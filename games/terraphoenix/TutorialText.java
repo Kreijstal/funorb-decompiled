@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl {
+final class TutorialText {
     static Sprite field_e;
     static int field_c;
     static int field_a;

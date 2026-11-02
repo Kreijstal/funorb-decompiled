@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui {
+final class AdminCheatOverlay {
     private int field_b;
     boolean field_d;
     static int[] field_e;
-    static bg[] field_a;
+    static IndexedSprite[] field_a;
     boolean field_c;
     static BattleUnit field_f;
 
@@ -51,13 +51,13 @@ final class ui {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
         if (param0 != -121) {
-          field_a = (bg[]) null;
+          field_a = (IndexedSprite[]) null;
         }
         field_a = null;
         field_e = null;
@@ -262,28 +262,28 @@ final class ui {
                 } else {
                   param0 = 320;
                   param2 = 76;
-                  vc.field_f.c(ij.field_a[0], 320, 468, 13881286, -1);
+                  vc.field_f.c(MessageKeys.field_a[0], 320, 468, 13881286, -1);
                   param0 = 96;
                   param2 += 48;
-                  sj.a(16777215, 20, param2, 610, 14, param0, ij.field_a[1], 0);
+                  sj.a(16777215, 20, param2, 610, 14, param0, MessageKeys.field_a[1], 0);
                   rh.field_b[11].b(32, param2 - 16);
                   param2 += 48;
                   rh.field_b[0].b(32, param2 - 16);
-                  sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[2], 0);
+                  sj.a(16777215, 20, param2, 608, 14, param0, MessageKeys.field_a[2], 0);
                   param2 += 48;
                   rh.field_b[1].b(32, param2 - 16);
-                  sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[3], 0);
+                  sj.a(16777215, 20, param2, 608, 14, param0, MessageKeys.field_a[3], 0);
                   param2 += 48;
                   rh.field_b[3].b(32, -16 + param2);
-                  sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[4], 0);
+                  sj.a(16777215, 20, param2, 608, 14, param0, MessageKeys.field_a[4], 0);
                   param2 += 48;
                   rh.field_b[6].b(32, -16 + param2);
-                  sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[5], 0);
+                  sj.a(16777215, 20, param2, 608, 14, param0, MessageKeys.field_a[5], 0);
                   param2 += 48;
                   rh.field_b[9].b(32, -16 + param2);
                   rh.field_b[10].b(32, 4 + param2);
                   param2 += 16;
-                  sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[6], 0);
+                  sj.a(16777215, 20, param2, 608, 14, param0, MessageKeys.field_a[6], 0);
                 }
               }
             } else {
@@ -316,7 +316,7 @@ final class ui {
         }
     }
 
-    ui(int param0) {
+    AdminCheatOverlay(int param0) {
         this.field_b = param0;
         this.field_c = true;
         this.field_d = true;

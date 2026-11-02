@@ -44,7 +44,7 @@ final class sa {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -55,10 +55,10 @@ final class sa {
         RuntimeException decompiledCaughtException = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (ja) (vd.field_l.d(9272));
+          var4 = (ja) (vd.field_l.beginBackward(9272));
           while (var4 != null) {
             eb.a(var4, 0, param1);
-            var4 = (ja) (vd.field_l.e((byte) -119));
+            var4 = (ja) (vd.field_l.nextBackward((byte) -119));
           }
           if (param0 == -336) {
             return;
@@ -68,7 +68,7 @@ final class sa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "sa.E(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "sa.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class sa {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ final class sa {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 

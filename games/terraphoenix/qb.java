@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qb {
-    static bg field_c;
+    static IndexedSprite field_c;
     static IntrusiveDeque field_a;
     static Sprite[] field_f;
     static String field_d;
@@ -11,11 +11,11 @@ final class qb {
     static String field_e;
     static int field_g;
 
-    final static bg a(String param0, byte param1, String param2, Archive param3) {
+    final static IndexedSprite a(String param0, byte param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bg stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -54,7 +54,7 @@ final class qb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -118,10 +118,10 @@ final class qb {
           var13 = LevelEditor.field_j;
           var15 = var13;
           var2 = var15.readUnsignedByte(param0 ^ -16384);
-          var3 = (ja) (vd.field_l.d(9272));
+          var3 = (ja) (vd.field_l.beginBackward(9272));
           while (var3 != null) {
             if (var3.field_o != var2) {
-              var3 = (ja) (vd.field_l.e((byte) -119));
+              var3 = (ja) (vd.field_l.nextBackward((byte) -119));
               continue;
             }
             break;
@@ -193,7 +193,7 @@ final class qb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "qb.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "qb.A(" + param0 + ')');
         }
     }
 

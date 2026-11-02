@@ -9,11 +9,11 @@ public final class Terraphoenix extends GameShell {
     int field_Fb;
     int field_jb;
     boolean field_Y;
-    private bg field_U;
+    private IndexedSprite field_U;
     int field_D;
     boolean field_fb;
     private int field_P;
-    private bg field_T;
+    private IndexedSprite field_T;
     private int field_xb;
     private BattleState field_X;
     private Sprite[] field_ab;
@@ -21,7 +21,7 @@ public final class Terraphoenix extends GameShell {
     int field_Bb;
     private boolean field_Gb;
     private ol field_S;
-    private bg field_sb;
+    private IndexedSprite field_sb;
     private String field_bb;
     String[] field_Eb;
     boolean field_yb;
@@ -37,7 +37,7 @@ public final class Terraphoenix extends GameShell {
     private int field_mb;
     private vl field_N;
     rk field_I;
-    ad field_wb;
+    TutorialController field_wb;
     private Sprite field_Q;
     boolean field_H;
     boolean field_E;
@@ -65,7 +65,7 @@ public final class Terraphoenix extends GameShell {
           SoftwareRasterizer.e(-1 + param1, -1 + param3, 2 + param4, param2 + 2, 6645093);
           SoftwareRasterizer.f(param1, param3, param4, param2, 0);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.PA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.PA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ public final class Terraphoenix extends GameShell {
             a.field_b.field_d) {
             ga.b((byte) 20);
           }
-          if (null != ga.field_k.d(9272)) {
+          if (null != ga.field_k.beginBackward(9272)) {
             fieldTemp$0 = this.field_R + 1;
             this.field_R = this.field_R + 1;
             if (fieldTemp$0 == 335) {
@@ -306,7 +306,7 @@ public final class Terraphoenix extends GameShell {
                 if (0 == ge.field_e) {
                   ja.field_i = 0;
                 }
-                if (kl.field_a > 0) {
+                if (TutorialText.field_a > 0) {
                   ja.field_i = 11;
                 }
                 this.b(false, ge.field_e);
@@ -449,8 +449,8 @@ public final class Terraphoenix extends GameShell {
                         if (!se.field_h) {
                           this.n(16777215);
                         }
-                        if (0 < kl.field_a) {
-                          kl.field_a = 0;
+                        if (0 < TutorialText.field_a) {
+                          TutorialText.field_a = 0;
                           ja.field_i = 10;
                         }
                       }
@@ -469,10 +469,10 @@ public final class Terraphoenix extends GameShell {
                     if (!se.field_h) {
                       this.n(16777215);
                     }
-                    if (0 >= kl.field_a) {
+                    if (0 >= TutorialText.field_a) {
                       return;
                     }
-                    kl.field_a = 0;
+                    TutorialText.field_a = 0;
                     ja.field_i = 10;
                     return;
                   }
@@ -495,7 +495,7 @@ public final class Terraphoenix extends GameShell {
               stackIn_272_2 = new StringBuilder().append(qf.field_a).append("<br><br>");
               stackIn_273_3 = (ge.field_e != 0);
               stackIn_276_4 = 98;
-              stackIn_277_5 = (kl.field_a != 0);
+              stackIn_277_5 = (TutorialText.field_a != 0);
               var3Lifetime1 = stackIn_272_0 + ((ud) (Object) stackIn_272_1).c(((StringBuilder) (Object) stackIn_272_2).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_273_3, stackIn_276_4, stackIn_277_5, false)).toString(), 310) * 14;
               var3Lifetime1 += 24;
               if (this.a(false, 224, (byte) -44, var3Lifetime1, FullscreenFocusCanvas.field_c) &&
@@ -507,7 +507,7 @@ public final class Terraphoenix extends GameShell {
               if (this.a(false, 224, (byte) -44, var3Lifetime1, vf.field_b) &&
                 ma.field_I == 1) {
                 oe.field_c = oe.field_c - ge.field_e;
-                kl.field_a = 0;
+                TutorialText.field_a = 0;
                 ge.field_e = 0;
                 ae.field_H = 0;
                 ja.field_i = 13;
@@ -1072,7 +1072,7 @@ public final class Terraphoenix extends GameShell {
                     ja.field_i = 0;
                   }
                   wb.field_g = 20;
-                  if (kl.field_a > 0) {
+                  if (TutorialText.field_a > 0) {
                     ja.field_i = 11;
                   }
                   this.b(false, ge.field_e);
@@ -1087,7 +1087,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_D = 0;
                   this.field_hb = 1;
                   if (Archive.field_a == 0) {
-                    this.field_wb = new ad(2);
+                    this.field_wb = new TutorialController(2);
                     this.field_wb.field_i = this;
                   }
                 }
@@ -1118,7 +1118,7 @@ public final class Terraphoenix extends GameShell {
               if (ge.field_e == 0) {
                 ja.field_i = 0;
               }
-              if (kl.field_a > 0) {
+              if (TutorialText.field_a > 0) {
                 ja.field_i = 11;
               }
               this.b(false, ge.field_e);
@@ -1130,7 +1130,7 @@ public final class Terraphoenix extends GameShell {
                 ja.field_i = 0;
               }
               wb.field_g = 20;
-              if (0 < kl.field_a) {
+              if (0 < TutorialText.field_a) {
                 ja.field_i = 11;
               }
               this.b(false, ge.field_e);
@@ -1140,7 +1140,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.GC(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.GC(" + param0 + ')');
         }
     }
 
@@ -1167,7 +1167,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1197,7 +1197,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.W(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.W(" + param0 + ')');
         }
     }
 
@@ -1224,7 +1224,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.LA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.LA(" + param0 + ')');
         }
     }
 
@@ -1256,7 +1256,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.U(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1277,7 +1277,7 @@ public final class Terraphoenix extends GameShell {
         int var6 = 0;
         var6 = field_V;
         try {
-          kl.field_a = 0;
+          TutorialText.field_a = 0;
           if (0 != (512 & ef.field_i)) {
             this.field_kb = 2;
           }
@@ -1523,7 +1523,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.QB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.QB(" + param0 + ')');
         }
     }
 
@@ -1549,7 +1549,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1562,7 +1562,7 @@ public final class Terraphoenix extends GameShell {
         int var5 = 0;
         var5 = field_V;
         try {
-          var2 = (hd) (ga.field_k.d(9272));
+          var2 = (hd) (ga.field_k.beginBackward(9272));
           if (param0) {
             return;
           }
@@ -1598,7 +1598,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "Terraphoenix.LB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "Terraphoenix.LB(" + param0 + ')');
         }
     }
 
@@ -1656,7 +1656,7 @@ public final class Terraphoenix extends GameShell {
                         DualLinkNode.a(vf.a("basic", bl.field_d, ke.field_d, be.field_w, 4650), (byte) -88, 35.0f);
                         return;
                       }
-                      DualLinkNode.a(vf.a("", kl.field_b, fc.field_a, ej.field_R, 4650), (byte) -124, 30.0f);
+                      DualLinkNode.a(vf.a("", TutorialText.field_b, fc.field_a, ej.field_R, 4650), (byte) -124, 30.0f);
                       return;
                     }
                     DualLinkNode.a(vf.a("", q.field_Nb, ab.field_a, be.field_w, 4650), (byte) 110, 25.0f);
@@ -1694,7 +1694,7 @@ public final class Terraphoenix extends GameShell {
             return;
           }
           if (h.field_j != null) {
-            DualLinkNode.a(td.field_e, (byte) -119, 70.0f);
+            DualLinkNode.a(IndexedSpriteState.field_e, (byte) -119, 70.0f);
             this.a((byte) -89);
             ca.field_a = new tk[8];
             ca.field_a[7] = tk.a(h.field_j, "", "terraphoenix_music_title");
@@ -1717,8 +1717,8 @@ public final class Terraphoenix extends GameShell {
             var3_int = 0;
             do {
               if (32 <= var3_int) {
-                ij.field_b = new Sprite(64, 80);
-                ij.field_b.a();
+                MessageKeys.field_b = new Sprite(64, 80);
+                MessageKeys.field_b.a();
                 break;
               }
               SoftwareRasterizer.d(0, var3_int, 64, var3_int);
@@ -1788,7 +1788,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3_ref2), "Terraphoenix.FC(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3_ref2), "Terraphoenix.FC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2103,7 +2103,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_188_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_187_0), ((StringBuilder) (Object) stackIn_187_1).append(stackIn_188_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_187_0), ((StringBuilder) (Object) stackIn_187_1).append(stackIn_188_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2175,7 +2175,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.I(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.I(" + param0 + ')');
         }
     }
 
@@ -2322,7 +2322,7 @@ public final class Terraphoenix extends GameShell {
             if (var12 == var8Lifetime1) {
               this.field_xb = var11;
             }
-            this.a(ij.field_e, 320, var8Lifetime1, var9, 124);
+            this.a(MessageKeys.field_e, 320, var8Lifetime1, var9, 124);
             var9 = var9 + var10;
             var11++;
             if (this.field_kb > 1) {
@@ -2529,13 +2529,13 @@ public final class Terraphoenix extends GameShell {
           }
           this.v(param0 ^ param0);
           this.i((byte) 108);
-          kl.field_e.d(0, 0);
+          TutorialText.field_e.d(0, 0);
           vc.field_e.d(0, 439);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.GB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.GB(" + param0 + ')');
         }
     }
 
@@ -2681,7 +2681,7 @@ public final class Terraphoenix extends GameShell {
           }
           this.v(0);
           this.i((byte) 58);
-          kl.field_e.d(0, 0);
+          TutorialText.field_e.d(0, 0);
           vc.field_e.d(0, 439);
           if (param0 > -95) {
             this.field_Db = false;
@@ -2690,7 +2690,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.CB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.CB(" + param0 + ')');
         }
     }
 
@@ -2743,7 +2743,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2764,7 +2764,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.C(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.C(" + param0 + ')');
         }
     }
 
@@ -2816,7 +2816,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var4), "Terraphoenix.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) var4), "Terraphoenix.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2843,7 +2843,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -2890,7 +2890,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.AC(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.AC(" + param0 + ')');
         }
     }
 
@@ -2916,7 +2916,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2933,7 +2933,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.VB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.VB(" + param0 + ')');
         }
     }
 
@@ -2959,7 +2959,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3125,7 +3125,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "Terraphoenix.FB(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "Terraphoenix.FB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3680,7 +3680,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.NA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.NA(" + param0 + ')');
         }
     }
 
@@ -3709,7 +3709,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3895,7 +3895,7 @@ public final class Terraphoenix extends GameShell {
             if (~var12 == ~var8Lifetime5) {
               this.field_xb = var11;
             }
-            if (kl.field_c != 6) {
+            if (TutorialText.field_c != 6) {
               this.a(fc.field_g, 320, var8Lifetime5, var9, 113);
               if (var13 != 0) {
                 this.a(je.field_b, 320, var8Lifetime5, var9, 111);
@@ -3915,13 +3915,13 @@ public final class Terraphoenix extends GameShell {
             this.b(true, -113);
           }
           this.i((byte) 95);
-          kl.field_e.d(0, 0);
+          TutorialText.field_e.d(0, 0);
           vc.field_e.d(0, 439);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.JB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.JB(" + param0 + ')');
         }
     }
 
@@ -3936,7 +3936,7 @@ public final class Terraphoenix extends GameShell {
           SoftwareRasterizer.d(param1, param3, 192, 50, 0, 128);
           var6_int = 16776960 - wa.field_s;
           if (param2 != -44) {
-            this.field_sb = (bg) null;
+            this.field_sb = (IndexedSprite) null;
           }
           if (param0 &&
             nd.field_k < 25) {
@@ -3966,7 +3966,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -3993,7 +3993,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -4010,7 +4010,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "Terraphoenix.MA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "Terraphoenix.MA(" + param0 + ')');
         }
     }
 
@@ -4060,14 +4060,14 @@ public final class Terraphoenix extends GameShell {
             var6 = 40;
             var6Lifetime1 = 144;
             var7 = 350;
-            if (kl.field_a <= 0) {
+            if (TutorialText.field_a <= 0) {
               if (bk.c(-25704)) {
                 stackIn_11_0 = 0;
               } else {
                 stackIn_11_0 = ef.field_i;
               }
             } else {
-              stackIn_11_0 = kl.field_a;
+              stackIn_11_0 = TutorialText.field_a;
             }
             var8 = stackIn_11_0;
             var9 = 0;
@@ -4081,7 +4081,7 @@ public final class Terraphoenix extends GameShell {
                 if (var14 == 0) {
                   regionExit2: {
                     if (stackIn_160_0 == stackIn_160_1) {
-                      if (0 < kl.field_a) {
+                      if (0 < TutorialText.field_a) {
                         break regionExit2;
                       }
                       if (var12 == 15) {
@@ -4242,7 +4242,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.EC(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.EC(" + param0 + ')');
         }
     }
 
@@ -4306,7 +4306,7 @@ public final class Terraphoenix extends GameShell {
           rk.a(0);
           BattleState.b(20);
           LevelEditor.d((byte) 19);
-          ad.b((byte) -108);
+          TutorialController.b((byte) -108);
           ol.g(20);
           IntrusiveNode.b(71);
           SpriteState.d((byte) -55);
@@ -4329,7 +4329,7 @@ public final class Terraphoenix extends GameShell {
           BitmapFont.a();
           fl.a(827399017);
           ca.a(109);
-          sd.a(-3864);
+          QuickChatMenu.a(-3864);
           li.a(-394132240);
           sj.a(0);
           rb.a(-61);
@@ -4356,8 +4356,8 @@ public final class Terraphoenix extends GameShell {
           bk.a(6144);
           gi.b(-50);
           ug.a(-11978);
-          td.a(-21697);
-          ui.a((byte) -121);
+          IndexedSpriteState.a(-21697);
+          AdminCheatOverlay.a((byte) -121);
           hk.a(true);
           ab.a(0);
           wa.c(21834);
@@ -4368,10 +4368,10 @@ public final class Terraphoenix extends GameShell {
           sb.c((byte) 29);
           qd.c((byte) 103);
           gm.a(8192);
-          kl.a(true);
+          TutorialText.a(true);
           RandomAccessCacheFile.b(1);
           pi.a();
-          tl.b();
+          VorbisDecoder.b();
           jk.a();
           kg.e(7087);
           hl.b(54);
@@ -4388,7 +4388,7 @@ public final class Terraphoenix extends GameShell {
           ke.a(false);
           ih.a();
           kb.a((byte) -105);
-          ij.a(77);
+          MessageKeys.a(77);
           hi.l(0);
           kd.a(true);
           fd.b(69);
@@ -4525,7 +4525,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.A(" + param0 + ')');
         }
     }
 
@@ -4757,7 +4757,7 @@ public final class Terraphoenix extends GameShell {
               if (decompiledFrameRemainder2) {
                 if (this.field_Bb == 0 &&
                   Archive.field_a == 0) {
-                  this.field_wb = new ad(1);
+                  this.field_wb = new TutorialController(1);
                   this.field_wb.field_i = this;
                 }
                 var2_int = 0;
@@ -4862,7 +4862,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.CC(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.CC(" + param0 + ')');
         }
     }
 
@@ -4889,7 +4889,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -4915,7 +4915,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -5060,7 +5060,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.SA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.SA(" + param0 + ')');
         }
     }
 
@@ -5087,7 +5087,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -5192,7 +5192,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.SB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.SB(" + param0 + ')');
         }
     }
 
@@ -5219,7 +5219,7 @@ public final class Terraphoenix extends GameShell {
             MouseWheelInput.field_b >= var3 &&
             MouseWheelInput.field_b < var6 + var3) {
             this.field_Eb = new String[1];
-            this.field_Eb[0] = td.field_h;
+            this.field_Eb[0] = IndexedSpriteState.field_h;
             if (ma.field_I == 1) {
               this.field_zb = new ch();
               this.field_D = 0;
@@ -5263,7 +5263,7 @@ public final class Terraphoenix extends GameShell {
             if (wb.field_g >= 10) {
               continue;
             }
-            kl.field_c = ja.field_i;
+            TutorialText.field_c = ja.field_i;
             wb.field_g = 20;
             di.field_k = null;
             ja.field_i = 12;
@@ -5277,7 +5277,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.BA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.BA(" + param0 + ')');
         }
     }
 
@@ -5520,7 +5520,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.T(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.T(" + param0 + ')');
         }
     }
 
@@ -5725,7 +5725,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.UA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.UA(" + param0 + ')');
         }
     }
 
@@ -5873,7 +5873,7 @@ public final class Terraphoenix extends GameShell {
                 break;
               }
               if (stackIn_163_0 == stackIn_163_1) {
-                kl.field_c = ja.field_i;
+                TutorialText.field_c = ja.field_i;
                 ja.field_i = 12;
                 hh.field_m.a();
                 SoftwareRasterizer.a();
@@ -5933,7 +5933,7 @@ public final class Terraphoenix extends GameShell {
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = ja.field_h;
                 if (ma.field_I == 1) {
-                  kl.field_c = ja.field_i;
+                  TutorialText.field_c = ja.field_i;
                   ja.field_i = 12;
                   hh.field_m.a();
                   SoftwareRasterizer.a();
@@ -5969,7 +5969,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.RA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.RA(" + param0 + ')');
         }
     }
 
@@ -5997,7 +5997,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "Terraphoenix.HA(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "Terraphoenix.HA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -6035,7 +6035,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -6061,7 +6061,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -6094,7 +6094,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "Terraphoenix.HB(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "Terraphoenix.HB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -6117,7 +6117,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -6774,7 +6774,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.R(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.R(" + param0 + ')');
         }
     }
 
@@ -6828,7 +6828,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -6857,7 +6857,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -6880,7 +6880,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.MB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.MB(" + param0 + ')');
         }
     }
 
@@ -6888,7 +6888,7 @@ public final class Terraphoenix extends GameShell {
         try {
           this.a(-68, "terraphoenix", 32);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.init()");
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.init()");
         }
     }
 
@@ -6914,7 +6914,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -6940,7 +6940,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -6949,7 +6949,7 @@ public final class Terraphoenix extends GameShell {
           int var2_int = 18 % ((-17 - param0) / 47);
           this.field_Fb = this.field_Fb + this.field_M;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.OB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.OB(" + param0 + ')');
         }
     }
 
@@ -6959,7 +6959,7 @@ public final class Terraphoenix extends GameShell {
           SoftwareRasterizer.d(-(rk.field_c >> 1) + 320, 77, rk.field_c, 362, param0, 192);
           ki.field_T.d(320 + (rk.field_c >> 1), 77);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.BB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.BB(" + param0 + ')');
         }
     }
 
@@ -7444,7 +7444,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.WB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.WB(" + param0 + ')');
         }
     }
 
@@ -7482,7 +7482,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -7661,7 +7661,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "Terraphoenix.AB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "Terraphoenix.AB(" + param0 + ')');
         }
     }
 
@@ -7716,7 +7716,7 @@ public final class Terraphoenix extends GameShell {
                   continue;
                 }
                 wb.field_g = 20;
-                ja.field_i = kl.field_c;
+                ja.field_i = TutorialText.field_c;
                 return;
               }
               break;
@@ -7727,7 +7727,7 @@ public final class Terraphoenix extends GameShell {
           var5 = stackIn_31_0;
           var6 = -10 % ((74 - param0) / 43);
           if (~var2_int == ~var5) {
-            ja.field_i = kl.field_c;
+            ja.field_i = TutorialText.field_c;
             wb.field_g = 20;
             return;
           }
@@ -7809,7 +7809,7 @@ public final class Terraphoenix extends GameShell {
           boolean decompiledFrameRemainder0 = true;
           var5++;
           if (var5 == var2_int) {
-            if (kl.field_c != 6) {
+            if (TutorialText.field_c != 6) {
               this.field_xb = -1;
               if (7 == ja.field_i) {
                 oh.field_e = oh.field_e + 1;
@@ -7822,7 +7822,7 @@ public final class Terraphoenix extends GameShell {
               if (ge.field_e == 0) {
                 ja.field_i = 0;
               }
-              if (kl.field_a > 0) {
+              if (TutorialText.field_a > 0) {
                 ja.field_i = 11;
               }
               this.b(false, ge.field_e);
@@ -7871,7 +7871,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.RB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.RB(" + param0 + ')');
         }
     }
 
@@ -8133,7 +8133,7 @@ public final class Terraphoenix extends GameShell {
               stackIn_184_3 = new StringBuilder().append(qf.field_a).append("<br><br>");
               stackIn_185_4 = (ge.field_e != 0);
               stackIn_188_5 = 119;
-              stackIn_189_6 = (0 != kl.field_a);
+              stackIn_189_6 = (0 != TutorialText.field_a);
               var8 = stackIn_184_0 + stackIn_184_1 * ((ud) (Object) stackIn_184_2).a(((StringBuilder) (Object) stackIn_184_3).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_185_4, stackIn_188_5, stackIn_189_6, false)).toString(), 330 - var3_intLifetime1 / 2, var8, var3_intLifetime1 - 10, 128, 16777215, 0, 1, 0, 14);
               var8 += 24;
               if (!this.a(false, 224, (byte) -44, var8, FullscreenFocusCanvas.field_c)) {
@@ -8142,21 +8142,21 @@ public final class Terraphoenix extends GameShell {
               stackIn_193_0 = var7_ref_ud;
               stackIn_193_1 = false;
               stackIn_194_2 = (ge.field_e != 0);
-              stackIn_198_3 = (kl.field_a != 0);
-              ((ud) (Object) stackIn_193_0).c(ij.a(stackIn_193_1, stackIn_194_2, stackIn_198_3, 2), 320, var8, 16777215, 0);
+              stackIn_198_3 = (TutorialText.field_a != 0);
+              ((ud) (Object) stackIn_193_0).c(MessageKeys.a(stackIn_193_1, stackIn_194_2, stackIn_198_3, 2), 320, var8, 16777215, 0);
               var8 += 24;
               if (this.a(false, 224, (byte) -44, var8, vf.field_b)) {
               }
               var8 += 80;
               stackIn_202_0 = var7_ref_ud;
-              stackIn_203_1 = (0 != kl.field_a);
+              stackIn_203_1 = (0 != TutorialText.field_a);
               stackIn_207_2 = (0 != ge.field_e);
               ((ud) (Object) stackIn_202_0).c(dg.a(stackIn_203_1, stackIn_207_2, (byte) -76, false), 320, var8 - (-(var9Lifetime1 * 5) - 64), 65535, -1);
               k.field_f.a(param0 ^ -89);
             }
             this.v(0);
             this.i((byte) 111);
-            kl.field_e.d(0, 0);
+            TutorialText.field_e.d(0, 0);
             vc.field_e.d(0, 439);
             decompiledFrameRemainder12 = (var10 != 0);
           }
@@ -8419,7 +8419,7 @@ public final class Terraphoenix extends GameShell {
                 }
               }
             }
-            kl.field_e.d(0, 0);
+            TutorialText.field_e.d(0, 0);
             if (ef.field_j >= 532 &&
               488 - m.field_g.field_t <= MouseWheelInput.field_b &&
               632 > ef.field_j &&
@@ -8573,7 +8573,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "Terraphoenix.B(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "Terraphoenix.B(" + param0 + ')');
         }
     }
 
@@ -8600,7 +8600,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -8629,7 +8629,7 @@ public final class Terraphoenix extends GameShell {
         int incrementValue$43 = 0;
         RuntimeException runtimeException = null;
         Sprite[] var2 = null;
-        bg[] var3 = null;
+        IndexedSprite[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -8642,21 +8642,21 @@ public final class Terraphoenix extends GameShell {
           if (me.field_o <= 0) {
             jd.a(112, ke.field_d, di.field_i);
             wa.a(il.a("mbfg", "member_benefits", ab.field_a, -1), (byte) 27, RandomAccessCacheFile.field_c);
-            pc.a(kl.field_e, 40);
+            pc.a(TutorialText.field_e, 40);
             va.a(0, 0, 16777215, il.a("mbpb", "member_benefits", ab.field_a, -1), vc.field_f, 135, 0, 0, false, 135, 1500);
-            sd.a(true, var2);
+            QuickChatMenu.a(true, var2);
             li.a(22957, dc.field_e, 0, -1, 16777215, (java.applet.Applet) (this));
           }
           di.field_i = null;
           kk.a(50, 100);
-          var3 = new bg[1];
+          var3 = new IndexedSprite[1];
           var3[0] = qb.a("sightingpic", (byte) -36, "", ab.field_a);
           og.field_f.a(var3, (int[]) null);
           wg.field_f = il.a("options", "", ab.field_a, -1);
           il.a("help", "", ab.field_a, -1);
           aa.field_j = il.a("next", "", ab.field_a, param0 + 2019);
           wh.field_e = il.a("prev", "", ab.field_a, -1);
-          jh.field_q = new bg[22];
+          jh.field_q = new IndexedSprite[22];
           var4 = 0;
           incrementValue$22 = var4;
           var4++;
@@ -8747,7 +8747,7 @@ public final class Terraphoenix extends GameShell {
           od.field_e = qb.a("map0", (byte) -36, "menu_graphics", ab.field_a);
           s.field_b = il.a("shield", "", ab.field_a, param0 ^ 2019);
           qh.field_b = il.a("exitgfx", "", ab.field_a, -1);
-          kl.field_e = il.a("titlebig", "menu_graphics", ab.field_a, -1);
+          TutorialText.field_e = il.a("titlebig", "menu_graphics", ab.field_a, -1);
           fg.field_f = qb.a("title_highscores", (byte) -36, "menu_graphics", ab.field_a);
           lm.field_g = qb.a("title_instructions", (byte) -36, "menu_graphics", ab.field_a);
           qb.field_c = qb.a("title_achievements", (byte) -36, "menu_graphics", ab.field_a);
@@ -8785,7 +8785,7 @@ public final class Terraphoenix extends GameShell {
             rk.field_e = lf.a(true, "", "zombiewalk", ab.field_a);
             wb.field_h = lf.a(true, "", "zombie_deaths", ab.field_a);
           }
-          ui.field_a = lf.a(true, "", "aliens_deaths", ab.field_a);
+          AdminCheatOverlay.field_a = lf.a(true, "", "aliens_deaths", ab.field_a);
           lf.field_e = lf.a(true, "", "men_deaths", ab.field_a);
           gi.field_j = lf.a(true, "", "explosion", ab.field_a);
           BattleUnit.field_M = lf.a(true, "", "alienaimdir", ab.field_a);
@@ -8818,7 +8818,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.OA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.OA(" + param0 + ')');
         }
     }
 
@@ -8862,13 +8862,13 @@ public final class Terraphoenix extends GameShell {
                 decompiledFrameRemainder0 = !(!cg.field_K.field_k);
                 if (decompiledFrameRemainder0) {
                   ef.field_i = ef.field_i | cg.field_K.field_m;
-                  kl.field_a = kl.field_a & ~cg.field_K.field_m;
+                  TutorialText.field_a = TutorialText.field_a & ~cg.field_K.field_m;
                   cg.field_K = null;
                   lk.b(9407);
-                  var2 = (eg) (u.field_c.d(9272));
+                  var2 = (eg) (u.field_c.beginBackward(9272));
                   while (var2 != null) {
                     ha.a(var2, 4, (byte) 80);
-                    var2 = (eg) (u.field_c.e((byte) -119));
+                    var2 = (eg) (u.field_c.nextBackward((byte) -119));
                     if (var3 != 0) {
                       decompiledFrameCompleted0 = false;
                       break;
@@ -8894,7 +8894,7 @@ public final class Terraphoenix extends GameShell {
                     } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var2_ref = decompiledCaughtException;
-                      bd.a((Throwable) ((Object) var2_ref), "TP Sgc", 88);
+                      bd.reportClientError((Throwable) ((Object) var2_ref), "TP Sgc", 88);
                       si.field_ib = null;
                     }
                     this.field_zb = null;
@@ -9009,7 +9009,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "Terraphoenix.F(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "Terraphoenix.F(" + param0 + ')');
         }
     }
 
@@ -9449,7 +9449,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.DC(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.DC(" + param0 + ')');
         }
     }
 
@@ -9587,7 +9587,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.NB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.NB(" + param0 + ')');
         }
     }
 
@@ -9624,7 +9624,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "Terraphoenix.KB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.KB(" + param0 + ')');
         }
     }
 
@@ -9642,10 +9642,10 @@ public final class Terraphoenix extends GameShell {
             ef.field_j > 540 &&
             MouseWheelInput.field_b <= 28) {
             boolean decompiledFrameCompleted0 = true;
-            kl.field_c = ja.field_i;
+            TutorialText.field_c = ja.field_i;
             ja.field_i = 12;
             wb.field_g = 20;
-            if (kl.field_c != 1) {
+            if (TutorialText.field_c != 1) {
               di.field_k = new Sprite(640, 480);
               var2_int = 0;
               while (var2_int < di.field_k.field_z.length) {
@@ -9672,7 +9672,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.PB(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.PB(" + param0 + ')');
         }
     }
 
@@ -9698,7 +9698,7 @@ public final class Terraphoenix extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "Terraphoenix.TA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "Terraphoenix.TA(" + param0 + ')');
         }
     }
 
@@ -9721,7 +9721,7 @@ public final class Terraphoenix extends GameShell {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 

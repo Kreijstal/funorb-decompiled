@@ -32,7 +32,7 @@ final class ll {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -41,7 +41,7 @@ final class ll {
         vi.field_p = ke.field_c;
         ClientException.field_e = 0;
         uj.field_d = 0;
-        si.field_ob = new sd(2);
+        si.field_ob = new QuickChatMenu(2);
         if (param0 == 49) {
           si.field_ob.a(-1, param1, kk.a(param0 + 10423, ef.field_j, MouseWheelInput.field_b), param0 - 134);
           return;
@@ -119,7 +119,7 @@ final class ll {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

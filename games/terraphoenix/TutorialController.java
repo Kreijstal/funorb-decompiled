@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ad {
+final class TutorialController {
     static int[] field_u;
     BattleState field_A;
     Terraphoenix field_i;
@@ -39,7 +39,7 @@ final class ad {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != -3109) {
-              ad.b((byte) -71);
+              TutorialController.b((byte) -71);
             }
             stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
@@ -486,7 +486,7 @@ final class ad {
         }
         oi.a(-22417, param2);
         if (param1 != 0) {
-          ad.a(30, -91);
+          TutorialController.a(30, -91);
         }
     }
 
@@ -835,7 +835,7 @@ final class ad {
           }
         }
         if (param0 < 28) {
-          ad.a(false, 108, true);
+          TutorialController.a(false, 108, true);
         }
     }
 
@@ -942,10 +942,10 @@ final class ad {
             if (var3_int != 0) {
               if (var3_int != 1) {
                 if (var3_int == 2) {
-                  this.field_o = kl.field_d[23];
-                  stackIn_70_1 = new StringBuilder().append(kl.field_d[24]);
+                  this.field_o = TutorialText.field_d[23];
+                  stackIn_70_1 = new StringBuilder().append(TutorialText.field_d[24]);
                   if (!param0) {
-                    stackIn_71_2 = kl.field_d[2];
+                    stackIn_71_2 = TutorialText.field_d[2];
                   } else {
                     stackIn_71_2 = "";
                   }
@@ -955,55 +955,55 @@ final class ad {
                     this.field_k = 93;
                     this.field_q = 413;
                     this.field_t = 475;
-                    stackIn_74_1 = new StringBuilder().append(kl.field_d[26]);
+                    stackIn_74_1 = new StringBuilder().append(TutorialText.field_d[26]);
                     if (param0) {
                       stackIn_75_2 = "";
                     } else {
-                      stackIn_75_2 = kl.field_d[2];
+                      stackIn_75_2 = TutorialText.field_d[2];
                     }
                     this.field_b = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).toString();
                     this.field_s = true;
-                    this.field_o = kl.field_d[25];
+                    this.field_o = TutorialText.field_d[25];
                     this.field_y = 477;
                   } else {
                     if (var3_int == 4) {
                       this.field_k = 5;
-                      stackIn_78_1 = new StringBuilder().append(kl.field_d[28]);
+                      stackIn_78_1 = new StringBuilder().append(TutorialText.field_d[28]);
                       if (param0) {
                         stackIn_79_2 = "";
                       } else {
-                        stackIn_79_2 = kl.field_d[29];
+                        stackIn_79_2 = TutorialText.field_d[29];
                       }
                       this.field_b = ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).toString();
                       this.field_s = true;
                       this.field_q = 111;
                       this.field_a = false;
                       this.field_t = 47;
-                      this.field_o = kl.field_d[27];
+                      this.field_o = TutorialText.field_d[27];
                       this.field_y = 153;
                     } else {
                       if (var3_int != 5) {
                         if (var3_int == 6) {
                           this.field_a = false;
-                          stackIn_86_1 = new StringBuilder().append(kl.field_d[34]);
+                          stackIn_86_1 = new StringBuilder().append(TutorialText.field_d[34]);
                           if (param0) {
                             stackIn_87_2 = "";
                           } else {
-                            stackIn_87_2 = kl.field_d[35];
+                            stackIn_87_2 = TutorialText.field_d[35];
                           }
                           this.field_b = ((StringBuilder) (Object) stackIn_86_1).append(stackIn_87_2).toString();
                           this.field_q = 90;
                           this.field_s = true;
                           this.field_y = 170;
-                          this.field_o = kl.field_d[33];
+                          this.field_o = TutorialText.field_d[33];
                           this.field_t = 317;
                           this.field_k = 63;
                         } else {
                           if (7 == var3_int) {
-                            this.field_o = kl.field_d[36];
-                            stackIn_90_1 = new StringBuilder().append(kl.field_d[37]);
+                            this.field_o = TutorialText.field_d[36];
+                            stackIn_90_1 = new StringBuilder().append(TutorialText.field_d[37]);
                             if (!param0) {
-                              stackIn_91_2 = kl.field_d[2];
+                              stackIn_91_2 = TutorialText.field_d[2];
                             } else {
                               stackIn_91_2 = "";
                             }
@@ -1021,23 +1021,23 @@ final class ad {
                                   this.field_k = 0;
                                   this.field_q = 0;
                                 } else {
-                                  this.field_b = kl.field_d[45] + kl.field_d[46];
-                                  this.field_o = kl.field_d[44];
+                                  this.field_b = TutorialText.field_d[45] + TutorialText.field_d[46];
+                                  this.field_o = TutorialText.field_d[44];
                                 }
                               } else {
                                 this.field_q = 373;
                                 this.field_y = 387;
-                                this.field_o = kl.field_d[41];
+                                this.field_o = TutorialText.field_d[41];
                                 this.field_k = 330;
                                 this.field_t = 624;
                                 stackIn_102_1 = !(param0);
                                 this.field_s = stackIn_102_1;
                                 this.field_a = false;
-                                stackIn_104_1 = new StringBuilder().append(kl.field_d[42]);
+                                stackIn_104_1 = new StringBuilder().append(TutorialText.field_d[42]);
                                 if (param0) {
                                   stackIn_105_2 = "";
                                 } else {
-                                  stackIn_105_2 = kl.field_d[43];
+                                  stackIn_105_2 = TutorialText.field_d[43];
                                 }
                                 this.field_b = ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).toString();
                                 this.field_i.field_I.field_a[18] = this.field_i.field_I.field_a[18] + 1;
@@ -1045,10 +1045,10 @@ final class ad {
                                 this.field_i.field_nb[2].d((byte) -100);
                               }
                             } else {
-                              this.field_o = kl.field_d[38];
-                              stackIn_94_1 = new StringBuilder().append(kl.field_d[39]);
+                              this.field_o = TutorialText.field_d[38];
+                              stackIn_94_1 = new StringBuilder().append(TutorialText.field_d[39]);
                               if (!param0) {
-                                stackIn_95_2 = kl.field_d[40];
+                                stackIn_95_2 = TutorialText.field_d[40];
                               } else {
                                 stackIn_95_2 = "";
                               }
@@ -1070,27 +1070,27 @@ final class ad {
                         this.field_y = 387;
                         this.field_k = 172;
                         this.field_s = true;
-                        stackIn_82_1 = new StringBuilder().append(kl.field_d[31]);
+                        stackIn_82_1 = new StringBuilder().append(TutorialText.field_d[31]);
                         if (param0) {
                           stackIn_83_2 = "";
                         } else {
-                          stackIn_83_2 = kl.field_d[32];
+                          stackIn_83_2 = TutorialText.field_d[32];
                         }
                         this.field_b = ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).toString();
-                        this.field_o = kl.field_d[30];
+                        this.field_o = TutorialText.field_d[30];
                       }
                     }
                   }
                 }
               } else {
-                stackIn_66_1 = new StringBuilder().append(kl.field_d[21]);
+                stackIn_66_1 = new StringBuilder().append(TutorialText.field_d[21]);
                 if (param0) {
                   stackIn_67_2 = "";
                 } else {
-                  stackIn_67_2 = kl.field_d[22];
+                  stackIn_67_2 = TutorialText.field_d[22];
                 }
                 this.field_b = ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).toString();
-                this.field_o = kl.field_d[20];
+                this.field_o = TutorialText.field_d[20];
                 this.field_a = false;
                 this.field_t = 419;
                 this.field_s = true;
@@ -1102,15 +1102,15 @@ final class ad {
               this.field_q = 153;
               this.field_t = 639;
               this.field_y = 180;
-              this.field_o = kl.field_d[18];
+              this.field_o = TutorialText.field_d[18];
               stackIn_60_1 = !(param0);
               this.field_s = stackIn_60_1;
               this.field_k = 540;
-              stackIn_62_1 = new StringBuilder().append(kl.field_d[19]);
+              stackIn_62_1 = new StringBuilder().append(TutorialText.field_d[19]);
               if (param0) {
                 stackIn_63_2 = "";
               } else {
-                stackIn_63_2 = kl.field_d[2];
+                stackIn_63_2 = TutorialText.field_d[2];
               }
               this.field_b = ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).toString();
             }
@@ -1118,9 +1118,9 @@ final class ad {
             if (var3_int == 0) {
               var3_int = this.field_l;
               if (0 == var3_int) {
-                this.field_b = kl.field_d[48];
+                this.field_b = TutorialText.field_d[48];
                 this.field_a = true;
-                this.field_o = kl.field_d[47];
+                this.field_o = TutorialText.field_d[47];
               } else {
                 if (var3_int != 1) {
                   if (2 != var3_int) {
@@ -1131,8 +1131,8 @@ final class ad {
                             if (var3_int == 7) {
                               this.field_r = 9;
                               this.field_C = 5;
-                              this.field_b = kl.field_d[66];
-                              this.field_o = kl.field_d[65];
+                              this.field_b = TutorialText.field_d[66];
+                              this.field_o = TutorialText.field_d[65];
                               if (!param0) {
                                 this.field_A.a(29518, -2);
                               }
@@ -1140,7 +1140,7 @@ final class ad {
                                 this.field_A.a(param1 ^ 12679, -1);
                               }
                               if (!param0) {
-                                this.field_A.a(-2, kl.field_d[67], -18);
+                                this.field_A.a(-2, TutorialText.field_d[67], -18);
                               }
                               this.field_a = false;
                             } else {
@@ -1149,8 +1149,8 @@ final class ad {
                                   if (var3_int != 10) {
                                     if (var3_int != 11) {
                                       if (var3_int == 12) {
-                                        this.field_o = kl.field_d[71];
-                                        this.field_b = kl.field_d[72];
+                                        this.field_o = TutorialText.field_d[71];
+                                        this.field_b = TutorialText.field_d[72];
                                         if (!param0) {
                                           this.field_A.a(29518, -2);
                                         }
@@ -1158,13 +1158,13 @@ final class ad {
                                           this.field_A.a(29518, -1);
                                         }
                                         if (!param0) {
-                                          this.field_A.a(-1, kl.field_d[73], -118);
+                                          this.field_A.a(-1, TutorialText.field_d[73], -118);
                                         }
                                         this.field_a = false;
                                       } else {
                                         if (var3_int == 13) {
-                                          this.field_o = kl.field_d[74];
-                                          this.field_b = kl.field_d[75];
+                                          this.field_o = TutorialText.field_d[74];
+                                          this.field_b = TutorialText.field_d[75];
                                           if (!param0) {
                                             this.field_A.a(29518, -1);
                                           }
@@ -1172,13 +1172,13 @@ final class ad {
                                             this.field_A.a(29518, -2);
                                           }
                                           if (!param0) {
-                                            this.field_A.a(1, kl.field_d[76], param1 ^ -17124);
+                                            this.field_A.a(1, TutorialText.field_d[76], param1 ^ -17124);
                                           }
                                         } else {
                                           if (var3_int != 14) {
                                             if (var3_int == 15) {
-                                              this.field_o = kl.field_d[79];
-                                              this.field_b = kl.field_d[80];
+                                              this.field_o = TutorialText.field_d[79];
+                                              this.field_b = TutorialText.field_d[80];
                                               this.field_t = 153;
                                               this.field_k = 98;
                                               this.field_q = 450;
@@ -1186,12 +1186,12 @@ final class ad {
                                               this.field_s = true;
                                             } else {
                                               if (var3_int == 16) {
-                                                this.field_b = kl.field_d[82];
-                                                this.field_o = kl.field_d[81];
+                                                this.field_b = TutorialText.field_d[82];
+                                                this.field_o = TutorialText.field_d[81];
                                               } else {
                                                 if (var3_int == 17) {
-                                                  this.field_b = kl.field_d[84];
-                                                  this.field_o = kl.field_d[83];
+                                                  this.field_b = TutorialText.field_d[84];
+                                                  this.field_o = TutorialText.field_d[83];
                                                   this.field_k = 306;
                                                   this.field_t = 542;
                                                   this.field_s = true;
@@ -1205,16 +1205,16 @@ final class ad {
                                                     this.field_y = 480;
                                                     this.field_k = 0;
                                                   } else {
-                                                    this.field_o = kl.field_d[85];
-                                                    this.field_b = kl.field_d[86];
+                                                    this.field_o = TutorialText.field_d[85];
+                                                    this.field_b = TutorialText.field_d[86];
                                                     this.field_a = false;
                                                   }
                                                 }
                                               }
                                             }
                                           } else {
-                                            this.field_o = kl.field_d[77];
-                                            this.field_b = kl.field_d[78];
+                                            this.field_o = TutorialText.field_d[77];
+                                            this.field_b = TutorialText.field_d[78];
                                           }
                                         }
                                       }
@@ -1292,8 +1292,8 @@ final class ad {
                                 this.field_k = 184;
                                 this.field_y = 474;
                                 this.field_s = true;
-                                this.field_o = kl.field_d[68];
-                                this.field_b = kl.field_d[69];
+                                this.field_o = TutorialText.field_d[68];
+                                this.field_b = TutorialText.field_d[69];
                                 if (!param0) {
                                   this.field_A.a(29518, -2);
                                 }
@@ -1301,14 +1301,14 @@ final class ad {
                                   this.field_A.a(param1 + 12421, -1);
                                 }
                                 if (!param0) {
-                                  this.field_A.a(-1, kl.field_d[70], -87);
+                                  this.field_A.a(-1, TutorialText.field_d[70], -87);
                                 }
                                 this.field_a = false;
                               }
                             }
                           } else {
-                            this.field_b = kl.field_d[63];
-                            this.field_o = kl.field_d[62];
+                            this.field_b = TutorialText.field_d[63];
+                            this.field_o = TutorialText.field_d[62];
                             if (!param0) {
                               this.field_A.a(param1 ^ 12679, -2);
                             }
@@ -1316,7 +1316,7 @@ final class ad {
                               this.field_A.a(29518, -1);
                             }
                             if (!param0) {
-                              this.field_A.a(-1, kl.field_d[64], -110);
+                              this.field_A.a(-1, TutorialText.field_d[64], -110);
                             }
                             this.field_y = 474;
                             this.field_q = 394;
@@ -1334,13 +1334,13 @@ final class ad {
                             this.field_A.a(29518, -1);
                           }
                           if (!param0) {
-                            this.field_A.a(-2, kl.field_d[61], -98);
+                            this.field_A.a(-2, TutorialText.field_d[61], -98);
                           }
                           this.field_a = false;
                         }
                       } else {
-                        this.field_b = kl.field_d[59];
-                        this.field_o = kl.field_d[58];
+                        this.field_b = TutorialText.field_d[59];
+                        this.field_o = TutorialText.field_d[58];
                         this.field_C = 3;
                         this.field_r = 4;
                         if (og.field_d > 0) {
@@ -1354,13 +1354,13 @@ final class ad {
                           this.field_A.a(29518, -1);
                         }
                         if (!param0) {
-                          this.field_A.a(-1, kl.field_d[60], param1 ^ -17095);
+                          this.field_A.a(-1, TutorialText.field_d[60], param1 ^ -17095);
                         }
                         this.field_a = false;
                       }
                     } else {
-                      this.field_b = kl.field_d[56];
-                      this.field_o = kl.field_d[55];
+                      this.field_b = TutorialText.field_d[56];
+                      this.field_o = TutorialText.field_d[55];
                       this.field_r = 4;
                       this.field_C = 3;
                       if (!param0) {
@@ -1370,7 +1370,7 @@ final class ad {
                         this.field_A.a(param1 + 12421, -1);
                       }
                       if (!param0) {
-                        this.field_A.a(-2, kl.field_d[57], -79);
+                        this.field_A.a(-2, TutorialText.field_d[57], -79);
                       }
                       this.field_a = false;
                     }
@@ -1379,9 +1379,9 @@ final class ad {
                     this.field_y = 474;
                     this.field_s = true;
                     this.field_t = 290;
-                    this.field_b = kl.field_d[53];
+                    this.field_b = TutorialText.field_d[53];
                     this.field_q = 452;
-                    this.field_o = kl.field_d[52];
+                    this.field_o = TutorialText.field_d[52];
                     if (!param0) {
                       this.field_A.a(29518, -2);
                     }
@@ -1389,13 +1389,13 @@ final class ad {
                       this.field_A.a(param1 + 12421, -1);
                     }
                     if (!param0) {
-                      this.field_A.a(-1, kl.field_d[54], -108);
+                      this.field_A.a(-1, TutorialText.field_d[54], -108);
                     }
                     this.field_a = false;
                   }
                 } else {
-                  this.field_b = kl.field_d[50];
-                  this.field_o = kl.field_d[49];
+                  this.field_b = TutorialText.field_d[50];
+                  this.field_o = TutorialText.field_d[49];
                   if (!param0) {
                     this.field_A.a(param1 + 12421, -2);
                   }
@@ -1403,7 +1403,7 @@ final class ad {
                     this.field_A.a(29518, -1);
                   }
                   if (!param0) {
-                    this.field_A.a(-2, kl.field_d[51], -47);
+                    this.field_A.a(-2, TutorialText.field_d[51], -47);
                   }
                   this.field_a = false;
                 }
@@ -1416,14 +1416,14 @@ final class ad {
             if (var3_int == 1) {
               this.field_a = false;
               this.field_s = true;
-              this.field_o = kl.field_d[3];
+              this.field_o = TutorialText.field_d[3];
               this.field_q = 266;
               this.field_k = 5;
               this.field_t = 47;
               this.field_y = 308;
-              stackIn_21_1 = new StringBuilder().append(kl.field_d[4]);
+              stackIn_21_1 = new StringBuilder().append(TutorialText.field_d[4]);
               if (!param0) {
-                stackIn_22_2 = kl.field_d[5];
+                stackIn_22_2 = TutorialText.field_d[5];
               } else {
                 stackIn_22_2 = "";
               }
@@ -1434,9 +1434,9 @@ final class ad {
                   this.field_y = 416;
                   this.field_s = true;
                   this.field_t = 628;
-                  stackIn_29_1 = new StringBuilder().append(kl.field_d[10]);
+                  stackIn_29_1 = new StringBuilder().append(TutorialText.field_d[10]);
                   if (!param0) {
-                    stackIn_30_2 = kl.field_d[11];
+                    stackIn_30_2 = TutorialText.field_d[11];
                   } else {
                     stackIn_30_2 = "";
                   }
@@ -1444,14 +1444,14 @@ final class ad {
                   this.field_k = 357;
                   this.field_a = false;
                   this.field_q = 387;
-                  this.field_o = kl.field_d[9];
+                  this.field_o = TutorialText.field_d[9];
                 } else {
                   if (var3_int != 4) {
                     if (var3_int == 5) {
-                      this.field_o = kl.field_d[15];
-                      stackIn_37_1 = new StringBuilder().append(kl.field_d[16]);
+                      this.field_o = TutorialText.field_d[15];
+                      stackIn_37_1 = new StringBuilder().append(TutorialText.field_d[16]);
                       if (!param0) {
-                        stackIn_38_2 = kl.field_d[17];
+                        stackIn_38_2 = TutorialText.field_d[17];
                       } else {
                         stackIn_38_2 = "";
                       }
@@ -1469,10 +1469,10 @@ final class ad {
                     this.field_q = 437;
                     this.field_t = 623;
                     this.field_y = 462;
-                    this.field_o = kl.field_d[12];
-                    stackIn_33_1 = new StringBuilder().append(kl.field_d[13]);
+                    this.field_o = TutorialText.field_d[12];
+                    stackIn_33_1 = new StringBuilder().append(TutorialText.field_d[13]);
                     if (!param0) {
-                      stackIn_34_2 = kl.field_d[14];
+                      stackIn_34_2 = TutorialText.field_d[14];
                     } else {
                       stackIn_34_2 = "";
                     }
@@ -1481,9 +1481,9 @@ final class ad {
                   }
                 }
               } else {
-                stackIn_25_1 = new StringBuilder().append(kl.field_d[7]);
+                stackIn_25_1 = new StringBuilder().append(TutorialText.field_d[7]);
                 if (!param0) {
-                  stackIn_26_2 = kl.field_d[8];
+                  stackIn_26_2 = TutorialText.field_d[8];
                 } else {
                   stackIn_26_2 = "";
                 }
@@ -1492,20 +1492,20 @@ final class ad {
                 this.field_t = 320;
                 this.field_q = 69;
                 this.field_a = false;
-                this.field_o = kl.field_d[6];
+                this.field_o = TutorialText.field_d[6];
                 this.field_k = 59;
                 this.field_s = true;
               }
             }
           } else {
-            stackIn_17_1 = new StringBuilder().append(kl.field_d[1]);
+            stackIn_17_1 = new StringBuilder().append(TutorialText.field_d[1]);
             if (!param0) {
-              stackIn_18_2 = kl.field_d[2];
+              stackIn_18_2 = TutorialText.field_d[2];
             } else {
               stackIn_18_2 = "";
             }
             this.field_b = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).toString();
-            this.field_o = kl.field_d[0];
+            this.field_o = TutorialText.field_d[0];
           }
         }
         if (param1 != 17097) {
@@ -1517,7 +1517,7 @@ final class ad {
         }
     }
 
-    ad(int param0) {
+    TutorialController(int param0) {
         this.field_w = -255;
         this.field_d = 0;
         this.field_B = 0;

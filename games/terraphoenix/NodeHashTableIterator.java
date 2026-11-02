@@ -101,7 +101,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -120,17 +120,17 @@ final class NodeHashTableIterator implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = Terraphoenix.field_V;
-        if (this.field_e != this.field_h.field_a[-1 + this.field_f]) {
+        if (this.field_e != this.field_h.buckets[-1 + this.field_f]) {
           return true;
         }
-        while (this.field_h.field_c > this.field_f) {
+        while (this.field_h.capacity > this.field_f) {
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          if (this.field_h.field_a[fieldTemp$0].previous != this.field_h.field_a[this.field_f - 1]) {
-            this.field_e = this.field_h.field_a[-1 + this.field_f].previous;
+          if (this.field_h.buckets[fieldTemp$0].previous != this.field_h.buckets[this.field_f - 1]) {
+            this.field_e = this.field_h.buckets[-1 + this.field_f].previous;
             return true;
           }
-          this.field_e = this.field_h.field_a[this.field_f - 1];
+          this.field_e = this.field_h.buckets[this.field_f - 1];
         }
         return false;
     }
@@ -148,20 +148,20 @@ final class NodeHashTableIterator implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = Terraphoenix.field_V;
-        if (this.field_h.field_a[-1 + this.field_f] != this.field_e) {
+        if (this.field_h.buckets[-1 + this.field_f] != this.field_e) {
           var1 = this.field_e;
           this.field_g = var1;
           this.field_e = var1.previous;
           return var1;
         }
         do {
-          if (this.field_f >= this.field_h.field_c) {
+          if (this.field_f >= this.field_h.capacity) {
             return null;
           }
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          var1 = this.field_h.field_a[fieldTemp$0].previous;
-        } while (this.field_h.field_a[this.field_f - 1] == var1);
+          var1 = this.field_h.buckets[fieldTemp$0].previous;
+        } while (this.field_h.buckets[this.field_f - 1] == var1);
         this.field_g = var1;
         this.field_e = var1.previous;
         return var1;
@@ -199,7 +199,7 @@ final class NodeHashTableIterator implements Iterator {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -209,7 +209,7 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     private final void a(boolean param0) {
-        this.field_e = this.field_h.field_a[0].previous;
+        this.field_e = this.field_h.buckets[0].previous;
         if (param0) {
           return;
         }
@@ -223,7 +223,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_h = param0;
           this.a(false);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "c.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "c.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

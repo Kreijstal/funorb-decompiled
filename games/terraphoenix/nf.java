@@ -42,7 +42,7 @@ final class nf implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var6 = (String) null;
-            bd.a((Throwable) ((Object) var1), (String) null, 98);
+            bd.reportClientError((Throwable) ((Object) var1), (String) null, 98);
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {
@@ -69,10 +69,10 @@ final class nf implements Runnable {
     final static void a(boolean param0, int param1) {
         if (param1 != -1260) {
           nf.a(true, 64);
-          ad.a(param0, 0, true);
+          TutorialController.a(param0, 0, true);
           return;
         }
-        ad.a(param0, 0, true);
+        TutorialController.a(param0, 0, true);
     }
 
     nf() {

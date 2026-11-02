@@ -40,7 +40,7 @@ final class mh {
           var8.d(var4, 8600);
           var8.j(-var4 + var8.position, -119);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class mh {
           return;
         }
         ef.field_i = ef.field_i | var3;
-        kl.field_a = kl.field_a | var3;
+        TutorialText.field_a = TutorialText.field_a | var3;
         ga.field_k.a(new hd(param1), -16611);
         if (!kg.field_q) {
           if (!bk.c(-25704)) {
@@ -133,7 +133,7 @@ final class mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "mh.C(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "mh.C(" + param0 + ')');
         }
     }
 

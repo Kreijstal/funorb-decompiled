@@ -126,7 +126,7 @@ final class ch {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class ch {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -787,7 +787,7 @@ final class ch {
           } else {
             stackIn_351_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_350_0), ((StringBuilder) (Object) stackIn_350_1).append(stackIn_351_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_350_0), ((StringBuilder) (Object) stackIn_350_1).append(stackIn_351_2).append(')').toString());
         }
     }
 
@@ -825,7 +825,7 @@ final class ch {
         if (256 > var5) {
           SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j, 0, 256 - var5);
         }
-        ij.a(false);
+        MessageKeys.a(false);
         if (kf.field_f >= 150) {
           hd.field_l.a(var3 + 15, 10 + var4, var5);
         } else {
@@ -903,7 +903,7 @@ final class ch {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -945,7 +945,7 @@ final class ch {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(')').toString());
         }
     }
 

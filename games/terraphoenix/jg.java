@@ -24,11 +24,11 @@ final class jg extends al {
             var6 = null;
             var7 = null;
             if (mc.field_b.field_r != null) {
-              ad.field_x = new ak(mc.field_b.field_r, 5200, 0);
+              TutorialController.field_x = new ak(mc.field_b.field_r, 5200, 0);
               mc.field_b.field_r = null;
-              var6 = new ua(255, ad.field_x, new ak(mc.field_b.field_q, 12000, 0), 2097152);
+              var6 = new ua(255, TutorialController.field_x, new ak(mc.field_b.field_q, 12000, 0), 2097152);
             }
-            if (ad.field_x != null) {
+            if (TutorialController.field_x != null) {
               if (null == wb.field_b) {
                 wb.field_b = new ak[mc.field_b.field_s.length];
               }
@@ -36,7 +36,7 @@ final class jg extends al {
                 wb.field_b[param4] = new ak(mc.field_b.field_s[param4], 12000, 0);
                 mc.field_b.field_s[param4] = null;
               }
-              var7 = new ua(param4, ad.field_x, wb.field_b[param4], 2097152);
+              var7 = new ua(param4, TutorialController.field_x, wb.field_b[param4], 2097152);
             }
             var8 = i.field_a.a(param2, param4, (ua) (var6), (ua) (var7), 115);
             if (param3) {
@@ -78,7 +78,7 @@ final class jg extends al {
             jg.a(46, 78, false, false, -28, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "jg.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "jg.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

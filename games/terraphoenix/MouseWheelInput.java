@@ -75,7 +75,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ abstract class MouseWheelInput {
 
     final static void a(byte param0) {
         uc var2 = null;
-        ji var1 = (ji) (vc.field_d.d(9272));
+        ji var1 = (ji) (vc.field_d.beginBackward(9272));
         if (var1 == null) {
           WidgetContainer.g(-17464);
           return;

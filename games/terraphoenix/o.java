@@ -4,7 +4,7 @@
 final class o {
     static int field_b;
     static String[] field_a;
-    static bg[] field_c;
+    static IndexedSprite[] field_c;
 
     final static void a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5) {
         try {
@@ -13,7 +13,7 @@ final class o {
             field_b = -25;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "o.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "o.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -25,24 +25,24 @@ final class o {
         RuntimeException var2 = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (fb) (hd.field_p.d(9272));
+          var4 = (fb) (hd.field_p.beginBackward(9272));
           while (var4 != null) {
             mh.a(var4, param0, 0);
-            var4 = (fb) (hd.field_p.e((byte) -119));
+            var4 = (fb) (hd.field_p.nextBackward((byte) -119));
           }
           if (param1 >= -38) {
             o.b(48, (byte) 24);
           }
-          var5 = (nd) (BattleUnit.field_Q.d(9272));
+          var5 = (nd) (BattleUnit.field_Q.beginBackward(9272));
           while (var5 != null) {
             WidgetContainer.a((byte) 15, var5, param0);
-            var5 = (nd) (BattleUnit.field_Q.e((byte) -119));
+            var5 = (nd) (BattleUnit.field_Q.nextBackward((byte) -119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "o.A(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "o.A(" + param0 + ',' + param1 + ')');
         }
     }
 

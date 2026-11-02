@@ -32,11 +32,11 @@ final class ArchiveIndex {
         field_m = null;
     }
 
-    final static bg a(int param0) {
+    final static IndexedSprite a(int param0) {
         if (param0 < 111) {
           ArchiveIndex.a((byte) 11);
         }
-        bg var1 = new bg(ah.field_A, sb.field_j, ha.field_s[0], hj.field_K[0], sb.field_m[0], rf.field_p[0], qc.field_b[0], wb.field_a);
+        IndexedSprite var1 = new IndexedSprite(ah.field_A, sb.field_j, ha.field_s[0], hj.field_K[0], sb.field_m[0], rf.field_p[0], qc.field_b[0], wb.field_a);
         SocketConnector.a((byte) 79);
         return var1;
     }
@@ -255,7 +255,7 @@ final class ArchiveIndex {
           } else {
             stackIn_100_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class ArchiveIndex {
           }
           this.a(94, param0);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

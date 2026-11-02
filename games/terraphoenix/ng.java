@@ -6,7 +6,7 @@ class ng extends fd {
     static int field_x;
     static int field_v;
     static String field_w;
-    static bg[] field_u;
+    static IndexedSprite[] field_u;
     static int field_y;
     static volatile int field_t;
 
@@ -21,7 +21,7 @@ class ng extends fd {
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

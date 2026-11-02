@@ -58,7 +58,7 @@ final class ja extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ja.A(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ja.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class ja extends IntrusiveNode {
               pj.field_l[1] = 5;
             }
           } else {
-            var4 = af.a(ij.a(new String[]{"<br><%0><br>"}, -1, hj.field_H), da.field_h, -3, kh.field_F, ch.field_c);
+            var4 = af.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, hj.field_H), da.field_h, -3, kh.field_F, ch.field_c);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
               if (!"<%0>".equals(kh.field_F[var6])) {
@@ -234,7 +234,7 @@ final class ja extends IntrusiveNode {
             ka.a(kh.field_F, 0, ia.field_r, 0, var5);
             kj.field_c = new String[-1 + (var4 - var5)];
             ka.a(kh.field_F, 1 + var5, kj.field_c, 0, -1 + var4 - var5);
-            var4 = af.a(ij.a(new String[]{"<br><%0><br>"}, -1, wj.field_b), da.field_h, -3, kh.field_F, ch.field_c);
+            var4 = af.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, wj.field_b), da.field_h, -3, kh.field_F, ch.field_c);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
               if (!"<%0>".equals(kh.field_F[var6])) {
@@ -376,7 +376,7 @@ final class ja extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "ja.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "ja.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

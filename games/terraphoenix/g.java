@@ -164,7 +164,7 @@ class g extends wa {
           var13 = (g) (this.field_L.c((byte) 127));
           while (var13 != null) {
             var13.a(this.field_Bb, this.field_lb, (byte) -8, this.field_x, param4, this.field_vb);
-            var13 = (g) (this.field_L.b(-115));
+            var13 = (g) (this.field_L.nextForward(-115));
           }
         }
         if (var12 != 0) {
@@ -207,7 +207,7 @@ class g extends wa {
           }
           this.field_L.a(param0, -16611);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "g.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "g.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -361,7 +361,7 @@ class g extends wa {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
         }
     }
 
@@ -539,10 +539,10 @@ class g extends wa {
           }
         }
         if (null != this.field_L) {
-          var23_ref = (g) (this.field_L.d(9272));
+          var23_ref = (g) (this.field_L.beginBackward(9272));
           while (var23_ref != null) {
             var23_ref.a(this.field_x, this.field_vb + var19, this.field_T, true, this.field_lb, param5, param6, param7, var20 + this.field_Bb, param9, param10);
-            var23_ref = (g) (this.field_L.e((byte) -119));
+            var23_ref = (g) (this.field_L.nextBackward((byte) -119));
           }
         }
         SoftwareRasterizer.c(var12, var13, var14, var15);
@@ -575,7 +575,7 @@ class g extends wa {
             this.field_B = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "g.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "g.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class ki extends vj {
     private Sprite field_U;
-    static bg field_ab;
+    static IndexedSprite field_ab;
     private String field_V;
     static String field_S;
     private int field_W;
@@ -96,10 +96,10 @@ final class ki extends vj {
             var12 = new Sprite(195, 221);
             var6 = var12.field_r / 2;
             var12.a();
-            Archive.field_i.c(ij.a(new String[]{df.field_L}, param0 - 28419, d.field_J), var6, 40, 16777215, -1);
-            ja.field_m.c(ij.a(new String[]{df.field_L}, -1, ga.field_a), var6, 60, 16777215, -1);
-            Archive.field_i.c(ij.a(new String[]{fi.field_o}, -1, uj.field_b), var6, 110, 16777215, -1);
-            ja.field_m.c(ij.a(new String[]{fi.field_o}, param0 - 28419, bd.field_j), var6, 130, 16777215, -1);
+            Archive.field_i.c(MessageKeys.a(new String[]{df.field_L}, param0 - 28419, d.field_J), var6, 40, 16777215, -1);
+            ja.field_m.c(MessageKeys.a(new String[]{df.field_L}, -1, ga.field_a), var6, 60, 16777215, -1);
+            Archive.field_i.c(MessageKeys.a(new String[]{fi.field_o}, -1, uj.field_b), var6, 110, 16777215, -1);
+            ja.field_m.c(MessageKeys.a(new String[]{fi.field_o}, param0 - 28419, bd.field_j), var6, 130, 16777215, -1);
             Archive.field_i.c(sl.field_c, var6, 180, 16777215, -1);
             ja.field_m.c(nj.field_k, var6, 200, 16777215, -1);
             wa.a(var12, 0, var12.field_t, param0 - 28307, 1, 0, 3, var12.field_r);
@@ -131,7 +131,7 @@ final class ki extends vj {
             var2Lifetime1 = SoftwareRasterizer.field_k;
             var3Lifetime1 = SoftwareRasterizer.field_j;
             SoftwareRasterizer.b(rb.field_a);
-            var14 = ij.a(new String[]{oe.field_b[ej.field_S]}, -1, bj.field_b);
+            var14 = MessageKeys.a(new String[]{oe.field_b[ej.field_S]}, -1, bj.field_b);
             var5 = Archive.field_i.a(var14, nl.field_a);
             var6Lifetime1 = Archive.field_i.a(var14, nl.field_a, Archive.field_i.field_s + Archive.field_i.field_p);
             var7Lifetime1 = lm.field_b + (nl.field_a - var5) / 2;
@@ -162,7 +162,7 @@ final class ki extends vj {
               var9_intLifetime2 = -var8;
               ee.field_h = ee.field_h + var9_intLifetime2;
               p.field_e.field_u = p.field_e.field_u + var9_intLifetime2 * 2;
-              ad.field_h = ad.field_h - var9_intLifetime2;
+              TutorialController.field_h = TutorialController.field_h - var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime2 * 2;
               p.field_e.field_v = p.field_e.field_v + var9_intLifetime2;
               var8 = var8 + var9_intLifetime2;
@@ -174,7 +174,7 @@ final class ki extends vj {
               ee.field_h = ee.field_h + var9_intLifetime3;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
               p.field_e.field_v = p.field_e.field_v + var9_intLifetime3;
-              ad.field_h = ad.field_h - var9_intLifetime3;
+              TutorialController.field_h = TutorialController.field_h - var9_intLifetime3;
             }
             p.field_e.f();
             var9 = new Sprite(p.field_e.field_q, p.field_e.field_u);
@@ -185,7 +185,7 @@ final class ki extends vj {
             var9.b(0, 0);
             GameApplet.field_b = new Sprite(640, 480);
             GameApplet.field_b.a();
-            p.field_e.b(fi.field_q + (p.field_e.field_q >> 1), ad.field_h + (p.field_e.field_u >> 1), ha.field_p, 4096);
+            p.field_e.b(fi.field_q + (p.field_e.field_q >> 1), TutorialController.field_h + (p.field_e.field_u >> 1), ha.field_p, 4096);
             p.field_e = null;
             GameApplet.field_b.c();
             SoftwareRasterizer.a(var28, var2Lifetime1, var3Lifetime1);
@@ -198,7 +198,7 @@ final class ki extends vj {
             var3Lifetime2 = SoftwareRasterizer.field_j;
             SoftwareRasterizer.b(rb.field_a);
             var16 = new Sprite(412, 43);
-            var5_ref_String = ij.a(new String[]{jh.field_p}, param0 - 28419, ia.field_p);
+            var5_ref_String = MessageKeys.a(new String[]{jh.field_p}, param0 - 28419, ia.field_p);
             jh.field_p = null;
             var16.a();
             ja.field_m.a(var5_ref_String, 3, 3, -6 + var16.field_r, -6 + var16.field_t, 16777215, -1, 0, 1, ja.field_m.field_s + ja.field_m.field_p);
@@ -256,7 +256,7 @@ final class ki extends vj {
             } else {
               stackIn_52_3 = 4;
             }
-            var2Lifetime4 = (stackIn_51_0 * ij.a(stackIn_51_1, stackIn_51_2 << stackIn_52_3) >> 16) + 40;
+            var2Lifetime4 = (stackIn_51_0 * MessageKeys.a(stackIn_51_1, stackIn_51_2 << stackIn_52_3) >> 16) + 40;
             if (var2Lifetime4 > 0) {
               lm.field_e.d(230, 389, var2Lifetime4);
               lm.field_e.d(232, 389, var2Lifetime4);
@@ -290,7 +290,7 @@ final class ki extends vj {
             ve.field_a.b(586, var1_int);
             if (var1_int < MouseWheelInput.field_b &&
               MouseWheelInput.field_b < var1_int + ig.field_a.field_t) {
-              var2Lifetime5 = (40 * ij.a(2, ClientException.field_e << 4) >> 16) + 40;
+              var2Lifetime5 = (40 * MessageKeys.a(2, ClientException.field_e << 4) >> 16) + 40;
               if (0 < var2Lifetime5) {
                 if (ef.field_j > -ig.field_a.field_r + 269 &&
                   ef.field_j < 269) {
@@ -320,7 +320,7 @@ final class ki extends vj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1_ref), "ki.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1_ref), "ki.A(" + param0 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class ki extends vj {
           this.field_V = param1;
           this.a(param3, (byte) 64, param4, param2, param5);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -357,7 +357,7 @@ final class ki extends vj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -377,7 +377,7 @@ final class ki extends vj {
             field_Y = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ki.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ki.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -440,7 +440,7 @@ final class ki extends vj {
             il.a(1, this.field_U);
           }
           var16.b(112, 144, var16.field_q << 4, var16.field_u << 4, -this.field_W << 10, 4096);
-          ij.a(false);
+          MessageKeys.a(false);
           this.field_U.d(-(var16.field_q >> 1) + var9, -var16.field_u + var10, 256);
         }
     }

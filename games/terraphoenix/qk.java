@@ -33,7 +33,7 @@ final class qk {
 
     final Object a(long param0, int param1) {
         be var6 = null;
-        wc var7 = (wc) (this.field_c.a(param0, (byte) -21));
+        wc var7 = (wc) (this.field_c.get(param0, (byte) -21));
         be var6Lifetime1;
         if (var7 == null) {
           return null;
@@ -51,7 +51,7 @@ final class qk {
             var7.secondaryKey = 0L;
           } else {
             var6 = new be(var5, var7.field_q);
-            this.field_c.a(var6, (byte) -118, var7.key);
+            this.field_c.put(var6, (byte) -118, var7.key);
             this.field_d.a(var6, (byte) 17);
             ((wc) ((Object) var6)).secondaryKey = 0L;
             var7.unlink((byte) 12);
@@ -65,7 +65,7 @@ final class qk {
           var7.secondaryKey = 0L;
         } else {
           var6Lifetime1 = new be(var5, var7.field_q);
-          this.field_c.a(var6Lifetime1, (byte) -118, var7.key);
+          this.field_c.put(var6Lifetime1, (byte) -118, var7.key);
           this.field_d.a(var6Lifetime1, (byte) 17);
           ((wc) ((Object) var6Lifetime1)).secondaryKey = 0L;
           var7.unlink((byte) 12);
@@ -81,12 +81,12 @@ final class qk {
             this.a(19L, 96);
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "qk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "qk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private final void a(byte param0, long param1) {
-        wc var4 = (wc) (this.field_c.a(param1, (byte) -21));
+        wc var4 = (wc) (this.field_c.get(param1, (byte) -21));
         this.a(var4, 1);
         if (param0 >= -54) {
           qk.a(-85);
@@ -121,17 +121,17 @@ final class qk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapException(Throwable cause, String context) {
         ClientException var2 = null;
-        if (param0 instanceof ClientException) {
-          var2 = (ClientException) ((Object) param0);
-          var2.field_b = var2.field_b + ' ' + param1;
+        if (cause instanceof ClientException) {
+          var2 = (ClientException) ((Object) cause);
+          var2.field_b = var2.field_b + ' ' + context;
         } else {
-          var2 = new ClientException(param0, param1);
+          var2 = new ClientException(cause, context);
         }
         return var2;
     }
@@ -154,11 +154,11 @@ final class qk {
             this.a(var6, 1);
           }
           var6_ref = new be(param0, param2);
-          this.field_c.a(var6_ref, (byte) -50, param1);
+          this.field_c.put(var6_ref, (byte) -50, param1);
           this.field_d.a(var6_ref, (byte) 78);
           ((wc) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "qk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "qk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

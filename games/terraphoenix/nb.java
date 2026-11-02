@@ -3,7 +3,7 @@
  */
 abstract class nb {
     static int field_e;
-    static bg[] field_f;
+    static IndexedSprite[] field_f;
     static Sprite[] field_d;
     static int[] field_c;
     static int field_g;

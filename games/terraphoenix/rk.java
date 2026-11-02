@@ -4,7 +4,7 @@
 final class rk {
     static String field_b;
     int[] field_a;
-    static bg[] field_e;
+    static IndexedSprite[] field_e;
     static int field_c;
     int[] field_d;
     static Sprite[] field_f;
@@ -17,7 +17,7 @@ final class rk {
           lb.a("", param0, -1);
           MapTile.a(param0, -6242);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "rk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "rk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

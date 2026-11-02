@@ -35,7 +35,7 @@ final class sl {
               if (q.field_Jb != 0) {
                 ej.a(-12966, param0);
               } else {
-                ad.a(param1, 0, false);
+                TutorialController.a(param1, 0, false);
                 ia.a(0, param0, 0, (byte) 126);
               }
             }
@@ -55,7 +55,7 @@ final class sl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

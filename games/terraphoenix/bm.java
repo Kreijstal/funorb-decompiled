@@ -87,8 +87,8 @@ final class bm {
           }
         }
         if (!param0) {
-          ea.field_n = ui.a(80, var8, param1 ^ -48);
-          ui.field_e = null;
+          ea.field_n = AdminCheatOverlay.a(80, var8, param1 ^ -48);
+          AdminCheatOverlay.field_e = null;
           return new dc(param0);
         }
         var5 = var8.readUnsignedShort(-25578);
@@ -100,12 +100,12 @@ final class bm {
           } else {
             stackIn_24_0 = null;
           }
-          ui.field_e = stackIn_24_0;
+          AdminCheatOverlay.field_e = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          bd.a((Throwable) ((Object) var6), "CC1", -77);
-          ui.field_e = null;
+          bd.reportClientError((Throwable) ((Object) var6), "CC1", -77);
+          AdminCheatOverlay.field_e = null;
           ea.field_n = null;
           return new dc(param0);
         }
@@ -116,7 +116,7 @@ final class bm {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class bm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

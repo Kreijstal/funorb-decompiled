@@ -4,13 +4,13 @@
 import java.io.*;
 
 final class le extends di {
-    static ad field_q;
+    static TutorialController field_q;
     static rh field_n;
     static String field_m;
     static java.applet.Applet field_r;
     static String[] field_o;
     static int[] field_s;
-    static bg field_p;
+    static IndexedSprite field_p;
 
     final static String a(boolean param0) {
         if (IsaacCipher.field_f == ua.field_d) {
@@ -58,7 +58,7 @@ final class le extends di {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ final class le extends di {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class le extends di {
               wf.field_n = stackIn_12_0;
               uc.field_r = stackIn_12_0;
               var5.position = 0;
-              ej.a(gi.field_v, -25563, di.field_l, ij.field_d, hb.field_i);
+              ej.a(gi.field_v, -25563, di.field_l, MessageKeys.field_d, hb.field_i);
               bc.a(-1, 0);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

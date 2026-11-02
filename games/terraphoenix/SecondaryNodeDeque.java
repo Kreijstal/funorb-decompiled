@@ -78,7 +78,7 @@ final class SecondaryNodeDeque implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1_ref), "tc.B(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1_ref), "tc.B(" + param0 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class SecondaryNodeDeque implements Iterable {
           int var3_int = -73 / ((param1 + 57) / 49);
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "tc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "tc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class SecondaryNodeDeque implements Iterable {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

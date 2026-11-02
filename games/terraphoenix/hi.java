@@ -6,7 +6,7 @@ final class hi extends ei implements n {
     static int field_ab;
     static String field_Y;
     static String field_Z;
-    static bg[] field_W;
+    static IndexedSprite[] field_W;
 
     private final void k(int param0) {
         int var2 = 93 % ((68 - param0) / 58);
@@ -68,7 +68,7 @@ final class hi extends ei implements n {
           }
           int var6_int = 102 % ((-5 - param4) / 57);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "hi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "hi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class hi extends ei implements n {
         try {
           var4 = new eb(param1, param2);
           if (param0) {
-            field_W = (bg[]) null;
+            field_W = (IndexedSprite[]) null;
           }
           var4.field_l = (WidgetActionListener) ((Object) new ic());
           var5 = -6 + this.field_n;
@@ -112,7 +112,7 @@ final class hi extends ei implements n {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class hi extends ei implements n {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw qk.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

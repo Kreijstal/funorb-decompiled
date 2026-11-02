@@ -47,7 +47,7 @@ final class rj {
           var2_long = ll.a(param0 ^ -1491051318);
           if (GameApplet.field_d != 0 &&
             fg.field_d < 0) {
-            var4_ref_ra = (ra) (am.field_F.d(9272));
+            var4_ref_ra = (ra) (am.field_F.beginBackward(9272));
             if (var4_ref_ra != null &&
               var4_ref_ra.field_o < var2_long) {
               var4_ref_ra.unlink((byte) 12);
@@ -111,7 +111,7 @@ final class rj {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class rj {
             rj.a(-113, (int[]) null);
           }
           if (0 == var2) {
-            var4 = (me) (ga.field_r.d(9272));
+            var4 = (me) (ga.field_r.beginBackward(9272));
             if (var4 == null) {
               WidgetContainer.g(-17464);
               return;
@@ -161,11 +161,11 @@ final class rj {
           }
           if (var2 == 1) {
             var4_int = var10.e((byte) 118);
-            var5_ref_vi = (vi) (pd.field_g.d(9272));
+            var5_ref_vi = (vi) (pd.field_g.beginBackward(9272));
             while (var5_ref_vi != null) {
               if (var3 != var5_ref_vi.field_l ||
                 var5_ref_vi.field_s != var4_int) {
-                var5_ref_vi = (vi) (pd.field_g.e((byte) -119));
+                var5_ref_vi = (vi) (pd.field_g.nextBackward((byte) -119));
                 continue;
               }
               break;
@@ -177,13 +177,13 @@ final class rj {
             var5_ref_vi.unlink((byte) 12);
             return;
           }
-          bd.a((Throwable) null, "LR1: " + BattleUnit.i(-15465), 67);
+          bd.reportClientError((Throwable) null, "LR1: " + BattleUnit.i(-15465), 67);
           WidgetContainer.g(-17464);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "rj.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "rj.A(" + param0 + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class rj {
           }
           var3.writeByte(param2.field_j, 12);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "rj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "rj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

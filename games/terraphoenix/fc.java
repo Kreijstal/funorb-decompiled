@@ -6,7 +6,7 @@ final class fc {
     private int field_f;
     static Archive field_a;
     static int[] field_e;
-    static bg[] field_i;
+    static IndexedSprite[] field_i;
     private int field_d;
     static String[] field_k;
     static String field_g;
@@ -59,7 +59,7 @@ final class fc {
 
     final void b(int param0, int param1) {
         if (param1 <= 119) {
-          field_i = (bg[]) null;
+          field_i = (IndexedSprite[]) null;
         }
         if (param0 >= 0 &&
           this.field_d >= param0) {
@@ -123,7 +123,7 @@ final class fc {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -316,7 +316,7 @@ final class fc {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -500,7 +500,7 @@ final class fc {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

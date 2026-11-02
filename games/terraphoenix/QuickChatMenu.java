@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd {
+final class QuickChatMenu {
     private int field_j;
     static String field_f;
     private int field_b;
@@ -17,7 +17,7 @@ final class sd {
         field_a = null;
         if (param0 != -3864) {
           Sprite[] var2 = (Sprite[]) null;
-          sd.a(true, (Sprite[]) null);
+          QuickChatMenu.a(true, (Sprite[]) null);
         }
         field_f = null;
         field_d = null;
@@ -90,7 +90,7 @@ final class sd {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class sd {
         this.field_j = 0;
         if (param3 != -85) {
           PacketBuffer var6 = (PacketBuffer) null;
-          sd.a((byte) -10, (PlatformTaskDispatcher) null, (PacketBuffer) null, 107);
+          QuickChatMenu.a((byte) -10, (PlatformTaskDispatcher) null, (PacketBuffer) null, 107);
         }
         this.field_c = param1 ? true : false;
         if (!this.field_c) {
@@ -139,7 +139,7 @@ final class sd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1_ref), "sd.E(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1_ref), "sd.E(" + param0 + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class sd {
             } else {
               stackIn_39_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param3).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -358,7 +358,7 @@ final class sd {
         }
     }
 
-    sd(int param0) {
+    QuickChatMenu(int param0) {
         this.field_c = false;
         this.field_h = 0;
         this.field_g = param0;

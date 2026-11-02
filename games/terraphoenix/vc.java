@@ -113,9 +113,9 @@ abstract class vc {
           }
           s.field_a.a();
           var1.f(0, 0);
-          ij.a(!param0 ? true : false);
+          MessageKeys.a(!param0 ? true : false);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "vc.M(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "vc.M(" + param0 + ')');
         }
     }
 

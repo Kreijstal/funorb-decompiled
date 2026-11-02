@@ -64,7 +64,7 @@ final class BattleUnit {
     private int field_L;
     static String field_o;
     static String field_kb;
-    static bg[] field_M;
+    static IndexedSprite[] field_M;
     static String field_bb;
     static int field_V;
     static byte[] field_O;
@@ -150,119 +150,119 @@ final class BattleUnit {
     }
 
     private final Sprite a(byte param0) {
-        bg[] stackIn_23_0 = null;
+        IndexedSprite[] stackIn_23_0 = null;
         int stackIn_25_1 = 0;
-        bg[] stackIn_31_0 = null;
+        IndexedSprite[] stackIn_31_0 = null;
         int stackIn_32_1 = 0;
-        bg[] stackIn_38_0 = null;
+        IndexedSprite[] stackIn_38_0 = null;
         int stackIn_39_1 = 0;
-        bg[] stackIn_45_0 = null;
+        IndexedSprite[] stackIn_45_0 = null;
         int stackIn_46_1 = 0;
-        bg[] stackIn_52_0 = null;
+        IndexedSprite[] stackIn_52_0 = null;
         int stackIn_52_1 = 0;
         int stackIn_52_2 = 0;
         int stackIn_54_3;
-        bg[] stackIn_60_0 = null;
+        IndexedSprite[] stackIn_60_0 = null;
         int stackIn_60_1 = 0;
         int stackIn_60_2 = 0;
         int stackIn_62_3;
-        bg[] stackIn_67_0 = null;
+        IndexedSprite[] stackIn_67_0 = null;
         int stackIn_67_1 = 0;
         int stackIn_67_2 = 0;
         int stackIn_69_3;
-        bg[] stackIn_75_0 = null;
+        IndexedSprite[] stackIn_75_0 = null;
         int stackIn_76_1 = 0;
         int stackIn_83_0 = 0;
-        bg[] stackIn_164_0 = null;
+        IndexedSprite[] stackIn_164_0 = null;
         int stackIn_164_1 = 0;
         int stackIn_165_2 = 0;
-        bg[] stackIn_169_0 = null;
+        IndexedSprite[] stackIn_169_0 = null;
         int stackIn_169_1 = 0;
         int stackIn_170_2 = 0;
-        bg[] stackIn_175_0 = null;
+        IndexedSprite[] stackIn_175_0 = null;
         int stackIn_175_1 = 0;
         int stackIn_176_2 = 0;
-        bg[] stackIn_190_0 = null;
+        IndexedSprite[] stackIn_190_0 = null;
         int stackIn_190_1 = 0;
         int stackIn_191_2 = 0;
-        bg[] stackIn_196_0 = null;
+        IndexedSprite[] stackIn_196_0 = null;
         int stackIn_196_1 = 0;
         int stackIn_196_2 = 0;
         int stackIn_197_3;
-        bg[] stackIn_202_0 = null;
+        IndexedSprite[] stackIn_202_0 = null;
         int stackIn_202_1 = 0;
         int stackIn_202_2 = 0;
         int stackIn_203_3;
-        bg[] stackIn_207_0 = null;
+        IndexedSprite[] stackIn_207_0 = null;
         int stackIn_207_1 = 0;
         int stackIn_208_2 = 0;
-        bg[] stackIn_212_0 = null;
+        IndexedSprite[] stackIn_212_0 = null;
         int stackIn_213_1 = 0;
-        bg[] stackIn_217_0 = null;
+        IndexedSprite[] stackIn_217_0 = null;
         int stackIn_217_1 = 0;
         int stackIn_218_2 = 0;
-        bg[] stackIn_223_0 = null;
+        IndexedSprite[] stackIn_223_0 = null;
         int stackIn_224_1 = 0;
-        bg[] stackIn_228_0 = null;
+        IndexedSprite[] stackIn_228_0 = null;
         int stackIn_228_1 = 0;
         int stackIn_228_2 = 0;
         int stackIn_229_3;
-        bg[] stackIn_234_0 = null;
+        IndexedSprite[] stackIn_234_0 = null;
         int stackIn_234_1 = 0;
         int stackIn_235_2 = 0;
-        bg[] stackIn_240_0 = null;
+        IndexedSprite[] stackIn_240_0 = null;
         int stackIn_240_1 = 0;
         int stackIn_240_2 = 0;
         int stackIn_241_3;
-        bg[] stackIn_245_0 = null;
+        IndexedSprite[] stackIn_245_0 = null;
         int stackIn_246_1 = 0;
-        bg[] stackIn_250_0 = null;
+        IndexedSprite[] stackIn_250_0 = null;
         int stackIn_250_1 = 0;
         int stackIn_251_2 = 0;
-        bg[] stackIn_256_0 = null;
+        IndexedSprite[] stackIn_256_0 = null;
         int stackIn_257_1 = 0;
-        bg[] stackIn_262_0 = null;
+        IndexedSprite[] stackIn_262_0 = null;
         int stackIn_262_1 = 0;
         int stackIn_262_2 = 0;
         int stackIn_263_3;
-        bg[] stackIn_268_0 = null;
+        IndexedSprite[] stackIn_268_0 = null;
         int stackIn_268_1 = 0;
         int stackIn_268_2 = 0;
         int stackIn_269_3;
-        bg[] stackIn_274_0 = null;
+        IndexedSprite[] stackIn_274_0 = null;
         int stackIn_275_1 = 0;
-        bg[] stackIn_282_0 = null;
+        IndexedSprite[] stackIn_282_0 = null;
         int stackIn_282_1 = 0;
         int stackIn_282_2 = 0;
         int stackIn_283_3;
-        bg[] stackIn_288_0 = null;
+        IndexedSprite[] stackIn_288_0 = null;
         int stackIn_288_1 = 0;
         int stackIn_289_2 = 0;
-        bg[] stackIn_294_0 = null;
+        IndexedSprite[] stackIn_294_0 = null;
         int stackIn_295_1 = 0;
-        bg[] stackIn_299_0 = null;
+        IndexedSprite[] stackIn_299_0 = null;
         int stackIn_300_1 = 0;
-        bg[] stackIn_305_0 = null;
+        IndexedSprite[] stackIn_305_0 = null;
         int stackIn_306_1 = 0;
-        bg[] stackIn_311_0 = null;
+        IndexedSprite[] stackIn_311_0 = null;
         int stackIn_311_1 = 0;
         int stackIn_312_2 = 0;
-        bg[] stackIn_317_0 = null;
+        IndexedSprite[] stackIn_317_0 = null;
         int stackIn_317_1 = 0;
         int stackIn_318_2 = 0;
-        bg[] stackIn_323_0 = null;
+        IndexedSprite[] stackIn_323_0 = null;
         int stackIn_324_1 = 0;
-        bg[] stackIn_332_0 = null;
+        IndexedSprite[] stackIn_332_0 = null;
         int stackIn_333_1 = 0;
-        bg[] stackIn_337_0 = null;
+        IndexedSprite[] stackIn_337_0 = null;
         int stackIn_337_1 = 0;
         int stackIn_338_2 = 0;
-        bg[] stackIn_343_0 = null;
+        IndexedSprite[] stackIn_343_0 = null;
         int stackIn_344_1 = 0;
-        bg[] stackIn_348_0 = null;
+        IndexedSprite[] stackIn_348_0 = null;
         int stackIn_348_1 = 0;
         int stackIn_349_2 = 0;
-        bg[] stackIn_353_0 = null;
+        IndexedSprite[] stackIn_353_0 = null;
         int stackIn_353_1 = 0;
         int stackIn_354_2 = 0;
         int var3;
@@ -325,7 +325,7 @@ final class BattleUnit {
           } else {
             stackIn_25_1 = 0;
           }
-          var6 = ((bg) (Object) stackIn_23_0[stackIn_25_1 + var3 + 1]).a().b();
+          var6 = ((IndexedSprite) (Object) stackIn_23_0[stackIn_25_1 + var3 + 1]).a().b();
         }
         if (this.field_U == 1) {
           stackIn_31_0 = DualLinkNode.field_k;
@@ -335,7 +335,7 @@ final class BattleUnit {
           } else {
             stackIn_32_1 = 0;
           }
-          var6 = ((bg) (Object) stackIn_31_0[stackIn_32_1 + 0 + var3]).b();
+          var6 = ((IndexedSprite) (Object) stackIn_31_0[stackIn_32_1 + 0 + var3]).b();
         }
         if (this.field_U == 2) {
           stackIn_38_0 = DualLinkNode.field_k;
@@ -345,7 +345,7 @@ final class BattleUnit {
           } else {
             stackIn_39_1 = 0;
           }
-          var6 = ((bg) (Object) stackIn_38_0[stackIn_39_1 + 1 + var3]).b();
+          var6 = ((IndexedSprite) (Object) stackIn_38_0[stackIn_39_1 + 1 + var3]).b();
         }
         if (this.field_U == 3) {
           stackIn_45_0 = DualLinkNode.field_k;
@@ -355,7 +355,7 @@ final class BattleUnit {
           } else {
             stackIn_46_1 = 0;
           }
-          var6 = ((bg) (Object) stackIn_45_0[stackIn_46_1 + (2 + var3)]).b();
+          var6 = ((IndexedSprite) (Object) stackIn_45_0[stackIn_46_1 + (2 + var3)]).b();
         }
         if (this.field_U == 4) {
           stackIn_52_0 = DualLinkNode.field_k;
@@ -367,7 +367,7 @@ final class BattleUnit {
           } else {
             stackIn_54_3 = 0;
           }
-          var6 = ((bg) (Object) stackIn_52_0[stackIn_52_1 + (stackIn_52_2 + stackIn_54_3)]).b();
+          var6 = ((IndexedSprite) (Object) stackIn_52_0[stackIn_52_1 + (stackIn_52_2 + stackIn_54_3)]).b();
         }
         if (this.field_U == 5) {
           stackIn_60_0 = DualLinkNode.field_k;
@@ -379,7 +379,7 @@ final class BattleUnit {
           } else {
             stackIn_62_3 = 0;
           }
-          var6 = ((bg) (Object) stackIn_60_0[stackIn_60_1 + (stackIn_60_2 + stackIn_62_3)]).b();
+          var6 = ((IndexedSprite) (Object) stackIn_60_0[stackIn_60_1 + (stackIn_60_2 + stackIn_62_3)]).b();
         }
         if (this.field_U == 6) {
           stackIn_67_0 = DualLinkNode.field_k;
@@ -391,7 +391,7 @@ final class BattleUnit {
           } else {
             stackIn_69_3 = 0;
           }
-          var6 = ((bg) (Object) stackIn_67_0[stackIn_67_1 + (stackIn_67_2 + stackIn_69_3)]).a().b();
+          var6 = ((IndexedSprite) (Object) stackIn_67_0[stackIn_67_1 + (stackIn_67_2 + stackIn_69_3)]).a().b();
         }
         if (this.field_U == 7) {
           stackIn_75_0 = DualLinkNode.field_k;
@@ -401,7 +401,7 @@ final class BattleUnit {
           } else {
             stackIn_76_1 = 0;
           }
-          var6 = ((bg) (Object) stackIn_75_0[stackIn_76_1 + 2 + var3]).a().b();
+          var6 = ((IndexedSprite) (Object) stackIn_75_0[stackIn_76_1 + 2 + var3]).a().b();
         }
         if (this.field_B == 1) {
           stackIn_83_0 = (this.f((byte) -117)) ? 1 : 0;
@@ -510,19 +510,19 @@ final class BattleUnit {
               stackIn_164_0 = di.field_f;
               stackIn_164_1 = 3;
               stackIn_165_2 = (var7 != 0) ? 5 : 0;
-              ((bg) (Object) stackIn_164_0[stackIn_164_1 + stackIn_165_2]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_164_0[stackIn_164_1 + stackIn_165_2]).a(0, 0);
             }
             if (5 == var8) {
               stackIn_169_0 = di.field_f;
               stackIn_169_1 = 4;
               stackIn_170_2 = (var7 == 0) ? 0 : 5;
-              ((bg) (Object) stackIn_169_0[stackIn_169_1 + stackIn_170_2]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_169_0[stackIn_169_1 + stackIn_170_2]).a(0, 0);
             }
             if (var8 == 6) {
               stackIn_175_0 = di.field_f;
               stackIn_175_1 = 3;
               stackIn_176_2 = (var7 != 0) ? 5 : 0;
-              ((bg) (Object) stackIn_175_0[stackIn_175_1 + stackIn_176_2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_175_0[stackIn_175_1 + stackIn_176_2]).a().a(0, 0);
             }
           }
         }
@@ -541,50 +541,50 @@ final class BattleUnit {
               stackIn_190_0 = wa.field_r;
               stackIn_190_1 = 1 + var3;
               stackIn_191_2 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_190_0[stackIn_190_1 + stackIn_191_2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_190_0[stackIn_190_1 + stackIn_191_2]).a().a(0, 0);
             }
             if (1 == var8) {
               stackIn_196_0 = wa.field_r;
               stackIn_196_1 = 0;
               stackIn_196_2 = var3;
               stackIn_197_3 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_196_0[stackIn_196_1 + (stackIn_196_2 + stackIn_197_3)]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_196_0[stackIn_196_1 + (stackIn_196_2 + stackIn_197_3)]).a(0, 0);
             }
             if (2 == var8) {
               stackIn_202_0 = wa.field_r;
               stackIn_202_1 = var3;
               stackIn_202_2 = 1;
               stackIn_203_3 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_202_0[stackIn_202_1 + (stackIn_202_2 + stackIn_203_3)]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_202_0[stackIn_202_1 + (stackIn_202_2 + stackIn_203_3)]).a(0, 0);
             }
             if (var8 == 3) {
               stackIn_207_0 = wa.field_r;
               stackIn_207_1 = var3 + 2;
               stackIn_208_2 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_207_0[stackIn_207_1 + stackIn_208_2]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_207_0[stackIn_207_1 + stackIn_208_2]).a(0, 0);
             }
             if (var8 == 4) {
               stackIn_212_0 = wa.field_r;
               stackIn_213_1 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_212_0[stackIn_213_1 + 3 + var3]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_212_0[stackIn_213_1 + 3 + var3]).a(0, 0);
             }
             if (5 == var8) {
               stackIn_217_0 = wa.field_r;
               stackIn_217_1 = var3 + 4;
               stackIn_218_2 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_217_0[stackIn_217_1 + stackIn_218_2]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_217_0[stackIn_217_1 + stackIn_218_2]).a(0, 0);
             }
             if (var8 == 6) {
               stackIn_223_0 = wa.field_r;
               stackIn_224_1 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_223_0[stackIn_224_1 + var3 + 3]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_223_0[stackIn_224_1 + var3 + 3]).a().a(0, 0);
             }
             if (var8 == 7) {
               stackIn_228_0 = wa.field_r;
               stackIn_228_1 = 2;
               stackIn_228_2 = var3;
               stackIn_229_3 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_228_0[stackIn_228_1 + (stackIn_228_2 + stackIn_229_3)]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_228_0[stackIn_228_1 + (stackIn_228_2 + stackIn_229_3)]).a().a(0, 0);
             }
           }
           if (2 == this.field_Z.field_m.field_f) {
@@ -592,49 +592,49 @@ final class BattleUnit {
               stackIn_234_0 = f.field_i;
               stackIn_234_1 = 1 + var3;
               stackIn_235_2 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_234_0[stackIn_234_1 + stackIn_235_2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_234_0[stackIn_234_1 + stackIn_235_2]).a().a(0, 0);
             }
             if (var8 == 1) {
               stackIn_240_0 = f.field_i;
               stackIn_240_1 = 0;
               stackIn_240_2 = var3;
               stackIn_241_3 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_240_0[stackIn_240_1 + (stackIn_240_2 + stackIn_241_3)]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_240_0[stackIn_240_1 + (stackIn_240_2 + stackIn_241_3)]).a(0, 0);
             }
             if (var8 == 2) {
               stackIn_245_0 = f.field_i;
               stackIn_246_1 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_245_0[stackIn_246_1 + (1 + var3)]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_245_0[stackIn_246_1 + (1 + var3)]).a(0, 0);
             }
             if (var8 == 3) {
               stackIn_250_0 = f.field_i;
               stackIn_250_1 = 2 + var3;
               stackIn_251_2 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_250_0[stackIn_250_1 + stackIn_251_2]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_250_0[stackIn_250_1 + stackIn_251_2]).a(0, 0);
             }
             if (var8 == 4) {
               stackIn_256_0 = f.field_i;
               stackIn_257_1 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_256_0[stackIn_257_1 + (var3 + 3)]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_256_0[stackIn_257_1 + (var3 + 3)]).a(0, 0);
             }
             if (var8 == 5) {
               stackIn_262_0 = f.field_i;
               stackIn_262_1 = var3;
               stackIn_262_2 = 4;
               stackIn_263_3 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_262_0[stackIn_262_1 + (stackIn_262_2 + stackIn_263_3)]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_262_0[stackIn_262_1 + (stackIn_262_2 + stackIn_263_3)]).a(0, 0);
             }
             if (var8 == 6) {
               stackIn_268_0 = f.field_i;
               stackIn_268_1 = 3;
               stackIn_268_2 = -var3;
               stackIn_269_3 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_268_0[stackIn_268_1 - (stackIn_268_2 - stackIn_269_3)]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_268_0[stackIn_268_1 - (stackIn_268_2 - stackIn_269_3)]).a().a(0, 0);
             }
             if (7 == var8) {
               stackIn_274_0 = f.field_i;
               stackIn_275_1 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_274_0[stackIn_275_1 + var3 + 2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_274_0[stackIn_275_1 + var3 + 2]).a().a(0, 0);
             }
           }
           if (this.field_Z.field_m.field_f == 3) {
@@ -643,45 +643,45 @@ final class BattleUnit {
               stackIn_282_1 = var3;
               stackIn_282_2 = 1;
               stackIn_283_3 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_282_0[stackIn_282_1 + (stackIn_282_2 + stackIn_283_3)]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_282_0[stackIn_282_1 + (stackIn_282_2 + stackIn_283_3)]).a().a(0, 0);
             }
             if (1 == var8) {
               stackIn_288_0 = pc.field_c;
               stackIn_288_1 = var3 + 0;
               stackIn_289_2 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_288_0[stackIn_288_1 + stackIn_289_2]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_288_0[stackIn_288_1 + stackIn_289_2]).a(0, 0);
             }
             if (var8 == 2) {
               stackIn_294_0 = pc.field_c;
               stackIn_295_1 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_294_0[stackIn_295_1 + var3 + 1]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_294_0[stackIn_295_1 + var3 + 1]).a(0, 0);
             }
             if (var8 == 3) {
               stackIn_299_0 = pc.field_c;
               stackIn_300_1 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_299_0[stackIn_300_1 + (2 + var3)]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_299_0[stackIn_300_1 + (2 + var3)]).a(0, 0);
             }
             if (var8 == 4) {
               stackIn_305_0 = pc.field_c;
               stackIn_306_1 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_305_0[stackIn_306_1 + var3 + 3]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_305_0[stackIn_306_1 + var3 + 3]).a(0, 0);
             }
             if (5 == var8) {
               stackIn_311_0 = pc.field_c;
               stackIn_311_1 = var3 + 4;
               stackIn_312_2 = (var7 == 0) ? 0 : 15;
-              ((bg) (Object) stackIn_311_0[stackIn_311_1 + stackIn_312_2]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_311_0[stackIn_311_1 + stackIn_312_2]).a(0, 0);
             }
             if (var8 == 6) {
               stackIn_317_0 = pc.field_c;
               stackIn_317_1 = 3 + var3;
               stackIn_318_2 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_317_0[stackIn_317_1 + stackIn_318_2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_317_0[stackIn_317_1 + stackIn_318_2]).a().a(0, 0);
             }
             if (var8 == 7) {
               stackIn_323_0 = pc.field_c;
               stackIn_324_1 = (var7 != 0) ? 15 : 0;
-              ((bg) (Object) stackIn_323_0[stackIn_324_1 + (var3 + 2)]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_323_0[stackIn_324_1 + (var3 + 2)]).a().a(0, 0);
             }
           }
           if (this.field_Z.field_b != null &&
@@ -689,30 +689,30 @@ final class BattleUnit {
             if (var8 == 0) {
               stackIn_332_0 = di.field_f;
               stackIn_333_1 = (var7 == 0) ? 0 : 5;
-              ((bg) (Object) stackIn_332_0[stackIn_333_1 + 1]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_332_0[stackIn_333_1 + 1]).a().a(0, 0);
             }
             if (1 == var8) {
               stackIn_337_0 = di.field_f;
               stackIn_337_1 = 0;
               stackIn_338_2 = (var7 != 0) ? 5 : 0;
-              ((bg) (Object) stackIn_337_0[stackIn_337_1 + stackIn_338_2]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_337_0[stackIn_337_1 + stackIn_338_2]).a(0, 0);
             }
             if (2 == var8) {
               stackIn_343_0 = di.field_f;
               stackIn_344_1 = (var7 == 0) ? 0 : 5;
-              ((bg) (Object) stackIn_343_0[stackIn_344_1 + 1]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_343_0[stackIn_344_1 + 1]).a(0, 0);
             }
             if (var8 == 3) {
               stackIn_348_0 = di.field_f;
               stackIn_348_1 = 2;
               stackIn_349_2 = (var7 == 0) ? 0 : 5;
-              ((bg) (Object) stackIn_348_0[stackIn_348_1 + stackIn_349_2]).a(0, 0);
+              ((IndexedSprite) (Object) stackIn_348_0[stackIn_348_1 + stackIn_349_2]).a(0, 0);
             }
             if (7 == var8) {
               stackIn_353_0 = di.field_f;
               stackIn_353_1 = 2;
               stackIn_354_2 = (var7 == 0) ? 0 : 5;
-              ((bg) (Object) stackIn_353_0[stackIn_353_1 + stackIn_354_2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_353_0[stackIn_353_1 + stackIn_354_2]).a().a(0, 0);
             }
           }
         }
@@ -1148,20 +1148,20 @@ final class BattleUnit {
             }
             switch (var3) {
               case 0:
-                ui.field_a[8 + var5].a(13, -6);
+                AdminCheatOverlay.field_a[8 + var5].a(13, -6);
                 break;
               case 5:
-                ui.field_a[var5].a(13, -6);
+                AdminCheatOverlay.field_a[var5].a(13, -6);
                 break;
               case 10:
-                ui.field_a[var5 + 12].a(13, -6);
+                AdminCheatOverlay.field_a[var5 + 12].a(13, -6);
                 break;
               case 15:
-                ui.field_a[4 + var5].a(13, -6);
+                AdminCheatOverlay.field_a[4 + var5].a(13, -6);
               default:
                 break regionExit1;
               case 20:
-                ui.field_a[var5 + 12].a(13, -6);
+                AdminCheatOverlay.field_a[var5 + 12].a(13, -6);
                 if (var8 == 0) {
                   break regionExit1;
                 }
@@ -1445,55 +1445,55 @@ final class BattleUnit {
     }
 
     private final Sprite b(boolean param0) {
-        bg[] stackIn_28_0 = null;
+        IndexedSprite[] stackIn_28_0 = null;
         int stackIn_30_1 = 0;
-        bg[] stackIn_36_0 = null;
+        IndexedSprite[] stackIn_36_0 = null;
         int stackIn_36_1 = 0;
         int stackIn_38_2 = 0;
-        bg[] stackIn_43_0 = null;
+        IndexedSprite[] stackIn_43_0 = null;
         int stackIn_43_1 = 0;
         int stackIn_43_2 = 0;
         int stackIn_45_3;
-        bg[] stackIn_51_0 = null;
+        IndexedSprite[] stackIn_51_0 = null;
         int stackIn_52_1 = 0;
-        bg[] stackIn_58_0 = null;
+        IndexedSprite[] stackIn_58_0 = null;
         int stackIn_58_1 = 0;
         int stackIn_58_2 = 0;
         int stackIn_60_3;
-        bg[] stackIn_66_0 = null;
+        IndexedSprite[] stackIn_66_0 = null;
         int stackIn_68_1 = 0;
-        bg[] stackIn_73_0 = null;
+        IndexedSprite[] stackIn_73_0 = null;
         int stackIn_73_1 = 0;
         int stackIn_73_2 = 0;
         int stackIn_75_3;
-        bg[] stackIn_81_0 = null;
+        IndexedSprite[] stackIn_81_0 = null;
         int stackIn_81_1 = 0;
         int stackIn_83_2 = 0;
-        bg[] stackIn_92_0 = null;
+        IndexedSprite[] stackIn_92_0 = null;
         int stackIn_92_1 = 0;
         int stackIn_94_2 = 0;
-        bg[] stackIn_99_0 = null;
+        IndexedSprite[] stackIn_99_0 = null;
         int stackIn_99_1 = 0;
         int stackIn_100_2 = 0;
-        bg[] stackIn_105_0 = null;
+        IndexedSprite[] stackIn_105_0 = null;
         int stackIn_105_1 = 0;
         int stackIn_106_2 = 0;
-        bg[] stackIn_111_0 = null;
+        IndexedSprite[] stackIn_111_0 = null;
         int stackIn_111_1 = 0;
         int stackIn_113_2 = 0;
-        bg[] stackIn_119_0 = null;
+        IndexedSprite[] stackIn_119_0 = null;
         int stackIn_119_1 = 0;
         int stackIn_119_2 = 0;
         int stackIn_120_3;
-        bg[] stackIn_125_0 = null;
+        IndexedSprite[] stackIn_125_0 = null;
         int stackIn_125_1 = 0;
         int stackIn_125_2 = 0;
         int stackIn_127_3;
-        bg[] stackIn_133_0 = null;
+        IndexedSprite[] stackIn_133_0 = null;
         int stackIn_133_1 = 0;
         int stackIn_133_2 = 0;
         int stackIn_135_3;
-        bg[] stackIn_141_0 = null;
+        IndexedSprite[] stackIn_141_0 = null;
         int stackIn_141_1 = 0;
         int stackIn_141_2 = 0;
         int stackIn_143_3 = 0;
@@ -1558,7 +1558,7 @@ final class BattleUnit {
               } else {
                 stackIn_30_1 = 0;
               }
-              ((bg) (Object) stackIn_28_0[stackIn_30_1 + (1 + var3)]).b(0, 0);
+              ((IndexedSprite) (Object) stackIn_28_0[stackIn_30_1 + (1 + var3)]).b(0, 0);
             }
             if (this.field_U == 1) {
               stackIn_36_0 = d.field_N;
@@ -1569,7 +1569,7 @@ final class BattleUnit {
               } else {
                 stackIn_38_2 = 0;
               }
-              ((bg) (Object) stackIn_36_0[stackIn_36_1 + stackIn_38_2]).c(0, 0);
+              ((IndexedSprite) (Object) stackIn_36_0[stackIn_36_1 + stackIn_38_2]).c(0, 0);
             }
             if (this.field_U == 2) {
               stackIn_43_0 = d.field_N;
@@ -1581,7 +1581,7 @@ final class BattleUnit {
               } else {
                 stackIn_45_3 = 0;
               }
-              ((bg) (Object) stackIn_43_0[stackIn_43_1 + (stackIn_43_2 + stackIn_45_3)]).c(0, 0);
+              ((IndexedSprite) (Object) stackIn_43_0[stackIn_43_1 + (stackIn_43_2 + stackIn_45_3)]).c(0, 0);
             }
             if (this.field_U == 3) {
               stackIn_51_0 = d.field_N;
@@ -1591,7 +1591,7 @@ final class BattleUnit {
               } else {
                 stackIn_52_1 = 0;
               }
-              ((bg) (Object) stackIn_51_0[stackIn_52_1 + (2 + var3)]).c(0, 0);
+              ((IndexedSprite) (Object) stackIn_51_0[stackIn_52_1 + (2 + var3)]).c(0, 0);
             }
             if (this.field_U == 4) {
               stackIn_58_0 = d.field_N;
@@ -1603,7 +1603,7 @@ final class BattleUnit {
               } else {
                 stackIn_60_3 = 0;
               }
-              ((bg) (Object) stackIn_58_0[stackIn_58_1 + (stackIn_58_2 + stackIn_60_3)]).c(0, 0);
+              ((IndexedSprite) (Object) stackIn_58_0[stackIn_58_1 + (stackIn_58_2 + stackIn_60_3)]).c(0, 0);
             }
             if (this.field_U == 5) {
               stackIn_66_0 = d.field_N;
@@ -1613,7 +1613,7 @@ final class BattleUnit {
               } else {
                 stackIn_68_1 = 0;
               }
-              ((bg) (Object) stackIn_66_0[stackIn_68_1 + 4 + var3]).c(0, 0);
+              ((IndexedSprite) (Object) stackIn_66_0[stackIn_68_1 + 4 + var3]).c(0, 0);
             }
             if (6 == this.field_U) {
               stackIn_73_0 = d.field_N;
@@ -1625,7 +1625,7 @@ final class BattleUnit {
               } else {
                 stackIn_75_3 = 0;
               }
-              ((bg) (Object) stackIn_73_0[stackIn_73_1 + (stackIn_73_2 + stackIn_75_3)]).b(0, 0);
+              ((IndexedSprite) (Object) stackIn_73_0[stackIn_73_1 + (stackIn_73_2 + stackIn_75_3)]).b(0, 0);
             }
             if (this.field_U != 7) {
               break regionExit1;
@@ -1638,7 +1638,7 @@ final class BattleUnit {
             } else {
               stackIn_83_2 = 0;
             }
-            ((bg) (Object) stackIn_81_0[stackIn_81_1 + stackIn_83_2]).b(0, 0);
+            ((IndexedSprite) (Object) stackIn_81_0[stackIn_81_1 + stackIn_83_2]).b(0, 0);
             if (var8 == 0) {
               break regionExit1;
             }
@@ -1655,7 +1655,7 @@ final class BattleUnit {
                   } else {
                     stackIn_94_2 = 0;
                   }
-                  ((bg) (Object) stackIn_92_0[stackIn_92_1 + stackIn_94_2]).b(0, 0);
+                  ((IndexedSprite) (Object) stackIn_92_0[stackIn_92_1 + stackIn_94_2]).b(0, 0);
                 }
                 if (1 == this.field_U) {
                   stackIn_99_0 = d.field_N;
@@ -1666,7 +1666,7 @@ final class BattleUnit {
                   } else {
                     stackIn_100_2 = 0;
                   }
-                  ((bg) (Object) stackIn_99_0[stackIn_99_1 + stackIn_100_2]).c(0, 0);
+                  ((IndexedSprite) (Object) stackIn_99_0[stackIn_99_1 + stackIn_100_2]).c(0, 0);
                 }
                 if (this.field_U == 2) {
                   stackIn_105_0 = d.field_N;
@@ -1677,7 +1677,7 @@ final class BattleUnit {
                   } else {
                     stackIn_106_2 = 0;
                   }
-                  ((bg) (Object) stackIn_105_0[stackIn_105_1 + stackIn_106_2]).c(0, 0);
+                  ((IndexedSprite) (Object) stackIn_105_0[stackIn_105_1 + stackIn_106_2]).c(0, 0);
                 }
                 if (this.field_U == 3) {
                   stackIn_111_0 = d.field_N;
@@ -1688,7 +1688,7 @@ final class BattleUnit {
                   } else {
                     stackIn_113_2 = 0;
                   }
-                  ((bg) (Object) stackIn_111_0[stackIn_111_1 + stackIn_113_2]).c(0, 0);
+                  ((IndexedSprite) (Object) stackIn_111_0[stackIn_111_1 + stackIn_113_2]).c(0, 0);
                 }
                 if (this.field_U == 4) {
                   stackIn_119_0 = d.field_N;
@@ -1700,7 +1700,7 @@ final class BattleUnit {
                   } else {
                     stackIn_120_3 = 0;
                   }
-                  ((bg) (Object) stackIn_119_0[stackIn_119_1 - (stackIn_119_2 - stackIn_120_3)]).c(0, 0);
+                  ((IndexedSprite) (Object) stackIn_119_0[stackIn_119_1 - (stackIn_119_2 - stackIn_120_3)]).c(0, 0);
                 }
                 if (this.field_U == 5) {
                   stackIn_125_0 = d.field_N;
@@ -1712,7 +1712,7 @@ final class BattleUnit {
                   } else {
                     stackIn_127_3 = 0;
                   }
-                  ((bg) (Object) stackIn_125_0[stackIn_125_1 - (stackIn_125_2 - stackIn_127_3)]).c(0, 0);
+                  ((IndexedSprite) (Object) stackIn_125_0[stackIn_125_1 - (stackIn_125_2 - stackIn_127_3)]).c(0, 0);
                 }
                 if (6 == this.field_U) {
                   stackIn_133_0 = d.field_N;
@@ -1724,7 +1724,7 @@ final class BattleUnit {
                   } else {
                     stackIn_135_3 = 0;
                   }
-                  ((bg) (Object) stackIn_133_0[stackIn_133_1 + (stackIn_133_2 + stackIn_135_3)]).b(0, 0);
+                  ((IndexedSprite) (Object) stackIn_133_0[stackIn_133_1 + (stackIn_133_2 + stackIn_135_3)]).b(0, 0);
                 }
                 if (this.field_U != 7) {
                   break regionExit1;
@@ -1738,7 +1738,7 @@ final class BattleUnit {
                 } else {
                   stackIn_143_3 = 0;
                 }
-                ((bg) (Object) stackIn_141_0[stackIn_141_1 + (stackIn_141_2 + stackIn_143_3)]).b(0, 0);
+                ((IndexedSprite) (Object) stackIn_141_0[stackIn_141_1 + (stackIn_141_2 + stackIn_143_3)]).b(0, 0);
                 if (var8 == 0) {
                   break regionExit1;
                 }
@@ -2151,7 +2151,7 @@ final class BattleUnit {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -2347,7 +2347,7 @@ final class BattleUnit {
           if (this.field_s) {
             GameApplet.field_m = true;
             this.tile.field_w = true;
-            ui.field_f = this;
+            AdminCheatOverlay.field_f = this;
             this.field_s = false;
           }
           this.field_u = 0;
@@ -2567,7 +2567,7 @@ final class BattleUnit {
         if (this.tile.field_w &&
           this.field_P > 0) {
           this.tile.field_w = false;
-          ui.field_f = null;
+          AdminCheatOverlay.field_f = null;
           this.field_s = true;
           GameApplet.field_m = false;
         }
@@ -4222,7 +4222,7 @@ final class BattleUnit {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 

@@ -62,12 +62,12 @@ final class jl extends jc {
             var4 = hm.a((byte) -126, param0);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!ad.a((byte) 103, var4.charAt(0)) &&
-                !ad.a((byte) 107, var4.charAt(var4.length() - 1))) {
+              if (!TutorialController.a((byte) 103, var4.charAt(0)) &&
+                !TutorialController.a((byte) 107, var4.charAt(var4.length() - 1))) {
                 var5 = 0;
                 for (var6 = 0; var6 < param0.length(); var6++) {
                   var7 = param0.charAt(var6);
-                  if (!ad.a((byte) 91, (char) var7)) {
+                  if (!TutorialController.a((byte) 91, (char) var7)) {
                     var5 = 0;
                   } else {
                     var5++;
@@ -102,7 +102,7 @@ final class jl extends jc {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class jl extends jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1_ref), "jl.H(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1_ref), "jl.H(" + param0 + ')');
         }
     }
 
@@ -297,7 +297,7 @@ final class jl extends jc {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -308,7 +308,7 @@ final class jl extends jc {
           this.field_F = param0;
           this.field_J = 256;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -332,7 +332,7 @@ final class jl extends jc {
         Sprite var6 = new Sprite(this.field_F.field_p, this.field_F.field_n);
         il.a(1, var6);
         this.field_F.a(0, -128, param2, 0);
-        ij.a(false);
+        MessageKeys.a(false);
         var6.a(param0 + this.field_w, param3 + this.field_u, this.field_J);
     }
 

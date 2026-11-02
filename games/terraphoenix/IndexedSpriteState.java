@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class td {
+abstract class IndexedSpriteState {
     static java.applet.Applet field_b;
     int field_g;
     static String field_h;

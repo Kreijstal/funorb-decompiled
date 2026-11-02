@@ -62,7 +62,7 @@ final class ProxySocketConnector extends SocketConnector {
             } else {
               stackIn_25_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -130,7 +130,7 @@ final class ProxySocketConnector extends SocketConnector {
           var22 = null;
           var12 = Terraphoenix.field_V;
           try {
-            var13 = (wf) (rd.field_k.d(9272));
+            var13 = (wf) (rd.field_k.beginBackward(9272));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -280,7 +280,7 @@ final class ProxySocketConnector extends SocketConnector {
             } else {
               stackIn_68_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -371,7 +371,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -468,7 +468,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

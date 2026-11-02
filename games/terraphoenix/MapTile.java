@@ -509,7 +509,7 @@ final class MapTile {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1396,22 +1396,22 @@ final class MapTile {
             var11 = null;
             var11Lifetime1 = null;
             if (1 == this.field_m) {
-              var11Lifetime1 = ui.field_a[11];
+              var11Lifetime1 = AdminCheatOverlay.field_a[11];
             }
             if (this.field_m == 2) {
-              var11Lifetime1 = ui.field_a[3];
+              var11Lifetime1 = AdminCheatOverlay.field_a[3];
             }
             if (this.field_m == 3) {
-              var11Lifetime1 = ui.field_a[11];
+              var11Lifetime1 = AdminCheatOverlay.field_a[11];
             }
             if (4 == this.field_m) {
-              var11Lifetime1 = ui.field_a[7];
+              var11Lifetime1 = AdminCheatOverlay.field_a[7];
             }
             if (5 == this.field_m) {
-              var11Lifetime1 = ui.field_a[15];
+              var11Lifetime1 = AdminCheatOverlay.field_a[15];
             }
             if (6 == this.field_m) {
-              var11Lifetime1 = ui.field_a[15];
+              var11Lifetime1 = AdminCheatOverlay.field_a[15];
             }
             if (this.field_m == 7) {
               var11Lifetime1 = lf.field_e[3];
@@ -1433,20 +1433,20 @@ final class MapTile {
                 null == this.map.editor &&
                 !this.field_a) {
                 if (var9Lifetime1 == null) {
-                  this.a(param0 - ((bg) (var11Lifetime1)).field_f / 2, -((bg) (var11Lifetime1)).field_i + var8Lifetime1 + 15, ((bg) (var11Lifetime1)).b(), 17335, 0);
+                  this.a(param0 - ((IndexedSprite) (var11Lifetime1)).field_f / 2, -((IndexedSprite) (var11Lifetime1)).field_i + var8Lifetime1 + 15, ((IndexedSprite) (var11Lifetime1)).b(), 17335, 0);
                 } else {
                   ((Sprite) (var9Lifetime1)).a();
-                  this.a(-(((bg) (var11Lifetime1)).field_f / 2) + 64, 15 + (124 - ((bg) (var11Lifetime1)).field_i), ((bg) (var11Lifetime1)).b(), 17335, 0);
+                  this.a(-(((IndexedSprite) (var11Lifetime1)).field_f / 2) + 64, 15 + (124 - ((IndexedSprite) (var11Lifetime1)).field_i), ((IndexedSprite) (var11Lifetime1)).b(), 17335, 0);
                   k.field_f.a(0);
                 }
                 decompiledFrameRemainder1 = false;
               }
               else {
                 if (var9Lifetime1 == null) {
-                  ((bg) (var11Lifetime1)).b(-(((bg) (var11Lifetime1)).field_f / 2) + param0, 15 + var8Lifetime1 - ((bg) (var11Lifetime1)).field_i, this.field_t);
+                  ((IndexedSprite) (var11Lifetime1)).b(-(((IndexedSprite) (var11Lifetime1)).field_f / 2) + param0, 15 + var8Lifetime1 - ((IndexedSprite) (var11Lifetime1)).field_i, this.field_t);
                 } else {
                   ((Sprite) (var9Lifetime1)).a();
-                  ((bg) (var11Lifetime1)).b(64 - ((bg) (var11Lifetime1)).field_f / 2, 15 + (124 - ((bg) (var11Lifetime1)).field_i), this.field_t);
+                  ((IndexedSprite) (var11Lifetime1)).b(64 - ((IndexedSprite) (var11Lifetime1)).field_f / 2, 15 + (124 - ((IndexedSprite) (var11Lifetime1)).field_i), this.field_t);
                   k.field_f.a(0);
                 }
               }
@@ -1490,7 +1490,7 @@ final class MapTile {
           } else {
             stackIn_525_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_524_0), ((StringBuilder) (Object) stackIn_524_1).append(stackIn_525_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_524_0), ((StringBuilder) (Object) stackIn_524_1).append(stackIn_525_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1824,7 +1824,7 @@ final class MapTile {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -2076,7 +2076,7 @@ final class MapTile {
             this.field_v = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "dl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "dl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

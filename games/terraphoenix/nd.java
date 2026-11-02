@@ -23,7 +23,7 @@ final class nd extends IntrusiveNode {
             field_r = 88;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class nd extends IntrusiveNode {
                   var24Lifetime1Lifetime1 = param0.field_c[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_e[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_q[var23Lifetime2];
-                  ad.field_u[var23Lifetime2] = (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16) + var9;
+                  TutorialController.field_u[var23Lifetime2] = (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16) + var9;
                   nf.field_f[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16);
                   hj.field_J[var23Lifetime2] = (var17 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_O[var23Lifetime2];
@@ -262,7 +262,7 @@ final class nd extends IntrusiveNode {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class nd extends IntrusiveNode {
         try {
           qc.a(true, true, 106);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "nd.E(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "nd.E(" + param0 + ')');
         }
     }
 
@@ -295,7 +295,7 @@ final class nd extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "nd.A(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "nd.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class nd extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1_ref), "nd.D(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1_ref), "nd.D(" + param0 + ')');
         }
     }
 

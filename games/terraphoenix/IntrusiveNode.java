@@ -37,24 +37,24 @@ class IntrusiveNode {
         RuntimeException var2_ref = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (eg) (ic.field_s.d(param0 - 11568));
+          var4 = (eg) (ic.field_s.beginBackward(param0 - 11568));
           while (var4 != null) {
             qc.a(param1, var4, (byte) -110);
-            var4 = (eg) (ic.field_s.e((byte) -119));
+            var4 = (eg) (ic.field_s.nextBackward((byte) -119));
           }
-          var2 = vc.field_g.d(param0 ^ 30032);
+          var2 = vc.field_g.beginBackward(param0 ^ 30032);
           if (param0 != 20840) {
             field_f = (Sprite) null;
           }
           while (var2 != null) {
             eb.a(param1, (byte) 125);
-            var2 = vc.field_g.e((byte) -119);
+            var2 = vc.field_g.nextBackward((byte) -119);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "uf.JB(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "uf.JB(" + param0 + ',' + param1 + ')');
         }
     }
 

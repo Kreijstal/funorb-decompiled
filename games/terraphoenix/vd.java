@@ -10,7 +10,7 @@ final class vd extends PcmStream {
     vg field_m;
 
     final PcmStream c() {
-        sh var1 = (sh) (this.field_n.d(9272));
+        sh var1 = (sh) (this.field_n.beginBackward(9272));
         if (var1 == null) {
           return null;
         }
@@ -46,7 +46,7 @@ final class vd extends PcmStream {
     final PcmStream a() {
         sh var1;
         while (true) {
-          var1 = (sh) (this.field_n.e((byte) -119));
+          var1 = (sh) (this.field_n.nextBackward((byte) -119));
           if (var1 == null) {
             return null;
           }
@@ -70,7 +70,7 @@ final class vd extends PcmStream {
         var7 = Terraphoenix.field_V;
         try {
           this.field_m.a(param0, param1, param2);
-          var6 = (sh) (this.field_n.d(9272));
+          var6 = (sh) (this.field_n.beginBackward(9272));
           while (var6 != null) {
             stackIn_4_0 = this.field_q.a(var6, 16384);
             boolean decompiledFrameCompleted0 = true;
@@ -91,7 +91,7 @@ final class vd extends PcmStream {
                 var6.field_y = var6.field_y - var5;
               }
             }
-            var6 = (sh) (this.field_n.e((byte) -119));
+            var6 = (sh) (this.field_n.nextBackward((byte) -119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -104,7 +104,7 @@ final class vd extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class vd extends PcmStream {
         int var4;
         var4 = Terraphoenix.field_V;
         this.field_m.a(param0);
-        var3 = (sh) (this.field_n.d(9272));
+        var3 = (sh) (this.field_n.beginBackward(9272));
         while (var3 != null) {
           if (!this.field_q.a(var3, 16384)) {
             var2 = param0;
@@ -128,7 +128,7 @@ final class vd extends PcmStream {
               var2 = var2 - var3.field_y;
             } while (!this.field_q.a((byte) 77, (int[]) null, var2, var3, 0));
           }
-          var3 = (sh) (this.field_n.e((byte) -119));
+          var3 = (sh) (this.field_n.nextBackward((byte) -119));
         }
     }
 
@@ -213,7 +213,7 @@ final class vd extends PcmStream {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class vd extends PcmStream {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -276,7 +276,7 @@ final class vd extends PcmStream {
         try {
           this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

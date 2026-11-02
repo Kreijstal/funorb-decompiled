@@ -40,7 +40,7 @@ final class hm extends UiWidget {
             SoftwareRasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
-        ij.a(false);
+        MessageKeys.a(false);
         return var3;
     }
 
@@ -58,7 +58,7 @@ final class hm extends UiWidget {
         if (65536 > this.field_M) {
           di.a(var5 + this.field_p, var6, 16105, var6 + this.field_n, (this.field_M * this.field_p >> 16) + var5);
           this.a(this.field_D[1], var6, var5, -1);
-          ij.a(false);
+          MessageKeys.a(false);
         }
     }
 
@@ -103,7 +103,7 @@ final class hm extends UiWidget {
           SoftwareRasterizer.d(this.field_K + var7, var6, this.field_K, var12Lifetime1);
           SoftwareRasterizer.d(var7 - this.field_K, var6, this.field_K, var12Lifetime1);
         }
-        ij.a(false);
+        MessageKeys.a(false);
         return var14;
     }
 
@@ -129,13 +129,13 @@ final class hm extends UiWidget {
           for (var6 = -this.field_A + param2; var6 < var5_int; var6 = var6 + param0.field_r) {
             param0.b(var6, param1);
           }
-          ij.a(false);
+          MessageKeys.a(false);
           if (SoftwareRasterizer.field_b <= param2 + this.field_C.field_r) {
             il.a(1, this.field_I);
             param0.b(-this.field_A, 0);
             param0.b(2 * this.field_K - this.field_A, 0);
             this.field_z.e(0, 0);
-            ij.a(false);
+            MessageKeys.a(false);
             this.field_I.b(param2, param1);
           }
           if (SoftwareRasterizer.field_f >= -this.field_C.field_r + var5_int) {
@@ -145,7 +145,7 @@ final class hm extends UiWidget {
             param0.b(-var7, 0);
             param0.b(-var7 + this.field_K * 2, 0);
             this.field_C.e(0, 0);
-            ij.a(false);
+            MessageKeys.a(false);
             this.field_I.b(-this.field_C.field_r + var5_int, param1);
             return;
           }
@@ -160,7 +160,7 @@ final class hm extends UiWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -193,14 +193,14 @@ final class hm extends UiWidget {
           var2_int = 0;
           var3 = param1.length();
           while (var2_int < var3) {
-            if (ad.a((byte) 114, param1.charAt(var2_int))) {
+            if (TutorialController.a((byte) 114, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (ad.a((byte) 110, param1.charAt(-1 + var3))) {
+            if (TutorialController.a((byte) 110, param1.charAt(-1 + var3))) {
               var3--;
               continue;
             }
@@ -241,7 +241,7 @@ final class hm extends UiWidget {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -294,7 +294,7 @@ final class hm extends UiWidget {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

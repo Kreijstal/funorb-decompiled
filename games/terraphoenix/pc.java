@@ -6,10 +6,10 @@ import java.io.*;
 final class pc {
     static boolean[][] field_b;
     static Sprite field_d;
-    static bg field_e;
+    static IndexedSprite field_e;
     static long field_a;
     int field_f;
-    static bg[] field_c;
+    static IndexedSprite[] field_c;
 
     final static int a(int param0, int param1, int param2) {
         if (param0 > -10) {
@@ -23,10 +23,10 @@ final class pc {
         try {
           vi.field_h = param0;
           if (param1 != 40) {
-            field_c = (bg[]) null;
+            field_c = (IndexedSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "pc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "pc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

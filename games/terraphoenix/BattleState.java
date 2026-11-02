@@ -98,7 +98,7 @@ final class BattleState {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -305,7 +305,7 @@ final class BattleState {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
@@ -317,7 +317,7 @@ final class BattleState {
           int var1_int = -25 / ((param0 - 65) / 50);
           ja.a(-110, false, 4);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "e.L(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "e.L(" + param0 + ')');
         }
     }
 
@@ -362,7 +362,7 @@ final class BattleState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "e.C(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "e.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -462,7 +462,7 @@ final class BattleState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "e.I(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "e.I(" + param0 + ')');
         }
     }
 
@@ -501,7 +501,7 @@ final class BattleState {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -1122,7 +1122,7 @@ final class BattleState {
               92 > var4 && (!ha.field_o ||
               this.field_B >= 7)) {
               param0.field_Eb = new String[1];
-              param0.field_Eb[0] = sd.field_f;
+              param0.field_Eb[0] = QuickChatMenu.field_f;
               if (this.field_N == 1) {
                 qd.$cfr$intArgs$a$e9dea5688aa5(109, 24);
                 var5_intLifetime1 = 0;
@@ -1235,7 +1235,7 @@ final class BattleState {
                 param0.field_Eb = new String[1];
                 param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_ref.field_g].field_j + " " + UiWidget.field_h;
                 if (this.field_L == 1) {
-                  param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_ref.field_g].field_j + " " + td.field_a;
+                  param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_ref.field_g].field_j + " " + IndexedSpriteState.field_a;
                 }
                 if (ef.field_j >= 324 &&
                   ef.field_j <= 354 &&
@@ -1322,7 +1322,7 @@ final class BattleState {
                 param0.field_Eb = new String[1];
                 param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_refLifetime1.field_g].field_j + " " + UiWidget.field_h;
                 if (this.field_L == 1) {
-                  param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_refLifetime1.field_g].field_j + " " + td.field_a;
+                  param0.field_Eb[0] = SecondaryNodeDequeIterator.field_b + od.field_c[var5_refLifetime1.field_g].field_j + " " + IndexedSpriteState.field_a;
                 }
                 if (!(ef.field_j >= 481) ||
                   !(ef.field_j <= 511) ||
@@ -1465,7 +1465,7 @@ final class BattleState {
           } else {
             stackIn_1004_2 = "{...}";
           }
-          throw qk.a((Throwable) (stackIn_1003_0), ((StringBuilder) (Object) stackIn_1003_1).append(stackIn_1004_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) (stackIn_1003_0), ((StringBuilder) (Object) stackIn_1003_1).append(stackIn_1004_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1781,7 +1781,7 @@ final class BattleState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "e.H(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "e.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1801,7 +1801,7 @@ final class BattleState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "e.Q(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "e.Q(" + param0 + ')');
         }
     }
 
@@ -2503,7 +2503,7 @@ final class BattleState {
           } else {
             stackIn_650_2 = "{...}";
           }
-          throw qk.a((Throwable) (stackIn_649_0), ((StringBuilder) (Object) stackIn_649_1).append(stackIn_650_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) (stackIn_649_0), ((StringBuilder) (Object) stackIn_649_1).append(stackIn_650_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2542,7 +2542,7 @@ final class BattleState {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2576,7 +2576,7 @@ final class BattleState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "e.B(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "e.B(" + param0 + ')');
         }
     }
 
@@ -3088,7 +3088,7 @@ final class BattleState {
           } else {
             stackIn_222_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_221_0), ((StringBuilder) (Object) stackIn_221_1).append(stackIn_222_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_221_0), ((StringBuilder) (Object) stackIn_221_1).append(stackIn_222_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -3795,7 +3795,7 @@ final class BattleState {
           } else {
             stackIn_600_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_599_0), ((StringBuilder) (Object) stackIn_599_1).append(stackIn_600_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_599_0), ((StringBuilder) (Object) stackIn_599_1).append(stackIn_600_2).append(')').toString());
         }
     }
 
@@ -3942,14 +3942,14 @@ final class BattleState {
           }
           if ((decompiledNaturalLoopExit0) &&
             (GameApplet.field_m)) {
-            var6 = -(32 * ui.field_f.field_H) + (-sj.field_b + (320 + 32 * ui.field_f.field_F));
-            var7 = ui.field_f.field_H * 16 + 16 * ui.field_f.field_F + (240 + (-lg.field_c - ui.field_f.field_E * 48 / 100) - 32);
+            var6 = -(32 * AdminCheatOverlay.field_f.field_H) + (-sj.field_b + (320 + 32 * AdminCheatOverlay.field_f.field_F));
+            var7 = AdminCheatOverlay.field_f.field_H * 16 + 16 * AdminCheatOverlay.field_f.field_F + (240 + (-lg.field_c - AdminCheatOverlay.field_f.field_E * 48 / 100) - 32);
             var8 = -320 + var6;
             var8 += 304;
             var9 = -240 + var7 - 32;
             var9 += 224;
-            ui.field_f.field_g.a(var9, 4, var8, -22899, ui.field_f);
-            FullscreenFocusCanvas.a(ui.field_f.field_g, -31661);
+            AdminCheatOverlay.field_f.field_g.a(var9, 4, var8, -22899, AdminCheatOverlay.field_f);
+            FullscreenFocusCanvas.a(AdminCheatOverlay.field_f.field_g, -31661);
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted5 = true;
@@ -4952,7 +4952,7 @@ final class BattleState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "e.U(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "e.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4966,7 +4966,7 @@ final class BattleState {
             this.field_d = 61;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "e.G(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "e.G(" + param0 + ')');
         }
     }
 
@@ -5177,7 +5177,7 @@ final class BattleState {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(')').toString());
         }
     }
 
@@ -5232,7 +5232,7 @@ final class BattleState {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -5261,7 +5261,7 @@ final class BattleState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "e.E(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "e.E(" + param0 + ')');
         }
     }
 
@@ -5559,7 +5559,7 @@ final class BattleState {
           } else {
             stackIn_219_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_218_0), ((StringBuilder) (Object) stackIn_218_1).append(stackIn_219_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_218_0), ((StringBuilder) (Object) stackIn_218_1).append(stackIn_219_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -12001,7 +12001,7 @@ final class BattleState {
                     continue scanLoop1;
                 }
                 case 930: {
-                    throw qk.a((Throwable) ((Object) stackIn_930_0), ((StringBuilder) (Object) stackIn_930_1).append(stackIn_930_2).append(')').toString());
+                    throw qk.wrapException((Throwable) ((Object) stackIn_930_0), ((StringBuilder) (Object) stackIn_930_1).append(stackIn_930_2).append(')').toString());
                 }
                 case 931: {
                     return;
@@ -12178,10 +12178,10 @@ final class BattleState {
                                           case 0:
                                             this.field_B = 0;
                                             var2_int = 10;
-                                            le.field_q = new ad(0);
+                                            le.field_q = new TutorialController(0);
                                             le.field_q.field_A = this;
                                             if (Archive.field_a >= 1) {
-                                              this.a(1, kl.field_d[76], -87);
+                                              this.a(1, TutorialText.field_d[76], -87);
                                               if (var24 != 0) {
                                                 this.a(-1, ak.field_c, -32);
                                               }
@@ -13162,7 +13162,7 @@ final class BattleState {
             this.field_B = -1;
             stackIn_767_0 = null;
           }
-          le.field_q = (ad) (stackIn_767_0);
+          le.field_q = (TutorialController) (stackIn_767_0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -13174,7 +13174,7 @@ final class BattleState {
           } else {
             stackIn_773_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_772_0), ((StringBuilder) (Object) stackIn_772_1).append(stackIn_773_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_772_0), ((StringBuilder) (Object) stackIn_772_1).append(stackIn_773_2).append(')').toString());
         }
     }
 

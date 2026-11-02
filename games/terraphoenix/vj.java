@@ -41,7 +41,7 @@ class vj extends eb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ class vj extends eb {
         hh var5;
         int var6;
         var6 = Terraphoenix.field_V;
-        var4 = (hh) (this.field_R.d(9272));
+        var4 = (hh) (this.field_R.beginBackward(9272));
         if (param0 != 2) {
           field_K = (rh) null;
         }
@@ -65,7 +65,7 @@ class vj extends eb {
             }
             var5 = var5.field_j;
           }
-          var4 = (hh) (this.field_R.e((byte) -119));
+          var4 = (hh) (this.field_R.nextBackward((byte) -119));
         }
         return null;
     }
@@ -84,7 +84,7 @@ class vj extends eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "vj.G(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "vj.G(" + param0 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ class vj extends eb {
           }
           this.field_M[param0] = param1;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "vj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "vj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ class vj extends eb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ class vj extends eb {
         try {
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

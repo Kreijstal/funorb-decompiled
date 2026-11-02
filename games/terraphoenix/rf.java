@@ -13,7 +13,7 @@ abstract class rf extends DualLinkNode {
     static int[] field_p;
     static boolean field_r;
     static String field_t;
-    static ui[] field_B;
+    static AdminCheatOverlay[] field_B;
     static rh field_z;
     static String field_q;
 
@@ -73,7 +73,7 @@ abstract class rf extends DualLinkNode {
         field_s = "OBJECTIVE FAILED";
         field_t = "Undo troop placement";
         field_u = new rh(4, 1, 1, 1);
-        field_B = new ui[]{new ui(0), new ui(1), new ui(2), new ui(3), new ui(4), new ui(5), new ui(6), new ui(7), new ui(8)};
+        field_B = new AdminCheatOverlay[]{new AdminCheatOverlay(0), new AdminCheatOverlay(1), new AdminCheatOverlay(2), new AdminCheatOverlay(3), new AdminCheatOverlay(4), new AdminCheatOverlay(5), new AdminCheatOverlay(6), new AdminCheatOverlay(7), new AdminCheatOverlay(8)};
         field_z = new rh(1, 2, 2, 0);
         field_q = "Reload ";
     }

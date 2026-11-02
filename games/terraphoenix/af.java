@@ -53,7 +53,7 @@ abstract class af implements rc {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_ee = cm.field_b[var3];
             var4_ref_ee.c((byte) 41);
-            ad.a(var3, -6);
+            TutorialController.a(var3, -6);
             var5 = var4_ref_ee.field_r + var4_ref_ee.field_K >> 1;
             var6 = var4_ref_ee.field_M + var4_ref_ee.field_a >> 1;
             var7 = var4_ref_ee.field_t + var4_ref_ee.field_v >> 1;
@@ -101,7 +101,7 @@ abstract class af implements rc {
             }
             var21[var16] = -2147483648;
             var17 = cm.field_b[var16];
-            ad.a(var16, -6);
+            TutorialController.a(var16, -6);
             for (var18 = 0; 3 > var18; var18++) {
               ld.field_a[var18] = ld.field_a[var18] + DualLinkNode.field_j[var15][var18];
             }
@@ -112,7 +112,7 @@ abstract class af implements rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "af.S(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "af.S(" + param0 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ abstract class af implements rc {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(')').toString());
         }
     }
 

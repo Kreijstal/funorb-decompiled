@@ -18,7 +18,7 @@ final class jd extends vc {
           sj.field_f = param1;
           dm.field_d = param2;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "jd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "jd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class jd extends vc {
         RuntimeException var2_ref = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (cc) (qb.field_a.d(9272));
+          var4 = (cc) (qb.field_a.beginBackward(9272));
           do {
             if (var4 == null) {
               if (param0) {
@@ -85,12 +85,12 @@ final class jd extends vc {
               break;
             }
             ia.a(param1, var4, -118);
-            var4 = (cc) (qb.field_a.e((byte) -119));
+            var4 = (cc) (qb.field_a.nextBackward((byte) -119));
           } while (var3 == 0);
-          var2 = qc.field_a.d(9272);
+          var2 = qc.field_a.beginBackward(9272);
           while (var2 != null) {
             da.a(0, param1);
-            var2 = qc.field_a.e((byte) -119);
+            var2 = qc.field_a.nextBackward((byte) -119);
             if (var3 != 0) {
               return;
             }
@@ -99,7 +99,7 @@ final class jd extends vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "jd.D(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "jd.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -324,7 +324,7 @@ final class jd extends vc {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 

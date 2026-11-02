@@ -3,7 +3,7 @@
  */
 final class gi {
     private LevelMap field_u;
-    static bg[] field_j;
+    static IndexedSprite[] field_j;
     int field_o;
     double field_t;
     static qf field_r;
@@ -769,7 +769,7 @@ final class gi {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -898,10 +898,10 @@ final class gi {
           var2 = var28.readUnsignedByte(-16384);
           if (var2 == 0) {
             var4 = var28.readUnsignedShort(-25578);
-            var5 = (nd) (BattleUnit.field_Q.d(9272));
+            var5 = (nd) (BattleUnit.field_Q.beginBackward(9272));
             while (var5 != null) {
               if (var5.field_s != var4) {
-                var5 = (nd) (BattleUnit.field_Q.e((byte) -119));
+                var5 = (nd) (BattleUnit.field_Q.nextBackward((byte) -119));
                 continue;
               }
               break;
@@ -997,10 +997,10 @@ final class gi {
           if (var2 == 1) {
             var4Lifetime1 = var28.readUnsignedShort(-25578);
             var5_long = var28.h((byte) 78);
-            var7_ref_fb = (fb) (hd.field_p.d(9272));
+            var7_ref_fb = (fb) (hd.field_p.beginBackward(9272));
             while (var7_ref_fb != null) {
               if (var7_ref_fb.field_s != var4Lifetime1) {
-                var7_ref_fb = (fb) (hd.field_p.e((byte) -119));
+                var7_ref_fb = (fb) (hd.field_p.nextBackward((byte) -119));
                 continue;
               }
               break;
@@ -1013,13 +1013,13 @@ final class gi {
             var7_ref_fb.unlink((byte) 12);
             return;
           }
-          bd.a((Throwable) null, "HS1: " + BattleUnit.i(-15465), -60);
+          bd.reportClientError((Throwable) null, "HS1: " + BattleUnit.i(-15465), -60);
           WidgetContainer.g(-17464);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "gi.I(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "gi.I(" + param0 + ')');
         }
     }
 
@@ -1090,7 +1090,7 @@ final class gi {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1159,7 +1159,7 @@ final class gi {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -1170,12 +1170,12 @@ final class gi {
 
     final static void a(Archive param0, Archive param1, Archive param2, int param3) {
         Sprite var18 = null;
-        bg[] var5 = null;
-        bg[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var20 = null;
         int[][] var17 = null;
         int[][] var7 = null;
-        bg[] var15 = null;
+        IndexedSprite[] var15 = null;
         int var11_int = 0;
         Sprite var16 = null;
         Sprite var19 = null;
@@ -1198,10 +1198,10 @@ final class gi {
           var18 = new Sprite(param2.a("button.gif", "", -21653), (java.awt.Component) ((Object) ae.field_G));
           qb.a("dropdown", (byte) -36, "commonui", param0);
           var5 = lf.a(true, "commonui", "screen_options", param0);
-          hk.field_d = new bg[4];
-          ng.field_u = new bg[4];
-          o.field_c = new bg[4];
-          var6 = new bg[][]{o.field_c, ng.field_u, hk.field_d};
+          hk.field_d = new IndexedSprite[4];
+          ng.field_u = new IndexedSprite[4];
+          o.field_c = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{o.field_c, ng.field_u, hk.field_d};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;
@@ -1219,7 +1219,7 @@ final class gi {
           var20[3][var8Lifetime1] = 4767999;
           for (var9 = 0; 3 > var9; var9++) {
             var15 = var6[var9];
-            bg[] var10 = var15;
+            IndexedSprite[] var10 = var15;
             for (var11_int = 0; var11_int < var15.length; var11_int++) {
               var15[var11_int] = lf.a(var20[var11_int], var5[var9], param3 + 2040);
             }
@@ -1238,10 +1238,10 @@ final class gi {
           var12 = new Sprite(-(var9Lifetime1 * 2) + var18.field_r, var9Lifetime1);
           var12.a();
           var18.d(-var9Lifetime1, 0);
-          ij.a(false);
+          MessageKeys.a(false);
           i.field_c = new Sprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "gi.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "gi.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -1254,7 +1254,7 @@ final class gi {
           this.field_u = this.field_g.map;
           this.field_d = 0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

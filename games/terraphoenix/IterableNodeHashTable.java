@@ -7,8 +7,8 @@ final class IterableNodeHashTable implements Iterable {
     static String field_d;
     static boolean field_e;
     private IntrusiveNode field_b;
-    int field_c;
-    IntrusiveNode[] field_a;
+    int capacity;
+    IntrusiveNode[] buckets;
 
     public final Iterator iterator() {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
@@ -59,7 +59,7 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class IterableNodeHashTable implements Iterable {
         field_d = null;
     }
 
-    final void a(IntrusiveNode param0, byte param1, long param2) {
+    final void put(IntrusiveNode node, byte obfuscationGuard, long key) {
         IntrusiveNode var5 = null;
         RuntimeException var5_ref = null;
         RuntimeException stackIn_7_0 = null;
@@ -88,16 +88,16 @@ final class IterableNodeHashTable implements Iterable {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.next != null) {
-            param0.unlink((byte) 12);
+          if (node.next != null) {
+            node.unlink((byte) 12);
           }
-          var5 = this.field_a[(int)(param2 & (long)(this.field_c - 1))];
-          param0.next = var5.next;
-          param0.previous = var5;
-          param0.next.previous = param0;
-          param0.previous.next = param0;
-          param0.key = param2;
-          if (param1 <= -49) {
+          var5 = this.buckets[(int)(key & (long)(this.capacity - 1))];
+          node.next = var5.next;
+          node.previous = var5;
+          node.next.previous = node;
+          node.previous.next = node;
+          node.key = key;
+          if (obfuscationGuard <= -49) {
             return;
           }
           IterableNodeHashTable.a(-9);
@@ -107,22 +107,22 @@ final class IterableNodeHashTable implements Iterable {
           var5_ref = decompiledCaughtException;
           stackIn_7_0 = var5_ref;
           stackIn_7_1 = new StringBuilder().append("ce.A(");
-          if (param0 == null) {
+          if (node == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(',').append(key).append(')').toString());
         }
     }
 
-    final IntrusiveNode a(long param0, byte param1) {
+    final IntrusiveNode get(long key, byte obfuscationGuard) {
         IntrusiveNode var5 = null;
         int var6 = Terraphoenix.field_V;
-        IntrusiveNode var4 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
+        IntrusiveNode var4 = this.buckets[(int)((long)(-1 + this.capacity) & key)];
         this.field_b = var4.previous;
         while (var4 != this.field_b) {
-          if (param0 == this.field_b.key) {
+          if (key == this.field_b.key) {
             var5 = this.field_b;
             this.field_b = this.field_b.previous;
             return var5;
@@ -130,7 +130,7 @@ final class IterableNodeHashTable implements Iterable {
           this.field_b = this.field_b.previous;
         }
         this.field_b = null;
-        if (param1 != -21) {
+        if (obfuscationGuard != -21) {
           return (IntrusiveNode) null;
         }
         return null;

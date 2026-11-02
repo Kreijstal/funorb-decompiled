@@ -45,7 +45,7 @@ final class t {
             }
             this.field_d.reset();
           } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "t.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw qk.wrapException((Throwable) ((Object) runtimeException), "t.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

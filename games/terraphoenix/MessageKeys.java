@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij {
+final class MessageKeys {
     static Sprite field_b;
     static String field_e;
     static String field_c;
@@ -23,7 +23,7 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ij.E(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ij.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class ij {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
         }
     }
 
@@ -1558,7 +1558,7 @@ final class ij {
                 }
                 var2 = bc.a("create_createanaccount", false);
                 if (var2 != null) {
-                  td.field_j = ll.a(0, var2);
+                  IndexedSpriteState.field_j = ll.a(0, var2);
                 }
                 var2 = bc.a("create_username", false);
                 if (null != var2) {
@@ -1994,7 +1994,7 @@ final class ij {
                 }
                 var2 = bc.a("loading_levels", false);
                 if (var2 != null) {
-                  kl.field_b = ll.a(0, var2);
+                  TutorialText.field_b = ll.a(0, var2);
                 }
                 var2 = bc.a("loading_extradata", false);
                 if (var2 != null) {
@@ -2026,7 +2026,7 @@ final class ij {
                 }
                 var2 = bc.a("unpacking_music", false);
                 if (null != var2) {
-                  td.field_e = ll.a(0, var2);
+                  IndexedSpriteState.field_e = ll.a(0, var2);
                 }
                 var2 = bc.a("unpacking_levels", false);
                 if (var2 != null) {
@@ -2640,27 +2640,27 @@ final class ij {
                 }
                 var2 = bc.a("quickchat_shortcut_help,0", false);
                 if (var2 != null) {
-                  sd.field_d[0] = ll.a(0, var2);
+                  QuickChatMenu.field_d[0] = ll.a(0, var2);
                 }
                 var2 = bc.a("quickchat_shortcut_help,1", false);
                 if (null != var2) {
-                  sd.field_d[1] = ll.a(sl.a(param0, 3), var2);
+                  QuickChatMenu.field_d[1] = ll.a(sl.a(param0, 3), var2);
                 }
                 var2 = bc.a("quickchat_shortcut_help,2", false);
                 if (var2 != null) {
-                  sd.field_d[2] = ll.a(0, var2);
+                  QuickChatMenu.field_d[2] = ll.a(0, var2);
                 }
                 var2 = bc.a("quickchat_shortcut_help,3", false);
                 if (null != var2) {
-                  sd.field_d[3] = ll.a(sl.a(param0, 3), var2);
+                  QuickChatMenu.field_d[3] = ll.a(sl.a(param0, 3), var2);
                 }
                 var2 = bc.a("quickchat_shortcut_help,4", false);
                 if (null != var2) {
-                  sd.field_d[4] = ll.a(sl.a(param0, 3), var2);
+                  QuickChatMenu.field_d[4] = ll.a(sl.a(param0, 3), var2);
                 }
                 var2 = bc.a("quickchat_shortcut_help,5", false);
                 if (var2 != null) {
-                  sd.field_d[5] = ll.a(0, var2);
+                  QuickChatMenu.field_d[5] = ll.a(0, var2);
                 }
                 var2 = bc.a("quickchat_shortcut_keys,0", false);
                 if (var2 != null) {
@@ -3207,7 +3207,7 @@ final class ij {
                   } else {
                     stackIn_2605_2 = "{...}";
                   }
-                  throw qk.a((Throwable) ((Object) stackIn_2604_0), ((StringBuilder) (Object) stackIn_2604_1).append(stackIn_2605_2).append(')').toString());
+                  throw qk.wrapException((Throwable) ((Object) stackIn_2604_0), ((StringBuilder) (Object) stackIn_2604_1).append(stackIn_2605_2).append(')').toString());
                 }
                 if (GameApplet.field_j) {
                   var3++;
@@ -3227,7 +3227,7 @@ final class ij {
         try {
           var4_int = 0;
           if (param3 != 2) {
-            ij.a(82, (Archive) null);
+            MessageKeys.a(82, (Archive) null);
           }
           if (param2) {
             var4_int += 4;
@@ -3243,7 +3243,7 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var4), "ij.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) var4), "ij.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3267,7 +3267,7 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "ij.F(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ij.F(" + param0 + ')');
         }
     }
 
@@ -3279,14 +3279,14 @@ final class ij {
           field_a = null;
           field_e = null;
           if (param0 <= 62) {
-            ij.a((String[]) null, -80, (String) null);
+            MessageKeys.a((String[]) null, -80, (String) null);
           }
           field_c = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "ij.B(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "ij.B(" + param0 + ')');
         }
     }
 

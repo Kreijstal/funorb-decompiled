@@ -60,7 +60,7 @@ final class RandomAccessCacheFile {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class RandomAccessCacheFile {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class RandomAccessCacheFile {
         RuntimeException decompiledCaughtException = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (wf) (rd.field_k.d(9272));
+          var4 = (wf) (rd.field_k.beginBackward(9272));
           var1 = var4;
           if (param0 > -86) {
             RandomAccessCacheFile.a((byte) -125);
@@ -145,7 +145,7 @@ final class RandomAccessCacheFile {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1_ref), "b.D(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1_ref), "b.D(" + param0 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class RandomAccessCacheFile {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class RandomAccessCacheFile {
           this.field_d.write(param1, param2, param0);
           this.field_a = this.field_a + (long)param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "b.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "b.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -402,7 +402,7 @@ final class RandomAccessCacheFile {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -426,7 +426,7 @@ final class RandomAccessCacheFile {
           }
           this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

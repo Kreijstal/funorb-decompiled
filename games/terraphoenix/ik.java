@@ -31,9 +31,9 @@ final class ik {
           int var5 = -112 % ((param1 + 32) / 48);
           var2.d(0, -hd.field_l.field_t);
           ib.field_Y.field_v = hd.field_l.field_t;
-          ij.a(false);
+          MessageKeys.a(false);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ik.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ik.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

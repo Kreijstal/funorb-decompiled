@@ -44,7 +44,7 @@ final class re {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "re.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "re.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class re {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var7), "re.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qk.wrapException((Throwable) ((Object) var7), "re.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -172,7 +172,7 @@ final class re {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "re.D(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "re.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class re {
             } else {
               if (3 == var2) {
                 this.field_g[0] = 95;
-                this.field_r = sd.field_a;
+                this.field_r = QuickChatMenu.field_a;
                 this.field_l = 16;
                 this.field_p = 2;
                 this.field_o = 24;
@@ -391,7 +391,7 @@ final class re {
                             if (9 == var2) {
                               this.field_o = 25;
                               this.field_p = 2;
-                              this.field_r = ij.field_c;
+                              this.field_r = MessageKeys.field_c;
                               this.field_g[0] = 80;
                               this.field_l = 9;
                               this.field_g[1] = 30;

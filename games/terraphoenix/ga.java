@@ -181,7 +181,7 @@ final class ga {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -306,11 +306,11 @@ final class ga {
         }
     }
 
-    final static bg[] a(byte param0, int param1, Archive param2, int param3) {
+    final static IndexedSprite[] a(byte param0, int param1, Archive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        bg[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -318,7 +318,7 @@ final class ga {
         try {
           if (!DualLinkNode.a(param3, param1, param2, true)) {
             stackIn_2_0 = null;
-            return (bg[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           var4_int = 35 / ((-65 - param0) / 58);
           stackIn_4_0 = uc.o(-28336);
@@ -333,7 +333,7 @@ final class ga {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class ga {
           }
           ia.a(param1, param2, -74);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ga.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ga.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

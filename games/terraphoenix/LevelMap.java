@@ -174,7 +174,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var8), "dk.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qk.wrapException((Throwable) ((Object) var8), "dk.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -259,7 +259,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var7), "dk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qk.wrapException((Throwable) ((Object) var7), "dk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -271,7 +271,7 @@ final class LevelMap {
             discarded$0 = this.a(-21, -19, -77, -123, -123, (byte) 64, 48);
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "dk.S(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "dk.S(" + param0 + ')');
         }
     }
 
@@ -288,7 +288,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var9), "dk.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw qk.wrapException((Throwable) ((Object) var9), "dk.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -569,7 +569,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var8), "dk.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qk.wrapException((Throwable) ((Object) var8), "dk.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -630,7 +630,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "dk.BA(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "dk.BA(" + param0 + ')');
         }
     }
 
@@ -1135,7 +1135,7 @@ final class LevelMap {
           } else {
             stackIn_471_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_466_0), ((StringBuilder) (Object) stackIn_470_1).append(stackIn_471_2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_466_0), ((StringBuilder) (Object) stackIn_470_1).append(stackIn_471_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1152,7 +1152,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var8), "dk.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qk.wrapException((Throwable) ((Object) var8), "dk.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -1503,7 +1503,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "dk.C(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "dk.C(" + param0 + ')');
         }
     }
 
@@ -1547,7 +1547,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var6_ref), "dk.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) var6_ref), "dk.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1564,7 +1564,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var5), "dk.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) var5), "dk.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1684,7 +1684,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2_ref), "dk.G(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2_ref), "dk.G(" + param0 + ')');
         }
     }
 
@@ -1847,7 +1847,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "dk.K(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "dk.K(" + param0 + ')');
         }
     }
 
@@ -2123,7 +2123,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var10), "dk.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw qk.wrapException((Throwable) ((Object) var10), "dk.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -2174,7 +2174,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "dk.O(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "dk.O(" + param0 + ')');
         }
     }
 
@@ -2204,7 +2204,7 @@ final class LevelMap {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -2215,7 +2215,7 @@ final class LevelMap {
             this.field_k = -63;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "dk.M(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "dk.M(" + param0 + ')');
         }
     }
 
@@ -2260,7 +2260,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var5_ref), "dk.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) var5_ref), "dk.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2409,7 +2409,7 @@ final class LevelMap {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(')').toString());
         }
     }
 
@@ -2422,7 +2422,7 @@ final class LevelMap {
             field_c = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "dk.W(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "dk.W(" + param0 + ')');
         }
     }
 
@@ -2458,7 +2458,7 @@ final class LevelMap {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -2790,7 +2790,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var8_ref), "dk.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qk.wrapException((Throwable) ((Object) var8_ref), "dk.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -2814,7 +2814,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var5_ref), "dk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) var5_ref), "dk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2825,7 +2825,7 @@ final class LevelMap {
           this.field_b = param0;
           this.tiles = new MapTile[this.field_b][this.field_e];
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3301,7 +3301,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "dk.E(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "dk.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3803,7 +3803,7 @@ final class LevelMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var4), "dk.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) var4), "dk.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3838,7 +3838,7 @@ final class LevelMap {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -4858,7 +4858,7 @@ final class LevelMap {
           } else {
             stackIn_586_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_585_0), ((StringBuilder) (Object) stackIn_585_1).append(stackIn_586_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_585_0), ((StringBuilder) (Object) stackIn_585_1).append(stackIn_586_2).append(')').toString());
         }
     }
 

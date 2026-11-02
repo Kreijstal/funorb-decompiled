@@ -5,7 +5,7 @@ final class od {
     static ba[] field_h;
     static re[] field_c;
     static String field_b;
-    static bg field_e;
+    static IndexedSprite field_e;
     static boolean field_a;
     static String field_f;
     static o field_g;
@@ -64,7 +64,7 @@ final class od {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

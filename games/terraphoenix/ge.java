@@ -49,7 +49,7 @@ final class ge {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "ge.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "ge.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

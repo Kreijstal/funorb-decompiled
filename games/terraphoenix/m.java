@@ -59,7 +59,7 @@ final class m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "m.D(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "m.D(" + param0 + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class m {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              bd.a((Throwable) null, "MGR1: " + param2, param3 ^ -114);
+              bd.reportClientError((Throwable) null, "MGR1: " + param2, param3 ^ -114);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -126,7 +126,7 @@ final class m {
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -221,7 +221,7 @@ final class m {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

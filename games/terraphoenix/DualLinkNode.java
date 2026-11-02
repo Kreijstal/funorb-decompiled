@@ -3,7 +3,7 @@
  */
 class DualLinkNode extends IntrusiveNode {
     static String field_n;
-    static bg[] field_k;
+    static IndexedSprite[] field_k;
     static int[][] field_j;
     long secondaryKey;
     DualLinkNode secondaryPrevious;
@@ -40,17 +40,17 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(String param0, byte param1, float param2) {
         try {
-          ad.field_e = param0;
+          TutorialController.field_e = param0;
           int var3_int = -44 % ((-15 - param1) / 53);
           ed.field_d = param2;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "vh.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "vh.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

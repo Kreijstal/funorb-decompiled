@@ -50,12 +50,12 @@ final class uc extends PacketBuffer {
         }
     }
 
-    final static bg[] o(int param0) {
+    final static IndexedSprite[] o(int param0) {
         int var2 = 0;
         int var3 = Terraphoenix.field_V;
-        bg[] var1 = new bg[kf.field_b];
+        IndexedSprite[] var1 = new IndexedSprite[kf.field_b];
         for (var2 = 0; var2 < kf.field_b; var2++) {
-          var1[var2] = new bg(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], qc.field_b[var2], wb.field_a);
+          var1[var2] = new IndexedSprite(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], qc.field_b[var2], wb.field_a);
         }
         if (param0 != -28336) {
           String var4 = (String) null;
@@ -131,7 +131,7 @@ final class uc extends PacketBuffer {
           og.field_e = param1;
           int var2_int = 111 / ((49 - param0) / 53);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "uc.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "uc.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class uc extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class uc extends PacketBuffer {
         try {
           this.field_m = new IsaacCipher(param0);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "uc.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "uc.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

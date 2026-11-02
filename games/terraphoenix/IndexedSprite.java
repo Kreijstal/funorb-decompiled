@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends td {
+final class IndexedSprite extends IndexedSpriteState {
     byte[] field_l;
     int[] field_m;
 
@@ -85,7 +85,7 @@ final class bg extends td {
           var6 <= 0) {
           return;
         }
-        bg.d(SoftwareRasterizer.field_i, this.field_l, this.field_m, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.d(SoftwareRasterizer.field_i, this.field_l, this.field_m, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -191,7 +191,7 @@ final class bg extends td {
           var5 <= 0) {
           return;
         }
-        bg.a(SoftwareRasterizer.field_i, this.field_l, this.field_m, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(SoftwareRasterizer.field_i, this.field_l, this.field_m, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -235,7 +235,7 @@ final class bg extends td {
           var6 <= 0) {
           return;
         }
-        bg.c(SoftwareRasterizer.field_i, this.field_l, this.field_m, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.c(SoftwareRasterizer.field_i, this.field_l, this.field_m, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void c(int param0, int param1) {
@@ -279,13 +279,13 @@ final class bg extends td {
           var5 <= 0) {
           return;
         }
-        bg.a(SoftwareRasterizer.field_i, this.field_l, this.field_m, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(SoftwareRasterizer.field_i, this.field_l, this.field_m, var4, var3, var6, var5, var7, var8);
     }
 
-    final bg a() {
+    final IndexedSprite a() {
         int var4 = 0;
         int var3 = 0;
-        bg var1 = new bg(this.field_k, this.field_c, this.field_m.length);
+        IndexedSprite var1 = new IndexedSprite(this.field_k, this.field_c, this.field_m.length);
         int var3Lifetime1;
         var1.field_f = this.field_f;
         var1.field_i = this.field_i;
@@ -496,7 +496,7 @@ final class bg extends td {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        bg.a(SoftwareRasterizer.field_i, this.field_l, this.field_m, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        IndexedSprite.a(SoftwareRasterizer.field_i, this.field_l, this.field_m, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     private final static void d(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -576,10 +576,10 @@ final class bg extends td {
           var5 <= 0) {
           return;
         }
-        bg.b(SoftwareRasterizer.field_i, this.field_l, this.field_m, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.b(SoftwareRasterizer.field_i, this.field_l, this.field_m, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    bg(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+    IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
         this.field_f = param0;
         this.field_i = param1;
         this.field_g = param2;
@@ -590,7 +590,7 @@ final class bg extends td {
         this.field_m = param7;
     }
 
-    bg(int param0, int param1, int param2) {
+    IndexedSprite(int param0, int param1, int param2) {
         this.field_k = param0;
         this.field_f = param0;
         this.field_c = param1;

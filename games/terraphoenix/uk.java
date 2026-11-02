@@ -28,10 +28,10 @@ final class uk {
           if (0 != var2) {
             if (var2 == 1) {
               var3 = var8.readInt((byte) -107);
-              var4 = (cc) (qb.field_a.d(9272));
+              var4 = (cc) (qb.field_a.beginBackward(9272));
               while (var4 != null) {
                 if (var3 != var4.field_k) {
-                  var4 = (cc) (qb.field_a.e((byte) -119));
+                  var4 = (cc) (qb.field_a.nextBackward((byte) -119));
                   continue;
                 }
                 break;
@@ -46,11 +46,11 @@ final class uk {
               }
             }
             if (decompiledFrameRemainder0) {
-              bd.a((Throwable) null, "A1: " + BattleUnit.i(-15465), 117);
+              bd.reportClientError((Throwable) null, "A1: " + BattleUnit.i(-15465), 117);
               WidgetContainer.g(-17464);
             }
           } else {
-            var3_ref_jh = (jh) (qc.field_a.d(9272));
+            var3_ref_jh = (jh) (qc.field_a.beginBackward(9272));
             if (var3_ref_jh == null) {
               WidgetContainer.g(-17464);
               return;
@@ -82,7 +82,7 @@ final class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "uk.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "uk.A(" + param0 + ')');
         }
     }
 

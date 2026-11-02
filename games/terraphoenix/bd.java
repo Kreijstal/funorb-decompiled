@@ -119,7 +119,7 @@ final class bd {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class bd {
         return this;
     }
 
-    final static void a(Throwable param0, String param1, int param2) {
+    final static void reportClientError(Throwable error, String context, int obfuscationGuard) {
         try {
           PlatformTaskDispatcher stackIn_13_0;
           java.net.URL stackIn_13_1;
@@ -155,28 +155,28 @@ final class bd {
           var7 = Terraphoenix.field_V;
           try {
             var3 = "";
-            if (param0 != null) {
-              var3 = pc.a(param0, 0);
+            if (error != null) {
+              var3 = pc.a(error, 0);
             }
-            if (param1 != null) {
-              if (param0 != null) {
+            if (context != null) {
+              if (error != null) {
                 var3 = var3 + " | ";
               }
-              var3 = var3 + param1;
+              var3 = var3 + context;
             }
             u.a(var3, 113);
             var8 = qf.a(var3, 0, ":", "%3a");
             var9 = qf.a(var8, 0, "@", "%40");
-            var4 = -44 % ((3 - param2) / 63);
+            var4 = -44 % ((3 - obfuscationGuard) / 63);
             var10 = qf.a(var9, 0, "&", "%26");
             var11 = qf.a(var10, 0, "#", "%23");
-            if (td.field_b == null) {
+            if (IndexedSpriteState.field_b == null) {
               return;
             }
             stackIn_13_0 = d.field_K;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
-            stackIn_13_3 = td.field_b.getCodeBase();
+            stackIn_13_3 = IndexedSpriteState.field_b.getCodeBase();
             stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(ve.field_b).append("&u=");
             if (null != sa.field_f) {
               stackIn_14_1 = null;
@@ -250,7 +250,7 @@ final class bd {
           param1.field_n = this.field_n;
           param1.field_h = this.field_h;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "bd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "bd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -278,7 +278,7 @@ final class bd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class bd {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -362,7 +362,7 @@ abstract class wc extends DualLinkNode {
           } else {
             stackIn_196_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_195_0), ((StringBuilder) (Object) stackIn_195_1).append(stackIn_196_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_195_0), ((StringBuilder) (Object) stackIn_195_1).append(stackIn_196_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

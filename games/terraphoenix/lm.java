@@ -4,7 +4,7 @@
 final class lm {
     static String field_f;
     static int field_d;
-    static bg field_g;
+    static IndexedSprite field_g;
     static int[] field_a;
     static int field_c;
     static Sprite field_e;
@@ -216,7 +216,7 @@ final class lm {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class lm {
           param2.d(1 + param0, param5 + 1, param8);
           SoftwareRasterizer.a(rb.field_a);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "lm.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "lm.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

@@ -246,7 +246,7 @@ final class wl extends PcmStream {
         if (param1 < 9) {
           return;
         }
-        var3 = (sh) (this.field_t.field_n.d(9272));
+        var3 = (sh) (this.field_t.field_n.beginBackward(9272));
         while (var3 != null) {
           if ((0 > param0 ||
             param0 == var3.field_v) &&
@@ -254,7 +254,7 @@ final class wl extends PcmStream {
             this.field_J[var3.field_v][var3.field_w] = null;
             var3.field_h = 0;
           }
-          var3 = (sh) (this.field_t.field_n.e((byte) -119));
+          var3 = (sh) (this.field_t.field_n.nextBackward((byte) -119));
         }
     }
 
@@ -267,7 +267,7 @@ final class wl extends PcmStream {
           this.a(param0, param2, true, 0);
           int var4_int = 46 / ((param1 - 83) / 41);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "wl.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "wl.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -307,7 +307,7 @@ final class wl extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -386,12 +386,12 @@ final class wl extends PcmStream {
           return;
         }
         if (0 != (4 & this.field_q[param0])) {
-          var3 = (sh) (this.field_t.field_n.d(9272));
+          var3 = (sh) (this.field_t.field_n.beginBackward(9272));
           while (var3 != null) {
             if (param0 == var3.field_v) {
               var3.field_A = 0;
             }
-            var3 = (sh) (this.field_t.field_n.e((byte) -119));
+            var3 = (sh) (this.field_t.field_n.nextBackward((byte) -119));
           }
         }
     }
@@ -406,18 +406,18 @@ final class wl extends PcmStream {
         int var3;
         var4 = Terraphoenix.field_V;
         if ((2 & this.field_q[param0]) != 0) {
-          var3_ref_sh = (sh) (this.field_t.field_n.d(9272));
+          var3_ref_sh = (sh) (this.field_t.field_n.beginBackward(9272));
           while (var3_ref_sh != null) {
             if (~param0 == ~var3_ref_sh.field_v) {
               if (this.field_J[param0][var3_ref_sh.field_w] != null) {
-                var3_ref_sh = (sh) (this.field_t.field_n.e((byte) -119));
+                var3_ref_sh = (sh) (this.field_t.field_n.nextBackward((byte) -119));
                 continue;
               }
               if (var3_ref_sh.field_h < 0) {
                 var3_ref_sh.field_h = 0;
               }
             }
-            var3_ref_sh = (sh) (this.field_t.field_n.e((byte) -119));
+            var3_ref_sh = (sh) (this.field_t.field_n.nextBackward((byte) -119));
           }
         }
         var3 = 115 / ((55 - param1) / 56);
@@ -469,7 +469,7 @@ final class wl extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -481,7 +481,7 @@ final class wl extends PcmStream {
 
     private final void b(byte param0, int param1) {
         int var4 = Terraphoenix.field_V;
-        sh var3 = (sh) (this.field_t.field_n.d(9272));
+        sh var3 = (sh) (this.field_t.field_n.beginBackward(9272));
         while (var3 != null) {
           if (param1 < 0 ||
             param1 == var3.field_v) {
@@ -497,7 +497,7 @@ final class wl extends PcmStream {
             }
             var3.unlink((byte) 12);
           }
-          var3 = (sh) (this.field_t.field_n.e((byte) -119));
+          var3 = (sh) (this.field_t.field_n.nextBackward((byte) -119));
         }
         if (param0 > -111) {
           this.field_M = (int[]) null;
@@ -532,7 +532,7 @@ final class wl extends PcmStream {
               var5.field_D = -var5.field_j + var6;
               return;
             }
-            var5 = (sh) (this.field_t.field_n.b(-87));
+            var5 = (sh) (this.field_t.field_n.nextForward(-87));
           }
         }
         var11 = (qd) (this.field_z.a((byte) 46, (long)this.field_s[param2]));
@@ -689,7 +689,7 @@ final class wl extends PcmStream {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -769,7 +769,7 @@ final class wl extends PcmStream {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -904,7 +904,7 @@ final class wl extends PcmStream {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -959,7 +959,7 @@ final class wl extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -986,7 +986,7 @@ final class wl extends PcmStream {
           this.field_E = this.field_G.field_c[this.field_H];
           this.field_r = this.field_G.b(this.field_E);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "wl.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "wl.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1062,7 +1062,7 @@ final class wl extends PcmStream {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1199,7 +1199,7 @@ final class wl extends PcmStream {
             } else {
               stackIn_56_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1291,7 +1291,7 @@ final class wl extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1348,7 +1348,7 @@ final class wl extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -1431,7 +1431,7 @@ final class wl extends PcmStream {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1464,7 +1464,7 @@ final class wl extends PcmStream {
         if ((2 & this.field_q[param3]) == 0) {
           var9.field_h = 0;
         } else {
-          var7 = (sh) (this.field_t.field_n.d(9272));
+          var7 = (sh) (this.field_t.field_n.beginBackward(9272));
           while (var7 != null) {
             if (var7.field_v == var9.field_v &&
               var7.field_h < 0 &&
@@ -1472,7 +1472,7 @@ final class wl extends PcmStream {
               var9.field_h = 0;
               break;
             }
-            var7 = (sh) (this.field_t.field_n.e((byte) -119));
+            var7 = (sh) (this.field_t.field_n.nextBackward((byte) -119));
           }
         }
     }

@@ -3,7 +3,7 @@
  */
 class si extends al implements n {
     private BitmapFont field_rb;
-    static sd field_ob;
+    static QuickChatMenu field_ob;
     private boolean field_mb;
     private hm field_kb;
     static String field_hb;
@@ -93,7 +93,7 @@ class si extends al implements n {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ class si extends al implements n {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ class si extends al implements n {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ class si extends al implements n {
           field_ib = null;
           return;
         }
-        field_ob = (sd) null;
+        field_ob = (QuickChatMenu) null;
         field_pb = null;
         field_ib = null;
     }
@@ -211,7 +211,7 @@ class si extends al implements n {
           this.field_kb.field_P = true;
           this.b((byte) 95, this.field_kb);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "si.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "si.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ class si extends al implements n {
             si.n(13);
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "si.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "si.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

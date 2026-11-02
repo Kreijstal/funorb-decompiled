@@ -31,7 +31,7 @@ abstract class ld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ld.K(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ld.K(" + param0 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ abstract class ld {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ abstract class ld {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ abstract class ld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3_ref), "ld.I(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3_ref), "ld.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -203,7 +203,7 @@ abstract class ld {
           field_c = null;
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ld.D(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ld.D(" + param0 + ')');
         }
     }
 
@@ -248,7 +248,7 @@ abstract class ld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ld.C(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ld.C(" + param0 + ')');
         }
     }
 
@@ -285,7 +285,7 @@ abstract class ld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var3), "ld.A(" + param0 + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) var3), "ld.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -312,7 +312,7 @@ abstract class ld {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ abstract class ld {
             field_d = -10;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ld.G(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ld.G(" + param0 + ')');
         }
     }
 
@@ -390,7 +390,7 @@ abstract class ld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var4), "ld.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) var4), "ld.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -438,7 +438,7 @@ abstract class ld {
           am.g((byte) -3);
           if (param2.field_I > 0 &&
             param2.field_f != null) {
-            sd.a((byte) 87);
+            QuickChatMenu.a((byte) 87);
           }
           ae.field_I = 0;
           var8 = 0;
@@ -541,7 +541,7 @@ abstract class ld {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -49,19 +49,19 @@ final class IntrusiveDeque {
         field_c = null;
     }
 
-    final boolean a(byte param0) {
-        if (param0 > -34) {
+    final boolean isEmpty(byte obfuscationGuard) {
+        if (obfuscationGuard > -34) {
           return false;
         }
         return this.field_a == this.field_a.previous ? true : false;
     }
 
-    final void c(int param0) {
+    final void clear(int obfuscationGuard) {
         IntrusiveNode var5 = null;
         IntrusiveNode var4 = null;
         int var3 = Terraphoenix.field_V;
-        if (param0 != 21480) {
-          this.d(-102);
+        if (obfuscationGuard != 21480) {
+          this.beginBackward(-102);
           while (true) {
             var5 = this.field_a.previous;
             if (var5 == this.field_a) {
@@ -82,9 +82,9 @@ final class IntrusiveDeque {
         this.field_b = null;
     }
 
-    final static bg a(Archive param0, int param1, byte param2, int param3) {
+    final static IndexedSprite a(Archive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
-        bg stackIn_6_0 = null;
+        IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -108,14 +108,14 @@ final class IntrusiveDeque {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final IntrusiveNode e(byte param0) {
+    final IntrusiveNode nextBackward(byte obfuscationGuard) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
-        if (param0 != -119) {
+        if (obfuscationGuard != -119) {
           this.b((byte) -7);
           var2 = this.field_b;
           if (var2 != this.field_a) {
@@ -134,14 +134,14 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode nextForward(int obfuscationGuard) {
         IntrusiveNode var2 = this.field_b;
         if (var2 == this.field_a) {
           this.field_b = null;
           return null;
         }
         this.field_b = var2.next;
-        if (param0 <= -67) {
+        if (obfuscationGuard <= -67) {
           return var2;
         }
         Archive var3 = (Archive) null;
@@ -149,10 +149,10 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode d(int param0) {
+    final IntrusiveNode beginBackward(int obfuscationGuard) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
-        if (param0 != 9272) {
+        if (obfuscationGuard != 9272) {
           field_f = 56;
           var2 = this.field_a.previous;
           if (var2 == this.field_a) {
@@ -179,12 +179,12 @@ final class IntrusiveDeque {
           param0.previous = this.field_a.previous;
           param0.next = this.field_a;
           if (param1 != 0) {
-            this.c(-11);
+            this.clear(-11);
           }
           param0.next.previous = param0;
           param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "jj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "jj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class IntrusiveDeque {
         try {
           param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "jj.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "jj.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

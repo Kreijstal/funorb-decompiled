@@ -22,7 +22,7 @@ abstract class kh extends WidgetContainer {
           this.field_G = 0;
           this.field_N = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ abstract class kh extends WidgetContainer {
             SoftwareRasterizer.a();
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
-            ij.a(false);
+            MessageKeys.a(false);
             hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
             return;
           }
@@ -54,7 +54,7 @@ abstract class kh extends WidgetContainer {
           SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
-          ij.a(false);
+          MessageKeys.a(false);
           hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
           return;
         }
@@ -65,7 +65,7 @@ abstract class kh extends WidgetContainer {
             SoftwareRasterizer.a();
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
-            ij.a(false);
+            MessageKeys.a(false);
             hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
             return;
           }
@@ -74,7 +74,7 @@ abstract class kh extends WidgetContainer {
           SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
-          ij.a(false);
+          MessageKeys.a(false);
           hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
           return;
         }
@@ -85,7 +85,7 @@ abstract class kh extends WidgetContainer {
             SoftwareRasterizer.a();
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
-            ij.a(false);
+            MessageKeys.a(false);
             hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
             return;
           }
@@ -94,7 +94,7 @@ abstract class kh extends WidgetContainer {
           SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
-          ij.a(false);
+          MessageKeys.a(false);
           hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
           return;
         }
@@ -103,7 +103,7 @@ abstract class kh extends WidgetContainer {
           SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
-          ij.a(false);
+          MessageKeys.a(false);
           hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
           return;
         }
@@ -112,7 +112,7 @@ abstract class kh extends WidgetContainer {
         SoftwareRasterizer.a();
         this.a(0, 0, (byte) 82);
         super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
-        ij.a(false);
+        MessageKeys.a(false);
         hf.field_y.a(param0 + this.field_w, param3 + this.field_u, this.field_G);
     }
 

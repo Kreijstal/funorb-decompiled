@@ -45,7 +45,7 @@ final class kj implements WidgetActionListener {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ final class kj implements WidgetActionListener {
           var1 = MouseInputHandler.field_b;
           if (var1 > 0) {
             if (var1 != 1) {
-              m.field_e = ij.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
+              m.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
             } else {
               m.field_e = ol.field_Lb;
             }
@@ -82,7 +82,7 @@ final class kj implements WidgetActionListener {
           var1 = MouseInputHandler.field_b;
           if (var1 > 0) {
             if (var1 != 1) {
-              m.field_e = ij.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
+              m.field_e = MessageKeys.a(new String[]{Integer.toString(var1)}, -1, na.field_X);
             } else {
               m.field_e = ol.field_Lb;
             }

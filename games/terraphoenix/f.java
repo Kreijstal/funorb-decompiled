@@ -10,7 +10,7 @@ final class f implements WidgetActionListener {
     private BitmapFont field_k;
     private int field_e;
     static int[] field_a;
-    static bg[] field_i;
+    static IndexedSprite[] field_i;
     private int field_l;
     static int field_g;
     static String field_h;
@@ -62,7 +62,7 @@ final class f implements WidgetActionListener {
             this.field_k.a(param1.field_o, var13 + (param1.field_w + param2), this.field_j + param0 + param1.field_u, -this.field_c + (-var13 + param1.field_p), param1.field_n - (this.field_c << 1), this.field_e, this.field_f, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "f.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "f.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class f implements WidgetActionListener {
           this.field_j = param2;
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class f implements WidgetActionListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

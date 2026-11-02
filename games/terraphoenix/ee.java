@@ -113,7 +113,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ee.C(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ee.C(" + param0 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var2), "ee.B(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var2), "ee.B(" + param0 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var6), "ee.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.wrapException((Throwable) ((Object) var6), "ee.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -187,20 +187,20 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) runtimeException), "ee.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ee.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static void a(byte param0, Archive param1) {
         RuntimeException runtimeException = null;
-        tl var2 = null;
+        VorbisDecoder var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          tl.a(param1.a("headers.packvorbis", "", -21653));
-          var2 = tl.a(param1, "jagex logo2.packvorbis", "");
+          VorbisDecoder.a(param1.a("headers.packvorbis", "", -21653));
+          var2 = VorbisDecoder.a(param1, "jagex logo2.packvorbis", "");
           if (param0 != 51) {
             return;
           }
@@ -216,7 +216,7 @@ final class ee {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class ee {
             field_h = -43;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
         }
     }
 
@@ -312,7 +312,7 @@ final class ee {
               return;
             }
             if (var2 != 4) {
-              bd.a((Throwable) null, "F1: " + BattleUnit.i(-15465), 111);
+              bd.reportClientError((Throwable) null, "F1: " + BattleUnit.i(-15465), 111);
               WidgetContainer.g(-17464);
               return;
             }
@@ -354,7 +354,7 @@ final class ee {
           var6.field_Eb = (String) (var3Lifetime1);
           var6.field_Lb = var4_ref_StringLifetime1;
           var6.unlink((byte) 12);
-          var7 = (q) (sb.field_h.d(9272));
+          var7 = (q) (sb.field_h.beginBackward(9272));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7 != null) {
@@ -364,7 +364,7 @@ final class ee {
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_49_0)) {
-                var7 = (q) (sb.field_h.e((byte) -119));
+                var7 = (q) (sb.field_h.nextBackward((byte) -119));
                 continue;
               }
             }
@@ -385,7 +385,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1_ref), "ee.E(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1_ref), "ee.E(" + param0 + ')');
         }
     }
 

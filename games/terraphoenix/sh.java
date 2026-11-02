@@ -160,7 +160,7 @@ final class sh extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "sh.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "sh.A(" + param0 + ')');
         }
     }
 

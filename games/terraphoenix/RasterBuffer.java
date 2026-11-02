@@ -47,7 +47,7 @@ abstract class RasterBuffer {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -107);
             }
-            var15 = (ok) (vc.field_g.d(9272));
+            var15 = (ok) (vc.field_g.beginBackward(9272));
             if (var15 == null) {
               WidgetContainer.g(-17464);
               return;
@@ -59,7 +59,7 @@ abstract class RasterBuffer {
             return;
           }
           if (var2 == 1) {
-            var11 = (eg) (ic.field_s.d(9272));
+            var11 = (eg) (ic.field_s.beginBackward(9272));
             if (var11 == null) {
               WidgetContainer.g(-17464);
               return;
@@ -67,10 +67,10 @@ abstract class RasterBuffer {
             var11.unlink((byte) 12);
           } else {
             if (var2 != 2) {
-              bd.a((Throwable) null, "A1: " + BattleUnit.i(-15465), -87);
+              bd.reportClientError((Throwable) null, "A1: " + BattleUnit.i(-15465), -87);
               WidgetContainer.g(-17464);
             } else {
-              var13 = (ok) (vc.field_g.d(9272));
+              var13 = (ok) (vc.field_g.beginBackward(9272));
               if (var13 == null) {
                 WidgetContainer.g(param0 - 17531);
                 return;
@@ -85,7 +85,7 @@ abstract class RasterBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "te.A(" + param0 + ')');
+          throw qk.wrapException((Throwable) ((Object) var1), "te.A(" + param0 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ abstract class RasterBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ abstract class RasterBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var7), "te.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qk.wrapException((Throwable) ((Object) var7), "te.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

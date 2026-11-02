@@ -6,7 +6,7 @@ final class d extends jc {
     static int field_M;
     static String field_O;
     private IntrusiveDeque field_A;
-    static bg[] field_N;
+    static IndexedSprite[] field_N;
     static int[] field_L;
     static PlatformTaskDispatcher field_K;
     static String field_J;
@@ -17,7 +17,7 @@ final class d extends jc {
         k var2 = new k(this.field_A);
         kh var3 = (kh) (var2.a((byte) -13));
         if (param0) {
-          field_N = (bg[]) null;
+          field_N = (IndexedSprite[]) null;
         }
         while (var3 != null) {
           var3.field_J = false;
@@ -140,7 +140,7 @@ final class d extends jc {
           var3.field_J = true;
           var3.a((byte) 14, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

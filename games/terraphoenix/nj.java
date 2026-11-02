@@ -17,7 +17,7 @@ final class nj extends ke {
           this.field_h.position(0);
           this.field_h.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "nj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "nj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

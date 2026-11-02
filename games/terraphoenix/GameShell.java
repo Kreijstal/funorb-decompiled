@@ -40,7 +40,7 @@ abstract class GameShell extends GameApplet {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ abstract class GameShell extends GameApplet {
         ji.a(this.field_A, this.field_s, this.field_v, param5, param1 - 4915, this.field_w, this.field_t, nj.field_l, 5000, param1, this.field_x, param6, ph.field_o, this.field_B);
         pe.a(this.field_B, this.field_w, param6, this.field_A, this.field_v, ph.field_o, 128, nj.field_l, this.field_x);
         wd.a(false);
-        lk.field_d = ad.c(-3109);
+        lk.field_d = TutorialController.c(-3109);
         am.a((byte) 29, ae.field_G);
         f.field_g = param7;
         fg.field_b = param4;
@@ -285,7 +285,7 @@ abstract class GameShell extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              bd.a((Throwable) ((Object) var6), "S1", 82);
+              bd.reportClientError((Throwable) ((Object) var6), "S1", 82);
               var11 = (String) null;
               si.a((String) null, 3);
               fm.field_b = null;
@@ -450,7 +450,7 @@ abstract class GameShell extends GameApplet {
               bl.field_a = null;
             } else {
               if (bl.field_a.a(-3, "")) {
-                ij.a(3, bl.field_a);
+                MessageKeys.a(3, bl.field_a);
                 bl.field_a = null;
                 ea.a((byte) 47);
               }
@@ -465,7 +465,7 @@ abstract class GameShell extends GameApplet {
           GameShell.a((byte) 103, ch.field_g)) {
           IntrusiveDeque.e(-119);
           hj.g(-7958);
-          ad.field_e = hh.field_k;
+          TutorialController.field_e = hh.field_k;
           wd.field_b = false;
           am.a(ch.field_g, DelegatingCanvas.field_c, ph.field_q, bi.field_d, (byte) -22);
           if (ea.field_j ||
@@ -611,7 +611,7 @@ abstract class GameShell extends GameApplet {
                                 bh.b(-80);
                                 return;
                               }
-                              bd.a((Throwable) null, "MGS1: " + BattleUnit.i(-15465), -87);
+                              bd.reportClientError((Throwable) null, "MGS1: " + BattleUnit.i(-15465), -87);
                               WidgetContainer.g(-17464);
                               return;
                             }
@@ -622,7 +622,7 @@ abstract class GameShell extends GameApplet {
                             Terraphoenix.q(320);
                           }
                         } else {
-                          sd.a((byte) 43, nj.field_l, LevelEditor.field_j, qh.field_d);
+                          QuickChatMenu.a((byte) 43, nj.field_l, LevelEditor.field_j, qh.field_d);
                         }
                       }
                     } else {
@@ -641,7 +641,7 @@ abstract class GameShell extends GameApplet {
           }
           return;
         }
-        bd.a((Throwable) null, "MGS2: " + BattleUnit.i(-15465), -109);
+        bd.reportClientError((Throwable) null, "MGS2: " + BattleUnit.i(-15465), -109);
         WidgetContainer.g(-17464);
     }
 
@@ -709,7 +709,7 @@ abstract class GameShell extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            bd.a((Throwable) ((Object) var6_ref), (String) null, 99);
+            bd.reportClientError((Throwable) ((Object) var6_ref), (String) null, 99);
             this.a("crash", true);
           }
           return;
@@ -723,7 +723,7 @@ abstract class GameShell extends GameApplet {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -734,7 +734,7 @@ abstract class GameShell extends GameApplet {
             this.field_w = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "gf.WC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "gf.WC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

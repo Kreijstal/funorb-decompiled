@@ -101,7 +101,7 @@ final class tb extends uj {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw qk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw qk.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -311,7 +311,7 @@ final class tb extends uj {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class tb extends uj {
           }
           if (this.field_w) {
             var2_int = 1;
-            var3 = this.field_k.d(9272);
+            var3 = this.field_k.beginBackward(9272);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (0 == this.field_n[var4]) {
@@ -361,7 +361,7 @@ final class tb extends uj {
               } else {
                 var3.unlink((byte) 12);
               }
-              var3 = this.field_k.e((byte) -119);
+              var3 = this.field_k.nextBackward((byte) -119);
             }
             while (this.field_z < this.field_j.field_d.length) {
               if (0 == this.field_j.field_d[this.field_z]) {
@@ -393,7 +393,7 @@ final class tb extends uj {
           else {
             if (this.field_o) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_k.d(9272);
+              var3Lifetime1 = this.field_k.beginBackward(9272);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_n[var4Lifetime1] != 1) {
@@ -404,7 +404,7 @@ final class tb extends uj {
                 } else {
                   var2_intLifetime1 = 0;
                 }
-                var3Lifetime1 = this.field_k.e((byte) -119);
+                var3Lifetime1 = this.field_k.nextBackward((byte) -119);
               }
               scanLoop1: while (true) {
                 if (this.field_z < this.field_j.field_d.length) {
@@ -756,7 +756,7 @@ final class tb extends uj {
           var5 = (java.applet.Applet) null;
           tb.a(-41, (String) null, (java.applet.Applet) null);
         }
-        var2 = this.field_v.d(9272);
+        var2 = this.field_v.beginBackward(9272);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 >= 0 &&
@@ -771,11 +771,11 @@ final class tb extends uj {
             if (this.field_n[var3] == 1) {
               var2.unlink((byte) 12);
             }
-            var2 = this.field_v.e((byte) -119);
+            var2 = this.field_v.nextBackward((byte) -119);
             continue;
           }
           var2.unlink((byte) 12);
-          var2 = this.field_v.e((byte) -119);
+          var2 = this.field_v.nextBackward((byte) -119);
         }
     }
 
@@ -853,7 +853,7 @@ final class tb extends uj {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw qk.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

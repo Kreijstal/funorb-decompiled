@@ -56,10 +56,10 @@ final class va {
           fi.field_q = param0;
           ee.field_h = param1;
           fg.field_a = param5;
-          ad.field_h = param6;
+          TutorialController.field_h = param6;
           p.field_e = param3;
         } catch (RuntimeException runtimeException) {
-          throw qk.a((Throwable) ((Object) runtimeException), "va.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw qk.wrapException((Throwable) ((Object) runtimeException), "va.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
     }
 
