@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh extends lh {
+final class vh extends IntrusiveNode {
     int field_m;
     static int field_o;
     static String field_k;
@@ -28,8 +28,8 @@ final class vh extends lh {
     }
 
     final static void a(int param0) {
-        td.field_k.field_c = param0;
-        td.field_k.field_b = 0;
+        BufferedSocket.field_k.field_c = param0;
+        BufferedSocket.field_k.field_b = 0;
     }
 
     final static void a(long param0, int param1) {

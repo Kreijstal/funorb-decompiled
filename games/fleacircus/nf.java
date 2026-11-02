@@ -21,7 +21,7 @@ final class nf extends gj implements pe, da {
         return false;
     }
 
-    private final int a(String param0, String param1, int param2, byte param3, int param4, int param5, qa param6) {
+    private final int a(String param0, String param1, int param2, byte param3, int param4, int param5, UiComponent param6) {
         RuntimeException var8 = null;
         v var9 = null;
         ml var10 = null;
@@ -37,14 +37,14 @@ final class nf extends gj implements pe, da {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new ml(20, param2, 120 + param4, 25, param6, false, 120, 3, ug.field_e, 16777215, param1);
-          this.a((qa) (var10), (byte) -107);
+          this.a((UiComponent) (var10), (byte) -107);
           if (param3 != 109) {
             stackIn_2_0 = 12;
             return stackIn_2_0;
           }
           var9 = new v(((nh) ((Object) param6)).a((byte) 55), param0, 126, param2 + var10.field_j, 25 + param4, param5);
           var9.field_s = (kd) (this);
-          this.a((qa) (var9), (byte) -124);
+          this.a((UiComponent) (var9), (byte) -124);
           stackIn_4_0 = var9.field_j + var10.field_j;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,8 +88,8 @@ final class nf extends gj implements pe, da {
     public final void a(int param0) {
         ((vf) (this.field_I.a((byte) 76))).d(true);
         if (param0 > -66) {
-          qa var3 = (qa) null;
-          this.a(26, 17, (qa) null, '﾿');
+          UiComponent var3 = (UiComponent) null;
+          this.a(26, 17, (UiComponent) null, '﾿');
         }
     }
 
@@ -109,18 +109,18 @@ final class nf extends gj implements pe, da {
     }
 
     public nf() {
-        super(0, 0, 496, 0, (ch) null);
+        super(0, 0, 496, 0, (ComponentLayout) null);
         this.field_I = new bc("", (kd) null, 12);
         e var1 = new e(nb.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ug.field_e.field_H, -1, 2147483647, true);
-        qa var2 = new qa(t.field_c, var1, (kd) null);
+        UiComponent var2 = new UiComponent(t.field_c, var1, (kd) null);
         this.field_J = new bb(e.field_g, (kd) null);
         this.field_L = new bb(gd.field_d, (kd) null);
         this.field_I.field_m = df.field_c;
         this.field_I.a(true, new vf(this.field_I));
         this.field_J.field_D = false;
-        this.field_J.field_p = (ch) ((Object) new ri());
-        this.field_L.field_p = (ch) ((Object) new me());
-        this.field_I.field_p = (ch) ((Object) new aa(10000536));
+        this.field_J.field_p = (ComponentLayout) ((Object) new ri());
+        this.field_L.field_p = (ComponentLayout) ((Object) new me());
+        this.field_I.field_p = (ComponentLayout) ((Object) new aa(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
@@ -132,15 +132,15 @@ final class nf extends gj implements pe, da {
         this.field_L.a(3 + var4, 60, var3 + 15, 40, 80);
         this.field_L.field_s = (kd) (this);
         this.field_J.field_s = (kd) (this);
-        this.a((qa) (this.field_J), (byte) -45);
-        this.a((qa) (this.field_L), (byte) -126);
+        this.a((UiComponent) (this.field_J), (byte) -45);
+        this.a((UiComponent) (this.field_L), (byte) -126);
         this.field_H = new ij((pe) (this));
         this.field_H.a(60 + this.field_I.field_y + this.field_I.field_u, -this.field_I.field_u + (-this.field_I.field_y + this.field_u - 60), 20, 150, 80);
-        this.a((qa) (this.field_H), (byte) -38);
+        this.a((UiComponent) (this.field_H), (byte) -38);
         this.a(0, 496, 0, var4 + (55 + var3), 80);
     }
 
-    final void a(int param0, int param1, qa param2, byte param3) {
+    final void a(int param0, int param1, UiComponent param2, byte param3) {
         try {
           if (param3 > -85) {
             this.field_J = (bb) null;
@@ -163,7 +163,7 @@ final class nf extends gj implements pe, da {
             this.j(115);
           }
           if (this.field_L == param4) {
-            na.a((byte) -121);
+            NodeHashTableIterator.a((byte) -121);
             return;
           }
           if (this.field_J != param4) {
@@ -219,7 +219,7 @@ final class nf extends gj implements pe, da {
         }
     }
 
-    final boolean a(int param0, int param1, qa param2, char param3) {
+    final boolean a(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -254,7 +254,7 @@ final class nf extends gj implements pe, da {
         }
     }
 
-    private final int a(String param0, int param1, String param2, int param3, int param4, qa param5) {
+    private final int a(String param0, int param1, String param2, int param3, int param4, UiComponent param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

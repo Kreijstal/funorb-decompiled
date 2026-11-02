@@ -47,7 +47,7 @@ final class se {
         }
         try {
           if (em.field_g == null) {
-            em.field_g = new nd(nb.field_a, rh.field_e);
+            em.field_g = new nd(nb.field_a, ResourceArchive.field_e);
             nb.field_a.b(em.field_g, (byte) -35);
           }
           em.field_g.a(param0, param3, param2, -122);
@@ -73,7 +73,7 @@ final class se {
         ih var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var10 = ae.field_a;
           if (param0 > -94) {

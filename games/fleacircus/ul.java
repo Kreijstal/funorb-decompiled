@@ -45,7 +45,7 @@ final class ul extends gj implements nk, da {
         }
     }
 
-    final boolean a(int param0, int param1, qa param2, char param3) {
+    final boolean a(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -88,7 +88,7 @@ final class ul extends gj implements nk, da {
         RuntimeException var3 = null;
         try {
           if (param1 == this.field_H) {
-            this.field_J.a((qa) (this), -123);
+            this.field_J.a((UiComponent) (this), -123);
           }
           if (this.field_J == param1) {
             this.e((byte) -32);
@@ -143,7 +143,7 @@ final class ul extends gj implements nk, da {
         kb var2 = null;
         int var4 = 0;
         int var3 = 0;
-        int var5 = fleas.field_A ? 1 : 0;
+        int var5 = FleaCircusApplet.field_A ? 1 : 0;
         fa var6 = tl.field_p;
         fa var7 = var6;
         if (param0) {
@@ -200,7 +200,7 @@ final class ul extends gj implements nk, da {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param3 != 248) {
             return;
@@ -212,7 +212,7 @@ final class ul extends gj implements nk, da {
                   if (this.field_K) {
                     ej.a(param3 ^ 232);
                   } else {
-                    td.g(param3 ^ 252);
+                    BufferedSocket.g(param3 ^ 252);
                   }
                 } else {
                   vi.c((byte) -124);
@@ -246,7 +246,7 @@ final class ul extends gj implements nk, da {
     }
 
     ul(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (ch) null);
+        super(0, 0, 310, 190, (ComponentLayout) null);
         ml dupTemp$0 = null;
         ml dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -306,16 +306,16 @@ final class ul extends gj implements nk, da {
               this.field_N = new bb(qk.field_h, (kd) (this));
             }
           }
-          this.field_H.field_p = (ch) ((Object) new aa(10000536));
-          this.field_J.field_p = (ch) ((Object) new mh(10000536));
+          this.field_H.field_p = (ComponentLayout) ((Object) new aa(10000536));
+          this.field_J.field_p = (ComponentLayout) ((Object) new mh(10000536));
           var6 = new ri();
-          this.field_I.field_p = (ch) ((Object) var6);
+          this.field_I.field_p = (ComponentLayout) ((Object) var6);
           if (this.field_L != null) {
-            this.field_L.field_p = (ch) ((Object) var6);
+            this.field_L.field_p = (ComponentLayout) ((Object) var6);
           }
           this.field_H.field_m = uf.field_l;
           if (this.field_N != null) {
-            this.field_N.field_p = (ch) ((Object) var6);
+            this.field_N.field_p = (ComponentLayout) ((Object) var6);
           }
           if (this.field_N != null) {
             this.field_N.field_m = se.field_f;
@@ -323,9 +323,9 @@ final class ul extends gj implements nk, da {
           if (!this.field_P) {
             if (this.field_K) {
               this.field_L.field_m = ga.field_n;
-              this.field_L.field_p = (ch) ((Object) new me());
+              this.field_L.field_p = (ComponentLayout) ((Object) new me());
             } else {
-              this.field_L.field_p = (ch) ((Object) new me());
+              this.field_L.field_p = (ComponentLayout) ((Object) new me());
             }
           } else {
             this.field_L.field_m = db.field_F;
@@ -346,13 +346,13 @@ final class ul extends gj implements nk, da {
           }
           dupTemp$0 = new ml(10, this.field_z, this.field_u - 20, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a((qa) (dupTemp$0), (byte) -61);
-          this.field_z = this.field_z + (5 + ((qa) ((Object) var12)).field_j);
+          this.a((UiComponent) (dupTemp$0), (byte) -61);
+          this.field_z = this.field_z + (5 + ((UiComponent) ((Object) var12)).field_j);
           dupTemp$1 = new ml(10, this.field_z, this.field_u - 20, 25, this.field_J, false, 80, 3, var7, 16777215, kc.field_g);
           var13 = dupTemp$1;
-          this.a((qa) (dupTemp$1), (byte) -118);
+          this.a((UiComponent) (dupTemp$1), (byte) -118);
           this.field_I.field_s = (kd) (this);
-          this.field_z = this.field_z + (((qa) ((Object) var13)).field_j + 5);
+          this.field_z = this.field_z + (((UiComponent) ((Object) var13)).field_j + 5);
           if (null != this.field_N) {
             this.field_N.field_s = (kd) (this);
           }
@@ -381,12 +381,12 @@ final class ul extends gj implements nk, da {
             }
           }
           this.a(0, this.field_u, 0, this.field_z + 3, 80);
-          this.a((qa) (this.field_I), (byte) -76);
+          this.a((UiComponent) (this.field_I), (byte) -76);
           if (null != this.field_N) {
-            this.a((qa) (this.field_N), (byte) -42);
+            this.a((UiComponent) (this.field_N), (byte) -42);
           }
           if (null != this.field_L) {
-            this.a((qa) (this.field_L), (byte) -33);
+            this.a((UiComponent) (this.field_L), (byte) -33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

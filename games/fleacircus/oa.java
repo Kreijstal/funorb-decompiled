@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends lh {
+final class oa extends IntrusiveNode {
     static String field_o;
     byte[] field_k;
     int field_i;
-    static rh field_l;
+    static ResourceArchive field_l;
     static int field_j;
     static int[] field_m;
     static boolean field_n;
@@ -39,7 +39,7 @@ final class oa extends lh {
         af.field_g = 0;
         if (bc.field_V == 0) {
           bj.field_m = bc.field_V;
-          k.a(0, td.field_j);
+          k.a(0, BufferedSocket.field_j);
           if (bc.field_V >= 0) {
             pi.field_b[bc.field_V].a(param1, true);
           }
@@ -52,7 +52,7 @@ final class oa extends lh {
         }
         if (-2 == bc.field_V) {
           bj.field_m = bc.field_V;
-          k.a(0, td.field_j);
+          k.a(0, BufferedSocket.field_j);
         }
         if (bc.field_V >= 0) {
           pi.field_b[bc.field_V].a(param1, true);
@@ -75,7 +75,7 @@ final class oa extends lh {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var2_int = param0.length();
           var3 = 0;

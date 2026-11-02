@@ -22,8 +22,8 @@ final class j extends ne {
         field_o = null;
         field_h = null;
         if (param0 >= -89) {
-          rh var2 = (rh) null;
-          j.a((rh) null, (rh) null, -107, (rh) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          j.a((ResourceArchive) null, (ResourceArchive) null, -107, (ResourceArchive) null);
         }
     }
 
@@ -96,13 +96,13 @@ final class j extends ne {
           var8 = var7;
           var8.field_d[param2] = param0 - param4.b(param3);
           var7.field_d[param3.length()] = param0;
-          cd.a(param3, param4, var8, param2 + 30988, 0);
+          GameAppletShell.a(param3, param4, var8, param2 + 30988, 0);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "j.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(rh param0, rh param1, int param2, rh param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         dd var17 = null;
         bi[] var5 = null;
         bi[][] var6 = null;
@@ -117,7 +117,7 @@ final class j extends ne {
         dd var12 = null;
         int var8 = 0;
         int var9 = 0;
-        int var13 = fleas.field_A ? 1 : 0;
+        int var13 = FleaCircusApplet.field_A ? 1 : 0;
         int var8Lifetime1;
         int var9Lifetime1;
         uh.field_m = of.a("frame_top", "commonui", param0, 101);
@@ -207,7 +207,7 @@ final class j extends ne {
           var7 = param0.b(param2);
           var8.field_d[0] = param3 - (var7 >> 1);
           var8.field_d[param2.length()] = param3 + (var7 >> 1);
-          cd.a(param2, param0, var8, 30988, 0);
+          GameAppletShell.a(param2, param0, var8, 30988, 0);
           if (param1 <= 45) {
             this.field_r = 7;
           }
@@ -235,7 +235,7 @@ final class j extends ne {
     private final pi a(String param0, byte param1, int param2, fa param3) {
         pi var5 = null;
         RuntimeException var5_ref = null;
-        rh var6 = null;
+        ResourceArchive var6 = null;
         pi var7 = null;
         pi stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -246,8 +246,8 @@ final class j extends ne {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -74) {
-            var6 = (rh) null;
-            j.a((rh) null, (rh) null, -66, (rh) null);
+            var6 = (ResourceArchive) null;
+            j.a((ResourceArchive) null, (ResourceArchive) null, -66, (ResourceArchive) null);
           }
           var7 = new pi(param2 - param3.field_H, param3.field_K + param2, param0.length());
           var5 = var7;
@@ -303,7 +303,7 @@ final class j extends ne {
         String[] var16 = null;
         String[] var17 = null;
         int var12Lifetime1;
-        var15 = fleas.field_A ? 1 : 0;
+        var15 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (0 == param1) {
             param1 = param3.field_N;
@@ -388,7 +388,7 @@ final class j extends ne {
               } else {
                 stackIn_44_4 = this.a(param3.b(var13), var13, 0, param5);
               }
-              cd.a(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_44_4);
+              GameAppletShell.a(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_44_4);
             }
             var11 = var11 + param1;
             this.field_c[var12Lifetime1] = var14;
@@ -437,7 +437,7 @@ final class j extends ne {
           var8 = var7;
           var7.field_d[0] = param1;
           var8.field_d[param0.length()] = param2.b(param0) + param1;
-          cd.a(param0, param2, var8, 30988, 0);
+          GameAppletShell.a(param0, param2, var8, 30988, 0);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "j.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-class qa extends lh {
+class UiComponent extends IntrusiveNode {
     boolean field_x;
     static int field_k;
     kd field_s;
     int field_u;
     int field_v;
-    ch field_p;
+    ComponentLayout field_p;
     int field_r;
     static bi field_l;
     ne field_w;
@@ -128,7 +128,7 @@ class qa extends lh {
         }
     }
 
-    boolean a(qa param0, int param1) {
+    boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -153,7 +153,7 @@ class qa extends lh {
         }
     }
 
-    void a(int param0, int param1, qa param2, byte param3) {
+    void a(int param0, int param1, UiComponent param2, byte param3) {
         int var5_int = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;
@@ -199,7 +199,7 @@ class qa extends lh {
         }
     }
 
-    boolean a(int param0, boolean param1, int param2, qa param3, int param4, int param5, int param6) {
+    boolean a(int param0, boolean param1, int param2, UiComponent param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -212,7 +212,7 @@ class qa extends lh {
           if (param1) {
             return false;
           }
-          this.field_p = (ch) null;
+          this.field_p = (ComponentLayout) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -252,7 +252,7 @@ class qa extends lh {
         pk var11;
         pk var12;
         pk var13;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         this.a(param0, param3, this, (byte) -111);
         var5 = this.e(1) ? 1 : 0;
         if (!param2) {
@@ -262,7 +262,7 @@ class qa extends lh {
           }
         } else {
           if (al.field_f == 0) {
-            sharedTailExit_2: {
+            regionExit1: {
               if (jk.field_r != 0) {
                 if (this.a(param0, true, ob.field_e, this, pb.field_d, jk.field_r, param3)) {
                   param2 = false;
@@ -285,7 +285,7 @@ class qa extends lh {
                           this.f(-1);
                         }
                       }
-                      break sharedTailExit_2;
+                      break regionExit1;
                     }
                   }
                 }
@@ -442,7 +442,7 @@ class qa extends lh {
         int var4_int;
         dd var4;
         int var5;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         var1 = ob.field_a[0] * ij.field_H[0];
         var2 = of.field_d[0];
         var3 = new int[var1];
@@ -478,7 +478,7 @@ class qa extends lh {
         return null;
     }
 
-    qa(String param0, kd param1) {
+    UiComponent(String param0, kd param1) {
         this(param0, nf.field_M.field_i, param1);
     }
 
@@ -500,7 +500,7 @@ class qa extends lh {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           discarded$0 = param2.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_y).append(",").append(this.field_z).append(" ").append(this.field_u).append("x").append(this.field_j);
           if (null != this.field_i) {
@@ -514,7 +514,7 @@ class qa extends lh {
           }
           if (this.field_p != null) {
             discarded$4 = param2.append(" renderer=");
-            if (this.field_p instanceof qa) {
+            if (this.field_p instanceof UiComponent) {
               param2 = this.a(param2, param3, param0 + 1, -71);
               if (var6 != 0) {
                 discarded$5 = param2.append(this.field_p);
@@ -526,7 +526,7 @@ class qa extends lh {
           var5_int = 27 / ((param1 - 36) / 46);
           if (null != this.field_s) {
             discarded$6 = param2.append(" listener=");
-            if (!(this.field_s instanceof qa)) {
+            if (!(this.field_s instanceof UiComponent)) {
               discarded$7 = param2.append(this.field_s);
               if (var6 != 0) {
                 param2 = this.a(param2, param3, 1 + param0, -110);
@@ -596,7 +596,7 @@ class qa extends lh {
         int var5_int;
         String var5;
         int var6;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         var4 = this.c((byte) 8);
         var5_int = param0;
         while (var4 >= var5_int) {
@@ -613,7 +613,7 @@ class qa extends lh {
         }
     }
 
-    boolean a(int param0, int param1, qa param2, char param3) {
+    boolean a(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -638,11 +638,11 @@ class qa extends lh {
         }
     }
 
-    void a(byte param0, qa param1, int param2, int param3, int param4, int param5) {
+    void a(byte param0, UiComponent param1, int param2, int param3, int param4, int param5) {
         try {
           this.field_v = 0;
           if (param0 != 5) {
-            qa.d(-24);
+            UiComponent.d(-24);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "qa.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -655,7 +655,7 @@ class qa extends lh {
         int var4Lifetime2;
         int var4Lifetime3;
         if (param1 > -15) {
-          qa.h(111);
+          UiComponent.h(111);
           if (!this.e(1)) {
             var4 = param2;
             if (80 != var4) {
@@ -689,7 +689,7 @@ class qa extends lh {
         return this.a(this, -124);
     }
 
-    boolean a(int param0, qa param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(int param0, UiComponent param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -733,12 +733,12 @@ class qa extends lh {
         return false;
     }
 
-    protected qa() {
+    protected UiComponent() {
         this.field_n = 0;
         this.field_r = 0;
     }
 
-    qa(String param0, ch param1, kd param2) {
+    UiComponent(String param0, ComponentLayout param1, kd param2) {
         eg var4 = null;
         this.field_n = 0;
         this.field_r = 0;
@@ -756,7 +756,7 @@ class qa extends lh {
         }
     }
 
-    qa(int param0, int param1, int param2, int param3, ch param4, kd param5) {
+    UiComponent(int param0, int param1, int param2, int param3, ComponentLayout param4, kd param5) {
         this.field_n = 0;
         this.field_r = 0;
         try {
@@ -773,7 +773,7 @@ class qa extends lh {
 
     boolean e(int param0) {
         if (param0 != 1) {
-          this.a(-97, -125, (qa) null, 'ﾹ');
+          this.a(-97, -125, (UiComponent) null, 'ﾹ');
           return false;
         }
         return false;

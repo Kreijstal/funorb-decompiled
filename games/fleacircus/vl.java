@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vl extends lh {
+abstract class vl extends IntrusiveNode {
     int field_i;
 
     abstract int a(ke param0);

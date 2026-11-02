@@ -16,7 +16,7 @@ final class ri extends e {
         this(2188450, 2591221, 9543);
     }
 
-    public final void a(int param0, int param1, boolean param2, qa param3, int param4) {
+    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;

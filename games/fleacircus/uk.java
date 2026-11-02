@@ -22,7 +22,7 @@ final class uk {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = fleas.field_A ? 1 : 0;
+        var10 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var2_int = 33 / ((param0 + 55) / 38);
           if (param1 == null) {

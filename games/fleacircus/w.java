@@ -52,7 +52,7 @@ abstract class w {
 
     abstract void a(Object param0, boolean param1, byte param2);
 
-    final static dd[] a(int param0, int param1, int param2, rh param3) {
+    final static dd[] a(int param0, int param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
@@ -143,7 +143,7 @@ abstract class w {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           RuntimeException var2_ref = null;
-          var8 = fleas.field_A ? 1 : 0;
+          var8 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             try {
               var9 = param1.getParameter("cookieprefix");

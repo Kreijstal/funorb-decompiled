@@ -7,7 +7,7 @@ abstract class hm {
     int field_e;
     String field_a;
     static wd field_b;
-    static rh field_g;
+    static ResourceArchive field_g;
     static String[] field_c;
     static String field_h;
     static String field_f;
@@ -22,7 +22,7 @@ abstract class hm {
           field_b = null;
           return;
         }
-        field_g = (rh) null;
+        field_g = (ResourceArchive) null;
         field_c = null;
         field_h = null;
         field_b = null;
@@ -39,12 +39,12 @@ abstract class hm {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var3_int = -param0.field_mb + param1.field_mb;
           if (!param2) {
             var5 = (String) null;
-            hm.a((String) null, (rh) null, (byte) -42, (String) null);
+            hm.a((String) null, (ResourceArchive) null, (byte) -42, (String) null);
           }
           if (param1.field_lb == ul.field_F) {
             var3_int -= 200;
@@ -91,7 +91,7 @@ abstract class hm {
 
     abstract java.net.Socket a(boolean param0) throws IOException;
 
-    final static bi a(String param0, rh param1, byte param2, String param3) {
+    final static bi a(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

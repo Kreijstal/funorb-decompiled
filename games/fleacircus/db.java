@@ -38,7 +38,7 @@ abstract class db extends gj {
     }
 
     db(f param0, int param1, int param2) {
-        super(-param1 + ll.field_m >> 1, -param2 + ca.field_Q >> 1, param1, param2, (ch) null);
+        super(-param1 + ll.field_m >> 1, -param2 + ca.field_Q >> 1, param1, param2, (ComponentLayout) null);
         try {
           this.field_L = param0;
           this.field_G = false;
@@ -118,7 +118,7 @@ abstract class db extends gj {
         int var11 = 0;
         int var5Lifetime1;
         int var8Lifetime1;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var3_int = param0.length();
           var4 = var3_int;
@@ -205,16 +205,16 @@ abstract class db extends gj {
         }
     }
 
-    final qa i(int param0) {
+    final UiComponent i(int param0) {
         if (param0 != -257) {
           String[] var3 = (String[]) null;
           db.a((String) null, (String[]) null, false);
         }
-        qa var2 = super.i(param0 + 0);
+        UiComponent var2 = super.i(param0 + 0);
         if (var2 != null) {
           return var2;
         }
-        return (qa) (this);
+        return (UiComponent) (this);
     }
 
     final static int a(byte param0, Random param1, int param2) {
@@ -228,7 +228,7 @@ abstract class db extends gj {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param2 <= 0) {
             throw new IllegalArgumentException();

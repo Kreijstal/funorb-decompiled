@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lk extends qa {
+final class lk extends UiComponent {
     static vc field_O;
     int field_I;
     private int field_N;
@@ -28,7 +28,7 @@ final class lk extends qa {
         int var11 = 0;
         int var12 = 0;
         int var6 = 0;
-        int var13 = fleas.field_A ? 1 : 0;
+        int var13 = FleaCircusApplet.field_A ? 1 : 0;
         dd var14 = new dd(this.field_N * 2, this.field_j);
         int var8Lifetime1;
         int var9Lifetime1;
@@ -68,7 +68,7 @@ final class lk extends qa {
         }
     }
 
-    final void a(int param0, int param1, qa param2, byte param3) {
+    final void a(int param0, int param1, UiComponent param2, byte param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -175,11 +175,11 @@ final class lk extends qa {
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var1_int = 0;
           var2 = 0;
-          while (wf.b(-113)) {
+          while (SecondaryNodeDeque.b(-113)) {
             bk.field_a.h(0);
             if (bk.field_a.b(-66)) {
               var1_int = 1;
@@ -234,7 +234,7 @@ final class lk extends qa {
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
-        int var9 = fleas.field_A ? 1 : 0;
+        int var9 = FleaCircusApplet.field_A ? 1 : 0;
         int var2 = this.field_j >> 1;
         dd var3 = new dd(var2, this.field_j);
         r.a(var3, 45);
@@ -275,7 +275,7 @@ final class lk extends qa {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var5_int = this.field_u + param3;
           mi.a((byte) -52, var5_int - this.field_P.field_w, param3 + this.field_P.field_w, param1 + this.field_j, param1);
@@ -338,8 +338,8 @@ final class lk extends qa {
     }
 
     final static void a(byte param0) {
-        if (vg.field_z != 0 - wf.field_c &&
-          vg.field_z != -wf.field_c + 250) {
+        if (vg.field_z != 0 - SecondaryNodeDeque.field_c &&
+          vg.field_z != -SecondaryNodeDeque.field_c + 250) {
         }
         if (param0 != 35) {
           field_J = -59;

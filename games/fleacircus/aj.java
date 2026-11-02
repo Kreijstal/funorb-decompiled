@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends pa {
+final class aj extends DualLinkNode {
     static dd[] field_t;
     static String field_x;
     private int[] field_u;
@@ -26,7 +26,7 @@ final class aj extends pa {
         int var6 = 0;
         fh var7 = null;
         int var9 = 0;
-        var9 = fleas.field_A ? 1 : 0;
+        var9 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param2 != 4) {
             return;
@@ -96,7 +96,7 @@ final class aj extends pa {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         StringBuilder var6 = new StringBuilder(80);
         StringBuilder var2 = var6;
         if (this.field_y == null) {
@@ -125,7 +125,7 @@ final class aj extends pa {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param2.field_a == null) {
             return;
@@ -198,7 +198,7 @@ final class aj extends pa {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param1 != 4) {
             return;
@@ -246,7 +246,7 @@ final class aj extends pa {
         CharSequence var8 = null;
         int var9 = 0;
         CharSequence var10 = null;
-        var9 = fleas.field_A ? 1 : 0;
+        var9 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param3 == 0) {
             stackIn_3_0 = "";
@@ -346,7 +346,7 @@ final class aj extends pa {
 
     final void h(int param0) {
         int var2 = 0;
-        int var3 = fleas.field_A ? 1 : 0;
+        int var3 = FleaCircusApplet.field_A ? 1 : 0;
         if (null != this.field_z) {
           for (var2 = 0; this.field_z.length > var2; var2++) {
             this.field_z[var2] = ne.a(this.field_z[var2], 32768);

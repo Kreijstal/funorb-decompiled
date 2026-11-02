@@ -3,22 +3,22 @@
  */
 import java.util.*;
 
-final class wf implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static String field_e;
-    pa field_a;
+    DualLinkNode field_a;
     static int field_c;
     static String field_d;
-    static rh field_b;
+    static ResourceArchive field_b;
 
     final static wj c(int param0) {
         if (param0 != 0) {
-          wf.c(120);
+          SecondaryNodeDeque.c(120);
           return (wj) ((Object) new o());
         }
         return (wj) ((Object) new o());
     }
 
-    final void a(int param0, pa param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
           if (param1.field_m != null) {
             param1.e(-122);
@@ -41,7 +41,7 @@ final class wf implements Iterable {
         if (param0 >= -90) {
           field_d = (String) null;
         }
-        var1 = rh.field_f;
+        var1 = ResourceArchive.field_f;
         synchronized (var1) {
           if (tl.field_o == tc.field_h) {
             return false;
@@ -54,11 +54,11 @@ final class wf implements Iterable {
         return stackIn_8_0;
     }
 
-    final pa d(int param0) {
+    final DualLinkNode d(int param0) {
         if (param0 != -27593) {
-          return (pa) null;
+          return (DualLinkNode) null;
         }
-        pa var2 = this.field_a.field_p;
+        DualLinkNode var2 = this.field_a.field_p;
         if (this.field_a != var2) {
           var2.e(123);
           return var2;
@@ -66,7 +66,7 @@ final class wf implements Iterable {
         return null;
     }
 
-    private wf() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 

@@ -14,7 +14,7 @@ final class sg {
     int field_e;
     int field_b;
     private long field_g;
-    static td field_h;
+    static BufferedSocket field_h;
 
     final static pd a(byte param0, ie param1) {
         pd var2 = null;
@@ -59,7 +59,7 @@ final class sg {
         char[] var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (Character.isISOControl(param0)) {
             return false;
@@ -113,7 +113,7 @@ final class sg {
         int var7 = 0;
         ih var8 = null;
         aj var9 = null;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         var8 = ae.field_a;
         var3 = var8.e(false);
         stackIn_3_0 = (0 != (var3 & 128));
@@ -148,7 +148,7 @@ final class sg {
           var5 = var8.d((byte) 59);
           try {
             var9 = nf.field_F.a(32768, var5);
-            wf.field_d = var9.c((byte) 103);
+            SecondaryNodeDeque.field_d = var9.c((byte) 103);
             if (qi.field_d.equals(b.field_e)) {
               stackIn_24_0 = null;
             } else {
@@ -160,10 +160,10 @@ final class sg {
             var6 = (Exception) (Object) decompiledCaughtException;
             ud.a("CC1", (Throwable) ((Object) var6), 0);
             l.field_c = null;
-            wf.field_d = null;
+            SecondaryNodeDeque.field_d = null;
           }
         } else {
-          wf.field_d = tf.a(var8, 0, 80);
+          SecondaryNodeDeque.field_d = tf.a(var8, 0, 80);
           l.field_c = null;
         }
         return new sg(param0);
@@ -206,7 +206,7 @@ final class sg {
         }
         this.field_j = d.field_N;
         this.field_e = jd.field_t;
-        this.field_l = wf.field_d;
+        this.field_l = SecondaryNodeDeque.field_d;
         this.field_g = ki.field_b;
         this.field_b = ga.field_o;
         this.field_k = ll.field_j;

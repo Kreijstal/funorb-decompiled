@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hk extends lh {
+final class hk extends IntrusiveNode {
     static sl[] field_G;
     private static ba[] field_v;
     private int field_J;
@@ -155,7 +155,7 @@ final class hk extends lh {
         field_C = true;
     }
 
-    final static hk a(rh param0, String param1, String param2) {
+    final static hk a(ResourceArchive param0, String param1, String param2) {
         try {
           hk var4_ref = null;
           if (!hk.a(param0)) {
@@ -180,7 +180,7 @@ final class hk extends lh {
         }
     }
 
-    final static hk a(rh param0, int param1, int param2) {
+    final static hk a(ResourceArchive param0, int param1, int param2) {
         try {
           hk var4_ref = null;
           if (!hk.a(param0)) {
@@ -213,7 +213,7 @@ final class hk extends lh {
         return var0;
     }
 
-    private final static boolean a(rh param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_C) {
           var1 = param0.a(0, (byte) 120, 0);

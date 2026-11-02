@@ -28,7 +28,7 @@ final class v extends ja {
         }
     }
 
-    final void a(int param0, int param1, qa param2, byte param3) {
+    final void a(int param0, int param1, UiComponent param2, byte param3) {
         try {
           this.field_T = this.field_T + 1;
           super.a(param0, param1, param2, (byte) -112);
@@ -91,7 +91,7 @@ final class v extends ja {
         var22 = null;
         var26 = null;
         var36 = null;
-        var13 = fleas.field_A ? 1 : 0;
+        var13 = FleaCircusApplet.field_A ? 1 : 0;
         var6 = this.field_S.a(false);
         if (ea.field_b == var6) {
           var17 = bg.field_b;
@@ -102,7 +102,7 @@ final class v extends ja {
             var6 = this.field_S.a(false);
             var40 = (eg) ((Object) this.field_p);
             var9 = param1 + this.field_y;
-            var10 = var40.a(param0, (qa) (this), (byte) -59) + (var40.a((qa) (this), (byte) -35).a(param2) >> 1);
+            var10 = var40.a(param0, (UiComponent) (this), (byte) -59) + (var40.a((UiComponent) (this), (byte) -35).a(param2) >> 1);
             if (ea.field_b != var6 &&
               var6 != w.field_e) {
               if (var6 == ml.field_K) {
@@ -138,7 +138,7 @@ final class v extends ja {
           var6 = this.field_S.a(false);
           var41 = (eg) ((Object) this.field_p);
           var9Lifetime3 = param1 + this.field_y;
-          var10Lifetime3 = var41.a(param0, (qa) (this), (byte) -59) + (var41.a((qa) (this), (byte) -35).a(param2) >> 1);
+          var10Lifetime3 = var41.a(param0, (UiComponent) (this), (byte) -59) + (var41.a((UiComponent) (this), (byte) -35).a(param2) >> 1);
           if (ea.field_b != var6 &&
             var6 != w.field_e) {
             if (var6 == ml.field_K) {
@@ -191,7 +191,7 @@ final class v extends ja {
           var6Lifetime1 = this.field_S.a(false);
           var43 = (eg) ((Object) this.field_p);
           var9Lifetime1 = param1 + this.field_y;
-          var10Lifetime1 = var43.a(param0, (qa) (this), (byte) -59) + (var43.a((qa) (this), (byte) -35).a(param2) >> 1);
+          var10Lifetime1 = var43.a(param0, (UiComponent) (this), (byte) -59) + (var43.a((UiComponent) (this), (byte) -35).a(param2) >> 1);
           if (ea.field_b != var6Lifetime1 &&
             var6Lifetime1 != w.field_e) {
             if (var6Lifetime1 == ml.field_K) {
@@ -237,7 +237,7 @@ final class v extends ja {
         var6Lifetime2 = this.field_S.a(false);
         var42 = (eg) ((Object) this.field_p);
         var9Lifetime2 = param1 + this.field_y;
-        var10Lifetime2 = var42.a(param0, (qa) (this), (byte) -59) + (var42.a((qa) (this), (byte) -35).a(param2) >> 1);
+        var10Lifetime2 = var42.a(param0, (UiComponent) (this), (byte) -59) + (var42.a((UiComponent) (this), (byte) -35).a(param2) >> 1);
         if (ea.field_b == var6Lifetime2) {
           var27 = t.field_h[0];
           var11Lifetime2 = var27.field_x << 1;
@@ -296,7 +296,7 @@ final class v extends ja {
         return;
     }
 
-    final boolean a(qa param0, int param1) {
+    final boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

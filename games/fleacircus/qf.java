@@ -6,7 +6,7 @@ final class qf {
     private int field_c;
     private cc[] field_b;
 
-    final static qf a(rh param0, int param1, int param2) {
+    final static qf a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, (byte) 122, param2);
         if (var3 == null) {
           return null;
@@ -59,7 +59,7 @@ final class qf {
         return new sf(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static qf a(rh param0, String param1, String param2) {
+    final static qf a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(0, param2, param1);
         if (var3 == null) {
           return null;

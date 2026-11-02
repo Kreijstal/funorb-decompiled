@@ -53,7 +53,7 @@ class ef extends kc {
         int var5 = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           for (var2_int = 0; 3 > var2_int; var2_int++) {
             bd.field_ob[var2_int] = 0;

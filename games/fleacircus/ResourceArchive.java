@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh {
+final class ResourceArchive {
     private boolean field_d;
     private gi field_i;
     static vb field_p;
@@ -68,7 +68,7 @@ final class rh {
         byte[] var43 = null;
         byte[] var44 = null;
         int var14Lifetime1;
-        var22 = fleas.field_A ? 1 : 0;
+        var22 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (!this.a(true, param1)) {
             return false;
@@ -262,7 +262,7 @@ final class rh {
         int var2;
         int var4;
         int var5;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         if (!this.b((byte) -126)) {
           return false;
         }
@@ -333,13 +333,13 @@ final class rh {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           while (true) {
             param1--;
             if (0 > param1) {
               if (param4 > -65) {
-                rh.c((byte) -61);
+                ResourceArchive.c((byte) -61);
               }
               return;
             }
@@ -591,7 +591,7 @@ final class rh {
         int var9 = 0;
         int var10 = 0;
         StringBuilder discarded$0 = null;
-        int var11 = fleas.field_A ? 1 : 0;
+        int var11 = FleaCircusApplet.field_A ? 1 : 0;
         if (param1 <= 0L) {
           return null;
         }
@@ -711,9 +711,9 @@ final class rh {
           b.field_a = param0;
           mh.field_x = param8;
           tj.field_c = param7;
-          td.field_k = (w) ((Object) new g());
+          BufferedSocket.field_k = (w) ((Object) new g());
           vg.field_r = new af(param8);
-          gf.field_e = new uf(td.field_k, vg.field_r);
+          gf.field_e = new uf(BufferedSocket.field_k, vg.field_r);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "rh.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
@@ -908,7 +908,7 @@ final class rh {
         int var4;
         int var5;
         int var4Lifetime1;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         if (!this.b((byte) -113)) {
           return 0;
         }
@@ -949,7 +949,7 @@ final class rh {
         return true;
     }
 
-    rh(gi param0, boolean param1, int param2) {
+    ResourceArchive(gi param0, boolean param1, int param2) {
         this.field_m = null;
         try {
           if (param2 < 0 ||

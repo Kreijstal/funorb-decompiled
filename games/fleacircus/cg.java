@@ -41,7 +41,7 @@ final class cg extends gi {
         byte[] var5 = null;
         byte[] var6 = null;
         byte[] var7 = null;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (null != this.field_j) {
           return this.field_j;
         }
@@ -142,15 +142,15 @@ final class cg extends gi {
         dl discarded$2 = null;
         int var2_int;
         dl var2;
-        lh var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        lh var6;
-        lh var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        lh var3Lifetime1;
-        var5 = fleas.field_A ? 1 : 0;
+        IntrusiveNode var3Lifetime1;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0 <= 119) {
           field_z = -93L;
         }
@@ -174,18 +174,18 @@ final class cg extends gi {
               }
               var3 = this.field_p.b((byte) -105);
             }
-            L4: while (true) {
+            scanLoop1: while (true) {
               if (this.field_l < this.field_j.field_f.length) {
                 if (this.field_j.field_f[this.field_l] != 0) {
                   if (this.field_o.field_d >= 250) {
                     var2_int = 0;
-                    break L4;
+                    break scanLoop1;
                   }
                   if (this.field_i[this.field_l] == 0) {
                     discarded$0 = this.a(2, 1, this.field_l);
                   }
                   if (0 == this.field_i[this.field_l]) {
-                    var7 = new lh();
+                    var7 = new IntrusiveNode();
                     var7.field_c = (long)this.field_l;
                     var2_int = 0;
                     this.field_p.a(false, var7);
@@ -228,7 +228,7 @@ final class cg extends gi {
                     discarded$2 = this.a(2, 2, this.field_l);
                   }
                   if (this.field_i[this.field_l] != 1) {
-                    var6 = new lh();
+                    var6 = new IntrusiveNode();
                     var6.field_c = (long)this.field_l;
                     var2_intLifetime1 = 0;
                     this.field_p.a(false, var6);
@@ -302,7 +302,7 @@ final class cg extends gi {
         byte[] var28 = null;
         byte[] var29 = null;
         byte[] var30 = null;
-        var10 = fleas.field_A ? 1 : 0;
+        var10 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0 != 2) {
           this.a(-58, (byte) -93);
         }
@@ -348,7 +348,7 @@ final class cg extends gi {
               var4 = this.field_f.a(param0 + 125, true, param2, this.field_m, (byte) 2);
             }
           }
-          this.field_n.a((lh) (var4), true, (long)param2);
+          this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
         }
         if (((dl) (var4)).field_q) {
           return null;
@@ -404,7 +404,7 @@ final class cg extends gi {
               return null;
             }
             var4 = this.field_f.a(param0 ^ 125, true, param2, this.field_m, (byte) 2);
-            this.field_n.a((lh) (var4), true, (long)param2);
+            this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
             return null;
           }
         }
@@ -445,7 +445,7 @@ final class cg extends gi {
           }
           if (!this.field_f.a(-99)) {
             var4 = this.field_f.a(param0 ^ 125, true, param2, this.field_m, (byte) 2);
-            this.field_n.a((lh) (var4), true, (long)param2);
+            this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
           }
           return null;
         }
@@ -469,7 +469,7 @@ final class cg extends gi {
         int var3 = 0;
         dl discarded$0 = null;
         dl discarded$1 = null;
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0) {
           return;
         }
@@ -479,7 +479,7 @@ final class cg extends gi {
         if (this.a(-1712) == null) {
           return;
         }
-        lh var2 = this.field_s.c((byte) 47);
+        IntrusiveNode var2 = this.field_s.c((byte) 47);
         while (var2 != null) {
           var3 = (int)var2.field_c;
           if (var3 < 0) {

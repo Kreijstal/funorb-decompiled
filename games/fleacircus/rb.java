@@ -23,7 +23,7 @@ final class rb extends gj implements da {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param3 != 248) {
             rb.a(-65, -100, (byte) -84);
@@ -37,7 +37,7 @@ final class rb extends gj implements da {
               }
             }
           } else {
-            na.a((byte) -81);
+            NodeHashTableIterator.a((byte) -81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,14 +84,14 @@ final class rb extends gj implements da {
           int var6_intLifetime1;
           int var6_intLifetime2;
           int var8Lifetime1;
-          var9 = fleas.field_A ? 1 : 0;
+          var9 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             if (null == sg.field_h &&
               !id.a(false, param2)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (rh.field_k == d.field_O) {
+            if (ResourceArchive.field_k == d.field_O) {
               if (!param2) {
                 cf.field_c = lk.a(param1, false, (byte) -35, param3);
               } else {
@@ -102,29 +102,29 @@ final class rb extends gj implements da {
               ud.field_b.a(-11, 14);
               ud.field_b.a(-11, cf.field_c.a(true).field_c);
               dk.b((byte) 41, -1);
-              rh.field_k = je.field_P;
+              ResourceArchive.field_k = je.field_P;
             }
-            if (rh.field_k == je.field_P &&
+            if (ResourceArchive.field_k == je.field_P &&
               gi.a(1, true)) {
               var6_int = ae.field_a.e(false);
               if (var6_int == 0) {
-                rh.field_k = ef.field_h;
+                ResourceArchive.field_k = ef.field_h;
               } else {
-                rh.field_k = pi.field_g;
+                ResourceArchive.field_k = pi.field_g;
                 be.field_a = var6_int;
                 pd.field_l = -1;
               }
               ae.field_a.field_i = 0;
             }
-            if (ef.field_h == rh.field_k &&
+            if (ef.field_h == ResourceArchive.field_k &&
               gi.a(8, true)) {
               ug.field_a = ae.field_a.f(-71);
               ae.field_a.field_i = 0;
               wd.a(param2, -120, cf.field_c, param4, param0);
-              rh.field_k = dl.field_w;
+              ResourceArchive.field_k = dl.field_w;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (dl.field_w == rh.field_k &&
+            if (dl.field_w == ResourceArchive.field_k &&
               gi.a(1, true)) {
               var6_intLifetime1 = ae.field_a.e(false);
               be.field_a = var6_intLifetime1;
@@ -133,7 +133,7 @@ final class rb extends gj implements da {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  rh.field_k = pi.field_g;
+                  ResourceArchive.field_k = pi.field_g;
                   pd.field_l = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -146,10 +146,10 @@ final class rb extends gj implements da {
               }
               if (decompiledFrameRemainder0) {
                 pd.field_l = -1;
-                rh.field_k = ll.field_r;
+                ResourceArchive.field_k = ll.field_r;
               }
             }
-            if (ll.field_r == rh.field_k &&
+            if (ll.field_r == ResourceArchive.field_k &&
               gf.b(-128)) {
               aj.field_w = ae.field_a.f(-109);
               qe.field_k = ae.field_a.e(false);
@@ -182,7 +182,7 @@ final class rb extends gj implements da {
               var12 = (CharSequence) ((Object) b.field_e);
               ma.field_a = uk.a(92, var12);
               nb.field_h = ae.field_a.e(false);
-              rh.field_k = fh.field_b;
+              ResourceArchive.field_k = fh.field_b;
               if (cf.field_c.a(true) == wa.field_g) {
                 ml.field_F.a(true, rl.a((byte) -111));
               } else {
@@ -204,7 +204,7 @@ final class rb extends gj implements da {
                 }
               } else {
                 try {
-                  eb.a("zap", new Object[]{rh.a((byte) -70, aj.field_w)}, -11745, rl.a((byte) -126));
+                  eb.a("zap", new Object[]{ResourceArchive.a((byte) -70, aj.field_w)}, -11745, rl.a((byte) -126));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -225,7 +225,7 @@ final class rb extends gj implements da {
               stackIn_78_0 = 13;
               return stackIn_78_0;
             }
-            if (pi.field_g == rh.field_k &&
+            if (pi.field_g == ResourceArchive.field_k &&
               gf.b(115)) {
               k.c(-28354);
               if (7 == be.field_a &&
@@ -244,7 +244,7 @@ final class rb extends gj implements da {
             }
             if (sg.field_h == null) {
               if (aa.field_q) {
-                if (h.b(102) <= 30000L) {
+                if (ContextualRuntimeException.b(102) <= 30000L) {
                   fh.field_a = jc.field_d;
                 } else {
                   fh.field_a = ok.field_B;
@@ -300,7 +300,7 @@ final class rb extends gj implements da {
         super.b(param0, param1, param2, param3);
     }
 
-    final boolean a(int param0, int param1, qa param2, char param3) {
+    final boolean a(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -336,14 +336,14 @@ final class rb extends gj implements da {
     }
 
     public rb() {
-        super(0, 0, 476, 225, (ch) null);
+        super(0, 0, 476, 225, (ComponentLayout) null);
         this.field_J = new bb(qk.field_h, (kd) null);
         this.field_F = new bb(qj.field_J, (kd) null);
         this.field_I = new bb(tc.field_g, (kd) null);
         ri var1 = new ri();
-        this.field_J.field_p = (ch) ((Object) var1);
-        this.field_F.field_p = (ch) ((Object) var1);
-        this.field_I.field_p = (ch) ((Object) var1);
+        this.field_J.field_p = (ComponentLayout) ((Object) var1);
+        this.field_F.field_p = (ComponentLayout) ((Object) var1);
+        this.field_I.field_p = (ComponentLayout) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
@@ -355,14 +355,14 @@ final class rb extends gj implements da {
         this.field_J.field_m = se.field_f;
         this.field_I.field_s = (kd) (this);
         this.field_I.field_m = ga.field_n;
-        this.a((qa) (this.field_F), (byte) -39);
-        this.a((qa) (this.field_J), (byte) -59);
-        this.a((qa) (this.field_I), (byte) -53);
+        this.a((UiComponent) (this.field_F), (byte) -39);
+        this.a((UiComponent) (this.field_J), (byte) -59);
+        this.a((UiComponent) (this.field_I), (byte) -53);
     }
 
     final static void a(int param0, int param1, int param2, dd param3, int param4, int param5, byte param6, int param7, int param8) {
         bh.field_l = param2;
-        li.field_i = param8;
+        IterableNodeHashTable.field_i = param8;
         ei.field_V = param1;
         if (param6 <= 119) {
           return;

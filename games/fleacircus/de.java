@@ -6,7 +6,7 @@ final class de {
     int field_f;
     int field_g;
     int field_d;
-    static rh field_h;
+    static ResourceArchive field_h;
     int field_c;
     static vg field_b;
     int field_e;
@@ -34,7 +34,7 @@ final class de {
 
     final static void a(byte param0, int param1, int param2, int param3) {
         if (param0 != 88) {
-          field_h = (rh) null;
+          field_h = (ResourceArchive) null;
         }
         gb.a(si.field_R);
         int var4 = param1 * 16;

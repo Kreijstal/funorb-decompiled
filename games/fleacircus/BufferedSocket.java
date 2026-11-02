@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class td implements Runnable {
+final class BufferedSocket implements Runnable {
     private OutputStream field_d;
     static long[][] field_f;
     private InputStream field_n;
@@ -47,16 +47,16 @@ final class td implements Runnable {
         int var2;
         ql var3;
         boolean decompiledFrameRemainder0 = true;
-        var2 = fleas.field_A ? 1 : 0;
+        var2 = FleaCircusApplet.field_A ? 1 : 0;
         tj.field_a = tj.field_a + 1;
         if ((!(wc.field_q > 0) ||
-          qh.c((byte) 68)) && (fleas.field_E == 0 &&
+          qh.c((byte) 68)) && (FleaCircusApplet.field_E == 0 &&
           tj.field_a >= 15)) {
           oa.a(9, true, 15);
           decompiledFrameRemainder0 = false;
         }
         else {
-          if (ia.field_m[fleas.field_E].length <= tj.field_a) {
+          if (ia.field_m[FleaCircusApplet.field_E].length <= tj.field_a) {
             if (hj.field_a[1] == -1 + pl.field_l[1] &&
               hj.field_a[0] == -1 + pl.field_l[0]) {
               hg.a(-25389, 3, 252, tj.field_a);
@@ -75,15 +75,15 @@ final class td implements Runnable {
               em.field_b = 0;
             }
             if (tj.field_a == 12 &&
-              fleas.field_E == 0 &&
+              FleaCircusApplet.field_E == 0 &&
               !c.field_U) {
               hg.a(-25389, 10, 245, tj.field_a);
             }
-            if (tj.field_a >= ia.field_m[fleas.field_E].length) {
+            if (tj.field_a >= ia.field_m[FleaCircusApplet.field_E].length) {
               oa.a(9, true, 41);
             } else {
-              hj.field_a[fleas.field_E] = Math.max(tj.field_a, hj.field_a[fleas.field_E]);
-              var3 = new ql(fleas.field_E, -1 + hj.field_a[fleas.field_E], 0, 0, 0, 0);
+              hj.field_a[FleaCircusApplet.field_E] = Math.max(tj.field_a, hj.field_a[FleaCircusApplet.field_E]);
+              var3 = new ql(FleaCircusApplet.field_E, -1 + hj.field_a[FleaCircusApplet.field_E], 0, 0, 0, 0);
               if (!qh.c((byte) 38)) {
                 rd.a(var3, 79, 5);
                 ej.a((byte) -39);
@@ -128,7 +128,7 @@ final class td implements Runnable {
           InterruptedException var4 = null;
           int var6 = 0;
           String var7 = null;
-          var6 = fleas.field_A ? 1 : 0;
+          var6 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             while (true) {
               var3 = this;
@@ -213,7 +213,7 @@ final class td implements Runnable {
     final void h(int param0) {
         try {
           int var4 = 0;
-          var4 = fleas.field_A ? 1 : 0;
+          var4 = FleaCircusApplet.field_A ? 1 : 0;
           if (this.field_l) {
             return;
           }
@@ -282,7 +282,7 @@ final class td implements Runnable {
           dk.field_B = dk.field_B + (var2_intLifetime2 >> 1);
           w.field_a = w.field_a + param1.d((byte) -88);
           if (param0 != -107) {
-            td.b(13);
+            BufferedSocket.b(13);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -299,7 +299,7 @@ final class td implements Runnable {
         }
     }
 
-    td(java.net.Socket param0, ce param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, ce param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -312,7 +312,7 @@ final class td implements Runnable {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var8 = 0;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 > -85) {
             return;
@@ -374,7 +374,7 @@ final class td implements Runnable {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (this.field_l) {
             return;
@@ -411,7 +411,7 @@ final class td implements Runnable {
         fi var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var4 = (ql) (sd.field_d.c((byte) 47));
           while (var4 != null) {
@@ -420,7 +420,7 @@ final class td implements Runnable {
           }
           var5 = (fi) (lk.field_O.c((byte) 47));
           if (param1 != -1115925337) {
-            td.g(-22);
+            BufferedSocket.g(-22);
           }
           while (var5 != null) {
             rd.a(param0, var5, (byte) -118);
@@ -442,7 +442,7 @@ final class td implements Runnable {
         return this.field_n.available();
     }
 
-    private td(java.net.Socket param0, ce param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, ce param1, int param2) throws IOException {
         this.field_b = 0;
         this.field_e = 0;
         this.field_l = false;
@@ -489,9 +489,9 @@ final class td implements Runnable {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_f[0][var0] = cd.a(cd.a(var4 << 8, cd.a(cd.a(var10 << 24, cd.a(var2 << 32, cd.a(var6 << 40, cd.a(var2 << 56, var2 << 48)))), var8 << 16)), var12);
+            field_f[0][var0] = GameAppletShell.a(GameAppletShell.a(var4 << 8, GameAppletShell.a(GameAppletShell.a(var10 << 24, GameAppletShell.a(var2 << 32, GameAppletShell.a(var6 << 40, GameAppletShell.a(var2 << 56, var2 << 48)))), var8 << 16)), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_f[var14][var0] = cd.a(field_f[-1 + var14][var0] >>> 8, field_f[-1 + var14][var0] << 56);
+                field_f[var14][var0] = GameAppletShell.a(field_f[-1 + var14][var0] >>> 8, field_f[-1 + var14][var0] << 56);
             }
             var0++;
         }

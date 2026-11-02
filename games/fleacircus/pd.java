@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd extends lh {
+final class pd extends IntrusiveNode {
     ie field_m;
     static dd[] field_k;
     int field_j;
     static String field_i;
     static int field_l;
-    lh field_n;
+    IntrusiveNode field_n;
 
     final static ob a(int param0, String param1) {
         int var2_int = 0;
@@ -113,7 +113,7 @@ final class pd extends lh {
         }
     }
 
-    pd(ie param0, lh param1) {
+    pd(ie param0, IntrusiveNode param1) {
         try {
           this.field_m = param0;
           this.field_j = param0.g();

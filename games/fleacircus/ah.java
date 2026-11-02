@@ -77,7 +77,7 @@ final class ah {
           int var13 = 0;
           EOFException var14 = null;
           int var16 = 0;
-          var16 = fleas.field_A ? 1 : 0;
+          var16 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             var6 = this.field_f;
             synchronized (var6) {
@@ -112,7 +112,7 @@ final class ah {
                 this.field_e.a(0, nf.field_G, 6, (byte) 114);
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (param2 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -128,7 +128,7 @@ final class ah {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var11 = (nf.field_G[0] << 8 & 65280) + (255 & nf.field_G[1]);
                         var13 = nf.field_G[7] & 255;
@@ -144,7 +144,7 @@ final class ah {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var10 = (65280 & nf.field_G[7] << 8) + ((nf.field_G[6] & 255) << 16) + (nf.field_G[8] & 255);
                         var11 = (255 & nf.field_G[3]) + (nf.field_G[2] << 8 & 65280) + (((255 & nf.field_G[1]) << 16) + ((255 & nf.field_G[0]) << 24));
@@ -281,7 +281,7 @@ final class ah {
           Object stackIn_55_0 = null;
           Throwable decompiledCaughtException = null;
           IOException var4 = null;
-          var18 = fleas.field_A ? 1 : 0;
+          var18 = FleaCircusApplet.field_A ? 1 : 0;
           var3_ref = this.field_f;
           synchronized (var3_ref) {
             try {
@@ -387,7 +387,7 @@ final class ah {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = fleas.field_A ? 1 : 0;
+        var2 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 != -1) {
             field_c = true;
@@ -395,14 +395,14 @@ final class ah {
           if (vf.c((byte) -5)) {
             mg.field_a.a(hm.field_d, param0 + 41, true, bk.field_b);
             mg.field_a.d(true);
-            while (wf.b(-113)) {
+            while (SecondaryNodeDeque.b(-113)) {
               mg.field_a.a(id.field_b, (byte) -105, ji.field_a);
             }
             return;
           }
-          if (null != rh.field_p &&
-            rh.field_p.field_c) {
-            lh.a(false);
+          if (null != ResourceArchive.field_p &&
+            ResourceArchive.field_p.field_c) {
+            IntrusiveNode.a(false);
             mg.field_a.b(new ic(mg.field_a, fb.field_g), (byte) -35);
           }
           return;

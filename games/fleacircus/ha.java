@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ha extends lh {
+final class ha extends IntrusiveNode {
     static int field_l;
     byte[] field_r;
     static dd field_i;
@@ -44,10 +44,10 @@ final class ha extends lh {
         }
     }
 
-    final static boolean a(rh param0, int param1, int param2, int param3) {
+    final static boolean a(ResourceArchive param0, int param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        rh var5 = null;
+        ResourceArchive var5 = null;
         byte[] var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -55,8 +55,8 @@ final class ha extends lh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -32180) {
-            var5 = (rh) null;
-            ha.a((rh) null, -106, -37, 82);
+            var5 = (ResourceArchive) null;
+            ha.a((ResourceArchive) null, -106, -37, 82);
           }
           var6 = param0.a(param2, (byte) 120, param3);
           var4 = var6;

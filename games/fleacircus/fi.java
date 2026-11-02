@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fi extends lh {
+final class fi extends IntrusiveNode {
     int[] field_m;
     boolean field_p;
     static String field_k;
@@ -30,7 +30,7 @@ final class fi extends lh {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 == null) {
             stackIn_3_0 = hi.field_k;
@@ -58,7 +58,7 @@ final class fi extends lh {
                   }
                   if (2 <= var5 &&
                     !param1) {
-                    stackIn_31_0 = wf.field_e;
+                    stackIn_31_0 = SecondaryNodeDeque.field_e;
                     return stackIn_31_0;
                   }
                 }
@@ -90,7 +90,7 @@ final class fi extends lh {
         }
     }
 
-    final static n a(rh param0, rh param1, String param2, String param3, byte param4) {
+    final static n a(ResourceArchive param0, ResourceArchive param1, String param2, String param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -110,7 +110,7 @@ final class fi extends lh {
           var5_int = param0.a(param2, (byte) -100);
           if (param4 != 82) {
             var7 = (String) null;
-            fi.a((rh) null, (rh) null, (String) null, (String) null, (byte) 26);
+            fi.a((ResourceArchive) null, (ResourceArchive) null, (String) null, (String) null, (byte) 26);
           }
           var6 = param0.a(param3, (byte) -15, var5_int);
           stackIn_3_0 = dl.a(var6, 2, var5_int, param1, param0);

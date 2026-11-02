@@ -21,7 +21,7 @@ final class bm extends gj implements da {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param3 != 248) {
             return;
@@ -55,7 +55,7 @@ final class bm extends gj implements da {
 
     private final void a(int param0, int param1) {
         int var5 = 0;
-        int var6 = fleas.field_A ? 1 : 0;
+        int var6 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_J >= param1) {
           return;
         }
@@ -91,14 +91,14 @@ final class bm extends gj implements da {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new bb(param2, param0);
-          var4.field_p = (ch) ((Object) new ri());
+          var4.field_p = (ComponentLayout) ((Object) new ri());
           if (!param1) {
             this.field_G = (fa) null;
           }
           var5 = this.field_j - 2;
           this.a(0, this.field_u, 0, this.field_j + 34, 80);
           var4.a(7, this.field_u - 14, var5, 30, 80);
-          this.a((qa) (var4), (byte) -32);
+          this.a((UiComponent) (var4), (byte) -32);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -122,7 +122,7 @@ final class bm extends gj implements da {
     }
 
     final static ll a(boolean param0, int param1, int param2, int param3, int param4) {
-        int var6 = fleas.field_A ? 1 : 0;
+        int var6 = FleaCircusApplet.field_A ? 1 : 0;
         ll var5 = (ll) (jj.field_S.c((byte) 47));
         while (var5 != null) {
           if (var5.field_k == param4) {
@@ -143,7 +143,7 @@ final class bm extends gj implements da {
         if (param0 <= 8) {
           bm.c(true);
         }
-        return (int)(1000000000L / na.field_f);
+        return (int)(1000000000L / NodeHashTableIterator.field_f);
     }
 
     final static void e(byte param0) {
@@ -159,7 +159,7 @@ final class bm extends gj implements da {
         int var8 = 0;
         int var9 = 0;
         int var2Lifetime1;
-        var9 = fleas.field_A ? 1 : 0;
+        var9 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 != 31) {
             bm.c(false);
@@ -211,7 +211,7 @@ final class bm extends gj implements da {
     }
 
     bm(bd param0, fa param1, String param2) {
-        super(0, 0, 288, 0, (ch) null);
+        super(0, 0, 288, 0, (ComponentLayout) null);
         int var4_int = 0;
         this.field_J = 0;
         try {

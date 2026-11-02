@@ -44,7 +44,7 @@ final class qh extends dl {
         ib.field_g = 0;
         ql.field_o = 0;
         bf.field_b = 0;
-        td.field_i = hd.field_c;
+        BufferedSocket.field_i = hd.field_c;
         ul.field_G = new pl(2);
         ul.field_G.a(em.a(kc.field_b, param1, ag.field_f), -1, param0, -81);
     }
@@ -119,7 +119,7 @@ final class qh extends dl {
           if (null == sg.field_h) {
             return false;
           }
-          if (fh.field_b == rh.field_k) {
+          if (fh.field_b == ResourceArchive.field_k) {
             return true;
           }
           return false;
@@ -127,7 +127,7 @@ final class qh extends dl {
         if (null == sg.field_h) {
           return false;
         }
-        if (fh.field_b == rh.field_k) {
+        if (fh.field_b == ResourceArchive.field_k) {
           return true;
         }
         return false;

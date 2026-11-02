@@ -13,7 +13,7 @@ final class re {
         jg.field_d = true;
         fk.field_D = true;
         nb.field_a.i(-106);
-        wf.a(dh.field_c, false, false);
+        SecondaryNodeDeque.a(dh.field_c, false, false);
     }
 
     public static void a(byte param0) {
@@ -25,7 +25,7 @@ final class re {
         field_b = null;
     }
 
-    final static String a(byte param0, int param1, rh param2, String param3, String param4) {
+    final static String a(byte param0, int param1, ResourceArchive param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -85,7 +85,7 @@ final class re {
           return (param0 + var3) / param1 - var3;
         }
         String var4 = (String) null;
-        re.a((byte) 110, 3, (rh) null, (String) null, (String) null);
+        re.a((byte) 110, 3, (ResourceArchive) null, (String) null, (String) null);
         var3Lifetime1 = param0 >>> 31;
         return (param0 + var3Lifetime1) / param1 - var3Lifetime1;
     }

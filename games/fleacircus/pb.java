@@ -6,7 +6,7 @@ final class pb {
     static String field_b;
     static String field_h;
     static fa field_e;
-    static rh field_a;
+    static ResourceArchive field_a;
     static int field_i;
     static int field_d;
     static dd field_g;
@@ -18,7 +18,7 @@ final class pb {
         ll var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param1 != 0) {
             field_b = (String) null;
@@ -48,7 +48,7 @@ final class pb {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var1_int = ed.field_c[0];
           if (param0 <= 42) {

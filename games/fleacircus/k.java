@@ -41,7 +41,7 @@ final class k {
         int var9_intLifetime1;
         int var9_intLifetime2;
         int var9_intLifetime1Lifetime1;
-        var14 = fleas.field_A ? 1 : 0;
+        var14 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           try {
             if (param0.length < param2 + param1) {
@@ -210,7 +210,7 @@ final class k {
         long var8 = 0L;
         int var10 = 0;
         int var11 = 0;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           try {
             var5_int = -66 / ((29 - param3) / 41);
@@ -326,7 +326,7 @@ final class k {
         long var5;
         int var7;
         int var8;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         var2 = 50 / ((param0 + 24) / 54);
         if (-1L != this.field_j) {
           if (~this.field_k != ~this.field_j) {
@@ -371,7 +371,7 @@ final class k {
     private final void b(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0 < 47) {
           k.a(92, 3, 126, true);
         }

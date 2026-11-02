@@ -17,7 +17,7 @@ final class vk extends bb {
         }
     }
 
-    private vk(String param0, ch param1, kd param2) {
+    private vk(String param0, ComponentLayout param1, kd param2) {
         super(param0, param1, param2);
         try {
           this.field_p = nf.field_M.field_d;

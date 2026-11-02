@@ -4,24 +4,24 @@
 final class hc {
     private int field_h;
     static int[] field_k;
-    private lh field_i;
+    private IntrusiveNode field_i;
     private int field_e;
     static String field_c;
     static fh field_b;
-    private lh[] field_g;
+    private IntrusiveNode[] field_g;
     static String field_f;
     static String field_d;
-    private lh field_a;
+    private IntrusiveNode field_a;
     static int field_j;
 
-    final lh b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        lh var4;
-        lh var5;
-        lh var8;
-        var3 = fleas.field_A ? 1 : 0;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var8;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_e <= 0) {
           do {
             if (this.field_e >= this.field_h) {
@@ -84,20 +84,20 @@ final class hc {
         field_f = null;
     }
 
-    final lh a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         this.field_e = 0;
         if (!param0) {
-          return (lh) null;
+          return (IntrusiveNode) null;
         }
         return this.b((byte) 102);
     }
 
-    final lh a(long param0, int param1) {
-        lh var4;
-        lh var5;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
-        lh var5Lifetime1;
-        var6 = fleas.field_A ? 1 : 0;
+        IntrusiveNode var5Lifetime1;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         var4 = this.field_g[(int)((long)(-1 + this.field_h) & param0)];
         if (param1 == -1110) {
           this.field_i = var4.field_h;
@@ -136,13 +136,13 @@ final class hc {
 
     hc(int param0) {
         int var2 = 0;
-        lh dupTemp$1 = null;
-        lh var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_e = 0;
-        this.field_g = new lh[param0];
+        this.field_g = new IntrusiveNode[param0];
         this.field_h = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new lh();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_g[var2] = dupTemp$1;
           var3.field_h = var3;
@@ -150,14 +150,14 @@ final class hc {
         }
     }
 
-    final void a(lh param0, boolean param1, long param2) {
-        lh var5 = null;
+    final void a(IntrusiveNode param0, boolean param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
           if (param0.field_a != null) {
             param0.c(-1);
           }
           if (!param1) {
-            this.a((lh) null, true, 11L);
+            this.a((IntrusiveNode) null, true, 11L);
           }
           var5 = this.field_g[(int)(param2 & (long)(this.field_h - 1))];
           param0.field_h = var5;

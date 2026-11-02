@@ -29,7 +29,7 @@ final class mh extends aa {
         super(param0, param1);
     }
 
-    final String c(int param0, qa param1) {
+    final String c(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

@@ -50,7 +50,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var27Lifetime1;
         int var28Lifetime1;
         int var29Lifetime1;
-        var30 = fleas.field_A ? 1 : 0;
+        var30 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var7_int = 2147483647;
           var8 = -2147483648;
@@ -84,7 +84,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           var21Lifetime2 = bl.field_c;
           var22Lifetime2 = bl.field_a;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param1.field_w > var23Lifetime2) {
               var24Lifetime1 = param1.field_n[var23Lifetime2];
               var25Lifetime1 = param1.field_f[var23Lifetime2];
@@ -96,7 +96,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_68_1 = var29Lifetime1;
               if (var30 == 0) {
                 if (stackIn_68_0 > stackIn_68_1) {
-                  h.field_c[var23Lifetime2] = -2147483648;
+                  ContextualRuntimeException.field_c[var23Lifetime2] = -2147483648;
                 } else {
                   kb.field_o[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
                   il.field_c[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
@@ -106,7 +106,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   if (var29Lifetime1 < var7_int) {
                     var7_int = var29Lifetime1;
                   }
-                  h.field_c[var23Lifetime2] = var29Lifetime1;
+                  ContextualRuntimeException.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param2) {
                   qk.field_f[var23Lifetime2] = var27Lifetime1 >> bj.field_l;
@@ -167,7 +167,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   stackIn_68_0 = ~tc.field_b.length;
                   stackIn_68_1 = ~var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_68_0 >= stackIn_68_1) {
                     break;
@@ -225,13 +225,13 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != rh.field_f) {
+          if (null != ResourceArchive.field_f) {
             lg.field_d = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < ah.field_g.length) {
               var2_int = -129 & ah.field_g[var2_int];
-              if (fleas.field_A) {
+              if (FleaCircusApplet.field_A) {
                 var2_int = -1;
               }
             } else {
@@ -271,7 +271,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         int var3 = 0;
         try {
-          if (null != rh.field_f) {
+          if (null != ResourceArchive.field_f) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
@@ -328,7 +328,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int stackIn_18_1 = 0;
         RuntimeException decompiledCaughtException = null;
         double var10Lifetime1;
-        var19 = fleas.field_A ? 1 : 0;
+        var19 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           jj.field_Z = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = ij.field_F.length;
@@ -381,7 +381,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           var14 = (int)((double)var14 * var10Lifetime1);
           var12 = (int)((double)var12 * var10Lifetime1);
           var15 = 0;
-          L5: while (true) {
+          scanLoop1: while (true) {
             stackIn_18_0 = ~var15;
             stackIn_18_1 = ~ij.field_F.length;
             if (stackIn_18_0 > stackIn_18_1) {
@@ -409,7 +409,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               mj.a(nl.field_a, var17, false, jj.field_Z, false, true, 91);
               tc.a(var12, var9, var13, var14, param0 ^ -515994062, var8, var7, var17);
               var15++;
-              continue L5;
+              continue scanLoop1;
             }
             break;
           }
@@ -428,7 +428,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (rh.field_f != null) {
+          if (ResourceArchive.field_f != null) {
             em.field_f = -1;
           }
           return;
@@ -456,7 +456,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (rh.field_f != null) {
+          if (ResourceArchive.field_f != null) {
             lg.field_d = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -464,7 +464,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var2_int = ah.field_g[var2_int];
               if ((var2_int & 128) != 0) {
                 var2_int = -1;
-                if (fleas.field_A) {
+                if (FleaCircusApplet.field_A) {
                   var2_int = -1;
                 }
               }

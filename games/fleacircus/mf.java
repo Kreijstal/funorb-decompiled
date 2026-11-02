@@ -15,7 +15,7 @@ final class mf {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         for (var6 = -1 + this.field_f.length; var6 >= 0; var6--) {
           if (null == this.field_f[var6]) {
             this.field_f[var6] = new nj(param2, param0, param1, param4, this.field_d);
@@ -44,7 +44,7 @@ final class mf {
     final void a(int param0) {
         int var2 = 0;
         int var3;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         for (var2 = this.field_f.length - param0; var2 >= 0; var2--) {
           if (null != this.field_f[var2]) {
             this.field_f[var2].c(-55);
@@ -68,7 +68,7 @@ final class mf {
 
     mf(int param0, int param1) {
         int var3 = 0;
-        na.field_c = new Random((long)param1);
+        NodeHashTableIterator.field_c = new Random((long)param1);
         this.field_f = new nj[param0];
         this.field_d = new int[255];
         for (var3 = 0; var3 < 255; var3++) {

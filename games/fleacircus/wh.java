@@ -4,7 +4,7 @@
 final class wh {
     static String field_c;
     static dd field_b;
-    static rh field_e;
+    static ResourceArchive field_e;
     static int[] field_d;
     private String field_a;
 
@@ -28,7 +28,7 @@ final class wh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -38) {
-            field_e = (rh) null;
+            field_e = (ResourceArchive) null;
           }
           stackIn_3_0 = this.field_a.equals(param1);
           return stackIn_3_0;

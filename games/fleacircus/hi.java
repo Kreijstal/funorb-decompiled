@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends lh {
+final class hi extends IntrusiveNode {
     static sf field_p;
     static int field_q;
     static String field_k;
@@ -42,7 +42,7 @@ final class hi extends lh {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           while (true) {
             var3 = param0.a(param1, (byte) -34);

@@ -3,14 +3,14 @@
  */
 final class jd {
     static int[] field_o;
-    ch field_d;
+    ComponentLayout field_d;
     static String[] field_g;
     int field_f;
-    ch field_l;
+    ComponentLayout field_l;
     int field_c;
-    ch field_i;
+    ComponentLayout field_i;
     static long field_n;
-    ch field_h;
+    ComponentLayout field_h;
     private int field_m;
     fa field_a;
     int field_e;
@@ -21,7 +21,7 @@ final class jd {
     int field_r;
     static int field_t;
     int field_b;
-    ch field_p;
+    ComponentLayout field_p;
 
     final static int a(boolean param0, int param1) {
         if (param0) {
@@ -130,7 +130,7 @@ final class jd {
         int var11Lifetime1;
         int var13Lifetime1;
         int var13Lifetime2;
-        var15 = fleas.field_A ? 1 : 0;
+        var15 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var5_int = this.field_r + this.field_c;
           var6 = this.field_e + this.field_j;
@@ -175,7 +175,7 @@ final class jd {
           gb.e(1 + var12, var13Lifetime1 + 1, -2 + var9 + var5_int, var10 + var6 - 2, this.field_f);
           this.field_a.a(param2, var12 + this.field_c, this.field_e + var13Lifetime1, var9, var10, this.field_m, -1, 0, 0, var7);
           if (!param0) {
-            this.field_i = (ch) null;
+            this.field_i = (ComponentLayout) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -221,13 +221,13 @@ final class jd {
         dd var13 = null;
         hb var14 = null;
         hb var19 = null;
-        int var15 = fleas.field_A ? 1 : 0;
+        int var15 = FleaCircusApplet.field_A ? 1 : 0;
         hb var14Lifetime1;
         hb var14Lifetime2;
         try {
           var17 = new e(param0, 2, 2, 2236962, 1, 1, 1, param0.field_K + param0.field_H + 2);
           var17.field_f = 16777215;
-          this.field_i = (ch) ((Object) var17);
+          this.field_i = (ComponentLayout) ((Object) var17);
           var4 = new hb();
           var17.a(2, var4);
           this.field_r = 3;
@@ -241,9 +241,9 @@ final class jd {
           this.field_b = 15658734;
           var4.field_c = 15658734;
           this.field_m = 15658734;
-          var4.a(0, -17562).a(15658734, (byte) -75).a(true, lh.a(7829367, 8947848, (byte) -90, 10066329));
-          var4.a(1, -17562).a(true, lh.a(13421772, 11184810, (byte) 66, 10066329));
-          var4.a(3, -17562).a(param1, lh.a(10066329, 8947848, (byte) -99, 7829367)).a(param1, 1).c(124, 1);
+          var4.a(0, -17562).a(15658734, (byte) -75).a(true, IntrusiveNode.a(7829367, 8947848, (byte) -90, 10066329));
+          var4.a(1, -17562).a(true, IntrusiveNode.a(13421772, 11184810, (byte) 66, 10066329));
+          var4.a(3, -17562).a(param1, IntrusiveNode.a(10066329, 8947848, (byte) -99, 7829367)).a(param1, 1).c(124, 1);
           var5 = new dd[9];
           var16 = new sj(32, 32);
           var18 = var16;
@@ -253,21 +253,21 @@ final class jd {
           var5[4] = (dd) ((Object) var18);
           var4.a(4, -17562).a(true, (byte) -121).a(true, var5);
           var4.a(5, -17562).a(true, ta.a(0, 65793, -2843, 0, 0)).a(true, (byte) -107).a(-1, (byte) -75);
-          this.field_p = (ch) ((Object) var4);
+          this.field_p = (ComponentLayout) ((Object) var4);
           var6 = new hb(var4, true);
           var6.field_i = 0;
           var7 = new hb(var4, true);
           var7.field_i = 0;
           var7.a((byte) 61, bf.a(2885, 8947848));
           var7.a(1, -17562).a(true, bf.a(2885, 11184810)).a(2236962, (byte) -75);
-          this.field_d = (ch) ((Object) new lb(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_d = (ComponentLayout) ((Object) new lb(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ee(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ib(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new hb();
           var17.a(2, var8);
-          var8.a(0, -17562).a(param1, lh.a(10066329, 15658734, (byte) -107, 7829367)).a(1118481, (byte) -75).a(-1, 127);
+          var8.a(0, -17562).a(param1, IntrusiveNode.a(10066329, 15658734, (byte) -107, 7829367)).a(1118481, (byte) -75).a(-1, 127);
           var8.a(4, -17562).a(true, (byte) -115).a(true, var5);
-          this.field_l = (ch) ((Object) var8);
+          this.field_l = (ComponentLayout) ((Object) var8);
           var9 = new dd[9];
           var10 = new dd[9];
           var9[4] = new dd(2, 1);
@@ -333,13 +333,13 @@ final class jd {
             jd.a((String) null, -64);
           }
           if (ui.field_kb == ui.field_ob &&
-            param0.equals(li.field_d)) {
+            param0.equals(IterableNodeHashTable.field_d)) {
             ui.field_kb = ql.field_l;
             stackIn_11_0 = kh.field_a;
             return stackIn_11_0;
           }
           ui.field_kb = wi.field_f;
-          li.field_d = param0;
+          IterableNodeHashTable.field_d = param0;
           kh.field_a = null;
           stackIn_9_0 = null;
           return (mk) (stackIn_9_0);

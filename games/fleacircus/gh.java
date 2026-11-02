@@ -104,7 +104,7 @@ final class gh extends r {
             return stackIn_6_0;
           }
           if (fm.a(true, var6)) {
-            stackIn_10_0 = qa.field_t;
+            stackIn_10_0 = UiComponent.field_t;
             return stackIn_10_0;
           }
           if (hg.a(var6, 1)) {
@@ -182,7 +182,7 @@ final class gh extends r {
         int var11 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var1_int = rb.field_H;
           var2 = 0;
@@ -297,7 +297,7 @@ final class gh extends r {
           if (param0 != 160) {
             this.field_n = (c) null;
           }
-          if (!lh.a(var4, var3, -1)) {
+          if (!IntrusiveNode.a(var4, var3, -1)) {
             stackIn_7_0 = ml.field_K;
             return stackIn_7_0;
           }

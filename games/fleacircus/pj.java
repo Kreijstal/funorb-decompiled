@@ -38,7 +38,7 @@ final class pj extends cb {
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
-        var12 = fleas.field_A ? 1 : 0;
+        var12 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var13 = ae.field_a;
           var15 = var13;
@@ -67,7 +67,7 @@ final class pj extends cb {
             }
             kh.a(var5, var4, 26721);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              td.a((byte) -107, var15);
+              BufferedSocket.a((byte) -107, var15);
               if (var6_intLifetime1 == 0) {
                 lg.a(rf.field_l, var6_intLifetime1, w.field_a, wd.field_c, -103, dk.field_B);
               } else {
@@ -150,7 +150,7 @@ final class pj extends cb {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = fleas.field_A ? 1 : 0;
+        var10 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           gb.b(param3, param2, 1 + param1, 10000536);
           gb.b(param3, param4 + param2, 1 + param1, 12105912);
@@ -187,13 +187,13 @@ final class pj extends cb {
           int var3 = 0;
           Throwable decompiledCaughtException = null;
           RuntimeException var1 = null;
-          var3 = fleas.field_A ? 1 : 0;
+          var3 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             if (param0 != 60) {
               field_y = (String) null;
             }
-            if (td.field_k != null) {
-              td.field_k.d(param0 - 14895);
+            if (BufferedSocket.field_k != null) {
+              BufferedSocket.field_k.d(param0 - 14895);
             }
             if (null != vg.field_r) {
               vg.field_r.a(true);

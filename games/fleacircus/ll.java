@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll extends lh {
+final class ll extends IntrusiveNode {
     boolean field_l;
     static boolean field_j;
     static jd field_n;
@@ -33,7 +33,7 @@ final class ll extends lh {
         if (null == fl.field_b) {
           fl.field_b = new dd(640, 336);
           fl.field_b.f();
-          oe.a((byte) -118, rh.field_c.field_x, fleas.field_E);
+          oe.a((byte) -118, ResourceArchive.field_c.field_x, FleaCircusApplet.field_E);
           gi.field_b.a((byte) 71);
           if (param0 != 336) {
             ll.a(-25);
@@ -42,7 +42,7 @@ final class ll extends lh {
           return;
         }
         fl.field_b.f();
-        oe.a((byte) -118, rh.field_c.field_x, fleas.field_E);
+        oe.a((byte) -118, ResourceArchive.field_c.field_x, FleaCircusApplet.field_E);
         gi.field_b.a((byte) 71);
         if (param0 == 336) {
           return;

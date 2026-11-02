@@ -10,9 +10,9 @@ final class rc implements Iterator {
     static String[] field_g;
     static String field_h;
     static String field_f;
-    private pa field_d;
-    private pa field_b;
-    private wf field_c;
+    private DualLinkNode field_d;
+    private DualLinkNode field_b;
+    private SecondaryNodeDeque field_c;
 
     public final boolean hasNext() {
         return this.field_b != this.field_c.field_a;
@@ -25,7 +25,7 @@ final class rc implements Iterator {
         int var2Lifetime2;
         int var2Lifetime3;
         int var2Lifetime4;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         if (param1 != 22861) {
           return (byte) -117;
         }
@@ -377,12 +377,12 @@ final class rc implements Iterator {
     public final Object next() {
         Object var1 = this.field_b;
         if (var1 != this.field_c.field_a) {
-          this.field_b = ((pa) (var1)).field_p;
+          this.field_b = ((DualLinkNode) (var1)).field_p;
         } else {
           var1 = null;
           this.field_b = null;
         }
-        this.field_d = (pa) (var1);
+        this.field_d = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -394,7 +394,7 @@ final class rc implements Iterator {
         this.field_d = null;
     }
 
-    rc(wf param0) {
+    rc(SecondaryNodeDeque param0) {
         this.field_d = null;
         try {
           this.field_c = param0;

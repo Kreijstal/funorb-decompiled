@@ -40,7 +40,7 @@ final class ci {
         int var8Lifetime1;
         int var9Lifetime1;
         int var11Lifetime1;
-        var12 = fleas.field_A ? 1 : 0;
+        var12 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var3_int = -55 % ((param1 - 6) / 44);
           if (null != this.field_b) {

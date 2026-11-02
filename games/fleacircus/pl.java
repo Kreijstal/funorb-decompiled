@@ -240,7 +240,7 @@ final class pl {
           if (this.field_a != 0 &&
             kc.field_f != 0) {
             if (this.field_h <= 0) {
-              this.field_h = qa.field_k;
+              this.field_h = UiComponent.field_k;
             }
             this.field_h = this.field_h - 1;
           }
@@ -382,7 +382,7 @@ final class pl {
           }
           if (kc.field_f != 0) {
             if (this.field_h <= 0) {
-              this.field_h = qa.field_k;
+              this.field_h = UiComponent.field_k;
             }
             this.field_h = this.field_h - 1;
           }
@@ -516,7 +516,7 @@ final class pl {
         return this.field_j == 102 ? true : false;
     }
 
-    final static boolean a(rh param0, rh param1, rh param2, boolean param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;

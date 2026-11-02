@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class li implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static int field_i;
     static String field_e;
     static String field_d;
-    lh[] field_f;
-    private lh field_a;
+    IntrusiveNode[] field_f;
+    private IntrusiveNode field_a;
     static String field_c;
     static String field_b;
     int field_g;
@@ -26,11 +26,11 @@ final class li implements Iterable {
         field_b = null;
     }
 
-    final void a(long param0, lh param1, byte param2) {
-        lh var5 = null;
+    final void a(long param0, IntrusiveNode param1, byte param2) {
+        IntrusiveNode var5 = null;
         try {
           if (param2 != 43) {
-            li.a((byte) -31);
+            IterableNodeHashTable.a((byte) -31);
           }
           if (null != param1.field_a) {
             param1.c(param2 ^ -44);
@@ -51,19 +51,19 @@ final class li implements Iterable {
         int var3;
         int var2Lifetime1;
         int var2Lifetime2;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         if (wc.field_q > 0) {
           if (aa.field_r == null) {
-            rh.field_p = wf.a(0, 640, 0, fg.field_q, 0, 480);
+            ResourceArchive.field_p = SecondaryNodeDeque.a(0, 640, 0, fg.field_q, 0, 480);
           } else {
-            rh.field_p = aa.field_r.b(param1 - 7862);
-            qa.a((byte) 116, 2);
+            ResourceArchive.field_p = aa.field_r.b(param1 - 7862);
+            UiComponent.a((byte) 116, 2);
           }
-          if (rh.field_p == null) {
+          if (ResourceArchive.field_p == null) {
             var2 = 3;
           } else {
             var2 = 2;
-            aj.a(0, rh.field_p);
+            aj.a(0, ResourceArchive.field_p);
           }
           if (param1 != -74) {
             return;
@@ -103,21 +103,21 @@ final class li implements Iterable {
         pf.a(var2Lifetime2, 1, param0);
     }
 
-    private li() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new na(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final lh a(boolean param0, long param1) {
-        lh var4;
-        lh var5;
+    final IntrusiveNode a(boolean param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         if (!param0) {
-          return (lh) null;
+          return (IntrusiveNode) null;
         }
         var4 = this.field_f[(int)(param1 & (long)(this.field_g - 1))];
         this.field_a = var4.field_h;

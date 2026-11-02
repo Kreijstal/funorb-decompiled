@@ -17,7 +17,7 @@ final class gl extends sh {
         int var5 = 0;
         tk var6 = null;
         int var7 = 0;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           this.field_o.b(param0, param1, param2);
           var6 = (tk) (this.field_n.c((byte) 47));
@@ -68,7 +68,7 @@ final class gl extends sh {
         tk var3;
         int var4;
         boolean stackIn_4_0 = false;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         this.field_o.a(param0);
         var3 = (tk) (this.field_n.c((byte) 47));
         while (var3 != null) {
@@ -177,7 +177,7 @@ final class gl extends sh {
         int var10 = 0;
         ie var11 = null;
         int var12 = 0;
-        var12 = fleas.field_A ? 1 : 0;
+        var12 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param3 != -21345) {
             this.d();

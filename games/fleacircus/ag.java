@@ -4,9 +4,9 @@
 import java.io.*;
 
 final class ag {
-    private li field_b;
+    private IterableNodeHashTable field_b;
     private int field_g;
-    private wf field_c;
+    private SecondaryNodeDeque field_c;
     static String field_e;
     private int field_d;
     static int field_f;
@@ -26,7 +26,7 @@ final class ag {
     private final void a(int param0, long param1, Object param2, int param3) {
         cb var6 = null;
         pj var7 = null;
-        int var8 = fleas.field_A ? 1 : 0;
+        int var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 > this.field_g) {
             throw new IllegalStateException();
@@ -59,12 +59,12 @@ final class ag {
         throw new Error();
     }
 
-    final static rh a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           cg var8 = null;
-          rh stackIn_15_0 = null;
+          ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -91,7 +91,7 @@ final class ag {
             if (param0) {
               var8.c(param5 - 78);
             }
-            stackIn_15_0 = new rh(var8, param4, param3);
+            stackIn_15_0 = new ResourceArchive(var8, param4, param3);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

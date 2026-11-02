@@ -40,7 +40,7 @@ final class va {
         int var4;
         int var5;
         int var4Lifetime1;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         var2 = this.field_o;
         var3 = this.field_l;
         if (!this.c((byte) -114)) {
@@ -146,16 +146,16 @@ final class va {
         this.field_p.a(this.field_h, param0 + 6874, this.field_f);
         if (param0 != -7936) {
           this.field_n = -70;
-          h.field_h = false;
-          var2 = wf.a(0, this.field_f, 0, fg.field_q, 0, this.field_h);
+          ContextualRuntimeException.field_h = false;
+          var2 = SecondaryNodeDeque.a(0, this.field_f, 0, fg.field_q, 0, this.field_h);
           if (var2 == null) {
             this.a(-121);
             return var2;
           }
           return var2;
         }
-        h.field_h = false;
-        var2Lifetime1 = wf.a(0, this.field_f, 0, fg.field_q, 0, this.field_h);
+        ContextualRuntimeException.field_h = false;
+        var2Lifetime1 = SecondaryNodeDeque.a(0, this.field_f, 0, fg.field_q, 0, this.field_h);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }
@@ -166,7 +166,7 @@ final class va {
     final void a(byte param0) {
         int fieldTemp$0 = 0;
         int var2;
-        if (null != rh.field_p) {
+        if (null != ResourceArchive.field_p) {
           return;
         }
         if (wc.field_q <= 0) {

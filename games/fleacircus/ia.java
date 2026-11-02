@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends lh {
+final class ia extends IntrusiveNode {
     static String[] field_s;
     static kh[][] field_m;
     static int[] field_l;
@@ -19,7 +19,7 @@ final class ia extends lh {
         byte[] var4 = null;
         double var5 = 0.0;
         int var7 = 0;
-        int var8 = fleas.field_A ? 1 : 0;
+        int var8 = FleaCircusApplet.field_A ? 1 : 0;
         sf var3 = new sf(22050, param0);
         byte[] var4Lifetime1;
         double var5Lifetime1;
@@ -95,7 +95,7 @@ final class ia extends lh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         pd var2Lifetime1;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           gf.field_d = param1;
           if (!param0) {

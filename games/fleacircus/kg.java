@@ -105,7 +105,7 @@ final class kg extends la {
           this.field_v.start();
           this.field_z = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (h.a(param0, -122) != 1) {
+          if (ContextualRuntimeException.a(param0, -122) != 1) {
             this.b(bf.a(true, param0));
             return;
           }

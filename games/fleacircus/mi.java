@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends lh {
+final class mi extends IntrusiveNode {
     int field_i;
     int field_j;
     int field_l;

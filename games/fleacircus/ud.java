@@ -26,7 +26,7 @@ final class ud {
         int var12Lifetime3;
         int var12Lifetime4;
         dd[] var10Lifetime1;
-        var15 = fleas.field_A ? 1 : 0;
+        var15 = FleaCircusApplet.field_A ? 1 : 0;
         var9 = param3 + (param4 + param7);
         var10 = new dd[]{new dd(var9, var9), new dd(param1, var9), new dd(var9, var9), new dd(var9, param1), new dd(64, 64), new dd(var9, param1), new dd(var9, var9), new dd(param1, var9), new dd(var9, var9)};
         var11_ref_dd__ = var10;
@@ -107,7 +107,7 @@ final class ud {
           String var8 = null;
           String var9 = null;
           String var10 = null;
-          var6 = fleas.field_A ? 1 : 0;
+          var6 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             var3 = "";
             if (param1 != null) {
@@ -198,24 +198,24 @@ final class ud {
         fa var7 = null;
         fa var8 = null;
         int var3Lifetime1;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var7 = tl.field_p;
           var8 = var7;
-          sd.field_f = var8.b(pa.field_i[12]);
-          var2 = var8.b(pa.field_i[13]);
+          sd.field_f = var8.b(DualLinkNode.field_i[12]);
+          var2 = var8.b(DualLinkNode.field_i[13]);
           if (var2 > sd.field_f) {
             sd.field_f = var2;
           }
-          h.field_g = new dd[b.field_d.length];
+          ContextualRuntimeException.field_g = new dd[b.field_d.length];
           ua.field_tb = new dd[b.field_d.length];
           var3 = -15 % ((-48 - param0) / 60);
           var4 = 0;
-          while (var4 < h.field_g.length) {
-            h.field_g[var4] = je.field_O[db.a((byte) -115, new Random(), je.field_O.length)];
+          while (var4 < ContextualRuntimeException.field_g.length) {
+            ContextualRuntimeException.field_g[var4] = je.field_O[db.a((byte) -115, new Random(), je.field_O.length)];
             {
               while ((null == ua.field_tb[var4] ||
-                ua.field_tb[var4] == h.field_g[var4])) {
+                ua.field_tb[var4] == ContextualRuntimeException.field_g[var4])) {
                 ua.field_tb[var4] = je.field_O[db.a((byte) -115, new Random(), je.field_O.length)];
               }
               {
@@ -223,7 +223,7 @@ final class ud {
               }
             }
           }
-          gj.field_A = new rk(320, 420, gl.field_m, qa.field_l, bb.field_H, lh.field_b);
+          gj.field_A = new rk(320, 420, gl.field_m, UiComponent.field_l, bb.field_H, IntrusiveNode.field_b);
           gj.field_A.field_t = fl.field_f;
           gj.field_A.field_y = 1;
           gj.field_A.field_z = -1;

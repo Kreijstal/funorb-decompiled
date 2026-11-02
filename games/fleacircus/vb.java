@@ -40,7 +40,7 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (null == kc.field_c) {
             return null;
@@ -94,12 +94,12 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -29039) {
-          rh var2 = (rh) null;
-          vb.a(92, (rh) null, -70, -1);
+          ResourceArchive var2 = (ResourceArchive) null;
+          vb.a(92, (ResourceArchive) null, -70, -1);
         }
     }
 
-    final static dd a(int param0, rh param1, int param2, int param3) {
+    final static dd a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -110,7 +110,7 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
             field_a = (dd) null;
           }
           if (ha.a(param1, -32180, param2, param3)) {
-            return qa.h(114);
+            return UiComponent.h(114);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

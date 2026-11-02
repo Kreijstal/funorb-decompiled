@@ -17,11 +17,11 @@ final class mc {
 
     final static void a(dd param0, String param1, int param2) {
         try {
-          pa.field_k = param1;
+          DualLinkNode.field_k = param1;
           if (param2 != 0) {
             field_c = (k[]) null;
           }
-          cd.field_b = param0;
+          GameAppletShell.field_b = param0;
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "mc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -10746,6 +10746,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "fleacircus": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/fleacircus"
+      },
+      "inputTreeSha256": "029c16636c824d03651e357ffda43e5067bb8e254335ed518d08b6ab20edaae8",
+      "sources": {
+        "files": 306,
+        "sha256": "3d63e4bd531d3576946c1eacc9bbc3c9d0ce8139c2578f5a1463485bad09e1f6"
+      },
+      "dictionary": {
+        "path": "decompilation/fleacircus-naming.json",
+        "sha256": "ac7c1319e9a7f29f60c5a7b0e3363adc07175ed068f871322d34bd527cdfe2dc"
+      },
+      "readingGuide": {
+        "path": "games/fleacircus/README.md",
+        "sha256": "bb7220a1073b8376685255958cce7611727695a3c1f9dee6975f8f0d2d38f632"
+      },
+      "rulesSha256": "4ce0e88a06eda82d93e5465a5157b86f6f2bc7feb7255e8358300c38a233b5fa",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11660,6 +11684,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 306,
+          "sha256": "3d63e4bd531d3576946c1eacc9bbc3c9d0ce8139c2578f5a1463485bad09e1f6"
         }
       },
       "geoblox": {

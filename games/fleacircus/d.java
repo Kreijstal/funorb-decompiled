@@ -36,7 +36,7 @@ final class d extends bb {
         int var14Lifetime1;
         int var14Lifetime2;
         int var14Lifetime3;
-        var20 = fleas.field_A ? 1 : 0;
+        var20 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var6_int = (param5 - param0 << 8) / param2.field_x;
           var7 = var6_int * param2.field_q + (param0 << 8);
@@ -139,7 +139,7 @@ final class d extends bb {
         int var6 = 0;
         int var8 = 0;
         int var6Lifetime1;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var2_int = param1.b(8, (byte) -87);
           if (var2_int > 0) {
@@ -216,7 +216,7 @@ final class d extends bb {
         return this.field_K.b(param0, false);
     }
 
-    final boolean a(int param0, boolean param1, int param2, qa param3, int param4, int param5, int param6) {
+    final boolean a(int param0, boolean param1, int param2, UiComponent param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -229,7 +229,7 @@ final class d extends bb {
         int var11 = 0;
         int var13 = 0;
         int var14 = 0;
-        var14 = fleas.field_A ? 1 : 0;
+        var14 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;

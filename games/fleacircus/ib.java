@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ib implements ch {
+final class ib implements ComponentLayout {
     static String field_e;
     private int field_j;
     private int field_b;
     private int field_h;
-    static rh field_f;
+    static ResourceArchive field_f;
     static int field_g;
     private int field_l;
     static String field_d;
@@ -16,8 +16,8 @@ final class ib implements ch {
     private fa field_c;
     static int[][] field_a;
 
-    public final void a(int param0, int param1, boolean param2, qa param3, int param4) {
-        qa stackIn_5_0 = null;
+    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+        UiComponent stackIn_5_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -29,10 +29,10 @@ final class ib implements ch {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param3 instanceof d) {
-            stackIn_5_0 = (qa) (param3);
+            stackIn_5_0 = (UiComponent) (param3);
           } else {
             stackIn_5_0 = null;
           }
@@ -87,7 +87,7 @@ final class ib implements ch {
         RuntimeException decompiledCaughtException = null;
         try {
           ri.a(param3, param12, param14, param8, param6, true, param7, param5, param2, param0, param10, rg.field_n, fb.field_c, 0, param9, 480, (dd[]) null, param4, param11, param1, cm.field_j);
-          li.a(param13, (byte) -74);
+          IterableNodeHashTable.a(param13, (byte) -74);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -145,7 +145,7 @@ final class ib implements ch {
         int var8 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var1 = ae.field_a;
           var2 = var1.e(false);
@@ -198,7 +198,7 @@ final class ib implements ch {
             }
             if (4 != var2) {
               if (param0 > -94) {
-                field_f = (rh) null;
+                field_f = (ResourceArchive) null;
               }
               ud.a("F1: " + ak.a(true), (Throwable) null, 0);
               k.c(-28354);
@@ -243,13 +243,13 @@ final class ib implements ch {
           var6.field_jb = var4_ref_StringLifetime1;
           var6.c(-1);
           var7 = (gm) (tf.field_E.c((byte) 47));
-          L7: while (true) {
+          scanLoop1: while (true) {
             if (var7 != null) {
               stackOut_45_0 = hm.a(var7, var6, true);
               stackIn_56_0 = stackOut_45_0 ? 1 : 0;
               stackIn_46_0 = stackOut_45_0;
               if (var8 != 0) {
-                break L7;
+                break scanLoop1;
               }
               if (stackIn_46_0) {
                 var7 = (gm) (tf.field_E.b((byte) -105));

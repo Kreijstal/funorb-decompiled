@@ -34,9 +34,9 @@ final class q {
         }
     }
 
-    final static rh a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 != 8192) {
-          return (rh) null;
+          return (ResourceArchive) null;
         }
         return ag.a(false, param1, false, 1, true, param0 - 8191);
     }
@@ -53,7 +53,7 @@ final class q {
         kf var9 = null;
         ih var10 = null;
         byte[] var14 = null;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var10 = ae.field_a;
           if (!param0) {

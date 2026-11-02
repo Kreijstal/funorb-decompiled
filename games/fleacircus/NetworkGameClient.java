@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wb extends cd {
+abstract class NetworkGameClient extends GameAppletShell {
     private boolean field_s;
     String field_n;
     private long field_x;
@@ -21,7 +21,7 @@ abstract class wb extends cd {
     final static int a(int param0, int param1) {
         int var2;
         int var3;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         lc.field_r = 0;
         jj.field_M = null;
         nj.field_a = null;
@@ -30,26 +30,26 @@ abstract class wb extends cd {
         if (param1 != 5) {
           field_w = (String) null;
         }
-        td.field_k.field_c = td.field_k.field_c + 1;
+        BufferedSocket.field_k.field_c = BufferedSocket.field_k.field_c + 1;
         if (51 == param0) {
-          td.field_k.field_b = 2;
+          BufferedSocket.field_k.field_b = 2;
         } else {
           if (param0 == 50) {
-            td.field_k.field_b = 5;
+            BufferedSocket.field_k.field_b = 5;
           } else {
-            td.field_k.field_b = 1;
+            BufferedSocket.field_k.field_b = 1;
           }
         }
         pg.field_c = var2;
-        if (td.field_k.field_c >= 2 &&
+        if (BufferedSocket.field_k.field_c >= 2 &&
           param0 == 51) {
           return 2;
         }
-        if (td.field_k.field_c >= 2 &&
+        if (BufferedSocket.field_k.field_c >= 2 &&
           param0 == 50) {
           return 5;
         }
-        if (td.field_k.field_c < 4) {
+        if (BufferedSocket.field_k.field_c < 4) {
           return -1;
         }
         return 1;
@@ -77,9 +77,9 @@ abstract class wb extends cd {
         java.awt.Container var6;
         int var3Lifetime1;
         int var3Lifetime2;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         if (null != aa.field_r) {
-          if (rh.field_p == null) {
+          if (ResourceArchive.field_p == null) {
             var6 = sk.a((byte) 60);
             var4 = var6.getSize();
             aa.field_r.a(var4.width, 0, var4.height);
@@ -101,7 +101,7 @@ abstract class wb extends cd {
         if (qh.j(32391)) {
           var3 = bm.f((byte) 85) * 1200;
           if (this.field_v ||
-            !(var3 >= td.a(true)) &&
+            !(var3 >= BufferedSocket.a(true)) &&
             !(vg.c(-127) <= var3)) {
             this.field_v = false;
             k.c(-28354);
@@ -148,7 +148,7 @@ abstract class wb extends cd {
                   rl.a(oc.field_b, 256, 104);
                 }
               } else {
-                rl.a(li.field_c, 256, 102);
+                rl.a(IterableNodeHashTable.field_c, 256, 102);
               }
               rj.field_j = true;
             }
@@ -197,7 +197,7 @@ abstract class wb extends cd {
           }
           rl.field_d = uh.a(1, 26, false, true, ki.field_d);
           oa.field_l = uh.a(1, 26, false, true, bm.field_M);
-          kc.field_d = uh.a(1, 26, false, true, lh.field_f);
+          kc.field_d = uh.a(1, 26, false, true, IntrusiveNode.field_f);
           pf.field_b = oa.field_l;
           ib.field_k = 2;
           a.field_a = rl.field_d;
@@ -211,7 +211,7 @@ abstract class wb extends cd {
               if (il.field_a.a("", -123)) {
                 je.a(il.field_a, -30);
                 il.field_a = null;
-                fleas.h((byte) 76);
+                FleaCircusApplet.h((byte) 76);
               }
             }
           }
@@ -236,16 +236,16 @@ abstract class wb extends cd {
           if (tg.field_j) {
             ak.a(38);
           }
-          if (null == td.field_g) {
-            td.field_g = wc.a((byte) -95);
+          if (null == BufferedSocket.field_g) {
+            BufferedSocket.field_g = wc.a((byte) -95);
             u.field_a = rk.e(24089);
           }
-          kb.a(-1, td.field_g, kc.field_d, u.field_a);
+          kb.a(-1, BufferedSocket.field_g, kc.field_d, u.field_a);
           rl.field_d = null;
           oa.field_l = null;
           kc.field_d = null;
           bh.a(false, (java.applet.Applet) (this));
-          fleas.h((byte) -127);
+          FleaCircusApplet.h((byte) -127);
           ib.field_k = 10;
         }
         if (10 == ib.field_k) {
@@ -282,8 +282,8 @@ abstract class wb extends cd {
           }
         }
         if (!param0 &&
-          h.field_h) {
-          lh.a((byte) -69, ol.field_e);
+          ContextualRuntimeException.field_h) {
+          IntrusiveNode.a((byte) -69, ol.field_e);
           this.c(122);
           aj.a(0, ol.field_e);
         }
@@ -357,7 +357,7 @@ abstract class wb extends cd {
         int var2;
         sg var3;
         int var4;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         var2 = be.field_a;
         if (param0 != -12) {
           this.a(false, -14);
@@ -436,7 +436,7 @@ abstract class wb extends cd {
         int var3;
         boolean stackIn_4_1 = false;
         int var2;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         if (!nl.a(-118)) {
           if (ib.field_k >= 10) {
             if (!wh.b(27415)) {
@@ -450,7 +450,7 @@ abstract class wb extends cd {
             }
           }
         } else {
-          stackIn_4_1 = (rh.field_p != null);
+          stackIn_4_1 = (ResourceArchive.field_p != null);
           discarded$7 = this.a(stackIn_4_1, 0, false);
         }
         var2 = 114 / ((-58 - param0) / 63);
@@ -579,7 +579,7 @@ abstract class wb extends cd {
         cg.field_y = this.field_m;
         ek.a(10, cg.field_y);
         wc.a(22986, param2, cg.field_y, param3, fg.field_q, this.field_p, this.field_n, this.field_o, this.field_u, 5000, this.field_r, this.field_x, 5000, this.field_l);
-        rh.a(cg.field_y, this.field_r, 8737, param2, this.field_u, this.field_n, this.field_p, this.field_l, fg.field_q);
+        ResourceArchive.a(cg.field_y, this.field_r, 8737, param2, this.field_u, this.field_n, this.field_p, this.field_l, fg.field_q);
         vg.b((byte) 32);
         ui.field_pb = of.a(-21814);
         aj.a(0, ol.field_e);
@@ -590,7 +590,7 @@ abstract class wb extends cd {
           field_w = (String) null;
         }
         ki.field_d = param4;
-        lh.field_f = param7;
+        IntrusiveNode.field_f = param7;
         this.j(90);
         ia.b(true);
     }
@@ -620,7 +620,7 @@ abstract class wb extends cd {
             wd.a(-29250, 4);
           }
           if (ui.field_mb[4]) {
-            td.a(5, -1115925337);
+            BufferedSocket.a(5, -1115925337);
           }
           if (ui.field_mb[5]) {
             pg.a(-68, 6);
@@ -667,7 +667,7 @@ abstract class wb extends cd {
           ni var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
-          var8 = fleas.field_A ? 1 : 0;
+          var8 = FleaCircusApplet.field_A ? 1 : 0;
           var4 = mg.a(param0, cg.field_y, 10, al.field_f);
           if (var4 == 0) {
             throw new IllegalStateException();
@@ -727,7 +727,7 @@ abstract class wb extends cd {
             hf.a(rl.a((byte) -99), -60);
           }
           if (param1 != 0) {
-            wb.i(-102);
+            NetworkGameClient.i(-102);
           }
           if (var4 == 6 &&
             tb.field_c) {
@@ -753,11 +753,11 @@ abstract class wb extends cd {
           }
           if (var4 == 13) {
             try {
-              if (lh.field_g == null) {
-                lh.field_g = new sk(fg.field_q, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (IntrusiveNode.field_g == null) {
+                IntrusiveNode.field_g = new sk(fg.field_q, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (lh.field_g.c((byte) 79)) {
-                var12 = lh.field_g.a(param1 + 86);
+              if (IntrusiveNode.field_g.c((byte) 79)) {
+                var12 = IntrusiveNode.field_g.a(param1 + 86);
                 if (var12 != null) {
                   var7 = pg.a(var12.field_i, 0, var12.field_k, 0);
                   w.a(61, var7);
@@ -765,7 +765,7 @@ abstract class wb extends cd {
                   var9 = (String) null;
                   w.a(61, (String) null);
                 }
-                lh.field_g = null;
+                IntrusiveNode.field_g = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -773,7 +773,7 @@ abstract class wb extends cd {
               ud.a("S1", (Throwable) ((Object) var5), 0);
               var10 = (String) null;
               w.a(61, (String) null);
-              lh.field_g = null;
+              IntrusiveNode.field_g = null;
             }
           }
           if (var4 == 15) {
@@ -812,15 +812,15 @@ abstract class wb extends cd {
         field_t = (byte[][]) null;
         field_w = null;
         if (param0 != -1) {
-          wb.a(-80, -9, 33, (byte) 20, 49, 5, 89, -70);
+          NetworkGameClient.a(-80, -9, 33, (byte) 20, 49, 5, 89, -70);
         }
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         int var9;
-        var9 = fleas.field_A ? 1 : 0;
+        var9 = FleaCircusApplet.field_A ? 1 : 0;
         if (param3 != -39) {
-          wb.a(-108, 18, 34, (byte) -127, -110, -18, 7, 121);
+          NetworkGameClient.a(-108, 18, 34, (byte) -127, -110, -18, 7, 121);
         }
         if (param5 >= param1) {
           if (param5 < param2) {
@@ -845,7 +845,7 @@ abstract class wb extends cd {
         }
     }
 
-    protected wb() {
+    protected NetworkGameClient() {
     }
 
     static {

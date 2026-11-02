@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class bb extends qa {
+class bb extends UiComponent {
     boolean field_G;
     static int field_C;
     boolean field_D;
@@ -61,14 +61,14 @@ class bb extends qa {
         }
     }
 
-    bb(String param0, ch param1, kd param2) {
+    bb(String param0, ComponentLayout param1, kd param2) {
         super(param0, param1, param2);
         this.field_D = true;
         this.field_B = true;
         this.field_F = false;
     }
 
-    boolean a(int param0, boolean param1, int param2, qa param3, int param4, int param5, int param6) {
+    boolean a(int param0, boolean param1, int param2, UiComponent param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -127,7 +127,7 @@ class bb extends qa {
         this.field_B = true;
     }
 
-    void a(int param0, int param1, qa param2, byte param3) {
+    void a(int param0, int param1, UiComponent param2, byte param3) {
         if (param3 > -85) {
           return;
         }
@@ -148,7 +148,7 @@ class bb extends qa {
         }
     }
 
-    boolean a(int param0, int param1, qa param2, char param3) {
+    boolean a(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -182,7 +182,7 @@ class bb extends qa {
         this(param0, nf.field_M.field_p, param1);
     }
 
-    boolean a(qa param0, int param1) {
+    boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -195,7 +195,7 @@ class bb extends qa {
             this.field_F = true;
             if (this.field_s != null &&
               this.field_s instanceof p) {
-              ((p) (this.field_s)).a((qa) (this), this.field_F, (byte) -31);
+              ((p) (this.field_s)).a((UiComponent) (this), this.field_F, (byte) -31);
             }
             if (param1 < -26) {
               return true;
@@ -218,11 +218,11 @@ class bb extends qa {
         }
     }
 
-    final void a(byte param0, qa param1, int param2, int param3, int param4, int param5) {
+    final void a(byte param0, UiComponent param1, int param2, int param3, int param4, int param5) {
         try {
           if (param0 != 5) {
-            qa var8 = (qa) null;
-            this.a((qa) null, 66);
+            UiComponent var8 = (UiComponent) null;
+            this.a((UiComponent) null, 66);
           }
           if (this.field_s != null &&
             this.field_s instanceof dg) {
@@ -270,7 +270,7 @@ class bb extends qa {
           field_A = (Boolean) null;
           return;
         }
-        ((p) (this.field_s)).a((qa) (this), this.field_F, (byte) -31);
+        ((p) (this.field_s)).a((UiComponent) (this), this.field_F, (byte) -31);
         if (param0 == -1) {
           return;
         }
@@ -281,8 +281,8 @@ class bb extends qa {
         if (param0 == 1) {
           return this.field_F;
         }
-        qa var3 = (qa) null;
-        this.a(-92, -95, (qa) null, '\005');
+        UiComponent var3 = (UiComponent) null;
+        this.a(-92, -95, (UiComponent) null, '\005');
         return this.field_F;
     }
 

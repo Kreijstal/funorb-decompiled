@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ta extends pa {
+abstract class ta extends DualLinkNode {
     static String field_s;
     static int field_y;
     int field_q;

@@ -3,7 +3,7 @@
  */
 abstract class oh extends jj {
     private int field_ab;
-    private qa field_ib;
+    private UiComponent field_ib;
     private int field_eb;
     private ak field_fb;
     static int field_db;
@@ -32,7 +32,7 @@ abstract class oh extends jj {
         super.l(param0);
     }
 
-    final static void a(rh param0, rh param1, boolean param2, byte param3, rh param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, byte param3, ResourceArchive param4) {
         try {
           uc.field_c = pk.a((byte) 68, "");
           uc.field_c.a(false, 10518);
@@ -51,7 +51,7 @@ abstract class oh extends jj {
     boolean a(int param0) {
         int fieldTemp$0 = 0;
         int var2 = 0;
-        int var3 = fleas.field_A ? 1 : 0;
+        int var3 = FleaCircusApplet.field_A ? 1 : 0;
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
@@ -105,7 +105,7 @@ abstract class oh extends jj {
         int var2 = 89 % ((-56 - param0) / 45);
     }
 
-    oh(f param0, qa param1, int param2, int param3, int param4) {
+    oh(f param0, UiComponent param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_u, param1.field_j + (12 + param2));
         try {
           this.field_bb = param4;
@@ -118,7 +118,7 @@ abstract class oh extends jj {
         }
     }
 
-    private final void c(qa param0, int param1) {
+    private final void c(UiComponent param0, int param1) {
         if (null != this.field_hb) {
           this.field_hb.c(-1);
         }
@@ -128,7 +128,7 @@ abstract class oh extends jj {
         } else {
           this.field_hb = new tf();
         }
-        this.a((qa) (this.field_hb), (byte) -85);
+        this.a((UiComponent) (this.field_hb), (byte) -85);
         if (param1 <= 79) {
           return;
         }
@@ -140,7 +140,7 @@ abstract class oh extends jj {
     }
 
     final static dd c(int param0, int param1, int param2) {
-        int var6 = fleas.field_A ? 1 : 0;
+        int var6 = FleaCircusApplet.field_A ? 1 : 0;
         dd var7 = new dd(param2, param2);
         dd var3 = var7;
         int var4 = 0;
@@ -159,7 +159,7 @@ abstract class oh extends jj {
         }
     }
 
-    void d(qa param0, int param1) {
+    void d(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -208,25 +208,25 @@ abstract class oh extends jj {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
-        var17 = fleas.field_A ? 1 : 0;
+        var17 = FleaCircusApplet.field_A ? 1 : 0;
         if (param8 < param11) {
           if (param0 > param11) {
-            pa.a(param6, param11, param4, param3, param2, param15, param14, param8, param9, param12, param13, gb.field_a, param1, param7, param0, 32679, param10);
+            DualLinkNode.a(param6, param11, param4, param3, param2, param15, param14, param8, param9, param12, param13, gb.field_a, param1, param7, param0, 32679, param10);
           } else {
             if (param0 <= param8) {
-              pa.a(param9, param8, param14, param15, param4, param12, param2, param0, param1, param3, param10, gb.field_a, param6, param13, param11, param5 + 32679, param7);
+              DualLinkNode.a(param9, param8, param14, param15, param4, param12, param2, param0, param1, param3, param10, gb.field_a, param6, param13, param11, param5 + 32679, param7);
             } else {
-              pa.a(param1, param0, param14, param3, param2, param12, param4, param8, param9, param15, param13, gb.field_a, param6, param10, param11, 32679, param7);
+              DualLinkNode.a(param1, param0, param14, param3, param2, param12, param4, param8, param9, param15, param13, gb.field_a, param6, param10, param11, 32679, param7);
             }
           }
         } else {
           if (param8 < param0) {
-            pa.a(param9, param8, param4, param12, param14, param15, param2, param11, param6, param3, param7, gb.field_a, param1, param13, param0, 32679, param10);
+            DualLinkNode.a(param9, param8, param4, param12, param14, param15, param2, param11, param6, param3, param7, gb.field_a, param1, param13, param0, 32679, param10);
           } else {
             if (param0 <= param11) {
-              pa.a(param6, param11, param2, param15, param4, param3, param14, param0, param1, param12, param10, gb.field_a, param9, param7, param8, 32679, param13);
+              DualLinkNode.a(param6, param11, param2, param15, param4, param3, param14, param0, param1, param12, param10, gb.field_a, param9, param7, param8, 32679, param13);
             } else {
-              pa.a(param1, param0, param2, param12, param14, param3, param4, param11, param6, param15, param7, gb.field_a, param9, param10, param8, param5 ^ 32679, param13);
+              DualLinkNode.a(param1, param0, param2, param12, param14, param3, param4, param11, param6, param15, param7, gb.field_a, param9, param10, param8, param5 ^ 32679, param13);
             }
           }
         }
@@ -241,12 +241,12 @@ abstract class oh extends jj {
         if (param0 > 70) {
           return super.j(80);
         }
-        qa var3 = (qa) null;
-        this.d((qa) null, 45);
+        UiComponent var3 = (UiComponent) null;
+        this.d((UiComponent) null, 45);
         return super.j(80);
     }
 
-    boolean a(int param0, int param1, qa param2, char param3) {
+    boolean a(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

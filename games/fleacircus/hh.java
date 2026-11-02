@@ -22,9 +22,9 @@ final class hh {
     }
 
     final static void a(int param0) {
-        lh.a(false);
+        IntrusiveNode.a(false);
         if (null != ol.field_e) {
-          lh.a((byte) -6, ol.field_e);
+          IntrusiveNode.a((byte) -6, ol.field_e);
         }
         if (param0 != 1) {
           field_c = (Calendar) null;

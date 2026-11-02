@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dl extends pa {
+abstract class dl extends DualLinkNode {
     boolean field_v;
     static ed field_w;
     static dd field_s;
@@ -24,7 +24,7 @@ abstract class dl extends pa {
 
     abstract byte[] g(int param0);
 
-    final static n a(int param0, int param1, int param2, rh param3, rh param4) {
+    final static n a(int param0, int param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         n stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

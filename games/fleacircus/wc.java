@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class wc extends lh {
+final class wc extends IntrusiveNode {
     sf[] field_m;
     de[] field_j;
     int field_k;
@@ -33,7 +33,7 @@ final class wc extends lh {
         int var9 = 0;
         int var10 = 0;
         int[] var11 = null;
-        var10 = fleas.field_A ? 1 : 0;
+        var10 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param2) {
             var11 = (int[]) null;

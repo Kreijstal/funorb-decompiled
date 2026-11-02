@@ -9,10 +9,10 @@ final class tc {
     static String[] field_e;
     int field_f;
     static int[] field_b;
-    rh field_a;
+    ResourceArchive field_a;
     static int field_h;
 
-    final static dj a(rh param0, String param1, rh param2, byte param3, String param4) {
+    final static dj a(ResourceArchive param0, String param1, ResourceArchive param2, byte param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -134,7 +134,7 @@ final class tc {
         int var15Lifetime1;
         int var14Lifetime2;
         int var15Lifetime2;
-        var40 = fleas.field_A ? 1 : 0;
+        var40 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var44 = param7;
           if (var44.field_J != null &&
@@ -171,7 +171,7 @@ final class tc {
             }
             var14Lifetime2 = stackIn_16_0;
             var15 = param3 * var61[var13] + (var62[var13] * param0 + param2 * var63[var13]) >> 8;
-            stackIn_18_0 = h.field_b;
+            stackIn_18_0 = ContextualRuntimeException.field_b;
             if (var15 >= 0) {
               stackIn_19_1 = var15;
             } else {
@@ -235,7 +235,7 @@ final class tc {
               var32 = var30 & 65280;
               var33 = var28 * var32 >>> 8 & 1157693184 | -117505793 & var31 * var28 >>> 8;
               var33 = var33 + 65793 * var29;
-              wb.a(var26, var25, var27, (byte) -39, (16711422 & var33) >> 1, var23, var22, var24);
+              NetworkGameClient.a(var26, var25, var27, (byte) -39, (16711422 & var33) >> 1, var23, var22, var24);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];
@@ -283,7 +283,7 @@ final class tc {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (!bh.a((byte) 109, param2, param1)) {
             return false;

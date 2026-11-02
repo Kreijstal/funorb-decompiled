@@ -68,8 +68,8 @@ final class ea {
           return;
         }
         try {
-          param1.addKeyListener(rh.field_f);
-          param1.addFocusListener(rh.field_f);
+          param1.addKeyListener(ResourceArchive.field_f);
+          param1.addFocusListener(ResourceArchive.field_f);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -131,7 +131,7 @@ final class ea {
         byte[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var2_int = param1.length();
           if (param0 != -18428) {

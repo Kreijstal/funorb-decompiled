@@ -27,17 +27,17 @@ class ja extends bb {
         int var14;
         mi var15;
         int var16;
-        qa var17;
+        UiComponent var17;
         int var7Lifetime1;
-        var16 = fleas.field_A ? 1 : 0;
+        var16 = FleaCircusApplet.field_A ? 1 : 0;
         this.field_N = new vc();
         var2 = 0;
         if (param0 != 424) {
-          var17 = (qa) null;
-          this.a(-109, 29, (qa) null, (byte) 12);
+          var17 = (UiComponent) null;
+          this.a(-109, 29, (UiComponent) null, (byte) 12);
         }
         var3 = (eg) ((Object) this.field_p);
-        var4 = var3.a((qa) (this), (byte) -35);
+        var4 = var3.a((UiComponent) (this), (byte) -35);
         while (true) {
           var5 = this.field_i.indexOf("<hotspot=", var2);
           if (-1 == var5) {
@@ -82,7 +82,7 @@ class ja extends bb {
         String[] var7 = null;
         String[] var8 = null;
         int var5 = 0;
-        int var6 = fleas.field_A ? 1 : 0;
+        int var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 != 0) {
             this.b(55, 20, false, -78);
@@ -105,7 +105,7 @@ class ja extends bb {
         }
     }
 
-    ja(String param0, ch param1) {
+    ja(String param0, ComponentLayout param1) {
         super(param0, (kd) null);
         this.field_M = null;
         try {
@@ -119,7 +119,7 @@ class ja extends bb {
         mi var4;
         mi var5;
         int var6;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         var4 = (mi) (this.field_N.c((byte) 47));
         if (param2 != -1) {
           return (mi) null;
@@ -140,7 +140,7 @@ class ja extends bb {
         return null;
     }
 
-    void a(int param0, int param1, qa param2, byte param3) {
+    void a(int param0, int param1, UiComponent param2, byte param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
@@ -177,7 +177,7 @@ class ja extends bb {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        this.a(param1, param0, param2, ((eg) ((Object) this.field_p)).b(-69, (qa) (this)), 80);
+        this.a(param1, param0, param2, ((eg) ((Object) this.field_p)).b(-69, (UiComponent) (this)), 80);
         if (param3 != -9) {
           this.field_K = (String[]) null;
         }
@@ -191,7 +191,7 @@ class ja extends bb {
         field_L = null;
     }
 
-    boolean a(qa param0, int param1) {
+    boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -231,8 +231,8 @@ class ja extends bb {
         eg var5 = (eg) ((Object) this.field_p);
         mi var6 = this.field_M;
         if (var6 != null) {
-          var7 = var5.a(false, param1, (qa) (this));
-          var8 = var5.a(param0, (qa) (this), (byte) 84);
+          var7 = var5.a(false, param1, (UiComponent) (this));
+          var8 = var5.a(param0, (UiComponent) (this), (byte) 84);
           do {
             ek.a(var6.field_l + 2, -2 + (var7 + var6.field_i), var8 + var6.field_j - 2, 1, var6.field_n + 2);
             var6 = var6.field_q;

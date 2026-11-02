@@ -13,7 +13,7 @@ final class ij extends gj implements da {
     static si[] field_F;
     private pe field_G;
 
-    final boolean a(int param0, int param1, qa param2, char param3) {
+    final boolean a(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
@@ -52,7 +52,7 @@ final class ij extends gj implements da {
     }
 
     ij(pe param0) {
-        super(0, 0, 0, 0, (ch) null);
+        super(0, 0, 0, 0, (ComponentLayout) null);
         try {
           this.field_G = param0;
         } catch (RuntimeException runtimeException) {
@@ -71,11 +71,11 @@ final class ij extends gj implements da {
           int var1_int = 0;
           IOException var1 = null;
           ni var2 = null;
-          if (td.field_k.field_c >= 4) {
-            if (td.field_k.field_b == -1) {
+          if (BufferedSocket.field_k.field_c >= 4) {
+            if (BufferedSocket.field_k.field_b == -1) {
               return 3;
             }
-            if (td.field_k.field_b == -2) {
+            if (BufferedSocket.field_k.field_b == -2) {
               return 4;
             }
             return 1;
@@ -87,7 +87,7 @@ final class ij extends gj implements da {
             }
             if (lc.field_r == 1) {
               if (2 == nj.field_a.field_b) {
-                stackIn_14_0 = wb.a(-1, 5);
+                stackIn_14_0 = NetworkGameClient.a(-1, 5);
                 return stackIn_14_0;
               }
               if (nj.field_a.field_b == 1) {
@@ -95,7 +95,7 @@ final class ij extends gj implements da {
               }
             }
             if (lc.field_r == 2) {
-              jj.field_M = new td((java.net.Socket) (nj.field_a.field_e), mh.field_x);
+              jj.field_M = new BufferedSocket((java.net.Socket) (nj.field_a.field_e), mh.field_x);
               var2 = new ni(13);
               ob.a(wj.field_d, of.field_b, (byte) -19, b.field_a, var2);
               var2.a(-11, 15);
@@ -107,13 +107,13 @@ final class ij extends gj implements da {
             if (3 == lc.field_r) {
               if (0 >= jj.field_M.e(-110)) {
                 if (lj.a((byte) -25) > mk.field_e) {
-                  stackIn_29_0 = wb.a(-2, 5);
+                  stackIn_29_0 = NetworkGameClient.a(-2, 5);
                   return stackIn_29_0;
                 }
               } else {
                 var1_int = jj.field_M.f(1605772320);
                 if (var1_int != 0) {
-                  stackIn_24_0 = wb.a(var1_int, 5);
+                  stackIn_24_0 = NetworkGameClient.a(var1_int, 5);
                   return stackIn_24_0;
                 }
                 lc.field_r = lc.field_r + 1;
@@ -126,7 +126,7 @@ final class ij extends gj implements da {
             if (lc.field_r != 4) {
               return -1;
             }
-            td.field_k.a(jj.field_M, md.field_S, (byte) 105);
+            BufferedSocket.field_k.a(jj.field_M, md.field_S, (byte) 105);
             lc.field_r = 0;
             jj.field_M = null;
             nj.field_a = null;
@@ -135,7 +135,7 @@ final class ij extends gj implements da {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return wb.a(-3, 5);
+            return NetworkGameClient.a(-3, 5);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -176,7 +176,7 @@ final class ij extends gj implements da {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           for (var6_int = 0; var6_int < this.field_K.length; var6_int++) {
             if (this.field_M[var6_int] == param4) {
@@ -227,7 +227,7 @@ final class ij extends gj implements da {
         int var5 = 0;
         int var6 = 0;
         int var5Lifetime1;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           this.field_C.f(1);
           if (param0 != null &&
@@ -241,16 +241,16 @@ final class ij extends gj implements da {
             this.field_M = new bb[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_M[var5] = new bb(this.field_K[var5], (kd) (this));
-              this.field_M[var5].field_p = (ch) ((Object) var4);
-              this.field_M[var5].field_m = lh.field_d;
+              this.field_M[var5].field_p = (ComponentLayout) ((Object) var4);
+              this.field_M[var5].field_m = IntrusiveNode.field_d;
               this.field_M[var5].a(0, 80, 20 + var5 * 16, 15, 80);
-              this.a((qa) (this.field_M[var5]), (byte) -89);
+              this.a((UiComponent) (this.field_M[var5]), (byte) -89);
             }
             this.field_M[var3_int] = new bb(ue.field_b, (kd) (this));
             var5Lifetime1 = -104 / ((param1 - 15) / 54);
-            this.field_M[var3_int].field_p = (ch) ((Object) var4);
+            this.field_M[var3_int].field_p = (ComponentLayout) ((Object) var4);
             this.field_M[var3_int].a(0, 100, (var3_int + 1) * 16 + 20, 15, 80);
-            this.a((qa) (this.field_M[var3_int]), (byte) -112);
+            this.a((UiComponent) (this.field_M[var3_int]), (byte) -112);
             return;
           }
           this.field_K = null;

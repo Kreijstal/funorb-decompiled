@@ -6,7 +6,7 @@ final class sa {
     static char[] field_a;
     static String[] field_c;
 
-    final static String a(rh param0, String param1, String param2, String param3, byte param4) {
+    final static String a(ResourceArchive param0, String param1, String param2, String param3, byte param4) {
         RuntimeException var5 = null;
         String var6 = null;
         String stackIn_3_0 = null;
@@ -28,7 +28,7 @@ final class sa {
           }
           if (param4 != 46) {
             var6 = (String) null;
-            sa.a((rh) null, (String) null, (String) null, (String) null, (byte) 95);
+            sa.a((ResourceArchive) null, (String) null, (String) null, (String) null, (byte) 95);
           }
           stackIn_7_0 = param3 + " - " + param0.a(param4 - 164, param1) + "%";
           return stackIn_7_0;

@@ -3,7 +3,7 @@
  */
 final class we {
     static int field_c;
-    private lh field_a;
+    private IntrusiveNode field_a;
     private vc field_b;
 
     final static void a(int param0, int param1) {
@@ -13,8 +13,8 @@ final class we {
         hd.field_b = (param0 << 16) / 150;
     }
 
-    final lh b(int param0) {
-        lh var2 = this.field_b.field_e.field_h;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_b.field_e.field_h;
         int var3 = -111 / ((-1 - param0) / 58);
         if (this.field_b.field_e == var2) {
           this.field_a = null;
@@ -24,12 +24,12 @@ final class we {
         return var2;
     }
 
-    final lh a(byte param0, lh param1) {
-        lh var3 = null;
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_5_0 = null;
-        lh stackIn_7_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -48,7 +48,7 @@ final class we {
           }
           this.field_a = null;
           stackIn_5_0 = null;
-          return (lh) (stackIn_5_0);
+          return (IntrusiveNode) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -63,8 +63,8 @@ final class we {
         }
     }
 
-    final lh a(byte param0) {
-        lh var2 = this.field_b.field_e.field_a;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_b.field_e.field_a;
         if (this.field_b.field_e == var2) {
           this.field_a = null;
           return null;
@@ -90,8 +90,8 @@ final class we {
         field_c = 106;
     }
 
-    final lh c(int param0) {
-        lh var2 = this.field_a;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_a;
         if (this.field_b.field_e == var2) {
           this.field_a = null;
           return null;
@@ -100,16 +100,16 @@ final class we {
           this.field_a = var2.field_h;
           return var2;
         }
-        this.field_a = (lh) null;
+        this.field_a = (IntrusiveNode) null;
         this.field_a = var2.field_h;
         return var2;
     }
 
-    final lh b(byte param0, lh param1) {
-        lh var3 = null;
+    final IntrusiveNode b(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        lh stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -121,12 +121,12 @@ final class we {
             var3 = this.field_b.field_e.field_a;
           }
           if (param0 >= -107) {
-            this.field_a = (lh) null;
+            this.field_a = (IntrusiveNode) null;
           }
           if (this.field_b.field_e == var3) {
             this.field_a = null;
             stackIn_8_0 = null;
-            return (lh) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_a = var3.field_a;
           stackIn_10_0 = var3;
@@ -145,9 +145,9 @@ final class we {
         }
     }
 
-    final lh a(boolean param0) {
-        lh var2 = null;
-        lh var2Lifetime1;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (!param0) {
           this.field_b = (vc) null;
           var2 = this.field_a;

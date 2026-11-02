@@ -21,7 +21,7 @@ final class fc {
         byte[] var20;
         int[] var21;
         byte[] var22;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         var1 = new dd[ef.field_l];
         for (var2 = 0; ef.field_l > var2; var2++) {
           var3 = ij.field_H[var2] * ob.field_a[var2];
@@ -34,7 +34,7 @@ final class fc {
             }
             var1[var2] = new dd(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var21);
           } else {
-            var22 = wb.field_t[var2];
+            var22 = NetworkGameClient.field_t[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
@@ -178,16 +178,16 @@ final class fc {
         int var25Lifetime1;
         int var26Lifetime1;
         int var9Lifetime2Lifetime1;
-        var27 = fleas.field_A ? 1 : 0;
+        var27 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var1_int = tj.field_a;
-          if (nl.field_c[fleas.field_E].length <= tj.field_a) {
-            var1_int = nl.field_c[fleas.field_E].length - 1;
+          if (nl.field_c[FleaCircusApplet.field_E].length <= tj.field_a) {
+            var1_int = nl.field_c[FleaCircusApplet.field_E].length - 1;
           }
-          var2 = var1_int * se.field_a.length / ia.field_m[fleas.field_E].length;
-          var8 = nl.field_c[fleas.field_E][var1_int];
+          var2 = var1_int * se.field_a.length / ia.field_m[FleaCircusApplet.field_E].length;
+          var8 = nl.field_c[FleaCircusApplet.field_E][var1_int];
           var8.d(0, 0);
-          pa.a(111);
+          DualLinkNode.a(111);
           for (var3 = 39; var3 >= 0; var3--) {
             for (var4 = 20; 0 <= var4; var4--) {
               var7 = fl.field_c[var3][var4];
@@ -353,9 +353,9 @@ final class fc {
           }
           ((fa) (Object) stackIn_106_0).c(stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_110_4, -1);
           var11Lifetime2 = 100 % ((param0 - 66) / 60);
-          var10 = db.a(pk.field_G, new String[]{wj.field_c[fleas.field_E][var1_int]}, true);
-          var12 = db.a(fb.field_f, new String[]{Integer.toString(qh.field_z), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_f)}, true);
-          var13 = db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_e)}, true);
+          var10 = db.a(pk.field_G, new String[]{wj.field_c[FleaCircusApplet.field_E][var1_int]}, true);
+          var12 = db.a(fb.field_f, new String[]{Integer.toString(qh.field_z), Integer.toString((int) ia.field_m[FleaCircusApplet.field_E][var1_int].field_f)}, true);
+          var13 = db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[FleaCircusApplet.field_E][var1_int].field_e)}, true);
           var14 = db.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true);
           var15 = db.a(pd.field_i, new String[]{Integer.toString(j.field_f ^ wi.field_p.field_b)}, true);
           var16 = ve.field_d;
@@ -410,7 +410,7 @@ final class fc {
                 var25 = var25 - 2 * var26;
               }
               tl.field_p.b(fi.field_l, 320, var25, 0, 0, ni.field_j / 3);
-              var26_ref_String = var14 + "   " + db.a(fleas.field_I, new String[]{var20}, true);
+              var26_ref_String = var14 + "   " + db.a(FleaCircusApplet.field_I, new String[]{var20}, true);
               tl.field_p.a(db.a(var26_ref_String, new String[]{"2"}, true), 320, var25 + tl.field_p.field_N, 0, 0);
               gb.b(si.field_R);
             }
@@ -497,7 +497,7 @@ final class fc {
         throw new IllegalStateException();
     }
 
-    final static dd[] a(rh param0, String param1, String param2, byte param3) {
+    final static dd[] a(ResourceArchive param0, String param1, String param2, byte param3) {
         dd[] var4 = null;
         RuntimeException var4_ref = null;
         dd[] var5 = null;

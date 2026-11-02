@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class fleas extends wb {
+public final class FleaCircusApplet extends NetworkGameClient {
     private dd field_C;
     static String field_H;
     static Random field_F;
@@ -114,7 +114,7 @@ public final class fleas extends wb {
                     stackIn_8_0 = 0;
                     var9 = stackIn_8_0;
                     while (var9 < 4) {
-                      lh.field_e[var8 + 4 * var6_int][4 * var7 + var9] = 0;
+                      IntrusiveNode.field_e[var8 + 4 * var6_int][4 * var7 + var9] = 0;
                       var9++;
                     }
                     var8++;
@@ -145,7 +145,7 @@ public final class fleas extends wb {
               }
               var9Lifetime1 = stackIn_42_0;
               while (4 > var9Lifetime1) {
-                lh.field_e[var8Lifetime1 + param3 * 4][var9Lifetime1 + param0 * 4] = 0;
+                IntrusiveNode.field_e[var8Lifetime1 + param3 * 4][var9Lifetime1 + param0 * 4] = 0;
                 var9Lifetime1++;
               }
               var8Lifetime1++;
@@ -227,13 +227,13 @@ public final class fleas extends wb {
             if (fl.field_c[var10][var11] == 16 ||
               fl.field_c[var10][var11] == 29) {
               if (ge.field_a[param2] > 0 &&
-                0 >= lh.field_e[4 + var10 * 4][4 * var11]) {
+                0 >= IntrusiveNode.field_e[4 + var10 * 4][4 * var11]) {
                 qg.field_a[param2] = 16 + 16 * var10;
                 dh.field_b[param2] = var11 * 16;
                 fh.$cfr$intArgs$a$cb0bc10e6b69(89, uh.field_s, 100, 63);
               }
               if (0 > ge.field_a[param2] &&
-                lh.field_e[var10 * 4 - 1][4 * var11] <= 0) {
+                IntrusiveNode.field_e[var10 * 4 - 1][4 * var11] <= 0) {
                 qg.field_a[param2] = var10 * 16 - 4;
                 dh.field_b[param2] = 16 * var11;
                 fh.$cfr$intArgs$a$cb0bc10e6b69(116, uh.field_s, 100, 63);
@@ -283,7 +283,7 @@ public final class fleas extends wb {
               }
               var9Lifetime2 = stackIn_165_0;
               while (var9Lifetime2 < 4) {
-                lh.field_e[var8Lifetime2 + 4 * param3][4 * param0 + var9Lifetime2] = 0;
+                IntrusiveNode.field_e[var8Lifetime2 + 4 * param3][4 * param0 + var9Lifetime2] = 0;
                 var9Lifetime2++;
               }
               var8Lifetime2++;
@@ -336,7 +336,7 @@ public final class fleas extends wb {
                       stackIn_186_0 = 0;
                       var9Lifetime3 = stackIn_186_0;
                       while (4 > var9Lifetime3) {
-                        lh.field_e[var8Lifetime3 + var6_intLifetime2 * 4][var9Lifetime3 + var7Lifetime2 * 4] = 0;
+                        IntrusiveNode.field_e[var8Lifetime3 + var6_intLifetime2 * 4][var9Lifetime3 + var7Lifetime2 * 4] = 0;
                         var9Lifetime3++;
                       }
                       var8Lifetime3++;
@@ -382,7 +382,7 @@ public final class fleas extends wb {
                       stackIn_233_0 = 0;
                       var9Lifetime4 = stackIn_233_0;
                       while (4 > var9Lifetime4) {
-                        lh.field_e[var6_intLifetime3 * 4 + var8Lifetime4][var7Lifetime3 * 4 + var9Lifetime4] = 0;
+                        IntrusiveNode.field_e[var6_intLifetime3 * 4 + var8Lifetime4][var7Lifetime3 * 4 + var9Lifetime4] = 0;
                         var9Lifetime4++;
                       }
                       var8Lifetime4++;
@@ -397,7 +397,7 @@ public final class fleas extends wb {
                       stackIn_217_0 = 0;
                       var9Lifetime4Lifetime1 = stackIn_217_0;
                       while (var9Lifetime4Lifetime1 < 4) {
-                        lh.field_e[var6_intLifetime3 * 4 + var8Lifetime4Lifetime1][var7Lifetime3 * 4 + var9Lifetime4Lifetime1] = 1;
+                        IntrusiveNode.field_e[var6_intLifetime3 * 4 + var8Lifetime4Lifetime1][var7Lifetime3 * 4 + var9Lifetime4Lifetime1] = 1;
                         var9Lifetime4Lifetime1++;
                       }
                       var8Lifetime4Lifetime1++;
@@ -437,8 +437,8 @@ public final class fleas extends wb {
 
     final void b(byte param0) {
         hl.g(0);
-        if (null != rh.field_p) {
-          lh.a(false);
+        if (null != ResourceArchive.field_p) {
+          IntrusiveNode.a(false);
         }
         if (param0 != -61) {
           return;
@@ -492,9 +492,9 @@ public final class fleas extends wb {
           aj.field_t = of.a("blocks", "", hm.field_g, 89);
           el.field_s = of.a("fleas", "", hm.field_g, 67);
           var3 = -24 % ((-43 - param0) / 62);
-          lh.field_b = (fa) ((Object) tc.a(de.field_h, "squarish16", hm.field_g, (byte) 120, ""));
+          IntrusiveNode.field_b = (fa) ((Object) tc.a(de.field_h, "squarish16", hm.field_g, (byte) 120, ""));
           var2 = new int[2][];
-          var2[0] = ((dj) (lh.field_b)).field_P[0];
+          var2[0] = ((dj) (IntrusiveNode.field_b)).field_P[0];
           array$0 = new int[var2[0].length];
           var2[1] = array$0;
           var4_int = 1;
@@ -519,7 +519,7 @@ public final class fleas extends wb {
                 continue;
               }
             } else {
-              ((dj) (lh.field_b)).field_P = var2;
+              ((dj) (IntrusiveNode.field_b)).field_P = var2;
               tl.field_p = (fa) ((Object) tc.a(de.field_h, "fleafont_filled", hm.field_g, (byte) 115, ""));
               var2 = new int[4][];
               var2[0] = ((dj) (tl.field_p)).field_P[0];
@@ -580,7 +580,7 @@ public final class fleas extends wb {
                   tk.field_m = kl.a(252, hm.field_g, "", "level_select_arrow_pressed");
                   ad.field_b = fc.a(hm.field_g, "level_select_frame", "", (byte) 61);
                   pf.field_a = kl.a(252, hm.field_g, "", "level_select_preview_frame");
-                  pa.field_n = kl.a(252, hm.field_g, "", "level_select_slider_tab");
+                  DualLinkNode.field_n = kl.a(252, hm.field_g, "", "level_select_slider_tab");
                   rd.field_e = kl.a(252, hm.field_g, "", "level_select_bracket");
                   rb.field_G = kl.a(252, hm.field_g, "", "level_select_scroll_bg");
                   de.field_a = kl.a(252, hm.field_g, "", "main_title");
@@ -604,7 +604,7 @@ public final class fleas extends wb {
                   lj.field_f = hm.a("slider_right", hm.field_g, (byte) -79, "");
                   tb.field_f = kl.a(252, hm.field_g, "", "slider_tab");
                   gl.field_m = hm.a("checkbox_value_0", hm.field_g, (byte) -88, "");
-                  qa.field_l = hm.a("checkbox_value_1", hm.field_g, (byte) -13, "");
+                  UiComponent.field_l = hm.a("checkbox_value_1", hm.field_g, (byte) -13, "");
                   ai.field_n = of.a("countdown", "", hm.field_g, 103);
                   ji.field_f = new dd[ai.field_n.length];
                   break;
@@ -720,8 +720,8 @@ public final class fleas extends wb {
                   var11 = tl.field_p.field_N;
                   vb.field_a = new dd(var11, var11);
                   vb.field_a.f();
-                  td.field_m.a(0, 0, var11, var11);
-                  td.field_m = null;
+                  BufferedSocket.field_m.a(0, 0, var11, var11);
+                  BufferedSocket.field_m = null;
                   gi.field_b.a((byte) 109);
                   break;
                 }
@@ -729,15 +729,15 @@ public final class fleas extends wb {
                 var11++;
               } while (var17 == 0);
               var12 = 10 * tl.field_p.field_N;
-              rh.field_c = new ik(45, -(var12 / 2) + 250, 340, var12, tl.field_p, be.field_c, tk.field_m, pa.field_n, rb.field_G);
-              rh.field_c.field_Q = -16777216;
-              rh.field_c.field_r = -1862275584;
-              rh.field_c.field_F = -2241536;
-              rh.field_c.field_H = -16777214;
-              rh.field_c.field_u = 134217728;
-              rh.field_c.field_s = 0;
-              rh.field_c.field_w = 553648127;
-              rh.field_c.field_O = -1593901056;
+              ResourceArchive.field_c = new ik(45, -(var12 / 2) + 250, 340, var12, tl.field_p, be.field_c, tk.field_m, DualLinkNode.field_n, rb.field_G);
+              ResourceArchive.field_c.field_Q = -16777216;
+              ResourceArchive.field_c.field_r = -1862275584;
+              ResourceArchive.field_c.field_F = -2241536;
+              ResourceArchive.field_c.field_H = -16777214;
+              ResourceArchive.field_c.field_u = 134217728;
+              ResourceArchive.field_c.field_s = 0;
+              ResourceArchive.field_c.field_w = 553648127;
+              ResourceArchive.field_c.field_O = -1593901056;
               dk.field_C = new vg("", 360, 20, tl.field_p);
               wd.field_a = new vg("", 360, 178, tl.field_p);
               de.field_b = new vg("", 360, 395, tl.field_p);
@@ -749,7 +749,7 @@ public final class fleas extends wb {
               dk.field_C.field_n = 145;
               wd.field_a.field_n = 205;
               de.field_b.field_n = 220;
-              ol.field_f = new rk(wd.field_a.field_l, 420, gl.field_m, qa.field_l, bb.field_H, lh.field_b);
+              ol.field_f = new rk(wd.field_a.field_l, 420, gl.field_m, UiComponent.field_l, bb.field_H, IntrusiveNode.field_b);
               ol.field_f.field_t = fl.field_f;
               var15_int = ob.field_c.length - 1;
               do {
@@ -827,15 +827,15 @@ public final class fleas extends wb {
         int var3Lifetime2;
         var4 = field_A ? 1 : 0;
         try {
-          if (null != rh.field_p) {
-            stackIn_5_0 = rh.field_p;
+          if (null != ResourceArchive.field_p) {
+            stackIn_5_0 = ResourceArchive.field_p;
           } else {
             stackIn_5_0 = ol.field_e;
           }
           var2 = stackIn_5_0;
           if (mc.b((byte) 123)) {
             stackIn_11_0 = var2;
-            if (null == rh.field_p) {
+            if (null == ResourceArchive.field_p) {
               stackIn_12_1 = ha.field_k;
             } else {
               stackIn_12_1 = true;
@@ -847,8 +847,8 @@ public final class fleas extends wb {
             bg.a((byte) -75, (java.awt.Canvas) (var2));
             return;
           }
-          if (!td.d(-89)) {
-            jj.a(100.0f, li.field_h, true);
+          if (!BufferedSocket.d(-89)) {
+            jj.a(100.0f, IterableNodeHashTable.field_h, true);
             bg.a((byte) -104, (java.awt.Canvas) (var2));
             return;
           }
@@ -913,7 +913,7 @@ public final class fleas extends wb {
           }
           if (!hi.a((byte) -72)) {
             if (uk.b(15000)) {
-              if (rh.field_p == null) {
+              if (ResourceArchive.field_p == null) {
                 stackIn_77_0 = ha.field_k;
               } else {
                 stackIn_77_0 = true;
@@ -949,7 +949,7 @@ public final class fleas extends wb {
 
     final void a(int param0) {
         try {
-          fleas.m(param0 + 0);
+          FleaCircusApplet.m(param0 + 0);
           nb.a((byte) 69);
           cf.b(21230);
           lc.c((byte) 99);
@@ -959,13 +959,13 @@ public final class fleas extends wb {
           cl.a(-2);
           l.b(-29049);
           qi.a((byte) -113);
-          wb.i(param0 + 0);
-          h.c(param0 ^ 55);
-          cd.c(true);
+          NetworkGameClient.i(param0 + 0);
+          ContextualRuntimeException.c(param0 ^ 55);
+          GameAppletShell.c(true);
           rd.a((byte) -19);
           jg.a(param0 ^ 107);
           gb.a();
-          rh.c((byte) -110);
+          ResourceArchive.c((byte) -110);
           fa.a();
           qg.a(false);
           tb.a((byte) -72);
@@ -990,7 +990,7 @@ public final class fleas extends wb {
           af.a(105);
           uf.a(true);
           k.a(-40);
-          td.a(123167272);
+          BufferedSocket.a(123167272);
           kh.a((byte) -97);
           ik.b(false);
           vg.c((byte) -53);
@@ -1001,7 +1001,7 @@ public final class fleas extends wb {
           vj.b(true);
           df.a((byte) 71);
           bk.a(param0 ^ -6565);
-          lh.b(1);
+          IntrusiveNode.b(1);
           hc.c((byte) 87);
           tk.a(param0 ^ 93);
           fd.e();
@@ -1035,7 +1035,7 @@ public final class fleas extends wb {
           cc.a();
           ti.a(-23740);
           nc.a(param0 ^ -99);
-          pa.d(-6);
+          DualLinkNode.d(-6);
           cm.a(param0 ^ -91);
           ta.c((byte) 62);
           ea.a((byte) -95);
@@ -1098,7 +1098,7 @@ public final class fleas extends wb {
           ee.a(1);
           ib.a(-111);
           ne.a((byte) -84);
-          qa.d(0);
+          UiComponent.d(0);
           bb.a(-1);
           dk.a((byte) 2);
           jj.c(true);
@@ -1140,13 +1140,13 @@ public final class fleas extends wb {
           pk.d((byte) 89);
           qj.i(param0 ^ 124);
           fh.a((byte) -94);
-          li.a((byte) -112);
-          wf.a(0);
+          IterableNodeHashTable.a((byte) -112);
+          SecondaryNodeDeque.a(0);
           cb.f(param0 ^ 67);
           pj.h(-103);
           jk.c(28);
           a.a((byte) 126);
-          na.b(105);
+          NodeHashTableIterator.b(105);
           rc.a((byte) 58);
           ll.a(61);
           bh.a(param0 ^ 125);
@@ -1274,8 +1274,8 @@ public final class fleas extends wb {
                 pb.field_a.a(-116)) {
                 if (ib.field_f.b((byte) -125) &&
                   ib.field_f.a(-128)) {
-                  if (pa.field_l.b((byte) -102) &&
-                    pa.field_l.a(-22)) {
+                  if (DualLinkNode.field_l.b((byte) -102) &&
+                    DualLinkNode.field_l.a(-22)) {
                     if (ob.field_d.b((byte) -108) &&
                       ob.field_d.a(-72)) {
                       if (jc.field_e.b((byte) -104) &&
@@ -1298,7 +1298,7 @@ public final class fleas extends wb {
                               wj.field_b[1] = ia.a(882, 2500, 1);
                               this.j((byte) 87);
                               pb.field_a = null;
-                              fleas.h((byte) -110);
+                              FleaCircusApplet.h((byte) -110);
                               return false;
                             }
                             jj.a(31.0f, sa.a(pf.field_b, "roman12", de.field_j, rg.field_q, (byte) 46), true);
@@ -1307,7 +1307,7 @@ public final class fleas extends wb {
                           jj.a(30.0f, sa.a(de.field_h, "", de.field_j, rg.field_q, (byte) 46), true);
                           return false;
                         }
-                        jj.a(25.0f, sa.a(hm.field_g, "", bf.field_f, li.field_e, (byte) 46), true);
+                        jj.a(25.0f, sa.a(hm.field_g, "", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
                         return false;
                       }
                       jj.a(20.0f, sa.a(jc.field_e, "", tj.field_b, mi.field_p, (byte) 46), true);
@@ -1316,7 +1316,7 @@ public final class fleas extends wb {
                     jj.a(18.0f, re.a((byte) 127, 0, ob.field_d, kk.field_c, cf.field_b), true);
                     return false;
                   }
-                  jj.a(15.0f, sa.a(pa.field_l, "", gk.field_G, sc.field_c, (byte) 46), true);
+                  jj.a(15.0f, sa.a(DualLinkNode.field_l, "", gk.field_G, sc.field_c, (byte) 46), true);
                   return false;
                 }
                 jj.a(10.0f, sa.a(ib.field_f, "", fk.field_x, vf.field_n, (byte) 46), true);
@@ -1325,7 +1325,7 @@ public final class fleas extends wb {
               jj.a(5.0f, sa.a(pb.field_a, "", fk.field_x, vf.field_n, (byte) 46), true);
               return false;
             }
-            jj.a(3.0f, sa.a(a.field_a, "basic", bf.field_f, li.field_e, (byte) 46), true);
+            jj.a(3.0f, sa.a(a.field_a, "basic", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
             return false;
           }
           if (null != ib.field_f) {
@@ -1333,14 +1333,14 @@ public final class fleas extends wb {
             this.d(true);
             wi.b(-14277);
             ib.field_f = null;
-            fleas.h((byte) 76);
+            FleaCircusApplet.h((byte) 76);
             return false;
           }
           if (jc.field_e != null) {
             jj.a(65.0f, cb.field_q, true);
             this.d(true);
-            td.field_j = wk.a(jc.field_e, "", "Flea Circus Titlescreen");
-            gg.field_h.a(field_K, ob.field_d, 11498, 0, td.field_j);
+            BufferedSocket.field_j = wk.a(jc.field_e, "", "Flea Circus Titlescreen");
+            gg.field_h.a(field_K, ob.field_d, 11498, 0, BufferedSocket.field_j);
             hf.field_e[0] = wk.a(jc.field_e, "", "Flea Circus 1");
             hf.field_e[1] = wk.a(jc.field_e, "", "Flea Circus 2");
             hf.field_e[2] = wk.a(jc.field_e, "", "Flea Circus 3");
@@ -1350,7 +1350,7 @@ public final class fleas extends wb {
                 field_K = null;
                 ob.field_d = null;
                 jc.field_e = null;
-                fleas.h((byte) -114);
+                FleaCircusApplet.h((byte) -114);
                 break;
               }
               gg.field_h.a(field_K, ob.field_d, 11498, 0, hf.field_e[var3_int]);
@@ -1362,13 +1362,13 @@ public final class fleas extends wb {
             jj.a(70.0f, f.field_H, true);
             this.d(true);
             cb.field_u = kl.a(252, a.field_a, "basic", "unachieved");
-            td.field_m = kl.a(252, a.field_a, "basic", "orbcoin");
-            em.a(td.field_m, (byte) -85);
+            BufferedSocket.field_m = kl.a(252, a.field_a, "basic", "orbcoin");
+            em.a(BufferedSocket.field_m, (byte) -85);
             mf.field_g = kl.a(252, a.field_a, "basic", "locked");
             ve.field_d = (fa) ((Object) ub.a("roman12", a.field_a, "", pf.field_b, 32));
             lk.field_Q = (fa) ((Object) ub.a("roman20", a.field_a, "", pf.field_b, 32));
             a.field_a = null;
-            fleas.h((byte) 33);
+            FleaCircusApplet.h((byte) 33);
             return false;
           }
           if (hm.field_g != null) {
@@ -1377,15 +1377,15 @@ public final class fleas extends wb {
             this.g((byte) -111);
             de.field_h = null;
             hm.field_g = null;
-            fleas.h((byte) -116);
+            FleaCircusApplet.h((byte) -116);
             return false;
           }
-          if (pa.field_l == null) {
+          if (DualLinkNode.field_l == null) {
             var3_int = 0;
             do {
               if (var3_int >= 11) {
                 ab.field_b = 0;
-                k.a(0, td.field_j);
+                k.a(0, BufferedSocket.field_j);
                 var3_int = 3072;
                 break;
               }
@@ -1397,18 +1397,18 @@ public final class fleas extends wb {
             var6 = 10;
             var7 = -2;
             if (param1 <= 0) {
-              fleas.a((ih) null, -35);
+              FleaCircusApplet.a((ih) null, -35);
             }
             var8 = this.field_C.field_w - 20;
             var9 = this.field_C.field_t - 20;
             rb.a(var5, var6, var9, this.field_C, var8, var3_int, (byte) 125, var4, var7);
             ue.a((byte) -122, this.field_N);
             mc.a(this.field_D, ih.field_m, 0);
-            pa.a(false, jj.field_P);
+            DualLinkNode.a(false, jj.field_P);
             el.a((java.applet.Applet) (this), 150, (byte) 44, 15488514, jd.field_g, 1052688);
             we.a(50, 106);
             qb.a(50, 114);
-            fleas.h((byte) -71);
+            FleaCircusApplet.h((byte) -71);
             return true;
           }
           jj.a(98.0f, vi.field_c, true);
@@ -1417,12 +1417,12 @@ public final class fleas extends wb {
           array$0 = new kh[var5];
           ia.field_m[0] = array$0;
           var6 = 0;
-          L4: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameCompleted1 = true;
             if (var5 > var6) {
               var4_ref_String = 1 + var6 + ".lvl";
-              var3 = pa.field_l.a(0, var4_ref_String, "");
+              var3 = DualLinkNode.field_l.a(0, var4_ref_String, "");
               stackIn_126_0 = null;
               stackIn_126_1 = var3;
               if (var10 != 0) {
@@ -1452,7 +1452,7 @@ public final class fleas extends wb {
               var6 = 0;
               while (var6 < var5) {
                 var4_ref_StringLifetime1 = "classic_" + (1 + var6) + ".lvl";
-                var3Lifetime1 = pa.field_l.a(0, var4_ref_StringLifetime1, "");
+                var3Lifetime1 = DualLinkNode.field_l.a(0, var4_ref_StringLifetime1, "");
                 stackIn_137_0 = null;
                 if (var10 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -1473,15 +1473,15 @@ public final class fleas extends wb {
                 ff.field_b[var6] = new dd(20, 20);
                 var6++;
                 if (var10 != 0) {
-                  break L4;
+                  break scanLoop1;
                 }
               }
               stackIn_137_0 = null;
             }
-            pa.field_l = (rh) (stackIn_137_0);
+            DualLinkNode.field_l = (ResourceArchive) (stackIn_137_0);
             jk.field_l = 2;
             tj.field_a = 0;
-            fleas.h((byte) -72);
+            FleaCircusApplet.h((byte) -72);
             break;
           }
           return false;
@@ -1506,12 +1506,12 @@ public final class fleas extends wb {
         try {
           ni.field_j = ni.field_j + 1;
           ai.e(-20846);
-          if (rh.field_p != null &&
-            rh.field_p.field_c) {
-            lh.a(false);
+          if (ResourceArchive.field_p != null &&
+            ResourceArchive.field_p.field_c) {
+            IntrusiveNode.a(false);
             cm.a((byte) -28);
           }
-          stackIn_11_1 = (rh.field_p != null);
+          stackIn_11_1 = (ResourceArchive.field_p != null);
           this.b(stackIn_11_1, (byte) 63);
           if (d.field_Q) {
             this.f(true);
@@ -1532,7 +1532,7 @@ public final class fleas extends wb {
             }
             if ((decompiledFrameCompleted0) && (ei.field_H[2] &&
               ab.field_b == -1)) {
-              td.b(120);
+              BufferedSocket.b(120);
             }
             if (ei.field_H[86]) {
               if (ei.field_H[16]) {
@@ -1599,9 +1599,9 @@ public final class fleas extends wb {
           }
           boolean decompiledFrameRemainder0 = true;
           if (md.field_T) {
-            if (!td.d(-101)) {
+            if (!BufferedSocket.d(-101)) {
               nb.a(false);
-              decompiledFrameRemainder0 = !(!td.d(-104));
+              decompiledFrameRemainder0 = !(!BufferedSocket.d(-104));
               if (decompiledFrameRemainder0) {
                 wh.a(-98);
                 em.a(param0 - 21512);
@@ -1632,7 +1632,7 @@ public final class fleas extends wb {
                         break;
                       }
                     case 2:
-                      lh.a(false);
+                      IntrusiveNode.a(false);
                       break;
                   }
                   if (var3 != 0) {
@@ -1650,12 +1650,12 @@ public final class fleas extends wb {
               if (decompiledFrameRemainder0) {
                 if (uk.b(param0 - 6434)) {
                   stackIn_165_1 = -81;
-                  stackIn_166_2 = (rh.field_p != null);
+                  stackIn_166_2 = (ResourceArchive.field_p != null);
                   var2_int = this.a((byte) stackIn_165_1, stackIn_166_2);
                   if (1 == var2_int ||
                     2 == var2_int) {
-                    if (null != rh.field_p) {
-                      lh.a(false);
+                    if (null != ResourceArchive.field_p) {
+                      IntrusiveNode.a(false);
                     }
                     if (var2_int == 2) {
                       hf.a(rl.a((byte) -110), -52);
@@ -1741,7 +1741,7 @@ public final class fleas extends wb {
               af.field_g = af.field_g + 1;
               if (af.field_g == 16 &&
                 ab.field_b == 10) {
-                td.b(94);
+                BufferedSocket.b(94);
               }
               if (ab.field_b >= 0) {
                 pi.field_b[ab.field_b].e(-400);
@@ -1824,14 +1824,14 @@ public final class fleas extends wb {
           if (ne.field_a != null) {
             uh.a((byte) -128, ne.field_a);
             ne.field_a = null;
-            fleas.h((byte) 79);
+            FleaCircusApplet.h((byte) 79);
           }
           hm.field_g = q.a(8192, 1);
           pb.field_a = q.a(8192, 2);
           if (!param0) {
             return;
           }
-          pa.field_l = q.a(8192, 3);
+          DualLinkNode.field_l = q.a(8192, 3);
           ib.field_f = q.a(8192, 4);
           ob.field_d = q.a(8192, 5);
           jc.field_e = q.a(8192, 6);
@@ -1852,7 +1852,7 @@ public final class fleas extends wb {
         try {
           bm.e((byte) 31);
           if (param0 > -47) {
-            fleas.h((byte) -92);
+            FleaCircusApplet.h((byte) -92);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "fleas.A(" + param0 + ',' + param1 + ',' + param2 + ')');
@@ -1905,7 +1905,7 @@ public final class fleas extends wb {
           bf.field_d = qf.a(pb.field_a, "", "FLEA_spinplatform").b().a(var2);
           ab.field_a = qf.a(pb.field_a, "", "FLEA_bomb").b().a(var2);
           ah.field_a = qf.a(pb.field_a, "", "FLEA_drowning").b().a(var2);
-          rh.field_n = qf.a(pb.field_a, "", "FLEA_fanloop").b().a(var2);
+          ResourceArchive.field_n = qf.a(pb.field_a, "", "FLEA_fanloop").b().a(var2);
           hi.field_p = qf.a(pb.field_a, "", "FLEA_spider").b().a(var2);
           uh.field_s = qf.a(pb.field_a, "", "FLEA_teleport_in").b().a(var2);
           gi.field_d = qf.a(pb.field_a, "", "FLEA_noplace").b().a(var2);
@@ -1916,7 +1916,7 @@ public final class fleas extends wb {
           hf.field_g = qf.a(pb.field_a, "", "FLEA_bridgecollapse").b().a(var2);
           kc.field_e = qf.a(pb.field_a, "", "FLEA_death").b().a(var2);
           pb.field_a = null;
-          oj.field_i = ie.a(rh.field_n, 100, 0);
+          oj.field_i = ie.a(ResourceArchive.field_n, 100, 0);
           oj.field_i.g(-1);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "fleas.L(" + param0 + ')');
@@ -1994,7 +1994,7 @@ public final class fleas extends wb {
                     param1 = stackIn_44_0;
                     while ((4 + var7) > param1) {
                       stackIn_28_0 = 0;
-                      stackIn_28_1 = lh.field_e[param2][param1];
+                      stackIn_28_1 = IntrusiveNode.field_e[param2][param1];
                       if (stackIn_28_0 != stackIn_28_1) {
                         if (ik.field_R) {
                           fh.$cfr$intArgs$a$cb0bc10e6b69(107, gi.field_d, 100, 96);
@@ -2034,15 +2034,15 @@ public final class fleas extends wb {
                     stackIn_50_0Lifetime1 = -2;
                     stackIn_50_1Lifetime1 = ~mh.field_u;
                     if (stackIn_50_0Lifetime1 == stackIn_50_1Lifetime1) {
-                      lh.field_e[param2][param1] = 1;
+                      IntrusiveNode.field_e[param2][param1] = 1;
                     }
                     if (mh.field_u == 2 &&
                       param2 - var6 == -param1 + (var7 + 3)) {
-                      lh.field_e[param2][param1] = 1;
+                      IntrusiveNode.field_e[param2][param1] = 1;
                     }
                     if (mh.field_u == 3 &&
                       ~(-var7 + param1) == ~(-var6 + param2)) {
-                      lh.field_e[param2][param1] = 1;
+                      IntrusiveNode.field_e[param2][param1] = 1;
                     }
                     param1++;
                   }
@@ -2060,7 +2060,7 @@ public final class fleas extends wb {
         }
     }
 
-    public fleas() {
+    public FleaCircusApplet() {
     }
 
     final static re[] a(ih param0, int param1) {
@@ -2081,7 +2081,7 @@ public final class fleas extends wb {
         var7 = field_A ? 1 : 0;
         try {
           if (param1 != -6383) {
-            fleas.a((ih) null, -51);
+            FleaCircusApplet.a((ih) null, -51);
           }
           var2_int = param0.b(8, (byte) -87);
           if (var2_int > 0) {
@@ -2250,7 +2250,7 @@ public final class fleas extends wb {
             var2_int = -1 + nl.field_c[field_E].length;
           }
           boolean decompiledNaturalLoopExit2 = false;
-          while (!(decompiledNaturalLoopExit2 = (!wf.b(-118)))) {
+          while (!(decompiledNaturalLoopExit2 = (!SecondaryNodeDeque.b(-118)))) {
             var3 = id.field_b;
             stackIn_42_0 = -33;
             stackIn_42_1 = ~var3;
@@ -2284,7 +2284,7 @@ public final class fleas extends wb {
           ee.field_h = ee.field_h - (ee.field_h + 1 >> 3);
           if (10 == jk.field_l) {
           }
-          if (pa.field_o == 1) {
+          if (DualLinkNode.field_o == 1) {
             return;
           }
           qh.field_z = 0;
@@ -2621,18 +2621,18 @@ public final class fleas extends wb {
                 stackIn_376_0Lifetime1 = ~jd.field_o[var3Lifetime3];
                 stackIn_376_1Lifetime1 = -1;
                 if (stackIn_376_0Lifetime1 == stackIn_376_1Lifetime1) {
-                  lh.field_e[var10][var11] = 0;
-                  if (lh.field_e[var10][var11 + md.field_L] == 2 &&
+                  IntrusiveNode.field_e[var10][var11] = 0;
+                  if (IntrusiveNode.field_e[var10][var11 + md.field_L] == 2 &&
                     var14 == 0) {
                     this.a((md.field_L + var11) / 4, true, var3Lifetime3, var10 / 4, 2);
                   }
-                  if (lh.field_e[var10][var11 - md.field_L] == 2 &&
+                  if (IntrusiveNode.field_e[var10][var11 - md.field_L] == 2 &&
                     var14 == 0) {
                     this.a((var11 - md.field_L) / 4, true, var3Lifetime3, var10 / 4, 3);
                   }
-                  if ((!(0 >= lh.field_e[var10][var11 + md.field_L]) ||
+                  if ((!(0 >= IntrusiveNode.field_e[var10][var11 + md.field_L]) ||
                     var14 != 0) &&
-                    lh.field_e[var10 + var12][var11] == 2) {
+                    IntrusiveNode.field_e[var10 + var12][var11] == 2) {
                     this.a(var11 / 4, true, var3Lifetime3, (var10 + var12) / 4, var12);
                   }
                   boolean decompiledFrameRemainder3 = true;
@@ -2643,15 +2643,15 @@ public final class fleas extends wb {
                   var12 = var9 / 4;
                   var11 = var8Lifetime1 / 4;
                   if (jd.field_o[var3Lifetime3] != 2) {
-                    if (!(lh.field_e[var10][md.field_L + var11] <= 0) ||
+                    if (!(IntrusiveNode.field_e[var10][md.field_L + var11] <= 0) ||
                       var14 != 0) {
-                      if (lh.field_e[var12 + var10][var11] > 0 &&
-                        lh.field_e[var10][-md.field_L + var11] <= 0 &&
-                        lh.field_e[var12 + var10][var11 - md.field_L] <= 0) {
+                      if (IntrusiveNode.field_e[var12 + var10][var11] > 0 &&
+                        IntrusiveNode.field_e[var10][-md.field_L + var11] <= 0 &&
+                        IntrusiveNode.field_e[var12 + var10][var11 - md.field_L] <= 0) {
                         var8Lifetime1 = var8Lifetime1 - ue.field_d;
                         var7Lifetime1 = var7Lifetime1 + var9;
                       } else {
-                        if (0 >= lh.field_e[var12 + var10][var11]) {
+                        if (0 >= IntrusiveNode.field_e[var12 + var10][var11]) {
                           var7Lifetime1 = var7Lifetime1 + var9;
                         } else {
                           var9 = -var9;
@@ -2667,7 +2667,7 @@ public final class fleas extends wb {
                   var11 = var8Lifetime1 / 4;
                   if (1 != jd.field_o[var3Lifetime3] &&
                     cl.field_d[var3Lifetime3] == 0) {
-                    lh.field_e[var10][var11] = 1;
+                    IntrusiveNode.field_e[var10][var11] = 1;
                   }
                 } else {
                   boolean decompiledFrameRemainder2 = true;
@@ -2692,8 +2692,8 @@ public final class fleas extends wb {
                     }
                   }
                   if (2 == jd.field_o[var3Lifetime3]) {
-                    lh.field_e[var10][var11] = 0;
-                    if (lh.field_e[var10][-md.field_L + var11] == 2) {
+                    IntrusiveNode.field_e[var10][var11] = 0;
+                    if (IntrusiveNode.field_e[var10][-md.field_L + var11] == 2) {
                       this.a((var11 - 1) / 4, true, var3Lifetime3, var10 / 4, 3);
                     }
                     var9 = ge.field_a[var3Lifetime3];
@@ -2704,13 +2704,13 @@ public final class fleas extends wb {
                     var12 = var9 / 4;
                     var8Lifetime1 = var8Lifetime1 - ue.field_d;
                     var11 = var11 - md.field_L;
-                    if (!(lh.field_e[var10][var11] <= 0) ||
+                    if (!(IntrusiveNode.field_e[var10][var11] <= 0) ||
                       var14 != 0) {
                       var8Lifetime1 = var8Lifetime1 + ue.field_d;
                       var11 = var11 + md.field_L;
                       jd.field_o[var3Lifetime3] = 0;
                     }
-                    lh.field_e[var10][var11] = 1;
+                    IntrusiveNode.field_e[var10][var11] = 1;
                   }
                 }
                 qg.field_a[var3Lifetime3] = var7Lifetime1;
@@ -2723,7 +2723,7 @@ public final class fleas extends wb {
             break;
           }
           var3Lifetime4 = stackIn_465_0;
-          L101: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder1 = true;
             if (var3Lifetime4 < gh.field_q) {
               var5Lifetime1 = rf.field_e[var3Lifetime4];
@@ -2739,7 +2739,7 @@ public final class fleas extends wb {
                   var7Lifetime2 = 16 * var5Lifetime1;
                   var8Lifetime2 = (-2 + var6Lifetime1) * 16 + hl.field_C[var3Lifetime4];
                   stackIn_537_0 = 0;
-                  break L101;
+                  break scanLoop1;
                 }
               } else {
                 if (stackIn_496_0 != stackIn_496_1 ||
@@ -2754,7 +2754,7 @@ public final class fleas extends wb {
                     stackIn_492_0 = 0;
                     var21Lifetime1 = stackIn_492_0;
                     while (var21Lifetime1 < 4) {
-                      lh.field_e[var5Lifetime1 * 4 + var20Lifetime1][var21Lifetime1 + 4 * var6Lifetime1] = 0;
+                      IntrusiveNode.field_e[var5Lifetime1 * 4 + var20Lifetime1][var21Lifetime1 + 4 * var6Lifetime1] = 0;
                       var21Lifetime1++;
                     }
                     var20Lifetime1++;
@@ -2784,7 +2784,7 @@ public final class fleas extends wb {
                 var8Lifetime2Lifetime1 = (-2 + var6Lifetime1Lifetime1) * 16 + hl.field_C[var3Lifetime4];
                 stackIn_537_0 = 0;
                 if (var24 != 0) {
-                  break L101;
+                  break scanLoop1;
                 }
                 var4Lifetime2Lifetime1 = stackIn_537_0;
                 while (var4Lifetime2Lifetime1 < nb.field_b) {
@@ -2798,7 +2798,7 @@ public final class fleas extends wb {
                       cl.field_d[var4Lifetime2Lifetime1] = 1;
                       fh.$cfr$intArgs$a$cb0bc10e6b69(93, fi.field_n, 100, 63);
                     }
-                    lh.field_e[qg.field_a[var4Lifetime2Lifetime1] / 4][dh.field_b[var4Lifetime2Lifetime1] / 4] = 0;
+                    IntrusiveNode.field_e[qg.field_a[var4Lifetime2Lifetime1] / 4][dh.field_b[var4Lifetime2Lifetime1] / 4] = 0;
                   }
                   var4Lifetime2Lifetime1++;
                 }
@@ -2880,7 +2880,7 @@ public final class fleas extends wb {
           field_H = null;
           field_F = null;
           if (param0 != -1) {
-            fleas.m(59);
+            FleaCircusApplet.m(59);
           }
           field_K = null;
           field_I = null;

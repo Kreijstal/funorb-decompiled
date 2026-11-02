@@ -19,7 +19,7 @@ final class nl {
         field_c = (dd[][]) null;
     }
 
-    final static void a(int param0, lh param1, lh param2) {
+    final static void a(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param0 < 99) {
             field_b = (String[]) null;

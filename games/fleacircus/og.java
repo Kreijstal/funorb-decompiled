@@ -67,7 +67,7 @@ final class og extends gj implements dc, da {
         int var21Lifetime2;
         int var21Lifetime3;
         int var21Lifetime4;
-        var23 = fleas.field_A ? 1 : 0;
+        var23 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param1 == null) {
             return;
@@ -200,7 +200,7 @@ final class og extends gj implements dc, da {
         }
     }
 
-    final boolean a(int param0, int param1, qa param2, char param3) {
+    final boolean a(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -236,7 +236,7 @@ final class og extends gj implements dc, da {
     }
 
     og(ua param0) {
-        super(0, 0, 288, 0, (ch) null);
+        super(0, 0, 288, 0, (ComponentLayout) null);
         String var7 = null;
         int var3 = 0;
         e var4 = null;
@@ -245,7 +245,7 @@ final class og extends gj implements dc, da {
         try {
           this.field_F = param0;
           this.field_G = new bb(ee.field_k, (kd) null);
-          this.field_G.field_p = (ch) ((Object) new ri());
+          this.field_G.field_p = (ComponentLayout) ((Object) new ri());
           var7 = db.a(oh.field_jb, new String[]{this.a(-115), this.j(0)}, true);
           var3 = 20;
           var4 = new e(ug.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ug.field_e.field_H, -1, 2147483647, true);
@@ -257,12 +257,12 @@ final class og extends gj implements dc, da {
           this.field_H.field_s = (kd) (this);
           this.field_H.b(this.field_u - 40, 26, var3, -9);
           var3 = var3 + (15 + this.field_H.field_j);
-          this.a((qa) (this.field_H), (byte) -55);
+          this.a((UiComponent) (this.field_H), (byte) -55);
           var5 = 4;
           var6 = 200;
           this.field_G.a(-var6 + 300 >> 1, var6, var3, 40, 80);
           this.field_G.field_s = (kd) (this);
-          this.a((qa) (this.field_G), (byte) -70);
+          this.a((UiComponent) (this.field_G), (byte) -70);
           this.a(0, 300, 0, var3 - (-55 - var5), 80);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -277,7 +277,7 @@ final class og extends gj implements dc, da {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var5_int = -79 % ((param3 + 36) / 61);
           if (0 != param0) {

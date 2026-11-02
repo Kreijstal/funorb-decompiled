@@ -60,15 +60,15 @@ class c extends bb {
         }
         if (null != this.field_p &&
           param3 == 0) {
-          this.field_p.a(-74, param1, this.field_D, (qa) (this), param0);
+          this.field_p.a(-74, param1, this.field_D, (UiComponent) (this), param0);
           if (this.field_p instanceof eg) {
             var8 = (eg) ((Object) this.field_p);
             if (this.field_M != this.field_K) {
-              var8.a((qa) (this), this.field_M, param0, this.field_K, -30298, param1);
+              var8.a((UiComponent) (this), this.field_M, param0, this.field_K, -30298, param1);
             }
             var6 = lj.a((byte) -27);
             if ((var6 - this.field_Q) % 1000L < 500L) {
-              var8.a(param0, 0, (qa) (this), this.field_M, param1);
+              var8.a(param0, 0, (UiComponent) (this), this.field_M, param1);
             }
           }
         }
@@ -122,7 +122,7 @@ class c extends bb {
         }
     }
 
-    final boolean a(int param0, boolean param1, int param2, qa param3, int param4, int param5, int param6) {
+    final boolean a(int param0, boolean param1, int param2, UiComponent param3, int param4, int param5, int param6) {
         int stackIn_5_1 = 0;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_21_0 = null;
@@ -135,7 +135,7 @@ class c extends bb {
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
             this.field_p instanceof eg) {
-            var8_int = ((eg) ((Object) this.field_p)).a(kc.field_b, (qa) (this), (byte) 97, param6, param0, ag.field_f);
+            var8_int = ((eg) ((Object) this.field_p)).a(kc.field_b, (UiComponent) (this), (byte) 97, param6, param0, ag.field_f);
             if (-1 == var8_int) {
               stackIn_5_1 = 0;
             } else {
@@ -218,9 +218,9 @@ class c extends bb {
         int var6;
         int var7;
         int var8;
-        qa var9;
+        UiComponent var9;
         eg var10;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         if (!this.field_T) {
           this.field_n = 0;
           this.field_r = 0;
@@ -230,13 +230,13 @@ class c extends bb {
           return;
         }
         var10 = (eg) ((Object) this.field_p);
-        var3 = var10.a((qa) (this), (byte) -35);
+        var3 = var10.a((UiComponent) (this), (byte) -35);
         var4 = var3.b((byte) 97);
         if (param0 <= 89) {
-          var9 = (qa) null;
-          this.a(11, 11, (qa) null, '*');
+          var9 = (UiComponent) null;
+          this.a(11, 11, (UiComponent) null, '*');
         }
-        var5 = var10.b((qa) (this), (byte) -67);
+        var5 = var10.b((UiComponent) (this), (byte) -67);
         var6 = var10.a((byte) 127) >> 1;
         if (var4 < var5 - var6) {
           this.field_r = 0;
@@ -272,7 +272,7 @@ class c extends bb {
     private final int j(int param0) {
         int var2;
         int var3;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         if (0 == this.field_M) {
           return this.field_M;
         }
@@ -381,7 +381,7 @@ class c extends bb {
         }
     }
 
-    void a(int param0, int param1, qa param2, byte param3) {
+    void a(int param0, int param1, UiComponent param2, byte param3) {
         int var6 = 0;
         eg var7 = null;
         RuntimeException stackIn_18_0 = null;
@@ -398,7 +398,7 @@ class c extends bb {
           if (this.field_v == 1) {
             if (this.field_p instanceof eg) {
               var7 = (eg) ((Object) this.field_p);
-              var6 = var7.a(kc.field_b, (qa) (this), (byte) 80, param1, param0, ag.field_f);
+              var6 = var7.a(kc.field_b, (UiComponent) (this), (byte) 80, param1, param0, ag.field_f);
               if (var6 != -1) {
                 if (this.field_R &&
                   this.field_N > var6 &&
@@ -425,7 +425,7 @@ class c extends bb {
         }
     }
 
-    final boolean a(int param0, int param1, qa param2, char param3) {
+    final boolean a(int param0, int param1, UiComponent param2, char param3) {
         int dupTemp$0 = 0;
         int stackIn_32_1 = 0;
         int stackIn_40_1 = 0;
@@ -563,7 +563,7 @@ class c extends bb {
         int var2;
         int var3;
         int var4;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         var2 = this.field_i.length();
         if (var2 == this.field_M) {
           return this.field_M;

@@ -13,12 +13,12 @@ final class wd {
     }
 
     final static void a(int param0, int param1) {
-        lh var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         hi var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 != -29250) {
             field_c = -7;

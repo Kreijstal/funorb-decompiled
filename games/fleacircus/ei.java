@@ -46,7 +46,7 @@ final class ei extends sh {
         int var6;
         int var5;
         boolean decompiledFrameRemainder0 = true;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_G.c()) {
           var2 = this.field_w * this.field_G.field_a / la.field_a;
           while (true) {
@@ -146,7 +146,7 @@ final class ei extends sh {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var3_int = 0;
           var4 = 78 / ((param0 + 2) / 63);
@@ -250,7 +250,7 @@ final class ei extends sh {
         int var5Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         var3 = param1 & 240;
         if (var3 == 128) {
           var4 = param1 & 15;
@@ -417,12 +417,12 @@ final class ei extends sh {
     }
 
     final static void b(boolean param0) {
-        v.field_R = new String[]{fj.field_a, pb.field_h, tb.field_b, mh.field_v, na.field_b, ec.field_d, vj.field_a};
-        kb.field_k = new String[][]{new String[]{em.field_a, hf.field_f, oj.field_j}, new String[]{hc.field_f, db.a(si.field_o, new String[]{ti.field_a, ua.field_xb}, true), db.a(ia.field_o, new String[]{ti.field_a, ua.field_xb}, true), vg.field_v, qa.field_q, ea.field_c, cl.field_c, wa.field_d}, new String[]{gj.field_D, db.a(fl.field_d, new String[]{ti.field_a, ua.field_xb}, true), db.a(oc.field_d, new String[]{ti.field_a, ua.field_xb}, true), db.a(af.field_a, new String[]{ti.field_a, ua.field_xb}, true), db.a(dl.field_u, new String[]{ti.field_a, ua.field_xb}, param0), db.a(kl.field_d, new String[]{ti.field_a, ua.field_xb}, param0), db.a(w.field_i, new String[]{ti.field_a, ua.field_xb}, true)}, new String[]{gj.field_D, db.a(hc.field_c, new String[]{ti.field_a, ua.field_xb}, param0), db.a(pl.field_i, new String[]{ti.field_a, ua.field_xb}, true), db.a(oe.field_b, new String[]{ti.field_a, ua.field_xb}, true), db.a(em.field_h, new String[]{ti.field_a, ua.field_xb}, true), db.a(re.field_b, new String[]{ti.field_a, ua.field_xb}, param0), db.a(kf.field_j, new String[]{ti.field_a, ua.field_xb}, true), db.a(lg.field_a, new String[]{ti.field_a, ua.field_xb}, true)}, new String[]{gj.field_D, db.a(jg.field_c, new String[]{ti.field_a, ua.field_xb}, param0), db.a(hm.field_f, new String[]{ti.field_a, ua.field_xb}, true), db.a(ui.field_lb, new String[]{ti.field_a, ua.field_xb}, true), db.a(gm.field_ib, new String[]{ti.field_a, ua.field_xb}, param0), db.a(j.field_l, new String[]{ti.field_a, ua.field_xb}, param0), db.a(cj.field_a, new String[]{ti.field_a, ua.field_xb}, true)}, new String[]{jj.field_V, g.field_t, qj.field_E}, new String[]{ga.field_q, kb.field_n, vc.field_g, ai.field_o}};
+        v.field_R = new String[]{fj.field_a, pb.field_h, tb.field_b, mh.field_v, NodeHashTableIterator.field_b, ec.field_d, vj.field_a};
+        kb.field_k = new String[][]{new String[]{em.field_a, hf.field_f, oj.field_j}, new String[]{hc.field_f, db.a(si.field_o, new String[]{ti.field_a, ua.field_xb}, true), db.a(ia.field_o, new String[]{ti.field_a, ua.field_xb}, true), vg.field_v, UiComponent.field_q, ea.field_c, cl.field_c, wa.field_d}, new String[]{gj.field_D, db.a(fl.field_d, new String[]{ti.field_a, ua.field_xb}, true), db.a(oc.field_d, new String[]{ti.field_a, ua.field_xb}, true), db.a(af.field_a, new String[]{ti.field_a, ua.field_xb}, true), db.a(dl.field_u, new String[]{ti.field_a, ua.field_xb}, param0), db.a(kl.field_d, new String[]{ti.field_a, ua.field_xb}, param0), db.a(w.field_i, new String[]{ti.field_a, ua.field_xb}, true)}, new String[]{gj.field_D, db.a(hc.field_c, new String[]{ti.field_a, ua.field_xb}, param0), db.a(pl.field_i, new String[]{ti.field_a, ua.field_xb}, true), db.a(oe.field_b, new String[]{ti.field_a, ua.field_xb}, true), db.a(em.field_h, new String[]{ti.field_a, ua.field_xb}, true), db.a(re.field_b, new String[]{ti.field_a, ua.field_xb}, param0), db.a(kf.field_j, new String[]{ti.field_a, ua.field_xb}, true), db.a(lg.field_a, new String[]{ti.field_a, ua.field_xb}, true)}, new String[]{gj.field_D, db.a(jg.field_c, new String[]{ti.field_a, ua.field_xb}, param0), db.a(hm.field_f, new String[]{ti.field_a, ua.field_xb}, true), db.a(ui.field_lb, new String[]{ti.field_a, ua.field_xb}, true), db.a(gm.field_ib, new String[]{ti.field_a, ua.field_xb}, param0), db.a(j.field_l, new String[]{ti.field_a, ua.field_xb}, param0), db.a(cj.field_a, new String[]{ti.field_a, ua.field_xb}, true)}, new String[]{jj.field_V, g.field_t, qj.field_E}, new String[]{ga.field_q, kb.field_n, vc.field_g, ai.field_o}};
         String var21 = db.a(jk.field_o, new String[]{ti.field_a, ua.field_xb}, true);
         String var1 = var21;
         String var2 = db.a(ak.field_g, new String[]{ti.field_a, ua.field_xb}, true);
-        String var3 = db.a(qa.field_o, new String[]{ti.field_a, ua.field_xb}, true);
+        String var3 = db.a(UiComponent.field_o, new String[]{ti.field_a, ua.field_xb}, true);
         String var4 = db.a(ta.field_s, new String[]{ti.field_a, ua.field_xb}, true);
         String var5 = db.a(wh.field_c, new String[]{ti.field_a, ua.field_xb}, true);
         String var6 = db.a(jk.field_q, new String[]{ti.field_a, ua.field_xb}, true);
@@ -440,31 +440,31 @@ final class ei extends sh {
         String var18 = db.a(fi.field_k, new String[]{ti.field_a, ua.field_xb}, true);
         String var19 = db.a(ld.field_b, new String[]{ti.field_a, ua.field_xb}, true);
         String var20 = db.a(si.field_H, new String[]{ti.field_a, ua.field_xb}, true);
-        pa.field_i = new String[23];
+        DualLinkNode.field_i = new String[23];
         qg.field_d = new String[]{"", var21, var2, var3, var3, var4, var20, var2, var5, var5, var10, var4, var6, var6, var7, var8, var9, var11, var12, var13, var14, var15, var16, var17, var18, var19, var16, var6, var7, var9, var8, var11, var6, var20};
-        pa.field_i[21] = ib.field_e;
-        pa.field_i[6] = hg.field_l;
-        pa.field_i[5] = hg.field_l;
-        pa.field_i[11] = bk.field_c;
-        pa.field_i[13] = hd.field_e;
-        pa.field_i[2] = uh.field_t;
-        pa.field_i[12] = pj.field_z;
-        pa.field_i[3] = ji.field_b;
-        pa.field_i[16] = pj.field_y;
-        pa.field_i[1] = uj.field_f;
-        pa.field_i[15] = qh.field_C;
-        pa.field_i[0] = ec.field_a;
-        pa.field_i[14] = pc.field_d;
-        pa.field_i[4] = mk.field_c;
-        pa.field_i[7] = a.field_c;
-        pa.field_i[20] = hg.field_o;
-        pa.field_i[17] = rh.field_b;
-        pa.field_i[18] = bb.field_I;
-        pa.field_i[9] = q.field_b[1];
-        pa.field_i[19] = kf.field_l;
-        pa.field_i[8] = q.field_b[0];
-        pa.field_i[22] = r.field_k;
-        pa.field_i[10] = q.field_b[2];
+        DualLinkNode.field_i[21] = ib.field_e;
+        DualLinkNode.field_i[6] = hg.field_l;
+        DualLinkNode.field_i[5] = hg.field_l;
+        DualLinkNode.field_i[11] = bk.field_c;
+        DualLinkNode.field_i[13] = hd.field_e;
+        DualLinkNode.field_i[2] = uh.field_t;
+        DualLinkNode.field_i[12] = pj.field_z;
+        DualLinkNode.field_i[3] = ji.field_b;
+        DualLinkNode.field_i[16] = pj.field_y;
+        DualLinkNode.field_i[1] = uj.field_f;
+        DualLinkNode.field_i[15] = qh.field_C;
+        DualLinkNode.field_i[0] = ec.field_a;
+        DualLinkNode.field_i[14] = pc.field_d;
+        DualLinkNode.field_i[4] = mk.field_c;
+        DualLinkNode.field_i[7] = a.field_c;
+        DualLinkNode.field_i[20] = hg.field_o;
+        DualLinkNode.field_i[17] = ResourceArchive.field_b;
+        DualLinkNode.field_i[18] = bb.field_I;
+        DualLinkNode.field_i[9] = q.field_b[1];
+        DualLinkNode.field_i[19] = kf.field_l;
+        DualLinkNode.field_i[8] = q.field_b[0];
+        DualLinkNode.field_i[22] = r.field_k;
+        DualLinkNode.field_i[10] = q.field_b[2];
     }
 
     final boolean a(int param0, int param1, int param2, tk param3, int[] param4) {
@@ -480,7 +480,7 @@ final class ei extends sh {
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param2 != -30686) {
             this.field_K = (int[]) null;
@@ -643,7 +643,7 @@ final class ei extends sh {
         int discarded$0 = 0;
         int var5;
         tk var6;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         if (param2 < 0) {
           for (var4 = 0; var4 < 16; var4++) {
             this.field_P[var4] = param0;
@@ -755,7 +755,7 @@ final class ei extends sh {
         int var9;
         wc var10;
         wc var11;
-        var9 = fleas.field_A ? 1 : 0;
+        var9 = FleaCircusApplet.field_A ? 1 : 0;
         this.b(-106, param0, 64, param1);
         if ((2 & this.field_q[param1]) != 0) {
           var5 = (tk) (this.field_O.field_n.b(-61));
@@ -831,7 +831,7 @@ final class ei extends sh {
     }
 
     private final void a(int param0, int param1) {
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         tk var3 = (tk) (this.field_O.field_n.c((byte) 47));
         while (var3 != null) {
           if ((param1 < 0 || var3.field_o == param1) &&
@@ -846,7 +846,7 @@ final class ei extends sh {
         }
     }
 
-    final synchronized boolean a(ng param0, rh param1, int param2, int param3, wk param4) {
+    final synchronized boolean a(ng param0, ResourceArchive param1, int param2, int param3, wk param4) {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -864,7 +864,7 @@ final class ei extends sh {
         int var11 = 0;
         wc var12 = null;
         wc var13 = null;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           param4.a();
           var6_int = 1;
@@ -931,7 +931,7 @@ final class ei extends sh {
 
     private final void b(int param0, boolean param1) {
         int var3 = 0;
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         int var3Lifetime1;
         if (param1) {
           this.a(-1, (byte) -104);
@@ -979,7 +979,7 @@ final class ei extends sh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var7 = 0;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (this.field_G.c()) {
             var4_int = this.field_G.field_a * this.field_w / la.field_a;
@@ -1029,7 +1029,7 @@ final class ei extends sh {
         long var4;
         int var6;
         int var7;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         var2 = this.field_u;
         var3 = this.field_U;
         var4 = this.field_E;
@@ -1099,7 +1099,7 @@ final class ei extends sh {
         tk var3;
         int var4;
         tk var5;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (param1 != 31911) {
           var5 = (tk) null;
           discarded$1 = this.b(64, (tk) null);
@@ -1124,7 +1124,7 @@ final class ei extends sh {
     private final void e(int param0, int param1) {
         int var4;
         tk var5;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0 < 0) {
           for (param0 = 0; param0 < 16; param0++) {
             this.e(param0, 15198);
@@ -1154,7 +1154,7 @@ final class ei extends sh {
         tk var3;
         int var4;
         int var5;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         var4 = -69 / ((param1 - 56) / 55);
         var3 = (tk) (this.field_O.field_n.c((byte) 47));
         while (var3 != null) {
@@ -1185,7 +1185,7 @@ final class ei extends sh {
 
     private final void c(int param0, int param1) {
         tk var3 = null;
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (param1 != -20403) {
           return;
         }
@@ -1205,7 +1205,7 @@ final class ei extends sh {
         tk var7;
         int var8;
         tk var9;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         var9 = this.field_D[param3][param1];
         if (var9 == null) {
           return;
@@ -1232,7 +1232,7 @@ final class ei extends sh {
 
     private final void e(int param0, int param1, int param2) {
         int var4 = 0;
-        int var5 = fleas.field_A ? 1 : 0;
+        int var5 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0 > -4) {
           ei.a(-11, (CharSequence) null, '�');
         }
@@ -1304,7 +1304,7 @@ final class ei extends sh {
     private final synchronized void a(byte param0, boolean param1, boolean param2, wk param3) {
         int var5_int = 0;
         int var6 = 0;
-        int var7 = fleas.field_A ? 1 : 0;
+        int var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           this.a(33, param1);
           this.field_G.a(param3.field_i);

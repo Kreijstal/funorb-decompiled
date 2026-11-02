@@ -53,7 +53,7 @@ final class of {
         tc var2;
         int var3;
         tc var4;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         while (this.field_e > this.field_j) {
           var4 = this.field_l[this.field_j];
           var2 = var4;
@@ -116,11 +116,11 @@ final class of {
         int var1 = 30 % ((param0 + 47) / 39);
     }
 
-    final static dd[] a(String param0, String param1, rh param2, int param3) {
+    final static dd[] a(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        rh var6 = null;
+        ResourceArchive var6 = null;
         dd[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -132,8 +132,8 @@ final class of {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 <= 58) {
-            var6 = (rh) null;
-            of.a((String) null, (String) null, (rh) null, 93);
+            var6 = (ResourceArchive) null;
+            of.a((String) null, (String) null, (ResourceArchive) null, 93);
           }
           var4_int = param2.a(param1, (byte) -100);
           var5 = param2.a(param0, (byte) -15, var4_int);

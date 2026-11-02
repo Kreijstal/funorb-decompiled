@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fg extends lh {
+final class fg extends IntrusiveNode {
     int[] field_o;
     int field_k;
     static sf field_l;
@@ -30,14 +30,14 @@ final class fg extends lh {
         int var4 = 0;
         int var5 = 0;
         int var8 = 0;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           pl.field_f = 0;
           var1_int = 61 % ((param0 + 43) / 47);
           qh.field_z = 0;
           qi.field_f = 0;
           kb.field_i = 0;
-          pa.field_o = 0;
+          DualLinkNode.field_o = 0;
           gh.field_q = 0;
           jc.field_f = 0;
           md.field_L = 1;
@@ -102,40 +102,40 @@ final class fg extends lh {
                         if (var5 != 4) {
                           if (var5 != 8) {
                             if (18 == var5) {
-                              lh.field_e[var6 + var2 * 4][var7 + var3 * 4] = -1;
+                              IntrusiveNode.field_e[var6 + var2 * 4][var7 + var3 * 4] = -1;
                             } else {
                               if (var5 == 11) {
                                 if (3 == var7) {
-                                  lh.field_e[var6 + 4 * var2][var7 + var3 * 4] = 1;
+                                  IntrusiveNode.field_e[var6 + 4 * var2][var7 + var3 * 4] = 1;
                                 } else {
-                                  lh.field_e[4 * var2 + var6][var3 * 4 + var7] = 0;
+                                  IntrusiveNode.field_e[4 * var2 + var6][var3 * 4 + var7] = 0;
                                 }
                               } else {
-                                lh.field_e[var6 + var2 * 4][var3 * 4 + var7] = 2;
+                                IntrusiveNode.field_e[var6 + var2 * 4][var3 * 4 + var7] = 2;
                               }
                             }
                           } else {
-                            lh.field_e[var2 * 4 + var6][var7 + 4 * var3] = -1;
+                            IntrusiveNode.field_e[var2 * 4 + var6][var7 + 4 * var3] = -1;
                           }
                         } else {
                           if (var7 == var6) {
-                            lh.field_e[4 * var2 + var6][4 * var3 + var7] = 1;
+                            IntrusiveNode.field_e[4 * var2 + var6][4 * var3 + var7] = 1;
                           } else {
-                            lh.field_e[var6 + 4 * var2][4 * var3 + var7] = 0;
+                            IntrusiveNode.field_e[var6 + 4 * var2][4 * var3 + var7] = 0;
                           }
                         }
                       } else {
                         if (var6 == -var7 + 3) {
-                          lh.field_e[var6 + var2 * 4][4 * var3 + var7] = 1;
+                          IntrusiveNode.field_e[var6 + var2 * 4][4 * var3 + var7] = 1;
                         } else {
-                          lh.field_e[var6 + 4 * var2][4 * var3 + var7] = 0;
+                          IntrusiveNode.field_e[var6 + 4 * var2][4 * var3 + var7] = 0;
                         }
                       }
                     } else {
-                      lh.field_e[var6 + 4 * var2][var3 * 4 + var7] = 1;
+                      IntrusiveNode.field_e[var6 + 4 * var2][var3 * 4 + var7] = 1;
                     }
                   } else {
-                    lh.field_e[4 * var2 + var6][var7 + 4 * var3] = 0;
+                    IntrusiveNode.field_e[4 * var2 + var6][var7 + 4 * var3] = 0;
                   }
                 }
               }

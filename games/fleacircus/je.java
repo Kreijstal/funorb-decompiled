@@ -23,7 +23,7 @@ final class je extends bb {
         }
     }
 
-    final void a(int param0, int param1, qa param2, byte param3) {
+    final void a(int param0, int param1, UiComponent param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -50,7 +50,7 @@ final class je extends bb {
         }
     }
 
-    final static void a(rh param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2610_0;
             StringBuilder stackIn_2610_1;
@@ -61,10 +61,10 @@ final class je extends bb {
             RuntimeException var2_ref;
             int var3;
             int var4;
-            rh param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(rh initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2610_0 = null;
@@ -97,7 +97,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("error_js5crc", 0);
                 if (var2 != null) {
-                  li.field_c = ab.a(0, var2);
+                  IterableNodeHashTable.field_c = ab.a(0, var2);
                 }
                 var2 = ad.a("error_js5io", 0);
                 if (null != var2) {
@@ -1495,7 +1495,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("create_select_alternative", 0);
                 if (var2 != null) {
-                  lh.field_d = ab.a(0, var2);
+                  IntrusiveNode.field_d = ab.a(0, var2);
                 }
                 var2 = ad.a("create_optin_news", 0);
                 if (var2 != null) {
@@ -1639,11 +1639,11 @@ final class je extends bb {
                 }
                 var2 = ad.a("create_alert_doublespace", 0);
                 if (var2 != null) {
-                  wf.field_e = ab.a(0, var2);
+                  SecondaryNodeDeque.field_e = ab.a(0, var2);
                 }
                 var2 = ad.a("create_alert_passchars", 0);
                 if (var2 != null) {
-                  qa.field_t = ab.a(0, var2);
+                  UiComponent.field_t = ab.a(0, var2);
                 }
                 var2 = ad.a("create_alert_passrepeated", 0);
                 if (var2 != null) {
@@ -1683,7 +1683,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("create_alert_invalidage", 0);
                 if (null != var2) {
-                  h.field_a = ab.a(0, var2);
+                  ContextualRuntimeException.field_a = ab.a(0, var2);
                 }
                 var2 = ad.a("create_alert_yearrange", 0);
                 if (var2 != null) {
@@ -1827,7 +1827,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("waitingfor_extradata", 0);
                 if (var2 != null) {
-                  li.field_h = ab.a(0, var2);
+                  IterableNodeHashTable.field_h = ab.a(0, var2);
                 }
                 var2 = ad.a("waitingfor_languages", 0);
                 if (var2 != null) {
@@ -1843,7 +1843,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("loading_graphics", 0);
                 if (var2 != null) {
-                  li.field_e = ab.a(0, var2);
+                  IterableNodeHashTable.field_e = ab.a(0, var2);
                 }
                 var2 = ad.a("loading_models", 0);
                 if (var2 != null) {
@@ -2075,7 +2075,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("previous", 0);
                 if (null != var2) {
-                  rh.field_b = ab.a(0, var2);
+                  ResourceArchive.field_b = ab.a(0, var2);
                 }
                 var2 = ad.a("prev", 0);
                 if (var2 != null) {
@@ -2709,11 +2709,11 @@ final class je extends bb {
                 }
                 var2 = ad.a("fs_accept_countdown_pl", 0);
                 if (null != var2) {
-                  cd.field_g = ab.a(0, var2);
+                  GameAppletShell.field_g = ab.a(0, var2);
                 }
                 var2 = ad.a("fs_nonmember", 0);
                 if (var2 != null) {
-                  rh.field_o = ab.a(0, var2);
+                  ResourceArchive.field_o = ab.a(0, var2);
                 }
                 var2 = ad.a("fs_button_close", 0);
                 if (null != var2) {
@@ -2753,7 +2753,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("mb_caption_title", 0);
                 if (null != var2) {
-                  h.field_d = ab.a(0, var2);
+                  ContextualRuntimeException.field_d = ab.a(0, var2);
                 }
                 var2 = ad.a("mb_including_gamename", 0);
                 if (var2 != null) {
@@ -2761,7 +2761,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("mb_full_access_1", 0);
                 if (null != var2) {
-                  li.field_b = ab.a(0, var2);
+                  IterableNodeHashTable.field_b = ab.a(0, var2);
                 }
                 var2 = ad.a("mb_full_access_2", 0);
                 if (null != var2) {
@@ -2769,7 +2769,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("mb_achievement_count_1", 0);
                 if (var2 != null) {
-                  wb.field_w = ab.a(0, var2);
+                  NetworkGameClient.field_w = ab.a(0, var2);
                 }
                 var2 = ad.a("mb_achievement_count_2", 0);
                 if (null != var2) {
@@ -3063,7 +3063,7 @@ final class je extends bb {
                 wh.field_e = null;
             }
             void run() {
-                var4 = fleas.field_A ? 1 : 0;
+                var4 = FleaCircusApplet.field_A ? 1 : 0;
                 try {
                   runChunk0();
                   if (finished) return;
@@ -3084,8 +3084,8 @@ final class je extends bb {
                   throw pf.a((Throwable) ((Object) stackIn_2610_0), ((StringBuilder) (Object) stackIn_2610_1).append(stackIn_2611_2).append(',').append(param1).append(')').toString());
                 }
                 if (var4 != 0) {
-                  stackIn_2619_0 = (!cd.field_e);
-                  cd.field_e = stackIn_2619_0;
+                  stackIn_2619_0 = (!GameAppletShell.field_e);
+                  GameAppletShell.field_e = stackIn_2619_0;
                 }
             }
         }
@@ -3093,7 +3093,7 @@ final class je extends bb {
         decompiledBody.run();
     }
 
-    final boolean a(qa param0, int param1) {
+    final boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -3130,7 +3130,7 @@ final class je extends bb {
         int var11 = 0;
         dd var7Lifetime1;
         dd var7Lifetime2;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           super.b(param0, param1, param2, param3);
           if (param3 != 0) {

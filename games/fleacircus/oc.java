@@ -46,7 +46,7 @@ final class oc {
         int var10Lifetime5;
         int var10Lifetime6;
         int var10Lifetime7;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (0 == param3) {
             stackIn_3_0 = 0;
@@ -59,7 +59,7 @@ final class oc {
           }
           param3 = param3 + param2;
           var8 = param1;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param0[var8];
             if (0 > var9) {
               var7_int = this.field_a[var7_int];
@@ -73,7 +73,7 @@ final class oc {
               param2++;
               param4[incrementValue$1] = (byte)(~var10);
               if (param3 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -89,7 +89,7 @@ final class oc {
               param2++;
               param4[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param3 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -105,7 +105,7 @@ final class oc {
               param2++;
               param4[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param2 >= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -121,7 +121,7 @@ final class oc {
               param2++;
               param4[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param2 >= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -137,7 +137,7 @@ final class oc {
               param2++;
               param4[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param3 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -153,7 +153,7 @@ final class oc {
               param2++;
               param4[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param3 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -185,7 +185,7 @@ final class oc {
               param2++;
               param4[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param3 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -225,7 +225,7 @@ final class oc {
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0) {
             field_d = (String) null;
@@ -274,7 +274,7 @@ final class oc {
         throw new Error();
     }
 
-    final static dd[] a(rh param0, int param1, int param2, byte param3) {
+    final static dd[] a(ResourceArchive param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         dd[] stackIn_5_0 = null;

@@ -22,7 +22,7 @@ final class wa {
 
     final void b(int param0) {
         int var2 = 0;
-        int var3 = fleas.field_A ? 1 : 0;
+        int var3 = FleaCircusApplet.field_A ? 1 : 0;
         int var2Lifetime1;
         for (var2 = 0; var2 < 32; var2++) {
           this.field_n[var2] = (byte) 0;
@@ -74,7 +74,7 @@ final class wa {
         int var12 = 0;
         int var13 = 0;
         int var8Lifetime1;
-        var13 = fleas.field_A ? 1 : 0;
+        var13 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var5_int = 0;
           var6 = 7 & -(7 & (int)param1) + 8;
@@ -171,7 +171,7 @@ final class wa {
         int var5 = 0;
         long var6 = 0L;
         int var8 = 0;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           this.field_c[this.field_a] = (byte)ne.a((int) this.field_c[this.field_a], 128 >>> sc.a(7, this.field_o));
           this.field_a = this.field_a + 1;
@@ -248,7 +248,7 @@ final class wa {
         int var3Lifetime1Lifetime1;
         int var3Lifetime1Lifetime2;
         int var3Lifetime1Lifetime3;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
@@ -268,7 +268,7 @@ final class wa {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_e[var3Lifetime1] = ik.a(this.field_e[var3Lifetime1], td.field_f[var4][sc.a(255, (int)(this.field_b[sc.a(var3Lifetime1 - var4, 7)] >>> var5))]);
+              this.field_e[var3Lifetime1] = ik.a(this.field_e[var3Lifetime1], BufferedSocket.field_f[var4][sc.a(255, (int)(this.field_b[sc.a(var3Lifetime1 - var4, 7)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -276,14 +276,14 @@ final class wa {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_b[var3Lifetime1Lifetime1] = this.field_e[var3Lifetime1Lifetime1];
           }
-          this.field_b[0] = ik.a(this.field_b[0], td.field_c[var2Lifetime2]);
+          this.field_b[0] = ik.a(this.field_b[0], BufferedSocket.field_c[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_e[var3Lifetime1Lifetime2] = this.field_b[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_e[var3Lifetime1Lifetime2] = ik.a(this.field_e[var3Lifetime1Lifetime2], td.field_f[var7][sc.a((int)(this.field_h[sc.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_e[var3Lifetime1Lifetime2] = ik.a(this.field_e[var3Lifetime1Lifetime2], BufferedSocket.field_f[var7][sc.a((int)(this.field_h[sc.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
