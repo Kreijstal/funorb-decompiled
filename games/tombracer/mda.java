@@ -616,7 +616,7 @@ final class mda extends c implements fo, ffa, gma {
     }
 
     final void a(la param0, int param1, int param2, int param3, int param4, int param5) {
-        qea var7 = null;
+        IsaacCipher var7 = null;
         int var8 = 0;
         try {
           var7 = param0.q(-79);

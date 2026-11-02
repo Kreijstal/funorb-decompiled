@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qaa {
+abstract class MouseWheelInput {
     static String[][] field_a;
 
     public static void a(int param0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class c extends vg implements fo {
+abstract class c extends IntrusiveNode implements fo {
     static int[] field_g;
     static java.math.BigInteger field_f;
     static String field_h;

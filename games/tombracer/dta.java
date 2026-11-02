@@ -126,8 +126,8 @@ final class dta {
               if (var9.b((byte) 90, param2)) {
                 tga.field_a.KA(param0, param5, param1, param6);
                 la.field_j.a(0, 0);
-                be.a(ad.field_i.toUpperCase(), 1, qr.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
-                be.a(dea.a(var9.c((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
+                SocketConnector.a(ad.field_i.toUpperCase(), 1, qr.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
+                SocketConnector.a(dea.a(var9.c((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
                 tga.field_a.la();
                 return;
               }

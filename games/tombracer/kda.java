@@ -584,11 +584,11 @@ final class kda extends eo {
     }
 
     final synchronized void a(long param0, int param1) {
-        vg var4 = new vg();
+        IntrusiveNode var4 = new IntrusiveNode();
         if (param1 != -6115) {
           this.field_ad = (vna) null;
         }
-        var4.field_d = param0;
+        var4.key = param0;
         this.field_kd.b((byte) -65, var4);
     }
 
@@ -761,15 +761,15 @@ final class kda extends eo {
         al var7;
         al var8;
         al var9;
-        vg var10;
-        vg var11;
+        IntrusiveNode var10;
+        IntrusiveNode var11;
         al var12;
         al var9Lifetime1;
-        vg var10Lifetime1;
-        vg var11Lifetime1;
+        IntrusiveNode var10Lifetime1;
+        IntrusiveNode var11Lifetime1;
         al var12Lifetime1;
         al var9Lifetime2;
-        vg var10Lifetime2;
+        IntrusiveNode var10Lifetime2;
         var4 = TombRacer.field_G ? 1 : 0;
         param0 = param0 & 2147483647;
         var2 = 0;
@@ -777,7 +777,7 @@ final class kda extends eo {
           var5 = (al) (this.field_dd.c(61));
           incrementValue$5 = var2;
           var2++;
-          csa.field_i[incrementValue$5] = (int)var5.field_d;
+          csa.field_i[incrementValue$5] = (int)var5.key;
           this.field_X = this.field_X - var5.field_i;
           if (var2 != 1000) {
             continue;
@@ -790,7 +790,7 @@ final class kda extends eo {
             var6 = (al) (this.field_Rc.c(-96));
             incrementValue$1 = var2;
             var2++;
-            csa.field_i[incrementValue$1] = (int)var6.field_d;
+            csa.field_i[incrementValue$1] = (int)var6.key;
             this.field_Xb = this.field_Xb - var6.field_i;
             if (var2 != 1000) {
               continue;
@@ -805,7 +805,7 @@ final class kda extends eo {
             var6 = (al) (this.field_Rc.c(-96));
             incrementValue$0 = var2;
             var2++;
-            csa.field_i[incrementValue$0] = (int)var6.field_d;
+            csa.field_i[incrementValue$0] = (int)var6.key;
             this.field_Xb = this.field_Xb - var6.field_i;
             if (var2 != 1000) {
               continue;
@@ -845,19 +845,19 @@ final class kda extends eo {
             else {
               while (!this.field_bd.d((byte) 14)) {
                 var9 = (al) (this.field_bd.c(-101));
-                jaggl.OpenGL.glDeleteLists((int)var9.field_d, var9.field_i);
+                jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_i);
               }
               while (!this.field_nd.d((byte) 14)) {
                 var10 = this.field_nd.c(-120);
-                jaggl.OpenGL.glDeleteProgramARB((int)var10.field_d);
+                jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
               }
               while (!this.field_kd.d((byte) 14)) {
                 var11 = this.field_kd.c(61);
-                jaggl.OpenGL.glDeleteObjectARB(var11.field_d);
+                jaggl.OpenGL.glDeleteObjectARB(var11.key);
               }
               while (!this.field_bd.d((byte) 14)) {
                 var12 = (al) (this.field_bd.c(-99));
-                jaggl.OpenGL.glDeleteLists((int)var12.field_d, var12.field_i);
+                jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_i);
               }
               if ((!(this.Q(10) <= 100663296)) &&
                 (!(bva.b((byte) -107) <= this.field_Xc + 60000L))) {
@@ -878,7 +878,7 @@ final class kda extends eo {
             var8 = (al) (this.field_ad.c(30));
             incrementValue$4 = var2;
             var2++;
-            csa.field_i[incrementValue$4] = (int)var8.field_d;
+            csa.field_i[incrementValue$4] = (int)var8.key;
             this.field_Fb = this.field_Fb - var8.field_i;
             stackIn_33_0 = 1000;
             stackIn_33_1 = var2;
@@ -893,11 +893,11 @@ final class kda extends eo {
             var2 = 0;
             while (!this.field_bd.d((byte) 14)) {
               var9Lifetime2 = (al) (this.field_bd.c(-101));
-              jaggl.OpenGL.glDeleteLists((int)var9Lifetime2.field_d, var9Lifetime2.field_i);
+              jaggl.OpenGL.glDeleteLists((int)var9Lifetime2.key, var9Lifetime2.field_i);
             }
             while (!this.field_nd.d((byte) 14)) {
               var10Lifetime2 = this.field_nd.c(-120);
-              jaggl.OpenGL.glDeleteProgramARB((int)var10Lifetime2.field_d);
+              jaggl.OpenGL.glDeleteProgramARB((int)var10Lifetime2.key);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -906,21 +906,21 @@ final class kda extends eo {
           (decompiledFrameRemainder0)) {
           while (!this.field_bd.d((byte) 14)) {
             var9Lifetime1 = (al) (this.field_bd.c(-101));
-            jaggl.OpenGL.glDeleteLists((int)var9Lifetime1.field_d, var9Lifetime1.field_i);
+            jaggl.OpenGL.glDeleteLists((int)var9Lifetime1.key, var9Lifetime1.field_i);
           }
           while (!this.field_nd.d((byte) 14)) {
             var10Lifetime1 = this.field_nd.c(-120);
-            jaggl.OpenGL.glDeleteProgramARB((int)var10Lifetime1.field_d);
+            jaggl.OpenGL.glDeleteProgramARB((int)var10Lifetime1.key);
           }
         }
         if (decompiledFrameRemainder2) {
           while (!this.field_kd.d((byte) 14)) {
             var11Lifetime1 = this.field_kd.c(61);
-            jaggl.OpenGL.glDeleteObjectARB(var11Lifetime1.field_d);
+            jaggl.OpenGL.glDeleteObjectARB(var11Lifetime1.key);
           }
           while (!this.field_bd.d((byte) 14)) {
             var12Lifetime1 = (al) (this.field_bd.c(-99));
-            jaggl.OpenGL.glDeleteLists((int)var12Lifetime1.field_d, var12Lifetime1.field_i);
+            jaggl.OpenGL.glDeleteLists((int)var12Lifetime1.key, var12Lifetime1.field_i);
           }
           if (!(this.Q(10) <= 100663296) &&
             !(bva.b((byte) -107) <= this.field_Xc + 60000L)) {
@@ -1268,8 +1268,8 @@ final class kda extends eo {
     }
 
     final synchronized void b(int param0, byte param1) {
-        vg var3 = new vg();
-        var3.field_d = (long)param0;
+        IntrusiveNode var3 = new IntrusiveNode();
+        var3.key = (long)param0;
         if (param1 != 18) {
           return;
         }
@@ -1662,7 +1662,7 @@ final class kda extends eo {
 
     final synchronized void a(int param0, int param1, byte param2) {
         al var4 = new al(param0);
-        var4.field_d = (long)param1;
+        var4.key = (long)param1;
         if (param2 <= 41) {
           return;
         }
@@ -1812,7 +1812,7 @@ final class kda extends eo {
           return;
         }
         al var4 = new al(param1);
-        var4.field_d = (long)param0;
+        var4.key = (long)param0;
         this.field_Rc.b((byte) -67, var4);
     }
 

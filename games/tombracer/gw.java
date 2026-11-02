@@ -244,7 +244,7 @@ final class gw extends kna {
     }
 
     final static void b(int param0, int param1) {
-        vg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         int var4 = 0;
         sda var5 = null;

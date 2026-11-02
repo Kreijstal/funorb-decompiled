@@ -5,8 +5,8 @@ import java.util.*;
 
 final class nd implements Iterator {
     private int field_b;
-    private vg field_d;
-    private vg field_a;
+    private IntrusiveNode field_d;
+    private IntrusiveNode field_a;
     private sk field_c;
 
     final static boolean b(byte param0) {
@@ -29,25 +29,25 @@ final class nd implements Iterator {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          if (this.field_c.field_e[fieldTemp$0].field_a == this.field_c.field_e[this.field_b - 1]) {
+          if (this.field_c.field_e[fieldTemp$0].next == this.field_c.field_e[this.field_b - 1]) {
             this.field_a = this.field_c.field_e[-1 + this.field_b];
             continue;
           }
           break;
         }
-        this.field_a = this.field_c.field_e[-1 + this.field_b].field_a;
+        this.field_a = this.field_c.field_e[-1 + this.field_b].next;
         return true;
     }
 
     private final void a(boolean param0) {
         this.field_d = null;
         if (param0) {
-          this.field_a = this.field_c.field_e[0].field_a;
+          this.field_a = this.field_c.field_e[0].next;
           this.field_b = 1;
           return;
         }
         this.field_b = -88;
-        this.field_a = this.field_c.field_e[0].field_a;
+        this.field_a = this.field_c.field_e[0].next;
         this.field_b = 1;
     }
 
@@ -101,13 +101,13 @@ final class nd implements Iterator {
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        vg var3;
-        vg var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = TombRacer.field_G ? 1 : 0;
         if (this.field_a != this.field_c.field_e[this.field_b - 1]) {
           var4 = this.field_a;
           this.field_d = var4;
-          this.field_a = var4.field_a;
+          this.field_a = var4.next;
           return var4;
         }
         do {
@@ -116,9 +116,9 @@ final class nd implements Iterator {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          var3 = this.field_c.field_e[fieldTemp$0].field_a;
+          var3 = this.field_c.field_e[fieldTemp$0].next;
         } while (var3 == this.field_c.field_e[-1 + this.field_b]);
-        this.field_a = var3.field_a;
+        this.field_a = var3.next;
         this.field_d = var3;
         return var3;
     }

@@ -336,12 +336,12 @@ final class np extends ka {
           var13 = this.field_e[1 + param5];
           var14 = 0;
           var15 = var12_int;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var15 < var13) {
               var16 = this.field_q[var15];
               stackIn_18_0 = var16;
               if (var17 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_18_0 == 0) {
                 var14 = var15;
@@ -672,7 +672,7 @@ final class np extends ka {
               param5.field_kb = null;
             }
           }
-          L41: {
+          regionExit1: {
             boolean decompiledFrameCompleted5 = true;
             if (!cra.a(this.field_u, -17, param1)) {
               param5.field_O = this.field_O;
@@ -681,17 +681,17 @@ final class np extends ka {
               param5.field_cb = this.field_cb;
               param5.field_E = this.field_E;
               if (var13 == 0) {
-                break L41;
+                break regionExit1;
               }
             }
-            L43: {
+            regionExit2: {
               if (param4.field_E != null &&
                 param4.field_E.length >= this.field_L) {
                 param5.field_Y = param4.field_Y;
                 param5.field_E = param4.field_E;
                 param5.field_cb = param4.field_cb;
                 if (var13 == 0) {
-                  break L43;
+                  break regionExit2;
                 }
               }
               var11Lifetime3 = this.field_L;
@@ -792,12 +792,12 @@ final class np extends ka {
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted4 = true;
-          L59: {
+          regionExit3: {
             if (!hh.a(param1, (byte) 5, this.field_u)) {
               param5.field_n = this.field_n;
               param5.field_y = this.field_y;
               if (var13 == 0) {
-                break L59;
+                break regionExit3;
               }
             }
             if (null == param4.field_n ||
@@ -852,14 +852,14 @@ final class np extends ka {
           }
           boolean decompiledFrameCompleted3 = true;
           if (qp.a(param1, (byte) -71, this.field_u)) {
-            L70: {
+            regionExit4: {
               if (param4.field_H != null &&
                 param4.field_H.length >= this.field_W) {
                 param5.field_z = param4.field_z;
                 param5.field_H = param4.field_H;
                 param5.field_hb = param4.field_hb;
                 if (var13 == 0) {
-                  break L70;
+                  break regionExit4;
                 }
               }
               var11Lifetime5 = this.field_W;
@@ -925,13 +925,13 @@ final class np extends ka {
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
-          L79: {
+          regionExit5: {
             boolean decompiledFrameCompleted2 = true;
-            L81: {
+            regionExit6: {
               if (!aca.a(param1, 32768, this.field_u)) {
                 param5.field_I = this.field_I;
                 if (var13 == 0) {
-                  break L81;
+                  break regionExit6;
                 }
               }
               if (null == param4.field_I ||
@@ -960,7 +960,7 @@ final class np extends ka {
               (!qba.a(this.field_u, 480, param1))) {
               param5.field_f = this.field_f;
               if (var13 == 0) {
-                break L79;
+                break regionExit5;
               }
             }
             if (null != param4.field_f &&
@@ -977,7 +977,7 @@ final class np extends ka {
               }
               if ((decompiledFrameCompleted1) &&
                 (var13 == 0)) {
-                break L79;
+                break regionExit5;
               }
             }
             if (decompiledFrameCompleted1) {
@@ -1148,7 +1148,7 @@ final class np extends ka {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           var5_int = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var5_int < this.field_W) {
               var6_int = 65535 & this.field_X[var5_int];
               var7_int = (var6_int & 65466) >> 10;
@@ -1164,7 +1164,7 @@ final class np extends ka {
                   var5_int++;
                   return;
                 }
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_23_0 != stackIn_23_1) {
                 var7_int = var7_int + ((param0 - var7_int) * param3 >> 7);
@@ -1180,7 +1180,7 @@ final class np extends ka {
               continue;
             }
             if (this.field_r == null) {
-              break L2;
+              break scanLoop1;
             }
             var5_int = 0;
             while (true) {
@@ -1580,15 +1580,15 @@ final class np extends ka {
             param4 = param4 << 4;
             param3 = param3 << 4;
             var10 = 0;
-            L1: while (var9_int > var10) {
+            scanLoop1: while (var9_int > var10) {
               var11 = param1[var10];
-              L3: while (this.field_d.length > var11) {
+              scanLoop2: while (this.field_d.length > var11) {
                 var12 = this.field_d[var11];
                 var13 = 0;
                 while (var12.length > var13) {
                   var14_int = var12[var13];
                   if (var47 != 0) {
-                    continue L3;
+                    continue scanLoop2;
                   }
                   if (this.field_db == null ||
                     (param6 & this.field_db[var14_int]) != 0 ||
@@ -1603,7 +1603,7 @@ final class np extends ka {
               }
               var10++;
               if (var47 == 0) {
-                continue L1;
+                continue scanLoop1;
               }
               return;
             }
@@ -1993,7 +1993,7 @@ final class np extends ka {
           }
           if (null == param7) {
             var10 = 0;
-            L11: while (true) {
+            scanLoop3: while (true) {
               boolean decompiledFrameRemainder3 = true;
               if (var9_int > var10) {
                 var11 = param1[var10];
@@ -2002,7 +2002,7 @@ final class np extends ka {
                 if (var47 != 0) {
                   if (stackIn_101_0 > stackIn_101_1) {
                     var11 = param1[var10];
-                    break L11;
+                    break scanLoop3;
                   }
                   decompiledFrameRemainder3 = false;
                 }
@@ -2064,7 +2064,7 @@ final class np extends ka {
                   }
                   var11 = param1[var10];
                   if (var47 != 0) {
-                    break L11;
+                    break scanLoop3;
                   }
                   if (var11 < this.field_d.length) {
                     var12 = this.field_d[var11];
@@ -3079,7 +3079,7 @@ final class np extends ka {
           }
           boolean decompiledFrameCompleted3 = true;
           boolean decompiledFrameCompleted2 = true;
-          L69: {
+          regionExit1: {
             if (stackIn_215_0 != 0) {
               if (null != this.field_i) {
                 var13Lifetime1 = this.field_i.field_d;
@@ -3125,7 +3125,7 @@ final class np extends ka {
                 }
                 if ((decompiledFrameCompleted3) &&
                   (var35 == 0)) {
-                  break L69;
+                  break regionExit1;
                 }
               }
               if (decompiledFrameCompleted3) {
@@ -3598,7 +3598,7 @@ final class np extends ka {
             if (param0 == 7) {
               if (null != this.field_j) {
                 var9 = 0;
-                L26: while (true) {
+                scanLoop1: while (true) {
                   stackIn_185_0 = ~var8_int;
                   stackIn_185_1 = ~var9;
                   if (stackIn_185_0 < stackIn_185_1) {
@@ -3652,7 +3652,7 @@ final class np extends ka {
                       }
                     }
                     var9++;
-                    continue L26;
+                    continue scanLoop1;
                   }
                   break;
                 }
@@ -3981,7 +3981,7 @@ final class np extends ka {
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           var1_int = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var1_int < this.field_N) {
               this.field_P[var1_int] = this.field_P[var1_int] + 7 >> 4;
               this.field_K[var1_int] = this.field_K[var1_int] + 7 >> 4;
@@ -3992,7 +3992,7 @@ final class np extends ka {
               }
             } else {
               if (null == this.field_g) {
-                break L1;
+                break scanLoop1;
               }
             }
             this.field_g.field_d = null;
@@ -4643,7 +4643,7 @@ final class np extends ka {
             var14_ref = qqa.a(var8, param1, this.field_W, (byte) -6);
             var15 = new uo[param1.field_o];
             var16 = 0;
-            L47: while (true) {
+            scanLoop1: while (true) {
               if (var16 < param1.field_o) {
                 var17 = param1.field_a[var16];
                 var18 = param1.field_t[var16];
@@ -4658,7 +4658,7 @@ final class np extends ka {
                 var27_int = var22_int * var23_int - var25_int * var20;
                 stackIn_196_0 = var20 * var24_int - var21 * var23_int;
                 if (var63 != 0) {
-                  break L47;
+                  break scanLoop1;
                 }
                 var28 = stackIn_196_0;
                 while (true) {
@@ -4726,7 +4726,7 @@ final class np extends ka {
               break;
             }
             var16 = stackIn_196_0;
-            L60: while (true) {
+            scanLoop2: while (true) {
               if (var16 < this.field_W) {
                 var17 = var8[var16];
                 var18 = param1.field_A[var17] & 65535;
@@ -5009,7 +5009,7 @@ final class np extends ka {
                 var16 = 0;
                 var17 = -10000;
                 var18 = 0;
-                L97: while (true) {
+                scanLoop3: while (true) {
                   if (this.field_ib > var18) {
                     var19_int = this.field_I[var18];
                     stackIn_332_0 = ~var19_int;
@@ -5019,9 +5019,9 @@ final class np extends ka {
                         var19_int = this.field_I[var18];
                         stackIn_356_0 = ~var19_int;
                         stackIn_356_1 = ~var17;
-                        break L60;
+                        break scanLoop2;
                       }
-                      break L97;
+                      break scanLoop3;
                     }
                     if (stackIn_332_0 != stackIn_332_1) {
                       var17 = var19_int;
@@ -5044,7 +5044,7 @@ final class np extends ka {
                     stackIn_356_0 = ~var19_int;
                     stackIn_356_1 = ~var17;
                     if (var63 != 0) {
-                      break L60;
+                      break scanLoop2;
                     }
                     if (stackIn_356_0 != stackIn_356_1) {
                       incrementValue$5 = var16;

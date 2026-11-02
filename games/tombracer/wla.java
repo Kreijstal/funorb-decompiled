@@ -165,7 +165,7 @@ final class wla extends jea {
             this.field_xb.field_sb = "|";
             if (!(rja.field_e < 5) ||
               !(ld.field_e < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_7_0 = this;
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
@@ -180,7 +180,7 @@ final class wla extends jea {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = pl.field_c;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;

@@ -22,13 +22,13 @@ final class li {
         if (mh.field_I == 0) {
           v.b(2, 0);
           mh.field_I = -mh.field_I + 1;
-          qb.a(param0, 5);
+          ProxySocketConnector.a(param0, 5);
           v.b(uca.field_c.a(6, 0) + 3, 0);
           return;
         }
         v.b(1, 0);
         mh.field_I = -mh.field_I + 1;
-        qb.a(param0, 5);
+        ProxySocketConnector.a(param0, 5);
         v.b(uca.field_c.a(6, 0) + 3, 0);
     }
 

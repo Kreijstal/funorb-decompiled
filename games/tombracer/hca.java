@@ -1541,20 +1541,20 @@ final class hca implements fo, gma, ffa, jfa, t {
                 this.field_eb = null;
               }
             }
-            L7: {
+            regionExit1: {
               if (null == this.field_eb) {
                 var8 = new int[][]{new int[]{var5, var7}, new int[]{this.field_mb - var3_int * var4, this.field_z + var3_int * var6}, new int[]{this.field_mb + var4 * var3_int, this.field_z - var6 * var3_int}, new int[]{-(var4 * var3_int) + this.field_mb, -(var6 * var3_int) + this.field_z}};
                 var9 = new int[][]{new int[]{this.field_b, this.field_K}, new int[]{-this.field_b, this.field_K}, new int[]{this.field_b, -this.field_K}, new int[]{-this.field_b, -this.field_K}};
                 var10 = 0;
-                L8: while (true) {
+                scanLoop2: while (true) {
                   stackIn_31_0 = -5;
                   if (stackIn_31_0 >= ~var10) {
-                    break L8;
+                    break scanLoop2;
                   }
                   var11 = this.field_J.field_u.b(var8[var10][1], -1, var8[var10][0], 2, 2);
                   var12 = var11;
                   if (var20 != 0) {
-                    break L7;
+                    break regionExit1;
                   }
                   var13 = 0;
                   while (var13 < var12.length) {
@@ -1592,7 +1592,7 @@ final class hca implements fo, gma, ffa, jfa, t {
                         }
                         this.field_b = var9[var10][0];
                         this.field_K = var9[var10][1];
-                        break L8;
+                        break scanLoop2;
                       }
                     }
                     var13++;

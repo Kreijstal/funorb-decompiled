@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends vg {
+final class tn extends IntrusiveNode {
     byte[] field_j;
     byte[] field_l;
     int field_i;
@@ -123,7 +123,7 @@ final class tn extends vg {
           return q.field_o + " - " + tk.field_b.a("commonui", true) + "%";
         }
         if (!hm.field_n.b(-99)) {
-          return hua.field_a;
+          return MouseInputHandler.field_a;
         }
         if (!hm.field_n.c("commonui", -128)) {
           return vja.field_b + " - " + hm.field_n.a("commonui", true) + "%";

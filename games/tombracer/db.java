@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends vg implements fo, ffa, gma, noa, qn {
+final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
     private int field_n;
     private la field_m;
     private int field_p;

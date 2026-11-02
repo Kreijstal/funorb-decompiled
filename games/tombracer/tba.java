@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tba extends vg {
+final class tba extends IntrusiveNode {
     static int field_k;
     static byte[] field_m;
     static String[] field_i;

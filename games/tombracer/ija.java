@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ija extends vg {
+abstract class ija extends IntrusiveNode {
     int[] field_g;
     static String field_i;
     int field_h;

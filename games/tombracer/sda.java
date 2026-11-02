@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sda extends vg {
+final class sda extends IntrusiveNode {
     static boolean[] field_f;
     int field_l;
     byte[] field_j;

@@ -181,7 +181,7 @@ final class cw {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4) {
-        vg var6 = null;
+        IntrusiveNode var6 = null;
         boolean discarded$0 = false;
         int var7 = TombRacer.field_G ? 1 : 0;
         if (null == this.field_d) {
@@ -197,7 +197,7 @@ final class cw {
           var6 = this.field_j.f(-80);
           while (this.field_j.field_e != var6) {
             ((oga) (var6)).a(this.field_g, (byte) -71, this.field_k);
-            var6 = var6.field_a;
+            var6 = var6.next;
           }
           this.field_h = true;
           this.field_c = true;
@@ -389,7 +389,7 @@ final class cw {
     }
 
     final void a(int param0) {
-        vg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
         this.field_l = null;
         this.field_m = null;
@@ -402,7 +402,7 @@ final class cw {
           var2 = this.field_j.f(-80);
           while (this.field_j.field_e != var2) {
             ((oga) (var2)).d((byte) -35);
-            var2 = var2.field_a;
+            var2 = var2.next;
           }
         }
         if (param0 < -43) {

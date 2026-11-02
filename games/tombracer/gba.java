@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gba extends vg {
+final class gba extends IntrusiveNode {
     String[] field_g;
     static int[] field_f;
 

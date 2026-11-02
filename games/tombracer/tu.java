@@ -239,7 +239,7 @@ class tu extends eha {
             var4_int = param2.u(-2).A(param0 + 2);
             if (param2.j(0) &&
               !this.field_f.j(param0 - 1876)) {
-              qb.a(var4_int, 5);
+              ProxySocketConnector.a(var4_int, 5);
             } else {
               li.b(var4_int, (byte) 116);
             }

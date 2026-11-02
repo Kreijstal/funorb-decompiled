@@ -67,7 +67,7 @@ final class dd {
               var7.field_j = 0L;
             } else {
               var6 = new tja(var8, var7.field_m);
-              this.field_c.a(var6, (byte) 125, var7.field_d);
+              this.field_c.a(var6, (byte) 125, var7.key);
               this.field_f.a(var6, -11396);
               ((pb) ((Object) var6)).field_j = 0L;
               var7.p(118);
@@ -87,7 +87,7 @@ final class dd {
             var7.field_j = 0L;
           } else {
             var6Lifetime1 = new tja(var9, var7.field_m);
-            this.field_c.a(var6Lifetime1, (byte) 125, var7.field_d);
+            this.field_c.a(var6Lifetime1, (byte) 125, var7.key);
             this.field_f.a(var6Lifetime1, -11396);
             ((pb) ((Object) var6Lifetime1)).field_j = 0L;
             var7.p(118);
@@ -172,7 +172,7 @@ final class dd {
             var3.field_j = var3.field_j + 1L;
             if ((long)param1 < fieldTemp$0) {
               var4 = new eba(var3.f(29243), var3.field_m);
-              this.field_c.a(var4, (byte) 124, var3.field_d);
+              this.field_c.a(var4, (byte) 124, var3.key);
               ig.a(31, var4, var3);
               var3.p(126);
               var3.c(-7975);

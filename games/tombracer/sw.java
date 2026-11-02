@@ -810,7 +810,7 @@ final class sw extends jea {
           koa.field_b = null;
           int var1_int = -56 % ((6 - param0) / 33);
           mh.field_F = null;
-          jna.field_j = null;
+          GameApplet.field_j = null;
           jma.field_a = null;
           qi.field_O = null;
           System.gc();

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qja extends vg {
+final class qja extends IntrusiveNode {
     int field_g;
     static String field_i;
     int field_h;

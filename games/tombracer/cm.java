@@ -387,7 +387,7 @@ final class cm implements bo {
                     var10 = 1;
                   }
                   if (var16 > 0 &&
-                    qb.field_f < var16) {
+                    ProxySocketConnector.field_f < var16) {
                     var12 = 1;
                   }
                 }
@@ -537,7 +537,7 @@ final class cm implements bo {
                       }
                     }
                     if (var12 != 0) {
-                      var31 = gl.$cfr$intArgs$a$53ce4ab4c593(106, kp.field_f, new String[]{Integer.toString(qb.field_f), Integer.toString(hp.field_a[var7][var9])});
+                      var31 = gl.$cfr$intArgs$a$53ce4ab4c593(106, kp.field_f, new String[]{Integer.toString(ProxySocketConnector.field_f), Integer.toString(hp.field_a[var7][var9])});
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;

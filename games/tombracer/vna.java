@@ -5,15 +5,15 @@ final class vna {
     static nh field_c;
     static su field_a;
     static String[][] field_d;
-    vg field_e;
-    private vg field_b;
+    IntrusiveNode field_e;
+    private IntrusiveNode field_b;
 
-    final vg a(int param0, vg param1) {
-        vg var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        vg stackIn_5_0 = null;
+        IntrusiveNode stackIn_5_0 = null;
         Object stackIn_8_0 = null;
-        vg stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -22,23 +22,23 @@ final class vna {
           if (param1 != null) {
             var3 = param1;
             if (TombRacer.field_G) {
-              var3 = this.field_e.field_a;
+              var3 = this.field_e.next;
             }
           } else {
-            var3 = this.field_e.field_a;
+            var3 = this.field_e.next;
           }
           if (param0 != -13854) {
-            stackIn_5_0 = (vg) null;
+            stackIn_5_0 = (IntrusiveNode) null;
             return stackIn_5_0;
           }
           if (this.field_e != var3) {
-            this.field_b = var3.field_a;
+            this.field_b = var3.next;
             stackIn_10_0 = var3;
             return stackIn_10_0;
           }
           this.field_b = null;
           stackIn_8_0 = null;
-          return (vg) (stackIn_8_0);
+          return (IntrusiveNode) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -53,23 +53,23 @@ final class vna {
         }
     }
 
-    final void a(byte param0, vg param1) {
+    final void a(byte param0, IntrusiveNode param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (null != param1.field_e) {
+          if (null != param1.previous) {
             param1.p(47);
           }
-          param1.field_a = this.field_e.field_a;
-          param1.field_e = this.field_e;
+          param1.next = this.field_e.next;
+          param1.previous = this.field_e;
           if (param0 < 87) {
             this.f(54);
           }
-          param1.field_e.field_a = param1;
-          param1.field_a.field_e = param1;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,22 +85,22 @@ final class vna {
         }
     }
 
-    final vg c(byte param0) {
-        vg var2 = null;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
-        vg stackIn_2_0 = null;
+        IntrusiveNode stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        vg stackIn_7_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.field_e;
+          var2 = this.field_e.previous;
           if (param0 != 22) {
-            stackIn_2_0 = (vg) null;
+            stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
           if (var2 == this.field_e) {
             stackIn_5_0 = null;
-            return (vg) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           var2.p(2);
           stackIn_7_0 = var2;
@@ -315,25 +315,25 @@ final class vna {
         }
     }
 
-    final vg a(int param0) {
-        vg var2 = null;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        vg stackIn_5_0 = null;
-        vg stackIn_7_0 = null;
+        IntrusiveNode stackIn_5_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = this.field_b;
           if (this.field_e == var2) {
             this.field_b = null;
             stackIn_2_0 = null;
-            return (vg) (stackIn_2_0);
+            return (IntrusiveNode) (stackIn_2_0);
           }
           if (param0 != -1) {
-            stackIn_5_0 = (vg) null;
+            stackIn_5_0 = (IntrusiveNode) null;
             return stackIn_5_0;
           }
-          this.field_b = var2.field_e;
+          this.field_b = var2.previous;
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -346,7 +346,7 @@ final class vna {
     final int a(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        vg var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
@@ -358,10 +358,10 @@ final class vna {
             return stackIn_3_0;
           }
           var2_int = 0;
-          var3 = this.field_e.field_a;
+          var3 = this.field_e.next;
           while (var3 != this.field_e) {
             var2_int++;
-            var3 = var3.field_a;
+            var3 = var3.next;
             if (var4 == 0) {
               continue;
             }
@@ -384,7 +384,7 @@ final class vna {
           if (param0 != 14) {
             field_a = (su) null;
           }
-          stackIn_7_0 = (this.field_e == this.field_e.field_a);
+          stackIn_7_0 = (this.field_e == this.field_e.next);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -393,19 +393,19 @@ final class vna {
         }
     }
 
-    final vg c(int param0) {
-        vg var2 = null;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         Object stackIn_4_0 = null;
-        vg stackIn_6_0 = null;
+        IntrusiveNode stackIn_6_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.field_a;
+          var2 = this.field_e.next;
           var3 = -30 % ((-37 - param0) / 59);
           if (this.field_e == var2) {
             stackIn_4_0 = null;
-            return (vg) (stackIn_4_0);
+            return (IntrusiveNode) (stackIn_4_0);
           }
           var2.p(64);
           stackIn_6_0 = var2;
@@ -417,7 +417,7 @@ final class vna {
         }
     }
 
-    final void b(byte param0, vg param1) {
+    final void b(byte param0, IntrusiveNode param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -427,13 +427,13 @@ final class vna {
           if (param0 >= -45) {
             vna.a(true, 11, -23);
           }
-          if (null != param1.field_e) {
+          if (null != param1.previous) {
             param1.p(111);
           }
-          param1.field_a = this.field_e;
-          param1.field_e = this.field_e.field_e;
-          param1.field_e.field_a = param1;
-          param1.field_a.field_e = param1;
+          param1.next = this.field_e;
+          param1.previous = this.field_e.previous;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -449,27 +449,27 @@ final class vna {
         }
     }
 
-    final vg f(int param0) {
-        vg var2 = null;
+    final IntrusiveNode f(int param0) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
-        vg stackIn_2_0 = null;
+        IntrusiveNode stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        vg stackIn_7_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.field_a;
+          var2 = this.field_e.next;
           if (param0 != -80) {
-            stackIn_2_0 = (vg) null;
+            stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
           if (this.field_e != var2) {
-            this.field_b = var2.field_a;
+            this.field_b = var2.next;
             stackIn_7_0 = var2;
             return stackIn_7_0;
           }
           this.field_b = null;
           stackIn_5_0 = null;
-          return (vg) (stackIn_5_0);
+          return (IntrusiveNode) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -495,25 +495,25 @@ final class vna {
         }
     }
 
-    final vg b(int param0) {
-        vg var2 = null;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
-        vg stackIn_7_0 = null;
-        vg stackIn_9_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.field_e;
+          var2 = this.field_e.previous;
           if (this.field_e == var2) {
             this.field_b = null;
             stackIn_4_0 = null;
-            return (vg) (stackIn_4_0);
+            return (IntrusiveNode) (stackIn_4_0);
           }
           if (param0 != 3) {
-            stackIn_7_0 = (vg) null;
+            stackIn_7_0 = (IntrusiveNode) null;
             return stackIn_7_0;
           }
-          this.field_b = var2.field_e;
+          this.field_b = var2.previous;
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -525,13 +525,13 @@ final class vna {
 
     final void d(int param0) {
         RuntimeException runtimeException = null;
-        vg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           while (true) {
-            var2 = this.field_e.field_a;
+            var2 = this.field_e.next;
             if (this.field_e != var2) {
               var2.p(param0 ^ 119);
               if (var3 != 0) {
@@ -553,23 +553,23 @@ final class vna {
         }
     }
 
-    final vg e(int param0) {
-        vg var2 = null;
+    final IntrusiveNode e(int param0) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
-        vg stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = this.field_b;
           if (var2 == this.field_e) {
             this.field_b = null;
             stackIn_4_0 = null;
-            return (vg) (stackIn_4_0);
+            return (IntrusiveNode) (stackIn_4_0);
           }
           if (param0 < 106) {
-            this.field_b = (vg) null;
+            this.field_b = (IntrusiveNode) null;
           }
-          this.field_b = var2.field_a;
+          this.field_b = var2.next;
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -580,10 +580,10 @@ final class vna {
     }
 
     public vna() {
-        this.field_e = new vg();
+        this.field_e = new IntrusiveNode();
         try {
-          this.field_e.field_e = this.field_e;
-          this.field_e.field_a = this.field_e;
+          this.field_e.previous = this.field_e;
+          this.field_e.next = this.field_e;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vna.<init>()");
         }

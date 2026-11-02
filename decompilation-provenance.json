@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "tombracer": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/tombracer"
+      },
+      "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
+      "sources": {
+        "files": 1090,
+        "sha256": "4ecdd313f868e12b92081a952e9f281266f94f7b9cd9e0537f7e799e8d98b286"
+      },
+      "dictionary": {
+        "path": "decompilation/tombracer-naming.json",
+        "sha256": "1ed6f71029085edcec3a13ac7be9fb55a76a2c214d1f65921303d470f3f556af"
+      },
+      "readingGuide": {
+        "path": "games/tombracer/README.md",
+        "sha256": "a70e7906f35b0e55d75e6da095287a7d7b41595f1a2d1394199d5ee7d01bee55"
+      },
+      "rulesSha256": "3ba3512f410913e74ef4980e7b93adb141bad983a250c51e0230c0288ccb3da2",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12290,6 +12314,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 1090,
+          "sha256": "4ecdd313f868e12b92081a952e9f281266f94f7b9cd9e0537f7e799e8d98b286"
         }
       },
       "torchallenge": {

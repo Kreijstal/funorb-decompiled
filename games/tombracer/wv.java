@@ -283,7 +283,7 @@ abstract class wv extends dfa {
             return;
           }
           var4_int = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (this.field_k.field_i > var4_int) {
               if (var5 == 0) {
                 stackIn_11_0 = this.field_m[var4_int];
@@ -301,13 +301,13 @@ abstract class wv extends dfa {
                 this.c(34);
               }
               if (!param1) {
-                break L1;
+                break scanLoop1;
               }
               if (rpa.field_d) {
-                break L1;
+                break scanLoop1;
               }
               if (vda.field_q) {
-                break L1;
+                break scanLoop1;
               }
               this.field_k.a(this.b(lba.field_p, true, jm.field_m), 71, this.b(sta.field_B, true, jba.field_j));
             }
@@ -1083,7 +1083,7 @@ abstract class wv extends dfa {
           var7 = 0;
           var8 = null;
           var9 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder1 = true;
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
@@ -1157,7 +1157,7 @@ abstract class wv extends dfa {
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameCompleted0) &&
               (var6 == null)) {
-              break L1;
+              break scanLoop1;
             }
             oh.a((byte) -91, new fna[]{this.field_m[((int[]) (var6))[0]], this.field_m[((int[]) (var6))[1]], this.field_m[((int[]) (var6))[2]]});
             break;

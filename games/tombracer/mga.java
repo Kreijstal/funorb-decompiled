@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mga extends vg {
+final class mga extends IntrusiveNode {
     static char[] field_j;
     int field_k;
     static String[] field_f;

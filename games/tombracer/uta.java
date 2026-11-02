@@ -37,7 +37,7 @@ abstract class uta implements sia {
           var3 = (gka) (this.field_s.f(-80));
           if (var3 == null ||
             !param1.equals(var3.field_h)) {
-            this.field_s.a((byte) 88, (vg) (new gka(param1)));
+            this.field_s.a((byte) 88, (IntrusiveNode) (new gka(param1)));
           }
           if (this.field_s.a((byte) -16) > 30) {
             this.field_s.c((byte) 22);
@@ -129,7 +129,7 @@ abstract class uta implements sia {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var4 = new vna();
-          L0: while (param2 != null) {
+          scanLoop1: while (param2 != null) {
             boolean decompiledFrameRemainder0 = true;
             var5 = this.field_m.b(param2);
             var6 = param2;
@@ -151,7 +151,7 @@ abstract class uta implements sia {
                 var9 = param2.substring(0, var7);
                 param2 = param2.substring(var7 + 1);
                 var4.b((byte) -128, new gka(var9));
-                continue L0;
+                continue scanLoop1;
               }
               var5 = this.field_m.b(param2);
               var7Lifetime1 = param2.length() - 1;
@@ -344,7 +344,7 @@ abstract class uta implements sia {
     }
 
     public boolean a(byte param0, char param1, int param2) {
-        vg stackIn_19_1 = null;
+        IntrusiveNode stackIn_19_1 = null;
         jea var5;
         int var6;
         String var7;
@@ -363,8 +363,8 @@ abstract class uta implements sia {
           if (param2 != 98) {
             if (99 == param2) {
               if (this.field_g != null &&
-                this.field_s.field_e != this.field_g.field_e) {
-                this.field_g = (gka) (this.field_g.field_e);
+                this.field_s.field_e != this.field_g.previous) {
+                this.field_g = (gka) (this.field_g.previous);
                 this.field_o.a((byte) 74, this.field_g.field_h);
               }
             } else {
@@ -376,9 +376,9 @@ abstract class uta implements sia {
             }
           } else {
             if (this.field_g == null ||
-              this.field_g.field_a != this.field_s.field_e) {
+              this.field_g.next != this.field_s.field_e) {
               if (null != this.field_g) {
-                stackIn_19_1 = this.field_g.field_a;
+                stackIn_19_1 = this.field_g.next;
               } else {
                 stackIn_19_1 = this.field_s.f(-80);
               }

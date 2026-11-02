@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tt extends vg implements bo {
+final class tt extends IntrusiveNode implements bo {
     private int[][] field_f;
     static String field_g;
     private boolean[] field_h;

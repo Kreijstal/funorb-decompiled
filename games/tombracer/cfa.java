@@ -275,13 +275,13 @@ final class cfa implements dv {
 
     final void b(int param0) {
         int var4 = 0;
-        qea var2;
+        IsaacCipher var2;
         boolean[] var3;
         int var5;
         int var6;
         kh var7;
         var6 = TombRacer.field_G ? 1 : 0;
-        var2 = new qea(new int[]{this.field_j.field_C});
+        var2 = new IsaacCipher(new int[]{this.field_j.field_C});
         this.field_i = new int[3];
         var3 = new boolean[7];
         for (var4 = 0; this.field_i.length > var4; var4++) {

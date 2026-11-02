@@ -175,12 +175,12 @@ final class aja extends lea {
                   sda.field_f[var11] = false;
                   var11++;
                 } while (var19 == 0);
-                L17: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11 = 0;
                     stackIn_66_0 = 0;
                     if (var19 != 0) {
-                      break L17;
+                      break scanLoop1;
                     }
                     var12 = stackIn_66_0;
                     while (true) {
@@ -193,7 +193,7 @@ final class aja extends lea {
                         var13_ref_int__ = var20;
                         stackIn_62_0 = 0;
                         var14 = stackIn_62_0;
-                        L24: while (true) {
+                        scanLoop2: while (true) {
                           if (var25.length > var14) {
                             var15 = var25[var14];
                             var16 = var20[1 + var14];
@@ -208,11 +208,11 @@ final class aja extends lea {
                               var17_int = stackIn_47_0;
                               if (~var17_int != ~var16 &&
                                 var19 == 0) {
-                                break L24;
+                                break scanLoop2;
                               }
                             } else {
                               if (~var16 != ~(255 & uu.field_a.field_ac[var15])) {
-                                break L24;
+                                break scanLoop2;
                               }
                             }
                             var14 += 2;
@@ -367,14 +367,14 @@ final class aja extends lea {
                 }
                 var17 = tn.field_n.field_tb.field_J;
                 var18_ref = (pha) (var17.f(param1 - 79));
-                L54: while (true) {
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
                     stackOut_126_0 = var18_ref.f(162);
                     stackIn_145_0 = stackOut_126_0 ? 1 : 0;
                     stackIn_127_0 = stackOut_126_0;
                     if (var19 != 0) {
-                      break L54;
+                      break scanLoop3;
                     }
                     if (!stackIn_127_0 ||
                       var19 != 0) {
@@ -454,7 +454,7 @@ final class aja extends lea {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(97, he.field_b, new String[]{Integer.toString(var9)});
+              var8.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(97, DelegatingCanvas.field_b, new String[]{Integer.toString(var9)});
             }
             cea.field_a.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(106, tra.field_A, new String[]{Integer.toString(uu.field_a.field_Mb), Integer.toString(uu.field_a.field_Jb)});
           }

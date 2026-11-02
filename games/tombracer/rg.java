@@ -126,7 +126,7 @@ final class rg extends qr {
         la.field_m[11] = msa.field_b;
         la.field_m[3] = poa.field_p;
         la.field_m[12] = tr.field_e;
-        la.field_m[6] = vg.field_b;
+        la.field_m[6] = IntrusiveNode.field_b;
         gn.field_w = new String[13];
         gn.field_w[10] = "piles";
         gn.field_w[0] = "henryj";

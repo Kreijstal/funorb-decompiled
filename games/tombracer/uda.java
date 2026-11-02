@@ -71,10 +71,10 @@ final class uda extends qra {
         stackIn_3_0 = (this.i(-1)) ? 0 : 1;
         var5 = stackIn_3_0;
         ik.field_h.a(0, 0);
-        be.a(gta.field_a.toUpperCase(), 1, qr.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
+        SocketConnector.a(gta.field_a.toUpperCase(), 1, qr.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
         if (-1 == this.field_u &&
           var5 != 0) {
-          be.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, koa.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
+          SocketConnector.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, koa.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
         }
         var6_ref_ad = (ad) (this.field_n.f(-80));
         while (var6_ref_ad != null) {
@@ -98,7 +98,7 @@ final class uda extends qra {
           } else {
             bsa.field_i.a(-(bsa.field_i.a() >> 1) + var8, -(bsa.field_i.c() >> 1) + var9, 0, 1627389951, 1);
           }
-          be.a(this.field_h.a(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
+          SocketConnector.a(this.field_h.a(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
           var11++;
         }
         se.f((byte) -6);

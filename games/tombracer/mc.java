@@ -36,7 +36,7 @@ final class mc extends nv {
           this.a(65, 57, (pc) null, 85);
           var2 = dfa.a(2048 + var2, 8192, -34);
           if (var2 != this.field_v) {
-            this.field_t = hua.a((byte) 99, var2 >> 2);
+            this.field_t = MouseInputHandler.a((byte) 99, var2 >> 2);
             this.field_p = bua.a(0, var2 >> 2);
             this.field_v = var2;
             return;
@@ -47,7 +47,7 @@ final class mc extends nv {
         if (var2 == this.field_v) {
           return;
         }
-        this.field_t = hua.a((byte) 99, var2 >> 2);
+        this.field_t = MouseInputHandler.a((byte) 99, var2 >> 2);
         this.field_p = bua.a(0, var2 >> 2);
         this.field_v = var2;
     }
@@ -202,7 +202,7 @@ final class mc extends nv {
           var9 = dfa.a(this.field_v + 2048, 8192, -71);
           var10 = cf.a(8192, -16390, var8, var9);
           var11 = dfa.a(2 * var10 + var8 + 4096, 8192, 126);
-          var12 = hua.a((byte) 99, var11 >> 2);
+          var12 = MouseInputHandler.a((byte) 99, var11 >> 2);
           var13 = bua.a(0, var11 >> 2);
           var14 = param2.field_b - gqa.a(param2.field_b, (byte) 24, this.field_w);
           var15 = var14 >> 8;

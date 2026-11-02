@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea extends vg implements bo {
+final class ea extends IntrusiveNode implements bo {
     static String[] field_k;
     static int field_j;
     private int[] field_g;

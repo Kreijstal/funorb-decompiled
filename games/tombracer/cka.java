@@ -622,8 +622,8 @@ final class cka extends ha {
         al var7;
         al var8;
         al var9;
-        vg var10;
-        vg var11;
+        IntrusiveNode var10;
+        IntrusiveNode var11;
         al var12;
         var4 = TombRacer.field_G ? 1 : 0;
         param0 = param0 & 2147483647;
@@ -632,7 +632,7 @@ final class cka extends ha {
           var5 = (al) (this.field_pd.c(-108));
           incrementValue$6 = var2;
           var2++;
-          qo.field_k[incrementValue$6] = (int)var5.field_d;
+          qo.field_k[incrementValue$6] = (int)var5.key;
           this.field_mb = this.field_mb - var5.field_i;
           if (var2 != 1000) {
             continue;
@@ -645,7 +645,7 @@ final class cka extends ha {
             var6 = (al) (this.field_K.c(63));
             incrementValue$1 = var2;
             var2++;
-            qo.field_k[incrementValue$1] = (int)var6.field_d;
+            qo.field_k[incrementValue$1] = (int)var6.key;
             this.field_jb = this.field_jb - var6.field_i;
             if (1000 != var2) {
               continue;
@@ -660,7 +660,7 @@ final class cka extends ha {
             var6 = (al) (this.field_K.c(63));
             incrementValue$0 = var2;
             var2++;
-            qo.field_k[incrementValue$0] = (int)var6.field_d;
+            qo.field_k[incrementValue$0] = (int)var6.key;
             this.field_jb = this.field_jb - var6.field_i;
             if (1000 != var2) {
               continue;
@@ -670,7 +670,7 @@ final class cka extends ha {
           }
         }
         boolean decompiledFrameCompleted1 = true;
-        L6: {
+        regionExit1: {
           if (var2 <= 0) {
             do {
               if (this.field_cc.d((byte) 14)) {
@@ -687,7 +687,7 @@ final class cka extends ha {
             if (decompiledFrameCompleted1) {
               jaggl.OpenGL.glDeleteFramebuffersEXT(var2, qo.field_k, 0);
               var2 = 0;
-              break L6;
+              break regionExit1;
             }
           }
           if (decompiledFrameCompleted1) {
@@ -711,7 +711,7 @@ final class cka extends ha {
           }
         }
         boolean decompiledFrameCompleted0 = true;
-        L10: {
+        regionExit2: {
           if (var2 <= 0) {
             do {
               if (this.field_Vb.d((byte) 14)) {
@@ -721,7 +721,7 @@ final class cka extends ha {
               var8 = (al) (this.field_Vb.c(-117));
               incrementValue$4 = var2;
               var2++;
-              qo.field_k[incrementValue$4] = (int)var8.field_d;
+              qo.field_k[incrementValue$4] = (int)var8.key;
               this.field_Tb = this.field_Tb - var8.field_i;
               stackIn_37_0 = var2;
               stackIn_37_1 = 1000;
@@ -729,7 +729,7 @@ final class cka extends ha {
             if (decompiledFrameCompleted0) {
               jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, qo.field_k, 0);
               var2 = 0;
-              break L10;
+              break regionExit2;
             }
           }
           if (decompiledFrameCompleted0) {
@@ -742,7 +742,7 @@ final class cka extends ha {
             var8 = (al) (this.field_Vb.c(-117));
             incrementValue$5 = var2;
             var2++;
-            qo.field_k[incrementValue$5] = (int)var8.field_d;
+            qo.field_k[incrementValue$5] = (int)var8.key;
             this.field_Tb = this.field_Tb - var8.field_i;
             stackIn_46_0 = var2;
             stackIn_46_1 = 1000;
@@ -756,19 +756,19 @@ final class cka extends ha {
         if (var2 <= 0) {
           while (!this.field_Lc.d((byte) 14)) {
             var9 = (al) (this.field_Lc.c(30));
-            jaggl.OpenGL.glDeleteLists((int)var9.field_d, var9.field_i);
+            jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_i);
           }
           while (!this.field_Fc.d((byte) 14)) {
             var10 = this.field_Fc.c(80);
-            jaggl.OpenGL.glDeleteProgramARB((int)var10.field_d);
+            jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
           }
           while (!this.field_rb.d((byte) 14)) {
             var11 = this.field_rb.c(50);
-            jaggl.OpenGL.glDeleteObjectARB(var11.field_d);
+            jaggl.OpenGL.glDeleteObjectARB(var11.key);
           }
           while (!this.field_Lc.d((byte) 14)) {
             var12 = (al) (this.field_Lc.c(-99));
-            jaggl.OpenGL.glDeleteLists((int)var12.field_d, var12.field_i);
+            jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_i);
           }
           this.field_hd.c(-29413);
           if (!(this.f(-44) <= 100663296) &&
@@ -781,19 +781,19 @@ final class cka extends ha {
           var2 = 0;
           while (!this.field_Lc.d((byte) 14)) {
             var9 = (al) (this.field_Lc.c(30));
-            jaggl.OpenGL.glDeleteLists((int)var9.field_d, var9.field_i);
+            jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_i);
           }
           while (!this.field_Fc.d((byte) 14)) {
             var10 = this.field_Fc.c(80);
-            jaggl.OpenGL.glDeleteProgramARB((int)var10.field_d);
+            jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
           }
           while (!this.field_rb.d((byte) 14)) {
             var11 = this.field_rb.c(50);
-            jaggl.OpenGL.glDeleteObjectARB(var11.field_d);
+            jaggl.OpenGL.glDeleteObjectARB(var11.key);
           }
           while (!this.field_Lc.d((byte) 14)) {
             var12 = (al) (this.field_Lc.c(-99));
-            jaggl.OpenGL.glDeleteLists((int)var12.field_d, var12.field_i);
+            jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_i);
           }
           this.field_hd.c(-29413);
           if (!(this.f(-44) <= 100663296) &&
@@ -1034,7 +1034,7 @@ final class cka extends ha {
           return;
         }
         al var4 = new al(param2);
-        var4.field_d = (long)param1;
+        var4.key = (long)param1;
         this.field_K.b((byte) -110, var4);
     }
 
@@ -1456,8 +1456,8 @@ final class cka extends ha {
         if (param0 != -105) {
           this.field_Lc = (vna) null;
         }
-        vg var4 = new vg();
-        var4.field_d = param1;
+        IntrusiveNode var4 = new IntrusiveNode();
+        var4.key = param1;
         this.field_rb.b((byte) -58, var4);
     }
 
@@ -1596,8 +1596,8 @@ final class cka extends ha {
     }
 
     final synchronized void i(int param0, int param1) {
-        vg var3 = new vg();
-        var3.field_d = (long)param0;
+        IntrusiveNode var3 = new IntrusiveNode();
+        var3.key = (long)param0;
         this.field_Fc.b((byte) -114, var3);
         if (param1 != -1) {
           this.field_wb = true;
@@ -2103,7 +2103,7 @@ final class cka extends ha {
           field_H = -33;
         }
         al var4 = new al(param2);
-        var4.field_d = (long)param1;
+        var4.key = (long)param1;
         this.field_pd.b((byte) -96, var4);
     }
 
@@ -2412,7 +2412,7 @@ final class cka extends ha {
         java.awt.Canvas var2 = null;
         Long var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
-        vg var1 = this.field_qb.f(-80);
+        IntrusiveNode var1 = this.field_qb.f(-80);
         while (var1 != null) {
           ((cp) (var1)).b((byte) 87);
           var1 = this.field_qb.e(125);
@@ -2883,7 +2883,7 @@ final class cka extends ha {
           this.a(92, true);
         }
         al var4 = new al(param1);
-        var4.field_d = (long)param2;
+        var4.key = (long)param2;
         this.field_Vb.b((byte) -84, var4);
     }
 

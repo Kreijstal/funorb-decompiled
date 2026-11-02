@@ -186,7 +186,7 @@ final class ua implements bo {
     }
 
     final static void b(int param0, int param1) {
-        vg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         cga var4 = null;
         RuntimeException decompiledCaughtException = null;

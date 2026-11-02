@@ -703,7 +703,7 @@ class jea extends um {
             return false;
           }
           param2 = dfa.a('_', "", param2, 0);
-          var3 = hua.a(param2, 0);
+          var3 = MouseInputHandler.a(param2, 0);
           stackIn_8_0 = (param1.indexOf(param2) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -848,7 +848,7 @@ class jea extends um {
         try {
           this.field_qb = param2;
           this.field_G = param4;
-          this.field_d = param0;
+          this.key = param0;
           this.field_t = param5;
           this.field_T = param3;
           this.a(false, param1);

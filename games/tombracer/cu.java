@@ -187,7 +187,7 @@ final class cu extends nv {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (jna.a(param0, param1, param3, param2)) {
+          if (GameApplet.a(param0, param1, param3, param2)) {
             return sba.d((byte) 120);
           }
           return null;

@@ -95,7 +95,7 @@ final class ena extends od {
             synchronized (var10_ref) {
               var9 = new nk(var8, jma.field_j.f(var8, -93));
             }
-            var19.b((byte) -124, (vg) (var9));
+            var19.b((byte) -124, (IntrusiveNode) (var9));
           }
           this.field_o[var30[var5]] = new rq(var31, (nk) (var9));
           var5++;

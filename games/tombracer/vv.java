@@ -68,7 +68,7 @@ final class vv extends wv {
           var10 = dfa.a('#', "<br>", var13, 0);
           var9 = var10;
           var9Lifetime3 = gl.$cfr$intArgs$a$53ce4ab4c593(85, var10, new String[]{wba.field_q[32]});
-          be.a(var9Lifetime3, 1, var6, 2431750, var7, var8, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
+          SocketConnector.a(var9Lifetime3, 1, var6, 2431750, var7, var8, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
           return;
         }
         this.h(-40, -77);
@@ -77,7 +77,7 @@ final class vv extends wv {
         var10Lifetime1 = dfa.a('#', "<br>", var12, 0);
         var9Lifetime1 = var10Lifetime1;
         var9Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(85, var10Lifetime1, new String[]{wba.field_q[32]});
-        be.a(var9Lifetime2, 1, var6, 2431750, var7, var8Lifetime1, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
+        SocketConnector.a(var9Lifetime2, 1, var6, 2431750, var7, var8Lifetime1, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
     }
 
     final void a(byte param0, boolean param1) {

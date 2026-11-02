@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bna extends vg {
+final class bna extends IntrusiveNode {
     boolean field_g;
     int[] field_f;
 

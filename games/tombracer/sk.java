@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class sk implements Iterable {
-    vg[] field_e;
+    IntrusiveNode[] field_e;
     static int[] field_f;
-    private vg field_d;
-    private vg field_a;
+    private IntrusiveNode field_d;
+    private IntrusiveNode field_a;
     int field_g;
     static int[] field_c;
     private int field_b;
@@ -24,20 +24,20 @@ final class sk implements Iterable {
         return (Iterator) ((Object) new nd(this));
     }
 
-    final void a(vg param0, byte param1, long param2) {
-        if (param0.field_e != null) {
+    final void a(IntrusiveNode param0, byte param1, long param2) {
+        if (param0.previous != null) {
           param0.p(92);
         }
-        vg var5 = this.field_e[(int)(param2 & (long)(-1 + this.field_g))];
-        param0.field_e = var5.field_e;
+        IntrusiveNode var5 = this.field_e[(int)(param2 & (long)(-1 + this.field_g))];
+        param0.previous = var5.previous;
         if (param1 < 98) {
           return;
         }
         try {
-          param0.field_a = var5;
-          param0.field_e.field_a = param0;
-          param0.field_a.field_e = param0;
-          param0.field_d = param2;
+          param0.next = var5;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
+          param0.key = param2;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -45,8 +45,8 @@ final class sk implements Iterable {
 
     final void a(int param0) {
         int var2;
-        vg var3;
-        vg var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = param0;
@@ -58,7 +58,7 @@ final class sk implements Iterable {
           }
           var3 = this.field_e[var2];
           while (true) {
-            var4 = var3.field_a;
+            var4 = var3.next;
             if (var3 != var4) {
               var4.p(92);
               continue;
@@ -69,9 +69,9 @@ final class sk implements Iterable {
         }
     }
 
-    final vg b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         if (param0 != 35) {
-          this.field_d = (vg) null;
+          this.field_d = (IntrusiveNode) null;
         }
         this.field_b = 0;
         return this.a((byte) 55);
@@ -79,23 +79,23 @@ final class sk implements Iterable {
 
     sk(int param0) {
         int var2 = 0;
-        vg dupTemp$0 = null;
-        vg var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_b = 0;
-        this.field_e = new vg[param0];
+        this.field_e = new IntrusiveNode[param0];
         this.field_g = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new vg();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_e[var2] = dupTemp$0;
-          var3.field_e = var3;
-          var3.field_a = var3;
+          var3.previous = var3;
+          var3.next = var3;
         }
     }
 
-    final vg a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int fieldTemp$0 = 0;
-        vg var2;
+        IntrusiveNode var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != 55) {
@@ -104,7 +104,7 @@ final class sk implements Iterable {
         if (this.field_b > 0 &&
           this.field_e[this.field_b - 1] != this.field_a) {
           var2 = this.field_a;
-          this.field_a = var2.field_a;
+          this.field_a = var2.next;
           return var2;
         }
         do {
@@ -113,24 +113,24 @@ final class sk implements Iterable {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          var2 = this.field_e[fieldTemp$0].field_a;
+          var2 = this.field_e[fieldTemp$0].next;
         } while (this.field_e[-1 + this.field_b] == var2);
-        this.field_a = var2.field_a;
+        this.field_a = var2.next;
         return var2;
     }
 
-    final vg a(long param0, boolean param1) {
-        vg var5 = null;
+    final IntrusiveNode a(long param0, boolean param1) {
+        IntrusiveNode var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
-        vg var4 = this.field_e[(int)((long)(-1 + this.field_g) & param0)];
-        this.field_d = var4.field_a;
+        IntrusiveNode var4 = this.field_e[(int)((long)(-1 + this.field_g) & param0)];
+        this.field_d = var4.next;
         while (var4 != this.field_d) {
-          if (param0 == this.field_d.field_d) {
+          if (param0 == this.field_d.key) {
             var5 = this.field_d;
-            this.field_d = this.field_d.field_a;
+            this.field_d = this.field_d.next;
             return var5;
           }
-          this.field_d = this.field_d.field_a;
+          this.field_d = this.field_d.next;
         }
         if (param1) {
           field_c = (int[]) null;

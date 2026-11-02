@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wda extends vg implements lj, noa, gr {
+abstract class wda extends IntrusiveNode implements lj, noa, gr {
     private la field_f;
     boolean field_k;
     private gpa field_g;

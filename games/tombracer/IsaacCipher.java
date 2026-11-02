@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qea {
+final class IsaacCipher {
     private int field_a;
     private int field_d;
     private int field_f;
@@ -31,7 +31,7 @@ final class qea {
               var2_ref.printStackTrace();
             }
             if (param1 > -59) {
-              qea.a(22);
+              IsaacCipher.a(22);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -55,7 +55,7 @@ final class qea {
 
     public static void a(int param0) {
         if (param0 != -3) {
-          qea.a(46);
+          IsaacCipher.a(46);
         }
         field_b = null;
     }
@@ -268,7 +268,7 @@ final class qea {
             vc.field_q = new kh(param6);
             ql.field_k = new kh(param7);
             q.field_r = param9;
-            be.field_c = param0;
+            SocketConnector.field_c = param0;
             csa.field_g = param11;
             nn.field_b = param3;
             du.field_h = param13;
@@ -316,7 +316,7 @@ final class qea {
         }
     }
 
-    qea(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
           this.field_g = new int[256];

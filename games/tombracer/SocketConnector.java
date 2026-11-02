@@ -3,16 +3,16 @@
  */
 import java.io.*;
 
-abstract class be {
+abstract class SocketConnector {
     static int field_c;
-    String field_a;
-    int field_b;
+    String host;
+    int port;
 
     abstract java.net.Socket a(int param0) throws IOException;
 
     final java.net.Socket a(byte param0) throws IOException {
         int var2 = -71 % ((param0 - 64) / 36);
-        return new java.net.Socket(this.field_a, this.field_b);
+        return new java.net.Socket(this.host, this.port);
     }
 
     final static int a(String param0, int param1, da param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, byte param10, int param11) {
@@ -75,7 +75,7 @@ abstract class be {
         if (param2 == 71) {
           return;
         }
-        be.a(59, -46, (byte) 78, 62, -53, 58);
+        SocketConnector.a(59, -46, (byte) 78, 62, -53, 58);
     }
 
     static {

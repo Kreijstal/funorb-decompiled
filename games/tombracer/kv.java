@@ -21,7 +21,7 @@ final class kv {
           if (param0 < 17) {
             field_c = (String[]) null;
           }
-          var3 = hua.a(param1, 0);
+          var3 = MouseInputHandler.a(param1, 0);
           stackIn_7_0 = (-1 != param2.indexOf(param1)) || (-1 != param2.indexOf(var3));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gka extends vg {
+final class gka extends IntrusiveNode {
     static int field_g;
     static String field_f;
     String field_h;

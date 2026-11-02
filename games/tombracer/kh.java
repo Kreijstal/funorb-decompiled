@@ -4,7 +4,7 @@
 final class kh extends uia {
     static String[][] field_l;
     private int field_i;
-    private qea field_n;
+    private IsaacCipher field_n;
     static String field_p;
     static String field_j;
     static String field_m;
@@ -73,7 +73,7 @@ final class kh extends uia {
 
     final void a(int param0, int[] param1) {
         try {
-          this.field_n = new qea(param1);
+          this.field_n = new IsaacCipher(param1);
           if (param0 != -26185) {
             this.b((byte) -116, 2);
           }

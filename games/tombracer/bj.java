@@ -48,13 +48,13 @@ final class bj extends ci {
             var13Lifetime1 = var12;
             var5 = 0;
             var6 = 0;
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (this.field_n > var6) {
                 if (this.field_o[var6] <= var4 &&
                   var4 < this.field_o[1 + var6]) {
                   if (var4 < this.field_m[var6]) {
                     var5 = 4096;
-                    break L3;
+                    break scanLoop1;
                   }
                   lua.a(var13Lifetime1, 0, ns.field_g, var5);
                   return var3;
@@ -87,15 +87,15 @@ final class bj extends ci {
               }
               var11 = 0;
               var9Lifetime1 = var11;
-              L8: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_n > var11) {
                   if (var6Lifetime1 >= this.field_o[var11] &&
                     this.field_o[var11 + 1] > var6Lifetime1) {
                     if (this.field_m[var11] <= var6Lifetime1) {
-                      break L8;
+                      break scanLoop2;
                     }
                     var7 = 4096;
-                    break L8;
+                    break scanLoop2;
                   }
                   var11++;
                   continue;

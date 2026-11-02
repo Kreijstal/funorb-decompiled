@@ -40,7 +40,7 @@ final class ne {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = hua.a(param2, 0);
+          var3 = MouseInputHandler.a(param2, 0);
           if (!param0) {
             var4 = (String) null;
             ne.a(false, (String) null, (String) null);

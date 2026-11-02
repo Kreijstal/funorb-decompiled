@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aia extends vg {
+final class aia extends IntrusiveNode {
     private int field_i;
     private int field_w;
     private int field_g;
@@ -50,7 +50,7 @@ final class aia extends vg {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        qea var17 = null;
+        IsaacCipher var17 = null;
         int var12Lifetime1;
         int var12Lifetime2;
         int var13Lifetime1;

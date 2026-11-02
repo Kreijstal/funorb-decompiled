@@ -275,7 +275,7 @@ final class jta extends qr {
         }
         try {
           var3 = (gn) (param0);
-          this.field_y.a((byte) 125, (vg) (var3));
+          this.field_y.a((byte) 125, (IntrusiveNode) (var3));
           var3.field_B = true;
           var3.a((ae) (this), false);
         } catch (RuntimeException runtimeException) {

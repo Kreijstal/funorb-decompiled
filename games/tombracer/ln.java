@@ -29,16 +29,16 @@ final class ln extends kna {
         return false;
     }
 
-    final static void a(vg param0, vg param1, byte param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
-          if (null != param1.field_e) {
+          if (null != param1.previous) {
             param1.p(63);
           }
-          param1.field_e = param0.field_e;
+          param1.previous = param0.previous;
           int var3_int = -97 % ((-39 - param2) / 63);
-          param1.field_a = param0;
-          param1.field_e.field_a = param1;
-          param1.field_a.field_e = param1;
+          param1.next = param0;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ln.VB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

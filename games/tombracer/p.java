@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p extends vg implements e {
+final class p extends IntrusiveNode implements e {
     java.awt.Canvas field_f;
     private static boolean field_g;
     int field_i;

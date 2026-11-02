@@ -59,7 +59,7 @@ final class am extends dg {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        qea var9 = null;
+        IsaacCipher var9 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;

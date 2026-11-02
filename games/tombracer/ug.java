@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ug extends jna {
+abstract class ug extends GameApplet {
     private long field_w;
     private boolean field_A;
     private boolean field_y;
@@ -165,7 +165,7 @@ abstract class ug extends jna {
             cua.a((byte) -65, di.a(37));
           }
           if (9 == var4) {
-            qea.a(di.a(104), -87);
+            IsaacCipher.a(di.a(104), -87);
           }
           if (var4 == 10) {
             ql.field_k.k(17, -2988);
@@ -415,7 +415,7 @@ abstract class ug extends jna {
         this.setBackground(java.awt.Color.black);
         bg.field_t = this.field_z;
         pt.b(bg.field_t, (byte) 65);
-        qea.a(this.field_s, this.field_v, dsa.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, bg.field_t, param5, this.field_w);
+        IsaacCipher.a(this.field_s, this.field_v, dsa.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, bg.field_t, param5, this.field_w);
         av.a(bg.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
         wka.b(520);
         tja.field_q = dka.a((byte) -86);

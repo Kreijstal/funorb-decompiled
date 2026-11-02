@@ -307,7 +307,7 @@ class l extends cg {
           this.a(var5, var4, var6, 0);
           return;
         }
-        L0: {
+        regionExit1: {
           if (144 == var3) {
             var4Lifetime1 = 15 & param0;
             var5Lifetime1 = 127 & param0 >> 8;
@@ -315,7 +315,7 @@ class l extends cg {
             if (var6Lifetime1 <= 0) {
               this.a(var5Lifetime1, var4Lifetime1, 64, 0);
               if (var8 == 0) {
-                break L0;
+                break regionExit1;
               }
             }
             this.b(var5Lifetime1, 0, var4Lifetime1, var6Lifetime1);
@@ -1117,9 +1117,9 @@ class l extends cg {
             var7 = new int[]{param0};
           }
           var8 = (jk) (param1.field_f.d(param4));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var8 != null) {
-              var9 = (int)var8.field_d;
+              var9 = (int)var8.key;
               var10 = (tn) (this.field_r.a((byte) -97, (long)var9));
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
@@ -1142,7 +1142,7 @@ class l extends cg {
               }
             } else {
               if (var6_int == 0) {
-                break L2;
+                break scanLoop1;
               }
             }
             param1.a();
@@ -1233,13 +1233,13 @@ class l extends cg {
         while (true) {
           stackIn_7_0 = var3;
           stackIn_7_1 = this.field_p;
-          L5: {
+          regionExit1: {
             if (stackIn_7_0 == stackIn_7_1) {
-              L8: while (true) {
+              scanLoop2: while (true) {
                 stackIn_30_0 = this.field_w.field_a[var2];
                 stackIn_30_1 = var3;
                 if (var7 != 0) {
-                  break L5;
+                  break regionExit1;
                 }
                 if (stackIn_30_0 == stackIn_30_1) {
                   this.field_w.e(var2);
@@ -1251,7 +1251,7 @@ class l extends cg {
                     this.field_w.f(var2);
                     if (!this.field_w.d() &&
                       var7 == 0) {
-                      break L8;
+                      break scanLoop2;
                     }
                     if (this.field_x != null) {
                       this.a(this.field_x, this.field_t, (byte) 80);
@@ -1261,7 +1261,7 @@ class l extends cg {
                     if (this.field_t &&
                       var3 != 0) {
                       this.field_w.a(var4);
-                      break L8;
+                      break scanLoop2;
                     }
                     this.a(true, -127);
                     this.field_w.a();

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ob extends vg {
+abstract class ob extends IntrusiveNode {
     float field_j;
     static int field_i;
     int field_h;
@@ -70,7 +70,7 @@ abstract class ob extends vg {
           po.field_l = su.a(wd.field_c, param0, (byte) 25);
           lh.field_b = su.a(lha.field_l, param0, (byte) 127);
           vua.field_A = su.a(wj.field_a, param0, (byte) 126);
-          dn.field_d = ak.a(param0, qb.field_e, -100);
+          dn.field_d = ak.a(param0, ProxySocketConnector.field_e, -100);
           ufa.field_r = ak.a(param0, via.field_a, param1 ^ -17261);
           bm.field_f = ak.a(param0, gda.field_d, -112);
           ega.field_e = su.a(nm.field_i, param0, (byte) 126);

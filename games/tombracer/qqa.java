@@ -53,11 +53,11 @@ final class qqa extends hha {
           if (!param3) {
             field_n = (boolean[]) null;
           }
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param1.length > var5) {
               stackIn_16_0 = param0.field_g.length;
               if (var6 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_16_0 != param0.field_h &&
                 param0.c((byte) 106) == param1[var5]) {
@@ -163,7 +163,7 @@ final class qqa extends hha {
               var50[var15] = -2147483647;
               var15++;
             } while (var23 == 0);
-            L0: while (true) {
+            scanLoop1: while (true) {
               stackIn_12_0 = param2;
               stackIn_12_1 = var15;
               if (stackIn_12_0 > stackIn_12_1) {
@@ -223,7 +223,7 @@ final class qqa extends hha {
               var15 = 0;
               do {
                 if (var15 >= var8) {
-                  break L0;
+                  break scanLoop1;
                 }
                 var16 = param1.field_u[var15];
                 if (var16 > 0) {
@@ -281,7 +281,7 @@ final class qqa extends hha {
                 }
                 var15++;
               } while (var23 == 0);
-              break L0;
+              break scanLoop1;
             }
           }
           stackIn_58_0 = new ima((int[]) (var4), (int[]) (var5), (int[]) (var6), (float[][]) (var7));

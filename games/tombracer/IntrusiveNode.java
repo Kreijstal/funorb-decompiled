@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vg {
-    vg field_e;
+class IntrusiveNode {
+    IntrusiveNode previous;
     static String field_b;
-    vg field_a;
-    long field_d;
+    IntrusiveNode next;
+    long key;
     static String[] field_c;
 
     final void p(int param0) {
-        if (this.field_e == null) {
+        if (this.previous == null) {
           return;
         }
         if (param0 >= 0) {
-          this.field_e.field_a = this.field_a;
-          this.field_a.field_e = this.field_e;
-          this.field_a = null;
-          this.field_e = null;
+          this.previous.next = this.next;
+          this.next.previous = this.previous;
+          this.next = null;
+          this.previous = null;
           return;
         }
     }
@@ -37,7 +37,7 @@ class vg {
     }
 
     final boolean l(byte param0) {
-        if (this.field_e == null) {
+        if (this.previous == null) {
           return false;
         }
         int var2 = -24 / ((-27 - param0) / 56);

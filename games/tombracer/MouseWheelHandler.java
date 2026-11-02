@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hfa extends qaa implements java.awt.event.MouseWheelListener {
+final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
     private int field_b;
 
     final void a(int param0, java.awt.Component param1) {
@@ -11,7 +11,7 @@ final class hfa extends qaa implements java.awt.event.MouseWheelListener {
         }
     }
 
-    hfa() {
+    MouseWheelHandler() {
         this.field_b = 0;
     }
 

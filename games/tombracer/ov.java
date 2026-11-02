@@ -75,7 +75,7 @@ final class ov extends nv implements mra {
           }
         }
         var3 = this.field_g.g(-25787) >> 2;
-        var4 = hua.a((byte) 111, var3);
+        var4 = MouseInputHandler.a((byte) 111, var3);
         var5 = bua.a(0, var3);
         var6 = 131072 + iia.d(this.field_g.c(param0 - 5467), this.field_g.a((byte) 55), param0 ^ 5416) / 2;
         var7 = this.field_g.d(3) + gqa.a(var4, (byte) 24, var6);

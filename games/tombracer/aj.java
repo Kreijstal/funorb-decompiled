@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends vg {
+final class aj extends IntrusiveNode {
     int[] field_i;
     naa[] field_j;
     int[] field_m;

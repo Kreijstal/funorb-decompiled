@@ -141,7 +141,7 @@ final class roa {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        qea var15 = null;
+        IsaacCipher var15 = null;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -156,7 +156,7 @@ final class roa {
         try {
           if (0 >= this.field_v &&
             this.a(12111)) {
-            var11_int = hua.a((byte) 122, param0 >> 2);
+            var11_int = MouseInputHandler.a((byte) 122, param0 >> 2);
             if (param9) {
               this.field_w = 123;
             }
@@ -173,7 +173,7 @@ final class roa {
               if (0 < this.field_s) {
                 var17 = var17 + (var15.a(this.field_s, 0) - this.field_s / 2);
               }
-              var18 = hua.a((byte) 110, var17 >> 2);
+              var18 = MouseInputHandler.a((byte) 110, var17 >> 2);
               var19 = bua.a(0, var17 >> 2);
               var20 = this.field_n;
               if (this.field_w > 0) {

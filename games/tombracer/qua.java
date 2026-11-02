@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qua extends vg {
+final class qua extends IntrusiveNode {
     byte[] field_g;
     ji field_f;
 

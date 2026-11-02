@@ -25,7 +25,7 @@ final class ina {
           df.field_J = tc.a(ea.field_l, param1 - 8829, param0);
           ta.field_ub = tc.a(vk.field_e, -8829, param0);
           rl.field_t = tc.a(dq.field_h, -8829, param0);
-          jna.field_j = tc.a(gta.field_f, param1 ^ -8829, param0);
+          GameApplet.field_j = tc.a(gta.field_f, param1 ^ -8829, param0);
           gca.field_g = tc.a(cba.field_b, param1 ^ -8829, param0);
           mh.field_F = tc.a(an.field_g, -8829, param0);
           koa.field_b = tc.a(nj.field_p, -8829, param0);
@@ -63,8 +63,8 @@ final class ina {
             rl.field_t[0].O(256, 256, 256);
             rl.field_t[1].O(192, 192, 192);
             rl.field_t[6].O(384, 384, 384);
-            jna.field_j[1].O(512, 512, 512);
-            jna.field_j[0].O(512, 512, 512);
+            GameApplet.field_j[1].O(512, 512, 512);
+            GameApplet.field_j[0].O(512, 512, 512);
             df.field_J[27].O(192, 156, 192);
             df.field_J[76].O(256, 256, 256);
             df.field_J[62].O(96, 96, 96);

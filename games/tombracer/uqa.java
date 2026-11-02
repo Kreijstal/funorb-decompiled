@@ -51,7 +51,7 @@ final class uqa extends osa {
               var5 = 1;
             }
             var8 = qva.a((byte) -41, var5 << 16, var4 << 16);
-            var9 = hua.a((byte) 110, var8 >> 2);
+            var9 = MouseInputHandler.a((byte) 110, var8 >> 2);
             var10 = bua.a(0, var8 >> 2);
             var11 = gqa.a(var9, (byte) 24, this.field_u >> 8) << 8;
             var12 = gqa.a(var10, (byte) 24, this.field_u >> 8) << 8;
@@ -66,7 +66,7 @@ final class uqa extends osa {
             var5 = 1;
           }
           var8Lifetime3 = qva.a((byte) -41, var5 << 16, var4 << 16);
-          var9Lifetime3 = hua.a((byte) 110, var8Lifetime3 >> 2);
+          var9Lifetime3 = MouseInputHandler.a((byte) 110, var8Lifetime3 >> 2);
           var10Lifetime3 = bua.a(0, var8Lifetime3 >> 2);
           var11Lifetime3 = gqa.a(var9Lifetime3, (byte) 24, this.field_u >> 8) << 8;
           var12Lifetime3 = gqa.a(var10Lifetime3, (byte) 24, this.field_u >> 8) << 8;
@@ -81,7 +81,7 @@ final class uqa extends osa {
             var5 = 1;
           }
           var8Lifetime1 = qva.a((byte) -41, var5 << 16, var4 << 16);
-          var9Lifetime1 = hua.a((byte) 110, var8Lifetime1 >> 2);
+          var9Lifetime1 = MouseInputHandler.a((byte) 110, var8Lifetime1 >> 2);
           var10Lifetime1 = bua.a(0, var8Lifetime1 >> 2);
           var11Lifetime1 = gqa.a(var9Lifetime1, (byte) 24, this.field_u >> 8) << 8;
           var12Lifetime1 = gqa.a(var10Lifetime1, (byte) 24, this.field_u >> 8) << 8;
@@ -96,7 +96,7 @@ final class uqa extends osa {
           var5 = 1;
         }
         var8Lifetime2 = qva.a((byte) -41, var5 << 16, var4 << 16);
-        var9Lifetime2 = hua.a((byte) 110, var8Lifetime2 >> 2);
+        var9Lifetime2 = MouseInputHandler.a((byte) 110, var8Lifetime2 >> 2);
         var10Lifetime2 = bua.a(0, var8Lifetime2 >> 2);
         var11Lifetime2 = gqa.a(var9Lifetime2, (byte) 24, this.field_u >> 8) << 8;
         var12Lifetime2 = gqa.a(var10Lifetime2, (byte) 24, this.field_u >> 8) << 8;

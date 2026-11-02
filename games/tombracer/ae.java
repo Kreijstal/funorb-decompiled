@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ae extends vg {
+class ae extends IntrusiveNode {
     bja field_l;
     int field_p;
     boolean field_f;

@@ -169,8 +169,8 @@ final class fja extends qra {
             var6Lifetime1 = 256;
             var7_intLifetime1 = 64;
             qa.a(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            be.a(dpa.field_c, 0, qr.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
-            be.a(voa.field_q + ": " + this.field_h.j(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
+            SocketConnector.a(dpa.field_c, 0, qr.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
+            SocketConnector.a(voa.field_q + ": " + this.field_h.j(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             qa.a(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
@@ -186,7 +186,7 @@ final class fja extends qra {
             if (50 >= this.field_q) {
               var4 = jh.field_J;
             } else {
-              var4 = hua.field_b.toUpperCase();
+              var4 = MouseInputHandler.field_b.toUpperCase();
             }
             var5_intLifetime1Lifetime1 = 40 + ds.field_n.a(var4, (byte) 41);
             var6Lifetime1Lifetime1 = aaa.a(false) / 2;

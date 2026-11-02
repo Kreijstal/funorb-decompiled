@@ -114,12 +114,12 @@ final class hf implements ac, gs {
         if (-17825792 > param2) {
           return;
         }
-        L0: {
-          L1: {
-            L2: {
-              L3: {
-                L4: {
-                  L5: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
+              regionExit4: {
+                regionExit5: {
+                  regionExit6: {
                     var5 = dfa.a(-this.field_p.g(-25787) >> 2, 2048, -115);
                     var6 = 0;
                     var7 = this.field_f;
@@ -127,57 +127,57 @@ final class hf implements ac, gs {
                       case 32:
                         break;
                       case 33:
-                        break L5;
+                        break regionExit6;
                       case 26:
-                        break L4;
+                        break regionExit5;
                       case 2:
-                        break L3;
+                        break regionExit4;
                       default:
-                        break L1;
+                        break regionExit2;
                       case 36:
                         if (var16 == 0) {
-                          break L2;
+                          break regionExit3;
                         }
                       case 3:
                         var6 = 2883584;
                         if (var16 == 0) {
-                          break L0;
+                          break regionExit1;
                         }
                         break;
                     }
                     var6 = 1835008;
                     if (var16 == 0) {
-                      break L0;
+                      break regionExit1;
                     }
                   }
                   var6 = 1835008;
                   if (var16 == 0) {
-                    break L0;
+                    break regionExit1;
                   }
                 }
                 var7 = this.field_p.H(0);
                 if (var7 == 6) {
                   var6 = 1835008;
                   if (var16 == 0) {
-                    break L0;
+                    break regionExit1;
                   }
                 }
                 if (var7 != 2) {
-                  break L0;
+                  break regionExit1;
                 }
                 var6 = 1835008;
                 if (var16 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               }
               var6 = 1835008;
               if (var16 == 0) {
-                break L0;
+                break regionExit1;
               }
             }
             var6 = 2359296;
             if (var16 == 0) {
-              break L0;
+              break regionExit1;
             }
           }
           var6 = -262144;

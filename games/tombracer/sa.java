@@ -180,7 +180,7 @@ final class sa extends wda {
         var7 = tia.a(var6, var4, -29543) - tia.a(-256, 0, -29543);
         for (var7 = var7 * -1; var7 < 0; var7 += 8192) {
         }
-        L2: {
+        regionExit1: {
           var8 = var7 - this.field_n.g(-25787);
           if (0 < this.field_s) {
             while (var8 < -4096) {
@@ -198,7 +198,7 @@ final class sa extends wda {
                 var8 = -this.field_s;
                 this.field_n.c(false, var8);
               }
-              break L2;
+              break regionExit1;
             }
           }
           this.field_n.c(false, var8);

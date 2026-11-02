@@ -271,7 +271,7 @@ class rj extends ae {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!jna.a(false, param1, param2, param0)) {
+          if (!GameApplet.a(false, param1, param2, param0)) {
             return null;
           }
           if (param3 != -82) {

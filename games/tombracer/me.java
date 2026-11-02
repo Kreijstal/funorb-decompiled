@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class me extends vg {
+abstract class me extends IntrusiveNode {
     boolean field_h;
     qh field_i;
     static String field_f;

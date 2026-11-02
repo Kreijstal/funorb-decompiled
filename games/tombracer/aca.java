@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aca extends vg {
+final class aca extends IntrusiveNode {
     int field_j;
     static String[] field_h;
     static byte[] field_i;
@@ -52,7 +52,7 @@ final class aca extends vg {
             stackIn_2_0 = (hea) null;
             return stackIn_2_0;
           }
-          if (!jna.a(false, param4, param1, param2)) {
+          if (!GameApplet.a(false, param4, param1, param2)) {
             return null;
           }
           stackIn_7_0 = fq.a(param0.a(false, param1, param4), (byte) 103);

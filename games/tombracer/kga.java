@@ -281,7 +281,7 @@ final class kga extends dg {
         if (this.field_t != 2) {
           this.field_p = this.field_p + 32;
           this.field_m = this.field_m + 96;
-          this.field_r = 524288 + hua.a((byte) 119, dfa.a(this.field_p, 2048, -122)) * 8;
+          this.field_r = 524288 + MouseInputHandler.a((byte) 119, dfa.a(this.field_p, 2048, -122)) * 8;
           return;
         }
     }

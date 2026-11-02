@@ -85,7 +85,7 @@ final class tna extends loa {
         }
     }
 
-    tna(qea param0) {
+    tna(IsaacCipher param0) {
         super(param0);
     }
 

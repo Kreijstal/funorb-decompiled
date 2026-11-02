@@ -204,7 +204,7 @@ final class no extends me {
             var2 = var2 + var4;
           }
           qa.a(var3, var2, (byte) 70, var6, aq.field_a, var7);
-          be.a(var18, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13);
+          SocketConnector.a(var18, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13);
           lva.field_m[this.field_n].a(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
           return;
         }
@@ -222,7 +222,7 @@ final class no extends me {
           var2 = var2 + var4;
         }
         qa.a(var3, var2, (byte) 70, var6, aq.field_a, var7);
-        be.a(var17, 1, eda.field_f, 16777215, 30, var12Lifetime1, 1, var10Lifetime1 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13Lifetime1);
+        SocketConnector.a(var17, 1, eda.field_f, 16777215, 30, var12Lifetime1, 1, var10Lifetime1 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13Lifetime1);
         lva.field_m[this.field_n].a(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
     }
 

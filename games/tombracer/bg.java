@@ -96,7 +96,7 @@ final class bg extends wda {
             var5 = 1;
           }
           var8Lifetime2 = qva.a((byte) -73, var5, var4);
-          var9Lifetime2 = hua.a((byte) 107, var8Lifetime2 >> 2);
+          var9Lifetime2 = MouseInputHandler.a((byte) 107, var8Lifetime2 >> 2);
           var10Lifetime2 = bua.a(0, var8Lifetime2 >> 2);
           var11Lifetime2 = doa.a(2, this.field_v, var9Lifetime2);
           var12 = doa.a(2, this.field_v, var10Lifetime2);
@@ -174,7 +174,7 @@ final class bg extends wda {
           this.field_n.a((byte) -120, var10Lifetime1, var11Lifetime1);
         } else {
           var8Lifetime1 = qva.a((byte) -73, var5, var4);
-          var9Lifetime1 = hua.a((byte) 107, var8Lifetime1 >> 2);
+          var9Lifetime1 = MouseInputHandler.a((byte) 107, var8Lifetime1 >> 2);
           var10Lifetime1 = bua.a(0, var8Lifetime1 >> 2);
           var11Lifetime1 = doa.a(2, this.field_v, var9Lifetime1);
           var12Lifetime1 = doa.a(2, this.field_v, var10Lifetime1);

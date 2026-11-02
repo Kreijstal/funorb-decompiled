@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lk extends vg implements qn, fo, noa {
+final class lk extends IntrusiveNode implements qn, fo, noa {
     private int field_o;
     private int field_p;
     private bca field_m;

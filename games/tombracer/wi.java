@@ -51,7 +51,7 @@ final class wi extends wda {
         int var9Lifetime2Lifetime1;
         var2 = this.field_p + this.field_n.q((byte) -80);
         if (0 >= this.field_r) {
-          var3 = hua.a((byte) 100, var2 >> 2);
+          var3 = MouseInputHandler.a((byte) 100, var2 >> 2);
           var6 = -112 % ((param0 + 69) / 42);
           var4 = bua.a(0, var2 >> 2);
           var5 = doa.a(2, this.field_t, var3);
@@ -150,7 +150,7 @@ final class wi extends wda {
           return;
         }
         if (this.field_o + this.field_t <= this.field_r) {
-          var3Lifetime1 = hua.a((byte) 100, var2 >> 2);
+          var3Lifetime1 = MouseInputHandler.a((byte) 100, var2 >> 2);
           var6Lifetime1 = -112 % ((param0 + 69) / 42);
           var4Lifetime1 = bua.a(0, var2 >> 2);
           var5Lifetime1 = doa.a(2, this.field_t, var3Lifetime1);
@@ -249,7 +249,7 @@ final class wi extends wda {
           return;
         }
         this.field_t = this.field_r - this.field_o;
-        var3Lifetime2 = hua.a((byte) 100, var2 >> 2);
+        var3Lifetime2 = MouseInputHandler.a((byte) 100, var2 >> 2);
         var6Lifetime2 = -112 % ((param0 + 69) / 42);
         var4Lifetime2 = bua.a(0, var2 >> 2);
         var5Lifetime2 = doa.a(2, this.field_t, var3Lifetime2);

@@ -45,14 +45,14 @@ final class js extends dr {
         hha discarded$2 = null;
         int var2_int;
         hha var2;
-        vg var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        vg var6;
-        vg var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        vg var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = TombRacer.field_G ? 1 : 0;
         if (null != this.field_f) {
@@ -63,7 +63,7 @@ final class js extends dr {
             var2_int = 1;
             var3 = this.field_f.f(-80);
             while (var3 != null) {
-              var4 = (int)var3.field_d;
+              var4 = (int)var3.key;
               if (this.field_n[var4] == 0) {
                 discarded$1 = this.a(1, param0 ^ -991, var4);
               }
@@ -74,19 +74,19 @@ final class js extends dr {
               }
               var3 = this.field_f.e(124);
             }
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (this.field_m < this.field_k.field_c.length) {
                 if (this.field_k.field_c[this.field_m] != 0) {
                   if (this.field_i.field_b >= 250) {
                     var2_int = 0;
-                    break L3;
+                    break scanLoop1;
                   }
                   if (0 == this.field_n[this.field_m]) {
                     discarded$0 = this.a(1, param0 ^ -988, this.field_m);
                   }
                   if (0 == this.field_n[this.field_m]) {
-                    var7 = new vg();
-                    var7.field_d = (long)this.field_m;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_m;
                     var2_int = 0;
                     this.field_f.b((byte) -91, var7);
                   }
@@ -107,7 +107,7 @@ final class js extends dr {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_f.f(param0 ^ -936);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_d;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_n[var4Lifetime1] != 1) {
                   discarded$3 = this.a(2, -52, var4Lifetime1);
                 }
@@ -128,8 +128,8 @@ final class js extends dr {
                     discarded$2 = this.a(2, 126, this.field_m);
                   }
                   if (this.field_n[this.field_m] != 1) {
-                    var6 = new vg();
-                    var6.field_d = (long)this.field_m;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_m;
                     this.field_f.b((byte) -96, var6);
                     var2_intLifetime1 = 0;
                   }
@@ -215,9 +215,9 @@ final class js extends dr {
         if (null == this.a(true)) {
           return;
         }
-        vg var2 = this.field_b.f(-80);
+        IntrusiveNode var2 = this.field_b.f(-80);
         while (var2 != null) {
-          var3 = (int)var2.field_d;
+          var3 = (int)var2.key;
           if (0 > var3) {
             var2.p(91);
           } else {
@@ -407,7 +407,7 @@ final class js extends dr {
               var4 = this.field_u.a(param2, true, this.field_j, -21, (byte) 2);
             }
           }
-          this.field_p.a((long)param2, 118, (vg) (var4));
+          this.field_p.a((long)param2, 118, (IntrusiveNode) (var4));
         }
         if (((hha) (var4)).field_m) {
           return null;
@@ -464,7 +464,7 @@ final class js extends dr {
               return null;
             }
             var4 = this.field_u.a(param2, true, this.field_j, -21, (byte) 2);
-            this.field_p.a((long)param2, 117, (vg) (var4));
+            this.field_p.a((long)param2, 117, (IntrusiveNode) (var4));
             return null;
           }
         }
@@ -505,7 +505,7 @@ final class js extends dr {
           }
           if (!this.field_u.d(-21)) {
             var4 = this.field_u.a(param2, true, this.field_j, -21, (byte) 2);
-            this.field_p.a((long)param2, 125, (vg) (var4));
+            this.field_p.a((long)param2, 125, (IntrusiveNode) (var4));
           }
           return null;
         }

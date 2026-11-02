@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dda extends vg {
+final class dda extends IntrusiveNode {
     static int[] field_f;
     private bs field_g;
 

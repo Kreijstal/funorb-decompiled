@@ -52,7 +52,7 @@ final class ot extends lba {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!jna.a(false, param1, param0, param2)) {
+          if (!GameApplet.a(false, param1, param0, param2)) {
             return null;
           }
           if (param3) {

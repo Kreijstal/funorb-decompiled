@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nv extends vg implements lj, fo, noa, gr {
+abstract class nv extends IntrusiveNode implements lj, fo, noa, gr {
     boolean field_f;
     static String field_h;
     fsa field_g;
@@ -313,9 +313,9 @@ abstract class nv extends vg implements lj, fo, noa, gr {
         }
     }
 
-    final qea o(byte param0) {
+    final IsaacCipher o(byte param0) {
         if (param0 != 46) {
-          return (qea) null;
+          return (IsaacCipher) null;
         }
         return this.field_g.y(1751085328);
     }

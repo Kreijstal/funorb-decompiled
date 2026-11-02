@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fsa extends vg implements lj, ew, fo, gma, ffa, noa, qn, t {
+final class fsa extends IntrusiveNode implements lj, ew, fo, gma, ffa, noa, qn, t {
     private vna field_K;
     static jea field_q;
     static int field_m;
@@ -638,7 +638,7 @@ final class fsa extends vg implements lj, ew, fo, gma, ffa, noa, qn, t {
     final void x(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_X != null) {
-          this.field_g = hua.a((byte) 124, -this.field_X.g(-25787) >> 2);
+          this.field_g = MouseInputHandler.a((byte) 124, -this.field_X.g(-25787) >> 2);
           this.field_w = bua.a(0, -this.field_X.g(param0 - 25727) >> 2);
         }
         if (param0 != -60) {
@@ -1930,9 +1930,9 @@ final class fsa extends vg implements lj, ew, fo, gma, ffa, noa, qn, t {
         }
     }
 
-    final qea y(int param0) {
+    final IsaacCipher y(int param0) {
         if (param0 != 1751085328) {
-          return (qea) null;
+          return (IsaacCipher) null;
         }
         return this.field_y.q(param0 - 1751085231);
     }

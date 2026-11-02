@@ -149,7 +149,7 @@ final class wh extends nv implements ut {
           }
         }
         this.field_x = this.field_g.g(-25787) >> 2;
-        this.field_E = hua.a((byte) 102, this.field_x);
+        this.field_E = MouseInputHandler.a((byte) 102, this.field_x);
         this.field_o = bua.a(0, this.field_x);
         var6 = this.field_g.P(0) << 16;
         if (!this.field_D) {

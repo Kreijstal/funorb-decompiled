@@ -68,7 +68,7 @@ final class rf {
             stackIn_24_0 = bq.field_b;
             return stackIn_24_0;
           }
-          if (qaa.a(2180, param1)) {
+          if (MouseWheelInput.a(2180, param1)) {
             stackIn_28_0 = gl.$cfr$intArgs$a$53ce4ab4c593(119, vra.field_c, new String[]{param1});
             return stackIn_28_0;
           }

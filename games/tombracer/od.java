@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class od extends vg {
+class od extends IntrusiveNode {
     static ura field_h;
     static int field_i;
     od field_f;

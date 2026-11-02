@@ -128,7 +128,7 @@ final class ft {
           var21Lifetime2 = uoa.field_f;
           var22Lifetime2 = uoa.field_g;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param0.field_I > var23Lifetime2) {
               var24Lifetime1 = param0.field_l[var23Lifetime2];
               var25Lifetime1 = param0.field_h[var23Lifetime2];
@@ -211,7 +211,7 @@ final class ft {
                   stackIn_69_0 = ~ada.field_y.length;
                   stackIn_69_1 = ~var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_69_0 >= stackIn_69_1) {
                     break;

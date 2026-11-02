@@ -164,7 +164,7 @@ final class ro extends wda {
           }
           var10 = qva.a((byte) -99, var7, var6);
           if (!this.field_o) {
-            var11 = hua.a((byte) 126, var10 >> 2);
+            var11 = MouseInputHandler.a((byte) 126, var10 >> 2);
             var12 = bua.a(0, var10 >> 2);
             var13 = doa.a(2, this.field_r, var11);
             var14 = doa.a(2, this.field_r, var12);
@@ -172,7 +172,7 @@ final class ro extends wda {
             return;
           }
           if (!this.field_s) {
-            var11Lifetime5 = hua.a((byte) 126, var10 >> 2);
+            var11Lifetime5 = MouseInputHandler.a((byte) 126, var10 >> 2);
             var12Lifetime5 = bua.a(0, var10 >> 2);
             var13Lifetime6 = doa.a(2, this.field_r, var11Lifetime5);
             var14Lifetime6 = doa.a(2, this.field_r, var12Lifetime5);
@@ -184,7 +184,7 @@ final class ro extends wda {
           if (this.field_v == 0) {
             this.field_n.c(false, -var11Lifetime6);
             this.field_s = false;
-            var11Lifetime6 = hua.a((byte) 126, var10 >> 2);
+            var11Lifetime6 = MouseInputHandler.a((byte) 126, var10 >> 2);
             var12Lifetime6 = bua.a(0, var10 >> 2);
             var13Lifetime7 = doa.a(2, this.field_r, var11Lifetime6);
             var14Lifetime7 = doa.a(2, this.field_r, var12Lifetime6);
@@ -194,7 +194,7 @@ final class ro extends wda {
           if (var12Lifetime6 <= this.field_v) {
             this.field_n.c(false, -var11Lifetime6);
             this.field_s = false;
-            var11Lifetime6 = hua.a((byte) 126, var10 >> 2);
+            var11Lifetime6 = MouseInputHandler.a((byte) 126, var10 >> 2);
             var12Lifetime6 = bua.a(0, var10 >> 2);
             var13Lifetime8 = doa.a(2, this.field_r, var11Lifetime6);
             var14Lifetime8 = doa.a(2, this.field_r, var12Lifetime6);
@@ -205,7 +205,7 @@ final class ro extends wda {
           if (this.field_u) {
             return;
           }
-          var11Lifetime7 = hua.a((byte) 126, var10 >> 2);
+          var11Lifetime7 = MouseInputHandler.a((byte) 126, var10 >> 2);
           var12Lifetime7 = bua.a(0, var10 >> 2);
           var13Lifetime9 = doa.a(2, this.field_r, var11Lifetime7);
           var14Lifetime9 = doa.a(2, this.field_r, var12Lifetime7);
@@ -232,7 +232,7 @@ final class ro extends wda {
         }
         var10Lifetime1 = qva.a((byte) -99, var7Lifetime1, var6Lifetime1);
         if (!this.field_o) {
-          var11Lifetime1 = hua.a((byte) 126, var10Lifetime1 >> 2);
+          var11Lifetime1 = MouseInputHandler.a((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime1 = bua.a(0, var10Lifetime1 >> 2);
           var13Lifetime1 = doa.a(2, this.field_r, var11Lifetime1);
           var14Lifetime1 = doa.a(2, this.field_r, var12Lifetime1);
@@ -240,7 +240,7 @@ final class ro extends wda {
           return;
         }
         if (!this.field_s) {
-          var11Lifetime2 = hua.a((byte) 126, var10Lifetime1 >> 2);
+          var11Lifetime2 = MouseInputHandler.a((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime2 = bua.a(0, var10Lifetime1 >> 2);
           var13Lifetime2 = doa.a(2, this.field_r, var11Lifetime2);
           var14Lifetime2 = doa.a(2, this.field_r, var12Lifetime2);
@@ -252,7 +252,7 @@ final class ro extends wda {
         if (this.field_v == 0) {
           this.field_n.c(false, -var11Lifetime3);
           this.field_s = false;
-          var11Lifetime3 = hua.a((byte) 126, var10Lifetime1 >> 2);
+          var11Lifetime3 = MouseInputHandler.a((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime3 = bua.a(0, var10Lifetime1 >> 2);
           var13Lifetime3 = doa.a(2, this.field_r, var11Lifetime3);
           var14Lifetime3 = doa.a(2, this.field_r, var12Lifetime3);
@@ -262,7 +262,7 @@ final class ro extends wda {
         if (var12Lifetime3 <= this.field_v) {
           this.field_n.c(false, -var11Lifetime3);
           this.field_s = false;
-          var11Lifetime3 = hua.a((byte) 126, var10Lifetime1 >> 2);
+          var11Lifetime3 = MouseInputHandler.a((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime3 = bua.a(0, var10Lifetime1 >> 2);
           var13Lifetime4 = doa.a(2, this.field_r, var11Lifetime3);
           var14Lifetime4 = doa.a(2, this.field_r, var12Lifetime3);
@@ -273,7 +273,7 @@ final class ro extends wda {
         if (this.field_u) {
           return;
         }
-        var11Lifetime4 = hua.a((byte) 126, var10Lifetime1 >> 2);
+        var11Lifetime4 = MouseInputHandler.a((byte) 126, var10Lifetime1 >> 2);
         var12Lifetime4 = bua.a(0, var10Lifetime1 >> 2);
         var13Lifetime5 = doa.a(2, this.field_r, var11Lifetime4);
         var14Lifetime5 = doa.a(2, this.field_r, var12Lifetime4);

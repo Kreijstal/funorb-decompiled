@@ -212,7 +212,7 @@ public final class cta extends eo {
           if (jagdx.ah.a(param1.a(param5, var10), 10643)) {
             return false;
           }
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (param2 >= 0) {
               if (param2 != 1) {
                 var8 = 0 + param2;
@@ -226,7 +226,7 @@ public final class cta extends eo {
                         param1.CheckDeviceMultiSampleType(param5, param3, field_fd[var11], true, var8) == 0)) {
                         var7 = field_md[var11];
                         var6 = field_fd[var12];
-                        break L1;
+                        break scanLoop1;
                       }
                     }
                   }

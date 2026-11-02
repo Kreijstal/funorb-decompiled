@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
+abstract class csa extends IntrusiveNode implements noa, qn, fo, gma, lj, ew {
     int field_m;
     private int field_q;
     int field_k;
@@ -684,7 +684,7 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
         csa var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        this.field_f = hua.a((byte) 106, -this.g(-25787) >> 2);
+        this.field_f = MouseInputHandler.a((byte) 106, -this.g(-25787) >> 2);
         this.field_h = bua.a(0, -this.g(-25787) >> 2);
         for (var2 = 0; this.field_t.length > var2; var2++) {
           this.field_t[var2].a(this.field_f, this.field_h, (byte) 98);

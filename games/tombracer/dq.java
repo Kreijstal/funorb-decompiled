@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dq extends vg {
+final class dq extends IntrusiveNode {
     int field_g;
     int field_i;
     static oc[] field_h;

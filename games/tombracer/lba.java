@@ -235,13 +235,13 @@ class lba extends fi {
           this.field_i = 0;
           return;
         }
-        qea var3 = (qea) null;
-        lba.a((byte) 11, (qea) null, 6);
+        IsaacCipher var3 = (IsaacCipher) null;
+        lba.a((byte) 11, (IsaacCipher) null, 6);
         this.field_m = 0;
         this.field_i = 0;
     }
 
-    final static loa a(byte param0, qea param1, int param2) {
+    final static loa a(byte param0, IsaacCipher param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         loa stackIn_3_0 = null;

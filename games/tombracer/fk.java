@@ -68,7 +68,7 @@ final class fk {
         } else {
           this.field_f = false;
         }
-        this.field_h.a((byte) 116, (vg) (var4));
+        this.field_h.a((byte) 116, (IntrusiveNode) (var4));
         return this.field_a[var4.field_g];
     }
 

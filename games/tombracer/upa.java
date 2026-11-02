@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class upa extends vg {
+final class upa extends IntrusiveNode {
     int[][] field_m;
     int field_j;
     int field_g;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jha extends vg {
+final class jha extends IntrusiveNode {
     private String field_n;
     private int field_f;
     private int field_l;

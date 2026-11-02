@@ -61,7 +61,7 @@ final class bn extends nv {
         var10 = var5 >> 17;
         var11 = et.b(var10, var9, -1);
         var12 = this.o((byte) 46).a(8192, 0);
-        var13 = hua.a((byte) 98, var12 >> 2);
+        var13 = MouseInputHandler.a((byte) 98, var12 >> 2);
         var14 = bua.a(0, var12 >> 2);
         var16 = this.field_g.P(0);
         if (this.field_q) {

@@ -741,14 +741,14 @@ class tra extends rj {
             return stackIn_3_0;
           }
           var2_int = -1 + this.field_I;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (0 < var2_int) {
               stackOut_6_0 = this.field_o.charAt(var2_int - 1);
               stackIn_14_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               stackIn_14_1 = 32;
               if (var3 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_7_0 != stackIn_14_1) {
                 var2_int--;
@@ -991,11 +991,11 @@ class tra extends rj {
           }
           var3 = 99 / ((param0 - 37) / 56);
           var4 = 1 + this.field_I;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var2_int > var4) {
               stackIn_14_0 = ~this.field_o.charAt(-1 + var4);
               if (var5 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_14_0 != -33) {
                 var4++;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fg extends vg {
+final class fg extends IntrusiveNode {
     private static float[] field_x;
     private static float[] field_y;
     private static tm[] field_M;

@@ -1313,7 +1313,7 @@ final class pfa {
                 }
                 var2 = mt.a("get_ready", (byte) 104);
                 if (var2 != null) {
-                  hua.field_b = jaa.a((byte) 67, var2);
+                  MouseInputHandler.field_b = jaa.a((byte) 67, var2);
                 }
                 var2 = mt.a("gogogo", (byte) 106);
                 if (var2 != null) {
@@ -1449,7 +1449,7 @@ final class pfa {
                 }
                 var2 = mt.a("name_feng", (byte) 121);
                 if (null != var2) {
-                  vg.field_b = jaa.a((byte) 90, var2);
+                  IntrusiveNode.field_b = jaa.a((byte) 90, var2);
                 }
                 var2 = mt.a("name_hans", (byte) 126);
                 if (var2 != null) {
@@ -1983,27 +1983,27 @@ final class pfa {
                 }
                 var2 = mt.a("gameopttooltips,0,0", (byte) 110);
                 if (null != var2) {
-                  qaa.field_a[0][0] = jaa.a((byte) 68, var2);
+                  MouseWheelInput.field_a[0][0] = jaa.a((byte) 68, var2);
                 }
                 var2 = mt.a("gameopttooltips,0,1", (byte) 106);
                 if (var2 != null) {
-                  qaa.field_a[0][1] = jaa.a((byte) 58, var2);
+                  MouseWheelInput.field_a[0][1] = jaa.a((byte) 58, var2);
                 }
                 var2 = mt.a("gameopttooltips,0,2", (byte) 112);
                 if (var2 != null) {
-                  qaa.field_a[0][2] = jaa.a((byte) 66, var2);
+                  MouseWheelInput.field_a[0][2] = jaa.a((byte) 66, var2);
                 }
                 var2 = mt.a("gameopttooltips,0,3", (byte) 111);
                 if (var2 != null) {
-                  qaa.field_a[0][3] = jaa.a((byte) 46, var2);
+                  MouseWheelInput.field_a[0][3] = jaa.a((byte) 46, var2);
                 }
                 var2 = mt.a("gameopttooltips,1,0", (byte) 105);
                 if (null != var2) {
-                  qaa.field_a[1][0] = jaa.a((byte) 52, var2);
+                  MouseWheelInput.field_a[1][0] = jaa.a((byte) 52, var2);
                 }
                 var2 = mt.a("gameopttooltips,1,1", (byte) 111);
                 if (null != var2) {
-                  qaa.field_a[1][1] = jaa.a((byte) 57, var2);
+                  MouseWheelInput.field_a[1][1] = jaa.a((byte) 57, var2);
                 }
                 var2 = mt.a("tomb_names,0", (byte) 117);
                 if (var2 != null) {
@@ -2152,7 +2152,7 @@ final class pfa {
                   }
                   throw tba.a((Throwable) ((Object) stackIn_1831_0), ((StringBuilder) (Object) stackIn_1831_1).append(stackIn_1832_2).append(',').append(param1).append(')').toString());
                 }
-                if (jna.field_m) {
+                if (GameApplet.field_m) {
                   TombRacer.field_G = (var4 == 0);
                 }
             }

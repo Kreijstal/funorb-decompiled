@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class oga extends vg {
+abstract class oga extends IntrusiveNode {
     boolean field_h;
     cka field_g;
     static long field_f;

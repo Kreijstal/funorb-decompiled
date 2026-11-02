@@ -533,7 +533,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) 112, "game_options_changed");
                 if (var2 != null) {
-                  he.field_b = jaa.a((byte) 102, var2);
+                  DelegatingCanvas.field_b = jaa.a((byte) 102, var2);
                 }
                 var2 = dn.a((byte) -47, "players_x_of_y");
                 if (var2 != null) {
@@ -1761,7 +1761,7 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) -51, "waitingfor_fonts");
                 if (var2 != null) {
-                  hua.field_a = jaa.a((byte) 83, var2);
+                  MouseInputHandler.field_a = jaa.a((byte) 83, var2);
                 }
                 var2 = dn.a((byte) -109, "waitingfor_soundeffects");
                 if (var2 != null) {
@@ -2771,11 +2771,11 @@ final class jga extends eta {
                 }
                 var2 = dn.a((byte) 120, "rating_mode_long_name,0");
                 if (var2 != null) {
-                  vg.field_c[0] = jaa.a((byte) 41, var2);
+                  IntrusiveNode.field_c[0] = jaa.a((byte) 41, var2);
                 }
                 var2 = dn.a((byte) -18, "rating_mode_long_name,1");
                 if (null != var2) {
-                  vg.field_c[1] = jaa.a((byte) 102, var2);
+                  IntrusiveNode.field_c[1] = jaa.a((byte) 102, var2);
                 }
                 var2 = dn.a((byte) -46, "graphics_config_fixed_size");
                 if (null != var2) {
@@ -3039,8 +3039,8 @@ final class jga extends eta {
                   throw tba.a((Throwable) ((Object) stackIn_2620_0), ((StringBuilder) (Object) stackIn_2620_1).append(stackIn_2621_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2629_0 = (!jna.field_m);
-                  jna.field_m = stackIn_2629_0;
+                  stackIn_2629_0 = (!GameApplet.field_m);
+                  GameApplet.field_m = stackIn_2629_0;
                 }
             }
         }

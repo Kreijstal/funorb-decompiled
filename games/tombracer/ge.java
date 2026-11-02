@@ -94,7 +94,7 @@ abstract class ge extends kna {
 
     final void a(byte param0, mra param1, la param2) {
         RuntimeException var4 = null;
-        qea var5 = null;
+        IsaacCipher var5 = null;
         roa var6 = null;
         int var7 = 0;
         mg var8 = null;

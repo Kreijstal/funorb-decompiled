@@ -28,11 +28,11 @@ final class hg {
         this.field_a = (qm) null;
     }
 
-    final static be a(String param0, int param1, boolean param2) {
-        qb var3 = null;
+    final static SocketConnector a(String param0, int param1, boolean param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        qb stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -42,11 +42,11 @@ final class hg {
             var4 = (String) null;
             hg.a((String) null, -41, false);
           }
-          var3 = new qb();
-          ((be) ((Object) var3)).field_b = param1;
-          ((be) ((Object) var3)).field_a = param0;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).port = param1;
+          ((SocketConnector) ((Object) var3)).host = param0;
           stackIn_3_0 = var3;
-          return (be) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

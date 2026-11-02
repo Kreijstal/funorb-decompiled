@@ -273,7 +273,7 @@ final class lja {
             var7 = this.b(-13);
             var4 = var7;
             var5 = wp.a(127, this.field_i);
-            var6 = qaa.a(2180, this.field_i) ? 1 : 0;
+            var6 = MouseWheelInput.a(2180, this.field_i) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_f.a((byte) -64, 4, gl.$cfr$intArgs$a$53ce4ab4c593(92, ao.field_m, new String[]{var7}));

@@ -107,7 +107,7 @@ final class rja extends loa {
         }
     }
 
-    rja(qea param0) {
+    rja(IsaacCipher param0) {
         super(param0);
     }
 

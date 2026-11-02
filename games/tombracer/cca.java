@@ -18,7 +18,7 @@ final class cca extends rva {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!jna.a(false, param0, param3, param1)) {
+          if (!GameApplet.a(false, param0, param3, param1)) {
             stackIn_2_0 = null;
             return (iu[]) (stackIn_2_0);
           }

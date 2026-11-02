@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rha extends vg {
+final class rha extends IntrusiveNode {
     static String field_h;
     byte[] field_g;
     int field_i;

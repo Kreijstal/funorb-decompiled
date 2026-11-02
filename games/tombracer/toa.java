@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class toa extends vg {
+final class toa extends IntrusiveNode {
     int field_l;
     static boolean field_j;
     static String field_f;

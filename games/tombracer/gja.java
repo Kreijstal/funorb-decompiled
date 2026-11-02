@@ -419,7 +419,7 @@ final class gja extends ka {
           var14_ref = qqa.a(var8, param1, this.field_I, (byte) -6);
           var15 = new gta[param1.field_o];
           var16 = 0;
-          L41: while (true) {
+          scanLoop1: while (true) {
             if (var16 < param1.field_o) {
               var17_int = param1.field_a[var16];
               var18 = param1.field_t[var16];
@@ -434,7 +434,7 @@ final class gja extends ka {
               var27_int = -(var20 * var25_int) + var23_int * var22;
               stackIn_175_0 = -(var21 * var23_int) + var24_int * var20;
               if (var63 != 0) {
-                break L41;
+                break scanLoop1;
               }
               var28 = stackIn_175_0;
               while (true) {
@@ -502,7 +502,7 @@ final class gja extends ka {
             break;
           }
           var16 = stackIn_175_0;
-          L54: while (true) {
+          scanLoop2: while (true) {
             if (this.field_I > var16) {
               var17_int = var8[var16];
               var18 = 65535 & param1.field_A[var17_int];
@@ -794,7 +794,7 @@ final class gja extends ka {
                   stackIn_354_0 = var19;
                   stackIn_354_1 = var17_int;
                   if (var63 != 0) {
-                    break L54;
+                    break scanLoop2;
                   }
                   if (stackIn_354_0 != stackIn_354_1) {
                     var16++;
@@ -816,7 +816,7 @@ final class gja extends ka {
                   stackIn_354_0 = var17_int;
                   stackIn_354_1 = var21;
                   if (var63 != 0) {
-                    break L54;
+                    break scanLoop2;
                   }
                   if (stackIn_354_0 != stackIn_354_1) {
                     this.field_j[var16] = var18;
@@ -885,7 +885,7 @@ final class gja extends ka {
             var16 = 0;
             var17 = new int[256];
             var18 = 0;
-            L105: while (true) {
+            scanLoop3: while (true) {
               boolean decompiledFrameRemainder1 = true;
               if (this.field_I > var18) {
                 var19 = param1.field_D[var8[var18]];
@@ -897,7 +897,7 @@ final class gja extends ka {
                     this.field_q[var18] = array$5;
                     var17[var18] = 0;
                     var18++;
-                    break L105;
+                    break scanLoop3;
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -926,7 +926,7 @@ final class gja extends ka {
                   var17[var18] = 0;
                   var18++;
                   if (var63 != 0) {
-                    break L105;
+                    break scanLoop3;
                   }
                 }
               }
@@ -1048,7 +1048,7 @@ final class gja extends ka {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           var5_int = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var5_int < this.field_I) {
               var6_int = this.field_P[var5_int] & 65535;
               var7_int = (var6_int & 65039) >> 10;
@@ -1063,7 +1063,7 @@ final class gja extends ka {
                   var5_int++;
                   return;
                 }
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_20_0 != stackIn_20_1) {
                 var7_int = var7_int + (param3 * (-var7_int + param0) >> 7);
@@ -1080,7 +1080,7 @@ final class gja extends ka {
               continue;
             }
             if (this.field_u == null) {
-              break L2;
+              break scanLoop1;
             }
             var5_int = 0;
             while (true) {
@@ -2736,14 +2736,14 @@ final class gja extends ka {
           }
           boolean decompiledFrameCompleted3 = true;
           if (pca.b(this.field_h, 71, param4)) {
-            L67: {
+            regionExit1: {
               if (null != param2.field_M &&
                 param2.field_M.length >= this.field_I) {
                 param0.field_z = param2.field_z;
                 param0.field_M = param2.field_M;
                 param0.field_V = param2.field_V;
                 if (var13 == 0) {
-                  break L67;
+                  break regionExit1;
                 }
               }
               var11Lifetime4 = this.field_I;
@@ -2838,12 +2838,12 @@ final class gja extends ka {
             param0.field_gb = this.field_gb;
           }
           boolean decompiledFrameCompleted0 = true;
-          L81: {
+          regionExit2: {
             boolean decompiledFrameCompleted1 = true;
             if (!hk.a(param4, this.field_h, -93)) {
               param0.field_nb = this.field_nb;
               if (var13 == 0) {
-                break L81;
+                break regionExit2;
               }
             }
             if (param2.field_nb != null &&
@@ -2860,7 +2860,7 @@ final class gja extends ka {
               }
               if ((decompiledFrameCompleted1) &&
                 (var13 == 0)) {
-                break L81;
+                break regionExit2;
               }
             }
             if (decompiledFrameCompleted1) {
@@ -3128,7 +3128,7 @@ final class gja extends ka {
               if (this.field_q != null) {
                 var9 = 0;
                 var10 = 0;
-                L43: while (true) {
+                scanLoop1: while (true) {
                   if (var8_int > var10) {
                     var11_int = param1[var10];
                     stackIn_174_0 = var11_int;
@@ -3141,7 +3141,7 @@ final class gja extends ka {
                         var10++;
                         return;
                       }
-                      break L43;
+                      break scanLoop1;
                     }
                     if (stackIn_174_0 < stackIn_174_1) {
                       var12_ref_int__ = this.field_q[var11_int];
@@ -3179,7 +3179,7 @@ final class gja extends ka {
                     return;
                   }
                   if (this.field_u == null) {
-                    break L43;
+                    break scanLoop1;
                   }
                   var10 = 0;
                   while (true) {
@@ -3301,7 +3301,7 @@ final class gja extends ka {
             if (null != this.field_q) {
               var9 = 0;
               var10 = 0;
-              L12: while (true) {
+              scanLoop2: while (true) {
                 if (var10 < var8_int) {
                   var11_int = param1[var10];
                   stackIn_229_0 = this.field_q.length;
@@ -3314,7 +3314,7 @@ final class gja extends ka {
                       var10++;
                       return;
                     }
-                    break L12;
+                    break scanLoop2;
                   }
                   if (stackIn_229_0 > stackIn_229_1) {
                     var12_ref_int__ = this.field_q[var11_int];
@@ -3367,7 +3367,7 @@ final class gja extends ka {
                   return;
                 }
                 if (this.field_u == null) {
-                  break L12;
+                  break scanLoop2;
                 }
                 var10 = 0;
                 while (true) {
@@ -3392,7 +3392,7 @@ final class gja extends ka {
             return;
           }
           var9 = 0;
-          L55: while (true) {
+          scanLoop3: while (true) {
             stackIn_44_0 = var8_int;
             while (true) {
               stackIn_45_0 = stackIn_44_0;
@@ -3485,7 +3485,7 @@ final class gja extends ka {
                       }
                     }
                     var9++;
-                    continue L55;
+                    continue scanLoop3;
                   }
                 }
                 if (decompiledFrameRemainder0) {
@@ -3824,7 +3824,7 @@ final class gja extends ka {
           if (param0 == 2) {
             if (param7 == null) {
               var10 = 0;
-              L3: while (true) {
+              scanLoop1: while (true) {
                 boolean decompiledFrameRemainder3 = true;
                 if (var10 < var9_int) {
                   var11 = param1[var10];
@@ -3833,7 +3833,7 @@ final class gja extends ka {
                   if (var47 != 0) {
                     if (stackIn_102_0 < stackIn_102_1) {
                       var11 = param1[var10];
-                      break L3;
+                      break scanLoop1;
                     }
                     decompiledFrameRemainder3 = false;
                   }
@@ -3893,7 +3893,7 @@ final class gja extends ka {
                     }
                     var11 = param1[var10];
                     if (var47 != 0) {
-                      break L3;
+                      break scanLoop1;
                     }
                     if (var11 < this.field_D.length) {
                       var12 = this.field_D[var11];
@@ -4072,13 +4072,13 @@ final class gja extends ka {
                   }
                   var40 = param1[var39];
                   if (var40 < this.field_D.length) {
-                    L58: while (true) {
+                    scanLoop2: while (true) {
                       var41 = this.field_D[var40];
                       var42 = 0;
                       while (var42 < var41.length) {
                         var43 = var41[var42];
                         if (var47 != 0) {
-                          continue L58;
+                          continue scanLoop2;
                         }
                         if (this.field_hb == null ||
                           (param6 & this.field_hb[var43]) != 0) {
@@ -4224,13 +4224,13 @@ final class gja extends ka {
                 }
                 var34 = param1[var33];
                 if (var34 < this.field_D.length) {
-                  L83: while (true) {
+                  scanLoop3: while (true) {
                     var35 = this.field_D[var34];
                     var36 = 0;
                     while (var36 < var35.length) {
                       var37 = var35[var36];
                       if (var47 != 0) {
-                        continue L83;
+                        continue scanLoop3;
                       }
                       if (this.field_hb == null ||
                         (this.field_hb[var37] & param6) != 0) {
@@ -4258,7 +4258,7 @@ final class gja extends ka {
             if (this.field_q != null) {
               var10 = 0;
               var11 = 0;
-              L122: while (true) {
+              scanLoop4: while (true) {
                 if (var11 < var9_int) {
                   var12_int = param1[var11];
                   stackIn_301_0 = ~var12_int;
@@ -4271,7 +4271,7 @@ final class gja extends ka {
                       var11++;
                       return;
                     }
-                    break L122;
+                    break scanLoop4;
                   }
                   if (stackIn_301_0 > stackIn_301_1) {
                     var13_ref_int__Lifetime1 = this.field_q[var12_int];
@@ -4310,7 +4310,7 @@ final class gja extends ka {
                 }
                 stackIn_298_0Lifetime1 = null;
                 if (stackIn_298_0Lifetime1 == this.field_u) {
-                  break L122;
+                  break scanLoop4;
                 }
                 var11 = 0;
                 while (true) {
@@ -4432,7 +4432,7 @@ final class gja extends ka {
           if (null != this.field_q) {
             var10 = 0;
             var11 = 0;
-            L104: while (true) {
+            scanLoop5: while (true) {
               if (var9_int > var11) {
                 var12_int = param1[var11];
                 stackIn_358_0 = ~this.field_q.length;
@@ -4445,7 +4445,7 @@ final class gja extends ka {
                     var11++;
                     return;
                   }
-                  break L104;
+                  break scanLoop5;
                 }
                 if (stackIn_358_0 < stackIn_358_1) {
                   var13_ref_int__Lifetime2 = this.field_q[var12_int];
@@ -4496,7 +4496,7 @@ final class gja extends ka {
               }
               stackIn_353_0Lifetime1 = null;
               if (stackIn_353_0Lifetime1 == this.field_u) {
-                break L104;
+                break scanLoop5;
               }
               var11 = 0;
               while (true) {
@@ -4563,12 +4563,12 @@ final class gja extends ka {
           var14 = this.field_J[1 + param3];
           var15 = 0;
           var16 = var13_int;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var14 > var16) {
               var17 = this.field_db[var16];
               stackIn_22_0 = 0;
               if (var18 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_22_0 == var17) {
                 var15 = var16;

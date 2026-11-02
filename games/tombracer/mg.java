@@ -114,7 +114,7 @@ final class mg {
         if (param0 != -94) {
           mg.a(44);
         }
-        return jna.a(param0 + 104, this.field_i);
+        return GameApplet.a(param0 + 104, this.field_i);
     }
 
     final void a(boolean param0, int param1) {
@@ -131,7 +131,7 @@ final class mg {
           this.field_l = 38;
         }
         if (param1 > 0) {
-          param1 = param1 % jna.a(10, this.field_i);
+          param1 = param1 % GameApplet.a(10, this.field_i);
           var3 = 0;
           while (param1 > 0) {
             this.d(0);

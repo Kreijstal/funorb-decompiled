@@ -282,7 +282,7 @@ final class vd extends nv {
     private final void c(int param0) {
         int var18 = 0;
         int var19 = 0;
-        qea var3;
+        IsaacCipher var3;
         int var4;
         int var5;
         int var6;

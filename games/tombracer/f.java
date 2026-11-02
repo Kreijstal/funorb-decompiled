@@ -233,13 +233,13 @@ final class f {
         if (param4 <= 0) {
           if (param0 == 2843) {
             var10 = 0;
-            L31: while (true) {
+            scanLoop1: while (true) {
               var11 = (int)param3;
               param3 = param3 / 10L;
               discarded$103 = var9.append((char)(-(10 * (int)param3) + (var11 + 48)));
               if (param3 == 0L) {
                 if (var12 == 0) {
-                  break L31;
+                  break scanLoop1;
                 }
               } else {
                 if (param1) {
@@ -261,13 +261,13 @@ final class f {
           }
           f.a(true);
           var10 = 0;
-          L36: while (true) {
+          scanLoop2: while (true) {
             var11 = (int)param3;
             param3 = param3 / 10L;
             discarded$106 = var9.append((char)(-(10 * (int)param3) + (var11 + 48)));
             if (param3 == 0L) {
               if (var12 == 0) {
-                break L36;
+                break scanLoop2;
               }
             } else {
               if (param1) {
@@ -293,13 +293,13 @@ final class f {
             discarded$85 = var9.append((char) var6);
             if (param0 == 2843) {
               var10 = 0;
-              L5: while (true) {
+              scanLoop3: while (true) {
                 var11 = (int)param3;
                 param3 = param3 / 10L;
                 discarded$86 = var9.append((char)(-(10 * (int)param3) + (var11 + 48)));
                 if (param3 == 0L) {
                   if (var12 == 0) {
-                    break L5;
+                    break scanLoop3;
                   }
                 } else {
                   if (param1) {
@@ -321,13 +321,13 @@ final class f {
             }
             f.a(true);
             var10 = 0;
-            L10: while (true) {
+            scanLoop4: while (true) {
               var11 = (int)param3;
               param3 = param3 / 10L;
               discarded$89 = var9.append((char)(-(10 * (int)param3) + (var11 + 48)));
               if (param3 == 0L) {
                 if (var12 == 0) {
-                  break L10;
+                  break scanLoop4;
                 }
               } else {
                 if (param1) {
@@ -441,7 +441,7 @@ final class f {
               var1_double = Math.random() * 0.03 - 0.015 + 0.7;
               var3 = 0;
               var4 = 0;
-              L1: while (true) {
+              scanLoop1: while (true) {
                 stackIn_6_0 = -513;
                 stackIn_6_1 = ~var4;
                 if (stackIn_6_0 < stackIn_6_1) {
@@ -509,7 +509,7 @@ final class f {
                     var7++;
                   }
                   var4++;
-                  continue L1;
+                  continue scanLoop1;
                 }
                 break;
               }

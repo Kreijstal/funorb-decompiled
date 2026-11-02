@@ -233,7 +233,7 @@ class ij extends lc implements tsa {
           return;
         }
         if (this.field_bb) {
-          vg.q(30497);
+          IntrusiveNode.q(30497);
           return;
         }
     }

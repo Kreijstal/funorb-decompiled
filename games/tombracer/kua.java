@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kua extends vg implements fo {
+final class kua extends IntrusiveNode implements fo {
     private hca field_h;
     private int field_g;
     private int field_l;
     private int field_k;
     private int field_f;
-    static jna field_j;
+    static GameApplet field_j;
     static jea field_i;
 
     final int f(byte param0) {
@@ -43,7 +43,7 @@ final class kua extends vg implements fo {
           var3.field_e = param2.field_e;
           var3.field_b = param2.field_b;
           if (param0 != 21938) {
-            field_j = (jna) null;
+            field_j = (GameApplet) null;
           }
           var3.field_h = param2.field_h;
           var3.field_c = param2.field_c;

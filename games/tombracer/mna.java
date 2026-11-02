@@ -40,7 +40,7 @@ abstract class mna {
             var5 < sd.field_K) {
             var11_int = gda.a(var15.field_d, -20011);
             if (var15.a(false) >= var11_int && (var15.field_m ||
-              !qaa.a(2180, var15.field_j))) {
+              !MouseWheelInput.a(2180, var15.field_j))) {
               var10 = 1;
             }
           }

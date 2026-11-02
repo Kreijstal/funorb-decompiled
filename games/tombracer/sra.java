@@ -374,7 +374,7 @@ final class sra implements eb {
         }
         if (!dna.field_G) {
           dea.field_c = false;
-          op.a(this.field_s, 10, ws.field_o, fr.field_b, oma.field_G, qaa.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
+          op.a(this.field_s, 10, ws.field_o, fr.field_b, oma.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
           cq.field_d = qw.field_f;
           tda.a(200, (byte) -71);
           fta.field_b = ff.field_p;

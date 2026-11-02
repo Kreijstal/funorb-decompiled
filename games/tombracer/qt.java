@@ -286,7 +286,7 @@ final class qt {
                     return;
                   }
                   if (var2 == 22) {
-                    qb.field_f = ((uia) ((Object) var1)).d(123);
+                    ProxySocketConnector.field_f = ((uia) ((Object) var1)).d(123);
                     bha.field_z = ((uia) ((Object) var1)).b((byte) 114);
                     return;
                   }

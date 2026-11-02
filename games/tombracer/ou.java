@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ou {
-    private qea field_c;
+    private IsaacCipher field_c;
     static int[] field_e;
     int field_a;
     private int[] field_d;
@@ -26,7 +26,7 @@ abstract class ou {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         int var2Lifetime1;
-        this.field_c = new qea(new int[]{this.field_b});
+        this.field_c = new IsaacCipher(new int[]{this.field_b});
         this.field_d = new int[this.field_a];
         for (var2 = 0; var2 < this.field_a; var2++) {
           this.field_d[var2] = this.field_c.b(95);

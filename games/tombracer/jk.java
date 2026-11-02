@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class jk extends vg {
+final class jk extends IntrusiveNode {
     static String field_i;
     static int[] field_h;
     byte[] field_f;
@@ -60,7 +60,7 @@ final class jk extends vg {
             stackIn_3_0 = -122;
             return stackIn_3_0;
           }
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var6 < var5.length) {
               var7 = var5[var6];
               if ((param2 ||
@@ -70,7 +70,7 @@ final class jk extends vg {
                   var4 = var7.field_a;
                 }
                 if (10 <= var3_int) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var6++;
@@ -140,7 +140,7 @@ final class jk extends vg {
             stackIn_3_0 = -122;
             return stackIn_3_0;
           }
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var6 < var5.length) {
               var7 = var5[var6];
               if ((param2 ||
@@ -150,7 +150,7 @@ final class jk extends vg {
                   var4 = var7.field_a;
                 }
                 if (10 <= var3_int) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var6++;

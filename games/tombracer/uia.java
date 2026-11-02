@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uia extends vg {
+class uia extends IntrusiveNode {
     int field_h;
     byte[] field_g;
     static String field_f;

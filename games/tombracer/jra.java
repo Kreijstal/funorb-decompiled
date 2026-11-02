@@ -5,7 +5,7 @@ final class jra extends loa {
     static String field_b;
     static String[] field_c;
 
-    jra(qea param0) {
+    jra(IsaacCipher param0) {
         super(param0);
     }
 

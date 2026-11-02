@@ -65,7 +65,7 @@ final class nna {
             stackIn_9_0 = eia.field_o;
             return stackIn_9_0;
           }
-          if (qaa.a(2180, param1)) {
+          if (MouseWheelInput.a(2180, param1)) {
             stackIn_13_0 = gl.$cfr$intArgs$a$53ce4ab4c593(125, bva.field_a, new String[]{param1});
             return stackIn_13_0;
           }

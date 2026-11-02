@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al extends vg {
+final class al extends IntrusiveNode {
     static boolean field_j;
     static double field_h;
     int field_i;
@@ -35,7 +35,7 @@ final class al extends vg {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = qb.a(param0.field_e, param0.field_a, param3.field_a, param0.field_k, (byte) -81, param3.field_e, param0.field_d, param3.field_d, param1, param3.field_k);
+          var4_int = ProxySocketConnector.a(param0.field_e, param0.field_a, param3.field_a, param0.field_k, (byte) -81, param3.field_e, param0.field_d, param3.field_d, param1, param3.field_k);
           if (-1 > var4_int) {
             System.out.println("Uh oh, collide.lineseg_lineseg returned " + var4_int);
             var4_int = 0;

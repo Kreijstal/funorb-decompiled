@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class jna extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static ka[] field_j;
     boolean field_b;
     public static boolean field_m;
@@ -115,7 +115,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
         RuntimeException var1 = null;
         try {
           if (param0 > -87) {
-            jna.provideLoaderApplet((java.applet.Applet) null);
+            GameApplet.provideLoaderApplet((java.applet.Applet) null);
           }
           field_j = null;
           return;
@@ -661,7 +661,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
           }
           try {
             if (param0 != 109) {
-              jna.a(false, -94, 60, (cn) null);
+              GameApplet.a(false, -94, 60, (cn) null);
             }
             this.d(param0 ^ -45);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -864,7 +864,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
             var2 = nb.field_d;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          nma.field_l = (java.awt.Canvas) ((Object) new he((java.awt.Component) (this)));
+          nma.field_l = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) nma.field_l));
           nma.field_l.setSize(mma.field_a, qf.field_i);
           nma.field_l.setVisible(true);
@@ -900,7 +900,7 @@ public abstract class jna extends java.applet.Applet implements Runnable, java.a
 
     abstract void c(int param0);
 
-    protected jna() {
+    protected GameApplet() {
         this.field_b = false;
     }
 

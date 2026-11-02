@@ -197,7 +197,7 @@ final class ck {
           rb.field_p[0] = new jea(0L, una.field_j, fj.field_a);
           bf.field_b[0] = new tv[6];
           var17_int = 0;
-          L6: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var17_int < 5) {
               bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, dja.field_p, w.field_f[var17_int], gv.field_w[var17_int]);
@@ -220,7 +220,7 @@ final class ck {
                 bf.field_b[1][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, dja.field_p, (iu) null, Integer.toString(sg.field_u[var17_int]));
                 var17_int++;
                 if (var21 != 0) {
-                  break L6;
+                  break scanLoop1;
                 }
               }
             }
@@ -247,7 +247,7 @@ final class ck {
           if (decompiledFrameCompleted0) {
             var17_int = 0;
           }
-          L16: while (true) {
+          scanLoop2: while (true) {
             if (var17_int < param0) {
               rb.field_p[var17_int + 4] = new jea(0L, una.field_j, kma.field_e[var17_int]);
               array$2 = new tv[1 + sea.c((int) oo.field_n[var17_int], 255)];
@@ -293,7 +293,7 @@ final class ck {
             var17_int = 0;
             while (var17_int < (param0 + 4)) {
               if (var21 != 0) {
-                break L16;
+                break scanLoop2;
               }
               stackIn_78_0Lifetime1 = null;
               if (stackIn_78_0Lifetime1 != rb.field_p[var17_int]) {

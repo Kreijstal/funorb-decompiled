@@ -166,11 +166,11 @@ final class ri extends wda {
           var6Lifetime1.field_tb = var4_ref_StringLifetime1;
           var6Lifetime1.p(70);
           var7 = (mu) (fla.field_f.f(-80));
-          L9: while (true) {
+          scanLoop1: while (true) {
             if (null != var7) {
               stackIn_55_0 = var7;
               if (var9 != 0) {
-                break L9;
+                break scanLoop1;
               }
               if (ol.a(stackIn_55_0, true, var6Lifetime1)) {
                 var7 = (mu) (fla.field_f.e(param0 - 14058));

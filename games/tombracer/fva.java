@@ -116,7 +116,7 @@ final class fva extends loa {
         }
     }
 
-    fva(qea param0) {
+    fva(IsaacCipher param0) {
         super(param0);
     }
 

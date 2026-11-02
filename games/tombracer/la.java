@@ -18,7 +18,7 @@ final class la implements ew, fo, noa {
     static nh[][] field_p;
     private vna field_i;
     private vna field_z;
-    private qea field_t;
+    private IsaacCipher field_t;
     private uw field_S;
     private int field_n;
     int field_a;
@@ -27,7 +27,7 @@ final class la implements ew, fo, noa {
     private pta field_f;
     private pta field_c;
     npa field_u;
-    private qea field_H;
+    private IsaacCipher field_H;
     private te field_D;
     private tqa field_B;
     private int field_r;
@@ -415,9 +415,9 @@ final class la implements ew, fo, noa {
         }
     }
 
-    final qea e(boolean param0) {
+    final IsaacCipher e(boolean param0) {
         if (!param0) {
-          return (qea) null;
+          return (IsaacCipher) null;
         }
         return this.field_H;
     }
@@ -444,7 +444,7 @@ final class la implements ew, fo, noa {
         this.field_B.a(param3, param6, true, param0, param1, param2, param5);
     }
 
-    final qea q(int param0) {
+    final IsaacCipher q(int param0) {
         int var2 = 60 % ((-19 - param0) / 42);
         return this.field_t;
     }
@@ -475,8 +475,8 @@ final class la implements ew, fo, noa {
           this.field_G.a((byte) -127);
         }
         if (param0) {
-          this.field_t = new qea(new int[]{this.field_n});
-          this.field_H = new qea(new int[]{this.field_n});
+          this.field_t = new IsaacCipher(new int[]{this.field_n});
+          this.field_H = new IsaacCipher(new int[]{this.field_n});
           this.field_u = new npa(false, 16);
           this.field_c = new pta(this, new hr(), 100);
           this.field_s = new pta(this, new ep(), 25);
@@ -1883,7 +1883,7 @@ final class la implements ew, fo, noa {
             return stackIn_13_0;
           }
           var18 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var18 < var17.length) {
               var16 = 0;
               if (var17[var18].a(param6, param1, 97, param3, param10, param0, param7, param2)) {
@@ -1894,7 +1894,7 @@ final class la implements ew, fo, noa {
                   var16 = 1;
                   if (!var17[var18].a((byte) -55, false)) {
                     var15 = 1;
-                    break L2;
+                    break scanLoop1;
                   }
                 }
               }

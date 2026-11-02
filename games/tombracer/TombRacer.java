@@ -16,7 +16,7 @@ public final class TombRacer extends rfa implements ls {
         boolean stackIn_17_0 = false;
         if (rda.d(20125)) {
           if (1 == param2) {
-            qb.c((byte) -118);
+            ProxySocketConnector.c((byte) -118);
             return true;
           }
           if (param2 == 2) {
@@ -253,14 +253,14 @@ public final class TombRacer extends rfa implements ls {
         bga.a(200);
         aoa.a((byte) 63);
         eca.a(30152);
-        qea.a(-3);
+        IsaacCipher.a(-3);
         rc.a(true);
         rfa.w(125);
         ug.l(param0 ^ 3665);
         lr.a(false);
-        jna.c((byte) -88);
-        hua.a(param0 ^ -3666);
-        qaa.a(14979);
+        GameApplet.c((byte) -88);
+        MouseInputHandler.a(param0 ^ -3666);
+        MouseWheelInput.a(14979);
         cn.d(0);
         uia.a(true);
         bva.a((byte) -13);
@@ -323,7 +323,7 @@ public final class TombRacer extends rfa implements ls {
         lu.a(-12);
         la.p(-128);
         tt.a(4);
-        vg.o(param0 ^ -3621);
+        IntrusiveNode.o(param0 ^ -3621);
         hw.a(-75);
         fr.a((byte) 1);
         ta.d((byte) -17);
@@ -501,7 +501,7 @@ public final class TombRacer extends rfa implements ls {
         nea.a(0);
         vaa.a(0);
         ml.a((byte) -7);
-        he.a(-24962);
+        DelegatingCanvas.a(-24962);
         ol.a(0);
         pla.b(-1);
         qu.a(72);
@@ -736,7 +736,7 @@ public final class TombRacer extends rfa implements ls {
         pb.a((byte) 98);
         ie.b(-13170);
         tja.a(false);
-        qb.b((byte) 90);
+        ProxySocketConnector.b((byte) 90);
         paa.k((byte) 77);
         fk.b(-116);
         fj.b(-2);

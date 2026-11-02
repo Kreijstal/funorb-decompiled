@@ -236,7 +236,7 @@ final class uha extends wda {
           rda.field_o = 0;
           so.field_K = 0;
           bha.field_z = -1;
-          qb.field_f = -1;
+          ProxySocketConnector.field_f = -1;
           if (param3.field_J == null) {
             param3.field_J = new vna();
           }

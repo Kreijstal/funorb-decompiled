@@ -28,21 +28,21 @@ final class en extends cg {
         }
     }
 
-    private final void a(vg param0, jva param1) {
+    private final void a(IntrusiveNode param0, jva param1) {
         while (true) {
           if (param0 == this.field_m.field_e) {
             ln.a(param0, param1, (byte) -102);
-            this.field_j = ((jva) (this.field_m.field_e.field_a)).field_f;
+            this.field_j = ((jva) (this.field_m.field_e.next)).field_f;
             return;
           }
           if (((jva) (param0)).field_f <= param1.field_f) {
-            param0 = param0.field_a;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         ln.a(param0, param1, (byte) -102);
-        this.field_j = ((jva) (this.field_m.field_e.field_a)).field_f;
+        this.field_j = ((jva) (this.field_m.field_e.next)).field_f;
         return;
     }
 
@@ -78,7 +78,7 @@ final class en extends cg {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_f = var7;
-              this.a(var5.field_a, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_f = 0;
               this.a(var5);
@@ -131,7 +131,7 @@ final class en extends cg {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_f = var5;
-              this.a(var3.field_a, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_f = 0;
               this.a(var3);
@@ -144,7 +144,7 @@ final class en extends cg {
     private final void a(jva param0) {
         param0.p(54);
         param0.a();
-        vg var2 = this.field_m.field_e.field_a;
+        IntrusiveNode var2 = this.field_m.field_e.next;
         if (var2 == this.field_m.field_e) {
           this.field_j = -1;
         } else {
@@ -153,7 +153,7 @@ final class en extends cg {
     }
 
     final synchronized void a(cg param0) {
-        this.field_l.a((byte) 110, (vg) (param0));
+        this.field_l.a((byte) 110, (IntrusiveNode) (param0));
     }
 
     final cg b() {

@@ -248,22 +248,22 @@ final class ki extends dg {
           var6 = null;
           var8 = this.field_m;
           if (var8 == 0) {
-            var6 = jna.field_j[0];
+            var6 = GameApplet.field_j[0];
           } else {
             if (var8 != 1) {
               if (var8 == 2) {
-                var6 = jna.field_j[2];
+                var6 = GameApplet.field_j[2];
               } else {
                 if (3 == var8) {
-                  var6 = jna.field_j[3];
+                  var6 = GameApplet.field_j[3];
                 } else {
                   if (var8 == 4) {
-                    var6 = jna.field_j[4];
+                    var6 = GameApplet.field_j[4];
                   }
                 }
               }
             } else {
-              var6 = jna.field_j[1];
+              var6 = GameApplet.field_j[1];
             }
           }
           if (var6 == null) {

@@ -432,7 +432,7 @@ final class iia extends ci {
               var25 = ns.field_g;
               var23 = ns.field_g - var8;
             }
-            L3: {
+            regionExit1: {
               if (var11 == 0) {
                 var26_int = var9;
                 var53 = var47[var9];
@@ -484,7 +484,7 @@ final class iia extends ci {
                       }
                     }
                     var9 = var26_int;
-                    break L3;
+                    break regionExit1;
                   }
                   var28++;
                   var26_int++;

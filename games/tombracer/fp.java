@@ -121,7 +121,7 @@ final class fp {
         wd.field_c = jpa.a(param2, "", "hud_timer");
         lha.field_l = jpa.a(param2, "", "hud_timer_head");
         wj.field_a = jpa.a(param2, "", "hud_timer_jaw");
-        qb.field_e = jpa.b(param2, "", "hud_sand");
+        ProxySocketConnector.field_e = jpa.b(param2, "", "hud_sand");
         via.field_a = new jpa[3];
         via.field_a[2] = jpa.a(param2, "", "hud_idolhead");
         via.field_a[0] = jpa.a(param2, "", "hud_coin");

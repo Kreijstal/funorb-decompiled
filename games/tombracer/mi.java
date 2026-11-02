@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends vg {
+final class mi extends IntrusiveNode {
     vna field_i;
     static String field_n;
     static int[] field_l;

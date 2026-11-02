@@ -346,7 +346,7 @@ final class rea extends nv {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!jna.a(false, param2, param1, param0)) {
+          if (!GameApplet.a(false, param2, param1, param0)) {
             return null;
           }
           if (param3 <= 20) {

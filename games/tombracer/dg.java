@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dg extends vg implements fo, noa {
+abstract class dg extends IntrusiveNode implements fo, noa {
     private int field_l;
     gr field_k;
     private int field_i;
@@ -253,7 +253,7 @@ abstract class dg extends vg implements fo, noa {
         } else {
           if (this.field_h.h(param0 + 31070)) {
             var5Lifetime2 = 1;
-            sharedTailExit_0: {
+            regionExit1: {
               if (this.field_k != null) {
                 if (var5Lifetime2 != 0) {
                   var5Lifetime2 = 1;
@@ -264,7 +264,7 @@ abstract class dg extends vg implements fo, noa {
                     stackIn_121_0 = 1;
                     var6Lifetime2 = stackIn_121_0;
                   }
-                  break sharedTailExit_0;
+                  break regionExit1;
                 }
                 if (!this.field_k.a(param0 ^ 12575)) {
                   var5Lifetime2 = 1;
@@ -343,11 +343,11 @@ abstract class dg extends vg implements fo, noa {
         if (this.field_k != null) {
           if (var5Lifetime3 != 0) {
             var5Lifetime3 = 1;
-            sharedTailExit_1: {
+            regionExit2: {
               if (var5Lifetime3 != 0) {
                 if (var4Lifetime2 != 0) {
                   var6Lifetime3 = 1;
-                  break sharedTailExit_1;
+                  break regionExit2;
                 }
                 stackIn_246_0 = 0;
               } else {
@@ -392,11 +392,11 @@ abstract class dg extends vg implements fo, noa {
           }
           if (!this.field_k.a(param0 ^ 12575)) {
             var5Lifetime3 = 1;
-            sharedTailExit_2: {
+            regionExit3: {
               if (var5Lifetime3 != 0) {
                 if (var4Lifetime2 != 0) {
                   var6Lifetime3Lifetime1 = 1;
-                  break sharedTailExit_2;
+                  break regionExit3;
                 }
                 stackIn_293_0 = 0;
               } else {
@@ -468,7 +468,7 @@ abstract class dg extends vg implements fo, noa {
           }
           var5Lifetime3 = 0;
         }
-        sharedTailExit_3: {
+        regionExit4: {
           if (var5Lifetime3 != 0) {
             if (var4Lifetime2 != 0) {
               var6Lifetime4 = 1;
@@ -489,7 +489,7 @@ abstract class dg extends vg implements fo, noa {
               }
               var9Lifetime4.b(var2, var8Lifetime4, var7Lifetime4, this.field_h.e(9648), -119, this.field_h.d(3), var3);
               this.field_j = false;
-              break sharedTailExit_3;
+              break regionExit4;
             }
             stackIn_362_0 = 0;
           } else {

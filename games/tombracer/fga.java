@@ -357,11 +357,11 @@ final class fga implements sia {
             }
             var4_int = 0;
             var5 = 0;
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (var5 < aq.a(-5640)) {
                 stackIn_45_0 = var4_int;
                 if (var7 != 0) {
-                  break L3;
+                  break scanLoop1;
                 }
                 if (stackIn_45_0 < 10) {
                   var6 = ak.a(var5, (byte) 125);
@@ -388,11 +388,11 @@ final class fga implements sia {
             var4_int++;
           } while (var7 == 0);
           var5Lifetime1 = 0;
-          L10: while (true) {
+          scanLoop2: while (true) {
             if (var5Lifetime1 < aq.a(param0 - 5568)) {
               stackIn_32_0 = 30;
               if (var7 != 0) {
-                break L10;
+                break scanLoop2;
               }
               if (stackIn_32_0 > var4_int) {
                 var6Lifetime1 = ak.a(var5Lifetime1, (byte) 111);
