@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gi {
+final class IsaacGenerator {
     static String field_m;
     static bd field_f;
     private int[] field_k;
@@ -12,7 +12,7 @@ final class gi {
     static String field_n;
     private int field_i;
     private int field_b;
-    static gb field_h;
+    static ResourceArchive field_h;
     private int[] field_a;
     static bd field_c;
     static bd field_j;
@@ -206,7 +206,7 @@ final class gi {
         return;
     }
 
-    gi(int[] param0) {
+    IsaacGenerator(int[] param0) {
         int var2_int = 0;
         try {
           this.field_a = new int[256];

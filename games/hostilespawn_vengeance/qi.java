@@ -13,7 +13,7 @@ final class qi extends vd implements qk {
     private vm field_L;
     static int field_J;
 
-    final static pg[] a(int param0, byte param1, int param2, gb param3) {
+    final static pg[] a(int param0, byte param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         pg[] stackIn_6_0 = null;
@@ -174,8 +174,8 @@ final class qi extends vd implements qk {
           this.field_L.a(this.field_I, param1 - (-this.field_v - 14), this.field_m + param0 + 10, this.field_s - 28, this.field_x, 16777215, -1, 0, 0, this.field_L.field_y);
           return;
         }
-        gb var6 = (gb) null;
-        qi.a(79, (byte) 30, -49, (gb) null);
+        ResourceArchive var6 = (ResourceArchive) null;
+        qi.a(79, (byte) 30, -49, (ResourceArchive) null);
         super.a(param0, param1, (byte) 80, param3);
         this.field_L.a(this.field_I, param1 - (-this.field_v - 14), this.field_m + param0 + 10, this.field_s - 28, this.field_x, 16777215, -1, 0, 0, this.field_L.field_y);
     }

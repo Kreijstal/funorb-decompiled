@@ -53,7 +53,7 @@ class oj extends p {
         }
         var2 = this.field_i;
         if (1 == var2) {
-          return wc.field_f[this.field_w][this.field_z % wc.field_f[this.field_w].length];
+          return ArchiveIndex.field_f[this.field_w][this.field_z % ArchiveIndex.field_f[this.field_w].length];
         }
         if (var2 == 18) {
           return kl.field_b[this.field_w][this.field_z % kl.field_b[this.field_w].length];
@@ -86,7 +86,7 @@ class oj extends p {
           return of.field_c[this.field_w][this.field_z % of.field_c[this.field_w].length];
         }
         if (var2 == 24) {
-          return wc.field_f[this.field_w][this.field_z % wc.field_f[this.field_w].length];
+          return ArchiveIndex.field_f[this.field_w][this.field_z % ArchiveIndex.field_f[this.field_w].length];
         }
         return null;
     }
@@ -1090,7 +1090,7 @@ class oj extends p {
                       }
                     } else {
                       this.field_H = th.field_Hb;
-                      this.field_u = gi.field_d;
+                      this.field_u = IsaacGenerator.field_d;
                     }
                   }
                 }
@@ -1275,11 +1275,11 @@ class oj extends p {
           return stackIn_9_0;
         }
         if (this.field_i == 231) {
-          stackIn_16_0 = (!q.field_g.a((byte) 119)) && (vi.field_p != null) && (this == vi.field_p[pc.field_c]);
+          stackIn_16_0 = (!q.field_g.a((byte) 119)) && (PacketBuffer.field_p != null) && (this == PacketBuffer.field_p[pc.field_c]);
           return stackIn_16_0;
         }
         if (this.field_i == 8 &&
-          vi.field_p != null) {
+          PacketBuffer.field_p != null) {
           stackIn_23_0 = (!q.field_g.a((byte) -117)) && (0 >= pc.field_c);
           return stackIn_23_0;
         }
@@ -1326,7 +1326,7 @@ class oj extends p {
         }
         var2 = this.field_i;
         if (var2 == 1) {
-          return wc.field_f;
+          return ArchiveIndex.field_f;
         }
         if (var2 == 18) {
           return kl.field_b;
@@ -1358,7 +1358,7 @@ class oj extends p {
         if (var2 != 24) {
           return (bd[][]) null;
         }
-        return wc.field_f;
+        return ArchiveIndex.field_f;
     }
 
     final void e(byte param0) {

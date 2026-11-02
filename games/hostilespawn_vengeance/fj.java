@@ -340,7 +340,7 @@ final class fj extends le {
     }
 
     final static void a(int param0, m param1, boolean param2) {
-        en var6 = null;
+        CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           if (!param2) {
@@ -348,7 +348,7 @@ final class fj extends le {
             fj.a((String) null, 7, true, (String) null, 102, (byte) 5, (String) null);
           }
           var6 = s.field_b;
-          en var3 = var6;
+          CipherPacketBuffer var3 = var6;
           var6.i(19319, param0);
           var6.field_i = var6.field_i + 1;
           var4 = var6.field_i;

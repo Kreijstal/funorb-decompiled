@@ -81,7 +81,7 @@ final class re {
           !this.c(24834)) {
           si.a(var4, var5, 11, 21, 0, 192);
         }
-        L7: {
+        regionExit1: {
           boolean decompiledFrameCompleted0 = true;
           var5 += 5;
           if (param0 != 18) {
@@ -187,7 +187,7 @@ final class re {
                 var5_ref_bd.a();
                 si.d();
                 stackIn_10_0 = var4;
-                stackIn_10_1 = uk.field_c;
+                stackIn_10_1 = ArchiveProvider.field_c;
                 stackIn_11_2 = !(param1);
                 stackIn_14_0 = (!hb.a(stackIn_10_0, stackIn_10_1, stackIn_11_2)) ? 0 : 1;
                 var6 = stackIn_14_0;
@@ -242,7 +242,7 @@ final class re {
               var4Lifetime1 = this.field_J;
             }
             stackIn_44_0 = var4Lifetime1;
-            stackIn_44_1 = uk.field_c;
+            stackIn_44_1 = ArchiveProvider.field_c;
             stackIn_45_2 = !(param1);
             var5 = hb.a(stackIn_44_0, stackIn_44_1, stackIn_45_2) ? 1 : 0;
             wh.field_d.c(il.field_b[var4Lifetime1].toUpperCase(), 260, 121, 16776960, -1);
@@ -265,7 +265,7 @@ final class re {
             }
             var6Lifetime1 = 0;
             if (var5 == 0) {
-              al.field_Z.c(vc.field_j.toUpperCase(), 260, 140, 16776960, -1);
+              al.field_Z.c(GameCanvas.field_j.toUpperCase(), 260, 140, 16776960, -1);
               stackIn_56_0 = var4Lifetime1;
               stackIn_56_1 = e.field_g;
               stackIn_57_2 = !(param1);
@@ -324,7 +324,7 @@ final class re {
               this.f((byte) 76);
             }
           }
-          ed.a(uh.field_i, (byte) -99);
+          IntrusiveNodeHashTable.a(uh.field_i, (byte) -99);
           if ((var3 != 0) &&
             (this.field_f == 13)) {
             qg.field_p = qg.field_p - 32;
@@ -861,14 +861,14 @@ final class re {
         var2 = stackIn_5_0;
         var3 = -9 % ((-59 - param0) / 46);
         var4 = 0;
-        L3: while (true) {
+        scanLoop1: while (true) {
           boolean decompiledFrameRemainder0 = true;
           if (var4 < var2) {
             stackIn_27_0 = this.field_w[0][var4].field_nb;
             if (var5 != 0) {
               if (stackIn_27_0 == null) {
                 var3++;
-                break L3;
+                break scanLoop1;
               }
               decompiledFrameRemainder0 = false;
             }
@@ -882,7 +882,7 @@ final class re {
           }
           if (decompiledFrameRemainder0) {
             if (!ib.a((byte) -72)) {
-              break L3;
+              break scanLoop1;
             }
             if (gn.field_k[1] == 10 &&
               null != this.field_w[1][10]) {
@@ -894,7 +894,7 @@ final class re {
             var3 = 0;
             while (true) {
               if (var2 <= var3) {
-                break L3;
+                break scanLoop1;
               }
               if (this.field_w[1][var3].field_nb != null) {
                 break;
@@ -903,7 +903,7 @@ final class re {
               if (var5 == 0) {
                 continue;
               }
-              break L3;
+              break scanLoop1;
             }
           }
           return 32 | var3;
@@ -1000,7 +1000,7 @@ final class re {
         var12 = 32;
         var13 = 0;
         var14 = ib.a((byte) -72) ? 1 : 0;
-        if (hb.a(31, uk.field_c, false)) {
+        if (hb.a(31, ArchiveProvider.field_c, false)) {
           var40 = e.field_y;
           var34 = var40;
           var15_ref_int__ = var34;
@@ -1031,7 +1031,7 @@ final class re {
         }
         if (decompiledFrameCompleted1) {
           var16_ref_int__ = mc.field_E;
-          var17_ref_int__ = uk.field_c;
+          var17_ref_int__ = ArchiveProvider.field_c;
         }
         var18Lifetime1 = 0;
         while (8 > var18Lifetime1) {
@@ -1248,8 +1248,8 @@ final class re {
         if (null == p.field_m[bm.field_c]) {
           p.field_m[bm.field_c] = pi.a(10, 6413, 3, ka.field_p[bm.field_c], 1);
         }
-        L3: {
-          L4: {
+        regionExit1: {
+          regionExit2: {
             var14 = p.field_m[bm.field_c];
             var15 = var14;
             if (var15.field_m) {
@@ -1283,7 +1283,7 @@ final class re {
                 while (10 > var11) {
                   stackIn_38_0 = var5[var11];
                   if (var12 != 0) {
-                    break L3;
+                    break regionExit1;
                   }
                   if (stackIn_38_0 != null) {
                     stackIn_26_0 = this;
@@ -1307,9 +1307,9 @@ final class re {
                 if ((var9 != 0)) {
                   this.a(tf.field_a, 8 + var10, -126, qg.field_r.toUpperCase(), true, -1);
                 }
-                break L4;
+                break regionExit2;
               }
-              var4Lifetime2 = ci.field_c;
+              var4Lifetime2 = MouseInput.field_c;
             } else {
               var4Lifetime2 = jf.field_h;
             }
@@ -1373,7 +1373,7 @@ final class re {
           return;
         }
         boolean decompiledFrameRemainder23 = true;
-        L1: {
+        regionExit1: {
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameRemainder22 = true;
           boolean decompiledFrameRemainder21 = true;
@@ -1393,11 +1393,11 @@ final class re {
               si.c();
               this.g(12169);
               if (param1) {
-                break L1;
+                break regionExit1;
               }
               this.field_t = 0;
               if (var7 == 0) {
-                break L1;
+                break regionExit1;
               }
             } else {
               if ((var4_int != 22 ||
@@ -1430,7 +1430,7 @@ final class re {
                   if (!(param1)) {
                     this.field_t = 0;
                   }
-                  break L1;
+                  break regionExit1;
                 } else if (5 != var4_int ||
                   var7 != 0) {
                   decompiledFrameRemainder2 = (var4_int != 1 ||
@@ -1465,7 +1465,7 @@ final class re {
                       if (var4_int != 18 ||
                         var7 != 0) {
                         if (var4_int != 17) {
-                          break L1;
+                          break regionExit1;
                         }
                         decompiledFrameRemainder1 = (var7 != 0);
                         decompiledFrameRemainder21 = !(decompiledFrameRemainder1);
@@ -1474,20 +1474,20 @@ final class re {
                       this.field_j = 1;
                       this.field_s = 17;
                       if (var7 == 0) {
-                        break L1;
+                        break regionExit1;
                       }
                     }
                     if ((decompiledFrameRemainder21) &&
                       (decompiledFrameRemainder1)) {
                       if (this.field_d != 6) {
-                        break L1;
+                        break regionExit1;
                       }
                       if (!this.g((byte) 30)) {
-                        break L1;
+                        break regionExit1;
                       }
                       jj.field_g = jj.field_g - 500;
                       if (var7 == 0) {
-                        break L1;
+                        break regionExit1;
                       }
                     }
                     if (decompiledFrameRemainder21) {
@@ -1495,7 +1495,7 @@ final class re {
                         (!(!this.c(24834)))) {
                         jj.field_g = jj.field_g + 500;
                       }
-                      break L1;
+                      break regionExit1;
                     }
                   }
                 }
@@ -1534,7 +1534,7 @@ final class re {
                     ((this.field_d == 2))) {
                     db.a(true, 256, vg.field_h);
                   }
-                  break L1;
+                  break regionExit1;
                 }
                 if ((decompiledFrameRemainder21) &&
                   (decompiledFrameRemainder17) &&
@@ -1557,7 +1557,7 @@ final class re {
                   hg.field_e = 1;
                   jf.field_c = 128;
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder21) &&
@@ -1601,14 +1601,14 @@ final class re {
                     this.field_s = 2;
                   }
                   if (jh.field_ab != 1) {
-                    break L1;
+                    break regionExit1;
                   }
                   if (this.field_s != 10) {
-                    break L1;
+                    break regionExit1;
                   }
                   db.a(false, 256, pe.field_ab);
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder21) &&
@@ -1628,7 +1628,7 @@ final class re {
                   bm.field_c = 1 - bm.field_c;
                   this.h((byte) 33);
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder21) &&
@@ -1650,7 +1650,7 @@ final class re {
                     this.field_s = 2;
                     this.field_j = 1;
                     if (var7 == 0) {
-                      break L1;
+                      break regionExit1;
                     }
                   }
                   bm.field_c = 0;
@@ -1658,7 +1658,7 @@ final class re {
                   this.field_s = 4;
                   this.field_j = 1;
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder21) &&
@@ -1679,12 +1679,12 @@ final class re {
                   if (this.field_d != 4) {
                     this.field_s = 2;
                     if (var7 == 0) {
-                      break L1;
+                      break regionExit1;
                     }
                   }
                   this.field_s = 4;
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder21) &&
@@ -1714,11 +1714,11 @@ final class re {
                   if (this.field_s != 0) {
                   }
                   if (1 != jh.field_ab) {
-                    break L1;
+                    break regionExit1;
                   }
                   ja.a((byte) 103, vg.field_h, true);
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder21) &&
@@ -1732,7 +1732,7 @@ final class re {
                   (decompiledFrameRemainder10) &&
                   (decompiledFrameRemainder9)) {
                   if (!param1) {
-                    break L1;
+                    break regionExit1;
                   }
                   var4_int = 64 * this.field_m / 160;
                   if (var4_int < 0) {
@@ -1742,9 +1742,9 @@ final class re {
                     var4_int = 64;
                   }
                   uh.field_i = var4_int;
-                  ed.a(var4_int, (byte) -49);
+                  IntrusiveNodeHashTable.a(var4_int, (byte) -49);
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder21) &&
@@ -1757,7 +1757,7 @@ final class re {
                   (decompiledFrameRemainder11) &&
                   (decompiledFrameRemainder10)) {
                   if (!param1) {
-                    break L1;
+                    break regionExit1;
                   }
                   var4_int = this.field_m * 256 / 160;
                   if (var4_int < 0) {
@@ -1769,7 +1769,7 @@ final class re {
                   qg.field_p = var4_int;
                   qi.b(var4_int, (byte) -90);
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder21) &&
@@ -1782,7 +1782,7 @@ final class re {
                   (decompiledFrameRemainder11)) {
                   ri.field_o = true;
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder21) &&
@@ -1803,12 +1803,12 @@ final class re {
                     if (ta.p(3)) {
                       this.field_t = 1;
                       if (var7 == 0) {
-                        break L1;
+                        break regionExit1;
                       }
                     }
                     this.field_t = 0;
                     if (var7 == 0) {
-                      break L1;
+                      break regionExit1;
                     }
                   }
                 }
@@ -1824,7 +1824,7 @@ final class re {
                   }
                   dc.a(76, bn.c(-1));
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder23) &&
@@ -1835,7 +1835,7 @@ final class re {
                   (decompiledFrameRemainder14)) {
                   ue.field_e = 0;
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder23) &&
@@ -1845,7 +1845,7 @@ final class re {
                   (decompiledFrameRemainder15)) {
                   ue.field_e = 2;
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder23) &&
@@ -1854,7 +1854,7 @@ final class re {
                   (decompiledFrameRemainder16)) {
                   ue.field_e = 1;
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder23) &&
@@ -1864,7 +1864,7 @@ final class re {
                   this.field_F = null;
                   wl.field_b = true;
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if ((decompiledFrameRemainder23) &&
@@ -1881,7 +1881,7 @@ final class re {
                   var5 = 0;
                   do {
                     if (var5 >= 8) {
-                      var4 = uk.field_c;
+                      var4 = ArchiveProvider.field_c;
                       break;
                     }
                     var16[var5] = 0;
@@ -1900,7 +1900,7 @@ final class re {
                     this.field_j = 1;
                     gn.field_k[0] = 0;
                     this.field_s = 0;
-                    break L1;
+                    break regionExit1;
                   }
                 }
               }
@@ -1919,11 +1919,11 @@ final class re {
               si.c();
               this.g(12169);
               if (param1) {
-                break L1;
+                break regionExit1;
               }
               this.field_t = 0;
               if (var7 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1940,7 +1940,7 @@ final class re {
               this.field_j = 1;
               this.field_s = 5;
               if (var7 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -1952,12 +1952,12 @@ final class re {
               if (ta.p(3)) {
                 this.field_t = 1;
                 if (var7 == 0) {
-                  break L1;
+                  break regionExit1;
                 }
               }
               this.field_t = 3;
               if (var7 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if ((decompiledFrameRemainder23) &&
@@ -2037,7 +2037,7 @@ final class re {
                 ei.field_o.a(il.field_a, (byte) -13);
                 ei.field_o.field_g = false;
               }
-              break L1;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder23) &&
@@ -2047,7 +2047,7 @@ final class re {
             dh.field_a.a((byte) -48, true);
             this.field_s = 3;
             if (var7 == 0) {
-              break L1;
+              break regionExit1;
             }
           }
           if ((decompiledFrameRemainder23) &&
@@ -2094,7 +2094,7 @@ final class re {
                 kh.field_ib[0] = 0;
               }
               rf.field_f = 0;
-              gb.field_h = 0;
+              ResourceArchive.field_h = 0;
               uf.field_h = false;
               bh.field_d = 0;
               gf.field_j = 0;
@@ -2299,7 +2299,7 @@ final class re {
         int var5Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
-        L0: {
+        regionExit1: {
           boolean decompiledFrameCompleted0 = true;
           var9 = HostileSpawn.field_I ? 1 : 0;
           this.field_E.a(true, true);
@@ -2382,7 +2382,7 @@ final class re {
                     if (!stackIn_45_0) {
                       this.field_w[var6Lifetime1][var8].field_nb = null;
                       if (var8 <= gn.field_k[var6Lifetime1]) {
-                        this.field_w[var6Lifetime1][var8].field_Y = en.field_y;
+                        this.field_w[var6Lifetime1][var8].field_Y = CipherPacketBuffer.field_y;
                       }
                       this.field_w[var6Lifetime1][var8].field_T = 8421376;
                       if (var8 == 10) {
@@ -2397,7 +2397,7 @@ final class re {
                     } else {
                       bm.field_c = var6Lifetime1;
                       this.field_w[var6Lifetime1][var8].field_nb = fm.field_a;
-                      this.field_w[var6Lifetime1][var8].field_Y = en.field_t;
+                      this.field_w[var6Lifetime1][var8].field_Y = CipherPacketBuffer.field_t;
                       this.field_w[var6Lifetime1][var8].field_T = 65793;
                       if (var8 == 10) {
                         rl.field_c = fg.field_c[var6Lifetime1];
@@ -2525,21 +2525,21 @@ final class re {
             if (stackIn_12_0) {
               dn.a(-4 + var6, param2 - 169, var9, var7 - 10, 16772608);
               if (var9 != 0) {
-                L18: {
+                regionExit1: {
                   var10 = kh.field_ib[an.field_r[var9]];
                   var8[an.field_r[var9]] = false;
                   var11_int = var9;
                   switch (var11_int) {
                     case 3:
                       var10 = var10 / 50;
-                      break L18;
+                      break regionExit1;
                     case 2:
                       break;
                     default:
-                      break L18;
+                      break regionExit1;
                     case 4:
                       var10 = var10 / 5;
-                      break L18;
+                      break regionExit1;
                   }
                   var10 = var10 / 10;
                 }
@@ -2552,7 +2552,7 @@ final class re {
               }
               if (ka.a(var7, 0, 40, 40, var6)) {
                 if (0 == var9) {
-                  stackIn_35_0 = gi.field_m;
+                  stackIn_35_0 = IsaacGenerator.field_m;
                 } else {
                   stackIn_35_0 = rf.field_s[var9 - 1];
                 }
@@ -2684,7 +2684,7 @@ final class re {
         var3Lifetime1 = rl.field_c - hh.field_d;
         if (0 < w.field_r) {
           if (rl.field_c > hh.field_d) {
-            var12Lifetime2 = var11 + "<br>" + vg.a(new String[]{Integer.toString(-hh.field_d + rl.field_c)}, 77, vc.field_f);
+            var12Lifetime2 = var11 + "<br>" + vg.a(new String[]{Integer.toString(-hh.field_d + rl.field_c)}, 77, GameCanvas.field_f);
             var14 = var12Lifetime2;
             var5Lifetime3 = var14;
             var5Lifetime3 = var12Lifetime2;
@@ -2814,7 +2814,7 @@ final class re {
         stackIn_16_0.field_sb = stackIn_16_1 + stackIn_17_2;
         rl.field_c = -1;
         var10 = 0;
-        L6: while (true) {
+        scanLoop1: while (true) {
           stackIn_19_0 = ~var10;
           stackIn_19_1 = ~var9;
           if (stackIn_19_0 > stackIn_19_1) {
@@ -2868,8 +2868,8 @@ final class re {
               var13.field_zb = var7;
               if (var13.field_jb) {
                 var13.field_v = 16776960;
-                var13.field_pb = en.field_q;
-                var13.field_Y = en.field_y;
+                var13.field_pb = CipherPacketBuffer.field_q;
+                var13.field_Y = CipherPacketBuffer.field_y;
                 if (var12 == 10) {
                   var13.field_v = 16742144;
                 }
@@ -2884,7 +2884,7 @@ final class re {
               var12++;
             }
             var10++;
-            continue L6;
+            continue scanLoop1;
           }
           break;
         }
@@ -3054,7 +3054,7 @@ final class re {
         int var19 = 0;
         var19 = HostileSpawn.field_I ? 1 : 0;
         if (0 == li.field_p) {
-          li.field_p = Math.max(wh.field_d.a(na.field_q.toUpperCase()), mk.field_L.a(wc.field_s.toUpperCase()));
+          li.field_p = Math.max(wh.field_d.a(na.field_q.toUpperCase()), mk.field_L.a(ArchiveIndex.field_s.toUpperCase()));
         }
         boolean decompiledFrameRemainder12 = true;
         if (param0 == this.field_d) {
@@ -3368,7 +3368,7 @@ final class re {
                   var9 = 400;
                 }
                 if (ig.field_L != 2 &&
-                  270 <= uk.field_e) {
+                  270 <= ArchiveProvider.field_e) {
                   break;
                 }
                 var5 = 1000;
@@ -3455,7 +3455,7 @@ final class re {
                 }
                 if (~param0 == ~this.field_d &&
                   !jk.a(-23322)) {
-                  L83: {
+                  regionExit1: {
                     if (2 != param0) {
                       if (var11 == 0) {
                         if ((!(this.field_K)) &&
@@ -3475,17 +3475,17 @@ final class re {
                             (!(rb.field_m >= (30 + (var5 - mk.field_L.field_y) + 7)))) {
                             if (var13 == 0) {
                               if (var9 - 32 > j.field_c) {
-                                break L83;
+                                break regionExit1;
                               }
                               if (j.field_c >= 320) {
-                                break L83;
+                                break regionExit1;
                               }
                             } else {
                               if (j.field_c < 320) {
-                                break L83;
+                                break regionExit1;
                               }
                               if (j.field_c >= 600) {
-                                break L83;
+                                break regionExit1;
                               }
                             }
                             this.field_t = var13;
@@ -3500,7 +3500,7 @@ final class re {
                           }
                         }
                       }
-                      break L83;
+                      break regionExit1;
                     }
                     if ((var14 != 24 ||
                       !(this.a((byte) 123) < 0)) && (!this.field_K &&
@@ -3674,12 +3674,12 @@ final class re {
             var4 = sg.field_i / 50;
             var5Lifetime2 = var12 + "<br>" + oa.field_j + jh.a((byte) -80, var4);
             if (HostileSpawn.field_I) {
-              var13 = var5Lifetime2 + "<br>" + vg.a(new String[]{Integer.toString(rl.field_c - hh.field_d)}, 50, vc.field_f);
+              var13 = var5Lifetime2 + "<br>" + vg.a(new String[]{Integer.toString(rl.field_c - hh.field_d)}, 50, GameCanvas.field_f);
               var4 = sg.field_i / 50;
               var5Lifetime2 = var13 + "<br>" + oa.field_j + jh.a((byte) -128, var4);
             }
           } else {
-            var13 = var5Lifetime2 + "<br>" + vg.a(new String[]{Integer.toString(rl.field_c - hh.field_d)}, 50, vc.field_f);
+            var13 = var5Lifetime2 + "<br>" + vg.a(new String[]{Integer.toString(rl.field_c - hh.field_d)}, 50, GameCanvas.field_f);
             var4 = sg.field_i / 50;
             var5Lifetime2 = var13 + "<br>" + oa.field_j + jh.a((byte) -128, var4);
           }
@@ -3748,7 +3748,7 @@ final class re {
               if (64 < uh.field_i) {
                 uh.field_i = 64;
               }
-              ed.a(uh.field_i, (byte) -108);
+              IntrusiveNodeHashTable.a(uh.field_i, (byte) -108);
             }
           }
         } else {
@@ -3759,7 +3759,7 @@ final class re {
           if (64 < uh.field_i) {
             uh.field_i = 64;
           }
-          ed.a(uh.field_i, (byte) -108);
+          IntrusiveNodeHashTable.a(uh.field_i, (byte) -108);
         }
         if (this.field_d == 16) {
           this.field_t = 1;
@@ -3850,8 +3850,8 @@ final class re {
     }
 
     private final void i(int param0, int param1) {
-        if (30000 > uk.field_e) {
-          uk.field_e = uk.field_e + 1;
+        if (30000 > ArchiveProvider.field_e) {
+          ArchiveProvider.field_e = ArchiveProvider.field_e + 1;
         }
         if (param1 != 17691) {
           String var4 = (String) null;
@@ -3891,7 +3891,7 @@ final class re {
         if (null == this.field_H) {
           this.field_H = new bd(ln.field_a.field_d * var3, var3 * ln.field_a.field_a);
           this.field_H.a();
-          am.field_d.a(4, var3);
+          IntrusiveNode.field_d.a(4, var3);
           o.field_n.b((byte) 113);
         }
         this.a(150, (byte) -55, 70, 52, 304);
@@ -3936,7 +3936,7 @@ final class re {
             var4 = cb.field_h;
           }
           if (4 == rl.field_c) {
-            var4 = jg.field_k;
+            var4 = KeyboardInput.field_k;
             if (r.field_a != 1) {
               var4 = ph.field_B;
             }
@@ -4085,9 +4085,9 @@ final class re {
         if (param0 <= 112) {
           return;
         }
-        if (uk.field_e > 150 &&
+        if (ArchiveProvider.field_e > 150 &&
           2 != ig.field_L) {
-          var4 = Math.min(480, 4 * (uk.field_e - 150));
+          var4 = Math.min(480, 4 * (ArchiveProvider.field_e - 150));
           var5 = 355;
           var6 = 274;
           var7 = 10;
@@ -4103,7 +4103,7 @@ final class re {
           var13 = 16776960;
           var17 = vg.a(new String[]{Integer.toString(wl.b(25685))}, 30, bi.field_f).toUpperCase();
           ((vm) ((Object) var12)).b(var17, var9, var10, var13, -1);
-          var18 = vg.a(new String[]{Integer.toString(10 - hh.field_d)}, 28, vc.field_f).toUpperCase();
+          var18 = vg.a(new String[]{Integer.toString(10 - hh.field_d)}, 28, GameCanvas.field_f).toUpperCase();
           var10 += 26;
           ((vm) ((Object) var12)).b(var18, var9, var10, var13, -1);
           var19 = md.field_m + jh.a((byte) -67, sg.field_i / 50);
@@ -4148,7 +4148,7 @@ final class re {
               if (ln.field_b[bm.field_c]) {
                 break;
               }
-              var25 = am.field_a.toUpperCase();
+              var25 = IntrusiveNode.field_a.toUpperCase();
               ((vm) ((Object) var12)).a(var25, -130 + var9, 340, 260, 80, var13, -1, 1, 0, 24);
             }
             break;
@@ -4600,11 +4600,11 @@ final class re {
         vb.field_Jb = 0.8999999761581421f;
         qm.field_O = 0.5f;
         ea.field_d = 0.5f;
-        vc.field_a = 0.30000001192092896f;
+        GameCanvas.field_a = 0.30000001192092896f;
         an.field_n = 0.20000000298023224f;
         var5 = kd.field_v.j();
-        if (vc.field_a != var5) {
-          kd.field_v.d(ua.a((byte) -67, vc.field_a, var5, 0.07000000029802322f));
+        if (GameCanvas.field_a != var5) {
+          kd.field_v.d(ua.a((byte) -67, GameCanvas.field_a, var5, 0.07000000029802322f));
         }
         var5Lifetime1 = kd.field_v.h();
         if (var5Lifetime1 != qm.field_O) {
@@ -4882,18 +4882,18 @@ final class re {
           return;
         }
         if (ib.a((byte) -72) &&
-          null != gi.field_h) {
-          oc.field_h[1][0] = gi.field_h.a("level_01.dat", "", 0);
-          oc.field_h[1][1] = gi.field_h.a("level_02.dat", "", 0);
-          oc.field_h[1][2] = gi.field_h.a("level_03.dat", "", 0);
-          oc.field_h[1][3] = gi.field_h.a("level_04.dat", "", 0);
-          oc.field_h[1][4] = gi.field_h.a("level_05.dat", "", 0);
-          oc.field_h[1][5] = gi.field_h.a("level_06.dat", "", 0);
-          oc.field_h[1][6] = gi.field_h.a("level_07.dat", "", 0);
-          oc.field_h[1][7] = gi.field_h.a("level_08.dat", "", 0);
-          oc.field_h[1][8] = gi.field_h.a("level_09.dat", "", 0);
-          oc.field_h[1][9] = gi.field_h.a("level_10.dat", "", 0);
-          gi.field_h = null;
+          null != IsaacGenerator.field_h) {
+          oc.field_h[1][0] = IsaacGenerator.field_h.a("level_01.dat", "", 0);
+          oc.field_h[1][1] = IsaacGenerator.field_h.a("level_02.dat", "", 0);
+          oc.field_h[1][2] = IsaacGenerator.field_h.a("level_03.dat", "", 0);
+          oc.field_h[1][3] = IsaacGenerator.field_h.a("level_04.dat", "", 0);
+          oc.field_h[1][4] = IsaacGenerator.field_h.a("level_05.dat", "", 0);
+          oc.field_h[1][5] = IsaacGenerator.field_h.a("level_06.dat", "", 0);
+          oc.field_h[1][6] = IsaacGenerator.field_h.a("level_07.dat", "", 0);
+          oc.field_h[1][7] = IsaacGenerator.field_h.a("level_08.dat", "", 0);
+          oc.field_h[1][8] = IsaacGenerator.field_h.a("level_09.dat", "", 0);
+          oc.field_h[1][9] = IsaacGenerator.field_h.a("level_10.dat", "", 0);
+          IsaacGenerator.field_h = null;
         }
         dd.field_o[4] = bh.field_j;
         dd.field_o[15] = nm.field_c;

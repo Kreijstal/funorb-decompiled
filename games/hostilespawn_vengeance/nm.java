@@ -266,9 +266,9 @@ final class nm {
                                             if (var7 == 0) {
                                               var7 = 1;
                                               for (var11Lifetime1 = pc.field_c; var11Lifetime1 >= 1; var11Lifetime1--) {
-                                                var12Lifetime1 = (int)(24.0 * ((double)vi.field_p[var11Lifetime1].field_j.field_e + vi.field_p[var11Lifetime1].field_l.field_f)) - var5;
-                                                var13Lifetime1 = -var6 + (int)(24.0 * (vi.field_p[var11Lifetime1].field_l.field_a + (double)vi.field_p[var11Lifetime1].field_j.field_g));
-                                                qg.field_q.a(true, 128, (int)(64.0 + vi.field_p[var11Lifetime1].field_c), 24 + var12Lifetime1 - 12, 24 + var13Lifetime1 - 12);
+                                                var12Lifetime1 = (int)(24.0 * ((double)PacketBuffer.field_p[var11Lifetime1].field_j.field_e + PacketBuffer.field_p[var11Lifetime1].field_l.field_f)) - var5;
+                                                var13Lifetime1 = -var6 + (int)(24.0 * (PacketBuffer.field_p[var11Lifetime1].field_l.field_a + (double)PacketBuffer.field_p[var11Lifetime1].field_j.field_g));
+                                                qg.field_q.a(true, 128, (int)(64.0 + PacketBuffer.field_p[var11Lifetime1].field_c), 24 + var12Lifetime1 - 12, 24 + var13Lifetime1 - 12);
                                               }
                                             }
                                             eg.field_v.a(true, 128, (int)(var8.field_c + 64.0), -12 + (var3 + 24), 12 + var4);
@@ -296,7 +296,7 @@ final class nm {
                       }
                     }
                   } else {
-                    var19 = wc.field_f[var8.field_w][var8.field_z % wc.field_f[var8.field_w].length];
+                    var19 = ArchiveIndex.field_f[var8.field_w][var8.field_z % ArchiveIndex.field_f[var8.field_w].length];
                     var19.a(true, 128, (int)var8.field_c, -12 + var3, -12 + var4);
                   }
                 } else {
@@ -368,7 +368,7 @@ final class nm {
         }
     }
 
-    final static void a(int param0, gb param1, int param2, wm param3) {
+    final static void a(int param0, ResourceArchive param1, int param2, wm param3) {
         if (param2 > -118) {
           return;
         }
@@ -376,7 +376,7 @@ final class nm {
           tk.field_d = param0 * eh.a((byte) -126) / 1000;
           tk.a(true, param1);
           hd.a(param1, false);
-          gb.a(param1, -11310);
+          ResourceArchive.a(param1, -11310);
           ha.b(255);
           pl.a(-16183);
           tk.field_e = -tk.field_d + 0;
@@ -411,7 +411,7 @@ final class nm {
         }
         if (param1 != -59) {
           wm var4 = (wm) null;
-          nm.a(-73, (gb) null, 7, (wm) null);
+          nm.a(-73, (ResourceArchive) null, 7, (wm) null);
         }
         return param0;
     }

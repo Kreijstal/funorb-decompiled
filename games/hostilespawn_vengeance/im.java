@@ -8,7 +8,7 @@ final class im {
     static String field_d;
     static int field_f;
     static pg field_g;
-    static gb field_c;
+    static ResourceArchive field_c;
     private static String field_z;
 
     public static void a(int param0) {

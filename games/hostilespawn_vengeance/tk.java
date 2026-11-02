@@ -3,19 +3,19 @@
  */
 final class tk {
     static vh field_c;
-    static gb field_a;
+    static ResourceArchive field_a;
     static String field_b;
     static int field_e;
     static int field_d;
     static String field_f;
 
-    final static void a(boolean param0, gb param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         qf var2 = null;
         try {
           qf.a(param1.a("", "headers.packvorbis", 0));
           var2 = qf.a(param1, "jagex logo2.packvorbis", "");
           if (!param0) {
-            field_a = (gb) null;
+            field_a = (ResourceArchive) null;
           }
           var2.c();
         } catch (RuntimeException runtimeException) {

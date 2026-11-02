@@ -12,7 +12,7 @@ final class kl {
           if (ag.field_t == null) {
             return false;
           }
-          if (ci.field_d == rc.field_a) {
+          if (MouseInput.field_d == rc.field_a) {
             return true;
           }
           return false;
@@ -20,7 +20,7 @@ final class kl {
         if (ag.field_t == null) {
           return false;
         }
-        if (ci.field_d == rc.field_a) {
+        if (MouseInput.field_d == rc.field_a) {
           return true;
         }
         return false;

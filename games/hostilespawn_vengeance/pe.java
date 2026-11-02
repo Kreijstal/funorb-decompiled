@@ -95,7 +95,7 @@ final class pe extends wb {
     }
 
     final static void a(byte param0, int param1) {
-        en var2 = s.field_b;
+        CipherPacketBuffer var2 = s.field_b;
         if (param0 == 51) {
           var2.i(19319, param1);
           var2.d(96, 1);

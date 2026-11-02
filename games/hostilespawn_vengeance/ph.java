@@ -9,7 +9,7 @@ class ph extends ag {
     private boolean field_C;
     boolean field_A;
     static String field_z;
-    static gb field_F;
+    static ResourceArchive field_F;
     static String field_B;
     private boolean field_E;
 

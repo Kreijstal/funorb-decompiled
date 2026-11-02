@@ -82,7 +82,7 @@ final class an extends ql {
         }
         var12 = mm.field_m[0];
         var3 = 0;
-        L2: while (true) {
+        scanLoop1: while (true) {
           if (var3 < 2) {
             if (0 == this.field_p[var3].field_l) {
               var4 = this.field_m[var3].b(param0 - 3);
@@ -90,7 +90,7 @@ final class an extends ql {
                 this.field_p[var3].field_l = -100 + 24 * this.field_m[var3].field_e;
                 this.field_p[var3].field_d = 48 + this.field_m[var3].field_g * 24;
                 this.field_p[-var3 + 1].field_l = -1;
-                break L2;
+                break scanLoop1;
               }
             }
             var3++;
@@ -155,8 +155,8 @@ final class an extends ql {
                 } else {
                   ln.field_a.field_c[ln.field_a.field_d + var6] = 4;
                   ln.field_a.field_c[-ln.field_a.field_d + var6] = 4;
-                  vj.field_w[dk.field_o] = new qm(ln.field_a, this.field_h[var3Lifetime1], 147, rl.field_c, 0, false);
-                  dk.field_o = dk.field_o + 1;
+                  vj.field_w[DualLinkNode.field_o] = new qm(ln.field_a, this.field_h[var3Lifetime1], 147, rl.field_c, 0, false);
+                  DualLinkNode.field_o = DualLinkNode.field_o + 1;
                 }
               }
             }

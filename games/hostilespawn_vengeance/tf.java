@@ -18,7 +18,7 @@ final class tf {
         field_b = null;
     }
 
-    final static pf a(int param0, en param1) {
+    final static pf a(int param0, CipherPacketBuffer param1) {
         int var7 = 0;
         pf stackIn_5_0 = null;
         pf stackIn_28_0 = null;
@@ -39,8 +39,8 @@ final class tf {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = vi.a((byte) 122, param1) ? 1 : 0;
-          var4 = vi.a((byte) 126, param1) ? 1 : 0;
+          var3 = PacketBuffer.a((byte) 122, param1) ? 1 : 0;
+          var4 = PacketBuffer.a((byte) 126, param1) ? 1 : 0;
           var5 = new pf();
           var5.field_c = (short)param1.a(16, true);
           var5.field_n = pa.a((byte) 87, var5.field_n, 16, param1);
@@ -71,10 +71,10 @@ final class tf {
             var5.field_s = pa.a((byte) 87, var5.field_s, 16, param1);
             var5.field_G = pa.a((byte) 87, var5.field_G, 16, param1);
           }
-          if (vi.a((byte) 105, param1)) {
+          if (PacketBuffer.a((byte) 105, param1)) {
             var5.field_g = pa.a((byte) 87, var5.field_g, 16, param1);
           }
-          if (vi.a((byte) 104, param1)) {
+          if (PacketBuffer.a((byte) 104, param1)) {
             var5.field_x = ga.a(104, param1, var5.field_x, 16);
             var6 = 0;
             for (var7 = 0; var5.field_x.length > var7; var7++) {

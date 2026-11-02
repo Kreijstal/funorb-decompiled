@@ -68,7 +68,7 @@ final class r {
               } else {
                 if (var6 == 3) {
                   if (0 == param0) {
-                    stackIn_24_0 = (30 > d.field_u) ? 1 : 0;
+                    stackIn_24_0 = (30 > NetworkGameClient.field_u) ? 1 : 0;
                   } else {
                     stackIn_24_0 = 0;
                   }
@@ -98,8 +98,8 @@ final class r {
                     if (var6 != 5) {
                       if (6 != var6) {
                         if (var6 == 7) {
-                          if (gb.field_h > 0) {
-                            gb.field_h = gb.field_h - 1;
+                          if (ResourceArchive.field_h > 0) {
+                            ResourceArchive.field_h = ResourceArchive.field_h - 1;
                             param2.field_i = 27;
                           }
                           var5_int = 2;
@@ -112,8 +112,8 @@ final class r {
                         }
                       }
                     } else {
-                      if (gb.field_h > 0) {
-                        gb.field_h = gb.field_h - 1;
+                      if (ResourceArchive.field_h > 0) {
+                        ResourceArchive.field_h = ResourceArchive.field_h - 1;
                         param2.field_i = 26;
                       }
                       var5_int = 2;

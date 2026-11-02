@@ -5,7 +5,7 @@ final class tb extends ph {
     private df field_O;
     int field_G;
     static int field_N;
-    static vi field_M;
+    static PacketBuffer field_M;
     static int[] field_K;
     int field_H;
     static bd field_I;
@@ -82,10 +82,10 @@ final class tb extends ph {
                 if (var5 <= 0) {
                   return null;
                 }
-                stackIn_35_0 = ui.field_g;
+                stackIn_35_0 = DualLinkDeque.field_g;
                 return stackIn_35_0;
               }
-              stackIn_21_0 = ui.field_g;
+              stackIn_21_0 = DualLinkDeque.field_g;
               return stackIn_21_0;
             }
             stackIn_16_0 = hm.field_n;
@@ -122,7 +122,7 @@ final class tb extends ph {
           if (ie.field_c != null) {
             ie.field_c.c(73);
           }
-          se.field_h.requestFocus();
+          GameAppletShell.field_h.requestFocus();
           return;
         }
         tb.e((byte) -36);
@@ -130,7 +130,7 @@ final class tb extends ph {
         if (ie.field_c != null) {
           ie.field_c.c(73);
         }
-        se.field_h.requestFocus();
+        GameAppletShell.field_h.requestFocus();
     }
 
     public static void e(byte param0) {

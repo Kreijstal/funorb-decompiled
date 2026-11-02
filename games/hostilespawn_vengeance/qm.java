@@ -7,7 +7,7 @@ final class qm extends oj {
     static int field_R;
     static float field_O;
 
-    final static pg a(String param0, int param1, String param2, gb param3) {
+    final static pg a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -108,7 +108,7 @@ final class qm extends oj {
         }
     }
 
-    final static gb b(int param0, int param1) {
+    final static ResourceArchive b(int param0, int param1) {
         if (param0 == 1) {
           return bf.a(false, true, param1, 1, false, 84);
         }

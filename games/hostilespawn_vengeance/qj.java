@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj extends am {
+final class qj extends IntrusiveNode {
     int field_j;
     int field_i;
     static byte[] field_h;
@@ -158,7 +158,7 @@ final class qj extends am {
         }
     }
 
-    final static fn a(gb param0, gb param1, int param2, int param3, int param4) {
+    final static fn a(ResourceArchive param0, ResourceArchive param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         java.applet.Applet var6 = null;
         Object stackIn_4_0 = null;
@@ -200,7 +200,7 @@ final class qj extends am {
         }
     }
 
-    final static void a(vi param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -215,8 +215,8 @@ final class qj extends am {
           jn.field_J = var2_intLifetime1 << 15 & 2064384;
           jn.field_J = jn.field_J + (param0.l(32270) << 7);
           if (param1 != -12) {
-            vi var3 = (vi) null;
-            qj.a((vi) null, (byte) -75);
+            PacketBuffer var3 = (PacketBuffer) null;
+            qj.a((PacketBuffer) null, (byte) -75);
           }
           var2_intLifetime2 = param0.l(32270);
           jn.field_J = jn.field_J + (var2_intLifetime2 >> 1);

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rb extends uk {
+final class rb extends ArchiveProvider {
     static int[] field_p;
     private um field_n;
     private int field_l;
     private byte[] field_v;
     private jm field_i;
-    private wc field_x;
+    private ArchiveIndex field_x;
     private int field_B;
     private byte[] field_r;
     static int field_m;
@@ -97,7 +97,7 @@ final class rb extends uk {
               var4 = this.field_t.a(this.field_q, (byte) -127, param0);
             }
           }
-          this.field_i.a(-97, (long)param0, (am) (var4));
+          this.field_i.a(-97, (long)param0, (IntrusiveNode) (var4));
         }
         if (((ae) (var4)).field_v) {
           return null;
@@ -152,7 +152,7 @@ final class rb extends uk {
             if (((ae) (var4)).field_w &&
               !this.field_h.a(20)) {
               var4 = this.field_h.a((byte) 2, this.field_g, param0, -18986, true);
-              this.field_i.a(-114, (long)param0, (am) (var4));
+              this.field_i.a(-114, (long)param0, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -191,7 +191,7 @@ final class rb extends uk {
           }
           if (!this.field_h.a(20)) {
             var4 = this.field_h.a((byte) 2, this.field_g, param0, -18986, true);
-            this.field_i.a(-106, (long)param0, (am) (var4));
+            this.field_i.a(-106, (long)param0, (IntrusiveNode) (var4));
           }
           return null;
         }
@@ -213,18 +213,18 @@ final class rb extends uk {
         if (param0 != -2) {
           return;
         }
-        vc.field_i[93] = 43;
-        vc.field_i[47] = 73;
-        vc.field_i[222] = 58;
-        vc.field_i[192] = 28;
-        vc.field_i[520] = 59;
-        vc.field_i[92] = 74;
-        vc.field_i[44] = 71;
-        vc.field_i[91] = 42;
-        vc.field_i[45] = 26;
-        vc.field_i[61] = 27;
-        vc.field_i[46] = 72;
-        vc.field_i[59] = 57;
+        GameCanvas.field_i[93] = 43;
+        GameCanvas.field_i[47] = 73;
+        GameCanvas.field_i[222] = 58;
+        GameCanvas.field_i[192] = 28;
+        GameCanvas.field_i[520] = 59;
+        GameCanvas.field_i[92] = 74;
+        GameCanvas.field_i[44] = 71;
+        GameCanvas.field_i[91] = 42;
+        GameCanvas.field_i[45] = 26;
+        GameCanvas.field_i[61] = 27;
+        GameCanvas.field_i[46] = 72;
+        GameCanvas.field_i[59] = 57;
     }
 
     final byte[] a(byte param0, int param1) {
@@ -247,15 +247,15 @@ final class rb extends uk {
         ae discarded$2 = null;
         int var2_int;
         ae var2;
-        am var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        am var6;
-        am var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
         ae var2Lifetime1;
-        am var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameRemainder2 = true;
@@ -280,18 +280,18 @@ final class rb extends uk {
               }
               var3 = this.field_w.a(12684);
             }
-            L6: while (true) {
+            scanLoop1: while (true) {
               if (this.field_A < this.field_x.field_o.length) {
                 if (this.field_x.field_o[this.field_A] != 0) {
                   if (this.field_t.field_e >= 250) {
                     var2_int = 0;
-                    break L6;
+                    break scanLoop1;
                   }
                   if (0 == this.field_r[this.field_A]) {
                     discarded$0 = this.a(this.field_A, 1, false);
                   }
                   if (this.field_r[this.field_A] == 0) {
-                    var7 = new am();
+                    var7 = new IntrusiveNode();
                     var7.field_c = (long)this.field_A;
                     var2_int = 0;
                     this.field_w.a(var7, 90);
@@ -334,7 +334,7 @@ final class rb extends uk {
                     discarded$2 = this.a(this.field_A, 2, false);
                   }
                   if (this.field_r[this.field_A] != 1) {
-                    var6 = new am();
+                    var6 = new IntrusiveNode();
                     var6.field_c = (long)this.field_A;
                     this.field_w.a(var6, 81);
                     var2_intLifetime1 = 0;
@@ -415,7 +415,7 @@ final class rb extends uk {
 
     }
 
-    final wc c(int param0) {
+    final ArchiveIndex c(int param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -448,7 +448,7 @@ final class rb extends uk {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_x = new wc(var7, this.field_l, this.field_v);
+            this.field_x = new ArchiveIndex(var7, this.field_l, this.field_v);
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
@@ -469,7 +469,7 @@ final class rb extends uk {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_x = new wc(var7, this.field_l, this.field_v);
+            this.field_x = new ArchiveIndex(var7, this.field_l, this.field_v);
             if (this.field_B != this.field_x.field_n) {
               throw new RuntimeException();
             }
@@ -506,7 +506,7 @@ final class rb extends uk {
         if (null == this.c(3)) {
           return;
         }
-        am var2 = this.field_u.g(-6);
+        IntrusiveNode var2 = this.field_u.g(-6);
         while (var2 != null) {
           var3 = (int)var2.field_c;
           if (var3 < 0) {

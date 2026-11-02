@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class ed implements Iterable {
+final class IntrusiveNodeHashTable implements Iterable {
     static bd field_a;
-    private am field_c;
+    private IntrusiveNode field_c;
     static String field_e;
-    am[] field_f;
+    IntrusiveNode[] field_f;
     static String field_d;
     int field_b;
 
@@ -42,7 +42,7 @@ final class ed implements Iterable {
           ra.field_i[dupTemp$0] = ra.field_i[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           if (param1) {
-            ed.b(-18);
+            IntrusiveNodeHashTable.b(-18);
           }
           for (var3 = 0; var3 < qb.field_i; var3++) {
             boolean decompiledFrameRemainder0 = true;
@@ -97,7 +97,7 @@ final class ed implements Iterable {
         }
         if (param0 != 0) {
           ln var2 = (ln) null;
-          ed.a((ln) null, true);
+          IntrusiveNodeHashTable.a((ln) null, true);
         }
         if (null != jj.field_d) {
           jj.field_d.g((byte) -19);
@@ -109,10 +109,10 @@ final class ed implements Iterable {
         ke.field_s.m(param0 ^ -108);
     }
 
-    final am a(long param0, int param1) {
-        am var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = HostileSpawn.field_I ? 1 : 0;
-        am var4 = this.field_f[(int)(param0 & (long)(this.field_b + param1))];
+        IntrusiveNode var4 = this.field_f[(int)(param0 & (long)(this.field_b + param1))];
         this.field_c = var4.field_g;
         while (this.field_c != var4) {
           if (param0 == this.field_c.field_c) {
@@ -126,11 +126,11 @@ final class ed implements Iterable {
         return null;
     }
 
-    final void a(byte param0, long param1, am param2) {
+    final void a(byte param0, long param1, IntrusiveNode param2) {
         if (null != param2.field_f) {
           param2.b(120);
         }
-        am var5 = this.field_f[(int)(param1 & (long)(-1 + this.field_b))];
+        IntrusiveNode var5 = this.field_f[(int)(param1 & (long)(-1 + this.field_b))];
         if (param0 <= 59) {
           return;
         }
@@ -188,7 +188,7 @@ final class ed implements Iterable {
         }
     }
 
-    private ed() throws Throwable {
+    private IntrusiveNodeHashTable() throws Throwable {
         throw new Error();
     }
 

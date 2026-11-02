@@ -80,7 +80,7 @@ final class rl {
     }
 
     final static void a(int param0, ic param1, int param2) {
-        en var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = s.field_b;
           var3.i(19319, param0);
@@ -97,7 +97,7 @@ final class rl {
         }
     }
 
-    final static boolean a(int param0, gb param1, int param2, int param3) {
+    final static boolean a(int param0, ResourceArchive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         ic var5 = null;

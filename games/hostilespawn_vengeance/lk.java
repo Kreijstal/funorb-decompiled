@@ -39,7 +39,7 @@ final class lk extends vd implements cd, qk {
 
     private final void e(byte param0) {
         int var2;
-        if (gi.b((byte) -86) ||
+        if (IsaacGenerator.b((byte) -86) ||
           !(this.field_O.field_n.length() <= 0) &&
           !(this.field_L.field_n.length() <= 0)) {
           r.a(this.field_O.field_n, this.field_L.field_n, -125);
@@ -67,14 +67,14 @@ final class lk extends vd implements cd, qk {
                   ki.a(-1);
                 } else {
                   if (!this.field_J) {
-                    vc.a((byte) -1);
+                    GameCanvas.a((byte) -1);
                   } else {
                     mn.a((byte) -126);
                   }
                 }
               }
             } else {
-              gb.d(126);
+              ResourceArchive.d(126);
             }
           }
           return;
@@ -189,7 +189,7 @@ final class lk extends vd implements cd, qk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          se.a(param20, param2, param3, new vh(param11), param6, param8, new vh(param12), param13, param1, param9, param18, param0, param19, param14, param5, param15 ^ 4686, new vh(param10), param17, param7, param16, param4);
+          GameAppletShell.a(param20, param2, param3, new vh(param11), param6, param8, new vh(param12), param13, param1, param9, param18, param0, param19, param14, param5, param15 ^ 4686, new vh(param10), param17, param7, param16, param4);
           if (param15 != 7662) {
             field_N = (nd) null;
           }
@@ -381,14 +381,14 @@ final class lk extends vd implements cd, qk {
           if (this.field_I != null) {
             this.field_m = this.field_m + (var7.b(this.field_I, -40 + this.field_s, var7.field_y) + 5);
           }
-          var8 = jg.field_b;
+          var8 = KeyboardInput.field_b;
           var9 = qj.a(bn.c(-1), (byte) -116);
           if (ub.field_b != var9) {
             if (var9 == wh.field_c) {
               var8 = dg.field_nb;
             }
           } else {
-            var8 = dk.field_k;
+            var8 = DualLinkNode.field_k;
           }
           dupTemp$0 = new nh(10, this.field_m, this.field_s - 20, 25, this.field_O, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;

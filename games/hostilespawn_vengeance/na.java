@@ -151,14 +151,14 @@ final class na {
           }
           var5[4] = (bd) ((Object) var18);
           var4.a(4, true).a((byte) -37, true).a(false, var5);
-          var4.a(5, true).a(false, uk.a(65793, 0, (byte) 127, 0, 0)).a((byte) -128, true).a(-1, true);
+          var4.a(5, true).a(false, ArchiveProvider.a(65793, 0, (byte) 127, 0, 0)).a((byte) -128, true).a(-1, true);
           this.field_e = (nn) ((Object) var4);
           var6 = new ha(var4, true);
           var6.field_k = 0;
           var7 = new ha(var4, true);
           var7.field_k = 0;
-          var7.a(false, en.h(-71, 8947848));
-          var7.a(1, true).a(false, en.h(-96, 11184810)).a(2236962, true);
+          var7.a(false, CipherPacketBuffer.h(-71, 8947848));
+          var7.a(1, true).a(false, CipherPacketBuffer.h(-96, 11184810)).a(2236962, true);
           this.field_n = (nn) ((Object) new rf(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ra(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new h(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class HostileSpawn extends d {
+public final class HostileSpawn extends NetworkGameClient {
     private int field_D;
     static int[] field_K;
     private int field_H;
@@ -42,13 +42,13 @@ public final class HostileSpawn extends d {
           wk.field_b[2] = sc.field_a;
           wk.field_b[1] = ue.field_f;
           wk.field_b[4] = fg.a("", "key", vd.field_C, false);
-          wk.field_b[11] = jg.field_f;
+          wk.field_b[11] = KeyboardInput.field_f;
           kh.field_bb = new int[101];
           wk.field_b[10] = aa.field_b;
           wk.field_b[5] = e.field_r;
           wk.field_b[9] = bn.field_l;
           wk.field_b[8] = mg.field_b;
-          wk.field_b[6] = jg.field_h;
+          wk.field_b[6] = KeyboardInput.field_h;
           wk.field_b[7] = qh.field_l;
           var2_int = 0;
           do {
@@ -109,10 +109,10 @@ public final class HostileSpawn extends d {
           wh.field_d = th.a(vd.field_C, param0 + 201, "digitalserial_16", te.field_J, "");
           mk.field_L = th.a(vd.field_C, 49, "digitalserial_20", te.field_J, "");
           id.field_A = th.a(vd.field_C, -127, "digitalserial_12", te.field_J, "");
-          wc.a("basicfont12", gb.field_a, 83, wd.field_a, "");
+          ArchiveIndex.a("basicfont12", ResourceArchive.field_a, 83, wd.field_a, "");
           of.field_e = th.a(vd.field_C, -111, "micro_numbers", te.field_J, "");
           lm.field_y = fg.a("", "splat_guard", vd.field_C, false);
-          d.field_s = fg.a("", "splat_dormant", vd.field_C, false);
+          NetworkGameClient.field_s = fg.a("", "splat_dormant", vd.field_C, false);
           ee.field_g = fg.a("", "splat_praetorian", vd.field_C, false);
           fk.field_c = fg.a("", "splat_queen", vd.field_C, false);
           rh.field_x = fg.a("", "splat_runner", vd.field_C, false);
@@ -123,7 +123,7 @@ public final class HostileSpawn extends d {
           me.field_ib = ln.field_m;
           if (!ib.a((byte) -72)) {
             var5 = sg.a(true, "", vd.field_C, "member_benefits");
-            dh.field_a = new e(ni.field_g, aj.field_g, var5, ci.field_i);
+            dh.field_a = new e(ni.field_g, aj.field_g, var5, MouseInput.field_i);
           }
           var5 = sg.a(true, "", vd.field_C, "keys");
           var6 = 0;
@@ -132,13 +132,13 @@ public final class HostileSpawn extends d {
               al.field_Z.a(var5, (int[]) null);
               id.field_A.a(var5, (int[]) null);
               il.field_c = jd.a((byte) 33, "", vd.field_C, "infoscreen");
-              qi.field_H = ci.a("", 27, "numkeys", vd.field_C);
-              pl.field_f = ci.a("", 114, "secweaponkeys", vd.field_C);
+              qi.field_H = MouseInput.a("", 27, "numkeys", vd.field_C);
+              pl.field_f = MouseInput.a("", 114, "secweaponkeys", vd.field_C);
               fj.field_Kb = jd.a((byte) 33, "", vd.field_C, "achievements_lrg");
               qc.field_v = qm.a("", 0, "hs_unachieved", vd.field_C);
-              de.field_i = ci.a("basic", param0 + 222, "locked", wd.field_a);
+              de.field_i = MouseInput.a("basic", param0 + 222, "locked", wd.field_a);
               ob.field_B = sg.a(true, "", vd.field_C, "hs_coins");
-              nm.field_f = ci.a("", -100, "sliderbutton", vd.field_C);
+              nm.field_f = MouseInput.a("", -100, "sliderbutton", vd.field_C);
               oa.field_m = new bd[9];
               oa.field_m[0] = new bd(4, 4);
               oa.field_m[1] = new bd(4, 4);
@@ -180,7 +180,7 @@ public final class HostileSpawn extends d {
               gj.a(param0 ^ -101, ig.field_H, 84.0f);
               this.a((byte) -106);
               oc.field_c = fg.a("", "hud_gun_big", vd.field_C, false);
-              jg.field_d = fg.a("", "hud_bottom", vd.field_C, false);
+              KeyboardInput.field_d = fg.a("", "hud_bottom", vd.field_C, false);
               gj.field_d = fg.a("", "hud_progress_bar", vd.field_C, false);
               ti.field_j = fg.a("", "hud_gun_box", vd.field_C, false);
               field_J = new bd[3];
@@ -212,10 +212,10 @@ public final class HostileSpawn extends d {
               this.s(param0 + 152);
               ia.field_l[10] = fg.a("", "spawn20", vd.field_C, false);
               ia.field_l[12] = fg.a("", "gunturret", vd.field_C, false);
-              ci.field_b = fg.a("", "cragturret", vd.field_C, false);
+              MouseInput.field_b = fg.a("", "cragturret", vd.field_C, false);
               ia.field_l[13] = fg.a("", "barrel", vd.field_C, false);
               jd.a((byte) 33, "", vd.field_C, "spawneyes0");
-              ia.field_l[23] = ci.a("", -32, "doorgfx", vd.field_C);
+              ia.field_l[23] = MouseInput.a("", -32, "doorgfx", vd.field_C);
               wg.field_zb = fg.a("", "hatching", vd.field_C, false);
               gj.a(param0 + 133, ig.field_H, 91.0f);
               this.a((byte) -51);
@@ -223,11 +223,11 @@ public final class HostileSpawn extends d {
               di.field_b = jd.a((byte) 33, "", vd.field_C, "gun_silhouettes");
               jj.field_j = ei.a(vd.field_C, 125, "", "bullet_acid");
               sj.field_e = fg.a("", "bullet_plasma", vd.field_C, false);
-              ue.field_c = ci.a("", -36, "bullet_rocket", vd.field_C);
+              ue.field_c = MouseInput.a("", -36, "bullet_rocket", vd.field_C);
               df.field_g = ei.a(vd.field_C, 125, "", "muzzleflash");
               id.field_p = ei.a(vd.field_C, 89, "", "impact_gun");
               fg.a("", "impact_rail", vd.field_C, false);
-              ci.a("", 116, "scorchmark_alpha", vd.field_C);
+              MouseInput.a("", 116, "scorchmark_alpha", vd.field_C);
               lg.field_k = fg.a("", "spatter_spawn", vd.field_C, false);
               break;
             }
@@ -246,13 +246,13 @@ public final class HostileSpawn extends d {
           fa.field_d = jd.a((byte) 33, "", vd.field_C, "lights");
           gj.a(20, ig.field_H, 99.0f);
           this.a((byte) -69);
-          pi.field_a[0] = ci.a("", 116, "shadow0", vd.field_C);
-          pi.field_a[1] = ci.a("", 110, "shadow1", vd.field_C);
-          pi.field_a[2] = ci.a("", param0 + 232, "shadow2", vd.field_C);
+          pi.field_a[0] = MouseInput.a("", 116, "shadow0", vd.field_C);
+          pi.field_a[1] = MouseInput.a("", 110, "shadow1", vd.field_C);
+          pi.field_a[2] = MouseInput.a("", param0 + 232, "shadow2", vd.field_C);
           hh.field_a = ei.a(vd.field_C, 97, "", "ammo");
           fg.a("", "pointer", vd.field_C, false);
           li.field_t = fg.a("", "compass", vd.field_C, false);
-          pi.field_b = ci.a("", param0 + 225, "health", vd.field_C);
+          pi.field_b = MouseInput.a("", param0 + 225, "health", vd.field_C);
           eg.field_v = fg.a("", "dragged_egg", vd.field_C, false);
           qg.field_q = fg.a("", "dragged_slime", vd.field_C, false);
           uf.field_g = new pg[3];
@@ -260,7 +260,7 @@ public final class HostileSpawn extends d {
           uf.field_g[1] = qm.a("", bm.a((int) param0, -113), "win_vengeance", vd.field_C);
           uf.field_g[2] = qm.a("", 0, "win_vengeance_alt", vd.field_C);
           vd.field_C = null;
-          gb.field_a = null;
+          ResourceArchive.field_a = null;
           var6 = 0;
           while (ia.field_l.length > var6) {
             if (var7 != 0) {
@@ -294,8 +294,8 @@ public final class HostileSpawn extends d {
           ia.field_l[162] = ga.field_a;
           ia.field_l[115] = td.field_f;
           ia.field_l[212] = qc.field_q;
-          ia.field_l[140] = gi.field_j;
-          ia.field_l[207] = wc.field_e;
+          ia.field_l[140] = IsaacGenerator.field_j;
+          ia.field_l[207] = ArchiveIndex.field_e;
           ia.field_l[74] = ki.field_b;
           ia.field_l[177] = el.field_d;
           ia.field_l[201] = vb.field_Lb;
@@ -303,7 +303,7 @@ public final class HostileSpawn extends d {
           ia.field_l[120] = ub.field_c;
           ia.field_l[210] = hj.field_r;
           ia.field_l[146] = ml.field_a;
-          ia.field_l[130] = vi.field_k;
+          ia.field_l[130] = PacketBuffer.field_k;
           ia.field_l[62] = rb.field_y;
           ia.field_l[89] = tc.field_b;
           ia.field_l[105] = ig.field_R;
@@ -318,30 +318,30 @@ public final class HostileSpawn extends d {
           ia.field_l[129] = ca.field_b;
           ia.field_l[61] = lc.field_b;
           ia.field_l[135] = mg.field_f;
-          ia.field_l[60] = ci.field_k;
+          ia.field_l[60] = MouseInput.field_k;
           ia.field_l[125] = mn.field_b;
           ia.field_l[127] = hh.field_b;
           ia.field_l[186] = dc.field_b;
           ia.field_l[138] = rh.field_z;
           ia.field_l[149] = hf.field_e;
-          ia.field_l[217] = ed.field_a;
+          ia.field_l[217] = IntrusiveNodeHashTable.field_a;
           ia.field_l[114] = rj.field_N;
-          ia.field_l[208] = ui.field_c;
+          ia.field_l[208] = DualLinkDeque.field_c;
           ia.field_l[176] = sf.field_T;
           ia.field_l[79] = oa.field_e;
           ia.field_l[136] = le.field_xb;
           ia.field_l[171] = ul.field_G;
           ia.field_l[163] = oh.field_a;
           ia.field_l[75] = nh.field_C;
-          ia.field_l[159] = ci.field_j;
+          ia.field_l[159] = MouseInput.field_j;
           ia.field_l[170] = bh.field_h;
           ia.field_l[219] = t.field_l;
           ia.field_l[40] = f.field_b;
           ia.field_l[168] = id.field_w;
           ia.field_l[58] = an.field_l;
-          ia.field_l[77] = gi.field_c;
+          ia.field_l[77] = IsaacGenerator.field_c;
           ia.field_l[175] = gm.field_j;
-          ia.field_l[123] = ci.field_l;
+          ia.field_l[123] = MouseInput.field_l;
           ia.field_l[65] = wa.field_o;
           ia.field_l[66] = sm.field_h;
           ia.field_l[97] = df.field_a;
@@ -350,11 +350,11 @@ public final class HostileSpawn extends d {
           ia.field_l[111] = qg.field_m;
           ia.field_l[92] = ab.field_a;
           ia.field_l[184] = ra.field_b;
-          ia.field_l[104] = ui.field_b;
+          ia.field_l[104] = DualLinkDeque.field_b;
           ia.field_l[180] = nb.field_E;
           ia.field_l[32] = kd.field_y;
           ia.field_l[134] = mj.field_a;
-          ia.field_l[93] = vc.field_k;
+          ia.field_l[93] = GameCanvas.field_k;
           ia.field_l[211] = pj.field_l;
           ia.field_l[199] = var2;
           ia.field_l[202] = uh.field_f;
@@ -366,7 +366,7 @@ public final class HostileSpawn extends d {
           ia.field_l[121] = fa.field_e;
           ia.field_l[206] = vk.field_p;
           ia.field_l[44] = oe.field_g;
-          ia.field_l[150] = gb.field_l;
+          ia.field_l[150] = ResourceArchive.field_l;
           ia.field_l[190] = om.field_e;
           ia.field_l[96] = q.field_c;
           ia.field_l[70] = e.field_d;
@@ -397,18 +397,18 @@ public final class HostileSpawn extends d {
           ia.field_l[131] = ri.field_k;
           ia.field_l[174] = la.field_e;
           ia.field_l[220] = uc.field_a;
-          ia.field_l[69] = en.field_w;
-          ia.field_l[132] = ci.field_g;
+          ia.field_l[69] = CipherPacketBuffer.field_w;
+          ia.field_l[132] = MouseInput.field_g;
           ia.field_l[116] = dd.field_j;
-          ia.field_l[73] = vc.field_h;
+          ia.field_l[73] = GameCanvas.field_h;
           ia.field_l[178] = df.field_j;
           ia.field_l[38] = oc.field_d;
-          ia.field_l[64] = jg.field_j;
+          ia.field_l[64] = KeyboardInput.field_j;
           ia.field_l[88] = ea.field_e;
           ia.field_l[147] = p.field_d;
           ia.field_l[192] = ne.field_n;
           ia.field_l[155] = o.field_g;
-          ia.field_l[59] = vi.field_j;
+          ia.field_l[59] = PacketBuffer.field_j;
           ia.field_l[169] = ld.field_o;
           ia.field_l[117] = ck.field_C;
           ia.field_l[80] = qa.field_g[7];
@@ -448,7 +448,7 @@ public final class HostileSpawn extends d {
           ia.field_l[195] = var2;
           ia.field_l[165] = sm.field_d;
           ia.field_l[35] = om.field_c;
-          ia.field_l[161] = jg.field_i;
+          ia.field_l[161] = KeyboardInput.field_i;
           ia.field_l[86] = u.field_h;
           ia.field_l[52] = lc.field_a;
           ia.field_l[119] = wd.field_b;
@@ -463,11 +463,11 @@ public final class HostileSpawn extends d {
           ia.field_l[45] = rd.field_a;
           ia.field_l[101] = el.field_l;
           ia.field_l[151] = wh.field_e;
-          ia.field_l[179] = dk.field_n;
+          ia.field_l[179] = DualLinkNode.field_n;
           ia.field_l[43] = r.field_b;
           ia.field_l[49] = qj.field_l;
           ia.field_l[126] = ln.field_c;
-          ia.field_l[57] = gi.field_f;
+          ia.field_l[57] = IsaacGenerator.field_f;
           ia.field_l[181] = ni.field_d;
           ia.field_l[34] = jd.field_h;
           ia.field_l[33] = c.field_f[0];
@@ -526,7 +526,7 @@ public final class HostileSpawn extends d {
           var6 = ln.field_a.field_d;
           var7 = ln.field_a.field_a;
           var8_int = 0;
-          L0: while ((-1 + var6) > var8_int) {
+          scanLoop1: while ((-1 + var6) > var8_int) {
             var9_int = 0;
             while (true) {
               if (var7 - 1 > var9_int) {
@@ -566,7 +566,7 @@ public final class HostileSpawn extends d {
               break;
             }
             if (var12 == 0) {
-              continue L0;
+              continue scanLoop1;
             }
             break;
           }
@@ -595,7 +595,7 @@ public final class HostileSpawn extends d {
             stackIn_43_0 = 0;
           }
           var5Lifetime2 = stackIn_43_0;
-          L16: while (true) {
+          scanLoop2: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (el.field_j > var5Lifetime2) {
               var9_ref = mm.field_m[var5Lifetime2];
@@ -625,12 +625,12 @@ public final class HostileSpawn extends d {
             } else {
               boolean decompiledFrameRemainder0 = true;
               boolean decompiledFrameCompleted1 = true;
-              L23: {
+              regionExit3: {
                 var9_intLifetime1 = ha.field_t;
                 if ((var9_intLifetime1 != 0 ||
                   var12 != 0) && var9_intLifetime1 != 6) {
                   if (2 == var9_intLifetime1) {
-                    break L23;
+                    break regionExit3;
                   }
                   if (var9_intLifetime1 == 3 &&
                     var12 == 0) {
@@ -688,7 +688,7 @@ public final class HostileSpawn extends d {
                       break;
                     }
                     if (var12 != 0) {
-                      break L16;
+                      break scanLoop2;
                     }
                     var8.field_g = 0;
                     while (var7 > var8.field_g) {
@@ -1047,10 +1047,10 @@ public final class HostileSpawn extends d {
           pe.field_ab = ji.a(tk.field_a, "", "hostilespawngameover");
           cl.field_o = ji.a(tk.field_a, "", "Hostilespawnloop");
           bb.field_b = ji.a(tk.field_a, "", "Hostilespawnloop_planet");
-          uk.field_d = ji.a(tk.field_a, "", "Hostilespawnloop_goo");
+          ArchiveProvider.field_d = ji.a(tk.field_a, "", "Hostilespawnloop_goo");
           bb.field_e = ji.a(tk.field_a, "", "Hostilespawnthreat");
           int var2_int = -11 % ((57 - param0) / 52);
-          en.field_u = ji.a(tk.field_a, "", "hostilespawnloop_vengeance");
+          CipherPacketBuffer.field_u = ji.a(tk.field_a, "", "hostilespawnloop_vengeance");
           ua.field_f = ji.a(tk.field_a, "", "hostilespawnthreat_vengeance");
           ph.field_F = null;
           ul.field_P = null;
@@ -1061,9 +1061,9 @@ public final class HostileSpawn extends d {
           ha.field_w.field_F.a(0, pe.field_ab, ej.field_h, nd.field_e, false);
           ha.field_w.field_F.a(0, cl.field_o, ej.field_h, nd.field_e, false);
           ha.field_w.field_F.a(0, bb.field_b, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, uk.field_d, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, ArchiveProvider.field_d, ej.field_h, nd.field_e, false);
           ha.field_w.field_F.a(0, bb.field_e, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, en.field_u, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, CipherPacketBuffer.field_u, ej.field_h, nd.field_e, false);
           ha.field_w.field_F.a(0, ua.field_f, ej.field_h, nd.field_e, false);
           nd.field_e = null;
           ej.field_h = null;
@@ -1096,18 +1096,18 @@ public final class HostileSpawn extends d {
           eh.a(true);
           ib.a(121);
           tg.a(param0 ^ 111);
-          d.g((byte) -106);
+          NetworkGameClient.g((byte) -106);
           kc.a(-82);
-          se.c((byte) 88);
+          GameAppletShell.c((byte) 88);
           sc.a(-87);
-          jg.b(-69);
-          ci.b(-31);
+          KeyboardInput.b(-69);
+          MouseInput.b(-31);
           kb.c((byte) -63);
           si.b();
-          gb.b(-16199);
+          ResourceArchive.b(-16199);
           gf.b((byte) -105);
           il.a(-91);
-          vi.g(255);
+          PacketBuffer.g(255);
           hn.a(false);
           ie.a((byte) 4);
           vg.a(param0 - 26);
@@ -1133,7 +1133,7 @@ public final class HostileSpawn extends d {
           qh.a((byte) -66);
           bi.a(true);
           nm.a((byte) 76);
-          am.b((byte) -50);
+          IntrusiveNode.b((byte) -50);
           ej.d(-21742);
           dh.b(-3);
           sg.b(-106);
@@ -1168,7 +1168,7 @@ public final class HostileSpawn extends d {
           c.a(true);
           bl.a(120);
           ca.a(param0 ^ 29);
-          en.r(-10723);
+          CipherPacketBuffer.r(-10723);
           jc.a((byte) 89);
           uc.a(212563556);
           kl.a(126);
@@ -1188,16 +1188,16 @@ public final class HostileSpawn extends d {
           ij.e((byte) 75);
           na.a(param0 + 61);
           oh.a(-32278);
-          wc.a(-17514);
+          ArchiveIndex.a(-17514);
           fh.b(9992);
-          uk.b(param0 - 109);
+          ArchiveProvider.b(param0 - 109);
           pb.f(param0 - 139);
           th.d((byte) 16);
           fj.i(-24510);
           cf.a(false);
           le.e(-3354);
           wk.a(2);
-          dk.a((byte) 71);
+          DualLinkNode.a((byte) 71);
           aj.a(-46);
           vh.a(false);
           ni.b(param0 ^ 107);
@@ -1219,7 +1219,7 @@ public final class HostileSpawn extends d {
           ee.b(param0 - 28);
           fg.a((byte) -98);
           ae.a(true);
-          gi.b(true);
+          IsaacGenerator.b(true);
           uf.g(24);
           pa.g(param0 ^ 107);
           an.g(2);
@@ -1242,7 +1242,7 @@ public final class HostileSpawn extends d {
           tk.a(117);
           lb.a(-16182);
           cb.a((byte) -122);
-          vc.a(119);
+          GameCanvas.a(119);
           mf.b(-33);
           rg.a(1);
           nj.b((byte) -93);
@@ -1307,8 +1307,8 @@ public final class HostileSpawn extends d {
           rj.e((byte) -122);
           od.e((byte) -55);
           nd.a(30401);
-          ed.a(-1);
-          ui.a(-1667734544);
+          IntrusiveNodeHashTable.a(-1);
+          DualLinkDeque.a(-1667734544);
           lj.f(param0 - 13);
           hb.a(false);
           el.b(true);
@@ -1423,7 +1423,7 @@ public final class HostileSpawn extends d {
           re.field_D = new bd[7][];
           of.field_c = new bd[7][];
           cb.field_g = new bd[7][];
-          wc.field_f = new bd[7][];
+          ArchiveIndex.field_f = new bd[7][];
           ck.field_y = new bd[7][];
           lb.field_a = new bd[7][];
           pa.field_i = new bd[7][];
@@ -1454,11 +1454,11 @@ public final class HostileSpawn extends d {
           lb.field_a[5] = ei.a(vd.field_C, 93, "", "spawn_spitter_death");
           lb.field_a[0] = ei.a(vd.field_C, 117, "", "spawn_spitter_idle");
           lb.field_a[1] = ei.a(vd.field_C, 126, "", "spawn_spitter_walk");
-          wc.field_f[4] = ei.a(vd.field_C, 119, "", "spawn_praetorian_attack");
-          wc.field_f[5] = ei.a(vd.field_C, param0 + 74, "", "spawn_praetorian_death");
-          wc.field_f[0] = ei.a(vd.field_C, bm.a(param0, 70), "", "spawn_praetorian_idle");
-          wc.field_f[1] = ei.a(vd.field_C, 93, "", "spawn_praetorian_walk");
-          var2 = new bd[][][]{of.field_c, pa.field_i, bf.field_f, re.field_D, kl.field_b, lb.field_a, cb.field_g, vd.field_y, wc.field_f};
+          ArchiveIndex.field_f[4] = ei.a(vd.field_C, 119, "", "spawn_praetorian_attack");
+          ArchiveIndex.field_f[5] = ei.a(vd.field_C, param0 + 74, "", "spawn_praetorian_death");
+          ArchiveIndex.field_f[0] = ei.a(vd.field_C, bm.a(param0, 70), "", "spawn_praetorian_idle");
+          ArchiveIndex.field_f[1] = ei.a(vd.field_C, 93, "", "spawn_praetorian_walk");
+          var2 = new bd[][][]{of.field_c, pa.field_i, bf.field_f, re.field_D, kl.field_b, lb.field_a, cb.field_g, vd.field_y, ArchiveIndex.field_f};
           var3 = var2;
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -1525,7 +1525,7 @@ public final class HostileSpawn extends d {
           if (decompiledNaturalLoopExit0) {
             stackIn_12_0 = null;
           }
-          bi.field_h = (gb) (stackIn_12_0);
+          bi.field_h = (ResourceArchive) (stackIn_12_0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1572,7 +1572,7 @@ public final class HostileSpawn extends d {
             v.a(-112, wa.field_q);
             wa.field_q.a(true, gf.field_b);
             wa.field_q = null;
-            se.field_h.requestFocus();
+            GameAppletShell.field_h.requestFocus();
           }
           if (!cm.b((byte) -97)) {
             boolean decompiledFrameRemainder0 = true;
@@ -1586,17 +1586,17 @@ public final class HostileSpawn extends d {
                 (decompiledFrameRemainder0 = !(!sg.field_j.field_l))) {
                 var2_int = sg.field_j.field_j.length;
                 var3_int = 0;
-                L12: while (true) {
+                scanLoop1: while (true) {
                   if (var2_int > var3_int) {
                     pb.field_Ob[var3_int] = sg.field_j.field_j[var3_int];
-                    uk.field_c[var3_int] = ll.a(uk.field_c[var3_int], pb.field_Ob[var3_int]);
+                    ArchiveProvider.field_c[var3_int] = ll.a(ArchiveProvider.field_c[var3_int], pb.field_Ob[var3_int]);
                     var3_int++;
                     if (var4 == 0) {
                       continue;
                     }
                   } else {
                     if (!hb.a(18, pb.field_Ob, false)) {
-                      break L12;
+                      break scanLoop1;
                     }
                   }
                   bh.field_g[18] = vg.a(new String[]{il.field_b[18]}, 91, sf.field_Y);
@@ -1845,13 +1845,13 @@ public final class HostileSpawn extends d {
               return false;
             }
             if (wb.field_S > 0 &&
-              null != gi.field_h) {
+              null != IsaacGenerator.field_h) {
               this.o(28974);
               return false;
             }
             li.a(50, param0 ^ 3);
             ij.a((byte) -17, vg.field_h);
-            am.field_d = this;
+            IntrusiveNode.field_d = this;
             this.m(300);
             of.field_h = new re(true);
             if (!ta.p(3)) {
@@ -1874,8 +1874,8 @@ public final class HostileSpawn extends d {
                     vd.field_C.e(param0 ^ 4)) {
                     if (bi.field_h.a(param0 ^ -15875) &&
                       bi.field_h.e(param0 ^ 4)) {
-                      if (gi.field_h.a(-15879) &&
-                        gi.field_h.e(0)) {
+                      if (IsaacGenerator.field_h.a(-15879) &&
+                        IsaacGenerator.field_h.e(0)) {
                         if (null != wd.field_a && (!wd.field_a.a(param0 ^ -15875) ||
                           !wd.field_a.a(-8088, "basic"))) {
                           gj.a(param0 ^ 16, s.a(wd.field_a, "basic", 47, cl.field_h, lj.field_r), 40.0f);
@@ -1890,12 +1890,12 @@ public final class HostileSpawn extends d {
                           }
                           if (wd.field_a.a(param0 - 15883) &&
                             wd.field_a.a(-8088, "basicfont12")) {
-                            if (gb.field_a.a(-15879) &&
-                              gb.field_a.a(param0 ^ -8084, "basicfont12")) {
+                            if (ResourceArchive.field_a.a(-15879) &&
+                              ResourceArchive.field_a.a(param0 ^ -8084, "basicfont12")) {
                               if (wd.field_a.a(-15879) &&
                                 wd.field_a.a(param0 - 8092, "kartika13")) {
-                                if (gb.field_a.a(-15879) &&
-                                  gb.field_a.a(-8088, "kartika13")) {
+                                if (ResourceArchive.field_a.a(-15879) &&
+                                  ResourceArchive.field_a.a(-8088, "kartika13")) {
                                   kb.b((byte) -43);
                                   u.field_e = u.field_e - w.field_r;
                                   w.field_r = 0;
@@ -1905,13 +1905,13 @@ public final class HostileSpawn extends d {
                                   this.u(111);
                                   return false;
                                 }
-                                gj.a(param0 + 16, s.a(gb.field_a, "kartika13", 84, cf.field_r, in.field_a), 17.0f);
+                                gj.a(param0 + 16, s.a(ResourceArchive.field_a, "kartika13", 84, cf.field_r, in.field_a), 17.0f);
                                 return false;
                               }
                               gj.a(20, s.a(wd.field_a, "kartika13", 113, cl.field_h, lj.field_r), 11.0f);
                               return false;
                             }
-                            gj.a(20, s.a(gb.field_a, "basicfont12", 125, cf.field_r, in.field_a), 15.0f);
+                            gj.a(20, s.a(ResourceArchive.field_a, "basicfont12", 125, cf.field_r, in.field_a), 15.0f);
                             return false;
                           }
                           gj.a(20, s.a(wd.field_a, "basicfont12", param0 ^ 57, cl.field_h, lj.field_r), 14.0f);
@@ -1920,10 +1920,10 @@ public final class HostileSpawn extends d {
                         gj.a(20, s.a(tk.field_a, "", 66, cl.field_h, lj.field_r), 80.0f);
                         return false;
                       }
-                      gj.a(20, md.a(ci.field_f, gi.field_h, dg.field_rb, (byte) -82), 35.0f);
+                      gj.a(20, md.a(MouseInput.field_f, IsaacGenerator.field_h, dg.field_rb, (byte) -82), 35.0f);
                       return false;
                     }
-                    gj.a(param0 ^ 16, md.a(ci.field_f, bi.field_h, dg.field_rb, (byte) 68), 30.0f);
+                    gj.a(param0 ^ 16, md.a(MouseInput.field_f, bi.field_h, dg.field_rb, (byte) 68), 30.0f);
                     return false;
                   }
                   gj.a(20, md.a(lj.field_r, vd.field_C, cl.field_h, (byte) -88), 25.0f);
@@ -2025,7 +2025,7 @@ public final class HostileSpawn extends d {
         var4 = field_I ? 1 : 0;
         try {
           if (wa.field_q == null) {
-            stackIn_5_0 = se.field_h;
+            stackIn_5_0 = GameAppletShell.field_h;
           } else {
             stackIn_5_0 = wa.field_q;
           }
@@ -2034,7 +2034,7 @@ public final class HostileSpawn extends d {
             stackIn_12_0 = false;
             stackIn_12_1 = var2;
             stackIn_15_2 = (wa.field_q != null) || (nm.field_a);
-            gb.a(stackIn_12_0, (java.awt.Canvas) (stackIn_12_1), stackIn_15_2);
+            ResourceArchive.a(stackIn_12_0, (java.awt.Canvas) (stackIn_12_1), stackIn_15_2);
             return;
           }
           if (!ul.field_N) {
@@ -2100,14 +2100,14 @@ public final class HostileSpawn extends d {
         int var3Lifetime1;
         var4 = field_I ? 1 : 0;
         try {
-          uf.field_i[4] = new bd(he.field_t.a("starfield.jpg", "", 0), (java.awt.Component) ((Object) se.field_h));
+          uf.field_i[4] = new bd(he.field_t.a("starfield.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           var2 = new bd[8][];
-          var2[0] = gl.a(new bd(he.field_t.a("floors_1.jpg", "", 0), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-          var2[1] = gl.a(new bd(he.field_t.a("floors_2.jpg", "", param0 + 4), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-          var2[2] = gl.a(new bd(he.field_t.a("floors_3.jpg", "", 0), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-          var2[3] = gl.a(new bd(he.field_t.a("floors_4.jpg", "", bm.a(param0, param0)), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-          var2[5] = gl.a(new bd(he.field_t.a("floors_6.jpg", "", param0 + 4), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-          var2[6] = gl.a(new bd(he.field_t.a("floors_7.jpg", "", 0), (java.awt.Component) ((Object) se.field_h)), 20, 8);
+          var2[0] = gl.a(new bd(he.field_t.a("floors_1.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[1] = gl.a(new bd(he.field_t.a("floors_2.jpg", "", param0 + 4), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[2] = gl.a(new bd(he.field_t.a("floors_3.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[3] = gl.a(new bd(he.field_t.a("floors_4.jpg", "", bm.a(param0, param0)), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[5] = gl.a(new bd(he.field_t.a("floors_6.jpg", "", param0 + 4), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
+          var2[6] = gl.a(new bd(he.field_t.a("floors_7.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h)), 20, 8);
           pk.field_d = new bd[1280];
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -2126,8 +2126,8 @@ public final class HostileSpawn extends d {
             stackIn_11_0 = (bd[][]) null;
           }
           var2Lifetime1 = stackIn_11_0;
-          ri.field_p = new bd(he.field_t.a("bg.jpg", "", 0), (java.awt.Component) ((Object) se.field_h));
-          hk.field_h = new bd(he.field_t.a("hs_logo.jpg", "", 0), (java.awt.Component) ((Object) se.field_h));
+          ri.field_p = new bd(he.field_t.a("bg.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
+          hk.field_h = new bd(he.field_t.a("hs_logo.jpg", "", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           var3Lifetime1 = 0;
           while (hk.field_h.field_D.length > var3Lifetime1) {
             if (var4 != 0) {
@@ -2150,17 +2150,17 @@ public final class HostileSpawn extends d {
 
     private final void o(int param0) {
         try {
-          oc.field_h[1][0] = gi.field_h.a("level_01.dat", "", 0);
-          oc.field_h[1][1] = gi.field_h.a("level_02.dat", "", bm.a(param0, 28974));
-          oc.field_h[1][2] = gi.field_h.a("level_03.dat", "", bm.a(param0, 28974));
-          oc.field_h[1][3] = gi.field_h.a("level_04.dat", "", bm.a(param0, param0));
-          oc.field_h[1][4] = gi.field_h.a("level_05.dat", "", param0 - 28974);
-          oc.field_h[1][5] = gi.field_h.a("level_06.dat", "", param0 - 28974);
-          oc.field_h[1][6] = gi.field_h.a("level_07.dat", "", 0);
-          oc.field_h[1][7] = gi.field_h.a("level_08.dat", "", 0);
-          oc.field_h[1][8] = gi.field_h.a("level_09.dat", "", 0);
-          oc.field_h[1][9] = gi.field_h.a("level_10.dat", "", 0);
-          gi.field_h = null;
+          oc.field_h[1][0] = IsaacGenerator.field_h.a("level_01.dat", "", 0);
+          oc.field_h[1][1] = IsaacGenerator.field_h.a("level_02.dat", "", bm.a(param0, 28974));
+          oc.field_h[1][2] = IsaacGenerator.field_h.a("level_03.dat", "", bm.a(param0, 28974));
+          oc.field_h[1][3] = IsaacGenerator.field_h.a("level_04.dat", "", bm.a(param0, param0));
+          oc.field_h[1][4] = IsaacGenerator.field_h.a("level_05.dat", "", param0 - 28974);
+          oc.field_h[1][5] = IsaacGenerator.field_h.a("level_06.dat", "", param0 - 28974);
+          oc.field_h[1][6] = IsaacGenerator.field_h.a("level_07.dat", "", 0);
+          oc.field_h[1][7] = IsaacGenerator.field_h.a("level_08.dat", "", 0);
+          oc.field_h[1][8] = IsaacGenerator.field_h.a("level_09.dat", "", 0);
+          oc.field_h[1][9] = IsaacGenerator.field_h.a("level_10.dat", "", 0);
+          IsaacGenerator.field_h = null;
         } catch (RuntimeException runtimeException) {
           throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.JA(" + param0 + ')');
         }
@@ -2194,7 +2194,7 @@ public final class HostileSpawn extends d {
               v.a(15, wa.field_q);
               wa.field_q.a(true, gf.field_b);
               wa.field_q = null;
-              se.field_h.requestFocus();
+              GameAppletShell.field_h.requestFocus();
             }
             if (var2_int == 3) {
               nh.a(true, (byte) -90);
@@ -2216,7 +2216,7 @@ public final class HostileSpawn extends d {
                 v.a(15, wa.field_q);
                 wa.field_q.a(true, gf.field_b);
                 wa.field_q = null;
-                se.field_h.requestFocus();
+                GameAppletShell.field_h.requestFocus();
               }
               dc.a(param0 - 1, bn.c(-1));
               if (!field_I) {
@@ -2227,7 +2227,7 @@ public final class HostileSpawn extends d {
               v.a(param0 - 38, wa.field_q);
               wa.field_q.a(true, gf.field_b);
               wa.field_q = null;
-              se.field_h.requestFocus();
+              GameAppletShell.field_h.requestFocus();
             }
             return;
           }
@@ -2265,7 +2265,7 @@ public final class HostileSpawn extends d {
             v.a(29, wa.field_q);
             wa.field_q.a(true, gf.field_b);
             wa.field_q = null;
-            se.field_h.requestFocus();
+            GameAppletShell.field_h.requestFocus();
           }
           if (of.field_h != null) {
             cg.a(-27587);
@@ -2303,7 +2303,7 @@ public final class HostileSpawn extends d {
           var5 = new kh(var3);
           var6 = new kd(var3, var4, var5);
           mb.field_s = new he(var5);
-          aj.a(var6, -25127, 22050, (java.awt.Component) ((Object) se.field_h), true, gf.field_b);
+          aj.a(var6, -25127, 22050, (java.awt.Component) ((Object) GameAppletShell.field_h), true, gf.field_b);
           if (param0 != -4323) {
             this.m(-15);
           }
@@ -2384,7 +2384,7 @@ public final class HostileSpawn extends d {
           if (param1 != 67) {
             this.field_D = 109;
           }
-          ui.a(0, param0, (byte) 97, 0);
+          DualLinkDeque.a(0, param0, (byte) 97, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2407,7 +2407,7 @@ public final class HostileSpawn extends d {
         RuntimeException decompiledCaughtException = null;
         var3 = field_I ? 1 : 0;
         try {
-          kd.field_y = ci.a("", 127, "Scenery_1", vd.field_C);
+          kd.field_y = MouseInput.a("", 127, "Scenery_1", vd.field_C);
           c.field_f = ei.a(vd.field_C, 97, "", "Scenery_2");
           jd.field_h = fg.a("", "Scenery_3", vd.field_C, false);
           om.field_c = fg.a("", "Scenery_4", vd.field_C, false);
@@ -2415,11 +2415,11 @@ public final class HostileSpawn extends d {
           wj.field_L = fg.a("", "Scenery_6", vd.field_C, false);
           oc.field_d = fg.a("", "Scenery_7", vd.field_C, false);
           hg.field_a = fg.a("", "Scenery_8", vd.field_C, false);
-          f.field_b = ci.a("", -76, "Scenery_9", vd.field_C);
+          f.field_b = MouseInput.a("", -76, "Scenery_9", vd.field_C);
           og.field_d = fg.a("", "Scenery_10", vd.field_C, false);
           r.field_e = fg.a("", "Scenery_11", vd.field_C, false);
           r.field_b = fg.a("", "Scenery_12", vd.field_C, false);
-          oe.field_g = ci.a("", -74, "Scenery_13", vd.field_C);
+          oe.field_g = MouseInput.a("", -74, "Scenery_13", vd.field_C);
           rd.field_a = fg.a("", "Scenery_14", vd.field_C, false);
           ng.field_v = fg.a("", "Scenery_15", vd.field_C, false);
           re.field_q = fg.a("", "Scenery_16", vd.field_C, false);
@@ -2432,27 +2432,27 @@ public final class HostileSpawn extends d {
           cl.field_j = fg.a("", "computer_console1_s_tga", vd.field_C, false);
           de.field_o = fg.a("", "computer_console1_w_tga", vd.field_C, false);
           an.field_j = fg.a("", "computer_console2_e_tga", vd.field_C, false);
-          gi.field_f = fg.a("", "computer_console2_n_tga", vd.field_C, false);
+          IsaacGenerator.field_f = fg.a("", "computer_console2_n_tga", vd.field_C, false);
           an.field_l = fg.a("", "computer_console2_s_tga", vd.field_C, false);
-          vi.field_j = fg.a("", "computer_console2_w_tga", vd.field_C, false);
-          ci.field_k = fg.a("", "Scenery_21", vd.field_C, false);
+          PacketBuffer.field_j = fg.a("", "computer_console2_w_tga", vd.field_C, false);
+          MouseInput.field_k = fg.a("", "Scenery_21", vd.field_C, false);
           lc.field_b = fg.a("", "Scenery_22", vd.field_C, false);
           rb.field_y = fg.a("", "Scenery_23", vd.field_C, false);
           ue.field_h = fg.a("", "Scenery_24", vd.field_C, false);
-          jg.field_j = fg.a("", "Scenery_25", vd.field_C, false);
+          KeyboardInput.field_j = fg.a("", "Scenery_25", vd.field_C, false);
           wa.field_o = fg.a("", "Scenery_26", vd.field_C, false);
           sm.field_h = fg.a("", "Scenery_27", vd.field_C, false);
           pl.field_j = fg.a("", "Scenery_28", vd.field_C, false);
           pe.field_hb = fg.a("", "Scenery_29", vd.field_C, false);
-          en.field_w = fg.a("", "Scenery_30", vd.field_C, false);
+          CipherPacketBuffer.field_w = fg.a("", "Scenery_30", vd.field_C, false);
           e.field_d = fg.a("", "Scenery_31", vd.field_C, false);
           ig.field_S = fg.a("", "Scenery_32", vd.field_C, false);
           f.field_d = fg.a("", "Scenery_33", vd.field_C, false);
-          vc.field_h = fg.a("", "Scenery_34", vd.field_C, false);
+          GameCanvas.field_h = fg.a("", "Scenery_34", vd.field_C, false);
           ki.field_b = fg.a("", "Scenery_35", vd.field_C, false);
           nh.field_C = fg.a("", "Scenery_36", vd.field_C, false);
           wb.field_W = fg.a("", "explosive_crate_e_tga", vd.field_C, false);
-          gi.field_c = fg.a("", "explosive_crate_n_tga", vd.field_C, false);
+          IsaacGenerator.field_c = fg.a("", "explosive_crate_n_tga", vd.field_C, false);
           el.field_f = fg.a("", "explosive_crate_s_tga", vd.field_C, false);
           oa.field_e = fg.a("", "explosive_crate_w_tga", vd.field_C, false);
           ue.field_f = fg.a("", "health_big_tga", vd.field_C, false);
@@ -2467,7 +2467,7 @@ public final class HostileSpawn extends d {
           oe.field_d = fg.a("", "Scenery_44", vd.field_C, false);
           km.field_z = fg.a("", "Scenery_45", vd.field_C, false);
           ab.field_a = fg.a("", "Scenery_46", vd.field_C, false);
-          vc.field_k = fg.a("", "Scenery_47", vd.field_C, false);
+          GameCanvas.field_k = fg.a("", "Scenery_47", vd.field_C, false);
           jc.field_a = fg.a("", "Scenery_48", vd.field_C, false);
           hm.field_l = fg.a("", "Scenery_49", vd.field_C, false);
           q.field_c = fg.a("", "Scenery_50", vd.field_C, false);
@@ -2478,7 +2478,7 @@ public final class HostileSpawn extends d {
           el.field_l = fg.a("", "Scenery_55", vd.field_C, false);
           lh.field_e = fg.a("", "Scenery_56", vd.field_C, false);
           vg.field_d = fg.a("", "Scenery_57", vd.field_C, false);
-          ui.field_b = fg.a("", "Scenery_58", vd.field_C, false);
+          DualLinkDeque.field_b = fg.a("", "Scenery_58", vd.field_C, false);
           ig.field_R = fg.a("", "Scenery_59", vd.field_C, false);
           ic.field_k = fg.a("", "Scenery_60", vd.field_C, false);
           eb.field_b = fg.a("", "Scenery_61", vd.field_C, false);
@@ -2497,38 +2497,38 @@ public final class HostileSpawn extends d {
           ub.field_c = fg.a("", "Scenery_74", vd.field_C, false);
           fa.field_e = fg.a("", "Scenery_75", vd.field_C, false);
           ej.field_d = fg.a("", "Scenery_76", vd.field_C, false);
-          ci.field_l = fg.a("", "Scenery_77", vd.field_C, false);
+          MouseInput.field_l = fg.a("", "Scenery_77", vd.field_C, false);
           ng.field_i = fg.a("", "Scenery_78", vd.field_C, false);
           mn.field_b = fg.a("", "Scenery_79", vd.field_C, false);
           ln.field_c = fg.a("", "Scenery_80", vd.field_C, false);
           hh.field_b = fg.a("", "Scenery_81", vd.field_C, false);
           bm.field_f = fg.a("", "reactor_tga", vd.field_C, false);
           ca.field_b = fg.a("", "reactor_damaged_tga", vd.field_C, false);
-          vi.field_k = fg.a("", "shuttle_tga", vd.field_C, false);
-          sc.field_a = ci.a("", param0 ^ 13124, "shield_module", vd.field_C);
+          PacketBuffer.field_k = fg.a("", "shuttle_tga", vd.field_C, false);
+          sc.field_a = MouseInput.a("", param0 ^ 13124, "shield_module", vd.field_C);
           qm.field_P = fg.a("", "explosive_charge", vd.field_C, false);
-          ci.a("", -21, "cloak_module", vd.field_C);
-          e.field_r = ci.a("", -78, "invulnerability_module", vd.field_C);
-          jg.field_h = ci.a("", param0 ^ 13130, "explosive_shells", vd.field_C);
-          qh.field_l = ci.a("", 120, "fusion_power", vd.field_C);
-          mg.field_b = ci.a("", -67, "incendiary_rockets", vd.field_C);
-          bn.field_l = ci.a("", 111, "plasma_fire", vd.field_C);
+          MouseInput.a("", -21, "cloak_module", vd.field_C);
+          e.field_r = MouseInput.a("", -78, "invulnerability_module", vd.field_C);
+          KeyboardInput.field_h = MouseInput.a("", param0 ^ 13130, "explosive_shells", vd.field_C);
+          qh.field_l = MouseInput.a("", 120, "fusion_power", vd.field_C);
+          mg.field_b = MouseInput.a("", -67, "incendiary_rockets", vd.field_C);
+          bn.field_l = MouseInput.a("", 111, "plasma_fire", vd.field_C);
           if (param0 != 13119) {
             return;
           }
-          aa.field_b = ci.a("", -48, "powered_boots", vd.field_C);
-          jg.field_f = fg.a("", "security_pass", vd.field_C, false);
+          aa.field_b = MouseInput.a("", -48, "powered_boots", vd.field_C);
+          KeyboardInput.field_f = fg.a("", "security_pass", vd.field_C, false);
           im.field_a = jd.a((byte) 33, "", vd.field_C, "doors_hammerhead");
-          ak.field_a = ci.a("", -116, "door_twiddles_hammerhead_h", vd.field_C);
-          an.field_d = ci.a("", 125, "door_twiddles_hammerhead_v", vd.field_C);
+          ak.field_a = MouseInput.a("", -116, "door_twiddles_hammerhead_h", vd.field_C);
+          an.field_d = MouseInput.a("", 125, "door_twiddles_hammerhead_v", vd.field_C);
           jd.field_o = jd.a((byte) 33, "", vd.field_C, "doors_planet");
-          ce.field_a = ci.a("", 118, "door_twiddles_planet_h", vd.field_C);
-          r.field_c = ci.a("", 125, "door_twiddles_planet_v", vd.field_C);
+          ce.field_a = MouseInput.a("", 118, "door_twiddles_planet_h", vd.field_C);
+          r.field_c = MouseInput.a("", 125, "door_twiddles_planet_v", vd.field_C);
           th.field_Hb = jd.a((byte) 33, "", vd.field_C, "doors_station");
-          qa.field_c = ci.a("", param0 - 13003, "door_twiddles_station_h", vd.field_C);
-          gi.field_d = ci.a("", -86, "door_twiddles_station_v", vd.field_C);
+          qa.field_c = MouseInput.a("", param0 - 13003, "door_twiddles_station_h", vd.field_C);
+          IsaacGenerator.field_d = MouseInput.a("", -86, "door_twiddles_station_v", vd.field_C);
           ri.field_k = fg.a("", "Scenery_82", vd.field_C, false);
-          ci.field_g = fg.a("", "Scenery_83", vd.field_C, false);
+          MouseInput.field_g = fg.a("", "Scenery_83", vd.field_C, false);
           wa.field_n = fg.a("", "Scenery_84", vd.field_C, false);
           mj.field_a = fg.a("", "Scenery_85", vd.field_C, false);
           mg.field_f = fg.a("", "Scenery_86", vd.field_C, false);
@@ -2536,27 +2536,27 @@ public final class HostileSpawn extends d {
           rh.field_C = fg.a("", "Scenery_88", vd.field_C, false);
           rh.field_z = fg.a("", "Scenery_89", vd.field_C, false);
           in.field_d = fg.a("", "Scenery_90", vd.field_C, false);
-          gi.field_j = ci.a("", param0 ^ -13180, "Scenery_91", vd.field_C);
-          ln.field_g = ci.a("", -91, "Scenery_92", vd.field_C);
+          IsaacGenerator.field_j = MouseInput.a("", param0 ^ -13180, "Scenery_91", vd.field_C);
+          ln.field_g = MouseInput.a("", -91, "Scenery_92", vd.field_C);
           li.field_y = fg.a("", "Scenery_93", vd.field_C, false);
           kc.field_d = fg.a("", "Scenery_94", vd.field_C, false);
           sj.field_b = fg.a("", "Scenery_95", vd.field_C, false);
           n.field_q = fg.a("", "Scenery_96", vd.field_C, false);
           ml.field_a = fg.a("", "Scenery_97", vd.field_C, false);
-          p.field_d = ci.a("", -33, "Scenery_98", vd.field_C);
+          p.field_d = MouseInput.a("", -33, "Scenery_98", vd.field_C);
           wk.field_a = fg.a("", "Scenery_99", vd.field_C, false);
           hf.field_e = fg.a("", "Scenery_100", vd.field_C, false);
-          gb.field_l = ci.a("", 110, "Scenery_101", vd.field_C);
-          wh.field_e = ci.a("", 120, "bend_a_1", vd.field_C);
-          wi.field_e = ci.a("", param0 ^ 13138, "bend_b_2", vd.field_C);
-          dl.field_r = ci.a("", 123, "corner_c_1", vd.field_C);
-          id.field_w = ci.a("", param0 ^ 13121, "corner_c_2", vd.field_C);
-          ld.field_o = ci.a("", param0 ^ -13139, "corner_c_3", vd.field_C);
-          la.field_e = ci.a("", 24, "corner_d_4", vd.field_C);
-          bb.field_a = ci.a("", param0 - 13007, "diagonal_d_1", vd.field_C);
-          qg.field_i = ci.a("", param0 - 13121, "diagonal_d_2", vd.field_C);
-          oa.field_i = ci.a("", -46, "diagonal_d_3", vd.field_C);
-          hf.field_j = ci.a("", -112, "Scenery_103", vd.field_C);
+          ResourceArchive.field_l = MouseInput.a("", 110, "Scenery_101", vd.field_C);
+          wh.field_e = MouseInput.a("", 120, "bend_a_1", vd.field_C);
+          wi.field_e = MouseInput.a("", param0 ^ 13138, "bend_b_2", vd.field_C);
+          dl.field_r = MouseInput.a("", 123, "corner_c_1", vd.field_C);
+          id.field_w = MouseInput.a("", param0 ^ 13121, "corner_c_2", vd.field_C);
+          ld.field_o = MouseInput.a("", param0 ^ -13139, "corner_c_3", vd.field_C);
+          la.field_e = MouseInput.a("", 24, "corner_d_4", vd.field_C);
+          bb.field_a = MouseInput.a("", param0 - 13007, "diagonal_d_1", vd.field_C);
+          qg.field_i = MouseInput.a("", param0 - 13121, "diagonal_d_2", vd.field_C);
+          oa.field_i = MouseInput.a("", -46, "diagonal_d_3", vd.field_C);
+          hf.field_j = MouseInput.a("", -112, "Scenery_103", vd.field_C);
           sd.field_t = fg.a("", "Scenery_107", vd.field_C, false);
           vb.field_Lb = fg.a("", "Scenery_108", vd.field_C, false);
           uh.field_f = fg.a("", "Scenery_109", vd.field_C, false);
@@ -2564,8 +2564,8 @@ public final class HostileSpawn extends d {
           ei.field_m = fg.a("", "Scenery_111", vd.field_C, false);
           j.field_a = fg.a("", "Scenery_112", vd.field_C, false);
           vk.field_p = fg.a("", "Scenery_113", vd.field_C, false);
-          wc.field_e = fg.a("", "Scenery_114", vd.field_C, false);
-          ui.field_c = ci.a("", 1, "Scenery_115", vd.field_C);
+          ArchiveIndex.field_e = fg.a("", "Scenery_114", vd.field_C, false);
+          DualLinkDeque.field_c = MouseInput.a("", 1, "Scenery_115", vd.field_C);
           dn.field_h = fg.a("", "Scenery_116", vd.field_C, false);
           hj.field_r = fg.a("", "Scenery_117", vd.field_C, false);
           pj.field_l = fg.a("", "Scenery_118", vd.field_C, false);
@@ -2574,7 +2574,7 @@ public final class HostileSpawn extends d {
           rg.field_a = fg.a("", "Scenery_121", vd.field_C, false);
           la.field_h = fg.a("", "Scenery_122", vd.field_C, false);
           gf.field_d = fg.a("", "Scenery_123", vd.field_C, false);
-          ed.field_a = fg.a("", "Scenery_124", vd.field_C, false);
+          IntrusiveNodeHashTable.field_a = fg.a("", "Scenery_124", vd.field_C, false);
           nb.field_J = fg.a("", "Scenery_125", vd.field_C, false);
           t.field_l = fg.a("", "Scenery_126", vd.field_C, false);
           uc.field_a = fg.a("", "Scenery_127", vd.field_C, false);

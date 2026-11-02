@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uk {
+abstract class ArchiveProvider {
     static int[] field_c;
     static ji field_d;
     static bl field_a;
@@ -10,7 +10,7 @@ abstract class uk {
 
     abstract int b(int param0, int param1);
 
-    abstract wc c(int param0);
+    abstract ArchiveIndex c(int param0);
 
     abstract byte[] a(byte param0, int param1);
 
@@ -73,7 +73,7 @@ abstract class uk {
         if (param2 >= 126) {
           return od.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
         }
-        uk.a(-106);
+        ArchiveProvider.a(-106);
         return od.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
     }
 
@@ -112,7 +112,7 @@ abstract class uk {
           return "levelf1.dat";
         }
         if (param0 != 9394) {
-          uk.a(43, -82, (byte) -21, -101, 0);
+          ArchiveProvider.a(43, -82, (byte) -21, -101, 0);
         }
         if (param1 == 10) {
           return "levelf2.dat";

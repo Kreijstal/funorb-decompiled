@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jc {
-    static ci field_b;
+    static MouseInput field_b;
     static String field_e;
     static jb[] field_c;
     static String field_d;
@@ -84,7 +84,7 @@ final class jc {
         }
     }
 
-    final static bd a(gb param0, int param1, int param2, int param3) {
+    final static bd a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -163,6 +163,6 @@ final class jc {
         field_e = "This password contains your Player Name, and would be easy to guess";
         field_d = "If you do nothing the game will revert to normal view in <%0> seconds.";
         field_c = new jb[65];
-        field_b = new ci();
+        field_b = new MouseInput();
     }
 }

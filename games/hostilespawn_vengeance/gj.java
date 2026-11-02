@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gj {
-    gb field_a;
+    ResourceArchive field_a;
     static int field_h;
     String field_c;
     String field_e;
@@ -60,16 +60,16 @@ final class gj {
         if (param0 != -17) {
           field_d = (bd) null;
         }
-        return new nd[]{bh.field_c, ac.field_c, tf.field_b, li.field_x, lk.field_N, kd.field_G, ee.field_h, pl.field_q, lg.field_e, gb.field_f, fh.field_a, bc.field_j, oa.field_g, ee.field_a};
+        return new nd[]{bh.field_c, ac.field_c, tf.field_b, li.field_x, lk.field_N, kd.field_G, ee.field_h, pl.field_q, lg.field_e, ResourceArchive.field_f, fh.field_a, bc.field_j, oa.field_g, ee.field_a};
     }
 
-    final static u[] a(boolean param0, en param1) {
+    final static u[] a(boolean param0, CipherPacketBuffer param1) {
         int var5 = 0;
-        en stackIn_3_0 = null;
+        CipherPacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
         Object stackIn_6_0 = null;
-        en stackIn_14_0 = null;
+        CipherPacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         boolean stackIn_15_2 = false;
         u[] stackIn_19_0 = null;
@@ -86,10 +86,10 @@ final class gj {
         int var7 = 0;
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
-          stackIn_3_0 = (en) (param1);
+          stackIn_3_0 = (CipherPacketBuffer) (param1);
           stackIn_3_1 = 8;
           stackIn_4_2 = !(param0);
-          var2_int = ((en) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
+          var2_int = ((CipherPacketBuffer) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
           if (0 < var2_int) {
             stackIn_6_0 = null;
             return (u[]) (stackIn_6_0);
@@ -100,7 +100,7 @@ final class gj {
           var3 = param1.a(12, true);
           var4 = new u[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (!vi.a((byte) 124, param1)) {
+            if (!PacketBuffer.a((byte) 124, param1)) {
               var6 = param1.a(aa.a(4, var5 - 1), true);
               var4[var5] = var4[var6];
             } else {
@@ -111,10 +111,10 @@ final class gj {
               param1.a(9, true);
               param1.a(12, true);
               param1.a(12, true);
-              stackIn_14_0 = (en) (param1);
+              stackIn_14_0 = (CipherPacketBuffer) (param1);
               stackIn_14_1 = 12;
               stackIn_15_2 = !(param0);
-              ((en) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
+              ((CipherPacketBuffer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
               var4[var5] = var6_ref_u;
             }
           }

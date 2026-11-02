@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc {
+final class ArchiveIndex {
     int[] field_o;
     int[] field_v;
     static String field_s;
@@ -29,7 +29,7 @@ final class wc {
     final static void a(int param0, int param1, int param2) {
         wk.field_c = param0;
         if (param2 != -1) {
-          wc.a(41);
+          ArchiveIndex.a(41);
         }
         qg.field_l = param1;
     }
@@ -116,7 +116,7 @@ final class wc {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        vi var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -132,7 +132,7 @@ final class wc {
         int var13Lifetime1Lifetime1;
         var16 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var17 = new vi(ml.a(param1, (byte) -76));
+          var17 = new PacketBuffer(ml.a(param1, (byte) -76));
           var4 = var17.l(32270);
           if (5 <= var4 &&
             var4 <= 7) {
@@ -154,7 +154,7 @@ final class wc {
             var8 = 0;
             var9 = -1;
             if (param0 != 0) {
-              wc.a(-105);
+              ArchiveIndex.a(-105);
             }
             this.field_t = new int[this.field_j];
             if (var4 < 7) {
@@ -305,7 +305,7 @@ final class wc {
         }
     }
 
-    final static fn a(String param0, gb param1, int param2, gb param3, String param4) {
+    final static fn a(String param0, ResourceArchive param1, int param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -322,7 +322,7 @@ final class wc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 23) {
-            wc.a(-98);
+            ArchiveIndex.a(-98);
           }
           var5_int = param3.a((byte) -2, param0);
           var6 = param3.a(var5_int, param4, -1);
@@ -360,7 +360,7 @@ final class wc {
         }
     }
 
-    wc(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
           this.field_d = pi.a(param0.length, 31465, param0);

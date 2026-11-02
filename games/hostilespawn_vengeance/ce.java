@@ -85,7 +85,7 @@ abstract class ce {
           }
           stackIn_19_0 = (ln) (param0);
           stackIn_20_1 = !(param1);
-          ed.a(stackIn_19_0, stackIn_20_1);
+          IntrusiveNodeHashTable.a(stackIn_19_0, stackIn_20_1);
           if (!param1) {
             field_f = (u[]) null;
           }

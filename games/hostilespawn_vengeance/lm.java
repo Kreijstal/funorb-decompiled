@@ -4,7 +4,7 @@
 final class lm extends ae {
     static java.math.BigInteger field_z;
     byte field_B;
-    vi field_C;
+    PacketBuffer field_C;
     static jb[] field_A;
     int field_x;
     static bd field_y;

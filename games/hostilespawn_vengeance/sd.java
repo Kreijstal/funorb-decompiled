@@ -62,7 +62,7 @@ class sd extends cn {
               var6 = wb.a(111, true, hf.field_d[var3_int]);
               var7 = -(var6 >> 1) + wk.field_c;
               var4 = var4 + cl.field_l;
-              if (uk.a(-jd.field_l + var7, param2, var6 + (jd.field_l << 1), var4, 124, param1, (ab.field_b << 1) + eh.field_d)) {
+              if (ArchiveProvider.a(-jd.field_l + var7, param2, var6 + (jd.field_l << 1), var4, 124, param1, (ab.field_b << 1) + eh.field_d)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

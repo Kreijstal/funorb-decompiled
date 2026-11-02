@@ -6,10 +6,10 @@ final class ml {
     static bd field_a;
 
     final static void a(byte param0, int param1) {
-        jg.a(23);
+        KeyboardInput.a(23);
         if (param0 != 112) {
-          vi var3 = (vi) null;
-          ml.a((vi) null, (java.math.BigInteger) null, 8, (java.math.BigInteger) null, (vi) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          ml.a((PacketBuffer) null, (java.math.BigInteger) null, 8, (java.math.BigInteger) null, (PacketBuffer) null);
         }
     }
 
@@ -117,7 +117,7 @@ final class ml {
         }
     }
 
-    final static void a(vi param0, java.math.BigInteger param1, int param2, java.math.BigInteger param3, vi param4) {
+    final static void a(PacketBuffer param0, java.math.BigInteger param1, int param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
           hg.a(param4.field_n, -120, param4.field_i, param2, param0, param1, param3);
         } catch (RuntimeException runtimeException) {
@@ -169,13 +169,13 @@ final class ml {
         byte[] var6 = null;
         Object var7 = null;
         CharSequence var9 = null;
-        vi var10 = null;
+        PacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         try {
-          var10 = new vi(param0);
+          var10 = new PacketBuffer(param0);
           var3 = var10.l(param1 ^ -32326);
           var4 = var10.d(8195);
           if (param1 != -76) {

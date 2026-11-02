@@ -3,7 +3,7 @@
  */
 final class gh {
     private static byte[] field_i;
-    private vi field_h;
+    private PacketBuffer field_h;
     private int[] field_c;
     int field_f;
     private long field_e;
@@ -203,11 +203,11 @@ final class gh {
     }
 
     gh() {
-        this.field_h = new vi((byte[]) null);
+        this.field_h = new PacketBuffer((byte[]) null);
     }
 
     gh(byte[] param0) {
-        this.field_h = new vi((byte[]) null);
+        this.field_h = new PacketBuffer((byte[]) null);
         this.a(param0);
     }
 

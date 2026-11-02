@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ci implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static bd field_k;
     static bd field_b;
     static bd[] field_e;
@@ -70,7 +70,7 @@ final class ci implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             var3 = (var3 << 5) + (-var3 + nl.a(false, param1.charAt(var4)));
           }
           if (param0 >= -30) {
-            ci.b(99);
+            MouseInput.b(99);
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -88,7 +88,7 @@ final class ci implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static bd a(String param0, int param1, String param2, gb param3) {
+    final static bd a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -341,7 +341,7 @@ final class ci implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static void a(int param0, int param1, hm param2) {
-        en var5 = null;
+        CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = s.field_b;
@@ -349,7 +349,7 @@ final class ci implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var5.field_i = var5.field_i + 1;
           var4 = var5.field_i;
           if (param1 != 2) {
-            ci.b(-16);
+            MouseInput.b(-16);
           }
           var5.d(114, 1);
           var5.d(94, param2.field_m);
@@ -379,7 +379,7 @@ final class ci implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         field_j = null;
         field_b = null;
         if (param0 >= -1) {
-          ci.a(-124);
+          MouseInput.a(-124);
         }
     }
 

@@ -6,7 +6,7 @@ final class i {
     static long[] field_c;
     static int field_f;
     static String field_e;
-    static gb field_b;
+    static ResourceArchive field_b;
     static volatile boolean field_i;
     static wi[] field_h;
     static char[] field_g;
@@ -24,7 +24,7 @@ final class i {
         field_e = null;
     }
 
-    final static void a(int param0, vi param1, fd param2, int param3) {
+    final static void a(int param0, PacketBuffer param1, fd param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -211,7 +211,7 @@ final class i {
         field_c[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = (-1 + var0) * 8;
-            field_c[var0] = ga.a(ga.a(dk.a(65280L, field_a[6][6 + var1]), ga.a(dk.a(16711680L, field_a[5][5 + var1]), ga.a(ga.a(ga.a(ga.a(dk.a(-72057594037927936L, field_a[0][var1]), dk.a(field_a[1][1 + var1], 71776119061217280L)), dk.a(280375465082880L, field_a[2][var1 + 2])), dk.a(field_a[3][3 + var1], 1095216660480L)), dk.a(4278190080L, field_a[4][var1 + 4])))), dk.a(field_a[7][7 + var1], 255L));
+            field_c[var0] = ga.a(ga.a(DualLinkNode.a(65280L, field_a[6][6 + var1]), ga.a(DualLinkNode.a(16711680L, field_a[5][5 + var1]), ga.a(ga.a(ga.a(ga.a(DualLinkNode.a(-72057594037927936L, field_a[0][var1]), DualLinkNode.a(field_a[1][1 + var1], 71776119061217280L)), DualLinkNode.a(280375465082880L, field_a[2][var1 + 2])), DualLinkNode.a(field_a[3][3 + var1], 1095216660480L)), DualLinkNode.a(4278190080L, field_a[4][var1 + 4])))), DualLinkNode.a(field_a[7][7 + var1], 255L));
         }
         field_e = "MISSION FAILED";
         field_i = true;

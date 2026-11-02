@@ -107,7 +107,7 @@ final class qg extends lf {
         this.field_t = param0 * param0;
     }
 
-    qg(vi param0) {
+    qg(PacketBuffer param0) {
         try {
           this.a(256, param0);
         } catch (RuntimeException runtimeException) {
@@ -115,7 +115,7 @@ final class qg extends lf {
         }
     }
 
-    private final void a(int param0, vi param1) {
+    private final void a(int param0, PacketBuffer param1) {
         try {
           this.field_c = param1.l(param0 + 32014);
           this.field_b = param1.l(32270);

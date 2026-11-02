@@ -11,7 +11,7 @@ abstract class ul extends vd {
     static int field_L;
     static bd[] field_J;
     static boolean field_O;
-    static gb field_P;
+    static ResourceArchive field_P;
     static boolean field_N;
     boolean field_F;
 

@@ -17,8 +17,8 @@ final class cc {
         if (!(pb.field_Kb >= 2)) {
           return kb.field_b;
         }
-        if (vc.field_d != null) {
-          if (vc.field_d.a(-15879)) {
+        if (GameCanvas.field_d != null) {
+          if (GameCanvas.field_d.a(-15879)) {
             return ad.field_b;
           }
           return u.field_j;

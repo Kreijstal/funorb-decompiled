@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends am {
+final class ei extends IntrusiveNode {
     static bd field_p;
     static bd field_m;
     static vl field_q;
@@ -234,12 +234,12 @@ final class ei extends am {
                             param9.a(225, var18, 5);
                           } else {
                             if (param9.field_i != 27) {
-                              L17: {
+                              regionExit1: {
                                 if ((3 & param9.field_e) == 0 &&
                                   eh.field_g > 0 &&
                                   Math.abs(param11) <= 48 &&
                                   Math.abs(param15) <= 48) {
-                                  ci.a(1, 45);
+                                  MouseInput.a(1, 45);
                                   if (uj.field_l == 1 &&
                                     0 >= param9.field_e) {
                                     param9.field_e = 30;
@@ -249,21 +249,21 @@ final class ei extends am {
                                       switch (var22) {
                                         case 24:
                                           tk.a(1, jc.field_c, 0, true);
-                                          break L17;
+                                          break regionExit1;
                                         case 27:
-                                          break L17;
+                                          break regionExit1;
                                         case 26:
-                                          break L17;
+                                          break regionExit1;
                                         case 19:
-                                          break L17;
+                                          break regionExit1;
                                         case 23:
-                                          break L17;
+                                          break regionExit1;
                                         default:
-                                          break L17;
+                                          break regionExit1;
                                         case 8:
                                           param9.field_e = 60;
                                           tk.a(5, jc.field_c, 35, true);
-                                          break L17;
+                                          break regionExit1;
                                         case 18:
                                           break;
                                       }
@@ -286,7 +286,7 @@ final class ei extends am {
                                 eh.field_g > 0 &&
                                 Math.abs(param11) <= 48 &&
                                 48 >= Math.abs(param15)) {
-                                ci.a(3, 126);
+                                MouseInput.a(3, 126);
                                 if (1 == uj.field_l &&
                                   param9.field_e <= 0) {
                                 }
@@ -1074,12 +1074,12 @@ final class ei extends am {
         field_n = null;
         if (param0 != 3) {
           String var2 = (String) null;
-          ei.a((gb) null, 102, (String) null, (String) null);
+          ei.a((ResourceArchive) null, 102, (String) null, (String) null);
         }
         field_q = null;
     }
 
-    final static bd[] a(gb param0, int param1, String param2, String param3) {
+    final static bd[] a(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

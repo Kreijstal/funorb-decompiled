@@ -74,7 +74,7 @@ final class th extends le {
           uj.d(-63);
           if (param0 != -5427) {
             var3 = (String) null;
-            th.a((gb) null, 13, (String) null, (gb) null, (String) null);
+            th.a((ResourceArchive) null, 13, (String) null, (ResourceArchive) null, (String) null);
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -163,7 +163,7 @@ final class th extends le {
         }
     }
 
-    final static nc a(gb param0, int param1, String param2, gb param3, String param4) {
+    final static nc a(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

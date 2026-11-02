@@ -68,7 +68,7 @@ final class um {
                 this.field_g.a(6, 0, ec.field_d, (byte) 39);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param3) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -84,7 +84,7 @@ final class um {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (ec.field_d[5] & 255) + ((ec.field_d[4] & 255) << 8);
                         var11 = ((255 & ec.field_d[2]) << 8) + ((ec.field_d[0] & 255) << 24) - (-(ec.field_d[1] << 16 & 16711680) - (ec.field_d[3] & 255));
@@ -100,7 +100,7 @@ final class um {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (255 & ec.field_d[3]) + (65280 & ec.field_d[2] << 8);
                         var11 = (ec.field_d[1] & 255) + (ec.field_d[0] << 8 & 65280);

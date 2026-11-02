@@ -9,7 +9,7 @@ final class mg {
     static int[] field_e;
     static int field_c;
 
-    final static bd[] a(gb param0, int param1, int param2, boolean param3) {
+    final static bd[] a(ResourceArchive param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         bd[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;

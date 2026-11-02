@@ -102,13 +102,13 @@ final class o extends ql {
         var4 = HostileSpawn.field_I ? 1 : 0;
         var2 = 0;
         var3 = param0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (el.field_j > var3) {
             if (mm.field_m[var3] != null &&
               mm.field_m[var3].field_I > 0 && (mm.field_m[var3].field_i == 4 ||
               24 == mm.field_m[var3].field_i)) {
               var2 = 1;
-              break L1;
+              break scanLoop1;
             }
             var3++;
             continue;

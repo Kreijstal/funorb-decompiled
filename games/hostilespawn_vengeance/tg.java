@@ -63,7 +63,7 @@ final class tg {
           le.c((byte) 113);
           return;
         }
-        en var2 = sc.field_g;
+        CipherPacketBuffer var2 = sc.field_g;
         var2.d(8195);
         var2.d(8195);
         var2.d(8195);
@@ -413,8 +413,8 @@ final class tg {
     final static void a(byte param0) {
         if (param0 == 75) {
           tb.f((byte) -85);
-          if (null != se.field_h) {
-            v.a(67, se.field_h);
+          if (null != GameAppletShell.field_h) {
+            v.a(67, GameAppletShell.field_h);
           }
           qc.c((byte) -118);
           lj.d((byte) 114);

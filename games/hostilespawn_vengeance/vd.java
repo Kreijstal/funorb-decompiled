@@ -4,7 +4,7 @@
 import java.util.*;
 
 class vd extends ag implements ai {
-    static gb field_C;
+    static ResourceArchive field_C;
     vl field_z;
     static bd[][] field_y;
     static int field_D;
@@ -379,13 +379,13 @@ class vd extends ag implements ai {
             vd.a((byte) -49);
           }
           var6_ref_ag = (ag) (var5.b(param0 - 273));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (null != var6_ref_ag) {
               stackOut_6_0 = var6_ref_ag.a(3000);
               stackIn_20_0 = stackOut_6_0 ? 1 : 0;
               stackIn_7_0 = stackOut_6_0;
               if (var7 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_7_0) {
                 if (var6_ref_ag.g(-9015) &&
@@ -459,13 +459,13 @@ class vd extends ag implements ai {
             this.a((ag) null, -42, 61, 98);
           }
           var9 = (ag) (var8.b(1));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var9 != null) {
               stackOut_6_0 = var9.a(param3 + 3000);
               stackIn_22_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               if (var10 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_7_0) {
                 if (var9.g(-9015) &&
@@ -879,16 +879,16 @@ class vd extends ag implements ai {
         try {
           var8 = new fl(this.field_z);
           if (param4 != 110) {
-            field_C = (gb) null;
+            field_C = (ResourceArchive) null;
           }
           var9 = (ag) (var8.b(param4 - 109));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (null != var9) {
               stackOut_6_0 = var9.a(3000);
               stackIn_17_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               if (var10 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_7_0) {
                 if (var9.a(param0, this.field_v + param1, param2 + this.field_m, param3, (byte) 110, param5, param6)) {

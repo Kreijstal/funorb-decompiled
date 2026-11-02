@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lj extends dk {
+abstract class lj extends DualLinkNode {
     static String field_r;
     static vm field_u;
     int field_s;
@@ -229,13 +229,13 @@ abstract class lj extends dk {
                   stackIn_53_0 = (var43Lifetime2.field_I <= 0) ? 0 : 1;
                   var32 = stackIn_53_0;
                   if (var26 == 0) {
-                    ci.a(5, 58);
+                    MouseInput.a(5, 58);
                   }
                   if (var26 > 0 &&
                     8 != var43Lifetime2.field_i &&
                     var43Lifetime2.a(19, -100)) {
                     if (var43Lifetime2.field_i == 0) {
-                      ci.a(15, 102);
+                      MouseInput.a(15, 102);
                     } else {
                       var43Lifetime2.field_I = var43Lifetime2.field_I - 15;
                     }

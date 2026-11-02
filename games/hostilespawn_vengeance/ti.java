@@ -39,7 +39,7 @@ final class ti implements nn {
         if (param0 != -1) {
           return -63;
         }
-        return wc.field_m;
+        return ArchiveIndex.field_m;
     }
 
     final static void a(int param0, byte param1, int param2) {
@@ -49,12 +49,12 @@ final class ti implements nn {
         if (param2 >= 42) {
           return;
         }
-        if (hb.a(param2, uk.field_c, false)) {
+        if (hb.a(param2, ArchiveProvider.field_c, false)) {
           return;
         }
         q.field_n = q.field_n + lg.field_m;
         fa.field_a = fa.field_a + 1;
-        int[] var6 = uk.field_c;
+        int[] var6 = ArchiveProvider.field_c;
         int[] var3 = var6;
         int var4 = param2;
         var6[var4 >> 5] = ll.a(var6[var4 >> 5], 1 << ua.a(31, var4));

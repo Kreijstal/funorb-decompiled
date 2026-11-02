@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class w extends tj {
+class w extends PcmStream {
     private int[] field_L;
     static int field_r;
     private int[] field_F;
@@ -83,7 +83,7 @@ class w extends tj {
         }
     }
 
-    final synchronized boolean a(int param0, ji param1, gb param2, rd param3, boolean param4) {
+    final synchronized boolean a(int param0, ji param1, ResourceArchive param2, rd param3, boolean param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -229,7 +229,7 @@ class w extends tj {
         }
     }
 
-    final synchronized tj b() {
+    final synchronized PcmStream b() {
         return null;
     }
 
@@ -1071,8 +1071,8 @@ class w extends tj {
         this.b(-75, (-128 & this.field_w[var5Lifetime4]) + var7Lifetime3, var5Lifetime4);
     }
 
-    final synchronized tj d() {
-        return (tj) ((Object) this.field_B);
+    final synchronized PcmStream d() {
+        return (PcmStream) ((Object) this.field_B);
     }
 
     private final void a(boolean param0, int param1) {

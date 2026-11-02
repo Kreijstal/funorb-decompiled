@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class kj implements Iterator {
-    private ui field_h;
+    private DualLinkDeque field_h;
     static boolean field_b;
-    private dk field_d;
-    private dk field_i;
+    private DualLinkNode field_d;
+    private DualLinkNode field_i;
     static String field_a;
     static cb field_g;
     static boolean field_c;
@@ -20,9 +20,9 @@ final class kj implements Iterator {
           this.field_i = null;
           var1 = null;
         } else {
-          this.field_i = ((dk) (var1)).field_j;
+          this.field_i = ((DualLinkNode) (var1)).field_j;
         }
-        this.field_d = (dk) (var1);
+        this.field_d = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -76,7 +76,7 @@ final class kj implements Iterator {
         return this.field_i != this.field_h.field_a;
     }
 
-    kj(ui param0) {
+    kj(DualLinkDeque param0) {
         this.field_d = null;
         try {
           this.field_h = param0;

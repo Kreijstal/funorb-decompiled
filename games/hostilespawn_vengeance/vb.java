@@ -27,7 +27,7 @@ final class vb extends le {
 
     final static int a(int param0, int param1, int param2, boolean param3) {
         int var4 = -25 / ((param1 - 1) / 62);
-        return jg.a(-84);
+        return KeyboardInput.a(-84);
     }
 
     static {

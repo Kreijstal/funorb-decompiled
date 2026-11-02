@@ -17,7 +17,7 @@ final class bl {
     }
 
     final static void a(int param0, ne param1, int param2) {
-        en var5 = null;
+        CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = s.field_b;

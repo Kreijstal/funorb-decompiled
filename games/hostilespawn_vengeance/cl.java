@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends am {
+final class cl extends IntrusiveNode {
     static bd field_j;
     static String field_h;
     static ji field_o;
     static int field_l;
     int field_m;
     static String field_k;
-    static gb field_i;
+    static ResourceArchive field_i;
     int field_n;
 
     public static void c(int param0) {

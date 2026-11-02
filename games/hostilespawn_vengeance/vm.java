@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vm extends dk {
+abstract class vm extends DualLinkNode {
     int field_u;
     private int[] field_G;
     private int[] field_E;

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qb extends am {
-    am field_j;
+final class qb extends IntrusiveNode {
+    IntrusiveNode field_j;
     static int field_k;
     int field_l;
     b field_h;

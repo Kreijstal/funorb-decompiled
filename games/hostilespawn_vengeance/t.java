@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class t extends am {
+final class t extends IntrusiveNode {
     static bd field_l;
     static ca field_i;
     int field_h;
@@ -22,8 +22,8 @@ final class t extends am {
           f.a((byte) 119)) {
           eh.field_c.a(sf.field_V[36], 100, uh.field_i);
         }
-        if (d.field_u > 0) {
-          ci.field_a[param1] = th.field_Fb[param2];
+        if (NetworkGameClient.field_u > 0) {
+          MouseInput.field_a[param1] = th.field_Fb[param2];
         }
         var4 = -param1 + 1;
         if (param2 != 0 &&
@@ -55,7 +55,7 @@ final class t extends am {
           field_k = (String[]) null;
         }
         CharSequence var2 = (CharSequence) ((Object) qg.field_r);
-        se.field_c = mf.a(false, var2);
+        GameAppletShell.field_c = mf.a(false, var2);
     }
 
     final static void c(int param0) {
@@ -74,25 +74,25 @@ final class t extends am {
         int var18 = 0;
         var18 = HostileSpawn.field_I ? 1 : 0;
         try {
-          pc.field_c = -1 + vi.field_p.length;
-          var1_double = (double)vi.field_p[0].field_j.field_e + vi.field_p[0].field_l.field_f - 1.0;
-          var3 = -1.0 + (vi.field_p[0].field_l.field_a + (double)vi.field_p[0].field_j.field_g);
+          pc.field_c = -1 + PacketBuffer.field_p.length;
+          var1_double = (double)PacketBuffer.field_p[0].field_j.field_e + PacketBuffer.field_p[0].field_l.field_f - 1.0;
+          var3 = -1.0 + (PacketBuffer.field_p[0].field_l.field_a + (double)PacketBuffer.field_p[0].field_j.field_g);
           if (param0 != -19706) {
             return;
           }
-          for (var5 = 1; var5 < vi.field_p.length; var5++) {
-            if (vi.field_p[var5] != null &&
-              231 == vi.field_p[var5].field_i) {
-              var6 = vi.field_p[var5].field_l.field_f + (double)vi.field_p[var5].field_j.field_e;
-              var8 = vi.field_p[var5].field_l.field_a + (double)vi.field_p[var5].field_j.field_g;
+          for (var5 = 1; var5 < PacketBuffer.field_p.length; var5++) {
+            if (PacketBuffer.field_p[var5] != null &&
+              231 == PacketBuffer.field_p[var5].field_i) {
+              var6 = PacketBuffer.field_p[var5].field_l.field_f + (double)PacketBuffer.field_p[var5].field_j.field_e;
+              var8 = PacketBuffer.field_p[var5].field_l.field_a + (double)PacketBuffer.field_p[var5].field_j.field_g;
               var10 = -var1_double + var6;
               var12 = var8 - var3;
               var14 = Math.sqrt(var10 * var10 + var12 * var12);
               if (var14 > 1.0) {
                 var16 = el.a(var6, var1_double, 16, var8, var3);
-                vi.field_p[var5].a(param0 + 19931, var16, 1);
-                vi.field_p[var5].field_l.b(-1.0 + var14, var16, 106);
-                vi.field_p[var5].b((byte) 117);
+                PacketBuffer.field_p[var5].a(param0 + 19931, var16, 1);
+                PacketBuffer.field_p[var5].field_l.b(-1.0 + var14, var16, 106);
+                PacketBuffer.field_p[var5].b((byte) 117);
               }
               var1_double = var6;
               var3 = var8;
@@ -101,11 +101,11 @@ final class t extends am {
             pc.field_c = var5 - 1;
             break;
           }
-          if (null != vi.field_p[0] &&
-            vi.field_p[0].field_w != 5) {
-            vi.field_p[0].field_o = (vi.field_p.length - pc.field_c) / 4 + 1;
-            stackIn_16_0 = vi.field_p[0];
-            stackIn_16_0.field_C = 16 / vi.field_p[0].field_o;
+          if (null != PacketBuffer.field_p[0] &&
+            PacketBuffer.field_p[0].field_w != 5) {
+            PacketBuffer.field_p[0].field_o = (PacketBuffer.field_p.length - pc.field_c) / 4 + 1;
+            stackIn_16_0 = PacketBuffer.field_p[0];
+            stackIn_16_0.field_C = 16 / PacketBuffer.field_p[0].field_o;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

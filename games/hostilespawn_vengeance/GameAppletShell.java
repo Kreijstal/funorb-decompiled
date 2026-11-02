@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class se extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_g;
     static java.awt.Canvas field_h;
     static String field_c;
@@ -71,7 +71,7 @@ public abstract class se extends java.applet.Applet implements Runnable, java.aw
             var2 = db.field_r;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          field_h = (java.awt.Canvas) ((Object) new vc((java.awt.Component) (this)));
+          field_h = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) field_h));
           field_h.setSize(hf.field_h, qc.field_s);
           field_h.setVisible(true);
@@ -531,7 +531,7 @@ public abstract class se extends java.applet.Applet implements Runnable, java.aw
         try {
           cn.a(126, param0, param12, param2);
           ub.a(param9, param17, param10, param13, (byte) -127);
-          wc.a(param14, param19, -1);
+          ArchiveIndex.a(param14, param19, -1);
           re.a(param15 - 3996, param6, param7, param1, param11, param3);
           kb.a(param20, 126, param5, param16);
           tm.a(param8, param18, param4, true);
@@ -844,7 +844,7 @@ public abstract class se extends java.applet.Applet implements Runnable, java.aw
     public final void windowClosed(java.awt.event.WindowEvent param0) {
     }
 
-    protected se() {
+    protected GameAppletShell() {
         this.field_i = false;
     }
 

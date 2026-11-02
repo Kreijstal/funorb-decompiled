@@ -7,14 +7,14 @@ final class bh {
     static int field_d;
     static nd field_c;
     static int field_e;
-    private dk field_f;
-    private dk field_i;
+    private DualLinkNode field_f;
+    private DualLinkNode field_i;
     static bd field_h;
     static int[] field_j;
     static int field_b;
 
-    final dk a(byte param0) {
-        dk var2 = this.field_f.field_j;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_f.field_j;
         if (this.field_f == var2) {
           return null;
         }
@@ -26,9 +26,9 @@ final class bh {
         return var2;
     }
 
-    final dk b(byte param0) {
-        dk var2 = null;
-        dk var2Lifetime1;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 >= -6) {
           field_d = -28;
           var2 = this.field_i;
@@ -99,7 +99,7 @@ final class bh {
               var22 = var20 - ni.field_f;
               var23 = var21 * var11_int + var18 >> 2;
               if ((param0 != 0 ||
-                !(gj.field_h * var21 + var16 * en.field_s < 0)) && (param2 != 0 ||
+                !(gj.field_h * var21 + var16 * CipherPacketBuffer.field_s < 0)) && (param2 != 0 ||
                 !(0 <= var17 * bj.field_d + ic.field_n * var22))) {
                 if (param0 != 2 &&
                   var23 < 0) {
@@ -266,10 +266,10 @@ final class bh {
     }
 
     final int c(byte param0) {
-        dk var3 = null;
+        DualLinkNode var3 = null;
         int var4 = HostileSpawn.field_I ? 1 : 0;
         int var2 = 0;
-        dk var3Lifetime1;
+        DualLinkNode var3Lifetime1;
         if (param0 > 4) {
           var3 = this.field_f.field_j;
           while (this.field_f != var3) {
@@ -287,8 +287,8 @@ final class bh {
         return var2;
     }
 
-    final dk d(byte param0) {
-        dk var2 = this.field_f.field_j;
+    final DualLinkNode d(byte param0) {
+        DualLinkNode var2 = this.field_f.field_j;
         if (var2 == this.field_f) {
           this.field_i = null;
           return null;
@@ -297,16 +297,16 @@ final class bh {
         if (param0 == -35) {
           return var2;
         }
-        return (dk) null;
+        return (DualLinkNode) null;
     }
 
     public bh() {
-        this.field_f = new dk();
+        this.field_f = new DualLinkNode();
         this.field_f.field_i = this.field_f;
         this.field_f.field_j = this.field_f;
     }
 
-    final void a(dk param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         try {
           int var3_int = -17 / ((param1 + 79) / 43);
           if (null != param0.field_i) {

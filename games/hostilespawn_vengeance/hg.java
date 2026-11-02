@@ -9,7 +9,7 @@ final class hg {
     static String field_d;
     static String[] field_b;
 
-    final static void a(byte[] param0, int param1, int param2, int param3, vi param4, java.math.BigInteger param5, java.math.BigInteger param6) {
+    final static void a(byte[] param0, int param1, int param2, int param3, PacketBuffer param4, java.math.BigInteger param5, java.math.BigInteger param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -43,7 +43,7 @@ final class hg {
           }
           if (bb.field_f == null ||
             !(bb.field_f.field_n.length >= var7_int)) {
-            bb.field_f = new vi(var7_int);
+            bb.field_f = new PacketBuffer(var7_int);
           }
           bb.field_f.field_i = 0;
           bb.field_f.a(param2, param0, true, param3);
@@ -51,7 +51,7 @@ final class hg {
           bb.field_f.a(var13, (byte) 108);
           if (tb.field_M == null ||
             !(tb.field_M.field_n.length >= 100)) {
-            tb.field_M = new vi(100);
+            tb.field_M = new PacketBuffer(100);
           }
           tb.field_M.field_i = 0;
           tb.field_M.d(95, 10);

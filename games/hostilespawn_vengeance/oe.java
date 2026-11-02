@@ -6,11 +6,11 @@ import java.util.*;
 final class oe implements Iterator {
     static bd field_g;
     static bd field_d;
-    private am field_b;
+    private IntrusiveNode field_b;
     static bn[] field_a;
-    private ed field_c;
+    private IntrusiveNodeHashTable field_c;
     private int field_e;
-    private am field_f;
+    private IntrusiveNode field_f;
 
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
@@ -65,7 +65,7 @@ final class oe implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        am var1;
+        IntrusiveNode var1;
         int var2;
         var2 = HostileSpawn.field_I ? 1 : 0;
         if (this.field_c.field_f[this.field_e - 1] != this.field_b) {
@@ -117,7 +117,7 @@ final class oe implements Iterator {
         field_d = (bd) null;
     }
 
-    oe(ed param0) {
+    oe(IntrusiveNodeHashTable param0) {
         this.field_f = null;
         try {
           this.field_c = param0;

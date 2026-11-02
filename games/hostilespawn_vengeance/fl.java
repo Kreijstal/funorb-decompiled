@@ -4,22 +4,22 @@
 final class fl {
     static String field_b;
     private vl field_c;
-    private am field_a;
+    private IntrusiveNode field_a;
     static String field_d;
 
-    final am a(am param0, boolean param1) {
-        am var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, boolean param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        am stackIn_2_0 = null;
+        IntrusiveNode stackIn_2_0 = null;
         Object stackIn_9_0 = null;
-        am stackIn_11_0 = null;
+        IntrusiveNode stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_2_0 = (am) null;
+            stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
           if (param0 == null) {
@@ -30,7 +30,7 @@ final class fl {
           if (this.field_c.field_b == var3) {
             this.field_a = null;
             stackIn_9_0 = null;
-            return (am) (stackIn_9_0);
+            return (IntrusiveNode) (stackIn_9_0);
           }
           this.field_a = var3.field_g;
           stackIn_11_0 = var3;
@@ -95,8 +95,8 @@ final class fl {
         }
     }
 
-    final am a(boolean param0) {
-        am var2 = this.field_a;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = this.field_a;
         if (this.field_c.field_b == var2) {
           this.field_a = null;
           return null;
@@ -110,11 +110,11 @@ final class fl {
         return var2;
     }
 
-    final am a(int param0) {
+    final IntrusiveNode a(int param0) {
         if (param0 != 0) {
-          return (am) null;
+          return (IntrusiveNode) null;
         }
-        am var2 = this.field_c.field_b.field_f;
+        IntrusiveNode var2 = this.field_c.field_b.field_f;
         if (var2 == this.field_c.field_b) {
           this.field_a = null;
           return null;
@@ -123,18 +123,18 @@ final class fl {
         return var2;
     }
 
-    final am a(int param0, am param1) {
-        am var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
-        am stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            this.field_a = (am) null;
+            this.field_a = (IntrusiveNode) null;
           }
           if (param1 == null) {
             var3 = this.field_c.field_b.field_f;
@@ -148,7 +148,7 @@ final class fl {
           }
           this.field_a = null;
           stackIn_7_0 = null;
-          return (am) (stackIn_7_0);
+          return (IntrusiveNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -163,8 +163,8 @@ final class fl {
         }
     }
 
-    final am c(int param0) {
-        am var2 = this.field_a;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_a;
         if (var2 == this.field_c.field_b) {
           this.field_a = null;
           return null;
@@ -186,8 +186,8 @@ final class fl {
         }
     }
 
-    final am b(int param0) {
-        am var2 = this.field_c.field_b.field_g;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_c.field_b.field_g;
         if (this.field_c.field_b == var2) {
           this.field_a = null;
           return null;
@@ -196,7 +196,7 @@ final class fl {
           this.field_a = var2.field_g;
           return var2;
         }
-        return (am) null;
+        return (IntrusiveNode) null;
     }
 
     static {

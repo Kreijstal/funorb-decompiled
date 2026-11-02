@@ -93,7 +93,7 @@ final class pk extends ql {
         }
     }
 
-    final static String a(int param0, int param1, vi param2) {
+    final static String a(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;

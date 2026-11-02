@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dl extends tj {
+final class dl extends PcmStream {
     private w field_s;
     static boolean field_l;
     static String field_p;
@@ -12,22 +12,22 @@ final class dl extends tj {
     static String field_m;
     wm field_q;
 
-    final tj d() {
+    final PcmStream d() {
         tm var1 = null;
         RuntimeException var1_ref = null;
         Object stackIn_2_0 = null;
         b stackIn_7_0 = null;
-        tj stackIn_9_0 = null;
+        PcmStream stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var1 = (tm) (this.field_t.g(-56));
           if (var1 == null) {
             stackIn_2_0 = null;
-            return (tj) (stackIn_2_0);
+            return (PcmStream) (stackIn_2_0);
           }
           if (null != var1.field_A) {
             stackIn_7_0 = var1.field_A;
-            return (tj) ((Object) stackIn_7_0);
+            return (PcmStream) ((Object) stackIn_7_0);
           }
           stackIn_9_0 = this.b();
           return stackIn_9_0;
@@ -105,7 +105,7 @@ final class dl extends tj {
         }
     }
 
-    final tj b() {
+    final PcmStream b() {
         tm var1 = null;
         int var2 = 0;
         Object stackIn_3_0 = null;
@@ -115,12 +115,12 @@ final class dl extends tj {
         int statePc = 0;
         Throwable caughtException = null;
         RuntimeException var1_ref = null;
-        stateLoop: while (true) {
+        scanLoop1: while (true) {
             switch (statePc) {
                 case 0: {
                     var2 = HostileSpawn.field_I ? 1 : 0;
                     statePc = 1;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 1: {
                     try {
@@ -130,14 +130,14 @@ final class dl extends tj {
                             {
                                 stackIn_6_0 = null;
                                 statePc = 6;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 2. */
                             {
                                 stackIn_3_0 = null;
                                 statePc = 3;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_1) {
@@ -146,7 +146,7 @@ final class dl extends tj {
                             throw dl.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 3: {
@@ -154,11 +154,11 @@ final class dl extends tj {
                     stackIn_4_0 = stackIn_6_0;
                     if (var2 != 0) {
                         statePc = 6;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 4. */
                         {
-                            return (tj) (stackIn_4_0);
+                            return (PcmStream) (stackIn_4_0);
                         }
                     }
                 }
@@ -169,7 +169,7 @@ final class dl extends tj {
                             {
                                 stackIn_10_0 = var1.field_A;
                                 statePc = 10;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 7. */
@@ -179,7 +179,7 @@ final class dl extends tj {
                                 }
                                 {
                                     statePc = 1;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
@@ -189,11 +189,11 @@ final class dl extends tj {
                             throw dl.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
                         }
                         caughtException = stateCaught_6;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 10: {
-                    return (tj) ((Object) stackIn_10_0);
+                    return (PcmStream) ((Object) stackIn_10_0);
                 }
                 case 12: {
                     var1_ref = (RuntimeException) ((Object) caughtException);
@@ -204,7 +204,7 @@ final class dl extends tj {
         }
     }
 
-    final static void a(int param0, gb param1) {
+    final static void a(int param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2619_0;
             StringBuilder stackIn_2619_1;
@@ -215,9 +215,9 @@ final class dl extends tj {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            gb param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, gb initialParam1) {
+            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2619_0 = null;
@@ -257,7 +257,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("error_js5connect_full", 24);
                 if (null != var2) {
-                  jg.field_g = nm.a(124, var2);
+                  KeyboardInput.field_g = nm.a(124, var2);
                 }
                 var2 = vj.a("error_js5connect", 24);
                 if (var2 != null) {
@@ -1240,7 +1240,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("tocustomersupport", 24);
                 if (var2 != null) {
-                  wc.field_k = nm.a(124, var2);
+                  ArchiveIndex.field_k = nm.a(124, var2);
                 }
                 var2 = vj.a("changedisplayname", 24);
                 if (null != var2) {
@@ -1264,7 +1264,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("goback", 24);
                 if (null != var2) {
-                  dk.field_l = nm.a(125, var2);
+                  DualLinkNode.field_l = nm.a(125, var2);
                 }
                 var2 = vj.a("otheroptions", 24);
                 if (null != var2) {
@@ -1482,7 +1482,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("openinpopupwindow", 24);
                 if (null != var2) {
-                  jg.field_e = nm.a(125, var2);
+                  KeyboardInput.field_e = nm.a(125, var2);
                 }
                 var2 = vj.a("create", 24);
                 if (null != var2) {
@@ -1650,7 +1650,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("create_select_alternative", 24);
                 if (null != var2) {
-                  uk.field_b = nm.a(124, var2);
+                  ArchiveProvider.field_b = nm.a(124, var2);
                 }
                 var2 = vj.a("create_optin_news", 24);
                 if (var2 != null) {
@@ -1666,7 +1666,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("login_username_email", 24);
                 if (var2 != null) {
-                  jg.field_b = nm.a(122, var2);
+                  KeyboardInput.field_b = nm.a(122, var2);
                 }
                 var2 = vj.a("login_username", 24);
                 if (null != var2) {
@@ -1674,7 +1674,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("login_email", 24);
                 if (var2 != null) {
-                  dk.field_k = nm.a(122, var2);
+                  DualLinkNode.field_k = nm.a(122, var2);
                 }
                 var2 = vj.a("login_username_tooltip", 24);
                 if (null != var2) {
@@ -1790,7 +1790,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("create_alert_nameleadingspace", 24);
                 if (null != var2) {
-                  ui.field_g = nm.a(127, var2);
+                  DualLinkDeque.field_g = nm.a(127, var2);
                 }
                 var2 = vj.a("create_alert_doublespace", 24);
                 if (null != var2) {
@@ -1826,7 +1826,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("create_alert_invalidemail", 24);
                 if (var2 != null) {
-                  en.field_z = nm.a(127, var2);
+                  CipherPacketBuffer.field_z = nm.a(127, var2);
                 }
                 var2 = vj.a("create_alert_email_unavailable", 24);
                 if (var2 != null) {
@@ -2022,7 +2022,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("loading_levels", 24);
                 if (null != var2) {
-                  ci.field_f = nm.a(127, var2);
+                  MouseInput.field_f = nm.a(127, var2);
                 }
                 var2 = vj.a("loading_extradata", 24);
                 if (var2 != null) {
@@ -2090,7 +2090,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("music_colon", 24);
                 if (var2 != null) {
-                  wc.field_s = nm.a(122, var2);
+                  ArchiveIndex.field_s = nm.a(122, var2);
                 }
                 var2 = vj.a("fullscreen", 24);
                 if (null != var2) {
@@ -2130,7 +2130,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("login_createaccount", 24);
                 if (var2 != null) {
-                  ed.field_d = nm.a(126, var2);
+                  IntrusiveNodeHashTable.field_d = nm.a(126, var2);
                 }
                 var2 = vj.a("tohighscores", 24);
                 if (null != var2) {
@@ -2230,7 +2230,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("previous", 24);
                 if (var2 != null) {
-                  ui.field_d = nm.a(126, var2);
+                  DualLinkDeque.field_d = nm.a(126, var2);
                 }
                 var2 = vj.a("prev", 24);
                 if (var2 != null) {
@@ -2258,7 +2258,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("returntogame", 24);
                 if (null != var2) {
-                  ui.field_h = nm.a(122, var2);
+                  DualLinkDeque.field_h = nm.a(122, var2);
                 }
                 var2 = vj.a("endgameresign", 24);
                 if (null != var2) {
@@ -2456,7 +2456,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("notyetachieved", 24);
                 if (null != var2) {
-                  vc.field_j = nm.a(127, var2);
+                  GameCanvas.field_j = nm.a(127, var2);
                 }
                 var2 = vj.a("achieved", 24);
                 if (null != var2) {
@@ -2872,7 +2872,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("fs_button_close", 24);
                 if (null != var2) {
-                  gi.field_n = nm.a(125, var2);
+                  IsaacGenerator.field_n = nm.a(125, var2);
                 }
                 var2 = vj.a("fs_button_members", 24);
                 if (null != var2) {
@@ -3016,7 +3016,7 @@ final class dl extends tj {
                 }
                 var2 = vj.a("serviceunavailable", 24);
                 if (var2 != null) {
-                  ci.field_c = nm.a(125, var2);
+                  MouseInput.field_c = nm.a(125, var2);
                 }
                 var2 = vj.a("createtouse", 24);
                 if (var2 != null) {
@@ -3238,8 +3238,8 @@ final class dl extends tj {
                   throw wg.a((Throwable) ((Object) stackIn_2619_0), ((StringBuilder) (Object) stackIn_2619_1).append(stackIn_2620_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2628_0 = (!se.field_f);
-                  se.field_f = stackIn_2628_0;
+                  stackIn_2628_0 = (!GameAppletShell.field_f);
+                  GameAppletShell.field_f = stackIn_2628_0;
                 }
             }
         }
@@ -3268,11 +3268,11 @@ final class dl extends tj {
           if ((this.field_s.field_C[param2.field_E] & 4) != 0 &&
             param2.field_h < 0) {
             var7_int = this.field_s.field_l[param2.field_E] / ug.field_g;
-            L2: while (true) {
+            scanLoop1: while (true) {
               var8 = (1048575 + var7_int - param2.field_i) / var7_int;
               if (param5 < var8) {
                 if (var12 == 0) {
-                  break L2;
+                  break scanLoop1;
                 }
               } else {
                 param2.field_A.b(param1, param4, var8);

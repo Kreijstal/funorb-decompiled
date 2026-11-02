@@ -129,7 +129,7 @@ final class uf extends ql {
         }
     }
 
-    final static void a(am param0, am param1, byte param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (param0.field_f != null) {
             param0.b(-124);
@@ -148,8 +148,8 @@ final class uf extends ql {
         int var2 = 0;
         int var2Lifetime1;
         if (param0) {
-          am var3 = (am) null;
-          uf.a((am) null, (am) null, (byte) 16);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          uf.a((IntrusiveNode) null, (IntrusiveNode) null, (byte) 16);
           var2 = ha.field_t;
           if (var2 != 6) {
             if (var2 == 9) {

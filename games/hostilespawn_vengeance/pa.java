@@ -376,8 +376,8 @@ final class pa extends ql {
     public static void g(int param0) {
         field_i = (bd[][]) null;
         if (param0 <= 118) {
-          en var2 = (en) null;
-          pa.a((byte) 6, (short[]) null, 99, (en) null);
+          CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+          pa.a((byte) 6, (short[]) null, 99, (CipherPacketBuffer) null);
         }
     }
 
@@ -396,7 +396,7 @@ final class pa extends ql {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = bf.field_d[ua.a((int) var4[var6], 255)];
           }
-          var1[var2] = new bd(ra.field_a, vc.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var5);
+          var1[var2] = new bd(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var5);
         }
         if (param0 != 14) {
           field_d = true;
@@ -519,7 +519,7 @@ final class pa extends ql {
         if (param0 != -1) {
           return;
         }
-        L0: {
+        regionExit1: {
           var13 = mm.field_m[0];
           var3 = var13.field_j;
           if (ha.field_t == 10) {
@@ -592,7 +592,7 @@ final class pa extends ql {
                 this.field_j.field_d = var3.field_g * 24 - 100;
                 this.field_j.field_l = var3.field_e * 24;
               }
-              break L0;
+              break regionExit1;
             }
             if (of.field_d != dn.field_i) {
               kd.a(0, 1);
@@ -605,7 +605,7 @@ final class pa extends ql {
                 this.field_j.field_d = var3.field_g * 24 - 100;
                 this.field_j.field_l = var3.field_e * 24;
               }
-              break L0;
+              break regionExit1;
             }
           }
           if (0 == this.field_j.field_l &&
@@ -667,7 +667,7 @@ final class pa extends ql {
         }
     }
 
-    final static short[] a(byte param0, short[] param1, int param2, en param3) {
+    final static short[] a(byte param0, short[] param1, int param2, CipherPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

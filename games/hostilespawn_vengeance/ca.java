@@ -12,12 +12,12 @@ abstract class ca {
           field_b = null;
           return;
         }
-        gb var2 = (gb) null;
-        ca.a((gb) null, (gb) null, (gb) null, 106);
+        ResourceArchive var2 = (ResourceArchive) null;
+        ca.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, 106);
         field_b = null;
     }
 
-    final static boolean a(gb param0, gb param1, gb param2, int param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -77,7 +77,7 @@ abstract class ca {
           dn.field_b = 0;
           bc.field_i = param2;
           of.field_d = dn.field_i;
-          vi.field_h = param0;
+          PacketBuffer.field_h = param0;
           qi.field_N = param4;
           eh.field_c.a(lm.field_A[23], 100, wj.field_O);
           HostileSpawn.field_F = 1 == param1 ? true : false;
@@ -87,13 +87,13 @@ abstract class ca {
         dn.field_b = 0;
         bc.field_i = param2;
         of.field_d = dn.field_i;
-        vi.field_h = param0;
+        PacketBuffer.field_h = param0;
         qi.field_N = param4;
         eh.field_c.a(lm.field_A[23], 100, wj.field_O);
         HostileSpawn.field_F = 1 == param1 ? true : false;
     }
 
-    abstract void a(vi param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     abstract bl a(boolean param0);
 

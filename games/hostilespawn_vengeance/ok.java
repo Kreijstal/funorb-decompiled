@@ -269,7 +269,7 @@ final class ok {
         return field_j;
     }
 
-    final void a(vi param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_n = new ma();

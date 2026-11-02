@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class am {
+class IntrusiveNode {
     static String field_a;
-    am field_f;
+    IntrusiveNode field_f;
     static String field_b;
     static HostileSpawn field_d;
-    am field_g;
+    IntrusiveNode field_g;
     long field_c;
     static int field_e;
 
@@ -68,8 +68,8 @@ class am {
           }
           if (decompiledFrameRemainder0) {
             if (!re.field_k) {
-              if (ui.field_e <= fb.field_l) {
-                stackIn_17_0 = (qg.field_u + ui.field_e > fb.field_l) ? 1 : 0;
+              if (DualLinkDeque.field_e <= fb.field_l) {
+                stackIn_17_0 = (qg.field_u + DualLinkDeque.field_e > fb.field_l) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -84,7 +84,7 @@ class am {
                 var2_int == 0) {
                 fb.field_l = 0;
               } else {
-                fb.field_l = ui.field_e;
+                fb.field_l = DualLinkDeque.field_e;
               }
             }
             qh.field_q = hn.field_b;
@@ -99,7 +99,7 @@ class am {
           }
           eb.field_d = param0;
           if (!re.field_k &&
-            fb.field_l < ui.field_e &&
+            fb.field_l < DualLinkDeque.field_e &&
             um.field_d) {
             qh.field_q = hn.field_b;
             l.field_d = qh.field_s;
@@ -214,7 +214,7 @@ class am {
           }
           ue.a(250, false);
           if (param1 <= 89) {
-            am.a(-56, (byte) -41);
+            IntrusiveNode.a(-56, (byte) -41);
           }
           for (var3Lifetime2 = 1; var3Lifetime2 < 5; var3Lifetime2++) {
             for (var4_intLifetime1 = 0; var4_intLifetime1 <= 256; var4_intLifetime1 += 16) {

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qf extends am {
+final class qf extends IntrusiveNode {
     private static int field_k;
     private static float[] field_M;
     private byte[][] field_L;
@@ -583,7 +583,7 @@ final class qf extends am {
         return var1;
     }
 
-    private final static boolean a(gb param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_K) {
           var1 = param0.a(false, 0, 0);
@@ -614,7 +614,7 @@ final class qf extends am {
         field_i = null;
     }
 
-    final static qf a(gb param0, int param1, int param2) {
+    final static qf a(ResourceArchive param0, int param1, int param2) {
         try {
           qf var4_ref = null;
           if (!qf.a(param0)) {
@@ -639,7 +639,7 @@ final class qf extends am {
         }
     }
 
-    final static qf a(gb param0, String param1, String param2) {
+    final static qf a(ResourceArchive param0, String param1, String param2) {
         try {
           qf var4_ref = null;
           if (!qf.a(param0)) {
@@ -675,7 +675,7 @@ final class qf extends am {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        vi var2 = new vi(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_l = var2.d(8195);
         this.field_x = var2.d(8195);
         this.field_u = var2.d(8195);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qc extends dk {
+abstract class qc extends DualLinkNode {
     int field_z;
     static String field_C;
     static int field_s;

@@ -101,8 +101,8 @@ final class fb extends ql {
             ln.field_a.field_c[var6] = 4;
             ln.field_a.field_c[var6 - 1] = 4;
             ln.field_a.field_c[var6 + 1] = 4;
-            fieldTemp$0 = dk.field_o;
-            dk.field_o = dk.field_o + 1;
+            fieldTemp$0 = DualLinkNode.field_o;
+            DualLinkNode.field_o = DualLinkNode.field_o + 1;
             vj.field_w[fieldTemp$0] = new qm(ln.field_a, this.field_k, 145, rl.field_c, 0, false);
             tb.field_N = 150;
             tk.a(1, jc.field_c, 31, true);
@@ -168,8 +168,8 @@ final class fb extends ql {
             ca.a((double)(this.field_p.field_e + 1), 0, (double)(this.field_p.field_g + 3), true, 0);
             this.field_o = new qm(ln.field_a, var3, 230, rl.field_c, 0, false);
             this.field_o.field_c = var11.field_c;
-            fieldTemp$2 = dk.field_o;
-            dk.field_o = dk.field_o + 1;
+            fieldTemp$2 = DualLinkNode.field_o;
+            DualLinkNode.field_o = DualLinkNode.field_o + 1;
             vj.field_w[fieldTemp$2] = this.field_o;
           }
         }
@@ -333,7 +333,7 @@ final class fb extends ql {
         var10 = var5;
         var8 = var10;
         var2 = var8;
-        this.field_i = vi.field_p[param0];
+        this.field_i = PacketBuffer.field_p[param0];
         if (var9.length < 12) {
           this.field_k = new oc();
           this.field_p = new oc();
@@ -422,7 +422,7 @@ final class fb extends ql {
           return cj.field_K;
         }
         if (this.field_s) {
-          return en.field_v;
+          return CipherPacketBuffer.field_v;
         }
         if (param0) {
           this.b((byte) 80);

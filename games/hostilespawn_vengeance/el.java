@@ -268,7 +268,7 @@ final class el extends fe {
           var21Lifetime2 = ge.field_c;
           var22Lifetime2 = ge.field_b;
           var23Lifetime2 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var23Lifetime2 < param4.field_c) {
               var24Lifetime1 = param4.field_n[var23Lifetime2];
               var25Lifetime1 = param4.field_E[var23Lifetime2];
@@ -293,7 +293,7 @@ final class el extends fe {
                   rb.field_p[var23Lifetime2] = -2147483648;
                 }
                 if (param5) {
-                  dk.field_m[var23Lifetime2] = var27Lifetime1 >> ih.field_w;
+                  DualLinkNode.field_m[var23Lifetime2] = var27Lifetime1 >> ih.field_w;
                   sj.field_f[var23Lifetime2] = var28Lifetime1 >> ih.field_w;
                   ii.field_c[var23Lifetime2] = var29Lifetime1;
                 }
@@ -317,7 +317,7 @@ final class el extends fe {
                   var26Lifetime1 = param4.field_e[var23Lifetime2];
                   ac.field_j[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var18 * var26Lifetime1) >> 16);
                   ke.field_v[var23Lifetime2] = (var16 * var25Lifetime1 + var24Lifetime1 * var13 + var26Lifetime1 * var19 >> 16) + var10;
-                  vi.field_m[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + var25Lifetime1 * var17 + var14 * var24Lifetime1 >> 16);
+                  PacketBuffer.field_m[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + var25Lifetime1 * var17 + var14 * var24Lifetime1 >> 16);
                   var24Lifetime1 = param4.field_Q[var23Lifetime2];
                   var25Lifetime1 = param4.field_B[var23Lifetime2];
                   var26Lifetime1 = param4.field_M[var23Lifetime2];
@@ -327,9 +327,9 @@ final class el extends fe {
                   var24Lifetime1 = param4.field_h[var23Lifetime2];
                   var25Lifetime1 = param4.field_l[var23Lifetime2];
                   var26Lifetime1 = param4.field_F[var23Lifetime2];
-                  se.field_d[var23Lifetime2] = (var18 * var26Lifetime1 + var25Lifetime1 * var15 + var12 * var24Lifetime1 >> 16) + var9;
+                  GameAppletShell.field_d[var23Lifetime2] = (var18 * var26Lifetime1 + var25Lifetime1 * var15 + var12 * var24Lifetime1 >> 16) + var9;
                   ae.field_q[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + var13 * var24Lifetime1 + var16 * var25Lifetime1 >> 16);
-                  gi.field_l[var23Lifetime2] = (var24Lifetime1 * var14 + (var17 * var25Lifetime1 + var20 * var26Lifetime1) >> 16) + var11;
+                  IsaacGenerator.field_l[var23Lifetime2] = (var24Lifetime1 * var14 + (var17 * var25Lifetime1 + var20 * var26Lifetime1) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
                     return;
@@ -351,7 +351,7 @@ final class el extends fe {
                   stackIn_69_0 = ~oa.field_c.length;
                   stackIn_69_1 = ~var18;
                   if (var30 != 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                   if (stackIn_69_0 >= stackIn_69_1) {
                     break;
@@ -615,7 +615,7 @@ final class el extends fe {
           var7 = null;
           var8 = var6_array;
           var9 = 0;
-          L6: while (true) {
+          scanLoop1: while (true) {
             if (var8.length > var9) {
               var10 = var8[var9];
               var11 = (java.net.Proxy) (var10);
@@ -642,7 +642,7 @@ final class el extends fe {
                 decompiledRegionSelector0 = 1;
               }
               if (decompiledRegionSelector0 == 0) {
-                break L6;
+                break scanLoop1;
               }
               var9++;
               if (var13 == 0) {

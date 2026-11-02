@@ -73,7 +73,7 @@ final class ka extends hi {
           if (this.a(param1, (byte) 91) != bi.field_d) {
             return ak.field_g;
           }
-          stackIn_3_0 = en.field_z;
+          stackIn_3_0 = CipherPacketBuffer.field_z;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

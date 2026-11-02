@@ -13,7 +13,7 @@ final class hf {
     static int field_h;
     static String field_f;
 
-    final static pg a(byte param0, gb param1, int param2, int param3) {
+    final static pg a(byte param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

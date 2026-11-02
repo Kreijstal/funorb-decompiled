@@ -27,7 +27,7 @@ final class dj {
         field_b = (int[][]) null;
     }
 
-    final void a(vi param0, ma param1) {
+    final void a(PacketBuffer param0, ma param1) {
         int var3;
         int var4;
         int var5;

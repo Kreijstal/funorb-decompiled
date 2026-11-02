@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class te extends vd implements nk, qk {
-    static se field_E;
+    static GameAppletShell field_E;
     static bd[] field_G;
     private wg field_H;
     private cj field_L;
     static ij field_M;
-    static gb field_J;
+    static ResourceArchive field_J;
     static int field_K;
     private ph field_I;
     static int[] field_F;
@@ -35,7 +35,7 @@ final class te extends vd implements nk, qk {
 
     private final String k(int param0) {
         if (param0 != 4897) {
-          field_E = (se) null;
+          field_E = (GameAppletShell) null;
           return "</col></u>";
         }
         return "</col></u>";
@@ -129,7 +129,7 @@ final class te extends vd implements nk, qk {
         var6 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (param0 != -2) {
-            field_E = (se) null;
+            field_E = (GameAppletShell) null;
           }
           if (param1 == 0) {
             l.a("terms.ws", (byte) 127);
@@ -174,8 +174,8 @@ final class te extends vd implements nk, qk {
           var4 = new cn(jd.field_s, 0, 0, 0, 0, 16777215, -1, 3, 0, jd.field_s.field_y, -1, 2147483647, true);
           this.field_L = new cj(var7, var4);
           this.field_L.field_i = "";
-          this.field_L.a(-1, jg.field_e, 0);
-          this.field_L.a(-1, jg.field_e, 1);
+          this.field_L.a(-1, KeyboardInput.field_e, 0);
+          this.field_L.a(-1, KeyboardInput.field_e, 1);
           this.field_L.field_p = (mh) (this);
           this.field_L.field_s = this.field_s - 40;
           this.field_L.a(true, this.field_s - 40, 26, var3);

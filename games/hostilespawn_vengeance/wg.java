@@ -191,7 +191,7 @@ final class wg extends dg implements qk {
         if (param0 != -9420) {
           field_yb = -95L;
         }
-        en var2 = s.field_b;
+        CipherPacketBuffer var2 = s.field_b;
         var2.i(param0 + 28739, param1);
         var2.d(90, 1);
         var2.d(param0 ^ -9403, 2);
@@ -248,7 +248,7 @@ final class wg extends dg implements qk {
             }
             if (param0.field_a != 3) {
               if (6 == param0.field_a) {
-                var5.a(22770, 9, wc.field_k);
+                var5.a(22770, 9, ArchiveIndex.field_k);
               }
             } else {
               var5.a(22770, 7, pf.field_N);

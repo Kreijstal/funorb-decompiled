@@ -9,7 +9,7 @@ final class s {
     static String field_a;
     private String field_c;
     static int field_g;
-    static en field_b;
+    static CipherPacketBuffer field_b;
 
     final static void a(int param0, fd param1, int param2, int param3, kd param4, java.awt.Component param5, boolean param6, int param7) {
         try {
@@ -50,7 +50,7 @@ final class s {
         return this.field_f;
     }
 
-    final static String a(gb param0, String param1, int param2, String param3, String param4) {
+    final static String a(ResourceArchive param0, String param1, int param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -113,7 +113,7 @@ final class s {
         field_h = null;
         if (param0) {
           String var2 = (String) null;
-          s.a((gb) null, (String) null, 5, (String) null, (String) null);
+          s.a((ResourceArchive) null, (String) null, 5, (String) null, (String) null);
         }
     }
 

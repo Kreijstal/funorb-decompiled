@@ -130,7 +130,7 @@ final class df {
             param7.field_z = 4;
             if (!pl.field_l) {
               if (eh.field_g > 0) {
-                ci.a(1, 46);
+                MouseInput.a(1, 46);
                 if (1 != uj.field_l) {
                 }
               }

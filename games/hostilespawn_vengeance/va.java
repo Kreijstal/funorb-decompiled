@@ -46,20 +46,20 @@ final class va {
         return var3;
     }
 
-    final static va a(gb param0, String param1, String param2) {
+    final static va a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, param1, 0);
         if (var3 == null) {
           return null;
         }
-        return new va(new vi(var3));
+        return new va(new PacketBuffer(var3));
     }
 
-    final static va a(gb param0, int param1, int param2) {
+    final static va a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(false, param2, param1);
         if (var3 == null) {
           return null;
         }
-        return new va(new vi(var3));
+        return new va(new PacketBuffer(var3));
     }
 
     final jb a() {
@@ -67,7 +67,7 @@ final class va {
         return new jb(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
-    private va(vi param0) {
+    private va(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new ok[10];

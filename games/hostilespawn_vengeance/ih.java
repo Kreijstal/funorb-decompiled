@@ -186,7 +186,7 @@ final class ih extends ej {
                       stackIn_64_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_64_0;
                       this.field_p = var14_ref;
-                      this.field_p.field_C = new vi(var15 + (var9 + this.field_p.field_B));
+                      this.field_p.field_C = new PacketBuffer(var15 + (var9 + this.field_p.field_B));
                       this.field_p.field_C.d(122, var10);
                       this.field_p.field_C.b(var9, 25251);
                       this.field_p.field_x = 10;
@@ -457,7 +457,7 @@ final class ih extends ej {
     private final void a(byte param0, boolean param1) {
         try {
           IOException iOException = null;
-          vi stackIn_4_0 = null;
+          PacketBuffer stackIn_4_0 = null;
           int stackIn_4_1 = 0;
           int stackIn_5_2 = 0;
           Throwable decompiledCaughtException = null;
@@ -474,7 +474,7 @@ final class ih extends ej {
             } else {
               stackIn_5_2 = 3;
             }
-            ((vi) (Object) stackIn_4_0).d(stackIn_4_1, stackIn_5_2);
+            ((PacketBuffer) (Object) stackIn_4_0).d(stackIn_4_1, stackIn_5_2);
             this.field_m.a(-121, 0L);
             this.field_t.a(this.field_m.field_n.length, this.field_m.field_n, (byte) -105, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {

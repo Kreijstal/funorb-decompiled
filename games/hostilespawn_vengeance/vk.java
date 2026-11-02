@@ -11,7 +11,7 @@ final class vk extends uh {
     final static void c(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        en var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;

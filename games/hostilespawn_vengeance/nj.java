@@ -3,14 +3,14 @@
  */
 abstract class nj {
     static String field_e;
-    static jg field_c;
+    static KeyboardInput field_c;
     static String field_b;
     static int field_a;
     static pg[][] field_d;
 
     public static void b(byte param0) {
         if (param0 != -93) {
-          field_c = (jg) null;
+          field_c = (KeyboardInput) null;
         }
         field_c = null;
         field_d = (pg[][]) null;
@@ -58,7 +58,7 @@ abstract class nj {
           var6 = var14;
           var7 = 0;
           for (var1_int = 0; ib.field_c > var1_int; var1_int++) {
-            L2: {
+            regionExit1: {
               var8_ref_p = jn.field_F[var1_int];
               var9 = var8_ref_p.field_j.b(-4);
               var3 = (int)(24.0 * (var8_ref_p.field_l.field_a + (double)var8_ref_p.field_j.field_g)) - var5;
@@ -82,7 +82,7 @@ abstract class nj {
                     switch (var12) {
                       case 32:
                         oa.a(-17652, var3, var8_ref_p, var2);
-                        break L2;
+                        break regionExit1;
                       case 1:
                         var11 = var8_ref_p.field_e / 2;
                         if (0 > var11) {
@@ -93,27 +93,27 @@ abstract class nj {
                         }
                         if (bm.field_c != 1) {
                           me.field_ib[var11].c(var2 - me.field_ib[var11].field_z / 2, -(me.field_ib[var11].field_A / 2) + var3, 128);
-                          break L2;
+                          break regionExit1;
                         }
                         if (kd.field_t) {
                           nj.a(var2 - me.field_ib[var11].field_z / 2, 128, -(me.field_ib[var11].field_A / 2) + var3, 22173, me.field_ib[var11], (int)var8_ref_p.field_c);
-                          break L2;
+                          break regionExit1;
                         }
                         if (var11 <= 0) {
-                          break L2;
+                          break regionExit1;
                         }
                         me.field_ib[var11].a(true, 128, (int)var8_ref_p.field_c, var2, var3);
-                        break L2;
+                        break regionExit1;
                       case 2:
                         var10 = 16711680;
                         si.f(var2, var3, var8_ref_p.field_e * 2, var10, 128 - var8_ref_p.field_e * 4);
-                        break L2;
+                        break regionExit1;
                       case 3:
                         nm.a(var2, var8_ref_p, var3, param0 ^ 11187);
-                        break L2;
+                        break regionExit1;
                       case 21:
                         ic.a(var2, var3, var8_ref_p, (byte) 107);
-                        break L2;
+                        break regionExit1;
                       case 17:
                       case 29:
                       case 5:
@@ -132,7 +132,7 @@ abstract class nj {
                           var12 != 8) {
                           if (var12 == 17) {
                             pf.a(var3, true, var8_ref_p, var2);
-                            break L2;
+                            break regionExit1;
                           }
                           if (var12 != 29) {
                             if (var12 != 28 &&
@@ -140,26 +140,26 @@ abstract class nj {
                               switch (var12) {
                                 case 5:
                                   ha.a(var2, param0 ^ -896, var8_ref_p, var3);
-                                  break L2;
+                                  break regionExit1;
                                 case 7:
                                   if (var7 >= var15.length) {
-                                    break L2;
+                                    break regionExit1;
                                   }
                                   var6[var7++] = var2;
                                   var6[var7++] = var3;
                                   incrementValue$2 = var7;
                                   var7++;
                                   var6[incrementValue$2] = (int)var8_ref_p.field_c;
-                                  break L2;
+                                  break regionExit1;
                                 case 24:
                                   bn.a(true, var3, var8_ref_p, var2);
-                                  break L2;
+                                  break regionExit1;
                                 case 6:
                                   tm.a((byte) 88, var2, var3, var8_ref_p);
-                                  break L2;
+                                  break regionExit1;
                                 case 37:
-                                  am.a(-1, var3, var2, var8_ref_p);
-                                  break L2;
+                                  IntrusiveNode.a(-1, var3, var2, var8_ref_p);
+                                  break regionExit1;
                                 case 11:
                                 case 34:
                                 case 33:
@@ -172,13 +172,13 @@ abstract class nj {
                                     switch (var12) {
                                       case 11:
                                         ri.a(91, var3, var8_ref_p, var2);
-                                        break L2;
+                                        break regionExit1;
                                       case 34:
                                         f.a(var2, var3, var8_ref_p, param0 ^ 11176);
-                                        break L2;
+                                        break regionExit1;
                                       case 33:
                                         in.a(param0 ^ 11182, var8_ref_p, var3, var2);
-                                        break L2;
+                                        break regionExit1;
                                       case 12:
                                         var11 = var8_ref_p.field_e * ln.field_m.length / 128;
                                         if (var11 >= ln.field_m.length) {
@@ -188,35 +188,35 @@ abstract class nj {
                                           var11 = 0;
                                         }
                                         ln.field_m[var11].a((double)var3, (double)var2, false, var8_ref_p.field_c, 256);
-                                        break L2;
+                                        break regionExit1;
                                       case 13:
                                         ka.a(var2, var8_ref_p, var3, 128);
-                                        break L2;
+                                        break regionExit1;
                                       case 14:
                                         mg.a(var8_ref_p, var2, var3, 2);
-                                        break L2;
+                                        break regionExit1;
                                       default:
                                         if (var12 != 22 &&
                                           var12 != 27) {
-                                          break L2;
+                                          break regionExit1;
                                         }
                                         bi.a(var8_ref_p, var3, var2, -49);
-                                        break L2;
+                                        break regionExit1;
                                     }
                                   }
                                   el.a(var2, var8_ref_p, param0 - 11295, var3);
-                                  break L2;
+                                  break regionExit1;
                               }
                             }
                             hd.a(var2, -110, var3, var8_ref_p);
-                            break L2;
+                            break regionExit1;
                           }
                         }
                         pf.a(var3, true, var8_ref_p, var2);
-                        break L2;
+                        break regionExit1;
                     }
                   }
-                  gb.a(var3, (byte) 81, var8_ref_p, var2);
+                  ResourceArchive.a(var3, (byte) 81, var8_ref_p, var2);
                 } else {
                   wi.a(var8_ref_p, var2, (byte) -87, var3);
                 }
@@ -290,9 +290,9 @@ abstract class nj {
         }
     }
 
-    final static gb a(int param0, int param1, boolean param2, boolean param3, int param4) {
+    final static ResourceArchive a(int param0, int param1, boolean param2, boolean param3, int param4) {
         if (param0 <= 66) {
-          return (gb) null;
+          return (ResourceArchive) null;
         }
         return bf.a(false, param2, param1, param4, param3, -31);
     }
@@ -355,6 +355,6 @@ abstract class nj {
     static {
         field_e = "Hard mode";
         field_b = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
-        field_c = new jg();
+        field_c = new KeyboardInput();
     }
 }

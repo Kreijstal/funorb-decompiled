@@ -214,7 +214,7 @@ final class vj extends ql {
           ha.field_t == 16) {
           si.a(410, 40, 140, 20, 0, 128);
           si.a(410, 40, 140, 20, 16776960);
-          id.field_A.c(jg.field_a + this.field_m, 415, 55, 16776960, -1);
+          id.field_A.c(KeyboardInput.field_a + this.field_m, 415, 55, 16776960, -1);
         }
     }
 
@@ -334,8 +334,8 @@ final class vj extends ql {
                 ca.a((double)(this.field_k[var8].field_e + 1), 0, (double)(this.field_k[var8].field_g + 1), true, var6_int);
                 this.field_i = new qm(ln.field_a, var3, 230, rl.field_c, 0, false);
                 this.field_i.field_c = var10.field_c;
-                fieldTemp$0 = dk.field_o;
-                dk.field_o = dk.field_o + 1;
+                fieldTemp$0 = DualLinkNode.field_o;
+                DualLinkNode.field_o = DualLinkNode.field_o + 1;
                 field_w[fieldTemp$0] = this.field_i;
               }
             }

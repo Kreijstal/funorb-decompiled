@@ -7,7 +7,7 @@ class uh extends ca {
     static String[] field_j;
     private long field_n;
     private String field_e;
-    static gb field_m;
+    static ResourceArchive field_m;
     static Calendar field_h;
     static w field_l;
     static boolean field_o;
@@ -51,7 +51,7 @@ class uh extends ca {
         }
     }
 
-    final void a(vi param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           if (param1 >= -94) {
             field_g = (String) null;

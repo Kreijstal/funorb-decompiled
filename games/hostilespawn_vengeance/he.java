@@ -6,7 +6,7 @@ final class he extends ch {
     int field_u;
     static double field_r;
     static String field_z;
-    static gb field_t;
+    static ResourceArchive field_t;
     static int field_x;
     int field_v;
     static java.awt.Image field_y;
@@ -31,7 +31,7 @@ final class he extends ch {
         }
         pg[] var1 = new pg[sc.field_c];
         for (var2 = 0; sc.field_c > var2; var2++) {
-          var1[var2] = new pg(ra.field_a, vc.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], ja.field_e[var2], bf.field_d);
+          var1[var2] = new pg(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], ja.field_e[var2], bf.field_d);
         }
         uj.d(113);
         return var1;
@@ -145,7 +145,7 @@ final class he extends ch {
             24 > var8) {
             param1.field_z = 4;
             param1.field_F = 255;
-            ci.a(1, 76);
+            MouseInput.a(1, 76);
             nh.a(param1, -29966);
           }
           param0.field_e = param0.field_e + 2;

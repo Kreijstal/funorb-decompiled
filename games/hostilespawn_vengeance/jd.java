@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd extends am {
+final class jd extends IntrusiveNode {
     int field_u;
     int field_p;
     static bd field_h;
@@ -45,7 +45,7 @@ final class jd extends am {
     }
 
     final static void a(int param0, int param1) {
-        am var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         String var4 = null;
         m var5 = null;
@@ -60,7 +60,7 @@ final class jd extends am {
           }
           if (param1 != 65535) {
             var4 = (String) null;
-            jd.a((byte) 125, (String) null, (gb) null, (String) null);
+            jd.a((byte) 125, (String) null, (ResourceArchive) null, (String) null);
           }
           var2 = ve.field_b.g(-68);
           while (var2 != null) {
@@ -93,7 +93,7 @@ final class jd extends am {
         }
     }
 
-    final static bd[] a(byte param0, String param1, gb param2, String param3) {
+    final static bd[] a(byte param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

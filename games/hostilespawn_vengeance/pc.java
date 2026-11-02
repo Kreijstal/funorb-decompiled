@@ -70,12 +70,12 @@ final class pc {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        stateLoop: while (true) {
+        scanLoop1: while (true) {
             switch (statePc) {
                 case 0: {
                     var26 = HostileSpawn.field_I ? 1 : 0;
                     statePc = 1;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 1: {
                     try {
@@ -84,7 +84,7 @@ final class pc {
                             {
                                 if (ik.field_b) {
                                     statePc = 9;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 5. */
                                     {
@@ -96,7 +96,7 @@ final class pc {
                                         } else {
                                             statePc = 6;
                                         }
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             }
@@ -104,7 +104,7 @@ final class pc {
                             /* Inlined CFG state: 2. */
                             {
                                 statePc = 10;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_1) {
@@ -113,20 +113,20 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 6: {
                     try {
                         statePc = 8;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_6) {
                         statePc = ((Object) stateCaught_6 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
                         }
                         caughtException = stateCaught_6;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 8: {
@@ -148,21 +148,21 @@ final class pc {
                         var7 = ln.field_a.field_f;
                         var8_int = 1;
                         statePc = 11;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_10) {
                         statePc = ((Object) stateCaught_10 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 11: {
                     try {
                         if (rc.field_e <= var8_int) {
                             statePc = 23;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 12. */
                             {
@@ -174,7 +174,7 @@ final class pc {
                                 } else {
                                     statePc = 13;
                                 }
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_11) {
@@ -183,7 +183,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
                         }
                         caughtException = stateCaught_11;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 13: {
@@ -194,21 +194,21 @@ final class pc {
                         } else {
                             statePc = 14;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_13) {
                         statePc = ((Object) stateCaught_13 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_13);
                         }
                         caughtException = stateCaught_13;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 14: {
                     try {
                         if (~var3 >= ~var10) {
                             statePc = 22;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 15. */
                             {
@@ -218,7 +218,7 @@ final class pc {
                                 {
                                     if (var4[var10] != 3) {
                                         statePc = 22;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 18. */
                                         {
@@ -228,7 +228,7 @@ final class pc {
                                             {
                                                 var4[var10] = 0;
                                                 statePc = 22;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -241,7 +241,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
                         }
                         caughtException = stateCaught_14;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 22: {
@@ -252,28 +252,28 @@ final class pc {
                         } else {
                             statePc = 23;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_22) {
                         statePc = ((Object) stateCaught_22 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_22);
                         }
                         caughtException = stateCaught_22;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 23: {
                     try {
                         stackIn_24_0 = mm.field_m[0].field_j;
                         statePc = 24;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_23) {
                         statePc = ((Object) stateCaught_23 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_23);
                         }
                         caughtException = stateCaught_23;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 24: {
@@ -286,28 +286,28 @@ final class pc {
                         } else {
                             statePc = 25;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_24) {
                         statePc = ((Object) stateCaught_24 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_24);
                         }
                         caughtException = stateCaught_24;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 25: {
                     try {
                         var10 = -1;
                         statePc = 26;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_25) {
                         statePc = ((Object) stateCaught_25 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_25);
                         }
                         caughtException = stateCaught_25;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 26: {
@@ -320,28 +320,28 @@ final class pc {
                         } else {
                             statePc = 27;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_26) {
                         statePc = ((Object) stateCaught_26 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_26);
                         }
                         caughtException = stateCaught_26;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 27: {
                     try {
                         var11 = 1;
                         statePc = 28;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_27) {
                         statePc = ((Object) stateCaught_27 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_27);
                         }
                         caughtException = stateCaught_27;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 28: {
@@ -351,13 +351,13 @@ final class pc {
                             {
                                 var13 = 1;
                                 statePc = 32;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 29. */
                             {
                                 statePc = 32;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_28) {
@@ -366,7 +366,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_28);
                         }
                         caughtException = stateCaught_28;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 32: {
@@ -377,41 +377,41 @@ final class pc {
                         } else {
                             statePc = 33;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_32) {
                         statePc = ((Object) stateCaught_32 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_32);
                         }
                         caughtException = stateCaught_32;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 33: {
                     try {
                         statePc = 36;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_33) {
                         statePc = ((Object) stateCaught_33 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_33);
                         }
                         caughtException = stateCaught_33;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 35: {
                     try {
                         var14 = var1_int - 2;
                         statePc = 36;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_35) {
                         statePc = ((Object) stateCaught_35 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_35);
                         }
                         caughtException = stateCaught_35;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 36: {
@@ -421,13 +421,13 @@ final class pc {
                             {
                                 var12 = -2 + var2;
                                 statePc = 40;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 37. */
                             {
                                 statePc = 40;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_36) {
@@ -436,7 +436,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_36);
                         }
                         caughtException = stateCaught_36;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 40: {
@@ -444,21 +444,21 @@ final class pc {
                         var15 = 0;
                         var16 = var11;
                         statePc = 41;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_40) {
                         statePc = ((Object) stateCaught_40 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_40);
                         }
                         caughtException = stateCaught_40;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 41: {
                     try {
                         if (~var12 >= ~var16) {
                             statePc = 51;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 42. */
                             {
@@ -467,13 +467,13 @@ final class pc {
                                 stackIn_43_0 = stackIn_52_0;
                                 if (var26 != 0) {
                                     statePc = 52;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 43. */
                                     {
                                         var17 = stackIn_43_0;
                                         statePc = 44;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             }
@@ -484,14 +484,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_41);
                         }
                         caughtException = stateCaught_41;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 44: {
                     try {
                         if (var14 <= var17) {
                             statePc = 49;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 45. */
                             {
@@ -501,18 +501,18 @@ final class pc {
                                 var17++;
                                 if (var26 != 0) {
                                     statePc = 50;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 46. */
                                     {
                                         if (var26 == 0) {
                                             statePc = 44;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 47. */
                                             {
                                                 statePc = 49;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -525,21 +525,21 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_44);
                         }
                         caughtException = stateCaught_44;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 49: {
                     try {
                         var16++;
                         statePc = 50;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_49) {
                         statePc = ((Object) stateCaught_49 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_49);
                         }
                         caughtException = stateCaught_49;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 50: {
@@ -549,14 +549,14 @@ final class pc {
                         } else {
                             statePc = 51;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_50) {
                         statePc = ((Object) stateCaught_50 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_50);
                         }
                         caughtException = stateCaught_50;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 51: {
@@ -564,14 +564,14 @@ final class pc {
                         var16 = var11 * var1_int;
                         stackIn_52_0 = var8.field_e;
                         statePc = 52;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_51) {
                         statePc = ((Object) stateCaught_51 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_51);
                         }
                         caughtException = stateCaught_51;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 52: {
@@ -584,41 +584,41 @@ final class pc {
                         var22 = Math.min(16 + var8.field_g, ln.field_a.field_a - 2);
                         var23 = var19;
                         statePc = 53;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_52) {
                         statePc = ((Object) stateCaught_52 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_52);
                         }
                         caughtException = stateCaught_52;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 53: {
                     try {
                         if (~var20 > ~var23) {
                             statePc = 58;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 54. */
                             {
-                                ui.a(var21, var17, var18, var23, (byte) -69);
-                                ui.a(var22, var17, var18, var23, (byte) -69);
+                                DualLinkDeque.a(var21, var17, var18, var23, (byte) -69);
+                                DualLinkDeque.a(var22, var17, var18, var23, (byte) -69);
                                 var23++;
                                 if (var26 != 0) {
                                     statePc = 59;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 55. */
                                     {
                                         if (var26 == 0) {
                                             statePc = 53;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 56. */
                                             {
                                                 statePc = 58;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -631,37 +631,37 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_53);
                         }
                         caughtException = stateCaught_53;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 58: {
                     try {
                         var23 = 1 + var21;
                         statePc = 59;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_58) {
                         statePc = ((Object) stateCaught_58 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_58);
                         }
                         caughtException = stateCaught_58;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 59: {
                     try {
                         if (var22 - 1 < var23) {
                             statePc = 66;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 60. */
                             {
-                                ui.a(var23, var17, var18, var19, (byte) -69);
-                                ui.a(var23, var17, var18, var20, (byte) -69);
+                                DualLinkDeque.a(var23, var17, var18, var19, (byte) -69);
+                                DualLinkDeque.a(var23, var17, var18, var20, (byte) -69);
                                 var23++;
                                 if (var26 != 0) {
                                     statePc = 82;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 61. */
                                     {
@@ -671,12 +671,12 @@ final class pc {
                                         {
                                             if (var26 == 0) {
                                                 statePc = 59;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             } else {
                                                 /* Inlined CFG state: 64. */
                                                 {
                                                     statePc = 66;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             }
                                         }
@@ -690,21 +690,21 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_59);
                         }
                         caughtException = stateCaught_59;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 66: {
                     try {
                         if (var10 <= 0) {
                             statePc = 81;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 67. */
                             {
                                 var16 = var21 * ln.field_a.field_d;
                                 var23 = var21;
                                 statePc = 68;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_66) {
@@ -713,14 +713,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_66);
                         }
                         caughtException = stateCaught_66;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 68: {
                     try {
                         if (var22 < var23) {
                             statePc = 81;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 69. */
                             {
@@ -728,13 +728,13 @@ final class pc {
                                 stackIn_70_0 = stackIn_83_0;
                                 if (var26 != 0) {
                                     statePc = 83;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 70. */
                                     {
                                         var24 = stackIn_70_0;
                                         statePc = 71;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             }
@@ -745,14 +745,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_68);
                         }
                         caughtException = stateCaught_68;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 71: {
                     try {
                         if (~var20 > ~var24) {
                             statePc = 79;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 72. */
                             {
@@ -762,7 +762,7 @@ final class pc {
                                 stackIn_73_1 = stackIn_80_1;
                                 if (var26 != 0) {
                                     statePc = 80;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 73. */
                                     {
@@ -772,7 +772,7 @@ final class pc {
                                                 ln.field_a.field_e[var16 + var24] = true;
                                                 ln.field_a.field_f[var16 + var24] = 2;
                                                 statePc = 78;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         } else {
                                             /* Inlined CFG state: 74. */
@@ -782,7 +782,7 @@ final class pc {
                                                 }
                                                 {
                                                     statePc = 78;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             }
                                         }
@@ -796,7 +796,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_71);
                         }
                         caughtException = stateCaught_71;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 78: {
@@ -807,14 +807,14 @@ final class pc {
                         } else {
                             statePc = 79;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_78) {
                         statePc = ((Object) stateCaught_78 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_78);
                         }
                         caughtException = stateCaught_78;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 79: {
@@ -822,14 +822,14 @@ final class pc {
                         stackIn_80_0 = var16;
                         stackIn_80_1 = ln.field_a.field_d;
                         statePc = 80;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_79) {
                         statePc = ((Object) stateCaught_79 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_79);
                         }
                         caughtException = stateCaught_79;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 80: {
@@ -841,14 +841,14 @@ final class pc {
                         } else {
                             statePc = 81;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_80) {
                         statePc = ((Object) stateCaught_80 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_80);
                         }
                         caughtException = stateCaught_80;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 81: {
@@ -858,41 +858,41 @@ final class pc {
                         var19 = 49;
                         var20 = var9;
                         statePc = 82;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_81) {
                         statePc = ((Object) stateCaught_81 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_81);
                         }
                         caughtException = stateCaught_81;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 82: {
                     try {
                         stackIn_83_0 = n.field_o ? 1 : 0;
                         statePc = 83;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_82) {
                         statePc = ((Object) stateCaught_82 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_82);
                         }
                         caughtException = stateCaught_82;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 83: {
                     try {
                         if (stackIn_83_0 == 0) {
                             statePc = 157;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 84. */
                             {
                                 var21 = 0;
                                 statePc = 85;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_83) {
@@ -901,14 +901,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_83);
                         }
                         caughtException = stateCaught_83;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 85: {
                     try {
                         if (~var21 <= ~rc.field_e) {
                             statePc = 157;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 86. */
                             {
@@ -919,7 +919,7 @@ final class pc {
                                 } else {
                                     statePc = 87;
                                 }
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_85) {
@@ -928,14 +928,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_85);
                         }
                         caughtException = stateCaught_85;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 87: {
                     try {
                         if (null == var22_ref_oj) {
                             statePc = 156;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 88. */
                             {
@@ -945,7 +945,7 @@ final class pc {
                                 {
                                     if (!od.a(var22_ref_oj.field_i, 1)) {
                                         statePc = 156;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 91. */
                                         {
@@ -955,7 +955,7 @@ final class pc {
                                             {
                                                 if (var22_ref_oj.field_h == 0) {
                                                     statePc = 156;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 } else {
                                                     /* Inlined CFG state: 94. */
                                                     {
@@ -965,7 +965,7 @@ final class pc {
                                                         {
                                                             if (null == q.field_g) {
                                                                 statePc = 102;
-                                                                continue stateLoop;
+                                                                continue scanLoop1;
                                                             } else {
                                                                 /* Inlined CFG state: 97. */
                                                                 {
@@ -978,7 +978,7 @@ final class pc {
                                                                         } else {
                                                                             statePc = 100;
                                                                         }
-                                                                        continue stateLoop;
+                                                                        continue scanLoop1;
                                                                     }
                                                                 }
                                                             }
@@ -997,20 +997,20 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_87);
                         }
                         caughtException = stateCaught_87;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 100: {
                     try {
                         statePc = 102;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_100) {
                         statePc = ((Object) stateCaught_100 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_100);
                         }
                         caughtException = stateCaught_100;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 102: {
@@ -1018,7 +1018,7 @@ final class pc {
                         var4[var23] = 0;
                         if (rh.a(var22_ref_oj.field_i, true)) {
                             statePc = 132;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 103. */
                             {
@@ -1030,13 +1030,13 @@ final class pc {
                                     var24 = var4[var23 + ln.field_a.field_d - 1];
                                     if (1 != var4[var23 + ln.field_a.field_d]) {
                                         statePc = 118;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 106. */
                                         {
                                             if (var24 == 2) {
                                                 statePc = 118;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             } else {
                                                 /* Inlined CFG state: 107. */
                                                 {
@@ -1046,7 +1046,7 @@ final class pc {
                                                     {
                                                         if (var24 == 3) {
                                                             statePc = 118;
-                                                            continue stateLoop;
+                                                            continue scanLoop1;
                                                         } else {
                                                             /* Inlined CFG state: 110. */
                                                             {
@@ -1059,7 +1059,7 @@ final class pc {
                                                                     } else {
                                                                         statePc = 113;
                                                                     }
-                                                                    continue stateLoop;
+                                                                    continue scanLoop1;
                                                                 }
                                                             }
                                                         }
@@ -1077,7 +1077,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_102);
                         }
                         caughtException = stateCaught_102;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 113: {
@@ -1087,7 +1087,7 @@ final class pc {
                         }
                         {
                             statePc = 118;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } catch (Throwable stateCaught_113) {
                         statePc = ((Object) stateCaught_113 instanceof RuntimeException ? 341 : -1);
@@ -1095,21 +1095,21 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_113);
                         }
                         caughtException = stateCaught_113;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 117: {
                     try {
                         var4[var23 + ln.field_a.field_d] = 0;
                         statePc = 118;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_117) {
                         statePc = ((Object) stateCaught_117 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_117);
                         }
                         caughtException = stateCaught_117;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 118: {
@@ -1117,13 +1117,13 @@ final class pc {
                         var24 = var4[ln.field_a.field_d + var23];
                         if (var4[ln.field_a.field_d + (var23 + 1)] != 1) {
                             statePc = 131;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 119. */
                             {
                                 if (2 == var24) {
                                     statePc = 131;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 120. */
                                     {
@@ -1133,7 +1133,7 @@ final class pc {
                                         {
                                             if (var24 == 3) {
                                                 statePc = 131;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             } else {
                                                 /* Inlined CFG state: 123. */
                                                 {
@@ -1146,7 +1146,7 @@ final class pc {
                                                             {
                                                                 var4[1 + ln.field_a.field_d + var23] = 0;
                                                                 statePc = 131;
-                                                                continue stateLoop;
+                                                                continue scanLoop1;
                                                             }
                                                         } else {
                                                             /* Inlined CFG state: 126. */
@@ -1156,7 +1156,7 @@ final class pc {
                                                                 }
                                                                 {
                                                                     statePc = 131;
-                                                                    continue stateLoop;
+                                                                    continue scanLoop1;
                                                                 }
                                                             }
                                                         }
@@ -1174,7 +1174,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_118);
                         }
                         caughtException = stateCaught_118;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 131: {
@@ -1184,14 +1184,14 @@ final class pc {
                         } else {
                             statePc = 132;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_131) {
                         statePc = ((Object) stateCaught_131 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_131);
                         }
                         caughtException = stateCaught_131;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 132: {
@@ -1200,13 +1200,13 @@ final class pc {
                         var24 = var4[1 - ln.field_a.field_d + var23];
                         if (1 != var4[1 + var23]) {
                             statePc = 145;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 133. */
                             {
                                 if (var24 == 2) {
                                     statePc = 145;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 134. */
                                     {
@@ -1216,7 +1216,7 @@ final class pc {
                                         {
                                             if (var24 == 3) {
                                                 statePc = 145;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             } else {
                                                 /* Inlined CFG state: 137. */
                                                 {
@@ -1229,7 +1229,7 @@ final class pc {
                                                             {
                                                                 var4[var23 + 1] = 0;
                                                                 statePc = 145;
-                                                                continue stateLoop;
+                                                                continue scanLoop1;
                                                             }
                                                         } else {
                                                             /* Inlined CFG state: 140. */
@@ -1239,7 +1239,7 @@ final class pc {
                                                                 }
                                                                 {
                                                                     statePc = 145;
-                                                                    continue stateLoop;
+                                                                    continue scanLoop1;
                                                                 }
                                                             }
                                                         }
@@ -1257,27 +1257,27 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_132);
                         }
                         caughtException = stateCaught_132;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 145: {
                     try {
                         if (var24 != 1) {
                             statePc = 156;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 146. */
                             {
                                 var24 = var4[var23 - (ln.field_a.field_d * 2 + 1)];
                                 if (2 == var24) {
                                     statePc = 156;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 147. */
                                     {
                                         if (var24 == 3) {
                                             statePc = 156;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 148. */
                                             {
@@ -1290,7 +1290,7 @@ final class pc {
                                                         {
                                                             var4[-ln.field_a.field_d + (var23 + 1)] = 0;
                                                             statePc = 156;
-                                                            continue stateLoop;
+                                                            continue scanLoop1;
                                                         }
                                                     } else {
                                                         /* Inlined CFG state: 151. */
@@ -1300,7 +1300,7 @@ final class pc {
                                                             }
                                                             {
                                                                 statePc = 156;
-                                                                continue stateLoop;
+                                                                continue scanLoop1;
                                                             }
                                                         }
                                                     }
@@ -1317,7 +1317,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_145);
                         }
                         caughtException = stateCaught_145;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 156: {
@@ -1328,14 +1328,14 @@ final class pc {
                         } else {
                             statePc = 157;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_156) {
                         statePc = ((Object) stateCaught_156 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_156);
                         }
                         caughtException = stateCaught_156;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 157: {
@@ -1344,14 +1344,14 @@ final class pc {
                         cm.field_c[var20] = var19 + 1;
                         var21 = var20 + 1;
                         statePc = 158;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_157) {
                         statePc = ((Object) stateCaught_157 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_157 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_157);
                         }
                         caughtException = stateCaught_157;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 158: {
@@ -1365,14 +1365,14 @@ final class pc {
                         } else {
                             statePc = 159;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_158) {
                         statePc = ((Object) stateCaught_158 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_158 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_158);
                         }
                         caughtException = stateCaught_158;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 159: {
@@ -1383,7 +1383,7 @@ final class pc {
                         stackIn_160_1 = stackIn_186_1;
                         if (var26 != 0) {
                             statePc = 186;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 160. */
                             {
@@ -1395,7 +1395,7 @@ final class pc {
                                 {
                                     if (stackIn_162_0 == stackIn_162_1) {
                                         statePc = 168;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 163. */
                                         {
@@ -1405,12 +1405,12 @@ final class pc {
                                             {
                                                 if (var4[var21] != 5) {
                                                     statePc = 171;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 } else {
                                                     /* Inlined CFG state: 166. */
                                                     {
                                                         statePc = 168;
-                                                        continue stateLoop;
+                                                        continue scanLoop1;
                                                     }
                                                 }
                                             }
@@ -1425,19 +1425,19 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_159);
                         }
                         caughtException = stateCaught_159;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 168: {
                     try {
                         if (cm.field_c[var21] < var25) {
                             statePc = 214;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 169. */
                             {
                                 statePc = 171;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_168) {
@@ -1446,14 +1446,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_168);
                         }
                         caughtException = stateCaught_168;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 171: {
                     try {
                         if (var19 <= 0) {
                             statePc = 184;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 172. */
                             {
@@ -1463,7 +1463,7 @@ final class pc {
                                 {
                                     if (var4[var23] == 0) {
                                         statePc = 180;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 175. */
                                         {
@@ -1473,12 +1473,12 @@ final class pc {
                                             {
                                                 if (var4[var23] != 5) {
                                                     statePc = 184;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 } else {
                                                     /* Inlined CFG state: 178. */
                                                     {
                                                         statePc = 180;
-                                                        continue stateLoop;
+                                                        continue scanLoop1;
                                                     }
                                                 }
                                             }
@@ -1493,14 +1493,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_171);
                         }
                         caughtException = stateCaught_171;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 180: {
                     try {
                         if (var25 <= cm.field_c[var23]) {
                             statePc = 184;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 181. */
                             {
@@ -1515,7 +1515,7 @@ final class pc {
                                     } else {
                                         statePc = 184;
                                     }
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
@@ -1525,7 +1525,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_180);
                         }
                         caughtException = stateCaught_180;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 184: {
@@ -1533,27 +1533,27 @@ final class pc {
                         stackIn_186_0 = ~var19;
                         stackIn_186_1 = -1;
                         statePc = 186;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_184) {
                         statePc = ((Object) stateCaught_184 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_184 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_184);
                         }
                         caughtException = stateCaught_184;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 186: {
                     try {
                         if (stackIn_186_0 >= stackIn_186_1) {
                             statePc = 196;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 187. */
                             {
                                 if (var4[var24] == 0) {
                                     statePc = 193;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 188. */
                                     {
@@ -1563,12 +1563,12 @@ final class pc {
                                         {
                                             if (var4[var24] != 5) {
                                                 statePc = 196;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             } else {
                                                 /* Inlined CFG state: 191. */
                                                 {
                                                     statePc = 193;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             }
                                         }
@@ -1582,19 +1582,19 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_186);
                         }
                         caughtException = stateCaught_186;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 193: {
                     try {
                         if (~cm.field_c[var24] > ~var25) {
                             statePc = 213;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 194. */
                             {
                                 statePc = 196;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_193) {
@@ -1603,14 +1603,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_193);
                         }
                         caughtException = stateCaught_193;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 196: {
                     try {
                         if (var19 <= 0) {
                             statePc = 208;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 197. */
                             {
@@ -1620,7 +1620,7 @@ final class pc {
                                 {
                                     if (var4[var22] == 0) {
                                         statePc = 205;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 200. */
                                         {
@@ -1630,12 +1630,12 @@ final class pc {
                                             {
                                                 if (var4[var22] != 5) {
                                                     statePc = 208;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 } else {
                                                     /* Inlined CFG state: 203. */
                                                     {
                                                         statePc = 205;
-                                                        continue stateLoop;
+                                                        continue scanLoop1;
                                                     }
                                                 }
                                             }
@@ -1650,19 +1650,19 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_196);
                         }
                         caughtException = stateCaught_196;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 205: {
                     try {
                         if (var25 > cm.field_c[var22]) {
                             statePc = 212;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 206. */
                             {
                                 statePc = 208;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_205) {
@@ -1671,7 +1671,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_205);
                         }
                         caughtException = stateCaught_205;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 208: {
@@ -1679,7 +1679,7 @@ final class pc {
                         var19++;
                         if (var19 >= 50) {
                             statePc = 216;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 209. */
                             {
@@ -1693,7 +1693,7 @@ final class pc {
                                     } else {
                                         statePc = 212;
                                     }
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
@@ -1703,7 +1703,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_208);
                         }
                         caughtException = stateCaught_208;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 212: {
@@ -1715,14 +1715,14 @@ final class pc {
                         } else {
                             statePc = 213;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_212) {
                         statePc = ((Object) stateCaught_212 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_212 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_212);
                         }
                         caughtException = stateCaught_212;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 213: {
@@ -1734,14 +1734,14 @@ final class pc {
                         } else {
                             statePc = 214;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_213) {
                         statePc = ((Object) stateCaught_213 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_213 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_213);
                         }
                         caughtException = stateCaught_213;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 214: {
@@ -1749,14 +1749,14 @@ final class pc {
                         var19--;
                         var20 = var21;
                         statePc = 215;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_214) {
                         statePc = ((Object) stateCaught_214 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_214 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_214);
                         }
                         caughtException = stateCaught_214;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 215: {
@@ -1766,27 +1766,27 @@ final class pc {
                         } else {
                             statePc = 216;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_215) {
                         statePc = ((Object) stateCaught_215 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_215 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_215);
                         }
                         caughtException = stateCaught_215;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 216: {
                     try {
                         statePc = 220;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_216) {
                         statePc = ((Object) stateCaught_216 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_216);
                         }
                         caughtException = stateCaught_216;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 217: {
@@ -1797,14 +1797,14 @@ final class pc {
                         } else {
                             statePc = 218;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_217) {
                         statePc = ((Object) stateCaught_217 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_217);
                         }
                         caughtException = stateCaught_217;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 218: {
@@ -1813,14 +1813,14 @@ final class pc {
                         System.out.println("ArrayIndexOutOfBoundsException while routefinding");
                         var21_ref_ArrayIndexOutOfBoundsException.printStackTrace();
                         statePc = 220;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_218) {
                         statePc = ((Object) stateCaught_218 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_218);
                         }
                         caughtException = stateCaught_218;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 220: {
@@ -1831,13 +1831,13 @@ final class pc {
                             {
                                 var21 = 0;
                                 statePc = 224;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 221. */
                             {
                                 statePc = 240;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_220) {
@@ -1846,14 +1846,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_220);
                         }
                         caughtException = stateCaught_220;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 224: {
                     try {
                         if (~var21 <= ~rc.field_e) {
                             statePc = 240;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 225. */
                             {
@@ -1863,7 +1863,7 @@ final class pc {
                                 stackIn_226_0 = stackOut_225_0;
                                 if (var26 != 0) {
                                     statePc = 241;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 226. */
                                     {
@@ -1872,7 +1872,7 @@ final class pc {
                                             {
                                                 if (var22_ref_oj.field_e != 0) {
                                                     statePc = 239;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 } else {
                                                     /* Inlined CFG state: 231. */
                                                     {
@@ -1881,7 +1881,7 @@ final class pc {
                                                         } else {
                                                             statePc = 232;
                                                         }
-                                                        continue stateLoop;
+                                                        continue scanLoop1;
                                                     }
                                                 }
                                             }
@@ -1893,7 +1893,7 @@ final class pc {
                                                 }
                                                 {
                                                     statePc = 239;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             }
                                         }
@@ -1907,7 +1907,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_224);
                         }
                         caughtException = stateCaught_224;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 232: {
@@ -1922,14 +1922,14 @@ final class pc {
                                 {
                                     stackIn_238_0 = -ln.field_a.field_d;
                                     statePc = 238;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             } else {
                                 /* Inlined CFG state: 235. */
                                 {
                                     stackIn_238_0 = 1;
                                     statePc = 238;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
@@ -1939,7 +1939,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_232);
                         }
                         caughtException = stateCaught_232;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 238: {
@@ -1948,14 +1948,14 @@ final class pc {
                         ln.field_a.field_c[var23] = 2;
                         ln.field_a.field_c[var24 + var23] = 2;
                         statePc = 239;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_238) {
                         statePc = ((Object) stateCaught_238 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_238);
                         }
                         caughtException = stateCaught_238;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 239: {
@@ -1966,28 +1966,28 @@ final class pc {
                         } else {
                             statePc = 240;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_239) {
                         statePc = ((Object) stateCaught_239 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_239);
                         }
                         caughtException = stateCaught_239;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 240: {
                     try {
                         stackIn_241_0 = 0;
                         statePc = 241;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_240) {
                         statePc = ((Object) stateCaught_240 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_240);
                         }
                         caughtException = stateCaught_240;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 241: {
@@ -1998,13 +1998,13 @@ final class pc {
                                 var16 = var1_int;
                                 var21 = 1;
                                 statePc = 245;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 242. */
                             {
                                 statePc = 342;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_241) {
@@ -2013,14 +2013,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_241);
                         }
                         caughtException = stateCaught_241;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 245: {
                     try {
                         if (~var21 <= ~(-1 + var2)) {
                             statePc = 297;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 246. */
                             {
@@ -2028,13 +2028,13 @@ final class pc {
                                 stackIn_247_0 = stackIn_298_0;
                                 if (var26 != 0) {
                                     statePc = 298;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 247. */
                                     {
                                         var22 = stackIn_247_0;
                                         statePc = 248;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             }
@@ -2045,14 +2045,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_245);
                         }
                         caughtException = stateCaught_245;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 248: {
                     try {
                         if (-1 + var1_int <= var22) {
                             statePc = 295;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 249. */
                             {
@@ -2062,13 +2062,13 @@ final class pc {
                                 stackIn_250_0 = stackOut_249_0;
                                 if (var26 != 0) {
                                     statePc = 296;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 250. */
                                     {
                                         if (stackIn_250_0) {
                                             statePc = 294;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 251. */
                                             {
@@ -2084,7 +2084,7 @@ final class pc {
                                                             } else {
                                                                 statePc = 259;
                                                             }
-                                                            continue stateLoop;
+                                                            continue scanLoop1;
                                                         }
                                                     } else {
                                                         /* Inlined CFG state: 254. */
@@ -2094,7 +2094,7 @@ final class pc {
                                                             }
                                                             {
                                                                 statePc = 294;
-                                                                continue stateLoop;
+                                                                continue scanLoop1;
                                                             }
                                                         }
                                                     }
@@ -2111,14 +2111,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_248);
                         }
                         caughtException = stateCaught_248;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 259: {
                     try {
                         if (var4[1 + var15] == 2) {
                             statePc = 265;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 260. */
                             {
@@ -2128,12 +2128,12 @@ final class pc {
                                 {
                                     if (var4[var15 + 1] != 1) {
                                         statePc = 292;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 263. */
                                         {
                                             statePc = 265;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         }
                                     }
                                 }
@@ -2145,14 +2145,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_259);
                         }
                         caughtException = stateCaught_259;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 265: {
                     try {
                         if (!var5[var15 - 1]) {
                             statePc = 274;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 266. */
                             {
@@ -2162,7 +2162,7 @@ final class pc {
                                 {
                                     if (var4[var15 - 1] == 2) {
                                         statePc = 274;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 269. */
                                         {
@@ -2172,12 +2172,12 @@ final class pc {
                                             {
                                                 if (var4[var15 - 1] != 1) {
                                                     statePc = 292;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 } else {
                                                     /* Inlined CFG state: 272. */
                                                     {
                                                         statePc = 274;
-                                                        continue stateLoop;
+                                                        continue scanLoop1;
                                                     }
                                                 }
                                             }
@@ -2192,14 +2192,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_265);
                         }
                         caughtException = stateCaught_265;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 274: {
                     try {
                         if (!var5[var15 + var1_int]) {
                             statePc = 283;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 275. */
                             {
@@ -2209,7 +2209,7 @@ final class pc {
                                 {
                                     if (var4[var1_int + var15] == 2) {
                                         statePc = 283;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 278. */
                                         {
@@ -2219,12 +2219,12 @@ final class pc {
                                             {
                                                 if (var4[var1_int + var15] != 1) {
                                                     statePc = 292;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 } else {
                                                     /* Inlined CFG state: 281. */
                                                     {
                                                         statePc = 283;
-                                                        continue stateLoop;
+                                                        continue scanLoop1;
                                                     }
                                                 }
                                             }
@@ -2239,14 +2239,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_274);
                         }
                         caughtException = stateCaught_274;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 283: {
                     try {
                         if (!var5[var15 - var1_int]) {
                             statePc = 294;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 284. */
                             {
@@ -2256,7 +2256,7 @@ final class pc {
                                 {
                                     if (var4[var15 - var1_int] == 2) {
                                         statePc = 294;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 287. */
                                         {
@@ -2266,12 +2266,12 @@ final class pc {
                                             {
                                                 if (var4[-var1_int + var15] == 1) {
                                                     statePc = 294;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 } else {
                                                     /* Inlined CFG state: 290. */
                                                     {
                                                         statePc = 292;
-                                                        continue stateLoop;
+                                                        continue scanLoop1;
                                                     }
                                                 }
                                             }
@@ -2286,7 +2286,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_283);
                         }
                         caughtException = stateCaught_283;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 292: {
@@ -2294,14 +2294,14 @@ final class pc {
                         var5[var15] = true;
                         var7[var15] = 2;
                         statePc = 294;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_292) {
                         statePc = ((Object) stateCaught_292 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_292);
                         }
                         caughtException = stateCaught_292;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 294: {
@@ -2312,28 +2312,28 @@ final class pc {
                         } else {
                             statePc = 295;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_294) {
                         statePc = ((Object) stateCaught_294 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_294);
                         }
                         caughtException = stateCaught_294;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 295: {
                     try {
                         stackIn_296_0 = var16 + var1_int;
                         statePc = 296;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_295) {
                         statePc = ((Object) stateCaught_295 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_295);
                         }
                         caughtException = stateCaught_295;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 296: {
@@ -2345,14 +2345,14 @@ final class pc {
                         } else {
                             statePc = 297;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_296) {
                         statePc = ((Object) stateCaught_296 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_296);
                         }
                         caughtException = stateCaught_296;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 297: {
@@ -2360,47 +2360,47 @@ final class pc {
                         var16 = var1_int;
                         stackIn_298_0 = 1;
                         statePc = 298;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_297) {
                         statePc = ((Object) stateCaught_297 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_297);
                         }
                         caughtException = stateCaught_297;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 298: {
                     try {
                         var21 = stackIn_298_0;
                         statePc = 299;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_298) {
                         statePc = ((Object) stateCaught_298 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_298);
                         }
                         caughtException = stateCaught_298;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 299: {
                     try {
                         if (~var21 <= ~(var2 - 1)) {
                             statePc = 342;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 300. */
                             {
                                 if (var26 != 0) {
                                     statePc = 342;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 301. */
                                     {
                                         var22 = 1;
                                         statePc = 302;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             }
@@ -2411,14 +2411,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_299);
                         }
                         caughtException = stateCaught_299;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 302: {
                     try {
                         if (~(var1_int - 1) >= ~var22) {
                             statePc = 338;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 303. */
                             {
@@ -2428,13 +2428,13 @@ final class pc {
                                 stackIn_304_0 = stackOut_303_0;
                                 if (var26 != 0) {
                                     statePc = 339;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 304. */
                                     {
                                         if (stackIn_304_0) {
                                             statePc = 337;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 305. */
                                             {
@@ -2450,7 +2450,7 @@ final class pc {
                                                             } else {
                                                                 statePc = 313;
                                                             }
-                                                            continue stateLoop;
+                                                            continue scanLoop1;
                                                         }
                                                     } else {
                                                         /* Inlined CFG state: 308. */
@@ -2460,7 +2460,7 @@ final class pc {
                                                             }
                                                             {
                                                                 statePc = 337;
-                                                                continue stateLoop;
+                                                                continue scanLoop1;
                                                             }
                                                         }
                                                     }
@@ -2477,19 +2477,19 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_302);
                         }
                         caughtException = stateCaught_302;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 313: {
                     try {
                         if (var4[var15 + 1] != 2) {
                             statePc = 336;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 314. */
                             {
                                 statePc = 316;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_313) {
@@ -2498,14 +2498,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_313);
                         }
                         caughtException = stateCaught_313;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 316: {
                     try {
                         if (!var5[-1 + var15]) {
                             statePc = 322;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 317. */
                             {
@@ -2515,12 +2515,12 @@ final class pc {
                                 {
                                     if (var4[var15 - 1] != 2) {
                                         statePc = 336;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 320. */
                                         {
                                             statePc = 322;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         }
                                     }
                                 }
@@ -2532,14 +2532,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_316);
                         }
                         caughtException = stateCaught_316;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 322: {
                     try {
                         if (!var5[var1_int + var15]) {
                             statePc = 328;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 323. */
                             {
@@ -2549,12 +2549,12 @@ final class pc {
                                 {
                                     if (var4[var15 + var1_int] != 2) {
                                         statePc = 336;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 326. */
                                         {
                                             statePc = 328;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         }
                                     }
                                 }
@@ -2566,14 +2566,14 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_322);
                         }
                         caughtException = stateCaught_322;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 328: {
                     try {
                         if (!var5[-var1_int + var15]) {
                             statePc = 337;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 329. */
                             {
@@ -2583,7 +2583,7 @@ final class pc {
                                 {
                                     if (var4[var15 - var1_int] != 2) {
                                         statePc = 336;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 332. */
                                         {
@@ -2592,7 +2592,7 @@ final class pc {
                                             }
                                             {
                                                 statePc = 337;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -2605,7 +2605,7 @@ final class pc {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_328);
                         }
                         caughtException = stateCaught_328;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 336: {
@@ -2613,14 +2613,14 @@ final class pc {
                         var5[var15] = true;
                         var7[var15] = 2;
                         statePc = 337;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_336) {
                         statePc = ((Object) stateCaught_336 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_336);
                         }
                         caughtException = stateCaught_336;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 337: {
@@ -2631,28 +2631,28 @@ final class pc {
                         } else {
                             statePc = 338;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_337) {
                         statePc = ((Object) stateCaught_337 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_337);
                         }
                         caughtException = stateCaught_337;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 338: {
                     try {
                         stackIn_339_0 = var16 + var1_int;
                         statePc = 339;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_338) {
                         statePc = ((Object) stateCaught_338 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_338);
                         }
                         caughtException = stateCaught_338;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 339: {
@@ -2664,14 +2664,14 @@ final class pc {
                         } else {
                             statePc = 342;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_339) {
                         statePc = ((Object) stateCaught_339 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
                             throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_339);
                         }
                         caughtException = stateCaught_339;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 341: {
@@ -2855,7 +2855,7 @@ final class pc {
           if (param0 != 14088) {
             pc.a(true, true, true);
           }
-          stackIn_4_0 = se.field_c.equals(mf.a(false, (CharSequence) ((Object) param1)));
+          stackIn_4_0 = GameAppletShell.field_c.equals(mf.a(false, (CharSequence) ((Object) param1)));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2897,7 +2897,7 @@ final class pc {
               }
               if (param3 >= 0L ||
                 HostileSpawn.field_I) {
-                var7 = var7 + "; Expires=" + dk.a((byte) -41, 1000L * param3 + hn.a((byte) 80)) + "; Max-Age=" + param3;
+                var7 = var7 + "; Expires=" + DualLinkNode.a((byte) -41, 1000L * param3 + hn.a((byte) 80)) + "; Max-Age=" + param3;
               }
               a.a(param4, 17467, "document.cookie=\"" + var7 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

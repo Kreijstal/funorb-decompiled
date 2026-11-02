@@ -16,15 +16,15 @@ final class hd extends hi {
         }
     }
 
-    final static void a(gb param0, boolean param1) {
+    final static void a(ResourceArchive param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
         pf var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        en var8 = null;
+        CipherPacketBuffer var8 = null;
         int var9 = 0;
-        en var10 = null;
+        CipherPacketBuffer var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -33,7 +33,7 @@ final class hd extends hi {
         int var4Lifetime1;
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var8 = new en(param0.a("", "logo.fo3d", 0));
+          var8 = new CipherPacketBuffer(param0.a("", "logo.fo3d", 0));
           var10 = var8;
           var3 = var10.l(32270);
           var10.c(false);
@@ -197,7 +197,7 @@ final class hd extends hi {
                   ca.a(81.5, 1, 37.0, true, 64);
                   kd.a(0, 1);
                 }
-                L34: {
+                regionExit1: {
                   var39Lifetime2.field_G = 0;
                   var20 = var5.field_l;
                   var21 = var20.field_f;
@@ -225,21 +225,21 @@ final class hd extends hi {
                     boolean decompiledFrameRemainder1 = true;
                     var36 = Math.abs(var36);
                     if (dn.field_i != of.field_d && (!(hf.field_i < 0) ||
-                      j.field_c != vc.field_g ||
+                      j.field_c != GameCanvas.field_g ||
                       rh.field_A != rb.field_m ||
                       32.0 < Math.abs(var36))) {
                       var39Lifetime2.a(param0 + 164, var34, 8);
                       if (var36 > 1.0) {
-                        vc.field_g = -2;
+                        GameCanvas.field_g = -2;
                       } else {
-                        vc.field_g = j.field_c;
+                        GameCanvas.field_g = j.field_c;
                         rh.field_A = rb.field_m;
                       }
                       decompiledFrameRemainder1 = false;
                     }
                     else {
                       rh.field_A = rb.field_m;
-                      vc.field_g = j.field_c;
+                      GameCanvas.field_g = j.field_c;
                     }
                     if (nh.field_H != 2 &&
                       nh.field_H != 3) {
@@ -361,7 +361,7 @@ final class hd extends hi {
                                                   rl.field_c == -1) {
                                                   qj.a(-121, var13Lifetime1, param1, var40);
                                                 } else {
-                                                  if (null == vi.field_p) {
+                                                  if (null == PacketBuffer.field_p) {
                                                     vh.a(var5, 5, var39Lifetime2);
                                                   } else {
                                                     u.a(param1, var40, var13Lifetime1, param0 ^ 61);
@@ -417,7 +417,7 @@ final class hd extends hi {
                                                                       if (!(var39Lifetime2.field_e > -3000)) {
                                                                         var39Lifetime2.field_i = -1;
                                                                       }
-                                                                      break L34;
+                                                                      break regionExit1;
                                                                     }
                                                                     if (var26 != 227) {
                                                                       if (var26 == 226) {
@@ -425,7 +425,7 @@ final class hd extends hi {
                                                                         if (!(var39Lifetime2.field_e > -3000)) {
                                                                           var39Lifetime2.field_i = -1;
                                                                         }
-                                                                        break L34;
+                                                                        break regionExit1;
                                                                       }
                                                                       if (var26 != 228 &&
                                                                         var26 != 232) {
@@ -450,7 +450,7 @@ final class hd extends hi {
                                                                             jh.a(uh.field_i * 3 / 2, (byte) 118, 47, jc.field_c, 3);
                                                                           }
                                                                         }
-                                                                        break L34;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                   }
@@ -495,7 +495,7 @@ final class hd extends hi {
                                 }
                               }
                             }
-                            break L34;
+                            break regionExit1;
                           }
                           qj.a(-90, var13Lifetime1, param1, var40);
                         }
@@ -582,7 +582,7 @@ final class hd extends hi {
             3 == ha.field_t) {
             kd.a(0, 1);
           }
-          for (var13Lifetime2 = 0; dk.field_o > var13Lifetime2; var13Lifetime2++) {
+          for (var13Lifetime2 = 0; DualLinkNode.field_o > var13Lifetime2; var13Lifetime2++) {
             var43 = vj.field_w[var13Lifetime2];
             if (var43 != null) {
               var15 = var43.field_j.field_e - var10;
@@ -603,8 +603,8 @@ final class hd extends hi {
                 tg.field_a = true;
               }
             } else {
-              vj.field_w[var13Lifetime2] = vj.field_w[dk.field_o];
-              dk.field_o = dk.field_o - 1;
+              vj.field_w[var13Lifetime2] = vj.field_w[DualLinkNode.field_o];
+              DualLinkNode.field_o = DualLinkNode.field_o - 1;
             }
           }
           for (var14 = el.field_j - 1; var14 > 0; var14--) {
@@ -905,7 +905,7 @@ final class hd extends hi {
               }
               if (var6 >= 2) {
                 param2.field_I = 0;
-                ci.a(100, 55);
+                MouseInput.a(100, 55);
               }
             }
             if (pj.field_v == 4) {
@@ -984,7 +984,7 @@ final class hd extends hi {
             }
             if (dn.field_i == of.field_d) {
               var6Lifetime4 = 0;
-              var7_double = (double)param2.field_j.field_e + param2.field_l.field_f - vi.field_h;
+              var7_double = (double)param2.field_j.field_e + param2.field_l.field_f - PacketBuffer.field_h;
               param2.field_c = (double)qi.field_N;
               var9_double = -bc.field_i + ((double)param2.field_j.field_g + param2.field_l.field_a);
               if (0.1 < var7_double) {
@@ -1256,17 +1256,17 @@ final class hd extends hi {
           if (of.field_d == dn.field_i) {
             hf.field_i = -1;
           } else {
-            if (ci.field_a[0] <= 0 &&
-              0 >= ci.field_a[1]) {
+            if (MouseInput.field_a[0] <= 0 &&
+              0 >= MouseInput.field_a[1]) {
               hf.field_i = -1;
             }
-            if (0 < d.field_u) {
-              d.field_u = d.field_u - 1;
+            if (0 < NetworkGameClient.field_u) {
+              NetworkGameClient.field_u = NetworkGameClient.field_u - 1;
               if (kh.field_U[0] == 3 &&
                 kh.field_ib[an.field_r[kh.field_U[0]]] > 0) {
                 dupTemp$0 = an.field_r[kh.field_U[0]];
                 kh.field_ib[dupTemp$0] = kh.field_ib[dupTemp$0] - 1;
-                ci.field_a[0] = ld.a(-44, kh.field_U[0]);
+                MouseInput.field_a[0] = ld.a(-44, kh.field_U[0]);
                 var6Lifetime3 = kh.field_U[0];
                 hf.field_i = var6Lifetime3;
               }
@@ -1274,74 +1274,74 @@ final class hd extends hi {
                 kh.field_ib[an.field_r[kh.field_U[1]]] > 0) {
                 dupTemp$1 = an.field_r[kh.field_U[1]];
                 kh.field_ib[dupTemp$1] = kh.field_ib[dupTemp$1] - 1;
-                ci.field_a[1] = ld.a(-11, kh.field_U[1]);
+                MouseInput.field_a[1] = ld.a(-11, kh.field_U[1]);
                 var6Lifetime3 = kh.field_U[1];
                 hf.field_i = var6Lifetime3;
               }
             }
-            if (ci.field_a[0] <= 0) {
+            if (MouseInput.field_a[0] <= 0) {
               if (null == of.field_h &&
                 jf.field_c == 0) {
                 if (0 < kh.field_U[0]) {
                   if (fh.field_c[0] &&
                     kh.field_ib[an.field_r[kh.field_U[0]]] <= 0) {
-                    ci.field_a[0] = ld.a(-7, 0);
+                    MouseInput.field_a[0] = ld.a(-7, 0);
                     var6Lifetime3 = 0;
                   }
                   if (fh.field_c[0] &&
                     kh.field_ib[an.field_r[kh.field_U[0]]] > 0) {
                     dupTemp$2 = an.field_r[kh.field_U[0]];
                     kh.field_ib[dupTemp$2] = kh.field_ib[dupTemp$2] - 1;
-                    ci.field_a[0] = ld.a(-25, kh.field_U[0]);
+                    MouseInput.field_a[0] = ld.a(-25, kh.field_U[0]);
                     var6Lifetime3 = kh.field_U[0];
                   }
                 } else {
                   if (fh.field_c[0] &&
                     dn.field_j < 2) {
-                    ci.field_a[0] = ld.a(bm.a(param4, -39), 0);
+                    MouseInput.field_a[0] = ld.a(bm.a(param4, -39), 0);
                     if (kh.field_U[1] == 0) {
-                      ci.field_a[1] = ci.field_a[0];
+                      MouseInput.field_a[1] = MouseInput.field_a[0];
                     }
                     var6Lifetime3 = 0;
                   }
                 }
               }
             } else {
-              ci.field_a[0] = ci.field_a[0] - 1;
+              MouseInput.field_a[0] = MouseInput.field_a[0] - 1;
               if (fh.field_c[0] && (!(an.field_r[kh.field_U[0]] >= 0) ||
                 !(kh.field_ib[an.field_r[kh.field_U[0]]] <= 0))) {
                 var6Lifetime3 = kh.field_U[0];
               }
             }
-            if (ci.field_a[1] <= 0) {
+            if (MouseInput.field_a[1] <= 0) {
               if (of.field_h == null &&
                 jf.field_c == 0) {
                 if (kh.field_U[1] > 0) {
                   if (fh.field_c[1] &&
                     kh.field_ib[an.field_r[kh.field_U[1]]] <= 0) {
-                    ci.field_a[1] = ld.a(-104, 0);
+                    MouseInput.field_a[1] = ld.a(-104, 0);
                     var6Lifetime3 = 0;
                   }
                   if (fh.field_c[1] &&
                     0 < kh.field_ib[an.field_r[kh.field_U[1]]]) {
                     dupTemp$3 = an.field_r[kh.field_U[1]];
                     kh.field_ib[dupTemp$3] = kh.field_ib[dupTemp$3] - 1;
-                    ci.field_a[1] = ld.a(param4 - 105, kh.field_U[1]);
+                    MouseInput.field_a[1] = ld.a(param4 - 105, kh.field_U[1]);
                     var6Lifetime3 = kh.field_U[1];
                   }
                 } else {
                   if (fh.field_c[1] &&
                     dn.field_j < 2) {
-                    ci.field_a[1] = ld.a(-104, 0);
+                    MouseInput.field_a[1] = ld.a(-104, 0);
                     var6Lifetime3 = 0;
                     if (kh.field_U[0] == 0) {
-                      ci.field_a[0] = ci.field_a[1];
+                      MouseInput.field_a[0] = MouseInput.field_a[1];
                     }
                   }
                 }
               }
             } else {
-              ci.field_a[1] = ci.field_a[1] - 1;
+              MouseInput.field_a[1] = MouseInput.field_a[1] - 1;
               if (var6Lifetime3 < 0 &&
                 fh.field_c[1] && (!(0 <= an.field_r[kh.field_U[1]]) ||
                 !(0 >= kh.field_ib[an.field_r[kh.field_U[1]]]))) {

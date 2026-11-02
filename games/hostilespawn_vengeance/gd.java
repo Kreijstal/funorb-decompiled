@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends tj {
-    private tj field_s;
+final class gd extends PcmStream {
+    private PcmStream field_s;
     private float field_q;
     private float field_r;
     private float field_m;
@@ -18,11 +18,11 @@ final class gd extends tj {
     private float field_o;
     private sh[] field_t;
 
-    final tj b() {
+    final PcmStream b() {
         return null;
     }
 
-    final tj d() {
+    final PcmStream d() {
         return this.field_s;
     }
 
@@ -380,7 +380,7 @@ final class gd extends tj {
         this.field_r = (float)((double)this.field_x * Math.sqrt((double)(1.0f - this.field_o) * 0.5));
     }
 
-    gd(tj param0) {
+    gd(PcmStream param0) {
         this.field_y = new oi[8];
         this.field_y[0] = new oi(1116 * ug.field_g / 44100);
         this.field_y[1] = new oi(1188 * ug.field_g / 44100);

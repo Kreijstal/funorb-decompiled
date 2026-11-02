@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wm extends tj {
+final class wm extends PcmStream {
     private vl field_l;
     private vl field_o;
     private int field_n;
     private int field_m;
 
     private final void d(int param0) {
-        tj var2 = (tj) (this.field_l.g(-48));
+        PcmStream var2 = (PcmStream) (this.field_l.g(-48));
         while (var2 != null) {
           var2.c(param0);
-          var2 = (tj) (this.field_l.a(12684));
+          var2 = (PcmStream) (this.field_l.a(12684));
         }
     }
 
@@ -103,23 +103,23 @@ final class wm extends tj {
         return;
     }
 
-    final tj b() {
-        return (tj) (this.field_l.a(12684));
+    final PcmStream b() {
+        return (PcmStream) (this.field_l.a(12684));
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        tj var4 = (tj) (this.field_l.g(-15));
+        PcmStream var4 = (PcmStream) (this.field_l.g(-15));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (tj) (this.field_l.a(12684));
+          var4 = (PcmStream) (this.field_l.a(12684));
         }
     }
 
-    final synchronized void a(tj param0) {
+    final synchronized void a(PcmStream param0) {
         param0.b(-104);
     }
 
-    final synchronized void b(tj param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_l.a((byte) -64, param0);
     }
 
@@ -127,14 +127,14 @@ final class wm extends tj {
         this.b(b.a(param0, param1, param2));
     }
 
-    final tj d() {
-        return (tj) (this.field_l.g(-26));
+    final PcmStream d() {
+        return (PcmStream) (this.field_l.g(-26));
     }
 
     private final void a(da param0) {
         param0.b(-62);
         param0.a();
-        am var2 = this.field_o.field_b.field_g;
+        IntrusiveNode var2 = this.field_o.field_b.field_g;
         if (var2 == this.field_o.field_b) {
           this.field_m = -1;
         } else {
@@ -142,7 +142,7 @@ final class wm extends tj {
         }
     }
 
-    private final void a(am param0, da param1) {
+    private final void a(IntrusiveNode param0, da param1) {
         while (true) {
           if (param0 == this.field_o.field_b) {
             uf.a(param1, param0, (byte) -78);

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class sc implements Runnable {
-    private vi field_m;
+    private PacketBuffer field_m;
     private kk field_f;
     private java.net.URL field_o;
     static int field_c;
@@ -16,7 +16,7 @@ final class sc implements Runnable {
     static String field_i;
     static String field_k;
     static bd field_l;
-    static en field_g;
+    static CipherPacketBuffer field_g;
     private kk field_n;
     private int field_b;
     private kk field_j;
@@ -50,14 +50,14 @@ final class sc implements Runnable {
         this.field_f = null;
     }
 
-    final vi b(byte param0) {
+    final PacketBuffer b(byte param0) {
         if (this.field_b == 3) {
           return this.field_m;
         }
         if (param0 >= 123) {
           return null;
         }
-        return (vi) null;
+        return (PacketBuffer) null;
     }
 
     public final void run() {
@@ -201,8 +201,8 @@ final class sc implements Runnable {
         u.field_f[6] = ej.field_o;
         u.field_f[3] = il.field_d;
         u.field_f[7] = jh.field_bb;
-        u.field_f[15] = ed.field_d;
-        u.field_f[13] = wc.field_s;
+        u.field_f[15] = IntrusiveNodeHashTable.field_d;
+        u.field_f[13] = ArchiveIndex.field_s;
         u.field_f[11] = mm.field_h;
         u.field_f[5] = ej.field_o;
         u.field_f[18] = field_p;
@@ -212,7 +212,7 @@ final class sc implements Runnable {
         if (param0 != 118) {
           sc.a(-47);
         }
-        u.field_f[17] = ui.field_d;
+        u.field_f[17] = DualLinkDeque.field_d;
         u.field_f[32] = f.field_c;
         u.field_f[22] = il.field_d;
         u.field_f[26] = jf.field_e;
@@ -221,7 +221,7 @@ final class sc implements Runnable {
         u.field_f[24] = gn.field_l;
         u.field_f[10] = m.field_m[2];
         u.field_f[31] = og.field_e;
-        u.field_f[21] = ed.field_d;
+        u.field_f[21] = IntrusiveNodeHashTable.field_d;
         u.field_f[9] = m.field_m[1];
         u.field_f[30] = c.field_b;
         u.field_f[8] = m.field_m[0];
@@ -231,7 +231,7 @@ final class sc implements Runnable {
         try {
           this.field_o = param1;
           this.field_e = param0;
-          this.field_m = new vi(param2);
+          this.field_m = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw wg.a((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

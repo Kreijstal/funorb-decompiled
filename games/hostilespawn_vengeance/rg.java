@@ -10,7 +10,7 @@ final class rg {
 
     final static boolean a(byte param0) {
         int var1 = -58 % ((param0 - 55) / 62);
-        return uk.a(bm.field_b, 0);
+        return ArchiveProvider.a(bm.field_b, 0);
     }
 
     final static boolean a(byte param0, char param1) {
@@ -23,7 +23,7 @@ final class rg {
     }
 
     final static pg b(int param0) {
-        pg var1 = new pg(ra.field_a, vc.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], ja.field_e[param0], bf.field_d);
+        pg var1 = new pg(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], ja.field_e[param0], bf.field_d);
         uj.d(param0 ^ -43);
         return var1;
     }
@@ -52,7 +52,7 @@ final class rg {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        en var14 = null;
+        CipherPacketBuffer var14 = null;
         int[][] var18 = null;
         int var6_intLifetime1;
         int var9Lifetime1;

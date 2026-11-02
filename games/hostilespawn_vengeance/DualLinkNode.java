@@ -3,16 +3,16 @@
  */
 import java.util.*;
 
-class dk extends am {
+class DualLinkNode extends IntrusiveNode {
     static int[] field_m;
     static String field_l;
     static int field_o;
     static bd field_n;
     static String field_k;
-    dk field_i;
+    DualLinkNode field_i;
     static int field_p;
     long field_h;
-    dk field_j;
+    DualLinkNode field_j;
 
     final static String a(byte param0, long param1) {
         int var6 = 0;
@@ -32,15 +32,15 @@ class dk extends am {
           var7 = uh.field_h.get(11);
           var8 = uh.field_h.get(12);
           var9 = uh.field_h.get(13);
-          return gb.field_k[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ea.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return ResourceArchive.field_k[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ea.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         cl var10 = (cl) null;
-        dk.a((cl) null, -84, 103);
+        DualLinkNode.a((cl) null, -84, 103);
         var6Lifetime1 = uh.field_h.get(1);
         var7Lifetime1 = uh.field_h.get(11);
         var8Lifetime1 = uh.field_h.get(12);
         var9Lifetime1 = uh.field_h.get(13);
-        return gb.field_k[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ea.field_f[var5] + "-" + var6Lifetime1 + " " + var7Lifetime1 / 10 + var7Lifetime1 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
+        return ResourceArchive.field_k[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ea.field_f[var5] + "-" + var6Lifetime1 + " " + var7Lifetime1 / 10 + var7Lifetime1 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
     static long a(long param0, long param1) {
@@ -48,7 +48,7 @@ class dk extends am {
     }
 
     final static void a(cl param0, int param1, int param2) {
-        en var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = s.field_b;
           var3.i(19319, param1);
@@ -83,12 +83,12 @@ class dk extends am {
           this.field_j = null;
           return;
         }
-        this.field_i = (dk) null;
+        this.field_i = (DualLinkNode) null;
         this.field_i = null;
         this.field_j = null;
     }
 
-    protected dk() {
+    protected DualLinkNode() {
     }
 
     static {

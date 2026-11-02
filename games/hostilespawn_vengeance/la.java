@@ -133,7 +133,7 @@ final class la extends ca {
         eb.field_e.h();
     }
 
-    final void a(vi param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.a(120, this.field_j);
           if (param1 >= -94) {
@@ -272,9 +272,9 @@ final class la extends ca {
     final bl a(boolean param0) {
         if (param0) {
           field_i = (String) null;
-          return uk.field_a;
+          return ArchiveProvider.field_a;
         }
-        return uk.field_a;
+        return ArchiveProvider.field_a;
     }
 
     final static int a(int param0, boolean param1) {

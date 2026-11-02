@@ -4,10 +4,10 @@
 final class cb {
     static int[] field_d;
     static String field_b;
-    private dk field_a;
+    private DualLinkNode field_a;
     private int field_i;
     static String field_h;
-    private dk[] field_f;
+    private DualLinkNode[] field_f;
     static bd[][] field_g;
     static long field_e;
     static int field_c;
@@ -90,7 +90,7 @@ final class cb {
         RuntimeException var2 = null;
         try {
           in.a(false);
-          jg.field_d.e((640 - jg.field_d.field_z) / 2, -4 + (-jg.field_d.field_A + 480));
+          KeyboardInput.field_d.e((640 - KeyboardInput.field_d.field_z) / 2, -4 + (-KeyboardInput.field_d.field_A + 480));
           var2_int = (640 - gj.field_d.field_z) / 2;
           var3 = -gj.field_d.field_A + 478;
           var4 = (gj.field_d.field_z - 4) * ij.k(param0 ^ -547) >> 9;
@@ -128,14 +128,14 @@ final class cb {
         }
     }
 
-    final dk a(long param0, int param1) {
-        dk var5 = null;
+    final DualLinkNode a(long param0, int param1) {
+        DualLinkNode var5 = null;
         int var6 = HostileSpawn.field_I ? 1 : 0;
         if (param1 != -30828) {
-          return (dk) null;
+          return (DualLinkNode) null;
         }
         this.field_j = param0;
-        dk var4 = this.field_f[(int)((long)(-1 + this.field_i) & param0)];
+        DualLinkNode var4 = this.field_f[(int)((long)(-1 + this.field_i) & param0)];
         this.field_a = var4.field_j;
         while (this.field_a != var4) {
           if (~param0 == ~this.field_a.field_h) {
@@ -149,8 +149,8 @@ final class cb {
         return null;
     }
 
-    final void a(long param0, dk param1, int param2) {
-        dk var5 = null;
+    final void a(long param0, DualLinkNode param1, int param2) {
+        DualLinkNode var5 = null;
         String var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -186,13 +186,13 @@ final class cb {
         }
     }
 
-    final dk a(int param0) {
-        dk var3_ref_dk = null;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var3_ref_dk = null;
         int var4 = HostileSpawn.field_I ? 1 : 0;
         if (this.field_a == null) {
           return null;
         }
-        dk var2 = this.field_f[(int)(this.field_j & (long)(-1 + this.field_i))];
+        DualLinkNode var2 = this.field_f[(int)(this.field_j & (long)(-1 + this.field_i))];
         while (this.field_a != var2) {
           if (~this.field_j == ~this.field_a.field_h) {
             var3_ref_dk = this.field_a;
@@ -222,12 +222,12 @@ final class cb {
 
     cb(int param0) {
         int var2 = 0;
-        dk dupTemp$0 = null;
-        dk var3 = null;
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
         this.field_i = param0;
-        this.field_f = new dk[param0];
+        this.field_f = new DualLinkNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new dk();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_f[var2] = dupTemp$0;
           var3.field_i = var3;

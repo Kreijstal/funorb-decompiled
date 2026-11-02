@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vi extends am {
+class PacketBuffer extends IntrusiveNode {
     static bd field_k;
     static double field_h;
     int field_i;
@@ -121,7 +121,7 @@ class vi extends am {
         field_p = null;
         field_o = null;
         if (param0 != 255) {
-          vi.k(-40);
+          PacketBuffer.k(-40);
         }
         field_j = null;
         field_k = null;
@@ -455,7 +455,7 @@ class vi extends am {
         this.field_n[fieldTemp$3] = (byte)param0;
     }
 
-    vi(int param0) {
+    PacketBuffer(int param0) {
         this.field_i = 0;
         this.field_n = hf.a(true, param0);
     }
@@ -521,7 +521,7 @@ class vi extends am {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        en var28 = null;
+        CipherPacketBuffer var28 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
@@ -769,7 +769,7 @@ class vi extends am {
         var6 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (!param2) {
-            vi.k(-128);
+            PacketBuffer.k(-128);
           }
           for (var5_int = param3; var5_int < param0 + param3; var5_int++) {
             fieldTemp$0 = this.field_i;
@@ -853,9 +853,9 @@ class vi extends am {
         }
     }
 
-    final static boolean a(byte param0, en param1) {
+    final static boolean a(byte param0, CipherPacketBuffer param1) {
         RuntimeException var2 = null;
-        en var3 = null;
+        CipherPacketBuffer var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -863,8 +863,8 @@ class vi extends am {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 45) {
-            var3 = (en) null;
-            vi.a((byte) -23, (en) null);
+            var3 = (CipherPacketBuffer) null;
+            PacketBuffer.a((byte) -23, (CipherPacketBuffer) null);
           }
           stackIn_5_0 = (param1.a(1, true) == 1);
           return stackIn_5_0;
@@ -911,7 +911,7 @@ class vi extends am {
         this.field_n[this.field_i - param0 - 1] = (byte)param0;
     }
 
-    vi(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
           this.field_i = 0;
           this.field_n = param0;

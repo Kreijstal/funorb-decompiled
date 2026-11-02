@@ -109,7 +109,7 @@ final class sf extends ig implements sk {
             return null;
           }
           if (this.field_i != null) {
-            jg.a(-128, rb.field_m, j.field_c - (this.field_Z - this.field_s));
+            KeyboardInput.a(-128, rb.field_m, j.field_c - (this.field_Z - this.field_s));
             return this.field_i;
           }
           return null;
@@ -118,7 +118,7 @@ final class sf extends ig implements sk {
           return null;
         }
         if (this.field_i != null) {
-          jg.a(-128, rb.field_m, j.field_c - (this.field_Z - this.field_s));
+          KeyboardInput.a(-128, rb.field_m, j.field_c - (this.field_Z - this.field_s));
           return this.field_i;
         }
         return null;
