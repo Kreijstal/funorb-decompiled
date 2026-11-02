@@ -32,7 +32,7 @@ final class cd {
           if (var2 != 0) {
             if (var2 != 1) {
               LoginCredentials.a((Throwable) null, 76, "A1: " + CampaignProgress.b(false));
-              TextSplitSupport.a((byte) -128);
+              TextSplitSupport.closeSessionSocket((byte) -128);
               return;
             }
             var3 = var8.readInt(1);
@@ -45,7 +45,7 @@ final class cd {
               break;
             }
             if (var4 == null) {
-              TextSplitSupport.a((byte) -125);
+              TextSplitSupport.closeSessionSocket((byte) -125);
               return;
             }
             var4.unlink(-102);
@@ -53,7 +53,7 @@ final class cd {
           }
           var3_ref_vg = (vg) (AccountRegistrationDialog.field_Bb.first((byte) 98));
           if (var3_ref_vg == null) {
-            TextSplitSupport.a((byte) -126);
+            TextSplitSupport.closeSessionSocket((byte) -126);
             return;
           }
           var4_int = var8.readUnsignedByte(0);
@@ -68,7 +68,7 @@ final class cd {
           }
           var8.position = var8.position + 4;
           if (!var8.verifyChecksum(4215)) {
-            TextSplitSupport.a((byte) -126);
+            TextSplitSupport.closeSessionSocket((byte) -126);
             return;
           }
           var3_ref_vg.field_n = true;
@@ -82,7 +82,7 @@ final class cd {
         }
     }
 
-    final static void a(int param0) {
+    final static void releaseStatics(int param0) {
         gp.field_e = null;
         if (param0 != 12) {
           field_b = (String) null;

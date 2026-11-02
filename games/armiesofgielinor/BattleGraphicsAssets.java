@@ -100,7 +100,7 @@ final class BattleGraphicsAssets {
           NineSliceFrame.activeFoliageSprites = nextAlias.foliageSprites;
           TextFieldValidator.currentThemeId = themeId;
           QuickChatCategoryMenuSupport.activeStructureSprites = nextAlias.structureSprites;
-          oq.activeStructureShadows = nextTheme.structureShadowSprites;
+          AlternateKeyedLoginCredentials.activeStructureShadows = nextTheme.structureShadowSprites;
           ArchiveMasterIndex.activeTerrainSample = ManaStarParticle.activeTerrainSprites[1].toRgbSprite();
           return;
         }

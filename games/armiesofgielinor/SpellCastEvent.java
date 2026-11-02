@@ -75,7 +75,7 @@ final class SpellCastEvent extends GameEvent {
             var6 = SpriteScrollBar.field_h[var3];
             stackIn_12_0 = var6;
             stackIn_13_1 = !(0 > var4);
-            var7 = lp.a(stackIn_12_0, stackIn_13_1, false);
+            var7 = TextWidthSupport.measureTextWidth(stackIn_12_0, stackIn_13_1, false);
             var8 = bt.field_g - (var7 >> 1);
             if (0 <= var4) {
               var2 = var2 + QuickChatPhrase.field_w;
@@ -155,7 +155,7 @@ final class SpellCastEvent extends GameEvent {
           return Battlefield.field_nb + " - " + DisplayModeOptionPainter.field_u.getGroupProgressByName("commonui", (byte) -34) + "%";
         }
         if (!CombatPresentation.field_M.ensureIndex((byte) 82)) {
-          return is.field_f;
+          return LeapYearSupport.field_f;
         }
         if (!CombatPresentation.field_M.ensureGroupAvailableByName(28979, "commonui")) {
           return QuickChatPhraseRepository.field_a + " - " + CombatPresentation.field_M.getGroupProgressByName("commonui", (byte) 122) + "%";
@@ -166,7 +166,7 @@ final class SpellCastEvent extends GameEvent {
         if (!LoginKind.field_g.ensureAllGroupsAvailable(param0 ^ 20707)) {
           return DateInputWidget.field_G + " - " + LoginKind.field_g.getOverallProgress(0) + "%";
         }
-        return fm.field_c;
+        return SpriteSliceAndBlendSupport.field_c;
     }
 
     public static void releaseStatics(boolean obfuscationGuard) {

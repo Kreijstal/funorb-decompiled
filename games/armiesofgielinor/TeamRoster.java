@@ -18,7 +18,7 @@ final class TeamRoster {
         return this.playerIds.length;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isSessionConnected(int param0) {
         int var1;
         boolean stackIn_4_0 = false;
         var1 = -85 / ((param0 + 50) / 45);
@@ -48,7 +48,7 @@ final class TeamRoster {
         playerRingSprite = null;
         field_d = null;
         if (obfuscationGuard >= -15) {
-          TeamRoster.a(62);
+          TeamRoster.isSessionConnected(62);
         }
         field_c = null;
         field_e = null;

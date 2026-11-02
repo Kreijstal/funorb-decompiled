@@ -35,7 +35,7 @@ final class UnitModelPreview {
         field_d = null;
         field_b = null;
         if (obfuscationGuard != -298276720) {
-          UnitModelPreview.b((byte) -86);
+          UnitModelPreview.readIncomingNullTerminatedString((byte) -86);
           field_m = null;
           return;
         }
@@ -127,7 +127,7 @@ final class UnitModelPreview {
         this.installFrameSet(-298276720);
     }
 
-    final static String b(byte param0) {
+    final static String readIncomingNullTerminatedString(byte param0) {
         if (param0 < 46) {
           UnitModelPreview.getCurrentRoomPlayer(-107L, 79);
           return ByteStorage.incomingPacket.readNullTerminatedString(1);

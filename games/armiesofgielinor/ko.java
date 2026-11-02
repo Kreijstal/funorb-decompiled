@@ -10,7 +10,7 @@ final class ko {
     static int pointerY;
     static String field_a;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_g = null;
         if (param0) {

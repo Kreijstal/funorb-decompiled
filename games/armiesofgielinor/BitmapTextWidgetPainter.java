@@ -700,8 +700,8 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
           if (param0 < 70) {
             return;
           }
-          oq.attachKeyboard(27080, (java.awt.Component) ((Object) param1));
-          DisplacedUnitMarker.a((java.awt.Component) ((Object) param1), (byte) 74);
+          AlternateKeyedLoginCredentials.attachKeyboard(27080, (java.awt.Component) ((Object) param1));
+          DisplacedUnitMarker.attachPointerInput((java.awt.Component) ((Object) param1), (byte) 74);
           if (CampaignMission.field_I == null) {
             return;
           }

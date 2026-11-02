@@ -318,7 +318,7 @@ final class WidgetStateStyle {
               param6 = param6 - (-640 + var11);
             }
           }
-          ArchiveLoadSequence.a(-(var9_int >> 1) + param6, param8, var9_int, param5, param3, -8991);
+          ArchiveLoadSequence.drawHorizontalThreeSliceWithBrightness(-(var9_int >> 1) + param6, param8, var9_int, param5, param3, -8991);
           param4.drawCentered(param7, param6, 2 + (param4.baselineHeight + param8), param0, -1);
           if (!param2) {
             return;

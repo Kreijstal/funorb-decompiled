@@ -8,7 +8,7 @@ class RasterViewportResizeHandler implements ViewportResizeListener {
     static int field_a;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 960112080) {
           PacketBuffer var2 = (PacketBuffer) null;
           RasterViewportResizeHandler.readNullableUnsignedByteArray((PacketBuffer) null, (byte) 105);
@@ -38,7 +38,7 @@ class RasterViewportResizeHandler implements ViewportResizeListener {
             var3[var4] = packet.readUnsignedByte(0);
           }
           if (obfuscationGuard != -98) {
-            RasterViewportResizeHandler.a(4);
+            RasterViewportResizeHandler.releaseStatics(4);
           }
           stackIn_10_0 = var3;
           return stackIn_10_0;

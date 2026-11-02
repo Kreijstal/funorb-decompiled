@@ -78,7 +78,7 @@ final class DisplacedUnitMarker extends PreparedAction {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachPointerInput(java.awt.Component param0, byte param1) {
         try {
           int var2_int = -78 / ((param1 + 46) / 57);
           param0.addMouseListener(BattleCharacter.pointerInputHandler);

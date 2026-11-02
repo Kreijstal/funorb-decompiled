@@ -1316,7 +1316,7 @@ final class InstructionsPanel {
         int var2 = 122 % ((param0 + 31) / 56);
         AlphaDecodedSpriteSupport var1 = (AlphaDecodedSpriteSupport) (ArchiveIndex.field_o.first((byte) 126));
         if (var1 == null) {
-          TextSplitSupport.a((byte) -128);
+          TextSplitSupport.closeSessionSocket((byte) -128);
           return;
         }
         CipherPacketBuffer var3 = ByteStorage.incomingPacket;
@@ -2397,14 +2397,14 @@ final class InstructionsPanel {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  TextSplitSupport.a((byte) -126);
+                  TextSplitSupport.closeSessionSocket((byte) -126);
                   RasterViewportResizeHandler.field_b = false;
                   stackIn_30_0 = var6_intLifetime1;
                   return stackIn_30_0;
                 }
               }
               if (decompiledFrameRemainder0) {
-                SpectateRoomRequestSupport.connectionState = oq.field_m;
+                SpectateRoomRequestSupport.connectionState = AlternateKeyedLoginCredentials.field_m;
                 DropdownSelectorPainter.packetPayloadLength = -1;
               }
             }
@@ -2412,7 +2412,7 @@ final class InstructionsPanel {
               stackIn_35_0 = -46;
               return stackIn_35_0;
             }
-            if (oq.field_m == SpectateRoomRequestSupport.connectionState &&
+            if (AlternateKeyedLoginCredentials.field_m == SpectateRoomRequestSupport.connectionState &&
               AgeValidator.isPacketPayloadReady(2)) {
               dc.field_o = ByteStorage.incomingPacket.readLong((byte) -2);
               ModalDialog.field_I = param3;
@@ -2505,7 +2505,7 @@ final class InstructionsPanel {
             }
             if (SummonAction.field_z == SpectateRoomRequestSupport.connectionState &&
               AgeValidator.isPacketPayloadReady(2)) {
-              TextSplitSupport.a((byte) -128);
+              TextSplitSupport.closeSessionSocket((byte) -128);
               if (MusicCrossfadeStream.deliveredOpcode == 7 &&
                 !RasterViewportResizeHandler.field_b) {
                 RasterViewportResizeHandler.field_b = true;
@@ -2522,7 +2522,7 @@ final class InstructionsPanel {
             }
             if (null == MoveAttackRequest.sessionSocket) {
               if (RasterViewportResizeHandler.field_b) {
-                if (TileMetadata.b(0) <= 30000L) {
+                if (TileMetadata.millisSinceLastPacketRead(0) <= 30000L) {
                   BitmapTextWidgetPainter.field_r = DamageEvent.field_y;
                 } else {
                   BitmapTextWidgetPainter.field_r = ValidationState.field_a;

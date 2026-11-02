@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm {
+final class SpriteSliceAndBlendSupport {
     static String field_b;
     static String field_c;
     static int[] field_d;
@@ -12,25 +12,25 @@ final class fm {
         field_b = null;
         field_c = null;
         if (obfuscationGuard < 80) {
-          fm.a(8, 105, 64);
+          SpriteSliceAndBlendSupport.compositeArgbColours(8, 105, 64);
         }
     }
 
-    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4) {
+    final static void drawHorizontalThreeSlice(RgbSprite[] param0, int param1, int param2, int param3, int param4) {
         try {
           param0[0].drawTransparent(param2, param3);
           param0[1].drawScaled(param0[1].pixelWidth + param2, param3, -(param0[2].pixelWidth << 1) + param1, param0[2].pixelHeight);
           param0[2].drawTransparent(param2 + param1 - param0[2].pixelWidth, param3);
           if (param4 > -38) {
             RgbSprite[] var6 = (RgbSprite[]) null;
-            fm.a((RgbSprite[]) null, -67, 44, -43, -95);
+            SpriteSliceAndBlendSupport.drawHorizontalThreeSlice((RgbSprite[]) null, -67, 44, -43, -95);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int compositeArgbColours(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -52,7 +52,7 @@ final class fm {
           return var7 | (var9 | var6) | var8;
         }
         RgbSprite[] var10 = (RgbSprite[]) null;
-        fm.a((RgbSprite[]) null, 127, 84, -117, 90);
+        SpriteSliceAndBlendSupport.drawHorizontalThreeSlice((RgbSprite[]) null, 127, 84, -117, 90);
         var5Lifetime1 = var3 + var4;
         var6Lifetime1 = (((255 & param1 >> 16) * var4 + var3 * ((16711680 & param0) >> 16)) / var5Lifetime1 & 1697972479) << 16;
         var7Lifetime1 = (-1660944129 & (((65280 & param1) >> 8) * var4 + var3 * ((65280 & param0) >> 8)) / var5Lifetime1) << 8;

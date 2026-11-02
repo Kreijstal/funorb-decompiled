@@ -356,7 +356,7 @@ final class VertexNormal {
               } else {
                 if (var5_int != 0 &&
                   !var12.packedFlag0) {
-                  var24Lifetime2 = is.field_a;
+                  var24Lifetime2 = LeapYearSupport.field_a;
                 } else {
                   if (var7 > var12.ratedGamesPlayed) {
                     var25_int = -var12.ratedGamesPlayed + var7;

@@ -177,7 +177,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         var55 = null;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var3 = 1;
-        if (!cu.field_c &&
+        if (!BitLengthSupport.field_c &&
           null == UnitCycler.field_g) {
           var3 = 0;
         }

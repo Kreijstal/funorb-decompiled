@@ -182,7 +182,7 @@ final class DropdownOptionList extends kq {
         }
         if (this.options.length > var5) {
           this.selectedIndex = var5;
-          this.selector.g((byte) 27);
+          this.selector.notifySelectionChanged((byte) 27);
           return;
         }
     }

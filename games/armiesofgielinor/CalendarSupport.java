@@ -24,7 +24,7 @@ final class CalendarSupport {
 
     final static int getDaysInMonth(byte obfuscationGuard, int monthIndex, int year) {
         if (monthIndex == 1) {
-          if (is.a(4, year)) {
+          if (LeapYearSupport.isLeapYear(4, year)) {
             return 29;
           }
           if (obfuscationGuard < -7) {

@@ -58,14 +58,14 @@ final class ConsoleTokenCursor {
               return true;
             }
             if (0 <= var2_int &&
-              TileMetadata.b(0) <= 30000L) {
+              TileMetadata.millisSinceLastPacketRead(0) <= 30000L) {
               return false;
             }
-            TextSplitSupport.a((byte) -127);
+            TextSplitSupport.closeSessionSocket((byte) -127);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            TextSplitSupport.a((byte) -127);
+            TextSplitSupport.closeSessionSocket((byte) -127);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {

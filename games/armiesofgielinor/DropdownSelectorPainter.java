@@ -266,7 +266,7 @@ final class DropdownSelectorPainter implements WidgetPainter {
               param1.readBits(125, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.readBits(82, cu.a(3, var5 - 1));
+              var6_int = param1.readBits(82, BitLengthSupport.bitLength(3, var5 - 1));
               var4[var5] = var4[var6_int];
             }
           }

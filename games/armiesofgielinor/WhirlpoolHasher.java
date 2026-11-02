@@ -35,7 +35,7 @@ final class WhirlpoolHasher {
           }
         } else {
           if (0 != (1 << FullscreenFocusCanvas.gameplayController.controlledPlayerId & FullscreenFocusCanvas.gameplayController.battlefield.field_i)) {
-            DisplacedUnitMarker.field_t[12] = is.field_c;
+            DisplacedUnitMarker.field_t[12] = LeapYearSupport.field_c;
           } else {
             if (FullscreenFocusCanvas.gameplayController.battlefield.field_i != 0) {
               DisplacedUnitMarker.field_t[12] = BitmapTextWidgetPainter.field_s;

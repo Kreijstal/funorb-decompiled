@@ -39,7 +39,7 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_E = null;
         field_F = null;
         if (param0 != 120) {

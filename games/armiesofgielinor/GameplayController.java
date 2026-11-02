@@ -3197,7 +3197,7 @@ final class GameplayController {
           if (param0 != 517) {
             discarded$1 = this.l(true);
           }
-          fm.a(QuickChatMenuCloseSupport.field_b, 77, 150, 15, -67);
+          SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 77, 150, 15, -67);
           GradientUiRenderer.drawCenteredSolidText(this.c(this.battlefield.playerMana[this.controlledPlayerId], -117), 180, 44, 16777215, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3542,7 +3542,7 @@ final class GameplayController {
             return;
           }
           if (this.battlefield.field_o) {
-            TextSplitSupport.a((byte) -124);
+            TextSplitSupport.closeSessionSocket((byte) -124);
             return;
           }
           if (this.movementPlanner == null) {
@@ -4066,7 +4066,7 @@ final class GameplayController {
           this.camera = null;
           this.unitRenderer = null;
           this.unitRenderer = null;
-          cu.field_b = null;
+          BitLengthSupport.field_b = null;
           ProgressMessageDialog.modelProjectionCamera = null;
           ConsoleParseException.b(param0 ^ -112);
           if (param0 != 111) {
@@ -7300,7 +7300,7 @@ final class GameplayController {
             var4 = 2;
             var3 = 3;
           }
-          cu.field_b = new RgbSprite(this.battlefield.mapWidth * 2 * var3, 1 + var4 * 2 * this.battlefield.mapWidth);
+          BitLengthSupport.field_b = new RgbSprite(this.battlefield.mapWidth * 2 * var3, 1 + var4 * 2 * this.battlefield.mapWidth);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7546,7 +7546,7 @@ final class GameplayController {
                 }
                 var8 = stackIn_36_0;
                 var9 = this.o(125);
-                fm.a(QuickChatMenuCloseSupport.field_b, 64, 10, -40 + var9, -71);
+                SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 64, 10, -40 + var9, -71);
                 stackIn_39_0 = SoundPanSupport.field_b;
                 if (var8 == 0) {
                   stackIn_40_1 = 0;
@@ -7562,16 +7562,16 @@ final class GameplayController {
                 }
               }
               var8Lifetime1 = PowerOfTwoSupport.field_k;
-              fm.a(QuickChatMenuCloseSupport.field_b, 30 + var5, IgnoreListLookupSupport.a(true, var8Lifetime1 - var5 - 45), MatchConditionEntry.a(var3_int, (byte) 94), -117);
+              SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 30 + var5, IgnoreListLookupSupport.a(true, var8Lifetime1 - var5 - 45), MatchConditionEntry.a(var3_int, (byte) 94), -117);
               GradientUiRenderer.drawSolidText(var4_ref_String, IgnoreListLookupSupport.a(true, var8Lifetime1 - 30 - var5), MatchConditionEntry.a(var3_int + 28, (byte) 94), 16777215, true);
               if (this.field_lb &&
                 -1 < this.controlledPlayerId) {
-                fm.a(QuickChatMenuCloseSupport.field_b, var6 + 30, IgnoreListLookupSupport.a(true, -15 + var7), MatchConditionEntry.a(var3_int, (byte) 94), -87);
+                SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, var6 + 30, IgnoreListLookupSupport.a(true, -15 + var7), MatchConditionEntry.a(var3_int, (byte) 94), -87);
                 GradientUiRenderer.drawSolidText(DisplacedUnitMarker.field_t[12], IgnoreListLookupSupport.a(true, var7), MatchConditionEntry.a(var3_int + 28, (byte) 94), 16777215, true);
               }
               return;
             }
-            if (!cu.field_a) {
+            if (!BitLengthSupport.field_a) {
               SoftwareRaster.clearPixels();
               if (var10 != 0) {
                 this.s(-123);
@@ -7678,7 +7678,7 @@ final class GameplayController {
               }
               var4 = stackIn_136_0;
               QuickChatCategory.field_u = 0;
-              fm.a(QuickChatMenuCloseSupport.field_b, 64, 10, this.o(125) - 40, -41);
+              SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 64, 10, this.o(125) - 40, -41);
               stackIn_139_0 = SoundPanSupport.field_b;
               if (var4 != 0) {
                 stackIn_140_1 = 1;
@@ -7688,7 +7688,7 @@ final class GameplayController {
               ((RgbSprite) (Object) stackIn_139_0[stackIn_140_1]).drawTransparent(28, -36 + this.o(param0 ^ 125));
               if (this.battlefield.teamGame &&
                 -1 < this.controlledPlayerId) {
-                fm.a(QuickChatMenuCloseSupport.field_b, 29, 74, this.o(param0 ^ 126) - 40, -87);
+                SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 29, 74, this.o(param0 ^ 126) - 40, -87);
                 stackIn_149_0 = 88;
                 stackIn_149_1 = -40 + (this.o(127) + 14);
                 stackIn_149_2 = 10;
@@ -10224,7 +10224,7 @@ final class GameplayController {
           SoftwareRaster.setClip(37 + param3, param0 - 70 + param5, 245 + param3, param0 + param5 - 45);
           GradientUiRenderer.drawSolidText(var9, -param2 + 42 + param3, param0 + (-43 + param5), 16777215, true);
           SoftwareRaster.resetClip();
-          lp.field_b[vg.field_r[param4.terrainType]].draw(param3 + 273, param0 + (param5 - 74));
+          TextWidthSupport.field_b[vg.field_r[param4.terrainType]].draw(param3 + 273, param0 + (param5 - 74));
           SoftwareRaster.fillRectangleBlended(param3 + 7, param0 - 41 + param5, 60, 30, 0, 128);
           TrianglePulse.field_f.drawTransparent(param3 + 12, -36 + param5 + param0);
           var10 = 0;
@@ -10285,10 +10285,10 @@ final class GameplayController {
           }
           GradientUiRenderer.drawRightAlignedSolidText(stackIn_59_0, stackIn_59_1, stackIn_59_2, stackIn_60_3, true);
           SoftwareRaster.fillRectangleBlended(72 + param3, param0 - 41 + param5, 190, 30, 0, 128);
-          if (param7 + 17 >= lp.field_b.length) {
+          if (param7 + 17 >= TextWidthSupport.field_b.length) {
             param7 = 0;
           }
-          stackIn_67_0 = lp.field_b[17 + param7];
+          stackIn_67_0 = TextWidthSupport.field_b[17 + param7];
           stackIn_67_1 = 268 + param3;
           stackIn_67_2 = param5 + (-42 + param0);
           if (WeightedLruCache.terrainDamageTakenPercent[param4.terrainType] < 100) {
@@ -10313,7 +10313,7 @@ final class GameplayController {
           var12Lifetime1 = 0;
           var13 = 23;
           if (param4.hasCorpse(68)) {
-            lp.field_b[0].draw(72 + (param3 + var13 * var12Lifetime1), param5 - 42 + param0);
+            TextWidthSupport.field_b[0].draw(72 + (param3 + var13 * var12Lifetime1), param5 - 42 + param0);
             var12Lifetime1++;
           }
           boolean decompiledFrameRemainder5 = true;
@@ -10333,18 +10333,18 @@ final class GameplayController {
           if ((decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
-            lp.field_b[1].draw(var13 * var12Lifetime1 + (72 + param3), param0 - (-param5 + 42));
+            TextWidthSupport.field_b[1].draw(var13 * var12Lifetime1 + (72 + param3), param0 - (-param5 + 42));
             var12Lifetime1++;
             decompiledFrameRemainder5 = (var17 != 0);
           }
           if ((decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
-            lp.field_b[2].draw(var13 * var12Lifetime1 + param3 + 72, param0 + param5 - 42);
+            TextWidthSupport.field_b[2].draw(var13 * var12Lifetime1 + param3 + 72, param0 + param5 - 42);
             var12Lifetime1++;
             decompiledFrameRemainder5 = (var17 != 0);
           }
           if (decompiledFrameRemainder5) {
-            lp.field_b[3].draw(72 - (-param3 - var13 * var12Lifetime1), param0 - 42 + param5);
+            TextWidthSupport.field_b[3].draw(72 - (-param3 - var13 * var12Lifetime1), param0 - 42 + param5);
             var12Lifetime1++;
           }
           var14Lifetime1 = param4.getEffectsForPlayer((byte) 97, param6, this.battlefield.getPlayerTeamIndex(param6, -1));
@@ -10355,7 +10355,7 @@ final class GameplayController {
             stackIn_131_0 = -1;
             if (var17 == 0) {
               if (stackIn_131_0 != ~(var15 & 1 << var16)) {
-                stackIn_127_0 = lp.field_b[AnimationSequence.field_f[var16]];
+                stackIn_127_0 = TextWidthSupport.field_b[AnimationSequence.field_f[var16]];
                 stackIn_127_1 = param3 + 72 + var12Lifetime1 * var13;
                 stackIn_127_2 = param5 - 42 + param0;
                 if (0 == (var14Lifetime1 & 1 << var16)) {
@@ -10376,7 +10376,7 @@ final class GameplayController {
           }
           if (stackIn_131_0 != 0) {
             var16Lifetime1 = param4.getExplicitOwner((byte) -56);
-            stackIn_136_0 = lp.field_b[9];
+            stackIn_136_0 = TextWidthSupport.field_b[9];
             stackIn_136_1 = var13 * var12Lifetime1 + (72 + param3);
             stackIn_136_2 = param5 - (42 - param0);
             if (~var16Lifetime1 != ~param6) {
@@ -11163,10 +11163,10 @@ final class GameplayController {
               }
               if (var2_intLifetime1 != -1) {
                 if (var2_intLifetime1 == 5) {
-                  cu.field_d[2].drawWithOpacity(211 + 45 * var2_intLifetime1, this.o(param0 - 11300) - 115, -this.field_n + 256);
+                  BitLengthSupport.field_d[2].drawWithOpacity(211 + 45 * var2_intLifetime1, this.o(param0 - 11300) - 115, -this.field_n + 256);
                 }
               } else {
-                cu.field_d[0].drawWithOpacity(211 + var2_intLifetime1 * 45, this.o(127) - 95 - 20, -this.field_n + 256);
+                BitLengthSupport.field_d[0].drawWithOpacity(211 + var2_intLifetime1 * 45, this.o(127) - 95 - 20, -this.field_n + 256);
               }
               ProjectileEffect.field_h[0].drawWithOpacity(208 + var2_intLifetime1 * 45, -95 + this.o(125) - 23, -this.field_n + 256);
               var2_intLifetime1++;
@@ -11595,7 +11595,7 @@ final class GameplayController {
             }
             var10 = stackIn_111_0;
             var11 = var3 * var9 / 40;
-            cu.field_b.bindAsRasterTarget();
+            BitLengthSupport.field_b.bindAsRasterTarget();
             var12 = var4 * var10 / 20;
             SoftwareRaster.clearPixels();
             SoftwareRaster.drawLine(var11 - var4 * 12, -(var4 * 9) + var12, var4 * 12 + var11, -(var4 * 9) + var12, 16777215);
@@ -11617,7 +11617,7 @@ final class GameplayController {
                 var5--;
               }
             }
-            cu.field_b.drawWithOpacity(-448 + param0 * this.field_H + var5, var6 - var4 * this.battlefield.mapWidth + 218, 128);
+            BitLengthSupport.field_b.drawWithOpacity(-448 + param0 * this.field_H + var5, var6 - var4 * this.battlefield.mapWidth + 218, 128);
             var13 = 0;
             var14 = 0;
             var15 = this.battlefield.mapSizeSetting;
@@ -11889,7 +11889,7 @@ final class GameplayController {
           } else {
             stackIn_22_0 = ConsoleTextNode.field_k;
           }
-          fm.a(stackIn_22_0, var8, IgnoreListLookupSupport.a(true, param3), MatchConditionEntry.a(param4, (byte) 94), -116);
+          SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(stackIn_22_0, var8, IgnoreListLookupSupport.a(true, param3), MatchConditionEntry.a(param4, (byte) 94), -116);
           ChatMessageWriteSupport.field_a.drawTransparent(IgnoreListLookupSupport.a(true, param3 + 9), MatchConditionEntry.a(6 + param4, (byte) 94));
           PowerOfTwoSupport.field_n.drawText(Integer.toString(var6_int), IgnoreListLookupSupport.a(true, param3 + 35), MatchConditionEntry.a(16 + param4, (byte) 94), 104342, -1);
           if (var7 != 0) {

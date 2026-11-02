@@ -218,7 +218,7 @@ final class LocalAccountSupport {
           if (0 == var2) {
             var4 = (TerrainScatterSupport) (StateChangeMarker.field_t.first((byte) 96));
             if (var4 == null) {
-              TextSplitSupport.a((byte) -124);
+              TextSplitSupport.closeSessionSocket((byte) -124);
               return;
             }
             var5 = DropdownSelectorPainter.packetPayloadLength - var9.position;
@@ -249,11 +249,11 @@ final class LocalAccountSupport {
               var5_ref_rs.unlink(-105);
               return;
             }
-            TextSplitSupport.a((byte) -125);
+            TextSplitSupport.closeSessionSocket((byte) -125);
             return;
           }
           LoginCredentials.a((Throwable) null, 70, "LR1: " + CampaignProgress.b(false));
-          TextSplitSupport.a((byte) -127);
+          TextSplitSupport.closeSessionSocket((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

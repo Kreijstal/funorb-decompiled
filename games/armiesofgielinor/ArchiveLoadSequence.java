@@ -46,7 +46,7 @@ final class ArchiveLoadSequence {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4, int param5) {
+    final static void drawHorizontalThreeSliceWithBrightness(int param0, int param1, int param2, RgbSprite[] param3, int param4, int param5) {
         try {
           if (param5 != -8991) {
             field_g = (int[]) null;

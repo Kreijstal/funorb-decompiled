@@ -36,7 +36,7 @@ final class TextSplitSupport {
         }
     }
 
-    final static void a(byte param0) {
+    final static void closeSessionSocket(byte param0) {
         if (null != MoveAttackRequest.sessionSocket) {
           MoveAttackRequest.sessionSocket.close((byte) -45);
           MoveAttackRequest.sessionSocket = null;

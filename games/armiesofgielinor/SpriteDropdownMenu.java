@@ -52,7 +52,7 @@ final class SpriteDropdownMenu {
         return contentTop;
     }
 
-    public static void w(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         if (param0 != 0) {
           field_v = -114;
@@ -578,7 +578,7 @@ final class SpriteDropdownMenu {
           var1 = new RgbSprite(540, 140);
           CombatSandbox.a(var1, 3);
           if (!param0) {
-            SpriteDropdownMenu.w(33);
+            SpriteDropdownMenu.releaseStatics(33);
           }
           TriangleRasterizer.useRasterClip();
           SoftwareRaster.clearPixels();

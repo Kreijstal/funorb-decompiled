@@ -44,7 +44,7 @@ final class TabbedPanel extends ClientUiComponent {
         this.layoutTabs(contentPadding, tabHeight, obfuscationGuard - 20199);
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         field_Nb = null;
         field_Lb = null;
         if (param0 != 2) {
@@ -198,17 +198,17 @@ final class TabbedPanel extends ClientUiComponent {
           var9 = var8;
           if (param0.campaign.localGodId != 1) {
             if (param0.campaign.localGodId == 2) {
-              FriendRequestSupport.field_c[0][2] = lp.field_c[0];
+              FriendRequestSupport.field_c[0][2] = TextWidthSupport.field_c[0];
             }
           } else {
             stackIn_5_0 = (!var9[1].equalsIgnoreCase(NetworkGameShell.field_q[1])) ? 2 : 1;
             var3 = stackIn_5_0;
-            FriendRequestSupport.field_c[0][var3] = lp.field_c[0];
+            FriendRequestSupport.field_c[0][var3] = TextWidthSupport.field_c[0];
             stackIn_8_0 = (1 != var3) ? 1 : 2;
             var4 = stackIn_8_0;
-            FriendRequestSupport.field_c[0][var4] = lp.field_c[3];
+            FriendRequestSupport.field_c[0][var4] = TextWidthSupport.field_c[3];
           }
-          FriendRequestSupport.field_c[0][0] = lp.field_c[param0.campaign.localGodId];
+          FriendRequestSupport.field_c[0][0] = TextWidthSupport.field_c[param0.campaign.localGodId];
           var7 = 0;
           var3Lifetime1 = var7;
           if (param1 != -26) {

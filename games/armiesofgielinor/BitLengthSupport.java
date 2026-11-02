@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cu implements gj {
+final class BitLengthSupport implements gj {
     static RgbSprite[] field_d;
     static boolean field_c;
     static RgbSprite field_b;
@@ -13,7 +13,7 @@ final class cu implements gj {
         field_b = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         int var2Lifetime1;
         if (param1 == 0) {

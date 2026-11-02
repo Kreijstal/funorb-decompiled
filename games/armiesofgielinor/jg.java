@@ -632,7 +632,7 @@ final class jg extends IntrusiveNode {
             }
             var12 = (SpriteSheetDecoder) (LabeledWidgetContainer.field_O.first((byte) 98));
             if (var12 == null) {
-              TextSplitSupport.a((byte) -127);
+              TextSplitSupport.closeSessionSocket((byte) -127);
               return;
             }
             var12.field_m = true;
@@ -643,7 +643,7 @@ final class jg extends IntrusiveNode {
           if (var2 == 1) {
             var11 = (iw) (ScreenWipeTransition.field_c.first((byte) 104));
             if (var11 == null) {
-              TextSplitSupport.a((byte) -126);
+              TextSplitSupport.closeSessionSocket((byte) -126);
               return;
             }
             var11.unlink(41);
@@ -651,7 +651,7 @@ final class jg extends IntrusiveNode {
             if (var2 == 2) {
               var14 = (SpriteSheetDecoder) (LabeledWidgetContainer.field_O.first((byte) 125));
               if (var14 == null) {
-                TextSplitSupport.a((byte) -125);
+                TextSplitSupport.closeSessionSocket((byte) -125);
                 return;
               }
               var14.field_l = GuestPlayConfirmationForm.a(-120);
@@ -659,7 +659,7 @@ final class jg extends IntrusiveNode {
               var14.unlink(param0 ^ 35);
             } else {
               LoginCredentials.a((Throwable) null, 78, "A1: " + CampaignProgress.b(false));
-              TextSplitSupport.a((byte) -127);
+              TextSplitSupport.closeSessionSocket((byte) -127);
             }
           }
           return;

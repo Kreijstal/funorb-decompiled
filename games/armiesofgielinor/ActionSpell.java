@@ -162,7 +162,7 @@ final class ActionSpell extends Spell {
             }
             ((CipherPacketBuffer) (Object) stackIn_32_0).writeByte(stackIn_32_1, stackIn_33_2);
             EmailValidator.outgoingPacket.writeInt((byte) -108, ProjectileEffect.getCampaignPacketWord0(-59));
-            EmailValidator.outgoingPacket.writeInt((byte) -124, oq.getCampaignPacketWord1(false));
+            EmailValidator.outgoingPacket.writeInt((byte) -124, AlternateKeyedLoginCredentials.getCampaignPacketWord1(false));
             EmailValidator.outgoingPacket.writeInt((byte) -59, RadialSummonItem.getCampaignPacketWord2(false));
             EmailValidator.outgoingPacket.writeInt((byte) -50, RevivalEvent.getCampaignPacketWord3(0));
           }

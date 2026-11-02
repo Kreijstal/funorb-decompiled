@@ -407,7 +407,7 @@ final class MapRepository {
                 var26 = param0.field_I[var23];
                 TextSplitSupport.field_b[var23] = (var26 * var18 + var12 * var24 + var15 * var25 >> 16) + var9;
                 li.field_k[var23] = var10 + (var16 * var25 + var24 * var13 + var19 * var26 >> 16);
-                is.field_e[var23] = var11 + (var26 * var20 + (var25 * var17 + var24 * var14) >> 16);
+                LeapYearSupport.field_e[var23] = var11 + (var26 * var20 + (var25 * var17 + var24 * var14) >> 16);
                 var23++;
                 if (var30 != 0) {
                   return;
@@ -502,10 +502,10 @@ final class MapRepository {
                 break scanLoop1;
               }
               if (stackIn_31_0 >= stackIn_31_1 &&
-                groupIndex < lp.mapThemesByArchive.length) {
+                groupIndex < TextWidthSupport.mapThemesByArchive.length) {
                 themeIndex = 0;
-                while (lp.mapThemesByArchive[groupIndex].length > themeIndex) {
-                  stackIn_23_0 = ~lp.mapThemesByArchive[groupIndex][themeIndex];
+                while (TextWidthSupport.mapThemesByArchive[groupIndex].length > themeIndex) {
+                  stackIn_23_0 = ~TextWidthSupport.mapThemesByArchive[groupIndex][themeIndex];
                   stackIn_23_1 = ~mapTheme;
                   if (stackIn_23_0 == stackIn_23_1) {
                     archiveGroup = groupIndex;
@@ -637,7 +637,7 @@ final class MapRepository {
             !this.bypassMembershipChecks) {
             return;
           }
-          themeIndices = lp.mapThemesByArchive[archiveGroup];
+          themeIndices = TextWidthSupport.mapThemesByArchive[archiveGroup];
           if (obfuscationGuard) {
             field_h = (DiskCacheWorker) null;
           }

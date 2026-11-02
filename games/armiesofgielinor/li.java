@@ -32,7 +32,7 @@ final class li extends IntrusiveNode {
           }
           MapTile.field_i = stackIn_4_0;
           GameplayController.field_f = (int)(106.0 + Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / (double)param0) * 50.0);
-          if (!cu.field_a) {
+          if (!BitLengthSupport.field_a) {
             ResourceArchive.field_a.g(200);
             return;
           }

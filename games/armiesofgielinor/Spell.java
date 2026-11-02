@@ -24,7 +24,7 @@ abstract class Spell {
           }
           Throwable var3 = (Throwable) null;
           LoginCredentials.a((Throwable) null, -63, param0);
-          TextSplitSupport.a((byte) -124);
+          TextSplitSupport.closeSessionSocket((byte) -124);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ik.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

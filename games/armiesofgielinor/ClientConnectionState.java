@@ -119,7 +119,7 @@ final class ClientConnectionState {
         if (param0 >= -64) {
           field_c = (String) null;
         }
-        stackIn_8_0 = (this == NetworkResourceRequest.field_D) || (this == oq.field_m) || (this == ResourceArchive.connectedState);
+        stackIn_8_0 = (this == NetworkResourceRequest.field_D) || (this == AlternateKeyedLoginCredentials.field_m) || (this == ResourceArchive.connectedState);
         return stackIn_8_0;
     }
 

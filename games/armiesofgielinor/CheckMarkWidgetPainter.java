@@ -19,7 +19,7 @@ final class CheckMarkWidgetPainter implements WidgetPainter {
 
     final static LoginCredentials a(String param0, String param1, boolean param2, int param3, long param4) {
         RuntimeException var6 = null;
-        oq stackIn_6_0 = null;
+        AlternateKeyedLoginCredentials stackIn_6_0 = null;
         PasswordLoginCredentials stackIn_8_0 = null;
         KeyedLoginCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -35,7 +35,7 @@ final class CheckMarkWidgetPainter implements WidgetPainter {
             return (LoginCredentials) ((Object) stackIn_8_0);
           }
           if (param2) {
-            stackIn_6_0 = new oq(param4, param1);
+            stackIn_6_0 = new AlternateKeyedLoginCredentials(param4, param1);
             return (LoginCredentials) ((Object) stackIn_6_0);
           }
           if (param3 != 1) {

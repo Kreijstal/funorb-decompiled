@@ -47,7 +47,7 @@ final class QuickChatPhrase extends DualLinkedNode {
           var4 += 2;
         }
         if (param2 != -115) {
-          QuickChatPhrase.e((byte) -15);
+          QuickChatPhrase.releaseStatics((byte) -15);
         }
         if (param1) {
           var4++;
@@ -248,7 +248,7 @@ final class QuickChatPhrase extends DualLinkedNode {
         return var2.toString();
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -74) {
           field_C = 84;
         }

@@ -34,7 +34,7 @@ final class TileMetadata implements TaggedFieldReader {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard != 37) {
-            TileMetadata.b(-94);
+            TileMetadata.millisSinceLastPacketRead(-94);
           }
           if (fieldName.equals("name")) {
             if (0 >= encodedLength) {
@@ -111,7 +111,7 @@ final class TileMetadata implements TaggedFieldReader {
         }
     }
 
-    final static long b(int param0) {
+    final static long millisSinceLastPacketRead(int param0) {
         if (param0 != 0) {
           TileMetadata.a(-47, true);
         }

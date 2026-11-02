@@ -44,13 +44,13 @@ final class nt extends IntrusiveNode {
           if (param0 != 894) {
             nt.releaseStatics((byte) 82);
           }
-          if (cu.field_a) {
+          if (BitLengthSupport.field_a) {
             var5_int = param1 & 3;
             param1 = param1 | param1 << 8;
             var6 = 0;
             while (true) {
               stackIn_10_0 = var6;
-              if (!cu.field_a) {
+              if (!BitLengthSupport.field_a) {
                 if (stackIn_10_0 >= 1) {
                   return;
                 }
@@ -69,7 +69,7 @@ final class nt extends IntrusiveNode {
               stackIn_16_0 = TileableNoiseGenerator.smokeSprites[var5_int];
               stackIn_16_1 = param3;
               stackIn_16_2 = param4 - var7 / 4;
-              if (cu.field_a) {
+              if (BitLengthSupport.field_a) {
                 stackIn_17_3 = 1;
               } else {
                 stackIn_17_3 = 2;
@@ -80,7 +80,7 @@ final class nt extends IntrusiveNode {
               stackIn_19_1 = var5_int + param3;
               stackIn_19_2 = -(var7 / 4) + param4;
               stackIn_19_3 = 64 - var8Lifetime1 / 2;
-              if (cu.field_a) {
+              if (BitLengthSupport.field_a) {
                 stackIn_20_4 = 1;
               } else {
                 stackIn_20_4 = 2;

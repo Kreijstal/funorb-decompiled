@@ -54,12 +54,12 @@ final class PlayerProfile {
           var2_int = MeshObject.field_d;
           if (param0.channelId != 2) {
             if (param0.channelId == 4) {
-              var2_intLifetime1 = fm.field_d[param0.channelId];
+              var2_intLifetime1 = SpriteSliceAndBlendSupport.field_d[param0.channelId];
             } else {
               if (~ChannelBaseVolumeConsoleCommand.localAccountId == ~param0.accountId) {
                 var2_intLifetime1 = CombatEvent.field_A[param0.channelId];
               } else {
-                var2_intLifetime1 = fm.field_d[param0.channelId];
+                var2_intLifetime1 = SpriteSliceAndBlendSupport.field_d[param0.channelId];
               }
             }
           } else {
@@ -68,7 +68,7 @@ final class PlayerProfile {
                 param0.privateMessageIdLow24 == 0) {
                 var2_intLifetime1 = CombatEvent.field_A[param0.channelId];
               } else {
-                var2_intLifetime1 = fm.field_d[param0.channelId];
+                var2_intLifetime1 = SpriteSliceAndBlendSupport.field_d[param0.channelId];
               }
             } else {
               var2_intLifetime1 = MeshObject.field_d;

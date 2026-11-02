@@ -4951,7 +4951,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "TTREED_MAGIC");
                 if (null != var2) {
-                  fm.field_b = uu.a(var2, (byte) -113);
+                  SpriteSliceAndBlendSupport.field_b = uu.a(var2, (byte) -113);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TTREED_AERIAL");
                 if (var2 != null) {

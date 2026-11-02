@@ -394,7 +394,7 @@ final class BattleCamera {
         }
         if (param0 == 0 &&
           EquipmentBattleTutorial.field_B &&
-          cu.field_a) {
+          BitLengthSupport.field_a) {
           this.a(-12608);
         }
         return;

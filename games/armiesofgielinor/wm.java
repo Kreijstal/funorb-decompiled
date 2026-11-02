@@ -176,31 +176,31 @@ final class wm {
             vq.field_a.content.y = vq.field_a.viewport.height - vq.field_a.content.height;
             vq.field_a.content.pendingYDelta = 0;
             MoveEvent.field_J = false;
-            cu.field_c = true;
+            BitLengthSupport.field_c = true;
           }
           if (ClientStateChecksumSupport.textChatActive) {
             if (null == UnitCycler.field_g) {
               var9Lifetime1 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
-              if (cu.field_c) {
+              if (BitLengthSupport.field_c) {
                 vq.field_a.content.pendingYDelta = var9Lifetime1 - vq.field_a.content.y;
               }
               vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
               stackIn_45_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime1);
-              cu.field_c = stackIn_45_0;
+              BitLengthSupport.field_c = stackIn_45_0;
               return (ChatMessage) (var4);
             }
-            cu.field_c = true;
+            BitLengthSupport.field_c = true;
           }
           var9Lifetime1Lifetime1 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
-          if (!cu.field_c) {
+          if (!BitLengthSupport.field_c) {
             vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
             stackIn_51_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime1Lifetime1);
-            cu.field_c = stackIn_51_0;
+            BitLengthSupport.field_c = stackIn_51_0;
           } else {
             vq.field_a.content.pendingYDelta = var9Lifetime1Lifetime1 - vq.field_a.content.y;
             vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
             stackIn_55_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime1Lifetime1);
-            cu.field_c = stackIn_55_0;
+            BitLengthSupport.field_c = stackIn_55_0;
           }
           return (ChatMessage) (var4);
         }
@@ -209,35 +209,35 @@ final class wm {
           vq.field_a.content.y = vq.field_a.viewport.height - vq.field_a.content.height;
           vq.field_a.content.pendingYDelta = 0;
           MoveEvent.field_J = false;
-          cu.field_c = true;
+          BitLengthSupport.field_c = true;
         }
         if (ClientStateChecksumSupport.textChatActive) {
           if (null == UnitCycler.field_g) {
             var9Lifetime2 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
-            if (!cu.field_c) {
+            if (!BitLengthSupport.field_c) {
               vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
               stackIn_66_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime2);
-              cu.field_c = stackIn_66_0;
+              BitLengthSupport.field_c = stackIn_66_0;
             } else {
               vq.field_a.content.pendingYDelta = var9Lifetime2 - vq.field_a.content.y;
               vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
               stackIn_70_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime2);
-              cu.field_c = stackIn_70_0;
+              BitLengthSupport.field_c = stackIn_70_0;
             }
             return (ChatMessage) (var4);
           }
-          cu.field_c = true;
+          BitLengthSupport.field_c = true;
         }
         var9Lifetime3 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
-        if (!cu.field_c) {
+        if (!BitLengthSupport.field_c) {
           vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
           stackIn_77_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime3);
-          cu.field_c = stackIn_77_0;
+          BitLengthSupport.field_c = stackIn_77_0;
         } else {
           vq.field_a.content.pendingYDelta = var9Lifetime3 - vq.field_a.content.y;
           vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
           stackIn_81_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime3);
-          cu.field_c = stackIn_81_0;
+          BitLengthSupport.field_c = stackIn_81_0;
         }
         return (ChatMessage) (var4);
     }

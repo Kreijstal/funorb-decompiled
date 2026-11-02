@@ -12,7 +12,7 @@ final class DeployEvent extends GameEvent {
     static int[][] field_C;
     static int pointerPressButton;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -88) {
           pointerPressButton = 25;
         }

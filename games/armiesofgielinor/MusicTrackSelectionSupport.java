@@ -131,12 +131,12 @@ final class MusicTrackSelectionSupport {
           bq.field_c = param0;
           SpellConfirmationDialog.field_i = param4;
           CombatEvent.field_A[2] = 9474303;
-          fm.field_d[0] = 16764000;
+          SpriteSliceAndBlendSupport.field_d[0] = 16764000;
           MeshObject.field_d = 8421504;
-          fm.field_d[1] = 6356832;
-          fm.field_d[3] = 16736511;
+          SpriteSliceAndBlendSupport.field_d[1] = 6356832;
+          SpriteSliceAndBlendSupport.field_d[3] = 16736511;
           CombatEvent.field_A[4] = 16711935;
-          fm.field_d[2] = 16736352;
+          SpriteSliceAndBlendSupport.field_d[2] = 16736352;
           var12 = new RgbSprite(4, 4);
           var13 = var12.pixels;
           var14 = var12.pixels;
@@ -213,7 +213,7 @@ final class MusicTrackSelectionSupport {
             UnitLossCondition.field_f = new ClientUiComponent(0L, param11);
             UnitLossCondition.field_f.text = CampaignMenu.field_n;
             CombatEvent.field_I.addChild(UnitLossCondition.field_f, 42);
-            stackIn_28_0 = TeamRoster.a(4) ? 1 : 0;
+            stackIn_28_0 = TeamRoster.isSessionConnected(4) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&
             !NodeIterator.field_a) {

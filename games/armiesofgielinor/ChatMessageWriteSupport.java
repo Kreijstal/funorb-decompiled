@@ -137,7 +137,7 @@ final class ChatMessageWriteSupport {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 4) {
           field_b = true;
           field_a = null;

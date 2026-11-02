@@ -205,7 +205,7 @@ final class LeaderEscortCondition implements MatchCondition {
               break;
             }
             if (var4_ref == null) {
-              TextSplitSupport.a((byte) -126);
+              TextSplitSupport.closeSessionSocket((byte) -126);
               return;
             }
             var5 = var27.readUnsignedByte(param0 - 9);
@@ -305,11 +305,11 @@ final class LeaderEscortCondition implements MatchCondition {
               var4.unlink(param0 ^ -103);
               return;
             }
-            TextSplitSupport.a((byte) -126);
+            TextSplitSupport.closeSessionSocket((byte) -126);
             return;
           }
           LoginCredentials.a((Throwable) null, 76, "HS1: " + CampaignProgress.b(false));
-          TextSplitSupport.a((byte) -127);
+          TextSplitSupport.closeSessionSocket((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

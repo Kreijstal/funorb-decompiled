@@ -185,7 +185,7 @@ final class DiskCacheWorker implements Runnable {
             if (var6 < 0) {
               var5 = var5 + OctaveNoiseMap.field_o;
             } else {
-              var7 = lp.a(SpriteScrollBar.field_h[var4], true, false);
+              var7 = TextWidthSupport.measureTextWidth(SpriteScrollBar.field_h[var4], true, false);
               var5 = var5 + QuickChatPhrase.field_w;
               var8 = bt.field_g - (var7 >> 1);
               if (mu.a(param2, jg.field_k + (FullscreenFocusCanvas.field_b << 1), param1, -LoginForm.field_E + var8, 5138823, (LoginForm.field_E << 1) + var7, var5)) {

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oq extends KeyedLoginCredentials {
+final class AlternateKeyedLoginCredentials extends KeyedLoginCredentials {
     static String field_j;
     static ClientConnectionState field_m;
     static RgbSprite[] activeStructureShadows;
     static String field_k;
 
-    oq(long param0, String param1) {
+    AlternateKeyedLoginCredentials(long param0, String param1) {
         super(param0, param1);
     }
 
@@ -19,7 +19,7 @@ final class oq extends KeyedLoginCredentials {
           activeStructureShadows = null;
           return;
         }
-        oq.releaseStatics(-38);
+        AlternateKeyedLoginCredentials.releaseStatics(-38);
         field_m = null;
         field_j = null;
         activeStructureShadows = null;
