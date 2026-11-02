@@ -8,7 +8,7 @@ final class sc {
     private String field_f;
     static byte[][] field_e;
     static ob field_h;
-    static mo field_d;
+    static BufferedSocket field_d;
     static String field_a;
     static String field_c;
 

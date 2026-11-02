@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cp extends com.ms.dll.Callback {
+final class NativeWindowCallback extends com.ms.dll.Callback {
     private volatile boolean field_a;
     private int field_d;
     private volatile int field_e;
@@ -112,7 +112,7 @@ final class cp extends com.ms.dll.Callback {
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
     }
 
-    cp() {
+    NativeWindowCallback() {
         this.field_a = true;
     }
 

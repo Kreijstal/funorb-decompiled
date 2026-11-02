@@ -23,7 +23,7 @@ final class ia implements eb {
           String stackIn_16_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (cb.field_p.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_p.startsWith("win") &&
               la.a(param1, -31451)) {
               return;
             }

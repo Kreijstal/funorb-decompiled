@@ -9,7 +9,7 @@ final class NodeHashTableIterator implements Iterator {
     private IterableNodeHashTable field_g;
     private int field_b;
     private IntrusiveNode field_d;
-    static mo field_e;
+    static BufferedSocket field_e;
     static int field_f;
 
     public final Object next() {

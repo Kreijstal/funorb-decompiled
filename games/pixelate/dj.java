@@ -12,7 +12,7 @@ final class dj {
             jl var5 = (jl) null;
             dj.a((byte) -124, (jl) null, (jl) null, -15);
           }
-          wb.field_c = param3;
+          MouseInputHandler.field_c = param3;
           bg.field_j = param2;
           ma.field_y = param1;
           op.b(SoftwareRasterizer.field_d / 2, SoftwareRasterizer.field_j / 2, true);

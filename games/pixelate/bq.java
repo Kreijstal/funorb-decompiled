@@ -57,7 +57,7 @@ final class bq {
           sm.field_l = true;
           CanvasRasterBuffer.field_h = param2;
           if (CanvasRasterBuffer.field_h == 0) {
-            var3_int = qn.a(l.field_t, wb.field_c, kc.field_p, -128, bg.field_j);
+            var3_int = qn.a(l.field_t, MouseInputHandler.field_c, kc.field_p, -128, bg.field_j);
             var4 = var3_int + 3;
             fo.field_a = new int[var4];
             vm.field_e = new String[var4];
@@ -76,7 +76,7 @@ final class bq {
             fo.field_a[-1 + var4] = 1;
             jj.field_h[1] = 5;
           } else if (CanvasRasterBuffer.field_h == 1) {
-            var3_int = qn.a(l.field_t, wb.field_c, kc.field_p, -102, bg.field_j);
+            var3_int = qn.a(l.field_t, MouseInputHandler.field_c, kc.field_p, -102, bg.field_j);
             var4 = 2 + var3_int;
             fo.field_a = new int[var4];
             vm.field_e = new String[var4];
@@ -94,9 +94,9 @@ final class bq {
           } else if (CanvasRasterBuffer.field_h != 2) {
             if (3 == CanvasRasterBuffer.field_h) {
               if (!mc.field_k.field_x) {
-                var3_int = qn.a(mn.field_a, wb.field_c, kc.field_p, -120, bg.field_j);
+                var3_int = qn.a(mn.field_a, MouseInputHandler.field_c, kc.field_p, -120, bg.field_j);
               } else {
-                var3_int = qn.a(el.field_c, wb.field_c, kc.field_p, -115, bg.field_j);
+                var3_int = qn.a(el.field_c, MouseInputHandler.field_c, kc.field_p, -115, bg.field_j);
               }
               var4 = 2 + var3_int;
               fo.field_a = new int[var4];
@@ -113,7 +113,7 @@ final class bq {
               fo.field_a[var4 - 1] = 0;
               jj.field_h[0] = 5;
             } else if (CanvasRasterBuffer.field_h == 4) {
-              var3_int = qn.a(l.field_o, wb.field_c, kc.field_p, -118, bg.field_j);
+              var3_int = qn.a(l.field_o, MouseInputHandler.field_c, kc.field_p, -118, bg.field_j);
               var4 = 2 + var3_int;
               vm.field_e = new String[var4];
               fo.field_a = new int[var4];
@@ -132,7 +132,7 @@ final class bq {
               if (CanvasRasterBuffer.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = qn.a(CanvasRasterBuffer.field_k, wb.field_c, kc.field_p, -118, bg.field_j);
+              var3_int = qn.a(CanvasRasterBuffer.field_k, MouseInputHandler.field_c, kc.field_p, -118, bg.field_j);
               var4 = var3_int + 3;
               fo.field_a = new int[var4];
               vm.field_e = new String[var4];
@@ -152,7 +152,7 @@ final class bq {
               jj.field_h[1] = 5;
             }
           } else {
-            var3_int = qn.a(sd.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), wb.field_c, kc.field_p, -128, bg.field_j);
+            var3_int = qn.a(sd.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, kc.field_p, -128, bg.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(kc.field_p[var5])) {
@@ -168,7 +168,7 @@ final class bq {
             qb.a(kc.field_p, 0, df.field_r, 0, var4);
             uk.field_r = new String[-1 + (var3_int - var4)];
             qb.a(kc.field_p, var4 + 1, uk.field_r, 0, var3_int + (-var4 - 1));
-            var3_int = qn.a(sd.a(oj.field_R, 44, new String[]{"<br><%0><br>"}), wb.field_c, kc.field_p, -106, bg.field_j);
+            var3_int = qn.a(sd.a(oj.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, kc.field_p, -106, bg.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(kc.field_p[var5])) {
@@ -273,18 +273,18 @@ final class bq {
             return;
           }
           ib.field_g = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + qe.field_u;
-          wb.field_b = (ko.field_fb + bd.field_c << 1) * mj.field_c.field_h;
+          MouseInputHandler.field_b = (ko.field_fb + bd.field_c << 1) * mj.field_c.field_h;
           ko.field_cb = -(var3_intLifetime1 >> 1) + qe.field_u;
           for (var4Lifetime2 = 0; var4Lifetime2 < vm.field_e.length; var4Lifetime2++) {
-            stackIn_115_0 = wb.field_b;
+            stackIn_115_0 = MouseInputHandler.field_b;
             if (fo.field_a[var4Lifetime2] < 0) {
               stackIn_116_1 = hq.field_r;
             } else {
               stackIn_116_1 = gk.field_fb;
             }
-            wb.field_b = stackIn_115_0 + stackIn_116_1;
+            MouseInputHandler.field_b = stackIn_115_0 + stackIn_116_1;
           }
-          de.field_h = bb.field_b - (wb.field_b >> 1);
+          de.field_h = bb.field_b - (MouseInputHandler.field_b >> 1);
           so.field_c = new int[vm.field_e.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = de.field_h;

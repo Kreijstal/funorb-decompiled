@@ -274,7 +274,7 @@ final class fh extends ch implements pn, vo {
         int var5 = 200;
         this.b(var2, 80);
         var3 += 50;
-        var3 = var3 + (5 + this.a((byte) 52, var3, na.field_a, this.field_O, mo.field_i, 170));
+        var3 = var3 + (5 + this.a((byte) 52, var3, na.field_a, this.field_O, BufferedSocket.field_i, 170));
         this.field_P.a(var5, (byte) 49, var3, 496 - var5 >> 1, 40);
         this.field_N.a(60, (byte) 38, 15 + var3, 3 + var4, 40);
         this.field_N.field_n = (fn) (this);

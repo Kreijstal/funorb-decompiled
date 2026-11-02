@@ -41,11 +41,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (cb.field_o != null) {
-                var1 = cb.field_o.toLowerCase();
+              if (PlatformTaskDispatcher.field_o != null) {
+                var1 = PlatformTaskDispatcher.field_o.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   -1 != ((String) (var1)).indexOf("apple")) {
-                  var2 = cb.field_l;
+                  var2 = PlatformTaskDispatcher.field_l;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -87,8 +87,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (cb.field_l != null))) {
-                stackIn_68_0 = cb.field_l.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskDispatcher.field_l != null))) {
+                stackIn_68_0 = PlatformTaskDispatcher.field_l.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -97,8 +97,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (cb.field_l.length() > var1_int) {
-                    var3 = cb.field_l.charAt(var1_int);
+                  if (PlatformTaskDispatcher.field_l.length() > var1_int) {
+                    var3 = PlatformTaskDispatcher.field_l.charAt(var1_int);
                     stackIn_81_0 = ~var3;
                     stackIn_81_1 = -49;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -125,7 +125,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (null != bd.field_b) {
                   var1 = bd.field_b;
                 }
-                var2_ref = cb.field_j;
+                var2_ref = PlatformTaskDispatcher.field_j;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -307,7 +307,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     final void a(int param0, byte param1, int param2, int param3, int param4, String param5, int param6) {
         try {
-          cb dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_24_0 = null;
           StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
@@ -337,7 +337,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               jh.field_M = param4;
               mc.field_m = 0;
               qm.field_L = ao.a(13867);
-              dupTemp$0 = new cb(param6, param5, param3, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param6, param5, param3, true);
               mc.field_k = dupTemp$0;
               fp.field_c = dupTemp$0;
               var8 = mc.field_k.a(1, (Runnable) (this), (byte) -123);

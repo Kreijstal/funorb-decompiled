@@ -48,7 +48,7 @@ final class od extends ak {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1, int param2, cb param3) {
+    final static void a(int param0, PacketBuffer param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;

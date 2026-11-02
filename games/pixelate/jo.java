@@ -25,7 +25,7 @@ final class jo implements eb {
 
     final static void a(int param0, String param1, Throwable param2) {
         try {
-          cb stackIn_15_0;
+          PlatformTaskDispatcher stackIn_15_0;
           int stackIn_15_1;
           java.net.URL stackIn_15_2;
           java.net.URL stackIn_15_3;
@@ -82,7 +82,7 @@ final class jo implements eb {
               stackIn_16_3 = null;
               stackIn_16_6 = ui.field_c;
             }
-            var4 = ((cb) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, ((StringBuilder) (Object) stackIn_15_5).append(stackIn_16_6).append("&v1=").append(cb.field_o).append("&v2=").append(cb.field_l).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, ((StringBuilder) (Object) stackIn_15_5).append(stackIn_16_6).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_l).append("&e=").append(var10).toString()));
             while (0 == var4.field_b) {
               vg.a(1L, (byte) 23);
             }

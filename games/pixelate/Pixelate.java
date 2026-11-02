@@ -459,7 +459,7 @@ public final class Pixelate extends lb {
         vi.e(-97);
         ho.b(11799);
         jj.b(-4136);
-        rp.a(-1);
+        KeyboardInputHandler.a(-1);
         vf.a(-109);
         vd.a(70);
         qh.a(param0 - 22862);
@@ -468,7 +468,7 @@ public final class Pixelate extends lb {
         ClientException.a(true);
         GameApplet.b(true);
         ll.a((byte) -57);
-        wb.a(-116);
+        MouseInputHandler.a(-116);
         MouseWheelHandler.a(false);
         SoftwareRasterizer.e();
         fm.a(-34);
@@ -498,7 +498,7 @@ public final class Pixelate extends lb {
         gm.a(-1);
         am.a((byte) -125);
         uo.b(127);
-        mo.a((byte) -84);
+        BufferedSocket.a((byte) -84);
         IntrusiveNode.d(-3);
         SpriteState.a((byte) -114);
         DualLinkNode.a(-2575);
@@ -1718,8 +1718,8 @@ public final class Pixelate extends lb {
         oo.field_c[21] = bi.a("basic", "achievement21", pf.field_d, (byte) -39);
         pj.field_a = bi.a("basic", "unachieved", qn.field_l, (byte) -86);
         var6 = bi.a("basic", "orbcoin", qn.field_l, (byte) -32);
-        rp.a((byte) -59, pj.field_a);
-        rp.a((byte) -59, var6);
+        KeyboardInputHandler.a((byte) -59, pj.field_a);
+        KeyboardInputHandler.a((byte) -59, var6);
         vn.field_c = new Sprite(16, 16);
         vn.field_c.c();
         var6.a(0, 0, 16, 16);
@@ -1760,14 +1760,14 @@ public final class Pixelate extends lb {
         if (param0 != -18528) {
           Pixelate.a(false, (byte) -93, -109, true, 5, -125, 20);
         }
-        eh.field_a = wb.a(3, (byte) 124);
-        pf.field_d = wb.a(5, (byte) 124);
-        hd.field_c = wb.a(6, (byte) 124);
-        ji.field_b = wb.a(7, (byte) 124);
-        PacketBuffer.field_p = wb.a(8, (byte) 124);
-        ab.field_f = wb.a(9, (byte) 124);
-        lj.field_c = wb.a(10, (byte) 124);
-        uk.field_u = wb.a(11, (byte) 124);
+        eh.field_a = MouseInputHandler.a(3, (byte) 124);
+        pf.field_d = MouseInputHandler.a(5, (byte) 124);
+        hd.field_c = MouseInputHandler.a(6, (byte) 124);
+        ji.field_b = MouseInputHandler.a(7, (byte) 124);
+        PacketBuffer.field_p = MouseInputHandler.a(8, (byte) 124);
+        ab.field_f = MouseInputHandler.a(9, (byte) 124);
+        lj.field_c = MouseInputHandler.a(10, (byte) 124);
+        uk.field_u = MouseInputHandler.a(11, (byte) 124);
         ho.a(-29810);
     }
 

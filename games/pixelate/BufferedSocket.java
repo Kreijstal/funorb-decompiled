@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class mo implements Runnable {
+final class BufferedSocket implements Runnable {
     static int field_k;
     static String field_i;
     private OutputStream field_j;
     private ei field_m;
-    private cb field_e;
+    private PlatformTaskDispatcher field_e;
     private int field_n;
     private int field_l;
     private boolean field_a;
@@ -114,7 +114,7 @@ final class mo implements Runnable {
         }
     }
 
-    mo(java.net.Socket param0, cb param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -278,7 +278,7 @@ final class mo implements Runnable {
         field_i = null;
         field_b = null;
         if (param0 > -55) {
-          mo.a((byte) 57);
+          BufferedSocket.a((byte) 57);
         }
     }
 
@@ -286,7 +286,7 @@ final class mo implements Runnable {
         this.b(-1);
     }
 
-    private mo(java.net.Socket param0, cb param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_n = 0;
         this.field_a = false;
         this.field_c = 0;

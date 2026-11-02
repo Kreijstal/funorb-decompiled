@@ -7,7 +7,7 @@ final class wn extends rf {
     static ak field_t;
     static int field_u;
     static int field_r;
-    private mo field_s;
+    private BufferedSocket field_s;
     static int[] field_q;
 
     final void e(byte param0) {
@@ -59,7 +59,7 @@ final class wn extends rf {
               }
               this.field_s = null;
             }
-            this.field_s = (mo) (param0);
+            this.field_s = (BufferedSocket) (param0);
             this.e(0);
             this.a((byte) 73, param1);
             this.field_g.position = 0;

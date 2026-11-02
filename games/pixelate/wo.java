@@ -144,7 +144,7 @@ final class wo {
         }
     }
 
-    final static FullscreenFocusCanvas a(cb param0, int param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

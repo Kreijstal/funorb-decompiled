@@ -218,7 +218,7 @@ final class hq extends de {
     }
 
     final void a(boolean param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
-        this.field_u = !param1 ? qj.field_c : wb.field_a;
+        this.field_u = !param1 ? qj.field_c : MouseInputHandler.field_a;
         this.field_G = 1;
         this.field_x = param5;
         this.field_y = sd.a(lj.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});

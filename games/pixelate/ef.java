@@ -3,7 +3,7 @@
  */
 final class ef {
     static String field_c;
-    static cb field_e;
+    static PlatformTaskDispatcher field_e;
     static boolean field_a;
     static int field_b;
     static int field_g;

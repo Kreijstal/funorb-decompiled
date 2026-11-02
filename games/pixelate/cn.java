@@ -50,7 +50,7 @@ final class cn {
           var8 = param4.a(-30491);
           var11_ref_StringLifetime1 = var8;
           if (null == NodeHashTableIterator.field_e &&
-            !wb.a(0, false)) {
+            !MouseInputHandler.a(0, false)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }

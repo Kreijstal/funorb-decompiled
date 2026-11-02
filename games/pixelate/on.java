@@ -49,7 +49,7 @@ final class on extends hb {
             return stackIn_9_0;
           }
           if (param0 == 4) {
-            stackIn_12_0 = sd.a(rp.field_b, 85, new String[]{param1});
+            stackIn_12_0 = sd.a(KeyboardInputHandler.field_b, 85, new String[]{param1});
             return stackIn_12_0;
           }
           if (param0 == 5) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fj {
-    static wb field_c;
+    static MouseInputHandler field_c;
     static int field_a;
     static int field_b;
 
@@ -146,6 +146,6 @@ final class fj {
     }
 
     static {
-        field_c = new wb();
+        field_c = new MouseInputHandler();
     }
 }

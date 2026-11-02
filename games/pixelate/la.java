@@ -164,7 +164,7 @@ final class la {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           try {
-            if (!cb.field_p.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_p.startsWith("win")) {
               return false;
             }
             if (param1 != -31451) {

@@ -7,7 +7,7 @@ final class op extends de {
     static String field_w;
     static String field_t;
     static String field_q;
-    static cb field_p;
+    static PlatformTaskDispatcher field_p;
     private int field_u;
     static int field_s;
     private int field_o;
@@ -353,7 +353,7 @@ final class op extends de {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0 != 260) {
-            field_p = (cb) null;
+            field_p = (PlatformTaskDispatcher) null;
           }
           ja.a();
           ai.field_x = 11;

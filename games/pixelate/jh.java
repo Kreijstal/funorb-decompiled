@@ -203,7 +203,7 @@ final class jh extends ch implements vo {
         this.field_J.a(var3, (byte) 103, -(2 * var2) + (this.field_C - 78), this.field_E - var3 >> 1, 30);
         this.field_N.field_n = (fn) (this);
         this.field_J.field_n = (fn) (this);
-        this.field_J.field_l = rp.field_a;
+        this.field_J.field_l = KeyboardInputHandler.field_a;
         this.field_L.field_n = (fn) (this);
         this.field_L.field_l = up.field_q;
         this.b(this.field_N, 80);

@@ -136,7 +136,7 @@ final class jf {
             return stackIn_9_0;
           }
           if (CanvasRasterBuffer.a(param0, (byte) 37)) {
-            stackIn_13_0 = sd.a(mo.field_b, 34, new String[]{param0});
+            stackIn_13_0 = sd.a(BufferedSocket.field_b, 34, new String[]{param0});
             return stackIn_13_0;
           }
           if (f.field_q >= 100 &&

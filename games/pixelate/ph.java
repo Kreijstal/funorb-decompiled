@@ -45,7 +45,7 @@ final class ph extends IntrusiveNode {
               }
             }
             if (rb.field_q == 2) {
-              sc.field_d = new mo((java.net.Socket) (se.field_o.field_e), ef.field_e);
+              sc.field_d = new BufferedSocket((java.net.Socket) (se.field_o.field_e), ef.field_e);
               var2 = new PacketBuffer(13);
               al.a(ql.field_o, (byte) 66, ak.field_ib, var2, lk.field_n);
               var2.writeByte(160, 15);

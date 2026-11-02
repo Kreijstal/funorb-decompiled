@@ -87,7 +87,7 @@ final class pl extends ch implements om, vo, pn {
         var3 = var3 + (5 + this.a(mp.field_d, this.field_L, 20, 170, var3, 126, ""));
         var3 = var3 + this.a(vk.field_qb, -86, this.field_V, 170, var3);
         var3 = var3 + (5 + this.a(pb.field_i, var3, this.field_X, 35, 170, r.field_b));
-        var3 = var3 + (this.a(na.field_a, var3, this.field_U, 35, 170, mo.field_i) + 5);
+        var3 = var3 + (this.a(na.field_a, var3, this.field_U, 35, 170, BufferedSocket.field_i) + 5);
         var3 = var3 + this.a((byte) 85, 170, this.field_Q, var3, rl.field_O);
         qp var4 = new qp(46, var3, this.field_E - 90, 25, this.field_T, true, this.field_E - 120, 5, ep.field_b, 11579568, CanvasRasterBuffer.field_j);
         this.b(var4, 80);

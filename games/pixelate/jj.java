@@ -66,7 +66,7 @@ class jj {
         ul.field_q = param2;
     }
 
-    final static bo[] a(cb param0, int param1) {
+    final static bo[] a(PlatformTaskDispatcher param0, int param1) {
         int var5 = 0;
         bo[] stackIn_3_0 = null;
         bo[] stackIn_7_0 = null;

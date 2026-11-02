@@ -92,7 +92,7 @@ class uc implements eb, af {
         }
     }
 
-    final static java.awt.Frame a(cb param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_7_0 = null;

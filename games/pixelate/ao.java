@@ -10,7 +10,7 @@ final class ao implements Runnable {
     static int field_d;
     volatile boolean field_a;
     volatile boolean field_f;
-    cb field_g;
+    PlatformTaskDispatcher field_g;
     volatile mm[] field_h;
     static String field_b;
 

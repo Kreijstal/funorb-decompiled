@@ -1574,7 +1574,7 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime126 = hb.a("puzzlecomplete", (byte) 103);
           if (null != var2Lifetime126) {
-            wb.field_a = of.a(var2Lifetime126, 1);
+            MouseInputHandler.field_a = of.a(var2Lifetime126, 1);
           }
           var2Lifetime127 = hb.a("puzzlefailed", (byte) -63);
           if (var2Lifetime127 != null) {
@@ -1804,7 +1804,7 @@ final class be extends ch implements hi, vo {
           }
           this.field_J.field_l = rm.field_c;
           if (null != this.field_Q) {
-            this.field_Q.field_l = rp.field_a;
+            this.field_Q.field_l = KeyboardInputHandler.field_a;
           }
           if (!this.field_I) {
             if (this.field_K) {

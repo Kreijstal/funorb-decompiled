@@ -59,7 +59,7 @@ final class bl {
         if (!param0) {
           bl.b(-26);
         }
-        return wb.field_b;
+        return MouseInputHandler.field_b;
     }
 
     final static MouseWheelHandler a(int param0) {

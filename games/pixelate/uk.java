@@ -168,7 +168,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_x_left_lobby", 0);
                 if (var2 != null) {
-                  rp.field_b = of.a(var2, 1);
+                  KeyboardInputHandler.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_x_lost_con", param0 ^ 31873);
                 if (var2 != null) {
@@ -1398,7 +1398,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_displayname", param0 ^ 31873);
                 if (null != var2) {
-                  mo.field_i = of.a(var2, 1);
+                  BufferedSocket.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("create_password", 0);
                 if (null != var2) {
@@ -1494,7 +1494,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("login_create_tooltip", param0 - 31873);
                 if (null != var2) {
-                  rp.field_a = of.a(var2, 1);
+                  KeyboardInputHandler.field_a = of.a(var2, 1);
                 }
                 var2 = vd.a("login_justplay_tooltip", param0 - 31873);
                 if (null != var2) {
@@ -1694,7 +1694,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("friendlistdupe", 0);
                 if (null != var2) {
-                  mo.field_b = of.a(var2, 1);
+                  BufferedSocket.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("friendnotfound", param0 ^ 31873);
                 if (null != var2) {

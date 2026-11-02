@@ -298,7 +298,7 @@ abstract class lb extends GameApplet {
         }
         if (hf.field_q == 1) {
           if (0 != wo.field_d) {
-            hn.field_e = wb.a(il.field_f, (byte) 124);
+            hn.field_e = MouseInputHandler.a(il.field_f, (byte) 124);
           }
           wk.field_j = vm.a(true, (byte) 22, false, wg.field_e, 1);
           io.field_g = vm.a(true, (byte) 22, false, lo.field_Hb, 1);
@@ -356,7 +356,7 @@ abstract class lb extends GameApplet {
         }
         if (hf.field_q == 10) {
           if (wo.field_d != 0) {
-            lf.field_f = wb.a(ro.field_c, (byte) 124);
+            lf.field_f = MouseInputHandler.a(ro.field_c, (byte) 124);
           }
           hf.field_q = 11;
         }
@@ -409,7 +409,7 @@ abstract class lb extends GameApplet {
         }
         pf.b(wo.field_d, -31383);
         l.a(false, wo.field_d, 5000, this.field_v, this.field_u, this.field_s, this.field_w, param0, 5000, param1, this.field_y, this.field_q, this.field_B, mc.field_k);
-        rp.a(this.field_u, param0, wo.field_d, this.field_y, mc.field_k, this.field_q, this.field_w, -21462, this.field_B);
+        KeyboardInputHandler.a(this.field_u, param0, wo.field_d, this.field_y, mc.field_k, this.field_q, this.field_w, -21462, this.field_B);
         qf.a(31171);
         gp.field_Lb = bl.a(71);
         he.a(0, ec.field_u);

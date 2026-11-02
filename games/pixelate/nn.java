@@ -267,7 +267,7 @@ final class nn {
             var14 = var6[var9];
             hh[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = wb.a(var5[var9], false, var19[var11_int]);
+              var14[var11_int] = MouseInputHandler.a(var5[var9], false, var19[var11_int]);
             }
           }
           var9Lifetime1 = var17.field_E;

@@ -235,7 +235,7 @@ final class oh {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, byte param4, java.awt.Component param5, cb param6, vi param7) {
+    final static void a(int param0, int param1, boolean param2, int param3, byte param4, java.awt.Component param5, PlatformTaskDispatcher param6, vi param7) {
         try {
           if (param4 > -91) {
             oh.a('ﾢ', 24);

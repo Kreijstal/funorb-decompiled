@@ -7,11 +7,11 @@ final class mc extends IntrusiveNode {
     boolean field_p;
     int field_s;
     int[] field_l;
-    static rp field_r;
+    static KeyboardInputHandler field_r;
     static String field_t;
     static String field_n;
     static int field_m;
-    static cb field_k;
+    static PlatformTaskDispatcher field_k;
     static String field_o;
     static long field_q;
 
@@ -407,7 +407,7 @@ final class mc extends IntrusiveNode {
     }
 
     static {
-        field_r = new rp();
+        field_r = new KeyboardInputHandler();
         field_t = "Please enter your age in years";
         field_n = "Private";
         field_o = "Updates will sent to the email address you've given";

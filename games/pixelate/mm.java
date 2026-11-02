@@ -165,7 +165,7 @@ class mm {
         param0.field_m = param1;
     }
 
-    final static mm a(cb param0, java.awt.Component param1, int param2, int param3) {
+    final static mm a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           je var4 = null;
           Throwable var4_ref = null;

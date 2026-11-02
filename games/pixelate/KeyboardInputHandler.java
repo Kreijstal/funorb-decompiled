@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_b;
     static String field_a;
 
@@ -47,12 +47,12 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, cb param4, int param5, String param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, String param6, int param7, int param8) {
         try {
           kj.field_s = param3;
           if (param7 != -21462) {
             String var10 = (String) null;
-            rp.a(117, 59, -61, 116, (cb) null, -123, (String) null, 58, -63);
+            KeyboardInputHandler.a(117, 59, -61, 116, (PlatformTaskDispatcher) null, -123, (String) null, 58, -63);
           }
           fj.field_a = param0;
           bl.field_e = param6;

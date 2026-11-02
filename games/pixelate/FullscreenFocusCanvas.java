@@ -10,7 +10,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     volatile boolean field_g;
     static String field_c;
 
-    final void a(int param0, cb param1) {
+    final void a(int param0, PlatformTaskDispatcher param1) {
         try {
           dc.a((byte) -124, this.field_f, param1);
           if (param0 != 6511) {

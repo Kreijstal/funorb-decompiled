@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class wb implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int field_b;
     static int field_c;
     static String field_a;
@@ -64,7 +64,7 @@ final class wb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             uk.field_s = jm.field_q;
           } else {
             try {
-              NodeHashTableIterator.field_e = new mo((java.net.Socket) (ra.field_b.field_e), op.field_p);
+              NodeHashTableIterator.field_e = new BufferedSocket((java.net.Socket) (ra.field_b.field_e), op.field_p);
               aa.field_f.position = 0;
               var4 = vi.field_o;
               var5 = var4;
@@ -137,7 +137,7 @@ final class wb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public static void a(int param0) {
         field_a = null;
         if (param0 >= -43) {
-          wb.a(48, true);
+          MouseInputHandler.a(48, true);
         }
     }
 

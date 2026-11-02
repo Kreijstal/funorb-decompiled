@@ -144,7 +144,7 @@ final class mi extends de {
           var9 = Pixelate.field_H ? 1 : 0;
           try {
             if (null == NodeHashTableIterator.field_e &&
-              !wb.a(0, param4)) {
+              !MouseInputHandler.a(0, param4)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -235,9 +235,9 @@ final class mi extends de {
                 vi.field_o.f(255);
                 vi.field_o.f(255);
                 vi.field_o.readInt(0);
-                mo.field_k = vi.field_o.a((byte) -115);
-                dc.field_b = new byte[mo.field_k];
-                for (var8 = 0; mo.field_k > var8; var8++) {
+                BufferedSocket.field_k = vi.field_o.a((byte) -115);
+                dc.field_b = new byte[BufferedSocket.field_k];
+                for (var8 = 0; BufferedSocket.field_k > var8; var8++) {
                   dc.field_b[var8] = vi.field_o.a(0);
                 }
               }

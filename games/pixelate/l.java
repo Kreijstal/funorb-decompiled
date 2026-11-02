@@ -37,8 +37,8 @@ final class l extends de {
 
     final static void b(int param0, boolean param1) {
         if (param0 != 19854) {
-          cb var3 = (cb) null;
-          l.a(false, -75, -15, true, 99, -28L, (String) null, -112, -64, true, 118, -87, 71, (cb) null);
+          PlatformTaskDispatcher var3 = (PlatformTaskDispatcher) null;
+          l.a(false, -75, -15, true, 99, -28L, (String) null, -112, -64, true, 118, -87, 71, (PlatformTaskDispatcher) null);
           if (tm.a((byte) 127)) {
             param1 = false;
           }
@@ -87,7 +87,7 @@ final class l extends de {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, long param5, String param6, int param7, int param8, boolean param9, int param10, int param11, int param12, cb param13) {
+    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, long param5, String param6, int param7, int param8, boolean param9, int param10, int param11, int param12, PlatformTaskDispatcher param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -97,7 +97,7 @@ final class l extends de {
           Throwable decompiledCaughtException = null;
           IOException var15 = null;
           RuntimeException var15_ref = null;
-          cb var16 = null;
+          PlatformTaskDispatcher var16 = null;
           try {
             vi.field_o = new pc(param8);
             aa.field_f = new pc(param2);
@@ -113,8 +113,8 @@ final class l extends de {
             ii.field_B = param6;
             gd.field_g = param10;
             if (param0) {
-              var16 = (cb) null;
-              l.a(false, 22, 99, false, -71, -71L, (String) null, 37, -83, false, -70, -34, 80, (cb) null);
+              var16 = (PlatformTaskDispatcher) null;
+              l.a(false, 22, 99, false, -71, -71L, (String) null, 37, -83, false, -70, -34, 80, (PlatformTaskDispatcher) null);
             }
             if (null == op.field_p.field_e) {
               return;

@@ -157,7 +157,7 @@ final class fm {
         }
     }
 
-    final static void a(cb param0, Object param1, byte param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, byte param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -267,7 +267,7 @@ final class fm {
 
     final byte[] a(int param0, int param1, boolean param2) {
         if (!param2) {
-          fm.a((cb) null, this.field_c[0], ((byte[]) (((Object[]) (this.field_c[0]))[1]))[2]);
+          fm.a((PlatformTaskDispatcher) null, this.field_c[0], ((byte[]) (((Object[]) (this.field_c[0]))[1]))[2]);
         }
         return this.a(-1, (int[]) null, param1, param0);
     }
@@ -646,7 +646,7 @@ final class fm {
         try {
           if (param0 != 63) {
             var3 = (Object) null;
-            fm.a((cb) null, (Object) null, (byte) 25);
+            fm.a((PlatformTaskDispatcher) null, (Object) null, (byte) 25);
           }
           stackIn_3_0 = f.a(param1, (byte) -70, false);
           return stackIn_3_0;

@@ -1124,7 +1124,7 @@ final class ii {
           this.field_a.field_d.field_d == 4) {
           var4.a(param0 - 77, var8.i(-122));
         }
-        wb.b(5);
+        MouseInputHandler.b(5);
         if (null != aa.field_p &&
           aa.field_p.field_n &&
           aa.field_p.field_r != null) {

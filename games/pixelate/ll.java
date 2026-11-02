@@ -13,7 +13,7 @@ final class ll implements Runnable {
     static String field_k;
     static String field_p;
     static Sprite[] field_m;
-    private cb field_h;
+    private PlatformTaskDispatcher field_h;
     private PacketBuffer field_l;
     static String field_f;
     private DataInputStream field_o;
@@ -211,7 +211,7 @@ final class ll implements Runnable {
         }
     }
 
-    ll(cb param0, java.net.URL param1, int param2) {
+    ll(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_h = param0;
           this.field_b = param1;
