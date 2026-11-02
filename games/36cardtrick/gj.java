@@ -42,7 +42,7 @@ final class gj implements Runnable {
             }
             var9.field_i = var9.field_i + 4;
             if (var9.e(-1)) {
-              var8.c(96);
+              var8.unlink(96);
               return;
             }
             mc.a((byte) -125);
@@ -66,7 +66,7 @@ final class gj implements Runnable {
             mc.a((byte) -128);
             return;
           }
-          var4_ref_rh.c(122);
+          var4_ref_rh.unlink(122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "36cardtrick": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/36cardtrick"
+      },
+      "inputTreeSha256": "9b00eb3e786cad9d1609bd25c61e0bf6f08b492948e98a2e3642c56f4b17def5",
+      "sources": {
+        "files": 295,
+        "sha256": "fbf880a1e2cfca33323e240c802a02ecbe72001ea58bb492a7a38ce13b22c83b"
+      },
+      "dictionary": {
+        "path": "decompilation/36cardtrick-naming.json",
+        "sha256": "cd2ae82c2f7ab5148f0ffa913c3d3b5f40df78ea55873e586133c77aa7e020b8"
+      },
+      "readingGuide": {
+        "path": "games/36cardtrick/README.md",
+        "sha256": "6610c0080011456c4631164e40d40596f9c58a8f54f71ffcb0d092d2363f8017"
+      },
+      "rulesSha256": "1f9b0035c5d51762796b8418d0e58cced7ae73cb657534d0b298191b3095f890",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -10614,6 +10638,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 295,
+          "sha256": "fbf880a1e2cfca33323e240c802a02ecbe72001ea58bb492a7a38ce13b22c83b"
         }
       },
       "aceofskies": {

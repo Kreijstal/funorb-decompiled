@@ -89,7 +89,7 @@ final class me {
           var21Lifetime2 = jb.field_m;
           var22Lifetime2 = jb.field_g;
           var23Lifetime2 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (param4.field_C > var23Lifetime2) {
               var24Lifetime1 = param4.field_r[var23Lifetime2];
               var25Lifetime1 = param4.field_b[var23Lifetime2];
@@ -172,7 +172,7 @@ final class me {
                   stackIn_67_0 = var18;
                   stackIn_67_1 = ve.field_d.length;
                   if (var30 != 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                   if (stackIn_67_0 >= stackIn_67_1) {
                     break;

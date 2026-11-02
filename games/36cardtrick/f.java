@@ -50,7 +50,7 @@ final class f {
             for (var7 = 0; var5 > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.f(-126) << (bc.a(var7, 3) << 8));
             }
-            var4.c(106);
+            var4.unlink(106);
             return;
           }
           if (1 != var2) {
@@ -72,7 +72,7 @@ final class f {
             mc.a((byte) -128);
             return;
           }
-          var5_ref_gh.c(param0 ^ -99);
+          var5_ref_gh.unlink(param0 ^ -99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

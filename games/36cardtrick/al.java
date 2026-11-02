@@ -17,7 +17,7 @@ final class al {
             pc.field_a.d(false);
             return;
           }
-          var1 = qb.field_b;
+          var1 = IntrusiveNode.field_b;
           if (var1 > 0) {
             if (var1 == 1) {
               rk.field_ab = dh.field_g;
@@ -35,7 +35,7 @@ final class al {
         if (ei.field_e) {
           pc.field_a.d(false);
         } else {
-          var1 = qb.field_b;
+          var1 = IntrusiveNode.field_b;
           if (var1 > 0) {
             if (var1 == 1) {
               rk.field_ab = dh.field_g;

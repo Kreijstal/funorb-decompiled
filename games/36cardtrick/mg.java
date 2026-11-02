@@ -338,7 +338,7 @@ final class mg {
               }
             }
             var4_ref_uh.field_o = true;
-            var4_ref_uh.c(104);
+            var4_ref_uh.unlink(104);
             return;
           }
           if (1 == var2) {
@@ -357,7 +357,7 @@ final class mg {
               return;
             }
             var6.field_h = var4;
-            var6.c(83);
+            var6.unlink(83);
             return;
           }
           k.a((Throwable) null, (byte) -101, "HS1: " + aj.a((byte) 92));

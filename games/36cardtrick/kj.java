@@ -290,7 +290,7 @@ class kj extends cj {
         this.field_y = -1;
         this.field_G = -1;
         try {
-          this.field_e = param0;
+          this.key = param0;
           this.a(param1, 1);
           if (param6 != null) {
             this.field_Z = param6;

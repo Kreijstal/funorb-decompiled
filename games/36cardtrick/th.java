@@ -27,7 +27,7 @@ final class th {
         if (!ri.b((byte) 64)) {
           return true;
         }
-        if (qb.field_b <= 0) {
+        if (IntrusiveNode.field_b <= 0) {
           return false;
         }
         if (!c.b(true)) {

@@ -57,7 +57,7 @@ final class uc extends pe {
             0 == param2 &&
             !var12.field_o &&
             var12.field_n) {
-            var12.c(98);
+            var12.unlink(98);
             var4 = null;
           }
           if (var4 == null) {
@@ -95,7 +95,7 @@ final class uc extends pe {
                 var4 = this.field_v.a(true, -1640279264, param1, (byte) 2, this.field_d);
               }
             }
-            this.field_n.a((long)param1, (byte) 69, (qb) (var4));
+            this.field_n.a((long)param1, (byte) 69, (IntrusiveNode) (var4));
           }
           if (((la) (var4)).field_n) {
             stackIn_40_0 = null;
@@ -137,7 +137,7 @@ final class uc extends pe {
                   this.field_t[param1] = (byte) 1;
                 }
                 if (!((la) (var4)).field_o) {
-                  ((la) (var4)).c(param0 ^ 34);
+                  ((la) (var4)).unlink(param0 ^ 34);
                 }
                 stackIn_77_0 = var4;
                 return (la) (stackIn_77_0);
@@ -147,11 +147,11 @@ final class uc extends pe {
               decompiledCaughtException = decompiledCaughtParameter1;
               var6_ref = (Exception) (Object) decompiledCaughtException;
               this.field_t[param1] = (byte)-1;
-              ((la) (var4)).c(param0 ^ 7);
+              ((la) (var4)).unlink(param0 ^ 7);
               if (((la) (var4)).field_o &&
                 !this.field_v.a(false)) {
                 var4 = this.field_v.a(true, -1640279264, param1, (byte) 2, this.field_d);
-                this.field_n.a((long)param1, (byte) 79, (qb) (var4));
+                this.field_n.a((long)param1, (byte) 79, (IntrusiveNode) (var4));
               }
               stackIn_86_0 = null;
               return (la) (stackIn_86_0);
@@ -188,11 +188,11 @@ final class uc extends pe {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (RuntimeException) (Object) decompiledCaughtException;
             this.field_v.c((byte) 0);
-            ((la) (var4)).c(82);
+            ((la) (var4)).unlink(82);
             if (((la) (var4)).field_o &&
               !this.field_v.a(false)) {
               var4 = this.field_v.a(true, -1640279264, param1, (byte) 2, this.field_d);
-              this.field_n.a((long)param1, (byte) 110, (qb) (var4));
+              this.field_n.a((long)param1, (byte) 110, (IntrusiveNode) (var4));
             }
             stackIn_117_0 = null;
             return (la) (stackIn_117_0);
@@ -206,7 +206,7 @@ final class uc extends pe {
             }
           }
           if (!((la) (var4)).field_o) {
-            ((la) (var4)).c(83);
+            ((la) (var4)).unlink(83);
           }
           stackIn_127_0 = var4;
           return (la) (stackIn_127_0);
@@ -319,7 +319,7 @@ final class uc extends pe {
         la discarded$0 = null;
         la discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
-        qb var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -336,11 +336,11 @@ final class uc extends pe {
           }
           var2 = this.field_e.a((byte) 74);
           while (var2 != null) {
-            var3 = (int)var2.field_e;
+            var3 = (int)var2.key;
             if (var3 >= 0) {
               if (var3 < this.field_l.field_b) {
                 if (this.field_l.field_q[var3] == 0) {
-                  var2.c(109);
+                  var2.unlink(109);
                 } else {
                   if (0 == this.field_t[var3]) {
                     discarded$0 = this.a((byte) 124, var3, 1);
@@ -349,14 +349,14 @@ final class uc extends pe {
                     discarded$1 = this.a((byte) 124, var3, 2);
                   }
                   if (this.field_t[var3] == 1) {
-                    var2.c(85);
+                    var2.unlink(85);
                   }
                 }
               } else {
-                var2.c(109);
+                var2.unlink(109);
               }
             } else {
-              var2.c(109);
+              var2.unlink(109);
             }
             var2 = this.field_e.b((byte) -99);
           }
@@ -378,12 +378,12 @@ final class uc extends pe {
         int var2_int = 0;
         la var2_ref = null;
         RuntimeException var2_ref2 = null;
-        qb var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         int var5 = 0;
-        qb var6 = null;
-        qb var7 = null;
-        qb var3Lifetime1;
+        IntrusiveNode var6 = null;
+        IntrusiveNode var7 = null;
+        IntrusiveNode var3Lifetime1;
         int var2_intLifetime1;
         int var4Lifetime1;
         var2 = null;
@@ -398,14 +398,14 @@ final class uc extends pe {
               var2_int = 1;
               var3 = this.field_j.a((byte) 74);
               while (var3 != null) {
-                var4 = (int)var3.field_e;
+                var4 = (int)var3.key;
                 if (this.field_t[var4] == 0) {
                   discarded$1 = this.a((byte) 124, var4, 1);
                 }
                 if (this.field_t[var4] == 0) {
                   var2_int = 0;
                 } else {
-                  var3.c(98);
+                  var3.unlink(98);
                 }
                 var3 = this.field_j.b((byte) -101);
               }
@@ -419,8 +419,8 @@ final class uc extends pe {
                     discarded$0 = this.a((byte) 124, this.field_c, 1);
                   }
                   if (this.field_t[this.field_c] == 0) {
-                    var7 = new qb();
-                    var7.field_e = (long)this.field_c;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_c;
                     var2_int = 0;
                     this.field_j.a(var7, param0 + 30390);
                   }
@@ -441,14 +441,14 @@ final class uc extends pe {
                 var2_intLifetime1 = 1;
                 var3Lifetime1 = this.field_j.a((byte) 74);
                 while (var3Lifetime1 != null) {
-                  var4Lifetime1 = (int)var3Lifetime1.field_e;
+                  var4Lifetime1 = (int)var3Lifetime1.key;
                   if (1 != this.field_t[var4Lifetime1]) {
                     discarded$3 = this.a((byte) 124, var4Lifetime1, 2);
                   }
                   if (this.field_t[var4Lifetime1] != 1) {
                     var2_intLifetime1 = 0;
                   } else {
-                    var3Lifetime1.c(124);
+                    var3Lifetime1.unlink(124);
                   }
                   var3Lifetime1 = this.field_j.b((byte) -104);
                 }
@@ -462,8 +462,8 @@ final class uc extends pe {
                       discarded$2 = this.a((byte) 124, this.field_c, 2);
                     }
                     if (this.field_t[this.field_c] != 1) {
-                      var6 = new qb();
-                      var6.field_e = (long)this.field_c;
+                      var6 = new IntrusiveNode();
+                      var6.key = (long)this.field_c;
                       this.field_j.a(var6, 27362);
                       var2_intLifetime1 = 0;
                     }
@@ -493,7 +493,7 @@ final class uc extends pe {
                   if (!var2_ref.field_o) {
                     throw new RuntimeException();
                   }
-                  var2_ref.c(86);
+                  var2_ref.unlink(86);
                 } else {
                   var2_ref.field_l = true;
                 }
@@ -691,7 +691,7 @@ final class uc extends pe {
             return (byte[]) (stackIn_2_0);
           }
           var4 = var3.b(param1);
-          var3.c(109);
+          var3.unlink(109);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

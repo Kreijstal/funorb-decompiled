@@ -46,10 +46,10 @@ final class wf {
             wf.a((byte) -32, (java.applet.Applet) null);
           }
           while (var2 != null) {
-            if (var2.field_i.b(-115)) {
+            if (var2.field_i.isLinked(-115)) {
               var2.field_h.f(mf.field_i * var2.field_j / 80);
             } else {
-              var2.c(103);
+              var2.unlink(103);
             }
             var2 = (gi) (aj.field_s.b((byte) -111));
           }

@@ -246,9 +246,9 @@ public final class Main extends c {
           if (param0 != -97283608) {
             return;
           }
-          L1: {
-            L2: {
-              L3: {
+          regionExit1: {
+            regionExit2: {
+              regionExit3: {
                 boolean decompiledFrameRemainder3 = true;
                 boolean decompiledFrameRemainder2 = true;
                 boolean decompiledFrameRemainder1 = true;
@@ -269,14 +269,14 @@ public final class Main extends c {
                     var3 != 0))) {
                     switch (var2_int) {
                       case 4:
-                        break L3;
+                        break regionExit3;
                       case 5:
-                        break L2;
+                        break regionExit2;
                       default:
                         return;
                       case 6:
                         if (var3 == 0) {
-                          break L1;
+                          break regionExit1;
                         }
                         break;
                     }
@@ -864,14 +864,14 @@ public final class Main extends c {
               stackIn_26_0 = 4;
             }
             var4 = stackIn_26_0;
-            L9: while (true) {
+            scanLoop1: while (true) {
               if (var4 >= 0) {
                 stackIn_49_0 = 5;
                 if (var8 != 0) {
-                  break L9;
+                  break scanLoop1;
                 }
                 var5Lifetime1 = stackIn_49_0;
-                L12: while (true) {
+                scanLoop2: while (true) {
                   stackIn_31_0 = -1;
                   stackIn_31_1 = ~var5Lifetime1;
                   if (stackIn_31_0 >= stackIn_31_1) {
@@ -894,12 +894,12 @@ public final class Main extends c {
                       var2[incrementValue$3] = (short) var6Lifetime1;
                     }
                     var5Lifetime1--;
-                    continue L12;
+                    continue scanLoop2;
                   }
                   break;
                 }
                 var4--;
-                continue L9;
+                continue scanLoop1;
               }
               this.field_Y = var2[sj.a(10999, var3, uh.field_l)];
               stackIn_49_0 = 118;
@@ -1189,14 +1189,14 @@ public final class Main extends c {
           if (param2 <= 101) {
             field_G = -54;
           }
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var3_int < 50) {
               stackIn_15_0 = null;
               stackOut_7_1 = param1.field_e.peekEvent();
               stackIn_15_1 = stackOut_7_1;
               stackIn_8_1 = stackOut_7_1;
               if (var4 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_15_0 != stackIn_8_1) {
                 wk.a((byte) -107, 1L);
@@ -1806,7 +1806,7 @@ public final class Main extends c {
           }
           var11 = new kc(1, 40);
           var12_int = 0;
-          L7: while (var12_int < vj.field_l) {
+          scanLoop1: while (var12_int < vj.field_l) {
             var13_int = 0;
             while (true) {
               if (10 > var13_int) {
@@ -1830,7 +1830,7 @@ public final class Main extends c {
               break;
             }
             if (var46 == 0) {
-              continue L7;
+              continue scanLoop1;
             }
             break;
           }
@@ -2661,7 +2661,7 @@ public final class Main extends c {
             var5_ref_kf = (kf) (jl.field_e.a((byte) 74));
             if (var5_ref_kf != null &&
               var3 > var5_ref_kf.field_g) {
-              var5_ref_kf.c(119);
+              var5_ref_kf.unlink(119);
               al.field_a = var5_ref_kf.field_i.length;
               rd.field_j.field_i = 0;
               var6_int = 0;
@@ -2679,7 +2679,7 @@ public final class Main extends c {
               return true;
             }
           }
-          L4: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (0 > vd.field_u) {
               rd.field_j.field_i = 0;
@@ -2724,7 +2724,7 @@ public final class Main extends c {
                 break;
               }
               if (var8 == 0) {
-                continue L4;
+                continue scanLoop1;
               }
             }
             break;

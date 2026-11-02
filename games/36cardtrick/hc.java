@@ -359,7 +359,7 @@ final class hc {
                 }
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param3 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -375,7 +375,7 @@ final class hc {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = (16711680 & fb.field_e[6] << 16) + (fb.field_e[7] << 8 & 65280) + (fb.field_e[8] & 255);
                         var13 = 255 & fb.field_e[9];
@@ -391,7 +391,7 @@ final class hc {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = ((255 & fb.field_e[0]) << 8) + (fb.field_e[1] & 255);
                         var12 = ((255 & fb.field_e[2]) << 8) + (255 & fb.field_e[3]);

@@ -4,27 +4,27 @@
 import java.util.*;
 
 final class ed implements Iterable {
-    private qb field_d;
+    private IntrusiveNode field_d;
     static int[] field_e;
     static int field_c;
     int field_a;
-    qb[] field_b;
+    IntrusiveNode[] field_b;
 
-    final void a(int param0, long param1, qb param2) {
-        qb var5 = null;
+    final void a(int param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param2.field_a) {
-            param2.c(83);
+          if (null != param2.previous) {
+            param2.unlink(83);
           }
           var5 = this.field_b[(int)(param1 & (long)(-1 + this.field_a))];
-          param2.field_d = var5;
-          param2.field_a = var5.field_a;
+          param2.next = var5;
+          param2.previous = var5.previous;
           if (param0 >= -94) {
-            this.field_d = (qb) null;
+            this.field_d = (IntrusiveNode) null;
           }
-          param2.field_a.field_d = param2;
-          param2.field_d.field_a = param2;
-          param2.field_e = param1;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
+          param2.key = param1;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ed.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -34,28 +34,28 @@ final class ed implements Iterable {
         return (Iterator) ((Object) new il(this));
     }
 
-    final qb a(byte param0, long param1) {
+    final IntrusiveNode a(byte param0, long param1) {
         int var4;
-        qb var5;
-        qb var6;
+        IntrusiveNode var5;
+        IntrusiveNode var6;
         int var7;
         var7 = Main.field_T;
         var4 = -24 / ((21 - param0) / 48);
         var5 = this.field_b[(int)((long)(-1 + this.field_a) & param1)];
-        this.field_d = var5.field_d;
+        this.field_d = var5.next;
         while (true) {
           if (var5 == this.field_d) {
             this.field_d = null;
             return null;
           }
-          if (this.field_d.field_e != param1) {
-            this.field_d = this.field_d.field_d;
+          if (this.field_d.key != param1) {
+            this.field_d = this.field_d.next;
             continue;
           }
           break;
         }
         var6 = this.field_d;
-        this.field_d = this.field_d.field_d;
+        this.field_d = this.field_d.next;
         return var6;
     }
 

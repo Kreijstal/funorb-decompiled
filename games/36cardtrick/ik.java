@@ -573,7 +573,7 @@ final class ik extends m {
           field_f = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_b; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_I[var8Lifetime1] != -2) {
               var9 = this.field_j[var8Lifetime1];
               var10 = this.field_R[var8Lifetime1];
@@ -620,7 +620,7 @@ final class ik extends m {
                       var28 = field_n[var27];
                       if (var28 == 64) {
                         if (field_f == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_f;
                         field_f = field_f + 1;
@@ -635,7 +635,7 @@ final class ik extends m {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
                 this.a(ll.field_d + jb.field_m, cc.field_a + jb.field_g, field_k[var9], field_k[var10], field_k[var11], var12, var13, var14_int)) {
@@ -662,7 +662,7 @@ final class ik extends m {
                     var16Lifetime2 = field_n[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_f == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_f;
                       field_f = field_f + 1;

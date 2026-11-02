@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class lk extends qb {
+class lk extends IntrusiveNode {
     static bk field_g;
     String field_n;
     int field_m;

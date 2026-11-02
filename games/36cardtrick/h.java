@@ -80,8 +80,8 @@ final class h extends hl {
             bi.field_d = 200;
             var1 = (gi) (aj.field_s.a((byte) 74));
             while (var1 != null) {
-              if (!var1.field_i.b(125)) {
-                var1.c(84);
+              if (!var1.field_i.isLinked(125)) {
+                var1.unlink(84);
               }
               var1 = (gi) (aj.field_s.b((byte) -92));
             }
@@ -216,7 +216,7 @@ final class h extends hl {
     }
 
     final static void a(int param0, int param1) {
-        qb.field_f = 1000000000L / (long)param1;
+        IntrusiveNode.field_f = 1000000000L / (long)param1;
         if (param0 != -17685) {
           h.a(-3, 103);
         }

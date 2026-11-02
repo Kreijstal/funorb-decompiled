@@ -48,7 +48,7 @@ final class va implements Iterable {
         if (param0 != 22018) {
           return 36;
         }
-        return (int)(1000000000L / qb.field_f);
+        return (int)(1000000000L / IntrusiveNode.field_f);
     }
 
     private va() throws Throwable {

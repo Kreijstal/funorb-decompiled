@@ -20,7 +20,7 @@ final class qj extends je {
           this.e();
           param0.field_h = this;
           param0.b();
-          this.a(this.field_m.field_a.field_d, param0);
+          this.a(this.field_m.field_a.next, param0);
           return;
         }
         throw new RuntimeException();
@@ -68,10 +68,10 @@ final class qj extends je {
     }
 
     private final void c(sf param0) {
-        param0.c(107);
+        param0.unlink(107);
         param0.a();
         param0.field_h = null;
-        qb var2 = this.field_m.field_a.field_d;
+        IntrusiveNode var2 = this.field_m.field_a.next;
         if (var2 == this.field_m.field_a) {
           this.field_l = -1;
         } else {
@@ -110,7 +110,7 @@ final class qj extends je {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_g = var5;
-              this.a(var3.field_d, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_g = 0;
               this.c(var3);
@@ -120,21 +120,21 @@ final class qj extends je {
         return;
     }
 
-    private final void a(qb param0, sf param1) {
+    private final void a(IntrusiveNode param0, sf param1) {
         while (true) {
           if (param0 == this.field_m.field_a) {
             ce.a(param0, 0, param1);
-            this.field_l = ((sf) (this.field_m.field_a.field_d)).field_g;
+            this.field_l = ((sf) (this.field_m.field_a.next)).field_g;
             return;
           }
           if (((sf) (param0)).field_g <= param1.field_g) {
-            param0 = param0.field_d;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         ce.a(param0, 0, param1);
-        this.field_l = ((sf) (this.field_m.field_a.field_d)).field_g;
+        this.field_l = ((sf) (this.field_m.field_a.next)).field_g;
         return;
     }
 
@@ -166,7 +166,7 @@ final class qj extends je {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_g = var7;
-              this.a(var5.field_d, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_g = 0;
               this.c(var5);
@@ -177,7 +177,7 @@ final class qj extends je {
     }
 
     final synchronized void a(je param0) {
-        param0.c(104);
+        param0.unlink(104);
     }
 
     public qj() {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends qb {
+final class rh extends IntrusiveNode {
     int field_i;
     static int field_k;
     static String field_g;
@@ -126,7 +126,7 @@ final class rh extends qb {
           }
           var6.field_gb = var4_ref_StringLifetime1;
           var6.field_cb = (String) (var3Lifetime1);
-          var6.c(82);
+          var6.unlink(82);
           var7 = (aa) (kh.field_c.a((byte) 74));
           while (null != var7) {
             if (rl.a((byte) 127, var7, var6)) {
@@ -203,10 +203,10 @@ final class rh extends qb {
           }
           var6 = 0;
           var7 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var3_int > var7) {
               if (var9 != 0) {
-                break L1;
+                break scanLoop1;
               }
               var8 = var6;
               while (param0 != param1.charAt(var8)) {
@@ -217,7 +217,7 @@ final class rh extends qb {
               var4[incrementValue$1] = param1.substring(var6, var8);
               var6 = 1 + var8;
               var7++;
-              continue L1;
+              continue scanLoop1;
             }
             var4[var3_int] = param1.substring(var6);
             break;

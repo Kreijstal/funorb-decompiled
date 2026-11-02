@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rc extends qb {
+final class rc extends IntrusiveNode {
     boolean field_j;
     int[] field_p;
     int field_h;

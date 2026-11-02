@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gi extends qb {
+final class gi extends IntrusiveNode {
     int field_j;
     static String field_g;
-    qb field_i;
+    IntrusiveNode field_i;
     li field_h;
 
     public static void a(int param0) {
@@ -147,7 +147,7 @@ final class gi extends qb {
         }
     }
 
-    gi(li param0, qb param1) {
+    gi(li param0, IntrusiveNode param1) {
         try {
           this.field_h = param0;
           this.field_j = param0.g();

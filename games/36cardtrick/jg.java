@@ -11,13 +11,13 @@ final class jg extends je {
           return;
         }
         param0 = param0 - this.field_l;
-        this.field_k.field_d = this.field_d;
-        this.field_k.field_a = this.field_a;
+        this.field_k.next = this.next;
+        this.field_k.previous = this.previous;
         this.field_l = 0;
-        this.field_a.field_d = (qb) ((Object) this.field_k);
-        this.field_d.field_a = (qb) ((Object) this.field_k);
-        this.field_a = null;
-        this.field_d = null;
+        this.previous.next = (IntrusiveNode) ((Object) this.field_k);
+        this.next.previous = (IntrusiveNode) ((Object) this.field_k);
+        this.previous = null;
+        this.next = null;
         if (0 < param0) {
           this.field_k.a(param0);
         }
@@ -52,13 +52,13 @@ final class jg extends je {
           }
           param1 = param1 + this.field_l;
           param2 = param2 - this.field_l;
-          this.field_k.field_a = this.field_a;
-          this.field_k.field_d = this.field_d;
+          this.field_k.previous = this.previous;
+          this.field_k.next = this.next;
           this.field_l = 0;
-          this.field_a.field_d = (qb) ((Object) this.field_k);
-          this.field_d.field_a = (qb) ((Object) this.field_k);
-          this.field_a = null;
-          this.field_d = null;
+          this.previous.next = (IntrusiveNode) ((Object) this.field_k);
+          this.next.previous = (IntrusiveNode) ((Object) this.field_k);
+          this.previous = null;
+          this.next = null;
           if (param2 <= 0) {
             return;
           }

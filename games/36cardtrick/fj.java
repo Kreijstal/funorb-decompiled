@@ -296,7 +296,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    de.field_c = ag.field_b.a(qb.field_f, -127);
+                    de.field_c = ag.field_b.a(IntrusiveNode.field_f, -127);
                     stackIn_102_0 = 0;
                   }
                   var3 = stackIn_102_0;

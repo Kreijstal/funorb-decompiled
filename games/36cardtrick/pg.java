@@ -98,7 +98,7 @@ final class pg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null) {
-            param1.c(109);
+            param1.unlink(109);
             param1.d(param0 ^ 103);
             this.field_e = this.field_e + param1.field_k;
           }
@@ -155,7 +155,7 @@ final class pg {
         }
         Object var5 = var7.e(param1);
         if (var5 == null) {
-          var7.c(100);
+          var7.unlink(100);
           var7.d(12);
           this.field_e = this.field_e + var7.field_k;
           return null;
@@ -166,10 +166,10 @@ final class pg {
           return var5;
         }
         tf var6 = new tf(var5, var7.field_k);
-        this.field_c.a(-96, var7.field_e, var6);
+        this.field_c.a(-96, var7.key, var6);
         this.field_g.a(-82, var6);
         ((pd) ((Object) var6)).field_j = 0L;
-        var7.c(105);
+        var7.unlink(105);
         var7.d(12);
         return var5;
     }

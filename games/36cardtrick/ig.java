@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ig extends qb {
+final class ig extends IntrusiveNode {
     private static wj[] field_t;
     private boolean field_v;
     private int field_n;

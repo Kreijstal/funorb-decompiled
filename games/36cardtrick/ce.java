@@ -75,7 +75,7 @@ final class ce extends java.awt.Canvas {
             var2.e((byte) 124);
             var2.e((byte) 124);
             var2.e((byte) 126);
-            var1.c(96);
+            var1.unlink(96);
             return;
           }
           mc.a((byte) -128);
@@ -87,7 +87,7 @@ final class ce extends java.awt.Canvas {
           var2Lifetime1.e((byte) 124);
           var2Lifetime1.e((byte) 124);
           var2Lifetime1.e((byte) 126);
-          var1.c(96);
+          var1.unlink(96);
           return;
         }
         mc.a((byte) -128);
@@ -101,18 +101,18 @@ final class ce extends java.awt.Canvas {
         }
     }
 
-    final static void a(qb param0, int param1, qb param2) {
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         try {
           if (param1 != 0) {
             field_b = 70;
           }
-          if (null != param2.field_a) {
-            param2.c(112);
+          if (null != param2.previous) {
+            param2.unlink(112);
           }
-          param2.field_d = param0;
-          param2.field_a = param0.field_a;
-          param2.field_a.field_d = param2;
-          param2.field_d.field_a = param2;
+          param2.next = param0;
+          param2.previous = param0.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ce.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

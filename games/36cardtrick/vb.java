@@ -4,19 +4,19 @@
 final class vb {
     private int field_d;
     static bk field_e;
-    private qb field_i;
-    private qb field_g;
+    private IntrusiveNode field_i;
+    private IntrusiveNode field_g;
     static int[] field_a;
     private int field_j;
-    private qb[] field_f;
+    private IntrusiveNode[] field_f;
     static int field_b;
     static kc field_k;
     static ej field_h;
     static bk field_c;
 
-    final qb b(int param0) {
+    final IntrusiveNode b(int param0) {
         if (param0 >= -31) {
-          return (qb) null;
+          return (IntrusiveNode) null;
         }
         this.field_j = 0;
         return this.a(true);
@@ -33,19 +33,19 @@ final class vb {
         field_h = null;
     }
 
-    final qb a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int var3;
-        qb var4;
-        qb var5;
-        qb var36;
-        qb var37;
-        qb var38;
-        qb var39;
-        qb var42;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var36;
+        IntrusiveNode var37;
+        IntrusiveNode var38;
+        IntrusiveNode var39;
+        IntrusiveNode var42;
         var3 = Main.field_T;
         if (param0) {
           if (this.field_j <= 0) {
@@ -55,15 +55,15 @@ final class vb {
               }
               fieldTemp$1 = this.field_j;
               this.field_j = this.field_j + 1;
-              var4 = this.field_f[fieldTemp$1].field_d;
+              var4 = this.field_f[fieldTemp$1].next;
               var38 = var4;
             } while (var4 == this.field_f[this.field_j - 1]);
-            this.field_i = var38.field_d;
+            this.field_i = var38.next;
             return var38;
           }
           if (this.field_f[this.field_j - 1] != this.field_i) {
             var42 = this.field_i;
-            this.field_i = var42.field_d;
+            this.field_i = var42.next;
             return var42;
           }
           do {
@@ -72,13 +72,13 @@ final class vb {
             }
             fieldTemp$0 = this.field_j;
             this.field_j = this.field_j + 1;
-            var4 = this.field_f[fieldTemp$0].field_d;
+            var4 = this.field_f[fieldTemp$0].next;
             var39 = var4;
           } while (var4 == this.field_f[this.field_j - 1]);
-          this.field_i = var39.field_d;
+          this.field_i = var39.next;
           return var39;
         }
-        this.field_g = (qb) null;
+        this.field_g = (IntrusiveNode) null;
         if (this.field_j <= 0) {
           do {
             if (this.field_j >= this.field_d) {
@@ -86,15 +86,15 @@ final class vb {
             }
             fieldTemp$3 = this.field_j;
             this.field_j = this.field_j + 1;
-            var4 = this.field_f[fieldTemp$3].field_d;
+            var4 = this.field_f[fieldTemp$3].next;
             var5 = var4;
           } while (var4 == this.field_f[this.field_j - 1]);
-          this.field_i = var5.field_d;
+          this.field_i = var5.next;
           return var5;
         }
         if (this.field_f[this.field_j - 1] != this.field_i) {
           var36 = this.field_i;
-          this.field_i = var36.field_d;
+          this.field_i = var36.next;
           return var36;
         }
         do {
@@ -103,30 +103,30 @@ final class vb {
           }
           fieldTemp$2 = this.field_j;
           this.field_j = this.field_j + 1;
-          var4 = this.field_f[fieldTemp$2].field_d;
+          var4 = this.field_f[fieldTemp$2].next;
           var37 = var4;
         } while (var4 == this.field_f[this.field_j - 1]);
-        this.field_i = var37.field_d;
+        this.field_i = var37.next;
         return var37;
     }
 
-    final void a(long param0, byte param1, qb param2) {
-        qb var5 = null;
+    final void a(long param0, byte param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          if (param2.field_a != null) {
-            param2.c(106);
+          if (param2.previous != null) {
+            param2.unlink(106);
           }
           var5 = this.field_f[(int)((long)(-1 + this.field_d) & param0)];
-          param2.field_d = var5;
-          param2.field_a = var5.field_a;
-          param2.field_a.field_d = param2;
-          param2.field_d.field_a = param2;
-          param2.field_e = param0;
+          param2.next = var5;
+          param2.previous = var5.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
+          param2.key = param0;
           if (param1 < 24) {
             this.a(true);
           }
@@ -156,65 +156,65 @@ final class vb {
         p.field_k = -1;
     }
 
-    final qb a(boolean param0, long param1) {
-        qb var4;
-        qb var5;
+    final IntrusiveNode a(boolean param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
-        qb var7;
-        qb var4Lifetime1;
-        qb var5Lifetime1;
+        IntrusiveNode var7;
+        IntrusiveNode var4Lifetime1;
+        IntrusiveNode var5Lifetime1;
         var6 = Main.field_T;
         if (!param0) {
           var4 = this.field_f[(int)(param1 & (long)(this.field_d - 1))];
-          this.field_g = var4.field_d;
+          this.field_g = var4.next;
           while (true) {
             if (var4 == this.field_g) {
               this.field_g = null;
               return null;
             }
-            if (~this.field_g.field_e != ~param1) {
-              this.field_g = this.field_g.field_d;
+            if (~this.field_g.key != ~param1) {
+              this.field_g = this.field_g.next;
               continue;
             }
             break;
           }
           var5 = this.field_g;
-          this.field_g = this.field_g.field_d;
+          this.field_g = this.field_g.next;
           return var5;
         }
-        var7 = (qb) null;
-        this.a(47L, (byte) 72, (qb) null);
+        var7 = (IntrusiveNode) null;
+        this.a(47L, (byte) 72, (IntrusiveNode) null);
         var4Lifetime1 = this.field_f[(int)(param1 & (long)(this.field_d - 1))];
-        this.field_g = var4Lifetime1.field_d;
+        this.field_g = var4Lifetime1.next;
         while (true) {
           if (var4Lifetime1 == this.field_g) {
             this.field_g = null;
             return null;
           }
-          if (~this.field_g.field_e != ~param1) {
-            this.field_g = this.field_g.field_d;
+          if (~this.field_g.key != ~param1) {
+            this.field_g = this.field_g.next;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_g;
-        this.field_g = this.field_g.field_d;
+        this.field_g = this.field_g.next;
         return var5Lifetime1;
     }
 
     vb(int param0) {
         int var2 = 0;
-        qb dupTemp$1 = null;
-        qb var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_j = 0;
-        this.field_f = new qb[param0];
+        this.field_f = new IntrusiveNode[param0];
         this.field_d = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new qb();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_f[var2] = dupTemp$1;
-          var3.field_d = var3;
-          var3.field_a = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 
