@@ -152,7 +152,7 @@ final class uv extends k {
           if (param0 < 113) {
             return false;
           }
-          if (lca.field_s != 0 &&
+          if (DisableEvent.field_s != 0 &&
             0 > hd.field_m) {
             var4_ref_bs = (bs) (mba.field_c.b((byte) 90));
             if (var4_ref_bs != null &&
@@ -173,17 +173,17 @@ final class uv extends k {
           while (true) {
             if (hd.field_m < 0) {
               ig.field_m.position = 0;
-              if (!ii.b(1, 0)) {
+              if (!CreatureEvent.b(1, 0)) {
                 return false;
               }
               hd.field_m = ig.field_m.readCipheredByte(694);
               ig.field_m.position = 0;
               dw.field_f = param1[hd.field_m];
             }
-            if (!u.d((byte) -67)) {
+            if (!StickyEvent.d((byte) -67)) {
               return false;
             }
-            if (0 == lca.field_s) {
+            if (0 == DisableEvent.field_s) {
               f.field_b = ef.field_l;
               ef.field_l = bd.field_j;
               bd.field_j = ri.field_a;
@@ -191,7 +191,7 @@ final class uv extends k {
               hd.field_m = -1;
               return true;
             }
-            var4 = lca.field_s;
+            var4 = DisableEvent.field_s;
             if (0.0 != nla.field_d) {
               var4 = (int)((double)var4 + ia.field_k.nextGaussian() * nla.field_d);
               if (var4 < 0) {

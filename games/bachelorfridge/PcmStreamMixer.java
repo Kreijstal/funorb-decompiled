@@ -145,7 +145,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void a(IntrusiveNode param0, lea param1) {
         while (true) {
           if (param0 == this.field_m.field_g) {
-            nr.$cfr$intArgs$a$94cfdbf41ae0(115, param0, param1);
+            RageAnimation.$cfr$intArgs$a$94cfdbf41ae0(115, param0, param1);
             this.field_j = ((lea) (this.field_m.field_g.next)).field_f;
             return;
           }
@@ -155,7 +155,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        nr.$cfr$intArgs$a$94cfdbf41ae0(115, param0, param1);
+        RageAnimation.$cfr$intArgs$a$94cfdbf41ae0(115, param0, param1);
         this.field_j = ((lea) (this.field_m.field_g.next)).field_f;
         return;
     }

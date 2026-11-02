@@ -146,7 +146,7 @@ final class pr {
         var4 = BachelorFridge.field_y;
         try {
           TriangleRasterizer.d();
-          ima.field_s = 11;
+          TeleportEvent.field_s = 11;
           qk.field_m = new int[260];
           if (param0 > -21) {
             return;

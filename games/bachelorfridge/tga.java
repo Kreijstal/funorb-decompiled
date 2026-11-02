@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tga extends jm {
+class tga extends BoardChange {
     int field_o;
     static sna field_p;
     int field_n;
@@ -31,13 +31,13 @@ class tga extends jm {
         }
     }
 
-    void a(boolean param0, op param1) {
+    void a(boolean param0, BattleState param1) {
         int var3_int = 0;
         try {
           if (param0) {
             tga.a(-106);
           }
-          var3_int = param1.field_L.field_o[this.field_n][this.field_o].field_n;
+          var3_int = param1.field_L.field_o[this.field_n][this.field_o].terrain;
           if (param1.field_L.field_o[this.field_n][this.field_o].field_a != -1 &&
             param1.field_L.field_o[this.field_n][this.field_o].field_a < 9) {
             var3_int = param1.field_L.field_o[this.field_n][this.field_o].field_a + 6;

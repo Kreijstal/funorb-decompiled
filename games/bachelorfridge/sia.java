@@ -90,7 +90,7 @@ final class sia extends kj {
           var22 = null;
           var12 = BachelorFridge.field_y;
           try {
-            var13 = (fka) (fd.field_z.b((byte) 90));
+            var13 = (fka) (AirstrikeAnimation.field_z.b((byte) 90));
             var18 = var13;
             if (var18 == null) {
               return;

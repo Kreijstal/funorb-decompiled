@@ -191,7 +191,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + jm.a(param1.length(), -56, this.position, var4, this.payload, 0);
+          this.position = this.position + BoardChange.a(param1.length(), -56, this.position, var4, this.payload, 0);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -365,7 +365,7 @@ class PacketBuffer extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = uga.a(mp.a(param0, true), 120);
+          var2 = FullHealAnimation.a(MassPoisonSpecial.a(param0, true), 120);
           if (var2 == null) {
             var2 = "";
           }
@@ -1618,7 +1618,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + jm.a(param0.length(), -113, this.position, var4, this.payload, 0);
+          this.position = this.position + BoardChange.a(param0.length(), -113, this.position, var4, this.payload, 0);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;

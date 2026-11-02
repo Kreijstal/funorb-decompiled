@@ -11,8 +11,8 @@ final class nl {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ii.a(-104, (java.awt.Component) ((Object) param0));
-          jba.a(-30229, (java.awt.Component) ((Object) param0));
+          CreatureEvent.a(-104, (java.awt.Component) ((Object) param0));
+          HailAnimation.a(-30229, (java.awt.Component) ((Object) param0));
           if (null != sd.field_c) {
             sd.field_c.a((java.awt.Component) ((Object) param0), (byte) -126);
           }
@@ -51,7 +51,7 @@ final class nl {
         }
         try {
           if (null == hp.field_d) {
-            hp.field_d = new hga(gja.field_m, at.field_i);
+            hp.field_d = new hga(gja.field_m, AnimationNode.field_i);
             gja.field_m.a((wj) (hp.field_d), (byte) 124);
           }
           hp.field_d.a(50, param2, param0, param1);

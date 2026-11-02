@@ -93,7 +93,7 @@ final class ama extends k {
                     }
                   }
                 } else {
-                  this.field_n[var4_int] = (vo) ((Object) ch.a(false, param1));
+                  this.field_n[var4_int] = (vo) ((Object) BagpipeSpecial.a(false, param1));
                 }
               } else {
                 this.field_n[var4_int] = (vo) ((Object) pka.a(param1, false));
@@ -150,7 +150,7 @@ final class ama extends k {
         try {
           var3_int = hh.field_d;
           var4 = bi.field_g;
-          tma.a(param1, -5);
+          SplitAnimation.a(param1, -5);
           bm.a(it.field_r, 0, wp.field_r, -14702, 0);
           if (this.field_n != null) {
             for (var5 = 0; var5 < this.field_n.length; var5++) {

@@ -17,11 +17,11 @@ final class qla extends kj {
         RuntimeException decompiledCaughtException = null;
         try {
           var13 = new sna(0L, (sna) null);
-          var13.field_eb = sma.a((byte) -85, param12, param0);
-          var13.field_A = sma.a((byte) 119, param1, param5);
-          var13.field_db = sma.a((byte) -38, param3, param9);
-          var13.field_K = sma.a((byte) -115, param8, param10);
-          var13.field_X = sma.a((byte) 73, param4, param11);
+          var13.field_eb = GasCloudAnimation.a((byte) -85, param12, param0);
+          var13.field_A = GasCloudAnimation.a((byte) 119, param1, param5);
+          var13.field_db = GasCloudAnimation.a((byte) -38, param3, param9);
+          var13.field_K = GasCloudAnimation.a((byte) -115, param8, param10);
+          var13.field_X = GasCloudAnimation.a((byte) 73, param4, param11);
           var13.field_jb = param7;
           var13.field_gb = param2;
           if (param6 != -24) {
@@ -78,7 +78,7 @@ final class qla extends kj {
 
     final static void d(int param0) {
         IntrusiveDeque.f(31883);
-        nm.f(-21522);
+        StampedeAnimation.f(-21522);
         uc.b(-103);
         if (param0 != -64) {
           field_g = (Sprite[]) null;

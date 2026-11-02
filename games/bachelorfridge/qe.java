@@ -29,7 +29,7 @@ final class qe {
         this.field_f = dda.field_j;
         this.field_j.a(this.field_b, (byte) 19, this.field_m);
         daa.field_vb = false;
-        FullscreenFocusCanvas var2 = GameKeyHandler.a(true, this.field_m, 0, this.field_b, ju.field_r, 0);
+        FullscreenFocusCanvas var2 = GameKeyHandler.a(true, this.field_m, 0, this.field_b, DiveBomberEvent.field_r, 0);
         if (var2 == null) {
           this.a(true);
         }

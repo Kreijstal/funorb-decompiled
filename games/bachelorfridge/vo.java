@@ -25,8 +25,8 @@ abstract class vo {
         field_c = null;
     }
 
-    final static pp a(int param0, PacketBuffer param1) {
-        nq var2 = null;
+    final static EventEffect a(int param0, PacketBuffer param1) {
+        CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -43,7 +43,7 @@ abstract class vo {
           }
           var4 = param1.b(true);
           stackIn_3_0 = new lia(var2, var3, var4);
-          return (pp) ((Object) stackIn_3_0);
+          return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

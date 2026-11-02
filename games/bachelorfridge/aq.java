@@ -24,7 +24,7 @@ final class aq {
 
     final static void a(int param0, int param1) {
         int var3 = BachelorFridge.field_y;
-        tla.d(param1 ^ 92);
+        AirstrikeEvent.d(param1 ^ 92);
         if (0 != param0) {
           if (param0 == 1) {
             cr.field_c = PcmSampleStream.createWithVolume(wt.field_m[1], 256, 96);

@@ -55,8 +55,8 @@ class DualLinkNode extends IntrusiveNode {
         return false;
     }
 
-    final static pp a(PacketBuffer param0, int param1) {
-        nq var2 = null;
+    final static EventEffect a(PacketBuffer param0, int param1) {
+        CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         fda stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -69,7 +69,7 @@ class DualLinkNode extends IntrusiveNode {
           }
           var2 = qi.a(param0, (byte) 64);
           stackIn_3_0 = new fda(var2);
-          return (pp) ((Object) stackIn_3_0);
+          return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -91,19 +91,19 @@ class DualLinkNode extends IntrusiveNode {
         try {
           bda.field_l = 0;
           sja.field_gb = null;
-          maa.field_v = 0;
+          SuperSpeedAnimation.field_v = 0;
           es.field_j.d(71);
-          cca.field_v.d(59);
+          HazmatAnimation.field_v.d(59);
           var1 = wja.field_m.b((byte) -73);
           while (var1 != null) {
             var1.unlinkSecondary(0);
             var1 = wja.field_m.a(-25177);
           }
           int var2 = -42 / ((param0 - 35) / 54);
-          var1Lifetime1 = fq.field_s.b((byte) -73);
+          var1Lifetime1 = HomingMissileSpecial.field_s.b((byte) -73);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary(0);
-            var1Lifetime1 = fq.field_s.a(-25177);
+            var1Lifetime1 = HomingMissileSpecial.field_s.a(-25177);
           }
           um.field_c = 0;
         } catch (RuntimeException runtimeException) {

@@ -119,8 +119,8 @@ final class vda {
           var20 = var17 * (1 + var6_int);
           if (an.field_q <= param2 &&
             ha.field_n >= param2) {
-            var22 = cr.a(DualLinkNode.field_l, param3 + param5, pw.field_x, 0);
-            var23 = cr.a(DualLinkNode.field_l, param5 - param3, pw.field_x, 0);
+            var22 = cr.a(DualLinkNode.field_l, param3 + param5, SnowAnimation.field_x, 0);
+            var23 = cr.a(DualLinkNode.field_l, param5 - param3, SnowAnimation.field_x, 0);
             hba.a(param1, var23, tj.field_b[param2], 7, var22);
           }
           var21 = (-1 + var7) * var16;
@@ -157,8 +157,8 @@ final class vda {
             if (ha.field_n < var22Lifetime1) {
               continue;
             }
-            var24 = cr.a(DualLinkNode.field_l, var6_int + param5, pw.field_x, 0);
-            var25 = cr.a(DualLinkNode.field_l, -var6_int + param5, pw.field_x, 0);
+            var24 = cr.a(DualLinkNode.field_l, var6_int + param5, SnowAnimation.field_x, 0);
+            var25 = cr.a(DualLinkNode.field_l, -var6_int + param5, SnowAnimation.field_x, 0);
             if (var22Lifetime1 >= an.field_q) {
               hba.a(param1, var25, tj.field_b[var22Lifetime1], 7, var24);
             }

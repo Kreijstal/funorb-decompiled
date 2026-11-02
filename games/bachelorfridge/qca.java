@@ -67,7 +67,7 @@ final class qca extends k {
         Sprite var31Lifetime1Lifetime4;
         Sprite var31Lifetime1Lifetime5;
         try {
-          mna.a(-1, (int[]) null, 0L, (String) null, (String) null, param0, -114, (sga) null, param1);
+          SleepEvent.a(-1, (int[]) null, 0L, (String) null, (String) null, param0, -114, (sga) null, param1);
           if (param0 == 0) {
             var11 = NetworkGameClient.field_u;
             var13 = ClientException.field_b[0];
@@ -108,7 +108,7 @@ final class qca extends k {
             var28 = ClientException.field_b[2];
             var31Lifetime1Lifetime4 = var28;
             var31Lifetime1Lifetime5 = var28;
-            var27 = sma.field_B;
+            var27 = GasCloudAnimation.field_B;
             var26.field_a.a((byte) 49, var27, var28, 13);
           }
           if (param0 == 2) {
@@ -118,7 +118,7 @@ final class qca extends k {
             var29.field_a.a((byte) 69, var30, var31Lifetime2, 11);
             var32 = NetworkGameClient.field_u;
             var34 = ClientException.field_b[1];
-            var33 = kk.field_t;
+            var33 = AttackUpAllEvent.field_t;
             var32.field_a.a((byte) 59, var33, var34, 12);
             var35 = NetworkGameClient.field_u;
             var37 = ClientException.field_b[2];
@@ -346,7 +346,7 @@ final class qca extends k {
         if (param0 != -117485887) {
           field_l = (String) null;
         }
-        return nr.field_w.field_wb;
+        return RageAnimation.field_w.field_wb;
     }
 
     public qca() {
@@ -422,14 +422,14 @@ final class qca extends k {
             if (this.field_r <= 0) {
               stackIn_9_0 = this.field_q;
             } else {
-              stackIn_9_0 = this.field_q + (kla.a(this.field_r, var6, -2147483648) - var4);
+              stackIn_9_0 = this.field_q + (DiveBomberAnimation.a(this.field_r, var6, -2147483648) - var4);
             }
             var8 = stackIn_9_0;
             var8 = var8 >> 4 & 255;
-            var9 = kla.a(hh.field_d, var6, -2147483648);
-            var10 = kla.a(bi.field_g, var6, param1 + -2147483648);
+            var9 = DiveBomberAnimation.a(hh.field_d, var6, -2147483648);
+            var10 = DiveBomberAnimation.a(bi.field_g, var6, param1 + -2147483648);
             var11 = var9 + (am.field_R[var8] * this.field_o >> 12);
-            var12 = var10 + (this.field_o * baa.field_z[var8] >> 12);
+            var12 = var10 + (this.field_o * BananarangAnimation.field_z[var8] >> 12);
             var13 = var12 - var10;
             var14 = var11 - var9;
             if (0 != var14 ||
@@ -463,7 +463,7 @@ final class qca extends k {
               var18 = -var10 + var12;
               var19 = -var17Lifetime2 / 2;
               var20 = 2048 / var17Lifetime2;
-              var21 = -(kla.a(4096, var6, -2147483648) >> 2) + 1024;
+              var21 = -(DiveBomberAnimation.a(4096, var6, -2147483648) >> 2) + 1024;
               stackIn_30_0 = (var10 >= var12) ? -1 : 1;
               var22 = stackIn_30_0;
               if (var18 < 0) {

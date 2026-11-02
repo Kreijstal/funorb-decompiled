@@ -68,14 +68,14 @@ final class jt {
         boolean decompiledFrameRemainder2 = true;
         var11 = BachelorFridge.field_y;
         Math.sin((double)vr.field_b / 10.0 * 0.5);
-        if (ku.field_q &&
+        if (FloodEvent.field_q &&
           this.field_s.field_T &&
           cc.field_b.field_z == null) {
           ng.field_a.draw(param0 + 410, 138);
           decompiledFrameRemainder2 = (var11 != 0);
         }
         if (decompiledFrameRemainder2) {
-          if (!ku.field_q ||
+          if (!FloodEvent.field_q ||
             null == cc.field_b.field_z) {
             cba.field_a.draw(410 + param0, 148);
             if (var11 != 0) {
@@ -103,10 +103,10 @@ final class jt {
           this.field_a == 0) {
           ska.field_k.draw(param0 + 519, 11);
           if (var11 != 0) {
-            tl.field_s.draw(525 + param0, 11);
+            PetAttackEvent.field_s.draw(525 + param0, 11);
           }
         } else {
-          tl.field_s.draw(525 + param0, 11);
+          PetAttackEvent.field_s.draw(525 + param0, 11);
         }
         if (this.field_a == 0 ||
           this.field_i > 0) {
@@ -280,7 +280,7 @@ final class jt {
             boolean decompiledFrameCompleted0 = true;
             {
               if (this.a(-22263) &&
-                fia.field_t == 1 &&
+                LevitateEvent.field_t == 1 &&
                 !this.field_c.field_h &&
                 !this.field_c.a((byte) -121)) {
                 var3_int = (mk.field_p - 385) / 47;
@@ -308,7 +308,7 @@ final class jt {
                   var7++;
                 }
               } else {
-                if (!(fia.field_t > 0) &&
+                if (!(LevitateEvent.field_t > 0) &&
                   this.field_c.field_h &&
                   null != this.field_h) {
                   var3_intLifetime1 = this.g(50);
@@ -390,11 +390,11 @@ final class jt {
           }
           if (decompiledFrameRemainder0) {
             boolean decompiledFrameRemainder1 = true;
-            if ((fia.field_t != 1 ||
+            if ((LevitateEvent.field_t != 1 ||
               this.field_c.field_h ||
               this.field_c.a((byte) -96) ||
               null == cc.field_b.field_z) &&
-              (decompiledFrameRemainder1 = !(fia.field_t > 0)) &&
+              (decompiledFrameRemainder1 = !(LevitateEvent.field_t > 0)) &&
               (decompiledFrameRemainder1 = !(!this.field_c.field_h)) &&
               (decompiledFrameRemainder1 = (this.field_p != null))) {
               if (!this.field_c.a((byte) -89, (int)this.field_p.field_d, (int)this.field_p.field_f, this.field_p.field_g)) {
@@ -510,10 +510,10 @@ final class jt {
           if (this.field_q.field_vb.field_T) {
             ada.field_l.a(594, 160);
             if (var3 != 0) {
-              lma.field_y.a(594, 160);
+              ClamsAnimation.field_y.a(594, 160);
             }
           } else {
-            lma.field_y.a(594, 160);
+            ClamsAnimation.field_y.a(594, 160);
           }
           if (!this.field_q.field_vb.field_T) {
             gha.field_b.a(594, 403);
@@ -634,8 +634,8 @@ final class jt {
     private final void c(int param0) {
         sna var3 = mka.a(13558251, 13558251, 13558251, (byte) -119, jha.field_g, 13558251, 1118481, 13558251);
         var3.field_eb = wd.field_w;
-        var3.field_A = bla.field_p;
-        var3.field_db = op.field_I;
+        var3.field_A = RageSpecial.field_p;
+        var3.field_db = BattleState.field_I;
         this.field_s = new sna("food", var3, 410, 138, 130, 140, "");
         this.field_l = new sna("freezerbox", var3, 8, 6, 350, 74, "");
         if (param0 != 12716) {
@@ -738,7 +738,7 @@ final class jt {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_a != 2 ||
             this.field_s.field_R != 1 ||
-            !ku.field_q) {
+            !FloodEvent.field_q) {
             if (this.field_a == 1 &&
               this.field_l.field_R == 1) {
               this.field_a = 2;

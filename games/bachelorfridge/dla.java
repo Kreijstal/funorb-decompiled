@@ -3,7 +3,7 @@
  */
 final class dla extends bf {
     static char field_j;
-    nq field_n;
+    CreatureRef field_n;
     static char[] field_i;
     static sna field_k;
     static String field_m;
@@ -11,14 +11,14 @@ final class dla extends bf {
 
     final void a(int param0, PacketBuffer param1) {
         try {
-          er.a(this.field_n, 122, param1);
+          FlirtAnimation.a(this.field_n, 122, param1);
           int var3_int = 126 % ((param0 + 53) / 50);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "dla.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(op param0, int param1) {
+    final void a(BattleState param0, int param1) {
         try {
           if (param1 != -26281) {
             PacketBuffer var4 = (PacketBuffer) null;
@@ -81,11 +81,11 @@ final class dla extends bf {
               }
               incrementValue$1 = var6Lifetime1;
               var6Lifetime1++;
-              param0 = ci.field_q[incrementValue$1];
+              param0 = PizzaPartySpecial.field_q[incrementValue$1];
               dupTemp$2 = param3[param0];
               dupTemp$3 = param1[dupTemp$2];
               param1[dupTemp$2] = dupTemp$3 + 1;
-              ci.field_q[dupTemp$3] = param0;
+              PizzaPartySpecial.field_q[dupTemp$3] = param0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,7 +108,7 @@ final class dla extends bf {
         }
     }
 
-    dla(nq param0) {
+    dla(CreatureRef param0) {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {

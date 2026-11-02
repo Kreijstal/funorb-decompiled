@@ -54,10 +54,10 @@ abstract class qea {
 
     final static int a(boolean param0) {
         if (!param0) {
-          return fj.field_g + (ri.field_c << 2) + (fb.field_p << 4);
+          return fj.field_g + (ri.field_c << 2) + (ShuffleSpecial.field_p << 4);
         }
         field_a = (String) null;
-        return fj.field_g + (ri.field_c << 2) + (fb.field_p << 4);
+        return fj.field_g + (ri.field_c << 2) + (ShuffleSpecial.field_p << 4);
     }
 
     static {

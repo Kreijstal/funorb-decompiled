@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class qja extends bf {
-    nq field_i;
+    CreatureRef field_i;
 
     final static void a(int param0) {
         fr.field_n = false;
@@ -13,7 +13,7 @@ final class qja extends bf {
         if (param0 != 0) {
           return;
         }
-        vka.field_p = null;
+        GasCloudSpecial.field_p = null;
         mq.field_a = null;
     }
 
@@ -78,17 +78,17 @@ final class qja extends bf {
         }
     }
 
-    final void a(op param0, int param1) {
+    final void a(BattleState param0, int param1) {
         try {
           if (param1 != -26281) {
-            this.field_i = (nq) null;
+            this.field_i = (CreatureRef) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "qja.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    qja(nq param0) {
+    qja(CreatureRef param0) {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
@@ -98,7 +98,7 @@ final class qja extends bf {
 
     final void a(int param0, PacketBuffer param1) {
         try {
-          er.a(this.field_i, 123, param1);
+          FlirtAnimation.a(this.field_i, 123, param1);
           int var3_int = -82 / ((param0 + 53) / 50);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "qja.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -29,15 +29,15 @@ final class ha extends tia {
           var2 = this.field_g;
           var2 += 16;
           for (var3 = 0; var3 < 16; var3++) {
-            var4 = 15 + kla.a(300, this.field_f, -2147483648) - 150;
-            var5 = -(int)((double)((64 + kla.a(50, this.field_f, -2147483648) - 25) * (16384 / (var2 / 16))) * Math.sin((double)var4));
-            var6 = -(int)((double)(6144 / (var2 / 16) * (-25 + kla.a(50, this.field_f, -2147483648) + 64)) * Math.cos((double)var4));
+            var4 = 15 + DiveBomberAnimation.a(300, this.field_f, -2147483648) - 150;
+            var5 = -(int)((double)((64 + DiveBomberAnimation.a(50, this.field_f, -2147483648) - 25) * (16384 / (var2 / 16))) * Math.sin((double)var4));
+            var6 = -(int)((double)(6144 / (var2 / 16) * (-25 + DiveBomberAnimation.a(50, this.field_f, -2147483648) + 64)) * Math.cos((double)var4));
             var7 = (int)(Math.sin((double)var2 * 300.0) * 100.0);
             var8 = new lh(var5, var7, var6);
-            kla.a(10, this.field_f, -2147483648);
-            var8.field_p = -kla.a(5000, this.field_f, -2147483648);
-            var8.field_k = -kla.a(5000, this.field_f, -2147483648);
-            var8.field_g = -kla.a(5000, this.field_f, -2147483648);
+            DiveBomberAnimation.a(10, this.field_f, -2147483648);
+            var8.field_p = -DiveBomberAnimation.a(5000, this.field_f, -2147483648);
+            var8.field_k = -DiveBomberAnimation.a(5000, this.field_f, -2147483648);
+            var8.field_g = -DiveBomberAnimation.a(5000, this.field_f, -2147483648);
             var8.field_m = -2;
             var8.field_o = this.field_g - 10;
             var8.field_r = (double)var4;

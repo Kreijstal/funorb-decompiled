@@ -171,7 +171,7 @@ final class ld extends pu {
                     var25 = (255 & param5.field_v[var17] >> 8) * var25 >> 8;
                     var26 = var26 * (param5.field_v[var17] & 255) >> 8;
                     var24 = (255 & param5.field_v[var17] >> 16) * var24 >> 8;
-                    param0.field_v[var17] = mp.a(mp.a(var24 << 16, var25 << 8), var26);
+                    param0.field_v[var17] = MassPoisonSpecial.a(MassPoisonSpecial.a(var24 << 16, var25 << 8), var26);
                   }
                 }
               } else {
@@ -201,7 +201,7 @@ final class ld extends pu {
               var23Lifetime1 = var11 * (var21Lifetime1 >>> 24) >> 8;
               if (0 < var23Lifetime1) {
                 var24Lifetime1 = 255 ^ var23Lifetime1;
-                param0.field_v[var17Lifetime1] = mp.a(dda.a(16711935, dda.a(16711935, var22Lifetime1) * var24Lifetime1 + var23Lifetime1 * dda.a(var21Lifetime1, 16711935) >> 8), dda.a(dda.a(var21Lifetime1, 65280) * var23Lifetime1 + dda.a(65280, var22Lifetime1) * var24Lifetime1 >> 8, 65280));
+                param0.field_v[var17Lifetime1] = MassPoisonSpecial.a(dda.a(16711935, dda.a(16711935, var22Lifetime1) * var24Lifetime1 + var23Lifetime1 * dda.a(var21Lifetime1, 16711935) >> 8), dda.a(dda.a(var21Lifetime1, 65280) * var23Lifetime1 + dda.a(65280, var22Lifetime1) * var24Lifetime1 >> 8, 65280));
               }
               var17Lifetime1++;
             }
@@ -231,7 +231,7 @@ final class ld extends pu {
                   var25Lifetime1 = var23Lifetime2 >>> 24;
                   if (var25Lifetime1 > 0) {
                     var26Lifetime1 = var25Lifetime1 ^ 255;
-                    param0.field_v[var17Lifetime2] = mp.a(dda.a(16711935, var26Lifetime1 * dda.a(16711935, var24Lifetime2) + dda.a(16711935, var23Lifetime2) * var25Lifetime1 >> 8), dda.a(var25Lifetime1 * dda.a(var23Lifetime2, 65280) + dda.a(65280, var24Lifetime2) * var26Lifetime1 >> 8, 65280));
+                    param0.field_v[var17Lifetime2] = MassPoisonSpecial.a(dda.a(16711935, var26Lifetime1 * dda.a(16711935, var24Lifetime2) + dda.a(16711935, var23Lifetime2) * var25Lifetime1 >> 8), dda.a(var25Lifetime1 * dda.a(var23Lifetime2, 65280) + dda.a(65280, var24Lifetime2) * var26Lifetime1 >> 8, 65280));
                   }
                   var17Lifetime2++;
                 }

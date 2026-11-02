@@ -29,7 +29,7 @@ final class vr {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_m.a((byte) -79, efa.a(var4, true));
+          var3_int = this.field_f.field_m.a((byte) -79, StickySpecial.a(var4, true));
           if (param1) {
             this.b(87, 101);
           }
@@ -71,7 +71,7 @@ final class vr {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_m.a((byte) -75, efa.a(var4, true));
+          var3_int = this.field_f.field_m.a((byte) -75, StickySpecial.a(var4, true));
           stackIn_7_0 = this.c(var3_int, -734);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,7 +211,7 @@ final class vr {
             var9 = tb.a(false, (byte) 81, this.field_c[param3]);
           }
           try {
-            var36 = td.a(-124, var9);
+            var36 = SpecialOrder.a(-124, var9);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -221,7 +221,7 @@ final class vr {
             stackIn_39_0 = var11_ref_RuntimeException;
             stackIn_39_1 = new StringBuilder();
             stackIn_40_2 = (param0 != null);
-            throw pe.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(wc.a(var9, -31303, var9.length)).append(" ").append(wc.a(var9, -31303, var9.length - 2)).append(" ").append(this.field_f.field_p[param3]).append(" ").append(this.field_f.field_b).toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(HazmatSpecial.a(var9, -31303, var9.length)).append(" ").append(HazmatSpecial.a(var9, -31303, var9.length - 2)).append(" ").append(this.field_f.field_p[param3]).append(" ").append(this.field_f.field_b).toString());
           }
           if (this.field_g) {
             this.field_c[param3] = null;
@@ -379,13 +379,13 @@ final class vr {
           }
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_m.a((byte) -87, efa.a(var6, true));
+          var4_int = this.field_f.field_m.a((byte) -87, StickySpecial.a(var6, true));
           if (!this.a(var4_int, (byte) 70)) {
             stackIn_8_0 = null;
             return (byte[]) (stackIn_8_0);
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_f.field_l[var4_int].a((byte) -81, efa.a(var7, true));
+          var5 = this.field_f.field_l[var4_int].a((byte) -81, StickySpecial.a(var7, true));
           stackIn_10_0 = this.b(-71, var4_int, var5);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -478,12 +478,12 @@ final class vr {
           stackIn_8_1 = -92;
           stackIn_8_2 = (String) (param2);
           stackIn_9_3 = !(param1);
-          var4_int = ((cr) (Object) stackIn_8_0).a((byte) stackIn_8_1, efa.a((CharSequence) ((Object) stackIn_8_2), stackIn_9_3));
+          var4_int = ((cr) (Object) stackIn_8_0).a((byte) stackIn_8_1, StickySpecial.a((CharSequence) ((Object) stackIn_8_2), stackIn_9_3));
           if (!this.a(var4_int, (byte) 70)) {
             return false;
           }
           var6 = (CharSequence) ((Object) param0);
-          var5 = this.field_f.field_l[var4_int].a((byte) -104, efa.a(var6, true));
+          var5 = this.field_f.field_l[var4_int].a((byte) -104, StickySpecial.a(var6, true));
           stackIn_13_0 = this.a(-121, var5, var4_int);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -548,7 +548,7 @@ final class vr {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_m.a((byte) -115, efa.a(var4, true));
+          var3_int = this.field_f.field_m.a((byte) -115, StickySpecial.a(var4, true));
           if (var3_int < 0) {
             return false;
           }
@@ -787,7 +787,7 @@ final class vr {
             this.field_f = (rf) null;
           }
           var5 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_l[param1].a((byte) -128, efa.a(var5, true));
+          var4_int = this.field_f.field_l[param1].a((byte) -128, StickySpecial.a(var5, true));
           if (this.a(false, param1, var4_int)) {
             stackIn_10_0 = var4_int;
             return stackIn_10_0;
@@ -822,7 +822,7 @@ final class vr {
         try {
           Sprite[] var16 = (Sprite[]) null;
           ll.a(jc.field_t, param13, param3, param2, param8, param5, 0, param6, param1, param9, param4, (Sprite[]) null, nja.field_a, param11, param7, param0, 0, 256, param12, param14, fa.field_f);
-          la.a(param10, 2);
+          TBomberEvent.a(param10, 2);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "vr.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
@@ -897,7 +897,7 @@ final class vr {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_f.field_m.a((byte) -95, efa.a(var4, true));
+          var3_int = this.field_f.field_m.a((byte) -95, StickySpecial.a(var4, true));
           stackIn_5_0 = this.b(var3_int, (byte) -87);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

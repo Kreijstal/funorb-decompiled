@@ -72,7 +72,7 @@ final class km extends hf {
         int var7 = gd.field_o.get(11);
         int var8 = gd.field_o.get(12);
         int var9 = gd.field_o.get(13);
-        return gp.field_B[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + sh.field_E[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return DreamsAnimation.field_B[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + sh.field_E[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     private km() throws Throwable {

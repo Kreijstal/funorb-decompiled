@@ -85,21 +85,21 @@ final class raa extends hfa {
           raa.e((byte) 61);
           var1 = qaa.field_e[rba.field_b];
           if (var1 != -1) {
-            jga.field_v = jm.field_k[var1] + "...";
+            PizzaPartyAnimation.field_v = BoardChange.field_k[var1] + "...";
             cr.field_a = f.b((byte) 73);
             return;
           }
-          jga.field_v = jm.field_k[0] + "... " + id.field_g;
+          PizzaPartyAnimation.field_v = BoardChange.field_k[0] + "... " + id.field_g;
           cr.field_a = f.b((byte) 73);
           return;
         }
         var1Lifetime1 = qaa.field_e[rba.field_b];
         if (var1Lifetime1 != -1) {
-          jga.field_v = jm.field_k[var1Lifetime1] + "...";
+          PizzaPartyAnimation.field_v = BoardChange.field_k[var1Lifetime1] + "...";
           cr.field_a = f.b((byte) 73);
           return;
         }
-        jga.field_v = jm.field_k[0] + "... " + id.field_g;
+        PizzaPartyAnimation.field_v = BoardChange.field_k[0] + "... " + id.field_g;
         cr.field_a = f.b((byte) 73);
     }
 

@@ -16,7 +16,7 @@ final class hi {
           var1 = vv.field_e;
           synchronized (var1) {
             ce.field_x = ce.field_x + 1;
-            gha.field_q = jaa.field_s;
+            gha.field_q = HazmatEvent.field_s;
             if (param0 < 82) {
               return;
             }
@@ -24,22 +24,22 @@ final class hi {
               var5 = 0;
               var2 = var5;
               while (var5 < 112) {
-                wga.field_q[var5] = false;
+                InvincibleEvent.field_q[var5] = false;
                 var5++;
               }
-              gfa.field_c = cj.field_i;
+              gfa.field_c = BattleUpdate.field_i;
             } else {
-              while (cj.field_i != gfa.field_c) {
-                var2 = wd.field_x[cj.field_i];
-                cj.field_i = 1 + cj.field_i & 127;
+              while (BattleUpdate.field_i != gfa.field_c) {
+                var2 = wd.field_x[BattleUpdate.field_i];
+                BattleUpdate.field_i = 1 + BattleUpdate.field_i & 127;
                 if (var2 < 0) {
-                  wga.field_q[~var2] = false;
+                  InvincibleEvent.field_q[~var2] = false;
                   continue;
                 }
-                wga.field_q[var2] = true;
+                InvincibleEvent.field_q[var2] = true;
               }
             }
-            jaa.field_s = lma.field_x;
+            HazmatEvent.field_s = ClamsAnimation.field_x;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

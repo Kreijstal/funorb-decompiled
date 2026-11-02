@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends at {
+final class ub extends AnimationNode {
     static volatile boolean field_l;
     static sna field_k;
     gj field_o;
     static int field_j;
-    private lc field_n;
+    private BoardChangeBatch field_n;
     private int field_m;
 
     public static void d(int param0) {
@@ -88,7 +88,7 @@ final class ub extends at {
                   decompiledFrameCompleted2 = false;
                   break;
                 }
-                fla.field_q = true;
+                ShieldSpecial.field_q = true;
                 decompiledFrameCompleted1 = false;
                 break;
               }
@@ -159,7 +159,7 @@ final class ub extends at {
             if (param1) {
               if (param4 == -1) {
                 for (var10 = 0; qha.field_c.length > var10; var10++) {
-                  if ((fia.field_r[var10 / 8] & 1 << (7 & var10)) != 0) {
+                  if ((LevitateEvent.field_r[var10 / 8] & 1 << (7 & var10)) != 0) {
                     var9 = 0;
                     decompiledFrameCompleted0 = false;
                     break;
@@ -176,7 +176,7 @@ final class ub extends at {
                   var9 = 0;
                   break;
                 }
-                param0 = param0 + (mja.field_s[param4] & 255);
+                param0 = param0 + (StampedeSpecial.field_s[param4] & 255);
               }
             }
             var10Lifetime1 = 0;
@@ -199,7 +199,7 @@ final class ub extends at {
                     bja.field_o[param4] = (byte)var11;
                   }
                   ub.a(param0, param1, -93, param3, param4 + 1, param5, param6, param7);
-                  if (fla.field_q) {
+                  if (ShieldSpecial.field_q) {
                     return;
                   }
                 }
@@ -228,9 +228,9 @@ final class ub extends at {
                   var12 = stackIn_80_0;
                 } else {
                   if (-1 != param4) {
-                    stackIn_71_0 = (var11 != (255 & pw.field_w.field_Eb[param4])) ? 0 : 1;
+                    stackIn_71_0 = (var11 != (255 & SnowAnimation.field_w.field_Eb[param4])) ? 0 : 1;
                   } else {
-                    stackIn_71_0 = (pw.field_w.field_Pb != qha.field_c[var11]) ? 0 : 1;
+                    stackIn_71_0 = (SnowAnimation.field_w.field_Pb != qha.field_c[var11]) ? 0 : 1;
                   }
                   var12 = stackIn_71_0;
                 }
@@ -239,7 +239,7 @@ final class ub extends at {
                 var10Lifetime1 = 1;
                 ub.a(param0, param1, -73, param3, param4 + 1, param5, param6, param7);
               }
-              if (fla.field_q) {
+              if (ShieldSpecial.field_q) {
                 return;
               }
               var11++;
@@ -271,16 +271,16 @@ final class ub extends at {
           return false;
         }
         this.field_o.field_h.a(23189);
-        jm var5 = (jm) (this.field_n.field_k.b((byte) 90));
+        BoardChange var5 = (BoardChange) (this.field_n.field_k.b((byte) 90));
         while (var5 != null) {
           var5.a(this, -107);
-          var5 = (jm) (this.field_n.field_k.c(0));
+          var5 = (BoardChange) (this.field_n.field_k.c(0));
         }
         int var3 = 81 % ((71 - param0) / 47);
         return true;
     }
 
-    ub(gj param0, lc param1) {
+    ub(gj param0, BoardChangeBatch param1) {
         try {
           this.field_m = 25;
           this.field_o = param0;

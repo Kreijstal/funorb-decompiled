@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cb extends at {
+final class cb extends AnimationNode {
     private int field_j;
     static String field_n;
     static sna[] field_o;

@@ -55,7 +55,7 @@ final class oaa {
           var2 = var2.trim();
           var2 = var2.toLowerCase();
           if (!var2.equals("")) {
-            return ((ji) (me.field_t.a(true, (long)var2.hashCode()))).field_h;
+            return ((ji) (BuffVendorEvent.field_t.a(true, (long)var2.hashCode()))).field_h;
           }
           return -1;
         }
@@ -63,7 +63,7 @@ final class oaa {
         var2Lifetime1 = var2Lifetime1.trim();
         var2Lifetime1 = var2Lifetime1.toLowerCase();
         if (!var2Lifetime1.equals("")) {
-          return ((ji) (me.field_t.a(true, (long)var2Lifetime1.hashCode()))).field_h;
+          return ((ji) (BuffVendorEvent.field_t.a(true, (long)var2Lifetime1.hashCode()))).field_h;
         }
         return -1;
     }

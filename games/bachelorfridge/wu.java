@@ -161,8 +161,8 @@ final class wu extends hf {
           var6 = param2;
           var7 = -param2;
           var8 = -1;
-          var9 = cr.a(DualLinkNode.field_l, param3 + param2, pw.field_x, 0);
-          var10 = cr.a(DualLinkNode.field_l, param3 - param2, pw.field_x, 0);
+          var9 = cr.a(DualLinkNode.field_l, param3 + param2, SnowAnimation.field_x, 0);
+          var10 = cr.a(DualLinkNode.field_l, param3 - param2, SnowAnimation.field_x, 0);
           hba.a(param0, var10, tj.field_b[param1], 7, var9);
           while (var6 > var5_int) {
             var8 += 2;
@@ -174,8 +174,8 @@ final class wu extends hf {
               var12 = param1 + var6;
               if (an.field_q <= var12 &&
                 var11 <= ha.field_n) {
-                var13 = cr.a(DualLinkNode.field_l, param3 + var5_int, pw.field_x, 0);
-                var14 = cr.a(DualLinkNode.field_l, -var5_int + param3, pw.field_x, 0);
+                var13 = cr.a(DualLinkNode.field_l, param3 + var5_int, SnowAnimation.field_x, 0);
+                var14 = cr.a(DualLinkNode.field_l, -var5_int + param3, SnowAnimation.field_x, 0);
                 if (var12 <= ha.field_n) {
                   hba.a(param0, var14, tj.field_b[var12], 7, var13);
                 }
@@ -193,8 +193,8 @@ final class wu extends hf {
             if (var11Lifetime1 > ha.field_n) {
               continue;
             }
-            var13Lifetime1 = cr.a(DualLinkNode.field_l, var6 + param3, pw.field_x, 0);
-            var14Lifetime1 = cr.a(DualLinkNode.field_l, param3 - var6, pw.field_x, param4 + 23);
+            var13Lifetime1 = cr.a(DualLinkNode.field_l, var6 + param3, SnowAnimation.field_x, 0);
+            var14Lifetime1 = cr.a(DualLinkNode.field_l, param3 - var6, SnowAnimation.field_x, param4 + 23);
             if (var12Lifetime1 <= ha.field_n) {
               hba.a(param0, var14Lifetime1, tj.field_b[var12Lifetime1], 7, var13Lifetime1);
             }

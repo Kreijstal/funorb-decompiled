@@ -46,9 +46,9 @@ final class vu extends pv {
         }
         if (40 >= this.field_g &&
           0 == this.field_g % 8) {
-          this.field_m[this.field_j][0] = kla.a(15, m.field_a, -2147483648);
-          this.field_m[this.field_j][1] = kla.a(15, m.field_a, -2147483648);
-          this.field_m[this.field_j][2] = kla.a(10, m.field_a, -2147483648) + 20;
+          this.field_m[this.field_j][0] = DiveBomberAnimation.a(15, m.field_a, -2147483648);
+          this.field_m[this.field_j][1] = DiveBomberAnimation.a(15, m.field_a, -2147483648);
+          this.field_m[this.field_j][2] = DiveBomberAnimation.a(10, m.field_a, -2147483648) + 20;
           this.field_m[this.field_j][3] = 2;
           this.field_j = this.field_j + 1;
         }

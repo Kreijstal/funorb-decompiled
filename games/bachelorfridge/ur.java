@@ -71,7 +71,7 @@ final class ur {
             var8 = 255 & param0[var5_int] << var6 | (255 & param0[var5_int + 1]) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_i[this.field_c] = (byte)mp.a((int) this.field_i[this.field_c], var8 >>> var7);
+              this.field_i[this.field_c] = (byte)MassPoisonSpecial.a((int) this.field_i[this.field_c], var8 >>> var7);
               this.field_l = this.field_l + (-var7 + 8);
               this.field_c = this.field_c + 1;
               if (this.field_l == 512) {
@@ -91,7 +91,7 @@ final class ur {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param0[var5_int] << var6 & 255;
-            this.field_i[this.field_c] = (byte)mp.a((int) this.field_i[this.field_c], var8Lifetime1 >>> var7);
+            this.field_i[this.field_c] = (byte)MassPoisonSpecial.a((int) this.field_i[this.field_c], var8Lifetime1 >>> var7);
           }
           if ((long)var7 + param1 >= 8L) {
             this.field_l = this.field_l + (8 - var7);
@@ -137,7 +137,7 @@ final class ur {
         int var9 = 0;
         var9 = BachelorFridge.field_y;
         try {
-          this.field_i[this.field_c] = (byte)mp.a((int) this.field_i[this.field_c], 128 >>> dda.a(this.field_l, 7));
+          this.field_i[this.field_c] = (byte)MassPoisonSpecial.a((int) this.field_i[this.field_c], 128 >>> dda.a(this.field_l, 7));
           this.field_c = this.field_c + 1;
           if (this.field_c > 32) {
             while (this.field_c < 64) {
@@ -186,8 +186,8 @@ final class ur {
         }
     }
 
-    final static pp a(PacketBuffer param0, byte param1) {
-        nq var2 = null;
+    final static EventEffect a(PacketBuffer param0, byte param1) {
+        CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         ela stackIn_3_0 = null;
@@ -202,7 +202,7 @@ final class ur {
           }
           var3 = param0.readUnsignedByte(param1 ^ 16711815);
           stackIn_3_0 = new ela(var2, var3);
-          return (pp) ((Object) stackIn_3_0);
+          return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -255,7 +255,7 @@ final class ur {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_a[var3Lifetime1] = gv.a(this.field_a[var3Lifetime1], hha.field_v[var4][dda.a(255, (int)(this.field_g[dda.a(var3Lifetime1 - var4, 7)] >>> var5))]);
+              this.field_a[var3Lifetime1] = gv.a(this.field_a[var3Lifetime1], SleepAnimation.field_v[var4][dda.a(255, (int)(this.field_g[dda.a(var3Lifetime1 - var4, 7)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -263,14 +263,14 @@ final class ur {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_g[var3Lifetime1Lifetime1] = this.field_a[var3Lifetime1Lifetime1];
           }
-          this.field_g[0] = gv.a(this.field_g[0], hha.field_z[var2Lifetime2]);
+          this.field_g[0] = gv.a(this.field_g[0], SleepAnimation.field_z[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_a[var3Lifetime1Lifetime2] = this.field_g[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_a[var3Lifetime1Lifetime2] = gv.a(this.field_a[var3Lifetime1Lifetime2], hha.field_v[var7][dda.a(255, (int)(this.field_n[dda.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1))]);
+              this.field_a[var3Lifetime1Lifetime2] = gv.a(this.field_a[var3Lifetime1Lifetime2], SleepAnimation.field_v[var7][dda.a(255, (int)(this.field_n[dda.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -294,10 +294,10 @@ final class ur {
           field_d = -72;
         }
         if (DualLinkNode.field_l <= param1 - param0 &&
-          pw.field_x >= param0 + param1 &&
+          SnowAnimation.field_x >= param0 + param1 &&
           an.field_q <= -param0 + param2 &&
           param2 + param0 <= ha.field_n) {
-          eja.a((byte) -60, param0, param3, param2, param4, param5, param1);
+          ScavengerAnimation.a((byte) -60, param0, param3, param2, param4, param5, param1);
         } else {
           BufferedSocket.a(param2, param3, 170, param1, param0, param4, param5);
         }

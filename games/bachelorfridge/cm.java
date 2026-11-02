@@ -45,9 +45,9 @@ final class cm extends oka {
         int var2 = 0;
         int var3 = 0;
         fs.field_f = param0;
-        if (saa.field_b != eb.field_t) {
+        if (saa.field_b != FishRainSpecial.field_t) {
           var2 = saa.field_b * saa.field_b;
-          var3 = var2 - eb.field_t * eb.field_t;
+          var3 = var2 - FishRainSpecial.field_t * FishRainSpecial.field_t;
           param0 = param0 + (pda.field_p - param0) * var3 / var2;
         }
         i.field_a.a(120, 31407, 640, ce.field_t, param0);
@@ -61,7 +61,7 @@ final class cm extends oka {
 
     final static void a(int param0, int param1, int param2, int param3) {
         int var4 = 103 % ((45 - param3) / 59);
-        mt.field_v = param2;
+        ScavengerSpecial.field_v = param2;
         wk.field_f = param0;
         ru.field_c = param1;
     }

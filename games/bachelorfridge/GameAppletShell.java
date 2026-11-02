@@ -39,18 +39,18 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0 != 0) {
             this.d(-15);
           }
-          if (dca.field_y != null) {
+          if (TBomberAnimation.field_y != null) {
             try {
-              dca.field_y.removeFocusListener((java.awt.event.FocusListener) (this));
-              dca.field_y.getParent().remove((java.awt.Component) ((Object) dca.field_y));
+              TBomberAnimation.field_y.removeFocusListener((java.awt.event.FocusListener) (this));
+              TBomberAnimation.field_y.getParent().remove((java.awt.Component) ((Object) TBomberAnimation.field_y));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (null != ju.field_r) {
+          if (null != DiveBomberEvent.field_r) {
             try {
-              ju.field_r.a(94);
+              DiveBomberEvent.field_r.a(94);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -193,7 +193,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 pr.a((byte) -21);
                 this.a(50);
-                hga.field_U = lp.a(dda.field_j, MouseInputHandler.field_b, (java.awt.Component) ((Object) dca.field_y), 29548);
+                hga.field_U = GasCloudEvent.a(dda.field_j, MouseInputHandler.field_b, (java.awt.Component) ((Object) TBomberAnimation.field_y), 29548);
                 this.c((byte) 91);
                 ena.field_m = us.a(-4127);
                 do {
@@ -214,7 +214,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(DiskCacheWorker.field_f > var3)) {
                       this.c(-2100834399);
-                      he.a(ju.field_r, false, dca.field_y);
+                      he.a(DiveBomberEvent.field_r, false, TBomberAnimation.field_y);
                       break;
                     }
                     this.f(-84);
@@ -225,7 +225,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              cv.a(1, (String) null, (Throwable) (var1));
+              SpiltMilkEvent.a(1, (String) null, (Throwable) (var1));
               this.a("crash", (byte) -48);
             }
             this.a(0, true);
@@ -272,14 +272,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               wk.field_g = 0;
               ej.field_p = param1;
               MouseInputHandler.field_b = param6;
-              tha.field_q = param6;
+              DreamsSpecial.field_q = param6;
               re.field_C = this;
               jia.field_m = nia.d(-31768);
               var8_int = -118 / ((35 - param3) / 54);
               dupTemp$0 = new PlatformTaskDispatcher(param2, param0, param5, true);
-              ju.field_r = dupTemp$0;
+              DiveBomberEvent.field_r = dupTemp$0;
               BufferedCacheFile.field_d = dupTemp$0;
-              var9 = ju.field_r.a((Runnable) (this), 2, 1);
+              var9 = DiveBomberEvent.field_r.a((Runnable) (this), 2, 1);
               while (true) {
                 if (var9.field_f == 0) {
                   gda.a(false, 10L);
@@ -292,7 +292,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8 = decompiledCaughtException;
-              cv.a(1, (String) null, var8);
+              SpiltMilkEvent.a(1, (String) null, var8);
               this.a("crash", (byte) -48);
             }
             return;
@@ -480,7 +480,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (var2.width < kb.field_h) {
                   return;
                 }
-                if (tha.field_q > var2.height) {
+                if (DreamsSpecial.field_q > var2.height) {
                   return;
                 }
               }
@@ -511,8 +511,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         Object var6 = null;
         try {
           var2_long = f.b((byte) 73);
-          var4 = baa.field_C[laa.field_j];
-          baa.field_C[laa.field_j] = var2_long;
+          var4 = BananarangAnimation.field_C[laa.field_j];
+          BananarangAnimation.field_C[laa.field_j] = var2_long;
           laa.field_j = 1 + laa.field_j & 31;
           if (var4 != 0L &&
             var4 < var2_long) {
@@ -565,10 +565,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         var4 = BachelorFridge.field_y;
         try {
-          if (dca.field_y != null) {
-            dca.field_y.removeFocusListener((java.awt.event.FocusListener) (this));
-            dca.field_y.getParent().setBackground(java.awt.Color.black);
-            dca.field_y.getParent().remove((java.awt.Component) ((Object) dca.field_y));
+          if (TBomberAnimation.field_y != null) {
+            TBomberAnimation.field_y.removeFocusListener((java.awt.event.FocusListener) (this));
+            TBomberAnimation.field_y.getParent().setBackground(java.awt.Color.black);
+            TBomberAnimation.field_y.getParent().remove((java.awt.Component) ((Object) TBomberAnimation.field_y));
           }
           boolean decompiledFrameRemainder0 = true;
           if (ve.field_n != null) {
@@ -594,21 +594,21 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          dca.field_y = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) dca.field_y));
-          dca.field_y.setSize(dda.field_j, MouseInputHandler.field_b);
-          dca.field_y.setVisible(true);
+          TBomberAnimation.field_y = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) TBomberAnimation.field_y));
+          TBomberAnimation.field_y.setSize(dda.field_j, MouseInputHandler.field_b);
+          TBomberAnimation.field_y.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == fda.field_j);
           if (!decompiledSharedTail0) {
-            dca.field_y.setLocation(qw.field_d, wk.field_g);
+            TBomberAnimation.field_y.setLocation(qw.field_d, wk.field_g);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = fda.field_j.getInsets();
-            dca.field_y.setLocation(var3.left + qw.field_d, var3.top + wk.field_g);
+            TBomberAnimation.field_y.setLocation(var3.left + qw.field_d, var3.top + wk.field_g);
           }
-          dca.field_y.addFocusListener((java.awt.event.FocusListener) (this));
-          dca.field_y.requestFocus();
+          TBomberAnimation.field_y.addFocusListener((java.awt.event.FocusListener) (this));
+          TBomberAnimation.field_y.requestFocus();
           if (param0 < 2) {
             field_e = (String) null;
           }
@@ -799,17 +799,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$1 > 50) {
             nf.field_K = true;
             jc.field_v = jc.field_v - 50;
-            dca.field_y.setSize(dda.field_j, MouseInputHandler.field_b);
-            dca.field_y.setVisible(true);
+            TBomberAnimation.field_y.setSize(dda.field_j, MouseInputHandler.field_b);
+            TBomberAnimation.field_y.setVisible(true);
             if (fda.field_j != null &&
               ve.field_n == null) {
               var6 = fda.field_j.getInsets();
-              dca.field_y.setLocation(var6.left + qw.field_d, wk.field_g + var6.top);
+              TBomberAnimation.field_y.setLocation(var6.left + qw.field_d, wk.field_g + var6.top);
               if (BachelorFridge.field_y != 0) {
-                dca.field_y.setLocation(qw.field_d, wk.field_g);
+                TBomberAnimation.field_y.setLocation(qw.field_d, wk.field_g);
               }
             } else {
-              dca.field_y.setLocation(qw.field_d, wk.field_g);
+              TBomberAnimation.field_y.setLocation(qw.field_d, wk.field_g);
             }
           }
           this.a((byte) 32);

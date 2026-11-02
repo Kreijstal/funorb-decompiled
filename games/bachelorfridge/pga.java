@@ -11,7 +11,7 @@ final class pga {
         int var4;
         du[] var5;
         var4 = BachelorFridge.field_y;
-        var5 = wga.d(0);
+        var5 = InvincibleEvent.d(0);
         var2 = var5;
         if (param0) {
           return (du) null;

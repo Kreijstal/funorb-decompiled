@@ -220,7 +220,7 @@ final class on extends DualLinkNode {
         var24 = BachelorFridge.field_y;
         try {
           da.field_c = param2;
-          l.field_r = param5;
+          SplitEvent.field_r = param5;
           for (var10_int = 0; var10_int < this.field_y.length; var10_int++) {
             this.field_y[var10_int].a(param4, (byte) -93, param3);
           }

@@ -19,19 +19,19 @@ abstract class IndexedSpriteState {
           return;
         }
         lr.field_k = new String[35];
-        lr.field_k[23] = maa.field_x;
+        lr.field_k[23] = SuperSpeedAnimation.field_x;
         lr.field_k[2] = wk.field_i;
-        lr.field_k[21] = hea.field_t;
+        lr.field_k[21] = BananarangSpecial.field_t;
         lr.field_k[5] = ll.field_l;
-        lr.field_k[6] = lp.field_t;
-        lr.field_k[param0] = ch.field_q;
-        lr.field_k[18] = ja.field_q;
+        lr.field_k[6] = GasCloudEvent.field_t;
+        lr.field_k[param0] = BagpipeSpecial.field_q;
+        lr.field_k[18] = ResetSpecial.field_q;
         lr.field_k[26] = si.field_c;
         lr.field_k[8] = null;
         lr.field_k[17] = qh.field_q;
         lr.field_k[33] = BitPacketBuffer.field_i;
         lr.field_k[34] = tj.field_a;
-        hl.field_G = new String[]{cca.field_w, bm.field_i, vm.field_g, mg.field_p};
+        hl.field_G = new String[]{HazmatAnimation.field_w, bm.field_i, vm.field_g, mg.field_p};
         lr.field_k[11] = jma.field_m;
         lr.field_k[19] = hfa.field_y;
         lr.field_k[13] = dh.field_i;
@@ -41,7 +41,7 @@ abstract class IndexedSpriteState {
         lr.field_k[7] = nha.field_b;
         lr.field_k[9] = ul.field_o;
         lr.field_k[4] = wa.field_l;
-        lr.field_k[20] = fq.field_q;
+        lr.field_k[20] = HomingMissileSpecial.field_q;
         lr.field_k[0] = dj.field_a;
     }
 

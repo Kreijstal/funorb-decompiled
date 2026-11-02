@@ -51,7 +51,7 @@ final class sp extends pu {
             sp.b(-122);
           }
           var4 = (String) null;
-          stackIn_3_0 = iv.a(-15, 0, 0, param0, (String) null, false, param2);
+          stackIn_3_0 = DamageEffect.a(-15, 0, 0, param0, (String) null, false, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

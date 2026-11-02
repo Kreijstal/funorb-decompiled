@@ -389,7 +389,7 @@ final class qh {
         var1 = uc.field_m;
         synchronized (var1) {
           tf.field_n = tf.field_n + 1;
-          fia.field_t = oga.field_q;
+          LevitateEvent.field_t = FlirtEvent.field_q;
           mk.field_p = ue.field_N;
           gd.field_m = dia.field_A;
           dda.field_f = gja.field_j;
@@ -398,10 +398,10 @@ final class qh {
           if (param0 <= 103) {
             qh.a(94, -48, 114, -68, -92, -64, 34, 23);
           }
-          nfa.field_a = tba.field_u;
+          nfa.field_a = FishRainEvent.field_u;
           jc.field_r = dma.field_c;
           jh.field_l = 0;
-          nd.field_h = cj.field_f;
+          nd.field_h = BattleUpdate.field_f;
         }
     }
 

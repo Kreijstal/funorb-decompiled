@@ -35,7 +35,7 @@ final class gda extends vd implements uja, lja {
         wj var2 = new wj(eq.field_f, var1, (pl) null);
         this.field_F = new hf(ne.field_m, (pl) null);
         this.field_C = new hf(bga.field_f, (pl) null);
-        this.field_G.field_h = cu.field_z;
+        this.field_G.field_h = FloodAnimation.field_z;
         this.field_G.a(7, new tt(this.field_G));
         this.field_F.field_z = false;
         this.field_F.field_f = (qda) ((Object) new ff());
@@ -47,7 +47,7 @@ final class gda extends vd implements uja, lja {
         var2.a(20, 50, (byte) 59, 270, var3);
         var3 += 50;
         this.c(var2, -123);
-        var3 = var3 + (5 + this.a(var3, this.field_G, gp.field_v, 170, saa.field_u, false));
+        var3 = var3 + (5 + this.a(var3, this.field_G, DreamsAnimation.field_v, 170, saa.field_u, false));
         this.field_F.a(-var5 + 496 >> 1, 40, (byte) 59, var5, var3);
         this.field_C.a(var4 + 3, 40, (byte) 59, 60, var3 + 15);
         this.field_C.field_k = (pl) (this);
@@ -253,7 +253,7 @@ final class gda extends vd implements uja, lja {
           param1.removeMouseListener(uc.field_m);
           param1.removeMouseMotionListener(uc.field_m);
           param1.removeFocusListener(uc.field_m);
-          oga.field_q = 0;
+          FlirtEvent.field_q = 0;
           if (param0 > -14) {
             java.awt.Component var3 = (java.awt.Component) null;
             gda.a(-19, (java.awt.Component) null);

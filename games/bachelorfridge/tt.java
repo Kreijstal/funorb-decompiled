@@ -38,7 +38,7 @@ final class tt extends aba {
         if (kq.field_j == dka.field_G) {
           return ut.field_m.b(25477);
         }
-        return dk.field_p;
+        return IncomingSpecial.field_p;
     }
 
     final jg a(String param0, boolean param1) {
@@ -54,7 +54,7 @@ final class tt extends aba {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!vq.a((byte) -60, var4)) {
+          if (!SlowAllAnimation.a((byte) -60, var4)) {
             stackIn_3_0 = jt.field_f;
             return stackIn_3_0;
           }
@@ -124,7 +124,7 @@ final class tt extends aba {
             this.field_g = param1;
           }
           if (!this.field_i) {
-            stackIn_12_0 = uga.field_A;
+            stackIn_12_0 = FullHealAnimation.field_A;
             return stackIn_12_0;
           }
           var4 = -59 % ((-8 - param0) / 45);

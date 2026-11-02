@@ -52,14 +52,14 @@ final class qha {
     final static void a(int param0, vr param1) {
         try {
           IterableNodeHashTable.field_a = param1;
-          vj.field_p = wfa.a("logo", param1, "minimal", (byte) -86);
+          vj.field_p = FullHealEvent.a("logo", param1, "minimal", (byte) -86);
           if (param0 < 114) {
             vr var3 = (vr) null;
             qha.a(-41, (vr) null);
           }
-          em.field_S = wfa.a("loading", param1, "minimal", (byte) -74);
-          ml.field_a = ch.a(param1, -1, "minimal", "fridgedoor2d");
-          ada.field_p = ch.a(param1, -1, "minimal", "fridge_left");
+          em.field_S = FullHealEvent.a("loading", param1, "minimal", (byte) -74);
+          ml.field_a = BagpipeSpecial.a(param1, -1, "minimal", "fridgedoor2d");
+          ada.field_p = BagpipeSpecial.a(param1, -1, "minimal", "fridge_left");
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "qha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -63,12 +63,12 @@ final class wi extends w implements oh {
     }
 
     final static void a(boolean param0, String param1, String param2, byte param3) {
-        lb.field_w = param2;
+        InvincibleAnimation.field_w = param2;
         if (param3 != -68) {
           return;
         }
         try {
-          dk.field_p = param1;
+          IncomingSpecial.field_p = param1;
           uv.a(false, oc.field_m, param0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "wi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -107,7 +107,7 @@ final class wi extends w implements oh {
 
     final static boolean a(int param0, int param1, int param2) {
         if (gf.field_k == 13) {
-          lc.b(-1);
+          BoardChangeBatch.b(-1);
           return true;
         }
         if (gf.field_k == 102) {

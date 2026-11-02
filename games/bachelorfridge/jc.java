@@ -47,7 +47,7 @@ final class jc extends DualLinkNode {
                 stackIn_19_0 = this.field_p;
                 stackIn_19_1 = var5;
                 if (var6 != 0) {
-                  stackIn_20_2 = vja.a((byte) var6, (byte) -93);
+                  stackIn_20_2 = AttackEvent.a((byte) var6, (byte) -93);
                 } else {
                   stackIn_20_2 = 0;
                 }
@@ -70,7 +70,7 @@ final class jc extends DualLinkNode {
                 stackIn_13_0 = this.field_o;
                 stackIn_13_1 = var5;
                 if (var6 != 0) {
-                  stackIn_14_2 = vja.a((byte) var6, (byte) -46);
+                  stackIn_14_2 = AttackEvent.a((byte) var6, (byte) -46);
                 } else {
                   stackIn_14_2 = 0;
                 }
@@ -146,7 +146,7 @@ final class jc extends DualLinkNode {
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (!param2) {
-            stackIn_7_0 = kea.a((byte) -3, param0.b(-26, param4, param1));
+            stackIn_7_0 = AirstrikeSpecial.a((byte) -3, param0.b(-26, param4, param1));
             return stackIn_7_0;
           }
           stackIn_5_0 = (BinaryBitmapFont) null;
@@ -185,14 +185,14 @@ final class jc extends DualLinkNode {
         int var2Lifetime1;
         if (this.field_q != null) {
           for (var2 = 0; var2 < this.field_q.length; var2++) {
-            this.field_q[var2] = mp.a(this.field_q[var2], 32768);
+            this.field_q[var2] = MassPoisonSpecial.a(this.field_q[var2], 32768);
           }
         }
         if (null != this.field_u) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (this.field_u.length > var4) {
-            this.field_u[var4] = mp.a(this.field_u[var4], 32768);
+            this.field_u[var4] = MassPoisonSpecial.a(this.field_u[var4], 32768);
             var4++;
           }
         }

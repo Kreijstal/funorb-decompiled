@@ -35,7 +35,7 @@ final class r extends pu {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
         try {
-          fd.a(param0, param8, param14, param1 + 1, param5, param9, param12, param2, (int[]) null, param7, (IndexedSprite[]) null, param11, param13, param4, param3, param10, param6);
+          AirstrikeAnimation.a(param0, param8, param14, param1 + 1, param5, param9, param12, param2, (int[]) null, param7, (IndexedSprite[]) null, param11, param13, param4, param3, param10, param6);
           if (param1 != -1) {
             field_m = (lo) null;
           }
@@ -145,7 +145,7 @@ final class r extends pu {
               var4.unlink(false);
             } else {
               var4.field_l = var4.field_l + var4.field_o;
-              kla.a(50, param2, -2147483648);
+              DiveBomberAnimation.a(50, param2, -2147483648);
             }
             var4 = (rea) (param3.c(0));
           }

@@ -20,7 +20,7 @@ final class aj {
           if (param2 != 0) {
             aj.a((byte) -31, -21);
           }
-          stackIn_6_0 = dr.b(param2 - 32124);
+          stackIn_6_0 = InvincibleSpecial.b(param2 - 32124);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

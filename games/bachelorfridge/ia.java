@@ -27,7 +27,7 @@ final class ia extends pv {
         }
         if (1 == this.field_g) {
           this.field_f.field_v.a((byte) 77, this.field_f.field_g.field_o.field_b, 0);
-          fia.c(3, this.field_f.field_g.field_o.field_e);
+          LevitateEvent.c(3, this.field_f.field_g.field_o.field_e);
           if (param0) {
             return false;
           }
@@ -42,7 +42,7 @@ final class ia extends pv {
     final static void a(boolean param0, int param1) {
         pja.a(-11204, param0);
         if (null != jja.field_m) {
-          gp.b(-25942, jja.field_m);
+          DreamsAnimation.b(-25942, jja.field_m);
         }
         if (param1 > -72) {
           ia.a(false, -79);

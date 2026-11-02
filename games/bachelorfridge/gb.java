@@ -43,7 +43,7 @@ final class gb extends IntrusiveNode {
             SoftwareRasterizer.clear();
             hl.field_C.drawText(param5, 5, 3 + hl.field_C.field_u, param3, -1);
             SoftwareRasterizer.setTarget(var12, var7, var8);
-            fk.d((byte) -121);
+            HomingMissileEvent.d((byte) -121);
             if (param4) {
               fw.a(param0, cea.field_i, var9, param2, true, oa.field_Bb, param1);
             } else {
@@ -82,10 +82,10 @@ final class gb extends IntrusiveNode {
             var5 = 20;
             var6 = var5 / 2;
             for (var7 = 0; var7 < 24; var7++) {
-              var4 = var4 + (var6 + kla.a(var5, laa.field_n, param1 ^ -2130706433));
+              var4 = var4 + (var6 + DiveBomberAnimation.a(var5, laa.field_n, param1 ^ -2130706433));
               gs.field_c[var7] = var4;
-              vb.field_h[var7] = kla.a(120, laa.field_n, param1 + 2130706433) + 70;
-              wda.field_b[var7] = kla.a(120, laa.field_n, -2147483648) + 70;
+              vb.field_h[var7] = DiveBomberAnimation.a(120, laa.field_n, param1 + 2130706433) + 70;
+              wda.field_b[var7] = DiveBomberAnimation.a(120, laa.field_n, -2147483648) + 70;
             }
             bf.field_f = true;
           }
@@ -147,7 +147,7 @@ final class gb extends IntrusiveNode {
         if (DualLinkNode.field_l > param4) {
           qn.a(param4, param1, param3, param2, 69, param5);
         } else {
-          if (param1 > pw.field_x) {
+          if (param1 > SnowAnimation.field_x) {
             qn.a(param4, param1, param3, param2, 69, param5);
           } else {
             if (param3 < an.field_q) {

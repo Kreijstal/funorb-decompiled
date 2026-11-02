@@ -85,7 +85,7 @@ final class fw extends IntrusiveNode {
               var12 = var12 | 65280 & var10Lifetime1 * ((param3 & 65280) >> 8);
               var12 = var12 | var10Lifetime1 * (255 & param3) >> 8 & 255;
               if (0 <= param1.field_v[var7_intLifetime1]) {
-                tla.a(var9Lifetime1 + param0, -1898743704, var12, var8Lifetime1 + param6, var11);
+                AirstrikeEvent.a(var9Lifetime1 + param0, -1898743704, var12, var8Lifetime1 + param6, var11);
               }
               var7_intLifetime1++;
             }

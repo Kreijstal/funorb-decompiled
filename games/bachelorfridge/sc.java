@@ -25,7 +25,7 @@ final class sc extends lw {
     final void a(int param0, byte param1) {
         if (param0 == 39) {
           this.b(1);
-          fla.b(23621);
+          ShieldSpecial.b(23621);
           mka.field_j = true;
           pka.field_f = true;
           MeshObject.field_a = true;
@@ -37,7 +37,7 @@ final class sc extends lw {
     }
 
     sc() {
-        super(true, new String[]{rn.field_t}, ls.field_d);
+        super(true, new String[]{BananarangEvent.field_t}, ls.field_d);
         this.field_c = new int[][]{new int[]{170, 160}};
     }
 

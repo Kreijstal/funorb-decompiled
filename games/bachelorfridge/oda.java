@@ -83,7 +83,7 @@ final class oda {
         }
     }
 
-    final static pp a(int param0, PacketBuffer param1) {
+    final static EventEffect a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         PacketBuffer var3 = null;
         kq stackIn_3_0 = null;
@@ -97,7 +97,7 @@ final class oda {
             oda.a(-17, (PacketBuffer) null);
           }
           stackIn_3_0 = new kq();
-          return (pp) ((Object) stackIn_3_0);
+          return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

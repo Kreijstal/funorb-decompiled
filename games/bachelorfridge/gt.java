@@ -128,8 +128,8 @@ final class gt extends k {
           var20 = var48;
           var21 = new Random((long)this.field_w);
           while (true) {
-            var23 = kla.a(-var14 + var15, var21, -2147483648) + var14;
-            var24 = kla.a(-var16 + var17, var21, -2147483648) + var16;
+            var23 = DiveBomberAnimation.a(-var14 + var15, var21, -2147483648) + var14;
+            var24 = DiveBomberAnimation.a(-var16 + var17, var21, -2147483648) + var16;
             var25 = var8 + var23;
             if (hh.field_d < var25) {
               var23 = -var8 + hh.field_d;
@@ -239,7 +239,7 @@ final class gt extends k {
             var12 = var13;
             var13 = 0;
             var7 = var6;
-            var6 = kla.a(hh.field_d, var21, param1 + -2147483648);
+            var6 = DiveBomberAnimation.a(hh.field_d, var21, param1 + -2147483648);
             var5 = var6 - var7;
             var8 = 0;
             var28Lifetime1 = var5;
@@ -323,7 +323,7 @@ final class gt extends k {
         var23 = BachelorFridge.field_y;
         try {
           if (~this.field_u < param2) {
-            stackIn_4_0 = 4096 - kla.a(this.field_u, param3, -2147483648);
+            stackIn_4_0 = 4096 - DiveBomberAnimation.a(this.field_u, param3, -2147483648);
           } else {
             stackIn_4_0 = 4096;
           }
@@ -333,7 +333,7 @@ final class gt extends k {
           if (0 >= var9) {
             stackIn_7_1 = 0;
           } else {
-            stackIn_7_1 = kla.a(var9, param3, -2147483648);
+            stackIn_7_1 = DiveBomberAnimation.a(var9, param3, -2147483648);
           }
           var10 = stackIn_6_0 - stackIn_7_1;
           if (hh.field_d <= param1) {

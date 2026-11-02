@@ -23,13 +23,13 @@ final class gd extends pu {
           cga.field_p = param7;
           vc.field_c = param0;
           rs.field_c = param2;
-          od.field_B = param4;
+          BuffVendorAnimation.field_B = param4;
           kt.field_j = param9;
           sha.field_m = param10;
           if (param3 > -57) {
             field_l = -90L;
           }
-          ima.field_r = param6;
+          TeleportEvent.field_r = param6;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
         }

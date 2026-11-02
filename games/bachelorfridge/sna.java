@@ -668,10 +668,10 @@ class sna extends tf {
         }
         stackIn_30_1 = (!on.field_x) && (SoftwareRasterizer.field_f <= mk.field_p) && (SoftwareRasterizer.field_h > mk.field_p) && (SoftwareRasterizer.field_j <= gd.field_m) && (gd.field_m < SoftwareRasterizer.field_k);
         this.field_E = stackIn_30_1;
-        if (fia.field_t == 0) {
+        if (LevitateEvent.field_t == 0) {
           this.field_ib = 0;
         }
-        stackIn_38_1 = (this.field_E) && (this.field_ib == fia.field_t) && (param0);
+        stackIn_38_1 = (this.field_E) && (this.field_ib == LevitateEvent.field_t) && (param0);
         this.field_T = stackIn_38_1;
         if (null != this.field_z) {
           var13 = (sna) (this.field_z.a(6));

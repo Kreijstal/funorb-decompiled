@@ -84,7 +84,7 @@ final class gs {
 
     gs(boolean param0) {
         this.field_m = ad.field_g;
-        this.field_i = gq.field_x;
+        this.field_i = OneAnimation.field_x;
         this.field_e = gba.field_yb;
         this.field_b = vv.field_d;
         this.field_k = to.field_a;
@@ -92,7 +92,7 @@ final class gs {
         this.field_g = qia.field_b;
         this.field_n = qk.field_n;
         this.field_p = wka.field_a;
-        this.field_j = bna.field_w;
+        this.field_j = DisableAnimation.field_w;
         if (param0) {
           this.field_o = hv.field_a;
         } else {
@@ -120,10 +120,10 @@ final class gs {
         }
     }
 
-    final static pp a(boolean param0, PacketBuffer param1) {
+    final static EventEffect a(boolean param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        pp stackIn_2_0 = null;
+        EventEffect stackIn_2_0 = null;
         o stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -131,12 +131,12 @@ final class gs {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_2_0 = (pp) null;
+            stackIn_2_0 = (EventEffect) null;
             return stackIn_2_0;
           }
           var2_int = param1.readUnsignedShort((byte) 113);
           stackIn_4_0 = new o(var2_int);
-          return (pp) ((Object) stackIn_4_0);
+          return (EventEffect) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -132,7 +132,7 @@ class wj extends IntrusiveNode {
         var5 = this.e(1023) ? 1 : 0;
         if (!param0) {
           if (var5 == 0) {
-            uga.field_y = fia.field_t;
+            FullHealAnimation.field_y = LevitateEvent.field_t;
             if (param3 != 6381) {
               this.a((byte) -90, -84, 109, 31);
             }
@@ -140,7 +140,7 @@ class wj extends IntrusiveNode {
             return param0;
           }
           if (lf.field_c == 0) {
-            uga.field_y = fia.field_t;
+            FullHealAnimation.field_y = LevitateEvent.field_t;
             if (param3 != 6381) {
               this.a((byte) -90, -84, 109, 31);
             }
@@ -149,7 +149,7 @@ class wj extends IntrusiveNode {
           }
           this.f(31);
           if (var7 == 0) {
-            uga.field_y = fia.field_t;
+            FullHealAnimation.field_y = LevitateEvent.field_t;
             if (param3 != 6381) {
               this.a((byte) -90, -84, 109, 31);
             }
@@ -162,8 +162,8 @@ class wj extends IntrusiveNode {
           this.a(gd.field_m, 13, mk.field_p, vc.field_a, param2, this, param1);
         }
         if (0 == lf.field_c) {
-          if (fia.field_t == 0 &&
-            uga.field_y != 0) {
+          if (LevitateEvent.field_t == 0 &&
+            FullHealAnimation.field_y != 0) {
             this.a(param1, mk.field_p, (byte) -101, this, gd.field_m, param2);
             var8 = cea.field_b;
             if (var8 != null) {
@@ -177,8 +177,8 @@ class wj extends IntrusiveNode {
           if (this.b(nfa.field_a, -7375, param1, lf.field_c, param2, this, jc.field_r)) {
             param0 = false;
             if (var7 == 0) {
-              if (fia.field_t == 0 &&
-                uga.field_y != 0) {
+              if (LevitateEvent.field_t == 0 &&
+                FullHealAnimation.field_y != 0) {
                 this.a(param1, mk.field_p, (byte) -101, this, gd.field_m, param2);
                 var9 = cea.field_b;
                 if (var9 != null) {
@@ -186,7 +186,7 @@ class wj extends IntrusiveNode {
                     ((mo) (var9.field_k)).a((re) null, var9, (byte) 88);
                   }
                   cea.field_b = null;
-                  uga.field_y = fia.field_t;
+                  FullHealAnimation.field_y = LevitateEvent.field_t;
                   if (param3 != 6381) {
                     this.a((byte) -90, -84, 109, 31);
                   }
@@ -194,7 +194,7 @@ class wj extends IntrusiveNode {
                   return param0;
                 }
               }
-              uga.field_y = fia.field_t;
+              FullHealAnimation.field_y = LevitateEvent.field_t;
               if (param3 != 6381) {
                 this.a((byte) -90, -84, 109, 31);
               }
@@ -204,8 +204,8 @@ class wj extends IntrusiveNode {
           }
           if (var5 != 0) {
             this.f(param3 - 6350);
-            if (fia.field_t == 0 &&
-              uga.field_y != 0) {
+            if (LevitateEvent.field_t == 0 &&
+              FullHealAnimation.field_y != 0) {
               this.a(param1, mk.field_p, (byte) -101, this, gd.field_m, param2);
               var11 = cea.field_b;
               if (var11 != null) {
@@ -213,7 +213,7 @@ class wj extends IntrusiveNode {
                   ((mo) (var11.field_k)).a((re) null, var11, (byte) 88);
                 }
                 cea.field_b = null;
-                uga.field_y = fia.field_t;
+                FullHealAnimation.field_y = LevitateEvent.field_t;
                 if (param3 != 6381) {
                   this.a((byte) -90, -84, 109, 31);
                 }
@@ -222,8 +222,8 @@ class wj extends IntrusiveNode {
               }
             }
           } else {
-            if (fia.field_t == 0 &&
-              uga.field_y != 0) {
+            if (LevitateEvent.field_t == 0 &&
+              FullHealAnimation.field_y != 0) {
               this.a(param1, mk.field_p, (byte) -101, this, gd.field_m, param2);
               var10 = cea.field_b;
               if (var10 != null) {
@@ -231,7 +231,7 @@ class wj extends IntrusiveNode {
                   ((mo) (var10.field_k)).a((re) null, var10, (byte) 88);
                 }
                 cea.field_b = null;
-                uga.field_y = fia.field_t;
+                FullHealAnimation.field_y = LevitateEvent.field_t;
                 if (param3 != 6381) {
                   this.a((byte) -90, -84, 109, 31);
                 }
@@ -241,7 +241,7 @@ class wj extends IntrusiveNode {
             }
           }
         }
-        uga.field_y = fia.field_t;
+        FullHealAnimation.field_y = LevitateEvent.field_t;
         if (param3 != 6381) {
           this.a((byte) -90, -84, 109, 31);
         }
@@ -663,11 +663,11 @@ class wj extends IntrusiveNode {
           }
           break;
         }
-        var5 = er.f(75);
+        var5 = FlirtAnimation.f(75);
         if (var5 == null) {
           return;
         }
-        fda.field_i.a((byte) -49, jl.field_s, IntrusiveDeque.field_b, var5);
+        fda.field_i.a((byte) -49, SuperSpeedEvent.field_s, IntrusiveDeque.field_b, var5);
     }
 
     boolean a(wj param0, int param1) {

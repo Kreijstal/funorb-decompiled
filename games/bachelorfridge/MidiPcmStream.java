@@ -892,12 +892,12 @@ final class MidiPcmStream extends PcmStream {
           if (64 > var6Lifetime3) {
             this.field_u[var4Lifetime4] = dda.a(this.field_u[var4Lifetime4], -2);
           } else {
-            this.field_u[var4Lifetime4] = mp.a(this.field_u[var4Lifetime4], 1);
+            this.field_u[var4Lifetime4] = MassPoisonSpecial.a(this.field_u[var4Lifetime4], 1);
           }
         }
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 >= 64) {
-            this.field_u[var4Lifetime4] = mp.a(this.field_u[var4Lifetime4], 2);
+            this.field_u[var4Lifetime4] = MassPoisonSpecial.a(this.field_u[var4Lifetime4], 2);
           } else {
             this.e(49, var4Lifetime4);
             this.field_u[var4Lifetime4] = dda.a(this.field_u[var4Lifetime4], -3);
@@ -947,7 +947,7 @@ final class MidiPcmStream extends PcmStream {
             this.f(-28068, var4Lifetime4);
             this.field_u[var4Lifetime4] = dda.a(this.field_u[var4Lifetime4], -5);
           } else {
-            this.field_u[var4Lifetime4] = mp.a(this.field_u[var4Lifetime4], 4);
+            this.field_u[var4Lifetime4] = MassPoisonSpecial.a(this.field_u[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {

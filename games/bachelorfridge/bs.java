@@ -75,17 +75,17 @@ final class bs extends IntrusiveNode {
           }
           if (!dma.field_a &&
             null == vla.field_x) {
-            vla.field_x = cn.a((byte) -68, 4);
+            vla.field_x = PlaceCreatureEffect.a((byte) -68, 4);
           }
           if (!dma.field_a &&
             vla.field_x.field_j) {
-            var13 = sg.field_q;
+            var13 = ZombiesSpecial.field_q;
             var11 = var13;
             var6 = var11;
             var1 = var6;
             var17 = vla.field_x.field_m;
             for (var3 = 0; var3 < 8; var3++) {
-              var6[var3] = mp.a(var13[var3], var17[var3]);
+              var6[var3] = MassPoisonSpecial.a(var13[var3], var17[var3]);
             }
             var14 = nga.field_i;
             var12 = var14;
@@ -106,9 +106,9 @@ final class bs extends IntrusiveNode {
             bs.a((Sprite) null, (byte) 34);
           }
           if (dma.field_a) {
-            of.b(115);
-            dca.d(-122);
-            if (iba.field_s == 8 &&
+            SlowAllSpecial.b(115);
+            TBomberAnimation.d(-122);
+            if (OhNoEvent.field_s == 8 &&
               !hs.a(false, nga.field_i)) {
               lg.a(true, 0, false);
               return;

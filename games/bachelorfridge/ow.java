@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ow extends jm {
+final class ow extends BoardChange {
     private aj[] field_m;
     static String field_n;
 
@@ -31,9 +31,9 @@ final class ow extends jm {
         try {
           var3 = null;
           var4 = null;
-          if (null != nb.field_q &&
-            !nb.field_q.equals(param2.getParameter("settings"))) {
-            var3 = nb.field_q;
+          if (null != ScavengerEvent.field_q &&
+            !ScavengerEvent.field_q.equals(param2.getParameter("settings"))) {
+            var3 = ScavengerEvent.field_q;
             var4 = var3;
             var4 = var3;
           }
@@ -133,11 +133,11 @@ final class ow extends jm {
         }
     }
 
-    final void a(boolean param0, op param1) {
+    final void a(boolean param0, BattleState param1) {
         int var4 = 0;
         aj[] var3 = null;
         aj var5 = null;
-        aga var6 = null;
+        BattleCreature var6 = null;
         int var7 = 0;
         aj[] var8 = null;
         RuntimeException stackIn_12_0 = null;
@@ -151,11 +151,11 @@ final class ow extends jm {
           var3 = var8;
           for (var4 = 0; var8.length > var4; var4++) {
             var5 = var8[var4];
-            var6 = param1.field_a[var5.field_c][var5.field_a].field_l;
+            var6 = param1.tiles[var5.field_c][var5.field_a].occupant;
             if (var6 != null &&
               var6.g(-75, 40)) {
             }
-            param1.field_a[var5.field_c][var5.field_a].field_j = 2;
+            param1.tiles[var5.field_c][var5.field_a].field_j = 2;
           }
           if (param0) {
             this.field_m = (aj[]) null;

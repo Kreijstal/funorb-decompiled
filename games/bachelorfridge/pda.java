@@ -81,7 +81,7 @@ final class pda extends DualLinkNode {
         }
         if (null != this.field_s) {
           for (var2 = 0; var2 < this.field_s.length; var2++) {
-            this.field_s[var2] = mp.a(this.field_s[var2], 32768);
+            this.field_s[var2] = MassPoisonSpecial.a(this.field_s[var2], 32768);
           }
         }
     }

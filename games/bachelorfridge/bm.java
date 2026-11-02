@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm extends pp {
+final class bm extends EventEffect {
     int field_k;
     private int field_j;
     int field_l;
@@ -46,7 +46,7 @@ final class bm extends pp {
         }
     }
 
-    final void a(aga param0, op param1, int param2) {
+    final void a(BattleCreature param0, BattleState param1, int param2) {
         try {
           if (param2 != 12) {
             PacketBuffer var5 = (PacketBuffer) null;
@@ -65,7 +65,7 @@ final class bm extends pp {
         if (param3 != -14702) {
           return;
         }
-        pw.field_x = param2;
+        SnowAnimation.field_x = param2;
     }
 
     static {

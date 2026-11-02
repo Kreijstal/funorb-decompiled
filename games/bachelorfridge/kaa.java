@@ -13,7 +13,7 @@ final class kaa extends pu {
         Throwable decompiledCaughtException = null;
         var1_ref = vv.field_e;
         synchronized (var1_ref) {
-          if (gha.field_q == jaa.field_s) {
+          if (gha.field_q == HazmatEvent.field_s) {
             return false;
           }
           gf.field_k = aq.field_a[gha.field_q];

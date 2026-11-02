@@ -109,7 +109,7 @@ abstract class bi extends jla {
             }
             if (!param7) {
               if (param1) {
-                ad.field_h.drawText(wfa.field_r, 20 + param4, ad.field_h.field_F + var22, 2, -1);
+                ad.field_h.drawText(FullHealEvent.field_r, 20 + param4, ad.field_h.field_F + var22, 2, -1);
               }
             } else {
               ad.field_h.drawText(gea.field_n, 20 + param4, ad.field_h.field_F * 2 + var22, 2, -1);
@@ -119,7 +119,7 @@ abstract class bi extends jla {
               ad.field_h.drawText(gea.field_n, 20 + param4, var18 + ad.field_h.field_F + ((ad.field_h.field_F << 1) + (-4 + param6)), 2, -1);
             } else {
               if (param1) {
-                ad.field_h.drawText(wfa.field_r, param4 + 20, var18 + ad.field_h.field_F + param6 + (-4 + (ad.field_h.field_F << 1)), 2, -1);
+                ad.field_h.drawText(FullHealEvent.field_r, param4 + 20, var18 + ad.field_h.field_F + param6 + (-4 + (ad.field_h.field_F << 1)), 2, -1);
               }
             }
           }
@@ -152,7 +152,7 @@ abstract class bi extends jla {
         }
         gja.field_m.f((byte) -66);
         if (null == hp.field_d) {
-          hp.field_d = new hga(gja.field_m, at.field_i);
+          hp.field_d = new hga(gja.field_m, AnimationNode.field_i);
         }
         gja.field_m.a((wj) (hp.field_d), (byte) 111);
     }

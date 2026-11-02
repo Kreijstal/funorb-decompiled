@@ -42,17 +42,17 @@ final class fn extends k {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = fj.field_i.nextInt();
           }
-          if (null == rl.field_p ||
-            !(var7_int <= rl.field_p.payload.length)) {
-            rl.field_p = new PacketBuffer(var7_int);
+          if (null == BuffVendorSpecial.field_p ||
+            !(var7_int <= BuffVendorSpecial.field_p.payload.length)) {
+            BuffVendorSpecial.field_p = new PacketBuffer(var7_int);
           }
-          rl.field_p.position = 0;
+          BuffVendorSpecial.field_p.position = 0;
           if (param0 != -68) {
             field_k = (int[]) null;
           }
-          rl.field_p.a(param1, -108, param6, param5);
-          rl.field_p.a(var7_int, false);
-          rl.field_p.encryptXtea(var13, 0);
+          BuffVendorSpecial.field_p.a(param1, -108, param6, param5);
+          BuffVendorSpecial.field_p.a(var7_int, false);
+          BuffVendorSpecial.field_p.encryptXtea(var13, 0);
           if (null == gu.field_a ||
             !(gu.field_a.payload.length >= 100)) {
             gu.field_a = new PacketBuffer(100);
@@ -68,7 +68,7 @@ final class fn extends k {
           gu.field_a.b(param6, param0 ^ 53);
           gu.field_a.encryptRsa(param3, 0, param2);
           param4.a(0, -82, gu.field_a.position, gu.field_a.payload);
-          param4.a(0, param0 ^ 35, rl.field_p.position, rl.field_p.payload);
+          param4.a(0, param0 ^ 35, BuffVendorSpecial.field_p.position, BuffVendorSpecial.field_p.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,7 +172,7 @@ final class fn extends k {
           for (var7 = 0; var7 < param5.field_p; var7++) {
             for (var8 = 0; var8 < param2; var8++) {
               if (param5.field_v[var6_int] > 0) {
-                tla.a(param3 + var8, param1 - 1898743715, param0, param4 + var7, 255 & param5.field_v[var6_int]);
+                AirstrikeEvent.a(param3 + var8, param1 - 1898743715, param0, param4 + var7, 255 & param5.field_v[var6_int]);
               }
               var6_int++;
             }

@@ -15,7 +15,7 @@ final class hda extends k {
           hda.a((byte) 27, true);
         }
         if (null != jja.field_m) {
-          gp.b(-25942, jja.field_m);
+          DreamsAnimation.b(-25942, jja.field_m);
         }
         if (NetworkGameClient.field_u != null) {
           NetworkGameClient.field_u.a((byte) -120, param1);
@@ -24,7 +24,7 @@ final class hda extends k {
         if (null != wt.field_n) {
           wt.field_n.a(param1, 7802);
         }
-        vja.a((byte) 88, param1);
+        AttackEvent.a((byte) 88, param1);
     }
 
     final void a(byte param0, PacketBuffer param1, int param2) {
@@ -205,14 +205,14 @@ final class hda extends k {
             ImageProducerRasterBuffer.a(1048576, param1, param3, param2, (byte) -112);
           }
           if (null != uf.field_c) {
-            var4_ref = lc.field_l;
+            var4_ref = BoardChangeBatch.field_l;
             synchronized (var4_ref) {
               uf.field_c.a(-1, param3, (byte) -107);
               if (param1 == uw.field_o) {
                 return;
               }
               uf.field_c.b(true);
-              lc.field_l.c();
+              BoardChangeBatch.field_l.c();
               uw.field_o = param1;
               if (uw.field_o != null) {
                 uf.field_c.a(uw.field_o, (byte) -115, param2);

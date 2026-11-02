@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class rr extends at {
+final class rr extends AnimationNode {
     private int field_s;
-    private fd field_o;
+    private AirstrikeAnimation field_o;
     private int field_u;
     private int field_k;
     private cq field_l;
@@ -106,9 +106,9 @@ final class rr extends at {
           var4 = (lh) (param1.b((byte) 90));
           while (var4 != null) {
             if (var4.b(true)) {
-              kla.a(50, param3, -2147483648);
-              var4.field_p = (int)((double)(128 + kla.a(80000, param3, -2147483648)) * Math.sin(var4.field_r));
-              var4.field_g = (int)((double)(kla.a(40000, param3, -2147483648) + 128) * Math.cos(var4.field_r));
+              DiveBomberAnimation.a(50, param3, -2147483648);
+              var4.field_p = (int)((double)(128 + DiveBomberAnimation.a(80000, param3, -2147483648)) * Math.sin(var4.field_r));
+              var4.field_g = (int)((double)(DiveBomberAnimation.a(40000, param3, -2147483648) + 128) * Math.cos(var4.field_r));
             }
             var4 = (lh) (param1.c(0));
           }
@@ -187,7 +187,7 @@ final class rr extends at {
 
     private final void d(byte param0) {
         oia var2 = null;
-        this.field_o.a(this.field_v, this.field_n, this.field_o.field_B.field_l.a(-27449, this.field_j), 0);
+        this.field_o.a(this.field_v, this.field_n, this.field_o.field_B.creature.a(-27449, this.field_j), 0);
         if (param0 > 87) {
           var2 = new oia(this.field_j, this.field_v, this.field_n);
           ((kj) ((Object) var2)).a(0);
@@ -195,7 +195,7 @@ final class rr extends at {
         }
     }
 
-    rr(gj param0, fd param1, int param2, int param3, boolean param4) {
+    rr(gj param0, AirstrikeAnimation param1, int param2, int param3, boolean param4) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -218,11 +218,11 @@ final class rr extends at {
           this.field_m = stackIn_4_1;
           this.field_q = this.field_k << 1;
           if (!this.field_m) {
-            this.field_s = ((this.field_j.field_h.field_z - this.field_v) * 64 + 640) / this.field_q;
+            this.field_s = ((this.field_j.field_h.width - this.field_v) * 64 + 640) / this.field_q;
             this.field_t = (10 + this.field_v) * 64 / this.field_q;
           } else {
             this.field_t = 64 * (10 + this.field_n) / this.field_q;
-            this.field_s = (640 + (-this.field_n + this.field_j.field_h.field_B) * 64) / this.field_q;
+            this.field_s = (640 + (-this.field_n + this.field_j.field_h.height) * 64) / this.field_q;
           }
           if (this.field_m) {
             this.field_q = -this.field_q;

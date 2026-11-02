@@ -46,7 +46,7 @@ abstract class pk implements qu {
         return null;
     }
 
-    final static String a(bca param0, boolean param1) {
+    final static String a(SpecialEvent param0, boolean param1) {
         hd var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_2_0 = null;
@@ -56,7 +56,7 @@ abstract class pk implements qu {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = (hd) (al.a(-56, param0.field_k));
+          var2 = (hd) (al.a(-56, param0.moveId));
           if (param1) {
             stackIn_4_0 = var2.field_f;
             return stackIn_4_0;

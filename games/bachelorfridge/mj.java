@@ -11,7 +11,7 @@ final class mj extends lg {
     private final void c(byte param0) {
         if (param0 == -51) {
           this.field_a.field_z = null;
-          this.a(hea.field_s, 40, param0 ^ 4571, 72, 334, 366);
+          this.a(BananarangSpecial.field_s, 40, param0 ^ 4571, 72, 334, 366);
           return;
         }
     }
@@ -32,8 +32,8 @@ final class mj extends lg {
         int var2 = -107 / ((param0 + 54) / 47);
         SoftwareRasterizer.a(40 + this.field_g, this.field_f + 20, -110 + this.field_d, -30 + this.field_c, 20, 65793, 64);
         wq.a(1, 14, 300, 16777215, 16 + this.field_f, 300, 65793, true, this.field_b, 0, this.field_g + 54);
-        ana.field_r.draw(350, 330);
-        laa.a(356, (byte) -112, 402, 16777215, hea.field_s, 65793);
+        EventAnimation.field_r.draw(350, 330);
+        laa.a(356, (byte) -112, 402, 16777215, BananarangSpecial.field_s, 65793);
     }
 
     mj(int param0, int param1, int param2, int param3, String param4) {

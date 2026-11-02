@@ -60,7 +60,7 @@ final class ob extends kj {
 
     final static void a(String param0, int param1, int[] param2, String param3, int param4, byte param5, int param6, String param7, kga param8, int[] param9) {
         try {
-          gfa.field_a[param4] = new wca(param6, param0, param7, param2, param9, param1, param8, param3);
+          gfa.field_a[param4] = new CreatureType(param6, param0, param7, param2, param9, param1, param8, param3);
           if (param5 != 22) {
             String var11 = (String) null;
             ob.a(-114L, (byte) -127, -69, -33, (String) null);

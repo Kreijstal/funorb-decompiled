@@ -76,7 +76,7 @@ abstract class sh extends vd implements mca {
             return;
           }
           if (var3 != 2) {
-            cv.a(1, "A1: " + nia.d((byte) -108), (Throwable) null);
+            SpiltMilkEvent.a(1, "A1: " + nia.d((byte) -108), (Throwable) null);
             vc.a((byte) -115);
             return;
           }

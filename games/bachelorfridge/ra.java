@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends at {
+final class ra extends AnimationNode {
     static char[] field_r;
     static int[] field_s;
     static String field_j;
@@ -27,10 +27,10 @@ final class ra extends at {
     ra(gj param0, ew param1) {
         try {
           this.field_o = param0;
-          this.field_n = param1.field_l.a(-27449, this.field_o);
+          this.field_n = param1.creature.a(-27449, this.field_o);
           this.field_q = new taa(this.field_o, this.field_n);
           this.a(27799, this.field_q);
-          this.field_n.a(16761024, 65, fb.field_q);
+          this.field_n.a(16761024, 65, ShuffleSpecial.field_q);
           this.field_m = 100;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

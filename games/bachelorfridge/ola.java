@@ -46,7 +46,7 @@ final class ola {
             }
           }
         } else {
-          if (0 == fia.field_t &&
+          if (0 == LevitateEvent.field_t &&
             this.field_h &&
             this.field_j != null) {
             var2 = this.field_k.g(50);
@@ -116,8 +116,8 @@ final class ola {
         if (param0 <= 40) {
           return;
         }
-        var2.field_A = bla.field_p;
-        var2.field_db = op.field_I;
+        var2.field_A = RageSpecial.field_p;
+        var2.field_db = BattleState.field_I;
         var2.field_eb = wd.field_w;
         this.field_s = new sna("shop", var2, 515, 8, 72, 70, "");
         this.field_a = new sna("arena", var2, 43, 333, 90, 80, "");
@@ -160,7 +160,7 @@ final class ola {
           var8 = (es) (this.field_q.c(0));
         }
         gba.field_xb.draw(10 + param1, 75);
-        ln.field_v.draw(param1 + 14, 79);
+        TeleportAnimation.field_v.draw(param1 + 14, 79);
         stackIn_5_0 = pja.field_b;
         if (-1 + this.field_m.g(0) == -1) {
           stackIn_6_1 = 9;
@@ -245,7 +245,7 @@ final class ola {
           for (var6 = 0; var6 < 10; var6++) {
             if (this.field_i[var5Lifetime1][var6].field_f != null &&
               this.field_i[var5Lifetime1][var6].field_f.field_n > 0) {
-              oo.field_q[-this.field_i[var5Lifetime1][var6].field_f.field_n + 24].draw(param1 + (-6 + this.field_i[var5Lifetime1][var6].field_f.field_p), -32 + this.field_i[var5Lifetime1][var6].field_f.field_j);
+              StampedeEvent.field_q[-this.field_i[var5Lifetime1][var6].field_f.field_n + 24].draw(param1 + (-6 + this.field_i[var5Lifetime1][var6].field_f.field_p), -32 + this.field_i[var5Lifetime1][var6].field_f.field_j);
             }
           }
         }
@@ -441,7 +441,7 @@ final class ola {
             vc.a((byte) -99);
             return;
           }
-          cv.a(1, "HS1: " + nia.d((byte) -108), (Throwable) null);
+          SpiltMilkEvent.a(1, "HS1: " + nia.d((byte) -108), (Throwable) null);
           vc.a((byte) -76);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -512,10 +512,10 @@ final class ola {
                   !(this.field_m.g(0) >= 8) &&
                   this.field_j == null)) {
                   RasterBuffer.a(0, 7758);
-                  this.field_m.a(new jfa(new rk(gfa.field_a[this.field_i[var3][var4].field_f.field_e]), var3, var4, this.field_i), true);
-                  wf.a(3909, var3, this.field_i[var3][var4].field_f.field_e, (jfa) (this.field_m.a(6)), var4);
+                  this.field_m.a(new jfa(new CreatureProfile(gfa.field_a[this.field_i[var3][var4].field_f.field_e]), var3, var4, this.field_i), true);
+                  MartyrAnimation.a(3909, var3, this.field_i[var3][var4].field_f.field_e, (jfa) (this.field_m.a(6)), var4);
                   uca.a(9, (byte) 99);
-                  this.field_q.a(new es(this.field_i[var3][var4].field_f.field_p, this.field_i[var3][var4].field_f.field_j, kla.a(6, m.field_a, -2147483648)), true);
+                  this.field_q.a(new es(this.field_i[var3][var4].field_f.field_p, this.field_i[var3][var4].field_f.field_j, DiveBomberAnimation.a(6, m.field_a, -2147483648)), true);
                   this.field_i[var3][var4].field_f.field_a = false;
                 }
               }
@@ -560,15 +560,15 @@ final class ola {
         if (1 == this.field_a.field_R &&
           gla.field_k) {
           boolean decompiledFrameRemainder0 = true;
-          if (!this.field_m.e(12917) && (!bp.e(-29919) ||
+          if (!this.field_m.e(12917) && (!AttackUpAllAnimation.e(-29919) ||
             af.field_a)) {
             qa.d(123);
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (bp.e(param0 - 29908) &&
+            if (AttackUpAllAnimation.e(param0 - 29908) &&
               !af.field_a) {
-              this.field_f = new mj(100, 150, 440, 160, iv.field_i);
+              this.field_f = new mj(100, 150, 440, 160, DamageEffect.field_i);
             } else {
               this.field_f = new mj(100, 150, 440, 160, vu.field_o);
             }
@@ -628,7 +628,7 @@ final class ola {
         int var3_int = 0;
         int var4 = 0;
         it var5_ref_it = null;
-        rk var6 = null;
+        CreatureProfile var6 = null;
         int var7 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -772,7 +772,7 @@ final class ola {
     final void a(byte param0, ola param1) {
         int var4 = 0;
         int var3_int = 0;
-        rk var3 = null;
+        CreatureProfile var3 = null;
         int var5 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -795,10 +795,10 @@ final class ola {
             var3_int++;
           }
           this.field_m = new IntrusiveDeque();
-          var3 = (rk) (param1.field_m.b((byte) 90));
+          var3 = (CreatureProfile) (param1.field_m.b((byte) 90));
           while (var3 != null) {
-            this.field_m.a(new jfa(var3, kla.a(6, var3.field_p, -2147483648), kla.a(10, var3.field_p, -2147483648), this.field_i), true);
-            var3 = (rk) (param1.field_m.c(0));
+            this.field_m.a(new jfa(var3, DiveBomberAnimation.a(6, var3.field_p, -2147483648), DiveBomberAnimation.a(10, var3.field_p, -2147483648), this.field_i), true);
+            var3 = (CreatureProfile) (param1.field_m.c(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -860,7 +860,7 @@ final class ola {
           }
           if (this.field_i[var5][var6].field_f == null ||
             !this.field_i[var5][var6].field_f.field_a) {
-            sm.a(false, param3, var5, var6);
+            SlowAllEvent.a(false, param3, var5, var6);
           }
           return this.field_i[var5][var6].a(false, var7);
         }

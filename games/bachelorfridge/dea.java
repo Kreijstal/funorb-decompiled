@@ -8,14 +8,14 @@ final class dea extends lw {
     static int field_n;
 
     dea() {
-        super(true, new String[]{mja.field_p, nw.field_t}, via.field_c);
+        super(true, new String[]{StampedeSpecial.field_p, FlySpecial.field_t}, via.field_c);
         this.field_c = new int[][]{new int[]{150, 190}, new int[]{160, 390}};
     }
 
     final static void a(String param0, float param1, int param2) {
         try {
           qd.field_q = param1;
-          mp.field_p = param0;
+          MassPoisonSpecial.field_p = param0;
           if (param2 < 114) {
             dea.d(124);
           }
@@ -51,11 +51,11 @@ final class dea extends lw {
                   this.c(127);
                 }
                 if (this.field_e == 1) {
-                  wf.field_x = true;
+                  MartyrAnimation.field_x = true;
                 }
                 if (um.a(true) &&
                   this.c((byte) 95)) {
-                  fla.b(23621);
+                  ShieldSpecial.b(23621);
                 }
               }
             } else {
@@ -78,11 +78,11 @@ final class dea extends lw {
                   this.c(127);
                 }
                 if (this.field_e == 1) {
-                  wf.field_x = true;
+                  MartyrAnimation.field_x = true;
                 }
                 if (um.a(true) &&
                   this.c((byte) 95)) {
-                  fla.b(23621);
+                  ShieldSpecial.b(23621);
                   if (param1 != 73) {
                     field_o = (java.awt.Color) null;
                   }
@@ -92,7 +92,7 @@ final class dea extends lw {
             }
           } else {
             if (this.field_e == 1) {
-              fla.b(param1 ^ 23564);
+              ShieldSpecial.b(param1 ^ 23564);
             } else {
               if (param0 != 40) {
                 if (param0 == 34) {
@@ -105,11 +105,11 @@ final class dea extends lw {
                     this.c(127);
                   }
                   if (this.field_e == 1) {
-                    wf.field_x = true;
+                    MartyrAnimation.field_x = true;
                   }
                   if (um.a(true) &&
                     this.c((byte) 95)) {
-                    fla.b(23621);
+                    ShieldSpecial.b(23621);
                   }
                 }
               } else {
@@ -127,11 +127,11 @@ final class dea extends lw {
                       this.c(127);
                     }
                     if (this.field_e == 1) {
-                      wf.field_x = true;
+                      MartyrAnimation.field_x = true;
                     }
                     if (um.a(true) &&
                       this.c((byte) 95)) {
-                      fla.b(23621);
+                      ShieldSpecial.b(23621);
                     }
                   }
                 }

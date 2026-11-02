@@ -23,9 +23,9 @@ final class kja {
     final static sna a(byte param0) {
         if (param0 != 20) {
           kja.a(-25, 95, (byte) 51, true);
-          return ak.field_q.field_vb;
+          return SnowEvent.field_q.field_vb;
         }
-        return ak.field_q.field_vb;
+        return SnowEvent.field_q.field_vb;
     }
 
     public static void b(int param0) {

@@ -54,7 +54,7 @@ final class mma {
               eia.field_a = kb.field_e;
             }
             if (kb.field_e == eia.field_a &&
-              ii.b(1, 0)) {
+              CreatureEvent.b(1, 0)) {
               var6_int = ig.field_m.readUnsignedByte(16711935);
               if (var6_int != 0) {
                 dw.field_f = -1;
@@ -66,7 +66,7 @@ final class mma {
               ig.field_m.position = 0;
             }
             if (eia.field_a == mn.field_m &&
-              ii.b(8, 0)) {
+              CreatureEvent.b(8, 0)) {
               bi.field_j = ig.field_m.readLong(-121);
               ig.field_m.position = 0;
               fha.a(param5, 0, uaa.field_f, param0, param3);
@@ -74,7 +74,7 @@ final class mma {
             }
             boolean decompiledFrameRemainder0 = true;
             if (eia.field_a == lba.field_c &&
-              ii.b(1, 0)) {
+              CreatureEvent.b(1, 0)) {
               var6_intLifetime1 = ig.field_m.readUnsignedByte(16711935);
               ij.field_m = null;
               ig.field_m.position = 0;
@@ -99,10 +99,10 @@ final class mma {
               }
             }
             if (eia.field_a == gca.field_f &&
-              u.d((byte) -67)) {
+              StickyEvent.d((byte) -67)) {
               gha.field_a = ig.field_m.readLong(-108);
               kda.field_b = param1;
-              hea.field_r = ig.field_m.readUnsignedByte(16711935);
+              BananarangSpecial.field_r = ig.field_m.readUnsignedByte(16711935);
               hka.field_i = ig.field_m.readUnsignedByte(16711935);
               ProxySocketConnector.field_f = ig.field_m.readUnsignedShort((byte) 115);
               var11 = ig.field_m.readNullableString((byte) 65);
@@ -114,7 +114,7 @@ final class mma {
               hk.field_d = stackIn_44_0;
               if (!param3) {
                 stackIn_49_0 = ((4 & var7) != 0);
-                er.field_y = stackIn_49_0;
+                FlirtAnimation.field_y = stackIn_49_0;
                 stackIn_52_0 = ((var7 & 8) != 0);
                 hl.field_I = stackIn_52_0;
                 stackIn_55_0 = ((2 & var7) != 0);
@@ -128,21 +128,21 @@ final class mma {
                 ig.field_m.readUnsignedByte(16711935);
                 ig.field_m.readInt(-64);
                 an.field_t = ig.field_m.readUnsignedShort((byte) 77);
-                kea.field_q = new byte[an.field_t];
+                AirstrikeSpecial.field_q = new byte[an.field_t];
                 for (var8 = 0; var8 < an.field_t; var8++) {
-                  kea.field_q[var8] = ig.field_m.b(true);
+                  AirstrikeSpecial.field_q[var8] = ig.field_m.b(true);
                 }
               }
               cha.field_l = ig.field_m.readString(-107);
               var12 = (CharSequence) ((Object) cha.field_l);
-              JaggrabDownloader.field_a = fq.a(0, var12);
+              JaggrabDownloader.field_a = HomingMissileSpecial.a(0, var12);
               rja.field_o = ig.field_m.readUnsignedByte(16711935);
               eia.field_a = uca.field_a;
               if (uaa.field_f.a((byte) -106) == bs.field_g) {
                 DiskCacheRequest.field_u.a(94, nia.d(-31768));
               } else {
-                if (uaa.field_f.a((byte) -106) == bna.field_x) {
-                  er.field_x.a(103, nia.d(-31768));
+                if (uaa.field_f.a((byte) -106) == DisableAnimation.field_x) {
+                  FlirtAnimation.field_x.a(103, nia.d(-31768));
                 }
               }
               DiskCacheRequest.field_x = false;
@@ -150,7 +150,7 @@ final class mma {
                 hp.a(nia.d(-31768), var11, 3);
               }
               if (ProxySocketConnector.field_f <= 0 &&
-                !er.field_y) {
+                !FlirtAnimation.field_y) {
                 try {
                   ac.a(nia.d(-31768), "unzap", (byte) 64);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -159,7 +159,7 @@ final class mma {
                 }
               } else {
                 try {
-                  ac.a(nia.d(-31768), "zap", new Object[]{uga.a(gha.field_a, 48)}, (byte) 73);
+                  ac.a(nia.d(-31768), "zap", new Object[]{FullHealAnimation.a(gha.field_a, 48)}, (byte) 73);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -177,7 +177,7 @@ final class mma {
               return stackIn_83_0;
             }
             if (lf.field_a == eia.field_a &&
-              u.d((byte) -67)) {
+              StickyEvent.d((byte) -67)) {
               vc.a((byte) -128);
               if (ri.field_a == 7 &&
                 !DiskCacheRequest.field_x) {

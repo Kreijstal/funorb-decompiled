@@ -53,7 +53,7 @@ final class IsaacRandom {
     }
 
     final static void a(int param0, byte param1) {
-        if (bp.e(-29919)) {
+        if (AttackUpAllAnimation.e(-29919)) {
           return;
         }
         sja.field_fb.writeCipheredByte(94, (byte) 115);
@@ -204,7 +204,7 @@ final class IsaacRandom {
         do {
           var4 = this.nextInt(28602);
         } while (var3 < var4);
-        return sg.a(param1, 1816304479, var4);
+        return ZombiesSpecial.a(param1, 1816304479, var4);
     }
 
     final int nextInt(int param0) {

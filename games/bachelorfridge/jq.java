@@ -40,11 +40,11 @@ final class jq extends k {
           if (jv.field_j == 11) {
             dja.b(false);
           }
-          nl.a(qd.field_q, mp.field_p, wk.field_b, -36);
+          nl.a(qd.field_q, MassPoisonSpecial.field_p, wk.field_b, -36);
           if (param1 > -122) {
             field_k = (int[]) null;
           }
-          av.a(0, -77, param0, 0);
+          IncomingEvent.a(0, -77, param0, 0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

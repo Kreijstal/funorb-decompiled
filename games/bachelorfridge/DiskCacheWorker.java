@@ -56,7 +56,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              cv.a(1, (String) null, (Throwable) ((Object) var2_ref));
+              SpiltMilkEvent.a(1, (String) null, (Throwable) ((Object) var2_ref));
               var7.field_n = false;
             }
           }

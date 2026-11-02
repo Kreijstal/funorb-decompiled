@@ -11,7 +11,7 @@ final class id extends pn {
 
     id(vr param0) {
         try {
-          this.field_b = bla.a(29611, "basic", "tiles_pizza", param0);
+          this.field_b = RageSpecial.a(29611, "basic", "tiles_pizza", param0);
           this.a(128);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -19,7 +19,7 @@ final class id extends pn {
     }
 
     final static void e(int param0, int param1) {
-        ol.a(pja.field_a[param1][kla.a(3, m.field_a, -2147483648)], true);
+        ol.a(pja.field_a[param1][DiveBomberAnimation.a(3, m.field_a, -2147483648)], true);
         if (param0 != 49) {
           id.e(68, -5);
         }

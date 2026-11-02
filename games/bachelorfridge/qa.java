@@ -8,7 +8,7 @@ final class qa extends k {
         if (bka.field_h) {
           return;
         }
-        ln.e(-116);
+        TeleportAnimation.e(-116);
         hp.field_c = -3;
         if (!af.field_a) {
           rs.a(true);

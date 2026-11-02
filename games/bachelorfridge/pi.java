@@ -49,10 +49,10 @@ final class pi extends kj {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (null == nb.field_q) {
+            if (null == ScavengerEvent.field_q) {
               return param1.getParameter("settings");
             }
-            stackIn_16_0 = nb.field_q;
+            stackIn_16_0 = ScavengerEvent.field_q;
             return stackIn_16_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -105,16 +105,16 @@ final class pi extends kj {
           var2 = this.field_f;
           var2 += 16;
           for (var3 = 0; var3 < 72; var3++) {
-            var4 = kla.a(this.field_f, this.field_e.field_h.field_w, -2147483648) - (this.field_f >> 1);
+            var4 = DiveBomberAnimation.a(this.field_f, this.field_e.field_h.field_w, -2147483648) - (this.field_f >> 1);
             stackIn_10_0 = (this.field_f >> 2) - Math.abs(var4) / 2;
             stackIn_10_1 = 0;
-            if (stackIn_10_1 < kla.a(2, this.field_e.field_h.field_w, -2147483648)) {
+            if (stackIn_10_1 < DiveBomberAnimation.a(2, this.field_e.field_h.field_w, -2147483648)) {
               stackIn_13_1 = 1;
             } else {
               stackIn_13_1 = -1;
             }
             var5 = stackIn_10_0 * stackIn_13_1;
-            kla.a(50, this.field_e.field_h.field_w, -2147483648);
+            DiveBomberAnimation.a(50, this.field_e.field_h.field_w, -2147483648);
             var6 = 64 + var4;
             var7 = var5 + 32;
             var8 = (int)(Math.sin(300.0 * (double)var2) * 100.0) * 0;
@@ -123,7 +123,7 @@ final class pi extends kj {
             stackIn_15_2 = var6;
             stackIn_15_3 = var8;
             stackIn_15_4 = var7;
-            if (kla.a(20, this.field_e.field_h.field_w, -2147483648) >= 5) {
+            if (DiveBomberAnimation.a(20, this.field_e.field_h.field_w, -2147483648) >= 5) {
               stackIn_16_0 = null;
               stackIn_16_1 = null;
               stackIn_16_5 = aha.field_A[this.field_e.field_h.field_E][0];
@@ -133,10 +133,10 @@ final class pi extends kj {
               stackIn_16_5 = aha.field_A[this.field_e.field_h.field_E][1];
             }
             var9 = new rea(stackIn_15_2, stackIn_15_3, stackIn_15_4, stackIn_16_5);
-            kla.a(3, this.field_e.field_h.field_w, -2147483648);
-            kla.a(5000, this.field_e.field_h.field_w, -2147483648);
-            var9.field_o = (double)(-kla.a(2, this.field_e.field_h.field_w, -2147483648));
-            var9.field_n = -kla.a(10, this.field_e.field_h.field_w, -2147483648) + 25;
+            DiveBomberAnimation.a(3, this.field_e.field_h.field_w, -2147483648);
+            DiveBomberAnimation.a(5000, this.field_e.field_h.field_w, -2147483648);
+            var9.field_o = (double)(-DiveBomberAnimation.a(2, this.field_e.field_h.field_w, -2147483648));
+            var9.field_n = -DiveBomberAnimation.a(10, this.field_e.field_h.field_w, -2147483648) + 25;
             var9.field_h = -1;
             this.field_g.a(var9, true);
           }
@@ -215,7 +215,7 @@ final class pi extends kj {
         if (param1 != 0) {
           return;
         }
-        fv.a(param0, 65280, 10, this.field_g, param2, (byte) -115);
+        PetAttackAnimation.a(param0, 65280, 10, this.field_g, param2, (byte) -115);
     }
 
     public static void a(boolean param0) {

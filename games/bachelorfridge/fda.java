@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fda extends pp {
+final class fda extends EventEffect {
     static java.awt.Frame field_j;
     static Sprite field_m;
     static vr field_l;
     static qh field_i;
     static vr field_k;
 
-    fda(nq param0) {
+    fda(CreatureRef param0) {
         try {
-          this.field_h = param0;
+          this.target = param0;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "fda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -93,8 +93,8 @@ final class fda extends pp {
           while (kaa.b(127)) {
             gja.field_m.a(dla.field_j, (byte) 7, gf.field_k);
           }
-          if (la.field_r != -1) {
-            var1_int = la.field_r;
+          if (TBomberEvent.field_r != -1) {
+            var1_int = TBomberEvent.field_r;
             ep.a(-1, param0 + 8191);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
@@ -138,8 +138,8 @@ final class fda extends pp {
         field_j = null;
     }
 
-    final void a(aga param0, op param1, int param2) {
-        aga var4 = this.field_h.a(103, param1);
+    final void a(BattleCreature param0, BattleState param1, int param2) {
+        BattleCreature var4 = this.target.a(103, param1);
         if (var4 == null) {
           return;
         }
@@ -156,7 +156,7 @@ final class fda extends pp {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          er.a(this.field_h, 109, param0);
+          FlirtAnimation.a(this.target, 109, param0);
           int var3_int = -94 % ((param1 - 34) / 58);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "fda.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -197,7 +197,7 @@ final class fda extends pp {
             w.field_g = param0.field_a;
             fl.field_p = param0.field_o;
           }
-          ija.a((byte) -100, param0);
+          CranberrySpecial.a((byte) -100, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

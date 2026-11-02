@@ -357,7 +357,7 @@ class vd extends wj implements e {
           if (var6 != 80) {
             return false;
           }
-          if (wga.field_q[81]) {
+          if (InvincibleEvent.field_q[81]) {
             stackIn_16_0 = this.a(-128, param3);
           } else {
             stackIn_16_0 = this.b(param3, 1);

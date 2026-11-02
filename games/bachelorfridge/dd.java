@@ -93,7 +93,7 @@ final class dd extends vd implements lja {
               this.field_E[var5].a(0, 15, (byte) 59, 80, 16 * var5 + 20);
               this.c(this.field_E[var5], -125);
             }
-            this.field_E[var3_int] = new hf(mt.field_t, (pl) (this));
+            this.field_E[var3_int] = new hf(ScavengerSpecial.field_t, (pl) (this));
             this.field_E[var3_int].field_f = (qda) ((Object) var4);
             this.field_E[var3_int].a(0, 15, (byte) 59, 100, 20 + var3_int * 16 + 16);
             if (param1 >= -19) {

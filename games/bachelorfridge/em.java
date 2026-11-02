@@ -24,7 +24,7 @@ final class em extends am implements lja {
         try {
           pn.field_f = pn.field_f + 65536;
           while (c.a(ph.field_D, pn.field_f, false) >= 65536) {
-            wga.field_s = wga.field_s + 1;
+            InvincibleEvent.field_s = InvincibleEvent.field_s + 1;
             pn.field_f = pn.field_f - ph.field_D;
           }
           var2_int = -1;
@@ -37,23 +37,23 @@ final class em extends am implements lja {
           }
           if (-1 != var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            if (ph.field_G > gp.field_A) {
-              gp.field_A = gp.field_A + 1;
-              if (ph.field_E < gp.field_A && (oja.field_f == null ||
+            if (ph.field_G > DreamsAnimation.field_A) {
+              DreamsAnimation.field_A = DreamsAnimation.field_A + 1;
+              if (ph.field_E < DreamsAnimation.field_A && (oja.field_f == null ||
                 null == oja.field_f[ih.field_l])) {
-                gp.field_A = gp.field_A - 1;
+                DreamsAnimation.field_A = DreamsAnimation.field_A - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (gp.field_A >= ph.field_G &&
+                if (DreamsAnimation.field_A >= ph.field_G &&
                   oja.field_f[(ih.field_l + 1) % var2_int] == null) {
-                  gp.field_A = gp.field_A - 1;
+                  DreamsAnimation.field_A = DreamsAnimation.field_A - 1;
                 }
               }
             }
-            if (gp.field_A >= ph.field_G) {
+            if (DreamsAnimation.field_A >= ph.field_G) {
               vj.field_n = ih.field_l;
-              if (!ja.field_p) {
+              if (!ResetSpecial.field_p) {
                 ih.field_l = ih.field_l - 1;
                 if (ih.field_l < 0) {
                   ih.field_l = ih.field_l + var2_int;
@@ -64,10 +64,10 @@ final class em extends am implements lja {
                   ih.field_l = ih.field_l - var2_int;
                 }
               }
-              gp.field_A = gp.field_A - ph.field_G;
+              DreamsAnimation.field_A = DreamsAnimation.field_A - ph.field_G;
             }
-            if (ph.field_E < gp.field_A) {
-              ja.field_p = true;
+            if (ph.field_E < DreamsAnimation.field_A) {
+              ResetSpecial.field_p = true;
             }
           }
           if (param1 != 0) {
@@ -82,27 +82,27 @@ final class em extends am implements lja {
               if (269 - id.field_h.field_q < nfa.field_a &&
                 nfa.field_a < 269) {
                 var4 = 1;
-                ja.field_p = false;
-                gp.field_A = ph.field_G;
+                ResetSpecial.field_p = false;
+                DreamsAnimation.field_A = ph.field_G;
               }
               if (586 < nfa.field_a &&
                 nfa.field_a < 586 + id.field_h.field_q) {
                 var4 = 1;
-                ja.field_p = true;
-                gp.field_A = ph.field_G;
+                ResetSpecial.field_p = true;
+                DreamsAnimation.field_A = ph.field_G;
               }
             }
             if (var4 == 0 &&
-              ph.field_E < gp.field_A &&
+              ph.field_E < DreamsAnimation.field_A &&
               gd.field_m > var3 &&
               id.field_h.field_p + var3 > gd.field_m) {
               if (-id.field_h.field_q + 269 < mk.field_p &&
                 mk.field_p < 269) {
-                gp.field_A = ph.field_E;
+                DreamsAnimation.field_A = ph.field_E;
               }
               if (586 < mk.field_p &&
                 mk.field_p < 586 + id.field_h.field_q) {
-                gp.field_A = ph.field_E;
+                DreamsAnimation.field_A = ph.field_E;
               }
             }
           }
@@ -147,9 +147,9 @@ final class em extends am implements lja {
     }
 
     final static void a(int param0, int param1) {
-        fb.field_p = param1 >> 4 & 3;
-        if (!(fb.field_p <= 2)) {
-          fb.field_p = 2;
+        ShuffleSpecial.field_p = param1 >> 4 & 3;
+        if (!(ShuffleSpecial.field_p <= 2)) {
+          ShuffleSpecial.field_p = 2;
         }
         ri.field_c = param1 >> 2 & 3;
         if (2 < ri.field_c) {
@@ -225,14 +225,14 @@ final class em extends am implements lja {
           var3 = null;
           if (dn.field_b != param1) {
             if (r.field_m == param1) {
-              var3 = cn.field_k;
+              var3 = PlaceCreatureEffect.field_k;
               this.field_q = this.field_q + 10;
-              if (od.e((byte) -127)) {
+              if (BuffVendorAnimation.e((byte) -127)) {
                 this.field_q = this.field_q + 20;
                 var3 = ProxySocketConnector.field_e;
               }
             } else {
-              if (param1 == tma.field_x) {
+              if (param1 == SplitAnimation.field_x) {
                 this.field_q = this.field_q + 30;
                 var3 = jia.field_l;
               }
@@ -285,7 +285,7 @@ final class em extends am implements lja {
         if (param0 > -26) {
           return true;
         }
-        return null != wh.field_p ? true : false;
+        return null != RefreshingSpecial.field_p ? true : false;
     }
 
     public final void a(int param0, hf param1, int param2, byte param3, int param4) {

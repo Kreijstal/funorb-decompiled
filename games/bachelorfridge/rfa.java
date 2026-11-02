@@ -25,9 +25,9 @@ final class rfa {
         }
     }
 
-    final static cj a(int param0, PacketBuffer param1) {
+    final static BattleUpdate a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        rv stackIn_3_0 = null;
+        EffectBatch stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -36,8 +36,8 @@ final class rfa {
           if (param0 != 29428) {
             rfa.a((byte) 60);
           }
-          stackIn_3_0 = new rv(param1);
-          return (cj) ((Object) stackIn_3_0);
+          stackIn_3_0 = new EffectBatch(param1);
+          return (BattleUpdate) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

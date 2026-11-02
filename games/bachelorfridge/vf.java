@@ -9,7 +9,7 @@ abstract class vf extends vd {
     static sna field_F;
 
     vf(rp param0, int param1, int param2) {
-        super(-param1 + lb.field_v >> 1, mi.field_k - param2 >> 1, param1, param2, (qda) null);
+        super(-param1 + InvincibleAnimation.field_v >> 1, mi.field_k - param2 >> 1, param1, param2, (qda) null);
         try {
           this.field_G = param0;
           this.field_E = 0;
@@ -21,11 +21,11 @@ abstract class vf extends vd {
 
     final void b(int param0, int param1, int param2) {
         if (param0 < -9) {
-          this.a(-param2 + lb.field_v >> 1, param1, (byte) 59, param2, mi.field_k - param1 >> 1);
+          this.a(-param2 + InvincibleAnimation.field_v >> 1, param1, (byte) 59, param2, mi.field_k - param1 >> 1);
           return;
         }
         this.field_C = true;
-        this.a(-param2 + lb.field_v >> 1, param1, (byte) 59, param2, mi.field_k - param1 >> 1);
+        this.a(-param2 + InvincibleAnimation.field_v >> 1, param1, (byte) 59, param2, mi.field_k - param1 >> 1);
     }
 
     boolean k(int param0) {
@@ -137,7 +137,7 @@ abstract class vf extends vd {
         gs var6 = null;
         try {
           var6 = new gs(param5, param0, param1, param3, param4);
-          ija.a((byte) 105, var6);
+          CranberrySpecial.a((byte) 105, var6);
           int var7 = -6 / ((70 - param2) / 45);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "vf.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');

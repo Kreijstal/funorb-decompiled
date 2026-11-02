@@ -36,23 +36,23 @@ final class ar extends vd implements pc, lja {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, op param4, oo param5) {
+    final static void a(int param0, int param1, int param2, boolean param3, BattleState param4, StampedeEvent param5) {
         if (param2 < 0 ||
-          param4.field_z <= param2 ||
+          param4.width <= param2 ||
           param0 < 0 ||
-          param0 >= param4.field_B) {
+          param0 >= param4.height) {
           return;
         }
         if (param1 != 31546) {
           return;
         }
-        wia var8 = param4.field_a[param2][param0];
-        aga var7 = var8.field_l;
+        BoardTile var8 = param4.tiles[param2][param0];
+        BattleCreature var7 = var8.occupant;
         if (var7 == null) {
           return;
         }
         try {
-          param5.field_o.a(new iv(new nq(var7), false, 1, 100, 0), true);
+          param5.effects.a(new DamageEffect(new CreatureRef(var7), false, 1, 100, 0), true);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ar.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

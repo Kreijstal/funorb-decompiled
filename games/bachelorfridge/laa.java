@@ -148,18 +148,18 @@ final class laa extends pv {
         var3 = BachelorFridge.field_y;
         eea.field_b = false;
         var1 = 92 / ((0 - param0) / 52);
-        at.field_i = null;
+        AnimationNode.field_i = null;
         if (gfa.field_i) {
           oq.field_b.o(2113632);
         } else {
           var2 = rja.field_o;
           if (0 < var2) {
             if (var2 != 1) {
-              at.field_i = lga.a(true, new String[]{Integer.toString(var2)}, ra.field_j);
+              AnimationNode.field_i = lga.a(true, new String[]{Integer.toString(var2)}, ra.field_j);
             } else {
-              at.field_i = qw.field_a;
+              AnimationNode.field_i = qw.field_a;
             }
-            at.field_i = rca.a(0, new CharSequence[]{(CharSequence) ((Object) at.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DualLinkNode.field_j)});
+            AnimationNode.field_i = rca.a(0, new CharSequence[]{(CharSequence) ((Object) AnimationNode.field_i), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) DualLinkNode.field_j)});
           }
           oq.field_b.p(-97);
           bi.o(2);

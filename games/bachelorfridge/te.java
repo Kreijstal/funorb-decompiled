@@ -20,8 +20,8 @@ final class te extends kj {
           int var3 = 0;
           var3 = BachelorFridge.field_y;
           try {
-            if (aka.field_G != null) {
-              aka.field_G.c(20);
+            if (HomingMissileAnimation.field_G != null) {
+              HomingMissileAnimation.field_G.c(20);
             }
             if (param0 <= 39) {
               te.c(26);
@@ -135,8 +135,8 @@ final class te extends kj {
         super(param0, param1, param2);
         try {
           this.field_g = 80;
-          this.field_i = kla.a(129, m.field_a, -2147483648) - 64;
-          this.field_h = -32 + kla.a(65, m.field_a, -2147483648);
+          this.field_i = DiveBomberAnimation.a(129, m.field_a, -2147483648) - 64;
+          this.field_h = -32 + DiveBomberAnimation.a(65, m.field_a, -2147483648);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

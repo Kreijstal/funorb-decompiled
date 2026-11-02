@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends jm {
+final class bg extends BoardChange {
     static String field_m;
 
     public bg() {
         this.field_j = 5;
     }
 
-    final void a(boolean param0, op param1) {
+    final void a(boolean param0, BattleState param1) {
         try {
           param1.field_K = 0;
           param1.field_x = param0 ? true : false;
@@ -43,10 +43,10 @@ final class bg extends jm {
           ub.field_k = null;
           return;
         }
-        ts.field_r = qk.field_q;
-        jba.field_A = lna.field_C;
-        jba.field_A.field_ab = -1;
-        jba.field_A.field_G = -1;
+        DisableSpecial.field_r = qk.field_q;
+        HailAnimation.field_A = lna.field_C;
+        HailAnimation.field_A.field_ab = -1;
+        HailAnimation.field_A.field_G = -1;
         qk.field_q = null;
         lna.field_C = null;
         ub.field_k = null;

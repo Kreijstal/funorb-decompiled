@@ -10,7 +10,7 @@ final class qc {
     static String field_e;
 
     final void a(byte param0, pd param1) {
-        if (this.field_f >= qga.field_p[this.field_c]) {
+        if (this.field_f >= OneSpecial.field_p[this.field_c]) {
           return;
         }
         try {
@@ -37,7 +37,7 @@ final class qc {
 
     qc(int param0) {
         this.field_c = param0;
-        this.field_d = qga.field_p[this.field_c];
+        this.field_d = OneSpecial.field_p[this.field_c];
         this.field_a = new pd[this.field_d];
     }
 

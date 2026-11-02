@@ -22,7 +22,7 @@ final class cf {
     final static void a(boolean param0, int param1, boolean param2, byte param3) {
         int var5 = BachelorFridge.field_y;
         if (param1 == -1) {
-          jm.a(param0, true);
+          BoardChange.a(param0, true);
           if (param3 >= 13) {
             return;
           }
@@ -30,7 +30,7 @@ final class cf {
           return;
         }
         if (-3 == param1) {
-          jm.a(param0, true);
+          BoardChange.a(param0, true);
           if (param3 >= 13) {
             return;
           }
@@ -46,16 +46,16 @@ final class cf {
           return;
         }
         if (param2) {
-          jm.a(false, true);
+          BoardChange.a(false, true);
           SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
-          eg.field_p[param1].l(9);
+          LevitateSpecial.field_p[param1].l(9);
           if (param3 >= 13) {
             return;
           }
           cf.a(-81);
           return;
         }
-        eg.field_p[param1].l(9);
+        LevitateSpecial.field_p[param1].l(9);
         if (param3 >= 13) {
           return;
         }

@@ -644,15 +644,15 @@ final class MusicPatch extends IntrusiveNode {
         if (null == wja.field_m) {
           wja.field_m = new DualLinkNodeHashTable(64);
         }
-        if (fq.field_s == null) {
-          fq.field_s = new DualLinkNodeHashTable(64);
+        if (HomingMissileSpecial.field_s == null) {
+          HomingMissileSpecial.field_s = new DualLinkNodeHashTable(64);
         }
         if (param1 > -45) {
           return;
         }
         try {
           es.field_j = param2.field_z;
-          cca.field_v = param0.field_z;
+          HazmatAnimation.field_v = param0.field_z;
           DualLinkNode.c(-55);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "eka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -77,7 +77,7 @@ final class eq {
                 raa.field_F = raa.field_F + 1;
               }
             }
-            hia.c((byte) -117);
+            AttackOrder.c((byte) -117);
           } else {
             raa.field_F = 0;
           }

@@ -6,7 +6,7 @@ final class rp extends hfa {
     static IntrusiveDeque field_C;
 
     public rp() {
-        super(0, 0, lb.field_v, mi.field_k, (qda) null, (pl) null);
+        super(0, 0, InvincibleAnimation.field_v, mi.field_k, (qda) null, (pl) null);
         this.field_D = new IntrusiveDeque();
     }
 

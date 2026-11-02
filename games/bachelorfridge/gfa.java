@@ -11,7 +11,7 @@ final class gfa {
     int field_j;
     static String field_k;
     int field_d;
-    static wca[] field_a;
+    static CreatureType[] field_a;
     static sna field_f;
     static String field_b;
 
@@ -43,7 +43,7 @@ final class gfa {
     static {
         field_c = 0;
         field_k = "Players: ";
-        field_a = new wca[50];
+        field_a = new CreatureType[50];
         field_g = "Unable to connect to the data server. Please check any firewall you are using.";
         field_b = "Players: <%0>/<%1>";
     }

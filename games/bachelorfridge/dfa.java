@@ -24,16 +24,16 @@ class dfa {
         var12 = BachelorFridge.field_y;
         try {
           ge.field_F = -1L;
-          mja.field_s = param4;
+          StampedeSpecial.field_s = param4;
           kb.field_j = param5;
           ld.field_q = param4.length;
-          fia.field_r = new byte[(7 + kb.field_j) / 8];
+          LevitateEvent.field_r = new byte[(7 + kb.field_j) / 8];
           ce.field_y = false;
-          rv.field_n = null;
-          pw.field_w = null;
+          EffectBatch.field_n = null;
+          SnowAnimation.field_w = null;
           var10_int = 0;
-          for (var11 = param3; mja.field_s.length > var11; var11++) {
-            var10_int = var10_int + (255 & mja.field_s[var11]);
+          for (var11 = param3; StampedeSpecial.field_s.length > var11; var11++) {
+            var10_int = var10_int + (255 & StampedeSpecial.field_s[var11]);
           }
           var10_int = (7 + var10_int) / 8;
           MouseWheelInput.field_c = new byte[var10_int];
@@ -44,7 +44,7 @@ class dfa {
           aa.field_l.d(99);
           iga.field_c = new DualLinkNodeHashTable(param2);
           wk.field_a = -1;
-          ui.field_q = -1;
+          FullHealSpecial.field_q = -1;
           hja.field_i = 0;
           hc.field_J = 0;
           if (null == param7.field_z) {
@@ -60,7 +60,7 @@ class dfa {
           bia.field_g.d(param3 + 92);
           wi.field_i = new DualLinkNodeHashTable(param1);
           wda.field_a = 0L;
-          kla.field_x = param0;
+          DiveBomberAnimation.field_x = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

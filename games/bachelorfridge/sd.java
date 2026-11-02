@@ -29,8 +29,8 @@ final class sd {
           mc.field_h > 0) {
           fieldTemp$4 = mc.field_h - 1;
           mc.field_h = mc.field_h - 1;
-          var2_ref_byte__Lifetime1 = rn.field_q[fieldTemp$4];
-          rn.field_q[mc.field_h] = null;
+          var2_ref_byte__Lifetime1 = BananarangEvent.field_q[fieldTemp$4];
+          BananarangEvent.field_q[mc.field_h] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&
@@ -76,7 +76,7 @@ final class sd {
         }
     }
 
-    final static void a(byte param0, PacketBuffer param1, sfa param2) {
+    final static void a(byte param0, PacketBuffer param1, CreatureOrder param2) {
         if (param2 == null) {
           param1.writeByte(-1, param0 - 124);
           return;
@@ -86,8 +86,8 @@ final class sd {
           if (param0 != 124) {
             sd.a(62, 123);
           }
-          param1.b(param2.field_g, -112);
-          er.a(param2.field_h, 110, param1);
+          param1.b(param2.moveId, -112);
+          FlirtAnimation.a(param2.creature, 110, param1);
           param2.a(param0 ^ 14, param1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "sd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -29,19 +29,19 @@ final class rs {
         int var2Lifetime1;
         var3 = BachelorFridge.field_y;
         try {
-          if (iba.field_s == kaa.field_m) {
+          if (OhNoEvent.field_s == kaa.field_m) {
             return;
           }
-          if (tn.a(iba.field_s, 124)) {
-            eg.field_p[iba.field_s].j(-5);
+          if (tn.a(OhNoEvent.field_s, 124)) {
+            LevitateSpecial.field_p[OhNoEvent.field_s].j(-5);
           }
           ip.a((byte) 22, kaa.field_m);
-          iba.field_s = kaa.field_m;
+          OhNoEvent.field_s = kaa.field_m;
           vla.field_w = sia.field_h;
-          tma.field_v = 0;
+          SplitAnimation.field_v = 0;
           if (kaa.field_m != 1 &&
             kaa.field_m != -3) {
-            ct.c(0, -114);
+            OneEvent.c(0, -114);
           }
           if (!param0) {
             field_h = (String) null;
@@ -51,12 +51,12 @@ final class rs {
             gs.field_f = null;
             dj.field_c = null;
             sna.field_fb = null;
-            baa.e(17035);
-            iba.d(34);
+            BananarangAnimation.e(17035);
+            OhNoEvent.d(34);
           }
           if (ai.field_c) {
-            tla.field_q = new IntrusiveDeque();
-            var9 = sg.field_q;
+            AirstrikeEvent.field_q = new IntrusiveDeque();
+            var9 = ZombiesSpecial.field_q;
             var7 = var9;
             var4 = var7;
             var1 = var4;
@@ -77,24 +77,24 @@ final class rs {
           }
           if (ge.field_D) {
             ih.d((byte) -109);
-            oga.e(46);
+            FlirtEvent.e(46);
             DualLinkNode.c(106);
             ge.field_D = false;
           }
-          if (iba.field_s == 12) {
-            tla.d(-89);
+          if (OhNoEvent.field_s == 12) {
+            AirstrikeEvent.d(-89);
           } else {
-            if (iba.field_s == 0) {
-              tla.d(-89);
+            if (OhNoEvent.field_s == 0) {
+              AirstrikeEvent.d(-89);
             } else {
-              if (iba.field_s == -2) {
-                tla.d(-89);
+              if (OhNoEvent.field_s == -2) {
+                AirstrikeEvent.d(-89);
               }
             }
           }
-          if (iba.field_s != 0 &&
+          if (OhNoEvent.field_s != 0 &&
             kaa.field_m == -3 &&
-            iba.field_s != 12) {
+            OhNoEvent.field_s != 12) {
             ena.a((byte) -44, IterableNodeHashTable.field_a);
             return;
           }

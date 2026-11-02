@@ -63,9 +63,9 @@ final class ria extends gca {
     private final void e(byte param0) {
         int var3 = 0;
         cia var4 = null;
-        int var2 = kla.a(256, vd.field_z, -2147483648);
+        int var2 = DiveBomberAnimation.a(256, vd.field_z, -2147483648);
         if (param0 < -80) {
-          var3 = kla.a(1024, vd.field_z, -2147483648);
+          var3 = DiveBomberAnimation.a(1024, vd.field_z, -2147483648);
           var4 = new cia(var2, 0, var3);
           var4.a(119, 128, -2);
           var4.a(0, -15, 0, 0);

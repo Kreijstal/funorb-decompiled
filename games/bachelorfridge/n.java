@@ -24,8 +24,8 @@ final class n {
         return this.field_e;
     }
 
-    final static pp a(PacketBuffer param0, int param1) {
-        nq var2 = null;
+    final static EventEffect a(PacketBuffer param0, int param1) {
+        CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -34,7 +34,7 @@ final class n {
         int var7 = 0;
         PacketBuffer var8 = null;
         int stackIn_5_0 = 0;
-        iv stackIn_6_0 = null;
+        DamageEffect stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -54,8 +54,8 @@ final class n {
           var5 = -16384 + (var5 ^ 16384);
           var6 = var3Lifetime1 >> 5;
           var7 = param0.readUnsignedByte(16711935);
-          stackIn_6_0 = new iv(var2, var4 != 0, var6, var5, var7);
-          return (pp) ((Object) stackIn_6_0);
+          stackIn_6_0 = new DamageEffect(var2, var4 != 0, var6, var5, var7);
+          return (EventEffect) ((Object) stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

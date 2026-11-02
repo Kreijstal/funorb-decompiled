@@ -85,7 +85,7 @@ final class oq {
         ge.field_L = param1 ? true : false;
         ge.a(320, 8, param0, aha.field_D, 2, 8, (aha.field_D.field_v + aha.field_D.field_B) * 3 / 2, (Sprite[]) null, aha.field_D.field_v, (byte) 91, 240, (Sprite[]) null);
         if (null != kga.field_c) {
-          ju.field_r.a((java.awt.Component) ((Object) kga.field_c), false, 127);
+          DiveBomberEvent.field_r.a((java.awt.Component) ((Object) kga.field_c), false, 127);
         }
     }
 

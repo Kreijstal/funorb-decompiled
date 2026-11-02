@@ -143,14 +143,14 @@ final class eca extends bi {
         var3 = ri.field_b.field_k[ks.field_i];
         var4 = ri.field_b.field_g[ks.field_i];
         var5 = this.field_k.field_u + 108;
-        this.a(0, od.field_z, param0 ^ 9);
+        this.a(0, BuffVendorAnimation.field_z, param0 ^ 9);
         var6 = 0;
-        this.a(1, hea.field_q, 0);
+        this.a(1, BananarangSpecial.field_q, 0);
         if (param0 == 9) {
           this.a(2, aj.field_b, 0);
           this.a(3, ej.field_n, param0 - 9);
           this.a(4, es.field_h, 0);
-          this.a(5, eg.field_q, 0);
+          this.a(5, LevitateSpecial.field_q, 0);
           for (var7 = 0; var7 < 10; var7++) {
             if (null != var3[var7] &&
               !var3[var7].equals("")) {
@@ -191,7 +191,7 @@ final class eca extends bi {
         this.a(2, aj.field_b, 0);
         this.a(3, ej.field_n, param0 - 9);
         this.a(4, es.field_h, 0);
-        this.a(5, eg.field_q, 0);
+        this.a(5, LevitateSpecial.field_q, 0);
         for (var7Lifetime1 = 0; var7Lifetime1 < 10; var7Lifetime1++) {
           if (null != var3[var7Lifetime1] &&
             !var3[var7Lifetime1].equals("")) {
@@ -293,11 +293,11 @@ final class eca extends bi {
 
     final void l(int param0) {
         this.i(-12988);
-        j.a(wa.field_l, 40, 16760896, true, 320, false);
+        InsanoSauceEvent.a(wa.field_l, 40, 16760896, true, 320, false);
         SoftwareRasterizer.a(40, 60, 560, 335, 20, 0, 80);
         if (param0 != 9) {
           this.field_k = (BitmapFont) null;
-          if (bp.e(param0 - 29928)) {
+          if (AttackUpAllAnimation.e(param0 - 29928)) {
             this.p(-118);
             this.c(true);
             return;
@@ -306,7 +306,7 @@ final class eca extends bi {
           this.c(true);
           return;
         }
-        if (bp.e(param0 - 29928)) {
+        if (AttackUpAllAnimation.e(param0 - 29928)) {
           this.p(-118);
           this.c(true);
           return;
@@ -325,7 +325,7 @@ final class eca extends bi {
           return gj.field_F;
         }
         if (var3 != 2) {
-          return ana.field_r;
+          return EventAnimation.field_r;
         }
         return jt.field_g;
     }
@@ -410,7 +410,7 @@ final class eca extends bi {
         if (param1 != 19950) {
           return false;
         }
-        if (bp.e(param1 ^ -14641)) {
+        if (AttackUpAllAnimation.e(param1 ^ -14641)) {
           return param0 >= 2 ? true : false;
         }
         return param0 != 2 ? true : false;

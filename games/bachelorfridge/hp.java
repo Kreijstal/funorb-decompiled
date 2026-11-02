@@ -46,7 +46,7 @@ final class hp {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            nb.field_q = param1;
+            ScavengerEvent.field_q = param1;
             try {
               if (param2 != 3) {
                 hp.a(106);
@@ -68,7 +68,7 @@ final class hp {
               ac.a("document.cookie=\"" + var5Lifetime6 + "\"", param0, 119);
             } catch (Throwable throwable) {
             }
-            eha.a(-123, param0);
+            InsanoSauceSpecial.a(-123, param0);
           } catch (RuntimeException runtimeException) {
             throw pe.wrapException((Throwable) ((Object) runtimeException), "hp.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }

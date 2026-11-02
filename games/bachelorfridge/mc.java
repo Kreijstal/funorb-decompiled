@@ -29,7 +29,7 @@ final class mc extends IntrusiveNode {
         RuntimeException var3_ref = null;
         var5 = BachelorFridge.field_y;
         try {
-          var3 = lk.a(param1, param0, (byte) -53);
+          var3 = SuperSpeedAllEvent.a(param1, param0, (byte) -53);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;

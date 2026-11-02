@@ -69,7 +69,7 @@ final class rba {
           }
           for (var5Lifetime1 = 0; 255 > var5Lifetime1; var5Lifetime1++) {
             var6 = -var5Lifetime1 + 255;
-            var7 = kla.a(var6, var4, -2147483648);
+            var7 = DiveBomberAnimation.a(var6, var4, -2147483648);
             var8 = var11[var7];
             var3[var7] = var11[var6];
             var3[511 - var5Lifetime1] = (byte) var8;
@@ -95,7 +95,7 @@ final class rba {
         int var3Lifetime1;
         var5 = BachelorFridge.field_y;
         try {
-          lp.field_u = false;
+          GasCloudEvent.field_u = false;
           if (param0 != null &&
             null != param0.field_f) {
             var6 = param0.field_f;
@@ -103,7 +103,7 @@ final class rba {
             for (var3 = 0; var6.length > var3; var3++) {
               var4 = var6[var3];
               if (var4 != 0) {
-                lp.field_u = true;
+                GasCloudEvent.field_u = true;
                 return;
               }
             }

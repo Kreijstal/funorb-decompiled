@@ -7,7 +7,7 @@ final class ad extends IntrusiveNode {
     static sna field_q;
     int field_o;
     static PalettedBitmapFont field_h;
-    aga field_s;
+    BattleCreature field_s;
     static int field_g;
     IntrusiveDeque field_n;
     int field_k;
@@ -172,7 +172,7 @@ final class ad extends IntrusiveNode {
                 }
                 var10[var14 + var12Lifetime1] = param1.field_q[var14];
               } else {
-                var8[var12Lifetime1 + var14] = ci.field_p;
+                var8[var12Lifetime1 + var14] = PizzaPartySpecial.field_p;
                 var9[var14 + var12Lifetime1] = param1.field_o[var14];
                 var10[var12Lifetime1 + var14] = param1.field_q[var14];
               }
@@ -224,7 +224,7 @@ final class ad extends IntrusiveNode {
         this.field_f.field_b = this.field_s.field_o.field_k.field_b;
         this.field_t = new IntrusiveDeque();
         this.field_n = new IntrusiveDeque();
-        this.field_j = this.field_s.field_I;
+        this.field_j = this.field_s.hp;
         if (param0 >= -53) {
           this.a(124);
         }
@@ -234,18 +234,18 @@ final class ad extends IntrusiveNode {
     final void b(boolean param0) {
         this.field_f.field_v = param0 ? true : false;
         this.field_f.field_i = false;
-        if (this.field_s.field_y == 29 ||
-          this.field_s.field_y == 44) {
+        if (this.field_s.statusId == 29 ||
+          this.field_s.statusId == 44) {
           this.field_f.a((byte) 92, this.field_s.field_o.field_b, 18);
           return;
         }
-        if (35 == this.field_s.field_y) {
+        if (35 == this.field_s.statusId) {
           this.field_f.field_i = true;
         }
-        if (this.field_s.field_y == 42) {
+        if (this.field_s.statusId == 42) {
           this.field_f.field_v = true;
         }
-        if (this.field_s.field_I <= 0) {
+        if (this.field_s.hp <= 0) {
           this.field_f.a((byte) 125, this.field_s.field_o.field_b, 6);
           this.field_f.field_u.a((byte) -69);
           return;
@@ -278,10 +278,10 @@ final class ad extends IntrusiveNode {
           }
           break;
         }
-        if (this.field_s.field_I < this.field_j) {
+        if (this.field_s.hp < this.field_j) {
           this.field_j = this.field_j - 1;
         } else {
-          if (this.field_s.field_I > this.field_j) {
+          if (this.field_s.hp > this.field_j) {
             this.field_j = this.field_j + 1;
           }
         }
@@ -291,7 +291,7 @@ final class ad extends IntrusiveNode {
         var3 = 0;
         var4 = (gca) (this.field_n.b((byte) 90));
         while (var4 != null) {
-          stackIn_20_0 = (~this.field_s.field_y == ~var4.field_h) ? 1 : 0;
+          stackIn_20_0 = (~this.field_s.statusId == ~var4.field_h) ? 1 : 0;
           var5 = stackIn_20_0;
           var6 = var4.a(false, var5 != 0) ? 1 : 0;
           if (var5 == 0 &&
@@ -302,8 +302,8 @@ final class ad extends IntrusiveNode {
           var3 = var3 | var5;
         }
         if (var3 == 0 &&
-          this.field_s.field_y != 0) {
-          var4Lifetime1 = nba.a(this.field_s.field_y, false);
+          this.field_s.statusId != 0) {
+          var4Lifetime1 = nba.a(this.field_s.statusId, false);
           if (var4Lifetime1 != null) {
             this.field_n.a(var4Lifetime1, true);
           }
@@ -311,7 +311,7 @@ final class ad extends IntrusiveNode {
         return;
     }
 
-    ad(aga param0) {
+    ad(BattleCreature param0) {
         try {
           this.field_s = param0;
           this.c((byte) -126);

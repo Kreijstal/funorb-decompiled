@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wn extends at {
+final class wn extends AnimationNode {
     static boolean field_p;
     private String field_k;
     static String field_l;

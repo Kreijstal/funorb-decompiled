@@ -14,7 +14,7 @@ final class gla extends nu {
         }
     }
 
-    final static cj a(PacketBuffer param0, byte param1) {
+    final static BattleUpdate a(PacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         vg stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -26,7 +26,7 @@ final class gla extends nu {
             field_j = (Sprite) null;
           }
           stackIn_3_0 = new vg(param0);
-          return (cj) ((Object) stackIn_3_0);
+          return (BattleUpdate) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

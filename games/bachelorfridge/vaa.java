@@ -91,7 +91,7 @@ final class vaa {
           var3 = 0;
         }
         if (0 == gk.field_d &&
-          null != rv.field_n) {
+          null != EffectBatch.field_n) {
           var3 = 0;
         }
         if (gk.field_d == 2 &&
@@ -103,8 +103,8 @@ final class vaa {
         }
         if (84 == gf.field_k) {
           if (var3 != 0) {
-            if (jm.field_g.length() > 0) {
-              var4_ref_String = jm.field_g.toString();
+            if (BoardChange.field_g.length() > 0) {
+              var4_ref_String = BoardChange.field_g.toString();
               var7 = var4_ref_String;
               var7Lifetime2 = var4_ref_String;
               if (mw.a(var4_ref_String, -1)) {
@@ -115,31 +115,31 @@ final class vaa {
                 if (var11 != 0) {
                   var5 = gk.field_d;
                   if (var5 == 0 &&
-                    pw.field_w != null) {
+                    SnowAnimation.field_w != null) {
                     var5 = 1;
                   }
                   if (af.a(var5, 26291) != 2) {
-                    no.a(-1, gk.field_d, param1 + 108, var4_ref_String, bd.field_k, param0);
+                    PetAttackSpecial.a(-1, gk.field_d, param1 + 108, var4_ref_String, bd.field_k, param0);
                   } else {
-                    fk.a(116, var5, param2, 1);
-                    no.a(-1, gk.field_d, param1 + 108, var4_ref_String, bd.field_k, param0);
+                    HomingMissileEvent.a(116, var5, param2, 1);
+                    PetAttackSpecial.a(-1, gk.field_d, param1 + 108, var4_ref_String, bd.field_k, param0);
                   }
                 }
               } else {
                 var5 = gk.field_d;
                 if (var5 == 0 &&
-                  pw.field_w != null) {
+                  SnowAnimation.field_w != null) {
                   var5 = 1;
                 }
                 if (af.a(var5, 26291) != 2) {
-                  no.a(-1, gk.field_d, param1 + 108, var4_ref_String, bd.field_k, param0);
+                  PetAttackSpecial.a(-1, gk.field_d, param1 + 108, var4_ref_String, bd.field_k, param0);
                 } else {
-                  fk.a(116, var5, param2, 1);
-                  no.a(-1, gk.field_d, param1 + 108, var4_ref_String, bd.field_k, param0);
+                  HomingMissileEvent.a(116, var5, param2, 1);
+                  PetAttackSpecial.a(-1, gk.field_d, param1 + 108, var4_ref_String, bd.field_k, param0);
                 }
               }
             }
-            bea.d(param1 ^ -128);
+            ClamsEvent.d(param1 ^ -128);
             if (var11 == 0) {
               return true;
             }
@@ -147,17 +147,17 @@ final class vaa {
           if (gk.field_d == 0) {
             return true;
           }
-          bea.d(-111);
+          ClamsEvent.d(-111);
           return true;
         }
         if (85 == gf.field_k) {
           if (var3 == 0) {
             return true;
           }
-          if (0 >= jm.field_g.length()) {
+          if (0 >= BoardChange.field_g.length()) {
             return true;
           }
-          sw.a(jm.field_g, param1 ^ 5, jm.field_g.length() - 1, ' ');
+          SleepSpecial.a(BoardChange.field_g, param1 ^ 5, BoardChange.field_g.length() - 1, ' ');
           return true;
         }
         var4 = dla.field_j;
@@ -167,11 +167,11 @@ final class vaa {
         if (var3 == 0) {
           return true;
         }
-        if (jm.field_g.length() >= 80) {
+        if (BoardChange.field_g.length() >= 80) {
           return true;
         }
         regionExit1: {
-          discarded$0 = jm.field_g.append((char) var4);
+          discarded$0 = BoardChange.field_g.append((char) var4);
           var5Lifetime1 = 485;
           var16 = cha.field_l;
           var23 = var16;
@@ -231,9 +231,9 @@ final class vaa {
               }
               break regionExit1;
             }
-            if (null == pw.field_w) {
+            if (null == SnowAnimation.field_w) {
               if (!am.field_O) {
-                if (pw.field_w == null) {
+                if (SnowAnimation.field_w == null) {
                   var30 = var7Lifetime1Lifetime6 + var17 + ": ";
                   var7Lifetime1Lifetime6 = var30;
                   var7Lifetime1Lifetime6 = var30;
@@ -253,8 +253,8 @@ final class vaa {
                     }
                     var5Lifetime1 = var5Lifetime1 - var9;
                   }
-                  if (var5Lifetime1 < dc.field_r.a(jm.field_g.toString())) {
-                    sw.a(jm.field_g, 4, -1 + jm.field_g.length(), ' ');
+                  if (var5Lifetime1 < dc.field_r.a(BoardChange.field_g.toString())) {
+                    SleepSpecial.a(BoardChange.field_g, 4, -1 + BoardChange.field_g.length(), ' ');
                   }
                   return true;
                 }
@@ -262,10 +262,10 @@ final class vaa {
                   null != jc.field_n) {
                   var7Lifetime1Lifetime6 = "[" + jc.field_n + "] ";
                   if (var11 != 0) {
-                    var7Lifetime1Lifetime6 = "[" + lga.a(true, new String[]{pw.field_w.field_Jb}, fq.field_r) + "] ";
+                    var7Lifetime1Lifetime6 = "[" + lga.a(true, new String[]{SnowAnimation.field_w.field_Jb}, HomingMissileSpecial.field_r) + "] ";
                   }
                 } else {
-                  var7Lifetime1Lifetime6 = "[" + lga.a(true, new String[]{pw.field_w.field_Jb}, fq.field_r) + "] ";
+                  var7Lifetime1Lifetime6 = "[" + lga.a(true, new String[]{SnowAnimation.field_w.field_Jb}, HomingMissileSpecial.field_r) + "] ";
                 }
                 var33 = var7Lifetime1Lifetime6 + var17 + ": ";
                 var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var33);
@@ -282,9 +282,9 @@ final class vaa {
                 }
                 break regionExit1;
               }
-              var7Lifetime1Lifetime6 = "[" + cja.field_r + "] ";
+              var7Lifetime1Lifetime6 = "[" + FlyEvent.field_r + "] ";
             }
-            if (pw.field_w == null) {
+            if (SnowAnimation.field_w == null) {
               var36 = var7Lifetime1Lifetime6 + var17 + ": ";
               var7Lifetime1Lifetime6 = var36;
               var7Lifetime1Lifetime6 = var36;
@@ -310,10 +310,10 @@ final class vaa {
               null != jc.field_n) {
               var7Lifetime1Lifetime6 = "[" + jc.field_n + "] ";
               if (var11 != 0) {
-                var7Lifetime1Lifetime6 = "[" + lga.a(true, new String[]{pw.field_w.field_Jb}, fq.field_r) + "] ";
+                var7Lifetime1Lifetime6 = "[" + lga.a(true, new String[]{SnowAnimation.field_w.field_Jb}, HomingMissileSpecial.field_r) + "] ";
               }
             } else {
-              var7Lifetime1Lifetime6 = "[" + lga.a(true, new String[]{pw.field_w.field_Jb}, fq.field_r) + "] ";
+              var7Lifetime1Lifetime6 = "[" + lga.a(true, new String[]{SnowAnimation.field_w.field_Jb}, HomingMissileSpecial.field_r) + "] ";
             }
             var39 = var7Lifetime1Lifetime6 + var17 + ": ";
             var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var39);
@@ -346,10 +346,10 @@ final class vaa {
             }
           }
         }
-        if (var5Lifetime1 >= dc.field_r.a(jm.field_g.toString())) {
+        if (var5Lifetime1 >= dc.field_r.a(BoardChange.field_g.toString())) {
           return true;
         }
-        sw.a(jm.field_g, 4, -1 + jm.field_g.length(), ' ');
+        SleepSpecial.a(BoardChange.field_g, 4, -1 + BoardChange.field_g.length(), ' ');
         return true;
     }
 
@@ -379,7 +379,7 @@ final class vaa {
         RuntimeException var3 = null;
         try {
           if (param1 == 1) {
-            stackIn_3_0 = lga.a(true, new String[]{param0}, lca.field_r);
+            stackIn_3_0 = lga.a(true, new String[]{param0}, DisableEvent.field_r);
             return stackIn_3_0;
           }
           if (param1 == 2) {
@@ -387,7 +387,7 @@ final class vaa {
             return stackIn_7_0;
           }
           if (param1 == 3) {
-            stackIn_10_0 = lga.a(true, new String[]{param0}, wia.field_c);
+            stackIn_10_0 = lga.a(true, new String[]{param0}, BoardTile.field_c);
             return stackIn_10_0;
           }
           if (param1 == 4) {
@@ -406,7 +406,7 @@ final class vaa {
             return stackIn_22_0;
           }
           if (param1 == 7) {
-            stackIn_25_0 = lga.a(true, new String[]{param0}, hia.field_i);
+            stackIn_25_0 = lga.a(true, new String[]{param0}, AttackOrder.field_i);
             return stackIn_25_0;
           }
           if (param1 == 8) {

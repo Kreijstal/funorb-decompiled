@@ -98,14 +98,14 @@ final class BufferedSocket implements Runnable {
         RuntimeException var2 = null;
         var4 = BachelorFridge.field_y;
         try {
-          bk.field_v = param1;
-          bca.field_n = new al[50][12];
+          SpiltMilkAnimation.field_v = param1;
+          SpecialEvent.field_n = new al[50][12];
           if (!param0) {
             return;
           }
           for (var2_int = 0; var2_int < 50; var2_int++) {
             for (var3 = 0; var3 < 12; var3++) {
-              bca.field_n[var2_int][var3] = new al((hs) null);
+              SpecialEvent.field_n[var2_int][var3] = new al((hs) null);
             }
           }
           return;
@@ -129,7 +129,7 @@ final class BufferedSocket implements Runnable {
           gk.field_d = 2;
           bd.field_k = param0;
           var6 = (CharSequence) ((Object) param0);
-          df.field_s = fq.a(0, var6);
+          MoveEvent.field_s = HomingMissileSpecial.a(0, var6);
           IntrusiveDeque.field_a = param2;
           bb.h(0);
           if (param1 <= 42) {
@@ -282,7 +282,7 @@ final class BufferedSocket implements Runnable {
         int var19Lifetime1Lifetime1;
         var23 = BachelorFridge.field_y;
         try {
-          gp.a(true, param4);
+          DreamsAnimation.a(true, param4);
           var7_int = 0;
           var8 = param4 - param1;
           if (var8 < 0) {
@@ -300,10 +300,10 @@ final class BufferedSocket implements Runnable {
           if (an.field_q <= param0 &&
             param0 <= ha.field_n) {
             var39 = tj.field_b[param0];
-            var16 = cr.a(DualLinkNode.field_l, param3 - param4, pw.field_x, 0);
-            var17 = cr.a(DualLinkNode.field_l, param3 + param4, pw.field_x, param2 - 170);
-            var18 = cr.a(DualLinkNode.field_l, -var8 + param3, pw.field_x, param2 ^ 170);
-            var19 = cr.a(DualLinkNode.field_l, var8 + param3, pw.field_x, param2 - 170);
+            var16 = cr.a(DualLinkNode.field_l, param3 - param4, SnowAnimation.field_x, 0);
+            var17 = cr.a(DualLinkNode.field_l, param3 + param4, SnowAnimation.field_x, param2 - 170);
+            var18 = cr.a(DualLinkNode.field_l, -var8 + param3, SnowAnimation.field_x, param2 ^ 170);
+            var19 = cr.a(DualLinkNode.field_l, var8 + param3, SnowAnimation.field_x, param2 - 170);
             hba.a(param5, var16, var39, 7, var18);
             hba.a(param6, var18, var39, param2 - 163, var19);
             hba.a(param5, var19, var39, 7, var17);
@@ -332,10 +332,10 @@ final class BufferedSocket implements Runnable {
                 ha.field_n >= var15) {
                 if (var8 > var9) {
                   var17Lifetime1 = it.field_l[var9];
-                  var18Lifetime1 = cr.a(DualLinkNode.field_l, var7_int + param3, pw.field_x, param2 - 170);
-                  var19Lifetime1 = cr.a(DualLinkNode.field_l, param3 - var7_int, pw.field_x, 0);
-                  var20 = cr.a(DualLinkNode.field_l, param3 + var17Lifetime1, pw.field_x, 0);
-                  var21 = cr.a(DualLinkNode.field_l, -var17Lifetime1 + param3, pw.field_x, 0);
+                  var18Lifetime1 = cr.a(DualLinkNode.field_l, var7_int + param3, SnowAnimation.field_x, param2 - 170);
+                  var19Lifetime1 = cr.a(DualLinkNode.field_l, param3 - var7_int, SnowAnimation.field_x, 0);
+                  var20 = cr.a(DualLinkNode.field_l, param3 + var17Lifetime1, SnowAnimation.field_x, 0);
+                  var21 = cr.a(DualLinkNode.field_l, -var17Lifetime1 + param3, SnowAnimation.field_x, 0);
                   if (ha.field_n >= var16Lifetime1) {
                     var40 = tj.field_b[var16Lifetime1];
                     hba.a(param5, var19Lifetime1, var40, 7, var21);
@@ -349,8 +349,8 @@ final class BufferedSocket implements Runnable {
                     hba.a(param5, var20, var41, 7, var18Lifetime1);
                   }
                 } else {
-                  var17Lifetime1 = cr.a(DualLinkNode.field_l, var7_int + param3, pw.field_x, 0);
-                  var18Lifetime1 = cr.a(DualLinkNode.field_l, -var7_int + param3, pw.field_x, 0);
+                  var17Lifetime1 = cr.a(DualLinkNode.field_l, var7_int + param3, SnowAnimation.field_x, 0);
+                  var18Lifetime1 = cr.a(DualLinkNode.field_l, -var7_int + param3, SnowAnimation.field_x, 0);
                   if (ha.field_n >= var16Lifetime1) {
                     hba.a(param5, var18Lifetime1, tj.field_b[var16Lifetime1], 7, var17Lifetime1);
                   }
@@ -373,11 +373,11 @@ final class BufferedSocket implements Runnable {
             if (DualLinkNode.field_l > var17Lifetime1Lifetime1) {
               continue;
             }
-            if (pw.field_x < var18Lifetime1Lifetime1) {
+            if (SnowAnimation.field_x < var18Lifetime1Lifetime1) {
               continue;
             }
-            var17Lifetime1Lifetime1 = cr.a(DualLinkNode.field_l, var17Lifetime1Lifetime1, pw.field_x, param2 ^ 170);
-            var18Lifetime1Lifetime1 = cr.a(DualLinkNode.field_l, var18Lifetime1Lifetime1, pw.field_x, 0);
+            var17Lifetime1Lifetime1 = cr.a(DualLinkNode.field_l, var17Lifetime1Lifetime1, SnowAnimation.field_x, param2 ^ 170);
+            var18Lifetime1Lifetime1 = cr.a(DualLinkNode.field_l, var18Lifetime1Lifetime1, SnowAnimation.field_x, 0);
             if (var7_int >= var8) {
               if (var16Lifetime1Lifetime1 <= ha.field_n) {
                 hba.a(param5, var18Lifetime1Lifetime1, tj.field_b[var16Lifetime1Lifetime1], 7, var17Lifetime1Lifetime1);
@@ -394,8 +394,8 @@ final class BufferedSocket implements Runnable {
               stackIn_38_0 = var11;
             }
             var19Lifetime1Lifetime1 = stackIn_38_0;
-            var20Lifetime1 = cr.a(DualLinkNode.field_l, param3 + var19Lifetime1Lifetime1, pw.field_x, 0);
-            var21Lifetime1 = cr.a(DualLinkNode.field_l, -var19Lifetime1Lifetime1 + param3, pw.field_x, 0);
+            var20Lifetime1 = cr.a(DualLinkNode.field_l, param3 + var19Lifetime1Lifetime1, SnowAnimation.field_x, 0);
+            var21Lifetime1 = cr.a(DualLinkNode.field_l, -var19Lifetime1Lifetime1 + param3, SnowAnimation.field_x, 0);
             if (ha.field_n >= var16Lifetime1Lifetime1) {
               var42 = tj.field_b[var16Lifetime1Lifetime1];
               hba.a(param5, var18Lifetime1Lifetime1, var42, 7, var21Lifetime1);
@@ -503,7 +503,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            cv.a(1, (String) null, (Throwable) ((Object) var1_ref));
+            SpiltMilkEvent.a(1, (String) null, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -562,7 +562,7 @@ final class BufferedSocket implements Runnable {
             var8 = param5[1].field_n;
             param5[0].e(param0, param3, param1);
             param5[2].e(param4 + param0 - var7, param3, param1);
-            SoftwareRasterizer.saveClip(eha.field_q);
+            SoftwareRasterizer.saveClip(InsanoSauceSpecial.field_q);
             SoftwareRasterizer.intersectClip(var6_int + param0, param3, -var7 + (param0 + param4), param3 + param5[1].field_o);
             var9 = var6_int + param0;
             var10 = param0 + param4 - var7;
@@ -572,7 +572,7 @@ final class BufferedSocket implements Runnable {
             if (param2 != 447) {
               field_b = (int[][]) null;
             }
-            SoftwareRasterizer.restoreClip(eha.field_q);
+            SoftwareRasterizer.restoreClip(InsanoSauceSpecial.field_q);
             return;
           }
           return;
@@ -596,22 +596,22 @@ final class BufferedSocket implements Runnable {
         field_l = new int[16];
         field_c = new int[16];
         field_h = new int[16];
-        ku.a(46, 460, new int[]{0, 5, 1, 33, 4, 22, 19}, 190, 170, 36, 0);
-        ku.a(-117, 460, new int[]{2, 20, 21, 5, 9}, 132, 170, 36, 1);
-        ku.a(-57, 460, new int[]{2, 20, 21, 5, 10, 11, 13}, 34, 170, 36, 2);
-        ku.a(-57, 460, new int[]{12, 34}, 200, 170, 36, 3);
-        ku.a(97, 460, new int[]{2, 20, 21, 5, 13}, 34, 170, 36, 4);
-        ku.a(40, 460, new int[]{17, 18, 23, 8}, 410, 180, 36, 5);
-        ku.a(-58, 460, new int[]{25, 8, 26}, 447, 70, 36, 6);
-        ku.a(-91, 460, new int[]{23, 8}, 400, 180, 36, 7);
-        ku.a(26, 460, new int[]{23, 8}, 400, 180, 36, 8);
-        ku.a(-55, 460, new int[]{23, 24}, 400, 180, 36, 9);
-        ku.a(-81, 460, new int[]{7}, 400, 290, 36, 10);
-        ku.a(101, 460, new int[]{}, 200, 170, 36, 11);
-        ku.a(-108, 460, new int[]{27, 28, 29}, 200, 170, 36, 12);
-        ku.a(42, 460, new int[]{30, 31}, 200, 170, 36, 13);
-        ku.a(-101, 460, new int[]{20, 21, 6, 7}, 200, 170, 36, 14);
-        ku.a(-97, 460, new int[]{20, 21, 6, 8}, 237, 170, 36, 15);
+        FloodEvent.a(46, 460, new int[]{0, 5, 1, 33, 4, 22, 19}, 190, 170, 36, 0);
+        FloodEvent.a(-117, 460, new int[]{2, 20, 21, 5, 9}, 132, 170, 36, 1);
+        FloodEvent.a(-57, 460, new int[]{2, 20, 21, 5, 10, 11, 13}, 34, 170, 36, 2);
+        FloodEvent.a(-57, 460, new int[]{12, 34}, 200, 170, 36, 3);
+        FloodEvent.a(97, 460, new int[]{2, 20, 21, 5, 13}, 34, 170, 36, 4);
+        FloodEvent.a(40, 460, new int[]{17, 18, 23, 8}, 410, 180, 36, 5);
+        FloodEvent.a(-58, 460, new int[]{25, 8, 26}, 447, 70, 36, 6);
+        FloodEvent.a(-91, 460, new int[]{23, 8}, 400, 180, 36, 7);
+        FloodEvent.a(26, 460, new int[]{23, 8}, 400, 180, 36, 8);
+        FloodEvent.a(-55, 460, new int[]{23, 24}, 400, 180, 36, 9);
+        FloodEvent.a(-81, 460, new int[]{7}, 400, 290, 36, 10);
+        FloodEvent.a(101, 460, new int[]{}, 200, 170, 36, 11);
+        FloodEvent.a(-108, 460, new int[]{27, 28, 29}, 200, 170, 36, 12);
+        FloodEvent.a(42, 460, new int[]{30, 31}, 200, 170, 36, 13);
+        FloodEvent.a(-101, 460, new int[]{20, 21, 6, 7}, 200, 170, 36, 14);
+        FloodEvent.a(-97, 460, new int[]{20, 21, 6, 8}, 237, 170, 36, 15);
         field_a = "Spectating...";
         field_n = new kf();
     }

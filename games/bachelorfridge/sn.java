@@ -18,7 +18,7 @@ final class sn extends pu {
     final static boolean c(int param0) {
         if (param0 <= 44) {
           sn.c(-66);
-          if (20 > lk.field_r) {
+          if (20 > SuperSpeedAllEvent.field_r) {
             return true;
           }
           if (!gw.a((byte) 110)) {
@@ -27,12 +27,12 @@ final class sn extends pu {
           if (rja.field_o <= 0) {
             return false;
           }
-          if (!uga.e(37)) {
+          if (!FullHealAnimation.e(37)) {
             return true;
           }
           return false;
         }
-        if (20 > lk.field_r) {
+        if (20 > SuperSpeedAllEvent.field_r) {
           return true;
         }
         if (!gw.a((byte) 110)) {
@@ -41,7 +41,7 @@ final class sn extends pu {
         if (rja.field_o <= 0) {
           return false;
         }
-        if (!uga.e(37)) {
+        if (!FullHealAnimation.e(37)) {
           return true;
         }
         return false;

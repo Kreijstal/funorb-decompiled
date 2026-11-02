@@ -566,7 +566,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        sw.a(field_A, 4, 0, ' ');
+        SleepSpecial.a(field_A, 4, 0, ' ');
         var4 = 0;
         var5 = 0;
         var6 = -1;

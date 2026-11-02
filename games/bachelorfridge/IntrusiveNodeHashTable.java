@@ -135,7 +135,7 @@ final class IntrusiveNodeHashTable {
     }
 
     final static void a(int param0) {
-        jea.field_c = new ofa(qaa.field_d, mda.field_c, sm.field_s, qs.field_m, nr.field_v, dla.field_k);
+        jea.field_c = new ofa(qaa.field_d, mda.field_c, SlowAllEvent.field_s, qs.field_m, RageAnimation.field_v, dla.field_k);
         int var1 = -49 % ((param0 - 46) / 59);
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iu extends at {
+final class iu extends AnimationNode {
     private int field_k;
     static String field_l;
     private int field_j;
@@ -58,7 +58,7 @@ final class iu extends at {
             on.field_t > var5) {
             var10_int = af.a(var8_ref_gs.field_p, 26291);
             if (var10_int <= var8_ref_gs.a((byte) 122) && (var8_ref_gs.field_i ||
-              !bna.a((byte) 5, var8_ref_gs.field_g))) {
+              !DisableAnimation.a((byte) 5, var8_ref_gs.field_g))) {
               var9 = 1;
             }
           }
@@ -67,7 +67,7 @@ final class iu extends at {
           } else {
             var5++;
             if (null == var8_ref_gs.field_h ||
-              wia.field_e) {
+              BoardTile.field_e) {
               if (null == var8_ref_gs.field_h) {
                 DualLinkNodeHashTable.field_b = DualLinkNodeHashTable.field_b + 1;
               }
@@ -101,12 +101,12 @@ final class iu extends at {
           var8Lifetime3 = var6 - (var7Lifetime1 - af.field_b.field_vb.field_p - af.field_b.field_vb.field_hb);
           af.field_b.field_vb.field_rb = af.field_b.field_vb.field_rb + var8Lifetime3;
           af.field_b.field_vb.field_p = af.field_b.field_vb.field_p - var8Lifetime3;
-          if (wia.field_e) {
+          if (BoardTile.field_e) {
             af.field_b.field_vb.field_p = var7Lifetime1;
           }
-          if (wia.field_e) {
+          if (BoardTile.field_e) {
             af.field_b.field_vb.field_I = 0;
-            wia.field_e = false;
+            BoardTile.field_e = false;
             qh.field_l = true;
             af.field_b.field_vb.field_rb = -af.field_b.field_vb.field_p + af.field_b.field_wb.field_p;
           }
@@ -139,9 +139,9 @@ final class iu extends at {
         var8Lifetime2 = var6 - (var7Lifetime2 - af.field_b.field_vb.field_p - af.field_b.field_vb.field_hb);
         af.field_b.field_vb.field_rb = af.field_b.field_vb.field_rb + var8Lifetime2;
         af.field_b.field_vb.field_p = af.field_b.field_vb.field_p - var8Lifetime2;
-        if (wia.field_e) {
+        if (BoardTile.field_e) {
           af.field_b.field_vb.field_p = var7Lifetime2;
-          if (!wia.field_e) {
+          if (!BoardTile.field_e) {
             af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
             if (lna.field_q &&
               bi.field_h != null) {
@@ -156,7 +156,7 @@ final class iu extends at {
             qh.field_l = stackIn_68_0;
           } else {
             af.field_b.field_vb.field_I = 0;
-            wia.field_e = false;
+            BoardTile.field_e = false;
             qh.field_l = true;
             af.field_b.field_vb.field_rb = -af.field_b.field_vb.field_p + af.field_b.field_wb.field_p;
             af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
@@ -187,7 +187,7 @@ final class iu extends at {
           }
           return (gs) (var4);
         }
-        if (!wia.field_e) {
+        if (!BoardTile.field_e) {
           af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
           if (lna.field_q) {
             if (bi.field_h == null) {
@@ -220,7 +220,7 @@ final class iu extends at {
           return (gs) (var4);
         }
         af.field_b.field_vb.field_I = 0;
-        wia.field_e = false;
+        BoardTile.field_e = false;
         qh.field_l = true;
         af.field_b.field_vb.field_rb = -af.field_b.field_vb.field_p + af.field_b.field_wb.field_p;
         af.field_b.field_vb.field_hb = -af.field_b.field_vb.field_p + var7Lifetime2;
@@ -270,7 +270,7 @@ final class iu extends at {
     }
 
     final static void d(int param0) {
-        mda.field_b.a(100 * jfa.field_q[baa.field_Q].field_d, 31407, 400, 105, 350);
+        mda.field_b.a(100 * jfa.field_q[BananarangAnimation.field_Q].field_d, 31407, 400, 105, 350);
         if (param0 > 6) {
           RasterBuffer.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
           RasterBuffer.field_d.a(0, 155, false, 19, 298, 20, 406);
@@ -284,7 +284,7 @@ final class iu extends at {
     final static void a(int param0, vr param1) {
         try {
           fi.field_p = param1.a((byte) 123, "minimal/fridge-view-bg.jpg", "");
-          gla.field_j = new Sprite(fi.field_p, (java.awt.Component) ((Object) dca.field_y));
+          gla.field_j = new Sprite(fi.field_p, (java.awt.Component) ((Object) TBomberAnimation.field_y));
           if (param0 != -1638641311) {
             iu.d(-98);
           }

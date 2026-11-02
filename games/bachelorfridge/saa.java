@@ -68,7 +68,7 @@ final class saa {
         try {
           if (gf.field_k == 13 &&
             kaa.field_m != 0 &&
-            0 != iba.field_s) {
+            0 != OhNoEvent.field_s) {
             var2_int = 1;
             lg.a(true, var2_int, false);
             return;
@@ -182,7 +182,7 @@ final class saa {
               this.field_p = stackIn_37_1;
               var2_int = -1;
               var2_intLifetime3 = (this.field_p) ? 1 : 0;
-              ct.c(var2_intLifetime3, -123);
+              OneEvent.c(var2_intLifetime3, -123);
               this.field_o = 5;
             }
             if (d.field_H.field_T &&
@@ -206,7 +206,7 @@ final class saa {
                   this.field_k.unlink(false);
                   mg.field_m.field_e.field_j = null;
                 }
-                ct.c(0, -114);
+                OneEvent.c(0, -114);
                 this.field_s = null;
               } else {
                 if (var2_intLifetime1 == 1) {
@@ -231,19 +231,19 @@ final class saa {
           if (this.field_p &&
             lf.field_c == 2) {
             this.field_p = false;
-            ct.c(0, -123);
+            OneEvent.c(0, -123);
             this.field_o = 5;
             this.field_t = false;
           }
           if (this.field_h &&
             lf.field_c == 2) {
             this.field_h = false;
-            ct.c(0, -124);
+            OneEvent.c(0, -124);
           }
           if (this.field_j &&
             lf.field_c == 2) {
             this.field_j = false;
-            ct.c(0, -127);
+            OneEvent.c(0, -127);
           }
           boolean decompiledFrameRemainder0 = true;
           if (!this.field_h) {
@@ -488,8 +488,8 @@ final class saa {
         try {
           var2 = mka.a(13558251, 13558251, 13558251, (byte) -124, jha.field_g, 13558251, 16777215, 13558251);
           var2.field_eb = wd.field_w;
-          var2.field_A = bla.field_p;
-          var2.field_db = op.field_I;
+          var2.field_A = RageSpecial.field_p;
+          var2.field_db = BattleState.field_I;
           if (param0) {
             field_a = (PcmStreamMixer) null;
           }
@@ -527,7 +527,7 @@ final class saa {
                 if (var4.a(gd.field_m, (byte) 116, mk.field_p)) {
                   var3_int = 1;
                   if (kr.field_vb <= 3) {
-                    ct.c(4 + kr.field_vb, -113);
+                    OneEvent.c(4 + kr.field_vb, -113);
                   }
                 }
                 var4 = (jfa) (this.field_d.field_c.field_m.c(0));
@@ -541,7 +541,7 @@ final class saa {
               }
               if (var3_int == 0 &&
                 !(kr.field_vb <= 3)) {
-                ct.c(-4 + kr.field_vb, -126);
+                OneEvent.c(-4 + kr.field_vb, -126);
               }
             }
             this.f((byte) -85);
@@ -625,7 +625,7 @@ final class saa {
             }
           }
           iea.field_a.a(param1 + 524, 420, 64);
-          op.field_u.draw(param1 + 540, 424);
+          BattleState.field_u.draw(param1 + 540, 424);
           dp.field_n[5].draw(524 + param1, 300);
           if (this.field_n <= 0) {
             if ((d.field_H.field_T ||
@@ -661,7 +661,7 @@ final class saa {
           }
           if (af.field_a &&
             param2) {
-            kla.b(true);
+            DiveBomberAnimation.b(true);
           }
           if (param0 != 2) {
             this.f((byte) 60);
@@ -705,7 +705,7 @@ final class saa {
             mg.field_m.field_e.field_m.a(var2.field_g, true);
             var2 = (jfa) (this.field_d.field_c.field_m.c(0));
           }
-          mg.field_m.field_i = new rk[50];
+          mg.field_m.field_i = new CreatureProfile[50];
           var5 = 0;
           var3Lifetime1 = var5;
           while (var5 < 50) {
@@ -735,9 +735,9 @@ final class saa {
           }
           this.field_d.field_c.field_k.d(-123);
           this.field_q = null;
-          ln.e(-122);
-          mea.e((byte) 90);
-          if (bp.e(-29919)) {
+          TeleportAnimation.e(-122);
+          CranberryAnimation.e((byte) 90);
+          if (AttackUpAllAnimation.e(-29919)) {
             if (!hs.a(false, nga.field_i)) {
               lg.a(true, 0, param0);
             } else {

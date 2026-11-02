@@ -61,8 +61,8 @@ final class qs extends pu {
           if (param0) {
             field_l = (Sprite[][]) null;
           }
-          while (nm.field_C.length > var1_int) {
-            i.field_h.a((long)nm.field_C[var1_int].toLowerCase().hashCode(), (byte) 127, new ji(var1_int));
+          while (StampedeAnimation.field_C.length > var1_int) {
+            i.field_h.a((long)StampedeAnimation.field_C[var1_int].toLowerCase().hashCode(), (byte) 127, new ji(var1_int));
             var1_int++;
           }
           return;
@@ -95,7 +95,7 @@ final class qs extends pu {
           }
         }
         if (lfa.field_q > 0) {
-          pm.f(param0 + 11100);
+          IncomingAnimation.f(param0 + 11100);
         }
         if (ld.field_p > 0) {
           dna.c(ld.field_p, false);

@@ -156,12 +156,12 @@ final class hga extends am {
                   var15 = vc.a(var2_int, 10, -16306);
                   var16 = mq.a(13, 207, var2_int);
                   var8 = dha.a((byte) -113, var2_int);
-                  bea.a(var15, var10, var12, var16, var11, var3, -52, var14, var13, var8, var9, var4, var5);
+                  ClamsEvent.a(var15, var10, var12, var16, var11, var3, -52, var14, var13, var8, var9, var4, var5);
                 } else {
                   if (var6 == 3) {
                     var11 = vc.a(var2_int, 10, -16306);
                     var12 = te.a(var2_int, (byte) -53);
-                    pm.a(var9, var3, 12635, var7, var8, var11, var4, var5, var12);
+                    IncomingAnimation.a(var9, var3, 12635, var7, var8, var11, var4, var5, var12);
                   }
                 }
               } else {

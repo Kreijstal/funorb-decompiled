@@ -60,7 +60,7 @@ final class tea extends mf implements lja {
                 this.field_mb = true;
               }
             } else {
-              var4 = uga.field_A;
+              var4 = FullHealAnimation.field_A;
               if (this.field_ob != null) {
                 this.field_ob.a(param0 + 26653);
               }
@@ -137,7 +137,7 @@ final class tea extends mf implements lja {
 
     public final void a(int param0, hf param1, int param2, byte param3, int param4) {
         if (this.field_mb) {
-          nw.a(true, false, (byte) 60);
+          FlySpecial.a(true, false, (byte) 60);
           return;
         }
         try {

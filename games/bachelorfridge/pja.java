@@ -50,7 +50,7 @@ final class pja {
         field_a = new PcmSample[10][9];
         field_g = new int[4096];
         for (var0 = 0; 4096 > var0; var0++) {
-          field_g[var0] = rn.c(40960, var0);
+          field_g[var0] = BananarangEvent.c(40960, var0);
         }
         field_f = "Return to Main Menu";
     }

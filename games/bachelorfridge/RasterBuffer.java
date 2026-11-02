@@ -190,7 +190,7 @@ abstract class RasterBuffer {
     }
 
     final static void a(int param0, int param1) {
-        ol.a(ib.field_d[param0], true);
+        ol.a(PlayerRoster.field_d[param0], true);
         if (param1 != 7758) {
           field_a = (BitmapFont) null;
         }

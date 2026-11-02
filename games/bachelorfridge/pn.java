@@ -71,7 +71,7 @@ abstract class pn {
           for (var4Lifetime1 = 0; var4Lifetime1 < 2 + param0.field_z; var4Lifetime1++) {
             for (var5Lifetime1 = 0; var5Lifetime1 < 2 + param0.field_a; var5Lifetime1++) {
               var8 = param0.a(var4Lifetime1, (byte) -103, var5Lifetime1);
-              if (param0.field_j[var5Lifetime1][var4Lifetime1].field_n == 1) {
+              if (param0.field_j[var5Lifetime1][var4Lifetime1].terrain == 1) {
                 this.a(var5Lifetime1, false, var8.field_c, var4Lifetime1, param0, -32 + var8.field_a);
               }
             }
@@ -122,7 +122,7 @@ abstract class pn {
         try {
           var3_int = 0;
           if (1 == param0.field_F) {
-            wf.a(54, (byte) -57);
+            MartyrAnimation.a(54, (byte) -57);
           }
           if (param0.field_F > 80) {
             var3_int = 8 * (-80 + param0.field_F);
@@ -173,8 +173,8 @@ abstract class pn {
 
     private final void a(int param0, aj param1, int param2, byte param3, jo param4) {
         IndexedSprite var9 = null;
-        wia var10 = param4.field_i.field_h.field_a[param2][param0];
-        int var7 = var10.field_n;
+        BoardTile var10 = param4.field_i.field_h.tiles[param2][param0];
+        int var7 = var10.terrain;
         if (param3 != -35) {
           field_e = (String) null;
         }
@@ -269,15 +269,15 @@ abstract class pn {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        wia var23 = null;
+        BoardTile var23 = null;
         var22 = BachelorFridge.field_y;
         try {
           if (param3.field_I[param0][param2].field_d) {
             return;
           }
           var8 = 32 / ((-62 - param1) / 45);
-          var23 = param3.field_i.field_h.field_a[param0][param2];
-          var9 = var23.field_n;
+          var23 = param3.field_i.field_h.tiles[param0][param2];
+          var9 = var23.terrain;
           if (var9 == 21 &&
             !param3.field_I[param0][param2].field_i) {
             this.field_b[109].a(param4, param5);
@@ -306,7 +306,7 @@ abstract class pn {
               il.field_b.a(param4, param5);
             } else {
               if (var9 == 28) {
-                if (var23.field_h >= od.field_w[var9].field_e) {
+                if (var23.field_h >= BuffVendorAnimation.field_w[var9].field_e) {
                   kka.field_f.a(param4, param5 - 64);
                 } else {
                   hna.field_h.a(param4, param5 - 64);
@@ -405,7 +405,7 @@ abstract class pn {
             if (var8 == 0) {
               var6[var7] = 0;
             } else {
-              var6[var7] = mp.a(var8, param1 << 24);
+              var6[var7] = MassPoisonSpecial.a(var8, param1 << 24);
             }
           }
           stackIn_10_0 = var5;
@@ -539,12 +539,12 @@ abstract class pn {
                   var13 = var13 & -16711936;
                   var14 = var14 * param3;
                   var14 = var14 & 16711680;
-                  var7[var8] = mp.a(mp.a(var11 + var13, var14 + var12) >>> 8, -16777216);
+                  var7[var8] = MassPoisonSpecial.a(MassPoisonSpecial.a(var11 + var13, var14 + var12) >>> 8, -16777216);
                 } else {
-                  var7[var8] = mp.a(-param3 + 255 << 24, var9);
+                  var7[var8] = MassPoisonSpecial.a(-param3 + 255 << 24, var9);
                 }
               } else {
-                var7[var8] = mp.a(var10, param3 << 24);
+                var7[var8] = MassPoisonSpecial.a(var10, param3 << 24);
               }
             }
           }
@@ -640,7 +640,7 @@ abstract class pn {
         IndexedSprite var14 = null;
         var8 = BachelorFridge.field_y;
         try {
-          if (param4.field_j[param0][param3].field_n == 1) {
+          if (param4.field_j[param0][param3].terrain == 1) {
             var7 = null;
             if (param4.field_j[param0][param3].field_k != 5) {
               if (param4.field_j[param0][param3].field_k != 10) {
@@ -754,7 +754,7 @@ abstract class pn {
               this.a(stackIn_19_1 + stackIn_20_2, (byte) -78).a(param2, param5);
             }
           }
-          if (param4.field_j[param0][param3].field_n == 29) {
+          if (param4.field_j[param0][param3].terrain == 29) {
             if (param4.field_j[param0][param3].field_k == 5) {
               pk.field_b[4].a(param2, param5);
               pk.field_b[1].a(param2, param5);
@@ -774,7 +774,7 @@ abstract class pn {
           if (param1) {
             this.field_c = (ArgbSprite[]) null;
           }
-          if (30 == param4.field_j[param0][param3].field_n) {
+          if (30 == param4.field_j[param0][param3].terrain) {
             if (param4.field_j[param0][param3].field_k == 5) {
               ld.field_l[4].a(param2, param5);
               ld.field_l[1].a(param2, param5);

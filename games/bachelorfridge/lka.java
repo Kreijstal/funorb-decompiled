@@ -244,7 +244,7 @@ class lka extends hf {
           return;
         }
         this.field_H = param1;
-        if (!wga.field_q[81]) {
+        if (!InvincibleEvent.field_q[81]) {
           this.field_K = this.field_H;
         }
     }
@@ -562,17 +562,17 @@ class lka extends hf {
                       this.h((byte) 52);
                       return true;
                     }
-                    if (wga.field_q[82] &&
+                    if (InvincibleEvent.field_q[82] &&
                       param1 == 65) {
                       this.g(81);
                       return true;
                     }
-                    if (wga.field_q[82] &&
+                    if (InvincibleEvent.field_q[82] &&
                       param1 == 66) {
                       this.b(false);
                       return true;
                     }
-                    if (wga.field_q[82] &&
+                    if (InvincibleEvent.field_q[82] &&
                       param1 == 67) {
                       this.h(104);
                       return true;
@@ -580,7 +580,7 @@ class lka extends hf {
                   } else {
                     if (this.field_H < this.field_w.length()) {
                       stackIn_34_1 = true;
-                      if (!wga.field_q[82]) {
+                      if (!InvincibleEvent.field_q[82]) {
                         stackIn_35_2 = 1 + this.field_H;
                       } else {
                         stackIn_35_2 = this.e((byte) -26);
@@ -592,7 +592,7 @@ class lka extends hf {
                 } else {
                   if (this.field_H > 0) {
                     stackIn_27_1 = true;
-                    if (wga.field_q[82]) {
+                    if (InvincibleEvent.field_q[82]) {
                       stackIn_28_2 = this.j(0);
                     } else {
                       stackIn_28_2 = -1 + this.field_H;

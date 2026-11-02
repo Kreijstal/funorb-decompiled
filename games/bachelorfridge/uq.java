@@ -36,7 +36,7 @@ final class uq extends sna {
             stackIn_8_1 = !(this.field_Db.field_t);
             stackIn_7_0.field_t = stackIn_8_1;
           }
-          for (var3 = 0; cja.field_v > var3; var3++) {
+          for (var3 = 0; FlyEvent.field_v > var3; var3++) {
             if (this.field_Bb[var3] != null) {
               stackIn_16_0 = this.field_Bb[var3];
               stackIn_17_1 = !(this.field_Cb.length() <= 0);
@@ -160,7 +160,7 @@ final class uq extends sna {
     }
 
     final static void h(int param0) {
-        baa.e(17035);
+        BananarangAnimation.e(17035);
         hba.a(true, IterableNodeHashTable.field_a);
         gs.field_f = null;
         int var1 = 3;
@@ -173,14 +173,14 @@ final class uq extends sna {
           uq.h(-43);
         }
         int var7 = 0;
-        op var8 = new op(var1, var2, var3, var4, var5, var6);
+        BattleState var8 = new BattleState(var1, var2, var3, var4, var5, var6);
         IntrusiveDeque var9 = mg.field_m.field_e.field_m;
-        rk[] var10 = new rk[var9.g(param0 + 28716)];
+        CreatureProfile[] var10 = new CreatureProfile[var9.g(param0 + 28716)];
         var9.a((byte) 88, var10);
         gj var11 = new gj(var8, var7, var10, false);
         hp.field_c = 0;
         dj.field_c = var11;
-        hia.c((byte) -124);
+        AttackOrder.c((byte) -124);
         qi.a((byte) 78);
         kaa.field_m = -1;
         sia.field_h = true;
@@ -299,7 +299,7 @@ final class uq extends sna {
             this.field_Ab.a(-1, this.field_yb);
             this.field_yb.field_pb = "|";
             if (!(hka.field_i < 5) ||
-              !(hea.field_r < 2)) {
+              !(BananarangSpecial.field_r < 2)) {
               regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
@@ -309,7 +309,7 @@ final class uq extends sna {
                 if (7 > hka.field_i) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
-                  if (hea.field_r < 2) {
+                  if (BananarangSpecial.field_r < 2) {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
@@ -320,7 +320,7 @@ final class uq extends sna {
                 stackIn_8_0Lifetime1 = this;
                 stackIn_8_1Lifetime1 = null;
                 stackIn_8_2Lifetime1 = null;
-                stackIn_8_5 = nw.field_r;
+                stackIn_8_5 = FlySpecial.field_r;
               }
               this.field_Db = new daa(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Ab.a(-1, this.field_Db);
@@ -333,8 +333,8 @@ final class uq extends sna {
             this.field_Ab.a(-1, var28[1]);
             var28[2] = new sna(0L, (sna) null);
             this.field_Ab.a(-1, var28[2]);
-            this.field_Bb = new sna[cja.field_v];
-            for (var16 = 0; var16 < cja.field_v; var16++) {
+            this.field_Bb = new sna[FlyEvent.field_v];
+            for (var16 = 0; var16 < FlyEvent.field_v; var16++) {
               if (null != lw.field_k[var16]) {
                 this.field_Bb[var16] = new sna(0L, param10, lw.field_k[var16]);
                 this.field_Bb[var16].field_N = 0;
@@ -353,7 +353,7 @@ final class uq extends sna {
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_jb.a(nr.field_y);
+            var17Lifetime2 = param6.field_jb.a(RageAnimation.field_y);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
@@ -361,7 +361,7 @@ final class uq extends sna {
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
-            for (var17Lifetime4 = 0; cja.field_v > var17Lifetime4; var17Lifetime4++) {
+            for (var17Lifetime4 = 0; FlyEvent.field_v > var17Lifetime4; var17Lifetime4++) {
               if (null != this.field_Bb[var17Lifetime4]) {
                 var18 = this.field_Bb[var17Lifetime4].e(-1);
                 if (var16Lifetime2 < var18) {
@@ -386,7 +386,7 @@ final class uq extends sna {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(var16Lifetime2, var28[1], (byte) -75, nr.field_y, param6, var18Lifetime4);
+            var18Lifetime4 = this.a(var16Lifetime2, var28[1], (byte) -75, RageAnimation.field_y, param6, var18Lifetime4);
             var18Lifetime4 = this.a(var18Lifetime4, var16Lifetime2, this.field_Bb[16], -13403, var28[1]);
             var18Lifetime4 = this.a(var18Lifetime4, var16Lifetime2, this.field_Bb[17], -13403, var28[1]);
             var18Lifetime4 = this.a(var18Lifetime4, var16Lifetime2, this.field_Bb[18], -13403, var28[1]);
@@ -436,12 +436,12 @@ final class uq extends sna {
             this.field_Ab.field_eb = mu.a(11579568, 3, this.field_Ab.field_p, 8421504, 2105376, (byte) 17);
             var23 = var19 + 13 + 13;
             var24 = 10 + (24 + var22 + var17Lifetime5);
-            var25 = oi.a(param2, var23, param0, -21264);
+            var25 = ResetAnimation.a(param2, var23, param0, -21264);
             var26 = nga.a(var24, param1, (byte) 127, param3);
             this.a(var24, 31407, var23, var25, var26);
             return;
           }
-          this.field_wb = new sna(0L, param8, eha.field_r);
+          this.field_wb = new sna(0L, param8, InsanoSauceSpecial.field_r);
           this.field_wb.field_gb = 11184810;
           this.field_wb.field_N = 1;
           this.field_Ab.a(-1, this.field_wb);
@@ -454,7 +454,7 @@ final class uq extends sna {
           this.field_Ab.field_eb = mu.a(11579568, 3, this.field_Ab.field_p, 8421504, 2105376, (byte) 17);
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = 34 + var16Lifetime1;
-          var20Lifetime1 = oi.a(param2, var18Lifetime1, param0, -21264);
+          var20Lifetime1 = ResetAnimation.a(param2, var18Lifetime1, param0, -21264);
           var21Lifetime1 = nga.a(var19Lifetime1, param1, (byte) 124, param3);
           this.a(var19Lifetime1, 31407, var18Lifetime1, var20Lifetime1, var21Lifetime1);
           return;

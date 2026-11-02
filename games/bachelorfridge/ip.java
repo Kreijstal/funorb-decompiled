@@ -43,7 +43,7 @@ final class ip extends kj {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!wc.a(0, var6)) {
+          if (!HazmatSpecial.a(0, var6)) {
             stackIn_3_0 = mk.field_f;
             return stackIn_3_0;
           }
@@ -52,10 +52,10 @@ final class ip extends kj {
             return stackIn_6_0;
           }
           if (2 != um.field_c) {
-            stackIn_9_0 = bt.field_q;
+            stackIn_9_0 = DreamsEvent.field_q;
             return stackIn_9_0;
           }
-          if (bna.a((byte) 5, param0)) {
+          if (DisableAnimation.a((byte) 5, param0)) {
             stackIn_12_0 = lga.a(true, new String[]{param0}, nu.field_d);
             return stackIn_12_0;
           }
@@ -102,7 +102,7 @@ final class ip extends kj {
 
     final boolean b(int param0) {
         if (0 == this.field_g) {
-          wf.a(69, (byte) -91);
+          MartyrAnimation.a(69, (byte) -91);
         }
         int fieldTemp$0 = this.field_g + 1;
         this.field_g = this.field_g + 1;
@@ -125,11 +125,11 @@ final class ip extends kj {
         }
         var2 = param1;
         if (var2 == 0) {
-          ala.a(26219, wc.field_p);
+          ala.a(26219, HazmatSpecial.field_p);
           return;
         }
         if (var2 == 12) {
-          ala.a(26219, jga.field_z);
+          ala.a(26219, PizzaPartyAnimation.field_z);
           return;
         }
         if (-3 == var2) {
@@ -139,8 +139,8 @@ final class ip extends kj {
         if (var2 != -2) {
           return;
         }
-        ala.a(26219, pm.field_z);
-        tla.d(-80);
+        ala.a(26219, IncomingAnimation.field_z);
+        AirstrikeEvent.d(-80);
     }
 
     static {

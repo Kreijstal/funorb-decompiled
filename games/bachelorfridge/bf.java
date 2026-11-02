@@ -6,7 +6,7 @@ abstract class bf extends IntrusiveNode {
     static hw[] field_g;
     static boolean field_f;
 
-    abstract void a(op param0, int param1);
+    abstract void a(BattleState param0, int param1);
 
     bf() {
     }
@@ -98,7 +98,7 @@ abstract class bf extends IntrusiveNode {
         String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
-        nea var3 = hj.b(0, param0, param1);
+        nea var3 = SplitSpecial.b(0, param0, param1);
         int var4 = 6 / ((-4 - param2) / 36);
         ik var5Lifetime1;
         if (var3 != null) {

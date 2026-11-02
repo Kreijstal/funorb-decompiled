@@ -40,19 +40,19 @@ final class lha {
         var1 = 1;
         var2 = kca.field_a;
         if (0 == var2) {
-          wc.field_p = MusicTrack.a(oaa.field_b, "", "bf_titlescreen_version2");
-          stackIn_32_0 = (wc.field_p == null) ? 0 : 1;
+          HazmatSpecial.field_p = MusicTrack.a(oaa.field_b, "", "bf_titlescreen_version2");
+          stackIn_32_0 = (HazmatSpecial.field_p == null) ? 0 : 1;
           var1Lifetime1 = stackIn_32_0;
         } else {
           if (var2 == 1) {
-            jga.field_z = MusicTrack.a(oaa.field_b, "", "bf_shopping_screen");
-            stackIn_36_0 = (null == jga.field_z) ? 0 : 1;
+            PizzaPartyAnimation.field_z = MusicTrack.a(oaa.field_b, "", "bf_shopping_screen");
+            stackIn_36_0 = (null == PizzaPartyAnimation.field_z) ? 0 : 1;
             var1Lifetime1 = stackIn_36_0;
           } else {
             if (var2 != 2) {
               if (var2 == 3) {
-                pm.field_z = MusicTrack.a(oaa.field_b, "", "bf_main_view2");
-                stackIn_44_0 = (pm.field_z == null) ? 0 : 1;
+                IncomingAnimation.field_z = MusicTrack.a(oaa.field_b, "", "bf_main_view2");
+                stackIn_44_0 = (IncomingAnimation.field_z == null) ? 0 : 1;
                 var1Lifetime1 = stackIn_44_0;
               } else {
                 if (var2 != 4) {
@@ -79,7 +79,7 @@ final class lha {
                           if (var2 != 9) {
                             if (var2 != 10) {
                               if (var2 == 11) {
-                                stackIn_76_0 = (!uf.field_c.a(db.field_a, wc.field_p, ai.field_d, (byte) -98, 22050)) ? 0 : 1;
+                                stackIn_76_0 = (!uf.field_c.a(db.field_a, HazmatSpecial.field_p, ai.field_d, (byte) -98, 22050)) ? 0 : 1;
                                 var1Lifetime1 = stackIn_76_0;
                               } else {
                                 if (var2 != 12) {
@@ -88,7 +88,7 @@ final class lha {
                                     var1Lifetime1 = stackIn_84_0;
                                   } else {
                                     if (14 == var2) {
-                                      stackIn_88_0 = (!uf.field_c.a(db.field_a, pm.field_z, ai.field_d, (byte) 103, 22050)) ? 0 : 1;
+                                      stackIn_88_0 = (!uf.field_c.a(db.field_a, IncomingAnimation.field_z, ai.field_d, (byte) 103, 22050)) ? 0 : 1;
                                       var1Lifetime1 = stackIn_88_0;
                                     } else {
                                       if (15 == var2) {
@@ -125,7 +125,7 @@ final class lha {
                                     }
                                   }
                                 } else {
-                                  stackIn_80_0 = (!uf.field_c.a(db.field_a, jga.field_z, ai.field_d, (byte) -26, 22050)) ? 0 : 1;
+                                  stackIn_80_0 = (!uf.field_c.a(db.field_a, PizzaPartyAnimation.field_z, ai.field_d, (byte) -26, 22050)) ? 0 : 1;
                                   var1Lifetime1 = stackIn_80_0;
                                 }
                               }
@@ -195,8 +195,8 @@ final class lha {
     }
 
     final static void b(byte param0) {
-        if (0 < eb.field_t) {
-          eb.field_t = eb.field_t - 1;
+        if (0 < FishRainSpecial.field_t) {
+          FishRainSpecial.field_t = FishRainSpecial.field_t - 1;
         }
         if (hga.field_U.field_f != pda.field_p) {
           fs.field_f = fs.field_f + (hga.field_U.field_f - pda.field_p);
@@ -205,8 +205,8 @@ final class lha {
         if (param0 <= 59) {
           field_b = (BitmapFont) null;
         }
-        if (!(eb.field_t <= 0)) {
-          iv.b(false);
+        if (!(FishRainSpecial.field_t <= 0)) {
+          DamageEffect.b(false);
         }
     }
 
@@ -247,7 +247,7 @@ final class lha {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = dca.field_y.getGraphics();
+            var9 = TBomberAnimation.field_y.getGraphics();
             if (null == tb.field_b) {
               tb.field_b = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -260,7 +260,7 @@ final class lha {
             }
             try {
               if (null == et.field_m) {
-                et.field_m = dca.field_y.createImage(304, 34);
+                et.field_m = TBomberAnimation.field_y.createImage(304, 34);
               }
               var10 = et.field_m.getGraphics();
               var10.setColor(param1);
@@ -296,7 +296,7 @@ final class lha {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            dca.field_y.repaint();
+            TBomberAnimation.field_y.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

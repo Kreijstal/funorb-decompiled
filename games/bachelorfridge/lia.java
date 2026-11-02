@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lia extends pp {
+final class lia extends EventEffect {
     int field_k;
     static lm field_j;
     static boolean field_i;
 
-    final void a(aga param0, op param1, int param2) {
+    final void a(BattleCreature param0, BattleState param1, int param2) {
         String var5 = null;
-        aga var6 = null;
-        aga var7 = null;
+        BattleCreature var6 = null;
+        BattleCreature var7 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -18,7 +18,7 @@ final class lia extends pp {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var6 = this.field_h.a(29, param1);
+          var6 = this.target.a(29, param1);
           var7 = var6;
           if (var7.g(param2 + 83, this.field_f)) {
             return;
@@ -26,9 +26,9 @@ final class lia extends pp {
           if (-1 != this.field_k) {
             var7.b((byte) 117, this.field_k);
           }
-          if (od.field_w[param1.field_a[var6.field_x][var6.field_J].field_n].field_b) {
-            param1.field_a[var6.field_x][var6.field_J].field_m = false;
-            param1.field_a[var6.field_x][var6.field_J].field_j = 5;
+          if (BuffVendorAnimation.field_w[param1.tiles[var6.tileX][var6.tileY].terrain].field_b) {
+            param1.tiles[var6.tileX][var6.tileY].field_m = false;
+            param1.tiles[var6.tileX][var6.tileY].field_j = 5;
           }
           if (param2 != 12) {
             var5 = (String) null;
@@ -55,9 +55,9 @@ final class lia extends pp {
         }
     }
 
-    lia(nq param0, int param1, int param2) {
+    lia(CreatureRef param0, int param1, int param2) {
         try {
-          this.field_h = param0;
+          this.target = param0;
           this.field_k = param2;
           this.field_f = param1;
         } catch (RuntimeException runtimeException) {
@@ -93,7 +93,7 @@ final class lia extends pp {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          er.a(this.field_h, 125, param0);
+          FlirtAnimation.a(this.target, 125, param0);
           param0.b(this.field_f, -113);
           param0.writeByte(this.field_k, 0);
           int var3_int = 126 % ((param1 - 34) / 58);

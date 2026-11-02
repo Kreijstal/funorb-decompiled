@@ -19,7 +19,7 @@ final class tw {
 
     final static void a(int param0, jfa param1, int param2) {
         int var3_int = 0;
-        if (bp.e(-29919)) {
+        if (AttackUpAllAnimation.e(-29919)) {
           return;
         }
         try {

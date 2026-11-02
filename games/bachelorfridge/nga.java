@@ -66,7 +66,7 @@ final class nga extends vo {
           return;
         }
         gja.field_m = new rp();
-        nw.a(true, true, (byte) -107);
+        FlySpecial.a(true, true, (byte) -107);
     }
 
     static {

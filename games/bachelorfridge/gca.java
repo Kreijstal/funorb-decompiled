@@ -44,12 +44,12 @@ abstract class gca extends IntrusiveNode {
 
     final static void d(byte param0) {
         if (param0 == 124) {
-          iv.b(false);
+          DamageEffect.b(false);
           hb.a(ClientException.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
           return;
         }
         gca.c((byte) -33);
-        iv.b(false);
+        DamageEffect.b(false);
         hb.a(ClientException.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
     }
 

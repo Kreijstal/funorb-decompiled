@@ -20,50 +20,50 @@ abstract class MouseWheelInput {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (aka.field_G.field_e >= 4) {
-            if (aka.field_G.field_k == -1) {
+          if (HomingMissileAnimation.field_G.field_e >= 4) {
+            if (HomingMissileAnimation.field_G.field_k == -1) {
               return 3;
             }
-            if (aka.field_G.field_k != -2) {
+            if (HomingMissileAnimation.field_G.field_k != -2) {
               return 1;
             }
             return 4;
           }
           try {
             if (param0 == ds.field_m) {
-              ch.field_p = mh.field_l.a((byte) 120, pw.field_A, nj.field_f);
+              BagpipeSpecial.field_p = mh.field_l.a((byte) 120, SnowAnimation.field_A, nj.field_f);
               ds.field_m = ds.field_m + 1;
             }
             if (ds.field_m == 1) {
-              if (ch.field_p.field_f == 2) {
-                stackIn_13_0 = cj.a(-1, 1);
+              if (BagpipeSpecial.field_p.field_f == 2) {
+                stackIn_13_0 = BattleUpdate.a(-1, 1);
                 return stackIn_13_0;
               }
-              if (ch.field_p.field_f == 1) {
+              if (BagpipeSpecial.field_p.field_f == 1) {
                 ds.field_m = ds.field_m + 1;
               }
             }
             if (ds.field_m == 2) {
-              hla.field_s = new BufferedSocket((java.net.Socket) (ch.field_p.field_e), mh.field_l);
+              RaiseEvent.field_s = new BufferedSocket((java.net.Socket) (BagpipeSpecial.field_p.field_e), mh.field_l);
               var2 = new PacketBuffer(13);
-              cca.a(var2, uea.field_i, (byte) -103, ma.field_E, ro.field_j);
+              HazmatAnimation.a(var2, uea.field_i, (byte) -103, ma.field_E, ClearTileFlagEffect.field_j);
               var2.writeByte(15, 0);
               var2.writeInt(bd.field_m, -1615464796);
-              hla.field_s.a(0, var2.payload, false, 13);
+              RaiseEvent.field_s.a(0, var2.payload, false, 13);
               ds.field_m = ds.field_m + 1;
-              wh.field_q = f.b((byte) 73) + 30000L;
+              RefreshingSpecial.field_q = f.b((byte) 73) + 30000L;
             }
             if (ds.field_m == 3) {
-              if (0 < hla.field_s.b(125)) {
-                var1_int = hla.field_s.b((byte) -47);
+              if (0 < RaiseEvent.field_s.b(125)) {
+                var1_int = RaiseEvent.field_s.b((byte) -47);
                 if (var1_int != 0) {
-                  stackIn_26_0 = cj.a(var1_int, 1);
+                  stackIn_26_0 = BattleUpdate.a(var1_int, 1);
                   return stackIn_26_0;
                 }
                 ds.field_m = ds.field_m + 1;
               } else {
-                if (wh.field_q < f.b((byte) 73)) {
-                  stackIn_23_0 = cj.a(-2, 1);
+                if (RefreshingSpecial.field_q < f.b((byte) 73)) {
+                  stackIn_23_0 = BattleUpdate.a(-2, 1);
                   return stackIn_23_0;
                 }
               }
@@ -72,16 +72,16 @@ abstract class MouseWheelInput {
               stackIn_32_0 = -1;
               return stackIn_32_0;
             }
-            aka.field_G.a(nf.field_M, hla.field_s, 16008);
-            ch.field_p = null;
-            hla.field_s = null;
+            HomingMissileAnimation.field_G.a(nf.field_M, RaiseEvent.field_s, 16008);
+            BagpipeSpecial.field_p = null;
+            RaiseEvent.field_s = null;
             ds.field_m = 0;
             stackIn_30_0 = 0;
             return stackIn_30_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return cj.a(-3, 1);
+            return BattleUpdate.a(-3, 1);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -622,7 +622,7 @@ final class ModelMesh extends ModelMeshBase {
           }
         }
         if (field_E) {
-          gm.a(var7 - 1, -30111, field_f, field_e, 0);
+          MoveOrder.a(var7 - 1, -30111, field_f, field_e, 0);
           if (this.field_A == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
               this.b(field_e[var8Lifetime2]);

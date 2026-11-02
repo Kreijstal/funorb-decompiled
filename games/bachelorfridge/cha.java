@@ -82,7 +82,7 @@ final class cha extends lw {
             if (this.field_e != 3) {
               return;
             }
-            fla.b(23621);
+            ShieldSpecial.b(23621);
             this.c(125);
             return;
           }
@@ -116,7 +116,7 @@ final class cha extends lw {
               if (this.field_e != 3) {
                 return;
               }
-              fla.b(23621);
+              ShieldSpecial.b(23621);
               this.c(125);
               return;
             }
@@ -133,7 +133,7 @@ final class cha extends lw {
               if (this.field_e != 3) {
                 return;
               }
-              fla.b(23621);
+              ShieldSpecial.b(23621);
               this.c(125);
               return;
             }
@@ -165,7 +165,7 @@ final class cha extends lw {
               }
               if (param0 == 37 &&
                 this.field_e == 3) {
-                fla.b(23621);
+                ShieldSpecial.b(23621);
                 this.c(125);
                 return;
               }
@@ -186,7 +186,7 @@ final class cha extends lw {
               }
               if (param0 == 37 &&
                 this.field_e == 3) {
-                fla.b(23621);
+                ShieldSpecial.b(23621);
                 this.c(125);
                 return;
               }
@@ -201,7 +201,7 @@ final class cha extends lw {
             if (this.field_e != 2) {
               if (param0 == 37 &&
                 this.field_e == 3) {
-                fla.b(23621);
+                ShieldSpecial.b(23621);
                 this.c(125);
                 return;
               }
@@ -215,7 +215,7 @@ final class cha extends lw {
         } else {
           if (param0 == 37 &&
             this.field_e == 3) {
-            fla.b(23621);
+            ShieldSpecial.b(23621);
             this.c(125);
           }
         }

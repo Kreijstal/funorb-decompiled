@@ -174,8 +174,8 @@ final class ue extends vd implements pc, lja, uja {
         int var1 = 1;
         this.field_H = new dia("", (pl) null, var1 != 0);
         this.field_L = new hf(dp.field_p, (pl) null);
-        this.field_M = new hf(nt.field_x, (pl) null);
-        this.field_C.field_h = cu.field_z;
+        this.field_M = new hf(SuperSpeedAllAnimation.field_x, (pl) null);
+        this.field_C.field_h = FloodAnimation.field_z;
         this.field_I.field_h = qf.field_w;
         this.field_K.field_h = bv.field_d;
         this.field_G.field_h = wj.field_r;
@@ -200,13 +200,13 @@ final class ue extends vd implements pc, lja, uja {
         cm dupTemp$1 = new cm(10000536);
         this.field_F.field_f = (qda) ((Object) dupTemp$1);
         this.field_G.field_f = (qda) ((Object) dupTemp$1);
-        String var2 = lga.a(true, new String[]{this.l(-81), this.d((byte) 125)}, cka.field_x);
+        String var2 = lga.a(true, new String[]{this.l(-81), this.d((byte) 125)}, ZombiesAnimation.field_x);
         int var3 = 20;
         var3 = var3 + this.a(var3, 170, ua.field_a, this.field_I, 120);
         var3 = var3 + (5 + this.a(this.field_K, "", var3, 20, 170, (byte) -14, rm.field_b));
-        var3 = var3 + this.a(var3, 170, mp.field_r, this.field_G, 120);
+        var3 = var3 + this.a(var3, 170, MassPoisonSpecial.field_r, this.field_G, 120);
         var3 = var3 + (this.a(-20199, var3, this.field_F, ug.field_m, hm.field_a, 170) + 5);
-        var3 = var3 + (this.a(-20199, var3, this.field_C, saa.field_u, gp.field_v, 170) + 5);
+        var3 = var3 + (this.a(-20199, var3, this.field_C, saa.field_u, DreamsAnimation.field_v, 170) + 5);
         var3 = var3 + this.a(vr.field_h, var3, 170, (byte) -32, this.field_D);
         ge var4 = new ge(46, var3, -90 + this.field_p, 25, this.field_H, true, this.field_p - 120, 5, oc.field_l, 11579568, ona.field_vb);
         this.c(var4, 38);
@@ -430,7 +430,7 @@ final class ue extends vd implements pc, lja, uja {
           var2 = Integer.parseInt(this.field_D.field_w);
         } catch (NumberFormatException numberFormatException) {
         }
-        return h.a(var2, this.field_H.field_B, this, 114, this.field_G.field_w, this.field_I.field_w, this.field_C.field_w);
+        return SpiltMilkSpecial.a(var2, this.field_H.field_B, this, 114, this.field_G.field_w, this.field_I.field_w, this.field_C.field_w);
     }
 
     private final boolean a(int param0, mca param1) {

@@ -206,7 +206,7 @@ final class jja extends PcmStream {
     final static void b(int param0) {
         cha.field_l = ig.field_m.readString(76);
         CharSequence var2 = (CharSequence) ((Object) cha.field_l);
-        JaggrabDownloader.field_a = fq.a(param0 ^ param0, var2);
+        JaggrabDownloader.field_a = HomingMissileSpecial.a(param0 ^ param0, var2);
     }
 
     public static void c(byte param0) {

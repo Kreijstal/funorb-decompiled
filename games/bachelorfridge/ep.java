@@ -9,7 +9,7 @@ final class ep extends pu {
         int var7 = 0;
         int var8 = 0;
         int var9 = BachelorFridge.field_y;
-        if (bp.e(-29919)) {
+        if (AttackUpAllAnimation.e(-29919)) {
           return;
         }
         sja.field_fb.writeCipheredByte(88, (byte) 114);
@@ -34,7 +34,7 @@ final class ep extends pu {
     }
 
     final static void a(int param0, int param1) {
-        la.field_r = param0;
+        TBomberEvent.field_r = param0;
         if (param1 != 8192) {
           ep.a(true, 42, 63);
         }

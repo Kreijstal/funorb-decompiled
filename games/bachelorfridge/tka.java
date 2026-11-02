@@ -89,8 +89,8 @@ final class tka extends kj {
         super(param0, param1, param2);
         try {
           this.field_f = 80;
-          this.field_g = kla.a(129, m.field_a, -2147483648) - 64;
-          this.field_h = kla.a(65, m.field_a, -2147483648) - 32;
+          this.field_g = DiveBomberAnimation.a(129, m.field_a, -2147483648) - 64;
+          this.field_h = DiveBomberAnimation.a(65, m.field_a, -2147483648) - 32;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "tka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

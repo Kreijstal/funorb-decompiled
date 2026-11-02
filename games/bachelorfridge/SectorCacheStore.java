@@ -148,7 +148,7 @@ final class SectorCacheStore {
         field_d = null;
     }
 
-    final static pp a(int param0, PacketBuffer param1) {
+    final static EventEffect a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         pea stackIn_1_0 = null;
@@ -159,7 +159,7 @@ final class SectorCacheStore {
         try {
           var2_int = 80 % ((-13 - param0) / 38);
           stackIn_1_0 = new pea(qi.a(param1, (byte) 24), param1.readUnsignedByte(16711935), param1.readUnsignedByte(16711935));
-          return (pp) ((Object) stackIn_1_0);
+          return (EventEffect) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

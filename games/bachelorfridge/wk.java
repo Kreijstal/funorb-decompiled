@@ -29,9 +29,9 @@ final class wk {
         }
         if (!param0) {
           wk.a(44);
-          return lb.field_w;
+          return InvincibleAnimation.field_w;
         }
-        return lb.field_w;
+        return InvincibleAnimation.field_w;
     }
 
     final pda a(int param0, int param1) {

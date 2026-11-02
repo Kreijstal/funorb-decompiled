@@ -12,7 +12,7 @@ final class ap {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 > 50) {
           if (DualLinkNode.field_l <= param1 &&
-            param1 <= pw.field_x) {
+            param1 <= SnowAnimation.field_x) {
             param2 = cr.a(an.field_q, param2, ha.field_n, 0);
             param0 = cr.a(an.field_q, param0, ha.field_n, 0);
             ada.a(param2, param4, param1, 80, param0);
@@ -21,7 +21,7 @@ final class ap {
         }
         ap.a(57, -68, -47, 62, 23);
         if (DualLinkNode.field_l <= param1 &&
-          param1 <= pw.field_x) {
+          param1 <= SnowAnimation.field_x) {
           param2 = cr.a(an.field_q, param2, ha.field_n, 0);
           param0 = cr.a(an.field_q, param0, ha.field_n, 0);
           ada.a(param2, param4, param1, 80, param0);

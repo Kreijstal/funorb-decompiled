@@ -78,12 +78,12 @@ final class eea {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = 39 / ((-47 - param2) / 49);
-          var4 = bna.b(-116, param0);
+          var4 = DisableAnimation.b(-116, param0);
           if (var4 != null &&
             var4.field_vb != null) {
             return true;
           }
-          stackIn_8_0 = (null != pw.field_w) && (ImageProducerRasterBuffer.a(param1, 28791) != null);
+          stackIn_8_0 = (null != SnowAnimation.field_w) && (ImageProducerRasterBuffer.a(param1, 28791) != null);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

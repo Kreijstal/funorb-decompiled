@@ -28,7 +28,7 @@ final class kc implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          cv.a(1, (String) null, (Throwable) ((Object) exception));
+          SpiltMilkEvent.a(1, (String) null, (Throwable) ((Object) exception));
         } finally {
           this.field_d = false;
         }

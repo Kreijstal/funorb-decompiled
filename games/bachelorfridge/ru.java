@@ -14,7 +14,7 @@ final class ru extends tn {
     private long field_f;
 
     final static void a(int param0, byte param1, int param2, boolean param3, boolean param4, int param5) {
-        od.field_w[param5] = new hja(param5, param2, param3, param4, param0);
+        BuffVendorAnimation.field_w[param5] = new hja(param5, param2, param3, param4, param0);
         int var6 = 108 % ((param1 - 55) / 57);
     }
 

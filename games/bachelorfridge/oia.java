@@ -43,15 +43,15 @@ final class oia extends kj {
           var2 = this.field_h;
           var2 += 16;
           for (var3 = 0; var3 < 32; var3++) {
-            var4 = kla.a(this.field_h, this.field_e.field_h.field_w, -2147483648) - (this.field_h >> 1);
+            var4 = DiveBomberAnimation.a(this.field_h, this.field_e.field_h.field_w, -2147483648) - (this.field_h >> 1);
             stackIn_11_0 = (this.field_h >> 2) - Math.abs(var4) / 2;
-            if (kla.a(2, this.field_e.field_h.field_w, -2147483648) <= 0) {
+            if (DiveBomberAnimation.a(2, this.field_e.field_h.field_w, -2147483648) <= 0) {
               stackIn_12_1 = -1;
             } else {
               stackIn_12_1 = 1;
             }
             var5 = stackIn_11_0 * stackIn_12_1;
-            kla.a(50, this.field_e.field_h.field_w, -2147483648);
+            DiveBomberAnimation.a(50, this.field_e.field_h.field_w, -2147483648);
             var6 = var4 + 64;
             var7 = var5 + 32;
             var8 = (int)(Math.sin(300.0 * (double)var2) * 100.0) * 0;
@@ -60,7 +60,7 @@ final class oia extends kj {
             stackIn_14_2 = var6;
             stackIn_14_3 = var8;
             stackIn_14_4 = var7;
-            if (5 <= kla.a(20, this.field_e.field_h.field_w, -2147483648)) {
+            if (5 <= DiveBomberAnimation.a(20, this.field_e.field_h.field_w, -2147483648)) {
               stackIn_15_0 = null;
               stackIn_15_1 = null;
               stackIn_15_5 = 16711680;
@@ -70,15 +70,15 @@ final class oia extends kj {
               stackIn_15_5 = 16631867;
             }
             var9 = new rea(stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5);
-            kla.a(3, this.field_e.field_h.field_w, -2147483648);
-            kla.a(5000, this.field_e.field_h.field_w, -2147483648);
-            var9.field_o = (double)(-1 - kla.a(2, this.field_e.field_h.field_w, -2147483648));
-            var9.field_n = 25 - kla.a(10, this.field_e.field_h.field_w, -2147483648);
+            DiveBomberAnimation.a(3, this.field_e.field_h.field_w, -2147483648);
+            DiveBomberAnimation.a(5000, this.field_e.field_h.field_w, -2147483648);
+            var9.field_o = (double)(-1 - DiveBomberAnimation.a(2, this.field_e.field_h.field_w, -2147483648));
+            var9.field_n = 25 - DiveBomberAnimation.a(10, this.field_e.field_h.field_w, -2147483648);
             var9.field_h = -1;
             this.field_g.a(var9, true);
           }
         }
-        aga.a(this.field_e.field_h.field_w, true, this.field_g, this.field_h);
+        BattleCreature.a(this.field_e.field_h.field_w, true, this.field_g, this.field_h);
         return false;
     }
 
@@ -89,7 +89,7 @@ final class oia extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        baa.a(this.field_g, true, 65280, param2, param0, 10);
+        BananarangAnimation.a(this.field_g, true, 65280, param2, param0, 10);
         if (param1 != 0) {
           oia.c(85);
         }

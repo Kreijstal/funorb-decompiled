@@ -20,8 +20,8 @@ final class ik {
         int var4;
         uha var5;
         var4 = BachelorFridge.field_y;
-        if (null == pw.field_w) {
-          var5 = lk.c(-12411, this.field_k);
+        if (null == SnowAnimation.field_w) {
+          var5 = SuperSpeedAllEvent.c(-12411, this.field_k);
           if (var5 != null) {
             var3 = var5.field_Jb;
             if (var5.field_Wb) {
@@ -63,7 +63,7 @@ final class ik {
           }
           this.field_b = param1.field_p;
           if (0 == param1.field_p) {
-            if (fb.field_p == 0) {
+            if (ShuffleSpecial.field_p == 0) {
               this.field_a.a(eea.field_c, true, 12);
             }
             this.field_a.a(d.field_D, true, 13);
@@ -72,7 +72,7 @@ final class ik {
             if (ri.field_c == 0) {
               this.field_a.a(ffa.field_i, true, 12);
             }
-            this.field_a.a(sma.field_B, true, 13);
+            this.field_a.a(GasCloudAnimation.field_B, true, 13);
           }
           if (param1.field_p == 2) {
             if (0 == fj.field_g) {
@@ -119,27 +119,27 @@ final class ik {
         }
         if (null != this.field_j &&
           this.field_e != ge.field_F &&
-          pw.field_w != null &&
-          ps.d(-117)) {
+          SnowAnimation.field_w != null &&
+          ZombiesEvent.d(-117)) {
           var7 = gf.a(this.field_e, false);
           var4 = ImageProducerRasterBuffer.a(this.field_e, 28791);
           var5 = this.b(8510);
           if (var4 != null) {
-            if (!pw.field_w.field_Zb ||
-              !(0 > pw.field_w.field_Nb)) {
+            if (!SnowAnimation.field_w.field_Zb ||
+              !(0 > SnowAnimation.field_w.field_Nb)) {
               this.field_a.a(lga.a(true, new String[]{var5}, gka.field_m), true, 1);
             }
           } else {
             if (var7 != null &&
-              pw.field_w.field_Fb &&
-              pw.field_w.field_Rb < pw.field_w.field_Pb) {
+              SnowAnimation.field_w.field_Fb &&
+              SnowAnimation.field_w.field_Rb < SnowAnimation.field_w.field_Pb) {
               if (var7.field_wb) {
-                this.field_a.a(lga.a(true, new String[]{var5}, jba.field_w), true, 1);
+                this.field_a.a(lga.a(true, new String[]{var5}, HailAnimation.field_w), true, 1);
               } else {
                 if (param1 &&
                   var7.field_Ob) {
-                  this.field_a.a(lga.a(true, new String[]{var5}, op.field_q), true, 0);
-                  this.field_a.a(lga.a(true, new String[]{var5}, rk.field_r), true, 1);
+                  this.field_a.a(lga.a(true, new String[]{var5}, BattleState.field_q), true, 0);
+                  this.field_a.a(lga.a(true, new String[]{var5}, CreatureProfile.field_r), true, 1);
                 } else {
                   this.field_a.a(lga.a(true, new String[]{var5}, vca.field_m), true, 0);
                 }
@@ -185,12 +185,12 @@ final class ik {
           bia.a((byte) 35, this.field_e, param2);
         } else {
           if (param0 == 1) {
-            od.a(this.field_e, param2, 2);
+            BuffVendorAnimation.a(this.field_e, param2, 2);
           } else {
             if (2 != param0) {
               if (param0 != 3) {
                 if (param0 == 10) {
-                  sfa.a(param2, this.field_k, false);
+                  CreatureOrder.a(param2, this.field_k, false);
                 } else {
                   if (param0 != 15) {
                     if (param0 != 16) {
@@ -240,8 +240,8 @@ final class ik {
             }
             var7 = this.b(8510);
             var4 = var7;
-            var5 = bna.b(-100, this.field_j);
-            var6 = bna.a((byte) 5, this.field_j) ? 1 : 0;
+            var5 = DisableAnimation.b(-100, this.field_j);
+            var6 = DisableAnimation.a((byte) 5, this.field_j) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_a.a(lga.a(true, new String[]{var7}, faa.field_a), true, 4);
@@ -295,7 +295,7 @@ final class ik {
           discarded$1 = this.d(35, -60, 45);
         }
         if (8 == param2) {
-          od.a(this.field_e, this.field_j, false);
+          BuffVendorAnimation.a(this.field_e, this.field_j, false);
         } else {
           if (param2 != 18) {
             if (param2 != 11) {
@@ -309,18 +309,18 @@ final class ik {
                       ew.a(this.field_c, this.field_e, this.field_b, false, this.field_j);
                       return true;
                     }
-                    fk.d(param0 + 14);
+                    HomingMissileEvent.d(param0 + 14);
                   } else {
                     kw.a(true);
                   }
                 } else {
-                  fk.a(param0 ^ -108, this.field_b, param1, 2);
+                  HomingMissileEvent.a(param0 ^ -108, this.field_b, param1, 2);
                 }
               } else {
-                fk.a(123, this.field_b, param1, 1);
+                HomingMissileEvent.a(123, this.field_b, param1, 1);
               }
             } else {
-              fk.a(param0 ^ -117, this.field_b, param1, 0);
+              HomingMissileEvent.a(param0 ^ -117, this.field_b, param1, 0);
             }
           } else {
             BufferedSocket.a(this.field_j, (byte) 89, this.field_e);
@@ -370,7 +370,7 @@ final class ik {
     final static void a(int param0, jfa param1, int param2, int param3) {
         BitPacketBuffer var4 = null;
         int var5 = 0;
-        if (bp.e(-29919)) {
+        if (AttackUpAllAnimation.e(-29919)) {
           return;
         }
         try {
@@ -389,7 +389,7 @@ final class ik {
 
     private final boolean e(int param0, int param1, int param2) {
         if (param0 == 17) {
-          wt.field_n = new uq(this.field_g.field_D, this.field_g.field_M, this.field_g.field_sb, this.field_g.field_p, param1, qaa.field_d, mda.field_c, sm.field_s, qs.field_m, nr.field_v, dla.field_k, this.field_j, this.field_e);
+          wt.field_n = new uq(this.field_g.field_D, this.field_g.field_M, this.field_g.field_sb, this.field_g.field_p, param1, qaa.field_d, mda.field_c, SlowAllEvent.field_s, qs.field_m, RageAnimation.field_v, dla.field_k, this.field_j, this.field_e);
           return true;
         }
         if (param2 != -12211) {
@@ -415,7 +415,7 @@ final class ik {
               if (param1 != 7) {
                 return false;
               }
-              var4_ref = tha.a(2, this.field_j, this.field_f, param0);
+              var4_ref = DreamsSpecial.a(2, this.field_j, this.field_f, param0);
             } else {
               var4_ref = ip.a(this.field_j, (byte) -80, param0);
             }
@@ -433,7 +433,7 @@ final class ik {
 
     ik(sna param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_a = new pna(td.field_o);
+          this.field_a = new pna(SpecialOrder.field_o);
           this.field_f = param3;
           this.field_j = param2;
           this.field_k = param4;

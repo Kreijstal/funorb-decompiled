@@ -10,7 +10,7 @@ final class nja {
         if (param0) {
           w.field_e = false;
         } else {
-          if (null == pw.field_w) {
+          if (null == SnowAnimation.field_w) {
             w.field_e = false;
           }
         }
@@ -30,8 +30,8 @@ final class nja {
             lfa.field_q = lfa.field_q - 1;
           }
         } else {
-          if (pw.field_w == null) {
-            if (rv.field_n != null) {
+          if (SnowAnimation.field_w == null) {
+            if (EffectBatch.field_n != null) {
               if (lfa.field_q <= 0) {
                 if (dja.field_m > 0) {
                   dja.field_m = dja.field_m - 1;
@@ -95,23 +95,23 @@ final class nja {
         byte[] var16;
         byte[] var17;
         var7 = BachelorFridge.field_y;
-        var1 = eha.field_s[0] * lq.field_A[0];
-        var16 = baa.field_P[0];
+        var1 = InsanoSauceSpecial.field_s[0] * lq.field_A[0];
+        var16 = BananarangAnimation.field_P[0];
         if (!uf.field_b[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var1 > var5_int; var5_int++) {
             var8[var5_int] = hk.field_f[dda.a((int) var16[var5_int], 255)];
           }
-          var3 = new Sprite(ok.field_Bb, kh.field_r, fl.field_j[0], fd.field_D[0], lq.field_A[0], eha.field_s[0], var8);
+          var3 = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], lq.field_A[0], InsanoSauceSpecial.field_s[0], var8);
         } else {
           var17 = cea.field_d[0];
           var13 = new int[var1];
           var11 = var13;
           var5 = var11;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = mp.a(dda.a(255, (int) var17[var6]) << 24, hk.field_f[dda.a(255, (int) var16[var6])]);
+            var5[var6] = MassPoisonSpecial.a(dda.a(255, (int) var17[var6]) << 24, hk.field_f[dda.a(255, (int) var16[var6])]);
           }
-          var3 = new ArgbSprite(ok.field_Bb, kh.field_r, fl.field_j[0], fd.field_D[0], lq.field_A[0], eha.field_s[0], var13);
+          var3 = new ArgbSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[0], AirstrikeAnimation.field_D[0], lq.field_A[0], InsanoSauceSpecial.field_s[0], var13);
         }
         al.b(-18073);
         if (!param0) {

@@ -17,7 +17,7 @@ final class gl extends pk implements fca, ufa {
           if (param0 != 3) {
             gl.d(0);
           }
-          stackIn_5_0 = (null != bna.b(-56, param1));
+          stackIn_5_0 = (null != DisableAnimation.b(-56, param1));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ final class gl extends pk implements fca, ufa {
           decompiledCaughtException = decompiledCaughtParameter0;
           numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return eb.field_s;
+        return FishRainSpecial.field_s;
     }
 
     public gl() {

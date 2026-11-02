@@ -93,9 +93,9 @@ final class al {
         if (param0 != -18073) {
           return;
         }
-        eha.field_s = null;
-        baa.field_P = (byte[][]) null;
-        fd.field_D = null;
+        InsanoSauceSpecial.field_s = null;
+        BananarangAnimation.field_P = (byte[][]) null;
+        AirstrikeAnimation.field_D = null;
         hk.field_f = null;
         lq.field_A = null;
         fl.field_j = null;

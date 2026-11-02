@@ -4,34 +4,34 @@
 final class fs {
     static int[] field_e;
     private boolean field_c;
-    private op field_d;
+    private BattleState field_d;
     static int field_f;
     private gj field_b;
     boolean field_a;
 
     final void a(int param0, int param1) {
         int var5 = 0;
-        aga[] var4;
+        BattleCreature[] var4;
         int var6;
-        aga[] var7;
-        aga[] var8;
+        BattleCreature[] var7;
+        BattleCreature[] var8;
         var6 = BachelorFridge.field_y;
         if (!this.field_a) {
-          var7 = this.field_b.field_h.field_S[0].field_b;
+          var7 = this.field_b.field_h.rosters[0].field_b;
           var8 = var7;
-          var4 = new aga[var7.length];
+          var4 = new BattleCreature[var7.length];
           for (var5 = 0; var8.length > var5; var5++) {
             if (var8[var5] != null) {
-              var4[var5] = new aga(var8[var5], this.field_d, 0, var5);
+              var4[var5] = new BattleCreature(var8[var5], this.field_d, 0, var5);
             }
           }
           this.field_d.a(param0 ^ 1, var4, 0);
           this.field_d.i((byte) -99);
           this.field_d.i(param0 ^ 0);
-          hla.field_t.position = 0;
-          this.field_d.b(hla.field_t, (byte) 123);
-          hla.field_t.position = 0;
-          dj.field_c.field_h.a(-2, hla.field_t);
+          RaiseEvent.field_t.position = 0;
+          this.field_d.b(RaiseEvent.field_t, (byte) 123);
+          RaiseEvent.field_t.position = 0;
+          dj.field_c.field_h.a(-2, RaiseEvent.field_t);
           this.c(15467);
         } else {
           sja.field_fb.writeCipheredByte(68, (byte) 108);
@@ -73,7 +73,7 @@ final class fs {
         var3 = this.field_d.field_N ? 1 : 0;
         var4 = this.field_d.field_M;
         var5 = this.field_d.field_Q;
-        var6 = ju.field_q[this.field_d.field_G];
+        var6 = DiveBomberEvent.field_q[this.field_d.field_G];
         if (this.field_b.field_h.field_A == 0) {
           stackIn_9_0 = (var2 != 0) ? 1 : 0;
         } else {
@@ -95,7 +95,7 @@ final class fs {
         if (param0 != 15467) {
           this.d(-52);
         }
-        this.field_b.field_Y = new sfa[7];
+        this.field_b.field_Y = new CreatureOrder[7];
         this.field_b.field_u = var6;
         this.field_b.field_p = var6 - 500;
         if (!this.field_b.field_h.field_N) {
@@ -163,7 +163,7 @@ final class fs {
         }
     }
 
-    final void a(boolean param0, sfa[] param1, int param2) {
+    final void a(boolean param0, CreatureOrder[] param1, int param2) {
         int fieldTemp$1 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -190,12 +190,12 @@ final class fs {
           } else {
             this.field_d.a(param1, 0, (byte) -31);
             this.c(15467);
-            hla.field_t.position = 0;
-            this.field_d.a(hla.field_t, -1);
+            RaiseEvent.field_t.position = 0;
+            this.field_d.a(RaiseEvent.field_t, -1);
             this.field_d.h((byte) -111);
-            var4_int = hla.field_t.position;
-            hla.field_t.position = 0;
-            this.field_b.field_h.a(var4_int, true, hla.field_t);
+            var4_int = RaiseEvent.field_t.position;
+            RaiseEvent.field_t.position = 0;
+            this.field_b.field_h.a(var4_int, true, RaiseEvent.field_t);
             this.field_b.b((byte) 31);
             this.field_b.field_cb = false;
           }
@@ -218,17 +218,17 @@ final class fs {
     }
 
     fs(gj param0, boolean param1) {
-        op var3 = null;
+        BattleState var3 = null;
         try {
           this.field_b = param0;
           this.field_a = param1 ? true : false;
           if (!this.field_a) {
             var3 = this.field_b.field_h;
-            this.field_d = new op(var3.field_G, var3.field_E, var3.field_k, var3.field_o, var3.field_m, var3.field_y);
-            hla.field_t.position = 0;
-            this.field_b.field_h.b(hla.field_t, (byte) 126);
-            hla.field_t.position = 0;
-            this.field_d.a(-2, hla.field_t);
+            this.field_d = new BattleState(var3.field_G, var3.field_E, var3.field_k, var3.field_o, var3.field_m, var3.field_y);
+            RaiseEvent.field_t.position = 0;
+            this.field_b.field_h.b(RaiseEvent.field_t, (byte) 126);
+            RaiseEvent.field_t.position = 0;
+            this.field_d.a(-2, RaiseEvent.field_t);
           }
           this.field_c = true;
         } catch (RuntimeException runtimeException) {

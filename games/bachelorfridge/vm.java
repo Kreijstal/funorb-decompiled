@@ -214,7 +214,7 @@ abstract class vm {
                         }
                         stackIn_41_0Lifetime1 = var17 + (var16 << 4);
                         var18 = stackIn_41_0Lifetime1;
-                        ci.field_q[var18] = var8;
+                        PizzaPartySpecial.field_q[var18] = var8;
                         wa.field_m[var16] = 1 + var17;
                         if (param3.field_n > 0 &&
                           param3.field_d != null) {

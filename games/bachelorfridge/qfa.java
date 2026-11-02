@@ -85,14 +85,14 @@ final class qfa extends cga {
           if (2 == gk.field_d) {
             qq.field_k.field_Z = ru.field_l;
           } else {
-            qq.field_k.field_Z = ro.field_k;
+            qq.field_k.field_Z = ClearTileFlagEffect.field_k;
           }
           var9_int = 495;
           var10 = 5;
           aja.field_p.a(param4, 31407, -10 + var9_int, 5, var10);
-          jba.field_A.a(param4, 31407, aja.field_p.field_sb - ts.field_r.field_sb, 0, 0);
+          HailAnimation.field_A.a(param4, 31407, aja.field_p.field_sb - DisableSpecial.field_r.field_sb, 0, 0);
           var10 = var10 + (param4 + param0);
-          ts.field_r.a(param4, 31407, ts.field_r.field_sb, jba.field_A.field_sb, 0);
+          DisableSpecial.field_r.a(param4, 31407, DisableSpecial.field_r.field_sb, HailAnimation.field_A.field_sb, 0);
           ub.field_k.a(param1, 31407, ub.field_k.e(-1), 5, var10);
           var11 = qq.field_k.e(-1);
           qq.field_k.a(param1, 31407, var11, -var11 + (var9_int - 5), var10);
@@ -219,7 +219,7 @@ final class qfa extends cga {
           if (param0 != 14) {
             return null;
           }
-          stackIn_30_0 = lga.a(true, new String[]{param1}, vfa.field_r);
+          stackIn_30_0 = lga.a(true, new String[]{param1}, ClamsSpecial.field_r);
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -284,7 +284,7 @@ final class qfa extends cga {
             return;
           }
           if (var2 != 1) {
-            cv.a(1, "A1: " + nia.d((byte) -108), (Throwable) null);
+            SpiltMilkEvent.a(1, "A1: " + nia.d((byte) -108), (Throwable) null);
             vc.a((byte) -115);
             return;
           }
@@ -323,7 +323,7 @@ final class qfa extends cga {
             field_t = (String) null;
           }
           var1 = sja.field_fb;
-          while (tg.c(-43)) {
+          while (SuperSpeedSpecial.c(-43)) {
             var1.writeCipheredByte(8, (byte) 119);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

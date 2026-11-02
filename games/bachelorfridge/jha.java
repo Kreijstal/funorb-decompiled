@@ -74,7 +74,7 @@ final class jha extends kj {
         if (param0 != -31068) {
           return (sna) null;
         }
-        return mt.c(0);
+        return ScavengerSpecial.c(0);
     }
 
     final void a(int param0, boolean param1, int param2) {

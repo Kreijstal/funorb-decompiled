@@ -41,7 +41,7 @@ final class dj {
         RuntimeException decompiledCaughtException = null;
         var4 = BachelorFridge.field_y;
         try {
-          if (!sl.a(param0, (byte) 125, param2)) {
+          if (!DamageTileEffect.a(param0, (byte) 125, param2)) {
             return false;
           }
           for (var3_int = 0; var3_int < param2.length(); var3_int++) {

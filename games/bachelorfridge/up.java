@@ -25,16 +25,16 @@ final class up {
         String var7 = null;
         var4 = BachelorFridge.field_y;
         nu.field_e.draw(0, 0);
-        nna.field_v.draw(77, 44);
-        jha.field_g.a(eha.field_p, 320, 68, 16776960, -1);
-        hfa.field_z.a(eha.field_p, 320, 68, 65793, -1);
+        ShieldAnimation.field_v.draw(77, 44);
+        jha.field_g.a(InsanoSauceSpecial.field_p, 320, 68, 16776960, -1);
+        hfa.field_z.a(InsanoSauceSpecial.field_p, 320, 68, 65793, -1);
         var2 = 0;
         while (var2 < 8) {
           var5 = this.field_b[var2];
           if (var5 != null ||
             var4 != 0) {
             if (0 != (1 << var2 & this.field_e)) {
-              tp.field_x.draw(ka.field_a[var2][0] + 2, ka.field_a[var2][1] + 2);
+              StickyAnimation.field_x.draw(ka.field_a[var2][0] + 2, ka.field_a[var2][1] + 2);
             }
             if (4 > var2) {
               if (var5 != null) {
@@ -57,11 +57,11 @@ final class up {
           break;
         }
         var6 = lga.a(true, new String[]{Integer.toString(this.field_c), Integer.toString(this.field_f.field_h.field_k)}, vu.field_l);
-        hfa.field_z.drawText(vk.field_r, 105, 380, 65793, -1);
-        jha.field_g.drawText(vk.field_r, 105, 380, 16777215, -1);
+        hfa.field_z.drawText(MartyrEvent.field_r, 105, 380, 65793, -1);
+        jha.field_g.drawText(MartyrEvent.field_r, 105, 380, 16777215, -1);
         hfa.field_z.drawText(var6, 180, 380, param0, -1);
         jha.field_g.drawText(var6, 180, 380, 16776960, -1);
-        pw.field_y.draw(490, 430);
+        SnowAnimation.field_y.draw(490, 430);
         if (this.field_d) {
           stackIn_17_0 = wda.field_g;
         } else {
@@ -239,7 +239,7 @@ final class up {
                         this.field_f.a(var3_ref_ad, (byte) -52);
                       }
                       if (this.field_c == 0 ||
-                        !wf.field_x) {
+                        !MartyrAnimation.field_x) {
                         this.field_g.field_u = false;
                         if (var6 != 0) {
                           this.field_g.field_u = true;
@@ -304,7 +304,7 @@ final class up {
                         }
                         var10 = var2;
                         var11 = var9;
-                        dk.$cfr$intArgs$a$e46325ef0b7e(stackIn_63_0, stackIn_63_1, var11);
+                        IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_63_0, stackIn_63_1, var11);
                         this.field_f.a(this.field_e, var10, false);
                         System.gc();
                         this.field_d = true;
@@ -323,7 +323,7 @@ final class up {
                 }
                 this.field_f.a(var3_ref_ad, (byte) -52);
                 if (this.field_c == 0 ||
-                  !wf.field_x) {
+                  !MartyrAnimation.field_x) {
                   this.field_g.field_u = false;
                   if (var6 != 0) {
                     this.field_g.field_u = true;
@@ -388,7 +388,7 @@ final class up {
                   }
                   var10Lifetime4 = var2Lifetime4;
                   var11Lifetime4 = var9Lifetime4;
-                  dk.$cfr$intArgs$a$e46325ef0b7e(stackIn_96_0, stackIn_96_1, var11Lifetime4);
+                  IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_96_0, stackIn_96_1, var11Lifetime4);
                   this.field_f.a(this.field_e, var10Lifetime4, false);
                   System.gc();
                   this.field_d = true;
@@ -446,7 +446,7 @@ final class up {
               stackIn_208_1Lifetime1 = 109;
               var10Lifetime1 = var2Lifetime1;
               var11Lifetime1 = var9Lifetime1;
-              dk.$cfr$intArgs$a$e46325ef0b7e(stackIn_208_0Lifetime1, stackIn_208_1Lifetime1, var11Lifetime1);
+              IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_208_0Lifetime1, stackIn_208_1Lifetime1, var11Lifetime1);
               this.field_f.a(this.field_e, var10Lifetime1, false);
               System.gc();
               this.field_d = true;
@@ -486,7 +486,7 @@ final class up {
                 }
                 var10Lifetime1Lifetime1 = var2Lifetime1Lifetime1;
                 var11Lifetime1Lifetime1 = var9Lifetime1Lifetime1;
-                dk.$cfr$intArgs$a$e46325ef0b7e(stackIn_157_0, stackIn_157_1, var11Lifetime1Lifetime1);
+                IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_157_0, stackIn_157_1, var11Lifetime1Lifetime1);
                 this.field_f.a(this.field_e, var10Lifetime1Lifetime1, false);
                 System.gc();
                 this.field_d = true;
@@ -499,7 +499,7 @@ final class up {
           lf.field_c = 0;
           return;
         }
-        if (wf.field_x) {
+        if (MartyrAnimation.field_x) {
           this.field_g.field_u = true;
           this.field_g.a(19842, true);
           if (!this.field_d && this.field_g.field_R == 1 && (0 < this.field_c &&
@@ -556,7 +556,7 @@ final class up {
             }
             var10Lifetime2Lifetime2 = var2Lifetime2;
             var11Lifetime2Lifetime2 = var9Lifetime2;
-            dk.$cfr$intArgs$a$e46325ef0b7e(stackIn_183_0, stackIn_183_1, var11Lifetime2Lifetime2);
+            IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_183_0, stackIn_183_1, var11Lifetime2Lifetime2);
             this.field_f.a(this.field_e, var10Lifetime2Lifetime2, false);
             System.gc();
             this.field_d = true;
@@ -636,7 +636,7 @@ final class up {
           }
           var10Lifetime3Lifetime2 = var2Lifetime3;
           var11Lifetime3Lifetime2 = var9Lifetime3;
-          dk.$cfr$intArgs$a$e46325ef0b7e(stackIn_130_0, stackIn_130_1, var11Lifetime3Lifetime2);
+          IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_130_0, stackIn_130_1, var11Lifetime3Lifetime2);
           this.field_f.a(this.field_e, var10Lifetime3Lifetime2, false);
           System.gc();
           this.field_d = true;
@@ -647,7 +647,7 @@ final class up {
         return;
     }
 
-    up(gj param0, sna param1, rk[] param2) {
+    up(gj param0, sna param1, CreatureProfile[] param2) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -659,11 +659,11 @@ final class up {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        rk[] var5_ref_rk__ = null;
+        CreatureProfile[] var5_ref_rk__ = null;
         int var5 = 0;
         int var6 = 0;
-        rk var7 = null;
-        aga var8 = null;
+        CreatureProfile var7 = null;
+        BattleCreature var8 = null;
         ad var9 = null;
         int var10 = 0;
         var10 = BachelorFridge.field_y;
@@ -679,7 +679,7 @@ final class up {
             var7 = var5_ref_rk__[var6];
             if (var10 == 0) {
               if (var7 != null) {
-                var8 = new aga(var7, this.field_f.field_h, this.field_f.field_n, -1);
+                var8 = new BattleCreature(var7, this.field_f.field_h, this.field_f.field_n, -1);
                 var9 = new ad(var8);
                 var9.b(false);
                 incrementValue$0 = var4_int;

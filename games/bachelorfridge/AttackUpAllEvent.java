@@ -1,0 +1,126 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AttackUpAllEvent extends SpecialEvent {
+    static int field_s;
+    static String field_t;
+    static String field_r;
+    static String field_q;
+
+    AttackUpAllEvent(int param0, CreatureRef param1) {
+        super(param0, param1);
+    }
+
+    AttackUpAllEvent(PacketBuffer param0) {
+        super(param0);
+        int var2_int = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        try {
+          this.moveId = param0.readUnsignedShort((byte) 100);
+          this.effects = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
+          while (true) {
+            var2_int--;
+            if (var2_int < 0) {
+              return;
+            }
+            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("kk.<init>(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    final static void e(byte param0) {
+        int var1_int = 0;
+        int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        var2 = BachelorFridge.field_y;
+        try {
+          if (param0 <= 102) {
+            AttackUpAllEvent.d(26);
+          }
+          for (var1_int = 0; 9 > var1_int; var1_int++) {
+            vma.a((byte) -103, var1_int);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pe.wrapException((Throwable) ((Object) var1), "kk.B(" + param0 + ')');
+        }
+    }
+
+    final void a(BattleState param0, int param1) {
+        try {
+          this.a(param0, (byte) -2);
+          int var3_int = 65 / ((12 - param1) / 35);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static boolean d(byte param0) {
+        if (param0 < 72) {
+          return true;
+        }
+        return tc.a(24215, nia.d(-31768));
+    }
+
+    public static void d(int param0) {
+        field_t = null;
+        field_q = null;
+        field_r = null;
+        if (param0 != 19691) {
+          AttackUpAllEvent.e((byte) 4);
+        }
+    }
+
+    final AnimationNode a(int param0, gj param1) {
+        RuntimeException var3 = null;
+        AttackUpAllAnimation stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 5) {
+            field_q = (String) null;
+          }
+          stackIn_3_0 = new AttackUpAllAnimation(param1, this);
+          return (AnimationNode) ((Object) stackIn_3_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("kk.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_s = 0;
+        field_t = "Show private chat from my friends and opponents";
+        field_r = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find suitable opponents in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";
+        field_q = "These are all collectible powerups. Moving on to one of these squares will pick up the powerup, and add a temporary bonus to your stats! Hearts will boost your Stamina, Speed arrows will boost your Speed, Boxing Gloves will boost your Fisticuffs, and Up arrows will boost your Flingstuff.";
+    }
+}

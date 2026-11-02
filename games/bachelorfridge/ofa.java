@@ -58,7 +58,7 @@ final class ofa extends sna {
         sna var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new sna(0L, param1, ci.field_p.toUpperCase());
+          var17 = new sna(0L, param1, PizzaPartySpecial.field_p.toUpperCase());
           var17.field_N = 1;
           this.field_vb = new sna(0L, param2);
           var8 = new sna(0L, param3);

@@ -9,7 +9,7 @@ final class lr extends IntrusiveNode {
     int field_g;
     boolean field_i;
     private int[][][] field_p;
-    wia[][] field_o;
+    BoardTile[][] field_o;
     private int field_j;
     int field_m;
     private int field_l;
@@ -28,10 +28,10 @@ final class lr extends IntrusiveNode {
         if (!param6 && (FullscreenFocusCanvas.field_b != SoftwareRasterizer.field_i ||
           kq.field_i != SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_c == hga.field_U.field_f &&
           SoftwareRasterizer.field_i == hga.field_U.field_b)) {
-          if (pw.field_w != null) {
+          if (SnowAnimation.field_w != null) {
             pv.a(false, true);
           } else {
-            if (null == rv.field_n) {
+            if (null == EffectBatch.field_n) {
               kf.a((byte) -6);
             } else {
               pv.a(true, true);
@@ -56,7 +56,7 @@ final class lr extends IntrusiveNode {
           mh.a(param0, param6, param9, param4, (byte) -51);
         }
         if (w.field_e &&
-          pw.field_w.field_Pb <= pw.field_w.field_Rb) {
+          SnowAnimation.field_w.field_Pb <= SnowAnimation.field_w.field_Rb) {
           qba.field_m.field_wb.field_Z = oia.field_i;
           tv.field_o.field_u = false;
           MouseInputHandler.a((byte) -126, qba.field_m.field_vb);
@@ -65,8 +65,8 @@ final class lr extends IntrusiveNode {
           tv.field_o.field_u = true;
           vt.a(qba.field_m, param4, 0, param8, param1);
         }
-        sma.a(param7, param8, -6, param1, param2, param4, param3);
-        vt.a(ak.field_q, param4, 0, param8, param1);
+        GasCloudAnimation.a(param7, param8, -6, param1, param2, param4, param3);
+        vt.a(SnowEvent.field_q, param4, 0, param8, param1);
         qf.field_v = qf.field_v + 1;
     }
 
@@ -226,10 +226,10 @@ final class lr extends IntrusiveNode {
           }
           this.field_f = param0.readUnsignedByte(16711935);
           this.field_q = param0.readUnsignedByte(16711935);
-          this.field_o = new wia[this.field_f][this.field_q];
+          this.field_o = new BoardTile[this.field_f][this.field_q];
           for (var2_int = 0; var2_int < this.field_f; var2_int++) {
             for (var3 = 0; this.field_q > var3; var3++) {
-              this.field_o[var2_int][var3] = new wia(param0.readUnsignedByte(16711935));
+              this.field_o[var2_int][var3] = new BoardTile(param0.readUnsignedByte(16711935));
               this.field_o[var2_int][var3].field_a = param0.b(true);
             }
           }

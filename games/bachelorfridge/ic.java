@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ic extends pp {
+final class ic extends EventEffect {
     static jd field_i;
 
     final void a(PacketBuffer param0, byte param1) {
@@ -12,7 +12,7 @@ final class ic extends pp {
         }
     }
 
-    final void a(aga param0, op param1, int param2) {
+    final void a(BattleCreature param0, BattleState param1, int param2) {
         try {
           param1.field_R = false;
           if (param2 != 12) {
@@ -32,11 +32,11 @@ final class ic extends pp {
           ua.field_b) {
           mn.field_l.a(-47);
         }
-        if (!bf.field_h[wca.field_n].field_i) {
+        if (!bf.field_h[CreatureType.field_n].field_i) {
           ImageProducerRasterBuffer.field_h.field_c.a(19842, true);
           if (ImageProducerRasterBuffer.field_h.field_c.field_R == 1) {
-            fla.b(23621);
-            if (wca.field_n == 10) {
+            ShieldSpecial.b(23621);
+            if (CreatureType.field_n == 10) {
               dj.field_c.field_h.a(true, 0);
               dj.field_c.e(-114);
             }

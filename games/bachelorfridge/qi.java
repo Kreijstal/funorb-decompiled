@@ -5,10 +5,10 @@ final class qi {
     static ue field_b;
     static String field_a;
 
-    final static nq a(PacketBuffer param0, byte param1) {
+    final static CreatureRef a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        nq stackIn_6_0 = null;
+        CreatureRef stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -21,7 +21,7 @@ final class qi {
           if (255 == var2_int) {
             return null;
           }
-          stackIn_6_0 = new nq(var2_int >> 5, var2_int & 31);
+          stackIn_6_0 = new CreatureRef(var2_int >> 5, var2_int & 31);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class qi {
           return;
         }
         if (0 == dj.field_c.field_h.field_h) {
-          lr.field_k[10] = nt.field_w;
+          lr.field_k[10] = SuperSpeedAllAnimation.field_w;
           if (param0 < 27) {
             field_b = (ue) null;
             return;

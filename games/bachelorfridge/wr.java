@@ -111,8 +111,8 @@ final class wr extends k {
           if (qi.field_b != null) {
             qi.field_b.field_J.a(args, (byte) -52);
           }
-          if (vk.field_q != null) {
-            vk.field_q.field_E.a(args, (byte) -35);
+          if (MartyrEvent.field_q != null) {
+            MartyrEvent.field_q.field_E.a(args, (byte) -35);
           }
           if (param1 == -38) {
             return;

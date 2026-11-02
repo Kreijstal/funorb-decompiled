@@ -74,21 +74,21 @@ final class nv extends sna {
           if (this.field_Hb[param1] == null) {
             if (this.field_yb[param1] == -1) {
               IntrusiveNodeHashTable.a(121);
-              ki.g(-26);
+              OhNoAnimation.g(-26);
             } else {
               var5 = 32768 | this.field_yb[param1];
               var6 = gk.field_d;
               if (0 == var6 &&
-                null != pw.field_w) {
+                null != SnowAnimation.field_w) {
                 var6 = 1;
               }
               if (af.a(var6, 26291) == 2) {
-                fk.a(113, var6, param0, 1);
+                HomingMissileEvent.a(113, var6, param0, 1);
               }
               var8 = (String) null;
-              no.a(var5, gk.field_d, 110, (String) null, bd.field_k, param2);
+              PetAttackSpecial.a(var5, gk.field_d, 110, (String) null, bd.field_k, param2);
               ob.a(IntrusiveDeque.field_a, (byte) -47, gk.field_d, var5, bd.field_k);
-              ki.g(-26);
+              OhNoAnimation.g(-26);
               vca.c(true);
             }
           } else {
@@ -151,14 +151,14 @@ final class nv extends sna {
           return true;
         }
         if (!lna.field_q) {
-          if (gm.field_k ||
+          if (MoveOrder.field_k ||
             gf.field_k == 9 ||
             gf.field_k == 10 ||
             11 == gf.field_k) {
             return wi.a(103, param0, param1);
           }
           if (gf.field_k == 80) {
-            if (!cn.d((byte) 23)) {
+            if (!PlaceCreatureEffect.d((byte) 23)) {
               return false;
             }
             lna.field_q = true;
@@ -166,7 +166,7 @@ final class nv extends sna {
           }
           return false;
         }
-        if (!cn.d((byte) 64)) {
+        if (!PlaceCreatureEffect.d((byte) 64)) {
           return false;
         }
         int var4 = vaa.a(param3, 1, param0) ? 1 : 0;
@@ -176,7 +176,7 @@ final class nv extends sna {
           lna.field_q = false;
         }
         if (gf.field_k == 13) {
-          bea.d(-125);
+          ClamsEvent.d(-125);
           var4 = 1;
           lna.field_q = false;
         }
@@ -313,7 +313,7 @@ final class nv extends sna {
         if (this.field_Eb == null &&
           this == da.field_d &&
           var4 != 0) {
-          ki.g(-26);
+          OhNoAnimation.g(-26);
           return true;
         }
         var5 = dla.field_j;

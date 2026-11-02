@@ -173,7 +173,7 @@ final class kn extends pn {
 
     kn(vr param0) {
         try {
-          this.field_b = bla.a(29611, "basic", "tiles_curry", param0);
+          this.field_b = RageSpecial.a(29611, "basic", "tiles_curry", param0);
           this.b((byte) -5);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "kn.<init>(" + (param0 != null ? "{...}" : "null") + ')');

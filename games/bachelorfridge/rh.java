@@ -21,7 +21,7 @@ final class rh {
             field_a = (String) null;
           }
           var3_int = 0;
-          var4 = vka.field_q;
+          var4 = GasCloudSpecial.field_q;
           while (pt.field_a.length > var3_int) {
             var5 = gn.field_l[var3_int];
             if (var5 < 0) {
@@ -30,11 +30,11 @@ final class rh {
               var6 = hka.a(true, true, pt.field_a[var3_int]);
               var4 = var4 + raa.field_J;
               var7 = sd.field_a - (var6 >> 1);
-              if (hha.a(jo.field_t + (pba.field_r << 1), param2, var6 + (hna.field_k << 1), 1, var7 - hna.field_k, var4, param0)) {
+              if (SleepAnimation.a(jo.field_t + (ShieldEvent.field_r << 1), param2, var6 + (hna.field_k << 1), 1, var7 - hna.field_k, var4, param0)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (raa.field_J + (pba.field_r << 1) + jo.field_t);
+              var4 = var4 + (raa.field_J + (ShieldEvent.field_r << 1) + jo.field_t);
             }
             var3_int++;
           }
@@ -62,7 +62,7 @@ final class rh {
           var2 = param1.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (0L != mp.a(var3, true)) {
+            if (0L != MassPoisonSpecial.a(var3, true)) {
               return;
             }
           }
@@ -100,17 +100,17 @@ final class rh {
         gs var10 = null;
         var7 = BachelorFridge.field_y;
         try {
-          if (saa.field_b > eb.field_t) {
-            eb.field_t = eb.field_t + 1;
+          if (saa.field_b > FishRainSpecial.field_t) {
+            FishRainSpecial.field_t = FishRainSpecial.field_t + 1;
           }
           if (hga.field_U.field_f != pda.field_p) {
             fs.field_f = fs.field_f + (hga.field_U.field_f - pda.field_p);
             pda.field_p = hga.field_U.field_f;
           }
-          if (eb.field_t <= 0) {
+          if (FishRainSpecial.field_t <= 0) {
             return;
           }
-          iv.b(false);
+          DamageEffect.b(false);
           if (param1 < 45) {
             var8 = (IntrusiveDeque) null;
             rh.a(true, (IntrusiveDeque) null);
@@ -135,11 +135,11 @@ final class rh {
             }
           }
           if (FullscreenFocusCanvas.field_a.field_R != 0) {
-            wt.field_n = new uq(FullscreenFocusCanvas.field_a.field_D, FullscreenFocusCanvas.field_a.field_M, FullscreenFocusCanvas.field_a.field_sb, FullscreenFocusCanvas.field_a.field_p, param3, qaa.field_d, mda.field_c, sm.field_s, qs.field_m, nr.field_v, dla.field_k, (String) null, 0L);
+            wt.field_n = new uq(FullscreenFocusCanvas.field_a.field_D, FullscreenFocusCanvas.field_a.field_M, FullscreenFocusCanvas.field_a.field_sb, FullscreenFocusCanvas.field_a.field_p, param3, qaa.field_d, mda.field_c, SlowAllEvent.field_s, qs.field_m, RageAnimation.field_v, dla.field_k, (String) null, 0L);
           }
           var10 = iu.a(param0, (byte) 114, gba.field_Bb, rg.field_h);
           if (var10 != null) {
-            om.a(var10, (byte) -111);
+            ShuffleAnimation.a(var10, (byte) -111);
           }
           var9 = gr.a(2);
           if (var9 != null) {
@@ -160,7 +160,7 @@ final class rh {
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
         try {
-          if (bp.e(-29919)) {
+          if (AttackUpAllAnimation.e(-29919)) {
             throw new IllegalStateException();
           }
           sja.field_fb.writeCipheredByte(80, (byte) 107);

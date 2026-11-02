@@ -76,7 +76,7 @@ final class ff extends gha {
         this.field_x = param0;
         this.field_v = param1;
         this.field_l = qia.field_a;
-        this.field_t = sl.field_k;
+        this.field_t = DamageTileEffect.field_k;
     }
 
     public ff() {

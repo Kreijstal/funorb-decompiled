@@ -34,13 +34,13 @@ final class lo {
         var5 = BachelorFridge.field_y;
         try {
           if (qaa.field_e == null) {
-            var1_int = jm.field_k.length;
+            var1_int = BoardChange.field_k.length;
             qaa.field_e = new int[1 + var1_int];
             for (var2 = 0; var2 < var1_int; var2++) {
               qaa.field_e[var2] = var2;
             }
             for (var2Lifetime1 = 0; var2Lifetime1 < -1 + var1_int; var2Lifetime1++) {
-              var3 = kla.a(var1_int - var2Lifetime1, m.field_a, -2147483648) + var2Lifetime1;
+              var3 = DiveBomberAnimation.a(var1_int - var2Lifetime1, m.field_a, -2147483648) + var2Lifetime1;
               if (~var3 != ~var2Lifetime1) {
                 var4 = qaa.field_e[var2Lifetime1];
                 qaa.field_e[var2Lifetime1] = qaa.field_e[var3];
@@ -86,7 +86,7 @@ final class lo {
         RuntimeException var1_ref = null;
         int[] var2_ref_int__ = null;
         int var2 = 0;
-        rk[] var3_ref_rk__ = null;
+        CreatureProfile[] var3_ref_rk__ = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -107,12 +107,12 @@ final class lo {
               }
               var9 = gca.a(0, ig.field_m);
               var1 = var9;
-              var2_ref_int__ = rd.a(true, ig.field_m);
+              var2_ref_int__ = SnowSpecial.a(true, ig.field_m);
               var3_ref_rk__ = tj.a((byte) 124, ig.field_m);
               mg.field_m.field_e = var9;
               mg.field_m.field_f = var2_ref_int__;
               mg.field_m.field_i = var3_ref_rk__;
-              er.e((byte) -66);
+              FlirtAnimation.e((byte) -66);
             }
             hb.field_j = false;
             return true;

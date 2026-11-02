@@ -64,7 +64,7 @@ final class wg extends aba {
           return;
         }
         lia.field_i = true;
-        gq.a(true, 19626);
+        OneAnimation.a(true, 19626);
         jv.field_j = 0;
     }
 
@@ -103,8 +103,8 @@ final class wg extends aba {
             return null;
           }
           var5 = var4;
-          if (eha.a(15, var5)) {
-            stackIn_6_0 = fd.field_E;
+          if (InsanoSauceSpecial.a(15, var5)) {
+            stackIn_6_0 = AirstrikeAnimation.field_E;
             return stackIn_6_0;
           }
           if (kaa.a(var5, (byte) 63)) {
@@ -121,11 +121,11 @@ final class wg extends aba {
             return stackIn_16_0;
           }
           if (0 >= var7.length()) {
-            stackIn_31_0 = nw.field_q;
+            stackIn_31_0 = FlySpecial.field_q;
             return stackIn_31_0;
           }
           if (vs.a(-62, var7, var5)) {
-            stackIn_21_0 = me.field_s;
+            stackIn_21_0 = BuffVendorEvent.field_s;
             return stackIn_21_0;
           }
           if (cw.a(var5, var7, true)) {
@@ -133,9 +133,9 @@ final class wg extends aba {
             return stackIn_25_0;
           }
           if (!db.a(var7, var5, false)) {
-            return fd.field_E;
+            return AirstrikeAnimation.field_E;
           }
-          stackIn_29_0 = me.field_s;
+          stackIn_29_0 = BuffVendorEvent.field_s;
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

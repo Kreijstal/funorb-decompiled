@@ -54,7 +54,7 @@ final class ina extends bi {
 
     final void l(int param0) {
         this.i(-12988);
-        j.a(rc.field_k, 40, 16760896, true, 320, false);
+        InsanoSauceEvent.a(rc.field_k, 40, 16760896, true, 320, false);
         SoftwareRasterizer.a(40, 60, 342, 335, 20, 0, 80);
         SoftwareRasterizer.a(390, 60, 210, 335, 20, 0, 80);
         SoftwareRasterizer.a(399, 69, 192, 136, 11, 0, 80);
@@ -213,8 +213,8 @@ final class ina extends bi {
         var4 = var3 + 390;
         var5 = 73;
         this.g(125, var2).draw(var4, var5);
-        var6 = pp.field_g[var2];
-        var7 = kla.field_y[var2];
+        var6 = EventEffect.field_g[var2];
+        var7 = DiveBomberAnimation.field_y[var2];
         var8 = this.a(872364388, var6);
         var8.a((210 - var8.field_n >> 1) + 390, -(var8.field_o >> 1) + 235, 160);
         if (this.b(var2, true)) {
@@ -230,7 +230,7 @@ final class ina extends bi {
         }
         var11 = 405;
         while (on.field_u[var2] > var10_int) {
-          sw.field_p.draw(var11, 330);
+          SleepSpecial.field_p.draw(var11, 330);
           var11 += 20;
           var10_int++;
         }
@@ -302,13 +302,13 @@ final class ina extends bi {
           var6 = new int[256];
           var3 = var6;
           for (var4_int = 0; var4_int < 256; var4_int++) {
-            var6[var4_int] = mp.a(var4_int << 7, dda.a(4128768, var4_int << 14));
+            var6[var4_int] = MassPoisonSpecial.a(var4_int << 7, dda.a(4128768, var4_int << 14));
           }
           var4 = new Sprite(32, 32);
           bu.a(param0 ^ 18958, var4);
           this.g(121, param1).drawQuarterSize(0, 0);
           db.b(109);
-          this.field_q[param1] = of.a(var4, var3, false, 255, 91, 8);
+          this.field_q[param1] = SlowAllSpecial.a(var4, var3, false, 255, 91, 8);
         }
         if (param0 != 18958) {
           this.field_q = (Sprite[]) null;
@@ -320,14 +320,14 @@ final class ina extends bi {
         if (!param1) {
           this.l(-29);
         }
-        return hp.a(param0, (byte) -121, sg.field_q);
+        return hp.a(param0, (byte) -121, ZombiesSpecial.field_q);
     }
 
     final void e(int param0) {
         int var2;
         this.field_p = this.a((byte) -117, mk.field_p, gd.field_m);
         if (1 == lf.field_c) {
-          ol.a(kea.field_r[0], true);
+          ol.a(AirstrikeSpecial.field_r[0], true);
           var2 = this.a((byte) -123, nfa.field_a, jc.field_r);
           if (this.field_t == var2) {
             this.field_t = -1;
@@ -372,13 +372,13 @@ final class ina extends bi {
             hp.a(var5, 0, (byte) 108, var6, de.field_A, 0);
             for (var8 = 0; var7.field_v.length > var8; var8++) {
               if (0 != var7.field_v[var8]) {
-                var7.field_v[var8] = mp.a(var7.field_v[var8], -16777216);
+                var7.field_v[var8] = MassPoisonSpecial.a(var7.field_v[var8], -16777216);
               }
             }
             this.field_l = (Sprite) ((Object) new ArgbSprite(var5 << 1, var6 << 1));
             this.field_l.b();
-            var8Lifetime1 = kla.a(768, m.field_a, -2147483648) - 384;
-            kh.a(false, var6 << 3, var5 << 4, 4096, 4096, var6 << 4, var5 << 3, var8Lifetime1, var7);
+            var8Lifetime1 = DiveBomberAnimation.a(768, m.field_a, -2147483648) - 384;
+            MassPoisonEvent.a(false, var6 << 3, var5 << 4, 4096, 4096, var6 << 4, var5 << 3, var8Lifetime1, var7);
             ((BitmapFont) ((Object) var3)).a(param1, var5, (9 * var6 >> 3) - 2, -16711423, -1);
             db.b(104);
             this.field_l.trimTransparentBorders();
@@ -418,7 +418,7 @@ final class ina extends bi {
     }
 
     final boolean c(int param0, int param1) {
-        if (!bp.e(-29919)) {
+        if (!AttackUpAllAnimation.e(-29919)) {
           return param0 != 0 ? true : false;
         }
         if (param1 != 19950) {

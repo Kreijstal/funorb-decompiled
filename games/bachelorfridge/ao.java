@@ -38,14 +38,14 @@ class ao extends kda {
             var7 = param1[1].field_n;
             param1[0].draw(param0, param4);
             param1[2].draw(param0 + param2 - var6, param4);
-            SoftwareRasterizer.saveClip(eha.field_q);
+            SoftwareRasterizer.saveClip(InsanoSauceSpecial.field_q);
             SoftwareRasterizer.intersectClip(param0 + var5_int, param4, -var6 + param0 + param2, param4 + param1[1].field_o);
             var8 = param0 + var5_int;
             var9 = -var6 + param2 + param0;
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {
               param1[1].draw(param0, param4);
             }
-            SoftwareRasterizer.restoreClip(eha.field_q);
+            SoftwareRasterizer.restoreClip(InsanoSauceSpecial.field_q);
             return;
           }
           return;

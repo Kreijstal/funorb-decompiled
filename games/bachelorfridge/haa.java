@@ -13,7 +13,7 @@ final class haa extends kj {
         this.field_g = this.field_g - 1;
         if (fieldTemp$0 < 0) {
           this.field_e.field_h.b((byte) -72, 38, this.field_d, this.field_c);
-          this.field_e.field_h.field_a[this.field_d][this.field_c].field_j = this.field_f ? 1 : 0;
+          this.field_e.field_h.tiles[this.field_d][this.field_c].field_j = this.field_f ? 1 : 0;
           return true;
         }
         if (param0 < 21) {

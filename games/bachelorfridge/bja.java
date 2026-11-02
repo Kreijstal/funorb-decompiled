@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bja extends jm {
+final class bja extends BoardChange {
     static String field_m;
     static String field_n;
     static byte[] field_o;
@@ -21,11 +21,11 @@ final class bja extends jm {
         this.field_j = 6;
     }
 
-    final void a(boolean param0, op param1) {
+    final void a(boolean param0, BattleState param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        op stackIn_3_0 = null;
+        BattleState stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -34,13 +34,13 @@ final class bja extends jm {
         RuntimeException var3 = null;
         var5 = BachelorFridge.field_y;
         try {
-          stackIn_3_0 = (op) (param1);
+          stackIn_3_0 = (BattleState) (param1);
           stackIn_4_1 = (param0);
           stackIn_3_0.field_l = stackIn_4_1;
-          for (var3_int = 0; param1.field_z > var3_int; var3_int++) {
-            for (var4 = 0; var4 < param1.field_B; var4++) {
-              if (param1.field_L.field_o[var3_int][var4].field_n == 1) {
-                param1.field_a[var3_int][var4].field_i = true;
+          for (var3_int = 0; param1.width > var3_int; var3_int++) {
+            for (var4 = 0; var4 < param1.height; var4++) {
+              if (param1.field_L.field_o[var3_int][var4].terrain == 1) {
+                param1.tiles[var3_int][var4].field_i = true;
               }
             }
           }
@@ -96,9 +96,9 @@ final class bja extends jm {
         int[] var16 = null;
         var11 = BachelorFridge.field_y;
         try {
-          var12 = ch.a(IterableNodeHashTable.field_a, param1 ^ -7, "basic", "fridge_rust");
-          var4 = wfa.a("fridge_drips", IterableNodeHashTable.field_a, "basic", (byte) -107);
-          var5 = wfa.a("fridge_muck", IterableNodeHashTable.field_a, "basic", (byte) -107);
+          var12 = BagpipeSpecial.a(IterableNodeHashTable.field_a, param1 ^ -7, "basic", "fridge_rust");
+          var4 = FullHealEvent.a("fridge_drips", IterableNodeHashTable.field_a, "basic", (byte) -107);
+          var5 = FullHealEvent.a("fridge_muck", IterableNodeHashTable.field_a, "basic", (byte) -107);
           ld.a(gla.field_j, var4, var5, var12, param2, param0, (byte) 27);
           if (param1 != 6) {
             return;

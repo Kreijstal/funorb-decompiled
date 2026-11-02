@@ -74,7 +74,7 @@ final class mr extends kj {
           return true;
         }
         if (this.field_g == 35) {
-          wf.a(44, (byte) 20);
+          MartyrAnimation.a(44, (byte) 20);
           this.field_e.a(this.field_c, false, this.field_d).field_j = 0;
           this.field_i.a(false, this.field_e.field_h);
         }

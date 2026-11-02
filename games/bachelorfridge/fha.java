@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fha extends at {
+final class fha extends AnimationNode {
     private int field_m;
     static String field_k;
     static String[][] field_j;
@@ -84,7 +84,7 @@ final class fha extends at {
           if (null != ij.field_m) {
             sja.field_fb.a(ij.field_m, 86);
           }
-          wd.a(sm.field_q, (byte) -126, sja.field_fb, ProxySocketConnector.field_g, tg.field_p);
+          wd.a(SlowAllEvent.field_q, (byte) -126, sja.field_fb, ProxySocketConnector.field_g, SuperSpeedSpecial.field_p);
           sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var5_int);
           hna.a(-1, 85);
           return;
@@ -144,11 +144,11 @@ final class fha extends at {
         try {
           var12 = cr.a(an.field_q, param7, ha.field_n, 0);
           var13 = cr.a(an.field_q, param2, ha.field_n, 0);
-          var14 = cr.a(DualLinkNode.field_l, param4, pw.field_x, 0);
+          var14 = cr.a(DualLinkNode.field_l, param4, SnowAnimation.field_x, 0);
           if (param1 < 43) {
             field_j = (String[][]) null;
           }
-          var15 = cr.a(DualLinkNode.field_l, param0, pw.field_x, 0);
+          var15 = cr.a(DualLinkNode.field_l, param0, SnowAnimation.field_x, 0);
           var8_int = cr.a(an.field_q, param6 + param7, ha.field_n, 0);
           var9 = cr.a(an.field_q, param2 - param6, ha.field_n, 0);
           for (var16 = var12; var8_int > var16; var16++) {
@@ -157,8 +157,8 @@ final class fha extends at {
           for (var16Lifetime1 = var13; var16Lifetime1 > var9; var16Lifetime1--) {
             hba.a(param3, var14, tj.field_b[var16Lifetime1], 7, var15);
           }
-          var10 = cr.a(DualLinkNode.field_l, param6 + param4, pw.field_x, 0);
-          var11 = cr.a(DualLinkNode.field_l, param0 - param6, pw.field_x, 0);
+          var10 = cr.a(DualLinkNode.field_l, param6 + param4, SnowAnimation.field_x, 0);
+          var11 = cr.a(DualLinkNode.field_l, param0 - param6, SnowAnimation.field_x, 0);
           for (var16Lifetime2 = var8_int; var9 >= var16Lifetime2; var16Lifetime2++) {
             var22 = tj.field_b[var16Lifetime2];
             hba.a(param3, var14, var22, 7, var10);

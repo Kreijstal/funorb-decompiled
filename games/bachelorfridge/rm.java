@@ -12,7 +12,7 @@ final class rm {
             field_a = -26;
           }
           IntrusiveDeque.field_d.a(param2, true);
-          nr.a(param0, param2, (byte) -48);
+          RageAnimation.a(param0, param2, (byte) -48);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "rm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

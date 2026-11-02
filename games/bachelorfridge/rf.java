@@ -23,7 +23,7 @@ final class rf {
     private int[] field_s;
 
     final static void a(int param0) {
-        vka.c((byte) 73);
+        GasCloudSpecial.c((byte) 73);
         if (param0 >= -127) {
           field_k = 18;
         }
@@ -76,7 +76,7 @@ final class rf {
         int var13Lifetime1Lifetime1;
         var16 = BachelorFridge.field_y;
         try {
-          var17 = new PacketBuffer(td.a(-97, param1));
+          var17 = new PacketBuffer(SpecialOrder.a(-97, param1));
           var4 = var17.readUnsignedByte(16711935);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -256,7 +256,7 @@ final class rf {
     rf(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_b = wc.a(param0, -31303, param0.length);
+          this.field_b = HazmatSpecial.a(param0, -31303, param0.length);
           if (this.field_b != param1) {
             throw new RuntimeException();
           }
@@ -264,7 +264,7 @@ final class rf {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_a = ln.a(param0.length, param0, 0, 8);
+            this.field_a = TeleportAnimation.a(param0.length, param0, 0, 8);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (this.field_a[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

@@ -281,7 +281,7 @@ final class fp extends tja {
               if (null != this.field_d.field_g &&
                 null != this.field_d.field_g[param2]) {
                 var28 = this.field_d.field_g[param2];
-                var29 = ln.a(var19.length - 2, var19, 0, 8);
+                var29 = TeleportAnimation.a(var19.length - 2, var19, 0, 8);
                 for (var10 = 0; var10 < 64; var10++) {
                   if (var28[var10] != var29[var10]) {
                     throw new RuntimeException();
@@ -332,7 +332,7 @@ final class fp extends tja {
             if (null != this.field_d.field_g &&
               null != this.field_d.field_g[param2]) {
               var31 = this.field_d.field_g[param2];
-              var30 = ln.a(-2 + var19.length, var19, 0, 8);
+              var30 = TeleportAnimation.a(-2 + var19.length, var19, 0, 8);
               var12 = 0;
               var10 = var12;
               while (var12 < 64) {

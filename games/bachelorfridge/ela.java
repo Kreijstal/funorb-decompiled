@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ela extends pp {
+final class ela extends EventEffect {
     private int field_k;
     static IndexedSprite[] field_j;
     static sna field_i;
@@ -21,15 +21,15 @@ final class ela extends pp {
         try {
           int var3_int = 37 % ((34 - param1) / 58);
           super.a(param0, (byte) -49);
-          er.a(this.field_h, 108, param0);
+          FlirtAnimation.a(this.target, 108, param0);
           param0.writeByte(this.field_k, 0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ela.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(aga param0, op param1, int param2) {
-        aga var4 = this.field_h.a(param2 ^ 18, param1);
+    final void a(BattleCreature param0, BattleState param1, int param2) {
+        BattleCreature var4 = this.target.a(param2 ^ 18, param1);
         if (var4 == null) {
           return;
         }
@@ -43,9 +43,9 @@ final class ela extends pp {
         }
     }
 
-    ela(nq param0, int param1) {
+    ela(CreatureRef param0, int param1) {
         try {
-          this.field_h = param0;
+          this.target = param0;
           this.field_k = param1;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ela.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends at {
+final class fl extends AnimationNode {
     static sna field_m;
     static int field_q;
     static int[] field_j;
@@ -29,16 +29,16 @@ final class fl extends at {
 
     private final void d(byte param0) {
         if (param0 == -82) {
-          if (this.field_n.field_s.field_y == 31) {
+          if (this.field_n.field_s.statusId == 31) {
             this.field_n.a(24831, 101, kna.field_g[31]);
-            wf.a(34, (byte) 126);
+            MartyrAnimation.a(34, (byte) 126);
           }
           return;
         }
         field_p = (int[]) null;
-        if (this.field_n.field_s.field_y == 31) {
+        if (this.field_n.field_s.statusId == 31) {
           this.field_n.a(24831, 101, kna.field_g[31]);
-          wf.a(34, (byte) 126);
+          MartyrAnimation.a(34, (byte) 126);
         }
     }
 

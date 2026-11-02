@@ -156,7 +156,7 @@ final class lga {
           da.field_d = param0;
           fo.field_a.field_z.d(82);
           fo.field_a.a(-1, da.field_d);
-          gm.field_k = param1 ? true : false;
+          MoveOrder.field_k = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "lga.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -381,17 +381,17 @@ final class lga {
           return;
         }
         wd.a((byte) 70, kga.field_c);
-        kga.field_c.a(-6, ju.field_r);
+        kga.field_c.a(-6, DiveBomberEvent.field_r);
         kga.field_c = null;
         if (null != qt.field_l) {
           qt.field_l.a(true);
         }
         if (param0 > 107) {
-          dca.field_y.requestFocus();
+          TBomberAnimation.field_y.requestFocus();
           return;
         }
         field_i = (String) null;
-        dca.field_y.requestFocus();
+        TBomberAnimation.field_y.requestFocus();
     }
 
     lga(jfa param0) {

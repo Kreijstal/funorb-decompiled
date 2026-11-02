@@ -21,17 +21,17 @@ final class bka implements qda {
         var2.writeByte(5, 0);
         if (param0 > -107) {
           field_h = false;
-          var2.writeByte(pw.field_w.field_Pb, 0);
-          var4 = (pw.field_w.field_Lb << 6) + pw.field_w.field_Kb;
+          var2.writeByte(SnowAnimation.field_w.field_Pb, 0);
+          var4 = (SnowAnimation.field_w.field_Lb << 6) + SnowAnimation.field_w.field_Kb;
           var2.writeByte(var4, 0);
-          var2.a(0, -77, pw.field_w.field_Eb.length, pw.field_w.field_Eb);
+          var2.a(0, -77, SnowAnimation.field_w.field_Eb.length, SnowAnimation.field_w.field_Eb);
           var2.writeLengthByte((byte) -32, -var3 + var2.position);
           return;
         }
-        var2.writeByte(pw.field_w.field_Pb, 0);
-        var4Lifetime1 = (pw.field_w.field_Lb << 6) + pw.field_w.field_Kb;
+        var2.writeByte(SnowAnimation.field_w.field_Pb, 0);
+        var4Lifetime1 = (SnowAnimation.field_w.field_Lb << 6) + SnowAnimation.field_w.field_Kb;
         var2.writeByte(var4Lifetime1, 0);
-        var2.a(0, -77, pw.field_w.field_Eb.length, pw.field_w.field_Eb);
+        var2.a(0, -77, SnowAnimation.field_w.field_Eb.length, SnowAnimation.field_w.field_Eb);
         var2.writeLengthByte((byte) -32, -var3 + var2.position);
     }
 
@@ -44,11 +44,11 @@ final class bka implements qda {
 
     final static void a(vr param0, boolean param1) {
         try {
-          to.field_b = new Sprite(param0.a((byte) 123, "dirty-floor.jpg", ""), (java.awt.Component) ((Object) dca.field_y));
+          to.field_b = new Sprite(param0.a((byte) 123, "dirty-floor.jpg", ""), (java.awt.Component) ((Object) TBomberAnimation.field_y));
           if (!param1) {
             field_h = true;
           }
-          r.field_n = new Sprite(param0.a((byte) 123, "instr_fridge_view.jpg", ""), (java.awt.Component) ((Object) dca.field_y));
+          r.field_n = new Sprite(param0.a((byte) 123, "instr_fridge_view.jpg", ""), (java.awt.Component) ((Object) TBomberAnimation.field_y));
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "bka.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

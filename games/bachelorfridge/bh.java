@@ -48,7 +48,7 @@ final class bh extends k {
         this.field_k = new short[512];
         if (0 < this.field_m) {
           for (var3 = 0; var3 < 512; var3++) {
-            this.field_k[var3] = (short)kla.a(this.field_m, var5, -2147483648);
+            this.field_k[var3] = (short)DiveBomberAnimation.a(this.field_m, var5, -2147483648);
           }
         }
     }
@@ -100,9 +100,9 @@ final class bh extends k {
           var5 = var4 >> 12;
           var6 = var5 + 1;
           for (var14 = 0; hh.field_d > var14; var14++) {
-            dca.field_v = 2147483647;
+            TBomberAnimation.field_v = 2147483647;
             um.field_a = 2147483647;
-            sma.field_C = 2147483647;
+            GasCloudAnimation.field_C = 2147483647;
             iia.field_p = 2147483647;
             var15 = 2048 + this.field_u * jq.field_k[var14];
             var16 = var15 >> 12;
@@ -194,14 +194,14 @@ final class bh extends k {
                   var11 = var10 * var10 + var9 * var9 >> 12;
                 }
                 if (var11 >= iia.field_p) {
-                  if (dca.field_v > var11) {
-                    um.field_a = sma.field_C;
-                    sma.field_C = dca.field_v;
-                    dca.field_v = var11;
+                  if (TBomberAnimation.field_v > var11) {
+                    um.field_a = GasCloudAnimation.field_C;
+                    GasCloudAnimation.field_C = TBomberAnimation.field_v;
+                    TBomberAnimation.field_v = var11;
                   } else {
-                    if (var11 < sma.field_C) {
-                      um.field_a = sma.field_C;
-                      sma.field_C = var11;
+                    if (var11 < GasCloudAnimation.field_C) {
+                      um.field_a = GasCloudAnimation.field_C;
+                      GasCloudAnimation.field_C = var11;
                     } else {
                       if (var11 < um.field_a) {
                         um.field_a = var11;
@@ -209,9 +209,9 @@ final class bh extends k {
                     }
                   }
                 } else {
-                  um.field_a = sma.field_C;
-                  sma.field_C = dca.field_v;
-                  dca.field_v = iia.field_p;
+                  um.field_a = GasCloudAnimation.field_C;
+                  GasCloudAnimation.field_C = TBomberAnimation.field_v;
+                  TBomberAnimation.field_v = iia.field_p;
                   iia.field_p = var11;
                 }
               }
@@ -220,18 +220,18 @@ final class bh extends k {
             if (var18Lifetime1 != 0) {
               if (var18Lifetime1 != 1) {
                 if (var18Lifetime1 == 3) {
-                  var3[var14] = sma.field_C;
+                  var3[var14] = GasCloudAnimation.field_C;
                 } else {
                   if (var18Lifetime1 == 4) {
                     var3[var14] = um.field_a;
                   } else {
                     if (2 == var18Lifetime1) {
-                      var3[var14] = -iia.field_p + dca.field_v;
+                      var3[var14] = -iia.field_p + TBomberAnimation.field_v;
                     }
                   }
                 }
               } else {
-                var3[var14] = dca.field_v;
+                var3[var14] = TBomberAnimation.field_v;
               }
             } else {
               var3[var14] = iia.field_p;

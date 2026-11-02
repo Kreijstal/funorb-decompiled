@@ -19,7 +19,7 @@ final class ok extends sna {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!io.a(true, param1)) {
+          if (!RaiseSpecial.a(true, param1)) {
             return false;
           }
           if (param0 == null) {
@@ -32,7 +32,7 @@ final class ok extends sna {
           if (12 <= var3_int) {
             return false;
           }
-          if (!mp.a(true, param1)) {
+          if (!MassPoisonSpecial.a(true, param1)) {
             return true;
           }
           if (var3_int != 0) {
@@ -128,67 +128,67 @@ final class ok extends sna {
           return;
         }
         if (DualLinkNode.field_l > param4) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (pw.field_x < param4) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+        if (SnowAnimation.field_x < param4) {
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param5 < DualLinkNode.field_l) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (param5 > pw.field_x) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+        if (param5 > SnowAnimation.field_x) {
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param6 < DualLinkNode.field_l) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (pw.field_x < param6) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+        if (SnowAnimation.field_x < param6) {
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param8 < DualLinkNode.field_l) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
-        if (pw.field_x < param8) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+        if (SnowAnimation.field_x < param8) {
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (an.field_q > param0) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param0 > ha.field_n) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (an.field_q > param3) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (ha.field_n < param3) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param7 < an.field_q) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (param7 > ha.field_n) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (an.field_q > param2) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         if (ha.field_n < param2) {
-          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
+          ResetEvent.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
         oda.a(param2, param5, param7, param0, 123, param4, param6, param3, param9, param8);

@@ -92,7 +92,7 @@ final class dl extends jla {
           this.p(-74);
         }
         var2 = fr.field_o.length;
-        var3 = pu.field_j.field_h.field_d;
+        var3 = pu.field_j.field_h.playerCount;
         var4 = 40;
         var5 = 110;
         var6 = 14;
@@ -222,14 +222,14 @@ final class dl extends jla {
             var2 = kw.field_n;
           }
         }
-        j.a(var2, 40, 16760896, true, 320, false);
+        InsanoSauceEvent.a(var2, 40, 16760896, true, 320, false);
         this.p(1);
         if (null != rga.field_a) {
           this.o(0);
         }
         this.c(true);
         if (!um.a(true)) {
-          kla.b(true);
+          DiveBomberAnimation.b(true);
         }
     }
 
@@ -252,7 +252,7 @@ final class dl extends jla {
         var7 = BachelorFridge.field_y;
         var3 = 0;
         var4 = -1;
-        var5 = pu.field_j.field_h.field_d;
+        var5 = pu.field_j.field_h.playerCount;
         if (param0 <= 35) {
           return -83;
         }

@@ -10,7 +10,7 @@ final class fma extends pu {
         RuntimeException decompiledCaughtException = null;
         try {
           BufferedSocket.field_b[param0] = param2;
-          eg.field_p[param0] = vfa.a(19341, param0);
+          LevitateSpecial.field_p[param0] = ClamsSpecial.a(19341, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

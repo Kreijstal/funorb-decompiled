@@ -134,21 +134,21 @@ final class el extends aba {
         if (param2 > param4) {
           if (param7 <= param2) {
             if (param7 <= param4) {
-              lca.a(param2, param6, (byte) -79, SoftwareRasterizer.field_e, param7, param4, param3, param5, param1);
+              DisableEvent.a(param2, param6, (byte) -79, SoftwareRasterizer.field_e, param7, param4, param3, param5, param1);
             } else {
-              lca.a(param2, param5, (byte) -99, SoftwareRasterizer.field_e, param4, param7, param3, param6, param1);
+              DisableEvent.a(param2, param5, (byte) -99, SoftwareRasterizer.field_e, param4, param7, param3, param6, param1);
             }
           } else {
-            lca.a(param7, param5, (byte) -73, SoftwareRasterizer.field_e, param4, param2, param3, param1, param6);
+            DisableEvent.a(param7, param5, (byte) -73, SoftwareRasterizer.field_e, param4, param2, param3, param1, param6);
           }
         } else {
           if (param7 > param4) {
-            lca.a(param7, param1, (byte) -115, SoftwareRasterizer.field_e, param2, param4, param3, param5, param6);
+            DisableEvent.a(param7, param1, (byte) -115, SoftwareRasterizer.field_e, param2, param4, param3, param5, param6);
           } else {
             if (param7 > param2) {
-              lca.a(param4, param1, (byte) -93, SoftwareRasterizer.field_e, param2, param7, param3, param6, param5);
+              DisableEvent.a(param4, param1, (byte) -93, SoftwareRasterizer.field_e, param2, param7, param3, param6, param5);
             } else {
-              lca.a(param4, param6, (byte) -105, SoftwareRasterizer.field_e, param7, param2, param3, param1, param5);
+              DisableEvent.a(param4, param6, (byte) -105, SoftwareRasterizer.field_e, param7, param2, param3, param1, param5);
             }
           }
         }
@@ -170,7 +170,7 @@ final class el extends aba {
         }
         int var1 = te.d((byte) 89);
         int var2 = nka.a((byte) -74);
-        raa.field_I.a((ge.field_I << 1) + var2, 9, -wo.field_j + rs.field_a, vka.field_q - ge.field_I, (wo.field_j << 1) + var1);
+        raa.field_I.a((ge.field_I << 1) + var2, 9, -wo.field_j + rs.field_a, GasCloudSpecial.field_q - ge.field_I, (wo.field_j << 1) + var1);
         w.a(true);
     }
 

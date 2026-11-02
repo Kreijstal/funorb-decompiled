@@ -53,7 +53,7 @@ final class pd {
           this.field_g = param4;
           this.field_f = param3;
           var8 = new Random((long)param0);
-          kla.a(10, var8, -2147483648);
+          DiveBomberAnimation.a(10, var8, -2147483648);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }

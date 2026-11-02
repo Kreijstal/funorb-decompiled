@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ks extends pp {
+final class ks extends EventEffect {
     static int field_i;
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          er.a(this.field_h, 121, param0);
+          FlirtAnimation.a(this.target, 121, param0);
           int var3_int = 30 / ((34 - param1) / 58);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ks.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(aga param0, op param1, int param2) {
-        aga var4 = null;
+    final void a(BattleCreature param0, BattleState param1, int param2) {
+        BattleCreature var4 = null;
         if (param2 != 12) {
           return;
         }
         try {
-          var4 = this.field_h.a(123, param1);
+          var4 = this.target.a(123, param1);
           var4.b((byte) 117, 0);
           var4.d(param2 - 123);
         } catch (RuntimeException runtimeException) {
@@ -27,9 +27,9 @@ final class ks extends pp {
         }
     }
 
-    ks(nq param0) {
+    ks(CreatureRef param0) {
         try {
-          this.field_h = param0;
+          this.target = param0;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ks.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

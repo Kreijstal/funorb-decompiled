@@ -36,7 +36,7 @@ final class wa extends lw {
             stackIn_4_0 = null;
             return (AntialiasedBitmapFont) (stackIn_4_0);
           }
-          var2 = new AntialiasedBitmapFont(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
+          var2 = new AntialiasedBitmapFont(param1, fl.field_j, AirstrikeAnimation.field_D, lq.field_A, InsanoSauceSpecial.field_s, hk.field_f, BananarangAnimation.field_P);
           al.b(-18073);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -70,7 +70,7 @@ final class wa extends lw {
         this.b(1);
         if (this.c((byte) 95)) {
           this.b((byte) 112);
-          fla.b(23621);
+          ShieldSpecial.b(23621);
           return;
         }
         if (param1 != 73) {

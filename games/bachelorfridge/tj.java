@@ -46,21 +46,21 @@ final class tj {
         }
     }
 
-    final static rk[] a(byte param0, PacketBuffer param1) {
+    final static CreatureProfile[] a(byte param0, PacketBuffer param1) {
         int var3 = 0;
-        rk[] var2 = null;
+        CreatureProfile[] var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
         PacketBuffer var5 = null;
-        rk[] var6 = null;
-        rk[] stackIn_7_0 = null;
+        CreatureProfile[] var6 = null;
+        CreatureProfile[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = BachelorFridge.field_y;
         try {
-          var6 = new rk[50];
+          var6 = new CreatureProfile[50];
           var2 = var6;
           for (var3 = 0; var3 < 50; var3++) {
             var6[var3] = gka.a(param1, 255);

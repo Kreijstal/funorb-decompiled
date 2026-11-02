@@ -66,8 +66,8 @@ final class qn extends kj {
           if (param4 <= 28) {
             qn.c((byte) -62);
           }
-          var8 = cr.a(DualLinkNode.field_l, param0, pw.field_x, 0);
-          var9 = cr.a(DualLinkNode.field_l, param1, pw.field_x, 0);
+          var8 = cr.a(DualLinkNode.field_l, param0, SnowAnimation.field_x, 0);
+          var9 = cr.a(DualLinkNode.field_l, param1, SnowAnimation.field_x, 0);
           for (var10 = var6_int; var10 <= var7; var10++) {
             hba.a(param3, var8, tj.field_b[var10], 7, var9);
           }
@@ -80,7 +80,7 @@ final class qn extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        rla.field_k.draw(param2 + 25, 10 + param0);
+        SetFriendlyEffect.field_k.draw(param2 + 25, 10 + param0);
         if (param1 != 0) {
           this.field_f = true;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg extends at {
+final class mg extends AnimationNode {
     private int field_n;
     static sna field_l;
     static mu field_m;
@@ -45,7 +45,7 @@ final class mg extends at {
           return (PcmSample) null;
         }
         if (param1 != -1) {
-          var2 = jga.field_y[param1];
+          var2 = PizzaPartyAnimation.field_y[param1];
           return var2;
         }
         return null;

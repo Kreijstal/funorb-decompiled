@@ -1,0 +1,187 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class SpecialEvent extends CreatureEvent {
+    boolean field_p;
+    static al[][] field_n;
+    IntrusiveDeque effects;
+
+    public static void c(int param0) {
+        if (param0 == 15) {
+          field_n = (al[][]) null;
+          return;
+        }
+        vr var2 = (vr) null;
+        SpecialEvent.a(-63, (vr) null, (vr) null);
+        field_n = (al[][]) null;
+    }
+
+    private final void a(BattleCreature param0, int param1) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!param0.a(this.moveId, 9) &&
+            param0.a(119, 9)) {
+            param0.d(119, (byte) -81);
+          } else {
+            param0.d(this.moveId, (byte) -85);
+          }
+          if (param1 == 119) {
+            return;
+          }
+          field_n = (al[][]) null;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("bca.J(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    SpecialEvent(PacketBuffer param0) {
+        super(4, param0.readUnsignedShort((byte) 76), param0);
+    }
+
+    final void a(BattleState param0, boolean param1) {
+        if (this instanceof ew) {
+          return;
+        }
+        if (param1) {
+          return;
+        }
+        try {
+          this.a(this.creature.a(109, param0), 119);
+          this.a(param0, -81);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bca.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    SpecialEvent(int param0, CreatureRef param1) {
+        super(4, param0, param1);
+        try {
+          this.effects = new IntrusiveDeque();
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    void a(BattleState param0, int param1) {
+        BattleCreature var3 = null;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = 26 % ((param1 - 12) / 35);
+          var3 = this.creature.a(50, param0);
+          if (this.moveId == 57) {
+            param0.a(-25, var3, 15);
+            return;
+          }
+          if (this.moveId != 62 &&
+            this.moveId != 63) {
+            return;
+          }
+          param0.a(-25, var3, 14);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("bca.E(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static void a(int param0, vr param1, vr param2) {
+        try {
+          if (param0 > -101) {
+            vr var4 = (vr) null;
+            SpecialEvent.a(51, (vr) null, (vr) null);
+          }
+          TBomberEvent.field_s = param2;
+          sha.field_l = param1;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bca.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void a(BattleState param0, byte param1) {
+        EventEffect var4 = null;
+        int var5 = BachelorFridge.field_y;
+        if (param1 != -2) {
+          BattleCreature var6 = (BattleCreature) null;
+          this.a((BattleCreature) null, -54);
+        }
+        BattleCreature var3 = this.creature.a(53, param0);
+        if (this.field_p) {
+          return;
+        }
+        try {
+          var4 = (EventEffect) (this.effects.b((byte) 90));
+          while (var4 != null) {
+            var4.a(var3, param0, 12);
+            var4 = (EventEffect) (this.effects.c(0));
+          }
+          this.a(var3, param1 + 121);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bca.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    void a(byte param0, PacketBuffer param1) {
+        int var4 = 0;
+        EventEffect var5 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        var4 = BachelorFridge.field_y;
+        try {
+          param1.b(this.moveId, -113);
+          if (param0 > -12) {
+            field_n = (al[][]) null;
+          }
+          param1.writeByte(this.effects.g(0), 0);
+          var5 = (EventEffect) (this.effects.b((byte) 90));
+          while (var5 != null) {
+            var5.a(param1, (byte) 92);
+            var5 = (EventEffect) (this.effects.c(0));
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("bca.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    static {
+    }
+}

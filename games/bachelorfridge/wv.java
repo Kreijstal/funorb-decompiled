@@ -39,7 +39,7 @@ final class wv extends pu {
           if (param0 >= -16) {
             field_l = (sna) null;
           }
-          gfa.field_a = new wca[-1 + lka.field_E.length];
+          gfa.field_a = new CreatureType[-1 + lka.field_E.length];
           for (var2_int = 1; var2_int < lka.field_E.length; var2_int++) {
             var3 = Integer.parseInt(lka.field_E[var2_int][0]);
             var4 = lka.field_E[var2_int][3];
@@ -69,7 +69,7 @@ final class wv extends pu {
               var13[7] = kka.a(var2_int, -41, 7);
               var13[10] = kka.a(var2_int, -75, 8);
             }
-            var10 = ch.a((byte) 91, var2_int);
+            var10 = BagpipeSpecial.a((byte) 91, var2_int);
             var16 = new int[4];
             var14 = var16;
             var11 = var14;

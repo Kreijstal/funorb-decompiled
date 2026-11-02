@@ -19,7 +19,7 @@ final class tc {
         if (hl.field_I) {
           return ao.field_d.a(dla.field_j, (byte) 7, gf.field_k);
         }
-        if (gm.field_k) {
+        if (MoveOrder.field_k) {
           return wi.a(93, param1, param0);
         }
         if (kf.a(param1, (byte) -89, param0)) {
@@ -472,11 +472,11 @@ final class tc {
         int var2_intLifetime1;
         var3 = BachelorFridge.field_y;
         try {
-          var2_int = vq.field_w;
+          var2_int = SlowAllAnimation.field_w;
           if (param1.field_p != 2) {
             if (param1.field_p != 4) {
               if (ge.field_F == param1.field_a) {
-                var2_intLifetime1 = jaa.field_u[param1.field_p];
+                var2_intLifetime1 = HazmatEvent.field_u[param1.field_p];
               } else {
                 var2_intLifetime1 = wp.field_q[param1.field_p];
               }
@@ -487,12 +487,12 @@ final class tc {
             if (!param1.field_i) {
               if (param1.field_m == 0 &&
                 param1.field_j == 0) {
-                var2_intLifetime1 = jaa.field_u[param1.field_p];
+                var2_intLifetime1 = HazmatEvent.field_u[param1.field_p];
               } else {
                 var2_intLifetime1 = wp.field_q[param1.field_p];
               }
             } else {
-              var2_intLifetime1 = vq.field_w;
+              var2_intLifetime1 = SlowAllAnimation.field_w;
             }
           }
           if (param0) {

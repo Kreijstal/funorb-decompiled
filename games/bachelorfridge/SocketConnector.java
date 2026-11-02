@@ -33,7 +33,7 @@ abstract class SocketConnector {
         if (param0 != 1) {
           return 75;
         }
-        return ud.field_p;
+        return SauceOfFlameSpecial.field_p;
     }
 
     final java.net.Socket a(int param0) throws IOException {

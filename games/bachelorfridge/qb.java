@@ -26,7 +26,7 @@ class qb extends k {
           return true;
         }
         if (this.field_k >= 0) {
-          var2 = sp.field_l >= 0 ? uh.a(l.field_r, sp.field_l, this.field_k) : uh.a(l.field_r, this.field_k);
+          var2 = sp.field_l >= 0 ? uh.a(SplitEvent.field_r, sp.field_l, this.field_k) : uh.a(SplitEvent.field_r, this.field_k);
           var2.c();
           this.field_n = var2.a();
           this.field_o = var2.field_i;
@@ -134,16 +134,16 @@ class qb extends k {
         int var8Lifetime2;
         var10 = BachelorFridge.field_y;
         try {
-          fv.field_w = param0;
+          PetAttackAnimation.field_w = param0;
           nla.field_f = true;
           var11 = param2;
           if (!param1) {
             stackIn_4_0 = IsaacRandom.field_h;
           } else {
-            stackIn_4_0 = maa.field_x;
+            stackIn_4_0 = SuperSpeedAnimation.field_x;
           }
           var6 = stackIn_4_0;
-          if (~fv.field_w == param3) {
+          if (~PetAttackAnimation.field_w == param3) {
             var7 = ut.a(db.field_b, 480, var11, RasterBuffer.field_a, 127);
             var8 = var7 + 3;
             gn.field_l = new int[var8];
@@ -163,7 +163,7 @@ class qb extends k {
             gn.field_l[-1 + var8] = 1;
             st.field_a[1] = 2;
           } else {
-            if (1 != fv.field_w) {
+            if (1 != PetAttackAnimation.field_w) {
               throw new IllegalArgumentException();
             }
             var7 = ut.a(db.field_b, 480, var11, RasterBuffer.field_a, -118);
@@ -196,7 +196,7 @@ class qb extends k {
             }
           }
           dfa.field_b = -(var7Lifetime1 >> 1) + (var7Lifetime1 + sd.field_a);
-          ula.field_f = (pba.field_r + raa.field_J << 1) * fw.field_i.field_e;
+          ula.field_f = (ShieldEvent.field_r + raa.field_J << 1) * fw.field_i.field_e;
           rs.field_a = sd.field_a - (var7Lifetime1 >> 1);
           for (var8Lifetime2 = 0; var8Lifetime2 < pt.field_a.length; var8Lifetime2++) {
             stackIn_37_0 = ula.field_f;
@@ -207,7 +207,7 @@ class qb extends k {
             }
             ula.field_f = stackIn_37_0 + stackIn_38_1;
           }
-          vka.field_q = jfa.field_w - (ula.field_f >> 1);
+          GasCloudSpecial.field_q = jfa.field_w - (ula.field_f >> 1);
           fw.field_i.a(param4, param3 ^ -86, rh.a(mk.field_p, (byte) -126, gd.field_m), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

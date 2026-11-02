@@ -130,9 +130,9 @@ final class pt implements qda {
             pt.a(101);
           }
           var23Lifetime1 = -param1[2] + param6[2];
-          var9 = var23Lifetime1 * param1[5] + (param1[3] * var21Lifetime1 + var22Lifetime1 * param1[4]) >> 16 - ima.field_s;
+          var9 = var23Lifetime1 * param1[5] + (param1[3] * var21Lifetime1 + var22Lifetime1 * param1[4]) >> 16 - TeleportEvent.field_s;
           var11 = param1[9] * var21Lifetime1 + param1[10] * var22Lifetime1 + var23Lifetime1 * param1[11] >> 16;
-          var10 = var23Lifetime1 * param1[8] + (var22Lifetime1 * param1[7] + var21Lifetime1 * param1[6]) >> 16 - ima.field_s;
+          var10 = var23Lifetime1 * param1[8] + (var22Lifetime1 * param1[7] + var21Lifetime1 * param1[6]) >> 16 - TeleportEvent.field_s;
           var21Lifetime2 = TriangleRasterizer.field_h;
           var22Lifetime2 = TriangleRasterizer.field_j;
           var23Lifetime2 = 0;
@@ -141,8 +141,8 @@ final class pt implements qda {
               var24Lifetime1 = param2.field_x[var23Lifetime2];
               var25Lifetime1 = param2.field_O[var23Lifetime2];
               var26Lifetime1 = param2.field_r[var23Lifetime2];
-              var27Lifetime1 = (var26Lifetime1 * var18 + (var24Lifetime1 * var12 + var25Lifetime1 * var15) >> 16 - ima.field_s) + var9;
-              var28Lifetime1 = (var16 * var25Lifetime1 + (var13 * var24Lifetime1 + var26Lifetime1 * var19) >> -ima.field_s + 16) + var10;
+              var27Lifetime1 = (var26Lifetime1 * var18 + (var24Lifetime1 * var12 + var25Lifetime1 * var15) >> 16 - TeleportEvent.field_s) + var9;
+              var28Lifetime1 = (var16 * var25Lifetime1 + (var13 * var24Lifetime1 + var26Lifetime1 * var19) >> -TeleportEvent.field_s + 16) + var10;
               var29Lifetime1 = (var26Lifetime1 * var20 + (var14 * var24Lifetime1 + var25Lifetime1 * var17) >> 16) + var11;
               stackIn_68_0 = ~var29Lifetime1;
               stackIn_68_1 = -51;
@@ -161,8 +161,8 @@ final class pt implements qda {
                   }
                 }
                 if (param5) {
-                  on.field_w[var23Lifetime2] = var27Lifetime1 >> ima.field_s;
-                  ra.field_s[var23Lifetime2] = var28Lifetime1 >> ima.field_s;
+                  on.field_w[var23Lifetime2] = var27Lifetime1 >> TeleportEvent.field_s;
+                  ra.field_s[var23Lifetime2] = var28Lifetime1 >> TeleportEvent.field_s;
                   ji.field_i[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -185,18 +185,18 @@ final class pt implements qda {
                   var26Lifetime1 = param2.field_L[var23Lifetime2];
                   fm.field_f[var23Lifetime2] = (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var18 * var26Lifetime1) >> 16) + var9;
                   ha.field_m[var23Lifetime2] = var10 + (var13 * var24Lifetime1 + var16 * var25Lifetime1 + var19 * var26Lifetime1 >> 16);
-                  eb.field_p[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + var24Lifetime1 * var14 + var17 * var25Lifetime1 >> 16);
+                  FishRainSpecial.field_p[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + var24Lifetime1 * var14 + var17 * var25Lifetime1 >> 16);
                   var24Lifetime1 = param2.field_M[var23Lifetime2];
                   var25Lifetime1 = param2.field_j[var23Lifetime2];
                   var26Lifetime1 = param2.field_p[var23Lifetime2];
-                  hha.field_A[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + (var12 * var24Lifetime1 + var15 * var25Lifetime1) >> 16);
-                  vea.field_x[var23Lifetime2] = (var19 * var26Lifetime1 + (var13 * var24Lifetime1 + var16 * var25Lifetime1) >> 16) + var10;
-                  kea.field_s[var23Lifetime2] = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var14 * var24Lifetime1 >> 16) + var11;
+                  SleepAnimation.field_A[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + (var12 * var24Lifetime1 + var15 * var25Lifetime1) >> 16);
+                  RaiseAnimation.field_x[var23Lifetime2] = (var19 * var26Lifetime1 + (var13 * var24Lifetime1 + var16 * var25Lifetime1) >> 16) + var10;
+                  AirstrikeSpecial.field_s[var23Lifetime2] = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var14 * var24Lifetime1 >> 16) + var11;
                   var24Lifetime1 = param2.field_s[var23Lifetime2];
                   var25Lifetime1 = param2.field_z[var23Lifetime2];
                   var26Lifetime1 = param2.field_a[var23Lifetime2];
                   tw.field_a[var23Lifetime2] = (var18 * var26Lifetime1 + (var24Lifetime1 * var12 + var25Lifetime1 * var15) >> 16) + var9;
-                  mt.field_u[var23Lifetime2] = var10 + (var26Lifetime1 * var19 + var25Lifetime1 * var16 + var13 * var24Lifetime1 >> 16);
+                  ScavengerSpecial.field_u[var23Lifetime2] = var10 + (var26Lifetime1 * var19 + var25Lifetime1 * var16 + var13 * var24Lifetime1 >> 16);
                   tja.field_a[var23Lifetime2] = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var14 * var24Lifetime1 >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
@@ -228,7 +228,7 @@ final class pt implements qda {
                   var20 = param2.field_N[var18];
                   var21Lifetime2 = param2.field_b[var18];
                   bv.field_G[var18] = var12 * var20 + var9 * var19 + var21Lifetime2 * var15 >> 16;
-                  fv.field_x[var18] = var19 * var10 - (-(var20 * var13) - var21Lifetime2 * var16) >> 16;
+                  PetAttackAnimation.field_x[var18] = var19 * var10 - (-(var20 * var13) - var21Lifetime2 * var16) >> 16;
                   ep.field_l[var18] = var21Lifetime2 * var17 + var19 * var11 + var14 * var20 >> 16;
                   var18++;
                 }

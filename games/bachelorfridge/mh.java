@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mh extends pp {
+final class mh extends EventEffect {
     boolean field_i;
     static PlatformTaskDispatcher field_l;
     static sna field_k;
@@ -19,14 +19,14 @@ final class mh extends pp {
     final void a(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -92 / ((param1 - 34) / 58);
-          er.a(this.field_h, 126, param0);
+          FlirtAnimation.a(this.target, 126, param0);
           param0.writeByte(this.field_i ? 1 : 0, 0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "mh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(aga param0, op param1, int param2) {
+    final void a(BattleCreature param0, BattleState param1, int param2) {
         try {
           if (param2 != 12) {
             this.field_i = true;
@@ -101,21 +101,21 @@ final class mh extends pp {
         var19 = BachelorFridge.field_y;
         try {
           dna.c(dja.field_m, false);
-          if (pw.field_w != null) {
+          if (SnowAnimation.field_w != null) {
             boolean decompiledFrameRemainder1 = true;
             jj.field_wb.field_u = true;
             ik.field_i.field_p = 0;
             var5 = ik.field_i;
             var5.field_sb = 0;
-            cn.field_j.field_p = 0;
-            var6 = cn.field_j;
+            PlaceCreatureEffect.field_j.field_p = 0;
+            var6 = PlaceCreatureEffect.field_j;
             var6.field_sb = 0;
             cw.field_yb.field_p = 0;
             var7 = cw.field_yb;
             var7.field_sb = 0;
-            if (!ps.d(-119)) {
-              var9_ref_String = pw.field_w.field_Jb;
-              vaa.field_a.field_Z = lga.a(true, new String[]{var9_ref_String}, fq.field_r).toUpperCase();
+            if (!ZombiesEvent.d(-119)) {
+              var9_ref_String = SnowAnimation.field_w.field_Jb;
+              vaa.field_a.field_Z = lga.a(true, new String[]{var9_ref_String}, HomingMissileSpecial.field_r).toUpperCase();
               cw.field_yb.a(40, 31407, ho.field_g.field_sb, 0, -40 + ho.field_g.field_p);
               cw.field_yb.field_Z = lga.a(true, new String[]{var9_ref_String}, ne.field_n);
               var8 = cw.field_yb;
@@ -125,7 +125,7 @@ final class mh extends pp {
               vaa.field_a.field_Z = tea.field_lb.toUpperCase();
               var9 = (2 + ho.field_g.field_sb) / 2;
               ik.field_i.a(40, 31407, -2 + var9, 0, ho.field_g.field_p - 40);
-              if (pw.field_w.field_Pb <= pw.field_w.field_Rb) {
+              if (SnowAnimation.field_w.field_Pb <= SnowAnimation.field_w.field_Rb) {
                 ik.field_i.field_Z = oia.field_i.toUpperCase();
                 ik.field_i.field_u = false;
                 if (var19 != 0) {
@@ -152,12 +152,12 @@ final class mh extends pp {
                   ik.field_i.field_eb = vo.field_b.field_A;
                 }
               }
-              cn.field_j.a(40, 31407, -var9 + ho.field_g.field_sb, var9, ho.field_g.field_p - 40);
-              cn.field_j.field_Z = l.field_q.toUpperCase();
-              stackIn_20_0 = cn.field_j;
+              PlaceCreatureEffect.field_j.a(40, 31407, -var9 + ho.field_g.field_sb, var9, ho.field_g.field_p - 40);
+              PlaceCreatureEffect.field_j.field_Z = SplitEvent.field_q.toUpperCase();
+              stackIn_20_0 = PlaceCreatureEffect.field_j;
               stackIn_21_1 = (param0) && (wda.field_a == 0L);
               stackIn_20_0.field_u = stackIn_21_1;
-              var8 = cn.field_j;
+              var8 = PlaceCreatureEffect.field_j;
               var10 = 2;
               if (pha.field_h != null) {
                 if (bja.field_o == null) {
@@ -198,14 +198,14 @@ final class mh extends pp {
                             stackIn_55_0 = 0;
                             stackIn_55_1 = ~var15;
                             if (stackIn_55_0 != stackIn_55_1) {
-                              if ((255 & pw.field_w.field_Eb[var15]) != var16) {
+                              if ((255 & SnowAnimation.field_w.field_Eb[var15]) != var16) {
                                 break scanLoop2;
                               }
                             } else {
                               if (var10 == 0) {
-                                stackIn_48_0 = pw.field_w.field_Pb;
+                                stackIn_48_0 = SnowAnimation.field_w.field_Pb;
                               } else {
-                                stackIn_48_0 = pw.field_w.field_Rb;
+                                stackIn_48_0 = SnowAnimation.field_w.field_Rb;
                               }
                               var17_int = stackIn_48_0;
                               if (~var16 != ~var17_int &&
@@ -248,17 +248,17 @@ final class mh extends pp {
                       continue;
                     }
                   }
-                  stackIn_70_0 = ~hea.field_r;
+                  stackIn_70_0 = ~BananarangSpecial.field_r;
                   break;
                 }
                 if (stackIn_70_0 <= -3 &&
-                  wga.field_q[12]) {
+                  InvincibleEvent.field_q[12]) {
                   var10 = 2;
                 }
               }
               if (var10 < 2) {
-                cn.field_j.field_u = false;
-                decompiledFrameRemainder1 = !(!cn.field_j.field_E);
+                PlaceCreatureEffect.field_j.field_u = false;
+                decompiledFrameRemainder1 = !(!PlaceCreatureEffect.field_j.field_E);
                 if (decompiledFrameRemainder1) {
                   var11_ref = null;
                   var12 = 0;
@@ -287,7 +287,7 @@ final class mh extends pp {
                     break;
                   }
                   if (stackIn_87_0 != var10) {
-                    var13_ref_String = nq.field_h;
+                    var13_ref_String = CreatureRef.field_h;
                     boolean decompiledSharedTail2 = (var12 == 0);
                     if (!decompiledSharedTail2) {
                       var14_ref_String = oda.field_b + (String) (var11_ref);
@@ -322,7 +322,7 @@ final class mh extends pp {
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (!(ld.field_q > var16)))) {
-                  var17_int = pw.field_w.field_Eb[var16] & 255;
+                  var17_int = SnowAnimation.field_w.field_Eb[var16] & 255;
                   if (var19 == 0) {
                     if (DelegatingCanvas.field_b != null &&
                       DelegatingCanvas.field_b[var16] != null &&
@@ -363,7 +363,7 @@ final class mh extends pp {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = ak.field_q.field_vb.field_z;
+                var17 = SnowEvent.field_q.field_vb.field_z;
                 var18_ref = (ema) (var17.b((byte) 90));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
@@ -413,13 +413,13 @@ final class mh extends pp {
                   stackIn_148_0 = -3;
                   break;
                 }
-                if (stackIn_148_0 >= ~hea.field_r &&
-                  wga.field_q[12]) {
+                if (stackIn_148_0 >= ~BananarangSpecial.field_r &&
+                  InvincibleEvent.field_q[12]) {
                   var16 = 0;
                 }
                 if (var16 != 0) {
-                  cn.field_j.field_u = false;
-                  if (cn.field_j.field_E) {
+                  PlaceCreatureEffect.field_j.field_u = false;
+                  if (PlaceCreatureEffect.field_j.field_E) {
                     boolean decompiledSharedTail0 = (0 != BitPacketBuffer.field_n.field_a.field_yb);
                     if (!decompiledSharedTail0) {
                       jja.field_m = bma.field_t;
@@ -440,7 +440,7 @@ final class mh extends pp {
               }
               var8.field_Z = lga.a(true, new String[]{Integer.toString(var9)}, jk.field_p);
             }
-            mja.field_t.field_Z = lga.a(true, new String[]{Integer.toString(pw.field_w.field_Rb), Integer.toString(pw.field_w.field_Pb)}, gfa.field_b);
+            StampedeSpecial.field_t.field_Z = lga.a(true, new String[]{Integer.toString(SnowAnimation.field_w.field_Rb), Integer.toString(SnowAnimation.field_w.field_Pb)}, gfa.field_b);
           }
           stackIn_167_0 = ela.field_i;
           stackIn_167_1 = 19842;
@@ -455,20 +455,20 @@ final class mh extends pp {
           stackIn_178_2 = (param2) && (!param1) && (w.field_e);
           ((sna) (Object) stackIn_177_0).a(stackIn_177_1, stackIn_178_2);
           BitPacketBuffer.field_n.field_a.f(18632);
-          if (null != pw.field_w) {
+          if (null != SnowAnimation.field_w) {
             if (0 != jj.field_wb.field_R) {
-              rja.a(param3, pw.field_w.f((byte) -62), 1);
+              rja.a(param3, SnowAnimation.field_w.f((byte) -62), 1);
             }
             if (ik.field_i.field_R != 0) {
               w.field_e = true;
             }
-            if (cn.field_j.field_R != 0) {
+            if (PlaceCreatureEffect.field_j.field_R != 0) {
               aba.field_f = true;
             }
             if (0 != vca.field_h.field_R) {
               w.field_e = false;
             }
-            wp.a(false, pw.field_w, param3, false);
+            wp.a(false, SnowAnimation.field_w, param3, false);
           }
           var5_int = -73 / ((param4 - 27) / 42);
           return;
@@ -479,9 +479,9 @@ final class mh extends pp {
         }
     }
 
-    mh(nq param0, boolean param1) {
+    mh(CreatureRef param0, boolean param1) {
         try {
-          this.field_h = param0;
+          this.target = param0;
           this.field_i = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

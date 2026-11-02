@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ns extends jm {
+final class ns extends BoardChange {
     static Sprite[] field_m;
-    nq field_n;
+    CreatureRef field_n;
 
     ns(PacketBuffer param0) {
         this(qi.a(param0, (byte) 9));
@@ -11,7 +11,7 @@ final class ns extends jm {
 
     final void b(PacketBuffer param0, byte param1) {
         try {
-          er.a(this.field_n, 108, param0);
+          FlirtAnimation.a(this.field_n, 108, param0);
           int var3_int = -18 / ((param1 - 37) / 38);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ns.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -25,8 +25,8 @@ final class ns extends jm {
         }
     }
 
-    final void a(boolean param0, op param1) {
-        aga var3 = this.field_n.a(107, param1);
+    final void a(boolean param0, BattleState param1) {
+        BattleCreature var3 = this.field_n.a(107, param1);
         if (var3 == null) {
           return;
         }
@@ -55,11 +55,11 @@ final class ns extends jm {
             if (param2 == 8) {
               param2 = 2;
               if (!gfa.field_i) {
-                param0 = uba.field_q;
+                param0 = TeleportSpecial.field_q;
               } else {
-                param0 = vfa.field_q;
+                param0 = ClamsSpecial.field_q;
               }
-              ola.field_e.a(-113, dk.field_p);
+              ola.field_e.a(-113, IncomingSpecial.field_p);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -101,7 +101,7 @@ final class ns extends jm {
         }
     }
 
-    ns(nq param0) {
+    ns(CreatureRef param0) {
         try {
           this.field_j = 8;
           this.field_n = param0;
@@ -114,8 +114,8 @@ final class ns extends jm {
         try {
           param0.a(27799, new gka(param0.field_o, this));
           if (param1 > -2) {
-            op var4 = (op) null;
-            this.a(false, (op) null);
+            BattleState var4 = (BattleState) null;
+            this.a(false, (BattleState) null);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ns.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tfa extends pp {
+final class tfa extends EventEffect {
     public tfa() {
     }
 
@@ -97,7 +97,7 @@ final class tfa extends pp {
           }
           fr.field_n = true;
           if (ub.field_j == 0) {
-            var3_int = ut.a(ec.field_a, wfa.field_s, oa.field_wb, jk.field_o, -125);
+            var3_int = ut.a(ec.field_a, FullHealEvent.field_s, oa.field_wb, jk.field_o, -125);
             var4 = var3_int + 3;
             fr.field_l = new int[var4];
             mj.field_h = new String[var4];
@@ -116,7 +116,7 @@ final class tfa extends pp {
             fr.field_l[-1 + var4] = 1;
             mu.field_l[1] = 5;
           } else if (ub.field_j == 1) {
-            var3_int = ut.a(ec.field_a, wfa.field_s, oa.field_wb, jk.field_o, 125);
+            var3_int = ut.a(ec.field_a, FullHealEvent.field_s, oa.field_wb, jk.field_o, 125);
             var4 = var3_int + 2;
             fr.field_l = new int[var4];
             mj.field_h = new String[var4];
@@ -133,10 +133,10 @@ final class tfa extends pp {
             mu.field_l[0] = 5;
           } else if (2 != ub.field_j) {
             if (ub.field_j == 3) {
-              if (!ju.field_r.field_k) {
-                var3_int = ut.a(ec.field_a, wfa.field_s, qca.field_l, jk.field_o, -10);
+              if (!DiveBomberEvent.field_r.field_k) {
+                var3_int = ut.a(ec.field_a, FullHealEvent.field_s, qca.field_l, jk.field_o, -10);
               } else {
-                var3_int = ut.a(ec.field_a, wfa.field_s, ej.field_o, jk.field_o, -5);
+                var3_int = ut.a(ec.field_a, FullHealEvent.field_s, ej.field_o, jk.field_o, -5);
               }
               var4 = var3_int + 2;
               fr.field_l = new int[var4];
@@ -153,7 +153,7 @@ final class tfa extends pp {
               fr.field_l[var4 - 1] = 0;
               mu.field_l[0] = 5;
             } else if (ub.field_j == 4) {
-              var3_int = ut.a(ec.field_a, wfa.field_s, cn.field_k, jk.field_o, 2);
+              var3_int = ut.a(ec.field_a, FullHealEvent.field_s, PlaceCreatureEffect.field_k, jk.field_o, 2);
               var4 = var3_int + 2;
               mj.field_h = new String[var4];
               fr.field_l = new int[var4];
@@ -172,7 +172,7 @@ final class tfa extends pp {
               if (ub.field_j != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = ut.a(ec.field_a, wfa.field_s, jia.field_l, jk.field_o, -126);
+              var3_int = ut.a(ec.field_a, FullHealEvent.field_s, jia.field_l, jk.field_o, -126);
               var4 = var3_int + 3;
               fr.field_l = new int[var4];
               mj.field_h = new String[var4];
@@ -184,7 +184,7 @@ final class tfa extends pp {
                 mj.field_h[var5] = ec.field_a[var5];
               }
               mj.field_h[var4 - 3] = "";
-              mj.field_h[var4 - 2] = ifa.field_p;
+              mj.field_h[var4 - 2] = DiveBomberSpecial.field_p;
               fr.field_l[-2 + var4] = 0;
               mu.field_l[0] = 3;
               mj.field_h[-1 + var4] = ala.field_d;
@@ -192,7 +192,7 @@ final class tfa extends pp {
               mu.field_l[1] = 5;
             }
           } else {
-            var3_int = ut.a(ec.field_a, wfa.field_s, lga.a(true, new String[]{"<br><%0><br>"}, vv.field_b), jk.field_o, param1 ^ 126);
+            var3_int = ut.a(ec.field_a, FullHealEvent.field_s, lga.a(true, new String[]{"<br><%0><br>"}, vv.field_b), jk.field_o, param1 ^ 126);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ec.field_a[var5])) {
@@ -204,11 +204,11 @@ final class tfa extends pp {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            vka.field_p = new String[var4];
-            ArrayOperations.copy(ec.field_a, 0, vka.field_p, 0, var4);
+            GasCloudSpecial.field_p = new String[var4];
+            ArrayOperations.copy(ec.field_a, 0, GasCloudSpecial.field_p, 0, var4);
             wba.field_a = new String[var3_int - var4 - 1];
             ArrayOperations.copy(ec.field_a, var4 + 1, wba.field_a, 0, var3_int - var4 - 1);
-            var3_int = ut.a(ec.field_a, wfa.field_s, lga.a(true, new String[]{"<br><%0><br>"}, sc.field_l), jk.field_o, -54);
+            var3_int = ut.a(ec.field_a, FullHealEvent.field_s, lga.a(true, new String[]{"<br><%0><br>"}, sc.field_l), jk.field_o, -54);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ec.field_a[var5])) {
@@ -224,8 +224,8 @@ final class tfa extends pp {
             ArrayOperations.copy(ec.field_a, 0, mq.field_a, 0, var4);
             SectorCacheStore.field_b = new String[-1 - var4 + var3_int];
             ArrayOperations.copy(ec.field_a, 1 + var4, SectorCacheStore.field_b, 0, -1 + var3_int - var4);
-            if (vka.field_p.length >= mq.field_a.length) {
-              stackIn_53_0 = vka.field_p.length;
+            if (GasCloudSpecial.field_p.length >= mq.field_a.length) {
+              stackIn_53_0 = GasCloudSpecial.field_p.length;
             } else {
               stackIn_53_0 = mq.field_a.length;
             }
@@ -242,11 +242,11 @@ final class tfa extends pp {
             for (var8 = 0; var8 < var7; var8++) {
               fr.field_l[var8] = -1;
             }
-            mj.field_h[0] = tla.field_s;
+            mj.field_h[0] = AirstrikeEvent.field_s;
             fr.field_l[1] = 0;
-            mj.field_h[1] = mja.field_r;
+            mj.field_h[1] = StampedeSpecial.field_r;
             mu.field_l = new int[2];
-            mj.field_h[2] = cj.field_g;
+            mj.field_h[2] = BattleUpdate.field_g;
             mu.field_l[0] = 5;
             mj.field_h[5] = "";
             fr.field_l[3] = 1;
@@ -287,7 +287,7 @@ final class tfa extends pp {
             }
           }
           if (ub.field_j == 2) {
-            var10 = vka.field_p;
+            var10 = GasCloudSpecial.field_p;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
@@ -305,26 +305,26 @@ final class tfa extends pp {
               }
             }
           }
-          io.field_p = mg.field_k - (var3_intLifetime1 >> 1);
+          RaiseSpecial.field_p = mg.field_k - (var3_intLifetime1 >> 1);
           qk.field_l = (um.field_d + cba.field_d << 1) * dp.field_o.field_e;
           rj.field_i = var3_intLifetime1 + mg.field_k - (var3_intLifetime1 >> 1);
           for (var4Lifetime2 = 0; mj.field_h.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_116_0 = qk.field_l;
             if (fr.field_l[var4Lifetime2] < 0) {
-              stackIn_117_1 = mm.field_z;
+              stackIn_117_1 = FlyAnimation.field_z;
             } else {
               stackIn_117_1 = hc.field_D;
             }
             qk.field_l = stackIn_116_0 + stackIn_117_1;
           }
-          ql.field_s = qaa.field_c - (qk.field_l >> 1);
+          HailSpecial.field_s = qaa.field_c - (qk.field_l >> 1);
           a.field_m = new int[mj.field_h.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = ql.field_s;
+          var5Lifetime3 = HailSpecial.field_s;
           while (mj.field_h.length > var4Lifetime3) {
             var6Lifetime1 = fr.field_l[var4Lifetime3];
             if (0 > var6Lifetime1) {
-              var5Lifetime3 = var5Lifetime3 + mm.field_z;
+              var5Lifetime3 = var5Lifetime3 + FlyAnimation.field_z;
             } else {
               var7Lifetime2 = gg.a(true, -84, mj.field_h[var4Lifetime3]);
               var5Lifetime3 = var5Lifetime3 + cba.field_d;
@@ -341,7 +341,7 @@ final class tfa extends pp {
           if (2 == ub.field_j) {
             dp.field_o.a(param2, 46, -1, -1);
           } else {
-            dp.field_o.a(param2, 90, rla.a(mk.field_p, gd.field_m, param1 ^ -128), 0);
+            dp.field_o.a(param2, 90, SetFriendlyEffect.a(mk.field_p, gd.field_m, param1 ^ -128), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -351,7 +351,7 @@ final class tfa extends pp {
         }
     }
 
-    final void a(aga param0, op param1, int param2) {
+    final void a(BattleCreature param0, BattleState param1, int param2) {
         try {
           param1.field_l = true;
           if (param2 != 12) {

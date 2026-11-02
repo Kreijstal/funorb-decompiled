@@ -9,7 +9,7 @@ final class p extends pu {
 
     final static void c(int param0) {
         int var2 = -3 / ((param0 - 19) / 61);
-        gb var1 = (gb) (ja.field_s.b((byte) 90));
+        gb var1 = (gb) (ResetSpecial.field_s.b((byte) 90));
         if (var1 == null) {
           vc.a((byte) -72);
           return;

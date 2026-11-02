@@ -11,7 +11,7 @@ final class jka extends pu {
             fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
             return;
           }
-          if (param0 > pw.field_x) {
+          if (param0 > SnowAnimation.field_x) {
             fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
             return;
           }
@@ -20,7 +20,7 @@ final class jka extends pu {
             return;
           }
           if (ha.field_n >= param4) {
-            jl.a(param2, param1, param3, param4, -1, param6, param0, param7);
+            SuperSpeedEvent.a(param2, param1, param3, param4, -1, param6, param0, param7);
             return;
           }
           fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
@@ -30,7 +30,7 @@ final class jka extends pu {
           fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
           return;
         }
-        if (param0 > pw.field_x) {
+        if (param0 > SnowAnimation.field_x) {
           fha.a(param0, 127, param4, param7, param1, param3, param2, param6);
           return;
         }
@@ -39,7 +39,7 @@ final class jka extends pu {
           return;
         }
         if (ha.field_n >= param4) {
-          jl.a(param2, param1, param3, param4, -1, param6, param0, param7);
+          SuperSpeedEvent.a(param2, param1, param3, param4, -1, param6, param0, param7);
           return;
         }
         fha.a(param0, 127, param4, param7, param1, param3, param2, param6);

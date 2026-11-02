@@ -31,13 +31,13 @@ final class wt extends k {
           wt.a(19, -118, 72, -6, 50, -27, -99);
         }
         if (DualLinkNode.field_l <= param5 &&
-          pw.field_x >= param0 &&
+          SnowAnimation.field_x >= param0 &&
           an.field_q <= param3 &&
           param4 <= ha.field_n) {
           if (param2 != 1) {
-            cma.a(param4, param6, param5, param0, param2, 64, param3);
+            InsanoSauceAnimation.a(param4, param6, param5, param0, param2, 64, param3);
           } else {
-            cv.a(param6, param1 + 28849, param4, param5, param0, param3);
+            SpiltMilkEvent.a(param6, param1 + 28849, param4, param5, param0, param3);
           }
         } else {
           if (1 == param2) {

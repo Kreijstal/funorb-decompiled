@@ -13,7 +13,7 @@ final class ft extends IntrusiveNode {
         }
         kt.field_m.a(-1, tv.field_o);
         if (param0 == 2048) {
-          lia.field_j = new lm(cja.field_r, kt.field_m);
+          lia.field_j = new lm(FlyEvent.field_r, kt.field_m);
           ng.field_e = new sna(0L, (sna) null);
           ng.field_e.a(-1, lia.field_j.field_a);
           ng.field_e.a(-1, mc.field_g);
@@ -21,7 +21,7 @@ final class ft extends IntrusiveNode {
           return;
         }
         ft.a(93);
-        lia.field_j = new lm(cja.field_r, kt.field_m);
+        lia.field_j = new lm(FlyEvent.field_r, kt.field_m);
         ng.field_e = new sna(0L, (sna) null);
         ng.field_e.a(-1, lia.field_j.field_a);
         ng.field_e.a(-1, mc.field_g);
@@ -32,7 +32,7 @@ final class ft extends IntrusiveNode {
         if (qo.field_c) {
           lia.field_i = true;
           int var1 = -76 % ((param0 - 32) / 42);
-          gq.a(false, 19626);
+          OneAnimation.a(false, 19626);
           jv.field_j = 0;
           return;
         }

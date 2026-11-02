@@ -31,16 +31,16 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int >= 0) {
               wd.field_x[gfa.field_c] = var2_int;
               gfa.field_c = gfa.field_c + 1 & 127;
-              if (cj.field_i == gfa.field_c) {
+              if (BattleUpdate.field_i == gfa.field_c) {
                 gfa.field_c = -1;
               }
             }
             if (0 <= var2_int) {
-              var3 = lma.field_x + 1 & 127;
+              var3 = ClamsAnimation.field_x + 1 & 127;
               if (gha.field_q != var3) {
-                aq.field_a[lma.field_x] = var2_int;
-                dla.field_i[lma.field_x] = (char)0;
-                lma.field_x = var3;
+                aq.field_a[ClamsAnimation.field_x] = var2_int;
+                dla.field_i[ClamsAnimation.field_x] = (char)0;
+                ClamsAnimation.field_x = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();
@@ -87,7 +87,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               0 <= var2_int) {
               wd.field_x[gfa.field_c] = ~var2_int;
               gfa.field_c = 127 & gfa.field_c + 1;
-              if (gfa.field_c == cj.field_i) {
+              if (gfa.field_c == BattleUpdate.field_i) {
                 gfa.field_c = -1;
               }
             }
@@ -131,24 +131,24 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
         var1 = new Sprite[ok.field_vb];
         for (var2 = 0; var2 < ok.field_vb; var2++) {
-          var3 = eha.field_s[var2] * lq.field_A[var2];
-          var20 = baa.field_P[var2];
+          var3 = InsanoSauceSpecial.field_s[var2] * lq.field_A[var2];
+          var20 = BananarangAnimation.field_P[var2];
           if (!uf.field_b[var2]) {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = hk.field_f[dda.a(255, (int) var20[var6_int])];
             }
-            var1[var2] = new Sprite(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], var21);
+            var1[var2] = new Sprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[var2], AirstrikeAnimation.field_D[var2], lq.field_A[var2], InsanoSauceSpecial.field_s[var2], var21);
           } else {
             var22 = cea.field_d[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6[var7] = mp.a(dda.a(var22[var7] << 24, -16777216), hk.field_f[dda.a((int) var20[var7], 255)]);
+              var6[var7] = MassPoisonSpecial.a(dda.a(var22[var7] << 24, -16777216), hk.field_f[dda.a((int) var20[var7], 255)]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[var2], AirstrikeAnimation.field_D[var2], lq.field_A[var2], InsanoSauceSpecial.field_s[var2], var16));
           }
         }
         al.b(-18073);
@@ -168,7 +168,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = ts.a(param3, param4, param1, param5, 2, param2);
+          var8 = DisableSpecial.a(param3, param4, param1, param5, 2, param2);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
@@ -225,11 +225,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (0 != var2_int && 65535 != var2_int &&
               cga.a(255, (char) var2_int)) {
-              var3 = lma.field_x + 1 & 127;
+              var3 = ClamsAnimation.field_x + 1 & 127;
               if (var3 != gha.field_q) {
-                aq.field_a[lma.field_x] = -1;
-                dla.field_i[lma.field_x] = (char)var2_int;
-                lma.field_x = var3;
+                aq.field_a[ClamsAnimation.field_x] = -1;
+                dla.field_i[ClamsAnimation.field_x] = (char)var2_int;
+                ClamsAnimation.field_x = var3;
               }
             }
           }

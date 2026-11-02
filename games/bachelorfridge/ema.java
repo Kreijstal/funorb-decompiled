@@ -97,7 +97,7 @@ final class ema extends sna {
           this.field_Hb = param0;
           this.field_Nb = param1;
           var6 = (CharSequence) ((Object) this.field_Hb);
-          fq.a(0, var6);
+          HomingMissileSpecial.a(0, var6);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ema.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -109,7 +109,7 @@ final class ema extends sna {
           this.field_Nb = param2;
           this.field_Hb = param0;
           var5 = (CharSequence) ((Object) this.field_Hb);
-          fq.a(param1 + param1, var5);
+          HomingMissileSpecial.a(param1 + param1, var5);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ema.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

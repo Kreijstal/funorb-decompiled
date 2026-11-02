@@ -178,7 +178,7 @@ final class nf extends aha {
     }
 
     nf(qu param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, om.b(false));
+        super(param1, ShuffleAnimation.b(false));
         try {
           this.field_L = param0;
           this.field_O = param1;

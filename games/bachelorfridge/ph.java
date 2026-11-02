@@ -27,7 +27,7 @@ final class ph extends vd implements fca, lja {
     }
 
     private final void k(int param0) {
-        if (ch.b(68) ||
+        if (BagpipeSpecial.b(68) ||
           !(this.field_Q.field_w.length() <= 0) &&
           !(this.field_H.field_w.length() <= 0)) {
           g.a(this.field_H.field_w, this.field_Q.field_w, (byte) 81);
@@ -278,11 +278,11 @@ final class ph extends vd implements fca, lja {
             this.field_v = this.field_v + (5 + var7.measureWrappedHeight(this.field_L, -40 + this.field_p, var7.field_u));
           }
           var8 = rw.field_b;
-          var9 = hha.a((byte) 127, nia.d(-31768));
+          var9 = SleepAnimation.a((byte) 127, nia.d(-31768));
           if (DiskCacheRequest.field_u == var9) {
             var8 = kr.field_zb;
           } else {
-            if (er.field_x == var9) {
+            if (FlirtAnimation.field_x == var9) {
               var8 = ji.field_g;
             }
           }
@@ -290,7 +290,7 @@ final class ph extends vd implements fca, lja {
           var12 = dupTemp$0;
           this.c(dupTemp$0, 15);
           this.field_v = this.field_v + (((wj) ((Object) var12)).field_q + 5);
-          dupTemp$1 = new ge(10, this.field_v, this.field_p - 20, 25, this.field_H, false, 80, 3, var7, 16777215, mp.field_r);
+          dupTemp$1 = new ge(10, this.field_v, this.field_p - 20, 25, this.field_H, false, 80, 3, var7, 16777215, MassPoisonSpecial.field_r);
           var13 = dupTemp$1;
           this.c(dupTemp$1, -120);
           this.field_v = this.field_v + (5 + ((wj) ((Object) var13)).field_q);

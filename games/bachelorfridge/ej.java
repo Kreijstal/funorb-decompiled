@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ej extends jm {
+final class ej extends BoardChange {
     private int field_m;
     static String field_n;
     static String field_o;
@@ -14,9 +14,9 @@ final class ej extends jm {
 
     final void a(ub param0, int param1) {
         int var5 = 0;
-        ib var4 = null;
+        PlayerRoster var4 = null;
         int var6 = 0;
-        op var7 = null;
+        BattleState var7 = null;
         gj var8 = null;
         gj var9 = null;
         RuntimeException stackIn_13_0 = null;
@@ -30,10 +30,10 @@ final class ej extends jm {
           var9 = var8;
           var8.field_T[this.field_m] = 0;
           if (param1 > -2) {
-            var7 = (op) null;
-            this.a(true, (op) null);
+            var7 = (BattleState) null;
+            this.a(true, (BattleState) null);
           }
-          var4 = param0.field_o.field_h.field_S[this.field_m];
+          var4 = param0.field_o.field_h.rosters[this.field_m];
           for (var5 = 0; var4.field_b.length > var5; var5++) {
             if (var4.field_b[var5] != null) {
               param0.a(27799, new cb(param0.field_o.b(var4.field_b[var5], -23990), 5));
@@ -74,12 +74,12 @@ final class ej extends jm {
         }
     }
 
-    final void a(boolean param0, op param1) {
+    final void a(boolean param0, BattleState param1) {
         int var4 = 0;
-        ib var3 = null;
+        PlayerRoster var3 = null;
         int var5 = 0;
-        op var6 = null;
-        ib var7 = null;
+        BattleState var6 = null;
+        PlayerRoster var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -87,12 +87,12 @@ final class ej extends jm {
         RuntimeException var3_ref = null;
         var5 = BachelorFridge.field_y;
         try {
-          param1.field_S[this.field_m].field_c = true;
-          var7 = param1.field_S[this.field_m];
+          param1.rosters[this.field_m].field_c = true;
+          var7 = param1.rosters[this.field_m];
           var3 = var7;
           if (param0) {
-            var6 = (op) null;
-            this.a(true, (op) null);
+            var6 = (BattleState) null;
+            this.a(true, (BattleState) null);
           }
           for (var4 = 0; var3.field_b.length > var4; var4++) {
             if (null != var7.field_b[var4]) {

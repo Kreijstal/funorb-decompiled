@@ -18,7 +18,7 @@ abstract class kj {
     }
 
     final static void b(byte param0) {
-        if (!bp.e(-29919)) {
+        if (!AttackUpAllAnimation.e(-29919)) {
           sja.field_fb.writeCipheredByte(78, (byte) 109);
           hb.field_j = true;
           if (param0 == -88) {
@@ -28,7 +28,7 @@ abstract class kj {
           return;
         }
         pma.b(mg.field_m.field_g, 20208);
-        er.e((byte) -93);
+        FlirtAnimation.e((byte) -93);
         if (param0 == -88) {
           uca.a(0, (byte) 101);
           return;

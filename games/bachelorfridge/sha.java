@@ -6,7 +6,7 @@ final class sha extends pu {
     static int field_m;
 
     final static void a(vr param0, boolean param1) {
-        Sprite var2 = new Sprite(param0.a((byte) 123, "", "final_frame.jpg"), (java.awt.Component) ((Object) dca.field_y));
+        Sprite var2 = new Sprite(param0.a((byte) 123, "", "final_frame.jpg"), (java.awt.Component) ((Object) TBomberAnimation.field_y));
         int var3 = var2.field_q;
         int var4 = var2.field_p;
         if (param1) {
@@ -42,9 +42,9 @@ final class sha extends pu {
             field_l = (vr) null;
           }
           if (gk.field_d == 2 &&
-            df.field_s != null) {
+            MoveEvent.field_s != null) {
             var3 = (CharSequence) ((Object) param1);
-            if (df.field_s.equals(fq.a(param0 + 24, var3))) {
+            if (MoveEvent.field_s.equals(HomingMissileSpecial.a(param0 + 24, var3))) {
               return true;
             }
           }

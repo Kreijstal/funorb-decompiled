@@ -77,7 +77,7 @@ final class nia extends lw {
             this.b((byte) 112);
             if (um.a(true) &&
               this.c((byte) 95)) {
-              fla.b(param1 + 23548);
+              ShieldSpecial.b(param1 + 23548);
             }
           }
         }
@@ -115,7 +115,7 @@ final class nia extends lw {
     }
 
     nia() {
-        super(true, new String[]{md.field_m, fq.field_p}, id.field_j);
+        super(true, new String[]{md.field_m, HomingMissileSpecial.field_p}, id.field_j);
         this.field_c = new int[][]{new int[]{320, 400}, new int[]{320, 390}};
     }
 
@@ -135,14 +135,14 @@ final class nia extends lw {
         var5 = BachelorFridge.field_y;
         try {
           sd.field_b = new int[50];
-          var1_int = (rla.a(false, 16777088) - rla.a(false, 16711680)) / 50;
+          var1_int = (SetFriendlyEffect.a(false, 16777088) - SetFriendlyEffect.a(false, 16711680)) / 50;
           var2 = (tf.a(-6, 16777088) - tf.a(-127, 16711680)) / 50;
           if (param0 < 16) {
             nia.a(120, true);
           }
           var3 = (lda.a(16777088, (byte) -36) - lda.a(16711680, (byte) -45)) / 50;
           for (var4 = 0; var4 < 50; var4++) {
-            sd.field_b[var4] = gna.a(rla.a(false, 16711680) + var4 * var1_int, (byte) -64, var4 * var3 + lda.a(16711680, (byte) -21), tf.a(-127, 16711680) + var4 * var2);
+            sd.field_b[var4] = gna.a(SetFriendlyEffect.a(false, 16711680) + var4 * var1_int, (byte) -64, var4 * var3 + lda.a(16711680, (byte) -21), tf.a(-127, 16711680) + var4 * var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

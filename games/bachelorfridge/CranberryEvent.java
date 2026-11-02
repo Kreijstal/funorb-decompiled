@@ -1,0 +1,95 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class CranberryEvent extends SpecialEvent {
+    CreatureRef field_q;
+    static String field_r;
+
+    final AnimationNode a(int param0, gj param1) {
+        RuntimeException var3 = null;
+        BattleState var4 = null;
+        CranberryAnimation stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 5) {
+            var4 = (BattleState) null;
+            this.a((BattleState) null, -23);
+          }
+          stackIn_3_0 = new CranberryAnimation(param1, this);
+          return (AnimationNode) ((Object) stackIn_3_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("rb.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    CranberryEvent(int param0, CreatureRef param1, CreatureRef param2) {
+        super(param0, param1);
+        try {
+          this.field_q = param2;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void a(byte param0, PacketBuffer param1) {
+        try {
+          super.a((byte) -124, param1);
+          if (param0 > -12) {
+            CranberryEvent.d((byte) -104);
+          }
+          FlirtAnimation.a(this.field_q, 117, param1);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void d(byte param0) {
+        field_r = null;
+        int var1 = 53 % ((25 - param0) / 44);
+    }
+
+    CranberryEvent(PacketBuffer param0) {
+        super(param0);
+        int var2_int = 0;
+        try {
+          this.moveId = param0.readUnsignedShort((byte) 91);
+          this.effects = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
+          while (true) {
+            var2_int--;
+            if (var2_int < 0) {
+              break;
+            }
+            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+          }
+          this.field_q = qi.a(param0, (byte) 75);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void a(BattleState param0, int param1) {
+        try {
+          this.a(param0, (byte) -2);
+          int var3_int = 68 % ((12 - param1) / 35);
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    static {
+        field_r = "Staff impersonation";
+    }
+}

@@ -45,7 +45,7 @@ final class ig extends k {
         for (var5 = 0; this.field_v > var5; var5++) {
           if (var5 > 0) {
             var6 = this.field_l;
-            var7 = (kla.a(4096, var11, -2147483648) - 2048) * this.field_o >> 12;
+            var7 = (DiveBomberAnimation.a(4096, var11, -2147483648) - 2048) * this.field_o >> 12;
             var6 = var6 + (var4 * var7 >> 12);
             this.field_u[var5] = this.field_u[-1 + var5] + var6;
           }
@@ -53,11 +53,11 @@ final class ig extends k {
           for (var6Lifetime1 = 0; this.field_x > var6Lifetime1; var6Lifetime1++) {
             if (var6Lifetime1 > 0) {
               var7Lifetime1 = this.field_q;
-              var8 = (kla.a(4096, var11, -2147483648) - 2048) * this.field_k >> 12;
+              var8 = (DiveBomberAnimation.a(4096, var11, -2147483648) - 2048) * this.field_k >> 12;
               var7Lifetime1 = var7Lifetime1 + (var3 * var8 >> 12);
               this.field_r[var5][var6Lifetime1] = var7Lifetime1 + this.field_r[var5][var6Lifetime1 - 1];
             }
-            this.field_p[var5][var6Lifetime1] = this.field_s <= 0 ? 4096 : -kla.a(this.field_s, var10, -2147483648) + 4096;
+            this.field_p[var5][var6Lifetime1] = this.field_s <= 0 ? 4096 : -DiveBomberAnimation.a(this.field_s, var10, -2147483648) + 4096;
           }
           this.field_r[var5][this.field_x] = 4096;
         }
@@ -170,33 +170,33 @@ final class ig extends k {
         }
     }
 
-    final static cj a(PacketBuffer param0, int param1) {
+    final static BattleUpdate a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        cj stackIn_2_0 = null;
+        BattleUpdate stackIn_2_0 = null;
         ce stackIn_6_0 = null;
         hba stackIn_10_0 = null;
-        vja stackIn_12_0 = null;
+        AttackEvent stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 51) {
-            stackIn_2_0 = (cj) null;
+            stackIn_2_0 = (BattleUpdate) null;
             return stackIn_2_0;
           }
           var2_int = param0.readUnsignedShort((byte) 64);
           if (3 == ((t) (al.a(103, var2_int))).field_p) {
             stackIn_6_0 = kfa.a(param0, 4096, var2_int);
-            return (cj) ((Object) stackIn_6_0);
+            return (BattleUpdate) ((Object) stackIn_6_0);
           }
           if (((t) (al.a(118, var2_int))).field_p == 2) {
-            stackIn_10_0 = nh.a(param0, var2_int, (byte) -116);
-            return (cj) ((Object) stackIn_10_0);
+            stackIn_10_0 = SuperSpeedAllSpecial.a(param0, var2_int, (byte) -116);
+            return (BattleUpdate) ((Object) stackIn_10_0);
           }
-          stackIn_12_0 = new vja(var2_int, param0);
-          return (cj) ((Object) stackIn_12_0);
+          stackIn_12_0 = new AttackEvent(var2_int, param0);
+          return (BattleUpdate) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

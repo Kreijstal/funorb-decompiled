@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jk extends at {
+final class jk extends AnimationNode {
     static String[] field_k;
     static String field_j;
     static String field_l;
@@ -49,7 +49,7 @@ final class jk extends at {
             fw.field_i.field_g >= 0) {
             var2 = st.field_a[fw.field_i.field_g];
             if (2 == var2) {
-              nh.b(param0 - 16);
+              SuperSpeedAllSpecial.b(param0 - 16);
             }
           }
           if (param0 != 2) {
@@ -84,7 +84,7 @@ final class jk extends at {
         int var2Lifetime2;
         int var2Lifetime3;
         if (this.field_m == 25) {
-          if (this.field_q.field_s.i(-90)) {
+          if (this.field_q.field_s.isDown(-90)) {
             fieldTemp$0 = this.field_m - 1;
             this.field_m = this.field_m - 1;
             if (fieldTemp$0 <= 0) {

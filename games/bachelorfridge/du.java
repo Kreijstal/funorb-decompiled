@@ -27,13 +27,13 @@ final class du {
             stackIn_4_0 = null;
             return (eq) (stackIn_4_0);
           }
-          if (dka.field_G == ki.field_w &&
-            param0.equals(vh.field_w)) {
+          if (dka.field_G == OhNoAnimation.field_w &&
+            param0.equals(BagpipeAnimation.field_w)) {
             dka.field_G = tn.field_a;
             stackIn_8_0 = vo.field_d;
             return stackIn_8_0;
           }
-          vh.field_w = param0;
+          BagpipeAnimation.field_w = param0;
           dka.field_G = kq.field_j;
           vo.field_d = null;
           stackIn_10_0 = null;

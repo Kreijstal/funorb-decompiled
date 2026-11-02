@@ -29,7 +29,7 @@ final class gw {
         if (jv.field_j < 10) {
           return false;
         }
-        if (13 > lk.field_r) {
+        if (13 > SuperSpeedAllEvent.field_r) {
           return false;
         }
         return true;
@@ -56,7 +56,7 @@ final class gw {
             gw.a((String) null, (String) null, (vr) null, 110);
           }
           var5 = param2.a((byte) 6, var4_int, param1);
-          stackIn_3_0 = bna.a(var4_int, param2, -116, var5);
+          stackIn_3_0 = DisableAnimation.a(var4_int, param2, -116, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

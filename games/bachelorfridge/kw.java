@@ -114,8 +114,8 @@ final class kw extends kj {
         try {
           this.field_o = param5 ? true : false;
           this.field_l = 80;
-          this.field_i = -64 + kla.a(129, m.field_a, -2147483648) + param3;
-          this.field_h = kla.a(65, m.field_a, -2147483648) + param4 - 32;
+          this.field_i = -64 + DiveBomberAnimation.a(129, m.field_a, -2147483648) + param3;
+          this.field_h = DiveBomberAnimation.a(65, m.field_a, -2147483648) + param4 - 32;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

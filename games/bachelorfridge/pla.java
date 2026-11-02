@@ -128,7 +128,7 @@ final class pla extends pn {
 
     pla(vr param0) {
         try {
-          this.field_b = bla.a(29611, "basic", "tiles_dessert", param0);
+          this.field_b = RageSpecial.a(29611, "basic", "tiles_dessert", param0);
           this.b((byte) -117);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "pla.<init>(" + (param0 != null ? "{...}" : "null") + ')');

@@ -12,10 +12,10 @@ class kda {
         RuntimeException decompiledCaughtException = null;
         var3 = BachelorFridge.field_y;
         try {
-          var4 = (gb) (ja.field_s.b((byte) 90));
+          var4 = (gb) (ResetSpecial.field_s.b((byte) 90));
           while (var4 != null) {
-            io.a(var4, true, param1);
-            var4 = (gb) (ja.field_s.c(0));
+            RaiseSpecial.a(var4, true, param1);
+            var4 = (gb) (ResetSpecial.field_s.c(0));
           }
           if (param0 < -16) {
             return;
@@ -47,17 +47,17 @@ class kda {
         if (param0 <= 92) {
           kda.a(-99, -54);
         }
-        if (bf.field_h[wca.field_n].c((byte) 95)) {
-          if (!bf.field_h[wca.field_n].field_i) {
-            return bf.field_h[wca.field_n].field_h[-1 + bf.field_h[wca.field_n].field_a];
+        if (bf.field_h[CreatureType.field_n].c((byte) 95)) {
+          if (!bf.field_h[CreatureType.field_n].field_i) {
+            return bf.field_h[CreatureType.field_n].field_h[-1 + bf.field_h[CreatureType.field_n].field_a];
           }
           return null;
         }
-        if (bf.field_h[wca.field_n].field_i) {
-          return bf.field_h[wca.field_n].field_h[bf.field_h[wca.field_n].field_e];
+        if (bf.field_h[CreatureType.field_n].field_i) {
+          return bf.field_h[CreatureType.field_n].field_h[bf.field_h[CreatureType.field_n].field_e];
         }
-        if (!bf.field_h[wca.field_n].field_i) {
-          return bf.field_h[wca.field_n].field_h[-1 + bf.field_h[wca.field_n].field_a];
+        if (!bf.field_h[CreatureType.field_n].field_i) {
+          return bf.field_h[CreatureType.field_n].field_h[-1 + bf.field_h[CreatureType.field_n].field_a];
         }
         return null;
     }

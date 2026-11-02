@@ -40,7 +40,7 @@ final class g extends IntrusiveNode {
           if (var5 == null) {
             return false;
           }
-          hia.a(-42, var5);
+          AttackOrder.a(-42, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

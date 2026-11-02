@@ -8,7 +8,7 @@ final class gj extends dfa {
     int field_db;
     fs field_e;
     jo field_s;
-    sfa field_Z;
+    CreatureOrder field_Z;
     private int[] field_v;
     private boolean field_eb;
     int field_u;
@@ -25,7 +25,7 @@ final class gj extends dfa {
     private IntrusiveDeque field_X;
     int field_p;
     ad field_P;
-    sfa[] field_Y;
+    CreatureOrder[] field_Y;
     private boolean field_Q;
     private int field_f;
     private pfa field_A;
@@ -48,7 +48,7 @@ final class gj extends dfa {
     kj[][] field_D;
     private sna field_z;
     int field_n;
-    op field_h;
+    BattleState field_h;
     boolean field_ab;
     private int field_K;
     int field_V;
@@ -85,8 +85,8 @@ final class gj extends dfa {
         kj var4;
         int var5;
         var5 = BachelorFridge.field_y;
-        for (var2 = 0; this.field_h.field_z > var2; var2++) {
-          for (var3 = 0; var3 < this.field_h.field_B; var3++) {
+        for (var2 = 0; this.field_h.width > var2; var2++) {
+          for (var3 = 0; var3 < this.field_h.height; var3++) {
             var4 = this.field_D[var2][var3];
             if (var4 != null &&
               var4.b(74)) {
@@ -114,13 +114,13 @@ final class gj extends dfa {
         if (param0 != -18254) {
           this.b(-102, 39);
         }
-        return this.field_h.field_a[param2][param1].field_n;
+        return this.field_h.tiles[param2][param1].terrain;
     }
 
     private final void q(int param0) {
         int var6 = 0;
         int var9 = 0;
-        at var3;
+        AnimationNode var3;
         vca var4;
         ad[][] var5;
         ad[] var7;
@@ -138,7 +138,7 @@ final class gj extends dfa {
           }
           var13 = (tia) (this.field_fb.c(0));
         }
-        var3 = (at) (this.field_j.b((byte) 90));
+        var3 = (AnimationNode) (this.field_j.b((byte) 90));
         if (var3 != null &&
           var3.b(21807)) {
           var3.unlink(false);
@@ -166,13 +166,13 @@ final class gj extends dfa {
               if (var10 != null) {
                 var10.a(104);
                 var11 = 1;
-                if (39 == var10.field_s.field_y) {
+                if (39 == var10.field_s.statusId) {
                   var11 = 0;
                 }
-                if (17 == var10.field_s.field_y) {
+                if (17 == var10.field_s.statusId) {
                   var11 = 2;
                 }
-                if (28 == var10.field_s.field_y) {
+                if (28 == var10.field_s.statusId) {
                   var11 = 3;
                 }
                 while (true) {
@@ -198,16 +198,16 @@ final class gj extends dfa {
         try {
           this.m(10);
           if (param0) {
-            op var4 = (op) null;
-            this.a((rk[]) null, (op) null, -93, 119);
+            BattleState var4 = (BattleState) null;
+            this.a((CreatureProfile[]) null, (BattleState) null, -93, 119);
           }
           this.field_P = param1;
           if (this.field_P != null) {
             RasterBuffer.a(33, 7758);
-            this.field_q = param1.field_s.field_x;
-            this.field_E = param1.field_s.field_J;
-            this.field_s.a((byte) -57, param1.field_s.field_J, param1.field_s.field_x);
-            var5 = this.field_s.a(param1.field_s.field_J, (byte) -91, param1.field_s.field_x);
+            this.field_q = param1.field_s.tileX;
+            this.field_E = param1.field_s.tileY;
+            this.field_s.a((byte) -57, param1.field_s.tileY, param1.field_s.tileX);
+            var5 = this.field_s.a(param1.field_s.tileY, (byte) -91, param1.field_s.tileX);
             this.field_W.c(-80 + var5.field_a, -40 + var5.field_c, -40);
             this.field_J = true;
             this.field_f = 5;
@@ -233,24 +233,24 @@ final class gj extends dfa {
         ema var10 = null;
         var9 = BachelorFridge.field_y;
         try {
-          var6_int = param4.field_s.field_x;
-          var7 = param4.field_s.field_J;
-          if (param4.field_s.field_y == 43) {
+          var6_int = param4.field_s.tileX;
+          var7 = param4.field_s.tileY;
+          if (param4.field_s.statusId == 43) {
             for (var8 = 0; param2 > var8; var8++) {
               if (2 != param3) {
                 if (param3 != 4) {
                   if (1 != param3) {
                     if (3 == param3) {
-                      this.field_h.b((byte) -72, 29, param4.field_s.field_x, param4.field_s.field_J + var8);
+                      this.field_h.b((byte) -72, 29, param4.field_s.tileX, param4.field_s.tileY + var8);
                     }
                   } else {
-                    this.field_h.b((byte) -122, 29, param4.field_s.field_x, param4.field_s.field_J - var8);
+                    this.field_h.b((byte) -122, 29, param4.field_s.tileX, param4.field_s.tileY - var8);
                   }
                 } else {
-                  this.field_h.b((byte) 66, 29, param4.field_s.field_x + var8, param4.field_s.field_J);
+                  this.field_h.b((byte) 66, 29, param4.field_s.tileX + var8, param4.field_s.tileY);
                 }
               } else {
-                this.field_h.b((byte) -76, 29, param4.field_s.field_x - var8, param4.field_s.field_J);
+                this.field_h.b((byte) -76, 29, param4.field_s.tileX - var8, param4.field_s.tileY);
               }
             }
           }
@@ -273,8 +273,8 @@ final class gj extends dfa {
             var10 = (ema) null;
             gj.a((byte) 117, (ema) null);
           }
-          if (param4.field_s.field_y == 40) {
-            param4.field_s.field_y = 0;
+          if (param4.field_s.statusId == 40) {
+            param4.field_s.statusId = 0;
           }
           this.a(param4, var7, param1, var6_int, (byte) -97);
           return;
@@ -309,7 +309,7 @@ final class gj extends dfa {
         }
     }
 
-    final ad b(aga param0, int param1) {
+    final ad b(BattleCreature param0, int param1) {
         ad var3 = null;
         RuntimeException var3_ref = null;
         ad stackIn_6_0 = null;
@@ -321,7 +321,7 @@ final class gj extends dfa {
           if (param0 == null) {
             return null;
           }
-          var3 = this.field_o[param0.field_D][param0.field_u];
+          var3 = this.field_o[param0.ownerIndex][param0.rosterSlot];
           if (param1 != -23990) {
             this.field_m = true;
           }
@@ -353,7 +353,7 @@ final class gj extends dfa {
         int var3;
         int var4;
         int var6;
-        aga var7;
+        BattleCreature var7;
         vca var8;
         int var3Lifetime1;
         int var4Lifetime1;
@@ -362,8 +362,8 @@ final class gj extends dfa {
         SoftwareRasterizer.clear();
         SoftwareRasterizer.setClip(0, 0, 640, i.field_a.field_rb);
         if (param0 < 29) {
-          var7 = (aga) null;
-          this.a((aga) null, -122);
+          var7 = (BattleCreature) null;
+          this.a((BattleCreature) null, -122);
         }
         if (0 == this.field_h.field_A &&
           0 == this.field_K) {
@@ -398,9 +398,9 @@ final class gj extends dfa {
               if (var4 != 0) {
                 this.field_x.e(-8 + (this.field_C.field_kb - (var3 >> 1)), -(var3 >> 1) + this.field_C.field_rb - 7, var3 + 16 + this.field_C.field_sb, this.field_C.field_p + (16 + var3), 256);
               }
-              ica.field_t.draw(574, 64);
+              SauceOfFlameEvent.field_t.draw(574, 64);
               if (this.field_C.field_T) {
-                fla.field_s.draw(574, 64);
+                ShieldSpecial.field_s.draw(574, 64);
               }
               b.field_t.drawParagraph(NetworkGameClient.field_q, 580, 41, 40, 30, 0, -1, 1, 0, 10);
             }
@@ -408,7 +408,7 @@ final class gj extends dfa {
               this.g(-1);
             }
             if (this.field_n < 0) {
-              fb.field_r.draw(-fb.field_r.field_q + b.field_t.a(BufferedSocket.field_a) + 20, 5);
+              ShuffleSpecial.field_r.draw(-ShuffleSpecial.field_r.field_q + b.field_t.a(BufferedSocket.field_a) + 20, 5);
               b.field_t.drawText(BufferedSocket.field_a, 5, -8 + b.field_t.field_u, 0, -1);
             }
             if (this.field_Y != null &&
@@ -426,7 +426,7 @@ final class gj extends dfa {
           }
           if (null != this.field_P &&
             this.field_J &&
-            this.field_P.field_s.field_I > 0) {
+            this.field_P.field_s.hp > 0) {
             this.field_W.a(0, -98, -10);
           }
           var8 = (vca) (this.field_S.b((byte) 90));
@@ -435,16 +435,16 @@ final class gj extends dfa {
             var8 = (vca) (this.field_S.c(0));
           }
           if (this.field_e.field_a) {
-            nna.field_w.draw(0, -nna.field_w.field_p + i.field_a.field_rb);
+            ShieldAnimation.field_w.draw(0, -ShieldAnimation.field_w.field_p + i.field_a.field_rb);
             var4Lifetime2 = 16776960;
             if (DualLinkNodeHashTable.field_b > 0 &&
               this.field_L % 40 > 20) {
               var4Lifetime2 = 16711680;
             }
-            ej.a(38, var4Lifetime2, pn.field_e, true, 12 + (-nna.field_w.field_p + i.field_a.field_rb + jha.field_g.field_u), -100);
+            ej.a(38, var4Lifetime2, pn.field_e, true, 12 + (-ShieldAnimation.field_w.field_p + i.field_a.field_rb + jha.field_g.field_u), -100);
           }
         }
-        if (hea.field_r >= 2) {
+        if (BananarangSpecial.field_r >= 2) {
           var3Lifetime1 = this.field_h.c((byte) -10);
           jha.field_g.a("Client: " + Integer.toHexString(var3Lifetime1), 320, 20, 8421631, -1);
           jha.field_g.a("Server: " + Integer.toHexString(this.field_g), 320, 40, 8421504, -1);
@@ -464,7 +464,7 @@ final class gj extends dfa {
           this.field_A.a(false);
         }
         if (af.field_a) {
-          kla.b(true);
+          DiveBomberAnimation.b(true);
         }
     }
 
@@ -485,7 +485,7 @@ final class gj extends dfa {
         if (param0 != 30996) {
           return;
         }
-        this.field_h.field_a[param1][param2].field_m = true;
+        this.field_h.tiles[param1][param2].field_m = true;
         uea var4 = new uea(this, param1, param2, 16711680);
         ((kj) ((Object) var4)).a(0);
     }
@@ -500,7 +500,7 @@ final class gj extends dfa {
           if (this.field_h.field_o != 3) {
             return true;
           }
-          if (!this.field_h.a((byte) -124, param0.field_s.field_D, param0.field_s.field_x, param0.field_s.field_J)) {
+          if (!this.field_h.a((byte) -124, param0.field_s.ownerIndex, param0.field_s.tileX, param0.field_s.tileY)) {
             return true;
           }
           if (!param1) {
@@ -532,18 +532,18 @@ final class gj extends dfa {
         ad var10;
         int var7Lifetime1;
         var9 = BachelorFridge.field_y;
-        var10 = this.field_G[this.field_Z.field_h.field_f];
+        var10 = this.field_G[this.field_Z.creature.field_f];
         this.field_H = this.field_s.field_h;
         this.field_N = this.field_s.field_s;
         if (0 > this.field_N) {
           return;
         }
-        if (this.field_h.field_z > this.field_N &&
+        if (this.field_h.width > this.field_N &&
           this.field_H >= 0 &&
-          this.field_h.field_B > this.field_H) {
+          this.field_h.height > this.field_H) {
           var3 = 124 % ((-58 - param0) / 54);
-          var4 = var10.field_s.field_x;
-          var5 = var10.field_s.field_J;
+          var4 = var10.field_s.tileX;
+          var5 = var10.field_s.tileY;
           var6 = un.a(126, this.field_H - var5, this.field_N - var4);
           var7 = 0;
           if (this.field_N - var4 == 0) {
@@ -562,7 +562,7 @@ final class gj extends dfa {
             } else {
               if ((var8.field_j == 80 ||
                 var8.field_j == 81) &&
-                this.field_h.field_a[this.field_N][this.field_H].field_l != null) {
+                this.field_h.tiles[this.field_N][this.field_H].occupant != null) {
                 this.m(10);
                 lf.field_c = 0;
                 this.field_f = 5;
@@ -577,8 +577,8 @@ final class gj extends dfa {
               if (0 != var6) {
                 this.field_P.field_s.field_s = var6;
               }
-              ((hia) (this.field_Z)).field_j = var6;
-              ((hia) (this.field_Z)).field_k = var7Lifetime1 - 1;
+              ((AttackOrder) (this.field_Z)).field_j = var6;
+              ((AttackOrder) (this.field_Z)).field_k = var7Lifetime1 - 1;
               this.k(-1);
               this.field_ab = false;
               uca.a(25, (byte) 114);
@@ -600,8 +600,8 @@ final class gj extends dfa {
           ad var5 = (ad) null;
           this.a(28, (ad) null);
         }
-        for (var2 = 0; this.field_h.field_z > var2; var2++) {
-          for (var3 = 0; var3 < this.field_h.field_B; var3++) {
+        for (var2 = 0; this.field_h.width > var2; var2++) {
+          for (var3 = 0; var3 < this.field_h.height; var3++) {
             if (null != this.field_D[var2][var3]) {
               return true;
             }
@@ -612,7 +612,7 @@ final class gj extends dfa {
 
     private final void e(byte param0) {
         int var2 = 0;
-        sfa var3;
+        CreatureOrder var3;
         oha var4;
         int var9;
         int var5;
@@ -630,14 +630,14 @@ final class gj extends dfa {
             if (var3 == null) {
               break;
             }
-            var4 = al.a(-110, var3.field_g);
-            hh.field_b[var4.field_h].draw(var3.field_h.field_f * 39 + 16, 28);
-            if (hh.field_b[var4.field_h].a(39 * var3.field_h.field_f + 16, 28, mk.field_p, gd.field_m)) {
+            var4 = al.a(-110, var3.moveId);
+            hh.field_b[var4.field_h].draw(var3.creature.field_f * 39 + 16, 28);
+            if (hh.field_b[var4.field_h].a(39 * var3.creature.field_f + 16, 28, mk.field_p, gd.field_m)) {
               var5 = 640;
               var6 = 480;
               var7 = 4 + mk.field_p;
               var8 = gd.field_m + 4;
-              sd.a(this.field_G[var3.field_h.field_f].field_s.a(var4, -5313), var7, var4, (byte) 74, var8, var5, var6);
+              sd.a(this.field_G[var3.creature.field_f].field_s.a(var4, -5313), var7, var4, (byte) 74, var8, var5, var6);
             }
           }
         }
@@ -659,64 +659,64 @@ final class gj extends dfa {
         } else {
           var2Lifetime1 = Math.max(ad.field_h.a(cd.field_o[this.field_h.field_o - 1]), ad.field_h.a(tw.field_b));
         }
-        SoftwareRasterizer.a(635 + (-var2Lifetime1 - 10), -eja.field_w.field_p + i.field_a.field_rb - 26, var2Lifetime1 + 20, 32, 7, 65793, 128);
+        SoftwareRasterizer.a(635 + (-var2Lifetime1 - 10), -ScavengerAnimation.field_w.field_p + i.field_a.field_rb - 26, var2Lifetime1 + 20, 32, 7, 65793, 128);
         if (this.field_h.field_J <= this.field_h.field_A) {
-          ad.field_h.b(tw.field_b, 630, i.field_a.field_rb - eja.field_w.field_p - 12, 0, -1);
+          ad.field_h.b(tw.field_b, 630, i.field_a.field_rb - ScavengerAnimation.field_w.field_p - 12, 0, -1);
         } else {
-          ad.field_h.b(lga.a(true, new String[]{Integer.toString((this.field_h.field_A - 1) / 2 + 1), Integer.toString(this.field_h.field_J / 2)}, eb.field_q), 630, -12 + i.field_a.field_rb - eja.field_w.field_p, 0, -1);
+          ad.field_h.b(lga.a(true, new String[]{Integer.toString((this.field_h.field_A - 1) / 2 + 1), Integer.toString(this.field_h.field_J / 2)}, FishRainSpecial.field_q), 630, -12 + i.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
         }
         if (param0 > -61) {
           var8 = (ad) null;
           this.b((ad) null, true);
         }
-        ad.field_h.b(cd.field_o[-1 + this.field_h.field_o], 630, -eja.field_w.field_p + i.field_a.field_rb, 0, -1);
-        var3 = -(this.field_h.field_d * 132) + 592;
-        eja.field_w.draw(var3, 4 - eja.field_w.field_p + i.field_a.field_rb);
-        for (var4 = 0; var4 < this.field_h.field_d; var4++) {
+        ad.field_h.b(cd.field_o[-1 + this.field_h.field_o], 630, -ScavengerAnimation.field_w.field_p + i.field_a.field_rb, 0, -1);
+        var3 = -(this.field_h.playerCount * 132) + 592;
+        ScavengerAnimation.field_w.draw(var3, 4 - ScavengerAnimation.field_w.field_p + i.field_a.field_rb);
+        for (var4 = 0; var4 < this.field_h.playerCount; var4++) {
           var5 = var4 * 132 + 40;
-          b.field_t.a(this.field_h.field_y[var4], var3 + (var5 + 67), 10 - eja.field_w.field_p + (i.field_a.field_rb + 12), var4 + 2, -1);
-          SoftwareRasterizer.a(7 + (var3 + var5), 14 - eja.field_w.field_p + i.field_a.field_rb + 10, 130, 16, 7, 65793, 128);
+          b.field_t.a(this.field_h.field_y[var4], var3 + (var5 + 67), 10 - ScavengerAnimation.field_w.field_p + (i.field_a.field_rb + 12), var4 + 2, -1);
+          SoftwareRasterizer.a(7 + (var3 + var5), 14 - ScavengerAnimation.field_w.field_p + i.field_a.field_rb + 10, 130, 16, 7, 65793, 128);
           if (this.field_h.field_o == 1) {
             for (var6 = 0; 7 > var6; var6++) {
-              if (this.field_h.field_S[var4].field_b[var6] != null) {
-                if (this.field_h.field_S[var4].field_b[var6].i(-124)) {
-                  kn.field_g.drawScaledAlpha(18 * var6 + (var3 + var5 + 12), 27 - eja.field_w.field_p + i.field_a.field_rb, kn.field_g.field_q >> 1, kn.field_g.field_p >> 1, 192);
+              if (this.field_h.rosters[var4].field_b[var6] != null) {
+                if (this.field_h.rosters[var4].field_b[var6].isDown(-124)) {
+                  kn.field_g.drawScaledAlpha(18 * var6 + (var3 + var5 + 12), 27 - ScavengerAnimation.field_w.field_p + i.field_a.field_rb, kn.field_g.field_q >> 1, kn.field_g.field_p >> 1, 192);
                 } else {
-                  this.field_o[var4][var6].field_f.a(1024, 10 + (-eja.field_w.field_p + i.field_a.field_rb - 12), 256, 8, 1024, 18 * var6 + var3 + var5 - 20);
+                  this.field_o[var4][var6].field_f.a(1024, 10 + (-ScavengerAnimation.field_w.field_p + i.field_a.field_rb - 12), 256, 8, 1024, 18 * var6 + var3 + var5 - 20);
                 }
               }
             }
           } else if (this.field_h.field_o == 2) {
             for (var6 = 0; var6 < this.field_T[var4]; var6++) {
-              sj.field_k[0].a(10 + var5 + var3 + var6 * 14, -eja.field_w.field_p + i.field_a.field_rb + 22);
+              sj.field_k[0].a(10 + var5 + var3 + var6 * 14, -ScavengerAnimation.field_w.field_p + i.field_a.field_rb + 22);
             }
           } else {
             if (3 == this.field_h.field_o) {
               for (var6 = 0; var6 < this.field_h.field_C[var4]; var6++) {
-                ela.field_j[0].a(var6 * 14 + var3 + (var5 + 10), 12 + i.field_a.field_rb + (-eja.field_w.field_p + 10));
+                ela.field_j[0].a(var6 * 14 + var3 + (var5 + 10), 12 + i.field_a.field_rb + (-ScavengerAnimation.field_w.field_p + 10));
               }
             }
           }
           if (this.field_h.a((byte) -60, var4)) {
-            b.field_t.a(lga.a(true, new String[]{this.field_h.field_y[var4]}, ts.field_p), 72 + var3 + (var5 - 5), 50 + i.field_a.field_rb - eja.field_w.field_p, 0, -1);
+            b.field_t.a(lga.a(true, new String[]{this.field_h.field_y[var4]}, DisableSpecial.field_p), 72 + var3 + (var5 - 5), 50 + i.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
           } else {
             if (this.field_h.b((byte) 106, var4)) {
-              b.field_t.a(cka.field_w, 72 + (-5 + var5 + var3), 26 + (-eja.field_w.field_p + (i.field_a.field_rb + 24)), 0, -1);
+              b.field_t.a(ZombiesAnimation.field_w, 72 + (-5 + var5 + var3), 26 + (-ScavengerAnimation.field_w.field_p + (i.field_a.field_rb + 24)), 0, -1);
             } else {
-              if (this.field_h.field_S[var4].field_c) {
-                b.field_t.a(cf.field_a, 72 + (-5 + var3 + var5), 50 + (i.field_a.field_rb - eja.field_w.field_p), 0, -1);
+              if (this.field_h.rosters[var4].field_c) {
+                b.field_t.a(cf.field_a, 72 + (-5 + var3 + var5), 50 + (i.field_a.field_rb - ScavengerAnimation.field_w.field_p), 0, -1);
               }
             }
           }
         }
     }
 
-    private final void a(int param0, rk[] param1) {
+    private final void a(int param0, CreatureProfile[] param1) {
         try {
           this.field_z = mka.a(13558251, param0, 13558251, (byte) -128, jha.field_g, 13558251, 16777215, 13558251);
-          this.field_z.field_db = op.field_I;
+          this.field_z.field_db = BattleState.field_I;
           this.field_z.field_eb = wd.field_w;
-          this.field_z.field_A = bla.field_p;
+          this.field_z.field_A = RageSpecial.field_p;
           this.field_z.field_N = 1;
           this.field_z.field_B = 12;
           this.field_W = new ng(this, this.field_z);
@@ -733,7 +733,7 @@ final class gj extends dfa {
         }
     }
 
-    private final void a(boolean param0, byte param1, gm param2, int param3) {
+    private final void a(boolean param0, byte param1, MoveOrder param2, int param3) {
         if (param1 != -88) {
           return;
         }
@@ -755,15 +755,15 @@ final class gj extends dfa {
 
     final void a(boolean param0, boolean param1) {
         IntrusiveDeque stackIn_25_0 = null;
-        at stackIn_25_1 = null;
+        AnimationNode stackIn_25_1 = null;
         boolean stackIn_26_2 = false;
         boolean stackIn_51_0 = false;
         boolean stackIn_60_1 = false;
         int var3;
-        at var4_ref_at;
+        AnimationNode var4_ref_at;
         int var4;
         int var5;
-        cj var6;
+        BattleUpdate var6;
         var5 = BachelorFridge.field_y;
         if (3 == kaa.field_m) {
           return;
@@ -810,7 +810,7 @@ final class gj extends dfa {
                 this.field_e.d((byte) -16);
               }
             } else {
-              var6 = (cj) (this.field_X.a(false));
+              var6 = (BattleUpdate) (this.field_X.a(false));
               var4_ref_at = var6.a(5, this);
               stackIn_25_0 = this.field_j;
               stackIn_25_1 = var4_ref_at;
@@ -826,10 +826,10 @@ final class gj extends dfa {
           if (this.field_e.field_a) {
             if ((!vs.field_d ||
               !lna.field_q) &&
-              !lb.g((byte) -59)) {
+              !InvincibleAnimation.g((byte) -59)) {
               if (!(mk.field_p <= 0) &&
-                !(mk.field_p >= nna.field_w.field_q) &&
-                !(i.field_a.field_rb - nna.field_w.field_p >= gd.field_m) &&
+                !(mk.field_p >= ShieldAnimation.field_w.field_q) &&
+                !(i.field_a.field_rb - ShieldAnimation.field_w.field_p >= gd.field_m) &&
                 !(i.field_a.field_rb <= gd.field_m) &&
                 lf.field_c == 1) {
                 stackIn_51_0 = !(wj.field_g);
@@ -856,23 +856,23 @@ final class gj extends dfa {
             this.field_j.e(12917)) {
             var4 = 0;
             if (var3 != 0) {
-              if (wga.field_q[98] ||
-                wga.field_q[sm.field_r]) {
+              if (InvincibleEvent.field_q[98] ||
+                InvincibleEvent.field_q[SlowAllEvent.field_r]) {
                 this.field_s.a(0, 8, 2962);
                 var4 = 1;
               }
-              if (wga.field_q[99] ||
-                wga.field_q[rq.field_g]) {
+              if (InvincibleEvent.field_q[99] ||
+                InvincibleEvent.field_q[rq.field_g]) {
                 var4 = 1;
                 this.field_s.a(0, -8, 2962);
               }
-              if (wga.field_q[96] ||
-                wga.field_q[oq.field_a]) {
+              if (InvincibleEvent.field_q[96] ||
+                InvincibleEvent.field_q[oq.field_a]) {
                 var4 = 1;
                 this.field_s.a(8, 0, 2962);
               }
-              if (wga.field_q[97] ||
-                wga.field_q[vk.field_s]) {
+              if (InvincibleEvent.field_q[97] ||
+                InvincibleEvent.field_q[MartyrEvent.field_s]) {
                 this.field_s.a(-8, 0, 2962);
                 var4 = 1;
               }
@@ -931,7 +931,7 @@ final class gj extends dfa {
     private final void k(int param0) {
         int var3 = 0;
         int[] var2;
-        sfa var4;
+        CreatureOrder var4;
         int var5;
         int[] var6;
         int[] var7;
@@ -940,7 +940,7 @@ final class gj extends dfa {
         int fieldTemp$1 = this.field_U;
         this.field_U = this.field_U + 1;
         this.field_Y[fieldTemp$1] = this.field_Z;
-        this.field_G[this.field_Z.field_h.field_f].field_l = true;
+        this.field_G[this.field_Z.creature.field_f].field_l = true;
         this.field_w = false;
         this.field_P = null;
         this.field_ab = false;
@@ -953,7 +953,7 @@ final class gj extends dfa {
         for (var3 = 0; var3 < 7; var3++) {
           var4 = this.field_Y[var3];
           if (var4 != null) {
-            var2[var3] = -this.field_G[var4.field_h.field_f].field_s.field_v;
+            var2[var3] = -this.field_G[var4.creature.field_f].field_s.field_v;
           } else {
             var2[var3] = 2147483646;
           }
@@ -961,24 +961,24 @@ final class gj extends dfa {
         if (param0 != -1) {
           this.field_x = (Sprite) null;
         }
-        dk.$cfr$intArgs$a$e46325ef0b7e(this.field_Y, 94, var7);
+        IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(this.field_Y, 94, var7);
         this.field_f = 5;
     }
 
     private final boolean r(int param0) {
         boolean stackIn_32_0 = false;
-        rk[] var3;
+        CreatureProfile[] var3;
         hd var4;
         if (param0 != 2) {
-          var3 = (rk[]) null;
-          this.a(28, (rk[]) null);
+          var3 = (CreatureProfile[]) null;
+          this.a(28, (CreatureProfile[]) null);
         }
-        var4 = (hd) (ur.field_e[this.field_Z.field_g]);
+        var4 = (hd) (ur.field_e[this.field_Z.moveId]);
         if (var4.c(0) == 0) {
           if (var4.field_j != 130) {
             return true;
           }
-          stackIn_32_0 = (this.field_h.field_a[this.field_N][this.field_H].field_l == null) && (this.field_h.field_a[this.field_N][this.field_H].e(-123));
+          stackIn_32_0 = (this.field_h.tiles[this.field_N][this.field_H].occupant == null) && (this.field_h.tiles[this.field_N][this.field_H].e(-123));
           return stackIn_32_0;
         }
         boolean decompiledFrameRemainder0 = true;
@@ -989,24 +989,24 @@ final class gj extends dfa {
               this.field_h.c(this.field_N, this.field_H, 127).field_A) {
               return true;
             }
-            if (this.field_h.field_a[this.field_N][this.field_H].field_l != null) {
+            if (this.field_h.tiles[this.field_N][this.field_H].occupant != null) {
               return true;
             }
             return false;
           }
           if (var4.c(0) == 2) {
-            if (this.field_N == this.field_P.field_s.field_x + 1 &&
-              this.field_P.field_s.field_J == this.field_H) {
+            if (this.field_N == this.field_P.field_s.tileX + 1 &&
+              this.field_P.field_s.tileY == this.field_H) {
               return true;
             }
-            if (this.field_N == -1 + this.field_P.field_s.field_x &&
-              this.field_P.field_s.field_J == this.field_H) {
+            if (this.field_N == -1 + this.field_P.field_s.tileX &&
+              this.field_P.field_s.tileY == this.field_H) {
               return true;
             }
-            decompiledFrameRemainder0 = (this.field_P.field_s.field_x != this.field_N ||
-              1 + this.field_P.field_s.field_J != this.field_H);
-            if ((decompiledFrameRemainder0) && (this.field_P.field_s.field_x == this.field_N &&
-              this.field_H == this.field_P.field_s.field_J - 1)) {
+            decompiledFrameRemainder0 = (this.field_P.field_s.tileX != this.field_N ||
+              1 + this.field_P.field_s.tileY != this.field_H);
+            if ((decompiledFrameRemainder0) && (this.field_P.field_s.tileX == this.field_N &&
+              this.field_H == this.field_P.field_s.tileY - 1)) {
               return true;
             }
           }
@@ -1023,14 +1023,14 @@ final class gj extends dfa {
         int var3;
         ad[] var4;
         ad var6;
-        aga var7;
+        BattleCreature var7;
         int var8;
         int var9;
         int var10;
         var10 = BachelorFridge.field_y;
         var2 = 14;
-        var3 = this.field_h.field_S[this.field_n].a((byte) -43);
-        fb.field_r.draw(var3 * 39 - fb.field_r.field_q, 5);
+        var3 = this.field_h.rosters[this.field_n].a((byte) -43);
+        ShuffleSpecial.field_r.draw(var3 * 39 - ShuffleSpecial.field_r.field_q, 5);
         if (param0 != -1) {
           this.field_n = 83;
         }
@@ -1039,20 +1039,20 @@ final class gj extends dfa {
           var6 = var4[var5];
           if (var6 != null) {
             var7 = var6.field_s;
-            uga.field_C.draw(-17 + var2, 6);
+            FullHealAnimation.field_C.draw(-17 + var2, 6);
             if (null != this.field_P &&
-              this.field_P.field_s.field_u == var7.field_u &&
-              this.field_P.field_s.field_D == var7.field_D) {
+              this.field_P.field_s.rosterSlot == var7.rosterSlot &&
+              this.field_P.field_s.ownerIndex == var7.ownerIndex) {
               this.field_x.drawAdditive(var2 - 17, 1, 128);
             }
-            if (!var6.field_s.i(100)) {
+            if (!var6.field_s.isDown(100)) {
               var6.field_f.a(2048, -43, 255, 8, 2048, var2 - 66);
             } else {
               kn.field_g.a(var2, 15, 192);
             }
             var8 = -7 + var2;
             var9 = 11;
-            if (!var6.field_s.i(param0 ^ -111)) {
+            if (!var6.field_s.isDown(param0 ^ -111)) {
               b.field_t.drawText("" + var7.field_v, var8 - 4, 6 + var9, 2 + this.field_n, -1);
             }
             var2 += 40;
@@ -1063,18 +1063,18 @@ final class gj extends dfa {
     final void a(int param0, byte param1) {
         int fieldTemp$0 = 0;
         int var5_int = 0;
-        sfa var3;
+        CreatureOrder var3;
         int var4;
         ad var5;
-        sfa[] var7;
+        CreatureOrder[] var7;
         int var8;
         int var9;
-        gm var10;
-        aga var11;
-        sfa var12;
-        gm var13;
-        aga var14;
-        sfa[] var15;
+        MoveOrder var10;
+        BattleCreature var11;
+        CreatureOrder var12;
+        MoveOrder var13;
+        BattleCreature var14;
+        CreatureOrder[] var15;
         var9 = BachelorFridge.field_y;
         fieldTemp$0 = this.field_U - 1;
         this.field_U = this.field_U - 1;
@@ -1084,38 +1084,38 @@ final class gj extends dfa {
           for (var5_int = 0; this.field_Y.length > var5_int; var5_int++) {
             var12 = this.field_Y[var5_int];
             if (var12 != null &&
-              param0 == var12.field_h.field_f) {
+              param0 == var12.creature.field_f) {
               var3 = var12;
               var4 = var5_int;
             }
           }
         }
-        var5 = this.field_G[var3.field_h.field_f];
+        var5 = this.field_G[var3.creature.field_f];
         var5.field_l = false;
         var11 = var5.field_s;
         var14 = var11;
-        if (var3 instanceof gm) {
-          var10 = (gm) (var3);
+        if (var3 instanceof MoveOrder) {
+          var10 = (MoveOrder) (var3);
           var13 = var10;
           if (var13.field_i == 2) {
-            this.field_h.field_a[-var13.field_l + var14.field_x][var14.field_J].field_g = false;
+            this.field_h.tiles[-var13.field_l + var14.tileX][var14.tileY].field_g = false;
           } else {
             if (var13.field_i != 4) {
               if (var13.field_i == 3) {
-                this.field_h.field_a[var14.field_x][var14.field_J + var13.field_l].field_g = false;
+                this.field_h.tiles[var14.tileX][var14.tileY + var13.field_l].field_g = false;
               } else {
                 if (1 == var13.field_i) {
-                  this.field_h.field_a[var14.field_x][-var13.field_l + var14.field_J].field_g = false;
+                  this.field_h.tiles[var14.tileX][-var13.field_l + var14.tileY].field_g = false;
                 }
               }
             } else {
-              this.field_h.field_a[var10.field_l + var11.field_x][var11.field_J].field_g = false;
+              this.field_h.tiles[var10.field_l + var11.tileX][var11.tileY].field_g = false;
             }
           }
         }
         var8 = 25 / ((param1 - 70) / 54);
         var4++;
-        var15 = new sfa[this.field_Y.length];
+        var15 = new CreatureOrder[this.field_Y.length];
         var7 = var15;
         if (var4 > 0) {
           ArrayOperations.copy(this.field_Y, 0, var15, 0, -1 + var4);
@@ -1137,24 +1137,24 @@ final class gj extends dfa {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        if (this.field_s != null && this.field_s.field_q >= 0 && this.field_s.field_q < this.field_h.field_z && this.field_s.field_r >= 0 &&
-          !(this.field_h.field_B <= this.field_s.field_r)) {
+        if (this.field_s != null && this.field_s.field_q >= 0 && this.field_s.field_q < this.field_h.width && this.field_s.field_r >= 0 &&
+          !(this.field_h.height <= this.field_s.field_r)) {
           var2 = mk.field_p;
           var3 = gd.field_m;
           var4 = this.a(-18254, this.field_s.field_r, this.field_s.field_q);
-          var5 = ad.field_h.c(od.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_d, 100) + 20;
-          var6 = 20 + ad.field_h.c(od.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_a, 100);
+          var5 = ad.field_h.c(BuffVendorAnimation.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_d, 100) + 20;
+          var6 = 20 + ad.field_h.c(BuffVendorAnimation.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_a, 100);
           var5 = Math.max(var5, var6);
           if (640 < var2 + var5) {
             var2 = var2 + (640 - var2 - var5);
           }
-          var7 = 20 + ad.field_h.measureWrappedHeight(od.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_d, 100, 12) + ad.field_h.measureWrappedHeight(od.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_a, 100, 12);
+          var7 = 20 + ad.field_h.measureWrappedHeight(BuffVendorAnimation.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_d, 100, 12) + ad.field_h.measureWrappedHeight(BuffVendorAnimation.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_a, 100, 12);
           if (i.field_a.field_rb < var7 + var3) {
             var3 = var3 + (i.field_a.field_rb - var3 - var7);
           }
           SoftwareRasterizer.a(var2, var3, var5, var7, 5, 65793, 192);
-          ad.field_h.a(od.field_w[var4].field_a, var2 + (var5 >> 1), var3 + 15, 0, -1);
-          ad.field_h.drawParagraph(od.field_w[var4].field_d, 10 + var2, var3 + 20, -20 + var5, 80, 0, -1, 1, 0, 12);
+          ad.field_h.a(BuffVendorAnimation.field_w[var4].field_a, var2 + (var5 >> 1), var3 + 15, 0, -1);
+          ad.field_h.drawParagraph(BuffVendorAnimation.field_w[var4].field_d, 10 + var2, var3 + 20, -20 + var5, 80, 0, -1, 1, 0, 12);
         }
         if (param0 != 8910) {
           this.field_q = 34;
@@ -1165,9 +1165,9 @@ final class gj extends dfa {
         boolean discarded$1 = false;
         RuntimeException var3 = null;
         ad var4 = null;
-        aga var5 = null;
-        aga var6 = null;
-        aga var7 = null;
+        BattleCreature var5 = null;
+        BattleCreature var6 = null;
+        BattleCreature var7 = null;
         Object stackIn_4_0 = null;
         ad stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -1178,8 +1178,8 @@ final class gj extends dfa {
           var6 = this.field_h.a((byte) -120, param1.field_s);
           var7 = var6;
           if (param0 != 21915) {
-            var5 = (aga) null;
-            discarded$1 = this.a((aga) null, (byte) 21);
+            var5 = (BattleCreature) null;
+            discarded$1 = this.a((BattleCreature) null, (byte) 21);
           }
           if (var7 == null) {
             stackIn_4_0 = null;
@@ -1188,13 +1188,13 @@ final class gj extends dfa {
           var4 = new ad(var7);
           param1.c((byte) -73);
           var4.c((byte) -102);
-          if (var7.field_D == this.field_n) {
-            this.field_G[var6.field_u] = var4;
-            if (this.field_K < var7.field_u + 1) {
-              this.field_K = var7.field_u + 1;
+          if (var7.ownerIndex == this.field_n) {
+            this.field_G[var6.rosterSlot] = var4;
+            if (this.field_K < var7.rosterSlot + 1) {
+              this.field_K = var7.rosterSlot + 1;
             }
           }
-          this.field_o[var6.field_D][var6.field_u] = var4;
+          this.field_o[var6.ownerIndex][var6.rosterSlot] = var4;
           stackIn_9_0 = var4;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1211,7 +1211,7 @@ final class gj extends dfa {
         }
     }
 
-    private final boolean a(aga param0, byte param1) {
+    private final boolean a(BattleCreature param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
@@ -1221,7 +1221,7 @@ final class gj extends dfa {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 101 % ((param1 + 59) / 36);
-          stackIn_3_0 = (this.field_n == param0.field_D);
+          stackIn_3_0 = (this.field_n == param0.ownerIndex);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1237,12 +1237,12 @@ final class gj extends dfa {
         }
     }
 
-    final sfa b(ad param0, boolean param1) {
+    final CreatureOrder b(ad param0, boolean param1) {
         int var4 = 0;
-        sfa[] var3 = null;
-        sfa var5 = null;
+        CreatureOrder[] var3 = null;
+        CreatureOrder var5 = null;
         int var6 = 0;
-        sfa stackIn_10_0 = null;
+        CreatureOrder stackIn_10_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -1257,7 +1257,7 @@ final class gj extends dfa {
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5 != null &&
-              param0.field_s.field_u == var5.field_h.field_f) {
+              param0.field_s.rosterSlot == var5.creature.field_f) {
               stackIn_10_0 = var5;
               return stackIn_10_0;
             }
@@ -1280,19 +1280,19 @@ final class gj extends dfa {
     final void a(ad param0, ad param1, boolean param2) {
         int var4_int = 0;
         int var5 = 0;
-        if (!param0.field_s.a(this.field_h.field_a[param1.field_s.field_x][param1.field_s.field_J].field_n, param2)) {
+        if (!param0.field_s.a(this.field_h.tiles[param1.field_s.tileX][param1.field_s.tileY].terrain, param2)) {
           return;
         }
-        if (!param1.field_s.a(this.field_h.field_a[param0.field_s.field_x][param0.field_s.field_J].field_n, false)) {
+        if (!param1.field_s.a(this.field_h.tiles[param0.field_s.tileX][param0.field_s.tileY].terrain, false)) {
           return;
         }
         try {
-          var4_int = param0.field_s.field_x;
-          var5 = param0.field_s.field_J;
-          param0.field_s.field_x = param1.field_s.field_x;
-          param0.field_s.field_J = param1.field_s.field_J;
-          param1.field_s.field_x = var4_int;
-          param1.field_s.field_J = var5;
+          var4_int = param0.field_s.tileX;
+          var5 = param0.field_s.tileY;
+          param0.field_s.tileX = param1.field_s.tileX;
+          param0.field_s.tileY = param1.field_s.tileY;
+          param1.field_s.tileX = var4_int;
+          param1.field_s.tileY = var5;
           this.b(param0, param1, true);
           this.b(param1, param0, !param2 ? true : false);
         } catch (RuntimeException runtimeException) {
@@ -1316,7 +1316,7 @@ final class gj extends dfa {
         StringBuilder stackIn_60_1 = null;
         String stackIn_61_2 = null;
         RuntimeException decompiledCaughtException = null;
-        wia var4 = null;
+        BoardTile var4 = null;
         RuntimeException var4_ref = null;
         jha var5_ref_jha = null;
         nj var5_ref_nj = null;
@@ -1327,33 +1327,33 @@ final class gj extends dfa {
         ek var8_ref_ek = null;
         jha var10 = null;
         int var11 = 0;
-        wia var13 = null;
+        BoardTile var13 = null;
         eda var14 = null;
-        wia var15 = null;
+        BoardTile var15 = null;
         int[][] var22 = null;
         int[] var23 = null;
         Object var7Lifetime1;
         var11 = BachelorFridge.field_y;
         try {
-          var13 = param0.field_s.field_w.field_a[param0.field_s.field_x][param0.field_s.field_J];
+          var13 = param0.field_s.battle.tiles[param0.field_s.tileX][param0.field_s.tileY];
           var15 = var13;
           var4 = var15;
-          var4.field_l = param0.field_s;
+          var4.occupant = param0.field_s;
           if (param0.field_s.a(32, (byte) 61)) {
             return;
           }
           if (!param2) {
             this.field_x = (Sprite) null;
           }
-          if (21 == var15.field_n) {
-            var14 = new eda(this, param0.field_s.field_x, param0.field_s.field_J, param0.field_f, this.field_s.field_k.field_b[93]);
+          if (21 == var15.terrain) {
+            var14 = new eda(this, param0.field_s.tileX, param0.field_s.tileY, param0.field_f, this.field_s.field_k.field_b[93]);
             var14 = var14;
             ((kj) ((Object) var14)).a(0);
           }
-          if (od.field_w[var13.field_n].field_b &&
+          if (BuffVendorAnimation.field_w[var13.terrain].field_b &&
             var15.field_m &&
             this.a(param0, param2) &&
-            33 != param0.field_s.field_y) {
+            33 != param0.field_s.statusId) {
             if (var15.a(-36) != 16 &&
               var15.a(-36) != 18 &&
               17 != var15.a(-36) &&
@@ -1362,43 +1362,43 @@ final class gj extends dfa {
                 var15.a(-36) != 6 &&
                 5 != var15.a(-36) &&
                 var15.a(-36) != 7) {
-                var5_ref_jha = new jha(this, param0.field_s.field_x, param0.field_s.field_J, param0.field_s.field_D);
+                var5_ref_jha = new jha(this, param0.field_s.tileX, param0.field_s.tileY, param0.field_s.ownerIndex);
                 ((kj) ((Object) var5_ref_jha)).a(0);
               } else {
                 aba.a((byte) -52, 15);
               }
             } else {
               aba.a((byte) -53, 16);
-              var5_ref_nj = new nj(this, param0.field_s.field_x, param0.field_s.field_J, od.field_w[var13.field_n].field_f);
+              var5_ref_nj = new nj(this, param0.field_s.tileX, param0.field_s.tileY, BuffVendorAnimation.field_w[var13.terrain].field_f);
               ((kj) ((Object) var5_ref_nj)).a(0);
             }
             param0.a(24831, 11, kna.field_g[var15.a(-36)]);
           }
-          stackIn_30_0 = (var15.field_n != 38) ? 0 : 1;
+          stackIn_30_0 = (var15.terrain != 38) ? 0 : 1;
           var5 = stackIn_30_0;
           stackIn_33_0 = (var15.field_j != 0) ? 0 : 1;
           var6 = stackIn_33_0;
           param0.field_s.a(var15, -122);
           if (var5 != 0) {
             if (var6 != 0) {
-              var7 = new bn(this, param0.field_s.field_x, param0.field_s.field_J);
+              var7 = new bn(this, param0.field_s.tileX, param0.field_s.tileY);
               var8_ref_ek = new ek(this, param0, -30);
               this.field_j.a(var8_ref_ek, true);
             } else {
-              var7 = new oia(this, param0.field_s.field_x, param0.field_s.field_J);
+              var7 = new oia(this, param0.field_s.tileX, param0.field_s.tileY);
               var8_ref_ek = new ek(this, param0, 75);
               this.field_j.a(var8_ref_ek, param2);
             }
             ((kj) (var7)).a(0);
           }
-          var22 = param0.field_s.field_w.field_i;
+          var22 = param0.field_s.battle.field_i;
           for (var8 = 0; var8 < var22.length; var8++) {
             var23 = var22[var8];
-            if (param0.field_s.field_x == var23[0] &&
-              var23[1] == param0.field_s.field_J) {
-              var10 = new jha(this, param0.field_s.field_x, param0.field_s.field_J, param0.field_s.field_D);
+            if (param0.field_s.tileX == var23[0] &&
+              var23[1] == param0.field_s.tileY) {
+              var10 = new jha(this, param0.field_s.tileX, param0.field_s.tileY, param0.field_s.ownerIndex);
               ((kj) ((Object) var10)).a(0);
-              if (param0.field_s.field_D != this.field_n) {
+              if (param0.field_s.ownerIndex != this.field_n) {
                 aba.a((byte) -117, 18);
               } else {
                 aba.a((byte) 43, 17);
@@ -1408,15 +1408,15 @@ final class gj extends dfa {
           if (3 == this.field_h.field_o) {
             if (param0.field_s.g((byte) 85)) {
               var7_int = this.field_h.b((byte) 99, param0.field_s);
-              this.field_h.field_c[var7_int] = new int[]{param0.field_s.field_x, param0.field_s.field_J};
+              this.field_h.field_c[var7_int] = new int[]{param0.field_s.tileX, param0.field_s.tileY};
             }
             if (this.a((byte) -87, param0)) {
-              var7Lifetime1 = new bu(this, param0.field_s.field_x, param0.field_s.field_J, param0.field_s.field_D);
+              var7Lifetime1 = new bu(this, param0.field_s.tileX, param0.field_s.tileY, param0.field_s.ownerIndex);
               ((kj) (var7Lifetime1)).a(0);
               this.field_h.a(this.field_h.b((byte) 121, param0.field_s), (byte) 97);
-              this.field_h.field_C[param0.field_s.field_D] = this.field_h.field_C[param0.field_s.field_D] + 1;
-              param0.field_s.field_y = 0;
-              param0.a(this.c(param0.field_s.field_D, 2271), 46, gka.field_r);
+              this.field_h.field_C[param0.field_s.ownerIndex] = this.field_h.field_C[param0.field_s.ownerIndex] + 1;
+              param0.field_s.statusId = 0;
+              param0.a(this.c(param0.field_s.ownerIndex, 2271), 46, gka.field_r);
             }
           }
           return;
@@ -1443,37 +1443,37 @@ final class gj extends dfa {
     private final void a(byte param0) {
         int var4 = 0;
         int var3;
-        sfa var5;
+        CreatureOrder var5;
         ad var6;
-        aga var7;
-        gm var8;
+        BattleCreature var7;
+        MoveOrder var8;
         int var9;
-        sfa[] var10;
+        CreatureOrder[] var10;
         var9 = BachelorFridge.field_y;
         var10 = this.field_Y;
         var3 = -17 % ((-79 - param0) / 47);
         for (var4 = 0; var4 < var10.length; var4++) {
           var5 = var10[var4];
           if (var5 != null) {
-            var6 = this.field_G[var5.field_h.field_f];
+            var6 = this.field_G[var5.creature.field_f];
             var7 = var6.field_s;
             var6.field_l = false;
-            if (var5 instanceof gm) {
-              var8 = (gm) (var5);
+            if (var5 instanceof MoveOrder) {
+              var8 = (MoveOrder) (var5);
               if (var8.field_i != 2) {
                 if (4 == var8.field_i) {
-                  this.field_h.field_a[var7.field_x + var8.field_l][var7.field_J].field_g = false;
+                  this.field_h.tiles[var7.tileX + var8.field_l][var7.tileY].field_g = false;
                 } else {
                   if (3 != var8.field_i) {
                     if (var8.field_i == 1) {
-                      this.field_h.field_a[var7.field_x][var7.field_J - var8.field_l].field_g = false;
+                      this.field_h.tiles[var7.tileX][var7.tileY - var8.field_l].field_g = false;
                     }
                   } else {
-                    this.field_h.field_a[var7.field_x][var8.field_l + var7.field_J].field_g = false;
+                    this.field_h.tiles[var7.tileX][var8.field_l + var7.tileY].field_g = false;
                   }
                 }
               } else {
-                this.field_h.field_a[-var8.field_l + var7.field_x][var7.field_J].field_g = false;
+                this.field_h.tiles[-var8.field_l + var7.tileX][var7.tileY].field_g = false;
               }
             }
           }
@@ -1482,13 +1482,13 @@ final class gj extends dfa {
 
     private final void a(ad param0, int param1, ad param2, int param3, byte param4) {
         try {
-          param0.field_s.field_w.field_a[param0.field_s.field_x][param0.field_s.field_J].field_l = null;
+          param0.field_s.battle.tiles[param0.field_s.tileX][param0.field_s.tileY].occupant = null;
           if (param4 > -35) {
             ad var7 = (ad) null;
             this.a(-101, (ad) null);
           }
-          param0.field_s.field_J = param1;
-          param0.field_s.field_x = param3;
+          param0.field_s.tileY = param1;
+          param0.field_s.tileX = param3;
           this.b(param0, param2, true);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -1520,7 +1520,7 @@ final class gj extends dfa {
           return;
         }
         Sprite var2 = new Sprite(640, 480);
-        fc.a(480, 640, var2, 0, (byte) 124, 0);
+        OhNoSpecial.a(480, 640, var2, 0, (byte) 124, 0);
         eq.a(var2, this, (byte) -111);
         sia.field_h = false;
         lg.a(true, 3, false);
@@ -1543,7 +1543,7 @@ final class gj extends dfa {
           this.field_db = param0;
           var5 = (t) (al.a(116, this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]]));
           this.field_P.a(16776960, 41, var5.field_f);
-          this.field_Z = (sfa) ((Object) new hia(al.a(94, this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]]).field_j, this.field_P.field_s));
+          this.field_Z = (CreatureOrder) ((Object) new AttackOrder(al.a(94, this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]]).field_j, this.field_P.field_s));
           this.field_ab = true;
           return;
         }
@@ -1636,13 +1636,13 @@ final class gj extends dfa {
         if (this.field_h.field_J - 1 != this.field_h.field_A) {
           if (this.field_M != 1) {
             if (this.field_M == 2) {
-              this.a(3, fv.field_y);
+              this.a(3, PetAttackAnimation.field_y);
             }
           } else {
             this.a(3, ph.field_C);
           }
         } else {
-          this.a(3, wga.field_r);
+          this.a(3, InvincibleEvent.field_r);
         }
         if (this.field_G != null) {
           var2 = null;
@@ -1650,24 +1650,24 @@ final class gj extends dfa {
           while (true) {
             if (var3 < 7) {
               if (null != this.field_G[var3] &&
-                !this.field_G[var3].field_s.i(-102)) {
+                !this.field_G[var3].field_s.isDown(-102)) {
                 var2 = this.field_G[var3];
               } else {
                 var3++;
                 continue;
               }
             }
-            if (0 >= this.field_h.field_S[this.field_n].b((byte) 97)) {
+            if (0 >= this.field_h.rosters[this.field_n].b((byte) 97)) {
               break;
             }
-            var3 = -(128 * (((ad) (var2)).field_s.field_x - ((ad) (var2)).field_s.field_J) >> 1) + 256;
-            var4 = 208 - ((((ad) (var2)).field_s.field_J + ((ad) (var2)).field_s.field_x) * 64 >> 1);
+            var3 = -(128 * (((ad) (var2)).field_s.tileX - ((ad) (var2)).field_s.tileY) >> 1) + 256;
+            var4 = 208 - ((((ad) (var2)).field_s.tileY + ((ad) (var2)).field_s.tileX) * 64 >> 1);
             this.field_j.a(new fu(this, this.field_s.field_b, this.field_s.field_B, var3, var4), true);
             break;
           }
         }
         this.field_h.j(-1);
-        this.field_h.field_j = new sfa[this.field_h.field_d][7];
+        this.field_h.field_j = new CreatureOrder[this.field_h.playerCount][7];
         this.j(-15503);
     }
 
@@ -1694,7 +1694,7 @@ final class gj extends dfa {
           }
           if (var2 != null) {
             stackIn_8_0 = -106;
-            nr.$cfr$intArgs$a$94cfdbf41ae0(stackIn_8_0, var2, param1);
+            RageAnimation.$cfr$intArgs$a$94cfdbf41ae0(stackIn_8_0, var2, param1);
           } else {
             aa.field_l.a(param1, true);
           }
@@ -1755,7 +1755,7 @@ final class gj extends dfa {
             var3 = var7;
             this.field_P.a(16776960, param0 ^ 16777086, var7.field_f);
           }
-          this.field_Z = (sfa) ((Object) new td(var3.field_j, this.field_P.field_s, var4 != 0));
+          this.field_Z = (CreatureOrder) ((Object) new SpecialOrder(var3.field_j, this.field_P.field_s, var4 != 0));
           if (var3.e(-2)) {
             this.field_w = true;
           } else {
@@ -1768,7 +1768,7 @@ final class gj extends dfa {
     final void l(int param0) {
         int var2 = 0;
         int var3 = 0;
-        aga var4;
+        BattleCreature var4;
         int var5;
         var5 = BachelorFridge.field_y;
         this.field_y = null;
@@ -1776,15 +1776,15 @@ final class gj extends dfa {
         if (param0 > -56) {
           return;
         }
-        for (var2 = 0; var2 < this.field_h.field_d; var2++) {
+        for (var2 = 0; var2 < this.field_h.playerCount; var2++) {
           for (var3 = 0; var3 < 7; var3++) {
-            var4 = this.field_h.field_S[var2].field_b[var3];
+            var4 = this.field_h.rosters[var2].field_b[var3];
             if (var4 != null) {
               this.field_o[var2][var3] = new ad(var4);
               if (var2 == this.field_n) {
                 this.field_K = this.field_K + 1;
               }
-              if (0 >= var4.field_I) {
+              if (0 >= var4.hp) {
                 this.field_o[var2][var3].b(-1, 5);
                 this.field_o[var2][var3].field_f.field_u.a((byte) -84);
               }
@@ -1795,12 +1795,12 @@ final class gj extends dfa {
         this.field_s = new jo(this);
         this.j(-15503);
         if (af.field_a) {
-          this.field_h.field_a[3][6].field_h = 20;
-          this.field_h.field_a[3][6].field_n = 39;
-          this.field_h.field_a[4][5].field_n = 39;
-          this.field_h.field_a[4][5].field_h = 20;
-          this.field_h.field_a[0][2].field_n = 39;
-          this.field_h.field_a[0][2].field_h = 20;
+          this.field_h.tiles[3][6].field_h = 20;
+          this.field_h.tiles[3][6].terrain = 39;
+          this.field_h.tiles[4][5].terrain = 39;
+          this.field_h.tiles[4][5].field_h = 20;
+          this.field_h.tiles[0][2].terrain = 39;
+          this.field_h.tiles[0][2].field_h = 20;
           this.field_h.field_e = 3;
         }
         aq.a(1 + this.field_h.field_E, -1);
@@ -1833,28 +1833,28 @@ final class gj extends dfa {
         int var5;
         Object var6;
         hd var7;
-        td var8;
+        SpecialOrder var8;
         ad var9;
-        var9 = this.field_G[this.field_Z.field_h.field_f];
+        var9 = this.field_G[this.field_Z.creature.field_f];
         this.field_H = this.field_s.field_h;
         this.field_N = this.field_s.field_s;
         if (this.field_N < 0) {
           return;
         }
-        if (this.field_N < this.field_h.field_z &&
+        if (this.field_N < this.field_h.width &&
           this.field_H >= 0 &&
-          this.field_H < this.field_h.field_B) {
-          var3 = var9.field_s.field_x;
+          this.field_H < this.field_h.height) {
+          var3 = var9.field_s.tileX;
           if (param0 != -17) {
             this.field_K = -53;
           }
-          var4 = var9.field_s.field_J;
+          var4 = var9.field_s.tileY;
           var5 = un.a(param0 + 105, -var4 + this.field_H, -var3 + this.field_N);
           if (this.r(param0 + 19)) {
             var6 = null;
-            var7 = (hd) (ur.field_e[this.field_Z.field_g]);
+            var7 = (hd) (ur.field_e[this.field_Z.moveId]);
             if (var7.c(0) == 3) {
-              var6 = this.field_h.field_a[this.field_N][this.field_H].field_l;
+              var6 = this.field_h.tiles[this.field_N][this.field_H].occupant;
               if (var7.field_j == 93) {
                 var6 = this.field_h.c(this.field_N, this.field_H, param0 + 19);
               }
@@ -1862,12 +1862,12 @@ final class gj extends dfa {
             if (var5 != 0) {
               this.field_P.field_s.field_s = var5;
             }
-            var8 = (td) (this.field_Z);
+            var8 = (SpecialOrder) (this.field_Z);
             var8.field_i = var5;
             var8.field_k = this.field_N;
             var8.field_n = this.field_H;
             if (var6 != null) {
-              var8.field_j = new nq((aga) (var6));
+              var8.field_j = new CreatureRef((BattleCreature) (var6));
             }
             this.k(-1);
             this.field_w = false;
@@ -1899,7 +1899,7 @@ final class gj extends dfa {
         int[][] var4 = null;
         RuntimeException var4_ref = null;
         ad var6 = null;
-        aga var7 = null;
+        BattleCreature var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -1910,7 +1910,7 @@ final class gj extends dfa {
         try {
           for (var4_int = 0; var4_int < param1.length; var4_int++) {
             this.field_G[var4_int] = param1[var4_int];
-            this.field_G[var4_int].field_s.field_u = var4_int;
+            this.field_G[var4_int].field_s.rosterSlot = var4_int;
           }
           if (param2) {
             this.field_v = (int[]) null;
@@ -1926,9 +1926,9 @@ final class gj extends dfa {
               var7 = var6.field_s;
               var8 = var13[var5][0];
               var9 = var13[var5][1];
-              var7.field_J = var9;
-              var7.field_x = var8;
-              var7.field_u = var5;
+              var7.tileY = var9;
+              var7.tileX = var8;
+              var7.rosterSlot = var5;
               this.field_h.a(var7, 1, this.field_n, var5);
             }
           }
@@ -1950,7 +1950,7 @@ final class gj extends dfa {
         }
     }
 
-    final boolean a(aga param0, int param1) {
+    final boolean a(BattleCreature param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -1961,7 +1961,7 @@ final class gj extends dfa {
           if (param1 != 2) {
             this.h(-33);
           }
-          stackIn_5_0 = (param0.field_D == this.field_n);
+          stackIn_5_0 = (param0.ownerIndex == this.field_n);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1977,12 +1977,12 @@ final class gj extends dfa {
         }
     }
 
-    private final void a(rk[] param0, op param1, int param2, int param3) {
+    private final void a(CreatureProfile[] param0, BattleState param1, int param2, int param3) {
         try {
           this.field_h = param1;
           this.field_n = param3;
           this.a(13558251, param0);
-          this.field_o = new ad[this.field_h.field_d][7];
+          this.field_o = new ad[this.field_h.playerCount][7];
           if (this.field_n >= 0) {
             this.field_G = this.field_o[this.field_n];
           }
@@ -1993,7 +1993,7 @@ final class gj extends dfa {
           if (param2 != 19273) {
             this.e(-67);
           }
-          this.field_D = new kj[this.field_h.field_z][this.field_h.field_B];
+          this.field_D = new kj[this.field_h.width][this.field_h.height];
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.MA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -2028,8 +2028,8 @@ final class gj extends dfa {
             if (null == this.field_G[var3Lifetime1]) {
               return;
             }
-            this.field_q = this.field_G[var3Lifetime1].field_s.field_x;
-            this.field_E = this.field_G[var3Lifetime1].field_s.field_J;
+            this.field_q = this.field_G[var3Lifetime1].field_s.tileX;
+            this.field_E = this.field_G[var3Lifetime1].field_s.tileY;
             this.a(false, this.a(this.field_E, false, this.field_q));
             if (nd.field_h == 4) {
               this.a(this.field_P, (byte) -52);
@@ -2061,7 +2061,7 @@ final class gj extends dfa {
         this.field_W.a(param0);
         if (this.field_P != null &&
           this.field_J) {
-          var4 = this.field_s.a(this.field_P.field_s.field_J, (byte) 56, this.field_P.field_s.field_x);
+          var4 = this.field_s.a(this.field_P.field_s.tileY, (byte) 56, this.field_P.field_s.tileX);
           this.field_W.b(-3, var4.field_c - 40, -90 + var4.field_a);
         }
         if (lf.field_c == 1 &&
@@ -2102,11 +2102,11 @@ final class gj extends dfa {
               this.field_E = var5.field_a;
             }
             if (this.field_q >= 0 &&
-              this.field_q < this.field_h.field_z &&
+              this.field_q < this.field_h.width &&
               this.field_E >= 0 &&
-              this.field_E < this.field_h.field_B &&
-              this.field_h.field_a[this.field_q][this.field_E].field_l != null &&
-              this.field_h.field_a[this.field_q][this.field_E].field_l.field_D == this.field_n) {
+              this.field_E < this.field_h.height &&
+              this.field_h.tiles[this.field_q][this.field_E].occupant != null &&
+              this.field_h.tiles[this.field_q][this.field_E].occupant.ownerIndex == this.field_n) {
               this.a(this.a(this.field_E, false, this.field_q), (byte) -52);
             } else {
               this.field_d = true;
@@ -2137,8 +2137,8 @@ final class gj extends dfa {
           if (this.field_eb &&
             this.field_O.field_R == 1) {
             if (null != this.field_P &&
-              this.field_P.field_s.field_D == this.field_n) {
-              stackIn_73_0 = this.field_P.field_s.field_u;
+              this.field_P.field_s.ownerIndex == this.field_n) {
+              stackIn_73_0 = this.field_P.field_s.rosterSlot;
             } else {
               stackIn_73_0 = -1;
             }
@@ -2193,11 +2193,11 @@ final class gj extends dfa {
           this.field_q = this.field_s.field_s;
           if (nd.field_h == 1 &&
             0 <= this.field_q &&
-            this.field_h.field_z > this.field_q &&
+            this.field_h.width > this.field_q &&
             this.field_E >= 0 &&
-            this.field_E < this.field_h.field_B &&
-            null != this.field_h.field_a[this.field_q][this.field_E].field_l &&
-            this.field_n == this.field_h.field_a[this.field_q][this.field_E].field_l.field_D) {
+            this.field_E < this.field_h.height &&
+            null != this.field_h.tiles[this.field_q][this.field_E].occupant &&
+            this.field_n == this.field_h.tiles[this.field_q][this.field_E].occupant.ownerIndex) {
             stackIn_113_0 = this;
             stackIn_113_1 = false;
             stackIn_113_2 = this;
@@ -2238,7 +2238,7 @@ final class gj extends dfa {
           RasterBuffer.a(36, 7758);
         }
         if (this.field_n >= 0 &&
-          (this.field_h.field_S[this.field_n].field_c ||
+          (this.field_h.rosters[this.field_n].field_c ||
           this.field_h.b((byte) 61, this.field_n)) &&
           !this.field_cb) {
           this.a((byte) 54);
@@ -2261,49 +2261,49 @@ final class gj extends dfa {
         int var6;
         int var7;
         int var8;
-        gm var9;
-        gm var10;
+        MoveOrder var9;
+        MoveOrder var10;
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = BachelorFridge.field_y;
-        var9 = (gm) (this.field_Z);
+        var9 = (MoveOrder) (this.field_Z);
         var10 = var9;
-        var3 = this.field_G[this.field_Z.field_h.field_f];
+        var3 = this.field_G[this.field_Z.creature.field_f];
         this.field_N = this.field_s.field_s;
         this.field_H = this.field_s.field_h;
         if (this.field_N < 0) {
           return;
         }
-        if (this.field_h.field_z > this.field_N &&
+        if (this.field_h.width > this.field_N &&
           this.field_H >= 0 &&
-          this.field_h.field_B > this.field_H) {
+          this.field_h.height > this.field_H) {
           var4 = var3.field_s.f((byte) 127);
-          var5 = (tv) (ur.field_e[var9.field_g]);
+          var5 = (tv) (ur.field_e[var9.moveId]);
           if (param0 <= 103) {
             this.b(102, -121);
           }
-          if (32 != var3.field_s.field_y &&
+          if (32 != var3.field_s.statusId &&
             this.field_h.field_E == 0 &&
-            !this.field_h.field_a[var3.field_s.field_x][var3.field_s.field_J].field_i) {
+            !this.field_h.tiles[var3.field_s.tileX][var3.field_s.tileY].field_i) {
             var4 = var4 >> 1;
           }
-          if (hl.a((byte) 100, var10.field_g)) {
+          if (hl.a((byte) 100, var10.moveId)) {
             var4 = var4 << 1;
             var4 = var4 + var5.field_l;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (var3.field_s.field_x == this.field_N &&
-            !this.field_h.field_a[this.field_N][this.field_H].field_g) {
-            this.field_h.field_a[this.field_N][this.field_H].field_g = true;
-            var6 = this.field_H - var3.field_s.field_J;
+          if (var3.field_s.tileX == this.field_N &&
+            !this.field_h.tiles[this.field_N][this.field_H].field_g) {
+            this.field_h.tiles[this.field_N][this.field_H].field_g = true;
+            var6 = this.field_H - var3.field_s.tileY;
             var7 = Math.abs(var6);
             scanLoop1: while (true) {
               if (var7 > 0) {
                 if (var6 > 0) {
-                  if (!(this.field_h.field_B > var3.field_s.field_J + var7) ||
-                    !var3.field_s.a(this.field_h.field_a[var3.field_s.field_x][var7 + var3.field_s.field_J].field_n, false)) {
+                  if (!(this.field_h.height > var3.field_s.tileY + var7) ||
+                    !var3.field_s.a(this.field_h.tiles[var3.field_s.tileX][var7 + var3.field_s.tileY].terrain, false)) {
                     var6 = -1 + var7;
-                    if (this.field_h.field_B <= var3.field_s.field_J + var7) {
+                    if (this.field_h.height <= var3.field_s.tileY + var7) {
                       break scanLoop1;
                     }
                   }
@@ -2311,10 +2311,10 @@ final class gj extends dfa {
                   if (var6 >= 0) {
                     continue;
                   }
-                  if (!(var3.field_s.field_J - var7 >= 0) ||
-                    !var3.field_s.a(this.field_h.field_a[var3.field_s.field_x][-var7 + var3.field_s.field_J].field_n, false)) {
+                  if (!(var3.field_s.tileY - var7 >= 0) ||
+                    !var3.field_s.a(this.field_h.tiles[var3.field_s.tileX][-var7 + var3.field_s.tileY].terrain, false)) {
                     var6 = -(-1 + var7);
-                    if (var3.field_s.field_J - var7 <= 0) {
+                    if (var3.field_s.tileY - var7 <= 0) {
                       break scanLoop1;
                     }
                   }
@@ -2329,23 +2329,23 @@ final class gj extends dfa {
               this.a(true, (byte) -88, var10, var6);
             } else {
               this.m(10);
-              this.field_h.field_a[this.field_N][this.field_H].field_g = false;
+              this.field_h.tiles[this.field_N][this.field_H].field_g = false;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (this.field_H == var3.field_s.field_J &&
-              !this.field_h.field_a[this.field_N][this.field_H].field_g) {
-              var6Lifetime1 = -var3.field_s.field_x + this.field_N;
-              this.field_h.field_a[this.field_N][this.field_H].field_g = true;
+            if (this.field_H == var3.field_s.tileY &&
+              !this.field_h.tiles[this.field_N][this.field_H].field_g) {
+              var6Lifetime1 = -var3.field_s.tileX + this.field_N;
+              this.field_h.tiles[this.field_N][this.field_H].field_g = true;
               var7Lifetime1 = Math.abs(var6Lifetime1);
               scanLoop2: while (true) {
                 if (var7Lifetime1 > 0) {
                   if (var6Lifetime1 > 0) {
-                    if (!(var3.field_s.field_x + var7Lifetime1 < this.field_h.field_z) ||
-                      !var3.field_s.a(this.field_h.field_a[var7Lifetime1 + var3.field_s.field_x][var3.field_s.field_J].field_n, false)) {
+                    if (!(var3.field_s.tileX + var7Lifetime1 < this.field_h.width) ||
+                      !var3.field_s.a(this.field_h.tiles[var7Lifetime1 + var3.field_s.tileX][var3.field_s.tileY].terrain, false)) {
                       var6Lifetime1 = var7Lifetime1 - 1;
-                      if (this.field_q + var7Lifetime1 >= -1 + this.field_h.field_z) {
+                      if (this.field_q + var7Lifetime1 >= -1 + this.field_h.width) {
                         break scanLoop2;
                       }
                     }
@@ -2353,8 +2353,8 @@ final class gj extends dfa {
                     if (var6Lifetime1 >= 0) {
                       continue;
                     }
-                    if (!(0 <= -var7Lifetime1 + var3.field_s.field_x) ||
-                      !var3.field_s.a(this.field_h.field_a[-var7Lifetime1 + var3.field_s.field_x][var3.field_s.field_J].field_n, false)) {
+                    if (!(0 <= -var7Lifetime1 + var3.field_s.tileX) ||
+                      !var3.field_s.a(this.field_h.tiles[-var7Lifetime1 + var3.field_s.tileX][var3.field_s.tileY].terrain, false)) {
                       var6Lifetime1 = -(var7Lifetime1 - 1);
                       if (-var7Lifetime1 + this.field_q <= 0) {
                         break scanLoop2;
@@ -2371,13 +2371,13 @@ final class gj extends dfa {
                 this.a(false, (byte) -88, var10, var6Lifetime1);
               } else {
                 this.m(10);
-                this.field_h.field_a[this.field_N][this.field_H].field_g = false;
+                this.field_h.tiles[this.field_N][this.field_H].field_g = false;
               }
               decompiledFrameRemainder0 = false;
             }
             else {
               this.m(10);
-              this.field_h.field_a[this.field_N][this.field_H].field_g = false;
+              this.field_h.tiles[this.field_N][this.field_H].field_g = false;
             }
           }
           this.field_N = -1;
@@ -2423,7 +2423,7 @@ final class gj extends dfa {
         }
     }
 
-    gj(op param0, int param1, rk[] param2, boolean param3) {
+    gj(BattleState param0, int param1, CreatureProfile[] param2, boolean param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -2453,7 +2453,7 @@ final class gj extends dfa {
           for (var5_int = 0; var5_int < 255; var5_int++) {
             this.field_v[var5_int] = 256 * var5_int;
           }
-          this.field_T = new int[param0.field_d];
+          this.field_T = new int[param0.playerCount];
           if (0 == param0.field_A) {
             lna.field_q = false;
           }
@@ -2515,9 +2515,9 @@ final class gj extends dfa {
           if (gf.field_k == 102) {
             this.field_s.a((byte) -57, this.field_E, this.field_q);
           }
-          if (hea.field_r >= 2 &&
+          if (BananarangSpecial.field_r >= 2 &&
             gf.field_k == 50 &&
-            wga.field_q[82]) {
+            InvincibleEvent.field_q[82]) {
             sja.field_fb.writeCipheredByte(93, (byte) 113);
             System.out.println("--- STATE DUMP REQUESTED ---");
             System.out.println(this.field_h.k((byte) -72));
@@ -2536,7 +2536,7 @@ final class gj extends dfa {
             } else {
               SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
               var3 = new Sprite(640, 480);
-              fc.a(480, 640, var3, 0, (byte) -90, 0);
+              OhNoSpecial.a(480, 640, var3, 0, (byte) -90, 0);
               eq.a(var3, this, (byte) -111);
               sia.field_h = false;
               var2 = 3;
@@ -2554,7 +2554,7 @@ final class gj extends dfa {
         if (param1) {
           this.field_X = (IntrusiveDeque) null;
         }
-        return this.b(this.field_h.field_a[param2][param0].field_l, -23990);
+        return this.b(this.field_h.tiles[param2][param0].occupant, -23990);
     }
 
     final void a(byte param0, int param1) {
@@ -2575,7 +2575,7 @@ final class gj extends dfa {
           this.field_db = param1;
           var4 = (tv) (al.a(-113, this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]]));
           this.field_P.a(16776960, 89, var4.field_f);
-          this.field_Z = (sfa) ((Object) new gm(this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]], this.field_P.field_s));
+          this.field_Z = (CreatureOrder) ((Object) new MoveOrder(this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]], this.field_P.field_s));
           return;
         }
     }
@@ -2592,7 +2592,7 @@ final class gj extends dfa {
         ad var9;
         var8 = BachelorFridge.field_y;
         this.field_U = 0;
-        this.field_Y = new sfa[7];
+        this.field_Y = new CreatureOrder[7];
         if (null != this.field_o) {
           var10 = this.field_o;
           var2 = var10;
@@ -2603,7 +2603,7 @@ final class gj extends dfa {
               var7 = var5[var6];
               if (var7 != null) {
                 var7.field_l = false;
-                if (var7.field_s.field_I > 0) {
+                if (var7.field_s.hp > 0) {
                   var7.b(false);
                 }
               }

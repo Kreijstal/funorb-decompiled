@@ -65,7 +65,7 @@ final class kb {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = ln.a(-5 + (var10.position - var13.length), var10.payload, 5, 8);
+        var15 = TeleportAnimation.a(-5 + (var10.position - var13.length), var10.payload, 5, 8);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

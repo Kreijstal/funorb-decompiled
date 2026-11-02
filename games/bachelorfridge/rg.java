@@ -16,7 +16,7 @@ final class rg extends IntrusiveNode {
         if (!param3) {
           return;
         }
-        var5 = 2 * (wga.field_s % ug.field_o.field_q);
+        var5 = 2 * (InvincibleEvent.field_s % ug.field_o.field_q);
         if (ug.field_o.field_q <= var5) {
           var5 = ug.field_o.field_q - var5 + ug.field_o.field_q;
         }
@@ -46,15 +46,15 @@ final class rg extends IntrusiveNode {
         int var4 = 0;
         int var5 = 0;
         try {
-          io.field_q.field_Z = param0;
+          RaiseSpecial.field_q.field_Z = param0;
           eda.field_j = true;
           var2_int = hga.field_U.field_b;
           var3 = hga.field_U.field_f;
-          var4 = io.field_q.field_jb.measureWrappedHeight(param0, 272, io.field_q.field_B);
+          var4 = RaiseSpecial.field_q.field_jb.measureWrappedHeight(param0, 272, RaiseSpecial.field_q.field_B);
           var5 = 7 + (-110 + var3 / param1 - var4 / 2);
           sb.field_n.a(var3 - 120 - var5 * 2, 31407, 320, (-320 + var2_int) / 2, var5);
           sb.field_n.field_eb = mu.a(11579568, 3, sb.field_n.field_p, 8421504, 2105376, (byte) 17);
-          io.field_q.a(-24 + (sb.field_n.field_p - 20), 31407, -24 + (-24 + sb.field_n.field_sb), 24, 16);
+          RaiseSpecial.field_q.a(-24 + (sb.field_n.field_p - 20), 31407, -24 + (-24 + sb.field_n.field_sb), 24, 16);
           aja.field_l.a(24, param1 ^ 31405, 80, 120, -24 + (-20 + sb.field_n.field_p));
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "rg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -76,7 +76,7 @@ final class rg extends IntrusiveNode {
         try {
           var5 = (cfa) (IntrusiveDeque.field_d.b((byte) 90));
           while (var5 != null) {
-            nr.a(param1, var5, (byte) 102);
+            RageAnimation.a(param1, var5, (byte) 102);
             var5 = (cfa) (IntrusiveDeque.field_d.c(0));
           }
           var2 = gs.field_l.b((byte) 90);
@@ -107,7 +107,7 @@ final class rg extends IntrusiveNode {
         if (!param3) {
           return;
         }
-        var5 = 2 * (wga.field_s % ug.field_o.field_q);
+        var5 = 2 * (InvincibleEvent.field_s % ug.field_o.field_q);
         if (ug.field_o.field_q <= var5) {
           var5 = ug.field_o.field_q - var5 + ug.field_o.field_q;
         }

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class taa extends at {
+final class taa extends AnimationNode {
     static AntialiasedBitmapFont field_u;
     private int field_v;
     private gj field_n;
@@ -23,7 +23,7 @@ final class taa extends at {
         if (param2 < 87) {
           field_m = (Sprite[]) null;
           if (null != da.field_d) {
-            da.field_d.a((byte) -120, param3, param3, param1 - uga.field_x, param1, param4);
+            da.field_d.a((byte) -120, param3, param3, param1 - FullHealAnimation.field_x, param1, param4);
             return;
           }
           return;
@@ -31,7 +31,7 @@ final class taa extends at {
         if (null == da.field_d) {
           return;
         }
-        da.field_d.a((byte) -120, param3, param3, param1 - uga.field_x, param1, param4);
+        da.field_d.a((byte) -120, param3, param3, param1 - FullHealAnimation.field_x, param1, param4);
     }
 
     private final void a(int param0, byte param1, int param2, gj param3) {
@@ -48,7 +48,7 @@ final class taa extends at {
     }
 
     taa(gj param0, ad param1) {
-        this(param0, param1.field_s.field_x, param1.field_s.field_J);
+        this(param0, param1.field_s.tileX, param1.field_s.tileY);
     }
 
     private final void b(boolean param0) {
@@ -63,7 +63,7 @@ final class taa extends at {
         this.field_v = this.field_j - this.field_o;
         this.field_r = this.field_k - this.field_t;
         if (param0) {
-          var2 = kla.a(2, this.field_n.field_h.field_w, -2147483648) == 1 ? -1 : 1;
+          var2 = DiveBomberAnimation.a(2, this.field_n.field_h.field_w, -2147483648) == 1 ? -1 : 1;
           var12 = new dha(this.field_t, this.field_o);
           var13 = new dha((int)((double)var2 * ((double)this.field_v * 0.2) + (double)this.field_t), (int)((double)this.field_o - (double)var2 * (0.2 * (double)this.field_r)));
           var14 = new dha((int)((double)this.field_k + (double)var2 * ((double)this.field_v * 0.2)), (int)((double)this.field_j - (double)this.field_r * 0.2 * (double)var2));
@@ -73,7 +73,7 @@ final class taa extends at {
         }
         gj var7 = (gj) null;
         this.a(34, (byte) 123, -56, (gj) null);
-        var2Lifetime1 = kla.a(2, this.field_n.field_h.field_w, -2147483648) == 1 ? -1 : 1;
+        var2Lifetime1 = DiveBomberAnimation.a(2, this.field_n.field_h.field_w, -2147483648) == 1 ? -1 : 1;
         dha var8 = new dha(this.field_t, this.field_o);
         dha var9 = new dha((int)((double)var2Lifetime1 * ((double)this.field_v * 0.2) + (double)this.field_t), (int)((double)this.field_o - (double)var2Lifetime1 * (0.2 * (double)this.field_r)));
         dha var10 = new dha((int)((double)this.field_k + (double)var2Lifetime1 * ((double)this.field_v * 0.2)), (int)((double)this.field_j - (double)this.field_r * 0.2 * (double)var2Lifetime1));

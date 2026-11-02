@@ -6,7 +6,7 @@ final class ika {
     IntrusiveDeque field_b;
     int field_c;
 
-    final static tk a(byte param0, PacketBuffer param1) {
+    final static PlayerMatchStats a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -26,8 +26,8 @@ final class ika {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        tk stackIn_2_0 = null;
-        tk stackIn_4_0 = null;
+        PlayerMatchStats stackIn_2_0 = null;
+        PlayerMatchStats stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -37,7 +37,7 @@ final class ika {
           var3 = param1.readUnsignedShort((byte) 45);
           var4 = param1.readUnsignedShort((byte) 80);
           if (param0 != 85) {
-            stackIn_2_0 = (tk) null;
+            stackIn_2_0 = (PlayerMatchStats) null;
             return stackIn_2_0;
           }
           var5 = param1.readUnsignedShort((byte) 61);
@@ -55,7 +55,7 @@ final class ika {
           var17 = param1.readUnsignedShort((byte) 45);
           var18 = param1.readUnsignedShort((byte) 59);
           var19 = param1.readUnsignedByte(16711935);
-          stackIn_4_0 = new tk(var2_int, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18, var19);
+          stackIn_4_0 = new PlayerMatchStats(var2_int, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18, var19);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

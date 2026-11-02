@@ -32,7 +32,7 @@ final class jr {
             return stackIn_2_0;
           }
           var6 = param2.a((byte) 6, var5_int, param3);
-          stackIn_4_0 = fd.a((byte) -105, var6, var5_int, param4, param2);
+          stackIn_4_0 = AirstrikeAnimation.a((byte) -105, var6, var5_int, param4, param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

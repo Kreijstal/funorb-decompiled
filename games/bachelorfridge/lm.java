@@ -17,8 +17,8 @@ final class lm {
         String[] var3 = null;
         sna[] var4 = null;
         try {
-          var3 = new String[]{param0, de.field_K, uj.field_v};
-          var4 = new sna[]{param1, ov.field_d, (sna) ((Object) nr.field_w)};
+          var3 = new String[]{param0, de.field_K, HailEvent.field_v};
+          var4 = new sna[]{param1, ov.field_d, (sna) ((Object) RageAnimation.field_w)};
           this.field_a = new dna(0L, ad.field_q, var3, jfa.field_f, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "lm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -34,7 +34,7 @@ final class lm {
           eda.field_k.a(18, 31407, -82 + ov.field_d.field_sb + (-rj.field_j - 2), 0, 2 + rg.field_h);
           vl.field_d.a(18, 31407, rj.field_j + 82, -2 + ov.field_d.field_sb + (-rj.field_j - 80), 2 + rg.field_h);
           rba.field_a.a(ov.field_d.field_sb, 20 + rg.field_h + 2, 107, 2, 0, -22 + (ov.field_d.field_p - rg.field_h), 20, rj.field_j);
-          nr.field_w.a((byte) -125, rj.field_j, 20, 2);
+          RageAnimation.field_w.a((byte) -125, rj.field_j, 20, 2);
           return;
         }
     }

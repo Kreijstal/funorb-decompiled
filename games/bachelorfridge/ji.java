@@ -27,7 +27,7 @@ final class ji extends IntrusiveNode {
             hda.field_o = gd.field_m;
           }
           boolean decompiledFrameRemainder0 = true;
-          df.field_o = df.field_o + 1;
+          MoveEvent.field_o = MoveEvent.field_o + 1;
           if (param1 != null) {
             decompiledFrameRemainder0 = !(param1.equals(ov.field_g));
           } else {
@@ -35,8 +35,8 @@ final class ji extends IntrusiveNode {
           }
           if (decompiledFrameRemainder0) {
             if (!b.field_r) {
-              if (pv.field_i <= df.field_o) {
-                stackIn_19_0 = (pv.field_i + oha.field_i > df.field_o) ? 1 : 0;
+              if (pv.field_i <= MoveEvent.field_o) {
+                stackIn_19_0 = (pv.field_i + oha.field_i > MoveEvent.field_o) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }
@@ -45,15 +45,15 @@ final class ji extends IntrusiveNode {
             }
             var2_int = stackIn_19_0;
             if (param1 == null) {
-              df.field_o = 0;
+              MoveEvent.field_o = 0;
             } else {
               if (b.field_r) {
-                df.field_o = pv.field_i;
+                MoveEvent.field_o = pv.field_i;
               } else {
                 if (var2_int != 0) {
-                  df.field_o = pv.field_i;
+                  MoveEvent.field_o = pv.field_i;
                 } else {
-                  df.field_o = 0;
+                  MoveEvent.field_o = 0;
                 }
               }
             }
@@ -64,22 +64,22 @@ final class ji extends IntrusiveNode {
                 b.field_r = true;
               }
             }
-            jl.field_s = ld.field_n;
+            SuperSpeedEvent.field_s = ld.field_n;
             IntrusiveDeque.field_b = hda.field_o;
           }
           ov.field_g = param1;
           if (!b.field_r &&
-            pv.field_i > df.field_o &&
+            pv.field_i > MoveEvent.field_o &&
             dda.field_f) {
-            jl.field_s = ld.field_n;
-            df.field_o = 0;
+            SuperSpeedEvent.field_s = ld.field_n;
+            MoveEvent.field_o = 0;
             IntrusiveDeque.field_b = hda.field_o;
           }
           ld.field_n = -1;
           hda.field_o = -1;
           if (b.field_r &&
-            df.field_o == lfa.field_o) {
-            df.field_o = 0;
+            MoveEvent.field_o == lfa.field_o) {
+            MoveEvent.field_o = 0;
             b.field_r = false;
             return;
           }

@@ -48,7 +48,7 @@ final class pha {
 
     final static java.awt.Canvas a(int param0) {
         int var1 = -20 % ((56 - param0) / 46);
-        return kga.field_c != null ? (java.awt.Canvas) ((Object) kga.field_c) : dca.field_y;
+        return kga.field_c != null ? (java.awt.Canvas) ((Object) kga.field_c) : TBomberAnimation.field_y;
     }
 
     private final void a(byte param0, long param1) {

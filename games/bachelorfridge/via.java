@@ -72,15 +72,15 @@ final class via implements qda {
         var3 = var8.readUnsignedByte(16711935);
         wka.field_a = var3 & 127;
         stackIn_5_0 = ((128 & var3) != 0);
-        gq.field_x = stackIn_5_0;
+        OneAnimation.field_x = stackIn_5_0;
         vv.field_d = var8.readUnsignedByte(param0 ^ -16721722);
         sr.field_a = var8.readLong(-108);
         if (wka.field_a == 2) {
           ad.field_g = var8.readUnsignedShort((byte) 75);
-          bna.field_w = var8.a(param0 ^ -10182);
+          DisableAnimation.field_w = var8.a(param0 ^ -10182);
         } else {
           ad.field_g = 0;
-          bna.field_w = 0;
+          DisableAnimation.field_w = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte(16711935) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
@@ -120,7 +120,7 @@ final class via implements qda {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          cv.a(1, "CC1", (Throwable) ((Object) var6));
+          SpiltMilkEvent.a(1, "CC1", (Throwable) ((Object) var6));
           qk.field_n = null;
           hv.field_a = null;
           return new gs(param1);
@@ -220,7 +220,7 @@ final class via implements qda {
         var6 = BachelorFridge.field_y;
         try {
           var10 = (CharSequence) ((Object) param1);
-          if (!wc.a(0, var10)) {
+          if (!HazmatSpecial.a(0, var10)) {
             stackIn_4_0 = mk.field_f;
             return stackIn_4_0;
           }
@@ -228,9 +228,9 @@ final class via implements qda {
             stackIn_8_0 = nha.field_d;
             return stackIn_8_0;
           }
-          var8 = bna.b(-50, param1);
+          var8 = DisableAnimation.b(-50, param1);
           if (var8 == null) {
-            stackIn_11_0 = lga.a(true, new String[]{param1}, qga.field_q);
+            stackIn_11_0 = lga.a(true, new String[]{param1}, OneSpecial.field_q);
             return stackIn_11_0;
           }
           es.field_j.a(var8, 0);
@@ -244,7 +244,7 @@ final class via implements qda {
           }
           var8.unlink(false);
           var8.unlinkSecondary(0);
-          maa.field_v = maa.field_v - 1;
+          SuperSpeedAnimation.field_v = SuperSpeedAnimation.field_v - 1;
           var9 = sja.field_fb;
           var9.writeCipheredByte(param0, (byte) 114);
           var9.position = var9.position + 1;

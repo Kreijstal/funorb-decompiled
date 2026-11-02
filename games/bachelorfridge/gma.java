@@ -22,11 +22,11 @@ final class gma {
     }
 
     final static void a(boolean param0) {
-        eha.c(false);
+        InsanoSauceSpecial.c(false);
         ImageProducerRasterBuffer.field_j = param0 ? true : false;
         gfa.field_i = true;
         gja.field_m.f((byte) -66);
-        uv.a(false, hla.field_r, false);
+        uv.a(false, RaiseEvent.field_r, false);
     }
 
     final static void b(int param0) {

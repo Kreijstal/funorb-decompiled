@@ -15,7 +15,7 @@ final class uc extends pv {
     }
 
     final static void d(int param0) {
-        fj var1 = (fj) (ii.field_m.a((byte) -124));
+        fj var1 = (fj) (CreatureEvent.field_m.a((byte) -124));
         if (var1 == null) {
           var1 = new fj();
         }

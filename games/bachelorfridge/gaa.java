@@ -33,7 +33,7 @@ final class gaa extends lg {
           fo.field_a = new sna(0L, (sna) null);
           if (param1 == null) {
             var11 = (Throwable) null;
-            cv.a(1, "QC1", (Throwable) null);
+            SpiltMilkEvent.a(1, "QC1", (Throwable) null);
             return;
           }
           param1.field_g = false;
@@ -43,10 +43,10 @@ final class gaa extends lg {
           var4 = kn.a(128);
           if (var4 == null) {
             var12 = (Throwable) null;
-            cv.a(1, "QC2", (Throwable) null);
+            SpiltMilkEvent.a(1, "QC2", (Throwable) null);
             return;
           }
-          nh.a(0, var4);
+          SuperSpeedAllSpecial.a(0, var4);
           var13 = (BitmapFont) null;
           mj.field_k = qla.a(1513239, 1513239, 0, 1127256, 65793, 8947848, -24, (BitmapFont) null, 4020342, 2245737, 5138823, 65793, 65793);
           tga.field_p = qla.a(0, 0, 16764006, 0, 0, 0, -24, param0, 0, 0, 0, 0, 0);
@@ -118,25 +118,25 @@ final class gaa extends lg {
             }
           }
           var7 = (String) null;
-          pp.a(vq.field_w, 5, var5, 0, (String) null);
-          jba.field_A.field_G = (8355711 & uc.field_l.field_G >> 1) + vq.field_w - ((vq.field_w & 16711422) >> 1);
-          jba.field_A.field_ab = ((uc.field_l.field_ab & 16711423) >> 1) - (8355711 & vq.field_w >> 1) + vq.field_w;
-          jba.field_A.field_w = ((uc.field_l.field_w & 16711423) >> 1) + (-((vq.field_w & 16711423) >> 1) + vq.field_w);
-          lna.field_C = jba.field_A;
-          qk.field_q = ts.field_r;
+          EventEffect.a(SlowAllAnimation.field_w, 5, var5, 0, (String) null);
+          HailAnimation.field_A.field_G = (8355711 & uc.field_l.field_G >> 1) + SlowAllAnimation.field_w - ((SlowAllAnimation.field_w & 16711422) >> 1);
+          HailAnimation.field_A.field_ab = ((uc.field_l.field_ab & 16711423) >> 1) - (8355711 & SlowAllAnimation.field_w >> 1) + SlowAllAnimation.field_w;
+          HailAnimation.field_A.field_w = ((uc.field_l.field_w & 16711423) >> 1) + (-((SlowAllAnimation.field_w & 16711423) >> 1) + SlowAllAnimation.field_w);
+          lna.field_C = HailAnimation.field_A;
+          qk.field_q = DisableSpecial.field_r;
           bi.field_h = new sna(0L, param4);
           qc.field_b = new sna(0L, param3);
           tga.field_m = new sna(0L, (sna) null);
           aja.field_p = new sna(0L, param1);
-          jba.field_A = new sna(0L, param0);
-          jba.field_A.field_jb = dc.field_r;
-          aja.field_p.a(-1, jba.field_A);
+          HailAnimation.field_A = new sna(0L, param0);
+          HailAnimation.field_A.field_jb = dc.field_r;
+          aja.field_p.a(-1, HailAnimation.field_A);
           if (param2 != 55) {
             field_k = -39;
           }
-          ts.field_r = new sna(0L, qk.field_q);
-          aja.field_p.a(param2 ^ -56, ts.field_r);
-          ub.field_k = new sna(0L, uc.field_l, nw.field_s);
+          DisableSpecial.field_r = new sna(0L, qk.field_q);
+          aja.field_p.a(param2 ^ -56, DisableSpecial.field_r);
+          ub.field_k = new sna(0L, uc.field_l, FlySpecial.field_s);
           qq.field_k = new sna(0L, uc.field_l);
           bi.field_h.a(param2 ^ -56, qc.field_b);
           bi.field_h.a(-1, tga.field_m);
@@ -192,8 +192,8 @@ final class gaa extends lg {
     private final void a(byte param0) {
         int var2 = 35 % ((15 - param0) / 49);
         this.field_a.field_z = null;
-        this.a(qga.field_s, 40, -4586, 72, 334, 260);
-        this.a(hea.field_s, 40, -4586, 72, 334, 366);
+        this.a(OneSpecial.field_s, 40, -4586, 72, 334, 260);
+        this.a(BananarangSpecial.field_s, 40, -4586, 72, 334, 366);
     }
 
     public static void d(int param0) {
@@ -223,18 +223,18 @@ final class gaa extends lg {
         if (this.field_j) {
           wq.a(1, 14, 300, 16777215, this.field_f + 10, 300, 65793, true, qi.field_a, 0, this.field_g + 54);
           laa.a(284, (byte) -56, 310, 16777215, lga.a(true, new String[]{this.field_h.field_g.field_o.field_h}, he.field_o), 65793);
-          ana.field_r.draw(244, 330);
-          laa.a(356, (byte) -111, 298, !this.field_j ? 8421504 : 16777215, qga.field_s, 65793);
-          ana.field_r.draw(350, 330);
-          laa.a(356, (byte) -65, 402, 16777215, hea.field_s, 65793);
+          EventAnimation.field_r.draw(244, 330);
+          laa.a(356, (byte) -111, 298, !this.field_j ? 8421504 : 16777215, OneSpecial.field_s, 65793);
+          EventAnimation.field_r.draw(350, 330);
+          laa.a(356, (byte) -65, 402, 16777215, BananarangSpecial.field_s, 65793);
           return;
         }
-        wq.a(1, 14, 300, 16777215, this.field_f + 16, 300, 65793, true, tba.field_r, 0, this.field_g + 54);
+        wq.a(1, 14, 300, 16777215, this.field_f + 16, 300, 65793, true, FishRainEvent.field_r, 0, this.field_g + 54);
         laa.a(284, (byte) -95, 310, 16777215, us.field_a, 65793);
-        ana.field_r.draw(244, 330);
-        laa.a(356, (byte) -111, 298, !this.field_j ? 8421504 : 16777215, qga.field_s, 65793);
-        ana.field_r.draw(350, 330);
-        laa.a(356, (byte) -65, 402, 16777215, hea.field_s, 65793);
+        EventAnimation.field_r.draw(244, 330);
+        laa.a(356, (byte) -111, 298, !this.field_j ? 8421504 : 16777215, OneSpecial.field_s, 65793);
+        EventAnimation.field_r.draw(350, 330);
+        laa.a(356, (byte) -65, 402, 16777215, BananarangSpecial.field_s, 65793);
     }
 
     static {

@@ -37,12 +37,12 @@ final class va {
               g.field_f.drawParagraph(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
-          if (gp.field_A < ph.field_E) {
+          if (DreamsAnimation.field_A < ph.field_E) {
             var7 = oja.field_f[vj.field_n];
             if (var7 != null) {
-              var2_int = (60 + var7.field_n) * gp.field_A / ph.field_E;
+              var2_int = (60 + var7.field_n) * DreamsAnimation.field_A / ph.field_E;
               var3 = var2_int - 30;
-              if (!ja.field_p) {
+              if (!ResetSpecial.field_p) {
                 iia.a((byte) 123, 199, -256 * var3 / 30, var7, (-var3 + var7.field_n) * 256 / 30, 245);
               } else {
                 iia.a((byte) -57, 199, 256 * (var7.field_n - var3) / 30, var7, -256 * var3 / 30, 245);
@@ -81,13 +81,13 @@ final class va {
 
     final static void a(byte param0) {
         ov.field_g = null;
-        jl.field_s = -1;
+        SuperSpeedEvent.field_s = -1;
         if (param0 < 7) {
           return;
         }
         IntrusiveDeque.field_b = -1;
         b.field_r = false;
-        df.field_o = 0;
+        MoveEvent.field_o = 0;
     }
 
     static {

@@ -6,7 +6,7 @@ final class iw {
     static IndexedSprite[] field_b;
 
     final static void a(int param0, boolean param1, BitmapFont param2, BitmapFont param3) {
-        wfa.field_s = param0;
+        FullHealEvent.field_s = param0;
         fp.field_f = param2;
         jk.field_o = param3;
         if (param1) {
@@ -14,7 +14,7 @@ final class iw {
         }
         try {
           iea.a(SoftwareRasterizer.field_c / 2, SoftwareRasterizer.field_i / 2, (byte) -98);
-          mja.a(param3.field_v, param2.field_v, 3, param3.field_B + param3.field_v, param2.field_v + param2.field_B);
+          StampedeSpecial.a(param3.field_v, param2.field_v, 3, param3.field_B + param3.field_v, param2.field_v + param2.field_B);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "iw.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -328,7 +328,7 @@ final class iw {
         wt.field_u = -2147483648;
         af.field_c = -2147483648;
         waa.field_a = 2147483647;
-        mt.field_r = 2147483647;
+        ScavengerSpecial.field_r = 2147483647;
     }
 
     final static void a(int param0, byte param1) {

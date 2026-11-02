@@ -22,7 +22,7 @@ final class jfa extends IntrusiveNode {
     private Sprite field_j;
     private int field_h;
     static qc[] field_q;
-    rk field_g;
+    CreatureProfile field_g;
     static sna field_f;
     private boolean field_t;
 
@@ -217,14 +217,14 @@ final class jfa extends IntrusiveNode {
           this.field_i.a(new vma(this, this.field_m[this.field_u][this.field_l].field_f), true);
           this.field_i.a(new vu(this, true), true);
           this.field_y = -1;
-          jba.a(this.field_m[this.field_u][this.field_l].field_f, this, 89);
+          HailAnimation.a(this.field_m[this.field_u][this.field_l].field_f, this, 89);
           this.field_v = this.field_g.e((byte) -108);
           this.field_m[this.field_u][this.field_l].field_f.field_a = false;
         }
         this.field_z = -1;
         this.field_x = -1;
         this.field_o = null;
-        var2 = kla.a(1500, this.field_r, param0 ^ 2147483644);
+        var2 = DiveBomberAnimation.a(1500, this.field_r, param0 ^ 2147483644);
         if (-1 + this.field_m[0].length > this.field_l &&
           this.field_m[this.field_u][this.field_l].field_e == 0) {
           if (this.field_l < -1 + this.field_m[0].length) {
@@ -340,8 +340,8 @@ final class jfa extends IntrusiveNode {
 
     private final void a(int param0) {
         this.field_t = true;
-        this.field_x = kla.a(6, this.field_r, -2147483648);
-        this.field_z = kla.a(10, this.field_r, -2147483648);
+        this.field_x = DiveBomberAnimation.a(6, this.field_r, -2147483648);
+        this.field_z = DiveBomberAnimation.a(10, this.field_r, -2147483648);
         if (this.field_m[this.field_x][this.field_z].field_e == 3) {
           this.field_t = false;
           this.field_z = -1;
@@ -403,7 +403,7 @@ final class jfa extends IntrusiveNode {
         this.field_v.a(this.field_s, false, this.field_p >> 1, this.field_h >> 1, 0, -15, 256, this.field_n + param1, this.field_k - 33);
         if (this.field_y != -1 &&
           this.field_g.field_f == -1) {
-          bna.field_v.draw(param1 + this.field_n + 10, this.field_k - 44);
+          DisableAnimation.field_v.draw(param1 + this.field_n + 10, this.field_k - 44);
           mq.field_b[this.field_y].draw(this.field_n + 23 + param1, this.field_k - 38);
         }
         if (this.field_i.b((byte) 90) instanceof vu) {
@@ -418,7 +418,7 @@ final class jfa extends IntrusiveNode {
         }
     }
 
-    jfa(rk param0, int param1, int param2, wda[][] param3) {
+    jfa(CreatureProfile param0, int param1, int param2, wda[][] param3) {
         int[] var5 = null;
         int[] var8 = null;
         int[] var7 = null;

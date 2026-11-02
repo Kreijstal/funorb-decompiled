@@ -128,12 +128,12 @@ final class aca extends kj {
     }
 
     private final void c(byte param0) {
-        int var2 = kla.a(1024, sma.field_I, -2147483648);
-        int var3 = kla.a(1024, sma.field_I, -2147483648);
+        int var2 = DiveBomberAnimation.a(1024, GasCloudAnimation.field_I, -2147483648);
+        int var3 = DiveBomberAnimation.a(1024, GasCloudAnimation.field_I, -2147483648);
         int var4 = var3 + var2;
         int var5 = var2 - var3;
         int var6 = !this.field_j ? 200 : 60;
-        bma var7 = new bma(var4, var6 << 4, var5, kla.a(mla.field_b.length, sma.field_I, -2147483648), 50 + kla.a(50, sma.field_I, -2147483648));
+        bma var7 = new bma(var4, var6 << 4, var5, DiveBomberAnimation.a(mla.field_b.length, GasCloudAnimation.field_I, -2147483648), 50 + DiveBomberAnimation.a(50, GasCloudAnimation.field_I, -2147483648));
         if (param0 == -100) {
           this.field_h.a(var7, true);
           return;
@@ -769,7 +769,7 @@ final class aca extends kj {
 
     final static hs a(byte param0, int param1, int param2) {
         byte[] var4_array = null;
-        if (bca.field_n[param1][param2] == null) {
+        if (SpecialEvent.field_n[param1][param2] == null) {
         }
         if (11 == param2) {
           param1 = 0;
@@ -780,15 +780,15 @@ final class aca extends kj {
         if (param2 == 10) {
           param1 = 11;
         }
-        hs var3 = bca.field_n[param1][param2].a(0);
+        hs var3 = SpecialEvent.field_n[param1][param2].a(0);
         if (var3 == null) {
           Object var4 = null;
           try {
-            var4_array = bk.field_v.a((byte) 123, hk.field_h[param2], fl.field_o[param1]);
+            var4_array = SpiltMilkAnimation.field_v.a((byte) 123, hk.field_h[param2], fl.field_o[param1]);
           } catch (IllegalArgumentException illegalArgumentException) {
           }
-          var3 = oo.a(param2, (byte) -77, var4_array, param1);
-          bca.field_n[param1][param2] = new al(var3);
+          var3 = StampedeEvent.a(param2, (byte) -77, var4_array, param1);
+          SpecialEvent.field_n[param1][param2] = new al(var3);
         }
         return var3;
     }

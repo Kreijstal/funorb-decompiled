@@ -121,7 +121,7 @@ abstract class am extends vf {
         }
         gt.field_s.draw(-90 + (param2 + this.field_p), 10 + param0);
         ao.a(param2 + 5, oea.field_s, this.field_p - 10, (byte) -128, param0 + 35);
-        ao.a(param2, jw.field_v, this.field_p, (byte) -128, this.field_q + (param0 - 22));
+        ao.a(param2, LevitateAnimation.field_v, this.field_p, (byte) -128, this.field_q + (param0 - 22));
         var5Lifetime2 = 169;
         var4Lifetime2 = this.field_q - 79;
         var6Lifetime2 = 127;

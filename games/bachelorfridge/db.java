@@ -5,8 +5,8 @@ final class db {
     static vr field_a;
     static String[] field_b;
 
-    final static pp a(PacketBuffer param0, int param1) {
-        nq var2 = null;
+    final static EventEffect a(PacketBuffer param0, int param1) {
+        CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -23,7 +23,7 @@ final class db {
             field_a = (vr) null;
           }
           stackIn_3_0 = new qq(var2, var3, var4);
-          return (pp) ((Object) stackIn_3_0);
+          return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -47,12 +47,12 @@ final class db {
         SoftwareRasterizer.setClip(var1.field_l, var1.field_j, var1.field_k, var1.field_h);
         if (param0 > 60) {
           var1.field_o = null;
-          ii.field_m.a(var1, true);
+          CreatureEvent.field_m.a(var1, true);
           return;
         }
         db.b(-65);
         var1.field_o = null;
-        ii.field_m.a(var1, true);
+        CreatureEvent.field_m.a(var1, true);
     }
 
     public static void a(int param0) {
@@ -78,7 +78,7 @@ final class db {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param0 = jm.a((byte) 75, param0, '_', "");
+          param0 = BoardChange.a((byte) 75, param0, '_', "");
           var3 = vm.a(param0, (byte) 106);
           if (param2) {
             var4 = (String) null;

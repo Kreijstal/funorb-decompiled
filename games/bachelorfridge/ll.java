@@ -20,7 +20,7 @@ final class ll extends pu {
         RuntimeException var21 = null;
         BitmapFont var22 = null;
         try {
-          tha.a(new lda(param5), param14, param7, new lda(param13), param9, param16, param6, param15, true, param2, param1, param8, new lda(param11), param18, param12, param10, param20, param3, param4, param19, param0);
+          DreamsSpecial.a(new lda(param5), param14, param7, new lda(param13), param9, param16, param6, param15, true, param2, param1, param8, new lda(param11), param18, param12, param10, param20, param3, param4, param19, param0);
           if (param17 != 256) {
             var22 = (BitmapFont) null;
             ll.a(-16, -38, -63, 72, 88, (Sprite[]) null, -28, -64, (BitmapFont) null, 105, -128, (Sprite[]) null, 110, (Sprite[]) null, (BitmapFont) null, -76, 31, -87, 88, -62, 81);

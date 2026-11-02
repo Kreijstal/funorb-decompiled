@@ -61,7 +61,7 @@ final class et extends k {
             regionExit1: {
               var7 = var7 - (var7 & -4096);
               if (this.field_o == 0) {
-                var7 = 4096 + baa.field_z[var7 >> 4 & 255] >> 1;
+                var7 = 4096 + BananarangAnimation.field_z[var7 >> 4 & 255] >> 1;
               } else {
                 if (this.field_o != 2) {
                   var14[var6] = var7;

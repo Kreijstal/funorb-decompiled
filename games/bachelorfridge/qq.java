@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qq extends pp {
+final class qq extends EventEffect {
     static IndexedSprite[] field_i;
     static Sprite field_l;
     static sna field_k;
@@ -42,7 +42,7 @@ final class qq extends pp {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          er.a(this.field_h, 119, param0);
+          FlirtAnimation.a(this.target, 119, param0);
           var3_int = -74 / ((34 - param1) / 58);
           param0.writeByte(this.field_j, 0);
           param0.b(this.field_f, -127);
@@ -194,19 +194,19 @@ final class qq extends pp {
         var20 = BachelorFridge.field_y;
         try {
           uc.field_l = param8;
-          jaa.field_u[4] = 16711935;
-          jaa.field_u[0] = 16764000;
-          jaa.field_u[3] = 16736511;
-          jaa.field_u[2] = 9474303;
+          HazmatEvent.field_u[4] = 16711935;
+          HazmatEvent.field_u[0] = 16764000;
+          HazmatEvent.field_u[3] = 16736511;
+          HazmatEvent.field_u[2] = 9474303;
           dc.field_r = param4;
           am.field_O = param11;
-          jaa.field_u[1] = 6356832;
+          HazmatEvent.field_u[1] = 6356832;
           wp.field_q[2] = 16736352;
           wp.field_q[0] = 16764000;
-          jaa.field_u[4] = 16711935;
+          HazmatEvent.field_u[4] = 16711935;
           wp.field_q[3] = 16736511;
           wp.field_q[1] = 6356832;
-          vq.field_w = 8421504;
+          SlowAllAnimation.field_w = 8421504;
           var12 = new Sprite(4, 4);
           var13 = var12.field_v;
           var14 = var12.field_v;
@@ -227,15 +227,15 @@ final class qq extends pp {
           var17.field_z = new IntrusiveDeque();
           af.field_b = new sga(0L, var17, param5, param2);
           gha.field_d.a(-1, af.field_b);
-          oi.field_w = new sna(0L, param3);
-          gha.field_d.a(-1, oi.field_w);
-          jba.field_A = new sna(0L, param6);
-          jba.field_A.field_jb = dc.field_r;
-          oi.field_w.a(-1, jba.field_A);
-          oi.field_w.d((byte) 116);
-          ts.field_r = new sna(0L, (sna) null);
-          ts.field_r.field_eb = var16;
-          oi.field_w.a(-1, ts.field_r);
+          ResetAnimation.field_w = new sna(0L, param3);
+          gha.field_d.a(-1, ResetAnimation.field_w);
+          HailAnimation.field_A = new sna(0L, param6);
+          HailAnimation.field_A.field_jb = dc.field_r;
+          ResetAnimation.field_w.a(-1, HailAnimation.field_A);
+          ResetAnimation.field_w.d((byte) 116);
+          DisableSpecial.field_r = new sna(0L, (sna) null);
+          DisableSpecial.field_r.field_eb = var16;
+          ResetAnimation.field_w.a(-1, DisableSpecial.field_r);
           r.field_l = new sna[5];
           bda.field_m = new sna[5];
           cb.field_o = new sna[5];
@@ -260,7 +260,7 @@ final class qq extends pp {
                 if (!am.field_O) {
                   stackIn_27_0 = uha.field_Vb;
                 } else {
-                  stackIn_27_0 = cja.field_r;
+                  stackIn_27_0 = FlyEvent.field_r;
                 }
                 var19 = stackIn_27_0;
               }
@@ -397,9 +397,9 @@ final class qq extends pp {
         }
     }
 
-    final void a(aga param0, op param1, int param2) {
+    final void a(BattleCreature param0, BattleState param1, int param2) {
         RuntimeException runtimeException = null;
-        aga var4 = null;
+        BattleCreature var4 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -408,7 +408,7 @@ final class qq extends pp {
         RuntimeException decompiledCaughtException = null;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var4 = this.field_h.a(71, param1);
+          var4 = this.target.a(71, param1);
           if (-1 != this.field_j) {
             var4.field_k[this.field_j] = var4.field_k[this.field_j] - this.field_f;
             decompiledFrameRemainder0 = (BachelorFridge.field_y != 0);
@@ -491,14 +491,14 @@ final class qq extends pp {
         }
     }
 
-    qq(nq param0, int param1, int param2) {
+    qq(CreatureRef param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_h = param0;
+          this.target = param0;
           this.field_j = param1;
           this.field_f = param2;
           return;

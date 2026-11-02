@@ -31,15 +31,15 @@ final class nea extends sna {
         }
         if (param0 != 94) {
           nea.f(67);
-          if (ola.field_p == ki.field_w) {
+          if (ola.field_p == OhNoAnimation.field_w) {
             ola.field_p = tn.field_a;
-            return sg.field_p;
+            return ZombiesSpecial.field_p;
           }
           return null;
         }
-        if (ola.field_p == ki.field_w) {
+        if (ola.field_p == OhNoAnimation.field_w) {
           ola.field_p = tn.field_a;
-          return sg.field_p;
+          return ZombiesSpecial.field_p;
         }
         return null;
     }

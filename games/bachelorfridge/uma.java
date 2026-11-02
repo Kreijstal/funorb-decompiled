@@ -58,7 +58,7 @@ final class uma extends sh {
             var8 = param5[param5.length * var7 / param3.field_p];
             for (var9 = 0; var9 < param0; var9++) {
               if (param3.field_v[var6_int] >= 0) {
-                tla.a(param1 + var9, -1898743704, var8, var7 + param4, param3.field_v[var6_int] & 255);
+                AirstrikeEvent.a(param1 + var9, -1898743704, var8, var7 + param4, param3.field_v[var6_int] & 255);
               }
               var6_int++;
             }
@@ -121,8 +121,8 @@ final class uma extends sh {
           }
           for (var1_int = 0; var1_int < bf.field_g.length; var1_int++) {
             bf.field_g[var1_int] = new hw(IsaacRandom.field_f.field_b[var1_int]);
-            var2 = ica.field_r[var1_int][0];
-            var3 = ica.field_r[var1_int][1];
+            var2 = SauceOfFlameEvent.field_r[var1_int][0];
+            var3 = SauceOfFlameEvent.field_r[var1_int][1];
             bf.field_g[var1_int].field_kb = -16 + var2;
             bf.field_g[var1_int].field_rb = -16 + var3;
             bf.field_g[var1_int].field_sb = 32;
@@ -130,17 +130,17 @@ final class uma extends sh {
           }
           var6 = 0;
           var1_intLifetime1 = var6;
-          while (hha.field_w.length > var6) {
-            hha.field_w[var6] = new hw(-1);
-            if (-1 != rn.field_s.field_g.field_m[var6]) {
-              hha.field_w[var6].field_vb = rn.field_s.field_g.field_m[var6];
+          while (SleepAnimation.field_w.length > var6) {
+            SleepAnimation.field_w[var6] = new hw(-1);
+            if (-1 != BananarangEvent.field_s.field_g.field_m[var6]) {
+              SleepAnimation.field_w[var6].field_vb = BananarangEvent.field_s.field_g.field_m[var6];
             }
-            var2Lifetime1 = od.field_A[var6][0];
-            var3Lifetime1 = od.field_A[var6][1];
-            hha.field_w[var6].field_kb = -16 + var2Lifetime1;
-            hha.field_w[var6].field_rb = var3Lifetime1 - 16;
-            var4 = hha.field_w[var6];
-            hha.field_w[var6].field_p = 32;
+            var2Lifetime1 = BuffVendorAnimation.field_A[var6][0];
+            var3Lifetime1 = BuffVendorAnimation.field_A[var6][1];
+            SleepAnimation.field_w[var6].field_kb = -16 + var2Lifetime1;
+            SleepAnimation.field_w[var6].field_rb = var3Lifetime1 - 16;
+            var4 = SleepAnimation.field_w[var6];
+            SleepAnimation.field_w[var6].field_p = 32;
             var4.field_sb = 32;
             var6++;
           }

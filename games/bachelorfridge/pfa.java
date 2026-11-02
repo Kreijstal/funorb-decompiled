@@ -14,7 +14,7 @@ final class pfa {
         if (param0 != 26858) {
           return -90;
         }
-        return rj.field_i - io.field_p;
+        return rj.field_i - RaiseSpecial.field_p;
     }
 
     final static void b(int param0) {
@@ -40,7 +40,7 @@ final class pfa {
         int var8Lifetime1;
         var10 = BachelorFridge.field_y;
         try {
-          var1_int = ql.field_s;
+          var1_int = HailSpecial.field_s;
           var2 = 0;
           if (2 == ub.field_j) {
             var3_long = f.b((byte) 73) - ph.field_P;
@@ -63,16 +63,16 @@ final class pfa {
             var6 = mj.field_h[var3];
             if (ub.field_j == 2 &&
               var2 == 1) {
-              if (vka.field_p.length < mq.field_a.length) {
+              if (GasCloudSpecial.field_p.length < mq.field_a.length) {
                 stackIn_16_0 = mq.field_a.length;
               } else {
-                stackIn_16_0 = vka.field_p.length;
+                stackIn_16_0 = GasCloudSpecial.field_p.length;
               }
               var7 = stackIn_16_0;
               if (var3 >= 6 &&
                 var7 + 6 > var3) {
-                if (var3 - 6 + vka.field_p.length - var7 >= 0) {
-                  stackIn_22_0 = vka.field_p[-6 + var3 + vka.field_p.length - var7];
+                if (var3 - 6 + GasCloudSpecial.field_p.length - var7 >= 0) {
+                  stackIn_22_0 = GasCloudSpecial.field_p[-6 + var3 + GasCloudSpecial.field_p.length - var7];
                 } else {
                   stackIn_22_0 = "";
                 }
@@ -114,7 +114,7 @@ final class pfa {
             }
             if (var4 < 0) {
               jk.field_o.drawText(var6, var8Lifetime1, gaa.field_k + var1_int, var5, -1);
-              var1_int = var1_int + mm.field_z;
+              var1_int = var1_int + FlyAnimation.field_z;
             } else {
               fp.field_f.drawText(var6, var8Lifetime1, var1_int + JaggrabDownloader.field_f, var5, -1);
               var1_int = var1_int + (um.field_d + (cba.field_d + hc.field_D));
@@ -250,10 +250,10 @@ final class pfa {
         int var7;
         int var8;
         int var9;
-        aga var10;
+        BattleCreature var10;
         oha var11;
         int var12;
-        aga var13;
+        BattleCreature var13;
         oha var14;
         oha var15;
         String var16;
@@ -271,7 +271,7 @@ final class pfa {
         var13 = var10;
         ula.field_h.draw(120, 120);
         this.field_f.field_f.a(this.field_f.field_f.field_x, param0, 2048, 2048, 0, -119, 256, 130, 104);
-        mp.field_s.draw(280, 180);
+        MassPoisonSpecial.field_s.draw(280, 180);
         jha.field_g.a(hl.field_G[2], 334, 194, 15204352, -1);
         hfa.field_z.a(hl.field_G[2], 334, 194, 65793, -1);
         jha.field_g.a(hl.field_G[3], 330, 224, 818659, -1);
@@ -282,7 +282,7 @@ final class pfa {
         hfa.field_z.a(hl.field_G[1], 328, 280, 65793, -1);
         this.a(dt.field_a, var10.field_k[2], -128, 400, 174, 2);
         this.a(DualLinkDeque.field_b, var10.field_k[3], -128, 400, 204, 3);
-        this.a(fk.field_s, var10.field_k[0], -128, 400, 236, 0);
+        this.a(HomingMissileEvent.field_s, var10.field_k[0], -128, 400, 236, 0);
         this.a(vaa.field_b, var10.field_k[1], -128, 400, 263, 1);
         ce.a(true, 16776960, 155, var13.field_n, 320, true);
         jha.field_g.a(DelegatingCanvas.field_a, 390, 368, 16776960, -1);
@@ -293,7 +293,7 @@ final class pfa {
             regionExit1: {
               var11 = al.a(-113, this.field_e[var3_int].field_zb);
               var14 = var11;
-              gq.field_E.draw(this.field_e[var3_int].field_kb, this.field_e[var3_int].field_rb);
+              OneAnimation.field_E.draw(this.field_e[var3_int].field_kb, this.field_e[var3_int].field_rb);
               if (!(var14 instanceof tv)) {
                 if (!(var14 instanceof hd)) {
                   if (var14 instanceof a) {
@@ -333,7 +333,7 @@ final class pfa {
                 nia.field_l[var11.field_b].e(this.field_e[var3_int].field_kb - 1, -1 + this.field_e[var3_int].field_rb, 51233);
               }
             }
-            wca.a(true, this.field_e[var3_int].field_rb, this.field_e[var3_int].field_kb, this.field_e[var3_int].field_zb, 117);
+            CreatureType.a(true, this.field_e[var3_int].field_rb, this.field_e[var3_int].field_kb, this.field_e[var3_int].field_zb, 117);
             if (!this.field_f.field_s.c((byte) -10, this.field_e[var3_int].field_zb)) {
               SoftwareRasterizer.d(4 + this.field_e[var3_int].field_kb, 4 + this.field_e[var3_int].field_rb, (this.field_e[var3_int].field_sb >> 1) + (this.field_e[var3_int].field_kb + 15), this.field_e[var3_int].field_rb + (this.field_e[var3_int].field_p >> 1) + 15, 65793, 4);
               SoftwareRasterizer.d(5 + this.field_e[var3_int].field_kb, 5 + this.field_e[var3_int].field_rb, (this.field_e[var3_int].field_sb >> 1) + (this.field_e[var3_int].field_kb + 14), 14 + this.field_e[var3_int].field_rb + (this.field_e[var3_int].field_p >> 1), 16711680, 2);
@@ -361,9 +361,9 @@ final class pfa {
           var12++;
         }
         if (this.field_a.field_T &&
-          this.field_f.field_s.field_y != 0) {
-          var3 = pna.field_zb[this.field_f.field_s.field_y].field_d;
-          var16 = pna.field_zb[this.field_f.field_s.field_y].field_e;
+          this.field_f.field_s.statusId != 0) {
+          var3 = pna.field_zb[this.field_f.field_s.statusId].field_d;
+          var16 = pna.field_zb[this.field_f.field_s.statusId].field_e;
           var5Lifetime1 = ad.field_h.c(var16, 200) + 10;
           var6Lifetime1 = ad.field_h.measureWrappedHeight(var16, 200, 0) + (ad.field_h.field_F << 1);
           SoftwareRasterizer.a(mk.field_p + 17, 4 + gd.field_m, var5Lifetime1 + 6, var6Lifetime1, 10, 65793, 128);

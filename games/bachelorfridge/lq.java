@@ -202,7 +202,7 @@ abstract class lq extends wj implements e {
         cq var1Lifetime1;
         var2 = BachelorFridge.field_y;
         try {
-          lc.field_l.f();
+          BoardChangeBatch.field_l.f();
           nia.field_m.f();
           rq.field_f = rq.field_f - 1;
           if (0 == rq.field_f) {
@@ -498,7 +498,7 @@ abstract class lq extends wj implements e {
           }
           var5_int = param1;
           if (var5_int == 80) {
-            if (wga.field_q[81]) {
+            if (InvincibleEvent.field_q[81]) {
               stackIn_18_0 = this.b(param3, -99);
             } else {
               stackIn_18_0 = this.a(90, param3);

@@ -99,7 +99,7 @@ final class sa extends pu {
     }
 
     final static void c(int param0) {
-        ud.a(nia.d(-31768), (byte) 95);
+        SauceOfFlameSpecial.a(nia.d(-31768), (byte) 95);
         if (param0 >= -82) {
           sa.b(116);
         }
@@ -218,7 +218,7 @@ final class sa extends pu {
               if (var5 == 0) {
                 var20.unlink(false);
               } else {
-                var20.field_Mb = kla.field_x;
+                var20.field_Mb = DiveBomberAnimation.field_x;
                 var20.field_yb = var5;
               }
               var20.unlinkSecondary(param0 ^ -7);
@@ -241,8 +241,8 @@ final class sa extends pu {
                 var4_ref_uha = new uha(ld.field_q);
                 ola.field_g.a(var4_ref_uha, 91, (long)var3);
               }
-              cja.a(var4_ref_uha, var1, 80, true);
-              h.a(var4_ref_uha, 0);
+              FlyEvent.a(var4_ref_uha, var1, 80, true);
+              SpiltMilkSpecial.a(var4_ref_uha, 0);
               return;
             }
             if (var2 == 9) {
@@ -251,7 +251,7 @@ final class sa extends pu {
               var29 = (uha) (ola.field_g.a((long)var3Lifetime4, (byte) -87));
               if (var29 != null) {
                 if (var4 != 0) {
-                  var29.field_Mb = kla.field_x;
+                  var29.field_Mb = DiveBomberAnimation.field_x;
                   var29.field_ec = var4;
                 } else {
                   var29.unlink(false);
@@ -282,10 +282,10 @@ final class sa extends pu {
                 var13 = var27_ref;
                 var13.field_Wb = false;
                 if (var4Lifetime1 != 0) {
-                  var27_ref.field_Mb = kla.field_x;
+                  var27_ref.field_Mb = DiveBomberAnimation.field_x;
                   var27_ref.field_ec = var4Lifetime1;
                 }
-                h.a(var27_ref, 0);
+                SpiltMilkSpecial.a(var27_ref, 0);
                 return;
               }
               if (var2 != 14 &&
@@ -300,7 +300,7 @@ final class sa extends pu {
                     if (var7 == null) {
                       var7 = new ema(var25, var26, var3_longLifetime2);
                       wi.field_i.a(var7, param0 + 98, var3_longLifetime2);
-                      pw.field_w.field_Rb = pw.field_w.field_Rb + 1;
+                      SnowAnimation.field_w.field_Rb = SnowAnimation.field_w.field_Rb + 1;
                     }
                     var7.field_Jb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 106);
                     var8 = ((PacketBuffer) ((Object) var1)).readVarInt(param0 + 6);
@@ -320,17 +320,17 @@ final class sa extends pu {
                     if (var24 != null) {
                       if (var5Lifetime1 != 0) {
                         var24.field_yb = var5Lifetime1;
-                        var24.field_Mb = kla.field_x;
+                        var24.field_Mb = DiveBomberAnimation.field_x;
                       } else {
                         var24.unlink(false);
                       }
                       var24.unlinkSecondary(0);
-                      pw.field_w.field_Rb = pw.field_w.field_Rb - 1;
+                      SnowAnimation.field_w.field_Rb = SnowAnimation.field_w.field_Rb - 1;
                     }
                     return;
                   }
                   if (var2 == 20) {
-                    cja.a(pw.field_w, var1, 125, false);
+                    FlyEvent.a(SnowAnimation.field_w, var1, 125, false);
                     return;
                   }
                   if (var2 == 21) {
@@ -344,14 +344,14 @@ final class sa extends pu {
                   }
                   if (var2 == 22) {
                     wk.field_a = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 48);
-                    ui.field_q = ((PacketBuffer) ((Object) var1)).readVarInt(-1);
+                    FullHealSpecial.field_q = ((PacketBuffer) ((Object) var1)).readVarInt(-1);
                     return;
                   }
                   if (var2 == 23) {
                     ge.field_F = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ 108);
                     return;
                   }
-                  cv.a(1, "L1: " + nia.d((byte) -106), (Throwable) null);
+                  SpiltMilkEvent.a(1, "L1: " + nia.d((byte) -106), (Throwable) null);
                   vc.a((byte) -78);
                   return;
                 }
@@ -368,7 +368,7 @@ final class sa extends pu {
                     }
                   }
                   if (0 != var5Lifetime1Lifetime1) {
-                    var23.field_Mb = kla.field_x;
+                    var23.field_Mb = DiveBomberAnimation.field_x;
                     var23.field_yb = var5Lifetime1Lifetime1;
                   }
                   gj.a((byte) 63, var23);
@@ -401,7 +401,7 @@ final class sa extends pu {
             } else {
               var14.field_Wb = true;
             }
-            h.a(var28, 0);
+            SpiltMilkSpecial.a(var28, 0);
             return;
           }
           var3_ref_emaLifetime1 = (ema) (bia.field_g.b((byte) 90));
@@ -424,24 +424,24 @@ final class sa extends pu {
             var3_ref_emaLifetime2 = (ema) (iga.field_c.a(param0 - 25170));
           }
           if (var2 == 1 &&
-            null != pw.field_w) {
-            ur.field_b = pw.field_w.field_Jb;
+            null != SnowAnimation.field_w) {
+            ur.field_b = SnowAnimation.field_w.field_Jb;
           }
           if (var2 == 4) {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 45);
-            pw.field_w = new uha(ld.field_q);
-            pw.field_w.setSecondaryKey(true, (long)var3Lifetime1);
-            cja.a(pw.field_w, var1, 54, false);
+            SnowAnimation.field_w = new uha(ld.field_q);
+            SnowAnimation.field_w.setSecondaryKey(true, (long)var3Lifetime1);
+            FlyEvent.a(SnowAnimation.field_w, var1, 54, false);
             wda.field_a = 0L;
           } else {
-            pw.field_w = null;
+            SnowAnimation.field_w = null;
           }
           if (var2 != 2 &&
             var2 != 3) {
-            rv.field_n = null;
+            EffectBatch.field_n = null;
           } else {
-            if (null == rv.field_n) {
-              rv.field_n = new uha(ld.field_q);
+            if (null == EffectBatch.field_n) {
+              EffectBatch.field_n = new uha(ld.field_q);
             }
           }
           if (var2 != 3) {
@@ -449,8 +449,8 @@ final class sa extends pu {
             return;
           }
           ce.field_y = true;
-          for (var3Lifetime2 = 0; fia.field_r.length > var3Lifetime2; var3Lifetime2++) {
-            fia.field_r[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).b(true);
+          for (var3Lifetime2 = 0; LevitateEvent.field_r.length > var3Lifetime2; var3Lifetime2++) {
+            LevitateEvent.field_r[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).b(true);
           }
           tq.field_h = ((PacketBuffer) ((Object) var1)).readUnsignedByte(16711935);
           ena.field_n = ((PacketBuffer) ((Object) var1)).readUnsignedByte(16711935);

@@ -96,9 +96,9 @@ class lg {
           this.field_e = mka.a(13558251, 13558251, 13558251, (byte) -119, jha.field_g, 13558251, 1118481, 13558251);
           this.field_e.field_N = 1;
           this.field_e.field_eb = wd.field_w;
-          this.field_e.field_db = op.field_I;
+          this.field_e.field_db = BattleState.field_I;
           this.field_b = param5;
-          this.field_e.field_A = bla.field_p;
+          this.field_e.field_A = RageSpecial.field_p;
           this.field_a = new sna();
           this.field_a.a(this.field_c >> 2, 31407, this.field_d, this.field_g, -(this.field_c >> 2) + this.field_f + this.field_c);
         } catch (RuntimeException runtimeException) {

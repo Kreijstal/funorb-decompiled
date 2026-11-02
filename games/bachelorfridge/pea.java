@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pea extends pp {
+final class pea extends EventEffect {
     static Sprite field_k;
     static String field_l;
     private int field_j;
     private int field_i;
 
-    final void a(aga param0, op param1, int param2) {
+    final void a(BattleCreature param0, BattleState param1, int param2) {
         Object var4 = null;
-        if (null != this.field_h) {
-          var4 = this.field_h.a(116, param1);
+        if (null != this.target) {
+          var4 = this.target.a(116, param1);
         }
         if (var4 == null) {
           var4 = param1.c(this.field_j, this.field_i, 112);
@@ -22,7 +22,7 @@ final class pea extends pp {
           return;
         }
         try {
-          ((aga) (var4)).field_A = false;
+          ((BattleCreature) (var4)).field_A = false;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "pea.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -42,7 +42,7 @@ final class pea extends pp {
         try {
           int var3_int = 23 % ((param1 - 34) / 58);
           super.a(param0, (byte) 113);
-          er.a(this.field_h, 115, param0);
+          FlirtAnimation.a(this.target, 115, param0);
           param0.writeByte(this.field_j, 0);
           param0.writeByte(this.field_i, 0);
         } catch (RuntimeException runtimeException) {
@@ -50,10 +50,10 @@ final class pea extends pp {
         }
     }
 
-    pea(nq param0, int param1, int param2) {
+    pea(CreatureRef param0, int param1, int param2) {
         try {
           this.field_i = param2;
-          this.field_h = param0;
+          this.target = param0;
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "pea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -67,8 +67,8 @@ final class pea extends pp {
         RuntimeException decompiledCaughtException = null;
         var2 = BachelorFridge.field_y;
         try {
-          for (var1_int = 0; rn.field_s.field_g.field_m.length > var1_int; var1_int++) {
-            rn.field_s.field_g.field_m[var1_int] = -1;
+          for (var1_int = 0; BananarangEvent.field_s.field_g.field_m.length > var1_int; var1_int++) {
+            BananarangEvent.field_s.field_g.field_m[var1_int] = -1;
           }
           if (param0 > 113) {
             return;

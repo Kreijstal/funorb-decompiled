@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mu {
-    rk[] field_i;
+    CreatureProfile[] field_i;
     ola field_e;
     static int[] field_j;
     int field_c;
@@ -121,7 +121,7 @@ final class mu {
           param0.readInt(-53);
           this.field_c = param0.readUnsignedByte(16711935);
           this.field_e = gca.a(0, param0);
-          this.field_i = new rk[50];
+          this.field_i = new CreatureProfile[50];
           for (var4_int = 0; var4_int < 50; var4_int++) {
             this.field_i[var4_int] = gka.a(param0, 255);
           }
@@ -148,7 +148,7 @@ final class mu {
               var6 = param0.readUnsignedByte(16711935);
             }
           }
-          this.field_f = rd.a(true, param0);
+          this.field_f = SnowSpecial.a(true, param0);
           if (param1) {
             this.a((byte) -6);
           }
@@ -193,13 +193,13 @@ final class mu {
     }
 
     public mu() {
-        this.field_i = new rk[50];
+        this.field_i = new CreatureProfile[50];
         this.b(27185);
     }
 
     mu(PacketBuffer param0) {
         int discarded$0 = 0;
-        this.field_i = new rk[50];
+        this.field_i = new CreatureProfile[50];
         try {
           discarded$0 = this.a(param0, false);
         } catch (RuntimeException runtimeException) {

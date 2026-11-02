@@ -15,17 +15,17 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (uc.field_m != null) {
             tf.field_n = 0;
-            oga.field_q = 0;
+            FlirtEvent.field_q = 0;
             gja.field_j = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
-              cj.field_f = cj.field_f & -2;
+              BattleUpdate.field_f = BattleUpdate.field_f & -2;
             }
             if ((8 & var2_int) != 0) {
-              cj.field_f = cj.field_f & -3;
+              BattleUpdate.field_f = BattleUpdate.field_f & -3;
             }
             if ((var2_int & 4) != 0) {
-              cj.field_f = cj.field_f & -5;
+              BattleUpdate.field_f = BattleUpdate.field_f & -5;
             }
           }
           if (!param0.isPopupTrigger()) {
@@ -86,25 +86,25 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (uc.field_m != null) {
             tf.field_n = 0;
-            tba.field_u = param0.getX();
+            FishRainEvent.field_u = param0.getX();
             dma.field_c = param0.getY();
             f.b((byte) 73);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               jh.field_l = 1;
-              oga.field_q = 1;
+              FlirtEvent.field_q = 1;
             } else {
               jh.field_l = 2;
-              oga.field_q = 2;
+              FlirtEvent.field_q = 2;
             }
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
-              cj.field_f = cj.field_f | 1;
+              BattleUpdate.field_f = BattleUpdate.field_f | 1;
             }
             if (0 != (var2_int & 8)) {
-              cj.field_f = cj.field_f | 2;
+              BattleUpdate.field_f = BattleUpdate.field_f | 2;
             }
             if (0 != (4 & var2_int)) {
-              cj.field_f = cj.field_f | 4;
+              BattleUpdate.field_f = BattleUpdate.field_f | 4;
             }
             gja.field_j = true;
           }
@@ -163,7 +163,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static int a(aga param0, aga param1, byte param2) {
+    final static int a(BattleCreature param0, BattleCreature param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -184,8 +184,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             stackIn_2_0 = -40;
             return stackIn_2_0;
           }
-          var3_int = param0.field_x - param1.field_x;
-          var4 = param0.field_J - param1.field_J;
+          var3_int = param0.tileX - param1.tileX;
+          var4 = param0.tileY - param1.tileY;
           if (Math.abs(var3_int) < Math.abs(var4)) {
             stackIn_7_0 = (var4 >= 0) ? 3 : 1;
             return stackIn_7_0;
@@ -255,7 +255,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (uc.field_m != null) {
-            oga.field_q = 0;
+            FlirtEvent.field_q = 0;
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "nn.focusLost(" + (param0 != null ? "{...}" : "null") + ')');

@@ -13,7 +13,7 @@ final class qf extends ida {
     private boolean field_B;
     private int field_t;
 
-    private final void a(int param0, aga param1, int param2, boolean param3, int param4) {
+    private final void a(int param0, BattleCreature param1, int param2, boolean param3, int param4) {
         ad var6 = null;
         try {
           var6 = this.field_s.b(param1, -23990);
@@ -29,7 +29,7 @@ final class qf extends ida {
         }
     }
 
-    private final void a(aga param0, boolean param1, int param2) {
+    private final void a(BattleCreature param0, boolean param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_15_0 = null;
@@ -38,10 +38,10 @@ final class qf extends ida {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 10;
-          if (param0.field_y == 17) {
+          if (param0.statusId == 17) {
             var4_int = 15;
           }
-          if (28 == param0.field_y) {
+          if (28 == param0.statusId) {
             var4_int = 20;
           }
           this.field_q = wka.a(57, this.field_C, var4_int, this.field_r);
@@ -97,7 +97,7 @@ final class qf extends ida {
           return false;
         }
         if (null == this.field_u &&
-          var7.field_s.field_y == 32) {
+          var7.field_s.statusId == 32) {
           var4_ref_je = PcmSampleStream.createWithVolume(rt.field_a[32], 256, 256);
           var4_ref_je.d(-1);
           this.field_u = tw.a(var4_ref_je, (byte) -36);
@@ -150,7 +150,7 @@ final class qf extends ida {
           var2Lifetime1Lifetime1.field_r = var4Lifetime1Lifetime1 * (this.field_j << 16) / this.field_z;
           return false;
         }
-        if (32 != var7.field_s.field_y) {
+        if (32 != var7.field_s.statusId) {
           var7.b(-1, this.field_t);
         }
         this.field_s.field_s.a(var7, 107);
@@ -204,31 +204,31 @@ final class qf extends ida {
         if (var3.field_s.g((byte) 85)) {
           return;
         }
-        if (var3.field_s.field_y == 33) {
+        if (var3.field_s.statusId == 33) {
           return;
         }
-        if (var3.field_s.field_y == 31) {
+        if (var3.field_s.statusId == 31) {
           return;
         }
         this.field_s.a(-16007, var3, 2);
-        var3.field_s.field_C = var3.field_s.field_C - 1;
+        var3.field_s.statusTurns = var3.field_s.statusTurns - 1;
     }
 
-    qf(gj param0, df param1) {
-        this(param0, param1.field_l, param1.field_k, param1.field_p, param1.field_n, param1.field_t);
+    qf(gj param0, MoveEvent param1) {
+        this(param0, param1.creature, param1.moveId, param1.field_p, param1.field_n, param1.field_t);
         ad var3 = null;
         try {
           var3 = this.field_p.a(-27449, this.field_s);
-          var3.field_s.d(param1.field_k, (byte) -115);
+          var3.field_s.d(param1.moveId, (byte) -115);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    qf(gj param0, nq param1, int param2, int param3, int param4, boolean param5) {
+    qf(gj param0, CreatureRef param1, int param2, int param3, int param4, boolean param5) {
         super(param0, param1, param3, param4);
         ad var8 = null;
-        aga var10 = null;
+        BattleCreature var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

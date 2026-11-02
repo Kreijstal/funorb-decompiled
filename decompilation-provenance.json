@@ -10588,17 +10588,17 @@
       "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
       "sources": {
         "files": 865,
-        "sha256": "f131209effc6beea93325658f5629d93c9c7d1bd59bf28788bc67d2de3400dbd"
+        "sha256": "c7404e61c2de6ddce04ea194b383f433e31c97ad873786ad87baa85a166df46e"
       },
       "dictionary": {
         "path": "decompilation/bachelorfridge-naming.json",
-        "sha256": "6ffc075565c175b9b500319c80fab84058d08a128a9dd6cb8f3a009105fec273"
+        "sha256": "825fa8c1c57df2100f3c0182e3c5edac7d614e41e27c29c53724271ddde3ea4a"
       },
       "readingGuide": {
         "path": "games/bachelorfridge/README.md",
-        "sha256": "3a9fbbd6faffda443a9f204bbfaa3461f5170bc9e25e7018efbadcf68a8f4dab"
+        "sha256": "56f80697737def50c83fa24db100d4d26e807b29873d72cc43aecce0d919f00c"
       },
-      "rulesSha256": "b1a2ee67791fb9cbc19f008fd0efccdb91b29663df0dbaf0f153aa22af7062da",
+      "rulesSha256": "155279a527086c6e700e5fa4a6344fa57971c5d856c7c24684de71dd769e6111",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11743,7 +11743,7 @@
         },
         "publishedSources": {
           "files": 865,
-          "sha256": "f131209effc6beea93325658f5629d93c9c7d1bd59bf28788bc67d2de3400dbd"
+          "sha256": "c7404e61c2de6ddce04ea194b383f433e31c97ad873786ad87baa85a166df46e"
         }
       },
       "bouncedown": {

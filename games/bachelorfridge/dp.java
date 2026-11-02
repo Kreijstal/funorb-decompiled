@@ -31,7 +31,7 @@ final class dp extends lw {
                 }
                 return;
               }
-              fla.b(23621);
+              ShieldSpecial.b(23621);
               if (param1 == 73) {
                 return;
               }
@@ -49,7 +49,7 @@ final class dp extends lw {
             this.field_e != 1) {
             this.b(1);
             if (this.c((byte) 95)) {
-              fla.b(23621);
+              ShieldSpecial.b(23621);
             }
             if (param1 != 73) {
               field_m = (String) null;
@@ -72,7 +72,7 @@ final class dp extends lw {
               }
               this.b(1);
               if (this.c((byte) 95)) {
-                fla.b(23621);
+                ShieldSpecial.b(23621);
               }
             }
           } else {
@@ -86,14 +86,14 @@ final class dp extends lw {
                 }
                 this.b(1);
                 if (this.c((byte) 95)) {
-                  fla.b(23621);
+                  ShieldSpecial.b(23621);
                 }
               }
             } else {
               this.b(1);
               this.c(param1 + 24);
               if (this.c((byte) 95)) {
-                fla.b(23621);
+                ShieldSpecial.b(23621);
               }
             }
           }
@@ -105,13 +105,13 @@ final class dp extends lw {
     }
 
     final void a(int param0) {
-        ku.field_q = true;
+        FloodEvent.field_q = true;
         this.c(120);
         int var2 = -115 % ((param0 - 59) / 33);
     }
 
     dp() {
-        super(true, new String[]{un.field_f, pea.field_l}, uga.field_w);
+        super(true, new String[]{un.field_f, pea.field_l}, FullHealAnimation.field_w);
         this.field_c = new int[][]{new int[]{280, 290}, new int[]{320, 400}};
     }
 

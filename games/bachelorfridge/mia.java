@@ -18,7 +18,7 @@ final class mia extends cia {
             mia.d((byte) 3);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            baa.field_C[var1_intLifetime1] = 0L;
+            BananarangAnimation.field_C[var1_intLifetime1] = 0L;
           }
           DiskCacheWorker.field_f = 0;
         } catch (RuntimeException runtimeException) {

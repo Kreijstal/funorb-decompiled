@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o extends pp {
+final class o extends EventEffect {
     static String field_i;
 
     public static void e(byte param0) {
@@ -29,13 +29,13 @@ final class o extends pp {
         if (param0 < 44) {
           field_i = (String) null;
         }
-        return wca.field_n >= 11 ? true : false;
+        return CreatureType.field_n >= 11 ? true : false;
     }
 
-    final void a(aga param0, op param1, int param2) {
+    final void a(BattleCreature param0, BattleState param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
-        aga var6 = null;
+        BattleCreature var6 = null;
         int var7 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -49,9 +49,9 @@ final class o extends pp {
           if (param2 != 12) {
             o.d((byte) 28);
           }
-          for (var4_int = 0; var4_int < param1.field_z; var4_int++) {
-            for (var5 = 0; var5 < param1.field_B; var5++) {
-              var6 = param1.field_a[var4_int][var5].field_l;
+          for (var4_int = 0; var4_int < param1.width; var4_int++) {
+            for (var5 = 0; var5 < param1.height; var5++) {
+              var6 = param1.tiles[var4_int][var5].occupant;
               if (var6 != null) {
                 var6.g(-116, this.field_f);
               }

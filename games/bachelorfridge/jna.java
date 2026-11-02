@@ -11,10 +11,10 @@ final class jna extends IntrusiveNode {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 != oi.field_w.field_R &&
+          if (0 != ResetAnimation.field_w.field_R &&
             !hl.field_I) {
             if (sea.field_j) {
-              fk.d(120);
+              HomingMissileEvent.d(120);
             } else {
               lna.field_q = true;
             }
@@ -27,7 +27,7 @@ final class jna extends IntrusiveNode {
                 lna.field_q = false;
               }
               if (qq.field_k.field_R != 0) {
-                bea.d(param2 ^ 125);
+                ClamsEvent.d(param2 ^ 125);
                 lna.field_q = false;
               }
             }
@@ -94,8 +94,8 @@ final class jna extends IntrusiveNode {
     }
 
     final static void a(boolean param0, boolean param1) {
-        wia.a(param1, (byte) 31);
-        kh.a((byte) -74, param1);
+        BoardTile.a(param1, (byte) 31);
+        MassPoisonEvent.a((byte) -74, param1);
         if (param0) {
           return;
         }

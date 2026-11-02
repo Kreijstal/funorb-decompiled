@@ -79,7 +79,7 @@ final class rha {
         if (ur.field_d > 200) {
           var5 = (250 - ur.field_d << 8) / 50;
         }
-        bu.a(0, rl.field_r);
+        bu.a(0, BuffVendorSpecial.field_r);
         TriangleRasterizer.d();
         SoftwareRasterizer.clear();
         tc.b(-8144);
@@ -87,7 +87,7 @@ final class rha {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0, -var5 + 256);
           db.b(110);
           if (ur.field_d < 150) {
-            rl.field_r.drawHalfSize(var3, var4);
+            BuffVendorSpecial.field_r.drawHalfSize(var3, var4);
           } else {
             nd.field_g.a(var3 + 15, var4 + 10, var5);
           }
@@ -127,7 +127,7 @@ final class rha {
               }
             }
           } else {
-            rl.field_r.drawHalfSize(var3, var4);
+            BuffVendorSpecial.field_r.drawHalfSize(var3, var4);
             var6 = ur.field_d - 125;
             if (var6 > 0 &&
               var6 < 50) {
@@ -179,7 +179,7 @@ final class rha {
         int var1 = -18 % ((40 - param0) / 37);
     }
 
-    final static void a(rk param0, PacketBuffer param1, byte param2) {
+    final static void a(CreatureProfile param0, PacketBuffer param1, byte param2) {
         if (param2 >= -61) {
           field_e = (Sprite[][]) null;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ida extends at {
+abstract class ida extends AnimationNode {
     static String field_o;
     int field_l;
     int field_j;
@@ -11,7 +11,7 @@ abstract class ida extends at {
     gj field_s;
     int field_n;
     int field_m;
-    nq field_p;
+    CreatureRef field_p;
 
     final static String a(int param0, byte[] param1, int param2, int param3) {
         int incrementValue$0 = 0;
@@ -196,7 +196,7 @@ abstract class ida extends at {
     }
 
     final void a(int param0, int param1, int param2) {
-        aga var4;
+        BattleCreature var4;
         int var5;
         var5 = BachelorFridge.field_y;
         var4 = this.field_p.a(64, this.field_s.field_h);
@@ -254,7 +254,7 @@ abstract class ida extends at {
         }
     }
 
-    ida(gj param0, nq param1, int param2, int param3) {
+    ida(gj param0, CreatureRef param1, int param2, int param3) {
         try {
           this.field_k = param2;
           this.field_s = param0;

@@ -370,7 +370,7 @@ final class qg {
                           if (var65 != 0) {
                             var67 = param8[param14];
                             var66 = -var65 + 256;
-                            param8[param14] = mp.a(dda.a(-16711936, var65 * var63 + var66 * dda.a(16711935, var67)) + dda.a(dda.a(var67, 65280) * var66 + var65 * var64, 16711680) >>> 8, 128 + (var65 >> 1) << 24);
+                            param8[param14] = MassPoisonSpecial.a(dda.a(-16711936, var65 * var63 + var66 * dda.a(16711935, var67)) + dda.a(dda.a(var67, 65280) * var66 + var65 * var64, 16711680) >>> 8, 128 + (var65 >> 1) << 24);
                           }
                         }
                         var45++;
@@ -498,7 +498,7 @@ final class qg {
                       if (var65Lifetime3 != 0) {
                         var66Lifetime3 = 256 - var65Lifetime3;
                         var67Lifetime3 = param8[param14];
-                        param8[param14] = mp.a(128 + (var65Lifetime3 >> 1) << 24, dda.a(-16711936, var63Lifetime3 * var65Lifetime3 + dda.a(var67Lifetime3, 16711935) * var66Lifetime3) + dda.a(16711680, var66Lifetime3 * dda.a(65280, var67Lifetime3) + var64Lifetime3 * var65Lifetime3) >>> 8);
+                        param8[param14] = MassPoisonSpecial.a(128 + (var65Lifetime3 >> 1) << 24, dda.a(-16711936, var63Lifetime3 * var65Lifetime3 + dda.a(var67Lifetime3, 16711935) * var66Lifetime3) + dda.a(16711680, var66Lifetime3 * dda.a(65280, var67Lifetime3) + var64Lifetime3 * var65Lifetime3) >>> 8);
                       }
                     }
                     var45Lifetime3++;
@@ -627,7 +627,7 @@ final class qg {
                         if (var65Lifetime1 != 0) {
                           var67Lifetime1 = param8[param14];
                           var66Lifetime1 = -var65Lifetime1 + 256;
-                          param8[param14] = mp.a(128 + (var65Lifetime1 >> 1) << 24, dda.a(dda.a(var67Lifetime1, 16711935) * var66Lifetime1 + var65Lifetime1 * var63Lifetime1, -16711936) + dda.a(var66Lifetime1 * dda.a(var67Lifetime1, 65280) + var64Lifetime1 * var65Lifetime1, 16711680) >>> 8);
+                          param8[param14] = MassPoisonSpecial.a(128 + (var65Lifetime1 >> 1) << 24, dda.a(dda.a(var67Lifetime1, 16711935) * var66Lifetime1 + var65Lifetime1 * var63Lifetime1, -16711936) + dda.a(var66Lifetime1 * dda.a(var67Lifetime1, 65280) + var64Lifetime1 * var65Lifetime1, 16711680) >>> 8);
                         }
                       }
                       var45Lifetime1++;
@@ -763,7 +763,7 @@ final class qg {
                         if (0 != var65Lifetime2) {
                           var66Lifetime2 = -var65Lifetime2 + 256;
                           var67Lifetime2 = param8[param14];
-                          param8[param14] = mp.a(dda.a(dda.a(var67Lifetime2, 65280) * var66Lifetime2 + var64Lifetime2 * var65Lifetime2, 16711680) + dda.a(var66Lifetime2 * dda.a(var67Lifetime2, 16711935) + var63Lifetime2 * var65Lifetime2, -16711936) >>> 8, (var65Lifetime2 >> 1) + 128 << 24);
+                          param8[param14] = MassPoisonSpecial.a(dda.a(dda.a(var67Lifetime2, 65280) * var66Lifetime2 + var64Lifetime2 * var65Lifetime2, 16711680) + dda.a(var66Lifetime2 * dda.a(var67Lifetime2, 16711935) + var63Lifetime2 * var65Lifetime2, -16711936) >>> 8, (var65Lifetime2 >> 1) + 128 << 24);
                         }
                       }
                       var51Lifetime2 = var51Lifetime2 + var23Lifetime1;

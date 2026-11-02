@@ -7,7 +7,7 @@ final class gna extends sna {
 
     final static void f(byte param0) {
         int var1 = 20 % ((-9 - param0) / 54);
-        bja.a(new Sprite(fi.field_p, (java.awt.Component) ((Object) dca.field_y)), 6, ep.field_m);
+        bja.a(new Sprite(fi.field_p, (java.awt.Component) ((Object) TBomberAnimation.field_y)), 6, ep.field_m);
     }
 
     gna(long param0, sna param1, sna param2, sna param3, Sprite param4, String param5) {
@@ -201,12 +201,12 @@ final class gna extends sna {
             SoftwareRasterizer.clear();
             lo.field_b.drawText(param2, 5, 3 + lo.field_b.field_u, 0, -1);
             SoftwareRasterizer.setTarget(var12, var7, var8);
-            fk.d((byte) -111);
+            HomingMissileEvent.d((byte) -111);
             if (param4) {
               gna.f((byte) -62);
             }
             if (param0) {
-              cn.a((byte) -63, var9, ap.field_c, param1, param3, param5, MouseWheelInput.field_a);
+              PlaceCreatureEffect.a((byte) -63, var9, ap.field_c, param1, param3, param5, MouseWheelInput.field_a);
               return;
             }
             uma.a(var9, param3, 0, MouseWheelInput.field_a, param5, param1);

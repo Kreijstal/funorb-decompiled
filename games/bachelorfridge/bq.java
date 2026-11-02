@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bq extends wia {
+final class bq extends BoardTile {
     boolean field_o;
 
     bq(int param0) {
@@ -23,7 +23,7 @@ final class bq extends wia {
           if (tfa.a(41, param0)) {
             return false;
           }
-          if (eha.a(15, param0)) {
+          if (InsanoSauceSpecial.a(15, param0)) {
             return false;
           }
           if (param1 != 20133) {

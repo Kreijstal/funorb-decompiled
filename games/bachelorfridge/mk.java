@@ -127,13 +127,13 @@ final class mk {
             return;
           }
           RasterBuffer.a(14, 7758);
-          if (!this.a(this.field_k, 0, rn.field_s.field_g.field_m)) {
-            ep.a((byte) 42, rn.field_s, this.field_l, this.field_e, rn.field_s.field_g.field_m);
+          if (!this.a(this.field_k, 0, BananarangEvent.field_s.field_g.field_m)) {
+            ep.a((byte) 42, BananarangEvent.field_s, this.field_l, this.field_e, BananarangEvent.field_s.field_g.field_m);
           }
           if (this.field_l) {
-            rn.field_s.field_v.a(false, 0, 0, true, -1);
+            BananarangEvent.field_s.field_v.a(false, 0, 0, true, -1);
           }
-          rn.field_s.field_g.field_i = 0;
+          BananarangEvent.field_s.field_g.field_i = 0;
           gs.field_f.field_i = false;
           gs.field_f.field_p = false;
           uca.a(18, (byte) -19);
@@ -155,20 +155,20 @@ final class mk {
           bf.field_g[var3].a(19842, true);
           if (bf.field_g[var3].field_T) {
             if (2 > var3 ||
-              rn.field_s.field_g.field_g[-2 + var3]) {
+              BananarangEvent.field_s.field_g.field_g[-2 + var3]) {
               this.field_x = var3;
             }
             if (bf.field_g[var3].field_R == 1) {
-              if (!this.a(this.field_x, rn.field_s.field_g.field_m, -125) && (this.field_x < 2 ||
-                rn.field_s.field_g.field_g[-2 + this.field_x])) {
+              if (!this.a(this.field_x, BananarangEvent.field_s.field_g.field_m, -125) && (this.field_x < 2 ||
+                BananarangEvent.field_s.field_g.field_g[-2 + this.field_x])) {
                 var6 = 0;
                 var4 = var6;
                 while (true) {
-                  if (var6 >= rn.field_s.field_g.field_m.length) {
+                  if (var6 >= BananarangEvent.field_s.field_g.field_m.length) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  if (-1 != rn.field_s.field_g.field_m[var6]) {
+                  if (-1 != BananarangEvent.field_s.field_g.field_m[var6]) {
                     var6++;
                     continue;
                   }
@@ -177,17 +177,17 @@ final class mk {
                 if (decompiledFrameCompleted0) {
                   RasterBuffer.a(8, 7758);
                   uca.a(17, (byte) 105);
-                  rn.field_s.field_g.field_m[var6] = this.field_x;
+                  BananarangEvent.field_s.field_g.field_m[var6] = this.field_x;
                   decompiledFrameRemainder0 = false;
                 }
               }
               if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0) && (-1 != this.field_x &&
-                this.a(this.field_x, rn.field_s.field_g.field_m, -126) && (this.field_x < 2 ||
-                rn.field_s.field_g.field_g[-2 + this.field_x]))) {
+                this.a(this.field_x, BananarangEvent.field_s.field_g.field_m, -126) && (this.field_x < 2 ||
+                BananarangEvent.field_s.field_g.field_g[-2 + this.field_x]))) {
                 RasterBuffer.a(9, 7758);
-                var4Lifetime1 = this.a(rn.field_s.field_g.field_m, 0, this.field_x);
+                var4Lifetime1 = this.a(BananarangEvent.field_s.field_g.field_m, 0, this.field_x);
                 if (var4Lifetime1 != -1) {
-                  rn.field_s.field_g.field_m[var4Lifetime1] = -1;
+                  BananarangEvent.field_s.field_g.field_m[var4Lifetime1] = -1;
                 }
               }
             }
@@ -196,13 +196,13 @@ final class mk {
         this.field_t = -1;
         var7 = 0;
         var3Lifetime1 = var7;
-        while (var7 < hha.field_w.length) {
-          hha.field_w[var7].a(19842, true);
-          if (hha.field_w[var7].field_T) {
+        while (var7 < SleepAnimation.field_w.length) {
+          SleepAnimation.field_w[var7].a(19842, true);
+          if (SleepAnimation.field_w[var7].field_T) {
             this.field_t = var7;
-            if (hha.field_w[var7].field_R == 1) {
+            if (SleepAnimation.field_w[var7].field_R == 1) {
               RasterBuffer.a(9, 7758);
-              rn.field_s.field_g.field_m[this.field_t] = -1;
+              BananarangEvent.field_s.field_g.field_m[this.field_t] = -1;
             }
           }
           var7++;
@@ -222,13 +222,13 @@ final class mk {
         var2 = 0;
         var3 = 0;
         var4 = param0 ? 1 : 0;
-        for (var5 = 0; var5 < rn.field_s.field_g.field_m.length; var5++) {
-          if (rn.field_s.field_g.field_m[var5] != -1) {
+        for (var5 = 0; var5 < BananarangEvent.field_s.field_g.field_m.length; var5++) {
+          if (BananarangEvent.field_s.field_g.field_m[var5] != -1) {
             if (ProxySocketConnector.field_f <= 0 &&
-              rn.field_s.field_g.field_m[var5] > 6) {
+              BananarangEvent.field_s.field_g.field_m[var5] > 6) {
               var4 = 0;
             }
-            var6 = ur.field_e[IsaacRandom.field_f.field_b[rn.field_s.field_g.field_m[var5]]];
+            var6 = ur.field_e[IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]]];
             if (var6 instanceof t) {
               var3 = 1;
             }
@@ -299,8 +299,8 @@ final class mk {
         int var7Lifetime1;
         var11 = BachelorFridge.field_y;
         wq.field_k.draw(0, 0);
-        j.a(this.field_v, 34, 16762880, true, 444, false);
-        wt.field_k.drawParagraph(rn.field_s.field_g.field_o.field_a, 350, 40, 240, 100, 16777215, -1, 0, 1, 14);
+        InsanoSauceEvent.a(this.field_v, 34, 16762880, true, 444, false);
+        wt.field_k.drawParagraph(BananarangEvent.field_s.field_g.field_o.field_a, 350, 40, 240, 100, 16777215, -1, 0, 1, 14);
         jha.field_g.a(hl.field_G[2], 414, 178, 15204352, -1);
         hfa.field_z.a(hl.field_G[2], 414, 178, 65793, -1);
         jha.field_g.a(hl.field_G[3], 412, 206, 818659, -1);
@@ -318,16 +318,16 @@ final class mk {
           this.field_s.a(8);
         }
         this.field_s.a(false, false, 2048, 2048, 0, -60, 256, 110, 100);
-        var4 = (ho) (rn.field_s.field_g.field_h.b((byte) 90));
+        var4 = (ho) (BananarangEvent.field_s.field_g.field_h.b((byte) 90));
         while (var4 != null) {
-          var4 = (ho) (rn.field_s.field_g.field_h.c(0));
+          var4 = (ho) (BananarangEvent.field_s.field_g.field_h.c(0));
         }
         this.a((byte) 21, this.field_d[2], dt.field_a, 154, 472, 2);
         this.a((byte) 21, this.field_d[3], DualLinkDeque.field_b, 184, 472, 3);
-        this.a((byte) 21, this.field_d[0], fk.field_s, 216, 472, 0);
+        this.a((byte) 21, this.field_d[0], HomingMissileEvent.field_s, 216, 472, 0);
         this.a((byte) 21, this.field_d[1], vaa.field_b, 243, 472, 1);
         this.c(false);
-        pw.field_y.draw(470, 320);
+        SnowAnimation.field_y.draw(470, 320);
         stackIn_7_0 = jha.field_g;
         stackIn_7_1 = di.field_l;
         stackIn_7_2 = 522;
@@ -335,13 +335,13 @@ final class mk {
         stackIn_8_4 = (!this.field_u.field_T) ? 16777215 : 16776960;
         ((BinaryBitmapFont) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, -1);
         hfa.field_z.a(di.field_l, 522, 342, 65793, -1);
-        for (var5 = 0; var5 < rn.field_s.field_g.field_m.length; var5++) {
-          if (rn.field_s.field_g.field_m[var5] != -1) {
+        for (var5 = 0; var5 < BananarangEvent.field_s.field_g.field_m.length; var5++) {
+          if (BananarangEvent.field_s.field_g.field_m[var5] != -1) {
             regionExit1: {
-              var6_int = od.field_A[var5][0];
-              var7 = od.field_A[var5][1];
-              gq.field_E.a(0, var7, var6_int, -1049413117, 4096);
-              var8_ref_oha = ur.field_e[IsaacRandom.field_f.field_b[rn.field_s.field_g.field_m[var5]]];
+              var6_int = BuffVendorAnimation.field_A[var5][0];
+              var7 = BuffVendorAnimation.field_A[var5][1];
+              OneAnimation.field_E.a(0, var7, var6_int, -1049413117, 4096);
+              var8_ref_oha = ur.field_e[IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]]];
               if (!(var8_ref_oha instanceof tv)) {
                 if (var8_ref_oha instanceof hd) {
                   nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) - 1 + var6_int, -(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1) - 1 + var7, 14971949);
@@ -381,13 +381,13 @@ final class mk {
                 nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (-1 + var6_int), var7 - 1 - (nia.field_l[ur.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1), 51233);
               }
             }
-            wca.a(true, -15 + od.field_A[var5][1], -15 + od.field_A[var5][0], IsaacRandom.field_f.field_b[rn.field_s.field_g.field_m[var5]], 78);
+            CreatureType.a(true, -15 + BuffVendorAnimation.field_A[var5][1], -15 + BuffVendorAnimation.field_A[var5][0], IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]], 78);
           }
         }
         if (-1 != this.field_x ||
           this.field_t != -1) {
           if (this.field_x == -1) {
-            stackIn_42_0 = rn.field_s.field_g.field_m[this.field_t];
+            stackIn_42_0 = BananarangEvent.field_s.field_g.field_m[this.field_t];
           } else {
             stackIn_42_0 = this.field_x;
           }
@@ -403,7 +403,7 @@ final class mk {
           var9 = field_p + 4;
           var10 = 4 + gd.field_m;
           if (param0) {
-            sd.a(rn.field_s.field_g.a(var6, -5313), var9, var6, (byte) 74, var10, var7Lifetime1, var8);
+            sd.a(BananarangEvent.field_s.field_g.a(var6, -5313), var9, var6, (byte) 74, var10, var7Lifetime1, var8);
           }
         }
         if (this.field_m != null) {
@@ -433,16 +433,16 @@ final class mk {
         }
         for (var3 = 0; 15 > var3; var3++) {
           boolean decompiledFrameRemainder0 = true;
-          var4 = ica.field_r[var3][0];
-          var5 = ica.field_r[var3][1];
+          var4 = SauceOfFlameEvent.field_r[var3][0];
+          var5 = SauceOfFlameEvent.field_r[var3][1];
           if (var2 > var3 && (var3 < 3 ||
-            rn.field_s.field_g.b(8, var3 / 3))) {
-            if (var3 == rn.field_s.field_g.field_i &&
-              rn.field_s.field_g.field_i != 0) {
+            BananarangEvent.field_s.field_g.b(8, var3 / 3))) {
+            if (var3 == BananarangEvent.field_s.field_g.field_i &&
+              BananarangEvent.field_s.field_g.field_i != 0) {
               this.field_r.drawAdditive(-13 + var4, var5 - 13, 255);
             }
             if (var3 >= 2) {
-              stackIn_20_0 = (rn.field_s.field_g.field_g[var3 - 2]) ? 1 : 0;
+              stackIn_20_0 = (BananarangEvent.field_s.field_g.field_g[var3 - 2]) ? 1 : 0;
             } else {
               stackIn_20_0 = 1;
             }
@@ -450,11 +450,11 @@ final class mk {
             if (var6 != 0) {
               var10 = ur.field_e[bf.field_g[var3].field_vb];
               var7 = var10;
-              if (rn.field_s.field_g.a(bf.field_g[var3].field_vb, 9)) {
+              if (BananarangEvent.field_s.field_g.a(bf.field_g[var3].field_vb, 9)) {
                 a.field_o.rotateNearest(a.field_o.field_n << 3, a.field_o.field_o << 3, (1 + var4) * 16, 16 * var5 + 16, 0, 4096);
               }
               boolean decompiledFrameRemainder2 = true;
-              gq.field_E.a(0, var5, var4, -1049413117, 4096);
+              OneAnimation.field_E.a(0, var5, var4, -1049413117, 4096);
               if (!(var7 instanceof tv)) {
                 if (!(var7 instanceof hd)) {
                   if (!(var7 instanceof a)) {
@@ -495,17 +495,17 @@ final class mk {
               } else {
                 nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + var4 - 1, -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + var5 - 1, 51233);
               }
-              wca.a(true, bf.field_g[var3].field_rb, bf.field_g[var3].field_kb + 1, bf.field_g[var3].field_vb, 106);
+              CreatureType.a(true, bf.field_g[var3].field_rb, bf.field_g[var3].field_kb + 1, bf.field_g[var3].field_vb, 106);
             } else {
               if (var3 >= var2 && (2 > var3 ||
-                rn.field_s.field_g.field_g[var3 - 2])) {
+                BananarangEvent.field_s.field_g.field_g[var3 - 2])) {
                 var9 = ur.field_e[bf.field_g[var3].field_vb];
                 var7 = var9;
-                if (rn.field_s.field_g.a(bf.field_g[var3].field_vb, 9)) {
+                if (BananarangEvent.field_s.field_g.a(bf.field_g[var3].field_vb, 9)) {
                   a.field_o.rotateNearest(a.field_o.field_n << 3, a.field_o.field_o << 3, var4 * 16 + 16, (1 + var5) * 16, 0, 4096);
                 }
                 boolean decompiledFrameRemainder1 = true;
-                gq.field_E.a(0, var5, var4, -1049413117, 4096);
+                OneAnimation.field_E.a(0, var5, var4, -1049413117, 4096);
                 if (var7 instanceof tv) {
                   nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(var4 - (1 + (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), -1 + (var5 - (nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 51233);
                 } else {
@@ -546,8 +546,8 @@ final class mk {
                     nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + var4 - 1, -(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + (var5 - 1), 14971949);
                   }
                 }
-                wca.a(true, bf.field_g[var3].field_rb, 1 + bf.field_g[var3].field_kb, bf.field_g[var3].field_vb, 106);
-                nma.field_v.rotateNearest(nma.field_v.field_n << 3, nma.field_v.field_o << 3, 16 * var4, var5 * 16, 0, 4096);
+                CreatureType.a(true, bf.field_g[var3].field_rb, 1 + bf.field_g[var3].field_kb, bf.field_g[var3].field_vb, 106);
+                RefreshingAnimation.field_v.rotateNearest(RefreshingAnimation.field_v.field_n << 3, RefreshingAnimation.field_v.field_o << 3, 16 * var4, var5 * 16, 0, 4096);
               } else {
                 hp.field_b[ur.field_e[bf.field_g[var3].field_vb].field_b].rotateNearest(nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_n << 3, nia.field_l[ur.field_e[bf.field_g[var3].field_vb].field_b].field_o << 3, 16 * var4, 16 * var5, 0, 4096);
               }
@@ -555,7 +555,7 @@ final class mk {
             decompiledFrameRemainder0 = false;
           }
           else {
-            nma.field_v.rotateNearest(nma.field_v.field_n << 3, nma.field_v.field_o << 3, 16 * var4, var5 * 16, 0, 4096);
+            RefreshingAnimation.field_v.rotateNearest(RefreshingAnimation.field_v.field_n << 3, RefreshingAnimation.field_v.field_o << 3, 16 * var4, var5 * 16, 0, 4096);
           }
         }
     }
@@ -567,9 +567,9 @@ final class mk {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          me.field_t = new IntrusiveNodeHashTable(16);
+          BuffVendorEvent.field_t = new IntrusiveNodeHashTable(16);
           for (var1_int = 0; var1_int < gb.field_f.length; var1_int++) {
-            me.field_t.a((long)gb.field_f[var1_int].toLowerCase().hashCode(), (byte) 78, new ji(var1_int));
+            BuffVendorEvent.field_t.a((long)gb.field_f[var1_int].toLowerCase().hashCode(), (byte) 78, new ji(var1_int));
           }
           if (param0 != -43) {
             field_f = (String) null;
@@ -595,19 +595,19 @@ final class mk {
         var9 = BachelorFridge.field_y;
         try {
           if (param5 == 0 &&
-            rn.field_s.field_g.a(84, 0, rn.field_s.field_g.field_m)) {
+            BananarangEvent.field_s.field_g.a(84, 0, BananarangEvent.field_s.field_g.field_m)) {
             param1++;
           }
           if (1 == param5 &&
-            rn.field_s.field_g.a(85, 0, rn.field_s.field_g.field_m)) {
+            BananarangEvent.field_s.field_g.a(85, 0, BananarangEvent.field_s.field_g.field_m)) {
             param1++;
           }
           if (param5 == 2 &&
-            rn.field_s.field_g.a(86, 0, rn.field_s.field_g.field_m)) {
+            BananarangEvent.field_s.field_g.a(86, 0, BananarangEvent.field_s.field_g.field_m)) {
             param1++;
           }
           if (param5 == 3 &&
-            rn.field_s.field_g.a(87, 0, rn.field_s.field_g.field_m)) {
+            BananarangEvent.field_s.field_g.a(87, 0, BananarangEvent.field_s.field_g.field_m)) {
             param1++;
           }
           var7_int = 0;
@@ -642,7 +642,7 @@ final class mk {
         if (param0 == -1) {
           return;
         }
-        PcmSample var2 = jga.field_y[param0];
+        PcmSample var2 = PizzaPartyAnimation.field_y[param0];
         if (var2 != null) {
           ol.a(var2, true);
         }
@@ -712,20 +712,20 @@ final class mk {
         try {
           this.field_l = param1 ? true : false;
           this.field_e = param2;
-          rn.field_s = param0;
-          IsaacRandom.field_f = rn.field_s.field_g.field_o.field_g;
-          this.field_v = rn.field_s.field_g.field_n;
-          this.field_k = new int[rn.field_s.field_g.field_m.length];
-          ArrayOperations.copy(rn.field_s.field_g.field_m, 0, this.field_k, 0, this.field_k.length);
-          this.field_d = rn.field_s.field_g.field_k;
-          this.field_s = rn.field_s.field_g.e((byte) -121);
-          rn.field_v = mka.a(13558251, 13558251, 13558251, (byte) -123, jha.field_g, 13558251, 16777215, 13558251);
-          rn.field_v.field_eb = wd.field_w;
-          rn.field_v.field_A = bla.field_p;
-          rn.field_v.field_db = op.field_I;
-          rn.field_v.field_N = 1;
-          this.field_u = new sna("confirm", rn.field_v, 470, 320, jha.field_g.a(di.field_l) + 40, 40, di.field_l);
-          hha.field_w = new hw[5];
+          BananarangEvent.field_s = param0;
+          IsaacRandom.field_f = BananarangEvent.field_s.field_g.field_o.field_g;
+          this.field_v = BananarangEvent.field_s.field_g.field_n;
+          this.field_k = new int[BananarangEvent.field_s.field_g.field_m.length];
+          ArrayOperations.copy(BananarangEvent.field_s.field_g.field_m, 0, this.field_k, 0, this.field_k.length);
+          this.field_d = BananarangEvent.field_s.field_g.field_k;
+          this.field_s = BananarangEvent.field_s.field_g.e((byte) -121);
+          BananarangEvent.field_v = mka.a(13558251, 13558251, 13558251, (byte) -123, jha.field_g, 13558251, 16777215, 13558251);
+          BananarangEvent.field_v.field_eb = wd.field_w;
+          BananarangEvent.field_v.field_A = RageSpecial.field_p;
+          BananarangEvent.field_v.field_db = BattleState.field_I;
+          BananarangEvent.field_v.field_N = 1;
+          this.field_u = new sna("confirm", BananarangEvent.field_v, 470, 320, jha.field_g.a(di.field_l) + 40, 40, di.field_l);
+          SleepAnimation.field_w = new hw[5];
           bf.field_g = new hw[15];
           uma.n(1);
           var8 = new Sprite(350, 80);
@@ -783,10 +783,10 @@ final class mk {
           this.field_r.b();
           SoftwareRasterizer.a(208, 208, 192, 255, this.field_w);
           hga.field_U.a((byte) 125);
-          this.field_s.a((byte) 65, rn.field_s.field_g.field_o.field_b, 0);
-          rn.field_s.field_g.field_f = -1;
+          this.field_s.a((byte) 65, BananarangEvent.field_s.field_g.field_o.field_b, 0);
+          BananarangEvent.field_s.field_g.field_f = -1;
           RasterBuffer.a(13, 7758);
-          ct.c(0, -121);
+          OneEvent.c(0, -121);
           a.a(15843842, 32, 16763049, 16435458);
           uca.a(16, (byte) -61);
         } catch (RuntimeException runtimeException) {

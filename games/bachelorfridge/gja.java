@@ -62,8 +62,8 @@ final class gja extends tia {
               }
               return;
             }
-            SoftwareRasterizer.setClip(qga.field_r.field_q + (-128 + (-8 + param2) - 1024 + (this.field_g << 3)), -32 + param0 - 64, qga.field_r.field_q + 16 + param2 - 128, qga.field_r.field_p - 32 + (param0 - 64));
-            qga.field_r.a(-8 + (param2 - 128), -96 + param0, this.field_g << 1);
+            SoftwareRasterizer.setClip(OneSpecial.field_r.field_q + (-128 + (-8 + param2) - 1024 + (this.field_g << 3)), -32 + param0 - 64, OneSpecial.field_r.field_q + 16 + param2 - 128, OneSpecial.field_r.field_p - 32 + (param0 - 64));
+            OneSpecial.field_r.a(-8 + (param2 - 128), -96 + param0, this.field_g << 1);
             SoftwareRasterizer.c();
             if (param1 == 25415) {
               return;
@@ -72,8 +72,8 @@ final class gja extends tia {
             gja.a(false, (java.applet.Applet) null, (String) null, 115);
             return;
           }
-          SoftwareRasterizer.setClip(qga.field_r.field_q + param2 - (1056 - (this.field_g << 3)), param0 - 32, qga.field_r.field_q + (-128 + param2) + 96, -32 + (param0 + qga.field_r.field_p));
-          qga.field_r.a(param2 - 128 + 96, param0 - 32, this.field_g << 1);
+          SoftwareRasterizer.setClip(OneSpecial.field_r.field_q + param2 - (1056 - (this.field_g << 3)), param0 - 32, OneSpecial.field_r.field_q + (-128 + param2) + 96, -32 + (param0 + OneSpecial.field_r.field_p));
+          OneSpecial.field_r.a(param2 - 128 + 96, param0 - 32, this.field_g << 1);
           SoftwareRasterizer.c();
           if (param1 == 25415) {
             return;
@@ -144,7 +144,7 @@ final class gja extends tia {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              cv.a(1, "MGR1: " + param2, (Throwable) null);
+              SpiltMilkEvent.a(1, "MGR1: " + param2, (Throwable) null);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

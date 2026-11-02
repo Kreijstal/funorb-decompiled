@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oca extends jm {
+final class oca extends BoardChange {
     private int field_q;
     static String field_p;
     static sna field_n;
     static String field_o;
     private int field_m;
 
-    final void a(boolean param0, op param1) {
+    final void a(boolean param0, BattleState param1) {
         try {
-          param1.field_a[this.field_q][this.field_m].field_m = true;
+          param1.tiles[this.field_q][this.field_m].field_m = true;
           if (param0) {
             PacketBuffer var4 = (PacketBuffer) null;
             this.b((PacketBuffer) null, (byte) 17);

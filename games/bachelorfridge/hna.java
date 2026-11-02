@@ -51,7 +51,7 @@ final class hna extends aba {
             this.a((String) null, false);
           }
           if (!param0.equals(this.field_g)) {
-            var3 = cca.b(-26869, param0);
+            var3 = HazmatAnimation.b(-26869, param0);
             if (!var3.a(false)) {
               stackIn_10_0 = ji.field_f;
               return stackIn_10_0;
@@ -99,7 +99,7 @@ final class hna extends aba {
             stackIn_8_0 = bv.field_j;
             return stackIn_8_0;
           }
-          stackIn_6_0 = ija.field_p;
+          stackIn_6_0 = CranberrySpecial.field_p;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

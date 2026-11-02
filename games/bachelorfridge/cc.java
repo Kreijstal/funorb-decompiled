@@ -152,7 +152,7 @@ final class cc {
             var60 = var44.field_d;
             dla.a(0, fg.field_a, 72, var60, 0);
           } else {
-            ku.d(-372);
+            FloodEvent.d(-372);
           }
           var54 = new int[param4.field_i];
           var49 = var54;
@@ -160,7 +160,7 @@ final class cc {
           var8 = var41;
           var64 = new int[param4.field_i];
           var62 = bv.field_G;
-          var63 = fv.field_x;
+          var63 = PetAttackAnimation.field_x;
           var61 = ep.field_l;
           for (var13 = 0; param4.field_i > var13; var13++) {
             var14 = var61[var13] * param1 + (var62[var13] * param0 + param3 * var63[var13]) >> 8;
@@ -190,7 +190,7 @@ final class cc {
             var64[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < lq.field_y; var13Lifetime1++) {
-            var14Lifetime1 = ci.field_q[var13Lifetime1];
+            var14Lifetime1 = PizzaPartySpecial.field_q[var13Lifetime1];
             var15Lifetime1 = param4.field_C[var14Lifetime1];
             var16 = param4.field_h[var14Lifetime1];
             var17 = param4.field_t[var14Lifetime1];
@@ -284,8 +284,8 @@ final class cc {
 
     final static void a(int param0, String param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, int param6, int param7, int param8) {
         nj.field_f = param4;
-        pw.field_A = param1;
-        ro.field_j = param0;
+        SnowAnimation.field_A = param1;
+        ClearTileFlagEffect.field_j = param0;
         if (param2 != -1456477592) {
           return;
         }
@@ -294,10 +294,10 @@ final class cc {
           mh.field_l = param5;
           bd.field_m = param8;
           uea.field_i = param7;
-          gp.field_x = param3;
-          aka.field_G = (vm) ((Object) new cl());
+          DreamsAnimation.field_x = param3;
+          HomingMissileAnimation.field_G = (vm) ((Object) new cl());
           oea.field_q = new DiskCacheWorker(param5);
-          ga.field_c = new kb(aka.field_G, oea.field_q);
+          ga.field_c = new kb(HomingMissileAnimation.field_G, oea.field_q);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "cc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

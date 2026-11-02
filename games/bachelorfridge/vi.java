@@ -42,9 +42,9 @@ final class vi {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          oi.field_v = new IntrusiveNodeHashTable(param0);
+          ResetAnimation.field_v = new IntrusiveNodeHashTable(param0);
           for (var1_int = 0; var1_int < ia.field_j.length; var1_int++) {
-            oi.field_v.a((long)ia.field_j[var1_int].toLowerCase().hashCode(), (byte) 102, new ji(var1_int));
+            ResetAnimation.field_v.a((long)ia.field_j[var1_int].toLowerCase().hashCode(), (byte) 102, new ji(var1_int));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -10,33 +10,33 @@ class ot extends iga {
         if (param0 != -106) {
           return (wba) null;
         }
-        return bna.field_x;
+        return DisableAnimation.field_x;
     }
 
     final static boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, byte param6) {
         if (param6 > 43) {
-          if (lb.g((byte) -96)) {
+          if (InvincibleAnimation.g((byte) -96)) {
             kja.a(param1, param3, (byte) -66, param2);
             if (NetworkGameClient.field_u != null &&
               NetworkGameClient.field_u.a(true, param2, param1, param0, param4)) {
               param2 = false;
               di.c(55);
             }
-            fd.a(true, param1, param2);
+            AirstrikeAnimation.a(true, param1, param2);
             vd.a((byte) -35, param2, param5);
             param2 = false;
           }
           return param2;
         }
         ot.a(-115, -104, true, 1, -88, -103, (byte) -27);
-        if (lb.g((byte) -96)) {
+        if (InvincibleAnimation.g((byte) -96)) {
           kja.a(param1, param3, (byte) -66, param2);
           if (NetworkGameClient.field_u != null &&
             NetworkGameClient.field_u.a(true, param2, param1, param0, param4)) {
             param2 = false;
             di.c(55);
           }
-          fd.a(true, param1, param2);
+          AirstrikeAnimation.a(true, param1, param2);
           vd.a((byte) -35, param2, param5);
           param2 = false;
         }

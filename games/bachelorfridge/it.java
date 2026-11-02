@@ -29,8 +29,8 @@ final class it {
         if (param0 >= -13) {
           discarded$0 = this.c(95);
         }
-        this.field_k = kla.a(100, m.field_a, -2147483648);
-        this.field_q = kla.a(100, m.field_a, -2147483648);
+        this.field_k = DiveBomberAnimation.a(100, m.field_a, -2147483648);
+        this.field_q = DiveBomberAnimation.a(100, m.field_a, -2147483648);
     }
 
     public static void d(int param0) {
@@ -60,7 +60,7 @@ final class it {
               tr.a(this.field_j - 22, dc.field_y[this.field_e], -(this.field_b >> 2) + 256, this.field_k, ua.field_d, this.field_q, -26512, param1 + this.field_p + 16);
             }
             if (0 < -(this.field_b >> 1) + 256) {
-              tr.a(-22 + this.field_j, dc.field_y[this.field_e], -(this.field_b >> 1) + 256, this.field_k, aw.field_y, this.field_q, -26512, param1 + (16 + this.field_p));
+              tr.a(-22 + this.field_j, dc.field_y[this.field_e], -(this.field_b >> 1) + 256, this.field_k, SauceOfFlameAnimation.field_y, this.field_q, -26512, param1 + (16 + this.field_p));
             }
           }
         } else {
@@ -125,7 +125,7 @@ final class it {
           for (var2_int = 0; var2_int < ut.field_l; var2_int++) {
             fn.field_k[var2_int + param1] = var2_int;
           }
-          laa.a(param1 + param1, af.field_c, param1 + ut.field_l, false, mt.field_r, 6374, param1);
+          laa.a(param1 + param1, af.field_c, param1 + ut.field_l, false, ScavengerSpecial.field_r, 6374, param1);
           if (param1 < ut.field_l) {
             ut.field_l = param1;
           }

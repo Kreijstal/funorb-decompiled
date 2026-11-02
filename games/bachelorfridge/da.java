@@ -61,7 +61,7 @@ final class da {
           }
           if (var7 > 0 &&
             0 < var6) {
-            dk.a(0, 0, var7, SoftwareRasterizer.field_e, var8, var9, 0, var4_int, param3.field_v, 455530063, var5, 0, var6);
+            IncomingSpecial.a(0, 0, var7, SoftwareRasterizer.field_e, var8, var9, 0, var4_int, param3.field_v, 455530063, var5, 0, var6);
             return;
           }
           return;

@@ -86,7 +86,7 @@ final class oba extends k {
         if (param0 != -1488922239) {
           return;
         }
-        it.field_s.a(var2 + (lda.field_a << 1), 56, -MidiNote.field_v + io.field_p, ql.field_s - lda.field_a, var1 + (MidiNote.field_v << 1));
+        it.field_s.a(var2 + (lda.field_a << 1), 56, -MidiNote.field_v + RaiseSpecial.field_p, HailSpecial.field_s - lda.field_a, var1 + (MidiNote.field_v << 1));
         pfa.b(param0 ^ -1488922240);
     }
 

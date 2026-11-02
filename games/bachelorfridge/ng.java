@@ -35,7 +35,7 @@ final class ng {
         int var5;
         int var6;
         int var7;
-        sfa var8;
+        CreatureOrder var8;
         int var9;
         ad var10;
         int var6Lifetime1;
@@ -49,9 +49,9 @@ final class ng {
         if (param0 <= 31) {
           field_n = (String) null;
         }
-        if (var10.field_s.field_y != 40) {
-          if (var10.field_s.field_y != 42) {
-            stackIn_13_0 = (var10.field_s.field_y != 39) ? 1 : 0;
+        if (var10.field_s.statusId != 40) {
+          if (var10.field_s.statusId != 42) {
+            stackIn_13_0 = (var10.field_s.statusId != 39) ? 1 : 0;
           } else {
             stackIn_13_0 = 0;
           }
@@ -73,8 +73,8 @@ final class ng {
               if (var5 != 0) {
                 if (var10.field_l) {
                   var8 = this.field_m.b(var10, true);
-                  this.field_m.a(var10.field_s.field_u, (byte) 126);
-                  if (var3.field_zb == var8.field_g) {
+                  this.field_m.a(var10.field_s.rosterSlot, (byte) 126);
+                  if (var3.field_zb == var8.moveId) {
                     return;
                   }
                 }
@@ -107,7 +107,7 @@ final class ng {
           }
           var3 = (jj) (this.field_d.field_z.c(0));
         }
-        if (this.field_m.field_n != var10.field_s.field_D) {
+        if (this.field_m.field_n != var10.field_s.ownerIndex) {
           this.field_l.field_kb = this.field_d.field_kb + 30;
           this.field_l.field_rb = this.field_d.field_rb + 40;
           this.field_l.a(19842, true);
@@ -163,9 +163,9 @@ final class ng {
         boolean stackIn_7_0 = false;
         if (param0 != -24) {
           var2 = (PacketBuffer) null;
-          ng.a((op) null, 101, (PacketBuffer) null);
+          ng.a((BattleState) null, 101, (PacketBuffer) null);
         }
-        stackIn_7_0 = (bp.e(-29919)) || !(ProxySocketConnector.field_f > 0);
+        stackIn_7_0 = (AttackUpAllAnimation.e(-29919)) || !(ProxySocketConnector.field_f > 0);
         return stackIn_7_0;
     }
 
@@ -216,7 +216,7 @@ final class ng {
         int var8_int;
         jj var8;
         int var9;
-        sfa var10;
+        CreatureOrder var10;
         int var11;
         int var12;
         int var13;
@@ -246,7 +246,7 @@ final class ng {
         var25 = this.field_m.field_P;
         var5 = this.field_m.field_n;
         var6 = -8 % ((-4 - param1) / 59);
-        if (var25.field_s.field_D != var5) {
+        if (var25.field_s.ownerIndex != var5) {
           this.field_l.field_kb = this.field_d.field_kb + 30;
           this.field_l.field_rb = this.field_d.field_rb + 40;
           this.field_l.a(true, 7802);
@@ -271,15 +271,15 @@ final class ng {
             } else {
               this.field_k.e(74 + this.field_d.field_kb, this.field_d.field_rb + 2, 64, 64, 255);
             }
-            if (var25.field_s.field_y != 0) {
+            if (var25.field_s.statusId != 0) {
               var8_int = 105;
               var9 = 12;
-              if (var25.field_s.field_y != 31 &&
+              if (var25.field_s.statusId != 31 &&
                 !var25.field_s.g((byte) 85)) {
-                ad.field_h.a(lga.a(true, new String[]{"" + var25.field_s.field_C}, vla.field_p), var8_int + this.field_d.field_kb, var9 + this.field_d.field_rb, 2, -1);
+                ad.field_h.a(lga.a(true, new String[]{"" + var25.field_s.statusTurns}, vla.field_p), var8_int + this.field_d.field_kb, var9 + this.field_d.field_rb, 2, -1);
                 var9 -= 15;
               }
-              ad.field_h.a(c.field_k[var25.field_s.field_y], this.field_d.field_kb + var8_int, var9 + this.field_d.field_rb, 2, -1);
+              ad.field_h.a(c.field_k[var25.field_s.statusId], this.field_d.field_kb + var8_int, var9 + this.field_d.field_rb, 2, -1);
             }
             var8 = (jj) (this.field_d.field_z.b((byte) 90));
             var9 = 0;
@@ -299,9 +299,9 @@ final class ng {
                   continue;
                 }
                 var26 = al.a(116, var8.field_zb);
-                if (this.field_m.field_P.field_s.field_y != 40 &&
-                  this.field_m.field_P.field_s.field_y != 42 &&
-                  this.field_m.field_P.field_s.field_y != 39 &&
+                if (this.field_m.field_P.field_s.statusId != 40 &&
+                  this.field_m.field_P.field_s.statusId != 42 &&
+                  this.field_m.field_P.field_s.statusId != 39 &&
                   var26.field_a != 2) {
                   if (var26.field_a == 1) {
                     if (2 == this.field_m.field_M) {
@@ -315,9 +315,9 @@ final class ng {
                   }
                 }
                 if ((var10 == null ||
-                  var10.field_g == var8.field_zb) &&
+                  var10.moveId == var8.field_zb) &&
                   (this.field_m.field_Z == null ||
-                  this.field_m.field_Z.field_g == var8.field_zb)) {
+                  this.field_m.field_Z.moveId == var8.field_zb)) {
                   if (var8.field_xb > 2) {
                     stackIn_48_0 = vma.field_j[var8.field_xb - 3];
                     stackIn_48_1 = var8.field_kb + (this.field_d.field_kb - 19);
@@ -368,9 +368,9 @@ final class ng {
               if (!(var27 instanceof tv)) {
                 if (var27 instanceof hd) {
                   if ((var10 == null ||
-                    var8.field_zb != var10.field_g) &&
+                    var8.field_zb != var10.moveId) &&
                     (this.field_m.field_Z == null ||
-                    var8.field_zb != this.field_m.field_Z.field_g)) {
+                    var8.field_zb != this.field_m.field_Z.moveId)) {
                     if (!var8.field_yb &&
                       var25.field_s.c((byte) -10, var8.field_zb)) {
                       nia.field_l[var27.field_b].e(-5 + var8.field_kb + this.field_d.field_kb, -5 + (var8.field_rb + this.field_d.field_rb), 11250603);
@@ -388,9 +388,9 @@ final class ng {
                       2 != ((t) (var27)).field_p) {
                       if (((t) (var27)).field_p != 4) {
                         if ((var10 == null ||
-                          var10.field_g != var8.field_zb) &&
+                          var10.moveId != var8.field_zb) &&
                           (null == this.field_m.field_Z ||
-                          var8.field_zb != this.field_m.field_Z.field_g)) {
+                          var8.field_zb != this.field_m.field_Z.moveId)) {
                           if (!var8.field_yb &&
                             var25.field_s.c((byte) -10, var8.field_zb)) {
                             nia.field_l[var27.field_b].e(-5 + this.field_d.field_kb + var8.field_kb, this.field_d.field_rb - (-var8.field_rb + 5), 11250603);
@@ -402,9 +402,9 @@ final class ng {
                         }
                       } else {
                         if ((var10 == null ||
-                          var10.field_g != var8.field_zb) &&
+                          var10.moveId != var8.field_zb) &&
                           (this.field_m.field_Z == null ||
-                          var8.field_zb != this.field_m.field_Z.field_g)) {
+                          var8.field_zb != this.field_m.field_Z.moveId)) {
                           if (!var8.field_yb &&
                             var25.field_s.c((byte) -10, var8.field_zb)) {
                             nia.field_l[var27.field_b].e(this.field_d.field_kb + (var8.field_kb - 5), this.field_d.field_rb + (var8.field_rb - 5), 11250603);
@@ -419,9 +419,9 @@ final class ng {
                     }
                     else {
                       if ((var10 == null ||
-                        var10.field_g != var8.field_zb) &&
+                        var10.moveId != var8.field_zb) &&
                         (this.field_m.field_Z == null ||
-                        this.field_m.field_Z.field_g != var8.field_zb)) {
+                        this.field_m.field_Z.moveId != var8.field_zb)) {
                         if (!var8.field_yb &&
                           var25.field_s.c((byte) -10, var8.field_zb)) {
                           nia.field_l[var27.field_b].e(-5 + (var8.field_kb + this.field_d.field_kb), this.field_d.field_rb + (var8.field_rb - 5), 11250603);
@@ -438,9 +438,9 @@ final class ng {
                 }
               } else {
                 if ((var10 == null ||
-                  var10.field_g != var8.field_zb) &&
+                  var10.moveId != var8.field_zb) &&
                   (this.field_m.field_Z == null ||
-                  var8.field_zb != this.field_m.field_Z.field_g)) {
+                  var8.field_zb != this.field_m.field_Z.moveId)) {
                   if (!var8.field_yb &&
                     var25.field_s.c((byte) -10, var8.field_zb)) {
                     nia.field_l[var24.field_b].e(this.field_d.field_kb + var8.field_kb - 5, -5 + this.field_d.field_rb + var8.field_rb, 11250603);
@@ -455,12 +455,12 @@ final class ng {
               }
               if (-1 != var8.field_zb &&
                 al.a(102, var8.field_zb).field_a != 3) {
-                wca.a(true, -4 + this.field_d.field_rb + var8.field_rb, var8.field_kb + (this.field_d.field_kb - 4), var8.field_zb, 90);
+                CreatureType.a(true, -4 + this.field_d.field_rb + var8.field_rb, var8.field_kb + (this.field_d.field_kb - 4), var8.field_zb, 90);
               }
               var12 = 0;
-              if (this.field_m.field_P.field_s.field_y != 40 &&
-                this.field_m.field_P.field_s.field_y != 42 &&
-                this.field_m.field_P.field_s.field_y != 39) {
+              if (this.field_m.field_P.field_s.statusId != 40 &&
+                this.field_m.field_P.field_s.statusId != 42 &&
+                this.field_m.field_P.field_s.statusId != 39) {
                 if (2 == var27.field_a) {
                   stackIn_135_0 = (this.field_m.field_M != 1) ? 0 : 1;
                   var12 = stackIn_135_0;
@@ -530,9 +530,9 @@ final class ng {
               }
               if (this.field_i.field_vb > 50 &&
                 this.field_i.field_T &&
-                0 != var25.field_s.field_y) {
-                var30 = pna.field_zb[var25.field_s.field_y].field_d;
-                var29 = pna.field_zb[var25.field_s.field_y].field_e;
+                0 != var25.field_s.statusId) {
+                var30 = pna.field_zb[var25.field_s.statusId].field_d;
+                var29 = pna.field_zb[var25.field_s.statusId].field_e;
                 var13 = mk.field_p + 4;
                 var14_int = gd.field_m + 4;
                 var15_int = ad.field_h.c(var29, 200) + 10;
@@ -550,7 +550,7 @@ final class ng {
               if (this.field_h.field_vb > 50 &&
                 this.field_h.field_T &&
                 var10 != null) {
-                var31 = al.a(-128, var10.field_g);
+                var31 = al.a(-128, var10.moveId);
                 var12 = mk.field_p + 4;
                 var13 = gd.field_m + 4;
                 var14 = var31.a((byte) 37);
@@ -729,7 +729,7 @@ final class ng {
         int var3 = BachelorFridge.field_y;
         if (this.field_m.field_P != null) {
           for (var2 = 0; var2 < 128; var2++) {
-            this.field_o[var2] = (128 - var2) * dda.a(65793, this.field_m.c(this.field_m.field_P.field_s.field_D, 2271));
+            this.field_o[var2] = (128 - var2) * dda.a(65793, this.field_m.c(this.field_m.field_P.field_s.ownerIndex, 2271));
           }
         }
         this.field_d.a(19842, param0);
@@ -747,11 +747,11 @@ final class ng {
         }
     }
 
-    final static aga a(op param0, int param1, PacketBuffer param2) {
+    final static BattleCreature a(BattleState param0, int param1, PacketBuffer param2) {
         int var5 = 0;
-        aga stackIn_11_0 = null;
+        BattleCreature stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        aga stackIn_16_0 = null;
+        BattleCreature stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -759,39 +759,39 @@ final class ng {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        aga var4 = null;
+        BattleCreature var4 = null;
         int var6 = 0;
-        rk var7 = null;
+        CreatureProfile var7 = null;
         var6 = BachelorFridge.field_y;
         try {
           var7 = gka.a(param2, 255);
           if (var7 == null) {
             return null;
           }
-          var4 = new aga(var7, param0, -1, -1);
-          var4.field_I = param2.readUnsignedShort((byte) 54);
+          var4 = new BattleCreature(var7, param0, -1, -1);
+          var4.hp = param2.readUnsignedShort((byte) 54);
           var4.field_t = param2.readUnsignedShort((byte) 109);
-          var4.field_D = param2.readUnsignedByte(16711935);
-          var4.field_u = param2.readUnsignedByte(param1 + 16711986);
-          var4.field_F = param2.readUnsignedByte(param1 + 16711986);
-          var4.field_x = param2.readUnsignedByte(param1 ^ -16711886);
-          var4.field_J = param2.readUnsignedByte(16711935);
+          var4.ownerIndex = param2.readUnsignedByte(16711935);
+          var4.rosterSlot = param2.readUnsignedByte(param1 + 16711986);
+          var4.splitId = param2.readUnsignedByte(param1 + 16711986);
+          var4.tileX = param2.readUnsignedByte(param1 ^ -16711886);
+          var4.tileY = param2.readUnsignedByte(16711935);
           var4.field_s = param2.readUnsignedByte(16711935);
-          var4.field_y = param2.readUnsignedByte(16711935);
-          var4.field_C = param2.readUnsignedByte(16711935);
-          var4.field_E = param2.readUnsignedByte(16711935);
+          var4.statusId = param2.readUnsignedByte(16711935);
+          var4.statusTurns = param2.readUnsignedByte(16711935);
+          var4.friendly = param2.readUnsignedByte(16711935);
           if (param1 != -51) {
             ng.a((byte) 43);
           }
           for (var5 = 0; 5 > var5; var5++) {
             var4.field_K[var5] = param2.b(true);
           }
-          var4.field_H = param2.readUnsignedByte(16711935);
+          var4.shield = param2.readUnsignedByte(16711935);
           stackIn_11_0 = var4;
           stackIn_12_1 = (param2.readUnsignedByte(16711935) == 1);
           stackIn_11_0.field_A = stackIn_12_1;
-          if (!var4.i(param1 ^ -100)) {
-            param0.field_a[var4.field_x][var4.field_J].field_l = var4;
+          if (!var4.isDown(param1 ^ -100)) {
+            param0.tiles[var4.tileX][var4.tileY].occupant = var4;
             var4.d(51);
           }
           stackIn_16_0 = var4;
@@ -891,9 +891,9 @@ final class ng {
           }
         }
         var10 = 1;
-        if (this.field_m.field_P.field_s.field_y != 40 &&
-          42 != this.field_m.field_P.field_s.field_y &&
-          this.field_m.field_P.field_s.field_y != 39) {
+        if (this.field_m.field_P.field_s.statusId != 40 &&
+          42 != this.field_m.field_P.field_s.statusId &&
+          this.field_m.field_P.field_s.statusId != 39) {
           if (!param3) {
             var10 = 0;
           } else if (this.field_m.field_P.field_s.c((byte) -10, param4) &&
@@ -932,7 +932,7 @@ final class ng {
         int var1;
         boolean stackIn_5_0 = false;
         var1 = -100 / ((param0 + 83) / 43);
-        stackIn_5_0 = (null != jea.field_c) || (gm.field_k);
+        stackIn_5_0 = (null != jea.field_c) || (MoveOrder.field_k);
         return stackIn_5_0;
     }
 

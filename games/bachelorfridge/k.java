@@ -15,11 +15,11 @@ abstract class k extends IntrusiveNode {
         throw new IllegalStateException("This operation does not have a monochrome output");
     }
 
-    final static pp a(boolean param0, PacketBuffer param1) {
-        nq var2 = null;
+    final static EventEffect a(boolean param0, PacketBuffer param1) {
+        CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        pp stackIn_2_0 = null;
+        EventEffect stackIn_2_0 = null;
         kt stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -27,13 +27,13 @@ abstract class k extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_2_0 = (pp) null;
+            stackIn_2_0 = (EventEffect) null;
             return stackIn_2_0;
           }
           var2 = qi.a(param1, (byte) 60);
           var3 = param1.readUnsignedByte(16711935);
           stackIn_4_0 = new kt(var2, var3);
-          return (pp) ((Object) stackIn_4_0);
+          return (EventEffect) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -164,7 +164,7 @@ abstract class k extends IntrusiveNode {
         if (param0 != 3685) {
           return;
         }
-        mm.field_D = SoftwareRasterizer.field_j;
+        FlyAnimation.field_D = SoftwareRasterizer.field_j;
     }
 
     static {

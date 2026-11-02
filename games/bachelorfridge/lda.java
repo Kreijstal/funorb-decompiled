@@ -74,7 +74,7 @@ final class lda {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param2);
-          if (!wc.a(0, var6)) {
+          if (!HazmatSpecial.a(0, var6)) {
             stackIn_2_0 = mk.field_f;
             return stackIn_2_0;
           }
@@ -90,7 +90,7 @@ final class lda {
             stackIn_12_0 = lga.a(true, new String[]{param2}, rt.field_c);
             return stackIn_12_0;
           }
-          if (maa.field_v >= 100 &&
+          if (SuperSpeedAnimation.field_v >= 100 &&
             0 >= ProxySocketConnector.field_f) {
             stackIn_16_0 = he.field_m;
             return stackIn_16_0;
@@ -98,11 +98,11 @@ final class lda {
           if (param0 != -26181) {
             field_d = (String) null;
           }
-          if (maa.field_v >= 200) {
+          if (SuperSpeedAnimation.field_v >= 200) {
             stackIn_22_0 = he.field_m;
             return stackIn_22_0;
           }
-          if (bna.a((byte) 5, param2)) {
+          if (DisableAnimation.a((byte) 5, param2)) {
             stackIn_25_0 = lga.a(true, new String[]{param2}, bda.field_p);
             return stackIn_25_0;
           }

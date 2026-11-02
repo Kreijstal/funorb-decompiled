@@ -41,7 +41,7 @@ final class a extends oha {
           var14 = var14 + var8;
           var18 = var18 + var12;
           var16 = var16 + var10;
-          var22[var20] = mp.a(mp.a(dda.a((int)Math.round(var14) << 16, 16763049), dda.a((int)Math.round(var16), -1526726401) << 8), dda.a(255, (int)Math.round(var18)));
+          var22[var20] = MassPoisonSpecial.a(MassPoisonSpecial.a(dda.a((int)Math.round(var14) << 16, 16763049), dda.a((int)Math.round(var16), -1526726401) << 8), dda.a(255, (int)Math.round(var18)));
         }
         if (param2 == 16763049) {
           return var4;

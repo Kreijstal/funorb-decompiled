@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rka extends ida {
-    private nq field_t;
+    private CreatureRef field_t;
 
     final boolean c(byte param0) {
         ad var2 = this.field_p.a(-27449, this.field_s);
@@ -32,7 +32,7 @@ final class rka extends ida {
         var2.field_o = 0;
     }
 
-    rka(gj param0, nq param1, nq param2, int param3, int param4) {
+    rka(gj param0, CreatureRef param1, CreatureRef param2, int param3, int param4) {
         super(param0, param1, param3, param4);
         try {
           this.field_t = param2;

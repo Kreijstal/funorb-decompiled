@@ -74,7 +74,7 @@ final class hca {
         int var3 = BachelorFridge.field_y;
         IndexedSprite[] var1 = new IndexedSprite[ok.field_vb];
         for (var2 = 0; ok.field_vb > var2; var2++) {
-          var1[var2] = new IndexedSprite(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], baa.field_P[var2], hk.field_f);
+          var1[var2] = new IndexedSprite(ok.field_Bb, MassPoisonEvent.field_r, fl.field_j[var2], AirstrikeAnimation.field_D[var2], lq.field_A[var2], InsanoSauceSpecial.field_s[var2], BananarangAnimation.field_P[var2], hk.field_f);
         }
         if (param0 == 200) {
           al.b(-18073);

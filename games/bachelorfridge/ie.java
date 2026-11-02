@@ -5,7 +5,7 @@ final class ie {
     static int[] field_b;
     static int field_a;
 
-    final static pp a(PacketBuffer param0, boolean param1) {
+    final static EventEffect a(PacketBuffer param0, boolean param1) {
         RuntimeException var2 = null;
         PacketBuffer var3 = null;
         dh stackIn_3_0 = null;
@@ -19,7 +19,7 @@ final class ie {
             ie.a((PacketBuffer) null, true);
           }
           stackIn_3_0 = new dh();
-          return (pp) ((Object) stackIn_3_0);
+          return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

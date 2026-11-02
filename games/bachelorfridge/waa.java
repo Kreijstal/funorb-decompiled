@@ -11,28 +11,28 @@ final class waa {
             return em.field_V;
           }
           if (kq.field_j == dka.field_G) {
-            return vh.field_w;
+            return BagpipeAnimation.field_w;
           }
           if (ut.field_m.a(!param0 ? true : false)) {
-            return dk.field_p;
+            return IncomingSpecial.field_p;
           }
-          return vh.field_w;
+          return BagpipeAnimation.field_w;
         }
         if (kq.field_j == ola.field_p) {
           return em.field_V;
         }
         if (kq.field_j == dka.field_G) {
-          return vh.field_w;
+          return BagpipeAnimation.field_w;
         }
         if (ut.field_m.a(!param0 ? true : false)) {
-          return dk.field_p;
+          return IncomingSpecial.field_p;
         }
-        return vh.field_w;
+        return BagpipeAnimation.field_w;
     }
 
     final static void b(boolean param0) {
-        aka.field_G.field_e = 0;
-        aka.field_G.field_k = 0;
+        HomingMissileAnimation.field_G.field_e = 0;
+        HomingMissileAnimation.field_G.field_k = 0;
         if (param0) {
           waa.a(-59, 44);
         }

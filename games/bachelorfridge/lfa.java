@@ -50,21 +50,21 @@ final class lfa extends k {
         int var1_int = 0;
         int var2 = 0;
         int var3_int = 0;
-        op var3 = null;
+        BattleState var3 = null;
         int var4_int = 0;
-        tk[] var4 = null;
+        PlayerMatchStats[] var4 = null;
         int var5 = 0;
         int var6 = 0;
         String[] var6_ref_String__ = null;
         int var7 = 0;
-        op var8 = null;
+        BattleState var8 = null;
         int var9 = 0;
         Object var10 = null;
         int var11_int = 0;
         gj var11 = null;
         int var13 = 0;
         Sprite var14 = null;
-        rk[] var15 = null;
+        CreatureProfile[] var15 = null;
         int var2Lifetime1;
         int var3_intLifetime1;
         int var4_intLifetime1;
@@ -100,7 +100,7 @@ final class lfa extends k {
             if (ri.field_a == 74) {
               ((gj) (var1)).field_h.a(dw.field_f, true, ig.field_m);
               if (!((gj) (var1)).field_h.field_U.e(12917)) {
-                ((gj) (var1)).field_g = ((cj) (((gj) (var1)).field_h.field_U.a(6))).field_j;
+                ((gj) (var1)).field_g = ((BattleUpdate) (((gj) (var1)).field_h.field_U.a(6))).field_j;
               }
               ((gj) (var1)).field_m = false;
               ((gj) (var1)).b((byte) -117);
@@ -135,7 +135,7 @@ final class lfa extends k {
                 ((gj) (var1)).field_p = -500 + var6;
                 ((gj) (var1)).field_k = var6;
                 ((gj) (var1)).field_m = true;
-                ((gj) (var1)).field_Y = new sfa[7];
+                ((gj) (var1)).field_Y = new CreatureOrder[7];
                 ((gj) (var1)).field_u = var6;
                 if (!((gj) (var1)).field_h.field_N) {
                   ((gj) (var1)).f((byte) 50);
@@ -160,8 +160,8 @@ final class lfa extends k {
             if (ri.field_a == 62) {
               var2Lifetime3 = ig.field_m.b(true);
               var3 = ((gj) (var1)).field_h;
-              var4 = new tk[var3.field_d];
-              for (var5Lifetime2 = 0; var3.field_d > var5Lifetime2; var5Lifetime2++) {
+              var4 = new PlayerMatchStats[var3.playerCount];
+              for (var5Lifetime2 = 0; var3.playerCount > var5Lifetime2; var5Lifetime2++) {
                 var4[var5Lifetime2] = ika.a((byte) 85, ig.field_m);
               }
               var3.a(true, var2Lifetime3);
@@ -192,7 +192,7 @@ final class lfa extends k {
             if (ri.field_a == 66) {
               ((gj) (var1)).field_h.field_f = ig.field_m.readUnsignedByte(16711935);
               if (vs.field_d) {
-                hia.c((byte) -109);
+                AttackOrder.c((byte) -109);
               }
               return true;
             }
@@ -201,11 +201,11 @@ final class lfa extends k {
             }
             ((gj) (var1)).field_V = ig.field_m.readUnsignedByte(16711935);
             if (vs.field_d) {
-              hia.c((byte) -122);
+              AttackOrder.c((byte) -122);
             }
             return true;
           }
-          baa.e(17035);
+          BananarangAnimation.e(17035);
           hba.a(true, IterableNodeHashTable.field_a);
           gs.field_f = null;
           var1_int = ig.field_m.readUnsignedByte(16711935);
@@ -218,20 +218,20 @@ final class lfa extends k {
           for (var8_int = 0; var6_ref_String__.length > var8_int; var8_int++) {
             var6_ref_String__[var8_int] = ig.field_m.i(0);
           }
-          var8 = new op(var1_int, var2Lifetime1, var3_intLifetime1, var4_intLifetime1, var5Lifetime1, var6_ref_String__);
+          var8 = new BattleState(var1_int, var2Lifetime1, var3_intLifetime1, var4_intLifetime1, var5Lifetime1, var6_ref_String__);
           var9 = ig.field_m.readUnsignedShort((byte) 80);
           var8.a(-2, ig.field_m);
           var10 = null;
           if (var8.field_A == 0 &&
             var7Lifetime1 >= 0) {
             var11_int = ig.field_m.readUnsignedByte(16711935);
-            var15 = new rk[var11_int];
+            var15 = new CreatureProfile[var11_int];
             var10 = var15;
             for (var12 = 0; var12 < var11_int; var12++) {
               var15[var12] = gka.a(ig.field_m, 255);
             }
           }
-          var11 = new gj(var8, var7Lifetime1, (rk[]) (var10), true);
+          var11 = new gj(var8, var7Lifetime1, (CreatureProfile[]) (var10), true);
           var11.field_g = ig.field_m.readInt(51);
           if (var8.field_A != 0) {
             ala.a(26219, iq.field_m);
@@ -245,7 +245,7 @@ final class lfa extends k {
           if (ri.field_a == 57) {
             vs.field_d = true;
             dj.field_c = var11;
-            hia.c((byte) -119);
+            AttackOrder.c((byte) -119);
             qi.a((byte) 122);
             dna.f((byte) -12);
           } else {
@@ -270,7 +270,7 @@ final class lfa extends k {
             java.awt.Component var7 = (java.awt.Component) null;
             lfa.a(93, (PlatformTaskDispatcher) null, true, (byte) 13, (MidiPcmStream) null, (java.awt.Component) null);
           }
-          efa.a(param0, param0, 1024, param2, param1, 19299, param5, param4);
+          StickySpecial.a(param0, param0, 1024, param2, param1, 19299, param5, param4);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "lfa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

@@ -68,13 +68,13 @@ final class sr {
           stackIn_5_0 = ld.field_p;
           stackIn_6_1 = !(param0);
           dna.c(stackIn_5_0, stackIn_6_1);
-          if (null != rv.field_n) {
+          if (null != EffectBatch.field_n) {
             ik.field_i.field_p = 0;
             var15 = ik.field_i;
             var17 = var15;
             var17.field_sb = 0;
-            cn.field_j.field_p = 0;
-            var5 = cn.field_j;
+            PlaceCreatureEffect.field_j.field_p = 0;
+            var5 = PlaceCreatureEffect.field_j;
             var5.field_sb = 0;
             cw.field_yb.field_p = 0;
             var6 = cw.field_yb;
@@ -82,7 +82,7 @@ final class sr {
             vaa.field_a.field_Z = tw.field_d.toUpperCase();
             var7 = (2 + ho.field_g.field_sb) / 2;
             cw.field_yb.a(40, 31407, var7 - 2, 0, ho.field_g.field_p - 40);
-            cn.field_j.a(40, 31407, -var7 + ho.field_g.field_sb, var7, ho.field_g.field_p - 40);
+            PlaceCreatureEffect.field_j.a(40, 31407, -var7 + ho.field_g.field_sb, var7, ho.field_g.field_p - 40);
             if (1 == qha.field_c.length &&
               qha.field_c[0] == 2) {
               var8 = 0;
@@ -92,7 +92,7 @@ final class sr {
               var10 = 0;
               while (true) {
                 if (var10 < qha.field_c.length) {
-                  stackIn_16_0 = ((fia.field_r[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
+                  stackIn_16_0 = ((LevitateEvent.field_r[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
                   var11_int = stackIn_16_0;
                   if (var11_int != 0) {
                     var9_int++;
@@ -112,9 +112,9 @@ final class sr {
                 break;
               }
             }
-            cn.field_j.field_u = true;
+            PlaceCreatureEffect.field_j.field_u = true;
             if (!ce.field_y) {
-              stackIn_40_0 = cn.field_j;
+              stackIn_40_0 = PlaceCreatureEffect.field_j;
               if (var8 != 0) {
                 stackIn_41_1 = bg.field_m;
               } else {
@@ -123,19 +123,19 @@ final class sr {
               stackIn_40_0.field_Z = ((String) (Object) stackIn_41_1).toUpperCase();
               stackIn_43_0 = (sna) (field_b);
               stackIn_43_1 = true;
-              stackIn_43_2 = new String[]{cn.field_j.field_Z};
+              stackIn_43_2 = new String[]{PlaceCreatureEffect.field_j.field_Z};
               if (var8 != 0) {
-                stackIn_44_3 = kk.field_r;
+                stackIn_44_3 = AttackUpAllEvent.field_r;
               } else {
                 stackIn_44_3 = ffa.field_h;
               }
               stackIn_43_0.field_Z = lga.a(stackIn_43_1, stackIn_43_2, stackIn_44_3);
               cw.field_yb.field_Z = lo.field_a;
-              fla.field_q = true;
+              ShieldSpecial.field_q = true;
               jj.field_wb.field_u = true;
               if (null != pha.field_h) {
                 uu.field_yb = false;
-                fla.field_q = false;
+                ShieldSpecial.field_q = false;
                 if (bja.field_o == null) {
                   bja.field_o = new byte[ld.field_q];
                   ala.field_b = new boolean[ld.field_q];
@@ -146,15 +146,15 @@ final class sr {
                   ala.field_b[var13] = false;
                   var13++;
                 }
-                ub.a(0, true, -81, -1, -1, rv.field_n, -1, ld.field_q);
-                if (!(2 > hea.field_r) &&
-                  wga.field_q[12]) {
-                  fla.field_q = true;
+                ub.a(0, true, -81, -1, -1, EffectBatch.field_n, -1, ld.field_q);
+                if (!(2 > BananarangSpecial.field_r) &&
+                  InvincibleEvent.field_q[12]) {
+                  ShieldSpecial.field_q = true;
                 }
               }
-              if (!fla.field_q) {
-                cn.field_j.field_u = false;
-                if (cn.field_j.field_E) {
+              if (!ShieldSpecial.field_q) {
+                PlaceCreatureEffect.field_j.field_u = false;
+                if (PlaceCreatureEffect.field_j.field_E) {
                   var9 = null;
                   if (uu.field_yb) {
                     var9 = "<col=A00000>" + gb.field_j + "</col>";
@@ -175,12 +175,12 @@ final class sr {
                       }
                     }
                   }
-                  jja.field_m = "<col=A00000>" + iha.field_k + "<br>" + jm.field_l + (String) (var9);
+                  jja.field_m = "<col=A00000>" + iha.field_k + "<br>" + BoardChange.field_l + (String) (var9);
                 }
               }
             } else {
               jj.field_wb.field_u = false;
-              field_b.field_Z = pba.field_q;
+              field_b.field_Z = ShieldEvent.field_q;
               if (var8 != 0) {
                 stackIn_30_0 = wk.field_e;
               } else {
@@ -203,7 +203,7 @@ final class sr {
                 var9 = (String) (var9) + "...";
               }
               cw.field_yb.field_Z = (String) (var9);
-              cn.field_j.field_Z = bga.field_f.toUpperCase();
+              PlaceCreatureEffect.field_j.field_Z = bga.field_f.toUpperCase();
             }
           }
           stackIn_73_0 = ela.field_i;
@@ -219,18 +219,18 @@ final class sr {
           stackIn_84_2 = (param3) && (!param1) && (w.field_e);
           ((sna) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
           BitPacketBuffer.field_n.field_a.f(18632);
-          if (null != rv.field_n) {
+          if (null != EffectBatch.field_n) {
             if (jj.field_wb.field_R != 0) {
               wt.b(-22908, param2);
             }
-            if (cn.field_j.field_R != 0) {
+            if (PlaceCreatureEffect.field_j.field_R != 0) {
               if (ce.field_y) {
-                kl.a(54, param2);
+                TBomberSpecial.a(54, param2);
               } else {
-                fq.a(param2, (byte) -124);
+                HomingMissileSpecial.a(param2, (byte) -124);
               }
             }
-            wp.a(false, rv.field_n, param2, true);
+            wp.a(false, EffectBatch.field_n, param2, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -265,7 +265,7 @@ final class sr {
           field_c = (boolean[]) null;
         }
         dc.field_m = da.field_a[param0];
-        gq.field_G = sb.field_m[param0];
+        OneAnimation.field_G = sb.field_m[param0];
         rj.field_q = dl.field_k[param0];
     }
 

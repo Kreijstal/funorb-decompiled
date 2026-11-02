@@ -46,7 +46,7 @@ final class cea {
             stackIn_5_0 = (PalettedBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new PalettedBitmapFont(param0, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
+          var2 = new PalettedBitmapFont(param0, fl.field_j, AirstrikeAnimation.field_D, lq.field_A, InsanoSauceSpecial.field_s, hk.field_f, BananarangAnimation.field_P);
           al.b(-18073);
           stackIn_7_0 = var2;
           return stackIn_7_0;

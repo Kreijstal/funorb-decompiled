@@ -18,7 +18,7 @@ final class BufferedCacheFile {
     private byte[] field_a;
 
     final static void a(byte param0) {
-        if (gm.field_k) {
+        if (MoveOrder.field_k) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_f, SoftwareRasterizer.field_j, SoftwareRasterizer.field_h - SoftwareRasterizer.field_f, -SoftwareRasterizer.field_j + SoftwareRasterizer.field_k);
           fo.field_a.a(false, 7802);
         }
@@ -408,8 +408,8 @@ final class BufferedCacheFile {
     final static void a(int param0, byte param1, int param2, lda param3, lda param4, int param5) {
         try {
           hna.field_k = param2;
-          pba.field_r = param5;
-          aka.field_x = param3;
+          ShieldEvent.field_r = param5;
+          HomingMissileAnimation.field_x = param3;
           raa.field_J = param0;
           nj.field_j = param4;
           if (param1 <= 19) {

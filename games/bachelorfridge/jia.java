@@ -254,7 +254,7 @@ final class jia extends k {
               ac.a("document.cookie=\"" + var5 + "\"", param2, 113);
             } catch (Throwable throwable) {
             }
-            eha.a(-119, param2);
+            InsanoSauceSpecial.a(-119, param2);
           } catch (RuntimeException runtimeException) {
             throw pe.wrapException((Throwable) ((Object) runtimeException), "jia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

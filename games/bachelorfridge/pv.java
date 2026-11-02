@@ -86,8 +86,8 @@ class pv extends IntrusiveNode {
           stackIn_9_1 = !(param1);
           dna.c(stackIn_6_0, stackIn_9_1);
           BitPacketBuffer.field_n.a(0, ela.field_i.field_p - 42, 0, ela.field_i.field_sb, (byte) 99);
-          mja.field_t.a(rg.field_h, 31407, nu.field_f.field_sb, 0, 0);
-          stackIn_11_0 = oga.field_t;
+          StampedeSpecial.field_t.a(rg.field_h, 31407, nu.field_f.field_sb, 0, 0);
+          stackIn_11_0 = FlirtEvent.field_t;
           stackIn_11_1 = 18;
           stackIn_11_2 = 31407;
           if (!IntrusiveDeque.field_c) {
@@ -97,7 +97,7 @@ class pv extends IntrusiveNode {
           }
           ((sna) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, -stackIn_12_3 + nu.field_f.field_sb, 0, rg.field_h + 2);
           ut.field_q.a(18, 31407, 42 + rj.field_j, -40 + (nu.field_f.field_sb - rj.field_j - 2), rg.field_h + 2);
-          ak.field_q.a((byte) -58, -2 + (nu.field_f.field_p - (rg.field_h + 20)), 0, 22 + rg.field_h, nu.field_f.field_sb, rj.field_j, 2);
+          SnowEvent.field_q.a((byte) -58, -2 + (nu.field_f.field_p - (rg.field_h + 20)), 0, 22 + rg.field_h, nu.field_f.field_sb, rj.field_j, 2);
           jj.field_wb.a(40, 31407, ela.field_i.field_sb, 0, -40 + ela.field_i.field_p);
           vaa.field_a.a(30, 31407, ho.field_g.field_sb, 0, 0);
           vm.field_i.a(-40 + (ho.field_g.field_p - 32), 31407, ho.field_g.field_sb, 0, 30);
@@ -208,7 +208,7 @@ class pv extends IntrusiveNode {
           rf.field_q.field_eb = mu.a(11579568, 3, rf.field_q.field_p, 8421504, 1, (byte) 17);
           tv.field_o.a(-26 + (-10 + rf.field_q.field_p), 31407, rf.field_q.field_sb - 10, 5, 5);
           vca.field_h.a(24, 31407, 80, (rf.field_q.field_sb - 80) / 2, -24 + rf.field_q.field_p - 5);
-          pg.e(0);
+          RageEvent.e(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

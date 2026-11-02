@@ -47,8 +47,8 @@ final class ei {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          sma.a(30869, param0, param16, param2, param14);
-          kea.a(-12238, param16);
+          GasCloudAnimation.a(30869, param0, param16, param2, param14);
+          AirstrikeSpecial.a(-12238, param16);
           if (param9) {
             return;
           }
@@ -63,8 +63,8 @@ final class ei {
           stackIn_4_8 = (String[]) (param15);
           stackIn_5_9 = !(param9);
           pna.a(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_5_9, param19, param4, param7, param11, param3);
-          nma.a(param10, true, param6, param16);
-          bla.c((byte) 13);
+          RefreshingAnimation.a(param10, true, param6, param16);
+          RageSpecial.c((byte) 13);
           ft.a(2048);
           gca.d((byte) 124);
           return;

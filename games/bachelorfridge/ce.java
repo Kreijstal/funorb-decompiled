@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ce extends vja {
+final class ce extends AttackEvent {
     static int field_t;
     static int[][] field_w;
     int field_v;
@@ -11,7 +11,7 @@ final class ce extends vja {
     static boolean field_y;
     static int[] field_u;
 
-    ce(int param0, nq param1, int param2, boolean param3, boolean param4, boolean param5, int param6) {
+    ce(int param0, CreatureRef param1, int param2, boolean param3, boolean param4, boolean param5, int param6) {
         super(param0, param1, param2, param6, param3, param4, param5);
         try {
           this.field_v = param6;
@@ -55,9 +55,9 @@ final class ce extends vja {
         field_w = (int[][]) null;
     }
 
-    final at a(int param0, gj param1) {
+    final AnimationNode a(int param0, gj param1) {
         RuntimeException var3 = null;
-        at stackIn_2_0 = null;
+        AnimationNode stackIn_2_0 = null;
         rja stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -66,9 +66,9 @@ final class ce extends vja {
         try {
           if (param0 == 5) {
             stackIn_4_0 = new rja(param1, this);
-            return (at) ((Object) stackIn_4_0);
+            return (AnimationNode) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (at) null;
+          stackIn_2_0 = (AnimationNode) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class ce extends vja {
             }
             lo.field_b.drawText(param3, 5, 3 + lo.field_b.field_u, 0, -1);
             SoftwareRasterizer.setTarget(var12, var7, var8);
-            fk.d((byte) 69);
+            HomingMissileEvent.d((byte) 69);
             if (param5) {
               fw.a(param4, MouseWheelInput.field_a, var9, param1, true, ap.field_c, param2);
               return;
@@ -143,9 +143,9 @@ final class ce extends vja {
         }
     }
 
-    final void a(op param0, boolean param1) {
+    final void a(BattleState param0, boolean param1) {
         RuntimeException runtimeException = null;
-        aga var3 = null;
+        BattleCreature var3 = null;
         t var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -156,15 +156,15 @@ final class ce extends vja {
         try {
           if (!this.field_r &&
             !this.field_n) {
-            var3 = this.field_l.a(69, param0);
-            var4 = (t) (al.a(120, this.field_k));
+            var3 = this.creature.a(69, param0);
+            var4 = (t) (al.a(120, this.moveId));
             var5 = 0;
             if (var4.field_u == 15 ||
               var4.field_u == 45 ||
               var4.field_u == 46) {
               var5 = 1;
             }
-            var6 = om.a(this.field_q, (byte) 25, var3.field_J, var5 != 0, this.field_v, var3, var3.field_x, param0);
+            var6 = ShuffleAnimation.a(this.field_q, (byte) 25, var3.tileY, var5 != 0, this.field_v, var3, var3.tileX, param0);
             this.field_v = var6;
             var3.a(param1, this.field_v, this.field_q);
             super.a(param0, false);
@@ -212,8 +212,8 @@ final class ce extends vja {
             ce.a(false, -81, -123, (String) null, 28, false);
           }
           var3 = new ika(param0.a((byte) 123, "", "manifest"));
-          rn.field_u = var3.field_c;
-          rs.field_g = new lr[rn.field_u];
+          BananarangEvent.field_u = var3.field_c;
+          rs.field_g = new lr[BananarangEvent.field_u];
           var4 = 0;
           var5 = (ft) (var3.field_b.b((byte) 90));
           while (var5 != null) {

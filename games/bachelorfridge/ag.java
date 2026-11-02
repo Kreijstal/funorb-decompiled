@@ -120,7 +120,7 @@ final class ag extends k {
 
     final static void a(jfa param0, byte param1) {
         int var2_int = 0;
-        if (bp.e(param1 ^ 29881)) {
+        if (AttackUpAllAnimation.e(param1 ^ 29881)) {
           return;
         }
         try {

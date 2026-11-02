@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kq extends pp {
+final class kq extends EventEffect {
     static int field_i;
     static af field_j;
     static int field_k;
@@ -27,7 +27,7 @@ final class kq extends pp {
         field_j = null;
     }
 
-    final void a(aga param0, op param1, int param2) {
+    final void a(BattleCreature param0, BattleState param1, int param2) {
         try {
           param1.field_l = false;
           if (param2 != 12) {

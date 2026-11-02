@@ -1,0 +1,152 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class BuffVendorAnimation extends EventAnimation {
+    static IndexedSprite field_C;
+    static int[][] field_A;
+    static Sprite field_B;
+    static hja[] field_w;
+    private BuffVendorEvent field_y;
+    private boolean field_x;
+    static String field_z;
+    private boolean field_v;
+
+    BuffVendorAnimation(gj param0, BuffVendorEvent param1, boolean param2) {
+        super(param0, param1);
+        this.field_v = false;
+        try {
+          this.field_x = param2 ? true : false;
+          this.field_y = param1;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    final static boolean e(byte param0) {
+        if (param0 >= -124) {
+          BuffVendorAnimation.a(-16L, 12, -52);
+          if (qt.field_l == null) {
+            return false;
+          }
+          if (qt.field_l.b(-8455)) {
+            return true;
+          }
+          return false;
+        }
+        if (qt.field_l == null) {
+          return false;
+        }
+        if (qt.field_l.b(-8455)) {
+          return true;
+        }
+        return false;
+    }
+
+    final static void a(long param0, String param1, boolean param2) {
+        CharSequence var5 = null;
+        try {
+          gk.field_d = 2;
+          bd.field_k = param1;
+          var5 = (CharSequence) ((Object) param1);
+          MoveEvent.field_s = HomingMissileSpecial.a(0, var5);
+          if (param2) {
+            BuffVendorAnimation.e((byte) 9);
+          }
+          IntrusiveDeque.field_a = param0;
+          lna.field_q = true;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "od.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    public static void b(boolean param0) {
+        field_A = (int[][]) null;
+        if (param0) {
+          return;
+        }
+        field_w = null;
+        field_C = null;
+        field_B = null;
+        field_z = null;
+    }
+
+    final static void a(long param0, int param1, int param2) {
+        int var5 = 0;
+        BitPacketBuffer var4 = sja.field_fb;
+        if (param2 == 2) {
+          var4.writeCipheredByte(param1, (byte) 100);
+          var4.position = var4.position + 1;
+          var5 = var4.position;
+          var4.writeByte(7, 0);
+          var4.writeLong(param2 ^ 1686281210, param0);
+          var4.writeLengthByte((byte) 89, -var5 + var4.position);
+          return;
+        }
+    }
+
+    private final void f(byte param0) {
+        if (param0 > -16) {
+          field_A = (int[][]) null;
+        }
+    }
+
+    final static byte[] a(String param0, byte param1) {
+        RuntimeException var2 = null;
+        String var3 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 <= 69) {
+            var3 = (String) null;
+            BuffVendorAnimation.a(-51L, (String) null, true);
+          }
+          stackIn_3_0 = IsaacRandom.field_g.a((byte) 123, param0, "");
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("od.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final boolean c(byte param0) {
+        tka var2 = null;
+        if (this.field_x) {
+          return true;
+        }
+        if (this.field_m.isLinked((byte) -106)) {
+          return false;
+        }
+        int fieldTemp$0 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
+        if (0 > fieldTemp$0) {
+          int var2_int = 39 / ((param0 - 71) / 47);
+          this.f((byte) -66);
+          return true;
+        }
+        if (!this.field_v) {
+          this.field_y.creature.a(-27449, this.screen).b(-1, 2);
+          var2 = new tka(this.screen, this.field_y.field_r, this.field_y.field_u);
+          ((kj) ((Object) var2)).a(0);
+          this.field_v = true;
+          return false;
+        }
+        return false;
+    }
+
+    static {
+        field_A = new int[][]{new int[]{89, 367}, new int[]{134, 382}, new int[]{181, 388}, new int[]{228, 382}, new int[]{273, 367}};
+        field_z = "Name";
+        field_w = new hja[40];
+    }
+}

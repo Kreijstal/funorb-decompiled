@@ -207,14 +207,14 @@ final class ut extends tia {
           this.field_g < 64) {
           for (var2 = 0; var2 < (120 - this.field_g) / 32; var2++) {
             this.field_i = this.field_j.a((double)(64 - this.field_g) / 64.0, 68);
-            var3 = -15 + (this.field_i.field_c << 4) + kla.a(30, this.field_f, -2147483648);
-            var4 = -15 + (this.field_i.field_a << 4) + kla.a(30, this.field_f, -2147483648);
+            var3 = -15 + (this.field_i.field_c << 4) + DiveBomberAnimation.a(30, this.field_f, -2147483648);
+            var4 = -15 + (this.field_i.field_a << 4) + DiveBomberAnimation.a(30, this.field_f, -2147483648);
             var5 = 0;
             var6 = new lh(var3, var5, var4);
-            kla.a(100, this.field_f, -2147483648);
-            var6.field_p = 16 - kla.a(32, this.field_f, -2147483648);
-            var6.field_k = 16 - kla.a(32, this.field_f, -2147483648);
-            var6.field_g = -kla.a(32, this.field_f, -2147483648) + 16;
+            DiveBomberAnimation.a(100, this.field_f, -2147483648);
+            var6.field_p = 16 - DiveBomberAnimation.a(32, this.field_f, -2147483648);
+            var6.field_k = 16 - DiveBomberAnimation.a(32, this.field_f, -2147483648);
+            var6.field_g = -DiveBomberAnimation.a(32, this.field_f, -2147483648) + 16;
             var6.field_m = -1;
             var6.field_o = 32;
             var6.field_l = 0;

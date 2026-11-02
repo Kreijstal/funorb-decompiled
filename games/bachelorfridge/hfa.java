@@ -190,7 +190,7 @@ abstract class hfa extends wj implements e {
           }
           var5_int = param1;
           if (var5_int == 80) {
-            if (wga.field_q[81]) {
+            if (InvincibleEvent.field_q[81]) {
               stackIn_9_0 = this.a(0, param3);
             } else {
               stackIn_9_0 = this.b(-14391, param3);

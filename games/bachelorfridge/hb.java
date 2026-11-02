@@ -23,10 +23,10 @@ final class hb extends aba {
         }
         kaa.field_m = param1;
         ut.field_o = param2;
-        tma.field_v = 0;
+        SplitAnimation.field_v = 0;
         if (!tn.a(kaa.field_m, 120)) {
           boolean decompiledFrameRemainder0 = true;
-          if (iba.field_s == 0) {
+          if (OhNoEvent.field_s == 0) {
             if (kaa.field_m != -3) {
               if (kaa.field_m != 7) {
                 if (kaa.field_m == 8) {
@@ -35,8 +35,8 @@ final class hb extends aba {
               } else {
                 ut.field_o = 0;
               }
-              if ((~iba.field_s == param0 ||
-                iba.field_s == 1) &&
+              if ((~OhNoEvent.field_s == param0 ||
+                OhNoEvent.field_s == 1) &&
                 kaa.field_m == 0) {
                 au.field_b = false;
               }
@@ -50,32 +50,32 @@ final class hb extends aba {
           if (decompiledFrameRemainder0) {
             if (kaa.field_m == 7) {
               ut.field_o = 0;
-              if ((~iba.field_s == param0 ||
-                iba.field_s == 1) && kaa.field_m == 0) {
+              if ((~OhNoEvent.field_s == param0 ||
+                OhNoEvent.field_s == 1) && kaa.field_m == 0) {
                 au.field_b = false;
               }
             } else {
               if (kaa.field_m != 8) {
-                if ((~iba.field_s == param0 ||
-                  iba.field_s == 1) &&
+                if ((~OhNoEvent.field_s == param0 ||
+                  OhNoEvent.field_s == 1) &&
                   kaa.field_m == 0) {
                   au.field_b = false;
                 }
               } else {
                 ut.field_o = 0;
-                if ((~iba.field_s == param0 ||
-                  iba.field_s == 1) && kaa.field_m == 0) {
+                if ((~OhNoEvent.field_s == param0 ||
+                  OhNoEvent.field_s == 1) && kaa.field_m == 0) {
                   au.field_b = false;
                 }
               }
             }
           }
         } else {
-          eg.field_p[kaa.field_m].a(param3, 32);
+          LevitateSpecial.field_p[kaa.field_m].a(param3, 32);
           if (kaa.field_m == 11) {
             fba.a(param3, (byte) -77);
           }
-          if (iba.field_s == 0) {
+          if (OhNoEvent.field_s == 0) {
             if (kaa.field_m != -3) {
               if (kaa.field_m != 7) {
                 if (kaa.field_m == 8) {
@@ -84,12 +84,12 @@ final class hb extends aba {
               } else {
                 ut.field_o = 0;
               }
-              if (~iba.field_s == param0) {
+              if (~OhNoEvent.field_s == param0) {
                 if (kaa.field_m == 0) {
                   au.field_b = false;
                 }
               } else {
-                if (iba.field_s == 1 &&
+                if (OhNoEvent.field_s == 1 &&
                   kaa.field_m == 0) {
                   au.field_b = false;
                 }
@@ -109,12 +109,12 @@ final class hb extends aba {
               ut.field_o = 0;
             }
           }
-          if (~iba.field_s == param0) {
+          if (~OhNoEvent.field_s == param0) {
             if (kaa.field_m == 0) {
               au.field_b = false;
             }
           } else {
-            if (iba.field_s == 1 &&
+            if (OhNoEvent.field_s == 1 &&
               kaa.field_m == 0) {
               au.field_b = false;
             }
@@ -143,10 +143,10 @@ final class hb extends aba {
           var6_int = param1 + 8 + (487 + param5 + 8);
           gha.field_d.a(i.field_a.field_p - 6, 31407, -6 + var6_int, 3, 3);
           var7 = gha.field_d.field_p - 5;
-          oi.field_w.a(param3, 31407, 2 + param1 - (-485 - param5), 5, -param3 + var7);
-          jba.field_A.a(param3, 31407, -ts.field_r.field_sb + (oi.field_w.field_sb - param1), param1, 0);
+          ResetAnimation.field_w.a(param3, 31407, 2 + param1 - (-485 - param5), 5, -param3 + var7);
+          HailAnimation.field_A.a(param3, 31407, -DisableSpecial.field_r.field_sb + (ResetAnimation.field_w.field_sb - param1), param1, 0);
           var7 = var7 - (param3 + 2);
-          ts.field_r.a(param3, 31407, ts.field_r.field_sb, param1 + jba.field_A.field_sb, 0);
+          DisableSpecial.field_r.a(param3, 31407, DisableSpecial.field_r.field_sb, param1 + HailAnimation.field_A.field_sb, 0);
           af.field_b.a((byte) -58, -5 + var7, 5, 5, param5 + 2 + 485 + param1, param5, 2);
           if (ao.field_d != null) {
             ao.field_d.a(af.field_b.field_kb, af.field_b.field_p, (byte) 59, af.field_b.field_sb, af.field_b.field_rb);

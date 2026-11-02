@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ew extends bca {
+final class ew extends SpecialEvent {
     static int[] field_s;
     static IndexedSprite field_q;
     static Sprite field_r;
@@ -155,7 +155,7 @@ final class ew extends bca {
         }
     }
 
-    final void a(op param0, int param1) {
+    final void a(BattleState param0, int param1) {
         try {
           int var3_int = 113 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
@@ -187,9 +187,9 @@ final class ew extends bca {
           gk.field_d = param2;
           bd.field_k = param4;
           var7 = (CharSequence) ((Object) param4);
-          df.field_s = fq.a(0, var7);
+          MoveEvent.field_s = HomingMissileSpecial.a(0, var7);
           IntrusiveDeque.field_a = param1;
-          var6 = lma.a(jv.field_i, param0, tga.field_p, 0, mj.field_k);
+          var6 = ClamsAnimation.a(jv.field_i, param0, tga.field_p, 0, mj.field_k);
           if (param3) {
             return true;
           }
@@ -215,9 +215,9 @@ final class ew extends bca {
         }
     }
 
-    final at a(int param0, gj param1) {
+    final AnimationNode a(int param0, gj param1) {
         RuntimeException var3 = null;
-        op var4 = null;
+        BattleState var4 = null;
         ra stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -225,11 +225,11 @@ final class ew extends bca {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            var4 = (op) null;
-            this.a((op) null, 89);
+            var4 = (BattleState) null;
+            this.a((BattleState) null, 89);
           }
           stackIn_3_0 = new ra(param1, this);
-          return (at) ((Object) stackIn_3_0);
+          return (AnimationNode) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -308,7 +308,7 @@ final class ew extends bca {
         field_r = null;
     }
 
-    ew(nq param0) {
+    ew(CreatureRef param0) {
         super(1023, param0);
     }
 

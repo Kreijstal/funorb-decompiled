@@ -47,15 +47,15 @@ final class ah extends tia {
         }
         if (!(this.field_g <= 32)) {
           for (var2 = 0; var2 < 2; var2++) {
-            var3 = -(3.141592653589793 * (double)((kla.a(50, this.field_f, -2147483648) + 50 * (-1 + this.field_j)) * 2) / 200.0 - 1.5707963267948966);
+            var3 = -(3.141592653589793 * (double)((DiveBomberAnimation.a(50, this.field_f, -2147483648) + 50 * (-1 + this.field_j)) * 2) / 200.0 - 1.5707963267948966);
             var13 = this.b(64);
-            var6 = var13[0] + (kla.a(30, this.field_f, -2147483648) - 15 >> 1);
-            var7 = var13[1] + (kla.a(30, this.field_f, -2147483648) - 15 >> 1);
+            var6 = var13[0] + (DiveBomberAnimation.a(30, this.field_f, -2147483648) - 15 >> 1);
+            var7 = var13[1] + (DiveBomberAnimation.a(30, this.field_f, -2147483648) - 15 >> 1);
             var8 = new lh(var6 << 4, 0, var7 << 4);
-            kla.a(30, this.field_f, -2147483648);
-            var8.field_p = 4 - kla.a(8, this.field_f, -2147483648);
-            var8.field_k = -kla.a(8, this.field_f, -2147483648) + 4;
-            var8.field_g = 4 - kla.a(8, this.field_f, -2147483648);
+            DiveBomberAnimation.a(30, this.field_f, -2147483648);
+            var8.field_p = 4 - DiveBomberAnimation.a(8, this.field_f, -2147483648);
+            var8.field_k = -DiveBomberAnimation.a(8, this.field_f, -2147483648) + 4;
+            var8.field_g = 4 - DiveBomberAnimation.a(8, this.field_f, -2147483648);
             var8.field_m = -1;
             var8.field_o = 32;
             var8.field_l = 0;
@@ -154,10 +154,10 @@ final class ah extends tia {
           if (param0.field_p != 2) {
             if (param0.field_p == 0 &&
               am.field_O) {
-              var4_ref = "[" + cja.field_r + "] ";
+              var4_ref = "[" + FlyEvent.field_r + "] ";
             }
             if (1 == param0.field_p) {
-              var4_ref = "[" + lga.a(true, new String[]{param0.field_k}, fq.field_r) + "] ";
+              var4_ref = "[" + lga.a(true, new String[]{param0.field_k}, HomingMissileSpecial.field_r) + "] ";
             }
             if (4 == param0.field_p &&
               jc.field_n != null) {

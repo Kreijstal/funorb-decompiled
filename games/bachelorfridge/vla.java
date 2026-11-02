@@ -29,25 +29,25 @@ final class vla extends mv {
     }
 
     final void e(int param0) {
-        pp var2 = null;
+        EventEffect var2 = null;
         ad var3 = null;
         int var4 = BachelorFridge.field_y;
         if (param0 != ~this.field_k.field_p) {
-          var2 = (pp) (this.field_k.field_o.b((byte) 90));
+          var2 = (EventEffect) (this.field_k.field_o.b((byte) 90));
           while (var2 != null) {
-            if (var2.field_h != null) {
-              var3 = var2.field_h.a(-27449, this.field_l);
+            if (var2.target != null) {
+              var3 = var2.target.a(-27449, this.field_l);
               if (var3.field_f.field_u.field_e) {
                 var3.b(false);
               }
             }
-            var2 = (pp) (this.field_k.field_o.c(0));
+            var2 = (EventEffect) (this.field_k.field_o.c(0));
           }
           return;
         }
     }
 
-    vla(gj param0, vja param1) {
+    vla(gj param0, AttackEvent param1) {
         super(param0, param1);
         try {
           this.field_q = 64;
@@ -58,11 +58,11 @@ final class vla extends mv {
 
     final boolean c(byte param0) {
         Object var6 = null;
-        t var6_ref = (t) (al.a(-69, this.field_k.field_k));
-        aga var3 = this.field_k.field_l.a(125, this.field_l.field_h);
-        ad var4 = this.field_k.field_l.a(-27449, this.field_l);
-        this.field_l.field_s.a((byte) -57, var3.field_J, var3.field_x);
-        if (var3.i(91)) {
+        t var6_ref = (t) (al.a(-69, this.field_k.moveId));
+        BattleCreature var3 = this.field_k.creature.a(125, this.field_l.field_h);
+        ad var4 = this.field_k.creature.a(-27449, this.field_l);
+        this.field_l.field_s.a((byte) -57, var3.tileY, var3.tileX);
+        if (var3.isDown(91)) {
           return true;
         }
         int var5 = -90 % ((71 - param0) / 47);
@@ -169,14 +169,14 @@ final class vla extends mv {
         int var5Lifetime1;
         int var5Lifetime2;
         if (param0 == 5) {
-          if (!gm.field_k) {
+          if (!MoveOrder.field_k) {
             return;
           }
           fo.field_a.a(19842, param3);
           var4 = da.field_d.g(-16360) ? 1 : 0;
           if (lf.field_c != 0 &&
             var4 == 0) {
-            lc.b(-1);
+            BoardChangeBatch.b(-1);
             param3 = false;
           }
           if (param3) {
@@ -187,25 +187,25 @@ final class vla extends mv {
           }
           var5 = da.field_d.b(false) + da.field_d.field_D;
           if (var5 > 640) {
-            uga.field_x = uga.field_x + 5;
+            FullHealAnimation.field_x = FullHealAnimation.field_x + 5;
             return;
           }
           if (var5 < 635 &&
-            uga.field_x > 0) {
-            uga.field_x = uga.field_x - 5;
+            FullHealAnimation.field_x > 0) {
+            FullHealAnimation.field_x = FullHealAnimation.field_x - 5;
             return;
           }
           return;
         }
         vla.f((byte) -87);
-        if (!gm.field_k) {
+        if (!MoveOrder.field_k) {
           return;
         }
         fo.field_a.a(19842, param3);
         var4Lifetime1 = da.field_d.g(-16360) ? 1 : 0;
         if (lf.field_c != 0 &&
           var4Lifetime1 == 0) {
-          lc.b(-1);
+          BoardChangeBatch.b(-1);
           param3 = false;
         }
         if (!param3) {
@@ -213,11 +213,11 @@ final class vla extends mv {
             fo.field_a.a(19842, param3);
             var5Lifetime1 = da.field_d.b(false) + da.field_d.field_D;
             if (var5Lifetime1 > 640) {
-              uga.field_x = uga.field_x + 5;
+              FullHealAnimation.field_x = FullHealAnimation.field_x + 5;
             } else {
               if (var5Lifetime1 < 635 &&
-                uga.field_x > 0) {
-                uga.field_x = uga.field_x - 5;
+                FullHealAnimation.field_x > 0) {
+                FullHealAnimation.field_x = FullHealAnimation.field_x - 5;
               }
             }
             return;
@@ -230,16 +230,16 @@ final class vla extends mv {
         }
         var5Lifetime2 = da.field_d.b(false) + da.field_d.field_D;
         if (var5Lifetime2 > 640) {
-          uga.field_x = uga.field_x + 5;
+          FullHealAnimation.field_x = FullHealAnimation.field_x + 5;
           return;
         }
         if (var5Lifetime2 >= 635) {
           return;
         }
-        if (uga.field_x <= 0) {
+        if (FullHealAnimation.field_x <= 0) {
           return;
         }
-        uga.field_x = uga.field_x - 5;
+        FullHealAnimation.field_x = FullHealAnimation.field_x - 5;
     }
 
     static {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iia extends jm {
+final class iia extends BoardChange {
     static int field_p;
     static sna field_m;
     static String field_o;
@@ -9,12 +9,12 @@ final class iia extends jm {
     static String field_q;
     static String field_n;
 
-    final void a(boolean param0, op param1) {
+    final void a(boolean param0, BattleState param1) {
         try {
           if (param0) {
             field_q = (String) null;
           }
-          param1.field_S[this.field_r].field_c = true;
+          param1.rosters[this.field_r].field_c = true;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "iia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

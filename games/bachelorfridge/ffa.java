@@ -5,7 +5,7 @@ final class ffa extends kj {
     static String field_i;
     private int field_g;
     static String[][] field_j;
-    private rb field_f;
+    private CranberryEvent field_f;
     static String field_h;
 
     final boolean b(int param0) {
@@ -55,7 +55,7 @@ final class ffa extends kj {
         return true;
     }
 
-    ffa(gj param0, rb param1, int param2, int param3) {
+    ffa(gj param0, CranberryEvent param1, int param2, int param3) {
         super(param0, param2, param3);
         try {
           this.field_f = param1;

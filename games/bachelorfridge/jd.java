@@ -343,11 +343,11 @@ final class jd {
           this.field_c = true;
           this.field_a = lf.field_c;
           this.field_f = lf.field_c;
-          this.field_i = nb.field_r;
+          this.field_i = ScavengerEvent.field_r;
         }
         if (this.field_f == 0) {
           if (lf.field_c == 0) {
-            if (fia.field_t != 0) {
+            if (LevitateEvent.field_t != 0) {
               if (this.field_f == 0) {
                 if (!this.field_c &&
                   !dda.field_f) {
@@ -404,9 +404,9 @@ final class jd {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (fia.field_t == 0) {
+        if (LevitateEvent.field_t == 0) {
           if (lf.field_c == 0) {
-            if (fia.field_t != 0) {
+            if (LevitateEvent.field_t != 0) {
               if (this.field_f == 0) {
                 if (!this.field_c &&
                   !dda.field_f) {
@@ -434,7 +434,7 @@ final class jd {
           }
           this.field_i = this.field_i - 1;
           if (lf.field_c == 0) {
-            if (fia.field_t != 0) {
+            if (LevitateEvent.field_t != 0) {
               if (this.field_f != 0) {
                 return;
               }

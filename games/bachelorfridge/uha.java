@@ -53,8 +53,8 @@ final class uha extends sna {
         field_Xb = (Sprite[][]) null;
     }
 
-    final static pp b(PacketBuffer param0, int param1) {
-        nq var2 = null;
+    final static EventEffect b(PacketBuffer param0, int param1) {
+        CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int stackIn_5_0 = 0;
@@ -71,7 +71,7 @@ final class uha extends sna {
           stackIn_5_0 = (param0.readUnsignedByte(16711935) == 1) ? 1 : 0;
           var3 = stackIn_5_0;
           stackIn_6_0 = new mh(var2, var3 != 0);
-          return (pp) ((Object) stackIn_6_0);
+          return (EventEffect) ((Object) stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

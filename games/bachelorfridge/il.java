@@ -267,7 +267,7 @@ final class il {
             var7_int = var7_int & -var13 >> 31;
             var14 = (-1 + (var11 + var13) >> 3) + var12;
             var13 += 24;
-            dupTemp$0 = mp.a(var7_int, var10 >>> var13);
+            dupTemp$0 = MassPoisonSpecial.a(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param3[var12] = (byte)dupTemp$0;
             if (var14 > var12) {
@@ -363,7 +363,7 @@ final class il {
                   if (~var8 == ~var11) {
                     var12 = 1 << 32 - var10;
                     if ((var12 & var11) == 0) {
-                      var3[var10] = mp.a(var12, var11);
+                      var3[var10] = MassPoisonSpecial.a(var12, var11);
                       continue;
                     }
                     var3[var10] = var3[-1 + var10];

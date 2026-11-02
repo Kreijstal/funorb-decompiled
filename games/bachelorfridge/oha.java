@@ -44,7 +44,7 @@ class oha {
         try {
           mda.field_b = new sna();
           var1_int = 100;
-          var2 = jfa.field_q[baa.field_Q];
+          var2 = jfa.field_q[BananarangAnimation.field_Q];
           for (var3 = 0; var2.field_d > var3; var3++) {
             var4 = var2.field_a[var3].field_b;
             var5 = dc.field_y[var4];
@@ -89,11 +89,11 @@ class oha {
         String[] var6 = null;
         var5 = BachelorFridge.field_y;
         try {
-          dka.field_G = ki.field_w;
+          dka.field_G = OhNoAnimation.field_w;
           if (param1 == 255) {
             stackIn_9_0 = 120;
             stackIn_10_1 = !(13 <= fga.field_f);
-            vo.field_d = nna.$cfr$intArgs$a$262119530e06(stackIn_9_0, stackIn_10_1);
+            vo.field_d = ShieldAnimation.$cfr$intArgs$a$262119530e06(stackIn_9_0, stackIn_10_1);
             var6 = (String[]) null;
             wr.a((String[]) null, (byte) -38);
           } else {

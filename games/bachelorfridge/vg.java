@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg extends cj {
+final class vg extends BattleUpdate {
     IntrusiveDeque field_m;
     static sna field_k;
     static BufferedCacheFile field_n;
     static Boolean field_l;
 
-    final void a(op param0, boolean param1) {
+    final void a(BattleState param0, boolean param1) {
         int var4 = 0;
         gj var5 = null;
         bf var6 = null;
@@ -106,7 +106,7 @@ final class vg extends cj {
         field_k = null;
     }
 
-    final at a(int param0, gj param1) {
+    final AnimationNode a(int param0, gj param1) {
         RuntimeException var3 = null;
         bf var4 = null;
         wea stackIn_3_0 = null;
@@ -120,7 +120,7 @@ final class vg extends cj {
             this.a((byte) -84, (bf) null);
           }
           stackIn_3_0 = new wea(param1, this);
-          return (at) ((Object) stackIn_3_0);
+          return (AnimationNode) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

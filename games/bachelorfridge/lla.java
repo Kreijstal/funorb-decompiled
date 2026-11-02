@@ -43,7 +43,7 @@ final class lla extends pu {
           }
           MeshObject.a(-123);
           if (dga.field_a == 0) {
-            mda.field_b.a(jfa.field_q[baa.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
+            mda.field_b.a(jfa.field_q[BananarangAnimation.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
             RasterBuffer.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
             uaa.a(false);
             lf.a(114);
@@ -94,7 +94,7 @@ final class lla extends pu {
           }
           MeshObject.a(-123);
           if (dga.field_a == 0) {
-            mda.field_b.a(jfa.field_q[baa.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
+            mda.field_b.a(jfa.field_q[BananarangAnimation.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
             RasterBuffer.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
             uaa.a(false);
             lf.a(114);
@@ -143,7 +143,7 @@ final class lla extends pu {
         }
         MeshObject.a(-123);
         if (dga.field_a == 0) {
-          mda.field_b.a(jfa.field_q[baa.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
+          mda.field_b.a(jfa.field_q[BananarangAnimation.field_Q].field_d * 100, param1 ^ 31436, 400, 105, 350);
           RasterBuffer.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
           uaa.a(false);
           lf.a(114);

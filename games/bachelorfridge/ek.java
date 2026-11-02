@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends at {
+final class ek extends AnimationNode {
     private gj field_l;
     private int field_j;
     private int field_n;
@@ -108,7 +108,7 @@ final class ek extends at {
           this.field_j = param2;
           this.field_l = param0;
           this.field_n = 64;
-          if (param1.field_s.field_y == 3) {
+          if (param1.field_s.statusId == 3) {
             this.field_j = this.field_j >> 1;
           }
           if (this.field_j > 0) {
@@ -116,7 +116,7 @@ final class ek extends at {
           } else {
             param1.a(65280, 28, Integer.toString(-this.field_j));
           }
-          if (param1.field_s.field_I > 0) {
+          if (param1.field_s.hp > 0) {
             return;
           }
           this.a(27799, new fl(this.field_l, param1));

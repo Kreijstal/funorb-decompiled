@@ -32,7 +32,7 @@ final class bda extends lw {
           } else {
             if (param0 == 18 &&
               this.field_e >= 1) {
-              fla.b(param1 + 23548);
+              ShieldSpecial.b(param1 + 23548);
             }
           }
         } else {
@@ -41,11 +41,11 @@ final class bda extends lw {
             this.c(101);
           }
           if (this.field_e == 1) {
-            wf.field_x = true;
+            MartyrAnimation.field_x = true;
           }
           if (um.a(true) &&
             this.c((byte) 95)) {
-            fla.b(23621);
+            ShieldSpecial.b(23621);
           }
         }
         if (param1 == 73) {

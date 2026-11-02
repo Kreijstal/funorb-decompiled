@@ -13,9 +13,9 @@ class hf extends wj {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_u != 0 &&
-            this.field_u != fia.field_t) {
+            this.field_u != LevitateEvent.field_t) {
             if (this.a(gd.field_m, mk.field_p, 0, param0, param1) &&
-              fia.field_t == 0) {
+              LevitateEvent.field_t == 0) {
               this.a(-param0 + mk.field_p, this.field_u, false, -param1 + gd.field_m);
             }
             this.a(param0, mk.field_p, (byte) -101, param2, gd.field_m, param1);

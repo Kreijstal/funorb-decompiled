@@ -68,20 +68,20 @@ final class nha {
               var6_int = 0;
               param4 = DualLinkNode.field_l;
             } else {
-              if (param4 <= pw.field_x) {
+              if (param4 <= SnowAnimation.field_x) {
                 var6_int = 1;
               } else {
                 var6_int = 0;
-                param4 = pw.field_x;
+                param4 = SnowAnimation.field_x;
               }
             }
             if (param5 < DualLinkNode.field_l) {
               param5 = DualLinkNode.field_l;
               var7 = 0;
             } else {
-              if (pw.field_x < param5) {
+              if (SnowAnimation.field_x < param5) {
                 var7 = 0;
-                param5 = pw.field_x;
+                param5 = SnowAnimation.field_x;
               } else {
                 var7 = 1;
               }

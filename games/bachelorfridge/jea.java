@@ -13,8 +13,8 @@ final class jea {
           jea.a(25);
         }
         lga.c((byte) 112);
-        if (dca.field_y != null) {
-          wd.a((byte) 70, dca.field_y);
+        if (TBomberAnimation.field_y != null) {
+          wd.a((byte) 70, TBomberAnimation.field_y);
         }
         oda.a(-705481812);
         qi.b(-1);

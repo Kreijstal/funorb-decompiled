@@ -82,7 +82,7 @@ abstract class aba extends pk implements fca {
 
     final static void a(byte param0, int param1) {
         int var2 = 84 % ((param0 + 18) / 34);
-        ol.a(jga.field_y[param1], true);
+        ol.a(PizzaPartyAnimation.field_y[param1], true);
     }
 
     public final void a(lka param0, int param1) {
@@ -95,10 +95,10 @@ abstract class aba extends pk implements fca {
         }
     }
 
-    final static pp a(PacketBuffer param0, int param1) {
+    final static EventEffect a(PacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         PacketBuffer var3 = null;
-        eba stackIn_3_0 = null;
+        SnowEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -108,8 +108,8 @@ abstract class aba extends pk implements fca {
             var3 = (PacketBuffer) null;
             aba.a((PacketBuffer) null, 85);
           }
-          stackIn_3_0 = new eba();
-          return (pp) ((Object) stackIn_3_0);
+          stackIn_3_0 = new SnowEffect();
+          return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

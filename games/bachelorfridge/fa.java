@@ -61,7 +61,7 @@ final class fa extends kj {
           stackIn_7_0 = ng.field_e;
           stackIn_8_1 = (param0) && (!eda.field_j);
           ((sna) (Object) stackIn_7_0).a(stackIn_8_1, 7802);
-          stackIn_11_0 = ui.field_r;
+          stackIn_11_0 = FullHealSpecial.field_r;
           stackIn_12_1 = (param0) && (!eda.field_j);
           ((sna) (Object) stackIn_11_0).a(stackIn_12_1, 7802);
         }
