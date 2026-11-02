@@ -263,10 +263,10 @@ final class ul {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        k var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        k var29 = null;
-        k var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -318,8 +318,8 @@ final class ul {
             var35 = h.a(this.field_g[param0], -42, true);
             var25 = var35;
             var9 = var25;
-            var26 = new k(var35);
-            var26.a(var26.field_m.length, param2, -2564, 5);
+            var26 = new PacketBuffer(var35);
+            var26.a(var26.payload.length, param2, -2564, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -347,14 +347,14 @@ final class ul {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var12 * (var5_int * 4);
-              var29 = new k(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var15_int = 0;
-              var29.field_j = var11;
+              var29.position = var11;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var29.i(-1478490344);
+                  var17 = var17 + var29.readInt(-1478490344);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -370,13 +370,13 @@ final class ul {
                 return true;
               }
               var44 = new byte[var14_int];
-              var29.field_j = var11;
+              var29.position = var11;
               var14_intLifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var29.i(-1478490344);
+                  var19 = var19 + var29.readInt(-1478490344);
                   if (var6 != null) {
                     var21 = var34[var20];
                   } else {
@@ -395,15 +395,15 @@ final class ul {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * var12 * var5_int;
-              var31 = new k(var43);
+              var31 = new PacketBuffer(var43);
               var39 = new int[var5_int];
               var32 = var39;
               var14 = var32;
-              var31.field_j = var11;
+              var31.position = var11;
               for (var15_int = 0; var12 > var15_int; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
-                  var16 = var16 + var31.i(-1478490344);
+                  var16 = var16 + var31.readInt(-1478490344);
                   var14[var17] = var14[var17] + var16;
                 }
               }
@@ -415,12 +415,12 @@ final class ul {
                 var15[var16] = array$1;
                 var39[var16] = 0;
               }
-              var31.field_j = var11;
+              var31.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var31.i(-1478490344);
+                  var18 = var18 + var31.readInt(-1478490344);
                   d.a(var43, var16, var40[var19], var39[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;

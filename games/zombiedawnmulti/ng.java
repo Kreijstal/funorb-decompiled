@@ -180,22 +180,22 @@ abstract class ng {
           }
           var7 = md.a((byte) 90, param1);
           if (var7 == null) {
-            stackIn_11_0 = vl.a(mf.field_a, new String[]{param1}, 2);
+            stackIn_11_0 = vl.a(MouseWheelInput.field_a, new String[]{param1}, 2);
             return stackIn_11_0;
           }
-          var7.a(true);
+          var7.unlink(true);
           var7.a(-4564);
-          fn.field_d = fn.field_d - 1;
+          ClientException.field_d = ClientException.field_d - 1;
           if (param2 > -21) {
             ng.a(-125);
           }
           var5 = ma.field_a;
           var5.b((byte) -35, param3);
-          var5.field_j = var5.field_j + 1;
-          var6 = var5.field_j;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.a(113, 3);
-          var5.a(param0, (byte) 105);
-          var5.e(89, -var6 + var5.field_j);
+          var5.writeString(param0, (byte) 105);
+          var5.e(89, -var6 + var5.position);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

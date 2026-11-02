@@ -5,7 +5,7 @@ final class fh {
     int[][] field_p;
     static String field_f;
     fc field_i;
-    static ja[] field_h;
+    static Sprite[] field_h;
     int field_r;
     private int[][] field_a;
     int field_c;
@@ -331,19 +331,19 @@ final class fh {
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var14 = s.field_e;
-          var2 = var14.g(31365);
+          var2 = var14.readUnsignedByte(31365);
           if (param0 != 1) {
             return;
           }
           if (0 == var2) {
-            var11 = da.a(8);
+            var11 = InflaterDecompressor.a(8);
             var3 = var11;
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((k) ((Object) var5)).g(31365);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(31365);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((k) ((Object) var5)).i(-1478490344);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-1478490344);
             }
             var12 = (ra) (so.field_j.c(param0 ^ 60));
             if (var12 == null) {
@@ -352,7 +352,7 @@ final class fh {
             }
             var12.field_h = var3;
             var12.field_k = true;
-            var12.a(true);
+            var12.unlink(true);
             return;
           }
           if (1 == var2) {
@@ -361,10 +361,10 @@ final class fh {
               ak.a((byte) -117);
               return;
             }
-            var13.a(true);
+            var13.unlink(true);
           } else {
             if (var2 != 2) {
-              bd.a("A1: " + ci.a(0), (Throwable) null, false);
+              MouseInputHandler.a("A1: " + ci.a(0), (Throwable) null, false);
               ak.a((byte) -118);
             } else {
               var15 = (ra) (so.field_j.c(param0 ^ 76));
@@ -372,9 +372,9 @@ final class fh {
                 ak.a((byte) -128);
                 return;
               }
-              var15.field_h = da.a(8);
+              var15.field_h = InflaterDecompressor.a(8);
               var15.field_k = true;
-              var15.a(true);
+              var15.unlink(true);
             }
           }
           return;
@@ -482,7 +482,7 @@ final class fh {
             var6++;
           }
           if (qq.field_h) {
-            var14Lifetime2 = param1.a(bd.field_g, 2);
+            var14Lifetime2 = param1.a(MouseInputHandler.field_g, 2);
             var15Lifetime2 = param1.a(true, bo.field_d);
             for (var16 = 0; var16 < this.field_q.length; var16++) {
               var17 = param1.c(this.field_q[var16].field_g, -20126);
@@ -616,7 +616,7 @@ final class fh {
         }
     }
 
-    final th b(int param0, int param1, int param2, int param3, int param4) {
+    final IntrusiveDeque b(int param0, int param1, int param2, int param3, int param4) {
         int var17 = 0;
         int[] stackIn_29_0 = null;
         int stackIn_29_1 = 0;
@@ -625,7 +625,7 @@ final class fh {
         int var7;
         qk var8;
         qk var9;
-        th var10;
+        IntrusiveDeque var10;
         int var11;
         int[] var12;
         int[] var13;
@@ -689,7 +689,7 @@ final class fh {
           this.a(-105, true, (nm) null, 61);
         }
         var9 = new qk(param3, param1);
-        var10 = new th();
+        var10 = new IntrusiveDeque();
         var10.a(var9, false);
         var11 = this.a(var9, var8, (byte) -71);
         if (var11 >= 0) {
@@ -823,8 +823,8 @@ final class fh {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        ja var15 = null;
-        ja var16 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var5_int = (int)((float)(-param2.field_k) + 320.0f * param2.field_d);
@@ -901,7 +901,7 @@ final class fh {
                           }
                         }
                       }
-                      if (wh.field_c) {
+                      if (IterableNodeHashTable.field_c) {
                         oo.a(var5_int, var6, 25, 25, 7864183);
                       }
                     }

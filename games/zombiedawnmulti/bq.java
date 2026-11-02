@@ -11,7 +11,7 @@ final class bq {
     static boolean field_c;
     static ao field_i;
     private of field_d;
-    static ja field_a;
+    static Sprite field_a;
     private int field_e;
 
     final byte[] a(int param0, int param1) {
@@ -142,7 +142,7 @@ final class bq {
         field_f = null;
         field_i = null;
         if (param0 <= 29) {
-          field_a = (ja) null;
+          field_a = (Sprite) null;
         }
     }
 
@@ -247,7 +247,7 @@ final class bq {
                 this.field_d.a(param2 ^ -50, 6, 0, la.field_g);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param3 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -263,7 +263,7 @@ final class bq {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = ((255 & la.field_g[4]) << 16) - (-(65280 & la.field_g[5] << 8) - (la.field_g[6] & 255));
                         var12 = (65280 & la.field_g[2] << 8) + (255 & la.field_g[3]);
@@ -279,7 +279,7 @@ final class bq {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = 255 & la.field_g[9];
                         var11 = (la.field_g[3] & 255) + (((la.field_g[2] & 255) << 8) + ((la.field_g[0] & 255) << 24)) + (16711680 & la.field_g[1] << 16);

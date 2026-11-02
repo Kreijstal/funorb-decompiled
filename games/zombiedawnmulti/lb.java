@@ -20,7 +20,7 @@ final class lb {
           if (ol.a(param1, false)) {
             return false;
           }
-          if (qa.a((byte) 29, param1)) {
+          if (DualLinkNode.a((byte) 29, param1)) {
             return false;
           }
           if (gn.b((byte) 62, param1)) {
@@ -98,7 +98,7 @@ final class lb {
     }
 
     final static void a(int param0) {
-        if (!ch.field_e) {
+        if (!IntrusiveDequeCursor.field_e) {
           throw new IllegalStateException();
         }
         if (h.field_L != null) {
@@ -107,7 +107,7 @@ final class lb {
         String var1 = ob.e(-24093);
         b.field_c = new qm(var1, (String) null, true, false, false);
         nb.field_a.b(3016, wj.field_i);
-        wj.field_i.a((cf) (b.field_c), (byte) -123);
+        wj.field_i.a((UiWidget) (b.field_c), (byte) -123);
         if (param0 == 9047) {
           wj.field_i.h((byte) 49);
           return;

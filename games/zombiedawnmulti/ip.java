@@ -44,8 +44,8 @@ final class ip {
         try {
           try {
             var9 = dk.field_Ib.getGraphics();
-            if (null == wb.field_hb) {
-              wb.field_hb = new java.awt.Font("Helvetica", 1, 13);
+            if (null == GameCharacter.field_hb) {
+              GameCharacter.field_hb = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
@@ -68,7 +68,7 @@ final class ip {
                 field_c = (String) null;
               }
               var10.fillRect(param0 * 3 + 2, 2, -(3 * param0) + 300, 30);
-              var10.setFont(wb.field_hb);
+              var10.setFont(GameCharacter.field_hb);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param3, (-(param3.length() * 6) + 304) / 2, 22);
               var9.drawImage(fq.field_i, ng.field_d / 2 - 152, -18 + pi.field_i / 2, (java.awt.image.ImageObserver) null);
@@ -83,14 +83,14 @@ final class ip {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, 1 + var8, 301, 31);
               var9.fillRect(2 + (var7 + param0 * 3), var8 + 2, -(3 * param0) + 300, 30);
-              var9.setFont(wb.field_hb);
+              var9.setFont(GameCharacter.field_hb);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param3, (-(6 * param3.length()) + 304) / 2 + var7, 22 + var8);
             }
             if (gj.field_b == null) {
               return;
             }
-            var9.setFont(wb.field_hb);
+            var9.setFont(GameCharacter.field_hb);
             var9.setColor(java.awt.Color.white);
             var9.drawString(gj.field_b, ng.field_d / 2 - 6 * gj.field_b.length() / 2, pi.field_i / 2 - 26);
             return;

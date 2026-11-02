@@ -83,7 +83,7 @@ final class lh {
         try {
           var9 = new ga(param1.a("logo.fo3d", "", false));
           var11 = var9;
-          var3 = var11.g(31365);
+          var3 = var11.readUnsignedByte(31365);
           var11.k(-1136);
           qh.field_f = bo.a(30816, var11);
           lk.field_G = new int[var3][];

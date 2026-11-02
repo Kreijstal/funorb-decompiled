@@ -4,7 +4,7 @@
 final class wn extends pp {
     static String field_s;
     static int field_t;
-    static fm field_u;
+    static BitmapFont field_u;
     static long field_r;
 
     wn(long param0, String param1) {
@@ -72,20 +72,20 @@ final class wn extends pp {
         ql.field_b.a(jk.field_f, 0, lo.field_g.field_zb, 0, param0 - 3347);
         int var1 = jk.field_f + 2;
         pd.field_b.a(lo.field_g.field_z - (!tb.field_u ? 0 : var1), tb.field_u ? var1 : 0, lo.field_g.field_zb, 0, -3344);
-        up.a(false);
+        NodeHashTableIterator.a(false);
         kj.field_u.a(40, qe.field_k.field_z - 40, qe.field_k.field_zb, 0, -3344);
         if (param0 != 3) {
           field_t = -52;
           ro.field_O.a(30, 0, cm.field_a.field_zb, 0, -3344);
           ml.field_Lb.a(-30 + (-40 + cm.field_a.field_z - 2), 30, cm.field_a.field_zb, 0, -3344);
-          k.field_g.a(30, 5, 68, 5, -3344);
+          PacketBuffer.field_g.a(30, 5, 68, 5, -3344);
           ud.field_M.a(30, 5, 78, 75, -3344);
           tk.field_l.a(30, 5, 48, 155, param0 ^ -3341);
           sc.field_d.a(30, 5, 48, 205, -3344);
           var2 = !tb.field_u ? 200 : 250;
-          da.field_h.a(30, 5, -var2 + 363, var2 + 5, -3344);
+          InflaterDecompressor.field_h.a(30, 5, -var2 + 363, var2 + 5, -3344);
           bp.field_w.a(30, 5, cm.field_a.field_zb - 5 - 5 - 365, 370, -3344);
-          ek.field_H.a(qa.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
+          ek.field_H.a(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
           var3 = (2 + cm.field_a.field_zb) / 2;
           ia.field_t.a(40, -40 + cm.field_a.field_z, var3 - 2, 0, param0 - 3347);
           if (!tb.field_u) {
@@ -96,14 +96,14 @@ final class wn extends pp {
         }
         ro.field_O.a(30, 0, cm.field_a.field_zb, 0, -3344);
         ml.field_Lb.a(-30 + (-40 + cm.field_a.field_z - 2), 30, cm.field_a.field_zb, 0, -3344);
-        k.field_g.a(30, 5, 68, 5, -3344);
+        PacketBuffer.field_g.a(30, 5, 68, 5, -3344);
         ud.field_M.a(30, 5, 78, 75, -3344);
         tk.field_l.a(30, 5, 48, 155, param0 ^ -3341);
         sc.field_d.a(30, 5, 48, 205, -3344);
         var2Lifetime1 = !tb.field_u ? 200 : 250;
-        da.field_h.a(30, 5, -var2Lifetime1 + 363, var2Lifetime1 + 5, -3344);
+        InflaterDecompressor.field_h.a(30, 5, -var2Lifetime1 + 363, var2Lifetime1 + 5, -3344);
         bp.field_w.a(30, 5, cm.field_a.field_zb - 5 - 5 - 365, 370, -3344);
-        ek.field_H.a(qa.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
+        ek.field_H.a(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
         var3Lifetime1 = (2 + cm.field_a.field_zb) / 2;
         ia.field_t.a(40, -40 + cm.field_a.field_z, var3Lifetime1 - 2, 0, param0 - 3347);
         if (!tb.field_u) {

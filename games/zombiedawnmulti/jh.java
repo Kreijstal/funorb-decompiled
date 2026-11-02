@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jh extends cj {
-    static ja[] field_Hb;
+    static Sprite[] field_Hb;
     cj field_Rb;
     byte[] field_Zb;
     boolean field_Wb;

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh extends br {
+final class nh extends IntrusiveNode {
     static int[] field_i;
-    static th field_g;
+    static IntrusiveDeque field_g;
     static String field_j;
     static String field_n;
     static boolean field_m;

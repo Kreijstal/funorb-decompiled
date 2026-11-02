@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pn {
-    static ja field_a;
+    static Sprite field_a;
     static int field_e;
     static int field_h;
-    static th field_f;
+    static IntrusiveDeque field_f;
     static ri[] field_c;
     static cj field_g;
     static int field_b;
@@ -51,7 +51,7 @@ final class pn {
         }
     }
 
-    final static boolean a(int param0, go param1) {
+    final static boolean a(int param0, PlatformTaskDispatcher param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -80,7 +80,7 @@ final class pn {
 
     final static void a(byte param0) {
         nh.field_m = false;
-        sh.field_L = s.field_e.g(31365) == 0 ? true : false;
+        sh.field_L = s.field_e.readUnsignedByte(31365) == 0 ? true : false;
         if (param0 > 51) {
           return;
         }
@@ -89,7 +89,7 @@ final class pn {
 
     static {
         field_h = 0;
-        field_f = new th();
+        field_f = new IntrusiveDeque();
         field_i = "Connection lost - attempting to reconnect";
     }
 }

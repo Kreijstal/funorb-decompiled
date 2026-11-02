@@ -28,13 +28,13 @@ class fc {
     final static void a(byte param0, boolean param1) {
         gf.field_g = 0;
         lq.field_b = 0;
-        fn.field_c = 0;
+        ClientException.field_c = 0;
         lb.field_a = nf.field_a;
         if (param0 < 121) {
           return;
         }
         gl.field_H = new hh(2);
-        gl.field_H.a(-1, param1, -31458, al.c(bo.field_d, -1, bd.field_g));
+        gl.field_H.a(-1, param1, -31458, al.c(bo.field_d, -1, MouseInputHandler.field_g));
     }
 
     private final id a(int param0, int param1, byte param2, int param3, int param4) {
@@ -42,12 +42,12 @@ class fc {
         h var6;
         fd var6_ref;
         int var7;
-        wb var8;
+        GameCharacter var8;
         if (param1 == 0) {
           var6_int = 1073741823 & param3;
           var7 = (byte)(param3 >>> 30 & 3);
-          var8 = new wb(param0, param4, var6_int);
-          var8.field_Lb = var7;
+          var8 = new GameCharacter(param0, param4, var6_int);
+          var8.team = var7;
           return (id) ((Object) var8);
         }
         if (param1 == 1) {
@@ -89,7 +89,7 @@ class fc {
         return param1 << 7;
     }
 
-    th a(int param0) {
+    IntrusiveDeque a(int param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -98,7 +98,7 @@ class fc {
         id var9 = null;
         int var10 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = 88 % ((param0 - 37) / 41);
-        th var3 = new th();
+        IntrusiveDeque var3 = new IntrusiveDeque();
         for (var4 = 0; var4 < this.field_l.length; var4 += 4) {
           var5 = this.field_l[var4];
           var6 = this.field_l[var4 + 1];
@@ -552,6 +552,6 @@ class fc {
     }
 
     static {
-        field_m = da.a(8);
+        field_m = InflaterDecompressor.a(8);
     }
 }

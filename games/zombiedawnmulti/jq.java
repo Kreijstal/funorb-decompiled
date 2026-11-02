@@ -31,7 +31,7 @@ final class jq {
         int var6 = 21 * param3 / param0;
         field_c.a(param5 - 7, -14 + param1, param4);
         if (null == uf.field_h) {
-          uf.field_h = new ja(8, 21);
+          uf.field_h = new Sprite(8, 21);
           g.c(uf.field_h);
           oo.a(0, 0, 8, 10, 65280, 16776960);
           oo.a(0, 10, 8, 11, 16776960, 16711680);
@@ -60,7 +60,7 @@ final class jq {
         }
     }
 
-    final static void a(k param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -130,7 +130,7 @@ final class jq {
     }
 
     final static void a(boolean param0, byte param1) {
-        em.field_U = !param0 ? new qh(l.field_d, ga.field_r) : new qh(mk.field_n, sk.field_i);
+        em.field_U = !param0 ? new qh(RasterBuffer.field_d, ga.field_r) : new qh(mk.field_n, sk.field_i);
         mh.field_i = new cj(0L, (cj) null);
         mh.field_i.a((byte) 50, em.field_U.field_c);
         int var2 = 81 % ((65 - param1) / 60);

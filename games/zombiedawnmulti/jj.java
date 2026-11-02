@@ -12,7 +12,7 @@ final class jj extends id {
     private int field_K;
     int field_Q;
     int field_P;
-    static ja[] field_F;
+    static Sprite[] field_F;
     private int field_J;
     static long field_M;
 
@@ -23,8 +23,8 @@ final class jj extends id {
           field_F = null;
           return;
         }
-        go var2 = (go) null;
-        jj.a(-32, 42, (String) null, -55, 28, (go) null, -114, -1, (byte) 0);
+        PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+        jj.a(-32, 42, (String) null, -55, 28, (PlatformTaskDispatcher) null, -114, -1, (byte) 0);
         field_L = null;
         field_I = null;
         field_F = null;
@@ -39,14 +39,14 @@ final class jj extends id {
         int fieldTemp$8 = 0;
         int fieldTemp$5 = 0;
         int fieldTemp$6 = 0;
-        go var3;
+        PlatformTaskDispatcher var3;
         int fieldTemp$0 = this.field_P - 1;
-        go var3Lifetime1;
-        go var3Lifetime2;
-        go var3Lifetime3;
+        PlatformTaskDispatcher var3Lifetime1;
+        PlatformTaskDispatcher var3Lifetime2;
+        PlatformTaskDispatcher var3Lifetime3;
         this.field_P = this.field_P - 1;
         if (fieldTemp$0 <= 0) {
-          this.a(true);
+          this.unlink(true);
           this.a(-4564);
           return;
         }
@@ -64,8 +64,8 @@ final class jj extends id {
           if (param0 <= -79) {
             return;
           }
-          var3 = (go) null;
-          jj.a(45, 6, (String) null, -22, 31, (go) null, -49, 13, (byte) 76);
+          var3 = (PlatformTaskDispatcher) null;
+          jj.a(45, 6, (String) null, -22, 31, (PlatformTaskDispatcher) null, -49, 13, (byte) 76);
           return;
         }
         this.field_N = this.field_N + this.field_K;
@@ -84,8 +84,8 @@ final class jj extends id {
           if (param0 <= -79) {
             return;
           }
-          var3Lifetime1 = (go) null;
-          jj.a(45, 6, (String) null, -22, 31, (go) null, -49, 13, (byte) 76);
+          var3Lifetime1 = (PlatformTaskDispatcher) null;
+          jj.a(45, 6, (String) null, -22, 31, (PlatformTaskDispatcher) null, -49, 13, (byte) 76);
           return;
         }
         if (this.field_N >= 80) {
@@ -102,8 +102,8 @@ final class jj extends id {
           if (param0 <= -79) {
             return;
           }
-          var3Lifetime2 = (go) null;
-          jj.a(45, 6, (String) null, -22, 31, (go) null, -49, 13, (byte) 76);
+          var3Lifetime2 = (PlatformTaskDispatcher) null;
+          jj.a(45, 6, (String) null, -22, 31, (PlatformTaskDispatcher) null, -49, 13, (byte) 76);
           return;
         }
         this.field_K = -this.field_K;
@@ -120,8 +120,8 @@ final class jj extends id {
         if (param0 <= -79) {
           return;
         }
-        var3Lifetime3 = (go) null;
-        jj.a(45, 6, (String) null, -22, 31, (go) null, -49, 13, (byte) 76);
+        var3Lifetime3 = (PlatformTaskDispatcher) null;
+        jj.a(45, 6, (String) null, -22, 31, (PlatformTaskDispatcher) null, -49, 13, (byte) 76);
         return;
     }
 
@@ -209,7 +209,7 @@ final class jj extends id {
         }
     }
 
-    final static void a(int param0, int param1, String param2, int param3, int param4, go param5, int param6, int param7, byte param8) {
+    final static void a(int param0, int param1, String param2, int param3, int param4, PlatformTaskDispatcher param5, int param6, int param7, byte param8) {
         kk.field_q = param0;
         if (param8 > -84) {
           return;
@@ -217,11 +217,11 @@ final class jj extends id {
         try {
           db.field_e = param4;
           qe.field_f = param1;
-          o.field_b = param6;
+          IsaacRandom.field_b = param6;
           p.field_a = param5;
           vg.field_r = param2;
-          ej.field_q = param3;
-          ll.field_b = param7;
+          BufferedSocket.field_q = param3;
+          FullscreenFocusCanvas.field_b = param7;
           i.field_a = (qb) ((Object) new ap());
           rn.field_d = new ai(param5);
           tj.field_a = new eq(i.field_a, rn.field_d);
@@ -243,7 +243,7 @@ final class jj extends id {
     }
 
     final void a(int param0, nm param1) {
-        ja stackIn_9_0 = null;
+        Sprite stackIn_9_0 = null;
         int stackIn_10_1 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -255,7 +255,7 @@ final class jj extends id {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ja var8 = null;
+        Sprite var8 = null;
         try {
           var3_int = param1.c(this.g(-43), -20126) - 24;
           if (param0 != -10136) {

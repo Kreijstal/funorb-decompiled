@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe extends se implements co, in, jn {
+final class fe extends WidgetContainer implements co, in, jn {
     private on field_I;
-    static ja field_U;
+    static Sprite field_U;
     private gn field_O;
     private on field_P;
     static ul field_L;
@@ -12,7 +12,7 @@ final class fe extends se implements co, in, jn {
     private fj field_H;
     private on field_N;
     private sq field_G;
-    static ja[] field_W;
+    static Sprite[] field_W;
     private gn field_S;
     private on field_M;
     static boolean field_R;
@@ -51,7 +51,7 @@ final class fe extends se implements co, in, jn {
           if (h.field_H == var4) {
             return false;
           }
-          if (se.field_F != var4) {
+          if (WidgetContainer.field_F != var4) {
             return true;
           }
           return false;
@@ -70,7 +70,7 @@ final class fe extends se implements co, in, jn {
     }
 
     final static void a(byte param0, int param1) {
-        br var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         n var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -80,10 +80,10 @@ final class fe extends se implements co, in, jn {
           if (param0 > -87) {
             return;
           }
-          var4 = (n) (nq.field_s.c(86));
+          var4 = (n) (SpriteState.field_s.c(86));
           while (var4 != null) {
             ih.a(var4, 1, param1);
-            var4 = (n) (nq.field_s.b(6));
+            var4 = (n) (SpriteState.field_s.b(6));
           }
           var2 = dc.field_Gb.c(84);
           while (var2 != null) {
@@ -110,7 +110,7 @@ final class fe extends se implements co, in, jn {
             return;
           }
           if (param2 == this.field_O) {
-            dq.c(-120);
+            ImageProducerRasterBuffer.c(-120);
             return;
           }
           if (param2 != this.field_S) {
@@ -132,7 +132,7 @@ final class fe extends se implements co, in, jn {
         }
     }
 
-    final boolean a(int param0, char param1, cf param2, int param3) {
+    final boolean a(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -171,7 +171,7 @@ final class fe extends se implements co, in, jn {
         }
     }
 
-    final void a(int param0, cf param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_S.field_F = this.h(-38);
@@ -221,7 +221,7 @@ final class fe extends se implements co, in, jn {
 
     private final String g(byte param0) {
         if (param0 != -109) {
-          field_W = (ja[]) null;
+          field_W = (Sprite[]) null;
           return "</col></u>";
         }
         return "</col></u>";
@@ -232,7 +232,7 @@ final class fe extends se implements co, in, jn {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(String param0, String param1, int param2, int param3, cf param4, int param5) {
+    private final int a(String param0, String param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -307,7 +307,7 @@ final class fe extends se implements co, in, jn {
         return cc.a(this.field_P.field_j, this.field_V.field_j, this.field_M.field_j, var2, -10663, this, this.field_H.field_G);
     }
 
-    private final int a(cf param0, int param1, int param2, String param3, int param4) {
+    private final int a(UiWidget param0, int param1, int param2, String param3, int param4) {
         RuntimeException var6 = null;
         uk var7 = null;
         int var8 = 0;
@@ -371,7 +371,7 @@ final class fe extends se implements co, in, jn {
           return true;
         }
         String var3 = (String) null;
-        int discarded$0 = this.a((cf) null, -84, -24, (String) null, -8);
+        int discarded$0 = this.a((UiWidget) null, -84, -24, (String) null, -8);
         return true;
     }
 
@@ -390,7 +390,7 @@ final class fe extends se implements co, in, jn {
         }
     }
 
-    private final int a(int param0, boolean param1, cf param2, String param3, String param4, int param5, int param6) {
+    private final int a(int param0, boolean param1, UiWidget param2, String param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         km var9 = null;
         el var10 = null;
@@ -440,7 +440,7 @@ final class fe extends se implements co, in, jn {
         }
     }
 
-    private final int a(int param0, cf param1, int param2, int param3, String param4) {
+    private final int a(int param0, UiWidget param1, int param2, int param3, String param4) {
         el var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -481,7 +481,7 @@ final class fe extends se implements co, in, jn {
     }
 
     public fe() {
-        super(0, 0, 496, 0, (nl) null);
+        super(0, 0, 496, 0, (WidgetActionListener) null);
         this.field_V = new on("", (bj) null, 12);
         this.field_M = new on("", (bj) null, 100);
         this.field_T = new on("", (bj) null, 100);
@@ -494,10 +494,10 @@ final class fe extends se implements co, in, jn {
         this.field_O = new gn(oq.field_v, (bj) null);
         this.field_V.field_x = bi.field_d;
         this.field_M.field_x = mo.field_Nb;
-        this.field_T.field_x = o.field_d;
+        this.field_T.field_x = IsaacRandom.field_d;
         this.field_P.field_x = ki.field_f;
         this.field_I.field_x = bh.field_e;
-        this.field_N.field_x = dl.field_g;
+        this.field_N.field_x = SocketConnector.field_g;
         this.field_H.field_x = ip.field_b;
         this.field_V.a((byte) -27, new tp(this.field_V));
         this.field_M.a((byte) -27, new hm(this.field_M));
@@ -506,23 +506,23 @@ final class fe extends se implements co, in, jn {
         this.field_I.a((byte) -27, new qp(this.field_I, this.field_P));
         this.field_N.a((byte) -27, new bp(this.field_N));
         this.field_S.field_F = false;
-        this.field_S.field_h = (nl) ((Object) new oq());
-        this.field_O.field_h = (nl) ((Object) new he());
-        this.field_V.field_h = (nl) ((Object) new tb(10000536));
+        this.field_S.listener = (WidgetActionListener) ((Object) new oq());
+        this.field_O.listener = (WidgetActionListener) ((Object) new he());
+        this.field_V.listener = (WidgetActionListener) ((Object) new tb(10000536));
         tb dupTemp$0 = new tb(10000536);
-        this.field_T.field_h = (nl) ((Object) dupTemp$0);
-        this.field_M.field_h = (nl) ((Object) dupTemp$0);
-        this.field_N.field_h = (nl) ((Object) new tb(10000536));
-        this.field_H.field_h = (nl) ((Object) new ib());
+        this.field_T.listener = (WidgetActionListener) ((Object) dupTemp$0);
+        this.field_M.listener = (WidgetActionListener) ((Object) dupTemp$0);
+        this.field_N.listener = (WidgetActionListener) ((Object) new tb(10000536));
+        this.field_H.listener = (WidgetActionListener) ((Object) new ib());
         m dupTemp$1 = new m(10000536);
-        this.field_I.field_h = (nl) ((Object) dupTemp$1);
-        this.field_P.field_h = (nl) ((Object) dupTemp$1);
+        this.field_I.listener = (WidgetActionListener) ((Object) dupTemp$1);
+        this.field_P.listener = (WidgetActionListener) ((Object) dupTemp$1);
         String var2 = vl.a(wa.field_d, new String[]{this.h((byte) 3), this.g((byte) -109)}, 2);
         int var3 = 20;
-        var3 = var3 + this.a(170, this.field_M, var3, 73, da.field_i);
+        var3 = var3 + this.a(170, this.field_M, var3, 73, InflaterDecompressor.field_i);
         var3 = var3 + (5 + this.a(20, true, this.field_T, cq.field_d, "", var3, 170));
         var3 = var3 + this.a(170, this.field_P, var3, 47, gn.field_D);
-        var3 = var3 + (5 + this.a(oi.field_f, bd.field_b, var3, 170, this.field_I, 35));
+        var3 = var3 + (5 + this.a(oi.field_f, MouseInputHandler.field_b, var3, 170, this.field_I, 35));
         var3 = var3 + (this.a(r.field_e, ia.field_w, var3, 170, this.field_V, 35) + 5);
         var3 = var3 + this.a(this.field_N, -99, 170, gj.field_a, var3);
         el var4 = new el(46, var3, -90 + this.field_n, 25, this.field_H, true, -120 + this.field_n, 5, cp.field_H, 11579568, uq.field_e);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rb {
-    static ja[] field_e;
+    static Sprite[] field_e;
     static String field_a;
     static int[] field_c;
     static String field_b;
@@ -25,7 +25,7 @@ final class rb {
           if (param1 == null) {
             return null;
           }
-          var2 = new ef(param1, k.field_i, qj.field_o, oq.field_w, vj.field_p, qp.field_t);
+          var2 = new ef(param1, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, qp.field_t);
           fd.h((byte) 126);
           stackIn_6_0 = var2;
           return stackIn_6_0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg implements nl {
+final class bg implements WidgetActionListener {
     static lh field_k;
     private int field_i;
     private int field_c;
@@ -10,7 +10,7 @@ final class bg implements nl {
     private int field_l;
     static String field_m;
     private int field_f;
-    private fm field_g;
+    private BitmapFont field_g;
     static of field_e;
     private int field_b;
     static String field_d;
@@ -80,7 +80,7 @@ final class bg implements nl {
         uf.a(param0, param2, (byte) 39);
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         ud var15 = null;
         int var7 = 0;
         int var8 = 0;
@@ -100,8 +100,8 @@ final class bg implements nl {
           var8 = param1 + param4.field_i + var15.field_bb;
           oo.d(var7, var8, var15.field_X, this.field_f);
           if (param2 != -15112) {
-            cf var14 = (cf) null;
-            this.a(true, 88, 109, -117, (cf) null);
+            UiWidget var14 = (UiWidget) null;
+            this.a(true, 88, 109, -117, (UiWidget) null);
           }
           if (-1 != var15.field_W) {
             var9 = 3.141592653589793 * (double)var15.field_W * 2.0 / (double)var15.field_U;
@@ -131,7 +131,7 @@ final class bg implements nl {
         return dj.field_k == ta.field_hb ? true : false;
     }
 
-    bg(fm param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    bg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_c = param3;
           this.field_f = param5;
@@ -154,6 +154,6 @@ final class bg implements nl {
         field_o = "TAB - hide chat temporarily";
         field_n = "Only show game chat from my friends";
         field_a = "No options available";
-        th discarded$0 = new th();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
     }
 }

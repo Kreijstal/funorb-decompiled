@@ -48,13 +48,13 @@ class nc {
         } else {
           if (df.field_I) {
             var3 = pp.field_n ? 1 : 0;
-            wb.l((byte) 124);
+            GameCharacter.l((byte) 124);
             if (var3 == 0) {
               var4 = param0 ? 1 : 0;
-              bm.a(var4 != 0, 15, 127, sp.field_g);
+              LevelActorSpawner.a(var4 != 0, 15, 127, sp.field_g);
             } else {
               var4 = param0 ? 1 : 0;
-              bm.a(var4 != 0, 1, 125, sp.field_g);
+              LevelActorSpawner.a(var4 != 0, 1, 125, sp.field_g);
             }
           }
         }
@@ -62,7 +62,7 @@ class nc {
           this.field_b = 82;
         }
         var3Lifetime1 = param0 ? 1 : 0;
-        bm.a(var3Lifetime1 != 0, -5, 126, sp.field_g);
+        LevelActorSpawner.a(var3Lifetime1 != 0, -5, 126, sp.field_g);
     }
 
     public static void b(boolean param0) {
@@ -112,7 +112,7 @@ class nc {
         if (param0 != 0) {
           this.field_d = -56;
         }
-        L1: {
+        regionExit1: {
           if (this.field_d != 1) {
             if (this.field_d != 2 &&
               13 != this.field_d) {
@@ -135,7 +135,7 @@ class nc {
                   v.field_e.d(0, 300);
                   oo.c();
                   pi.field_f.d(0, 480 - pi.field_f.field_b);
-                  break L1;
+                  break regionExit1;
                 }
                 if (4 == this.field_d) {
                   dd.field_g.d(0, 0);
@@ -165,7 +165,7 @@ class nc {
                 v.field_e.d(0, -v.field_e.field_b - pi.field_f.field_b + 480);
                 pi.field_f.d(0, 480 - pi.field_f.field_b);
               }
-              break L1;
+              break regionExit1;
             }
             of.field_e[0].c(0, 0);
           } else {
@@ -200,7 +200,7 @@ class nc {
             df.field_I = false;
             if (!wc.j(127)) {
               var6 = param1 ? 1 : 0;
-              bm.a(var6 != 0, -4, 126, sp.field_g);
+              LevelActorSpawner.a(var6 != 0, -4, 126, sp.field_g);
             } else {
               rj.a(-4, (byte) -37, af.field_a);
             }
@@ -213,7 +213,7 @@ class nc {
                   this.b((byte) 69);
                   tg.a((byte) 25, false);
                   var6 = param1 ? 1 : 0;
-                  bm.a(var6 != 0, -7, 125, sp.field_g);
+                  LevelActorSpawner.a(var6 != 0, -7, 125, sp.field_g);
                   vd.field_d = this.field_d;
                 }
               } else {
@@ -221,14 +221,14 @@ class nc {
                   if (5 == var6) {
                     if (this.field_g.c(-85)) {
                       var6 = param1 ? 1 : 0;
-                      bm.a(var6 != 0, 1, 126, sp.field_g);
+                      LevelActorSpawner.a(var6 != 0, 1, 126, sp.field_g);
                     }
                   } else {
                     if (var6 != 16) {
                       if (var6 == 14) {
                         if (this.field_g.c(-85)) {
                           var6 = param1 ? 1 : 0;
-                          bm.a(var6 != 0, 5, 127, sp.field_g);
+                          LevelActorSpawner.a(var6 != 0, 5, 127, sp.field_g);
                           vd.field_d = this.field_d;
                         }
                       } else {
@@ -237,7 +237,7 @@ class nc {
                             if (this.field_g.c(-85)) {
                               ((ol) (mj.field_Hb[4])).e(113);
                               var6 = param1 ? 1 : 0;
-                              bm.a(var6 != 0, 4, 125, sp.field_g);
+                              LevelActorSpawner.a(var6 != 0, 4, 125, sp.field_g);
                               vd.field_d = this.field_d;
                             }
                           } else {
@@ -245,13 +245,13 @@ class nc {
                               if (this.field_g.c(-85)) {
                                 var6 = vd.field_d;
                                 var7 = param1 ? 1 : 0;
-                                bm.a(var7 != 0, var6, 126, sp.field_g);
+                                LevelActorSpawner.a(var7 != 0, var6, 126, sp.field_g);
                               }
                             } else {
                               if (2 == var6) {
                                 if (this.field_g.c(-85)) {
                                   var6 = param1 ? 1 : 0;
-                                  bm.a(var6 != 0, 3, 126, sp.field_g);
+                                  LevelActorSpawner.a(var6 != 0, 3, 126, sp.field_g);
                                 }
                               } else {
                                 if (12 == var6) {
@@ -265,7 +265,7 @@ class nc {
                                   if (this.field_g.b(false)) {
                                     var6 = ok.field_l + 137;
                                     var7 = 8 + (-var6 + this.a((byte) -118, param2) + this.d(-110, param2) >> 1) + ok.field_l;
-                                    var8 = -var7 + bd.field_g << 1;
+                                    var8 = -var7 + MouseInputHandler.field_g << 1;
                                     var8 = var8 * 224 >> 8;
                                     if (0 >= var8) {
                                       tj.a(3273, 0);
@@ -311,7 +311,7 @@ class nc {
                                     if (this.field_g.b(false)) {
                                       var6 = 137 + ok.field_l;
                                       var7 = 8 + (this.a((byte) -118, param2) + this.d(-93, param2) - var6 >> 1) + ok.field_l;
-                                      var8 = bd.field_g - var7 << 1;
+                                      var8 = MouseInputHandler.field_g - var7 << 1;
                                       var8 = var8 * 200 >> 8;
                                       if (var8 <= 0) {
                                         ff.a(0, 61);
@@ -351,7 +351,7 @@ class nc {
                                           rn.a(-69);
                                         } else {
                                           var6 = param1 ? 1 : 0;
-                                          bd.field_f = false;
+                                          MouseInputHandler.field_f = false;
                                           lp.a((byte) -60, var6 != 0);
                                         }
                                       }
@@ -379,30 +379,30 @@ class nc {
                                           break;
                                         case 50:
                                           if (this.field_g.a((byte) -106)) {
-                                            ll.field_k.field_k = ll.field_k.field_k - 1;
+                                            FullscreenFocusCanvas.field_k.field_k = FullscreenFocusCanvas.field_k.field_k - 1;
                                           }
                                           if (this.field_g.b((byte) -66)) {
-                                            ll.field_k.field_k = ll.field_k.field_k + 1;
+                                            FullscreenFocusCanvas.field_k.field_k = FullscreenFocusCanvas.field_k.field_k + 1;
                                           }
-                                          if (0 > ll.field_k.field_k) {
-                                            ll.field_k.field_k = 2;
+                                          if (0 > FullscreenFocusCanvas.field_k.field_k) {
+                                            FullscreenFocusCanvas.field_k.field_k = 2;
                                           }
-                                          if (2 < ll.field_k.field_k) {
-                                            ll.field_k.field_k = 0;
+                                          if (2 < FullscreenFocusCanvas.field_k.field_k) {
+                                            FullscreenFocusCanvas.field_k.field_k = 0;
                                           }
                                           break;
                                         case 34:
                                           if (this.field_g.c(-85)) {
                                             oq.c((byte) 127);
                                             we.field_g[34] = df.a(-128);
-                                            ll.field_k.field_i = ll.field_k.field_i ^ 2;
-                                            th.b((byte) -61);
+                                            FullscreenFocusCanvas.field_k.field_i = FullscreenFocusCanvas.field_k.field_i ^ 2;
+                                            IntrusiveDeque.b((byte) -61);
                                           }
                                           break;
                                         case 47:
                                           if (this.field_g.c(-85)) {
-                                            ll.field_k.e(-110);
-                                            th.b((byte) -61);
+                                            FullscreenFocusCanvas.field_k.e(-110);
+                                            IntrusiveDeque.b((byte) -61);
                                           }
                                           break;
                                         default:
@@ -459,7 +459,7 @@ class nc {
                           if (this.field_g.c(-85)) {
                             mj.field_Hb[15].a(0, param1, 0);
                             var6 = param1 ? 1 : 0;
-                            bm.a(var6 != 0, 15, 126, sp.field_g);
+                            LevelActorSpawner.a(var6 != 0, 15, 126, sp.field_g);
                             vd.field_d = this.field_d;
                           }
                         }
@@ -469,8 +469,8 @@ class nc {
                         var6 = 1;
                         var7 = var6;
                         var8 = param1 ? 1 : 0;
-                        bm.a(var8 != 0, var7, 126, sp.field_g);
-                        var14 = k.field_n;
+                        LevelActorSpawner.a(var8 != 0, var7, 126, sp.field_g);
+                        var14 = PacketBuffer.field_n;
                         for (var8 = 0; var8 < 8; var8++) {
                           var14[var8] = 0;
                         }
@@ -484,7 +484,7 @@ class nc {
                 } else {
                   if (this.field_g.c(-85)) {
                     var6 = param1 ? 1 : 0;
-                    bm.a(var6 != 0, -7, 127, sp.field_g);
+                    LevelActorSpawner.a(var6 != 0, -7, 127, sp.field_g);
                     vd.field_d = 1;
                   }
                 }
@@ -493,14 +493,14 @@ class nc {
               if (this.field_g.c(-85)) {
                 tg.a((byte) 27, true);
                 var6 = param1 ? 1 : 0;
-                bm.a(var6 != 0, -7, 127, sp.field_g);
+                LevelActorSpawner.a(var6 != 0, -7, 127, sp.field_g);
                 vd.field_d = this.field_d;
               }
             }
           } else {
             if (this.field_g.c(-85)) {
               var6 = param1 ? 1 : 0;
-              bm.a(var6 != 0, 14, 127, sp.field_g);
+              LevelActorSpawner.a(var6 != 0, 14, 127, sp.field_g);
               vd.field_d = this.field_d;
             }
           }
@@ -541,7 +541,7 @@ class nc {
 
     final static void a(int param0, boolean param1) {
         tm.a(param1, false);
-        br.a(param1, 2);
+        IntrusiveNode.a(param1, 2);
         int var2 = 31 % ((param0 + 57) / 56);
     }
 
@@ -663,7 +663,7 @@ class nc {
         if (-2 == var6Lifetime1) {
           var6Lifetime1 = 2;
         }
-        fn.field_e.a();
+        ClientException.field_e.a();
         if (11 == var6Lifetime1) {
           var6Lifetime1 = 1;
         }
@@ -672,10 +672,10 @@ class nc {
         } else {
           wp.field_h.b(true, 1);
           oo.f(0, 0, 640, 480);
-          fn.field_e.h();
+          ClientException.field_e.h();
         }
-        dl.field_h.b((byte) 99);
-        fn.field_e.a(0, 0, var4, var5);
+        SocketConnector.field_h.b((byte) 99);
+        ClientException.field_e.a(0, 0, var4, var5);
     }
 
     void b(byte param0) {
@@ -699,7 +699,7 @@ class nc {
         if (~this.field_g.field_d != param0) {
           param2 = this.field_g.field_d;
         }
-        this.field_g.a(param2, param1, -31458, this.a(param0 - 6003, bo.field_d, bd.field_g));
+        this.field_g.a(param2, param1, -31458, this.a(param0 - 6003, bo.field_d, MouseInputHandler.field_g));
         if (this.field_d == 8) {
           fc.a((byte) 124, param1);
         }
@@ -752,7 +752,7 @@ class nc {
         boolean stackIn_8_0 = false;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
-        qd stackIn_24_0 = null;
+        GameScreen stackIn_24_0 = null;
         int stackIn_24_1 = 0;
         boolean stackIn_25_2 = false;
         int stackIn_65_0 = 0;
@@ -782,21 +782,21 @@ class nc {
             if (var3 == 1) {
               stackIn_16_0 = (ec.field_c) ? 15 : 1;
               var4 = stackIn_16_0;
-              bm.a(false, var4, param0 ^ 127, sp.field_g);
+              LevelActorSpawner.a(false, var4, param0 ^ 127, sp.field_g);
             }
             if (var3 != 2) {
               return;
             }
             stackIn_21_0 = (!ec.field_c) ? 1 : 15;
             var4Lifetime1 = stackIn_21_0;
-            bm.a(true, var4Lifetime1, 126, sp.field_g);
+            LevelActorSpawner.a(true, var4Lifetime1, 126, sp.field_g);
             return;
           }
         } else {
           stackIn_24_0 = wp.field_h;
           stackIn_24_1 = 122;
           stackIn_25_2 = (this.field_d != 2);
-          ((qd) (Object) stackIn_24_0).a((byte) stackIn_24_1, stackIn_25_2);
+          ((GameScreen) (Object) stackIn_24_0).a((byte) stackIn_24_1, stackIn_25_2);
           if (-7 == this.field_d) {
             return;
           }
@@ -836,7 +836,7 @@ class nc {
             continue;
           }
           if (this.field_d == 2) {
-            bm.a(false, -7, param0 ^ 126, sp.field_g);
+            LevelActorSpawner.a(false, -7, param0 ^ 126, sp.field_g);
             vd.field_d = 1;
             continue;
           }
@@ -850,11 +850,11 @@ class nc {
             continue;
           }
           if (this.field_d == 15) {
-            bm.a(false, 1, param0 ^ 125, sp.field_g);
+            LevelActorSpawner.a(false, 1, param0 ^ 125, sp.field_g);
             continue;
           }
           var3Lifetime1 = vd.field_d;
-          bm.a(false, var3Lifetime1, param0 + 125, sp.field_g);
+          LevelActorSpawner.a(false, var3Lifetime1, param0 + 125, sp.field_g);
         }
         var3Lifetime2 = 1;
         if (am.a(param0 ^ -112) &&
@@ -866,13 +866,13 @@ class nc {
             w.a(320, 180, true, 81);
           }
         }
-        if (param0 != ~this.a(-6003, bo.field_d, bd.field_g)) {
+        if (param0 != ~this.a(-6003, bo.field_d, MouseInputHandler.field_g)) {
           en.a(-1, 1);
         } else {
           en.a(-1, 4);
         }
         if (var3Lifetime2 != 0) {
-          this.field_g.a(this.a(-6003, bo.field_d, bd.field_g), 42, this.a(-6003, ka.field_t, vb.field_f));
+          this.field_g.a(this.a(-6003, bo.field_d, MouseInputHandler.field_g), 42, this.a(-6003, ka.field_t, vb.field_f));
           if (this.field_g.field_d != -1) {
             this.b(12, this.field_g.field_d);
             this.b(-74, true, this.field_g.field_d);
@@ -973,14 +973,14 @@ class nc {
             var7Lifetime2 = "ERROR: missing text";
           }
           if (var6 == 50) {
-            if (ll.field_k.field_k != 1) {
-              if (ll.field_k.field_k == 0) {
+            if (FullscreenFocusCanvas.field_k.field_k != 1) {
+              if (FullscreenFocusCanvas.field_k.field_k == 0) {
                 var12_ref_StringLifetime2 = jm.field_l;
               } else {
                 var12_ref_StringLifetime2 = jp.field_a;
               }
             } else {
-              var12_ref_StringLifetime2 = da.field_f;
+              var12_ref_StringLifetime2 = InflaterDecompressor.field_f;
             }
             var7Lifetime2 = var7Lifetime2 + var12_ref_StringLifetime2;
           }

@@ -7,14 +7,14 @@ final class ke {
     static int field_b;
     static pi field_f;
     static cj field_j;
-    static fm field_h;
+    static BitmapFont field_h;
     static String field_k;
     static String field_d;
     static String field_e;
     static ra field_g;
     static String field_a;
     static String field_c;
-    static ja[] field_i;
+    static Sprite[] field_i;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int[] array$1 = null;

@@ -6,7 +6,7 @@ final class sj extends ae {
     private int field_o;
     static int field_p;
     private int field_k;
-    static ja field_j;
+    static Sprite field_j;
     private int field_q;
     private int field_l;
     private int field_n;
@@ -180,8 +180,8 @@ final class sj extends ae {
         }
     }
 
-    final void a(int param0, qd param1) {
-        wb stackIn_4_0 = null;
+    final void a(int param0, GameScreen param1) {
+        GameCharacter stackIn_4_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -189,10 +189,10 @@ final class sj extends ae {
         gm var3 = null;
         RuntimeException var3_ref = null;
         Object var4 = null;
-        wb var4_ref = null;
+        GameCharacter var4_ref = null;
         Exception var5 = null;
         qk var5_ref = null;
-        wb var6 = null;
+        GameCharacter var6 = null;
         try {
           var3 = op.field_m.a(this.field_i, 70);
           var4 = null;

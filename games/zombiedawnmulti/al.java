@@ -76,11 +76,11 @@ abstract class al extends df {
         if (param0 <= 68) {
           return (String) null;
         }
-        return s.field_e.f((byte) -24);
+        return s.field_e.readString((byte) -24);
     }
 
     final static void j(int param0) {
-        ch.field_e = false;
+        IntrusiveDequeCursor.field_e = false;
         nj.field_f = false;
         fb.a(param0, 99);
         id.field_B = mp.field_b;
@@ -220,13 +220,13 @@ abstract class al extends df {
           return -1;
         }
         if (param2 >= jp.field_d &&
-          param2 < jp.field_d + er.field_j.field_x &&
+          param2 < jp.field_d + er.field_j.width &&
           param0 >= cr.field_j &&
-          cr.field_j + er.field_j.field_w > param0) {
+          cr.field_j + er.field_j.height > param0) {
           return 0;
         }
-        if (il.field_k <= param2 && param2 < il.field_k + er.field_j.field_x && param0 >= sq.field_O &&
-          !(param0 >= sq.field_O + er.field_j.field_w)) {
+        if (il.field_k <= param2 && param2 < il.field_k + er.field_j.width && param0 >= sq.field_O &&
+          !(param0 >= sq.field_O + er.field_j.height)) {
           return 1;
         }
         if (param1 != -1) {

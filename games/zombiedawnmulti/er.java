@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class er extends br {
+final class er extends IntrusiveNode {
     int field_g;
     static ma field_f;
     static int field_k;
     static int field_i;
     static int field_h;
-    static ja field_j;
+    static Sprite field_j;
 
     er(int param0) {
         this.field_g = param0;
@@ -29,9 +29,9 @@ final class er extends br {
         int var1Lifetime1;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         if (ai.field_b != ma.field_d) {
-          se.field_E = se.field_E - 40;
-          if (se.field_E <= 0) {
-            se.field_E = 0;
+          WidgetContainer.field_E = WidgetContainer.field_E - 40;
+          if (WidgetContainer.field_E <= 0) {
+            WidgetContainer.field_E = 0;
             ml.field_Jb = gn.field_I[hg.field_rb];
             ma.field_d = ai.field_b;
             stackIn_51_0 = !(hg.field_rb >= -1 + lm.field_pb);
@@ -58,9 +58,9 @@ final class er extends br {
           return false;
         }
         if (hg.field_rb != ml.field_Jb) {
-          se.field_E = se.field_E - 40;
-          if (se.field_E <= 0) {
-            se.field_E = 0;
+          WidgetContainer.field_E = WidgetContainer.field_E - 40;
+          if (WidgetContainer.field_E <= 0) {
+            WidgetContainer.field_E = 0;
             ml.field_Jb = gn.field_I[hg.field_rb];
             ma.field_d = ai.field_b;
             stackIn_7_0 = !(hg.field_rb >= -1 + lm.field_pb);
@@ -96,7 +96,7 @@ final class er extends br {
                 w.field_m = w.field_m & -1025;
               }
             } else {
-              if (se.field_E <= 0) {
+              if (WidgetContainer.field_E <= 0) {
                 if (ai.field_b == 21 &&
                   10 == hg.field_rb &&
                   !fb.field_e.field_I.a(true)) {
@@ -104,9 +104,9 @@ final class er extends br {
                   w.field_m = w.field_m & -1025;
                 }
               } else {
-                se.field_E = se.field_E - 40;
-                if (se.field_E <= 0) {
-                  se.field_E = 0;
+                WidgetContainer.field_E = WidgetContainer.field_E - 40;
+                if (WidgetContainer.field_E <= 0) {
+                  WidgetContainer.field_E = 0;
                 }
                 if (ai.field_b == 21 &&
                   10 == hg.field_rb &&
@@ -122,10 +122,10 @@ final class er extends br {
             field_k = -56;
             return false;
           }
-          if (se.field_E < 400) {
-            se.field_E = se.field_E + 40;
-            if (se.field_E > 400) {
-              se.field_E = 400;
+          if (WidgetContainer.field_E < 400) {
+            WidgetContainer.field_E = WidgetContainer.field_E + 40;
+            if (WidgetContainer.field_E > 400) {
+              WidgetContainer.field_E = 400;
             }
             if (ai.field_b == 21 &&
               10 == hg.field_rb &&
@@ -140,10 +140,10 @@ final class er extends br {
             return false;
           }
           if (!io.field_g &&
-            se.field_E > 0) {
-            se.field_E = se.field_E - 40;
-            if (se.field_E <= 0) {
-              se.field_E = 0;
+            WidgetContainer.field_E > 0) {
+            WidgetContainer.field_E = WidgetContainer.field_E - 40;
+            if (WidgetContainer.field_E <= 0) {
+              WidgetContainer.field_E = 0;
             }
           }
         }

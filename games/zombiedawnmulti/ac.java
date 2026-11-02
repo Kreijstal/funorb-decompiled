@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ac extends br {
+final class ac extends IntrusiveNode {
     private int field_h;
     private boolean field_K;
     private int field_N;
@@ -79,16 +79,16 @@ final class ac extends br {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        k var2 = new k(param0);
-        this.field_h = var2.i(-1478490344);
-        this.field_j = var2.i(-1478490344);
-        this.field_z = var2.i(-1478490344);
-        this.field_N = var2.i(-1478490344);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_h = var2.readInt(-1478490344);
+        this.field_j = var2.readInt(-1478490344);
+        this.field_z = var2.readInt(-1478490344);
+        this.field_N = var2.readInt(-1478490344);
         if (this.field_N < 0) {
           this.field_N = ~this.field_N;
           this.field_n = true;
         }
-        int var3 = var2.i(-1478490344);
+        int var3 = var2.readInt(-1478490344);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -96,7 +96,7 @@ final class ac extends br {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.g(31365);
+            var6_int = var2.readUnsignedByte(31365);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];

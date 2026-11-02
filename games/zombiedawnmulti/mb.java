@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mb extends br {
+final class mb extends IntrusiveNode {
     int field_m;
     int field_v;
     static String field_g;
@@ -9,7 +9,7 @@ final class mb extends br {
     int field_E;
     static boolean[][] field_k;
     int field_t;
-    static ja field_j;
+    static Sprite field_j;
     static int[] field_n;
     int field_o;
     uj field_C;
@@ -29,7 +29,7 @@ final class mb extends br {
     int field_s;
     int field_z;
 
-    final static int a(fm param0, boolean param1, String param2, String[] param3, int param4) {
+    final static int a(BitmapFont param0, boolean param1, String param2, String[] param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -169,7 +169,7 @@ final class mb extends br {
     public static void b(boolean param0) {
         field_n = null;
         if (param0) {
-          field_j = (ja) null;
+          field_j = (Sprite) null;
         }
         field_k = (boolean[][]) null;
         field_j = null;

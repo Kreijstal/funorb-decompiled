@@ -6,14 +6,14 @@ final class sp extends mp {
     private int field_m;
     static boolean field_h;
     private boolean field_o;
-    private fm field_f;
+    private BitmapFont field_f;
     static int field_g;
     private int field_n;
     private int field_k;
     private int field_l;
     private String field_i;
 
-    private final td a(fm param0, String param1, int param2, int param3) {
+    private final td a(BitmapFont param0, String param1, int param2, int param3) {
         td var5 = null;
         RuntimeException var5_ref = null;
         td var6 = null;
@@ -53,7 +53,7 @@ final class sp extends mp {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, String param3, fm param4) {
+    final void a(int param0, int param1, boolean param2, String param3, BitmapFont param4) {
         td var8 = null;
         td var9 = null;
         if (param3 == null) {
@@ -73,13 +73,13 @@ final class sp extends mp {
           var9 = var8;
           var9.field_e[0] = -param4.a(param3) + param0;
           var9.field_e[param3.length()] = param0;
-          qd.a(param4, 0, param3, 109, var9);
+          GameScreen.a(param4, 0, param3, 109, var9);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "sp.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, byte param1, fm param2, String param3, int param4) {
+    final void a(int param0, byte param1, BitmapFont param2, String param3, int param4) {
         td var8 = null;
         td var9 = null;
         if (param3 == null) {
@@ -100,7 +100,7 @@ final class sp extends mp {
           var9 = var8;
           var8.field_e[0] = param0;
           var9.field_e[param3.length()] = param0 + param2.a(param3);
-          qd.a(param2, 0, param3, 116, var9);
+          GameScreen.a(param2, 0, param3, 116, var9);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "sp.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -113,12 +113,12 @@ final class sp extends mp {
         }
         if (param0 != 0) {
           java.awt.Frame var2 = (java.awt.Frame) null;
-          sp.a((go) null, -50, (java.awt.Frame) null);
+          sp.a((PlatformTaskDispatcher) null, -50, (java.awt.Frame) null);
         }
         nb.field_a.b(param0 + 3016, pj.field_I);
     }
 
-    final void a(String param0, int param1, int param2, int param3, byte param4, int param5, int param6, fm param7) {
+    final void a(String param0, int param1, int param2, int param3, byte param4, int param5, int param6, BitmapFont param7) {
         td stackIn_37_0;
         td stackIn_37_1;
         int stackIn_37_2;
@@ -126,7 +126,7 @@ final class sp extends mp {
         td stackIn_38_0 = null;
         td stackIn_38_1 = null;
         int stackIn_38_4 = 0;
-        fm stackIn_42_0 = null;
+        BitmapFont stackIn_42_0 = null;
         int stackIn_43_1 = 0;
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
@@ -220,13 +220,13 @@ final class sp extends mp {
             var14.field_e[0] = 0;
             if (var13 != null) {
               var14.field_e[var13.length()] = param7.a(var13);
-              stackIn_42_0 = (fm) (param7);
+              stackIn_42_0 = (BitmapFont) (param7);
               if (param1 != 3) {
                 stackIn_43_1 = 0;
               } else {
                 stackIn_43_1 = this.a(var13, 0, param7.a(var13), param6);
               }
-              qd.a(stackIn_42_0, stackIn_43_1, var13, 120, var14);
+              GameScreen.a(stackIn_42_0, stackIn_43_1, var13, 120, var14);
             }
             this.field_e[var12Lifetime1] = var14;
             var11 = var11 + param3;
@@ -252,7 +252,7 @@ final class sp extends mp {
         }
     }
 
-    final void a(fm param0, String param1, int param2, byte param3, int param4) {
+    final void a(BitmapFont param0, String param1, int param2, byte param3, int param4) {
         td var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -274,13 +274,13 @@ final class sp extends mp {
           var7 = param0.a(param1);
           var8.field_e[0] = param4 - (var7 >> 1);
           var8.field_e[param1.length()] = param4 + (var7 >> 1);
-          qd.a(param0, 0, param1, param3 ^ 61, var8);
+          GameScreen.a(param0, 0, param1, param3 ^ 61, var8);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "sp.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static void a(go param0, int param1, java.awt.Frame param2) {
+    final static void a(PlatformTaskDispatcher param0, int param1, java.awt.Frame param2) {
         di var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;

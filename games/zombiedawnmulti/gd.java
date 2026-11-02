@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends gq {
+final class gd extends PcmStream {
     private int[] field_C;
     static me field_Q;
     private mb[][] field_O;
@@ -43,7 +43,7 @@ final class gd extends gq {
         }
     }
 
-    final static void a(boolean param0, int param1, ja[] param2) {
+    final static void a(boolean param0, int param1, Sprite[] param2) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -57,9 +57,9 @@ final class gd extends gq {
           }
           if (param0) {
             field_B = 38;
-            dl.field_h.b((byte) 107);
+            SocketConnector.field_h.b((byte) 107);
           } else {
-            dl.field_h.b((byte) 107);
+            SocketConnector.field_h.b((byte) 107);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class gd extends gq {
         }
     }
 
-    final static bm a(byte[] param0, byte param1) {
+    final static LevelActorSpawner a(byte[] param0, byte param1) {
         int var6 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -84,8 +84,8 @@ final class gd extends gq {
         int var4 = 0;
         byte[] var5 = null;
         int var7 = 0;
-        bm stackIn_3_0 = null;
-        bm stackIn_8_0 = null;
+        LevelActorSpawner stackIn_3_0 = null;
+        LevelActorSpawner stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -97,15 +97,15 @@ final class gd extends gq {
           var4 = 0;
           var5 = new byte[param0.length + 12];
           if (param1 != 46) {
-            stackIn_3_0 = (bm) null;
+            stackIn_3_0 = (LevelActorSpawner) null;
             return stackIn_3_0;
           }
-          br.a(0, var5, param1 - 173, re.a(param0, 0, (byte) 71));
-          br.a(1, var5, -80, var4);
-          br.a(2, var5, -118, var2_int);
-          br.a(3, var5, -91, var3);
+          IntrusiveNode.a(0, var5, param1 - 173, re.a(param0, 0, (byte) 71));
+          IntrusiveNode.a(1, var5, -80, var4);
+          IntrusiveNode.a(2, var5, -118, var2_int);
+          IntrusiveNode.a(3, var5, -91, var3);
           for (var6 = 1; var6 < param0.length / 4; var6++) {
-            br.a(3 + var6, var5, -127, re.a(param0, var6, (byte) 53));
+            IntrusiveNode.a(3 + var6, var5, -127, re.a(param0, var6, (byte) 53));
           }
           stackIn_8_0 = ij.a(var5, 7);
           return stackIn_8_0;
@@ -173,7 +173,7 @@ final class gd extends gq {
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (this.field_p.b()) {
-            var4_int = this.field_r * this.field_p.field_g / gp.field_p;
+            var4_int = this.field_r * this.field_p.field_g / PcmPlayerService.field_p;
             while (true) {
               var5 = (long)var4_int * (long)param2 + this.field_A;
               if (this.field_l - var5 >= 0L) {
@@ -536,7 +536,7 @@ final class gd extends gq {
             var7 = Math.sin(0.01227184630308513 * (double)(511 & param0.field_s));
             var3_int = var3_int + (int)((double)var5 * var7);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(param0.field_f.field_g * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)gp.field_p);
+          var5Lifetime1 = (int)(0.5 + (double)(param0.field_f.field_g * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)PcmPlayerService.field_p);
           stackIn_13_0 = (var5Lifetime1 >= 1) ? var5Lifetime1 : 1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -565,8 +565,8 @@ final class gd extends gq {
           var3 = (mb) (this.field_P.field_k.b(6));
         }
         if (!param1) {
-          ja[] var5 = (ja[]) null;
-          gd.a(false, -23, (ja[]) null);
+          Sprite[] var5 = (Sprite[]) null;
+          gd.a(false, -23, (Sprite[]) null);
         }
     }
 
@@ -621,14 +621,14 @@ final class gd extends gq {
         }
     }
 
-    final synchronized gq b() {
-        return (gq) ((Object) this.field_P);
+    final synchronized PcmStream b() {
+        return (PcmStream) ((Object) this.field_P);
     }
 
     private final synchronized void b(boolean param0, int param1) {
         if (param1 != -82) {
-          ja[] var4 = (ja[]) null;
-          gd.a(false, 13, (ja[]) null);
+          Sprite[] var4 = (Sprite[]) null;
+          gd.a(false, 13, (Sprite[]) null);
         }
         this.field_p.f();
         this.field_s = null;
@@ -654,7 +654,7 @@ final class gd extends gq {
     private final int a(mb param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ja[] var4 = null;
+        Sprite[] var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -663,8 +663,8 @@ final class gd extends gq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 81682502) {
-            var4 = (ja[]) null;
-            gd.a(true, -52, (ja[]) null);
+            var4 = (Sprite[]) null;
+            gd.a(true, -52, (Sprite[]) null);
           }
           var3_int = this.field_J[param0.field_o];
           if (var3_int < 8192) {
@@ -724,7 +724,7 @@ final class gd extends gq {
           var8 = (kg) (param3.field_f.a(0));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var9 = (int)var8.field_e;
+            var9 = (int)var8.key;
             var10 = (po) (this.field_G.a(param0 ^ -10783, (long)var9));
             if (var10 == null) {
               var10 = r.a(param4, var9, (byte) 15);
@@ -802,7 +802,7 @@ final class gd extends gq {
           if (param0 < 0 ||
             var3.field_o == param0) {
             if (var3.field_C != null) {
-              var3.field_C.e(gp.field_p / 100);
+              var3.field_C.e(PcmPlayerService.field_p / 100);
               if (var3.field_C.j()) {
                 this.field_P.field_o.b(var3.field_C);
               }
@@ -811,7 +811,7 @@ final class gd extends gq {
             if (var3.field_l < 0) {
               this.field_O[var3.field_o][var3.field_p] = null;
             }
-            var3.a(true);
+            var3.unlink(true);
           }
           var3 = (mb) (this.field_P.field_k.b(6));
         }
@@ -1082,7 +1082,7 @@ final class gd extends gq {
         boolean decompiledFrameCompleted0 = true;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_p.b()) {
-          var2 = this.field_p.field_g * this.field_r / gp.field_p;
+          var2 = this.field_p.field_g * this.field_r / PcmPlayerService.field_p;
           while (true) {
             var3 = this.field_A + (long)param0 * (long)var2;
             if (-var3 + this.field_l >= 0L) {
@@ -1122,7 +1122,7 @@ final class gd extends gq {
             return false;
           }
           if (0 <= param1.field_l) {
-            param1.a(true);
+            param1.unlink(true);
             if (param1.field_m > 0 &&
               this.field_t[param1.field_o][param1.field_m] == param1) {
               this.field_t[param1.field_o][param1.field_m] = null;
@@ -1156,7 +1156,7 @@ final class gd extends gq {
         }
     }
 
-    final synchronized gq d() {
+    final synchronized PcmStream d() {
         return null;
     }
 
@@ -1176,11 +1176,11 @@ final class gd extends gq {
         int var12 = 0;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          param0.field_D = gp.field_p / 100;
+          param0.field_D = PcmPlayerService.field_p / 100;
           if (param0.field_l >= 0 && (param0.field_C == null ||
             param0.field_C.k())) {
             param0.a((byte) 71);
-            param0.a(true);
+            param0.unlink(true);
             if (param0.field_m > 0) {
               if (param0 != this.field_t[param0.field_o][param0.field_m]) {
                 return true;
@@ -1267,7 +1267,7 @@ final class gd extends gq {
           }
           param0.a((byte) 71);
           if (param0.field_l >= 0) {
-            param0.a(true);
+            param0.unlink(true);
             if (param0.field_m > 0 &&
               this.field_t[param0.field_o][param0.field_m] == param0) {
               this.field_t[param0.field_o][param0.field_m] = null;

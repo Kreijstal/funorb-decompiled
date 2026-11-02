@@ -18,7 +18,7 @@ final class va {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           try {
-            if (!go.field_l.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_l.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&
@@ -63,12 +63,12 @@ final class va {
 
     final static void a(byte param0) {
         if (param0 == 62) {
-          kn.a(-1431, true, am.field_a, mc.field_g);
+          kn.a(-1431, true, am.field_a, RandomAccessCacheFile.field_g);
           bl.field_h = true;
           return;
         }
         field_b = (String) null;
-        kn.a(-1431, true, am.field_a, mc.field_g);
+        kn.a(-1431, true, am.field_a, RandomAccessCacheFile.field_g);
         bl.field_h = true;
     }
 

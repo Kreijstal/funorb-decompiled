@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl extends se implements in {
+final class gl extends WidgetContainer implements in {
     private gn[] field_I;
     static String field_K;
     static hh field_H;
@@ -27,7 +27,7 @@ final class gl extends se implements in {
           }
           var5 = (u) (cp.field_T.c(59));
           while (var5 != null) {
-            o.a(var5, param1, -85);
+            IsaacRandom.a(var5, param1, -85);
             var5 = (u) (cp.field_T.b(6));
           }
           return;
@@ -39,7 +39,7 @@ final class gl extends se implements in {
     }
 
     gl(jn param0) {
-        super(0, 0, 0, 0, (nl) null);
+        super(0, 0, 0, 0, (WidgetActionListener) null);
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {
@@ -75,13 +75,13 @@ final class gl extends se implements in {
             this.field_I = new gn[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_I[var5] = new gn(this.field_G[var5], (bj) (this));
-              this.field_I[var5].field_h = (nl) ((Object) var4);
+              this.field_I[var5].listener = (WidgetActionListener) ((Object) var4);
               this.field_I[var5].field_x = wd.field_I;
               this.field_I[var5].b(0, 20 + var5 * 16, 28972, 80, 15);
               this.b((byte) 94, this.field_I[var5]);
             }
             this.field_I[var3_int] = new gn(al.field_ab, (bj) (this));
-            this.field_I[var3_int].field_h = (nl) ((Object) var4);
+            this.field_I[var3_int].listener = (WidgetActionListener) ((Object) var4);
             this.field_I[var3_int].b(0, 16 * var3_int + 16 + 20, 28972, 100, 15);
             this.b((byte) 55, this.field_I[var3_int]);
             return;
@@ -110,13 +110,13 @@ final class gl extends se implements in {
         if (param0 != -2) {
           return;
         }
-        fm var5 = ke.field_h;
+        BitmapFont var5 = ke.field_h;
         if (null != this.field_G) {
           var5.a(pi.field_g, param3 + this.field_y, param1 + this.field_i, this.field_n, 20, 16777215, -1, 0, 0, var5.field_r + var5.field_C);
         }
     }
 
-    final static ja a(int param0) {
+    final static Sprite a(int param0) {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         int var1 = oq.field_w[0] * vj.field_p[0];
         byte[] var2 = qp.field_t[0];
@@ -129,7 +129,7 @@ final class gl extends se implements in {
           var3[var4_int] = tp.field_t[tq.b(255, (int) var2[var4_int])];
           var4_int++;
         }
-        ja var4 = new ja(ie.field_nb, hj.field_a, k.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], var3);
+        Sprite var4 = new Sprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], var3);
         fd.h((byte) 126);
         return var4;
     }
@@ -143,7 +143,7 @@ final class gl extends se implements in {
         field_K = null;
     }
 
-    final boolean a(int param0, char param1, cf param2, int param3) {
+    final boolean a(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -181,7 +181,7 @@ final class gl extends se implements in {
     public final void a(int param0, int param1, gn param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
-        cf var8 = null;
+        UiWidget var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -190,8 +190,8 @@ final class gl extends se implements in {
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param3 > -83) {
-            var8 = (cf) null;
-            this.a(-106, '￘', (cf) null, 49);
+            var8 = (UiWidget) null;
+            this.a(-106, '￘', (UiWidget) null, 49);
           }
           for (var6_int = 0; this.field_G.length > var6_int; var6_int++) {
             if (param2 == this.field_I[var6_int]) {

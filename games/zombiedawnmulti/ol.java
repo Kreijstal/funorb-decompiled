@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ol extends nc {
-    static ja field_n;
+    static Sprite field_n;
     static sc field_o;
     private int field_m;
     static String field_q;
@@ -143,7 +143,7 @@ final class ol extends nc {
         int stackIn_69_3 = 0;
         int stackIn_71_4;
         int stackIn_72_5 = 0;
-        ja[] stackIn_81_0 = null;
+        Sprite[] stackIn_81_0 = null;
         int stackIn_82_1 = 0;
         int var2;
         int var3;
@@ -166,8 +166,8 @@ final class ol extends nc {
         var3 = 600;
         var6 = 200;
         stackIn_3_0 = (p.field_e != 1) ? 0 : 1;
-        L1: {
-          L2: {
+        regionExit1: {
+          regionExit2: {
             var7 = stackIn_3_0;
             var14 = this.field_m;
             switch ((var16 == 0
@@ -198,7 +198,7 @@ final class ol extends nc {
                 pb.field_e.a(cp.field_S[0][1], 20, 230 + var5, var3, 440, 16777215, 0, 0, 0, var2);
                 if (var7 != 0) {
                   pb.field_e.a(fa.a(120, 1 + cp.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
-                  break L1;
+                  break regionExit1;
                 }
                 tf.field_Hb[0].g(530, 150);
                 tf.field_Hb[1].g(230, 242);
@@ -272,7 +272,7 @@ final class ol extends nc {
                 while (5 > var14) {
                   var15 = -1;
                   if (var16 != 0) {
-                    break L2;
+                    break regionExit2;
                   }
                   if (0 == var14) {
                     var15 = 3;
@@ -305,7 +305,7 @@ final class ol extends nc {
                 while (var14 < cp.field_Q.length) {
                   var15 = -1;
                   if (var16 != 0) {
-                    break L2;
+                    break regionExit2;
                   }
                   if (1 == var14) {
                     var15 = 43;
@@ -354,15 +354,15 @@ final class ol extends nc {
                 var14 = 0;
                 while (2 > var14) {
                   if (var16 != 0) {
-                    break L2;
+                    break regionExit2;
                   }
-                  stackIn_81_0 = ch.field_b;
+                  stackIn_81_0 = IntrusiveDequeCursor.field_b;
                   if (var14 == 0) {
                     stackIn_82_1 = 0;
                   } else {
                     stackIn_82_1 = 3;
                   }
-                  ((ja) (Object) stackIn_81_0[stackIn_82_1]).g(28, -8 + var5);
+                  ((Sprite) (Object) stackIn_81_0[stackIn_82_1]).g(28, -8 + var5);
                   var5 = var5 + (var2 * pb.field_e.a(bh.field_b[var14], 100, var5, var3 - 80, 400, 16777215, 0, 0, 0, var2) + 20);
                   var14++;
                 }

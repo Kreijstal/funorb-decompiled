@@ -5,11 +5,11 @@ public final class ZombieDawnMulti extends aq {
     static String field_M;
     static String[] field_K;
     private StringBuffer field_G;
-    static ja[][] field_L;
+    static Sprite[][] field_L;
     static int field_H;
     private StringBuffer field_J;
     static String field_F;
-    static ja[] field_I;
+    static Sprite[] field_I;
     public static boolean field_E;
 
     final void g(int param0) {
@@ -97,7 +97,7 @@ public final class ZombieDawnMulti extends aq {
             tg.a((byte) -16, true, pl.field_I);
           }
           if (param0 != -30169) {
-            field_L = (ja[][]) null;
+            field_L = (Sprite[][]) null;
           }
           if (n.a((byte) -50)) {
             oo.f(0, 0, oo.field_b, oo.field_l);
@@ -109,8 +109,8 @@ public final class ZombieDawnMulti extends aq {
               if (var3.length > var5) {
                 if (var7 == 0) {
                   if (null != var3[var5] &&
-                    bd.field_g >= var3[var5][0] &&
-                    (var3[var5][2] + var3[var5][0]) >= bd.field_g &&
+                    MouseInputHandler.field_g >= var3[var5][0] &&
+                    (var3[var5][2] + var3[var5][0]) >= MouseInputHandler.field_g &&
                     bo.field_d >= var3[var5][1] &&
                     bo.field_d <= (var3[var5][0] + var3[var5][3])) {
                     var4 = 1;
@@ -148,10 +148,10 @@ public final class ZombieDawnMulti extends aq {
             qp.a(stackIn_94_0, stackIn_95_1);
             decompiledSharedTail0 = (var7 != 0);
           }
-          if ((decompiledSharedTail0) && (wb.k((byte) 113) &&
+          if ((decompiledSharedTail0) && (GameCharacter.k((byte) 113) &&
             !n.a((byte) -39))) {
             oo.f(0, 0, oo.field_b, oo.field_l);
-            oe.a(oi.field_h[0].field_x, oi.field_h[0].field_w, oi.field_h, (byte) -21);
+            oe.a(oi.field_h[0].width, oi.field_h[0].height, oi.field_h, (byte) -21);
           }
           if (kj.field_q >= 2 &&
             bf.field_m) {
@@ -202,9 +202,9 @@ public final class ZombieDawnMulti extends aq {
         gd var2 = null;
         try {
           this.a(0, false, 9, 13, 1, 72, 10, (byte) -99);
-          o.field_j = true;
+          IsaacRandom.field_j = true;
           wf.field_m = 5000 * (int)Math.random();
-          ll.field_k = new rp();
+          FullscreenFocusCanvas.field_k = new rp();
           df.field_H = true;
           var2 = new gd();
           var2.f(128, 15, 9);
@@ -280,7 +280,7 @@ public final class ZombieDawnMulti extends aq {
                     iq.field_f = true;
                     var3_int = 1;
                     if (var8 != 0) {
-                      if (cf.field_s != null) {
+                      if (UiWidget.field_s != null) {
                         this.s(-50);
                       }
                       if (ji.field_c) {
@@ -293,7 +293,7 @@ public final class ZombieDawnMulti extends aq {
                     }
                   }
                 } else {
-                  if (cf.field_s != null) {
+                  if (UiWidget.field_s != null) {
                     this.s(-50);
                   }
                   if (ji.field_c) {
@@ -435,9 +435,9 @@ public final class ZombieDawnMulti extends aq {
               if (decompiledFrameRemainder2) {
                 if (!wc.j(124)) {
                   mo.i(-109);
-                  bm.a(true, 1, 127, 1);
-                  if (bd.field_f) {
-                    bd.field_f = false;
+                  LevelActorSpawner.a(true, 1, 127, 1);
+                  if (MouseInputHandler.field_f) {
+                    MouseInputHandler.field_f = false;
                     lp.a((byte) -59, false);
                   }
                   if (lb.a((byte) 53, sp.field_g)) {
@@ -451,7 +451,7 @@ public final class ZombieDawnMulti extends aq {
             if (decompiledFrameRemainder2) {
               ub.field_yb = ub.field_yb + 1;
               if (16 == ub.field_yb) {
-                if (!bd.field_f) {
+                if (!MouseInputHandler.field_f) {
                   jg.a(0);
                   if (var8 != 0) {
                     km.h(0);
@@ -482,7 +482,7 @@ public final class ZombieDawnMulti extends aq {
               }
             }
             var3_intLifetime1 = vd.field_d;
-            bm.a(false, var3_intLifetime1, 127, sp.field_g);
+            LevelActorSpawner.a(false, var3_intLifetime1, 127, sp.field_g);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -520,28 +520,28 @@ public final class ZombieDawnMulti extends aq {
         int[] var4_ref_int__ = null;
         int var5 = 0;
         fc var6 = null;
-        kb var7 = null;
-        hk var8 = null;
+        GameWorld var7 = null;
+        PlayerLoadout var8 = null;
         int var9_int = 0;
-        qd var9 = null;
+        GameScreen var9 = null;
         int var10 = 0;
         var10 = field_E ? 1 : 0;
         try {
           ib.field_a = b.a(true);
           if (uk.field_O) {
             if (vk.l((byte) -122)) {
-              if (!o.field_i) {
-                o.field_i = true;
+              if (!IsaacRandom.field_i) {
+                IsaacRandom.field_i = true;
                 if ((var10 != 0) && (tk.field_q != dk.field_Ib ||
-                  o.field_i)) {
-                  o.field_i = false;
+                  IsaacRandom.field_i)) {
+                  IsaacRandom.field_i = false;
                   tk.field_q = dk.field_Ib;
                 }
               }
             } else {
               if (tk.field_q != dk.field_Ib ||
-                o.field_i) {
-                o.field_i = false;
+                IsaacRandom.field_i) {
+                IsaacRandom.field_i = false;
                 tk.field_q = dk.field_Ib;
               }
             }
@@ -604,7 +604,7 @@ public final class ZombieDawnMulti extends aq {
                   decompiledFrameRemainder0 = (var10 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  if (wb.k((byte) 115)) {
+                  if (GameCharacter.k((byte) 115)) {
                     if (~er.field_i != ~er.field_h) {
                       this.a(true, false);
                       decompiledFrameRemainder0 = (var10 != 0);
@@ -632,12 +632,12 @@ public final class ZombieDawnMulti extends aq {
                       rn.a(-92);
                       break;
                     case 3:
-                      bd.field_f = false;
+                      MouseInputHandler.field_f = false;
                       lp.a((byte) -90, true);
                       break;
                     case 4:
-                      bd.field_f = true;
-                      rj.a(1, (byte) 124, ej.field_o);
+                      MouseInputHandler.field_f = true;
+                      rj.a(1, (byte) 124, BufferedSocket.field_o);
                       break;
                     default:
                       break;
@@ -662,12 +662,12 @@ public final class ZombieDawnMulti extends aq {
                   bl.a(-9);
                   sp.field_g = 13;
                   gh.field_g = false;
-                  vh.field_Fb = s.field_e.f((byte) -48);
+                  vh.field_Fb = s.field_e.readString((byte) -48);
                   continue;
                 }
                 if (op.field_i == 14) {
                   bl.a(-9);
-                  hl.a(eg.field_E, (byte) 75, k.f(23000), 150, pk.b(-11834), cb.field_j.length, cb.b(-122, 4), en.a((byte) -110), cb.b(-123, 500), 1024);
+                  hl.a(eg.field_E, (byte) 75, PacketBuffer.f(23000), 150, pk.b(-11834), cb.field_j.length, cb.b(-122, 4), en.a((byte) -110), cb.b(-123, 500), 1024);
                   tg.field_a[0] = (byte) 16;
                   ma.a(aq.k(-55), rn.b(28579), true);
                   gh.field_g = false;
@@ -685,7 +685,7 @@ public final class ZombieDawnMulti extends aq {
                     cp.field_K = false;
                     bi.field_e = true;
                     sp.field_g = 1;
-                    ch.field_k = true;
+                    IntrusiveDequeCursor.field_k = true;
                     if (re.field_b) {
                       gk.a((byte) 16);
                     }
@@ -702,10 +702,10 @@ public final class ZombieDawnMulti extends aq {
                 if (op.field_i == 57 ||
                   58 == op.field_i) {
                   bl.a(-9);
-                  s.field_e.g(31365);
-                  var2 = new String[s.field_e.g(31365)];
+                  s.field_e.readUnsignedByte(31365);
+                  var2 = new String[s.field_e.readUnsignedByte(31365)];
                   var3 = -2;
-                  var3 = s.field_e.g(31365);
+                  var3 = s.field_e.readUnsignedByte(31365);
                   var4 = 0;
                   while (var4 < var2.length) {
                     var2[var4] = s.field_e.c(0);
@@ -714,7 +714,7 @@ public final class ZombieDawnMulti extends aq {
                   if (var3 >= 254) {
                     var3 = -2;
                   }
-                  var4 = s.field_e.g(31365);
+                  var4 = s.field_e.readUnsignedByte(31365);
                   var5 = 0;
                   if (var2.length <= 2) {
                     if (var2.length > 1) {
@@ -726,37 +726,37 @@ public final class ZombieDawnMulti extends aq {
                   if (var5 == 0) {
                     var4 = 0;
                   }
-                  var6 = wh.a(bn.field_d.a((byte) -85, var4), -86);
-                  var7 = new kb(var2, var6);
-                  var8 = new hk();
+                  var6 = IterableNodeHashTable.a(bn.field_d.a((byte) -85, var4), -86);
+                  var7 = new GameWorld(var2, var6);
+                  var8 = new PlayerLoadout();
                   var7.a(2, s.field_e);
                   var7.field_r = var4;
-                  s.field_e.g(31365);
+                  s.field_e.readUnsignedByte(31365);
                   if (op.field_i == 57) {
                     var9_int = 0;
                     while (var9_int < 5) {
-                      dupTemp$1 = s.field_e.g(31365);
-                      ll.field_k.field_m[var9_int] = dupTemp$1;
-                      var8.field_d[var9_int] = dupTemp$1;
+                      dupTemp$1 = s.field_e.readUnsignedByte(31365);
+                      FullscreenFocusCanvas.field_k.field_m[var9_int] = dupTemp$1;
+                      var8.powerupTypes[var9_int] = dupTemp$1;
                       var9_int++;
                     }
                     var9_int = 0;
                     while (var9_int < 5) {
-                      dupTemp$2 = s.field_e.g(31365);
-                      ll.field_k.field_g[var9_int] = dupTemp$2;
+                      dupTemp$2 = s.field_e.readUnsignedByte(31365);
+                      FullscreenFocusCanvas.field_k.field_g[var9_int] = dupTemp$2;
                       var8.field_f[var9_int] = dupTemp$2;
                       var9_int++;
                     }
                     var9_int = 0;
                     while (var9_int < 3) {
-                      dupTemp$3 = s.field_e.g(31365);
-                      ll.field_k.field_s[var9_int] = dupTemp$3;
+                      dupTemp$3 = s.field_e.readUnsignedByte(31365);
+                      FullscreenFocusCanvas.field_k.field_s[var9_int] = dupTemp$3;
                       var8.field_c[var9_int] = dupTemp$3;
                       var9_int++;
                     }
                     var8.a(7054, s.field_e);
                   }
-                  var9 = new qd(var7, var8, var3);
+                  var9 = new GameScreen(var7, var8, var3);
                   if (57 != op.field_i) {
                     af.field_e = var9;
                     cp.field_K = true;
@@ -790,22 +790,22 @@ public final class ZombieDawnMulti extends aq {
                     if (re.field_b) {
                       gk.a((byte) 16);
                     }
-                    qd.field_bb = false;
+                    GameScreen.field_bb = false;
                   }
                   vo.field_q = false;
                   continue;
                 }
                 if (71 == op.field_i) {
-                  var2_array = da.a(8);
+                  var2_array = InflaterDecompressor.a(8);
                   var3_ref_int__ = var2_array;
                   var4_ref_ga = s.field_e;
                   var5 = 0;
                   while (var5 < 8) {
-                    var3_ref_int__[var5] = ((k) ((Object) var4_ref_ga)).i(-1478490344);
+                    var3_ref_int__[var5] = ((PacketBuffer) ((Object) var4_ref_ga)).readInt(-1478490344);
                     var5++;
                   }
                   var3_ref_int__ = var2_array;
-                  var4_ref_int__ = k.field_n;
+                  var4_ref_int__ = PacketBuffer.field_n;
                   var5 = 0;
                   while (var5 < 8) {
                     var3_ref_int__[var5] = tq.b(var3_ref_int__[var5], ~var4_ref_int__[var5]);
@@ -819,7 +819,7 @@ public final class ZombieDawnMulti extends aq {
                       var4_ref_int__ = fc.field_m;
                       var5 = var3;
                       var4_ref_int__[var5 >> 5] = cr.b(var4_ref_int__[var5 >> 5], 1 << tq.b(31, var5));
-                      var4_ref_int__ = k.field_n;
+                      var4_ref_int__ = PacketBuffer.field_n;
                       var5 = var3;
                       var4_ref_int__[var5 >> 5] = cr.b(var4_ref_int__[var5 >> 5], 1 << tq.b(31, var5));
                     }
@@ -829,26 +829,26 @@ public final class ZombieDawnMulti extends aq {
                 }
                 if (op.field_i == 61 &&
                   wp.field_h == null) {
-                  bd.a("got MOVE without a game", (Throwable) null, false);
+                  MouseInputHandler.a("got MOVE without a game", (Throwable) null, false);
                   continue;
                 }
                 if (wp.field_h != null) {
                   if (70 == op.field_i) {
-                    wp.field_h.field_W = s.field_e.c((byte) -18);
+                    wp.field_h.field_W = s.field_e.readShort((byte) -18);
                     wp.field_h.field_t = bl.a((byte) 107);
                     continue;
                   }
                   if (62 == op.field_i) {
-                    var2_int = s.field_e.g(31365);
+                    var2_int = s.field_e.readUnsignedByte(31365);
                     var3_ref_int__ = new int[op.field_m.field_t];
                     var4 = 0;
                     while (op.field_m.field_t > var4) {
-                      var3_ref_int__[var4] = s.field_e.d((byte) 69);
-                      op.field_m.field_v[var4] = s.field_e.d((byte) 69);
-                      op.field_m.field_o[var4] = s.field_e.d((byte) 69);
+                      var3_ref_int__[var4] = s.field_e.readUnsignedShort((byte) 69);
+                      op.field_m.field_v[var4] = s.field_e.readUnsignedShort((byte) 69);
+                      op.field_m.field_o[var4] = s.field_e.readUnsignedShort((byte) 69);
                       var4++;
                     }
-                    var4 = s.field_e.d((byte) 69);
+                    var4 = s.field_e.readUnsignedShort((byte) 69);
                     if (re.field_b) {
                       gk.a((byte) 16);
                       re.field_b = false;
@@ -862,7 +862,7 @@ public final class ZombieDawnMulti extends aq {
                     continue;
                   }
                   if (op.field_i == 72) {
-                    var2_ref2 = nq.a(22272, s.field_e);
+                    var2_ref2 = SpriteState.a(22272, s.field_e);
                     wp.field_h.a(false, var2_ref2);
                     continue;
                   }
@@ -908,7 +908,7 @@ public final class ZombieDawnMulti extends aq {
                     continue;
                   }
                   if (65 == op.field_i) {
-                    op.field_m.field_j = s.field_e.g(31365);
+                    op.field_m.field_j = s.field_e.readUnsignedByte(31365);
                     if (null == np.field_m) {
                       continue;
                     }
@@ -916,13 +916,13 @@ public final class ZombieDawnMulti extends aq {
                     continue;
                   }
                   if (op.field_i == 64) {
-                    var2_int = s.field_e.g(31365);
+                    var2_int = s.field_e.readUnsignedByte(31365);
                     System.out.println(" players resigned: " + Integer.toBinaryString(var2_int));
                     op.field_m.field_F = var2_int;
                     continue;
                   }
                   if (op.field_i == 66) {
-                    s.field_e.g(31365);
+                    s.field_e.readUnsignedByte(31365);
                     continue;
                   }
                 }
@@ -949,16 +949,16 @@ public final class ZombieDawnMulti extends aq {
                 if (var2_int != 1 ||
                   var10 != 0) {
                   if (ji.field_c) {
-                    ch.field_k = true;
+                    IntrusiveDequeCursor.field_k = true;
                     bi.field_e = true;
                     if (hh.field_b) {
-                      vh.field_Fb = qd.field_V;
-                      bm.a(false, 13, 127, 1);
+                      vh.field_Fb = GameScreen.field_V;
+                      LevelActorSpawner.a(false, 13, 127, 1);
                       if (var10 != 0) {
-                        bm.a(false, 1, 125, 1);
+                        LevelActorSpawner.a(false, 1, 125, 1);
                       }
                     } else {
-                      bm.a(false, 1, 125, 1);
+                      LevelActorSpawner.a(false, 1, 125, 1);
                     }
                     bl.a(-9);
                     var3_ref_nc = gk.a(2, pl.field_I);
@@ -1004,7 +1004,7 @@ public final class ZombieDawnMulti extends aq {
     public static void t(int param0) {
         try {
           field_F = null;
-          field_L = (ja[][]) null;
+          field_L = (Sprite[][]) null;
           int var1_int = 127 % ((param0 + 76) / 45);
           field_I = null;
           field_K = null;
@@ -1022,7 +1022,7 @@ public final class ZombieDawnMulti extends aq {
             h.a(qc.field_s, -65);
             so.d(-6445);
             qc.field_s = null;
-            o.d(26673);
+            IsaacRandom.d(26673);
           }
           ii.field_a = u.a(5, 2);
           if (param0 > -117) {
@@ -1052,14 +1052,14 @@ public final class ZombieDawnMulti extends aq {
         RuntimeException decompiledCaughtException = null;
         var4 = field_E ? 1 : 0;
         try {
-          cf.field_s.b(-198);
+          UiWidget.field_s.b(-198);
           if (bi.field_e) {
             return;
           }
-          op.field_m.field_H = param0 + cf.field_s.field_m.field_H;
-          var2 = (ae) (cf.field_s.field_q.c(71));
+          op.field_m.currentTick = param0 + UiWidget.field_s.world.currentTick;
+          var2 = (ae) (UiWidget.field_s.field_q.c(71));
           while (var2 != null) {
-            var3 = (ae) (cf.field_s.field_q.b(6));
+            var3 = (ae) (UiWidget.field_s.field_q.b(6));
             var2.a((byte) -123);
             var2.field_f = var2.field_f + 50;
             wp.field_h.a(false, var2);
@@ -1125,15 +1125,15 @@ public final class ZombieDawnMulti extends aq {
         int var4 = 0;
         ri var5 = null;
         int var6 = 0;
-        ja[] stackIn_160_0 = null;
+        Sprite[] stackIn_160_0 = null;
         int stackIn_160_1 = 0;
         int stackIn_160_2 = 0;
         double stackIn_161_3;
         int stackIn_164_0 = 0;
         int stackIn_164_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        ja[][] var3_array = null;
-        ja[][] var4_ref_ja____ = null;
+        Sprite[][] var3_array = null;
+        Sprite[][] var4_ref_ja____ = null;
         String[][] var5_array = null;
         int var3_intLifetime1;
         var6 = field_E ? 1 : 0;
@@ -1215,7 +1215,7 @@ public final class ZombieDawnMulti extends aq {
                                         ei.field_a[90] = jc.a(pf.field_b, "", "zd_multi_select_ability").a();
                                         ei.field_a[91] = jc.a(pf.field_b, "", "zd_multi_select_tree").a();
                                         pf.field_b = null;
-                                        o.d(26673);
+                                        IsaacRandom.d(26673);
                                         return false;
                                       }
                                       qm.a(80.0f, 80, jj.a(s.field_h, (byte) 113, il.field_n, pd.field_a));
@@ -1297,7 +1297,7 @@ public final class ZombieDawnMulti extends aq {
             ei.field_a[79] = ac.a(rn.field_e, "", "zd_multi_into_portal_opponent").c();
             ei.field_a[80] = ac.a(rn.field_e, "", "zd_multi_shackles").c();
             rn.field_e = null;
-            o.d(26673);
+            IsaacRandom.d(26673);
             return false;
           }
           if (null != df.field_M) {
@@ -1315,7 +1315,7 @@ public final class ZombieDawnMulti extends aq {
             hl.field_d[4] = ug.a(df.field_M, "", "zombie dawn white house");
             hl.field_d[9] = ug.a(df.field_M, "", "zombie dawn instructions loop");
             df.field_M = null;
-            o.d(26673);
+            IsaacRandom.d(26673);
             return false;
           }
           if (param1 <= 75) {
@@ -1330,7 +1330,7 @@ public final class ZombieDawnMulti extends aq {
               if (var6 == 0) {
                 if (hl.field_d[var3_int] != null &&
                   !wd.field_L.a(-10783, gd.field_Q, 176400, hl.field_d[var3_int], de.field_e)) {
-                  o.d(26673);
+                  IsaacRandom.d(26673);
                   return false;
                 }
                 var3_int++;
@@ -1342,18 +1342,18 @@ public final class ZombieDawnMulti extends aq {
               wd.field_L.d(125);
               de.field_e = null;
               gd.field_Q = null;
-              o.d(26673);
+              IsaacRandom.d(26673);
             }
             return false;
           }
           if (null != ki.field_m) {
             qm.a(80.0f, 80, bl.field_b);
             this.g(-30169);
-            bn.field_d = ed.a(ki.field_m, -2852);
-            of.field_e[0] = new ja(ki.field_m.a("", "background1.jpg", false), (java.awt.Component) ((Object) dk.field_Ib));
-            jo.field_d = new ja(ki.field_m.a("", "panorama.jpg", false), (java.awt.Component) ((Object) dk.field_Ib));
+            bn.field_d = LevelFileCatalog.a(ki.field_m, -2852);
+            of.field_e[0] = new Sprite(ki.field_m.a("", "background1.jpg", false), (java.awt.Component) ((Object) dk.field_Ib));
+            jo.field_d = new Sprite(ki.field_m.a("", "panorama.jpg", false), (java.awt.Component) ((Object) dk.field_Ib));
             ki.field_m = null;
-            o.d(26673);
+            IsaacRandom.d(26673);
             return false;
           }
           if (null != al.field_eb &&
@@ -1362,17 +1362,17 @@ public final class ZombieDawnMulti extends aq {
             this.g(-30169);
             qp.field_w = pj.a(al.field_eb, 4, he.field_f, "", "arialish12");
             if (!he.field_a) {
-              da.a("locked", al.field_eb, (byte) 19, "basic");
-              wl.field_l = da.a("unachieved", al.field_eb, (byte) 19, "basic")[0];
+              InflaterDecompressor.a("locked", al.field_eb, (byte) 19, "basic");
+              wl.field_l = InflaterDecompressor.a("unachieved", al.field_eb, (byte) 19, "basic")[0];
               of.field_k = fl.a("basic", "orbcoin", al.field_eb, 11091);
               fj.a(100, of.field_k);
-              var3_array = new ja[2][];
+              var3_array = new Sprite[2][];
               var3_array[0] = pb.a("", ii.field_a, -256, "levelstyle_iconssmall");
               var3_array[1] = null;
-              var4_ref_ja____ = new ja[1][];
+              var4_ref_ja____ = new Sprite[1][];
               var4_ref_ja____[0] = pb.a("", ii.field_a, -256, "levelstyle_iconslarge");
               var5_array = tj.field_e;
-              ub.a(var5_array, he.field_f, true, (String[][]) null, field_K, al.field_eb, 4, da.field_b, il.field_n, 1, cb.field_j, eg.field_E, true, var3_array, var4_ref_ja____);
+              ub.a(var5_array, he.field_f, true, (String[][]) null, field_K, al.field_eb, 4, InflaterDecompressor.field_b, il.field_n, 1, cb.field_j, eg.field_E, true, var3_array, var4_ref_ja____);
               bo.field_e = true;
               lp.a(200, -82);
               ua.a(he.field_f, al.field_eb, (byte) 23);
@@ -1380,7 +1380,7 @@ public final class ZombieDawnMulti extends aq {
             }
             he.field_f = null;
             al.field_eb = null;
-            o.d(26673);
+            IsaacRandom.d(26673);
             qm.a(90.0f, 80, bn.field_c);
             this.g(-30169);
             ah.field_e = ap.a(ii.field_a, cg.field_n, "", 4, "font");
@@ -1389,13 +1389,13 @@ public final class ZombieDawnMulti extends aq {
             lf.a(pb.field_e, 0);
             vc.a(true);
             a.field_a = new ri[7][];
-            a.field_a[0] = da.a("cursor_grab", ii.field_a, (byte) 19, "");
-            a.field_a[1] = da.a("cursor_point", ii.field_a, (byte) 19, "");
-            a.field_a[6] = da.a("cursor_point_forbidden", ii.field_a, (byte) 19, "");
-            a.field_a[2] = da.a("cursor_reticule", ii.field_a, (byte) 19, "");
-            a.field_a[3] = da.a("cursor_poweringup", ii.field_a, (byte) 19, "");
-            a.field_a[5] = da.a("cursor_targeting", ii.field_a, (byte) 19, "");
-            a.field_a[4] = da.a("cursor_idle", ii.field_a, (byte) 19, "");
+            a.field_a[0] = InflaterDecompressor.a("cursor_grab", ii.field_a, (byte) 19, "");
+            a.field_a[1] = InflaterDecompressor.a("cursor_point", ii.field_a, (byte) 19, "");
+            a.field_a[6] = InflaterDecompressor.a("cursor_point_forbidden", ii.field_a, (byte) 19, "");
+            a.field_a[2] = InflaterDecompressor.a("cursor_reticule", ii.field_a, (byte) 19, "");
+            a.field_a[3] = InflaterDecompressor.a("cursor_poweringup", ii.field_a, (byte) 19, "");
+            a.field_a[5] = InflaterDecompressor.a("cursor_targeting", ii.field_a, (byte) 19, "");
+            a.field_a[4] = InflaterDecompressor.a("cursor_idle", ii.field_a, (byte) 19, "");
             wd.field_P = wq.a(-22, "", ii.field_a, "intro_1");
             eq.field_c = wq.a(-127, "", ii.field_a, "intro_2");
             bl.field_g = wq.a(88, "", ii.field_a, "intro_3");
@@ -1405,7 +1405,7 @@ public final class ZombieDawnMulti extends aq {
             wq.a(-121, "", ii.field_a, "menu_pipebox2");
             no.field_Jb = wq.a(97, "", ii.field_a, "menu_title");
             dd.field_g = wq.a(-118, "", ii.field_a, "menu_title_blank");
-            ao.field_b = new ja[sm.field_g.length];
+            ao.field_b = new Sprite[sm.field_g.length];
             var3_intLifetime1 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (!(ao.field_b.length > var3_intLifetime1)))) {
@@ -1421,7 +1421,7 @@ public final class ZombieDawnMulti extends aq {
                   } else {
                     stackIn_161_3 = 0.65;
                   }
-                  stackIn_160_0[stackIn_160_1] = wh.a(stackIn_160_2, stackIn_161_3, var3_intLifetime1);
+                  stackIn_160_0[stackIn_160_1] = IterableNodeHashTable.a(stackIn_160_2, stackIn_161_3, var3_intLifetime1);
                 }
                 var3_intLifetime1++;
                 continue;
@@ -1484,11 +1484,11 @@ public final class ZombieDawnMulti extends aq {
               pm.field_N = wq.a(31, "", ii.field_a, "curve_tube_mask");
               w.field_z = wq.a(116, "", ii.field_a, "vert_tube_mask");
               wq.a(27, "", ii.field_a, "stars");
-              pp.field_q = da.a("engine_icons", ii.field_a, (byte) 19, "");
+              pp.field_q = InflaterDecompressor.a("engine_icons", ii.field_a, (byte) 19, "");
               jq.field_e = wq.a(-126, "", ii.field_a, "pipe_frame");
               jq.field_e.e();
-              bb.field_n = new ja(48, 48);
-              na.field_H[0] = da.a("portal2", ii.field_a, (byte) 19, "");
+              bb.field_n = new Sprite(48, 48);
+              na.field_H[0] = InflaterDecompressor.a("portal2", ii.field_a, (byte) 19, "");
               ud.field_Q = wq.a(-116, "", ii.field_a, "portal_foo_mask");
               cp.field_X = pb.a("", ii.field_a, -256, "blood");
               wa.field_b = pb.a("", ii.field_a, -256, "powerups");
@@ -1525,11 +1525,11 @@ public final class ZombieDawnMulti extends aq {
               wq.field_c[22] = pb.a("halloween", ii.field_a, -256, "halloween_human2");
             }
             boolean decompiledFrameCompleted0 = true;
-            pn.field_c = da.a("character_charming", ii.field_a, (byte) 19, "");
-            sh.field_N = da.a("character_charmed", ii.field_a, (byte) 19, "");
-            aa.field_h = da.a("character_stunned", ii.field_a, (byte) 19, "");
+            pn.field_c = InflaterDecompressor.a("character_charming", ii.field_a, (byte) 19, "");
+            sh.field_N = InflaterDecompressor.a("character_charmed", ii.field_a, (byte) 19, "");
+            aa.field_h = InflaterDecompressor.a("character_stunned", ii.field_a, (byte) 19, "");
             ig.field_d = pb.a("", ii.field_a, -256, "character_common");
-            ej.a(fl.a("", "zombie_counter_instructions", ii.field_a, 11091), (byte) -100, fl.a("", "hud", ii.field_a, 11091));
+            BufferedSocket.a(fl.a("", "zombie_counter_instructions", ii.field_a, 11091), (byte) -100, fl.a("", "hud", ii.field_a, 11091));
             rq.a(pb.a("", ii.field_a, -256, "popup"), 16777215);
             sq.a(4, pb.a("", ii.field_a, -256, "carpark_floor"), false);
             gd.a(false, 4, pb.a("", ii.field_a, -256, "carpark_tiles"));
@@ -1547,7 +1547,7 @@ public final class ZombieDawnMulti extends aq {
             pf.field_e[3] = pb.a("", ii.field_a, -256, "dimming3");
             pf.field_e[4] = pb.a("", ii.field_a, -256, "dimming4");
             ig.field_b = fl.a("", "tutorial_arrow", ii.field_a, 11091);
-            o.field_h = fl.a("", "tutorial", ii.field_a, 11091);
+            IsaacRandom.field_h = fl.a("", "tutorial", ii.field_a, 11091);
             sj.field_j = fl.a("", "frameh", ii.field_a, 11091);
             lm.field_fb = fl.a("", "framev", ii.field_a, 11091);
             rp.field_r = pb.a("", ii.field_a, -256, "framecorners");
@@ -1555,21 +1555,21 @@ public final class ZombieDawnMulti extends aq {
             vo.field_p = sj.field_j.c();
             vo.field_p.i();
             md.field_N = pb.a("", ii.field_a, -256, "instructions_controls");
-            ch.field_b = pb.a("", ii.field_a, -256, "instructions_survivors");
+            IntrusiveDequeCursor.field_b = pb.a("", ii.field_a, -256, "instructions_survivors");
             tf.field_Hb = pb.a("", ii.field_a, -256, "instructions_zombies");
             cc.field_b = fj.a("frame", "", 3, ii.field_a);
             field_I = fj.a("button_frame", "", 3, ii.field_a);
             lf.field_c = fj.a("button_raised", "", 3, ii.field_a);
             fj.a("button_depressed", "", 3, ii.field_a);
             oi.field_h = fj.a("frame_comp", "", 3, ii.field_a);
-            rl.field_a = fj.a("frame_comp_filled", "", 3, ii.field_a);
+            GameSimulation.field_a = fj.a("frame_comp_filled", "", 3, ii.field_a);
             if (!he.field_a) {
-              la.field_l = da.a("achievements_large", ii.field_a, (byte) 19, "");
+              la.field_l = InflaterDecompressor.a("achievements_large", ii.field_a, (byte) 19, "");
               var3 = la.field_l;
               var4 = 0;
               while (var4 < var3.length) {
                 var5 = var3[var4];
-                e.a((byte) 48, var5);
+                SecondaryNodeDeque.a((byte) 48, var5);
                 var4++;
                 if (var6 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -1577,21 +1577,21 @@ public final class ZombieDawnMulti extends aq {
                 }
               }
               if (decompiledFrameCompleted0) {
-                e.a((byte) 48, wl.field_l);
+                SecondaryNodeDeque.a((byte) 48, wl.field_l);
               }
             }
             if (decompiledFrameCompleted0) {
-              dl.field_h.b((byte) 104);
+              SocketConnector.field_h.b((byte) 104);
               ii.field_a = null;
               cg.field_n = null;
-              o.d(26673);
+              IsaacRandom.d(26673);
             }
             return false;
           }
           if (ha.field_g != null) {
             dg.a(new eh(ha.field_g.a("", "huffman", false)), -40);
             ha.field_g = null;
-            o.d(26673);
+            IsaacRandom.d(26673);
             return false;
           }
           bc.a((byte) 76);
@@ -1602,12 +1602,12 @@ public final class ZombieDawnMulti extends aq {
           tj.a(3273, 224);
           ff.a(200, 123);
           cj.d(false, 0);
-          o.d(26673);
+          IsaacRandom.d(26673);
           pl.field_J.a(true, (java.awt.Component) ((Object) dk.field_Ib), -14697);
           tk.field_q = dk.field_Ib;
-          kb.a(16777215, 5, field_I, 15, lf.field_c, pb.field_e, 65280, 240, 16711680, 320, oi.field_h, (byte) -128, 15, 20, 20);
+          GameWorld.a(16777215, 5, field_I, 15, lf.field_c, pb.field_e, 65280, 240, 16711680, 320, oi.field_h, (byte) -128, 15, 20, 20);
           kk.field_w = new h(10, 10, true);
-          e.field_e = new nm(100, 100);
+          SecondaryNodeDeque.field_e = new nm(100, 100);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1659,7 +1659,7 @@ public final class ZombieDawnMulti extends aq {
               ke.field_g = aa.b(-19300, 4);
             }
             if (ke.field_g.field_k) {
-              var2 = k.field_n;
+              var2 = PacketBuffer.field_n;
               var3 = ke.field_g.field_h;
               var4 = 0;
               do {
@@ -1686,32 +1686,32 @@ public final class ZombieDawnMulti extends aq {
           if (param0 > -117) {
             discarded$0 = this.c(true, 49);
           }
-          if (!qd.field_bb) {
+          if (!GameScreen.field_bb) {
             if (null == ub.field_vb) {
-              ub.field_vb = ej.a((byte) -57, 6);
+              ub.field_vb = BufferedSocket.a((byte) -57, 6);
             }
             if (ub.field_vb.field_h) {
-              ll.field_k.a(0, ub.field_vb.field_f);
+              FullscreenFocusCanvas.field_k.a(0, ub.field_vb.field_f);
               oq.c((byte) 120);
-              if ((ll.field_k.field_i & 2) == 0) {
+              if ((FullscreenFocusCanvas.field_k.field_i & 2) == 0) {
                 oq.c((byte) 119);
               }
-              we.field_g[47] = vn.field_d[ll.field_k.b((byte) -1)];
-              if (fn.field_b) {
-                th.b((byte) -61);
+              we.field_g[47] = vn.field_d[FullscreenFocusCanvas.field_k.b((byte) -1)];
+              if (ClientException.field_b) {
+                IntrusiveDeque.b((byte) -61);
               }
               ub.field_vb = null;
-              qd.field_bb = true;
+              GameScreen.field_bb = true;
             }
           }
           if (ia.field_r &&
-            qd.field_bb) {
+            GameScreen.field_bb) {
             ub.m(116);
             ii.a(103);
             if (pl.field_I == 6 &&
               !oa.a(-9, fc.field_m)) {
               pl.field_I = 3;
-              bm.a(false, 3, 127, sp.field_g);
+              LevelActorSpawner.a(false, 3, 127, sp.field_g);
             }
           }
           return;
@@ -1727,12 +1727,12 @@ public final class ZombieDawnMulti extends aq {
         RuntimeException var2 = null;
         try {
           ZombieDawnMulti.t(-121);
-          gb.b(103);
+          GameKeyHandler.b(103);
           vc.b(10066329);
           oe.b(-9162);
           rb.a((byte) -116);
           er.c(4);
-          th.d(92);
+          IntrusiveDeque.d(92);
           ul.b((byte) -35);
           vd.a(1);
           pn.a(31);
@@ -1748,16 +1748,16 @@ public final class ZombieDawnMulti extends aq {
           ai.a(127);
           eq.a(0);
           of.a(-1);
-          ej.b((byte) 16);
+          BufferedSocket.b((byte) 16);
           ih.b(108);
           aq.o(10);
-          fn.a(26677);
-          ag.b(true);
+          ClientException.a(26677);
+          GameApplet.b(true);
           mh.a(17);
-          bd.a(-1);
-          mf.a(54);
+          MouseInputHandler.a(-1);
+          MouseWheelInput.a(54);
           oo.a();
-          k.b(false);
+          PacketBuffer.b(false);
           bl.b(0);
           v.a(true);
           gj.a((byte) 91);
@@ -1768,21 +1768,21 @@ public final class ZombieDawnMulti extends aq {
           pf.b(6345);
           i.a(false);
           ii.c(-26028);
-          l.a(64);
+          RasterBuffer.a(64);
           lh.a((byte) -50);
-          ll.a((byte) -46);
+          FullscreenFocusCanvas.a((byte) -46);
           ok.e(12);
-          qd.h(256);
+          GameScreen.h(256);
           nn.b(112);
           ci.b(1475);
           s.a(-96);
           h.b(false);
           nm.a(6);
           rp.a(5);
-          rl.c(78);
-          br.b((byte) 48);
-          nq.e(-119);
-          qa.a((byte) 43);
+          GameSimulation.c(78);
+          IntrusiveNode.b((byte) 48);
+          SpriteState.e(-119);
+          DualLinkNode.a((byte) 43);
           ep.c();
           pk.a(619119521);
           qf.a(241);
@@ -1797,15 +1797,15 @@ public final class ZombieDawnMulti extends aq {
           lc.a((byte) 87);
           id.e((byte) 107);
           ce.a(24);
-          wb.o((byte) -45);
+          GameCharacter.o((byte) -45);
           jj.i(1);
           ae.b(false);
           fq.c(true);
           nc.b(false);
           tk.c((byte) -88);
           si.d(true);
-          hk.a((byte) 39);
-          kb.b(-6);
+          PlayerLoadout.a((byte) 39);
+          GameWorld.b(-6);
           fh.a(true);
           qe.a((byte) 7);
           ko.d(-66);
@@ -1823,7 +1823,7 @@ public final class ZombieDawnMulti extends aq {
           mb.b(false);
           mm.d();
           ba.d(16652);
-          gp.b();
+          PcmPlayerService.b();
           w.a((byte) -83);
           de.a(19091);
           jh.h(-36);
@@ -1841,7 +1841,7 @@ public final class ZombieDawnMulti extends aq {
           aj.a(-110);
           hb.a(false);
           be.a(0);
-          da.a((byte) -95);
+          InflaterDecompressor.a((byte) -95);
           ng.a(816);
           bc.c(22382);
           ql.a(4);
@@ -1876,7 +1876,7 @@ public final class ZombieDawnMulti extends aq {
           fa.j(57);
           wq.b((byte) 121);
           lo.a(0);
-          fm.a();
+          BitmapFont.a();
           uq.a(3);
           vi.a(119);
           cq.a((byte) -110);
@@ -1893,19 +1893,19 @@ public final class ZombieDawnMulti extends aq {
           ol.c((byte) -56);
           vf.a((byte) 9);
           eh.a((byte) 87);
-          mc.a((byte) 124);
+          RandomAccessCacheFile.a((byte) 124);
           wg.a((byte) -123);
           pd.a((byte) 91);
           vb.a(false);
           pg.b(true);
           hc.a(0);
-          ed.a(12814);
+          LevelFileCatalog.a(12814);
           ke.a(false);
           jo.a(false);
           pi.a(-19162);
           ic.a(70);
           kp.e(-29690);
-          o.b(-13532);
+          IsaacRandom.b(-13532);
           ec.a((byte) -12);
           dc.c((byte) 82);
           dk.c((byte) 92);
@@ -1940,7 +1940,7 @@ public final class ZombieDawnMulti extends aq {
           hj.a(27964);
           a.a(false);
           tg.a((byte) -72);
-          dl.a((byte) -109);
+          SocketConnector.a((byte) -109);
           en.a(20964);
           wl.a(true);
           iq.a(true);
@@ -1958,7 +1958,7 @@ public final class ZombieDawnMulti extends aq {
           am.b(-7);
           rm.a(80);
           kd.a(2791);
-          kq.a((byte) 60);
+          DelegatingCanvas.a((byte) 60);
           sf.a(4);
           fl.a((byte) 109);
           ij.a(true);
@@ -1966,19 +1966,19 @@ public final class ZombieDawnMulti extends aq {
           bg.a((byte) -104);
           wa.a(2);
           mp.a(12);
-          cf.e((byte) -90);
+          UiWidget.e((byte) -90);
           gn.a(-118);
           rg.a((byte) -39);
           al.i((byte) -92);
           df.g((byte) 84);
-          se.b(false);
-          ch.d(-1);
+          WidgetContainer.b(false);
+          IntrusiveDequeCursor.d(-1);
           bh.a((byte) -8);
           ji.a(13377);
           tl.f(32768);
           io.a((byte) 8);
           aa.f(0);
-          dq.b(-2);
+          ImageProducerRasterBuffer.b(-2);
           sm.a(-12970);
           fd.g((byte) 97);
           hn.a(0);
@@ -2020,9 +2020,9 @@ public final class ZombieDawnMulti extends aq {
           wk.h(-127);
           od.o((byte) -50);
           bk.c(4912);
-          kf.c(3);
-          wh.a(false);
-          e.a(118);
+          ProxySocketConnector.c(3);
+          IterableNodeHashTable.a(false);
+          SecondaryNodeDeque.a(118);
           kk.b(true);
           la.a(-113);
           ua.g((byte) -33);
@@ -2030,8 +2030,8 @@ public final class ZombieDawnMulti extends aq {
           ao.a(-23);
           eg.c((byte) 5);
           b.a(94);
-          up.a((byte) -30);
-          ln.a(18358);
+          NodeHashTableIterator.a((byte) -30);
+          SecondaryNodeDequeIterator.a(18358);
           vl.a(0);
           vg.a(8220);
           we.a((byte) 103);

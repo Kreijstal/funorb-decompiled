@@ -6,7 +6,7 @@ final class mo extends cj {
     private cj field_Pb;
     static ao field_Lb;
     cj field_Mb;
-    static th field_Fb;
+    static IntrusiveDeque field_Fb;
     static cj field_Hb;
     static ri[] field_Ob;
     static int field_Kb;
@@ -114,7 +114,7 @@ final class mo extends cj {
         }
     }
 
-    final static void a(int param0, k param1, int param2, int param3, byte param4) {
+    final static void a(int param0, PacketBuffer param1, int param2, int param3, byte param4) {
         try {
           param1.a(-120, 12);
           param1.a(17, (byte) -56);
@@ -238,7 +238,7 @@ final class mo extends cj {
         mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
     }
 
-    mo(long param0, cj param1, cj param2, cj param3, ja param4, String param5) {
+    mo(long param0, cj param1, cj param2, cj param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -309,7 +309,7 @@ final class mo extends cj {
         field_Lb = new ao(10, 2, 2, 0);
         field_Kb = 22;
         field_Nb = "Your email address is used to identify this account";
-        field_Fb = new th();
+        field_Fb = new IntrusiveDeque();
         field_Jb = new hh(1);
     }
 }

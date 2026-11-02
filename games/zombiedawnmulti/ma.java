@@ -18,10 +18,10 @@ final class ma {
 
     final static void a(cj param0, cj param1, boolean param2) {
         if (param0.field_Cb == null) {
-          param0.field_Cb = new th();
+          param0.field_Cb = new IntrusiveDeque();
         }
         if (null == param1.field_Cb) {
-          param1.field_Cb = new th();
+          param1.field_Cb = new IntrusiveDeque();
         }
         if (ol.field_o == null) {
           ol.field_o = new sc(64);
@@ -35,7 +35,7 @@ final class ma {
         try {
           jf.field_d = param1.field_Cb;
           ro.field_M = param0.field_Cb;
-          cf.d(-8328);
+          UiWidget.d(-8328);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ma.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

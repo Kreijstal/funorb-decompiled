@@ -35,18 +35,18 @@ final class vc {
         i.field_a.field_p = 0;
     }
 
-    final static void a(br param0, br param1, boolean param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, boolean param2) {
         try {
-          if (param1.field_b != null) {
-            param1.a(true);
+          if (param1.next != null) {
+            param1.unlink(true);
           }
           if (!param2) {
             vc.a((byte) -38);
           }
-          param1.field_b = param0.field_b;
-          param1.field_d = param0;
-          param1.field_b.field_d = param1;
-          param1.field_d.field_b = param1;
+          param1.next = param0.next;
+          param1.previous = param0;
+          param1.next.previous = param1;
+          param1.previous.next = param1;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

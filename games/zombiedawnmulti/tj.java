@@ -18,14 +18,14 @@ final class tj {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           db.field_c = param1;
-          var2 = (we) (gb.field_e.c(72));
+          var2 = (we) (GameKeyHandler.field_e.c(72));
           while (var2 != null) {
             if (!var2.field_h.b(param0 ^ 3277)) {
-              var2.a(true);
+              var2.unlink(true);
             } else {
               var2.field_f.d(128 + var2.field_m * db.field_c >> 8);
             }
-            var2 = (we) (gb.field_e.b(6));
+            var2 = (we) (GameKeyHandler.field_e.b(6));
           }
           if (param0 != 3273) {
             tj.a(30, 48);
@@ -38,7 +38,7 @@ final class tj {
             if (var2Lifetime1.field_h.b(param0 ^ 3277)) {
               var2Lifetime1.field_f.d(128 + db.field_c * var2Lifetime1.field_m >> 8);
             } else {
-              var2Lifetime1.a(true);
+              var2Lifetime1.unlink(true);
             }
             var2Lifetime1 = (we) (wc.field_K.b(6));
           }

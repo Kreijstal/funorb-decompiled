@@ -4,15 +4,15 @@
 final class mi extends cj {
     static String field_Jb;
     private cj field_Lb;
-    static ja field_Mb;
+    static Sprite field_Mb;
     private cj field_Fb;
-    static th field_Kb;
+    static IntrusiveDeque field_Kb;
     static int field_Gb;
     static String field_Nb;
     static cj[] field_Ib;
     static int field_Hb;
 
-    mi(long param0, ja param1, ja param2, int param3, cj param4, String param5) {
+    mi(long param0, Sprite param1, Sprite param2, int param3, cj param4, String param5) {
         this(param0, (cj) null, param4, param5);
         try {
           this.field_Lb.field_lb = param3;
@@ -84,7 +84,7 @@ final class mi extends cj {
           if (param1 >= -52) {
             return;
           }
-          param0.a(true);
+          param0.unlink(true);
           var2 = (jh) (tn.field_C.c(79));
           while (var2 != null) {
             if (var2.a(param0, (byte) -53)) {
@@ -136,7 +136,7 @@ final class mi extends cj {
 
     static {
         field_Jb = "Report <%0> for abuse";
-        field_Kb = new th();
+        field_Kb = new IntrusiveDeque();
         field_Nb = "Visit the Account Management section on the main site to view.";
     }
 }

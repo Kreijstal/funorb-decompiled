@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ff extends qa {
+class ff extends DualLinkNode {
     static int field_s;
     static String field_u;
     static ca field_r;
@@ -16,14 +16,14 @@ class ff extends qa {
         int var2Lifetime1;
         if (param0 == -4604) {
           var2 = ii.b((byte) -126);
-          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2 + (ic.field_g << 1), 12018);
-          up.b(-125);
+          qf.field_c.a(-ic.field_g + eb.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2 + (ic.field_g << 1), 12018);
+          NodeHashTableIterator.b(-125);
           return;
         }
         field_t = (String) null;
         var2Lifetime1 = ii.b((byte) -126);
-        qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2Lifetime1 + (ic.field_g << 1), 12018);
-        up.b(-125);
+        qf.field_c.a(-ic.field_g + eb.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2Lifetime1 + (ic.field_g << 1), 12018);
+        NodeHashTableIterator.b(-125);
     }
 
     final void c(byte param0) {
@@ -75,10 +75,10 @@ class ff extends qa {
           if (param0 != 126) {
             ff.a(-116, -3);
           }
-          var4 = (vg) (ag.field_i.c(param0 - 74));
+          var4 = (vg) (GameApplet.field_i.c(param0 - 74));
           while (var4 != null) {
             vi.a(param1, var4, (byte) -123);
-            var4 = (vg) (ag.field_i.b(6));
+            var4 = (vg) (GameApplet.field_i.b(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

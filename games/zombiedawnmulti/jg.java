@@ -5,7 +5,7 @@ final class jg {
     static String field_b;
     static boolean field_a;
 
-    final static String a(k param0, int param1, int param2) {
+    final static String a(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -19,12 +19,12 @@ final class jg {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.h((byte) -109);
+            var3_int = param0.readUnsignedSmart((byte) -109);
             if (var3_int > param1) {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.field_j = param0.field_j + r.field_a.a(var3_int, param2 - 3574, 0, param0.field_m, var4, param0.field_j);
+            param0.position = param0.position + r.field_a.a(var3_int, param2 - 3574, 0, param0.payload, var4, param0.position);
             if (param2 != 3460) {
               jg.b(43);
             }
@@ -116,7 +116,7 @@ final class jg {
         }
     }
 
-    final static sm[] a(int param0, go param1) {
+    final static sm[] a(int param0, PlatformTaskDispatcher param1) {
         int var6 = 0;
         sm[] stackIn_3_0 = null;
         sm[] stackIn_9_0 = null;

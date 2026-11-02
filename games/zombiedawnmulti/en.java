@@ -98,7 +98,7 @@ final class en extends IOException {
         }
     }
 
-    final static void a(cj param0, cj param1, fm param2, cj param3, cj param4, cj param5, boolean param6, hi param7, int param8, cj param9, cj param10, cj param11) {
+    final static void a(cj param0, cj param1, BitmapFont param2, cj param3, cj param4, cj param5, boolean param6, hi param7, int param8, cj param9, cj param10, cj param11) {
         String stackIn_24_0 = null;
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
@@ -124,12 +124,12 @@ final class en extends IOException {
         StringBuilder stackIn_75_1 = null;
         String stackIn_76_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ja var12 = null;
+        Sprite var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        ja[] var16 = null;
+        Sprite[] var16 = null;
         cj var17 = null;
         int var18 = 0;
         String var19 = null;
@@ -150,21 +150,21 @@ final class en extends IOException {
           wp.field_c[1] = 6356832;
           wp.field_c[2] = 16736352;
           wj.field_g = 8421504;
-          var12 = new ja(4, 4);
-          var13 = var12.field_B;
-          var14 = var12.field_B;
-          var15 = var12.field_B;
-          var12.field_B[15] = 7368816;
+          var12 = new Sprite(4, 4);
+          var13 = var12.pixels;
+          var14 = var12.pixels;
+          var15 = var12.pixels;
+          var12.pixels[15] = 7368816;
           var14[5] = 7368816;
           var13[2] = 7368816;
           var15[8] = 7368816;
-          var16 = new ja[9];
+          var16 = new Sprite[9];
           var16[4] = var12;
-          dq.field_k = new cj(0L, param10);
+          ImageProducerRasterBuffer.field_k = new cj(0L, param10);
           qe.field_q = new cj(0L, param9);
-          dq.field_k.a((byte) 50, qe.field_q);
+          ImageProducerRasterBuffer.field_k.a((byte) 50, qe.field_q);
           var17 = new cj(0L, (cj) null);
-          var17.field_Cb = new th();
+          var17.field_Cb = new IntrusiveDeque();
           tn.field_A = new tq(0L, var17, param1, param7);
           qe.field_q.a((byte) 50, tn.field_A);
           ek.field_z = new cj(0L, param3);
@@ -195,7 +195,7 @@ final class en extends IOException {
                     var19 = lo.field_c;
                   }
                 } else {
-                  var19 = l.field_d;
+                  var19 = RasterBuffer.field_d;
                 }
               } else {
                 if (!sn.field_Hb) {
@@ -216,7 +216,7 @@ final class en extends IOException {
                 la.field_h[var18].a((byte) 50, pf.field_d[var18]);
                 la.field_h[var18].a((byte) 50, hh.field_l[var18]);
                 la.field_h[var18].f(-128);
-                dq.field_k.a((byte) 50, la.field_h[var18]);
+                ImageProducerRasterBuffer.field_k.a((byte) 50, la.field_h[var18]);
                 gi.field_l = gi.field_l + 1;
               }
               var18++;
@@ -226,8 +226,8 @@ final class en extends IOException {
           }
           if (decompiledNaturalLoopExit0) {
             nn.field_b = new cj(0L, param5);
-            nn.field_b.field_wb = ln.field_c;
-            dq.field_k.a((byte) 50, nn.field_b);
+            nn.field_b.field_wb = SecondaryNodeDequeIterator.field_c;
+            ImageProducerRasterBuffer.field_k.a((byte) 50, nn.field_b);
             stackIn_28_0 = param8;
             stackIn_28_1 = -16736510;
           }

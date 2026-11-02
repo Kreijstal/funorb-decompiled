@@ -49,7 +49,7 @@ final class aa extends ii {
         if (param0 != 0) {
           field_n = (String[]) null;
         }
-        return ch.field_e;
+        return IntrusiveDequeCursor.field_e;
     }
 
     public static void f(int param0) {

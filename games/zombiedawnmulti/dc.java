@@ -9,8 +9,8 @@ final class dc extends cj {
     private cj[] field_Nb;
     private cj[] field_Jb;
     static int field_Fb;
-    static th field_Gb;
-    static fm field_Lb;
+    static IntrusiveDeque field_Gb;
+    static BitmapFont field_Lb;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_x = param1;
@@ -229,6 +229,6 @@ final class dc extends cj {
 
     static {
         field_Ib = new long[32];
-        field_Gb = new th();
+        field_Gb = new IntrusiveDeque();
     }
 }

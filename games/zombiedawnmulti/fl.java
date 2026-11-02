@@ -35,11 +35,11 @@ final class fl {
           return var2_ref_byte__;
         }
         if (param1 == 5000 &&
-          ej.field_e > 0) {
-          fieldTemp$1 = ej.field_e - 1;
-          ej.field_e = ej.field_e - 1;
+          BufferedSocket.field_e > 0) {
+          fieldTemp$1 = BufferedSocket.field_e - 1;
+          BufferedSocket.field_e = BufferedSocket.field_e - 1;
           var2_ref_byte__Lifetime1 = vb.field_a[fieldTemp$1];
-          vb.field_a[ej.field_e] = null;
+          vb.field_a[BufferedSocket.field_e] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (30000 == param1 &&
@@ -51,15 +51,15 @@ final class fl {
           return var2_ref_byte__Lifetime2;
         }
         var2 = -104 / ((param0 - 39) / 61);
-        if (null != gb.field_b) {
+        if (null != GameKeyHandler.field_b) {
           for (var3 = 0; var3 < lk.field_P.length; var3++) {
             if (param1 == lk.field_P[var3] &&
               ta.field_ib[var3] > 0) {
               dupTemp$3 = ta.field_ib[var3] - 1;
-              arrayValue$4 = gb.field_b[var3];
+              arrayValue$4 = GameKeyHandler.field_b[var3];
               ta.field_ib[var3] = dupTemp$3;
               var4 = arrayValue$4[dupTemp$3];
-              gb.field_b[var3][ta.field_ib[var3]] = null;
+              GameKeyHandler.field_b[var3][ta.field_ib[var3]] = null;
               return var4;
             }
           }
@@ -67,11 +67,11 @@ final class fl {
         return new byte[param1];
     }
 
-    final static ja a(String param0, String param1, ul param2, int param3) {
+    final static Sprite a(String param0, String param1, ul param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ja stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

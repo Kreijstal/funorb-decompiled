@@ -13,7 +13,7 @@ abstract class t {
 
     final static void a(ul param0, ul param1, int param2, boolean param3) {
         try {
-          en.a(cm.field_b, m.field_B, jj.field_L, qc.field_u, vo.field_m, ra.field_j, param3, td.field_f, 16736511, up.field_g, rb.field_d, nq.field_v);
+          en.a(cm.field_b, m.field_B, jj.field_L, qc.field_u, vo.field_m, ra.field_j, param3, td.field_f, 16736511, NodeHashTableIterator.field_g, rb.field_d, SpriteState.field_v);
           wp.field_j = pb.a("lobby", param1, param2 ^ -256, "chatfilter");
           vg.field_h[2] = hj.field_h;
           vg.field_h[1] = of.field_p;
@@ -48,7 +48,7 @@ abstract class t {
         try {
           try {
             var4 = param2.getGraphics();
-            dl.field_h.a(param1, var4, 2, param3);
+            SocketConnector.field_h.a(param1, var4, 2, param3);
             var4.dispose();
             if (!param0) {
               return;

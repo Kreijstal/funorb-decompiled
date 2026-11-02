@@ -4,17 +4,17 @@
 final class um {
     static String field_f;
     static String field_i;
-    static gb field_c;
+    static GameKeyHandler field_c;
     static int field_h;
     private float field_e;
     private float field_k;
     private float field_d;
     private float field_j;
     static int field_a;
-    static ja[][] field_g;
+    static Sprite[][] field_g;
     static String[] field_b;
 
-    final void a(int param0, byte param1, ja param2, int param3, int param4, int param5) {
+    final void a(int param0, byte param1, Sprite param2, int param3, int param4, int param5) {
         if (param1 != 33) {
           return;
         }
@@ -85,7 +85,7 @@ final class um {
         field_c = null;
         field_b = null;
         field_i = null;
-        field_g = (ja[][]) null;
+        field_g = (Sprite[][]) null;
         field_f = null;
     }
 
@@ -100,6 +100,6 @@ final class um {
         field_i = "Names can only contain letters, numbers, spaces and underscores";
         field_f = "members-only content";
         field_h = 50;
-        field_c = new gb();
+        field_c = new GameKeyHandler();
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends qa {
+final class ob extends DualLinkNode {
     char[] field_D;
     int[] field_x;
     boolean field_y;
@@ -34,7 +34,7 @@ final class ob extends qa {
         return var1;
     }
 
-    private final void a(int param0, k param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         char[] stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
@@ -57,12 +57,12 @@ final class ob extends qa {
           }
           if (1 != param2) {
             if (param2 == 2) {
-              var4_int = param1.g(31365);
+              var4_int = param1.readUnsignedByte(31365);
               this.field_r = new char[var4_int];
               this.field_x = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_x[var5] = param1.d((byte) 69);
-                var6 = param1.d(-249699580);
+                this.field_x[var5] = param1.readUnsignedShort((byte) 69);
+                var6 = param1.readByte(-249699580);
                 stackIn_20_0 = this.field_r;
                 stackIn_20_1 = var5;
                 if (var6 != 0) {
@@ -80,12 +80,12 @@ final class ob extends qa {
                 this.field_y = true;
                 return;
               }
-              var4_int = param1.g(31365);
+              var4_int = param1.readUnsignedByte(31365);
               this.field_D = new char[var4_int];
               this.field_B = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_B[var5] = param1.d((byte) 69);
-                var6 = param1.d(-249699580);
+                this.field_B[var5] = param1.readUnsignedShort((byte) 69);
+                var6 = param1.readByte(-249699580);
                 stackIn_14_0 = this.field_D;
                 stackIn_14_1 = var5;
                 if (0 != var6) {
@@ -97,7 +97,7 @@ final class ob extends qa {
               }
             }
           } else {
-            this.field_s = param1.f((byte) -93);
+            this.field_s = param1.readString((byte) -93);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -215,13 +215,13 @@ final class ob extends qa {
         return true;
     }
 
-    final void a(int param0, k param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         int var3_intLifetime1;
         try {
           while (true) {
-            var3_int = param1.g(31365);
+            var3_int = param1.readUnsignedByte(31365);
             if (0 == var3_int) {
               break;
             }

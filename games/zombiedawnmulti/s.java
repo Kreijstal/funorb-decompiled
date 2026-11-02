@@ -106,7 +106,7 @@ final class s {
         }
     }
 
-    final static void a(int param0, int param1, ja[] param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -145,7 +145,7 @@ final class s {
           if (param5 > 0 &&
             param4 > 0) {
             if (null != param2[3]) {
-              stackIn_9_0 = param2[3].field_z;
+              stackIn_9_0 = param2[3].fullWidth;
             } else {
               stackIn_9_0 = 0;
             }
@@ -153,7 +153,7 @@ final class s {
             if (null == param2[5]) {
               stackIn_12_0 = 0;
             } else {
-              stackIn_12_0 = param2[5].field_z;
+              stackIn_12_0 = param2[5].fullWidth;
             }
             var7 = stackIn_12_0;
             if (null != param2[1]) {
@@ -182,7 +182,7 @@ final class s {
             }
             var18 = var14;
             var19 = var15;
-            oo.a(qa.field_f);
+            oo.a(DualLinkNode.field_f);
             if (var18 > var19) {
               var19 = param0 + param4 * var8 / (var8 + var9);
               var18 = param0 + param4 * var8 / (var8 + var9);
@@ -190,38 +190,38 @@ final class s {
             if (null != param2[param1]) {
               oo.e(param3, param0, var16, var18);
               param2[0].g(param3, param0);
-              oo.b(qa.field_f);
+              oo.b(DualLinkNode.field_f);
             }
             if (param2[2] != null) {
               oo.e(var17, param0, var10, var18);
               param2[2].g(var13, param0);
-              oo.b(qa.field_f);
+              oo.b(DualLinkNode.field_f);
             }
             if (param2[6] != null) {
               oo.e(param3, var19, var16, var11);
               param2[6].g(param3, var15);
-              oo.b(qa.field_f);
+              oo.b(DualLinkNode.field_f);
             }
             if (param2[8] != null) {
               oo.e(var17, var19, var10, var11);
               param2[8].g(var13, var15);
-              oo.b(qa.field_f);
+              oo.b(DualLinkNode.field_f);
             }
             if (param2[1] != null &&
-              param2[1].field_z != 0) {
+              param2[1].fullWidth != 0) {
               oo.e(var16, param0, var17, var18);
-              for (var20 = var12; var20 < var13; var20 = var20 + param2[1].field_z) {
+              for (var20 = var12; var20 < var13; var20 = var20 + param2[1].fullWidth) {
                 param2[1].g(var20, param0);
               }
-              oo.b(qa.field_f);
+              oo.b(DualLinkNode.field_f);
             }
             if (param2[7] != null &&
-              0 != param2[7].field_z) {
+              0 != param2[7].fullWidth) {
               oo.e(var16, var19, var17, var11);
-              for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param2[7].field_z) {
+              for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param2[7].fullWidth) {
                 param2[7].g(var20Lifetime1, var15);
               }
-              oo.b(qa.field_f);
+              oo.b(DualLinkNode.field_f);
             }
             if (null != param2[3] &&
               param2[3].field_u != 0) {
@@ -229,7 +229,7 @@ final class s {
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param2[3].field_u) {
                 param2[3].g(param3, var20Lifetime2);
               }
-              oo.b(qa.field_f);
+              oo.b(DualLinkNode.field_f);
             }
             if (param2[5] != null &&
               param2[5].field_u != 0) {
@@ -237,20 +237,20 @@ final class s {
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param2[5].field_u) {
                 param2[5].g(var13, var20Lifetime3);
               }
-              oo.b(qa.field_f);
+              oo.b(DualLinkNode.field_f);
             }
             if (null != param2[4] &&
-              param2[4].field_z != 0) {
+              param2[4].fullWidth != 0) {
               if (param2[4].field_u == 0) {
                 return;
               }
               oo.e(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param2[4].field_u) {
-                for (var21 = var12; var13 > var21; var21 = var21 + param2[4].field_z) {
+                for (var21 = var12; var13 > var21; var21 = var21 + param2[4].fullWidth) {
                   param2[4].g(var21, var20Lifetime4);
                 }
               }
-              oo.b(qa.field_f);
+              oo.b(DualLinkNode.field_f);
             }
             return;
           }
@@ -271,7 +271,7 @@ final class s {
 
     final static String a(byte param0) {
         if (dj.field_k == id.field_B) {
-          return ch.field_j;
+          return IntrusiveDequeCursor.field_j;
         }
         if (param0 != 32) {
           return (String) null;
@@ -321,7 +321,7 @@ final class s {
         }
         lj.field_n = 0;
         ba.field_m = -2147483648;
-        up.field_d = -2147483648;
+        NodeHashTableIterator.field_d = -2147483648;
         var3 = -105 / ((param1 - 6) / 47);
         ab.field_j = 2147483647;
         mj.field_Ub = 2147483647;

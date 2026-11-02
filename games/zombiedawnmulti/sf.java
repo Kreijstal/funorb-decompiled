@@ -23,11 +23,11 @@ final class sf {
         int var2_int = 0;
         RuntimeException var2 = null;
         fc stackIn_2_0 = null;
-        bm stackIn_7_0 = null;
+        LevelActorSpawner stackIn_7_0 = null;
         Object stackIn_10_0 = null;
-        bm stackIn_12_0 = null;
-        bm stackIn_14_0 = null;
-        bm stackIn_16_0 = null;
+        LevelActorSpawner stackIn_12_0 = null;
+        LevelActorSpawner stackIn_14_0 = null;
+        LevelActorSpawner stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -104,8 +104,8 @@ final class sf {
             stackIn_12_0 = vl.a(lo.field_i, new String[]{param2}, 2);
             return stackIn_12_0;
           }
-          if (fn.field_d >= 100) {
-            stackIn_15_0 = th.field_c;
+          if (ClientException.field_d >= 100) {
+            stackIn_15_0 = IntrusiveDeque.field_c;
             return stackIn_15_0;
           }
           if (kj.a((byte) -94, param2)) {
@@ -117,11 +117,11 @@ final class sf {
           }
           var5 = ma.field_a;
           var5.b((byte) -35, param1);
-          var5.field_j = var5.field_j + 1;
-          var4 = var5.field_j;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(125, 2);
-          var5.a(param2, (byte) 105);
-          var5.e(100, -var4 + var5.field_j);
+          var5.writeString(param2, (byte) 105);
+          var5.e(100, -var4 + var5.position);
           stackIn_22_0 = null;
           return (String) (stackIn_22_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -151,7 +151,7 @@ final class sf {
             return false;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_4_0 = kf.field_k.equals(tg.a(var3, false));
+          stackIn_4_0 = ProxySocketConnector.field_k.equals(tg.a(var3, false));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

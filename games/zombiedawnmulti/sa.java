@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa extends br {
+final class sa extends IntrusiveNode {
     private int field_o;
-    private rl field_i;
+    private GameSimulation field_i;
     static ip field_n;
     private int field_k;
     static boolean field_f;
@@ -64,11 +64,11 @@ final class sa extends br {
           }
           var9 = new StringBuilder(var7);
           var10 = 0;
-          L4: while (true) {
+          scanLoop1: while (true) {
             var11 = param0.indexOf(param2, var10);
             if (var11 < 0) {
               if (var12 == 0) {
-                break L4;
+                break scanLoop1;
               }
             } else {
               discarded$0 = var9.append(param0.substring(var10, var11));
@@ -144,7 +144,7 @@ final class sa extends br {
         int stackIn_17_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_7_0;
-        br var2 = null;
+        IntrusiveNode var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         lm var3 = null;
@@ -178,7 +178,7 @@ final class sa extends br {
                   var3.a(-12, this);
                 }
               }
-              var2 = var2.field_d;
+              var2 = var2.previous;
               if (var6 == 0) {
                 continue;
               }
@@ -299,7 +299,7 @@ final class sa extends br {
             field_n = (ip) null;
           }
           var23 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (param0.field_n > var23) {
               var24 = param0.field_k[var23];
               var25 = param0.field_E[var23];
@@ -312,7 +312,7 @@ final class sa extends br {
               if (var30 != 0) {
                 if (stackIn_60_0 < stackIn_60_1) {
                   if (eb.field_J.length <= var18) {
-                    break L3;
+                    break scanLoop1;
                   }
                   var19 = param0.field_A[var18];
                   var20 = param0.field_p[var18];
@@ -321,9 +321,9 @@ final class sa extends br {
                   bq.field_g[var18] = var21 * var16 + var20 * var13 + var10 * var19 >> 16;
                   wp.field_i[var18] = var19 * var11 + var20 * var14 + var21 * var17 >> 16;
                   var18++;
-                  break L3;
+                  break scanLoop1;
                 }
-                break L3;
+                break scanLoop1;
               }
               if (stackIn_60_0 < stackIn_60_1) {
                 hl.field_f[var23] = -2147483648;
@@ -374,7 +374,7 @@ final class sa extends br {
                 var26 = param0.field_i[var23];
                 fl.field_c[var23] = (var24 * var12 + var15 * var25 + var18 * var26 >> 16) + var9;
                 qe.field_o[var23] = (var19 * var26 + (var25 * var16 + var13 * var24) >> 16) + var10;
-                ll.field_f[var23] = (var14 * var24 + var17 * var25 + var26 * var20 >> 16) + var11;
+                FullscreenFocusCanvas.field_f[var23] = (var14 * var24 + var17 * var25 + var26 * var20 >> 16) + var11;
                 var23++;
                 if (var30 != 0) {
                   return;

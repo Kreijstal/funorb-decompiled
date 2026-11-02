@@ -25,10 +25,10 @@ final class jm extends ae {
         if (param0 > -47) {
           jm.c((byte) 116);
         }
-        mf.field_b.a((br) (this), false);
+        MouseWheelInput.field_b.a((IntrusiveNode) (this), false);
     }
 
-    final void a(int param0, qd param1) {
+    final void a(int param0, GameScreen param1) {
         if (param0 != 0) {
           return;
         }
@@ -125,7 +125,7 @@ final class jm extends ae {
         return true;
     }
 
-    final static void a(int param0, boolean param1, int param2, ja[] param3, int param4, int param5) {
+    final static void a(int param0, boolean param1, int param2, Sprite[] param3, int param4, int param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -144,9 +144,9 @@ final class jm extends ae {
           }
           if (param3 != null &&
             0 < param5) {
-            var6_int = param3[0].field_z;
-            var7 = param3[2].field_z;
-            var8 = param3[1].field_z;
+            var6_int = param3[0].fullWidth;
+            var7 = param3[2].fullWidth;
+            var8 = param3[1].fullWidth;
             param3[0].g(param2, param4, param0);
             param3[2].g(-var7 + (param2 + param5), param4, param0);
             oo.a(ki.field_d);

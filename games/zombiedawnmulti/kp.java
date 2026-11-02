@@ -14,13 +14,13 @@ final class kp extends nc {
             li.field_C != param2) {
             bn.field_b = true;
             li.field_C = param2;
-            l.a(param1, (byte) -122);
+            RasterBuffer.a(param1, (byte) -122);
           }
           if (param0 == 1 &&
             param2 != qe.field_g) {
             qe.field_g = param2;
             bn.field_b = true;
-            l.a(param1, (byte) -74);
+            RasterBuffer.a(param1, (byte) -74);
           }
         } else {
           kp.e(-1);
@@ -31,13 +31,13 @@ final class kp extends nc {
                   param2 != ba.field_q) {
                   ba.field_q = param2;
                   bn.field_b = true;
-                  l.a(param1, (byte) -51);
+                  RasterBuffer.a(param1, (byte) -51);
                 }
                 return;
               }
               qe.field_g = param2;
               bn.field_b = true;
-              l.a(param1, (byte) -74);
+              RasterBuffer.a(param1, (byte) -74);
             }
           } else {
             if (li.field_C == param2) {
@@ -47,23 +47,23 @@ final class kp extends nc {
                     param2 != ba.field_q) {
                     ba.field_q = param2;
                     bn.field_b = true;
-                    l.a(param1, (byte) -51);
+                    RasterBuffer.a(param1, (byte) -51);
                   }
                   return;
                 }
                 qe.field_g = param2;
                 bn.field_b = true;
-                l.a(param1, (byte) -74);
+                RasterBuffer.a(param1, (byte) -74);
               }
             } else {
               bn.field_b = true;
               li.field_C = param2;
-              l.a(param1, (byte) -122);
+              RasterBuffer.a(param1, (byte) -122);
               if (param0 == 1 &&
                 param2 != qe.field_g) {
                 qe.field_g = param2;
                 bn.field_b = true;
-                l.a(param1, (byte) -74);
+                RasterBuffer.a(param1, (byte) -74);
               }
             }
           }
@@ -76,7 +76,7 @@ final class kp extends nc {
         }
         ba.field_q = param2;
         bn.field_b = true;
-        l.a(param1, (byte) -51);
+        RasterBuffer.a(param1, (byte) -51);
     }
 
     kp(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
@@ -93,9 +93,9 @@ final class kp extends nc {
         int var4 = 200;
         int var5 = 320 - var3 / 2;
         int var6 = 240 - var4 / 2;
-        var4Lifetime1 = ((fm) ((Object) var2)).a(vh.field_Fb, var3, 0);
+        var4Lifetime1 = ((BitmapFont) ((Object) var2)).a(vh.field_Fb, var3, 0);
         s.a(var6 - 10, 0, cc.field_b, -10 + var5, var4Lifetime1 + 20, 20 + var3);
-        ((fm) ((Object) var2)).a(vh.field_Fb, var5, var6, var3, var4Lifetime1, this.field_m, this.field_p, 1, 1, 0);
+        ((BitmapFont) ((Object) var2)).a(vh.field_Fb, var5, var6, var3, var4Lifetime1, this.field_m, this.field_p, 1, 1, 0);
     }
 
     public static void e(int param0) {

@@ -175,7 +175,7 @@ final class me {
           if (param0 == null) {
             return null;
           }
-          var2 = new sl(param0, k.field_i, qj.field_o, oq.field_w, vj.field_p, tp.field_t, qp.field_t);
+          var2 = new sl(param0, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, tp.field_t, qp.field_t);
           if (!param1) {
             field_h = -18;
           }
@@ -247,7 +247,7 @@ final class me {
           }
           stackIn_22_0 = var9;
           stackIn_23_1 = !(param2);
-          ((ac) (Object) stackIn_22_0).a(stackIn_23_1);
+          ((ac) (Object) stackIn_22_0).unlink(stackIn_23_1);
           this.field_a.a(true, var6, var8Lifetime1);
           stackIn_24_0 = var8Lifetime1;
           return stackIn_24_0;

@@ -5,7 +5,7 @@ final class td {
     static int[] field_a;
     int field_d;
     int[] field_e;
-    static ja[] field_c;
+    static Sprite[] field_c;
     static long field_g;
     static ug field_b;
     static hi field_f;
@@ -59,7 +59,7 @@ final class td {
     }
 
     final static jm a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        jm var8 = (jm) (mf.field_b.g(86));
+        jm var8 = (jm) (MouseWheelInput.field_b.g(86));
         if (var8 == null) {
           var8 = new jm();
         }

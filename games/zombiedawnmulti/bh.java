@@ -4,7 +4,7 @@
 final class bh {
     static vp field_a;
     static sc field_f;
-    static th field_d;
+    static IntrusiveDeque field_d;
     static String[] field_b;
     static int[] field_c;
     static String field_e;
@@ -147,24 +147,24 @@ final class bh {
               var10 = var19;
               var11 = 0;
               var12 = 0;
-              L4: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var20.length) {
                   if (var11 == 0 &&
                     kj.field_h != param7) {
-                    break L4;
+                    break scanLoop1;
                   }
                   var8_int = 0;
                   for (var12 = 0; var20.length > var12; var12 += 2) {
                     var13 = var20[var12];
                     if (var13 != -1) {
                       if (var13 < param7) {
-                        ll.field_c[var13] = true;
+                        FullscreenFocusCanvas.field_c[var13] = true;
                       }
                     } else {
                       lp.field_p = true;
                     }
                   }
-                  break L4;
+                  break scanLoop1;
                 }
                 var13Lifetime1 = var20[var12];
                 var14 = var10[var12 + 1];
@@ -174,15 +174,15 @@ final class bh {
                     var11 = 1;
                   } else {
                     if (param7 <= var13Lifetime1) {
-                      break L4;
+                      break scanLoop1;
                     }
-                    if (var14 != (255 & rl.field_v[var13Lifetime1])) {
-                      break L4;
+                    if (var14 != (255 & GameSimulation.field_v[var13Lifetime1])) {
+                      break scanLoop1;
                     }
                   }
                 } else {
                   if (var14 != qo.field_r[param6]) {
-                    break L4;
+                    break scanLoop1;
                   }
                 }
                 var12 += 2;
@@ -238,7 +238,7 @@ final class bh {
                   if (param7 == -1) {
                     param6 = var11;
                   } else {
-                    rl.field_v[param7] = (byte)var11;
+                    GameSimulation.field_v[param7] = (byte)var11;
                   }
                   bh.a(-1712, param1, param2, param3, param4, param5, param6, param7 + 1);
                   if (dj.field_l) {
@@ -252,7 +252,7 @@ final class bh {
             if (-1 == param7) {
               param6 = var11;
             } else {
-              rl.field_v[param7] = (byte)var11;
+              GameSimulation.field_v[param7] = (byte)var11;
             }
             if (param7 == -1 &&
               1 == qo.field_r.length) {
@@ -305,6 +305,6 @@ final class bh {
     static {
         field_e = "Type your password again to make sure it's correct";
         field_c = new int[8192];
-        field_d = new th();
+        field_d = new IntrusiveDeque();
     }
 }

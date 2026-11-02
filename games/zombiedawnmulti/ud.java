@@ -12,7 +12,7 @@ final class ud extends gn {
     int field_R;
     int field_W;
     static String[] field_N;
-    static ja field_P;
+    static Sprite field_P;
     static String field_Y;
     static ri field_Q;
     static cj field_M;
@@ -53,7 +53,7 @@ final class ud extends gn {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, cf param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -116,7 +116,7 @@ final class ud extends gn {
           vm.field_hb = param1 * wq.a((byte) 72) / 1000;
           ui.a(7478, param2);
           lh.a(-30, param2);
-          bm.a(30651, param2);
+          LevelActorSpawner.a(30651, param2);
           pg.a(false);
           eh.a(-1741);
           f.field_a = 0 - vm.field_hb;

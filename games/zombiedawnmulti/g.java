@@ -4,8 +4,8 @@
 import java.util.*;
 
 final class g {
-    private static th field_b;
-    private static th field_c;
+    private static IntrusiveDeque field_b;
+    private static IntrusiveDeque field_c;
     static Random field_a;
     private static String field_z;
 
@@ -13,7 +13,7 @@ final class g {
         return le.a(param0, (byte) -80) >> 8;
     }
 
-    final static void a(ja param0, int param1, int param2) {
+    final static void a(Sprite param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -25,8 +25,8 @@ final class g {
         int var9Lifetime2;
         var3 = param1 + param2 * oo.field_b;
         var4 = 0;
-        var5 = param0.field_w;
-        var6 = param0.field_x;
+        var5 = param0.height;
+        var6 = param0.width;
         var7 = oo.field_b - var6;
         var8 = 0;
         if (param2 < oo.field_e) {
@@ -56,7 +56,7 @@ final class g {
         }
         if (var6 > 0 &&
           var5 > 0) {
-          g.a(oo.field_i, param0.field_B, 0, var4, var3, var6, var5, var7, var8);
+          g.a(oo.field_i, param0.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -76,8 +76,8 @@ final class g {
         field_b.a(var0, false);
     }
 
-    final static ja b(ja param0) {
-        ja var1 = new ja(param0.field_z, param0.field_u);
+    final static Sprite b(Sprite param0) {
+        Sprite var1 = new Sprite(param0.fullWidth, param0.field_u);
         g.c(var1);
         oo.b();
         param0.f(0, 0, 16777215);
@@ -89,7 +89,7 @@ final class g {
         return var1;
     }
 
-    final static void a(ja param0, int param1, int param2, int param3) {
+    final static void a(Sprite param0, int param1, int param2, int param3) {
         int var4;
         int var5;
         int var6;
@@ -101,8 +101,8 @@ final class g {
         int var10Lifetime2;
         var4 = param1 + param2 * oo.field_b;
         var5 = 0;
-        var6 = param0.field_w;
-        var7 = param0.field_x;
+        var6 = param0.height;
+        var7 = param0.width;
         var8 = oo.field_b - var7;
         var9 = 0;
         if (param2 < oo.field_e) {
@@ -132,7 +132,7 @@ final class g {
         }
         if (var7 > 0 &&
           var6 > 0) {
-          g.a(oo.field_i, param0.field_B, 0, var5, var4, var7, var6, var8, var9, param3);
+          g.a(oo.field_i, param0.pixels, 0, var5, var4, var7, var6, var8, var9, param3);
           return;
         }
     }
@@ -148,15 +148,15 @@ final class g {
         field_c.a(var0, false);
     }
 
-    private final static boolean b(th param0) {
-        br var1;
+    private final static boolean b(IntrusiveDeque param0) {
+        IntrusiveNode var1;
         var1 = param0.c(51);
         while (var1 instanceof id) {
-          if (var1.field_d instanceof id) {
-            if (((id) (var1)).field_E > ((id) (var1.field_d)).field_E) {
+          if (var1.previous instanceof id) {
+            if (((id) (var1)).field_E > ((id) (var1.previous)).field_E) {
               return false;
             }
-            var1 = var1.field_d;
+            var1 = var1.previous;
             continue;
           }
           break;
@@ -188,25 +188,25 @@ final class g {
         }
     }
 
-    final static void a(ja param0) {
+    final static void a(Sprite param0) {
         int var4 = 0;
         int var5 = 0;
         int var3 = 0;
-        int[] var1 = param0.field_B;
+        int[] var1 = param0.pixels;
         int var2 = 0;
-        for (var4 = 0; var4 < param0.field_w; var4++) {
-          for (var5 = 0; var5 < param0.field_x / 2; var5++) {
+        for (var4 = 0; var4 < param0.height; var4++) {
+          for (var5 = 0; var5 < param0.width / 2; var5++) {
             var3 = var1[var2 + var5];
-            var1[var2 + var5] = var1[var2 + param0.field_x - var5 - 1];
-            var1[var2 + param0.field_x - var5 - 1] = var3;
+            var1[var2 + var5] = var1[var2 + param0.width - var5 - 1];
+            var1[var2 + param0.width - var5 - 1] = var3;
           }
-          var2 = var2 + param0.field_x;
+          var2 = var2 + param0.width;
         }
-        param0.field_r = param0.field_z - param0.field_x - param0.field_r;
+        param0.offsetX = param0.fullWidth - param0.width - param0.offsetX;
     }
 
-    final static void c(ja param0) {
-        g.a(param0.field_B, param0.field_x, param0.field_w);
+    final static void c(Sprite param0) {
+        g.a(param0.pixels, param0.width, param0.height);
     }
 
     final static void a(int param0) {
@@ -217,7 +217,7 @@ final class g {
         int[] var2;
         int var3;
         int var4;
-        ja var5;
+        Sprite var5;
         int[] var6;
         int[] var9;
         int[] var10;
@@ -227,8 +227,8 @@ final class g {
         var2 = var9;
         var3 = oo.field_b;
         var4 = oo.field_l;
-        var5 = new ja(var3, var4);
-        var6 = var5.field_B;
+        var5 = new Sprite(var3, var4);
+        var6 = var5.pixels;
         for (var7 = 0; var7 < var4; var7++) {
           for (var8 = 0; var8 < var3; var8++) {
             boolean decompiledFrameRemainder0 = true;
@@ -253,19 +253,19 @@ final class g {
         var5.c(0, 0);
     }
 
-    final static void a(th param0) {
+    final static void a(IntrusiveDeque param0) {
         Object var1;
-        br var1_ref;
-        br var2;
+        IntrusiveNode var1_ref;
+        IntrusiveNode var2;
         while (!g.b(param0)) {
           var1_ref = param0.c(51);
           while (var1_ref instanceof id) {
-            if (!(var1_ref.field_d instanceof id)) {
+            if (!(var1_ref.previous instanceof id)) {
               break;
             }
-            var2 = var1_ref.field_d;
+            var2 = var1_ref.previous;
             if (((id) (var1_ref)).field_E > ((id) (var2)).field_E) {
-              var1_ref.a(true);
+              var1_ref.unlink(true);
               qc.a(var1_ref, var2, 0);
             }
             var1_ref = var2;
@@ -443,8 +443,8 @@ final class g {
 
     static {
         field_z = "No pixdest to pop!";
-        field_b = new th();
-        field_c = new th();
+        field_b = new IntrusiveDeque();
+        field_c = new IntrusiveDeque();
         field_a = new Random();
     }
 }

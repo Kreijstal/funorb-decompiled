@@ -7,9 +7,9 @@ final class ao {
     int field_f;
     static int field_e;
     static int field_c;
-    static ja[] field_b;
+    static Sprite[] field_b;
     int field_g;
-    static ja[] field_h;
+    static Sprite[] field_h;
 
     public final String toString() {
         throw new IllegalStateException();

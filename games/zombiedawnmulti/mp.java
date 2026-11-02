@@ -56,20 +56,20 @@ abstract class mp {
         int fieldTemp$0 = 0;
         int var4_int = 0;
         try {
-          pm.field_R.field_j = param0;
+          pm.field_R.position = param0;
           pm.field_R.a(param0 ^ -108, 12);
-          pm.field_R.b(-114, c.field_c.nextInt());
-          pm.field_R.b(-118, c.field_c.nextInt());
+          pm.field_R.writeInt(-114, c.field_c.nextInt());
+          pm.field_R.writeInt(-118, c.field_c.nextInt());
           pm.field_R.a(123, param2);
           pm.field_R.a(-67, param1);
           pm.field_R.a(param3, (byte) -128);
           pm.field_R.a(tp.field_v, -2628, gn.field_L);
           ma.field_a.b((byte) -35, 18);
-          fieldTemp$0 = ma.field_a.field_j + 1;
-          ma.field_a.field_j = ma.field_a.field_j + 1;
+          fieldTemp$0 = ma.field_a.position + 1;
+          ma.field_a.position = ma.field_a.position + 1;
           var4_int = fieldTemp$0;
-          ma.field_a.a(pm.field_R.field_m, pm.field_R.field_j, 0, 126);
-          ma.field_a.e(72, -var4_int + ma.field_a.field_j);
+          ma.field_a.a(pm.field_R.payload, pm.field_R.position, 0, 126);
+          ma.field_a.e(72, -var4_int + ma.field_a.position);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "mp.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -112,7 +112,7 @@ abstract class mp {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        th var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         ml var7 = null;
@@ -179,7 +179,7 @@ abstract class mp {
                   !var7.field_Kb.equals("")) {
                   var7.field_Gb.field_rb = pa.field_T;
                   var7.field_Gb.field_ob = var11;
-                  var7.field_Gb.a(jk.field_f, var9, 3 + pa.field_T.field_z, 0, -3344);
+                  var7.field_Gb.a(jk.field_f, var9, 3 + pa.field_T.fullWidth, 0, -3344);
                   var12 = 1;
                 }
                 var7.field_Fb.field_ob = var11;
@@ -193,14 +193,14 @@ abstract class mp {
                 var13 = 0;
                 var14 = -80 + (var7.field_zb - 2);
                 if (var12 != 0) {
-                  var13 = 3 + pa.field_T.field_z;
+                  var13 = 3 + pa.field_T.fullWidth;
                   var14 = var14 - var13;
                 }
                 stackIn_34_0 = var7.field_Ib;
                 if (0 >= var14) {
                   stackIn_35_1 = var7.field_Hb;
                 } else {
-                  stackIn_35_1 = fm.a(var7.field_Ib.field_yb, var7.field_Hb, var14);
+                  stackIn_35_1 = BitmapFont.a(var7.field_Ib.field_yb, var7.field_Hb, var14);
                 }
                 stackIn_34_0.field_wb = stackIn_35_1;
                 var7.field_Ib.a(jk.field_f, var9, var14, var13, -3344);

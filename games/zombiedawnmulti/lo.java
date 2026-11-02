@@ -127,7 +127,7 @@ final class lo {
           if (param0 != 8192) {
             lo.a(50);
           }
-          var12 = ln.field_d;
+          var12 = SecondaryNodeDequeIterator.field_d;
           var10 = var12;
           var7 = var10;
           var2Lifetime1 = var7;

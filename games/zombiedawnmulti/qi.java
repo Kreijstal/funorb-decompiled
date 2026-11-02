@@ -18,7 +18,7 @@ final class qi {
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        k var9 = null;
+        PacketBuffer var9 = null;
         ga var11 = null;
         int[] var12 = null;
         int[] var13 = null;
@@ -26,18 +26,18 @@ final class qi {
         try {
           var11 = s.field_e;
           if (param0 < 101) {
-            var9 = (k) null;
-            qi.a(31, false, (java.math.BigInteger) null, 54, (java.math.BigInteger) null, (byte[]) null, (k) null);
+            var9 = (PacketBuffer) null;
+            qi.a(31, false, (java.math.BigInteger) null, 54, (java.math.BigInteger) null, (byte[]) null, (PacketBuffer) null);
           }
-          var2 = var11.g(31365);
-          var3 = var11.g(31365);
+          var2 = var11.readUnsignedByte(31365);
+          var3 = var11.readUnsignedByte(31365);
           if (var2 == 0) {
             var4_ref_u = (u) (cp.field_T.c(83));
             if (var4_ref_u == null) {
               ak.a((byte) -119);
               return;
             }
-            var5_int = -var11.field_j + hd.field_q;
+            var5_int = -var11.position + hd.field_q;
             var13 = var4_ref_u.field_h;
             var12 = var13;
             var6 = var12;
@@ -45,17 +45,17 @@ final class qi {
               var5_int = var13.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var11.g(31365) << tq.b(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var11.readUnsignedByte(31365) << tq.b(768, var7 << 8));
             }
-            var4_ref_u.a(true);
+            var4_ref_u.unlink(true);
             return;
           }
           if (var2 != 1) {
-            bd.a("LR1: " + ci.a(0), (Throwable) null, false);
+            MouseInputHandler.a("LR1: " + ci.a(0), (Throwable) null, false);
             ak.a((byte) -115);
             return;
           }
-          var4 = var11.h(22219);
+          var4 = var11.readSignedSmart(22219);
           var5 = (hp) (mh.field_l.c(83));
           while (var5 != null) {
             if (var5.field_v != var3 ||
@@ -69,7 +69,7 @@ final class qi {
             ak.a((byte) -117);
             return;
           }
-          var5.a(true);
+          var5.unlink(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,10 +90,10 @@ final class qi {
             qi.b((byte) 52);
           }
           so.a((java.awt.Component) ((Object) param1), 127);
-          if (null == ll.field_a) {
+          if (null == FullscreenFocusCanvas.field_a) {
             return;
           }
-          ll.field_a.a((byte) 127, (java.awt.Component) ((Object) param1));
+          FullscreenFocusCanvas.field_a.a((byte) 127, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,7 +124,7 @@ final class qi {
         }
     }
 
-    final static void a(int param0, boolean param1, java.math.BigInteger param2, int param3, java.math.BigInteger param4, byte[] param5, k param6) {
+    final static void a(int param0, boolean param1, java.math.BigInteger param2, int param3, java.math.BigInteger param4, byte[] param5, PacketBuffer param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -147,39 +147,39 @@ final class qi {
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var7_int = vj.b(param1, param3);
-          if (null == kf.field_j) {
-            kf.field_j = new java.security.SecureRandom();
+          if (null == ProxySocketConnector.field_j) {
+            ProxySocketConnector.field_j = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; 4 > var9; var9++) {
-            var8[var9] = kf.field_j.nextInt();
+            var8[var9] = ProxySocketConnector.field_j.nextInt();
           }
           if (null == so.field_k ||
-            !(so.field_k.field_m.length >= var7_int)) {
-            so.field_k = new k(var7_int);
+            !(so.field_k.payload.length >= var7_int)) {
+            so.field_k = new PacketBuffer(var7_int);
           }
-          so.field_k.field_j = 0;
+          so.field_k.position = 0;
           so.field_k.a(param5, param3, param0, 114);
           so.field_k.b(var7_int, (byte) 119);
           so.field_k.a(0, var13);
-          if (null == l.field_e ||
-            !(l.field_e.field_m.length >= 100)) {
-            l.field_e = new k(100);
+          if (null == RasterBuffer.field_e ||
+            !(RasterBuffer.field_e.payload.length >= 100)) {
+            RasterBuffer.field_e = new PacketBuffer(100);
           }
-          l.field_e.field_j = 0;
-          l.field_e.a(-30, 10);
+          RasterBuffer.field_e.position = 0;
+          RasterBuffer.field_e.a(-30, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            l.field_e.b(-128, var13[var11]);
+            RasterBuffer.field_e.writeInt(-128, var13[var11]);
             var11++;
           }
-          l.field_e.a(param3, (byte) -82);
-          l.field_e.a(param4, -2628, param2);
-          param6.a(l.field_e.field_m, l.field_e.field_j, 0, 127);
-          param6.a(so.field_k.field_m, so.field_k.field_j, 0, 122);
+          RasterBuffer.field_e.a(param3, (byte) -82);
+          RasterBuffer.field_e.a(param4, -2628, param2);
+          param6.a(RasterBuffer.field_e.payload, RasterBuffer.field_e.position, 0, 127);
+          param6.a(so.field_k.payload, so.field_k.position, 0, 122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

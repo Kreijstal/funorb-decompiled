@@ -13,7 +13,7 @@ final class eo {
         int var3;
         String var4;
         String var4Lifetime1;
-        stackIn_3_0 = (null == ej.field_n) ? 0 : 1;
+        stackIn_3_0 = (null == BufferedSocket.field_n) ? 0 : 1;
         var3 = stackIn_3_0;
         if (sj.field_p != 9) {
           if (sj.field_p == 10) {
@@ -39,13 +39,13 @@ final class eo {
               return false;
             }
           } else {
-            if (!pd.a(da.field_c, v.field_a, 2)) {
+            if (!pd.a(InflaterDecompressor.field_c, v.field_a, 2)) {
               return false;
             }
             if (fh.field_n == 2) {
               if (ob.d((byte) 88)) {
                 var4 = (String) null;
-                kb.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+                GameWorld.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
               }
               return true;
             }
@@ -81,7 +81,7 @@ final class eo {
             return false;
           }
           if (fh.field_n == 2 &&
-            !pd.a(da.field_c, v.field_a, 2)) {
+            !pd.a(InflaterDecompressor.field_c, v.field_a, 2)) {
             return false;
           }
           if (fh.field_n != 2 &&
@@ -91,7 +91,7 @@ final class eo {
         }
         if (ob.d((byte) 88)) {
           var4Lifetime1 = (String) null;
-          kb.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+          GameWorld.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
         }
         return true;
     }

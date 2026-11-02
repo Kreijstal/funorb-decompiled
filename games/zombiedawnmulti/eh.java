@@ -36,7 +36,7 @@ final class eh {
         r.a(0, m.field_w);
         ep.e();
         oo.b();
-        rl.a((byte) 125);
+        GameSimulation.a((byte) 125);
         if (var5 < 256) {
           oo.f(0, 0, oo.field_b, oo.field_l, 0, -var5 + 256);
         }
@@ -70,7 +70,7 @@ final class eh {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          qd.field_s.c(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
+          GameScreen.field_s.c(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
         }
         return;
     }
@@ -158,7 +158,7 @@ final class eh {
                 var9[var14 + var12Lifetime1] = param4.field_D[var14];
                 var10[var12Lifetime1 + var14] = param4.field_B[var14];
               } else {
-                var16 = bd.field_c.a(var15, -11452);
+                var16 = MouseInputHandler.field_c.a(var15, -11452);
                 var8[var12Lifetime1 + var14] = var16.e(-18572);
                 var9[var12Lifetime1 + var14] = param4.field_D[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
@@ -204,17 +204,17 @@ final class eh {
     }
 
     final static void a(int param0) {
-        ja var1 = null;
-        ja var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var1 = new ja(540, 140);
+          var1 = new Sprite(540, 140);
           r.a(0, var1);
           ep.e();
           oo.b();
           f.field_a = 0;
-          rl.a((byte) 120);
+          GameSimulation.a((byte) 120);
           var2 = var1.c();
           for (var3 = 0; var3 < 15; var3++) {
             var2.f(-2, -2, 16777215);
@@ -291,7 +291,7 @@ final class eh {
           param0 = param0 + param2;
           var9 = 77 / ((param1 + 1) / 54);
           var8 = param5;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var10 = param3[var8];
             if (var10 < 0) {
               var7_int = this.field_d[var7_int];
@@ -305,7 +305,7 @@ final class eh {
               param2++;
               param4[incrementValue$1] = (byte)(~var11);
               if (param0 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -321,7 +321,7 @@ final class eh {
               param2++;
               param4[incrementValue$3] = (byte)(~var11Lifetime1);
               if (param0 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -353,7 +353,7 @@ final class eh {
               param2++;
               param4[incrementValue$7] = (byte)(~var11Lifetime3);
               if (param2 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -369,7 +369,7 @@ final class eh {
               param2++;
               param4[incrementValue$9] = (byte)(~var11Lifetime4);
               if (param0 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -385,7 +385,7 @@ final class eh {
               param2++;
               param4[incrementValue$11] = (byte)(~var11Lifetime5);
               if (param0 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -401,7 +401,7 @@ final class eh {
               param2++;
               param4[incrementValue$13] = (byte)(~var11Lifetime6);
               if (param2 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -417,7 +417,7 @@ final class eh {
               param2++;
               param4[incrementValue$15] = (byte)(~var11Lifetime7);
               if (param0 <= param2) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }

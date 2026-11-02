@@ -3,7 +3,7 @@
  */
 final class rp {
     int field_k;
-    static ja[] field_r;
+    static Sprite[] field_r;
     static String field_b;
     private int field_a;
     static cj field_l;
@@ -232,7 +232,7 @@ final class rp {
             this.field_p[1] = this.b(-1458);
           }
           var3_int = 0;
-          L4: while (true) {
+          scanLoop1: while (true) {
             if (var3_int < 5) {
               this.field_m[var3_int] = this.d((byte) 69);
               stackIn_21_0 = ~this.field_a;
@@ -243,7 +243,7 @@ final class rp {
                   var3_int++;
                   return;
                 }
-                break L4;
+                break scanLoop1;
               }
               if (stackIn_21_0 <= stackIn_21_1) {
                 this.field_g[var3_int] = this.d((byte) 83);
@@ -518,24 +518,24 @@ final class rp {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var1 = s.field_e;
-          var2 = var1.g(31365);
+          var2 = var1.readUnsignedByte(31365);
           if (var2 == 0) {
             if (bh.field_f == null) {
               bh.field_f = new sc(128);
-              fn.field_d = 0;
+              ClientException.field_d = 0;
             }
-            stackIn_12_0 = (var1.g(31365) != 1) ? 0 : 1;
+            stackIn_12_0 = (var1.readUnsignedByte(31365) != 1) ? 0 : 1;
             var3 = stackIn_12_0;
-            var4_ref_String = var1.f((byte) -29);
+            var4_ref_String = var1.readString((byte) -29);
             if (var3 == 0) {
               var5 = var4_ref_String;
             }
             if (var3 != 0 ||
               var9 != 0) {
-              var5 = var1.f((byte) -19);
+              var5 = var1.readString((byte) -19);
             }
             var6 = md.a((byte) -55, var4_ref_String);
-            var7 = var1.f((byte) -89);
+            var7 = var1.readString((byte) -89);
             var8 = tg.a((CharSequence) ((Object) var4_ref_String), false);
             if (var8 == null) {
               var8 = var4_ref_String;
@@ -549,8 +549,8 @@ final class rp {
             if (var6 == null) {
               var6 = new ml();
               bh.field_f.a(-1, var6, (long)var8.hashCode());
-              fieldTemp$0 = fn.field_d;
-              fn.field_d = fn.field_d + 1;
+              fieldTemp$0 = ClientException.field_d;
+              ClientException.field_d = ClientException.field_d + 1;
               var6.field_Mb = fieldTemp$0;
               jf.field_d.a(var6, false);
             }
@@ -573,15 +573,15 @@ final class rp {
               return;
             }
             if (var2 != 4) {
-              bd.a("F1: " + ci.a(0), (Throwable) null, false);
+              MouseInputHandler.a("F1: " + ci.a(0), (Throwable) null, false);
               ak.a((byte) -119);
               var3Lifetime1 = 67 % ((-12 - param0) / 48);
               return;
             }
             ge.field_zb = 1;
-            var3_ref = var1.f((byte) -119);
+            var3_ref = var1.readString((byte) -119);
             ta.field_ob = ((String) (var3_ref)).intern();
-            var4 = var1.g(31365);
+            var4 = var1.readUnsignedByte(31365);
             gi.a((byte) -97, var4);
             return;
           }
@@ -589,12 +589,12 @@ final class rp {
             ol.field_o = new sc(128);
             dc.field_Fb = 0;
           }
-          var3_refLifetime1 = var1.f((byte) -49);
+          var3_refLifetime1 = var1.readString((byte) -49);
           if (((String) (var3_refLifetime1)).equals("")) {
             var3_refLifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.f((byte) -14);
-          var5Lifetime1 = var1.f((byte) -45);
+          var4_ref_StringLifetime1 = var1.readString((byte) -14);
+          var5Lifetime1 = var1.readString((byte) -45);
           var6Lifetime1 = dn.a(var4_ref_StringLifetime1, false);
           if (null == var6Lifetime1) {
             var6Lifetime1 = dn.a(var5Lifetime1, false);
@@ -616,13 +616,13 @@ final class rp {
           var6Lifetime1.field_Nb = (String) (var3_refLifetime1);
           var6Lifetime1.field_Kb = var5Lifetime1;
           var6Lifetime1.field_Hb = var4_ref_StringLifetime1;
-          var6Lifetime1.a(true);
+          var6Lifetime1.unlink(true);
           var7_ref = (ml) (ro.field_M.c(116));
-          L15: while (true) {
+          scanLoop1: while (true) {
             if (var7_ref != null) {
               stackIn_55_0 = var6Lifetime1;
               if (var9 != 0) {
-                break L15;
+                break scanLoop1;
               }
               if (md.a(stackIn_55_0, (byte) -49, var7_ref)) {
                 var7_ref = (ml) (ro.field_M.b(6));
@@ -742,7 +742,7 @@ final class rp {
           if (fb.field_e != null) {
             fb.field_e.b((byte) 37);
           }
-          we.field_g[47] = vn.field_d[ll.field_k.b((byte) -1)];
+          we.field_g[47] = vn.field_d[FullscreenFocusCanvas.field_k.b((byte) -1)];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1085,7 +1085,7 @@ final class rp {
               return;
             }
           }
-          this.field_n = ej.a((byte) -66);
+          this.field_n = BufferedSocket.a((byte) -66);
           this.field_m[1] = 3;
           this.field_m[2] = 8;
           this.field_f = 0L;

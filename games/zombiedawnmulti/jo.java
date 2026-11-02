@@ -5,7 +5,7 @@ final class jo {
     static ma field_e;
     static String field_c;
     static int field_f;
-    static ja field_d;
+    static Sprite field_d;
     static String field_a;
     static int field_b;
 

@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vo extends nc {
-    static ja field_r;
+    static Sprite field_r;
     static String field_n;
     private int field_t;
     static cj field_m;
     static String field_s;
     static boolean field_q;
-    static ja field_p;
+    static Sprite field_p;
     static di field_o;
     static ip field_l;
 
     private final void a(String param0, int param1, int param2, int param3) {
         try {
-          fn.field_e.a();
+          ClientException.field_e.a();
           oo.b();
           if (param1 != -5) {
             this.h(-39);
@@ -26,7 +26,7 @@ final class vo extends nc {
           g.a(16777215);
           oo.i(5, 5, 0, 0, 640, 480);
           ah.field_e.a(param0, 60, param3, 520, 200, 5, 0, 1, 0, param2);
-          dl.field_h.b((byte) 100);
+          SocketConnector.field_h.b((byte) 100);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "vo.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -140,14 +140,14 @@ final class vo extends nc {
         if (param0 > -59) {
           field_o = (di) null;
         }
-        bm.a(true, 1, 127, sp.field_g);
+        LevelActorSpawner.a(true, 1, 127, sp.field_g);
     }
 
     private final void b(int param0, int param1, int param2) {
         jo.field_d.g(param0, param1);
-        e.field_e.field_k = param2 - param0;
-        e.field_e.field_g = param1 - 80;
-        kk.field_w.a(param2 - 10021, e.field_e);
+        SecondaryNodeDeque.field_e.field_k = param2 - param0;
+        SecondaryNodeDeque.field_e.field_g = param1 - 80;
+        kk.field_w.a(param2 - 10021, SecondaryNodeDeque.field_e);
         eq.field_c.a(param0 + 150, param1 + 50);
     }
 
@@ -289,12 +289,12 @@ final class vo extends nc {
           if (var3 < 256) {
             ah.field_e.a((String) (var2), 60, var4, 520, 200, 1, 0, var3, 1, 0, var5Lifetime1);
             if (var6Lifetime1 == 0) {
-              g.a(fn.field_e, 0, 0, var3);
+              g.a(ClientException.field_e, 0, 0, var3);
             }
           } else {
             ah.field_e.a((String) (var2), 60, var4, 520, 200, 1, 0, 1, 0, var5Lifetime1);
             if (var6Lifetime1 == 0) {
-              g.a(fn.field_e, 0, 0);
+              g.a(ClientException.field_e, 0, 0);
             }
           }
         }
@@ -304,7 +304,7 @@ final class vo extends nc {
     final static boolean e(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 1) {
-          field_r = (ja) null;
+          field_r = (Sprite) null;
         }
         stackIn_6_0 = (null != ki.field_h) && (pi.field_a == field_l);
         return stackIn_6_0;

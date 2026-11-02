@@ -3,18 +3,18 @@
  */
 final class ki {
     int field_q;
-    static ja field_k;
+    static Sprite field_k;
     static ic field_a;
     int field_c;
     int field_g;
-    ja field_b;
+    Sprite field_b;
     static String[][] field_o;
     static String field_n;
     static ul field_m;
     static String field_f;
     static String field_p;
     static String field_i;
-    static ej field_h;
+    static BufferedSocket field_h;
     static String field_j;
     static int[] field_d;
     static no field_e;
@@ -49,10 +49,10 @@ final class ki {
 
     final boolean b(byte param0) {
         if (param0 > 3) {
-          return this.field_b.b(this.field_q, this.field_g, bd.field_g, bo.field_d);
+          return this.field_b.b(this.field_q, this.field_g, MouseInputHandler.field_g, bo.field_d);
         }
         ki.b(-41);
-        return this.field_b.b(this.field_q, this.field_g, bd.field_g, bo.field_d);
+        return this.field_b.b(this.field_q, this.field_g, MouseInputHandler.field_g, bo.field_d);
     }
 
     final void a(boolean param0) {
@@ -67,11 +67,11 @@ final class ki {
           t.field_e = t.field_e - 1;
         }
         if (param0 != 26) {
-          field_h = (ej) null;
+          field_h = (BufferedSocket) null;
         }
-        if (km.field_cb != dl.field_h.field_f) {
-          vj.field_t = vj.field_t + (-km.field_cb + dl.field_h.field_f);
-          km.field_cb = dl.field_h.field_f;
+        if (km.field_cb != SocketConnector.field_h.field_f) {
+          vj.field_t = vj.field_t + (-km.field_cb + SocketConnector.field_h.field_f);
+          km.field_cb = SocketConnector.field_h.field_f;
         }
         if (t.field_e > 0) {
           lk.g((byte) 63);
@@ -167,7 +167,7 @@ final class ki {
         int var6Lifetime1Lifetime1;
         int var4Lifetime1Lifetime1;
         int var5Lifetime1Lifetime1;
-        this.field_b = new ja(137, 49);
+        this.field_b = new Sprite(137, 49);
         this.field_c = param0;
         this.field_g = param2;
         this.field_q = param1;
@@ -177,14 +177,14 @@ final class ki {
           if (32 > param0 ||
             param0 > 38) {
             var6 = 1993752;
-            if (ll.field_k.c(127, param0)) {
+            if (FullscreenFocusCanvas.field_k.c(127, param0)) {
               var7 = wa.field_b[-44 + (param0 + 26)];
             }
             var4 = 280577;
             var5 = 2306851;
             var8 = fh.field_g;
-            var9 = ll.field_k.field_t[param0];
-            if (ll.field_k.d(param0, 53)) {
+            var9 = FullscreenFocusCanvas.field_k.field_t[param0];
+            if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
               var8 = vo.field_n;
               var9 = cr.a(param0, -117);
             } else {
@@ -200,9 +200,9 @@ final class ki {
             oo.e(2, 33, 133, 14, 65793);
             oo.e(3, 34, var9, 12, var6);
             if (var7 != null) {
-              ((ja) (var7)).g(108, 5);
+              ((Sprite) (var7)).g(108, 5);
             }
-            if (!ll.field_k.c(127, param0)) {
+            if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
               var10 = ro.field_N;
             } else {
               var10 = gh.field_f[param0];
@@ -212,15 +212,15 @@ final class ki {
             g.d();
             return;
           }
-          if (ll.field_k.c(127, param0)) {
+          if (FullscreenFocusCanvas.field_k.c(127, param0)) {
             var7 = wa.field_b[-13 + param0];
           }
           var6Lifetime3 = 8783880;
           var5Lifetime3 = 5053184;
           var4Lifetime3 = 8135424;
           var8Lifetime3 = fh.field_g;
-          var9 = ll.field_k.field_t[param0];
-          if (ll.field_k.d(param0, 53)) {
+          var9 = FullscreenFocusCanvas.field_k.field_t[param0];
+          if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
             var8Lifetime3 = vo.field_n;
             var10Lifetime4 = var8Lifetime3;
             var8Lifetime3 = var10Lifetime4;
@@ -233,9 +233,9 @@ final class ki {
             oo.e(2, 33, 133, 14, 65793);
             oo.e(3, 34, var9, 12, var6Lifetime3);
             if (var7 != null) {
-              ((ja) (var7)).g(108, 5);
+              ((Sprite) (var7)).g(108, 5);
             }
-            if (!ll.field_k.c(127, param0)) {
+            if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
               var10Lifetime4 = ro.field_N;
             } else {
               var10Lifetime4 = gh.field_f[param0];
@@ -259,9 +259,9 @@ final class ki {
           oo.e(2, 33, 133, 14, 65793);
           oo.e(3, 34, var9, 12, var6Lifetime3);
           if (var7 != null) {
-            ((ja) (var7)).g(108, 5);
+            ((Sprite) (var7)).g(108, 5);
           }
-          if (!ll.field_k.c(127, param0)) {
+          if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
             var10Lifetime6 = ro.field_N;
           } else {
             var10Lifetime6 = gh.field_f[param0];
@@ -277,14 +277,14 @@ final class ki {
           if (32 > param0 ||
             param0 > 38) {
             var6Lifetime1 = 1993752;
-            if (ll.field_k.c(127, param0)) {
+            if (FullscreenFocusCanvas.field_k.c(127, param0)) {
               var7 = wa.field_b[-44 + (param0 + 26)];
             }
             var4Lifetime1 = 280577;
             var5Lifetime1 = 2306851;
             var8Lifetime1 = fh.field_g;
-            var9 = ll.field_k.field_t[param0];
-            if (ll.field_k.d(param0, 53)) {
+            var9 = FullscreenFocusCanvas.field_k.field_t[param0];
+            if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
               var8Lifetime1 = vo.field_n;
               var9 = cr.a(param0, -117);
             } else {
@@ -300,9 +300,9 @@ final class ki {
             oo.e(2, 33, 133, 14, 65793);
             oo.e(3, 34, var9, 12, var6Lifetime1);
             if (var7 != null) {
-              ((ja) (var7)).g(108, 5);
+              ((Sprite) (var7)).g(108, 5);
             }
-            if (!ll.field_k.c(127, param0)) {
+            if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
               var10Lifetime1 = ro.field_N;
             } else {
               var10Lifetime1 = gh.field_f[param0];
@@ -312,15 +312,15 @@ final class ki {
             g.d();
             return;
           }
-          if (ll.field_k.c(127, param0)) {
+          if (FullscreenFocusCanvas.field_k.c(127, param0)) {
             var7 = wa.field_b[-13 + param0];
           }
           var6Lifetime1Lifetime1 = 8783880;
           var5Lifetime1Lifetime1 = 5053184;
           var4Lifetime1Lifetime1 = 8135424;
           var8Lifetime1Lifetime1 = fh.field_g;
-          var9 = ll.field_k.field_t[param0];
-          if (ll.field_k.d(param0, 53)) {
+          var9 = FullscreenFocusCanvas.field_k.field_t[param0];
+          if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
             var8Lifetime1Lifetime1 = vo.field_n;
             var10Lifetime1Lifetime1 = var8Lifetime1Lifetime1;
             var8Lifetime1Lifetime1 = var10Lifetime1Lifetime1;
@@ -333,9 +333,9 @@ final class ki {
             oo.e(2, 33, 133, 14, 65793);
             oo.e(3, 34, var9, 12, var6Lifetime1Lifetime1);
             if (var7 != null) {
-              ((ja) (var7)).g(108, 5);
+              ((Sprite) (var7)).g(108, 5);
             }
-            if (!ll.field_k.c(127, param0)) {
+            if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
               var10Lifetime1Lifetime1 = ro.field_N;
             } else {
               var10Lifetime1Lifetime1 = gh.field_f[param0];
@@ -358,9 +358,9 @@ final class ki {
           oo.e(2, 33, 133, 14, 65793);
           oo.e(3, 34, var9, 12, var6Lifetime1Lifetime1);
           if (var7 != null) {
-            ((ja) (var7)).g(108, 5);
+            ((Sprite) (var7)).g(108, 5);
           }
-          if (!ll.field_k.c(127, param0)) {
+          if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
             var10Lifetime1Lifetime2 = ro.field_N;
           } else {
             var10Lifetime1Lifetime2 = gh.field_f[param0];
@@ -370,15 +370,15 @@ final class ki {
           g.d();
           return;
         }
-        if (ll.field_k.c(127, param0)) {
+        if (FullscreenFocusCanvas.field_k.c(127, param0)) {
           var7 = wa.field_b[param0];
         }
         var4Lifetime2 = 6575425;
         var5Lifetime2 = 3420451;
         var6Lifetime2 = 5524287;
         var8Lifetime2 = fh.field_g;
-        var9 = ll.field_k.field_t[param0];
-        if (ll.field_k.d(param0, 53)) {
+        var9 = FullscreenFocusCanvas.field_k.field_t[param0];
+        if (FullscreenFocusCanvas.field_k.d(param0, 53)) {
           var8Lifetime2 = vo.field_n;
           var9 = cr.a(param0, -117);
           var9 = var9 * 131 / cr.a(param0, -110);
@@ -389,9 +389,9 @@ final class ki {
           oo.e(2, 33, 133, 14, 65793);
           oo.e(3, 34, var9, 12, var6Lifetime2);
           if (var7 != null) {
-            ((ja) (var7)).g(108, 5);
+            ((Sprite) (var7)).g(108, 5);
           }
-          if (!ll.field_k.c(127, param0)) {
+          if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
             var10Lifetime2 = ro.field_N;
           } else {
             var10Lifetime2 = gh.field_f[param0];
@@ -412,9 +412,9 @@ final class ki {
         oo.e(2, 33, 133, 14, 65793);
         oo.e(3, 34, var9, 12, var6Lifetime2);
         if (var7 != null) {
-          ((ja) (var7)).g(108, 5);
+          ((Sprite) (var7)).g(108, 5);
         }
-        if (!ll.field_k.c(127, param0)) {
+        if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
           var10Lifetime3 = ro.field_N;
         } else {
           var10Lifetime3 = gh.field_f[param0];
@@ -426,7 +426,7 @@ final class ki {
 
     static {
         field_a = null;
-        field_k = new ja(1280, 960);
+        field_k = new Sprite(1280, 960);
         field_f = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
         field_p = "Security";
         field_i = "<%0> is not on your friend list.";

@@ -4,10 +4,10 @@
 final class qp extends un {
     private pm field_q;
     static byte[][] field_t;
-    static ja field_v;
+    static Sprite field_v;
     static String[] field_s;
     static String field_r;
-    static ja[] field_u;
+    static Sprite[] field_u;
     static ef field_w;
 
     public static void h(int param0) {
@@ -33,30 +33,30 @@ final class qp extends un {
         return oo.field_b - param2;
     }
 
-    final static ja[] a(int param0, int param1, int param2, int param3, int param4) {
-        ja[] var6 = new ja[9];
-        ja[] var5 = var6;
-        ja dupTemp$0 = k.a(-109, param1, param3);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = PacketBuffer.a(-109, param1, param3);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        ja dupTemp$1 = k.a(-125, param1, param4);
+        Sprite dupTemp$1 = PacketBuffer.a(-125, param1, param4);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param0 != 0) {
-          var6[4] = k.a(-124, 64, param0);
+          var6[4] = PacketBuffer.a(-124, 64, param0);
           if (param2 <= -55) {
             return var5;
           }
-          return (ja[]) null;
+          return (Sprite[]) null;
         }
         if (param2 <= -55) {
           return var5;
         }
-        return (ja[]) null;
+        return (Sprite[]) null;
     }
 
     final static void a(boolean param0, boolean param1) {

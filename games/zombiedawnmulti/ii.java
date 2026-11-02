@@ -5,13 +5,13 @@ abstract class ii {
     static boolean field_e;
     static ul field_a;
     static String field_b;
-    static ja field_c;
+    static Sprite field_c;
     static long field_d;
 
     final static void a(int param0, byte param1, int param2, String param3, long param4) {
         try {
           v.field_a = param3;
-          da.field_c = param4;
+          InflaterDecompressor.field_c = param4;
           vh.field_Hb = true;
           fh.field_n = param0;
           mi.field_Gb = param2;
@@ -132,11 +132,11 @@ abstract class ii {
           }
           var5 = ma.field_a;
           var5.b((byte) -35, param2);
-          var5.field_j = var5.field_j + 1;
-          var4 = var5.field_j;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(124, 0);
-          var5.a(param0, (byte) 105);
-          var5.e(21, -var4 + var5.field_j);
+          var5.writeString(param0, (byte) 105);
+          var5.e(21, -var4 + var5.position);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -166,11 +166,11 @@ abstract class ii {
         try {
           if (-1 == hl.field_a &&
             tn.field_z == -1) {
-            hl.field_a = bd.field_g;
+            hl.field_a = MouseInputHandler.field_g;
             tn.field_z = bo.field_d;
           }
           boolean decompiledFrameRemainder0 = true;
-          l.field_a = l.field_a + 1;
+          RasterBuffer.field_a = RasterBuffer.field_a + 1;
           if (param1 != null) {
             decompiledFrameRemainder0 = !(param1.equals(kg.field_k));
           } else {
@@ -178,8 +178,8 @@ abstract class ii {
           }
           if (decompiledFrameRemainder0) {
             if (!cb.field_l) {
-              if (l.field_a >= um.field_h) {
-                stackIn_17_0 = (l.field_a < br.field_a + um.field_h) ? 1 : 0;
+              if (RasterBuffer.field_a >= um.field_h) {
+                stackIn_17_0 = (RasterBuffer.field_a < IntrusiveNode.field_a + um.field_h) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -188,15 +188,15 @@ abstract class ii {
             }
             var2_int = stackIn_17_0;
             if (param1 == null) {
-              l.field_a = 0;
+              RasterBuffer.field_a = 0;
             } else {
               if (cb.field_l) {
-                l.field_a = um.field_h;
+                RasterBuffer.field_a = um.field_h;
               } else {
                 if (var2_int != 0) {
-                  l.field_a = um.field_h;
+                  RasterBuffer.field_a = um.field_h;
                 } else {
-                  l.field_a = 0;
+                  RasterBuffer.field_a = 0;
                 }
               }
             }
@@ -212,9 +212,9 @@ abstract class ii {
           }
           kg.field_k = param1;
           if (!cb.field_l &&
-            um.field_h > l.field_a &&
+            um.field_h > RasterBuffer.field_a &&
             wc.field_J) {
-            l.field_a = 0;
+            RasterBuffer.field_a = 0;
             bl.field_c = tn.field_z;
             tf.field_Db = hl.field_a;
           }
@@ -222,8 +222,8 @@ abstract class ii {
             ii.b((byte) -126);
           }
           if (cb.field_l &&
-            ti.field_I == l.field_a) {
-            l.field_a = 0;
+            ti.field_I == RasterBuffer.field_a) {
+            RasterBuffer.field_a = 0;
             cb.field_l = false;
           }
           tn.field_z = -1;

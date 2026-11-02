@@ -4,7 +4,7 @@
 class sq extends gn {
     static int field_R;
     private String[] field_M;
-    private th field_T;
+    private IntrusiveDeque field_T;
     static boolean field_N;
     static int field_S;
     private wi field_V;
@@ -13,7 +13,7 @@ class sq extends gn {
     static int[] field_U;
     static String field_P;
 
-    final static void a(int param0, int param1, int param2, int param3, ja param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -28,7 +28,7 @@ class sq extends gn {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        ja var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
@@ -62,9 +62,9 @@ class sq extends gn {
             oo.a(var29);
             param4.a();
             oo.e(var29[0], var29[1], var29[2], var29[3]);
-            var13 = param6 + param7 * param4.field_x;
-            var14 = param4.field_x - param1;
-            var25 = var21.field_B;
+            var13 = param6 + param7 * param4.width;
+            var14 = param4.width - param1;
+            var25 = var21.pixels;
             var22 = var25;
             var15 = var22;
             for (var16 = param7; param3 + param7 > var16; var16++) {
@@ -76,15 +76,15 @@ class sq extends gn {
                     oo.d(var17, var16, param2, param5);
                   } else {
                     if (var16 > 0 &&
-                      0 == var15[var13 - param4.field_x]) {
+                      0 == var15[var13 - param4.width]) {
                       oo.d(var17, var16, param2, param5);
                     } else {
-                      if (param4.field_x - 1 > var17 &&
+                      if (param4.width - 1 > var17 &&
                         var15[var13 + 1] == 0) {
                         oo.d(var17, var16, param2, param5);
                       } else {
-                        if (-1 + param4.field_w > var16 &&
-                          var15[var13 + param4.field_x] == 0) {
+                        if (-1 + param4.height > var16 &&
+                          var15[var13 + param4.width] == 0) {
                           oo.d(var17, var16, param2, param5);
                         }
                       }
@@ -95,7 +95,7 @@ class sq extends gn {
               }
               var13 = var13 + var14;
             }
-            var21.g(-param4.field_r, -param4.field_y);
+            var21.g(-param4.offsetX, -param4.field_y);
             oo.a(var30, var10, var11);
             oo.b(var29);
             return;
@@ -151,10 +151,10 @@ class sq extends gn {
         return null;
     }
 
-    void a(int param0, cf param1, int param2, int param3) {
+    void a(int param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
-        cf var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -163,12 +163,12 @@ class sq extends gn {
         try {
           super.a(param0 ^ 0, param1, param2, param3);
           if (param0 != -5407) {
-            var7 = (cf) null;
-            this.a(93, (cf) null, 109, -90);
+            var7 = (UiWidget) null;
+            this.a(93, (UiWidget) null, 109, -90);
           }
           this.field_V = null;
           if (this.field_l) {
-            var5_int = bd.field_g - (param2 + this.field_y);
+            var5_int = MouseInputHandler.field_g - (param2 + this.field_y);
             var6 = bo.field_d + (-param3 - this.field_i);
             this.field_V = this.a((byte) 23, var5_int, var6);
           }
@@ -191,7 +191,7 @@ class sq extends gn {
         if (param2 != -4) {
           field_S = 74;
         }
-        this.b(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.field_h)).a((byte) 39, (cf) (this)));
+        this.b(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.listener)).a((byte) 39, (UiWidget) (this)));
     }
 
     final void a(byte param0) {
@@ -214,13 +214,13 @@ class sq extends gn {
         int var16;
         int var7Lifetime1;
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
-        this.field_T = new th();
+        this.field_T = new IntrusiveDeque();
         var2 = 0;
         if (param0 != 94) {
           this.a((byte) -110);
         }
-        var3 = (rk) ((Object) this.field_h);
-        var4 = var3.a((cf) (this), -102);
+        var3 = (rk) ((Object) this.listener);
+        var4 = var3.a((UiWidget) (this), -102);
         while (true) {
           var5 = this.field_j.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -283,7 +283,7 @@ class sq extends gn {
         return this.field_M[this.field_V.field_l];
     }
 
-    boolean a(cf param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -308,11 +308,11 @@ class sq extends gn {
         }
     }
 
-    sq(String param0, nl param1) {
+    sq(String param0, WidgetActionListener param1) {
         super(param0, (bj) null);
         this.field_V = null;
         try {
-          this.field_h = param1;
+          this.listener = param1;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -325,11 +325,11 @@ class sq extends gn {
         if (0 != param2) {
           return;
         }
-        rk var5 = (rk) ((Object) this.field_h);
+        rk var5 = (rk) ((Object) this.listener);
         wi var6 = this.field_V;
         if (var6 != null) {
-          var7 = var5.a(false, param3, (cf) (this));
-          var8 = var5.a((cf) (this), 0, param1);
+          var7 = var5.a(false, param3, (UiWidget) (this));
+          var8 = var5.a((UiWidget) (this), 0, param1);
           do {
             hl.a(-2 + var6.field_f + var8, var7 - (-var6.field_k + 2), (byte) 126, var6.field_j + 2, 2 + var6.field_n);
             var6 = var6.field_i;
@@ -461,7 +461,7 @@ class sq extends gn {
             if (var4 >= 0) {
               var1_int = var1_int + al.field_bb;
               if (var4 != aq.field_B.field_d) {
-                stackIn_44_0 = mc.field_a;
+                stackIn_44_0 = RandomAccessCacheFile.field_a;
               } else {
                 stackIn_44_0 = en.field_d;
               }
@@ -476,7 +476,7 @@ class sq extends gn {
               var1_int = var1_int + (al.field_bb + (wk.field_G + me.field_h));
             } else {
               uq.field_f.c(var6, var8Lifetime1, var1_int + bf.field_g, var5, -1);
-              var1_int = var1_int + se.field_C;
+              var1_int = var1_int + WidgetContainer.field_C;
             }
           }
           var3Lifetime1 = -59 % ((param0 - 38) / 57);
@@ -488,7 +488,7 @@ class sq extends gn {
         }
     }
 
-    final static void a(int param0, ja[] param1, boolean param2) {
+    final static void a(int param0, Sprite[] param1, boolean param2) {
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce extends br {
+final class ce extends IntrusiveNode {
     int field_t;
     static String field_o;
     private int field_j;
-    private ja field_f;
+    private Sprite field_f;
     private lq field_p;
     private int field_n;
     int field_s;
@@ -35,9 +35,9 @@ final class ce extends br {
         int var6 = 0;
         nm var6_ref_nm = null;
         int var7_int = 0;
-        th var7 = null;
+        IntrusiveDeque var7 = null;
         lk var7_ref = null;
-        br var8 = null;
+        IntrusiveNode var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -59,12 +59,12 @@ final class ce extends br {
             this.field_h = -1 + this.field_i.field_i.field_d;
           }
           this.field_j = 0;
-          if (o.field_j) {
+          if (IsaacRandom.field_j) {
             this.field_p = new lq();
             if (this.field_q != 1) {
               var4 = 48 * ip.field_f;
               var5 = ip.field_f * 48;
-              this.field_f = new ja(var4, var5);
+              this.field_f = new Sprite(var4, var5);
               var6 = this.field_t;
               while (this.field_n >= var6) {
                 if (var11 == 0) {
@@ -144,7 +144,7 @@ final class ce extends br {
                   while (2 > var6Lifetime1) {
                     var7_ref = p.a(var5Lifetime1 * 24, var4Lifetime1 * 24, 100, true);
                     this.field_p.a(29664, var7_ref);
-                    op.field_m.field_K.a(-25612, var7_ref);
+                    op.field_m.characters.a(-25612, var7_ref);
                     var6Lifetime1++;
                   }
                 }
@@ -180,7 +180,7 @@ final class ce extends br {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
         try {
-          nq.field_t.field_wb = param8;
+          SpriteState.field_t.field_wb = param8;
           if (param4 < 109) {
             ce.a(-64);
           }
@@ -194,14 +194,14 @@ final class ce extends br {
           }
           var9_int = 495;
           var10 = 5;
-          br.field_c.a(param0, var10, var9_int - 10, 5, -3344);
-          ec.field_b.a(param0, 0, br.field_c.field_zb - ua.field_E.field_zb, 0, -3344);
+          IntrusiveNode.field_c.a(param0, var10, var9_int - 10, 5, -3344);
+          ec.field_b.a(param0, 0, IntrusiveNode.field_c.field_zb - ua.field_E.field_zb, 0, -3344);
           var10 = var10 + (param6 + param0);
           ua.field_E.a(param0, 0, ua.field_E.field_zb, ec.field_b.field_zb, -3344);
           dp.field_c.a(param7, var10, dp.field_c.e(0), 5, -3344);
           var11 = jk.field_d.e(0);
           jk.field_d.a(param7, var10, var11, -5 + var9_int - var11, -3344);
-          nq.field_t.a(param3, 0, var9_int, 0, -3344);
+          SpriteState.field_t.a(param3, 0, var9_int, 0, -3344);
           var12 = 5 + var10 + param7;
           re.field_a.a(var12, param3, var9_int, 0, -3344);
           var12 = var12 + param3;
@@ -376,9 +376,9 @@ final class ce extends br {
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_40_0;
         int var2_int = 0;
-        qa var2 = null;
+        DualLinkNode var2 = null;
         RuntimeException var2_ref = null;
-        qa var3 = null;
+        DualLinkNode var3 = null;
         int var4 = 0;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -434,7 +434,7 @@ final class ce extends br {
               }
               if (stackIn_48_0 >= -1) {
                 this.d((byte) 87);
-                this.a(true);
+                this.unlink(true);
                 return true;
               }
             }
@@ -472,7 +472,7 @@ final class ce extends br {
             ce.a(-36, 94, -24, 32, (byte) 68, -15, -48, 125, (String) null);
           }
           var2_int = this.field_t;
-          L1: while (true) {
+          scanLoop1: while (true) {
             stackIn_6_0 = ~this.field_n;
             stackIn_6_1 = ~var2_int;
             if (stackIn_6_0 <= stackIn_6_1) {
@@ -498,7 +498,7 @@ final class ce extends br {
                 var3++;
               }
               var2_int++;
-              continue L1;
+              continue scanLoop1;
             }
             break;
           }
@@ -512,7 +512,7 @@ final class ce extends br {
 
     final static void c(byte param0) {
         try {
-          cb.a((String) null, 32, mc.field_g);
+          cb.a((String) null, 32, RandomAccessCacheFile.field_g);
           if (param0 != -123) {
             ce.a(79);
           }

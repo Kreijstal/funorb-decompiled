@@ -280,7 +280,7 @@ final class c {
         try {
           var4_int = -1;
           for (var5 = param3; param1 > var5; var5++) {
-            var4_int = var4_int >>> 8 ^ ed.field_a[255 & (param0[var5] ^ var4_int)];
+            var4_int = var4_int >>> 8 ^ LevelFileCatalog.field_a[255 & (param0[var5] ^ var4_int)];
           }
           if (!param2) {
             c.a(104);

@@ -23,7 +23,7 @@ final class hc {
           if (!param0) {
             field_c = -66;
           }
-          var2 = new ca(param1, k.field_i, qj.field_o, oq.field_w, vj.field_p, tp.field_t, qp.field_t);
+          var2 = new ca(param1, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, tp.field_t, qp.field_t);
           fd.h((byte) 125);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -52,12 +52,12 @@ final class hc {
         field_b = null;
     }
 
-    final static ja[] a(ja[] param0, int param1) {
+    final static Sprite[] a(Sprite[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ja var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        ja[] stackIn_5_0 = null;
+        Sprite[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -67,11 +67,11 @@ final class hc {
           for (var2_int = param1; param0.length > var2_int; var2_int++) {
             var3 = param0[var2_int];
             param0[var2_int].field_y = 0;
-            var3.field_r = 0;
-            param0[var2_int].field_z = param0[var2_int].field_x;
-            param0[var2_int].field_u = param0[var2_int].field_w;
+            var3.offsetX = 0;
+            param0[var2_int].fullWidth = param0[var2_int].width;
+            param0[var2_int].field_u = param0[var2_int].height;
           }
-          stackIn_5_0 = (ja[]) (param0);
+          stackIn_5_0 = (Sprite[]) (param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -102,8 +102,8 @@ final class hc {
             stackIn_2_0 = (ae) null;
             return stackIn_2_0;
           }
-          var2_int = param1.d((byte) 69);
-          var3 = param1.d((byte) 69);
+          var2_int = param1.readUnsignedShort((byte) 69);
+          var3 = param1.readUnsignedShort((byte) 69);
           stackIn_4_0 = new aj(var2_int, var3);
           return (ae) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

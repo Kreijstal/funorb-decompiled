@@ -6,7 +6,7 @@ final class km extends sq {
     private j field_Y;
     static boolean[] field_ab;
     private String field_bb;
-    private ja field_Z;
+    private Sprite field_Z;
     private int field_X;
     static int field_cb;
 
@@ -19,10 +19,10 @@ final class km extends sq {
         int var10;
         int var11;
         int var12;
-        ja var15;
-        ja var16;
-        ja var17;
-        ja var18;
+        Sprite var15;
+        Sprite var16;
+        Sprite var17;
+        Sprite var18;
         int var11Lifetime1;
         int var12Lifetime1;
         re var6Lifetime1;
@@ -43,23 +43,23 @@ final class km extends sq {
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime1 = this.field_Y.d(97);
-        var8 = (rk) ((Object) this.field_h);
+        var8 = (rk) ((Object) this.listener);
         var9 = this.field_y + param3;
-        var10 = var8.a((cf) (this), 0, param1) + (var8.a((cf) (this), param0 - 99).a((byte) -111) >> 1);
+        var10 = var8.a((UiWidget) (this), 0, param1) + (var8.a((UiWidget) (this), param0 - 99).a((byte) -111) >> 1);
         if (h.field_H == var6Lifetime1) {
           var18 = rj.field_I[0];
-          var11 = var18.field_z << 1;
+          var11 = var18.fullWidth << 1;
           var12 = var18.field_u << 1;
           if (this.field_Z == null) {
-            this.field_Z = new ja(var11, var12);
+            this.field_Z = new Sprite(var11, var12);
             r.a(0, this.field_Z);
           } else {
-            if (this.field_Z.field_x < var11) {
-              this.field_Z = new ja(var11, var12);
+            if (this.field_Z.width < var11) {
+              this.field_Z = new Sprite(var11, var12);
               r.a(0, this.field_Z);
             } else {
-              if (this.field_Z.field_w < var12) {
-                this.field_Z = new ja(var11, var12);
+              if (this.field_Z.height < var12) {
+                this.field_Z = new Sprite(var11, var12);
                 r.a(0, this.field_Z);
               } else {
                 r.a(0, this.field_Z);
@@ -67,36 +67,36 @@ final class km extends sq {
               }
             }
           }
-          var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -this.field_X << 10, 4096);
+          var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_X << 10, 4096);
           ql.a(true);
-          this.field_Z.e(var9 - (var18.field_z >> 1), var10 - var18.field_u, 256);
+          this.field_Z.e(var9 - (var18.fullWidth >> 1), var10 - var18.field_u, 256);
           return;
         }
         if (ua.field_I != var6Lifetime1) {
           if (jq.field_b == var6Lifetime1) {
             var15 = rj.field_I[2];
-            var15.e(var9, var10 - (var15.field_w >> 1), 256);
+            var15.e(var9, var10 - (var15.height >> 1), 256);
             return;
           }
           if (var6Lifetime1 == db.field_b) {
             var16 = rj.field_I[1];
-            var16.e(var9, -(var16.field_w >> 1) + var10, 256);
+            var16.e(var9, -(var16.height >> 1) + var10, 256);
           }
           return;
         }
         var17 = rj.field_I[0];
-        var11Lifetime1 = var17.field_z << 1;
+        var11Lifetime1 = var17.fullWidth << 1;
         var12Lifetime1 = var17.field_u << 1;
         if (this.field_Z == null) {
-          this.field_Z = new ja(var11Lifetime1, var12Lifetime1);
+          this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
           r.a(0, this.field_Z);
         } else {
-          if (this.field_Z.field_x < var11Lifetime1) {
-            this.field_Z = new ja(var11Lifetime1, var12Lifetime1);
+          if (this.field_Z.width < var11Lifetime1) {
+            this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
             r.a(0, this.field_Z);
           } else {
-            if (this.field_Z.field_w < var12Lifetime1) {
-              this.field_Z = new ja(var11Lifetime1, var12Lifetime1);
+            if (this.field_Z.height < var12Lifetime1) {
+              this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
               r.a(0, this.field_Z);
             } else {
               r.a(0, this.field_Z);
@@ -104,15 +104,15 @@ final class km extends sq {
             }
           }
         }
-        var17.a(112, 144, var17.field_z << 4, var17.field_u << 4, -this.field_X << 10, 4096);
+        var17.a(112, 144, var17.fullWidth << 4, var17.field_u << 4, -this.field_X << 10, 4096);
         ql.a(true);
-        this.field_Z.e(var9 - (var17.field_z >> 1), var10 - var17.field_u, 256);
+        this.field_Z.e(var9 - (var17.fullWidth >> 1), var10 - var17.field_u, 256);
         return;
     }
 
     final static void a(int param0, byte param1) {
         int var2_int = 0;
-        br var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         ab var5 = null;
         RuntimeException decompiledCaughtException = null;
@@ -138,7 +138,7 @@ final class km extends sq {
         }
     }
 
-    final void a(int param0, cf param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_X = this.field_X + 1;
           if (param0 != -5407) {
@@ -169,7 +169,7 @@ final class km extends sq {
           pa.field_O = new cj(0L, (cj) null);
           dp.field_b = new cj(0L, vo.field_m);
           dp.field_b.field_R = 1;
-          bi.field_f = new cj(0L, vd.field_a, qd.field_r);
+          bi.field_f = new cj(0L, vd.field_a, GameScreen.field_r);
           jb.field_c = new cj(0L, pn.field_g, ko.field_h);
           lk.field_J = new cj(0L, cm.field_b);
           if (param1 > -106) {
@@ -199,7 +199,7 @@ final class km extends sq {
         return null;
     }
 
-    final boolean a(cf param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -284,7 +284,7 @@ final class km extends sq {
                 id.field_D = id.field_D + 1;
               }
               var10_ref_String = bh.a(-126, var8_ref_ka);
-              var11 = var10_ref_String + fm.c(var8_ref_ka.field_d);
+              var11 = var10_ref_String + BitmapFont.c(var8_ref_ka.field_d);
               var12 = cj.a(var8_ref_ka, (byte) -63);
               var8_ref_ka.field_q = new cj(0L, qq.field_f, var11);
               var6 = var6 + param2;

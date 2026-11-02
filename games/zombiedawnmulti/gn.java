@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class gn extends cf {
+class gn extends UiWidget {
     private boolean field_H;
     static java.util.zip.CRC32 field_B;
     boolean field_G;
@@ -16,30 +16,30 @@ class gn extends cf {
     static String field_C;
     static String field_E;
 
-    gn(String param0, nl param1, bj param2) {
+    gn(String param0, WidgetActionListener param1, bj param2) {
         super(param0, param1, param2);
         this.field_J = true;
         this.field_F = true;
         this.field_H = false;
     }
 
-    void a(int param0, cf param1, int param2, int param3) {
+    void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_u != 0 &&
             this.field_u != pq.field_f) {
-            if (this.a(92, param2, bd.field_g, bo.field_d, param3) &&
+            if (this.a(92, param2, MouseInputHandler.field_g, bo.field_d, param3) &&
               pq.field_f == 0) {
-              this.a((byte) -49, this.field_u, bd.field_g - param2, bo.field_d - param3);
+              this.a((byte) -49, this.field_u, MouseInputHandler.field_g - param2, bo.field_d - param3);
             }
-            this.a(bd.field_g, param1, param3, bo.field_d, true, param2);
+            this.a(MouseInputHandler.field_g, param1, param3, bo.field_d, true, param2);
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "gn.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    boolean a(cf param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -52,7 +52,7 @@ class gn extends cf {
             this.field_H = true;
             if (null != this.field_A &&
               this.field_A instanceof om) {
-              ((om) (this.field_A)).a(this.field_H, true, (cf) (this));
+              ((om) (this.field_A)).a(this.field_H, true, (UiWidget) (this));
             }
             if (param1 == 0) {
               return true;
@@ -112,7 +112,7 @@ class gn extends cf {
         }
     }
 
-    boolean a(int param0, char param1, cf param2, int param3) {
+    boolean a(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -188,12 +188,12 @@ class gn extends cf {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.d((byte) 69);
+          var2_int = param1.readUnsignedShort((byte) 69);
           if (param0 != -1) {
             field_D = (String) null;
           }
-          var3 = param1.d((byte) 69);
-          var4 = param1.g(31365);
+          var3 = param1.readUnsignedShort((byte) 69);
+          var4 = param1.readUnsignedByte(31365);
           stackIn_3_0 = ak.a(var4, (byte) -94, var2_int, var3);
           return (ae) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -210,7 +210,7 @@ class gn extends cf {
         }
     }
 
-    final void a(int param0, cf param1, int param2, int param3, boolean param4, int param5) {
+    final void a(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
         try {
           if (null != this.field_A &&
             this.field_A instanceof ph) {
@@ -237,7 +237,7 @@ class gn extends cf {
             return;
           }
           if (this.field_A instanceof om) {
-            ((om) (this.field_A)).a(this.field_H, true, (cf) (this));
+            ((om) (this.field_A)).a(this.field_H, true, (UiWidget) (this));
             return;
           }
           return;
@@ -250,7 +250,7 @@ class gn extends cf {
           return;
         }
         if (this.field_A instanceof om) {
-          ((om) (this.field_A)).a(this.field_H, true, (cf) (this));
+          ((om) (this.field_A)).a(this.field_H, true, (UiWidget) (this));
           return;
         }
     }
@@ -259,7 +259,7 @@ class gn extends cf {
         this(param0, ra.field_o.field_n, param1);
     }
 
-    boolean a(int param0, int param1, int param2, cf param3, int param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         String var9 = null;
         RuntimeException stackIn_15_0 = null;
@@ -323,7 +323,7 @@ class gn extends cf {
             return stackIn_3_0;
           }
           if (2 != ge.field_zb) {
-            stackIn_6_0 = cf.field_p;
+            stackIn_6_0 = UiWidget.field_p;
             return stackIn_6_0;
           }
           if (param1 < 70) {
@@ -335,7 +335,7 @@ class gn extends cf {
             stackIn_13_0 = vl.a(ki.field_i, new String[]{param0}, 2);
             return stackIn_13_0;
           }
-          ro.field_M.a((byte) 120, (br) (var8));
+          ro.field_M.a((byte) 120, (IntrusiveNode) (var8));
           while (true) {
             var7 = (ml) (ro.field_M.b(6));
             if (var7 != null) {
@@ -344,16 +344,16 @@ class gn extends cf {
             }
             break;
           }
-          var8.a(true);
+          var8.unlink(true);
           var8.a(-4564);
           dc.field_Fb = dc.field_Fb - 1;
           var9 = ma.field_a;
           var9.b((byte) -35, param2);
-          var9.field_j = var9.field_j + 1;
-          var5 = var9.field_j;
+          var9.position = var9.position + 1;
+          var5 = var9.position;
           var9.a(-93, 1);
-          var9.a(param0, (byte) 105);
-          var9.e(73, -var5 + var9.field_j);
+          var9.writeString(param0, (byte) 105);
+          var9.e(73, -var5 + var9.position);
           stackIn_18_0 = null;
           return (String) (stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -454,7 +454,7 @@ class gn extends cf {
         this.field_J = true;
         this.field_F = true;
         this.field_H = false;
-        this.field_h = ra.field_o.field_a;
+        this.listener = ra.field_o.field_a;
     }
 
     static {

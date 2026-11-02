@@ -7,7 +7,7 @@ final class hh {
     static boolean field_m;
     private int field_k;
     private int field_j;
-    static ja field_h;
+    static Sprite field_h;
     private int field_f;
     private int field_i;
     private int field_g;
@@ -61,7 +61,7 @@ final class hh {
           }
           return;
         }
-        field_h = (ja) null;
+        field_h = (Sprite) null;
         this.field_k = 0;
         if (this.field_a) {
           this.field_d = param2;
@@ -476,8 +476,8 @@ final class hh {
           if (sq.field_Q > 0) {
             sq.field_Q = sq.field_Q - 1;
           } else {
-            if (da.field_a > 0) {
-              da.field_a = da.field_a - 1;
+            if (InflaterDecompressor.field_a > 0) {
+              InflaterDecompressor.field_a = InflaterDecompressor.field_a - 1;
             }
           }
         }
@@ -485,12 +485,12 @@ final class hh {
           v.a(param0 + 199);
         }
         if (sq.field_Q > 0) {
-          mf.a(sq.field_Q, false);
+          MouseWheelInput.a(sq.field_Q, false);
         }
-        if (param0 >= da.field_a) {
+        if (param0 >= InflaterDecompressor.field_a) {
           return;
         }
-        mf.a(da.field_a, false);
+        MouseWheelInput.a(InflaterDecompressor.field_a, false);
     }
 
     public static void a(boolean param0) {

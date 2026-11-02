@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ha extends br {
+final class ha extends IntrusiveNode {
     static oi[] field_j;
     static String field_h;
     int field_f;
@@ -12,7 +12,7 @@ final class ha extends br {
     static String field_n;
     static String field_k;
     static ao field_i;
-    static ja field_l;
+    static Sprite field_l;
 
     public static void a(int param0) {
         field_l = null;

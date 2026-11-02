@@ -4,7 +4,7 @@
 final class pk {
     static int[] field_a;
     static jb field_b;
-    static ja field_c;
+    static Sprite field_c;
 
     final static cj b(int param0) {
         if (param0 != -11834) {

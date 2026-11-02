@@ -13,7 +13,7 @@ final class pb {
     static int field_d;
 
     final static boolean a(int param0, int param1, int param2) {
-        if (!ch.a(param2, false)) {
+        if (!IntrusiveDequeCursor.a(param2, false)) {
           return false;
         }
         if (param1 != -20) {
@@ -28,11 +28,11 @@ final class pb {
         return false;
     }
 
-    final static ja[] a(String param0, ul param1, int param2, String param3) {
+    final static Sprite[] a(String param0, ul param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ja[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

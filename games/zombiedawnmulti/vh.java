@@ -5,25 +5,25 @@ final class vh extends cj {
     static String field_Nb;
     static boolean field_Mb;
     int field_Ob;
-    static ej field_Gb;
+    static BufferedSocket field_Gb;
     private int field_Jb;
     static String field_Fb;
     static boolean field_Hb;
     static ri field_Lb;
     static String[] field_Ib;
-    private ja field_Kb;
+    private Sprite field_Kb;
 
     final void j(int param0) {
         int var2;
         int var3;
-        var2 = bd.field_g - this.field_x;
+        var2 = MouseInputHandler.field_g - this.field_x;
         var3 = -this.field_Q + bo.field_d;
         if ((param0 & jf.field_e) != 0 &&
           var3 >= 0 &&
           var3 < this.field_z) {
           if (var2 >= 0 &&
             this.field_zb > var2) {
-            this.field_Ob = this.field_Kb.field_B[this.field_Kb.field_x * var3 + var2];
+            this.field_Ob = this.field_Kb.pixels[this.field_Kb.width * var3 + var2];
           }
           if (4 + this.field_zb <= var2 &&
             this.field_zb + 12 > var2) {
@@ -46,7 +46,7 @@ final class vh extends cj {
             field_Hb = false;
           }
           if (!param0) {
-            stackIn_6_0 = e.field_c.a(param2);
+            stackIn_6_0 = SecondaryNodeDeque.field_c.a(param2);
             return stackIn_6_0;
           }
           stackIn_4_0 = wn.field_u.a(param2);
@@ -69,7 +69,7 @@ final class vh extends cj {
         super(param0, param1, param2, param3, param4, param5, (String) null);
         this.field_Jb = 190;
         try {
-          this.field_Kb = new ja(param4, param5);
+          this.field_Kb = new Sprite(param4, param5);
           this.a(this.field_Kb, 12);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "vh.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -92,16 +92,16 @@ final class vh extends cj {
         this.field_Kb.c(this.field_x, this.field_Q);
         oo.a(4 + this.field_zb + this.field_x, this.field_Q, 8, this.field_z, 16777215, 4671303);
         var4 = 18 / ((param0 - 16) / 42);
-        var2 = -this.field_x + bd.field_g;
+        var2 = -this.field_x + MouseInputHandler.field_g;
         var3 = bo.field_d - this.field_Q;
         if ((jf.field_e & 1) != 0 &&
           var3 >= 0 && !(this.field_z <= var3) && (var2 >= 0 &&
           var2 < this.field_zb)) {
-          oo.c(bd.field_g, bo.field_d, 2, 0);
+          oo.c(MouseInputHandler.field_g, bo.field_d, 2, 0);
         }
     }
 
-    private final void a(ja param0, int param1) {
+    private final void a(Sprite param0, int param1) {
         int var4 = 0;
         int var3_int = 0;
         int var5 = 0;
@@ -118,11 +118,11 @@ final class vh extends cj {
           if (param1 != 12) {
             vh.c((byte) 47);
           }
-          while (param0.field_w > var3_int) {
-            for (var4 = 0; var4 < param0.field_x; var4++) {
-              var5 = var4 * 256 / param0.field_x;
-              var6 = -(var3_int * 256 / param0.field_w) + 255;
-              param0.field_B[var3_int * param0.field_x + var4] = gi.a(var6, this.field_Jb, var5, (byte) -115);
+          while (param0.height > var3_int) {
+            for (var4 = 0; var4 < param0.width; var4++) {
+              var5 = var4 * 256 / param0.width;
+              var6 = -(var3_int * 256 / param0.height) + 255;
+              param0.pixels[var3_int * param0.width + var4] = gi.a(var6, this.field_Jb, var5, (byte) -115);
             }
             var3_int++;
           }

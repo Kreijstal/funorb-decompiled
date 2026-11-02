@@ -41,8 +41,8 @@ final class wf extends ae {
     final void a(int param0, boolean param1, int param2, int param3) {
         oo.d(-24 + (this.field_p >> 16) - param2, -24 - param0 + (this.field_s >> 16), 1 + (-param3 + this.field_f) / 5, 16711680, 128);
         if (!param1) {
-          qd var6 = (qd) null;
-          this.a(106, (qd) null);
+          GameScreen var6 = (GameScreen) null;
+          this.a(106, (GameScreen) null);
         }
     }
 
@@ -83,12 +83,12 @@ final class wf extends ae {
         }
     }
 
-    final void a(int param0, qd param1) {
-        wb stackIn_76_0 = null;
+    final void a(int param0, GameScreen param1) {
+        GameCharacter stackIn_76_0 = null;
         boolean stackIn_77_1 = false;
-        qd stackIn_80_0 = null;
+        GameScreen stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
-        qd stackIn_85_0 = null;
+        GameScreen stackIn_85_0 = null;
         int stackIn_85_1 = 0;
         boolean stackIn_86_2 = false;
         RuntimeException stackIn_95_0 = null;
@@ -98,11 +98,11 @@ final class wf extends ae {
         int var3_int = 0;
         id var3 = null;
         RuntimeException var3_ref = null;
-        wb var4 = null;
+        GameCharacter var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        wb var8 = null;
+        GameCharacter var8 = null;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (this.field_i) {
@@ -163,9 +163,9 @@ final class wf extends ae {
             var6 = this.field_q;
             switch (var6) {
               case 13:
-                stackIn_80_0 = (qd) (param1);
+                stackIn_80_0 = (GameScreen) (param1);
                 stackIn_81_1 = (this.field_o == 36);
-                ((qd) (Object) stackIn_80_0).b(stackIn_81_1, 0, this.field_s, this.field_p);
+                ((GameScreen) (Object) stackIn_80_0).b(stackIn_81_1, 0, this.field_s, this.field_p);
                 break;
               case 15:
               case 17:
@@ -183,10 +183,10 @@ final class wf extends ae {
                     param1.b(this.field_p, -106, this.field_s, this.field_j);
                     break;
                   }
-                  stackIn_85_0 = (qd) (param1);
+                  stackIn_85_0 = (GameScreen) (param1);
                   stackIn_85_1 = this.field_p;
                   stackIn_86_2 = (32 == this.field_o);
-                  ((qd) (Object) stackIn_85_0).a(stackIn_85_1, stackIn_86_2, this.field_s, (byte) -40, this.field_j);
+                  ((GameScreen) (Object) stackIn_85_0).a(stackIn_85_1, stackIn_86_2, this.field_s, (byte) -40, this.field_j);
                   break;
                 }
                 var5 = op.field_m.a((byte) 32, this.field_j, 1000);
@@ -200,9 +200,9 @@ final class wf extends ae {
                 break;
               case 7:
                 var3 = op.field_m.a(this.field_l, (byte) 33);
-                if (var3 instanceof wb &&
+                if (var3 instanceof GameCharacter &&
                   37 == this.field_o) {
-                  var8 = (wb) (var3);
+                  var8 = (GameCharacter) (var3);
                   var8.field_ib = this.field_j;
                 }
                 break;
@@ -286,10 +286,10 @@ final class wf extends ae {
 
     final void a(byte param0) {
         super.a((byte) -86);
-        dg.field_K.a((br) (this), false);
+        dg.field_K.a((IntrusiveNode) (this), false);
         if (param0 > -47) {
-          qd var3 = (qd) null;
-          this.a(96, (qd) null);
+          GameScreen var3 = (GameScreen) null;
+          this.a(96, (GameScreen) null);
         }
     }
 

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tg implements Runnable {
-    go field_b;
+    PlatformTaskDispatcher field_b;
     static byte[] field_a;
     static cj field_d;
     volatile boolean field_h;
     volatile boolean field_c;
-    volatile gp[] field_f;
-    static ag field_i;
-    static hk field_e;
+    volatile PcmPlayerService[] field_f;
+    static GameApplet field_i;
+    static PlayerLoadout field_e;
     static uc field_g;
 
     final static int a(int param0, CharSequence param1, int param2, int param3, byte[] param4, int param5) {
@@ -152,45 +152,45 @@ final class tg implements Runnable {
         }
     }
 
-    final static ja[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ja var16 = null;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        Sprite var16 = null;
         int[] var18 = oo.field_i;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
         int var7 = oo.field_b;
         int var8 = oo.field_l;
-        ja var9 = new ja(param3, -(param3 * 2) + param1);
+        Sprite var9 = new Sprite(param3, -(param3 * 2) + param1);
         var9.a();
         oo.a(0, 0, param3, -(param3 * 2) + param1, param4, param2);
-        ja var10 = new ja(param3, param3);
+        Sprite var10 = new Sprite(param3, param3);
         if (param5 <= 25) {
           field_d = (cj) null;
         }
         var10.a();
         oo.e(0, 0, param3, param3, param4);
-        ja var11 = new ja(16, param3);
+        Sprite var11 = new Sprite(16, param3);
         var11.a();
         oo.e(0, 0, 16, param3, param4);
-        ja var12 = new ja(param3, param3);
+        Sprite var12 = new Sprite(param3, param3);
         var12.a();
         oo.e(0, 0, param3, param3, param2);
-        ja var13 = new ja(16, param3);
+        Sprite var13 = new Sprite(16, param3);
         var13.a();
         oo.e(0, 0, 16, param3, param2);
         Object var14 = null;
         if (param0 > 0) {
-          var16 = new ja(16, 16);
+          var16 = new Sprite(16, 16);
           var14 = var16;
           var16.a();
           oo.e(0, 0, 16, 16, param0);
         }
         oo.a(var18, var7, var8);
-        return new ja[]{var10, var11, var10, var9, (ja) (var14), var9, var12, var13, var12};
+        return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
     final static int b(int param0) {
-        if (fn.field_i < 2) {
+        if (ClientException.field_i < 2) {
           return 0;
         }
         if (p.field_e == 0) {
@@ -244,7 +244,7 @@ final class tg implements Runnable {
           }
         }
         if (param0 != 8218) {
-          field_i = (ag) null;
+          field_i = (GameApplet) null;
         }
         return 100;
     }
@@ -373,13 +373,13 @@ final class tg implements Runnable {
         int var16;
         Object var17;
         cj var18;
-        ja var19;
-        ja var20;
-        ja stackIn_7_0 = null;
+        Sprite var19;
+        Sprite var20;
+        Sprite stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_7_2 = 0;
         int stackIn_8_3 = 0;
-        ja stackIn_10_0 = null;
+        Sprite stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_10_2 = 0;
         int stackIn_11_3 = 0;
@@ -422,22 +422,22 @@ final class tg implements Runnable {
               var4 = var18.field_zb / 2 + var18.field_w;
               var5 = -6 + (var18.field_qb + var18.field_z - 48);
               oo.h(3 + var18.field_w, var18.field_qb, -6 + var18.field_w + var18.field_zb, var18.field_qb + var18.field_z - 3);
-              e.field_e.field_g = 0;
-              e.field_e.field_k = 420 - var4 - var18.field_zb / 4;
-              kk.field_w.a(-10136, e.field_e);
-              kk.field_w.field_P = nk.a(1052688, 455739624, ll.field_k.field_p[1]);
+              SecondaryNodeDeque.field_e.field_g = 0;
+              SecondaryNodeDeque.field_e.field_k = 420 - var4 - var18.field_zb / 4;
+              kk.field_w.a(-10136, SecondaryNodeDeque.field_e);
+              kk.field_w.field_P = nk.a(1052688, 455739624, FullscreenFocusCanvas.field_k.field_p[1]);
               var6 = 0;
               var7 = 30;
               var8 = 0;
               var9 = 7;
               var10 = wf.field_m / var7 % var9 + var8;
-              var19 = nk.a(no.field_Hb[var6][var10], ll.field_k.field_c[0], 255, ll.field_k.field_p[0]);
+              var19 = nk.a(no.field_Hb[var6][var10], FullscreenFocusCanvas.field_k.field_c[0], 255, FullscreenFocusCanvas.field_k.field_p[0]);
               og.h((byte) 126);
               var19.g(var4 - var18.field_zb / 4, var5);
               var7Lifetime2 = 45;
               var6Lifetime2 = 1;
               var10Lifetime1 = (wf.field_m + 3) / var7Lifetime2 % var9 + var8;
-              var20 = nk.a(no.field_Hb[var6Lifetime2][var10Lifetime1], ll.field_k.field_c[1], 255, ll.field_k.field_p[1]);
+              var20 = nk.a(no.field_Hb[var6Lifetime2][var10Lifetime1], FullscreenFocusCanvas.field_k.field_c[1], 255, FullscreenFocusCanvas.field_k.field_p[1]);
               og.h((byte) 119);
               var20.b(var18.field_zb / 4 + var4, var5);
               oo.h(3 + var18.field_w, var18.field_qb, var18.field_zb + (var18.field_w - 6), -3 + (var18.field_qb + var18.field_z));
@@ -458,7 +458,7 @@ final class tg implements Runnable {
               } else {
                 stackIn_8_3 = 64 - var13 << 4;
               }
-              ((ja) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_7_2, stackIn_8_3);
+              ((Sprite) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_7_2, stackIn_8_3);
               var14Lifetime1 = -8 + var4;
               var10Lifetime3 = var8Lifetime2 + (3 + wf.field_m) / var7Lifetime3 % var9Lifetime1;
               var6Lifetime4 = (wf.field_m + 13) / 64 % 10;
@@ -472,12 +472,12 @@ final class tg implements Runnable {
               } else {
                 stackIn_11_3 = -var13Lifetime1 + 64 << 4;
               }
-              ((ja) (Object) stackIn_10_0).c(stackIn_10_1, stackIn_10_2, stackIn_11_3);
+              ((Sprite) (Object) stackIn_10_0).c(stackIn_10_1, stackIn_10_2, stackIn_11_3);
               if (400 > wf.field_m % 1000) {
-                qp.field_w.a(nq.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
+                qp.field_w.a(SpriteState.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
                 oo.c();
                 tm.a(vk.i((byte) -39), false);
-                br.a(vk.i((byte) -39), 2);
+                IntrusiveNode.a(vk.i((byte) -39), 2);
                 pm.a(false, vk.i((byte) -39));
                 decompiledFrameRemainder0 = false;
               }
@@ -486,7 +486,7 @@ final class tg implements Runnable {
                   qp.field_w.a(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
                   oo.c();
                   tm.a(vk.i((byte) -39), false);
-                  br.a(vk.i((byte) -39), 2);
+                  IntrusiveNode.a(vk.i((byte) -39), 2);
                   pm.a(false, vk.i((byte) -39));
                   decompiledFrameRemainder0 = false;
                 }
@@ -497,7 +497,7 @@ final class tg implements Runnable {
             }
             if (decompiledFrameRemainder0) {
               tm.a(vk.i((byte) -39), false);
-              br.a(vk.i((byte) -39), 2);
+              IntrusiveNode.a(vk.i((byte) -39), 2);
               pm.a(false, vk.i((byte) -39));
             }
           } else {
@@ -536,7 +536,7 @@ final class tg implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        gp var2 = null;
+        PcmPlayerService var2 = null;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_c = true;
         try {
@@ -553,7 +553,7 @@ final class tg implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          bd.a((String) null, (Throwable) ((Object) exception), false);
+          MouseInputHandler.a((String) null, (Throwable) ((Object) exception), false);
         } finally {
           this.field_c = false;
         }
@@ -568,18 +568,18 @@ final class tg implements Runnable {
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
         String[] var3 = null;
-        bm var5 = null;
+        LevelActorSpawner var5 = null;
         fc var6 = null;
         ro var7 = null;
-        hk[] var8 = null;
+        PlayerLoadout[] var8 = null;
         int var9_int = 0;
-        kb var9 = null;
+        GameWorld var9 = null;
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
         int[] var13 = null;
         int[] var15 = null;
-        k var16 = null;
+        PacketBuffer var16 = null;
         int[] var18 = null;
         byte[] var20 = null;
         int var9_intLifetime1;
@@ -605,17 +605,17 @@ final class tg implements Runnable {
               stackIn_9_2 = 1;
             }
             var20 = ((ci) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_9_2);
-            var5 = (bm) (sf.a((byte) -96, var20));
-            var6 = wh.a(var20, -67);
+            var5 = (LevelActorSpawner) (sf.a((byte) -96, var20));
+            var6 = IterableNodeHashTable.a(var20, -67);
             var7 = new ro(var3, var5);
-            var8 = new hk[4];
-            var8[0] = new hk();
+            var8 = new PlayerLoadout[4];
+            var8[0] = new PlayerLoadout();
             for (var9_int = 0; var9_int < 3; var9_int++) {
               boolean decompiledFrameRemainder0 = true;
               if (!pp.field_n && (!h.i(51603) ||
-                !jk.a((byte) -128, ll.field_k.field_s[var9_int]))) {
-                var8[0].field_c[var9_int] = ll.field_k.field_s[var9_int];
-                var7.field_e[0] = cp.a(var7.field_e[0], 1L << ll.field_k.field_s[var9_int]);
+                !jk.a((byte) -128, FullscreenFocusCanvas.field_k.field_s[var9_int]))) {
+                var8[0].field_c[var9_int] = FullscreenFocusCanvas.field_k.field_s[var9_int];
+                var7.field_e[0] = cp.a(var7.field_e[0], 1L << FullscreenFocusCanvas.field_k.field_s[var9_int]);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -624,11 +624,11 @@ final class tg implements Runnable {
             }
             if (!pp.field_n) {
               for (var9_intLifetime1 = 0; var9_intLifetime1 < 5; var9_intLifetime1++) {
-                var8[0].field_d[var9_intLifetime1] = ll.field_k.field_m[var9_intLifetime1];
-                var8[0].field_f[var9_intLifetime1] = ll.field_k.field_g[var9_intLifetime1];
+                var8[0].powerupTypes[var9_intLifetime1] = FullscreenFocusCanvas.field_k.field_m[var9_intLifetime1];
+                var8[0].field_f[var9_intLifetime1] = FullscreenFocusCanvas.field_k.field_g[var9_intLifetime1];
               }
             } else {
-              var8[0].field_d[0] = 0;
+              var8[0].powerupTypes[0] = 0;
               var8[0].field_f[0] = 255;
               for (var9_intLifetime1 = 1; var9_intLifetime1 < 5; var9_intLifetime1++) {
                 var18 = var8[0].field_f;
@@ -636,25 +636,25 @@ final class tg implements Runnable {
                 var13 = var15;
                 var10 = var13;
                 var11 = var9_intLifetime1;
-                var8[0].field_d[var9_intLifetime1] = 255;
+                var8[0].powerupTypes[var9_intLifetime1] = 255;
                 var18[var11] = 255;
               }
             }
             for (var9_intLifetime2 = 1; var8.length > var9_intLifetime2; var9_intLifetime2++) {
-              var8[var9_intLifetime2] = new hk();
+              var8[var9_intLifetime2] = new PlayerLoadout();
             }
             var7.field_C = 2147483647;
             var5.a(var7, (byte) 53);
-            cf.field_s = new rl(var7, var8, true, false);
-            var9 = new kb(var3, var6);
-            var7.field_H = 1000;
-            var16 = new k(4096);
+            UiWidget.field_s = new GameSimulation(var7, var8, true, false);
+            var9 = new GameWorld(var3, var6);
+            var7.currentTick = 1000;
+            var16 = new PacketBuffer(4096);
             var7.a(var16, (byte) -122);
-            var16.field_j = 1;
+            var16.position = 1;
             var9.a(2, var16);
             var9.field_C = 2147483646;
-            var9.field_H = var7.field_H - 50;
-            wp.field_h = new qd(var9, var8[0], 0);
+            var9.currentTick = var7.currentTick - 50;
+            wp.field_h = new GameScreen(var9, var8[0], 0);
             np.field_m = wp.field_h;
             hh.field_b = true;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -681,11 +681,11 @@ final class tg implements Runnable {
         field_e = null;
     }
 
-    final static ja[] a(int param0) {
+    final static Sprite[] a(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        ja[] var1;
+        Sprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -699,17 +699,17 @@ final class tg implements Runnable {
         byte[] var21;
         int[] var22;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
-        var1 = new ja[qc.field_v];
+        var1 = new Sprite[qc.field_v];
         for (var2 = param0; qc.field_v > var2; var2++) {
           var3 = vj.field_p[var2] * oq.field_w[var2];
           var21 = qp.field_t[var2];
-          if (!ll.field_h[var2]) {
+          if (!FullscreenFocusCanvas.field_h[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = tp.field_t[tq.b(255, (int) var21[var6])];
             }
-            var1[var2] = new ja(ie.field_nb, hj.field_a, k.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var22);
+            var1[var2] = new Sprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var22);
           } else {
             var16 = vf.field_b[var2];
             var12 = var16;
@@ -721,7 +721,7 @@ final class tg implements Runnable {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = cr.b(tp.field_t[tq.b((int) var21[var7], 255)], tq.b(255, (int) var16[var7]) << 24);
             }
-            var1[var2] = (ja) ((Object) new rf(ie.field_nb, hj.field_a, k.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var17));
           }
         }
         fd.h((byte) 125);
@@ -729,7 +729,7 @@ final class tg implements Runnable {
     }
 
     tg() {
-        this.field_f = new gp[2];
+        this.field_f = new PcmPlayerService[2];
         this.field_h = false;
         this.field_c = false;
     }

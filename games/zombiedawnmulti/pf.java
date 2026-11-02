@@ -4,14 +4,14 @@
 final class pf {
     static cj[] field_d;
     static int field_c;
-    static ja[][] field_e;
+    static Sprite[][] field_e;
     static ri field_a;
     static ul field_b;
 
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        field_e = (ja[][]) null;
+        field_e = (Sprite[][]) null;
         if (param0 != 6345) {
           pf.a(-125);
           field_d = null;
@@ -62,6 +62,6 @@ final class pf {
 
     static {
         field_c = 100;
-        field_e = new ja[5][];
+        field_e = new Sprite[5][];
     }
 }

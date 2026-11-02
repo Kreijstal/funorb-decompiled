@@ -12,7 +12,7 @@ final class uf {
     static String field_c;
     static String field_i;
     private boolean field_k;
-    static ja field_h;
+    static Sprite field_h;
 
     final void a(boolean param0) {
         this.field_k = param0 ? true : false;
@@ -116,7 +116,7 @@ final class uf {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        th var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         ml var6 = null;
         int var7 = 0;
@@ -170,18 +170,18 @@ final class uf {
               !var6.field_Kb.equals("")) {
               var6.field_Gb.field_ob = 16737894;
               var6.field_Gb.field_rb = pa.field_T;
-              var6.field_Gb.a(jk.field_f, 0, 3 + pa.field_T.field_z, 0, -3344);
+              var6.field_Gb.a(jk.field_f, 0, 3 + pa.field_T.fullWidth, 0, -3344);
               var8 = 1;
             }
             var9 = 0;
             var10 = var6.field_zb;
             if (var8 != 0) {
-              var9 = 3 + pa.field_T.field_z;
+              var9 = 3 + pa.field_T.fullWidth;
               var10 = var10 - var9;
             }
             stackIn_22_0 = var6.field_Ib;
             if (var10 > 0) {
-              stackIn_23_1 = fm.a(var6.field_Ib.field_yb, var6.field_Hb, var10);
+              stackIn_23_1 = BitmapFont.a(var6.field_Ib.field_yb, var6.field_Hb, var10);
             } else {
               stackIn_23_1 = var6.field_Hb;
             }

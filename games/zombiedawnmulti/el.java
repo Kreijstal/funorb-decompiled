@@ -9,19 +9,19 @@ final class el extends rg {
     private int field_F;
     static int field_M;
     static ri field_E;
-    private fm field_G;
-    static ja[] field_H;
+    private BitmapFont field_G;
+    static Sprite[] field_H;
 
-    final static ja[] a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
-        ja var13 = null;
-        ja var14 = null;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
+        Sprite var13 = null;
+        Sprite var14 = null;
         int[] var16 = oo.field_i;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
         int var7 = oo.field_b;
         int var8 = oo.field_l;
-        ja var9 = new ja(16, param0);
+        Sprite var9 = new Sprite(16, param0);
         var9.a();
         oo.a(param2, 0, 16, param0, param1, param3);
         Object var10 = null;
@@ -47,7 +47,7 @@ final class el extends rg {
           oo.b(15, 4, 1, 0);
         }
         oo.a(var16, var7, var8);
-        return new ja[]{null, null, null, (ja) (var10), var9, (ja) (var11), null, null, null};
+        return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7, boolean param8, boolean param9) {
@@ -65,7 +65,7 @@ final class el extends rg {
             if (sq.field_Q > 0) {
               gg.a(param7, param4, param9, true);
             }
-            if (0 < da.field_a) {
+            if (0 < InflaterDecompressor.field_a) {
               so.a(param3 ^ 48, param4, param9, param1, param7);
             }
             if (io.field_b &&
@@ -88,7 +88,7 @@ final class el extends rg {
               if (sq.field_Q > 0) {
                 gg.a(param7, param4, param9, true);
               }
-              if (0 < da.field_a) {
+              if (0 < InflaterDecompressor.field_a) {
                 so.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
@@ -106,7 +106,7 @@ final class el extends rg {
               eb.field_B.field_V = qc.field_u.field_V;
               if (sq.field_Q > 0) {
                 gg.a(param7, param4, param9, true);
-                if (0 < da.field_a) {
+                if (0 < InflaterDecompressor.field_a) {
                   so.a(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (io.field_b &&
@@ -120,7 +120,7 @@ final class el extends rg {
                   vi.a(param2, param7, (byte) 45, hf.field_e, param6);
                 }
               } else {
-                if (0 < da.field_a) {
+                if (0 < InflaterDecompressor.field_a) {
                   so.a(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (!io.field_b) {
@@ -144,12 +144,12 @@ final class el extends rg {
         } else {
           if (kp.field_l == oo.field_b) {
             if (oo.field_l != dm.field_Qb &&
-              oo.field_l == dl.field_h.field_f &&
-              dl.field_h.field_h == oo.field_b) {
+              oo.field_l == SocketConnector.field_h.field_f &&
+              SocketConnector.field_h.field_h == oo.field_b) {
               if (null != mh.field_c) {
                 ci.a(false, -83);
               } else {
-                if (ej.field_n != null) {
+                if (BufferedSocket.field_n != null) {
                   ci.a(true, -51);
                 } else {
                   wn.a((byte) 3);
@@ -167,7 +167,7 @@ final class el extends rg {
               if (sq.field_Q > 0) {
                 gg.a(param7, param4, param9, true);
               }
-              if (0 < da.field_a) {
+              if (0 < InflaterDecompressor.field_a) {
                 so.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
@@ -191,7 +191,7 @@ final class el extends rg {
               if (sq.field_Q > 0) {
                 gg.a(param7, param4, param9, true);
               }
-              if (0 < da.field_a) {
+              if (0 < InflaterDecompressor.field_a) {
                 so.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (!io.field_b) {
@@ -211,12 +211,12 @@ final class el extends rg {
               }
             }
           } else {
-            if (oo.field_l == dl.field_h.field_f &&
-              dl.field_h.field_h == oo.field_b) {
+            if (oo.field_l == SocketConnector.field_h.field_f &&
+              SocketConnector.field_h.field_h == oo.field_b) {
               if (null != mh.field_c) {
                 ci.a(false, -83);
               } else {
-                if (ej.field_n != null) {
+                if (BufferedSocket.field_n != null) {
                   ci.a(true, -51);
                 } else {
                   wn.a((byte) 3);
@@ -234,7 +234,7 @@ final class el extends rg {
               if (sq.field_Q > 0) {
                 gg.a(param7, param4, param9, true);
               }
-              if (0 < da.field_a) {
+              if (0 < InflaterDecompressor.field_a) {
                 so.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
@@ -257,7 +257,7 @@ final class el extends rg {
                 if (sq.field_Q > 0) {
                   gg.a(param7, param4, param9, true);
                 }
-                if (0 < da.field_a) {
+                if (0 < InflaterDecompressor.field_a) {
                   so.a(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (io.field_b &&
@@ -275,7 +275,7 @@ final class el extends rg {
                 eb.field_B.field_V = qc.field_u.field_V;
                 if (sq.field_Q > 0) {
                   gg.a(param7, param4, param9, true);
-                  if (0 < da.field_a) {
+                  if (0 < InflaterDecompressor.field_a) {
                     so.a(param3 ^ 48, param4, param9, param1, param7);
                   }
                   if (io.field_b &&
@@ -289,7 +289,7 @@ final class el extends rg {
                     vi.a(param2, param7, (byte) 45, hf.field_e, param6);
                   }
                 } else {
-                  if (0 < da.field_a) {
+                  if (0 < InflaterDecompressor.field_a) {
                     so.a(param3 ^ 48, param4, param9, param1, param7);
                   }
                   if (!io.field_b) {
@@ -333,20 +333,20 @@ final class el extends rg {
         field_E = null;
         field_H = null;
         if (param0 != 3) {
-          field_H = (ja[]) null;
+          field_H = (Sprite[]) null;
         }
     }
 
-    final static mf b(boolean param0) {
+    final static MouseWheelInput b(boolean param0) {
         try {
           Throwable var1 = null;
-          mf stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0) {
               el.b(true);
             }
-            stackIn_3_0 = (mf) (Class.forName("ue").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -379,8 +379,8 @@ final class el extends rg {
         this.field_G.a(this.field_J, this.field_I + (var7Lifetime1 + var5), this.field_I + var6, -this.field_I + this.field_L, -(2 * this.field_I) + this.field_w, this.field_F, -1, this.field_K ? 0 : 2, 1, this.field_G.field_C);
     }
 
-    el(int param0, int param1, int param2, int param3, cf param4, boolean param5, int param6, int param7, fm param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (nl) null, (bj) null);
+    el(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetActionListener) null, (bj) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;

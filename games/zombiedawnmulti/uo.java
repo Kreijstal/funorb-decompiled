@@ -22,40 +22,40 @@ final class uo extends ae {
         ga var2 = ma.field_a;
         int var3Lifetime1;
         var2.b((byte) -35, param1);
-        var2.field_j = var2.field_j + 1;
+        var2.position = var2.position + 1;
         if (param0) {
-          var3 = var2.field_j;
+          var3 = var2.position;
           var2.a(-116, 2);
           var2.a(fg.field_k, fg.field_k.length, 0, 123);
           var2.a(123, pb.field_h);
           var2.a(125, sc.field_f);
           var2.a(tg.field_a, tg.field_a.length, 0, 119);
-          var2.e(113, var2.field_j - var3);
+          var2.e(113, var2.position - var3);
           return;
         }
         uo.b(true, -17);
-        var3Lifetime1 = var2.field_j;
+        var3Lifetime1 = var2.position;
         var2.a(-116, 2);
         var2.a(fg.field_k, fg.field_k.length, 0, 123);
         var2.a(123, pb.field_h);
         var2.a(125, sc.field_f);
         var2.a(tg.field_a, tg.field_a.length, 0, 119);
-        var2.e(113, var2.field_j - var3Lifetime1);
+        var2.e(113, var2.position - var3Lifetime1);
     }
 
     final void a(byte param0) {
         if (param0 <= -47) {
           super.a((byte) -82);
-          ic.field_c.a((br) (this), false);
+          ic.field_c.a((IntrusiveNode) (this), false);
           return;
         }
-        qd var3 = (qd) null;
-        this.a(70, (qd) null);
+        GameScreen var3 = (GameScreen) null;
+        this.a(70, (GameScreen) null);
         super.a((byte) -82);
-        ic.field_c.a((br) (this), false);
+        ic.field_c.a((IntrusiveNode) (this), false);
     }
 
-    final void a(int param0, qd param1) {
+    final void a(int param0, GameScreen param1) {
         try {
           param1.a(-1181, this.field_l, this.field_m, this.field_i, this.field_k);
           if (param0 != 0) {

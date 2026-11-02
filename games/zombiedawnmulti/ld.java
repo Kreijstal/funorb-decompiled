@@ -16,7 +16,7 @@ final class ld extends cj {
     private int field_Vb;
     private ld[] field_Fb;
     private int field_Jb;
-    static ja[] field_Ub;
+    static Sprite[] field_Ub;
     static String field_Lb;
     static long field_Kb;
 
@@ -341,10 +341,10 @@ final class ld extends cj {
                   var14 = 1;
                   var15 = vl.a(~ql.field_c & na.field_J[var7][var9], (byte) -103);
                 }
-                if (null != ch.field_g &&
-                  ch.field_g[var7] != null &&
+                if (null != IntrusiveDequeCursor.field_g &&
+                  IntrusiveDequeCursor.field_g[var7] != null &&
                   0 >= vl.field_h &&
-                  ch.field_g[var7][var9]) {
+                  IntrusiveDequeCursor.field_g[var7][var9]) {
                   var10 = 1;
                 }
                 if (null != sd.field_G &&
@@ -415,13 +415,13 @@ final class ld extends cj {
                 null != iq.field_b && (!param1 ||
                 !la.field_k)) {
                 lp.field_p = false;
-                if (null == rl.field_v) {
-                  rl.field_v = new byte[kj.field_h];
-                  ll.field_c = new boolean[kj.field_h];
+                if (null == GameSimulation.field_v) {
+                  GameSimulation.field_v = new byte[kj.field_h];
+                  FullscreenFocusCanvas.field_c = new boolean[kj.field_h];
                 }
                 dj.field_l = false;
                 for (var17_int = 0; var17_int < var7; var17_int++) {
-                  ll.field_c[var17_int] = false;
+                  FullscreenFocusCanvas.field_c[var17_int] = false;
                 }
                 bh.a(-1712, var9, 0, param0, param1, var7, -1, -1);
                 if (kj.field_q >= 2 &&
@@ -534,8 +534,8 @@ final class ld extends cj {
                   }
                   var23 = 0;
                   for (var24 = 0; var7 > var24; var24++) {
-                    if (ll.field_c[var24]) {
-                      var25_ref = "</col>" + cf.field_f[var24] + "<col=A00000>";
+                    if (FullscreenFocusCanvas.field_c[var24]) {
+                      var25_ref = "</col>" + UiWidget.field_f[var24] + "<col=A00000>";
                       var22 = var25_ref;
                       var21 = var22;
                       var22 = var25_ref;
@@ -550,7 +550,7 @@ final class ld extends cj {
                     }
                   }
                   if (var23 != 0) {
-                    var21 = kb.field_q + (String) (var22);
+                    var21 = GameWorld.field_q + (String) (var22);
                   } else {
                     var21 = vl.a(io.field_a, new String[]{(String) (var22)}, 2);
                   }
@@ -653,8 +653,8 @@ final class ld extends cj {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        fm var17 = null;
-        fm var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Tb = -1;
         try {
           this.field_Qb = param5;
@@ -678,14 +678,14 @@ final class ld extends cj {
               -1 == this.field_Qb[var13]) {
               var14 = tb.field_v;
             }
-            this.field_Gb[var13] = new mo(0L, param2, (cj) null, param3, (ja) (var14), param6[var13]);
+            this.field_Gb[var13] = new mo(0L, param2, (cj) null, param3, (Sprite) (var14), param6[var13]);
             this.a((byte) 50, this.field_Gb[var13]);
             var15 = var17.a(param6[var13]);
             if (this.field_Vb < var15) {
               this.field_Vb = var15;
             }
           }
-          this.field_Vb = this.field_Vb + (tb.field_v.field_z + 10);
+          this.field_Vb = this.field_Vb + (tb.field_v.fullWidth + 10);
           this.b(12, 11183);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -785,7 +785,7 @@ final class ld extends cj {
             var3 = (jh) null;
             ld.a((jh) null, false, 60, 111);
           }
-          var2 = mc.a(cq.a(0, param1), (byte) 26);
+          var2 = RandomAccessCacheFile.a(cq.a(0, param1), (byte) 26);
           if (var2 == null) {
             var2 = "";
           }
@@ -848,7 +848,7 @@ final class ld extends cj {
         }
         if (this.field_Ib != null) {
           this.field_Ib.c((byte) 108);
-          this.field_Ib.a(true);
+          this.field_Ib.unlink(true);
         }
         this.field_Ib = null;
         this.field_Tb = -1;
@@ -1104,7 +1104,7 @@ final class ld extends cj {
             this.field_Ib.b(12, 11183);
           } else {
             if (this.field_Qb[param1] == -1) {
-              qd.c(4024);
+              GameScreen.c(4024);
               fh.b(31706);
             } else {
               var5 = 32768 | this.field_Qb[param1];
@@ -1117,7 +1117,7 @@ final class ld extends cj {
                 kp.a(var6, param3, 1, true);
               }
               var8 = (String) null;
-              kb.a(var5, qf.field_g, param2, (String) null, va.field_a, 29602);
+              GameWorld.a(var5, qf.field_g, param2, (String) null, va.field_a, 29602);
               ii.a(va.field_a, (byte) -128, var5, qf.field_g, jj.field_M);
               fh.b(31706);
               lh.a(true);

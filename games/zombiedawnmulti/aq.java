@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class aq extends ag {
+abstract class aq extends GameApplet {
     static String field_r;
     private boolean field_m;
-    static ja field_u;
+    static Sprite field_u;
     private int field_y;
     private int field_C;
     static String field_n;
@@ -67,7 +67,7 @@ abstract class aq extends ag {
             field_B = (hh) null;
           }
           bi.field_a = true;
-          dl.field_e = bl.a((byte) 39) + 15000L;
+          SocketConnector.field_e = bl.a((byte) 39) + 15000L;
           return var2;
         }
         if (a.field_b == 11 &&
@@ -87,7 +87,7 @@ abstract class aq extends ag {
         lf.a(param1, -5989, this.field_D, this.field_A, this.field_p, p.field_e, pl.field_J, param5, this.field_m, this.field_o, 5000, 5000, this.field_v, this.field_y);
         jj.a(this.field_p, this.field_y, this.field_v, p.field_e, this.field_A, pl.field_J, param5, this.field_o, (byte) -106);
         vc.a((byte) 116);
-        ll.field_a = el.b(false);
+        FullscreenFocusCanvas.field_a = el.b(false);
         qi.a(100, dk.field_Ib);
         m.field_z = param3;
         sn.field_Lb = param2;
@@ -193,7 +193,7 @@ abstract class aq extends ag {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            bd.a((String) null, (Throwable) ((Object) var6_ref), false);
+            MouseInputHandler.a((String) null, (Throwable) ((Object) var6_ref), false);
             this.a(27200, "crash");
           }
           return;
@@ -227,7 +227,7 @@ abstract class aq extends ag {
     }
 
     private final void h(int param0) {
-        int var2 = s.field_e.g(31365);
+        int var2 = s.field_e.readUnsignedByte(31365);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var5 = 84 % ((param0 - 53) / 42);
         int var4 = -1 + hd.field_q;
@@ -320,7 +320,7 @@ abstract class aq extends ag {
                                 pn.a((byte) 124);
                                 return;
                               }
-                              bd.a("MGS1: " + ci.a(0), (Throwable) null, false);
+                              MouseInputHandler.a("MGS1: " + ci.a(0), (Throwable) null, false);
                               ak.a((byte) -114);
                               return;
                             }
@@ -348,7 +348,7 @@ abstract class aq extends ag {
           }
           return;
         }
-        bd.a("MGS2: " + ci.a(0), (Throwable) null, false);
+        MouseInputHandler.a("MGS2: " + ci.a(0), (Throwable) null, false);
         ak.a((byte) -125);
     }
 
@@ -370,7 +370,7 @@ abstract class aq extends ag {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          k var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -379,19 +379,19 @@ abstract class aq extends ag {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = wf.a(l.a((byte) -118), an.a(param0 ^ -2198), 32475);
+            var5_int = wf.a(RasterBuffer.a((byte) -118), an.a(param0 ^ -2198), 32475);
             if (var5_int != -1) {
               dd.a(0, hb.field_b, ol.field_q, var5_int);
               ol.field_q = null;
               hb.field_b = null;
             }
-            var11 = dl.c((byte) -125);
+            var11 = SocketConnector.c((byte) -125);
             if (var11 != null) {
               uc.b(16772, var11.booleanValue());
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = ek.a(nh.c((byte) -98), this.field_q, gg.a(param0 ^ -2218), -125, bb.c(-19385), s.a((byte) 32), wb.h((byte) -80));
+            var5_intLifetime1 = ek.a(nh.c((byte) -98), this.field_q, gg.a(param0 ^ -2218), -125, bb.c(-19385), s.a((byte) 32), GameCharacter.h((byte) -80));
             if (var5_intLifetime1 != -1) {
               sj.a(hb.field_b, 31407, var5_intLifetime1, ol.field_q);
               hb.field_b = null;
@@ -462,7 +462,7 @@ abstract class aq extends ag {
               if (wk.field_I.b(-90)) {
                 var12 = wk.field_I.a((byte) 21);
                 if (var12 != null) {
-                  var7 = oe.a(var12.field_j, var12.field_m, false, 0);
+                  var7 = oe.a(var12.position, var12.payload, false, 0);
                   ta.b((byte) 126, var7);
                 } else {
                   var9 = (String) null;
@@ -473,7 +473,7 @@ abstract class aq extends ag {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              bd.a("S1", (Throwable) ((Object) var5), false);
+              MouseInputHandler.a("S1", (Throwable) ((Object) var5), false);
               var10 = (String) null;
               ta.b((byte) -69, (String) null);
               wk.field_I = null;
@@ -534,8 +534,8 @@ abstract class aq extends ag {
           11 != a.field_b) {
           op.c(param0 - 93);
         }
-        if (ll.field_a != null) {
-          t.field_d = ll.field_a.b(param0 - 216);
+        if (FullscreenFocusCanvas.field_a != null) {
+          t.field_d = FullscreenFocusCanvas.field_a.b(param0 - 216);
         }
         if (vo.e(1)) {
           var3 = wq.a((byte) 63) * 1200;
@@ -548,7 +548,7 @@ abstract class aq extends ag {
             bf.a(true, 2, ei.field_c);
             wp.c(param0 ^ 8287);
             bi.field_a = true;
-            dl.field_e = bl.a((byte) 102) + 15000L;
+            SocketConnector.field_e = bl.a((byte) 102) + 15000L;
           }
         }
         if (gh.field_a == -1 ||
@@ -564,12 +564,12 @@ abstract class aq extends ag {
           }
           if (-1 != gh.field_a &&
             0 != gh.field_a) {
-            dl.field_e = 15000L + bl.a((byte) 113);
+            SocketConnector.field_e = 15000L + bl.a((byte) 113);
           }
         }
         if (gh.field_a != -1 &&
           gh.field_a != 0) {
-          if (10 > fn.field_i) {
+          if (10 > ClientException.field_i) {
             if (gh.field_a == 3) {
               this.a(27200, "js5crc");
             } else {
@@ -598,7 +598,7 @@ abstract class aq extends ag {
                 } else {
                   if (gh.field_a != 2) {
                     if (5 == gh.field_a) {
-                      bf.a(true, 5, bd.field_a);
+                      bf.a(true, 5, MouseInputHandler.field_a);
                     } else {
                       bf.a(true, 256, ko.field_j);
                     }
@@ -617,7 +617,7 @@ abstract class aq extends ag {
         if ((gh.field_a != -1 &&
           gh.field_a != 0 ||
           gh.a(86)) &&
-          bl.a((byte) 79) >= dl.field_e) {
+          bl.a((byte) 79) >= SocketConnector.field_e) {
           bi.field_a = false;
           if (gh.field_a != -1 &&
             gh.field_a != 0) {
@@ -629,39 +629,39 @@ abstract class aq extends ag {
           !gh.a(119)) {
           eb.field_p = false;
         }
-        if (fn.field_i == 0 &&
+        if (ClientException.field_i == 0 &&
           c.a((byte) 98)) {
-          fn.field_i = 1;
+          ClientException.field_i = 1;
         }
-        if (fn.field_i == 1) {
+        if (ClientException.field_i == 1) {
           if (p.field_e != 0) {
             cp.field_P = u.a(5, sn.field_Lb);
           }
           ra.field_l = oj.a(false, h.field_G, 1, -24285, true);
           fe.field_L = oj.a(false, m.field_y, 1, -24285, true);
           wm.field_V = oj.a(false, m.field_z, 1, -24285, true);
-          fn.field_i = 2;
+          ClientException.field_i = 2;
           he.field_f = fe.field_L;
           al.field_eb = ra.field_l;
         }
-        if (fn.field_i == 2) {
+        if (ClientException.field_i == 2) {
           if (cp.field_P != null &&
             cp.field_P.a((byte) -126)) {
             if (cp.field_P.a("", 2)) {
               if (cp.field_P.a(false, "")) {
                 ah.a(true, cp.field_P);
                 cp.field_P = null;
-                o.d(26673);
+                IsaacRandom.d(26673);
               }
             } else {
               cp.field_P = null;
             }
           }
           if (null == cp.field_P) {
-            fn.field_i = 3;
+            ClientException.field_i = 3;
           }
         }
-        if (fn.field_i == 3 &&
+        if (ClientException.field_i == 3 &&
           h.a(fe.field_L, param0 ^ -3795, ra.field_l, wm.field_V) &&
           jo.a(wm.field_V, 0)) {
           sc.b(1);
@@ -680,41 +680,41 @@ abstract class aq extends ag {
           if (ii.field_e) {
             bo.b(4);
           }
-          if (null == k.field_l) {
-            k.field_l = dg.a(30);
+          if (null == PacketBuffer.field_l) {
+            PacketBuffer.field_l = dg.a(30);
             c.field_e = vh.h(32);
           }
-          ud.a(-3758, c.field_e, wm.field_V, k.field_l);
+          ud.a(-3758, c.field_e, wm.field_V, PacketBuffer.field_l);
           wm.field_V = null;
           fe.field_L = null;
           ra.field_l = null;
           bk.a((java.applet.Applet) (this), -17708);
-          o.d(26673);
-          fn.field_i = 10;
+          IsaacRandom.d(26673);
+          ClientException.field_i = 10;
         }
-        if (fn.field_i == 10) {
+        if (ClientException.field_i == 10) {
           if (p.field_e != 0) {
             qc.field_s = u.a(5, sq.field_R);
           }
-          fn.field_i = 11;
+          ClientException.field_i = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (11 == fn.field_i) {
+        if (11 == ClientException.field_i) {
           if (null != qc.field_s && (!qc.field_s.a((byte) -120) ||
             !qc.field_s.a(param0 - 95))) {
             qm.a(0.0f, 80, jj.a(nh.field_n, (byte) 121, qc.field_s, ud.field_Y));
             decompiledFrameRemainder0 = false;
           }
           else {
-            fn.field_i = 12;
+            ClientException.field_i = 12;
             kn.field_f = true;
           }
         }
-        if (fn.field_i == 12 &&
+        if (ClientException.field_i == 12 &&
           !kn.field_f) {
-          fn.field_i = 13;
+          ClientException.field_i = 13;
         }
-        if (13 == fn.field_i) {
+        if (13 == ClientException.field_i) {
           var3Lifetime2 = 1;
           if (null != bg.field_k) {
             stackIn_135_0 = (!bg.field_k.a(-94)) ? 0 : 1;
@@ -722,12 +722,12 @@ abstract class aq extends ag {
             qm.a(bg.field_k.field_d, 80, bg.field_k.field_j);
           }
           if (var3Lifetime2 != 0) {
-            fn.field_i = 20;
+            ClientException.field_i = 20;
           }
         }
         if (!param1 &&
           hn.field_h) {
-          nq.a(95, dk.field_Ib);
+          SpriteState.a(95, dk.field_Ib);
           this.f(-58);
           qi.a(100, dk.field_Ib);
         }
@@ -757,8 +757,8 @@ abstract class aq extends ag {
           return;
         }
         if (!ge.p(-86)) {
-          if (10 <= fn.field_i) {
-            if (!gb.a(250)) {
+          if (10 <= ClientException.field_i) {
+            if (!GameKeyHandler.a(250)) {
               fc.b((byte) -9);
             } else {
               if (a.field_b == 0) {

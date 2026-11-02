@@ -4,7 +4,7 @@
 final class oi {
     static String field_f;
     boolean field_g;
-    static ja[] field_h;
+    static Sprite[] field_h;
     static String field_b;
     static ak field_j;
     static ri field_k;
@@ -23,7 +23,7 @@ final class oi {
         try {
           al.j(-1);
           nb.field_a.h(-92);
-          b.field_c = new qm(fa.field_Ib, (String) null, ch.field_e, param1, param3);
+          b.field_c = new qm(fa.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
           wj.field_i = new ub(nb.field_a, b.field_c);
           int var4_int = 120 / ((64 - param2) / 61);
           nb.field_a.b(3016, wj.field_i);
@@ -43,7 +43,7 @@ final class oi {
           field_f = null;
           return;
         }
-        field_h = (ja[]) null;
+        field_h = (Sprite[]) null;
         field_f = null;
     }
 
@@ -61,7 +61,7 @@ final class oi {
         try {
           al.j(-1);
           nb.field_a.h(-92);
-          b.field_c = new qm(fa.field_Ib, (String) null, ch.field_e, param1, param3);
+          b.field_c = new qm(fa.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
           wj.field_i = new ub(nb.field_a, b.field_c);
           int var4_int = 120 / ((64 - param2) / 61);
           nb.field_a.b(3016, wj.field_i);

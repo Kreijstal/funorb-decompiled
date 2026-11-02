@@ -447,7 +447,7 @@ final class jb {
             var6 = hp.a(this.field_f, param2 ^ 1009) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_j.a((byte) -118, vl.a(th.field_e, new String[]{var7}, param2 - 11), 4);
+              this.field_j.a((byte) -118, vl.a(IntrusiveDeque.field_e, new String[]{var7}, param2 - 11), 4);
               this.field_j.a((byte) -118, vl.a(sb.field_g, new String[]{var7}, 2), 6);
               if (param1 != null &&
                 param0 != 2 &&

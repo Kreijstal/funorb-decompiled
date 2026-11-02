@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fq extends ae {
-    static ja field_k;
+    static Sprite field_k;
     static String field_j;
     int field_l;
     static int field_n;
     static java.awt.Image field_i;
     private int field_m;
 
-    final void a(int param0, qd param1) {
+    final void a(int param0, GameScreen param1) {
         try {
           if (param0 != 0) {
-            k var4 = (k) null;
-            fq.a((k) null, (byte) 15);
+            PacketBuffer var4 = (PacketBuffer) null;
+            fq.a((PacketBuffer) null, (byte) 15);
           }
           param1.a((byte) -74, this.field_l, this.field_m);
         } catch (RuntimeException runtimeException) {
@@ -28,8 +28,8 @@ final class fq extends ae {
           field_k = null;
           return;
         }
-        k var2 = (k) null;
-        fq.a((k) null, (byte) -34);
+        PacketBuffer var2 = (PacketBuffer) null;
+        fq.a((PacketBuffer) null, (byte) -34);
         field_k = null;
     }
 
@@ -102,7 +102,7 @@ final class fq extends ae {
         }
     }
 
-    final static boolean a(k param0, byte param1) {
+    final static boolean a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -114,9 +114,9 @@ final class fq extends ae {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -114) {
-            field_k = (ja) null;
+            field_k = (Sprite) null;
           }
-          var2_int = param0.g(31365);
+          var2_int = param0.readUnsignedByte(31365);
           stackIn_5_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;

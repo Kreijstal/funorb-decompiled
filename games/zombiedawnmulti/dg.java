@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends se implements in {
-    static th field_K;
+final class dg extends WidgetContainer implements in {
+    static IntrusiveDeque field_K;
     private gn field_N;
     private gn field_H;
     static int field_M;
@@ -112,14 +112,14 @@ final class dg extends se implements in {
     }
 
     public dg() {
-        super(0, 0, 476, 225, (nl) null);
+        super(0, 0, 476, 225, (WidgetActionListener) null);
         this.field_P = new gn(en.field_a, (bj) null);
         this.field_N = new gn(oq.field_v, (bj) null);
         this.field_H = new gn(gf.field_a, (bj) null);
         oq var1 = new oq();
-        this.field_P.field_h = (nl) ((Object) var1);
-        this.field_N.field_h = (nl) ((Object) var1);
-        this.field_H.field_h = (nl) ((Object) var1);
+        this.field_P.listener = (WidgetActionListener) ((Object) var1);
+        this.field_N.listener = (WidgetActionListener) ((Object) var1);
+        this.field_H.listener = (WidgetActionListener) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
@@ -136,7 +136,7 @@ final class dg extends se implements in {
         this.b((byte) 60, this.field_H);
     }
 
-    final boolean a(int param0, char param1, cf param2, int param3) {
+    final boolean a(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -172,7 +172,7 @@ final class dg extends se implements in {
     }
 
     static {
-        field_K = new th();
+        field_K = new IntrusiveDeque();
         field_L = "The '<%0>' setting needs to be changed.";
         field_G = new String[]{"Pupil", "Neophyte", "Battle Master", "Conqueror", "Single-minded", "Bare Limbs", "Human-lover", "Gene Therapy", "Magic Fingers", "Lord of the Castle", "My Precious...", "Gotcha!", "Skin and Bones", "Mutant Strain", "Unattached", "Sire of the Realm", "Pumpkin Studies", "Slaughterer", "Unforgiving", "Behind Enemy Lines", "Barren Ally", "Laborious Student", "Gas Mask", "Journeyman"};
         field_J = false;

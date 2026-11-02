@@ -31,8 +31,8 @@ final class md {
     short field_o;
     short[] field_A;
     short[] field_y;
-    static th field_u;
-    static ja[] field_N;
+    static IntrusiveDeque field_u;
+    static Sprite[] field_N;
     int field_r;
     short[] field_b;
     short[] field_F;
@@ -51,12 +51,12 @@ final class md {
         RuntimeException var2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          sj.a(up.field_d, -891231071, param0, true, lj.field_n, 0, ab.field_j);
+          sj.a(NodeHashTableIterator.field_d, -891231071, param0, true, lj.field_n, 0, ab.field_j);
           for (var2_int = 0; var2_int < lj.field_n; var2_int++) {
             la.field_c[var2_int + param0] = var2_int;
           }
           if (param1 > -27) {
-            field_u = (th) null;
+            field_u = (IntrusiveDeque) null;
           }
           sj.a(ba.field_m, -891231071, param0 + param0, false, param0 + lj.field_n, param0, mj.field_Ub);
           if (param0 < lj.field_n) {
@@ -227,7 +227,7 @@ final class md {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -9159) {
-            field_N = (ja[]) null;
+            field_N = (Sprite[]) null;
           }
           stackIn_3_0 = md.a(param0, 10, -31, true);
           return stackIn_3_0;
@@ -258,7 +258,7 @@ final class md {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1 != -49) {
-            field_N = (ja[]) null;
+            field_N = (Sprite[]) null;
           }
           var3_int = param0.field_Mb - param2.field_Mb;
           if (param0.field_Nb != ta.field_ob) {
@@ -296,7 +296,7 @@ final class md {
         }
     }
 
-    final static void a(String[] args, int param1, int[] param2, ul param3, String[] param4, ja[][] param5, ja[][] param6, String[][] param7, byte[] param8, int param9, boolean param10, byte[] param11, String[] param12, int param13, String[][] param14) {
+    final static void a(String[] args, int param1, int[] param2, ul param3, String[] param4, Sprite[][] param5, Sprite[][] param6, String[][] param7, byte[] param8, int param9, boolean param10, byte[] param11, String[] param12, int param13, String[][] param14) {
         mo[] array$0 = null;
         mo[] array$1 = null;
         mo[] array$2 = null;
@@ -351,14 +351,14 @@ final class md {
         int var17_intLifetime4;
         var21 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          cf.field_f = args;
+          UiWidget.field_f = args;
           qp.field_s = param4;
           ZombieDawnMulti.field_L = param5;
           qo.field_r = param2;
           um.field_b = param12;
           i.field_e = param1;
           ul.field_m = param14;
-          ch.field_c = param11;
+          IntrusiveDequeCursor.field_c = param11;
           ng.field_b = param8;
           um.field_g = param6;
           kp.field_n = param7;
@@ -374,7 +374,7 @@ final class md {
           t.field_c[0] = vb.field_g;
           t.field_c[1] = ka.field_m;
           pd.field_b = new cj(0L, (cj) null);
-          dm.field_ac = new cj(0L, vd.field_a, qd.field_r);
+          dm.field_ac = new cj(0L, vd.field_a, GameScreen.field_r);
           mo.field_Hb = new cj(0L, pn.field_g, cg.field_j);
           hf.field_e = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
           pd.field_b.a((byte) 50, dm.field_ac);
@@ -389,14 +389,14 @@ final class md {
           var25.field_R = 1;
           ql.field_b = new cj(0L, vo.field_m);
           ql.field_b.field_R = 1;
-          kj.field_u = new cj(0L, ai.field_c, e.field_b.toUpperCase());
-          ro.field_O = new cj(0L, ed.field_d, uo.field_j.toUpperCase());
+          kj.field_u = new cj(0L, ai.field_c, SecondaryNodeDeque.field_b.toUpperCase());
+          ro.field_O = new cj(0L, LevelFileCatalog.field_d, uo.field_j.toUpperCase());
           ml.field_Lb = new cj(0L, cg.field_f);
-          k.field_g = new cj(0L, vd.field_a, vh.field_Nb);
-          ud.field_M = new cj(0L, al.field_fb, kb.field_p);
+          PacketBuffer.field_g = new cj(0L, vd.field_a, vh.field_Nb);
+          ud.field_M = new cj(0L, al.field_fb, GameWorld.field_p);
           tk.field_l = new cj(0L, al.field_fb, ck.field_b);
           sc.field_d = new cj(0L, al.field_fb, jl.field_t);
-          da.field_h = new cj(0L, al.field_fb, op.field_k);
+          InflaterDecompressor.field_h = new cj(0L, al.field_fb, op.field_k);
           bp.field_w = new cj(0L, pn.field_g, fd.field_N);
           ek.field_H = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
           ia.field_t = new cj(0L, he.field_i, sn.field_Gb.toUpperCase());
@@ -422,13 +422,13 @@ final class md {
             md.a((CharSequence) null, -24);
           }
           cm.field_a.a((byte) 50, ml.field_Lb);
-          ml.field_Lb.a((byte) 50, k.field_g);
+          ml.field_Lb.a((byte) 50, PacketBuffer.field_g);
           ml.field_Lb.a((byte) 50, ud.field_M);
           ml.field_Lb.a((byte) 50, tk.field_l);
           if (tb.field_u) {
             ml.field_Lb.a((byte) 50, sc.field_d);
           }
-          ml.field_Lb.a((byte) 50, da.field_h);
+          ml.field_Lb.a((byte) 50, InflaterDecompressor.field_h);
           ml.field_Lb.a((byte) 50, bp.field_w);
           ml.field_Lb.a((byte) 50, ek.field_H);
           if (tb.field_u) {
@@ -438,7 +438,7 @@ final class md {
           sc.field_j = new cj(0L, vo.field_m);
           sc.field_j.field_lb = 0;
           sc.field_j.field_R = 1;
-          kn.field_a = new cj(0L, kb.field_n, ji.field_e.toUpperCase());
+          kn.field_a = new cj(0L, GameWorld.field_n, ji.field_e.toUpperCase());
           lm.field_gb = new cj(0L, wa.field_a);
           lm.field_gb.a((byte) 50, sc.field_j);
           lm.field_gb.a((byte) 50, kn.field_a);
@@ -448,20 +448,20 @@ final class md {
           sk.field_i.field_lb = 1;
           var16.field_R = 1;
           ga.field_r = new cj(0L, (cj) null);
-          fn.field_h = new cj(0L, vo.field_m);
-          fn.field_h.field_R = 1;
-          ie.field_jb = new cj(0L, vd.field_a, qd.field_r);
+          ClientException.field_h = new cj(0L, vo.field_m);
+          ClientException.field_h.field_R = 1;
+          ie.field_jb = new cj(0L, vd.field_a, GameScreen.field_r);
           bf.field_h = new cj(0L, pn.field_g, cg.field_j);
           bf.field_n = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
-          ga.field_r.a((byte) 50, fn.field_h);
+          ga.field_r.a((byte) 50, ClientException.field_h);
           ga.field_r.a((byte) 50, ie.field_jb);
           if (tb.field_u) {
             ga.field_r.a((byte) 50, bf.field_h);
           }
           ga.field_r.a((byte) 50, bf.field_n);
           jp.field_b = new cj(0L, ai.field_c, pi.field_b.toUpperCase());
-          gg.field_m = new cj(0L, ed.field_d);
-          dl.field_a = new cj(0L, cg.field_f);
+          gg.field_m = new cj(0L, LevelFileCatalog.field_d);
+          SocketConnector.field_a = new cj(0L, cg.field_f);
           ik.field_d = new cj(0L, hd.field_x, vb.field_d.toUpperCase());
           mi.field_Ib = new cj[4 + param9];
           ma.field_b = new mo[param9 + 4][];
@@ -474,27 +474,27 @@ final class md {
             mi.field_Ib[1] = new cj(0L, m.field_B, gi.field_n);
             array$0 = new mo[1 + qo.field_r.length];
             ma.field_b[1] = array$0;
-            ma.field_b[1][0] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (ja) null, hi.field_Mb);
+            ma.field_b[1][0] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < qo.field_r.length; var17_intLifetime1++) {
-              ma.field_b[1][1 + var17_intLifetime1] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (ja) null, Integer.toString(qo.field_r[var17_intLifetime1]));
+              ma.field_b[1][1 + var17_intLifetime1] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, Integer.toString(qo.field_r[var17_intLifetime1]));
             }
           }
           mi.field_Ib[2] = new cj(0L, m.field_B, qj.field_j);
-          ma.field_b[2] = new mo[]{new mo(0L, uq.field_d, (cj) null, cm.field_b, (ja) null, hi.field_Mb), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[0], be.field_f), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[1], wf.field_k)};
+          ma.field_b[2] = new mo[]{new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[0], be.field_f), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[1], wf.field_k)};
           if (r.field_f > 1) {
             mi.field_Ib[3] = new cj(0L, m.field_B, gj.field_d);
             array$1 = new mo[r.field_f + 1];
             ma.field_b[3] = array$1;
-            ma.field_b[3][0] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (ja) null, hi.field_Mb);
+            ma.field_b[3][0] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < r.field_f; var17_intLifetime2++) {
-              ma.field_b[3][1 + var17_intLifetime2] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (ja) null, um.field_b[var17_intLifetime2]);
+              ma.field_b[3][1 + var17_intLifetime2] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, um.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param9 > var17_intLifetime3; var17_intLifetime3++) {
-            mi.field_Ib[4 + var17_intLifetime3] = new cj(0L, m.field_B, cf.field_f[var17_intLifetime3]);
+            mi.field_Ib[4 + var17_intLifetime3] = new cj(0L, m.field_B, UiWidget.field_f[var17_intLifetime3]);
             array$2 = new mo[1 + tq.b(255, (int) ng.field_b[var17_intLifetime3])];
             ma.field_b[var17_intLifetime3 + 4] = array$2;
-            ma.field_b[var17_intLifetime3 + 4][0] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (ja) null, hi.field_Mb);
+            ma.field_b[var17_intLifetime3 + 4][0] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb);
             for (var18 = 0; var18 < (255 & ng.field_b[var17_intLifetime3]); var18++) {
               if (ZombieDawnMulti.field_L != null) {
                 if (null == ZombieDawnMulti.field_L[var17_intLifetime3]) {
@@ -514,7 +514,7 @@ final class md {
                   var20 = ul.field_m[var17_intLifetime3][var18];
                 }
               }
-              ma.field_b[var17_intLifetime3 + 4][var18 + 1] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (ja) (var19_ref), (String) (var20));
+              ma.field_b[var17_intLifetime3 + 4][var18 + 1] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param9 + 4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -531,7 +531,7 @@ final class md {
             }
           }
           en.field_b = new cj(0L, he.field_i);
-          gb.field_a = new cj(0L, he.field_i);
+          GameKeyHandler.field_a = new cj(0L, he.field_i);
           eb.field_B = new cj(0L, qc.field_u);
           eb.field_B.b((byte) -32, vo.field_m);
           eb.field_B.field_lb = 1;
@@ -539,25 +539,25 @@ final class md {
           var17.field_R = 1;
           fc.field_a = new cj(0L, (cj) null);
           fc.field_a.a((byte) 50, gg.field_m);
-          fc.field_a.a((byte) 50, dl.field_a);
-          dl.field_a.a((byte) 50, ik.field_d);
+          fc.field_a.a((byte) 50, SocketConnector.field_a);
+          SocketConnector.field_a.a((byte) 50, ik.field_d);
           for (var18Lifetime2 = 0; 4 + param9 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(qo.field_r.length < 2)) && (var18Lifetime2 != 3 ||
               !(r.field_f <= 1))) {
-              dl.field_a.a((byte) 50, mi.field_Ib[var18Lifetime2]);
+              SocketConnector.field_a.a((byte) 50, mi.field_Ib[var18Lifetime2]);
               for (var19 = 0; ma.field_b[var18Lifetime2].length > var19; var19++) {
                 if (null != ma.field_b[var18Lifetime2][var19]) {
-                  dl.field_a.a((byte) 50, ma.field_b[var18Lifetime2][var19]);
+                  SocketConnector.field_a.a((byte) 50, ma.field_b[var18Lifetime2][var19]);
                 }
               }
             }
           }
           fc.field_a.a((byte) 50, en.field_b);
-          fc.field_a.a((byte) 50, gb.field_a);
+          fc.field_a.a((byte) 50, GameKeyHandler.field_a);
           fc.field_a.a((byte) 50, eb.field_B);
           mq.field_l = new cj(0L, kc.field_c, p.field_c.toUpperCase());
-          pg.field_a = new cj(0L, kb.field_n, qq.field_d.toUpperCase());
+          pg.field_a = new cj(0L, GameWorld.field_n, qq.field_d.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -661,7 +661,7 @@ final class md {
             param1 <= 36) {
             var4_int = 0;
             if (param2 >= -12) {
-              md.a((String[]) null, -25, (int[]) null, (ul) null, (String[]) null, (ja[][]) null, (ja[][]) null, (String[][]) null, (byte[]) null, -121, true, (byte[]) null, (String[]) null, 73, (String[][]) null);
+              md.a((String[]) null, -25, (int[]) null, (ul) null, (String[]) null, (Sprite[][]) null, (Sprite[][]) null, (String[][]) null, (byte[]) null, -121, true, (byte[]) null, (String[]) null, 73, (String[][]) null);
             }
             var5 = 0;
             var6 = 0;
@@ -729,6 +729,6 @@ final class md {
     }
 
     static {
-        field_u = new th();
+        field_u = new IntrusiveDeque();
     }
 }

@@ -6,7 +6,7 @@ abstract class ek extends ff {
     int field_C;
     static String field_y;
     int field_E;
-    static ja field_J;
+    static Sprite field_J;
     static cj field_z;
     int field_x;
     int field_G;
@@ -15,7 +15,7 @@ abstract class ek extends ff {
     static tq field_H;
     static long field_K;
     static String field_F;
-    rl field_A;
+    GameSimulation field_A;
 
     final static int a(boolean param0, int param1, String param2, int param3, String param4, String param5, int param6) {
         hf var7 = null;
@@ -109,13 +109,13 @@ abstract class ek extends ff {
         me.field_h = param4;
         if (param2 == 1829947600) {
           nc.field_h = param0;
-          se.field_C = param1;
+          WidgetContainer.field_C = param1;
           bf.field_g = param3;
           return;
         }
         field_z = (cj) null;
         nc.field_h = param0;
-        se.field_C = param1;
+        WidgetContainer.field_C = param1;
         bf.field_g = param3;
     }
 
@@ -143,12 +143,12 @@ abstract class ek extends ff {
         ud.field_N = null;
     }
 
-    void a(int param0, rl param1) {
+    void a(int param0, GameSimulation param1) {
         try {
           this.field_A = param1;
           this.d((byte) -105);
           if (param0 != -9019) {
-            field_J = (ja) null;
+            field_J = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ek.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

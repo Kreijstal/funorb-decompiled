@@ -3,7 +3,7 @@
  */
 final class cc {
     static ri field_c;
-    static ja[] field_b;
+    static Sprite[] field_b;
     static String field_a;
     static String field_d;
 
@@ -25,7 +25,7 @@ final class cc {
             return false;
           }
           if (param4 != -10663) {
-            field_b = (ja[]) null;
+            field_b = (Sprite[]) null;
           }
           var8 = new tf(nb.field_a, param5);
           nb.field_a.b(param4 ^ -8815, var8);
@@ -34,12 +34,12 @@ final class cc {
             return true;
           }
           iq.field_c = null;
-          mc.field_g = param2;
+          RandomAccessCacheFile.field_g = param2;
           am.field_a = param0;
           ab.field_k = param6;
           id.field_B = dj.field_k;
           rj.field_J = param3;
-          ch.field_j = param1;
+          IntrusiveDequeCursor.field_j = param1;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

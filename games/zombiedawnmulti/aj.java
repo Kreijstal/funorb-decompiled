@@ -7,7 +7,7 @@ final class aj extends ae {
     static String field_i;
     private int field_k;
 
-    final void a(int param0, qd param1) {
+    final void a(int param0, GameScreen param1) {
         if (param0 != 0) {
           return;
         }
@@ -18,7 +18,7 @@ final class aj extends ae {
         }
     }
 
-    final static void a(pd param0, int param1, int param2, int param3, int param4, int param5, int param6, fm param7, int param8, int param9, int param10, int param11, pd param12, int param13, pd param14, fm param15, int param16, int param17, int param18, byte param19) {
+    final static void a(pd param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, pd param12, int param13, pd param14, BitmapFont param15, int param16, int param17, int param18, byte param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -34,7 +34,7 @@ final class aj extends ae {
         RuntimeException var20 = null;
         try {
           wn.field_u = param7;
-          e.field_c = param15;
+          SecondaryNodeDeque.field_c = param15;
           if (param19 <= 50) {
             aj.a(-22, false, -26);
           }
@@ -105,12 +105,12 @@ final class aj extends ae {
           while (var3_int < eo.field_e.length) {
             var5 = dn.field_a[var3_int];
             if (var5 < 0) {
-              var4 = var4 + dq.field_l;
+              var4 = var4 + ImageProducerRasterBuffer.field_l;
             } else {
               var6 = vh.a(true, -121, eo.field_e[var3_int]);
               var7 = aq.field_x - (var6 >> 1);
               var4 = var4 + pb.field_b;
-              if (th.a(param0, -wb.field_db + var7, param2, (wb.field_db << 1) + var6, var4, po.field_n + (ne.field_tb << 1), 93)) {
+              if (IntrusiveDeque.a(param0, -GameCharacter.field_db + var7, param2, (GameCharacter.field_db << 1) + var6, var4, po.field_n + (ne.field_tb << 1), 93)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

@@ -6,9 +6,9 @@ final class od extends lm {
     static String field_zb;
     private boolean field_yb;
     static int field_Db;
-    static ja[] field_Fb;
+    static Sprite[] field_Fb;
     static String field_Eb;
-    static ja[] field_Ab;
+    static Sprite[] field_Ab;
     static byte[] field_Gb;
     static String field_Bb;
 

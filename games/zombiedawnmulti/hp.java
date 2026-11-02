@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class hp extends br {
+final class hp extends IntrusiveNode {
     static int[] field_s;
     int field_v;
     int field_n;
@@ -53,7 +53,7 @@ final class hp extends br {
           if (0 >= param2) {
             throw new IllegalArgumentException();
           }
-          if (l.a(param2, -62)) {
+          if (RasterBuffer.a(param2, -62)) {
             stackIn_6_0 = (int)((long)param2 * (4294967295L & (long)param1.nextInt()) >> 32);
             return stackIn_6_0;
           }

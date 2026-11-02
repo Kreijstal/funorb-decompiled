@@ -76,7 +76,7 @@ final class mq extends nc {
             var12_ref_ri.b(var10_int, var11);
           }
         }
-        var7.b(kb.field_E, 320, var8 + 72, 16777215, 0);
+        var7.b(GameWorld.field_E, 320, var8 + 72, 16777215, 0);
         var7.b(vk.field_G, 320, 18 + (40 + (var8 + 32)), 14540083, 0);
         var9Lifetime1 = -1;
         if (this.field_t == -1) {
@@ -102,7 +102,7 @@ final class mq extends nc {
           var7.c(var4, var11Lifetime1, var12, 16777215, 0);
           var11Lifetime1 = var11Lifetime1 + var7.a(var4);
           for (var17 = 0; ra.field_n[var9Lifetime1] > var17; var17++) {
-            of.field_k.g(var17 * (of.field_k.field_z >> 1) + var11Lifetime1, 2 - of.field_k.field_u + var12);
+            of.field_k.g(var17 * (of.field_k.fullWidth >> 1) + var11Lifetime1, 2 - of.field_k.field_u + var12);
           }
         }
     }
@@ -258,7 +258,7 @@ final class mq extends nc {
         if (param1 <= 10) {
           field_l = (cj) null;
         }
-        int[] var4 = this.field_d != 6 ? k.field_n : fc.field_m;
+        int[] var4 = this.field_d != 6 ? PacketBuffer.field_n : fc.field_m;
         int[] var3 = var4;
         return fq.a(param0, 127, var4);
     }
@@ -306,13 +306,13 @@ final class mq extends nc {
         var2 = sf.field_e - sf.field_g >> 1;
         if (ng.field_e < bo.field_d &&
           ng.field_e + 2 * sf.field_g > bo.field_d &&
-          sf.field_a - var2 < bd.field_g) {
+          sf.field_a - var2 < MouseInputHandler.field_g) {
           var3 = -1;
           var4 = 0;
           while (true) {
             if (var4 < sf.field_b) {
-              if (this.field_m[var4] <= bd.field_g &&
-                sf.field_g + this.field_m[var4] > bd.field_g &&
+              if (this.field_m[var4] <= MouseInputHandler.field_g &&
+                sf.field_g + this.field_m[var4] > MouseInputHandler.field_g &&
                 bo.field_d >= this.field_s[var4] &&
                 bo.field_d < sf.field_g + this.field_s[var4]) {
                 var3 = var4;

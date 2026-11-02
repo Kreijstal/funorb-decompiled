@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tf extends ne implements in {
-    static ja[] field_Hb;
+    static Sprite[] field_Hb;
     private boolean field_Ib;
     static int field_Eb;
     static int field_Db;
@@ -84,14 +84,14 @@ final class tf extends ne implements in {
               var4 = param2.field_h;
               if (param2.field_c == 248) {
                 if (!param1) {
-                  nq.f(-42);
+                  SpriteState.f(-42);
                 }
                 var4 = ba.field_p;
                 this.field_Ib = true;
               }
             }
           } else {
-            var4 = qa.field_g;
+            var4 = DualLinkNode.field_g;
           }
           var5 = new wd((ne) (this), ci.field_d, var4);
           if (!param2.field_d) {
@@ -114,12 +114,12 @@ final class tf extends ne implements in {
             }
           } else {
             if (param2.field_e) {
-              this.a((cf) (new pj(this)), (byte) 122);
+              this.a((UiWidget) (new pj(this)), (byte) 122);
               return;
             }
             var5.a(ub.field_xb, -112, (bj) (this));
           }
-          this.a((cf) (var5), (byte) 125);
+          this.a((UiWidget) (var5), (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -150,7 +150,7 @@ final class tf extends ne implements in {
             tf.a((uj) null, (byte) 86);
           }
           var2 = new we(param0, param0);
-          gb.field_e.a(var2, false);
+          GameKeyHandler.field_e.a(var2, false);
           bh.field_a.b(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;

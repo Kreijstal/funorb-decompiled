@@ -64,7 +64,7 @@ final class ji {
         al.j(-1);
         int var1 = -108 / ((param0 - 38) / 61);
         ud.field_ab = true;
-        ch.field_e = true;
+        IntrusiveDequeCursor.field_e = true;
         nb.field_a.h(-120);
         qj.a(pn.field_i, false, 127);
     }

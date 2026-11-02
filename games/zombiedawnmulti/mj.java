@@ -566,7 +566,7 @@ final class mj extends cj {
         return var5;
     }
 
-    mj(long param0, cj param1, ja param2, ja param3, cj param4, cj param5, boolean param6) {
+    mj(long param0, cj param1, Sprite param2, Sprite param3, cj param4, cj param5, boolean param6) {
         this(param0, param1, param1, param4, param5, param6);
         try {
           this.field_Tb.field_rb = param2;

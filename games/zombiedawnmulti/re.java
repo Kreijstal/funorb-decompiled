@@ -7,15 +7,15 @@ final class re {
 
     final static void a(boolean param0) {
         CharSequence var3 = null;
-        ta.field_lb = s.field_e.f((byte) -107);
+        ta.field_lb = s.field_e.readString((byte) -107);
         if (!param0) {
           var3 = (CharSequence) ((Object) ta.field_lb);
-          kf.field_k = tg.a(var3, param0);
+          ProxySocketConnector.field_k = tg.a(var3, param0);
           return;
         }
         field_a = (cj) null;
         CharSequence var2 = (CharSequence) ((Object) ta.field_lb);
-        kf.field_k = tg.a(var2, param0);
+        ProxySocketConnector.field_k = tg.a(var2, param0);
     }
 
     final static boolean b(int param0) {

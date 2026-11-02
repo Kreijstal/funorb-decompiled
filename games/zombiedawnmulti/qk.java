@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qk extends br {
+final class qk extends IntrusiveNode {
     static String field_f;
     static int field_j;
     int field_h;
@@ -22,11 +22,11 @@ final class qk extends br {
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var2_int = param0.d((byte) 69);
-          var3 = param0.g(param1 ^ -31477);
+          var2_int = param0.readUnsignedShort((byte) 69);
+          var3 = param0.readUnsignedByte(param1 ^ -31477);
           var4 = new int[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            var4[var5] = param0.d((byte) 69);
+            var4[var5] = param0.readUnsignedShort((byte) 69);
           }
           if (param1 != -114) {
             qk.b(true);
@@ -64,13 +64,13 @@ final class qk extends br {
         int var7 = 0;
         int var8 = 0;
         try {
-          var2_int = bd.field_g;
+          var2_int = MouseInputHandler.field_g;
           var3 = bo.field_d;
           var4 = vo.field_m.field_yb.b(param0, 500);
           var5 = vo.field_m.field_yb.c(param0, 500) + 6;
           var6 = 2 + var4 * jk.field_f;
           var7 = qp.a(var2_int, (byte) 126, var5, 12);
-          var8 = br.a(true, var3, 20, var6);
+          var8 = IntrusiveNode.a(true, var3, 20, var6);
           oo.a(var7, var8, var5, var6, 0);
           oo.e(var7 + 1, var8 + 1, -2 + var5, var6 - 2, 16777088);
           if (param1 > -109) {

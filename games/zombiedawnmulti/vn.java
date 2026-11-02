@@ -6,7 +6,7 @@ final class vn {
     static int field_f;
     static String[] field_g;
     static long field_b;
-    static ja field_h;
+    static Sprite field_h;
     static String[] field_d;
     static String field_a;
     static md[] field_c;
@@ -32,7 +32,7 @@ final class vn {
         }
     }
 
-    final static ja[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param0 > 29) {
           return qp.a(param3, 1, -102, param2, param1);
         }
@@ -42,7 +42,7 @@ final class vn {
 
     static {
         field_g = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-        field_h = new ja(80, 80);
+        field_h = new Sprite(80, 80);
         field_a = "Asking for or providing contact information";
         field_d = new String[]{"Control scheme: Classic", "Control scheme: Modern"};
     }

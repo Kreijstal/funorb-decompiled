@@ -69,7 +69,7 @@ final class ua extends rg {
         if (i.field_a.b((byte) 99)) {
           return 0;
         }
-        return ch.b(19352);
+        return IntrusiveDequeCursor.b(19352);
     }
 
     public static void g(byte param0) {
@@ -170,7 +170,7 @@ final class ua extends rg {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, cf param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_6_0 = 0;
@@ -216,14 +216,14 @@ final class ua extends rg {
         }
         qe.field_e = new cp();
         if (param0 == -2) {
-          wj.field_i.a((cf) (qe.field_e), (byte) 123);
+          wj.field_i.a((UiWidget) (qe.field_e), (byte) 123);
           return;
         }
         ua.h(-84);
-        wj.field_i.a((cf) (qe.field_e), (byte) 123);
+        wj.field_i.a((UiWidget) (qe.field_e), (byte) 123);
     }
 
-    final void a(int param0, cf param1, int param2, int param3, boolean param4, int param5) {
+    final void a(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_u = 0;
@@ -232,7 +232,7 @@ final class ua extends rg {
         }
     }
 
-    private ua(int param0, int param1, int param2, int param3, nl param4, bj param5, cf param6, boolean param7, boolean param8) {
+    private ua(int param0, int param1, int param2, int param3, WidgetActionListener param4, bj param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_M = 2147483647;
         this.field_G = 2147483647;
@@ -257,7 +257,7 @@ final class ua extends rg {
         }
     }
 
-    final void a(int param0, cf param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         int stackIn_11_1 = 0;
         int stackIn_14_2 = 0;
         int stackIn_20_1 = 0;
@@ -273,7 +273,7 @@ final class ua extends rg {
           if ((!(this.field_B instanceof gn) ||
             ((gn) (this.field_B)).field_F) &&
             this.field_u == 1) {
-            var5_int = -this.field_L + (bd.field_g - param2);
+            var5_int = -this.field_L + (MouseInputHandler.field_g - param2);
             var6 = -param3 + (-this.field_F + bo.field_d);
             if (this.field_y != var5_int ||
               this.field_i != var6) {

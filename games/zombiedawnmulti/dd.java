@@ -8,11 +8,11 @@ final class dd implements dr {
     static String field_e;
     static String field_c;
     static Boolean field_d;
-    static ja[][] field_f;
+    static Sprite[][] field_f;
 
     public static void a(boolean param0) {
         field_g = null;
-        field_f = (ja[][]) null;
+        field_f = (Sprite[][]) null;
         field_c = null;
         field_e = null;
         field_a = null;
@@ -97,13 +97,13 @@ final class dd implements dr {
             var4_ref_bb = (bb) (he.field_k.c(60));
             if (var4_ref_bb != null &&
               var4_ref_bb.field_j < var2_long) {
-              var4_ref_bb.a(true);
+              var4_ref_bb.unlink(true);
               hd.field_q = var4_ref_bb.field_f.length;
-              s.field_e.field_j = 0;
+              s.field_e.position = 0;
               for (var5_int = 0; hd.field_q > var5_int; var5_int++) {
-                s.field_e.field_m[var5_int] = var4_ref_bb.field_f[var5_int];
+                s.field_e.payload[var5_int] = var4_ref_bb.field_f[var5_int];
               }
-              k.field_k = jp.field_e;
+              PacketBuffer.field_k = jp.field_e;
               jp.field_e = ij.field_d;
               ij.field_d = op.field_i;
               op.field_i = var4_ref_bb.field_l;
@@ -126,19 +126,19 @@ final class dd implements dr {
         try {
           while (true) {
             if (stackIn_20_0 < 0) {
-              s.field_e.field_j = 0;
+              s.field_e.position = 0;
               if (!fa.b(10, 1)) {
                 return false;
               }
               fd.field_F = s.field_e.m(101);
-              s.field_e.field_j = 0;
+              s.field_e.position = 0;
               hd.field_q = param0[fd.field_F];
             }
             if (!dd.a(0)) {
               return false;
             }
             if (od.field_Db == 0) {
-              k.field_k = jp.field_e;
+              PacketBuffer.field_k = jp.field_e;
               jp.field_e = ij.field_d;
               ij.field_d = op.field_i;
               op.field_i = fd.field_F;
@@ -154,7 +154,7 @@ final class dd implements dr {
             }
             var5 = new bb(var2_long + (long)var4, fd.field_F, new byte[hd.field_q]);
             for (var6 = 0; hd.field_q > var6; var6++) {
-              var5.field_f[var6] = s.field_e.field_m[var6];
+              var5.field_f[var6] = s.field_e.payload[var6];
             }
             he.field_k.a(var5, false);
             fd.field_F = -1;
@@ -179,15 +179,15 @@ final class dd implements dr {
           if (!fa.b(10, 1)) {
             return false;
           }
-          hd.field_q = s.field_e.g(param0 + 31365);
-          s.field_e.field_j = 0;
+          hd.field_q = s.field_e.readUnsignedByte(param0 + 31365);
+          s.field_e.position = 0;
         }
         if (hd.field_q == -2) {
           if (!fa.b(param0 + 10, 2)) {
             return false;
           }
-          hd.field_q = s.field_e.d((byte) 69);
-          s.field_e.field_j = 0;
+          hd.field_q = s.field_e.readUnsignedShort((byte) 69);
+          s.field_e.position = 0;
         }
         return fa.b(10, hd.field_q);
     }
@@ -255,7 +255,7 @@ final class dd implements dr {
     static {
         field_a = "Please check if address is correct";
         field_b = "Draws even more zombies to you at the start of each match than Prepared. Equip both for the maximum number of minions.";
-        field_f = new ja[5][];
+        field_f = new Sprite[5][];
         field_e = "Cancel";
         field_c = "For the zombie on the go.";
     }

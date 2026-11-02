@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class np extends ae {
-    static qd field_m;
+    static GameScreen field_m;
     private int field_k;
     private int field_q;
     private int field_p;
@@ -12,7 +12,7 @@ final class np extends ae {
     private int field_i;
     private int field_j;
 
-    final void a(int param0, qd param1) {
+    final void a(int param0, GameScreen param1) {
         try {
           param1.a(this.field_k, this.field_i, -34, this.field_q, this.field_p, this.field_n, this.field_o, this.field_j);
           if (param0 != 0) {

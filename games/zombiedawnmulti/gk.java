@@ -60,7 +60,7 @@ final class gk {
           }
           var6 = stackIn_4_0;
           if (ic.field_d == 0) {
-            var7 = mb.a(e.field_c, false, var11, lj.field_t, 480);
+            var7 = mb.a(SecondaryNodeDeque.field_c, false, var11, lj.field_t, 480);
             var8 = 3 + var7;
             dn.field_a = new int[var8];
             eo.field_e = new String[var8];
@@ -82,7 +82,7 @@ final class gk {
             if (1 != ic.field_d) {
               throw new IllegalArgumentException();
             }
-            var7 = mb.a(e.field_c, false, var11, lj.field_t, 480);
+            var7 = mb.a(SecondaryNodeDeque.field_c, false, var11, lj.field_t, 480);
             var8 = var7 + 2;
             dn.field_a = new int[var8];
             eo.field_e = new String[var8];
@@ -104,21 +104,21 @@ final class gk {
             stackIn_26_0 = !(dn.field_a[var8Lifetime1] < 0);
             var9Lifetime1 = vh.a(stackIn_26_0, -36, eo.field_e[var8Lifetime1]);
             if (-1 != dn.field_a[var8Lifetime1]) {
-              var9Lifetime1 = var9Lifetime1 + wb.field_db * 2;
+              var9Lifetime1 = var9Lifetime1 + GameCharacter.field_db * 2;
             }
             if (var9Lifetime1 > var7Lifetime1) {
               var7Lifetime1 = var9Lifetime1;
             }
           }
           pl.field_F = mo.field_Jb.field_c * (ne.field_tb + pb.field_b << 1);
-          mc.field_e = aq.field_x - (-var7Lifetime1 + (var7Lifetime1 >> 1));
-          ch.field_i = -(var7Lifetime1 >> 1) + aq.field_x;
+          RandomAccessCacheFile.field_e = aq.field_x - (-var7Lifetime1 + (var7Lifetime1 >> 1));
+          IntrusiveDequeCursor.field_i = -(var7Lifetime1 >> 1) + aq.field_x;
           var8Lifetime2 = 0;
           while (var8Lifetime2 < eo.field_e.length) {
             stackIn_38_0 = pl.field_F;
             stackIn_38_1 = dn.field_a[var8Lifetime2];
             if (stackIn_38_1 < 0) {
-              stackIn_41_1 = dq.field_l;
+              stackIn_41_1 = ImageProducerRasterBuffer.field_l;
             } else {
               stackIn_41_1 = po.field_n;
             }
@@ -129,7 +129,7 @@ final class gk {
             gk.a((byte) -33);
           }
           eb.field_M = -(pl.field_F >> 1) + pm.field_Q;
-          mo.field_Jb.a(0, param0, -31458, aj.a(bo.field_d, false, bd.field_g));
+          mo.field_Jb.a(0, param0, -31458, aj.a(bo.field_d, false, MouseInputHandler.field_g));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -121,9 +121,9 @@ final class hd extends un {
         return stackIn_10_0;
     }
 
-    final static void a(java.math.BigInteger param0, byte param1, java.math.BigInteger param2, k param3, k param4) {
+    final static void a(java.math.BigInteger param0, byte param1, java.math.BigInteger param2, PacketBuffer param3, PacketBuffer param4) {
         try {
-          qi.a(0, true, param0, param3.field_j, param2, param3.field_m, param4);
+          qi.a(0, true, param0, param3.position, param2, param3.payload, param4);
           int var5_int = 19 % ((-76 - param1) / 44);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "hd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -218,8 +218,8 @@ final class hd extends un {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_j;
-            param0.b(param1 ^ 34, var17.field_r);
+            var4 = param0.position;
+            param0.writeInt(param1 ^ 34, var17.field_r);
             for (var5 = param1; var5 < var17.field_n; var5++) {
               if (var17.field_g[var5] != 0) {
                 param0.a(-99, var17.field_g[var5]);
@@ -232,7 +232,7 @@ final class hd extends un {
                         var15 = (java.lang.reflect.Field) (var17.field_m[var5].field_d);
                         var8 = var15.getModifiers();
                         param0.a(118, 0);
-                        param0.b(-126, var8);
+                        param0.writeInt(-126, var8);
                       }
                     } else {
                       var16_ref = (java.lang.reflect.Field) (var17.field_m[var5].field_d);
@@ -244,7 +244,7 @@ final class hd extends un {
                     var26 = (java.lang.reflect.Field) (var17.field_m[var5].field_d);
                     var8 = var26.getInt((Object) null);
                     param0.a(-95, 0);
-                    param0.b(-123, var8);
+                    param0.writeInt(-123, var8);
                   }
                   if (var6_int == 3) {
                     var27 = (java.lang.reflect.Method) (var17.field_l[var5].field_d);
@@ -264,14 +264,14 @@ final class hd extends un {
                       param0.a(-45, 4);
                     } else {
                       param0.a(113, 2);
-                      param0.a((String) (var10), (byte) 105);
+                      param0.writeString((String) (var10), (byte) 105);
                     }
                   } else {
                     if (var6_int == 4) {
                       var28 = (java.lang.reflect.Method) (var17.field_l[var5].field_d);
                       var8Lifetime1 = var28.getModifiers();
                       param0.a(125, 0);
-                      param0.b(-102, var8Lifetime1);
+                      param0.writeInt(-102, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
@@ -326,7 +326,7 @@ final class hd extends un {
               }
             }
             param0.f(var4, 117);
-            var17.a(true);
+            var17.unlink(true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -352,8 +352,8 @@ final class hd extends un {
           gi.field_i.c(param0, -1);
         }
         if (param1 != -19) {
-          k var3 = (k) null;
-          hd.a((java.math.BigInteger) null, (byte) -46, (java.math.BigInteger) null, (k) null, (k) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          hd.a((java.math.BigInteger) null, (byte) -46, (java.math.BigInteger) null, (PacketBuffer) null, (PacketBuffer) null);
         }
     }
 
@@ -381,7 +381,7 @@ final class hd extends un {
             return stackIn_7_0;
           }
           if (param0 == 7) {
-            stackIn_11_0 = kb.field_w;
+            stackIn_11_0 = GameWorld.field_w;
             return stackIn_11_0;
           }
           if (~param0 == param2) {

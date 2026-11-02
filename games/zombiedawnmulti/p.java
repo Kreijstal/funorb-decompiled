@@ -5,7 +5,7 @@ final class p {
     static long[] field_d;
     static int field_e;
     static String field_c;
-    static go field_a;
+    static PlatformTaskDispatcher field_a;
     static String field_b;
     static long[][] field_f;
 

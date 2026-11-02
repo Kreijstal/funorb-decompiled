@@ -85,14 +85,14 @@ final class oe {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, ja[] param2, byte param3) {
+    final static void a(int param0, int param1, Sprite[] param2, byte param3) {
         try {
           qf.field_c = new pd(param2);
           if (param3 != -21) {
             field_d = (String) null;
           }
           ic.field_g = param1;
-          e.field_a = param0;
+          SecondaryNodeDeque.field_a = param0;
           ff.f(-4604);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "oe.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

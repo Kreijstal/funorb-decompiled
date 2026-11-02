@@ -4,10 +4,10 @@
 import java.io.*;
 
 final class lf {
-    static ja[] field_c;
+    static Sprite[] field_c;
     static lf field_a;
     static int field_d;
-    static th field_e;
+    static IntrusiveDeque field_e;
     static String field_b;
 
     final static StringBuilder a(char param0, int param1, int param2, StringBuilder param3) {
@@ -58,7 +58,7 @@ final class lf {
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          param0.a(param1);
+          param0.unlink(param1);
           var2 = (dm) (cg.field_i.c(104));
           while (var2 != null) {
             if (var2.a((byte) -117, param0)) {
@@ -97,7 +97,7 @@ final class lf {
         field_e = null;
     }
 
-    final static void a(boolean param0, int param1, long param2, int param3, int param4, int param5, go param6, int param7, boolean param8, int param9, int param10, int param11, String param12, int param13) {
+    final static void a(boolean param0, int param1, long param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, int param7, boolean param8, int param9, int param10, int param11, String param12, int param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -122,7 +122,7 @@ final class lf {
             rp.field_q = param7;
             lo.field_b = param5;
             v.field_f = param4;
-            qa.field_i = param2;
+            DualLinkNode.field_i = param2;
             ff.field_s = param9;
             if (null == ok.field_m.field_s) {
               return;
@@ -166,16 +166,16 @@ final class lf {
 
     final static void a(ef param0, int param1) {
         int var2_int = 0;
-        ja var3 = null;
+        Sprite var3 = null;
         if (null == of.field_k) {
           return;
         }
         try {
           var2_int = param0.field_C + param0.field_r;
-          var3 = new ja(var2_int, var2_int);
+          var3 = new Sprite(var2_int, var2_int);
           var3.a();
           of.field_k.c(0, param1, var2_int, var2_int);
-          dl.field_h.b((byte) 119);
+          SocketConnector.field_h.b((byte) 119);
           of.field_k = var3;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "lf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -184,7 +184,7 @@ final class lf {
 
     static {
         field_a = new lf();
-        field_e = new th();
+        field_e = new IntrusiveDeque();
         field_b = "Disguise";
     }
 }

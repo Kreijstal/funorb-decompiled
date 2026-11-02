@@ -4,14 +4,14 @@
 final class vk extends rg {
     static String field_K;
     static int[] field_J;
-    private th field_H;
+    private IntrusiveDeque field_H;
     static String field_F;
     static String field_G;
     static boolean field_E;
     static pd field_I;
     static String[] field_L;
 
-    final void b(int param0, cf param1) {
+    final void b(int param0, UiWidget param1) {
         df var3 = null;
         if (!(param1 instanceof df)) {
           throw new IllegalArgumentException();
@@ -23,7 +23,7 @@ final class vk extends rg {
           var3 = (df) (param1);
           this.field_H.a(-25612, var3);
           var3.field_R = true;
-          var3.a((cf) (this), 0);
+          var3.a((UiWidget) (this), 0);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "vk.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -37,7 +37,7 @@ final class vk extends rg {
           vk.a(-28, (CharSequence) null);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (fn.field_i >= 20 &&
+        if (ClientException.field_i >= 20 &&
           ge.p(-86) && (!(qq.field_a > 0) ||
           re.b(-118))) {
           stackIn_9_0 = false;
@@ -51,18 +51,18 @@ final class vk extends rg {
 
     final void h(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        ch var2 = new ch(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         df var3 = (df) (var2.c(-3));
         if (param0 > -84) {
           vk.l((byte) 127);
         }
         while (var3 != null) {
           if (var3.i(-27388)) {
-            var3.a(true);
+            var3.unlink(true);
           }
           var3 = (df) (var2.a((byte) -113));
         }
-        this.field_B = (cf) ((Object) this.j((byte) -119));
+        this.field_B = (UiWidget) ((Object) this.j((byte) -119));
     }
 
     public static void k(byte param0) {
@@ -184,7 +184,7 @@ final class vk extends rg {
 
     final void h(int param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        ch var2 = new ch(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         df var3 = (df) (var2.c(-3));
         while (var3 != null) {
           var3.field_R = false;
@@ -198,7 +198,7 @@ final class vk extends rg {
 
     final df j(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        ch var2 = new ch(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         df var3 = (df) (var2.c(-3));
         while (var3 != null) {
           if (var3.field_R) {
@@ -214,28 +214,28 @@ final class vk extends rg {
 
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (this.field_h != null) {
-          this.field_h.a(true, param1, -15112, param3, (cf) (this));
+        if (this.listener != null) {
+          this.listener.a(true, param1, -15112, param3, (UiWidget) (this));
         }
         if (param0 != -2) {
           return;
         }
-        ch var5 = new ch(this.field_H);
-        cf var6 = (cf) (var5.a(32397));
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
+        UiWidget var6 = (UiWidget) (var5.a(32397));
         while (var6 != null) {
           var6.a(-2, param1 + this.field_i, param2, param3 + this.field_y);
-          var6 = (cf) (var5.e(-3));
+          var6 = (UiWidget) (var5.e(-3));
         }
     }
 
-    final cf f(int param0) {
-        ch var2;
+    final UiWidget f(int param0) {
+        IntrusiveDequeCursor var2;
         df var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        var2 = new ch(this.field_H);
+        var2 = new IntrusiveDequeCursor(this.field_H);
         if (param0 != -1963) {
-          return (cf) null;
+          return (UiWidget) null;
         }
         var3 = (df) (var2.c(-3));
         while (var3 != null) {
@@ -247,9 +247,9 @@ final class vk extends rg {
         return null;
     }
 
-    final static ja[] a(int param0, int param1, ul param2, int param3) {
+    final static Sprite[] a(int param0, int param1, ul param2, int param3) {
         RuntimeException var4 = null;
-        ja[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -354,20 +354,20 @@ final class vk extends rg {
     }
 
     public vk() {
-        super(0, 0, ub.field_wb, kc.field_a, (nl) null, (bj) null);
-        this.field_H = new th();
+        super(0, 0, ub.field_wb, kc.field_a, (WidgetActionListener) null, (bj) null);
+        this.field_H = new IntrusiveDeque();
     }
 
     final void g(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        ch var2 = new ch(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         if (param0 != 118) {
           field_J = (int[]) null;
         }
         df var3 = (df) (var2.c(-3));
         while (var3 != null) {
           if (var3.h(-6134)) {
-            var3.a(true);
+            var3.unlink(true);
           }
           var3 = (df) (var2.a((byte) -30));
         }

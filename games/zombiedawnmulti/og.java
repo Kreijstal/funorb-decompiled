@@ -12,7 +12,7 @@ final class og extends ek {
     static String field_S;
 
     final static void h(byte param0) {
-        dl.field_h.b((byte) 106);
+        SocketConnector.field_h.b((byte) 106);
         if (param0 < 109) {
           og.b(26, 121);
         }
@@ -22,7 +22,7 @@ final class og extends ek {
         int fieldTemp$0 = this.field_R - 1;
         this.field_R = this.field_R - 1;
         if (fieldTemp$0 <= 0) {
-          this.a(true);
+          this.unlink(true);
           this.a(-4564);
           return;
         }
@@ -35,14 +35,14 @@ final class og extends ek {
         ga var2 = ma.field_a;
         var2.b((byte) -35, param0);
         int var3 = -1 / ((param1 - 57) / 55);
-        var2.field_j = var2.field_j + 1;
-        int var4 = var2.field_j;
+        var2.position = var2.position + 1;
+        int var4 = var2.position;
         var2.a(122, 5);
         var2.a(122, mh.field_c.field_mc);
         int var5 = mh.field_c.field_Pb + (mh.field_c.field_fc << 6);
         var2.a(-101, var5);
         var2.a(mh.field_c.field_Zb, mh.field_c.field_Zb.length, 0, 114);
-        var2.e(91, -var4 + var2.field_j);
+        var2.e(91, -var4 + var2.position);
     }
 
     public static void g(byte param0) {
@@ -79,13 +79,13 @@ final class og extends ek {
         return true;
     }
 
-    final void a(int param0, rl param1) {
+    final void a(int param0, GameSimulation param1) {
         try {
           super.a(param0 ^ 0, param1);
           if (param0 != -9019) {
             og.b(-123, -15);
           }
-          this.field_R = this.field_A.field_m.a((byte) 32, this.field_O, 3000);
+          this.field_R = this.field_A.world.a((byte) 32, this.field_O, 3000);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "og.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -127,9 +127,9 @@ final class og extends ek {
         int stackIn_34_0 = 0;
         int stackIn_69_0 = 0;
         int stackIn_78_0 = 0;
-        ja[] stackIn_80_0 = null;
+        Sprite[] stackIn_80_0 = null;
         int stackIn_81_1 = 0;
-        ja[] stackIn_89_0 = null;
+        Sprite[] stackIn_89_0 = null;
         int stackIn_90_1 = 0;
         String stackIn_153_0 = null;
         String stackIn_162_0 = null;
@@ -137,7 +137,7 @@ final class og extends ek {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        th var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         jh var12 = null;
@@ -171,7 +171,7 @@ final class og extends ek {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        ja var42 = null;
+        Sprite var42 = null;
         cj var43 = null;
         cj var44 = null;
         cj var45 = null;
@@ -180,14 +180,14 @@ final class og extends ek {
         cj var48 = null;
         cj var49 = null;
         Object var50 = null;
-        ja var50_ref = null;
+        Sprite var50_ref = null;
         Object var51 = null;
-        ja var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        ja var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        ja var53_ref = null;
-        ja var54 = null;
+        Sprite var53_ref = null;
+        Sprite var54 = null;
         String var34Lifetime1;
         String var34Lifetime2;
         int var14Lifetime1;
@@ -421,7 +421,7 @@ final class og extends ek {
               } else {
                 var12.field_Kb.a(jk.field_f, var31, 68, 0, -3344);
               }
-              var12.field_Gb.field_wb = fm.a(var12.field_Gb.field_yb, var32, 78);
+              var12.field_Gb.field_wb = BitmapFont.a(var12.field_Gb.field_yb, var32, 78);
               var12.field_Gb.a(jk.field_f, var31, 78, 70, -3344);
               if (var12.field_Gb.field_L &&
                 !var12.field_Gb.field_wb.equals(var32)) {
@@ -443,12 +443,12 @@ final class og extends ek {
               stackIn_69_0 = (tb.field_u) ? 250 : 200;
               var33_intLifetime1 = stackIn_69_0;
               var12.field_jc.a(jk.field_f, var31, -var33_intLifetime1 + 365 - 2, var33_intLifetime1, -3344);
-              var34_int = ed.field_c;
+              var34_int = LevelFileCatalog.field_c;
               if ((var14Lifetime1 & 1 << jq.field_f) != 0) {
                 var50_ref = qp.field_u[var12.field_Pb];
                 var12.field_Xb.field_rb = var50_ref;
-                var12.field_Xb.a(var12.field_jc.field_z, 0, var50_ref.field_z, var34_int, -3344);
-                var34_int = var34_int + (ed.field_c + var50_ref.field_z);
+                var12.field_Xb.a(var12.field_jc.field_z, 0, var50_ref.fullWidth, var34_int, -3344);
+                var34_int = var34_int + (LevelFileCatalog.field_c + var50_ref.fullWidth);
               }
               if (0 != (var14Lifetime1 & 1 << ho.field_l)) {
                 if (!var12.field_Ob) {
@@ -465,14 +465,14 @@ final class og extends ek {
                 }
                 var51_ref = stackIn_80_0[stackIn_81_1];
                 var12.field_kc.field_rb = var51_ref;
-                var12.field_kc.a(var12.field_jc.field_z, 0, var51_ref.field_z, var34_int, -3344);
-                var34_int = var34_int + (ed.field_c + var51_ref.field_z);
+                var12.field_kc.a(var12.field_jc.field_z, 0, var51_ref.fullWidth, var34_int, -3344);
+                var34_int = var34_int + (LevelFileCatalog.field_c + var51_ref.fullWidth);
               }
               if (0 != (1 << el.field_M & var14Lifetime1)) {
                 var52_ref = we.field_j[var12.field_fc - 1];
                 var12.field_Tb.field_rb = var52_ref;
-                var12.field_Tb.a(var12.field_jc.field_z, 0, var52_ref.field_z, var34_int, -3344);
-                var34_int = var34_int + (ed.field_c + var52_ref.field_z);
+                var12.field_Tb.a(var12.field_jc.field_z, 0, var52_ref.fullWidth, var34_int, -3344);
+                var34_int = var34_int + (LevelFileCatalog.field_c + var52_ref.fullWidth);
               }
               if ((1 << ti.field_J & var14Lifetime1) != 0) {
                 stackIn_89_0 = ke.field_i;
@@ -483,8 +483,8 @@ final class og extends ek {
                 }
                 var53_ref = stackIn_89_0[stackIn_90_1];
                 var12.field_ec.field_rb = var53_ref;
-                var12.field_ec.a(var12.field_jc.field_z, 0, var53_ref.field_z, var34_int, -3344);
-                var34_int = var34_int + (var53_ref.field_z + ed.field_c);
+                var12.field_ec.a(var12.field_jc.field_z, 0, var53_ref.fullWidth, var34_int, -3344);
+                var34_int = var34_int + (var53_ref.fullWidth + LevelFileCatalog.field_c);
               }
               if (null != um.field_g) {
                 for (var36Lifetime1 = 0; kj.field_h > var36Lifetime1; var36Lifetime1++) {
@@ -493,8 +493,8 @@ final class og extends ek {
                     var42 = um.field_g[var36Lifetime1][255 & var12.field_Zb[var36Lifetime1]];
                     var54 = var42;
                     var12.field_Qb[var36Lifetime1].field_rb = var42;
-                    var12.field_Qb[var36Lifetime1].a(var12.field_jc.field_z, 0, var54.field_z, var34_int, -3344);
-                    var34_int = var34_int + (ed.field_c + var54.field_z);
+                    var12.field_Qb[var36Lifetime1].a(var12.field_jc.field_z, 0, var54.fullWidth, var34_int, -3344);
+                    var34_int = var34_int + (LevelFileCatalog.field_c + var54.fullWidth);
                   }
                 }
               }
@@ -581,9 +581,9 @@ final class og extends ek {
                   }
                 }
                 if (var35 == null) {
-                  ui.field_j = cf.field_f[var34_intLifetime2];
+                  ui.field_j = UiWidget.field_f[var34_intLifetime2];
                 } else {
-                  ui.field_j = cf.field_f[var34_intLifetime2] + " - " + (String) (var35);
+                  ui.field_j = UiWidget.field_f[var34_intLifetime2] + " - " + (String) (var35);
                 }
               }
             }
@@ -620,7 +620,7 @@ final class og extends ek {
               if (var12.field_fc == 2) {
                 stackIn_167_0 = oe.field_a;
               } else {
-                stackIn_167_0 = qd.field_E;
+                stackIn_167_0 = GameScreen.field_E;
               }
               ui.field_j = stackIn_167_0;
             }
@@ -707,7 +707,7 @@ final class og extends ek {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
-        hk.field_a = true;
+        PlayerLoadout.field_a = true;
         if (param0 != 0) {
           return;
         }

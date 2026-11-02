@@ -5,7 +5,7 @@ final class af {
     int field_f;
     static java.awt.Color field_b;
     static int[] field_g;
-    static qd field_e;
+    static GameScreen field_e;
     static String field_c;
     static sc field_h;
     static String field_a;

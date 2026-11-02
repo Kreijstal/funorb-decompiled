@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wa implements nl {
+final class wa implements WidgetActionListener {
     private int field_m;
     static cj field_a;
     static boolean field_k;
-    private fm field_h;
+    private BitmapFont field_h;
     private int field_e;
     private int field_l;
     static String field_j;
@@ -14,11 +14,11 @@ final class wa implements nl {
     private int field_i;
     static String field_d;
     static int field_g;
-    static ja[] field_b;
+    static Sprite[] field_b;
 
-    public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         int var10 = 0;
-        cf stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -32,7 +32,7 @@ final class wa implements nl {
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param4 instanceof wm) {
-            stackIn_4_0 = (cf) (param4);
+            stackIn_4_0 = (UiWidget) (param4);
           } else {
             stackIn_4_0 = null;
           }
@@ -81,7 +81,7 @@ final class wa implements nl {
         field_d = null;
     }
 
-    wa(fm param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    wa(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_e = param1;
           this.field_i = param4;

@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class cp extends se implements jn, in {
+final class cp extends WidgetContainer implements jn, in {
     static String field_L;
-    static fm field_H;
+    static BitmapFont field_H;
     private gn field_M;
     gl field_V;
     static ul field_P;
     static Calendar field_U;
     private gn field_W;
     private on field_G;
-    static ja[] field_X;
-    static th field_T;
+    static Sprite[] field_X;
+    static IntrusiveDeque field_T;
     static String[][] field_J;
     static int field_O;
     static boolean field_K;
@@ -23,7 +23,7 @@ final class cp extends se implements jn, in {
     static String[] field_R;
     static String[][] field_N;
 
-    final boolean a(int param0, char param1, cf param2, int param3) {
+    final boolean a(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -143,18 +143,18 @@ final class cp extends se implements jn, in {
     }
 
     public cp() {
-        super(0, 0, 496, 0, (nl) null);
+        super(0, 0, 496, 0, (WidgetActionListener) null);
         this.field_G = new on("", (bj) null, 12);
         hq var1 = new hq(field_H, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.field_C, -1, 2147483647, true);
-        cf var2 = new cf(la.field_e, var1, (bj) null);
+        UiWidget var2 = new UiWidget(la.field_e, var1, (bj) null);
         this.field_M = new gn(ji.field_e, (bj) null);
         this.field_W = new gn(gk.field_a, (bj) null);
         this.field_G.field_x = bi.field_d;
         this.field_G.a((byte) -27, new tp(this.field_G));
         this.field_M.field_F = false;
-        this.field_M.field_h = (nl) ((Object) new oq());
-        this.field_W.field_h = (nl) ((Object) new he());
-        this.field_G.field_h = (nl) ((Object) new tb(10000536));
+        this.field_M.listener = (WidgetActionListener) ((Object) new oq());
+        this.field_W.listener = (WidgetActionListener) ((Object) new he());
+        this.field_G.listener = (WidgetActionListener) ((Object) new tb(10000536));
         int var3 = 20;
         int var4 = 4;
         var2.b(20, var3, 28972, 270, 50);
@@ -204,7 +204,7 @@ final class cp extends se implements jn, in {
         field_U = null;
     }
 
-    final void a(int param0, cf param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_M.field_F = this.h(param0 + 5427);
@@ -213,7 +213,7 @@ final class cp extends se implements jn, in {
         }
     }
 
-    private final int a(int param0, String param1, int param2, cf param3, int param4, String param5) {
+    private final int a(int param0, String param1, int param2, UiWidget param3, int param4, String param5) {
         int discarded$1 = 0;
         RuntimeException var7 = null;
         String var8 = null;
@@ -229,7 +229,7 @@ final class cp extends se implements jn, in {
         try {
           if (param4 >= -9) {
             var8 = (String) null;
-            discarded$1 = this.a(82, (String) null, 77, (cf) null, 115, (String) null);
+            discarded$1 = this.a(82, (String) null, 77, (UiWidget) null, 115, (String) null);
           }
           stackIn_3_0 = this.a(param0, param3, param5, 35, param1, 12352, param2);
           return stackIn_3_0;
@@ -278,7 +278,7 @@ final class cp extends se implements jn, in {
         }
     }
 
-    private final int a(int param0, cf param1, String param2, int param3, String param4, int param5, int param6) {
+    private final int a(int param0, UiWidget param1, String param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         km var9 = null;
         el var10 = null;
@@ -335,15 +335,15 @@ final class cp extends se implements jn, in {
         if (param0 == 20) {
           return true;
         }
-        cf var3 = (cf) null;
-        this.a(-4, (cf) null, -95, 88);
+        UiWidget var3 = (UiWidget) null;
+        this.a(-4, (UiWidget) null, -95, 88);
         return true;
     }
 
     static {
         field_L = "Charm";
         field_U = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
-        field_T = new th();
+        field_T = new IntrusiveDeque();
         field_I = new String[]{"<col=FF0000>Disguise</col>: don a costume to blend in seamlessly with the environment. Your zombie won't lunge at survivors from a distance but, if it gets close, it won't resist the urge to bite.", "<col=FF0000>Speed</col>: go hyperactive and gain super-speed! Your zombie will move twice as fast to catch those fleshy humans.", "<col=FF0000>Meltdown</col>: dissolve into a puddle of sticky goo! Humans run very slowly through it, but zombies will be unaffected.", "<col=FF0000>Hammer</col>: stun any human or zombie in your field of influence!", "<col=E4F26A>More powerups can be researched by playing Rated games</col>!"};
         field_N = new String[4][6];
         field_J = new String[][]{new String[]{"Welcome to Zombie Dawn Multiplayer!", "How To Win"}, new String[]{"Basic Controls"}, new String[]{"Advanced Controls"}, new String[]{"The Interface"}, new String[]{"Starting Powerups"}, new String[]{"Starting Traits"}, new String[]{"Research"}};

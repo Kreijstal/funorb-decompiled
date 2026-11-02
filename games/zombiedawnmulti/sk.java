@@ -4,19 +4,19 @@
 final class sk {
     static boolean field_j;
     int field_p;
-    nl field_o;
+    WidgetActionListener field_o;
     int field_e;
     int field_c;
-    nl field_k;
+    WidgetActionListener field_k;
     static String field_r;
     int field_m;
     static String field_q;
-    nl field_a;
+    WidgetActionListener field_a;
     int field_b;
     int field_d;
-    nl field_s;
-    fm field_h;
-    nl field_n;
+    WidgetActionListener field_s;
+    BitmapFont field_h;
+    WidgetActionListener field_n;
     static cj field_i;
     private int field_f;
     int field_l;
@@ -67,24 +67,24 @@ final class sk {
         oo.f(param0, param6, param2, param1, param4, param5);
     }
 
-    final void a(int param0, fm param1) {
+    final void a(int param0, BitmapFont param1) {
         hq var18 = null;
         jl var4 = null;
-        ja[] var5 = null;
-        rf var17 = null;
-        rf var19 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var17 = null;
+        ArgbSprite var19 = null;
         int var7_int = 0;
         jl var6 = null;
         jl var7 = null;
         bg discarded$0 = null;
         wa discarded$1 = null;
         jl var8 = null;
-        ja[] var9 = null;
-        ja[] var10 = null;
-        ja dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         jl var11 = null;
         jl var12 = null;
-        ja var13 = null;
+        Sprite var13 = null;
         jl var14 = null;
         jl var20 = null;
         int var15 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -92,7 +92,7 @@ final class sk {
         jl var14Lifetime2;
         try {
           var18 = new hq(param1, 2, 2, 2236962, 1, 1, 1, param1.field_r + (param1.field_C + 2));
-          this.field_s = (nl) ((Object) var18);
+          this.field_s = (WidgetActionListener) ((Object) var18);
           var18.field_q = 16777215;
           var4 = new jl();
           var18.a(param0 - 125269882, var4);
@@ -110,37 +110,37 @@ final class sk {
           var4.a(0, (byte) -36).b(15658734, 0).a(vn.a(43, 7829367, 10066329, 8947848), 2147483647);
           var4.a(1, (byte) -36).a(vn.a(62, 13421772, 10066329, 11184810), 2147483647);
           var4.a(3, (byte) -36).a(vn.a(67, 10066329, 7829367, 8947848), 2147483647).a(1, 2147483647).a(1, (byte) 47);
-          var5 = new ja[9];
-          var17 = new rf(32, 32);
+          var5 = new Sprite[9];
+          var17 = new ArgbSprite(32, 32);
           var19 = var17;
-          for (var7_int = 0; var19.field_B.length > var7_int; var7_int++) {
-            var17.field_B[var7_int] = 1077952576;
+          for (var7_int = 0; var19.pixels.length > var7_int; var7_int++) {
+            var17.pixels[var7_int] = 1077952576;
           }
-          var5[4] = (ja) ((Object) var19);
+          var5[4] = (Sprite) ((Object) var19);
           var4.a(4, (byte) -36).a(true, 2521).a(var5, 2147483647);
           var4.a(5, (byte) -36).a(u.a(21242, 0, 65793, 0, 0), 2147483647).a(true, 2521).b(-1, 0);
-          this.field_n = (nl) ((Object) var4);
+          this.field_n = (WidgetActionListener) ((Object) var4);
           var6 = new jl(var4, true);
           var6.field_d = 0;
           var7 = new jl(var4, true);
           var7.field_d = 0;
           var7.a(nk.a(8947848, (byte) -98), false);
           var7.a(1, (byte) -36).a(nk.a(11184810, (byte) 108), 2147483647).b(2236962, 0);
-          this.field_k = (nl) ((Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_k = (WidgetActionListener) ((Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new bg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new wa(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new jl();
           var18.a(-3, var8);
           var8.a(0, (byte) -36).a(vn.a(120, 10066329, 7829367, 15658734), 2147483647).b(1118481, 0).a((byte) 44, -1);
           var8.a(4, (byte) -36).a(true, 2521).a(var5, 2147483647);
-          this.field_o = (nl) ((Object) var8);
-          var9 = new ja[9];
-          var10 = new ja[9];
-          var9[4] = new ja(2, 1);
-          var10[4] = new ja(1, 2);
+          this.field_o = (WidgetActionListener) ((Object) var8);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_B = new int[]{6710886, 7829367};
-          var10[4].field_B = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new jl();
           var12 = new jl();
           var11.a(var9, 0, false);
@@ -149,8 +149,8 @@ final class sk {
             this.a(21, (String) null, -114, (byte) -66);
           }
           var12.a(var10, 0, false);
-          var13 = new ja(7, 4);
-          var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13 = new Sprite(7, 4);
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new jl(var4, true);
           var14.a(var13.c(), (byte) -102);
           var13.b();
@@ -176,8 +176,8 @@ final class sk {
           var3 = -(t.field_e * t.field_e) + var2;
           param1 = param1 + var3 * (-param1 + km.field_cb) / var2;
         }
-        dq.field_k.a(120, param1, 640, ck.field_a, -3344);
-        eo.a(nj.field_h, ed.field_c, 0, -10, 5, 640, km.field_cb - 24);
+        ImageProducerRasterBuffer.field_k.a(120, param1, 640, ck.field_a, -3344);
+        eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, km.field_cb - 24);
         if (!param0) {
           return;
         }
@@ -192,7 +192,7 @@ final class sk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 95) {
-            this.field_h = (fm) null;
+            this.field_h = (BitmapFont) null;
           }
           if (!this.field_g) {
             this.a(6, param1, param0, param2);

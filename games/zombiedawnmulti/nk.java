@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends br {
+final class nk extends IntrusiveNode {
     static String field_j;
     private int field_r;
     static String field_q;
@@ -9,20 +9,20 @@ final class nk extends br {
     static int field_s;
     static String field_f;
     private int field_o;
-    private th field_l;
+    private IntrusiveDeque field_l;
     private int field_p;
     private ge field_t;
     private int field_i;
-    private rl field_m;
+    private GameSimulation field_m;
     static ea field_h;
     static String[] field_n;
     private boolean field_g;
 
     final static void a(int param0, double param1, int param2, int param3, double param4) {
-        th discarded$0 = null;
+        IntrusiveDeque discarded$0 = null;
         if (od.field_Db == 0 &&
           param2 > 0) {
-          he.field_k = new th();
+          he.field_k = new IntrusiveDeque();
         } else {
           if (0 == param2) {
             he.field_k = null;
@@ -32,7 +32,7 @@ final class nk extends br {
         la.field_n = param1;
         if (param3 == ab.field_o &&
           param0 > 0) {
-          discarded$0 = new th();
+          discarded$0 = new IntrusiveDeque();
         } else {
           if (param0 != 0) {
           }
@@ -57,17 +57,17 @@ final class nk extends br {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.d((byte) 69);
-          var3 = param1.d((byte) 69);
-          var4 = param1.d((byte) 69);
-          var5 = param1.d((byte) 69);
+          var2_int = param1.readUnsignedShort((byte) 69);
+          var3 = param1.readUnsignedShort((byte) 69);
+          var4 = param1.readUnsignedShort((byte) 69);
+          var5 = param1.readUnsignedShort((byte) 69);
           if (param0 != 20399) {
             var9 = (ri) null;
             nk.a(-34, (int[]) null, (ri) null);
           }
-          var6 = param1.d((byte) 69);
-          var7 = param1.d((byte) 69);
-          var8 = param1.d((byte) 69);
+          var6 = param1.readUnsignedShort((byte) 69);
+          var7 = param1.readUnsignedShort((byte) 69);
+          var8 = param1.readUnsignedShort((byte) 69);
           stackIn_3_0 = td.a(var5, var2_int, var4, (byte) 125, var8, var6, var7, var3);
           return (ae) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,10 +141,10 @@ final class nk extends br {
         }
     }
 
-    final static ja a(ja param0, int param1, int param2, int param3) {
+    final static Sprite a(Sprite param0, int param1, int param2, int param3) {
         int var5 = 0;
-        ja stackIn_14_0 = null;
-        ja stackIn_16_0 = null;
+        Sprite stackIn_14_0 = null;
+        Sprite stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -183,7 +183,7 @@ final class nk extends br {
             stackIn_16_0 = vb.field_b;
             return stackIn_16_0;
           }
-          stackIn_14_0 = (ja) null;
+          stackIn_14_0 = (Sprite) null;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,17 +199,17 @@ final class nk extends br {
         }
     }
 
-    final static ja[] a(int param0, byte param1) {
+    final static Sprite[] a(int param0, byte param1) {
         int var2 = -119 / ((43 - param1) / 47);
-        ja[] var3 = new ja[9];
-        var3[4] = k.a(-111, 64, param0);
+        Sprite[] var3 = new Sprite[9];
+        var3[4] = PacketBuffer.a(-111, 64, param0);
         return var3;
     }
 
     final void a(int param0) {
         int var2;
-        br var3;
-        br var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         ek var5;
         int var6;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -219,7 +219,7 @@ final class nk extends br {
             this.field_m.field_b.field_i.a((byte) 122);
             this.field_m.field_b.a(48);
           }
-          this.a(true);
+          this.unlink(true);
         }
         var2 = this.field_p * this.field_p;
         if (param0 < 91) {
@@ -227,9 +227,9 @@ final class nk extends br {
         }
         var3 = this.field_l.c(49);
         while (var3 instanceof ha) {
-          var4 = var3.field_d;
+          var4 = var3.previous;
           if (((ha) (var3)).field_f < var2) {
-            var3.a(true);
+            var3.unlink(true);
             var5 = ((ha) (var3)).field_m;
             if (!(var5 instanceof ge)) {
               if (var5 instanceof lm) {
@@ -285,7 +285,7 @@ final class nk extends br {
         return var3;
     }
 
-    nk(rl param0, int param1, int param2, boolean param3) {
+    nk(GameSimulation param0, int param1, int param2, boolean param3) {
         boolean stackIn_4_1 = false;
         int stackIn_7_1 = 0;
         int stackIn_19_0 = 0;
@@ -299,7 +299,7 @@ final class nk extends br {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        br var6 = null;
+        IntrusiveNode var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -324,7 +324,7 @@ final class nk extends br {
           this.field_p = 0;
           this.field_i = param2;
           this.field_o = param1;
-          this.field_l = new th();
+          this.field_l = new IntrusiveDeque();
           var5_int = this.field_r * this.field_r;
           var6 = this.field_m.field_u.c(76);
           while (var6 instanceof ek) {
@@ -366,7 +366,7 @@ final class nk extends br {
               if (var12 != 0) {
                 if (var6 instanceof ge) {
                   var13 = (ge) (var6);
-                  if (this.field_m.field_m.b(0, var13.field_gb)) {
+                  if (this.field_m.world.b(0, var13.field_gb)) {
                     this.field_m.a((byte) -100, var13);
                     decompiledFrameRemainder0 = false;
                   }
@@ -376,7 +376,7 @@ final class nk extends br {
                 }
               }
             }
-            var6 = var6.field_d;
+            var6 = var6.previous;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,7 +4,7 @@
 final class no extends cj {
     static String field_Fb;
     static int field_Gb;
-    static ja[][] field_Hb;
+    static Sprite[][] field_Hb;
     private cj field_Ib;
     static String field_Kb;
     static ri field_Jb;
@@ -14,7 +14,7 @@ final class no extends cj {
         int var1 = -7 % ((-1 - param0) / 63);
         if (null != sb.field_k) {
           var2 = sb.field_k;
-          cf.a((byte) -61, vl.a(lp.field_h, new String[]{var2}, 2));
+          UiWidget.a((byte) -61, vl.a(lp.field_h, new String[]{var2}, 2));
           sb.field_k = null;
         }
     }
@@ -73,10 +73,10 @@ final class no extends cj {
                 if (0 >= var5) {
                   return null;
                 }
-                stackIn_37_0 = th.field_a;
+                stackIn_37_0 = IntrusiveDeque.field_a;
                 return stackIn_37_0;
               }
-              stackIn_19_0 = th.field_a;
+              stackIn_19_0 = IntrusiveDeque.field_a;
               return stackIn_19_0;
             }
             stackIn_14_0 = bg.field_q;
@@ -98,7 +98,7 @@ final class no extends cj {
         }
     }
 
-    final static bm a(byte param0, byte[] param1) {
+    final static LevelActorSpawner a(byte param0, byte[] param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -113,7 +113,7 @@ final class no extends cj {
         int incrementValue$7 = 0;
         int var15 = 0;
         int incrementValue$8 = 0;
-        bm stackIn_16_0 = null;
+        LevelActorSpawner stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -199,9 +199,9 @@ final class no extends cj {
             var14[var15] = re.a(param1, incrementValue$8, (byte) 62);
           }
           if (param0 != 104) {
-            field_Hb = (ja[][]) null;
+            field_Hb = (Sprite[][]) null;
           }
-          stackIn_16_0 = new bm(var26, var22, var3, var4, var5, var23, var24, var8Lifetime1, var9);
+          stackIn_16_0 = new LevelActorSpawner(var26, var22, var3, var4, var5, var23, var24, var8Lifetime1, var9);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -224,7 +224,7 @@ final class no extends cj {
           CharSequence var2 = (CharSequence) null;
           no.a(false, -117, (CharSequence) null);
         }
-        field_Hb = (ja[][]) null;
+        field_Hb = (Sprite[][]) null;
         field_Kb = null;
     }
 
@@ -277,7 +277,7 @@ final class no extends cj {
           var17.field_R = 1;
           this.field_Ib = new cj(0L, param2);
           var8 = new cj(0L, param3);
-          var9 = new cj(0L, param3, qa.field_j);
+          var9 = new cj(0L, param3, DualLinkNode.field_j);
           var9.field_R = 1;
           var10 = 50;
           var11 = 0;
@@ -354,7 +354,7 @@ final class no extends cj {
 
     static {
         field_Fb = "Left-click or press 'ESC' to skip cutscene";
-        field_Hb = new ja[2][];
+        field_Hb = new Sprite[2][];
         field_Kb = "Make them tremble and shake.";
     }
 }

@@ -15,7 +15,7 @@ final class ge extends pa {
     boolean field_lb;
     private int field_sb;
     private int field_xb;
-    private th field_Cb;
+    private IntrusiveDeque field_Cb;
     lm field_tb;
     private int field_hb;
     int field_gb;
@@ -114,16 +114,16 @@ final class ge extends pa {
           if (0 < this.field_fb) {
             this.field_fb = this.field_fb - 1;
           }
-          L12: {
+          regionExit1: {
             if (this.field_nb != 1 && (!(this.field_M > 2) ||
               this.field_Bb)) {
               if ((this.field_nb == 0)) {
                 this.field_nb = hp.a((byte) 114, g.field_a, 60) + 60;
-                if (!(!this.field_A.field_m.b((byte) -98, 55, this.field_gb))) {
+                if (!(!this.field_A.world.b((byte) -98, 55, this.field_gb))) {
                   this.field_nb = 0;
                 }
               }
-              break L12;
+              break regionExit1;
             }
             var2 = -24 + this.e((byte) -112) + hp.a((byte) 22, g.field_a, 48);
             var3 = -24 + (this.g(1829947600) + hp.a((byte) -66, g.field_a, 48));
@@ -175,7 +175,7 @@ final class ge extends pa {
                             this.field_G = this.field_G + (this.field_yb << 16);
                           }
                           if (this.field_V == 5) {
-                            this.field_A.field_m.a(-99, (ff) (this));
+                            this.field_A.world.a(-99, (ff) (this));
                             this.t(4);
                           }
                         } else {
@@ -205,8 +205,8 @@ final class ge extends pa {
                                     this.field_L = this.field_L - 1;
                                     this.field_Bb = false;
                                     if (this.field_vb == null) {
-                                      this.field_vb = new sa(this, this.e((byte) -112), -30 + this.g(1829947600), this.field_A.field_m.a((byte) 32, this.field_gb, 750));
-                                      this.field_A.field_m.field_G.a(this.field_vb, false);
+                                      this.field_vb = new sa(this, this.e((byte) -112), -30 + this.g(1829947600), this.field_A.world.a((byte) 32, this.field_gb, 750));
+                                      this.field_A.world.field_G.a(this.field_vb, false);
                                     } else {
                                       if (this.field_vb.b(true)) {
                                         this.t(4);
@@ -234,8 +234,8 @@ final class ge extends pa {
                                       this.field_L = this.field_L - 1;
                                       this.field_xb = 0;
                                       if (this.field_vb == null) {
-                                        this.field_vb = new sa(this, this.e((byte) -112), -30 + this.g(1829947600), this.field_A.field_m.a((byte) 32, this.field_gb, 750));
-                                        this.field_A.field_m.field_G.a(this.field_vb, false);
+                                        this.field_vb = new sa(this, this.e((byte) -112), -30 + this.g(1829947600), this.field_A.world.a((byte) 32, this.field_gb, 750));
+                                        this.field_A.world.field_G.a(this.field_vb, false);
                                       }
                                       if (!(!this.field_vb.b(true))) {
                                         this.t(4);
@@ -250,7 +250,7 @@ final class ge extends pa {
                                       }
                                       if (!(this.field_V < 5)) {
                                         this.m((byte) 85);
-                                        this.field_A.field_m.a(-113, (ff) (this));
+                                        this.field_A.world.a(-113, (ff) (this));
                                       }
                                     } else {
                                       if (this.field_Q != 19 &&
@@ -259,7 +259,7 @@ final class ge extends pa {
                                           if (this.field_V == gg.field_j[27] / 2) {
                                             this.field_Bb = false;
                                             this.field_ub = 0;
-                                            this.field_xb = this.field_A.field_m.a((byte) 32, this.field_gb, 2250);
+                                            this.field_xb = this.field_A.world.a((byte) 32, this.field_gb, 2250);
                                           }
                                           if ((~(-1 + gg.field_j[27]) == ~this.field_V)) {
                                             this.a(4, (byte) -89);
@@ -274,7 +274,7 @@ final class ge extends pa {
                                               if (gg.field_j[28] / 2 == this.field_V) {
                                                 this.field_xb = 0;
                                                 this.field_Bb = false;
-                                                this.field_ub = this.field_A.field_m.a((byte) 32, this.field_gb, 2250);
+                                                this.field_ub = this.field_A.world.a((byte) 32, this.field_gb, 2250);
                                               }
                                               if ((gg.field_j[28] - 1 == this.field_V)) {
                                                 this.a(4, (byte) -89);
@@ -299,7 +299,7 @@ final class ge extends pa {
                                   this.a(4, (byte) -89);
                                   this.field_nb = 2;
                                   var5 = new og(this.e((byte) -112), this.g(1829947600), this.field_D, this.field_gb);
-                                  this.field_A.field_m.field_K.a(var5, false);
+                                  this.field_A.world.characters.a(var5, false);
                                   var5.a(-9019, this.field_A);
                                 }
                               }
@@ -345,9 +345,9 @@ final class ge extends pa {
                       }
                     }
                   } else {
-                    if (!this.field_A.field_m.b((byte) -66, 61, this.field_gb)) {
+                    if (!this.field_A.world.b((byte) -66, 61, this.field_gb)) {
                     }
-                    if (this.field_A.field_m.b((byte) -88, 54, this.field_gb)) {
+                    if (this.field_A.world.b((byte) -88, 54, this.field_gb)) {
                     }
                     boolean decompiledFrameRemainder0 = true;
                     if (this.field_tb != null &&
@@ -455,10 +455,10 @@ final class ge extends pa {
         var4 = -var2 + this.e((byte) -112);
         var5 = -var3 + this.g(1829947600);
         var6 = 6400;
-        if (this.field_A.field_m.b((byte) -101, 61, this.field_gb)) {
+        if (this.field_A.world.b((byte) -101, 61, this.field_gb)) {
           var6 = var6 * 3;
         }
-        if (this.field_A.field_m.b((byte) -109, 54, this.field_gb)) {
+        if (this.field_A.world.b((byte) -109, 54, this.field_gb)) {
           var6 = var6 * 5;
         }
         if (var5 * var5 + var4 * var4 <= var6 + 10 &&
@@ -467,10 +467,10 @@ final class ge extends pa {
           this.field_ab = var3;
           var7 = 57344 * this.field_M;
           var8 = var7 / 2;
-          if (this.field_A.field_m.b((byte) -68, 61, this.field_gb)) {
+          if (this.field_A.world.b((byte) -68, 61, this.field_gb)) {
             var7 = var7 + var8;
           }
-          if (this.field_A.field_m.b((byte) -102, 54, this.field_gb)) {
+          if (this.field_A.world.b((byte) -102, 54, this.field_gb)) {
             var7 = var7 + var8;
           }
           this.c(93, var7);
@@ -741,7 +741,7 @@ final class ge extends pa {
         if (null != this.field_vb) {
           this.field_Q = 15;
           this.field_vb.d(-108);
-          this.field_vb.a(true);
+          this.field_vb.unlink(true);
           this.field_vb = null;
           this.a(4, (byte) -89);
         }
@@ -774,7 +774,7 @@ final class ge extends pa {
         this.field_S = true;
     }
 
-    final void a(boolean param0, th param1) {
+    final void a(boolean param0, IntrusiveDeque param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -827,10 +827,10 @@ final class ge extends pa {
             this.field_nb = 3;
           }
           var4 = var3 / 2;
-          if (this.field_A.field_m.b((byte) -72, 49, this.field_gb)) {
+          if (this.field_A.world.b((byte) -72, 49, this.field_gb)) {
             var3 = var3 + var4;
           }
-          if (this.field_A.field_m.b((byte) -101, 47, this.field_gb)) {
+          if (this.field_A.world.b((byte) -101, 47, this.field_gb)) {
             var3 = var3 + var4;
           }
           this.c(-97, var3);
@@ -885,10 +885,10 @@ final class ge extends pa {
               this.field_ab = ((lm) (var2)).g(param0 + 1829973910);
               var6 = 57344 * this.field_M;
               var7 = var6 / 2;
-              if (this.field_A.field_m.b((byte) -77, 61, this.field_gb)) {
+              if (this.field_A.world.b((byte) -77, 61, this.field_gb)) {
                 var6 = var6 + var7;
               }
-              if (this.field_A.field_m.b((byte) -99, 54, this.field_gb)) {
+              if (this.field_A.world.b((byte) -99, 54, this.field_gb)) {
                 var6 = var6 + var7;
               }
               this.c(param0 ^ 26259, var6);
@@ -922,10 +922,10 @@ final class ge extends pa {
                     var4 = var10.g(param0 ^ -1829940758) - this.g(1829947600);
                     var5 = var3 * var3 + var4 * var4;
                     var11 = 6400;
-                    if (this.field_A.field_m.b((byte) -79, 61, this.field_gb)) {
+                    if (this.field_A.world.b((byte) -79, 61, this.field_gb)) {
                       var11 = var11 * 2;
                     }
-                    if (this.field_A.field_m.b((byte) -91, 54, this.field_gb)) {
+                    if (this.field_A.world.b((byte) -91, 54, this.field_gb)) {
                       var11 = var11 * 3;
                     }
                     if (var11 > var5) {
@@ -1015,7 +1015,7 @@ final class ge extends pa {
         if (param0 >= -59) {
           field_zb = -82;
         }
-        stackIn_6_0 = (a.field_b >= 10) && (fn.field_i >= 13);
+        stackIn_6_0 = (a.field_b >= 10) && (ClientException.field_i >= 13);
         return stackIn_6_0;
     }
 

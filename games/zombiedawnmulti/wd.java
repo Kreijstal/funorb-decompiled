@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends se implements in {
+final class wd extends WidgetContainer implements in {
     static ri field_P;
     static id field_G;
     static int[] field_Q;
@@ -12,7 +12,7 @@ final class wd extends se implements in {
     private gn[] field_H;
     private int field_J;
     static String field_I;
-    private fm field_M;
+    private BitmapFont field_M;
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
@@ -68,7 +68,7 @@ final class wd extends se implements in {
           return;
         }
         if (df.field_I) {
-          cf.field_s.a(0, param3, param5, param0, false);
+          UiWidget.field_s.a(0, param3, param5, param0, false);
           return;
         }
         try {
@@ -82,8 +82,8 @@ final class wd extends se implements in {
         }
     }
 
-    wd(ne param0, fm param1, String param2) {
-        super(0, 0, 288, 0, (nl) null);
+    wd(ne param0, BitmapFont param1, String param2) {
+        super(0, 0, 288, 0, (WidgetActionListener) null);
         int var4_int = 0;
         this.field_J = 0;
         try {
@@ -110,7 +110,7 @@ final class wd extends se implements in {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new gn(param0, param2);
-          var4.field_h = (nl) ((Object) new oq());
+          var4.listener = (WidgetActionListener) ((Object) new oq());
           var5 = this.field_w - 2;
           this.b(0, 0, 28972, this.field_n, this.field_w + 34);
           var4.b(7, var5, 28972, -14 + this.field_n, 30);

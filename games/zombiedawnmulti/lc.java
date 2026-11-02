@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc extends br {
+final class lc extends IntrusiveNode {
     private int field_h;
     static boolean[] field_m;
     private int field_j;
@@ -20,7 +20,7 @@ final class lc extends br {
           ul var2 = (ul) null;
           lc.a(-40, (ul) null, (int[]) null, (ri[]) null, (ul) null);
         }
-        ri var1 = new ri(ie.field_nb, hj.field_a, k.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], qp.field_t[0], tp.field_t);
+        ri var1 = new ri(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], qp.field_t[0], tp.field_t);
         fd.h((byte) 126);
         return var1;
     }
@@ -143,10 +143,10 @@ final class lc extends br {
     }
 
     final static void a(int param0, ul param1, int[] param2, ri[] param3, ul param4) {
-        ja[] dupTemp$0 = null;
-        ja[] dupTemp$1 = null;
-        ja[] dupTemp$2 = null;
-        ja[] dupTemp$3 = null;
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         ri[] var5 = null;
         ri[] var6 = null;
         int[] var6_array = null;
@@ -174,18 +174,18 @@ final class lc extends br {
         cj var9 = null;
         cj var10 = null;
         cj var11 = null;
-        ja[] var12 = null;
-        ja[] var13 = null;
-        ja[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         cj var15 = null;
-        ja[] var16 = null;
-        ja[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
         var18 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var20 = da.a("crowns", param1, (byte) 19, "lobby");
+          var20 = InflaterDecompressor.a("crowns", param1, (byte) 19, "lobby");
           var5 = var20;
           hg.field_ub = var20.length;
           if (param3 != null) {
@@ -222,7 +222,7 @@ final class lc extends br {
           jp.field_f = 11;
           nj.field_h = 4;
           jk.field_f = 15;
-          ed.field_c = 2;
+          LevelFileCatalog.field_c = 2;
           var7 = pj.a(param1, 4, param4, "largefont", "lobby");
           fd.field_G = pj.a(param1, param0 + 12039, param4, "generalfont", "lobby");
           jj.field_L = pj.a(param1, 4, param4, "chatfont", "lobby");
@@ -232,23 +232,23 @@ final class lc extends br {
           var8 = new cj(0L, (cj) null);
           var8.field_M = 16777215;
           var8.field_J = jk.field_f;
-          var8.field_yb = (fm) ((Object) var7);
+          var8.field_yb = (BitmapFont) ((Object) var7);
           var9 = var8;
           var8.field_lb = 1;
           var9.field_R = 1;
           var10 = new cj(0L, (cj) null);
           var10.field_J = jk.field_f;
-          var10.field_yb = (fm) ((Object) fd.field_G);
+          var10.field_yb = (BitmapFont) ((Object) fd.field_G);
           var10.field_M = 16777215;
           var11 = var10;
           var10.field_lb = 1;
           var11.field_R = 1;
-          ed.field_d = new cj(0L, var8);
-          ed.field_d.field_ab = hc.a(pb.a("lobby", param1, -256, "heading"), param0 + 12035);
+          LevelFileCatalog.field_d = new cj(0L, var8);
+          LevelFileCatalog.field_d.field_ab = hc.a(pb.a("lobby", param1, -256, "heading"), param0 + 12035);
           rb.field_d = new cj(0L, (cj) null);
           rb.field_d.field_ab = el.a(120, 8421504, 0, 4210752, false, false);
-          up.field_g = new cj(0L, (cj) null);
-          up.field_g.field_ab = tg.a(1, 114, 6316128, 3, 6316128, 108);
+          NodeHashTableIterator.field_g = new cj(0L, (cj) null);
+          NodeHashTableIterator.field_g.field_ab = tg.a(1, 114, 6316128, 3, 6316128, 108);
           kd.field_a = new cj(0L, (cj) null);
           kd.field_a.field_ab = hc.a(pb.a("lobby", param1, param0 ^ 12285, "popup"), 0);
           var12 = hc.a(pb.a("lobby", param1, -256, "popup_mouseover"), 0);
@@ -273,7 +273,7 @@ final class lc extends br {
           vo.field_m = new cj(0L, (cj) null);
           vo.field_m.field_J = jk.field_f;
           vo.field_m.field_M = 13421772;
-          vo.field_m.field_yb = (fm) ((Object) fd.field_G);
+          vo.field_m.field_yb = (BitmapFont) ((Object) fd.field_G);
           vo.field_m.field_lb = 1;
           cm.field_b = new cj(0L, vo.field_m);
           cm.field_b.field_M = 16764006;
@@ -284,7 +284,7 @@ final class lc extends br {
           var15 = new cj(0L, cm.field_b);
           var15.field_J = jk.field_f;
           var15.field_M = 16777215;
-          var15.field_yb = (fm) ((Object) var7);
+          var15.field_yb = (BitmapFont) ((Object) var7);
           qc.field_u = new cj(0L, vo.field_m);
           qc.field_u.field_ab = el.a(16, 2236962, 0, 2236962, false, false);
           qc.field_u.field_V = 2;
@@ -296,7 +296,7 @@ final class lc extends br {
           m.field_x = new cj(0L, m.field_B);
           m.field_x.b((byte) -32, cm.field_b);
           var16 = pb.a("lobby", param1, -256, "button_mouseover");
-          ql.field_d = new sn(kd.field_a, var12, vo.field_m, cm.field_b, 3, 2, ed.field_c, 3, jk.field_f);
+          ql.field_d = new sn(kd.field_a, var12, vo.field_m, cm.field_b, 3, 2, LevelFileCatalog.field_c, 3, jk.field_f);
           ta.field_gb = new cj(0L, cm.field_b);
           ta.field_gb.field_X = var16;
           ta.field_gb.field_sb = 1;
@@ -308,11 +308,11 @@ final class lc extends br {
           ta.field_gb.field_gb = pb.a("lobby", param1, param0 + 11779, "button_active");
           ta.field_gb.field_Bb = pb.a("lobby", param1, -256, "button_disabled");
           ta.field_gb.field_R = 1;
-          kf.field_i = new cj(0L, cm.field_b);
-          kf.field_i.field_R = 1;
-          kf.field_i.field_ab = hc.a(pb.a("lobby", param1, -256, "tab_inactive"), 0);
-          kf.field_i.field_X = hc.a(pb.a("lobby", param1, -256, "tab_mouseover"), 0);
-          kf.field_i.field_gb = var14;
+          ProxySocketConnector.field_i = new cj(0L, cm.field_b);
+          ProxySocketConnector.field_i.field_R = 1;
+          ProxySocketConnector.field_i.field_ab = hc.a(pb.a("lobby", param1, -256, "tab_inactive"), 0);
+          ProxySocketConnector.field_i.field_X = hc.a(pb.a("lobby", param1, -256, "tab_mouseover"), 0);
+          ProxySocketConnector.field_i.field_gb = var14;
           aa.field_l = new cj(0L, (cj) null);
           aa.field_l.field_ab = tg.a(-1, 206, 1127256, 3, 1856141, 32);
           cg.field_f = new cj(0L, (cj) null);
@@ -323,7 +323,7 @@ final class lc extends br {
           he.field_i.field_N = 1;
           he.field_i.field_R = 1;
           he.field_i.field_eb = 1;
-          kb.field_n = new cj(0L, he.field_i);
+          GameWorld.field_n = new cj(0L, he.field_i);
           tj.field_b = new cj(0L, cm.field_b);
           tj.field_b.field_R = 1;
           tj.field_b.field_N = 1;
@@ -334,7 +334,7 @@ final class lc extends br {
           de.field_f = new cj(0L, tj.field_b);
           ai.field_c = new cj(0L, he.field_i);
           ra.field_j = new cj(0L, tj.field_b);
-          nq.field_v = new cj(0L, tj.field_b);
+          SpriteState.field_v = new cj(0L, tj.field_b);
           uq.field_d = new cj(0L, tj.field_b);
           tj.field_b.field_ab = hc.a(pb.a("lobby", param1, param0 + 11779, "smallbutton"), 0);
           tj.field_b.field_X = hc.a(pb.a("lobby", param1, -256, "smallbutton_mouseover"), 0);
@@ -342,9 +342,9 @@ final class lc extends br {
           tj.field_b.field_gb = dupTemp$0;
           tj.field_b.field_S = dupTemp$0;
           tj.field_b.field_Bb = hc.a(pb.a("lobby", param1, -256, "smallbutton_disabled"), 0);
-          kb.field_n.field_ab = hc.a(pb.a("lobby", param1, -256, "mediumbutton"), 0);
-          kb.field_n.field_X = hc.a(pb.a("lobby", param1, -256, "mediumbutton_mouseover"), param0 ^ param0);
-          kb.field_n.field_S = hc.a(pb.a("lobby", param1, -256, "mediumbutton_mouseheld"), 0);
+          GameWorld.field_n.field_ab = hc.a(pb.a("lobby", param1, -256, "mediumbutton"), 0);
+          GameWorld.field_n.field_X = hc.a(pb.a("lobby", param1, -256, "mediumbutton_mouseover"), param0 ^ param0);
+          GameWorld.field_n.field_S = hc.a(pb.a("lobby", param1, -256, "mediumbutton_mouseheld"), 0);
           he.field_i.field_ab = hc.a(pb.a("lobby", param1, -256, "bigbutton"), 0);
           he.field_i.field_X = hc.a(pb.a("lobby", param1, -256, "bigbutton_mouseover"), 0);
           he.field_i.field_S = hc.a(pb.a("lobby", param1, -256, "bigbutton_mouseheld"), param0 ^ -12035);
@@ -370,11 +370,11 @@ final class lc extends br {
           dupTemp$2 = hc.a(pb.a("lobby", param1, param0 + 11779, "chatbutton_active"), param0 ^ -12035);
           ra.field_j.field_gb = dupTemp$2;
           ra.field_j.field_S = dupTemp$2;
-          nq.field_v.field_ab = hc.a(pb.a("lobby", param1, -256, "chatfilterbutton"), 0);
-          nq.field_v.field_X = hc.a(pb.a("lobby", param1, param0 + 11779, "chatfilterbutton_mouseover"), 0);
+          SpriteState.field_v.field_ab = hc.a(pb.a("lobby", param1, -256, "chatfilterbutton"), 0);
+          SpriteState.field_v.field_X = hc.a(pb.a("lobby", param1, param0 + 11779, "chatfilterbutton_mouseover"), 0);
           dupTemp$3 = hc.a(pb.a("lobby", param1, -256, "chatfilterbutton_active"), 0);
-          nq.field_v.field_gb = dupTemp$3;
-          nq.field_v.field_S = dupTemp$3;
+          SpriteState.field_v.field_gb = dupTemp$3;
+          SpriteState.field_v.field_S = dupTemp$3;
           var17 = pb.a("lobby", param1, -256, "checkbox");
           jk.field_h = new mi(0L, var17[1], var17[0], 1, cm.field_b, (String) null);
           po.field_k = new cj(0L, (cj) null);

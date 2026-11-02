@@ -33,7 +33,7 @@ class pp extends ic {
         }
     }
 
-    final void a(k param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.a(this.field_p, true);
           if (param1 != -1) {

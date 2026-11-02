@@ -16,7 +16,7 @@ final class la {
     private int field_f;
     static int[] field_c;
     static ri[] field_l;
-    static ja field_j;
+    static Sprite field_j;
 
     private final void b(int param0, byte param1) {
         int[] var4 = null;

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class hg extends gm {
-    static da field_wb;
+    static InflaterDecompressor field_wb;
     static int field_rb;
     static String field_tb;
     static int field_ub;
@@ -23,7 +23,7 @@ final class hg extends gm {
         String var11;
         int var12;
         int var13;
-        fn var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -51,13 +51,13 @@ final class hg extends gm {
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (!(param1 instanceof fn)) {
+        if (!(param1 instanceof ClientException)) {
           var2 = "";
           var11 = var2;
           var2 = var11;
           var11Lifetime6 = var2;
         } else {
-          var14 = (fn) ((Object) param1);
+          var14 = (ClientException) ((Object) param1);
           param1 = var14.field_f;
           var2 = var14.field_k + " | ";
         }
@@ -184,7 +184,7 @@ final class hg extends gm {
           field_wb = null;
           return;
         }
-        field_wb = (da) null;
+        field_wb = (InflaterDecompressor) null;
         field_sb = null;
         field_wb = null;
     }
@@ -196,8 +196,8 @@ final class hg extends gm {
         synchronized (var1) {
           pq.field_f = hh.field_e;
           gi.field_m = gi.field_m + 1;
-          bd.field_g = pb.field_a;
-          bo.field_d = da.field_e;
+          MouseInputHandler.field_g = pb.field_a;
+          bo.field_d = InflaterDecompressor.field_e;
           wc.field_J = vj.field_m;
           vj.field_m = false;
           kd.field_b = s.field_f;
@@ -222,7 +222,7 @@ final class hg extends gm {
     }
 
     static {
-        field_wb = new da();
+        field_wb = new InflaterDecompressor();
         field_tb = "Loading sound effects";
         field_sb = "Unfortunately your configuration doesn't support fullscreen mode.";
         field_vb = "Player";

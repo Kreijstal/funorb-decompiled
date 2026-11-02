@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf extends br {
+final class bf extends IntrusiveNode {
     static tq field_n;
-    static ja field_f;
-    private th field_p;
+    static Sprite field_f;
+    private IntrusiveDeque field_p;
     private int[][] field_k;
     static boolean field_m;
     static String field_j;
@@ -146,7 +146,7 @@ final class bf extends br {
 
     final void a(int param0) {
         int var2 = -43 / ((param0 + 32) / 47);
-        this.a(true);
+        this.unlink(true);
     }
 
     final static void a(boolean param0, int param1, String param2) {
@@ -161,7 +161,7 @@ final class bf extends br {
             h.field_L.field_R) {
             var3_int = 1;
             if (param1 == 8) {
-              if (!ch.field_e) {
+              if (!IntrusiveDequeCursor.field_e) {
                 param2 = f.field_b;
               } else {
                 param2 = ql.field_f;
@@ -186,7 +186,7 @@ final class bf extends br {
               if (param1 == 10) {
                 return;
               }
-              if (!ch.field_e) {
+              if (!IntrusiveDequeCursor.field_e) {
                 b.field_c.g((byte) 106);
                 return;
               }
@@ -263,7 +263,7 @@ final class bf extends br {
             var5 = var6;
             var6 = var10_ref_boolean____;
           }
-          this.field_p = new th();
+          this.field_p = new IntrusiveDeque();
           for (var9Lifetime1 = 0; var5.length > var9Lifetime1; var9Lifetime1++) {
             var16 = 0;
             var10Lifetime1 = var16;

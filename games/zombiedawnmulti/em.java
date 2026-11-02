@@ -49,7 +49,7 @@ final class em extends wk {
         }
     }
 
-    private final void a(String param0, int param1, int param2, cf param3, boolean param4) {
+    private final void a(String param0, int param1, int param2, UiWidget param3, boolean param4) {
         if (!param4) {
           return;
         }
@@ -88,7 +88,7 @@ final class em extends wk {
         this.field_Q.b(var6 + 90, 0, param2, 40, param4);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, ja[] param5, int param6, int param7, fm param8, int param9, int param10, int param11, int param12, ja[] param13, int param14, fm param15, ja[] param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, Sprite[] param13, int param14, BitmapFont param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -256,15 +256,15 @@ final class em extends wk {
         }
     }
 
-    private em(nl param0, boolean param1) {
-        super(0, 0, 0, 0, (nl) null);
+    private em(WidgetActionListener param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetActionListener) null);
         try {
           this.field_R = (pm) ((Object) new on("", (bj) null, 2));
           this.field_T = (pm) ((Object) new on("", (bj) null, 2));
           this.field_Q = (pm) ((Object) new on("", (bj) null, 4));
-          this.field_Q.field_h = param0;
-          this.field_T.field_h = param0;
-          this.field_R.field_h = param0;
+          this.field_Q.listener = param0;
+          this.field_T.listener = param0;
+          this.field_R.listener = param0;
           this.field_Z = param1 ? true : false;
           if (!this.field_Z) {
             this.b((byte) 111, this.field_R);
@@ -279,7 +279,7 @@ final class em extends wk {
         }
     }
 
-    em(nl param0, boolean param1, int param2, int param3, int param4, int param5) {
+    em(WidgetActionListener param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.b(param2, param3, 28972, param4, param5);

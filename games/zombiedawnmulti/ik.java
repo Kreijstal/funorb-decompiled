@@ -28,7 +28,7 @@ final class ik {
               qf.field_f = fh.field_j;
             } else {
               while (fh.field_j != qf.field_f) {
-                var2 = ln.field_f[fh.field_j];
+                var2 = SecondaryNodeDequeIterator.field_f[fh.field_j];
                 fh.field_j = fh.field_j + 1 & 127;
                 if (var2 < 0) {
                   lc.field_m[~var2] = false;

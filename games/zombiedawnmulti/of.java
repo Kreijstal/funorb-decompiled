@@ -5,14 +5,14 @@ import java.io.*;
 
 final class of {
     private long field_m;
-    static ja[] field_e;
+    static Sprite[] field_e;
     private long field_j;
     private byte[] field_i;
     private long field_b;
     private int field_n;
     private long field_c;
-    private mc field_o;
-    static ja field_k;
+    private RandomAccessCacheFile field_o;
+    static Sprite field_k;
     private int field_a;
     static ma field_d;
     private long field_h;
@@ -182,7 +182,7 @@ final class of {
     }
 
     final static void b(byte param0) {
-        we.field_k = new th();
+        we.field_k = new IntrusiveDeque();
         if (param0 < 97) {
           java.awt.Component var2 = (java.awt.Component) null;
           of.a(116, (java.awt.Component) null);
@@ -415,14 +415,14 @@ final class of {
           param1.removeFocusListener(on.field_Z);
           hh.field_e = 0;
           if (param0 != -1693) {
-            field_e = (ja[]) null;
+            field_e = (Sprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "of.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    of(mc param0, int param1, int param2) throws IOException {
+    of(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_m = -1L;
         this.field_a = 0;
@@ -455,7 +455,7 @@ final class of {
     }
 
     static {
-        field_e = new ja[5];
+        field_e = new Sprite[5];
         field_p = "Friends";
         field_d = new ma();
     }

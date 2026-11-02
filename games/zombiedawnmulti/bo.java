@@ -3,7 +3,7 @@
  */
 final class bo {
     private String field_f;
-    static th field_a;
+    static IntrusiveDeque field_a;
     static String field_c;
     static ul field_b;
     static boolean field_e;
@@ -38,7 +38,7 @@ final class bo {
           var4 = new af[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (!fq.a(68, param1)) {
-              var6 = param1.h(dq.b(-1 + var5, param0 - 30800), param0 ^ 17006);
+              var6 = param1.h(ImageProducerRasterBuffer.b(-1 + var5, param0 - 30800), param0 ^ 17006);
               var4[var5] = var4[var6];
             } else {
               var6_ref_af = new af();
@@ -110,12 +110,12 @@ final class bo {
               hj.field_f = md.a((CharSequence) ((Object) var6), param2 ^ -9159);
             }
           }
-          hk.field_e = param0;
+          PlayerLoadout.field_e = param0;
           pf.field_c = param4;
           gg.field_c = param1;
-          ao.field_h = new ja[param3.length];
+          ao.field_h = new Sprite[param3.length];
           for (var7 = param2; var7 < param3.length; var7++) {
-            ao.field_h[var7] = new ja(317, 34);
+            ao.field_h[var7] = new Sprite(317, 34);
           }
           nj.field_a = param3;
           return;
@@ -157,10 +157,10 @@ final class bo {
         field_c = null;
     }
 
-    final static bm a(byte[] param0, int param1) {
+    final static LevelActorSpawner a(byte[] param0, int param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        bm stackIn_10_0 = null;
+        LevelActorSpawner stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -178,14 +178,14 @@ final class bo {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1 != 24) {
-            field_a = (th) null;
+            field_a = (IntrusiveDeque) null;
           }
           var2_int = 0;
           var8 = new byte[param0.length + 24];
           var7 = var8;
           var3 = var7;
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 4; var2_intLifetime1++) {
-            br.a(var2_intLifetime1, var3, -85, re.a(param0, var2_intLifetime1, (byte) 112));
+            IntrusiveNode.a(var2_intLifetime1, var3, -85, re.a(param0, var2_intLifetime1, (byte) 112));
           }
           incrementValue$0 = var2_intLifetime1;
           var2_intLifetime1++;
@@ -193,16 +193,16 @@ final class bo {
           incrementValue$1 = var2_intLifetime1;
           var2_intLifetime1++;
           var5 = re.a(param0, incrementValue$1, (byte) 78);
-          br.a(4, var8, -116, var4);
-          br.a(5, var8, -88, var5);
-          br.a(6, var8, -74, var4);
-          br.a(7, var8, -79, var5);
-          br.a(8, var8, -91, var4);
-          br.a(9, var8, param1 ^ -88, var5);
-          br.a(10, var8, -111, var4);
-          br.a(11, var8, -85, var5);
+          IntrusiveNode.a(4, var8, -116, var4);
+          IntrusiveNode.a(5, var8, -88, var5);
+          IntrusiveNode.a(6, var8, -74, var4);
+          IntrusiveNode.a(7, var8, -79, var5);
+          IntrusiveNode.a(8, var8, -91, var4);
+          IntrusiveNode.a(9, var8, param1 ^ -88, var5);
+          IntrusiveNode.a(10, var8, -111, var4);
+          IntrusiveNode.a(11, var8, -85, var5);
           for (var2_intLifetime2 = 6; param0.length / 4 > var2_intLifetime2; var2_intLifetime2++) {
-            br.a(6 + var2_intLifetime2, var3, -111, re.a(param0, var2_intLifetime2, (byte) 112));
+            IntrusiveNode.a(6 + var2_intLifetime2, var3, -111, re.a(param0, var2_intLifetime2, (byte) 112));
           }
           stackIn_10_0 = no.a((byte) 104, var8);
           return stackIn_10_0;
@@ -256,7 +256,7 @@ final class bo {
 
     static {
         field_c = "RATING";
-        field_a = new th();
+        field_a = new IntrusiveDeque();
         field_e = true;
         field_d = 0;
     }

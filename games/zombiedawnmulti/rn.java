@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rn {
-    static ja[] field_a;
-    static ll field_f;
+    static Sprite[] field_a;
+    static FullscreenFocusCanvas field_f;
     static ai field_d;
     static ul field_e;
     static String field_g;
@@ -25,9 +25,9 @@ final class rn {
         if (field_f == null) {
           return;
         }
-        nq.a(95, field_f);
+        SpriteState.a(95, field_f);
         if (param0 > -26) {
-          field_a = (ja[]) null;
+          field_a = (Sprite[]) null;
           field_f.a(8192, pl.field_J);
           field_f = null;
           if (null != ng.field_g) {

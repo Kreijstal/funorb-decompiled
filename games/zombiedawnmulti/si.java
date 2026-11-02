@@ -17,7 +17,7 @@ final class si extends nc {
     private cb[] field_u;
     private int field_s;
     private String field_l;
-    private kb field_z;
+    private GameWorld field_z;
     private int field_t;
     private int field_B;
     private int field_q;
@@ -57,7 +57,7 @@ final class si extends nc {
         return 430;
     }
 
-    final void a(int param0, int param1, int param2, int[] param3, kb param4) {
+    final void a(int param0, int param1, int param2, int[] param3, GameWorld param4) {
         int var9 = 0;
         boolean stackIn_4_1 = false;
         int[] stackIn_14_1 = null;
@@ -116,7 +116,7 @@ final class si extends nc {
             }
             this.field_j = stackIn_14_1;
           }
-          this.field_g.a(-9049, true, this.a(-6003, bo.field_d, bd.field_g));
+          this.field_g.a(-9049, true, this.a(-6003, bo.field_d, MouseInputHandler.field_g));
           this.field_g.field_c = this.field_j.length;
           this.field_y = (int[]) ((Object) param3.clone());
           for (var6_int = 0; this.field_y.length > var6_int; var6_int++) {
@@ -127,7 +127,7 @@ final class si extends nc {
             }
           }
           this.field_w = 1;
-          this.field_p = this.field_z.field_H * 20 / 1000;
+          this.field_p = this.field_z.currentTick * 20 / 1000;
           this.field_A = new int[this.field_y.length];
           for (var6_intLifetime1 = 0; var6_intLifetime1 < param3.length; var6_intLifetime1++) {
             var7Lifetime1 = this.field_y[var6_intLifetime1];
@@ -149,19 +149,19 @@ final class si extends nc {
           }
           this.field_v = 0;
           if (!gf.field_h) {
-            var13 = ll.field_k;
+            var13 = FullscreenFocusCanvas.field_k;
             var7Lifetime2 = var13.g((byte) -32);
             for (var8Lifetime1 = 0; var7Lifetime2 > var8Lifetime1; var8Lifetime1++) {
-              if (ll.field_k.field_m[var8Lifetime1] != 255) {
-                this.e(ll.field_k.field_m[var8Lifetime1], param1 + 4);
-                if (255 != ll.field_k.field_g[var8Lifetime1]) {
-                  this.e(ll.field_k.field_g[var8Lifetime1], 4);
+              if (FullscreenFocusCanvas.field_k.field_m[var8Lifetime1] != 255) {
+                this.e(FullscreenFocusCanvas.field_k.field_m[var8Lifetime1], param1 + 4);
+                if (255 != FullscreenFocusCanvas.field_k.field_g[var8Lifetime1]) {
+                  this.e(FullscreenFocusCanvas.field_k.field_g[var8Lifetime1], 4);
                 }
               }
             }
             for (var8Lifetime1Lifetime1 = 0; var8Lifetime1Lifetime1 < 3; var8Lifetime1Lifetime1++) {
-              if (255 != ll.field_k.field_s[var8Lifetime1Lifetime1]) {
-                this.e(ll.field_k.field_s[var8Lifetime1Lifetime1], 4);
+              if (255 != FullscreenFocusCanvas.field_k.field_s[var8Lifetime1Lifetime1]) {
+                this.e(FullscreenFocusCanvas.field_k.field_s[var8Lifetime1Lifetime1], 4);
               }
             }
             if (0 >= this.field_v) {
@@ -172,12 +172,12 @@ final class si extends nc {
             for (var9 = 0; var9 < this.field_v; var9++) {
               var10 = var8Lifetime1Lifetime2 / (this.field_v - var9);
               var11 = this.field_u[var9].field_m;
-              ll.field_k.a(-126, var10, var11);
+              FullscreenFocusCanvas.field_k.a(-126, var10, var11);
               this.field_u[var9].a(0, var10);
               var8Lifetime1Lifetime2 = var8Lifetime1Lifetime2 - var10;
               this.field_r[var9] = var10;
             }
-            th.b((byte) -61);
+            IntrusiveDeque.b((byte) -61);
             return;
           }
           return;
@@ -431,7 +431,7 @@ final class si extends nc {
         int var22;
         int var23;
         int var24;
-        ja var25;
+        Sprite var25;
         int var26;
         int var6Lifetime1;
         int var7Lifetime1;
@@ -488,7 +488,7 @@ final class si extends nc {
           qp.field_w.a(qm.field_N, 478, 134, 16777215, 1, var6);
           var8_int = 555;
           if (this.field_z.field_i) {
-            qp.field_w.a(th.field_d, var8_int, 122, 16777215, 1, var6);
+            qp.field_w.a(IntrusiveDeque.field_d, var8_int, 122, 16777215, 1, var6);
           }
           qp.field_w.a(bo.field_c, var8_int, 134, 16777215, 1, var6);
           var7 = var7 + (-5 + (1 + pb.field_e.a(this.field_l, 0, 90, 640, 240, 65280, var3, var6, 1, 0, 30)) * var4);
@@ -558,7 +558,7 @@ final class si extends nc {
               var20 = stackIn_51_0;
               if (var20 != 0) {
                 wa.field_b[-18 + var19].c(var18, var10 + 5, var6);
-                if (wa.field_b[var19 - 18].b(var18, 5 + var10, bd.field_g, bo.field_d)) {
+                if (wa.field_b[var19 - 18].b(var18, 5 + var10, MouseInputHandler.field_g, bo.field_d)) {
                   this.field_E = var19;
                 }
                 var18 += 28;
@@ -632,13 +632,13 @@ final class si extends nc {
           var7Lifetime1 = 0;
           var8 = new int[]{30, 239, 448};
           for (var9Lifetime1 = 0; 5 > var9Lifetime1; var9Lifetime1++) {
-            var10Lifetime1 = ll.field_k.field_m[var9Lifetime1];
+            var10Lifetime1 = FullscreenFocusCanvas.field_k.field_m[var9Lifetime1];
             if (255 != var10Lifetime1) {
               var7Lifetime1 = ga.field_v[var9Lifetime1];
             }
           }
           for (var9Lifetime1Lifetime1 = 0; var9Lifetime1Lifetime1 < 3; var9Lifetime1Lifetime1++) {
-            var10Lifetime1Lifetime1 = ll.field_k.field_s[var9Lifetime1Lifetime1];
+            var10Lifetime1Lifetime1 = FullscreenFocusCanvas.field_k.field_s[var9Lifetime1Lifetime1];
             if (255 != var10Lifetime1Lifetime1) {
               if (var7Lifetime1 <= var8[var9Lifetime1Lifetime1]) {
                 stackIn_102_0 = var8[var9Lifetime1Lifetime1];
@@ -657,10 +657,10 @@ final class si extends nc {
           rq.field_l.a(239, 231, var6Lifetime1);
           rq.field_l.a(448, 231, var6Lifetime1);
           var9Lifetime1Lifetime3 = 0;
-          var10Lifetime1Lifetime2 = ll.field_k.g((byte) 125);
+          var10Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.g((byte) 125);
           for (var11Lifetime1 = 0; var11Lifetime1 < var10Lifetime1Lifetime2; var11Lifetime1++) {
-            var12Lifetime1 = ll.field_k.field_m[var11Lifetime1];
-            var13Lifetime1 = ll.field_k.field_g[var11Lifetime1];
+            var12Lifetime1 = FullscreenFocusCanvas.field_k.field_m[var11Lifetime1];
+            var13Lifetime1 = FullscreenFocusCanvas.field_k.field_g[var11Lifetime1];
             na.field_I.a(-32 + ga.field_v[var11Lifetime1], 126, var6Lifetime1);
             if (255 != var12Lifetime1 &&
               63 > var12Lifetime1) {
@@ -669,8 +669,8 @@ final class si extends nc {
                 oo.a(10 + ga.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * wf.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
               }
               w.field_z.a(ga.field_v[var11Lifetime1], 166, var6Lifetime1);
-              mg.a(var12Lifetime1, var13Lifetime1, (byte) 46, 106, ll.field_k, var6Lifetime1, -28 + ga.field_v[var11Lifetime1]);
-              var14Lifetime1Lifetime2 = ll.field_k.field_t[var12Lifetime1];
+              mg.a(var12Lifetime1, var13Lifetime1, (byte) 46, 106, FullscreenFocusCanvas.field_k, var6Lifetime1, -28 + ga.field_v[var11Lifetime1]);
+              var14Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.field_t[var12Lifetime1];
               var15Lifetime1 = cr.a(var12Lifetime1, -107);
               incrementValue$1 = var9Lifetime1Lifetime3;
               var9Lifetime1Lifetime3++;
@@ -686,7 +686,7 @@ final class si extends nc {
               ((ef) (Object) stackIn_116_0).b(stackIn_116_1, stackIn_116_2, stackIn_116_3, stackIn_117_4, 1, var6Lifetime1);
               if (255 != var13Lifetime1 &&
                 var13Lifetime1 < 63) {
-                var14Lifetime1Lifetime3 = ll.field_k.field_t[var13Lifetime1];
+                var14Lifetime1Lifetime3 = FullscreenFocusCanvas.field_k.field_t[var13Lifetime1];
                 var15Lifetime1Lifetime1 = cr.a(var13Lifetime1, -101);
                 incrementValue$2 = var9Lifetime1Lifetime3;
                 var9Lifetime1Lifetime3++;
@@ -706,7 +706,7 @@ final class si extends nc {
             }
           }
           for (var11Lifetime1Lifetime1 = 0; var11Lifetime1Lifetime1 < 3; var11Lifetime1Lifetime1++) {
-            var12Lifetime1Lifetime1 = ll.field_k.field_s[var11Lifetime1Lifetime1];
+            var12Lifetime1Lifetime1 = FullscreenFocusCanvas.field_k.field_s[var11Lifetime1Lifetime1];
             if (var12Lifetime1Lifetime1 != 255) {
               qj.field_m.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
               oo.h(0, 0, 640, 366);
@@ -718,8 +718,8 @@ final class si extends nc {
               }
               pm.field_N.a(var11Lifetime1Lifetime1 * 209 + 38, 244, var6Lifetime1);
               oo.c();
-              qh.a(var12Lifetime1Lifetime1, -29990, ll.field_k, 280, var11Lifetime1Lifetime1 * 209 + 91, var6Lifetime1);
-              var13Lifetime1Lifetime1Lifetime2 = ll.field_k.field_t[var12Lifetime1Lifetime1];
+              qh.a(var12Lifetime1Lifetime1, -29990, FullscreenFocusCanvas.field_k, 280, var11Lifetime1Lifetime1 * 209 + 91, var6Lifetime1);
+              var13Lifetime1Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.field_t[var12Lifetime1Lifetime1];
               var14Lifetime1Lifetime1 = cr.a(var12Lifetime1Lifetime1, -95);
               incrementValue$0 = var9Lifetime1Lifetime3;
               var9Lifetime1Lifetime3++;
@@ -787,7 +787,7 @@ final class si extends nc {
               var8 = var8 / 2;
             }
             var6 = var8 + 16;
-            var3 = bd.field_g;
+            var3 = MouseInputHandler.field_g;
             var5 += 16;
             if (0 > var3) {
               var3 = 0;
