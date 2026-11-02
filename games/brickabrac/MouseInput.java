@@ -203,7 +203,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int multiplyQ16(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var3 = param2 >> 16;
@@ -215,7 +215,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           var6 = 65535 & param0;
           return (var6 * var4 >> 16) + var5 * var4 + var3 * param0;
         }
-        MouseInput.a(-92, 104, -112);
+        MouseInput.multiplyQ16(-92, 104, -112);
         var5Lifetime1 = param0 >> 16;
         var6Lifetime1 = 65535 & param0;
         return (var6Lifetime1 * var4 >> 16) + var5Lifetime1 * var4 + var3 * param0;

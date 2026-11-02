@@ -17,11 +17,11 @@ final class ToggleButtonWidget extends FocusableWidget {
         field_L = null;
     }
 
-    final static void a(String param0, int param1, float param2, boolean param3) {
+    final static void showLoadingProgress(String param0, int param1, float param2, boolean param3) {
         try {
           if (param1 != 8192) {
             String var5 = (String) null;
-            ToggleButtonWidget.a((String) null, 67, -0.11976710706949234f, true);
+            ToggleButtonWidget.showLoadingProgress((String) null, 67, -0.11976710706949234f, true);
           }
           if (ChatLobbyUiHelpers.loadingProgressDialog == null) {
             ChatLobbyUiHelpers.loadingProgressDialog = new LoadingProgressDialog(ResourceArchive.field_f, AppletGameShell.field_b);
@@ -88,7 +88,7 @@ final class ToggleButtonWidget extends FocusableWidget {
         }
     }
 
-    final static void a(byte param0) {
+    final static void clearLobbyState(byte param0) {
         LobbyPlayer var3 = null;
         int var2 = BrickABrac.field_J ? 1 : 0;
         ClientResourceHelpers.currentLobbyGame = null;

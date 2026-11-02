@@ -9,7 +9,7 @@ final class WidgetLayerBootstrap {
     static RgbSprite[][] volcanicSegsSprites;
     static int uiRowHeight;
 
-    final static void b(boolean param0) {
+    final static void createWidgetLayerStack(boolean param0) {
         PopupWidgetLayer.widgetTheme = IntegerValidationHelpers.getSharedWidgetTheme((byte) 84);
         if (!param0) {
           ResourceArchive.field_f = new WidgetLayerStack();

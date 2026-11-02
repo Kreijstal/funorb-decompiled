@@ -16,7 +16,7 @@ abstract class ResourceRequest extends DualLinkNode {
     final static void setQuickChatHelpEntry(QuickChatCategoryDefinition category, boolean obfuscationGuard) {
         try {
           if (obfuscationGuard) {
-            ResourceRequest.a(27, -126, 116, 12, -63, -53, 36, -10, -75);
+            ResourceRequest.drawFramedPanel(27, -126, 116, 12, -63, -53, 36, -10, -75);
           }
           category.phraseIds = new int[]{-1};
           category.phraseShortcuts = new char[]{(char)63};
@@ -43,7 +43,7 @@ abstract class ResourceRequest extends DualLinkNode {
         field_z = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawFramedPanel(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         param7 = -param7 + 256;
         if (param3 != 2) {
           ResourceRequest.clearSharedReferences((byte) -88);

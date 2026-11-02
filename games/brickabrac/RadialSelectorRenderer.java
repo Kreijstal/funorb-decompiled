@@ -159,7 +159,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
           field_h = null;
           return;
         }
-        RadialSelectorRenderer.a(false, 38);
+        RadialSelectorRenderer.isScreenCurrentOrPending(false, 38);
         arcticBackgroundColors = null;
         field_c = null;
         field_h = null;
@@ -208,7 +208,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
           CacheEntry.a(param17, param11, 45, param10, param13, param1, param3, param7, param18, param6, param14, param0, param16, param8, param15);
           IntegerBitLengthHelpers.a(param5, param7, param2, (byte) 104);
           GameClock.b((byte) 13);
-          SingleChildWidget.g((byte) -24);
+          SingleChildWidget.buildMainScreenRoots((byte) -24);
           SoftwareFramebuffer.b((byte) 40);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -309,7 +309,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void openServerListPage(java.applet.Applet param0, boolean param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -351,7 +351,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
         }
     }
 
-    final static boolean a(boolean param0, int param1) {
+    final static boolean isScreenCurrentOrPending(boolean param0, int param1) {
         ResourceArchive var3;
         if (!param0) {
           if (null == InvitationDialogHelpers.pendingScreen &&

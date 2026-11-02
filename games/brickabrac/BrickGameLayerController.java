@@ -17,10 +17,10 @@ final class BrickGameLayerController implements GameLayerController {
         if (!MonotonicTime.field_c) {
           return false;
         }
-        if (RadialSelectorRenderer.a(false, -2)) {
+        if (RadialSelectorRenderer.isScreenCurrentOrPending(false, -2)) {
           return false;
         }
-        if (RadialSelectorRenderer.a(false, 19)) {
+        if (RadialSelectorRenderer.isScreenCurrentOrPending(false, 19)) {
           return true;
         }
         var2 = -78 / ((0 - param0) / 34);
@@ -212,7 +212,7 @@ final class BrickGameLayerController implements GameLayerController {
         int var5Lifetime11;
         if (obfuscationGuard == 16769381) {
           if (LegacyUtf8Decoder.hasFrameFocusOrFullscreen((byte) 121)) {
-            stackIn_300_0 = (!AccountMessageDialog.n(obfuscationGuard - 16769386)) ? 0 : 1;
+            stackIn_300_0 = (!AccountMessageDialog.isCursorBlinkVisible(obfuscationGuard - 16769386)) ? 0 : 1;
           } else {
             stackIn_300_0 = 0;
           }
@@ -384,7 +384,7 @@ final class BrickGameLayerController implements GameLayerController {
           }
           return;
         }
-        if (!AccountMessageDialog.n(obfuscationGuard - 16769386)) {
+        if (!AccountMessageDialog.isCursorBlinkVisible(obfuscationGuard - 16769386)) {
           var2Lifetime2 = 0;
           var3Lifetime2 = DualLinkDeque.field_d.screenY;
           if (!ConnectionPhase.field_d) {
@@ -1408,7 +1408,7 @@ final class BrickGameLayerController implements GameLayerController {
           if (!MonotonicTime.field_c) {
             return false;
           }
-          if (RadialSelectorRenderer.a(false, -2)) {
+          if (RadialSelectorRenderer.isScreenCurrentOrPending(false, -2)) {
             return true;
           }
           return false;
@@ -1416,7 +1416,7 @@ final class BrickGameLayerController implements GameLayerController {
         if (!MonotonicTime.field_c) {
           return false;
         }
-        if (RadialSelectorRenderer.a(false, -2)) {
+        if (RadialSelectorRenderer.isScreenCurrentOrPending(false, -2)) {
           return true;
         }
         return false;

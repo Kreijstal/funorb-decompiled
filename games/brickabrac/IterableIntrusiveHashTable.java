@@ -19,7 +19,7 @@ final class IterableIntrusiveHashTable implements Iterable {
         field_b = null;
         if (obfuscationGuard != 24968) {
           MusicTrack var2 = (MusicTrack) null;
-          IterableIntrusiveHashTable.a(-14, true, (MusicTrack) null, -51, -100, true);
+          IterableIntrusiveHashTable.scheduleMusicTrack(-14, true, (MusicTrack) null, -51, -100, true);
           packetRandom = null;
           return;
         }
@@ -79,7 +79,7 @@ final class IterableIntrusiveHashTable implements Iterable {
         return (Iterator) ((Object) new IntrusiveHashIterator(this));
     }
 
-    final static void a(int param0, boolean param1, MusicTrack param2, int param3, int param4, boolean param5) {
+    final static void scheduleMusicTrack(int param0, boolean param1, MusicTrack param2, int param3, int param4, boolean param5) {
         Object var6 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

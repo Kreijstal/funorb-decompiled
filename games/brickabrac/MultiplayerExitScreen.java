@@ -103,8 +103,8 @@ final class MultiplayerExitScreen extends MatchResultScreen {
           if (param4 <= 11) {
             savePrompts = (String[]) null;
           }
-          TooltipSprite.a(param3, param1, (byte) -59, param2);
-          WidgetLayerBootstrap.b(false);
+          TooltipSprite.loadCommonUiResources(param3, param1, (byte) -59, param2);
+          WidgetLayerBootstrap.createWidgetLayerStack(false);
           MusicVoice.field_l = StrongCacheEntry.field_P;
           IntrusiveHashIterator.field_g = StrongCacheEntry.field_P;
         } catch (RuntimeException runtimeException) {
@@ -124,10 +124,10 @@ final class MultiplayerExitScreen extends MatchResultScreen {
     final void navigateBack(int obfuscationGuard) {
         if (obfuscationGuard != -1) {
           MultiplayerExitScreen.clearSharedReferences(-22);
-          ArchiveNetworkRequest.f((byte) 122);
+          ArchiveNetworkRequest.leaveCurrentGame((byte) 122);
           return;
         }
-        ArchiveNetworkRequest.f((byte) 122);
+        ArchiveNetworkRequest.leaveCurrentGame((byte) 122);
     }
 
     MultiplayerExitScreen() {

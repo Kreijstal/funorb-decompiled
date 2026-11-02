@@ -46,7 +46,7 @@ final class QuickChatPhraseRegistry {
         return definition;
     }
 
-    final static boolean a(ResourceArchive param0, byte param1) {
+    final static boolean areAllGroupsAvailable(ResourceArchive param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

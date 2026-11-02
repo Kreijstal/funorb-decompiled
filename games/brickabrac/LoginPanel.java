@@ -400,7 +400,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
             this.y = this.y + (5 + var7.measureWrappedHeight(this.introMessage, -40 + this.width, var7.ascent));
           }
           var8 = PlayerInputBatch.field_p;
-          var9 = MultiValueSliderWidget.a(EmailConfirmationValidator.e((byte) -115), -28432);
+          var9 = MultiValueSliderWidget.readLastLoginMethod(EmailConfirmationValidator.e((byte) -115), -28432);
           if (EmailConfirmationValidator.field_k == var9) {
             var8 = IntegerParsingHelpers.field_a;
           } else {

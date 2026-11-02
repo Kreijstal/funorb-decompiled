@@ -407,7 +407,7 @@ final class MusicVoice extends IntrusiveNode {
                 if (var13.actionLabel.pressedButton != 0) {
                   GameConnectionHelpers.requestRemoveOrRejectPlayer(param2, var13.playerId, true);
                 } else {
-                  SpriteGeometry.a(0, PlayerNameChooserPanel.pressY, var13, param1, (byte) 58, LoadingProgressDialog.pressX, 0);
+                  SpriteGeometry.openPlayerContextMenu(0, PlayerNameChooserPanel.pressY, var13, param1, (byte) 58, LoadingProgressDialog.pressX, 0);
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -429,7 +429,7 @@ final class MusicVoice extends IntrusiveNode {
                       var25 = GamePresentationHelpers.formatIndexedText(InputOptionsHelpers.field_h, new String[]{null, Integer.toString(var6)}, (byte) 103);
                     } else {
                       if ((var8 & ~var13.optionEligibilityMask) != 0) {
-                        var26_int = TextFieldRenderer.a((byte) -82, ~var13.optionEligibilityMask & var8);
+                        var26_int = TextFieldRenderer.highestOneBit((byte) -82, ~var13.optionEligibilityMask & var8);
                         var25 = ObjectHistoryBuffer.field_j;
                         if (var26_int > 0 &&
                           EmailLoginCredentials.field_p != null &&
@@ -457,7 +457,7 @@ final class MusicVoice extends IntrusiveNode {
                       var25 = GamePresentationHelpers.formatIndexedText(WidgetLayerStack.field_H, new String[]{var21, Integer.toString(var6)}, (byte) 103);
                     } else {
                       if ((var8 & ~var13.optionEligibilityMask) != 0) {
-                        var26_int = TextFieldRenderer.a((byte) -82, ~var13.optionEligibilityMask & var8);
+                        var26_int = TextFieldRenderer.highestOneBit((byte) -82, ~var13.optionEligibilityMask & var8);
                         var25 = GamePresentationHelpers.formatIndexedText(IntNode.field_m, new String[]{var21}, (byte) 103);
                         if (var26_int > 0 &&
                           null != EmailLoginCredentials.field_p &&

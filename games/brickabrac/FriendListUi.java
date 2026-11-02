@@ -155,7 +155,7 @@ final class FriendListUi {
                 }
               } else {
                 pressedName = entry.name;
-                SpriteGeometry.a(-1, entry, GameScreen.friendsListPane.scrollPane, (int[]) null, pressedName, -1, (byte) -58, 0L, (String) null);
+                SpriteGeometry.createContextActions(-1, entry, GameScreen.friendsListPane.scrollPane, (int[]) null, pressedName, -1, (byte) -58, 0L, (String) null);
                 if (null != entry.serverName &&
                   !ConditionalTextValue.a(13134, GameRenderAudioHelpers.contextActions.targetName) &&
                   !TextWidgetRenderer.field_e) {

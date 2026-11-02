@@ -10,7 +10,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     static String field_p;
     private TextFieldWidget matchingField;
 
-    final static void e(byte param0) {
+    final static void showAccountLoginContent(byte param0) {
         String var1 = null;
         String var1Lifetime1;
         if (!NanoGameClock.field_l) {

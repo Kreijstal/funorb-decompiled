@@ -10,7 +10,7 @@ final class SecondaryNodeQueue {
     static String field_e;
     static String field_a;
 
-    final static void d(int param0) {
+    final static void clearNameEntryPopup(int param0) {
         MusicCrossfadeStream.nameEntryPopup = null;
         int var1 = -1 / ((42 - param0) / 59);
     }
@@ -117,7 +117,7 @@ final class SecondaryNodeQueue {
         field_c = null;
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
+    final static void installSoundArchives(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           BallPulseEffect.specialMusicTrackArchive = param1;
           NineSliceFrame.field_g = param3;
@@ -146,7 +146,7 @@ final class SecondaryNodeQueue {
             return (IndexedSprite) (stackIn_2_0);
           }
           if (obfuscationGuard != 0) {
-            SecondaryNodeQueue.d(-20);
+            SecondaryNodeQueue.clearNameEntryPopup(-20);
           }
           stackIn_6_0 = LevelSelectScreen.buildIndexedSprite(false);
           return stackIn_6_0;

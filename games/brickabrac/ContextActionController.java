@@ -194,2483 +194,2483 @@ final class ContextActionController {
                 HighscorePackSelector.field_c = param0;
                 var2 = AppletFlowHelpers.a("loginm3", (byte) 107);
                 if (var2 != null) {
-                  DisplayModeInfo.field_b = MenuButton.a(var2, (byte) 126);
+                  DisplayModeInfo.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("loginm2", (byte) -110);
                 if (var2 != null) {
-                  ByteArrayPoolHelpers.field_e = MenuButton.a(var2, (byte) 91);
+                  ByteArrayPoolHelpers.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("loginm1", (byte) -124);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 98);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("idlemessage20min", (byte) -107);
                 if (null != var2) {
-                  NinjaBackground.field_s = MenuButton.a(var2, (byte) 104);
+                  NinjaBackground.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 104);
                 }
                 var2 = AppletFlowHelpers.a("error_js5crc", (byte) -111);
                 if (null != var2) {
-                  AppletFlowHelpers.field_d = MenuButton.a(var2, (byte) 72);
+                  AppletFlowHelpers.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("error_js5io", (byte) -119);
                 if (null != var2) {
-                  RadialSelectorWidget.field_M = MenuButton.a(var2, (byte) 80);
+                  RadialSelectorWidget.field_M = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("error_js5connect_full", (byte) -119);
                 if (null != var2) {
-                  AppletGameShell.field_k = MenuButton.a(var2, (byte) 106);
+                  AppletGameShell.field_k = MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("error_js5connect", (byte) -114);
                 if (var2 != null) {
-                  WidgetLayerBootstrap.field_e = MenuButton.a(var2, (byte) 72);
+                  WidgetLayerBootstrap.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("login_gameupdated", (byte) 24);
                 if (null != var2) {
-                  CanvasViewGlobals.field_b = MenuButton.a(var2, (byte) 71);
+                  CanvasViewGlobals.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("create_unable", (byte) 91);
                 if (null != var2) {
-                  ConditionalTextValue.field_d = MenuButton.a(var2, (byte) 71);
+                  ConditionalTextValue.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("create_ineligible", (byte) 28);
                 if (var2 != null) {
-                  CircleBody.field_q = MenuButton.a(var2, (byte) 96);
+                  CircleBody.field_q = MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("usernameprompt", (byte) 2);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 111);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("passwordprompt", (byte) 34);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 74);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("andagainprompt", (byte) -123);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 116);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("ticketing_read", (byte) -119);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 90);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("ticketing_ignore", (byte) -128);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 91);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("ticketing_oneunread", (byte) 113);
                 if (var2 != null) {
-                  WidgetGroup.field_C = MenuButton.a(var2, (byte) 110);
+                  WidgetGroup.field_C = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("ticketing_xunread", (byte) -111);
                 if (null != var2) {
-                  IntegerBitLengthHelpers.unreadMessagesFormat = MenuButton.a(var2, (byte) 116);
+                  IntegerBitLengthHelpers.unreadMessagesFormat = MenuButton.decodeCp1252Bytes(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("ticketing_gotowebsite", (byte) -125);
                 if (null != var2) {
-                  ConditionalTextValue.field_e = MenuButton.a(var2, (byte) 88);
+                  ConditionalTextValue.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("ticketing_waitingformessages", (byte) 38);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 92);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_on", (byte) -127);
                 if (var2 != null) {
-                  UiCleanupHelpers.field_a = MenuButton.a(var2, (byte) 123);
+                  UiCleanupHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 123);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_friends", (byte) -127);
                 if (null != var2) {
-                  AchievementSubmission.friendsTabLabel = MenuButton.a(var2, (byte) 125);
+                  AchievementSubmission.friendsTabLabel = MenuButton.decodeCp1252Bytes(var2, (byte) 125);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_off", (byte) -122);
                 if (var2 != null) {
-                  TableRowSubmission.field_s = MenuButton.a(var2, (byte) 123);
+                  TableRowSubmission.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 123);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_lobby", (byte) -8);
                 if (null != var2) {
-                  ArcticBackground.field_u = MenuButton.a(var2, (byte) 98);
+                  ArcticBackground.field_u = MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_public", (byte) 15);
                 if (null != var2) {
-                  QuickChatHelpDialog.field_Wb = MenuButton.a(var2, (byte) 118);
+                  QuickChatHelpDialog.field_Wb = MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_ignore", (byte) -115);
                 if (var2 != null) {
-                  SpriteInputHelpers.ignoreTabLabel = MenuButton.a(var2, (byte) 110);
+                  SpriteInputHelpers.ignoreTabLabel = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_tips", (byte) 35);
                 if (var2 != null) {
-                  MidiSynthesizer.field_u = MenuButton.a(var2, (byte) 89);
+                  MidiSynthesizer.field_u = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_game", (byte) 126);
                 if (null != var2) {
-                  UiComponent.field_Z = MenuButton.a(var2, (byte) 97);
+                  UiComponent.field_Z = MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_private", (byte) 45);
                 if (var2 != null) {
-                  ContentTransitionLayer.field_hb = MenuButton.a(var2, (byte) 84);
+                  ContentTransitionLayer.field_hb = MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_entered_game", (byte) 69);
                 if (null != var2) {
-                  IntKeyIndex.field_d = MenuButton.a(var2, (byte) 82);
+                  IntKeyIndex.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_joined_your_game", (byte) 98);
                 if (var2 != null) {
-                  InstructionsScreen.field_w = MenuButton.a(var2, (byte) 119);
+                  InstructionsScreen.field_w = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_entered_other_game", (byte) -126);
                 if (null != var2) {
-                  DateInputWidget.field_K = MenuButton.a(var2, (byte) 80);
+                  DateInputWidget.field_K = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_left_lobby", (byte) -125);
                 if (null != var2) {
-                  ArcticBackground.field_v = MenuButton.a(var2, (byte) 111);
+                  ArcticBackground.field_v = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_lost_con", (byte) -123);
                 if (var2 != null) {
-                  Brick.field_z = MenuButton.a(var2, (byte) 122);
+                  Brick.field_z = MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_cannot_join_full", (byte) 7);
                 if (null != var2) {
-                  SpriteGeometry.field_B = MenuButton.a(var2, (byte) 110);
+                  SpriteGeometry.field_B = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_cannot_join_inprogress", (byte) 102);
                 if (var2 != null) {
-                  GameRenderAudioHelpers.field_e = MenuButton.a(var2, (byte) 122);
+                  GameRenderAudioHelpers.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_declined_invite", (byte) 112);
                 if (var2 != null) {
-                  BlankScreen.field_h = MenuButton.a(var2, (byte) 98);
+                  BlankScreen.field_h = MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_withdrew_request", (byte) 110);
                 if (var2 != null) {
-                  GamePresentationHelpers.field_c = MenuButton.a(var2, (byte) 76);
+                  GamePresentationHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_removed", (byte) -119);
                 if (null != var2) {
-                  LevelPack.field_f = MenuButton.a(var2, (byte) 121);
+                  LevelPack.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("mu_x_dropped_out", (byte) -112);
                 if (null != var2) {
-                  GameplaySpriteHelpers.field_b = MenuButton.a(var2, (byte) 97);
+                  GameplaySpriteHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("mu_entered_other_game", (byte) 62);
                 if (null != var2) {
-                  ConnectionPhase.field_b = MenuButton.a(var2, (byte) 102);
+                  ConnectionPhase.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("mu_game_is_full", (byte) 60);
                 if (var2 != null) {
-                  PlayerBadgeHelpers.gameFullText = MenuButton.a(var2, (byte) 83);
+                  PlayerBadgeHelpers.gameFullText = MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("mu_game_has_started", (byte) 25);
                 if (var2 != null) {
-                  OptionsScreen.field_w = MenuButton.a(var2, (byte) 89);
+                  OptionsScreen.field_w = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("mu_you_declined_invite", (byte) -117);
                 if (var2 != null) {
-                  GameTransportActions.field_b = MenuButton.a(var2, (byte) 76);
+                  GameTransportActions.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("mu_invite_withdrawn", (byte) 73);
                 if (var2 != null) {
-                  BrickMotionPath.field_s = MenuButton.a(var2, (byte) 73);
+                  BrickMotionPath.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("mu_request_declined", (byte) 113);
                 if (null != var2) {
-                  MenuScreen.field_n = MenuButton.a(var2, (byte) 86);
+                  MenuScreen.field_n = MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("mu_request_withdrawn", (byte) -111);
                 if (var2 != null) {
-                  AchievementIcon.field_o = MenuButton.a(var2, (byte) 71);
+                  AchievementIcon.field_o = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("mu_all_players_have_left", (byte) 95);
                 if (null != var2) {
-                  LobbyKeyboardGlobals.field_c = MenuButton.a(var2, (byte) 74);
+                  LobbyKeyboardGlobals.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("mu_lobby_name", (byte) 3);
                 if (null != var2) {
-                  ConnectionPhase.nameColumnHeadingText = MenuButton.a(var2, (byte) 87);
+                  ConnectionPhase.nameColumnHeadingText = MenuButton.decodeCp1252Bytes(var2, (byte) 87);
                 }
                 var2 = AppletFlowHelpers.a("mu_lobby_rating", (byte) -116);
                 if (var2 != null) {
-                  RadialSelectorRenderer.field_c = MenuButton.a(var2, (byte) 71);
+                  RadialSelectorRenderer.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("mu_lobby_friend_add", (byte) 61);
                 if (var2 != null) {
-                  LoginPanel.field_J = MenuButton.a(var2, (byte) 70);
+                  LoginPanel.field_J = MenuButton.decodeCp1252Bytes(var2, (byte) 70);
                 }
                 var2 = AppletFlowHelpers.a("mu_lobby_friend_rm", (byte) 72);
                 if (var2 != null) {
-                  ChocolateBackground.field_y = MenuButton.a(var2, (byte) 91);
+                  ChocolateBackground.field_y = MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("mu_lobby_name_add", (byte) -19);
                 if (null != var2) {
-                  MatchCompleteScreen.field_z = MenuButton.a(var2, (byte) 84);
+                  MatchCompleteScreen.field_z = MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("mu_lobby_name_rm", (byte) -117);
                 if (var2 != null) {
-                  ScreenNavigationHelpers.field_e = MenuButton.a(var2, (byte) 90);
+                  ScreenNavigationHelpers.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("mu_lobby_location", (byte) 8);
                 if (var2 != null) {
-                  ArchiveSource.locationColumnHeadingText = MenuButton.a(var2, (byte) 89);
+                  ArchiveSource.locationColumnHeadingText = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_all_games", (byte) -116);
                 if (null != var2) {
-                  LobbyCaptionGlobals.field_c = MenuButton.a(var2, (byte) 114);
+                  LobbyCaptionGlobals.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_status", (byte) -119);
                 if (var2 != null) {
-                  AppletFlowHelpers.field_b = MenuButton.a(var2, (byte) 87);
+                  AppletFlowHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 87);
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_owner", (byte) -119);
                 if (null != var2) {
-                  VolcanicBackground.field_r = MenuButton.a(var2, (byte) 105);
+                  VolcanicBackground.field_r = MenuButton.decodeCp1252Bytes(var2, (byte) 105);
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_players", (byte) 76);
                 if (var2 != null) {
-                  SocialListResponseHelpers.playersLabel = MenuButton.a(var2, (byte) 115);
+                  SocialListResponseHelpers.playersLabel = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_avg_rating", (byte) 125);
                 if (var2 != null) {
-                  BallPulseEffect.field_o = MenuButton.a(var2, (byte) 103);
+                  BallPulseEffect.field_o = MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_options", (byte) -112);
                 if (null != var2) {
-                  TextFieldRenderer.field_v = MenuButton.a(var2, (byte) 120);
+                  TextFieldRenderer.field_v = MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_elapsed_time", (byte) -14);
                 if (null != var2) {
-                  ByteStorage.field_d = MenuButton.a(var2, (byte) 84);
+                  ByteStorage.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("mu_play_rated", (byte) 60);
                 if (var2 != null) {
-                  GameplayRenderHelpers.field_e = MenuButton.a(var2, (byte) 110);
+                  GameplayRenderHelpers.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("mu_create_unrated", (byte) 8);
                 if (var2 != null) {
-                  MultiplayerMatch.field_e = MenuButton.a(var2, (byte) 82);
+                  MultiplayerMatch.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("mu_options", (byte) -120);
                 if (var2 != null) {
-                  ArchiveSource.field_b = MenuButton.a(var2, (byte) 93);
+                  ArchiveSource.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 93);
                 }
                 var2 = AppletFlowHelpers.a("mu_options_whocanjoin", (byte) -121);
                 if (var2 != null) {
-                  Bzip2State.field_H = MenuButton.a(var2, (byte) 85);
+                  Bzip2State.field_H = MenuButton.decodeCp1252Bytes(var2, (byte) 85);
                 }
                 var2 = AppletFlowHelpers.a("mu_options_players", (byte) -107);
                 if (var2 != null) {
-                  QuickChatMenu.field_ac = MenuButton.a(var2, (byte) 75);
+                  QuickChatMenu.field_ac = MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("mu_options_dontmind", (byte) 19);
                 if (null != var2) {
-                  StateIconLabel.field_Pb = MenuButton.a(var2, (byte) 89);
+                  StateIconLabel.field_Pb = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("mu_options_allow_spectate", (byte) -107);
                 if (var2 != null) {
-                  PlayerInputBatch.field_j = MenuButton.a(var2, (byte) 85);
+                  PlayerInputBatch.field_j = MenuButton.decodeCp1252Bytes(var2, (byte) 85);
                 }
                 var2 = AppletFlowHelpers.a("mu_options_ratedgametype", (byte) -114);
                 if (null != var2) {
-                  EmailConfirmationValidator.field_r = MenuButton.a(var2, (byte) 89);
+                  EmailConfirmationValidator.field_r = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("yes", (byte) -119);
                 if (null != var2) {
-                  IntegerPowerHelpers.yesText = MenuButton.a(var2, (byte) 115);
+                  IntegerPowerHelpers.yesText = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("no", (byte) -4);
                 if (var2 != null) {
-                  MenuSelection.field_a = MenuButton.a(var2, (byte) 106);
+                  MenuSelection.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("mu_invite_players", (byte) -108);
                 if (var2 != null) {
-                  SecondaryNodeQueue.field_a = MenuButton.a(var2, (byte) 119);
+                  SecondaryNodeQueue.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("close", (byte) -17);
                 if (var2 != null) {
-                  LobbyRenderGlobals.field_e = MenuButton.a(var2, (byte) 98);
+                  LobbyRenderGlobals.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("add_x_to_friends", (byte) 4);
                 if (null != var2) {
-                  AchievementMaskRequest.field_l = MenuButton.a(var2, (byte) 108);
+                  AchievementMaskRequest.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("add_x_to_ignore", (byte) 52);
                 if (var2 != null) {
-                  PasswordFieldRenderer.field_H = MenuButton.a(var2, (byte) 76);
+                  PasswordFieldRenderer.field_H = MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("rm_x_from_friends", (byte) -111);
                 if (var2 != null) {
-                  ChatLobbyUiHelpers.field_g = MenuButton.a(var2, (byte) 120);
+                  ChatLobbyUiHelpers.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("rm_x_from_ignore", (byte) -127);
                 if (var2 != null) {
-                  UsernameSuggestionPanel.field_O = MenuButton.a(var2, (byte) 83);
+                  UsernameSuggestionPanel.field_O = MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("send_pm_to_x", (byte) -108);
                 if (null != var2) {
-                  ClientException.field_c = MenuButton.a(var2, (byte) 82);
+                  ClientException.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("send_qc_to_x", (byte) -115);
                 if (var2 != null) {
-                  BrowserResizeNotificationHelpers.field_b = MenuButton.a(var2, (byte) 103);
+                  BrowserResizeNotificationHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("send_pm", (byte) -110);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 91);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("invite_accept_xs_game", (byte) -110);
                 if (var2 != null) {
-                  IndexedSpriteHelpers.field_d = MenuButton.a(var2, (byte) 80);
+                  IndexedSpriteHelpers.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("invite_decline_xs_game", (byte) 54);
                 if (null != var2) {
-                  WidgetLayerBootstrap.field_f = MenuButton.a(var2, (byte) 126);
+                  WidgetLayerBootstrap.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("join_xs_game", (byte) -122);
                 if (null != var2) {
-                  FocusableWidget.field_G = MenuButton.a(var2, (byte) 71);
+                  FocusableWidget.field_G = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("join_request_xs_game", (byte) 24);
                 if (null != var2) {
-                  PlayerBadgeHelpers.askToJoinGameText = MenuButton.a(var2, (byte) 91);
+                  PlayerBadgeHelpers.askToJoinGameText = MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("join_withdraw_request_xs_game", (byte) 71);
                 if (null != var2) {
-                  FontRequestHelpers.field_b = MenuButton.a(var2, (byte) 115);
+                  FontRequestHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("mu_gameopt_kick_x_from_this_game", (byte) -115);
                 if (null != var2) {
-                  RankingsRequest.field_q = MenuButton.a(var2, (byte) 102);
+                  RankingsRequest.field_q = MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("mu_gameopt_withdraw_invite_to_x", (byte) -121);
                 if (null != var2) {
-                  LobbySetupHelpers.field_c = MenuButton.a(var2, (byte) 91);
+                  LobbySetupHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("mu_gameopt_accept_x_into_game", (byte) -114);
                 if (null != var2) {
-                  UiCleanupHelpers.field_b = MenuButton.a(var2, (byte) 126);
+                  UiCleanupHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("mu_gameopt_reject_x_from_game", (byte) 123);
                 if (null != var2) {
-                  RasterCacheSurface.field_o = MenuButton.a(var2, (byte) 90);
+                  RasterCacheSurface.field_o = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("mu_gameopt_invite_x_to_game", (byte) -128);
                 if (null != var2) {
-                  ResourceRequest.field_A = MenuButton.a(var2, (byte) 79);
+                  ResourceRequest.field_A = MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("report_x_for_abuse", (byte) -108);
                 if (var2 != null) {
-                  DesertBackground.field_t = MenuButton.a(var2, (byte) 74);
+                  DesertBackground.field_t = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("unable_to_send_message_password_a", (byte) 64);
                 if (var2 != null) {
-                  DiagnosticTextLine.field_j = MenuButton.a(var2, (byte) 119);
+                  DiagnosticTextLine.field_j = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("unable_to_send_message_password_b", (byte) -128);
                 if (var2 != null) {
-                  ScreenshotViewer.field_m = MenuButton.a(var2, (byte) 103);
+                  ScreenshotViewer.field_m = MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_lobby_show_all", (byte) 75);
                 if (var2 != null) {
-                  Bzip2State.field_m = MenuButton.a(var2, (byte) 116);
+                  Bzip2State.field_m = MenuButton.decodeCp1252Bytes(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_lobby_friends_only", (byte) -127);
                 if (null != var2) {
-                  RasterSnapshot.field_l = MenuButton.a(var2, (byte) 74);
+                  RasterSnapshot.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_lobby_friends", (byte) 16);
                 if (null != var2) {
-                  DirectByteStorage.field_l = MenuButton.a(var2, (byte) 76);
+                  DirectByteStorage.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_lobby_hide", (byte) -126);
                 if (null != var2) {
-                  ArchiveSourceManager.field_e = MenuButton.a(var2, (byte) 123);
+                  ArchiveSourceManager.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 123);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_game_show_all", (byte) -14);
                 if (null != var2) {
-                  LegacyUtf8Decoder.field_a = MenuButton.a(var2, (byte) 99);
+                  LegacyUtf8Decoder.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_game_friends_only", (byte) 117);
                 if (var2 != null) {
-                  StrongCacheEntry.field_K = MenuButton.a(var2, (byte) 86);
+                  StrongCacheEntry.field_K = MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_game_friends", (byte) -128);
                 if (var2 != null) {
-                  DualLinkNode.field_m = MenuButton.a(var2, (byte) 91);
+                  DualLinkNode.field_m = MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_game_hide", (byte) 126);
                 if (var2 != null) {
-                  CacheIoWorker.field_b = MenuButton.a(var2, (byte) 83);
+                  CacheIoWorker.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_pm_show_all", (byte) -125);
                 if (var2 != null) {
-                  ObjectHistoryBuffer.field_l = MenuButton.a(var2, (byte) 90);
+                  ObjectHistoryBuffer.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_pm_friends_only", (byte) -123);
                 if (null != var2) {
-                  PlayerBadgeHelpers.friendsAndOpponentsPrivateChatText = MenuButton.a(var2, (byte) 73);
+                  PlayerBadgeHelpers.friendsAndOpponentsPrivateChatText = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_pm_friends", (byte) -109);
                 if (var2 != null) {
-                  HotspotTextWidget.field_M = MenuButton.a(var2, (byte) 98);
+                  HotspotTextWidget.field_M = MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_invisible_and_silent_mode", (byte) -118);
                 if (var2 != null) {
-                  EmailAvailabilityRequest.field_b = MenuButton.a(var2, (byte) 72);
+                  EmailAvailabilityRequest.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("you_have_been_removed_from_xs_game", (byte) 86);
                 if (null != var2) {
-                  ValidationMessageWidget.field_T = MenuButton.a(var2, (byte) 80);
+                  ValidationMessageWidget.field_T = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("your_rating_is_x", (byte) 48);
                 if (var2 != null) {
-                  FontRequestHelpers.field_c = MenuButton.a(var2, (byte) 110);
+                  FontRequestHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("you_are_on_x_server", (byte) -125);
                 if (null != var2) {
-                  LevelDecoder.field_c = MenuButton.a(var2, (byte) 90);
+                  LevelDecoder.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("rated_game", (byte) -110);
                 if (var2 != null) {
-                  DelayedPacket.field_n = MenuButton.a(var2, (byte) 111);
+                  DelayedPacket.field_n = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("unrated_game", (byte) -125);
                 if (var2 != null) {
-                  LobbyCaptionGlobals.field_b = MenuButton.a(var2, (byte) 90);
+                  LobbyCaptionGlobals.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("rated_game_tips", (byte) -107);
                 if (null != var2) {
-                  TextChoiceDialogStyles.field_a = MenuButton.a(var2, (byte) 107);
+                  TextChoiceDialogStyles.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 107);
                 }
                 var2 = AppletFlowHelpers.a("searching_for_opponent_singular", (byte) -115);
                 if (null != var2) {
-                  MatchingTextValidator.field_l = MenuButton.a(var2, (byte) 99);
+                  MatchingTextValidator.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("searching_for_opponents_plural", (byte) -112);
                 if (var2 != null) {
-                  FireworkBurst.matchmakingStatusText = MenuButton.a(var2, (byte) 75);
+                  FireworkBurst.matchmakingStatusText = MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("find_opponent_singular", (byte) 23);
                 if (null != var2) {
-                  NewAchievementsScreen.field_F = MenuButton.a(var2, (byte) 96);
+                  NewAchievementsScreen.field_F = MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("find_opponents_plural", (byte) -127);
                 if (null != var2) {
-                  ArrayWidgetGroup.field_J = MenuButton.a(var2, (byte) 124);
+                  ArrayWidgetGroup.field_J = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("rated_game_tips_setup_singular", (byte) -117);
                 if (null != var2) {
-                  ResourceArchiveFactory.field_f = MenuButton.a(var2, (byte) 127);
+                  ResourceArchiveFactory.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("rated_game_tips_setup_plural", (byte) -106);
                 if (null != var2) {
-                  LabeledWidget.field_G = MenuButton.a(var2, (byte) 113);
+                  LabeledWidget.field_G = MenuButton.decodeCp1252Bytes(var2, (byte) 113);
                 }
                 var2 = AppletFlowHelpers.a("waiting_to_start_hint", (byte) -117);
                 if (null != var2) {
-                  SocialListEntry.field_Pb = MenuButton.a(var2, (byte) 96);
+                  SocialListEntry.field_Pb = MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("your_game", (byte) -121);
                 if (null != var2) {
-                  UiComponentNode.field_x = MenuButton.a(var2, (byte) 120);
+                  UiComponentNode.field_x = MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("game_full", (byte) -127);
                 if (null != var2) {
-                  GameCanvas.field_d = MenuButton.a(var2, (byte) 127);
+                  GameCanvas.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("join_requests_one", (byte) -111);
                 if (null != var2) {
-                  LabeledToggleRenderer.field_g = MenuButton.a(var2, (byte) 86);
+                  LabeledToggleRenderer.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("join_requests_many", (byte) 50);
                 if (var2 != null) {
-                  LevelPackLoader.field_h = MenuButton.a(var2, (byte) 121);
+                  LevelPackLoader.field_h = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("xs_game", (byte) -12);
                 if (null != var2) {
-                  LobbyKeyboardGlobals.field_a = MenuButton.a(var2, (byte) 124);
+                  LobbyKeyboardGlobals.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("waiting_for_x_to_start_game", (byte) -127);
                 if (null != var2) {
-                  IntrusiveNode.field_a = MenuButton.a(var2, (byte) 88);
+                  IntrusiveNode.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("game_options_changed", (byte) -108);
                 if (null != var2) {
-                  SpriteGeometry.field_w = MenuButton.a(var2, (byte) 71);
+                  SpriteGeometry.field_w = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("players_x_of_y", (byte) -114);
                 if (null != var2) {
-                  LobbyCaptionGlobals.field_d = MenuButton.a(var2, (byte) 106);
+                  LobbyCaptionGlobals.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("message_lobby", (byte) -109);
                 if (null != var2) {
-                  LevelPackSelectScreen.field_x = MenuButton.a(var2, (byte) 72);
+                  LevelPackSelectScreen.field_x = MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_lobby", (byte) 75);
                 if (null != var2) {
-                  MeshAudioHelpers.field_b = MenuButton.a(var2, (byte) 112);
+                  MeshAudioHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 112);
                 }
                 var2 = AppletFlowHelpers.a("message_game", (byte) 79);
                 if (var2 != null) {
-                  MeshLobbyUiHelpers.field_b = MenuButton.a(var2, (byte) 121);
+                  MeshLobbyUiHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("message_team", (byte) -109);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 97);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_game", (byte) 41);
                 if (null != var2) {
-                  MultiplayerExitScreen.field_y = MenuButton.a(var2, (byte) 89);
+                  MultiplayerExitScreen.field_y = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("kick", (byte) -113);
                 if (var2 != null) {
-                  LegacyUtf8Decoder.field_b = MenuButton.a(var2, (byte) 89);
+                  LegacyUtf8Decoder.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("inviting_x", (byte) 101);
                 if (var2 != null) {
-                  PasswordTooltipHelpers.field_a = MenuButton.a(var2, (byte) 116);
+                  PasswordTooltipHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("x_wants_to_join", (byte) 63);
                 if (var2 != null) {
-                  QuickChatPopupHelpers.field_g = MenuButton.a(var2, (byte) 90);
+                  QuickChatPopupHelpers.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("accept", (byte) 80);
                 if (var2 != null) {
-                  JungleBackground.field_t = MenuButton.a(var2, (byte) 78);
+                  JungleBackground.field_t = MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("reject", (byte) -113);
                 if (var2 != null) {
-                  NameEntryPopup.field_Wb = MenuButton.a(var2, (byte) 112);
+                  NameEntryPopup.field_Wb = MenuButton.decodeCp1252Bytes(var2, (byte) 112);
                 }
                 var2 = AppletFlowHelpers.a("invite", (byte) -123);
                 if (null != var2) {
-                  InputOptionsHelpers.field_f = MenuButton.a(var2, (byte) 97);
+                  InputOptionsHelpers.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("status_concluded", (byte) -106);
                 if (var2 != null) {
-                  LobbyPlayer.field_Sb = MenuButton.a(var2, (byte) 90);
+                  LobbyPlayer.field_Sb = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("status_spectate", (byte) -4);
                 if (var2 != null) {
-                  ArrayWidgetGroup.field_I = MenuButton.a(var2, (byte) 118);
+                  ArrayWidgetGroup.field_I = MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("status_playing", (byte) -15);
                 if (null != var2) {
-                  CanvasResizeController.field_o = MenuButton.a(var2, (byte) 79);
+                  CanvasResizeController.field_o = MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("status_join", (byte) -107);
                 if (var2 != null) {
-                  TooltipSprite.field_k = MenuButton.a(var2, (byte) 117);
+                  TooltipSprite.field_k = MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("status_private", (byte) 46);
                 if (var2 != null) {
-                  LobbySetupHelpers.field_a = MenuButton.a(var2, (byte) 101);
+                  LobbySetupHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("status_full", (byte) 47);
                 if (var2 != null) {
-                  IntArrayRequest.field_p = MenuButton.a(var2, (byte) 95);
+                  IntArrayRequest.field_p = MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("players_in_game", (byte) 112);
                 if (null != var2) {
-                  QuickChatParameterType.field_f = MenuButton.a(var2, (byte) 124);
+                  QuickChatParameterType.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("you_are_invited_to_xs_game", (byte) -111);
                 if (null != var2) {
-                  TextFieldRenderer.field_y = MenuButton.a(var2, (byte) 92);
+                  TextFieldRenderer.field_y = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("asking_to_join_xs_game", (byte) 28);
                 if (null != var2) {
-                  TextChoiceDialogHitTest.field_b = MenuButton.a(var2, (byte) 88);
+                  TextChoiceDialogHitTest.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("who_can_join", (byte) 47);
                 if (var2 != null) {
-                  FarmBackground.field_s = MenuButton.a(var2, (byte) 100);
+                  FarmBackground.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("you_can_join", (byte) -112);
                 if (null != var2) {
-                  ArchiveSource.field_d = MenuButton.a(var2, (byte) 124);
+                  ArchiveSource.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("you_can_ask_to_join", (byte) 35);
                 if (null != var2) {
-                  WidgetPaintStyle.field_n = MenuButton.a(var2, (byte) 75);
+                  WidgetPaintStyle.field_n = MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("you_cannot_join_in_progress", (byte) 68);
                 if (var2 != null) {
-                  AchievementsScreen.field_K = MenuButton.a(var2, (byte) 85);
+                  AchievementsScreen.field_K = MenuButton.decodeCp1252Bytes(var2, (byte) 85);
                 }
                 var2 = AppletFlowHelpers.a("you_can_spectate", (byte) 105);
                 if (null != var2) {
-                  LobbyPlayer.field_jc = MenuButton.a(var2, (byte) 102);
+                  LobbyPlayer.field_jc = MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("you_can_not_spectate", (byte) -112);
                 if (var2 != null) {
-                  AlternateNumericLoginCredentials.field_q = MenuButton.a(var2, (byte) 101);
+                  AlternateNumericLoginCredentials.field_q = MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("spectate_xs_game", (byte) -122);
                 if (null != var2) {
-                  LevelResultSubmission.field_s = MenuButton.a(var2, (byte) 81);
+                  LevelResultSubmission.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 81);
                 }
                 var2 = AppletFlowHelpers.a("hide_players_in_xs_game", (byte) 50);
                 if (var2 != null) {
-                  ArchiveSourceManager.field_d = MenuButton.a(var2, (byte) 88);
+                  ArchiveSourceManager.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("show_players_in_xs_game", (byte) -123);
                 if (null != var2) {
-                  Paddle.field_G = MenuButton.a(var2, (byte) 99);
+                  Paddle.field_G = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("connecting_to_friend_server_twoline", (byte) -118);
                 if (null != var2) {
-                  LoginCredentialKind.field_f = MenuButton.a(var2, (byte) 102);
+                  LoginCredentialKind.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("loading", (byte) 18);
                 if (null != var2) {
-                  AlternateNumericLoginCredentials.field_t = MenuButton.a(var2, (byte) 124);
+                  AlternateNumericLoginCredentials.field_t = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("offline", (byte) -126);
                 if (var2 != null) {
-                  DialogMessagePanel.field_S = MenuButton.a(var2, (byte) 84);
+                  DialogMessagePanel.field_S = MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("multiconst_invite_only", (byte) 35);
                 if (var2 != null) {
-                  MainMenuScreen.field_r = MenuButton.a(var2, (byte) 121);
+                  MainMenuScreen.field_r = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("multiconst_clan", (byte) 60);
                 if (var2 != null) {
-                  CanvasInputCleanup.field_e = MenuButton.a(var2, (byte) 115);
+                  CanvasInputCleanup.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("multiconst_friends", (byte) 56);
                 if (var2 != null) {
-                  IterableIntrusiveHashTable.field_g = MenuButton.a(var2, (byte) 88);
+                  IterableIntrusiveHashTable.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("multiconst_similar_rating", (byte) 55);
                 if (null != var2) {
-                  AlternateNumericLoginCredentials.field_u = MenuButton.a(var2, (byte) 72);
+                  AlternateNumericLoginCredentials.field_u = MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("multiconst_open", (byte) -115);
                 if (null != var2) {
-                  FullscreenDialogHelpers.field_a = MenuButton.a(var2, (byte) 96);
+                  FullscreenDialogHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("no_options_available", (byte) -118);
                 if (var2 != null) {
-                  TextHotspotRegion.field_m = MenuButton.a(var2, (byte) 88);
+                  TextHotspotRegion.field_m = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("reportabuse", (byte) -4);
                 if (null != var2) {
-                  RadialSelectorWidget.field_Y = MenuButton.a(var2, (byte) 109);
+                  RadialSelectorWidget.field_Y = MenuButton.decodeCp1252Bytes(var2, (byte) 109);
                 }
                 var2 = AppletFlowHelpers.a("presstabtochat", (byte) -122);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 75);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("pressf10toquickchat", (byte) 31);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 99);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("dob_chatdisabled", (byte) -119);
                 if (var2 != null) {
-                  CircleBody.field_s = MenuButton.a(var2, (byte) 74);
+                  CircleBody.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("dob_enterforchat", (byte) 71);
                 if (var2 != null) {
-                  MusicEnvelope.field_i = MenuButton.a(var2, (byte) 108);
+                  MusicEnvelope.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("tab_hidechattemporarily", (byte) -11);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 104);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 104);
                 }
                 var2 = AppletFlowHelpers.a("esc_cancelprivatemessage", (byte) -124);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 107);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 107);
                 }
                 var2 = AppletFlowHelpers.a("esc_cancelthisline", (byte) -125);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 118);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("privatequickchat_from_x", (byte) -122);
                 if (null != var2) {
-                  FullscreenFailureDialog.field_fb = MenuButton.a(var2, (byte) 115);
+                  FullscreenFailureDialog.field_fb = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("privatequickchat_to_x", (byte) -111);
                 if (var2 != null) {
-                  SaveResultsPromptScreen.field_x = MenuButton.a(var2, (byte) 82);
+                  SaveResultsPromptScreen.field_x = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("privatechat_blankarea_explanation", (byte) 122);
                 if (var2 != null) {
-                  AccountDateHelpers.field_b = MenuButton.a(var2, (byte) 105);
+                  AccountDateHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 105);
                 }
                 var2 = AppletFlowHelpers.a("publicchat_unavailable_ratedgame", (byte) -111);
                 if (null != var2) {
-                  LobbyCaptionGlobals.field_a = MenuButton.a(var2, (byte) 121);
+                  LobbyCaptionGlobals.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("privatechat_friend_offline", (byte) -120);
                 if (var2 != null) {
-                  ScorePopup.field_j = MenuButton.a(var2, (byte) 102);
+                  ScorePopup.field_j = MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("privatechat_friend_notlisted", (byte) -111);
                 if (null != var2) {
-                  IndexedSpriteHelpers.field_c = MenuButton.a(var2, (byte) 112);
+                  IndexedSpriteHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 112);
                 }
                 var2 = AppletFlowHelpers.a("chatviewscrolledup", (byte) -114);
                 if (var2 != null) {
-                  CalendarRankingHelpers.field_h = MenuButton.a(var2, (byte) 83);
+                  CalendarRankingHelpers.field_h = MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("thisisrunescapeclan", (byte) -125);
                 if (var2 != null) {
-                  LobbyLoginGlobals.field_d = MenuButton.a(var2, (byte) 89);
+                  LobbyLoginGlobals.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("thisisrunescapeclan_notowner", (byte) 46);
                 if (var2 != null) {
-                  ChocolateBackground.field_t = MenuButton.a(var2, (byte) 115);
+                  ChocolateBackground.field_t = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("runescapeclan", (byte) -112);
                 if (null != var2) {
-                  SoundCache.field_b = MenuButton.a(var2, (byte) 95);
+                  SoundCache.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("rated_membersonly", (byte) -106);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 121);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_membersonly", (byte) -128);
                 if (var2 != null) {
-                  PacketBuffer.field_m = MenuButton.a(var2, (byte) 80);
+                  PacketBuffer.field_m = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_1moreratedgame", (byte) 55);
                 if (var2 != null) {
-                  NineSliceFrame.field_a = MenuButton.a(var2, (byte) 119);
+                  NineSliceFrame.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_moreratedgames", (byte) -126);
                 if (null != var2) {
-                  MeshAudioHelpers.field_e = MenuButton.a(var2, (byte) 119);
+                  MeshAudioHelpers.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_needrating", (byte) -113);
                 if (var2 != null) {
-                  QuickChatPhraseDefinition.field_x = MenuButton.a(var2, (byte) 71);
+                  QuickChatPhraseDefinition.field_x = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_unratedonly", (byte) 45);
                 if (var2 != null) {
-                  ContentTransitionLayer.field_ib = MenuButton.a(var2, (byte) 114);
+                  ContentTransitionLayer.field_ib = MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_notunlocked", (byte) -110);
                 if (var2 != null) {
-                  InstructionsScreen.field_t = MenuButton.a(var2, (byte) 80);
+                  InstructionsScreen.field_t = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_cannotbecombined1", (byte) 55);
                 if (null != var2) {
-                  LobbyRenderGlobals.field_b = MenuButton.a(var2, (byte) 79);
+                  LobbyRenderGlobals.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_cannotbecombined2", (byte) -119);
                 if (null != var2) {
-                  FileCacheStore.field_e = MenuButton.a(var2, (byte) 92);
+                  FileCacheStore.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_playernotmember", (byte) -2);
                 if (null != var2) {
-                  MenuSelection.field_f = MenuButton.a(var2, (byte) 92);
+                  MenuSelection.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_younotmember", (byte) 118);
                 if (null != var2) {
-                  DateInputWidget.field_J = MenuButton.a(var2, (byte) 119);
+                  DateInputWidget.field_J = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_playerneedsrating", (byte) 5);
                 if (var2 != null) {
-                  WidgetLayerStack.field_H = MenuButton.a(var2, (byte) 101);
+                  WidgetLayerStack.field_H = MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_youneedrating", (byte) 38);
                 if (null != var2) {
-                  InputOptionsHelpers.field_h = MenuButton.a(var2, (byte) 90);
+                  InputOptionsHelpers.field_h = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_playerneedsratedgames", (byte) -125);
                 if (null != var2) {
-                  ValidationStatus.field_g = MenuButton.a(var2, (byte) 115);
+                  ValidationStatus.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_youneedratedgames", (byte) 121);
                 if (null != var2) {
-                  Brick.field_F = MenuButton.a(var2, (byte) 100);
+                  Brick.field_F = MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_playerneeds1ratedgame", (byte) 66);
                 if (null != var2) {
-                  QuickChatSineHelpers.field_b = MenuButton.a(var2, (byte) 97);
+                  QuickChatSineHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_youneed1ratedgame", (byte) -120);
                 if (var2 != null) {
-                  SaveResultsPromptScreen.field_w = MenuButton.a(var2, (byte) 126);
+                  SaveResultsPromptScreen.field_w = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_playerhasntunlocked", (byte) 21);
                 if (var2 != null) {
-                  IntNode.field_m = MenuButton.a(var2, (byte) 117);
+                  IntNode.field_m = MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_youhaventunlocked", (byte) 79);
                 if (var2 != null) {
-                  ObjectHistoryBuffer.field_j = MenuButton.a(var2, (byte) 77);
+                  ObjectHistoryBuffer.field_j = MenuButton.decodeCp1252Bytes(var2, (byte) 77);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_trychanging1", (byte) -10);
                 if (null != var2) {
-                  LobbyPlayer.field_bc = MenuButton.a(var2, (byte) 106);
+                  LobbyPlayer.field_bc = MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_trychanging2", (byte) 64);
                 if (null != var2) {
-                  QuickChatHelpDialog.field_Rb = MenuButton.a(var2, (byte) 102);
+                  QuickChatHelpDialog.field_Rb = MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_needchanging1", (byte) 89);
                 if (var2 != null) {
-                  ProducerFramebuffer.field_k = MenuButton.a(var2, (byte) 80);
+                  ProducerFramebuffer.field_k = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_needchanging2", (byte) 121);
                 if (var2 != null) {
-                  MusicEnvelope.field_l = MenuButton.a(var2, (byte) 122);
+                  MusicEnvelope.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_mightchange", (byte) 97);
                 if (var2 != null) {
-                  UiComponentNode.field_y = MenuButton.a(var2, (byte) 103);
+                  UiComponentNode.field_y = MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_playersdontqualify", (byte) 20);
                 if (null != var2) {
-                  LabeledToggleRenderer.field_a = MenuButton.a(var2, (byte) 79);
+                  LabeledToggleRenderer.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_playersdontqualify_selectgametab", (byte) 34);
                 if (var2 != null) {
-                  NineSliceFrame.field_d = MenuButton.a(var2, (byte) 85);
+                  NineSliceFrame.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 85);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_unselectedoptions", (byte) 85);
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  WhirlpoolHasher.field_b = MenuButton.a(var2, (byte) 78);
+                  WhirlpoolHasher.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_pleaseselectoption1", (byte) 9);
                 if (var2 != null) {
-                  MouseWheelSource.field_b = MenuButton.a(var2, (byte) 122);
+                  MouseWheelSource.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_pleaseselectoption2", (byte) -128);
                 if (null != var2) {
-                  BackgroundScene.field_g = MenuButton.a(var2, (byte) 119);
+                  BackgroundScene.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_badnumplayers", (byte) -19);
                 if (var2 != null) {
-                  AccountContentTransitionLayer.field_rb = MenuButton.a(var2, (byte) 126);
+                  AccountContentTransitionLayer.field_rb = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_inviteplayers_or_trychanging1", (byte) -115);
                 if (null != var2) {
-                  ContextMenu.field_ac = MenuButton.a(var2, (byte) 115);
+                  ContextMenu.field_ac = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_inviteplayers_or_trychanging2", (byte) -117);
                 if (null != var2) {
-                  LoginCredentials.field_e = MenuButton.a(var2, (byte) 77);
+                  LoginCredentials.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 77);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_novalidcombos", (byte) -119);
                 if (var2 != null) {
-                  RadialSelectorRenderer.field_a = MenuButton.a(var2, (byte) 76);
+                  RadialSelectorRenderer.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_pleasetrychanging", (byte) 36);
                 if (var2 != null) {
-                  AchievementsScreen.field_G = MenuButton.a(var2, (byte) 75);
+                  AchievementsScreen.field_G = MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("ra_title", (byte) 119);
                 if (var2 != null) {
-                  TextFieldRenderer.field_B = MenuButton.a(var2, (byte) 124);
+                  TextFieldRenderer.field_B = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("ra_mutethisplayer", (byte) -114);
                 if (var2 != null) {
-                  FullscreenFailureDialog.field_gb = MenuButton.a(var2, (byte) 102);
+                  FullscreenFailureDialog.field_gb = MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("ra_suggestmute", (byte) -109);
                 if (null != var2) {
-                  AppletFlowHelpers.field_e = MenuButton.a(var2, (byte) 127);
+                  AppletFlowHelpers.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("ra_intro", (byte) 124);
                 if (var2 != null) {
-                  LobbyGame.field_rc = MenuButton.a(var2, (byte) 99);
+                  LobbyGame.field_rc = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("ra_intro_no_name", (byte) 96);
                 if (null != var2) {
-                  ContextMenu.field_Ub = MenuButton.a(var2, (byte) 112);
+                  ContextMenu.field_Ub = MenuButton.decodeCp1252Bytes(var2, (byte) 112);
                 }
                 var2 = AppletFlowHelpers.a("ra_explanation", (byte) 21);
                 if (var2 != null) {
-                  QuickChatPhraseDefinition.field_D = MenuButton.a(var2, (byte) 75);
+                  QuickChatPhraseDefinition.field_D = MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("rule_pillar_0", (byte) -117);
                 if (null != var2) {
-                  DualLinkNode.field_o = MenuButton.a(var2, (byte) 115);
+                  DualLinkNode.field_o = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("rule_0_0", (byte) 13);
                 if (var2 != null) {
-                  DelayedPacket.field_i = MenuButton.a(var2, (byte) 82);
+                  DelayedPacket.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("rule_0_1", (byte) -114);
                 if (var2 != null) {
-                  IntegerValidationHelpers.field_b = MenuButton.a(var2, (byte) 73);
+                  IntegerValidationHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("rule_0_2", (byte) -106);
                 if (var2 != null) {
-                  TextFieldValidator.field_i = MenuButton.a(var2, (byte) 73);
+                  TextFieldValidator.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("rule_0_3", (byte) -16);
                 if (null != var2) {
-                  AppletFlowHelpers.field_i = MenuButton.a(var2, (byte) 110);
+                  AppletFlowHelpers.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("rule_0_4", (byte) -117);
                 if (null != var2) {
-                  DualLinkNode.field_i = MenuButton.a(var2, (byte) 111);
+                  DualLinkNode.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("rule_0_5", (byte) -128);
                 if (null != var2) {
-                  BackgroundRegistry.field_a = MenuButton.a(var2, (byte) 123);
+                  BackgroundRegistry.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 123);
                 }
                 var2 = AppletFlowHelpers.a("rule_pillar_1", (byte) 51);
                 if (null != var2) {
-                  SaveResultsPromptScreen.field_r = MenuButton.a(var2, (byte) 117);
+                  SaveResultsPromptScreen.field_r = MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("rule_1_0", (byte) 87);
                 if (null != var2) {
-                  RichTextLayout.field_o = MenuButton.a(var2, (byte) 89);
+                  RichTextLayout.field_o = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("rule_1_1", (byte) 2);
                 if (null != var2) {
-                  RasterCacheSurface.field_l = MenuButton.a(var2, (byte) 108);
+                  RasterCacheSurface.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("rule_1_2", (byte) -115);
                 if (var2 != null) {
-                  NineSliceFrame.field_c = MenuButton.a(var2, (byte) 118);
+                  NineSliceFrame.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("rule_1_3", (byte) -114);
                 if (var2 != null) {
-                  MeshAudioHelpers.field_g = MenuButton.a(var2, (byte) 83);
+                  MeshAudioHelpers.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("rule_1_4", (byte) -4);
                 if (null != var2) {
-                  GrowableIntList.field_n = MenuButton.a(var2, (byte) 78);
+                  GrowableIntList.field_n = MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("rule_pillar_2", (byte) -109);
                 if (null != var2) {
-                  LobbyUiHelpers.reportSecurityHeading = MenuButton.a(var2, (byte) 92);
+                  LobbyUiHelpers.reportSecurityHeading = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("rule_2_0", (byte) -2);
                 if (var2 != null) {
-                  IntegerBitLengthHelpers.contactInformationReportReason = MenuButton.a(var2, (byte) 122);
+                  IntegerBitLengthHelpers.contactInformationReportReason = MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("rule_2_1", (byte) -114);
                 if (var2 != null) {
-                  ContextMenu.field_Rb = MenuButton.a(var2, (byte) 90);
+                  ContextMenu.field_Rb = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("rule_2_2", (byte) -15);
                 if (null != var2) {
-                  AchievementsScreen.field_I = MenuButton.a(var2, (byte) 123);
+                  AchievementsScreen.field_I = MenuButton.decodeCp1252Bytes(var2, (byte) 123);
                 }
                 var2 = AppletFlowHelpers.a("createafreeaccount", (byte) 55);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 82);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("cancel", (byte) 25);
                 if (var2 != null) {
-                  ValidationIconWidget.field_L = MenuButton.a(var2, (byte) 108);
+                  ValidationIconWidget.field_L = MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("pleaselogintoplay", (byte) -116);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 119);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("pleaselogin", (byte) 121);
                 if (var2 != null) {
-                  LevelPackLoader.field_a = MenuButton.a(var2, (byte) 99);
+                  LevelPackLoader.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("pleaselogin_member", (byte) 60);
                 if (null != var2) {
-                  CanvasResizeController.field_k = MenuButton.a(var2, (byte) 72);
+                  CanvasResizeController.field_k = MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("invaliduserorpass", (byte) 42);
                 if (var2 != null) {
-                  DesertBackground.field_u = MenuButton.a(var2, (byte) 86);
+                  DesertBackground.field_u = MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("pleasetryagain", (byte) 48);
                 if (null != var2) {
-                  GameCanvas.field_b = MenuButton.a(var2, (byte) 126);
+                  GameCanvas.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("pleasereenterpass", (byte) 51);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 84);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("playfreeversion", (byte) 117);
                 if (var2 != null) {
-                  MonotonicTime.field_f = MenuButton.a(var2, (byte) 94);
+                  MonotonicTime.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 94);
                 }
                 var2 = AppletFlowHelpers.a("reloadgame", (byte) -18);
                 if (null != var2) {
-                  DialogMessagePanel.field_L = MenuButton.a(var2, (byte) 119);
+                  DialogMessagePanel.field_L = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("toserverlist", (byte) -125);
                 if (var2 != null) {
-                  Ball.field_H = MenuButton.a(var2, (byte) 82);
+                  Ball.field_H = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("tocustomersupport", (byte) 112);
                 if (var2 != null) {
-                  MatchingTextValidator.field_p = MenuButton.a(var2, (byte) 76);
+                  MatchingTextValidator.field_p = MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("changedisplayname", (byte) 61);
                 if (var2 != null) {
-                  BrickABrac.field_G = MenuButton.a(var2, (byte) 91);
+                  BrickABrac.field_G = MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("returntohomepage", (byte) -10);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 95);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("justplay", (byte) -116);
                 if (var2 != null) {
-                  RankingSocketHelpers.justPlayText = MenuButton.a(var2, (byte) 119);
+                  RankingSocketHelpers.justPlayText = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("justplay_excl", (byte) 119);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 125);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 125);
                 }
                 var2 = AppletFlowHelpers.a("login", (byte) -119);
                 if (null != var2) {
-                  ClientViewHelpers.field_a = MenuButton.a(var2, (byte) 76);
+                  ClientViewHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("goback", (byte) -120);
                 if (var2 != null) {
-                  ByteArrayNode.field_l = MenuButton.a(var2, (byte) 96);
+                  ByteArrayNode.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("otheroptions", (byte) -118);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 90);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("proceed", (byte) 71);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("connectingtoserver", (byte) 1);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 101);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("pleasewait", (byte) -119);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 103);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("logging_in", (byte) 40);
                 if (null != var2) {
-                  WidgetTextLayout.field_d = MenuButton.a(var2, (byte) 95);
+                  WidgetTextLayout.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("reconnect", (byte) 5);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 110);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("backtoerror", (byte) -110);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 117);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("pleasecheckinternet", (byte) 67);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 114);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("attemptingtoreconnect", (byte) -115);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 80);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("connectionlost_reconnecting", (byte) 75);
                 if (null != var2) {
-                  GameScreen.field_b = MenuButton.a(var2, (byte) 97);
+                  GameScreen.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("connectionlost_withreason", (byte) -122);
                 if (var2 != null) {
-                  ProxySocketConnector.field_h = MenuButton.a(var2, (byte) 91);
+                  ProxySocketConnector.field_h = MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("passwordverificationrequired", (byte) -128);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 119);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("invalidpass", (byte) -116);
                 if (null != var2) {
-                  TooltipSprite.field_n = MenuButton.a(var2, (byte) 123);
+                  TooltipSprite.field_n = MenuButton.decodeCp1252Bytes(var2, (byte) 123);
                 }
                 var2 = AppletFlowHelpers.a("retry", (byte) -124);
                 if (var2 != null) {
-                  TabbedPane.field_Tb = MenuButton.a(var2, (byte) 123);
+                  TabbedPane.field_Tb = MenuButton.decodeCp1252Bytes(var2, (byte) 123);
                 }
                 var2 = AppletFlowHelpers.a("back", (byte) -114);
                 if (var2 != null) {
-                  HalloweenBackground.field_s = MenuButton.a(var2, (byte) 75);
+                  HalloweenBackground.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("exitfullscreenmode", (byte) -112);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 116);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("quittowebsite", (byte) -124);
                 if (var2 != null) {
-                  HalfRgbBlendHelpers.quitToWebsiteText = MenuButton.a(var2, (byte) 80);
+                  HalfRgbBlendHelpers.quitToWebsiteText = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("connectionrestored", (byte) -113);
                 if (null != var2) {
-                  FarmBackground.field_t = MenuButton.a(var2, (byte) 78);
+                  FarmBackground.field_t = MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("warning_ifyouquit", (byte) -107);
                 if (var2 != null) {
-                  LevelResultSubmission.field_o = MenuButton.a(var2, (byte) 115);
+                  LevelResultSubmission.field_o = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("warning_ifyouquitorleavepage", (byte) -115);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 110);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("resubscribe_withoutlosing_fs", (byte) -112);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 90);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("resubscribe_withoutlosing", (byte) -108);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 107);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 107);
                 }
                 var2 = AppletFlowHelpers.a("customersupport_withoutlosing_fs", (byte) -113);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 94);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 94);
                 }
                 var2 = AppletFlowHelpers.a("customersupport_withoutlosing", (byte) -125);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 88);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("js5help_withoutlosing_fs", (byte) 106);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 91);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("js5help_withoutlosing", (byte) -112);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 125);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 125);
                 }
                 var2 = AppletFlowHelpers.a("checkinternet_withoutlosing_fs", (byte) -128);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 93);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 93);
                 }
                 var2 = AppletFlowHelpers.a("checkinternet_withoutlosing", (byte) -8);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 110);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("create_intro", (byte) -126);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 100);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("create_sameaccounttip_unnamed", (byte) -117);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 112);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 112);
                 }
                 var2 = AppletFlowHelpers.a("dateofbirthprompt", (byte) 6);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 73);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("fetchingcountrylist", (byte) 97);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 110);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("countryprompt", (byte) -124);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 82);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("countrylisterror", (byte) 104);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 93);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 93);
                 }
                 var2 = AppletFlowHelpers.a("theonlypersonalquestions", (byte) -116);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 78);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("create_submittingdata", (byte) 34);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 97);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("check", (byte) 44);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 86);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("create_pleasechooseausername", (byte) -5);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 103);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("create_usernameblurb", (byte) 2);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 87);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 87);
                 }
                 var2 = AppletFlowHelpers.a("checkingavailability", (byte) 39);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 90);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("checking", (byte) -112);
                 if (null != var2) {
-                  DropTargetWidget.field_G = MenuButton.a(var2, (byte) 103);
+                  DropTargetWidget.field_G = MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("create_namealreadytaken", (byte) 19);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 93);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 93);
                 }
                 var2 = AppletFlowHelpers.a("create_sameaccounttip_named", (byte) -107);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 80);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("create_nosuggestions", (byte) -125);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 100);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("create_alternativelygoback", (byte) -116);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("create_available", (byte) 66);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 89);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("create_willnowshowtermsandconditions", (byte) -116);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("fetchingterms", (byte) -123);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 83);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("termserror", (byte) -19);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 75);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("create_iagree", (byte) 121);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 83);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("create_idisagree", (byte) -108);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 98);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("create_pleasescrolldowntoaccept", (byte) 59);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 117);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("create_linkaddress", (byte) -106);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 126);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("openinpopupwindow", (byte) 109);
                 if (null != var2) {
-                  GameConnectionShell.field_z = MenuButton.a(var2, (byte) 110);
+                  GameConnectionShell.field_z = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("create", (byte) 61);
                 if (null != var2) {
-                  GrowableIntList.field_d = MenuButton.a(var2, (byte) 126);
+                  GrowableIntList.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("create_pleasechooseapassword", (byte) -120);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 105);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 105);
                 }
                 var2 = AppletFlowHelpers.a("create_passwordblurb", (byte) -113);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 113);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 113);
                 }
                 var2 = AppletFlowHelpers.a("create_nevergivepassword", (byte) -125);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("creatingyouraccount", (byte) -116);
                 if (null != var2) {
-                  MidiSynthesizer.field_o = MenuButton.a(var2, (byte) 88);
+                  MidiSynthesizer.field_o = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("create_youmustaccept", (byte) 36);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 81);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 81);
                 }
                 var2 = AppletFlowHelpers.a("create_passwordsdifferent", (byte) 63);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 110);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("create_success", (byte) 106);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 87);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 87);
                 }
                 var2 = AppletFlowHelpers.a("day", (byte) 40);
                 if (var2 != null) {
-                  StrongCacheEntry.field_M = MenuButton.a(var2, (byte) 99);
+                  StrongCacheEntry.field_M = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("month", (byte) 36);
                 if (null != var2) {
-                  LobbyCaptionGlobals.field_f = MenuButton.a(var2, (byte) 86);
+                  LobbyCaptionGlobals.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("year", (byte) 85);
                 if (null != var2) {
-                  IndexedSpriteHelpers.field_f = MenuButton.a(var2, (byte) 84);
+                  IndexedSpriteHelpers.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,0", (byte) -128);
                 if (null != var2) {
-                  Widget.field_v[0] = MenuButton.a(var2, (byte) 78);
+                  Widget.field_v[0] = MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,1", (byte) -123);
                 if (var2 != null) {
-                  Widget.field_v[1] = MenuButton.a(var2, (byte) 74);
+                  Widget.field_v[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,2", (byte) 61);
                 if (null != var2) {
-                  Widget.field_v[2] = MenuButton.a(var2, (byte) 71);
+                  Widget.field_v[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,3", (byte) -116);
                 if (var2 != null) {
-                  Widget.field_v[3] = MenuButton.a(var2, (byte) 124);
+                  Widget.field_v[3] = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,4", (byte) -111);
                 if (null != var2) {
-                  Widget.field_v[4] = MenuButton.a(var2, (byte) 95);
+                  Widget.field_v[4] = MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,5", (byte) -127);
                 if (var2 != null) {
-                  Widget.field_v[5] = MenuButton.a(var2, (byte) 114);
+                  Widget.field_v[5] = MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,6", (byte) -108);
                 if (null != var2) {
-                  Widget.field_v[6] = MenuButton.a(var2, (byte) 92);
+                  Widget.field_v[6] = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,7", (byte) 122);
                 if (var2 != null) {
-                  Widget.field_v[7] = MenuButton.a(var2, (byte) 89);
+                  Widget.field_v[7] = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,8", (byte) -113);
                 if (var2 != null) {
-                  Widget.field_v[8] = MenuButton.a(var2, (byte) 82);
+                  Widget.field_v[8] = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,9", (byte) -123);
                 if (null != var2) {
-                  Widget.field_v[9] = MenuButton.a(var2, (byte) 74);
+                  Widget.field_v[9] = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,10", (byte) 83);
                 if (null != var2) {
-                  Widget.field_v[10] = MenuButton.a(var2, (byte) 99);
+                  Widget.field_v[10] = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,11", (byte) 112);
                 if (var2 != null) {
-                  Widget.field_v[11] = MenuButton.a(var2, (byte) 101);
+                  Widget.field_v[11] = MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("create_welcome", (byte) -17);
                 if (var2 != null) {
-                  PlayerNameChooserPanel.field_H = MenuButton.a(var2, (byte) 101);
+                  PlayerNameChooserPanel.field_H = MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("create_u13_welcome", (byte) -122);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 117);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("create_createanaccount", (byte) 0);
                 if (null != var2) {
-                  CheckboxWidgetRenderer.field_a = MenuButton.a(var2, (byte) 71);
+                  CheckboxWidgetRenderer.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("create_username", (byte) -111);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 125);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 125);
                 }
                 var2 = AppletFlowHelpers.a("create_displayname", (byte) -115);
                 if (null != var2) {
-                  BlankScreen.field_j = MenuButton.a(var2, (byte) 108);
+                  BlankScreen.field_j = MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("create_password", (byte) -108);
                 if (var2 != null) {
-                  HalfRgbBlendHelpers.passwordLabel = MenuButton.a(var2, (byte) 106);
+                  HalfRgbBlendHelpers.passwordLabel = MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("create_password_confirm", (byte) -121);
                 if (null != var2) {
-                  WidgetLayerStack.field_G = MenuButton.a(var2, (byte) 72);
+                  WidgetLayerStack.field_G = MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("create_email", (byte) 29);
                 if (var2 != null) {
-                  IntNode.field_l = MenuButton.a(var2, (byte) 74);
+                  IntNode.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("create_email_confirm", (byte) -125);
                 if (null != var2) {
-                  DelayedPacket.field_o = MenuButton.a(var2, (byte) 73);
+                  DelayedPacket.field_o = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("create_age", (byte) 96);
                 if (null != var2) {
-                  HuffmanCodec.field_d = MenuButton.a(var2, (byte) 120);
+                  HuffmanCodec.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("create_u13_email", (byte) -125);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 85);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 85);
                 }
                 var2 = AppletFlowHelpers.a("create_u13_email_confirm", (byte) 67);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 71);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("create_dob", (byte) -109);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 117);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("create_country", (byte) 89);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 87);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 87);
                 }
                 var2 = AppletFlowHelpers.a("create_alternatives_header", (byte) 5);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("create_alternatives_select", (byte) -5);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 88);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("create_suggestions", (byte) -19);
                 if (null != var2) {
-                  AchievementIcon.field_l = MenuButton.a(var2, (byte) 71);
+                  AchievementIcon.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("create_more_suggestions", (byte) -119);
                 if (var2 != null) {
-                  IntegerValidationHelpers.field_c = MenuButton.a(var2, (byte) 126);
+                  IntegerValidationHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("create_select_alternative", (byte) -117);
                 if (var2 != null) {
-                  JavaRandomHelpers.field_c = MenuButton.a(var2, (byte) 122);
+                  JavaRandomHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("create_optin_news", (byte) -15);
                 if (var2 != null) {
-                  LevelCompleteScreen.field_z = MenuButton.a(var2, (byte) 74);
+                  LevelCompleteScreen.field_z = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("create_agreeterms", (byte) -120);
                 if (null != var2) {
-                  SocialListResponseHelpers.createAccountConsentText = MenuButton.a(var2, (byte) 91);
+                  SocialListResponseHelpers.createAccountConsentText = MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("create_u13terms", (byte) 43);
                 if (var2 != null) {
-                  MainMenuScreen.field_z = MenuButton.a(var2, (byte) 70);
+                  MainMenuScreen.field_z = MenuButton.decodeCp1252Bytes(var2, (byte) 70);
                 }
                 var2 = AppletFlowHelpers.a("login_username_email", (byte) -128);
                 if (var2 != null) {
-                  PlayerInputBatch.field_p = MenuButton.a(var2, (byte) 93);
+                  PlayerInputBatch.field_p = MenuButton.decodeCp1252Bytes(var2, (byte) 93);
                 }
                 var2 = AppletFlowHelpers.a("login_username", (byte) 66);
                 if (var2 != null) {
-                  IndexedSpriteGeometry.field_c = MenuButton.a(var2, (byte) 98);
+                  IndexedSpriteGeometry.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("login_email", (byte) 34);
                 if (null != var2) {
-                  IntegerParsingHelpers.field_a = MenuButton.a(var2, (byte) 91);
+                  IntegerParsingHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("login_username_tooltip", (byte) -127);
                 if (null != var2) {
-                  ValidatedTextFieldWidget.field_X = MenuButton.a(var2, (byte) 121);
+                  ValidatedTextFieldWidget.field_X = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("login_password_tooltip", (byte) 120);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 114);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("login_login_tooltip", (byte) 96);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 82);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("login_create_tooltip", (byte) 97);
                 if (var2 != null) {
-                  MidiSynthesizer.field_q = MenuButton.a(var2, (byte) 80);
+                  MidiSynthesizer.field_q = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("login_justplay_tooltip", (byte) -128);
                 if (null != var2) {
-                  SoundCache.field_i = MenuButton.a(var2, (byte) 111);
+                  SoundCache.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("login_back_tooltip", (byte) 41);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 125);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 125);
                 }
                 var2 = AppletFlowHelpers.a("login_no_displayname", (byte) 60);
                 if (var2 != null) {
-                  EmailAvailabilityRequest.field_d = MenuButton.a(var2, (byte) 123);
+                  EmailAvailabilityRequest.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 123);
                 }
                 var2 = AppletFlowHelpers.a("create_username_tooltip", (byte) 51);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 73);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("create_username_hint", (byte) -128);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 95);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("create_displayname_tooltip", (byte) 124);
                 if (null != var2) {
-                  IntegerPowerHelpers.preferredDisplayNameTooltip = MenuButton.a(var2, (byte) 120);
+                  IntegerPowerHelpers.preferredDisplayNameTooltip = MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("create_displayname_hint", (byte) -119);
                 if (var2 != null) {
-                  GameClock.field_h = MenuButton.a(var2, (byte) 72);
+                  GameClock.field_h = MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("create_password_tooltip", (byte) -19);
                 if (var2 != null) {
-                  IntKeyIndex.field_a = MenuButton.a(var2, (byte) 119);
+                  IntKeyIndex.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("create_password_hint", (byte) -128);
                 if (var2 != null) {
-                  InstructionsScreen.field_x = MenuButton.a(var2, (byte) 111);
+                  InstructionsScreen.field_x = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("create_password_confirm_tooltip", (byte) 21);
                 if (var2 != null) {
-                  BoundedFile.field_b = MenuButton.a(var2, (byte) 73);
+                  BoundedFile.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("create_email_tooltip", (byte) 119);
                 if (null != var2) {
-                  GameConnectionHelpers.field_d = MenuButton.a(var2, (byte) 108);
+                  GameConnectionHelpers.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("create_email_confirm_tooltip", (byte) -113);
                 if (var2 != null) {
-                  ResourceArchive.field_e = MenuButton.a(var2, (byte) 107);
+                  ResourceArchive.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 107);
                 }
                 var2 = AppletFlowHelpers.a("create_age_tooltip", (byte) -124);
                 if (null != var2) {
-                  MeshLobbyUiHelpers.field_d = MenuButton.a(var2, (byte) 73);
+                  MeshLobbyUiHelpers.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("create_optin_news_tooltip", (byte) -117);
                 if (var2 != null) {
-                  ClientViewHelpers.field_e = MenuButton.a(var2, (byte) 79);
+                  ClientViewHelpers.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("create_u13_email_tooltip", (byte) -122);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 111);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("create_u13_email_confirm_tooltip", (byte) -118);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 115);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("create_dob_tooltip", (byte) 30);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 127);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("create_country_tooltip", (byte) 51);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 96);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("create_optin_tooltip", (byte) -127);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 122);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("create_continue", (byte) -111);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 122);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("create_username_unavailable", (byte) -113);
                 if (var2 != null) {
-                  ScreenNavigationHelpers.field_f = MenuButton.a(var2, (byte) 125);
+                  ScreenNavigationHelpers.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 125);
                 }
                 var2 = AppletFlowHelpers.a("create_username_available", (byte) 74);
                 if (var2 != null) {
-                  MouseWheelSource.field_d = MenuButton.a(var2, (byte) 124);
+                  MouseWheelSource.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_namelength", (byte) 6);
                 if (var2 != null) {
-                  MenuScreen.field_o = MenuButton.a(var2, (byte) 82);
+                  MenuScreen.field_o = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_namechars", (byte) -109);
                 if (var2 != null) {
-                  RankingsRequest.field_i = MenuButton.a(var2, (byte) 121);
+                  RankingsRequest.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_nameleadingspace", (byte) -120);
                 if (null != var2) {
-                  MenuButton.field_g = MenuButton.a(var2, (byte) 95);
+                  MenuButton.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_doublespace", (byte) -126);
                 if (null != var2) {
-                  MusicPatch.field_n = MenuButton.a(var2, (byte) 99);
+                  MusicPatch.field_n = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_passchars", (byte) -109);
                 if (var2 != null) {
-                  HuffmanCodec.field_c = MenuButton.a(var2, (byte) 102);
+                  HuffmanCodec.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_passrepeated", (byte) -18);
                 if (var2 != null) {
-                  WhirlpoolHasher.field_i = MenuButton.a(var2, (byte) 76);
+                  WhirlpoolHasher.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_passlength", (byte) 29);
                 if (null != var2) {
-                  RasterStackHelpers.field_a = MenuButton.a(var2, (byte) 86);
+                  RasterStackHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_passcontainsname", (byte) -107);
                 if (null != var2) {
-                  BackgroundRegistry.field_b = MenuButton.a(var2, (byte) 93);
+                  BackgroundRegistry.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 93);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_passcontainsemail", (byte) 45);
                 if (var2 != null) {
-                  StateIconLabel.field_Tb = MenuButton.a(var2, (byte) 116);
+                  StateIconLabel.field_Tb = MenuButton.decodeCp1252Bytes(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_passcontainsname_partial", (byte) 51);
                 if (var2 != null) {
-                  GameUiController.field_f = MenuButton.a(var2, (byte) 117);
+                  GameUiController.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_checkname", (byte) 55);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 88);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_invalidemail", (byte) -120);
                 if (var2 != null) {
-                  ValidationIconWidget.invalidEmailMessage = MenuButton.a(var2, (byte) 100);
+                  ValidationIconWidget.invalidEmailMessage = MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_email_unavailable", (byte) -124);
                 if (var2 != null) {
-                  ConstructionBackground.field_s = MenuButton.a(var2, (byte) 74);
+                  ConstructionBackground.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_invaliddate", (byte) -116);
                 if (null != var2) {
-                  ScrollPaneWithFooter.field_Rb = MenuButton.a(var2, (byte) 73);
+                  ScrollPaneWithFooter.field_Rb = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_invalidage", (byte) -114);
                 if (null != var2) {
-                  FarmBackground.field_y = MenuButton.a(var2, (byte) 115);
+                  FarmBackground.field_y = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_yearrange", (byte) -122);
                 if (null != var2) {
-                  Under13RegistrationNoticePanel.field_J = MenuButton.a(var2, (byte) 90);
+                  Under13RegistrationNoticePanel.field_J = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_mismatch", (byte) 26);
                 if (var2 != null) {
-                  AccountContentTransitionLayer.field_sb = MenuButton.a(var2, (byte) 92);
+                  AccountContentTransitionLayer.field_sb = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("create_passwordvalid", (byte) -123);
                 if (null != var2) {
-                  SoundPlayback.field_k = MenuButton.a(var2, (byte) 85);
+                  SoundPlayback.field_k = MenuButton.decodeCp1252Bytes(var2, (byte) 85);
                 }
                 var2 = AppletFlowHelpers.a("create_emailvalid", (byte) -108);
                 if (null != var2) {
-                  WeightedLruCache.validEmailMessage = MenuButton.a(var2, (byte) 92);
+                  WeightedLruCache.validEmailMessage = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("create_account_success", (byte) -126);
                 if (var2 != null) {
-                  FramedMenuScreen.field_r = MenuButton.a(var2, (byte) 101);
+                  FramedMenuScreen.field_r = MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("invalid_name", (byte) -113);
                 if (null != var2) {
-                  LobbyGame.field_Xb = MenuButton.a(var2, (byte) 122);
+                  LobbyGame.field_Xb = MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("cannot_add_yourself", (byte) -128);
                 if (var2 != null) {
-                  TextHuffmanHelpers.field_a = MenuButton.a(var2, (byte) 113);
+                  TextHuffmanHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 113);
                 }
                 var2 = AppletFlowHelpers.a("unable_to_add_friend", (byte) -114);
                 if (null != var2) {
-                  BackgroundSurfaceHelpers.field_b = MenuButton.a(var2, (byte) 117);
+                  BackgroundSurfaceHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("unable_to_add_ignore", (byte) -110);
                 if (var2 != null) {
-                  AccountDateHelpers.field_c = MenuButton.a(var2, (byte) 99);
+                  AccountDateHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("unable_to_delete_friend", (byte) 35);
                 if (null != var2) {
-                  ScrollPaneWithFooter.field_Ub = MenuButton.a(var2, (byte) 81);
+                  ScrollPaneWithFooter.field_Ub = MenuButton.decodeCp1252Bytes(var2, (byte) 81);
                 }
                 var2 = AppletFlowHelpers.a("unable_to_delete_ignore", (byte) 34);
                 if (null != var2) {
-                  InvitationDialogHelpers.field_b = MenuButton.a(var2, (byte) 121);
+                  InvitationDialogHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("friendlistfull", (byte) -112);
                 if (null != var2) {
-                  IntegerRemainderHelpers.friendListFullText = MenuButton.a(var2, (byte) 97);
+                  IntegerRemainderHelpers.friendListFullText = MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("friendlistdupe", (byte) 19);
                 if (var2 != null) {
-                  TextChoiceDialogStyles.field_d = MenuButton.a(var2, (byte) 89);
+                  TextChoiceDialogStyles.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("friendnotfound", (byte) 56);
                 if (null != var2) {
-                  MusicVoice.field_C = MenuButton.a(var2, (byte) 109);
+                  MusicVoice.field_C = MenuButton.decodeCp1252Bytes(var2, (byte) 109);
                 }
                 var2 = AppletFlowHelpers.a("ignorelistfull", (byte) 40);
                 if (null != var2) {
-                  CanvasInputHelpers.field_d = MenuButton.a(var2, (byte) 98);
+                  CanvasInputHelpers.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("ignorelistdupe", (byte) 73);
                 if (var2 != null) {
-                  DraggableWidget.field_J = MenuButton.a(var2, (byte) 124);
+                  DraggableWidget.field_J = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("ignorenotfound", (byte) 26);
                 if (var2 != null) {
-                  WeightedLruCache.field_h = MenuButton.a(var2, (byte) 99);
+                  WeightedLruCache.field_h = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("removeignorefirst", (byte) -113);
                 if (null != var2) {
-                  ConstructionBackground.field_u = MenuButton.a(var2, (byte) 104);
+                  ConstructionBackground.field_u = MenuButton.decodeCp1252Bytes(var2, (byte) 104);
                 }
                 var2 = AppletFlowHelpers.a("removefriendfirst", (byte) -111);
                 if (var2 != null) {
-                  MeshAudioHelpers.field_a = MenuButton.a(var2, (byte) 93);
+                  MeshAudioHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 93);
                 }
                 var2 = AppletFlowHelpers.a("enterfriend_add", (byte) -12);
                 if (null != var2) {
-                  ArchiveNetworkClient.field_t = MenuButton.a(var2, (byte) 88);
+                  ArchiveNetworkClient.field_t = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("enterfriend_del", (byte) 37);
                 if (null != var2) {
-                  TableDataRequest.field_j = MenuButton.a(var2, (byte) 111);
+                  TableDataRequest.field_j = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("enterignore_add", (byte) -115);
                 if (null != var2) {
-                  CacheIoWorker.field_e = MenuButton.a(var2, (byte) 118);
+                  CacheIoWorker.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("enterignore_del", (byte) -107);
                 if (var2 != null) {
-                  MultiplayerExitScreen.field_A = MenuButton.a(var2, (byte) 96);
+                  MultiplayerExitScreen.field_A = MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("text_removed_from_game", (byte) 25);
                 if (null != var2) {
-                  EmailValidator.field_k = MenuButton.a(var2, (byte) 70);
+                  EmailValidator.field_k = MenuButton.decodeCp1252Bytes(var2, (byte) 70);
                 }
                 var2 = AppletFlowHelpers.a("text_lobby_pleaselogin_free", (byte) 63);
                 if (null != var2) {
-                  BrickGameLayerController.field_b = MenuButton.a(var2, (byte) 105);
+                  BrickGameLayerController.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 105);
                 }
                 var2 = AppletFlowHelpers.a("opengl", (byte) -121);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 95);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("sse", (byte) 2);
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 114);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("purejava", (byte) 26);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 127);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_graphics", (byte) -128);
                 if (null != var2) {
-                  OutgoingPacketHelpers.field_e = MenuButton.a(var2, (byte) 118);
+                  OutgoingPacketHelpers.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_models", (byte) -122);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 83);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_fonts", (byte) -5);
                 if (null != var2) {
-                  RadialSelectorWidget.field_P = MenuButton.a(var2, (byte) 92);
+                  RadialSelectorWidget.field_P = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_soundeffects", (byte) 116);
                 if (var2 != null) {
-                  MovingBody.field_n = MenuButton.a(var2, (byte) 111);
+                  MovingBody.field_n = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_music", (byte) 18);
                 if (var2 != null) {
-                  BallPulseEffect.field_i = MenuButton.a(var2, (byte) 116);
+                  BallPulseEffect.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_instruments", (byte) 41);
                 if (null != var2) {
-                  AlternateNumericLoginCredentials.field_n = MenuButton.a(var2, (byte) 83);
+                  AlternateNumericLoginCredentials.field_n = MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_levels", (byte) -117);
                 if (var2 != null) {
-                  IntArrayRequestHelpers.waitingForLevelsText = MenuButton.a(var2, (byte) 99);
+                  IntArrayRequestHelpers.waitingForLevelsText = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_extradata", (byte) 5);
                 if (null != var2) {
-                  IntHistoryBuffer.field_k = MenuButton.a(var2, (byte) 79);
+                  IntHistoryBuffer.field_k = MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_languages", (byte) 65);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 104);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 104);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_textures", (byte) -127);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 70);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 70);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_animations", (byte) 116);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 85);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 85);
                 }
                 var2 = AppletFlowHelpers.a("loading_graphics", (byte) 111);
                 if (null != var2) {
-                  WidgetGroup.field_F = MenuButton.a(var2, (byte) 87);
+                  WidgetGroup.field_F = MenuButton.decodeCp1252Bytes(var2, (byte) 87);
                 }
                 var2 = AppletFlowHelpers.a("loading_models", (byte) -110);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 113);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 113);
                 }
                 var2 = AppletFlowHelpers.a("loading_fonts", (byte) -107);
                 if (null != var2) {
-                  ConditionalTextValue.field_k = MenuButton.a(var2, (byte) 105);
+                  ConditionalTextValue.field_k = MenuButton.decodeCp1252Bytes(var2, (byte) 105);
                 }
                 var2 = AppletFlowHelpers.a("loading_soundeffects", (byte) -17);
                 if (var2 != null) {
-                  ValidationIconWidget.field_Q = MenuButton.a(var2, (byte) 108);
+                  ValidationIconWidget.field_Q = MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("loading_music", (byte) 123);
                 if (var2 != null) {
-                  EmailValidator.field_m = MenuButton.a(var2, (byte) 110);
+                  EmailValidator.field_m = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("loading_instruments", (byte) -123);
                 if (var2 != null) {
-                  LinkWidgetRenderer.field_a = MenuButton.a(var2, (byte) 127);
+                  LinkWidgetRenderer.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("loading_levels", (byte) -7);
                 if (var2 != null) {
-                  AppletResourceHelpers.field_a = MenuButton.a(var2, (byte) 95);
+                  AppletResourceHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("loading_extradata", (byte) 92);
                 if (null != var2) {
-                  BrowserResizeNotificationHelpers.field_e = MenuButton.a(var2, (byte) 84);
+                  BrowserResizeNotificationHelpers.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("loading_languages", (byte) 76);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 90);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("loading_textures", (byte) -107);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 75);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("loading_animations", (byte) -120);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 106);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("unpacking_graphics", (byte) 53);
                 if (var2 != null) {
-                  MessageScreen.field_u = MenuButton.a(var2, (byte) 97);
+                  MessageScreen.field_u = MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("unpacking_models", (byte) -128);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 104);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 104);
                 }
                 var2 = AppletFlowHelpers.a("unpacking_soundeffects", (byte) 73);
                 if (var2 != null) {
-                  BitPacketBuffer.field_s = MenuButton.a(var2, (byte) 78);
+                  BitPacketBuffer.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("unpacking_music", (byte) 9);
                 if (null != var2) {
-                  ValidatedTextFieldWidget.field_bb = MenuButton.a(var2, (byte) 113);
+                  ValidatedTextFieldWidget.field_bb = MenuButton.decodeCp1252Bytes(var2, (byte) 113);
                 }
                 var2 = AppletFlowHelpers.a("unpacking_levels", (byte) 78);
                 if (var2 != null) {
-                  Ball.field_x = MenuButton.a(var2, (byte) 97);
+                  Ball.field_x = MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("unpacking_languages", (byte) 15);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 72);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("unpacking_animations", (byte) -124);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 106);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("unpacking_toolkit", (byte) -128);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 81);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 81);
                 }
                 var2 = AppletFlowHelpers.a("instructions", (byte) -119);
                 if (null != var2) {
-                  TextHotspotRegion.field_l = MenuButton.a(var2, (byte) 86);
+                  TextHotspotRegion.field_l = MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("tutorial", (byte) -120);
                 if (null != var2) {
-                  LevelPackLoader.field_i = MenuButton.a(var2, (byte) 122);
+                  LevelPackLoader.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("playtutorial", (byte) 113);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 86);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("sound_colon", (byte) 48);
                 if (null != var2) {
-                  LevelResultSubmission.field_q = MenuButton.a(var2, (byte) 111);
+                  LevelResultSubmission.field_q = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("music_colon", (byte) 3);
                 if (null != var2) {
-                  ArchiveNetworkClient.field_r = MenuButton.a(var2, (byte) 113);
+                  ArchiveNetworkClient.field_r = MenuButton.decodeCp1252Bytes(var2, (byte) 113);
                 }
                 var2 = AppletFlowHelpers.a("fullscreen", (byte) -118);
                 if (var2 != null) {
-                  GamePresentationHelpers.field_b = MenuButton.a(var2, (byte) 112);
+                  GamePresentationHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 112);
                 }
                 var2 = AppletFlowHelpers.a("screensize", (byte) -107);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 75);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("highscores", (byte) 76);
                 if (null != var2) {
-                  MusicCrossfadeStream.field_B = MenuButton.a(var2, (byte) 107);
+                  MusicCrossfadeStream.field_B = MenuButton.decodeCp1252Bytes(var2, (byte) 107);
                 }
                 var2 = AppletFlowHelpers.a("rankings", (byte) 113);
                 if (var2 != null) {
-                  TextValidationHelpers.field_c = MenuButton.a(var2, (byte) 107);
+                  TextValidationHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 107);
                 }
                 var2 = AppletFlowHelpers.a("achievements", (byte) -116);
                 if (null != var2) {
-                  FocusableWidget.field_D = MenuButton.a(var2, (byte) 121);
+                  FocusableWidget.field_D = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("achievementsthisgame", (byte) 22);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 124);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("achievementsthissession", (byte) 70);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 106);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("watchintroduction", (byte) -117);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("quit", (byte) 118);
                 if (var2 != null) {
-                  HighscorePackSelector.field_g = MenuButton.a(var2, (byte) 97);
+                  HighscorePackSelector.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("login_createaccount", (byte) -121);
                 if (var2 != null) {
-                  UiComponent.field_mb = MenuButton.a(var2, (byte) 103);
+                  UiComponent.field_mb = MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("tohighscores", (byte) 25);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 121);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("returntomainmenu", (byte) -4);
                 if (null != var2) {
-                  VerticalScrollbar.field_Rb = MenuButton.a(var2, (byte) 118);
+                  VerticalScrollbar.field_Rb = MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("returntopausemenu", (byte) -5);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 92);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("returntooptionsmenu_notpaused", (byte) -109);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 75);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("mainmenu", (byte) -17);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 85);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 85);
                 }
                 var2 = AppletFlowHelpers.a("pausemenu", (byte) 107);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 127);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("optionsmenu_notpaused", (byte) -111);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 80);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("menu", (byte) 35);
                 if (null != var2) {
-                  ModalOverlayHelpers.field_b = MenuButton.a(var2, (byte) 127);
+                  ModalOverlayHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("selectlevel", (byte) 36);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 72);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("nextlevel", (byte) -109);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 90);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("startgame", (byte) -124);
                 if (null != var2) {
-                  ConstructionBackground.field_r = MenuButton.a(var2, (byte) 124);
+                  ConstructionBackground.field_r = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("newgame", (byte) 113);
                 if (var2 != null) {
-                  UnderwaterBackground.field_v = MenuButton.a(var2, (byte) 101);
+                  UnderwaterBackground.field_v = MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("resumegame", (byte) -119);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 111);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("resumetutorial", (byte) 109);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 88);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("skip", (byte) 109);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 90);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("skiptutorial", (byte) 39);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 98);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("skipending", (byte) -114);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 74);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("restartlevel", (byte) 30);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 102);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("endtest", (byte) -123);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 74);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("endgame", (byte) -116);
                 if (var2 != null) {
-                  LevelPackLoader.field_d = MenuButton.a(var2, (byte) 82);
+                  LevelPackLoader.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("endtutorial", (byte) 118);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 108);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("ok", (byte) -108);
                 if (null != var2) {
-                  TextFieldValidator.field_j = MenuButton.a(var2, (byte) 87);
+                  TextFieldValidator.field_j = MenuButton.decodeCp1252Bytes(var2, (byte) 87);
                 }
                 var2 = AppletFlowHelpers.a("on", (byte) -127);
                 if (var2 != null) {
-                  MusicVoiceMixer.field_q = MenuButton.a(var2, (byte) 80);
+                  MusicVoiceMixer.field_q = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("off", (byte) 125);
                 if (var2 != null) {
-                  BufferedFile.field_q = MenuButton.a(var2, (byte) 110);
+                  BufferedFile.field_q = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("previous", (byte) 56);
                 if (null != var2) {
-                  DiagnosticTextLine.field_i = MenuButton.a(var2, (byte) 104);
+                  DiagnosticTextLine.field_i = MenuButton.decodeCp1252Bytes(var2, (byte) 104);
                 }
                 var2 = AppletFlowHelpers.a("prev", (byte) -122);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("next", (byte) 9);
                 if (null != var2) {
-                  PauseMenuScreen.field_u = MenuButton.a(var2, (byte) 84);
+                  PauseMenuScreen.field_u = MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("graphics_colon", (byte) -122);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 112);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 112);
                 }
                 var2 = AppletFlowHelpers.a("hotseatmultiplayer", (byte) 118);
                 if (null != var2) {
-                  MatchResultScreen.field_r = MenuButton.a(var2, (byte) 121);
+                  MatchResultScreen.field_r = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("entermultiplayerlobby", (byte) 104);
                 if (var2 != null) {
-                  ArchiveNetworkRequest.field_H = MenuButton.a(var2, (byte) 110);
+                  ArchiveNetworkRequest.field_H = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("singleplayergame", (byte) -107);
                 if (var2 != null) {
-                  BirthDateEntryPanel.field_O = MenuButton.a(var2, (byte) 102);
+                  BirthDateEntryPanel.field_O = MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("returntogame", (byte) -125);
                 if (var2 != null) {
-                  DebouncedValidationSource.field_e = MenuButton.a(var2, (byte) 103);
+                  DebouncedValidationSource.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("endgameresign", (byte) -110);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 74);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("offerdraw", (byte) 117);
                 if (null != var2) {
-                  CanvasInputCleanup.field_b = MenuButton.a(var2, (byte) 115);
+                  CanvasInputCleanup.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("canceldraw", (byte) -106);
                 if (null != var2) {
-                  LobbyRenderGlobals.field_a = MenuButton.a(var2, (byte) 84);
+                  LobbyRenderGlobals.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("acceptdraw", (byte) -116);
                 if (var2 != null) {
-                  IntegerRemainderHelpers.acceptDrawText = MenuButton.a(var2, (byte) 86);
+                  IntegerRemainderHelpers.acceptDrawText = MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("resign", (byte) 27);
                 if (var2 != null) {
-                  StrongCacheEntry.field_H = MenuButton.a(var2, (byte) 124);
+                  StrongCacheEntry.field_H = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("returntolobby", (byte) -118);
                 if (null != var2) {
-                  QuickChatSineHelpers.field_a = MenuButton.a(var2, (byte) 74);
+                  QuickChatSineHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("cont", (byte) -117);
                 if (null != var2) {
-                  UsernameSuggestionPanel.field_L = MenuButton.a(var2, (byte) 111);
+                  UsernameSuggestionPanel.field_L = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("continue_spectating", (byte) -119);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 77);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 77);
                 }
                 var2 = AppletFlowHelpers.a("messages", (byte) -127);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("graphics_fastest", (byte) -114);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 98);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("graphics_medium", (byte) 50);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 125);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 125);
                 }
                 var2 = AppletFlowHelpers.a("graphics_best", (byte) 107);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 92);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("graphics_directx", (byte) -127);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 113);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 113);
                 }
                 var2 = AppletFlowHelpers.a("graphics_opengl", (byte) 105);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 96);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("graphics_java", (byte) 65);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 93);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 93);
                 }
                 var2 = AppletFlowHelpers.a("graphics_quality_high", (byte) 47);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 126);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("graphics_quality_low", (byte) 113);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 100);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("graphics_mode", (byte) -118);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 90);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("graphics_quality", (byte) -119);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 90);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("mode", (byte) 39);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 122);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("quality", (byte) -120);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 76);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("keys", (byte) 12);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("objective", (byte) 95);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 124);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("currentobjective", (byte) -122);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 80);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("pressescforpausemenu", (byte) 57);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 89);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("pressescforpausemenuortoskiptutorial", (byte) -125);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 79);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("pressescforoptionsmenu_doesntpause", (byte) -109);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 89);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("pressescforoptionsmenu_doesntpause_short", (byte) -118);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 126);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("powerups", (byte) -127);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 71);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("latestlevel_suffix", (byte) -128);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 86);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("unreachedlevel_name", (byte) -109);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 109);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 109);
                 }
                 var2 = AppletFlowHelpers.a("unreachedlevel_cannotplayreason", (byte) 5);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 89);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("unreachedlevel_cannotplayreason_shorter", (byte) 61);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 78);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("unreachedworld_cannotplayreason", (byte) -110);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 111);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("memberslevel_name", (byte) -119);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 80);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("memberslevel_cannotplayreason", (byte) -126);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 122);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("membersworld_cannotplayreason", (byte) 68);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 94);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 94);
                 }
                 var2 = AppletFlowHelpers.a("unreachedlevel_createtip", (byte) 109);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 106);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("unreachedlevel_createtip_line1", (byte) -3);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 82);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("unreachedlevel_createtip_line2", (byte) -7);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 71);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("unreachedlevel_logintip", (byte) -122);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 73);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("memberslevel_logintip", (byte) -109);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("displayname_none", (byte) 31);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 79);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("levelxofy1", (byte) 113);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 97);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("levelxofy2", (byte) 112);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 103);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("levelxofy", (byte) -124);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 100);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("ingame_level", (byte) 113);
                 if (null != var2) {
-                  AlternateNumericLoginCredentials.field_p = MenuButton.a(var2, (byte) 117);
+                  AlternateNumericLoginCredentials.field_p = MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("mouseoveranicon", (byte) -107);
                 if (var2 != null) {
-                  ProducerFramebuffer.field_h = MenuButton.a(var2, (byte) 73);
+                  ProducerFramebuffer.field_h = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("notyetachieved", (byte) 55);
                 if (null != var2) {
-                  ResourcePreparationEntry.field_c = MenuButton.a(var2, (byte) 114);
+                  ResourcePreparationEntry.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("achieved", (byte) -125);
                 if (null != var2) {
-                  DesertBackground.field_s = MenuButton.a(var2, (byte) 88);
+                  DesertBackground.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("orbpoints", (byte) 16);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 76);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("orbcoins", (byte) -123);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 105);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 105);
                 }
                 var2 = AppletFlowHelpers.a("orbpoints_colon", (byte) -123);
                 if (null != var2) {
-                  LevelPackLoader.field_c = MenuButton.a(var2, (byte) 117);
+                  LevelPackLoader.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("orbcoins_colon", (byte) -7);
                 if (null != var2) {
-                  UsernameAvailabilityValidator.field_m = MenuButton.a(var2, (byte) 94);
+                  UsernameAvailabilityValidator.field_m = MenuButton.decodeCp1252Bytes(var2, (byte) 94);
                 }
                 var2 = AppletFlowHelpers.a("achieved_colon_description", (byte) 86);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 108);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("secretachievement", (byte) 33);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 82);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("no_highscores", (byte) 54);
                 if (null != var2) {
-                  ArchiveNetworkRequest.field_J = MenuButton.a(var2, (byte) 114);
+                  ArchiveNetworkRequest.field_J = MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("hs_name", (byte) 10);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 100);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("hs_level", (byte) -114);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 79);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("hs_fromlevel", (byte) 60);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 94);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 94);
                 }
                 var2 = AppletFlowHelpers.a("hs_tolevel", (byte) -116);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 125);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 125);
                 }
                 var2 = AppletFlowHelpers.a("hs_score", (byte) -110);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 119);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("hs_end", (byte) 113);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 81);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 81);
                 }
                 var2 = AppletFlowHelpers.a("ingame_score", (byte) 119);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 115);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("score_colon", (byte) -107);
                 if (var2 != null) {
-                  LevelResultSubmission.field_j = MenuButton.a(var2, (byte) 98);
+                  LevelResultSubmission.field_j = MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("mp_leavegame", (byte) 75);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 118);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("mp_offerrematch", (byte) 110);
                 if (var2 != null) {
-                  RectangleBody.field_t = MenuButton.a(var2, (byte) 81);
+                  RectangleBody.field_t = MenuButton.decodeCp1252Bytes(var2, (byte) 81);
                 }
                 var2 = AppletFlowHelpers.a("mp_offerrematch_unrated", (byte) 45);
                 if (var2 != null) {
-                  ResourcePreparationQueue.field_a = MenuButton.a(var2, (byte) 85);
+                  ResourcePreparationQueue.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 85);
                 }
                 var2 = AppletFlowHelpers.a("mp_acceptrematch", (byte) -114);
                 if (var2 != null) {
-                  MusicPatch.field_m = MenuButton.a(var2, (byte) 83);
+                  MusicPatch.field_m = MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("mp_acceptrematch_unrated", (byte) 12);
                 if (null != var2) {
-                  BrowserResizeNotificationHelpers.field_c = MenuButton.a(var2, (byte) 117);
+                  BrowserResizeNotificationHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("mp_cancelrematch", (byte) 0);
                 if (null != var2) {
-                  LoginCredentials.field_g = MenuButton.a(var2, (byte) 89);
+                  LoginCredentials.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("mp_cancelrematch_unrated", (byte) -111);
                 if (null != var2) {
-                  ContentTransitionPhase.field_a = MenuButton.a(var2, (byte) 98);
+                  ContentTransitionPhase.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("mp_rematchnewgame", (byte) -110);
                 if (null != var2) {
-                  GameRenderAudioHelpers.field_b = MenuButton.a(var2, (byte) 71);
+                  GameRenderAudioHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("mp_rematchnewgame_unrated", (byte) -116);
                 if (null != var2) {
-                  TabbedPane.field_Pb = MenuButton.a(var2, (byte) 117);
+                  TabbedPane.field_Pb = MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("mp_x_wantstodraw", (byte) -106);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 117);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("mp_x_offersrematch", (byte) 59);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 126);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("mp_x_offersrematch_unrated", (byte) -118);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 72);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("mp_youofferrematch", (byte) 15);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 78);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("mp_youofferrematch_unrated", (byte) -124);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 99);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("mp_youofferdraw", (byte) 45);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 71);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("mp_youresigned", (byte) 115);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 124);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("mp_youresigned_rematch", (byte) -112);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 95);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("mp_x_hasresignedandleft", (byte) 70);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 106);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("mp_x_hasresigned_rematch", (byte) -3);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 126);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("mp_x_hasresigned", (byte) 110);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 71);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("mp_x_hasleft", (byte) 88);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 114);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("mp_x_haswon", (byte) -114);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 115);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("mp_youhavewon", (byte) -128);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 81);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 81);
                 }
                 var2 = AppletFlowHelpers.a("mp_gamedrawn", (byte) -126);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 116);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("mp_timeremaining", (byte) -4);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 96);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("mp_x_turn", (byte) 77);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 95);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("mp_yourturn", (byte) 14);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 99);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("gameover", (byte) 68);
                 if (var2 != null) {
-                  SpaceBackground.field_s = MenuButton.a(var2, (byte) 90);
+                  SpaceBackground.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("mp_hidechat", (byte) 4);
                 if (null != var2) {
-                  PopupWidgetLayer.field_V = MenuButton.a(var2, (byte) 88);
+                  PopupWidgetLayer.field_V = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("mp_showchat_nounread", (byte) 116);
                 if (var2 != null) {
-                  BubbleDistortion.field_A = MenuButton.a(var2, (byte) 109);
+                  BubbleDistortion.field_A = MenuButton.decodeCp1252Bytes(var2, (byte) 109);
                 }
                 var2 = AppletFlowHelpers.a("mp_showchat_unread1", (byte) 111);
                 if (null != var2) {
-                  BirthDateValidator.field_g = MenuButton.a(var2, (byte) 117);
+                  BirthDateValidator.field_g = MenuButton.decodeCp1252Bytes(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("mp_showchat_unread2", (byte) -106);
                 if (var2 != null) {
-                  ArchiveSource.field_a = MenuButton.a(var2, (byte) 78);
+                  ArchiveSource.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("click_to_quickchat", (byte) -119);
                 if (null != var2) {
-                  MainMenuScreen.field_y = MenuButton.a(var2, (byte) 112);
+                  MainMenuScreen.field_y = MenuButton.decodeCp1252Bytes(var2, (byte) 112);
                 }
                 var2 = AppletFlowHelpers.a("autorespond", (byte) -107);
                 if (null != var2) {
-                  GameOverlayHelpers.field_b = MenuButton.a(var2, (byte) 71);
+                  GameOverlayHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_help", (byte) 37);
                 if (var2 != null) {
-                  ScreenNavigationHelpers.quickChatHelpTitle = MenuButton.a(var2, (byte) 127);
+                  ScreenNavigationHelpers.quickChatHelpTitle = MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_help_title", (byte) 63);
                 if (null != var2) {
-                  DelegatingCanvas.field_b = MenuButton.a(var2, (byte) 100);
+                  DelegatingCanvas.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_help,0", (byte) -117);
                 if (null != var2) {
-                  MenuSelection.field_p[0] = MenuButton.a(var2, (byte) 75);
+                  MenuSelection.field_p[0] = MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_help,1", (byte) 20);
                 if (null != var2) {
-                  MenuSelection.field_p[1] = MenuButton.a(var2, (byte) 119);
+                  MenuSelection.field_p[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_help,2", (byte) -16);
                 if (null != var2) {
-                  MenuSelection.field_p[2] = MenuButton.a(var2, (byte) 84);
+                  MenuSelection.field_p[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_help,3", (byte) 12);
                 if (null != var2) {
-                  MenuSelection.field_p[3] = MenuButton.a(var2, (byte) 108);
+                  MenuSelection.field_p[3] = MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_help,4", (byte) 18);
                 if (var2 != null) {
-                  MenuSelection.field_p[4] = MenuButton.a(var2, (byte) 107);
+                  MenuSelection.field_p[4] = MenuButton.decodeCp1252Bytes(var2, (byte) 107);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_help,5", (byte) 41);
                 if (null != var2) {
-                  MenuSelection.field_p[5] = MenuButton.a(var2, (byte) 92);
+                  MenuSelection.field_p[5] = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_keys,0", (byte) 119);
                 if (var2 != null) {
-                  PlayerNameChooserPanel.field_M[0] = MenuButton.a(var2, (byte) 122);
+                  PlayerNameChooserPanel.field_M[0] = MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_keys,1", (byte) 51);
                 if (null != var2) {
-                  PlayerNameChooserPanel.field_M[1] = MenuButton.a(var2, (byte) 92);
+                  PlayerNameChooserPanel.field_M[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_keys,2", (byte) 26);
                 if (null != var2) {
-                  PlayerNameChooserPanel.field_M[2] = MenuButton.a(var2, (byte) 118);
+                  PlayerNameChooserPanel.field_M[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_keys,3", (byte) 101);
                 if (null != var2) {
-                  PlayerNameChooserPanel.field_M[3] = MenuButton.a(var2, (byte) 71);
+                  PlayerNameChooserPanel.field_M[3] = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_keys,4", (byte) 124);
                 if (var2 != null) {
-                  PlayerNameChooserPanel.field_M[4] = MenuButton.a(var2, (byte) 94);
+                  PlayerNameChooserPanel.field_M[4] = MenuButton.decodeCp1252Bytes(var2, (byte) 94);
                 }
                 var2 = AppletFlowHelpers.a("quickchat_shortcut_keys,5", (byte) -119);
                 if (var2 != null) {
-                  PlayerNameChooserPanel.field_M[5] = MenuButton.a(var2, (byte) 100);
+                  PlayerNameChooserPanel.field_M[5] = MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("keychar_the_character_under_questionmark", (byte) 109);
                 if (null != var2) {
@@ -2678,504 +2678,504 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("rating_noratings", (byte) -116);
                 if (null != var2) {
-                  ProxyAuthenticationRequiredException.field_f = MenuButton.a(var2, (byte) 79);
+                  ProxyAuthenticationRequiredException.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("rating_rating", (byte) -115);
                 if (null != var2) {
-                  QuickChatCategoryRegistry.field_e = MenuButton.a(var2, (byte) 127);
+                  QuickChatCategoryRegistry.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("rating_played", (byte) -128);
                 if (null != var2) {
-                  NodeDeque.field_c = MenuButton.a(var2, (byte) 101);
+                  NodeDeque.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("rating_won", (byte) -117);
                 if (var2 != null) {
-                  WidgetPaintStyle.field_e = MenuButton.a(var2, (byte) 91);
+                  WidgetPaintStyle.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("rating_lost", (byte) -126);
                 if (var2 != null) {
-                  ScrollPaneWithFooter.field_Vb = MenuButton.a(var2, (byte) 84);
+                  ScrollPaneWithFooter.field_Vb = MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("rating_drawn", (byte) 62);
                 if (null != var2) {
-                  BufferedFile.field_p = MenuButton.a(var2, (byte) 126);
+                  BufferedFile.field_p = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("benefits_fullscreen", (byte) 37);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 80);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("benefits_noadverts", (byte) -121);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 84);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("benefits_price", (byte) 89);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 98);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("members_expansion_benefits,0", (byte) -116);
                 if (var2 != null) {
-                  MatchCompleteScreen.field_y[0] = MenuButton.a(var2, (byte) 89);
+                  MatchCompleteScreen.field_y[0] = MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("members_expansion_benefits,1", (byte) -10);
                 if (null != var2) {
-                  MatchCompleteScreen.field_y[1] = MenuButton.a(var2, (byte) 74);
+                  MatchCompleteScreen.field_y[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("members_expansion_benefits,2", (byte) -122);
                 if (var2 != null) {
-                  MatchCompleteScreen.field_y[2] = MenuButton.a(var2, (byte) 103);
+                  MatchCompleteScreen.field_y[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("members_expansion_price_top", (byte) -121);
                 if (null != var2) {
-                  ByteStorage.field_a = MenuButton.a(var2, (byte) 80);
+                  ByteStorage.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("members_expansion_price_bottom", (byte) -124);
                 if (var2 != null) {
-                  ArchiveIndex.field_q = MenuButton.a(var2, (byte) 125);
+                  ArchiveIndex.field_q = MenuButton.decodeCp1252Bytes(var2, (byte) 125);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_lost_seq,0", (byte) -106);
                 if (var2 != null) {
-                  ContentTransitionPhase.field_e[0] = MenuButton.a(var2, (byte) 115);
+                  ContentTransitionPhase.field_e[0] = MenuButton.decodeCp1252Bytes(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_lost_seq,1", (byte) -108);
                 if (null != var2) {
-                  ContentTransitionPhase.field_e[1] = MenuButton.a(var2, (byte) 127);
+                  ContentTransitionPhase.field_e[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_lost_seq,2", (byte) -114);
                 if (null != var2) {
-                  ContentTransitionPhase.field_e[2] = MenuButton.a(var2, (byte) 99);
+                  ContentTransitionPhase.field_e[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_lost_seq,3", (byte) -6);
                 if (var2 != null) {
-                  ContentTransitionPhase.field_e[3] = MenuButton.a(var2, (byte) 106);
+                  ContentTransitionPhase.field_e[3] = MenuButton.decodeCp1252Bytes(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_lost", (byte) -110);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 107);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 107);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_restored", (byte) 34);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 123);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 123);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_please_check", (byte) -106);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 124);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_wait", (byte) -112);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 105);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 105);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_retry", (byte) 110);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 80);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_resume", (byte) -120);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 101);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_or", (byte) 6);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 101);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_exitfs", (byte) 27);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 118);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_exitfs_quit", (byte) 118);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 113);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 113);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_quit", (byte) -125);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 92);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_check_fs", (byte) -112);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 82);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("reconnect_check_nonfs", (byte) -125);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 124);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("fs_accept_beforeaccept", (byte) -125);
                 if (var2 != null) {
-                  MultiValueSliderRenderer.field_k = MenuButton.a(var2, (byte) 124);
+                  MultiValueSliderRenderer.field_k = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("fs_button_accept", (byte) 6);
                 if (null != var2) {
-                  GrowableIntList.field_c = MenuButton.a(var2, (byte) 92);
+                  GrowableIntList.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("fs_accept_afteraccept", (byte) -115);
                 if (var2 != null) {
-                  GameConnectionHelpers.field_e = MenuButton.a(var2, (byte) 121);
+                  GameConnectionHelpers.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("fs_button_cancel", (byte) 41);
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  QuickChatSineHelpers.field_c = MenuButton.a(var2, (byte) 74);
+                  QuickChatSineHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("fs_accept_aftercancel", (byte) -127);
                 if (var2 != null) {
-                  CanvasViewGlobals.field_f = MenuButton.a(var2, (byte) 73);
+                  CanvasViewGlobals.field_f = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("fs_accept_countdown_sing", (byte) 40);
                 if (var2 != null) {
-                  PowerUp.field_x = MenuButton.a(var2, (byte) 72);
+                  PowerUp.field_x = MenuButton.decodeCp1252Bytes(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("fs_accept_countdown_pl", (byte) -107);
                 if (var2 != null) {
-                  CanvasViewGlobals.field_e = MenuButton.a(var2, (byte) 78);
+                  CanvasViewGlobals.field_e = MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("fs_nonmember", (byte) -123);
                 if (var2 != null) {
-                  StatefulWidgetRenderer.field_x = MenuButton.a(var2, (byte) 102);
+                  StatefulWidgetRenderer.field_x = MenuButton.decodeCp1252Bytes(var2, (byte) 102);
                 }
                 var2 = AppletFlowHelpers.a("fs_button_close", (byte) -116);
                 if (var2 != null) {
-                  LevelSequence.field_a = MenuButton.a(var2, (byte) 82);
+                  LevelSequence.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("fs_button_members", (byte) -123);
                 if (null != var2) {
-                  PasswordValidator.field_q = MenuButton.a(var2, (byte) 114);
+                  PasswordValidator.field_q = MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("fs_unavailable", (byte) -125);
                 if (null != var2) {
-                  LoginCredentials.field_a = MenuButton.a(var2, (byte) 76);
+                  LoginCredentials.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("fs_unavailable_try_signed_applet", (byte) -108);
                 if (null != var2) {
-                  AccountDateHelpers.field_d = MenuButton.a(var2, (byte) 76);
+                  AccountDateHelpers.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("fs_focus", (byte) -106);
                 if (null != var2) {
-                  ChocolateBackground.field_s = MenuButton.a(var2, (byte) 79);
+                  ChocolateBackground.field_s = MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("fs_focus_or_resolution", (byte) -124);
                 if (null != var2) {
-                  AccountResponse.field_h = MenuButton.a(var2, (byte) 112);
+                  AccountResponse.field_h = MenuButton.decodeCp1252Bytes(var2, (byte) 112);
                 }
                 var2 = AppletFlowHelpers.a("fs_timeout", (byte) 40);
                 if (null != var2) {
-                  DirectByteStorage.field_h = MenuButton.a(var2, (byte) 119);
+                  DirectByteStorage.field_h = MenuButton.decodeCp1252Bytes(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("fs_button_tryagain", (byte) -118);
                 if (null != var2) {
-                  BoardPresentationHelpers.field_b = MenuButton.a(var2, (byte) 71);
+                  BoardPresentationHelpers.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("graphics_ui_fs_countdown", (byte) 8);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 121);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("mb_caption_title", (byte) 44);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 71);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("mb_including_gamename", (byte) 79);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 78);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("mb_full_access_1", (byte) 32);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 77);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 77);
                 }
                 var2 = AppletFlowHelpers.a("mb_full_access_2", (byte) -115);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 83);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("mb_achievement_count_1", (byte) -2);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 124);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("mb_achievement_count_2", (byte) 55);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 77);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 77);
                 }
                 var2 = AppletFlowHelpers.a("mb_exclusive_1", (byte) -127);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 108);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("mb_exclusive_2", (byte) -111);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 89);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("me_extra_benefits", (byte) -117);
                 if (var2 != null) {
-                  DialogPointerGlobals.field_c = MenuButton.a(var2, (byte) 111);
+                  DialogPointerGlobals.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("hs_friend_tip", (byte) -125);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 121);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("hs_friend_tip_multi", (byte) 91);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 114);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("hs_mode_name,0", (byte) 45);
                 if (null != var2) {
-                  SpriteInputHelpers.field_c[0] = MenuButton.a(var2, (byte) 83);
+                  SpriteInputHelpers.field_c[0] = MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("hs_mode_name,1", (byte) 73);
                 if (null != var2) {
-                  SpriteInputHelpers.field_c[1] = MenuButton.a(var2, (byte) 110);
+                  SpriteInputHelpers.field_c[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("hs_mode_name,2", (byte) -14);
                 if (null != var2) {
-                  SpriteInputHelpers.field_c[2] = MenuButton.a(var2, (byte) 111);
+                  SpriteInputHelpers.field_c[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("rating_mode_name,0", (byte) -112);
                 if (null != var2) {
-                  LevelCompleteScreen.field_E[0] = MenuButton.a(var2, (byte) 74);
+                  LevelCompleteScreen.field_E[0] = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("rating_mode_name,1", (byte) 95);
                 if (var2 != null) {
-                  LevelCompleteScreen.field_E[1] = MenuButton.a(var2, (byte) 100);
+                  LevelCompleteScreen.field_E[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("rating_mode_long_name,0", (byte) -122);
                 if (null != var2) {
-                  UiGeometryHelpers.rankingSortModeLabels[0] = MenuButton.a(var2, (byte) 92);
+                  UiGeometryHelpers.rankingSortModeLabels[0] = MenuButton.decodeCp1252Bytes(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("rating_mode_long_name,1", (byte) -112);
                 if (var2 != null) {
-                  UiGeometryHelpers.rankingSortModeLabels[1] = MenuButton.a(var2, (byte) 71);
+                  UiGeometryHelpers.rankingSortModeLabels[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("graphics_config_fixed_size", (byte) -117);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 107);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 107);
                 }
                 var2 = AppletFlowHelpers.a("graphics_config_resizable", (byte) -124);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 120);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("graphics_config_fullscreen", (byte) -20);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 109);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 109);
                 }
                 var2 = AppletFlowHelpers.a("graphics_config_done", (byte) -118);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 122);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("graphics_config_apply", (byte) 65);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 101);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("graphics_config_title", (byte) 75);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 108);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 108);
                 }
                 var2 = AppletFlowHelpers.a("graphics_config_instruction", (byte) -109);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 109);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 109);
                 }
                 var2 = AppletFlowHelpers.a("graphics_config_need_memory", (byte) 109);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 94);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 94);
                 }
                 var2 = AppletFlowHelpers.a("pleasewait_dotdotdot", (byte) -16);
                 if (null != var2) {
-                  BackgroundSurfaceHelpers.field_a = MenuButton.a(var2, (byte) 83);
+                  BackgroundSurfaceHelpers.field_a = MenuButton.decodeCp1252Bytes(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("serviceunavailable", (byte) 85);
                 if (var2 != null) {
-                  BoundedFile.field_d = MenuButton.a(var2, (byte) 104);
+                  BoundedFile.field_d = MenuButton.decodeCp1252Bytes(var2, (byte) 104);
                 }
                 var2 = AppletFlowHelpers.a("createtouse", (byte) 40);
                 if (var2 != null) {
-                  DateFieldsWidget.field_N = MenuButton.a(var2, (byte) 75);
+                  DateFieldsWidget.field_N = MenuButton.decodeCp1252Bytes(var2, (byte) 75);
                 }
                 var2 = AppletFlowHelpers.a("achievementsoffline", (byte) -20);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 70);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 70);
                 }
                 var2 = AppletFlowHelpers.a("warning", (byte) 18);
                 if (null != var2) {
-                  MenuButton.a(var2, (byte) 126);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("DEFAULT_PLAYER_NAME", (byte) -20);
                 if (null != var2) {
-                  LevelSelectScreen.field_t = MenuButton.a(var2, (byte) 126);
+                  LevelSelectScreen.field_t = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin1", (byte) -110);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 88);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin2,1", (byte) 77);
                 if (var2 != null) {
-                  EmailConfirmationValidator.field_m[1] = MenuButton.a(var2, (byte) 82);
+                  EmailConfirmationValidator.field_m[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 82);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin2,2", (byte) -108);
                 if (null != var2) {
-                  EmailConfirmationValidator.field_m[2] = MenuButton.a(var2, (byte) 79);
+                  EmailConfirmationValidator.field_m[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin2,3", (byte) -123);
                 if (var2 != null) {
-                  EmailConfirmationValidator.field_m[3] = MenuButton.a(var2, (byte) 126);
+                  EmailConfirmationValidator.field_m[3] = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin2,4", (byte) 84);
                 if (var2 != null) {
-                  EmailConfirmationValidator.field_m[4] = MenuButton.a(var2, (byte) 87);
+                  EmailConfirmationValidator.field_m[4] = MenuButton.decodeCp1252Bytes(var2, (byte) 87);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin2,5", (byte) -121);
                 if (var2 != null) {
-                  EmailConfirmationValidator.field_m[5] = MenuButton.a(var2, (byte) 90);
+                  EmailConfirmationValidator.field_m[5] = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin2,6", (byte) 63);
                 if (var2 != null) {
-                  EmailConfirmationValidator.field_m[6] = MenuButton.a(var2, (byte) 73);
+                  EmailConfirmationValidator.field_m[6] = MenuButton.decodeCp1252Bytes(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin2,7", (byte) 6);
                 if (null != var2) {
-                  EmailConfirmationValidator.field_m[7] = MenuButton.a(var2, (byte) 103);
+                  EmailConfirmationValidator.field_m[7] = MenuButton.decodeCp1252Bytes(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin3,1", (byte) 115);
                 if (var2 != null) {
-                  FullscreenFailureKind.field_e[1] = MenuButton.a(var2, (byte) 90);
+                  FullscreenFailureKind.field_e[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin3,2", (byte) -106);
                 if (null != var2) {
-                  FullscreenFailureKind.field_e[2] = MenuButton.a(var2, (byte) 81);
+                  FullscreenFailureKind.field_e[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 81);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin3,3", (byte) -107);
                 if (var2 != null) {
-                  FullscreenFailureKind.field_e[3] = MenuButton.a(var2, (byte) 78);
+                  FullscreenFailureKind.field_e[3] = MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin3,4", (byte) -13);
                 if (var2 != null) {
-                  FullscreenFailureKind.field_e[4] = MenuButton.a(var2, (byte) 96);
+                  FullscreenFailureKind.field_e[4] = MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin3,5", (byte) -121);
                 if (null != var2) {
-                  FullscreenFailureKind.field_e[5] = MenuButton.a(var2, (byte) 116);
+                  FullscreenFailureKind.field_e[5] = MenuButton.decodeCp1252Bytes(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin3,6", (byte) -19);
                 if (var2 != null) {
-                  FullscreenFailureKind.field_e[6] = MenuButton.a(var2, (byte) 71);
+                  FullscreenFailureKind.field_e[6] = MenuButton.decodeCp1252Bytes(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin3,7", (byte) 61);
                 if (null != var2) {
-                  FullscreenFailureKind.field_e[7] = MenuButton.a(var2, (byte) 90);
+                  FullscreenFailureKind.field_e[7] = MenuButton.decodeCp1252Bytes(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("discard", (byte) -116);
                 if (null != var2) {
-                  DesertBackground.field_r = MenuButton.a(var2, (byte) 86);
+                  DesertBackground.field_r = MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin4,1", (byte) -110);
                 if (null != var2) {
-                  CalendarRankingHelpers.field_c[1] = MenuButton.a(var2, (byte) 86);
+                  CalendarRankingHelpers.field_c[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin4,2", (byte) 66);
                 if (null != var2) {
-                  CalendarRankingHelpers.field_c[2] = MenuButton.a(var2, (byte) 96);
+                  CalendarRankingHelpers.field_c[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 96);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin4,3", (byte) -108);
                 if (var2 != null) {
-                  CalendarRankingHelpers.field_c[3] = MenuButton.a(var2, (byte) 124);
+                  CalendarRankingHelpers.field_c[3] = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin4,4", (byte) -110);
                 if (var2 != null) {
-                  CalendarRankingHelpers.field_c[4] = MenuButton.a(var2, (byte) 100);
+                  CalendarRankingHelpers.field_c[4] = MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin4,5", (byte) -123);
                 if (null != var2) {
-                  CalendarRankingHelpers.field_c[5] = MenuButton.a(var2, (byte) 100);
+                  CalendarRankingHelpers.field_c[5] = MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin4,6", (byte) -122);
                 if (null != var2) {
-                  CalendarRankingHelpers.field_c[6] = MenuButton.a(var2, (byte) 98);
+                  CalendarRankingHelpers.field_c[6] = MenuButton.decodeCp1252Bytes(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin4,7", (byte) 96);
                 if (var2 != null) {
-                  CalendarRankingHelpers.field_c[7] = MenuButton.a(var2, (byte) 95);
+                  CalendarRankingHelpers.field_c[7] = MenuButton.decodeCp1252Bytes(var2, (byte) 95);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin_notloggedin", (byte) -119);
                 if (null != var2) {
-                  PauseMenuScreen.field_w = MenuButton.a(var2, (byte) 118);
+                  PauseMenuScreen.field_w = MenuButton.decodeCp1252Bytes(var2, (byte) 118);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin_alternate,1", (byte) 95);
                 if (var2 != null) {
-                  MultiplayerExitScreen.savePrompts[1] = MenuButton.a(var2, (byte) 88);
+                  MultiplayerExitScreen.savePrompts[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 88);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin_alternate,2", (byte) 33);
                 if (var2 != null) {
-                  MultiplayerExitScreen.savePrompts[2] = MenuButton.a(var2, (byte) 81);
+                  MultiplayerExitScreen.savePrompts[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 81);
                 }
                 if (param1 <= 89) {
                   ContextActionController.a((ResourceArchive) null, -113);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin_alternate,3", (byte) -120);
                 if (null != var2) {
-                  MultiplayerExitScreen.savePrompts[3] = MenuButton.a(var2, (byte) 124);
+                  MultiplayerExitScreen.savePrompts[3] = MenuButton.decodeCp1252Bytes(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin_alternate,4", (byte) 122);
                 if (var2 != null) {
-                  MultiplayerExitScreen.savePrompts[4] = MenuButton.a(var2, (byte) 110);
+                  MultiplayerExitScreen.savePrompts[4] = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin_alternate,5", (byte) -8);
                 if (null != var2) {
-                  MultiplayerExitScreen.savePrompts[5] = MenuButton.a(var2, (byte) 120);
+                  MultiplayerExitScreen.savePrompts[5] = MenuButton.decodeCp1252Bytes(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin_alternate,6", (byte) -127);
                 if (null != var2) {
-                  MultiplayerExitScreen.savePrompts[6] = MenuButton.a(var2, (byte) 104);
+                  MultiplayerExitScreen.savePrompts[6] = MenuButton.decodeCp1252Bytes(var2, (byte) 104);
                 }
                 var2 = AppletFlowHelpers.a("mustlogin_alternate,7", (byte) 100);
                 if (var2 != null) {
-                  MultiplayerExitScreen.savePrompts[7] = MenuButton.a(var2, (byte) 113);
+                  MultiplayerExitScreen.savePrompts[7] = MenuButton.decodeCp1252Bytes(var2, (byte) 113);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,0", (byte) -116);
                 if (null != var2) {
-                  AppletResourceHelpers.field_e[0] = MenuButton.a(var2, (byte) 74);
+                  AppletResourceHelpers.field_e[0] = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,1", (byte) 7);
                 if (null != var2) {
-                  AppletResourceHelpers.field_e[1] = MenuButton.a(var2, (byte) 93);
+                  AppletResourceHelpers.field_e[1] = MenuButton.decodeCp1252Bytes(var2, (byte) 93);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,2", (byte) -111);
                 if (null != var2) {
-                  AppletResourceHelpers.field_e[2] = MenuButton.a(var2, (byte) 110);
+                  AppletResourceHelpers.field_e[2] = MenuButton.decodeCp1252Bytes(var2, (byte) 110);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,3", (byte) -106);
                 if (null != var2) {
-                  AppletResourceHelpers.field_e[3] = MenuButton.a(var2, (byte) 100);
+                  AppletResourceHelpers.field_e[3] = MenuButton.decodeCp1252Bytes(var2, (byte) 100);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,4", (byte) -128);
                 if (var2 != null) {
-                  AppletResourceHelpers.field_e[4] = MenuButton.a(var2, (byte) 121);
+                  AppletResourceHelpers.field_e[4] = MenuButton.decodeCp1252Bytes(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,5", (byte) -116);
                 if (null != var2) {
-                  AppletResourceHelpers.field_e[5] = MenuButton.a(var2, (byte) 126);
+                  AppletResourceHelpers.field_e[5] = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,6", (byte) -115);
                 if (var2 != null) {
-                  AppletResourceHelpers.field_e[6] = MenuButton.a(var2, (byte) 116);
+                  AppletResourceHelpers.field_e[6] = MenuButton.decodeCp1252Bytes(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,7", (byte) -122);
                 if (var2 != null) {
-                  AppletResourceHelpers.field_e[7] = MenuButton.a(var2, (byte) 114);
+                  AppletResourceHelpers.field_e[7] = MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,8", (byte) -15);
                 if (var2 != null) {
-                  AppletResourceHelpers.field_e[8] = MenuButton.a(var2, (byte) 114);
+                  AppletResourceHelpers.field_e[8] = MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,9", (byte) 29);
                 if (var2 != null) {
-                  AppletResourceHelpers.field_e[9] = MenuButton.a(var2, (byte) 93);
+                  AppletResourceHelpers.field_e[9] = MenuButton.decodeCp1252Bytes(var2, (byte) 93);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,10", (byte) 10);
                 if (null != var2) {
-                  AppletResourceHelpers.field_e[10] = MenuButton.a(var2, (byte) 126);
+                  AppletResourceHelpers.field_e[10] = MenuButton.decodeCp1252Bytes(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,11", (byte) -120);
                 if (var2 != null) {
-                  AppletResourceHelpers.field_e[11] = MenuButton.a(var2, (byte) 94);
+                  AppletResourceHelpers.field_e[11] = MenuButton.decodeCp1252Bytes(var2, (byte) 94);
                 }
                 var2 = AppletFlowHelpers.a("subscription_cost_monthly,12", (byte) -111);
                 if (var2 != null) {
-                  AppletResourceHelpers.field_e[12] = MenuButton.a(var2, (byte) 81);
+                  AppletResourceHelpers.field_e[12] = MenuButton.decodeCp1252Bytes(var2, (byte) 81);
                 }
                 var2 = AppletFlowHelpers.a("sentence_separator", (byte) 99);
                 if (var2 != null) {
-                  MenuButton.a(var2, (byte) 87);
+                  MenuButton.decodeCp1252Bytes(var2, (byte) 87);
                 }
                 HighscorePackSelector.field_c = null;
             }

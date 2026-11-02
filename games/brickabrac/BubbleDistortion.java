@@ -205,7 +205,7 @@ final class BubbleDistortion extends CircleBody {
         this.stateWord = this.stateWord + 1;
     }
 
-    final static void a(MidiSynthesizer param0, PlatformServices param1, int param2, int param3, int param4, int param5, java.awt.Component param6, boolean param7) {
+    final static void initializeAudioOutput(MidiSynthesizer param0, PlatformServices param1, int param2, int param3, int param4, int param5, java.awt.Component param6, boolean param7) {
         try {
           PcmPlayer.configureOutput(param2, param7, 10);
           DirectByteStorage.field_f = PcmPlayer.create(param1, param6, 0, param4);
@@ -269,7 +269,7 @@ final class BubbleDistortion extends CircleBody {
         try {
           if (obfuscationGuard <= 79) {
             var4 = (java.awt.Component) null;
-            BubbleDistortion.a((MidiSynthesizer) null, (PlatformServices) null, 83, 59, 15, -106, (java.awt.Component) null, true);
+            BubbleDistortion.initializeAudioOutput((MidiSynthesizer) null, (PlatformServices) null, 83, 59, 15, -106, (java.awt.Component) null, true);
           }
           var3_int = super.computeSyncChecksum(120, diagnostics) ^ -72674834;
           if (diagnostics != null) {

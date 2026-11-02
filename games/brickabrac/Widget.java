@@ -607,7 +607,7 @@ class Widget extends IntrusiveNode {
         ClientResourceHelpers.enabledFeatureMask = 0;
     }
 
-    final static void a(PlatformServices param0, byte param1, java.awt.Canvas param2) {
+    final static void initializeMidiSynthesizer(PlatformServices param0, byte param1, java.awt.Canvas param2) {
         try {
           ChatLobbyUiHelpers.field_f = new MidiSynthesizer();
           ChatLobbyUiHelpers.field_f.setInitialProgram(0, 9, 128);

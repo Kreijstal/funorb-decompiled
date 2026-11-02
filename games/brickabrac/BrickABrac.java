@@ -128,10 +128,10 @@ public final class BrickABrac extends InteractiveGameClient {
     }
 
     final void initializeClient(boolean obfuscationGuard) {
-        this.a((byte) 39, 0, 2, obfuscationGuard, 1, 4, 14, 65);
+        this.initializeClientServices((byte) 39, 0, 2, obfuscationGuard, 1, 4, 14, 65);
         ButtonWidgetRenderer.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
         AppletFlowHelpers.field_c = new RgbSprite(640, 480);
-        Widget.a(AccountMessageDialog.field_ub, (byte) 60, CacheIoRequest.windowCanvas);
+        Widget.initializeMidiSynthesizer(AccountMessageDialog.field_ub, (byte) 60, CacheIoRequest.windowCanvas);
         this.registerUiLifecycle(3160, new GameUiController());
         ReportAbuseDialog.a(SocialListResponseHelpers.incomingPacketLengths, 1);
     }
@@ -214,7 +214,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (14 == opcode) {
             OpacityWidget.finishScreenTransition((byte) -116);
-            LobbySetupHelpers.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, ValidationStatus.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.roundUpPowerOfTwo(2000, (byte) -54), TextChoiceDialogHitTest.a(1345), VerticalScrollbar.roundUpPowerOfTwo(8, (byte) -53), 1024, DropTargetWidget.field_I.length);
+            LobbySetupHelpers.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, ValidationStatus.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.roundUpPowerOfTwo(2000, (byte) -54), TextChoiceDialogHitTest.getLobbyCaptionContent(1345), VerticalScrollbar.roundUpPowerOfTwo(8, (byte) -53), 1024, DropTargetWidget.field_I.length);
             GameTransportHelpers.bindSocialListEntries(FramedMenuScreen.getIgnoreListContent(115), QuickChatHelpDialog.getFriendsListContent(obfuscationGuard - 45), obfuscationGuard ^ 12);
             RadialSelectorWidget.field_L = false;
             MonotonicTime.field_c = true;
@@ -223,7 +223,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (opcode == 15) {
             if (MonotonicTime.field_c) {
-              WhirlpoolHasher.a(7);
+              WhirlpoolHasher.closeTransientPopups(7);
               BirthDateValidator.clearChatHistory((byte) -56);
               ScreenNavigationHelpers.requestScreen(false, obfuscationGuard + 43, 0);
               MonotonicTime.field_c = false;
@@ -260,7 +260,7 @@ public final class BrickABrac extends InteractiveGameClient {
               var19[var7] = IntrusiveHashIterator.bitwiseAnd(var34[var7], ~var46[var7]);
             }
             if (ResourceRequest.field_y) {
-              var5_int = InputOptionsHelpers.a(true, var35);
+              var5_int = InputOptionsHelpers.findLastNonZeroIndex(true, var35);
               for (var6 = 0; var6 <= var5_int; var6++) {
                 if (DirectByteStorage.isBitSet(var35, var6, (byte) -75)) {
                   LevelResultWireHelpers.achievementNotifications.addLast(new IntNode(var6), (byte) 3);
@@ -474,7 +474,7 @@ public final class BrickABrac extends InteractiveGameClient {
             }
           }
         }
-        AccountRegistrationPanel.h((byte) -64);
+        AccountRegistrationPanel.refreshMenuScreens((byte) -64);
     }
 
     public BrickABrac() {
@@ -517,7 +517,7 @@ public final class BrickABrac extends InteractiveGameClient {
         if (obfuscationGuard) {
           field_G = (String) null;
         }
-        QuickChatMenu.d((byte) 107);
+        QuickChatMenu.shutdownClient((byte) 107);
     }
 
     public final boolean handleGameKey(int keyCode, char character, int obfuscationGuard) {

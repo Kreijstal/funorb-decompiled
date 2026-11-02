@@ -9,11 +9,11 @@ final class AccountContentTransitionLayer extends ContentTransitionLayer {
     static String field_sb;
     static int fullscreenDialogPaddingY;
 
-    final static void m(int param0) {
+    final static void resetRetryTimer(int param0) {
         PasswordFieldRenderer.field_G = MonotonicTime.nowMillis(false);
         GameplayScreen.field_h = 0;
         if (param0 >= -58) {
-          AccountContentTransitionLayer.m(-3);
+          AccountContentTransitionLayer.resetRetryTimer(-3);
         }
     }
 

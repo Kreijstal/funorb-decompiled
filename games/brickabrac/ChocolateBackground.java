@@ -64,7 +64,7 @@ final class ChocolateBackground extends BackgroundScene {
           return IntKeyIndex.chocCentreSprites[scaleDivisor - 1];
         }
         java.applet.Applet var4 = (java.applet.Applet) null;
-        ChocolateBackground.a((java.applet.Applet) null, 68);
+        ChocolateBackground.openSubscribePage((java.applet.Applet) null, 68);
         return IntKeyIndex.chocCentreSprites[scaleDivisor - 1];
     }
 
@@ -85,8 +85,8 @@ final class ChocolateBackground extends BackgroundScene {
         Brick.chocCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.backgroundSpriteArchive, "choc_caps", 2);
         TextChoiceDialogHitTest.chocSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.backgroundSpriteArchive, "choc_segs", 2);
         IntKeyIndex.chocCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.backgroundSpriteArchive);
-        Brick.chocCapsSprites[1] = Under13RegistrationNoticePanel.a(Brick.chocCapsSprites[0], obfuscationGuard);
-        TextChoiceDialogHitTest.chocSegsSprites[1] = Under13RegistrationNoticePanel.a(TextChoiceDialogHitTest.chocSegsSprites[0], obfuscationGuard);
+        Brick.chocCapsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(Brick.chocCapsSprites[0], obfuscationGuard);
+        TextChoiceDialogHitTest.chocSegsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(TextChoiceDialogHitTest.chocSegsSprites[0], obfuscationGuard);
         IntKeyIndex.chocCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, IntKeyIndex.chocCentreSprites[0]);
         NameEntryPopup.chocLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.backgroundSpriteArchive, "choc_lever", 2);
         return true;
@@ -220,7 +220,7 @@ final class ChocolateBackground extends BackgroundScene {
         return false;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSubscribePage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -273,7 +273,7 @@ final class ChocolateBackground extends BackgroundScene {
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
-        ChocolateBackground.a((java.applet.Applet) null, -87);
+        ChocolateBackground.openSubscribePage((java.applet.Applet) null, -87);
         field_t = null;
         chocolateMidSprite = null;
         field_y = null;

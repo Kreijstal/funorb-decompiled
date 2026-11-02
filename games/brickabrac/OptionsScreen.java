@@ -11,7 +11,7 @@ final class OptionsScreen extends FramedMenuScreen {
     static UiComponent field_v;
     static RgbSprite desertFarSprite;
 
-    final static RgbSprite a(int param0, int param1, String param2, boolean param3) {
+    final static RgbSprite renderScaledTextSprite(int param0, int param1, String param2, boolean param3) {
         int var11 = 0;
         int var12 = 0;
         int var4_int = 0;

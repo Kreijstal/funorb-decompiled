@@ -16,7 +16,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         this.initializeButtons(ContentTransitionPhase.field_b, 0);
     }
 
-    final static String a(int param0, boolean param1, CharSequence param2) {
+    final static String validateNameText(int param0, boolean param1, CharSequence param2) {
         int var4 = 0;
         String var3 = null;
         int var5 = 0;
@@ -35,7 +35,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
             return stackIn_4_0;
           }
           for (var4 = param0; var4 < param2.length(); var4++) {
-            if (!UiComponent.a(true, param2.charAt(var4))) {
+            if (!UiComponent.isValidNameCharacter(true, param2.charAt(var4))) {
               stackIn_11_0 = RankingsRequest.field_i;
               return stackIn_11_0;
             }
@@ -77,7 +77,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         return stackIn_13_0;
     }
 
-    final static void f(int param0) {
+    final static void flushPendingTableNameMessage(int param0) {
         String var2 = null;
         if (param0 != 0) {
           return;
@@ -85,7 +85,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         if (TableNameEntry.field_g != null) {
           var2 = TableNameEntry.field_g;
           String var1 = var2;
-          ArrayWidgetGroup.a((byte) -83, GamePresentationHelpers.formatIndexedText(ValidationMessageWidget.field_T, new String[]{var2}, (byte) 103));
+          ArrayWidgetGroup.showMessageDialogText((byte) -83, GamePresentationHelpers.formatIndexedText(ValidationMessageWidget.field_T, new String[]{var2}, (byte) 103));
           TableNameEntry.field_g = null;
         }
     }

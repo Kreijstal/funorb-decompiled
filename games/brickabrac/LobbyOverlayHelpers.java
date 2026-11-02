@@ -10,7 +10,7 @@ final class LobbyOverlayHelpers extends IntrusiveNode {
     public LobbyOverlayHelpers() {
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawLobbyOverlays(boolean param0, int param1) {
         boolean decompiledFrameRemainder0 = true;
         if ((TextLineLayout.field_b <= 0) &&
           (decompiledFrameRemainder0 = (!(IntArrayRequest.field_j <= 0) ||

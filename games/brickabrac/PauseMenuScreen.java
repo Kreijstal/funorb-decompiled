@@ -54,7 +54,7 @@ class PauseMenuScreen extends FramedMenuScreen {
         IntArrayRequest.gameplayScreen.drawScreen((byte) -116);
         Rasterizer2D.darkenRectangle(0, 0, 640, 480);
         this.drawMenuFrame(102);
-        DelayedPacket.d(0);
+        DelayedPacket.paintScreenFrame(0);
         if (obfuscationGuard <= -14) {
           this.drawEnabledButtons(0);
           return;

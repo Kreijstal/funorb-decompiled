@@ -142,7 +142,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           if (param2 <= ~MeshLobbyUiHelpers.field_f) {
             return;
           }
-          ProxyAuthenticationRequiredException.a(param2 - 123);
+          ProxyAuthenticationRequiredException.animateLobbyOverlayBounds(param2 - 123);
           DualLinkDeque.field_d.updateRoot(param3, -15211);
           if (null != PacketReceiveHelpers.field_a) {
             if (TextWidgetRenderer.field_e) {

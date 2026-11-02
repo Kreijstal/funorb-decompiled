@@ -24,7 +24,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
         throw new RuntimeException();
     }
 
-    final static void f(byte param0) {
+    final static void leaveCurrentGame(byte param0) {
         if (!IntArrayRequest.gameplayScreen.isSpectator(95)) {
           GameTransportActions.requestLeaveOrDeclineGame(ClientResourceHelpers.currentLobbyGame.getGameId((byte) 31), false, 11);
           IntegerBitLengthHelpers.field_d = true;
@@ -108,7 +108,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
         bytePool5000 = (byte[][]) null;
     }
 
-    final static String d(byte param0) {
+    final static String getLoadingStatusMessage(byte param0) {
         if (!(2 <= GameConnectionShell.clientStage)) {
           return BackgroundSurfaceHelpers.field_c;
         }

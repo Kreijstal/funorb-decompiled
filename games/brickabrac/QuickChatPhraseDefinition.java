@@ -195,7 +195,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         RgbSprite var29Lifetime4;
         RgbSprite var29Lifetime5;
         RgbSprite var29Lifetime6;
-        SpriteGeometry.a(param1, param2, (ScrollPane) null, (int[]) null, (String) null, -1, (byte) -58, 0L, (String) null);
+        SpriteGeometry.createContextActions(param1, param2, (ScrollPane) null, (int[]) null, (String) null, -1, (byte) -58, 0L, (String) null);
         if (param1 == 0) {
           var9 = GameRenderAudioHelpers.contextActions;
           var11 = ProxyAuthenticationRequiredException.field_b[0];

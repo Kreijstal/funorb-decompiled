@@ -16,7 +16,7 @@ final class ContentTransitionPhase {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        ContentTransitionPhase.a((ResourceArchive) null, 51, -113);
+        ContentTransitionPhase.loadMusicPatch((ResourceArchive) null, 51, -113);
         field_e = null;
         field_a = null;
         field_b = null;
@@ -26,7 +26,7 @@ final class ContentTransitionPhase {
         throw new IllegalStateException();
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void reloadPage(byte param0, java.applet.Applet param1) {
         try {
           int var2_int = 0;
           Exception var2 = null;
@@ -80,7 +80,7 @@ final class ContentTransitionPhase {
         }
     }
 
-    final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

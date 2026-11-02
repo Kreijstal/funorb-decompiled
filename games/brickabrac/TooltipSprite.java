@@ -14,7 +14,7 @@ final class TooltipSprite extends IntrusiveNode {
     static int textChoiceButtonLineHeight;
     private boolean hovered;
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
+    final static void loadCommonUiResources(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         RgbSprite var17 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -98,7 +98,7 @@ final class TooltipSprite extends IntrusiveNode {
         this.hovered = this.sprite.containsPixel(this.x, this.y, MusicPatch.pointerX, ResourcePreparationEntry.pointerY);
     }
 
-    final static void e(int param0) {
+    final static void shutdownAudioPlayers(int param0) {
         if (DirectByteStorage.field_f != null) {
           DirectByteStorage.field_f.shutdown();
         }

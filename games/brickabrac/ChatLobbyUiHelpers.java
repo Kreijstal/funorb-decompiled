@@ -413,7 +413,7 @@ final class ChatLobbyUiHelpers {
                                     Widget.field_p = ((PacketBuffer) ((Object) packet)).readLong(-32768);
                                     break regionExit1;
                                   default:
-                                    AlignedIconLabel.a("L1: " + WhirlpoolHasher.c((byte) -121), (Throwable) null, 108);
+                                    AlignedIconLabel.a("L1: " + WhirlpoolHasher.describePacketHistory((byte) -121), (Throwable) null, 108);
                                     GameTransportHelpers.closeGameTransport((byte) 84);
                                     break regionExit1;
                                 }

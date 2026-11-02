@@ -22,7 +22,7 @@ final class TableNameEntry {
         waterSmallSprite = null;
     }
 
-    final static void a(byte param0, java.awt.Canvas param1, boolean param2) {
+    final static void renderStartupScreen(byte param0, java.awt.Canvas param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -41,21 +41,21 @@ final class TableNameEntry {
               var3_int = 1;
               GameplayAudioEvent.redrawRequested = false;
             }
-            ResourcePreparationEntry.a(ArchiveNetworkRequest.d((byte) 103), BrickGameLayerController.field_f, RichTextLayout.b(false), var3_int != 0, 0);
+            ResourcePreparationEntry.a(ArchiveNetworkRequest.getLoadingStatusMessage((byte) 103), BrickGameLayerController.field_f, RichTextLayout.b(false), var3_int != 0, 0);
             return;
           }
           if (!BubbleDistortion.isLogoAnimationFinished((byte) -94)) {
             Rasterizer2D.clear();
             MultiValueSliderRenderer.drawLogoAnimation(false, 240, 320);
-            DiagnosticTextLine.a(param1, 0, 14209, 0);
+            DiagnosticTextLine.drawFramebufferToCanvas(param1, 0, 14209, 0);
             return;
           }
           if (AchievementIcon.field_j != 0) {
             QuickChatCategoryDefinition.a(true, param1);
             return;
           }
-          RankingsScreen.a(param2, -71, false);
-          DiagnosticTextLine.a(param1, 0, 14209, 0);
+          RankingsScreen.drawOverlayBackdrop(param2, -71, false);
+          DiagnosticTextLine.drawFramebufferToCanvas(param1, 0, 14209, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

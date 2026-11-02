@@ -85,7 +85,7 @@ final class DelayedPacket extends IntrusiveNode {
         }
     }
 
-    final static void d(int param0) {
+    final static void paintScreenFrame(int param0) {
         if (param0 != 0) {
           return;
         }

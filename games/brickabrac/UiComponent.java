@@ -532,7 +532,7 @@ class UiComponent extends UiComponentNode {
         }
     }
 
-    final static boolean a(boolean param0, char param1) {
+    final static boolean isValidNameCharacter(boolean param0, char param1) {
         if (Character.isISOControl(param1)) {
           return false;
         }

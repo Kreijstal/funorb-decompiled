@@ -81,8 +81,8 @@ final class HalloweenBackground extends BackgroundScene {
         StrongCacheEntry.halloweenCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.backgroundSpriteArchive, "halloween_caps", 2);
         GameConnectionShell.halloweenSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.backgroundSpriteArchive, "halloween_segs", 2);
         CanvasInputHelpers.halloweenCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_centre", (byte) -118, AchievementIcon.backgroundSpriteArchive);
-        StrongCacheEntry.halloweenCapsSprites[1] = Under13RegistrationNoticePanel.a(StrongCacheEntry.halloweenCapsSprites[0], obfuscationGuard);
-        GameConnectionShell.halloweenSegsSprites[1] = Under13RegistrationNoticePanel.a(GameConnectionShell.halloweenSegsSprites[0], obfuscationGuard);
+        StrongCacheEntry.halloweenCapsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(StrongCacheEntry.halloweenCapsSprites[0], obfuscationGuard);
+        GameConnectionShell.halloweenSegsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(GameConnectionShell.halloweenSegsSprites[0], obfuscationGuard);
         CanvasInputHelpers.halloweenCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, CanvasInputHelpers.halloweenCentreSprites[0]);
         return true;
     }

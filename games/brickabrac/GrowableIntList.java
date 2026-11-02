@@ -169,7 +169,7 @@ final class GrowableIntList {
                 if (null != IncomingPacketHelpers.pendingLobbyGame) {
                   CacheIoRequest.a(true, true);
                 } else {
-                  NanoGameClock.b(31);
+                  NanoGameClock.layoutMainScreenWidgets(31);
                 }
               }
             }
@@ -236,7 +236,7 @@ final class GrowableIntList {
                 if (null != IncomingPacketHelpers.pendingLobbyGame) {
                   CacheIoRequest.a(true, true);
                 } else {
-                  NanoGameClock.b(31);
+                  NanoGameClock.layoutMainScreenWidgets(31);
                 }
               }
             }

@@ -63,7 +63,7 @@ final class PacketReceiveHelpers {
     }
 
     final static void a(int param0) {
-        ScrollPane.h(-29448);
+        ScrollPane.pumpAudio(-29448);
         if (param0 >= -126) {
           field_a = (BirthDateEntryPanel) null;
         }

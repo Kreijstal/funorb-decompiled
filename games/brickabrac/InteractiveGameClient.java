@@ -76,7 +76,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = ByteArrayPoolHelpers.getActiveCanvas((byte) 0);
         if (TextFieldRenderer.c((byte) -84)) {
-          TableNameEntry.a((byte) 68, var2, LegacyUtf8Decoder.hasFrameFocusOrFullscreen((byte) -81));
+          TableNameEntry.renderStartupScreen((byte) 68, var2, LegacyUtf8Decoder.hasFrameFocusOrFullscreen((byte) -81));
           return;
         }
         if (!CalendarRankingHelpers.field_f) {
@@ -103,7 +103,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         } while (var4 == 0);
         if (IntArrayRequest.field_i) {
           ModalOverlayHelpers.a((byte) -123);
-          DiagnosticTextLine.a(var2, 0, 14209, 0);
+          DiagnosticTextLine.drawFramebufferToCanvas(var2, 0, 14209, 0);
           if (var4 == 0) {
             return;
           }
@@ -178,8 +178,8 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         boolean decompiledFrameCompleted0 = true;
         boolean decompiledFrameRemainder0 = true;
         var2 = 0;
-        if (!ConditionalTextValue.a(2)) {
-          if (HotspotTextWidget.a(9)) {
+        if (!ConditionalTextValue.hasVisibleLayer(2)) {
+          if (HotspotTextWidget.isFullscreenDialogOpen(9)) {
             if (!LoginMethodPreference.b(126)) {
               var3 = InstructionsScreen.pollFullscreenDialogAction((byte) 124);
               switch (var3) {
@@ -194,7 +194,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                     break;
                   }
                 case 2:
-                  LevelPack.b(102);
+                  LevelPack.closeFullscreenCanvas(102);
                   break;
               }
               this.updateGameLayer(false, (byte) 69);
@@ -212,7 +212,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
               if (1 == var3 ||
                 var3 == 2) {
                 if (null != GameplayRenderHelpers.fullscreenCanvas) {
-                  LevelPack.b(118);
+                  LevelPack.closeFullscreenCanvas(118);
                 }
                 if (var3 == 2) {
                   AppletFlowHelpers.showQuitPage(param0 ^ 2058, EmailConfirmationValidator.e((byte) -85));
@@ -406,7 +406,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         var4 = BrickABrac.field_J ? 1 : 0;
         if (null != GameplayRenderHelpers.fullscreenCanvas &&
           GameplayRenderHelpers.fullscreenCanvas.focusLossPending) {
-          LevelPack.b(84);
+          LevelPack.closeFullscreenCanvas(84);
           MotionWaypoint.c(4);
         }
         stackIn_7_1 = (GameplayRenderHelpers.fullscreenCanvas != null);

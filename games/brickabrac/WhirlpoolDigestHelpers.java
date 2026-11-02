@@ -9,7 +9,7 @@ final class WhirlpoolDigestHelpers {
         field_a = null;
         if (obfuscationGuard != 0) {
           CharSequence var2 = (CharSequence) null;
-          WhirlpoolDigestHelpers.a((byte) -52, true, (CharSequence) null);
+          WhirlpoolDigestHelpers.isValidPlayerName((byte) -52, true, (CharSequence) null);
           field_b = null;
           return;
         }
@@ -66,7 +66,7 @@ final class WhirlpoolDigestHelpers {
         }
     }
 
-    final static boolean a(byte param0, boolean param1, CharSequence param2) {
+    final static boolean isValidPlayerName(byte param0, boolean param1, CharSequence param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -80,7 +80,7 @@ final class WhirlpoolDigestHelpers {
             return false;
           }
           for (var3_int = 0; param2.length() > var3_int; var3_int++) {
-            if (!UiComponent.a(true, param2.charAt(var3_int))) {
+            if (!UiComponent.isValidNameCharacter(true, param2.charAt(var3_int))) {
               return false;
             }
           }

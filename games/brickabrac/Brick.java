@@ -388,7 +388,7 @@ final class Brick extends RectangleBody {
         }
     }
 
-    final static void e(int param0) {
+    final static void layoutLobbySlidePanels(int param0) {
         int var1 = (-640 + LevelResultWireHelpers.field_a) / 2;
         int var2 = ScrollPaneWithFooter.field_Yb * ScrollPaneWithFooter.field_Yb;
         int var3 = var2 - TextLineLayout.field_b * TextLineLayout.field_b;

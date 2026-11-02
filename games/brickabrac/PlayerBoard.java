@@ -829,7 +829,7 @@ final class PlayerBoard extends IntrusiveNode {
           }
           ball.y256 = -(2 * ball.radius256) + destinationPortal.y256;
           angleSample = this.nextRandomBoundedInt(65536, (byte) 62);
-          outgoingAngle = MouseInput.a(angleSample, -1, 33554432) + MouseInput.a(-angleSample + 65536, -1, 67108864);
+          outgoingAngle = MouseInput.multiplyQ16(angleSample, -1, 33554432) + MouseInput.multiplyQ16(-angleSample + 65536, -1, 67108864);
           outgoingAngle = outgoingAngle >> 16;
           if (ball.velocityX256 < 0) {
             outgoingAngle = -outgoingAngle;

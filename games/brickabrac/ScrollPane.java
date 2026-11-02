@@ -194,7 +194,7 @@ final class ScrollPane extends UiComponent {
         this.scrollbar.setScrollbarBounds(-scrollbarWidth + this.width, this.viewport.height, this.height, (byte) -110, scrollbarWidth, -this.content.localY, this.content.height, 0);
     }
 
-    final static void h(int param0) {
+    final static void pumpAudio(int param0) {
         SoundPlayback var1 = null;
         int var2 = 0;
         String var3 = null;

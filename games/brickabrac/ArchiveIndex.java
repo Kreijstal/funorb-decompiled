@@ -239,7 +239,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static void a(int param0) {
+    final static void tickLobbyTransitions(int param0) {
         int var2 = BrickABrac.field_J ? 1 : 0;
         if (TextLineLayout.field_b > 0) {
           TextLineLayout.field_b = TextLineLayout.field_b - 1;
@@ -256,7 +256,7 @@ final class ArchiveIndex {
           return;
         }
         if (!(TextLineLayout.field_b <= 0)) {
-          Brick.e(param0 ^ 32040);
+          Brick.layoutLobbySlidePanels(param0 ^ 32040);
         }
         if (!(IntArrayRequest.field_j <= 0)) {
           ArchiveSourceManager.layoutLobbyTransition(IntArrayRequest.field_j, false);

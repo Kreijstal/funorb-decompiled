@@ -171,15 +171,15 @@ final class QuickChatCategoryRegistry {
               TableQuickChatHelpers.field_c[var7_int] = null;
             }
           }
-          LoginCredentialKind.field_h = AgeValidator.a("frame", "basic", param0, -122);
-          CanvasInputCleanup.field_d = AgeValidator.a("frame_track", "basic", param0, -128);
+          LoginCredentialKind.field_h = AgeValidator.loadTiledFrameSprites("frame", "basic", param0, -122);
+          CanvasInputCleanup.field_d = AgeValidator.loadTiledFrameSprites("frame_track", "basic", param0, -128);
           CanvasInputCleanup.field_d[4] = null;
           var7 = LoginCredentialKind.field_h;
           var7[4] = null;
           SpriteInputHelpers.loadRgbSpriteByName("basic", "frame_bracket", (byte) 106, param0);
-          AchievementBrowserScreen.field_A = AgeValidator.a("button_frame", "basic", param0, -91);
-          Ball.field_G = AgeValidator.a("button_raised", "basic", param0, 103);
-          IntArrayRequest.field_k = AgeValidator.a("button_depressed", "basic", param0, -104);
+          AchievementBrowserScreen.field_A = AgeValidator.loadTiledFrameSprites("button_frame", "basic", param0, -91);
+          Ball.field_G = AgeValidator.loadTiledFrameSprites("button_raised", "basic", param0, 103);
+          IntArrayRequest.field_k = AgeValidator.loadTiledFrameSprites("button_depressed", "basic", param0, -104);
           IntrusiveHashTable.achievementSourceIcons = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
           LevelCompleteScreen.field_F = SpriteInputHelpers.loadRgbSpriteByName("basic", "unachieved", (byte) 97, param1);
           DelayedPacket.field_p = SpriteInputHelpers.loadRgbSpriteByName("basic", "orbcoin", (byte) 122, param1);
@@ -230,7 +230,7 @@ final class QuickChatCategoryRegistry {
           GameOverlayHelpers.smallLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small", 2);
           ScorePopup.chocolateSmallLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);
           AccountMessageDialog.spaceSmallLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
-          MultiValueSliderWidget.field_K = AgeValidator.a("frame_bubble", "basic", param0, -105);
+          MultiValueSliderWidget.field_K = AgeValidator.loadTiledFrameSprites("frame_bubble", "basic", param0, -105);
           CanvasInputHelpers.field_a = SpriteInputHelpers.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
           BytePayloadSubmission.smallRosetteSprites = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
           IntHistoryBuffer.largeRosetteSprites = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
@@ -317,7 +317,7 @@ final class QuickChatCategoryRegistry {
           ClientException.gameOverMessageSprite = HotspotTextWidget.a(2, SpaceBackground.field_s.toUpperCase(), -1);
           IntegerBitLengthHelpers.countdownSprites = new RgbSprite[3];
           for (var10_intLifetime11 = 0; var10_intLifetime11 < IntegerBitLengthHelpers.countdownSprites.length; var10_intLifetime11++) {
-            IntegerBitLengthHelpers.countdownSprites[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
+            IntegerBitLengthHelpers.countdownSprites[var10_intLifetime11] = OptionsScreen.renderScaledTextSprite(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
           }
           BoundedFile.field_a = new RgbSprite[FullscreenFailureKind.trackHeads.length];
           for (var10_intLifetime12 = 0; BoundedFile.field_a.length > var10_intLifetime12; var10_intLifetime12++) {

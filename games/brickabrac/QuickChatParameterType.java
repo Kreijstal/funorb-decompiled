@@ -91,7 +91,7 @@ final class QuickChatParameterType {
           if (param1 >= -81) {
             QuickChatParameterType.a((byte) -77);
           }
-          stackIn_3_0 = AchievementsScreen.a(0, false, param0);
+          stackIn_3_0 = AchievementsScreen.validateNameText(0, false, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

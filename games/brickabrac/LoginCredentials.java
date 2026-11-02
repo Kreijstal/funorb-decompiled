@@ -39,7 +39,7 @@ abstract class LoginCredentials {
           canvas.setBounds(0, 0, width, height);
           canvas.addFocusListener(canvas);
           if (!obfuscationGuard) {
-            LoginCredentials.a((byte) 7, -111);
+            LoginCredentials.resendPendingTableTraffic((byte) 7, -111);
           }
           canvas.requestFocus();
           canvasResult = canvas;
@@ -73,7 +73,7 @@ abstract class LoginCredentials {
         field_j = null;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendPendingTableTraffic(byte param0, int param1) {
         int var3 = 0;
         TableRowSubmission var4 = null;
         TableDataRequest var5 = null;

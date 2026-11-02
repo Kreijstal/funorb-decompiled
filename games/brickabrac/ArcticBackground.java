@@ -173,8 +173,8 @@ final class ArcticBackground extends BackgroundScene {
           ObjectHistoryBuffer.arcticCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_caps", 2);
           BoardPresentationHelpers.arcticSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_segs", 2);
           LobbyOverlayHelpers.arcticCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_centre", (byte) -115, AchievementIcon.backgroundSpriteArchive);
-          ObjectHistoryBuffer.arcticCapsSprites[1] = Under13RegistrationNoticePanel.a(ObjectHistoryBuffer.arcticCapsSprites[0], obfuscationGuard);
-          BoardPresentationHelpers.arcticSegsSprites[1] = Under13RegistrationNoticePanel.a(BoardPresentationHelpers.arcticSegsSprites[0], false);
+          ObjectHistoryBuffer.arcticCapsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(ObjectHistoryBuffer.arcticCapsSprites[0], obfuscationGuard);
+          BoardPresentationHelpers.arcticSegsSprites[1] = Under13RegistrationNoticePanel.createHalfSizeSprites(BoardPresentationHelpers.arcticSegsSprites[0], false);
           LobbyOverlayHelpers.arcticCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, LobbyOverlayHelpers.arcticCentreSprites[0]);
           return true;
         }

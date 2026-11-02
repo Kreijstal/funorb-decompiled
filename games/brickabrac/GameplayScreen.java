@@ -255,21 +255,21 @@ final class GameplayScreen extends GameScreen {
         var4Lifetime1 = stackIn_19_0 | stackIn_20_1;
         if (1 == this.match.playerCount &&
           this.match.playerBoards[0].boardState == 5) {
-          IterableIntrusiveHashTable.a(25459, true, GrowableIntList.completionMusicTrack, 1, 1, true);
+          IterableIntrusiveHashTable.scheduleMusicTrack(25459, true, GrowableIntList.completionMusicTrack, 1, 1, true);
         } else {
           if (!this.match.resultsReady) {
             if (var4Lifetime1 != 0) {
-              IterableIntrusiveHashTable.a(25459, true, MessageScreen.panicMusicTrack, 1, 1, true);
+              IterableIntrusiveHashTable.scheduleMusicTrack(25459, true, MessageScreen.panicMusicTrack, 1, 1, true);
             } else {
               if (TabbedPane.currentBackground != null &&
                 TabbedPane.currentBackground.musicReady) {
                 BytePayloadRequest.a(1, true, TabbedPane.currentBackground.getMusicChannelGain(-109), false, 1, TabbedPane.currentBackground.musicData, true);
               } else {
-                IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
+                IterableIntrusiveHashTable.scheduleMusicTrack(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
               }
             }
           } else {
-            IterableIntrusiveHashTable.a(25459, true, RichTextLayout.podiumMusicTrack, 1, 1, true);
+            IterableIntrusiveHashTable.scheduleMusicTrack(25459, true, RichTextLayout.podiumMusicTrack, 1, 1, true);
           }
         }
         if (this.match.resultsReady &&
@@ -296,7 +296,7 @@ final class GameplayScreen extends GameScreen {
                   ScreenNavigationHelpers.requestScreen(false, 101, 19);
                 }
               } else {
-                ArchiveNetworkRequest.f((byte) 122);
+                ArchiveNetworkRequest.leaveCurrentGame((byte) 122);
               }
             }
           }
@@ -613,7 +613,7 @@ final class GameplayScreen extends GameScreen {
           if (this.match.playerCount == 1 &&
             this.match.playerBoards[0].boardState == 8) {
             ScreenNavigationHelpers.requestScreen(usePointer, 107, 18);
-            IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
+            IterableIntrusiveHashTable.scheduleMusicTrack(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
           } else {
             this.showPostMatchScreen(usePointer, (byte) 69);
           }
@@ -627,11 +627,11 @@ final class GameplayScreen extends GameScreen {
     final void showPostMatchScreen(boolean usePointer, byte obfuscationGuard) {
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        TextHuffmanHelpers.a((byte) 80, WeightedLruCache.primaryActivityLoop);
-        TextHuffmanHelpers.a((byte) 80, LoginMethodPreference.alternateActivityLoop);
+        TextHuffmanHelpers.removeSoundStream((byte) 80, WeightedLruCache.primaryActivityLoop);
+        TextHuffmanHelpers.removeSoundStream((byte) 80, LoginMethodPreference.alternateActivityLoop);
         if (!(this.match.playerCount <= 1) ||
           9 != this.match.playerBoards[0].boardState) {
-          IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
+          IterableIntrusiveHashTable.scheduleMusicTrack(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
         }
         if (this.networkedMatch) {
           return;
@@ -674,7 +674,7 @@ final class GameplayScreen extends GameScreen {
         try {
           playerId = packet.readUnsignedByte(255);
           if (this.match.playerCount <= playerId) {
-            AlignedIconLabel.a("K1: (" + playerId + "/" + packet.position + ") " + WhirlpoolHasher.c((byte) -110), (Throwable) null, obfuscationGuard + 125);
+            AlignedIconLabel.a("K1: (" + playerId + "/" + packet.position + ") " + WhirlpoolHasher.describePacketHistory((byte) -110), (Throwable) null, obfuscationGuard + 125);
             GameTransportHelpers.closeGameTransport((byte) 89);
             return;
           }
@@ -1092,7 +1092,7 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    final static void b(byte param0, boolean param1) {
+    final static void startLocalTwoPlayerGame(byte param0, boolean param1) {
         int var2 = 9 % ((param0 + 73) / 49);
         String[] var3 = new String[]{LoadingProgressDialog.field_cb == null ? ReflectionCheckHelpers.playerOneLabel : LoadingProgressDialog.field_cb, DelayedPacket.field_q};
         LevelSequence var4 = new LevelSequence(ValidationStatus.field_b, IndexedSpriteHelpers.createIndexOrder(false, ValidationStatus.field_b.levelCount, ButtonWidgetRenderer.field_w), 3);

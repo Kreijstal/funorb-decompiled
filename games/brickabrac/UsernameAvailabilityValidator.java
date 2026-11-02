@@ -16,7 +16,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         CappedUrlRequest.tooltipAnchorY = -1;
     }
 
-    final static void e(int param0) {
+    final static void renderLogoGlow(int param0) {
         RgbSprite var1 = null;
         RgbSprite var3 = null;
         int var4 = 0;
@@ -96,7 +96,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void resetQuickChatInput(boolean param0) {
         if (!param0) {
           UsernameAvailabilityValidator.clearTooltipState((byte) -72);
           OptionsScreen.field_A.setLength(0);

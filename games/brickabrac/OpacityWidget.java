@@ -138,8 +138,8 @@ final class OpacityWidget extends SingleChildWidget {
             EmailLoginCredentials.field_l = false;
           }
           if (HalloweenBackground.field_y) {
-            WhirlpoolHasher.a(7);
-            ToggleButtonWidget.a((byte) 119);
+            WhirlpoolHasher.closeTransientPopups(7);
+            ToggleButtonWidget.clearLobbyState((byte) 119);
             EmailConfirmationValidator.e(-94);
             HalloweenBackground.field_y = false;
           }

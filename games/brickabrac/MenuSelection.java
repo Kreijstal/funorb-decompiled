@@ -279,7 +279,7 @@ final class MenuSelection {
               submission.unlink((byte) 111);
               return;
             }
-            AlignedIconLabel.a("A1: " + WhirlpoolHasher.c((byte) -101), (Throwable) null, 123);
+            AlignedIconLabel.a("A1: " + WhirlpoolHasher.describePacketHistory((byte) -101), (Throwable) null, 123);
             GameTransportHelpers.closeGameTransport((byte) 60);
           } else {
             pendingRequest = (BytePayloadRequest) (EmailConfirmationValidator.pendingBytePayloadRequests.first(-110));
