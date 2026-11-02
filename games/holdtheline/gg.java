@@ -40,7 +40,7 @@ final class gg extends rm {
         var6 = param1 + this.field_o + (this.field_u >> 1);
         var8 = this.field_I.b(-7447);
         if (hh.field_d == var8) {
-          var16 = ef.field_i[0];
+          var16 = FullscreenFocusCanvas.field_i[0];
           var9 = var16.field_o << 1;
           var10 = var16.field_v << 1;
           if (le.field_m == null) {
@@ -66,16 +66,16 @@ final class gg extends rm {
         } else {
           if (var8 != um.field_a) {
             if (g.field_k == var8) {
-              var13 = ef.field_i[2];
+              var13 = FullscreenFocusCanvas.field_i[2];
               var13.b(-(var13.field_s >> 1) + var5, -(var13.field_y >> 1) + var6, 256);
             } else {
               if (tg.field_d == var8) {
-                var14 = ef.field_i[1];
+                var14 = FullscreenFocusCanvas.field_i[1];
                 var14.b(-(var14.field_s >> 1) + var5, var6 - (var14.field_y >> 1), 256);
               }
             }
           } else {
-            var15 = ef.field_i[0];
+            var15 = FullscreenFocusCanvas.field_i[0];
             var9 = var15.field_o << 1;
             var10 = var15.field_v << 1;
             if (le.field_m == null) {

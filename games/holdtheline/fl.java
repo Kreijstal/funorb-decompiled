@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends hl {
+final class fl extends IntrusiveNode {
     static ah field_i;
     int field_k;
     static boolean field_j;

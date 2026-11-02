@@ -120,7 +120,7 @@ final class am implements dh {
     public am() {
         this.field_g = 1;
         this.field_e = 1;
-        this.field_a = hl.field_g;
+        this.field_a = IntrusiveNode.field_g;
     }
 
     final static void a(int param0, byte param1, fb param2) {

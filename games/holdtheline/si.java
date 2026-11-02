@@ -19,7 +19,7 @@ final class si extends dc {
           return jb.field_X;
         }
         jb.field_X = new ga();
-        jb.field_X.a(hl.field_g, (byte) 39);
+        jb.field_X.a(IntrusiveNode.field_g, (byte) 39);
         jb.field_X.field_c = 7697781;
         jb.field_X.field_n = 0;
         jb.field_X.field_q = 2763306;

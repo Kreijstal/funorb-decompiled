@@ -47,7 +47,7 @@ final class a extends v implements qa, pi, pn {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new dj(20, param5, param2 + 120, 25, param3, param1, 120, 3, hl.field_g, 16777215, param4);
+          var10 = new dj(20, param5, param2 + 120, 25, param3, param1, 120, 3, IntrusiveNode.field_g, 16777215, param4);
           this.a(true, var10);
           var9 = new bd(((wk) ((Object) param3)).a(1), param0, 126, var10.field_u + param5, 50 + param2, param6);
           var9.field_t = (tb) (this);
@@ -233,11 +233,11 @@ final class a extends v implements qa, pi, pn {
         var3 = var3 + this.a(170, this.field_T, 25, var3, lc.field_f);
         var3 = var3 + (this.a(170, 21411, this.field_P, od.field_o, fi.field_ib, var3) + 5);
         var3 = var3 + (this.a(170, 21411, this.field_G, ic.field_h, sh.field_a, var3) + 5);
-        var3 = var3 + this.a(170, (byte) -124, sf.field_o, var3, this.field_M);
+        var3 = var3 + this.a(170, (byte) -124, ImageProducerRasterBuffer.field_o, var3, this.field_M);
         dj var4 = new dj(46, var3, -90 + this.field_x, 25, this.field_J, true, -120 + this.field_x, 5, mo.field_w, 11579568, lm.field_c);
         this.a(true, var4);
         var3 = var3 + var4.field_u;
-        dk var5 = new dk(hl.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, hl.field_g.field_G, -1, 2147483647, true);
+        dk var5 = new dk(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, IntrusiveNode.field_g.field_G, -1, 2147483647, true);
         this.field_O = new cj(var2, var5);
         this.field_O.field_z = "";
         this.field_O.a(0, m.field_d, true);
@@ -288,7 +288,7 @@ final class a extends v implements qa, pi, pn {
           var2 = Integer.parseInt(this.field_M.field_q);
         } catch (NumberFormatException numberFormatException) {
         }
-        return hl.a(this.field_T.field_q, -23000, this.field_J.field_B, this.field_G.field_q, this, this.field_L.field_q, var2);
+        return IntrusiveNode.a(this.field_T.field_q, -23000, this.field_J.field_B, this.field_G.field_q, this, this.field_L.field_q, var2);
     }
 
     public static void i(byte param0) {
@@ -432,7 +432,7 @@ final class a extends v implements qa, pi, pn {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new dj(20, param3, param0 + 120, param2, param1, false, 120, 3, hl.field_g, 16777215, param4);
+          var6 = new dj(20, param3, param0 + 120, param2, param1, false, 120, 3, IntrusiveNode.field_g, 16777215, param4);
           this.a(true, var6);
           stackIn_1_0 = var6.field_u;
           return stackIn_1_0;
@@ -470,7 +470,7 @@ final class a extends v implements qa, pi, pn {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new dj(20, param3, 120 + param0, 25, param4, false, 120, 3, hl.field_g, 16777215, param2);
+          var9 = new dj(20, param3, 120 + param0, 25, param4, false, 120, 3, IntrusiveNode.field_g, 16777215, param2);
           if (param1 != -124) {
             var8 = (String) null;
             discarded$1 = this.a(71, (n) null, -15, -54, (String) null);

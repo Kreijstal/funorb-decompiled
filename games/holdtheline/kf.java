@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends tj {
+final class kf extends PcmStream {
     int[] field_t;
     private int[] field_s;
     private int[] field_L;
@@ -22,7 +22,7 @@ final class kf extends tj {
     private int[] field_C;
     private int[] field_P;
     private int[] field_J;
-    static ef field_U;
+    static FullscreenFocusCanvas field_U;
     private int[] field_I;
     private int[] field_B;
     private ck[][] field_R;
@@ -233,7 +233,7 @@ final class kf extends tj {
         }
     }
 
-    final synchronized tj b() {
+    final synchronized PcmStream b() {
         return null;
     }
 
@@ -705,8 +705,8 @@ final class kf extends tj {
         }
     }
 
-    final synchronized tj a() {
-        return (tj) ((Object) this.field_x);
+    final synchronized PcmStream a() {
+        return (PcmStream) ((Object) this.field_x);
     }
 
     private final void a(byte param0, int param1) {

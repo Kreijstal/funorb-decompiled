@@ -43,12 +43,12 @@ abstract class p {
           }
           ra.field_X = si.a(fb.field_i, 33, "world_images", "");
           ok.a(32381);
-          mi.field_c = new hj[4];
+          DelegatingCanvas.field_c = new hj[4];
           for (var3 = 0; var3 < 4; var3++) {
-            mi.field_c[var3] = ra.field_X[var3].e();
-            qm.a(mi.field_c[var3], 64, -1);
-            mi.field_c[var3].f();
-            rf.field_ab.a(-rf.field_ab.field_s + mi.field_c[var3].field_s >> 1, -rf.field_ab.field_y + mi.field_c[var3].field_y >> 1);
+            DelegatingCanvas.field_c[var3] = ra.field_X[var3].e();
+            qm.a(DelegatingCanvas.field_c[var3], 64, -1);
+            DelegatingCanvas.field_c[var3].f();
+            rf.field_ab.a(-rf.field_ab.field_s + DelegatingCanvas.field_c[var3].field_s >> 1, -rf.field_ab.field_y + DelegatingCanvas.field_c[var3].field_y >> 1);
           }
           ih.field_t = new hj[4];
           var6 = 0;
@@ -69,7 +69,7 @@ abstract class p {
           return (hj) null;
         }
         if (param0 == 1) {
-          return mi.field_c[param2];
+          return DelegatingCanvas.field_c[param2];
         }
         if (param0 != 2) {
           return ra.field_X[param2];

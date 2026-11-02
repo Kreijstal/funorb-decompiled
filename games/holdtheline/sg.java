@@ -492,7 +492,7 @@ final class sg {
           }
           var8 = 0;
           var9_int = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var9_int < this.field_z) {
               var10_ref_ja = this.field_C[var9_int];
@@ -550,7 +550,7 @@ final class sg {
                 var13Lifetime1 = 6 * (param4 * param4);
                 stackIn_44_0 = ~var13Lifetime1;
                 if (var22 != 0) {
-                  break L2;
+                  break scanLoop1;
                 }
                 if (stackIn_44_0 < ~var12Lifetime1) {
                   var14Lifetime1 = (var13Lifetime1 * 2 - var12Lifetime1) * 4096;
@@ -1667,7 +1667,7 @@ final class sg {
           this.a((byte) -109);
           this.a(true);
           var4 = 0;
-          L1: while (var4 < this.field_h) {
+          scanLoop1: while (var4 < this.field_h) {
             var5_ref_ja = this.field_C[var4];
             var6 = 0;
             if (var19 == 0) {
@@ -1806,7 +1806,7 @@ final class sg {
                 pd.a(hk.field_a[20 + var5_ref_ja.field_R], param0 - 12, var5_ref_ja.field_A.field_f - 15, -25 + var5_ref_ja.field_A.field_h, 200 - (var5_ref_ja.field_ob * 8 - 512), 16777215);
               }
               var4++;
-              continue L1;
+              continue scanLoop1;
             }
             break;
           }
@@ -2437,7 +2437,7 @@ final class sg {
           this.field_ab = -150;
           var8 = null;
           if (this.field_J == 0 &&
-            mi.field_d == 7) {
+            DelegatingCanvas.field_d == 7) {
             var8 = new int[4];
             var9_int = 0;
             while (var9_int < 4) {
@@ -2590,7 +2590,7 @@ final class sg {
             }
           }
           var9_int = 0;
-          L26: while (true) {
+          scanLoop1: while (true) {
             if (var9_int < this.field_z) {
               this.field_C[var9_int].field_mc = var9_int;
               stackIn_201_0 = this.field_C[var9_int];
@@ -2698,7 +2698,7 @@ final class sg {
                 }
                 this.field_W = new ah();
                 if (this.field_J >= 5) {
-                  break L26;
+                  break scanLoop1;
                 }
                 if (param6) {
                   stackIn_201_0 = null;
@@ -2800,7 +2800,7 @@ final class sg {
           var4 = param1.field_r;
           var4 = (float)((double)var4 * 10.185916357881302);
           var5 = Math.round(var4);
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var5 < 0) {
               var5 += 64;
               if (var9 == 0) {
@@ -2810,7 +2810,7 @@ final class sg {
               while (var5 >= 64) {
                 var5 -= 64;
                 if (var9 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var4 = 6.2831854820251465f * (float)var5 / (float)param0;
@@ -2881,7 +2881,7 @@ final class sg {
             this.field_m = (ue[]) null;
           }
           var2_int = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             stackIn_6_0 = ~var2_int;
             stackIn_6_1 = ~this.field_h;
             if (stackIn_6_0 > stackIn_6_1) {
@@ -3122,7 +3122,7 @@ final class sg {
                   var11 = (int)(var6.field_N * 80.0f / (float)var6.field_C.field_i);
                   var12 = (int)(var6.field_lc * 80.0f / (float)var6.field_C.field_i);
                   var13 = 0;
-                  L55: while (true) {
+                  scanLoop2: while (true) {
                     if (var13 >= 2) {
                       while (true) {
                         var13 = 0;
@@ -3152,7 +3152,7 @@ final class sg {
                           }
                           var13++;
                         }
-                        break L55;
+                        break scanLoop2;
                       }
                     } else {
                       tc.b((var13 + 1) * var5 / 2 + var3 - 2, -1 + (var4 - var13), 84, 0);
@@ -3164,7 +3164,7 @@ final class sg {
                       while (true) {
                         tc.b(stackIn_184_0 + (stackIn_184_1 - stackIn_184_2 * (stackIn_184_3 - stackIn_184_4) / 2), var4 + (20 + var13), 84, 0);
                         var13++;
-                        continue L55;
+                        continue scanLoop2;
                       }
                     }
 
@@ -3258,7 +3258,7 @@ final class sg {
                 }
               }
               var2_int++;
-              continue L1;
+              continue scanLoop1;
             }
             break;
           }
@@ -3536,11 +3536,11 @@ final class sg {
               var8 = var8 + var9;
               var19 = param2.field_z;
               var20 = -var9;
-              L8: while (true) {
+              scanLoop1: while (true) {
                 if (var20 < 0) {
                   stackIn_59_0 = -var7;
                   if (var22 != 0) {
-                    break L8;
+                    break scanLoop1;
                   }
                   var21 = stackIn_59_0;
                   while (var21 < 0) {
@@ -3561,7 +3561,7 @@ final class sg {
                   stackIn_57_1Lifetime1 = var13;
                   var12 = stackIn_57_0Lifetime1 + stackIn_57_1Lifetime1;
                   var20++;
-                  continue L8;
+                  continue scanLoop1;
                 }
                 stackIn_59_0 = var18;
                 break;
@@ -3600,7 +3600,7 @@ final class sg {
         RuntimeException var3 = null;
         try {
           if (param1.field_kb == null) {
-            param1.field_kb = sf.a(param1.field_C.field_d, (byte) 27, param1.field_Eb);
+            param1.field_kb = ImageProducerRasterBuffer.a(param1.field_C.field_d, (byte) 27, param1.field_Eb);
           }
           vb.a(-67, this.field_I);
           if (param0 != 32249) {
@@ -4051,7 +4051,7 @@ final class sg {
             return;
           }
           var2_int = 0;
-          L50: while (true) {
+          scanLoop1: while (true) {
             if (this.field_z > var2_int) {
               stackOut_178_0 = this.field_C[var2_int];
               stackIn_240_0 = stackOut_178_0;
@@ -4088,7 +4088,7 @@ final class sg {
                   stackIn_240_0 = stackOut_200_0;
                   stackIn_201_0 = stackOut_200_0;
                   if (var13 != 0) {
-                    break L50;
+                    break scanLoop1;
                   }
                   if (stackIn_201_0 != null ||
                     var13 != 0) {
@@ -4122,7 +4122,7 @@ final class sg {
                   stackIn_240_0 = stackOut_230_0;
                   stackIn_231_0 = stackOut_230_0;
                   if (var13 != 0) {
-                    break L50;
+                    break scanLoop1;
                   }
                   var4_refLifetime1 = stackIn_231_0;
                   while (null != var4_refLifetime1) {
@@ -4173,8 +4173,8 @@ final class sg {
             break;
           }
           var2_int = stackIn_266_0;
-          L81: while (true) {
-            L82: {
+          scanLoop2: while (true) {
+            regionExit3: {
               boolean decompiledFrameCompleted2 = true;
               boolean decompiledFrameCompleted1 = true;
               if (var2_int < 5) {
@@ -4189,7 +4189,7 @@ final class sg {
                 if (this.field_J != 0) {
                   if (this.field_J != 2) {
                     if (this.field_J != 3) {
-                      break L82;
+                      break regionExit3;
                     }
                     if (this.field_B != -1) {
                       var5_int = 0;
@@ -4201,7 +4201,7 @@ final class sg {
                           if (stackIn_303_0 > stackIn_303_1) {
                             stackIn_535_0 = this.field_P;
                             stackIn_535_1 = this.field_C[var2_int].field_bc;
-                            break L81;
+                            break scanLoop2;
                           }
                           decompiledFrameCompleted2 = false;
                           break;
@@ -4232,7 +4232,7 @@ final class sg {
                         stackIn_535_0 = this.field_P;
                         stackIn_535_1 = this.field_C[var2_int].field_bc;
                         if (var13 != 0) {
-                          break L81;
+                          break scanLoop2;
                         }
                         if (stackIn_535_0 < stackIn_535_1) {
                           this.field_P = this.field_C[var2_int].field_bc;
@@ -4248,7 +4248,7 @@ final class sg {
                     (decompiledFrameCompleted1)) {
                     var5_intLifetime2 = 0;
                     var2_int = 0;
-                    L95: while (true) {
+                    scanLoop4: while (true) {
                       boolean decompiledFrameRemainder2 = true;
                       if (var2_int < this.field_h) {
                         stackIn_345_0 = this.field_C[var2_int].field_Sb;
@@ -4257,7 +4257,7 @@ final class sg {
                           if (stackIn_345_0 > stackIn_345_1) {
                             stackIn_356_0 = ~this.field_P;
                             stackIn_356_1 = ~this.field_C[var2_int].field_Sb;
-                            break L95;
+                            break scanLoop4;
                           }
                           decompiledFrameRemainder2 = false;
                         }
@@ -4299,7 +4299,7 @@ final class sg {
                           stackIn_356_0 = ~this.field_P;
                           stackIn_356_1 = ~this.field_C[var2_int].field_Sb;
                           if (var13 != 0) {
-                            break L95;
+                            break scanLoop4;
                           }
                           if (stackIn_356_0 > stackIn_356_1) {
                             this.field_P = this.field_C[var2_int].field_Sb;
@@ -4321,7 +4321,7 @@ final class sg {
                             stackIn_535_0 = this.field_e;
                             stackIn_535_1 = var7_int;
                             if (var13 != 0) {
-                              break L81;
+                              break scanLoop2;
                             }
                             if (stackIn_535_0 < stackIn_535_1 &&
                               this.field_P >= var7_int) {
@@ -4346,7 +4346,7 @@ final class sg {
                       this.field_e = this.field_P;
                     }
                     if (var13 == 0) {
-                      break L82;
+                      break regionExit3;
                     }
                   }
                 }
@@ -4355,7 +4355,7 @@ final class sg {
                 (decompiledFrameCompleted1)) {
                 var5_intLifetime1 = 0;
                 var2_int = 0;
-                L113: while (true) {
+                scanLoop5: while (true) {
                   if (var2_int < this.field_h) {
                     stackIn_505_0 = ~this.field_C[var2_int].field_bc;
                     stackIn_505_1 = ~this.field_B;
@@ -4401,7 +4401,7 @@ final class sg {
                         } else {
                           qh.a(0, 2);
                         }
-                        if ((7 == mi.field_d) &&
+                        if ((7 == DelegatingCanvas.field_d) &&
                           (!(2 <= this.field_C[0].field_R)) &&
                           (~(pc.field_l[cf.field_w] - 1) == ~vg.field_P)) {
                           var6 = hn.field_y + this.field_ob;
@@ -4430,7 +4430,7 @@ final class sg {
                               stackIn_505_0 = d.field_c[var2_int];
                               stackIn_505_1 = -1;
                               if (var13 != 0) {
-                                break L113;
+                                break scanLoop5;
                               }
                               if (stackIn_505_0 == stackIn_505_1) {
                                 var7_intLifetime1 = 0;
@@ -4475,12 +4475,12 @@ final class sg {
                       stackIn_505_0 = ~var2_int;
                       stackIn_505_1 = ~this.field_h;
                       if (stackIn_505_0 <= stackIn_505_1) {
-                        break L82;
+                        break regionExit3;
                       }
                       stackIn_535_0 = this.field_P;
                       stackIn_535_1 = this.field_C[var2_int].field_bc;
                       if (var13 != 0) {
-                        break L81;
+                        break scanLoop2;
                       }
                       if (stackIn_535_0 < stackIn_535_1) {
                         this.field_P = this.field_C[var2_int].field_bc;
@@ -4497,7 +4497,7 @@ final class sg {
                   stackIn_535_0 = this.field_P;
                   stackIn_535_1 = this.field_C[var2_int].field_bc;
                   if (var13 != 0) {
-                    break L81;
+                    break scanLoop2;
                   }
                   if (stackIn_535_0 < stackIn_535_1) {
                     this.field_P = this.field_C[var2_int].field_bc;
@@ -5109,7 +5109,7 @@ final class sg {
             this.a(33, 114, (ja) null);
           }
           var10 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             stackIn_6_0 = ~var10;
             stackIn_6_1 = ~param1;
             if (stackIn_6_0 > stackIn_6_1) {
@@ -5158,7 +5158,7 @@ final class sg {
                 var15++;
               }
               var10++;
-              continue L1;
+              continue scanLoop1;
             }
             break;
           }
@@ -6070,7 +6070,7 @@ final class sg {
           }
           this.field_sb = new wd[var20.field_e];
           var14 = 0;
-          L43: while (true) {
+          scanLoop1: while (true) {
             if (var20.field_e > var14) {
               this.field_sb[var14] = (wd) (var20.field_b[var14]);
               var14++;
@@ -6083,7 +6083,7 @@ final class sg {
                 while (var10 > var14) {
                   stackIn_163_0 = 0;
                   if (var50 != 0) {
-                    break L43;
+                    break scanLoop1;
                   }
                   var15 = stackIn_163_0;
                   while (var15 < this.field_sb.length) {
@@ -6104,7 +6104,7 @@ final class sg {
           var40 = stackIn_163_0;
           var41 = this.field_sb[0].field_k;
           var14 = 0;
-          L52: while (true) {
+          scanLoop2: while (true) {
             boolean decompiledFrameRemainder3 = true;
             boolean decompiledFrameCompleted2 = true;
             boolean decompiledFrameCompleted1 = true;
@@ -6120,7 +6120,7 @@ final class sg {
                   var16Lifetime1 = var4.f(0);
                   stackIn_223_0 = var44_int;
                   stackIn_223_1 = 5;
-                  break L52;
+                  break scanLoop2;
                 }
                 decompiledFrameRemainder3 = false;
               }
@@ -6151,7 +6151,7 @@ final class sg {
                 stackIn_223_0 = var44_intLifetime1;
                 stackIn_223_1 = 5;
                 if (var50 != 0) {
-                  break L52;
+                  break scanLoop2;
                 }
                 if (stackIn_223_0 >= stackIn_223_1 &&
                   var44_intLifetime1 <= 8) {
@@ -6285,11 +6285,11 @@ final class sg {
             }
             var15Lifetime1Lifetime1 = stackIn_247_0;
             var14 = this.field_h;
-            L87: while (true) {
+            scanLoop3: while (true) {
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameRemainder5 = true;
               boolean decompiledFrameCompleted0 = true;
-              L90: {
+              regionExit4: {
                 if (this.field_z > var14) {
                   stackIn_259_0 = 0;
                   stackIn_259_1 = this.field_C[var14].field_rc;
@@ -6298,7 +6298,7 @@ final class sg {
                       var43Lifetime1 = param1[this.field_C[var14].field_R];
                       stackIn_269_0 = var43Lifetime1;
                       stackIn_269_1 = var14;
-                      break L90;
+                      break regionExit4;
                     }
                     decompiledFrameRemainder5 = false;
                   }
@@ -6349,7 +6349,7 @@ final class sg {
                   var43Lifetime1 = pf.field_c[this.field_r];
                   stackIn_277_0 = var14 & 1;
                   if (var50 != 0) {
-                    break L87;
+                    break scanLoop3;
                   }
                   if (stackIn_277_0 == 0) {
                     var43Lifetime1 = var43Lifetime1 ^ 1;
@@ -6374,7 +6374,7 @@ final class sg {
                   var43Lifetime1Lifetime1 = pf.field_c[this.field_r];
                   stackIn_277_0 = var14 & 1;
                   if (var50 != 0) {
-                    break L87;
+                    break scanLoop3;
                   }
                   if (stackIn_277_0 == 0) {
                     var43Lifetime1Lifetime1 = var43Lifetime1Lifetime1 ^ 1;
@@ -6387,7 +6387,7 @@ final class sg {
               break;
             }
             var14 = stackIn_277_0;
-            L103: while (true) {
+            scanLoop5: while (true) {
               if (var14 < this.field_z) {
                 this.field_C[var14].field_Eb = 8421504;
                 this.field_C[var14].field_tc = 0;
@@ -6399,7 +6399,7 @@ final class sg {
                 if (3 == this.field_r) {
                   this.field_pb = false;
                   if (var50 == 0) {
-                    break L103;
+                    break scanLoop5;
                   }
                 }
                 this.field_pb = true;
@@ -6850,13 +6850,13 @@ final class sg {
         try {
           var2 = mm.field_a[this.field_mb];
           var3 = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var3 < var2.field_b) {
               var4 = var2.field_p[var3];
               var5 = 1;
               stackIn_172_0 = 0;
               if (var10 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var6 = stackIn_172_0;
               while (true) {
@@ -6989,7 +6989,7 @@ final class sg {
                   break;
                 }
                 var3++;
-                continue L0;
+                continue scanLoop1;
               }
             }
             stackIn_172_0 = param0;
@@ -7372,7 +7372,7 @@ final class sg {
           var8 = var7 * ((float)(1 + var6) - var4_float);
           var9 = var5;
           var10 = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             stackIn_3_0 = ~var10;
             stackIn_3_1 = ~param2;
             if (stackIn_3_0 > stackIn_3_1) {
@@ -7410,7 +7410,7 @@ final class sg {
               var12 = stackIn_21_0;
               this.field_cb.a((byte) -91, new wm(var11, 1 + var12, -1));
               var10++;
-              continue L0;
+              continue scanLoop1;
             }
             break;
           }
@@ -7528,7 +7528,7 @@ final class sg {
             if (param1 != 28978) {
               return;
             }
-            L19: {
+            regionExit1: {
               var5 = new ei();
               var6 = new ei();
               var7 = new ei();
@@ -7557,7 +7557,7 @@ final class sg {
                   while (true) {
                     stackIn_73_0 = $cfr$fcmpg(var13, var11);
                     if (var16 != 0) {
-                      break L19;
+                      break regionExit1;
                     }
                     if (stackIn_73_0 < 0) {
                       var11 = var11 - var13;

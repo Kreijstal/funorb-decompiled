@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ln extends hl {
+class ln extends IntrusiveNode {
     static jn field_k;
     long field_i;
     ln field_n;

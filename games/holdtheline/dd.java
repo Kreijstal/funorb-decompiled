@@ -206,7 +206,7 @@ final class dd extends wd {
           if (hc.field_b) {
             var6 = var6 | 1;
           }
-          if (mi.field_f) {
+          if (DelegatingCanvas.field_f) {
             var6 = var6 | 4;
           }
           if (param2) {

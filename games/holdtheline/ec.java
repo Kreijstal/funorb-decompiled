@@ -487,7 +487,7 @@ final class ec extends pc {
     }
 
     final static void b(int param0, byte param1) {
-        hl var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         fl var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -862,8 +862,8 @@ final class ec extends pc {
         var6 = (int)((double)we.field_n * (1.0 - Math.exp((double)(0.20000000298023224f * (float)var5))));
         var6 = (int)((float)var6 + this.field_x[param3]);
         if (param1 == 22) {
-          if (7 != mi.field_d) {
-            if (mi.field_d == 0) {
+          if (7 != DelegatingCanvas.field_d) {
+            if (DelegatingCanvas.field_d == 0) {
               stackIn_36_0 = new StringBuilder();
               if (!wb.field_c) {
                 stackIn_37_1 = tf.field_r;
@@ -872,10 +872,10 @@ final class ec extends pc {
               }
               var7 = ((StringBuilder) (Object) stackIn_36_0).append(stackIn_37_1).append(" ").append(bo.field_a).toString();
             } else {
-              if (mi.field_d == 1) {
+              if (DelegatingCanvas.field_d == 1) {
                 var7 = cj.field_M;
               } else {
-                if (mi.field_d != 2) {
+                if (DelegatingCanvas.field_d != 2) {
                   throw new RuntimeException();
                 }
                 stackIn_31_0 = new StringBuilder();
@@ -1087,61 +1087,61 @@ final class ec extends pc {
           }
           if (this.field_ab == 0) {
             if (var7 != 0) {
-              if (mi.field_d == 7) {
+              if (DelegatingCanvas.field_d == 7) {
                 wb.field_c = false;
-                mi.field_d = 0;
+                DelegatingCanvas.field_d = 0;
               } else {
-                if (mi.field_d == 0) {
+                if (DelegatingCanvas.field_d == 0) {
                   if (wb.field_c) {
-                    mi.field_d = 1;
+                    DelegatingCanvas.field_d = 1;
                   }
                   stackIn_85_0 = !(wb.field_c);
                   wb.field_c = stackIn_85_0;
                 } else {
-                  if (1 != mi.field_d) {
-                    if (2 == mi.field_d) {
+                  if (1 != DelegatingCanvas.field_d) {
+                    if (2 == DelegatingCanvas.field_d) {
                       if (wb.field_c) {
-                        mi.field_d = 7;
+                        DelegatingCanvas.field_d = 7;
                       }
                       stackIn_78_0 = !(wb.field_c);
                       wb.field_c = stackIn_78_0;
                     }
                   } else {
-                    mi.field_d = 2;
+                    DelegatingCanvas.field_d = 2;
                   }
                 }
               }
             } else {
               if (var8 != 0) {
-                if (7 != mi.field_d) {
-                  if (mi.field_d != 0) {
-                    if (mi.field_d != 1) {
-                      if (mi.field_d == 2) {
+                if (7 != DelegatingCanvas.field_d) {
+                  if (DelegatingCanvas.field_d != 0) {
+                    if (DelegatingCanvas.field_d != 1) {
+                      if (DelegatingCanvas.field_d == 2) {
                         if (!wb.field_c) {
-                          mi.field_d = 1;
+                          DelegatingCanvas.field_d = 1;
                         }
                         wb.field_c = false;
                       }
                     } else {
-                      mi.field_d = 0;
+                      DelegatingCanvas.field_d = 0;
                       wb.field_c = true;
                     }
                   } else {
                     if (!wb.field_c) {
-                      mi.field_d = 7;
+                      DelegatingCanvas.field_d = 7;
                     }
                     wb.field_c = false;
                   }
                 } else {
                   wb.field_c = true;
-                  mi.field_d = 2;
+                  DelegatingCanvas.field_d = 2;
                 }
               }
             }
             if (var7 != 0 ||
               var8 != 0) {
               h.b((byte) 125);
-              this.field_O[param0] = cc.field_C[mi.field_d];
+              this.field_O[param0] = cc.field_C[DelegatingCanvas.field_d];
               this.a(false, 6267);
               this.a(0, (byte) -124);
               this.field_H[0] = -1;
@@ -1218,9 +1218,9 @@ final class ec extends pc {
         if (param1 != 6267) {
           discarded$0 = this.d(20, 52, -61);
         }
-        this.field_t = this.field_t | (mi.field_d == 1 ? true : false);
-        this.field_t = this.field_t & (mi.field_d != 7 ? true : false);
-        this.field_O = new String[]{cc.field_C[mi.field_d], cd.field_c};
+        this.field_t = this.field_t | (DelegatingCanvas.field_d == 1 ? true : false);
+        this.field_t = this.field_t & (DelegatingCanvas.field_d != 7 ? true : false);
+        this.field_O = new String[]{cc.field_C[DelegatingCanvas.field_d], cd.field_c};
     }
 
     private final void a(int param0, boolean param1, byte param2, boolean param3) {
@@ -1268,7 +1268,7 @@ final class ec extends pc {
           return;
         }
         this.field_B[param0] = 90;
-        if (mi.field_d == 7) {
+        if (DelegatingCanvas.field_d == 7) {
           if (param0 == 0) {
             if (param3) {
               return;
@@ -1285,8 +1285,8 @@ final class ec extends pc {
             ma.a(stackIn_70_0, stackIn_71_1);
           }
         } else {
-          if (mi.field_d != 1 &&
-            mi.field_d != 0) {
+          if (DelegatingCanvas.field_d != 1 &&
+            DelegatingCanvas.field_d != 0) {
             if (param0 == 0) {
               vg.field_P = var6;
               cf.field_w = var6;
@@ -1426,9 +1426,9 @@ final class ec extends pc {
           this.field_X[0] = param3;
           this.field_G[0] = param4;
           if (pj.b((byte) 93)) {
-            this.field_O = new String[]{cc.field_C[mi.field_d], null, cd.field_c};
+            this.field_O = new String[]{cc.field_C[DelegatingCanvas.field_d], null, cd.field_c};
           } else {
-            this.field_O = new String[]{cc.field_C[mi.field_d], cd.field_c};
+            this.field_O = new String[]{cc.field_C[DelegatingCanvas.field_d], cd.field_c};
           }
           this.field_Q[0] = param5;
           this.field_T[0] = param6;

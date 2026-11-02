@@ -3,15 +3,15 @@
  */
 final class tm {
     private ah field_d;
-    private hl field_a;
+    private IntrusiveNode field_a;
     static String[] field_b;
     static long field_c;
 
-    final hl a(hl param0, byte param1) {
-        hl var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, byte param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
-        hl stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -25,11 +25,11 @@ final class tm {
           if (var3 == this.field_d.field_e) {
             this.field_a = null;
             stackIn_5_0 = null;
-            return (hl) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           this.field_a = var3.field_h;
           if (param1 >= -100) {
-            this.field_a = (hl) null;
+            this.field_a = (IntrusiveNode) null;
           }
           stackIn_9_0 = var3;
           return stackIn_9_0;
@@ -93,10 +93,10 @@ final class tm {
         }
     }
 
-    final hl a(int param0) {
-        hl var2 = this.field_d.field_e.field_a;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_d.field_e.field_a;
         if (param0 != 8115) {
-          return (hl) null;
+          return (IntrusiveNode) null;
         }
         if (var2 != this.field_d.field_e) {
           this.field_a = var2.field_a;
@@ -113,11 +113,11 @@ final class tm {
         return !fj.field_o.a(250) ? true : false;
     }
 
-    final hl a(int param0, hl param1) {
-        hl var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
-        hl stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -138,7 +138,7 @@ final class tm {
           }
           this.field_a = null;
           stackIn_7_0 = null;
-          return (hl) (stackIn_7_0);
+          return (IntrusiveNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -158,8 +158,8 @@ final class tm {
         field_b = null;
     }
 
-    final hl a(boolean param0) {
-        hl var2 = this.field_a;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = this.field_a;
         if (var2 == this.field_d.field_e) {
           this.field_a = null;
           return null;
@@ -168,15 +168,15 @@ final class tm {
           this.field_a = var2.field_a;
           return var2;
         }
-        return (hl) null;
+        return (IntrusiveNode) null;
     }
 
-    final hl a(byte param0) {
-        hl var2 = null;
-        hl var2Lifetime1;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != -104) {
-          hl var3 = (hl) null;
-          this.a(-43, (hl) null);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a(-43, (IntrusiveNode) null);
           var2 = this.field_a;
           if (this.field_d.field_e != var2) {
             this.field_a = var2.field_h;
@@ -202,9 +202,9 @@ final class tm {
         }
     }
 
-    final hl c(byte param0) {
+    final IntrusiveNode c(byte param0) {
         int var3 = -72 % ((param0 + 65) / 49);
-        hl var2 = this.field_d.field_e.field_h;
+        IntrusiveNode var2 = this.field_d.field_e.field_h;
         if (var2 != this.field_d.field_e) {
           this.field_a = var2.field_h;
           return var2;

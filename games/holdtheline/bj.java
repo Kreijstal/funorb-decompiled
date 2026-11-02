@@ -115,11 +115,11 @@ final class bj extends v implements qa, pi {
         int var6 = 0;
         try {
           this.field_K = param0;
-          this.field_M = new rm(sf.field_j, (tb) null);
+          this.field_M = new rm(ImageProducerRasterBuffer.field_j, (tb) null);
           this.field_M.field_l = (dh) ((Object) new mo());
           var7 = sd.a(ta.field_b, new String[]{this.g((byte) -120), this.a((byte) -119)}, true);
           var3 = 20;
-          var4 = new dk(hl.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, hl.field_g.field_G, -1, 2147483647, true);
+          var4 = new dk(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.field_G, -1, 2147483647, true);
           this.field_F = new cj(var7, var4);
           this.field_F.field_z = "";
           this.field_F.a(0, m.field_d, true);

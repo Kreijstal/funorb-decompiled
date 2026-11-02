@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class md extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static go[] field_j;
     boolean field_b;
     static gn field_i;
@@ -128,7 +128,7 @@ public abstract class md extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -24327) {
-            md.provideLoaderApplet((java.applet.Applet) null);
+            GameAppletShell.provideLoaderApplet((java.applet.Applet) null);
           }
           if (null == param1) {
             stackIn_7_0 = null;
@@ -244,7 +244,7 @@ public abstract class md extends java.applet.Applet implements Runnable, java.aw
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          kd.field_b = (java.awt.Canvas) ((Object) new mi((java.awt.Component) (this)));
+          kd.field_b = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) kd.field_b));
           kd.field_b.setSize(lj.field_f, g.field_i);
           kd.field_b.setVisible(true);
@@ -412,7 +412,7 @@ public abstract class md extends java.applet.Applet implements Runnable, java.aw
           if (vf.field_j == this &&
             !cf.field_y) {
             cg.field_a = true;
-            if (hl.field_b &&
+            if (IntrusiveNode.field_b &&
               -n.field_n + bb.b(-1) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
@@ -634,7 +634,7 @@ public abstract class md extends java.applet.Applet implements Runnable, java.aw
     public final void windowOpened(java.awt.event.WindowEvent param0) {
     }
 
-    protected md() {
+    protected GameAppletShell() {
         this.field_b = false;
     }
 
@@ -799,7 +799,7 @@ public abstract class md extends java.applet.Applet implements Runnable, java.aw
                   if (stackIn_81_0 > stackIn_81_1) {
                     break;
                   }
-                  hl.field_b = true;
+                  IntrusiveNode.field_b = true;
                   break;
                 }
               }

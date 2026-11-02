@@ -91,7 +91,7 @@ abstract class mm {
               var3_refLifetime1 = (wm) (param0.field_k.c((byte) 105));
             }
           }
-          L8: {
+          regionExit1: {
             if (param0.field_o != 0) {
               if (param0.field_o != 1) {
                 if (2 != param0.field_o) {
@@ -118,7 +118,7 @@ abstract class mm {
                       }
                       if (decompiledFrameRemainder0) {
                         stackIn_95_0 = (vk) (param0);
-                        break L8;
+                        break regionExit1;
                       }
                     }
                     if (decompiledFrameRemainder0) {
@@ -130,7 +130,7 @@ abstract class mm {
                       }
                     }
                     stackIn_95_0 = (vk) (param0);
-                    break L8;
+                    break regionExit1;
                   }
                   if (null == kc.field_b.a(8192)) {
                     return false;
@@ -147,7 +147,7 @@ abstract class mm {
                   }
                 }
                 stackIn_95_0 = (vk) (param0);
-                break L8;
+                break regionExit1;
               }
               if (a.field_F.a(param1 + 8257) == null) {
                 return false;

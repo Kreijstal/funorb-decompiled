@@ -575,7 +575,7 @@ class hi extends fj {
               return true;
             }
             if (var2_int >= 0 &&
-              sf.d(101) <= 30000L) {
+              ImageProducerRasterBuffer.d(101) <= 30000L) {
               return false;
             }
             r.a(-28036);

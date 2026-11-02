@@ -6,13 +6,13 @@ import java.util.*;
 final class nc implements Iterator {
     static vn field_c;
     private int field_i;
-    private hl field_k;
+    private IntrusiveNode field_k;
     static int[] field_j;
     static int field_g;
     static hj field_h;
     static String field_b;
     static byte[] field_e;
-    private hl field_d;
+    private IntrusiveNode field_d;
     static String field_a;
     private im field_f;
 
@@ -38,7 +38,7 @@ final class nc implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        hl var1;
+        IntrusiveNode var1;
         int var2;
         var2 = HoldTheLine.field_D;
         if (this.field_f.field_j[this.field_i - 1] != this.field_k) {

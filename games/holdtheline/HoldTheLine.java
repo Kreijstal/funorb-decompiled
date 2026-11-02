@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class HoldTheLine extends oh {
+public final class HoldTheLine extends NetworkGameClient {
     static ql field_F;
     private int field_C;
     static String field_B;
@@ -26,7 +26,7 @@ public final class HoldTheLine extends oh {
           dm.a((byte) -20);
           rh.a(-123);
           jo.a((byte) 108);
-          md.g(-1);
+          GameAppletShell.g(-1);
           kd.a((byte) -126);
           ah.a(true);
           o.b((byte) 39);
@@ -39,7 +39,7 @@ public final class HoldTheLine extends oh {
           pe.a(param0 - 128);
           ti.g(param0 - 21134);
           l.a(param0 ^ 17182);
-          oh.m(8);
+          NetworkGameClient.m(8);
           ii.a(8388479);
           dl.a(-55);
           jf.b((byte) 106);
@@ -63,7 +63,7 @@ public final class HoldTheLine extends oh {
           w.a((byte) 118);
           mm.b(false);
           ac.b(-3646);
-          ef.b(0);
+          FullscreenFocusCanvas.b(0);
           gh.a(121);
           pc.c(param0 ^ -129);
           wj.a(16831);
@@ -78,7 +78,7 @@ public final class HoldTheLine extends oh {
           ee.e(0);
           m.a(true);
           tn.b(1);
-          hl.c(-2);
+          IntrusiveNode.c(-2);
           ua.a(param0 + 23881);
           ld.a(122);
           ei.b(true);
@@ -135,7 +135,7 @@ public final class HoldTheLine extends oh {
           id.d();
           bl.e(0);
           bg.a(param0 ^ 128);
-          mi.a(param0 ^ -248);
+          DelegatingCanvas.a(param0 ^ -248);
           pb.a(0);
           ag.c(true);
           ol.b(6985);
@@ -194,7 +194,7 @@ public final class HoldTheLine extends oh {
           qe.a((byte) -42);
           uk.a((byte) -116);
           mk.a(true);
-          sf.c(-1);
+          ImageProducerRasterBuffer.c(-1);
           pa.a(true);
           be.e(5751);
           ke.a();
@@ -325,9 +325,9 @@ public final class HoldTheLine extends oh {
           if (param0 != -35) {
             field_F = (ql) null;
           }
-          if (md.field_i != null) {
-            rk.a((byte) 125, md.field_i);
-            md.field_i = null;
+          if (GameAppletShell.field_i != null) {
+            rk.a((byte) 125, GameAppletShell.field_i);
+            GameAppletShell.field_i = null;
             qd.d(56);
           }
           pg.field_J = bi.a(122, 3);
@@ -338,7 +338,7 @@ public final class HoldTheLine extends oh {
           kk.field_i = bi.a(-17, 8);
           oe.field_j = bi.a(-16, 9);
           cc.field_y = bi.a(param0 ^ -89, 10);
-          ef.a(g.field_p, (byte) -126, si.field_lb);
+          FullscreenFocusCanvas.a(g.field_p, (byte) -126, si.field_lb);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -379,7 +379,7 @@ public final class HoldTheLine extends oh {
               field_B = (String) null;
             }
             try {
-              stackIn_4_0 = (jf) (Class.forName("f").newInstance());
+              stackIn_4_0 = (jf) (Class.forName("MouseWheelInput").newInstance());
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -645,7 +645,7 @@ public final class HoldTheLine extends oh {
                     if (var4 != 0) {
                       if (vg.field_G == 1) {
                         if (gg.field_L) {
-                          ef.a(114);
+                          FullscreenFocusCanvas.a(114);
                           if (var5 != 0) {
                             kd.b((byte) -54);
                           }
@@ -794,7 +794,7 @@ public final class HoldTheLine extends oh {
           ce.field_r = -1;
           kb.field_c = false;
           vg.field_P = 0;
-          mi.field_d = 7;
+          DelegatingCanvas.field_d = 7;
           this.field_C = 125;
           t.field_l = -1;
           var2_int = 84 / ((42 - param0) / 51);
@@ -1020,12 +1020,12 @@ public final class HoldTheLine extends oh {
           }
           if (null != b.field_d &&
             !b.field_d.b((byte) -90)) {
-            jj.a(107, oh.field_r, 2.0f);
+            jj.a(107, NetworkGameClient.field_r, 2.0f);
             return;
           }
           if (null != th.field_m) {
             if (!th.field_m.b((byte) -49)) {
-              jj.a(125, oh.field_r, 3.0f);
+              jj.a(125, NetworkGameClient.field_r, 3.0f);
               return;
             }
             if (!co.a(th.field_m, b.field_d, 10302)) {

@@ -176,13 +176,13 @@ final class b {
           var6.field_hb = (String) (var3Lifetime1);
           var6.d(param0 ^ 10);
           var7 = (fi) (be.field_j.b((byte) 96));
-          L7: while (true) {
+          scanLoop1: while (true) {
             if (var7 != null) {
               stackIn_63_0 = var6;
               stackIn_63_1 = 200;
               stackIn_63_2 = var7;
               if (var8 != 0) {
-                break L7;
+                break scanLoop1;
               }
               if (gi.a(stackIn_63_0, stackIn_63_1, stackIn_63_2)) {
                 var7 = (fi) (be.field_j.c((byte) -33));
@@ -283,12 +283,12 @@ final class b {
           }
           var4_int = 0;
           var5 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (param3.field_e > var5) {
               var6 = (ei) (param3.field_b[var5]);
               stackIn_16_0 = 0;
               if (var9 != 0) {
-                break L1;
+                break scanLoop1;
               }
               var7 = stackIn_16_0;
               while (var6.field_e > var7) {
@@ -297,7 +297,7 @@ final class b {
                 var7++;
               }
               var5++;
-              continue L1;
+              continue scanLoop1;
             }
             stackIn_16_0 = 1;
             break;
@@ -321,7 +321,7 @@ final class b {
     final static void a(boolean param0, int param1) {
         RuntimeException runtimeException = null;
         ih var2 = null;
-        hl var2_ref = null;
+        IntrusiveNode var2_ref = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;

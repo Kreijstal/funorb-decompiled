@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sn extends hl {
+final class sn extends IntrusiveNode {
     private boolean field_G;
     private static float[] field_H;
     private static int field_t;

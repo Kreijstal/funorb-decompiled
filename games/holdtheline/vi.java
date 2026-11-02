@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vi extends hl {
+final class vi extends IntrusiveNode {
     og field_i;
     byte[] field_j;
 

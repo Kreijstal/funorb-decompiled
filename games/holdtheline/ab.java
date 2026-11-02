@@ -89,10 +89,10 @@ class ab extends dc implements pi {
 
     final static boolean n(int param0) {
         if (param0 >= 103) {
-          return ak.field_b == sf.field_n ? true : false;
+          return ak.field_b == ImageProducerRasterBuffer.field_n ? true : false;
         }
         field_pb = 24;
-        return ak.field_b == sf.field_n ? true : false;
+        return ak.field_b == ImageProducerRasterBuffer.field_n ? true : false;
     }
 
     final static java.net.URL a(String param0, String param1, java.net.URL param2, byte param3, int param4) {

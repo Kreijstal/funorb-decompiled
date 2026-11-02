@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf extends tj {
+final class tf extends PcmStream {
     private int field_s;
     private int[] field_u;
     static uf field_A;
@@ -142,7 +142,7 @@ final class tf extends tj {
         }
     }
 
-    final tj b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -310,7 +310,7 @@ final class tf extends tj {
         return (java.awt.Container) ((Object) en.a(111));
     }
 
-    final tj a() {
+    final PcmStream a() {
         return null;
     }
 

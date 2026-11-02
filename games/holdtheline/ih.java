@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ih extends hl {
+final class ih extends IntrusiveNode {
     static int field_p;
     static ah field_n;
     static ah field_j;

@@ -32,7 +32,7 @@ final class gm implements dh {
           var6_int = param3.field_k + param1;
           var7 = param3.field_o + param4;
           tn.a(var6_int, param3.field_x, 152, var7, param3.field_u);
-          var8 = ef.field_i[1];
+          var8 = FullscreenFocusCanvas.field_i[1];
           if (param3 instanceof rm &&
             ((rm) (param3)).field_B) {
             var8.b((-var8.field_o + param3.field_x >> 1) + 1 + var6_int, (-var8.field_v + param3.field_u >> 1) + (var7 + 1), 256);

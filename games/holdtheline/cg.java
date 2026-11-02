@@ -89,10 +89,10 @@ final class cg {
           rf.field_X = g.field_m;
           na.field_k = sd.field_a;
           sd.field_a = false;
-          gg.field_J = mi.field_a;
+          gg.field_J = DelegatingCanvas.field_a;
           lb.field_x = im.field_e;
           jb.field_U = nl.field_f;
-          mi.field_a = 0;
+          DelegatingCanvas.field_a = 0;
         }
         if (param0 == 1983) {
           return;

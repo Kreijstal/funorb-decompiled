@@ -205,10 +205,10 @@ final class kd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             nl.field_f = param0.getY();
             bb.b(-1);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              mi.field_a = 2;
+              DelegatingCanvas.field_a = 2;
               u.field_R = 2;
             } else {
-              mi.field_a = 1;
+              DelegatingCanvas.field_a = 1;
               u.field_R = 1;
             }
             var2_int = param0.getModifiers();

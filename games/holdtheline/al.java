@@ -42,8 +42,8 @@ final class al {
           nd.field_g > 0) {
           fieldTemp$5 = nd.field_g - 1;
           nd.field_g = nd.field_g - 1;
-          var2_ref_byte__Lifetime2 = ef.field_h[fieldTemp$5];
-          ef.field_h[nd.field_g] = null;
+          var2_ref_byte__Lifetime2 = FullscreenFocusCanvas.field_h[fieldTemp$5];
+          FullscreenFocusCanvas.field_h[nd.field_g] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (param1 <= 84) {

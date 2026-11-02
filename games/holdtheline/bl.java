@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class bl extends tj {
+final class bl extends PcmStream {
     static sg field_r;
     ah field_q;
     static int[] field_n;
@@ -66,13 +66,13 @@ final class bl extends tj {
         }
     }
 
-    final tj a() {
+    final PcmStream a() {
         ck var1 = (ck) (this.field_q.b((byte) 100));
         if (var1 == null) {
           return null;
         }
         if (var1.field_t != null) {
-          return (tj) ((Object) var1.field_t);
+          return (PcmStream) ((Object) var1.field_t);
         }
         return this.b();
     }
@@ -263,7 +263,7 @@ final class bl extends tj {
         }
     }
 
-    final tj b() {
+    final PcmStream b() {
         ck var1;
         int var2;
         var2 = HoldTheLine.field_D;
@@ -273,7 +273,7 @@ final class bl extends tj {
             return null;
           }
           if (var1.field_t != null) {
-            return (tj) ((Object) var1.field_t);
+            return (PcmStream) ((Object) var1.field_t);
           }
         }
     }

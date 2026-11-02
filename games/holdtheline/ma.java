@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma extends hl {
+final class ma extends IntrusiveNode {
     int[] field_j;
     static uf field_l;
     boolean field_i;
@@ -112,18 +112,18 @@ final class ma extends hl {
         qd.a(20830, 3 + cf.field_w);
         ek.field_x = 3;
         pe.field_g = new int[4];
-        if (7 != mi.field_d) {
-          if (1 != mi.field_d &&
+        if (7 != DelegatingCanvas.field_d) {
+          if (1 != DelegatingCanvas.field_d &&
             !wb.field_c) {
             em.field_o = false;
           }
           bn.a(1, param0 ^ 21498);
           nm.field_b = kn.b((byte) -49);
           if (pd.a(nm.field_b, true)) {
-            bl.field_r = new sg(nm.field_b, mi.field_d, wb.field_c, em.field_o, t.field_l, ah.field_b);
+            bl.field_r = new sg(nm.field_b, DelegatingCanvas.field_d, wb.field_c, em.field_o, t.field_l, ah.field_b);
           } else {
             sk.field_i = ah.field_b;
-            ca.field_r = mi.field_d;
+            ca.field_r = DelegatingCanvas.field_d;
             bl.field_r = null;
             on.field_r = t.field_l;
             qn.field_k = em.field_o;

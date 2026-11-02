@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck extends hl {
+final class ck extends IntrusiveNode {
     int field_n;
     int field_l;
     int field_w;

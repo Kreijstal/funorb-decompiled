@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wc extends hl {
+abstract class wc extends IntrusiveNode {
     int field_k;
     static byte[][] field_i;
     static String field_j;

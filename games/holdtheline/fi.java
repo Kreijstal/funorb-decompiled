@@ -55,7 +55,7 @@ final class fi extends hi {
             var6 = (gn) null;
             fi.a(25, (gn) null, (gn) null, 26, 41);
           }
-          stackIn_6_0 = md.a(param0 - 7255, param1.a(param4, true, param3));
+          stackIn_6_0 = GameAppletShell.a(param0 - 7255, param1.a(param4, true, param3));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

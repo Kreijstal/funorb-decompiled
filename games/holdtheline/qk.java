@@ -83,7 +83,7 @@ final class qk {
             for (var11 = param1; param4 > var11; var11++) {
               var12 = im.field_h[var11];
               if (!param3) {
-                stackIn_24_0 = oh.field_s[var12];
+                stackIn_24_0 = NetworkGameClient.field_s[var12];
               } else {
                 stackIn_24_0 = va.field_j[var12];
               }

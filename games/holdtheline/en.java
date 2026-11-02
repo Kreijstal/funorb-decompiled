@@ -70,7 +70,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
             oa.field_s = dl.a(be.field_i, "benefits", false, "headline");
             im.field_k = dl.a(be.field_i, "benefits", false, "blurbpane");
             eg.field_c = dl.a(be.field_i, "benefits", false, "button");
-            hl.field_d = dl.a(be.field_i, "benefits", false, "signup_text");
+            IntrusiveNode.field_d = dl.a(be.field_i, "benefits", false, "signup_text");
             mn.field_c = dl.a(be.field_i, "benefits", false, "menu_text");
             nc.field_h = dl.a(be.field_i, "benefits", false, "button_frame");
             nl.field_i = dl.a(be.field_i, "benefits", false, "arrow");
@@ -85,7 +85,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
             nl.field_i.c(2, 2, t.field_n);
             fh.a(2, var11.field_y, var11.field_s, var11, 0, 0, 1, -24983);
             nl.field_i = var11;
-            oh.field_m = nl.field_i.d();
+            NetworkGameClient.field_m = nl.field_i.d();
             var12 = new hj(195, 221);
             var6 = var12.field_s / 2;
             var12.f();
@@ -104,7 +104,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
               fh.a(3, lf.field_a[var7].field_y, lf.field_a[var7].field_s, lf.field_a[var7], 0, 0, 1, -24983);
             }
             qh.field_b = null;
-            ek.field_m = hl.field_d.e();
+            ek.field_m = IntrusiveNode.field_d.e();
             ek.field_m.f();
             mk.a(255, tc.field_j, 2 * tc.field_c / 3, 0, 0, 64);
             tc.a(var28, var2, var3);
@@ -239,7 +239,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (null != eg.field_c &&
             nc.field_h != null) {
             eg.field_c.a(231, 390);
-            var1 = hl.field_d;
+            var1 = IntrusiveNode.field_d;
             if (ln.field_k.field_g == 0) {
               var1 = ek.field_m;
             }
@@ -283,7 +283,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (nl.field_i != null) {
             var1_int = 357 - nl.field_i.field_v / 2;
             nl.field_i.a(269 - nl.field_i.field_o, var1_int);
-            oh.field_m.a(586, var1_int);
+            NetworkGameClient.field_m.a(586, var1_int);
             if (rf.field_X > var1_int &&
               nl.field_i.field_y + var1_int > rf.field_X) {
               var2Lifetime5 = (oe.a(io.field_b << 4, 2) * 40 >> 16) + 40;
@@ -301,10 +301,10 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       lf.field_a[va.field_e].a(269, 340);
                       return;
                     }
-                    oh.field_m.b(585, -1 + var1_int, var2Lifetime5);
-                    oh.field_m.b(587, -1 + var1_int, var2Lifetime5);
-                    oh.field_m.b(585, 1 + var1_int, var2Lifetime5);
-                    oh.field_m.b(587, var1_int + 1, var2Lifetime5);
+                    NetworkGameClient.field_m.b(585, -1 + var1_int, var2Lifetime5);
+                    NetworkGameClient.field_m.b(587, -1 + var1_int, var2Lifetime5);
+                    NetworkGameClient.field_m.b(585, 1 + var1_int, var2Lifetime5);
+                    NetworkGameClient.field_m.b(587, var1_int + 1, var2Lifetime5);
                   }
                 }
               }

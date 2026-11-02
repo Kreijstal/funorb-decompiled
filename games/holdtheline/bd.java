@@ -227,8 +227,8 @@ final class bd extends cj {
         int var11Lifetime1;
         int var12Lifetime1;
         fd var6Lifetime1;
-        L0: {
-          L1: {
+        regionExit1: {
+          regionExit2: {
             var13 = HoldTheLine.field_D;
             var6 = this.field_U.b(-7447);
             if (hh.field_d != var6 &&
@@ -236,13 +236,13 @@ final class bd extends cj {
               var5 = this.field_U.b((byte) -59);
               if (var5 == null) {
                 var5 = this.field_P;
-                break L1;
+                break regionExit2;
               }
               if (!(var5.equals(this.field_q))) {
                 this.field_q = var5;
                 this.j(0);
               }
-              break L0;
+              break regionExit1;
             }
             var5 = hg.field_N;
           }
@@ -257,7 +257,7 @@ final class bd extends cj {
         var9 = this.field_k + param2;
         var10 = var8.a(-1337403295, (n) (this), param1) + (var8.a((byte) 20, (n) (this)).a(-93) >> 1);
         if (hh.field_d == var6Lifetime1) {
-          var18 = ef.field_i[0];
+          var18 = FullscreenFocusCanvas.field_i[0];
           var11 = var18.field_o << 1;
           var12 = var18.field_v << 1;
           if (null == this.field_T) {
@@ -284,17 +284,17 @@ final class bd extends cj {
         }
         if (var6Lifetime1 != um.field_a) {
           if (g.field_k == var6Lifetime1) {
-            var15 = ef.field_i[2];
+            var15 = FullscreenFocusCanvas.field_i[2];
             var15.b(var9, var10 - (var15.field_y >> 1), 256);
             return;
           }
           if (tg.field_d == var6Lifetime1) {
-            var16 = ef.field_i[1];
+            var16 = FullscreenFocusCanvas.field_i[1];
             var16.b(var9, var10 - (var16.field_y >> 1), 256);
           }
           return;
         }
-        var17 = ef.field_i[0];
+        var17 = FullscreenFocusCanvas.field_i[0];
         var11Lifetime1 = var17.field_o << 1;
         var12Lifetime1 = var17.field_v << 1;
         if (null == this.field_T) {

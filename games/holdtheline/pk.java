@@ -81,7 +81,7 @@ final class pk extends v implements pi {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_k + param2;
         int var6 = param1 + this.field_o;
-        hl.field_g.a(de.field_P, var5 + 20, 20 + var6, this.field_x - 40, this.field_u - 50, 16777215, -1, 1, 0, hl.field_g.field_G);
+        IntrusiveNode.field_g.a(de.field_P, var5 + 20, 20 + var6, this.field_x - 40, this.field_u - 50, 16777215, -1, 1, 0, IntrusiveNode.field_g.field_G);
         super.a(param0, param1, param2, param3);
     }
 

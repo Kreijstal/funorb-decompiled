@@ -236,7 +236,7 @@ abstract class rl extends v {
           stackIn_10_0 = 1000 * param5 / var6;
         }
         var7 = stackIn_10_0;
-        oh.field_s[in.field_h] = var7;
+        NetworkGameClient.field_s[in.field_h] = var7;
         in.field_h = in.field_h + 1;
         if (we.field_j > var7) {
           we.field_j = var7;

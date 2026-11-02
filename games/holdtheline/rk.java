@@ -318,7 +318,7 @@ final class rk extends vd {
           }
           var2Lifetime13 = ln.a("TEXT_NAVIGATE_BACK", 0);
           if (var2Lifetime13 != null) {
-            hl.field_c = rk.a((byte) -84, var2Lifetime13);
+            IntrusiveNode.field_c = rk.a((byte) -84, var2Lifetime13);
           }
           var2Lifetime14 = ln.a("TEXT_RESUME", 0);
           if (null != var2Lifetime14) {
@@ -622,7 +622,7 @@ final class rk extends vd {
           }
           var2Lifetime89 = ln.a("TEXT_INSTRUCTIONS3", 0);
           if (null != var2Lifetime89) {
-            sf.field_k = rk.a((byte) -39, var2Lifetime89);
+            ImageProducerRasterBuffer.field_k = rk.a((byte) -39, var2Lifetime89);
           }
           var2Lifetime90 = ln.a("TEXT_INSTRUCTIONS4_1", 0);
           if (var2Lifetime90 != null) {
@@ -638,7 +638,7 @@ final class rk extends vd {
           }
           var2Lifetime93 = ln.a("TEXT_INSTRUCTIONS5_2", 0);
           if (null != var2Lifetime93) {
-            hl.field_e = rk.a((byte) 55, var2Lifetime93);
+            IntrusiveNode.field_e = rk.a((byte) 55, var2Lifetime93);
           }
           var2Lifetime94 = ln.a("TEXT_INSTRUCTIONS5_3", 0);
           if (null != var2Lifetime94) {
@@ -1029,7 +1029,7 @@ final class rk extends vd {
           }
           var2Lifetime190 = ln.a("CARNAME_F1", 0);
           if (null != var2Lifetime190) {
-            mi.field_h = rk.a((byte) -57, var2Lifetime190);
+            DelegatingCanvas.field_h = rk.a((byte) -57, var2Lifetime190);
           }
           var2Lifetime191 = ln.a("CARNAME_TOURER", 0);
           if (null != var2Lifetime191) {
@@ -1076,7 +1076,7 @@ final class rk extends vd {
           }
           throw kk.a((Throwable) ((Object) stackIn_709_0), ((StringBuilder) (Object) stackIn_709_1).append(stackIn_710_2).append(')').toString());
         }
-        if (md.field_h) {
+        if (GameAppletShell.field_h) {
           var3++;
           HoldTheLine.field_D = var3;
         }

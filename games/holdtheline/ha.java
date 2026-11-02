@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ha extends hl implements hd {
+final class ha extends IntrusiveNode implements hd {
     int field_q;
     static Random field_n;
     float field_m;

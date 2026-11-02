@@ -209,7 +209,7 @@ final class ij {
     }
 
     final static void a(boolean param0, int param1) {
-        if (7 != mi.field_d) {
+        if (7 != DelegatingCanvas.field_d) {
           throw new RuntimeException();
         }
         int var2 = pf.a((byte) 65, kn.b((byte) -49).field_p);

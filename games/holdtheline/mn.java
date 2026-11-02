@@ -119,7 +119,7 @@ final class mn {
               var11 = var11 - var16;
               var4.a(var25.field_f, (byte) 110);
               if (var11 < 0.0f) {
-                param1.a(ef.a(var18, var13, 14, var18 - var17), var4.a(-50), var13.field_k, var3.a(-90), (byte) 49);
+                param1.a(FullscreenFocusCanvas.a(var18, var13, 14, var18 - var17), var4.a(-50), var13.field_k, var3.a(-90), (byte) 49);
                 var26 = o.a((byte) 51);
                 var3 = var26;
                 var27 = o.a((byte) 21);
@@ -139,7 +139,7 @@ final class mn {
             var3.a(var28.field_f, (byte) 66);
             var4.a(var29.field_h, (byte) 95);
             var4.a(var29.field_f, (byte) 121);
-            param1.a(ef.a(1.0f, var13, 14, -var17 + var18), var4.a(-60), var13.field_k, var3.a(-127), (byte) 49);
+            param1.a(FullscreenFocusCanvas.a(1.0f, var13, 14, -var17 + var18), var4.a(-60), var13.field_k, var3.a(-127), (byte) 49);
             var3 = o.a((byte) 17);
             var30 = o.a((byte) -128);
             var3.a(var6Lifetime1.field_h, (byte) 71);

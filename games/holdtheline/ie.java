@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie extends hl {
+final class ie extends IntrusiveNode {
     static go field_k;
     static int field_n;
     byte[] field_l;

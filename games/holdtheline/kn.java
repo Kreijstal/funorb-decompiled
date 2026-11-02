@@ -290,10 +290,10 @@ final class kn {
         if (param0 != -49) {
           kn.a((byte) -96);
         }
-        if (mi.field_d == 3) {
+        if (DelegatingCanvas.field_d == 3) {
           return tk.field_c[4][0];
         }
-        if (mi.field_d != 2) {
+        if (DelegatingCanvas.field_d != 2) {
           return tk.field_c[cf.field_w][vg.field_P];
         }
         return tk.field_c[5][vg.field_P];

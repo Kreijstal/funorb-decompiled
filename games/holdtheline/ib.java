@@ -24,7 +24,7 @@ final class ib implements Runnable {
     private Object field_e;
     private static String field_v;
     private static int field_b;
-    private cl field_x;
+    private DirectDrawFullscreenController field_x;
     private boolean field_q;
     static String field_s;
     static String field_p;
@@ -495,7 +495,7 @@ final class ib implements Runnable {
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
-        cl var7 = null;
+        DirectDrawFullscreenController var7 = null;
         this.field_h = null;
         this.field_l = false;
         this.field_f = false;
@@ -593,7 +593,7 @@ final class ib implements Runnable {
             if (!this.field_l) {
               this.field_e = Class.forName("rj").newInstance();
             } else {
-              var7 = new cl();
+              var7 = new DirectDrawFullscreenController();
               this.field_x = var7;
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
