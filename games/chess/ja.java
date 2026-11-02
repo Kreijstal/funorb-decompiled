@@ -29,7 +29,7 @@ final class ja extends f {
         }
     }
 
-    final static void a(um param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         RuntimeException runtimeException = null;
         ci var2 = null;
         ci var3 = null;
@@ -172,7 +172,7 @@ final class ja extends f {
             null != param0.field_y) {
             dh.a((byte) 95);
           }
-          um.field_a = 0;
+          ResourceArchive.field_a = 0;
           if (param2 >= -67) {
             field_f = false;
           }
@@ -232,7 +232,7 @@ final class ja extends f {
                           dupTemp$0 = param0.field_y[var8];
                           lc.field_n[dupTemp$0] = lc.field_n[dupTemp$0] + 1;
                         }
-                        um.field_a = um.field_a + 1;
+                        ResourceArchive.field_a = ResourceArchive.field_a + 1;
                         break;
                       }
                     }

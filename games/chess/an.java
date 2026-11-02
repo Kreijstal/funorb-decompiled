@@ -28,8 +28,8 @@ final class an {
           ka.field_a.a(lf.field_S * 64 / 80, (byte) -100);
           var2 = (tn) (ef.field_n.g(-18110));
           while (var2 != null) {
-            if (!var2.field_n.b(20478)) {
-              var2.c(-2193);
+            if (!var2.field_n.isLinked(20478)) {
+              var2.unlink(-2193);
             } else {
               var2.field_k.h(lf.field_S * var2.field_o / 80);
             }

@@ -170,7 +170,7 @@ final class ge extends k implements mj {
             return stackIn_11_0;
           }
           var4_refLifetime1.field_q = param2;
-          nd.field_h.a((o) (var4_refLifetime1), (byte) 102);
+          nd.field_h.a((IntrusiveNode) (var4_refLifetime1), (byte) 102);
           tm.a(false, var4_refLifetime1, param1);
           stackIn_13_0 = var4_refLifetime1;
           return stackIn_13_0;

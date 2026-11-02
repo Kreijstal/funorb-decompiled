@@ -10,11 +10,11 @@ final class id {
         if (param0 < 21) {
           id.a((byte) -89);
           hn.b(68);
-          lj.a((byte) 19);
+          ArchiveIndex.a((byte) 19);
           return;
         }
         hn.b(68);
-        lj.a((byte) 19);
+        ArchiveIndex.a((byte) 19);
     }
 
     final void a(int param0, int param1, int param2, int param3, boolean param4) {
@@ -41,7 +41,7 @@ final class id {
         String[] var3 = null;
         ci[] var4 = null;
         try {
-          var3 = new String[]{param0, gg.field_g, ke.field_b};
+          var3 = new String[]{param0, gg.field_g, IsaacCipher.field_b};
           var4 = new ci[]{param1, hb.field_a, (ci) ((Object) fg.field_d)};
           this.field_a = new d(0L, ao.field_a, var3, hd.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {

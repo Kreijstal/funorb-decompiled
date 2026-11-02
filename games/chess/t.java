@@ -233,9 +233,9 @@ final class t extends ma implements mj {
               var28.field_L != 0) {
               if (param1) {
                 if (var6Lifetime2 == 0) {
-                  p.field_n = 0;
+                  PacketBuffer.field_n = 0;
                 } else {
-                  p.field_n = p.field_n ^ var6Lifetime2;
+                  PacketBuffer.field_n = PacketBuffer.field_n ^ var6Lifetime2;
                 }
               } else {
                 if (param0.field_Mb != var6Lifetime2) {
@@ -247,11 +247,11 @@ final class t extends ma implements mj {
             if (param1) {
               if (var6Lifetime2 != 0) {
                 stackIn_118_0 = var28;
-                stackIn_119_1 = ((var6Lifetime2 & p.field_n) != 0);
+                stackIn_119_1 = ((var6Lifetime2 & PacketBuffer.field_n) != 0);
                 stackIn_118_0.field_gb = stackIn_119_1;
               } else {
                 stackIn_114_0 = var28;
-                stackIn_115_1 = (p.field_n == 0);
+                stackIn_115_1 = (PacketBuffer.field_n == 0);
                 stackIn_114_0.field_gb = stackIn_115_1;
               }
             } else {

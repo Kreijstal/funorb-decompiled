@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa extends o {
+final class pa extends IntrusiveNode {
     static String field_k;
     static String field_n;
     static int[] field_o;
@@ -23,7 +23,7 @@ final class pa extends o {
         field_o = null;
     }
 
-    final static void a(int param0, boolean param1, p param2, jk param3) {
+    final static void a(int param0, boolean param1, PacketBuffer param2, jk param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -62,7 +62,7 @@ final class pa extends o {
           try {
             var18 = new fl();
             var18.field_l = param2.i(-82);
-            var18.field_t = param2.e((byte) -102);
+            var18.field_t = param2.readInt((byte) -102);
             var18.field_v = new int[var18.field_l];
             if (!param1) {
               field_n = (String) null;
@@ -92,7 +92,7 @@ final class pa extends o {
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param2.e((byte) -108);
+                        var13 = param2.readInt((byte) -108);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param2.a(var13, (byte) 121, var21[var12_int], 0);
@@ -116,7 +116,7 @@ final class pa extends o {
                   var8 = dupTemp$1;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param2.e((byte) -94);
+                    var9 = param2.readInt((byte) -94);
                   }
                   var18.field_q[var5] = var6_int;
                   var18.field_v[var5] = var9;
@@ -144,7 +144,7 @@ final class pa extends o {
                 var18.field_o[var5] = -5;
               }
             }
-            vj.field_c.a((o) (var18), (byte) 92);
+            vj.field_c.a((IntrusiveNode) (var18), (byte) 92);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

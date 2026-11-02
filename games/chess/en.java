@@ -72,7 +72,7 @@ final class en {
         var3 = param0.field_m;
         var4 = param0.field_B;
         var5 = param0.field_F;
-        var15 = um.field_j;
+        var15 = ResourceArchive.field_j;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_d;
@@ -81,11 +81,11 @@ final class en {
         var10 = param0.field_y;
         var11 = var10;
         var12 = param0.field_J + 1;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var3 > 0) {
             while (true) {
               if (var10 == 0) {
-                break L0;
+                break scanLoop1;
               }
               if (var3 != 1) {
                 var8[var9] = (byte)var2;
@@ -98,7 +98,7 @@ final class en {
             }
             if (var10 == 0) {
               var3 = 1;
-              break L0;
+              break scanLoop1;
             }
             var8[var9] = (byte)var2;
             var9++;
@@ -119,11 +119,11 @@ final class en {
                 var7 = var7 >> 8;
                 var4++;
                 if (var4 == var12) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 if (var1 != var5) {
                   var5 = var1;
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var3 = 3;
                 var7 = var15Lifetime1[var7];
@@ -131,11 +131,11 @@ final class en {
                 var7 = var7 >> 8;
                 var4++;
                 if (var4 == var12) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 if (var1 != var5) {
                   var5 = var1;
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var7 = var15Lifetime1[var7];
                 var1 = (byte)var7;
@@ -146,17 +146,17 @@ final class en {
                 var5 = (byte)var7;
                 var7 = var7 >> 8;
                 var4++;
-                continue L0;
+                continue scanLoop1;
               }
               if (var10 == 0) {
                 var3 = 1;
-                break L0;
+                break scanLoop1;
               }
             } else {
               var5 = var1;
               if (var10 == 0) {
                 var3 = 1;
-                break L0;
+                break scanLoop1;
               }
             }
             var8[var9] = (byte)var2;
@@ -174,7 +174,7 @@ final class en {
         param0.field_m = var3;
         param0.field_B = var4;
         param0.field_F = var5;
-        um.field_j = var6;
+        ResourceArchive.field_j = var6;
         param0.field_d = var7;
         param0.field_C = var8;
         param0.field_i = var9;
@@ -307,8 +307,8 @@ final class en {
         var24 = null;
         var25 = null;
         param0.field_u = 1;
-        if (um.field_j == null) {
-          um.field_j = new int[param0.field_u * 100000];
+        if (ResourceArchive.field_j == null) {
+          ResourceArchive.field_j = new int[param0.field_u * 100000];
         }
         var26 = 1;
         while (true) {
@@ -479,14 +479,14 @@ final class en {
                 param0.field_x[var4] = param0.field_x[var4] + param0.field_x[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(um.field_j[var4] & 255);
+                var1 = (byte)(ResourceArchive.field_j[var4] & 255);
                 dupTemp$1 = param0.field_x[var1 & 255];
-                um.field_j[dupTemp$1] = um.field_j[dupTemp$1] | var4 << 8;
+                ResourceArchive.field_j[dupTemp$1] = ResourceArchive.field_j[dupTemp$1] | var4 << 8;
                 param0.field_x[var1 & 255] = param0.field_x[var1 & 255] + 1;
               }
-              param0.field_d = um.field_j[param0.field_p] >> 8;
+              param0.field_d = ResourceArchive.field_j[param0.field_p] >> 8;
               param0.field_B = 0;
-              param0.field_d = um.field_j[param0.field_d];
+              param0.field_d = ResourceArchive.field_j[param0.field_d];
               param0.field_F = (byte)(param0.field_d & 255);
               param0.field_d = param0.field_d >> 8;
               param0.field_B = param0.field_B + 1;
@@ -550,7 +550,7 @@ final class en {
               }
               dupTemp$0 = param0.field_k[var1 & 255] & 255;
               param0.field_v[dupTemp$0] = param0.field_v[dupTemp$0] + 1;
-              um.field_j[var14] = param0.field_k[var1 & 255] & 255;
+              ResourceArchive.field_j[var14] = param0.field_k[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -607,7 +607,7 @@ final class en {
             var1 = param0.field_k[param0.field_g[param0.field_b[0]] & 255];
             param0.field_v[var1 & 255] = param0.field_v[var1 & 255] + var15;
             while (var15 > 0) {
-              um.field_j[var14] = var1 & 255;
+              ResourceArchive.field_j[var14] = var1 & 255;
               var14++;
               var15--;
             }

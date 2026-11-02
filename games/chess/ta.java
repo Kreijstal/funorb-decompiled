@@ -164,7 +164,7 @@ final class ta extends pk {
         RuntimeException decompiledCaughtException = null;
         var3 = Chess.field_G;
         try {
-          param0.c(-2193);
+          param0.unlink(-2193);
           if (param1 >= -73) {
             ta.b(29);
           }
@@ -177,7 +177,7 @@ final class ta extends pk {
             break;
           }
           if (var2 == null) {
-            bb.field_d.a((o) (param0), (byte) -43);
+            bb.field_d.a((IntrusiveNode) (param0), (byte) -43);
             return;
           }
           he.a(param0, var2, true);

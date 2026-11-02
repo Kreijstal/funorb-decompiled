@@ -41,7 +41,7 @@ final class dn {
         Exception var10 = null;
         dj var11 = null;
         int var12 = 0;
-        um var13 = null;
+        ResourceArchive var13 = null;
         char[] var14 = null;
         char[] var15 = null;
         var12 = Chess.field_G;
@@ -53,8 +53,8 @@ final class dn {
           var7 = var14;
           var8 = new di[var5_int];
           if (param4 != 13911) {
-            var13 = (um) null;
-            dn.a(21, -29, (byte) 51, (um) null, (um) null);
+            var13 = (ResourceArchive) null;
+            dn.a(21, -29, (byte) 51, (ResourceArchive) null, (ResourceArchive) null);
           }
           var9 = 49;
           try {
@@ -132,7 +132,7 @@ final class dn {
         field_a = null;
     }
 
-    final static pm a(int param0, int param1, byte param2, um param3, um param4) {
+    final static pm a(int param0, int param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         pm stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

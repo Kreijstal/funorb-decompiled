@@ -86,7 +86,7 @@ final class gn {
         return gn.a(var4);
     }
 
-    final void a(p param0, ll param1) {
+    final void a(PacketBuffer param0, ll param1) {
         int var3;
         int var4;
         int var5;

@@ -77,11 +77,11 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
           var5 = qn.field_U;
           var5.f(param0, param2 - 165);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.c(2, (byte) 68);
           var5.a(-121, param1);
-          var5.a(-var4 + var5.field_l, -1);
+          var5.a(-var4 + var5.position, -1);
           stackIn_24_0 = null;
           return (String) (stackIn_24_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

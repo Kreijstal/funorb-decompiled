@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uj extends o {
+final class uj extends IntrusiveNode {
     static String field_o;
     static String field_m;
     static String field_l;
@@ -277,7 +277,7 @@ final class uj extends o {
               si.d(65280);
               return;
             }
-            var5_int = -var9.field_l + sb.field_sb;
+            var5_int = -var9.position + sb.field_sb;
             var11 = var4_ref_pa.field_q;
             var10 = var11;
             var6 = var10;
@@ -287,16 +287,16 @@ final class uj extends o {
             for (var7 = 0; var5_int > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.i(-80) << (ce.a(3, var7) << 8));
             }
-            var4_ref_pa.c(param0 ^ 2146);
+            var4_ref_pa.unlink(param0 ^ 2146);
             return;
           }
           if (1 == var2) {
             var4 = var9.a(false);
-            var5 = (dc) (fa.field_j.g(-18110));
+            var5 = (dc) (GameAppletShell.field_j.g(-18110));
             while (var5 != null) {
               if (~var5.field_j != ~var3 ||
                 var4 != var5.field_l) {
-                var5 = (dc) (fa.field_j.a((byte) -128));
+                var5 = (dc) (GameAppletShell.field_j.a((byte) -128));
                 continue;
               }
               break;
@@ -305,7 +305,7 @@ final class uj extends o {
               si.d(param0 + 65523);
               return;
             }
-            var5.c(-2193);
+            var5.unlink(-2193);
             return;
           }
           fg.a((Throwable) null, (byte) -77, "LR1: " + tm.b((byte) -127));

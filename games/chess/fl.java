@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends o {
+final class fl extends IntrusiveNode {
     nl[] field_u;
     static int field_n;
     static String field_k;
@@ -16,7 +16,7 @@ final class fl extends o {
     int field_l;
     static int field_x;
     static String field_s;
-    static um field_m;
+    static ResourceArchive field_m;
 
     final static ci c(byte param0) {
         if (param0 != 70) {
@@ -32,7 +32,7 @@ final class fl extends o {
         synchronized (var1) {
           wh.field_f = nd.field_l;
           qf.field_a = qf.field_a + 1;
-          hn.field_k = o.field_b;
+          hn.field_k = IntrusiveNode.field_b;
           if (!param0) {
             fl.b(true);
           }

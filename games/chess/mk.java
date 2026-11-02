@@ -188,7 +188,7 @@ final class mk {
                 var12.field_fc.a((byte) 125, var12.field_Ib);
               }
               var12.field_Wb = new ci(0L, (ci) null);
-              if ((1 << ke.field_d & var14) != 0) {
+              if ((1 << IsaacCipher.field_d & var14) != 0) {
                 var12.field_fc.a((byte) 124, var12.field_Wb);
               }
               var45 = var12.field_kc;
@@ -322,7 +322,7 @@ final class mk {
                   }
                   else {
                     if (var12.field_Mb == 2) {
-                      var12.field_Rb.field_db = ke.field_l;
+                      var12.field_Rb.field_db = IsaacCipher.field_l;
                     } else {
                       var12.field_Qb.field_db = fn.field_d;
                     }
@@ -400,7 +400,7 @@ final class mk {
                 var12.field_Ib.a(var34_int, var52_ref.field_v, -2147483648, var12.field_fc.field_pb, 0);
                 var34_int = var34_int + (var52_ref.field_v + qc.field_e);
               }
-              if ((var14Lifetime1 & 1 << ke.field_d) != 0) {
+              if ((var14Lifetime1 & 1 << IsaacCipher.field_d) != 0) {
                 stackIn_89_0 = ad.field_c;
                 if (var12.field_lc) {
                   stackIn_92_1 = 1;

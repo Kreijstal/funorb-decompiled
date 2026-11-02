@@ -193,7 +193,7 @@ final class rm extends mf {
         return var3;
     }
 
-    final static int a(p param0, String param1, int param2) {
+    final static int a(PacketBuffer param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -206,15 +206,15 @@ final class rm extends mf {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param0.field_l;
+          var3_int = param0.position;
           var5 = (CharSequence) ((Object) param1);
           var4 = dj.a(var5, 0);
           param0.b((byte) -127, var4.length);
-          param0.field_l = param0.field_l + cg.field_c.a(true, var4.length, 0, var4, param0.field_o, param0.field_l);
+          param0.position = param0.position + cg.field_c.a(true, var4.length, 0, var4, param0.data, param0.position);
           if (param2 != 16711422) {
             rm.a(-114);
           }
-          stackIn_3_0 = -var3_int + param0.field_l;
+          stackIn_3_0 = -var3_int + param0.position;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

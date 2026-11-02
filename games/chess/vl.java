@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vl extends nm {
+final class vl extends PcmStream {
     private int[] field_F;
     int[] field_E;
     private qd[][] field_u;
@@ -46,7 +46,7 @@ final class vl extends nm {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int sampleCount) {
         int var2;
         long var3;
         int var5;
@@ -55,22 +55,22 @@ final class vl extends nm {
         if (this.field_v.e()) {
           var2 = this.field_v.field_h * this.field_w / md.field_l;
           while (true) {
-            var3 = (long)param0 * (long)var2 + this.field_N;
+            var3 = (long)sampleCount * (long)var2 + this.field_N;
             if (this.field_J - var3 >= 0L) {
               this.field_N = var3;
               break;
             }
             var5 = (int)((-1L + (long)var2 + (this.field_J - this.field_N)) / (long)var2);
             this.field_N = this.field_N + (long)var5 * (long)var2;
-            this.field_B.a(var5);
-            param0 = param0 - var5;
+            this.field_B.skip(var5);
+            sampleCount = sampleCount - var5;
             this.d(0);
             if (!this.field_v.e()) {
               break;
             }
           }
         }
-        this.field_B.a(param0);
+        this.field_B.skip(sampleCount);
     }
 
     final boolean a(byte param0, qd param1) {
@@ -89,7 +89,7 @@ final class vl extends nm {
           if (param1.field_J < 0) {
             return true;
           }
-          param1.c(-2193);
+          param1.unlink(-2193);
           if (param1.field_A > 0 &&
             this.field_U[param1.field_n][param1.field_A] == param1) {
             this.field_U[param1.field_n][param1.field_A] = null;
@@ -150,7 +150,7 @@ final class vl extends nm {
           if (0 <= param4.field_J && (null == param4.field_j ||
             param4.field_j.h())) {
             param4.c((byte) 124);
-            param4.c(-2193);
+            param4.unlink(-2193);
             if (0 < param4.field_A) {
               if (param4 != this.field_U[param4.field_n][param4.field_A]) {
                 return true;
@@ -232,14 +232,14 @@ final class vl extends nm {
           if (param2 != null) {
             param4.field_j.a(param2, param3, param1);
           } else {
-            param4.field_j.a(param1);
+            param4.field_j.skip(param1);
           }
           if (param4.field_j.g()) {
             this.field_B.field_p.a(param4.field_j);
           }
           param4.c((byte) 117);
           if (param4.field_J >= 0) {
-            param4.c(param0 - 2228);
+            param4.unlink(param0 - 2228);
             if (0 < param4.field_A &&
               param4 == this.field_U[param4.field_n][param4.field_A]) {
               this.field_U[param4.field_n][param4.field_A] = null;
@@ -350,9 +350,9 @@ final class vl extends nm {
         var7.field_p = 0;
         var7.field_y = 0;
         if (this.field_r[param1] == 0) {
-          var7.field_j = na.a(var6, this.a(83, var7), this.a(var7, (byte) -128), this.b(1311, var7));
+          var7.field_j = PcmSampleStream.a(var6, this.a(83, var7), this.a(var7, (byte) -128), this.b(1311, var7));
         } else {
-          var7.field_j = na.a(var6, this.a(90, var7), 0, this.b(1311, var7));
+          var7.field_j = PcmSampleStream.a(var6, this.a(90, var7), 0, this.b(1311, var7));
           stackIn_17_1 = -109;
           stackIn_17_2 = var7;
           if (0 <= var10.field_p[param0]) {
@@ -376,7 +376,7 @@ final class vl extends nm {
           }
           this.field_U[param1][var7.field_A] = var7;
         }
-        this.field_B.field_x.a((o) (var7), (byte) -46);
+        this.field_B.field_x.a((IntrusiveNode) (var7), (byte) -46);
         if (param3 != -21164) {
           return;
         }
@@ -449,7 +449,7 @@ final class vl extends nm {
             if (0 > var3.field_J) {
               this.field_u[var3.field_n][var3.field_C] = null;
             }
-            var3.c(-2193);
+            var3.unlink(-2193);
           }
           var3 = (qd) (this.field_B.field_x.a((byte) -108));
         }
@@ -589,7 +589,7 @@ final class vl extends nm {
         }
     }
 
-    final synchronized nm b() {
+    final synchronized PcmStream b() {
         return null;
     }
 
@@ -610,7 +610,7 @@ final class vl extends nm {
         }
     }
 
-    final synchronized boolean a(um param0, int param1, int param2, pf param3, fe param4) {
+    final synchronized boolean a(ResourceArchive param0, int param1, int param2, pf param3, fe param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -641,7 +641,7 @@ final class vl extends nm {
           }
           var8 = (td) (param3.field_k.a(true));
           while (var8 != null) {
-            var9 = (int)var8.field_e;
+            var9 = (int)var8.key;
             var12 = (kf) (this.field_s.a(71, (long)var9));
             if (var12 == null) {
               var13 = ij.a(-109, var9, param0);
@@ -777,8 +777,8 @@ final class vl extends nm {
         }
     }
 
-    final synchronized nm a() {
-        return (nm) ((Object) this.field_B);
+    final synchronized PcmStream a() {
+        return (PcmStream) ((Object) this.field_B);
     }
 
     private final void a(byte param0, int param1) {
@@ -1256,7 +1256,7 @@ final class vl extends nm {
         this.field_t[param2] = param0;
     }
 
-    final static void a(p param0, ln param1, boolean param2, int param3) {
+    final static void a(PacketBuffer param0, ln param1, boolean param2, int param3) {
         int var8 = 0;
         ln stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
@@ -1323,17 +1323,17 @@ final class vl extends nm {
           var6 = stackIn_31_0;
           param0.a(param1.field_sc.length, (byte) 125, param1.field_sc, 0);
           param1.field_Ub = param0.f(674914976);
-          param1.field_Jb = ud.a(2) - (long)param0.e((byte) -104);
+          param1.field_Jb = ud.a(2) - (long)param0.readInt((byte) -104);
           if (var5 == 0) {
             param1.field_pc = -1;
           } else {
-            param1.field_pc = param0.e((byte) -110);
+            param1.field_pc = param0.readInt((byte) -110);
           }
           param1.field_Fb = param0.d((byte) -50);
-          var7 = param0.field_l;
+          var7 = param0.position;
           param1.field_Gb = param0.d(0);
           if (var6 != 0) {
-            param0.field_l = var7;
+            param0.position = var7;
             param1.field_ec = new String[param1.field_Xb];
             for (var8 = 0; param1.field_Xb > var8; var8++) {
               param1.field_ec[var8] = param0.d(0);

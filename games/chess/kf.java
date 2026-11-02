@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends o {
+final class kf extends IntrusiveNode {
     private int[] field_o;
     dl[] field_r;
     int field_n;
@@ -201,7 +201,7 @@ final class kf extends o {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        p var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         dl var40 = null;
         byte[] var41 = null;
@@ -285,41 +285,41 @@ final class kf extends o {
           this.field_p = new short[128];
           this.field_s = new lm[128];
           this.field_l = new byte[128];
-          var38 = new p(param0);
-          for (var3 = 0; 0 != var38.field_o[var38.field_l + var3]; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; 0 != var38.data[var38.position + var3]; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var5 < var3; var5++) {
-            var4[var5] = var38.g(0);
+            var4[var5] = var38.readByte(0);
           }
-          var38.field_l = var38.field_l + 1;
+          var38.position = var38.position + 1;
           var3++;
-          var5Lifetime1 = var38.field_l;
-          var38.field_l = var38.field_l + var3;
-          for (var6 = 0; var38.field_o[var38.field_l + var6] != 0; var6++) {
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.data[var38.position + var6] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var8 < var6; var8++) {
-            var7[var8] = var38.g(0);
+            var7[var8] = var38.readByte(0);
           }
-          var38.field_l = var38.field_l + 1;
+          var38.position = var38.position + 1;
           var6++;
-          var8Lifetime1 = var38.field_l;
-          var38.field_l = var38.field_l + var6;
-          for (var9 = 0; 0 != var38.field_o[var38.field_l + var9]; var9++) {
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; 0 != var38.data[var38.position + var9]; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var11_int < var9; var11_int++) {
-            var10[var11_int] = var38.g(0);
+            var10[var11_int] = var38.readByte(0);
           }
           var9++;
-          var38.field_l = var38.field_l + 1;
+          var38.position = var38.position + 1;
           var53 = new byte[var9];
           var39 = var53;
           var11 = var39;
@@ -376,15 +376,15 @@ final class kf extends o {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.field_o[var17 + var38.field_l] != 0; var17++) {
+          for (var17 = 0; var38.data[var17 + var38.position] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var19 < var17; var19++) {
-            var18[var19] = var38.g(0);
+            var18[var19] = var38.readByte(0);
           }
-          var38.field_l = var38.field_l + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; 128 > var20; var20++) {
@@ -425,7 +425,7 @@ final class kf extends o {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = var38.field_o[incrementValue$6] - 1;
+                var23Lifetime1 = var38.data[incrementValue$6] - 1;
               }
               this.field_l[var24] = (byte)var23Lifetime1;
               var20Lifetime3--;
@@ -444,7 +444,7 @@ final class kf extends o {
                 }
                 incrementValue$4 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = var38.field_o[incrementValue$4] + 16 << 2;
+                var24Lifetime1 = var38.data[incrementValue$4] + 16 << 2;
               }
               var20Lifetime4--;
               this.field_q[var25_int] = (byte)var24Lifetime1;
@@ -489,23 +489,23 @@ final class kf extends o {
             var45 = var13[var27Lifetime1];
             if (var45.field_a != null) {
               for (var29 = 1; var29 < var45.field_a.length; var29 += 2) {
-                var45.field_a[var29] = var38.g(0);
+                var45.field_a[var29] = var38.readByte(0);
               }
             }
             if (null != var45.field_k) {
               for (var29Lifetime5 = 3; var29Lifetime5 < var45.field_k.length - 2; var29Lifetime5 += 2) {
-                var45.field_k[var29Lifetime5] = var38.g(0);
+                var45.field_k[var29Lifetime5] = var38.readByte(0);
               }
             }
           }
           if (var15 != null) {
             for (var27Lifetime2 = 1; var27Lifetime2 < var46.length; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.g(0);
+              var15[var27Lifetime2] = var38.readByte(0);
             }
           }
           if (var16 != null) {
             for (var27Lifetime3 = 1; var27Lifetime3 < var47.length; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.g(0);
+              var16[var27Lifetime3] = var38.readByte(0);
             }
           }
           for (var27Lifetime4 = 0; var27Lifetime4 < var12; var27Lifetime4++) {

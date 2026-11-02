@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends p {
+final class nk extends PacketBuffer {
     static String field_u;
     private int field_s;
-    private ke field_p;
+    private IsaacCipher field_p;
     static int[][] field_r;
     static jc field_t;
     static String field_v;
     static String[] field_x;
-    static fa field_w;
+    static GameAppletShell field_w;
     static int field_q;
 
     final void m(int param0) {
-        this.field_s = 8 * this.field_l;
+        this.field_s = 8 * this.position;
         if (param0 != -27123) {
           field_r = (int[][]) null;
         }
@@ -30,14 +30,14 @@ final class nk extends p {
         while (param1 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_o[incrementValue$0] & mi.field_s[var4]) << param1 - var4);
+          var5 = var5 + ((this.data[incrementValue$0] & mi.field_s[var4]) << param1 - var4);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (var4 != param1) {
-          var5 = var5 + (this.field_o[var3] >> var4 - param1 & mi.field_s[param1]);
+          var5 = var5 + (this.data[var3] >> var4 - param1 & mi.field_s[param1]);
         } else {
-          var5 = var5 + (mi.field_s[var4] & this.field_o[var3]);
+          var5 = var5 + (mi.field_s[var4] & this.data[var3]);
         }
         return var5;
     }
@@ -48,11 +48,11 @@ final class nk extends p {
 
     final void g(byte param0) {
         if (param0 >= 44) {
-          this.field_l = (7 + this.field_s) / 8;
+          this.position = (7 + this.field_s) / 8;
           return;
         }
         this.g((byte) -48);
-        this.field_l = (7 + this.field_s) / 8;
+        this.position = (7 + this.field_s) / 8;
     }
 
     nk(byte[] param0) {
@@ -62,19 +62,19 @@ final class nk extends p {
     final int n(int param0) {
         int fieldTemp$0 = 0;
         if (param0 < -15) {
-          fieldTemp$0 = this.field_l;
-          this.field_l = this.field_l + 1;
-          return this.field_o[fieldTemp$0] - this.field_p.b(-1) & 255;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.data[fieldTemp$0] - this.field_p.nextValue(-1) & 255;
         }
         field_x = (String[]) null;
-        int fieldTemp$1 = this.field_l;
-        this.field_l = this.field_l + 1;
-        return this.field_o[fieldTemp$1] - this.field_p.b(-1) & 255;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return this.data[fieldTemp$1] - this.field_p.nextValue(-1) & 255;
     }
 
     final void a(int[] param0, byte param1) {
         try {
-          this.field_p = new ke(param0);
+          this.field_p = new IsaacCipher(param0);
           if (param1 != -92) {
             this.n(-19);
           }
@@ -95,9 +95,9 @@ final class nk extends p {
         var6 = Chess.field_G;
         try {
           for (var5_int = 0; param0 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_l;
-            this.field_l = this.field_l + 1;
-            param1[param3 + var5_int] = (byte)(this.field_o[fieldTemp$0] - this.field_p.b(-1));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param1[param3 + var5_int] = (byte)(this.data[fieldTemp$0] - this.field_p.nextValue(-1));
           }
           if (!param2) {
             return;
@@ -167,9 +167,9 @@ final class nk extends p {
     }
 
     final void f(int param0, int param1) {
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_o[fieldTemp$0] = (byte)(param0 + this.field_p.b(-1));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.data[fieldTemp$0] = (byte)(param0 + this.field_p.nextValue(-1));
         if (param1 > -49) {
           String var4 = (String) null;
           nk.a(true, (String) null, (String) null, true);

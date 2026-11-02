@@ -139,7 +139,7 @@ final class nj extends hl {
         return bd.field_d;
     }
 
-    final static void a(byte param0, p param1) {
+    final static void a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -420,12 +420,12 @@ final class nj extends hl {
     final static void a(boolean param0, int param1, String param2, boolean param3) {
         bo.a((byte) 123);
         jh.field_e.i(0);
-        um.field_b = new wf(pi.field_a, (String) null, dk.field_g, param0, param3);
+        ResourceArchive.field_b = new wf(pi.field_a, (String) null, dk.field_g, param0, param3);
         if (param1 != 2) {
           return;
         }
         try {
-          field_w = new sb(jh.field_e, um.field_b);
+          field_w = new sb(jh.field_e, ResourceArchive.field_b);
           jh.field_e.b(field_w, (byte) -75);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "nj.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

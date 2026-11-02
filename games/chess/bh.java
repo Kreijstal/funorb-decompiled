@@ -87,8 +87,8 @@ abstract class bh extends mf implements ra {
           }
           var5 = qn.field_U;
           var5.f(param2, param1 ^ -90);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.c(1, (byte) -98);
           var5.c(param0.field_j, (byte) -72);
           var5.c((byte) -125, param0.field_l);
@@ -97,7 +97,7 @@ abstract class bh extends mf implements ra {
           var5.d(param0.field_p, (byte) -81);
           var5.d(param0.field_r, (byte) -81);
           var5.b(var4, (byte) -125);
-          var5.a(-var4 + var5.field_l, -1);
+          var5.a(-var4 + var5.position, -1);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "bh.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -585,11 +585,11 @@ abstract class bh extends mf implements ra {
           if (tc.field_z != null) {
             try {
               tc.field_z.a(0L, 0);
-              tc.field_z.a(tk.field_h.field_l, 24, -1, tk.field_h.field_o);
+              tc.field_z.a(tk.field_h.position, 24, -1, tk.field_h.data);
             } catch (Exception exception) {
             }
           }
-          tk.field_h.field_l = tk.field_h.field_l + 24;
+          tk.field_h.position = tk.field_h.position + 24;
           if (param0 != -74) {
             field_H = (String) null;
           }

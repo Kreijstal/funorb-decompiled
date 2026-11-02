@@ -42,7 +42,7 @@ final class jg extends bh implements mj {
         vk.field_g = 0;
     }
 
-    final static km[] a(byte param0, int param1, um param2, int param3) {
+    final static km[] a(byte param0, int param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bo {
-    static um field_d;
+    static ResourceArchive field_d;
     static String field_a;
     static boolean field_c;
     static ci field_b;

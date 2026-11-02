@@ -8,12 +8,12 @@ final class kl {
     static String field_a;
     static int field_i;
     private int field_b;
-    private o[] field_e;
+    private IntrusiveNode[] field_e;
     static String field_g;
     static String field_l;
     static int[] field_h;
-    private o field_c;
-    private o field_j;
+    private IntrusiveNode field_c;
+    private IntrusiveNode field_j;
 
     final static Class a(int param0, String param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
@@ -80,37 +80,37 @@ final class kl {
         }
     }
 
-    final void a(int param0, long param1, o param2) {
-        o var5 = null;
+    final void a(int param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param2.field_c != null) {
-            param2.c(-2193);
+          if (param2.next != null) {
+            param2.unlink(-2193);
           }
           var5 = this.field_e[(int)((long)(-1 + this.field_b) & param1)];
-          param2.field_h = var5;
-          param2.field_c = var5.field_c;
-          param2.field_c.field_h = param2;
-          param2.field_e = param1;
-          param2.field_h.field_c = param2;
+          param2.previous = var5;
+          param2.next = var5.next;
+          param2.next.previous = param2;
+          param2.key = param1;
+          param2.previous.next = param2;
           int var6 = -127 % ((-35 - param0) / 62);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "kl.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final o a(int param0, long param1) {
-        o var6 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var6 = null;
         int var7 = Chess.field_G;
-        o var4 = this.field_e[(int)((long)(this.field_b - 1) & param1)];
-        this.field_j = var4.field_h;
+        IntrusiveNode var4 = this.field_e[(int)((long)(this.field_b - 1) & param1)];
+        this.field_j = var4.previous;
         int var5 = 101 / ((-50 - param0) / 58);
         while (this.field_j != var4) {
-          if (~param1 == ~this.field_j.field_e) {
+          if (~param1 == ~this.field_j.key) {
             var6 = this.field_j;
-            this.field_j = this.field_j.field_h;
+            this.field_j = this.field_j.previous;
             return var6;
           }
-          this.field_j = this.field_j.field_h;
+          this.field_j = this.field_j.previous;
         }
         this.field_j = null;
         return null;
@@ -146,46 +146,46 @@ final class kl {
         }
     }
 
-    final o b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        o var4;
-        o var5;
-        o var8;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var8;
         var3 = Chess.field_G;
         if (0 >= this.field_d) {
           do {
             if (this.field_b <= this.field_d) {
               if (param0 < 64) {
-                return (o) null;
+                return (IntrusiveNode) null;
               }
               return null;
             }
             fieldTemp$1 = this.field_d;
             this.field_d = this.field_d + 1;
-            var4 = this.field_e[fieldTemp$1].field_h;
+            var4 = this.field_e[fieldTemp$1].previous;
           } while (this.field_e[-1 + this.field_d] == var4);
-          this.field_c = var4.field_h;
+          this.field_c = var4.previous;
           return var4;
         }
         if (this.field_e[this.field_d - 1] != this.field_c) {
           var8 = this.field_c;
-          this.field_c = var8.field_h;
+          this.field_c = var8.previous;
           return var8;
         }
         do {
           if (this.field_b <= this.field_d) {
             if (param0 < 64) {
-              return (o) null;
+              return (IntrusiveNode) null;
             }
             return null;
           }
           fieldTemp$0 = this.field_d;
           this.field_d = this.field_d + 1;
-          var5 = this.field_e[fieldTemp$0].field_h;
+          var5 = this.field_e[fieldTemp$0].previous;
         } while (this.field_e[-1 + this.field_d] == var5);
-        this.field_c = var5.field_h;
+        this.field_c = var5.previous;
         return var5;
     }
 
@@ -203,7 +203,7 @@ final class kl {
         kl.a((java.awt.Canvas) null, (byte) 34);
     }
 
-    final o a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         this.field_d = 0;
         if (!param0) {
           this.a(-106, 109L);
@@ -214,17 +214,17 @@ final class kl {
 
     kl(int param0) {
         int var2 = 0;
-        o dupTemp$1 = null;
-        o var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_d = 0;
-        this.field_e = new o[param0];
+        this.field_e = new IntrusiveNode[param0];
         this.field_b = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new o();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          var3.field_c = var3;
-          var3.field_h = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

@@ -7,7 +7,7 @@ final class li {
     static double[] field_e;
     static String field_c;
     static String field_b;
-    static um field_g;
+    static ResourceArchive field_g;
     static java.awt.Font field_f;
 
     final static hg a(int param0, int param1) {
@@ -39,7 +39,7 @@ final class li {
         }
     }
 
-    final static km a(int param0, byte param1, um param2, int param3) {
+    final static km a(int param0, byte param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         km stackIn_5_0 = null;
         km stackIn_7_0 = null;

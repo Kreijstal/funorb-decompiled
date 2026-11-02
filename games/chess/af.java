@@ -77,7 +77,7 @@ final class af {
         }
     }
 
-    final void a(int param0, p param1, uk param2, un param3) {
+    final void a(int param0, PacketBuffer param1, uk param2, un param3) {
         try {
           if (param0 != 0) {
             uk var6 = (uk) null;

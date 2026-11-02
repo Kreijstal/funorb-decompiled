@@ -158,9 +158,9 @@ final class ri extends jb implements ha, we {
         }
     }
 
-    final static um a(int param0, byte param1) {
+    final static ResourceArchive a(int param0, byte param1) {
         if (param1 < 126) {
-          return (um) null;
+          return (ResourceArchive) null;
         }
         return ci.a(-17288, param0, 1, false, false, true);
     }

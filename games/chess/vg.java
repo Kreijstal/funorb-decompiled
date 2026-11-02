@@ -6,7 +6,7 @@ final class vg {
     static int field_f;
     static String field_b;
     private String field_d;
-    static p field_c;
+    static PacketBuffer field_c;
     private boolean field_e;
 
     final boolean a(int param0) {

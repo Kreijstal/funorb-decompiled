@@ -8,7 +8,7 @@ final class bb {
     static jc field_d;
     static String field_a;
 
-    final static void a(um param0, rk[] param1, um param2, byte param3, int[] param4) {
+    final static void a(ResourceArchive param0, rk[] param1, ResourceArchive param2, byte param3, int[] param4) {
         km[] dupTemp$0 = null;
         km[] dupTemp$1 = null;
         km[] dupTemp$2 = null;
@@ -208,7 +208,7 @@ final class bb {
           nj.field_x.field_R = 1;
           nj.field_x.field_y = 1;
           nj.field_x.field_fb = 1;
-          p.field_k = new ci(0L, nj.field_x);
+          PacketBuffer.field_k = new ci(0L, nj.field_x);
           pa.field_m = new ci(0L, sj.field_k);
           pa.field_m.field_y = 1;
           pa.field_m.field_G = 1;
@@ -227,9 +227,9 @@ final class bb {
           pa.field_m.field_ab = dupTemp$0;
           pa.field_m.field_Z = dupTemp$0;
           pa.field_m.field_D = rh.a(ao.a(param0, "smallbutton_disabled", 2993, "lobby"), -9568);
-          p.field_k.field_Ab = rh.a(ao.a(param0, "mediumbutton", 2993, "lobby"), param3 - 9463);
-          p.field_k.field_Q = rh.a(ao.a(param0, "mediumbutton_mouseover", 2993, "lobby"), -9568);
-          p.field_k.field_Z = rh.a(ao.a(param0, "mediumbutton_mouseheld", param3 ^ -3034, "lobby"), -9568);
+          PacketBuffer.field_k.field_Ab = rh.a(ao.a(param0, "mediumbutton", 2993, "lobby"), param3 - 9463);
+          PacketBuffer.field_k.field_Q = rh.a(ao.a(param0, "mediumbutton_mouseover", 2993, "lobby"), -9568);
+          PacketBuffer.field_k.field_Z = rh.a(ao.a(param0, "mediumbutton_mouseheld", param3 ^ -3034, "lobby"), -9568);
           nj.field_x.field_Ab = rh.a(ao.a(param0, "bigbutton", 2993, "lobby"), -9568);
           nj.field_x.field_Q = rh.a(ao.a(param0, "bigbutton_mouseover", 2993, "lobby"), param3 ^ 9527);
           nj.field_x.field_Z = rh.a(ao.a(param0, "bigbutton_mouseheld", param3 ^ -3034, "lobby"), -9568);
@@ -445,7 +445,7 @@ final class bb {
         }
         if (param1 <= 1) {
           int[] var6 = (int[]) null;
-          bb.a((um) null, (rk[]) null, (um) null, (byte) -56, (int[]) null);
+          bb.a((ResourceArchive) null, (rk[]) null, (ResourceArchive) null, (byte) -56, (int[]) null);
         }
         int var5 = tl.field_Fb.l(49) + tl.field_Fb.field_U;
         if (var5 > 640) {

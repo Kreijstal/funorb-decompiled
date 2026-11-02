@@ -82,7 +82,7 @@ final class qf {
             var23Lifetime5 = var20;
             var32Lifetime4 = var23Lifetime5;
             var23Lifetime6 = var20;
-            var19 = ua.field_e;
+            var19 = ArchiveProvider.field_e;
             var18.field_b.a((byte) -110, var19, var20, 13);
           }
           if (param2 <= 5) {

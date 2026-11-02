@@ -7,7 +7,7 @@ final class qa {
     static String field_d;
     static String field_b;
     static String field_g;
-    static um field_c;
+    static ResourceArchive field_c;
     static id field_f;
 
     final static void a(byte param0, String param1, java.applet.Applet param2) {

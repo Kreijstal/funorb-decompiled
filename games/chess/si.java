@@ -65,9 +65,9 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
         if (param0 != 65280) {
           return;
         }
-        if (lj.field_a != null) {
-          lj.field_a.a(-1);
-          lj.field_a = null;
+        if (ArchiveIndex.field_a != null) {
+          ArchiveIndex.field_a.a(-1);
+          ArchiveIndex.field_a = null;
         }
     }
 
@@ -99,15 +99,15 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
     final static void a(int param0, int param1) {
         nk var2 = qn.field_U;
         var2.f(param1, -68);
-        var2.field_l = var2.field_l + 1;
+        var2.position = var2.position + 1;
         int var3 = -54 % ((param0 - 63) / 36);
-        int var4 = var2.field_l;
+        int var4 = var2.position;
         var2.c(5, (byte) -79);
         var2.c(pd.field_Rb.field_hc, (byte) 66);
         int var5 = (pd.field_Rb.field_Mb << 6) + pd.field_Rb.field_ic;
         var2.c(var5, (byte) -62);
         var2.a(pd.field_Rb.field_sc, (byte) -45, 0, pd.field_Rb.field_sc.length);
-        var2.a(var2.field_l - var4, -1);
+        var2.a(var2.position - var4, -1);
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {

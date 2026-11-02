@@ -14,13 +14,13 @@ final class ng {
           if (param5 < 23) {
             field_d = (String) null;
           }
-          qn.field_U.field_l = qn.field_U.field_l + 1;
-          var7_int = qn.field_U.field_l;
+          qn.field_U.position = qn.field_U.position + 1;
+          var7_int = qn.field_U.position;
           qn.field_U.a(-107, param2);
           qn.field_U.a(-110, param4);
           qn.field_U.c(param3, (byte) -126);
           qn.field_U.c(param1 ? 1 : 0, (byte) -95);
-          qn.field_U.a(qn.field_U.field_l - var7_int, -1);
+          qn.field_U.a(qn.field_U.position - var7_int, -1);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ng.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

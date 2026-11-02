@@ -38,7 +38,7 @@ final class dj extends l {
         return var2.toString();
     }
 
-    final void a(p param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -87,16 +87,16 @@ final class dj extends l {
         byte[] var6_ref_byte__ = null;
         byte[] var7 = null;
         Object var8 = null;
-        p var10 = null;
+        PacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         try {
-          var10 = new p(param0);
+          var10 = new PacketBuffer(param0);
           var3 = 92 % ((61 - param1) / 50);
           var4 = var10.i(-92);
-          var5 = var10.e((byte) -124);
+          var5 = var10.readInt((byte) -124);
           if (var5 >= 0 && (0 == je.field_l ||
             !(var5 > je.field_l))) {
             if (var4 == 0) {
@@ -107,7 +107,7 @@ final class dj extends l {
               stackIn_7_0 = var6_ref_byte__;
               return stackIn_7_0;
             }
-            var6 = var10.e((byte) -93);
+            var6 = var10.readInt((byte) -93);
             if (var6 >= 0 && (je.field_l == 0 ||
               !(je.field_l < var6))) {
               var14 = new byte[var6];
@@ -305,7 +305,7 @@ final class dj extends l {
         field_w = null;
     }
 
-    private final void a(int param0, int param1, p param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;

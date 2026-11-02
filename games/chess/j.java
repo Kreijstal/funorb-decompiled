@@ -22,8 +22,8 @@ final class j extends l {
           }
         }
         if (param0 != 0) {
-          p var4 = (p) null;
-          this.a((p) null, -30);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a((PacketBuffer) null, -30);
         }
         if (null != this.field_q) {
           var5 = 0;
@@ -40,7 +40,7 @@ final class j extends l {
         field_v = null;
     }
 
-    private final void a(int param0, p param1, boolean param2) {
+    private final void a(int param0, PacketBuffer param1, boolean param2) {
         char[] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         char stackIn_12_2 = 0;
@@ -68,7 +68,7 @@ final class j extends l {
               this.field_r = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
                 this.field_q[var5] = param1.f(674914976);
-                var6 = param1.g(0);
+                var6 = param1.readByte(0);
                 stackIn_19_0 = this.field_r;
                 stackIn_19_1 = var5;
                 if (0 == var6) {
@@ -84,7 +84,7 @@ final class j extends l {
               this.field_t = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
                 this.field_t[var5] = param1.f(674914976);
-                var6 = param1.g(0);
+                var6 = param1.readByte(0);
                 stackIn_11_0 = this.field_s;
                 stackIn_11_1 = var5;
                 if (var6 == 0) {
@@ -118,7 +118,7 @@ final class j extends l {
         }
     }
 
-    final void a(p param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;

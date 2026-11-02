@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pf extends o {
+final class pf extends IntrusiveNode {
     kl field_k;
     byte[] field_j;
 
-    final static pf a(um param0, String param1, String param2) {
+    final static pf a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, 30045, param2);
         if (var3 == null) {
           return null;
         }
-        return new pf(new p(var3));
+        return new pf(new PacketBuffer(var3));
     }
 
     final void a() {
@@ -118,7 +118,7 @@ final class pf extends o {
         }
     }
 
-    private pf(p param0) {
+    private pf(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -147,7 +147,7 @@ final class pf extends o {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        p stackIn_84_0 = null;
+        PacketBuffer stackIn_84_0 = null;
         int stackIn_85_1 = 0;
         int stackIn_91_0 = 0;
         int var2;
@@ -199,7 +199,7 @@ final class pf extends o {
         int var48;
         int var49;
         int var50;
-        p var51;
+        PacketBuffer var51;
         int var52;
         int var53;
         int var54;
@@ -221,11 +221,11 @@ final class pf extends o {
         int var15Lifetime2;
         int var28Lifetime1;
         int var29Lifetime1;
-        param0.field_l = param0.field_o.length - 3;
+        param0.position = param0.data.length - 3;
         var2 = param0.i(-93);
         var3 = param0.f(674914976);
         var4 = 14 + var2 * 10;
-        param0.field_l = 0;
+        param0.position = 0;
         var5 = 0;
         var6 = 0;
         var7 = 0;
@@ -284,13 +284,13 @@ final class pf extends o {
         var4 = var4 + 5 * var5;
         var4 = var4 + 2 * (var7 + var8 + var6 + var9 + var11);
         var4 = var4 + (var10 + var12);
-        var13Lifetime1 = param0.field_l;
+        var13Lifetime1 = param0.position;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
           param0.c((byte) 95);
         }
-        var4 = var4 + (param0.field_l - var13Lifetime1);
-        var15Lifetime2 = param0.field_l;
+        var4 = var4 + (param0.position - var13Lifetime1);
+        var15Lifetime2 = param0.position;
         var16 = 0;
         var17 = 0;
         var18 = 0;
@@ -377,50 +377,50 @@ final class pf extends o {
           }
         }
         var29Lifetime1 = 0;
-        var30 = param0.field_l;
-        param0.field_l = param0.field_l + var26;
-        var31 = param0.field_l;
-        param0.field_l = param0.field_l + var11;
-        var32 = param0.field_l;
-        param0.field_l = param0.field_l + var10;
-        var33 = param0.field_l;
-        param0.field_l = param0.field_l + var9;
-        var34 = param0.field_l;
-        param0.field_l = param0.field_l + var16;
-        var35 = param0.field_l;
-        param0.field_l = param0.field_l + var18;
-        var36 = param0.field_l;
-        param0.field_l = param0.field_l + var20;
-        var37 = param0.field_l;
-        param0.field_l = param0.field_l + (var7 + var8 + var11);
-        var38 = param0.field_l;
-        param0.field_l = param0.field_l + var7;
-        var39 = param0.field_l;
-        param0.field_l = param0.field_l + var27;
-        var40 = param0.field_l;
-        param0.field_l = param0.field_l + var8;
-        var41 = param0.field_l;
-        param0.field_l = param0.field_l + var17;
-        var42 = param0.field_l;
-        param0.field_l = param0.field_l + var19;
-        var43 = param0.field_l;
-        param0.field_l = param0.field_l + var21;
-        var44 = param0.field_l;
-        param0.field_l = param0.field_l + var12;
-        var45 = param0.field_l;
-        param0.field_l = param0.field_l + var9;
-        var46 = param0.field_l;
-        param0.field_l = param0.field_l + var22;
-        var47 = param0.field_l;
-        param0.field_l = param0.field_l + var23;
-        var48 = param0.field_l;
-        param0.field_l = param0.field_l + var24;
-        var49 = param0.field_l;
-        param0.field_l = param0.field_l + var25;
-        var50 = param0.field_l;
-        param0.field_l = param0.field_l + var5 * 3;
+        var30 = param0.position;
+        param0.position = param0.position + var26;
+        var31 = param0.position;
+        param0.position = param0.position + var11;
+        var32 = param0.position;
+        param0.position = param0.position + var10;
+        var33 = param0.position;
+        param0.position = param0.position + var9;
+        var34 = param0.position;
+        param0.position = param0.position + var16;
+        var35 = param0.position;
+        param0.position = param0.position + var18;
+        var36 = param0.position;
+        param0.position = param0.position + var20;
+        var37 = param0.position;
+        param0.position = param0.position + (var7 + var8 + var11);
+        var38 = param0.position;
+        param0.position = param0.position + var7;
+        var39 = param0.position;
+        param0.position = param0.position + var27;
+        var40 = param0.position;
+        param0.position = param0.position + var8;
+        var41 = param0.position;
+        param0.position = param0.position + var17;
+        var42 = param0.position;
+        param0.position = param0.position + var19;
+        var43 = param0.position;
+        param0.position = param0.position + var21;
+        var44 = param0.position;
+        param0.position = param0.position + var12;
+        var45 = param0.position;
+        param0.position = param0.position + var9;
+        var46 = param0.position;
+        param0.position = param0.position + var22;
+        var47 = param0.position;
+        param0.position = param0.position + var23;
+        var48 = param0.position;
+        param0.position = param0.position + var24;
+        var49 = param0.position;
+        param0.position = param0.position + var25;
+        var50 = param0.position;
+        param0.position = param0.position + var5 * 3;
         this.field_j = new byte[var4];
-        var51 = new p(this.field_j);
+        var51 = new PacketBuffer(this.field_j);
         var51.d(1297377380, (byte) -81);
         var51.d(6, (byte) -81);
         stackIn_84_0 = var51;
@@ -429,10 +429,10 @@ final class pf extends o {
         } else {
           stackIn_85_1 = 1;
         }
-        ((p) (Object) stackIn_84_0).b(stackIn_85_1, 100);
+        ((PacketBuffer) (Object) stackIn_84_0).b(stackIn_85_1, 100);
         var51.b(var2, 97);
         var51.b(var3, 109);
-        param0.field_l = var13Lifetime1;
+        param0.position = var13Lifetime1;
         var52 = 0;
         var53 = 0;
         var54 = 0;
@@ -448,15 +448,15 @@ final class pf extends o {
             return;
           }
           var51.d(1297379947, (byte) -81);
-          var51.field_l = var51.field_l + 4;
-          var61 = var51.field_l;
+          var51.position = var51.position + 4;
+          var61 = var51.position;
           var62 = -1;
           while (true) {
             var63 = param0.c((byte) 78);
             var51.a(false, var63);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
-            var64 = param0.field_o[incrementValue$0] & 255;
+            var64 = param0.data[incrementValue$0] & 255;
             stackIn_91_0 = (var64 == var62) ? 0 : 1;
             var65 = stackIn_91_0;
             var62 = var64 & 15;
@@ -466,7 +466,7 @@ final class pf extends o {
               }
               var51.c(47, (byte) 72);
               var51.c(0, (byte) 114);
-              var51.a(var51.field_l - var61, (byte) -62);
+              var51.a(var51.position - var61, (byte) -62);
               var60++;
               break;
             }
@@ -478,13 +478,13 @@ final class pf extends o {
               var51.c(3, (byte) 96);
               incrementValue$25 = var50;
               var50++;
-              var51.c((int) param0.field_o[incrementValue$25], (byte) 106);
+              var51.c((int) param0.data[incrementValue$25], (byte) 106);
               incrementValue$26 = var50;
               var50++;
-              var51.c((int) param0.field_o[incrementValue$26], (byte) 88);
+              var51.c((int) param0.data[incrementValue$26], (byte) 88);
               incrementValue$27 = var50;
               var50++;
-              var51.c((int) param0.field_o[incrementValue$27], (byte) -67);
+              var51.c((int) param0.data[incrementValue$27], (byte) -67);
               continue;
             }
             var52 = var52 ^ var64 >> 4;
@@ -494,10 +494,10 @@ final class pf extends o {
               }
               incrementValue$23 = var37;
               var37++;
-              var53 = var53 + param0.field_o[incrementValue$23];
+              var53 = var53 + param0.data[incrementValue$23];
               incrementValue$24 = var38;
               var38++;
-              var54 = var54 + param0.field_o[incrementValue$24];
+              var54 = var54 + param0.data[incrementValue$24];
               var51.c(var53 & 127, (byte) 71);
               var51.c(var54 & 127, (byte) -76);
               continue;
@@ -508,10 +508,10 @@ final class pf extends o {
               }
               incrementValue$21 = var37;
               var37++;
-              var53 = var53 + param0.field_o[incrementValue$21];
+              var53 = var53 + param0.data[incrementValue$21];
               incrementValue$22 = var40;
               var40++;
-              var55 = var55 + param0.field_o[incrementValue$22];
+              var55 = var55 + param0.data[incrementValue$22];
               var51.c(var53 & 127, (byte) 79);
               var51.c(var55 & 127, (byte) 86);
               continue;
@@ -523,10 +523,10 @@ final class pf extends o {
                 }
                 incrementValue$5 = var45;
                 var45++;
-                var56 = var56 + param0.field_o[incrementValue$5];
+                var56 = var56 + param0.data[incrementValue$5];
                 incrementValue$6 = var33;
                 var33++;
-                var56 = var56 + (param0.field_o[incrementValue$6] << 7);
+                var56 = var56 + (param0.data[incrementValue$6] << 7);
                 var51.c(var56 & 127, (byte) -76);
                 var51.c(var56 >> 7 & 127, (byte) -91);
                 continue;
@@ -537,7 +537,7 @@ final class pf extends o {
                 }
                 incrementValue$4 = var32;
                 var32++;
-                var57 = var57 + param0.field_o[incrementValue$4];
+                var57 = var57 + param0.data[incrementValue$4];
                 var51.c(var57 & 127, (byte) 89);
                 continue;
               }
@@ -550,7 +550,7 @@ final class pf extends o {
                 }
                 incrementValue$1 = var44;
                 var44++;
-                var51.c((int) param0.field_o[incrementValue$1], (byte) 125);
+                var51.c((int) param0.data[incrementValue$1], (byte) 125);
                 continue;
               }
               if (var65 != 0) {
@@ -558,10 +558,10 @@ final class pf extends o {
               }
               incrementValue$2 = var37;
               var37++;
-              var53 = var53 + param0.field_o[incrementValue$2];
+              var53 = var53 + param0.data[incrementValue$2];
               incrementValue$3 = var31;
               var31++;
-              var58 = var58 + param0.field_o[incrementValue$3];
+              var58 = var58 + param0.data[incrementValue$3];
               var51.c(var53 & 127, (byte) -95);
               var51.c(var58 & 127, (byte) 120);
               continue;
@@ -571,50 +571,50 @@ final class pf extends o {
             }
             incrementValue$7 = var15Lifetime2;
             var15Lifetime2++;
-            var28Lifetime1 = var28Lifetime1 + param0.field_o[incrementValue$7] & 127;
+            var28Lifetime1 = var28Lifetime1 + param0.data[incrementValue$7] & 127;
             var51.c(var28Lifetime1, (byte) -68);
             if (var28Lifetime1 != 0 &&
               var28Lifetime1 != 32) {
               if (var28Lifetime1 == 1) {
                 incrementValue$19 = var34;
                 var34++;
-                var66 = param0.field_o[incrementValue$19];
+                var66 = param0.data[incrementValue$19];
               } else if (var28Lifetime1 == 33) {
                 incrementValue$18 = var41;
                 var41++;
-                var66 = param0.field_o[incrementValue$18];
+                var66 = param0.data[incrementValue$18];
               } else if (var28Lifetime1 == 7) {
                 incrementValue$17 = var35;
                 var35++;
-                var66 = param0.field_o[incrementValue$17];
+                var66 = param0.data[incrementValue$17];
               } else if (var28Lifetime1 == 39) {
                 incrementValue$16 = var42;
                 var42++;
-                var66 = param0.field_o[incrementValue$16];
+                var66 = param0.data[incrementValue$16];
               } else if (var28Lifetime1 == 10) {
                 incrementValue$15 = var36;
                 var36++;
-                var66 = param0.field_o[incrementValue$15];
+                var66 = param0.data[incrementValue$15];
               } else if (var28Lifetime1 == 42) {
                 incrementValue$14 = var43;
                 var43++;
-                var66 = param0.field_o[incrementValue$14];
+                var66 = param0.data[incrementValue$14];
               } else if (var28Lifetime1 == 99) {
                 incrementValue$13 = var46;
                 var46++;
-                var66 = param0.field_o[incrementValue$13];
+                var66 = param0.data[incrementValue$13];
               } else if (var28Lifetime1 == 98) {
                 incrementValue$12 = var47;
                 var47++;
-                var66 = param0.field_o[incrementValue$12];
+                var66 = param0.data[incrementValue$12];
               } else if (var28Lifetime1 == 101) {
                 incrementValue$11 = var48;
                 var48++;
-                var66 = param0.field_o[incrementValue$11];
+                var66 = param0.data[incrementValue$11];
               } else if (var28Lifetime1 == 100) {
                 incrementValue$10 = var49;
                 var49++;
-                var66 = param0.field_o[incrementValue$10];
+                var66 = param0.data[incrementValue$10];
               } else if (var28Lifetime1 != 64 &&
                 var28Lifetime1 != 65 &&
                 var28Lifetime1 != 120 &&
@@ -622,16 +622,16 @@ final class pf extends o {
                 var28Lifetime1 != 123) {
                 incrementValue$8 = var39;
                 var39++;
-                var66 = param0.field_o[incrementValue$8];
+                var66 = param0.data[incrementValue$8];
               } else {
                 incrementValue$9 = var30;
                 var30++;
-                var66 = param0.field_o[incrementValue$9];
+                var66 = param0.data[incrementValue$9];
               }
             } else {
               incrementValue$20 = var44;
               var44++;
-              var66 = param0.field_o[incrementValue$20];
+              var66 = param0.data[incrementValue$20];
             }
             var66 = var66 + var70[var28Lifetime1];
             var70[var28Lifetime1] = var66;

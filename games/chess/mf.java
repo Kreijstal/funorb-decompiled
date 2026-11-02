@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class mf extends o {
+class mf extends IntrusiveNode {
     int field_r;
     static String field_x;
     int field_C;
@@ -264,7 +264,7 @@ class mf extends o {
         if (param0 >= -116) {
           return true;
         }
-        L0: {
+        regionExit1: {
           var5 = this.d((byte) -67) ? 1 : 0;
           if (param3) {
             if (0 != fl.field_p) {
@@ -306,7 +306,7 @@ class mf extends o {
                     }
                   }
                 }
-                break L0;
+                break regionExit1;
               }
               this.a(78, fl.field_p, param1, this, param2, rf.field_b, hn.field_k);
             }
@@ -340,7 +340,7 @@ class mf extends o {
                   }
                 }
               }
-              break L0;
+              break regionExit1;
             }
             if (!this.a(th.field_d, re.field_m, ag.field_f, (byte) 88, this, param1, param2)) {
               if (var5 == 0) {
@@ -353,7 +353,7 @@ class mf extends o {
                       var5 != 0 &&
                       th.field_d != 0) {
                       this.d(102);
-                      break L0;
+                      break regionExit1;
                     }
                   } else {
                     if (!(var12.field_p instanceof cj)) {
@@ -369,7 +369,7 @@ class mf extends o {
                     }
                   }
                 }
-                break L0;
+                break regionExit1;
               }
               this.d(115);
               if (var7 != 0) {
@@ -389,7 +389,7 @@ class mf extends o {
                     var5 != 0 &&
                     th.field_d != 0) {
                     this.d(102);
-                    break L0;
+                    break regionExit1;
                   }
                 } else {
                   ((cj) (var19.field_p)).a(var19, -10925, (ji) null);
@@ -398,10 +398,10 @@ class mf extends o {
                     var5 != 0 &&
                     th.field_d != 0) {
                     this.d(102);
-                    break L0;
+                    break regionExit1;
                   }
                 }
-                break L0;
+                break regionExit1;
               }
               if ((var7 != 0) && (var5 != 0 &&
                 th.field_d != 0)) {

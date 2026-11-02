@@ -150,16 +150,16 @@ final class ml {
         var5 = Chess.field_G;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            pj.field_f[var2_int] = 0;
+            GzipInflater.field_f[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; qf.field_c > var2_intLifetime1; var2_intLifetime1++) {
             if (param1.field_k == ik.field_i[var2_intLifetime1].field_k) {
               dupTemp$3 = ik.field_i[var2_intLifetime1].b(2);
-              pj.field_f[dupTemp$3] = pj.field_f[dupTemp$3] + 1;
+              GzipInflater.field_f[dupTemp$3] = GzipInflater.field_f[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param1.b(2);
-          pj.field_f[dupTemp$0] = pj.field_f[dupTemp$0] + 1;
+          GzipInflater.field_f[dupTemp$0] = GzipInflater.field_f[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           if (param0 <= 3) {
             field_f = (ci) null;
@@ -168,8 +168,8 @@ final class ml {
             boolean decompiledFrameRemainder0 = true;
             if (param1.field_k == ik.field_i[var3].field_k) {
               var4 = ik.field_i[var3].b(2);
-              if (pj.field_f[var4] > fh.field_b) {
-                pj.field_f[var4] = pj.field_f[var4] - 1;
+              if (GzipInflater.field_f[var4] > fh.field_b) {
+                GzipInflater.field_f[var4] = GzipInflater.field_f[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
@@ -211,7 +211,7 @@ final class ml {
         int var7 = param1[1].field_v;
         param1[0].b(param2, param0);
         param1[2].b(param2 + (param4 - var6), param0);
-        wb.b(o.field_d);
+        wb.b(IntrusiveNode.field_d);
         wb.e(var5_int + param2, param0, param4 + (param2 - var6), param1[1].field_u + param0);
         if (param3 > -125) {
           return;
@@ -222,7 +222,7 @@ final class ml {
           for (param2 = var8; param2 < var9; param2 = param2 + var7) {
             param1[1].b(param2, param0);
           }
-          wb.a(o.field_d);
+          wb.a(IntrusiveNode.field_d);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ml.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -403,7 +403,7 @@ final class ml {
         }
     }
 
-    final static boolean a(int param0, um param1) {
+    final static boolean a(int param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         nk var3 = null;
         boolean stackIn_3_0 = false;

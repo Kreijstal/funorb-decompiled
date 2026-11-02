@@ -37,14 +37,14 @@ final class ld {
 
     final static void a(String param0, String param1, int param2) {
         try {
-          if (null != ua.field_d) {
-            ua.field_d.k((byte) 95);
+          if (null != ArchiveProvider.field_d) {
+            ArchiveProvider.field_d.k((byte) 95);
           }
-          um.field_b = new wf(param0, param1, false, true, true);
+          ResourceArchive.field_b = new wf(param0, param1, false, true, true);
           if (param2 != 0) {
             ld.a(-20);
           }
-          nj.field_w.c(um.field_b, 69);
+          nj.field_w.c(ResourceArchive.field_b, 69);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ld.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

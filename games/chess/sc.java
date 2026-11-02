@@ -5,14 +5,14 @@ final class sc {
     static ci field_f;
     static ci field_d;
     static int field_i;
-    static um field_c;
+    static ResourceArchive field_c;
     static ci field_h;
     static String field_g;
     static String field_b;
     static int field_e;
     static lh field_a;
 
-    final static String a(String param0, um param1, int param2, String param3, byte param4) {
+    final static String a(String param0, ResourceArchive param1, int param2, String param3, byte param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -142,7 +142,7 @@ final class sc {
         try {
           if (param0 >= -112) {
             var4 = (String) null;
-            sc.a((String) null, (um) null, 101, (String) null, (byte) 55);
+            sc.a((String) null, (ResourceArchive) null, 101, (String) null, (byte) 55);
           }
           var5 = (hh) (eh.field_R.g(-18110));
           while (var5 != null) {

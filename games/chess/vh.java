@@ -61,26 +61,26 @@ final class vh {
           int var2 = 0;
           Throwable decompiledCaughtException = null;
           var2 = 94 / ((16 - param1) / 37);
-          if (lj.field_a != null && (param0 < 0 ||
+          if (ArchiveIndex.field_a != null && (param0 < 0 ||
             tb.field_f == ik.field_e)) {
-            if (qn.field_U.field_l == 0 &&
+            if (qn.field_U.position == 0 &&
               (10000L + ta.field_t) < ud.a(2)) {
               qn.field_U.f(param0, -105);
             }
-            if (qn.field_U.field_l > 0) {
+            if (qn.field_U.position > 0) {
               try {
-                lj.field_a.a(0, qn.field_U.field_l, (byte) -92, qn.field_U.field_o);
+                ArchiveIndex.field_a.a(0, qn.field_U.position, (byte) -92, qn.field_U.data);
                 ta.field_t = ud.a(2);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 si.d(65280);
               }
-              qn.field_U.field_l = 0;
+              qn.field_U.position = 0;
             }
             return;
           }
-          qn.field_U.field_l = 0;
+          qn.field_U.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -232,7 +232,7 @@ final class di extends ci {
                 oj.a(var6, (byte) -99, 1, param3);
               }
               var8 = (String) null;
-              ke.a(9822, vk.field_g, ij.field_c, param1, var5, (String) null);
+              IsaacCipher.a(9822, vk.field_g, ij.field_c, param1, var5, (String) null);
               hn.a(ij.field_c, vk.field_g, (byte) -54, var5, re.field_p);
               rc.b(param0 ^ 24);
               e.h((byte) -120);
@@ -328,7 +328,7 @@ final class di extends ci {
         }
         if (this.field_Kb != null) {
           this.field_Kb.n(105);
-          this.field_Kb.c(-2193);
+          this.field_Kb.unlink(-2193);
         }
         this.field_Kb = null;
         this.field_Jb = -1;
@@ -554,9 +554,9 @@ final class di extends ci {
             var8 = th.field_c[9] >> 2;
             var9 = th.field_c[10] >> 2;
             var10_int = th.field_c[11] >> 2;
-            var11 = var9 * ua.field_b[4] + (ua.field_b[3] * var8 + ua.field_b[5] * var10_int) >> 14;
-            var12 = var10_int * ua.field_b[8] + var8 * ua.field_b[6] + ua.field_b[7] * var9 >> 14;
-            var13 = var10_int * ua.field_b[11] + var8 * ua.field_b[9] + var9 * ua.field_b[10] >> 14;
+            var11 = var9 * ArchiveProvider.field_b[4] + (ArchiveProvider.field_b[3] * var8 + ArchiveProvider.field_b[5] * var10_int) >> 14;
+            var12 = var10_int * ArchiveProvider.field_b[8] + var8 * ArchiveProvider.field_b[6] + ArchiveProvider.field_b[7] * var9 >> 14;
+            var13 = var10_int * ArchiveProvider.field_b[11] + var8 * ArchiveProvider.field_b[9] + var9 * ArchiveProvider.field_b[10] >> 14;
             var2[var3] = var6 * var12 + (var11 * var5 + var13 * var7) >> 16;
           }
           var3Lifetime1 = th.field_c[param0] >> 8;
@@ -564,7 +564,7 @@ final class di extends ci {
           var5Lifetime1 = th.field_c[11] >> 8;
           var6Lifetime1 = sl.field_a << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = pj.a(106, var6Lifetime1) >> 8;
+          var8Lifetime1 = GzipInflater.a(106, var6Lifetime1) >> 8;
           var9Lifetime1 = rf.a(var6Lifetime1, 255) >> 8;
           if (hn.field_k != -1 &&
             rf.field_b != -1) {
@@ -594,9 +594,9 @@ final class di extends ci {
             var17 = ei.field_v[var16];
             cn.a((byte) 25, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              ua.field_b[var18] = ua.field_b[var18] + ql.field_a[var15][var18];
+              ArchiveProvider.field_b[var18] = ArchiveProvider.field_b[var18] + ql.field_a[var15][var18];
             }
-            hb.a(false, th.field_c, (byte) -98, ua.field_b, false, var17, true);
+            hb.a(false, th.field_c, (byte) -98, ArchiveProvider.field_b, false, var17, true);
             lf.a(var8Lifetime1, var17, var14, var9Lifetime1, 29521, var12Lifetime1, var13Lifetime1, var7Lifetime1);
           }
           return;

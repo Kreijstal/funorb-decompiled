@@ -21,7 +21,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (null != bj.field_cb) {
             qf.field_a = 0;
-            o.field_b = param0.getX();
+            IntrusiveNode.field_b = param0.getX();
             cb.field_b = param0.getY();
             rc.field_d = true;
           }
@@ -120,7 +120,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (bj.field_cb != null) {
             qf.field_a = 0;
-            o.field_b = -1;
+            IntrusiveNode.field_b = -1;
             cb.field_b = -1;
             rc.field_d = true;
           }
@@ -223,7 +223,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (bj.field_cb != null) {
             qf.field_a = 0;
-            o.field_b = param0.getX();
+            IntrusiveNode.field_b = param0.getX();
             cb.field_b = param0.getY();
             rc.field_d = true;
           }
@@ -243,7 +243,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             return;
           }
           qf.field_a = 0;
-          o.field_b = param0.getX();
+          IntrusiveNode.field_b = param0.getX();
           cb.field_b = param0.getY();
           rc.field_d = true;
           return;

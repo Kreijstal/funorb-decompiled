@@ -178,7 +178,7 @@ final class pd extends ci {
             return false;
           }
           if (dk.c(false)) {
-            ke.a(param0 ^ -17303, vg.field_f, hd.field_e, param1, ja.field_i, (String) null);
+            IsaacCipher.a(param0 ^ -17303, vg.field_f, hd.field_e, param1, ja.field_i, (String) null);
           }
           return true;
         }

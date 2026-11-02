@@ -4,7 +4,7 @@
 final class nc extends fb {
     private int field_R;
     int field_M;
-    static pj field_N;
+    static GzipInflater field_N;
     int field_U;
     static jc field_O;
     private ml field_S;
@@ -147,7 +147,7 @@ final class nc extends fb {
               if (var1.field_Sb == 0) {
                 var1.field_Mb = 0;
                 if (var1.l(1)) {
-                  var1.c(-2193);
+                  var1.unlink(-2193);
                 }
               }
             }
@@ -160,7 +160,7 @@ final class nc extends fb {
               if (var1_ref.field_Hb == 0) {
                 var1_ref.field_jc = 0;
                 if (var1_ref.m(-23901)) {
-                  var1_ref.c(-2193);
+                  var1_ref.unlink(-2193);
                 }
               }
             }
@@ -179,7 +179,7 @@ final class nc extends fb {
               }
               var1Lifetime1.field_Mb = 0;
               if (var1Lifetime1.l(1)) {
-                var1Lifetime1.c(-2193);
+                var1Lifetime1.unlink(-2193);
               }
             }
             var1Lifetime1 = (r) (pd.field_Sb.a((byte) -125));
@@ -197,7 +197,7 @@ final class nc extends fb {
     }
 
     static {
-        field_N = new pj();
+        field_N = new GzipInflater();
         field_O = new jc();
         field_Q = "Connection timed out. Please try using a different server.";
         field_P = "Loading fonts";

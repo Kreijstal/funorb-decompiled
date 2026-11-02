@@ -25,7 +25,7 @@ final class ig {
         }
     }
 
-    final static c a(int param0, um param1, int param2, int param3, um param4) {
+    final static c a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         c stackIn_4_0 = null;

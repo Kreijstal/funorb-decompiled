@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mm {
-    static um field_d;
+    static ResourceArchive field_d;
     static String field_c;
     static dd field_a;
     static String field_b;
     static String field_e;
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = pj.a(param1 ^ -105, param0);
+        int var3 = GzipInflater.a(param1 ^ -105, param0);
         int var4 = rf.a(param0, 255);
-        int var5 = pj.a(110, param2);
+        int var5 = GzipInflater.a(110, param2);
         if (param1 != -1) {
           mm.a(44);
         }

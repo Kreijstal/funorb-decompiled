@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class n {
-    static p field_g;
+    static PacketBuffer field_g;
     static String field_h;
     static String field_a;
     static String[] field_d;
@@ -61,7 +61,7 @@ final class n {
         field_d = null;
     }
 
-    final static void a(um param0, um param1, boolean param2, int param3, um param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, int param3, ResourceArchive param4) {
         try {
           pi.field_c = la.a(true, "");
           pi.field_c.a(false, -1730123902);

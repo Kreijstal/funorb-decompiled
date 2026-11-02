@@ -224,7 +224,7 @@ abstract class eh extends ma {
           if (0 >= param2) {
             throw new IllegalArgumentException();
           }
-          if (ua.a(param2, 14)) {
+          if (ArchiveProvider.a(param2, 14)) {
             stackIn_5_0 = (int)((long)param2 * ((long)param1.nextInt() & 4294967295L) >> 32);
             return stackIn_5_0;
           }

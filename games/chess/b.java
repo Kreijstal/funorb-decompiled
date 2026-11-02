@@ -63,11 +63,11 @@ final class b {
               var10_ref_int__ = var17;
               var11 = 0;
               var12 = 0;
-              L18: while (true) {
+              scanLoop1: while (true) {
                 if (var19.length <= var12) {
                   if (var11 == 0 &&
                     qa.field_e != param3) {
-                    break L18;
+                    break scanLoop1;
                   }
                   var8_int = 0;
                   for (var12 = 0; var19.length > var12; var12 += 2) {
@@ -80,7 +80,7 @@ final class b {
                       d.field_Gb = true;
                     }
                   }
-                  break L18;
+                  break scanLoop1;
                 }
                 var13_intLifetime1 = var19[var12];
                 var14 = var10_ref_int__[var12 + 1];
@@ -90,15 +90,15 @@ final class b {
                     var11 = 1;
                   } else {
                     if (var13_intLifetime1 >= param3) {
-                      break L18;
+                      break scanLoop1;
                     }
                     if ((255 & d.field_Jb[var13_intLifetime1]) != var14) {
-                      break L18;
+                      break scanLoop1;
                     }
                   }
                 } else {
                   if (var14 != wn.field_d[param5]) {
-                    break L18;
+                    break scanLoop1;
                   }
                 }
                 var12 += 2;
@@ -282,8 +282,8 @@ final class b {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        p var16 = null;
-        p var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -295,9 +295,9 @@ final class b {
         int var4Lifetime5;
         var15 = Chess.field_G;
         try {
-          var16 = new p(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_l = -2 + param1.length;
+          var17.position = -2 + param1.length;
           h.field_n = var17.f(674914976);
           wm.field_b = new int[h.field_n];
           a.field_c = new int[h.field_n];
@@ -306,7 +306,7 @@ final class b {
           vk.field_d = new byte[h.field_n][];
           be.field_a = new int[h.field_n];
           field_c = new int[h.field_n];
-          var17.field_l = -(8 * h.field_n) - 7 + param1.length;
+          var17.position = -(8 * h.field_n) - 7 + param1.length;
           cd.field_p = var17.f(674914976);
           ek.field_a = var17.f(674914976);
           var3 = (var17.i(-127) & 255) + 1;
@@ -322,7 +322,7 @@ final class b {
           for (var4Lifetime3 = 0; h.field_n > var4Lifetime3; var4Lifetime3++) {
             field_c[var4Lifetime3] = var17.f(674914976);
           }
-          var17.field_l = -(h.field_n * 8) - 7 + (param1.length - 3 * (-1 + var3));
+          var17.position = -(h.field_n * 8) - 7 + (param1.length - 3 * (-1 + var3));
           uh.field_r = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             uh.field_r[var4Lifetime4] = var17.k(1389913160);
@@ -330,7 +330,7 @@ final class b {
               uh.field_r[var4Lifetime4] = 1;
             }
           }
-          var17.field_l = 0;
+          var17.position = 0;
           var4Lifetime5 = 0;
           if (param0 <= 104) {
             return;
@@ -351,11 +351,11 @@ final class b {
             var11 = var17.i(-104);
             if ((1 & var11) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var17.g(0);
+                var8[var12] = var17.readByte(0);
               }
               if (0 != (var11 & 2)) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var17.g(0);
+                  dupTemp$1 = var17.readByte(0);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_31_0 = var10;
@@ -370,13 +370,13 @@ final class b {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var5 * var13 + var12] = var17.g(0);
+                  var8[var5 * var13 + var12] = var17.readByte(0);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$0 = var17.g(0);
+                    dupTemp$0 = var17.readByte(0);
                     var9[var5 * var13 + var12] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_46_0 = var10;

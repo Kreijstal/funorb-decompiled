@@ -13,7 +13,7 @@ final class ao {
     static String field_j;
     static ci field_a;
 
-    final static km[] a(um param0, String param1, int param2, String param3) {
+    final static km[] a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

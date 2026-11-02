@@ -9,15 +9,15 @@ final class ij {
     static String field_f;
     static String[] field_a;
 
-    final static void a(um param0, boolean param1, um param2, byte param3) {
+    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, byte param3) {
         try {
           da.a(fi.field_b, r.field_Tb, ic.field_c, bj.field_eb, ia.field_o, qn.field_P, af.field_o, tk.field_d, param1, false, sj.field_k, pk.field_a);
           el.field_z = ao.a(param2, "chatfilter", 2993, "lobby");
           nk.field_x[2] = ii.field_K;
           nk.field_x[1] = gg.field_g;
           if (param3 <= 70) {
-            um var5 = (um) null;
-            ij.a((um) null, false, (um) null, (byte) 17);
+            ResourceArchive var5 = (ResourceArchive) null;
+            ij.a((ResourceArchive) null, false, (ResourceArchive) null, (byte) 17);
           }
           nk.field_x[0] = fm.field_Q;
           dm.a(v.field_k, param0, 1513239);
@@ -52,7 +52,7 @@ final class ij {
         ag.field_e = true;
     }
 
-    final static kf a(int param0, int param1, um param2) {
+    final static kf a(int param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

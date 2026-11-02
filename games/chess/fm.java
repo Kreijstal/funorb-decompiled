@@ -84,7 +84,7 @@ final class fm extends kn {
         eh var3 = (eh) (var2.c(-20229));
         while (var3 != null) {
           if (var3.a(param0 - 10812)) {
-            var3.c(-2193);
+            var3.unlink(-2193);
           }
           var3 = (eh) (var2.b(8922));
         }
@@ -124,7 +124,7 @@ final class fm extends kn {
         eh var4 = (eh) (var2.c(-20229));
         while (var4 != null) {
           if (var4.g((byte) -73)) {
-            var4.c(-2193);
+            var4.unlink(-2193);
           }
           var4 = (eh) (var2.b(8922));
         }

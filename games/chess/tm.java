@@ -60,7 +60,7 @@ final class tm {
         for (var2 = 0; sb.field_sb > var2; var2++) {
           var7 = var1Lifetime1 + ' ';
           var1Lifetime1 = var7;
-          var3 = 255 & tk.field_h.field_o[var2];
+          var3 = 255 & tk.field_h.data[var2];
           var4 = var3 >> 4;
           var3 = var3 & 15;
           if (var4 < 10) {

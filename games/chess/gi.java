@@ -10,7 +10,7 @@ final class gi {
     static km[] field_c;
     static String field_f;
 
-    final static rk a(int param0, int param1, int param2, um param3) {
+    final static rk a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         rk stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

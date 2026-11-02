@@ -5,7 +5,7 @@ final class bi {
     static String field_b;
     static boolean[] field_d;
     static String[] field_c;
-    static um field_a;
+    static ResourceArchive field_a;
     static String field_e;
     static int field_f;
 

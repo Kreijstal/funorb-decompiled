@@ -13,7 +13,7 @@ final class wg extends pk {
     static hg field_r;
     int field_y;
     static String field_p;
-    static um field_q;
+    static ResourceArchive field_q;
     int field_x;
     static int field_w;
     private rk field_A;
@@ -99,14 +99,14 @@ final class wg extends pk {
             var2Lifetime1 = stackIn_16_0 | 1;
           } else {
             stackIn_33_0 = stackIn_24_0;
-            sharedTailExit_0: {
+            regionExit1: {
               if (hn.field_k <= this.field_u - var4) {
                 stackIn_35_0 = stackIn_33_0;
                 stackIn_35_1 = 1;
               } else {
                 if (rf.field_b <= this.field_A.field_i) {
                   var2Lifetime1 = stackIn_24_0 | 1;
-                  break sharedTailExit_0;
+                  break regionExit1;
                 }
                 stackIn_35_0 = stackIn_24_0;
                 stackIn_35_1 = 0;

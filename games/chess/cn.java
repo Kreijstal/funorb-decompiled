@@ -131,7 +131,7 @@ final class cn implements Iterable {
                 var4 = 1;
                 var5 = 1;
               }
-              ua.field_b = mm.a(var2 * var4, -1, var5 * var2);
+              ArchiveProvider.field_b = mm.a(var2 * var4, -1, var5 * var2);
               return;
             }
             var4 = 1;
@@ -187,7 +187,7 @@ final class cn implements Iterable {
           var4 = 1;
           var5 = 1;
         }
-        ua.field_b = mm.a(var2 * var4, -1, var5 * var2);
+        ArchiveProvider.field_b = mm.a(var2 * var4, -1, var5 * var2);
     }
 
     public static void b(int param0) {

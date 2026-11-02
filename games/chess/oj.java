@@ -15,19 +15,19 @@ final class oj {
           sg.field_d != param2) {
           sg.field_d = param2;
           tj.field_l = true;
-          pj.b(-6446, param3);
+          GzipInflater.b(-6446, param3);
         }
         if (1 == param0 &&
           ii.field_Q != param2) {
           ii.field_Q = param2;
           tj.field_l = true;
-          pj.b(-6446, param3);
+          GzipInflater.b(-6446, param3);
         }
         if (2 == param0 &&
           param2 != v.field_d) {
           v.field_d = param2;
           tj.field_l = true;
-          pj.b(param1 - 6347, param3);
+          GzipInflater.b(param1 - 6347, param3);
         }
         if (param1 != -99) {
           oj.a((byte) 15);
@@ -111,8 +111,8 @@ final class oj {
     }
 
     final static void a(int param0) {
-        if (ua.field_d != null) {
-          ua.field_d.k((byte) -112);
+        if (ArchiveProvider.field_d != null) {
+          ArchiveProvider.field_d.k((byte) -112);
         }
         hn.field_u = new s();
         nj.field_w.c(hn.field_u, 78);

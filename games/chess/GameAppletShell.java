@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class fa extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static int[] field_d;
     static jc field_j;
     boolean field_g;
@@ -54,8 +54,8 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
         try {
           var3 = qn.field_U;
           var3.f(param2, -65);
-          var3.field_l = var3.field_l + 1;
-          var4 = var3.field_l;
+          var3.position = var3.position + 1;
+          var4 = var3.position;
           var3.c(1, (byte) -114);
           var3.c(param0.field_q, (byte) 124);
           if (param1 != 15079) {
@@ -67,7 +67,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
           var3.d(param0.field_o, (byte) -81);
           var3.d(param0.field_n, (byte) -81);
           var3.b(var4, (byte) -126);
-          var3.a(var3.field_l - var4, -1);
+          var3.a(var3.position - var4, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -122,7 +122,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
             !jf.field_a) {
             od.field_W = true;
             if (om.field_l &&
-              ud.a(2) - pj.field_g > 1000L) {
+              ud.a(2) - GzipInflater.field_g > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (sl.field_c > var2.width) {
@@ -221,7 +221,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
             try {
               u.a(true, "loggedout", bh.i(81));
               if (param1 != -58) {
-                fa.a((byte) -79);
+                GameAppletShell.a((byte) -79);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -738,7 +738,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
               ba.field_L = bh.i(81);
               dupTemp$0 = new jk(param4, param2, param6, true);
               oc.field_l = dupTemp$0;
-              um.field_g = dupTemp$0;
+              ResourceArchive.field_g = dupTemp$0;
               var8 = oc.field_l.a(1, true, (Runnable) (this));
               var9 = 75 % ((-48 - param1) / 46);
               while (true) {
@@ -874,7 +874,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
             !jf.field_a) {
             mk.field_b = ud.a(2);
             bc.a(5000L, (byte) -92);
-            um.field_g = null;
+            ResourceArchive.field_g = null;
             this.a((byte) 33, false);
             return;
           }
@@ -944,7 +944,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
           b.field_f = true;
           od.field_W = true;
           hf.field_a = false;
-          pj.field_g = ud.a(2);
+          GzipInflater.field_g = ud.a(2);
           if (param0 != 125) {
             field_k = (String) null;
           }
@@ -995,7 +995,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
         return true;
     }
 
-    protected fa() {
+    protected GameAppletShell() {
         this.field_g = false;
     }
 

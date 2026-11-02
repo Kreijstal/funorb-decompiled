@@ -5,8 +5,8 @@ final class qc {
     static km[][] field_d;
     private v field_f;
     static long field_a;
-    private um field_g;
-    private um field_b;
+    private ResourceArchive field_g;
+    private ResourceArchive field_b;
     static int field_e;
     static String field_c;
 
@@ -28,7 +28,7 @@ final class qc {
         }
         var3Lifetime1 = new dj();
         if (var4 != null) {
-          var3Lifetime1.a(new p(var4), true);
+          var3Lifetime1.a(new PacketBuffer(var4), true);
         }
         if (param1 >= 32768) {
           var3Lifetime1.f(32768);
@@ -124,7 +124,7 @@ final class qc {
         field_d = (km[][]) null;
     }
 
-    qc(int param0, um param1, um param2, ui param3) {
+    qc(int param0, ResourceArchive param1, ResourceArchive param2, ui param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

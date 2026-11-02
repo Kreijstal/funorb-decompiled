@@ -42,7 +42,7 @@ final class jn extends fb {
         }
     }
 
-    final static rk a(String param0, int param1, String param2, um param3) {
+    final static rk a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

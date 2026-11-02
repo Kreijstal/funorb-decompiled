@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class mn extends wn {
-    static p field_h;
+    static PacketBuffer field_h;
     private java.net.ProxySelector field_k;
     static String field_l;
     static String field_i;
@@ -444,7 +444,7 @@ final class mn extends wn {
             return stackIn_2_0;
           }
           if (param0 != 96) {
-            field_h = (p) null;
+            field_h = (PacketBuffer) null;
           }
           var3 = param1.address();
           if (!((Object) var3 instanceof java.net.InetSocketAddress)) {
@@ -506,7 +506,7 @@ final class mn extends wn {
 
     static {
         field_l = "Show game chat from my friends";
-        field_h = new p(256);
+        field_h = new PacketBuffer(256);
         field_i = "Month";
         field_j = "Real-life threats";
     }

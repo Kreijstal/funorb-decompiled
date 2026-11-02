@@ -554,7 +554,7 @@ final class ai {
         field_h = null;
     }
 
-    final static km[] a(int param0, String param1, String param2, um param3) {
+    final static km[] a(int param0, String param1, String param2, ResourceArchive param3) {
         km[] var4 = null;
         RuntimeException var4_ref = null;
         km[] var5 = null;

@@ -11,12 +11,12 @@ final class ck {
         return new lm(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
-    final static ck a(um param0, int param1, int param2) {
+    final static ck a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, param2, 5847);
         if (var3 == null) {
           return null;
         }
-        return new ck(new p(var3));
+        return new ck(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -59,14 +59,14 @@ final class ck {
         return var3;
     }
 
-    private ck(p param0) {
+    private ck(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new og[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.i(-101);
           if (var3 != 0) {
-            param0.field_l = param0.field_l - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new og();
             this.field_b[var2].a(param0);
           }

@@ -89,13 +89,13 @@ final class wf extends ma implements ha, mj {
           this.field_N = (qn) ((Object) new bg(param0, (rg) (this), 100));
           this.field_U = (qn) ((Object) new bg("", (rg) (this), 20));
           if (!this.field_T) {
-            this.field_M = new fb(ua.field_c, (rg) null);
+            this.field_M = new fb(ArchiveProvider.field_c, (rg) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_K) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = fa.field_k;
+              stackIn_19_3 = GameAppletShell.field_k;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
@@ -243,7 +243,7 @@ final class wf extends ma implements ha, mj {
           return;
         }
         try {
-          bj.a(na.a(param0, 100, 96), true);
+          bj.a(PcmSampleStream.a(param0, 100, 96), true);
           int var2_int = -101 % ((param1 + 24) / 39);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "wf.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

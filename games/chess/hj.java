@@ -12,7 +12,7 @@ final class hj {
     private on field_m;
     private da[] field_h;
     private java.math.BigInteger field_c;
-    private p field_e;
+    private PacketBuffer field_e;
     static int[] field_b;
     static boolean field_i;
     static char[] field_a;
@@ -42,13 +42,13 @@ final class hj {
               stackIn_9_0 = this.field_h[param2];
               return stackIn_9_0;
             }
-            this.field_e.field_l = 72 * param2 + 6;
-            var6_int = this.field_e.e((byte) -93);
+            this.field_e.position = 72 * param2 + 6;
+            var6_int = this.field_e.readInt((byte) -93);
             if (param0 != 14) {
               stackIn_12_0 = (da) null;
               return stackIn_12_0;
             }
-            var7 = this.field_e.e((byte) -91);
+            var7 = this.field_e.readInt((byte) -91);
             var13 = new byte[64];
             this.field_e.a(64, (byte) 125, var13, 0);
             var9 = new da(param2, param4, param3, this.field_d, this.field_m, var6_int, var13, var7, param1);
@@ -84,7 +84,7 @@ final class hj {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        p var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -102,11 +102,11 @@ final class hj {
         if (this.field_g.field_s) {
           return false;
         }
-        var10 = new p(this.field_g.a(param0));
-        var10.field_l = 5;
+        var10 = new PacketBuffer(this.field_g.a(param0));
+        var10.position = 5;
         var3 = var10.i(-87);
-        var10.field_l = var10.field_l + 72 * var3;
-        var13 = new byte[-var10.field_l + var10.field_o.length];
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[-var10.position + var10.data.length];
         var11 = var13;
         var4 = var11;
         var10.a(var13.length, (byte) 125, var13, 0);
@@ -121,7 +121,7 @@ final class hj {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = kh.a(5, -var13.length + var10.field_l - 5, (byte) -82, var10.field_o);
+        var15 = kh.a(5, -var13.length + var10.position - 5, (byte) -82, var10.data);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[1 + var7] != var15[var7]) {
             throw new RuntimeException();

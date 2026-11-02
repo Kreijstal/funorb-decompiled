@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class um {
+final class ResourceArchive {
     static int[] field_j;
     boolean field_k;
     private Object[] field_m;
     int field_f;
     static km field_c;
-    private ua field_i;
-    private lj field_d;
+    private ArchiveProvider field_i;
+    private ArchiveIndex field_d;
     private Object[][] field_e;
     static String field_h;
     static wf field_b;
@@ -20,7 +20,7 @@ final class um {
         field_b = null;
         field_g = null;
         if (param0 != 73) {
-          um.b(102);
+          ResourceArchive.b(102);
         }
         field_l = null;
         field_j = null;
@@ -373,12 +373,12 @@ final class um {
         byte[] var24 = null;
         int[] var25 = null;
         byte[] var26 = null;
-        p var27 = null;
+        PacketBuffer var27 = null;
         byte[] var28 = null;
-        p var30 = null;
+        PacketBuffer var30 = null;
         int[] var31 = null;
         byte[][] var32 = null;
-        p var33 = null;
+        PacketBuffer var33 = null;
         int[] var35 = null;
         byte[] var36 = null;
         byte[] var37 = null;
@@ -428,8 +428,8 @@ final class um {
             var36 = jf.a(true, false, this.field_m[param3]);
             var26 = var36;
             var9 = var26;
-            var27 = new p(var36);
-            var27.a(5, param0, (byte) -67, var27.field_o.length);
+            var27 = new PacketBuffer(var36);
+            var27.a(5, param0, (byte) -67, var27.data.length);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -447,7 +447,7 @@ final class um {
             stackIn_35_0 = var12_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param0 != null);
-            throw fk.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(ke.a(var9, 21106, var9.length)).append(" ").append(ke.a(var9, 21106, var9.length - 2)).append(" ").append(this.field_d.field_p[param3]).append(" ").append(this.field_d.field_c).toString());
+            throw fk.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(IsaacCipher.a(var9, 21106, var9.length)).append(" ").append(IsaacCipher.a(var9, 21106, var9.length - 2)).append(" ").append(this.field_d.field_p[param3]).append(" ").append(this.field_d.field_c).toString());
           }
           if (this.field_k) {
             this.field_m[param3] = null;
@@ -458,14 +458,14 @@ final class um {
               var12--;
               var13 = 255 & var24[var12];
               var12 = var12 - 4 * var5_int * var13;
-              var33 = new p(var44);
+              var33 = new PacketBuffer(var44);
               var15 = 0;
-              var33.field_l = var12;
+              var33.position = var12;
               var16 = 0;
               for (var17 = 0; var17 < var13; var17++) {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var33.e((byte) -105);
+                  var18 = var18 + var33.readInt((byte) -105);
                   if (var6 == null) {
                     var20 = var19;
                   } else {
@@ -481,13 +481,13 @@ final class um {
                 return true;
               }
               var45 = new byte[var15];
-              var33.field_l = var12;
+              var33.position = var12;
               var15Lifetime1 = 0;
               var18 = 0;
               for (var19 = 0; var13 > var19; var19++) {
                 var20 = 0;
                 for (var21 = 0; var21 < var5_int; var21++) {
-                  var20 = var20 + var33.e((byte) -94);
+                  var20 = var20 + var33.readInt((byte) -94);
                   if (var6 == null) {
                     var22 = var21;
                   } else {
@@ -506,15 +506,15 @@ final class um {
               var12--;
               var13 = 255 & var24[var12];
               var12 = var12 - var5_int * (var13 * 4);
-              var30 = new p(var44);
+              var30 = new PacketBuffer(var44);
               var39 = new int[var5_int];
               var31 = var39;
               var15_ref_int__ = var31;
-              var30.field_l = var12;
+              var30.position = var12;
               for (var16 = 0; var13 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var30.e((byte) -119);
+                  var17 = var17 + var30.readInt((byte) -119);
                   var15_ref_int__[var18] = var15_ref_int__[var18] + var17;
                 }
               }
@@ -526,12 +526,12 @@ final class um {
                 var16_ref_byte____[var17] = array$1;
                 var39[var17] = 0;
               }
-              var30.field_l = var12;
+              var30.position = var12;
               var17 = 0;
               for (var18 = 0; var13 > var18; var18++) {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19 = var19 + var30.e((byte) -127);
+                  var19 = var19 + var30.readInt((byte) -127);
                   ne.a(var44, var17, var40[var20], var39[var20], var19);
                   var15_ref_int__[var20] = var15_ref_int__[var20] + var19;
                   var17 = var17 + var19;
@@ -582,7 +582,7 @@ final class um {
           return 0;
         }
         if (param0 >= -49) {
-          this.field_d = (lj) null;
+          this.field_d = (ArchiveIndex) null;
         }
         return this.field_d.field_o[param1];
     }
@@ -917,7 +917,7 @@ final class um {
         }
     }
 
-    um(ua param0, boolean param1, int param2) {
+    ResourceArchive(ArchiveProvider param0, boolean param1, int param2) {
         this.field_d = null;
         try {
           if (param2 < 0 ||

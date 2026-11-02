@@ -153,7 +153,7 @@ final class pc extends ci {
             this.field_Ib.field_S = "|";
             if (!(5 > sb.field_rb) ||
               !(sk.field_t < 2)) {
-              L4: {
+              regionExit1: {
                 stackIn_7_0 = this;
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
@@ -168,7 +168,7 @@ final class pc extends ci {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = jd.field_a;
-                    break L4;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;
@@ -645,12 +645,12 @@ final class pc extends ci {
                   bi.field_d[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
-                L16: while (true) {
+                scanLoop1: while (true) {
                   if (2 > var10) {
                     var11_int = 0;
                     stackIn_69_0 = 0;
                     if (var19 != 0) {
-                      break L16;
+                      break scanLoop1;
                     }
                     var12 = stackIn_69_0;
                     while (true) {
@@ -663,7 +663,7 @@ final class pc extends ci {
                         var13 = var20;
                         stackIn_65_0 = 0;
                         var14_int = stackIn_65_0;
-                        L23: while (true) {
+                        scanLoop2: while (true) {
                           if (var24.length > var14_int) {
                             var15 = var24[var14_int];
                             var16 = var20[1 + var14_int];
@@ -678,12 +678,12 @@ final class pc extends ci {
                               var17_int = stackIn_44_0;
                               if (~var16 != ~var17_int &&
                                 var19 == 0) {
-                                break L23;
+                                break scanLoop2;
                               }
                             } else {
                               if (~var16 != ~(255 & pd.field_Rb.field_sc[var15]) &&
                                 var19 == 0) {
-                                break L23;
+                                break scanLoop2;
                               }
                             }
                             var14_int += 2;
@@ -788,14 +788,14 @@ final class pc extends ci {
                 }
                 var17 = se.field_S.field_Kb.field_I;
                 var18_ref = (r) (var17.g(-18110));
-                L49: while (true) {
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
                     stackOut_113_0 = var18_ref.l(1);
                     stackIn_131_0 = stackOut_113_0 ? 1 : 0;
                     stackIn_114_0 = stackOut_113_0;
                     if (var19 != 0) {
-                      break L49;
+                      break scanLoop3;
                     }
                     if (!stackIn_114_0) {
                       if (var11_int != 0 &&
@@ -911,7 +911,7 @@ final class pc extends ci {
               }
               if (decompiledFrameRemainder0) {
                 if (stackIn_165_0 == ~var10) {
-                  var13_ref = ke.field_c;
+                  var13_ref = IsaacCipher.field_c;
                   boolean decompiledSharedTail0 = (var12 == 0);
                   if (!decompiledSharedTail0) {
                     var14 = ic.field_d + (String) (var11);

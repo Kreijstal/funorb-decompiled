@@ -56,7 +56,7 @@ final class kg extends kn {
             nj.field_u.field_h >= 0) {
             var2 = eh.field_L[nj.field_u.field_h];
             if (var2 == 2) {
-              um.a(5);
+              ResourceArchive.a(5);
             }
           }
           stackIn_19_0 = var2;

@@ -17,8 +17,8 @@ final class ec extends dm {
         String var1Lifetime1;
         if (param0 <= -42) {
           var1 = "";
-          if (null != um.field_b) {
-            var1 = um.field_b.i((byte) 52);
+          if (null != ResourceArchive.field_b) {
+            var1 = ResourceArchive.field_b.i((byte) 52);
           }
           if (var1.length() == 0) {
             var1 = am.b((byte) -84);
@@ -30,8 +30,8 @@ final class ec extends dm {
         }
         ec.d((byte) 58);
         var1Lifetime1 = "";
-        if (null != um.field_b) {
-          var1Lifetime1 = um.field_b.i((byte) 52);
+        if (null != ResourceArchive.field_b) {
+          var1Lifetime1 = ResourceArchive.field_b.i((byte) 52);
         }
         if (var1Lifetime1.length() == 0) {
           var1Lifetime1 = am.b((byte) -84);
@@ -138,7 +138,7 @@ final class ec extends dm {
         return true;
     }
 
-    final void a(p param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.a(true, this.field_k);
           param0.a(this.field_h, false);
@@ -161,8 +161,8 @@ final class ec extends dm {
 
     final ug b(byte param0) {
         if (param0 <= 27) {
-          p var3 = (p) null;
-          this.a((p) null, (byte) -84);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((PacketBuffer) null, (byte) -84);
           return field_i;
         }
         return field_i;

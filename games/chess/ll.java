@@ -14,14 +14,14 @@ final class ll {
     private int field_c;
     int field_f;
 
-    final void b(p param0) {
+    final void b(PacketBuffer param0) {
         this.field_k = param0.i(-100);
-        this.field_a = param0.e((byte) -128);
-        this.field_f = param0.e((byte) -112);
+        this.field_a = param0.readInt((byte) -128);
+        this.field_f = param0.readInt((byte) -112);
         this.a(param0);
     }
 
-    final void a(p param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_g = param0.i(-101);
         this.field_i = new int[this.field_g];

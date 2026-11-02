@@ -33,7 +33,7 @@ final class am {
         }
     }
 
-    final static String a(p param0, int param1, byte param2) {
+    final static String a(PacketBuffer param0, int param1, byte param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -53,7 +53,7 @@ final class am {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.field_l = param0.field_l + cg.field_c.a((byte) 115, param0.field_o, var3_int, param0.field_l, 0, var4);
+            param0.position = param0.position + cg.field_c.a((byte) 115, param0.data, var3_int, param0.position, 0, var4);
             var5 = gh.a(var4, 0, -161, var3_int);
             if (param2 >= 54) {
               stackIn_8_0 = var5;
@@ -237,7 +237,7 @@ final class am {
               fieldTemp$0 = wc.field_v;
               wc.field_v = wc.field_v + 1;
               var6.field_Ib = fieldTemp$0;
-              cl.field_e.a((o) (var6), (byte) 127);
+              cl.field_e.a((IntrusiveNode) (var6), (byte) 127);
             }
             var6.field_Ob = var7;
             var6.field_Kb = var5;
@@ -292,7 +292,7 @@ final class am {
             fieldTemp$1 = wg.field_w;
             wg.field_w = wg.field_w + 1;
             var6Lifetime1.field_Ib = fieldTemp$1;
-            me.field_e.a((o) (var6Lifetime1), (byte) 126);
+            me.field_e.a((IntrusiveNode) (var6Lifetime1), (byte) 126);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -300,7 +300,7 @@ final class am {
           var6Lifetime1.field_Lb = (String) (var3Lifetime1);
           var6Lifetime1.field_Fb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Ob = var5Lifetime1;
-          var6Lifetime1.c(-2193);
+          var6Lifetime1.unlink(-2193);
           var7_ref = (ve) (me.field_e.g(-18110));
           while (var7_ref != null) {
             if (pd.a((byte) -15, var6Lifetime1, var7_ref)) {
@@ -312,7 +312,7 @@ final class am {
             break;
           }
           if (null == var7_ref) {
-            me.field_e.a((o) (var6Lifetime1), (byte) -102);
+            me.field_e.a((IntrusiveNode) (var6Lifetime1), (byte) -102);
             if (var9 == 0) {
               return;
             }

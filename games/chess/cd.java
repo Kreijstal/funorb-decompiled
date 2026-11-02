@@ -215,7 +215,7 @@ final class cd extends pk {
         cd.a(67, (byte[]) null, true, -63, -46, 41);
     }
 
-    final static void a(byte param0, um param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         km var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -257,8 +257,8 @@ final class cd extends pk {
         try {
           var6 = qn.field_U;
           var6.f(param3, -82);
-          var6.field_l = var6.field_l + 1;
-          var7 = var6.field_l;
+          var6.position = var6.position + 1;
+          var7 = var6.position;
           var6.c(4, (byte) -75);
           int var8 = -76 / ((param5 + 3) / 40);
           var6.c(param4, (byte) 83);
@@ -268,7 +268,7 @@ final class cd extends pk {
           }
           var6.c(var9, (byte) 81);
           var6.a(param1, (byte) -45, 0, param1.length);
-          var6.a(var6.field_l - var7, -1);
+          var6.a(var6.position - var7, -1);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "cd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

@@ -6,7 +6,7 @@ final class jj {
     static dd[] field_c;
     static c field_d;
     static c field_b;
-    static um field_e;
+    static ResourceArchive field_e;
     static hn field_a;
 
     final static void c(int param0) {
@@ -19,16 +19,16 @@ final class jj {
         var3 = Chess.field_G;
         try {
           if (param0 != 8) {
-            field_e = (um) null;
+            field_e = (ResourceArchive) null;
           }
           var1 = qn.field_U;
           while (ci.g(param0 + 2147483639)) {
             var1.f(8, -65);
-            fieldTemp$0 = var1.field_l + 1;
-            var1.field_l = var1.field_l + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             de.a(var1, (byte) 67);
-            qn.field_U.a(var1.field_l - var2, -1);
+            qn.field_U.a(var1.position - var2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

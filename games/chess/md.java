@@ -9,17 +9,17 @@ class md {
     private static vi field_e;
     private int field_i;
     int[] field_j;
-    private nm field_c;
+    private PcmStream field_c;
     private static int field_s;
     private int field_g;
-    private nm[] field_n;
+    private PcmStream[] field_n;
     private long field_h;
     private int field_u;
     private int field_d;
     private int field_b;
     private long field_r;
     private int field_m;
-    private nm[] field_f;
+    private PcmStream[] field_f;
     private int field_k;
     private int field_p;
     private boolean field_o;
@@ -102,9 +102,9 @@ class md {
         field_e = null;
     }
 
-    private final void a(nm param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        nm var4 = this.field_n[var3];
+        PcmStream var4 = this.field_n[var3];
         if (var4 == null) {
           this.field_f[var3] = param0;
         } else {
@@ -120,7 +120,7 @@ class md {
           this.field_p = 0;
         }
         if (this.field_c != null) {
-          this.field_c.a(param0);
+          this.field_c.skip(param0);
           return;
         }
     }
@@ -235,20 +235,20 @@ class md {
         int var7_int;
         Object var7;
         int var8_int;
-        nm[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        nm var11;
+        PcmStream var11;
         pb var12;
         int var13;
-        nm var14;
+        PcmStream var14;
         int var15_int;
-        nm var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        nm var14Lifetime1;
-        nm var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_q) {
           var3 = var3 << 1;
@@ -263,7 +263,7 @@ class md {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -296,7 +296,7 @@ class md {
                       var12.field_j = var12.field_j + var13;
                     }
                     if (var4 >= this.field_i) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.a();
                     if (var14Lifetime2 != null) {
@@ -309,12 +309,12 @@ class md {
                     var15 = var11.field_j;
                     var11.field_j = null;
                     if (var10 != null) {
-                      ((nm) (var10)).field_j = var15;
+                      ((PcmStream) (var10)).field_j = var15;
                     } else {
                       this.field_f[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_n[var7_int] = (nm) (var10);
+                      this.field_n[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -335,8 +335,8 @@ class md {
             this.field_n[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((nm) (var7)).field_j;
-              ((nm) (var7)).field_j = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_j;
+              ((PcmStream) (var7)).field_j = null;
               var7 = var10Lifetime1;
             }
           }
@@ -369,7 +369,7 @@ class md {
     void e() throws Exception {
     }
 
-    final synchronized void b(nm param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_c = param0;
     }
 
@@ -408,12 +408,12 @@ class md {
         this.field_a = true;
     }
 
-    private final static void a(nm param0) {
+    private final static void a(PcmStream param0) {
         param0.field_k = false;
         if (param0.field_l != null) {
           param0.field_l.field_j = 0;
         }
-        nm var1 = param0.a();
+        PcmStream var1 = param0.a();
         while (var1 != null) {
           md.a(var1);
           var1 = param0.b();
@@ -425,13 +425,13 @@ class md {
         this.field_a = false;
         this.field_t = ud.a(2);
         this.field_h = 0L;
-        this.field_n = new nm[8];
+        this.field_n = new PcmStream[8];
         this.field_d = 0;
         this.field_b = 0;
         this.field_k = 0;
         this.field_p = 0;
         this.field_r = 0L;
-        this.field_f = new nm[8];
+        this.field_f = new PcmStream[8];
         this.field_o = true;
     }
 }

@@ -30,7 +30,7 @@ abstract class dm {
         field_b = null;
     }
 
-    final static c a(int param0, um param1, String param2, um param3, String param4) {
+    final static c a(int param0, ResourceArchive param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -82,9 +82,9 @@ abstract class dm {
         }
     }
 
-    abstract void a(p param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
-    final static void a(lh param0, um param1, int param2) {
+    final static void a(lh param0, ResourceArchive param1, int param2) {
         int var8 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -115,7 +115,7 @@ abstract class dm {
           param1.field_k = false;
           ak.field_u = new kj(var3_int, param1, param1);
           oa.field_b = new qc(var3_int, param1, param1, new th());
-          var4 = p.a(param2 - 1529624);
+          var4 = PacketBuffer.a(param2 - 1529624);
           if (var4 == null) {
             var11 = (Throwable) null;
             fg.a((Throwable) null, (byte) -77, "QC2");

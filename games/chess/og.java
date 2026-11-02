@@ -258,7 +258,7 @@ final class og {
         return field_h;
     }
 
-    final void a(p param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_g = new ll();
@@ -267,7 +267,7 @@ final class og {
         this.field_f.b(param0);
         int var2 = param0.i(-89);
         if (var2 != 0) {
-          param0.field_l = param0.field_l - 1;
+          param0.position = param0.position - 1;
           this.field_t = new ll();
           this.field_t.b(param0);
           this.field_w = new ll();
@@ -275,7 +275,7 @@ final class og {
         }
         var2 = param0.i(-128);
         if (var2 != 0) {
-          param0.field_l = param0.field_l - 1;
+          param0.position = param0.position - 1;
           this.field_c = new ll();
           this.field_c.b(param0);
           this.field_k = new ll();
@@ -283,7 +283,7 @@ final class og {
         }
         var2 = param0.i(-101);
         if (var2 != 0) {
-          param0.field_l = param0.field_l - 1;
+          param0.position = param0.position - 1;
           this.field_j = new ll();
           this.field_j.b(param0);
           this.field_e = new ll();

@@ -294,7 +294,7 @@ final class em {
             }
             var18 = var14;
             var19 = var15;
-            wb.b(fa.field_d);
+            wb.b(GameAppletShell.field_d);
             if (var19 < var18) {
               var19 = param5 * var8 / (var9 + var8) + param0;
               var18 = param5 * var8 / (var9 + var8) + param0;
@@ -302,22 +302,22 @@ final class em {
             if (null != param1[0]) {
               wb.e(param3, param0, var16, var18);
               param1[0].b(param3, param0);
-              wb.a(fa.field_d);
+              wb.a(GameAppletShell.field_d);
             }
             if (param1[2] != null) {
               wb.e(var17, param0, var10, var18);
               param1[2].b(var13, param0);
-              wb.a(fa.field_d);
+              wb.a(GameAppletShell.field_d);
             }
             if (param1[6] != null) {
               wb.e(param3, var19, var16, var11);
               param1[6].b(param3, var15);
-              wb.a(fa.field_d);
+              wb.a(GameAppletShell.field_d);
             }
             if (param1[8] != null) {
               wb.e(var17, var19, var10, var11);
               param1[8].b(var13, var15);
-              wb.a(fa.field_d);
+              wb.a(GameAppletShell.field_d);
             }
             if (null != param1[1] &&
               param1[1].field_v != 0) {
@@ -325,7 +325,7 @@ final class em {
               for (var20 = var12; var20 < var13; var20 = var20 + param1[1].field_v) {
                 param1[1].b(var20, param0);
               }
-              wb.a(fa.field_d);
+              wb.a(GameAppletShell.field_d);
             }
             if (param1[7] != null &&
               0 != param1[7].field_v) {
@@ -333,7 +333,7 @@ final class em {
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].field_v) {
                 param1[7].b(var20Lifetime1, var15);
               }
-              wb.a(fa.field_d);
+              wb.a(GameAppletShell.field_d);
             }
             if (null != param1[3] &&
               param1[3].field_u != 0) {
@@ -341,7 +341,7 @@ final class em {
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param1[3].field_u) {
                 param1[3].b(param3, var20Lifetime2);
               }
-              wb.a(fa.field_d);
+              wb.a(GameAppletShell.field_d);
             }
             if (null != param1[5] &&
               param1[5].field_u != 0) {
@@ -349,7 +349,7 @@ final class em {
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param1[5].field_u) {
                 param1[5].b(var13, var20Lifetime3);
               }
-              wb.a(fa.field_d);
+              wb.a(GameAppletShell.field_d);
             }
             if (null != param1[4] &&
               0 != param1[4].field_v) {
@@ -362,7 +362,7 @@ final class em {
                   param1[4].b(var21, var20Lifetime4);
                 }
               }
-              wb.a(fa.field_d);
+              wb.a(GameAppletShell.field_d);
             }
             return;
           }

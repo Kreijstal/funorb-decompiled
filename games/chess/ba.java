@@ -43,7 +43,7 @@ final class ba extends ma implements nn, mj {
 
     final static void a(ak param0, int param1, int param2) {
         try {
-          nc.field_O.a((o) (param0), (byte) 114);
+          nc.field_O.a((IntrusiveNode) (param0), (byte) 114);
           if (param1 > -58) {
             field_Q = (byte[]) null;
           }
@@ -119,7 +119,7 @@ final class ba extends ma implements nn, mj {
                 if (lg.a(-74, var6) == 2) {
                   oj.a(var6, (byte) -99, 1, param1);
                 }
-                ke.a(9822, vk.field_g, ij.field_c, param0, -1, var5_ref_String);
+                IsaacCipher.a(9822, vk.field_g, ij.field_c, param0, -1, var5_ref_String);
               } else {
                 var14 = (String) null;
                 var13 = (String) null;

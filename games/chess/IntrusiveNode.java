@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class o {
+class IntrusiveNode {
     static int[] field_d;
     static volatile int field_b;
-    o field_c;
+    IntrusiveNode next;
     static int field_f;
     static int[] field_a;
-    o field_h;
-    long field_e;
+    IntrusiveNode previous;
+    long key;
     static String[] field_i;
     static rk field_g;
 
@@ -20,7 +20,7 @@ class o {
           field_a = null;
           return;
         }
-        o.b((byte) 36);
+        IntrusiveNode.b((byte) 36);
         field_i = null;
         field_a = null;
     }
@@ -33,25 +33,25 @@ class o {
         return db.j(param0 ^ -20);
     }
 
-    final boolean b(int param0) {
-        if (param0 != 20478) {
+    final boolean isLinked(int obfuscationGuard) {
+        if (obfuscationGuard != 20478) {
           return false;
         }
-        if (null != this.field_c) {
+        if (null != this.next) {
           return true;
         }
         return false;
     }
 
-    final void c(int param0) {
-        if (this.field_c == null) {
+    final void unlink(int obfuscationGuard) {
+        if (this.next == null) {
           return;
         }
-        if (param0 == -2193) {
-          this.field_c.field_h = this.field_h;
-          this.field_h.field_c = this.field_c;
-          this.field_c = null;
-          this.field_h = null;
+        if (obfuscationGuard == -2193) {
+          this.next.previous = this.previous;
+          this.previous.next = this.next;
+          this.next = null;
+          this.previous = null;
           return;
         }
     }

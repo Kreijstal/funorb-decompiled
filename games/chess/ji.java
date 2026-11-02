@@ -61,7 +61,7 @@ final class ji extends kn {
         }
     }
 
-    final static String a(String param0, String param1, String param2, um param3, byte param4) {
+    final static String a(String param0, String param1, String param2, ResourceArchive param3, byte param4) {
         RuntimeException var5 = null;
         String var6 = null;
         String stackIn_5_0 = null;
@@ -154,7 +154,7 @@ final class ji extends kn {
           var10 = Chess.field_G;
           try {
             var6_int = -87 % ((20 - param4) / 61);
-            if (null == lj.field_a &&
+            if (null == ArchiveIndex.field_a &&
               !gd.a((byte) 68, param1)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
@@ -166,7 +166,7 @@ final class ji extends kn {
                 var11 = (String) null;
                 eh.field_K = l.a(false, param2, (byte) 118, (String) null, sj.field_i);
               }
-              qn.field_U.field_l = 0;
+              qn.field_U.position = 0;
               qn.field_U.c(14, (byte) 61);
               qn.field_U.c(eh.field_K.b((byte) 70).field_c, (byte) -73);
               vh.a(-1, (byte) 83);
@@ -175,7 +175,7 @@ final class ji extends kn {
             if (rm.field_J == tb.field_f &&
               tk.a(5, 1)) {
               var7 = tk.field_h.i(-89);
-              tk.field_h.field_l = 0;
+              tk.field_h.position = 0;
               if (0 == var7) {
                 tb.field_f = tg.field_d;
               } else {
@@ -187,8 +187,8 @@ final class ji extends kn {
             if (tb.field_f == tg.field_d &&
               tk.a(120, 8)) {
               sj.field_h = tk.field_h.d((byte) 116);
-              tk.field_h.field_l = 0;
-              pj.a(param5, -27359, param1, param0, eh.field_K);
+              tk.field_h.position = 0;
+              GzipInflater.a(param5, -27359, param1, param0, eh.field_K);
               tb.field_f = dl.field_j;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -196,7 +196,7 @@ final class ji extends kn {
               tk.a(81, 1)) {
               var7Lifetime1 = tk.field_h.i(-106);
               wg.field_B = var7Lifetime1;
-              tk.field_h.field_l = 0;
+              tk.field_h.position = 0;
               lf.field_N = null;
               if (var7Lifetime1 != 0 &&
                 var7Lifetime1 != 1) {
@@ -245,11 +245,11 @@ final class ji extends kn {
               if (on.field_a) {
                 tk.field_h.i(-87);
                 tk.field_h.i(-86);
-                tk.field_h.e((byte) -106);
+                tk.field_h.readInt((byte) -106);
                 si.field_n = tk.field_h.f(674914976);
                 jn.field_P = new byte[si.field_n];
                 for (var9 = 0; si.field_n > var9; var9++) {
-                  jn.field_P[var9] = tk.field_h.g(0);
+                  jn.field_P[var9] = tk.field_h.readByte(0);
                 }
               }
               ci.field_J = tk.field_h.d(0);
@@ -312,7 +312,7 @@ final class ji extends kn {
               stackIn_93_0 = wg.field_B;
               return stackIn_93_0;
             }
-            if (lj.field_a == null) {
+            if (ArchiveIndex.field_a == null) {
               if (ja.field_f) {
                 if (ea.i((byte) 17) > 30000L) {
                   n.field_c = nc.field_Q;
