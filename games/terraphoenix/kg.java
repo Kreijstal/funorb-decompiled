@@ -99,7 +99,7 @@ final class kg extends h {
                 this.field_e.position = 0;
                 this.field_e.writeByte(4, -90);
                 this.field_e.writeByte((int) this.field_n, 68);
-                this.field_e.e(0, 8959);
+                this.field_e.writeInt(0, 8959);
                 this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -163,8 +163,8 @@ final class kg extends h {
           try {
             this.field_e.position = 0;
             this.field_e.writeByte(6, -108);
-            this.field_e.a(3, (byte) -89);
-            this.field_e.h(-1564407352, 0);
+            this.field_e.writeMedium(3, (byte) -89);
+            this.field_e.writeShort(-1564407352, 0);
             this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -338,10 +338,10 @@ final class kg extends h {
                       }
                     } else {
                       this.field_o.position = 0;
-                      var6 = this.field_o.a(-16384);
-                      var7 = this.field_o.f((byte) -107);
-                      var8 = this.field_o.a(-16384);
-                      var9 = this.field_o.f((byte) -107);
+                      var6 = this.field_o.readUnsignedByte(-16384);
+                      var7 = this.field_o.readInt((byte) -107);
+                      var8 = this.field_o.readUnsignedByte(-16384);
+                      var9 = this.field_o.readInt((byte) -107);
                       var10 = 127 & var8;
                       stackIn_43_0 = (0 == (128 & var8)) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -378,7 +378,7 @@ final class kg extends h {
                       this.field_k = var14_ref;
                       this.field_k.field_H = new PacketBuffer(this.field_k.field_G + (var15 + var9));
                       this.field_k.field_H.writeByte(var10, 89);
-                      this.field_k.field_H.e(var9, 8959);
+                      this.field_k.field_H.writeInt(var9, 8959);
                       this.field_k.field_F = 10;
                       this.field_o.position = 0;
                     }

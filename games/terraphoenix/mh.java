@@ -26,16 +26,16 @@ final class mh {
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(1, -22);
-          var8.h(-1564407352, param0.field_s);
-          var8.h(-1564407352, param0.field_h);
-          var8.h(-1564407352, param0.field_q);
-          var8.e(param0.field_k, 8959);
-          var8.e(param0.field_l, 8959);
-          var8.e(param0.field_j, 8959);
-          var8.e(param0.field_o, 8959);
+          var8.writeShort(-1564407352, param0.field_s);
+          var8.writeShort(-1564407352, param0.field_h);
+          var8.writeShort(-1564407352, param0.field_q);
+          var8.writeInt(param0.field_k, 8959);
+          var8.writeInt(param0.field_l, 8959);
+          var8.writeInt(param0.field_j, 8959);
+          var8.writeInt(param0.field_o, 8959);
           var8.writeByte(param0.field_r.length, -99);
           for (var5 = param2; var5 < param0.field_r.length; var5++) {
-            var7.e(param0.field_r[var5], 8959);
+            var7.writeInt(param0.field_r[var5], 8959);
           }
           var8.d(var4, 8600);
           var8.j(-var4 + var8.position, -119);
@@ -57,9 +57,9 @@ final class mh {
         ga.field_k.a(new hd(param1), -16611);
         if (!kg.field_q) {
           if (!bk.c(-25704)) {
-            cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, km.field_e, bh.field_a, param2, (byte) 43);
+            cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, ArchiveIndex.field_e, bh.field_a, param2, (byte) 43);
           } else {
-            u.field_c.a(new eg(param1, param2, -ge.field_e + oe.field_c, km.field_e, oh.field_e, bh.field_a), -16611);
+            u.field_c.a(new eg(param1, param2, -ge.field_e + oe.field_c, ArchiveIndex.field_e, oh.field_e, bh.field_a), -16611);
           }
         }
     }
@@ -78,8 +78,8 @@ final class mh {
         int var3Lifetime1;
         var4 = Terraphoenix.field_V;
         try {
-          l.e(243, 197, 369, 143, 16777215);
-          l.f(244, 198, 367, 141, 0);
+          SoftwareRasterizer.e(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.f(244, 198, 367, 141, 0);
           if (rk.field_f == null) {
             if (null != ja.field_m) {
               ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

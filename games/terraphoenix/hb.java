@@ -13,7 +13,7 @@ class hb extends nb {
     static int field_i;
     static int field_n;
 
-    final static int a(gf param0, int param1, boolean param2) {
+    final static int a(GameShell param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -40,7 +40,7 @@ class hb extends nb {
         }
     }
 
-    final static void a(pk param0, int param1, int param2, String param3, em param4) {
+    final static void a(BitmapFont param0, int param1, int param2, String param3, em param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -108,15 +108,15 @@ class hb extends nb {
 
     cm c(int param0) {
         if (param0 != 0) {
-          gf var3 = (gf) null;
-          hb.a((gf) null, 1, true);
+          GameShell var3 = (GameShell) null;
+          hb.a((GameShell) null, 1, true);
         }
         return hf.field_s;
     }
 
     final void a(byte param0, PacketBuffer param1) {
         try {
-          param1.a(this.field_k, 76);
+          param1.writeLong(this.field_k, 76);
           param1.a(-97, this.field_q);
           if (param0 != -2) {
             PacketBuffer var4 = (PacketBuffer) null;

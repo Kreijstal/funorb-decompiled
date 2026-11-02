@@ -278,7 +278,7 @@ final class BattleUnit {
         int var9Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var10 = Terraphoenix.field_V;
-        var12 = gf.field_p;
+        var12 = GameShell.field_p;
         var3 = 5;
         var4 = 0;
         if (this.field_nb.field_g != 0 &&
@@ -741,7 +741,7 @@ final class BattleUnit {
         if (var8 == 7) {
           me.field_l[5 * this.field_nb.field_g + 2].a().a(0, var4);
         }
-        if (this == this.tile.map.field_i.field_q) {
+        if (this == this.tile.map.state.field_q) {
           NodeHashTableIterator.a((byte) -86, var12, 16777215);
           NodeHashTableIterator.a((byte) -86, var12, 8421504);
           NodeHashTableIterator.a((byte) -86, var12, 4210752);
@@ -794,7 +794,7 @@ final class BattleUnit {
         double var15Lifetime1;
         double var23Lifetime1;
         double var25Lifetime1;
-        var37 = new gi(this.tile.map.field_i);
+        var37 = new gi(this.tile.map.state);
         var38 = var37;
         this.field_gb = this.field_H;
         this.field_h = true;
@@ -853,7 +853,7 @@ final class BattleUnit {
         var11 = 100 * this.field_N;
         var12 = null;
         if (null != this.tile.map.a(-66, this.field_n, this.field_N, this.field_X)) {
-          var12 = this.tile.map.a(108, this.field_n, this.field_N, this.field_X).field_h;
+          var12 = this.tile.map.a(108, this.field_n, this.field_N, this.field_X).unit;
         }
         if (var12 != null) {
           var11 = 100 * ((BattleUnit) (var12)).field_E + 70;
@@ -1054,7 +1054,7 @@ final class BattleUnit {
         Sprite var7;
         int var8;
         var8 = Terraphoenix.field_V;
-        var2 = gf.field_p;
+        var2 = GameShell.field_p;
         var3 = 0;
         if (this.field_t == 2) {
           var3 = 5;
@@ -1171,16 +1171,16 @@ final class BattleUnit {
           field_M[var3 + var5].a(0, 0);
         }
         if (var6 != 0) {
-          var7 = gf.field_p.e();
+          var7 = GameShell.field_p.e();
           var7.d(0, 0);
         }
         if (this.field_U != 5 &&
           this.field_F == IntrusiveNode.field_c &&
           this.field_H == vf.field_a &&
           this.field_E == cm.field_d) {
-          NodeHashTableIterator.a((byte) -86, gf.field_p, 16711680);
-          NodeHashTableIterator.a((byte) -86, gf.field_p, 8388608);
-          NodeHashTableIterator.a((byte) -86, gf.field_p, 4194304);
+          NodeHashTableIterator.a((byte) -86, GameShell.field_p, 16711680);
+          NodeHashTableIterator.a((byte) -86, GameShell.field_p, 8388608);
+          NodeHashTableIterator.a((byte) -86, GameShell.field_p, 4194304);
         }
         if (this.field_U == 0) {
           fc.field_i[1 + 5 * this.field_nb.field_g].b(0, var4);
@@ -1257,7 +1257,7 @@ final class BattleUnit {
         boolean decompiledFrameRemainder0 = true;
         var5 = Terraphoenix.field_V;
         var3 = this.field_x;
-        var2 = gf.field_p;
+        var2 = GameShell.field_p;
         if (this.field_S) {
           if (1 != this.field_d) {
             if (this.field_d != 0) {
@@ -1391,11 +1391,11 @@ final class BattleUnit {
         if (IntrusiveNode.field_c == this.field_F &&
           this.field_H == vf.field_a &&
           cm.field_d == this.field_E) {
-          NodeHashTableIterator.a((byte) -86, gf.field_p, 16711680);
-          NodeHashTableIterator.a((byte) -86, gf.field_p, 8388608);
-          NodeHashTableIterator.a((byte) -86, gf.field_p, 4194304);
+          NodeHashTableIterator.a((byte) -86, GameShell.field_p, 16711680);
+          NodeHashTableIterator.a((byte) -86, GameShell.field_p, 8388608);
+          NodeHashTableIterator.a((byte) -86, GameShell.field_p, 4194304);
         }
-        this.a(var3, 0, param0 + 25285, gf.field_p, 0);
+        this.a(var3, 0, param0 + 25285, GameShell.field_p, 0);
         k.field_f.a(0);
         return var2;
     }
@@ -1423,8 +1423,8 @@ final class BattleUnit {
 
     private final void l(int param0) {
         if (this.field_Z != null) {
-          this.tile.map.field_i.field_G.field_Ab = false;
-          this.tile.map.field_i.field_G.field_H = false;
+          this.tile.map.state.client.field_Ab = false;
+          this.tile.map.state.client.field_H = false;
         }
         if (!this.tile.map.a(this.field_E, this.field_H, this.field_N, this.field_X, -17402, this.field_F, this.field_n)) {
           this.d((byte) -11);
@@ -1547,7 +1547,7 @@ final class BattleUnit {
           field_O = (byte[]) null;
         }
         regionExit1: {
-          var2 = gf.field_p;
+          var2 = GameShell.field_p;
           var6 = this.field_U;
           if (!this.field_S) {
             if (this.field_U == 0) {
@@ -1834,11 +1834,11 @@ final class BattleUnit {
         if (IntrusiveNode.field_c == this.field_F &&
           vf.field_a == this.field_H &&
           cm.field_d == this.field_E) {
-          NodeHashTableIterator.a((byte) -86, gf.field_p, 16711680);
-          NodeHashTableIterator.a((byte) -86, gf.field_p, 8388608);
-          NodeHashTableIterator.a((byte) -86, gf.field_p, 4194304);
+          NodeHashTableIterator.a((byte) -86, GameShell.field_p, 16711680);
+          NodeHashTableIterator.a((byte) -86, GameShell.field_p, 8388608);
+          NodeHashTableIterator.a((byte) -86, GameShell.field_p, 4194304);
         }
-        this.a(var5, 0, 25317, gf.field_p, 0);
+        this.a(var5, 0, 25317, GameShell.field_p, 0);
         if (0 == var6) {
           me.field_l[5 * this.field_nb.field_g + 1].a().a(0, var4);
         }
@@ -1893,7 +1893,7 @@ final class BattleUnit {
         int var9Lifetime1;
         var10 = Terraphoenix.field_V;
         if (null != this.tile &&
-          this == this.tile.field_h) {
+          this == this.tile.unit) {
           var2 = 320 - sj.field_b;
           var3 = -lg.field_c + 240;
           var2 = var2 + 32 * (-this.field_H + this.field_F);
@@ -1919,7 +1919,7 @@ final class BattleUnit {
             stackIn_15_1 = var6_int;
             stackIn_16_2 = (this.field_s) ? 5 : 3;
             ((se) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2, var5, -22899, this);
-            DelegatingCanvas.a(this.field_g, -31661);
+            FullscreenFocusCanvas.a(this.field_g, -31661);
           }
           if (!this.field_k &&
             1 == this.field_C &&
@@ -1976,16 +1976,16 @@ final class BattleUnit {
             var7 = 1;
             this.field_U = (4 + this.field_U) % 8;
           }
-          if (null != gf.field_p) {
-            gf.field_p.a();
-            l.f(0, 0, gf.field_p.field_r, gf.field_p.field_t, 0);
+          if (null != GameShell.field_p) {
+            GameShell.field_p.a();
+            SoftwareRasterizer.f(0, 0, GameShell.field_p.field_r, GameShell.field_p.field_t, 0);
             if (var10 != 0) {
-              gf.field_p = new Sprite(d.field_N[0].field_f, d.field_N[0].field_i);
-              gf.field_p.a();
+              GameShell.field_p = new Sprite(d.field_N[0].field_f, d.field_N[0].field_i);
+              GameShell.field_p.a();
             }
           } else {
-            gf.field_p = new Sprite(d.field_N[0].field_f, d.field_N[0].field_i);
-            gf.field_p.a();
+            GameShell.field_p = new Sprite(d.field_N[0].field_f, d.field_N[0].field_i);
+            GameShell.field_p.a();
           }
           if (this.field_t == 0) {
             var6 = this.b(false);
@@ -2009,7 +2009,7 @@ final class BattleUnit {
             var6 != null) {
             if (this.field_C == 1 &&
               this.field_k &&
-              this.tile.map.field_i.field_L > 0) {
+              this.tile.map.state.field_L > 0) {
               NodeHashTableIterator.a((byte) -86, (Sprite) (var6), 16711680);
             }
             if (!this.field_k &&
@@ -2042,7 +2042,7 @@ final class BattleUnit {
               stackIn_96_2 = 4;
             }
             ((se) (Object) stackIn_93_0).a(stackIn_93_1, stackIn_96_2, var8, -22899, this);
-            DelegatingCanvas.a(this.field_g, -31661);
+            FullscreenFocusCanvas.a(this.field_g, -31661);
             if (var10 == 0) {
               return;
             }
@@ -2078,7 +2078,7 @@ final class BattleUnit {
           if (this.field_t == 9) {
             this.field_g.field_b = 12;
           }
-          DelegatingCanvas.a(this.field_g, -31661);
+          FullscreenFocusCanvas.a(this.field_g, -31661);
           return;
         }
     }
@@ -2101,33 +2101,33 @@ final class BattleUnit {
         try {
           param4 = param4 + param3.field_v;
           param1 = param1 + param3.field_p;
-          var6_int = l.field_k * param4 + param1;
+          var6_int = SoftwareRasterizer.field_k * param4 + param1;
           var7 = 0;
           var8 = param3.field_t;
           var9 = param3.field_r;
-          var10 = l.field_k - var9;
-          if (l.field_d > param4) {
-            var12 = l.field_d - param4;
+          var10 = SoftwareRasterizer.field_k - var9;
+          if (SoftwareRasterizer.field_d > param4) {
+            var12 = SoftwareRasterizer.field_d - param4;
             var8 = var8 - var12;
             var7 = var7 + var9 * var12;
-            param4 = l.field_d;
-            var6_int = var6_int + var12 * l.field_k;
+            param4 = SoftwareRasterizer.field_d;
+            var6_int = var6_int + var12 * SoftwareRasterizer.field_k;
           }
           var11 = 0;
-          if (param1 < l.field_b) {
-            var12Lifetime1 = -param1 + l.field_b;
+          if (param1 < SoftwareRasterizer.field_b) {
+            var12Lifetime1 = -param1 + SoftwareRasterizer.field_b;
             var9 = var9 - var12Lifetime1;
-            param1 = l.field_b;
+            param1 = SoftwareRasterizer.field_b;
             var7 = var7 + var12Lifetime1;
             var6_int = var6_int + var12Lifetime1;
             var11 = var11 + var12Lifetime1;
             var10 = var10 + var12Lifetime1;
           }
-          if (var8 + param4 > l.field_c) {
-            var8 = var8 - (-l.field_c + param4 + var8);
+          if (var8 + param4 > SoftwareRasterizer.field_c) {
+            var8 = var8 - (-SoftwareRasterizer.field_c + param4 + var8);
           }
-          if (l.field_f < var9 + param1) {
-            var12Lifetime2 = var9 + (param1 - l.field_f);
+          if (SoftwareRasterizer.field_f < var9 + param1) {
+            var12Lifetime2 = var9 + (param1 - SoftwareRasterizer.field_f);
             var10 = var10 + var12Lifetime2;
             var9 = var9 - var12Lifetime2;
             var11 = var11 + var12Lifetime2;
@@ -2137,7 +2137,7 @@ final class BattleUnit {
             if (param2 != 25317) {
               return;
             }
-            kb.a(var11, param3.field_z, var8, 0, var6_int, var10, l.field_i, 0, 0, param0, var9, true, var7);
+            kb.a(var11, param3.field_z, var8, 0, var6_int, var10, SoftwareRasterizer.field_i, 0, 0, param0, var9, true, var7);
             return;
           }
           return;
@@ -2331,13 +2331,13 @@ final class BattleUnit {
           this.field_A = 0;
           this.field_S = true;
           this.field_d = 5;
-          if (0 == fa.field_a) {
+          if (0 == Archive.field_a) {
             this.field_T = (int)(Math.random() * (double)this.field_T / 3.0) + 2 * this.field_T / 3;
           }
-          if (fa.field_a == 1) {
+          if (Archive.field_a == 1) {
             this.field_T = (int)(Math.random() * (double)this.field_T / 2.0) + this.field_T / 2;
           }
-          if (fa.field_a == 2) {
+          if (Archive.field_a == 2) {
             this.field_T = (int)(Math.random() * (double)this.field_T);
           }
           this.field_T = this.field_T + this.field_P;
@@ -2483,12 +2483,12 @@ final class BattleUnit {
         if (null != this.field_Z) {
           if (4 != this.field_nb.field_g &&
             this.field_nb.field_g != 15) {
-            this.tile.map.field_i.field_G.field_Ab = false;
+            this.tile.map.state.client.field_Ab = false;
           }
           if (this.field_nb.field_g != 0) {
-            this.tile.map.field_i.field_G.field_H = false;
+            this.tile.map.state.client.field_H = false;
           }
-          this.tile.map.field_i.field_G.field_E = false;
+          this.tile.map.state.client.field_E = false;
         }
         if (param0 != 5813) {
           discarded$0 = this.j(88);
@@ -2615,7 +2615,7 @@ final class BattleUnit {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  if (!this.tile.map.field_i.field_J) {
+                  if (!this.tile.map.state.field_J) {
                     var3 = this.field_F * 32 - 32 * this.field_H + this.field_hb;
                     var4 = 16 * this.field_H + this.field_F * 16 - (-this.field_L + this.field_E * 48);
                     eg.field_p = this.field_E;
@@ -2699,7 +2699,7 @@ final class BattleUnit {
           if (null == this.field_Z &&
             this.field_C == 1 &&
             !q.field_Ib &&
-            !this.tile.map.field_i.field_J &&
+            !this.tile.map.state.field_J &&
             !this.field_f) {
             if ((this.field_A <= 10 &&
               !param0) &&
@@ -2743,7 +2743,7 @@ final class BattleUnit {
           if (null == this.field_Z &&
             0 == this.field_C &&
             !q.field_Ib &&
-            !this.tile.map.field_i.field_J &&
+            !this.tile.map.state.field_J &&
             !this.field_f) {
             var5_intLifetime2 = 32 * this.field_F - this.field_H * 32;
             var6Lifetime1 = -(this.field_E * 48) + 16 * this.field_H + 16 * this.field_F;
@@ -2808,7 +2808,7 @@ final class BattleUnit {
           if (this.field_Z == null &&
             this.field_C == 1 &&
             !q.field_Ib &&
-            !this.tile.map.field_i.field_J) {
+            !this.tile.map.state.field_J) {
             var4Lifetime2 = 32 * this.field_X - 32 * this.field_n;
             eg.field_p = this.field_N;
             var5_intLifetime1 = -(this.field_N * 48) + this.field_X * 16 + this.field_n * 16;
@@ -2828,7 +2828,7 @@ final class BattleUnit {
           if (null == this.field_Z &&
             this.field_C == 0 &&
             !q.field_Ib &&
-            !this.tile.map.field_i.field_J) {
+            !this.tile.map.state.field_J) {
             var4Lifetime2Lifetime1 = this.field_F * 32 - 32 * this.field_H;
             var5_intLifetime1Lifetime1 = this.field_F * 16 + 16 * this.field_H - this.field_E * 48;
             eg.field_p = this.field_E;
@@ -2880,7 +2880,7 @@ final class BattleUnit {
                   this.tile.field_m = 11;
                   var4Lifetime2Lifetime2 = 0;
                   while (var4Lifetime2Lifetime2 < 100) {
-                    var5 = this.tile.map.field_i.units[var4Lifetime2Lifetime2];
+                    var5 = this.tile.map.state.units[var4Lifetime2Lifetime2];
                     if (var7 != 0) {
                       decompiledFrameCompleted1 = false;
                       break;
@@ -2895,7 +2895,7 @@ final class BattleUnit {
                   }
                 }
                 if (decompiledFrameCompleted1) {
-                  this.tile.field_h = null;
+                  this.tile.unit = null;
                   this.tile.field_t = this.field_x;
                 }
                 if (this.tile.field_m == 0) {
@@ -2936,7 +2936,7 @@ final class BattleUnit {
               this.tile.field_m = 11;
               var4Lifetime3 = 0;
               while (var4Lifetime3 < 100) {
-                var5Lifetime1 = this.tile.map.field_i.units[var4Lifetime3];
+                var5Lifetime1 = this.tile.map.state.units[var4Lifetime3];
                 if (var7 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -2951,7 +2951,7 @@ final class BattleUnit {
               }
             }
             if (decompiledFrameCompleted0) {
-              this.tile.field_h = null;
+              this.tile.unit = null;
               this.tile.field_t = this.field_x;
             }
             if (this.tile.field_m == 0) {
@@ -2988,7 +2988,7 @@ final class BattleUnit {
         int var9;
         BattleState var10;
         var9 = Terraphoenix.field_V;
-        var10 = this.tile.map.field_i;
+        var10 = this.tile.map.state;
         var3 = var10;
         var4 = 0;
         var5 = 50;
@@ -3115,7 +3115,7 @@ final class BattleUnit {
         gi var24;
         gi var25;
         double var10Lifetime1;
-        var24 = new gi(this.tile.map.field_i);
+        var24 = new gi(this.tile.map.state);
         var25 = var24;
         this.field_R = this.field_E;
         this.field_db = true;
@@ -3334,9 +3334,9 @@ final class BattleUnit {
           this.a(-58, 102, -90, (Sprite) null, 103);
         }
         if (null != this.tile &&
-          this.tile.map.field_i.field_G.field_Bb == 0 &&
+          this.tile.map.state.client.field_Bb == 0 &&
           this.field_Z == null &&
-          fa.field_a < 2) {
+          Archive.field_a < 2) {
           this.field_jb = this.field_v / 2;
         }
     }
@@ -3357,8 +3357,8 @@ final class BattleUnit {
         this.field_jb = this.field_jb - var2;
         this.field_q = this.field_q + var2;
         if (this.tile != null &&
-          0 == this.tile.map.field_i.field_G.field_Bb &&
-          fa.field_a < 2) {
+          0 == this.tile.map.state.client.field_Bb &&
+          Archive.field_a < 2) {
           this.field_q = 0;
           this.field_jb = 0;
         }
@@ -3575,8 +3575,8 @@ final class BattleUnit {
                 if (5 == this.tile.map.a(param0 ^ -13954, this.field_H + this.field_r.field_a, var4Lifetime1, this.field_r.field_b + this.field_F).field_v) {
                   var4Lifetime1--;
                 }
-                if (null != this.tile.map.a(91, this.field_H + this.field_r.field_a, var4Lifetime1, this.field_r.field_b + this.field_F).field_h) {
-                  this.tile.map.a(-33, this.field_r.field_a + this.field_H, var4Lifetime1, this.field_F + this.field_r.field_b).field_h.field_k = true;
+                if (null != this.tile.map.a(91, this.field_H + this.field_r.field_a, var4Lifetime1, this.field_r.field_b + this.field_F).unit) {
+                  this.tile.map.a(-33, this.field_r.field_a + this.field_H, var4Lifetime1, this.field_F + this.field_r.field_b).unit.field_k = true;
                   if (this.field_r.field_b == 1 &&
                     this.field_r.field_a == 0) {
                     this.field_U = 0;
@@ -3617,7 +3617,7 @@ final class BattleUnit {
               var3Lifetime1 = 1;
               if (this.field_r == null) {
                 boolean decompiledFrameRemainder0 = true;
-                this.tile.field_h = null;
+                this.tile.unit = null;
                 if (0 == this.field_C) {
                   this.field_r = this.tile.map.a(false, this.field_n, this.field_H, -88, true, this.field_N, this.field_E, this.field_X, this.field_F);
                   decompiledFrameRemainder0 = (var6 != 0);
@@ -3629,12 +3629,12 @@ final class BattleUnit {
                   }
                   if (~this.field_E != ~this.field_N &&
                     this.field_r == null) {
-                    this.tile.field_h = this;
+                    this.tile.unit = this;
                     this.field_Y = true;
                     return false;
                   }
                 }
-                this.tile.field_h = this;
+                this.tile.unit = this;
                 var3Lifetime1 = 0;
               }
               if (this.field_r != null) {
@@ -3669,7 +3669,7 @@ final class BattleUnit {
             }
             this.field_G = this.field_G - var4Lifetime1Lifetime1;
             this.field_H = this.field_H + this.field_r.field_a;
-            this.tile.field_h = null;
+            this.tile.unit = null;
             this.field_L = this.field_L - 16 * (this.field_r.field_a + this.field_r.field_b);
             this.field_F = this.field_F + this.field_r.field_b;
             if (this.field_r.field_b == 1 &&
@@ -3731,7 +3731,7 @@ final class BattleUnit {
               var5 += 16;
             }
             this.field_G = this.field_G + var5;
-            this.tile.field_h = this;
+            this.tile.unit = this;
             this.field_jb = this.field_jb - this.field_r.field_c;
             this.b(this.field_r.field_c, (byte) -77);
             this.field_r = this.field_r.field_d;
@@ -3840,16 +3840,16 @@ final class BattleUnit {
         this.field_x = (int)(16777215.0 * Math.random());
         this.field_s = false;
         this.field_C = 1;
-        var3 = fa.field_a;
+        var3 = Archive.field_a;
         this.field_t = param0;
         this.field_db = false;
-        this.field_P = km.field_q[this.field_t].field_c[var3];
+        this.field_P = ArchiveIndex.field_q[this.field_t].field_c[var3];
         if (param1 == 0 &&
           null != le.field_q) {
-          this.field_P = km.field_q[this.field_t].field_c[0];
+          this.field_P = ArchiveIndex.field_q[this.field_t].field_c[0];
         }
         this.field_T = 0;
-        this.field_u = km.field_q[this.field_t].field_g[var3];
+        this.field_u = ArchiveIndex.field_q[this.field_t].field_g[var3];
         if (param1 == 0 &&
           null != le.field_q) {
           this.field_u = 0;
@@ -3862,11 +3862,11 @@ final class BattleUnit {
                   regionExit6: {
                     regionExit7: {
                       boolean decompiledFrameRemainder0 = true;
-                      this.field_m = km.field_q[this.field_t].field_b[var3];
-                      this.field_jb = km.field_q[this.field_t].field_a[var3];
-                      this.field_y = km.field_q[this.field_t].field_e[var3];
-                      this.field_I = km.field_q[this.field_t].field_e[var3];
-                      this.field_K = km.field_q[this.field_t].field_d;
+                      this.field_m = ArchiveIndex.field_q[this.field_t].field_b[var3];
+                      this.field_jb = ArchiveIndex.field_q[this.field_t].field_a[var3];
+                      this.field_y = ArchiveIndex.field_q[this.field_t].field_e[var3];
+                      this.field_I = ArchiveIndex.field_q[this.field_t].field_e[var3];
+                      this.field_K = ArchiveIndex.field_q[this.field_t].field_d;
                       this.field_U = (int)(8.0 * Math.random());
                       this.field_z = 0;
                       this.field_X = 0;

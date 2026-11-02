@@ -186,7 +186,7 @@ final class dd extends eb {
               } else {
                 if (var10 <= ld.field_c.field_t) {
                   il.a(1, ld.field_c);
-                  l.a();
+                  SoftwareRasterizer.a();
                 } else {
                   ld.field_c = new Sprite(var9, var10);
                   il.a(1, ld.field_c);
@@ -218,7 +218,7 @@ final class dd extends eb {
             var9Lifetime3 <= ld.field_c.field_r &&
             var10Lifetime3 <= ld.field_c.field_t) {
             il.a(1, ld.field_c);
-            l.a();
+            SoftwareRasterizer.a();
           } else {
             ld.field_c = new Sprite(var9Lifetime3, var10Lifetime3);
             il.a(1, ld.field_c);
@@ -245,7 +245,7 @@ final class dd extends eb {
             } else {
               if (var10Lifetime1 <= ld.field_c.field_t) {
                 il.a(1, ld.field_c);
-                l.a();
+                SoftwareRasterizer.a();
               } else {
                 ld.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
                 il.a(1, ld.field_c);
@@ -280,7 +280,7 @@ final class dd extends eb {
           if (var9Lifetime2 <= ld.field_c.field_r &&
             var10Lifetime2 <= ld.field_c.field_t) {
             il.a(1, ld.field_c);
-            l.a();
+            SoftwareRasterizer.a();
           } else {
             ld.field_c = new Sprite(var9Lifetime2, var10Lifetime2);
             il.a(1, ld.field_c);

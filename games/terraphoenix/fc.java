@@ -4,7 +4,7 @@
 final class fc {
     private boolean field_c;
     private int field_f;
-    static fa field_a;
+    static Archive field_a;
     static int[] field_e;
     static bg[] field_i;
     private int field_d;
@@ -180,37 +180,37 @@ final class fc {
           param3 = param3 - (-15 + param1.field_u);
           param2 = param2 + param1.field_p;
           param3 = param3 + param1.field_v;
-          var5_int = param3 * l.field_k + param2;
+          var5_int = param3 * SoftwareRasterizer.field_k + param2;
           var6 = param4;
           var7 = param2;
           var8 = param3;
           var9 = param1.field_t;
           var10 = param1.field_r;
-          var11 = -var10 + l.field_k;
+          var11 = -var10 + SoftwareRasterizer.field_k;
           var12 = 0;
-          if (param3 < l.field_d) {
-            var13 = -param3 + l.field_d;
+          if (param3 < SoftwareRasterizer.field_d) {
+            var13 = -param3 + SoftwareRasterizer.field_d;
             var9 = var9 - var13;
-            param3 = l.field_d;
-            var5_int = var5_int + var13 * l.field_k;
+            param3 = SoftwareRasterizer.field_d;
+            var5_int = var5_int + var13 * SoftwareRasterizer.field_k;
             var6 = var6 + var13 * var10;
             var8 = var8 + var13;
           }
-          if (l.field_b > param2) {
-            var13Lifetime1 = -param2 + l.field_b;
+          if (SoftwareRasterizer.field_b > param2) {
+            var13Lifetime1 = -param2 + SoftwareRasterizer.field_b;
             var12 = var12 + var13Lifetime1;
             var7 = var7 + var13Lifetime1;
             var11 = var11 + var13Lifetime1;
             var10 = var10 - var13Lifetime1;
             var6 = var6 + var13Lifetime1;
-            param2 = l.field_b;
+            param2 = SoftwareRasterizer.field_b;
             var5_int = var5_int + var13Lifetime1;
           }
-          if (param3 + var9 > l.field_c) {
-            var9 = var9 - (param3 + var9 - l.field_c);
+          if (param3 + var9 > SoftwareRasterizer.field_c) {
+            var9 = var9 - (param3 + var9 - SoftwareRasterizer.field_c);
           }
-          if (l.field_f < param2 + var10) {
-            var13Lifetime2 = var10 + (param2 - l.field_f);
+          if (SoftwareRasterizer.field_f < param2 + var10) {
+            var13Lifetime2 = var10 + (param2 - SoftwareRasterizer.field_f);
             var10 = var10 - var13Lifetime2;
             var12 = var12 + var13Lifetime2;
             var11 = var11 + var13Lifetime2;
@@ -232,7 +232,7 @@ final class fc {
                   gd.field_a[incrementValue$3][var8] = param0;
                   incrementValue$4 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$4] = 0;
+                  SoftwareRasterizer.field_i[incrementValue$4] = 0;
                 } else {
                   var5_int++;
                   var7++;
@@ -247,7 +247,7 @@ final class fc {
                   gd.field_a[incrementValue$6][var8] = param0;
                   incrementValue$7 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$7] = 0;
+                  SoftwareRasterizer.field_i[incrementValue$7] = 0;
                 } else {
                   var5_int++;
                   var7++;
@@ -262,7 +262,7 @@ final class fc {
                   gd.field_a[incrementValue$9][var8] = param0;
                   incrementValue$10 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$10] = 0;
+                  SoftwareRasterizer.field_i[incrementValue$10] = 0;
                 } else {
                   var7++;
                   var5_int++;
@@ -277,7 +277,7 @@ final class fc {
                   gd.field_a[incrementValue$12][var8] = param0;
                   incrementValue$13 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$13] = 0;
+                  SoftwareRasterizer.field_i[incrementValue$13] = 0;
                 } else {
                   var5_int++;
                   var7++;
@@ -290,7 +290,7 @@ final class fc {
                 if (var14Lifetime1 != 0) {
                   incrementValue$1 = var5_int;
                   var5_int++;
-                  l.field_i[incrementValue$1] = 0;
+                  SoftwareRasterizer.field_i[incrementValue$1] = 0;
                 } else {
                   var5_int++;
                 }
@@ -335,7 +335,7 @@ final class fc {
           ja.field_l = sj.field_c;
           sj.field_c = false;
           ma.field_I = sh.field_z;
-          mm.field_c = qe.field_l;
+          mm.field_c = IsaacCipher.field_l;
           lm.field_c = qd.field_i;
           sh.field_z = 0;
         }

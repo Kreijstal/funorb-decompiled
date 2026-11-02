@@ -10,9 +10,9 @@ final class LevelMap {
     static int[] field_c;
     MapTile[][] tiles;
     private int[][] field_d;
-    LevelEditor field_l;
+    LevelEditor editor;
     int field_b;
-    BattleState field_i;
+    BattleState state;
     static int[] field_j;
     private int field_k;
 
@@ -600,12 +600,12 @@ final class LevelMap {
             var5 = 1;
             while (-1 + this.field_e > var5) {
               stackIn_33_0 = var2_int;
-              stackIn_33_1 = this.field_i.field_y;
+              stackIn_33_1 = this.state.field_y;
               if (stackIn_33_0 <= stackIn_33_1 &&
-                var3 <= this.field_i.field_j &&
-                this.field_i.field_y <= 1 + var2_int &&
-                this.field_i.field_j <= (1 + var3)) {
-                if (this.field_i.field_N == 1 &&
+                var3 <= this.state.field_j &&
+                this.state.field_y <= 1 + var2_int &&
+                this.state.field_j <= (1 + var3)) {
+                if (this.state.field_N == 1 &&
                   le.field_q == null) {
                   sj.field_b = -(var5 * 32) + 32 * var4;
                   vf.field_a = -1;
@@ -1077,19 +1077,19 @@ final class LevelMap {
                             break;
                           }
                         }
-                        if (var38Lifetime1Lifetime1.field_h != null) {
-                          var39 = var38Lifetime1Lifetime1.field_h.c(-127);
-                          var40 = var38Lifetime1Lifetime1.field_h.h(13);
+                        if (var38Lifetime1Lifetime1.unit != null) {
+                          var39 = var38Lifetime1Lifetime1.unit.c(-127);
+                          var40 = var38Lifetime1Lifetime1.unit.h(13);
                           if ((double)var40 > var19 &&
                             (double)(-var39) < var17 &&
                             var17 < (double)var39 &&
                             (double)(-var39) < var19 &&
                             var19 < (double)var39) {
-                            if (var38Lifetime1Lifetime1.field_h == param1 &&
+                            if (var38Lifetime1Lifetime1.unit == param1 &&
                               !param3) {
                               return true;
                             }
-                            if (var38Lifetime1Lifetime1.field_h != param2) {
+                            if (var38Lifetime1Lifetime1.unit != param2) {
                               return false;
                             }
                           }
@@ -1497,7 +1497,7 @@ final class LevelMap {
             break;
           }
           if (stackIn_3_0 != stackIn_3_1) {
-            this.field_i = (BattleState) null;
+            this.state = (BattleState) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1526,16 +1526,16 @@ final class LevelMap {
             if (var6.field_v == 3) {
               return true;
             }
-            if (var6.field_h != null && (param0 ||
-              var6.field_h.field_k)) {
+            if (var6.unit != null && (param0 ||
+              var6.unit.field_k)) {
               return true;
             }
             if (var6.field_v == 4 &&
-              null != var6.field_C.field_h) {
+              null != var6.field_C.unit) {
               return true;
             }
             if (5 == var6.field_v &&
-              null != var6.field_c.field_h) {
+              null != var6.field_c.unit) {
               return true;
             }
             if (param3 <= 75) {
@@ -2160,7 +2160,7 @@ final class LevelMap {
           var3Lifetime1 = stackIn_13_0;
           var3Lifetime2 = 0;
           while (var3Lifetime2 < 12) {
-            var2 = this.field_i.units[var3Lifetime2];
+            var2 = this.state.units[var3Lifetime2];
             if (var4 != 0) {
               return;
             }
@@ -2874,8 +2874,8 @@ final class LevelMap {
         try {
           var3_int = 0;
           var4 = null;
-          if (null != this.field_i) {
-            var4 = this.field_i.field_F;
+          if (null != this.state) {
+            var4 = this.state.field_F;
           }
           var5 = 320 - sj.field_b;
           var6 = -lg.field_c + 240;
@@ -2883,7 +2883,7 @@ final class LevelMap {
           var8 = 1 + this.field_b - 2;
           var9 = 0;
           var10 = 1 + (-2 + this.field_e);
-          if (this.field_l != null) {
+          if (this.editor != null) {
             var10 = -1 + this.field_e;
             var7 = 0;
             var8 = this.field_b - 1;
@@ -2896,7 +2896,7 @@ final class LevelMap {
           }
           if (null != u.field_a) {
             u.field_a.a();
-            l.f(0, 0, 128, 160, 0);
+            SoftwareRasterizer.f(0, 0, 128, 160, 0);
             k.field_f.a(0);
           }
           IntrusiveNode.field_c = -1;
@@ -2929,16 +2929,16 @@ final class LevelMap {
                     682 > var5 &&
                     -32 < var6 &&
                     var6 < 624) {
-                    if (null != this.field_i && (0 == var11 ||
+                    if (null != this.state && (0 == var11 ||
                       var12 == 0 ||
                       ~var11 == ~(-1 + this.field_b) ||
                       var12 == this.field_e - 1)) {
                       while (true) {
                         if (var11 != 0 &&
                           var12 != 0) {
-                          pf.a(this.field_i, (byte) 71, var5, var6);
+                          pf.a(this.state, (byte) 71, var5, var6);
                         } else {
-                          wi.a((byte) -80, this.field_i, var5, var6);
+                          wi.a((byte) -80, this.state, var5, var6);
                         }
                         if (IntrusiveNode.field_c != var11) {
                           decompiledFrameCompleted7 = false;
@@ -2958,13 +2958,13 @@ final class LevelMap {
                           stackIn_89_0 = var14;
                           if (stackIn_89_0 != null) {
                             var15 = hb.field_p[0];
-                            if (null != var14.field_h &&
+                            if (null != var14.unit &&
                               ~var13 == ~eg.field_p) {
-                              if (null != var14.field_h.field_Z) {
+                              if (null != var14.unit.field_Z) {
                                 var15 = hb.field_p[2];
                               } else {
-                                if (var14.field_h.field_C == 1) {
-                                  if (var14.field_h.field_k) {
+                                if (var14.unit.field_C == 1) {
+                                  if (var14.unit.field_k) {
                                     var15 = hb.field_p[1];
                                   }
                                 } else {
@@ -2972,8 +2972,8 @@ final class LevelMap {
                                 }
                               }
                             }
-                            if (this.field_i != null &&
-                              this.field_i.field_L != 0 &&
+                            if (this.state != null &&
+                              this.state.field_L != 0 &&
                               eg.field_p == var13) {
                               var15 = hb.field_p[1];
                             }
@@ -2982,8 +2982,8 @@ final class LevelMap {
                             }
                           } else {
                             var15 = hb.field_p[0];
-                            if (null != this.field_i &&
-                              this.field_i.field_L != 0 &&
+                            if (null != this.state &&
+                              this.state.field_L != 0 &&
                               var13 == eg.field_p) {
                               var15 = hb.field_p[1];
                             }
@@ -2993,24 +2993,24 @@ final class LevelMap {
                             var16 = null;
                             if (!param1) {
                               u.field_a.a();
-                              l.f(0, 0, 128, 160, 0);
+                              SoftwareRasterizer.f(0, 0, 128, 160, 0);
                               k.field_f.a(0);
                             } else {
                               var16 = oi.field_J;
                               ((Sprite) (var16)).a();
-                              l.f(0, 0, 128, 160, 0);
+                              SoftwareRasterizer.f(0, 0, 128, 160, 0);
                             }
                             if (null != var16) {
                               ((Sprite) (var16)).a();
-                              l.a(32, 124, 16777215);
-                              l.a(64, 108, 16777215);
-                              l.a(64, 139, 16777215);
-                              l.a(95, 124, 16777215);
+                              SoftwareRasterizer.a(32, 124, 16777215);
+                              SoftwareRasterizer.a(64, 108, 16777215);
+                              SoftwareRasterizer.a(64, 139, 16777215);
+                              SoftwareRasterizer.a(95, 124, 16777215);
                               k.field_f.a(0);
                               u.field_a.a();
                               ((Sprite) (var16)).d(0, 0);
-                              if (this.field_i != null &&
-                                0 < this.field_i.field_L) {
+                              if (this.state != null &&
+                                0 < this.state.field_L) {
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16744576);
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16728128);
@@ -3040,32 +3040,32 @@ final class LevelMap {
                       (decompiledFrameCompleted6) &&
                       (decompiledFrameCompleted5) &&
                       (decompiledFrameCompleted4)) {
-                      if (this.field_i != null) {
+                      if (this.state != null) {
                         var13Lifetime2 = 48 * -eg.field_p;
-                        if (Math.abs(this.field_i.field_y - var5) + Math.abs(-var13Lifetime2 + (-var6 + this.field_i.field_j)) * 2 < 32 &&
+                        if (Math.abs(this.state.field_y - var5) + Math.abs(-var13Lifetime2 + (-var6 + this.state.field_j)) * 2 < 32 &&
                           param1 &&
-                          !this.field_i.field_w) {
+                          !this.state.field_w) {
                           vf.field_a = var12;
                           IntrusiveNode.field_c = var11;
                           cm.field_d = eg.field_p;
                         }
                       }
-                      if (null != this.field_l) {
+                      if (null != this.editor) {
                         var13Lifetime2 = 0;
                         if (0 < tg.field_l) {
                           var13Lifetime2 = var13Lifetime2 - tg.field_l * 48;
                         }
-                        if (this.field_l.field_k >= var5 - 16 &&
-                          16 + var5 >= this.field_l.field_k &&
-                          var13Lifetime2 + (var6 - 8) <= this.field_l.field_d &&
-                          var13Lifetime2 + (var6 + 8) >= this.field_l.field_d) {
+                        if (this.editor.field_k >= var5 - 16 &&
+                          16 + var5 >= this.editor.field_k &&
+                          var13Lifetime2 + (var6 - 8) <= this.editor.field_d &&
+                          var13Lifetime2 + (var6 + 8) >= this.editor.field_d) {
                           cm.field_d = 0;
                           vf.field_a = var12;
                           IntrusiveNode.field_c = var11;
                           if (~var11 == ~IntrusiveNode.field_c &&
                             ~vf.field_a == ~var12 &&
                             param1) {
-                            l.a(var5 << 4, var6 << 4, 384, 255, bj.field_d);
+                            SoftwareRasterizer.a(var5 << 4, var6 << 4, 384, 255, bj.field_d);
                           }
                         }
                       }
@@ -3101,13 +3101,13 @@ final class LevelMap {
                           stackIn_89_0Lifetime2 = var14Lifetime2;
                           if (stackIn_89_0Lifetime2 != null) {
                             var15Lifetime2 = hb.field_p[0];
-                            if (null != var14Lifetime2.field_h &&
+                            if (null != var14Lifetime2.unit &&
                               ~var13Lifetime2 == ~eg.field_p) {
-                              if (null != var14Lifetime2.field_h.field_Z) {
+                              if (null != var14Lifetime2.unit.field_Z) {
                                 var15Lifetime2 = hb.field_p[2];
                               } else {
-                                if (var14Lifetime2.field_h.field_C == 1) {
-                                  if (var14Lifetime2.field_h.field_k) {
+                                if (var14Lifetime2.unit.field_C == 1) {
+                                  if (var14Lifetime2.unit.field_k) {
                                     var15Lifetime2 = hb.field_p[1];
                                   }
                                 } else {
@@ -3115,8 +3115,8 @@ final class LevelMap {
                                 }
                               }
                             }
-                            if (this.field_i != null &&
-                              this.field_i.field_L != 0 &&
+                            if (this.state != null &&
+                              this.state.field_L != 0 &&
                               eg.field_p == var13Lifetime2) {
                               var15Lifetime2 = hb.field_p[1];
                             }
@@ -3125,8 +3125,8 @@ final class LevelMap {
                             }
                           } else {
                             var15Lifetime2 = hb.field_p[0];
-                            if (null != this.field_i &&
-                              this.field_i.field_L != 0 &&
+                            if (null != this.state &&
+                              this.state.field_L != 0 &&
                               var13Lifetime2 == eg.field_p) {
                               var15Lifetime2 = hb.field_p[1];
                             }
@@ -3136,24 +3136,24 @@ final class LevelMap {
                             var16Lifetime2 = null;
                             if (!param1) {
                               u.field_a.a();
-                              l.f(0, 0, 128, 160, 0);
+                              SoftwareRasterizer.f(0, 0, 128, 160, 0);
                               k.field_f.a(0);
                             } else {
                               var16Lifetime2 = oi.field_J;
                               ((Sprite) (var16Lifetime2)).a();
-                              l.f(0, 0, 128, 160, 0);
+                              SoftwareRasterizer.f(0, 0, 128, 160, 0);
                             }
                             if (null != var16Lifetime2) {
                               ((Sprite) (var16Lifetime2)).a();
-                              l.a(32, 124, 16777215);
-                              l.a(64, 108, 16777215);
-                              l.a(64, 139, 16777215);
-                              l.a(95, 124, 16777215);
+                              SoftwareRasterizer.a(32, 124, 16777215);
+                              SoftwareRasterizer.a(64, 108, 16777215);
+                              SoftwareRasterizer.a(64, 139, 16777215);
+                              SoftwareRasterizer.a(95, 124, 16777215);
                               k.field_f.a(0);
                               u.field_a.a();
                               ((Sprite) (var16Lifetime2)).d(0, 0);
-                              if (this.field_i != null &&
-                                0 < this.field_i.field_L) {
+                              if (this.state != null &&
+                                0 < this.state.field_L) {
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16744576);
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16728128);
@@ -3201,13 +3201,13 @@ final class LevelMap {
                         stackIn_89_0Lifetime1 = var14Lifetime1;
                         if (stackIn_89_0Lifetime1 != null) {
                           var15Lifetime1 = hb.field_p[0];
-                          if (null != var14Lifetime1.field_h &&
+                          if (null != var14Lifetime1.unit &&
                             ~var13Lifetime1 == ~eg.field_p) {
-                            if (null != var14Lifetime1.field_h.field_Z) {
+                            if (null != var14Lifetime1.unit.field_Z) {
                               var15Lifetime1 = hb.field_p[2];
                             } else {
-                              if (var14Lifetime1.field_h.field_C == 1) {
-                                if (var14Lifetime1.field_h.field_k) {
+                              if (var14Lifetime1.unit.field_C == 1) {
+                                if (var14Lifetime1.unit.field_k) {
                                   var15Lifetime1 = hb.field_p[1];
                                 }
                               } else {
@@ -3215,8 +3215,8 @@ final class LevelMap {
                               }
                             }
                           }
-                          if (this.field_i != null &&
-                            this.field_i.field_L != 0 &&
+                          if (this.state != null &&
+                            this.state.field_L != 0 &&
                             eg.field_p == var13Lifetime1) {
                             var15Lifetime1 = hb.field_p[1];
                           }
@@ -3225,8 +3225,8 @@ final class LevelMap {
                           }
                         } else {
                           var15Lifetime1 = hb.field_p[0];
-                          if (null != this.field_i &&
-                            this.field_i.field_L != 0 &&
+                          if (null != this.state &&
+                            this.state.field_L != 0 &&
                             var13Lifetime1 == eg.field_p) {
                             var15Lifetime1 = hb.field_p[1];
                           }
@@ -3236,24 +3236,24 @@ final class LevelMap {
                           var16Lifetime1 = null;
                           if (!param1) {
                             u.field_a.a();
-                            l.f(0, 0, 128, 160, 0);
+                            SoftwareRasterizer.f(0, 0, 128, 160, 0);
                             k.field_f.a(0);
                           } else {
                             var16Lifetime1 = oi.field_J;
                             ((Sprite) (var16Lifetime1)).a();
-                            l.f(0, 0, 128, 160, 0);
+                            SoftwareRasterizer.f(0, 0, 128, 160, 0);
                           }
                           if (null != var16Lifetime1) {
                             ((Sprite) (var16Lifetime1)).a();
-                            l.a(32, 124, 16777215);
-                            l.a(64, 108, 16777215);
-                            l.a(64, 139, 16777215);
-                            l.a(95, 124, 16777215);
+                            SoftwareRasterizer.a(32, 124, 16777215);
+                            SoftwareRasterizer.a(64, 108, 16777215);
+                            SoftwareRasterizer.a(64, 139, 16777215);
+                            SoftwareRasterizer.a(95, 124, 16777215);
                             k.field_f.a(0);
                             u.field_a.a();
                             ((Sprite) (var16Lifetime1)).d(0, 0);
-                            if (this.field_i != null &&
-                              0 < this.field_i.field_L) {
+                            if (this.state != null &&
+                              0 < this.state.field_L) {
                               NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
                               NodeHashTableIterator.a((byte) -86, u.field_a, 16744576);
                               NodeHashTableIterator.a((byte) -86, u.field_a, 16728128);
@@ -3351,10 +3351,10 @@ final class LevelMap {
         try {
           var4_int = param0 - 5 * (this.field_b - 64) / 2;
           var5 = param2 - 5 * (this.field_e - 64) / 2;
-          l.e(-3 + var4_int, -3 + var5, 6 + this.field_b * 5, 5 * this.field_e + 6, 10066329);
-          l.e(-2 + var4_int, -2 + var5, 4 + 5 * this.field_b, 5 * this.field_e + 4, 0);
-          l.e(-1 + var4_int, var5 - 1, 2 + this.field_b * 5, 2 + 5 * this.field_e, 6645093);
-          l.f(var4_int, var5, this.field_b * 5, this.field_e * 5, 0);
+          SoftwareRasterizer.e(-3 + var4_int, -3 + var5, 6 + this.field_b * 5, 5 * this.field_e + 6, 10066329);
+          SoftwareRasterizer.e(-2 + var4_int, -2 + var5, 4 + 5 * this.field_b, 5 * this.field_e + 4, 0);
+          SoftwareRasterizer.e(-1 + var4_int, var5 - 1, 2 + this.field_b * 5, 2 + 5 * this.field_e, 6645093);
+          SoftwareRasterizer.f(var4_int, var5, this.field_b * 5, this.field_e * 5, 0);
           vf.field_a = -1;
           IntrusiveNode.field_c = -1;
           var8 = 5597743;
@@ -3368,44 +3368,44 @@ final class LevelMap {
           if (param2 == 50) {
             var7 = 70;
             var6 = 400;
-            l.e(var6 - 13, 47, 176, 326, 10066329);
-            l.e(var6 - 12, 48, 174, 324, 0);
-            l.e(-11 + var6, 49, 172, 322, 6645093);
-            l.f(-10 + var6, 50, 170, 320, 0);
+            SoftwareRasterizer.e(var6 - 13, 47, 176, 326, 10066329);
+            SoftwareRasterizer.e(var6 - 12, 48, 174, 324, 0);
+            SoftwareRasterizer.e(-11 + var6, 49, 172, 322, 6645093);
+            SoftwareRasterizer.f(-10 + var6, 50, 170, 320, 0);
             var16_int = 20;
             og.field_f.b(vb.field_e, var6, var7, 16777215, -1);
             og.field_f.b(vb.field_e, 1 + var6, var7, 16777215, -1);
             var7 = var7 + (6 + var16_int);
             og.field_f.b(kj.field_a, var6, var7, 16777215, -1);
             var7 = var7 + (var16_int + 6);
-            l.f(var6, var7 - 11, 12, 12, var8);
+            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var8);
             og.field_f.b(cm.field_e, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            l.f(var6, var7 - 11, 12, 12, var9);
+            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var9);
             og.field_f.b(gh.field_L, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            l.f(var6, var7 - 11, 12, 12, var10);
+            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var10);
             og.field_f.b(ab.field_c, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             var7 += 6;
             og.field_f.b(mm.field_g, var6, var7, 16777215, -1);
             var7 = var7 + (var16_int + 6);
-            l.f(var6, var7 - 11, 12, 12, var11);
+            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var11);
             og.field_f.b(bm.field_c, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            l.f(var6, var7 - 11, 12, 12, var12);
+            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var12);
             og.field_f.b(am.field_H, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            l.f(var6, -11 + var7, 12, 12, var13);
+            SoftwareRasterizer.f(var6, -11 + var7, 12, 12, var13);
             og.field_f.b(cg.field_I, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            l.f(var6, var7 - 11, 12, 12, var15);
+            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var15);
             og.field_f.b(DualLinkNode.field_h, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            l.f(var6, -11 + var7, 12, 12, var14);
+            SoftwareRasterizer.f(var6, -11 + var7, 12, 12, var14);
             og.field_f.b(gh.field_O, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            l.f(var6, -11 + var7, 12, 12, 16777215);
+            SoftwareRasterizer.f(var6, -11 + var7, 12, 12, 16777215);
             og.field_f.b(rj.field_b, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             rh.field_b[0].f(-2 + var6, -13 + var7);
@@ -3459,7 +3459,7 @@ final class LevelMap {
                           if (var20.field_b != -1) {
                             if (this.field_a == 2) {
                               var22 = this.field_b / 4;
-                              if (this.field_i.field_G.field_Bb == 11) {
+                              if (this.state.client.field_Bb == 11) {
                                 var22 = 1 + this.field_b / 8;
                               }
                               if (var17 < -var22 + this.field_b / 2 ||
@@ -3488,7 +3488,7 @@ final class LevelMap {
                               var21 = 1;
                             }
                           }
-                          if (this.field_i.map.tiles[var17][var18].field_v >= 3) {
+                          if (this.state.map.tiles[var17][var18].field_v >= 3) {
                             var21 = 1;
                           }
                           var22_ref_dl = var20;
@@ -3570,41 +3570,41 @@ final class LevelMap {
                         var19 = (int)(128.0 + 64.0 * Math.sin((double)(-var18) + (mm.field_f * 2.0 + (double)var17))) * 65793;
                       }
                       if (var19 != 0) {
-                        l.f(var6Lifetime1, var7Lifetime1, 5, 5, var19);
+                        SoftwareRasterizer.f(var6Lifetime1, var7Lifetime1, 5, 5, var19);
                         if (var19 == 16777215) {
-                          l.c(var6Lifetime1, var7Lifetime1 + 2, var6Lifetime1 + 2, var7Lifetime1, 0);
-                          l.c(var6Lifetime1, 3 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 1, 0);
-                          l.c(4 + var6Lifetime1, 2 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1, 0);
-                          l.c(4 + var6Lifetime1, var7Lifetime1 + 3, var6Lifetime1 + 2, var7Lifetime1 + 1, 0);
+                          SoftwareRasterizer.c(var6Lifetime1, var7Lifetime1 + 2, var6Lifetime1 + 2, var7Lifetime1, 0);
+                          SoftwareRasterizer.c(var6Lifetime1, 3 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 1, 0);
+                          SoftwareRasterizer.c(4 + var6Lifetime1, 2 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1, 0);
+                          SoftwareRasterizer.c(4 + var6Lifetime1, var7Lifetime1 + 3, var6Lifetime1 + 2, var7Lifetime1 + 1, 0);
                         }
                         if (var19 == 16777214) {
-                          l.c(var6Lifetime1, var7Lifetime1 + 1, var6Lifetime1 + 2, var7Lifetime1 + 3, 0);
-                          l.c(var6Lifetime1, var7Lifetime1, var6Lifetime1 + 2, 2 + var7Lifetime1, 0);
-                          l.c(var6Lifetime1 + 4, 1 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 3, 0);
-                          l.c(var6Lifetime1 + 4, var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 2, 0);
+                          SoftwareRasterizer.c(var6Lifetime1, var7Lifetime1 + 1, var6Lifetime1 + 2, var7Lifetime1 + 3, 0);
+                          SoftwareRasterizer.c(var6Lifetime1, var7Lifetime1, var6Lifetime1 + 2, 2 + var7Lifetime1, 0);
+                          SoftwareRasterizer.c(var6Lifetime1 + 4, 1 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 3, 0);
+                          SoftwareRasterizer.c(var6Lifetime1 + 4, var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 2, 0);
                         }
-                        l.f(var6Lifetime1 + 4, var7Lifetime1, 5, 2236962);
-                        l.b(var6Lifetime1, 4 + var7Lifetime1, 4, 2236962);
+                        SoftwareRasterizer.f(var6Lifetime1 + 4, var7Lifetime1, 5, 2236962);
+                        SoftwareRasterizer.b(var6Lifetime1, 4 + var7Lifetime1, 4, 2236962);
                       }
                       if (var21 != 0) {
-                        l.c(var6Lifetime1, var7Lifetime1, -1 + (5 + var6Lifetime1), -1 + (var7Lifetime1 + 5), 16711680);
-                        l.c(var6Lifetime1, 1 + var7Lifetime1, 5 + var6Lifetime1 - 2, 5 + var7Lifetime1 - 1, 16711680);
-                        l.c(5 + (var6Lifetime1 - 1), var7Lifetime1, -1 + (var6Lifetime1 + 5), var7Lifetime1, 16711680);
+                        SoftwareRasterizer.c(var6Lifetime1, var7Lifetime1, -1 + (5 + var6Lifetime1), -1 + (var7Lifetime1 + 5), 16711680);
+                        SoftwareRasterizer.c(var6Lifetime1, 1 + var7Lifetime1, 5 + var6Lifetime1 - 2, 5 + var7Lifetime1 - 1, 16711680);
+                        SoftwareRasterizer.c(5 + (var6Lifetime1 - 1), var7Lifetime1, -1 + (var6Lifetime1 + 5), var7Lifetime1, 16711680);
                       }
-                      if (var6Lifetime1 <= this.field_i.field_y &&
-                        this.field_i.field_y < (5 + var6Lifetime1) &&
-                        var7Lifetime1 <= this.field_i.field_j &&
-                        5 + var7Lifetime1 > this.field_i.field_j) {
+                      if (var6Lifetime1 <= this.state.field_y &&
+                        this.state.field_y < (5 + var6Lifetime1) &&
+                        var7Lifetime1 <= this.state.field_j &&
+                        5 + var7Lifetime1 > this.state.field_j) {
                         IntrusiveNode.field_c = var17;
                         vf.field_a = var18;
                       }
                       if (var20.field_a ||
                         !var20.field_d) {
                         if (4 == (var20.field_i & 4)) {
-                          l.g(var6Lifetime1 + 4, var7Lifetime1, 5, 16776960);
+                          SoftwareRasterizer.g(var6Lifetime1 + 4, var7Lifetime1, 5, 16776960);
                         }
                         if ((var20.field_i & 8) == 8) {
-                          l.d(var6Lifetime1, 4 + var7Lifetime1, 5, 16776960);
+                          SoftwareRasterizer.d(var6Lifetime1, 4 + var7Lifetime1, 5, 16776960);
                         }
                         if (-1 != var20.field_g) {
                           var23 = var15;
@@ -3614,8 +3614,8 @@ final class LevelMap {
                           if ((var20.field_i & 1) == 1) {
                             var23 = 16776960;
                           }
-                          l.g(var6Lifetime1, var7Lifetime1, 5, var23);
-                          l.g(-1 + var6Lifetime1, var7Lifetime1, 5, var23);
+                          SoftwareRasterizer.g(var6Lifetime1, var7Lifetime1, 5, var23);
+                          SoftwareRasterizer.g(-1 + var6Lifetime1, var7Lifetime1, 5, var23);
                         }
                         if (-1 != var20.field_k) {
                           var23Lifetime1 = var15;
@@ -3625,8 +3625,8 @@ final class LevelMap {
                           if ((2 & var20.field_i) == 2) {
                             var23Lifetime1 = 16776960;
                           }
-                          l.d(var6Lifetime1, var7Lifetime1 - 1, 5, var23Lifetime1);
-                          l.d(var6Lifetime1, var7Lifetime1, 5, var23Lifetime1);
+                          SoftwareRasterizer.d(var6Lifetime1, var7Lifetime1 - 1, 5, var23Lifetime1);
+                          SoftwareRasterizer.d(var6Lifetime1, var7Lifetime1, 5, var23Lifetime1);
                         }
                       }
                     }
@@ -3650,25 +3650,25 @@ final class LevelMap {
               var7Lifetime1Lifetime1 = -(sj.field_b * 5 / 64) + var5 + 5 * lg.field_c / 32;
               var6Lifetime1Lifetime1 = sj.field_b * 5 / 64 + (var4_int + 5 * lg.field_c / 32);
               var16_intLifetime1 = 48;
-              l.c(var4_int, var5, var4_int + 5 * this.field_b, this.field_e * 5 + var5);
-              l.c(-var16_intLifetime1 + (2 + var6Lifetime1Lifetime1), 2 + var7Lifetime1Lifetime1, 2 + var6Lifetime1Lifetime1, -var16_intLifetime1 + var7Lifetime1Lifetime1 + 2, 16777215);
-              l.c(var6Lifetime1Lifetime1 + 2, 2 + (var7Lifetime1Lifetime1 - var16_intLifetime1), var16_intLifetime1 + (var6Lifetime1Lifetime1 + 2), 2 + var7Lifetime1Lifetime1, 16777215);
-              l.c(var6Lifetime1Lifetime1 + (2 + var16_intLifetime1), var7Lifetime1Lifetime1 + 2, var6Lifetime1Lifetime1 + 2, 2 + var7Lifetime1Lifetime1 + var16_intLifetime1, 16777215);
-              l.c(2 + var6Lifetime1Lifetime1, var16_intLifetime1 + var7Lifetime1Lifetime1 + 2, var6Lifetime1Lifetime1 + 2 - var16_intLifetime1, var7Lifetime1Lifetime1 + 2, 16777215);
-              l.c();
+              SoftwareRasterizer.c(var4_int, var5, var4_int + 5 * this.field_b, this.field_e * 5 + var5);
+              SoftwareRasterizer.c(-var16_intLifetime1 + (2 + var6Lifetime1Lifetime1), 2 + var7Lifetime1Lifetime1, 2 + var6Lifetime1Lifetime1, -var16_intLifetime1 + var7Lifetime1Lifetime1 + 2, 16777215);
+              SoftwareRasterizer.c(var6Lifetime1Lifetime1 + 2, 2 + (var7Lifetime1Lifetime1 - var16_intLifetime1), var16_intLifetime1 + (var6Lifetime1Lifetime1 + 2), 2 + var7Lifetime1Lifetime1, 16777215);
+              SoftwareRasterizer.c(var6Lifetime1Lifetime1 + (2 + var16_intLifetime1), var7Lifetime1Lifetime1 + 2, var6Lifetime1Lifetime1 + 2, 2 + var7Lifetime1Lifetime1 + var16_intLifetime1, 16777215);
+              SoftwareRasterizer.c(2 + var6Lifetime1Lifetime1, var16_intLifetime1 + var7Lifetime1Lifetime1 + 2, var6Lifetime1Lifetime1 + 2 - var16_intLifetime1, var7Lifetime1Lifetime1 + 2, 16777215);
+              SoftwareRasterizer.c();
             }
             var16_intLifetime1 = 0;
             while (true) {
-              if (this.field_i.field_F.length > var16_intLifetime1) {
+              if (this.state.field_F.length > var16_intLifetime1) {
                 if (var24 == 0) {
-                  if (null != this.field_i.field_F[var16_intLifetime1]) {
-                    var7Lifetime1Lifetime2 = (int)(2.0 + (this.field_i.field_F[var16_intLifetime1].field_p / 10.0 + (double)(var5 + 5 * this.field_i.field_F[var16_intLifetime1].field_m)));
-                    var6Lifetime1Lifetime2 = (int)(2.0 + (this.field_i.field_F[var16_intLifetime1].field_y / 10.0 + (double)(5 * this.field_i.field_F[var16_intLifetime1].field_c + var4_int)));
+                  if (null != this.state.field_F[var16_intLifetime1]) {
+                    var7Lifetime1Lifetime2 = (int)(2.0 + (this.state.field_F[var16_intLifetime1].field_p / 10.0 + (double)(var5 + 5 * this.state.field_F[var16_intLifetime1].field_m)));
+                    var6Lifetime1Lifetime2 = (int)(2.0 + (this.state.field_F[var16_intLifetime1].field_y / 10.0 + (double)(5 * this.state.field_F[var16_intLifetime1].field_c + var4_int)));
                     var17Lifetime1 = 16776960;
-                    if (~eg.field_p != ~this.field_i.field_F[var16_intLifetime1].field_x) {
+                    if (~eg.field_p != ~this.state.field_F[var16_intLifetime1].field_x) {
                       var17Lifetime1 = 14540032;
                     }
-                    l.f(-1 + var6Lifetime1Lifetime2, -1 + var7Lifetime1Lifetime2, 2, 2, var17Lifetime1);
+                    SoftwareRasterizer.f(-1 + var6Lifetime1Lifetime2, -1 + var7Lifetime1Lifetime2, 2, 2, var17Lifetime1);
                   }
                   var16_intLifetime1++;
                   continue;
@@ -3677,7 +3677,7 @@ final class LevelMap {
                 if (50 != param2) {
                   var17Lifetime1 = 0;
                   while (100 > var17Lifetime1) {
-                    var16 = this.field_i.units[var17Lifetime1];
+                    var16 = this.state.units[var17Lifetime1];
                     if (var24 != 0) {
                       return;
                     }
@@ -3696,9 +3696,9 @@ final class LevelMap {
                         }
                         if (var16.field_Z != null &&
                           var16.tile != null &&
-                          var16 == var16.tile.field_h) {
+                          var16 == var16.tile.unit) {
                           rh.field_b[0].c(-2 + var6Lifetime1Lifetime2, -2 + var7Lifetime1Lifetime2);
-                          if (var16 == this.field_i.field_q) {
+                          if (var16 == this.state.field_q) {
                             rh.field_b[0].f(var6Lifetime1Lifetime2 - 6, var7Lifetime1Lifetime2 - 6);
                           }
                         }
@@ -3712,10 +3712,10 @@ final class LevelMap {
                           } else {
                             rh.field_b[1].c(var6Lifetime1Lifetime2 - 2, -2 + var7Lifetime1Lifetime2);
                           }
-                          if (((null != this.field_i.field_q)) &&
-                            (!(!this.field_i.map.a((byte) -93, this.field_i.field_q, var16)))) {
-                            l.a(2 + var6Lifetime1Lifetime2, var7Lifetime1Lifetime2 + 2, 4, 16711680);
-                            l.a(var6Lifetime1Lifetime2 + 2, 2 + var7Lifetime1Lifetime2, 5, 8388608);
+                          if (((null != this.state.field_q)) &&
+                            (!(!this.state.map.a((byte) -93, this.state.field_q, var16)))) {
+                            SoftwareRasterizer.a(2 + var6Lifetime1Lifetime2, var7Lifetime1Lifetime2 + 2, 4, 16711680);
+                            SoftwareRasterizer.a(var6Lifetime1Lifetime2 + 2, 2 + var7Lifetime1Lifetime2, 5, 8388608);
                           }
                         }
                         decompiledFrameRemainder0 = false;
@@ -3742,7 +3742,7 @@ final class LevelMap {
             }
             var17Lifetime2 = 0;
             while (var17Lifetime2 < 100) {
-              var16Lifetime1 = this.field_i.units[var17Lifetime2];
+              var16Lifetime1 = this.state.units[var17Lifetime2];
               if (var24 != 0) {
                 return;
               }
@@ -3761,7 +3761,7 @@ final class LevelMap {
                   }
                   if (null != var16Lifetime1.field_Z) {
                     rh.field_b[0].c(-2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 - 2);
-                    if (this.field_i.field_q == var16Lifetime1) {
+                    if (this.state.field_q == var16Lifetime1) {
                       rh.field_b[0].f(var6Lifetime1Lifetime3 - 6, -6 + var7Lifetime1Lifetime3);
                     }
                   }
@@ -3775,10 +3775,10 @@ final class LevelMap {
                     } else {
                       rh.field_b[1].c(-2 + var6Lifetime1Lifetime3, -2 + var7Lifetime1Lifetime3);
                     }
-                    if (((null != this.field_i.field_q)) &&
-                      (!(!this.field_i.map.a((byte) -93, this.field_i.field_q, var16Lifetime1)))) {
-                      l.a(2 + var6Lifetime1Lifetime3, 2 + var7Lifetime1Lifetime3, 4, 16711680);
-                      l.a(2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 + 2, 5, 8388608);
+                    if (((null != this.state.field_q)) &&
+                      (!(!this.state.map.a((byte) -93, this.state.field_q, var16Lifetime1)))) {
+                      SoftwareRasterizer.a(2 + var6Lifetime1Lifetime3, 2 + var7Lifetime1Lifetime3, 4, 16711680);
+                      SoftwareRasterizer.a(2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 + 2, 5, 8388608);
                     }
                   }
                   decompiledFrameRemainder1 = false;
@@ -3911,7 +3911,7 @@ final class LevelMap {
         try {
           regionExit1: {
             this.field_m = 0;
-            this.field_i = param0;
+            this.state = param0;
             sj.field_b = 0;
             lg.field_c = 0;
             GameApplet.field_m = false;
@@ -3920,7 +3920,7 @@ final class LevelMap {
             var3 = 0;
             var4 = 0;
             var5 = 0;
-            if (param0.field_G.field_db) {
+            if (param0.client.field_db) {
               this.field_b = 64;
               this.field_e = 64;
               this.field_a = 3;
@@ -3934,7 +3934,7 @@ final class LevelMap {
                 break regionExit1;
               }
             }
-            var6 = param0.field_G.field_Bb;
+            var6 = param0.client.field_Bb;
             switch ((var22 == 0
               || var6 == 1
               || var6 == 3
@@ -3975,7 +3975,7 @@ final class LevelMap {
                 this.field_b = 64;
                 this.field_a = 3;
                 this.field_e = 64;
-                if (param0.field_G.field_ub == 1) {
+                if (param0.client.field_ub == 1) {
                   stackIn_74_1 = 4;
                 } else {
                   stackIn_74_1 = 5;
@@ -3995,7 +3995,7 @@ final class LevelMap {
                   break regionExit1;
                 }
               case 5:
-                if (param0.field_G.field_ub != 1) {
+                if (param0.client.field_ub != 1) {
                   stackIn_82_1 = 4;
                 } else {
                   stackIn_82_1 = 5;
@@ -4029,7 +4029,7 @@ final class LevelMap {
               case 8:
                 this.field_b = 64;
                 this.field_e = 64;
-                if (param0.field_G.field_vb != 1) {
+                if (param0.client.field_vb != 1) {
                   this.field_a = 1;
                   var4 = 3;
                   if (var22 == 0) {
@@ -4047,7 +4047,7 @@ final class LevelMap {
                 var4 = 4;
                 this.field_b = 64;
                 this.field_a = 2;
-                if (1 == param0.field_G.field_ub) {
+                if (1 == param0.client.field_ub) {
                   stackIn_96_1 = 4;
                 } else {
                   stackIn_96_1 = 5;
@@ -4060,7 +4060,7 @@ final class LevelMap {
               case 10:
                 this.field_b = 64;
                 this.field_e = 64;
-                if (param0.field_G.field_vb != 1) {
+                if (param0.client.field_vb != 1) {
                   this.field_k = 6;
                   this.field_e = 62;
                   this.field_a = 1;
@@ -4518,7 +4518,7 @@ final class LevelMap {
                 var12 = 0;
                 var13_ref = ImageProducerRasterBuffer.field_k[wf.a("Hanger", true)];
                 var6 = 0;
-                if (param0.field_G.field_Bb == 3) {
+                if (param0.client.field_Bb == 3) {
                   var13_ref = ImageProducerRasterBuffer.field_k[wf.a("AlienHanger", true)];
                 }
               }
@@ -4533,7 +4533,7 @@ final class LevelMap {
                 var13_ref = ImageProducerRasterBuffer.field_k[wf.a("FactoryBase", true)];
                 var9 = 0;
                 var12 = 0;
-                if (param0.field_G.field_Bb == 3) {
+                if (param0.client.field_Bb == 3) {
                   var13_ref = ImageProducerRasterBuffer.field_k[wf.a("AlienFactoryBase", true)];
                 }
               }
@@ -4832,7 +4832,7 @@ final class LevelMap {
                     var14 = 0;
                     while (var14 < this.field_e) {
                       this.tiles[var13][var14].a(0);
-                      stackIn_571_0 = param0.field_G.field_Bb;
+                      stackIn_571_0 = param0.client.field_Bb;
                       stackIn_571_1 = 1;
                       if (stackIn_571_0 == stackIn_571_1) {
                         this.tiles[var13][var14].field_z = true;

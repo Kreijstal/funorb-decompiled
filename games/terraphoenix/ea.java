@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea implements cj {
+final class ea implements WidgetActionListener {
     private int field_a;
     private int field_e;
     private int field_l;
     static boolean field_j;
-    private pk field_h;
+    private BitmapFont field_h;
     private int field_b;
     private int field_p;
     private int field_i;
@@ -49,14 +49,14 @@ final class ea implements cj {
           if (param4) {
             var7 = 16777215;
           }
-          l.f(param1.field_w + param2, param1.field_u + param0, param1.field_p, param1.field_n, this.field_q);
+          SoftwareRasterizer.f(param1.field_w + param2, param1.field_u + param0, param1.field_p, param1.field_n, this.field_q);
           var8 = param1.field_w + (param2 + this.field_g);
           var9 = this.field_l + (param1.field_u + param0);
-          l.d(var8, var9, this.field_i, this.field_e, 5592405);
-          l.f(var8, var9, this.field_i, this.field_e, var7);
+          SoftwareRasterizer.d(var8, var9, this.field_i, this.field_e, 5592405);
+          SoftwareRasterizer.f(var8, var9, this.field_i, this.field_e, var7);
           if (var11.field_C) {
-            l.c(var8, var9, var8 + this.field_i, var9 + this.field_e, 1);
-            l.c(this.field_i + var8, var9, var8, var9 + this.field_e, 1);
+            SoftwareRasterizer.c(var8, var9, var8 + this.field_i, var9 + this.field_e, 1);
+            SoftwareRasterizer.c(this.field_i + var8, var9, var8, var9 + this.field_e, 1);
           }
           if (this.field_h != null) {
             var10 = this.field_i + this.field_g + this.field_a;
@@ -127,7 +127,7 @@ final class ea implements cj {
         }
     }
 
-    ea(pk param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    ea(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_c = 1;
         this.field_d = 1;
         try {

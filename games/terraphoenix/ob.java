@@ -13,7 +13,7 @@ final class ob {
     static int[] field_a;
 
     final static void b() {
-        ob.a(l.field_b, l.field_d, l.field_f, l.field_c);
+        ob.a(SoftwareRasterizer.field_b, SoftwareRasterizer.field_d, SoftwareRasterizer.field_f, SoftwareRasterizer.field_c);
     }
 
     private final static void c() {
@@ -37,10 +37,10 @@ final class ob {
         if (field_d.length < field_h) {
           field_d = new int[vd.b(field_h, 17603)];
         }
-        int var4 = param1 * l.field_k + param0;
+        int var4 = param1 * SoftwareRasterizer.field_k + param0;
         for (var5 = 0; var5 < field_h; var5++) {
           field_d[var5] = var4;
-          var4 = var4 + l.field_k;
+          var4 = var4 + SoftwareRasterizer.field_k;
         }
     }
 

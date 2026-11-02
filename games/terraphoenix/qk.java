@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qk {
-    static pk field_e;
-    static pk field_a;
+    static BitmapFont field_e;
+    static BitmapFont field_a;
     static int field_b;
     private SecondaryNodeDeque field_d;
     static String field_g;

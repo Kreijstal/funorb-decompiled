@@ -3,11 +3,11 @@
  */
 final class oe {
     static int field_c;
-    private fa field_e;
+    private Archive field_e;
     static String field_a;
     static rh field_d;
     static String[] field_b;
-    private fa field_g;
+    private Archive field_g;
     private qk field_f;
 
     final mb a(boolean param0, int param1) {

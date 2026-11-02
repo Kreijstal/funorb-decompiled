@@ -34,7 +34,7 @@ abstract class RasterBuffer {
           if (param0 != 67) {
             field_e = (String) null;
           }
-          var2 = var12.a(-16384);
+          var2 = var12.readUnsignedByte(-16384);
           if (0 == var2) {
             var10 = a.b(3922);
             var16 = var10;
@@ -43,9 +43,9 @@ abstract class RasterBuffer {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((PacketBuffer) ((Object) var5)).a(-16384);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-16384);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).f((byte) -107);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -107);
             }
             var15 = (ok) (vc.field_g.d(9272));
             if (var15 == null) {
@@ -175,19 +175,19 @@ abstract class RasterBuffer {
           var9 = param3;
           param3 = param3 - param4;
           if (param1 == 0) {
-            l.a(param2, param3, param5);
+            SoftwareRasterizer.a(param2, param3, param5);
             return;
           }
           if (0 > param1) {
             param1 = -param1;
           }
           var11 = -param1 + param3;
-          if (l.field_d > var11) {
-            var11 = l.field_d;
+          if (SoftwareRasterizer.field_d > var11) {
+            var11 = SoftwareRasterizer.field_d;
           }
           var12 = param3 + param1 + 1;
-          if (var12 > l.field_c) {
-            var12 = l.field_c;
+          if (var12 > SoftwareRasterizer.field_c) {
+            var12 = SoftwareRasterizer.field_c;
           }
           var13 = var11;
           var14 = param1 * param1;
@@ -210,15 +210,15 @@ abstract class RasterBuffer {
               }
               {
                 var19 = param2 - var15 + 1;
-                if (var19 < l.field_b) {
-                  var19 = l.field_b;
+                if (var19 < SoftwareRasterizer.field_b) {
+                  var19 = SoftwareRasterizer.field_b;
                 }
                 var20 = param2 + var15;
-                if (l.field_f < var20) {
-                  var20 = l.field_f;
+                if (SoftwareRasterizer.field_f < var20) {
+                  var20 = SoftwareRasterizer.field_f;
                 }
                 var7_int = var19;
-                var21 = l.field_k * var13 + var19;
+                var21 = SoftwareRasterizer.field_k * var13 + var19;
                 for (var22 = var19; var20 > var22; var22++) {
                   var10 = (int)((double)var9 + Math.sqrt((double)(-((-param3 + var8) * (var8 - param3)) - (var7_int - param2) * (var7_int - param2) + param1 * param1)));
                   if (var10 >= gd.field_a[var7_int][var8]) {
@@ -227,7 +227,7 @@ abstract class RasterBuffer {
                     }
                     incrementValue$4 = var21;
                     var21++;
-                    l.field_i[incrementValue$4] = param5;
+                    SoftwareRasterizer.field_i[incrementValue$4] = param5;
                   } else {
                     var21++;
                   }
@@ -263,14 +263,14 @@ abstract class RasterBuffer {
               break;
             }
             var19Lifetime1 = -var15Lifetime1 + param2;
-            if (var19Lifetime1 < l.field_b) {
-              var19Lifetime1 = l.field_b;
+            if (var19Lifetime1 < SoftwareRasterizer.field_b) {
+              var19Lifetime1 = SoftwareRasterizer.field_b;
             }
             var20Lifetime1 = var15Lifetime1 + param2;
-            if (l.field_f - 1 < var20Lifetime1) {
-              var20Lifetime1 = l.field_f - 1;
+            if (SoftwareRasterizer.field_f - 1 < var20Lifetime1) {
+              var20Lifetime1 = SoftwareRasterizer.field_f - 1;
             }
-            var21Lifetime1 = var13 * l.field_k + var19Lifetime1;
+            var21Lifetime1 = var13 * SoftwareRasterizer.field_k + var19Lifetime1;
             var25 = var19Lifetime1;
             var7_intLifetime1 = var25;
             for (var22Lifetime1 = var19Lifetime1; var20Lifetime1 > var22Lifetime1; var22Lifetime1++) {
@@ -281,7 +281,7 @@ abstract class RasterBuffer {
                 }
                 incrementValue$2 = var21Lifetime1;
                 var21Lifetime1++;
-                l.field_i[incrementValue$2] = param5;
+                SoftwareRasterizer.field_i[incrementValue$2] = param5;
               } else {
                 var21Lifetime1++;
               }
@@ -306,7 +306,7 @@ abstract class RasterBuffer {
         if (param0 != 0) {
           return;
         }
-        l.a(this.field_c, this.field_b, this.field_f);
+        SoftwareRasterizer.a(this.field_c, this.field_b, this.field_f);
     }
 
     abstract void a(int param0, int param1, byte param2, java.awt.Component param3);

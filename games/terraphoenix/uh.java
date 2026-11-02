@@ -78,7 +78,7 @@ final class uh extends WidgetContainer implements pa, n {
     }
 
     uh(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (cj) null);
+        super(0, 0, 310, 190, (WidgetActionListener) null);
         j dupTemp$0 = null;
         j dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -97,7 +97,7 @@ final class uh extends WidgetContainer implements pa, n {
         RuntimeException decompiledCaughtException = null;
         ic var6 = null;
         RuntimeException var6_ref = null;
-        pk var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         kf var9 = null;
         j var12 = null;
@@ -138,15 +138,15 @@ final class uh extends WidgetContainer implements pa, n {
               this.field_K = new eb(td.field_j, (sc) (this));
             }
           }
-          this.field_N.field_l = (cj) ((Object) new ng(10000536));
-          this.field_R.field_l = (cj) ((Object) new ah(10000536));
+          this.field_N.field_l = (WidgetActionListener) ((Object) new ng(10000536));
+          this.field_R.field_l = (WidgetActionListener) ((Object) new ah(10000536));
           var6 = new ic();
-          this.field_F.field_l = (cj) ((Object) var6);
+          this.field_F.field_l = (WidgetActionListener) ((Object) var6);
           if (null != this.field_G) {
-            this.field_G.field_l = (cj) ((Object) var6);
+            this.field_G.field_l = (WidgetActionListener) ((Object) var6);
           }
           if (this.field_K != null) {
-            this.field_K.field_l = (cj) ((Object) var6);
+            this.field_K.field_l = (WidgetActionListener) ((Object) var6);
           }
           this.field_N.field_x = hi.field_Z;
           if (this.field_K != null) {
@@ -157,9 +157,9 @@ final class uh extends WidgetContainer implements pa, n {
           } else {
             if (this.field_Q) {
               this.field_G.field_x = qf.field_b;
-              this.field_G.field_l = (cj) ((Object) new qh());
+              this.field_G.field_l = (WidgetActionListener) ((Object) new qh());
             } else {
-              this.field_G.field_l = (cj) ((Object) new qh());
+              this.field_G.field_l = (WidgetActionListener) ((Object) new qh());
             }
           }
           this.field_u = 15;
@@ -172,7 +172,7 @@ final class uh extends WidgetContainer implements pa, n {
           if (var9 == RasterBuffer.field_g) {
             var8 = ed.field_b;
           } else {
-            if (gf.field_u == var9) {
+            if (GameShell.field_u == var9) {
               var8 = mm.field_a;
             }
           }
@@ -353,7 +353,7 @@ final class uh extends WidgetContainer implements pa, n {
           qk.field_e.a(this.field_I, this.field_w + param0 + 20, this.field_u + (param3 + 15), -40 + this.field_p, this.field_n, 16777215, -1, 1, 0, qk.field_e.field_s);
         }
         if (this.field_K != null) {
-          l.d(param0 + 10, param3 + 134, this.field_p - 20, 4210752);
+          SoftwareRasterizer.d(param0 + 10, param3 + 134, this.field_p - 20, 4210752);
         }
         if (param1 > -106) {
           this.field_R = (ej) null;

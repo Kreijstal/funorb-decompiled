@@ -149,7 +149,7 @@ abstract class af implements rc {
         return this.e(0);
     }
 
-    final static int a(String param0, pk param1, int param2, String[] param3, int param4) {
+    final static int a(String param0, BitmapFont param1, int param2, String[] param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -186,7 +186,7 @@ abstract class af implements rc {
           }
           if (param2 != -3) {
             var14 = (String[]) null;
-            af.a((String) null, (pk) null, 80, (String[]) null, 47);
+            af.a((String) null, (BitmapFont) null, 80, (String[]) null, 47);
           }
           var6 = (-1 + var5_int + param4) / param4;
           param4 = var5_int / var6;

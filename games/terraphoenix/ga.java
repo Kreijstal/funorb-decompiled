@@ -72,7 +72,7 @@ final class ga {
               var2 = new PacketBuffer(13);
               ej.a(ng.field_y, -25563, var2, tj.field_wb, ai.field_c);
               var2.writeByte(15, -121);
-              var2.e(rf.field_v, 8959);
+              var2.writeInt(rf.field_v, 8959);
               gi.field_l.a(13, 0, (byte) -97, var2.payload);
               hm.field_N = hm.field_N + 1;
               t.field_b = 30000L + ll.a(1000);
@@ -246,7 +246,7 @@ final class ga {
     final static void d(int param0) {
         int var1 = LevelEditor.a(-1);
         int var2 = mc.a(55);
-        DelegatingCanvas.field_a.a(var1 + (nb.field_e << 1), vi.field_o - nb.field_e, var2 + (eb.field_D << 1), 0, -eb.field_D + jh.field_m);
+        FullscreenFocusCanvas.field_a.a(var1 + (nb.field_e << 1), vi.field_o - nb.field_e, var2 + (eb.field_D << 1), 0, -eb.field_D + jh.field_m);
         if (param0 != -6513) {
           field_p = (String) null;
         }
@@ -306,7 +306,7 @@ final class ga {
         }
     }
 
-    final static bg[] a(byte param0, int param1, fa param2, int param3) {
+    final static bg[] a(byte param0, int param1, Archive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;

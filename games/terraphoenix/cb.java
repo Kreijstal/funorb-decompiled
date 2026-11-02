@@ -178,7 +178,7 @@ final class cb extends jc {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.a(-16384);
+          var2_int = param0.readUnsignedByte(-16384);
           if (param1 < 72) {
             return true;
           }
@@ -274,7 +274,7 @@ final class cb extends jc {
         }
     }
 
-    private cb(int param0, int param1, int param2, int param3, cj param4, sc param5, UiWidget param6, boolean param7, boolean param8) {
+    private cb(int param0, int param1, int param2, int param3, WidgetActionListener param4, sc param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_N = 2147483647;
         this.field_M = 2147483647;

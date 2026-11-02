@@ -4,7 +4,7 @@
 final class IntrusiveDeque {
     IntrusiveNode field_a;
     static String field_e;
-    static fa field_c;
+    static Archive field_c;
     static int field_f;
     static String field_d;
     private IntrusiveNode field_b;
@@ -82,7 +82,7 @@ final class IntrusiveDeque {
         this.field_b = null;
     }
 
-    final static bg a(fa param0, int param1, byte param2, int param3) {
+    final static bg a(Archive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         bg stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -96,7 +96,7 @@ final class IntrusiveDeque {
           if (!DualLinkNode.a(param3, param1, param0, true)) {
             return null;
           }
-          stackIn_6_0 = km.a(param2 + 97);
+          stackIn_6_0 = ArchiveIndex.a(param2 + 97);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,8 +144,8 @@ final class IntrusiveDeque {
         if (param0 <= -67) {
           return var2;
         }
-        fa var3 = (fa) null;
-        IntrusiveDeque.a((fa) null, 85, (byte) 51, 81);
+        Archive var3 = (Archive) null;
+        IntrusiveDeque.a((Archive) null, 85, (byte) 51, 81);
         return var2;
     }
 

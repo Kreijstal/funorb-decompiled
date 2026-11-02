@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh implements cj {
+final class qh implements WidgetActionListener {
     static Sprite field_b;
     static int[] field_c;
     private int field_f;
     static int field_d;
     private int field_a;
-    private pk field_e;
+    private BitmapFont field_e;
 
     final static gd a(boolean param0) {
         String var1 = pb.a((byte) -47);
@@ -108,7 +108,7 @@ final class qh implements cj {
         }
     }
 
-    qh(pk param0, int param1, int param2) {
+    qh(BitmapFont param0, int param1, int param2) {
         try {
           this.field_a = param1;
           this.field_f = param2;

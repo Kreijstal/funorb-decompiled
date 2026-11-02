@@ -6,7 +6,7 @@ final class o {
     static String[] field_a;
     static bg[] field_c;
 
-    final static void a(int param0, int param1, int param2, pk param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5) {
         try {
           UiWidget.c((byte) 123);
           if (param0 != 50) {

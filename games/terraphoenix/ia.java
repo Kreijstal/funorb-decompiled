@@ -250,9 +250,9 @@ final class ia extends di {
           jc.field_z.position = 0;
           jc.field_z.writeByte(10, 92);
           for (var9Lifetime1 = 0; var9Lifetime1 < 4; var9Lifetime1++) {
-            jc.field_z.e(var12[var9Lifetime1], 8959);
+            jc.field_z.writeInt(var12[var9Lifetime1], 8959);
           }
-          jc.field_z.h(-1564407352, param5);
+          jc.field_z.writeShort(-1564407352, param5);
           jc.field_z.rsaEncrypt(param4, (byte) -52, param3);
           param1.a(-222449912, jc.field_z.payload, jc.field_z.position, 0);
           var9Lifetime2 = 39 % ((param2 - 0) / 61);
@@ -324,7 +324,7 @@ final class ia extends di {
           }
           var5.d(var4, 8600);
           var5.position = var5.position - 4;
-          param1.field_k = var5.f((byte) -107);
+          param1.field_k = var5.readInt((byte) -107);
           var5.j(var5.position - var4, -119);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "ia.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

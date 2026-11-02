@@ -99,7 +99,7 @@ abstract class vc {
         Sprite var1 = new Sprite(540, 140);
         il.a(1, var1);
         ob.b();
-        l.a();
+        SoftwareRasterizer.a();
         if (!param0) {
           return;
         }
@@ -109,7 +109,7 @@ abstract class vc {
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);
-            l.e(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.e(4, 4, 0, 0, 540, 140);
           }
           s.field_a.a();
           var1.f(0, 0);

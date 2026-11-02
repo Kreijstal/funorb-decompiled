@@ -36,13 +36,13 @@ abstract class MouseWheelInput {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final static DelegatingCanvas a(int param0, int param1, int param2, int param3, byte param4, PlatformTaskDispatcher param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, int param2, int param3, byte param4, PlatformTaskDispatcher param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        DelegatingCanvas var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        DelegatingCanvas stackIn_5_0 = null;
-        DelegatingCanvas stackIn_7_0 = null;
+        FullscreenFocusCanvas stackIn_5_0 = null;
+        FullscreenFocusCanvas stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -53,9 +53,9 @@ abstract class MouseWheelInput {
           if (var8 == null) {
             return null;
           }
-          var7 = new DelegatingCanvas();
+          var7 = new FullscreenFocusCanvas();
           if (param4 <= 82) {
-            stackIn_5_0 = (DelegatingCanvas) null;
+            stackIn_5_0 = (FullscreenFocusCanvas) null;
             return stackIn_5_0;
           }
           var7.field_e = var8;
@@ -99,10 +99,10 @@ abstract class MouseWheelInput {
         }
         if (param0 < -125) {
           var2 = LevelEditor.field_j;
-          var2.f((byte) -107);
-          var2.f((byte) -107);
-          var2.f((byte) -107);
-          var2.f((byte) -107);
+          var2.readInt((byte) -107);
+          var2.readInt((byte) -107);
+          var2.readInt((byte) -107);
+          var2.readInt((byte) -107);
           var1.unlink((byte) 12);
           return;
         }

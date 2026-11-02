@@ -16,7 +16,7 @@ abstract class kh extends WidgetContainer {
     abstract void a(int param0, int param1, byte param2);
 
     kh(d param0, int param1, int param2) {
-        super(-param1 + vk.field_c >> 1, -param2 + be.field_v >> 1, param1, param2, (cj) null);
+        super(-param1 + vk.field_c >> 1, -param2 + be.field_v >> 1, param1, param2, (WidgetActionListener) null);
         try {
           this.field_J = false;
           this.field_G = 0;
@@ -42,7 +42,7 @@ abstract class kh extends WidgetContainer {
           hf.field_y = new Sprite(this.field_p, this.field_n);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
-            l.a();
+            SoftwareRasterizer.a();
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
             ij.a(false);
@@ -51,7 +51,7 @@ abstract class kh extends WidgetContainer {
           }
           this.field_G = 14;
           il.a(1, hf.field_y);
-          l.a();
+          SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
           ij.a(false);
@@ -62,7 +62,7 @@ abstract class kh extends WidgetContainer {
           hf.field_y = new Sprite(this.field_p, this.field_n);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
-            l.a();
+            SoftwareRasterizer.a();
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
             ij.a(false);
@@ -71,7 +71,7 @@ abstract class kh extends WidgetContainer {
           }
           this.field_G = 14;
           il.a(1, hf.field_y);
-          l.a();
+          SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
           ij.a(false);
@@ -82,7 +82,7 @@ abstract class kh extends WidgetContainer {
           hf.field_y = new Sprite(this.field_p, this.field_n);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
-            l.a();
+            SoftwareRasterizer.a();
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
             ij.a(false);
@@ -91,7 +91,7 @@ abstract class kh extends WidgetContainer {
           }
           this.field_G = 14;
           il.a(1, hf.field_y);
-          l.a();
+          SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
           ij.a(false);
@@ -100,7 +100,7 @@ abstract class kh extends WidgetContainer {
         }
         if (param1 <= -106) {
           il.a(1, hf.field_y);
-          l.a();
+          SoftwareRasterizer.a();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
           ij.a(false);
@@ -109,7 +109,7 @@ abstract class kh extends WidgetContainer {
         }
         this.field_G = 14;
         il.a(1, hf.field_y);
-        l.a();
+        SoftwareRasterizer.a();
         this.a(0, 0, (byte) 82);
         super.a(-param0 - this.field_w, -127, param2, -param3 - this.field_u);
         ij.a(false);

@@ -45,7 +45,7 @@ class g extends wa {
     private int field_vb;
     private int field_ub;
     private int field_M;
-    private pk field_S;
+    private BitmapFont field_S;
     private boolean field_T;
     Sprite field_ob;
     private Sprite field_w;
@@ -68,7 +68,7 @@ class g extends wa {
         if (param0 != -36) {
           this.field_Bb = -103;
         }
-        this.a(l.field_k, 0, false, true, l.field_j, true, param1, false, 0, false, false);
+        this.a(SoftwareRasterizer.field_k, 0, false, true, SoftwareRasterizer.field_j, true, param1, false, 0, false, false);
     }
 
     public static void d(int param0) {
@@ -129,19 +129,19 @@ class g extends wa {
         this.field_vb = param5 + this.field_R;
         this.field_W = this.field_W - var7Lifetime3;
         this.field_lb = this.field_lb + var7Lifetime3;
-        var8 = l.field_b;
-        var9 = l.field_d;
-        var10 = l.field_f;
-        var11 = l.field_c;
-        l.i(this.field_vb, this.field_Bb, this.field_x + this.field_vb, this.field_Bb + this.field_lb);
+        var8 = SoftwareRasterizer.field_b;
+        var9 = SoftwareRasterizer.field_d;
+        var10 = SoftwareRasterizer.field_f;
+        var11 = SoftwareRasterizer.field_c;
+        SoftwareRasterizer.i(this.field_vb, this.field_Bb, this.field_x + this.field_vb, this.field_Bb + this.field_lb);
         var12 = 0;
         if (!mm.field_b &&
           param4 &&
           ma.field_I != 0 &&
-          mm.field_c >= l.field_b &&
-          mm.field_c < l.field_f &&
-          l.field_d <= lm.field_c &&
-          l.field_c > lm.field_c) {
+          mm.field_c >= SoftwareRasterizer.field_b &&
+          mm.field_c < SoftwareRasterizer.field_f &&
+          SoftwareRasterizer.field_d <= lm.field_c &&
+          SoftwareRasterizer.field_c > lm.field_c) {
           this.field_pb = ma.field_I;
           var12 = 1;
           this.field_Y = -this.field_Bb + lm.field_c;
@@ -156,7 +156,7 @@ class g extends wa {
         if (oh.field_f == 0) {
           this.field_N = 0;
         }
-        stackIn_35_1 = (!gi.field_w) && (ef.field_j >= l.field_b) && (l.field_f > ef.field_j) && (MouseWheelInput.field_b >= l.field_d) && (l.field_c > MouseWheelInput.field_b);
+        stackIn_35_1 = (!gi.field_w) && (ef.field_j >= SoftwareRasterizer.field_b) && (SoftwareRasterizer.field_f > ef.field_j) && (MouseWheelInput.field_b >= SoftwareRasterizer.field_d) && (SoftwareRasterizer.field_c > MouseWheelInput.field_b);
         this.field_D = stackIn_35_1;
         stackIn_40_1 = (this.field_D) && (this.field_N == oh.field_f) && (param4);
         this.field_Z = stackIn_40_1;
@@ -173,7 +173,7 @@ class g extends wa {
         if (this.field_D) {
           gi.field_w = true;
         }
-        l.c(var8, var9, var10, var11);
+        SoftwareRasterizer.c(var8, var9, var10, var11);
         if (this.field_N != 0 &&
           this.field_kb) {
           this.field_ib = MouseWheelInput.field_b - (this.field_Y + param0);
@@ -214,7 +214,7 @@ class g extends wa {
     final void a(int param0, boolean param1) {
         gi.field_w = !param1 ? true : false;
         mm.field_b = !param1 ? true : false;
-        this.a(0, l.field_j, (byte) -8, l.field_k, true, 0);
+        this.a(0, SoftwareRasterizer.field_j, (byte) -8, SoftwareRasterizer.field_k, true, 0);
         if (param0 >= -7) {
           this.field_ob = (Sprite) null;
         }
@@ -389,11 +389,11 @@ class g extends wa {
         var25 = Terraphoenix.field_V;
         this.field_vb = this.field_R + param1;
         this.field_Bb = param8 + this.field_ib;
-        var12 = l.field_b;
-        var13 = l.field_d;
-        var14 = l.field_f;
-        var15 = l.field_c;
-        l.i(this.field_vb, this.field_Bb, this.field_vb + this.field_x, this.field_Bb + this.field_lb);
+        var12 = SoftwareRasterizer.field_b;
+        var13 = SoftwareRasterizer.field_d;
+        var14 = SoftwareRasterizer.field_f;
+        var15 = SoftwareRasterizer.field_c;
+        SoftwareRasterizer.i(this.field_vb, this.field_Bb, this.field_vb + this.field_x, this.field_Bb + this.field_lb);
         param5 = param5 & this.field_zb;
         if (!this.field_Ab) {
           param10 = this.field_Z;
@@ -545,7 +545,7 @@ class g extends wa {
             var23_ref = (g) (this.field_L.e((byte) -119));
           }
         }
-        l.c(var12, var13, var14, var15);
+        SoftwareRasterizer.c(var12, var13, var14, var15);
     }
 
     private g(long param0, g param1, int param2, int param3, int param4, int param5, String param6) {

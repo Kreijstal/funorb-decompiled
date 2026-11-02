@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj {
-    static fa field_f;
+    static Archive field_f;
     static int field_b;
     static Sprite[] field_e;
     static lg[] field_a;

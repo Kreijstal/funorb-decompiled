@@ -55,12 +55,12 @@ final class gj {
           ab.field_g[3] = (int)kd.field_c;
           nc.field_c.position = 0;
           ab.field_g[2] = (int)(kd.field_c >> 32);
-          nc.field_c.e(ab.field_g[0], param2 ^ 8958);
-          nc.field_c.e(ab.field_g[1], 8959);
-          nc.field_c.e(ab.field_g[2], 8959);
-          nc.field_c.e(ab.field_g[3], 8959);
+          nc.field_c.writeInt(ab.field_g[0], param2 ^ 8958);
+          nc.field_c.writeInt(ab.field_g[1], 8959);
+          nc.field_c.writeInt(ab.field_g[2], 8959);
+          nc.field_c.writeInt(ab.field_g[3], 8959);
           GameApplet.a(9371, nc.field_c);
-          nc.field_c.h(-1564407352, param1);
+          nc.field_c.writeShort(-1564407352, param1);
           param3.a((byte) -2, nc.field_c);
           di.field_l.position = 0;
           if (!param0) {
@@ -70,10 +70,10 @@ final class gj {
           }
           di.field_l.position = di.field_l.position + 2;
           var5_int = di.field_l.position;
-          di.field_l.e(nd.field_i, 8959);
-          di.field_l.a(pc.field_a, 21);
+          di.field_l.writeInt(nd.field_i, 8959);
+          di.field_l.writeLong(pc.field_a, 21);
           var6 = 0;
-          if (jm.field_c) {
+          if (DelegatingCanvas.field_c) {
             var6 = var6 | 1;
           }
           if (hf.field_x) {
@@ -90,7 +90,7 @@ final class gj {
           if (var7 == null) {
             var7 = "";
           }
-          di.field_l.a(var7, 2295);
+          di.field_l.writeString(var7, 2295);
           if (og.field_e != null) {
             di.field_l.b(og.field_e, -108);
           }
@@ -160,7 +160,7 @@ final class gj {
         }
     }
 
-    final static void a(bm param0, bm param1, int param2, int param3, pk param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, bm param14, int param15, int param16, pk param17, int param18, int param19, int param20) {
+    final static void a(bm param0, bm param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, bm param14, int param15, int param16, BitmapFont param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

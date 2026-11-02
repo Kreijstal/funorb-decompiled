@@ -3,19 +3,19 @@
  */
 final class mi extends nb {
     private String field_j;
-    static fa field_h;
+    static Archive field_h;
     static String field_i;
     private String field_k;
 
     final static void d(int param0) {
         if (param0 != -22284) {
-          field_h = (fa) null;
+          field_h = (Archive) null;
         }
     }
 
     final cm c(int param0) {
         if (param0 != 0) {
-          field_h = (fa) null;
+          field_h = (Archive) null;
           return rj.field_a;
         }
         return rj.field_a;

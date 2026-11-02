@@ -36,7 +36,7 @@ abstract class jc extends UiWidget implements sf {
         }
     }
 
-    jc(int param0, int param1, int param2, int param3, cj param4, sc param5) {
+    jc(int param0, int param1, int param2, int param3, WidgetActionListener param4, sc param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 

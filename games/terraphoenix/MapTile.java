@@ -7,7 +7,7 @@ final class MapTile {
     boolean field_z;
     private int field_q;
     boolean field_a;
-    BattleUnit field_h;
+    BattleUnit unit;
     boolean field_w;
     int field_k;
     static int[] field_f;
@@ -77,7 +77,7 @@ final class MapTile {
             if (this.field_C == null) {
               return 10000;
             }
-            if (this.field_C.field_h != null) {
+            if (this.field_C.unit != null) {
               return 10000;
             }
             if (0 != param2 ||
@@ -89,7 +89,7 @@ final class MapTile {
             if (null == this.field_c) {
               return 10000;
             }
-            if (this.field_c.field_h != null) {
+            if (this.field_c.unit != null) {
               return 10000;
             }
             if (param2 != 0 ||
@@ -260,7 +260,7 @@ final class MapTile {
             var7 += 4;
           }
           if (var9.field_v == 4) {
-            if (var9.field_C.field_h != null) {
+            if (var9.field_C.unit != null) {
               return 10000;
             }
             if (param2 != 0 ||
@@ -270,7 +270,7 @@ final class MapTile {
           }
           if (5 == var9.field_v) {
             if (null != var9.field_c) {
-              if (null != var9.field_c.field_h) {
+              if (null != var9.field_c.unit) {
                 return 10000;
               }
             } else {
@@ -281,9 +281,9 @@ final class MapTile {
               return 10000;
             }
           }
-          if (null != var9.field_h && (var9.field_h.field_k ||
-            var9.field_h.field_C == 0 ||
-            !var9.map.field_i.field_J)) {
+          if (null != var9.unit && (var9.unit.field_k ||
+            var9.unit.field_C == 0 ||
+            !var9.map.state.field_J)) {
             return 10000;
           }
         }
@@ -397,7 +397,7 @@ final class MapTile {
 
     final void a(boolean param0) {
         if (-1 != this.field_b) {
-          this.field_b = DelegatingCanvas.field_f[this.field_b];
+          this.field_b = FullscreenFocusCanvas.field_f[this.field_b];
         }
         if (this.field_j >= 0) {
           this.field_j = hb.field_h[this.field_j];
@@ -426,7 +426,7 @@ final class MapTile {
         var6 = Terraphoenix.field_V;
         var5 = this;
         if (param1 != 1000) {
-          this.field_h = (BattleUnit) null;
+          this.unit = (BattleUnit) null;
         }
         while (param2 > ((MapTile) (var5)).field_r) {
           var5 = ((MapTile) (var5)).field_C;
@@ -462,40 +462,40 @@ final class MapTile {
             this.field_r = -16;
           }
           param0 = param0 + param2.field_p;
-          var6_int = param0 + param1 * l.field_k;
+          var6_int = param0 + param1 * SoftwareRasterizer.field_k;
           var7 = 0;
           var8 = param2.field_t;
           var9 = param2.field_r;
-          var10 = l.field_k - var9;
-          if (param1 < l.field_d) {
-            var12 = l.field_d - param1;
-            param1 = l.field_d;
+          var10 = SoftwareRasterizer.field_k - var9;
+          if (param1 < SoftwareRasterizer.field_d) {
+            var12 = SoftwareRasterizer.field_d - param1;
+            param1 = SoftwareRasterizer.field_d;
             var8 = var8 - var12;
-            var6_int = var6_int + var12 * l.field_k;
+            var6_int = var6_int + var12 * SoftwareRasterizer.field_k;
             var7 = var7 + var9 * var12;
           }
           var11 = 0;
-          if (l.field_c < var8 + param1) {
-            var8 = var8 - (-l.field_c + var8 + param1);
+          if (SoftwareRasterizer.field_c < var8 + param1) {
+            var8 = var8 - (-SoftwareRasterizer.field_c + var8 + param1);
           }
-          if (l.field_b > param0) {
-            var12Lifetime1 = l.field_b - param0;
+          if (SoftwareRasterizer.field_b > param0) {
+            var12Lifetime1 = SoftwareRasterizer.field_b - param0;
             var9 = var9 - var12Lifetime1;
             var7 = var7 + var12Lifetime1;
             var10 = var10 + var12Lifetime1;
             var6_int = var6_int + var12Lifetime1;
             var11 = var11 + var12Lifetime1;
-            param0 = l.field_b;
+            param0 = SoftwareRasterizer.field_b;
           }
-          if (var9 + param0 > l.field_f) {
-            var12Lifetime2 = -l.field_f + (param0 + var9);
+          if (var9 + param0 > SoftwareRasterizer.field_f) {
+            var12Lifetime2 = -SoftwareRasterizer.field_f + (param0 + var9);
             var9 = var9 - var12Lifetime2;
             var10 = var10 + var12Lifetime2;
             var11 = var11 + var12Lifetime2;
           }
           if (var9 > 0 &&
             0 < var8) {
-            qc.a(l.field_i, var10, param2.field_z, var7, param4, var11, var8, param3 ^ 16729015, 0, var9, var6_int);
+            qc.a(SoftwareRasterizer.field_i, var10, param2.field_z, var7, param4, var11, var8, param3 ^ 16729015, 0, var9, var6_int);
             return;
           }
           return;
@@ -625,7 +625,7 @@ final class MapTile {
             u.field_a = new Sprite(128, 160);
           }
           var7_int = 0;
-          if (this.map.field_i != null) {
+          if (this.map.state != null) {
             if (this.map.field_m == 1 &&
               this.field_r == 0 &&
               !this.field_d) {
@@ -649,7 +649,7 @@ final class MapTile {
             }
           }
           if (this.field_p > 0 &&
-            null == this.map.field_i.field_K) {
+            null == this.map.state.field_K) {
             this.field_p = this.field_p - 4;
           }
           if (d.field_H &&
@@ -659,7 +659,7 @@ final class MapTile {
               tg.field_l == this.field_r) {
               var9 = oi.field_J;
               oi.field_J.a();
-              l.f(0, 0, 128, 160, 0);
+              SoftwareRasterizer.f(0, 0, 128, 160, 0);
               k.field_f.a(0);
             }
             var8 = -(this.field_l * 48 / 100) + param3;
@@ -698,10 +698,10 @@ final class MapTile {
                 if (var11_int < 0) {
                   if (var9 != null) {
                     ((Sprite) (var9)).a();
-                    l.a(32, 124, 16777215);
-                    l.a(64, 108, 16777215);
-                    l.a(64, 139, 16777215);
-                    l.a(95, 124, 16777215);
+                    SoftwareRasterizer.a(32, 124, 16777215);
+                    SoftwareRasterizer.a(64, 108, 16777215);
+                    SoftwareRasterizer.a(64, 139, 16777215);
+                    SoftwareRasterizer.a(95, 124, 16777215);
                     k.field_f.a(0);
                   }
                 } else {
@@ -731,9 +731,9 @@ final class MapTile {
                   } else {
                     aj.field_a[var11_int].b(-32 + param0, var8 - 16, var12);
                   }
-                  if (this.map.field_i != null &&
+                  if (this.map.state != null &&
                     this.field_b >= 0) {
-                    this.map.field_i.a(param0 - 32, -16 + var8, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
+                    this.map.state.a(param0 - 32, -16 + var8, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
                   }
                 }
                 if (null != this.map.a(115, this.field_n, this.field_r, -1 + this.field_A) &&
@@ -794,17 +794,17 @@ final class MapTile {
                     aj.field_a[var11_intLifetime3].b(32, 108, var12Lifetime1);
                     k.field_f.a(0);
                   }
-                  if (this.map.field_i != null &&
+                  if (this.map.state != null &&
                     0 <= this.field_b) {
-                    this.map.field_i.a(-32 + param0, -16 + var8, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
+                    this.map.state.a(-32 + param0, -16 + var8, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
                   }
                 } else {
                   if (var9 != null) {
                     ((Sprite) (var9)).a();
-                    l.a(32, 124, 16777215);
-                    l.a(64, 108, 16777215);
-                    l.a(64, 139, 16777215);
-                    l.a(95, 124, 16777215);
+                    SoftwareRasterizer.a(32, 124, 16777215);
+                    SoftwareRasterizer.a(64, 108, 16777215);
+                    SoftwareRasterizer.a(64, 139, 16777215);
+                    SoftwareRasterizer.a(95, 124, 16777215);
                     k.field_f.a(0);
                   }
                 }
@@ -869,7 +869,7 @@ final class MapTile {
             if (this.field_p > 0) {
               li.field_a = true;
               if (this.field_p < 64) {
-                l.b(param0, -24 + var8, 32, 16777215, 4 * this.field_p);
+                SoftwareRasterizer.b(param0, -24 + var8, 32, 16777215, 4 * this.field_p);
               }
             }
             if ((this.field_z ||
@@ -888,8 +888,8 @@ final class MapTile {
             if (var9 != null) {
               u.field_a.a();
               ((Sprite) (var9)).d(0, 0);
-              if (this.map.field_i != null &&
-                this.map.field_i.field_L > 0) {
+              if (this.map.state != null &&
+                this.map.state.field_L > 0) {
                 NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
                 NodeHashTableIterator.a((byte) -86, u.field_a, 16744576);
                 NodeHashTableIterator.a((byte) -86, u.field_a, 16728128);
@@ -917,11 +917,11 @@ final class MapTile {
             tg.field_l == this.field_r) {
             var9Lifetime1 = oi.field_J;
             oi.field_J.a();
-            l.f(0, 0, 128, 160, 0);
+            SoftwareRasterizer.f(0, 0, 128, 160, 0);
             k.field_f.a(0);
           }
           if (tg.field_l < this.field_r) {
-            if (this.field_h != null) {
+            if (this.unit != null) {
             }
             if (this.field_C != null) {
               param1 = this.field_C.a(param0, param1, param2, param3, (byte) 125, param5);
@@ -931,7 +931,7 @@ final class MapTile {
           }
           if (!PacketBuffer.field_j &&
             this.field_r != tg.field_l) {
-            if (null == this.field_h) {
+            if (null == this.unit) {
             }
             if (null != this.field_C) {
               param1 = this.field_C.a(param0, param1, param2, param3, (byte) 125, param5);
@@ -948,15 +948,15 @@ final class MapTile {
             if (var10Lifetime1 != 0) {
               if (!this.field_z &&
                 !this.field_a &&
-                this.map.field_l == null) {
+                this.map.editor == null) {
                 if (!this.field_d) {
                   if (0 > this.field_b) {
                     if (var9Lifetime1 != null) {
                       ((Sprite) (var9Lifetime1)).a();
-                      l.a(32, 124, 16777215);
-                      l.a(64, 108, 16777215);
-                      l.a(64, 139, 16777215);
-                      l.a(95, 124, 16777215);
+                      SoftwareRasterizer.a(32, 124, 16777215);
+                      SoftwareRasterizer.a(64, 108, 16777215);
+                      SoftwareRasterizer.a(64, 139, 16777215);
+                      SoftwareRasterizer.a(95, 124, 16777215);
                       k.field_f.a(0);
                     }
                   } else {
@@ -977,8 +977,8 @@ final class MapTile {
                       }
                       k.field_f.a(0);
                     }
-                    if (this.map.field_i != null) {
-                      this.map.field_i.a(-32 + param0, var8Lifetime1 - 16, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
+                    if (this.map.state != null) {
+                      this.map.state.a(-32 + param0, var8Lifetime1 - 16, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
                     }
                   }
                   if (this.field_g >= 0) {
@@ -1010,8 +1010,8 @@ final class MapTile {
                         this.a(32, 60, dm.field_a[this.field_g + var11_intLifetime1], param4 ^ 17354, 64);
                         k.field_f.a(0);
                       }
-                      if (this.map.field_i != null) {
-                        this.map.field_i.a(param0 - 32, var8Lifetime1 - 64, this.field_r, dm.field_a[var11_intLifetime1 + this.field_g], true, 28144);
+                      if (this.map.state != null) {
+                        this.map.state.a(param0 - 32, var8Lifetime1 - 64, this.field_r, dm.field_a[var11_intLifetime1 + this.field_g], true, 28144);
                       }
                     } else {
                       if (var9Lifetime1 != null) {
@@ -1021,8 +1021,8 @@ final class MapTile {
                       } else {
                         this.a(param0 - 32, -64 + var8Lifetime1, dm.field_a[this.field_g], param4 ^ 17354, 64);
                       }
-                      if (this.map.field_i != null) {
-                        this.map.field_i.a(-32 + param0, -64 + var8Lifetime1, this.field_r, dm.field_a[this.field_g], true, 28144);
+                      if (this.map.state != null) {
+                        this.map.state.a(-32 + param0, -64 + var8Lifetime1, this.field_r, dm.field_a[this.field_g], true, 28144);
                       }
                     }
                   }
@@ -1035,8 +1035,8 @@ final class MapTile {
                       } else {
                         bk.field_a[this.field_k].c(-32 + param0, -64 + var8Lifetime1, 128);
                       }
-                      if (this.map.field_i != null) {
-                        this.map.field_i.a(-32 + param0, var8Lifetime1 - 64, this.field_r, bk.field_a[this.field_k], true, 28144);
+                      if (this.map.state != null) {
+                        this.map.state.a(-32 + param0, var8Lifetime1 - 64, this.field_r, bk.field_a[this.field_k], true, 28144);
                       }
                     } else {
                       var11_intLifetime1 = 0;
@@ -1066,16 +1066,16 @@ final class MapTile {
                         bk.field_a[var11_intLifetime1 + this.field_k].c(32, 60, 128);
                         k.field_f.a(0);
                       }
-                      if (this.map.field_i != null) {
-                        this.map.field_i.a(param0 - 32, var8Lifetime1 - 64, this.field_r, bk.field_a[var11_intLifetime1 + this.field_k], true, 28144);
+                      if (this.map.state != null) {
+                        this.map.state.a(param0 - 32, var8Lifetime1 - 64, this.field_r, bk.field_a[var11_intLifetime1 + this.field_k], true, 28144);
                       }
                     }
                   }
                 } else {
                   if (0 <= this.field_b) {
                     this.a(param0 - 32, -16 + var8Lifetime1, aj.field_a[this.field_b], 17335, 0);
-                    if (null != this.map.field_i) {
-                      this.map.field_i.a(param0 - 32, var8Lifetime1 - 16, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
+                    if (null != this.map.state) {
+                      this.map.state.a(param0 - 32, var8Lifetime1 - 16, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
                     }
                   }
                   if ((this.field_i & 1) > 0 &&
@@ -1087,8 +1087,8 @@ final class MapTile {
                   var11_intLifetime1 = stackIn_331_0;
                   if (this.field_g >= 0) {
                     this.a(param0 - 32, -64 + var8Lifetime1, dm.field_a[this.field_g], 17335, var11_intLifetime1);
-                    if (this.map.field_i != null) {
-                      this.map.field_i.a(-32 + param0, -64 + var8Lifetime1, this.field_r, dm.field_a[this.field_g], true, param4 + 28019);
+                    if (this.map.state != null) {
+                      this.map.state.a(-32 + param0, -64 + var8Lifetime1, this.field_r, dm.field_a[this.field_g], true, param4 + 28019);
                     }
                   }
                   if ((2 & this.field_i) > 0 &&
@@ -1100,8 +1100,8 @@ final class MapTile {
                   var11_intLifetime1 = stackIn_339_0;
                   if (0 <= this.field_k) {
                     this.a(param0 - 32, -64 + var8Lifetime1, bk.field_a[this.field_k], 17335, var11_intLifetime1);
-                    if (this.map.field_i != null) {
-                      this.map.field_i.a(-32 + param0, -64 + var8Lifetime1, this.field_r, bk.field_a[this.field_k], true, 28144);
+                    if (this.map.state != null) {
+                      this.map.state.a(-32 + param0, -64 + var8Lifetime1, this.field_r, bk.field_a[this.field_k], true, 28144);
                     }
                   }
                 }
@@ -1113,15 +1113,15 @@ final class MapTile {
               }
               this.field_a = true;
               if (this.field_b < 0) {
-                if (null != this.map.field_l) {
+                if (null != this.map.editor) {
                   vc.field_f.c("N", param0 - 12, var8Lifetime1, 16711680, -1);
                 }
                 if (var9Lifetime1 != null) {
                   ((Sprite) (var9Lifetime1)).a();
-                  l.a(32, 124, 16777215);
-                  l.a(64, 108, 16777215);
-                  l.a(64, 139, 16777215);
-                  l.a(95, 124, 16777215);
+                  SoftwareRasterizer.a(32, 124, 16777215);
+                  SoftwareRasterizer.a(64, 108, 16777215);
+                  SoftwareRasterizer.a(64, 139, 16777215);
+                  SoftwareRasterizer.a(95, 124, 16777215);
                   k.field_f.a(0);
                 }
               } else {
@@ -1145,21 +1145,21 @@ final class MapTile {
                     ji.field_j[this.field_q].b(-32 + param0, -16 + var8Lifetime1);
                   }
                 }
-                if (null != this.map.field_i) {
-                  this.map.field_i.a(param0 - 32, var8Lifetime1 - 16, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
+                if (null != this.map.state) {
+                  this.map.state.a(param0 - 32, var8Lifetime1 - 16, this.field_r, aj.field_a[this.field_b], false, param4 + 28019);
                 }
               }
               if (IntrusiveNode.field_c == this.field_A &&
                 this.field_n == vf.field_a) {
               }
-              if (this.map.field_l != null &&
+              if (this.map.editor != null &&
                 this.field_A == IntrusiveNode.field_c &&
                 vf.field_a == this.field_n) {
                 var11_intLifetime1Lifetime2 = 32768;
                 if (this.field_r == tg.field_l) {
                   var11_intLifetime1Lifetime2 = 65280;
                 }
-                l.d(param0 - 32, -16 + var8Lifetime1, 64, 32, var11_intLifetime1Lifetime2, 128);
+                SoftwareRasterizer.d(param0 - 32, -16 + var8Lifetime1, 64, 32, var11_intLifetime1Lifetime2, 128);
               }
               if (ll.field_c) {
                 if (this.field_g >= 0) {
@@ -1171,8 +1171,8 @@ final class MapTile {
                       dm.field_a[this.field_g].c(32, 60, 200);
                       k.field_f.a(0);
                     }
-                    if (this.map.field_i != null) {
-                      this.map.field_i.a(-32 + param0, var8Lifetime1 - 64, this.field_r, dm.field_a[this.field_g], true, 28144);
+                    if (this.map.state != null) {
+                      this.map.state.a(-32 + param0, var8Lifetime1 - 64, this.field_r, dm.field_a[this.field_g], true, 28144);
                     }
                   } else {
                     var11_intLifetime1Lifetime3 = 0;
@@ -1202,8 +1202,8 @@ final class MapTile {
                       dm.field_a[this.field_g + var11_intLifetime1Lifetime3].c(32, 60, 200);
                       k.field_f.a(0);
                     }
-                    if (this.map.field_i != null) {
-                      this.map.field_i.a(-32 + param0, -64 + var8Lifetime1, this.field_r, dm.field_a[var11_intLifetime1Lifetime3 + this.field_g], true, 28144);
+                    if (this.map.state != null) {
+                      this.map.state.a(-32 + param0, -64 + var8Lifetime1, this.field_r, dm.field_a[var11_intLifetime1Lifetime3 + this.field_g], true, 28144);
                     }
                   }
                 }
@@ -1216,8 +1216,8 @@ final class MapTile {
                     } else {
                       bk.field_a[this.field_k].c(param0 - 32, -64 + var8Lifetime1, 256);
                     }
-                    if (this.map.field_i != null) {
-                      this.map.field_i.a(-32 + param0, var8Lifetime1 - 64, this.field_r, bk.field_a[this.field_k], true, 28144);
+                    if (this.map.state != null) {
+                      this.map.state.a(-32 + param0, var8Lifetime1 - 64, this.field_r, bk.field_a[this.field_k], true, 28144);
                     }
                   } else {
                     var11_intLifetime1Lifetime3 = 0;
@@ -1247,8 +1247,8 @@ final class MapTile {
                     } else {
                       bk.field_a[this.field_k + var11_intLifetime1Lifetime3].c(param0 - 32, var8Lifetime1 - 64, 256);
                     }
-                    if (null != this.map.field_i) {
-                      this.map.field_i.a(param0 - 32, var8Lifetime1 - 64, this.field_r, bk.field_a[var11_intLifetime1Lifetime3 + this.field_k], true, param4 ^ 28045);
+                    if (null != this.map.state) {
+                      this.map.state.a(param0 - 32, var8Lifetime1 - 64, this.field_r, bk.field_a[var11_intLifetime1Lifetime3 + this.field_k], true, param4 ^ 28045);
                     }
                   }
                 }
@@ -1264,7 +1264,7 @@ final class MapTile {
           if (this.field_j >= 0 &&
             MouseWheelInput.field_a) {
             if (!this.field_z &&
-              null == this.map.field_l) {
+              null == this.map.editor) {
               if (this.field_j == 7) {
                 if (var9Lifetime1 == null) {
                   stackIn_456_0 = this;
@@ -1370,7 +1370,7 @@ final class MapTile {
                 }
               }
             }
-            if (null != this.map.field_i) {
+            if (null != this.map.state) {
               var11_intLifetime2 = 0;
               if (2 == nc.field_a[this.field_j]) {
                 var11_intLifetime2 = 1;
@@ -1385,9 +1385,9 @@ final class MapTile {
                 var11_intLifetime2 = 3;
               }
               if (7 == this.field_j) {
-                this.map.field_i.a((byte) -101, var8Lifetime1 - 112, param0 - 32, se.field_c[(this.field_n * 3 + this.field_A) % se.field_c.length]);
+                this.map.state.a((byte) -101, var8Lifetime1 - 112, param0 - 32, se.field_c[(this.field_n * 3 + this.field_A) % se.field_c.length]);
               } else {
-                this.map.field_i.a(this.field_r, -32 + param0, (byte) -118, var11_intLifetime2, -64 + var8Lifetime1, kg.field_r[this.field_j]);
+                this.map.state.a(this.field_r, -32 + param0, (byte) -118, var11_intLifetime2, -64 + var8Lifetime1, kg.field_r[this.field_j]);
               }
             }
           }
@@ -1430,7 +1430,7 @@ final class MapTile {
             }
             if (var11Lifetime1 != null) {
               if (!this.field_z &&
-                null == this.map.field_l &&
+                null == this.map.editor &&
                 !this.field_a) {
                 if (var9Lifetime1 == null) {
                   this.a(param0 - ((bg) (var11Lifetime1)).field_f / 2, -((bg) (var11Lifetime1)).field_i + var8Lifetime1 + 15, ((bg) (var11Lifetime1)).b(), 17335, 0);
@@ -1458,8 +1458,8 @@ final class MapTile {
           if (var9Lifetime1 != null) {
             u.field_a.a();
             ((Sprite) (var9Lifetime1)).d(0, 0);
-            if (null != this.map.field_i &&
-              this.map.field_i.field_L > 0) {
+            if (null != this.map.state &&
+              this.map.state.field_L > 0) {
               NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
               NodeHashTableIterator.a((byte) -86, u.field_a, 16744576);
               NodeHashTableIterator.a((byte) -86, u.field_a, 16728128);
@@ -1722,7 +1722,7 @@ final class MapTile {
                   var22 = var22 + var24;
                   var17_int = var17_int + var19;
                   var21 = var21 + var23;
-                  var36Lifetime2 = var36Lifetime2 + l.field_k;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_k;
                 }
               }
               var36Lifetime3 = param10 - param4;
@@ -1808,7 +1808,7 @@ final class MapTile {
               var30 = var30 + var32;
               var22 = var22 + var24;
               var21 = var21 + var23;
-              var35Lifetime1 = var35Lifetime1 + l.field_k;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_k;
               var18 = var18 + var20;
             }
             return;
@@ -1869,25 +1869,25 @@ final class MapTile {
           this.field_v = -1;
         }
         if (this.field_b == 0 &&
-          this.map.field_i.field_G.field_Bb == 11) {
+          this.map.state.client.field_Bb == 11) {
           this.field_b = 12;
         }
         boolean decompiledFrameRemainder1 = true;
         if (this.field_b == 1) {
-          if (this.map.field_i.field_G.field_Bb == 11) {
+          if (this.map.state.client.field_Bb == 11) {
             this.field_b = 13;
           }
           if (this.field_b != 2) {
             if (((3 == this.field_b)) &&
-              ((this.map.field_i.field_G.field_Bb == 11))) {
+              ((this.map.state.client.field_Bb == 11))) {
               this.field_b = 1;
             }
             decompiledFrameRemainder1 = false;
           }
           else {
-            if (this.map.field_i.field_G.field_Bb != 11) {
+            if (this.map.state.client.field_Bb != 11) {
               if (((3 == this.field_b)) &&
-                ((this.map.field_i.field_G.field_Bb == 11))) {
+                ((this.map.state.client.field_Bb == 11))) {
                 this.field_b = 1;
               }
               decompiledFrameRemainder1 = false;
@@ -1899,15 +1899,15 @@ final class MapTile {
         } else {
           if (this.field_b != 2) {
             if (((3 == this.field_b)) &&
-              ((this.map.field_i.field_G.field_Bb == 11))) {
+              ((this.map.state.client.field_Bb == 11))) {
               this.field_b = 1;
             }
             decompiledFrameRemainder1 = false;
           }
           else {
-            if (this.map.field_i.field_G.field_Bb != 11) {
+            if (this.map.state.client.field_Bb != 11) {
               if (((3 == this.field_b)) &&
-                ((this.map.field_i.field_G.field_Bb == 11))) {
+                ((this.map.state.client.field_Bb == 11))) {
                 this.field_b = 1;
               }
               decompiledFrameRemainder1 = false;
@@ -1918,7 +1918,7 @@ final class MapTile {
           }
         }
         if ((decompiledFrameRemainder1) && (3 == this.field_b &&
-          this.map.field_i.field_G.field_Bb == 11)) {
+          this.map.state.client.field_Bb == 11)) {
           this.field_b = 1;
         }
         this.field_d = false;
@@ -1985,14 +1985,14 @@ final class MapTile {
         this.field_q = -1;
         this.field_z = false;
         this.field_a = false;
-        if (this.map.field_i.field_G.field_db ||
-          this.map.field_i.field_G.field_Bb == 0 ||
-          1 == this.map.field_i.field_G.field_Bb ||
-          this.map.field_i.field_G.field_Bb == 2 ||
-          3 == this.map.field_i.field_G.field_Bb ||
-          this.map.field_i.field_G.field_Bb == 7 ||
-          9 == this.map.field_i.field_G.field_Bb ||
-          11 == this.map.field_i.field_G.field_Bb) {
+        if (this.map.state.client.field_db ||
+          this.map.state.client.field_Bb == 0 ||
+          1 == this.map.state.client.field_Bb ||
+          this.map.state.client.field_Bb == 2 ||
+          3 == this.map.state.client.field_Bb ||
+          this.map.state.client.field_Bb == 7 ||
+          9 == this.map.state.client.field_Bb ||
+          11 == this.map.state.client.field_Bb) {
           if (-1 != this.field_j) {
             if (((this.field_r == 0)) &&
               ((this.field_v == -1))) {
@@ -2061,7 +2061,7 @@ final class MapTile {
           this.field_A = param0;
           this.field_j = -1;
           this.field_v = -1;
-          this.field_h = null;
+          this.unit = null;
           this.field_c = null;
           this.field_g = -1;
           this.field_C = null;

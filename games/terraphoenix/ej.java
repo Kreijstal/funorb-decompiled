@@ -136,9 +136,9 @@ class ej extends eb {
         RuntimeException var5 = null;
         try {
           param2.writeByte(12, param1 + 25544);
-          param2.h(-1564407352, 17);
-          param2.h(-1564407352, param0);
-          param2.h(param1 ^ 1564382701, param4);
+          param2.writeShort(-1564407352, 17);
+          param2.writeShort(-1564407352, param0);
+          param2.writeShort(param1 ^ 1564382701, param4);
           if (param1 != -25563) {
             var6 = (java.awt.Canvas) null;
             ej.a(-21, (java.awt.Canvas) null);

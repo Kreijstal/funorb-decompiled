@@ -5,7 +5,7 @@ abstract class di extends af implements pa {
     static String[] field_h;
     static Sprite field_k;
     private ej field_j;
-    static fa field_i;
+    static Archive field_i;
     static int field_e;
     static String field_g;
     static uc field_l;
@@ -117,7 +117,7 @@ abstract class di extends af implements pa {
         if (param2 != 16105) {
           field_k = (Sprite) null;
         }
-        l.i(param4, param1, param0, param3);
+        SoftwareRasterizer.i(param4, param1, param0, param3);
     }
 
     public final void a(ej param0, boolean param1) {

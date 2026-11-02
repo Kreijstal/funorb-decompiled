@@ -20,7 +20,7 @@ final class sh extends IntrusiveNode {
     int field_j;
     int field_r;
     int field_s;
-    lh field_k;
+    PcmSampleStream field_k;
     static long field_n;
     int field_u;
     PcmSample field_F;
@@ -97,10 +97,10 @@ final class sh extends IntrusiveNode {
             var6 = rb.field_d[var3];
             if (pe.field_e == 2 &&
               var2 == 1) {
-              if (ia.field_r.length >= km.field_c.length) {
+              if (ia.field_r.length >= ArchiveIndex.field_c.length) {
                 stackIn_19_0 = ia.field_r.length;
               } else {
-                stackIn_19_0 = km.field_c.length;
+                stackIn_19_0 = ArchiveIndex.field_c.length;
               }
               var7 = stackIn_19_0;
               if (kj.field_c.length < ec.field_d.length) {
@@ -150,7 +150,7 @@ final class sh extends IntrusiveNode {
             }
             if (0 > var4) {
               da.field_h.b(var6, var8Lifetime1, af.field_a + var1_int, var5, -1);
-              var1_int = var1_int + jm.field_b;
+              var1_int = var1_int + DelegatingCanvas.field_b;
             } else {
               qk.field_a.b(var6, var8Lifetime1, var1_int + fh.field_a, var5, -1);
               var1_int = var1_int + (hi.field_ab + dc.field_b + lm.field_d);

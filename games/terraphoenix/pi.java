@@ -257,7 +257,7 @@ final class pi {
         this.field_q.a(param0);
         this.field_e = new fj();
         this.field_e.a(param0);
-        int var2 = param0.a(-16384);
+        int var2 = param0.readUnsignedByte(-16384);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_d = new fj();
@@ -265,7 +265,7 @@ final class pi {
           this.field_x = new fj();
           this.field_x.a(param0);
         }
-        var2 = param0.a(-16384);
+        var2 = param0.readUnsignedByte(-16384);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_m = new fj();
@@ -273,7 +273,7 @@ final class pi {
           this.field_y = new fj();
           this.field_y.a(param0);
         }
-        var2 = param0.a(-16384);
+        var2 = param0.readUnsignedByte(-16384);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_b = new fj();

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gf extends GameApplet {
+abstract class GameShell extends GameApplet {
     private boolean field_r;
     private int field_A;
     private long field_t;
@@ -18,7 +18,7 @@ abstract class gf extends GameApplet {
     private int field_z;
     static nd field_y;
 
-    private final static boolean a(byte param0, fa param1) {
+    private final static boolean a(byte param0, Archive param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -68,7 +68,7 @@ abstract class gf extends GameApplet {
     }
 
     private final void g(byte param0) {
-        int var2 = LevelEditor.field_j.a(-16384);
+        int var2 = LevelEditor.field_j.readUnsignedByte(-16384);
         if (param0 != -118) {
           String var6 = (String) null;
           this.a(-109, -4, -25, (String) null, -60);
@@ -233,7 +233,7 @@ abstract class gf extends GameApplet {
             }
           }
           if (var4 == 4) {
-            if (jm.field_c) {
+            if (DelegatingCanvas.field_c) {
               rk.a(dg.a(false), true);
             } else {
               q.field_Jb = 10;
@@ -324,7 +324,7 @@ abstract class gf extends GameApplet {
         var5 = Terraphoenix.field_V;
         if (null != ab.field_b) {
           if (a.field_b == null) {
-            var6 = DelegatingCanvas.b(113);
+            var6 = FullscreenFocusCanvas.b(113);
             var4 = var6.getSize();
             ab.field_b.a((byte) 63, var4.width, var4.height);
           }
@@ -462,12 +462,12 @@ abstract class gf extends GameApplet {
         }
         if (uh.field_H == 3 &&
           nh.a(ph.field_q, ch.field_g, false, bi.field_d) &&
-          gf.a((byte) 103, ch.field_g)) {
+          GameShell.a((byte) 103, ch.field_g)) {
           IntrusiveDeque.e(-119);
           hj.g(-7958);
           ad.field_e = hh.field_k;
           wd.field_b = false;
-          am.a(ch.field_g, jm.field_c, ph.field_q, bi.field_d, (byte) -22);
+          am.a(ch.field_g, DelegatingCanvas.field_c, ph.field_q, bi.field_d, (byte) -22);
           if (ea.field_j ||
             i.field_d != null) {
             stackIn_103_0 = !(ea.field_j);
@@ -799,7 +799,7 @@ abstract class gf extends GameApplet {
         }
     }
 
-    protected gf() {
+    protected GameShell() {
     }
 
     static {

@@ -98,7 +98,7 @@ final class qc {
           }
           if (param0 != 80) {
             var4 = (String) null;
-            qc.a((String) null, (fa) null, (String) null, (byte) -43);
+            qc.a((String) null, (Archive) null, (String) null, (byte) -43);
           }
           if (ak.a(param1, param2, false)) {
             return false;
@@ -156,10 +156,10 @@ final class qc {
           var6.writeByte(1, -125);
           var6.writeByte(param1.field_o, -18);
           var6.writeByte(param1.field_l, -99);
-          var6.e(param1.field_q, 8959);
-          var6.e(param1.field_m, 8959);
-          var6.e(param1.field_i, 8959);
-          var6.e(param1.field_j, 8959);
+          var6.writeInt(param1.field_q, 8959);
+          var6.writeInt(param1.field_m, 8959);
+          var6.writeInt(param1.field_i, 8959);
+          var6.writeInt(param1.field_j, 8959);
           int var5 = 5 / ((param2 - 34) / 34);
           var6.d(var4, 8600);
           var6.j(var6.position - var4, -119);
@@ -183,7 +183,7 @@ final class qc {
         }
     }
 
-    final static String a(String param0, fa param1, String param2, byte param3) {
+    final static String a(String param0, Archive param1, String param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;

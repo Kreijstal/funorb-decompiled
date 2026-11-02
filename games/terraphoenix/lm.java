@@ -224,28 +224,28 @@ final class lm {
         int var9_int = param6 + param2.field_p + param0 - param7;
         int var10 = param6 + param0 + (param2.field_p + param1);
         int var11 = (param2.field_t >> 1) + param2.field_v + param5;
-        l.i(var9_int, 0, var10, var11 + param3);
+        SoftwareRasterizer.i(var9_int, 0, var10, var11 + param3);
         param2.d(-1 + param0, param5 - 1, param8);
         param2.d(param0 - 1, param5 + 1, param8);
-        l.a(rb.field_a);
-        l.i(1 + var9_int, 0, var10 + 1, var11 + param3);
+        SoftwareRasterizer.a(rb.field_a);
+        SoftwareRasterizer.i(1 + var9_int, 0, var10 + 1, var11 + param3);
         param2.d(param0 + 1, -1 + param5, param8);
         param2.d(param0 + 1, param5 + 1, param8);
-        l.a(rb.field_a);
+        SoftwareRasterizer.a(rb.field_a);
         var9_int = -param1 - param6 + (param0 + param2.field_p) + param2.field_r;
         var10 = -param7 + (-param6 + (param2.field_r + param2.field_p + param0));
-        l.i(var9_int, -param3 + var11, var10, 480);
+        SoftwareRasterizer.i(var9_int, -param3 + var11, var10, 480);
         if (param4 < 122) {
           return;
         }
         try {
           param2.d(-1 + param0, param5 - 1, param8);
           param2.d(param0 - 1, param5 + 1, param8);
-          l.a(rb.field_a);
-          l.i(1 + var9_int, -param3 + var11, var10 + 1, 480);
+          SoftwareRasterizer.a(rb.field_a);
+          SoftwareRasterizer.i(1 + var9_int, -param3 + var11, var10 + 1, 480);
           param2.d(param0 + 1, param5 - 1, param8);
           param2.d(1 + param0, param5 + 1, param8);
-          l.a(rb.field_a);
+          SoftwareRasterizer.a(rb.field_a);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "lm.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

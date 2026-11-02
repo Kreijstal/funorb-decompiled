@@ -126,7 +126,7 @@ final class nh extends rf {
         }
     }
 
-    final static boolean a(fa param0, fa param1, boolean param2, fa param3) {
+    final static boolean a(Archive param0, Archive param1, boolean param2, Archive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

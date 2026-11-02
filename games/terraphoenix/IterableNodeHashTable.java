@@ -14,11 +14,11 @@ final class IterableNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final static Sprite[] a(String param0, byte param1, String param2, fa param3) {
+    final static Sprite[] a(String param0, byte param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        fa var6 = null;
+        Archive var6 = null;
         Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -30,8 +30,8 @@ final class IterableNodeHashTable implements Iterable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -70) {
-            var6 = (fa) null;
-            IterableNodeHashTable.a((String) null, (byte) 73, (String) null, (fa) null);
+            var6 = (Archive) null;
+            IterableNodeHashTable.a((String) null, (byte) 73, (String) null, (Archive) null);
           }
           var4_int = param3.c(-1, param2);
           var5 = param3.a(-103, var4_int, param0);

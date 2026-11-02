@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class si extends al implements n {
-    private pk field_rb;
+    private BitmapFont field_rb;
     static sd field_ob;
     private boolean field_mb;
     private hm field_kb;
@@ -199,7 +199,7 @@ class si extends al implements n {
         return false;
     }
 
-    si(d param0, pk param1, String param2, boolean param3, boolean param4) {
+    si(d param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new oi((si) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = param3 ? true : false;

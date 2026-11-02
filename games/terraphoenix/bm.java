@@ -29,10 +29,10 @@ final class bm {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        l.e(param1, param0, 16, 0);
+        SoftwareRasterizer.e(param1, param0, 16, 0);
         if (param2 >= 126) {
-          l.e(param1, param0, 12, 16777215);
-          l.e(param1, param0, 8, 0);
+          SoftwareRasterizer.e(param1, param0, 12, 16777215);
+          SoftwareRasterizer.e(param1, param0, 8, 0);
           return;
         }
     }
@@ -53,14 +53,14 @@ final class bm {
         var7 = Terraphoenix.field_V;
         var8 = LevelEditor.field_j;
         var2 = var8;
-        var3 = var8.a(-16384);
+        var3 = var8.readUnsignedByte(-16384);
         if (param1 != 0) {
           field_c = (String) null;
         }
         im.field_c = 127 & var3;
         stackIn_5_0 = ((128 & var3) != 0);
         ng.field_s = stackIn_5_0;
-        da.field_d = var8.a(-16384);
+        da.field_d = var8.readUnsignedByte(-16384);
         pl.field_Q = var8.h((byte) 78);
         if (im.field_c != 2) {
           ji.field_k = 0;
@@ -69,7 +69,7 @@ final class bm {
           wb.field_c = var8.readUnsignedShort(-25578);
           ji.field_k = var8.d((byte) -114);
         }
-        stackIn_11_0 = (var8.a(-16384) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(-16384) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
         ge.field_c = var8.readString(-1);
         if (var4 != 0) {

@@ -135,14 +135,14 @@ final class cg extends WidgetContainer implements n {
     }
 
     public cg() {
-        super(0, 0, 476, 225, (cj) null);
+        super(0, 0, 476, 225, (WidgetActionListener) null);
         this.field_F = new eb(td.field_j, (sc) null);
         this.field_G = new eb(sl.field_f, (sc) null);
         this.field_J = new eb(aj.field_c, (sc) null);
         ic var1 = new ic();
-        this.field_F.field_l = (cj) ((Object) var1);
-        this.field_G.field_l = (cj) ((Object) var1);
-        this.field_J.field_l = (cj) ((Object) var1);
+        this.field_F.field_l = (WidgetActionListener) ((Object) var1);
+        this.field_G.field_l = (WidgetActionListener) ((Object) var1);
+        this.field_J.field_l = (WidgetActionListener) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;

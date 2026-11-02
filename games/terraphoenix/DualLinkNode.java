@@ -11,7 +11,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode secondaryNext;
     static String field_h;
 
-    final static boolean a(int param0, int param1, fa param2, boolean param3) {
+    final static boolean a(int param0, int param1, Archive param2, boolean param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;

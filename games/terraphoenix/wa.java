@@ -19,7 +19,7 @@ class wa extends DualLinkNode {
 
     final static void a(Sprite param0, byte param1, String param2) {
         try {
-          fa.field_d = param0;
+          Archive.field_d = param0;
           if (param1 < 19) {
             wa.c(-64);
           }
@@ -52,30 +52,30 @@ class wa extends DualLinkNode {
         int var16Lifetime1;
         var19 = Terraphoenix.field_V;
         try {
-          if (l.field_b > param1) {
-            param7 = param7 - (l.field_b - param1);
-            param1 = l.field_b;
+          if (SoftwareRasterizer.field_b > param1) {
+            param7 = param7 - (SoftwareRasterizer.field_b - param1);
+            param1 = SoftwareRasterizer.field_b;
           }
-          if (l.field_d > param5) {
-            param2 = param2 - (l.field_d - param5);
-            param5 = l.field_d;
+          if (SoftwareRasterizer.field_d > param5) {
+            param2 = param2 - (SoftwareRasterizer.field_d - param5);
+            param5 = SoftwareRasterizer.field_d;
           }
-          if (param1 + param7 > l.field_f) {
-            param7 = -param1 + l.field_f;
+          if (param1 + param7 > SoftwareRasterizer.field_f) {
+            param7 = -param1 + SoftwareRasterizer.field_f;
           }
-          if (param5 + param2 > l.field_c) {
-            param2 = -param5 + l.field_c;
+          if (param5 + param2 > SoftwareRasterizer.field_c) {
+            param2 = -param5 + SoftwareRasterizer.field_c;
           }
           if (param7 > 0 &&
             param2 > 0) {
             var21 = param0.d();
-            var30 = l.field_i;
-            var10 = l.field_k;
-            var11 = l.field_j;
+            var30 = SoftwareRasterizer.field_i;
+            var10 = SoftwareRasterizer.field_k;
+            var11 = SoftwareRasterizer.field_j;
             var29 = new int[4];
-            l.b(var29);
+            SoftwareRasterizer.b(var29);
             param0.a();
-            l.i(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.i(var29[0], var29[1], var29[2], var29[3]);
             var13 = param1 + param0.field_r * param5;
             var14 = -param7 + param0.field_r;
             var25 = var21.field_z;
@@ -92,7 +92,7 @@ class wa extends DualLinkNode {
                   var15[1 + var13] == 0 ||
                   !(param0.field_t - 1 <= var16) &&
                   0 == var15[var13 + param0.field_r])) {
-                  l.e(var17, var16, param6, param4);
+                  SoftwareRasterizer.e(var17, var16, param6, param4);
                 }
                 var13++;
               }
@@ -100,8 +100,8 @@ class wa extends DualLinkNode {
             }
             var16Lifetime1 = 60 / ((param3 - 1) / 51);
             var21.b(-param0.field_p, -param0.field_v);
-            l.a(var30, var10, var11);
-            l.a(var29);
+            SoftwareRasterizer.a(var30, var10, var11);
+            SoftwareRasterizer.a(var29);
             return;
           }
           return;

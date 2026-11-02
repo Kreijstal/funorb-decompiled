@@ -8,7 +8,7 @@ final class tb extends uj {
     private int field_f;
     private rf field_h;
     private int field_A;
-    private km field_j;
+    private ArchiveIndex field_j;
     private byte[] field_y;
     static String field_l;
     private int field_p;
@@ -161,8 +161,8 @@ final class tb extends uj {
             di.field_l.position = 0;
             if (param0 == null) {
               nc.field_c.position = 0;
-              nc.field_c.e(j.field_H.nextInt(), param5 + 8863);
-              nc.field_c.e(j.field_H.nextInt(), 8959);
+              nc.field_c.writeInt(j.field_H.nextInt(), param5 + 8863);
+              nc.field_c.writeInt(j.field_H.nextInt(), 8959);
               stackIn_21_0 = nc.field_c;
               if (!param2.c(1)) {
                 stackIn_22_1 = "";
@@ -188,13 +188,13 @@ final class tb extends uj {
                 var9 = var9 | 1;
               }
               nc.field_c.position = 0;
-              nc.field_c.e(j.field_H.nextInt(), 8959);
-              nc.field_c.e(j.field_H.nextInt(), param5 + 8863);
+              nc.field_c.writeInt(j.field_H.nextInt(), 8959);
+              nc.field_c.writeInt(j.field_H.nextInt(), param5 + 8863);
               nc.field_c.b(var14, -33);
               nc.field_c.b(var8, -101);
               var15 = (CharSequence) ((Object) param0);
               nc.field_c.b(nh.a(-31621, var15), -34);
-              nc.field_c.h(-1564407352, param4);
+              nc.field_c.writeShort(-1564407352, param4);
               nc.field_c.writeByte(param6, -115);
               nc.field_c.writeByte(var9, -90);
               di.field_l.writeByte(18, param5 ^ 21);
@@ -204,7 +204,7 @@ final class tb extends uj {
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              di.field_l.a(var11_ref_String, 2295);
+              di.field_l.writeString(var11_ref_String, 2295);
               ea.a(ga.field_o, nc.field_c, param5 - 96, dj.field_c, di.field_l);
               di.field_l.g(-var10 + di.field_l.position, -20125);
             }
@@ -213,7 +213,7 @@ final class tb extends uj {
           }
           if (mh.field_a == ha.field_n &&
             vc.a(param5 - 213, 1)) {
-            var9Lifetime1 = LevelEditor.field_j.a(-16384);
+            var9Lifetime1 = LevelEditor.field_j.readUnsignedByte(-16384);
             LevelEditor.field_j.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -661,7 +661,7 @@ final class tb extends uj {
         return var3.c(0);
     }
 
-    final km a(byte param0) {
+    final ArchiveIndex a(byte param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -691,7 +691,7 @@ final class tb extends uj {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_j = new km(var7, this.field_A, this.field_y);
+            this.field_j = new ArchiveIndex(var7, this.field_A, this.field_y);
             if (this.field_j.field_t != this.field_p) {
               throw new RuntimeException();
             }
@@ -711,7 +711,7 @@ final class tb extends uj {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_j = new km(var7, this.field_A, this.field_y);
+            this.field_j = new ArchiveIndex(var7, this.field_A, this.field_y);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;

@@ -107,7 +107,7 @@ final class vg extends PcmStream {
     }
 
     final void a(PcmSample param0, int param1, int param2) {
-        this.a(lh.a(param0, param1, param2));
+        this.a(PcmSampleStream.a(param0, param1, param2));
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {

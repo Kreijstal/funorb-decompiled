@@ -8,7 +8,7 @@ final class hj extends jc {
     static long field_I;
     static int[] field_K;
 
-    private hj(int param0, int param1, int param2, int param3, cj param4, sc param5, UiWidget param6) {
+    private hj(int param0, int param1, int param2, int param3, WidgetActionListener param4, sc param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_F = param6;

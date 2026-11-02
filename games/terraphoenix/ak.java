@@ -95,23 +95,23 @@ final class ak {
         }
         if (param14 > param4) {
           if (param8 > param14) {
-            MapTile.a(true, param1, param0, l.field_i, param14, param6, param9, param12, param3, param11, param8, param13, param4, param10, param15, param2, param7);
+            MapTile.a(true, param1, param0, SoftwareRasterizer.field_i, param14, param6, param9, param12, param3, param11, param8, param13, param4, param10, param15, param2, param7);
           } else {
             if (param4 < param8) {
-              MapTile.a(true, param11, param10, l.field_i, param8, param12, param9, param6, param13, param1, param14, param3, param4, param0, param15, param2, param7);
+              MapTile.a(true, param11, param10, SoftwareRasterizer.field_i, param8, param12, param9, param6, param13, param1, param14, param3, param4, param0, param15, param2, param7);
             } else {
-              MapTile.a(true, param11, param10, l.field_i, param4, param7, param0, param6, param13, param15, param14, param2, param8, param9, param1, param3, param12);
+              MapTile.a(true, param11, param10, SoftwareRasterizer.field_i, param4, param7, param0, param6, param13, param15, param14, param2, param8, param9, param1, param3, param12);
             }
           }
         } else {
           if (param4 >= param8) {
             if (param14 < param8) {
-              MapTile.a(true, param15, param9, l.field_i, param8, param12, param10, param7, param2, param1, param4, param3, param14, param0, param11, param13, param6);
+              MapTile.a(true, param15, param9, SoftwareRasterizer.field_i, param8, param12, param10, param7, param2, param1, param4, param3, param14, param0, param11, param13, param6);
             } else {
-              MapTile.a(true, param15, param9, l.field_i, param14, param6, param0, param7, param2, param11, param4, param13, param8, param10, param1, param3, param12);
+              MapTile.a(true, param15, param9, SoftwareRasterizer.field_i, param14, param6, param0, param7, param2, param11, param4, param13, param8, param10, param1, param3, param12);
             }
           } else {
-            MapTile.a(true, param1, param0, l.field_i, param4, param7, param10, param12, param3, param15, param8, param2, param14, param9, param11, param13, param6);
+            MapTile.a(true, param1, param0, SoftwareRasterizer.field_i, param4, param7, param10, param12, param3, param15, param8, param2, param14, param9, param11, param13, param6);
           }
         }
     }

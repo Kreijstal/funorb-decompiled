@@ -41,7 +41,7 @@ final class BattleState {
     static String field_o;
     int field_H;
     int field_y;
-    Terraphoenix field_G;
+    Terraphoenix client;
 
     private final void a(boolean param0, BattleUnit param1) {
         RuntimeException stackIn_28_0 = null;
@@ -168,30 +168,30 @@ final class BattleState {
           var15 = param5.field_r;
           var16 = 0;
           var17 = param5.field_p + param5.field_v * var7.field_r;
-          if (l.field_d > var9) {
-            var19 = l.field_d - var9;
+          if (SoftwareRasterizer.field_d > var9) {
+            var19 = SoftwareRasterizer.field_d - var9;
             var17 = var17 + var19 * var15;
             var13 = var13 - var19;
-            var9 = l.field_d;
+            var9 = SoftwareRasterizer.field_d;
             var12 = var12 + var19;
             var10 = var10 + var15 * var19;
           }
           var18 = 64 - param5.field_r;
-          if (var8 < l.field_b) {
-            var19Lifetime1 = -var8 + l.field_b;
+          if (var8 < SoftwareRasterizer.field_b) {
+            var19Lifetime1 = -var8 + SoftwareRasterizer.field_b;
             var10 = var10 + var19Lifetime1;
-            var8 = l.field_b;
+            var8 = SoftwareRasterizer.field_b;
             var17 = var17 + var19Lifetime1;
             var15 = var15 - var19Lifetime1;
             var16 = var16 + var19Lifetime1;
             var11 = var11 + var19Lifetime1;
             var18 = var18 + var19Lifetime1;
           }
-          if (l.field_c < (var9 + var13)) {
-            var13 = var13 - (var13 + (var9 - l.field_c));
+          if (SoftwareRasterizer.field_c < (var9 + var13)) {
+            var13 = var13 - (var13 + (var9 - SoftwareRasterizer.field_c));
           }
-          if ((var8 + var15) > l.field_f) {
-            var19Lifetime2 = -l.field_f + var15 + var8;
+          if ((var8 + var15) > SoftwareRasterizer.field_f) {
+            var19Lifetime2 = -SoftwareRasterizer.field_f + var15 + var8;
             var16 = var16 + var19Lifetime2;
             var18 = var18 + var19Lifetime2;
             var15 = var15 - var19Lifetime2;
@@ -374,48 +374,48 @@ final class BattleState {
         var3 = Terraphoenix.field_V;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_G.field_db) {
+          if (this.client.field_db) {
             qd.$cfr$intArgs$a$e9dea5688aa5(69, 11);
             decompiledFrameRemainder0 = (var3 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (1 == this.field_G.field_Bb) {
+            if (1 == this.client.field_Bb) {
               qd.$cfr$intArgs$a$e9dea5688aa5(26, 13);
             }
-            if (this.field_G.field_Bb == 2) {
+            if (this.client.field_Bb == 2) {
               qd.$cfr$intArgs$a$e9dea5688aa5(113, 11);
             }
-            if (this.field_G.field_Bb == 3) {
+            if (this.client.field_Bb == 3) {
               qd.$cfr$intArgs$a$e9dea5688aa5(104, 11);
             }
-            if (4 == this.field_G.field_Bb) {
+            if (4 == this.client.field_Bb) {
               qd.$cfr$intArgs$a$e9dea5688aa5(122, 11);
             }
-            if (this.field_G.field_Bb == 5) {
+            if (this.client.field_Bb == 5) {
               qd.$cfr$intArgs$a$e9dea5688aa5(76, 5);
             }
-            if (this.field_G.field_Bb == 6) {
+            if (this.client.field_Bb == 6) {
               qd.$cfr$intArgs$a$e9dea5688aa5(58, 11);
             }
-            if (7 == this.field_G.field_Bb) {
+            if (7 == this.client.field_Bb) {
               qd.$cfr$intArgs$a$e9dea5688aa5(32, 5);
             }
-            if (this.field_G.field_Bb == 8) {
+            if (this.client.field_Bb == 8) {
               qd.$cfr$intArgs$a$e9dea5688aa5(44, 11);
             }
-            if (this.field_G.field_Bb == 9) {
+            if (this.client.field_Bb == 9) {
               qd.$cfr$intArgs$a$e9dea5688aa5(24, 5);
             }
-            if (this.field_G.field_Bb == 10) {
+            if (this.client.field_Bb == 10) {
               qd.$cfr$intArgs$a$e9dea5688aa5(52, 11);
             }
-            if (this.field_G.field_Bb == 11) {
+            if (this.client.field_Bb == 11) {
               qd.$cfr$intArgs$a$e9dea5688aa5(53, 4);
             }
-            if (this.field_G.field_Bb == 12) {
+            if (this.client.field_Bb == 12) {
               qd.$cfr$intArgs$a$e9dea5688aa5(29, 11);
             }
-            if (13 == this.field_G.field_Bb) {
+            if (13 == this.client.field_Bb) {
               qd.$cfr$intArgs$a$e9dea5688aa5(70, 11);
             }
           }
@@ -429,9 +429,9 @@ final class BattleState {
             }
             if (null != this.units[var2_int]) {
               if (this.units[var2_int].field_Z != null) {
-                if (this.field_G.field_Bb == 5 ||
-                  this.field_G.field_Bb == 7 ||
-                  this.field_G.field_Bb == 9) {
+                if (this.client.field_Bb == 5 ||
+                  this.client.field_Bb == 7 ||
+                  this.client.field_Bb == 9) {
                   this.units[var2_int].field_h = true;
                   this.units[var2_int].field_R = this.units[var2_int].field_E;
                   this.units[var2_int].field_i = this.units[var2_int].field_F;
@@ -674,14 +674,14 @@ final class BattleState {
                   }
                 }
                 if (var5 != null &&
-                  null != var5.field_h &&
-                  var5.field_h.field_C == 0 &&
-                  var5.field_h.field_Z != null) {
-                  var3 = ef.field_a + var5.field_h.field_Z.b(1);
+                  null != var5.unit &&
+                  var5.unit.field_C == 0 &&
+                  var5.unit.field_Z != null) {
+                  var3 = ef.field_a + var5.unit.field_Z.b(1);
                 }
-                if (null != var5 && (null != var5.field_h &&
-                  var5.field_h.field_C != 0 &&
-                  var5.field_h.field_k ||
+                if (null != var5 && (null != var5.unit &&
+                  var5.unit.field_C != 0 &&
+                  var5.unit.field_k ||
                   this.field_L == 1)) {
                   var3 = q.field_Fb;
                   if (this.field_m) {
@@ -799,23 +799,23 @@ final class BattleState {
                           break regionExit2;
                         }
                       }
-                      if (var5Lifetime1.field_h != null &&
-                        var5Lifetime1.field_h.field_C == 0 &&
-                        var5Lifetime1.field_h.field_Z != null && (!ha.field_o ||
+                      if (var5Lifetime1.unit != null &&
+                        var5Lifetime1.unit.field_C == 0 &&
+                        var5Lifetime1.unit.field_Z != null && (!ha.field_o ||
                         7 <= this.field_B)) {
                         this.field_q.field_S = false;
                         if (7 <= this.field_B &&
                           this.field_B < 10) {
                           this.field_B = this.field_B + 1;
                         }
-                        this.field_q = this.map.a(102, vf.field_a, cm.field_d, IntrusiveNode.field_c).field_h;
+                        this.field_q = this.map.a(102, vf.field_a, cm.field_d, IntrusiveNode.field_c).unit;
                         this.a(-1);
                         this.field_m = false;
                         this.field_L = 0;
                       }
-                      if (var5Lifetime1.field_h != null &&
-                        var5Lifetime1.field_h.field_C == 1 &&
-                        var5Lifetime1.field_h.field_k && (!ha.field_o ||
+                      if (var5Lifetime1.unit != null &&
+                        var5Lifetime1.unit.field_C == 1 &&
+                        var5Lifetime1.unit.field_k && (!ha.field_o ||
                         5 <= this.field_B)) {
                         this.field_q.field_X = IntrusiveNode.field_c;
                         this.field_q.field_d = 2;
@@ -898,20 +898,20 @@ final class BattleState {
                           ld.field_e = vf.field_a;
                           og.field_d = -1;
                           this.field_q.field_S = false;
-                          this.field_q.tile.field_h = null;
+                          this.field_q.tile.unit = null;
                           fi.field_m = this.map.a(false, this.field_q.field_n, this.field_q.field_H, -89, true, this.field_q.field_N, this.field_q.field_E, this.field_q.field_X, this.field_q.field_F);
-                          this.field_q.tile.field_h = this.field_q;
+                          this.field_q.tile.unit = this.field_q;
                           if (fi.field_m != null) {
                             og.field_d = fi.field_m.a(param1);
                             if (var9 != 0) {
                               this.b((byte) -3);
                               if (null != var5Lifetime1 &&
-                                null != var5Lifetime1.field_h &&
-                                0 == var5Lifetime1.field_h.field_C &&
-                                null != var5Lifetime1.field_h.field_Z) {
+                                null != var5Lifetime1.unit &&
+                                0 == var5Lifetime1.unit.field_C &&
+                                null != var5Lifetime1.unit.field_Z) {
                                 this.b((byte) -3);
                                 this.field_m = false;
-                                this.field_q = var5Lifetime1.field_h;
+                                this.field_q = var5Lifetime1.unit;
                                 this.field_L = 0;
                                 this.a(-1);
                               }
@@ -921,24 +921,24 @@ final class BattleState {
                       } else {
                         this.b((byte) -3);
                         if ((var9 != 0) && (null != var5Lifetime1 &&
-                          null != var5Lifetime1.field_h &&
-                          0 == var5Lifetime1.field_h.field_C &&
-                          null != var5Lifetime1.field_h.field_Z)) {
+                          null != var5Lifetime1.unit &&
+                          0 == var5Lifetime1.unit.field_C &&
+                          null != var5Lifetime1.unit.field_Z)) {
                           this.b((byte) -3);
                           this.field_m = false;
-                          this.field_q = var5Lifetime1.field_h;
+                          this.field_q = var5Lifetime1.unit;
                           this.field_L = 0;
                           this.a(-1);
                         }
                       }
                     } else {
                       if (null != var5Lifetime1 &&
-                        null != var5Lifetime1.field_h &&
-                        0 == var5Lifetime1.field_h.field_C &&
-                        null != var5Lifetime1.field_h.field_Z) {
+                        null != var5Lifetime1.unit &&
+                        0 == var5Lifetime1.unit.field_C &&
+                        null != var5Lifetime1.unit.field_Z) {
                         this.b((byte) -3);
                         this.field_m = false;
-                        this.field_q = var5Lifetime1.field_h;
+                        this.field_q = var5Lifetime1.unit;
                         this.field_L = 0;
                         this.a(-1);
                       }
@@ -1020,7 +1020,7 @@ final class BattleState {
                 var4 < 92 && (!ha.field_o ||
                 this.field_B >= 11) && this.field_q.field_B == 0) {
                 param0.field_Eb = new String[1];
-                param0.field_Eb[0] = fa.field_e;
+                param0.field_Eb[0] = Archive.field_e;
                 if (this.field_N == 1) {
                   qd.$cfr$intArgs$a$e9dea5688aa5(16, 33);
                   var5_intLifetime2 = this.field_q.g(12384);
@@ -1775,7 +1775,7 @@ final class BattleState {
           if (stackIn_330_0 == stackIn_330_1 &&
             mm.field_e >= 2) {
             this.a(true);
-            this.a(this.field_G, (byte) -67);
+            this.a(this.client, (byte) -67);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1869,7 +1869,7 @@ final class BattleState {
                 this.units[var6].field_k ||
                 this.units[var6].field_h ||
                 this.field_B >= 16 ||
-                !(fa.field_a <= 0)) && (this.units[var6].field_P > 0 &&
+                !(Archive.field_a <= 0)) && (this.units[var6].field_P > 0 &&
                 !this.units[var6].field_Y)) {
                 var4 = this.units[var6];
                 break scanLoop1;
@@ -2203,7 +2203,7 @@ final class BattleState {
                   ((BattleUnit) (var4)).field_N = 4;
                 }
                 var9_ref_dl = this.map.a(-115, ((BattleUnit) (var4)).field_n, ((BattleUnit) (var4)).field_E, ((BattleUnit) (var4)).field_X);
-                ((BattleUnit) (var4)).tile.field_h = null;
+                ((BattleUnit) (var4)).tile.unit = null;
                 stackIn_413_0 = null;
                 stackIn_413_1 = var9_ref_dl;
                 do {
@@ -2228,7 +2228,7 @@ final class BattleState {
                       var8 = 0;
                     }
                   }
-                  ((BattleUnit) (var4)).tile.field_h = (BattleUnit) (var4);
+                  ((BattleUnit) (var4)).tile.unit = (BattleUnit) (var4);
                   var10++;
                   if (25 < var10) {
                     var8 = 1;
@@ -2323,7 +2323,7 @@ final class BattleState {
                       ((BattleUnit) (var4)).field_n = ((BattleUnit) (var5)).field_gb + (int)(9.0 * Math.random() - 4.0);
                       ((BattleUnit) (var4)).field_N = ((BattleUnit) (var5)).field_R;
                     }
-                    ((BattleUnit) (var4)).tile.field_h = null;
+                    ((BattleUnit) (var4)).tile.unit = null;
                     ((BattleUnit) (var4)).field_r = null;
                     if (((BattleUnit) (var4)).field_C == 0) {
                       ((BattleUnit) (var4)).field_r = this.map.a(((BattleUnit) (var4)).field_n, ((BattleUnit) (var4)).field_H, ((BattleUnit) (var4)).field_F, ((BattleUnit) (var4)).field_N, false, ((BattleUnit) (var4)).field_X, ((BattleUnit) (var4)).field_E, true);
@@ -2344,7 +2344,7 @@ final class BattleState {
                         var8 = 0;
                       }
                     }
-                    ((BattleUnit) (var4)).tile.field_h = (BattleUnit) (var4);
+                    ((BattleUnit) (var4)).tile.unit = (BattleUnit) (var4);
                     var9++;
                     if (var9 > 25) {
                       ((BattleUnit) (var4)).field_w = 1;
@@ -2703,26 +2703,26 @@ final class BattleState {
             var12 = param3.field_t;
             var13 = param3.field_r;
             var14 = 0;
-            if (l.field_d > var8) {
-              var15 = l.field_d - var8;
+            if (SoftwareRasterizer.field_d > var8) {
+              var15 = SoftwareRasterizer.field_d - var8;
               var11 = var11 + var15;
-              var8 = l.field_d;
+              var8 = SoftwareRasterizer.field_d;
               var9 = var9 + var13 * var15;
               var12 = var12 - var15;
             }
-            if ((var8 + var12) > l.field_c) {
-              var12 = var12 - (var12 + (var8 - l.field_c));
+            if ((var8 + var12) > SoftwareRasterizer.field_c) {
+              var12 = var12 - (var12 + (var8 - SoftwareRasterizer.field_c));
             }
-            if (l.field_b > var7_int) {
-              var15Lifetime2 = l.field_b - var7_int;
-              var7_int = l.field_b;
+            if (SoftwareRasterizer.field_b > var7_int) {
+              var15Lifetime2 = SoftwareRasterizer.field_b - var7_int;
+              var7_int = SoftwareRasterizer.field_b;
               var13 = var13 - var15Lifetime2;
               var14 = var14 + var15Lifetime2;
               var10 = var10 + var15Lifetime2;
               var9 = var9 + var15Lifetime2;
             }
-            if (var7_int + var13 > l.field_f) {
-              var15Lifetime3 = -l.field_f + (var7_int + var13);
+            if (var7_int + var13 > SoftwareRasterizer.field_f) {
+              var15Lifetime3 = -SoftwareRasterizer.field_f + (var7_int + var13);
               var14 = var14 + var15Lifetime3;
               var13 = var13 - var15Lifetime3;
             }
@@ -2834,26 +2834,26 @@ final class BattleState {
           var13Lifetime1 = param3.field_t;
           var14Lifetime1 = param3.field_r;
           var15Lifetime1 = 0;
-          if (var9Lifetime1 < l.field_d) {
-            var16Lifetime1 = l.field_d - var9Lifetime1;
-            var9Lifetime1 = l.field_d;
+          if (var9Lifetime1 < SoftwareRasterizer.field_d) {
+            var16Lifetime1 = SoftwareRasterizer.field_d - var9Lifetime1;
+            var9Lifetime1 = SoftwareRasterizer.field_d;
             var10Lifetime1 = var10Lifetime1 + var16Lifetime1 * var14Lifetime1;
             var12Lifetime1 = var12Lifetime1 + var16Lifetime1;
             var13Lifetime1 = var13Lifetime1 - var16Lifetime1;
           }
-          if (l.field_b > var8Lifetime1) {
-            var16Lifetime2 = -var8Lifetime1 + l.field_b;
-            var8Lifetime1 = l.field_b;
+          if (SoftwareRasterizer.field_b > var8Lifetime1) {
+            var16Lifetime2 = -var8Lifetime1 + SoftwareRasterizer.field_b;
+            var8Lifetime1 = SoftwareRasterizer.field_b;
             var10Lifetime1 = var10Lifetime1 + var16Lifetime2;
             var15Lifetime1 = var15Lifetime1 + var16Lifetime2;
             var11Lifetime1 = var11Lifetime1 + var16Lifetime2;
             var14Lifetime1 = var14Lifetime1 - var16Lifetime2;
           }
-          if (var13Lifetime1 + var9Lifetime1 > l.field_c) {
-            var13Lifetime1 = var13Lifetime1 - (-l.field_c + var9Lifetime1 + var13Lifetime1);
+          if (var13Lifetime1 + var9Lifetime1 > SoftwareRasterizer.field_c) {
+            var13Lifetime1 = var13Lifetime1 - (-SoftwareRasterizer.field_c + var9Lifetime1 + var13Lifetime1);
           }
-          if (var14Lifetime1 + var8Lifetime1 > l.field_f) {
-            var16Lifetime3 = var8Lifetime1 + var14Lifetime1 - l.field_f;
+          if (var14Lifetime1 + var8Lifetime1 > SoftwareRasterizer.field_f) {
+            var16Lifetime3 = var8Lifetime1 + var14Lifetime1 - SoftwareRasterizer.field_f;
             var14Lifetime1 = var14Lifetime1 - var16Lifetime3;
             var15Lifetime1 = var15Lifetime1 + var16Lifetime3;
           }
@@ -3154,7 +3154,7 @@ final class BattleState {
           rk.field_c = 32;
           wb.field_g = 20;
           hh.field_m.a();
-          l.a();
+          SoftwareRasterizer.a();
           k.field_f.a(0);
           var4 = -88 % ((-66 - param0) / 59);
           var3_int = 0;
@@ -3182,7 +3182,7 @@ final class BattleState {
                 if (stackIn_209_0 != null &&
                   this.units[var6].field_P > 0) {
                   if (null != this.units[var6].tile) {
-                    this.units[var6].tile.field_h = null;
+                    this.units[var6].tile.unit = null;
                   }
                   if (null == this.units[var6].field_Z &&
                     this.units[var6].field_C != 0) {
@@ -3427,10 +3427,10 @@ final class BattleState {
                   mh.a((byte) 119, 13, 242);
                 }
                 if (param1.field_ob &&
-                  fa.field_a == 1) {
+                  Archive.field_a == 1) {
                   mh.a((byte) 117, 14, 241);
                 }
-                if (fa.field_a == 2) {
+                if (Archive.field_a == 2) {
                   mh.a((byte) 121, 15, 240);
                 }
               }
@@ -3949,7 +3949,7 @@ final class BattleState {
             var9 = -240 + var7 - 32;
             var9 += 224;
             ui.field_f.field_g.a(var9, 4, var8, -22899, ui.field_f);
-            DelegatingCanvas.a(ui.field_f.field_g, -31661);
+            FullscreenFocusCanvas.a(ui.field_f.field_g, -31661);
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted5 = true;
@@ -3973,13 +3973,13 @@ final class BattleState {
               }
               if (stackIn_573_0 != null) {
                 var9_ref = hb.field_p[0];
-                if (var8_ref_dl.field_h != null &&
+                if (var8_ref_dl.unit != null &&
                   ~eg.field_p == ~var7Lifetime1) {
-                  if (null != var8_ref_dl.field_h.field_Z) {
+                  if (null != var8_ref_dl.unit.field_Z) {
                     var9_ref = hb.field_p[2];
                   } else {
-                    if (1 == var8_ref_dl.field_h.field_C) {
-                      if (var8_ref_dl.field_h.field_k) {
+                    if (1 == var8_ref_dl.unit.field_C) {
+                      if (var8_ref_dl.unit.field_k) {
                         var9_ref = hb.field_p[1];
                       }
                     } else {
@@ -4121,7 +4121,7 @@ final class BattleState {
                   stackIn_176_0Lifetime1 = -1;
                   stackIn_176_1Lifetime1 = ~gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1];
                   if (stackIn_176_0Lifetime1 > stackIn_176_1Lifetime1) {
-                    l.a(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, (2048 * gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1] + (gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1] * 16 + 262144 * gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1])) % 16777215);
+                    SoftwareRasterizer.a(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, (2048 * gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1] + (gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1] * 16 + 262144 * gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1])) % 16777215);
                   }
                   var7Lifetime1Lifetime1++;
                 }
@@ -4194,7 +4194,7 @@ final class BattleState {
                           }
                           cc.field_i[((oh) (var9_refLifetime2)).field_g].a(192, 93, 383, var8 + 46, (byte) 21);
                           if (this.field_q.field_nb == var9_refLifetime2) {
-                            l.e(310, var8 + 10, 148, 73, 16777215);
+                            SoftwareRasterizer.e(310, var8 + 10, 148, 73, 16777215);
                             if (this.field_L == 1) {
                               stackIn_256_0 = 1;
                               if (this.field_m) {
@@ -4203,7 +4203,7 @@ final class BattleState {
                                 stackIn_257_1 = 1;
                               }
                               if (stackIn_256_0 == stackIn_257_1) {
-                                l.e(311, 11 + var8, 146, 71, 16711680);
+                                SoftwareRasterizer.e(311, 11 + var8, 146, 71, 16711680);
                               }
                             }
                           }
@@ -4235,7 +4235,7 @@ final class BattleState {
                                 } else {
                                   stackIn_277_4 = 65280;
                                 }
-                                l.f(stackIn_329_0, stackIn_329_1, stackIn_329_2, stackIn_273_3, stackIn_277_4);
+                                SoftwareRasterizer.f(stackIn_329_0, stackIn_329_1, stackIn_329_2, stackIn_273_3, stackIn_277_4);
                                 var12Lifetime2++;
                               }
                             }
@@ -4259,7 +4259,7 @@ final class BattleState {
                               }
                               if (((oh) (var9_refLifetime2)).field_c <= 0 &&
                                 mm.field_f <= 3.14) {
-                                l.d(324, 50 + var8, 30, 30, 16711680, 128);
+                                SoftwareRasterizer.d(324, 50 + var8, 30, 30, 16711680, 128);
                               }
                             }
                           }
@@ -4283,7 +4283,7 @@ final class BattleState {
                           stackIn_329_3 = var8 + 10;
                           stackIn_329_4 = 73;
                         }
-                        l.c(stackIn_329_0, stackIn_329_1, stackIn_329_2, stackIn_329_3 + stackIn_329_4);
+                        SoftwareRasterizer.c(stackIn_329_0, stackIn_329_1, stackIn_329_2, stackIn_329_3 + stackIn_329_4);
                         if (((oh) (var9_refLifetime2)).field_g == 0) {
                           cc.field_i[((oh) (var9_refLifetime2)).field_g].a(192, 93, var10_int + 81, var8 + 46, (byte) 21);
                           if (var19 != 0) {
@@ -4292,12 +4292,12 @@ final class BattleState {
                         } else {
                           cc.field_i[((oh) (var9_refLifetime2)).field_g].a(192, 93, var10_int + 73, 36 + var8 + 10, (byte) 21);
                         }
-                        l.c();
+                        SoftwareRasterizer.c();
                         if (var9_refLifetime2 == this.field_q.field_nb) {
-                          l.e(var10_int, 10 + var8, 73, 73, 16777215);
+                          SoftwareRasterizer.e(var10_int, 10 + var8, 73, 73, 16777215);
                           if (1 == this.field_L &&
                             !this.field_m) {
-                            l.e(1 + var10_int, var8 + 11, 71, 71, 16711680);
+                            SoftwareRasterizer.e(1 + var10_int, var8 + 11, 71, 71, 16711680);
                           }
                         }
                         if (0 < ((oh) (var9_refLifetime2)).a(true)) {
@@ -4327,7 +4327,7 @@ final class BattleState {
                               } else {
                                 stackIn_368_4 = 65280;
                               }
-                              l.f(stackIn_426_0, stackIn_426_1, stackIn_426_2, stackIn_364_3, stackIn_368_4);
+                              SoftwareRasterizer.f(stackIn_426_0, stackIn_426_1, stackIn_426_2, stackIn_364_3, stackIn_368_4);
                               var13Lifetime1++;
                             }
                           }
@@ -4337,7 +4337,7 @@ final class BattleState {
                             nb.field_d[7].b(478, var8 + 50);
                             if (((oh) (var9_refLifetime2)).field_c <= 0 &&
                               3.14 >= mm.field_f) {
-                              l.d(478, var8 + 50, 30, 30, 16711680, 128);
+                              SoftwareRasterizer.d(478, var8 + 50, 30, 30, 16711680, 128);
                               if (-464 + (var10_int + 478) <= ef.field_j &&
                                 -464 + (508 + var10_int) >= ef.field_j &&
                                 MouseWheelInput.field_b >= (var8 + 50) &&
@@ -4356,7 +4356,7 @@ final class BattleState {
                         }
                       }
                       if (null != this.field_q.field_b) {
-                        l.c(547, 35 + var8, 595, 48 + var8 + 35);
+                        SoftwareRasterizer.c(547, 35 + var8, 595, 48 + var8 + 35);
                         var10 = cc.field_i[this.field_q.field_b.field_g].d();
                         var10.b();
                         if (this.field_q.field_b.field_g == 5) {
@@ -4365,18 +4365,18 @@ final class BattleState {
                         if (this.field_q.field_b.field_g == 11) {
                           var10.b(547 - var10.field_p, -3 + (var8 - (-32 - var10.field_v / 2)));
                         }
-                        l.c();
+                        SoftwareRasterizer.c();
                         if (this.field_m) {
-                          l.e(547, var8 + 35, 48, 48, 16777215);
-                          l.e(548, var8 + 36, 46, 46, 16711680);
+                          SoftwareRasterizer.e(547, var8 + 35, 48, 48, 16777215);
+                          SoftwareRasterizer.e(548, var8 + 36, 46, 46, 16711680);
                         }
                         og.field_f.a(Integer.toString(this.field_q.field_b.field_d), 589, var8 + 81, 16777215, -1);
                       }
                       if (this.field_q.field_B == 0) {
-                        l.d(100, var8 + 67, 24, 24, 0, 128);
+                        SoftwareRasterizer.d(100, var8 + 67, 24, 24, 0, 128);
                       }
                       if (this.field_q.field_B == 1) {
-                        l.d(128, 67 + var8, 24, 24, 0, 128);
+                        SoftwareRasterizer.d(128, 67 + var8, 24, 24, 0, 128);
                       }
                       if (eg.field_p != 0) {
                         break regionExit1;
@@ -4387,30 +4387,30 @@ final class BattleState {
                       stackIn_426_3 = 24;
                       stackIn_426_4 = 0;
                     }
-                    l.d(stackIn_426_0, stackIn_426_1, stackIn_426_2, stackIn_426_3, stackIn_426_4, 128);
+                    SoftwareRasterizer.d(stackIn_426_0, stackIn_426_1, stackIn_426_2, stackIn_426_3, stackIn_426_4, 128);
                   }
                   if (5 <= eg.field_p) {
-                    l.d(213, var8 + 67, 24, 24, 0, 128);
+                    SoftwareRasterizer.d(213, var8 + 67, 24, 24, 0, 128);
                   }
                   var10_int = 133;
                   var11_intLifetime1 = this.field_q.field_P * var10_int / this.field_q.field_mb;
                   var12Lifetime2 = var10_int * this.field_q.field_T / this.field_q.field_mb;
                   var13Lifetime1 = (this.field_q.field_u + this.field_q.field_m) * var10_int / 200;
-                  l.d(var11_intLifetime1 + 159, var8 + 28, var10_int - var11_intLifetime1, 7, 16776960, 128);
-                  l.d(var11_intLifetime1 + 159 + var12Lifetime2, var8 + 28, -var12Lifetime2 - (var11_intLifetime1 - var10_int), 7, 0, 192);
-                  l.d(159 + var13Lifetime1, 45 + var8, var10_int - var13Lifetime1, 7, 0, 192);
+                  SoftwareRasterizer.d(var11_intLifetime1 + 159, var8 + 28, var10_int - var11_intLifetime1, 7, 16776960, 128);
+                  SoftwareRasterizer.d(var11_intLifetime1 + 159 + var12Lifetime2, var8 + 28, -var12Lifetime2 - (var11_intLifetime1 - var10_int), 7, 0, 192);
+                  SoftwareRasterizer.d(159 + var13Lifetime1, 45 + var8, var10_int - var13Lifetime1, 7, 0, 192);
                   var14 = this.field_q.field_jb;
                   boolean decompiledSharedTail1 = (this.field_q.field_B == 0);
                   if (!decompiledSharedTail1) {
                     var15 = var10_int * this.field_q.field_jb / this.field_q.field_v;
-                    l.d(159 + var15, var8 + 11, -var15 + var10_int, 7, 0, 192);
+                    SoftwareRasterizer.d(159 + var15, var8 + 11, -var15 + var10_int, 7, 0, 192);
                     decompiledSharedTail1 = (var19 != 0);
                   }
                   if (decompiledSharedTail1) {
                     var14 = 2 * var14 / 3;
                     var15 = var10_int * var14 / this.field_q.field_v;
-                    l.d(159, var8 + 11, var15, 7, 16777215, 128);
-                    l.d(159 + var15, var8 + 11, -var15 + var10_int, 7, 0, 192);
+                    SoftwareRasterizer.d(159, var8 + 11, var15, 7, 16777215, 128);
+                    SoftwareRasterizer.d(159 + var15, var8 + 11, -var15 + var10_int, 7, 0, 192);
                   }
                   var14Lifetime2 = this.field_q.field_jb;
                   var15_ref_String = Integer.toString(var14Lifetime2);
@@ -4437,25 +4437,25 @@ final class BattleState {
                 }
                 if (ha.field_o) {
                   if (this.field_B < 2) {
-                    l.f(306, 7 + var8, 234, 79, 0);
+                    SoftwareRasterizer.f(306, 7 + var8, 234, 79, 0);
                   }
                   if (this.field_B < 7) {
-                    l.f(241, 66 + var8, 26, 26, 0);
+                    SoftwareRasterizer.f(241, 66 + var8, 26, 26, 0);
                   }
                   if (this.field_B < 9) {
-                    l.f(269, var8 + 66, 26, 26, 0);
+                    SoftwareRasterizer.f(269, var8 + 66, 26, 26, 0);
                   }
                   if (this.field_B < 10) {
-                    l.f(606, 7 + var8, 29, 79, 0);
+                    SoftwareRasterizer.f(606, 7 + var8, 29, 79, 0);
                   }
                   if (this.field_B < 11) {
-                    l.f(99, 66 + var8, 54, 26, 0);
+                    SoftwareRasterizer.f(99, 66 + var8, 54, 26, 0);
                   }
                   if (this.field_B < 12) {
-                    l.f(184, var8 + 66, 54, 26, 0);
+                    SoftwareRasterizer.f(184, var8 + 66, 54, 26, 0);
                   }
                   if (this.field_B < 14) {
-                    l.f(541, 7 + var8, 54, 54, 0);
+                    SoftwareRasterizer.f(541, 7 + var8, 54, 54, 0);
                   }
                 }
                 var9 = 0;
@@ -4519,8 +4519,8 @@ final class BattleState {
                       394 >= MouseWheelInput.field_b &&
                       ef.field_j <= (var14Lifetime1 + var4Lifetime1Lifetime1) && (!ha.field_o ||
                       this.field_B >= 7)) {
-                      this.field_G.field_Eb = new String[1];
-                      this.field_G.field_Eb[0] = SecondaryNodeDequeIterator.field_b + this.units[var11_intLifetime1Lifetime1].field_Z.b(1);
+                      this.client.field_Eb = new String[1];
+                      this.client.field_Eb[0] = SecondaryNodeDequeIterator.field_b + this.units[var11_intLifetime1Lifetime1].field_Z.b(1);
                       if (oh.field_f == 1) {
                         if (this.field_B >= 7 &&
                           this.field_B < 10 &&
@@ -4556,10 +4556,10 @@ final class BattleState {
                       og.field_f.a(Integer.toString(var15Lifetime1), -5 + (var4Lifetime1Lifetime1 + var14Lifetime1), -5 + var8, var17Lifetime1, -1);
                     }
                     if (this.units[var11_intLifetime1Lifetime1].field_ob) {
-                      l.e(89 - vl.field_c.field_r + var4Lifetime1Lifetime1 - (-var14Lifetime1 + 1), 383, 4, 16777215);
-                      l.e(89 + (-vl.field_c.field_r + (var4Lifetime1Lifetime1 + var14Lifetime1)) + 1, 383, 4, 16777215);
-                      l.e(-vl.field_c.field_r + var4Lifetime1Lifetime1 + (var14Lifetime1 + 89), 383, 3, 16711680);
-                      l.e(var4Lifetime1Lifetime1 + (-vl.field_c.field_r + var14Lifetime1) + 89, 383, 2, 0);
+                      SoftwareRasterizer.e(89 - vl.field_c.field_r + var4Lifetime1Lifetime1 - (-var14Lifetime1 + 1), 383, 4, 16777215);
+                      SoftwareRasterizer.e(89 + (-vl.field_c.field_r + (var4Lifetime1Lifetime1 + var14Lifetime1)) + 1, 383, 4, 16777215);
+                      SoftwareRasterizer.e(-vl.field_c.field_r + var4Lifetime1Lifetime1 + (var14Lifetime1 + 89), 383, 3, 16711680);
+                      SoftwareRasterizer.e(var4Lifetime1Lifetime1 + (-vl.field_c.field_r + var14Lifetime1) + 89, 383, 2, 0);
                     }
                     if (this.units[var11_intLifetime1Lifetime1].field_v == this.units[var11_intLifetime1Lifetime1].field_jb &&
                       1 == this.units[var11_intLifetime1Lifetime1].field_B) {
@@ -4585,10 +4585,10 @@ final class BattleState {
             var8_ref_dlLifetime1 = stackIn_573_0;
             if (null != var8_ref_dlLifetime1) {
               if (null != oi.field_J) {
-                l.f(0, 100, oi.field_J.field_q, oi.field_J.field_u, 16711823);
+                SoftwareRasterizer.f(0, 100, oi.field_J.field_q, oi.field_J.field_u, 16711823);
                 oi.field_J.b(0, 100);
               }
-              var9_refLifetime1 = var8_ref_dlLifetime1.field_h;
+              var9_refLifetime1 = var8_ref_dlLifetime1.unit;
               var10_intLifetime2 = 80;
               if (null != var9_refLifetime1) {
                 og.field_f.a(((BattleUnit) (var9_refLifetime1)).field_K, 630, var10_intLifetime2, 16777215, 0);
@@ -4725,25 +4725,25 @@ final class BattleState {
                 }
                 var11 = null;
                 if (bh.field_e[25]) {
-                  var11 = new BattleUnit(0, this.field_G.field_Bb);
+                  var11 = new BattleUnit(0, this.client.field_Bb);
                 }
                 if (bh.field_e[16]) {
-                  var11 = new BattleUnit(1, this.field_G.field_Bb);
+                  var11 = new BattleUnit(1, this.client.field_Bb);
                 }
                 if (bh.field_e[17]) {
-                  var11 = new BattleUnit(2, this.field_G.field_Bb);
+                  var11 = new BattleUnit(2, this.client.field_Bb);
                 }
                 if (bh.field_e[18]) {
-                  var11 = new BattleUnit(3, this.field_G.field_Bb);
+                  var11 = new BattleUnit(3, this.client.field_Bb);
                 }
                 if (bh.field_e[19]) {
-                  var11 = new BattleUnit(4, this.field_G.field_Bb);
+                  var11 = new BattleUnit(4, this.client.field_Bb);
                 }
                 if (bh.field_e[20]) {
-                  var11 = new BattleUnit(5, this.field_G.field_Bb);
+                  var11 = new BattleUnit(5, this.client.field_Bb);
                 }
                 if (bh.field_e[21]) {
-                  var11 = new BattleUnit(6, this.field_G.field_Bb);
+                  var11 = new BattleUnit(6, this.client.field_Bb);
                 }
                 if (null != var11) {
                   var12Lifetime1 = 0;
@@ -4761,7 +4761,7 @@ final class BattleState {
                     ((BattleUnit) (var11)).tile = var8_ref_dlLifetime1;
                     ((BattleUnit) (var11)).field_H = vf.field_a;
                     ((BattleUnit) (var11)).field_E = eg.field_p;
-                    var8_ref_dlLifetime1.field_h = (BattleUnit) (var11);
+                    var8_ref_dlLifetime1.unit = (BattleUnit) (var11);
                     ((BattleUnit) (var11)).field_F = IntrusiveNode.field_c;
                     var11 = null;
                     break;
@@ -4780,7 +4780,7 @@ final class BattleState {
                       ((BattleUnit) (var11)).field_H = vf.field_a;
                       ((BattleUnit) (var11)).tile = var8_ref_dlLifetime1;
                       ((BattleUnit) (var11)).field_E = eg.field_p;
-                      var8_ref_dlLifetime1.field_h = (BattleUnit) (var11);
+                      var8_ref_dlLifetime1.unit = (BattleUnit) (var11);
                       ((BattleUnit) (var11)).field_F = IntrusiveNode.field_c;
                       var11 = null;
                       break;
@@ -4811,15 +4811,15 @@ final class BattleState {
                 var8 = 320;
               }
               var9 = 24 * vc.field_f.c(this.field_K, var8);
-              l.f(320 - var8 / 2 - 10, 237 - (var9 / 2 - 122), var8 + 20, 8 + var9, 8388608);
+              SoftwareRasterizer.f(320 - var8 / 2 - 10, 237 - (var9 / 2 - 122), var8 + 20, 8 + var9, 8388608);
               jl.a(jc.field_G, 6 + var9 + 8, 116 + (-(var9 / 2) + 240), 20 + var8 + 6, (byte) -115, -13 + (-(var8 / 2) + 320));
               kb.a(116, 24, var8 + (-(var8 / 2) + 320), this.field_K, -(var8 / 2) + 320, 50 + (240 - var9 + 105), 16777215);
               this.field_K = null;
             }
             decompiledFrameRemainder0 = (null != this.field_K);
             if (decompiledFrameRemainder0) {
-              jm.field_h = jm.field_h + 1;
-              stackIn_745_0 = ~jm.field_h;
+              DelegatingCanvas.field_h = DelegatingCanvas.field_h + 1;
+              stackIn_745_0 = ~DelegatingCanvas.field_h;
               stackIn_745_1 = -101;
             }
           }
@@ -4829,7 +4829,7 @@ final class BattleState {
               lg.field_c = this.field_k;
               this.field_K = null;
               sj.field_b = this.field_c;
-              jm.field_h = 0;
+              DelegatingCanvas.field_h = 0;
               eg.field_p = this.field_E;
             }
             var8 = vc.field_f.b(this.field_K);
@@ -4841,7 +4841,7 @@ final class BattleState {
               var8 = og.field_f.b(jc.field_B);
             }
             var9 = 24 + 24 * vc.field_f.c(this.field_K, var8);
-            l.f(-10 - var8 / 2 + 320, 50 + (-28 - var9 / 2 + 240), var8 + 20, 8 + var9, 8388608);
+            SoftwareRasterizer.f(-10 - var8 / 2 + 320, 50 + (-28 - var9 / 2 + 240), var8 + 20, 8 + var9, 8388608);
             stackIn_753_0 = jc.field_G;
             stackIn_753_1 = var9 + 14;
             stackIn_753_2 = 209 + (-(var9 / 2) + 50);
@@ -4899,22 +4899,22 @@ final class BattleState {
             stackIn_782_0 = param1;
           }
           if (stackIn_782_0) {
-            this.field_G.field_Eb = null;
+            this.client.field_Eb = null;
           }
           if (this.field_J) {
-            l.d(162, 7, 364, 33, 0, 128);
-            l.b(162, 39, 364, 4473924);
+            SoftwareRasterizer.d(162, 7, 364, 33, 0, 128);
+            SoftwareRasterizer.b(162, 39, 364, 4473924);
             ua.field_b.b(0, 0);
-            if (null != this.field_G.field_Eb) {
-              boolean decompiledSharedTail0 = (this.field_G.field_Eb.length != 1);
+            if (null != this.client.field_Eb) {
+              boolean decompiledSharedTail0 = (this.client.field_Eb.length != 1);
               if (!decompiledSharedTail0) {
-                og.field_f.a(this.field_G.field_Eb[0], 178, 6, 332, 33, 16777215, -1, 1, 1, 12);
+                og.field_f.a(this.client.field_Eb[0], 178, 6, 332, 33, 16777215, -1, 1, 1, 12);
                 decompiledSharedTail0 = (var19 != 0);
               }
               if (decompiledSharedTail0) {
-                og.field_f.a(this.field_G.field_Eb[0], 178, 6, 162, 33, 16777215, -1, 1, 1, 12);
-                l.f(344, 10, 27, 4473924);
-                og.field_f.a(this.field_G.field_Eb[1], 348, 6, 162, 33, 16777215, -1, 1, 1, 12);
+                og.field_f.a(this.client.field_Eb[0], 178, 6, 162, 33, 16777215, -1, 1, 1, 12);
+                SoftwareRasterizer.f(344, 10, 27, 4473924);
+                og.field_f.a(this.client.field_Eb[1], 348, 6, 162, 33, 16777215, -1, 1, 1, 12);
               }
             }
           }
@@ -5036,27 +5036,27 @@ final class BattleState {
           if (param0 != -101) {
             return;
           }
-          if (l.field_d > var7) {
-            var14 = l.field_d - var7;
+          if (SoftwareRasterizer.field_d > var7) {
+            var14 = SoftwareRasterizer.field_d - var7;
             var11 = var11 - var14;
             var8 = var8 + var14 * var12;
-            var7 = l.field_d;
+            var7 = SoftwareRasterizer.field_d;
             var10 = var10 + var14;
           }
           var13 = 0;
-          if (l.field_c < var7 + var11) {
-            var11 = var11 - (-l.field_c + (var11 + var7));
+          if (SoftwareRasterizer.field_c < var7 + var11) {
+            var11 = var11 - (-SoftwareRasterizer.field_c + (var11 + var7));
           }
-          if (var6 < l.field_b) {
-            var14Lifetime1 = l.field_b - var6;
+          if (var6 < SoftwareRasterizer.field_b) {
+            var14Lifetime1 = SoftwareRasterizer.field_b - var6;
             var13 = var13 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
             var12 = var12 - var14Lifetime1;
             var9 = var9 + var14Lifetime1;
-            var6 = l.field_b;
+            var6 = SoftwareRasterizer.field_b;
           }
-          if (l.field_f < var6 + var12) {
-            var14Lifetime2 = var12 + var6 - l.field_f;
+          if (SoftwareRasterizer.field_f < var6 + var12) {
+            var14Lifetime2 = var12 + var6 - SoftwareRasterizer.field_f;
             var12 = var12 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
           }
@@ -5356,7 +5356,7 @@ final class BattleState {
                     var4_ref_r.field_F = this.map.field_b / 2;
                     var4_ref_r.field_H = 2;
                     var4_ref_r.tile = this.map.tiles[this.map.field_b / 2][2];
-                    var4_ref_r.tile.field_h = var4_ref_r;
+                    var4_ref_r.tile.unit = var4_ref_r;
                   }
                 }
                 if (((decompiledFrameCompleted1) && (decompiledFrameCompleted0)) &&
@@ -5393,7 +5393,7 @@ final class BattleState {
               var4_ref_r.field_F = 2;
               var4_ref_r.field_H = this.map.field_e / 2;
               var4_ref_r.tile = this.map.tiles[2][this.map.field_e / 2];
-              var4_ref_r.tile.field_h = var4_ref_r;
+              var4_ref_r.tile.unit = var4_ref_r;
             }
             var3_int = 0;
             stackIn_65_0 = 0;
@@ -5508,7 +5508,7 @@ final class BattleState {
               this.field_d = this.field_d + 1;
               this.field_m = false;
               this.field_L = 0;
-              jm.field_h = 0;
+              DelegatingCanvas.field_h = 0;
               this.field_k = lg.field_c;
               this.field_E = eg.field_p;
               this.field_c = sj.field_b;
@@ -6419,7 +6419,7 @@ final class BattleState {
                                                 } else {
                                                     /* Inlined CFG state: 99. */
                                                     {
-                                                        this.map.tiles[this.units[var4_int].field_F][this.units[var4_int].field_H].field_h = this.units[var4_int];
+                                                        this.map.tiles[this.units[var4_int].field_F][this.units[var4_int].field_H].unit = this.units[var4_int];
                                                         this.units[var4_int].tile = this.map.tiles[this.units[var4_int].field_F][this.units[var4_int].field_H];
                                                         this.field_q = this.units[var4_int];
                                                         lg.field_c = 16 * (this.field_q.field_F + this.field_q.field_H);
@@ -9310,7 +9310,7 @@ final class BattleState {
                         } else {
                             /* Inlined CFG state: 527. */
                             {
-                                if (var4.field_b == jm.field_a) {
+                                if (var4.field_b == DelegatingCanvas.field_a) {
                                     statePc = 532;
                                     continue scanLoop1;
                                 } else {
@@ -9321,7 +9321,7 @@ final class BattleState {
                                         }
                                         {
                                             var4.field_d = 0;
-                                            var4.field_b = jm.field_a;
+                                            var4.field_b = DelegatingCanvas.field_a;
                                             statePc = 532;
                                             continue scanLoop1;
                                         }
@@ -12070,7 +12070,7 @@ final class BattleState {
           le.field_q = null;
           this.b((byte) -3);
           this.field_f = 0;
-          this.field_G = param0;
+          this.client = param0;
           this.field_z = 0;
           this.field_v = false;
           this.field_L = 0;
@@ -12180,7 +12180,7 @@ final class BattleState {
                                             var2_int = 10;
                                             le.field_q = new ad(0);
                                             le.field_q.field_A = this;
-                                            if (fa.field_a >= 1) {
+                                            if (Archive.field_a >= 1) {
                                               this.a(1, kl.field_d[76], -87);
                                               if (var24 != 0) {
                                                 this.a(-1, ak.field_c, -32);
@@ -12188,7 +12188,7 @@ final class BattleState {
                                             } else {
                                               this.a(-1, ak.field_c, -32);
                                             }
-                                            if (2 == fa.field_a) {
+                                            if (2 == Archive.field_a) {
                                               var2_int = 14;
                                             }
                                             this.field_J = true;
@@ -12201,7 +12201,7 @@ final class BattleState {
                                       var2_int = 16;
                                       var6 = 4;
                                       this.field_J = false;
-                                      if (fa.field_a != 2) {
+                                      if (Archive.field_a != 2) {
                                         break regionExit1;
                                       }
                                       var2_int = 20;
@@ -12213,7 +12213,7 @@ final class BattleState {
                                     var2_int = 12;
                                     var8 = 2;
                                     this.field_J = true;
-                                    if (fa.field_a != 2) {
+                                    if (Archive.field_a != 2) {
                                       break regionExit1;
                                     }
                                     var2_int = 20;
@@ -12224,7 +12224,7 @@ final class BattleState {
                                   var3 = 1;
                                   var2_int = 16;
                                   this.field_J = true;
-                                  if (fa.field_a == 2) {
+                                  if (Archive.field_a == 2) {
                                     var2_int = 20;
                                     var3 = 2;
                                   }
@@ -12246,7 +12246,7 @@ final class BattleState {
                                 var11 = 0;
                                 var12 = 2;
                                 this.field_J = false;
-                                if (fa.field_a != 2) {
+                                if (Archive.field_a != 2) {
                                   break regionExit1;
                                 }
                                 var12 = 4;
@@ -12257,7 +12257,7 @@ final class BattleState {
                               var12 = 6;
                               var3 = 6;
                               var11 = 4;
-                              if (fa.field_a == 2) {
+                              if (Archive.field_a == 2) {
                                 var12 = 8;
                                 var11 = 6;
                               }
@@ -12272,11 +12272,11 @@ final class BattleState {
                             var13 = 4;
                             var12 = 4;
                             var8 = 3;
-                            if (fa.field_a == 0) {
+                            if (Archive.field_a == 0) {
                               var11 = 2;
                             }
                             this.field_J = false;
-                            if (fa.field_a != 2) {
+                            if (Archive.field_a != 2) {
                               break regionExit1;
                             }
                             var12 = 8;
@@ -12292,7 +12292,7 @@ final class BattleState {
                           var12 = 8;
                           this.field_J = true;
                           var11 = 4;
-                          if (2 != fa.field_a) {
+                          if (2 != Archive.field_a) {
                             break regionExit1;
                           }
                           var13 = 8;
@@ -12335,7 +12335,7 @@ final class BattleState {
                       var14 = 6;
                       var12 = 6;
                       var3 = 18;
-                      if (fa.field_a == 2) {
+                      if (Archive.field_a == 2) {
                         var12 = 12;
                         var3 = 12;
                       }
@@ -12496,7 +12496,7 @@ final class BattleState {
                       this.units[var15].field_E = 0;
                       this.units[var15].field_U = 5;
                       var17_ref_dl = this.map.a(-121, this.units[var15].field_H, this.units[var15].field_E, this.units[var15].field_F);
-                      var17_ref_dl.field_h = this.units[var15];
+                      var17_ref_dl.unit = this.units[var15];
                       this.units[var15].tile = var17_ref_dl;
                       this.field_q = this.units[var15];
                       lg.field_c = (this.field_q.field_F + this.field_q.field_H) * 16;
@@ -12526,7 +12526,7 @@ final class BattleState {
                 this.units[var15].field_E = 0;
                 this.units[var15].field_U = 2;
                 var17_ref_dl = this.map.a(120, this.units[var15].field_H, this.units[var15].field_E, this.units[var15].field_F);
-                var17_ref_dl.field_h = this.units[var15];
+                var17_ref_dl.unit = this.units[var15];
                 this.units[var15].tile = var17_ref_dl;
                 this.field_q = this.units[var15];
                 this.field_u = true;
@@ -12582,7 +12582,7 @@ final class BattleState {
                     this.units[var15].field_U = 6;
                     this.units[var15].field_E = 0;
                     var17_ref_dl = this.map.a(-75, this.units[var15].field_H, this.units[var15].field_E, this.units[var15].field_F);
-                    var17_ref_dl.field_h = this.units[var15];
+                    var17_ref_dl.unit = this.units[var15];
                     var17_ref_dl.field_j = -1;
                     var17_ref_dl.field_v = 0;
                     this.units[var15].tile = var17_ref_dl;
@@ -12620,7 +12620,7 @@ final class BattleState {
                       this.units[var15].field_E = 0;
                       this.units[var15].field_U = 5;
                       var17_ref_dl = this.map.a(-121, this.units[var15].field_H, this.units[var15].field_E, this.units[var15].field_F);
-                      var17_ref_dl.field_h = this.units[var15];
+                      var17_ref_dl.unit = this.units[var15];
                       this.units[var15].tile = var17_ref_dl;
                       this.field_q = this.units[var15];
                       lg.field_c = (this.field_q.field_F + this.field_q.field_H) * 16;
@@ -12668,7 +12668,7 @@ final class BattleState {
                       }
                       this.units[var16].field_E = 0;
                       var17_ref_dl = this.map.a(-49, this.units[var16].field_H, this.units[var16].field_E, this.units[var16].field_F);
-                      var17_ref_dl.field_h = this.units[var16];
+                      var17_ref_dl.unit = this.units[var16];
                       this.units[var16].tile = var17_ref_dl;
                     }
                     var16++;
@@ -12986,7 +12986,7 @@ final class BattleState {
                     this.units[var15].field_H = var19;
                     this.units[var15].field_E = var20;
                     var21 = this.map.a(-119, var19, var20, var18);
-                    var21.field_h = this.units[var15];
+                    var21.unit = this.units[var15];
                     stackIn_528_0 = this.units[var15];
                     stackIn_528_0.tile = var21;
                     break;
@@ -13018,7 +13018,7 @@ final class BattleState {
                         }
                         this.units[var15].field_F = var18;
                         this.units[var15].field_H = var19;
-                        this.map.tiles[var18][var19].field_h = this.units[var15];
+                        this.map.tiles[var18][var19].unit = this.units[var15];
                         break scanLoop17;
                       }
                     }
@@ -13035,7 +13035,7 @@ final class BattleState {
                       }
                       this.units[var15].field_F = var18;
                       this.units[var15].field_H = var19;
-                      this.map.tiles[var18][var19].field_h = this.units[var15];
+                      this.map.tiles[var18][var19].unit = this.units[var15];
                       break;
                     }
                     break;
@@ -13134,7 +13134,7 @@ final class BattleState {
                   this.units[var15].field_H = var19;
                   this.units[var15].field_E = var20;
                   var21 = this.map.a(-125, var19, var20, var18);
-                  var21.field_h = this.units[var15];
+                  var21.unit = this.units[var15];
                   this.units[var15].tile = var21;
                   this.units[var15].field_U = 6;
                 }
@@ -13155,7 +13155,7 @@ final class BattleState {
             if (le.field_q == null) {
               return;
             }
-            if (fa.field_a <= 0) {
+            if (Archive.field_a <= 0) {
               return;
             }
             le.field_q.c((byte) 51);

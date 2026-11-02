@@ -6,7 +6,7 @@ final class pb {
     static String field_c;
     static int field_b;
 
-    final static Sprite[] a(int param0, boolean param1, int param2, fa param3) {
+    final static Sprite[] a(int param0, boolean param1, int param2, Archive param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -37,7 +37,7 @@ final class pb {
     }
 
     final static String a(byte param0) {
-        if (qe.field_f == ua.field_d) {
+        if (IsaacCipher.field_f == ua.field_d) {
           return ra.field_m;
         }
         if (param0 != -47) {

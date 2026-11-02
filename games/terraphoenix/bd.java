@@ -29,7 +29,7 @@ final class bd {
     }
 
     final void a(int param0, UiWidget param1, int param2, int param3, hf param4) {
-        pk stackIn_18_0 = null;
+        BitmapFont stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
         int stackIn_21_2 = 0;
@@ -96,7 +96,7 @@ final class bd {
             } else {
               stackIn_25_8 = 256;
             }
-            ((pk) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_h, param4.field_a, param4.field_m);
+            ((BitmapFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_h, param4.field_a, param4.field_m);
           }
           if (param3 == 1) {
             return;

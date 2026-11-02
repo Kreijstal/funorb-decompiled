@@ -16,7 +16,7 @@ final class ec {
         return this.field_e;
     }
 
-    final static qj a(String param0, int param1, fa param2, fa param3, String param4) {
+    final static qj a(String param0, int param1, Archive param2, Archive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

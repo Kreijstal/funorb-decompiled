@@ -41,7 +41,7 @@ final class pe {
         }
     }
 
-    final static void a(int param0, pk param1, int param2, pk param3) {
+    final static void a(int param0, BitmapFont param1, int param2, BitmapFont param3) {
         if (param2 != 48) {
           return;
         }
@@ -49,7 +49,7 @@ final class pe {
           da.field_h = param1;
           qk.field_a = param3;
           ch.field_c = param0;
-          tb.a(l.field_k / 2, 21361, l.field_j / 2);
+          tb.a(SoftwareRasterizer.field_k / 2, 21361, SoftwareRasterizer.field_j / 2);
           aj.a(param3.field_p + param3.field_u, param2 - 19653, param1.field_p + param1.field_u, param3.field_u, param1.field_u);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "pe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

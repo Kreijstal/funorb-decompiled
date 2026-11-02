@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bi {
-    static fa field_b;
+    static Archive field_b;
     static String field_c;
     static String field_a;
-    static fa field_d;
+    static Archive field_d;
 
     final static oa a(int param0, String param1) {
         int var2_int = 0;
@@ -76,7 +76,7 @@ final class bi {
             var6 = (java.awt.Component) null;
             bi.a(-13, 13, 17, (java.awt.Component) null);
           }
-          qe.field_f = k.field_b;
+          IsaacCipher.field_f = k.field_b;
           if (param0 != 255) {
             if (param0 < 100) {
               wl.field_Q = aj.a(param0, (byte) 113, param1);
@@ -121,7 +121,7 @@ final class bi {
           field_a = null;
           return;
         }
-        field_d = (fa) null;
+        field_d = (Archive) null;
         field_d = null;
         field_c = null;
         field_a = null;

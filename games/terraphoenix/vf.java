@@ -21,7 +21,7 @@ final class vf {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (og.field_a != qe.field_f) {
+          if (og.field_a != IsaacCipher.field_f) {
             return false;
           }
           var8 = new tj(jl.field_I, param0);
@@ -39,7 +39,7 @@ final class vf {
           ra.field_m = param5;
           cg.field_H = param6;
           nf.field_c = param2;
-          qe.field_f = ua.field_d;
+          IsaacCipher.field_f = ua.field_d;
           wf.field_q = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,7 +81,7 @@ final class vf {
           return;
         }
         String var2 = (String) null;
-        vf.a((String) null, (String) null, (fa) null, (String) null, 121);
+        vf.a((String) null, (String) null, (Archive) null, (String) null, 121);
         field_b = null;
     }
 
@@ -97,7 +97,7 @@ final class vf {
         }
     }
 
-    final static String a(String param0, String param1, fa param2, String param3, int param4) {
+    final static String a(String param0, String param1, Archive param2, String param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;

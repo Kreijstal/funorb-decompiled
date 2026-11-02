@@ -11,7 +11,7 @@ final class oc {
         return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
-    final static oc a(fa param0, int param1, int param2) {
+    final static oc a(Archive param0, int param1, int param2) {
         byte[] var3 = param0.b(param1, 119, param2);
         if (var3 == null) {
           return null;
@@ -64,7 +64,7 @@ final class oc {
         int var3;
         this.field_b = new pi[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.a(-16384);
+          var3 = param0.readUnsignedByte(-16384);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_b[var2] = new pi();

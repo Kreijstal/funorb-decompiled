@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class nk {
+class PcmPlayerService {
     private long field_h;
     private static int field_m;
     static boolean field_r;
@@ -31,7 +31,7 @@ class nk {
         }
         PcmStream var1 = param0.c();
         while (var1 != null) {
-          nk.a(var1);
+          PcmPlayerService.a(var1);
           var1 = param0.a();
         }
     }
@@ -76,7 +76,7 @@ class nk {
         }
     }
 
-    final static nk a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static PcmPlayerService a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
@@ -104,14 +104,14 @@ class nk {
               } else {
                 stackIn_11_2 = 2;
               }
-              ((nk) ((Object) stackIn_10_0)).field_t = new int[stackIn_10_1 * stackIn_11_2];
-              ((nk) ((Object) var4)).field_s = param3;
-              ((nk) ((Object) var4)).a(param1);
-              ((nk) ((Object) var4)).field_b = (param3 & -1024) + 1024;
-              if (((nk) ((Object) var4)).field_b > 16384) {
-                ((nk) ((Object) var4)).field_b = 16384;
+              ((PcmPlayerService) ((Object) stackIn_10_0)).field_t = new int[stackIn_10_1 * stackIn_11_2];
+              ((PcmPlayerService) ((Object) var4)).field_s = param3;
+              ((PcmPlayerService) ((Object) var4)).a(param1);
+              ((PcmPlayerService) ((Object) var4)).field_b = (param3 & -1024) + 1024;
+              if (((PcmPlayerService) ((Object) var4)).field_b > 16384) {
+                ((PcmPlayerService) ((Object) var4)).field_b = 16384;
               }
-              ((nk) ((Object) var4)).b(((nk) ((Object) var4)).field_b);
+              ((PcmPlayerService) ((Object) var4)).b(((PcmPlayerService) ((Object) var4)).field_b);
               if (field_m > 0 &&
                 field_g == null) {
                 field_g = new nf();
@@ -122,14 +122,14 @@ class nk {
                 if (field_g.field_d[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_g.field_d[param2] = (nk) ((Object) var5);
+                field_g.field_d[param2] = (PcmPlayerService) ((Object) var5);
               }
               stackIn_21_0 = var4;
-              return (nk) ((Object) stackIn_21_0);
+              return (PcmPlayerService) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              return new nk();
+              return new PcmPlayerService();
             }
           }
           throw new IllegalArgumentException();
@@ -171,7 +171,7 @@ class nk {
         if (this.field_i != null &&
           this.field_a <= 0) {
           this.field_a = this.field_a + (field_u >> 4);
-          nk.a(this.field_i);
+          PcmPlayerService.a(this.field_i);
           this.a(this.field_i, this.field_i.b());
           var4 = 0;
           var5 = 255;
@@ -401,7 +401,7 @@ class nk {
         this.field_p = true;
     }
 
-    nk() {
+    PcmPlayerService() {
         this.field_p = false;
         this.field_l = 32;
         this.field_h = ll.a(1000);

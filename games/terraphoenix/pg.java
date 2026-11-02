@@ -16,7 +16,7 @@ final class pg {
           jl.field_I.a((UiWidget) (vi.field_n), (byte) -1);
         }
         vi.field_n.a((byte) 60, param1, param2, param0);
-        l.a();
+        SoftwareRasterizer.a();
         if (param3 <= 53) {
           return;
         }
@@ -102,7 +102,7 @@ final class pg {
           }
           if (var2 == 4) {
             this.field_c[0] = 80;
-            this.field_d = qe.field_g;
+            this.field_d = IsaacCipher.field_g;
             this.field_g[0] = 35;
             this.field_c[1] = 90;
             this.field_a[0] = 60;
@@ -120,7 +120,7 @@ final class pg {
             return;
           }
           if (var2 == 5) {
-            this.field_d = fa.field_c;
+            this.field_d = Archive.field_c;
             this.field_c[0] = 55;
             this.field_g[0] = 35;
             this.field_a[0] = 55;

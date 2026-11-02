@@ -13,7 +13,7 @@ final class le extends di {
     static bg field_p;
 
     final static String a(boolean param0) {
-        if (qe.field_f == ua.field_d) {
+        if (IsaacCipher.field_f == ua.field_d) {
           return cg.field_H;
         }
         if (param0) {

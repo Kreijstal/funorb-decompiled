@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km {
+final class ArchiveIndex {
     static pg[] field_q;
     int field_j;
     bc[] field_f;
@@ -34,7 +34,7 @@ final class km {
 
     final static bg a(int param0) {
         if (param0 < 111) {
-          km.a((byte) 11);
+          ArchiveIndex.a((byte) 11);
         }
         bg var1 = new bg(ah.field_A, sb.field_j, ha.field_s[0], hj.field_K[0], sb.field_m[0], rf.field_p[0], qc.field_b[0], wb.field_a);
         SocketConnector.a((byte) 79);
@@ -90,15 +90,15 @@ final class km {
         var16 = Terraphoenix.field_V;
         try {
           var18 = new PacketBuffer(qg.a(-1, param1));
-          var4 = var18.a(-16384);
+          var4 = var18.readUnsignedByte(-16384);
           if (5 <= var4 &&
             var4 <= 7) {
             if (6 <= var4) {
-              this.field_t = var18.f((byte) -107);
+              this.field_t = var18.readInt((byte) -107);
             } else {
               this.field_t = 0;
             }
-            var5 = var18.a(-16384);
+            var5 = var18.readUnsignedByte(-16384);
             stackIn_11_0 = (0 == (var5 & 1)) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 < 7) {
@@ -145,12 +145,12 @@ final class km {
                 this.field_l[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; this.field_s > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
-                this.field_l[this.field_b[var10Lifetime1Lifetime1]] = var18.f((byte) -107);
+                this.field_l[this.field_b[var10Lifetime1Lifetime1]] = var18.readInt((byte) -107);
               }
               this.field_g = new bc(this.field_l);
             }
             for (var10Lifetime2 = 0; this.field_s > var10Lifetime2; var10Lifetime2++) {
-              this.field_h[this.field_b[var10Lifetime2]] = var18.f((byte) -107);
+              this.field_h[this.field_b[var10Lifetime2]] = var18.readInt((byte) -107);
             }
             if (param0 < 37) {
               var17 = (byte[]) null;
@@ -164,7 +164,7 @@ final class km {
               }
             }
             for (var10Lifetime4 = 0; var10Lifetime4 < this.field_s; var10Lifetime4++) {
-              this.field_o[this.field_b[var10Lifetime4]] = var18.f((byte) -107);
+              this.field_o[this.field_b[var10Lifetime4]] = var18.readInt((byte) -107);
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_s; var10Lifetime5++) {
@@ -236,7 +236,7 @@ final class km {
                   } else {
                     var14Lifetime1 = this.field_r[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_n[var11Lifetime1][var14Lifetime1] = var18.f((byte) -107);
+                  this.field_n[var11Lifetime1][var14Lifetime1] = var18.readInt((byte) -107);
                 }
                 this.field_f[var11Lifetime1] = new bc(this.field_n[var11Lifetime1]);
               }
@@ -259,7 +259,7 @@ final class km {
         }
     }
 
-    km(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
           this.field_i = j.a(0, param0.length, param0);

@@ -81,12 +81,12 @@ final class ki extends vj {
             pc.field_d = il.a("menu_text", "benefits", sj.field_f, -1);
             IntrusiveNode.field_f = il.a("button_frame", "benefits", sj.field_f, -1);
             ig.field_a = il.a("arrow", "benefits", sj.field_f, -1);
-            fa.field_i = (pk) ((Object) qg.a((byte) 94, dm.field_d, "benefits", sj.field_f, "large_font"));
-            ja.field_m = (pk) ((Object) qg.a((byte) 94, dm.field_d, "benefits", sj.field_f, "small_font"));
-            var27 = l.field_i;
-            var2 = l.field_k;
-            var3 = l.field_j;
-            l.b(rb.field_a);
+            Archive.field_i = (BitmapFont) ((Object) qg.a((byte) 94, dm.field_d, "benefits", sj.field_f, "large_font"));
+            ja.field_m = (BitmapFont) ((Object) qg.a((byte) 94, dm.field_d, "benefits", sj.field_f, "small_font"));
+            var27 = SoftwareRasterizer.field_i;
+            var2 = SoftwareRasterizer.field_k;
+            var3 = SoftwareRasterizer.field_j;
+            SoftwareRasterizer.b(rb.field_a);
             var11 = new Sprite(4 + ig.field_a.field_r, 4 + ig.field_a.field_t);
             var11.a();
             ig.field_a.f(2, 2, me.field_k);
@@ -96,11 +96,11 @@ final class ki extends vj {
             var12 = new Sprite(195, 221);
             var6 = var12.field_r / 2;
             var12.a();
-            fa.field_i.c(ij.a(new String[]{df.field_L}, param0 - 28419, d.field_J), var6, 40, 16777215, -1);
+            Archive.field_i.c(ij.a(new String[]{df.field_L}, param0 - 28419, d.field_J), var6, 40, 16777215, -1);
             ja.field_m.c(ij.a(new String[]{df.field_L}, -1, ga.field_a), var6, 60, 16777215, -1);
-            fa.field_i.c(ij.a(new String[]{fi.field_o}, -1, uj.field_b), var6, 110, 16777215, -1);
+            Archive.field_i.c(ij.a(new String[]{fi.field_o}, -1, uj.field_b), var6, 110, 16777215, -1);
             ja.field_m.c(ij.a(new String[]{fi.field_o}, param0 - 28419, bd.field_j), var6, 130, 16777215, -1);
-            fa.field_i.c(sl.field_c, var6, 180, 16777215, -1);
+            Archive.field_i.c(sl.field_c, var6, 180, 16777215, -1);
             ja.field_m.c(nj.field_k, var6, 200, 16777215, -1);
             wa.a(var12, 0, var12.field_t, param0 - 28307, 1, 0, 3, var12.field_r);
             hb.field_m.a();
@@ -113,27 +113,27 @@ final class ki extends vj {
             vi.field_j = null;
             kb.field_s = sb.field_p.d();
             kb.field_s.a();
-            hh.a(l.field_k, (byte) -2, 2 * l.field_j / 3, 0, 64, 0);
-            l.a(var27, var2, var3);
-            l.a(rb.field_a);
+            hh.a(SoftwareRasterizer.field_k, (byte) -2, 2 * SoftwareRasterizer.field_j / 3, 0, 64, 0);
+            SoftwareRasterizer.a(var27, var2, var3);
+            SoftwareRasterizer.a(rb.field_a);
             sl.field_d = (-IntrusiveNode.field_f.field_t + lm.field_e.field_t) / 2 + 390;
             sj.field_f = null;
-            gf.field_C = (-IntrusiveNode.field_f.field_t + lm.field_e.field_t) / 2 + 390;
+            GameShell.field_C = (-IntrusiveNode.field_f.field_t + lm.field_e.field_t) / 2 + 390;
             nj.field_j = (lm.field_e.field_r - IntrusiveNode.field_f.field_r) / 2 + 434;
             qk.field_i = 231 + (-IntrusiveNode.field_f.field_r + lm.field_e.field_r) / 2;
           }
-          if (fa.field_d == null) {
+          if (Archive.field_d == null) {
             return;
           }
           if (null != p.field_e &&
-            null != fa.field_i) {
-            var28 = l.field_i;
-            var2Lifetime1 = l.field_k;
-            var3Lifetime1 = l.field_j;
-            l.b(rb.field_a);
+            null != Archive.field_i) {
+            var28 = SoftwareRasterizer.field_i;
+            var2Lifetime1 = SoftwareRasterizer.field_k;
+            var3Lifetime1 = SoftwareRasterizer.field_j;
+            SoftwareRasterizer.b(rb.field_a);
             var14 = ij.a(new String[]{oe.field_b[ej.field_S]}, -1, bj.field_b);
-            var5 = fa.field_i.a(var14, nl.field_a);
-            var6Lifetime1 = fa.field_i.a(var14, nl.field_a, fa.field_i.field_s + fa.field_i.field_p);
+            var5 = Archive.field_i.a(var14, nl.field_a);
+            var6Lifetime1 = Archive.field_i.a(var14, nl.field_a, Archive.field_i.field_s + Archive.field_i.field_p);
             var7Lifetime1 = lm.field_b + (nl.field_a - var5) / 2;
             var8 = (fg.field_a - var6Lifetime1) / 2 + ee.field_h;
             var7Lifetime1 -= 3;
@@ -179,7 +179,7 @@ final class ki extends vj {
             p.field_e.f();
             var9 = new Sprite(p.field_e.field_q, p.field_e.field_u);
             var9.a();
-            fa.field_i.a(var14, lm.field_b, ee.field_h, nl.field_a, fg.field_a, 16777215, -1, 1, 1, fa.field_i.field_p + fa.field_i.field_s);
+            Archive.field_i.a(var14, lm.field_b, ee.field_h, nl.field_a, fg.field_a, 16777215, -1, 1, 1, Archive.field_i.field_p + Archive.field_i.field_s);
             wa.a(var9, 0, var9.field_u, -86, 1, 0, 3, var9.field_q);
             p.field_e.a();
             var9.b(0, 0);
@@ -188,55 +188,55 @@ final class ki extends vj {
             p.field_e.b(fi.field_q + (p.field_e.field_q >> 1), ad.field_h + (p.field_e.field_u >> 1), ha.field_p, 4096);
             p.field_e = null;
             GameApplet.field_b.c();
-            l.a(var28, var2Lifetime1, var3Lifetime1);
-            l.a(rb.field_a);
+            SoftwareRasterizer.a(var28, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.a(rb.field_a);
           }
           if (null != jh.field_p &&
             null != ja.field_m) {
-            var29 = l.field_i;
-            var2Lifetime2 = l.field_k;
-            var3Lifetime2 = l.field_j;
-            l.b(rb.field_a);
+            var29 = SoftwareRasterizer.field_i;
+            var2Lifetime2 = SoftwareRasterizer.field_k;
+            var3Lifetime2 = SoftwareRasterizer.field_j;
+            SoftwareRasterizer.b(rb.field_a);
             var16 = new Sprite(412, 43);
             var5_ref_String = ij.a(new String[]{jh.field_p}, param0 - 28419, ia.field_p);
             jh.field_p = null;
             var16.a();
             ja.field_m.a(var5_ref_String, 3, 3, -6 + var16.field_r, -6 + var16.field_t, 16777215, -1, 0, 1, ja.field_m.field_s + ja.field_m.field_p);
             wa.a(var16, 0, var16.field_t, -101, 1, 0, 3, var16.field_r);
-            fa.field_d.a();
-            var16.b(199 - fa.field_d.field_p, 83 - fa.field_d.field_v);
-            l.a(var29, var2Lifetime2, var3Lifetime2);
-            l.a(rb.field_a);
+            Archive.field_d.a();
+            var16.b(199 - Archive.field_d.field_p, 83 - Archive.field_d.field_v);
+            SoftwareRasterizer.a(var29, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.a(rb.field_a);
           }
           if (vi.field_h != null &&
             ja.field_m != null) {
-            var30 = l.field_i;
-            var2Lifetime3 = l.field_k;
-            var3Lifetime3 = l.field_j;
-            l.b(rb.field_a);
+            var30 = SoftwareRasterizer.field_i;
+            var2Lifetime3 = SoftwareRasterizer.field_k;
+            var3Lifetime3 = SoftwareRasterizer.field_j;
+            SoftwareRasterizer.b(rb.field_a);
             var4 = ja.field_m.a(sb.field_l, 640) + 6;
             var5Lifetime1 = 20 + (vi.field_h.field_q + var4);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = var6Lifetime2 - (-vi.field_h.field_q - 20);
-            fa.field_d.a();
-            ja.field_m.b(sb.field_l, var7Lifetime2 - fa.field_d.field_p, ja.field_m.field_p + 155 - (fa.field_d.field_v - ja.field_m.field_s), 16777215, -1);
-            wa.a(fa.field_d, -4 + var7Lifetime2 - fa.field_d.field_p, 50, 58, 1, 155 - fa.field_d.field_v, 3, var4);
-            var8Lifetime1 = -fa.field_d.field_v + (155 - (-ja.field_m.field_p + (-ja.field_m.field_s - 3 + vi.field_h.field_u)) / 2);
-            vi.field_h.b(var6Lifetime2 - fa.field_d.field_p, var8Lifetime1);
-            l.a(var30, var2Lifetime3, var3Lifetime3);
-            l.a(rb.field_a);
+            Archive.field_d.a();
+            ja.field_m.b(sb.field_l, var7Lifetime2 - Archive.field_d.field_p, ja.field_m.field_p + 155 - (Archive.field_d.field_v - ja.field_m.field_s), 16777215, -1);
+            wa.a(Archive.field_d, -4 + var7Lifetime2 - Archive.field_d.field_p, 50, 58, 1, 155 - Archive.field_d.field_v, 3, var4);
+            var8Lifetime1 = -Archive.field_d.field_v + (155 - (-ja.field_m.field_p + (-ja.field_m.field_s - 3 + vi.field_h.field_u)) / 2);
+            vi.field_h.b(var6Lifetime2 - Archive.field_d.field_p, var8Lifetime1);
+            SoftwareRasterizer.a(var30, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.a(rb.field_a);
             vi.field_h = null;
           }
-          l.b(rb.field_a);
-          l.a(16, 16, 608, 112, 15, PacketBuffer.field_h, da.field_b);
-          l.a(231, 144, 393, 232, 15, PacketBuffer.field_h, da.field_b);
+          SoftwareRasterizer.b(rb.field_a);
+          SoftwareRasterizer.a(16, 16, 608, 112, 15, PacketBuffer.field_h, da.field_b);
+          SoftwareRasterizer.a(231, 144, 393, 232, 15, PacketBuffer.field_h, da.field_b);
           if (dg.field_a != null) {
             dg.field_a.b(0, 0);
           }
           if (hb.field_m != null) {
             hb.field_m.b(0, 0);
           }
-          fa.field_d.b(0, 0);
+          Archive.field_d.b(0, 0);
           if (GameApplet.field_b != null) {
             GameApplet.field_b.b(0, 0);
           }
@@ -279,7 +279,7 @@ final class ki extends vj {
             if (1 == si.field_ob.field_h) {
               hh.a(lm.field_e.field_r - 4, (byte) 123, 7 * lm.field_e.field_t / 12, 436, 64, 392);
             }
-            stackIn_65_0 = gf.field_C;
+            stackIn_65_0 = GameShell.field_C;
             stackIn_65_1 = -80;
             stackIn_66_2 = (si.field_ob.field_h == 1);
             jd.$cfr$intArgs$a$c79a3df4369d(stackIn_65_0, stackIn_65_1, stackIn_66_2, nj.field_j);
@@ -434,7 +434,7 @@ final class ki extends vj {
             this.field_U.field_r >= var11 &&
             this.field_U.field_t >= var12) {
             il.a(1, this.field_U);
-            l.a();
+            SoftwareRasterizer.a();
           } else {
             this.field_U = new Sprite(var11, var12);
             il.a(1, this.field_U);

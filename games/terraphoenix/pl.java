@@ -102,7 +102,7 @@ final class pl extends WidgetContainer implements jf, n, rg {
     }
 
     public pl() {
-        super(0, 0, 496, 0, (cj) null);
+        super(0, 0, 496, 0, (WidgetActionListener) null);
         this.field_J = new ib("", (sc) null, 12);
         this.field_S = new ib("", (sc) null, 100);
         this.field_I = new ib("", (sc) null, 100);
@@ -127,17 +127,17 @@ final class pl extends WidgetContainer implements jf, n, rg {
         this.field_U.a(new mg(this.field_U, this.field_H), 5859);
         this.field_R.a(new le(this.field_R), 5859);
         this.field_O.field_A = false;
-        this.field_O.field_l = (cj) ((Object) new ic());
-        this.field_M.field_l = (cj) ((Object) new qh());
-        this.field_J.field_l = (cj) ((Object) new ng(10000536));
+        this.field_O.field_l = (WidgetActionListener) ((Object) new ic());
+        this.field_M.field_l = (WidgetActionListener) ((Object) new qh());
+        this.field_J.field_l = (WidgetActionListener) ((Object) new ng(10000536));
         ng dupTemp$0 = new ng(10000536);
-        this.field_I.field_l = (cj) ((Object) dupTemp$0);
-        this.field_S.field_l = (cj) ((Object) dupTemp$0);
-        this.field_R.field_l = (cj) ((Object) new ng(10000536));
-        this.field_W.field_l = (cj) ((Object) new kj());
+        this.field_I.field_l = (WidgetActionListener) ((Object) dupTemp$0);
+        this.field_S.field_l = (WidgetActionListener) ((Object) dupTemp$0);
+        this.field_R.field_l = (WidgetActionListener) ((Object) new ng(10000536));
+        this.field_W.field_l = (WidgetActionListener) ((Object) new kj());
         ah dupTemp$1 = new ah(10000536);
-        this.field_U.field_l = (cj) ((Object) dupTemp$1);
-        this.field_H.field_l = (cj) ((Object) dupTemp$1);
+        this.field_U.field_l = (WidgetActionListener) ((Object) dupTemp$1);
+        this.field_H.field_l = (WidgetActionListener) ((Object) dupTemp$1);
         String var2 = ij.a(new String[]{this.h(46), this.g((byte) 9)}, -1, h.field_d);
         int var3 = 20;
         var3 = var3 + this.a(g.field_nb, this.field_S, 170, 16777215, var3);

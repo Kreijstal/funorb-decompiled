@@ -31,13 +31,13 @@ final class ek {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.a(-16384);
+        var3 = param0.readUnsignedByte(-16384);
         this.field_a[0] = var3 >> 4;
         this.field_a[1] = var3 & 15;
         if (var3 != 0) {
           this.field_c[0] = param0.readUnsignedShort(-25578);
           this.field_c[1] = param0.readUnsignedShort(-25578);
-          var4 = param0.a(-16384);
+          var4 = param0.readUnsignedByte(-16384);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_a[var5]; var6++) {
               this.field_b[var5][0][var6] = param0.readUnsignedShort(-25578);

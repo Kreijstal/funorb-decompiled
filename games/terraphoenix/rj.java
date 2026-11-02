@@ -134,8 +134,8 @@ final class rj {
         var8 = Terraphoenix.field_V;
         try {
           var10 = LevelEditor.field_j;
-          var2 = var10.a(-16384);
-          var3 = var10.a(-16384);
+          var2 = var10.readUnsignedByte(-16384);
+          var3 = var10.readUnsignedByte(-16384);
           if (param0 < 72) {
             var9 = (int[]) null;
             rj.a(-113, (int[]) null);
@@ -154,7 +154,7 @@ final class rj {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.a(-16384) << (dg.a(3, var7) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(-16384) << (dg.a(3, var7) << 8));
             }
             var4.unlink((byte) 12);
             return;

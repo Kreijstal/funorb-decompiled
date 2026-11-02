@@ -63,7 +63,7 @@ final class wf extends IntrusiveNode {
           return;
         }
         ec.field_d = null;
-        km.field_c = null;
+        ArchiveIndex.field_c = null;
     }
 
     final static boolean a(int param0) {

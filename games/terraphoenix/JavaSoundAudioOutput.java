@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class JavaSoundAudioOutput extends nk {
+final class JavaSoundAudioOutput extends PcmPlayerService {
     private byte[] field_w;
     private javax.sound.sampled.SourceDataLine field_x;
     private int field_v;

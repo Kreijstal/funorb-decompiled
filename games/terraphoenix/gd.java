@@ -94,14 +94,14 @@ final class gd {
             var7 = param1[1].field_q;
             param1[0].b(param2, param0);
             param1[2].b(param2 + param4 - var6, param0);
-            l.b(vl.field_e);
-            l.i(param2 + var5_int, param0, param2 - (-param4 + var6), param0 + param1[1].field_u);
+            SoftwareRasterizer.b(vl.field_e);
+            SoftwareRasterizer.i(param2 + var5_int, param0, param2 - (-param4 + var6), param0 + param1[1].field_u);
             var8 = param2 + var5_int;
             var9 = -var6 + (param2 + param4);
             for (param2 = var8; var9 > param2; param2 = param2 + var7) {
               param1[1].b(param2, param0);
             }
-            l.a(vl.field_e);
+            SoftwareRasterizer.a(vl.field_e);
             return;
           }
           return;

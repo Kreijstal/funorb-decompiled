@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fd implements cj, w {
+class fd implements WidgetActionListener, w {
     int field_m;
     static String field_q;
-    pk field_j;
+    BitmapFont field_j;
     int field_l;
     static boolean field_o;
     static String field_p;
@@ -447,7 +447,7 @@ class fd implements cj, w {
         }
     }
 
-    fd(pk param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    fd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -719,7 +719,7 @@ class fd implements cj, w {
     protected fd() {
     }
 
-    fd(pk param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    fd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_b = param3;
           this.field_r = param11;

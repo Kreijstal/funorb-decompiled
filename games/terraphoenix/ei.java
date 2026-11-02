@@ -226,15 +226,15 @@ abstract class ei extends kh {
         int var15Lifetime1;
         int var13Lifetime2;
         var16 = Terraphoenix.field_V;
-        l.b(6 + param0, param1 + 35, this.field_p - 12, this.field_n - 40, 2105376, 0);
+        SoftwareRasterizer.b(6 + param0, param1 + 35, this.field_p - 12, this.field_n - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param1;
         while (var7 < var4) {
-          if (var8 >= l.field_d &&
-            var8 < l.field_c) {
+          if (var8 >= SoftwareRasterizer.field_d &&
+            var8 < SoftwareRasterizer.field_c) {
             regionExit1: {
               regionExit2: {
                 var9 = (var6 - var5) * var7 / var4 + var5;
@@ -259,7 +259,7 @@ abstract class ei extends kh {
                           if (var14 >= 420) {
                             var15 = (462 - var14) * var9 / 42;
                             var15 = var15 | (var15 << 8 | var15 << 16);
-                            l.field_i[l.field_k * var8 + param0 + var11] = var15;
+                            SoftwareRasterizer.field_i[SoftwareRasterizer.field_k * var8 + param0 + var11] = var15;
                           } else {
                             var12 = 1 + var11;
                           }
@@ -270,7 +270,7 @@ abstract class ei extends kh {
                       }
                       var13Lifetime2 = (-var12 + 462) * var9 / 42;
                       var13Lifetime2 = var13Lifetime2 | (var13Lifetime2 << 16 | var13Lifetime2 << 8);
-                      l.field_i[param0 + (var8 * l.field_k + var10)] = var13Lifetime2;
+                      SoftwareRasterizer.field_i[param0 + (var8 * SoftwareRasterizer.field_k + var10)] = var13Lifetime2;
                     }
                     var10++;
                   }
@@ -289,7 +289,7 @@ abstract class ei extends kh {
                   if (var14Lifetime1 >= 420) {
                     var15Lifetime1 = (462 - var14Lifetime1) * var9 / 42;
                     var15Lifetime1 = var15Lifetime1 | (var15Lifetime1 << 8 | var15Lifetime1 << 16);
-                    l.field_i[l.field_k * var8 + param0 + var11] = var15Lifetime1;
+                    SoftwareRasterizer.field_i[SoftwareRasterizer.field_k * var8 + param0 + var11] = var15Lifetime1;
                   } else {
                     var12 = 1 + var11;
                   }
@@ -300,7 +300,7 @@ abstract class ei extends kh {
               var11 = var12;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            l.d(param0 + var10, var8, -var10 + var11, var9);
+            SoftwareRasterizer.d(param0 + var10, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -317,8 +317,8 @@ abstract class ei extends kh {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          l.d(param0, var8Lifetime1, 6, var9Lifetime1);
-          l.d(this.field_p + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.d(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.d(this.field_p + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -333,8 +333,8 @@ abstract class ei extends kh {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          l.d(param0, var8Lifetime2, 6, var9Lifetime2);
-          l.d(-6 + (param0 + this.field_p), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.d(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.d(-6 + (param0 + this.field_p), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

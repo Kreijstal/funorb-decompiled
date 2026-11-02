@@ -10,10 +10,10 @@ final class jd extends vc {
     private long field_n;
     private long field_h;
 
-    final static void a(int param0, fa param1, fa param2) {
+    final static void a(int param0, Archive param1, Archive param2) {
         try {
           if (param0 < 106) {
-            jd.a(-74, (fa) null, (fa) null);
+            jd.a(-74, (Archive) null, (Archive) null);
           }
           sj.field_f = param1;
           dm.field_d = param2;
@@ -122,7 +122,7 @@ final class jd extends vc {
             while (true) {
               if (this.field_m < var8) {
                 if (param0 >= -29) {
-                  jd.a(69, (fa) null, (fa) null);
+                  jd.a(69, (Archive) null, (Archive) null);
                 }
                 return var6 / (long)this.field_m;
               }
@@ -151,7 +151,7 @@ final class jd extends vc {
             break;
           }
           if (param0 >= -29) {
-            jd.a(69, (fa) null, (fa) null);
+            jd.a(69, (Archive) null, (Archive) null);
             return var6Lifetime1 / (long)this.field_m;
           }
           break;

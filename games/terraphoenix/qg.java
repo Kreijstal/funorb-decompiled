@@ -25,8 +25,8 @@ final class qg {
         Object var7 = null;
         try {
           var9 = new PacketBuffer(param1);
-          var3 = var9.a(-16384);
-          var4 = var9.f((byte) -107);
+          var3 = var9.readUnsignedByte(-16384);
+          var4 = var9.readInt((byte) -107);
           if (0 <= var4 && (eg.field_h == 0 ||
             !(var4 > eg.field_h))) {
             if (~var3 == param0) {
@@ -37,7 +37,7 @@ final class qg {
               stackIn_21_0 = var5;
               return stackIn_21_0;
             }
-            var5_int = var9.f((byte) -107);
+            var5_int = var9.readInt((byte) -107);
             if (var5_int >= 0 && (eg.field_h == 0 ||
               !(eg.field_h < var5_int))) {
               var12 = new byte[var5_int];
@@ -127,7 +127,7 @@ final class qg {
         return new byte[param1];
     }
 
-    final static ud a(byte param0, fa param1, String param2, fa param3, String param4) {
+    final static ud a(byte param0, Archive param1, String param2, Archive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -230,37 +230,37 @@ final class qg {
           param1 = param1 + param0.field_p;
           param4 = param4 - (-15 + param0.field_u);
           param4 = param4 + param0.field_v;
-          var6_int = param1 + l.field_k * param4;
+          var6_int = param1 + SoftwareRasterizer.field_k * param4;
           var7 = 0;
           var8 = param1;
           var9 = param4;
           var10 = param0.field_t;
           var11 = param0.field_r;
-          var12 = -var11 + l.field_k;
-          if (param4 < l.field_d) {
-            var14 = l.field_d - param4;
+          var12 = -var11 + SoftwareRasterizer.field_k;
+          if (param4 < SoftwareRasterizer.field_d) {
+            var14 = SoftwareRasterizer.field_d - param4;
             var10 = var10 - var14;
             var7 = var7 + var14 * var11;
-            var6_int = var6_int + l.field_k * var14;
-            param4 = l.field_d;
+            var6_int = var6_int + SoftwareRasterizer.field_k * var14;
+            param4 = SoftwareRasterizer.field_d;
             var9 = var9 + var14;
           }
           var13 = 0;
-          if (param1 < l.field_b) {
-            var14Lifetime1 = -param1 + l.field_b;
+          if (param1 < SoftwareRasterizer.field_b) {
+            var14Lifetime1 = -param1 + SoftwareRasterizer.field_b;
             var6_int = var6_int + var14Lifetime1;
             var12 = var12 + var14Lifetime1;
-            param1 = l.field_b;
+            param1 = SoftwareRasterizer.field_b;
             var13 = var13 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
             var7 = var7 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
           }
-          if (param4 + var10 > l.field_c) {
-            var10 = var10 - (-l.field_c + (param4 + var10));
+          if (param4 + var10 > SoftwareRasterizer.field_c) {
+            var10 = var10 - (-SoftwareRasterizer.field_c + (param4 + var10));
           }
-          if (var11 + param1 > l.field_f) {
-            var14Lifetime2 = -l.field_f + var11 + param1;
+          if (var11 + param1 > SoftwareRasterizer.field_f) {
+            var14Lifetime2 = -SoftwareRasterizer.field_f + var11 + param1;
             var13 = var13 + var14Lifetime2;
             var12 = var12 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;

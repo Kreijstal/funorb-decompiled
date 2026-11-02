@@ -8,7 +8,7 @@ final class ah extends ng {
     static char[] field_E;
     static String field_C;
 
-    private ah(pk param0, int param1) {
+    private ah(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -27,15 +27,15 @@ final class ah extends ng {
         RuntimeException var5 = null;
         var10 = Terraphoenix.field_V;
         try {
-          l.d(param3, param4, 1 + param2, 10000536);
-          l.d(param3, param4 + param0, 1 + param2, 12105912);
+          SoftwareRasterizer.d(param3, param4, 1 + param2, 10000536);
+          SoftwareRasterizer.d(param3, param4 + param0, 1 + param2, 12105912);
           var5_int = 1;
-          if (var5_int + param4 < l.field_d) {
-            var5_int = -param4 + l.field_d;
+          if (var5_int + param4 < SoftwareRasterizer.field_d) {
+            var5_int = -param4 + SoftwareRasterizer.field_d;
           }
           var6 = param0;
-          if (var6 + param4 > l.field_c) {
-            var6 = l.field_c - param4;
+          if (var6 + param4 > SoftwareRasterizer.field_c) {
+            var6 = SoftwareRasterizer.field_c - param4;
           }
           if (param1 != 128) {
             return;
@@ -43,8 +43,8 @@ final class ah extends ng {
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 48 * var7 / param0 + 152;
             var9 = var8 | (var8 << 8 | var8 << 16);
-            l.field_i[param3 + (param4 + var7) * l.field_k] = var9;
-            l.field_i[param3 + (l.field_k * (param4 + var7) + param2)] = var9;
+            SoftwareRasterizer.field_i[param3 + (param4 + var7) * SoftwareRasterizer.field_k] = var9;
+            SoftwareRasterizer.field_i[param3 + (SoftwareRasterizer.field_k * (param4 + var7) + param2)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

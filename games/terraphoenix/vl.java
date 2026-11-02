@@ -97,7 +97,7 @@ final class vl {
         if (param0 != 3) {
           field_c = (Sprite) null;
         }
-        if (ua.field_d == qe.field_f) {
+        if (ua.field_d == IsaacCipher.field_f) {
           return oe.field_a;
         }
         if (!vc.field_a.a(-113)) {
@@ -145,29 +145,29 @@ final class vl {
         var13 = Terraphoenix.field_V;
         try {
           param1.field_yb = false;
-          l.c(0, 0, 640, 56 + this.field_f / 4);
+          SoftwareRasterizer.c(0, 0, 640, 56 + this.field_f / 4);
           vk.field_d.d(0, this.field_f / 4 + 0);
-          l.c(0, 56, 356 + this.field_f, 369);
+          SoftwareRasterizer.c(0, 56, 356 + this.field_f, 369);
           vk.field_d.d(0 + this.field_f, 0);
-          l.c(0, 369, 356 + this.field_f, 480);
-          l.f(0, 0, 640, 480, 0);
-          l.c(356 - this.field_f, 56, 640, 369);
+          SoftwareRasterizer.c(0, 369, 356 + this.field_f, 480);
+          SoftwareRasterizer.f(0, 0, 640, 480, 0);
+          SoftwareRasterizer.c(356 - this.field_f, 56, 640, 369);
           vk.field_d.d(0 - this.field_f, 0);
-          l.c(-this.field_f + 356, 369, 640, 480);
-          l.f(0, 0, 640, 480, 0);
-          l.c(0, -this.field_f + 369, 640, 480);
+          SoftwareRasterizer.c(-this.field_f + 356, 369, 640, 480);
+          SoftwareRasterizer.f(0, 0, 640, 480, 0);
+          SoftwareRasterizer.c(0, -this.field_f + 369, 640, 480);
           vk.field_d.d(0, -this.field_f + 0);
-          l.c();
+          SoftwareRasterizer.c();
           qh.field_b.b(624 - qh.field_b.field_r, -qh.field_b.field_t + 464 - this.field_f);
           if (param1.field_wb == null) {
             if (ef.field_j >= 624 - qh.field_b.field_r &&
               ef.field_j <= 624 &&
               -this.field_f + (464 - qh.field_b.field_t) <= MouseWheelInput.field_b &&
               464 - this.field_f >= MouseWheelInput.field_b) {
-              l.d(624 - qh.field_b.field_r, 464 - this.field_f - qh.field_b.field_t, qh.field_b.field_r, qh.field_b.field_t, 16777215, 128);
+              SoftwareRasterizer.d(624 - qh.field_b.field_r, 464 - this.field_f - qh.field_b.field_t, qh.field_b.field_r, qh.field_b.field_t, 16777215, 128);
             }
           } else {
-            l.d(-qh.field_b.field_r + 624, -this.field_f + 464 - qh.field_b.field_t, qh.field_b.field_r, qh.field_b.field_t, 0, 192);
+            SoftwareRasterizer.d(-qh.field_b.field_r + 624, -this.field_f + 464 - qh.field_b.field_t, qh.field_b.field_r, qh.field_b.field_t, 0, 192);
           }
           param1.field_I.field_a[0] = 100;
           var3_int = param1.field_Bb;
@@ -219,7 +219,7 @@ final class vl {
               if (var6 == 5) {
                 param1.field_Eb[0] = lb.field_c[5];
               }
-              l.e(5 + this.field_f, var4, qc.field_f[0].field_r, qc.field_f[0].field_t, 16777215);
+              SoftwareRasterizer.e(5 + this.field_f, var4, qc.field_f[0].field_r, qc.field_f[0].field_t, 16777215);
               if (var6 != this.field_d) {
                 this.field_d = var6;
                 qd.$cfr$intArgs$a$e9dea5688aa5(67, 28);
@@ -254,7 +254,7 @@ final class vl {
           if (param1.field_hb == 5) {
             og.field_f.c(lb.field_c[5], this.field_f + 189, 79, 65280, -1);
           }
-          l.c(this.field_f + 57, 84, 323 + this.field_f, 364);
+          SoftwareRasterizer.c(this.field_f + 57, 84, 323 + this.field_f, 364);
           var4 = 84 - param1.field_G;
           for (var6 = -1 + od.field_c.length; var6 >= 0; var6--) {
             boolean decompiledFrameRemainder0 = true;
@@ -346,7 +346,7 @@ final class vl {
                 } else {
                   BattleState.field_g.c(this.field_f + 57, var4, 128);
                 }
-                l.i(59 + this.field_f, 2 + var4, this.field_f + 321, var4 + 66);
+                SoftwareRasterizer.i(59 + this.field_f, 2 + var4, this.field_f + 321, var4 + 66);
                 if (var6 != 5 &&
                   11 != var6) {
                   cc.field_i[var6].a(192, 128, 164 + this.field_f, 50 + (var4 + 2), (byte) 21);
@@ -358,7 +358,7 @@ final class vl {
                   var8 = 4;
                   cc.field_i[var6].a(192, 128, var7 + (this.field_f + 164) - 64, 50 + (var4 + 2 + var8), (byte) 21);
                 }
-                l.c(this.field_f + 57, 84, this.field_f + 323, 364);
+                SoftwareRasterizer.c(this.field_f + 57, 84, this.field_f + 323, 364);
                 if (param1.field_I.field_a[var6] > 50) {
                   param1.field_I.field_a[var6] = 55;
                 }
@@ -424,7 +424,7 @@ final class vl {
                     MouseWheelInput.field_b < 2 + (var4 + 44)) {
                     param1.field_yb = true;
                     param1.field_gb = 1 + var6;
-                    l.e(this.field_f + 59, 2 + var4, 44, 44, 16777215);
+                    SoftwareRasterizer.e(this.field_f + 59, 2 + var4, 44, 44, 16777215);
                   }
                 }
                 var7 = 65280;
@@ -526,9 +526,9 @@ final class vl {
               } else {
                 BattleState.field_g.c(57 + this.field_f, var4, 128);
               }
-              l.i(this.field_f + 59, 2 + var4, this.field_f + 321, var4 + 66);
+              SoftwareRasterizer.i(this.field_f + 59, 2 + var4, this.field_f + 321, var4 + 66);
               kb.field_a[var6].a(0, 128, this.field_f + 190, 32 + (var4 + 2), (byte) 21);
-              l.c(this.field_f + 57, 84, 323 + this.field_f, 364);
+              SoftwareRasterizer.c(this.field_f + 57, 84, 323 + this.field_f, 364);
               if (param1.field_I.field_d[var6] > 50) {
                 param1.field_I.field_d[var6] = 55;
               }
@@ -568,7 +568,7 @@ final class vl {
                   MouseWheelInput.field_b < 44 + var4 + 2) {
                   param1.field_gb = -var6 - 1;
                   param1.field_yb = true;
-                  l.e(this.field_f + 59, 2 + var4, 44, 44, 16777215);
+                  SoftwareRasterizer.e(this.field_f + 59, 2 + var4, 44, 44, 16777215);
                 }
               }
               if (0 >= param1.field_I.field_d[var6]) {
@@ -585,7 +585,7 @@ final class vl {
               var4 += 92;
             }
           }
-          l.c();
+          SoftwareRasterizer.c();
           var4 = var4 + param1.field_G;
           var4 -= 84;
           if (oh.field_f != 1) {
@@ -645,7 +645,7 @@ final class vl {
               }
             }
           } else {
-            l.f(this.field_f + 333, 58, 19, 309, 0);
+            SoftwareRasterizer.f(this.field_f + 333, 58, 19, 309, 0);
           }
           var6 = 4;
           if (var3_int > 0) {
@@ -738,11 +738,11 @@ final class vl {
               og.field_f.c(Integer.toString(param1.field_nb[param1.field_qb].field_i.field_d), 602 - this.field_f, 335, 65280, -1);
               if (!(7 >= param1.field_nb[param1.field_qb].field_i.field_d) ||
                 !(param1.field_I.field_a[param1.field_nb[param1.field_qb].field_i.field_g] > 0)) {
-                l.f(618 - this.field_f, 325, 6, 11, 6052956);
+                SoftwareRasterizer.f(618 - this.field_f, 325, 6, 11, 6052956);
               }
             } else {
-              l.f(582 - this.field_f, 325, 6, 11, 6052956);
-              l.f(618 - this.field_f, 325, 6, 11, 6052956);
+              SoftwareRasterizer.f(582 - this.field_f, 325, 6, 11, 6052956);
+              SoftwareRasterizer.f(618 - this.field_f, 325, 6, 11, 6052956);
             }
             var9 = 171;
             var10 = 171;
@@ -752,41 +752,41 @@ final class vl {
             }
             param1.field_nb[param1.field_qb].d((byte) 37);
             og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_e), var9, 406 - this.field_f, 16777215, -1);
-            l.c(var9, 0, param1.field_nb[param1.field_qb].field_t * 3 + var9, 640);
+            SoftwareRasterizer.c(var9, 0, param1.field_nb[param1.field_qb].field_t * 3 + var9, 640);
             tg.field_e.f(var10, 416 - this.field_f, 16711680);
-            l.c();
+            SoftwareRasterizer.c();
             og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9 + 1, -this.field_f + 426, 0, -1);
             og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9 - 1, 416 + (-this.field_f + 10), 0, -1);
             og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (-this.field_f + 416 + 1), 0, -1);
             og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (-this.field_f + 416 - 1), 0, -1);
             og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (416 - this.field_f), 16711680, -1);
             var11 = 65793 * (int)(Math.sin(mm.field_f) * 120.0) + 7895160;
-            l.c(var9, 0, param1.field_nb[param1.field_qb].field_w * 3 + var9, 640);
+            SoftwareRasterizer.c(var9, 0, param1.field_nb[param1.field_qb].field_w * 3 + var9, 640);
             tg.field_e.f(var10, 432 - this.field_f, 255);
             if (param1.field_nb[param1.field_qb].field_w != param1.field_nb[param1.field_qb].field_s) {
-              l.d(var9, 432 - this.field_f, param1.field_nb[param1.field_qb].field_s * 3, 9, var11, 192);
-              l.d(3 * param1.field_nb[param1.field_qb].field_s + var9, 432 - this.field_f, 3 * (-param1.field_nb[param1.field_qb].field_s + param1.field_nb[param1.field_qb].field_w), 9, var11 & 16711680, 192);
-              l.c();
+              SoftwareRasterizer.d(var9, 432 - this.field_f, param1.field_nb[param1.field_qb].field_s * 3, 9, var11, 192);
+              SoftwareRasterizer.d(3 * param1.field_nb[param1.field_qb].field_s + var9, 432 - this.field_f, 3 * (-param1.field_nb[param1.field_qb].field_s + param1.field_nb[param1.field_qb].field_w), 9, var11 & 16711680, 192);
+              SoftwareRasterizer.c();
               og.field_f.b(param1.field_nb[param1.field_qb].field_s + og.field_b, var9 + 1, 10 + (432 - this.field_f), 0, -1);
               og.field_f.b(param1.field_nb[param1.field_qb].field_s + og.field_b, var9 - 1, -this.field_f + 442, 0, -1);
               og.field_f.b(param1.field_nb[param1.field_qb].field_s + og.field_b, var9, 442 - this.field_f + 1, 0, -1);
               og.field_f.b(param1.field_nb[param1.field_qb].field_s + og.field_b, var9, 432 - this.field_f + 9, 0, -1);
               og.field_f.b(param1.field_nb[param1.field_qb].field_s + og.field_b, var9, 10 + (-this.field_f + 432), var11, -1);
             } else {
-              l.c();
+              SoftwareRasterizer.c();
               og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9 + 1, 432 - this.field_f + 10, 0, -1);
               og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9 - 1, 10 - this.field_f + 432, 0, -1);
               og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 1 + (442 - this.field_f), 0, -1);
               og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 10 + (432 - (this.field_f + 1)), 0, -1);
               og.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 432 - (this.field_f - 10), 8421631, -1);
             }
-            l.c(var9, 0, param1.field_nb[param1.field_qb].field_u * 3 + var9, 640);
+            SoftwareRasterizer.c(var9, 0, param1.field_nb[param1.field_qb].field_u * 3 + var9, 640);
             tg.field_e.f(var10, 448 - this.field_f, 16776960);
             if (param1.field_nb[param1.field_qb].field_w != param1.field_nb[param1.field_qb].field_s) {
-              l.d(var9, 448 - this.field_f, param1.field_nb[param1.field_qb].field_v * 3, 9, var11, 192);
-              l.d(param1.field_nb[param1.field_qb].field_v * 3 + var9, -this.field_f + 448, (param1.field_nb[param1.field_qb].field_u - param1.field_nb[param1.field_qb].field_v) * 3, 9, 16711680 & var11, 192);
+              SoftwareRasterizer.d(var9, 448 - this.field_f, param1.field_nb[param1.field_qb].field_v * 3, 9, var11, 192);
+              SoftwareRasterizer.d(param1.field_nb[param1.field_qb].field_v * 3 + var9, -this.field_f + 448, (param1.field_nb[param1.field_qb].field_u - param1.field_nb[param1.field_qb].field_v) * 3, 9, 16711680 & var11, 192);
             }
-            l.c();
+            SoftwareRasterizer.c();
             og.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, 1 + var9, 448 - this.field_f + 10, 0, -1);
             og.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, -1 + var9, -this.field_f + 448 + 10, 0, -1);
             og.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, 458 - (this.field_f - 1), 0, -1);
@@ -796,16 +796,16 @@ final class vl {
             } else {
               og.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, 10 + (448 - this.field_f), var11, -1);
             }
-            l.c(var9, 0, 3 * param1.field_nb[param1.field_qb].field_B + var9, 640);
+            SoftwareRasterizer.c(var9, 0, 3 * param1.field_nb[param1.field_qb].field_B + var9, 640);
             tg.field_e.f(var10, 464 - this.field_f, 16777215);
-            l.c();
+            SoftwareRasterizer.c();
             og.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", 1 + var9, 10 + (-this.field_f + 464), 0, -1);
             og.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9 - 1, 10 + (464 - this.field_f), 0, -1);
             og.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9, 10 + (-this.field_f + 464 + 1), 0, -1);
             og.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9, -1 + (10 + (464 - this.field_f)), 0, -1);
             og.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", var9, 474 - this.field_f, 16777215, -1);
           }
-          l.c();
+          SoftwareRasterizer.c();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -14,7 +14,7 @@ final class ik {
         field_a = null;
     }
 
-    final static void a(fa param0, byte param1) {
+    final static void a(Archive param0, byte param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;

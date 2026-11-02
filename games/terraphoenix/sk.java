@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk implements cj {
+final class sk implements WidgetActionListener {
     private int field_e;
     private int field_i;
     private int field_j;
@@ -11,7 +11,7 @@ final class sk implements cj {
     static String field_a;
     private int field_c;
     static String field_d;
-    private pk field_g;
+    private BitmapFont field_g;
 
     public final void a(int param0, UiWidget param1, int param2, int param3, boolean param4) {
         int var10 = 0;
@@ -36,16 +36,16 @@ final class sk implements cj {
           var12 = (wi) (stackIn_4_0);
           if (var12 == null) {
           }
-          l.f(param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, this.field_c);
+          SoftwareRasterizer.f(param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, this.field_c);
           var7 = -(2 * var12.field_M) + param1.field_p;
           var8 = var12.field_M + param2 + param1.field_w;
           var9 = var12.field_K + (param0 + param1.field_u);
-          l.c(var8, var9, var8 + var7, var9, this.field_j);
+          SoftwareRasterizer.c(var8, var9, var8 + var7, var9, this.field_j);
           if (param3 != -24381) {
             sk.a(false);
           }
           for (var10 = -1 + var12.g(1); var10 >= 0; var10--) {
-            l.e(var8 + var12.b(var10, 0) * var7 / var12.a(0), var9, this.field_e, this.field_h);
+            SoftwareRasterizer.e(var8 + var12.b(var10, 0) * var7 / var12.a(0), var9, this.field_e, this.field_h);
           }
           if (null == this.field_g) {
             return;
@@ -75,7 +75,7 @@ final class sk implements cj {
         }
     }
 
-    sk(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    sk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_c = param4;
           this.field_f = param2;

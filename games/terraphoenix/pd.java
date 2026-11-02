@@ -23,14 +23,14 @@ final class pd {
     }
 
     final static pd a(int param0) {
-        if (og.field_a == qe.field_f) {
+        if (og.field_a == IsaacCipher.field_f) {
           throw new IllegalStateException();
         }
         if (param0 != -352) {
           return (pd) null;
         }
-        if (k.field_b == qe.field_f) {
-          qe.field_f = og.field_a;
+        if (k.field_b == IsaacCipher.field_f) {
+          IsaacCipher.field_f = og.field_a;
           return wl.field_Q;
         }
         return null;

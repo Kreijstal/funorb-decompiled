@@ -207,8 +207,8 @@ final class sd {
           var14 = Terraphoenix.field_V;
           try {
             var18 = new wf();
-            var18.field_p = param2.a(-16384);
-            var18.field_i = param2.f((byte) -107);
+            var18.field_p = param2.readUnsignedByte(-16384);
+            var18.field_i = param2.readInt((byte) -107);
             var18.field_o = new byte[var18.field_p][][];
             var18.field_k = new int[var18.field_p];
             var18.field_j = new mf[var18.field_p];
@@ -217,7 +217,7 @@ final class sd {
             var18.field_s = new mf[var18.field_p];
             for (var5 = 0; var18.field_p > var5; var5++) {
               try {
-                var6_int = param2.a(-16384);
+                var6_int = param2.readUnsignedByte(-16384);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
@@ -225,7 +225,7 @@ final class sd {
                     var6_int == 4) {
                     var20 = param2.readString(-1);
                     var21 = param2.readString(-1);
-                    var9 = param2.a(-16384);
+                    var9 = param2.readUnsignedByte(-16384);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
                       var10[var11_int] = param2.readString(-1);
@@ -235,7 +235,7 @@ final class sd {
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param2.f((byte) -107);
+                        var13 = param2.readInt((byte) -107);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param2.a(var13, 0, -37, var22[var12_int]);
@@ -257,7 +257,7 @@ final class sd {
                   var16 = param2.readString(-1);
                   var9 = 0;
                   if (1 == var6_int) {
-                    var9 = param2.f((byte) -107);
+                    var9 = param2.readInt((byte) -107);
                   }
                   var18.field_k[var5] = var6_int;
                   var18.field_m[var5] = var9;

@@ -7,7 +7,7 @@ final class ph extends di {
     private ej field_p;
     static String[] field_n;
     static int field_o;
-    static fa field_q;
+    static Archive field_q;
     static wg field_v;
     static String[] field_r;
     static String field_u;
@@ -134,7 +134,7 @@ final class ph extends di {
                   if (ob.field_h <= param0) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + l.field_k;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_k;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
@@ -188,7 +188,7 @@ final class ph extends di {
               if (ob.field_h <= param0) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + l.field_k;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_k;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }
@@ -277,7 +277,7 @@ final class ph extends di {
             stackIn_39_0 = var7;
             return stackIn_39_0;
           }
-          DelegatingCanvas.a(param0, 112, var7);
+          FullscreenFocusCanvas.a(param0, 112, var7);
           stackIn_37_0 = null;
           return (java.awt.Frame) (stackIn_37_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -339,7 +339,7 @@ final class ph extends di {
 
     final static void a(int param0, bm param1, int param2, int param3) {
         try {
-          DelegatingCanvas.field_a = param1;
+          FullscreenFocusCanvas.field_a = param1;
           nb.field_e = param0;
           if (param3 != -1) {
             field_t = (int[]) null;

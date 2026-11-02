@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj implements cj {
+final class kj implements WidgetActionListener {
     static String[] field_c;
     static im field_d;
     static vg field_b;

@@ -4,7 +4,7 @@
 final class aj {
     static String field_c;
     static Sprite[] field_a;
-    static fa field_b;
+    static Archive field_b;
 
     final static pd a(int param0, byte param1, String param2) {
         pd var3 = null;
@@ -39,7 +39,7 @@ final class aj {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         af.field_a = param4;
         fh.field_a = param3;
-        jm.field_b = param2;
+        DelegatingCanvas.field_b = param2;
         if (param1 != -19605) {
           field_a = (Sprite[]) null;
           lm.field_d = param0;
@@ -51,7 +51,7 @@ final class aj {
     public static void a(boolean param0) {
         field_c = null;
         if (param0) {
-          field_b = (fa) null;
+          field_b = (Archive) null;
           field_b = null;
           field_a = null;
           return;

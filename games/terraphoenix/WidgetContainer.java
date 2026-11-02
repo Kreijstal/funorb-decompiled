@@ -133,7 +133,7 @@ class WidgetContainer extends UiWidget implements sf {
             field_A = (String) null;
           }
           var3.writeByte(0, param0 + 70);
-          var3.h(param0 ^ -1564407353, param1.field_s);
+          var3.writeShort(param0 ^ -1564407353, param1.field_s);
           var3.writeByte(param1.field_n, -103);
           var3.writeByte(param1.field_j, -102);
         } catch (RuntimeException runtimeException) {
@@ -520,7 +520,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    WidgetContainer(int param0, int param1, int param2, int param3, cj param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, WidgetActionListener param4) {
         super(param0, param1, param2, param3, param4, (sc) null);
         this.field_C = new IntrusiveDeque();
     }

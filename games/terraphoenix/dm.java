@@ -6,7 +6,7 @@ final class dm {
     static Sprite[] field_a;
     static int field_g;
     static long field_f;
-    static fa field_d;
+    static Archive field_d;
     static long field_c;
     static String field_e;
 

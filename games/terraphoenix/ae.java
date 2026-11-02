@@ -163,7 +163,7 @@ final class ae extends WidgetContainer implements rg, n {
     }
 
     public ae() {
-        super(0, 0, 496, 0, (cj) null);
+        super(0, 0, 496, 0, (WidgetActionListener) null);
         this.field_J = new ib("", (sc) null, 12);
         fd var1 = new fd(ra.field_l, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(wj.field_f, var1, (sc) null);
@@ -172,9 +172,9 @@ final class ae extends WidgetContainer implements rg, n {
         this.field_J.field_x = p.field_g;
         this.field_J.a(new ia(this.field_J), 5859);
         this.field_K.field_A = false;
-        this.field_K.field_l = (cj) ((Object) new ic());
-        this.field_O.field_l = (cj) ((Object) new qh());
-        this.field_J.field_l = (cj) ((Object) new ng(10000536));
+        this.field_K.field_l = (WidgetActionListener) ((Object) new ic());
+        this.field_O.field_l = (WidgetActionListener) ((Object) new qh());
+        this.field_J.field_l = (WidgetActionListener) ((Object) new ng(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;

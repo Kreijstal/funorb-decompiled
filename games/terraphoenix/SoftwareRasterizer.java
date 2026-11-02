@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class l {
+final class SoftwareRasterizer {
     static int field_j;
     static int[] field_l;
     static int field_c;
@@ -38,17 +38,17 @@ final class l {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            l.g(param0 + param2, param1, -param2 + 1, param4, param5);
+            SoftwareRasterizer.g(param0 + param2, param1, -param2 + 1, param4, param5);
           } else {
-            l.g(param0, param1, param2 + 1, param4, param5);
+            SoftwareRasterizer.g(param0, param1, param2 + 1, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            l.a(param0, param1 + param3, -param3 + 1, param4, param5);
+            SoftwareRasterizer.a(param0, param1 + param3, -param3 + 1, param4, param5);
           } else {
-            l.a(param0, param1, param3 + 1, param4, param5);
+            SoftwareRasterizer.a(param0, param1, param3 + 1, param4, param5);
           }
           return;
         }
@@ -137,7 +137,7 @@ final class l {
         field_d = param1;
         field_f = param2;
         field_c = param3;
-        l.d();
+        SoftwareRasterizer.d();
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -440,7 +440,7 @@ final class l {
         field_d = param0[1];
         field_f = param0[2];
         field_c = param0[3];
-        l.d();
+        SoftwareRasterizer.d();
     }
 
     final static void f(int param0, int param1, int param2, int param3, int param4) {
@@ -478,7 +478,7 @@ final class l {
         field_d = 0;
         field_f = field_k;
         field_c = field_j;
-        l.d();
+        SoftwareRasterizer.d();
     }
 
     final static void d(int param0, int param1, int param2, int param3) {
@@ -547,8 +547,8 @@ final class l {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          l.g(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          l.a(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRasterizer.g(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRasterizer.a(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
@@ -563,7 +563,7 @@ final class l {
         int var9;
         int var10;
         if (param2 == 0) {
-          l.a(param0, param1, param3);
+          SoftwareRasterizer.a(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -954,8 +954,8 @@ final class l {
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
-        l.a(field_i, 0, param2 + param3 * field_k, param0, param2, param4, field_k - param4, param5);
-        l.a(field_i, 0, param2 + param3 * field_k, param1, param3, param5, field_k - param4, param2, param4);
+        SoftwareRasterizer.a(field_i, 0, param2 + param3 * field_k, param0, param2, param4, field_k - param4, param5);
+        SoftwareRasterizer.a(field_i, 0, param2 + param3 * field_k, param1, param3, param5, field_k - param4, param2, param4);
     }
 
     public static void b() {
@@ -980,7 +980,7 @@ final class l {
         if (field_c > param3) {
           field_c = param3;
         }
-        l.d();
+        SoftwareRasterizer.d();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4) {
@@ -1021,7 +1021,7 @@ final class l {
         int var21 = var20 - var19;
         int var22 = var6 + var8 * field_k;
         int var23 = field_k + var6 - var7;
-        l.a(0, 0, 0, 0, 0, var15, var5, var22, field_i, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        SoftwareRasterizer.a(0, 0, 0, 0, 0, var15, var5, var22, field_i, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1066,14 +1066,14 @@ final class l {
         field_i = param0;
         field_k = param1;
         field_j = param2;
-        l.c(0, 0, param1, param2);
+        SoftwareRasterizer.c(0, 0, param1, param2);
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4) {
-        l.d(param0, param1, param2, param4);
-        l.d(param0, param1 + param3 - 1, param2, param4);
-        l.g(param0, param1, param3, param4);
-        l.g(param0 + param2 - 1, param1, param3, param4);
+        SoftwareRasterizer.d(param0, param1, param2, param4);
+        SoftwareRasterizer.d(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRasterizer.g(param0, param1, param3, param4);
+        SoftwareRasterizer.g(param0 + param2 - 1, param1, param3, param4);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -1119,11 +1119,11 @@ final class l {
         int var23Lifetime1;
         int var23Lifetime2;
         if (param6 == 256) {
-          l.f(param0, param1, param2, param3, param4, param5);
+          SoftwareRasterizer.f(param0, param1, param2, param3, param4, param5);
           return;
         }
         if (param4 == 0) {
-          l.d(param0, param1, param2, param3, param5, param6);
+          SoftwareRasterizer.d(param0, param1, param2, param3, param5, param6);
           return;
         }
         var7 = 256 - param6;
@@ -1294,7 +1294,7 @@ final class l {
           return;
         }
         if (param4 == 256) {
-          l.e(param0, param1, param2, param3);
+          SoftwareRasterizer.e(param0, param1, param2, param3);
           return;
         }
         if (param2 < 0) {
@@ -1552,17 +1552,17 @@ final class l {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            l.d(param0 + param2, param1, -param2 + 1, param4);
+            SoftwareRasterizer.d(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            l.d(param0, param1, param2 + 1, param4);
+            SoftwareRasterizer.d(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            l.g(param0, param1 + param3, -param3 + 1, param4);
+            SoftwareRasterizer.g(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            l.g(param0, param1, param3 + 1, param4);
+            SoftwareRasterizer.g(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -1709,7 +1709,7 @@ final class l {
         int var20Lifetime1;
         int var20Lifetime2;
         if (param4 == 0) {
-          l.f(param0, param1, param2, param3, param5);
+          SoftwareRasterizer.f(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -1830,11 +1830,11 @@ final class l {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        l.g(param0, param1, param2, param4, param5);
-        l.g(param0, param1 + param3 - 1, param2, param4, param5);
+        SoftwareRasterizer.g(param0, param1, param2, param4, param5);
+        SoftwareRasterizer.g(param0, param1 + param3 - 1, param2, param4, param5);
         if (param3 >= 3) {
-          l.a(param0, param1 + 1, param3 - 2, param4, param5);
-          l.a(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+          SoftwareRasterizer.a(param0, param1 + 1, param3 - 2, param4, param5);
+          SoftwareRasterizer.a(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
           return;
         }
     }
@@ -1867,7 +1867,7 @@ final class l {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          l.a(param0, param1, param3);
+          SoftwareRasterizer.a(param0, param1, param3);
           return;
         }
         if (param2 < 0) {

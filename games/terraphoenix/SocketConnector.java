@@ -11,7 +11,7 @@ abstract class SocketConnector {
 
     abstract java.net.Socket b(boolean param0) throws IOException;
 
-    final static Sprite[] a(fa param0, int param1, int param2, boolean param3) {
+    final static Sprite[] a(Archive param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

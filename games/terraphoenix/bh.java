@@ -33,7 +33,7 @@ final class bh implements Runnable {
         if (param0 >= -22) {
           return;
         }
-        LevelEditor.field_j.a(-16384);
+        LevelEditor.field_j.readUnsignedByte(-16384);
     }
 
     protected final void finalize() {

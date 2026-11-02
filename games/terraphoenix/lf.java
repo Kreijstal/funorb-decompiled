@@ -11,7 +11,7 @@ final class lf {
     static String field_d;
     static int field_c;
 
-    final static bg[] a(boolean param0, String param1, String param2, fa param3) {
+    final static bg[] a(boolean param0, String param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

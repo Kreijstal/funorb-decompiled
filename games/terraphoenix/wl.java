@@ -271,7 +271,7 @@ final class wl extends PcmStream {
         }
     }
 
-    final static ud a(fa param0, int param1, fa param2, int param3, int param4) {
+    final static ud a(Archive param0, int param1, Archive param2, int param3, int param4) {
         RuntimeException var5 = null;
         String var6 = null;
         ud stackIn_6_0 = null;
@@ -436,7 +436,7 @@ final class wl extends PcmStream {
         var8 = Terraphoenix.field_V;
         try {
           if (this.field_G.e()) {
-            var4_int = this.field_l * this.field_G.field_e / nk.field_u;
+            var4_int = this.field_l * this.field_G.field_e / PcmPlayerService.field_u;
             while (true) {
               var5 = this.field_x + (long)param2 * (long)var4_int;
               if (-var5 + this.field_r < 0L) {
@@ -486,7 +486,7 @@ final class wl extends PcmStream {
           if (param1 < 0 ||
             param1 == var3.field_v) {
             if (null != var3.field_k) {
-              var3.field_k.c(nk.field_u / 100);
+              var3.field_k.c(PcmPlayerService.field_u / 100);
               if (var3.field_k.k()) {
                 this.field_t.field_m.a(var3.field_k);
               }
@@ -562,9 +562,9 @@ final class wl extends PcmStream {
         var8.field_G = 0;
         var8.field_h = -1;
         if (this.field_S[param2] == 0) {
-          var8.field_k = lh.a(var7, this.a((byte) 92, var8), this.a(var8, (byte) -49), this.a(true, var8));
+          var8.field_k = PcmSampleStream.a(var7, this.a((byte) 92, var8), this.a(var8, (byte) -49), this.a(true, var8));
         } else {
-          var8.field_k = lh.a(var7, this.a((byte) 78, var8), 0, this.a(true, var8));
+          var8.field_k = PcmSampleStream.a(var7, this.a((byte) 78, var8), 0, this.a(true, var8));
           stackIn_17_1 = !(var11.field_p[param1] >= 0);
           this.a(stackIn_17_1, var8, 120);
         }
@@ -609,7 +609,7 @@ final class wl extends PcmStream {
         boolean decompiledFrameRemainder0 = true;
         var6 = Terraphoenix.field_V;
         if (this.field_G.e()) {
-          var2 = this.field_G.field_e * this.field_l / nk.field_u;
+          var2 = this.field_G.field_e * this.field_l / PcmPlayerService.field_u;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_x;
             if (0L <= this.field_r - var3) {
@@ -788,7 +788,7 @@ final class wl extends PcmStream {
         int var11 = 0;
         var11 = Terraphoenix.field_V;
         try {
-          param3.field_y = nk.field_u / 100;
+          param3.field_y = PcmPlayerService.field_u / 100;
           if (0 <= param3.field_h && (null == param3.field_k ||
             param3.field_k.i())) {
             param3.c((byte) -120);
@@ -1335,7 +1335,7 @@ final class wl extends PcmStream {
             var7 = Math.sin(0.01227184630308513 * (double)(param1.field_r & 511));
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(256 * param1.field_F.field_l) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)nk.field_u);
+          var5Lifetime1 = (int)(0.5 + (double)(256 * param1.field_F.field_l) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)PcmPlayerService.field_u);
           stackIn_13_0 = (1 > var5Lifetime1) ? 1 : var5Lifetime1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1352,7 +1352,7 @@ final class wl extends PcmStream {
         }
     }
 
-    final synchronized boolean a(fa param0, da param1, tk param2, int param3, int param4) {
+    final synchronized boolean a(Archive param0, da param1, tk param2, int param3, int param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;

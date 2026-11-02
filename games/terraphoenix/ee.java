@@ -25,7 +25,7 @@ final class ee {
     int[] field_Q;
     short[] field_D;
     short[] field_j;
-    static fa field_G;
+    static Archive field_G;
     short[] field_y;
     short[] field_g;
     int[] field_w;
@@ -191,7 +191,7 @@ final class ee {
         }
     }
 
-    final static void a(byte param0, fa param1) {
+    final static void a(byte param0, Archive param1) {
         RuntimeException runtimeException = null;
         tl var2 = null;
         RuntimeException stackIn_7_0 = null;
@@ -260,13 +260,13 @@ final class ee {
         var8 = Terraphoenix.field_V;
         try {
           var1 = LevelEditor.field_j;
-          var2 = var1.a(-16384);
+          var2 = var1.readUnsignedByte(-16384);
           if (0 == var2) {
             if (null == ai.field_f) {
               ai.field_f = new vb(128);
               cb.field_I = 0;
             }
-            stackIn_12_0 = (var1.a(-16384) != 1) ? 0 : 1;
+            stackIn_12_0 = (var1.readUnsignedByte(-16384) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
             var4_ref_String = var1.readString(-1);
             if (var3_int != 0) {
@@ -319,7 +319,7 @@ final class ee {
             jg.field_gb = 1;
             var3 = var1.readString(-1);
             ml.field_t = ((String) (var3)).intern();
-            var4 = var1.a(-16384);
+            var4 = var1.readUnsignedByte(-16384);
             ve.a(2, var4);
             return;
           }

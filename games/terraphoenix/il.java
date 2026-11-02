@@ -17,7 +17,7 @@ final class il {
             Sprite var3 = (Sprite) null;
             il.a(74, (Sprite) null);
           }
-          l.a(param1.field_z, param1.field_q, param1.field_u);
+          SoftwareRasterizer.a(param1.field_z, param1.field_q, param1.field_u);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "il.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -48,7 +48,7 @@ final class il {
         int var1 = 117 / ((50 - param0) / 52);
     }
 
-    final static Sprite a(String param0, String param1, fa param2, int param3) {
+    final static Sprite a(String param0, String param1, Archive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -192,7 +192,7 @@ final class il {
 
     final static byte[] a(byte param0, String param1) {
         RuntimeException var2 = null;
-        fa var3 = null;
+        Archive var3 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -200,8 +200,8 @@ final class il {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 70) {
-            var3 = (fa) null;
-            il.a((String) null, (String) null, (fa) null, -14);
+            var3 = (Archive) null;
+            il.a((String) null, (String) null, (Archive) null, -14);
           }
           stackIn_3_0 = nj.field_i.a("", param1, -21653);
           return stackIn_3_0;

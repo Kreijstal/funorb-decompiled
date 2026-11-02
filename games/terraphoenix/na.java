@@ -78,7 +78,7 @@ final class na extends ei {
         super.a(param0, param1, param2);
         be.field_x.c(this.field_eb, param0 + (this.field_p >> 1), param1 + 103, 16777215, -1);
         if (null != this.field_bb) {
-          l.d(20 + param0, -7 + (120 + param1), 260, 8421504);
+          SoftwareRasterizer.d(20 + param0, -7 + (120 + param1), 260, 8421504);
           be.field_x.a(this.field_bb, 20 + param0, param1 + 128, 260, 100, 16777215, -1, 1, 0, be.field_x.field_s);
         }
     }

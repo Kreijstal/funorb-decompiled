@@ -11,7 +11,7 @@ final class am extends WidgetContainer implements n {
     private String[] field_I;
 
     am(rg param0) {
-        super(0, 0, 0, 0, (cj) null);
+        super(0, 0, 0, 0, (WidgetActionListener) null);
         try {
           this.field_G = param0;
         } catch (RuntimeException runtimeException) {
@@ -26,7 +26,7 @@ final class am extends WidgetContainer implements n {
         field_K = null;
     }
 
-    final static void a(fa param0, boolean param1, fa param2, fa param3, byte param4) {
+    final static void a(Archive param0, boolean param1, Archive param2, Archive param3, byte param4) {
         try {
           vc.field_a = UiWidget.b("", 20);
           vc.field_a.a(false, param4 + 87);
@@ -36,7 +36,7 @@ final class am extends WidgetContainer implements n {
           }
           gi.a(param3, param2, param0, param4 - 2018);
           nd.c((byte) -11);
-          qe.field_f = og.field_a;
+          IsaacCipher.field_f = og.field_a;
           pe.field_a = og.field_a;
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "am.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -170,13 +170,13 @@ final class am extends WidgetContainer implements n {
             this.field_L = new eb[var3_int + 1];
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_L[var5] = new eb(this.field_I[var5], (sc) (this));
-              this.field_L[var5].field_l = (cj) ((Object) var4);
+              this.field_L[var5].field_l = (WidgetActionListener) ((Object) var4);
               this.field_L[var5].field_x = g.field_ab;
               this.field_L[var5].a(16 * var5 + 20, (byte) 117, 80, 0, 15);
               this.b((byte) 95, this.field_L[var5]);
             }
             this.field_L[var3_int] = new eb(re.field_d, (sc) (this));
-            this.field_L[var3_int].field_l = (cj) ((Object) var4);
+            this.field_L[var3_int].field_l = (WidgetActionListener) ((Object) var4);
             this.field_L[var3_int].a(var3_int * 16 + 16 + 20, (byte) 127, 100, 0, 15);
             this.b((byte) 95, this.field_L[var3_int]);
             return;
@@ -244,7 +244,7 @@ final class am extends WidgetContainer implements n {
         if (param2 != 0) {
           return;
         }
-        pk var5 = qk.field_e;
+        BitmapFont var5 = qk.field_e;
         if (null != this.field_I) {
           var5.a(tb.field_l, this.field_w + param0, this.field_u + param3, this.field_p, 20, 16777215, -1, 0, 0, var5.field_p + var5.field_s);
         }
@@ -255,7 +255,7 @@ final class am extends WidgetContainer implements n {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        fa var5 = null;
+        Archive var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -263,8 +263,8 @@ final class am extends WidgetContainer implements n {
         var4 = Terraphoenix.field_V;
         try {
           if (!param1) {
-            var5 = (fa) null;
-            am.a((fa) null, false, (fa) null, (fa) null, (byte) 59);
+            var5 = (Archive) null;
+            am.a((Archive) null, false, (Archive) null, (Archive) null, (byte) 59);
           }
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);

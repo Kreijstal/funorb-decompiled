@@ -5,13 +5,13 @@ final class bl {
     static Sprite[] field_b;
     static boolean field_e;
     static int field_f;
-    static fa field_a;
+    static Archive field_a;
     static String field_c;
     static String field_g;
     static long field_h;
     static String field_d;
 
-    final static void a(byte param0, fa param1) {
+    final static void a(byte param0, Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2491_0;
             StringBuilder stackIn_2491_1;
@@ -22,9 +22,9 @@ final class bl {
             RuntimeException var2_ref;
             int var3;
             byte param0;
-            fa param1;
+            Archive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, fa initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2491_0 = null;
@@ -344,7 +344,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 98, "launching");
                 if (null != var2) {
-                  jm.field_a = ll.a(0, var2);
+                  DelegatingCanvas.field_a = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 82, "hasdied");
                 if (var2 != null) {
@@ -424,7 +424,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 98, "selectready");
                 if (var2 != null) {
-                  fa.field_e = ll.a(0, var2);
+                  Archive.field_e = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 119, "selectsprint");
                 if (null != var2) {
@@ -1458,7 +1458,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 78, "_1000pts");
                 if (null != var2) {
-                  jm.field_e = ll.a(0, var2);
+                  DelegatingCanvas.field_e = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 102, "_2500pts");
                 if (null != var2) {
@@ -1502,11 +1502,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 89, "Grunt_with_shielded_armour");
                 if (var2 != null) {
-                  qe.field_g = ll.a(0, var2);
+                  IsaacCipher.field_g = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 104, "Squiddy_with_shielded_armour");
                 if (null != var2) {
-                  fa.field_c = ll.a(0, var2);
+                  Archive.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 92, "Squiddy_Commander");
                 if (var2 != null) {
@@ -1530,7 +1530,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 80, "Kenetic_projection_armour");
                 if (var2 != null) {
-                  qe.field_j = ll.a(param0 - 96, var2);
+                  IsaacCipher.field_j = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 71, "Alien_scale_mail");
                 if (var2 != null) {
@@ -2923,7 +2923,7 @@ final class bl {
           field_b = null;
           field_a = null;
           if (param0) {
-            field_a = (fa) null;
+            field_a = (Archive) null;
           }
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ')');

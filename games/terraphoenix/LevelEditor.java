@@ -8,7 +8,7 @@ final class LevelEditor {
     int field_a;
     int field_b;
     int field_g;
-    private LevelMap field_i;
+    private LevelMap map;
     private int field_n;
     static String field_h;
     int field_e;
@@ -96,14 +96,14 @@ final class LevelEditor {
           boolean decompiledFrameRemainder4 = true;
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
-          if ((null != this.field_i) &&
+          if ((null != this.map) &&
             (decompiledFrameRemainder5 = (IntrusiveNode.field_c != -1))) {
-            var3 = this.field_i.tiles[IntrusiveNode.field_c][vf.field_a];
+            var3 = this.map.tiles[IntrusiveNode.field_c][vf.field_a];
             if (this.field_a != 0) {
               if (var3 == null) {
-                this.field_i.tiles[IntrusiveNode.field_c][vf.field_a] = new MapTile(IntrusiveNode.field_c, vf.field_a, 0, this.field_i);
+                this.map.tiles[IntrusiveNode.field_c][vf.field_a] = new MapTile(IntrusiveNode.field_c, vf.field_a, 0, this.map);
               }
-              var3 = this.field_i.tiles[IntrusiveNode.field_c][vf.field_a];
+              var3 = this.map.tiles[IntrusiveNode.field_c][vf.field_a];
             }
             if (tg.field_l > 0 &&
               var3 != null) {
@@ -127,7 +127,7 @@ final class LevelEditor {
                 if (var3.field_r >= tg.field_l) {
                   break;
                 }
-                var3.field_C = new MapTile(IntrusiveNode.field_c, vf.field_a, 1 + var3.field_r, this.field_i);
+                var3.field_C = new MapTile(IntrusiveNode.field_c, vf.field_a, 1 + var3.field_r, this.map);
                 var3.field_C.field_c = var3;
                 var3 = var3.field_C;
                 if (var5 != 0) {
@@ -157,7 +157,7 @@ final class LevelEditor {
                 boolean decompiledFrameRemainder0 = true;
                 if (this.field_g == 1) {
                   if (var3 == null) {
-                    this.field_i.tiles[IntrusiveNode.field_c][vf.field_a] = new MapTile(IntrusiveNode.field_c, vf.field_a, 0, this.field_i);
+                    this.map.tiles[IntrusiveNode.field_c][vf.field_a] = new MapTile(IntrusiveNode.field_c, vf.field_a, 0, this.map);
                     decompiledFrameRemainder0 = (var5 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -168,7 +168,7 @@ final class LevelEditor {
                           continue;
                         }
                       } else {
-                        var3.field_C = new MapTile(IntrusiveNode.field_c, vf.field_a, 1 + var3.field_r, this.field_i);
+                        var3.field_C = new MapTile(IntrusiveNode.field_c, vf.field_a, 1 + var3.field_r, this.map);
                       }
                       break;
                     }
@@ -192,7 +192,7 @@ final class LevelEditor {
                           break;
                         }
                       }
-                      this.field_i.tiles[IntrusiveNode.field_c][vf.field_a] = null;
+                      this.map.tiles[IntrusiveNode.field_c][vf.field_a] = null;
                     }
                     break;
                   }
@@ -267,8 +267,8 @@ final class LevelEditor {
         Object var2 = null;
         byte[] var2_array = ImageProducerRasterBuffer.field_k[this.field_c];
         if (var2_array == null) {
-          this.field_i = new LevelMap(16, 16);
-          this.field_i.field_l = this;
+          this.map = new LevelMap(16, 16);
+          this.map.editor = this;
           return;
         }
         this.a(false, var2_array);
@@ -281,15 +281,15 @@ final class LevelEditor {
         MapTile var2 = null;
         int var3 = 0;
         var3 = Terraphoenix.field_V;
-        var2 = this.field_i.tiles[IntrusiveNode.field_c][vf.field_a];
+        var2 = this.map.tiles[IntrusiveNode.field_c][vf.field_a];
         if (param0 <= 121) {
           LevelEditor.d((byte) 89);
         }
         if (0 != this.field_a) {
           if (var2 == null) {
-            this.field_i.tiles[IntrusiveNode.field_c][vf.field_a] = new MapTile(IntrusiveNode.field_c, vf.field_a, 0, this.field_i);
+            this.map.tiles[IntrusiveNode.field_c][vf.field_a] = new MapTile(IntrusiveNode.field_c, vf.field_a, 0, this.map);
           }
-          var2 = this.field_i.tiles[IntrusiveNode.field_c][vf.field_a];
+          var2 = this.map.tiles[IntrusiveNode.field_c][vf.field_a];
         }
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameCompleted0 = true;
@@ -315,7 +315,7 @@ final class LevelEditor {
             if (tg.field_l <= var2.field_r) {
               break;
             }
-            var2.field_C = new MapTile(IntrusiveNode.field_c, vf.field_a, 1 + var2.field_r, this.field_i);
+            var2.field_C = new MapTile(IntrusiveNode.field_c, vf.field_a, 1 + var2.field_r, this.map);
             var2.field_C.field_c = var2;
             var2 = var2.field_C;
             if (var3 != 0) {
@@ -356,13 +356,13 @@ final class LevelEditor {
     }
 
     final void c(int param0) {
-        if (null == this.field_i) {
+        if (null == this.map) {
           return;
         }
         fg.field_c = "MAP SAVING";
         j.field_R = 256;
         String var2 = ph.field_n[this.field_c] + ".lev";
-        byte[] var3 = this.field_i.a(true);
+        byte[] var3 = this.map.a(true);
         ImageProducerRasterBuffer.field_k[wf.a(var2, true)] = var3;
         fg.field_c = "MAP SAVED";
         j.field_R = 256;
@@ -405,14 +405,14 @@ final class LevelEditor {
         try {
           fg.field_c = "MAP LOADING";
           j.field_R = 256;
-          this.field_i = new LevelMap(param1);
+          this.map = new LevelMap(param1);
           if (param0) {
             this.b((byte) -127);
           }
           fg.field_c = "MAP LOADED";
           j.field_R = 256;
-          if (this.field_i != null) {
-            this.field_i.field_l = this;
+          if (this.map != null) {
+            this.map.editor = this;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -437,11 +437,11 @@ final class LevelEditor {
         byte[] var5_array = null;
         String var6 = null;
         Throwable decompiledCaughtException = null;
-        if (null != this.field_i) {
+        if (null != this.map) {
           boolean decompiledSharedTail0 = !(param0 > 0);
           if (!decompiledSharedTail0) {
-            var3 = param0 + this.field_i.field_b;
-            var4 = this.field_i.field_e + param0;
+            var3 = param0 + this.map.field_b;
+            var4 = this.map.field_e + param0;
             this.c(-13859);
             var5 = null;
             var6 = ph.field_n[this.field_c] + ".lev";
@@ -452,21 +452,21 @@ final class LevelEditor {
               exception = (Exception) (Object) decompiledCaughtException;
               System.out.println(exception);
             }
-            this.field_i = new LevelMap(var3, var4);
-            this.field_i.field_l = this;
+            this.map = new LevelMap(var3, var4);
+            this.map.editor = this;
             if (var5_array != null) {
-              this.field_i.a(0, (byte) 104, 0, var5_array);
+              this.map.a(0, (byte) 104, 0, var5_array);
             }
             decompiledSharedTail0 = (Terraphoenix.field_V != 0);
           }
           if (decompiledSharedTail0) {
-            this.field_i.field_b = this.field_i.field_b + param0;
-            this.field_i.field_e = this.field_i.field_e + param0;
-            if (this.field_i.field_b < 2) {
-              this.field_i.field_b = 2;
+            this.map.field_b = this.map.field_b + param0;
+            this.map.field_e = this.map.field_e + param0;
+            if (this.map.field_b < 2) {
+              this.map.field_b = 2;
             }
-            if (this.field_i.field_e < 2) {
-              this.field_i.field_e = 2;
+            if (this.map.field_e < 2) {
+              this.map.field_e = 2;
             }
           }
         }
@@ -490,10 +490,10 @@ final class LevelEditor {
         int var3Lifetime2;
         var7 = Terraphoenix.field_V;
         vc.field_f.b(ph.field_n[this.field_c], 24, 24, 0, -1);
-        if (this.field_i != null) {
-          vc.field_f.b("MAP: " + this.field_i.field_b + " x " + this.field_i.field_e, 24, 48, 16711935, -1);
+        if (this.map != null) {
+          vc.field_f.b("MAP: " + this.map.field_b + " x " + this.map.field_e, 24, 48, 16711935, -1);
           vc.field_f.b("Level:" + tg.field_l, 24, 72, 16711935, -1);
-          this.field_i.d(-125);
+          this.map.d(-125);
           if (var7 != 0) {
             vc.field_f.b("MAP IS NULL", 24, 48, 16711680, -1);
           }
@@ -565,7 +565,7 @@ final class LevelEditor {
                 break regionExit1;
               }
               if (stackIn_37_0 == stackIn_37_1) {
-                l.e(var2Lifetime2, var3Lifetime2, var4, var5, 65280);
+                SoftwareRasterizer.e(var2Lifetime2, var3Lifetime2, var4, var5, 65280);
               }
               var6++;
             }

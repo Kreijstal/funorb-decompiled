@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class f implements cj {
+final class f implements WidgetActionListener {
     private int field_c;
     private int field_j;
     private int field_b;
     private int field_f;
     private int field_d;
-    private pk field_k;
+    private BitmapFont field_k;
     private int field_e;
     static int[] field_a;
     static bg[] field_i;
@@ -37,7 +37,7 @@ final class f implements cj {
         int var12Lifetime1;
         try {
           var14 = !(param1 instanceof gh) ? null : (gh) (param1);
-          l.f(param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, this.field_d);
+          SoftwareRasterizer.f(param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, this.field_d);
           if (param3 != -24381) {
             this.field_b = 13;
           }
@@ -45,18 +45,18 @@ final class f implements cj {
           }
           var7 = var14.field_R + (param2 + param1.field_w);
           var8 = param0 + param1.field_u + var14.field_M;
-          l.e(var7, var8, var14.field_Q, this.field_b);
+          SoftwareRasterizer.e(var7, var8, var14.field_Q, this.field_b);
           if (var14.field_P != -1) {
             var9 = 3.141592653589793 * (double)var14.field_P * 2.0 / (double)var14.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_Q);
             var12 = (int)(Math.cos(var9) * (double)var14.field_Q);
-            l.e(var7 + var11, var8 + var12, 1, this.field_l);
+            SoftwareRasterizer.e(var7 + var11, var8 + var12, 1, this.field_l);
           }
-          l.e(var7, var8, 2, 1);
+          SoftwareRasterizer.e(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_N) / (double)var14.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_Q);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_Q);
-          l.c(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.c(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_k) {
             var13 = var14.field_Q + (var14.field_R + this.field_c);
             this.field_k.a(param1.field_o, var13 + (param1.field_w + param2), this.field_j + param0 + param1.field_u, -this.field_c + (-var13 + param1.field_p), param1.field_n - (this.field_c << 1), this.field_e, this.field_f, 1, 1, 0);
@@ -66,7 +66,7 @@ final class f implements cj {
         }
     }
 
-    f(pk param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    f(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_f = param4;
           this.field_e = param3;

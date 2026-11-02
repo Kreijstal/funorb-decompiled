@@ -20,10 +20,10 @@ final class kk {
           if (param1 >= IntrusiveNode.field_f.field_r + nj.field_j) {
             return -1;
           }
-          if (param2 < gf.field_C) {
+          if (param2 < GameShell.field_C) {
             return -1;
           }
-          if (param2 < IntrusiveNode.field_f.field_t + gf.field_C) {
+          if (param2 < IntrusiveNode.field_f.field_t + GameShell.field_C) {
             return 1;
           }
           return -1;
@@ -35,10 +35,10 @@ final class kk {
           if (param1 >= IntrusiveNode.field_f.field_r + nj.field_j) {
             return -1;
           }
-          if (param2 < gf.field_C) {
+          if (param2 < GameShell.field_C) {
             return -1;
           }
-          if (param2 < IntrusiveNode.field_f.field_t + gf.field_C) {
+          if (param2 < IntrusiveNode.field_f.field_t + GameShell.field_C) {
             return 1;
           }
           return -1;
@@ -53,10 +53,10 @@ final class kk {
         if (param1 >= IntrusiveNode.field_f.field_r + nj.field_j) {
           return -1;
         }
-        if (param2 < gf.field_C) {
+        if (param2 < GameShell.field_C) {
           return -1;
         }
-        if (param2 >= IntrusiveNode.field_f.field_t + gf.field_C) {
+        if (param2 >= IntrusiveNode.field_f.field_t + GameShell.field_C) {
           return -1;
         }
         return 1;

@@ -6,7 +6,7 @@ final class uc extends PacketBuffer {
     private int field_o;
     static rh field_p;
     static int field_r;
-    private qe field_m;
+    private IsaacCipher field_m;
     static String field_q;
 
     public static void m(int param0) {
@@ -119,7 +119,7 @@ final class uc extends PacketBuffer {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = ei.b(wb.field_a[dg.a((int) var21[var7], 255)], dg.a((int) var16[var7], 255) << 24);
             }
-            var1[var2] = (Sprite) ((Object) new sg(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], var17));
           }
         }
         SocketConnector.a((byte) 95);
@@ -171,7 +171,7 @@ final class uc extends PacketBuffer {
           return;
         }
         try {
-          this.field_m = new qe(param0);
+          this.field_m = new IsaacCipher(param0);
         } catch (RuntimeException runtimeException) {
           throw qk.a((Throwable) ((Object) runtimeException), "uc.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class h {
-    static fa field_j;
+    static Archive field_j;
     static pd field_c;
     static String field_d;
     hl field_b;

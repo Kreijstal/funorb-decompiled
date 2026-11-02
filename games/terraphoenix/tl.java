@@ -45,7 +45,7 @@ final class tl extends IntrusiveNode {
         field_O = 0;
     }
 
-    final static tl a(fa param0, String param1, String param2) {
+    final static tl a(Archive param0, String param1, String param2) {
         try {
           tl var4_ref = null;
           if (!tl.a(param0)) {
@@ -93,7 +93,7 @@ final class tl extends IntrusiveNode {
         return var1;
     }
 
-    final static tl a(fa param0, int param1, int param2) {
+    final static tl a(Archive param0, int param1, int param2) {
         try {
           tl var4_ref = null;
           if (!tl.a(param0)) {
@@ -171,7 +171,7 @@ final class tl extends IntrusiveNode {
         return new PcmSample(this.field_A, var12, this.field_x, this.field_E, this.field_s);
     }
 
-    private final static boolean a(fa param0) {
+    private final static boolean a(Archive param0) {
         byte[] var1 = null;
         if (!field_I) {
           var1 = param0.b(0, -100, 0);
@@ -348,15 +348,15 @@ final class tl extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_A = var2.f((byte) -107);
-        this.field_w = var2.f((byte) -107);
-        this.field_x = var2.f((byte) -107);
-        this.field_E = var2.f((byte) -107);
+        this.field_A = var2.readInt((byte) -107);
+        this.field_w = var2.readInt((byte) -107);
+        this.field_x = var2.readInt((byte) -107);
+        this.field_E = var2.readInt((byte) -107);
         if (this.field_E < 0) {
           this.field_E = ~this.field_E;
           this.field_s = true;
         }
-        int var3 = var2.f((byte) -107);
+        int var3 = var2.readInt((byte) -107);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -364,7 +364,7 @@ final class tl extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.a(-16384);
+            var6_int = var2.readUnsignedByte(-16384);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];

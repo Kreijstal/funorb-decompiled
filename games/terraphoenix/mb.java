@@ -47,7 +47,7 @@ final class mb extends DualLinkNode {
         return (Terraphoenix.field_O & 1 << param0) != 0 ? true : false;
     }
 
-    final static void a(int param0, pk param1, int param2, int param3, Sprite[] param4, int param5, Sprite[] param6, byte param7, int param8, int param9, int param10, int param11, int param12, Sprite[] param13, int param14, int param15, pk param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, BitmapFont param1, int param2, int param3, Sprite[] param4, int param5, Sprite[] param6, byte param7, int param8, int param9, int param10, int param11, int param12, Sprite[] param13, int param14, int param15, BitmapFont param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -116,7 +116,7 @@ final class mb extends DualLinkNode {
         var4 = Terraphoenix.field_V;
         try {
           while (true) {
-            var3_int = param0.a(-16384);
+            var3_int = param0.readUnsignedByte(-16384);
             if (var3_int != 0) {
               this.a(param0, (byte) 126, var3_int);
               continue;
@@ -179,14 +179,14 @@ final class mb extends DualLinkNode {
         try {
           if (param2 != 1) {
             if (param2 == 2) {
-              var4_int = param0.a(-16384);
+              var4_int = param0.readUnsignedByte(-16384);
               this.field_r = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
                 this.field_r[var5] = param0.readUnsignedShort(-25578);
               }
             } else {
               if (3 == param2) {
-                var4_int = param0.a(-16384);
+                var4_int = param0.readUnsignedByte(-16384);
                 this.field_q = new int[var4_int][];
                 this.field_v = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {

@@ -25,14 +25,14 @@ final class bk {
             var8 = param4[1].field_q;
             param4[0].e(param2, param0, param1);
             param4[2].e(-var7 + param2 + param3, param0, param1);
-            l.b(vl.field_e);
-            l.i(param2 + var6_int, param0, param3 + (param2 - var7), param0 + param4[1].field_u);
+            SoftwareRasterizer.b(vl.field_e);
+            SoftwareRasterizer.i(param2 + var6_int, param0, param3 + (param2 - var7), param0 + param4[1].field_u);
             var9 = var6_int + param2;
             var10 = param3 + (param2 - var7);
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param4[1].e(param2, param0, param1);
             }
-            l.a(vl.field_e);
+            SoftwareRasterizer.a(vl.field_e);
             return;
           }
           return;

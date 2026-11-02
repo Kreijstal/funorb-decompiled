@@ -5,7 +5,7 @@ final class be extends wc {
     static String field_y;
     static int field_v;
     static Sprite field_u;
-    static pk field_x;
+    static BitmapFont field_x;
     static String field_w;
     private Object field_t;
 

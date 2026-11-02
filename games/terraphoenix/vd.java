@@ -150,14 +150,14 @@ final class vd extends PcmStream {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        lh var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         int var7_intLifetime1;
         var12 = Terraphoenix.field_V;
         try {
           if ((this.field_q.field_q[param0.field_v] & 4) != 0 &&
             param0.field_h < 0) {
-            var7_int = this.field_q.field_D[param0.field_v] / nk.field_u;
+            var7_int = this.field_q.field_D[param0.field_v] / PcmPlayerService.field_u;
             while (true) {
               var8 = (1048575 + var7_int - param0.field_A) / var7_int;
               if (var8 > param3) {
@@ -168,20 +168,20 @@ final class vd extends PcmStream {
               param3 = param3 - var8;
               param0.field_A = param0.field_A + (var7_int * var8 - 1048576);
               param4 = param4 + var8;
-              var9 = nk.field_u / 100;
+              var9 = PcmPlayerService.field_u / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;
               }
               var11 = param0.field_k;
               if (this.field_q.field_S[param0.field_v] != 0) {
-                param0.field_k = lh.a(param0.field_F, var11.l(), 0, var11.g());
+                param0.field_k = PcmSampleStream.a(param0.field_F, var11.l(), 0, var11.g());
                 stackIn_13_0 = this.field_q;
                 stackIn_14_1 = !(param0.field_B.field_p[param0.field_w] >= 0);
                 ((wl) (Object) stackIn_13_0).a(stackIn_14_1, param0, 109);
                 param0.field_k.e(var9, var11.h());
               } else {
-                param0.field_k = lh.a(param0.field_F, var11.l(), var11.h(), var11.g());
+                param0.field_k = PcmSampleStream.a(param0.field_F, var11.l(), var11.h(), var11.g());
               }
               if (0 > param0.field_B.field_p[param0.field_w]) {
                 param0.field_k.g(-1);
@@ -236,14 +236,14 @@ final class vd extends PcmStream {
               param2.field_k.a(param0);
               return;
             }
-            var4_int = this.field_q.field_D[param2.field_v] / nk.field_u;
+            var4_int = this.field_q.field_D[param2.field_v] / PcmPlayerService.field_u;
             var5 = (1048575 + (var4_int - param2.field_A)) / var4_int;
             param2.field_A = 1048575 & var4_int * param0 + param2.field_A;
             if (var5 <= param0) {
               if (this.field_q.field_S[param2.field_v] == 0) {
-                param2.field_k = lh.a(param2.field_F, param2.field_k.l(), param2.field_k.h(), param2.field_k.g());
+                param2.field_k = PcmSampleStream.a(param2.field_F, param2.field_k.l(), param2.field_k.h(), param2.field_k.g());
               } else {
-                param2.field_k = lh.a(param2.field_F, param2.field_k.l(), 0, param2.field_k.g());
+                param2.field_k = PcmSampleStream.a(param2.field_F, param2.field_k.l(), 0, param2.field_k.g());
                 stackIn_9_0 = this.field_q;
                 stackIn_10_1 = !(param2.field_B.field_p[param2.field_w] >= 0);
                 ((wl) (Object) stackIn_9_0).a(stackIn_10_1, param2, 100);

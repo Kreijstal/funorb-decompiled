@@ -3,7 +3,7 @@
  */
 final class a {
     static MouseInputHandler field_d;
-    static DelegatingCanvas field_b;
+    static FullscreenFocusCanvas field_b;
     static String field_a;
     static int[] field_c;
     static String field_e;

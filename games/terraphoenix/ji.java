@@ -108,7 +108,7 @@ final class ji extends IntrusiveNode {
             LevelEditor.field_j = new uc(param9);
             di.field_l = new uc(param8);
             nd.field_i = param13;
-            jm.field_c = param1;
+            DelegatingCanvas.field_c = param1;
             sb.field_i = param2;
             hf.field_x = param3;
             gi.field_v = param11;

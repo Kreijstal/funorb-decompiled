@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe {
+final class IsaacCipher {
     static volatile int field_l;
     static Sprite field_k;
     static String field_h;
@@ -20,8 +20,8 @@ final class qe {
         field_h = null;
         field_k = null;
         if (!param0) {
-          fa var2 = (fa) null;
-          qe.a(-54, (fa) null);
+          Archive var2 = (Archive) null;
+          IsaacCipher.a(-54, (Archive) null);
         }
         field_g = null;
         field_j = null;
@@ -209,7 +209,7 @@ final class qe {
         return this.field_i[fieldTemp$0];
     }
 
-    final static void a(int param0, fa param1) {
+    final static void a(int param0, Archive param1) {
         int var3 = 0;
         int var4 = 0;
         ee var5 = null;
@@ -228,7 +228,7 @@ final class qe {
         try {
           var8 = new uc(param1.a("logo.fo3d", "", -21653));
           var10 = var8;
-          var3 = var10.a(-16384);
+          var3 = var10.readUnsignedByte(-16384);
           var10.k(-1694261224);
           qk.field_l = ig.a(-25831, var10);
           cm.field_b = new ee[var3];
@@ -266,7 +266,7 @@ final class qe {
         }
     }
 
-    qe(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
           this.field_i = new int[256];

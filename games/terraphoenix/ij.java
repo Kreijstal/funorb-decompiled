@@ -178,7 +178,7 @@ final class ij {
         }
     }
 
-    final static void a(int param0, fa param1) {
+    final static void a(int param0, Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2604_0;
             StringBuilder stackIn_2604_1;
@@ -188,9 +188,9 @@ final class ij {
             RuntimeException var2_ref;
             int var3;
             int param0;
-            fa param1;
+            Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, fa initialParam1) {
+            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2604_0 = null;
@@ -1754,7 +1754,7 @@ final class ij {
                 }
                 var2 = bc.a("create_alert_namelength", false);
                 if (var2 != null) {
-                  km.field_m = ll.a(0, var2);
+                  ArchiveIndex.field_m = ll.a(0, var2);
                 }
                 var2 = bc.a("create_alert_namechars", false);
                 if (var2 != null) {
@@ -2014,7 +2014,7 @@ final class ij {
                 }
                 var2 = bc.a("unpacking_graphics", false);
                 if (var2 != null) {
-                  qe.field_h = ll.a(0, var2);
+                  IsaacCipher.field_h = ll.a(0, var2);
                 }
                 var2 = bc.a("unpacking_models", false);
                 if (var2 != null) {
@@ -2102,7 +2102,7 @@ final class ij {
                 }
                 var2 = bc.a("login_createaccount", false);
                 if (null != var2) {
-                  DelegatingCanvas.field_c = ll.a(0, var2);
+                  FullscreenFocusCanvas.field_c = ll.a(0, var2);
                 }
                 var2 = bc.a("tohighscores", false);
                 if (null != var2) {
@@ -2840,7 +2840,7 @@ final class ij {
                 }
                 var2 = bc.a("fs_nonmember", false);
                 if (null != var2) {
-                  jm.field_d = ll.a(0, var2);
+                  DelegatingCanvas.field_d = ll.a(0, var2);
                 }
                 var2 = bc.a("fs_button_close", false);
                 if (var2 != null) {
@@ -3227,7 +3227,7 @@ final class ij {
         try {
           var4_int = 0;
           if (param3 != 2) {
-            ij.a(82, (fa) null);
+            ij.a(82, (Archive) null);
           }
           if (param2) {
             var4_int += 4;
@@ -3256,8 +3256,8 @@ final class ij {
           if (var1 == null) {
             throw new IllegalStateException();
           }
-          l.a(var1.field_p, var1.field_h, var1.field_q);
-          l.c(var1.field_o, var1.field_i, var1.field_l, var1.field_n);
+          SoftwareRasterizer.a(var1.field_p, var1.field_h, var1.field_q);
+          SoftwareRasterizer.c(var1.field_o, var1.field_i, var1.field_l, var1.field_n);
           if (param0) {
             field_a = (String[]) null;
           }

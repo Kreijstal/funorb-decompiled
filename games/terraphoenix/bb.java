@@ -3,7 +3,7 @@
  */
 final class bb {
     String field_c;
-    fa field_a;
+    Archive field_a;
     String field_b;
     int field_e;
     static long[] field_f;
@@ -63,7 +63,7 @@ final class bb {
           while (var3_int < rb.field_d.length) {
             var5 = f.field_a[var3_int];
             if (var5 < 0) {
-              var4 = var4 + jm.field_b;
+              var4 = var4 + DelegatingCanvas.field_b;
             } else {
               var6 = bb.$cfr$intArgs$a$62abead39cee(87, true, rb.field_d[var3_int]);
               var7 = -(var6 >> 1) + nd.field_r;
@@ -96,11 +96,11 @@ final class bb {
         }
     }
 
-    final static void a(fa param0, int param1, int param2, vg param3) {
+    final static void a(Archive param0, int param1, int param2, vg param3) {
         try {
           IntrusiveNode.field_e = uc.j((byte) -127) * param2 / 1000;
           ee.a((byte) 51, param0);
-          qe.a(-28664, param0);
+          IsaacCipher.a(-28664, param0);
           if (param1 >= -60) {
             bb.a(2);
           }
@@ -117,7 +117,7 @@ final class bb {
         jg.field_kb.field_i = 0;
         if (param0 != 3287) {
           vg var2 = (vg) null;
-          bb.a((fa) null, 113, -67, (vg) null);
+          bb.a((Archive) null, 113, -67, (vg) null);
         }
         jg.field_kb.field_l = 0;
     }

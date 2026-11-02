@@ -207,7 +207,7 @@ class eb extends UiWidget {
         }
     }
 
-    eb(String param0, cj param1, sc param2) {
+    eb(String param0, WidgetActionListener param1, sc param2) {
         super(param0, param1, param2);
         this.field_H = false;
         this.field_z = true;

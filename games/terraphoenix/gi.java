@@ -195,12 +195,12 @@ final class gi {
         if (this.field_s == 6) {
           var3Lifetime2 = (int)((double)(-lg.field_c) + (-(((double)(this.field_x * 100) + this.field_t) / 100.0 * 48.0) + (16.0 * ((double)this.field_m + this.field_p / 100.0) + 16.0 * ((double)this.field_c + this.field_y / 100.0)))) + 240;
           var2Lifetime2 = (int)(32.0 * ((double)this.field_c + this.field_y / 100.0) - 32.0 * ((double)this.field_m + this.field_p / 100.0) - (double)sj.field_b) + 320;
-          l.e(var2Lifetime2, var3Lifetime2, 3, 8421504);
+          SoftwareRasterizer.e(var2Lifetime2, var3Lifetime2, 3, 8421504);
         }
         if (7 == this.field_s) {
           var2Lifetime3 = (int)((double)(-sj.field_b) + (((double)this.field_c + this.field_y / 100.0) * 32.0 - 32.0 * ((double)this.field_m + this.field_p / 100.0))) + 320;
           var3Lifetime3 = 240 + (int)(-(48.0 * (((double)(this.field_x * 100) + this.field_t) / 100.0)) + ((this.field_y / 100.0 + (double)this.field_c) * 16.0 + (this.field_p / 100.0 + (double)this.field_m) * 16.0) - (double)lg.field_c);
-          l.e(var2Lifetime3, var3Lifetime3, 3, 65535);
+          SoftwareRasterizer.e(var2Lifetime3, var3Lifetime3, 3, 65535);
         }
     }
 
@@ -235,26 +235,26 @@ final class gi {
           } else {
             if (var6.field_b != -1 && (var6.field_b != 5 ||
               100.0 * Math.random() < (double)(this.field_o - 60))) {
-              var6.field_b = DelegatingCanvas.field_f[var6.field_b];
+              var6.field_b = FullscreenFocusCanvas.field_f[var6.field_b];
               if (var6.field_b == -1) {
                 var6.field_v = -1;
                 if (var6.field_r > 0) {
-                  if (var6.field_h != null) {
-                    var6.field_h.field_E = var6.field_h.field_E - 1;
-                    var6.field_h.field_P = 0;
-                    var6.field_h.tile = var6.field_c;
-                    if (null == var6.field_c.field_h) {
-                      var6.field_c.field_h = var6.field_h;
-                      var6.field_h = null;
+                  if (var6.unit != null) {
+                    var6.unit.field_E = var6.unit.field_E - 1;
+                    var6.unit.field_P = 0;
+                    var6.unit.tile = var6.field_c;
+                    if (null == var6.field_c.unit) {
+                      var6.field_c.unit = var6.unit;
+                      var6.unit = null;
                       if (-1 == var6.field_c.field_v &&
-                        null == var6.field_c.field_c.field_h) {
-                        var6.field_c.field_c.field_h = var6.field_c.field_h;
-                        var6.field_c.field_h = null;
-                        var6.field_c.field_c.field_h.field_A = 0;
-                        var6.field_c.field_c.field_h.field_d = 5;
-                        var6.field_c.field_c.field_h.field_S = true;
-                        var6.field_c.field_c.field_h.field_P = 0;
-                        var6.field_c.field_c.field_h.tile = var6.field_c.field_c;
+                        null == var6.field_c.field_c.unit) {
+                        var6.field_c.field_c.unit = var6.field_c.unit;
+                        var6.field_c.unit = null;
+                        var6.field_c.field_c.unit.field_A = 0;
+                        var6.field_c.field_c.unit.field_d = 5;
+                        var6.field_c.field_c.unit.field_S = true;
+                        var6.field_c.field_c.unit.field_P = 0;
+                        var6.field_c.field_c.unit.tile = var6.field_c.field_c;
                       }
                     }
                   }
@@ -359,12 +359,12 @@ final class gi {
                 discarded$5 = this.a(var7, var6Lifetime1, this.field_x, (byte) -20);
                 discarded$6 = this.a(var7, var6Lifetime1, 1 + this.field_x, (byte) -124);
                 if (var11 != null &&
-                  var11.field_h != null &&
-                  0 < var11.field_h.field_P) {
-                  var11.field_h.a((byte) -51, this.field_o);
-                  if (var11.field_h.field_P <= 0 &&
-                    var11.field_h.field_Z == null &&
-                    var11.field_h.field_t != 7 &&
+                  var11.unit != null &&
+                  0 < var11.unit.field_P) {
+                  var11.unit.a((byte) -51, this.field_o);
+                  if (var11.unit.field_P <= 0 &&
+                    var11.unit.field_Z == null &&
+                    var11.unit.field_t != 7 &&
                     null != this.field_e) {
                     if (null != this.field_e) {
                       this.field_e.field_e = this.field_e.field_e + 1;
@@ -655,7 +655,7 @@ final class gi {
             }
             break;
           }
-          if (var4.field_h == null) {
+          if (var4.unit == null) {
             continue;
           }
           if (this.field_s == 6) {
@@ -664,8 +664,8 @@ final class gi {
           if (this.field_s == 7) {
             continue;
           }
-          var6 = var4.field_h.c(param0 ^ -117);
-          var7 = var4.field_h.h(13);
+          var6 = var4.unit.c(param0 ^ -117);
+          var7 = var4.unit.h(13);
           if (!((double)var7 > this.field_p)) {
             continue;
           }
@@ -683,7 +683,7 @@ final class gi {
           }
           break;
         }
-        if (var4.field_h.field_P <= 0) {
+        if (var4.unit.field_P <= 0) {
           this.a((byte) -6, false);
           return this;
         }
@@ -695,19 +695,19 @@ final class gi {
             this.field_s != 6 &&
             this.field_s != 5 &&
             this.field_s != 7) {
-            var4.field_h.a((byte) 114, this.field_o, this.field_s);
+            var4.unit.a((byte) 114, this.field_o, this.field_s);
           }
         } else {
           if (this.field_s != 1 &&
             this.field_s != 6 &&
             this.field_s != 5 &&
             this.field_s != 7) {
-            var4.field_h.a((byte) 114, this.field_o, this.field_s);
+            var4.unit.a((byte) 114, this.field_o, this.field_s);
           }
         }
-        if (var4.field_h.field_P <= 0 &&
-          var4.field_h.field_Z == null &&
-          7 != var4.field_h.field_t &&
+        if (var4.unit.field_P <= 0 &&
+          var4.unit.field_Z == null &&
+          7 != var4.unit.field_t &&
           this.field_e != null) {
           this.field_e.field_e = this.field_e.field_e + 1;
         }
@@ -895,7 +895,7 @@ final class gi {
         try {
           var28 = LevelEditor.field_j;
           var3 = 83 % ((56 - param0) / 50);
-          var2 = var28.a(-16384);
+          var2 = var28.readUnsignedByte(-16384);
           if (var2 == 0) {
             var4 = var28.readUnsignedShort(-25578);
             var5 = (nd) (BattleUnit.field_Q.d(9272));
@@ -910,7 +910,7 @@ final class gi {
               WidgetContainer.g(-17464);
               return;
             }
-            var6 = var28.a(-16384);
+            var6 = var28.readUnsignedByte(-16384);
             if (var6 != 0) {
               var7 = var5.field_n;
               od.field_h[0].field_d = null;
@@ -920,7 +920,7 @@ final class gi {
               for (var9_int = 1; var6 > var9_int; var9_int++) {
                 od.field_h[var9_int].field_f = var28.readString(-1);
                 od.field_h[var9_int].field_a = false;
-                if (1 == var28.a(-16384)) {
+                if (1 == var28.readUnsignedByte(-16384)) {
                   od.field_h[var9_int].field_d = var28.readString(-1);
                 } else {
                   od.field_h[var9_int].field_d = null;
@@ -942,10 +942,10 @@ final class gi {
               var16 = 0;
               var17 = 0;
               var18 = 0;
-              var19 = var28.a(-16384);
+              var19 = var28.readUnsignedByte(-16384);
               if (0 < var19) {
                 for (var20 = 0; var19 > var20; var20++) {
-                  var21 = var28.a(-16384);
+                  var21 = var28.readUnsignedByte(-16384);
                   var22 = od.field_h[var21].field_f;
                   var23 = var28.h((byte) 78);
                   var25 = var28.position;
@@ -957,7 +957,7 @@ final class gi {
                     for (var26 = 0; var26 < var8; var26++) {
                       incrementValue$3 = var16;
                       var16++;
-                      var12[0][incrementValue$3] = var28.f((byte) -107);
+                      var12[0][incrementValue$3] = var28.readInt((byte) -107);
                     }
                   }
                   if (var22 != null &&
@@ -970,7 +970,7 @@ final class gi {
                     for (var26Lifetime1 = 0; var8 > var26Lifetime1; var26Lifetime1++) {
                       incrementValue$4 = var17;
                       var17++;
-                      var12[1][incrementValue$4] = var28.f((byte) -107);
+                      var12[1][incrementValue$4] = var28.readInt((byte) -107);
                     }
                   }
                   if (var7 > var15 &&
@@ -984,7 +984,7 @@ final class gi {
                     for (var26Lifetime2 = 0; var8 > var26Lifetime2; var26Lifetime2++) {
                       incrementValue$5 = var18;
                       var18++;
-                      var12[2][incrementValue$5] = var28.f((byte) -107);
+                      var12[2][incrementValue$5] = var28.readInt((byte) -107);
                     }
                   }
                 }
@@ -1048,7 +1048,7 @@ final class gi {
               decompiledFrameRemainder0 = (param0.field_g != 32);
             }
             if ((decompiledFrameRemainder0) && ((28 != param0.field_g ||
-              13 != param0.map.field_i.field_G.field_Bb) && 0 <= param0.field_g)) {
+              13 != param0.map.state.client.field_Bb) && 0 <= param0.field_g)) {
               if (nh.field_E[param0.field_g] == 1) {
                 param0.a(1, true, 111);
               }
@@ -1117,7 +1117,7 @@ final class gi {
               decompiledFrameRemainder0 = (32 != param2.field_k);
             }
             if ((decompiledFrameRemainder0) && ((28 != param2.field_k ||
-              param2.map.field_i.field_G.field_Bb != 13) && param2.field_k >= 0)) {
+              param2.map.state.client.field_Bb != 13) && param2.field_k >= 0)) {
               if (1 == nh.field_E[param2.field_k]) {
                 param2.a(2, true, -95);
               }
@@ -1168,7 +1168,7 @@ final class gi {
         this.a((byte) -6, true);
     }
 
-    final static void a(fa param0, fa param1, fa param2, int param3) {
+    final static void a(Archive param0, Archive param1, Archive param2, int param3) {
         Sprite var18 = null;
         bg[] var5 = null;
         bg[][] var6 = null;
@@ -1192,9 +1192,9 @@ final class gi {
           hd.field_o = il.a("jagex_logo_grey", "commonui", param0, param3 + 2039);
           i.field_c = ig.a(param0, 0, "button", "commonui");
           og.field_c = IterableNodeHashTable.a("validation", (byte) -90, "commonui", param0);
-          ra.field_l = (pk) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo12"));
-          qk.field_e = (pk) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo14"));
-          be.field_x = (pk) ((Object) ec.a("commonui", param3 + 10232, param1, param0, "arezzo14bold"));
+          ra.field_l = (BitmapFont) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo12"));
+          qk.field_e = (BitmapFont) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo14"));
+          be.field_x = (BitmapFont) ((Object) ec.a("commonui", param3 + 10232, param1, param0, "arezzo14bold"));
           var18 = new Sprite(param2.a("button.gif", "", -21653), (java.awt.Component) ((Object) ae.field_G));
           qb.a("dropdown", (byte) -36, "commonui", param0);
           var5 = lf.a(true, "commonui", "screen_options", param0);
@@ -1227,7 +1227,7 @@ final class gi {
           var9Lifetime1 = var18.field_t;
           ja.c((byte) 109);
           var18.a();
-          l.h(0, 0, l.field_k, l.field_j);
+          SoftwareRasterizer.h(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j);
           var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.a();

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa {
+final class Archive {
     static Sprite field_d;
     private Object[][] field_g;
     private boolean field_j;
@@ -9,10 +9,10 @@ final class fa {
     static int field_a;
     static String field_e;
     private uj field_b;
-    static pk field_i;
+    static BitmapFont field_i;
     private Object[] field_k;
     static String field_c;
-    private km field_f;
+    private ArchiveIndex field_f;
 
     final boolean a(int param0, String param1) {
         int var3_int = 0;
@@ -282,7 +282,7 @@ final class fa {
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(-14328, param2, 5, var26.payload.length);
+            var26.xteaDecrypt(-14328, param2, 5, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -318,7 +318,7 @@ final class fa {
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var32.f((byte) -107);
+                  var17 = var17 + var32.readInt((byte) -107);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -340,7 +340,7 @@ final class fa {
               for (var18 = 0; var12 > var18; var18++) {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19 = var19 + var32.f((byte) -107);
+                  var19 = var19 + var32.readInt((byte) -107);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -367,7 +367,7 @@ final class fa {
               for (var15 = 0; var15 < var12; var15++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
-                  var16 = var16 + var29.f((byte) -107);
+                  var16 = var16 + var29.readInt((byte) -107);
                   var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
                 }
               }
@@ -384,7 +384,7 @@ final class fa {
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var29.f((byte) -107);
+                  var18 = var18 + var29.readInt((byte) -107);
                   ka.a(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;
@@ -468,7 +468,7 @@ final class fa {
         field_e = null;
         field_c = null;
         if (param0 < 34) {
-          fa.b(29);
+          Archive.b(29);
         }
         field_i = null;
     }
@@ -832,7 +832,7 @@ final class fa {
         return var2;
     }
 
-    fa(uj param0, boolean param1, int param2) {
+    Archive(uj param0, boolean param1, int param2) {
         this.field_f = null;
         try {
           if (param2 < 0 ||

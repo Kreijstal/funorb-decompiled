@@ -88,7 +88,7 @@ final class hi extends ei implements n {
           if (param0) {
             field_W = (bg[]) null;
           }
-          var4.field_l = (cj) ((Object) new ic());
+          var4.field_l = (WidgetActionListener) ((Object) new ic());
           var5 = -6 + this.field_n;
           this.field_n = this.field_n + 38;
           var4.a(var5, (byte) 80, -16 + (-14 + this.field_p), 15, 30);
@@ -150,7 +150,7 @@ final class hi extends ei implements n {
           var4.field_u = 50;
           var4.field_p = this.field_p;
           var4.field_w = 0;
-          var4.field_l = (cj) ((Object) new fd(ra.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_l = (WidgetActionListener) ((Object) new fd(ra.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 95, var4);
           this.field_X = this.a(false, RasterBuffer.field_e, (sc) (this));
           return;

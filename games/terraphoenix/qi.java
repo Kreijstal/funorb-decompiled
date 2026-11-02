@@ -63,7 +63,7 @@ final class qi {
         }
         var10 = new PacketBuffer(this.field_d.b(param0));
         var10.position = 5;
-        var3 = var10.a(-16384);
+        var3 = var10.readUnsignedByte(-16384);
         var10.position = var10.position + var3 * 72;
         var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
@@ -130,8 +130,8 @@ final class qi {
               return stackIn_9_0;
             }
             this.field_h.position = param1 * 72 + 6;
-            var6_int = this.field_h.f((byte) -107);
-            var7 = this.field_h.f((byte) -107);
+            var6_int = this.field_h.readInt((byte) -107);
+            var7 = this.field_h.readInt((byte) -107);
             var13 = new byte[64];
             if (param4 < 89) {
               this.field_g = (java.math.BigInteger) null;

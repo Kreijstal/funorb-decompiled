@@ -7,10 +7,10 @@ final class da {
     static boolean field_f;
     static PlatformTaskDispatcher field_g;
     static String[] field_i;
-    static pk field_h;
+    static BitmapFont field_h;
     static int field_b;
-    private fa field_a;
-    private fa field_c;
+    private Archive field_a;
+    private Archive field_c;
     private il field_e;
 
     private final PcmSample a(int param0, int param1, int[] param2, int param3) {
@@ -477,7 +477,7 @@ final class da {
         }
     }
 
-    da(fa param0, fa param1) {
+    da(Archive param0, Archive param1) {
         this.field_j = new il(256);
         this.field_e = new il(256);
         try {

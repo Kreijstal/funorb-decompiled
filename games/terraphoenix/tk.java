@@ -5,7 +5,7 @@ final class tk extends IntrusiveNode {
     byte[] field_i;
     il field_h;
 
-    final static tk a(fa param0, String param1, String param2) {
+    final static tk a(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, param2, -21653);
         if (var3 == null) {
           return null;
@@ -221,7 +221,7 @@ final class tk extends IntrusiveNode {
         int var28Lifetime1;
         int var29Lifetime1;
         param0.position = param0.payload.length - 3;
-        var2 = param0.a(-16384);
+        var2 = param0.readUnsignedByte(-16384);
         var3 = param0.readUnsignedShort(-25578);
         var4 = 14 + var2 * 10;
         param0.position = 0;
@@ -237,7 +237,7 @@ final class tk extends IntrusiveNode {
         while (var13 < var2) {
           var14 = -1;
           while (true) {
-            var15 = param0.a(-16384);
+            var15 = param0.readUnsignedByte(-16384);
             if (var15 != var14) {
               var4++;
             }
@@ -304,7 +304,7 @@ final class tk extends IntrusiveNode {
         var27 = 0;
         var28 = 0;
         for (var29 = 0; var29 < var6; var29++) {
-          var28 = var28 + param0.a(-16384) & 127;
+          var28 = var28 + param0.readUnsignedByte(-16384) & 127;
           if (var28 != 0) {
             if (var28 != 32) {
               if (var28 != 1) {
@@ -420,8 +420,8 @@ final class tk extends IntrusiveNode {
         param0.position = param0.position + var5 * 3;
         this.field_i = new byte[var4];
         var51 = new PacketBuffer(this.field_i);
-        var51.e(1297377380, 8959);
-        var51.e(6, 8959);
+        var51.writeInt(1297377380, 8959);
+        var51.writeInt(6, 8959);
         stackIn_84_0 = var51;
         stackIn_84_1 = -1564407352;
         if (var2 <= 1) {
@@ -429,9 +429,9 @@ final class tk extends IntrusiveNode {
         } else {
           stackIn_85_2 = 1;
         }
-        ((PacketBuffer) (Object) stackIn_84_0).h(stackIn_84_1, stackIn_85_2);
-        var51.h(-1564407352, var2);
-        var51.h(-1564407352, var3);
+        ((PacketBuffer) (Object) stackIn_84_0).writeShort(stackIn_84_1, stackIn_85_2);
+        var51.writeShort(-1564407352, var2);
+        var51.writeShort(-1564407352, var3);
         param0.position = var13Lifetime1;
         var52 = 0;
         var53 = 0;
@@ -447,7 +447,7 @@ final class tk extends IntrusiveNode {
           if (var60 >= var2) {
             return;
           }
-          var51.e(1297379947, 8959);
+          var51.writeInt(1297379947, 8959);
           var51.position = var51.position + 4;
           var61 = var51.position;
           var62 = -1;

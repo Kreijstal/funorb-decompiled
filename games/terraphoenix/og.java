@@ -52,7 +52,7 @@ final class og {
             try {
               var5 = new byte[param2];
               var3 = var5;
-              jm.a(param1, param2, 0, var5);
+              DelegatingCanvas.a(param1, param2, 0, var5);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {

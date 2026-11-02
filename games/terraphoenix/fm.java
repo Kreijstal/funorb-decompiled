@@ -42,10 +42,10 @@ final class fm {
 
     final static kf[] a(boolean param0) {
         if (!param0) {
-          return new kf[]{RasterBuffer.field_g, gf.field_u, gm.field_j};
+          return new kf[]{RasterBuffer.field_g, GameShell.field_u, gm.field_j};
         }
         fm.a(47);
-        return new kf[]{RasterBuffer.field_g, gf.field_u, gm.field_j};
+        return new kf[]{RasterBuffer.field_g, GameShell.field_u, gm.field_j};
     }
 
     public static void b(int param0) {

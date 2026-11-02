@@ -130,7 +130,7 @@ final class kf {
         }
     }
 
-    final static qd a(int param0, byte param1, fa param2) {
+    final static qd a(int param0, byte param1, Archive param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;

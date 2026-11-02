@@ -10,7 +10,7 @@ final class d extends jc {
     static int[] field_L;
     static PlatformTaskDispatcher field_K;
     static String field_J;
-    static nk field_I;
+    static PcmPlayerService field_I;
 
     final void b(boolean param0) {
         int var4 = Terraphoenix.field_V;
@@ -47,7 +47,7 @@ final class d extends jc {
         k var2 = new k(this.field_A);
         kh var3 = (kh) (var2.a((byte) -13));
         if (param0 < 122) {
-          field_I = (nk) null;
+          field_I = (PcmPlayerService) null;
         }
         while (var3 != null) {
           if (var3.f((byte) -121)) {
@@ -80,7 +80,7 @@ final class d extends jc {
     }
 
     public d() {
-        super(0, 0, vk.field_c, be.field_v, (cj) null, (sc) null);
+        super(0, 0, vk.field_c, be.field_v, (WidgetActionListener) null, (sc) null);
         this.field_A = new IntrusiveDeque();
     }
 

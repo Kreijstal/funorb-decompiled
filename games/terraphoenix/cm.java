@@ -39,7 +39,7 @@ final class cm {
           if (!vc.a(-127, 1)) {
             return false;
           }
-          qh.field_d = LevelEditor.field_j.a(-16384);
+          qh.field_d = LevelEditor.field_j.readUnsignedByte(-16384);
           LevelEditor.field_j.position = 0;
         }
         if (qh.field_d != -2) {

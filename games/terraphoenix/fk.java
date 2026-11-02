@@ -38,7 +38,7 @@ final class fk {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_a.a(-16384);
+          var3 = this.field_a.readUnsignedByte(-16384);
           var4 = this.field_a.i((byte) 13);
           if (var3 == 47) {
             this.field_a.position = this.field_a.position + var4;
@@ -59,10 +59,10 @@ final class fk {
         var3Lifetime1 = field_g[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_a.a(-16384) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_a.readUnsignedByte(-16384) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_a.a(-16384) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_a.readUnsignedByte(-16384) << 16;
         }
         return var4Lifetime1;
     }
@@ -163,8 +163,8 @@ final class fk {
         this.field_d = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_a.f((byte) -107);
-          var5 = this.field_a.f((byte) -107);
+          var4 = this.field_a.readInt((byte) -107);
+          var5 = this.field_a.readInt((byte) -107);
           if (var4 == 1297379947) {
             this.field_d[var3] = this.field_a.position;
             var3++;

@@ -92,7 +92,7 @@ final class hl {
         }
     }
 
-    final static Sprite a(fa param0, int param1, byte param2, int param3) {
+    final static Sprite a(Archive param0, int param1, byte param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;

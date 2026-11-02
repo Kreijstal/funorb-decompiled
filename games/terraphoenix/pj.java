@@ -155,12 +155,12 @@ final class pj {
         field_a = null;
     }
 
-    final DelegatingCanvas b(int param0) {
+    final FullscreenFocusCanvas b(int param0) {
         this.field_m = ja.field_j;
         this.field_e = wc.field_p;
         this.field_j.a(9887, this.field_p, this.field_u);
         ai.field_h = false;
-        DelegatingCanvas var2 = MouseWheelInput.a(this.field_p, this.field_u, param0, 0, (byte) 109, nj.field_l);
+        FullscreenFocusCanvas var2 = MouseWheelInput.a(this.field_p, this.field_u, param0, 0, (byte) 109, nj.field_l);
         if (var2 == null) {
           this.a(param0 + 97);
         }
@@ -210,11 +210,11 @@ final class pj {
           pj.d(-99);
         }
         int var5 = 256 - param2;
-        int var6 = l.field_i[param4];
+        int var6 = SoftwareRasterizer.field_i[param4];
         int var7 = ((16711680 & param3) >> 16) * param2 + var5 * (var6 >> 16 & 255) >> 8;
         int var8 = (255 & param3 >> 8) * param2 + var5 * ((65280 & var6) >> 8) >> 8;
         int var9 = param2 * (param3 & 255) + var5 * (var6 & 255) >> 8;
-        l.field_i[param4] = var9 + 65536 * var7 + var8 * 256;
+        SoftwareRasterizer.field_i[param4] = var9 + 65536 * var7 + var8 * 256;
     }
 
     final void a(byte param0, int param1, int param2) {

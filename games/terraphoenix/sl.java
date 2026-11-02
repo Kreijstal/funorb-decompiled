@@ -28,7 +28,7 @@ final class sl {
             sa.a(-26, vb.b((byte) -27), fc.a(-1), oi.field_H, var3_int != 0);
           } else {
             if (!sl.a((byte) -40)) {
-              l.a();
+              SoftwareRasterizer.a();
               ch.a((byte) -79, 240, 320);
               ia.a(0, param0, 0, (byte) 113);
             } else {

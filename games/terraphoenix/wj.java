@@ -103,7 +103,7 @@ final class wj {
             }
             if (mh.field_a == s.field_c &&
               vc.a(-113, 1)) {
-              var6_int = LevelEditor.field_j.a(-16384);
+              var6_int = LevelEditor.field_j.readUnsignedByte(-16384);
               LevelEditor.field_j.position = 0;
               if (0 != var6_int) {
                 qk.field_b = var6_int;
@@ -123,7 +123,7 @@ final class wj {
             boolean decompiledFrameRemainder0 = true;
             if (mh.field_a == af.field_b &&
               vc.a(-115, 1)) {
-              var6_intLifetime1 = LevelEditor.field_j.a(param1 - 45782);
+              var6_intLifetime1 = LevelEditor.field_j.readUnsignedByte(param1 - 45782);
               og.field_e = null;
               qk.field_b = var6_intLifetime1;
               LevelEditor.field_j.position = 0;
@@ -149,11 +149,11 @@ final class wj {
             if (WidgetContainer.field_B == mh.field_a &&
               cm.b((byte) -61)) {
               SpriteState.field_y = LevelEditor.field_j.h((byte) 78);
-              mm.field_e = LevelEditor.field_j.a(-16384);
-              LevelEditor.field_j.a(param1 ^ -19754);
+              mm.field_e = LevelEditor.field_j.readUnsignedByte(-16384);
+              LevelEditor.field_j.readUnsignedByte(param1 ^ -19754);
               me.field_o = LevelEditor.field_j.readUnsignedShort(param1 - 54976);
               var6 = LevelEditor.field_j.j(param1 ^ -1915102434);
-              var7 = LevelEditor.field_j.a(param1 ^ -19754);
+              var7 = LevelEditor.field_j.readUnsignedByte(param1 ^ -19754);
               if (0 != (var7 & 1)) {
                 wh.b(96);
               }
@@ -166,9 +166,9 @@ final class wj {
                 }
               }
               if (hf.field_x) {
-                LevelEditor.field_j.a(-16384);
-                LevelEditor.field_j.a(-16384);
-                LevelEditor.field_j.f((byte) -107);
+                LevelEditor.field_j.readUnsignedByte(-16384);
+                LevelEditor.field_j.readUnsignedByte(-16384);
+                LevelEditor.field_j.readInt((byte) -107);
                 kf.field_g = LevelEditor.field_j.readUnsignedShort(param1 ^ -4416);
                 BattleUnit.field_O = new byte[kf.field_g];
                 for (var8 = 0; kf.field_g > var8; var8++) {
@@ -178,11 +178,11 @@ final class wj {
               kj.field_f = LevelEditor.field_j.readString(-1);
               var11 = (CharSequence) ((Object) kj.field_f);
               IntrusiveDeque.field_e = hm.a((byte) 2, var11);
-              MouseInputHandler.field_b = LevelEditor.field_j.a(-16384);
+              MouseInputHandler.field_b = LevelEditor.field_j.readUnsignedByte(-16384);
               mh.field_a = od.field_g;
               if (am.field_K.c(0) != rj.field_a) {
                 if (am.field_K.c(param1 ^ 29398) == hf.field_s) {
-                  gf.field_u.a(dg.a(false), (byte) 117);
+                  GameShell.field_u.a(dg.a(false), (byte) 117);
                 }
               } else {
                 RasterBuffer.field_g.a(dg.a(false), (byte) 117);
@@ -208,7 +208,7 @@ final class wj {
                 }
               }
               if (me.field_o > 0) {
-                jm.field_c = true;
+                DelegatingCanvas.field_c = true;
               }
               di.field_l.a(ab.field_g, 16888);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {

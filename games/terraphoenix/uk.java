@@ -24,10 +24,10 @@ final class uk {
         try {
           boolean decompiledFrameRemainder0 = true;
           var8 = LevelEditor.field_j;
-          var2 = var8.a(-16384);
+          var2 = var8.readUnsignedByte(-16384);
           if (0 != var2) {
             if (var2 == 1) {
-              var3 = var8.f((byte) -107);
+              var3 = var8.readInt((byte) -107);
               var4 = (cc) (qb.field_a.d(9272));
               while (var4 != null) {
                 if (var3 != var4.field_k) {
@@ -55,7 +55,7 @@ final class uk {
               WidgetContainer.g(-17464);
               return;
             }
-            var4_int = var8.a(-16384);
+            var4_int = var8.readUnsignedByte(-16384);
             if (var4_int == 0) {
               var5 = null;
             } else {

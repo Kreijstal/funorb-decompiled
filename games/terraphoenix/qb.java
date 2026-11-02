@@ -11,7 +11,7 @@ final class qb {
     static String field_e;
     static int field_g;
 
-    final static bg a(String param0, byte param1, String param2, fa param3) {
+    final static bg a(String param0, byte param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -117,7 +117,7 @@ final class qb {
           }
           var13 = LevelEditor.field_j;
           var15 = var13;
-          var2 = var15.a(param0 ^ -16384);
+          var2 = var15.readUnsignedByte(param0 ^ -16384);
           var3 = (ja) (vd.field_l.d(9272));
           while (var3 != null) {
             if (var3.field_o != var2) {
@@ -130,7 +130,7 @@ final class qb {
             WidgetContainer.g(-17464);
             return;
           }
-          var4 = var15.a(-16384);
+          var4 = var15.readUnsignedByte(-16384);
           if (var4 != 0) {
             GameApplet.field_k[0] = kj.field_f;
             var5 = var3.field_k;

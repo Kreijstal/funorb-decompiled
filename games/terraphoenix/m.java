@@ -51,7 +51,7 @@ final class m {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (ua.field_d != qe.field_f) {
+          if (ua.field_d != IsaacCipher.field_f) {
             return -1;
           }
           stackIn_23_0 = 2;

@@ -239,7 +239,7 @@ class vj extends eb {
         return this.field_M[this.field_N.field_i];
     }
 
-    vj(String param0, cj param1) {
+    vj(String param0, WidgetActionListener param1) {
         super(param0, (sc) null);
         this.field_N = null;
         try {
@@ -288,7 +288,7 @@ class vj extends eb {
         field_K = null;
     }
 
-    final static fa a(boolean param0, boolean param1, int param2, byte param3, int param4) {
+    final static Archive a(boolean param0, boolean param1, int param2, byte param3, int param4) {
         if (param3 != 62) {
           field_L = (String) null;
         }

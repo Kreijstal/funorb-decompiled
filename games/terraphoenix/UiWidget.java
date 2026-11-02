@@ -4,7 +4,7 @@
 import java.util.*;
 
 class UiWidget extends IntrusiveNode {
-    cj field_l;
+    WidgetActionListener field_l;
     static String field_t;
     int field_j;
     int field_y;
@@ -734,7 +734,7 @@ class UiWidget extends IntrusiveNode {
         this.field_v = 0;
     }
 
-    UiWidget(String param0, cj param1, sc param2) {
+    UiWidget(String param0, WidgetActionListener param1, sc param2) {
         w var4 = null;
         this.field_y = 0;
         this.field_v = 0;
@@ -752,7 +752,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, cj param4, sc param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetActionListener param4, sc param5) {
         this.field_y = 0;
         this.field_v = 0;
         try {

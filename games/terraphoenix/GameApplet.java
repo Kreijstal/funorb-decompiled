@@ -507,8 +507,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Insets var6 = null;
         try {
           var2_long = ll.a(param0 + 1000);
-          var4 = bb.field_f[DelegatingCanvas.field_b];
-          bb.field_f[DelegatingCanvas.field_b] = var2_long;
+          var4 = bb.field_f[FullscreenFocusCanvas.field_b];
+          bb.field_f[FullscreenFocusCanvas.field_b] = var2_long;
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(var2_long - var4);
@@ -517,7 +517,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 0) {
             GameApplet.a(108, (PacketBuffer) null);
           }
-          DelegatingCanvas.field_b = DelegatingCanvas.field_b + 1 & 31;
+          FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + 1 & 31;
           fieldTemp$1 = q.field_Db;
           q.field_Db = q.field_Db + 1;
           if (50 < fieldTemp$1) {
@@ -653,7 +653,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var2 = MouseWheelInput.field_e;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          ae.field_G = (java.awt.Canvas) ((Object) new jm((java.awt.Component) (this)));
+          ae.field_G = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           if (param0 != 0) {
             return;
           }
@@ -763,8 +763,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           try {
             try {
               if (gm.field_f != null) {
-                jm.field_f = jm.field_f + 1;
-                if (jm.field_f >= 3) {
+                DelegatingCanvas.field_f = DelegatingCanvas.field_f + 1;
+                if (DelegatingCanvas.field_f >= 3) {
                   this.a("alreadyloaded", true);
                   return;
                 }

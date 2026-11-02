@@ -38,7 +38,7 @@ final class df extends eb {
         }
     }
 
-    private df(String param0, cj param1, sc param2) {
+    private df(String param0, WidgetActionListener param1, sc param2) {
         super(param0, param1, param2);
         try {
           this.field_l = vc.field_c.field_q;

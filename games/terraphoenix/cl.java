@@ -9,7 +9,7 @@ final class cl extends WidgetContainer implements jf, n {
     private vj field_F;
 
     cl(tj param0) {
-        super(0, 0, 288, 0, (cj) null);
+        super(0, 0, 288, 0, (WidgetActionListener) null);
         String var7 = null;
         int var3 = 0;
         fd var4 = null;
@@ -18,7 +18,7 @@ final class cl extends WidgetContainer implements jf, n {
         try {
           this.field_H = param0;
           this.field_G = new eb(rj.field_e, (sc) null);
-          this.field_G.field_l = (cj) ((Object) new ic());
+          this.field_G.field_l = (WidgetActionListener) ((Object) new ic());
           var7 = ij.a(new String[]{this.f((byte) -69), this.d(false)}, -1, rf.field_y);
           var3 = 20;
           var4 = new fd(qk.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
@@ -178,35 +178,35 @@ final class cl extends WidgetContainer implements jf, n {
           var7 = (param0 << 8) + var6_int * param3.field_p;
           param4 = param4 + param3.field_v;
           param1 = param1 + param3.field_p;
-          var8 = param4 * l.field_k + param1;
+          var8 = param4 * SoftwareRasterizer.field_k + param1;
           var9 = 0;
           var10 = param3.field_t;
           var11 = param3.field_r;
-          var12 = -var11 + l.field_k;
+          var12 = -var11 + SoftwareRasterizer.field_k;
           var13 = 9 / ((param2 - 24) / 56);
-          if (l.field_d > param4) {
-            var15 = l.field_d - param4;
+          if (SoftwareRasterizer.field_d > param4) {
+            var15 = SoftwareRasterizer.field_d - param4;
             var9 = var9 + var15 * var11;
-            var8 = var8 + l.field_k * var15;
+            var8 = var8 + SoftwareRasterizer.field_k * var15;
             var10 = var10 - var15;
-            param4 = l.field_d;
+            param4 = SoftwareRasterizer.field_d;
           }
           var14 = 0;
-          if (l.field_b > param1) {
-            var15Lifetime1 = -param1 + l.field_b;
+          if (SoftwareRasterizer.field_b > param1) {
+            var15Lifetime1 = -param1 + SoftwareRasterizer.field_b;
             var9 = var9 + var15Lifetime1;
             var12 = var12 + var15Lifetime1;
-            param1 = l.field_b;
+            param1 = SoftwareRasterizer.field_b;
             var7 = var7 + var15Lifetime1 * var6_int;
             var8 = var8 + var15Lifetime1;
             var11 = var11 - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param4 + var10 > l.field_c) {
-            var10 = var10 - (-l.field_c + (param4 + var10));
+          if (param4 + var10 > SoftwareRasterizer.field_c) {
+            var10 = var10 - (-SoftwareRasterizer.field_c + (param4 + var10));
           }
-          if (l.field_f < var11 + param1) {
-            var15Lifetime2 = -l.field_f + param1 + var11;
+          if (SoftwareRasterizer.field_f < var11 + param1) {
+            var15Lifetime2 = -SoftwareRasterizer.field_f + param1 + var11;
             var11 = var11 - var15Lifetime2;
             var12 = var12 + var15Lifetime2;
             var14 = var14 + var15Lifetime2;
@@ -225,11 +225,11 @@ final class cl extends WidgetContainer implements jf, n {
                   var18 = param3.field_z[incrementValue$0];
                   if (var18 != 0) {
                     if (var16 > 255) {
-                      l.field_i[var8] = var18;
+                      SoftwareRasterizer.field_i[var8] = var18;
                     } else {
-                      var19 = l.field_i[var8];
+                      var19 = SoftwareRasterizer.field_i[var8];
                       var20 = 16711935 & (var19 & 16711935) * var17 + (var18 & 16711935) * var16 >> 8;
-                      l.field_i[var8] = var20 + dg.a(dg.a(65280, var19) * var17 + dg.a(65280, var18) * var16 >> 8, 65280);
+                      SoftwareRasterizer.field_i[var8] = var20 + dg.a(dg.a(65280, var19) * var17 + dg.a(65280, var18) * var16 >> 8, 65280);
                     }
                   }
                   var8++;

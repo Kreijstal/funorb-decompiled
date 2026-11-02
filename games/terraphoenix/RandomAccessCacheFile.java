@@ -310,7 +310,7 @@ final class RandomAccessCacheFile {
             var16 = (String) null;
             RandomAccessCacheFile.a((byte) 57, (String) null);
           }
-          var3 = (255 & var18.a(-16384)) + 1;
+          var3 = (255 & var18.readUnsignedByte(-16384)) + 1;
           for (var4 = 0; var4 < kf.field_b; var4++) {
             ha.field_s[var4] = var17.readUnsignedShort(-25578);
           }
@@ -345,7 +345,7 @@ final class RandomAccessCacheFile {
             var9 = var20;
             ug.field_c[var4Lifetime5] = var22;
             var10 = 0;
-            var11 = var18.a(-16384);
+            var11 = var18.readUnsignedByte(-16384);
             stackIn_24_0 = 0;
             stackIn_24_1 = var11 & 1;
             if (stackIn_24_0 == stackIn_24_1) {

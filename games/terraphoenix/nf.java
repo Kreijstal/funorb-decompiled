@@ -8,13 +8,13 @@ final class nf implements Runnable {
     PlatformTaskDispatcher field_e;
     volatile boolean field_b;
     static int[] field_f;
-    volatile nk[] field_d;
+    volatile PcmPlayerService[] field_d;
     static Sprite[] field_g;
     volatile boolean field_i;
 
     public final void run() {
         int var1_int = 0;
-        nk var2 = null;
+        PcmPlayerService var2 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
@@ -76,7 +76,7 @@ final class nf implements Runnable {
     }
 
     nf() {
-        this.field_d = new nk[2];
+        this.field_d = new PcmPlayerService[2];
         this.field_b = false;
         this.field_i = false;
     }

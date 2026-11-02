@@ -5,7 +5,7 @@ final class oi extends WidgetContainer implements n {
     static Sprite field_J;
     private eb[] field_K;
     private int[] field_L;
-    private pk field_I;
+    private BitmapFont field_I;
     static java.awt.Color field_H;
     private int field_F;
     private String field_N;
@@ -44,8 +44,8 @@ final class oi extends WidgetContainer implements n {
         }
     }
 
-    oi(si param0, pk param1, String param2) {
-        super(0, 0, 288, 0, (cj) null);
+    oi(si param0, BitmapFont param1, String param2) {
+        super(0, 0, 288, 0, (WidgetActionListener) null);
         int var4_int = 0;
         this.field_F = 0;
         try {
@@ -120,7 +120,7 @@ final class oi extends WidgetContainer implements n {
             this.a(-103, (String) null, (byte) -64);
           }
           var4 = new eb(param2, param1);
-          var4.field_l = (cj) ((Object) new ic());
+          var4.field_l = (WidgetActionListener) ((Object) new ic());
           var5 = -2 + this.field_n;
           this.a(0, (byte) 107, this.field_p, 0, 34 + this.field_n);
           var4.a(var5, (byte) 85, this.field_p - 14, 7, 30);

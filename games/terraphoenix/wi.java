@@ -111,7 +111,7 @@ final class wi extends eb {
         var2 = Terraphoenix.field_V;
         try {
           for (var1_int = 0; 10 > var1_int; var1_int++) {
-            km.field_q[var1_int] = new pg(var1_int);
+            ArchiveIndex.field_q[var1_int] = new pg(var1_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

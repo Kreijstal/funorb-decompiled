@@ -158,7 +158,7 @@ final class ProxySocketConnector extends SocketConnector {
               return;
             }
             var4 = param1.position;
-            param1.e(var17.field_i, 8959);
+            param1.writeInt(var17.field_i, 8959);
             if (param0 > -115) {
               field_e = (qf) null;
             }
@@ -170,7 +170,7 @@ final class ProxySocketConnector extends SocketConnector {
                     var15 = (java.lang.reflect.Field) (var17.field_s[var5].field_e);
                     var8 = var15.getInt((Object) null);
                     param1.writeByte(0, -106);
-                    param1.e(var8, 8959);
+                    param1.writeInt(var8, 8959);
                   } else {
                     if (var6_int == 1) {
                       var16_ref = (java.lang.reflect.Field) (var17.field_s[var5].field_e);
@@ -182,7 +182,7 @@ final class ProxySocketConnector extends SocketConnector {
                         var26 = (java.lang.reflect.Field) (var17.field_s[var5].field_e);
                         var8 = var26.getModifiers();
                         param1.writeByte(0, -93);
-                        param1.e(var8, 8959);
+                        param1.writeInt(var8, 8959);
                       }
                     }
                   }
@@ -199,19 +199,19 @@ final class ProxySocketConnector extends SocketConnector {
                       param1.writeByte(0, -107);
                     } else if (var10 instanceof Number) {
                       param1.writeByte(1, 59);
-                      param1.a(((Number) (var10)).longValue(), 53);
+                      param1.writeLong(((Number) (var10)).longValue(), 53);
                     } else if (!(var10 instanceof String)) {
                       param1.writeByte(4, 119);
                     } else {
                       param1.writeByte(2, -105);
-                      param1.a((String) (var10), 2295);
+                      param1.writeString((String) (var10), 2295);
                     }
                   } else {
                     if (var6_int == 4) {
                       var27 = (java.lang.reflect.Method) (var17.field_j[var5].field_e);
                       var8Lifetime1 = var27.getModifiers();
                       param1.writeByte(0, 74);
-                      param1.e(var8Lifetime1, 8959);
+                      param1.writeInt(var8Lifetime1, 8959);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {

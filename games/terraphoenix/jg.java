@@ -10,12 +10,12 @@ final class jg extends al {
     static Sprite field_hb;
     static int field_gb;
 
-    final static fa a(int param0, int param1, boolean param2, boolean param3, int param4, boolean param5) {
+    final static Archive a(int param0, int param1, boolean param2, boolean param3, int param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           tb var8 = null;
-          fa stackIn_17_0 = null;
+          Archive stackIn_17_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 30) {
@@ -42,7 +42,7 @@ final class jg extends al {
             if (param3) {
               var8.c((byte) 2);
             }
-            stackIn_17_0 = new fa(var8, param5, param1);
+            stackIn_17_0 = new Archive(var8, param5, param1);
             return stackIn_17_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
