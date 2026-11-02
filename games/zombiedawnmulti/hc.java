@@ -102,8 +102,8 @@ final class hc {
             stackIn_2_0 = (ae) null;
             return stackIn_2_0;
           }
-          var2_int = param1.d((byte) 69);
-          var3 = param1.d((byte) 69);
+          var2_int = param1.readUnsignedShort((byte) 69);
+          var3 = param1.readUnsignedShort((byte) 69);
           stackIn_4_0 = new aj(var2_int, var3);
           return (ae) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

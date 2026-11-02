@@ -518,24 +518,24 @@ final class rp {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var1 = s.field_e;
-          var2 = var1.g(31365);
+          var2 = var1.readUnsignedByte(31365);
           if (var2 == 0) {
             if (bh.field_f == null) {
               bh.field_f = new sc(128);
               ClientException.field_d = 0;
             }
-            stackIn_12_0 = (var1.g(31365) != 1) ? 0 : 1;
+            stackIn_12_0 = (var1.readUnsignedByte(31365) != 1) ? 0 : 1;
             var3 = stackIn_12_0;
-            var4_ref_String = var1.f((byte) -29);
+            var4_ref_String = var1.readString((byte) -29);
             if (var3 == 0) {
               var5 = var4_ref_String;
             }
             if (var3 != 0 ||
               var9 != 0) {
-              var5 = var1.f((byte) -19);
+              var5 = var1.readString((byte) -19);
             }
             var6 = md.a((byte) -55, var4_ref_String);
-            var7 = var1.f((byte) -89);
+            var7 = var1.readString((byte) -89);
             var8 = tg.a((CharSequence) ((Object) var4_ref_String), false);
             if (var8 == null) {
               var8 = var4_ref_String;
@@ -579,9 +579,9 @@ final class rp {
               return;
             }
             ge.field_zb = 1;
-            var3_ref = var1.f((byte) -119);
+            var3_ref = var1.readString((byte) -119);
             ta.field_ob = ((String) (var3_ref)).intern();
-            var4 = var1.g(31365);
+            var4 = var1.readUnsignedByte(31365);
             gi.a((byte) -97, var4);
             return;
           }
@@ -589,12 +589,12 @@ final class rp {
             ol.field_o = new sc(128);
             dc.field_Fb = 0;
           }
-          var3_refLifetime1 = var1.f((byte) -49);
+          var3_refLifetime1 = var1.readString((byte) -49);
           if (((String) (var3_refLifetime1)).equals("")) {
             var3_refLifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.f((byte) -14);
-          var5Lifetime1 = var1.f((byte) -45);
+          var4_ref_StringLifetime1 = var1.readString((byte) -14);
+          var5Lifetime1 = var1.readString((byte) -45);
           var6Lifetime1 = dn.a(var4_ref_StringLifetime1, false);
           if (null == var6Lifetime1) {
             var6Lifetime1 = dn.a(var5Lifetime1, false);

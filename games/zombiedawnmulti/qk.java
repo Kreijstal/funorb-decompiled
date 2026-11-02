@@ -22,11 +22,11 @@ final class qk extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var2_int = param0.d((byte) 69);
-          var3 = param0.g(param1 ^ -31477);
+          var2_int = param0.readUnsignedShort((byte) 69);
+          var3 = param0.readUnsignedByte(param1 ^ -31477);
           var4 = new int[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            var4[var5] = param0.d((byte) 69);
+            var4[var5] = param0.readUnsignedShort((byte) 69);
           }
           if (param1 != -114) {
             qk.b(true);

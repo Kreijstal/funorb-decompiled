@@ -76,14 +76,14 @@ final class mm {
         int var3Lifetime1;
         this.field_f.payload = param0;
         this.field_f.position = 10;
-        int var2 = this.field_f.d((byte) 69);
-        this.field_g = this.field_f.d((byte) 69);
+        int var2 = this.field_f.readUnsignedShort((byte) 69);
+        this.field_g = this.field_f.readUnsignedShort((byte) 69);
         this.field_e = 500000;
         this.field_i = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_f.i(-1478490344);
-          var5 = this.field_f.i(-1478490344);
+          var4 = this.field_f.readInt(-1478490344);
+          var5 = this.field_f.readInt(-1478490344);
           if (var4 == 1297379947) {
             this.field_i[var3] = this.field_f.position;
             var3++;
@@ -173,14 +173,14 @@ final class mm {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_f.g(31365);
+          var3 = this.field_f.readUnsignedByte(31365);
           var4 = this.field_f.a(0);
           if (var3 == 47) {
             this.field_f.position = this.field_f.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_f.e(128);
+            var5 = this.field_f.readUnsignedMedium(128);
             var4 -= 3;
             var6 = this.field_h[param0];
             this.field_b = this.field_b + (long)var6 * (long)(this.field_e - var5);
@@ -194,10 +194,10 @@ final class mm {
         var3Lifetime1 = field_c[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_f.g(31365) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_f.readUnsignedByte(31365) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_f.g(31365) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_f.readUnsignedByte(31365) << 16;
         }
         return var4Lifetime1;
     }

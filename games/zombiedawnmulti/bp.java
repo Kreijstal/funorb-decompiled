@@ -72,13 +72,13 @@ final class bp extends un {
           var8.a(param0.field_i, (byte) -95);
           var8.a(param0.field_v, (byte) -76);
           var8.a(param0.field_t, (byte) -66);
-          var8.b(-116, param0.field_w);
-          var8.b(-99, param0.field_x);
-          var8.b(122, param0.field_l);
-          var8.b(-128, param0.field_k);
+          var8.writeInt(-116, param0.field_w);
+          var8.writeInt(-99, param0.field_x);
+          var8.writeInt(122, param0.field_l);
+          var8.writeInt(-128, param0.field_k);
           var8.a(-83, param0.field_y.length);
           for (var5 = 0; var5 < param0.field_y.length; var5++) {
-            var7.b(52, param0.field_y[var5]);
+            var7.writeInt(52, param0.field_y[var5]);
           }
           if (!param1) {
             field_u = (cj) null;
@@ -145,8 +145,8 @@ final class bp extends un {
           var14 = ZombieDawnMulti.field_E ? 1 : 0;
           try {
             var19 = new lp();
-            var19.field_n = param1.g(31365);
-            var19.field_r = param1.i(param3 - 1478490340);
+            var19.field_n = param1.readUnsignedByte(31365);
+            var19.field_r = param1.readInt(param3 - 1478490340);
             var19.field_m = new di[var19.field_n];
             var19.field_o = new byte[var19.field_n][][];
             var19.field_g = new int[var19.field_n];
@@ -155,25 +155,25 @@ final class bp extends un {
             var19.field_i = new int[var19.field_n];
             for (var5 = 0; var19.field_n > var5; var5++) {
               try {
-                var6_int = param1.g(31365);
+                var6_int = param1.readUnsignedByte(31365);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var21 = param1.f((byte) -32);
-                    var22 = param1.f((byte) -55);
-                    var9 = param1.g(31365);
+                    var21 = param1.readString((byte) -32);
+                    var22 = param1.readString((byte) -55);
+                    var9 = param1.readUnsignedByte(31365);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param1.f((byte) -8);
+                      var10[var11_int] = param1.readString((byte) -8);
                     }
                     var23 = new byte[var9][];
                     var20 = var23;
                     var11 = var20;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param1.i(-1478490344);
+                        var13 = param1.readInt(-1478490344);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param1.a(0, param3 - 6347, var13, var23[var12_int]);
@@ -191,13 +191,13 @@ final class bp extends un {
                     var19.field_o[var5] = var23;
                   }
                 } else {
-                  var17 = param1.f((byte) -43);
+                  var17 = param1.readString((byte) -43);
                   var7 = var17;
-                  var16 = param1.f((byte) -61);
+                  var16 = param1.readString((byte) -61);
                   var8 = var16;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param1.i(param3 - 1478490340);
+                    var9 = param1.readInt(param3 - 1478490340);
                   }
                   var19.field_i[var5] = var6_int;
                   var19.field_q[var5] = var9;

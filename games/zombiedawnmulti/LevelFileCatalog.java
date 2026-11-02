@@ -66,7 +66,7 @@ final class LevelFileCatalog {
           ma.field_a.position = ma.field_a.position + 1;
           var7_int = ma.field_a.position;
           ma.field_a.a(param1, true);
-          ma.field_a.a(param0, (byte) 105);
+          ma.field_a.writeString(param0, (byte) 105);
           ma.field_a.a(-31, param3);
           stackIn_2_0 = ma.field_a;
           stackIn_2_1 = 107;

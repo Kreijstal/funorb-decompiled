@@ -76,7 +76,7 @@ final class IntrusiveDequeCursor {
               var2 = new PacketBuffer(13);
               mo.a(IsaacRandom.field_b, var2, BufferedSocket.field_q, db.field_e, (byte) -124);
               var2.a(param0 - 19244, 15);
-              var2.b(-128, kk.field_q);
+              var2.writeInt(-128, kk.field_q);
               vh.field_Gb.a(0, -100, 13, var2.payload);
               la.field_d = la.field_d + 1;
               li.field_A = 30000L + bl.a((byte) 43);

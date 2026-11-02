@@ -29,8 +29,8 @@ final class qi {
             var9 = (PacketBuffer) null;
             qi.a(31, false, (java.math.BigInteger) null, 54, (java.math.BigInteger) null, (byte[]) null, (PacketBuffer) null);
           }
-          var2 = var11.g(31365);
-          var3 = var11.g(31365);
+          var2 = var11.readUnsignedByte(31365);
+          var3 = var11.readUnsignedByte(31365);
           if (var2 == 0) {
             var4_ref_u = (u) (cp.field_T.c(83));
             if (var4_ref_u == null) {
@@ -45,7 +45,7 @@ final class qi {
               var5_int = var13.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var11.g(31365) << tq.b(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var11.readUnsignedByte(31365) << tq.b(768, var7 << 8));
             }
             var4_ref_u.unlink(true);
             return;
@@ -55,7 +55,7 @@ final class qi {
             ak.a((byte) -115);
             return;
           }
-          var4 = var11.h(22219);
+          var4 = var11.readSignedSmart(22219);
           var5 = (hp) (mh.field_l.c(83));
           while (var5 != null) {
             if (var5.field_v != var3 ||
@@ -173,7 +173,7 @@ final class qi {
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            RasterBuffer.field_e.b(-128, var13[var11]);
+            RasterBuffer.field_e.writeInt(-128, var13[var11]);
             var11++;
           }
           RasterBuffer.field_e.a(param3, (byte) -82);

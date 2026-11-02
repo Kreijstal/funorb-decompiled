@@ -188,12 +188,12 @@ class gn extends UiWidget {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.d((byte) 69);
+          var2_int = param1.readUnsignedShort((byte) 69);
           if (param0 != -1) {
             field_D = (String) null;
           }
-          var3 = param1.d((byte) 69);
-          var4 = param1.g(31365);
+          var3 = param1.readUnsignedShort((byte) 69);
+          var4 = param1.readUnsignedByte(31365);
           stackIn_3_0 = ak.a(var4, (byte) -94, var2_int, var3);
           return (ae) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -352,7 +352,7 @@ class gn extends UiWidget {
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.a(-93, 1);
-          var9.a(param0, (byte) 105);
+          var9.writeString(param0, (byte) 105);
           var9.e(73, -var5 + var9.position);
           stackIn_18_0 = null;
           return (String) (stackIn_18_0);

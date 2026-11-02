@@ -27,7 +27,7 @@ final class tl extends DualLinkNode {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           while (true) {
-            var3_int = param0.g(31365);
+            var3_int = param0.readUnsignedByte(31365);
             if (var3_int != 0) {
               this.a(88, param0, var3_int);
               continue;
@@ -105,24 +105,24 @@ final class tl extends DualLinkNode {
           var4_int = 3 / ((param0 + 33) / 46);
           if (param2 != 1) {
             if (2 == param2) {
-              var5 = param1.g(31365);
+              var5 = param1.readUnsignedByte(31365);
               this.field_r = new int[var5];
               for (var6 = 0; var6 < var5; var6++) {
-                this.field_r[var6] = param1.d((byte) 69);
+                this.field_r[var6] = param1.readUnsignedShort((byte) 69);
               }
             } else if (param2 == 3) {
-              var5 = param1.g(31365);
+              var5 = param1.readUnsignedByte(31365);
               this.field_s = new int[var5][];
               this.field_q = new int[var5];
               for (var6 = 0; var6 < var5; var6++) {
-                var7 = param1.d((byte) 69);
+                var7 = param1.readUnsignedShort((byte) 69);
                 var8 = r.a(var7, (byte) 35);
                 if (var8 != null) {
                   this.field_q[var6] = var7;
                   array$0 = new int[var8.field_f];
                   this.field_s[var6] = array$0;
                   for (var9 = 0; var8.field_f > var9; var9++) {
-                    this.field_s[var6][var9] = param1.d((byte) 69);
+                    this.field_s[var6][var9] = param1.readUnsignedShort((byte) 69);
                   }
                 }
               }
@@ -132,7 +132,7 @@ final class tl extends DualLinkNode {
               }
             }
           } else {
-            this.field_u = mk.a('<', false, param1.f((byte) -62));
+            this.field_u = mk.a('<', false, param1.readString((byte) -62));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

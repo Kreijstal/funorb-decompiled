@@ -34,8 +34,8 @@ final class hb {
         byte[] var13 = null;
         try {
           var9 = new PacketBuffer(param0);
-          var3 = var9.g(31365);
-          var4 = var9.i(param1 ^ -1478490344);
+          var3 = var9.readUnsignedByte(31365);
+          var4 = var9.readInt(param1 ^ -1478490344);
           if (var4 >= 0 && (qo.field_u == 0 ||
             !(qo.field_u < var4))) {
             if (var3 == param1) {
@@ -46,7 +46,7 @@ final class hb {
               stackIn_21_0 = var5;
               return stackIn_21_0;
             }
-            var5_int = var9.i(-1478490344);
+            var5_int = var9.readInt(-1478490344);
             if (0 <= var5_int && (0 == qo.field_u ||
               !(qo.field_u < var5_int))) {
               var12 = new byte[var5_int];

@@ -227,7 +227,7 @@ abstract class aq extends GameApplet {
     }
 
     private final void h(int param0) {
-        int var2 = s.field_e.g(31365);
+        int var2 = s.field_e.readUnsignedByte(31365);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var5 = 84 % ((param0 - 53) / 42);
         int var4 = -1 + hd.field_q;

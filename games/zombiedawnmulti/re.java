@@ -7,7 +7,7 @@ final class re {
 
     final static void a(boolean param0) {
         CharSequence var3 = null;
-        ta.field_lb = s.field_e.f((byte) -107);
+        ta.field_lb = s.field_e.readString((byte) -107);
         if (!param0) {
           var3 = (CharSequence) ((Object) ta.field_lb);
           ProxySocketConnector.field_k = tg.a(var3, param0);

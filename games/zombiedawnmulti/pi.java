@@ -56,10 +56,10 @@ final class pi {
           mj.field_Fb[2] = (int)(nm.field_c >> 32);
           mj.field_Fb[3] = (int)nm.field_c;
           pm.field_R.position = 0;
-          pm.field_R.b(33, mj.field_Fb[0]);
-          pm.field_R.b(param0 ^ 84, mj.field_Fb[1]);
-          pm.field_R.b(-111, mj.field_Fb[2]);
-          pm.field_R.b(param0 ^ 88, mj.field_Fb[3]);
+          pm.field_R.writeInt(33, mj.field_Fb[0]);
+          pm.field_R.writeInt(param0 ^ 84, mj.field_Fb[1]);
+          pm.field_R.writeInt(-111, mj.field_Fb[2]);
+          pm.field_R.writeInt(param0 ^ 88, mj.field_Fb[3]);
           jq.a(pm.field_R, 13746);
           pm.field_R.a(param4, (byte) -54);
           if (param0 != -59) {
@@ -74,7 +74,7 @@ final class pi {
           }
           ma.field_a.position = ma.field_a.position + 2;
           var5_int = ma.field_a.position;
-          ma.field_a.b(95, v.field_f);
+          ma.field_a.writeInt(95, v.field_f);
           ma.field_a.a(DualLinkNode.field_i, true);
           var6 = 0;
           if (cm.field_e) {
@@ -94,7 +94,7 @@ final class pi {
           if (var7 == null) {
             var7 = "";
           }
-          ma.field_a.a(var7, (byte) 105);
+          ma.field_a.writeString(var7, (byte) 105);
           if (null != oe.field_f) {
             ma.field_a.b(-16171, oe.field_f);
           }

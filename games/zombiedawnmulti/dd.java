@@ -179,14 +179,14 @@ final class dd implements dr {
           if (!fa.b(10, 1)) {
             return false;
           }
-          hd.field_q = s.field_e.g(param0 + 31365);
+          hd.field_q = s.field_e.readUnsignedByte(param0 + 31365);
           s.field_e.position = 0;
         }
         if (hd.field_q == -2) {
           if (!fa.b(param0 + 10, 2)) {
             return false;
           }
-          hd.field_q = s.field_e.d((byte) 69);
+          hd.field_q = s.field_e.readUnsignedShort((byte) 69);
           s.field_e.position = 0;
         }
         return fa.b(10, hd.field_q);

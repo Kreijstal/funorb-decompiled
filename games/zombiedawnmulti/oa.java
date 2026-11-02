@@ -18,12 +18,12 @@ final class oa {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.d((byte) 69);
+          var2_int = param0.readUnsignedShort((byte) 69);
           if (param1 != 14) {
             field_a = (ao) null;
           }
-          var3 = param0.g(31365);
-          var4 = param0.d((byte) 69);
+          var3 = param0.readUnsignedByte(31365);
+          var4 = param0.readUnsignedShort((byte) 69);
           stackIn_3_0 = new fq(var2_int, var3, var4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

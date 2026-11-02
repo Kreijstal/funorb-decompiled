@@ -37,7 +37,7 @@ final class rh {
         this.field_d.b(param0);
         this.field_f = new pe();
         this.field_f.b(param0);
-        int var2 = param0.g(31365);
+        int var2 = param0.readUnsignedByte(31365);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_r = new pe();
@@ -45,7 +45,7 @@ final class rh {
           this.field_l = new pe();
           this.field_l.b(param0);
         }
-        var2 = param0.g(31365);
+        var2 = param0.readUnsignedByte(31365);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_e = new pe();
@@ -53,7 +53,7 @@ final class rh {
           this.field_s = new pe();
           this.field_s.b(param0);
         }
-        var2 = param0.g(31365);
+        var2 = param0.readUnsignedByte(31365);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_a = new pe();
@@ -62,18 +62,18 @@ final class rh {
           this.field_x.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.h((byte) -116);
+          var4 = param0.readUnsignedSmart((byte) -116);
           if (var4 == 0) {
             break;
           }
           this.field_y[var3] = var4;
-          this.field_k[var3] = param0.h(22219);
-          this.field_u[var3] = param0.h((byte) -127);
+          this.field_k[var3] = param0.readSignedSmart(22219);
+          this.field_u[var3] = param0.readUnsignedSmart((byte) -127);
         }
-        this.field_w = param0.h((byte) -119);
-        this.field_t = param0.h((byte) -107);
-        this.field_b = param0.d((byte) 69);
-        this.field_h = param0.d((byte) 69);
+        this.field_w = param0.readUnsignedSmart((byte) -119);
+        this.field_t = param0.readUnsignedSmart((byte) -107);
+        this.field_b = param0.readUnsignedShort((byte) 69);
+        this.field_h = param0.readUnsignedShort((byte) 69);
         this.field_j = new uh();
         this.field_q = new pe();
         this.field_j.a(param0, this.field_q);

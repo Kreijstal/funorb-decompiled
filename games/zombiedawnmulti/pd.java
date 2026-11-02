@@ -119,7 +119,7 @@ final class pd {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.position = -2 + param1.length;
-          qc.field_v = var17.d((byte) 69);
+          qc.field_v = var17.readUnsignedShort((byte) 69);
           FullscreenFocusCanvas.field_h = new boolean[qc.field_v];
           qj.field_o = new int[qc.field_v];
           PacketBuffer.field_i = new int[qc.field_v];
@@ -131,25 +131,25 @@ final class pd {
           qp.field_t = new byte[qc.field_v][];
           vj.field_p = new int[qc.field_v];
           var17.position = param1.length - 7 - 8 * qc.field_v;
-          ie.field_nb = var17.d((byte) 69);
-          hj.field_a = var17.d((byte) 69);
-          var3 = 1 + (var17.g(31365) & 255);
+          ie.field_nb = var17.readUnsignedShort((byte) 69);
+          hj.field_a = var17.readUnsignedShort((byte) 69);
+          var3 = 1 + (var17.readUnsignedByte(31365) & 255);
           for (var4 = 0; var4 < qc.field_v; var4++) {
-            PacketBuffer.field_i[var4] = var16.d((byte) 69);
+            PacketBuffer.field_i[var4] = var16.readUnsignedShort((byte) 69);
           }
           for (var4Lifetime1 = 0; qc.field_v > var4Lifetime1; var4Lifetime1++) {
-            qj.field_o[var4Lifetime1] = var17.d((byte) 69);
+            qj.field_o[var4Lifetime1] = var17.readUnsignedShort((byte) 69);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < qc.field_v; var4Lifetime2++) {
-            oq.field_w[var4Lifetime2] = var17.d((byte) 69);
+            oq.field_w[var4Lifetime2] = var17.readUnsignedShort((byte) 69);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < qc.field_v; var4Lifetime3++) {
-            vj.field_p[var4Lifetime3] = var17.d((byte) 69);
+            vj.field_p[var4Lifetime3] = var17.readUnsignedShort((byte) 69);
           }
           var17.position = -(var3 * 3) - 4 + (param1.length - 8 * qc.field_v);
           tp.field_t = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            tp.field_t[var4Lifetime4] = var17.e(128);
+            tp.field_t[var4Lifetime4] = var17.readUnsignedMedium(128);
             if (tp.field_t[var4Lifetime4] == 0) {
               tp.field_t[var4Lifetime4] = 1;
             }
@@ -168,16 +168,16 @@ final class pd {
             var9 = var19;
             vf.field_b[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.g(31365);
+            var11 = var17.readUnsignedByte(31365);
             stackIn_24_0 = -1;
             stackIn_24_1 = ~(1 & var11);
             if (stackIn_24_0 == stackIn_24_1) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var17.d(-249699580);
+                var8[var12] = var17.readByte(-249699580);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$1 = var17.d(-249699580);
+                  dupTemp$1 = var17.readByte(-249699580);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_33_0 = var10;
@@ -192,13 +192,13 @@ final class pd {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var13 * var5 + var12] = var17.d(-249699580);
+                  var8[var13 * var5 + var12] = var17.readByte(-249699580);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var17.d(-249699580);
+                    dupTemp$0 = var17.readByte(-249699580);
                     var9[var12 + var5 * var13] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_48_0 = var10;

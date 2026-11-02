@@ -121,22 +121,22 @@ final class sn extends cj {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          vn.field_e = param1.d((byte) 69) << 5;
-          var2_int = param1.g(param0 + 27315);
+          vn.field_e = param1.readUnsignedShort((byte) 69) << 5;
+          var2_int = param1.readUnsignedByte(param0 + 27315);
           ao.field_c = (var2_int & 7) << 18;
           vn.field_e = vn.field_e + (var2_int >> 3);
-          ao.field_c = ao.field_c + (param1.d((byte) 69) << 2);
-          var2_intLifetime1 = param1.g(31365);
+          ao.field_c = ao.field_c + (param1.readUnsignedShort((byte) 69) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(31365);
           ao.field_c = ao.field_c + (var2_intLifetime1 >> 6);
           jq.field_a = var2_intLifetime1 << 15 & 2064384;
           if (param0 != 4050) {
             sn.c((byte) 16);
           }
-          jq.field_a = jq.field_a + (param1.g(31365) << 7);
-          var2_intLifetime2 = param1.g(31365);
+          jq.field_a = jq.field_a + (param1.readUnsignedByte(31365) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(31365);
           qc.field_q = var2_intLifetime2 << 16 & 65536;
           jq.field_a = jq.field_a + (var2_intLifetime2 >> 1);
-          qc.field_q = qc.field_q + param1.d((byte) 69);
+          qc.field_q = qc.field_q + param1.readUnsignedShort((byte) 69);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "sn.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

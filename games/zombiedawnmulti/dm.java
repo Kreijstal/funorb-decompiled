@@ -99,17 +99,17 @@ final class dm extends cj {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.d((byte) 69);
-          var3 = param1.d((byte) 69);
-          var4 = param1.d((byte) 69);
+          var2_int = param1.readUnsignedShort((byte) 69);
+          var3 = param1.readUnsignedShort((byte) 69);
+          var4 = param1.readUnsignedShort((byte) 69);
           if (param0 < 37) {
             stackIn_2_0 = (sj) null;
             return stackIn_2_0;
           }
-          var5 = param1.d((byte) 69);
-          var6 = param1.i(-1478490344);
-          var7 = param1.i(-1478490344);
-          var8 = param1.g(31365);
+          var5 = param1.readUnsignedShort((byte) 69);
+          var6 = param1.readInt(-1478490344);
+          var7 = param1.readInt(-1478490344);
+          var8 = param1.readUnsignedByte(31365);
           stackIn_4_0 = new sj(var2_int, var3, var4, var5, var6, var7, var8);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -180,7 +180,7 @@ final class io {
     }
 
     private final void a(long param0, boolean param1) {
-        kk var4 = (kk) (this.field_j.a(param0, 72));
+        kk var4 = (kk) (this.field_j.get(param0, 72));
         this.a(1, var4);
         if (!param1) {
           return;
@@ -261,7 +261,7 @@ final class io {
         if (param0 <= 121) {
           return (Object) null;
         }
-        kk var7 = (kk) (this.field_j.a(param1, 64));
+        kk var7 = (kk) (this.field_j.get(param1, 64));
         if (var7 == null) {
           return null;
         }

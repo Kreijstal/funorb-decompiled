@@ -386,14 +386,14 @@ final class qm extends WidgetContainer implements fi, in {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.d((byte) 69);
-          var3 = param0.d((byte) 69);
-          var4 = param0.d((byte) 69);
-          var5 = param0.d((byte) 69);
+          var2_int = param0.readUnsignedShort((byte) 69);
+          var3 = param0.readUnsignedShort((byte) 69);
+          var4 = param0.readUnsignedShort((byte) 69);
+          var5 = param0.readUnsignedShort((byte) 69);
           if (!param1) {
             qm.a(16);
           }
-          var6 = param0.d((byte) 69);
+          var6 = param0.readUnsignedShort((byte) 69);
           stackIn_3_0 = ClientException.a(var6, var4, var3, (byte) 104, var2_int, var5);
           return (ae) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

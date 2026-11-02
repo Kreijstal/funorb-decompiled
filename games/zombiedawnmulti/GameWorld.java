@@ -212,39 +212,39 @@ class GameWorld {
         var16 = null;
         var17 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          this.currentTick = param1.c((byte) -18);
-          stackIn_4_1 = (0 != param1.g(param0 ^ 31367));
+          this.currentTick = param1.readShort((byte) -18);
+          stackIn_4_1 = (0 != param1.readUnsignedByte(param0 ^ 31367));
           this.field_i = stackIn_4_1;
-          this.field_C = param1.d((byte) 69);
-          this.field_I = param1.d((byte) 69);
-          this.field_g = param1.d((byte) 69);
-          this.field_l = param1.g(31365);
+          this.field_C = param1.readUnsignedShort((byte) 69);
+          this.field_I = param1.readUnsignedShort((byte) 69);
+          this.field_g = param1.readUnsignedShort((byte) 69);
+          this.field_l = param1.readUnsignedByte(31365);
           if (param0 != 2) {
             var18 = (String) null;
             GameWorld.a(51, (String) null);
           }
           for (var3_int = 0; var3_int < this.field_t; var3_int++) {
-            this.field_y[var3_int] = param1.g(31365);
-            this.field_D[var3_int][0] = param1.e(128);
-            this.field_D[var3_int][1] = param1.e(128);
-            this.field_d[var3_int] = param1.d((byte) 69);
-            this.field_e[var3_int] = (long)param1.e(128) << 40;
+            this.field_y[var3_int] = param1.readUnsignedByte(31365);
+            this.field_D[var3_int][0] = param1.readUnsignedMedium(128);
+            this.field_D[var3_int][1] = param1.readUnsignedMedium(128);
+            this.field_d[var3_int] = param1.readUnsignedShort((byte) 69);
+            this.field_e[var3_int] = (long)param1.readUnsignedMedium(128) << 40;
             this.teamCharacterCounts[var3_int] = 0;
             this.field_J[var3_int] = 0;
-            this.field_a[var3_int] = param1.d((byte) 69);
-            this.field_z[var3_int] = param1.d((byte) 69);
+            this.field_a[var3_int] = param1.readUnsignedShort((byte) 69);
+            this.field_z[var3_int] = param1.readUnsignedShort((byte) 69);
           }
           while (true) {
-            dupTemp$0 = param1.g(31365);
+            dupTemp$0 = param1.readUnsignedByte(31365);
             var3_intLifetime1 = dupTemp$0;
             if (dupTemp$0 == 0) {
               return;
             }
             var4 = null;
-            var5 = param1.g(31365);
-            var6 = param1.d((byte) 69);
-            var7 = param1.d((byte) 69);
-            var8 = param1.d((byte) 69);
+            var5 = param1.readUnsignedByte(31365);
+            var6 = param1.readUnsignedShort((byte) 69);
+            var7 = param1.readUnsignedShort((byte) 69);
+            var8 = param1.readUnsignedShort((byte) 69);
             var8 = 255 & var8 | var8 << 16 & -16777216;
             var14 = var3_intLifetime1;
             if (var14 == 1) {
@@ -331,7 +331,7 @@ class GameWorld {
           var7 = var8.position;
           var8.a(114, param4);
           if (param4 == 2) {
-            var8.a(param1, (byte) 105);
+            var8.writeString(param1, (byte) 105);
           }
           if (param3 == null) {
             var8.a(param0, (byte) -71);

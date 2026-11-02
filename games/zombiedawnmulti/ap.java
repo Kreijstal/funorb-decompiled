@@ -243,10 +243,10 @@ final class ap extends qb {
                       }
                     } else {
                       this.field_k.position = 0;
-                      var6 = this.field_k.g(31365);
-                      var7 = this.field_k.i(-1478490344);
-                      var8 = this.field_k.g(31365);
-                      var9 = this.field_k.i(-1478490344);
+                      var6 = this.field_k.readUnsignedByte(31365);
+                      var7 = this.field_k.readInt(-1478490344);
+                      var8 = this.field_k.readUnsignedByte(31365);
+                      var9 = this.field_k.readInt(-1478490344);
                       var10 = 127 & var8;
                       stackIn_50_0 = ((var8 & 128) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -283,7 +283,7 @@ final class ap extends qb {
                       this.field_m = var14_ref;
                       this.field_m.field_y = new PacketBuffer(var15 + (var9 + this.field_m.field_B));
                       this.field_m.field_y.a(125, var10);
-                      this.field_m.field_y.b(42, var9);
+                      this.field_m.field_y.writeInt(42, var9);
                       this.field_m.field_D = 10;
                       this.field_k.position = 0;
                     }
@@ -488,7 +488,7 @@ final class ap extends qb {
                 this.field_b.position = 0;
                 this.field_b.a(126, 4);
                 this.field_b.a(125, (int) this.field_i);
-                this.field_b.b(-103, 0);
+                this.field_b.writeInt(-103, 0);
                 this.field_q.a(0, -100, this.field_b.payload.length, this.field_b.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;

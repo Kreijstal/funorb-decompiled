@@ -58,8 +58,8 @@ abstract class mp {
         try {
           pm.field_R.position = param0;
           pm.field_R.a(param0 ^ -108, 12);
-          pm.field_R.b(-114, c.field_c.nextInt());
-          pm.field_R.b(-118, c.field_c.nextInt());
+          pm.field_R.writeInt(-114, c.field_c.nextInt());
+          pm.field_R.writeInt(-118, c.field_c.nextInt());
           pm.field_R.a(123, param2);
           pm.field_R.a(-67, param1);
           pm.field_R.a(param3, (byte) -128);

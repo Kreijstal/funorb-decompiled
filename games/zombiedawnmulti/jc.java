@@ -72,14 +72,14 @@ final class jc {
         int var3;
         this.field_a = new rh[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.g(31365);
+          var3 = param0.readUnsignedByte(31365);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_a[var2] = new rh();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_b = param0.d((byte) 69);
-        this.field_c = param0.d((byte) 69);
+        this.field_b = param0.readUnsignedShort((byte) 69);
+        this.field_c = param0.readUnsignedShort((byte) 69);
     }
 }

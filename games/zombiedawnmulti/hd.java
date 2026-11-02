@@ -219,7 +219,7 @@ final class hd extends un {
               return;
             }
             var4 = param0.position;
-            param0.b(param1 ^ 34, var17.field_r);
+            param0.writeInt(param1 ^ 34, var17.field_r);
             for (var5 = param1; var5 < var17.field_n; var5++) {
               if (var17.field_g[var5] != 0) {
                 param0.a(-99, var17.field_g[var5]);
@@ -232,7 +232,7 @@ final class hd extends un {
                         var15 = (java.lang.reflect.Field) (var17.field_m[var5].field_d);
                         var8 = var15.getModifiers();
                         param0.a(118, 0);
-                        param0.b(-126, var8);
+                        param0.writeInt(-126, var8);
                       }
                     } else {
                       var16_ref = (java.lang.reflect.Field) (var17.field_m[var5].field_d);
@@ -244,7 +244,7 @@ final class hd extends un {
                     var26 = (java.lang.reflect.Field) (var17.field_m[var5].field_d);
                     var8 = var26.getInt((Object) null);
                     param0.a(-95, 0);
-                    param0.b(-123, var8);
+                    param0.writeInt(-123, var8);
                   }
                   if (var6_int == 3) {
                     var27 = (java.lang.reflect.Method) (var17.field_l[var5].field_d);
@@ -264,14 +264,14 @@ final class hd extends un {
                       param0.a(-45, 4);
                     } else {
                       param0.a(113, 2);
-                      param0.a((String) (var10), (byte) 105);
+                      param0.writeString((String) (var10), (byte) 105);
                     }
                   } else {
                     if (var6_int == 4) {
                       var28 = (java.lang.reflect.Method) (var17.field_l[var5].field_d);
                       var8Lifetime1 = var28.getModifiers();
                       param0.a(125, 0);
-                      param0.b(-102, var8Lifetime1);
+                      param0.writeInt(-102, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {

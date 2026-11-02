@@ -19,7 +19,7 @@ final class jg {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.h((byte) -109);
+            var3_int = param0.readUnsignedSmart((byte) -109);
             if (var3_int > param1) {
               var3_int = param1;
             }

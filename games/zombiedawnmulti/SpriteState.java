@@ -75,9 +75,9 @@ abstract class SpriteState extends DualLinkNode {
           if (param0 != 22272) {
             field_t = (cj) null;
           }
-          var2_int = param1.d((byte) 69);
-          var3 = param1.d((byte) 69);
-          var4 = param1.d((byte) 69);
+          var2_int = param1.readUnsignedShort((byte) 69);
+          var3 = param1.readUnsignedShort((byte) 69);
+          var4 = param1.readUnsignedShort((byte) 69);
           stackIn_3_0 = aq.a(var2_int, false, var4, var3);
           return (ae) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

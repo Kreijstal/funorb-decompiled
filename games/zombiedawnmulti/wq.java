@@ -98,14 +98,14 @@ final class wq {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.d((byte) 69);
+          var2_int = param0.readUnsignedShort((byte) 69);
           var5 = -60 / ((-63 - param1) / 52);
-          var3 = param0.g(31365);
-          var4 = param0.g(31365);
-          var6 = param0.g(31365);
-          var7 = param0.d((byte) 69);
-          var8 = param0.d((byte) 69);
-          var9 = param0.d((byte) 69);
+          var3 = param0.readUnsignedByte(31365);
+          var4 = param0.readUnsignedByte(31365);
+          var6 = param0.readUnsignedByte(31365);
+          var7 = param0.readUnsignedShort((byte) 69);
+          var8 = param0.readUnsignedShort((byte) 69);
+          var9 = param0.readUnsignedShort((byte) 69);
           stackIn_1_0 = rm.a(var2_int, var8, var9, var4, var6, var3, 8128, var7);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

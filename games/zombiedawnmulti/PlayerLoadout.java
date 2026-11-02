@@ -25,7 +25,7 @@ final class PlayerLoadout {
             this.powerupTypes = (int[]) null;
           }
           while (this.powerupReadyTick.length > var3_int) {
-            this.powerupReadyTick[var3_int] = param1.d((byte) 69);
+            this.powerupReadyTick[var3_int] = param1.readUnsignedShort((byte) 69);
             var3_int++;
           }
           return;

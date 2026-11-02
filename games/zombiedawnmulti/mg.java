@@ -68,8 +68,8 @@ final class mg extends id {
             dd.field_d = null;
             if (param4 == null) {
               pm.field_R.position = 0;
-              pm.field_R.b(125, c.field_c.nextInt());
-              pm.field_R.b(-114, c.field_c.nextInt());
+              pm.field_R.writeInt(125, c.field_c.nextInt());
+              pm.field_R.writeInt(-114, c.field_c.nextInt());
               stackIn_15_0 = pm.field_R;
               stackIn_15_1 = -16171;
               if (param1.a((byte) 105)) {
@@ -97,8 +97,8 @@ final class mg extends id {
               if (param0) {
                 var9 = var9 | 1;
               }
-              pm.field_R.b(-11, c.field_c.nextInt());
-              pm.field_R.b(90, c.field_c.nextInt());
+              pm.field_R.writeInt(-11, c.field_c.nextInt());
+              pm.field_R.writeInt(90, c.field_c.nextInt());
               pm.field_R.b(-16171, var14);
               pm.field_R.b(-16171, var8);
               var15 = (CharSequence) ((Object) param4);
@@ -113,7 +113,7 @@ final class mg extends id {
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              ma.field_a.a(var11_ref_StringLifetime4, (byte) 105);
+              ma.field_a.writeString(var11_ref_StringLifetime4, (byte) 105);
               hd.a(gn.field_L, (byte) -123, tp.field_v, pm.field_R, ma.field_a);
               ma.field_a.b(false, ma.field_a.position - var10);
             }
@@ -122,7 +122,7 @@ final class mg extends id {
           }
           if (MouseWheelInput.field_c == vo.field_l &&
             fa.b(10, 1)) {
-            var9Lifetime1 = s.field_e.g(31365);
+            var9Lifetime1 = s.field_e.readUnsignedByte(31365);
             s.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -151,7 +151,7 @@ final class mg extends id {
           if (sa.field_n == vo.field_l) {
             var9Lifetime2 = 2;
             if (fa.b(param6 ^ -82, var9Lifetime2)) {
-              var10Lifetime1 = s.field_e.d((byte) 69);
+              var10Lifetime1 = s.field_e.readUnsignedShort((byte) 69);
               s.field_e.position = 0;
               if (fa.b(10, var10Lifetime1)) {
                 var11 = hb.field_b.length;
@@ -168,12 +168,12 @@ final class mg extends id {
           if (pq.field_p == vo.field_l &&
             dd.a(param6 ^ -92)) {
             if (op.field_i == 255) {
-              var9_ref_String = s.field_e.g((byte) -89);
+              var9_ref_String = s.field_e.readNullableString((byte) -89);
               if (var9_ref_String != null) {
                 jh.a(jl.b(0), -1, var9_ref_String);
               }
             } else {
-              ol.field_q = s.field_e.f((byte) -71);
+              ol.field_q = s.field_e.readString((byte) -71);
             }
             ak.a((byte) -118);
             sk.field_j = false;

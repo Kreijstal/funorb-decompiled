@@ -194,7 +194,7 @@ abstract class ng {
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.a(113, 3);
-          var5.a(param0, (byte) 105);
+          var5.writeString(param0, (byte) 105);
           var5.e(89, -var6 + var5.position);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);

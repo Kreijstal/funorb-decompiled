@@ -59,7 +59,7 @@ final class ga extends PacketBuffer {
           }
           var13 = s.field_e;
           var15 = var13;
-          var2 = var15.g(31365);
+          var2 = var15.readUnsignedByte(31365);
           var3 = (vg) (GameApplet.field_i.c(116));
           while (var3 != null) {
             if (var2 != var3.field_i) {
@@ -72,12 +72,12 @@ final class ga extends PacketBuffer {
             ak.a((byte) -123);
             return;
           }
-          var4 = var15.g(31365);
+          var4 = var15.readUnsignedByte(31365);
           if (var4 != 0) {
             kk.field_v[0] = ta.field_lb;
             var5 = var3.field_p;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              kk.field_v[var6_int] = var13.f((byte) -116);
+              kk.field_v[var6_int] = var13.readString((byte) -116);
             }
             s.a(var4, (byte) 111, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {

@@ -136,9 +136,9 @@ final class rj extends id {
             rj.j(-22);
           }
           var28 = s.field_e;
-          var2 = var28.g(param0 + 31362);
+          var2 = var28.readUnsignedByte(param0 + 31362);
           if (var2 == 0) {
-            var3 = var28.d((byte) 69);
+            var3 = var28.readUnsignedShort((byte) 69);
             var4 = (nh) (pn.field_f.c(71));
             while (var4 != null) {
               if (var3 != var4.field_l) {
@@ -151,7 +151,7 @@ final class rj extends id {
               ak.a((byte) -119);
               return;
             }
-            var5 = var28.g(param0 ^ 31366);
+            var5 = var28.readUnsignedByte(param0 ^ 31366);
             if (var5 == 0) {
               var4.unlink(true);
               return;
@@ -162,12 +162,12 @@ final class rj extends id {
             ha.field_j[0].field_c = null;
             var7 = var4.field_f;
             for (var8_int = 1; var5 > var8_int; var8_int++) {
-              ha.field_j[var8_int].field_d = var28.f((byte) -121);
+              ha.field_j[var8_int].field_d = var28.readString((byte) -121);
               ha.field_j[var8_int].field_g = false;
-              if (1 != var28.g(31365)) {
+              if (1 != var28.readUnsignedByte(31365)) {
                 ha.field_j[var8_int].field_c = null;
               } else {
-                ha.field_j[var8_int].field_c = var28.f((byte) -81);
+                ha.field_j[var8_int].field_c = var28.readString((byte) -81);
               }
             }
             var8 = new String[3][var6];
@@ -180,15 +180,15 @@ final class rj extends id {
             var15 = 0;
             var16 = 0;
             var17 = 0;
-            var18 = var28.g(31365);
+            var18 = var28.readUnsignedByte(31365);
             if (var18 <= 0) {
               var4.unlink(true);
               return;
             }
             for (var19 = 0; var18 > var19; var19++) {
-              var20 = var28.g(31365);
+              var20 = var28.readUnsignedByte(31365);
               var21 = ha.field_j[var20].field_d;
-              var22 = var28.a((byte) -30);
+              var22 = var28.readLong((byte) -30);
               var24 = var28.position;
               if (var6 > var19) {
                 var8[0][var12] = var21;
@@ -198,7 +198,7 @@ final class rj extends id {
                 for (var25 = 0; var7 > var25; var25++) {
                   incrementValue$0 = var15;
                   var15++;
-                  var36[0][incrementValue$0] = var28.i(-1478490344);
+                  var36[0][incrementValue$0] = var28.readInt(-1478490344);
                 }
               }
               if (var21 != null &&
@@ -211,7 +211,7 @@ final class rj extends id {
                 for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                   incrementValue$1 = var16;
                   var16++;
-                  var36[1][incrementValue$1] = var28.i(-1478490344);
+                  var36[1][incrementValue$1] = var28.readInt(-1478490344);
                 }
               }
               if (var14 < var6 &&
@@ -225,7 +225,7 @@ final class rj extends id {
                 for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                   incrementValue$2 = var17;
                   var17++;
-                  var36[2][incrementValue$2] = var28.i(-1478490344);
+                  var36[2][incrementValue$2] = var28.readInt(-1478490344);
                 }
               }
             }
@@ -233,8 +233,8 @@ final class rj extends id {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var28.d((byte) 69);
-            var28.a((byte) -30);
+            var3Lifetime1 = var28.readUnsignedShort((byte) 69);
+            var28.readLong((byte) -30);
             var4_ref = (kj) (md.field_u.c(102));
             while (var4_ref != null) {
               if (var4_ref.field_i != var3Lifetime1) {

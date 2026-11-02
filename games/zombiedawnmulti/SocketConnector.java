@@ -57,11 +57,11 @@ abstract class SocketConnector {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1) {
-            param0.field_cc = param2.g(31365);
+            param0.field_cc = param2.readUnsignedByte(31365);
           }
-          param0.field_mc = param2.g(31365);
-          param0.field_Pb = param2.g(31365);
-          var4_int = param2.g(31365);
+          param0.field_mc = param2.readUnsignedByte(31365);
+          param0.field_Pb = param2.readUnsignedByte(31365);
+          var4_int = param2.readUnsignedByte(31365);
           stackIn_6_0 = (jh) (param0);
           stackIn_7_1 = (0 != (var4_int & 128));
           stackIn_6_0.field_Mb = stackIn_7_1;
@@ -92,21 +92,21 @@ abstract class SocketConnector {
           param2.a(0, -6351, param0.field_Zb.length, param0.field_Zb);
           stackIn_31_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_31_0;
-          param0.field_Ub = param2.d((byte) 69);
-          param0.field_qc = bl.a((byte) 108) - (long)param2.i(-1478490344);
+          param0.field_Ub = param2.readUnsignedShort((byte) 69);
+          param0.field_qc = bl.a((byte) 108) - (long)param2.readInt(-1478490344);
           if (var5 == 0) {
             param0.field_Sb = -1;
           } else {
-            param0.field_Sb = param2.i(-1478490344);
+            param0.field_Sb = param2.readInt(-1478490344);
           }
-          param0.field_nc = param2.a((byte) -30);
+          param0.field_nc = param2.readLong((byte) -30);
           var7 = param2.position;
-          param0.field_Nb = param2.f((byte) -74);
+          param0.field_Nb = param2.readString((byte) -74);
           if (var6 != 0) {
             param0.field_bc = new String[param0.field_cc];
             param2.position = var7;
             for (var8 = 0; var8 < param0.field_cc; var8++) {
-              param0.field_bc[var8] = param2.f((byte) -91);
+              param0.field_bc[var8] = param2.readString((byte) -91);
             }
             return;
           }

@@ -120,7 +120,7 @@ final class sf {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.a(125, 2);
-          var5.a(param2, (byte) 105);
+          var5.writeString(param2, (byte) 105);
           var5.e(100, -var4 + var5.position);
           stackIn_22_0 = null;
           return (String) (stackIn_22_0);

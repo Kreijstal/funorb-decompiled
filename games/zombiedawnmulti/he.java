@@ -96,14 +96,14 @@ final class he implements nl {
             he.a(-53);
           }
           var10 = s.field_e;
-          var2 = var10.g(31365);
+          var2 = var10.readUnsignedByte(31365);
           if (var2 == 0) {
             var9 = (cr) (dc.field_Gb.c(param0 + 9430));
             if (var9 == null) {
               ak.a((byte) -128);
               return;
             }
-            var4 = var10.g(param0 + 40720);
+            var4 = var10.readUnsignedByte(param0 + 40720);
             if (var4 != 0) {
               var12 = new byte[var4];
               var11 = var12;
@@ -123,7 +123,7 @@ final class he implements nl {
             var9.unlink(true);
           } else {
             if (var2 == 1) {
-              var3 = var10.i(-1478490344);
+              var3 = var10.readInt(-1478490344);
               var4_ref_n = (n) (SpriteState.field_s.c(param0 ^ -9398));
               while (var4_ref_n != null) {
                 if (var4_ref_n.field_h != var3) {

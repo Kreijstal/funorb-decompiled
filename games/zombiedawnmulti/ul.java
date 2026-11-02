@@ -354,7 +354,7 @@ final class ul {
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var29.i(-1478490344);
+                  var17 = var17 + var29.readInt(-1478490344);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -376,7 +376,7 @@ final class ul {
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var29.i(-1478490344);
+                  var19 = var19 + var29.readInt(-1478490344);
                   if (var6 != null) {
                     var21 = var34[var20];
                   } else {
@@ -403,7 +403,7 @@ final class ul {
               for (var15_int = 0; var12 > var15_int; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
-                  var16 = var16 + var31.i(-1478490344);
+                  var16 = var16 + var31.readInt(-1478490344);
                   var14[var17] = var14[var17] + var16;
                 }
               }
@@ -420,7 +420,7 @@ final class ul {
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var31.i(-1478490344);
+                  var18 = var18 + var31.readInt(-1478490344);
                   d.a(var43, var16, var40[var19], var39[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;

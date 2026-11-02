@@ -58,18 +58,18 @@ final class kn {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.d((byte) 69);
-          var3 = param1.d((byte) 69);
-          var4 = param1.g(31365);
-          var5 = param1.i(-1478490344);
-          var6 = param1.i(-1478490344);
-          var7 = param1.i(-1478490344);
-          var8 = param1.i(-1478490344);
+          var2_int = param1.readUnsignedShort((byte) 69);
+          var3 = param1.readUnsignedShort((byte) 69);
+          var4 = param1.readUnsignedByte(31365);
+          var5 = param1.readInt(-1478490344);
+          var6 = param1.readInt(-1478490344);
+          var7 = param1.readInt(-1478490344);
+          var8 = param1.readInt(-1478490344);
           if (param0 <= 63) {
             var10 = (String) null;
             kn.a(-24, false, (String) null, (String) null);
           }
-          var9 = param1.i(-1478490344);
+          var9 = param1.readInt(-1478490344);
           stackIn_3_0 = ng.a(var5, 47, var4, var3, var7, var2_int, var8, var9, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

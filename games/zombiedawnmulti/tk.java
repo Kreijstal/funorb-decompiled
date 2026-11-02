@@ -688,10 +688,10 @@ final class tk extends nc {
           var6.a(121, 1);
           var6.a(127, param0.field_v);
           var6.c(param0.field_f, 0);
-          var6.b(-118, param0.field_q);
-          var6.b(92, param0.field_u);
-          var6.b(-115, param0.field_r);
-          var6.b(100, param0.field_n);
+          var6.writeInt(-118, param0.field_q);
+          var6.writeInt(92, param0.field_u);
+          var6.writeInt(-115, param0.field_r);
+          var6.writeInt(100, param0.field_n);
           var6.f(var4, 115);
           var6.e(70, var6.position - var4);
         } catch (RuntimeException runtimeException) {

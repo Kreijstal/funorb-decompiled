@@ -57,17 +57,17 @@ final class nk extends IntrusiveNode {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.d((byte) 69);
-          var3 = param1.d((byte) 69);
-          var4 = param1.d((byte) 69);
-          var5 = param1.d((byte) 69);
+          var2_int = param1.readUnsignedShort((byte) 69);
+          var3 = param1.readUnsignedShort((byte) 69);
+          var4 = param1.readUnsignedShort((byte) 69);
+          var5 = param1.readUnsignedShort((byte) 69);
           if (param0 != 20399) {
             var9 = (ri) null;
             nk.a(-34, (int[]) null, (ri) null);
           }
-          var6 = param1.d((byte) 69);
-          var7 = param1.d((byte) 69);
-          var8 = param1.d((byte) 69);
+          var6 = param1.readUnsignedShort((byte) 69);
+          var7 = param1.readUnsignedShort((byte) 69);
+          var8 = param1.readUnsignedShort((byte) 69);
           stackIn_3_0 = td.a(var5, var2_int, var4, (byte) 125, var8, var6, var7, var3);
           return (ae) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

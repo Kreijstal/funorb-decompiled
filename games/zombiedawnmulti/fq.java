@@ -116,7 +116,7 @@ final class fq extends ae {
           if (param1 != -114) {
             field_k = (Sprite) null;
           }
-          var2_int = param0.g(31365);
+          var2_int = param0.readUnsignedByte(31365);
           stackIn_5_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;

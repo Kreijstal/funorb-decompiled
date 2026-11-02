@@ -76,7 +76,7 @@ abstract class al extends df {
         if (param0 <= 68) {
           return (String) null;
         }
-        return s.field_e.f((byte) -24);
+        return s.field_e.readString((byte) -24);
     }
 
     final static void j(int param0) {

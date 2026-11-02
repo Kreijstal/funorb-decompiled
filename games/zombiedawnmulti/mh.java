@@ -199,10 +199,10 @@ final class mh implements Runnable {
             return;
           }
           var2 = s.field_e;
-          var2.i(-1478490344);
-          var2.i(-1478490344);
-          var2.i(-1478490344);
-          var2.i(-1478490344);
+          var2.readInt(-1478490344);
+          var2.readInt(-1478490344);
+          var2.readInt(-1478490344);
+          var2.readInt(-1478490344);
           var1.unlink(true);
           return;
         }
@@ -212,10 +212,10 @@ final class mh implements Runnable {
           return;
         }
         var2Lifetime1 = s.field_e;
-        var2Lifetime1.i(-1478490344);
-        var2Lifetime1.i(-1478490344);
-        var2Lifetime1.i(-1478490344);
-        var2Lifetime1.i(-1478490344);
+        var2Lifetime1.readInt(-1478490344);
+        var2Lifetime1.readInt(-1478490344);
+        var2Lifetime1.readInt(-1478490344);
+        var2Lifetime1.readInt(-1478490344);
         var1Lifetime1.unlink(true);
     }
 

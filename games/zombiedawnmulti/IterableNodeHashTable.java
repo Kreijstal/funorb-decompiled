@@ -10,21 +10,21 @@ final class IterableNodeHashTable implements Iterable {
     static boolean field_c;
     private IntrusiveNode field_e;
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long key, int obfuscationGuard) {
         IntrusiveNode var4;
         int var5;
         IntrusiveNode var6;
         int var7;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = this.buckets[(int)(param0 & (long)(-1 + this.field_d))];
+        var4 = this.buckets[(int)(key & (long)(-1 + this.field_d))];
         this.field_e = var4.previous;
-        var5 = -79 / ((param1 + 3) / 54);
+        var5 = -79 / ((obfuscationGuard + 3) / 54);
         while (true) {
           if (var4 == this.field_e) {
             this.field_e = null;
             return null;
           }
-          if (param0 != this.field_e.key) {
+          if (key != this.field_e.key) {
             this.field_e = this.field_e.previous;
             continue;
           }

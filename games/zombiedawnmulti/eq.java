@@ -57,8 +57,8 @@ final class eq {
               return stackIn_11_0;
             }
             this.field_b.position = 6 + 72 * param0;
-            var6_int = this.field_b.i(-1478490344);
-            var7 = this.field_b.i(param2 - 1478474451);
+            var6_int = this.field_b.readInt(-1478490344);
+            var7 = this.field_b.readInt(param2 - 1478474451);
             var14 = new byte[64];
             this.field_b.a(0, param2 ^ 9946, 64, var14);
             var9 = new cn(param0, param3, param1, this.field_i, this.field_d, var6_int, var14, var7, param4);
@@ -253,7 +253,7 @@ final class eq {
         }
         var10 = new PacketBuffer(this.field_h.e(0));
         var10.position = 5;
-        var3 = var10.g(31365);
+        var3 = var10.readUnsignedByte(31365);
         var10.position = var10.position + var3 * 72;
         var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;

@@ -57,12 +57,12 @@ final class ob extends DualLinkNode {
           }
           if (1 != param2) {
             if (param2 == 2) {
-              var4_int = param1.g(31365);
+              var4_int = param1.readUnsignedByte(31365);
               this.field_r = new char[var4_int];
               this.field_x = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_x[var5] = param1.d((byte) 69);
-                var6 = param1.d(-249699580);
+                this.field_x[var5] = param1.readUnsignedShort((byte) 69);
+                var6 = param1.readByte(-249699580);
                 stackIn_20_0 = this.field_r;
                 stackIn_20_1 = var5;
                 if (var6 != 0) {
@@ -80,12 +80,12 @@ final class ob extends DualLinkNode {
                 this.field_y = true;
                 return;
               }
-              var4_int = param1.g(31365);
+              var4_int = param1.readUnsignedByte(31365);
               this.field_D = new char[var4_int];
               this.field_B = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_B[var5] = param1.d((byte) 69);
-                var6 = param1.d(-249699580);
+                this.field_B[var5] = param1.readUnsignedShort((byte) 69);
+                var6 = param1.readByte(-249699580);
                 stackIn_14_0 = this.field_D;
                 stackIn_14_1 = var5;
                 if (0 != var6) {
@@ -97,7 +97,7 @@ final class ob extends DualLinkNode {
               }
             }
           } else {
-            this.field_s = param1.f((byte) -93);
+            this.field_s = param1.readString((byte) -93);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -221,7 +221,7 @@ final class ob extends DualLinkNode {
         int var3_intLifetime1;
         try {
           while (true) {
-            var3_int = param1.g(31365);
+            var3_int = param1.readUnsignedByte(31365);
             if (0 == var3_int) {
               break;
             }

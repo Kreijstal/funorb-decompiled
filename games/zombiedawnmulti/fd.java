@@ -208,7 +208,7 @@ final class fd extends id {
             }
             if (de.field_h == vo.field_l &&
               fa.b(10, 1)) {
-              var6_int = s.field_e.g(param0 ^ 31371);
+              var6_int = s.field_e.readUnsignedByte(param0 ^ 31371);
               s.field_e.position = 0;
               if (var6_int == 0) {
                 vo.field_l = ul.field_n;
@@ -220,7 +220,7 @@ final class fd extends id {
             }
             if (ul.field_n == vo.field_l &&
               fa.b(10, 8)) {
-              nm.field_c = s.field_e.a((byte) -30);
+              nm.field_c = s.field_e.readLong((byte) -30);
               s.field_e.position = 0;
               pi.a((byte) -59, param2, param1, ki.field_a, param5);
               vo.field_l = lc.field_l;
@@ -228,7 +228,7 @@ final class fd extends id {
             boolean decompiledFrameRemainder0 = true;
             if (vo.field_l == lc.field_l &&
               fa.b(10, 1)) {
-              var6_intLifetime1 = s.field_e.g(31365);
+              var6_intLifetime1 = s.field_e.readUnsignedByte(31365);
               s.field_e.position = 0;
               oe.field_f = null;
               op.field_i = var6_intLifetime1;
@@ -253,13 +253,13 @@ final class fd extends id {
             }
             if (vo.field_l == qb.field_e &&
               dd.a(0)) {
-              ii.field_d = s.field_e.a((byte) -30);
+              ii.field_d = s.field_e.readLong((byte) -30);
               ci.field_f = param3;
-              kj.field_q = s.field_e.g(31365);
-              am.field_b = s.field_e.g(31365);
-              vl.field_h = s.field_e.d((byte) 69);
-              var11 = s.field_e.g((byte) -89);
-              var7 = s.field_e.g(31365);
+              kj.field_q = s.field_e.readUnsignedByte(31365);
+              am.field_b = s.field_e.readUnsignedByte(31365);
+              vl.field_h = s.field_e.readUnsignedShort((byte) 69);
+              var11 = s.field_e.readNullableString((byte) -89);
+              var7 = s.field_e.readUnsignedByte(31365);
               if ((var7 & 1) != 0) {
                 fj.a((byte) 85);
               }
@@ -276,33 +276,33 @@ final class fd extends id {
                 stackIn_63_0 = ((var7 & 16) != 0);
                 tm.field_b = stackIn_63_0;
                 if (gj.field_e) {
-                  s.field_e.g(31365);
-                  s.field_e.g(param0 + 31351);
-                  s.field_e.i(-1478490344);
-                  vn.field_f = s.field_e.d((byte) 69);
+                  s.field_e.readUnsignedByte(31365);
+                  s.field_e.readUnsignedByte(param0 + 31351);
+                  s.field_e.readInt(-1478490344);
+                  vn.field_f = s.field_e.readUnsignedShort((byte) 69);
                   DelegatingCanvas.field_b = new byte[vn.field_f];
                   for (var8 = 0; var8 < vn.field_f; var8++) {
-                    DelegatingCanvas.field_b[var8] = s.field_e.d(vg.a(param0, -249699574));
+                    DelegatingCanvas.field_b[var8] = s.field_e.readByte(vg.a(param0, -249699574));
                   }
                 }
               } else {
                 stackIn_45_0 = ((var7 & 16) != 0);
                 tm.field_b = stackIn_45_0;
                 if (gj.field_e) {
-                  s.field_e.g(31365);
-                  s.field_e.g(param0 + 31351);
-                  s.field_e.i(-1478490344);
-                  vn.field_f = s.field_e.d((byte) 69);
+                  s.field_e.readUnsignedByte(31365);
+                  s.field_e.readUnsignedByte(param0 + 31351);
+                  s.field_e.readInt(-1478490344);
+                  vn.field_f = s.field_e.readUnsignedShort((byte) 69);
                   DelegatingCanvas.field_b = new byte[vn.field_f];
                   for (var8 = 0; var8 < vn.field_f; var8++) {
-                    DelegatingCanvas.field_b[var8] = s.field_e.d(vg.a(param0, -249699574));
+                    DelegatingCanvas.field_b[var8] = s.field_e.readByte(vg.a(param0, -249699574));
                   }
                 }
               }
-              ta.field_lb = s.field_e.f((byte) -48);
+              ta.field_lb = s.field_e.readString((byte) -48);
               var12 = (CharSequence) ((Object) ta.field_lb);
               ProxySocketConnector.field_k = tg.a(var12, false);
-              qq.field_a = s.field_e.g(31365);
+              qq.field_a = s.field_e.readUnsignedByte(31365);
               vo.field_l = pi.field_a;
               if (ki.field_a.b(7) != uq.field_b) {
                 if (ki.field_a.b(7) == pl.field_G) {
@@ -354,7 +354,7 @@ final class fd extends id {
               if (op.field_i == 7) {
                 op.field_i = 3;
               }
-              ol.field_q = s.field_e.f((byte) -31);
+              ol.field_q = s.field_e.readString((byte) -31);
               sk.field_j = false;
               stackIn_102_0 = op.field_i;
               return stackIn_102_0;

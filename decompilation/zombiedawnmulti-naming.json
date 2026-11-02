@@ -956,12 +956,260 @@
       "renamedSymbol": "M:IntrusiveNode.unlink(Z)V"
     },
     {
+      "symbol": "M:k.a(B)J",
+      "originalName": "a",
+      "to": "readLong",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readLong(B)J"
+    },
+    {
+      "symbol": "M:k.a(Ljava/lang/String;B)V",
+      "originalName": "a",
+      "to": "writeString",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeString(Ljava/lang/String;B)V"
+    },
+    {
+      "symbol": "M:k.b(II)V",
+      "originalName": "b",
+      "to": "writeInt",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeInt(II)V"
+    },
+    {
+      "symbol": "M:k.c(B)I",
+      "originalName": "c",
+      "to": "readShort",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readShort(B)I"
+    },
+    {
+      "symbol": "M:k.d(B)I",
+      "originalName": "d",
+      "to": "readUnsignedShort",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedShort(B)I"
+    },
+    {
+      "symbol": "M:k.d(I)B",
+      "originalName": "d",
+      "to": "readByte",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readByte(I)B"
+    },
+    {
+      "symbol": "M:k.e(I)I",
+      "originalName": "e",
+      "to": "readUnsignedMedium",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedMedium(I)I"
+    },
+    {
+      "symbol": "M:k.f(B)Ljava/lang/String;",
+      "originalName": "f",
+      "to": "readString",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readString(B)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:k.g(B)Ljava/lang/String;",
+      "originalName": "g",
+      "to": "readNullableString",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readNullableString(B)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:k.g(I)I",
+      "originalName": "g",
+      "to": "readUnsignedByte",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedByte(I)I"
+    },
+    {
+      "symbol": "M:k.h(B)I",
+      "originalName": "h",
+      "to": "readUnsignedSmart",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedSmart(B)I"
+    },
+    {
+      "symbol": "M:k.h(I)I",
+      "originalName": "h",
+      "to": "readSignedSmart",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readSignedSmart(I)I"
+    },
+    {
+      "symbol": "M:k.i(I)I",
+      "originalName": "i",
+      "to": "readInt",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readInt(I)I"
+    },
+    {
+      "symbol": "M:wh.a(JI)Lbr;",
+      "originalName": "a",
+      "to": "get",
+      "evidence": "IterableNodeHashTable.get masks the key into a bucket and walks it comparing node keys.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.get(JI)LIntrusiveNode;"
+    },
+    {
       "symbol": "P:br.a(Z)V#0",
       "originalName": "param0",
       "to": "clearLinks",
       "evidence": "IntrusiveNode link fields and unlink body; hash table buckets and deques splice them.",
       "confidence": "reviewed",
       "renamedSymbol": "P:IntrusiveNode.unlink(Z)V#0"
+    },
+    {
+      "symbol": "P:k.a(B)J#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readLong(B)J#0"
+    },
+    {
+      "symbol": "P:k.a(Ljava/lang/String;B)V#0",
+      "originalName": "param0",
+      "to": "value",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.writeString(Ljava/lang/String;B)V#0"
+    },
+    {
+      "symbol": "P:k.a(Ljava/lang/String;B)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.writeString(Ljava/lang/String;B)V#1"
+    },
+    {
+      "symbol": "P:k.b(II)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.writeInt(II)V#0"
+    },
+    {
+      "symbol": "P:k.b(II)V#1",
+      "originalName": "param1",
+      "to": "value",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.writeInt(II)V#1"
+    },
+    {
+      "symbol": "P:k.c(B)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readShort(B)I#0"
+    },
+    {
+      "symbol": "P:k.d(B)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readUnsignedShort(B)I#0"
+    },
+    {
+      "symbol": "P:k.d(I)B#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readByte(I)B#0"
+    },
+    {
+      "symbol": "P:k.e(I)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readUnsignedMedium(I)I#0"
+    },
+    {
+      "symbol": "P:k.f(B)Ljava/lang/String;#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readString(B)Ljava/lang/String;#0"
+    },
+    {
+      "symbol": "P:k.g(B)Ljava/lang/String;#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readNullableString(B)Ljava/lang/String;#0"
+    },
+    {
+      "symbol": "P:k.g(I)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readUnsignedByte(I)I#0"
+    },
+    {
+      "symbol": "P:k.h(B)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readUnsignedSmart(B)I#0"
+    },
+    {
+      "symbol": "P:k.h(I)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readSignedSmart(I)I#0"
+    },
+    {
+      "symbol": "P:k.i(I)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "PacketBuffer reads advance the cursor over payload bytes with big-endian shifts and masks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PacketBuffer.readInt(I)I#0"
+    },
+    {
+      "symbol": "P:wh.a(JI)Lbr;#0",
+      "originalName": "param0",
+      "to": "key",
+      "evidence": "IterableNodeHashTable.get masks the key into a bucket and walks it comparing node keys.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:IterableNodeHashTable.get(JI)LIntrusiveNode;#0"
+    },
+    {
+      "symbol": "P:wh.a(JI)Lbr;#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "IterableNodeHashTable.get masks the key into a bucket and walks it comparing node keys.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:IterableNodeHashTable.get(JI)LIntrusiveNode;#1"
     }
   ],
   "symbols": [
@@ -130173,7 +130421,7 @@
     },
     {
       "symbol": "L:k.a(B)J#0",
-      "renamedSymbol": "L:PacketBuffer.a(B)J#0",
+      "renamedSymbol": "L:PacketBuffer.readLong(B)J#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -130184,7 +130432,7 @@
     },
     {
       "symbol": "L:k.a(B)J#1",
-      "renamedSymbol": "L:PacketBuffer.a(B)J#1",
+      "renamedSymbol": "L:PacketBuffer.readLong(B)J#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -131108,7 +131356,7 @@
     },
     {
       "symbol": "L:k.a(Ljava/lang/String;B)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeString(Ljava/lang/String;B)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -131119,7 +131367,7 @@
     },
     {
       "symbol": "L:k.a(Ljava/lang/String;B)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeString(Ljava/lang/String;B)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -131130,7 +131378,7 @@
     },
     {
       "symbol": "L:k.a(Ljava/lang/String;B)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#2",
+      "renamedSymbol": "L:PacketBuffer.writeString(Ljava/lang/String;B)V#2",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -131141,7 +131389,7 @@
     },
     {
       "symbol": "L:k.a(Ljava/lang/String;B)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#3",
+      "renamedSymbol": "L:PacketBuffer.writeString(Ljava/lang/String;B)V#3",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -131427,7 +131675,7 @@
     },
     {
       "symbol": "L:k.b(II)V#0",
-      "renamedSymbol": "L:PacketBuffer.b(II)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeInt(II)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -131438,7 +131686,7 @@
     },
     {
       "symbol": "L:k.b(II)V#1",
-      "renamedSymbol": "L:PacketBuffer.b(II)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeInt(II)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -131449,7 +131697,7 @@
     },
     {
       "symbol": "L:k.b(II)V#2",
-      "renamedSymbol": "L:PacketBuffer.b(II)V#2",
+      "renamedSymbol": "L:PacketBuffer.writeInt(II)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -131460,7 +131708,7 @@
     },
     {
       "symbol": "L:k.b(II)V#3",
-      "renamedSymbol": "L:PacketBuffer.b(II)V#3",
+      "renamedSymbol": "L:PacketBuffer.writeInt(II)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -131471,7 +131719,7 @@
     },
     {
       "symbol": "L:k.b(II)V#4",
-      "renamedSymbol": "L:PacketBuffer.b(II)V#4",
+      "renamedSymbol": "L:PacketBuffer.writeInt(II)V#4",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -131592,7 +131840,7 @@
     },
     {
       "symbol": "L:k.c(B)I#0",
-      "renamedSymbol": "L:PacketBuffer.c(B)I#0",
+      "renamedSymbol": "L:PacketBuffer.readShort(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -131691,7 +131939,7 @@
     },
     {
       "symbol": "L:k.d(I)B#0",
-      "renamedSymbol": "L:PacketBuffer.d(I)B#0",
+      "renamedSymbol": "L:PacketBuffer.readByte(I)B#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -131735,7 +131983,7 @@
     },
     {
       "symbol": "L:k.f(B)Ljava/lang/String;#0",
-      "renamedSymbol": "L:PacketBuffer.f(B)Ljava/lang/String;#0",
+      "renamedSymbol": "L:PacketBuffer.readString(B)Ljava/lang/String;#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -131746,7 +131994,7 @@
     },
     {
       "symbol": "L:k.f(B)Ljava/lang/String;#1",
-      "renamedSymbol": "L:PacketBuffer.f(B)Ljava/lang/String;#1",
+      "renamedSymbol": "L:PacketBuffer.readString(B)Ljava/lang/String;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -131757,7 +132005,7 @@
     },
     {
       "symbol": "L:k.f(B)Ljava/lang/String;#2",
-      "renamedSymbol": "L:PacketBuffer.f(B)Ljava/lang/String;#2",
+      "renamedSymbol": "L:PacketBuffer.readString(B)Ljava/lang/String;#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -131779,7 +132027,7 @@
     },
     {
       "symbol": "L:k.g(B)Ljava/lang/String;#0",
-      "renamedSymbol": "L:PacketBuffer.g(B)Ljava/lang/String;#0",
+      "renamedSymbol": "L:PacketBuffer.readNullableString(B)Ljava/lang/String;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -131790,7 +132038,7 @@
     },
     {
       "symbol": "L:k.g(I)I#0",
-      "renamedSymbol": "L:PacketBuffer.g(I)I#0",
+      "renamedSymbol": "L:PacketBuffer.readUnsignedByte(I)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -131801,7 +132049,7 @@
     },
     {
       "symbol": "L:k.h(B)I#0",
-      "renamedSymbol": "L:PacketBuffer.h(B)I#0",
+      "renamedSymbol": "L:PacketBuffer.readUnsignedSmart(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -131812,7 +132060,7 @@
     },
     {
       "symbol": "L:k.h(I)I#0",
-      "renamedSymbol": "L:PacketBuffer.h(I)I#0",
+      "renamedSymbol": "L:PacketBuffer.readSignedSmart(I)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -243440,7 +243688,7 @@
     },
     {
       "symbol": "L:wh.a(JI)Lbr;#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JI)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JI)LIntrusiveNode;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -243451,7 +243699,7 @@
     },
     {
       "symbol": "L:wh.a(JI)Lbr;#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JI)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JI)LIntrusiveNode;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -243462,7 +243710,7 @@
     },
     {
       "symbol": "L:wh.a(JI)Lbr;#2",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JI)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JI)LIntrusiveNode;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -243473,7 +243721,7 @@
     },
     {
       "symbol": "L:wh.a(JI)Lbr;#3",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JI)LIntrusiveNode;#3",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JI)LIntrusiveNode;#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -262789,9 +263037,9 @@
     },
     {
       "symbol": "M:k.a(B)J",
-      "renamedSymbol": "M:PacketBuffer.a(B)J",
+      "renamedSymbol": "M:PacketBuffer.readLong(B)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readLong",
       "declaration": {
         "file": "k.java",
         "start": 10384,
@@ -262943,9 +263191,9 @@
     },
     {
       "symbol": "M:k.a(Ljava/lang/String;B)V",
-      "renamedSymbol": "M:PacketBuffer.a(Ljava/lang/String;B)V",
+      "renamedSymbol": "M:PacketBuffer.writeString(Ljava/lang/String;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeString",
       "declaration": {
         "file": "k.java",
         "start": 4600,
@@ -262987,9 +263235,9 @@
     },
     {
       "symbol": "M:k.b(II)V",
-      "renamedSymbol": "M:PacketBuffer.b(II)V",
+      "renamedSymbol": "M:PacketBuffer.writeInt(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "writeInt",
       "declaration": {
         "file": "k.java",
         "start": 16679,
@@ -263042,9 +263290,9 @@
     },
     {
       "symbol": "M:k.c(B)I",
-      "renamedSymbol": "M:PacketBuffer.c(B)I",
+      "renamedSymbol": "M:PacketBuffer.readShort(B)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "readShort",
       "declaration": {
         "file": "k.java",
         "start": 10651,
@@ -263097,9 +263345,9 @@
     },
     {
       "symbol": "M:k.d(B)I",
-      "renamedSymbol": "M:PacketBuffer.d(B)I",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedShort(B)I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "readUnsignedShort",
       "declaration": {
         "file": "k.java",
         "start": 10989,
@@ -263108,9 +263356,9 @@
     },
     {
       "symbol": "M:k.d(I)B",
-      "renamedSymbol": "M:PacketBuffer.d(I)B",
+      "renamedSymbol": "M:PacketBuffer.readByte(I)B",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "readByte",
       "declaration": {
         "file": "k.java",
         "start": 17841,
@@ -263141,9 +263389,9 @@
     },
     {
       "symbol": "M:k.e(I)I",
-      "renamedSymbol": "M:PacketBuffer.e(I)I",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedMedium(I)I",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "readUnsignedMedium",
       "declaration": {
         "file": "k.java",
         "start": 17322,
@@ -263163,9 +263411,9 @@
     },
     {
       "symbol": "M:k.f(B)Ljava/lang/String;",
-      "renamedSymbol": "M:PacketBuffer.f(B)Ljava/lang/String;",
+      "renamedSymbol": "M:PacketBuffer.readString(B)Ljava/lang/String;",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "readString",
       "declaration": {
         "file": "k.java",
         "start": 15115,
@@ -263196,9 +263444,9 @@
     },
     {
       "symbol": "M:k.g(B)Ljava/lang/String;",
-      "renamedSymbol": "M:PacketBuffer.g(B)Ljava/lang/String;",
+      "renamedSymbol": "M:PacketBuffer.readNullableString(B)Ljava/lang/String;",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "readNullableString",
       "declaration": {
         "file": "k.java",
         "start": 14147,
@@ -263207,9 +263455,9 @@
     },
     {
       "symbol": "M:k.g(I)I",
-      "renamedSymbol": "M:PacketBuffer.g(I)I",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedByte(I)I",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "readUnsignedByte",
       "declaration": {
         "file": "k.java",
         "start": 16189,
@@ -263229,9 +263477,9 @@
     },
     {
       "symbol": "M:k.h(B)I",
-      "renamedSymbol": "M:PacketBuffer.h(B)I",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedSmart(B)I",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "readUnsignedSmart",
       "declaration": {
         "file": "k.java",
         "start": 24670,
@@ -263240,9 +263488,9 @@
     },
     {
       "symbol": "M:k.h(I)I",
-      "renamedSymbol": "M:PacketBuffer.h(I)I",
+      "renamedSymbol": "M:PacketBuffer.readSignedSmart(I)I",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "readSignedSmart",
       "declaration": {
         "file": "k.java",
         "start": 5676,
@@ -263251,9 +263499,9 @@
     },
     {
       "symbol": "M:k.i(I)I",
-      "renamedSymbol": "M:PacketBuffer.i(I)I",
+      "renamedSymbol": "M:PacketBuffer.readInt(I)I",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "readInt",
       "declaration": {
         "file": "k.java",
         "start": 3464,
@@ -283722,9 +283970,9 @@
     },
     {
       "symbol": "M:wh.a(JI)Lbr;",
-      "renamedSymbol": "M:IterableNodeHashTable.a(JI)LIntrusiveNode;",
+      "renamedSymbol": "M:IterableNodeHashTable.get(JI)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "get",
       "declaration": {
         "file": "wh.java",
         "start": 224,
@@ -324015,9 +324263,9 @@
     },
     {
       "symbol": "P:k.a(B)J#0",
-      "renamedSymbol": "P:PacketBuffer.a(B)J#0",
+      "renamedSymbol": "P:PacketBuffer.readLong(B)J#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 10391,
@@ -324400,9 +324648,9 @@
     },
     {
       "symbol": "P:k.a(Ljava/lang/String;B)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(Ljava/lang/String;B)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeString(Ljava/lang/String;B)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "value",
       "declaration": {
         "file": "k.java",
         "start": 4609,
@@ -324411,9 +324659,9 @@
     },
     {
       "symbol": "P:k.a(Ljava/lang/String;B)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(Ljava/lang/String;B)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeString(Ljava/lang/String;B)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 4622,
@@ -324521,9 +324769,9 @@
     },
     {
       "symbol": "P:k.b(II)V#0",
-      "renamedSymbol": "P:PacketBuffer.b(II)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeInt(II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 16685,
@@ -324532,9 +324780,9 @@
     },
     {
       "symbol": "P:k.b(II)V#1",
-      "renamedSymbol": "P:PacketBuffer.b(II)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeInt(II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "value",
       "declaration": {
         "file": "k.java",
         "start": 16697,
@@ -324620,9 +324868,9 @@
     },
     {
       "symbol": "P:k.c(B)I#0",
-      "renamedSymbol": "P:PacketBuffer.c(B)I#0",
+      "renamedSymbol": "P:PacketBuffer.readShort(B)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 10658,
@@ -324697,9 +324945,9 @@
     },
     {
       "symbol": "P:k.d(B)I#0",
-      "renamedSymbol": "P:PacketBuffer.d(B)I#0",
+      "renamedSymbol": "P:PacketBuffer.readUnsignedShort(B)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 10996,
@@ -324708,9 +324956,9 @@
     },
     {
       "symbol": "P:k.d(I)B#0",
-      "renamedSymbol": "P:PacketBuffer.d(I)B#0",
+      "renamedSymbol": "P:PacketBuffer.readByte(I)B#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 17847,
@@ -324752,9 +325000,9 @@
     },
     {
       "symbol": "P:k.e(I)I#0",
-      "renamedSymbol": "P:PacketBuffer.e(I)I#0",
+      "renamedSymbol": "P:PacketBuffer.readUnsignedMedium(I)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 17328,
@@ -324785,9 +325033,9 @@
     },
     {
       "symbol": "P:k.f(B)Ljava/lang/String;#0",
-      "renamedSymbol": "P:PacketBuffer.f(B)Ljava/lang/String;#0",
+      "renamedSymbol": "P:PacketBuffer.readString(B)Ljava/lang/String;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 15122,
@@ -324829,9 +325077,9 @@
     },
     {
       "symbol": "P:k.g(B)Ljava/lang/String;#0",
-      "renamedSymbol": "P:PacketBuffer.g(B)Ljava/lang/String;#0",
+      "renamedSymbol": "P:PacketBuffer.readNullableString(B)Ljava/lang/String;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 14154,
@@ -324840,9 +325088,9 @@
     },
     {
       "symbol": "P:k.g(I)I#0",
-      "renamedSymbol": "P:PacketBuffer.g(I)I#0",
+      "renamedSymbol": "P:PacketBuffer.readUnsignedByte(I)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 16195,
@@ -324873,9 +325121,9 @@
     },
     {
       "symbol": "P:k.h(B)I#0",
-      "renamedSymbol": "P:PacketBuffer.h(B)I#0",
+      "renamedSymbol": "P:PacketBuffer.readUnsignedSmart(B)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 24677,
@@ -324884,9 +325132,9 @@
     },
     {
       "symbol": "P:k.h(I)I#0",
-      "renamedSymbol": "P:PacketBuffer.h(I)I#0",
+      "renamedSymbol": "P:PacketBuffer.readSignedSmart(I)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 5682,
@@ -324895,9 +325143,9 @@
     },
     {
       "symbol": "P:k.i(I)I#0",
-      "renamedSymbol": "P:PacketBuffer.i(I)I#0",
+      "renamedSymbol": "P:PacketBuffer.readInt(I)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "k.java",
         "start": 3470,
@@ -376705,9 +376953,9 @@
     },
     {
       "symbol": "P:wh.a(JI)Lbr;#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JI)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IterableNodeHashTable.get(JI)LIntrusiveNode;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "key",
       "declaration": {
         "file": "wh.java",
         "start": 231,
@@ -376716,9 +376964,9 @@
     },
     {
       "symbol": "P:wh.a(JI)Lbr;#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JI)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IterableNodeHashTable.get(JI)LIntrusiveNode;#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "wh.java",
         "start": 243,
@@ -378095,7 +378343,7 @@
       "original": "ZombieDawnMulti.java",
       "renamed": "ZombieDawnMulti.java",
       "inputSha256": "46e43ab989a823126f48f90eb4a2c5b3a6040796bb5b30c1590e15e83f7d0ab2",
-      "outputSha256": "fbeba9a7cec0dacb858884503834b1467ef1927bd996f7c5a05c8cb8255c46e0",
+      "outputSha256": "ce2c97810379ccfdb6e4bd22fb82ac0615ad0a66ed6b775a4a4d648cc64932af",
       "edits": [
         {
           "start": 187,
@@ -378308,6 +378556,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 22616,
+          "end": 22617,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 22791,
           "end": 22792,
           "symbol": "C:k",
@@ -378320,6 +378575,34 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 24084,
+          "end": 24085,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 24140,
+          "end": 24141,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 24215,
+          "end": 24216,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 24520,
+          "end": 24521,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 24884,
@@ -378343,6 +378626,20 @@
           "renamed": "PlayerLoadout"
         },
         {
+          "start": 25114,
+          "end": 25115,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 25287,
+          "end": 25288,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 25319,
           "end": 25321,
           "symbol": "C:ll",
@@ -378357,11 +378654,25 @@
           "renamed": "powerupTypes"
         },
         {
+          "start": 25596,
+          "end": 25597,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 25628,
           "end": 25630,
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 25905,
+          "end": 25906,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 25937,
@@ -378399,6 +378710,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 27832,
+          "end": 27833,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 27978,
           "end": 27979,
           "symbol": "C:k",
@@ -378420,11 +378738,74 @@
           "renamed": "MouseInputHandler"
         },
         {
+          "start": 29258,
+          "end": 29259,
+          "symbol": "M:k.c(B)I",
+          "original": "c",
+          "renamed": "readShort"
+        },
+        {
+          "start": 29465,
+          "end": 29466,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 29682,
+          "end": 29683,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 29755,
+          "end": 29756,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 29828,
+          "end": 29829,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 29931,
+          "end": 29932,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
           "start": 30491,
           "end": 30493,
           "symbol": "C:nq",
           "original": "nq",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 32319,
+          "end": 32320,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 32601,
+          "end": 32602,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 32882,
+          "end": 32883,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 33680,
@@ -379261,7 +379642,7 @@
       "original": "ac.java",
       "renamed": "ac.java",
       "inputSha256": "133d23fb426757da6a81a196168d5abd31c2238917614e87e82333a4a58b9fd0",
-      "outputSha256": "2bf0b16fc5f0a9c11e630ec7b09b445033420bda2e25b75bc9db61c1824ceef8",
+      "outputSha256": "f14746af8893fdc1f6548d3ad2fe90365afea624036e299b3d543af58f654e76",
       "edits": [
         {
           "start": 80,
@@ -379283,6 +379664,48 @@
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 2418,
+          "end": 2419,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2462,
+          "end": 2463,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2506,
+          "end": 2507,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2550,
+          "end": 2551,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2703,
+          "end": 2704,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2938,
+          "end": 2939,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         }
       ]
     },
@@ -380164,8 +380587,15 @@
       "original": "al.java",
       "renamed": "al.java",
       "inputSha256": "c7bbcf8b2efaa286220d302ef34e76c76ee02b839decca32cc260d82954aec20",
-      "outputSha256": "cfa656985ddd96bb01b4f3f794ca93ac01a6d1366e549de3d5e8a5b50b61b340",
+      "outputSha256": "ee4bfb3de4ce196ccc4de8c99b77e4c8a8c5369bc1649301969adc919cf19f82",
       "edits": [
+        {
+          "start": 2379,
+          "end": 2380,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
         {
           "start": 2447,
           "end": 2449,
@@ -380280,7 +380710,7 @@
       "original": "ap.java",
       "renamed": "ap.java",
       "inputSha256": "41976103bbecd71438a0d6a0199933bdf0eda4828cf10638a4caff3aff4a259e",
-      "outputSha256": "849afdc87831f69d7db7ee3af3b84b22cb843cabb37f08e4f726d43dbd1f9d1e",
+      "outputSha256": "07e63475bcb4938b18216a256c4bc565cda0561293e6088197f0c34ccd2697de",
       "edits": [
         {
           "start": 178,
@@ -380661,6 +381091,34 @@
           "renamed": "position"
         },
         {
+          "start": 9725,
+          "end": 9726,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 9777,
+          "end": 9778,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 9835,
+          "end": 9836,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 9887,
+          "end": 9888,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 10495,
           "end": 10502,
           "symbol": "F:qa.field_l:J",
@@ -380680,6 +381138,13 @@
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 11783,
+          "end": 11784,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
         },
         {
           "start": 11880,
@@ -380731,6 +381196,13 @@
           "renamed": "position"
         },
         {
+          "start": 19265,
+          "end": 19266,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
           "start": 19330,
           "end": 19337,
           "symbol": "F:k.field_m:[B",
@@ -380750,7 +381222,7 @@
       "original": "aq.java",
       "renamed": "aq.java",
       "inputSha256": "87bb42d6e29328c07753442399bba6a25b5fccee629e46662d8371cc968dc79b",
-      "outputSha256": "8d1e5e497c74d467450a7304e4b0e7c7790c49d26f17be7631bb945cd21b273c",
+      "outputSha256": "31a9f0a6de01a3e91f7edb15d9c920f22c839bd4bec650c30fbe3210efe7817d",
       "edits": [
         {
           "start": 64,
@@ -380786,6 +381258,13 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 7370,
+          "end": 7371,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 10323,
@@ -381416,7 +381895,7 @@
       "original": "be.java",
       "renamed": "be.java",
       "inputSha256": "40daadcd3a09ec67f3833019b9f0bbde374a18d3c2c2895c6779dff7547d1462",
-      "outputSha256": "a7fef624ad99806c5fa720010772e15b8f9cf8e181888d8f1bd87986953040e2",
+      "outputSha256": "4b98dd0fdc87801b41422932f5e29a7ec8385765db4e893a042c3712a7c216b0",
       "edits": [
         {
           "start": 1371,
@@ -381431,6 +381910,90 @@
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 1902,
+          "end": 1903,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 2028,
+          "end": 2029,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2145,
+          "end": 2146,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 2392,
+          "end": 2393,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3072,
+          "end": 3073,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4131,
+          "end": 4132,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 4389,
+          "end": 4390,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 4613,
+          "end": 4614,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 5103,
+          "end": 5104,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 6488,
+          "end": 6489,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 6969,
+          "end": 6970,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 8574,
+          "end": 8575,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
         }
       ]
     },
@@ -382104,7 +382667,7 @@
       "original": "bp.java",
       "renamed": "bp.java",
       "inputSha256": "37800c91f8c2272ac1a5003002c0c2877a37b320d3a84072b7d5dea95a601852",
-      "outputSha256": "bfe63a2dac07efee4c5f0535149da9b17de6426916599d189d4c110d503bf119",
+      "outputSha256": "25fa73c14ee8fa22b3255bc51dffce676bbfd6be6b94acef1e924fcf77fc9392",
       "edits": [
         {
           "start": 124,
@@ -382135,6 +382698,41 @@
           "renamed": "position"
         },
         {
+          "start": 2504,
+          "end": 2505,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2544,
+          "end": 2545,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2583,
+          "end": 2584,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2622,
+          "end": 2623,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2775,
+          "end": 2776,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
           "start": 2941,
           "end": 2948,
           "symbol": "F:k.field_j:I",
@@ -382161,6 +382759,83 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 4870,
+          "end": 4871,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 4915,
+          "end": 4916,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 5367,
+          "end": 5368,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 5595,
+          "end": 5596,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 5645,
+          "end": 5646,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 5694,
+          "end": 5695,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 5871,
+          "end": 5872,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 6178,
+          "end": 6179,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 6984,
+          "end": 6985,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 7064,
+          "end": 7065,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 7212,
+          "end": 7213,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
         },
         {
           "start": 8941,
@@ -383449,7 +384124,7 @@
       "original": "ch.java",
       "renamed": "IntrusiveDequeCursor.java",
       "inputSha256": "28eb5891672d84004e18ea5136061de621debf37fb8e4887ebe6013ed45540cb",
-      "outputSha256": "b97924aa5b1dbeb06630b09f05f9e676171db50bc006f4ff8b02144a1866b42e",
+      "outputSha256": "2d48eebd102677bb5a378bf46a8ba02569249d1228a1dd97e6af6d2f9c6cc601",
       "edits": [
         {
           "start": 69,
@@ -383520,6 +384195,13 @@
           "symbol": "C:ej",
           "original": "ej",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 2177,
+          "end": 2178,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
         },
         {
           "start": 2244,
@@ -384215,7 +384897,7 @@
       "original": "ck.java",
       "renamed": "ck.java",
       "inputSha256": "23c6eb84056b288d3f008db04b2cdfbebc417ee28251d9174dd9d06bb910fc50",
-      "outputSha256": "a28726b343b5a85824321990c79324118b1e097bf99341556e9b953c51ca9d3b",
+      "outputSha256": "d2fa2fa5f9dd03e34bafa048c9ed10bd459d0948a88cc3fe399a4544b46fbcef",
       "edits": [
         {
           "start": 2701,
@@ -384225,11 +384907,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 2721,
+          "end": 2722,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 2997,
           "end": 2998,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3017,
+          "end": 3018,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
         },
         {
           "start": 3056,
@@ -384239,11 +384935,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 3076,
+          "end": 3077,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 3115,
           "end": 3116,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3135,
+          "end": 3136,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 3174,
@@ -384253,6 +384963,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 3194,
+          "end": 3195,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 3751,
           "end": 3752,
           "symbol": "C:k",
@@ -384260,11 +384977,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 3771,
+          "end": 3772,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 3826,
           "end": 3827,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3846,
+          "end": 3847,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 3884,
@@ -384281,11 +385012,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 4174,
+          "end": 4175,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 4223,
           "end": 4224,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 4243,
+          "end": 4244,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 4403,
@@ -384295,11 +385040,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 4423,
+          "end": 4424,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
           "start": 4461,
           "end": 4462,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 4481,
+          "end": 4482,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 4922,
@@ -384323,6 +385082,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 5434,
+          "end": 5435,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
           "start": 5669,
           "end": 5671,
           "symbol": "C:dl",
@@ -384337,11 +385103,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 5858,
+          "end": 5859,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
           "start": 5899,
           "end": 5900,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 5919,
+          "end": 5920,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 6174,
@@ -384365,11 +385145,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 6867,
+          "end": 6868,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
           "start": 6919,
           "end": 6920,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 6939,
+          "end": 6940,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 7688,
@@ -384379,11 +385173,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 7708,
+          "end": 7709,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
           "start": 7753,
           "end": 7754,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 7773,
+          "end": 7774,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 7818,
@@ -384393,11 +385201,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 7838,
+          "end": 7839,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 8225,
           "end": 8226,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 8245,
+          "end": 8246,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 8288,
@@ -384414,11 +385236,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 8572,
+          "end": 8573,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 8620,
           "end": 8621,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 8640,
+          "end": 8641,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 8824,
@@ -384428,11 +385264,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 8844,
+          "end": 8845,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
           "start": 8897,
           "end": 8898,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 8917,
+          "end": 8918,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 9147,
@@ -384456,11 +385306,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 9741,
+          "end": 9742,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
           "start": 10083,
           "end": 10084,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 10103,
+          "end": 10104,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 10153,
@@ -384477,6 +385341,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 10331,
+          "end": 10332,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
           "start": 10412,
           "end": 10414,
           "symbol": "C:bd",
@@ -384491,11 +385362,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 10601,
+          "end": 10602,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
           "start": 10659,
           "end": 10660,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 10679,
+          "end": 10680,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 11439,
@@ -384505,11 +385390,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 11459,
+          "end": 11460,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
           "start": 11971,
           "end": 11972,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 11991,
+          "end": 11992,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 12522,
@@ -384524,6 +385423,13 @@
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 13412,
+          "end": 13413,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 13542,
@@ -384561,11 +385467,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 14154,
+          "end": 14155,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
           "start": 14214,
           "end": 14215,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 14234,
+          "end": 14235,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 14269,
@@ -384575,11 +385495,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 14289,
+          "end": 14290,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 14429,
           "end": 14430,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 14449,
+          "end": 14450,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
         }
       ]
     },
@@ -385474,7 +386408,7 @@
       "original": "dd.java",
       "renamed": "dd.java",
       "inputSha256": "95ff0d85469a05c6ed71c137c39c379bfc089c08d70978c13f9b6bc08578dfce",
-      "outputSha256": "d21b32aa146690346744eb01d9f688bca8ca4c05ae911463433c89c51e8af151",
+      "outputSha256": "5246841a0f164cf5c05bf9d1540bc9f38f07f4f58cc8127e05bea44b809aa882",
       "edits": [
         {
           "start": 239,
@@ -385547,11 +386481,25 @@
           "renamed": "payload"
         },
         {
+          "start": 5990,
+          "end": 5991,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 6029,
           "end": 6036,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 6194,
+          "end": 6195,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 6228,
@@ -385886,7 +386834,7 @@
       "original": "dl.java",
       "renamed": "SocketConnector.java",
       "inputSha256": "037d1caa3e9d6e40534676a7c7b7254355a12cf54d2ddaa10773cb2b4fa41577",
-      "outputSha256": "6c752560813276a6d76b4e4f3b7cbdb2b3f66d2fc5ef78ce53da0a92dfda51a4",
+      "outputSha256": "31fd48a9e895730b17d4a6e690440899ca4ba6967853f2a2c7830725eac9cc33",
       "edits": [
         {
           "start": 72,
@@ -385931,6 +386879,62 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 1675,
+          "end": 1676,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1732,
+          "end": 1733,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1777,
+          "end": 1778,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1815,
+          "end": 1816,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3108,
+          "end": 3109,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3182,
+          "end": 3183,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 3315,
+          "end": 3316,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 3378,
+          "end": 3379,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
           "start": 3417,
           "end": 3424,
           "symbol": "F:k.field_j:I",
@@ -385938,11 +386942,25 @@
           "renamed": "position"
         },
         {
+          "start": 3461,
+          "end": 3462,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 3581,
           "end": 3588,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 3703,
+          "end": 3704,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 4988,
@@ -385985,8 +387003,58 @@
       "original": "dm.java",
       "renamed": "dm.java",
       "inputSha256": "b8b5727c77f69551e2335656c930b384f30a4b8c08fdd9ec0c4a55cd8bdb46e5",
-      "outputSha256": "b8b5727c77f69551e2335656c930b384f30a4b8c08fdd9ec0c4a55cd8bdb46e5",
-      "edits": []
+      "outputSha256": "c62bfc0adc35434f18ca61e054a2c2810b156b5819c8514ee1346a70e016c7b6",
+      "edits": [
+        {
+          "start": 3060,
+          "end": 3061,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3098,
+          "end": 3099,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3136,
+          "end": 3137,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3284,
+          "end": 3285,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3322,
+          "end": 3323,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 3362,
+          "end": 3363,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 3402,
+          "end": 3403,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        }
+      ]
     },
     {
       "original": "dn.java",
@@ -386310,7 +387378,7 @@
       "original": "ed.java",
       "renamed": "LevelFileCatalog.java",
       "inputSha256": "8c288b0202f421f355eb962028534222cc72c44ac702024249b96a73945488e4",
-      "outputSha256": "23a3c8bb8b8754510fbccdf7184e8f1921cb22f1bd5dcba624a1510cb26abe2a",
+      "outputSha256": "aafd92cf319b94796d0b5f327f4a2b850301a5633b598990c7149d0a9070333f",
       "edits": [
         {
           "start": 50,
@@ -386346,6 +387414,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 2410,
+          "end": 2411,
+          "symbol": "M:k.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeString"
         },
         {
           "start": 2766,
@@ -387342,7 +388417,7 @@
       "original": "eq.java",
       "renamed": "eq.java",
       "inputSha256": "200073d8ca630b80434ce538e7c352a97f6c9fbdcc12bb1c2b28ed77d277eb45",
-      "outputSha256": "3c97be2852f02741823e806facb95d35ac22ccc1949798f87d7e354b703c145e",
+      "outputSha256": "4b9b8ea899b0ebb7a959c29688a0ea20f82895009176c71019473f9afb40dc9a",
       "edits": [
         {
           "start": 228,
@@ -387357,6 +388432,20 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 2032,
+          "end": 2033,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2080,
+          "end": 2081,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
         },
         {
           "start": 8676,
@@ -387378,6 +388467,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 9262,
+          "end": 9263,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 9286,
@@ -388309,7 +389405,7 @@
       "original": "fd.java",
       "renamed": "fd.java",
       "inputSha256": "23e568baab26f030831452813c58ba4337321da7cb14b40de5ec5bc77ae3781e",
-      "outputSha256": "70586f81a67cabdcaf4c08bf7018577adf645c7e1bc3bedd5d3379c800c82d5b",
+      "outputSha256": "484d8390eb98d14038716b6562995063b3d1fadf30963645f6db739346757cc4",
       "edits": [
         {
           "start": 189,
@@ -388340,11 +389436,25 @@
           "renamed": "position"
         },
         {
+          "start": 6799,
+          "end": 6800,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 6842,
           "end": 6849,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 7207,
+          "end": 7208,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
         },
         {
           "start": 7246,
@@ -388354,11 +389464,88 @@
           "renamed": "position"
         },
         {
+          "start": 7551,
+          "end": 7552,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 7585,
           "end": 7592,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 8438,
+          "end": 8439,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
+          "start": 8525,
+          "end": 8526,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 8572,
+          "end": 8573,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 8619,
+          "end": 8620,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 8665,
+          "end": 8666,
+          "symbol": "M:k.g(B)Ljava/lang/String;",
+          "original": "g",
+          "renamed": "readNullableString"
+        },
+        {
+          "start": 8711,
+          "end": 8712,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 9360,
+          "end": 9361,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 9398,
+          "end": 9399,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 9445,
+          "end": 9446,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 9502,
+          "end": 9503,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 9534,
@@ -388375,6 +389562,41 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 9680,
+          "end": 9681,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 9926,
+          "end": 9927,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 9964,
+          "end": 9965,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 10011,
+          "end": 10012,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 10068,
+          "end": 10069,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
           "start": 10100,
           "end": 10102,
           "symbol": "C:kq",
@@ -388389,11 +389611,32 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 10246,
+          "end": 10247,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 10367,
+          "end": 10368,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 10457,
           "end": 10459,
           "symbol": "C:kf",
           "original": "kf",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 10527,
+          "end": 10528,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 10698,
@@ -388408,6 +389651,13 @@
           "symbol": "C:mc",
           "original": "mc",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 12595,
+          "end": 12596,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 14652,
@@ -388677,7 +389927,7 @@
       "original": "fh.java",
       "renamed": "fh.java",
       "inputSha256": "933b26915c52120fee83f75aa0d93053109b86ca1cb6df9c152a31743de2f5fa",
-      "outputSha256": "2c2b71cfc5fe4ff28c21929cb1c48063a9440be63206c49da66561b8cc299c8b",
+      "outputSha256": "6710de3e535e28a7595268146e2f91f3f264fc8997e28cf9499f732404e7f2ca",
       "edits": [
         {
           "start": 130,
@@ -388685,6 +389935,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "Sprite"
+        },
+        {
+          "start": 10172,
+          "end": 10173,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 10290,
@@ -388701,11 +389958,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 10445,
+          "end": 10446,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 10535,
           "end": 10536,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 10555,
+          "end": 10556,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
         },
         {
           "start": 10827,
@@ -389934,7 +391205,7 @@
       "original": "fq.java",
       "renamed": "fq.java",
       "inputSha256": "c34d1e58c964643f6b250d4a54a681657b4bbe7d3e35537555d549b8b417fd85",
-      "outputSha256": "aa1e6a9ece1c96b707616b04816d1bb2f5a4211a0a1027f88fd32affe163be56",
+      "outputSha256": "56ffb50c767fc1b8ff0fe4492feadce42b1ac8abdeff70b905cc672bdd6ed565",
       "edits": [
         {
           "start": 77,
@@ -390005,6 +391276,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "Sprite"
+        },
+        {
+          "start": 4337,
+          "end": 4338,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         }
       ]
     },
@@ -390342,7 +391620,7 @@
       "original": "ga.java",
       "renamed": "ga.java",
       "inputSha256": "edde0356c80d897b6884d8fdd49f2841a15dc2924f756f336ae92b80c86cfcc6",
-      "outputSha256": "ef72e17ab83a78f236e0b6eb9dfe7a13ec5cc3f96ae9c15130280eabe0183902",
+      "outputSha256": "b67af78923c12d76c8ca32ecfb9eb895b4ed3039182d9e8acc6061c579339bd8",
       "edits": [
         {
           "start": 61,
@@ -390387,6 +391665,13 @@
           "renamed": "position"
         },
         {
+          "start": 1692,
+          "end": 1693,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 1725,
           "end": 1727,
           "symbol": "C:ag",
@@ -390399,6 +391684,20 @@
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 2048,
+          "end": 2049,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 2264,
+          "end": 2265,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 2517,
@@ -391538,7 +392837,7 @@
       "original": "gn.java",
       "renamed": "gn.java",
       "inputSha256": "150f7190835452da50f0576ceff5996e63ef92323e9ab1e0a7103492227315e8",
-      "outputSha256": "7492f72f2a85383c7df6231bbbf19c74c0975e1810f51c3dc343b7ef482d7cc3",
+      "outputSha256": "574d21c59f174223dacfd83a29a9490fcfd0fc473eec34f3d6726c9e4ec4f69f",
       "edits": [
         {
           "start": 76,
@@ -391595,6 +392894,27 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 6378,
+          "end": 6379,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 6495,
+          "end": 6496,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 6533,
+          "end": 6534,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 7275,
@@ -391665,6 +392985,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 12293,
+          "end": 12294,
+          "symbol": "M:k.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeString"
         },
         {
           "start": 12350,
@@ -392589,7 +393916,7 @@
       "original": "hb.java",
       "renamed": "hb.java",
       "inputSha256": "6e0b9ca0a44bf64c2b71961f42d0ee4ac283facc405b8adc53c43c7a653b5536",
-      "outputSha256": "79029e84702241805a1e49a42a3e7af3755d1e9038528251f932302531cde1ba",
+      "outputSha256": "949dd684cc0b7cadfce796ebe136e159fe52cbfd31605257329efacc5e5bb440",
       "edits": [
         {
           "start": 183,
@@ -392627,6 +393954,27 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 1046,
+          "end": 1047,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1078,
+          "end": 1079,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 1482,
+          "end": 1483,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 3086,
           "end": 3088,
           "symbol": "C:cf",
@@ -392639,7 +393987,7 @@
       "original": "hc.java",
       "renamed": "hc.java",
       "inputSha256": "b5c2c292d53fb29135ff2eb94bd945299ea789f34b20421284cea972b8e8c76b",
-      "outputSha256": "a64ab9913fb23cd88ea4046753e0d23ee044321731a93dc2073d5980a50b1026",
+      "outputSha256": "8d44bdff8035c054401edc22bbee5a7cb158a5bda87f7a9cb492d7fcb46a8c39",
       "edits": [
         {
           "start": 724,
@@ -392710,6 +394058,20 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "Sprite"
+        },
+        {
+          "start": 3661,
+          "end": 3662,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3699,
+          "end": 3700,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         }
       ]
     },
@@ -392717,7 +394079,7 @@
       "original": "hd.java",
       "renamed": "hd.java",
       "inputSha256": "a96d8821a43677af60e6aa7d92e73600d8d425f8d00f56132a0d86878f201415",
-      "outputSha256": "6b7c11a64efaefc32ddd80ac522d50eed1e38be08ba19315db8adcec6c3d21cf",
+      "outputSha256": "4fb23a747db22e2437096732e5b573951194777ea478b15f01434622b20ccd8e",
       "edits": [
         {
           "start": 4312,
@@ -392753,6 +394115,41 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 7882,
+          "end": 7883,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 8508,
+          "end": 8509,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 9075,
+          "end": 9076,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 10142,
+          "end": 10143,
+          "symbol": "M:k.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeString"
+        },
+        {
+          "start": 10482,
+          "end": 10483,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
         },
         {
           "start": 14086,
@@ -392802,7 +394199,7 @@
       "original": "he.java",
       "renamed": "he.java",
       "inputSha256": "c40ad80add2e93041472363c7132506e21fe54005952d475d6354bf329f2c5c9",
-      "outputSha256": "9548e16cf3a7510bb9a7884bee174aea1fb87af46a3c5c2a70fc779d4297b521",
+      "outputSha256": "86a9d977a5765ad6beb7d2e61ba5d52b78a361e2a30fb0738033deda86dd039c",
       "edits": [
         {
           "start": 237,
@@ -392833,6 +394230,20 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 3546,
+          "end": 3547,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3765,
+          "end": 3766,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 4061,
           "end": 4068,
           "symbol": "F:k.field_j:I",
@@ -392852,6 +394263,13 @@
           "symbol": "M:br.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 4372,
+          "end": 4373,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
         },
         {
           "start": 4420,
@@ -393072,7 +394490,7 @@
       "original": "hk.java",
       "renamed": "PlayerLoadout.java",
       "inputSha256": "85e1cca3f402b8ac2e32564c18433871e09cba29f7ea443bf0766e6f67a3d4fd",
-      "outputSha256": "9b5986596c56db1153205460fa1fe7a4661e0af419553e42bb5793455140bdde",
+      "outputSha256": "f4f9b98ea05d693821c7438d712d08c439d1ed96e9a9dd46b4337b33afa534e4",
       "edits": [
         {
           "start": 50,
@@ -393122,6 +394540,13 @@
           "symbol": "F:hk.field_b:[I",
           "original": "field_b",
           "renamed": "powerupReadyTick"
+        },
+        {
+          "start": 785,
+          "end": 786,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 1449,
@@ -393881,7 +395306,7 @@
       "original": "ih.java",
       "renamed": "ih.java",
       "inputSha256": "9458f90c40e8a95c0908056746a1e31e1d70d22d9fc59eafb1e0b7d982255bd8",
-      "outputSha256": "47ab97703d1449cccfb86e324b3bfbd29830ae17412700eeed4bf1bfb41700df",
+      "outputSha256": "f43103d7fe5f98663a6e9d300b874ec88ca2650c187210b90241e40de9e78803",
       "edits": [
         {
           "start": 317,
@@ -393954,6 +395379,13 @@
           "renamed": "position"
         },
         {
+          "start": 3003,
+          "end": 3004,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 3053,
           "end": 3060,
           "symbol": "F:k.field_j:I",
@@ -393982,6 +395414,34 @@
           "renamed": "position"
         },
         {
+          "start": 3713,
+          "end": 3714,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 3753,
+          "end": 3754,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 3791,
+          "end": 3792,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 3829,
+          "end": 3830,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
           "start": 3908,
           "end": 3915,
           "symbol": "F:k.field_j:I",
@@ -393994,7 +395454,7 @@
       "original": "ii.java",
       "renamed": "ii.java",
       "inputSha256": "f0649a4b3af8bcf409634504ecf6218b83e9b99ae46a33e93e08bbe80ae44d1b",
-      "outputSha256": "f9bc1606374b7b7933f5f162c685038b5d995f0a50f7cd43285d7f3477e327d6",
+      "outputSha256": "cab369bc3bab695ce82cb369517247bfcb44bcff2714e1a81602924a09959975",
       "edits": [
         {
           "start": 147,
@@ -394030,6 +395490,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 4255,
+          "end": 4256,
+          "symbol": "M:k.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeString"
         },
         {
           "start": 4312,
@@ -394348,7 +395815,7 @@
       "original": "io.java",
       "renamed": "io.java",
       "inputSha256": "3d2e8513769661dab904f8a8bfab43961ef25aa24aa31883742e6acf62795c47",
-      "outputSha256": "9bef39f422a11e60070f188a4183a5477e0c37b5870b83c6924a560ebf002bb0",
+      "outputSha256": "a36eb7e33d292c776ab2c197a7e15ea6da991a6aa50f47162554812addd23302",
       "edits": [
         {
           "start": 120,
@@ -394428,6 +395895,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 6959,
+          "end": 6960,
+          "symbol": "M:wh.a(JI)Lbr;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 7575,
           "end": 7576,
           "symbol": "M:br.a(Z)V",
@@ -394461,6 +395935,13 @@
           "symbol": "C:wh",
           "original": "wh",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 9464,
+          "end": 9465,
+          "symbol": "M:wh.a(JI)Lbr;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 9699,
@@ -397049,7 +398530,7 @@
       "original": "jc.java",
       "renamed": "jc.java",
       "inputSha256": "e80528faf378c85252b7ed5e58455ed4bb6da069e45d99fc7f8d7d148ea5f9a5",
-      "outputSha256": "d9c0efa399754d5851a1161b58251c3d30eb4b69e74fa354ea9dd61f06ad452b",
+      "outputSha256": "74ea46be21a1ae138279d1ba4ab4c975275313de1edb9f84b1504c7dd67c04f5",
       "edits": [
         {
           "start": 339,
@@ -397073,6 +398554,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 2174,
+          "end": 2175,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 2230,
           "end": 2237,
           "symbol": "F:k.field_j:I",
@@ -397085,6 +398573,20 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 2397,
+          "end": 2398,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2441,
+          "end": 2442,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         }
       ]
     },
@@ -397121,7 +398623,7 @@
       "original": "jg.java",
       "renamed": "jg.java",
       "inputSha256": "0f3c2acdb44512ba954db601c2681ac8cf7c974f0e73e5d50a6d58f84b0d9ec2",
-      "outputSha256": "50b7a033cf477c297965c5f819d7a1dcf3d87af00f399a0e9cea455562a7d99a",
+      "outputSha256": "fb747e71b63c76352fbcc005c81bf002d9ccf7778c09aea240405f94bafc8b36",
       "edits": [
         {
           "start": 137,
@@ -397129,6 +398631,13 @@
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 635,
+          "end": 636,
+          "symbol": "M:k.h(B)I",
+          "original": "h",
+          "renamed": "readUnsignedSmart"
         },
         {
           "start": 793,
@@ -397662,7 +399171,7 @@
       "original": "k.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "52e311f17922dbc5f5d4faa97585ef04b4f35055941e3489b74654d03a0abc32",
-      "outputSha256": "063f69bb42fb049b40e2633d7e61e74e49060ea00489cf366b694e397330c40b",
+      "outputSha256": "36770bb17b33ed4e8bf7f3297611ca5eaa33756f222988d7e911ed1895c22415",
       "edits": [
         {
           "start": 44,
@@ -397705,6 +399214,20 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 436,
+          "end": 437,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 495,
+          "end": 496,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 573,
@@ -397796,6 +399319,27 @@
           "symbol": "C:up",
           "original": "up",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 3464,
+          "end": 3465,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 3470,
+          "end": 3476,
+          "symbol": "P:k.i(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 3492,
+          "end": 3498,
+          "symbol": "P:k.i(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 3562,
@@ -397938,6 +399482,55 @@
           "renamed": "position"
         },
         {
+          "start": 4545,
+          "end": 4546,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 4600,
+          "end": 4601,
+          "symbol": "M:k.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeString"
+        },
+        {
+          "start": 4609,
+          "end": 4615,
+          "symbol": "P:k.a(Ljava/lang/String;B)V#0",
+          "original": "param0",
+          "renamed": "value"
+        },
+        {
+          "start": 4622,
+          "end": 4628,
+          "symbol": "P:k.a(Ljava/lang/String;B)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 4756,
+          "end": 4762,
+          "symbol": "P:k.a(Ljava/lang/String;B)V#0",
+          "original": "param0",
+          "renamed": "value"
+        },
+        {
+          "start": 4887,
+          "end": 4893,
+          "symbol": "P:k.a(Ljava/lang/String;B)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 4982,
+          "end": 4988,
+          "symbol": "P:k.a(Ljava/lang/String;B)V#0",
+          "original": "param0",
+          "renamed": "value"
+        },
+        {
           "start": 5006,
           "end": 5013,
           "symbol": "F:k.field_j:I",
@@ -397959,11 +399552,25 @@
           "renamed": "position"
         },
         {
+          "start": 5059,
+          "end": 5065,
+          "symbol": "P:k.a(Ljava/lang/String;B)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 5079,
           "end": 5086,
           "symbol": "F:k.field_m:[B",
           "original": "field_m",
           "renamed": "payload"
+        },
+        {
+          "start": 5088,
+          "end": 5094,
+          "symbol": "P:k.a(Ljava/lang/String;B)V#0",
+          "original": "param0",
+          "renamed": "value"
         },
         {
           "start": 5135,
@@ -397994,6 +399601,34 @@
           "renamed": "payload"
         },
         {
+          "start": 5362,
+          "end": 5368,
+          "symbol": "P:k.a(Ljava/lang/String;B)V#0",
+          "original": "param0",
+          "renamed": "value"
+        },
+        {
+          "start": 5405,
+          "end": 5411,
+          "symbol": "P:k.a(Ljava/lang/String;B)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 5676,
+          "end": 5677,
+          "symbol": "M:k.h(I)I",
+          "original": "h",
+          "renamed": "readSignedSmart"
+        },
+        {
+          "start": 5682,
+          "end": 5688,
+          "symbol": "P:k.h(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 5722,
           "end": 5729,
           "symbol": "F:k.field_m:[B",
@@ -398006,6 +399641,27 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 5757,
+          "end": 5763,
+          "symbol": "P:k.h(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 5856,
+          "end": 5857,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 5901,
+          "end": 5902,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 6079,
@@ -398288,6 +399944,69 @@
           "renamed": "payload"
         },
         {
+          "start": 9650,
+          "end": 9651,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
+          "start": 10384,
+          "end": 10385,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
+          "start": 10391,
+          "end": 10397,
+          "symbol": "P:k.a(B)J#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 10413,
+          "end": 10419,
+          "symbol": "P:k.a(B)J#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 10495,
+          "end": 10496,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 10497,
+          "end": 10503,
+          "symbol": "P:k.a(B)J#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 10564,
+          "end": 10565,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 10651,
+          "end": 10652,
+          "symbol": "M:k.c(B)I",
+          "original": "c",
+          "renamed": "readShort"
+        },
+        {
+          "start": 10658,
+          "end": 10664,
+          "symbol": "P:k.c(B)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 10681,
           "end": 10688,
           "symbol": "F:k.field_j:I",
@@ -398330,6 +400049,27 @@
           "renamed": "position"
         },
         {
+          "start": 10897,
+          "end": 10903,
+          "symbol": "P:k.c(B)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 10989,
+          "end": 10990,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 10996,
+          "end": 11002,
+          "symbol": "P:k.d(B)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 11019,
           "end": 11026,
           "symbol": "F:k.field_j:I",
@@ -398342,6 +400082,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 11059,
+          "end": 11065,
+          "symbol": "P:k.d(B)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 11085,
@@ -398484,6 +400231,20 @@
           "renamed": "payload"
         },
         {
+          "start": 14147,
+          "end": 14148,
+          "symbol": "M:k.g(B)Ljava/lang/String;",
+          "original": "g",
+          "renamed": "readNullableString"
+        },
+        {
+          "start": 14154,
+          "end": 14160,
+          "symbol": "P:k.g(B)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 14181,
           "end": 14188,
           "symbol": "F:k.field_m:[B",
@@ -398510,6 +400271,20 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 14299,
+          "end": 14305,
+          "symbol": "P:k.g(B)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 14419,
+          "end": 14420,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 14588,
@@ -398589,6 +400364,27 @@
           "renamed": "payload"
         },
         {
+          "start": 15115,
+          "end": 15116,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 15122,
+          "end": 15128,
+          "symbol": "P:k.f(B)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 15209,
+          "end": 15215,
+          "symbol": "P:k.f(B)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 15284,
           "end": 15291,
           "symbol": "F:k.field_j:I",
@@ -398652,6 +400448,27 @@
           "renamed": "position"
         },
         {
+          "start": 16189,
+          "end": 16190,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 16195,
+          "end": 16201,
+          "symbol": "P:k.g(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 16217,
+          "end": 16223,
+          "symbol": "P:k.g(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 16312,
           "end": 16319,
           "symbol": "F:k.field_j:I",
@@ -398708,6 +400525,27 @@
           "renamed": "position"
         },
         {
+          "start": 16679,
+          "end": 16680,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 16685,
+          "end": 16691,
+          "symbol": "P:k.b(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 16697,
+          "end": 16703,
+          "symbol": "P:k.b(II)V#1",
+          "original": "param1",
+          "renamed": "value"
+        },
+        {
           "start": 16738,
           "end": 16745,
           "symbol": "F:k.field_j:I",
@@ -398734,6 +400572,13 @@
           "symbol": "F:k.field_m:[B",
           "original": "field_m",
           "renamed": "payload"
+        },
+        {
+          "start": 16831,
+          "end": 16837,
+          "symbol": "P:k.b(II)V#1",
+          "original": "param1",
+          "renamed": "value"
         },
         {
           "start": 16877,
@@ -398764,6 +400609,13 @@
           "renamed": "payload"
         },
         {
+          "start": 16970,
+          "end": 16976,
+          "symbol": "P:k.b(II)V#1",
+          "original": "param1",
+          "renamed": "value"
+        },
+        {
           "start": 17016,
           "end": 17023,
           "symbol": "F:k.field_j:I",
@@ -398792,6 +400644,20 @@
           "renamed": "payload"
         },
         {
+          "start": 17109,
+          "end": 17115,
+          "symbol": "P:k.b(II)V#1",
+          "original": "param1",
+          "renamed": "value"
+        },
+        {
+          "start": 17150,
+          "end": 17156,
+          "symbol": "P:k.b(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 17201,
           "end": 17208,
           "symbol": "F:k.field_j:I",
@@ -398818,6 +400684,34 @@
           "symbol": "F:k.field_m:[B",
           "original": "field_m",
           "renamed": "payload"
+        },
+        {
+          "start": 17293,
+          "end": 17299,
+          "symbol": "P:k.b(II)V#1",
+          "original": "param1",
+          "renamed": "value"
+        },
+        {
+          "start": 17322,
+          "end": 17323,
+          "symbol": "M:k.e(I)I",
+          "original": "e",
+          "renamed": "readUnsignedMedium"
+        },
+        {
+          "start": 17328,
+          "end": 17334,
+          "symbol": "P:k.e(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 17350,
+          "end": 17356,
+          "symbol": "P:k.e(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 17411,
@@ -398902,6 +400796,27 @@
           "symbol": "F:k.field_m:[B",
           "original": "field_m",
           "renamed": "payload"
+        },
+        {
+          "start": 17841,
+          "end": 17842,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 17847,
+          "end": 17853,
+          "symbol": "P:k.d(I)B#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 17869,
+          "end": 17875,
+          "symbol": "P:k.d(I)B#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 17970,
@@ -399247,6 +401162,13 @@
           "renamed": "position"
         },
         {
+          "start": 20407,
+          "end": 20408,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 21133,
           "end": 21140,
           "symbol": "F:k.field_j:I",
@@ -399268,6 +401190,20 @@
           "renamed": "position"
         },
         {
+          "start": 21468,
+          "end": 21469,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 21516,
+          "end": 21517,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 22089,
           "end": 22096,
           "symbol": "F:k.field_j:I",
@@ -399280,6 +401216,20 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 22134,
+          "end": 22135,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 22166,
+          "end": 22167,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
         },
         {
           "start": 23783,
@@ -399310,6 +401260,20 @@
           "renamed": "payload"
         },
         {
+          "start": 24670,
+          "end": 24671,
+          "symbol": "M:k.h(B)I",
+          "original": "h",
+          "renamed": "readUnsignedSmart"
+        },
+        {
+          "start": 24677,
+          "end": 24683,
+          "symbol": "P:k.h(B)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 24717,
           "end": 24724,
           "symbol": "F:k.field_m:[B",
@@ -399322,6 +401286,27 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 24752,
+          "end": 24758,
+          "symbol": "P:k.h(B)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 24868,
+          "end": 24869,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 24912,
+          "end": 24913,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 25500,
@@ -399338,6 +401323,20 @@
           "renamed": "position"
         },
         {
+          "start": 25687,
+          "end": 25688,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 25727,
+          "end": 25728,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 26274,
           "end": 26281,
           "symbol": "F:k.field_j:I",
@@ -399350,6 +401349,20 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 26319,
+          "end": 26320,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 26351,
+          "end": 26352,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
         },
         {
           "start": 27076,
@@ -399645,7 +401658,7 @@
       "original": "kb.java",
       "renamed": "GameWorld.java",
       "inputSha256": "5994eeb4d6e4db43a8281d1fee3b87b0e482b47f1c14b6abb883299b1e9a3822",
-      "outputSha256": "46afdd04ec36f4cd00a8bed4f1dbae8a0194f1f81ffa5768a0f9d4c73f94b538",
+      "outputSha256": "2ec015516281d442123988778a3d8d519e42d46b40213039e6f139801105af77",
       "edits": [
         {
           "start": 65,
@@ -399865,6 +401878,48 @@
           "renamed": "currentTick"
         },
         {
+          "start": 6239,
+          "end": 6240,
+          "symbol": "M:k.c(B)I",
+          "original": "c",
+          "renamed": "readShort"
+        },
+        {
+          "start": 6291,
+          "end": 6292,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 6381,
+          "end": 6382,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 6427,
+          "end": 6428,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 6473,
+          "end": 6474,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 6519,
+          "end": 6520,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 6605,
           "end": 6607,
           "symbol": "C:kb",
@@ -399872,11 +401927,95 @@
           "renamed": "GameWorld"
         },
         {
+          "start": 6754,
+          "end": 6755,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 6811,
+          "end": 6812,
+          "symbol": "M:k.e(I)I",
+          "original": "e",
+          "renamed": "readUnsignedMedium"
+        },
+        {
+          "start": 6866,
+          "end": 6867,
+          "symbol": "M:k.e(I)I",
+          "original": "e",
+          "renamed": "readUnsignedMedium"
+        },
+        {
+          "start": 6918,
+          "end": 6919,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 6982,
+          "end": 6983,
+          "symbol": "M:k.e(I)I",
+          "original": "e",
+          "renamed": "readUnsignedMedium"
+        },
+        {
           "start": 7013,
           "end": 7020,
           "symbol": "F:kb.field_m:[I",
           "original": "field_m",
           "renamed": "teamCharacterCounts"
+        },
+        {
+          "start": 7120,
+          "end": 7121,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 7178,
+          "end": 7179,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 7260,
+          "end": 7261,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 7434,
+          "end": 7435,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 7470,
+          "end": 7471,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 7510,
+          "end": 7511,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 7550,
+          "end": 7551,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 7801,
@@ -399940,6 +402079,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 11024,
+          "end": 11025,
+          "symbol": "M:k.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeString"
         },
         {
           "start": 11228,
@@ -400949,8 +403095,65 @@
       "original": "kn.java",
       "renamed": "kn.java",
       "inputSha256": "832220e265924683412b3653bc5ab0bcb3f33f5570ceeecd8fdfc836809059a2",
-      "outputSha256": "832220e265924683412b3653bc5ab0bcb3f33f5570ceeecd8fdfc836809059a2",
-      "edits": []
+      "outputSha256": "2e31b19869832b995a1959d420b7648aefa6f7a0274cd25fafbca20701a3850b",
+      "edits": [
+        {
+          "start": 1991,
+          "end": 1992,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2029,
+          "end": 2030,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2067,
+          "end": 2068,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 2101,
+          "end": 2102,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2141,
+          "end": 2142,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2181,
+          "end": 2182,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2221,
+          "end": 2222,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2398,
+          "end": 2399,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        }
+      ]
     },
     {
       "original": "ko.java",
@@ -402106,15 +404309,80 @@
       "original": "lh.java",
       "renamed": "lh.java",
       "inputSha256": "2b1c5441acfdbf1e14a5f4883e77a86cd8304dd5a1184745d4c09e790756c882",
-      "outputSha256": "2b1c5441acfdbf1e14a5f4883e77a86cd8304dd5a1184745d4c09e790756c882",
-      "edits": []
+      "outputSha256": "17814df922b1e298e8176035b4961ff66bf4b2720d7f19a47011936154bae2ef",
+      "edits": [
+        {
+          "start": 2437,
+          "end": 2438,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        }
+      ]
     },
     {
       "original": "li.java",
       "renamed": "li.java",
       "inputSha256": "0a9ef258ed34f57915a702db8afb4c6c7a87a7ab7b862e50b6162c2d1f95eb6a",
-      "outputSha256": "0a9ef258ed34f57915a702db8afb4c6c7a87a7ab7b862e50b6162c2d1f95eb6a",
-      "edits": []
+      "outputSha256": "cfb73b8f87827214db15bbb50a0272e886df0fdeffa2c8678b47c61cc6ee71cb",
+      "edits": [
+        {
+          "start": 1420,
+          "end": 1421,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1458,
+          "end": 1459,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1496,
+          "end": 1497,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1530,
+          "end": 1531,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 1570,
+          "end": 1571,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 1681,
+          "end": 1682,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 1721,
+          "end": 1722,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 1761,
+          "end": 1762,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        }
+      ]
     },
     {
       "original": "lj.java",
@@ -403452,7 +405720,7 @@
       "original": "mg.java",
       "renamed": "mg.java",
       "inputSha256": "abb17d6b36d9c9adc7b1b61d129f61c63667e2b010b59006e0cb748bff9f0e07",
-      "outputSha256": "e2ea65a6683641306a93ad77a28f520597b6e339acb2709d7907e67346220b78",
+      "outputSha256": "d4d33b2b513af18abe5689111999ec07ce85b865030e0901817fb47ff693aa42",
       "edits": [
         {
           "start": 388,
@@ -403481,6 +405749,20 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 2304,
+          "end": 2305,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2358,
+          "end": 2359,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
         },
         {
           "start": 2636,
@@ -403532,6 +405814,20 @@
           "renamed": "position"
         },
         {
+          "start": 3468,
+          "end": 3469,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 3522,
+          "end": 3523,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
           "start": 3726,
           "end": 3728,
           "symbol": "C:nq",
@@ -403560,6 +405856,13 @@
           "renamed": "position"
         },
         {
+          "start": 4241,
+          "end": 4242,
+          "symbol": "M:k.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeString"
+        },
+        {
           "start": 4409,
           "end": 4416,
           "symbol": "F:k.field_j:I",
@@ -403581,6 +405884,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 4626,
+          "end": 4627,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 4658,
           "end": 4665,
           "symbol": "F:k.field_j:I",
@@ -403595,11 +405905,32 @@
           "renamed": "position"
         },
         {
+          "start": 5704,
+          "end": 5705,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
           "start": 5742,
           "end": 5749,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 6323,
+          "end": 6324,
+          "symbol": "M:k.g(B)Ljava/lang/String;",
+          "original": "g",
+          "renamed": "readNullableString"
+        },
+        {
+          "start": 6509,
+          "end": 6510,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 8711,
@@ -403663,7 +405994,7 @@
       "original": "mh.java",
       "renamed": "mh.java",
       "inputSha256": "0cf56a559e6a5337da03ad13efbf5e8697a30ef19b936c0dbb1bf6a3f84ad3d9",
-      "outputSha256": "33a0c288dadf37a79a70cd844148a05a3adc944f8ffd6070cedc8c7b5270f6ac",
+      "outputSha256": "5530a803aedb11b4f8c0d0b7df341bcd485acac88672c46bab3315fcb7af663b",
       "edits": [
         {
           "start": 106,
@@ -403778,11 +406109,67 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 6525,
+          "end": 6526,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 6556,
+          "end": 6557,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 6587,
+          "end": 6588,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 6618,
+          "end": 6619,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 6649,
           "end": 6650,
           "symbol": "M:br.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 6895,
+          "end": 6896,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 6933,
+          "end": 6934,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 6971,
+          "end": 6972,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 7009,
+          "end": 7010,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
         },
         {
           "start": 7047,
@@ -403996,7 +406383,7 @@
       "original": "mm.java",
       "renamed": "mm.java",
       "inputSha256": "19d67195bd68e657c9f3dc2fd70b3b44d9b66fd5cb46d9835d4f1a9784042bde",
-      "outputSha256": "2cf0f0100665e9630e9025e2e72764eda3530b9628f7f40337d060836c0b9c9e",
+      "outputSha256": "dc952a71864da30c0f5e6aea9dfccb68802a0938deebfff76597b9e7c7ca4385",
       "edits": [
         {
           "start": 102,
@@ -404111,6 +406498,34 @@
           "renamed": "position"
         },
         {
+          "start": 2042,
+          "end": 2043,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2092,
+          "end": 2093,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2257,
+          "end": 2258,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 2303,
+          "end": 2304,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 2401,
           "end": 2408,
           "symbol": "F:k.field_j:I",
@@ -404160,6 +406575,13 @@
           "renamed": "payload"
         },
         {
+          "start": 4572,
+          "end": 4573,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 4671,
           "end": 4678,
           "symbol": "F:k.field_j:I",
@@ -404172,6 +406594,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 4804,
+          "end": 4805,
+          "symbol": "M:k.e(I)I",
+          "original": "e",
+          "renamed": "readUnsignedMedium"
         },
         {
           "start": 5018,
@@ -404200,6 +406629,20 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 5351,
+          "end": 5352,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 5465,
+          "end": 5466,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 5566,
@@ -404293,7 +406736,7 @@
       "original": "mp.java",
       "renamed": "mp.java",
       "inputSha256": "9a00a54aa688551cd59896cea3ddb579db7d4ae60498278796264d183cf5fb71",
-      "outputSha256": "47adf14eff17c2a3dcdcc6af043650bc3b5d42bce8d85d6736a945505ec070fa",
+      "outputSha256": "ae17dd5eac29134987539ab49550df998970cbf16344b6d3d67ab460d7332959",
       "edits": [
         {
           "start": 1844,
@@ -404301,6 +406744,20 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 1926,
+          "end": 1927,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 1977,
+          "end": 1978,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
         },
         {
           "start": 2256,
@@ -405044,7 +407501,7 @@
       "original": "ng.java",
       "renamed": "ng.java",
       "inputSha256": "b5f588b64873347db298520e819941abbc8fd9323ec7a4e9d41ab554c2ef8dc5",
-      "outputSha256": "b29a8a530b4dc91002560077ed0c52c35114d3c5f562af506c3082e6e73ee289",
+      "outputSha256": "04f6ad670b42c195645ff21926a4ed7e1e2ef3f83363e7237a0ec3089d968c70",
       "edits": [
         {
           "start": 6287,
@@ -405096,6 +407553,13 @@
           "renamed": "position"
         },
         {
+          "start": 6706,
+          "end": 6707,
+          "symbol": "M:k.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeString"
+        },
+        {
           "start": 6763,
           "end": 6770,
           "symbol": "F:k.field_j:I",
@@ -405137,8 +407601,57 @@
       "original": "nj.java",
       "renamed": "nj.java",
       "inputSha256": "7490baa8c4409016144f516956aecd039871cad5e74220dbaec63828cc704e4e",
-      "outputSha256": "1dd2a0cd07ef21ab90e96630a4925098a125d6a18ce44644ac318dc02f8a1c13",
+      "outputSha256": "f0aeaa466b4899a759dc5af0c9a16b62263b49b0496f723c0e4f535d2726b03d",
       "edits": [
+        {
+          "start": 1070,
+          "end": 1071,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1291,
+          "end": 1292,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1327,
+          "end": 1328,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
+          "start": 1401,
+          "end": 1402,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1443,
+          "end": 1444,
+          "symbol": "M:k.e(I)I",
+          "original": "e",
+          "renamed": "readUnsignedMedium"
+        },
+        {
+          "start": 1559,
+          "end": 1560,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1638,
+          "end": 1639,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
         {
           "start": 1688,
           "end": 1690,
@@ -405147,11 +407660,53 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 1706,
+          "end": 1707,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 1749,
           "end": 1751,
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 1843,
+          "end": 1844,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1886,
+          "end": 1887,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 2060,
+          "end": 2061,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2105,
+          "end": 2106,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 2302,
+          "end": 2303,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 2347,
@@ -405180,7 +407735,7 @@
       "original": "nk.java",
       "renamed": "nk.java",
       "inputSha256": "d6b55f571a7e70f7efd5ea39d43bf91bad7a738892747771b03f3a9e86cb5188",
-      "outputSha256": "b155c80adb3ae8b322239e0aa90ff008bdac3859e4c3e68789393a4e4ff2db68",
+      "outputSha256": "e2ea208537c6381a2e40d3718056fb970702b7d57c38d3dc1150884de43ad3ec",
       "edits": [
         {
           "start": 61,
@@ -405223,6 +407778,55 @@
           "symbol": "C:th",
           "original": "th",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 1572,
+          "end": 1573,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1610,
+          "end": 1611,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1648,
+          "end": 1649,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1686,
+          "end": 1687,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1847,
+          "end": 1848,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1885,
+          "end": 1886,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1923,
+          "end": 1924,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 4945,
@@ -405514,7 +408118,7 @@
       "original": "nq.java",
       "renamed": "SpriteState.java",
       "inputSha256": "af1c65ca9ac9ebc23f5d90ec7c60a300bf9bd8e818a375228e44b9bfdc2ace5e",
-      "outputSha256": "1dbf24d87b5c432839630879583a999c6284b617d6344f6e93e9e32e7ee7f560",
+      "outputSha256": "096084004d6d737011a1d6c1f60bced7ff4b0fc29847676240f0e611297b1065",
       "edits": [
         {
           "start": 53,
@@ -405587,6 +408191,27 @@
           "renamed": "FullscreenFocusCanvas"
         },
         {
+          "start": 2375,
+          "end": 2376,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2413,
+          "end": 2414,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2451,
+          "end": 2452,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
           "start": 3853,
           "end": 3855,
           "symbol": "C:nq",
@@ -405656,14 +408281,36 @@
       "original": "oa.java",
       "renamed": "oa.java",
       "inputSha256": "05d23fc770f299568acdb6637f46c4f3c940562296f1cd7ab1aa2c326af4151e",
-      "outputSha256": "05d23fc770f299568acdb6637f46c4f3c940562296f1cd7ab1aa2c326af4151e",
-      "edits": []
+      "outputSha256": "6bddabb4258f3b6f988657c3a04b6dab13ac489b21c8a8ae7f6d363a468bf20c",
+      "edits": [
+        {
+          "start": 536,
+          "end": 537,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 649,
+          "end": 650,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 683,
+          "end": 684,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        }
+      ]
     },
     {
       "original": "ob.java",
       "renamed": "ob.java",
       "inputSha256": "d53aefc233c421b09faa1296331c2a300429c51bc0b584e2bf0e8722bc14980c",
-      "outputSha256": "38dbdaa960757e0e57d08440dc5458cfc2bbc386a75fd4e5e77cec972b4248ff",
+      "outputSha256": "e0f2b61062b1f013194a7ad7bcc4b706b4328fb272762296f3211397dd195fcd",
       "edits": [
         {
           "start": 61,
@@ -405680,11 +408327,67 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 1595,
+          "end": 1596,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1802,
+          "end": 1803,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1846,
+          "end": 1847,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 2435,
+          "end": 2436,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 2642,
+          "end": 2643,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2686,
+          "end": 2687,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 3100,
+          "end": 3101,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 6514,
           "end": 6515,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 6704,
+          "end": 6705,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         }
       ]
     },
@@ -407248,7 +409951,7 @@
       "original": "pd.java",
       "renamed": "pd.java",
       "inputSha256": "b441121c07c02a018274e847f771bf083b0d856313ff0ce02632cb2ed4f076d6",
-      "outputSha256": "ed0b08dd2126df9e65937bc8f922e21a01d64ec3bf48652d34a7bb6b88da904f",
+      "outputSha256": "cd73f4988bee3bf6a44587c4d7d0e6babe0c0ea8a036bea4310c28336db57850",
       "edits": [
         {
           "start": 88,
@@ -407293,6 +409996,13 @@
           "renamed": "position"
         },
         {
+          "start": 3846,
+          "end": 3847,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
           "start": 3870,
           "end": 3872,
           "symbol": "C:ll",
@@ -407314,11 +410024,60 @@
           "renamed": "position"
         },
         {
+          "start": 4348,
+          "end": 4349,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4391,
+          "end": 4392,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4433,
+          "end": 4434,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 4516,
           "end": 4517,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 4540,
+          "end": 4541,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4693,
+          "end": 4694,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4846,
+          "end": 4847,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4999,
+          "end": 5000,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 5041,
@@ -407328,11 +410087,53 @@
           "renamed": "position"
         },
         {
+          "start": 5262,
+          "end": 5263,
+          "symbol": "M:k.e(I)I",
+          "original": "e",
+          "renamed": "readUnsignedMedium"
+        },
+        {
           "start": 5407,
           "end": 5414,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 5946,
+          "end": 5947,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 6167,
+          "end": 6168,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 6329,
+          "end": 6330,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 6899,
+          "end": 6900,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 7140,
+          "end": 7141,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
         },
         {
           "start": 7603,
@@ -407347,7 +410148,7 @@
       "original": "pe.java",
       "renamed": "pe.java",
       "inputSha256": "9eb3b0753b6b6df8364f31787626fa536ff30b9dcce47f387de4d8a49c9e5363",
-      "outputSha256": "6daae793be7e2e7aaad308da7ff11cdf02af39c4f0068a09c9e0fa90cf859f8c",
+      "outputSha256": "c8df4b48f4082ce74e1c346b5d17da82a45c99d889e4579392e0d7d25e039230",
       "edits": [
         {
           "start": 328,
@@ -407357,11 +410158,53 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 370,
+          "end": 371,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 410,
+          "end": 411,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
+          "start": 456,
+          "end": 457,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 1289,
           "end": 1290,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 1353,
+          "end": 1354,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1547,
+          "end": 1548,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1599,
+          "end": 1600,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         }
       ]
     },
@@ -407412,7 +410255,7 @@
       "original": "pi.java",
       "renamed": "pi.java",
       "inputSha256": "1d3157da8632f0c45bca3c77017a76ad8aec3bc81112374a62cc2c0e28ea46d7",
-      "outputSha256": "522938bed46ced8ee21f392ae0e18bd1adac607bba9aaf5ce8acf7639150f488",
+      "outputSha256": "26746aeeba368441bc2dd668b770bfcc75e2a397c67271641b4f90926cfc9ee2",
       "edits": [
         {
           "start": 1872,
@@ -407420,6 +410263,34 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 1906,
+          "end": 1907,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 1950,
+          "end": 1951,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2003,
+          "end": 2004,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2049,
+          "end": 2050,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
         },
         {
           "start": 2297,
@@ -407450,11 +410321,25 @@
           "renamed": "position"
         },
         {
+          "start": 2563,
+          "end": 2564,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
           "start": 2604,
           "end": 2606,
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 3080,
+          "end": 3081,
+          "symbol": "M:k.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeString"
         },
         {
           "start": 3325,
@@ -408103,7 +410988,7 @@
       "original": "pn.java",
       "renamed": "pn.java",
       "inputSha256": "cd83f9e353ae75865ccae371b8dd5f60e4e33c43be62dcaa19e05a8ba7eeb671",
-      "outputSha256": "0a591cca2954a0fc201ebe46f2d733f93a20fd18bb1a860550796798a670b31b",
+      "outputSha256": "25e08ea68bcadfda07f0b397bbc2f46b7cce2999aef9e952047351f4be2ea9f2",
       "edits": [
         {
           "start": 66,
@@ -408127,6 +411012,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 2581,
+          "end": 2582,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 2747,
           "end": 2749,
           "symbol": "C:th",
@@ -408139,7 +411031,7 @@
       "original": "po.java",
       "renamed": "po.java",
       "inputSha256": "813645e36accf155af5babf81db60cfc2fb2ad6e27d868e5266642286175b768",
-      "outputSha256": "67a8d2a92bf80bb81d761ae2f5a429c14c656eea9e3e44af6f2d92012ee7662d",
+      "outputSha256": "c57248953723f6023d4845d32a80fee65aa03d846dcc6527f73d61f81f4c9380",
       "edits": [
         {
           "start": 82,
@@ -408182,6 +411074,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 6084,
+          "end": 6085,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
         },
         {
           "start": 6145,
@@ -408233,6 +411132,13 @@
           "renamed": "position"
         },
         {
+          "start": 6514,
+          "end": 6515,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
           "start": 6557,
           "end": 6564,
           "symbol": "F:k.field_j:I",
@@ -408282,6 +411188,13 @@
           "renamed": "position"
         },
         {
+          "start": 6966,
+          "end": 6967,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
           "start": 7009,
           "end": 7016,
           "symbol": "F:k.field_j:I",
@@ -408294,6 +411207,41 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 7334,
+          "end": 7335,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 8075,
+          "end": 8076,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 8230,
+          "end": 8231,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 8456,
+          "end": 8457,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 8738,
+          "end": 8739,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 8995,
@@ -408310,6 +411258,13 @@
           "renamed": "position"
         },
         {
+          "start": 9225,
+          "end": 9226,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
           "start": 9268,
           "end": 9275,
           "symbol": "F:k.field_j:I",
@@ -408324,6 +411279,20 @@
           "renamed": "position"
         },
         {
+          "start": 9448,
+          "end": 9449,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 9686,
+          "end": 9687,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 10915,
           "end": 10922,
           "symbol": "F:k.field_m:[B",
@@ -408336,6 +411305,139 @@
           "symbol": "F:k.field_m:[B",
           "original": "field_m",
           "renamed": "payload"
+        },
+        {
+          "start": 12850,
+          "end": 12851,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 13023,
+          "end": 13024,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 13315,
+          "end": 13316,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 13560,
+          "end": 13561,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 13783,
+          "end": 13784,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 13990,
+          "end": 13991,
+          "symbol": "M:k.d(I)B",
+          "original": "d",
+          "renamed": "readByte"
+        },
+        {
+          "start": 14389,
+          "end": 14390,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 14869,
+          "end": 14870,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 15057,
+          "end": 15058,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 15240,
+          "end": 15241,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 16687,
+          "end": 16688,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 16891,
+          "end": 16892,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 19484,
+          "end": 19485,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 19705,
+          "end": 19706,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 19806,
+          "end": 19807,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 19903,
+          "end": 19904,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 20072,
+          "end": 20073,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 20293,
+          "end": 20294,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 20528,
+          "end": 20529,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         }
       ]
     },
@@ -411473,7 +414575,7 @@
       "original": "qi.java",
       "renamed": "qi.java",
       "inputSha256": "1f4c8d726a2998df398f10b965ea0f0fd911911ab1374fa2eecb6a7b1e45eb24",
-      "outputSha256": "834ea74de943d52708b3cba9616e670c7d59676dd55c2c03404535d2ad868a19",
+      "outputSha256": "e3e29364e9c86113d3912a2888ed16385ddd77a316a1fe507910a1f67c1118fb",
       "edits": [
         {
           "start": 491,
@@ -411497,11 +414599,32 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 888,
+          "end": 889,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 921,
+          "end": 922,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 1144,
           "end": 1151,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 1476,
+          "end": 1477,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 1548,
@@ -411516,6 +414639,13 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 1764,
+          "end": 1765,
+          "symbol": "M:k.h(I)I",
+          "original": "h",
+          "renamed": "readSignedSmart"
         },
         {
           "start": 2149,
@@ -411651,6 +414781,13 @@
           "renamed": "RasterBuffer"
         },
         {
+          "start": 5812,
+          "end": 5813,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
           "start": 5878,
           "end": 5879,
           "symbol": "C:l",
@@ -411734,7 +414871,7 @@
       "original": "qk.java",
       "renamed": "qk.java",
       "inputSha256": "ef324e7fd4569397292b11ec186dcc1155326ede9457195a8e91d2ffbc3f9278",
-      "outputSha256": "16d815b8c1f0b0039739f952b9ef27dd436a4c0546e39028d3c3143242fd42f5",
+      "outputSha256": "fdb2dac1c659f70a8aaeacd0b02f573c1a747ff041e3558f6eba56b655208e06",
       "edits": [
         {
           "start": 61,
@@ -411742,6 +414879,27 @@
           "symbol": "C:br",
           "original": "br",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 689,
+          "end": 690,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 727,
+          "end": 728,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 859,
+          "end": 860,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 2040,
@@ -411770,7 +414928,7 @@
       "original": "qm.java",
       "renamed": "qm.java",
       "inputSha256": "93d98d1502fc9e00dec12cf40a0f023db26fe152ce1284c34688c9ffea93f2bf",
-      "outputSha256": "c4e8f08b9d71ec8152180705d6a2f64d6eaa1145e631d4b2e0ed1e3179650605",
+      "outputSha256": "a44068232d397b5c4211023b357ef3260be3b6388a55576cfdb478d8d37007be",
       "edits": [
         {
           "start": 61,
@@ -411848,6 +415006,41 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 14512,
+          "end": 14513,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 14550,
+          "end": 14551,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 14588,
+          "end": 14589,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 14626,
+          "end": 14627,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 14723,
+          "end": 14724,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 14761,
@@ -412177,8 +415370,15 @@
       "original": "re.java",
       "renamed": "re.java",
       "inputSha256": "ce90bc92ecbef1fc53041bd07f9d32e7cfdb5e1b132c80de9c80390108ffdbbd",
-      "outputSha256": "1661ad3ea2c86412e917b60afd2daffa3fff06554687d953a73690d87d2f2dd8",
+      "outputSha256": "f8cb9d8e4dc8d7e94800cdb72903fc1aa6628196179abe689b3fee970339a560",
       "edits": [
+        {
+          "start": 215,
+          "end": 216,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
         {
           "start": 320,
           "end": 322,
@@ -412964,7 +416164,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "0c817a4b0d6fa4795b30722162eced38857460dc7e741869c61cb192623f0b7b",
-      "outputSha256": "be4c57a50032549d449da76cb313d2a798612caf7e99317605ba5f239459d933",
+      "outputSha256": "36ed7080f7fcd9ee6a66cc26ff540448f689901d954718ccc9293a3f31d9b955",
       "edits": [
         {
           "start": 771,
@@ -412972,6 +416172,13 @@
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 983,
+          "end": 984,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 1035,
@@ -412988,6 +416195,13 @@
           "renamed": "position"
         },
         {
+          "start": 1235,
+          "end": 1236,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 1287,
           "end": 1294,
           "symbol": "F:k.field_j:I",
@@ -413002,6 +416216,13 @@
           "renamed": "position"
         },
         {
+          "start": 1487,
+          "end": 1488,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 1539,
           "end": 1546,
           "symbol": "F:k.field_j:I",
@@ -413014,6 +416235,55 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 1785,
+          "end": 1786,
+          "symbol": "M:k.h(B)I",
+          "original": "h",
+          "renamed": "readUnsignedSmart"
+        },
+        {
+          "start": 1934,
+          "end": 1935,
+          "symbol": "M:k.h(I)I",
+          "original": "h",
+          "renamed": "readSignedSmart"
+        },
+        {
+          "start": 1982,
+          "end": 1983,
+          "symbol": "M:k.h(B)I",
+          "original": "h",
+          "renamed": "readUnsignedSmart"
+        },
+        {
+          "start": 2038,
+          "end": 2039,
+          "symbol": "M:k.h(B)I",
+          "original": "h",
+          "renamed": "readUnsignedSmart"
+        },
+        {
+          "start": 2084,
+          "end": 2085,
+          "symbol": "M:k.h(B)I",
+          "original": "h",
+          "renamed": "readUnsignedSmart"
+        },
+        {
+          "start": 2130,
+          "end": 2131,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2174,
+          "end": 2175,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         }
       ]
     },
@@ -413028,7 +416298,7 @@
       "original": "rj.java",
       "renamed": "rj.java",
       "inputSha256": "7cf4e1102e9b0b70cc7692183e84947211be477582cbe108ba14aee568b01d8d",
-      "outputSha256": "7558118d647f341ef40d482be50034418e3a1f98a74f17f3d1281229476d47e2",
+      "outputSha256": "4ffa9c3db4d93910552880941ef1d32e23b8efa64594f47b44a06edb308f35ab",
       "edits": [
         {
           "start": 151,
@@ -413038,11 +416308,60 @@
           "renamed": "Sprite"
         },
         {
+          "start": 4126,
+          "end": 4127,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 4197,
+          "end": 4198,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4582,
+          "end": 4583,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 4649,
           "end": 4650,
           "symbol": "M:br.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 5007,
+          "end": 5008,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 5104,
+          "end": 5105,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 5245,
+          "end": 5246,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 5618,
+          "end": 5619,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 5677,
@@ -413052,11 +416371,32 @@
           "renamed": "unlink"
         },
         {
+          "start": 5804,
+          "end": 5805,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 5891,
+          "end": 5892,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
+        },
+        {
           "start": 5934,
           "end": 5941,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 6324,
+          "end": 6325,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
         },
         {
           "start": 6616,
@@ -413066,6 +416406,13 @@
           "renamed": "position"
         },
         {
+          "start": 6841,
+          "end": 6842,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 7209,
           "end": 7216,
           "symbol": "F:k.field_j:I",
@@ -413073,11 +416420,32 @@
           "renamed": "position"
         },
         {
+          "start": 7434,
+          "end": 7435,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 7515,
           "end": 7516,
           "symbol": "M:br.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 7617,
+          "end": 7618,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 7649,
+          "end": 7650,
+          "symbol": "M:k.a(B)J",
+          "original": "a",
+          "renamed": "readLong"
         },
         {
           "start": 8061,
@@ -415029,7 +418397,7 @@
       "original": "rp.java",
       "renamed": "rp.java",
       "inputSha256": "46aa1b58926c8e90f389f2e9fd8f808de3e29ccff4d783cad8bd396412f16c1a",
-      "outputSha256": "13fa11bfec9cda78af600264b8766f219877384d9b3a4e9cd6fa2a6c31b1887c",
+      "outputSha256": "5322cb407222cfb8ebc1886d22198fe9eb62741f50f345bf4a53587090f946bd",
       "edits": [
         {
           "start": 83,
@@ -415055,11 +418423,46 @@
           "kind": "label"
         },
         {
+          "start": 17630,
+          "end": 17631,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 17759,
           "end": 17761,
           "symbol": "C:fn",
           "original": "fn",
           "renamed": "ClientException"
+        },
+        {
+          "start": 17822,
+          "end": 17823,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 17914,
+          "end": 17915,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 18092,
+          "end": 18093,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 18199,
+          "end": 18200,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 18729,
@@ -415088,6 +418491,41 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 19634,
+          "end": 19635,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 19732,
+          "end": 19733,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 19960,
+          "end": 19961,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 20126,
+          "end": 20127,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 20172,
+          "end": 20173,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 21267,
@@ -416845,7 +420283,7 @@
       "original": "sf.java",
       "renamed": "sf.java",
       "inputSha256": "c323706a4c4aac953cf23448ded0eefe0cafdce31da32599ad1e579b5e948045",
-      "outputSha256": "89524c8f7a4c83f16854af1ef0035980bbd05b95abcb53ac060284a6da306d2c",
+      "outputSha256": "b1b793c798301d7017529801e63e144279c6579e49ac1ae76a03d32e216ac3fe",
       "edits": [
         {
           "start": 557,
@@ -416909,6 +420347,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 4020,
+          "end": 4021,
+          "symbol": "M:k.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeString"
         },
         {
           "start": 4078,
@@ -417396,7 +420841,7 @@
       "original": "sn.java",
       "renamed": "sn.java",
       "inputSha256": "9fba2ca8fe87a821602591375f9079a1910083bdc03da721cbf896525e24d19c",
-      "outputSha256": "f4b5e088387430d85cc571196b78de67e8906ee479c8c041a63bcc4b88d404f3",
+      "outputSha256": "3deab498a5b682f1fde61e58037a28f349a036fdbbd73bb4817a6eecc8e5cb11",
       "edits": [
         {
           "start": 376,
@@ -417460,6 +420905,55 @@
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3736,
+          "end": 3737,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3783,
+          "end": 3784,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3944,
+          "end": 3945,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4001,
+          "end": 4002,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 4248,
+          "end": 4249,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 4301,
+          "end": 4302,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 4472,
+          "end": 4473,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 4707,
@@ -419893,7 +423387,7 @@
       "original": "tk.java",
       "renamed": "tk.java",
       "inputSha256": "a0fdda509147b1b74e48fe392b8f3052a78b406db9dcb18a3630c570737a0f2d",
-      "outputSha256": "f0e11368cc8671d2f0ba971ee5256376ae30710bce5c4dda42b057b4ef3f72a4",
+      "outputSha256": "4802226a234bc3fbb792f49c9194f46c07ab8d1ce2bc14970ed1420d5011014f",
       "edits": [
         {
           "start": 977,
@@ -420568,6 +424062,34 @@
           "renamed": "position"
         },
         {
+          "start": 23152,
+          "end": 23153,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 23192,
+          "end": 23193,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 23230,
+          "end": 23231,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 23270,
+          "end": 23271,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
           "start": 23349,
           "end": 23356,
           "symbol": "F:k.field_j:I",
@@ -420704,7 +424226,7 @@
       "original": "tl.java",
       "renamed": "tl.java",
       "inputSha256": "13497996cc341353a1fcd29fb902de25ccaa731b2fbbd49bdc656bc05c1f68f7",
-      "outputSha256": "45713a17ac1a1d9a8393a7d6fb5920d3813022df1647c6d1cdcc24f0bcd32f71",
+      "outputSha256": "889648afcf6f19e133d094904bca0703ba072f45ed41cc188e73dfce5bb8df42",
       "edits": [
         {
           "start": 61,
@@ -420721,11 +424243,60 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 816,
+          "end": 817,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
           "start": 2773,
           "end": 2774,
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3408,
+          "end": 3409,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3558,
+          "end": 3559,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3654,
+          "end": 3655,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3836,
+          "end": 3837,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4193,
+          "end": 4194,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4439,
+          "end": 4440,
+          "symbol": "M:k.f(B)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 5307,
@@ -421231,7 +424802,7 @@
       "original": "ug.java",
       "renamed": "ug.java",
       "inputSha256": "2d4fb52e89c991521b5e24a0c2338d6a450e6082e7db8ef089fe99b3a783bd2d",
-      "outputSha256": "e7b2c4ae43545bc5bbdc7e88dc1a697d11293cf3f6188fcf7d981ce5e3a16476",
+      "outputSha256": "d70f82740cfba3ed9aa890dc7083d8bd915c54473c4341af62b1e1013b06adf1",
       "edits": [
         {
           "start": 61,
@@ -421276,11 +424847,32 @@
           "renamed": "payload"
         },
         {
+          "start": 5610,
+          "end": 5611,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 5642,
+          "end": 5643,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
           "start": 5702,
           "end": 5709,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 5986,
+          "end": 5987,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 7116,
@@ -421302,6 +424894,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 7761,
+          "end": 7762,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
         },
         {
           "start": 10358,
@@ -421752,6 +425351,20 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 12141,
+          "end": 12142,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 12176,
+          "end": 12177,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
+        },
+        {
           "start": 12334,
           "end": 12335,
           "symbol": "C:k",
@@ -421764,6 +425377,13 @@
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 12814,
+          "end": 12815,
+          "symbol": "M:k.b(II)V",
+          "original": "b",
+          "renamed": "writeInt"
         },
         {
           "start": 12849,
@@ -422002,7 +425622,7 @@
       "original": "uh.java",
       "renamed": "uh.java",
       "inputSha256": "7141b34822ad808fd2ce422cbf080b932bf3d3cf95eb320c67c216cfecb0a60d",
-      "outputSha256": "80c5ab199ff723402afccc5ef038c47c15b30a32b2b13df7a21bfb94266af4ed",
+      "outputSha256": "0459860b4cb44b86394c176f57ad1b8fbbb4717c2e44deeabcad544e50e2be24",
       "edits": [
         {
           "start": 3313,
@@ -422010,6 +425630,62 @@
           "symbol": "C:k",
           "original": "k",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3523,
+          "end": 3524,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3667,
+          "end": 3668,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3716,
+          "end": 3717,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3754,
+          "end": 3755,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3924,
+          "end": 3925,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3989,
+          "end": 3990,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4551,
+          "end": 4552,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4627,
+          "end": 4628,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         }
       ]
     },
@@ -422720,7 +426396,7 @@
       "original": "ul.java",
       "renamed": "ul.java",
       "inputSha256": "20667160d58e216e0df084e524a2208a423497d952806b4834b61a55f8140994",
-      "outputSha256": "1c64e22fe19d8d108a8a8377953f6c7877007ffe9b7af8b0404225840a201bd3",
+      "outputSha256": "e52a9bbbf2ebc578b552d95b2a91b3be7fd7207bbaf52dc4c5c9a69c63eed3a2",
       "edits": [
         {
           "start": 8993,
@@ -422772,11 +426448,25 @@
           "renamed": "position"
         },
         {
+          "start": 12457,
+          "end": 12458,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 12964,
           "end": 12971,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 13228,
+          "end": 13229,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
         },
         {
           "start": 13923,
@@ -422793,11 +426483,25 @@
           "renamed": "position"
         },
         {
+          "start": 14265,
+          "end": 14266,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
+        },
+        {
           "start": 14691,
           "end": 14698,
           "symbol": "F:k.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 14917,
+          "end": 14918,
+          "symbol": "M:k.i(I)I",
+          "original": "i",
+          "renamed": "readInt"
         }
       ]
     },
@@ -426089,7 +429793,7 @@
       "original": "wh.java",
       "renamed": "IterableNodeHashTable.java",
       "inputSha256": "8f2f56df07b6559f591831f462ab0115c931915271766d037993d0e7d5315d53",
-      "outputSha256": "024273de6a343b9f1bbed3114cc720c3201b212b7775ccc7cf2c35eb00a85a65",
+      "outputSha256": "4efa8a3b51c97e93cd7d6caba8413f10d820a17eb1d687bb5d0db5926f1a6494",
       "edits": [
         {
           "start": 71,
@@ -426127,6 +429831,27 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 224,
+          "end": 225,
+          "symbol": "M:wh.a(JI)Lbr;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
+          "start": 231,
+          "end": 237,
+          "symbol": "P:wh.a(JI)Lbr;#0",
+          "original": "param0",
+          "renamed": "key"
+        },
+        {
+          "start": 243,
+          "end": 249,
+          "symbol": "P:wh.a(JI)Lbr;#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 261,
           "end": 263,
           "symbol": "C:br",
@@ -426148,11 +429873,32 @@
           "renamed": "buckets"
         },
         {
+          "start": 405,
+          "end": 411,
+          "symbol": "P:wh.a(JI)Lbr;#0",
+          "original": "param0",
+          "renamed": "key"
+        },
+        {
           "start": 471,
           "end": 478,
           "symbol": "F:br.field_d:Lbr;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 503,
+          "end": 509,
+          "symbol": "P:wh.a(JI)Lbr;#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 667,
+          "end": 673,
+          "symbol": "P:wh.a(JI)Lbr;#0",
+          "original": "param0",
+          "renamed": "key"
         },
         {
           "start": 690,
@@ -426864,7 +430610,7 @@
       "original": "wq.java",
       "renamed": "wq.java",
       "inputSha256": "1b4943c2ec462ec5f420bcf74dd526b8183c967717ec08cfcfd7bf26588b7328",
-      "outputSha256": "998701044fef7e0447b3b2d549e2283c29c27f90dce42a693575c66ed087e1a1",
+      "outputSha256": "855f165c98f1743c2fd1e8a16d494dbbb7731352319c9e57c1c69c9dd6631bfc",
       "edits": [
         {
           "start": 144,
@@ -426886,6 +430632,55 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "Sprite"
+        },
+        {
+          "start": 3244,
+          "end": 3245,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3328,
+          "end": 3329,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3362,
+          "end": 3363,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3396,
+          "end": 3397,
+          "symbol": "M:k.g(I)I",
+          "original": "g",
+          "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 3430,
+          "end": 3431,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3468,
+          "end": 3469,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 3506,
+          "end": 3507,
+          "symbol": "M:k.d(B)I",
+          "original": "d",
+          "renamed": "readUnsignedShort"
         },
         {
           "start": 4348,
@@ -426912,10 +430707,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/zombiedawnmulti"
     },
-    "rulesSha256": "7c2f3bf720580953f348f021566e9a14e3aa7f5075159c101805b2f75bef5ff0",
+    "rulesSha256": "1d183621a17a5d5e83897c4519160aadd5ae94fa68f26abcba49b44719cf0d3e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "854791338433f981516fd30d1a51754afb38d4c6601cefbf0b63c6c391ee05db",
-    "outputTreeSha256": "8f9d311d1669bb431d030bf0db87551e1f63a8295425d2c3c202b1fbf609eec0",
+    "outputTreeSha256": "c6a8717be0d7becb1a0f4bf372c2ffdfa4c831b1488170d67b47ba85bed8d6cb",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

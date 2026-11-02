@@ -135,7 +135,7 @@ abstract class ii {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.a(124, 0);
-          var5.a(param0, (byte) 105);
+          var5.writeString(param0, (byte) 105);
           var5.e(21, -var4 + var5.position);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);

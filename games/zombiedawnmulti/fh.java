@@ -331,7 +331,7 @@ final class fh {
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var14 = s.field_e;
-          var2 = var14.g(31365);
+          var2 = var14.readUnsignedByte(31365);
           if (param0 != 1) {
             return;
           }
@@ -341,9 +341,9 @@ final class fh {
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((PacketBuffer) ((Object) var5)).g(31365);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(31365);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).i(-1478490344);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-1478490344);
             }
             var12 = (ra) (so.field_j.c(param0 ^ 60));
             if (var12 == null) {

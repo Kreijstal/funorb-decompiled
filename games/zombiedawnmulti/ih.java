@@ -98,7 +98,7 @@ final class ih {
           }
           var5.f(var4, 121);
           var5.position = var5.position - 4;
-          param0.field_h = var5.i(-1478490344);
+          param0.field_h = var5.readInt(-1478490344);
           var5.e(41, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ih.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -117,10 +117,10 @@ final class ih {
           var6.a(118, 1);
           var6.a(-128, param1.field_i);
           var6.a(-109, param1.field_f);
-          var6.b(-104, param1.field_m);
-          var6.b(91, param1.field_l);
-          var6.b(43, param1.field_g);
-          var6.b(-99, param1.field_n);
+          var6.writeInt(-104, param1.field_m);
+          var6.writeInt(91, param1.field_l);
+          var6.writeInt(43, param1.field_g);
+          var6.writeInt(-99, param1.field_n);
           var6.f(var4, 117);
           var6.e(35, var6.position - var4);
         } catch (RuntimeException runtimeException) {

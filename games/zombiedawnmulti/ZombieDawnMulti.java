@@ -662,7 +662,7 @@ public final class ZombieDawnMulti extends aq {
                   bl.a(-9);
                   sp.field_g = 13;
                   gh.field_g = false;
-                  vh.field_Fb = s.field_e.f((byte) -48);
+                  vh.field_Fb = s.field_e.readString((byte) -48);
                   continue;
                 }
                 if (op.field_i == 14) {
@@ -702,10 +702,10 @@ public final class ZombieDawnMulti extends aq {
                 if (op.field_i == 57 ||
                   58 == op.field_i) {
                   bl.a(-9);
-                  s.field_e.g(31365);
-                  var2 = new String[s.field_e.g(31365)];
+                  s.field_e.readUnsignedByte(31365);
+                  var2 = new String[s.field_e.readUnsignedByte(31365)];
                   var3 = -2;
-                  var3 = s.field_e.g(31365);
+                  var3 = s.field_e.readUnsignedByte(31365);
                   var4 = 0;
                   while (var4 < var2.length) {
                     var2[var4] = s.field_e.c(0);
@@ -714,7 +714,7 @@ public final class ZombieDawnMulti extends aq {
                   if (var3 >= 254) {
                     var3 = -2;
                   }
-                  var4 = s.field_e.g(31365);
+                  var4 = s.field_e.readUnsignedByte(31365);
                   var5 = 0;
                   if (var2.length <= 2) {
                     if (var2.length > 1) {
@@ -731,25 +731,25 @@ public final class ZombieDawnMulti extends aq {
                   var8 = new PlayerLoadout();
                   var7.a(2, s.field_e);
                   var7.field_r = var4;
-                  s.field_e.g(31365);
+                  s.field_e.readUnsignedByte(31365);
                   if (op.field_i == 57) {
                     var9_int = 0;
                     while (var9_int < 5) {
-                      dupTemp$1 = s.field_e.g(31365);
+                      dupTemp$1 = s.field_e.readUnsignedByte(31365);
                       FullscreenFocusCanvas.field_k.field_m[var9_int] = dupTemp$1;
                       var8.powerupTypes[var9_int] = dupTemp$1;
                       var9_int++;
                     }
                     var9_int = 0;
                     while (var9_int < 5) {
-                      dupTemp$2 = s.field_e.g(31365);
+                      dupTemp$2 = s.field_e.readUnsignedByte(31365);
                       FullscreenFocusCanvas.field_k.field_g[var9_int] = dupTemp$2;
                       var8.field_f[var9_int] = dupTemp$2;
                       var9_int++;
                     }
                     var9_int = 0;
                     while (var9_int < 3) {
-                      dupTemp$3 = s.field_e.g(31365);
+                      dupTemp$3 = s.field_e.readUnsignedByte(31365);
                       FullscreenFocusCanvas.field_k.field_s[var9_int] = dupTemp$3;
                       var8.field_c[var9_int] = dupTemp$3;
                       var9_int++;
@@ -801,7 +801,7 @@ public final class ZombieDawnMulti extends aq {
                   var4_ref_ga = s.field_e;
                   var5 = 0;
                   while (var5 < 8) {
-                    var3_ref_int__[var5] = ((PacketBuffer) ((Object) var4_ref_ga)).i(-1478490344);
+                    var3_ref_int__[var5] = ((PacketBuffer) ((Object) var4_ref_ga)).readInt(-1478490344);
                     var5++;
                   }
                   var3_ref_int__ = var2_array;
@@ -834,21 +834,21 @@ public final class ZombieDawnMulti extends aq {
                 }
                 if (wp.field_h != null) {
                   if (70 == op.field_i) {
-                    wp.field_h.field_W = s.field_e.c((byte) -18);
+                    wp.field_h.field_W = s.field_e.readShort((byte) -18);
                     wp.field_h.field_t = bl.a((byte) 107);
                     continue;
                   }
                   if (62 == op.field_i) {
-                    var2_int = s.field_e.g(31365);
+                    var2_int = s.field_e.readUnsignedByte(31365);
                     var3_ref_int__ = new int[op.field_m.field_t];
                     var4 = 0;
                     while (op.field_m.field_t > var4) {
-                      var3_ref_int__[var4] = s.field_e.d((byte) 69);
-                      op.field_m.field_v[var4] = s.field_e.d((byte) 69);
-                      op.field_m.field_o[var4] = s.field_e.d((byte) 69);
+                      var3_ref_int__[var4] = s.field_e.readUnsignedShort((byte) 69);
+                      op.field_m.field_v[var4] = s.field_e.readUnsignedShort((byte) 69);
+                      op.field_m.field_o[var4] = s.field_e.readUnsignedShort((byte) 69);
                       var4++;
                     }
-                    var4 = s.field_e.d((byte) 69);
+                    var4 = s.field_e.readUnsignedShort((byte) 69);
                     if (re.field_b) {
                       gk.a((byte) 16);
                       re.field_b = false;
@@ -908,7 +908,7 @@ public final class ZombieDawnMulti extends aq {
                     continue;
                   }
                   if (65 == op.field_i) {
-                    op.field_m.field_j = s.field_e.g(31365);
+                    op.field_m.field_j = s.field_e.readUnsignedByte(31365);
                     if (null == np.field_m) {
                       continue;
                     }
@@ -916,13 +916,13 @@ public final class ZombieDawnMulti extends aq {
                     continue;
                   }
                   if (op.field_i == 64) {
-                    var2_int = s.field_e.g(31365);
+                    var2_int = s.field_e.readUnsignedByte(31365);
                     System.out.println(" players resigned: " + Integer.toBinaryString(var2_int));
                     op.field_m.field_F = var2_int;
                     continue;
                   }
                   if (op.field_i == 66) {
-                    s.field_e.g(31365);
+                    s.field_e.readUnsignedByte(31365);
                     continue;
                   }
                 }
