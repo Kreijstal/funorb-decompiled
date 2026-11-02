@@ -47,7 +47,7 @@ final class uh {
           this.field_c &&
           this.field_a != 0) {
           var3 = Js5Archive.field_e.camera;
-          var4 = Js5Archive.field_e.field_H;
+          var4 = Js5Archive.field_e.navigation;
           if (this.field_p) {
             var5 = var3.a(-(int)((float)(24 * this.field_a) / 1.0f) + ha.field_b, false);
             var6 = var3.b(ei.field_K - (int)((float)(24 * this.field_a) / 1.0f), true);
@@ -123,7 +123,7 @@ final class uh {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.d((byte) -124);
+          var2_int = param1.readUnsignedByte((byte) -124);
           if (param0 != -36) {
             field_o = (rj) null;
           }

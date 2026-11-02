@@ -224,15 +224,15 @@ final class ck extends IntrusiveNode {
                   if (var5.getY(237239984) % 24 == 0) {
                     var7--;
                   }
-                  Js5Archive.field_e.field_H.field_A.field_f[var7][var6] = eg.a(Js5Archive.field_e.field_H.field_A.field_f[var7][var6], -33554433);
-                  Js5Archive.field_e.field_H.field_A.field_f[var7 - 1][var6] = eg.a(Js5Archive.field_e.field_H.field_A.field_f[var7 - 1][var6], -33554433);
-                  Js5Archive.field_e.field_H.field_A.a(true, param0 + 25732, var7, false, var6);
-                  Js5Archive.field_e.field_H.field_A.a(true, 14365, var7 - 1, false, var6);
+                  Js5Archive.field_e.navigation.field_A.tiles[var7][var6] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[var7][var6], -33554433);
+                  Js5Archive.field_e.navigation.field_A.tiles[var7 - 1][var6] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[var7 - 1][var6], -33554433);
+                  Js5Archive.field_e.navigation.field_A.a(true, param0 + 25732, var7, false, var6);
+                  Js5Archive.field_e.navigation.field_A.a(true, 14365, var7 - 1, false, var6);
                   this.field_h = true;
                   if (null != this.field_r) {
                     pc.a((byte) 13, this.field_r);
                   }
-                  this.field_r = kh.a(pb.a(so.field_a, 2, 1) + 64, false);
+                  this.field_r = kh.a(pb.a(so.random, 2, 1) + 64, false);
                 }
               }
             } else {
@@ -628,7 +628,7 @@ final class ck extends IntrusiveNode {
         this.field_r = null;
         this.field_j = null;
         this.field_h = false;
-        if (!Js5Archive.field_e.field_H.a(param0, param1, 106)) {
+        if (!Js5Archive.field_e.navigation.a(param0, param1, 106)) {
           param1 = param1 - (-4 + param1 % 24);
         }
         this.field_k = param0;
@@ -683,7 +683,7 @@ final class ck extends IntrusiveNode {
             if (!(var5 instanceof id)) {
               if (this.field_o != 1) {
                 stackIn_39_0 = var11;
-                if (Js5Archive.field_e.field_H.a(var7, this.field_p, var6, this.field_k, 124) == -1) {
+                if (Js5Archive.field_e.navigation.a(var7, this.field_p, var6, this.field_k, 124) == -1) {
                   stackIn_40_1 = 0;
                 } else {
                   stackIn_40_1 = 1;
@@ -692,10 +692,10 @@ final class ck extends IntrusiveNode {
               }
             } else {
               stackIn_33_0 = var11;
-              if (Js5Archive.field_e.field_H.a(-24 + var7 - 26, this.field_p, var6, this.field_k, 110) == -1 &&
-                Js5Archive.field_e.field_H.a(-24 + var7 - 26, this.field_p, 24 + var6, this.field_k, 125) == -1 &&
-                Js5Archive.field_e.field_H.a(var7 + 2, this.field_p, var6, this.field_k, 109) == -1 &&
-                Js5Archive.field_e.field_H.a(2 + var7, this.field_p, var6 + 24, this.field_k, 111) == -1) {
+              if (Js5Archive.field_e.navigation.a(-24 + var7 - 26, this.field_p, var6, this.field_k, 110) == -1 &&
+                Js5Archive.field_e.navigation.a(-24 + var7 - 26, this.field_p, 24 + var6, this.field_k, 125) == -1 &&
+                Js5Archive.field_e.navigation.a(var7 + 2, this.field_p, var6, this.field_k, 109) == -1 &&
+                Js5Archive.field_e.navigation.a(2 + var7, this.field_p, var6 + 24, this.field_k, 111) == -1) {
                 stackIn_35_1 = 0;
               } else {
                 stackIn_35_1 = 1;

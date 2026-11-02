@@ -117,7 +117,7 @@ final class jg {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_g.d((byte) -116);
+          var3 = this.field_g.readUnsignedByte((byte) -116);
           var4 = this.field_g.b(true);
           if (var3 == 47) {
             this.field_g.position = this.field_g.position + var4;
@@ -138,10 +138,10 @@ final class jg {
         var3Lifetime1 = field_c[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_g.d((byte) -128) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_g.readUnsignedByte((byte) -128) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_g.d((byte) -125) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_g.readUnsignedByte((byte) -125) << 16;
         }
         return var4Lifetime1;
     }
@@ -167,8 +167,8 @@ final class jg {
         this.field_a = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_g.c(123);
-          var5 = this.field_g.c(121);
+          var4 = this.field_g.readInt(123);
+          var5 = this.field_g.readInt(121);
           if (var4 == 1297379947) {
             this.field_a[var3] = this.field_g.position;
             var3++;

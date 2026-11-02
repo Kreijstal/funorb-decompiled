@@ -68,7 +68,7 @@ final class gk extends WorldObject {
         this.field_J = false;
         this.field_D = false;
         this.field_D = param3 ? true : false;
-        int var5 = pb.a(so.field_a, 2, 1);
+        int var5 = pb.a(so.random, 2, 1);
         if (var5 == 1) {
           this.field_E = true;
         } else {
@@ -98,7 +98,7 @@ final class gk extends WorldObject {
           Zombie.field_Fb[param0] = param1;
           Zombie.field_Fb[param0][-2 + Zombie.field_Fb[param0].length].a();
           if (!ng.field_e) {
-            Rasterizer.d();
+            Rasterizer.clear();
           }
           if (!param2) {
             var4 = (byte[]) null;

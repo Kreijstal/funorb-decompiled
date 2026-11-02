@@ -19,7 +19,7 @@ final class pb extends IntrusiveNode {
     private final void d(int param0) {
         this.field_q = this.field_h * 24 + (12 + this.a(270415848));
         this.field_j = this.field_k * 24 + (12 + this.a(param0 ^ 270415728));
-        this.field_o = -pb.a(so.field_a, 50, param0 ^ 153);
+        this.field_o = -pb.a(so.random, 50, param0 ^ 153);
         if (param0 != 152) {
           this.field_i = -123;
         }
@@ -29,7 +29,7 @@ final class pb extends IntrusiveNode {
         if (param0 != 270415848) {
           this.field_q = -61;
         }
-        return -9 + pb.a(so.field_a, 18, 1);
+        return -9 + pb.a(so.random, 18, 1);
     }
 
     final static Js5Archive a(boolean param0, boolean param1, int param2, boolean param3, int param4) {
@@ -133,20 +133,20 @@ final class pb extends IntrusiveNode {
           Rasterizer.b(param0, param2 + param1, 1 + param4, 12105912);
           var5_int = 1;
           var6 = param1;
-          if (Rasterizer.field_l > var5_int + param2) {
-            var5_int = Rasterizer.field_l - param2;
+          if (Rasterizer.clipTop > var5_int + param2) {
+            var5_int = Rasterizer.clipTop - param2;
           }
           if (param3 != 48) {
             return;
           }
-          if (Rasterizer.field_d < var6 + param2) {
-            var6 = -param2 + Rasterizer.field_d;
+          if (Rasterizer.clipBottom < var6 + param2) {
+            var6 = -param2 + Rasterizer.clipBottom;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + var7 * 48 / param1;
             var9 = var8 | (var8 << 16 | var8 << 8);
-            Rasterizer.field_c[(var7 + param2) * Rasterizer.field_f + param0] = var9;
-            Rasterizer.field_c[(var7 + param2) * Rasterizer.field_f - (-param0 - param4)] = var9;
+            Rasterizer.pixels[(var7 + param2) * Rasterizer.width + param0] = var9;
+            Rasterizer.pixels[(var7 + param2) * Rasterizer.width - (-param0 - param4)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -174,11 +174,11 @@ final class pb extends IntrusiveNode {
         var8 = ZombieDawn.field_J;
         try {
           var9 = fj.field_g;
-          var2 = var9.d((byte) -122);
+          var2 = var9.readUnsignedByte((byte) -122);
           if (param0 < 63) {
             return;
           }
-          var3 = var9.d((byte) -126);
+          var3 = var9.readUnsignedByte((byte) -126);
           if (0 == var2) {
             var4_ref_lo = (lo) (c.field_b.b((byte) 26));
             if (var4_ref_lo == null) {
@@ -193,7 +193,7 @@ final class pb extends IntrusiveNode {
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.d((byte) -116) << (eg.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -116) << (eg.a(var7, 3) << 8));
             }
             var4_ref_lo.field_h = true;
             var4_ref_lo.unlink(-27598);
@@ -317,13 +317,13 @@ final class pb extends IntrusiveNode {
         this.field_k = param1;
         this.field_h = param0;
         this.d(152);
-        this.field_l = pb.a(so.field_a, 10, 1) + 25 >> 2;
+        this.field_l = pb.a(so.random, 10, 1) + 25 >> 2;
         this.field_p = 0;
         this.field_i = 12 + 24 * this.field_h + this.a(270415848);
         this.field_m = 12 + (this.field_k * 24 + this.a(270415848));
-        this.field_r = pb.a(so.field_a, 10, 1) + param2;
+        this.field_r = pb.a(so.random, 10, 1) + param2;
         this.field_o = 0;
-        this.field_n = pb.a(so.field_a, 1, 1);
+        this.field_n = pb.a(so.random, 1, 1);
     }
 
     static {

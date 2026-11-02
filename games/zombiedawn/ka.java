@@ -77,7 +77,7 @@ final class ka {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_g.d(-1)) {
+          if (1 == this.field_g.groupCount(-1)) {
             stackIn_3_0 = this.a(0, param0, param2, true);
             return stackIn_3_0;
           }
@@ -123,7 +123,7 @@ final class ka {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_b.d(param0 ^ -1856253637) == 1) {
+          if (this.field_b.groupCount(param0 ^ -1856253637) == 1) {
             stackIn_3_0 = this.a(param2, param1, 0, 117);
             return stackIn_3_0;
           }

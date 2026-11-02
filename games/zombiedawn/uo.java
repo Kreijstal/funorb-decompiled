@@ -22,9 +22,9 @@ final class uo {
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (param0) {
-          Rasterizer.a(0, 0, Rasterizer.field_f, Rasterizer.field_a, 0, 192);
+          Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height, 0, 192);
         } else {
-          Rasterizer.d();
+          Rasterizer.clear();
         }
         if (param1 != -28518) {
           uo.a(true, 65, false);

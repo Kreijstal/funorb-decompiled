@@ -371,14 +371,14 @@ final class te extends id {
                   while (var8 < 3) {
                     if (this.field_jb[var8] == 0) {
                       this.field_jb[var8] = 6;
-                      this.field_Y[var8] = -so.c(30) - 50;
-                      this.field_W[var8] = so.c(6);
+                      this.field_Y[var8] = -so.randomInt(30) - 50;
+                      this.field_W[var8] = so.randomInt(6);
                       if (var8 % 2 == 0) {
                         this.field_W[var8] = -this.field_W[var8];
                       }
                       this.field_W[var8] = this.field_W[var8] + 10;
-                      this.field_X[var8] = so.c(10);
-                      this.field_V[var8] = so.c(10);
+                      this.field_X[var8] = so.randomInt(10);
+                      this.field_V[var8] = so.randomInt(10);
                     }
                     var8++;
                   }

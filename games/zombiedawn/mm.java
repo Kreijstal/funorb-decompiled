@@ -94,7 +94,7 @@ final class mm extends IntrusiveNode {
         }
         int var1 = 20;
         int var2 = 40;
-        int var3 = pb.a(so.field_a, 5, 1);
+        int var3 = pb.a(so.random, 5, 1);
         if (var3 == 0) {
           UiWidget.field_q = UiWidget.field_q - 3;
         } else {

@@ -121,7 +121,7 @@ final class wj extends IntrusiveNode {
         int var28Lifetime1;
         int var29Lifetime1;
         param0.position = param0.payload.length - 3;
-        var2 = param0.d((byte) -123);
+        var2 = param0.readUnsignedByte((byte) -123);
         var3 = param0.f(2);
         var4 = 14 + var2 * 10;
         param0.position = 0;
@@ -137,7 +137,7 @@ final class wj extends IntrusiveNode {
         while (var13 < var2) {
           var14 = -1;
           while (true) {
-            var15 = param0.d((byte) -121);
+            var15 = param0.readUnsignedByte((byte) -121);
             if (var15 != var14) {
               var4++;
             }
@@ -204,7 +204,7 @@ final class wj extends IntrusiveNode {
         var27 = 0;
         var28 = 0;
         for (var29 = 0; var29 < var6; var29++) {
-          var28 = var28 + param0.d((byte) -122) & 127;
+          var28 = var28 + param0.readUnsignedByte((byte) -122) & 127;
           if (var28 != 0) {
             if (var28 != 32) {
               if (var28 != 1) {

@@ -25,7 +25,7 @@ class qf {
     private boolean field_e;
 
     private final static void a(PcmStream param0) {
-        param0.field_k = false;
+        param0.active = false;
         if (param0.field_h != null) {
           param0.field_h.field_h = 0;
         }
@@ -296,7 +296,7 @@ class qf {
                       var11 = var11.field_i;
                       continue;
                     }
-                    var11.field_k = true;
+                    var11.active = true;
                     var13 = var11.a();
                     var4 = var4 + var13;
                     if (var12 != null) {
@@ -352,7 +352,7 @@ class qf {
           this.field_i = 0;
         }
         if (this.field_f != null) {
-          this.field_f.a(param0, 0, param1);
+          this.field_f.fill(param0, 0, param1);
         }
         this.field_d = pd.a(-22826);
     }
@@ -363,7 +363,7 @@ class qf {
           this.field_i = 0;
         }
         if (this.field_f != null) {
-          this.field_f.a(param0);
+          this.field_f.skip(param0);
           return;
         }
     }

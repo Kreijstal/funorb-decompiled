@@ -87,7 +87,7 @@ final class eg extends IntrusiveNode {
             IntrusiveDeque.field_a[3].b(var3 + var4 - 5, -5 + var1);
             bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb - 4, 16777215, 0, 0, 2, 0);
             bj.field_q.a(ip.field_o, 300 + var2, var1 - 14, 10066329, 0);
-            Rasterizer.c();
+            Rasterizer.resetClip();
           }
           return;
         }
@@ -113,7 +113,7 @@ final class eg extends IntrusiveNode {
             IntrusiveDeque.field_a[3].b(var3Lifetime1 + var4Lifetime1 - 5, -5 + var1Lifetime1);
             bj.field_q.a(jd.field_c, 20 + var2Lifetime1, -10 + var1Lifetime1 + (-te.field_bb + 20), 400, -40 + te.field_bb - 4, 16777215, 0, 0, 2, 0);
             bj.field_q.a(ip.field_o, 300 + var2Lifetime1, var1Lifetime1 - 14, 10066329, 0);
-            Rasterizer.c();
+            Rasterizer.resetClip();
           }
           return;
         }
@@ -141,7 +141,7 @@ final class eg extends IntrusiveNode {
           IntrusiveDeque.field_a[3].b(var3Lifetime2 + var4Lifetime2 - 5, -5 + var1Lifetime2);
           bj.field_q.a(jd.field_c, 20 + var2Lifetime2, -10 + var1Lifetime2 + (-te.field_bb + 20), 400, -40 + te.field_bb - 4, 16777215, 0, 0, 2, 0);
           bj.field_q.a(ip.field_o, 300 + var2Lifetime2, var1Lifetime2 - 14, 10066329, 0);
-          Rasterizer.c();
+          Rasterizer.resetClip();
         }
     }
 

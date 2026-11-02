@@ -160,7 +160,7 @@ final class bg extends IntrusiveNode {
           }
           if (oe.field_a == ic.field_T &&
             ck.a((byte) -125, 1)) {
-            var9Lifetime1 = fj.field_g.d((byte) -119);
+            var9Lifetime1 = fj.field_g.readUnsignedByte((byte) -119);
             fj.field_g.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {

@@ -65,14 +65,14 @@ final class oe {
         try {
           ij.field_L = new u[15];
           ij.field_L[0] = new u(WorldObject.field_w, 0, 0);
-          var1_int = pb.a(so.field_a, 50, 1) + 30;
+          var1_int = pb.a(so.random, 50, 1) + 30;
           var2 = 1;
           for (var3 = param0; 15 > var3; var3++) {
             ij.field_L[var3] = new u(cn.field_a, var2, var1_int);
-            var1_int = var1_int + (pb.a(so.field_a, 100, param0 ^ 0) + 75);
+            var1_int = var1_int + (pb.a(so.random, 100, param0 ^ 0) + 75);
             if (var3 == 7) {
               var2 = 2;
-              var1_int = pb.a(so.field_a, 10, param0 + 0);
+              var1_int = pb.a(so.random, 10, param0 + 0);
             }
           }
           ip.c(param0 ^ -63);

@@ -90,14 +90,14 @@ final class DualLinkDeque {
         try {
           var2 = 42 / ((-82 - param0) / 32);
           var9 = fj.field_g;
-          var3 = var9.d((byte) -118);
+          var3 = var9.readUnsignedByte((byte) -118);
           if (0 == var3) {
             var4_ref_df = (df) (jj.field_D.b((byte) 26));
             if (var4_ref_df == null) {
               p.a(1);
               return;
             }
-            var5_int = var9.d((byte) -122);
+            var5_int = var9.readUnsignedByte((byte) -122);
             if (var5_int != 0) {
               var13 = new byte[var5_int];
               var9.readBytes(var5_int, 0, var13, 11240);
@@ -118,7 +118,7 @@ final class DualLinkDeque {
             p.a(1);
             return;
           }
-          var4 = var9.c(-105);
+          var4 = var9.readInt(-105);
           var5 = (ep) (uk.field_a.b((byte) 26));
           while (var5 != null) {
             if (var4 != var5.field_k) {

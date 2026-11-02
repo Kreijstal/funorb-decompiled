@@ -8,33 +8,33 @@ final class cd extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_x;
-        int var4 = param0 + param1 * Rasterizer.field_f;
+        int var4 = param0 + param1 * Rasterizer.width;
         int var5 = 0;
         int var6 = this.field_t;
         int var7 = this.field_w;
-        int var8 = Rasterizer.field_f - var7;
+        int var8 = Rasterizer.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer.field_l) {
-          var10 = Rasterizer.field_l - param1;
+        if (param1 < Rasterizer.clipTop) {
+          var10 = Rasterizer.clipTop - param1;
           var6 = var6 - var10;
-          param1 = Rasterizer.field_l;
+          param1 = Rasterizer.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * Rasterizer.field_f;
+          var4 = var4 + var10 * Rasterizer.width;
         }
-        if (param1 + var6 > Rasterizer.field_d) {
-          var6 = var6 - (param1 + var6 - Rasterizer.field_d);
+        if (param1 + var6 > Rasterizer.clipBottom) {
+          var6 = var6 - (param1 + var6 - Rasterizer.clipBottom);
         }
-        if (param0 < Rasterizer.field_g) {
-          var10Lifetime1 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var10Lifetime1 = Rasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer.field_g;
+          param0 = Rasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer.field_b) {
-          var10Lifetime2 = param0 + var7 - Rasterizer.field_b;
+        if (param0 + var7 > Rasterizer.clipRight) {
+          var10Lifetime2 = param0 + var7 - Rasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -43,7 +43,7 @@ final class cd extends Sprite {
           var6 <= 0) {
           return;
         }
-        cd.c(Rasterizer.field_c, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+        cd.c(Rasterizer.pixels, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
     }
 
     final void b(int param0, int param1) {
@@ -52,33 +52,33 @@ final class cd extends Sprite {
         int var9Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_x;
-        int var3 = param0 + param1 * Rasterizer.field_f;
+        int var3 = param0 + param1 * Rasterizer.width;
         int var4 = 0;
         int var5 = this.field_t;
         int var6 = this.field_w;
-        int var7 = Rasterizer.field_f - var6;
+        int var7 = Rasterizer.width - var6;
         int var8 = 0;
-        if (param1 < Rasterizer.field_l) {
-          var9 = Rasterizer.field_l - param1;
+        if (param1 < Rasterizer.clipTop) {
+          var9 = Rasterizer.clipTop - param1;
           var5 = var5 - var9;
-          param1 = Rasterizer.field_l;
+          param1 = Rasterizer.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * Rasterizer.field_f;
+          var3 = var3 + var9 * Rasterizer.width;
         }
-        if (param1 + var5 > Rasterizer.field_d) {
-          var5 = var5 - (param1 + var5 - Rasterizer.field_d);
+        if (param1 + var5 > Rasterizer.clipBottom) {
+          var5 = var5 - (param1 + var5 - Rasterizer.clipBottom);
         }
-        if (param0 < Rasterizer.field_g) {
-          var9Lifetime1 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var9Lifetime1 = Rasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = Rasterizer.field_g;
+          param0 = Rasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > Rasterizer.field_b) {
-          var9Lifetime2 = param0 + var6 - Rasterizer.field_b;
+        if (param0 + var6 > Rasterizer.clipRight) {
+          var9Lifetime2 = param0 + var6 - Rasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -87,7 +87,7 @@ final class cd extends Sprite {
           var5 <= 0) {
           return;
         }
-        cd.d(Rasterizer.field_c, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+        cd.d(Rasterizer.pixels, this.field_z, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -125,30 +125,30 @@ final class cd extends Sprite {
         if (var7 < var11) {
           param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
         }
-        var14Lifetime2 = param0 + param1 * Rasterizer.field_f;
-        int var15 = Rasterizer.field_f - param2;
-        if (param1 + param3 > Rasterizer.field_d) {
-          param3 = param3 - (param1 + param3 - Rasterizer.field_d);
+        var14Lifetime2 = param0 + param1 * Rasterizer.width;
+        int var15 = Rasterizer.width - param2;
+        if (param1 + param3 > Rasterizer.clipBottom) {
+          param3 = param3 - (param1 + param3 - Rasterizer.clipBottom);
         }
-        if (param1 < Rasterizer.field_l) {
-          var16 = Rasterizer.field_l - param1;
+        if (param1 < Rasterizer.clipTop) {
+          var16 = Rasterizer.clipTop - param1;
           param3 = param3 - var16;
-          var14Lifetime2 = var14Lifetime2 + var16 * Rasterizer.field_f;
+          var14Lifetime2 = var14Lifetime2 + var16 * Rasterizer.width;
           var9 = var9 + var13 * var16;
         }
-        if (param0 + param2 > Rasterizer.field_b) {
-          var16Lifetime1 = param0 + param2 - Rasterizer.field_b;
+        if (param0 + param2 > Rasterizer.clipRight) {
+          var16Lifetime1 = param0 + param2 - Rasterizer.clipRight;
           param2 = param2 - var16Lifetime1;
           var15 = var15 + var16Lifetime1;
         }
-        if (param0 < Rasterizer.field_g) {
-          var16Lifetime2 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var16Lifetime2 = Rasterizer.clipLeft - param0;
           param2 = param2 - var16Lifetime2;
           var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
           var8 = var8 + var12 * var16Lifetime2;
           var15 = var15 + var16Lifetime2;
         }
-        cd.b(Rasterizer.field_c, this.field_z, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+        cd.b(Rasterizer.pixels, this.field_z, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
     }
 
     final void c(int param0, int param1, int param2, int param3) {
@@ -175,26 +175,26 @@ final class cd extends Sprite {
         var7 = param2 << 8;
         var8 = (param3 - param2 << 8) / var5;
         var9 = 0;
-        if (param0 < Rasterizer.field_g) {
-          var6 = var6 - (Rasterizer.field_g - param0);
-          var9 = var9 + (Rasterizer.field_g - param0);
-          param0 = Rasterizer.field_g;
+        if (param0 < Rasterizer.clipLeft) {
+          var6 = var6 - (Rasterizer.clipLeft - param0);
+          var9 = var9 + (Rasterizer.clipLeft - param0);
+          param0 = Rasterizer.clipLeft;
         }
-        if (param1 < Rasterizer.field_l) {
-          var7 = var7 + (Rasterizer.field_l - param1) * var8;
-          var5 = var5 - (Rasterizer.field_l - param1);
-          var9 = var9 + (Rasterizer.field_l - param1) * Rasterizer.field_f;
-          param1 = Rasterizer.field_l;
+        if (param1 < Rasterizer.clipTop) {
+          var7 = var7 + (Rasterizer.clipTop - param1) * var8;
+          var5 = var5 - (Rasterizer.clipTop - param1);
+          var9 = var9 + (Rasterizer.clipTop - param1) * Rasterizer.width;
+          param1 = Rasterizer.clipTop;
         }
-        if (param0 + var6 > Rasterizer.field_b) {
-          var6 = Rasterizer.field_b - param0;
+        if (param0 + var6 > Rasterizer.clipRight) {
+          var6 = Rasterizer.clipRight - param0;
         }
-        if (param1 + var5 > Rasterizer.field_d) {
-          var5 = Rasterizer.field_d - param1;
+        if (param1 + var5 > Rasterizer.clipBottom) {
+          var5 = Rasterizer.clipBottom - param1;
         }
-        var10 = Rasterizer.field_f - var6;
+        var10 = Rasterizer.width - var6;
         var11 = this.field_w - var6;
-        var12 = param0 + param1 * Rasterizer.field_f;
+        var12 = param0 + param1 * Rasterizer.width;
         for (param1 = -var5; param1 < 0; param1++) {
           var13 = var7 >> 8;
           if (var13 >= 0) {
@@ -204,10 +204,10 @@ final class cd extends Sprite {
               incrementValue$0 = var9;
               var9++;
               var16 = this.field_z[incrementValue$0];
-              var17 = Rasterizer.field_c[var12];
+              var17 = Rasterizer.pixels[var12];
               incrementValue$1 = var12;
               var12++;
-              Rasterizer.field_c[incrementValue$1] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
+              Rasterizer.pixels[incrementValue$1] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
             }
             var12 = var12 + var10;
             var9 = var9 + var11;
@@ -252,30 +252,30 @@ final class cd extends Sprite {
         if (var6 < var10) {
           param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
         }
-        var13Lifetime2 = param0 + param1 * Rasterizer.field_f;
-        int var14 = Rasterizer.field_f - param2;
-        if (param1 + param3 > Rasterizer.field_d) {
-          param3 = param3 - (param1 + param3 - Rasterizer.field_d);
+        var13Lifetime2 = param0 + param1 * Rasterizer.width;
+        int var14 = Rasterizer.width - param2;
+        if (param1 + param3 > Rasterizer.clipBottom) {
+          param3 = param3 - (param1 + param3 - Rasterizer.clipBottom);
         }
-        if (param1 < Rasterizer.field_l) {
-          var15 = Rasterizer.field_l - param1;
+        if (param1 < Rasterizer.clipTop) {
+          var15 = Rasterizer.clipTop - param1;
           param3 = param3 - var15;
-          var13Lifetime2 = var13Lifetime2 + var15 * Rasterizer.field_f;
+          var13Lifetime2 = var13Lifetime2 + var15 * Rasterizer.width;
           var8 = var8 + var12 * var15;
         }
-        if (param0 + param2 > Rasterizer.field_b) {
-          var15Lifetime1 = param0 + param2 - Rasterizer.field_b;
+        if (param0 + param2 > Rasterizer.clipRight) {
+          var15Lifetime1 = param0 + param2 - Rasterizer.clipRight;
           param2 = param2 - var15Lifetime1;
           var14 = var14 + var15Lifetime1;
         }
-        if (param0 < Rasterizer.field_g) {
-          var15Lifetime2 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var15Lifetime2 = Rasterizer.clipLeft - param0;
           param2 = param2 - var15Lifetime2;
           var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        cd.d(Rasterizer.field_c, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        cd.d(Rasterizer.pixels, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     final void g(int param0, int param1) {
@@ -313,28 +313,28 @@ final class cd extends Sprite {
         var4 = this.field_t >> 2;
         param0 = param0 + this.field_v / 4;
         param1 = param1 + this.field_x / 4;
-        if (param0 >= Rasterizer.field_g) {
+        if (param0 >= Rasterizer.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = Rasterizer.field_g - param0 << 2;
+          stackIn_3_0 = Rasterizer.clipLeft - param0 << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= Rasterizer.field_b) {
+        if (param0 + var3 <= Rasterizer.clipRight) {
           stackIn_6_0 = this.field_w - 4;
         } else {
-          stackIn_6_0 = (Rasterizer.field_b - param0 << 2) - 4;
+          stackIn_6_0 = (Rasterizer.clipRight - param0 << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= Rasterizer.field_l) {
+        if (param1 >= Rasterizer.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = Rasterizer.field_l - param1 << 2;
+          stackIn_9_0 = Rasterizer.clipTop - param1 << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= Rasterizer.field_d) {
+        if (param1 + var4 <= Rasterizer.clipBottom) {
           stackIn_12_0 = this.field_t - 4;
         } else {
-          stackIn_12_0 = (Rasterizer.field_d - param1 << 2) - 4;
+          stackIn_12_0 = (Rasterizer.clipBottom - param1 << 2) - 4;
         }
         var8 = stackIn_12_0;
         var23 = new int[16];
@@ -343,7 +343,7 @@ final class cd extends Sprite {
         for (var10 = var7; var10 <= var8; var10 += 4) {
           for (var11 = var5; var11 <= var6; var11 += 4) {
             var12 = var10 * this.field_w + var11;
-            var13 = (param1 + (var10 >> 2)) * Rasterizer.field_f + (param0 + (var11 >> 2));
+            var13 = (param1 + (var10 >> 2)) * Rasterizer.width + (param0 + (var11 >> 2));
             for (var14 = 0; var14 < 4; var14++) {
               for (var15 = 0; var15 < 4; var15++) {
                 var9[(var14 << 2) + var15] = this.field_z[var12 + var14 * this.field_w + var15];
@@ -367,8 +367,8 @@ final class cd extends Sprite {
               var17 = var17 / var15Lifetime1 << 8;
               var19Lifetime1 = var15Lifetime1 >> 4;
               var20 = 256 - var19Lifetime1;
-              var21 = Rasterizer.field_c[var13];
-              Rasterizer.field_c[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = Rasterizer.pixels[var13];
+              Rasterizer.pixels[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
           }
         }
@@ -434,33 +434,33 @@ final class cd extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_x;
-        int var4 = param0 + param1 * Rasterizer.field_f;
+        int var4 = param0 + param1 * Rasterizer.width;
         int var5 = 0;
         int var6 = this.field_t;
         int var7 = this.field_w;
-        int var8 = Rasterizer.field_f - var7;
+        int var8 = Rasterizer.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer.field_l) {
-          var10 = Rasterizer.field_l - param1;
+        if (param1 < Rasterizer.clipTop) {
+          var10 = Rasterizer.clipTop - param1;
           var6 = var6 - var10;
-          param1 = Rasterizer.field_l;
+          param1 = Rasterizer.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * Rasterizer.field_f;
+          var4 = var4 + var10 * Rasterizer.width;
         }
-        if (param1 + var6 > Rasterizer.field_d) {
-          var6 = var6 - (param1 + var6 - Rasterizer.field_d);
+        if (param1 + var6 > Rasterizer.clipBottom) {
+          var6 = var6 - (param1 + var6 - Rasterizer.clipBottom);
         }
-        if (param0 < Rasterizer.field_g) {
-          var10Lifetime1 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var10Lifetime1 = Rasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer.field_g;
+          param0 = Rasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer.field_b) {
-          var10Lifetime2 = param0 + var7 - Rasterizer.field_b;
+        if (param0 + var7 > Rasterizer.clipRight) {
+          var10Lifetime2 = param0 + var7 - Rasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -469,7 +469,7 @@ final class cd extends Sprite {
           var6 <= 0) {
           return;
         }
-        cd.b(0, 0, 0, Rasterizer.field_c, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        cd.b(0, 0, 0, Rasterizer.pixels, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     cd(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
@@ -482,33 +482,33 @@ final class cd extends Sprite {
         int var9Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + (this.field_q - this.field_t - this.field_x);
-        int var3 = param0 + (param1 + this.field_t - 1) * Rasterizer.field_f;
+        int var3 = param0 + (param1 + this.field_t - 1) * Rasterizer.width;
         int var4 = 0;
         int var5 = this.field_t;
         int var6 = this.field_w;
-        int var7 = -Rasterizer.field_f - var6;
+        int var7 = -Rasterizer.width - var6;
         int var8 = 0;
-        if (param1 < Rasterizer.field_l) {
-          var5 = var5 - (Rasterizer.field_l - param1);
-          param1 = Rasterizer.field_l;
+        if (param1 < Rasterizer.clipTop) {
+          var5 = var5 - (Rasterizer.clipTop - param1);
+          param1 = Rasterizer.clipTop;
         }
-        if (param1 + var5 > Rasterizer.field_d) {
-          var9 = param1 + var5 - Rasterizer.field_d;
+        if (param1 + var5 > Rasterizer.clipBottom) {
+          var9 = param1 + var5 - Rasterizer.clipBottom;
           var5 = var5 - var9;
-          var3 = var3 - var9 * Rasterizer.field_f;
+          var3 = var3 - var9 * Rasterizer.width;
           var4 = var4 + var9 * var6;
         }
-        if (param0 < Rasterizer.field_g) {
-          var9Lifetime1 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var9Lifetime1 = Rasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = Rasterizer.field_g;
+          param0 = Rasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > Rasterizer.field_b) {
-          var9Lifetime2 = param0 + var6 - Rasterizer.field_b;
+        if (param0 + var6 > Rasterizer.clipRight) {
+          var9Lifetime2 = param0 + var6 - Rasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -517,7 +517,7 @@ final class cd extends Sprite {
           var5 <= 0) {
           return;
         }
-        cd.d(Rasterizer.field_c, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+        cd.d(Rasterizer.pixels, this.field_z, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void c(int param0, int param1, int param2) {
@@ -526,33 +526,33 @@ final class cd extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_x;
-        int var4 = param0 + param1 * Rasterizer.field_f;
+        int var4 = param0 + param1 * Rasterizer.width;
         int var5 = 0;
         int var6 = this.field_t;
         int var7 = this.field_w;
-        int var8 = Rasterizer.field_f - var7;
+        int var8 = Rasterizer.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer.field_l) {
-          var10 = Rasterizer.field_l - param1;
+        if (param1 < Rasterizer.clipTop) {
+          var10 = Rasterizer.clipTop - param1;
           var6 = var6 - var10;
-          param1 = Rasterizer.field_l;
+          param1 = Rasterizer.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * Rasterizer.field_f;
+          var4 = var4 + var10 * Rasterizer.width;
         }
-        if (param1 + var6 > Rasterizer.field_d) {
-          var6 = var6 - (param1 + var6 - Rasterizer.field_d);
+        if (param1 + var6 > Rasterizer.clipBottom) {
+          var6 = var6 - (param1 + var6 - Rasterizer.clipBottom);
         }
-        if (param0 < Rasterizer.field_g) {
-          var10Lifetime1 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var10Lifetime1 = Rasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer.field_g;
+          param0 = Rasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer.field_b) {
-          var10Lifetime2 = param0 + var7 - Rasterizer.field_b;
+        if (param0 + var7 > Rasterizer.clipRight) {
+          var10Lifetime2 = param0 + var7 - Rasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -561,7 +561,7 @@ final class cd extends Sprite {
           var6 <= 0) {
           return;
         }
-        cd.e(Rasterizer.field_c, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+        cd.e(Rasterizer.pixels, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void e(int param0, int param1, int param2) {
@@ -570,33 +570,33 @@ final class cd extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_x;
-        int var4 = param0 + param1 * Rasterizer.field_f;
+        int var4 = param0 + param1 * Rasterizer.width;
         int var5 = 0;
         int var6 = this.field_t;
         int var7 = this.field_w;
-        int var8 = Rasterizer.field_f - var7;
+        int var8 = Rasterizer.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer.field_l) {
-          var10 = Rasterizer.field_l - param1;
+        if (param1 < Rasterizer.clipTop) {
+          var10 = Rasterizer.clipTop - param1;
           var6 = var6 - var10;
-          param1 = Rasterizer.field_l;
+          param1 = Rasterizer.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * Rasterizer.field_f;
+          var4 = var4 + var10 * Rasterizer.width;
         }
-        if (param1 + var6 > Rasterizer.field_d) {
-          var6 = var6 - (param1 + var6 - Rasterizer.field_d);
+        if (param1 + var6 > Rasterizer.clipBottom) {
+          var6 = var6 - (param1 + var6 - Rasterizer.clipBottom);
         }
-        if (param0 < Rasterizer.field_g) {
-          var10Lifetime1 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var10Lifetime1 = Rasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer.field_g;
+          param0 = Rasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer.field_b) {
-          var10Lifetime2 = param0 + var7 - Rasterizer.field_b;
+        if (param0 + var7 > Rasterizer.clipRight) {
+          var10Lifetime2 = param0 + var7 - Rasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -605,7 +605,7 @@ final class cd extends Sprite {
           var6 <= 0) {
           return;
         }
-        cd.f(Rasterizer.field_c, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+        cd.f(Rasterizer.pixels, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -645,33 +645,33 @@ final class cd extends Sprite {
         int var9Lifetime2;
         param0 = param0 + (this.field_r - this.field_w - this.field_v);
         param1 = param1 + this.field_x;
-        int var3 = param0 + param1 * Rasterizer.field_f;
+        int var3 = param0 + param1 * Rasterizer.width;
         int var4 = this.field_w - 1;
         int var5 = this.field_t;
         int var6 = this.field_w;
-        int var7 = Rasterizer.field_f - var6;
+        int var7 = Rasterizer.width - var6;
         int var8 = var6 + var6;
-        if (param1 < Rasterizer.field_l) {
-          var9 = Rasterizer.field_l - param1;
+        if (param1 < Rasterizer.clipTop) {
+          var9 = Rasterizer.clipTop - param1;
           var5 = var5 - var9;
-          param1 = Rasterizer.field_l;
+          param1 = Rasterizer.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * Rasterizer.field_f;
+          var3 = var3 + var9 * Rasterizer.width;
         }
-        if (param1 + var5 > Rasterizer.field_d) {
-          var5 = var5 - (param1 + var5 - Rasterizer.field_d);
+        if (param1 + var5 > Rasterizer.clipBottom) {
+          var5 = var5 - (param1 + var5 - Rasterizer.clipBottom);
         }
-        if (param0 < Rasterizer.field_g) {
-          var9Lifetime1 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var9Lifetime1 = Rasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = Rasterizer.field_g;
+          param0 = Rasterizer.clipLeft;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > Rasterizer.field_b) {
-          var9Lifetime2 = param0 + var6 - Rasterizer.field_b;
+        if (param0 + var6 > Rasterizer.clipRight) {
+          var9Lifetime2 = param0 + var6 - Rasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -680,7 +680,7 @@ final class cd extends Sprite {
           var5 <= 0) {
           return;
         }
-        cd.e(Rasterizer.field_c, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+        cd.e(Rasterizer.pixels, this.field_z, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void d(int param0, int param1, int param2) {
@@ -693,33 +693,33 @@ final class cd extends Sprite {
         }
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_x;
-        int var4 = param0 + param1 * Rasterizer.field_f;
+        int var4 = param0 + param1 * Rasterizer.width;
         int var5 = 0;
         int var6 = this.field_t;
         int var7 = this.field_w;
-        int var8 = Rasterizer.field_f - var7;
+        int var8 = Rasterizer.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer.field_l) {
-          var10 = Rasterizer.field_l - param1;
+        if (param1 < Rasterizer.clipTop) {
+          var10 = Rasterizer.clipTop - param1;
           var6 = var6 - var10;
-          param1 = Rasterizer.field_l;
+          param1 = Rasterizer.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * Rasterizer.field_f;
+          var4 = var4 + var10 * Rasterizer.width;
         }
-        if (param1 + var6 > Rasterizer.field_d) {
-          var6 = var6 - (param1 + var6 - Rasterizer.field_d);
+        if (param1 + var6 > Rasterizer.clipBottom) {
+          var6 = var6 - (param1 + var6 - Rasterizer.clipBottom);
         }
-        if (param0 < Rasterizer.field_g) {
-          var10Lifetime1 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var10Lifetime1 = Rasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer.field_g;
+          param0 = Rasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer.field_b) {
-          var10Lifetime2 = param0 + var7 - Rasterizer.field_b;
+        if (param0 + var7 > Rasterizer.clipRight) {
+          var10Lifetime2 = param0 + var7 - Rasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -728,7 +728,7 @@ final class cd extends Sprite {
           var6 <= 0) {
           return;
         }
-        cd.d(Rasterizer.field_c, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+        cd.d(Rasterizer.pixels, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void f(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -791,33 +791,33 @@ final class cd extends Sprite {
         int var9Lifetime2;
         param0 = param0 + this.field_v;
         param1 = param1 + this.field_x;
-        int var3 = param0 + param1 * Rasterizer.field_f;
+        int var3 = param0 + param1 * Rasterizer.width;
         int var4 = 0;
         int var5 = this.field_t;
         int var6 = this.field_w;
-        int var7 = Rasterizer.field_f - var6;
+        int var7 = Rasterizer.width - var6;
         int var8 = 0;
-        if (param1 < Rasterizer.field_l) {
-          var9 = Rasterizer.field_l - param1;
+        if (param1 < Rasterizer.clipTop) {
+          var9 = Rasterizer.clipTop - param1;
           var5 = var5 - var9;
-          param1 = Rasterizer.field_l;
+          param1 = Rasterizer.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * Rasterizer.field_f;
+          var3 = var3 + var9 * Rasterizer.width;
         }
-        if (param1 + var5 > Rasterizer.field_d) {
-          var5 = var5 - (param1 + var5 - Rasterizer.field_d);
+        if (param1 + var5 > Rasterizer.clipBottom) {
+          var5 = var5 - (param1 + var5 - Rasterizer.clipBottom);
         }
-        if (param0 < Rasterizer.field_g) {
-          var9Lifetime1 = Rasterizer.field_g - param0;
+        if (param0 < Rasterizer.clipLeft) {
+          var9Lifetime1 = Rasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = Rasterizer.field_g;
+          param0 = Rasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > Rasterizer.field_b) {
-          var9Lifetime2 = param0 + var6 - Rasterizer.field_b;
+        if (param0 + var6 > Rasterizer.clipRight) {
+          var9Lifetime2 = param0 + var6 - Rasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -826,7 +826,7 @@ final class cd extends Sprite {
           var5 <= 0) {
           return;
         }
-        cd.d(Rasterizer.field_c, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+        cd.d(Rasterizer.pixels, this.field_z, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -1015,33 +1015,33 @@ final class cd extends Sprite {
         var4 = this.field_t >> 1;
         param0 = param0 + this.field_v / 2;
         param1 = param1 + this.field_x / 2;
-        if (param0 >= Rasterizer.field_g) {
+        if (param0 >= Rasterizer.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = Rasterizer.field_g - param0 << 1;
+          stackIn_3_0 = Rasterizer.clipLeft - param0 << 1;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= Rasterizer.field_b) {
+        if (param0 + var3 <= Rasterizer.clipRight) {
           stackIn_6_0 = this.field_w - 2;
         } else {
-          stackIn_6_0 = (Rasterizer.field_b - param0 << 1) - 2;
+          stackIn_6_0 = (Rasterizer.clipRight - param0 << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param1 >= Rasterizer.field_l) {
+        if (param1 >= Rasterizer.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = Rasterizer.field_l - param1 << 1;
+          stackIn_9_0 = Rasterizer.clipTop - param1 << 1;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= Rasterizer.field_d) {
+        if (param1 + var4 <= Rasterizer.clipBottom) {
           stackIn_12_0 = this.field_t - 2;
         } else {
-          stackIn_12_0 = (Rasterizer.field_d - param1 << 1) - 2;
+          stackIn_12_0 = (Rasterizer.clipBottom - param1 << 1) - 2;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 2) {
           var10 = var9 * this.field_w + var5;
-          var11 = (param1 + (var9 >> 1)) * Rasterizer.field_f + (param0 + (var5 >> 1));
+          var11 = (param1 + (var9 >> 1)) * Rasterizer.width + (param0 + (var5 >> 1));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;
@@ -1070,8 +1070,8 @@ final class cd extends Sprite {
               var16 = var16 / var18 << 8;
               var19Lifetime1 = var18 >> 2;
               var20 = 256 - var19Lifetime1;
-              var21 = Rasterizer.field_c[var11];
-              Rasterizer.field_c[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = Rasterizer.pixels[var11];
+              Rasterizer.pixels[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
             var12 += 2;
             var11++;

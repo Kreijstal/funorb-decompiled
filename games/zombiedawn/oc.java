@@ -13,7 +13,7 @@ final class oc {
 
     final static void a(byte param0) {
         int var1 = 77 % ((param0 + 10) / 53);
-        Rasterizer.h(4, 4, 0, 0, Rasterizer.field_f, Rasterizer.field_a);
+        Rasterizer.h(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
     }
 
     static {

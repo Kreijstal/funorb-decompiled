@@ -33,7 +33,7 @@ final class PcmMixer extends PcmStream {
         return;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void fill(int[] param0, int param1, int param2) {
         int var4 = 0;
         bc var5 = null;
         int var7 = 0;
@@ -78,7 +78,7 @@ final class PcmMixer extends PcmStream {
     private final void c(int param0) {
         PcmStream var2 = (PcmStream) (this.field_n.b((byte) 26));
         while (var2 != null) {
-          var2.a(param0);
+          var2.skip(param0);
           var2 = (PcmStream) (this.field_n.a(false));
         }
     }
@@ -90,7 +90,7 @@ final class PcmMixer extends PcmStream {
     private final void c(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) (this.field_n.b((byte) 26));
         while (var4 != null) {
-          var4.b(param0, param1, param2);
+          var4.fillOrSkip(param0, param1, param2);
           var4 = (PcmStream) (this.field_n.a(false));
         }
     }
@@ -123,7 +123,7 @@ final class PcmMixer extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var2 = 0;
         bc var3 = null;
         int var5 = 0;

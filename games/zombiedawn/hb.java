@@ -84,7 +84,7 @@ final class hb extends UiWidget {
           }
           var7 = -32 / ((param2 - 34) / 50);
           pa.a(-21189);
-          if (Rasterizer.field_g <= this.field_K.field_w + param3) {
+          if (Rasterizer.clipLeft <= this.field_K.field_w + param3) {
             ki.a((byte) -118, this.field_B);
             param1.b(-this.field_H, 0);
             param1.b(-this.field_H + 2 * this.field_E, 0);
@@ -92,7 +92,7 @@ final class hb extends UiWidget {
             pa.a(-21189);
             this.field_B.b(param3, param0);
           }
-          if (-this.field_K.field_w + var5_int <= Rasterizer.field_b) {
+          if (-this.field_K.field_w + var5_int <= Rasterizer.clipRight) {
             ki.a((byte) -107, this.field_B);
             for (var7Lifetime1 = -this.field_K.field_w + (this.field_i + this.field_H); this.field_E * 2 < var7Lifetime1; var7Lifetime1 = var7Lifetime1 - this.field_E * 2) {
             }

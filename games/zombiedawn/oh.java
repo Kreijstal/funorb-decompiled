@@ -56,7 +56,7 @@ final class oh extends cb {
             bb.field_h = new PacketBuffer(var7_int);
           }
           bb.field_h.position = 0;
-          bb.field_h.a(param0, param4, param1, param5 - 59700);
+          bb.field_h.writeBytes(param0, param4, param1, param5 - 59700);
           bb.field_h.padToPosition(var7_int, 0);
           bb.field_h.a(var14, 30044);
           if (null == ip.field_l ||
@@ -73,8 +73,8 @@ final class oh extends cb {
           }
           ip.field_l.writeShort(param4, (byte) 105);
           ip.field_l.encryptRsa(param2, false, param6);
-          param3.a(ip.field_l.payload, ip.field_l.position, 0, param5 ^ -4276);
-          param3.a(bb.field_h.payload, bb.field_h.position, 0, -27843);
+          param3.writeBytes(ip.field_l.payload, ip.field_l.position, 0, param5 ^ -4276);
+          param3.writeBytes(bb.field_h.payload, bb.field_h.position, 0, -27843);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

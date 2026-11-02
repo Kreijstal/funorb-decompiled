@@ -62,8 +62,8 @@ abstract class pn extends ei {
         var7 = 0;
         var8 = param1;
         while (var4 > var7) {
-          if (var8 >= Rasterizer.field_l &&
-            var8 < Rasterizer.field_d) {
+          if (var8 >= Rasterizer.clipTop &&
+            var8 < Rasterizer.clipBottom) {
             var9 = var7 * (var6 - var5) / var4 + var5;
             var10 = 0;
             var11 = this.field_i;
@@ -76,7 +76,7 @@ abstract class pn extends ei {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  Rasterizer.field_c[param0 + var8 * Rasterizer.field_f + var10] = var13;
+                  Rasterizer.pixels[param0 + var8 * Rasterizer.width + var10] = var13;
                 }
                 var10++;
               }
@@ -91,7 +91,7 @@ abstract class pn extends ei {
                   if (var14 >= 420) {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    Rasterizer.field_c[var8 * Rasterizer.field_f + param0 + var11] = var15;
+                    Rasterizer.pixels[var8 * Rasterizer.width + param0 + var11] = var15;
                   } else {
                     var12Lifetime1 = var11 + 1;
                   }

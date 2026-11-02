@@ -19,7 +19,7 @@ final class wh implements wa {
         int var3 = ZombieDawn.field_J;
         int var2Lifetime1;
         try {
-          vm.field_u = Js5Archive.field_e.field_H.a(8728);
+          vm.field_u = Js5Archive.field_e.navigation.a(8728);
           for (var1_int = 0; var1_int < vm.field_u.length; var1_int++) {
             for (var2 = 0; var2 < vm.field_u[0].length; var2++) {
               if (vm.field_u[var1_int][var2] != 0) {

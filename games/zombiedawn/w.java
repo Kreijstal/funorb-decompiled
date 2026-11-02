@@ -23,7 +23,7 @@ abstract class w {
           nf.field_d.a();
           ni.field_b[2].h(5, -5, 16777215);
           ni.field_b[3].h(5, -5, 16777215);
-          Rasterizer.h(4, 4, 0, 0, Rasterizer.field_f, Rasterizer.field_a);
+          Rasterizer.h(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
           ni.field_b[2].h(5, -5, 0);
           ni.field_b[3].h(5, -5, 0);
           mk.field_a = new Sprite[16];

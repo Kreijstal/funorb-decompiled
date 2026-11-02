@@ -52,18 +52,18 @@ final class ig extends wo {
                 else {
                   if (var2 > 48) {
                     if (var4 <= 96) {
-                      this.targetX = -24 + var2 + so.c(48);
+                      this.targetX = -24 + var2 + so.randomInt(48);
                       var7 = 1;
-                      this.targetY = -48 + (so.c(96) + 96);
+                      this.targetY = -48 + (so.randomInt(96) + 96);
                     } else {
                       if (var2 >= 1080) {
-                        this.targetX = -24 - so.c(48) + 1008;
+                        this.targetX = -24 - so.randomInt(48) + 1008;
                         var7 = 1;
-                        this.targetY = so.c(48) + var4 - 24;
+                        this.targetY = so.randomInt(48) + var4 - 24;
                       } else {
                         if (!(1440 > var4)) {
-                          this.targetX = so.c(48) + (var2 - 24);
-                          this.targetY = -24 + (so.c(8) + 1436);
+                          this.targetX = so.randomInt(48) + (var2 - 24);
+                          this.targetY = -24 + (so.randomInt(8) + 1436);
                           var7 = 1;
                         }
                       }
@@ -71,9 +71,9 @@ final class ig extends wo {
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    this.targetX = 24 + (so.c(48) + 96);
+                    this.targetX = 24 + (so.randomInt(48) + 96);
                     var7 = 1;
-                    this.targetY = -24 + (var4 + so.c(48));
+                    this.targetY = -24 + (var4 + so.randomInt(48));
                     if (var7 != 0) {
                       this.moveToward(0, this.field_D);
                       this.setState(1, -6904);
@@ -89,7 +89,7 @@ final class ig extends wo {
                         this.unlink(-27598);
                         this.d(0);
                       } else {
-                        if (24 + Js5Archive.field_e.field_H.field_u <= var2) {
+                        if (24 + Js5Archive.field_e.navigation.width <= var2) {
                           this.unlink(-27598);
                           this.d(0);
                         }
@@ -111,7 +111,7 @@ final class ig extends wo {
                 ho.a(this.getY(237239984), (byte) 54, this.getX(true));
               } else {
                 if (var2 > -24 &&
-                  24 + Js5Archive.field_e.field_H.field_u > var2) {
+                  24 + Js5Archive.field_e.navigation.width > var2) {
                   return;
                 }
               }
@@ -132,7 +132,7 @@ final class ig extends wo {
                 this.unlink(-27598);
                 this.d(0);
               } else {
-                if (24 + Js5Archive.field_e.field_H.field_u <= var2) {
+                if (24 + Js5Archive.field_e.navigation.width <= var2) {
                   this.unlink(-27598);
                   this.d(0);
                 }
@@ -148,7 +148,7 @@ final class ig extends wo {
               ho.a(this.getY(237239984), (byte) 54, this.getX(true));
             } else {
               if (var2 > -24 &&
-                24 + Js5Archive.field_e.field_H.field_u > var2) {
+                24 + Js5Archive.field_e.navigation.width > var2) {
                 return;
               }
             }
@@ -174,18 +174,18 @@ final class ig extends wo {
               else {
                 if (var2 > 48) {
                   if (var4 <= 96) {
-                    this.targetX = -24 + var2 + so.c(48);
+                    this.targetX = -24 + var2 + so.randomInt(48);
                     var7Lifetime1 = 1;
-                    this.targetY = -48 + (so.c(96) + 96);
+                    this.targetY = -48 + (so.randomInt(96) + 96);
                   } else {
                     if (var2 >= 1080) {
-                      this.targetX = -24 - so.c(48) + 1008;
+                      this.targetX = -24 - so.randomInt(48) + 1008;
                       var7Lifetime1 = 1;
-                      this.targetY = so.c(48) + var4 - 24;
+                      this.targetY = so.randomInt(48) + var4 - 24;
                     } else {
                       if (!(1440 > var4)) {
-                        this.targetX = so.c(48) + (var2 - 24);
-                        this.targetY = -24 + (so.c(8) + 1436);
+                        this.targetX = so.randomInt(48) + (var2 - 24);
+                        this.targetY = -24 + (so.randomInt(8) + 1436);
                         var7Lifetime1 = 1;
                       }
                     }
@@ -193,9 +193,9 @@ final class ig extends wo {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  this.targetX = 24 + (so.c(48) + 96);
+                  this.targetX = 24 + (so.randomInt(48) + 96);
                   var7Lifetime1 = 1;
-                  this.targetY = -24 + (var4 + so.c(48));
+                  this.targetY = -24 + (var4 + so.randomInt(48));
                   if (var7Lifetime1 != 0) {
                     this.moveToward(0, this.field_D);
                     this.setState(1, -6904);
@@ -212,7 +212,7 @@ final class ig extends wo {
                     this.unlink(-27598);
                     this.d(0);
                   } else {
-                    if (24 + Js5Archive.field_e.field_H.field_u <= var2) {
+                    if (24 + Js5Archive.field_e.navigation.width <= var2) {
                       this.unlink(-27598);
                       this.d(0);
                       return;
@@ -239,7 +239,7 @@ final class ig extends wo {
           ho.a(this.getY(237239984), (byte) 54, this.getX(true));
         } else {
           if (var2 > -24 &&
-            24 + Js5Archive.field_e.field_H.field_u > var2) {
+            24 + Js5Archive.field_e.navigation.width > var2) {
             return;
           }
         }
@@ -252,8 +252,8 @@ final class ig extends wo {
         if (param0 < 95) {
           this.g(18);
         }
-        if (this.getY(237239984) - 48 <= Js5Archive.field_e.field_H.field_p &&
-          this.getX(true) - 48 <= Js5Archive.field_e.field_H.field_u) {
+        if (this.getY(237239984) - 48 <= Js5Archive.field_e.navigation.height &&
+          this.getX(true) - 48 <= Js5Archive.field_e.navigation.width) {
           return;
         }
         this.unlink(-27598);
@@ -327,7 +327,7 @@ final class ig extends wo {
         if (this.getY(237239984) < 0) {
           return;
         }
-        if (this.getY(237239984) > Js5Archive.field_e.field_H.field_p) {
+        if (this.getY(237239984) > Js5Archive.field_e.navigation.height) {
           return;
         }
         if (!(this.getX(true) >= 0)) {

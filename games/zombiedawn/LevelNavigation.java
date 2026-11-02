@@ -10,14 +10,14 @@ final class LevelNavigation {
     private int field_c;
     private boolean field_t;
     private int[][] field_D;
-    int field_u;
+    int width;
     TileMap field_A;
     private int[][] field_v;
     boolean[][] field_b;
     private int[][] field_E;
     static int field_s;
     private int field_y;
-    int field_p;
+    int height;
     private Point[] field_i;
     private Point[] field_C;
     private int[][] field_h;
@@ -52,7 +52,7 @@ final class LevelNavigation {
         return var2;
     }
 
-    final boolean a(boolean param0, int param1, int param2, boolean param3) {
+    final boolean isWalkable(boolean param0, int param1, int param2, boolean param3) {
         int var5;
         int var6;
         int var7;
@@ -94,12 +94,12 @@ final class LevelNavigation {
     }
 
     private final void b(int param0) {
-        this.field_u = 24 * this.field_A.field_k;
+        this.width = 24 * this.field_A.field_k;
         if (param0 != -1) {
           Camera var3 = (Camera) null;
           this.a(49, (Camera) null);
         }
-        this.field_p = this.field_A.field_r * 24;
+        this.height = this.field_A.field_r * 24;
     }
 
     final void a(Camera param0, int param1, boolean param2, boolean param3) {
@@ -320,7 +320,7 @@ final class LevelNavigation {
           if (param0 >= -71) {
             return;
           }
-          var2 = var27.d((byte) -128);
+          var2 = var27.readUnsignedByte((byte) -128);
           if (var2 == 0) {
             var3 = var27.f(2);
             var4 = (jc) (TileMap.field_g.b((byte) 26));
@@ -335,7 +335,7 @@ final class LevelNavigation {
               p.a(1);
               return;
             }
-            var5 = var27.d((byte) -122);
+            var5 = var27.readUnsignedByte((byte) -122);
             if (var5 != 0) {
               var6 = var4.field_u;
               cm.field_b[0].field_d = null;
@@ -345,7 +345,7 @@ final class LevelNavigation {
               for (var8_int = 1; var5 > var8_int; var8_int++) {
                 cm.field_b[var8_int].field_c = var27.a(true);
                 cm.field_b[var8_int].field_a = false;
-                if (1 != var27.d((byte) -128)) {
+                if (1 != var27.readUnsignedByte((byte) -128)) {
                   cm.field_b[var8_int].field_d = null;
                 } else {
                   cm.field_b[var8_int].field_d = var27.a(true);
@@ -367,12 +367,12 @@ final class LevelNavigation {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.d((byte) -120);
+              var18 = var27.readUnsignedByte((byte) -120);
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var27.d((byte) -127);
+                  var20 = var27.readUnsignedByte((byte) -127);
                   var21 = cm.field_b[var20].field_c;
-                  var22 = var27.c(true);
+                  var22 = var27.readLong(true);
                   var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
@@ -382,7 +382,7 @@ final class LevelNavigation {
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var27.c(126);
+                      var11[0][incrementValue$3] = var27.readInt(126);
                     }
                   }
                   if (var21 != null &&
@@ -395,7 +395,7 @@ final class LevelNavigation {
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var27.c(-43);
+                      var11[1][incrementValue$4] = var27.readInt(-43);
                     }
                   }
                   if (var6 > var14 &&
@@ -409,7 +409,7 @@ final class LevelNavigation {
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var27.c(-89);
+                      var11[2][incrementValue$5] = var27.readInt(-89);
                     }
                   }
                 }
@@ -421,7 +421,7 @@ final class LevelNavigation {
           }
           if (1 == var2) {
             var3Lifetime1 = var27.f(2);
-            var4_long = var27.c(true);
+            var4_long = var27.readLong(true);
             var6_ref_rc = (rc) (hk.field_F.b((byte) 26));
             while (var6_ref_rc != null) {
               if (var3Lifetime1 != var6_ref_rc.field_i) {
@@ -570,7 +570,7 @@ final class LevelNavigation {
 
     final int a(int param0, int param1, int param2, byte param3, boolean param4, int param5) {
         int var17 = ZombieDawn.field_J;
-        if (!this.a(false, param0, param5, param4)) {
+        if (!this.isWalkable(false, param0, param5, param4)) {
           return -1;
         }
         float var7 = 12.0f;
@@ -592,7 +592,7 @@ final class LevelNavigation {
         while (var7 < (float)var16) {
           var15 = var15 + var13;
           var14 = var14 + var12;
-          if (!this.a(false, (int)var15, (int)var14, param4)) {
+          if (!this.isWalkable(false, (int)var15, (int)var14, param4)) {
             return -1;
           }
           var16 = (int)((float)var16 - var7);
@@ -801,7 +801,7 @@ final class LevelNavigation {
             while (var9 > var6) {
               while (var5 < var8) {
                 var15_int = this.c(var6, -39, var5);
-                if (ub.a(127, this.field_A.field_f[var6][var5]) != null ||
+                if (ub.a(127, this.field_A.tiles[var6][var5]) != null ||
                   this.field_r <= var5 &&
                   this.field_z >= var5 ||
                   this.field_n <= var6 &&
@@ -913,7 +913,7 @@ final class LevelNavigation {
           return null;
         }
         stackIn_17_1 = !(param0);
-        if (!this.a(stackIn_17_1, param2, param3, param0)) {
+        if (!this.isWalkable(stackIn_17_1, param2, param3, param0)) {
           if (this.b(0, var6Lifetime1 - 1, var7Lifetime1)) {
             if (!this.b(0, 1 + var6Lifetime1, var7Lifetime1)) {
               param3 = var6Lifetime1 * 24;

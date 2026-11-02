@@ -37,7 +37,7 @@ final class jo extends qk {
         if (this.field_Sb) {
           this.state = 23;
           if (-1 != this.field_Rb) {
-            var10 = Js5Archive.field_e.field_H.a(true, this.getX(true), this.field_Pb, this.field_Rb, this.getY(237239984));
+            var10 = Js5Archive.field_e.navigation.a(true, this.getX(true), this.field_Pb, this.field_Rb, this.getY(237239984));
             if (var10 != null) {
               var3_ref_kk = (Point) (var10.b((byte) 26));
               this.field_Pb = var3_ref_kk.y;

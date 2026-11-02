@@ -190,7 +190,7 @@ final class oo extends id {
         this.field_X = new int[param1][6];
         this.field_V = new boolean[param1][6];
         var5 = var19[this.field_H].length;
-        stackIn_7_0 = (0 != so.c(2)) ? 0 : 1;
+        stackIn_7_0 = (0 != so.randomInt(2)) ? 0 : 1;
         var6 = stackIn_7_0;
         for (var7_int = 0; var7_int < var5; var7_int++) {
           for (var8_int = 0; var8_int < 6; var8_int++) {
@@ -224,7 +224,7 @@ final class oo extends id {
         var15 = new int[]{83, 83, 99, 99, 103, 111, 103, 111, 103, 111, 79, 95};
         var16 = new int[]{89, 89, 89, 89, 105, 113, 121, 121, 81, 81};
         for (var17 = var5 + 1; param1 - 1 > var17; var17++) {
-          stackIn_21_0 = (so.c(2) != 0) ? 0 : 1;
+          stackIn_21_0 = (so.randomInt(2) != 0) ? 0 : 1;
           var13Lifetime1 = stackIn_21_0;
           if (var13Lifetime1 != 0) {
             var11Lifetime1 = 2;
@@ -270,8 +270,8 @@ final class oo extends id {
     oo(int param0, int param1, int param2) {
         super(param0, param1, param2);
         oj.field_d.a(0, 6);
-        so.field_a.setSeed((long)param2);
-        this.field_Q = so.c(2) + 6;
+        so.random.setSeed((long)param2);
+        this.field_Q = so.randomInt(2) + 6;
         int[][] discarded$0 = this.b((byte) 123, this.field_Q);
     }
 

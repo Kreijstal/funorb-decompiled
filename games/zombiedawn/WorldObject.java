@@ -41,10 +41,10 @@ abstract class WorldObject extends SpatialObject {
         WorldObject var6;
         if (param0 == 32) {
           if (-1 == this.field_v) {
-            return (WorldObject) (Js5Archive.field_e.field_n.b(false));
+            return (WorldObject) (Js5Archive.field_e.spatialGrid.b(false));
           }
           do {
-            var6 = (WorldObject) (Js5Archive.field_e.field_n.b(false));
+            var6 = (WorldObject) (Js5Archive.field_e.spatialGrid.b(false));
             if (var6 == null) {
               return null;
             }
@@ -54,10 +54,10 @@ abstract class WorldObject extends SpatialObject {
         }
         this.field_x = -55;
         if (-1 == this.field_v) {
-          return (WorldObject) (Js5Archive.field_e.field_n.b(false));
+          return (WorldObject) (Js5Archive.field_e.spatialGrid.b(false));
         }
         while (true) {
-          var3_ref = (WorldObject) (Js5Archive.field_e.field_n.b(false));
+          var3_ref = (WorldObject) (Js5Archive.field_e.spatialGrid.b(false));
           if (var3_ref == null) {
             return null;
           }
@@ -147,9 +147,9 @@ abstract class WorldObject extends SpatialObject {
           var4 = null;
           if (param1 != -1) {
             var5 = 1 + (param1 >> 7);
-            var4_ref = (WorldObject) (Js5Archive.field_e.field_n.a(var5, this.field_u, 29845, this.field_B));
+            var4_ref = (WorldObject) (Js5Archive.field_e.spatialGrid.a(var5, this.field_u, 29845, this.field_B));
           } else {
-            var4_ref = (WorldObject) (Js5Archive.field_e.field_n.a(true));
+            var4_ref = (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
           }
           if (param0 != -74) {
             return (WorldObject) null;
@@ -173,9 +173,9 @@ abstract class WorldObject extends SpatialObject {
         var4Lifetime1 = null;
         if (param1 != -1) {
           var5Lifetime1 = 1 + (param1 >> 7);
-          var4_refLifetime1 = (WorldObject) (Js5Archive.field_e.field_n.a(var5Lifetime1, this.field_u, 29845, this.field_B));
+          var4_refLifetime1 = (WorldObject) (Js5Archive.field_e.spatialGrid.a(var5Lifetime1, this.field_u, 29845, this.field_B));
         } else {
-          var4_refLifetime1 = (WorldObject) (Js5Archive.field_e.field_n.a(true));
+          var4_refLifetime1 = (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
         }
         if (param0 != -74) {
           return (WorldObject) null;
@@ -205,33 +205,33 @@ abstract class WorldObject extends SpatialObject {
           this.field_v = -1;
           if (param1 == 16) {
             if (param0 == -1) {
-              return (WorldObject) (Js5Archive.field_e.field_n.a(true));
+              return (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
             }
             var3 = (param0 >> 7) + 1;
-            return (WorldObject) (Js5Archive.field_e.field_n.a(var3, this.field_u, 29845, this.field_B));
+            return (WorldObject) (Js5Archive.field_e.spatialGrid.a(var3, this.field_u, 29845, this.field_B));
           }
           this.field_x = 64;
           if (param0 == -1) {
-            return (WorldObject) (Js5Archive.field_e.field_n.a(true));
+            return (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
           }
           var3Lifetime3 = (param0 >> 7) + 1;
-          return (WorldObject) (Js5Archive.field_e.field_n.a(var3Lifetime3, this.field_u, 29845, this.field_B));
+          return (WorldObject) (Js5Archive.field_e.spatialGrid.a(var3Lifetime3, this.field_u, 29845, this.field_B));
         }
         this.field_A = -1;
         this.field_v = -1;
         if (param1 == 16) {
           if (param0 == -1) {
-            return (WorldObject) (Js5Archive.field_e.field_n.a(true));
+            return (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
           }
           var3Lifetime1 = (param0 >> 7) + 1;
-          return (WorldObject) (Js5Archive.field_e.field_n.a(var3Lifetime1, this.field_u, 29845, this.field_B));
+          return (WorldObject) (Js5Archive.field_e.spatialGrid.a(var3Lifetime1, this.field_u, 29845, this.field_B));
         }
         this.field_x = 64;
         if (param0 == -1) {
-          return (WorldObject) (Js5Archive.field_e.field_n.a(true));
+          return (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
         }
         var3Lifetime2 = (param0 >> 7) + 1;
-        return (WorldObject) (Js5Archive.field_e.field_n.a(var3Lifetime2, this.field_u, 29845, this.field_B));
+        return (WorldObject) (Js5Archive.field_e.spatialGrid.a(var3Lifetime2, this.field_u, 29845, this.field_B));
     }
 
     final static void a(int param0, byte[] param1, byte param2, int param3) {

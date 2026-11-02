@@ -97,8 +97,8 @@ final class va {
             return stackIn_2_0;
           }
           var2 = new PacketBuffer(param1);
-          var3 = var2.d((byte) -118);
-          var4 = var2.c(-38);
+          var3 = var2.readUnsignedByte((byte) -118);
+          var4 = var2.readInt(-38);
           if (var4 >= 0 && (GameLoopApplet.field_z == 0 ||
             !(var4 > GameLoopApplet.field_z))) {
             if (var3 == 0) {
@@ -107,7 +107,7 @@ final class va {
               stackIn_14_0 = var5_ref_byte__;
               return stackIn_14_0;
             }
-            var5 = var2.c(-69);
+            var5 = var2.readInt(-69);
             if (var5 >= 0 && (0 == GameLoopApplet.field_z ||
               !(var5 > GameLoopApplet.field_z))) {
               var6 = new byte[var5];
@@ -169,13 +169,13 @@ final class va {
             va.a((byte) -53, (byte[]) null);
           }
           var1 = fj.field_g;
-          var2 = var1.d((byte) -126);
+          var2 = var1.readUnsignedByte((byte) -126);
           if (var2 == 0) {
             if (nk.field_a == null) {
               nk.field_a = new pf(128);
               ih.field_J = 0;
             }
-            stackIn_15_0 = (var1.d((byte) -119) != 1) ? 0 : 1;
+            stackIn_15_0 = (var1.readUnsignedByte((byte) -119) != 1) ? 0 : 1;
             var3_int = stackIn_15_0;
             var4_ref_String = var1.a(true);
             if (var3_int != 0) {
@@ -225,7 +225,7 @@ final class va {
             w.field_b = 1;
             var3 = var1.a(true);
             oo.field_T = ((String) (var3)).intern();
-            var4 = var1.d((byte) -128);
+            var4 = var1.readUnsignedByte((byte) -128);
             rd.a(20348, var4);
             return;
           }

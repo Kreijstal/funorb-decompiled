@@ -419,12 +419,12 @@ final class jb implements io {
           return ki.field_V;
         }
         if (f.field_i != null) {
-          if (!f.field_i.a((byte) 73)) {
+          if (!f.field_i.isIndexLoaded((byte) 73)) {
             return cj.field_e;
           }
           return l.field_g;
         }
-        if (!IntrusiveDeque.field_d.a((byte) 73)) {
+        if (!IntrusiveDeque.field_d.isIndexLoaded((byte) 73)) {
           return DualLinkNode.field_o;
         }
         if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
@@ -433,17 +433,17 @@ final class jb implements io {
         if (param0 >= -49) {
           return (String) null;
         }
-        if (!da.field_l.a((byte) 73)) {
+        if (!da.field_l.isIndexLoaded((byte) 73)) {
           return nd.field_d;
         }
         if (!da.field_l.a(-1, "commonui")) {
           return ba.field_e + " - " + da.field_l.b("commonui", 86) + "%";
         }
-        if (!al.field_a.a((byte) 73)) {
+        if (!al.field_a.isIndexLoaded((byte) 73)) {
           return ad.field_o;
         }
         if (!al.field_a.c(9001)) {
-          return lo.field_p + " - " + al.field_a.e(-94) + "%";
+          return lo.field_p + " - " + al.field_a.percentLoaded(-94) + "%";
         }
         return jh.field_l;
     }

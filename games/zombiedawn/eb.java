@@ -36,13 +36,13 @@ final class eb implements io {
             var7Lifetime1 = -5 + (param4 + param3.field_k + param3.field_i) + (-(param3.field_i >> 1) + var6_intLifetime1);
             var8Lifetime1 = -(var6_intLifetime1 * 2) + (param3.field_i >> 1);
             var9 = var6_intLifetime1 + ((param3.field_n - 4 >> 1) + param3.field_j) + param2;
-            if (Rasterizer.field_l <= var9 &&
-              Rasterizer.field_d > var9) {
-              if (Rasterizer.field_g < var7Lifetime1) {
-                Rasterizer.field_c[var9 * Rasterizer.field_f + var7Lifetime1 - 1] = eg.a(Rasterizer.field_c[-1 + (var9 * Rasterizer.field_f + var7Lifetime1)], 16711422) >> 1;
+            if (Rasterizer.clipTop <= var9 &&
+              Rasterizer.clipBottom > var9) {
+              if (Rasterizer.clipLeft < var7Lifetime1) {
+                Rasterizer.pixels[var9 * Rasterizer.width + var7Lifetime1 - 1] = eg.a(Rasterizer.pixels[-1 + (var9 * Rasterizer.width + var7Lifetime1)], 16711422) >> 1;
               }
-              if (var8Lifetime1 + var7Lifetime1 < Rasterizer.field_b) {
-                Rasterizer.field_c[Rasterizer.field_f * var9 - (-var7Lifetime1 - var8Lifetime1)] = eg.a(Rasterizer.field_c[var8Lifetime1 + (Rasterizer.field_f * var9 + var7Lifetime1)] >> 1, 8355711);
+              if (var8Lifetime1 + var7Lifetime1 < Rasterizer.clipRight) {
+                Rasterizer.pixels[Rasterizer.width * var9 - (-var7Lifetime1 - var8Lifetime1)] = eg.a(Rasterizer.pixels[var8Lifetime1 + (Rasterizer.width * var9 + var7Lifetime1)] >> 1, 8355711);
               }
             }
             Rasterizer.b(var7Lifetime1, var9, var8Lifetime1, 0);

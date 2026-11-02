@@ -57,7 +57,7 @@ final class rn {
           var17.position = -7 + (param0.length - t.field_h * 8);
           gl.field_F = var17.f(2);
           Zombie.field_pb = var17.f(2);
-          var3 = (255 & var17.d((byte) -125)) + 1;
+          var3 = (255 & var17.readUnsignedByte((byte) -125)) + 1;
           for (var4 = 0; var4 < t.field_h; var4++) {
             sl.field_d[var4] = var16.f(2);
           }
@@ -92,7 +92,7 @@ final class rn {
             var9 = var19;
             ka.field_f[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.d((byte) -115);
+            var11 = var17.readUnsignedByte((byte) -115);
             if ((1 & var11) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
                 var8[var12] = var17.readByte((byte) 116);

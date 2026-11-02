@@ -48,23 +48,23 @@ final class a {
 
     final void a(int param0, int param1, int param2, int param3) {
         this.field_i = param2;
-        this.field_o = param0 + (-(so.c(8) << 16) + 262144);
+        this.field_o = param0 + (-(so.randomInt(8) << 16) + 262144);
         this.field_k = param1 << 16;
         if (param3 > 57) {
-          this.field_j = (so.c(1) << 16) + 65536;
-          this.field_e = so.c(32768) - 114688;
+          this.field_j = (so.randomInt(1) << 16) + 65536;
+          this.field_e = so.randomInt(32768) - 114688;
           this.field_a = true;
-          this.field_d = 12 + so.c(3);
+          this.field_d = 12 + so.randomInt(3);
           this.field_n = 0;
           this.field_b = 0;
           so.a(sg.field_fb);
           return;
         }
         a.b((byte) -23);
-        this.field_j = (so.c(1) << 16) + 65536;
-        this.field_e = so.c(32768) - 114688;
+        this.field_j = (so.randomInt(1) << 16) + 65536;
+        this.field_e = so.randomInt(32768) - 114688;
         this.field_a = true;
-        this.field_d = 12 + so.c(3);
+        this.field_d = 12 + so.randomInt(3);
         this.field_n = 0;
         this.field_b = 0;
         so.a(sg.field_fb);
@@ -107,7 +107,7 @@ final class a {
           if (this.field_b != 2) {
             return;
           }
-          kh.a(so.c(1) + 153, false);
+          kh.a(so.randomInt(1) + 153, false);
           return;
         }
         this.field_j = this.field_j - 8192;
@@ -125,7 +125,7 @@ final class a {
         if (this.field_b != 2) {
           return;
         }
-        kh.a(so.c(1) + 153, false);
+        kh.a(so.randomInt(1) + 153, false);
         return;
     }
 

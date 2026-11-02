@@ -64,7 +64,7 @@ final class np extends an {
           }
           if (var10 <= tm.field_m.field_t) {
             ki.a((byte) -86, tm.field_m);
-            Rasterizer.d();
+            Rasterizer.clear();
             var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
             tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
@@ -99,7 +99,7 @@ final class np extends an {
           }
           if (var10Lifetime1 <= tm.field_m.field_t) {
             ki.a((byte) -86, tm.field_m);
-            Rasterizer.d();
+            Rasterizer.clear();
             var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
             tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);

@@ -245,7 +245,7 @@ final class vj extends al {
         if (this.field_r == null) {
           this.field_r = new Sprite(100, 100);
           ki.a((byte) -92, this.field_r);
-          Rasterizer.d();
+          Rasterizer.clear();
           jb.field_a[1].b(25, 25);
           for (var3 = 0; var3 < 5; var3++) {
             so.a(4424743);
@@ -254,7 +254,7 @@ final class vj extends al {
           pa.a(-21189);
           this.field_u = new Sprite(100, 100);
           ki.a((byte) -94, this.field_u);
-          Rasterizer.d();
+          Rasterizer.clear();
           jb.field_a[1].b(25, 25);
           for (var3Lifetime3 = 0; var3Lifetime3 < 2; var3Lifetime3++) {
             so.a(16777215);

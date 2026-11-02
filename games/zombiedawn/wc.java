@@ -188,7 +188,7 @@ class wc extends qk {
         var12 = ZombieDawn.field_J;
         try {
           var14 = fj.field_g;
-          var2 = var14.d((byte) -124);
+          var2 = var14.readUnsignedByte((byte) -124);
           var3 = (mg) (bg.field_i.b((byte) 26));
           if (param0 <= 117) {
             return;
@@ -204,7 +204,7 @@ class wc extends qk {
             p.a(1);
             return;
           }
-          var4 = var14.d((byte) -124);
+          var4 = var14.readUnsignedByte((byte) -124);
           if (var4 != 0) {
             bb.field_b[0] = ce.field_r;
             var5 = var3.field_i;

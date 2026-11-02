@@ -230,7 +230,7 @@ final class si extends qk {
           var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
           while (var6_ref != null) {
             if (var6_ref.x(33)) {
-              var10 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+              var10 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var10 != null) {
                 if (!(var10.field_g <= var4) ||
                   var4 == -1) {
@@ -268,7 +268,7 @@ final class si extends qk {
             var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
             while (var6_ref != null) {
               if (var6_ref.x(33)) {
-                var11 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+                var11 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
                 if (var11 != null) {
                   if (!(var11.field_g <= var4) ||
                     var4 == -1) {
@@ -306,7 +306,7 @@ final class si extends qk {
             var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
             while (var6_ref != null) {
               if (var6_ref.x(33)) {
-                var18 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+                var18 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
                 if (var18 != null) {
                   if (!(var18.field_g <= var4) ||
                     var4 == -1) {

@@ -391,7 +391,7 @@ final class rj extends PcmStream {
         this.a(true, (byte) -71);
         if (param0 != 28013) {
           int[] var3 = (int[]) null;
-          this.a((int[]) null, 52, -103);
+          this.fill((int[]) null, 52, -103);
         }
     }
 
@@ -654,7 +654,7 @@ final class rj extends PcmStream {
         }
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void fill(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var8 = 0;
@@ -676,18 +676,18 @@ final class rj extends PcmStream {
               }
               var7 = (int)((-1L + ((long)var4_int + (-this.field_K + this.field_t))) / (long)var4_int);
               this.field_K = this.field_K + (long)var4_int * (long)var7;
-              this.field_J.a(param0, param1, var7);
+              this.field_J.fill(param0, param1, var7);
               param1 = param1 + var7;
               this.a(false);
               param2 = param2 - var7;
               if (this.field_w.a()) {
                 continue;
               }
-              this.field_J.a(param0, param1, param2);
+              this.field_J.fill(param0, param1, param2);
               return;
             }
           }
-          this.field_J.a(param0, param1, param2);
+          this.field_J.fill(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1081,9 +1081,9 @@ final class rj extends PcmStream {
           }
           param2.field_E.c(param2.field_r);
           if (param3 != null) {
-            param2.field_E.a(param3, param1, param4);
+            param2.field_E.fill(param3, param1, param4);
           } else {
-            param2.field_E.a(param4);
+            param2.field_E.skip(param4);
           }
           if (param2.field_E.f()) {
             this.field_J.field_m.b(param2.field_E);
@@ -1183,7 +1183,7 @@ final class rj extends PcmStream {
         this.a(param0, 256);
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var2;
         long var3;
         int var6;
@@ -1199,7 +1199,7 @@ final class rj extends PcmStream {
             }
             var5 = (int)((-this.field_K + (this.field_t + ((long)var2 - 1L))) / (long)var2);
             this.field_K = this.field_K + (long)var2 * (long)var5;
-            this.field_J.a(var5);
+            this.field_J.skip(var5);
             param0 = param0 - var5;
             this.a(false);
             if (!this.field_w.a()) {
@@ -1207,7 +1207,7 @@ final class rj extends PcmStream {
             }
           }
         }
-        this.field_J.a(param0);
+        this.field_J.skip(param0);
     }
 
     private final void b(int param0, int param1) {

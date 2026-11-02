@@ -39,7 +39,7 @@ final class Zombie extends Mover {
 
     private final void q(int param0) {
         int var2;
-        var2 = pb.a(so.field_a, 50, param0 ^ 0);
+        var2 = pb.a(so.random, 50, param0 ^ 0);
         if (var2 == param0 &&
           Math.abs(this.field_K + this.velocityX) < Math.abs(this.field_I) &&
           Math.abs(this.field_R + this.velocityY) < Math.abs(this.field_M)) {
@@ -133,9 +133,9 @@ final class Zombie extends Mover {
           this.field_eb = true;
         }
         if (this.o((byte) -22)) {
-          this.field_U = tp.$cfr$intArgs$b$3010b50b2764(59, 70 + pb.a(so.field_a, 2, 1));
+          this.field_U = tp.$cfr$intArgs$b$3010b50b2764(59, 70 + pb.a(so.random, 2, 1));
         } else {
-          this.field_U = tp.$cfr$intArgs$b$3010b50b2764(37, pb.a(so.field_a, 2, 1) + 72);
+          this.field_U = tp.$cfr$intArgs$b$3010b50b2764(37, pb.a(so.random, 2, 1) + 72);
         }
     }
 
@@ -182,7 +182,7 @@ final class Zombie extends Mover {
           return;
         }
         var2 = null;
-        var6 = Js5Archive.field_e.field_H;
+        var6 = Js5Archive.field_e.navigation;
         var7 = 1;
         if (!this.i((byte) -126)) {
           var7 = var7 | 2;
@@ -332,7 +332,7 @@ final class Zombie extends Mover {
           var4 = param1.worldToScreenY(this.getY(237239984), 0) - 48;
           if (this.state == 8) {
             ki.a((byte) -99, md.field_vb);
-            Rasterizer.d();
+            Rasterizer.clear();
             DualLinkNode.field_k[cg.field_d[8] + this.field_G + this.field_Cb].b(0, 0);
             pa.a(-21189);
             ho.a(md.field_vb, this.o((byte) -83), this.field_fb, -128);
@@ -384,7 +384,7 @@ final class Zombie extends Mover {
               var5 = 30;
             }
             ki.a((byte) -100, md.field_vb);
-            Rasterizer.d();
+            Rasterizer.clear();
             if (this.field_S != 3) {
               ad.field_g[this.field_t][var5].b(3, 3);
             } else {
@@ -587,10 +587,10 @@ final class Zombie extends Mover {
           this.state == 5 ||
           this.state == 6) {
           if (this.field_fb != 2 &&
-            pb.a(so.field_a, 2, 1) != 0) {
+            pb.a(so.random, 2, 1) != 0) {
             return;
           }
-          var2 = Js5Archive.field_e.field_H;
+          var2 = Js5Archive.field_e.navigation;
           var3 = null;
           var4 = null;
           var5 = Js5Archive.field_e.zombies.sentinel.previous;
@@ -605,7 +605,7 @@ final class Zombie extends Mover {
                 var7 = var2.a(true, this.getX(true), var6.getY(237239984), var6.getX(true), this.getY(237239984));
                 if (var7 != null) {
                   if (this.state == 4 &&
-                    pb.a(so.field_a, 2, param0 - 17303) != 0) {
+                    pb.a(so.random, 2, param0 - 17303) != 0) {
                     var5 = var5.previous;
                     continue;
                   }
@@ -803,10 +803,10 @@ final class Zombie extends Mover {
         this.velocityY = 0;
         this.velocityX = 0;
         this.field_fb = param3;
-        this.field_vb = pb.a(so.field_a, 5, 1);
-        this.field_db = pb.a(so.field_a, 120, 1);
+        this.field_vb = pb.a(so.random, 5, 1);
+        this.field_db = pb.a(so.random, 120, 1);
         if (this.field_fb != 0) {
-          this.field_gb = pb.a(so.field_a, this.field_sb, 1);
+          this.field_gb = pb.a(so.random, this.field_sb, 1);
         }
     }
 
@@ -880,7 +880,7 @@ final class Zombie extends Mover {
         if (null == this.field_lb) {
           return;
         }
-        this.field_yb = Js5Archive.field_e.field_H.a(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984));
+        this.field_yb = Js5Archive.field_e.navigation.a(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984));
     }
 
     final boolean o(int param0) {
@@ -1095,7 +1095,7 @@ final class Zombie extends Mover {
                           var5 = -var3 + this.getX(true);
                           var6 = this.getY(237239984) - var4;
                           if (var6 * var6 + var5 * var5 <= 6410 &&
-                            Js5Archive.field_e.field_H.a(var4, this.getY(237239984), var3, this.getX(true), 114) != -1) {
+                            Js5Archive.field_e.navigation.a(var4, this.getY(237239984), var3, this.getX(true), 114) != -1) {
                             this.targetY = var4;
                             this.targetX = var3;
                             this.moveToward(0, 114688);
@@ -1119,14 +1119,14 @@ final class Zombie extends Mover {
                     if ((this.field_G == 0 ||
                       2 == this.field_G) && 0 == this.field_N) {
                       var3 = 0;
-                      if (0 == pb.a(so.field_a, 3, 1)) {
+                      if (0 == pb.a(so.random, 3, 1)) {
                         if (this.field_wb.t(10)) {
-                          var3 = 40 + pb.a(so.field_a, 4, 1);
+                          var3 = 40 + pb.a(so.random, 4, 1);
                         } else {
-                          var3 = 37 + pb.a(so.field_a, 3, 1);
+                          var3 = 37 + pb.a(so.random, 3, 1);
                         }
                       } else {
-                        var3 = pb.a(so.field_a, 5, 1) + 30;
+                        var3 = pb.a(so.random, 5, 1) + 30;
                       }
                       this.field_U = tp.$cfr$intArgs$b$3010b50b2764(71, var3);
                     }
@@ -1148,7 +1148,7 @@ final class Zombie extends Mover {
                       this.field_wb = null;
                       this.setState(4, -6904);
                       if (null != this.field_lb) {
-                        this.a(Js5Archive.field_e.field_H.a(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984)), true);
+                        this.a(Js5Archive.field_e.navigation.a(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984)), true);
                       }
                     } else {
                       if (this.field_zb == 30) {
@@ -1160,20 +1160,20 @@ final class Zombie extends Mover {
                       if (this.state == 12) {
                         this.field_ob = false;
                         this.g((byte) 23);
-                        stackIn_89_0 = (Js5Archive.field_e.field_H.a(false, this.getY(237239984), this.getX(true), true)) ? 0 : 1;
+                        stackIn_89_0 = (Js5Archive.field_e.navigation.isWalkable(false, this.getY(237239984), this.getX(true), true)) ? 0 : 1;
                         var3 = stackIn_89_0;
                         if (var3 != 0) {
                           this.field_y = this.field_y - this.velocityX;
                           var3 = 0;
                           this.field_x = this.field_x - this.velocityY;
                           if (this.velocityX != 0 &&
-                            Js5Archive.field_e.field_H.a(false, this.getY(237239984), this.field_y + this.velocityX >> 16, true)) {
+                            Js5Archive.field_e.navigation.isWalkable(false, this.getY(237239984), this.field_y + this.velocityX >> 16, true)) {
                             this.velocityY = 0;
                             this.targetY = this.field_x >> 16;
                             this.field_y = this.field_y + this.velocityX;
                           } else {
                             if (0 != this.velocityY &&
-                              Js5Archive.field_e.field_H.a(false, this.velocityY + this.field_x >> 16, this.field_y >> 16, true)) {
+                              Js5Archive.field_e.navigation.isWalkable(false, this.velocityY + this.field_x >> 16, this.field_y >> 16, true)) {
                               this.targetX = this.field_y >> 16;
                               this.field_x = this.field_x + this.velocityY;
                               this.velocityX = 0;
@@ -1282,14 +1282,14 @@ final class Zombie extends Mover {
           if (this.field_db != 1 && (!(this.speedScale > 4) ||
             this.field_ob)) {
             if ((this.field_db == 0)) {
-              this.field_db = 60 + pb.a(so.field_a, 60, 1);
+              this.field_db = 60 + pb.a(so.random, 60, 1);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            var3 = this.getX(true) - (-pb.a(so.field_a, 48, 1) + 24);
-            var4 = this.getY(237239984) + (pb.a(so.field_a, 48, 1) - 24);
-            if (Js5Archive.field_e.field_H.a(false, var4, var3, true)) {
+            var3 = this.getX(true) - (-pb.a(so.random, 48, 1) + 24);
+            var4 = this.getY(237239984) + (pb.a(so.random, 48, 1) - 24);
+            if (Js5Archive.field_e.navigation.isWalkable(false, var4, var3, true)) {
               this.a(var4, var3, false);
             } else {
               this.field_db = this.field_db + 1;

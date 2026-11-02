@@ -185,7 +185,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var7 = param2[1].field_r;
             param2[0].b(param1, param4);
             param2[2].b(-var6 + param1 + param3, param4);
-            Rasterizer.b(HumanFactory.field_c);
+            Rasterizer.saveClip(HumanFactory.field_c);
             Rasterizer.c(var5_int + param1, param4, -var6 + param3 + param1, param4 + param2[1].field_q);
             var8 = var5_int + param1;
             var9 = param1 + param3 - var6;
@@ -197,7 +197,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 return;
               }
             }
-            Rasterizer.a(HumanFactory.field_c);
+            Rasterizer.restoreClip(HumanFactory.field_c);
             return;
           }
           return;

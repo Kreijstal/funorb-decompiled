@@ -1629,15 +1629,15 @@ class al {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.a((byte) 73)) {
+          if (!param2.isIndexLoaded((byte) 73)) {
             return false;
           }
           if (!param2.a(-1, "commonui")) {
             return false;
           }
-          if (param3.a((byte) 73) &&
+          if (param3.isIndexLoaded((byte) 73) &&
             param3.a(-1, "commonui")) {
-            if (param0.a((byte) 73) &&
+            if (param0.isIndexLoaded((byte) 73) &&
               param0.a(param1 + 31525, "button.gif")) {
               if (param1 == -31526) {
                 return true;

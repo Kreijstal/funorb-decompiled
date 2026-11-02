@@ -662,7 +662,7 @@ final class ac extends al {
         int var3 = -9 / ((param1 + 11) / 63);
         cc.field_k = new Sprite(640, 341);
         cc.field_k.a();
-        Rasterizer.d();
+        Rasterizer.clear();
         this.e(-122, 0);
         cn.field_f.b(13);
     }

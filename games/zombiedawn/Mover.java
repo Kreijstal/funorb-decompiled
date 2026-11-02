@@ -45,7 +45,7 @@ abstract class Mover extends WorldObject {
         }
         this.field_y = this.field_y + var7.field_h;
         this.field_x = this.field_x + var7.field_i;
-        if (Js5Archive.field_e.field_H.a(false, this.field_x >> 16, this.field_y >> 16, true)) {
+        if (Js5Archive.field_e.navigation.isWalkable(false, this.field_x >> 16, this.field_y >> 16, true)) {
           this.d((byte) 12);
         } else {
           this.field_x = this.field_x - var7.field_i;
@@ -270,7 +270,7 @@ abstract class Mover extends WorldObject {
     final int tileAtPixel(int param0, int param1, int param2) {
         int var4 = param1 / 24;
         int var5 = param2 / 24;
-        int[][] var6 = Js5Archive.field_e.field_H.field_A.field_f;
+        int[][] var6 = Js5Archive.field_e.navigation.field_A.tiles;
         if (var4 < param0) {
           return 0;
         }
@@ -293,7 +293,7 @@ abstract class Mover extends WorldObject {
         this.field_J = false;
         this.field_Z = 0;
         this.state = this instanceof Human ? 0 : 4;
-        this.field_S = pb.a(so.field_a, 2, 1) != 1 ? 1 : 3;
+        this.field_S = pb.a(so.random, 2, 1) != 1 ? 1 : 3;
         this.field_G = 0;
         this.field_N = 0;
         this.field_D = param3;

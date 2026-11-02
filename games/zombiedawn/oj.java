@@ -61,7 +61,7 @@ final class oj {
         this.field_a = this.field_a + this.field_c;
         this.field_b = this.field_b + this.field_e;
         if (this.field_c != 0.0f) {
-          if (Js5Archive.field_e.field_H.a((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
+          if (Js5Archive.field_e.navigation.a((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
             return;
           }
           this.field_e = 0.0f;
@@ -71,7 +71,7 @@ final class oj {
         if (0.0f == this.field_e) {
           return;
         }
-        if (Js5Archive.field_e.field_H.a((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
+        if (Js5Archive.field_e.navigation.a((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
           return;
         }
         this.field_e = 0.0f;

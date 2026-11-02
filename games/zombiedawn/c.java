@@ -112,7 +112,7 @@ final class c {
           if (param4 > -24) {
             c.b(-60);
           }
-          if (!param0.a((byte) 73)) {
+          if (!param0.isIndexLoaded((byte) 73)) {
             stackIn_5_0 = (String) (param2);
             return stackIn_5_0;
           }

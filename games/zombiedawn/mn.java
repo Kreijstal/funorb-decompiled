@@ -205,12 +205,12 @@ final class mn extends IntrusiveNode {
               }
             }
             ki.a((byte) -120, this.field_r);
-            var5 = new Camera(this.field_i.field_u, this.field_i.field_p);
+            var5 = new Camera(this.field_i.width, this.field_i.height);
             var5.x = bd.field_d + this.field_q * 24;
             var5.y = this.field_j * 24 + nh.field_G;
             this.field_i.a(var5, false);
             if (0 == this.field_k) {
-              Rasterizer.d();
+              Rasterizer.clear();
             }
             this.field_i.a(var5, 1, true, false);
             var11 = Js5Archive.field_e.zombies;

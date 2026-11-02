@@ -13,7 +13,7 @@ final class nn extends IntrusiveNode {
             if (!ck.a((byte) -128, 1)) {
               return false;
             }
-            jd.field_b = fj.field_g.d((byte) -117);
+            jd.field_b = fj.field_g.readUnsignedByte((byte) -117);
             fj.field_g.position = 0;
           }
           if (-2 == jd.field_b) {
@@ -29,7 +29,7 @@ final class nn extends IntrusiveNode {
           if (!ck.a((byte) -128, 1)) {
             return false;
           }
-          jd.field_b = fj.field_g.d((byte) -117);
+          jd.field_b = fj.field_g.readUnsignedByte((byte) -117);
           fj.field_g.position = 0;
         }
         if (-2 == jd.field_b) {

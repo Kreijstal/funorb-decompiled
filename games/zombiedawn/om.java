@@ -95,18 +95,18 @@ final class om extends w {
           var8_int = param2 - param6 - param7;
           var9 = -param6 + (param1 - param7);
           var10 = param6 + (param2 + param7);
-          if (var8_int < Rasterizer.field_g) {
-            var8_int = Rasterizer.field_g;
+          if (var8_int < Rasterizer.clipLeft) {
+            var8_int = Rasterizer.clipLeft;
           }
-          if (Rasterizer.field_b < var10) {
-            var10 = Rasterizer.field_b;
+          if (Rasterizer.clipRight < var10) {
+            var10 = Rasterizer.clipRight;
           }
           var11 = param1 - (-param6 - param7);
-          if (Rasterizer.field_l > var9) {
-            var9 = Rasterizer.field_l;
+          if (Rasterizer.clipTop > var9) {
+            var9 = Rasterizer.clipTop;
           }
-          if (Rasterizer.field_d < var11) {
-            var11 = Rasterizer.field_d;
+          if (Rasterizer.clipBottom < var11) {
+            var11 = Rasterizer.clipBottom;
           }
           var12 = new int[32];
           var13 = 16711935 & param3;
@@ -144,17 +144,17 @@ final class om extends w {
                     var30 = var30 - na.field_c[var25 % 256 + var22 % 256 * 256];
                     var27 = var23 * var30 / var28 + param2;
                     var26 = param1 + var21 * var30 / var28;
-                    if (var27 < Rasterizer.field_g) {
-                      var27 = Rasterizer.field_g;
+                    if (var27 < Rasterizer.clipLeft) {
+                      var27 = Rasterizer.clipLeft;
                     }
-                    if (var26 < Rasterizer.field_l) {
-                      var26 = Rasterizer.field_l;
+                    if (var26 < Rasterizer.clipTop) {
+                      var26 = Rasterizer.clipTop;
                     }
-                    if (var27 >= Rasterizer.field_b) {
-                      var27 = -1 + Rasterizer.field_b;
+                    if (var27 >= Rasterizer.clipRight) {
+                      var27 = -1 + Rasterizer.clipRight;
                     }
-                    if (Rasterizer.field_d <= var26) {
-                      var26 = -1 + Rasterizer.field_d;
+                    if (Rasterizer.clipBottom <= var26) {
+                      var26 = -1 + Rasterizer.clipBottom;
                     }
                   } else {
                     if (var19 > var24) {
@@ -163,28 +163,28 @@ final class om extends w {
                       var30 = -(param5 * (-WorldObject.a(1311979239, (var29 << 7) / param7) + 65536) >> 11) + var28;
                       var26 = param1 + var30 * var21 / var28;
                       var27 = param2 + var23 * var30 / var28;
-                      if (Rasterizer.field_l > var26) {
-                        var26 = Rasterizer.field_l;
+                      if (Rasterizer.clipTop > var26) {
+                        var26 = Rasterizer.clipTop;
                       }
-                      if (Rasterizer.field_g > var27) {
-                        var27 = Rasterizer.field_g;
+                      if (Rasterizer.clipLeft > var27) {
+                        var27 = Rasterizer.clipLeft;
                       }
-                      if (var27 >= Rasterizer.field_b) {
-                        var27 = -1 + Rasterizer.field_b;
+                      if (var27 >= Rasterizer.clipRight) {
+                        var27 = -1 + Rasterizer.clipRight;
                       }
-                      if (Rasterizer.field_d > var26) {
-                        var17.field_z[var20] = Rasterizer.field_c[var27 + Rasterizer.field_f * var26];
+                      if (Rasterizer.clipBottom > var26) {
+                        var17.field_z[var20] = Rasterizer.pixels[var27 + Rasterizer.width * var26];
                         var20++;
                         var25++;
                         var23++;
                         var24 = var24 + (2 * var23 - 1);
                         continue;
                       }
-                      var26 = Rasterizer.field_d - 1;
+                      var26 = Rasterizer.clipBottom - 1;
                     }
                   }
                 }
-                var17.field_z[var20] = Rasterizer.field_c[var27 + Rasterizer.field_f * var26];
+                var17.field_z[var20] = Rasterizer.pixels[var27 + Rasterizer.width * var26];
                 var20++;
                 var25++;
                 var23++;

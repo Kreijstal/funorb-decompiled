@@ -33,7 +33,7 @@ final class gg {
     }
 
     final static void a(int param0) {
-        vg.field_a = Js5Archive.field_e.field_H.field_A.field_p;
+        vg.field_a = Js5Archive.field_e.navigation.field_A.field_p;
         pm.d((byte) 36);
         if (param0 != 128) {
           byte[] var2 = (byte[]) null;

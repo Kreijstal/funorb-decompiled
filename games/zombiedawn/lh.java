@@ -160,10 +160,10 @@ final class lh extends pc {
                       }
                     } else {
                       this.field_j.position = 0;
-                      var6 = this.field_j.d((byte) -127);
-                      var7 = this.field_j.c(param0 ^ -111);
-                      var8 = this.field_j.d((byte) -117);
-                      var9 = this.field_j.c(-121);
+                      var6 = this.field_j.readUnsignedByte((byte) -127);
+                      var7 = this.field_j.readInt(param0 ^ -111);
+                      var8 = this.field_j.readUnsignedByte((byte) -117);
+                      var9 = this.field_j.readInt(-121);
                       var10 = 127 & var8;
                       stackIn_65_0 = ((128 & var8) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;

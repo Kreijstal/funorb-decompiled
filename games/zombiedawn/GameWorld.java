@@ -22,7 +22,7 @@ final class GameWorld {
     int field_r;
     private qj field_b;
     int field_f;
-    LevelNavigation field_H;
+    LevelNavigation navigation;
     int field_nb;
     int field_G;
     private int field_z;
@@ -52,7 +52,7 @@ final class GameWorld {
     TileMap tileMap;
     private DualLinkDeque field_W;
     IntrusiveDeque field_e;
-    SpatialGrid field_n;
+    SpatialGrid spatialGrid;
     private int field_fb;
     private PcmSampleStream field_L;
     private int field_ib;
@@ -441,7 +441,7 @@ final class GameWorld {
             } else {
               var3_ref2 = (Zombie) (var2);
               if (var3_ref2.field_fb > 0) {
-                var3_ref2.field_gb = so.c(var3_ref2.field_sb);
+                var3_ref2.field_gb = so.randomInt(var3_ref2.field_sb);
               }
               var3_ref2.j((byte) 82);
               if (!var3_ref2.n((byte) 25)) {
@@ -516,7 +516,7 @@ final class GameWorld {
               pc.a((byte) 13, this.field_L);
             }
             if (this.field_r % 32 == 0) {
-              this.field_H.a(true, 33);
+              this.navigation.a(true, 33);
             }
           }
           this.d((byte) -127);
@@ -614,7 +614,7 @@ final class GameWorld {
             this.field_q == 1) {
             this.g(115);
           }
-          this.field_H.field_A.a(0, false);
+          this.navigation.field_A.a(0, false);
           co.a(0);
           if (var3_int == 0) {
             var6 = 0;
@@ -712,7 +712,7 @@ final class GameWorld {
           var5_int = param1 >> 7;
           var6 = param0 >> 7;
           var7 = param3 * param3;
-          var8 = (WorldObject) (this.field_n.a((param3 >> 7) + 1, var6, 29845, var5_int));
+          var8 = (WorldObject) (this.spatialGrid.a((param3 >> 7) + 1, var6, 29845, var5_int));
           while (var8 != null) {
             if (var11 != 0) {
               return;
@@ -724,7 +724,7 @@ final class GameWorld {
                 ((Mover) (var8)).b((byte) 126, 1000);
               }
             }
-            var8 = (WorldObject) (this.field_n.b(false));
+            var8 = (WorldObject) (this.spatialGrid.b(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -793,9 +793,9 @@ final class GameWorld {
           }
           stackIn_6_0 = null;
           stackIn_6_1 = null;
-          stackIn_6_2 = param3 + pb.a(so.field_a, param2, 1);
-          stackIn_6_3 = param4 + pb.a(so.field_a, param0, 1);
-          if (pb.a(so.field_a, 2, 1) != 1) {
+          stackIn_6_2 = param3 + pb.a(so.random, param2, 1);
+          stackIn_6_3 = param4 + pb.a(so.random, param0, 1);
+          if (pb.a(so.random, 2, 1) != 1) {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
             stackIn_7_4 = false;
@@ -1661,7 +1661,7 @@ final class GameWorld {
           }
           stackIn_6_0 = null;
           stackIn_6_1 = null;
-          stackIn_6_2 = this.field_H;
+          stackIn_6_2 = this.navigation;
           stackIn_6_3 = param2;
           stackIn_6_4 = param3;
           if (!param0) {
@@ -1964,7 +1964,7 @@ final class GameWorld {
           }
           if (bo.field_p[82] &&
             param0 == 48) {
-            this.a(0, this.field_H.field_u, this.field_H.field_p, param2 ^ -29685, 0);
+            this.a(0, this.navigation.width, this.navigation.height, param2 ^ -29685, 0);
             return true;
           }
           return false;
@@ -2097,15 +2097,15 @@ final class GameWorld {
             }
             this.field_L.h(ge.field_c * (220 * var2_int) / 16 >> 8);
             if (var2_int > 0) {
-              this.camera.x = this.camera.x + (pb.a(so.field_a, var2_int, param0 - 9843) - var2_int / 2);
-              this.camera.y = this.camera.y + (-(var2_int / 2) + pb.a(so.field_a, var2_int, 1));
+              this.camera.x = this.camera.x + (pb.a(so.random, var2_int, param0 - 9843) - var2_int / 2);
+              this.camera.y = this.camera.y + (-(var2_int / 2) + pb.a(so.random, var2_int, 1));
             }
           }
-          this.field_H.a(this.camera, false);
-          if (-1 != this.field_H.field_A.field_c &&
-            this.field_H.field_A.field_o != -1) {
-            var2_intLifetime1 = this.camera.worldToScreenX(this.field_H.field_A.field_c, (byte) -100);
-            var3 = this.camera.worldToScreenY(this.field_H.field_A.field_o, 0);
+          this.navigation.a(this.camera, false);
+          if (-1 != this.navigation.field_A.field_c &&
+            this.navigation.field_A.field_o != -1) {
+            var2_intLifetime1 = this.camera.worldToScreenX(this.navigation.field_A.field_c, (byte) -100);
+            var3 = this.camera.worldToScreenY(this.navigation.field_A.field_o, 0);
             stackIn_27_0 = sl.field_c;
             if (5 > he.field_c) {
               stackIn_28_1 = he.field_c;
@@ -2172,7 +2172,7 @@ final class GameWorld {
           if (stackIn_58_0 != stackIn_58_1) {
             this.a((Zombie) null, false);
           }
-          this.field_H.a(this.camera, 1, true, false);
+          this.navigation.a(this.camera, 1, true, false);
           var2 = this.field_v.b((byte) 26);
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -2205,7 +2205,7 @@ final class GameWorld {
             ld.field_m = true;
             TileMap.field_q = this.camera.x;
             ki.a((byte) -120, hn.field_p);
-            Rasterizer.d();
+            Rasterizer.clear();
             pa.a(-21189);
             if (var14 != 0) {
               ld.field_m = false;
@@ -2251,12 +2251,12 @@ final class GameWorld {
           if (stackIn_108_0 == stackIn_108_1) {
             hn.field_p.b(-this.camera.x + TileMap.field_q - 40, -this.camera.y + (qb.field_b - 40));
           }
-          this.field_H.a(this.camera, 2, true, false);
-          if (this.field_H.field_A.field_a == 6 &&
+          this.navigation.a(this.camera, 2, true, false);
+          if (this.navigation.field_A.field_a == 6 &&
             this.field_h != -1) {
             this.i(1);
           }
-          this.field_H.a(this.camera, 3, true, false);
+          this.navigation.a(this.camera, 3, true, false);
           var2 = this.zombies.b((byte) 26);
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
@@ -2279,7 +2279,7 @@ final class GameWorld {
           boolean decompiledFrameCompleted1 = true;
           if (stackIn_127_0) {
             var4_int = 0;
-            while (var4_int < this.field_H.field_u) {
+            while (var4_int < this.navigation.width) {
               var5_int = this.camera.worldToScreenX(var4_int, (byte) -92);
               stackIn_146_0 = ~var5_int;
               stackIn_146_1 = -1;
@@ -2306,7 +2306,7 @@ final class GameWorld {
               (decompiledFrameCompleted1)) {
               var4_int = 0;
               while (true) {
-                stackIn_146_0Lifetime1 = ~this.field_H.field_p;
+                stackIn_146_0Lifetime1 = ~this.navigation.height;
                 stackIn_146_1Lifetime1 = ~var4_int;
                 if (stackIn_146_0Lifetime1 >= stackIn_146_1Lifetime1) {
                   break;
@@ -2418,7 +2418,7 @@ final class GameWorld {
             }
             this.field_V.b(-(this.field_V.field_w / 2) + bd.field_d, nh.field_G - this.field_V.field_t);
             so.a(this.field_t, bd.field_d + (-(this.field_V.field_w / 2) - 6), -6 + (-this.field_V.field_t + nh.field_G));
-            Rasterizer.c();
+            Rasterizer.resetClip();
           }
           var7 = (da) (this.field_ob.b((byte) 26));
           if (var7 != null) {
@@ -2533,7 +2533,7 @@ final class GameWorld {
           var5 = new DualLinkDeque();
           var6_ref_kd = (Zombie) (this.field_W.c((byte) 34));
           while (null != var6_ref_kd) {
-            var7_ref_qh = this.field_H.a(true, var6_ref_kd.getX(true), param0, param1, var6_ref_kd.getY(237239984));
+            var7_ref_qh = this.navigation.a(true, var6_ref_kd.getX(true), param0, param1, var6_ref_kd.getY(237239984));
             if (var18 != 0) {
               return;
             }
@@ -2553,7 +2553,7 @@ final class GameWorld {
               if (param2 <= 114) {
                 this.field_F = false;
               }
-              var8 = this.field_H.a(8728);
+              var8 = this.navigation.a(8728);
               var8[var7][var6] = 1;
               var9 = 2;
               var10 = 1;
@@ -2645,7 +2645,7 @@ final class GameWorld {
                 }
                 param1 = 24 * var14Lifetime1 + SpatialObject.e(-128);
                 param0 = SpatialObject.e(49) + var15Lifetime1 * 24;
-                var13.a(this.field_H.a(true, var13.getX(true), param0, param1, var13.getY(237239984)), true);
+                var13.a(this.navigation.a(true, var13.getX(true), param0, param1, var13.getY(237239984)), true);
                 if (7 == this.field_q &&
                   0 == this.field_h &&
                   !var13.x(52)) {
@@ -2807,7 +2807,7 @@ final class GameWorld {
               var8.r(param2 ^ -31320);
               this.field_W.a(var8, (byte) -126);
               if (param4 != null) {
-                var8.a(this.field_H.a(true, var6_int, param4.y, param4.x, var7), true);
+                var8.a(this.navigation.a(true, var6_int, param4.y, param4.x, var7), true);
               }
             }
             if (!(param1 instanceof we)) {
@@ -2920,7 +2920,7 @@ final class GameWorld {
           }
           var4_int = this.camera.a(param0, false);
           var5 = this.camera.b(param1, true);
-          if (this.field_H.a(false, var5, var4_int, true)) {
+          if (this.navigation.isWalkable(false, var5, var4_int, true)) {
             boolean decompiledFrameRemainder1 = true;
             boolean decompiledFrameCompleted0 = true;
             if (bo.field_p[82]) {
@@ -2939,7 +2939,7 @@ final class GameWorld {
                   }
                   if (decompiledFrameRemainder0) {
                     if (7 != this.field_q) {
-                      var6_ref = HumanFactory.createHuman(105, var4_int, so.c(9), var5);
+                      var6_ref = HumanFactory.createHuman(105, var4_int, so.randomInt(9), var5);
                       if (var9 != 0) {
                         var6_ref = HumanFactory.createHuman(68, var4_int, 28, var5);
                         var6_ref = new me(var4_int, var5, 3);
@@ -2971,7 +2971,7 @@ final class GameWorld {
                 var6 = stackIn_50_0;
                 var7 = 0;
                 while (var7 < var6) {
-                  var8 = new Zombie(var4_int, var5, pb.a(so.field_a, 2, param2 ^ 31099), 0);
+                  var8 = new Zombie(var4_int, var5, pb.a(so.random, 2, param2 ^ 31099), 0);
                   this.zombies.addFirst(0, var8);
                   var8.d((byte) -1);
                   var7++;
@@ -3156,7 +3156,7 @@ final class GameWorld {
               this.field_gb.k(16284)) {
               ck.a(-6, 6836);
             }
-            this.field_H.a(false);
+            this.navigation.a(false);
             var3 = 0;
             var4 = 0;
             var5_ref_le = this.zombies.b((byte) 26);
@@ -3259,7 +3259,7 @@ final class GameWorld {
                 decompiledFrameRemainder2 = (var7 == 6);
                 if ((decompiledFrameRemainder2) &&
                   (var13 == 0)) {
-                  var7_ref_fb = (WorldObject) (this.field_n.a(0, 0, this.field_n.field_d, 1, true));
+                  var7_ref_fb = (WorldObject) (this.spatialGrid.a(0, 0, this.spatialGrid.field_d, 1, true));
                   while (null != var7_ref_fb) {
                     stackIn_130_0 = var7_ref_fb instanceof Zombie;
                     if (stackIn_130_0) {
@@ -3271,14 +3271,14 @@ final class GameWorld {
                         var8_ref_kd.field_cb = false;
                         var8_ref_kd.c((byte) -20);
                         var8_ref_kd.q((byte) -114);
-                        var8_ref_kd.a(this.field_H.a(true, var8_ref_kd.getX(true), 120, this.field_H.field_u - 1, var8_ref_kd.getY(237239984)), true);
+                        var8_ref_kd.a(this.navigation.a(true, var8_ref_kd.getX(true), 120, this.navigation.width - 1, var8_ref_kd.getY(237239984)), true);
                         this.field_gb.a(true);
                         if (60 >= this.field_gb.j(-106)) {
                           this.a(233, 22, (byte) -23);
                         }
                       }
                     }
-                    var7_ref_fb = (WorldObject) (this.field_n.b(false));
+                    var7_ref_fb = (WorldObject) (this.spatialGrid.b(false));
                   }
                   decompiledFrameRemainder2 = false;
                 }
@@ -3293,14 +3293,14 @@ final class GameWorld {
                   if (this.field_gb.field_a < 600) {
                     this.field_jb = 650;
                   }
-                  var7Lifetime3 = so.c(3);
+                  var7Lifetime3 = so.randomInt(3);
                   var8 = 240 * var7Lifetime3 + 156;
                   var9 = 0;
                   var8 = -12 + (264 + 288 * var7Lifetime3);
                   var10 = 0;
                   while (var10 < 18) {
-                    var11 = so.c(24) + var8;
-                    var12 = so.c(9);
+                    var11 = so.randomInt(24) + var8;
+                    var12 = so.randomInt(9);
                     this.zombies.addFirst(0, new me(var11, var9, var12));
                     var9 -= 30;
                     var10++;
@@ -3320,12 +3320,12 @@ final class GameWorld {
                 this.field_jb = this.field_jb - 1;
                 if (fieldTemp$1 <= 0) {
                   var7_ref_int__ = new int[]{0, 3, 5, 2, 30, 26, 24};
-                  var8Lifetime3 = so.c(this.field_k);
+                  var8Lifetime3 = so.randomInt(this.field_k);
                   var9Lifetime4 = this.field_D[var8Lifetime3];
                   var10Lifetime2 = this.field_s[var8Lifetime3];
                   var11Lifetime1 = so.a(var7_ref_int__);
-                  var9Lifetime4 = var9Lifetime4 + so.c(48);
-                  var10Lifetime2 = var10Lifetime2 + so.c(48);
+                  var9Lifetime4 = var9Lifetime4 + so.randomInt(48);
+                  var10Lifetime2 = var10Lifetime2 + so.randomInt(48);
                   this.field_jb = 25;
                   this.zombies.addFirst(0, new ig(var9Lifetime4, var10Lifetime2, var11Lifetime1));
                 }
@@ -3348,15 +3348,15 @@ final class GameWorld {
                   var7Lifetime1 = 0;
                   while (true) {
                     if (var7Lifetime1 < 4) {
-                      var8Lifetime1 = -15 + pb.a(so.field_a, 30, param0 - 92);
-                      var9Lifetime1 = pb.a(so.field_a, 30, 1) - 15;
-                      this.zombies.addFirst(param0 ^ 93, HumanFactory.createHuman(123, var8Lifetime1 + this.field_H.field_A.field_c, 19, this.field_H.field_A.field_o + var9Lifetime1));
+                      var8Lifetime1 = -15 + pb.a(so.random, 30, param0 - 92);
+                      var9Lifetime1 = pb.a(so.random, 30, 1) - 15;
+                      this.zombies.addFirst(param0 ^ 93, HumanFactory.createHuman(123, var8Lifetime1 + this.navigation.field_A.field_c, 19, this.navigation.field_A.field_o + var9Lifetime1));
                       var7Lifetime1++;
                       if (var13 == 0) {
                         continue;
                       }
                     } else {
-                      this.b(3, this.field_H.field_A.field_o, true, this.field_H.field_A.field_c);
+                      this.b(3, this.navigation.field_A.field_o, true, this.navigation.field_A.field_c);
                     }
                     break;
                   }
@@ -3386,8 +3386,8 @@ final class GameWorld {
                 }
               }
             }
-            if (this.field_H.field_A.field_c != -1 &&
-              this.field_H.field_A.field_o != -1) {
+            if (this.navigation.field_A.field_c != -1 &&
+              this.navigation.field_A.field_o != -1) {
               if (ql.field_j >= 0.0f) {
                 ql.field_j = ql.field_j + ub.field_f;
                 ub.field_f = ub.field_f - 0.18000000715255737f;
@@ -3428,7 +3428,7 @@ final class GameWorld {
               if ((var10Lifetime1 != 0 ||
                 var13 != 0) &&
                 var10Lifetime1 == 60) {
-                kh.a(so.c(3) + 119, false);
+                kh.a(so.randomInt(3) + 119, false);
               }
               if (var13 == 0) {
                 return;
@@ -3526,22 +3526,22 @@ final class GameWorld {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.field_d.addFirst(0, new gk(param3, param0, pb.a(so.field_a, 6, 1), param1));
-            this.field_d.addFirst(0, new gk(param3 + 15, param0, pb.a(so.field_a, 6, 1), param1));
-            this.field_d.addFirst(0, new gk(-15 + param3, param0, pb.a(so.field_a, 6, 1), param1));
-            this.field_d.addFirst(0, new gk(param3, param0 - 15, pb.a(so.field_a, 6, 1), param1));
+            this.field_d.addFirst(0, new gk(param3, param0, pb.a(so.random, 6, 1), param1));
+            this.field_d.addFirst(0, new gk(param3 + 15, param0, pb.a(so.random, 6, 1), param1));
+            this.field_d.addFirst(0, new gk(-15 + param3, param0, pb.a(so.random, 6, 1), param1));
+            this.field_d.addFirst(0, new gk(param3, param0 - 15, pb.a(so.random, 6, 1), param1));
           }
           if (param2 < 109) {
             this.a((Zombie) null, (byte) -74);
           }
-          this.field_d.addFirst(0, new gk(param3, 15 + param0, pb.a(so.field_a, 6, 1), param1));
-          if (!this.field_H.a(false, param0 - 24, param3, true) &&
-            !this.field_H.a(false, -24 + param0, param3 + 24, true) &&
-            !this.field_H.a(false, param0 - 24, -24 + param3, true) &&
-            this.field_H.a(false, param0, param3, true)) {
+          this.field_d.addFirst(0, new gk(param3, 15 + param0, pb.a(so.random, 6, 1), param1));
+          if (!this.navigation.isWalkable(false, param0 - 24, param3, true) &&
+            !this.navigation.isWalkable(false, -24 + param0, param3 + 24, true) &&
+            !this.navigation.isWalkable(false, param0 - 24, -24 + param3, true) &&
+            this.navigation.isWalkable(false, param0, param3, true)) {
             param0 = param0 - (24 + param0 % 24);
-            this.zombies.addFirst(0, new gk(param3, param0, 6 + pb.a(so.field_a, 6, 1), param1));
-            this.field_d.addFirst(0, new gk(param3, 24 + param0, pb.a(so.field_a, 6, 1), param1));
+            this.zombies.addFirst(0, new gk(param3, param0, 6 + pb.a(so.random, 6, 1), param1));
+            this.field_d.addFirst(0, new gk(param3, 24 + param0, pb.a(so.random, 6, 1), param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3712,13 +3712,13 @@ final class GameWorld {
           this.field_r = 0;
           this.field_fb = 0;
           MouseWheelInput.field_c = 0;
-          this.field_H = new LevelNavigation(this.tileMap);
+          this.navigation = new LevelNavigation(this.tileMap);
           this.field_u = new int[3];
           this.field_J = new int[3];
           mn.a(false);
           hm.a(9);
-          this.field_n = new SpatialGrid(1 + (this.field_H.field_u >> 7), 1 + (this.field_H.field_p >> 7));
-          this.camera = new Camera(this.field_H.field_u, this.field_H.field_p);
+          this.spatialGrid = new SpatialGrid(1 + (this.navigation.width >> 7), 1 + (this.navigation.height >> 7));
+          this.camera = new Camera(this.navigation.width, this.navigation.height);
           this.camera.a(this.tileMap.field_b[1], this.tileMap.field_b[3], this.tileMap.field_m[2], this.tileMap.field_m[0], this.tileMap.field_b[0], this.tileMap.field_m[1], this.tileMap.field_m[3], this.tileMap.field_b[2], 106);
           this.camera.a((byte) -98);
           this.b(8, this.tileMap.field_a);
@@ -3792,7 +3792,7 @@ final class GameWorld {
                     }
                   }
                   if (var4 instanceof kc) {
-                    ((kc) (var4)).a(this.field_H, false);
+                    ((kc) (var4)).a(this.navigation, false);
                   }
                 }
               }
@@ -3859,7 +3859,7 @@ final class GameWorld {
           var5.a(var4_ref, this.field_V.field_w / 2, this.field_V.field_t - var5.field_x, 2, -1);
           this.field_t.a();
           this.field_V.h(6, 6, 16777215);
-          Rasterizer.h(4, 4, 0, 0, Rasterizer.field_f, Rasterizer.field_a);
+          Rasterizer.h(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
           this.field_V.h(6, 6, 0);
           cn.field_f.b(96);
           stackIn_117_0 = !param0;
@@ -3935,16 +3935,16 @@ final class GameWorld {
             this.field_h != -1 ||
             7 == this.field_q) {
             this.field_gb.d(0);
-            this.field_H.field_A.field_c = -1;
-            this.field_H.field_A.field_o = -1;
+            this.navigation.field_A.field_c = -1;
+            this.navigation.field_A.field_o = -1;
           }
           boolean decompiledFrameCompleted3 = true;
           boolean decompiledFrameCompleted1 = true;
           regionExit1: {
             boolean decompiledFrameCompleted2 = true;
             if (this.field_h == -1) {
-              this.field_H.field_A.field_o = -1;
-              this.field_H.field_A.field_c = -1;
+              this.navigation.field_A.field_o = -1;
+              this.navigation.field_A.field_c = -1;
               if (5 != this.field_q) {
                 if (this.field_q != 6) {
                   break regionExit1;
@@ -3987,9 +3987,9 @@ final class GameWorld {
                           stackIn_259_1 = 5;
                           if (stackIn_259_0 >= stackIn_259_1 ||
                             var10_int != 0 &&
-                            !(so.c(256) < 100)) {
+                            !(so.randomInt(256) < 100)) {
                             var7_ref_boolean____[var10_int][var12] = true;
-                            var13 = var12 - so.c(var11 + 1);
+                            var13 = var12 - so.randomInt(var11 + 1);
                             if (var10_int == 0) {
                               var9 = var13;
                             } else {
@@ -4026,9 +4026,9 @@ final class GameWorld {
                     stackIn_304_1 = -2;
                     if (var17 != 0) {
                       if (stackIn_304_0 < stackIn_304_1) {
-                        var9_ref_kd = this.spawnZombie(216, (byte) 122, -264 + this.field_H.field_u, 144, 48 + (this.field_H.field_p + 30));
+                        var9_ref_kd = this.spawnZombie(216, (byte) 122, -264 + this.navigation.width, 144, 48 + (this.navigation.height + 30));
                         var10 = new qh();
-                        var10.addFirst(0, new Point(var9_ref_kd.getX(true), this.field_H.field_p - 168 + so.c(96)));
+                        var10.addFirst(0, new Point(var9_ref_kd.getX(true), this.navigation.height - 168 + so.randomInt(96)));
                         var9_ref_kd.a(var10, true);
                         break regionExit1;
                       }
@@ -4054,9 +4054,9 @@ final class GameWorld {
                     if (stackIn_304_0Lifetime1 >= stackIn_304_1Lifetime1) {
                       break;
                     }
-                    var9_ref_kdLifetime1 = this.spawnZombie(216, (byte) 122, -264 + this.field_H.field_u, 144, 48 + (this.field_H.field_p + 30));
+                    var9_ref_kdLifetime1 = this.spawnZombie(216, (byte) 122, -264 + this.navigation.width, 144, 48 + (this.navigation.height + 30));
                     var10Lifetime1 = new qh();
-                    var10Lifetime1.addFirst(0, new Point(var9_ref_kdLifetime1.getX(true), this.field_H.field_p - 168 + so.c(96)));
+                    var10Lifetime1.addFirst(0, new Point(var9_ref_kdLifetime1.getX(true), this.navigation.height - 168 + so.randomInt(96)));
                     var9_ref_kdLifetime1.a(var10Lifetime1, true);
                     if (var17 != 0) {
                       break regionExit1;
@@ -4075,7 +4075,7 @@ final class GameWorld {
               var7 = 0;
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (!(var7 < this.tileMap.field_r)))) {
-                var8Lifetime2 = this.field_H.c(var7, -34, var6) & 127;
+                var8Lifetime2 = this.navigation.c(var7, -34, var6) & 127;
                 stackIn_320_0 = ~var8Lifetime2;
                 stackIn_320_1 = -8;
                 if (var17 == 0) {
@@ -4083,7 +4083,7 @@ final class GameWorld {
                     this.field_D[this.field_k] = (-2 + var6) * 24;
                     this.field_s[this.field_k] = var7 * 24;
                     this.field_k = this.field_k + 1;
-                    this.field_H.field_A.field_f[var7][var6] = eg.a(-128, this.field_H.field_A.field_f[var7][var6]);
+                    this.navigation.field_A.tiles[var7][var6] = eg.a(-128, this.navigation.field_A.tiles[var7][var6]);
                   }
                   var7++;
                   continue;
@@ -4099,12 +4099,12 @@ final class GameWorld {
               scanLoop5: while (true) {
                 boolean decompiledFrameRemainder5 = true;
                 if (this.tileMap.field_r > var7Lifetime2) {
-                  var8Lifetime3 = 127 & this.field_H.c(var7Lifetime2, 89, var6Lifetime2);
+                  var8Lifetime3 = 127 & this.navigation.c(var7Lifetime2, 89, var6Lifetime2);
                   stackIn_331_0 = -8;
                   stackIn_331_1 = ~var8Lifetime3;
                   if (var17 != 0) {
                     if (stackIn_331_0 < stackIn_331_1) {
-                      var8Lifetime3 = this.field_H.c(var7Lifetime2, 109, var6Lifetime2) & 127;
+                      var8Lifetime3 = this.navigation.c(var7Lifetime2, 109, var6Lifetime2) & 127;
                       stackIn_340_0 = ~var8Lifetime3;
                       stackIn_340_1 = -8;
                       break scanLoop5;
@@ -4116,7 +4116,7 @@ final class GameWorld {
                       this.field_D[this.field_k] = var6Lifetime2 * 24 + 24;
                       this.field_s[this.field_k] = 24 * var7Lifetime2;
                       this.field_k = this.field_k + 1;
-                      this.field_H.field_A.field_f[var7Lifetime2][var6Lifetime2] = eg.a(this.field_H.field_A.field_f[var7Lifetime2][var6Lifetime2], -128);
+                      this.navigation.field_A.tiles[var7Lifetime2][var6Lifetime2] = eg.a(this.navigation.field_A.tiles[var7Lifetime2][var6Lifetime2], -128);
                     }
                     var7Lifetime2++;
                     continue;
@@ -4131,7 +4131,7 @@ final class GameWorld {
                     if (stackIn_331_0Lifetime1 >= stackIn_331_1Lifetime1) {
                       break;
                     }
-                    var8Lifetime3 = this.field_H.c(var7Lifetime2, 109, var6Lifetime2) & 127;
+                    var8Lifetime3 = this.navigation.c(var7Lifetime2, 109, var6Lifetime2) & 127;
                     stackIn_340_0 = ~var8Lifetime3;
                     stackIn_340_1 = -8;
                     if (var17 != 0) {
@@ -4141,7 +4141,7 @@ final class GameWorld {
                       this.field_D[this.field_k] = 24 * var6Lifetime2 - 12;
                       this.field_s[this.field_k] = 24 * var7Lifetime2 - 48;
                       this.field_k = this.field_k + 1;
-                      this.field_H.field_A.field_f[var7Lifetime2][var6Lifetime2] = eg.a(-128, this.field_H.field_A.field_f[var7Lifetime2][var6Lifetime2]);
+                      this.navigation.field_A.tiles[var7Lifetime2][var6Lifetime2] = eg.a(-128, this.navigation.field_A.tiles[var7Lifetime2][var6Lifetime2]);
                     }
                     var6Lifetime2++;
                   }
@@ -4153,7 +4153,7 @@ final class GameWorld {
               var7Lifetime3 = stackIn_340_0 - stackIn_340_1;
               var6Lifetime3 = 0;
               while (var6Lifetime3 < this.tileMap.field_k) {
-                var8Lifetime4 = 127 & this.field_H.c(var7Lifetime3, -63, var6Lifetime3);
+                var8Lifetime4 = 127 & this.navigation.c(var7Lifetime3, -63, var6Lifetime3);
                 stackIn_351_0 = var8Lifetime4;
                 stackIn_351_1 = 7;
                 if (var17 != 0) {
@@ -4169,13 +4169,13 @@ final class GameWorld {
                   this.field_D[this.field_k] = (var6Lifetime3 - 1) * 24;
                   this.field_s[this.field_k] = 24 + var7Lifetime3 * 24;
                   this.field_k = this.field_k + 1;
-                  this.field_H.field_A.field_f[var7Lifetime3][var6Lifetime3] = eg.a(this.field_H.field_A.field_f[var7Lifetime3][var6Lifetime3], -128);
+                  this.navigation.field_A.tiles[var7Lifetime3][var6Lifetime3] = eg.a(this.navigation.field_A.tiles[var7Lifetime3][var6Lifetime3], -128);
                 }
                 var6Lifetime3++;
               }
               if ((decompiledFrameCompleted3) &&
                 (decompiledFrameCompleted2)) {
-                this.field_H.field_A.a(0);
+                this.navigation.field_A.a(0);
                 var7Lifetime4 = 0;
                 while (true) {
                   stackIn_351_0Lifetime1 = var7Lifetime4;
@@ -4190,13 +4190,13 @@ final class GameWorld {
                   }
                   var6Lifetime4 = stackIn_371_0;
                   while (var6Lifetime4 < this.tileMap.field_k) {
-                    var8Lifetime5 = 127 & this.field_H.field_A.field_h[var7Lifetime4][var6Lifetime4];
+                    var8Lifetime5 = 127 & this.navigation.field_A.field_h[var7Lifetime4][var6Lifetime4];
                     stackIn_351_0Lifetime1Lifetime1 = var8Lifetime5;
                     stackIn_351_1Lifetime1Lifetime1 = 14;
                     if (stackIn_351_0Lifetime1Lifetime1 == stackIn_351_1Lifetime1Lifetime1 ||
                       var8Lifetime5 == 10 ||
                       2 == var8Lifetime5) {
-                      this.field_H.field_A.field_h[var7Lifetime4][var6Lifetime4] = eg.a(this.field_H.field_A.field_h[var7Lifetime4][var6Lifetime4], -128);
+                      this.navigation.field_A.field_h[var7Lifetime4][var6Lifetime4] = eg.a(this.navigation.field_A.field_h[var7Lifetime4][var6Lifetime4], -128);
                     }
                     var6Lifetime4++;
                   }
@@ -4228,20 +4228,20 @@ final class GameWorld {
                 stackIn_378_0 = this.tileMap.field_k;
                 stackIn_378_1 = var7Lifetime1;
                 if (stackIn_378_0 > stackIn_378_1) {
-                  var8Lifetime1 = this.field_H.field_A.field_h[var6Lifetime1][var7Lifetime1];
+                  var8Lifetime1 = this.navigation.field_A.field_h[var6Lifetime1][var7Lifetime1];
                   var9Lifetime1 = 127 & var8Lifetime1;
                   stackIn_374_0Lifetime1 = ~var9Lifetime1;
                   stackIn_374_1Lifetime1 = -61;
                   if (stackIn_374_0Lifetime1 <= stackIn_374_1Lifetime1) {
                     var10_array = new int[8];
-                    var10_array[0] = eg.a(this.field_H.field_A.field_h[-1 + var6Lifetime1][var7Lifetime1 - 1], 127);
-                    var10_array[1] = eg.a(this.field_H.field_A.field_h[0 + var6Lifetime1][var7Lifetime1 - 1], 127);
-                    var10_array[2] = eg.a(127, this.field_H.field_A.field_h[var6Lifetime1 + 1][-1 + var7Lifetime1]);
-                    var10_array[3] = eg.a(127, this.field_H.field_A.field_h[-1 + var6Lifetime1][0 + var7Lifetime1]);
-                    var10_array[4] = eg.a(127, this.field_H.field_A.field_h[var6Lifetime1 + 1][0 + var7Lifetime1]);
-                    var10_array[5] = eg.a(127, this.field_H.field_A.field_h[var6Lifetime1 - 1][1 + var7Lifetime1]);
-                    var10_array[6] = eg.a(this.field_H.field_A.field_h[0 + var6Lifetime1][1 + var7Lifetime1], 127);
-                    var10_array[7] = eg.a(this.field_H.field_A.field_h[1 + var6Lifetime1][var7Lifetime1 + 1], 127);
+                    var10_array[0] = eg.a(this.navigation.field_A.field_h[-1 + var6Lifetime1][var7Lifetime1 - 1], 127);
+                    var10_array[1] = eg.a(this.navigation.field_A.field_h[0 + var6Lifetime1][var7Lifetime1 - 1], 127);
+                    var10_array[2] = eg.a(127, this.navigation.field_A.field_h[var6Lifetime1 + 1][-1 + var7Lifetime1]);
+                    var10_array[3] = eg.a(127, this.navigation.field_A.field_h[-1 + var6Lifetime1][0 + var7Lifetime1]);
+                    var10_array[4] = eg.a(127, this.navigation.field_A.field_h[var6Lifetime1 + 1][0 + var7Lifetime1]);
+                    var10_array[5] = eg.a(127, this.navigation.field_A.field_h[var6Lifetime1 - 1][1 + var7Lifetime1]);
+                    var10_array[6] = eg.a(this.navigation.field_A.field_h[0 + var6Lifetime1][1 + var7Lifetime1], 127);
+                    var10_array[7] = eg.a(this.navigation.field_A.field_h[1 + var6Lifetime1][var7Lifetime1 + 1], 127);
                     var11Lifetime1 = 1;
                     while (true) {
                       if (var11Lifetime1 != 0) {
@@ -4288,7 +4288,7 @@ final class GameWorld {
                       var16++;
                     }
                     var16Lifetime1 = var12Lifetime1Lifetime1;
-                    this.field_H.field_A.field_h[var6Lifetime1][var7Lifetime1] = GameWorld.a(eg.a(-128, var8Lifetime1), var16Lifetime1);
+                    this.navigation.field_A.field_h[var6Lifetime1][var7Lifetime1] = GameWorld.a(eg.a(-128, var8Lifetime1), var16Lifetime1);
                   }
                   var7Lifetime1++;
                   continue;
@@ -4299,10 +4299,10 @@ final class GameWorld {
             }
           }
           if (decompiledFrameCompleted0) {
-            el.field_g = this.field_H.field_A.field_o;
+            el.field_g = this.navigation.field_A.field_o;
             this.field_ib = -1;
             ql.field_j = -1.0f;
-            ek.field_I = this.field_H.field_A.field_c;
+            ek.field_I = this.navigation.field_A.field_c;
             this.field_gb.c(this.field_G, 0);
             stackIn_415_0 = 120;
           }
@@ -4340,8 +4340,8 @@ final class GameWorld {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != this.field_H &&
-            null != this.field_H.field_A) {
+          if (null != this.navigation &&
+            null != this.navigation.field_A) {
             if (this.field_q == 3 &&
               this.field_h == -1) {
               return false;
@@ -4589,7 +4589,7 @@ final class GameWorld {
         int var4 = 0;
         var4 = ZombieDawn.field_J;
         try {
-          Js5Archive.field_e.field_H.a(param0, -106);
+          Js5Archive.field_e.navigation.a(param0, -106);
           var2 = (WorldObject) (this.zombies.b((byte) 26));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var2))) {
@@ -4599,9 +4599,9 @@ final class GameWorld {
             if (var4 == 0) {
               if (stackIn_4_0) {
                 var3 = (Mover) (var2);
-                stackIn_10_0 = this.field_H;
+                stackIn_10_0 = this.navigation;
                 stackIn_11_1 = !(param0);
-                if (!((LevelNavigation) (Object) stackIn_10_0).a(stackIn_11_1, var3.getY(237239984), var3.getX(true), false)) {
+                if (!((LevelNavigation) (Object) stackIn_10_0).isWalkable(stackIn_11_1, var3.getY(237239984), var3.getX(true), false)) {
                   stackIn_17_0 = var3;
                   if (var3 instanceof Human) {
                     stackIn_18_1 = 0;
@@ -4629,7 +4629,7 @@ final class GameWorld {
             if (this.field_h != 0) {
               return;
             }
-            if (!this.field_H.a(false, 1056, 972, false)) {
+            if (!this.navigation.isWalkable(false, 1056, 972, false)) {
               return;
             }
             this.a(232, 23, (byte) -23);
@@ -4659,7 +4659,7 @@ final class GameWorld {
           if (param0) {
             return;
           }
-          this.field_n.a(param1.field_u, -1, param1, param1.field_B);
+          this.spatialGrid.a(param1.field_u, -1, param1, param1.field_B);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4748,7 +4748,7 @@ final class GameWorld {
           }
           qm.field_b = this.field_bb;
           if (param0) {
-            this.field_n = (SpatialGrid) null;
+            this.spatialGrid = (SpatialGrid) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

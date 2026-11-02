@@ -16,10 +16,10 @@ final class nm {
           return;
         }
         am var2 = fj.field_g;
-        var2.c(param0 ^ 14826);
-        var2.c(param0 ^ 14820);
-        var2.c(-37);
-        var2.c(95);
+        var2.readInt(param0 ^ 14826);
+        var2.readInt(param0 ^ 14820);
+        var2.readInt(-37);
+        var2.readInt(95);
         var1.unlink(-27598);
         if (param0 == 14740) {
           return;

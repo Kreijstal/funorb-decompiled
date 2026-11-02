@@ -15,9 +15,9 @@ final class ko {
     int field_e;
 
     final void b(PacketBuffer param0) {
-        this.field_e = param0.d((byte) -120);
-        this.field_d = param0.c(-105);
-        this.field_g = param0.c(-58);
+        this.field_e = param0.readUnsignedByte((byte) -120);
+        this.field_d = param0.readInt(-105);
+        this.field_g = param0.readInt(-58);
         this.a(param0);
     }
 
@@ -50,7 +50,7 @@ final class ko {
 
     final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_k = param0.d((byte) -120);
+        this.field_k = param0.readUnsignedByte((byte) -120);
         this.field_h = new int[this.field_k];
         this.field_c = new int[this.field_k];
         for (var2 = 0; var2 < this.field_k; var2++) {

@@ -160,7 +160,7 @@ final class wf extends hm {
                 ki.a((byte) -118, this.field_O);
               } else {
                 ki.a((byte) -103, this.field_O);
-                Rasterizer.d();
+                Rasterizer.clear();
               }
             }
           }
@@ -207,7 +207,7 @@ final class wf extends hm {
             } else {
               if (var12Lifetime1 <= this.field_O.field_t) {
                 ki.a((byte) -103, this.field_O);
-                Rasterizer.d();
+                Rasterizer.clear();
               } else {
                 this.field_O = new Sprite(var11Lifetime1, var12Lifetime1);
                 ki.a((byte) -118, this.field_O);
@@ -251,7 +251,7 @@ final class wf extends hm {
             var11Lifetime2 <= this.field_O.field_w) {
             if (var12Lifetime2 <= this.field_O.field_t) {
               ki.a((byte) -103, this.field_O);
-              Rasterizer.d();
+              Rasterizer.clear();
             } else {
               this.field_O = new Sprite(var11Lifetime2, var12Lifetime2);
               ki.a((byte) -118, this.field_O);
@@ -291,7 +291,7 @@ final class wf extends hm {
             } else {
               if (var12Lifetime3 <= this.field_O.field_t) {
                 ki.a((byte) -103, this.field_O);
-                Rasterizer.d();
+                Rasterizer.clear();
               } else {
                 this.field_O = new Sprite(var11Lifetime3, var12Lifetime3);
                 ki.a((byte) -118, this.field_O);
@@ -333,7 +333,7 @@ final class wf extends hm {
               ki.a((byte) -118, this.field_O);
             } else {
               ki.a((byte) -103, this.field_O);
-              Rasterizer.d();
+              Rasterizer.clear();
             }
           }
         }

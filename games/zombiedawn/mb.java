@@ -141,15 +141,15 @@ final class mb extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_x = var2.c(125);
-        this.field_y = var2.c(101);
-        this.field_w = var2.c(109);
-        this.field_J = var2.c(121);
+        this.field_x = var2.readInt(125);
+        this.field_y = var2.readInt(101);
+        this.field_w = var2.readInt(109);
+        this.field_J = var2.readInt(121);
         if (this.field_J < 0) {
           this.field_J = ~this.field_J;
           this.field_F = true;
         }
-        int var3 = var2.c(103);
+        int var3 = var2.readInt(103);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -157,7 +157,7 @@ final class mb extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.d((byte) -123);
+            var6_int = var2.readUnsignedByte((byte) -123);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];

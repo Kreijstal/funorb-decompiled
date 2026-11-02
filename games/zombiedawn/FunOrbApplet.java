@@ -160,7 +160,7 @@ abstract class FunOrbApplet extends GameApplet {
     }
 
     private final void j(int param0) {
-        int var2 = fj.field_g.d((byte) -121);
+        int var2 = fj.field_g.readUnsignedByte((byte) -121);
         int var3 = 0 != (var2 & 1) ? 1 : 0;
         if (param0 != -1) {
           this.gameCrc = -26;
@@ -467,7 +467,7 @@ abstract class FunOrbApplet extends GameApplet {
         }
         if (ld.field_j == 2) {
           if (f.field_i != null &&
-            f.field_i.a((byte) 73)) {
+            f.field_i.isIndexLoaded((byte) 73)) {
             if (!f.field_i.a("", 0)) {
               f.field_i = null;
             } else {
@@ -521,7 +521,7 @@ abstract class FunOrbApplet extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (ld.field_j == 11) {
-          if (null != aa.field_f && (!aa.field_f.a((byte) 73) ||
+          if (null != aa.field_f && (!aa.field_f.isIndexLoaded((byte) 73) ||
             !aa.field_f.c(9001))) {
             eh.a(ic.a(l.field_g, (byte) 114, cj.field_e, aa.field_f), 0.0f, -1);
             decompiledFrameRemainder0 = false;

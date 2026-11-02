@@ -186,7 +186,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static void a(int param0) {
         jh.field_i = false;
-        fj.field_g.d((byte) -122);
+        fj.field_g.readUnsignedByte((byte) -122);
         if (param0 < 110) {
           String var2 = (String) null;
           GameKeyHandler.a(-42, (String) null);

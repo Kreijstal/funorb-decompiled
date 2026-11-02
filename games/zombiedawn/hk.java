@@ -79,14 +79,14 @@ final class hk extends WorldObject {
         boolean stackIn_31_1 = false;
         int var1;
         Object stackIn_29_0Lifetime1;
-        stackIn_3_0 = (pb.a(so.field_a, 2, 1) != 1) ? 0 : 1;
+        stackIn_3_0 = (pb.a(so.random, 2, 1) != 1) ? 0 : 1;
         var1 = stackIn_3_0;
-        stackIn_6_1 = (pb.a(so.field_a, 2, 1) == 1);
+        stackIn_6_1 = (pb.a(so.random, 2, 1) == 1);
         this.field_M = stackIn_6_1;
-        if (pb.a(so.field_a, 15, 1) == 1) {
-          this.field_G = 7 + pb.a(so.field_a, 2, 1);
+        if (pb.a(so.random, 15, 1) == 1) {
+          this.field_G = 7 + pb.a(so.random, 2, 1);
         } else {
-          this.field_G = pb.a(so.field_a, 7, 1);
+          this.field_G = pb.a(so.random, 7, 1);
         }
         if (var1 == 0) {
           stackIn_12_1 = 6;
@@ -150,10 +150,10 @@ final class hk extends WorldObject {
           }
         }
         this.field_D = false;
-        if (pb.a(so.field_a, 5, 1) != 0) {
+        if (pb.a(so.random, 5, 1) != 0) {
           this.field_N = 2147483647;
         } else {
-          this.field_N = pb.a(so.field_a, 100, 1);
+          this.field_N = pb.a(so.random, 100, 1);
         }
     }
 
@@ -259,7 +259,7 @@ final class hk extends WorldObject {
         if (var1 == null) {
           var1 = new uf();
         }
-        var1.a(Rasterizer.field_l, (byte) -29, Rasterizer.field_f, Rasterizer.field_b, Rasterizer.field_d, Rasterizer.field_c, Rasterizer.field_g, Rasterizer.field_a);
+        var1.a(Rasterizer.clipTop, (byte) -29, Rasterizer.width, Rasterizer.clipRight, Rasterizer.clipBottom, Rasterizer.pixels, Rasterizer.clipLeft, Rasterizer.height);
         DelegatingCanvas.field_d.addFirst(param0 ^ param0, var1);
     }
 

@@ -78,9 +78,9 @@ final class lm extends WorldObject {
         super(param0, param1, 0);
         this.field_G = 20;
         this.field_H = param2 + 150;
-        this.field_G = so.c(3) + 3;
-        this.field_F = so.c(this.field_G);
-        this.field_E = so.c(5);
+        this.field_G = so.randomInt(3) + 3;
+        this.field_F = so.randomInt(this.field_G);
+        this.field_E = so.randomInt(5);
         so.a(pi.field_k);
     }
 

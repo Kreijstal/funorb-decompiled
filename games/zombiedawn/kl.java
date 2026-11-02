@@ -23,7 +23,7 @@ final class kl extends al {
           this.a((byte) -96);
         }
         var3 = id.field_M;
-        Rasterizer.d();
+        Rasterizer.clear();
         if (this.field_n) {
           this.d(-105);
           return;
@@ -325,7 +325,7 @@ final class kl extends al {
     private final void a(int param0, int param1, int param2, String param3) {
         try {
           lf.field_h.a();
-          Rasterizer.d();
+          Rasterizer.clear();
           sg.field_jb.a(param3, 60, param1, 520, 200, 4, 0, 1, 0, param0);
           so.a(16777215);
           so.a(16777215);
@@ -348,7 +348,7 @@ final class kl extends al {
         }
         bn.field_i = param0;
         ki.a((byte) -119, cc.field_b);
-        Rasterizer.d();
+        Rasterizer.clear();
         Sprite var2 = f.field_d;
         int var3 = 0;
         int var4 = 0;

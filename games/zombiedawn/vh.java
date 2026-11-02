@@ -40,34 +40,34 @@ final class vh {
           param3 = param3 + param0.field_g;
           param4 = param4 + param0.field_h;
           var7 = (param2 << 8) + var6_int * param0.field_g;
-          var8 = Rasterizer.field_f * param4 + param3;
+          var8 = Rasterizer.width * param4 + param3;
           var9 = 0;
           var10 = param0.field_d;
           var11 = param0.field_j;
-          var12 = -var11 + Rasterizer.field_f;
+          var12 = -var11 + Rasterizer.width;
           var13 = 0;
-          if (param4 < Rasterizer.field_l) {
-            var14 = Rasterizer.field_l - param4;
-            param4 = Rasterizer.field_l;
+          if (param4 < Rasterizer.clipTop) {
+            var14 = Rasterizer.clipTop - param4;
+            param4 = Rasterizer.clipTop;
             var10 = var10 - var14;
             var9 = var9 + var11 * var14;
-            var8 = var8 + Rasterizer.field_f * var14;
+            var8 = var8 + Rasterizer.width * var14;
           }
-          if (Rasterizer.field_d < var10 + param4) {
-            var10 = var10 - (param4 + (var10 - Rasterizer.field_d));
+          if (Rasterizer.clipBottom < var10 + param4) {
+            var10 = var10 - (param4 + (var10 - Rasterizer.clipBottom));
           }
-          if (Rasterizer.field_g > param3) {
-            var14Lifetime1 = Rasterizer.field_g - param3;
+          if (Rasterizer.clipLeft > param3) {
+            var14Lifetime1 = Rasterizer.clipLeft - param3;
             var7 = var7 + var14Lifetime1 * var6_int;
-            param3 = Rasterizer.field_g;
+            param3 = Rasterizer.clipLeft;
             var8 = var8 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
             var12 = var12 + var14Lifetime1;
             var13 = var13 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
           }
-          if (param3 + var11 > Rasterizer.field_b) {
-            var14Lifetime2 = var11 + param3 - Rasterizer.field_b;
+          if (param3 + var11 > Rasterizer.clipRight) {
+            var14Lifetime2 = var11 + param3 - Rasterizer.clipRight;
             var12 = var12 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
@@ -93,11 +93,11 @@ final class vh {
                   var17 = param0.field_l[param0.field_k[incrementValue$0] & 255];
                   if (0 != var17) {
                     if (var15 <= 255) {
-                      var18 = Rasterizer.field_c[var8];
+                      var18 = Rasterizer.pixels[var8];
                       var19 = 16711935 & (16711935 & var17) * var15 + var16 * (var18 & 16711935) >> 8;
-                      Rasterizer.field_c[var8] = (eg.a(eg.a(var17, 65280) * var15 + var16 * eg.a(65280, var18), 16711732) >> 8) + var19;
+                      Rasterizer.pixels[var8] = (eg.a(eg.a(var17, 65280) * var15 + var16 * eg.a(65280, var18), 16711732) >> 8) + var19;
                     } else {
-                      Rasterizer.field_c[var8] = var17;
+                      Rasterizer.pixels[var8] = var17;
                     }
                   }
                   var8++;

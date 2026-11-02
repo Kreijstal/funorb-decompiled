@@ -4,14 +4,14 @@
 abstract class PcmStream extends IntrusiveNode {
     int field_j;
     AbstractAudioSample field_h;
-    volatile boolean field_k;
+    volatile boolean active;
     PcmStream field_i;
 
-    final void b(int[] param0, int param1, int param2) {
-        if (this.field_k) {
-          this.a(param0, param1, param2);
+    final void fillOrSkip(int[] param0, int param1, int param2) {
+        if (this.active) {
+          this.fill(param0, param1, param2);
         } else {
-          this.a(param2);
+          this.skip(param2);
         }
     }
 
@@ -19,9 +19,9 @@ abstract class PcmStream extends IntrusiveNode {
         return 255;
     }
 
-    abstract void a(int param0);
+    abstract void skip(int param0);
 
-    abstract void a(int[] param0, int param1, int param2);
+    abstract void fill(int[] param0, int param1, int param2);
 
     abstract int a();
 
@@ -30,6 +30,6 @@ abstract class PcmStream extends IntrusiveNode {
     abstract PcmStream d();
 
     protected PcmStream() {
-        this.field_k = true;
+        this.active = true;
     }
 }

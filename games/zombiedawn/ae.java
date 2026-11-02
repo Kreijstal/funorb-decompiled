@@ -27,7 +27,7 @@ final class ae {
         try {
           var8 = new am(param0.a("", -119, "logo.fo3d"));
           var10 = var8;
-          var3 = var10.d((byte) -119);
+          var3 = var10.readUnsignedByte((byte) -119);
           var10.h((byte) 75);
           if (param1 >= -109) {
             return;

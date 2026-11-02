@@ -68,7 +68,7 @@ public final class ZombieDawn extends GameLoopApplet {
         int var14Lifetime1;
         int var5Lifetime1Lifetime1;
         var16 = field_J;
-        Rasterizer.d();
+        Rasterizer.clear();
         if (sg.field_eb != GameApplet.field_c) {
           if (GameApplet.field_c.field_d == 0) {
             stackIn_5_0 = sg.field_eb;

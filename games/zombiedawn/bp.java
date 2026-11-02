@@ -50,8 +50,8 @@ final class bp {
             if (param1 >= -99) {
               this.field_b = (java.math.BigInteger) null;
             }
-            var6_int = this.field_d.c(89);
-            var7 = this.field_d.c(-95);
+            var6_int = this.field_d.readInt(89);
+            var7 = this.field_d.readInt(-95);
             var13 = new byte[64];
             this.field_d.readBytes(64, 0, var13, 11240);
             var9 = new om(param3, param0, param4, this.field_f, this.field_i, var6_int, var13, var7, param2);
@@ -111,7 +111,7 @@ final class bp {
         }
         var10 = new PacketBuffer(this.field_e.d(0));
         var10.position = 5;
-        var3 = var10.d((byte) -118);
+        var3 = var10.readUnsignedByte((byte) -118);
         var10.position = var10.position + 72 * var3;
         var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;

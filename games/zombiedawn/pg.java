@@ -46,7 +46,7 @@ final class pg extends al {
           mo.field_a.b(640 + (vh.field_b - this.field_q), 6);
           mo.field_a.b(-this.field_q + vh.field_b + 640, 134);
         }
-        Rasterizer.c();
+        Rasterizer.resetClip();
         ql.field_g.b(vh.field_b, id.field_M / 2);
         super.a((byte) -112);
     }

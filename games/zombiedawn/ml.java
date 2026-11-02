@@ -64,7 +64,7 @@ final class ml {
         int var3;
         this.field_c = new ve[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.d((byte) -119);
+          var3 = param0.readUnsignedByte((byte) -119);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_c[var2] = new ve();

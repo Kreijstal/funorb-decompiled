@@ -26,18 +26,18 @@ final class ek extends WorldObject {
     }
 
     private final void f(byte param0) {
-        this.field_H = pb.a(so.field_a, 127, 1) + 128;
+        this.field_H = pb.a(so.random, 127, 1) + 128;
         if (param0 == -8) {
           this.field_F = 0;
-          this.field_y = this.field_N - (-pb.a(so.field_a, 24, param0 ^ -7) + 12) << 16;
-          this.field_x = this.field_L - 12 + pb.a(so.field_a, 24, 1) << 16;
+          this.field_y = this.field_N - (-pb.a(so.random, 24, param0 ^ -7) + 12) << 16;
+          this.field_x = this.field_L - 12 + pb.a(so.random, 24, 1) << 16;
           return;
         }
         Camera var3 = (Camera) null;
         this.a((byte) 119, (Camera) null);
         this.field_F = 0;
-        this.field_y = this.field_N - (-pb.a(so.field_a, 24, param0 ^ -7) + 12) << 16;
-        this.field_x = this.field_L - 12 + pb.a(so.field_a, 24, 1) << 16;
+        this.field_y = this.field_N - (-pb.a(so.random, 24, param0 ^ -7) + 12) << 16;
+        this.field_x = this.field_L - 12 + pb.a(so.random, 24, 1) << 16;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -51,9 +51,9 @@ final class ek extends WorldObject {
           this.field_M = 0;
           this.f((byte) -8);
           var5 = bg.field_o.length;
-          this.field_D = pb.a(so.field_a, 10, 1);
-          this.field_K = pb.a(so.field_a, param2, 1);
-          this.field_F = pb.a(so.field_a, var5, 1);
+          this.field_D = pb.a(so.random, 10, 1);
+          this.field_K = pb.a(so.random, param2, 1);
+          this.field_F = pb.a(so.random, var5, 1);
           return;
         }
     }
@@ -81,7 +81,7 @@ final class ek extends WorldObject {
                 return;
               }
               if (!ng.field_e &&
-                Js5Archive.field_e.field_H.field_b[this.getY(237239984) / 24][this.getX(true) / 24]) {
+                Js5Archive.field_e.navigation.field_b[this.getY(237239984) / 24][this.getX(true) / 24]) {
                 return;
               }
               bg.field_o[this.field_F].e(var3_int, var4, this.field_H);

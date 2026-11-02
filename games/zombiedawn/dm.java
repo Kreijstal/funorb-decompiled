@@ -25,7 +25,7 @@ final class dm extends DualLinkNode {
             this.field_t = (String[]) null;
           }
           while (true) {
-            var3_int = param0.d((byte) -120);
+            var3_int = param0.readUnsignedByte((byte) -120);
             if (0 == var3_int) {
               return;
             }
@@ -118,14 +118,14 @@ final class dm extends DualLinkNode {
             this.field_t = PacketBuffer.split('<', param0.a(true), -123);
           } else {
             if (param1 == 2) {
-              var4_int = param0.d((byte) -122);
+              var4_int = param0.readUnsignedByte((byte) -122);
               this.field_u = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
                 this.field_u[var5] = param0.f(2);
               }
             } else {
               if (param1 == 3) {
-                var4_int = param0.d((byte) -127);
+                var4_int = param0.readUnsignedByte((byte) -127);
                 this.field_v = new int[var4_int];
                 this.field_w = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {

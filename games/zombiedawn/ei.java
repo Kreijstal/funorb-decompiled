@@ -72,7 +72,7 @@ abstract class ei extends hp {
         if (null == f.field_e) {
           f.field_e = new Sprite(this.field_i, this.field_n);
           ki.a((byte) -86, f.field_e);
-          Rasterizer.d();
+          Rasterizer.clear();
           this.a(param3, 0, (byte) -121);
           super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
           pa.a(param3 ^ -21189);
@@ -82,7 +82,7 @@ abstract class ei extends hp {
         if (f.field_e.field_w < this.field_i) {
           f.field_e = new Sprite(this.field_i, this.field_n);
           ki.a((byte) -86, f.field_e);
-          Rasterizer.d();
+          Rasterizer.clear();
           this.a(param3, 0, (byte) -121);
           super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
           pa.a(param3 ^ -21189);
@@ -91,7 +91,7 @@ abstract class ei extends hp {
         }
         if (f.field_e.field_t >= this.field_n) {
           ki.a((byte) -86, f.field_e);
-          Rasterizer.d();
+          Rasterizer.clear();
           this.a(param3, 0, (byte) -121);
           super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
           pa.a(param3 ^ -21189);
@@ -100,7 +100,7 @@ abstract class ei extends hp {
         }
         f.field_e = new Sprite(this.field_i, this.field_n);
         ki.a((byte) -86, f.field_e);
-        Rasterizer.d();
+        Rasterizer.clear();
         this.a(param3, 0, (byte) -121);
         super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
         pa.a(param3 ^ -21189);

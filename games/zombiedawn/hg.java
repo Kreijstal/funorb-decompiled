@@ -29,7 +29,7 @@ final class hg {
           var1 = new Sprite(540, 140);
           ki.a((byte) -122, var1);
           en.c();
-          Rasterizer.d();
+          Rasterizer.clear();
           LevelNavigation.field_x = 0;
           gk.j(30549);
           var2 = var1.e();

@@ -11,7 +11,7 @@ final class gb extends WorldObject {
     gb(int param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_E = 0;
-        this.field_D = pb.a(so.field_a, 5, 1);
+        this.field_D = pb.a(so.random, 5, 1);
         this.field_F = true;
         this.d((byte) 121);
     }
@@ -170,14 +170,14 @@ final class gb extends WorldObject {
         int var5Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var6 = ZombieDawn.field_J;
-        if (5 == Js5Archive.field_e.field_H.field_A.field_a) {
+        if (5 == Js5Archive.field_e.navigation.field_A.field_a) {
           var2 = (this.getX(true) + 12) / 24;
           var3 = (-1 + this.getY(237239984)) / 24;
           if (var2 >= 0 &&
             var3 >= 0 &&
-            Js5Archive.field_e.field_H.field_A.field_f[0].length > var2 &&
-            Js5Archive.field_e.field_H.field_A.field_f.length > var3) {
-            var4 = ub.a(127, Js5Archive.field_e.field_H.field_A.field_f[var3][var2]);
+            Js5Archive.field_e.navigation.field_A.tiles[0].length > var2 &&
+            Js5Archive.field_e.navigation.field_A.tiles.length > var3) {
+            var4 = ub.a(127, Js5Archive.field_e.navigation.field_A.tiles[var3][var2]);
             if ((var4 != null)) {
               if (0 <= var4.field_h) {
                 if (var4.field_h <= 0) {

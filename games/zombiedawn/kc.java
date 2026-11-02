@@ -64,7 +64,7 @@ final class kc extends id {
             } else {
               var4 = var4 + var3_int;
             }
-            if (param0.a(param1, var5, var4, false)) {
+            if (param0.isWalkable(param1, var5, var4, false)) {
               this.field_T = this.field_T + var3_int;
               continue;
             }
@@ -226,7 +226,7 @@ final class kc extends id {
             if (this.field_H) {
               this.field_W = jp.$cfr$intArgs$a$c44adeabe1a9(127, 96);
               var2 = 30;
-              this.field_W.f(-(var2 / 2) + so.c(var2) + 256);
+              this.field_W.f(-(var2 / 2) + so.randomInt(var2) + 256);
               this.field_W.h(ge.field_c / 2);
             } else {
               if (this.field_W != null) {
@@ -259,7 +259,7 @@ final class kc extends id {
           if (this.field_H) {
             this.field_W = jp.$cfr$intArgs$a$c44adeabe1a9(127, 96);
             var2Lifetime1 = 30;
-            this.field_W.f(-(var2Lifetime1 / 2) + so.c(var2Lifetime1) + 256);
+            this.field_W.f(-(var2Lifetime1 / 2) + so.randomInt(var2Lifetime1) + 256);
             this.field_W.h(ge.field_c / 2);
           } else {
             if (this.field_W != null) {

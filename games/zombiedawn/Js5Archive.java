@@ -147,7 +147,7 @@ final class Js5Archive {
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var30.c(100);
+                  var17 = var17 + var30.readInt(100);
                   if (var6 != null) {
                     var19 = var35[var18];
                   } else {
@@ -169,7 +169,7 @@ final class Js5Archive {
               for (var18 = 0; var12 > var18; var18++) {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var30.c(-44);
+                  var19 = var19 + var30.readInt(-44);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -196,7 +196,7 @@ final class Js5Archive {
               for (var15_int = 0; var15_int < var12; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var17 < var5_int; var17++) {
-                  var16 = var16 + var32.c(124);
+                  var16 = var16 + var32.readInt(124);
                   var14[var17] = var14[var17] + var16;
                 }
               }
@@ -213,7 +213,7 @@ final class Js5Archive {
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var32.c(-48);
+                  var18 = var18 + var32.readInt(-48);
                   gp.a(var44, var16, var41[var19], var40[var19], var18);
                   var14[var19] = var14[var19] + var18;
                   var16 = var16 + var18;
@@ -273,7 +273,7 @@ final class Js5Archive {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a((byte) 73)) {
+          if (!this.isIndexLoaded((byte) 73)) {
             return false;
           }
           param0 = param0.toLowerCase();
@@ -310,8 +310,8 @@ final class Js5Archive {
         }
     }
 
-    final int d(int param0) {
-        if (!this.a((byte) 73)) {
+    final int groupCount(int param0) {
+        if (!this.isIndexLoaded((byte) 73)) {
           return -1;
         }
         if (param0 != -1) {
@@ -385,7 +385,7 @@ final class Js5Archive {
         }
     }
 
-    final synchronized boolean a(byte param0) {
+    final synchronized boolean isIndexLoaded(byte param0) {
         if (param0 != 73) {
           this.field_b = (jh) (this.field_j[19]);
         }
@@ -407,14 +407,14 @@ final class Js5Archive {
         int var1 = -106 % ((67 - param0) / 40);
     }
 
-    final synchronized int e(int param0) {
+    final synchronized int percentLoaded(int param0) {
         int var2;
         int var3;
         int var4;
         int var5;
         int var4Lifetime1;
         var5 = ZombieDawn.field_J;
-        if (!this.a((byte) 73)) {
+        if (!this.isIndexLoaded((byte) 73)) {
           return 0;
         }
         var2 = 0;
@@ -488,7 +488,7 @@ final class Js5Archive {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a((byte) 73)) {
+          if (!this.isIndexLoaded((byte) 73)) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
@@ -549,7 +549,7 @@ final class Js5Archive {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a((byte) 73)) {
+          if (!this.isIndexLoaded((byte) 73)) {
             stackIn_2_0 = null;
             return (byte[]) (stackIn_2_0);
           }
@@ -598,7 +598,7 @@ final class Js5Archive {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a((byte) 73)) {
+          if (!this.isIndexLoaded((byte) 73)) {
             return false;
           }
           param1 = param1.toLowerCase();
@@ -638,7 +638,7 @@ final class Js5Archive {
         if (param1 != -82) {
           this.c(((int[]) (this.field_j[4]))[0], 99);
         }
-        if (!this.a((byte) 73)) {
+        if (!this.isIndexLoaded((byte) 73)) {
           return false;
         }
         if (param0 < 0 ||
@@ -704,7 +704,7 @@ final class Js5Archive {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a((byte) 73)) {
+          if (!this.isIndexLoaded((byte) 73)) {
             return false;
           }
           param0 = param0.toLowerCase();
@@ -730,7 +730,7 @@ final class Js5Archive {
 
     private final synchronized boolean a(int param0, int param1, int param2) {
         int var4;
-        if (!this.a((byte) 73)) {
+        if (!this.isIndexLoaded((byte) 73)) {
           return false;
         }
         if (0 <= param1 &&
@@ -747,7 +747,7 @@ final class Js5Archive {
     }
 
     final synchronized byte[] a(int param0, byte param1) {
-        if (!this.a((byte) 73)) {
+        if (!this.isIndexLoaded((byte) 73)) {
           return null;
         }
         if (1 == this.field_b.field_d.length) {
@@ -775,7 +775,7 @@ final class Js5Archive {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a((byte) 73)) {
+          if (!this.isIndexLoaded((byte) 73)) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -828,7 +828,7 @@ final class Js5Archive {
         int var4;
         int var5;
         var5 = ZombieDawn.field_J;
-        if (!this.a((byte) 73)) {
+        if (!this.isIndexLoaded((byte) 73)) {
           return false;
         }
         var2 = 1;

@@ -66,7 +66,7 @@ final class jk {
           return;
         }
         if (param0) {
-          Rasterizer.a(0, 0, Rasterizer.field_f, Rasterizer.field_a, 0, 192);
+          Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height, 0, 192);
         }
         if (!param1) {
           wo.field_xb.a(0, 0, 0);
@@ -217,7 +217,7 @@ final class jk {
         var3 = ZombieDawn.field_J;
         while (this.field_c > this.field_f) {
           var4 = this.field_e[this.field_f];
-          if (!var4.field_c.a((byte) 73)) {
+          if (!var4.field_c.isIndexLoaded((byte) 73)) {
             this.a(~param0, 0, var4);
             return false;
           }
@@ -235,7 +235,7 @@ final class jk {
             var4.field_i == null &&
             var4.field_k != null &&
             !var4.field_c.c(9001)) {
-            this.a(~param0, var4.field_c.e(-102), var4);
+            this.a(~param0, var4.field_c.percentLoaded(-102), var4);
             return false;
           }
           this.field_f = this.field_f + 1;

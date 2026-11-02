@@ -12,7 +12,7 @@ final class me extends wo {
 
     me(int param0, int param1, int param2) {
         super(param0, param1, param2);
-        this.field_Eb = -72 + (so.c(144) + param0);
+        this.field_Eb = -72 + (so.randomInt(144) + param0);
     }
 
     public static void x(int param0) {
@@ -52,7 +52,7 @@ final class me extends wo {
 
     final void d(byte param0) {
         if (this.getY(237239984) < 0 ||
-          this.getY(237239984) > Js5Archive.field_e.field_H.field_p) {
+          this.getY(237239984) > Js5Archive.field_e.navigation.height) {
           return;
         }
         int var2 = -66 % ((param0 - 66) / 50);
@@ -61,7 +61,7 @@ final class me extends wo {
 
     final void g(int param0) {
         super.g(99);
-        if (this.getY(237239984) - 48 > Js5Archive.field_e.field_H.field_p) {
+        if (this.getY(237239984) - 48 > Js5Archive.field_e.navigation.height) {
           this.unlink(-27598);
           this.d(0);
           if (param0 > 95) {

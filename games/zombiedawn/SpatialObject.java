@@ -123,7 +123,7 @@ class SpatialObject extends DualLinkNode {
 
     final static int e(int param0) {
         int var1 = -98 / ((-62 - param0) / 56);
-        return 4 + pb.a(so.field_a, 16, 1);
+        return 4 + pb.a(so.random, 16, 1);
     }
 
     static {

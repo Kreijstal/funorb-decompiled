@@ -112,15 +112,15 @@ final class jh {
         var16 = ZombieDawn.field_J;
         try {
           var17 = new PacketBuffer(va.a((byte) -122, param0));
-          var4 = var17.d((byte) -127);
+          var4 = var17.readUnsignedByte((byte) -127);
           if (var4 >= 5 &&
             7 >= var4) {
             if (6 <= var4) {
-              this.field_e = var17.c(-51);
+              this.field_e = var17.readInt(-51);
             } else {
               this.field_e = 0;
             }
-            var5 = var17.d((byte) -125);
+            var5 = var17.readUnsignedByte((byte) -125);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
@@ -170,12 +170,12 @@ final class jh {
                 this.field_o[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_q; var10Lifetime1Lifetime1++) {
-                this.field_o[this.field_n[var10Lifetime1Lifetime1]] = var17.c(rd.b((int) param1, 41));
+                this.field_o[this.field_n[var10Lifetime1Lifetime1]] = var17.readInt(rd.b((int) param1, 41));
               }
               this.field_g = new mo(this.field_o);
             }
             for (var10Lifetime2 = 0; var10Lifetime2 < this.field_q; var10Lifetime2++) {
-              this.field_j[this.field_n[var10Lifetime2]] = var17.c(109);
+              this.field_j[this.field_n[var10Lifetime2]] = var17.readInt(109);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_q; var10Lifetime3++) {
@@ -185,7 +185,7 @@ final class jh {
               }
             }
             for (var10Lifetime4 = 0; var10Lifetime4 < this.field_q; var10Lifetime4++) {
-              this.field_c[this.field_n[var10Lifetime4]] = var17.c(117);
+              this.field_c[this.field_n[var10Lifetime4]] = var17.readInt(117);
             }
             if (var4 < 7) {
               for (var10Lifetime5 = 0; this.field_q > var10Lifetime5; var10Lifetime5++) {
@@ -257,7 +257,7 @@ final class jh {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_b[var11Lifetime1][var14Lifetime1] = var17.c(param1 + 189);
+                  this.field_b[var11Lifetime1][var14Lifetime1] = var17.readInt(param1 + 189);
                 }
                 this.field_a[var11Lifetime1] = new mo(this.field_b[var11Lifetime1]);
               }

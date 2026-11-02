@@ -432,26 +432,26 @@ class vf implements io, ak {
               var19 = param5 * var8 / (var8 + var9) + param0;
               var18 = param5 * var8 / (var8 + var9) + param0;
             }
-            Rasterizer.b(dd.field_c);
+            Rasterizer.saveClip(dd.field_c);
             if (param1[0] != null) {
               Rasterizer.c(param2, param0, var16, var18);
               param1[0].b(param2, param0);
-              Rasterizer.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (null != param1[2]) {
               Rasterizer.c(var17, param0, var10, var18);
               param1[2].b(var13, param0);
-              Rasterizer.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (param1[6] != null) {
               Rasterizer.c(param2, var19, var16, var11);
               param1[6].b(param2, var15);
-              Rasterizer.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (param1[8] != null) {
               Rasterizer.c(var17, var19, var10, var11);
               param1[8].b(var13, var15);
-              Rasterizer.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (null != param1[1] &&
               0 != param1[1].field_r) {
@@ -459,7 +459,7 @@ class vf implements io, ak {
               for (var20 = var12; var20 < var13; var20 = var20 + param1[1].field_r) {
                 param1[1].b(var20, param0);
               }
-              Rasterizer.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (param1[7] != null &&
               param1[7].field_r != 0) {
@@ -467,7 +467,7 @@ class vf implements io, ak {
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].field_r) {
                 param1[7].b(var20Lifetime1, var15);
               }
-              Rasterizer.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (null != param1[param3] &&
               0 != param1[3].field_q) {
@@ -475,7 +475,7 @@ class vf implements io, ak {
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param1[3].field_q) {
                 param1[3].b(param2, var20Lifetime2);
               }
-              Rasterizer.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (param1[5] != null &&
               param1[5].field_q != 0) {
@@ -483,7 +483,7 @@ class vf implements io, ak {
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param1[5].field_q) {
                 param1[5].b(var13, var20Lifetime3);
               }
-              Rasterizer.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (null != param1[4] &&
               param1[4].field_r != 0 &&
@@ -494,7 +494,7 @@ class vf implements io, ak {
                   param1[4].b(var21, var20Lifetime4);
                 }
               }
-              Rasterizer.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
               return;
             }
             return;

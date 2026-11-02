@@ -20,7 +20,7 @@ final class TileMap {
     int field_r;
     static IntrusiveDeque field_g;
     int[][] field_t;
-    int[][] field_f;
+    int[][] tiles;
     static int field_q;
 
     final void a(int param0, boolean param1) {
@@ -46,7 +46,7 @@ final class TileMap {
             }
             var4 = 0;
             while (this.field_h[0].length > var4) {
-              var5 = (127 & this.field_f[var3_int][var4]) >> 0;
+              var5 = (127 & this.tiles[var3_int][var4]) >> 0;
               var6 = ub.a(127, var5);
               if (var6 != null) {
                 this.field_h[var3_int][var4] = GameWorld.a(eg.a(this.field_h[var3_int][var4], -128), var6.field_g);
@@ -66,10 +66,10 @@ final class TileMap {
 
     final void a(int param0) {
         try {
-          this.a(this.field_f, (byte) -39);
-          this.a(108, this.field_f);
-          this.field_k = this.field_f[param0].length;
-          this.field_r = this.field_f.length;
+          this.a(this.tiles, (byte) -39);
+          this.a(108, this.tiles);
+          this.field_k = this.tiles[param0].length;
+          this.field_r = this.tiles.length;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "on.J(" + param0 + ')');
         }
@@ -867,11 +867,11 @@ final class TileMap {
               stackIn_21_0 = -1;
               return stackIn_21_0;
             }
-            if (this.field_f.length <= param1) {
+            if (this.tiles.length <= param1) {
               stackIn_24_0 = -1;
               return stackIn_24_0;
             }
-            if (this.field_f[0].length <= param2) {
+            if (this.tiles[0].length <= param2) {
               stackIn_29_0 = -1;
               return stackIn_29_0;
             }
@@ -1597,59 +1597,59 @@ final class TileMap {
         try {
           var5_int = param0 + param2;
           var6 = param4 + param1;
-          if (Rasterizer.field_g >= param2) {
-            stackIn_5_0 = Rasterizer.field_g;
+          if (Rasterizer.clipLeft >= param2) {
+            stackIn_5_0 = Rasterizer.clipLeft;
           } else {
             stackIn_5_0 = param2;
           }
           var7 = stackIn_5_0;
-          if (Rasterizer.field_l >= param4) {
-            stackIn_9_0 = Rasterizer.field_l;
+          if (Rasterizer.clipTop >= param4) {
+            stackIn_9_0 = Rasterizer.clipTop;
           } else {
             stackIn_9_0 = param4;
           }
           var8 = stackIn_9_0;
-          if (var5_int < Rasterizer.field_b) {
+          if (var5_int < Rasterizer.clipRight) {
             stackIn_13_0 = var5_int;
           } else {
-            stackIn_13_0 = Rasterizer.field_b;
+            stackIn_13_0 = Rasterizer.clipRight;
           }
           var9 = stackIn_13_0;
-          if (var6 < Rasterizer.field_d) {
+          if (var6 < Rasterizer.clipBottom) {
             stackIn_17_0 = var6;
           } else {
-            stackIn_17_0 = Rasterizer.field_d;
+            stackIn_17_0 = Rasterizer.clipBottom;
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameCompleted1 = true;
           var10 = stackIn_17_0;
-          if (param2 >= Rasterizer.field_g &&
-            param2 < Rasterizer.field_b) {
-            var11 = var8 * Rasterizer.field_f + param2;
+          if (param2 >= Rasterizer.clipLeft &&
+            param2 < Rasterizer.clipRight) {
+            var11 = var8 * Rasterizer.width + param2;
             var12 = var10 + 1 - var8 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              Rasterizer.field_c[var11] = 16777215;
-              var11 = var11 + Rasterizer.field_f * 2;
+              Rasterizer.pixels[var11] = 16777215;
+              var11 = var11 + Rasterizer.width * 2;
               if (var13 != 0) {
                 decompiledFrameCompleted1 = false;
                 break;
               }
             }
           }
-          if ((decompiledFrameCompleted1) && (Rasterizer.field_l <= param4 &&
-            Rasterizer.field_d > var6)) {
-            var11Lifetime3 = var7 + param4 * Rasterizer.field_f;
+          if ((decompiledFrameCompleted1) && (Rasterizer.clipTop <= param4 &&
+            Rasterizer.clipBottom > var6)) {
+            var11Lifetime3 = var7 + param4 * Rasterizer.width;
             var12Lifetime3 = -var7 + (1 + var9) >> 1;
             while (true) {
               var12Lifetime3--;
               if (0 > var12Lifetime3) {
                 break;
               }
-              Rasterizer.field_c[var11Lifetime3] = 16777215;
+              Rasterizer.pixels[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
               if (var13 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -1661,32 +1661,32 @@ final class TileMap {
             (param3 <= 21)) {
             TileMap.a((byte) 52, (GameLayer) null);
           }
-          if (var5_int >= Rasterizer.field_g &&
-            Rasterizer.field_b > var5_int) {
-            var11Lifetime1 = Rasterizer.field_f * ((1 & -param2 + var5_int) + var8) + var5_int;
+          if (var5_int >= Rasterizer.clipLeft &&
+            Rasterizer.clipRight > var5_int) {
+            var11Lifetime1 = Rasterizer.width * ((1 & -param2 + var5_int) + var8) + var5_int;
             var12Lifetime1 = var10 + (1 - var8) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              Rasterizer.field_c[var11Lifetime1] = 16777215;
-              var11Lifetime1 = var11Lifetime1 + 2 * Rasterizer.field_f;
+              Rasterizer.pixels[var11Lifetime1] = 16777215;
+              var11Lifetime1 = var11Lifetime1 + 2 * Rasterizer.width;
               if (var13 != 0) {
                 return;
               }
             }
           }
-          if (Rasterizer.field_l <= param4 &&
-            Rasterizer.field_d > var6) {
-            var11Lifetime2 = (1 & -param4 + var6) + var7 + Rasterizer.field_f * var6;
+          if (Rasterizer.clipTop <= param4 &&
+            Rasterizer.clipBottom > var6) {
+            var11Lifetime2 = (1 & -param4 + var6) + var7 + Rasterizer.width * var6;
             var12Lifetime2 = 1 - (-var9 + var7) >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              Rasterizer.field_c[var11Lifetime2] = 16777215;
+              Rasterizer.pixels[var11Lifetime2] = 16777215;
               var11Lifetime2 += 2;
               if (var13 != 0) {
                 return;
@@ -1709,11 +1709,11 @@ final class TileMap {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 0 &&
-            param0 < this.field_f[0].length &&
+            param0 < this.tiles[0].length &&
             param1 >= 0 &&
-            param1 < this.field_f.length) {
+            param1 < this.tiles.length) {
             if (param2 == 1) {
-              stackIn_18_0 = this.field_f[param1][param0];
+              stackIn_18_0 = this.tiles[param1][param0];
               return stackIn_18_0;
             }
             stackIn_16_0 = 32;
@@ -1844,7 +1844,7 @@ final class TileMap {
           this.field_c = param7;
           this.field_s = param3;
           this.field_o = param8;
-          this.field_f = param0;
+          this.tiles = param0;
           this.field_m = param6;
           this.field_j = param4;
           this.field_h = new int[param0.length][param0[0].length];

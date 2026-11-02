@@ -47,19 +47,19 @@ final class dp implements io {
           return 0;
         }
         if (jp.field_a == 0) {
-          if (!IntrusiveDeque.field_d.a((byte) 73)) {
+          if (!IntrusiveDeque.field_d.isIndexLoaded((byte) 73)) {
             return 20;
           }
           if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
             return 40;
           }
-          if (!da.field_l.a((byte) 73)) {
+          if (!da.field_l.isIndexLoaded((byte) 73)) {
             return 50;
           }
           if (!da.field_l.a(-1, "commonui")) {
             return 60;
           }
-          if (!al.field_a.a((byte) 73)) {
+          if (!al.field_a.isIndexLoaded((byte) 73)) {
             return 70;
           }
           if (!al.field_a.c(9001)) {
@@ -68,19 +68,19 @@ final class dp implements io {
           return 100;
         }
         if (f.field_i == null) {
-          if (!IntrusiveDeque.field_d.a((byte) 73)) {
+          if (!IntrusiveDeque.field_d.isIndexLoaded((byte) 73)) {
             return 43;
           }
           if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
             return 57;
           }
-          if (!da.field_l.a((byte) 73)) {
+          if (!da.field_l.isIndexLoaded((byte) 73)) {
             return 71;
           }
           if (!da.field_l.a(-1, "commonui")) {
             return 80;
           }
-          if (!al.field_a.a((byte) 73)) {
+          if (!al.field_a.isIndexLoaded((byte) 73)) {
             return 82;
           }
           if (!al.field_a.c(9001)) {
@@ -88,7 +88,7 @@ final class dp implements io {
           }
           return 100;
         }
-        if (!f.field_i.a((byte) 73)) {
+        if (!f.field_i.isIndexLoaded((byte) 73)) {
           return 14;
         }
         if (!f.field_i.a("", 0)) {
@@ -97,19 +97,19 @@ final class dp implements io {
         if (!f.field_i.a(-1, "")) {
           return 29;
         }
-        if (!IntrusiveDeque.field_d.a((byte) 73)) {
+        if (!IntrusiveDeque.field_d.isIndexLoaded((byte) 73)) {
           return 43;
         }
         if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
           return 57;
         }
-        if (!da.field_l.a((byte) 73)) {
+        if (!da.field_l.isIndexLoaded((byte) 73)) {
           return 71;
         }
         if (!da.field_l.a(-1, "commonui")) {
           return 80;
         }
-        if (!al.field_a.a((byte) 73)) {
+        if (!al.field_a.isIndexLoaded((byte) 73)) {
           return 82;
         }
         if (al.field_a.c(9001)) {
@@ -221,10 +221,10 @@ final class dp implements io {
         }
         ki.a((byte) -102, ti.field_g);
         en.c();
-        Rasterizer.d();
+        Rasterizer.clear();
         gk.j(30549);
         if (var5 < 256) {
-          Rasterizer.a(0, 0, Rasterizer.field_f, Rasterizer.field_a, 0, 256 - var5);
+          Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height, 0, 256 - var5);
           pa.a(param1 ^ 32173);
           if (param1 != -12138) {
             dp.a(118, -83);

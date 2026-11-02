@@ -186,7 +186,7 @@ final class we extends qk {
         this.field_Vb = -1;
         this.field_Nb = 125 + (int)(250.0 * Math.random());
         this.field_pb = this.field_Nb;
-        this.field_Pb = pb.a(so.field_a, 4, 1);
+        this.field_Pb = pb.a(so.random, 4, 1);
     }
 
     final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
@@ -302,7 +302,7 @@ final class we extends qk {
               var6_ref = (Zombie) (this.e((byte) 32));
               continue;
             }
-            var9 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+            var9 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
             if (var9 != null) {
               if (var6_ref.field_Bb == 0 && (!(var9.field_g <= var5) ||
                 var5 == -1)) {
@@ -341,7 +341,7 @@ final class we extends qk {
                 var6_ref = (Zombie) (this.e((byte) 32));
                 continue;
               }
-              var10 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+              var10 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var10 != null) {
                 if (var6_ref.field_Bb == 0 && (!(var10.field_g <= var5) ||
                   var5 == -1)) {
@@ -364,7 +364,7 @@ final class we extends qk {
                 var6_ref = (Zombie) (this.e((byte) 32));
                 continue;
               }
-              var17 = Js5Archive.field_e.field_H.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+              var17 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var17 != null) {
                 if (var6_ref.field_Bb == 0 && (!(var17.field_g <= var5) ||
                   var5 == -1)) {

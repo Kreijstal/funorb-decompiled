@@ -131,7 +131,7 @@ final class tp extends PcmStream {
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void fill(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -155,7 +155,7 @@ final class tp extends PcmStream {
         var11 = ZombieDawn.field_J;
         try {
           if (this.field_y <= 0) {
-            this.a(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_x) {
@@ -212,7 +212,7 @@ final class tp extends PcmStream {
           if (this.field_o < 256 && (this.field_l != null ||
             this.field_r != null)) {
             if (var4_int == 256) {
-              this.field_v.a(param0, param1, param2);
+              this.field_v.fill(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (this.field_z != null &&
@@ -223,8 +223,8 @@ final class tp extends PcmStream {
                   this.field_q = new int[var6];
                   this.field_z = new int[var6];
                 }
-                this.field_v.a(this.field_z, 0, param2);
-                this.field_t.a(this.field_q, 0, param2);
+                this.field_v.fill(this.field_z, 0, param2);
+                this.field_t.fill(this.field_q, 0, param2);
                 if (qf.field_l) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
@@ -237,7 +237,7 @@ final class tp extends PcmStream {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_q[var8] * var5 + var4_int * this.field_z[var8] >> 8);
                 }
               } else {
-                this.field_t.a(param0, param1, param2);
+                this.field_t.fill(param0, param1, param2);
               }
             }
           }
@@ -252,7 +252,7 @@ final class tp extends PcmStream {
               this.field_z = new int[var6];
               this.field_q = new int[var6];
             }
-            this.field_s.a(this.field_z, 0, param2);
+            this.field_s.fill(this.field_z, 0, param2);
             if (qf.field_l) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -401,17 +401,17 @@ final class tp extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         boolean decompiledFrameRemainder0 = true;
         var3 = ZombieDawn.field_J;
         if (0 < this.field_u) {
           if (this.field_l != null) {
-            this.field_v.a(param0);
+            this.field_v.skip(param0);
             if (1048576 <= this.field_u) {
               if ((!(0 >= this.field_o)) &&
                 ((null != this.field_n))) {
-                this.field_s.a(param0);
+                this.field_s.skip(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -419,19 +419,19 @@ final class tp extends PcmStream {
               if (this.field_r == null) {
                 if ((!(0 >= this.field_o)) &&
                   ((null != this.field_n))) {
-                  this.field_s.a(param0);
+                  this.field_s.skip(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_t.a(param0);
+                this.field_t.skip(param0);
               }
             }
           } else {
             if (1048576 <= this.field_u) {
               if ((!(0 >= this.field_o)) &&
                 ((null != this.field_n))) {
-                this.field_s.a(param0);
+                this.field_s.skip(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -439,12 +439,12 @@ final class tp extends PcmStream {
               if (this.field_r == null) {
                 if ((!(0 >= this.field_o)) &&
                   ((null != this.field_n))) {
-                  this.field_s.a(param0);
+                  this.field_s.skip(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_t.a(param0);
+                this.field_t.skip(param0);
               }
             }
           }
@@ -452,7 +452,7 @@ final class tp extends PcmStream {
           if (1048576 <= this.field_u) {
             if ((!(0 >= this.field_o)) &&
               ((null != this.field_n))) {
-              this.field_s.a(param0);
+              this.field_s.skip(param0);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -460,18 +460,18 @@ final class tp extends PcmStream {
             if (this.field_r == null) {
               if ((!(0 >= this.field_o)) &&
                 ((null != this.field_n))) {
-                this.field_s.a(param0);
+                this.field_s.skip(param0);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_t.a(param0);
+              this.field_t.skip(param0);
             }
           }
         }
         if ((decompiledFrameRemainder0) && (0 < this.field_o &&
           null != this.field_n)) {
-          this.field_s.a(param0);
+          this.field_s.skip(param0);
         }
         if (this.field_x) {
           if (0 < this.field_A &&

@@ -255,7 +255,7 @@ final class dg extends IOException {
             ja.a(jb.a((byte) -58), ud.field_c, var3_int != 0, dp.a(param1 - 103), (byte) -90);
           } else {
             if (!Point.a(param1 ^ -251)) {
-              Rasterizer.d();
+              Rasterizer.clear();
               dp.a(320, -12138, 240);
               uh.a(40, 0, 0, param0);
             } else {

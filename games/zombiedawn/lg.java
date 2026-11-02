@@ -73,9 +73,9 @@ final class lg {
           for (var2_int = 0; param0 > var2_int; var2_int++) {
             if (ExceptionWrapper.field_e != 0) {
               var9 = Js5Archive.field_e.spawnZombie(60, (byte) 125, 930, 140, 960);
-              var5 = 20 + hp.field_A.getX(true) - so.c(40);
-              var6 = hp.field_A.getY(237239984) - so.c(60);
-              var9.a(Js5Archive.field_e.field_H.a(true, var9.getX(true), var6, var5, var9.getY(237239984)), true);
+              var5 = 20 + hp.field_A.getX(true) - so.randomInt(40);
+              var6 = hp.field_A.getY(237239984) - so.randomInt(60);
+              var9.a(Js5Archive.field_e.navigation.a(true, var9.getX(true), var6, var5, var9.getY(237239984)), true);
             } else {
               var8 = Js5Archive.field_e.spawnZombie(20, (byte) 120, 70, 354, 890);
               var5_ref_qh = new qh();

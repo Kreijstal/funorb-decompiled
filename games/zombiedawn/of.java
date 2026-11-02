@@ -130,13 +130,13 @@ final class of {
               return;
             }
             var3 = nh.field_P - var1_int;
-            for (var2 = var1_int; var2 < Rasterizer.field_b; var2 = var2 + ch.field_a.field_w) {
+            for (var2 = var1_int; var2 < Rasterizer.clipRight; var2 = var2 + ch.field_a.field_w) {
               ch.field_a.e(var2, 0);
               ch.field_a.f(var2, var3);
             }
             Rasterizer.f(0, var1_int, bd.field_e, nh.field_P - var1_int);
             var2Lifetime1 = -var1_int + bd.field_e;
-            for (var3Lifetime1 = var1_int; Rasterizer.field_d > var3Lifetime1; var3Lifetime1 = var3Lifetime1 + GameWorld.field_x.field_t) {
+            for (var3Lifetime1 = var1_int; Rasterizer.clipBottom > var3Lifetime1; var3Lifetime1 = var3Lifetime1 + GameWorld.field_x.field_t) {
               GameWorld.field_x.e(0, var3Lifetime1);
               GameWorld.field_x.c(var2Lifetime1, var3Lifetime1);
             }
@@ -198,12 +198,12 @@ final class of {
             this.a(60, -58, (byte) 14, 69, -115);
           }
           var7 = param1;
-          if (Rasterizer.field_f < 6 + (var5_int + var7)) {
-            var7 = -6 + (-var5_int + Rasterizer.field_f);
+          if (Rasterizer.width < 6 + (var5_int + var7)) {
+            var7 = -6 + (-var5_int + Rasterizer.width);
           }
           var8 = param2 - (this.field_c.field_w - 32);
-          if (Rasterizer.field_a < var8 + var6 + 6) {
-            var8 = -6 + (-var6 + Rasterizer.field_a);
+          if (Rasterizer.height < var8 + var6 + 6) {
+            var8 = -6 + (-var6 + Rasterizer.height);
           }
           Rasterizer.c(var7, var8, 6 + var5_int, 6 + var6, this.field_j);
           Rasterizer.b(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_k);
@@ -357,7 +357,7 @@ final class of {
           if (var7 == -1) {
             var7 = this.field_c.field_I + this.field_c.field_x;
           }
-          var8 = Rasterizer.field_f >> 2;
+          var8 = Rasterizer.width >> 2;
           var9 = this.field_c.b(param1);
           var10 = this.field_c.field_I + this.field_c.field_x;
           var11 = 1;
@@ -383,11 +383,11 @@ final class of {
             }
           }
           var12 = param0;
-          if (var5_int + (var9 + var12) > Rasterizer.field_f) {
-            var12 = -var9 + Rasterizer.field_f - var5_int;
+          if (var5_int + (var9 + var12) > Rasterizer.width) {
+            var12 = -var9 + Rasterizer.width - var5_int;
           }
           var13Lifetime1 = -this.field_c.field_w + (param2 + 32);
-          if (Rasterizer.field_a < var13Lifetime1 - (-var10 - var6)) {
+          if (Rasterizer.height < var13Lifetime1 - (-var10 - var6)) {
             var13Lifetime1 = -var6 - var10 + param2;
           }
           Rasterizer.c(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_i);

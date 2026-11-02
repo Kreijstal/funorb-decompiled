@@ -159,18 +159,18 @@ class id extends WorldObject {
         }
         this.field_E = this.field_z;
         this.field_z = 0;
-        var6 = Js5Archive.field_e.field_H;
+        var6 = Js5Archive.field_e.navigation;
         var7 = var6;
         var3 = this.getX(param0) / 24;
         var4 = this.getY(237239984) / 24;
         if (this.getY(237239984) % 24 == 0) {
           var4--;
         }
-        var6.field_A.field_f[var4][var3] = eg.a(var6.field_A.field_f[var4][var3], -33554433);
+        var6.field_A.tiles[var4][var3] = eg.a(var6.field_A.tiles[var4][var3], -33554433);
         var7.field_A.a(param0, 14365, var4, false, var3);
         var6.field_A.field_t[var4 - 1][var3] = eg.a(var6.field_A.field_t[var4 - 1][var3], -33554433);
         if (this.field_O) {
-          var6.field_A.field_f[-1 + var4][var3] = eg.a(var6.field_A.field_f[-1 + var4][var3], -33554433);
+          var6.field_A.tiles[-1 + var4][var3] = eg.a(var6.field_A.tiles[-1 + var4][var3], -33554433);
           var7.field_A.a(true, 14365, -1 + var4, false, var3);
           var6.field_A.field_t[var4 - 1][var3] = eg.a(var6.field_A.field_t[var4 - 1][var3], -33554433);
         }
@@ -252,7 +252,7 @@ class id extends WorldObject {
               continue;
             }
             if (Js5Archive.field_e.field_r >= 250 &&
-              0 != pb.a(so.field_a, 25, 1)) {
+              0 != pb.a(so.random, 25, 1)) {
               break;
             }
             if (!this.a(true, true)) {
@@ -263,17 +263,17 @@ class id extends WorldObject {
             if (this.getY(237239984) % 24 == 0) {
               var4_int--;
             }
-            Js5Archive.field_e.field_H.field_A.field_f[var4_int][var3] = eg.a(Js5Archive.field_e.field_H.field_A.field_f[var4_int][var3], -33554433);
-            Js5Archive.field_e.field_H.field_A.field_f[-1 + var4_int][var3] = eg.a(Js5Archive.field_e.field_H.field_A.field_f[-1 + var4_int][var3], -33554433);
-            Js5Archive.field_e.field_H.field_A.a(true, 14365, var4_int, false, var3);
-            Js5Archive.field_e.field_H.field_A.a(true, 14365, var4_int - 1, false, var3);
-            if (pb.a(so.field_a, 2, 1) != 0) {
+            Js5Archive.field_e.navigation.field_A.tiles[var4_int][var3] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[var4_int][var3], -33554433);
+            Js5Archive.field_e.navigation.field_A.tiles[-1 + var4_int][var3] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[-1 + var4_int][var3], -33554433);
+            Js5Archive.field_e.navigation.field_A.a(true, 14365, var4_int, false, var3);
+            Js5Archive.field_e.navigation.field_A.a(true, 14365, var4_int - 1, false, var3);
+            if (pb.a(so.random, 2, 1) != 0) {
               break;
             }
             if (null != this.field_K) {
               pc.a((byte) 13, this.field_K);
             }
-            this.field_K = kh.a(pb.a(so.field_a, 2, 1) + 64, false);
+            this.field_K = kh.a(pb.a(so.random, 2, 1) + 64, false);
             break;
           }
         }
@@ -309,9 +309,9 @@ class id extends WorldObject {
           var3Lifetime2 = (this.getY(237239984) - 1) / 24;
           if (0 <= var2Lifetime1 &&
             0 <= var3Lifetime2 &&
-            var2Lifetime1 < Js5Archive.field_e.field_H.field_A.field_f[0].length &&
-            var3Lifetime2 < Js5Archive.field_e.field_H.field_A.field_f.length) {
-            var7 = ub.a(127, Js5Archive.field_e.field_H.field_A.field_f[var3Lifetime2][var2Lifetime1]);
+            var2Lifetime1 < Js5Archive.field_e.navigation.field_A.tiles[0].length &&
+            var3Lifetime2 < Js5Archive.field_e.navigation.field_A.tiles.length) {
+            var7 = ub.a(127, Js5Archive.field_e.navigation.field_A.tiles[var3Lifetime2][var2Lifetime1]);
             if ((var7 != null)) {
               if (var7.field_h >= 0) {
                 if (var7.field_h <= 0) {

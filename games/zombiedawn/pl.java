@@ -112,7 +112,7 @@ final class pl extends al {
           if (param1 != -257) {
             return;
           }
-          Rasterizer.d();
+          Rasterizer.clear();
           this.a(0, 0, param1 ^ 260);
           if (param0 >= 0) {
             Rasterizer.h(3, 3, 0, 0, 640, 341);
@@ -743,7 +743,7 @@ final class pl extends al {
             nc.field_k.b(qo.field_s + param1, 30 + param2);
             Rasterizer.f(320 + param1, 0, bd.field_e, nh.field_P);
             nc.field_k.b(param1 - (-j.field_d + nc.field_k.field_r), 30 + param2);
-            Rasterizer.c();
+            Rasterizer.resetClip();
           }
           Rasterizer.g(param1 + wl.field_b, param2 + 47, 23, 23, 3, var5_int);
           if (hm.field_J == -2) {

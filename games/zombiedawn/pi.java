@@ -216,7 +216,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
                   var25 = var25 + var27;
                   var29 = var29 + var31;
                   var17_int = var17_int + var19;
-                  var36Lifetime2 = var36Lifetime2 + Rasterizer.field_f;
+                  var36Lifetime2 = var36Lifetime2 + Rasterizer.width;
                 }
               }
               var36Lifetime3 = -param16 + param11;
@@ -369,7 +369,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
               var30 = var30 + var32;
               var22 = var22 + var24;
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + Rasterizer.field_f;
+              var35Lifetime1 = var35Lifetime1 + Rasterizer.width;
               var26 = var26 + var28;
               var21 = var21 + var23;
               var25 = var25 + var27;

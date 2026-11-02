@@ -32,7 +32,7 @@ final class tm extends IntrusiveNode {
             var8 = param3[1].field_r;
             param3[0].c(param0, param2, param4);
             param3[2].c(-var7 + (param5 + param0), param2, param4);
-            Rasterizer.b(HumanFactory.field_c);
+            Rasterizer.saveClip(HumanFactory.field_c);
             Rasterizer.c(param0 + var6_int, param2, param5 + param0 - var7, param3[1].field_q + param2);
             var9 = param0 + var6_int;
             var10 = param0 + param5 - var7;
@@ -42,7 +42,7 @@ final class tm extends IntrusiveNode {
             if (param1 != 32421) {
               tm.a(-59, (byte) 126, false, -69);
             }
-            Rasterizer.a(HumanFactory.field_c);
+            Rasterizer.restoreClip(HumanFactory.field_c);
             return;
           }
           return;

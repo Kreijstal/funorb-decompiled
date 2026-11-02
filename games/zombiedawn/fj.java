@@ -21,7 +21,7 @@ final class fj extends pm {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          Rasterizer.d();
+          Rasterizer.clear();
           param0.b(3, 3);
           ho.a(md.field_vb, param3, param1, -109);
           pa.a(-21189);

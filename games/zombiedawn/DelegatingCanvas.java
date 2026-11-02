@@ -88,7 +88,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         } else {
           if (!dl.a(false)) {
             if (ac.d(50)) {
-              Rasterizer.h(0, 0, Rasterizer.field_f, Rasterizer.field_a);
+              Rasterizer.h(0, 0, Rasterizer.width, Rasterizer.height);
               oe.a((byte) -116);
               var1 = 1;
             }
@@ -111,7 +111,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         if (bg.a(2)) {
           var2 = (ln.field_b - 1 << 8) / 16;
           if (var2 > 0) {
-            Rasterizer.a(0, 0, Rasterizer.field_f, Rasterizer.field_a, 0, var2);
+            Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height, 0, var2);
             var1 = 1;
           }
         }

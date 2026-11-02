@@ -298,12 +298,12 @@ final class o {
         }
         this.a(9);
         if (null != nl.field_t &&
-          nl.field_t.a((byte) 73) &&
+          nl.field_t.isIndexLoaded((byte) 73) &&
           nl.field_t.a(-1, "members_expansion_screen") &&
           nl.field_t.a(-1, "arialish12") &&
           nl.field_t.a(-1, "pump32") &&
           ge.field_b != null &&
-          ge.field_b.a((byte) 73) &&
+          ge.field_b.isIndexLoaded((byte) 73) &&
           ge.field_b.a(-1, "arialish12") &&
           ge.field_b.a(-1, "pump32")) {
           li.field_i = vj.a(nl.field_t, "frame", "members_expansion_screen", 4424743);

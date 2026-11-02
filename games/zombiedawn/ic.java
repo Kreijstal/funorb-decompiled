@@ -70,11 +70,11 @@ final class ic extends tb implements mi {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 121 / ((param1 + 44) / 61);
-          if (!param3.a((byte) 73)) {
+          if (!param3.isIndexLoaded((byte) 73)) {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }
-          stackIn_5_0 = param0 + " - " + param3.e(-105) + "%";
+          stackIn_5_0 = param0 + " - " + param3.percentLoaded(-105) + "%";
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

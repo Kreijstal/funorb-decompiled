@@ -69,7 +69,7 @@ final class ud implements io {
               Rasterizer.a(2 + var6_int, 2 + var7, var10, -4 + param3.field_n, 2188450, 100);
             }
           }
-          Rasterizer.c();
+          Rasterizer.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

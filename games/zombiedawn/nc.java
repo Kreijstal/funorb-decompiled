@@ -29,7 +29,7 @@ final class nc extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        sl.field_b = new be(so.field_a.nextInt(), 3, 256, 256, 256, 2.0f, true);
+        sl.field_b = new be(so.random.nextInt(), 3, 256, 256, 256, 2.0f, true);
         if (param0 == 11800) {
           na.field_c = sl.field_b.c(256, 256, param0 - 11827);
           return;

@@ -83,15 +83,15 @@ abstract class Human extends Mover {
         this.field_S = stackIn_8_1;
         ho.a(this.getY(237239984), (byte) 54, this.getX(true));
         var9 = -1;
-        var10 = pb.a(so.field_a, 128, 1);
+        var10 = pb.a(so.random, 128, 1);
         if (var10 > 110) {
           var9 = this.field_db;
         } else {
           if (var10 > 50) {
             if (this.t(10)) {
-              var9 = pb.a(so.field_a, 4, 1) + 40;
+              var9 = pb.a(so.random, 4, 1) + 40;
             } else {
-              var9 = pb.a(so.field_a, 3, 1) + 37;
+              var9 = pb.a(so.random, 3, 1) + 37;
             }
           }
         }
@@ -276,7 +276,7 @@ abstract class Human extends Mover {
         Point var7 = null;
         Point var6 = null;
         int var4 = -5 % ((43 - param1) / 57);
-        qh var5 = Js5Archive.field_e.field_H.a(true, this.getX(true), param2, param0, this.getY(237239984));
+        qh var5 = Js5Archive.field_e.navigation.a(true, this.getX(true), param2, param0, this.getY(237239984));
         if (var5 != null) {
           var7 = (Point) (var5.b((byte) 26));
           var6 = var7;
@@ -322,7 +322,7 @@ abstract class Human extends Mover {
           regionExit1: {
             var5 = stackIn_8_0;
             if (-1 + this.field_ub != var4 && (var5 == 0 ||
-              -1 == Js5Archive.field_e.field_H.a(this.field_gb[var4], this.getY(237239984), this.field_jb[var4], this.getX(true), 124))) {
+              -1 == Js5Archive.field_e.navigation.a(this.field_gb[var4], this.getY(237239984), this.field_jb[var4], this.getX(true), 124))) {
               MouseInputHandler.field_e[var4] = -1;
               break regionExit1;
             }
@@ -454,7 +454,7 @@ abstract class Human extends Mover {
                 !bo.field_p[86]) {
                 ki.a((byte) -114, dn.field_E);
                 var4 = 0;
-                Rasterizer.d();
+                Rasterizer.clear();
                 var3_int = 0;
               }
               if (param0 > -76) {
@@ -599,7 +599,7 @@ abstract class Human extends Mover {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = Js5Archive.field_e.field_H;
+          var3 = Js5Archive.field_e.navigation;
           if (param0 <= 52) {
             var8 = (Camera) null;
             this.a((byte) -36, (Camera) null);
@@ -643,8 +643,8 @@ abstract class Human extends Mover {
         var4 = ZombieDawn.field_J;
         if (400 + this.field_t > Js5Archive.field_e.field_r &&
           Js5Archive.field_e.field_r > 200 &&
-          pb.a(so.field_a, 25, 1) == 0) {
-          this.c(this.getX(true) + pb.a(so.field_a, 1000, 1) - 500, 78, this.getY(237239984) - (-pb.a(so.field_a, 1000, 1) + 500));
+          pb.a(so.random, 25, 1) == 0) {
+          this.c(this.getX(true) + pb.a(so.random, 1000, 1) - 500, 78, this.getY(237239984) - (-pb.a(so.random, 1000, 1) + 500));
         }
         if (param0 < 95) {
           this.field_gb = (int[]) null;
@@ -673,7 +673,7 @@ abstract class Human extends Mover {
                 this.field_lb = 53;
               } else {
                 if (!this.field_hb) {
-                  stackIn_96_1 = pb.a(so.field_a, 200, 1) + 20;
+                  stackIn_96_1 = pb.a(so.random, 200, 1) + 20;
                 } else {
                   stackIn_96_1 = 65;
                 }
@@ -695,17 +695,17 @@ abstract class Human extends Mover {
               if (0 != this.velocityX ||
                 this.velocityY != 0) {
                 this.g((byte) -113);
-                if (!Js5Archive.field_e.field_H.a(false, this.velocityY + this.field_x >> 16, this.field_y + this.velocityX >> 16, true)) {
+                if (!Js5Archive.field_e.navigation.isWalkable(false, this.velocityY + this.field_x >> 16, this.field_y + this.velocityX >> 16, true)) {
                   this.field_x = this.field_x - this.velocityY;
                   this.field_y = this.field_y - this.velocityX;
                   if (this.velocityX != 0 &&
-                    Js5Archive.field_e.field_H.a(false, this.getY(237239984), this.velocityX + this.field_y >> 16, true)) {
+                    Js5Archive.field_e.navigation.isWalkable(false, this.getY(237239984), this.velocityX + this.field_y >> 16, true)) {
                     this.velocityY = 0;
                     this.field_y = this.field_y + this.velocityX;
                     this.targetY = this.field_x >> 16;
                   } else {
                     if (this.velocityY != 0 &&
-                      Js5Archive.field_e.field_H.a(false, this.field_x + this.velocityY >> 16, this.field_y >> 16, true)) {
+                      Js5Archive.field_e.navigation.isWalkable(false, this.field_x + this.velocityY >> 16, this.field_y >> 16, true)) {
                       this.velocityX = 0;
                       this.targetX = this.field_y >> 16;
                       this.field_x = this.field_x + this.velocityY;
@@ -850,15 +850,15 @@ abstract class Human extends Mover {
         this.field_ob = false;
         this.field_vb = 0;
         Sprite discarded$0 = new Sprite(48, 48);
-        this.field_lb = pb.a(so.field_a, 200, 1);
+        this.field_lb = pb.a(so.random, 200, 1);
         this.field_jb = new int[61];
         this.field_gb = new int[61];
         this.i((byte) 79);
-        this.field_qb = pb.a(so.field_a, 5, 1);
+        this.field_qb = pb.a(so.random, 5, 1);
         if (this.t(10)) {
-          this.field_db = 49 + pb.a(so.field_a, 4, 1);
+          this.field_db = 49 + pb.a(so.random, 4, 1);
         } else {
-          this.field_db = pb.a(so.field_a, 3, 1) + 26;
+          this.field_db = pb.a(so.random, 3, 1) + 26;
         }
     }
 
@@ -891,8 +891,8 @@ abstract class Human extends Mover {
                 continue;
               }
               if (param1 ||
-                Js5Archive.field_e.field_H.a(var6.getY(237239984), this.getX(true), this.getY(237239984), (byte) -91, false, var6.getX(true)) != -1 ||
-                Js5Archive.field_e.field_H.a(var6.getY(237239984) - 48, this.getX(true), -48 + this.getY(237239984), (byte) -109, false, var6.getX(true)) != -1) {
+                Js5Archive.field_e.navigation.a(var6.getY(237239984), this.getX(true), this.getY(237239984), (byte) -91, false, var6.getX(true)) != -1 ||
+                Js5Archive.field_e.navigation.a(var6.getY(237239984) - 48, this.getX(true), -48 + this.getY(237239984), (byte) -109, false, var6.getX(true)) != -1) {
                 return true;
               }
             }

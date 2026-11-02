@@ -80,9 +80,9 @@ final class cc {
                   var2[var4] = (byte)-1;
                 }
               }
-              param0.a(var2, 24, 0, -27843);
+              param0.writeBytes(var2, 24, 0, -27843);
             } else {
-              param0.a(var2, 24, 0, -27843);
+              param0.writeBytes(var2, 24, 0, -27843);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

@@ -25,31 +25,31 @@ final class u {
         if (param0 <= 71) {
           this.field_m = -75;
           if (this.field_b == 2) {
-            this.field_a = 130 + pb.a(so.field_a, 77, 1) << 4;
+            this.field_a = 130 + pb.a(so.random, 77, 1) << 4;
             return;
           }
           if (this.field_b == 1) {
-            this.field_a = pb.a(so.field_a, 50, 1) + 90 << 4;
+            this.field_a = pb.a(so.random, 50, 1) + 90 << 4;
             return;
           }
           if (this.field_b == 0) {
-            this.field_a = pb.a(so.field_a, 20, 1) + 87 << 4;
+            this.field_a = pb.a(so.random, 20, 1) + 87 << 4;
             return;
           }
           return;
         }
         if (this.field_b == 2) {
-          this.field_a = 130 + pb.a(so.field_a, 77, 1) << 4;
+          this.field_a = 130 + pb.a(so.random, 77, 1) << 4;
           return;
         }
         if (this.field_b == 1) {
-          this.field_a = pb.a(so.field_a, 50, 1) + 90 << 4;
+          this.field_a = pb.a(so.random, 50, 1) + 90 << 4;
           return;
         }
         if (this.field_b != 0) {
           return;
         }
-        this.field_a = pb.a(so.field_a, 20, 1) + 87 << 4;
+        this.field_a = pb.a(so.random, 20, 1) + 87 << 4;
     }
 
     final void d(int param0) {
@@ -93,7 +93,7 @@ final class u {
               }
               if (this.a(param0 - 93)) {
                 this.field_k = true;
-                this.field_m = pb.a(so.field_a, 20, 1);
+                this.field_m = pb.a(so.random, 20, 1);
               } else {
                 stackIn_10_1 = this.field_l;
                 if (this.field_l < this.field_a) {
@@ -109,7 +109,7 @@ final class u {
             if (!this.field_k) {
               if (this.a(param0 - 93)) {
                 this.field_k = true;
-                this.field_m = pb.a(so.field_a, 20, 1);
+                this.field_m = pb.a(so.random, 20, 1);
               } else {
                 stackIn_18_1 = this.field_l;
                 if (this.field_l < this.field_a) {
@@ -129,7 +129,7 @@ final class u {
             } else {
               if (this.a(param0 - 93)) {
                 this.field_k = true;
-                this.field_m = pb.a(so.field_a, 20, 1);
+                this.field_m = pb.a(so.random, 20, 1);
               } else {
                 stackIn_27_1 = this.field_l;
                 if (this.field_l < this.field_a) {
@@ -148,7 +148,7 @@ final class u {
           if (!this.field_k) {
             if (this.a(param0 - 93)) {
               this.field_k = true;
-              this.field_m = pb.a(so.field_a, 20, 1);
+              this.field_m = pb.a(so.random, 20, 1);
             } else {
               stackIn_54_1 = this.field_l;
               if (this.field_l < this.field_a) {
@@ -168,7 +168,7 @@ final class u {
           } else {
             if (this.a(param0 - 93)) {
               this.field_k = true;
-              this.field_m = pb.a(so.field_a, 20, 1);
+              this.field_m = pb.a(so.random, 20, 1);
             } else {
               stackIn_62_1 = this.field_l;
               if (this.field_l < this.field_a) {
@@ -185,7 +185,7 @@ final class u {
         if (!this.field_k) {
           if (this.a(param0 - 93)) {
             this.field_k = true;
-            this.field_m = pb.a(so.field_a, 20, 1);
+            this.field_m = pb.a(so.random, 20, 1);
           } else {
             stackIn_37_1 = this.field_l;
             if (this.field_l < this.field_a) {
@@ -205,7 +205,7 @@ final class u {
         } else {
           if (this.a(param0 - 93)) {
             this.field_k = true;
-            this.field_m = pb.a(so.field_a, 20, 1);
+            this.field_m = pb.a(so.random, 20, 1);
           } else {
             stackIn_46_1 = this.field_l;
             if (this.field_l < this.field_a) {
@@ -273,26 +273,26 @@ final class u {
           this.field_h = 4;
           this.field_b = param1;
           this.field_i = param0;
-          stackIn_4_1 = (0 == pb.a(so.field_a, 2, 1));
+          stackIn_4_1 = (0 == pb.a(so.random, 2, 1));
           this.field_c = stackIn_4_1;
-          this.field_n = pb.a(so.field_a, 3, 1);
+          this.field_n = pb.a(so.random, 3, 1);
           if (this.field_b == 0) {
             this.field_n = 0;
             this.field_c = false;
           }
-          this.field_g = pb.a(so.field_a, 30, 1);
+          this.field_g = pb.a(so.random, 30, 1);
           if (this.field_b != 2) {
             if (this.field_b == 1) {
-              this.field_l = 90 + pb.a(so.field_a, 50, 1) << 4;
+              this.field_l = 90 + pb.a(so.random, 50, 1) << 4;
             } else {
               if (this.field_b != 0) {
                 this.a((byte) 95);
                 return;
               }
-              this.field_l = pb.a(so.field_a, 20, 1) + 87 << 4;
+              this.field_l = pb.a(so.random, 20, 1) + 87 << 4;
             }
           } else {
-            this.field_l = pb.a(so.field_a, 77, 1) + 130 << 4;
+            this.field_l = pb.a(so.random, 77, 1) + 130 << 4;
           }
           this.a((byte) 95);
           return;

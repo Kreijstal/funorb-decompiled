@@ -160,22 +160,22 @@ final class se extends qg {
         var17 = ZombieDawn.field_J;
         if (param13 < param4) {
           if (param4 < param14) {
-            pi.a(param11, param10, Rasterizer.field_c, param6, (byte) -104, param7, param12, param8, param2, param1, param15, param14, param9, param3, param5, param13, param4);
+            pi.a(param11, param10, Rasterizer.pixels, param6, (byte) -104, param7, param12, param8, param2, param1, param15, param14, param9, param3, param5, param13, param4);
           } else {
             if (param13 >= param14) {
-              pi.a(param5, param1, Rasterizer.field_c, param11, (byte) -104, param12, param9, param3, param8, param15, param10, param4, param7, param2, param6, param14, param13);
+              pi.a(param5, param1, Rasterizer.pixels, param11, (byte) -104, param12, param9, param3, param8, param15, param10, param4, param7, param2, param6, param14, param13);
             } else {
-              pi.a(param5, param15, Rasterizer.field_c, param6, (byte) -104, param12, param7, param3, param2, param1, param10, param4, param9, param8, param11, param13, param14);
+              pi.a(param5, param15, Rasterizer.pixels, param6, (byte) -104, param12, param7, param3, param2, param1, param10, param4, param9, param8, param11, param13, param14);
             }
           }
         } else {
           if (param13 < param14) {
-            pi.a(param11, param1, Rasterizer.field_c, param5, (byte) -104, param7, param9, param8, param3, param10, param15, param14, param12, param2, param6, param4, param13);
+            pi.a(param11, param1, Rasterizer.pixels, param5, (byte) -104, param7, param9, param8, param3, param10, param15, param14, param12, param2, param6, param4, param13);
           } else {
             if (param4 >= param14) {
-              pi.a(param6, param10, Rasterizer.field_c, param11, (byte) -104, param9, param12, param2, param8, param15, param1, param13, param7, param3, param5, param14, param4);
+              pi.a(param6, param10, Rasterizer.pixels, param11, (byte) -104, param9, param12, param2, param8, param15, param1, param13, param7, param3, param5, param14, param4);
             } else {
-              pi.a(param6, param15, Rasterizer.field_c, param5, (byte) -104, param9, param7, param2, param3, param10, param1, param13, param12, param8, param11, param4, param14);
+              pi.a(param6, param15, Rasterizer.pixels, param5, (byte) -104, param9, param7, param2, param3, param10, param1, param13, param12, param8, param11, param4, param14);
             }
           }
         }

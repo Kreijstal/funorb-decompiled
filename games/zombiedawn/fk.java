@@ -484,7 +484,7 @@ final class fk extends hp implements oa, hh, ri {
         oo.field_R = oo.field_R - 1;
         if (fieldTemp$0 <= 0) {
           Js5Archive.field_e.zombies.addFirst(0, new hk());
-          oo.field_R = pb.a(so.field_a, 40, 1) + 40;
+          oo.field_R = pb.a(so.random, 40, 1) + 40;
           if (param0) {
             fk.b(false);
             return;

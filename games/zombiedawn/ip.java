@@ -41,12 +41,12 @@ final class ip extends PcmStream {
             } else {
               if (var6.field_b != 1) {
                 if (var6.field_b == 2) {
-                  var6.field_l = -pb.a(so.field_a, 19, 1) << 4;
+                  var6.field_l = -pb.a(so.random, 19, 1) << 4;
                   var6.field_a = (var3 << 4) + var6.field_l;
                   var6.field_h = 48;
                 }
               } else {
-                var6.field_l = -pb.a(so.field_a, 12, 1) << 4;
+                var6.field_l = -pb.a(so.random, 12, 1) << 4;
                 var6.field_a = (var2 << 4) + var6.field_l;
                 var6.field_h = 36;
               }
@@ -90,7 +90,7 @@ final class ip extends PcmStream {
                 param1.field_D = param1.field_D + var7_int * param4;
                 break;
               }
-              param1.field_E.a(param0, param2, var8);
+              param1.field_E.fill(param0, param2, var8);
               param4 = param4 - var8;
               param1.field_D = param1.field_D + (var7_int * var8 - 1048576);
               param2 = param2 + var8;
@@ -115,7 +115,7 @@ final class ip extends PcmStream {
                 param1.field_E.e(-1);
               }
               var11.c(var9);
-              var11.a(param0, param2, param5 - param2);
+              var11.fill(param0, param2, param5 - param2);
               if (!var11.f()) {
                 continue;
               }
@@ -125,7 +125,7 @@ final class ip extends PcmStream {
           if (param3 != 0) {
             this.a();
           }
-          param1.field_E.a(param0, param2, param4);
+          param1.field_E.fill(param0, param2, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -212,7 +212,7 @@ final class ip extends PcmStream {
               param1 = param0.field_D / var4_int;
             }
           }
-          param0.field_E.a(param1);
+          param0.field_E.skip(param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -318,7 +318,7 @@ final class ip extends PcmStream {
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void fill(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         lf var6 = null;
@@ -331,7 +331,7 @@ final class ip extends PcmStream {
         RuntimeException var4 = null;
         var7 = ZombieDawn.field_J;
         try {
-          this.field_m.a(param0, param1, param2);
+          this.field_m.fill(param0, param1, param2);
           var6 = (lf) (this.field_s.b((byte) 26));
           while (var6 != null) {
             stackIn_4_0 = this.field_n.b(30296, var6);
@@ -393,12 +393,12 @@ final class ip extends PcmStream {
         field_o = null;
     }
 
-    final void a(int param0) {
+    final void skip(int param0) {
         int var2;
         lf var3;
         int var4;
         var4 = ZombieDawn.field_J;
-        this.field_m.a(param0);
+        this.field_m.skip(param0);
         var3 = (lf) (this.field_s.b((byte) 26));
         while (var3 != null) {
           if (!this.field_n.b(30296, var3)) {

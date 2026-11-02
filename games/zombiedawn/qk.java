@@ -49,8 +49,8 @@ class qk extends Human {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         int var5 = 0;
-        if (Rasterizer.field_f == bd.field_e) {
-          if (Rasterizer.field_a != nh.field_P) {
+        if (Rasterizer.width == bd.field_e) {
+          if (Rasterizer.height != nh.field_P) {
             return;
           }
           if (param4) {
@@ -556,8 +556,8 @@ class qk extends Human {
               var8 = -var6 + this.getY(237239984);
               var9 = var7 * var7 + var8 * var8;
               if (var3 > var9) {
-                if (Js5Archive.field_e.field_H.a(var6, this.getY(237239984), var5, this.getX(true), 123) == -1 &&
-                  Js5Archive.field_e.field_H.a(-24 + var6, -24 + this.getY(237239984), var5, this.getX(true), 105) == -1) {
+                if (Js5Archive.field_e.navigation.a(var6, this.getY(237239984), var5, this.getX(true), 123) == -1 &&
+                  Js5Archive.field_e.navigation.a(-24 + var6, -24 + this.getY(237239984), var5, this.getX(true), 105) == -1) {
                   var4_ref_fb = this.e((byte) 32);
                   continue;
                 }
@@ -606,7 +606,7 @@ class qk extends Human {
             }
           }
           this.field_Lb = this.field_Fb;
-          this.field_zb = pb.a(so.field_a, this.field_Fb, 1) + 1;
+          this.field_zb = pb.a(so.random, this.field_Fb, 1) + 1;
         }
         return;
     }

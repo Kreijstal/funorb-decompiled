@@ -160,11 +160,11 @@ final class sn {
             var5.writeByte(0, 95);
           } else {
             var5.writeByte(param1.field_j.length, -90);
-            var5.a(param1.field_j, param1.field_j.length, 0, param2 ^ -27843);
+            var5.writeBytes(param1.field_j, param1.field_j.length, 0, param2 ^ -27843);
           }
           var5.writeCrc32(-60, var4);
           var5.position = var5.position - 4;
-          param1.field_k = var5.c(98);
+          param1.field_k = var5.readInt(98);
           var5.d(69, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

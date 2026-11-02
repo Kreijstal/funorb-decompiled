@@ -70,7 +70,7 @@ final class qh extends IntrusiveDeque {
           return;
         }
         try {
-          Rasterizer.d();
+          Rasterizer.clear();
           rc.a(true, (byte) -63);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qh.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
