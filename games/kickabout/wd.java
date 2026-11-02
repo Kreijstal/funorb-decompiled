@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends gn {
+final class wd extends IntrusiveNode {
     static se field_l;
     static String field_g;
     int field_p;
@@ -40,7 +40,7 @@ final class wd extends gn {
           if (param2 <= 33) {
             field_l = (se) null;
           }
-          var9 = iw.field_h;
+          var9 = PacketBuffer.field_h;
           var3 = var9;
           if (rm.field_C == 0) {
             for (var4 = 0; var4 < 30; var4++) {

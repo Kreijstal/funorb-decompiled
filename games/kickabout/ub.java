@@ -11,7 +11,7 @@ abstract class ub extends wj {
     static hd field_D;
 
     final static kg h(byte param0) {
-        kg var1 = new kg(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], pq.field_O[0], lt.field_a);
+        kg var1 = new kg(kw.field_i, ai.field_J, IsaacRandom.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], pq.field_O[0], lt.field_a);
         int var2 = 103 / ((param0 + 65) / 46);
         tk.h((byte) -98);
         return var1;
@@ -31,7 +31,7 @@ abstract class ub extends wj {
         }
         if (null == d.field_a) {
           d.field_a = new ut(this.field_n, this.field_i);
-          iw.a(param1 - 190, d.field_a);
+          PacketBuffer.a(param1 - 190, d.field_a);
           on.b();
           this.a(0, (byte) 125, 0);
           super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
@@ -41,7 +41,7 @@ abstract class ub extends wj {
         }
         if (d.field_a.field_q < this.field_n) {
           d.field_a = new ut(this.field_n, this.field_i);
-          iw.a(param1 - 190, d.field_a);
+          PacketBuffer.a(param1 - 190, d.field_a);
           on.b();
           this.a(0, (byte) 125, 0);
           super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
@@ -51,7 +51,7 @@ abstract class ub extends wj {
         }
         if (this.field_i > d.field_a.field_w) {
           d.field_a = new ut(this.field_n, this.field_i);
-          iw.a(param1 - 190, d.field_a);
+          PacketBuffer.a(param1 - 190, d.field_a);
           on.b();
           this.a(0, (byte) 125, 0);
           super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
@@ -59,7 +59,7 @@ abstract class ub extends wj {
           d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
           return;
         }
-        iw.a(param1 - 190, d.field_a);
+        PacketBuffer.a(param1 - 190, d.field_a);
         on.b();
         this.a(0, (byte) 125, 0);
         super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
@@ -83,7 +83,7 @@ abstract class ub extends wj {
             for (var6 = 0; var3 > var6; var6++) {
               var5[var6] = lt.field_a[qj.b((int) var4[var6], 255)];
             }
-            var1[var2] = new ut(kw.field_i, ai.field_J, aq.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], var5);
+            var1[var2] = new ut(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], var5);
           }
           tk.h((byte) -70);
           return var1;

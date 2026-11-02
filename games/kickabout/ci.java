@@ -57,7 +57,7 @@ final class ci implements Iterable {
         int var2 = 0;
         int var1 = wq.b((byte) 46);
         if (!param0) {
-          var2 = gn.d((byte) 101);
+          var2 = IntrusiveNode.d((byte) 101);
           ba.field_p.a(-dq.field_f + ka.field_a, (mt.field_a << 1) + var2, uq.field_c - mt.field_a, (dq.field_f << 1) + var1, 3);
           re.a(0);
           return;

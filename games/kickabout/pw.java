@@ -10,7 +10,7 @@ final class pw extends i {
 
     final void a(int param0, int param1) {
         int var3;
-        ml stackIn_27_0 = null;
+        CipherPacketBuffer stackIn_27_0 = null;
         int stackIn_27_1 = 0;
         int stackIn_28_2 = 0;
         boolean decompiledFrameRemainder0 = true;
@@ -55,7 +55,7 @@ final class pw extends i {
               } else {
                 stackIn_28_2 = hk.field_L;
               }
-              ((ml) (Object) stackIn_27_0).b(stackIn_27_1, stackIn_28_2);
+              ((CipherPacketBuffer) (Object) stackIn_27_0).b(stackIn_27_1, stackIn_28_2);
               ((wf) (cq.field_h)).a(0, 0, true);
             }
             if (decompiledFrameRemainder0) {

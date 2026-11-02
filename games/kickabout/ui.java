@@ -6,7 +6,7 @@ final class ui extends vv {
     byte field_x;
     static vc[] field_w;
     static boolean field_t;
-    iw field_v;
+    PacketBuffer field_v;
     int field_u;
 
     final static void a(String param0, byte param1, String param2) {

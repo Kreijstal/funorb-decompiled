@@ -23,7 +23,7 @@ final class cu {
         String stackIn_20_2 = null;
         Object var6;
         cf var6_ref;
-        iw var7;
+        PacketBuffer var7;
         cf var6_refLifetime1;
         var6 = null;
         if (param1 == 0) {
@@ -46,8 +46,8 @@ final class cu {
           stackIn_9_0.field_Bb = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).toString();
           return var6_ref;
         }
-        var7 = (iw) null;
-        cu.a((byte) 95, (String) null, (iw) null);
+        var7 = (PacketBuffer) null;
+        cu.a((byte) 95, (String) null, (PacketBuffer) null);
         var6_refLifetime1 = (cf) (field_a.b((byte) -32));
         if (var6_refLifetime1 == null) {
           var6_refLifetime1 = new cf();
@@ -129,7 +129,7 @@ final class cu {
         int var4 = -22 / ((param0 - 36) / 39);
     }
 
-    final static int a(byte param0, String param1, iw param2) {
+    final static int a(byte param0, String param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;

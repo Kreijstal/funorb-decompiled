@@ -16,7 +16,7 @@ final class ra extends dj {
     static ot field_L;
     static js field_G;
 
-    final static void a(boolean param0, int param1, iw param2, qb param3) {
+    final static void a(boolean param0, int param1, PacketBuffer param2, qb param3) {
         int var8 = 0;
         qb stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
@@ -90,7 +90,7 @@ final class ra extends dj {
           param3.field_Nb = param2.i((byte) -124);
           if (param1 < 113) {
             var10 = (qb) null;
-            ra.a(true, -32, (iw) null, (qb) null);
+            ra.a(true, -32, (PacketBuffer) null, (qb) null);
           }
           var7 = param2.field_n;
           param3.field_ec = param2.a(22);
@@ -269,8 +269,8 @@ final class ra extends dj {
           var12Lifetime5 = 0;
           var13 = this.field_j + 230;
           var14 = var4;
-          while (ml.field_s.length > var12Lifetime5) {
-            var15_ref_String = ml.field_s[var12Lifetime5];
+          while (CipherPacketBuffer.field_s.length > var12Lifetime5) {
+            var15_ref_String = CipherPacketBuffer.field_s[var12Lifetime5];
             var16 = pb.field_C.c(var15_ref_String, var9, var10);
             if (var14 + var16 > var6 + var4) {
               break;

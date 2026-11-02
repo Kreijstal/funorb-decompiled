@@ -516,13 +516,13 @@ final class va extends hs {
             }
           }
         } else {
-          L16: {
+          regionExit1: {
             var7 = 15;
             if ((var4 != 0 ||
               var6 != 0) && (var3 != 0 ||
               var5 != 0)) {
               var7 = var7 * 200;
-              break L16;
+              break regionExit1;
             }
             var7 = var7 << 8;
           }

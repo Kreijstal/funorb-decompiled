@@ -81,9 +81,9 @@ final class uc extends tm {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gn var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
-        gn var3 = null;
+        IntrusiveNode var3 = null;
         tf var5 = null;
         var4 = Kickabout.field_G;
         try {
@@ -129,7 +129,7 @@ final class uc extends tm {
     }
 
     final static void a(long param0, int param1, int param2) {
-        ml var4 = or.field_d;
+        CipherPacketBuffer var4 = or.field_d;
         var4.b(param1, (byte) -94);
         var4.field_n = var4.field_n + 1;
         int var5 = var4.field_n;

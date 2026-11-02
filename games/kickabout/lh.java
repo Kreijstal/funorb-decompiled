@@ -43,7 +43,7 @@ final class lh extends tm {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        ml var5 = null;
+        CipherPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param2);
@@ -60,7 +60,7 @@ final class lh extends tm {
             return stackIn_10_0;
           }
           if (lf.a(param2, -64)) {
-            stackIn_13_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ah.field_m, new String[]{param2});
+            stackIn_13_0 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, GameAppletShell.field_m, new String[]{param2});
             return stackIn_13_0;
           }
           if (param1 <= bc.field_d &&
@@ -140,7 +140,7 @@ final class lh extends tm {
         }
     }
 
-    final static bc a(iw param0, int param1) {
+    final static bc a(PacketBuffer param0, int param1) {
         bc var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;

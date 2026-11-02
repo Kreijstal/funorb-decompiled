@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ma extends ah {
+abstract class ma extends GameAppletShell {
     private int field_p;
     private long field_v;
     String field_z;
@@ -123,7 +123,7 @@ abstract class ma extends ah {
         vg.b(vv.field_r, 31900);
         uv.a(127, this.field_x, this.field_A, this.field_s, this.field_B, param7, param1, 5000, oo.field_c, vv.field_r, this.field_v, this.field_u, 5000, this.field_z);
         js.a(this.field_z, param1, oo.field_c, vv.field_r, this.field_u, this.field_x, this.field_B, this.field_s, false);
-        ml.o(255);
+        CipherPacketBuffer.o(255);
         ag.field_f = aw.g((byte) 3);
         lp.a(ic.field_d, (byte) -64);
         no.field_F = param4;
@@ -272,7 +272,7 @@ abstract class ma extends ah {
                       if (var2 != 7) {
                         if (var2 != 8) {
                           if (16 == var2) {
-                            gn.c(-49);
+                            IntrusiveNode.c(-49);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {
@@ -476,7 +476,7 @@ abstract class ma extends ah {
           up.field_k = gu.a(false, no.field_F, 1, true, param0 ^ 127);
           hl.field_d = 2;
           kh.field_g = bw.field_b;
-          ht.field_b = gs.field_c;
+          IterableNodeHashTable.field_b = gs.field_c;
         }
         if (hl.field_d == 2) {
           if (qq.field_H != null &&
@@ -1060,7 +1060,7 @@ abstract class ma extends ah {
                       }
                     }
                     if (var12 != 0) {
-                      var31 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, aq.field_h, new String[]{Integer.toString(mi.field_d), Integer.toString(lh.field_E[var7][var9])});
+                      var31 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, IsaacRandom.field_h, new String[]{Integer.toString(mi.field_d), Integer.toString(lh.field_E[var7][var9])});
                       var21 = var31;
                       var21 = var31;
                       if (var21 != null) {
@@ -1199,7 +1199,7 @@ abstract class ma extends ah {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          iw var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Kickabout.field_G;
@@ -1284,7 +1284,7 @@ abstract class ma extends ah {
             bq.a((byte) 125, so.a(51));
           }
           if (var4 == 12) {
-            im.a(so.a(-85), 114, aq.c(71));
+            im.a(so.a(-85), 114, IsaacRandom.c(71));
           }
           if (13 == var4) {
             try {

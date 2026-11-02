@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hn extends gn {
+final class hn extends IntrusiveNode {
     static java.math.BigInteger field_h;
     int field_i;
     int[] field_g;
@@ -119,7 +119,7 @@ final class hn extends gn {
         return var7.toString();
     }
 
-    final void a(int param0, iw param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;

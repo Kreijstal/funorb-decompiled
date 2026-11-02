@@ -25,7 +25,7 @@ final class te {
     }
 
     final static void a(int param0, ii param1, byte param2) {
-        ml var5 = null;
+        CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = or.field_d;

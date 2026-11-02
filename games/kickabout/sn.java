@@ -11,7 +11,7 @@ final class sn {
     static String[] field_b;
     static String field_e;
     static hu field_i;
-    private iw field_d;
+    private PacketBuffer field_d;
     static String field_j;
     static Vector field_g;
     static byte[] field_c;
@@ -97,7 +97,7 @@ final class sn {
         }
     }
 
-    final iw a(boolean param0) {
+    final PacketBuffer a(boolean param0) {
         if (param0) {
           field_a = (hu) null;
           return this.field_d;

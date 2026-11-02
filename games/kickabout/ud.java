@@ -325,7 +325,7 @@ final class ud extends qt {
               ea.field_f.field_a == on.field_g) {
               if (null == uv.field_i) {
                 if (ow.field_b == null) {
-                  ml.c(false);
+                  CipherPacketBuffer.c(false);
                   if (param4) {
                     df.field_H = ub.field_B;
                   } else {
@@ -354,7 +354,7 @@ final class ud extends qt {
                     e.a(bf.field_u, param3, param2, param6, 92);
                   }
                   w.a(param2, param0, param6, param8, param5, param3, param1);
-                  e.a(bs.field_c, param3, param2, param6, 38);
+                  e.a(ClientException.field_c, param3, param2, param6, 38);
                   de.field_c = de.field_c + 1;
                   return;
                 }
@@ -418,7 +418,7 @@ final class ud extends qt {
               ea.field_f.field_a == on.field_g) {
               if (null == uv.field_i) {
                 if (ow.field_b == null) {
-                  ml.c(false);
+                  CipherPacketBuffer.c(false);
                   if (param4) {
                     df.field_H = ub.field_B;
                   } else {
@@ -447,7 +447,7 @@ final class ud extends qt {
                     e.a(bf.field_u, param3, param2, param6, 92);
                   }
                   w.a(param2, param0, param6, param8, param5, param3, param1);
-                  e.a(bs.field_c, param3, param2, param6, 38);
+                  e.a(ClientException.field_c, param3, param2, param6, 38);
                   de.field_c = de.field_c + 1;
                   return;
                 }
@@ -527,7 +527,7 @@ final class ud extends qt {
           }
         }
         w.a(param2, param0, param6, param8, param5, param3, param1);
-        e.a(bs.field_c, param3, param2, param6, 38);
+        e.a(ClientException.field_c, param3, param2, param6, 38);
         de.field_c = de.field_c + 1;
     }
 

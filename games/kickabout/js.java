@@ -20,7 +20,7 @@ abstract class js {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          iw.a(-94, param2);
+          PacketBuffer.a(-94, param2);
           on.b();
           t.c();
           t.b(on.field_g >> 1, 202);
@@ -203,8 +203,8 @@ abstract class js {
                 stackIn_54_0 = ((4 & var7) != 0);
                 fc.field_f = stackIn_54_0;
                 stackIn_57_0 = ((var7 & 8) != 0);
-                iw.field_l = stackIn_57_0;
-                if (iw.field_l) {
+                PacketBuffer.field_l = stackIn_57_0;
+                if (PacketBuffer.field_l) {
                   kb.field_C = true;
                 }
                 stackIn_62_0 = ((16 & var7) != 0);

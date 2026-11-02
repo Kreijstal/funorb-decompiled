@@ -161,7 +161,7 @@ final class pe {
 
     final static void a(eg param0, ut param1, int param2, int param3) {
         try {
-          iw.a(-51, param1);
+          PacketBuffer.a(-51, param1);
           on.b();
           if (param3 != 40) {
             int[] var5 = (int[]) null;

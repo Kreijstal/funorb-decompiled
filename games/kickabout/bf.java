@@ -453,7 +453,7 @@ final class bf extends hs {
             var5_int = this.field_a.field_i[this.field_h][var4Lifetime4];
             var6 = (this.field_t[var4Lifetime4].field_q >> 1) + this.field_t[var4Lifetime4].field_F;
             var7 = -16 + this.field_t[var4Lifetime4].field_T + this.field_t[var4Lifetime4].field_mb;
-            iw.a(67, ff.field_b);
+            PacketBuffer.a(67, ff.field_b);
             on.b();
             q.field_d.d(this.field_a.field_S[var5_int].toLowerCase(), on.field_g >> 1, -1 + on.field_f, 16777062, -1);
             ta.e(param0 + 116);

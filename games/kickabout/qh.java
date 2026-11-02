@@ -291,7 +291,7 @@ final class qh {
                 this.field_f.a(0, 56, 6, id.field_u);
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param4) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -307,7 +307,7 @@ final class qh {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var11 = (id.field_u[1] & 255) + (65280 & id.field_u[0] << 8);
                         var10 = (id.field_u[6] & 255) + (((id.field_u[5] & 255) << 8) + (16711680 & id.field_u[4] << 16));
@@ -323,7 +323,7 @@ final class qh {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var12 = ((id.field_u[4] & 255) << 8) + (255 & id.field_u[5]);
                         var13 = id.field_u[9] & 255;
@@ -451,7 +451,7 @@ final class qh {
           }
           var3 = je.field_k;
           var4 = 5 + var2 * 18;
-          L2: while (jh.field_Hb.field_Gb.field_mb - (-15 + jh.field_Hb.field_Db.field_J) > var4) {
+          scanLoop1: while (jh.field_Hb.field_Gb.field_mb - (-15 + jh.field_Hb.field_Db.field_J) > var4) {
             if (pu.field_Db[var3] > var2) {
               var5 = (cf) (var8.g(24009));
               while (var5 != null) {
@@ -473,10 +473,10 @@ final class qh {
               var2++;
               if (var6 == null) {
                 var5.h((byte) 104);
-                continue L2;
+                continue scanLoop1;
               }
               var5.a((byte) 59, var6);
-              continue L2;
+              continue scanLoop1;
             }
             break;
           }

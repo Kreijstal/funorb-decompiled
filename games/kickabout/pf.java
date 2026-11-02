@@ -13,7 +13,7 @@ abstract class pf {
     abstract void a(byte[] param0, int param1);
 
     final static void a(int param0, dl param1, byte param2) {
-        ml var4 = null;
+        CipherPacketBuffer var4 = null;
         try {
           int var3_int = -84 / ((param2 + 50) / 61);
           var4 = or.field_d;
@@ -39,7 +39,7 @@ abstract class pf {
         field_b = null;
     }
 
-    final static void a(iw param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;

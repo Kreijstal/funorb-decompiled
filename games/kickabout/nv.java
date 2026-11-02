@@ -35,7 +35,7 @@ final class nv extends wi {
           if (param1 == null) {
             return null;
           }
-          var3 = new cn(param1, aq.field_f, fc.field_g, ku.field_c, lo.field_j, lt.field_a, pq.field_O);
+          var3 = new cn(param1, IsaacRandom.field_f, fc.field_g, ku.field_c, lo.field_j, lt.field_a, pq.field_O);
           tk.h((byte) -92);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -207,7 +207,7 @@ final class nv extends wi {
     }
 
     final static void a(int param0, int param1) {
-        ml var2 = or.field_d;
+        CipherPacketBuffer var2 = or.field_d;
         var2.b(param0, (byte) -104);
         var2.a(106, 1);
         var2.a(117, 1);

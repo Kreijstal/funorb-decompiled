@@ -33,7 +33,7 @@ final class of {
         int var6 = 0;
         gg var7 = null;
         gg var8 = null;
-        ml var9 = null;
+        CipherPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = Kickabout.field_G;
         try {

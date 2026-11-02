@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class er extends gn {
+final class er extends IntrusiveNode {
     static int field_k;
     static byte[] field_h;
     static volatile boolean field_l;

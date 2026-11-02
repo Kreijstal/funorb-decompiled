@@ -48,7 +48,7 @@ final class nq extends i {
         }
     }
 
-    final static short[] a(short[] param0, ml param1, int param2, int param3) {
+    final static short[] a(short[] param0, CipherPacketBuffer param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

@@ -120,7 +120,7 @@ final class pu extends hd implements lv {
           } else {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
-            stackIn_8_5 = iw.field_m[param1];
+            stackIn_8_5 = PacketBuffer.field_m[param1];
           }
           stackIn_7_3[stackIn_7_4] = stackIn_8_5;
           var8 = new vn(stackIn_7_2, 2);

@@ -240,7 +240,7 @@ final class gm extends nl {
         }
         var2 = var2 + dq.$cfr$intArgs$a$7f8aad568c81(127, 2, ru.field_l);
         var3 = tq.h(-2521);
-        var4 = aq.a(true);
+        var4 = IsaacRandom.a(true);
         if (512 > Math.abs((this.field_M >> 16) - var3) &&
           Math.abs(-var4 + (this.field_w >> 16)) < 512) {
           var5 = ad.a(-var3 + (this.field_M >> 16), true, (this.field_w >> 16) - var4);
@@ -335,7 +335,7 @@ final class gm extends nl {
           var12 = this.field_N.b(0);
           var13 = this.field_N.a(15);
           var14 = new ut(var12, 10 * var8_ref_String__.length + 5 + var13 + 20);
-          iw.a(-64, var14);
+          PacketBuffer.a(-64, var14);
           this.field_N.a(var13 >> 1, 23, var12 >> 1);
           var15 = q.field_d;
           var16 = var13 + 11;
@@ -381,7 +381,7 @@ final class gm extends nl {
         if (!this.field_l && (1 == tb.field_v ||
           this.field_ab ||
           this.field_T)) {
-          iw.a(-88, kw.field_f);
+          PacketBuffer.a(-88, kw.field_f);
           on.b();
           var2 = (var2 << 7) / hw.field_i;
           this.a(var2, var8, 128, 190, (byte) -91);

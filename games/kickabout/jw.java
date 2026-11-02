@@ -207,7 +207,7 @@ final class jw extends hd {
         int stackIn_51_1 = 0;
         int var7Lifetime1;
         var3 = this.field_F + (this.field_q + this.field_zb >> 1);
-        sharedTailExit_0: {
+        regionExit1: {
           if (!this.field_lb) {
             stackIn_40_0 = 65793;
           } else {
@@ -248,7 +248,7 @@ final class jw extends hd {
               }
               stackIn_27_1 = (!this.field_Gb) ? 0 : 1;
               var6 = stackIn_24_0[stackIn_27_1];
-              break sharedTailExit_0;
+              break regionExit1;
             }
             stackIn_40_0 = 16777215;
           }

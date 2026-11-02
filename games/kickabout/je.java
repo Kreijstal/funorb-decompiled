@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class je extends gn {
+final class je extends IntrusiveNode {
     int[] field_r;
     static rd[] field_f;
     int field_j;
@@ -153,15 +153,15 @@ final class je extends gn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        iw var7 = null;
-        iw var8 = null;
+        PacketBuffer var7 = null;
+        PacketBuffer var8 = null;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
         int var4Lifetime4;
         try {
           this.field_l = param0;
-          var7 = new iw(param1);
+          var7 = new PacketBuffer(param1);
           var8 = var7;
           this.field_j = var8.h((byte) -116);
           this.field_r = new int[this.field_j];

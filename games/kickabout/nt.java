@@ -237,7 +237,7 @@ final class nt extends hd implements lv {
           var10 = sh.field_g;
           var10.c(-(var10.field_q >> 1) + var5, var6 - (var10.field_w >> 1));
           var8 = new ot(18, 13);
-          iw.a(param0 ^ -24576, var8);
+          PacketBuffer.a(param0 ^ -24576, var8);
           q.field_d.d("10", on.field_g >> 1, on.field_f - 2, -1, -1);
           eo.a(var8, -16711423);
           eo.a(var8, 1996554497);
@@ -254,9 +254,9 @@ final class nt extends hd implements lv {
     final static void a(int param0, sj param1, int param2, gq param3) {
         try {
           qt.field_l = nb.b((byte) 119) * param0 / 1000;
-          ah.a(param1, (byte) 60);
+          GameAppletShell.a(param1, (byte) 60);
           ou.a((byte) 49, param1);
-          ml.a(3, param1);
+          CipherPacketBuffer.a(3, param1);
           ip.a(false);
           fn.d((byte) -128);
           up.field_p = 0 - qt.field_l;

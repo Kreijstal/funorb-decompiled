@@ -99,8 +99,8 @@ final class kn extends i {
             var6.field_gb) {
             on.a(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
             on.f(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
-            qe.field_i[iw.field_e[var6.field_Bb]].c(64 + param1, param2 + 70);
-            un.field_d.d(kw.field_c[var6.field_Bb].toLowerCase(), (qe.field_i[iw.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
+            qe.field_i[PacketBuffer.field_e[var6.field_Bb]].c(64 + param1, param2 + 70);
+            un.field_d.d(kw.field_c[var6.field_Bb].toLowerCase(), (qe.field_i[PacketBuffer.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
             var7 = new String[16];
             var8 = un.field_d.a(lw.field_a[var6.field_Bb], new int[]{240}, var7);
             var9 = 0;

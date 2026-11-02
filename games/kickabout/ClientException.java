@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bs extends RuntimeException {
+final class ClientException extends RuntimeException {
     Throwable field_e;
     static np field_c;
     static sr field_a;
@@ -18,7 +18,7 @@ final class bs extends RuntimeException {
     public static void a(byte param0) {
         field_b = null;
         if (param0 > -50) {
-          bs.a((byte) 40);
+          ClientException.a((byte) 40);
           field_c = null;
           field_a = null;
           return;
@@ -71,12 +71,12 @@ final class bs extends RuntimeException {
           return;
         }
         ut[] var4 = (ut[]) null;
-        bs.a((ut[]) null, (byte) 5);
+        ClientException.a((ut[]) null, (byte) 5);
         tb.field_s = param0;
         ta.field_A = param2;
     }
 
-    bs(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_d = param1;
         this.field_e = param0;
     }

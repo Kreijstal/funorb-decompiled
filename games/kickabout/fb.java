@@ -167,7 +167,7 @@ final class fb extends cj {
         int var3 = Kickabout.field_G;
         kg[] var1 = new kg[io.field_l];
         for (var2 = 0; var2 < io.field_l; var2++) {
-          var1[var2] = new kg(kw.field_i, ai.field_J, aq.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], pq.field_O[var2], lt.field_a);
+          var1[var2] = new kg(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], pq.field_O[var2], lt.field_a);
         }
         if (param0 <= 78) {
           fb.n(-91);

@@ -229,13 +229,13 @@ class wj extends fd implements jp {
           if (!param0) {
             field_x = (int[]) null;
           }
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var9 != null) {
               stackOut_5_0 = var9.e((byte) -113);
               stackIn_16_0 = stackOut_5_0;
               stackIn_6_0 = stackOut_5_0;
               if (var10 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_6_0) {
                 if (var9.a(param0, param1 + this.field_g, param2, param3, param4, param5 + this.field_t, param6)) {
@@ -371,7 +371,7 @@ class wj extends fd implements jp {
             if (var7 == 0) {
               if (stackIn_11_0) {
                 var5 = new nw(this.field_y);
-                var5.a((byte) 104, (gn) (var4));
+                var5.a((byte) 104, (IntrusiveNode) (var4));
                 var6 = (fd) (var5.b((byte) 46));
                 while (var6 != null) {
                   stackOut_19_0 = var6.a(param0, 0);
@@ -703,11 +703,11 @@ class wj extends fd implements jp {
           }
           var9 = new StringBuilder(var7);
           var10 = 0;
-          L5: while (true) {
+          scanLoop1: while (true) {
             var11 = param3.indexOf(param0, var10);
             if (0 > var11) {
               if (var12 == 0) {
-                break L5;
+                break scanLoop1;
               }
             } else {
               discarded$0 = var9.append(param3.substring(var10, var11));
@@ -959,13 +959,13 @@ class wj extends fd implements jp {
           }
           var5 = new nw(this.field_y);
           var6_ref_fd = (fd) (var5.a((byte) -108));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var6_ref_fd != null) {
               stackOut_6_0 = var6_ref_fd.e((byte) -113);
               stackIn_20_0 = stackOut_6_0 ? 1 : 0;
               stackIn_7_0 = stackOut_6_0;
               if (var7 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_7_0) {
                 if (var6_ref_fd.b(52) &&
@@ -1088,13 +1088,13 @@ class wj extends fd implements jp {
           var8 = new nw(this.field_y);
           var9 = (fd) (var8.a((byte) 54));
           var10 = -61 % ((63 - param6) / 56);
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var9 != null) {
               stackOut_3_0 = var9.e((byte) -113);
               stackIn_19_0 = stackOut_3_0;
               stackIn_4_0 = stackOut_3_0;
               if (var11 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_4_0) {
                 if (var9.b(82) &&

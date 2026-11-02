@@ -87,7 +87,7 @@ final class il {
     final static String a(String param0, int param1, byte param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        ml var5 = null;
+        CipherPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;

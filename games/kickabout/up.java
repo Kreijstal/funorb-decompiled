@@ -130,8 +130,8 @@ final class up implements lv {
 
     final boolean c(int param0) {
         if (param0 != -2) {
-          iw var3 = (iw) null;
-          this.a(-56, (iw) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a(-56, (PacketBuffer) null);
         }
         if (this.field_q != -1) {
           return false;
@@ -147,7 +147,7 @@ final class up implements lv {
     }
 
     final static void a(int param0, int param1) {
-        ml var2 = or.field_d;
+        CipherPacketBuffer var2 = or.field_d;
         var2.b(param0, (byte) 85);
         var2.field_n = var2.field_n + 1;
         int var3 = var2.field_n;
@@ -159,7 +159,7 @@ final class up implements lv {
         var2.c(62, -var3 + var2.field_n);
     }
 
-    final void a(int param0, iw param1) {
+    final void a(int param0, PacketBuffer param1) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -364,7 +364,7 @@ final class up implements lv {
         d.a((byte) 127);
     }
 
-    final void a(byte param0, iw param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;

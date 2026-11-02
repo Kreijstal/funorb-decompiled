@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends gn {
+final class qm extends IntrusiveNode {
     byte[] field_e;
-    kc field_f;
+    IntrusiveNodeHashTable field_f;
 
     final void b() {
         int[] var1;
@@ -33,7 +33,7 @@ final class qm extends gn {
         if (this.field_f != null) {
           return;
         }
-        this.field_f = new kc(16);
+        this.field_f = new IntrusiveNodeHashTable(16);
         var20 = new int[16];
         var17 = var20;
         var1 = var17;
@@ -109,14 +109,14 @@ final class qm extends gn {
         if (var3 == null) {
           return null;
         }
-        return new qm(new iw(var3));
+        return new qm(new PacketBuffer(var3));
     }
 
     final void a() {
         this.field_f = null;
     }
 
-    private qm(iw param0) {
+    private qm(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -145,7 +145,7 @@ final class qm extends gn {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        iw stackIn_84_0 = null;
+        PacketBuffer stackIn_84_0 = null;
         int stackIn_84_1 = 0;
         int stackIn_85_2 = 0;
         int stackIn_91_0 = 0;
@@ -198,7 +198,7 @@ final class qm extends gn {
         int var48;
         int var49;
         int var50;
-        iw var51;
+        PacketBuffer var51;
         int var52;
         int var53;
         int var54;
@@ -419,7 +419,7 @@ final class qm extends gn {
         var50 = param0.field_n;
         param0.field_n = param0.field_n + var5 * 3;
         this.field_e = new byte[var4];
-        var51 = new iw(this.field_e);
+        var51 = new PacketBuffer(this.field_e);
         var51.b(-66, 1297377380);
         var51.b(-29, 6);
         stackIn_84_0 = var51;
@@ -429,7 +429,7 @@ final class qm extends gn {
         } else {
           stackIn_85_2 = 1;
         }
-        ((iw) (Object) stackIn_84_0).g(stackIn_84_1, stackIn_85_2);
+        ((PacketBuffer) (Object) stackIn_84_0).g(stackIn_84_1, stackIn_85_2);
         var51.g(-1207444472, var2);
         var51.g(-1207444472, var3);
         param0.field_n = var13Lifetime1;

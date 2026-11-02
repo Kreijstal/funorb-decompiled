@@ -116,16 +116,16 @@ final class rm extends qt {
           var15 = param3;
           q.field_d.a(var15, 35 + this.field_j, param8, param5, -1);
           var14 = Integer.toString(param0);
-          q.field_d.d(var14, ml.field_r[0] + this.field_j, param8, param5, -1);
+          q.field_d.d(var14, CipherPacketBuffer.field_r[0] + this.field_j, param8, param5, -1);
           var16 = 9999 > var13 ? Integer.toString(var13) : "9999+";
           var14Lifetime1 = var16;
-          q.field_d.d(var16, ml.field_r[1] + this.field_j, param8, param5, -1);
+          q.field_d.d(var16, CipherPacketBuffer.field_r[1] + this.field_j, param8, param5, -1);
           var17 = param4 + "%";
-          q.field_d.d(var17, this.field_j + ml.field_r[2], param8, param5, -1);
+          q.field_d.d(var17, this.field_j + CipherPacketBuffer.field_r[2], param8, param5, -1);
           var14Lifetime2 = param1 + "%";
-          q.field_d.d(var14Lifetime2, ml.field_r[3] + this.field_j, param8, param5, -1);
+          q.field_d.d(var14Lifetime2, CipherPacketBuffer.field_r[3] + this.field_j, param8, param5, -1);
           var18 = param6 + "%";
-          q.field_d.d(var18, this.field_j + ml.field_r[4], param8, param5, -1);
+          q.field_d.d(var18, this.field_j + CipherPacketBuffer.field_r[4], param8, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "rm.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -248,11 +248,11 @@ final class rm extends qt {
         }
         var3 = 99;
         var4 = 11184810;
-        q.field_d.d(wm.field_p, ml.field_r[0] + this.field_j, var3, var4, -1);
-        q.field_d.d(k.field_e, this.field_j + ml.field_r[1], var3, var4, -1);
-        q.field_d.d(mt.field_e, this.field_j + ml.field_r[2], var3, var4, -1);
-        q.field_d.d(ta.field_D, ml.field_r[3] + this.field_j, var3, var4, -1);
-        q.field_d.d(ku.field_e, ml.field_r[4] + this.field_j, var3, var4, -1);
+        q.field_d.d(wm.field_p, CipherPacketBuffer.field_r[0] + this.field_j, var3, var4, -1);
+        q.field_d.d(k.field_e, this.field_j + CipherPacketBuffer.field_r[1], var3, var4, -1);
+        q.field_d.d(mt.field_e, this.field_j + CipherPacketBuffer.field_r[2], var3, var4, -1);
+        q.field_d.d(ta.field_D, CipherPacketBuffer.field_r[3] + this.field_j, var3, var4, -1);
+        q.field_d.d(ku.field_e, CipherPacketBuffer.field_r[4] + this.field_j, var3, var4, -1);
         var3 = var3 + (q.field_d.field_G + 8);
         if (!ug.field_e.field_e) {
           var5 = uf.field_a;

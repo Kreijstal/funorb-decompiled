@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lq extends gn {
+abstract class lq extends IntrusiveNode {
     int field_g;
     lq field_f;
     dm field_h;

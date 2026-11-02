@@ -24,7 +24,7 @@ final class hh {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        iw var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -33,7 +33,7 @@ final class hh {
           if (param1 != -3) {
             hh.a((byte) 111);
           }
-          var9 = new iw(param0);
+          var9 = new PacketBuffer(param0);
           var3 = var9.h((byte) -107);
           var4 = var9.k(param1 + 7);
           if (var4 >= 0 && (jk.field_h == 0 ||

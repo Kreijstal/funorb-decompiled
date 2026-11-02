@@ -38,7 +38,7 @@ final class wr extends mo {
         field_g = null;
     }
 
-    final static int a(int param0, ml param1, int param2, int param3, int param4, int param5) {
+    final static int a(int param0, CipherPacketBuffer param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_4_0 = 0;
@@ -76,7 +76,7 @@ final class wr extends mo {
         }
     }
 
-    final void c(ml param0, int param1) {
+    final void c(CipherPacketBuffer param0, int param1) {
         try {
           this.field_k[0] = param0.l(3, 59);
           if (param1 != 2) {

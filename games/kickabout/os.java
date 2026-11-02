@@ -105,7 +105,7 @@ final class os {
           if (param0 > -32) {
             field_I = (ks) null;
           }
-          iw.field_g = new ut(wn.field_j.field_o << 1, wn.field_j.field_o << 1);
+          PacketBuffer.field_g = new ut(wn.field_j.field_o << 1, wn.field_j.field_o << 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ final class os {
           var21Lifetime2 = t.field_p;
           var22Lifetime2 = t.field_e;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_b > var23Lifetime2) {
               var24Lifetime2 = param0.field_f[var23Lifetime2];
@@ -264,7 +264,7 @@ final class os {
               if (var30 != 0) {
                 if (stackIn_56_0 < stackIn_56_1) {
                   stackIn_65_0 = pv.field_F.length;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -346,7 +346,7 @@ final class os {
                   }
                   stackIn_65_0 = pv.field_F.length;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_65_0 <= var18) {
                     break;

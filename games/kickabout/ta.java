@@ -11,7 +11,7 @@ abstract class ta extends qt {
     ta() {
     }
 
-    final static void a(iw param0, java.math.BigInteger param1, int param2, int param3, byte[] param4, int param5, java.math.BigInteger param6) {
+    final static void a(PacketBuffer param0, java.math.BigInteger param1, int param2, int param3, byte[] param4, int param5, java.math.BigInteger param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -45,7 +45,7 @@ abstract class ta extends qt {
           }
           if (df.field_I == null ||
             !(df.field_I.field_f.length >= var7_int)) {
-            df.field_I = new iw(var7_int);
+            df.field_I = new PacketBuffer(var7_int);
           }
           df.field_I.field_n = 0;
           df.field_I.a(param3, param2, 1991220144, param4);
@@ -53,7 +53,7 @@ abstract class ta extends qt {
           df.field_I.a(var13, (byte) 53);
           if (uf.field_c == null ||
             !(uf.field_c.field_f.length >= 100)) {
-            uf.field_c = new iw(100);
+            uf.field_c = new PacketBuffer(100);
           }
           uf.field_c.field_n = 0;
           uf.field_c.a(111, param5);
@@ -104,7 +104,7 @@ abstract class ta extends qt {
         super.a(param0 + param0, param1, param2);
         ic.field_h.a(tu.field_E, (byte) 120);
         da.field_h.b(22997);
-        kc.a(ic.field_h.field_x, 415422632);
+        IntrusiveNodeHashTable.a(ic.field_h.field_x, 415422632);
     }
 
     final static void e(int param0) {
@@ -114,7 +114,7 @@ abstract class ta extends qt {
         }
         if (param0 < 116) {
           java.math.BigInteger var2 = (java.math.BigInteger) null;
-          ta.a((iw) null, (java.math.BigInteger) null, -77, 44, (byte[]) null, -52, (java.math.BigInteger) null);
+          ta.a((PacketBuffer) null, (java.math.BigInteger) null, -77, 44, (byte[]) null, -52, (java.math.BigInteger) null);
         }
         on.a(var1.field_h, var1.field_g, var1.field_j);
         on.e(var1.field_e, var1.field_l, var1.field_i, var1.field_f);

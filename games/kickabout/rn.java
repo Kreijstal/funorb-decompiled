@@ -38,7 +38,7 @@ final class rn {
 
     final static String a(String param0, int param1, int param2, String param3) {
         RuntimeException var4 = null;
-        ml var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         gg var7 = null;
         CharSequence var8 = null;

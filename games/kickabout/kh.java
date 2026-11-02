@@ -99,7 +99,7 @@ final class kh {
           stackIn_2_3 = true;
           stackIn_3_4 = !(param3);
           var7 = (eg) (((dd) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
-          iw.a(102, vf.field_F);
+          PacketBuffer.a(102, vf.field_F);
           on.b();
           t.c();
           if (wr.field_l == 3) {

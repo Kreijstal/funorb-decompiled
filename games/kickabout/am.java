@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class am extends gn {
+class am extends IntrusiveNode {
     am field_f;
     am field_e;
     long field_l;

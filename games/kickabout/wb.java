@@ -130,7 +130,7 @@ final class wb extends hs {
         RuntimeException var8 = null;
         try {
           if (kd.field_z.field_sb != 0 &&
-            !iw.field_l) {
+            !PacketBuffer.field_l) {
             if (!kb.field_C) {
               vg.field_Wb = true;
             } else {

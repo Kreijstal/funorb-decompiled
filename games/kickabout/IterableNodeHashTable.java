@@ -3,16 +3,16 @@
  */
 import java.util.*;
 
-final class ht implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static sj field_c;
-    gn[] field_e;
+    IntrusiveNode[] field_e;
     static String field_a;
-    private gn field_f;
+    private IntrusiveNode field_f;
     static sj field_b;
     int field_d;
 
-    final void a(gn param0, int param1, long param2) {
-        gn var5 = null;
+    final void a(IntrusiveNode param0, int param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param0.field_b) {
             param0.c((byte) -109);
@@ -31,13 +31,13 @@ final class ht implements Iterable {
         }
     }
 
-    final gn a(long param0, byte param1) {
-        gn var4;
-        gn var5;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
         var6 = Kickabout.field_G;
         if (param1 < 1) {
-          return (gn) null;
+          return (IntrusiveNode) null;
         }
         var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_d))];
         this.field_f = var4.field_d;
@@ -488,14 +488,14 @@ final class ht implements Iterable {
         return;
     }
 
-    ht(int param0) {
+    IterableNodeHashTable(int param0) {
         int var2 = 0;
-        gn dupTemp$0 = null;
-        gn var3 = null;
-        this.field_e = new gn[param0];
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
+        this.field_e = new IntrusiveNode[param0];
         this.field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new gn();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_e[var2] = dupTemp$0;
           var3.field_d = var3;

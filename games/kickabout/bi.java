@@ -10,13 +10,13 @@ abstract class bi {
     o field_b;
     o field_c;
     o field_j;
-    iw field_d;
+    PacketBuffer field_d;
     int field_f;
     long field_p;
     volatile int field_l;
     volatile int field_o;
     byte field_g;
-    iw field_n;
+    PacketBuffer field_n;
     ui field_k;
 
     final int b(int param0) {
@@ -172,11 +172,11 @@ abstract class bi {
         this.field_b = new o();
         this.field_c = new o();
         this.field_j = new o();
-        this.field_d = new iw(6);
+        this.field_d = new PacketBuffer(6);
         this.field_g = (byte) 0;
         this.field_o = 0;
         this.field_l = 0;
-        this.field_n = new iw(10);
+        this.field_n = new PacketBuffer(10);
     }
 
     static {

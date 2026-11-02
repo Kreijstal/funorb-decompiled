@@ -71,20 +71,20 @@ final class eh implements pk {
         mf.h((byte) -19);
         up.e(-1456);
         sj var16 = kh.field_g;
-        sj var17 = ht.field_b;
-        if (null != ht.field_c &&
+        sj var17 = IterableNodeHashTable.field_b;
+        if (null != IterableNodeHashTable.field_c &&
           null != d.field_b) {
-          ml.k(61, 0);
+          CipherPacketBuffer.k(61, 0);
           if (null == sr.field_h) {
-            it.a(new rj(ht.field_c, d.field_b), d.field_b, (byte) -100);
+            it.a(new rj(IterableNodeHashTable.field_c, d.field_b), d.field_b, (byte) -100);
           }
           d.field_b = null;
-          ht.field_c = null;
+          IterableNodeHashTable.field_c = null;
           dd.a((byte) 49);
           return false;
         }
         if (ni.field_i != null) {
-          ml.k(61, 1);
+          CipherPacketBuffer.k(61, 1);
           f.a(ni.field_i, (byte) -122);
           ni.field_i = null;
           dd.a((byte) 53);
@@ -94,7 +94,7 @@ final class eh implements pk {
           return false;
         }
         if (v.field_b != null) {
-          ml.k(61, 2);
+          CipherPacketBuffer.k(61, 2);
           eo.field_q = wa.a((byte) 124, "lobby", bo.field_Cb, "logo");
           eo.field_p = se.a(bo.field_Cb, -28, "lobby", "time");
           eo.field_j = se.a(bo.field_Cb, -121, "lobby", "tournament_icons");
@@ -108,7 +108,7 @@ final class eh implements pk {
           q.field_d = qk.a("font", v.field_b, 75, "fonts", bo.field_Cb);
           pb.field_C = qk.a("", var17, 105, "arialish12", var16);
           var4 = new ut(16, 9);
-          iw.a(-64, var4);
+          PacketBuffer.a(-64, var4);
           on.d(4, 4, 3, 7829367);
           on.d(4, 4, 2, 13421772);
           ta.e(122);
@@ -120,7 +120,7 @@ final class eh implements pk {
           sh.field_g = nh.b(nh.a(var6));
           nn.field_B = (ot) (bg.a("menu", bo.field_Cb, (byte) 69, "divider"));
           tt.field_e = wa.a((byte) 122, "menu", bo.field_Cb, "button_left_shine");
-          ah.field_l = wa.a((byte) 106, "menu", bo.field_Cb, "button_middle_shine");
+          GameAppletShell.field_l = wa.a((byte) 106, "menu", bo.field_Cb, "button_middle_shine");
           sk.a(-109, 100, 20);
           cg.field_K = wa.a((byte) 107, "menu", bo.field_Cb, "button_right_shine");
           kh.field_r = wa.a((byte) 116, "menu", bo.field_Cb, "button_small_shine");
@@ -164,7 +164,7 @@ final class eh implements pk {
           mf.a(se.a(bo.field_Cb, -124, "menu", "tickbox"), true);
           sk.a(80, 100, 75);
           eq.field_h = (ot) (bg.a("menu", bo.field_Cb, (byte) 93, "hammer_icon"));
-          ml.field_q = (ot) (bg.a("menu", bo.field_Cb, (byte) 89, "hammer_icon_buy"));
+          CipherPacketBuffer.field_q = (ot) (bg.a("menu", bo.field_Cb, (byte) 89, "hammer_icon_buy"));
           sk.a(113, 100, 70);
           qj.field_f = bg.a("menu", bo.field_Cb, (byte) 60, "tactics_pitch");
           fc.field_h = (ot) (bg.a("menu", bo.field_Cb, (byte) 109, "lock_icon"));
@@ -197,7 +197,7 @@ final class eh implements pk {
           return false;
         }
         if (sj.field_f != null) {
-          ml.k(61, 3);
+          CipherPacketBuffer.k(61, 3);
           cq.field_j = new ut(sj.field_f.a("background_guy.png", "", 36), (java.awt.Component) ((Object) ln.l(64)));
           mk.field_a = new ut(sj.field_f.a("background.png", "", 66), (java.awt.Component) ((Object) ln.l(64)));
           iu.field_k = new ut(sj.field_f.a("splash.jpg", "", 8), (java.awt.Component) ((Object) ln.l(64)));
@@ -244,14 +244,14 @@ final class eh implements pk {
           return false;
         }
         if (b.field_H != null) {
-          ml.k(61, 4);
+          CipherPacketBuffer.k(61, 4);
           ee.a(new ks(b.field_H.a("huffman", "", 93)), false);
           b.field_H = null;
           dd.a((byte) 78);
           return false;
         }
         if (null != Kickabout.field_J) {
-          ml.k(61, 5);
+          CipherPacketBuffer.k(61, 5);
           ap.a((byte) -34, Kickabout.field_J);
           Kickabout.field_J = null;
           dd.a((byte) 81);
@@ -260,7 +260,7 @@ final class eh implements pk {
         if (nt.field_Bb == null) {
           return true;
         }
-        ml.k(61, 6);
+        CipherPacketBuffer.k(61, 6);
         rf.a(20113, vu.field_Eb, gd.field_h, nt.field_Bb);
         nt.field_Bb = null;
         vu.field_Eb = null;
@@ -502,15 +502,15 @@ final class eh implements pk {
         int var5;
         var5 = Kickabout.field_G;
         nm.a(0, -76, false, dq.$cfr$intArgs$a$7f8aad568c81(79, 3, new Random()));
-        ml.k(param0 ^ 12774, 7);
+        CipherPacketBuffer.k(param0 ^ 12774, 7);
         t.a(0.6000000238418579f);
         g.b(false);
         fn.i(18);
         ii.b(65280);
-        ml.k(61, 8);
+        CipherPacketBuffer.k(61, 8);
         td.b(param0 - 12854);
         sk.a(118, 2, 1);
-        ml.k(61, 9);
+        CipherPacketBuffer.k(61, 9);
         sk.a(84, 6, 1);
         eo.a();
         sk.a(-46, 6, 2);
@@ -520,7 +520,7 @@ final class eh implements pk {
         cm.l(96);
         sk.a(-49, 6, 5);
         tu.n((byte) -10);
-        ml.k(61, 10);
+        CipherPacketBuffer.k(61, 10);
         wb.b((byte) -47);
         rf.a((byte) -124);
         sk.a(127, 4, 1);
@@ -531,7 +531,7 @@ final class eh implements pk {
         b.field_U = (ut[]) ((Object) new ot[kb.field_E.length]);
         for (var2 = 0; var2 < kb.field_E.length; var2++) {
           var3 = new ot(40, 40);
-          iw.a(-100, var3);
+          PacketBuffer.a(-100, var3);
           kb.field_E[var2].c(0, 0);
           ta.e(param0 - 12637);
           for (var4 = 0; var3.field_y.length > var4; var4++) {
@@ -543,7 +543,7 @@ final class eh implements pk {
           var3.a(2130706432);
           b.field_U[var2] = (ut) ((Object) nh.b(var3));
         }
-        ml.k(61, 11);
+        CipherPacketBuffer.k(61, 11);
         if (param0 != 12763) {
           return;
         }
@@ -551,7 +551,7 @@ final class eh implements pk {
         mj.a(256.0, 60, (double)nv.field_E[ew.field_a], (double)qt.field_r[ew.field_a]);
         gg.h((byte) 51);
         jm.a(-5, false, -2);
-        ml.k(61, 12);
+        CipherPacketBuffer.k(61, 12);
         sk.a(-71, 4, 1);
         nr.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, pb.field_C, un.field_d, new nk(), 20, 16777215, 30, new pa(true), 16777215, 9, new pa(false), 16777215);
         sk.a(-57, 4, 2);
@@ -559,7 +559,7 @@ final class eh implements pk {
         sk.a(75, 4, 3);
         cm.a(param0 ^ 922092267, 50);
         Kickabout.t(param0 - 826888154);
-        ml.k(61, 13);
+        CipherPacketBuffer.k(61, 13);
         oa.a(false, new md());
         oa.a(false, new tr());
         oa.a(false, new w());
@@ -572,7 +572,7 @@ final class eh implements pk {
         int var3_int = 0;
         ti var4 = null;
         int var7 = 0;
-        iw var8 = null;
+        PacketBuffer var8 = null;
         ue var9 = null;
         ue var10 = null;
         byte[] var14 = null;
@@ -639,7 +639,7 @@ final class eh implements pk {
         id.field_y = dh.a((byte) -128, 11);
         bo.field_Cb = dh.a((byte) -128, 5);
         v.field_b = dh.a((byte) -125, 6);
-        ht.field_c = dh.a((byte) -127, 7);
+        IterableNodeHashTable.field_c = dh.a((byte) -127, 7);
         d.field_b = dh.a((byte) -128, 8);
         vp.field_j = dh.a((byte) -127, 9);
         ni.field_i = dh.a((byte) -127, 10);
@@ -652,7 +652,7 @@ final class eh implements pk {
         gd.field_h = dh.a((byte) -126, 16);
         sj.field_f = dh.a((byte) -126, 17);
         sj var4 = kh.field_g;
-        sj var3 = ht.field_b;
+        sj var3 = IterableNodeHashTable.field_b;
         mp.field_h = new qe(55);
         mp.field_h.a(var4, bh.field_q, -6869, "basic", nu.field_M);
         mp.field_h.a(sj.field_f, bh.field_q, -6869, "", nu.field_M);
@@ -677,7 +677,7 @@ final class eh implements pk {
           mp.field_h.a(bo.field_Cb, h.field_d, param0 - 14181, "street", nu.field_M);
           mp.field_h.a(bo.field_Cb, h.field_d, -6869, "beach_surface0", nu.field_M);
         }
-        mp.field_h.a(ht.field_c, (byte) -115, us.field_f, qj.field_c);
+        mp.field_h.a(IterableNodeHashTable.field_c, (byte) -115, us.field_f, qj.field_c);
         mp.field_h.a(qj.field_c, d.field_b, -100);
         mp.field_h.a(vp.field_j, (byte) -109, fw.field_H, ej.field_yb);
         mp.field_h.a(ni.field_i, (byte) -123, fw.field_H, ej.field_yb);

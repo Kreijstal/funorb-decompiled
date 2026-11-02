@@ -26,7 +26,7 @@ final class rc {
         this(-1, 1000000, 1000000);
     }
 
-    final void a(int param0, iw param1, byte[] param2) {
+    final void a(int param0, PacketBuffer param1, byte[] param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;

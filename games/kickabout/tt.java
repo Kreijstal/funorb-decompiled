@@ -29,7 +29,7 @@ final class tt {
         int stackIn_61_1 = 0;
         gg stackIn_61_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ml var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -151,7 +151,7 @@ final class tt {
           var6Lifetime1.field_Gb = var4_ref_StringLifetime1;
           var6Lifetime1.c((byte) -109);
           var7_ref = (gg) (ne.field_I.g(24009));
-          L17: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != var7_ref) {
               stackIn_61_0 = var7_ref;
@@ -166,7 +166,7 @@ final class tt {
             }
             if (decompiledFrameRemainder0) {
               if (null == var7_ref) {
-                break L17;
+                break scanLoop1;
               }
               stackIn_61_0 = var7_ref;
               stackIn_61_1 = 16737894;
@@ -204,7 +204,7 @@ final class tt {
             stackIn_5_0 = null;
             return (uo) (stackIn_5_0);
           }
-          var2 = new uo(param1, aq.field_f, fc.field_g, ku.field_c, lo.field_j, pq.field_O);
+          var2 = new uo(param1, IsaacRandom.field_f, fc.field_g, ku.field_c, lo.field_j, pq.field_O);
           tk.h((byte) -82);
           stackIn_7_0 = var2;
           return stackIn_7_0;

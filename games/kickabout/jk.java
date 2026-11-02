@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jk extends gn {
+final class jk extends IntrusiveNode {
     private int[] field_q;
     byte[] field_p;
     static int[] field_g;
@@ -289,7 +289,7 @@ final class jk extends gn {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        iw var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         gl var40 = null;
         byte[] var41 = null;
@@ -374,7 +374,7 @@ final class jk extends gn {
           this.field_k = new byte[128];
           this.field_q = new int[128];
           this.field_r = new short[128];
-          var38 = new iw(param0);
+          var38 = new PacketBuffer(param0);
           for (var3 = 0; 0 != var38.field_f[var3 + var38.field_n]; var3++) {
           }
           var55 = new byte[var3];

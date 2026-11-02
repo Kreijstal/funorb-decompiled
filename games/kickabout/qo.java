@@ -79,7 +79,7 @@ final class qo extends jd {
         int var4 = Kickabout.field_G;
         ut var6 = new ut(108, 108);
         int var3Lifetime1;
-        iw.a(-110, var6);
+        PacketBuffer.a(-110, var6);
         on.d(54, 54, 51, 204);
         for (var2_int = 43; var2_int > 0; var2_int--) {
           var3 = 119 * var2_int / 43 + 34;
@@ -90,7 +90,7 @@ final class qo extends jd {
         }
         ta.e(param0 ^ -22987);
         ot var2 = new ot(54, 54);
-        iw.a(param0 ^ -23017, var2);
+        PacketBuffer.a(param0 ^ -23017, var2);
         var6.f(0, 0);
         ta.e(125);
         int var5 = 0;
@@ -145,7 +145,7 @@ final class qo extends jd {
 
     final static boolean a(boolean param0, byte param1) {
         try {
-          ml var2_ref_ml = null;
+          CipherPacketBuffer var2_ref_ml = null;
           if (wt.field_A == null) {
             wt.field_A = vl.field_c.a(true, uc.field_E, rl.field_o);
           }

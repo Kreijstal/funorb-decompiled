@@ -657,7 +657,7 @@ final class ob extends tj {
           var2 = (var2 << 8) / hw.field_i;
           this.a(300, var3, var4, var2, 300);
         } else {
-          iw.a(-115, kw.field_f);
+          PacketBuffer.a(-115, kw.field_f);
           on.b();
           var2 = (var2 << 7) / hw.field_i;
           this.a(300, 64, 64, var2, 300);

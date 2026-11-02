@@ -187,7 +187,7 @@ final class tb extends bi {
                       stackIn_61_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_61_0;
                       this.field_k = var14_ref;
-                      this.field_k.field_v = new iw(var15 + var9 + this.field_k.field_x);
+                      this.field_k.field_v = new PacketBuffer(var15 + var9 + this.field_k.field_x);
                       this.field_k.field_v.a(110, var10);
                       this.field_k.field_v.b(-125, var9);
                       this.field_k.field_u = 10;
@@ -436,7 +436,7 @@ final class tb extends bi {
     private final void a(boolean param0, boolean param1) {
         try {
           IOException iOException = null;
-          iw stackIn_5_0 = null;
+          PacketBuffer stackIn_5_0 = null;
           int stackIn_5_1 = 0;
           int stackIn_6_2 = 0;
           Throwable decompiledCaughtException = null;
@@ -453,7 +453,7 @@ final class tb extends bi {
             } else {
               stackIn_6_2 = 3;
             }
-            ((iw) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
+            ((PacketBuffer) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
             this.field_d.b((byte) 89, 0L);
             this.field_x.a(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
           } catch (java.io.IOException decompiledCaughtParameter0) {

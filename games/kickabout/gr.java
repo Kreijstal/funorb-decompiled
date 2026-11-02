@@ -130,7 +130,7 @@ final class gr {
         cq var4 = null;
         pt var5 = null;
         int var6 = 0;
-        iw var7 = null;
+        PacketBuffer var7 = null;
         pt var8 = null;
         up var9 = null;
         int var3_intLifetime1;
@@ -187,8 +187,8 @@ final class gr {
             this.field_J[var3_intLifetime2] = param0.field_J[var3_intLifetime2];
           }
           if (param1 < 12) {
-            var7 = (iw) null;
-            this.a(63, (iw) null, 110);
+            var7 = (PacketBuffer) null;
+            this.a(63, (PacketBuffer) null, 110);
           }
           this.field_B = param0.field_B;
           this.field_H = param0.field_H;
@@ -1124,7 +1124,7 @@ final class gr {
         return false;
     }
 
-    final void a(int param0, iw param1, int param2) {
+    final void a(int param0, PacketBuffer param1, int param2) {
         boolean stackIn_57_1 = false;
         boolean stackIn_63_1 = false;
         RuntimeException stackIn_67_0 = null;

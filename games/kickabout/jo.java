@@ -85,7 +85,7 @@ final class jo extends tm {
           eq.a(0);
           g.field_a.b(0, param0);
           if (null != la.field_a) {
-            if (iw.field_l) {
+            if (PacketBuffer.field_l) {
               la.field_a.a(g.field_a.field_T, 31947, g.field_a.field_F, param0);
             } else {
               la.field_a = null;
@@ -160,7 +160,7 @@ final class jo extends tm {
     }
 
     final static boolean a(tf param0, boolean param1) {
-        gn var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         RuntimeException stackIn_16_0 = null;

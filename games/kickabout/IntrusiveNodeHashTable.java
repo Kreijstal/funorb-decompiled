@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kc {
-    private gn field_e;
+final class IntrusiveNodeHashTable {
+    private IntrusiveNode field_e;
     private int field_a;
-    private gn[] field_d;
-    private gn field_c;
+    private IntrusiveNode[] field_d;
+    private IntrusiveNode field_c;
     static String field_f;
     private int field_b;
     static ut[] field_g;
 
-    final gn b(int param0) {
+    final IntrusiveNode b(int param0) {
         this.field_a = param0;
         return this.a(-1);
     }
 
-    final void a(gn param0, int param1, long param2) {
-        gn var5 = null;
+    final void a(IntrusiveNode param0, int param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
           if (param0.field_b != null) {
             param0.c((byte) -109);
@@ -33,10 +33,10 @@ final class kc {
         }
     }
 
-    final gn a(boolean param0, long param1) {
-        gn var5 = null;
+    final IntrusiveNode a(boolean param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = Kickabout.field_G;
-        gn var4 = this.field_d[(int)(param1 & (long)(this.field_b - 1))];
+        IntrusiveNode var4 = this.field_d[(int)(param1 & (long)(this.field_b - 1))];
         this.field_c = var4.field_d;
         while (this.field_c != var4) {
           if (param1 == this.field_c.field_a) {
@@ -50,7 +50,7 @@ final class kc {
         if (param0) {
           return null;
         }
-        this.field_c = (gn) null;
+        this.field_c = (IntrusiveNode) null;
         return null;
     }
 
@@ -66,8 +66,8 @@ final class kc {
 
     final void a(boolean param0) {
         int var2 = 0;
-        gn var3 = null;
-        gn var4 = null;
+        IntrusiveNode var3 = null;
+        IntrusiveNode var4 = null;
         int var5 = Kickabout.field_G;
         if (!param0) {
           return;
@@ -94,9 +94,9 @@ final class kc {
         }
     }
 
-    final gn a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$0 = 0;
-        gn var2;
+        IntrusiveNode var2;
         int var3;
         var3 = Kickabout.field_G;
         if (0 < this.field_a &&
@@ -172,15 +172,15 @@ final class kc {
         }
     }
 
-    kc(int param0) {
+    IntrusiveNodeHashTable(int param0) {
         int var2 = 0;
-        gn dupTemp$0 = null;
-        gn var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_a = 0;
-        this.field_d = new gn[param0];
+        this.field_d = new IntrusiveNode[param0];
         this.field_b = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new gn();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_d[var2] = dupTemp$0;
           var3.field_b = var3;

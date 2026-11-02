@@ -19,7 +19,7 @@ final class kp {
     int field_h;
 
     final static void a(int param0, int param1) {
-        gn var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ii var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -107,7 +107,7 @@ final class kp {
         }
     }
 
-    final void a(byte param0, ml param1) {
+    final void a(byte param0, CipherPacketBuffer param1) {
         int var4 = 0;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_21_0 = null;

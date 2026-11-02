@@ -198,7 +198,7 @@ final class el extends tm {
             stackIn_31_0 = oh.b(-14954) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&
-            !iw.field_l) {
+            !PacketBuffer.field_l) {
             return;
           }
           la.field_a = new ib(0, 0, 0, 0);

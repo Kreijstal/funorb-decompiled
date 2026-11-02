@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class us extends gn {
+final class us extends IntrusiveNode {
     static String field_f;
     static String field_g;
     static int field_j;

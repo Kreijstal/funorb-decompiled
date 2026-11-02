@@ -122,7 +122,7 @@ final class pq extends i {
               pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
-            pb.field_C.d(iw.field_j, 315 + param1, 245 + param2, 16777215, -1);
+            pb.field_C.d(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
           }
           if (!cq.e(15137)) {
             if (this.field_H.field_Fb == -1) {
@@ -181,7 +181,7 @@ final class pq extends i {
             }
             return;
           }
-          pb.field_C.d(iw.field_j, 315 + param1, 245 + param2, 16777215, -1);
+          pb.field_C.d(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
         }
         if (!cq.e(15137)) {
           if (this.field_H.field_Fb == -1) {

@@ -155,13 +155,13 @@ final class dt {
             t.a(this.field_d, var7 + this.field_d, this.field_d + var5, this.field_b, -var6 + this.field_b, -var4 + this.field_b, 4487082);
             t.a(this.field_d, var9 + this.field_d, this.field_d + var5, this.field_b, this.field_b - var8, -var4 + this.field_b, 85);
           } else {
-            iw.a(param0 + 112, fd.field_e);
+            PacketBuffer.a(param0 + 112, fd.field_e);
             on.b();
             t.c();
             t.a(ga.field_P, ga.field_P + (var7 << 1), (var5 << 1) + ga.field_P, ga.field_P, -(var6 << 1) + ga.field_P, ga.field_P - (var4 << 1), -16777216);
             t.a(ga.field_P, ga.field_P + (var9 << 1), (var5 << 1) + ga.field_P, ga.field_P, ga.field_P - (var8 << 1), -(var4 << 1) + ga.field_P, -16777216);
             ta.e(param0 + 116);
-            iw.a(param0 ^ 68, ga.field_N);
+            PacketBuffer.a(param0 ^ 68, ga.field_N);
             on.b();
             t.c();
             t.b(ga.field_P, ga.field_P);

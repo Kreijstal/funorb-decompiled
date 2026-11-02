@@ -85,7 +85,7 @@ final class tk extends hd {
         ku.field_c = null;
         lt.field_a = null;
         pq.field_O = (byte[][]) null;
-        aq.field_f = null;
+        IsaacRandom.field_f = null;
         fc.field_g = null;
         lo.field_j = null;
         if (param0 >= -69) {

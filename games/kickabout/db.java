@@ -29,7 +29,7 @@ final class db {
     db(byte[] param0, je param1) {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
-        iw var4 = null;
+        PacketBuffer var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -39,14 +39,14 @@ final class db {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        iw var14 = null;
+        PacketBuffer var14 = null;
         int var9Lifetime1;
         this.field_i = -1;
         this.field_e = null;
         this.field_e = param1;
         try {
-          var14 = new iw(param0);
-          var4 = new iw(param0);
+          var14 = new PacketBuffer(param0);
+          var4 = new PacketBuffer(param0);
           var14.h((byte) -126);
           var14.field_n = var14.field_n + 2;
           var5 = var14.h((byte) -112);

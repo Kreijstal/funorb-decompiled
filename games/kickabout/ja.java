@@ -383,13 +383,13 @@ final class ja extends ta {
         var2 = this.field_U;
         var3 = null;
         var4 = 0;
-        L2: while (true) {
+        scanLoop1: while (true) {
           if (var4 < 9) {
             var5 = ic.field_h.field_i[ic.field_h.field_q[var4]];
             if (!var5.c(param0 ^ 3)) {
               if (var2 == 0) {
                 var3 = var5;
-                break L2;
+                break scanLoop1;
               }
               var2--;
             }

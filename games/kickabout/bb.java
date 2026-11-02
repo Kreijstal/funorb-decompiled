@@ -342,7 +342,7 @@ final class bb extends hd {
         if (var5 <= 0) {
           return false;
         }
-        if (var5 == ml.field_v) {
+        if (var5 == CipherPacketBuffer.field_v) {
           var5 = 63;
         }
         for (var7 = 0; this.field_Hb.length > var7; var7++) {

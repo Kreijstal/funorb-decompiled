@@ -66,7 +66,7 @@ final class jg extends ct {
             if (kp.field_m == null) {
               kp.field_m = new ut(var7.field_o + 8, var7.field_v + 8);
             }
-            iw.a(-56, kp.field_m);
+            PacketBuffer.a(-56, kp.field_m);
             on.b();
             var7.c(4, 4);
             nh.a(kp.field_m, 0.0, 1.3, 1.2);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class iw extends gn {
+class PacketBuffer extends IntrusiveNode {
     byte[] field_f;
     static int[] field_e;
     static vn[] field_m;
@@ -478,7 +478,7 @@ class iw extends gn {
         field_m = null;
         if (param0 != 88) {
           he var2 = (he) null;
-          iw.a((byte) 23, (he) null);
+          PacketBuffer.a((byte) 23, (he) null);
         }
     }
 
@@ -658,7 +658,7 @@ class iw extends gn {
         throw new IllegalArgumentException();
     }
 
-    iw(int param0) {
+    PacketBuffer(int param0) {
         this.field_n = 0;
         this.field_f = un.a(param0, false);
     }
@@ -839,7 +839,7 @@ class iw extends gn {
         return -32768 + this.a((byte) 81);
     }
 
-    iw(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
           this.field_f = param0;
           this.field_n = 0;

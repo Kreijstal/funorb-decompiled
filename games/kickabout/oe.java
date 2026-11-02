@@ -218,7 +218,7 @@ final class oe extends mo {
         field_g = null;
     }
 
-    final void a(int param0, ml param1) {
+    final void a(int param0, CipherPacketBuffer param1) {
         int var3_int = 0;
         int var5 = Kickabout.field_G;
         try {
@@ -250,7 +250,7 @@ final class oe extends mo {
         var3 = Kickabout.field_G;
         var4 = new StringBuilder("AgentTeamSelection\t ready=");
         var1 = var4;
-        gn.a(this.field_o, -28745, this.field_i, var1);
+        IntrusiveNode.a(this.field_o, -28745, this.field_i, var1);
         StringBuilder discarded$74 = var1.append("\tselection=[");
         for (var2 = 0; var2 < this.field_k.length; var2++) {
           if (this.field_k[var2] >= 0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hr extends gn {
+final class hr extends IntrusiveNode {
     static String field_f;
     int field_i;
     int field_j;
@@ -116,7 +116,7 @@ final class hr extends gn {
               ou.field_B = hw.field_i;
               var2_intLifetime1 = var15.field_o * hw.field_i >> 8;
               var3Lifetime1 = hw.field_i * var15.field_v >> 8;
-              iw.a(param0 ^ 10, ja.field_S);
+              PacketBuffer.a(param0 ^ 10, ja.field_S);
               var15.a(0, 0, var2_intLifetime1, var3Lifetime1);
               ta.e(118);
             }

@@ -30,7 +30,7 @@ final class kv {
     private static int[] field_g;
     private fq field_a;
 
-    final void a(iw param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_u = new fq();

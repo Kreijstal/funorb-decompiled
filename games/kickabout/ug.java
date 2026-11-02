@@ -17,8 +17,8 @@ final class ug {
         field_a = null;
         field_b = (ut[][]) null;
         if (param0 != -1) {
-          gn var2 = (gn) null;
-          ug.a((gn) null, 81, (gn) null);
+          IntrusiveNode var2 = (IntrusiveNode) null;
+          ug.a((IntrusiveNode) null, 81, (IntrusiveNode) null);
         }
     }
 
@@ -32,7 +32,7 @@ final class ug {
         return b.c(-23, param1);
     }
 
-    final static void a(gn param0, int param1, gn param2) {
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         if (null != param2.field_b) {
           param2.c((byte) -109);
         }

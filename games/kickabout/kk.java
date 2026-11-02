@@ -166,7 +166,7 @@ final class kk {
     }
 
     final static boolean a(int param0, tf param1) {
-        gn var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         tf var4 = null;

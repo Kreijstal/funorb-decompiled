@@ -28,7 +28,7 @@ final class ou extends fd {
           this.field_D = (ut) null;
         }
         ut var3 = new ut(var2, this.field_i);
-        iw.a(99, var3);
+        PacketBuffer.a(99, var3);
         for (var4 = 0; this.field_i > var4; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
             var6 = (double)var5 * (double)var5 / (double)((this.field_i - var4) * var4);
@@ -50,9 +50,9 @@ final class ou extends fd {
         kk var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        ml var8 = null;
+        CipherPacketBuffer var8 = null;
         int var9 = 0;
-        ml var10 = null;
+        CipherPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -61,7 +61,7 @@ final class ou extends fd {
         int var4Lifetime1;
         var7 = Kickabout.field_G;
         try {
-          var8 = new ml(param1.a("", "logo.fo3d", 48));
+          var8 = new CipherPacketBuffer(param1.a("", "logo.fo3d", 48));
           var10 = var8;
           var3 = var10.h((byte) -109);
           var10.p(-111);
@@ -123,7 +123,7 @@ final class ou extends fd {
           }
           ta.e(param2 - 1);
           if (on.field_b <= this.field_v.field_q + param1) {
-            iw.a(param2 ^ -84, this.field_I);
+            PacketBuffer.a(param2 ^ -84, this.field_I);
             param0.c(-this.field_H, 0);
             param0.c(this.field_G * 2 - this.field_H, 0);
             this.field_D.e(0, 0);
@@ -131,7 +131,7 @@ final class ou extends fd {
             this.field_I.c(param1, param3);
           }
           if (on.field_c >= var5_int - this.field_v.field_q) {
-            iw.a(-107, this.field_I);
+            PacketBuffer.a(-107, this.field_I);
             for (var7 = this.field_n - this.field_v.field_q + this.field_H; var7 > this.field_G * 2; var7 = var7 - this.field_G * 2) {
             }
             param0.c(-var7, 0);
@@ -197,7 +197,7 @@ final class ou extends fd {
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
-        iw.a(-66, var14);
+        PacketBuffer.a(-66, var14);
         if (param0 != -257) {
           return (ut) null;
         }

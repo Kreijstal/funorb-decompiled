@@ -246,7 +246,7 @@ final class vg extends hd {
     }
 
     final static void a(boolean param0, wd param1, int param2) {
-        ml var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = or.field_d;
           var3.b(param2, (byte) 98);

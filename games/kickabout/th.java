@@ -88,7 +88,7 @@ final class th {
     }
 
     final static void a(byte param0) {
-        gn var1 = null;
+        IntrusiveNode var1 = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;

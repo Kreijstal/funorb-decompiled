@@ -69,7 +69,7 @@ final class ae extends wj implements qu, vh, ur {
         if (param3 == -1) {
           var17 = nm.a(param4, -74, ll.field_m);
           var5 = var17;
-          iw.a(param1 + 13, var17);
+          PacketBuffer.a(param1 + 13, var17);
         } else {
           if (param3 != -2) {
             stackIn_5_0 = param4;
@@ -98,7 +98,7 @@ final class ae extends wj implements qu, vh, ur {
             var9_ref_ut = nm.a(stackIn_11_0, stackIn_11_1, stackIn_12_2);
             var15 = new ut(param3, var14.field_v);
             var5 = var15;
-            iw.a(-116, var15);
+            PacketBuffer.a(-116, var15);
             var9_ref_ut.d(var15.field_o - var9_ref_ut.field_o, 0);
             for (var10 = var14.field_o; var10 < var15.field_o - var9_ref_ut.field_o; var10 = var10 + var16.field_o) {
               var16.d(var10, 0);
@@ -108,7 +108,7 @@ final class ae extends wj implements qu, vh, ur {
           } else {
             var13 = nm.a(param4, -85, lb.field_L);
             var5 = var13;
-            iw.a(98, var13);
+            PacketBuffer.a(98, var13);
           }
         }
         pt.a(-3 + on.field_g, -22914, 3, on.field_f - 3, 3);
@@ -126,7 +126,7 @@ final class ae extends wj implements qu, vh, ur {
           nh.a(10, 6, on.field_g - 10, 6, 6, 8, var25);
           nh.a(10, 8, on.field_g - 10, 8, 6, 8, var25);
         } else if (1 == param2) {
-          iw.a(109, var5);
+          PacketBuffer.a(109, var5);
           var5.c(0, 0, 60);
           ta.e(param1 + 174);
           var24 = new int[64];
@@ -142,7 +142,7 @@ final class ae extends wj implements qu, vh, ur {
           var19 = var5;
           var18 = new ut(var5.field_o, var5.field_v);
           var5 = var18;
-          iw.a(-45, var18);
+          PacketBuffer.a(-45, var18);
           eo.a(var19, 0, 0, 230);
           pt.a(-3 + on.field_g, -22914, 3, on.field_f - 3, 3);
           var23 = new int[64];
@@ -165,8 +165,8 @@ final class ae extends wj implements qu, vh, ur {
             if (!param0) {
               tt.field_e.c(0, 0, 16);
               pt.a(on.field_g - cg.field_K.field_o, -22914, 0, on.field_f, 0);
-              for (var7 = tt.field_e.field_o; on.field_g - cg.field_K.field_o > var7; var7 = var7 + ah.field_l.field_o) {
-                ah.field_l.c(var7, 0, 16);
+              for (var7 = tt.field_e.field_o; on.field_g - cg.field_K.field_o > var7; var7 = var7 + GameAppletShell.field_l.field_o) {
+                GameAppletShell.field_l.c(var7, 0, 16);
               }
               ta.e(124);
               cg.field_K.c(var5.field_o - cg.field_K.field_o, 0, 16);
@@ -260,7 +260,7 @@ final class ae extends wj implements qu, vh, ur {
         String var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, mf.field_Ab, new String[]{this.b(true), this.l(6)});
         int var3 = 20;
         var3 = var3 + this.a(170, si.field_i, 21621, var3, this.field_S);
-        var3 = var3 + (5 + this.a(20, true, ah.field_n, this.field_K, 170, "", var3));
+        var3 = var3 + (5 + this.a(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
         var3 = var3 + this.a(170, at.field_Ib, 21621, var3, this.field_T);
         var3 = var3 + (this.a(this.field_N, fa.field_h, 35, 170, var3, ev.field_A) + 5);
         var3 = var3 + (this.a(this.field_E, ua.field_f, 35, 170, var3, jk.field_i) + 5);

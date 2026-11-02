@@ -16,7 +16,7 @@ final class vs {
     static int field_i;
 
     final static boolean a(int param0, int param1) {
-        gn var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -115,7 +115,7 @@ final class vs {
           }
           var12 = mg.a(this.field_d, var9, var10, this.field_j, var11, (byte) 108);
           var12.field_mb.a(0, 99);
-          iw.a(-81, tm.field_u);
+          PacketBuffer.a(-81, tm.field_u);
           on.b();
           var12.a(var8[this.field_d.field_q], 0, on.field_g >> 1, var17[this.field_d.field_q], (byte) -118);
           ta.e(122);

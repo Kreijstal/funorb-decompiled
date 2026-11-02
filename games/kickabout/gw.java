@@ -12,7 +12,7 @@ final class gw {
     final static void b(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ml var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -39,7 +39,7 @@ final class gw {
         }
     }
 
-    final static String a(int param0, byte param1, iw param2) {
+    final static String a(int param0, byte param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;

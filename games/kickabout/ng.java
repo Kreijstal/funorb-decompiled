@@ -65,7 +65,7 @@ final class ng {
         for (var9Lifetime1 = 0; var9Lifetime1 < 6; var9Lifetime1++) {
           jm.a(100, 9863, (param5 - param0) * var9Lifetime1 / 6 + param0);
           var10 = bt.a(-127, param4, param3);
-          iw.a(87, var10);
+          PacketBuffer.a(87, var10);
           var17 = (nr) (var8.g(24009));
           while (var17 != null) {
             var17.a(var9Lifetime1, -2);
@@ -77,7 +77,7 @@ final class ng {
         return var6;
     }
 
-    final void a(ml param0, int param1) {
+    final void a(CipherPacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;

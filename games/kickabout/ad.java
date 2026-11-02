@@ -1157,7 +1157,7 @@ final class ad {
                 }
                 var2 = ib.a("title_attached", -100);
                 if (null != var2) {
-                  iw.field_k = kt.a(var2, true);
+                  PacketBuffer.field_k = kt.a(var2, true);
                 }
                 var2 = ib.a("title_detached", -107);
                 if (var2 != null) {
@@ -1990,7 +1990,7 @@ final class ad {
                 }
                 var2 = ib.a("menu_options", param1 ^ -85);
                 if (var2 != null) {
-                  ah.field_f = kt.a(var2, true);
+                  GameAppletShell.field_f = kt.a(var2, true);
                 }
                 var2 = ib.a("menu_records", -81);
                 if (null != var2) {
@@ -2262,7 +2262,7 @@ final class ad {
                 }
                 var2 = ib.a("left_records_caps", -117);
                 if (var2 != null) {
-                  ah.field_b = kt.a(var2, true);
+                  GameAppletShell.field_b = kt.a(var2, true);
                 }
                 var2 = ib.a("left_instructions_caps", -107);
                 if (var2 != null) {
@@ -2314,15 +2314,15 @@ final class ad {
                 }
                 var2 = ib.a("instructions_auctions1_labels,0", -122);
                 if (var2 != null) {
-                  ml.field_t[0] = kt.a(var2, true);
+                  CipherPacketBuffer.field_t[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_auctions1_labels,1", -126);
                 if (var2 != null) {
-                  ml.field_t[1] = kt.a(var2, true);
+                  CipherPacketBuffer.field_t[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_auctions1_labels,2", param1 ^ -110);
                 if (null != var2) {
-                  ml.field_t[2] = kt.a(var2, true);
+                  CipherPacketBuffer.field_t[2] = kt.a(var2, true);
                 }
                 var2 = ib.a("park", -92);
                 if (var2 != null) {
@@ -2386,7 +2386,7 @@ final class ad {
                 }
                 var2 = ib.a("search_for_team", -98);
                 if (var2 != null) {
-                  ht.field_a = kt.a(var2, true);
+                  IterableNodeHashTable.field_a = kt.a(var2, true);
                 }
                 var2 = ib.a("exp_colon_space", param1 ^ -112);
                 if (null != var2) {
@@ -3080,7 +3080,7 @@ final class ad {
                 }
                 var2 = ib.a("click_team_results", -115);
                 if (null != var2) {
-                  gn.field_c = kt.a(var2, true);
+                  IntrusiveNode.field_c = kt.a(var2, true);
                 }
                 var2 = ib.a("statname,0", -112);
                 if (var2 != null) {
@@ -3172,7 +3172,7 @@ final class ad {
                 }
                 var2 = ib.a("your_auction", param1 - 101);
                 if (null != var2) {
-                  bs.field_b = kt.a(var2, true);
+                  ClientException.field_b = kt.a(var2, true);
                 }
                 var2 = ib.a("no_trinkets", -80);
                 if (var2 != null) {
@@ -3392,7 +3392,7 @@ final class ad {
                 }
                 var2 = ib.a("player_already_in_auction", param1 - 92);
                 if (var2 != null) {
-                  iw.field_j = kt.a(var2, true);
+                  PacketBuffer.field_j = kt.a(var2, true);
                 }
                 var2 = ib.a("increase_stat_max_symbol", -120);
                 if (var2 != null) {
@@ -4458,19 +4458,19 @@ final class ad {
                 }
                 var2 = ib.a("instructions_gamemode1,0", -97);
                 if (null != var2) {
-                  ml.field_s[0] = kt.a(var2, true);
+                  CipherPacketBuffer.field_s[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemode1,1", -85);
                 if (null != var2) {
-                  ml.field_s[1] = kt.a(var2, true);
+                  CipherPacketBuffer.field_s[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemode1,2", -92);
                 if (null != var2) {
-                  ml.field_s[2] = kt.a(var2, true);
+                  CipherPacketBuffer.field_s[2] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemode1,3", -85);
                 if (null != var2) {
-                  ml.field_s[3] = kt.a(var2, true);
+                  CipherPacketBuffer.field_s[3] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gamemode2", param1 ^ -106);
                 if (null != var2) {
@@ -4552,8 +4552,8 @@ final class ad {
                   throw nb.a((Throwable) ((Object) stackIn_3808_0), ((StringBuilder) (Object) stackIn_3808_1).append(stackIn_3809_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_3817_0 = (!ah.field_d);
-                  ah.field_d = stackIn_3817_0;
+                  stackIn_3817_0 = (!GameAppletShell.field_d);
+                  GameAppletShell.field_d = stackIn_3817_0;
                 }
             }
         }

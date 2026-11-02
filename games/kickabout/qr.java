@@ -104,7 +104,7 @@ final class qr {
         return (int)((double)((-320 + param0 << 8) / hw.field_i) + hd.field_K);
     }
 
-    final static void a(int param0, iw param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

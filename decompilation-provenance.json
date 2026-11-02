@@ -10794,6 +10794,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "kickabout": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/kickabout"
+      },
+      "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
+      "sources": {
+        "files": 543,
+        "sha256": "d276d980a778905e8f3ce1928f7f271660527daecb48c733300207ebf7301961"
+      },
+      "dictionary": {
+        "path": "decompilation/kickabout-naming.json",
+        "sha256": "ce73cc81fdf9ffaf594bc53ec1a4bc4cc521beeb775cb8cc803419e25bd2b7bc"
+      },
+      "readingGuide": {
+        "path": "games/kickabout/README.md",
+        "sha256": "522d5c5b64eada9414b5fa206d207a6b5f86b4f91d5c2c4c4ba1a9c24d4b94db"
+      },
+      "rulesSha256": "940e535dc6b46ae19ac634963b46ff9608174b35e3a8f8bd0d0898487117eaa1",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11904,6 +11928,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 543,
+          "sha256": "d276d980a778905e8f3ce1928f7f271660527daecb48c733300207ebf7301961"
         }
       },
       "lexicominos": {

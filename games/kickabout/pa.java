@@ -17,7 +17,7 @@ final class pa extends dg {
         }
     }
 
-    final static void a(gn param0, gn param1, byte param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (param0.field_b != null) {
             param0.c((byte) -109);
@@ -34,8 +34,8 @@ final class pa extends dg {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != 3) {
-          gn var7 = (gn) null;
-          pa.a((gn) null, (gn) null, (byte) 126);
+          IntrusiveNode var7 = (IntrusiveNode) null;
+          pa.a((IntrusiveNode) null, (IntrusiveNode) null, (byte) 126);
           if (null == this.field_k) {
             ae.a(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
             return;

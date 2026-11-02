@@ -57,7 +57,7 @@ final class rv {
           if (up.field_p > 200) {
             var5 = (-up.field_p + 250 << 8) / 50;
           }
-          iw.a(110, ti.field_f);
+          PacketBuffer.a(110, ti.field_f);
           t.c();
           on.b();
           fp.a((byte) 47);
@@ -114,7 +114,7 @@ final class rv {
         if (up.field_p > 200) {
           var5Lifetime1 = (-up.field_p + 250 << 8) / 50;
         }
-        iw.a(110, ti.field_f);
+        PacketBuffer.a(110, ti.field_f);
         t.c();
         on.b();
         fp.a((byte) 47);

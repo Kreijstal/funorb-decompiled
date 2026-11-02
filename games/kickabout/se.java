@@ -230,7 +230,7 @@ final class se extends ct {
                   var5 = var7;
                   if (null != var7.field_zb &&
                     !ew.a(118, wi.field_v.field_k) &&
-                    !iw.field_l) {
+                    !PacketBuffer.field_l) {
                     if (!kb.field_C) {
                       var17 = wi.field_v;
                       var18 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var16});

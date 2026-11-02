@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class es extends gn {
+final class es extends IntrusiveNode {
     static byte[][] field_e;
     private int field_j;
     static int field_h;
@@ -11,14 +11,14 @@ final class es extends gn {
     static vn field_k;
     static ut field_f;
 
-    final void a(ml param0, byte param1) {
+    final void a(CipherPacketBuffer param0, byte param1) {
         try {
           param0.a(112, this.field_j);
           param0.a(this.field_l, (byte) 118);
           param0.a(102, this.field_i);
           if (param1 < 89) {
-            ml var4 = (ml) null;
-            this.a((ml) null, (byte) 107);
+            CipherPacketBuffer var4 = (CipherPacketBuffer) null;
+            this.a((CipherPacketBuffer) null, (byte) 107);
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "es.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

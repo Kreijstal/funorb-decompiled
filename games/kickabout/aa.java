@@ -8,11 +8,11 @@ class aa extends ps {
     static ut field_f;
 
     final static void a(byte param0, int param1, mp param2) {
-        ml var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         mp var5 = null;
-        ml var6 = null;
+        CipherPacketBuffer var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -54,7 +54,7 @@ class aa extends ps {
         }
     }
 
-    final void a(iw param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.a(this.field_g, -1781890008);
           param0.a((byte) -85, this.field_i);

@@ -45,7 +45,7 @@ final class bt {
           return (ut) null;
         }
         ut var6 = new ut(var3, param2 * var4[1] + var4[2] + var4[0]);
-        iw.a(83, var6);
+        PacketBuffer.a(83, var6);
         int var7 = 0;
         var5[0].a(0, var7);
         var7 = var7 + var4[0];
@@ -269,7 +269,7 @@ final class bt {
         }
         var3 = new tc();
         if (var4 != null) {
-          var3.a(new iw(var4), 0);
+          var3.a(new PacketBuffer(var4), 0);
         }
         if (32768 <= param1) {
           var3.a(-104);

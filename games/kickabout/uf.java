@@ -5,7 +5,7 @@ final class uf {
     static String field_d;
     static String field_a;
     static hd field_b;
-    static iw field_c;
+    static PacketBuffer field_c;
     static String[] field_e;
 
     final static void a(ut[][] param0, sj param1, int[] param2, boolean param3, byte[] param4, kg[] param5, sj param6, int param7, String[][] param8, String[][] param9, sj param10, byte[] param11, String[] param12, int param13, String[] param14, ut[][] param15, int[] param16, int param17, int param18, String[] param19) {
@@ -202,7 +202,7 @@ final class uf {
           if (param0 != -32) {
             return;
           }
-          iw.a(119, var2);
+          PacketBuffer.a(119, var2);
           for (var3 = 0; var3 < 6; var3++) {
             for (var4 = 0; 6 > var4; var4++) {
               var5 = 6710886;
@@ -218,7 +218,7 @@ final class uf {
               if (var3 == ct.a(124, -3 + var4, 6)) {
                 var5 = 8947848;
               }
-              iw.a(-110, var8);
+              PacketBuffer.a(-110, var8);
               on.b();
               on.a(on.field_g - 6 >> 1, 26, 6, 10, var5);
               ta.e(120);

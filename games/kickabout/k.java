@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class k extends gn {
+final class k extends IntrusiveNode {
     static boolean field_k;
     static sl field_m;
     static ut field_j;
@@ -29,7 +29,7 @@ final class k extends gn {
             vk.field_b = true;
             oo.field_b = ng.a("cars", "street", 2, bo.field_Cb);
             so.field_d = ng.a("signs", "street", 2, bo.field_Cb);
-            iw.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
+            PacketBuffer.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
             return -1;
           }
           return bo.field_Cb.a("street", -16248);
@@ -38,7 +38,7 @@ final class k extends gn {
           vk.field_b = true;
           oo.field_b = ng.a("cars", "street", 2, bo.field_Cb);
           so.field_d = ng.a("signs", "street", 2, bo.field_Cb);
-          iw.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
+          PacketBuffer.field_h = ng.a("cracks", "street", 2, bo.field_Cb);
           return -1;
         }
         return bo.field_Cb.a("street", -16248);

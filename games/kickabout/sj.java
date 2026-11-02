@@ -697,10 +697,10 @@ final class sj {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        iw var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        iw var29 = null;
-        iw var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -755,7 +755,7 @@ final class sj {
             var35 = lg.a(this.field_e[param0], true, 18828);
             var25 = var35;
             var9 = var25;
-            var26 = new iw(var35);
+            var26 = new PacketBuffer(var35);
             var26.a(var26.field_f.length, param1, true, 5);
             decompiledFrameRemainder0 = false;
           }
@@ -784,7 +784,7 @@ final class sj {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - var5_int * var12 * 4;
-              var29 = new iw(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var15_int = 0;
               var29.field_n = var11;
@@ -832,7 +832,7 @@ final class sj {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * var12 * var5_int;
-              var31 = new iw(var43);
+              var31 = new PacketBuffer(var43);
               var31.field_n = var11;
               var39 = new int[var5_int];
               var32 = var39;

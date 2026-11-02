@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni extends gn {
+final class ni extends IntrusiveNode {
     static rf field_l;
     static String field_h;
     int field_j;
@@ -65,7 +65,7 @@ final class ni extends gn {
         if (param3 != -20859) {
           return false;
         }
-        if (iw.field_l) {
+        if (PacketBuffer.field_l) {
           return la.field_a.a(il.field_c, (byte) 127, cc.field_e);
         }
         if (kd.field_s) {

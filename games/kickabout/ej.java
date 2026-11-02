@@ -77,10 +77,10 @@ final class ej extends hd {
           on.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           if (param0) {
             if (c.a(this.field_Bb, 0, bh.field_f)) {
-              qe.field_i[iw.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+              qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
             } else {
               if (pc.field_e) {
-                qe.field_i[iw.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+                qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
               } else {
                 if (this.field_Bb != 32) {
                   pn.field_w.g(this.field_F, this.field_T);
@@ -96,7 +96,7 @@ final class ej extends hd {
           } else {
             this.c(true);
             if (c.a(this.field_Bb, 0, bh.field_f)) {
-              qe.field_i[iw.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+              qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
             } else {
               if (!pc.field_e) {
                 if (this.field_Bb == 32) {
@@ -109,7 +109,7 @@ final class ej extends hd {
                   pn.field_w.g(this.field_F, this.field_T);
                 }
               } else {
-                qe.field_i[iw.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+                qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
               }
             }
           }
@@ -120,10 +120,10 @@ final class ej extends hd {
           }
           if (param0) {
             if (c.a(this.field_Bb, 0, bh.field_f)) {
-              qe.field_i[iw.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+              qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
             } else {
               if (pc.field_e) {
-                qe.field_i[iw.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+                qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
               } else {
                 if (this.field_Bb != 32) {
                   pn.field_w.g(this.field_F, this.field_T);
@@ -139,7 +139,7 @@ final class ej extends hd {
           } else {
             this.c(true);
             if (c.a(this.field_Bb, 0, bh.field_f)) {
-              qe.field_i[iw.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+              qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
             } else {
               if (!pc.field_e) {
                 if (this.field_Bb == 32) {
@@ -152,7 +152,7 @@ final class ej extends hd {
                   pn.field_w.g(this.field_F, this.field_T);
                 }
               } else {
-                qe.field_i[iw.field_e[this.field_Bb]].g(this.field_F, this.field_T);
+                qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
               }
             }
           }

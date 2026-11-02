@@ -32,7 +32,7 @@ final class wl extends mo {
         return true;
     }
 
-    final void a(ml param0, boolean param1) {
+    final void a(CipherPacketBuffer param0, boolean param1) {
         int var6 = 0;
         int var3_int = 0;
         int var4 = 0;

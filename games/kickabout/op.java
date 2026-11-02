@@ -26,7 +26,7 @@ final class op extends qv {
         int var5 = 48;
         int var6 = 21;
         ut var7 = new ut(jt.field_yb << 1, om.field_Bb << 1);
-        iw.a(97, var7);
+        PacketBuffer.a(97, var7);
         on.b();
         on.c(0, 0, jt.field_yb << 1, om.field_Bb << 1, 2, 16777215);
         on.e(1, 1, -2 + (jt.field_yb << 1), (om.field_Bb << 1) - 2, 16777215);
@@ -44,7 +44,7 @@ final class op extends qv {
         ta.e(param0 ^ -363021514);
         ta.e(127);
         pq.field_Q = new ut(2 + jt.field_yb, 2 + om.field_Bb);
-        iw.a(param0 + 363021421, pq.field_Q);
+        PacketBuffer.a(param0 + 363021421, pq.field_Q);
         on.a(0, 0, on.field_g, on.field_f, 65793);
         var7.f(1, 1);
         ta.e(125);

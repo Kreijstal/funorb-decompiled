@@ -66,9 +66,9 @@ final class ef extends am {
         tf var3;
         int var4;
         int var5;
-        iw var5_ref_iw;
+        PacketBuffer var5_ref_iw;
         int var6;
-        iw var9;
+        PacketBuffer var9;
         int var10;
         Object var11;
         je var12;
@@ -104,7 +104,7 @@ final class ef extends am {
         var3_intLifetime1 = var16;
         while (var16 < this.field_r.length) {
           var28 = this.field_r[var16];
-          var5_ref_iw = new iw(var28);
+          var5_ref_iw = new PacketBuffer(var28);
           var5_ref_iw.field_n = 1;
           var6 = var5_ref_iw.a((byte) 81);
           var2 = var2 != 0 & gs.field_d.b(var6, 119) ? 1 : 0;
@@ -120,7 +120,7 @@ final class ef extends am {
         var29 = gd.field_c.c(this.field_o, 4);
         for (var7 = 0; var29.length > var7; var7++) {
           var30 = this.field_r[var7];
-          var9 = new iw(var30);
+          var9 = new PacketBuffer(var30);
           var9.field_n = 1;
           var10 = var9.a((byte) 81);
           var11 = null;

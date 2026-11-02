@@ -66,7 +66,7 @@ final class j {
         int var4 = this.field_b.field_R;
         if (ia.field_c) {
           this.field_b.field_R = (this.field_b.field_R + 1024) % 2048;
-          iw.a(param0 + 39, wa.field_a);
+          PacketBuffer.a(param0 + 39, wa.field_a);
           on.b();
           this.field_b.a(1200, 300, 48, 90, (byte) -105);
           ta.e(127);
@@ -77,7 +77,7 @@ final class j {
           }
           return;
         }
-        iw.a(param0 + 39, wa.field_a);
+        PacketBuffer.a(param0 + 39, wa.field_a);
         on.b();
         this.field_b.a(1200, 300, 48, 90, (byte) -105);
         ta.e(127);

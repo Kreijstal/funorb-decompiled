@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class ah extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_m;
     static String field_n;
     static String field_b;
@@ -543,7 +543,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_68_0 = gn.a(12105, var2.charAt(var3));
+                      stackIn_68_0 = IntrusiveNode.a(12105, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -798,7 +798,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
         RuntimeException var1 = null;
         try {
           if (param0 != 1) {
-            ah.provideLoaderApplet((java.applet.Applet) null);
+            GameAppletShell.provideLoaderApplet((java.applet.Applet) null);
           }
           field_m = null;
           field_n = null;
@@ -870,7 +870,7 @@ public abstract class ah extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected ah() {
+    protected GameAppletShell() {
         this.field_e = false;
     }
 

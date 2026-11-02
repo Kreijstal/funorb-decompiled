@@ -62,7 +62,7 @@ final class gb extends wi {
           var10 = var15.field_v << 1;
           if (null == nq.field_G) {
             nq.field_G = new ut(var9, var10);
-            iw.a(-54, nq.field_G);
+            PacketBuffer.a(-54, nq.field_G);
             var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
             nq.field_G.c(var5 - var15.field_o, var6 - var15.field_v, 256);
@@ -70,7 +70,7 @@ final class gb extends wi {
           }
           if (nq.field_G.field_q < var9) {
             nq.field_G = new ut(var9, var10);
-            iw.a(-54, nq.field_G);
+            PacketBuffer.a(-54, nq.field_G);
             var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
             nq.field_G.c(var5 - var15.field_o, var6 - var15.field_v, 256);
@@ -78,13 +78,13 @@ final class gb extends wi {
           }
           if (nq.field_G.field_w < var10) {
             nq.field_G = new ut(var9, var10);
-            iw.a(-54, nq.field_G);
+            PacketBuffer.a(-54, nq.field_G);
             var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
             nq.field_G.c(var5 - var15.field_o, var6 - var15.field_v, 256);
             return;
           }
-          iw.a(116, nq.field_G);
+          PacketBuffer.a(116, nq.field_G);
           on.b();
           var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
           ta.e(120);
@@ -97,7 +97,7 @@ final class gb extends wi {
           var10Lifetime1 = var16.field_v << 1;
           if (null == nq.field_G) {
             nq.field_G = new ut(var9Lifetime1, var10Lifetime1);
-            iw.a(-54, nq.field_G);
+            PacketBuffer.a(-54, nq.field_G);
             var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
             nq.field_G.c(var5 - var16.field_o, var6 - var16.field_v, 256);
@@ -105,7 +105,7 @@ final class gb extends wi {
           }
           if (nq.field_G.field_q < var9Lifetime1) {
             nq.field_G = new ut(var9Lifetime1, var10Lifetime1);
-            iw.a(-54, nq.field_G);
+            PacketBuffer.a(-54, nq.field_G);
             var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
             nq.field_G.c(var5 - var16.field_o, var6 - var16.field_v, 256);
@@ -113,13 +113,13 @@ final class gb extends wi {
           }
           if (nq.field_G.field_w < var10Lifetime1) {
             nq.field_G = new ut(var9Lifetime1, var10Lifetime1);
-            iw.a(-54, nq.field_G);
+            PacketBuffer.a(-54, nq.field_G);
             var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
             nq.field_G.c(var5 - var16.field_o, var6 - var16.field_v, 256);
             return;
           }
-          iw.a(116, nq.field_G);
+          PacketBuffer.a(116, nq.field_G);
           on.b();
           var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
           ta.e(120);

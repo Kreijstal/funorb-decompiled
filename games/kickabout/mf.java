@@ -167,7 +167,7 @@ final class mf extends hd {
         }
     }
 
-    final static void a(byte param0, ml param1, boolean param2) {
+    final static void a(byte param0, CipherPacketBuffer param1, boolean param2) {
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_42_0 = null;
@@ -643,7 +643,7 @@ final class mf extends hd {
         ge.field_o[1] = h.field_c;
         ge.field_o[7] = at.field_Fb;
         ge.field_o[15] = hn.field_e;
-        ge.field_o[24] = ah.field_f;
+        ge.field_o[24] = GameAppletShell.field_f;
         ge.field_o[18] = o.field_b;
         ge.field_o[23] = nb.field_h;
         ge.field_o[40] = ms.field_a;
@@ -750,7 +750,7 @@ final class mf extends hd {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$fbddc791f0bf(int param0, ml param1, boolean param2) {
+    final static void $cfr$intArgs$a$fbddc791f0bf(int param0, CipherPacketBuffer param1, boolean param2) {
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_42_0 = null;

@@ -57,11 +57,11 @@ final class pl {
               var10 = var18;
               var11 = 0;
               var12 = 0;
-              L3: while (true) {
+              scanLoop1: while (true) {
                 if (var19.length <= var12) {
                   if (var11 == 0 &&
                     param6 != ss.field_j) {
-                    break L3;
+                    break scanLoop1;
                   }
                   for (var12 = 0; var12 < var19.length; var12 += 2) {
                     var13 = var19[var12];
@@ -74,7 +74,7 @@ final class pl {
                     }
                   }
                   var8_int = 0;
-                  break L3;
+                  break scanLoop1;
                 }
                 var13Lifetime1 = var19[var12];
                 var14 = var10[1 + var12];
@@ -84,15 +84,15 @@ final class pl {
                     var11 = 1;
                   } else {
                     if (var13Lifetime1 >= param6) {
-                      break L3;
+                      break scanLoop1;
                     }
                     if (var14 != (hm.field_G[var13Lifetime1] & 255)) {
-                      break L3;
+                      break scanLoop1;
                     }
                   }
                 } else {
                   if (rn.field_d[param3] != var14) {
-                    break L3;
+                    break scanLoop1;
                   }
                 }
                 var12 += 2;

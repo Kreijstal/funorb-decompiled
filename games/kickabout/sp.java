@@ -21,7 +21,7 @@ final class sp extends im {
     String field_Nb;
 
     final static void a(int param0, fa param1, int param2) {
-        ml var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;

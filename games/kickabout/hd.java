@@ -72,7 +72,7 @@ class hd extends iv {
         int var8 = 0;
         int var9 = Kickabout.field_G;
         try {
-          iw.a(-123, lg.field_a);
+          PacketBuffer.a(-123, lg.field_a);
           var10 = j.a(-5275);
           var5 = var10.field_o;
           var6 = var10.field_v;

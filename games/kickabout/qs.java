@@ -210,12 +210,12 @@ final class qs extends ta {
         }
         var10 = new tf();
         var3 = -1;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (6 >= var3) {
             if (cq.e(15137) ||
               var3 != -1) {
               if (ic.field_h.field_t < var3) {
-                break L1;
+                break scanLoop1;
               }
               for (var4_int = 0; var4_int < 8; var4_int++) {
                 var5 = ha.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
@@ -258,7 +258,7 @@ final class qs extends ta {
         sr[] var3 = new sr[sf.field_D.length];
         sr[] var4 = var3;
         var3[1] = vs.field_k;
-        var3[2] = bs.field_a;
+        var3[2] = ClientException.field_a;
         var3[0] = ra.field_H;
         var3[4] = sr.field_k;
         var3[3] = ri.field_u;

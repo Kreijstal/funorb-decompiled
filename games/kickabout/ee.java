@@ -36,15 +36,15 @@ final class ee {
         if (param0 != 653278209) {
           return;
         }
-        int var3 = hw.field_i * iw.field_g.field_o >> 8;
-        int var4 = iw.field_g.field_o * hw.field_i >> 8;
+        int var3 = hw.field_i * PacketBuffer.field_g.field_o >> 8;
+        int var4 = PacketBuffer.field_g.field_o * hw.field_i >> 8;
         int var5 = hw.field_i * sa.field_e >> 8;
         int var6 = lr.field_m * hw.field_i >> 8;
         if (!rg.field_f) {
-          eo.a(iw.field_g, -(var3 >> 1) + (-var5 + param1), -var6 + param2 - (var4 >> 1), var3, var4);
+          eo.a(PacketBuffer.field_g, -(var3 >> 1) + (-var5 + param1), -var6 + param2 - (var4 >> 1), var3, var4);
           return;
         }
-        iw.field_g.e(param1 - var5 - (var3 >> 1), -var6 + (param2 - (var4 >> 1)), var3, var4, 256);
+        PacketBuffer.field_g.e(param1 - var5 - (var3 >> 1), -var6 + (param2 - (var4 >> 1)), var3, var4, 256);
     }
 
     final static void a(ks param0, boolean param1) {
