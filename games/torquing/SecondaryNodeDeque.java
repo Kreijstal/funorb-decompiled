@@ -36,7 +36,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final static void a(nj param0, byte param1) {
+    final static void a(PcmSampleStream param0, byte param1) {
         synchronized (Torquing.field_v) {
           int var3 = 127 / ((17 - param1) / 41);
           Torquing.field_v.field_r.a(param0);

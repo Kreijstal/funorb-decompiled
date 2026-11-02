@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj extends PcmStream {
+final class PcmSampleStream extends PcmStream {
     private int field_u;
     private int field_o;
     private int field_q;
@@ -20,8 +20,8 @@ final class nj extends PcmStream {
 
     private final void i() {
         this.field_y = this.field_p;
-        this.field_r = nj.b(this.field_p, this.field_n);
-        this.field_s = nj.c(this.field_p, this.field_n);
+        this.field_r = PcmSampleStream.b(this.field_p, this.field_n);
+        this.field_s = PcmSampleStream.c(this.field_p, this.field_n);
     }
 
     private final void f() {
@@ -39,10 +39,10 @@ final class nj extends PcmStream {
         int var1 = this.field_y * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_t == 0) {
-          var1 = var1 - var1 * this.field_o / (((gg) (this.field_m)).field_n.length << 8);
+          var1 = var1 - var1 * this.field_o / (((PcmSample) (this.field_m)).data.length << 8);
         } else {
           if (this.field_t >= 0) {
-            var1 = var1 - var1 * this.field_u / ((gg) (this.field_m)).field_n.length;
+            var1 = var1 - var1 * this.field_u / ((PcmSample) (this.field_m)).data.length;
           }
         }
         return var1 > 255 ? 255 : var1;
@@ -52,7 +52,7 @@ final class nj extends PcmStream {
         return this.field_p == -2147483648 ? 0 : this.field_p + 32 >> 6;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, nj param11, int param12, int param13) {
+    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
         param11.field_r = param11.field_r - param11.field_A * param5;
@@ -96,7 +96,7 @@ final class nj extends PcmStream {
         return param5;
     }
 
-    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, nj param12) {
+    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -181,21 +181,21 @@ final class nj extends PcmStream {
         this.a(param0 << 6, this.j());
     }
 
-    final static nj a(gg param0, int param1, int param2, int param3) {
-        if (param0.field_n == null) {
+    final static PcmSampleStream a(PcmSample param0, int param1, int param2, int param3) {
+        if (param0.data == null) {
           return null;
         }
-        if (param0.field_n.length != 0) {
-          return new nj(param0, param1, param2 << 6, param3 << 6);
+        if (param0.data.length != 0) {
+          return new PcmSampleStream(param0, param1, param2 << 6, param3 << 6);
         }
         return null;
     }
 
     final synchronized boolean e() {
-        return this.field_o < 0 || this.field_o >= ((gg) (this.field_m)).field_n.length << 8;
+        return this.field_o < 0 || this.field_o >= ((PcmSample) (this.field_m)).data.length << 8;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, nj param11, int param12, int param13) {
+    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -321,7 +321,7 @@ final class nj extends PcmStream {
         this.unlink(0);
     }
 
-    private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, nj param11, int param12, int param13) {
+    private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -374,7 +374,7 @@ final class nj extends PcmStream {
         this.b(param0, param1 << 6, param2 << 6);
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, nj param10, int param11, int param12) {
+    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         if (param11 != 0) {
@@ -411,7 +411,7 @@ final class nj extends PcmStream {
         return param5;
     }
 
-    private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, nj param11, int param12, int param13) {
+    private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
         param11.field_r = param11.field_r - param11.field_A * param5;
@@ -470,14 +470,14 @@ final class nj extends PcmStream {
             if (this.field_z == 256 &&
               (this.field_o & 255) == 0) {
               if (AudioOutput.field_r) {
-                return nj.a(0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_r, this.field_s, 0, param3, param2, this);
+                return PcmSampleStream.a(0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_r, this.field_s, 0, param3, param2, this);
               }
-              return nj.a(((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_y, 0, param3, param2, this);
+              return PcmSampleStream.a(((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_y, 0, param3, param2, this);
             }
             if (AudioOutput.field_r) {
-              return nj.a(0, 0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_r, this.field_s, 0, param3, param2, this, this.field_z, param4);
+              return PcmSampleStream.a(0, 0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_r, this.field_s, 0, param3, param2, this, this.field_z, param4);
             }
-            return nj.b(0, 0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_y, 0, param3, param2, this, this.field_z, param4);
+            return PcmSampleStream.b(0, 0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_y, 0, param3, param2, this, this.field_z, param4);
           }
           var6 = param1 + this.field_x;
           if (var6 > param3) {
@@ -487,15 +487,15 @@ final class nj extends PcmStream {
           if (this.field_z == 256 &&
             (this.field_o & 255) == 0) {
             if (!AudioOutput.field_r) {
-              param1 = nj.b(((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_y, this.field_v, 0, var6, param2, this);
+              param1 = PcmSampleStream.b(((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_y, this.field_v, 0, var6, param2, this);
             } else {
-              param1 = nj.a(0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_r, this.field_s, this.field_A, this.field_q, 0, var6, param2, this);
+              param1 = PcmSampleStream.a(0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_r, this.field_s, this.field_A, this.field_q, 0, var6, param2, this);
             }
           } else {
             if (!AudioOutput.field_r) {
-              param1 = nj.b(0, 0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_y, this.field_v, 0, var6, param2, this, this.field_z, param4);
+              param1 = PcmSampleStream.b(0, 0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_y, this.field_v, 0, var6, param2, this, this.field_z, param4);
             } else {
-              param1 = nj.a(0, 0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_r, this.field_s, this.field_A, this.field_q, 0, var6, param2, this, this.field_z, param4);
+              param1 = PcmSampleStream.a(0, 0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_r, this.field_s, this.field_A, this.field_q, 0, var6, param2, this, this.field_z, param4);
             }
           }
           this.field_x = this.field_x - param1;
@@ -520,14 +520,14 @@ final class nj extends PcmStream {
             if (this.field_z == -256 &&
               (this.field_o & 255) == 0) {
               if (AudioOutput.field_r) {
-                return nj.b(0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_r, this.field_s, 0, param3, param2, this);
+                return PcmSampleStream.b(0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_r, this.field_s, 0, param3, param2, this);
               }
-              return nj.b(((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_y, 0, param3, param2, this);
+              return PcmSampleStream.b(((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_y, 0, param3, param2, this);
             }
             if (AudioOutput.field_r) {
-              return nj.c(0, 0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_r, this.field_s, 0, param3, param2, this, this.field_z, param4);
+              return PcmSampleStream.c(0, 0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_r, this.field_s, 0, param3, param2, this, this.field_z, param4);
             }
-            return nj.a(0, 0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_y, 0, param3, param2, this, this.field_z, param4);
+            return PcmSampleStream.a(0, 0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_y, 0, param3, param2, this, this.field_z, param4);
           }
           var6 = param1 + this.field_x;
           if (var6 > param3) {
@@ -537,15 +537,15 @@ final class nj extends PcmStream {
           if (this.field_z == -256 &&
             (this.field_o & 255) == 0) {
             if (!AudioOutput.field_r) {
-              param1 = nj.a(((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_y, this.field_v, 0, var6, param2, this);
+              param1 = PcmSampleStream.a(((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_y, this.field_v, 0, var6, param2, this);
             } else {
-              param1 = nj.b(0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_r, this.field_s, this.field_A, this.field_q, 0, var6, param2, this);
+              param1 = PcmSampleStream.b(0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_r, this.field_s, this.field_A, this.field_q, 0, var6, param2, this);
             }
           } else {
             if (!AudioOutput.field_r) {
-              param1 = nj.d(0, 0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_y, this.field_v, 0, var6, param2, this, this.field_z, param4);
+              param1 = PcmSampleStream.d(0, 0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_y, this.field_v, 0, var6, param2, this, this.field_z, param4);
             } else {
-              param1 = nj.b(0, 0, ((gg) (this.field_m)).field_n, param0, this.field_o, param1, this.field_r, this.field_s, this.field_A, this.field_q, 0, var6, param2, this, this.field_z, param4);
+              param1 = PcmSampleStream.b(0, 0, ((PcmSample) (this.field_m)).data, param0, this.field_o, param1, this.field_r, this.field_s, this.field_A, this.field_q, 0, var6, param2, this, this.field_z, param4);
             }
           }
           this.field_x = this.field_x - param1;
@@ -556,7 +556,7 @@ final class nj extends PcmStream {
         return param3;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, nj param13, int param14, int param15) {
+    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmSampleStream param13, int param14, int param15) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -620,7 +620,7 @@ final class nj extends PcmStream {
         int fieldTemp$2 = 0;
         int discarded$4 = 0;
         int discarded$3 = 0;
-        gg var4;
+        PcmSample var4;
         int var5;
         int var6;
         int var7;
@@ -633,10 +633,10 @@ final class nj extends PcmStream {
           this.a(param2);
           return;
         }
-        var4 = (gg) (this.field_m);
+        var4 = (PcmSample) (this.field_m);
         var5 = this.field_u << 8;
         var6 = this.field_B << 8;
-        var7 = var4.field_n.length << 8;
+        var7 = var4.data.length << 8;
         var8 = var6 - var5;
         if (var8 <= 0) {
           this.field_t = 0;
@@ -663,7 +663,7 @@ final class nj extends PcmStream {
           if (!this.field_w) {
             if (this.field_z >= 0) {
               while (true) {
-                var9 = this.a(param0, var9, var6, param2, (int) var4.field_n[this.field_u]);
+                var9 = this.a(param0, var9, var6, param2, (int) var4.data[this.field_u]);
                 if (this.field_o < var6) {
                   return;
                 }
@@ -671,7 +671,7 @@ final class nj extends PcmStream {
               }
             }
             while (true) {
-              var9 = this.b(param0, var9, var5, param2, (int) var4.field_n[this.field_B - 1]);
+              var9 = this.b(param0, var9, var5, param2, (int) var4.data[this.field_B - 1]);
               if (this.field_o >= var5) {
                 return;
               }
@@ -679,7 +679,7 @@ final class nj extends PcmStream {
             }
           }
           if (this.field_z < 0) {
-            var9 = this.b(param0, var9, var5, param2, (int) var4.field_n[this.field_u]);
+            var9 = this.b(param0, var9, var5, param2, (int) var4.data[this.field_u]);
             if (this.field_o >= var5) {
               return;
             }
@@ -687,13 +687,13 @@ final class nj extends PcmStream {
             this.field_z = -this.field_z;
           }
           while (true) {
-            var9 = this.a(param0, var9, var6, param2, (int) var4.field_n[this.field_B - 1]);
+            var9 = this.a(param0, var9, var6, param2, (int) var4.data[this.field_B - 1]);
             if (this.field_o < var6) {
               return;
             }
             this.field_o = var6 + var6 - 1 - this.field_o;
             this.field_z = -this.field_z;
-            var9 = this.b(param0, var9, var5, param2, (int) var4.field_n[this.field_u]);
+            var9 = this.b(param0, var9, var5, param2, (int) var4.data[this.field_u]);
             if (this.field_o >= var5) {
               return;
             }
@@ -706,7 +706,7 @@ final class nj extends PcmStream {
           if (!this.field_w) {
             if (this.field_z < 0) {
               while (true) {
-                var9 = this.b(param0, var9, var5, param2, (int) var4.field_n[this.field_B - 1]);
+                var9 = this.b(param0, var9, var5, param2, (int) var4.data[this.field_B - 1]);
                 if (this.field_o >= var5) {
                   return;
                 }
@@ -722,7 +722,7 @@ final class nj extends PcmStream {
               this.field_t = 0;
             } else {
               while (true) {
-                var9 = this.a(param0, var9, var6, param2, (int) var4.field_n[this.field_u]);
+                var9 = this.a(param0, var9, var6, param2, (int) var4.data[this.field_u]);
                 if (this.field_o < var6) {
                   return;
                 }
@@ -741,7 +741,7 @@ final class nj extends PcmStream {
           }
           else {
             if (this.field_z < 0) {
-              var9 = this.b(param0, var9, var5, param2, (int) var4.field_n[this.field_u]);
+              var9 = this.b(param0, var9, var5, param2, (int) var4.data[this.field_u]);
               if (this.field_o >= var5) {
                 return;
               }
@@ -753,7 +753,7 @@ final class nj extends PcmStream {
             }
             if (decompiledFrameRemainder0) {
               do {
-                var9 = this.a(param0, var9, var6, param2, (int) var4.field_n[this.field_B - 1]);
+                var9 = this.a(param0, var9, var6, param2, (int) var4.data[this.field_B - 1]);
                 if (this.field_o < var6) {
                   return;
                 }
@@ -764,7 +764,7 @@ final class nj extends PcmStream {
                 if (fieldTemp$1 == 0) {
                   break;
                 }
-                var9 = this.b(param0, var9, var5, param2, (int) var4.field_n[this.field_u]);
+                var9 = this.b(param0, var9, var5, param2, (int) var4.data[this.field_u]);
                 if (this.field_o >= var5) {
                   return;
                 }
@@ -799,7 +799,7 @@ final class nj extends PcmStream {
         this.field_w = param0 ? true : false;
     }
 
-    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, nj param10) {
+    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -869,7 +869,7 @@ final class nj extends PcmStream {
         return this.field_n < 0 ? -1 : this.field_n;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, nj param10, int param11, int param12) {
+    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         if (param11 != 0) {
@@ -912,8 +912,8 @@ final class nj extends PcmStream {
         int var3;
         var1 = this.field_p;
         if (var1 != -2147483648) {
-          var2 = nj.b(var1, this.field_n);
-          var3 = nj.c(var1, this.field_n);
+          var2 = PcmSampleStream.b(var1, this.field_n);
+          var3 = PcmSampleStream.c(var1, this.field_n);
         } else {
           var3 = 0;
           var2 = 0;
@@ -1009,8 +1009,8 @@ final class nj extends PcmStream {
           this.a(param1, param2);
           return;
         }
-        int var4 = nj.b(param1, param2);
-        int var5 = nj.c(param1, param2);
+        int var4 = PcmSampleStream.b(param1, param2);
+        int var5 = PcmSampleStream.c(param1, param2);
         if (this.field_r != var4) {
           var6 = param1 - this.field_y;
           if (this.field_y - param1 > var6) {
@@ -1074,7 +1074,7 @@ final class nj extends PcmStream {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, nj param10) {
+    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -1140,7 +1140,7 @@ final class nj extends PcmStream {
         return param4 >> 1;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, nj param13, int param14, int param15) {
+    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmSampleStream param13, int param14, int param15) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -1199,7 +1199,7 @@ final class nj extends PcmStream {
         return param5;
     }
 
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, nj param12) {
+    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -1284,7 +1284,7 @@ final class nj extends PcmStream {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        gg var2;
+        PcmSample var2;
         int var3;
         int var4;
         int var5;
@@ -1309,10 +1309,10 @@ final class nj extends PcmStream {
             this.i();
           }
         }
-        var2 = (gg) (this.field_m);
+        var2 = (PcmSample) (this.field_m);
         var3 = this.field_u << 8;
         var4 = this.field_B << 8;
-        var5 = var2.field_n.length << 8;
+        var5 = var2.data.length << 8;
         var6 = var4 - var3;
         if (var6 <= 0) {
           this.field_t = 0;
@@ -1457,7 +1457,7 @@ final class nj extends PcmStream {
         this.field_t = param0;
     }
 
-    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, nj param9) {
+    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1519,10 +1519,10 @@ final class nj extends PcmStream {
         return param3;
     }
 
-    private nj(gg param0, int param1, int param2) {
-        this.field_m = (fb) ((Object) param0);
-        this.field_u = param0.field_k;
-        this.field_B = param0.field_o;
+    private PcmSampleStream(PcmSample param0, int param1, int param2) {
+        this.field_m = (AbstractAudioSample) ((Object) param0);
+        this.field_u = param0.loopStart;
+        this.field_B = param0.loopEnd;
         this.field_w = param0.field_l;
         this.field_z = param1;
         this.field_p = param2;
@@ -1531,7 +1531,7 @@ final class nj extends PcmStream {
         this.i();
     }
 
-    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, nj param9) {
+    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1593,12 +1593,12 @@ final class nj extends PcmStream {
         return param3;
     }
 
-    final static nj a(gg param0, int param1, int param2) {
-        if (param0.field_n == null) {
+    final static PcmSampleStream a(PcmSample param0, int param1, int param2) {
+        if (param0.data == null) {
           return null;
         }
-        if (param0.field_n.length != 0) {
-          return new nj(param0, (int)((long)param0.field_m * 256L * (long)param1 / (long)(100 * AudioOutput.field_c)), param2 << 6);
+        if (param0.data.length != 0) {
+          return new PcmSampleStream(param0, (int)((long)param0.sampleRate * 256L * (long)param1 / (long)(100 * AudioOutput.field_c)), param2 << 6);
         }
         return null;
     }
@@ -1608,7 +1608,7 @@ final class nj extends PcmStream {
         this.field_B = param1;
     }
 
-    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, nj param8) {
+    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmSampleStream param8) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1663,7 +1663,7 @@ final class nj extends PcmStream {
 
     final synchronized void c(int param0) {
         param0 = param0 << 8;
-        int var2 = ((gg) (this.field_m)).field_n.length << 8;
+        int var2 = ((PcmSample) (this.field_m)).data.length << 8;
         if (param0 < -1) {
           param0 = -1;
         }
@@ -1673,10 +1673,10 @@ final class nj extends PcmStream {
         this.field_o = param0;
     }
 
-    private nj(gg param0, int param1, int param2, int param3) {
-        this.field_m = (fb) ((Object) param0);
-        this.field_u = param0.field_k;
-        this.field_B = param0.field_o;
+    private PcmSampleStream(PcmSample param0, int param1, int param2, int param3) {
+        this.field_m = (AbstractAudioSample) ((Object) param0);
+        this.field_u = param0.loopStart;
+        this.field_B = param0.loopEnd;
         this.field_w = param0.field_l;
         this.field_z = param1;
         this.field_p = param2;
@@ -1685,7 +1685,7 @@ final class nj extends PcmStream {
         this.i();
     }
 
-    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, nj param8) {
+    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmSampleStream param8) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

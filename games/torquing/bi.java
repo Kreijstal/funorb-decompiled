@@ -1451,7 +1451,7 @@ final class bi {
                 var14 = this.field_D[var11_int];
                 this.a(538, 0, var14.field_h, var14.field_c);
                 if (null == ig.field_r[13]) {
-                  ig.field_r[13] = nj.a(th.field_F[13], 100, 96);
+                  ig.field_r[13] = PcmSampleStream.a(th.field_F[13], 100, 96);
                 }
                 if (!ig.field_r[13].e(17)) {
                   ig.field_r[13].c(0);

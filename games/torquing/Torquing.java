@@ -582,7 +582,7 @@ public final class Torquing extends tg {
         int[] var47 = null;
         Sprite[] var48 = null;
         Sprite var49 = null;
-        gg var50 = null;
+        PcmSample var50 = null;
         byte[] var51 = null;
         PacketBuffer var52 = null;
         String var53 = null;
@@ -1016,11 +1016,11 @@ public final class Torquing extends tg {
             th.field_F[28] = cg.a(bp.field_c, "", "torq_jump2").b();
             var3_intLifetime1 = bp.field_c.a(-1, "");
             var50 = id.field_a.a(bp.field_c.a("torq_whistle", -107, var3_intLifetime1), var3_intLifetime1, (byte) -84);
-            var63 = new byte[var50.field_n.length];
+            var63 = new byte[var50.data.length];
             var51 = var63;
             var5_ref_byte__ = var51;
-            dk.a(var50.field_n, 0, var5_ref_byte__, 0, var63.length);
-            th.field_F[5] = new gg(var50.field_m, var63, var50.field_k, var50.field_o, var50.field_l);
+            dk.a(var50.data, 0, var5_ref_byte__, 0, var63.length);
+            th.field_F[5] = new PcmSample(var50.sampleRate, var63, var50.loopStart, var50.loopEnd, var50.field_l);
             bp.field_c = null;
             cf.a(6639);
             return false;

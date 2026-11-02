@@ -2292,7 +2292,7 @@ final class mh {
                   break regionExit2;
                 }
                 if (ig.field_r[25] == null) {
-                  ig.field_r[25] = nj.a(th.field_F[25], 100, 96);
+                  ig.field_r[25] = PcmSampleStream.a(th.field_F[25], 100, 96);
                 }
                 if (ig.field_r[25].e(17)) {
                   break regionExit1;

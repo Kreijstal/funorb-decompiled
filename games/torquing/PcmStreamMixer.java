@@ -121,8 +121,8 @@ final class PcmStreamMixer extends PcmStream {
         this.b(param0);
     }
 
-    final void a(gg param0, int param1, int param2, int param3) {
-        this.a(nj.a(param0, param1, param2), param3);
+    final void a(PcmSample param0, int param1, int param2, int param3) {
+        this.a(PcmSampleStream.a(param0, param1, param2), param3);
     }
 
     private final void b(sl param0) {
@@ -141,8 +141,8 @@ final class PcmStreamMixer extends PcmStream {
         return (PcmStream) (this.field_n.f(-24059));
     }
 
-    final void a(gg param0, int param1, int param2) {
-        this.b(nj.a(param0, param1, param2));
+    final void a(PcmSample param0, int param1, int param2) {
+        this.b(PcmSampleStream.a(param0, param1, param2));
     }
 
     private final void c(int[] param0, int param1, int param2) {

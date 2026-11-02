@@ -55,7 +55,7 @@ final class wl extends sl {
     private int field_R;
     private int[] field_lb;
     private int[] field_G;
-    private nj[] field_V;
+    private PcmSampleStream[] field_V;
     private int field_z;
     private int[] field_n;
     private int field_u;
@@ -899,7 +899,7 @@ final class wl extends sl {
         this.field_L = new int[this.field_x.field_M];
         this.field_nb = new int[this.field_x.field_M];
         this.field_D = new boolean[this.field_x.field_M];
-        this.field_V = new nj[this.field_x.field_M];
+        this.field_V = new PcmSampleStream[this.field_x.field_M];
         this.c();
     }
 
@@ -1033,15 +1033,15 @@ final class wl extends sl {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        gg stackIn_14_0 = null;
+        PcmSample stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
-        nj stackIn_17_0 = null;
+        PcmSampleStream stackIn_17_0 = null;
         int stackIn_18_1 = 0;
-        nj stackIn_20_0 = null;
+        PcmSampleStream stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         Throwable decompiledCaughtException = null;
-        nj var7 = null;
+        PcmSampleStream var7 = null;
         Object var8 = null;
         this.b(param0);
         if (param3 > field_E[7999] &&
@@ -1067,14 +1067,14 @@ final class wl extends sl {
           } else {
             stackIn_15_2 = 0;
           }
-          var7 = nj.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
+          var7 = PcmSampleStream.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
           var7.d(this.field_x.field_w[param1], this.field_x.field_t[param1]);
           stackIn_17_0 = var7;
           stackIn_18_1 = (this.field_x.field_y[param1] == 0) ? 0 : -1;
-          ((nj) (Object) stackIn_17_0).d(stackIn_18_1);
+          ((PcmSampleStream) (Object) stackIn_17_0).d(stackIn_18_1);
           stackIn_20_0 = var7;
           stackIn_21_1 = (this.field_x.field_y[param1] != 2) ? false : true;
-          ((nj) (Object) stackIn_20_0).a(stackIn_21_1);
+          ((PcmSampleStream) (Object) stackIn_20_0).a(stackIn_21_1);
           if (param2 != 0) {
             var7.c(param2);
             var7.a(AudioOutput.field_c >> 7, param4 * this.field_R * this.field_z >> 12, param5);

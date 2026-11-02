@@ -95,7 +95,7 @@ final class qg extends am {
 
     final static void a(double param0, double[] param1, int param2, double param3, boolean param4) {
         boolean stackIn_16_0 = false;
-        gg[] stackIn_16_1 = null;
+        PcmSample[] stackIn_16_1 = null;
         int stackIn_17_2 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -136,7 +136,7 @@ final class qg extends am {
                 } else {
                   stackIn_17_2 = 26;
                 }
-                ip.a(stackIn_16_0, nj.a(stackIn_16_1[stackIn_17_2], var8, var7_int));
+                ip.a(stackIn_16_0, PcmSampleStream.a(stackIn_16_1[stackIn_17_2], var8, var7_int));
               }
               if (0.0 == param0 &&
                 var8 > 150) {

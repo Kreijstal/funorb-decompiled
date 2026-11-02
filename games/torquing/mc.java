@@ -4,7 +4,7 @@
 final class mc extends IntrusiveNode {
     static int field_l;
     static k field_k;
-    nj field_j;
+    PcmSampleStream field_j;
     static double field_m;
 
     final static void c(int param0) {
@@ -128,7 +128,7 @@ final class mc extends IntrusiveNode {
         }
     }
 
-    mc(nj param0) {
+    mc(PcmSampleStream param0) {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {

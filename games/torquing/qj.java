@@ -410,7 +410,7 @@ final class qj {
         }
     }
 
-    final static void a(int param0, int param1, int param2, gg param3) {
+    final static void a(int param0, int param1, int param2, PcmSample param3) {
         try {
           tb.field_l.a(param3, 100, on.field_c * param2 / 160, param0);
           if (param1 != -5205) {

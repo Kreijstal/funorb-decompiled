@@ -173,7 +173,7 @@ final class np extends ha {
           }
         } else {
           if (ig.field_r[param0] == null) {
-            ig.field_r[param0] = nj.a(th.field_F[param0], 100, param2);
+            ig.field_r[param0] = PcmSampleStream.a(th.field_F[param0], 100, param2);
             ig.field_r[param0].d(-1);
           }
           if (j.field_a != ig.field_r[param0]) {

@@ -17,7 +17,7 @@ final class j {
     byte[] field_e;
     byte[][] field_f;
     byte[] field_A;
-    static nj field_a;
+    static PcmSampleStream field_a;
     int[] field_y;
     int[] field_i;
     int[][] field_k;

@@ -3,7 +3,7 @@
  */
 final class th extends WidgetContainer implements ba, ng {
     private lg field_E;
-    static gg[] field_F;
+    static PcmSample[] field_F;
     static ResourceArchive field_C;
     private gp field_H;
     private lg field_B;
@@ -102,7 +102,7 @@ final class th extends WidgetContainer implements ba, ng {
         }
     }
 
-    final static void a(int param0, gg param1) {
+    final static void a(int param0, PcmSample param1) {
         try {
           tb.field_l.a(param1, param0, on.field_c * 96 / 160);
         } catch (RuntimeException runtimeException) {
@@ -187,7 +187,7 @@ final class th extends WidgetContainer implements ba, ng {
         field_F = null;
         field_C = null;
         if (param0 != 2147483647) {
-          field_F = (gg[]) null;
+          field_F = (PcmSample[]) null;
         }
     }
 
@@ -346,6 +346,6 @@ final class th extends WidgetContainer implements ba, ng {
     }
 
     static {
-        field_F = new gg[29];
+        field_F = new PcmSample[29];
     }
 }

@@ -56,7 +56,7 @@ final class fq extends jh {
         field_F = null;
     }
 
-    final static void a(boolean param0, int param1, gg param2, int param3) {
+    final static void a(boolean param0, int param1, PcmSample param2, int param3) {
         try {
           if (param0) {
             field_F = (dg) null;

@@ -6,7 +6,7 @@ final class ni extends IntrusiveNode {
     static sm[] field_l;
     byte[] field_j;
 
-    final static void a(nj param0, boolean param1) {
+    final static void a(PcmSampleStream param0, boolean param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -187,7 +187,7 @@ final class ni extends IntrusiveNode {
           Throwable var6 = null;
           RuntimeException var6_ref = null;
           String var7 = null;
-          nj var8 = null;
+          PcmSampleStream var8 = null;
           String var9 = null;
           String var10 = null;
           String var7Lifetime1;
@@ -203,8 +203,8 @@ final class ni extends IntrusiveNode {
               var7Lifetime2 = var10;
               var7Lifetime3 = var10;
               if (param0 < 69) {
-                var8 = (nj) null;
-                ni.a((nj) null, false);
+                var8 = (PcmSampleStream) null;
+                ni.a((PcmSampleStream) null, false);
               }
               if (param3 >= 0L) {
                 var7Lifetime4 = var10 + "; Expires=" + ka.a(param3 * 1000L + km.b(-1), -2) + "; Max-Age=" + param3;

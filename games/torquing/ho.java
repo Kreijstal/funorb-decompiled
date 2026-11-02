@@ -511,7 +511,7 @@ final class ho extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final gg a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -561,7 +561,7 @@ final class ho extends IntrusiveNode {
         this.field_B = null;
         var12 = this.field_l;
         this.field_l = null;
-        return new gg(this.field_M, var12, this.field_L, this.field_F, this.field_A);
+        return new PcmSample(this.field_M, var12, this.field_L, this.field_F, this.field_A);
     }
 
     final static int a() {
@@ -603,7 +603,7 @@ final class ho extends IntrusiveNode {
         }
     }
 
-    final gg c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -635,7 +635,7 @@ final class ho extends IntrusiveNode {
           }
         }
         this.field_B = null;
-        return new gg(this.field_M, var1, this.field_L, this.field_F, this.field_A);
+        return new PcmSample(this.field_M, var1, this.field_L, this.field_F, this.field_A);
     }
 
     private ho(byte[] param0) throws IOException {

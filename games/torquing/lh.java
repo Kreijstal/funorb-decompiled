@@ -15,7 +15,7 @@ final class lh {
     int[] field_i;
     private int[] field_s;
     int[] field_K;
-    gg[] field_o;
+    PcmSample[] field_o;
     int[] field_p;
     int[] field_N;
     int[] field_w;
@@ -59,7 +59,7 @@ final class lh {
         int var3 = 0;
         int var2;
         int var5;
-        gg var4;
+        PcmSample var4;
         var5 = Torquing.field_u;
         if (this.field_a == null) {
           return;
@@ -178,7 +178,7 @@ final class lh {
           this.field_i = new int[this.field_r];
           var5Lifetime3 = param0.readUnsignedShort(7088);
           this.field_x = new int[var5Lifetime3];
-          this.field_o = new gg[var5Lifetime3];
+          this.field_o = new PcmSample[var5Lifetime3];
           this.field_F = new int[var5Lifetime3];
           this.field_z = new int[var5Lifetime3];
           this.field_w = new int[var5Lifetime3];

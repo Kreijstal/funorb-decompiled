@@ -9,7 +9,7 @@ final class ip {
 
     final static boolean a(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
-        nj var3 = null;
+        PcmSampleStream var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -17,8 +17,8 @@ final class ip {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -28) {
-            var3 = (nj) null;
-            ip.a(false, (nj) null);
+            var3 = (PcmSampleStream) null;
+            ip.a(false, (PcmSampleStream) null);
           }
           stackIn_3_0 = ij.a(true, 10, param1, -98);
           return stackIn_3_0;
@@ -63,9 +63,9 @@ final class ip {
         return (java.applet.Applet) ((Object) vk.field_B);
     }
 
-    final static void a(boolean param0, nj param1) {
+    final static void a(boolean param0, PcmSampleStream param1) {
         mc var2 = null;
-        nj var3 = null;
+        PcmSampleStream var3 = null;
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

@@ -3,7 +3,7 @@
  */
 class ig extends pc {
     static Level field_q;
-    static nj[] field_r;
+    static PcmSampleStream[] field_r;
 
     ig(uc param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_x, -1, 2147483647, false);
@@ -35,6 +35,6 @@ class ig extends pc {
     }
 
     static {
-        field_r = new nj[29];
+        field_r = new PcmSampleStream[29];
     }
 }
