@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class RasterBuffer {
-    static es field_a;
+    static SecondaryKeyHashTable field_a;
     int[] field_e;
     static eg field_f;
     int field_b;

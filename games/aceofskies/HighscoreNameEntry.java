@@ -108,7 +108,7 @@ final class HighscoreNameEntry {
           for (int var6 = 0; var3 > var6; var6++) {
             var5[var6] = ud.field_e[pg.a(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(pu.field_a, cc.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var5);
+          var1[var2] = new Sprite(pu.field_a, JaggrabDownloader.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var5);
         }
         OpenGlUnderwaterEffect.f(1);
         return var1;

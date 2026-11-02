@@ -13,11 +13,11 @@ final class aq {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           Sprite var1 = new Sprite(param0, 140);
-          cm.a(var1, param0 - 15032);
+          ProxySocketConnector.a(var1, param0 - 15032);
           re.a();
           SoftwareRasterizer.clearFramebuffer();
           it.field_c = 0;
-          wj.e((byte) -128);
+          OpenGlFramebuffer.e((byte) -128);
           Sprite var2 = var1.copy();
           for (int var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);

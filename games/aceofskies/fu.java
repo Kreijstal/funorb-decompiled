@@ -39,7 +39,7 @@ abstract class fu {
           var3[var4_int] = ud.field_e[pg.a((int) var2[var4_int], 255)];
           var4_int++;
         }
-        Sprite var4 = new Sprite(pu.field_a, cc.field_i, lh.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], var3);
+        Sprite var4 = new Sprite(pu.field_a, JaggrabDownloader.field_i, lh.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], var3);
         OpenGlUnderwaterEffect.f(1);
         return var4;
     }

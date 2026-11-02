@@ -246,7 +246,7 @@ final class SectorCacheStore {
             for (int var6 = 0; var3 > var6; var6++) {
               var10[var6] = ud.field_e[pg.a((int) var21[var6], 255)];
             }
-            var1[var2] = new Sprite(pu.field_a, cc.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var22);
+            var1[var2] = new Sprite(pu.field_a, JaggrabDownloader.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var22);
           } else {
             byte[] var15 = ql.field_p[var2];
             byte[] var11 = var15;
@@ -258,7 +258,7 @@ final class SectorCacheStore {
             for (int var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = vo.a(pg.a(-16777216, var15[var7] << 24), ud.field_e[pg.a(255, (int) var21[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(pu.field_a, cc.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(pu.field_a, JaggrabDownloader.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var17));
           }
         }
         if (param0 > -79) {

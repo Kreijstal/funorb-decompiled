@@ -59,7 +59,7 @@ final class SoftCacheReference extends CacheReference {
             }
             return;
           }
-          hr.field_e.a(ik.field_l, true, qo.field_d, true);
+          hr.field_e.a(OpenGlRectangleTexture.field_l, true, qo.field_d, true);
           hr.field_e.f((byte) 33);
           if (param0 < 120) {
             return;

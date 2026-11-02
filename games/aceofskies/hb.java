@@ -5,7 +5,7 @@ import java.io.*;
 
 final class hb {
     static int field_b;
-    static cc field_a;
+    static JaggrabDownloader field_a;
 
     final static void a(CipherPacketBuffer param0, int param1) {
         try {
@@ -57,7 +57,7 @@ final class hb {
                 }
                 stackIn_35_0 = null;
               }
-              field_a = (cc) (stackIn_35_0);
+              field_a = (JaggrabDownloader) (stackIn_35_0);
               break;
             }
             param0.writeInt((byte) 87, var2.field_j);

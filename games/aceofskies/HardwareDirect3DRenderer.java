@@ -32,8 +32,8 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
     private int field_tc;
 
     final void a(int param0, HardwareVertexBuffer param1, int param2) {
-        cj var4 = (cj) (param1);
-        this.field_Rc.SetStreamSource(param2, var4.field_f, 0, var4.b(param0));
+        Direct3DVertexBuffer var4 = (Direct3DVertexBuffer) (param1);
+        this.field_Rc.SetStreamSource(param2, var4.buffer, 0, var4.b(param0));
     }
 
     final HardwareVolumeTexture a(int param0, int param1, int param2, hd param3, int param4, byte[] param5) {
@@ -709,7 +709,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         if (param1 != 8762) {
           this.w(-85);
         }
-        return (HardwareIndexBuffer) ((Object) new dm(this, BufferElementType.field_b, param0));
+        return (HardwareIndexBuffer) ((Object) new Direct3DIndexBuffer(this, BufferElementType.field_b, param0));
     }
 
     final fa a(pl[] param0, int param1) {
@@ -963,7 +963,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         if (param1 <= 72) {
           this.m(-115);
         }
-        return (HardwareVertexBuffer) ((Object) new cj(this, param0));
+        return (HardwareVertexBuffer) ((Object) new Direct3DVertexBuffer(this, param0));
     }
 
     final void l(byte param0) {

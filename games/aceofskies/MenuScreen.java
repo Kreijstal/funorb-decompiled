@@ -691,8 +691,8 @@ final class MenuScreen {
             param1 = param1 + SoftCacheReference.brassButtonSprites[1].d();
           }
           var12.a(true);
-          jm.levelRingSprites[21].b(param1 + 3, 9 + param4, 16, 16);
-          jm.levelRingSprites[21].b(-param0 + (20 + param1), 9 + param4, 16, 16);
+          SocketConnector.levelRingSprites[21].b(param1 + 3, 9 + param4, 16, 16);
+          SocketConnector.levelRingSprites[21].b(-param0 + (20 + param1), 9 + param4, 16, 16);
           HighscoreQuery.powerBulbSprites[0].b(param1 + 3, 9 + param4, 16, 16);
           HighscoreQuery.powerBulbSprites[0].b(-param0 + param1 + 20, 9 + param4, 16, 16);
           if (param3) {
@@ -774,11 +774,11 @@ final class MenuScreen {
           int var4_int = jaggl.OpenGL.glGenProgramARB();
           jaggl.OpenGL.glBindProgramARB(param1, var4_int);
           jaggl.OpenGL.glProgramStringARB(param1, 34933, param3);
-          jaggl.OpenGL.glGetIntegerv(34379, ik.field_m, 0);
+          jaggl.OpenGL.glGetIntegerv(34379, OpenGlRectangleTexture.field_m, 0);
           if (param0 <= 22) {
             MenuScreen.a((byte) -82, 1, false);
           }
-          if (ik.field_m[0] == -1) {
+          if (OpenGlRectangleTexture.field_m[0] == -1) {
             jaggl.OpenGL.glBindProgramARB(param1, 0);
             uf stackIn_6_0 = new uf(param2, param1, var4_int);
             return stackIn_6_0;
@@ -1075,7 +1075,7 @@ final class MenuScreen {
           if (var19Lifetime1) {
             PacketBuffer.gameFont.drawCenteredText(111, -14483644, var6, var15Lifetime1Lifetime2, var7Lifetime2Lifetime2, RenderEffect.field_d);
           } else {
-            PacketBuffer.gameFont.drawCenteredText(114, -56764, var6, var15Lifetime1Lifetime2, var7Lifetime2Lifetime2, jm.field_b);
+            PacketBuffer.gameFont.drawCenteredText(114, -56764, var6, var15Lifetime1Lifetime2, var7Lifetime2Lifetime2, SocketConnector.field_b);
           }
           int var20Lifetime1 = 160;
           String var18_ref_StringLifetime1 = hn.field_b[var17];
@@ -1222,7 +1222,7 @@ final class MenuScreen {
         int var5 = 0;
         int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          cu.field_r = true;
+          OpenGlRenderbuffer.field_r = true;
           ol.field_c = param1;
           if (ol.field_c == 0) {
             var3_int = ff.a(qk.field_g, ad.field_V, st.field_b, -3, nh.field_c);
@@ -1262,7 +1262,7 @@ final class MenuScreen {
           } else if (ol.field_c != 2) {
             if (ol.field_c == 3) {
               if (pt.field_b.field_q) {
-                var3_int = ff.a(qk.field_g, jm.field_c, st.field_b, -3, nh.field_c);
+                var3_int = ff.a(qk.field_g, SocketConnector.field_c, st.field_b, -3, nh.field_c);
               } else {
                 var3_int = ff.a(qk.field_g, ht.field_h, st.field_b, -3, nh.field_c);
               }
@@ -1332,10 +1332,10 @@ final class MenuScreen {
             if (-1 == var4) {
               throw new IllegalStateException();
             }
-            es.field_a = new String[var4];
-            au.a(st.field_b, 0, es.field_a, 0, var4);
-            cc.field_b = new String[-var4 + (var3_int - 1)];
-            au.a(st.field_b, 1 + var4, cc.field_b, 0, -1 - var4 + var3_int);
+            SecondaryKeyHashTable.field_a = new String[var4];
+            au.a(st.field_b, 0, SecondaryKeyHashTable.field_a, 0, var4);
+            JaggrabDownloader.field_b = new String[-var4 + (var3_int - 1)];
+            au.a(st.field_b, 1 + var4, JaggrabDownloader.field_b, 0, -1 - var4 + var3_int);
             var3_int = ff.a(qk.field_g, sn.a(InstrumentEnvelope.field_d, 105, new String[]{"<br><%0><br>"}), st.field_b, -3, nh.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -1352,14 +1352,14 @@ final class MenuScreen {
             au.a(st.field_b, 0, cn.field_z, 0, var4);
             NetworkArchiveRequest.field_v = new String[-1 + var3_int - var4];
             au.a(st.field_b, var4 + 1, NetworkArchiveRequest.field_v, 0, -1 + var3_int - var4);
-            if (es.field_a.length >= cn.field_z.length) {
-              stackIn_65_0 = es.field_a.length;
+            if (SecondaryKeyHashTable.field_a.length >= cn.field_z.length) {
+              stackIn_65_0 = SecondaryKeyHashTable.field_a.length;
             } else {
               stackIn_65_0 = cn.field_z.length;
             }
             var5 = stackIn_65_0;
-            if (NetworkArchiveRequest.field_v.length <= cc.field_b.length) {
-              stackIn_68_0 = cc.field_b.length;
+            if (NetworkArchiveRequest.field_v.length <= JaggrabDownloader.field_b.length) {
+              stackIn_68_0 = JaggrabDownloader.field_b.length;
             } else {
               stackIn_68_0 = NetworkArchiveRequest.field_v.length;
             }
@@ -1422,7 +1422,7 @@ final class MenuScreen {
             }
           }
           if (ol.field_c == 2) {
-            String[] var10 = es.field_a;
+            String[] var10 = SecondaryKeyHashTable.field_a;
             String[] var4_ref_String__ = var10;
             for (int var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               String var11 = var10[var5Lifetime2];
@@ -1431,7 +1431,7 @@ final class MenuScreen {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            String[] var4_ref_String__Lifetime1 = cc.field_b;
+            String[] var4_ref_String__Lifetime1 = JaggrabDownloader.field_b;
             for (int var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               String var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               int var7Lifetime1Lifetime1 = IntrusiveDeque.a(true, var12, false);

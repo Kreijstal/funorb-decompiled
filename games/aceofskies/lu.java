@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lu {
-    private wj field_b;
+    private OpenGlFramebuffer field_b;
     static String field_a;
     private OpenGlRenderer field_d;
     private IntrusiveDeque field_c;
@@ -47,13 +47,13 @@ final class lu {
             if (!this.field_d.field_u) {
               return;
             }
-            this.field_b = new wj(this.field_d);
+            this.field_b = new OpenGlFramebuffer(this.field_d);
             if (this.field_d.field_Hb > 1 &&
               this.field_d.field_i) {
               if (!this.field_d.field_Nb) {
                 return;
               }
-              this.field_b = new wj(this.field_d);
+              this.field_b = new OpenGlFramebuffer(this.field_d);
             }
           }
         } catch (RuntimeException runtimeException) {

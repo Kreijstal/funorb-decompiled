@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-abstract class jm {
+abstract class SocketConnector {
     static RenderSprite[] levelRingSprites;
-    int field_f;
+    int port;
     static String field_b;
     static String field_c;
-    String field_e;
+    String host;
     static int field_d;
 
     public static void a(int param0) {
@@ -18,7 +18,7 @@ abstract class jm {
           field_c = null;
           return;
         }
-        jm.a(-62);
+        SocketConnector.a(-62);
         field_b = null;
         levelRingSprites = null;
         field_c = null;
@@ -26,9 +26,9 @@ abstract class jm {
 
     abstract java.net.Socket a(byte param0) throws IOException;
 
-    final java.net.Socket b(byte param0) throws IOException {
-        int var2 = -124 / ((param0 + 69) / 34);
-        return new java.net.Socket(this.field_e, this.field_f);
+    final java.net.Socket connectDirect(byte obfuscationGuard) throws IOException {
+        int var2 = -124 / ((obfuscationGuard + 69) / 34);
+        return new java.net.Socket(this.host, this.port);
     }
 
     static {

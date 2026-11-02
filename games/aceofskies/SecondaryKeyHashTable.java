@@ -3,95 +3,95 @@
  */
 import java.io.*;
 
-final class es {
+final class SecondaryKeyHashTable {
     static String[] field_a;
-    private DualLinkNode field_d;
+    private DualLinkNode lookupCursor;
     static int rendererCurrentShadowColor;
-    private int field_f;
+    private int bucketCount;
     static RenderSprite[] smokeSprites;
     static String field_g;
-    private DualLinkNode[] field_e;
-    private long field_h;
+    private DualLinkNode[] bucketSentinels;
+    private long lookupKey;
     static SpriteData lockedSpriteData;
 
-    final DualLinkNode a(boolean param0) {
-        if (null == this.field_d) {
+    final DualLinkNode nextWithLookupKey(boolean obfuscationGuard) {
+        if (null == this.lookupCursor) {
           return null;
         }
-        if (param0) {
+        if (obfuscationGuard) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_e[(int)((long)(this.field_f - 1) & this.field_h)];
+        DualLinkNode var2 = this.bucketSentinels[(int)((long)(this.bucketCount - 1) & this.lookupKey)];
         while (true) {
-          if (var2 == this.field_d) {
-            this.field_d = null;
+          if (var2 == this.lookupCursor) {
+            this.lookupCursor = null;
             return null;
           }
-          if (~this.field_d.secondaryKey != ~this.field_h) {
-            this.field_d = this.field_d.nextSecondaryNode;
+          if (~this.lookupCursor.secondaryKey != ~this.lookupKey) {
+            this.lookupCursor = this.lookupCursor.nextSecondaryNode;
             continue;
           }
           break;
         }
-        DualLinkNode var3 = this.field_d;
-        this.field_d = this.field_d.nextSecondaryNode;
+        DualLinkNode var3 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.nextSecondaryNode;
         return var3;
     }
 
-    final DualLinkNode a(int param0, long param1) {
-        this.field_h = param1;
-        DualLinkNode var4 = this.field_e[(int)((long)(this.field_f - 1) & param1)];
-        if (param0 >= 87) {
-          this.field_d = var4.nextSecondaryNode;
+    final DualLinkNode firstWithKey(int obfuscationGuard, long key) {
+        this.lookupKey = key;
+        DualLinkNode var4 = this.bucketSentinels[(int)((long)(this.bucketCount - 1) & key)];
+        if (obfuscationGuard >= 87) {
+          this.lookupCursor = var4.nextSecondaryNode;
           while (true) {
-            if (var4 == this.field_d) {
-              this.field_d = null;
+            if (var4 == this.lookupCursor) {
+              this.lookupCursor = null;
               return null;
             }
-            if (~this.field_d.secondaryKey != ~param1) {
-              this.field_d = this.field_d.nextSecondaryNode;
+            if (~this.lookupCursor.secondaryKey != ~key) {
+              this.lookupCursor = this.lookupCursor.nextSecondaryNode;
               continue;
             }
             break;
           }
-          DualLinkNode var5 = this.field_d;
-          this.field_d = this.field_d.nextSecondaryNode;
+          DualLinkNode var5 = this.lookupCursor;
+          this.lookupCursor = this.lookupCursor.nextSecondaryNode;
           return var5;
         }
         smokeSprites = (RenderSprite[]) null;
-        this.field_d = var4.nextSecondaryNode;
+        this.lookupCursor = var4.nextSecondaryNode;
         while (true) {
-          if (var4 == this.field_d) {
-            this.field_d = null;
+          if (var4 == this.lookupCursor) {
+            this.lookupCursor = null;
             return null;
           }
-          if (~this.field_d.secondaryKey != ~param1) {
-            this.field_d = this.field_d.nextSecondaryNode;
+          if (~this.lookupCursor.secondaryKey != ~key) {
+            this.lookupCursor = this.lookupCursor.nextSecondaryNode;
             continue;
           }
           break;
         }
-        DualLinkNode var5Lifetime1 = this.field_d;
-        this.field_d = this.field_d.nextSecondaryNode;
+        DualLinkNode var5Lifetime1 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.nextSecondaryNode;
         return var5Lifetime1;
     }
 
-    final void a(DualLinkNode param0, long param1, byte param2) {
+    final void put(DualLinkNode node, long key, byte obfuscationGuard) {
         try {
-          if (null != param0.previousSecondaryNode) {
-            param0.unlinkSecondaryNode(-122);
+          if (null != node.previousSecondaryNode) {
+            node.unlinkSecondaryNode(-122);
           }
-          DualLinkNode var5 = this.field_e[(int)(param1 & (long)(this.field_f - 1))];
-          param0.previousSecondaryNode = var5.previousSecondaryNode;
-          param0.nextSecondaryNode = var5;
-          param0.previousSecondaryNode.nextSecondaryNode = param0;
-          if (param2 != 56) {
-            this.a(false);
+          DualLinkNode var5 = this.bucketSentinels[(int)(key & (long)(this.bucketCount - 1))];
+          node.previousSecondaryNode = var5.previousSecondaryNode;
+          node.nextSecondaryNode = var5;
+          node.previousSecondaryNode.nextSecondaryNode = node;
+          if (obfuscationGuard != 56) {
+            this.nextWithLookupKey(false);
           }
-          param0.secondaryKey = param1;
-          param0.nextSecondaryNode.previousSecondaryNode = param0;
+          node.secondaryKey = key;
+          node.nextSecondaryNode.previousSecondaryNode = node;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "es.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "es.C(" + (node != null ? "{...}" : "null") + ',' + key + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -166,15 +166,15 @@ final class es {
         }
     }
 
-    es(int param0) {
+    SecondaryKeyHashTable(int bucketCount) {
         boolean var4 = (AceOfSkies.obfuscationControl);
-        this.field_f = param0;
-        this.field_e = new DualLinkNode[param0];
+        this.bucketCount = bucketCount;
+        this.bucketSentinels = new DualLinkNode[bucketCount];
         int var2 = 0;
-        while (var2 < param0) {
+        while (var2 < bucketCount) {
           DualLinkNode dupTemp$1 = new DualLinkNode();
           DualLinkNode var3 = dupTemp$1;
-          this.field_e[var2] = dupTemp$1;
+          this.bucketSentinels[var2] = dupTemp$1;
           var3.previousSecondaryNode = var3;
           var3.nextSecondaryNode = var3;
           var2++;

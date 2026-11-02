@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed extends OpenGlTexture implements HardwareTexture2D {
+final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
     private int field_j;
     private int field_k;
     static int rendererJustificationRemainderQ8;
@@ -91,7 +91,7 @@ final class ed extends OpenGlTexture implements HardwareTexture2D {
         }
     }
 
-    ed(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+    OpenGlTexture2D(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(param0, 3553, param1, BufferElementType.field_h, param2 * param3, param4);
         String stackIn_17_2 = null;
         String stackIn_21_2 = null;
@@ -180,7 +180,7 @@ final class ed extends OpenGlTexture implements HardwareTexture2D {
         }
     }
 
-    ed(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
+    OpenGlTexture2D(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
         super(param0, 3553, param1, BufferElementType.field_i, param3 * param2, param4);
         String stackIn_16_2 = null;
         String stackIn_20_2 = null;
@@ -227,7 +227,7 @@ final class ed extends OpenGlTexture implements HardwareTexture2D {
         }
     }
 
-    ed(HardwareOpenGlRenderer param0, hd param1, BufferElementType param2, int param3, int param4) {
+    OpenGlTexture2D(HardwareOpenGlRenderer param0, hd param1, BufferElementType param2, int param3, int param4) {
         super(param0, 3553, param1, param2, param3 * param4, false);
         String stackIn_7_2 = null;
         String stackIn_11_2 = null;
@@ -334,7 +334,7 @@ final class ed extends OpenGlTexture implements HardwareTexture2D {
           int var6 = param0 * 3;
           pl.a(0);
           if (param2 >= -60) {
-            ed.a(-54, (wu) null, (byte) -49, -81, true);
+            OpenGlTexture2D.a(-54, (wu) null, (byte) -49, -81, true);
           }
           int var7 = var5_int - 10;
           if (param1.field_f > 0 &&
@@ -443,7 +443,7 @@ final class ed extends OpenGlTexture implements HardwareTexture2D {
     public final int b(byte param0) {
         try {
           if (param0 <= 2) {
-            ed.a(125, (wu) null, (byte) -44, -22, true);
+            OpenGlTexture2D.a(125, (wu) null, (byte) -44, -22, true);
           }
           int stackIn_4_0 = this.field_k;
           return stackIn_4_0;
@@ -454,7 +454,7 @@ final class ed extends OpenGlTexture implements HardwareTexture2D {
         }
     }
 
-    ed(HardwareOpenGlRenderer param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
+    OpenGlTexture2D(HardwareOpenGlRenderer param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(param0, 3553, IterableNodeHashTable.field_g, BufferElementType.field_h, param1 * param2, param3);
         String stackIn_16_2 = null;
         String stackIn_20_2 = null;

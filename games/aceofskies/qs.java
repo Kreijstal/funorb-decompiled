@@ -12,9 +12,9 @@ final class qs {
         String stackIn_44_2 = null;
         try {
           ScreenParticle.field_o = ScreenParticle.field_o + 1;
-          if (ik.field_k == -1 &&
+          if (OpenGlRectangleTexture.field_k == -1 &&
             rs.field_v == -1) {
-            ik.field_k = ic.field_b;
+            OpenGlRectangleTexture.field_k = ic.field_b;
             rs.field_v = cf.field_g;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -40,7 +40,7 @@ final class qs {
             } else {
               ScreenParticle.field_o = jp.field_b;
             }
-            we.field_c = ik.field_k;
+            we.field_c = OpenGlRectangleTexture.field_k;
             SpriteState.field_o = rs.field_v;
             if (param1 != null) {
               ht.field_g = false;
@@ -51,7 +51,7 @@ final class qs {
           if (!ht.field_g &&
             ScreenParticle.field_o < jp.field_b &&
             uu.pointerMoved) {
-            we.field_c = ik.field_k;
+            we.field_c = OpenGlRectangleTexture.field_k;
             SpriteState.field_o = rs.field_v;
             ScreenParticle.field_o = 0;
           }
@@ -64,7 +64,7 @@ final class qs {
             ScreenParticle.field_o = 0;
             ht.field_g = false;
           }
-          ik.field_k = -1;
+          OpenGlRectangleTexture.field_k = -1;
           rs.field_v = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

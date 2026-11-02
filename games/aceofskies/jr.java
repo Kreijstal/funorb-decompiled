@@ -49,7 +49,7 @@ final class jr extends DualLinkNode {
           ee.field_e = new int[to.field_t];
           var18.position = -(to.field_t * 8) + (-7 + param0.length);
           pu.field_a = var18.readUnsignedShort((byte) 0);
-          cc.field_i = var18.readUnsignedShort((byte) 0);
+          JaggrabDownloader.field_i = var18.readUnsignedShort((byte) 0);
           int var3 = (var18.readUnsignedByte(param1 ^ 7055) & 255) + 1;
           for (int var4 = 0; to.field_t > var4; var4++) {
             lh.field_a[var4] = var17.readUnsignedShort((byte) 0);

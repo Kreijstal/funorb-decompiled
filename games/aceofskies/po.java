@@ -184,7 +184,7 @@ final class po extends ka {
           this.field_g = param1;
           if (param3 ||
             tt.a(this.field_g, true, this.field_d)) {
-            this.field_c = new am(cu.a((byte) 117, this.field_g, this.field_d));
+            this.field_c = new am(OpenGlRenderbuffer.a((byte) 117, this.field_g, this.field_d));
           }
           if (param3 ||
             ta.a(this.field_g, this.field_d, (byte) 91)) {

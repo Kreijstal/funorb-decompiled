@@ -76,7 +76,7 @@ final class hi extends to {
           return;
         }
         Sprite var6 = new Sprite(this.field_s.field_q, this.field_s.field_n);
-        cm.a(var6, -14492);
+        ProxySocketConnector.a(var6, -14492);
         this.field_s.a((byte) 90, param1, 0, 0);
         sl.c(2765);
         var6.a(param3 + this.field_p, param2 + this.field_h, this.field_u);

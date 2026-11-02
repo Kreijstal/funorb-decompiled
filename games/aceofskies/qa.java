@@ -49,22 +49,22 @@ final class qa {
             String var6 = ne.field_g[var3];
             if (ol.field_c == 2 &&
               var2 == 1) {
-              if (es.field_a.length >= cn.field_z.length) {
-                stackIn_21_0 = es.field_a.length;
+              if (SecondaryKeyHashTable.field_a.length >= cn.field_z.length) {
+                stackIn_21_0 = SecondaryKeyHashTable.field_a.length;
               } else {
                 stackIn_21_0 = cn.field_z.length;
               }
               int var7 = stackIn_21_0;
-              if (cc.field_b.length < NetworkArchiveRequest.field_v.length) {
+              if (JaggrabDownloader.field_b.length < NetworkArchiveRequest.field_v.length) {
                 stackIn_24_0 = NetworkArchiveRequest.field_v.length;
               } else {
-                stackIn_24_0 = cc.field_b.length;
+                stackIn_24_0 = JaggrabDownloader.field_b.length;
               }
               int var8 = stackIn_24_0;
               if (var3 >= 6 &&
                 6 + var7 > var3) {
-                if (var3 - (6 - es.field_a.length) - var7 >= 0) {
-                  stackIn_30_0 = es.field_a[var3 - 6 - (-es.field_a.length + var7)];
+                if (var3 - (6 - SecondaryKeyHashTable.field_a.length) - var7 >= 0) {
+                  stackIn_30_0 = SecondaryKeyHashTable.field_a[var3 - 6 - (-SecondaryKeyHashTable.field_a.length + var7)];
                 } else {
                   stackIn_30_0 = "";
                 }
@@ -72,10 +72,10 @@ final class qa {
               }
               if (var7 + 7 <= var3 &&
                 var8 + (7 + var7) > var3) {
-                if (cc.field_b.length <= -var7 + (var3 - 7)) {
+                if (JaggrabDownloader.field_b.length <= -var7 + (var3 - 7)) {
                   stackIn_37_0 = "";
                 } else {
-                  stackIn_37_0 = cc.field_b[-var7 + var3 - 7];
+                  stackIn_37_0 = JaggrabDownloader.field_b[-var7 + var3 - 7];
                 }
                 var6 = stackIn_37_0;
               }
@@ -137,10 +137,10 @@ final class qa {
         if (it.field_c > 200) {
           var5 = (250 - it.field_c << 8) / 50;
         }
-        cm.a(wd.field_v, -14492);
+        ProxySocketConnector.a(wd.field_v, -14492);
         re.a();
         SoftwareRasterizer.clearFramebuffer();
-        wj.e((byte) -124);
+        OpenGlFramebuffer.e((byte) -124);
         if (var5 < 256) {
           SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, -var5 + 256);
           sl.c(2765);

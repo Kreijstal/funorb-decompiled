@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il {
+final class AwtFullscreenController {
     private java.awt.DisplayMode field_b;
     private java.awt.GraphicsDevice field_a;
 
@@ -111,7 +111,7 @@ final class il {
               Throwable var7_ref = decompiledCaughtException;
             }
           }
-          throw il.<RuntimeException>$cfr$sneakyThrow(var6);
+          throw AwtFullscreenController.<RuntimeException>$cfr$sneakyThrow(var6);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -119,7 +119,7 @@ final class il {
         }
     }
 
-    public il() throws Exception {
+    public AwtFullscreenController() throws Exception {
         java.awt.GraphicsEnvironment var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         this.field_a = var1.getDefaultScreenDevice();
         if (this.field_a.isFullScreenSupported()) {
@@ -135,7 +135,7 @@ final class il {
             return;
           }
         }
-        throw il.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw AwtFullscreenController.<RuntimeException>$cfr$sneakyThrow(new Exception());
     }
 
     static {

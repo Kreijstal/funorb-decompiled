@@ -124,7 +124,7 @@ final class wu {
         String stackIn_11_2 = null;
         String stackIn_15_2 = null;
         try {
-          wj.a(41, param3, param2, param0, param1, param5, param0, 1024);
+          OpenGlFramebuffer.a(41, param3, param2, param0, param1, param5, param0, 1024);
           if (param4 != 32767) {
             wu.a(47, false, (java.awt.Component) null, (SystemTaskService) null, 11, (jt) null);
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cu extends DualLinkNode implements ws {
+final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttachment {
     private OpenGlRenderer field_t;
     int field_u;
     int field_v;
@@ -26,7 +26,7 @@ final class cu extends DualLinkNode implements ws {
         if (param0 >= 101) {
           return (wc.a((byte) -101, param1, param2) | DiskCacheWorker.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
         }
-        cu.c((byte) 81);
+        OpenGlRenderbuffer.c((byte) 81);
         return (wc.a((byte) -101, param1, param2) | DiskCacheWorker.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
     }
 
@@ -68,7 +68,7 @@ final class cu extends DualLinkNode implements ws {
         ClientException.field_d.d(qk.field_e, -30244);
     }
 
-    cu(OpenGlRenderer param0, int param1, int param2, int param3) {
+    OpenGlRenderbuffer(OpenGlRenderer param0, int param1, int param2, int param3) {
         this.field_n = -1;
         this.field_q = -1;
         try {

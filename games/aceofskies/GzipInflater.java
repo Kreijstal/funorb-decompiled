@@ -49,7 +49,7 @@ final class GzipInflater {
           if (param1 != -16) {
             field_c = (String) null;
           }
-          boolean stackIn_3_0 = es.a(ln.class, -106, param0);
+          boolean stackIn_3_0 = SecondaryKeyHashTable.a(ln.class, -106, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

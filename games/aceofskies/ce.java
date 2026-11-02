@@ -297,7 +297,7 @@ final class ce extends ab implements dr, dn {
               PacketBuffer.i(-112);
             }
           } else {
-            cu.c((byte) 104);
+            OpenGlRenderbuffer.c((byte) 104);
           }
           int var6_intLifetime1 = 122 % ((param4 + 27) / 61);
           return;

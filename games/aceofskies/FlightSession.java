@@ -173,7 +173,7 @@ final class FlightSession {
                   int stackIn_82_1 = (12 <= var8) ? 0 : 1;
                   var10 = stackIn_81_0 & stackIn_82_1;
                 }
-                jm.levelRingSprites[var8].a(var5, var6);
+                SocketConnector.levelRingSprites[var8].a(var5, var6);
                 if (var7 == 6) {
                   if (this.scoreMultiplier <= 50) {
                     stackIn_90_0 = 16777215 | 255 * this.scoreMultiplier / 50 << 24;
@@ -181,7 +181,7 @@ final class FlightSession {
                     stackIn_90_0 = -1;
                   }
                   int var11Lifetime1 = stackIn_90_0;
-                  jm.levelRingSprites[1 + var8].a(var5, var6, 0, var11Lifetime1, 1);
+                  SocketConnector.levelRingSprites[1 + var8].a(var5, var6, 0, var11Lifetime1, 1);
                 }
                 GameKeyHandler.upgradeSprites[var7].a(var5, var6);
                 if (var10 != 0) {
@@ -307,7 +307,7 @@ final class FlightSession {
                 if (var4.renderMode != 0 ||
                   !(var4.ageTicks < var4.durationTicks)) {
                   if (var4.renderMode == 1) {
-                    es.smokeSprites[(var4.durationTicks + var4.alphaScale) % es.smokeSprites.length].a(-var7 + var5, var6 - var7, var7 << 1, var7 << 1, 0, var8 << 24 | 16777215, 1);
+                    SecondaryKeyHashTable.smokeSprites[(var4.durationTicks + var4.alphaScale) % SecondaryKeyHashTable.smokeSprites.length].a(-var7 + var5, var6 - var7, var7 << 1, var7 << 1, 0, var8 << 24 | 16777215, 1);
                   }
                   boolean decompiledFrameRemainder0 = false;
                 }
@@ -3495,7 +3495,7 @@ final class FlightSession {
                       var25Lifetime1 = var22_ref.spriteIndex;
                       var26 = (int)(var3 * (double)(50 * var22_ref.ageTicks) / (double)var22_ref.lifetimeTicks + 10.0);
                       int var27 = -(var22_ref.ageTicks * 256 / var22_ref.lifetimeTicks) + 256;
-                      es.smokeSprites[var25Lifetime1].a(-(var26 >> 1) + var23Lifetime2, -(var26 >> 1) + var24Lifetime1, var26, var26, 0, var27 << 23 & -14870727 | var22_ref.colourOrBlastRadius & 16777215, 1);
+                      SecondaryKeyHashTable.smokeSprites[var25Lifetime1].a(-(var26 >> 1) + var23Lifetime2, -(var26 >> 1) + var24Lifetime1, var26, var26, 0, var27 << 23 & -14870727 | var22_ref.colourOrBlastRadius & 16777215, 1);
                     }
                   }
                 }
@@ -3653,7 +3653,7 @@ final class FlightSession {
                   var25Lifetime3Lifetime1 = var22_refLifetime1.spriteIndex;
                   var26Lifetime2Lifetime1 = (int)(10.0 + var3 * (double)(var22_refLifetime1.ageTicks * 50) / (double)var22_refLifetime1.lifetimeTicks);
                   int var27Lifetime2 = 256 - var22_refLifetime1.ageTicks * 256 / var22_refLifetime1.lifetimeTicks;
-                  es.smokeSprites[var25Lifetime3Lifetime1].a(-(var26Lifetime2Lifetime1 >> 1) + var23Lifetime4Lifetime1, -(var26Lifetime2Lifetime1 >> 1) + var24Lifetime3Lifetime1, var26Lifetime2Lifetime1, var26Lifetime2Lifetime1, 0, 16777215 & var22_refLifetime1.colourOrBlastRadius | -9633548 & var27Lifetime2 << 23, 1);
+                  SecondaryKeyHashTable.smokeSprites[var25Lifetime3Lifetime1].a(-(var26Lifetime2Lifetime1 >> 1) + var23Lifetime4Lifetime1, -(var26Lifetime2Lifetime1 >> 1) + var24Lifetime3Lifetime1, var26Lifetime2Lifetime1, var26Lifetime2Lifetime1, 0, 16777215 & var22_refLifetime1.colourOrBlastRadius | -9633548 & var27Lifetime2 << 23, 1);
                 } else {
                   var25Lifetime3Lifetime1 = (int)(var3 * (double)(2 * -var22_refLifetime1.colourOrBlastRadius));
                   var26Lifetime2Lifetime1 = SectorCacheStore.explosionSprites.length * var22_refLifetime1.ageTicks / var22_refLifetime1.lifetimeTicks;

@@ -16,8 +16,8 @@ final class cs {
             return false;
           }
           int var6 = 114 % ((param0 - 32) / 42);
-          wj var12 = this.field_c.field_o;
-          cu var7 = new cu(this.field_c, 6408, param1.field_l, param1.field_m);
+          OpenGlFramebuffer var12 = this.field_c.field_o;
+          OpenGlRenderbuffer var7 = new OpenGlRenderbuffer(this.field_c, 6408, param1.field_l, param1.field_m);
           boolean var8 = false;
           this.field_c.a(var12, 32925);
           var12.a(var7, 0, (byte) 119);
