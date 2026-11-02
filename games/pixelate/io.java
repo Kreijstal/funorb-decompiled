@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class io {
-    static fm field_g;
+    static ResourceArchive field_g;
     static ak field_f;
     static long field_d;
     static int field_e;
@@ -23,7 +23,7 @@ final class io {
           var4 = (m) (on.field_nb.c(1504642273));
           while (var4 != null) {
             jc.a((byte) -31, param0, var4);
-            var4 = (m) (on.field_nb.f(1504642273));
+            var4 = (m) (on.field_nb.last(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,12 +59,12 @@ final class io {
         int var12Lifetime1;
         var13 = Pixelate.field_H ? 1 : 0;
         try {
-          var15 = vi.field_o;
+          var15 = MusicCrossfadeStream.field_o;
           var2 = var15.f(255);
           var3 = (lc) (rg.field_c.c(1504642273));
           while (var3 != null) {
             if (~var2 != ~var3.field_k) {
-              var3 = (lc) (rg.field_c.f(1504642273));
+              var3 = (lc) (rg.field_c.last(1504642273));
               continue;
             }
             break;
@@ -105,7 +105,7 @@ final class io {
             var10 = 0;
             var11 = 0;
             while (var9 > var10) {
-              var12 = gn.field_A[var10];
+              var12 = ArchiveRequest.field_A[var10];
               var7[0][var11] = lg.field_b[var12];
               var8[0][var11 * 4] = ep.field_c[var12];
               var8[0][1 + var11 * 4] = uc.field_b[var12];
@@ -123,7 +123,7 @@ final class io {
             var14 = 0;
             var11Lifetime1 = var14;
             while (var10Lifetime1 < var9) {
-              var12Lifetime1 = gn.field_A[var10Lifetime1 + var6];
+              var12Lifetime1 = ArchiveRequest.field_A[var10Lifetime1 + var6];
               var7[1][var14] = lg.field_b[var12Lifetime1];
               var8[1][4 * var14] = ep.field_c[var12Lifetime1];
               var8[1][1 + 4 * var14] = uc.field_b[var12Lifetime1];
@@ -173,7 +173,7 @@ final class io {
           var5 = (ga.field_f << 8) / 75;
         }
         if (param1 > -46) {
-          field_g = (fm) null;
+          field_g = (ResourceArchive) null;
           if (ga.field_f > 200) {
             var5 = (250 - ga.field_f << 8) / 50;
           }
@@ -199,7 +199,7 @@ final class io {
                 if (var6 < 20) {
                   var7 = var6 * 256 / 20;
                 }
-                in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 8);
+                MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 8);
               }
               return;
             }
@@ -221,7 +221,7 @@ final class io {
             if (var6Lifetime3 < 20) {
               var7Lifetime3 = var6Lifetime3 * 256 / 20;
             }
-            in.field_s.a(15 + var3, 10 + var4, var7Lifetime3 * var5 >> 8);
+            MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime3 * var5 >> 8);
           }
           return;
         }
@@ -267,7 +267,7 @@ final class io {
                 if (var6Lifetime1 < 20) {
                   var7Lifetime1 = var6Lifetime1 * 256 / 20;
                 }
-                in.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+                MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
               }
             } else {
               if (var6Lifetime1 >= 50) {
@@ -277,7 +277,7 @@ final class io {
                   if (var6Lifetime1 < 20) {
                     var7Lifetime1 = var6Lifetime1 * 256 / 20;
                   }
-                  in.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+                  MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
                 }
               } else {
                 if (var6Lifetime1 < 20) {
@@ -289,7 +289,7 @@ final class io {
                     if (var6Lifetime1 < 20) {
                       var7Lifetime1 = var6Lifetime1 * 256 / 20;
                     }
-                    in.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+                    MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
                   }
                 } else {
                   if (var6Lifetime1 < 30) {
@@ -300,7 +300,7 @@ final class io {
                       if (var6Lifetime1 < 20) {
                         var7Lifetime1 = var6Lifetime1 * 256 / 20;
                       }
-                      in.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+                      MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
                     }
                   } else {
                     var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
@@ -311,7 +311,7 @@ final class io {
                       if (var6Lifetime1 < 20) {
                         var7Lifetime1 = var6Lifetime1 * 256 / 20;
                       }
-                      in.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+                      MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
                     }
                   }
                 }
@@ -342,7 +342,7 @@ final class io {
           if (var6Lifetime2 < 20) {
             var7Lifetime2 = var6Lifetime2 * 256 / 20;
           }
-          in.field_s.a(15 + var3, 10 + var4, var7Lifetime2 * var5 >> 8);
+          MusicPatchNode.field_s.a(15 + var3, 10 + var4, var7Lifetime2 * var5 >> 8);
         }
         return;
     }
@@ -386,7 +386,7 @@ final class io {
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
-        tc var8 = null;
+        BinaryBitmapFont var8 = null;
         try {
           ud.field_L[0] = ai.field_d.nextInt();
           ud.field_L[1] = ai.field_d.nextInt();
@@ -424,7 +424,7 @@ final class io {
             var6 = var6 | 16;
           }
           aa.field_f.writeByte(160, var6);
-          var7 = ln.a(ao.a(13867), (byte) -85);
+          var7 = ln.a(AudioService.a(13867), (byte) -85);
           if (var7 == null) {
             var7 = "";
           }
@@ -433,8 +433,8 @@ final class io {
             aa.field_f.a((byte) -66, sc.field_a);
           }
           if (param1 >= -40) {
-            var8 = (tc) null;
-            io.a((tc) null, (byte) 105);
+            var8 = (BinaryBitmapFont) null;
+            io.a((BinaryBitmapFont) null, (byte) 105);
           }
           wh.a(ag.field_m, aa.field_f, tp.field_t, uk.field_v, 12556);
           aa.field_f.c(7519, aa.field_f.position - var5_int);
@@ -454,10 +454,10 @@ final class io {
         }
     }
 
-    final static void a(tc param0, byte param1) {
+    final static void a(BinaryBitmapFont param0, byte param1) {
         try {
           DelegatingCanvas.field_d = param0;
-          pe.field_c = DelegatingCanvas.field_d.field_z + DelegatingCanvas.field_d.field_w;
+          pe.field_c = DelegatingCanvas.field_d.maxDescent + DelegatingCanvas.field_d.maxAscent;
           int var2_int = -116 / ((70 - param1) / 48);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "io.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -481,7 +481,7 @@ final class io {
         field_a = null;
         field_c = null;
         if (param0 <= 97) {
-          field_g = (fm) null;
+          field_g = (ResourceArchive) null;
           field_g = null;
           return;
         }

@@ -33,10 +33,10 @@ final class bd {
           if (param0 > -50) {
             return;
           }
-          if (oh.field_b < qh.field_c) {
-            oh.field_b = oh.field_b + 1;
+          if (HuffmanCodec.field_b < qh.field_c) {
+            HuffmanCodec.field_b = HuffmanCodec.field_b + 1;
           }
-          if (oh.field_b <= 0) {
+          if (HuffmanCodec.field_b <= 0) {
             return;
           }
           r.b(-96);
@@ -49,13 +49,13 @@ final class bd {
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {
-            var5 = fm.field_f[var4_int];
+            var5 = ResourceArchive.field_f[var4_int];
             if (var5 != null) {
               if (var5.field_P != 0) {
-                cg.a((byte) -13, var5, var4_int);
+                DiskCacheRequest.a((byte) -13, var5, var4_int);
               }
               var6 = IterableNodeHashTable.a(var4_int, 0);
-              fm.field_h[var4_int].field_H = h.field_V[var6];
+              ResourceArchive.field_h[var4_int].field_H = h.field_V[var6];
               DelegatingCanvas.field_e[var4_int].field_cb = rg.field_a[var6];
             }
           }

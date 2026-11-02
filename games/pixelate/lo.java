@@ -175,8 +175,8 @@ final class lo extends ak {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (ca.field_a == null) {
-          ca.field_a = new int[2 * param2];
+        if (WhirlpoolHasher.field_a == null) {
+          WhirlpoolHasher.field_a = new int[2 * param2];
           if (ep.field_c == null ||
             !(ep.field_c.length >= param2)) {
             ep.field_c = new int[2 * param2];
@@ -195,9 +195,9 @@ final class lo extends ak {
           }
           if (SecondaryNodeDequeIterator.field_c == null) {
             SecondaryNodeDequeIterator.field_c = new int[2 * param2];
-            if (null == gn.field_A ||
-              !(param1 + param2 <= gn.field_A.length)) {
-              gn.field_A = new int[2 * (param1 + param2)];
+            if (null == ArchiveRequest.field_A ||
+              !(param1 + param2 <= ArchiveRequest.field_A.length)) {
+              ArchiveRequest.field_A = new int[2 * (param1 + param2)];
             }
             if (dp.field_o == null ||
               !(param2 <= dp.field_o.length)) {
@@ -205,9 +205,9 @@ final class lo extends ak {
             }
           } else {
             if (param2 <= SecondaryNodeDequeIterator.field_c.length) {
-              if (null == gn.field_A ||
-                !(param1 + param2 <= gn.field_A.length)) {
-                gn.field_A = new int[2 * (param1 + param2)];
+              if (null == ArchiveRequest.field_A ||
+                !(param1 + param2 <= ArchiveRequest.field_A.length)) {
+                ArchiveRequest.field_A = new int[2 * (param1 + param2)];
               }
               if (dp.field_o == null ||
                 !(param2 <= dp.field_o.length)) {
@@ -215,9 +215,9 @@ final class lo extends ak {
               }
             } else {
               SecondaryNodeDequeIterator.field_c = new int[2 * param2];
-              if (null == gn.field_A ||
-                !(param1 + param2 <= gn.field_A.length)) {
-                gn.field_A = new int[2 * (param1 + param2)];
+              if (null == ArchiveRequest.field_A ||
+                !(param1 + param2 <= ArchiveRequest.field_A.length)) {
+                ArchiveRequest.field_A = new int[2 * (param1 + param2)];
               }
               if (dp.field_o == null ||
                 !(param2 <= dp.field_o.length)) {
@@ -226,8 +226,8 @@ final class lo extends ak {
             }
           }
         } else {
-          if (ca.field_a.length < param2) {
-            ca.field_a = new int[2 * param2];
+          if (WhirlpoolHasher.field_a.length < param2) {
+            WhirlpoolHasher.field_a = new int[2 * param2];
             if (ep.field_c == null ||
               !(ep.field_c.length >= param2)) {
               ep.field_c = new int[2 * param2];
@@ -248,20 +248,20 @@ final class lo extends ak {
               !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
               SecondaryNodeDequeIterator.field_c = new int[2 * param2];
             }
-            if (null == gn.field_A) {
-              gn.field_A = new int[2 * (param1 + param2)];
+            if (null == ArchiveRequest.field_A) {
+              ArchiveRequest.field_A = new int[2 * (param1 + param2)];
               if (dp.field_o == null ||
                 !(param2 <= dp.field_o.length)) {
                 dp.field_o = new boolean[2 * param2];
               }
             } else {
-              if (param1 + param2 <= gn.field_A.length) {
+              if (param1 + param2 <= ArchiveRequest.field_A.length) {
                 if (dp.field_o == null ||
                   !(param2 <= dp.field_o.length)) {
                   dp.field_o = new boolean[2 * param2];
                 }
               } else {
-                gn.field_A = new int[2 * (param1 + param2)];
+                ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                 if (dp.field_o == null ||
                   !(param2 <= dp.field_o.length)) {
                   dp.field_o = new boolean[2 * param2];
@@ -287,20 +287,20 @@ final class lo extends ak {
                 !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
                 SecondaryNodeDequeIterator.field_c = new int[2 * param2];
               }
-              if (null == gn.field_A) {
-                gn.field_A = new int[2 * (param1 + param2)];
+              if (null == ArchiveRequest.field_A) {
+                ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                 if (dp.field_o == null ||
                   !(param2 <= dp.field_o.length)) {
                   dp.field_o = new boolean[2 * param2];
                 }
               } else {
-                if (param1 + param2 <= gn.field_A.length) {
+                if (param1 + param2 <= ArchiveRequest.field_A.length) {
                   if (dp.field_o == null ||
                     !(param2 <= dp.field_o.length)) {
                     dp.field_o = new boolean[2 * param2];
                   }
                 } else {
-                  gn.field_A = new int[2 * (param1 + param2)];
+                  ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                   if (dp.field_o == null ||
                     !(param2 <= dp.field_o.length)) {
                     dp.field_o = new boolean[2 * param2];
@@ -313,20 +313,20 @@ final class lo extends ak {
                   !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
                   SecondaryNodeDequeIterator.field_c = new int[2 * param2];
                 }
-                if (null == gn.field_A) {
-                  gn.field_A = new int[2 * (param1 + param2)];
+                if (null == ArchiveRequest.field_A) {
+                  ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                   if (dp.field_o == null ||
                     !(param2 <= dp.field_o.length)) {
                     dp.field_o = new boolean[2 * param2];
                   }
                 } else {
-                  if (param1 + param2 <= gn.field_A.length) {
+                  if (param1 + param2 <= ArchiveRequest.field_A.length) {
                     if (dp.field_o == null ||
                       !(param2 <= dp.field_o.length)) {
                       dp.field_o = new boolean[2 * param2];
                     }
                   } else {
-                    gn.field_A = new int[2 * (param1 + param2)];
+                    ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                     if (dp.field_o == null ||
                       !(param2 <= dp.field_o.length)) {
                       dp.field_o = new boolean[2 * param2];
@@ -339,20 +339,20 @@ final class lo extends ak {
                   !(param2 <= SecondaryNodeDequeIterator.field_c.length)) {
                   SecondaryNodeDequeIterator.field_c = new int[2 * param2];
                 }
-                if (null == gn.field_A) {
-                  gn.field_A = new int[2 * (param1 + param2)];
+                if (null == ArchiveRequest.field_A) {
+                  ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                   if (dp.field_o == null ||
                     !(param2 <= dp.field_o.length)) {
                     dp.field_o = new boolean[2 * param2];
                   }
                 } else {
-                  if (param1 + param2 <= gn.field_A.length) {
+                  if (param1 + param2 <= ArchiveRequest.field_A.length) {
                     if (dp.field_o == null ||
                       !(param2 <= dp.field_o.length)) {
                       dp.field_o = new boolean[2 * param2];
                     }
                   } else {
-                    gn.field_A = new int[2 * (param1 + param2)];
+                    ArchiveRequest.field_A = new int[2 * (param1 + param2)];
                     if (dp.field_o == null ||
                       !(param2 <= dp.field_o.length)) {
                       dp.field_o = new boolean[2 * param2];

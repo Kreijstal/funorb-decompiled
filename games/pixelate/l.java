@@ -99,7 +99,7 @@ final class l extends de {
           RuntimeException var15_ref = null;
           PlatformTaskDispatcher var16 = null;
           try {
-            vi.field_o = new pc(param8);
+            MusicCrossfadeStream.field_o = new pc(param8);
             aa.field_f = new pc(param2);
             bj.field_a = param1;
             hf.field_n = param7;
@@ -120,7 +120,7 @@ final class l extends de {
               return;
             }
             try {
-              vi.field_p = new uo(op.field_p.field_e, 64, 0);
+              MusicCrossfadeStream.field_p = new BufferedRandomAccessFile(op.field_p.field_e, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,22 +156,22 @@ final class l extends de {
         if (qo.field_o != ClientException.field_f.field_i) {
           wa.field_i = wa.field_i + (ClientException.field_f.field_i - qo.field_o);
           qo.field_o = ClientException.field_f.field_i;
-          if (!(oh.field_b <= 0)) {
-            oh.field_b = oh.field_b - 1;
+          if (!(HuffmanCodec.field_b <= 0)) {
+            HuffmanCodec.field_b = HuffmanCodec.field_b - 1;
           }
           if (param0) {
-            if (!(oh.field_b <= 0)) {
+            if (!(HuffmanCodec.field_b <= 0)) {
               r.b(-96);
             }
             return;
           }
           return;
         }
-        if (!(oh.field_b <= 0)) {
-          oh.field_b = oh.field_b - 1;
+        if (!(HuffmanCodec.field_b <= 0)) {
+          HuffmanCodec.field_b = HuffmanCodec.field_b - 1;
         }
         if (param0) {
-          if (!(oh.field_b <= 0)) {
+          if (!(HuffmanCodec.field_b <= 0)) {
             r.b(-96);
           }
           return;
@@ -179,22 +179,22 @@ final class l extends de {
     }
 
     final void a(int param0) {
-        tc var2 = null;
+        BinaryBitmapFont var2 = null;
         int var3 = 0;
-        tc var2Lifetime1;
+        BinaryBitmapFont var2Lifetime1;
         int var3Lifetime1;
         this.d((byte) -65);
         this.b((byte) -71);
         if (param0 == 11) {
           var2 = qj.field_e;
-          var3 = 1 + (var2.field_w + var2.field_z);
-          var2.a(ie.field_F, 50, 160, 540, 200, 16777215, 0, 1, 1, var3);
+          var3 = 1 + (var2.maxAscent + var2.maxDescent);
+          var2.drawParagraph(ie.field_F, 50, 160, 540, 200, 16777215, 0, 1, 1, var3);
           return;
         }
         this.a((byte) 119, false, 7);
         var2Lifetime1 = qj.field_e;
-        var3Lifetime1 = 1 + (var2Lifetime1.field_w + var2Lifetime1.field_z);
-        var2Lifetime1.a(ie.field_F, 50, 160, 540, 200, 16777215, 0, 1, 1, var3Lifetime1);
+        var3Lifetime1 = 1 + (var2Lifetime1.maxAscent + var2Lifetime1.maxDescent);
+        var2Lifetime1.drawParagraph(ie.field_F, 50, 160, 540, 200, 16777215, 0, 1, 1, var3Lifetime1);
     }
 
     static {

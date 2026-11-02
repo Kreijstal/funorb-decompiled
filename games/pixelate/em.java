@@ -44,10 +44,10 @@ final class em {
         try {
           jm.field_i = param0;
           var2_int = param0[0].field_A;
-          rn.field_b = var2_int;
+          SectorCacheStore.field_b = var2_int;
           hf.field_k = var2_int;
           lo.field_Jb = (800 - var2_int) / 2;
-          ip.field_A = rk.field_e.field_w + rk.field_e.field_z;
+          ip.field_A = rk.field_e.maxAscent + rk.field_e.maxDescent;
           bh.field_k = ip.field_A * 50 - 163;
           if (param1 >= -75) {
             field_b = (String) null;
@@ -76,7 +76,7 @@ final class em {
             em.a((byte) 53);
           }
           bj.field_d = param6;
-          eg.field_n = new wi(param4, param1, param2, param0, param3, param8, param7);
+          ProxySocketConnector.field_n = new wi(param4, param1, param2, param0, param3, param8, param7);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "em.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
@@ -91,7 +91,7 @@ final class em {
         field_a = null;
     }
 
-    final static void a(vj param0, int param1, int param2, fm param3) {
+    final static void a(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
         try {
           ub.field_a = pf.a(true) * param2 / 1000;
           nj.a(param3, (byte) 14);

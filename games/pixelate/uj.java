@@ -75,13 +75,13 @@ final class uj extends ak {
         if (param1 <= 84) {
           return (aa) null;
         }
-        var8 = vi.field_o;
+        var8 = MusicCrossfadeStream.field_o;
         var2 = var8;
         var3 = var8.f(255);
         fk.field_o = var3 & 127;
         stackIn_5_0 = (0 != (128 & var3));
         uc.field_n = stackIn_5_0;
-        lj.field_d = var8.f(255);
+        BoundedRandomAccessFile.field_d = var8.f(255);
         cd.field_g = var8.a(false);
         if (fk.field_o == 2) {
           qf.field_b = var8.a((byte) 2);
@@ -111,8 +111,8 @@ final class uj extends ak {
           }
         }
         if (!param0) {
-          pb.field_j = lj.a(80, -57, var8);
-          oh.field_g = null;
+          pb.field_j = BoundedRandomAccessFile.a(80, -57, var8);
+          HuffmanCodec.field_g = null;
           return new aa(param0);
         }
         var5 = var8.a((byte) 127);
@@ -124,12 +124,12 @@ final class uj extends ak {
           } else {
             stackIn_24_0 = var9.field_u;
           }
-          oh.field_g = stackIn_24_0;
+          HuffmanCodec.field_g = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           jo.a(1, "CC1", (Throwable) ((Object) var6));
-          oh.field_g = null;
+          HuffmanCodec.field_g = null;
           pb.field_j = null;
           return new aa(param0);
         }

@@ -92,7 +92,7 @@ final class ne extends ie {
             return stackIn_6_0;
           }
           for (var4 = 0; var4 < param2.length(); var4++) {
-            if (!oh.a(param2.charAt(var4), -112)) {
+            if (!HuffmanCodec.a(param2.charAt(var4), -112)) {
               stackIn_13_0 = nj.field_g;
               return stackIn_13_0;
             }

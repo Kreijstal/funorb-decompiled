@@ -49,7 +49,7 @@ final class ki {
           if (param0 < 14) {
             field_a = (String) null;
           }
-          var10 = vi.field_o;
+          var10 = MusicCrossfadeStream.field_o;
           var2 = var10.f(255);
           if (var2 != 0) {
             if (1 != var2) {
@@ -61,7 +61,7 @@ final class ki {
             var4_ref_og = (og) (wk.field_g.c(1504642273));
             while (var4_ref_og != null) {
               if (var4_ref_og.field_m != var3) {
-                var4_ref_og = (og) (wk.field_g.f(1504642273));
+                var4_ref_og = (og) (wk.field_g.last(1504642273));
                 continue;
               }
               break;

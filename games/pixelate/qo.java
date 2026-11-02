@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qo extends mg {
-    static fm field_u;
+    static ResourceArchive field_u;
     private c field_p;
     static ak field_q;
     static int field_o;
@@ -21,9 +21,9 @@ final class qo extends mg {
     final static String e(int param0) {
         if (param0 != 480) {
           qo.b(false);
-          return vi.field_o.h(5);
+          return MusicCrossfadeStream.field_o.h(5);
         }
-        return vi.field_o.h(5);
+        return MusicCrossfadeStream.field_o.h(5);
     }
 
     final String a(int param0, String param1) {

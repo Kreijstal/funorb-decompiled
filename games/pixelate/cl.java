@@ -31,7 +31,7 @@ final class cl {
           return;
         }
         ln.field_q = false;
-        lh.field_g = 0 == vi.field_o.f(255) ? true : false;
+        IsaacRandom.field_g = 0 == MusicCrossfadeStream.field_o.f(255) ? true : false;
     }
 
     final static int a(int param0, byte[] param1, int param2, CharSequence param3, int param4, int param5) {
@@ -204,8 +204,8 @@ final class cl {
         if (null != up.field_o) {
           dp.a(up.field_o, -2);
         }
-        if (null != eg.field_n) {
-          eg.field_n.a(param1, (byte) 20);
+        if (null != ProxySocketConnector.field_n) {
+          ProxySocketConnector.field_n.a(param1, (byte) 20);
         }
         de.a((byte) 28, param1);
         if (hc.field_M != null) {

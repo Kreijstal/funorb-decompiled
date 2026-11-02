@@ -33,7 +33,7 @@ final class sk {
         ug.a(2586);
         param12 = bq.a((byte) -124, param2, param6, param12, param13, param11, param5);
         ImageProducerRasterBuffer.a(param5, param10, param8, param0, param3, param1, -28362, param12, param4, param9);
-        oh.a(param0, 0, param4);
+        HuffmanCodec.a(param0, 0, param4);
         bd.a((byte) -64, param12, param4, param11);
         if (param7 <= -112) {
           return;

@@ -7,7 +7,7 @@ final class fl {
     static int[] field_g;
     static String field_f;
     static String field_c;
-    static fm field_b;
+    static ResourceArchive field_b;
     private boolean field_a;
 
     final static qe c(int param0) {
@@ -46,7 +46,7 @@ final class fl {
         if (hn.a(param1, param2, param3)) {
           return true;
         }
-        if (lh.field_g) {
+        if (IsaacRandom.field_g) {
           return false;
         }
         return go.a(param0, -35, param1);

@@ -84,7 +84,7 @@ final class sm extends IntrusiveNode {
             }
             if (var5 != null) {
               var6 = (String) null;
-              ti.a(0, (String) null, (String) (var4), (byte) -59, 2, (String) (var5));
+              MidiPcmStream.a(0, (String) null, (String) (var4), (byte) -59, 2, (String) (var5));
             }
           }
           he.field_f = null;
@@ -138,7 +138,7 @@ final class sm extends IntrusiveNode {
           return;
         }
         var6Lifetime1 = (String) null;
-        ti.a(0, (String) null, (String) (var4Lifetime1), (byte) -59, 2, (String) (var5Lifetime1));
+        MidiPcmStream.a(0, (String) null, (String) (var4Lifetime1), (byte) -59, 2, (String) (var5Lifetime1));
         he.field_f = null;
         il.field_e = -1;
         return;

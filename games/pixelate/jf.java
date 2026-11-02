@@ -38,15 +38,15 @@ final class jf {
           }
           var2_long = hm.a(64);
           if (0 != ij.field_s &&
-            0 > ao.field_c) {
+            0 > AudioService.field_c) {
             var4_ref_ug = (ug) (id.field_d.c(1504642273));
             if (var4_ref_ug != null &&
               var2_long > var4_ref_ug.field_o) {
               var4_ref_ug.c(2779);
               jj.field_b = var4_ref_ug.field_r.length;
-              vi.field_o.position = 0;
+              MusicCrossfadeStream.field_o.position = 0;
               for (var5_int = 0; jj.field_b > var5_int; var5_int++) {
-                vi.field_o.payload[var5_int] = var4_ref_ug.field_r[var5_int];
+                MusicCrossfadeStream.field_o.payload[var5_int] = var4_ref_ug.field_r[var5_int];
               }
               oj.field_G = gb.field_d;
               gb.field_d = tm.field_U;
@@ -56,24 +56,24 @@ final class jf {
             }
           }
           while (true) {
-            if (ao.field_c < 0) {
-              vi.field_o.position = 0;
+            if (AudioService.field_c < 0) {
+              MusicCrossfadeStream.field_o.position = 0;
               if (!rd.a(1, false)) {
                 return false;
               }
-              ao.field_c = vi.field_o.f((byte) 114);
-              vi.field_o.position = 0;
-              jj.field_b = param1[ao.field_c];
+              AudioService.field_c = MusicCrossfadeStream.field_o.f((byte) 114);
+              MusicCrossfadeStream.field_o.position = 0;
+              jj.field_b = param1[AudioService.field_c];
             }
-            if (!in.e(-18481)) {
+            if (!MusicPatchNode.e(-18481)) {
               return false;
             }
             if (0 == ij.field_s) {
               oj.field_G = gb.field_d;
               gb.field_d = tm.field_U;
               tm.field_U = mn.field_e;
-              mn.field_e = ao.field_c;
-              ao.field_c = -1;
+              mn.field_e = AudioService.field_c;
+              AudioService.field_c = -1;
               return true;
             }
             var4 = ij.field_s;
@@ -83,12 +83,12 @@ final class jf {
                 var4 = 0;
               }
             }
-            var5 = new ug(var2_long + (long)var4, ao.field_c, new byte[jj.field_b]);
+            var5 = new ug(var2_long + (long)var4, AudioService.field_c, new byte[jj.field_b]);
             for (var6 = 0; var6 < jj.field_b; var6++) {
-              var5.field_r[var6] = vi.field_o.payload[var6];
+              var5.field_r[var6] = MusicCrossfadeStream.field_o.payload[var6];
             }
-            id.field_d.a(22125, var5);
-            ao.field_c = -1;
+            id.field_d.addFirst(22125, var5);
+            AudioService.field_c = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,7 +140,7 @@ final class jf {
             return stackIn_13_0;
           }
           if (f.field_q >= 100 &&
-            uo.field_j <= 0) {
+            BufferedRandomAccessFile.field_j <= 0) {
             stackIn_18_0 = tm.field_Q;
             return stackIn_18_0;
           }
@@ -220,13 +220,13 @@ final class jf {
           }
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
-            var7 = sl.a(var6, (byte) 120);
+            var7 = IndexedSpriteState.a(var6, (byte) 120);
             if (var7 != null) {
               stackIn_19_0 = var7;
               return stackIn_19_0;
             }
           }
-          stackIn_22_0 = uo.a(-58, var3[var3.length - 1]);
+          stackIn_22_0 = BufferedRandomAccessFile.a(-58, var3[var3.length - 1]);
           return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -242,11 +242,11 @@ final class jf {
         }
     }
 
-    final static ob a(fm param0, int param1, fm param2, int param3, byte param4) {
+    final static PaletteBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, byte param4) {
         RuntimeException var5 = null;
         String var6 = null;
         Object stackIn_4_0 = null;
-        ob stackIn_6_0 = null;
+        PaletteBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -263,7 +263,7 @@ final class jf {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (ob) (stackIn_4_0);
+          return (PaletteBitmapFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

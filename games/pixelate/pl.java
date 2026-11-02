@@ -9,7 +9,7 @@ final class pl extends ch implements om, vo, pn {
     private qm field_K;
     private gk field_V;
     private gk field_P;
-    static bb field_Y;
+    static IntrusiveDeque field_Y;
     private h field_T;
     static int field_S;
     private qm field_R;
@@ -61,7 +61,7 @@ final class pl extends ch implements om, vo, pn {
         this.field_L.field_l = jf.field_b;
         this.field_V.field_l = te.field_Eb;
         this.field_X.field_l = dd.field_f;
-        this.field_Q.field_l = bb.field_d;
+        this.field_Q.field_l = IntrusiveDeque.field_d;
         this.field_T.field_l = mc.field_o;
         this.field_U.a((byte) 101, new ec(this.field_U));
         this.field_P.a((byte) 118, new bc(this.field_P));
@@ -92,7 +92,7 @@ final class pl extends ch implements om, vo, pn {
         qp var4 = new qp(46, var3, this.field_E - 90, 25, this.field_T, true, this.field_E - 120, 5, ep.field_b, 11579568, CanvasRasterBuffer.field_j);
         this.b(var4, 80);
         var3 = var3 + var4.field_C;
-        uc var5 = new uc(he.field_d, 0, 0, 0, 0, 16777215, -1, 0, 0, he.field_d.field_w, -1, 2147483647, true);
+        uc var5 = new uc(he.field_d, 0, 0, 0, 0, 16777215, -1, 0, 0, he.field_d.maxAscent, -1, 2147483647, true);
         this.field_M = new db(var2, var5);
         this.field_M.field_l = "";
         this.field_M.a(IntrusiveNode.field_g, 0, 0);
@@ -271,7 +271,7 @@ final class pl extends ch implements om, vo, pn {
         var29 = null;
         var11 = Pixelate.field_H ? 1 : 0;
         try {
-          var1 = vi.field_o;
+          var1 = MusicCrossfadeStream.field_o;
           if (!param0) {
             pl.m(96);
           }
@@ -338,7 +338,7 @@ final class pl extends ch implements om, vo, pn {
               while (var31 != null) {
                 var31.c(2779);
                 var31.e(17);
-                var31 = (uj) (ImageProducerRasterBuffer.field_n.f(1504642273));
+                var31 = (uj) (ImageProducerRasterBuffer.field_n.last(1504642273));
               }
               ka.field_X = 0;
               return;
@@ -375,7 +375,7 @@ final class pl extends ch implements om, vo, pn {
               while (var32 != null) {
                 var32.c(2779);
                 var32.e(17);
-                var32 = (eq) (nk.field_a.f(1504642273));
+                var32 = (eq) (nk.field_a.last(1504642273));
               }
               return;
             }
@@ -407,7 +407,7 @@ final class pl extends ch implements om, vo, pn {
                     if (19 == var2) {
                       var3Lifetime2 = ((PacketBuffer) ((Object) var1)).a(false);
                       var5Lifetime1 = ((PacketBuffer) ((Object) var1)).f(255);
-                      var23 = ll.a(var3Lifetime2, 14428);
+                      var23 = JaggrabDownloader.a(var3Lifetime2, 14428);
                       if (var23 == null) {
                         return;
                       }
@@ -452,10 +452,10 @@ final class pl extends ch implements om, vo, pn {
                   var3Lifetime2 = ((PacketBuffer) (Object) stackIn_100_0).a(stackIn_101_1);
                   var24 = ((PacketBuffer) ((Object) var1)).h(5);
                   var25 = ((PacketBuffer) ((Object) var1)).h(5);
-                  var7 = ll.a(var3Lifetime2, 14428);
+                  var7 = JaggrabDownloader.a(var3Lifetime2, 14428);
                   if (var7 == null) {
                     var7 = new uj(var24, var25, var3Lifetime2);
-                    stackIn_105_0 = eh.field_f;
+                    stackIn_105_0 = SocketConnector.field_f;
                     stackIn_106_1 = !(param0);
                     ((vg) (Object) stackIn_105_0).a(stackIn_106_1, var7, var3Lifetime2);
                     io.field_c.field_mc = io.field_c.field_mc + 1;
@@ -468,7 +468,7 @@ final class pl extends ch implements om, vo, pn {
                   var7.field_Yb = var8 >> 1;
                   var7.field_Qb = ((PacketBuffer) ((Object) var1)).f(255);
                   var7.field_Ib = ((PacketBuffer) ((Object) var1)).f(255);
-                  wi.field_a.a(22125, var7);
+                  wi.field_a.addFirst(22125, var7);
                   return;
                 }
                 stackIn_113_0 = var1;
@@ -527,7 +527,7 @@ final class pl extends ch implements om, vo, pn {
           while (var3_ref_uj != null) {
             var3_ref_uj.c(2779);
             var3_ref_uj.e(17);
-            var3_ref_uj = (uj) (wi.field_a.f(1504642273));
+            var3_ref_uj = (uj) (wi.field_a.last(1504642273));
           }
           var3_ref_ujLifetime1 = (uj) (il.field_d.a(-110));
           while (var3_ref_ujLifetime1 != null) {
@@ -675,7 +675,7 @@ final class pl extends ch implements om, vo, pn {
           if (sk.field_a == var4) {
             return false;
           }
-          if (var4 == uo.field_b) {
+          if (var4 == BufferedRandomAccessFile.field_b) {
             return false;
           }
           if (var4 == wh.field_o) {
@@ -920,6 +920,6 @@ final class pl extends ch implements om, vo, pn {
     }
 
     static {
-        field_Y = new bb();
+        field_Y = new IntrusiveDeque();
     }
 }

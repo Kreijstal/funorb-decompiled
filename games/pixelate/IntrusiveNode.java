@@ -13,7 +13,7 @@ class IntrusiveNode {
     static String field_i;
     IntrusiveNode field_h;
 
-    final static void a(String[] args, fm param1, int[] param2, byte param3, Sprite[][] param4, int param5, byte[] param6, Sprite[][] param7, String[] param8, String[][] param9, String[][] param10, String[] param11, int param12, int param13, byte[] param14) {
+    final static void a(String[] args, ResourceArchive param1, int[] param2, byte param3, Sprite[][] param4, int param5, byte[] param6, Sprite[][] param7, String[] param8, String[][] param9, String[][] param10, String[] param11, int param12, int param13, byte[] param14) {
         lo[] array$0 = null;
         lo[] array$1 = null;
         lo[] array$2 = null;
@@ -79,16 +79,16 @@ class IntrusiveNode {
           bg.field_d = param14;
           bf.field_q = param10;
           dk.field_a = param4;
-          bn.field_P = eh.a("gameprivacy", "lobby", (byte) 47, param1);
-          fd.field_c = eh.a("ratedgame", "lobby", (byte) 47, param1);
-          go.field_h = eh.a("opentome", "lobby", (byte) 47, param1);
-          so.field_d = eh.a("allowspectators", "lobby", (byte) 47, param1);
+          bn.field_P = SocketConnector.a("gameprivacy", "lobby", (byte) 47, param1);
+          fd.field_c = SocketConnector.a("ratedgame", "lobby", (byte) 47, param1);
+          go.field_h = SocketConnector.a("opentome", "lobby", (byte) 47, param1);
+          so.field_d = SocketConnector.a("allowspectators", "lobby", (byte) 47, param1);
           rb.field_p = new String[5];
           rb.field_p[3] = il.field_c;
           rb.field_p[2] = cl.field_b;
           rb.field_p[4] = u.field_g;
           rb.field_p[0] = pc.field_t;
-          rb.field_p[1] = nm.field_b;
+          rb.field_p[1] = IntrusiveDequeCursor.field_b;
           oc.field_O = new ak(0L, (ak) null);
           ho.field_g = new ak(0L, u.field_l, qn.field_m);
           l.field_s = new ak(0L, ni.field_s, rh.field_m);
@@ -107,16 +107,16 @@ class IntrusiveNode {
           gk.field_lb.field_Bb = 1;
           gk.field_cb = new ak(0L, be.field_R, jh.field_K.toUpperCase());
           sd.field_P = new ak(0L, io.field_f, ul.field_n.toUpperCase());
-          gm.field_a = new ak(0L, ff.field_a);
+          DiskCacheWorker.field_a = new ak(0L, ff.field_a);
           wc.field_n = new ak(0L, u.field_l, op.field_w);
           if (param3 < 108) {
             IntrusiveNode.d(41);
           }
-          lh.field_b = new ak(0L, vk.field_mb, co.field_u);
+          IsaacRandom.field_b = new ak(0L, vk.field_mb, co.field_u);
           on.field_pb = new ak(0L, vk.field_mb, nk.field_c);
-          be.field_P = new ak(0L, vk.field_mb, km.field_q);
+          be.field_P = new ak(0L, vk.field_mb, MusicPatchPcmStream.field_q);
           g.field_o = new ak(0L, vk.field_mb, ii.field_b);
-          wn.field_t = new ak(0L, ni.field_s, df.field_m);
+          SocketJs5Transport.field_t = new ak(0L, ni.field_s, df.field_m);
           aj.field_k = new gp(0L, new ak(0L, (ak) null), ff.field_g, ug.field_s);
           lg.field_c = new ak(0L, bf.field_k, DualLinkNode.field_m.toUpperCase());
           lg.field_c.field_rb = f.field_n;
@@ -133,23 +133,23 @@ class IntrusiveNode {
             stackIn_9_1 = null;
             stackIn_9_4 = re.field_c;
           }
-          in.field_p = new ak(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
-          ti.field_E = new ak(0L, (ak) null);
-          ti.field_E.a(sd.field_P, (byte) 26);
-          ti.field_E.a(gm.field_a, (byte) 26);
-          gm.field_a.a(wc.field_n, (byte) 26);
-          gm.field_a.a(lh.field_b, (byte) 26);
-          gm.field_a.a(on.field_pb, (byte) 26);
+          MusicPatchNode.field_p = new ak(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
+          MidiPcmStream.field_E = new ak(0L, (ak) null);
+          MidiPcmStream.field_E.a(sd.field_P, (byte) 26);
+          MidiPcmStream.field_E.a(DiskCacheWorker.field_a, (byte) 26);
+          DiskCacheWorker.field_a.a(wc.field_n, (byte) 26);
+          DiskCacheWorker.field_a.a(IsaacRandom.field_b, (byte) 26);
+          DiskCacheWorker.field_a.a(on.field_pb, (byte) 26);
           if (f.field_n) {
-            gm.field_a.a(be.field_P, (byte) 26);
+            DiskCacheWorker.field_a.a(be.field_P, (byte) 26);
           }
-          gm.field_a.a(g.field_o, (byte) 26);
-          gm.field_a.a(wn.field_t, (byte) 26);
-          gm.field_a.a(aj.field_k, (byte) 26);
+          DiskCacheWorker.field_a.a(g.field_o, (byte) 26);
+          DiskCacheWorker.field_a.a(SocketJs5Transport.field_t, (byte) 26);
+          DiskCacheWorker.field_a.a(aj.field_k, (byte) 26);
           if (f.field_n) {
-            ti.field_E.a(lg.field_c, (byte) 26);
+            MidiPcmStream.field_E.a(lg.field_c, (byte) 26);
           }
-          ti.field_E.a(in.field_p, (byte) 26);
+          MidiPcmStream.field_E.a(MusicPatchNode.field_p, (byte) 26);
           jm.field_h = new ak(0L, mg.field_h);
           jm.field_h.field_kb = 0;
           jm.field_h.field_Bb = 1;
@@ -247,7 +247,7 @@ class IntrusiveNode {
           }
           wm.field_d = new ak(0L, bf.field_k);
           ep.field_a = new ak(0L, bf.field_k);
-          nk.field_e = new ak(0L, kj.field_l);
+          nk.field_e = new ak(0L, ArchiveIndex.field_l);
           nk.field_e.a(-27813, mg.field_h);
           nk.field_e.field_kb = 1;
           var17 = nk.field_e;
@@ -271,7 +271,7 @@ class IntrusiveNode {
           ai.field_A.a(wm.field_d, (byte) 26);
           ai.field_A.a(ep.field_a, (byte) 26);
           ai.field_A.a(nk.field_e, (byte) 26);
-          ih.field_g = new ak(0L, pj.field_i, ca.field_k.toUpperCase());
+          ih.field_g = new ak(0L, pj.field_i, WhirlpoolHasher.field_k.toUpperCase());
           hb.field_eb = new ak(0L, nk.field_f, ec.field_o.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

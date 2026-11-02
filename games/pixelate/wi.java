@@ -11,8 +11,8 @@ final class wi {
     String field_h;
     private String field_i;
     int field_m;
-    static vj field_d;
-    static bb field_a;
+    static PcmStreamMixer field_d;
+    static IntrusiveDeque field_a;
     static String field_e;
     private int field_k;
     private int[] field_j;
@@ -78,19 +78,19 @@ final class wi {
                 param0 != 2 &&
                 !ln.field_q) {
                 this.field_j = param1;
-                this.field_b.a(sd.a(nl.field_d, 61, new String[]{var7}), (byte) -80, 19);
+                this.field_b.a(sd.a(NodeHashTable.field_d, 61, new String[]{var7}), (byte) -80, 19);
               }
             }
             if (var5 != null) {
               if (!ul.a(57, this.field_h) &&
                 !ln.field_q) {
-                if (!lh.field_g) {
+                if (!IsaacRandom.field_g) {
                   this.field_b.a(sd.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
                 }
                 this.field_b.a(sd.a(ho.field_f, 83, new String[]{var7}), (byte) -33, 18);
                 if (param1 != null) {
                   this.field_j = param1;
-                  this.field_b.a(sd.a(nl.field_d, 22, new String[]{var7}), (byte) -95, 19);
+                  this.field_b.a(sd.a(NodeHashTable.field_d, 22, new String[]{var7}), (byte) -95, 19);
                 }
               }
               this.field_b.a(sd.a(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
@@ -121,7 +121,7 @@ final class wi {
         }
         bq.a(false, (byte) -110, 4);
         if (param0 != -53) {
-          field_d = (vj) null;
+          field_d = (PcmStreamMixer) null;
         }
     }
 
@@ -252,7 +252,7 @@ final class wi {
           return;
         }
         var7 = gp.a(param1 + 100, this.field_l);
-        var4 = ll.a(this.field_l, param1 + 14526);
+        var4 = JaggrabDownloader.a(this.field_l, param1 + 14526);
         var5 = this.a((byte) 27);
         if (var4 != null) {
           if (!io.field_c.field_dc) {
@@ -299,7 +299,7 @@ final class wi {
           return;
         }
         if (var7.field_Vb) {
-          this.field_b.a(sd.a(fm.field_j, param1 + 180, new String[]{var5}), (byte) -111, 1);
+          this.field_b.a(sd.a(ResourceArchive.field_j, param1 + 180, new String[]{var5}), (byte) -111, 1);
           if (param1 == -98) {
             return;
           }
@@ -323,7 +323,7 @@ final class wi {
           return;
         }
         this.field_b.a(sd.a(md.field_V, 59, new String[]{var5}), (byte) -70, 0);
-        this.field_b.a(sd.a(po.field_f, 101, new String[]{var5}), (byte) -41, 1);
+        this.field_b.a(sd.a(SoundCache.field_f, 101, new String[]{var5}), (byte) -41, 1);
         if (param1 == -98) {
           return;
         }
@@ -360,7 +360,7 @@ final class wi {
         if (param2 == 4) {
           var5 = jf.a(this.field_h, param0, (byte) 79);
           if (var5 != null) {
-            ti.a(0, (String) null, this.field_h, (byte) -50, 2, var5);
+            MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var5);
           }
           if (param1 >= -123) {
           }
@@ -369,7 +369,7 @@ final class wi {
         if (param2 == 5) {
           var6 = ff.a(param0, this.field_h, (byte) -106);
           if (var6 != null) {
-            ti.a(0, (String) null, this.field_h, (byte) -50, 2, var6);
+            MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var6);
           }
           if (param1 >= -123) {
           }
@@ -378,7 +378,7 @@ final class wi {
         if (param2 == 6) {
           var7 = mj.a(85, this.field_h, param0);
           if (var7 != null) {
-            ti.a(0, (String) null, this.field_h, (byte) -50, 2, var7);
+            MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var7);
           }
           if (param1 >= -123) {
           }
@@ -392,7 +392,7 @@ final class wi {
           if (param1 < -123) {
           }
         } else {
-          ti.a(0, (String) null, this.field_h, (byte) -50, 2, var8);
+          MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var8);
           if (param1 >= -123) {
           }
         }
@@ -425,7 +425,7 @@ final class wi {
             if (io.field_e == 0) {
               this.field_b.a(gd.field_j, (byte) -31, 12);
             }
-            this.field_b.a(uo.field_d, (byte) -127, 13);
+            this.field_b.a(BufferedRandomAccessFile.field_d, (byte) -127, 13);
           }
           if (1 == param1.field_j) {
             if (0 == gh.field_v) {
@@ -582,7 +582,7 @@ final class wi {
           }
           var3 = this.a((byte) 43);
           String var2 = var3;
-          this.field_b.a(sd.a(sl.field_j, param0 - 8830, new String[]{var3}), (byte) -72, 17);
+          this.field_b.a(sd.a(IndexedSpriteState.field_j, param0 - 8830, new String[]{var3}), (byte) -72, 17);
         }
         if (param0 == 8893) {
           return;

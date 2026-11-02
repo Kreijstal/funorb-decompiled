@@ -50,13 +50,13 @@ final class w extends uc {
           var2 = (eq) (nk.field_a.c(1504642273));
           while (var2 != null) {
             if (var2.a((byte) 110, param1)) {
-              var2 = (eq) (nk.field_a.f(1504642273));
+              var2 = (eq) (nk.field_a.last(1504642273));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            nk.field_a.a(22125, param1);
+            nk.field_a.addFirst(22125, param1);
           } else {
             stackIn_9_0 = -4;
             jj.$cfr$intArgs$a$2d0b7bdf67eb(stackIn_9_0, var2, param1);

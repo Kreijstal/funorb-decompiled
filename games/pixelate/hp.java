@@ -21,7 +21,7 @@ final class hp extends ak {
         }
         boolean decompiledFrameRemainder0 = true;
         this.a(-28476, true);
-        if ((0 == nm.field_c ||
+        if ((0 == IntrusiveDequeCursor.field_c ||
           this.field_P != 0) && this.field_Eb.field_P == 0) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
@@ -33,7 +33,7 @@ final class hp extends ak {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        ti.a(false);
+        MidiPcmStream.a(false);
         if (param3 > -83) {
           hp.j(-32);
         }
@@ -78,7 +78,7 @@ final class hp extends ak {
           for (var12 = 0; var12 < kd.field_c.length; var12++) {
             var13 = new ak(0L, param3, SpriteState.field_I[var12]);
             var14 = new ak(0L, param3, kd.field_c[var12]);
-            var15 = param3.field_Db.c(kd.field_c[var12]);
+            var15 = param3.field_Db.textWidth(kd.field_c[var12]);
             var13.a(var10, 15, 20, 256, 65);
             if (var11 < var15) {
               var11 = var15;

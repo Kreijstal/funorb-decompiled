@@ -10,7 +10,7 @@ final class ad extends uc {
     private int field_v;
     private int field_t;
 
-    final static boolean[] a(hh param0, int param1) {
+    final static boolean[] a(IndexedSprite param0, int param1) {
         int var3 = 0;
         boolean[] var2 = null;
         RuntimeException var2_ref = null;
@@ -34,7 +34,7 @@ final class ad extends uc {
           for (var3 = 0; var5.length > var3; var3++) {
             stackIn_7_0 = var5;
             stackIn_7_1 = var3;
-            stackIn_8_2 = !(param0.field_n[var3] <= 1);
+            stackIn_8_2 = !(param0.indices[var3] <= 1);
             stackIn_7_0[stackIn_7_1] = stackIn_8_2;
           }
           stackIn_10_0 = var5;
@@ -148,13 +148,13 @@ final class ad extends uc {
     final static void a(Sprite[] param0, int param1, int param2, int param3) {
         try {
           if (param2 > -57) {
-            hh var5 = (hh) null;
-            ad.a((hh) null, -30);
+            IndexedSprite var5 = (IndexedSprite) null;
+            ad.a((IndexedSprite) null, -30);
           }
           he.field_a = new sb(param0);
           gh.field_t = param3;
           PacketBuffer.field_n = param1;
-          bb.h(-126);
+          IntrusiveDeque.h(-126);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ad.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -202,7 +202,7 @@ final class ad extends uc {
           td.a(param3 + param0.field_z, param0.field_p + (param2 + (param0.field_C - this.field_s[0].field_B >> 1)), param0.field_E, this.field_s, (byte) 121, var7);
           stackIn_19_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
-          this.field_a.a(param0.field_q, param3 + param0.field_z, param2 + param0.field_p - 2, param0.field_E, param0.field_C, var8, -1, 1, 1, this.field_a.field_w);
+          this.field_a.drawParagraph(param0.field_q, param3 + param0.field_z, param2 + param0.field_p - 2, param0.field_E, param0.field_C, var8, -1, 1, 1, this.field_a.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -66,7 +66,7 @@ final class hq extends de {
             if (param3) {
               stackIn_12_1 = gf.field_c;
             } else {
-              stackIn_12_1 = vi.field_J;
+              stackIn_12_1 = MusicCrossfadeStream.field_J;
             }
             this.field_A = stackIn_12_1;
             this.field_I = 10;
@@ -80,7 +80,7 @@ final class hq extends de {
         int var2;
         int var3;
         int var4;
-        ob var5;
+        PaletteBitmapFont var5;
         int var6;
         int var7;
         int var8;
@@ -108,54 +108,54 @@ final class hq extends de {
         }
         var5 = rk.field_e;
         var6 = 190;
-        var7 = var5.field_w + var5.field_z + 3;
+        var7 = var5.maxAscent + var5.maxDescent + 3;
         if (this.field_G == 0) {
-          var5.a(tg.field_b, 120, var6, 0, -1);
-          var5.c(this.field_v, 540, var6, 1, -1);
+          var5.drawText(tg.field_b, 120, var6, 0, -1);
+          var5.drawRightAlignedText(this.field_v, 540, var6, 1, -1);
           var6 = var6 + var7;
-          var5.a(ep.field_d, 120, var6, 0, -1);
-          var5.c(Integer.toString(this.field_E), 540, var6, 1, -1);
+          var5.drawText(ep.field_d, 120, var6, 0, -1);
+          var5.drawRightAlignedText(Integer.toString(this.field_E), 540, var6, 1, -1);
           var6 = var6 + var7;
-          var5.a(vi.field_E, 120, var6, 0, -1);
-          var5.c(Integer.toString(this.field_H), 540, var6, 1, -1);
+          var5.drawText(MusicCrossfadeStream.field_E, 120, var6, 0, -1);
+          var5.drawRightAlignedText(Integer.toString(this.field_H), 540, var6, 1, -1);
           var6 = var6 + var7;
-          var5.a(lo.field_Lb, 120, var6, 0, -1);
-          var5.c(Integer.toString(this.field_J), 540, var6, 1, -1);
+          var5.drawText(lo.field_Lb, 120, var6, 0, -1);
+          var5.drawRightAlignedText(Integer.toString(this.field_J), 540, var6, 1, -1);
           var6 = var6 + var7;
           SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
           SoftwareRasterizer.d(120, var6 - 2, 420, 3, 16777215);
           var6 = var6 + var7;
-          var5.a(he.field_c, 120, var6, 0, -1);
-          var5.c(this.field_K, 540, var6, 1, -1);
+          var5.drawText(he.field_c, 120, var6, 0, -1);
+          var5.drawRightAlignedText(this.field_K, 540, var6, 1, -1);
         } else {
           if (this.field_G != 1) {
             if (this.field_G == 2) {
               if (this.field_o != null) {
-                var5.b(this.field_o, 330, var6, 0, -1);
+                var5.drawCentered(this.field_o, 330, var6, 0, -1);
               }
               var6 = var6 + var7;
-              var5.a("Final Scores:", 120, var6, 0, -1);
+              var5.drawText("Final Scores:", 120, var6, 0, -1);
               var6 = var6 + var7;
-              var5.a(this.field_M[this.field_z], 120, var6, 0, -1);
-              var5.c(this.field_p[this.field_z], 540, var6, 1, -1);
+              var5.drawText(this.field_M[this.field_z], 120, var6, 0, -1);
+              var5.drawRightAlignedText(this.field_p[this.field_z], 540, var6, 1, -1);
               var6 = var6 + var7;
-              var5.a(this.field_M[1 - this.field_z], 120, var6, 0, -1);
-              var5.c(this.field_p[1 - this.field_z], 540, var6, 1, -1);
+              var5.drawText(this.field_M[1 - this.field_z], 120, var6, 0, -1);
+              var5.drawRightAlignedText(this.field_p[1 - this.field_z], 540, var6, 1, -1);
               var6 = var6 + var7;
-              var5.b(this.field_w, 330, var6, 0, -1);
+              var5.drawCentered(this.field_w, 330, var6, 0, -1);
             }
           } else {
             var6 = var6 + var7;
-            var5.a(tg.field_b, 120, var6, 0, -1);
-            var5.c(this.field_v, 540, var6, 1, -1);
+            var5.drawText(tg.field_b, 120, var6, 0, -1);
+            var5.drawRightAlignedText(this.field_v, 540, var6, 1, -1);
             var6 = var6 + var7;
-            var5.a(ep.field_d, 120, var6, 0, -1);
-            var5.c(this.field_y, 540, var6, 1, -1);
+            var5.drawText(ep.field_d, 120, var6, 0, -1);
+            var5.drawRightAlignedText(this.field_y, 540, var6, 1, -1);
             var6 = var6 + var7;
             SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
             SoftwareRasterizer.d(120, var6 - 2, 420, 3, 16777215);
             var6 = var6 + var7;
-            var5.b(this.field_u, 330, var6, 0, -1);
+            var5.drawCentered(this.field_u, 330, var6, 0, -1);
           }
         }
     }
@@ -174,7 +174,7 @@ final class hq extends de {
     }
 
     private final int d(int param0, int param1) {
-        int var3 = rk.field_e.c(param1 == 0 ? this.field_A : this.field_s);
+        int var3 = rk.field_e.textWidth(param1 == 0 ? this.field_A : this.field_s);
         if (param1 == 0) {
           var3 += 40;
         }
@@ -221,7 +221,7 @@ final class hq extends de {
         this.field_u = !param1 ? qj.field_c : MouseInputHandler.field_a;
         this.field_G = 1;
         this.field_x = param5;
-        this.field_y = sd.a(lj.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});
+        this.field_y = sd.a(BoundedRandomAccessFile.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});
         if (param4 != 34) {
           return;
         }
@@ -281,7 +281,7 @@ final class hq extends de {
           discarded$0 = this.d(-3, 100);
         }
         if (oa.field_j == 1) {
-          kj.a(this.field_x, (byte) 126);
+          ArchiveIndex.a(this.field_x, (byte) 126);
           fc.field_e = 14;
           var3 = param0 ? 1 : 0;
           la.a(!gq.d(121) ? 0 : 12, -3, var3 != 0, -25528);
@@ -450,7 +450,7 @@ final class hq extends de {
         } else {
           if (md.field_Y) {
             var3 = param1 ? 1 : 0;
-            la.a(ti.field_t, -5, var3 != 0, -25528);
+            la.a(MidiPcmStream.field_t, -5, var3 != 0, -25528);
           }
           if (oa.field_i) {
             qj.a(false, 0, 11);

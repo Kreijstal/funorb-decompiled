@@ -32,7 +32,7 @@ final class co {
         if (ri.field_h < this.field_j) {
           return false;
         }
-        if (0 < uo.field_j) {
+        if (0 < BufferedRandomAccessFile.field_j) {
           return true;
         }
         return false;
@@ -136,7 +136,7 @@ final class co {
             }
           }
         }
-        if (uo.field_i != var3) {
+        if (BufferedRandomAccessFile.field_i != var3) {
           this.field_s.a(var3, 127, var4);
         } else {
           if (var4 != wp.field_c) {
@@ -144,12 +144,12 @@ final class co {
           }
         }
         if (this.field_n > 0) {
-          ae.field_a = (this.field_n - uo.field_i) / 2;
+          ae.field_a = (this.field_n - BufferedRandomAccessFile.field_i) / 2;
         }
     }
 
     final FullscreenFocusCanvas b(boolean param0) {
-        this.field_b = uo.field_i;
+        this.field_b = BufferedRandomAccessFile.field_i;
         this.field_l = wp.field_c;
         this.field_s.a(this.field_q, 126, this.field_x);
         wl.field_i = param0 ? true : false;
@@ -185,7 +185,7 @@ final class co {
         if (ib.field_f != null) {
           return;
         }
-        if (uo.field_j <= 0) {
+        if (BufferedRandomAccessFile.field_j <= 0) {
           this.field_c = false;
         }
         if (this.field_c) {
@@ -203,14 +203,14 @@ final class co {
           var2 = -110 / ((-61 - param0) / 38);
           return;
         }
-        if (uo.field_i < this.field_n) {
-          ae.field_a = (this.field_n - uo.field_i) / 2;
+        if (BufferedRandomAccessFile.field_i < this.field_n) {
+          ae.field_a = (this.field_n - BufferedRandomAccessFile.field_i) / 2;
         } else {
           if (this.field_n > 0) {
             ae.field_a = 0;
           }
         }
-        if (uo.field_i == this.field_i &&
+        if (BufferedRandomAccessFile.field_i == this.field_i &&
           this.field_p == wp.field_c) {
           return;
         }

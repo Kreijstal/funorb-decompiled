@@ -20,7 +20,7 @@ final class tm extends qm {
         if (param0 < 108) {
           field_U = -99;
         }
-        stackIn_9_0 = (null != eg.field_n) || (sc.b(-10093)) || (null != hc.field_M) || (CanvasRasterBuffer.b(12742));
+        stackIn_9_0 = (null != ProxySocketConnector.field_n) || (sc.b(-10093)) || (null != hc.field_M) || (CanvasRasterBuffer.b(12742));
         return stackIn_9_0;
     }
 
@@ -37,7 +37,7 @@ final class tm extends qm {
         if (param0 != -20822) {
           tm.a(-68);
         }
-        nl.a(0, true);
+        NodeHashTable.a(0, true);
         el.field_b = 0;
     }
 
@@ -123,17 +123,17 @@ final class tm extends qm {
 
     final static void d(byte param0) {
         try {
-          if (null != vi.field_p) {
+          if (null != MusicCrossfadeStream.field_p) {
             try {
-              vi.field_p.a(0L, -112);
-              vi.field_p.a(24, vi.field_o.position, (byte) -121, vi.field_o.payload);
+              MusicCrossfadeStream.field_p.a(0L, -112);
+              MusicCrossfadeStream.field_p.write(24, MusicCrossfadeStream.field_o.position, (byte) -121, MusicCrossfadeStream.field_o.payload);
             } catch (Exception exception) {
             }
           }
           if (param0 >= -45) {
             field_N = (sb) null;
           }
-          vi.field_o.position = vi.field_o.position + 24;
+          MusicCrossfadeStream.field_o.position = MusicCrossfadeStream.field_o.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

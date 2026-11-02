@@ -88,10 +88,10 @@ final class g extends mg {
           }
           var5 = var4;
           if (ep.a((byte) 34, var5)) {
-            stackIn_7_0 = vi.field_y;
+            stackIn_7_0 = MusicCrossfadeStream.field_y;
             return stackIn_7_0;
           }
-          if (nm.a(var5, 64)) {
+          if (IntrusiveDequeCursor.a(var5, 64)) {
             stackIn_11_0 = ka.field_R;
             return stackIn_11_0;
           }
@@ -116,7 +116,7 @@ final class g extends mg {
             return stackIn_27_0;
           }
           if (!gb.a(var5, var6, 95)) {
-            return vi.field_y;
+            return MusicCrossfadeStream.field_y;
           }
           stackIn_31_0 = tj.field_w;
           return stackIn_31_0;
@@ -387,13 +387,13 @@ final class g extends mg {
           if (param4 == var5.field_o) {
             return var5;
           }
-          var5 = (ue) (f.field_c.f(1504642273));
+          var5 = (ue) (f.field_c.last(1504642273));
         }
         var5Lifetime1 = new ue();
         var5Lifetime1.field_s = param2;
         var5Lifetime1.field_m = param3;
         var5Lifetime1.field_o = param4;
-        f.field_c.a(22125, var5Lifetime1);
+        f.field_c.addFirst(22125, var5Lifetime1);
         uj.a(param0, var5Lifetime1, 65536);
         return var5Lifetime1;
     }

@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class ie extends ng implements j {
-    static jl field_G;
+    static BitmapFont field_G;
     static String field_F;
     ng field_H;
 
@@ -45,7 +45,7 @@ abstract class ie extends ng implements j {
 
     ng l(int param0) {
         if (param0 <= 48) {
-          field_G = (jl) null;
+          field_G = (BitmapFont) null;
         }
         ng var2 = this.field_H;
         if (var2 == null) {
@@ -165,7 +165,7 @@ abstract class ie extends ng implements j {
             var9 = param3;
             var10 = param1;
             for (var11 = param4; var11 < param0; var11++) {
-              var12 = gn.field_A[var11];
+              var12 = ArchiveRequest.field_A[var11];
               if (!param2) {
                 stackIn_24_0 = SecondaryNodeDequeIterator.field_c[var12];
               } else {
@@ -177,10 +177,10 @@ abstract class ie extends ng implements j {
                   var10 = var13;
                 }
               } else {
-                gn.field_A[var11] = gn.field_A[var8];
+                ArchiveRequest.field_A[var11] = ArchiveRequest.field_A[var8];
                 incrementValue$0 = var8;
                 var8++;
-                gn.field_A[incrementValue$0] = var12;
+                ArchiveRequest.field_A[incrementValue$0] = var12;
                 if (var9 > var13) {
                   var9 = var13;
                 }
@@ -192,11 +192,11 @@ abstract class ie extends ng implements j {
           }
           for (var7_intLifetime1 = -1 + param0; var7_intLifetime1 > param4; var7_intLifetime1--) {
             for (var8Lifetime1 = param4; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
-              var9Lifetime1 = gn.field_A[var8Lifetime1];
-              var10Lifetime1 = gn.field_A[1 + var8Lifetime1];
+              var9Lifetime1 = ArchiveRequest.field_A[var8Lifetime1];
+              var10Lifetime1 = ArchiveRequest.field_A[1 + var8Lifetime1];
               if (tj.a(false, param2, var9Lifetime1, var10Lifetime1)) {
-                gn.field_A[var8Lifetime1] = var10Lifetime1;
-                gn.field_A[var8Lifetime1 + 1] = var9Lifetime1;
+                ArchiveRequest.field_A[var8Lifetime1] = var10Lifetime1;
+                ArchiveRequest.field_A[var8Lifetime1 + 1] = var9Lifetime1;
               }
             }
           }

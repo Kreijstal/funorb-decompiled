@@ -19,14 +19,14 @@ final class fc {
 
     final static void a(ak param0, int param1, ak param2) {
         if (param0.field_L == null) {
-          param0.field_L = new bb();
+          param0.field_L = new IntrusiveDeque();
         }
         if (param1 != 64) {
           return;
         }
         try {
           if (param2.field_L == null) {
-            param2.field_L = new bb();
+            param2.field_L = new IntrusiveDeque();
           }
           if (null == vm.field_b) {
             vm.field_b = new vg(64);
@@ -91,26 +91,26 @@ final class fc {
         int var1Lifetime1;
         if (param0 >= -30) {
           field_c = (String) null;
-          if (32 >= wn.field_u) {
+          if (32 >= SocketJs5Transport.field_u) {
             jg.a(0, 119);
             return;
           }
-          var1 = wn.field_u % 32;
+          var1 = SocketJs5Transport.field_u % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          jg.a(wn.field_u - var1, -8);
+          jg.a(SocketJs5Transport.field_u - var1, -8);
           return;
         }
-        if (32 >= wn.field_u) {
+        if (32 >= SocketJs5Transport.field_u) {
           jg.a(0, 119);
           return;
         }
-        var1Lifetime1 = wn.field_u % 32;
+        var1Lifetime1 = SocketJs5Transport.field_u % 32;
         if (var1Lifetime1 == 0) {
           var1Lifetime1 = 32;
         }
-        jg.a(wn.field_u - var1Lifetime1, -8);
+        jg.a(SocketJs5Transport.field_u - var1Lifetime1, -8);
     }
 
     static {

@@ -12,7 +12,7 @@ final class ge {
     static String field_e;
     static el field_i;
 
-    final static void a(String[] args, int param1, fm param2, byte[] param3, Sprite[][] param4, int param5, String[][] param6, fm param7, byte[] param8, String[] param9, Sprite[][] param10, hh[] param11, String[][] param12, fm param13, String[] param14, int[] param15, int param16, boolean param17, int[] param18, byte param19) {
+    final static void a(String[] args, int param1, ResourceArchive param2, byte[] param3, Sprite[][] param4, int param5, String[][] param6, ResourceArchive param7, byte[] param8, String[] param9, Sprite[][] param10, IndexedSprite[] param11, String[][] param12, ResourceArchive param13, String[] param14, int[] param15, int param16, boolean param17, int[] param18, byte param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -166,7 +166,7 @@ final class ge {
         field_d = null;
         if (param0 != -1) {
           int[] var2 = (int[]) null;
-          ge.a((String[]) null, -96, (fm) null, (byte[]) null, (Sprite[][]) null, 52, (String[][]) null, (fm) null, (byte[]) null, (String[]) null, (Sprite[][]) null, (hh[]) null, (String[][]) null, (fm) null, (String[]) null, (int[]) null, 27, true, (int[]) null, (byte) -67);
+          ge.a((String[]) null, -96, (ResourceArchive) null, (byte[]) null, (Sprite[][]) null, 52, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (Sprite[][]) null, (IndexedSprite[]) null, (String[][]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 27, true, (int[]) null, (byte) -67);
         }
         field_c = null;
     }

@@ -22,7 +22,7 @@ final class nd {
         int var4_intLifetime1;
         int var7Lifetime1;
         ln.field_m[7][3] = "mod_zeph";
-        dd var10 = new dd(3, 3, 0, 0, 0, 262144, 0, 0, new hh[]{});
+        dd var10 = new dd(3, 3, 0, 0, 0, 262144, 0, 0, new IndexedSprite[]{});
         dd var2 = new dd(3, 3, 0, 0, 0, 65536, 0, 0, al.field_c[4][3]);
         var2.field_d = 1;
         hd var3 = new hd(var10);
@@ -77,12 +77,12 @@ final class nd {
           var8 = 370;
           g.field_r = new kk(var5, var7Lifetime1, var8);
           an.field_b = new kk(var6, 640 - var7Lifetime1, var8);
-          lj.field_g = new al(var4, var5, g.field_r);
+          BoundedRandomAccessFile.field_g = new al(var4, var5, g.field_r);
           f.field_a = new al(var4, var6, an.field_b);
-          cg.field_H = new pb(var4, 320, var8);
+          DiskCacheRequest.field_H = new pb(var4, 320, var8);
           g.field_r.a(0, 0, 0, (byte) -69, 0);
           an.field_b.a(0, 0, 0, (byte) -98, 0);
-          cg.field_H.a(-18577);
+          DiskCacheRequest.field_H.a(-18577);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "nd.A(" + param0 + ')');
         }
@@ -90,11 +90,11 @@ final class nd {
 
     final static void a(int param0) {
         sc.field_h = rk.field_e;
-        h.field_T = 10 + sc.field_h.c(PacketBuffer.field_o[20]);
+        h.field_T = 10 + sc.field_h.textWidth(PacketBuffer.field_o[20]);
         if (param0 != 3) {
           field_c = (int[]) null;
         }
-        int var1 = sc.field_h.c(PacketBuffer.field_o[21]);
+        int var1 = sc.field_h.textWidth(PacketBuffer.field_o[21]);
         if (var1 > h.field_T) {
           h.field_T = var1;
         }

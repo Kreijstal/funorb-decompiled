@@ -10,7 +10,7 @@ final class ri {
     static hp field_f;
     static int field_h;
     static boolean field_b;
-    static vi field_a;
+    static MusicCrossfadeStream field_a;
 
     public static void b(int param0) {
         field_f = null;

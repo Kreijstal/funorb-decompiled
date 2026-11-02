@@ -12,7 +12,7 @@ final class lf {
     private int field_d;
     private boolean field_c;
     private int field_a;
-    static fm field_f;
+    static ResourceArchive field_f;
 
     final void a(lf param0, int param1, w param2, byte param3, int param4, ng param5) {
         RuntimeException stackIn_23_0 = null;
@@ -143,7 +143,7 @@ final class lf {
     }
 
     final void a(int param0, int param1, ng param2, byte param3, w param4) {
-        jl stackIn_18_0;
+        BitmapFont stackIn_18_0;
         String stackIn_18_1;
         int stackIn_18_2;
         int stackIn_18_3;
@@ -217,7 +217,7 @@ final class lf {
             } else {
               stackIn_25_8 = 256;
             }
-            ((jl) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_l, param4.field_d, param4.field_j);
+            ((BitmapFont) (Object) stackIn_18_0).drawParagraphAlpha(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_l, param4.field_d, param4.field_j);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

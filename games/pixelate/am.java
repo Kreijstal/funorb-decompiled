@@ -4,14 +4,14 @@
 final class am {
     private PacketBuffer field_d;
     static int[] field_i;
-    private gm field_a;
+    private DiskCacheWorker field_a;
     private java.math.BigInteger field_f;
-    private gg[] field_h;
+    private CachedArchiveProvider[] field_h;
     static boolean field_e;
     static int[] field_b;
     private java.math.BigInteger field_k;
-    private rf field_j;
-    private rj field_g;
+    private Js5Transport field_j;
+    private Js5NetworkRequest field_g;
     static int field_c;
 
     public static void a(byte param0) {
@@ -35,7 +35,7 @@ final class am {
         }
     }
 
-    final static void a(fm param0, boolean param1, fm param2) {
+    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2) {
         pb.field_n = param0;
         if (!param1) {
           return;
@@ -65,7 +65,7 @@ final class am {
           stackIn_8_0 = ql.field_n;
           stackIn_9_1 = (param1) && (!uj.field_Wb);
           ((ak) (Object) stackIn_8_0).a(stackIn_9_1, 0);
-          stackIn_12_0 = ti.field_E;
+          stackIn_12_0 = MidiPcmStream.field_E;
           stackIn_13_1 = (param1) && (!uj.field_Wb);
           ((ak) (Object) stackIn_12_0).a(stackIn_13_1, 0);
         }
@@ -91,14 +91,14 @@ final class am {
         }
     }
 
-    final gg a(boolean param0, int param1, int param2, rn param3, rn param4) {
+    final CachedArchiveProvider a(boolean param0, int param1, int param2, SectorCacheStore param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        gg var9 = null;
+        CachedArchiveProvider var9 = null;
         byte[] var13 = null;
-        gg stackIn_10_0 = null;
-        gg stackIn_12_0 = null;
+        CachedArchiveProvider stackIn_10_0 = null;
+        CachedArchiveProvider stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -120,7 +120,7 @@ final class am {
             var7 = this.field_d.readInt(param1 - 6);
             var13 = new byte[64];
             this.field_d.a(var13, 0, -86, 64);
-            var9 = new gg(param2, param4, param3, this.field_j, this.field_a, var6_int, var13, var7, param0);
+            var9 = new CachedArchiveProvider(param2, param4, param3, this.field_j, this.field_a, var6_int, var13, var7, param0);
             this.field_h[param2] = var9;
             stackIn_12_0 = var9;
             return stackIn_12_0;
@@ -147,7 +147,7 @@ final class am {
     }
 
     final static String a(int param0) {
-        if (rj.field_F == tm.field_X) {
+        if (Js5NetworkRequest.field_F == tm.field_X) {
           return pm.field_s;
         }
         if (param0 != -13565) {
@@ -156,7 +156,7 @@ final class am {
         return kd.field_a;
     }
 
-    am(rf param0, gm param1) {
+    am(Js5Transport param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -188,7 +188,7 @@ final class am {
         return;
     }
 
-    private am(rf param0, gm param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private am(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -295,7 +295,7 @@ final class am {
           return true;
         }
         this.field_d = var10;
-        this.field_h = new gg[var3];
+        this.field_h = new CachedArchiveProvider[var3];
         return true;
     }
 

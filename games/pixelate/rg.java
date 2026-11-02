@@ -3,10 +3,10 @@
  */
 abstract class rg {
     static jj field_e;
-    static bb field_c;
+    static IntrusiveDeque field_c;
     static String[] field_a;
     static byte[] field_d;
-    static bb field_b;
+    static IntrusiveDeque field_b;
 
     public static void a(int param0) {
         field_a = null;
@@ -29,7 +29,7 @@ abstract class rg {
         jm.field_h.field_cb = param0;
         int var2_int = ClientException.field_f.field_a;
         int var3 = ClientException.field_f.field_i;
-        int var4 = jm.field_h.field_Db.a(param0, 272, jm.field_h.field_mb);
+        int var4 = jm.field_h.field_Db.paragraphHeight(param0, 272, jm.field_h.field_mb);
         if (param1) {
           return;
         }
@@ -50,7 +50,7 @@ abstract class rg {
 
     static {
         field_a = new String[3];
-        field_c = new bb();
+        field_c = new IntrusiveDeque();
         field_b = null;
         field_d = new byte[]{(byte)3, (byte)3};
     }

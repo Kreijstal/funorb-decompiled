@@ -240,7 +240,7 @@ abstract class jg extends ng implements j {
     }
 
     final static void a(int param0, int param1) {
-        wn.field_u = param0;
+        SocketJs5Transport.field_u = param0;
         if (null != to.field_q) {
           to.field_q.c((byte) 30, param0);
         }
@@ -363,7 +363,7 @@ abstract class jg extends ng implements j {
             stackIn_12_0 = 3;
             return stackIn_12_0;
           }
-          if (qo.field_n == rj.field_F) {
+          if (qo.field_n == Js5NetworkRequest.field_F) {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
@@ -371,7 +371,7 @@ abstract class jg extends ng implements j {
             stackIn_20_0 = 1;
             return stackIn_20_0;
           }
-          if (tm.field_X != rj.field_F) {
+          if (tm.field_X != Js5NetworkRequest.field_F) {
             stackIn_25_0 = -1;
             return stackIn_25_0;
           }

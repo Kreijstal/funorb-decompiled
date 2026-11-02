@@ -16,7 +16,7 @@ final class vp extends ak {
     static int field_Ib;
     static ak field_Qb;
     static int field_Lb;
-    static bb field_Hb;
+    static IntrusiveDeque field_Hb;
 
     public static void c(byte param0) {
         field_Qb = null;
@@ -60,7 +60,7 @@ final class vp extends ak {
         return var5;
     }
 
-    final static vj d(byte param0) {
+    final static PcmStreamMixer d(byte param0) {
         if (param0 != -58) {
           field_Lb = -5;
           return wi.field_d;
@@ -287,15 +287,15 @@ final class vp extends ak {
           var4 = (df) (he.field_b.c(param0 + 1504642273));
           while (var4 != null) {
             Pixelate.a(param1, (byte) 109, var4);
-            var4 = (df) (he.field_b.f(1504642273));
+            var4 = (df) (he.field_b.last(1504642273));
           }
           if (param0 != 0) {
-            field_Hb = (bb) null;
+            field_Hb = (IntrusiveDeque) null;
           }
-          var5 = (sm) (in.field_J.c(param0 ^ 1504642273));
+          var5 = (sm) (MusicPatchNode.field_J.c(param0 ^ 1504642273));
           while (var5 != null) {
             he.a((byte) -53, param1, var5);
-            var5 = (sm) (in.field_J.f(1504642273));
+            var5 = (sm) (MusicPatchNode.field_J.last(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

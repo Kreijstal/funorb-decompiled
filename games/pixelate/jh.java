@@ -42,7 +42,7 @@ final class jh extends ch implements vo {
           stackIn_8_1 = -28476;
           stackIn_9_2 = (param2) && (!param3) && (!uj.field_Wb) && (null == io.field_c) && (null == bn.field_S);
           ((ak) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2);
-          stackIn_15_0 = ti.field_E;
+          stackIn_15_0 = MidiPcmStream.field_E;
           stackIn_15_1 = param0 - 28478;
           stackIn_16_2 = (param2) && (!param3) && (!uj.field_Wb) && (io.field_c == null) && (null == bn.field_S);
           ((ak) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2);
@@ -59,7 +59,7 @@ final class jh extends ch implements vo {
           stackIn_56_1 = -28476;
           stackIn_57_2 = (param2) && (!param3) && (!uj.field_Wb) && (null == io.field_c) && (null == bn.field_S);
           ((ak) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_57_2);
-          stackIn_63_0 = ti.field_E;
+          stackIn_63_0 = MidiPcmStream.field_E;
           stackIn_63_1 = param0 - 28478;
           stackIn_64_2 = (param2) && (!param3) && (!uj.field_Wb) && (io.field_c == null) && (null == bn.field_S);
           ((ak) (Object) stackIn_63_0).a(stackIn_63_1, stackIn_64_2);
@@ -74,16 +74,16 @@ final class jh extends ch implements vo {
         }
         if (lg.field_c.field_P != 0) {
           if (fe.field_a) {
-            ao.a(83, param1);
+            AudioService.a(83, param1);
           } else {
-            if (0 < uo.field_j) {
-              ao.a(83, param1);
+            if (0 < BufferedRandomAccessFile.field_j) {
+              AudioService.a(83, param1);
             } else {
               if (2 > wo.field_h) {
                 hd.field_g = true;
               } else {
                 if (bc.field_m[12]) {
-                  ao.a(83, param1);
+                  AudioService.a(83, param1);
                 } else {
                   hd.field_g = true;
                 }
@@ -91,7 +91,7 @@ final class jh extends ch implements vo {
             }
           }
         }
-        if (0 != in.field_p.field_P) {
+        if (0 != MusicPatchNode.field_p.field_P) {
           if (1 == ia.field_a.length &&
             GameApplet.field_o != ia.field_a[0]) {
             GameApplet.field_o = ia.field_a[0];
@@ -107,7 +107,7 @@ final class jh extends ch implements vo {
         int var5 = this.field_z + param2;
         int var6 = this.field_p + param0;
         int var7 = 87 % ((70 - param3) / 49);
-        he.field_d.a(wi.field_n, 20 + var5, 20 + var6, -40 + this.field_E, -50 + this.field_C, 16777215, -1, 1, 0, he.field_d.field_w);
+        he.field_d.drawParagraph(wi.field_n, 20 + var5, 20 + var6, -40 + this.field_E, -50 + this.field_C, 16777215, -1, 1, 0, he.field_d.maxAscent);
         super.a(param0, param1, param2, (byte) 122);
     }
 
@@ -169,7 +169,7 @@ final class jh extends ch implements vo {
               id.a(param2 + 87);
             }
           } else {
-            nm.b(true);
+            IntrusiveDequeCursor.b(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

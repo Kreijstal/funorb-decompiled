@@ -10,10 +10,10 @@ final class aj extends IntrusiveNode {
     int field_p;
     static int field_n;
     int field_s;
-    ei[] field_v;
+    PlatformTask[] field_v;
     byte[][][] field_w;
     int[] field_q;
-    ei[] field_l;
+    PlatformTask[] field_l;
     static int[] field_o;
 
     final static Object a(boolean param0, byte[] param1, int param2) {
@@ -68,10 +68,10 @@ final class aj extends IntrusiveNode {
         field_k = null;
     }
 
-    final static void a(fm param0, fm param1, boolean param2, int param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, int param3) {
         try {
-          nk.a(eg.field_k, c.field_Y, ug.field_s, sc.field_g, (byte) 125, kj.field_l, dn.field_c, bl.field_d, qk.field_d, param2, mg.field_h, l.field_q);
-          h.field_V = eh.a("chatfilter", "lobby", (byte) 47, param1);
+          nk.a(ProxySocketConnector.field_k, c.field_Y, ug.field_s, sc.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, qk.field_d, param2, mg.field_h, l.field_q);
+          h.field_V = SocketConnector.a("chatfilter", "lobby", (byte) 47, param1);
           rg.field_a[1] = a.field_J;
           int var4_int = -115 % ((param3 - 44) / 59);
           rg.field_a[0] = kc.field_m;

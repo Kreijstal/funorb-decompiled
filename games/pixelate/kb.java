@@ -4,18 +4,18 @@
 abstract class kb extends ch implements bp {
     static String field_M;
     static String field_J;
-    static ob field_L;
+    static PaletteBitmapFont field_L;
     static int[] field_N;
     static String[] field_I;
     private oa field_K;
 
-    final static void a(int param0, PlatformTaskDispatcher param1, vi param2, boolean param3, java.awt.Component param4, int param5) {
+    final static void a(int param0, PlatformTaskDispatcher param1, MusicCrossfadeStream param2, boolean param3, java.awt.Component param4, int param5) {
         try {
           if (param5 <= 102) {
             java.awt.Component var7 = (java.awt.Component) null;
-            kb.a(-5, (PlatformTaskDispatcher) null, (vi) null, false, (java.awt.Component) null, -3);
+            kb.a(-5, (PlatformTaskDispatcher) null, (MusicCrossfadeStream) null, false, (java.awt.Component) null, -3);
           }
-          oh.a(1024, param0, param3, param0, (byte) -110, param4, param1, param2);
+          HuffmanCodec.a(1024, param0, param3, param0, (byte) -110, param4, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "kb.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -80,7 +80,7 @@ abstract class kb extends ch implements bp {
         field_L = null;
         field_M = null;
         if (param0 != 125) {
-          field_L = (ob) null;
+          field_L = (PaletteBitmapFont) null;
         }
     }
 

@@ -8,7 +8,7 @@ final class hg implements eb {
     static String field_i;
     static String field_b;
     static int field_g;
-    private jl field_h;
+    private BitmapFont field_h;
     private int field_d;
     private int field_a;
     private int field_e;
@@ -56,7 +56,7 @@ final class hg implements eb {
           if (null == this.field_h) {
             return;
           }
-          this.field_h.b(var12.field_q, var7 / 2 + var8, this.field_h.field_M + (var9 + var12.field_T), this.field_f, this.field_j);
+          this.field_h.drawCentered(var12.field_q, var7 / 2 + var8, this.field_h.lineAdvance + (var9 + var12.field_T), this.field_f, this.field_j);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ final class hg implements eb {
         }
     }
 
-    hg(jl param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    hg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_c = param3;
           this.field_j = param2;

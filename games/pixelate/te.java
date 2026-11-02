@@ -238,8 +238,8 @@ final class te extends ak {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        jl var17 = null;
-        jl var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Lb = -1;
         try {
           this.field_Hb = param7;
@@ -248,7 +248,7 @@ final class te extends ak {
           this.field_Mb = this.field_Tb.length;
           var17 = param3.field_Db;
           var18 = var17;
-          this.field_Jb = var18.field_w + (2 + var18.field_z);
+          this.field_Jb = var18.maxAscent + (2 + var18.maxDescent);
           this.field_Rb = 0;
           this.field_Ob = this.field_Jb * this.field_Mb;
           this.field_Sb = new lo[this.field_Mb];
@@ -265,7 +265,7 @@ final class te extends ak {
             }
             this.field_Sb[var13] = new lo(0L, param2, (ak) null, param3, (Sprite) (var14), param6[var13]);
             this.a(this.field_Sb[var13], (byte) 26);
-            var15 = var17.c(param6[var13]);
+            var15 = var17.textWidth(param6[var13]);
             if (var15 > this.field_Rb) {
               this.field_Rb = var15;
             }
@@ -375,7 +375,7 @@ final class te extends ak {
               dg.a(true, ce.field_d, var5, (String) null, jo.field_k, param3);
               di.a(var5, fp.field_e, jo.field_k, (byte) 9, ce.field_d);
               mj.a(false);
-              wn.d(-93);
+              SocketJs5Transport.d(-93);
             } else {
               pd.j(-127);
               mj.a(false);

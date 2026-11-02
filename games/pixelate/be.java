@@ -25,7 +25,7 @@ final class be extends ch implements hi, vo {
             this.field_O.a((ng) (this), 27);
           }
           if (param1 != 4) {
-            be.a(-101, (fm) null);
+            be.a(-101, (ResourceArchive) null);
           }
           if (this.field_O == param0) {
             this.a((byte) 125);
@@ -446,7 +446,7 @@ final class be extends ch implements hi, vo {
                   }
                   if (null != jm.field_r &&
                     null != jm.field_r[var7] &&
-                    uo.field_j <= 0 &&
+                    BufferedRandomAccessFile.field_j <= 0 &&
                     jm.field_r[var7][var9]) {
                     var10 = 1;
                   }
@@ -459,7 +459,7 @@ final class be extends ch implements hi, vo {
                     }
                     if (var16 != 0 &&
                       !fe.field_a &&
-                      uo.field_j <= 0) {
+                      BufferedRandomAccessFile.field_j <= 0) {
                       var10 = 1;
                     }
                   }
@@ -468,7 +468,7 @@ final class be extends ch implements hi, vo {
                     var16Lifetime2 = pa.field_a[var7][var9];
                     if (0 != var16Lifetime2 &&
                       !fe.field_a &&
-                      uo.field_j <= 0) {
+                      BufferedRandomAccessFile.field_j <= 0) {
                       var10 = 1;
                     }
                     if (var16Lifetime2 > 0 &&
@@ -603,7 +603,7 @@ final class be extends ch implements hi, vo {
                         }
                       }
                       if (var12 != 0) {
-                        var22 = sd.a(eh.field_d, 103, new String[]{Integer.toString(gi.field_a), Integer.toString(w.field_z[var7][var9])});
+                        var22 = sd.a(SocketConnector.field_d, 103, new String[]{Integer.toString(gi.field_a), Integer.toString(w.field_z[var7][var9])});
                         if (null != var21) {
                           var21 = (String) (var21) + "<br>" + (String) (var22);
                         } else {
@@ -625,7 +625,7 @@ final class be extends ch implements hi, vo {
                         }
                       }
                     } else {
-                      var21 = nl.field_b;
+                      var21 = NodeHashTable.field_b;
                     }
                   }
                   if (var4_int != 0 &&
@@ -781,7 +781,7 @@ final class be extends ch implements hi, vo {
         RuntimeException var5 = null;
         try {
           if (null != this.field_S) {
-            he.field_d.a(this.field_S, 20 + (param2 + this.field_z), 15 + param0 + this.field_p, -40 + this.field_E, this.field_C, 16777215, -1, 1, 0, he.field_d.field_w);
+            he.field_d.drawParagraph(this.field_S, 20 + (param2 + this.field_z), 15 + param0 + this.field_p, -40 + this.field_E, this.field_C, 16777215, -1, 1, 0, he.field_d.maxAscent);
           }
           if (this.field_Q != null) {
             SoftwareRasterizer.b(param2 + 10, 134 + param0, -20 + this.field_E, 4210752);
@@ -908,7 +908,7 @@ final class be extends ch implements hi, vo {
         }
     }
 
-    final static void a(int param0, fm param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RuntimeException stackIn_529_0 = null;
         StringBuilder stackIn_529_1 = null;
         String stackIn_530_2 = null;
@@ -1069,7 +1069,7 @@ final class be extends ch implements hi, vo {
           ig.field_b = param1;
           var2 = hb.a("text_game_name", (byte) 119);
           if (null != var2) {
-            po.field_e = of.a(var2, 1);
+            SoundCache.field_e = of.a(var2, 1);
           }
           var2Lifetime1 = hb.a("text_benefits,0", (byte) -12);
           if (null != var2Lifetime1) {
@@ -1466,7 +1466,7 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime99 = hb.a("levelcolonspace", (byte) -11);
           if (var2Lifetime99 != null) {
-            po.field_j = of.a(var2Lifetime99, 1);
+            SoundCache.field_j = of.a(var2Lifetime99, 1);
           }
           var2Lifetime100 = hb.a("scorecolonspace", (byte) -91);
           if (var2Lifetime100 != null) {
@@ -1474,7 +1474,7 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime101 = hb.a("bestcolonspace", (byte) -18);
           if (null != var2Lifetime101) {
-            bb.field_e = of.a(var2Lifetime101, 1);
+            IntrusiveDeque.field_e = of.a(var2Lifetime101, 1);
           }
           var2Lifetime102 = hb.a("name_wins", (byte) 103);
           if (var2Lifetime102 != null) {
@@ -1586,7 +1586,7 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime129 = hb.a("a_of_b", (byte) -22);
           if (null != var2Lifetime129) {
-            lj.field_b = of.a(var2Lifetime129, 1);
+            BoundedRandomAccessFile.field_b = of.a(var2Lifetime129, 1);
           }
           var2Lifetime130 = hb.a("totaltime", (byte) -18);
           if (null != var2Lifetime130) {
@@ -1598,7 +1598,7 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime132 = hb.a("perfectlandings", (byte) 117);
           if (var2Lifetime132 != null) {
-            vi.field_E = of.a(var2Lifetime132, 1);
+            MusicCrossfadeStream.field_E = of.a(var2Lifetime132, 1);
           }
           var2Lifetime133 = hb.a("picturescompleted", (byte) 116);
           if (var2Lifetime133 != null) {
@@ -1646,7 +1646,7 @@ final class be extends ch implements hi, vo {
           }
           var2Lifetime144 = hb.a("keycode_a", (byte) -53);
           if (null != var2Lifetime144) {
-            cg.field_F = 255 & var2Lifetime144[0];
+            DiskCacheRequest.field_F = 255 & var2Lifetime144[0];
           }
           var2Lifetime145 = hb.a("keycode_s", (byte) -11);
           if (null != var2Lifetime145) {
@@ -1747,7 +1747,7 @@ final class be extends ch implements hi, vo {
         RuntimeException decompiledCaughtException = null;
         ad var6 = null;
         RuntimeException var6_ref = null;
-        jl var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         io var9 = null;
         qp var10 = null;
@@ -1766,7 +1766,7 @@ final class be extends ch implements hi, vo {
           this.field_J = (c) ((Object) new gk(param0, (fn) (this), 100));
           this.field_O = (c) ((Object) new gk("", (fn) (this), 20));
           if (!this.field_I) {
-            this.field_L = new qm(ca.field_m, (fn) null);
+            this.field_L = new qm(WhirlpoolHasher.field_m, (fn) null);
             stackIn_14_1 = null;
             stackIn_14_2 = null;
             if (this.field_K) {
@@ -1826,19 +1826,19 @@ final class be extends ch implements hi, vo {
           this.field_p = 15;
           var7 = he.field_d;
           if (null != this.field_S) {
-            this.field_p = this.field_p + (var7.a(this.field_S, this.field_E - 40, var7.field_w) + 5);
+            this.field_p = this.field_p + (var7.paragraphHeight(this.field_S, this.field_E - 40, var7.maxAscent) + 5);
           }
           var8 = ui.field_d;
-          var9 = lg.a(ao.a(13867), -18992);
+          var9 = lg.a(AudioService.a(13867), -18992);
           if (ig.field_e == var9) {
             var8 = rb.field_r;
             if ((var11 != 0) &&
               (var9 == vm.field_a)) {
-              var8 = sn.field_k;
+              var8 = MusicPatch.field_k;
             }
           } else {
             if (var9 == vm.field_a) {
-              var8 = sn.field_k;
+              var8 = MusicPatch.field_k;
             }
           }
           dupTemp$0 = new qp(10, this.field_p, this.field_E - 20, 25, this.field_J, false, 80, 3, var7, 16777215, var8);

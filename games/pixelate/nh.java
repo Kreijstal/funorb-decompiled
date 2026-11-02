@@ -38,29 +38,29 @@ final class nh {
     }
 
     final static void a(byte param0) {
-        int var1 = rk.field_e.g(16711680);
-        int var2 = rk.field_e.g(16777215);
+        int var1 = rk.field_e.findNearestBasePaletteIndex(16711680);
+        int var2 = rk.field_e.findNearestBasePaletteIndex(16777215);
         if (param0 <= 54) {
           field_c = (String) null;
         }
-        int var3 = rk.field_e.field_R[0].length;
-        rk.field_e.field_R = new int[4][];
+        int var3 = rk.field_e.colorPalettes[0].length;
+        rk.field_e.colorPalettes = new int[4][];
         int[] array$0 = new int[var3];
-        rk.field_e.field_R[0] = array$0;
-        rk.field_e.field_R[0][var1] = 65793;
-        rk.field_e.field_R[0][var2] = 16777215;
+        rk.field_e.colorPalettes[0] = array$0;
+        rk.field_e.colorPalettes[0][var1] = 65793;
+        rk.field_e.colorPalettes[0][var2] = 16777215;
         int[] array$1 = new int[var3];
-        rk.field_e.field_R[1] = array$1;
-        rk.field_e.field_R[1][var1] = 65793;
-        rk.field_e.field_R[1][var2] = 16711680;
+        rk.field_e.colorPalettes[1] = array$1;
+        rk.field_e.colorPalettes[1][var1] = 65793;
+        rk.field_e.colorPalettes[1][var2] = 16711680;
         int[] array$2 = new int[var3];
-        rk.field_e.field_R[2] = array$2;
-        rk.field_e.field_R[2][var1] = 65793;
-        rk.field_e.field_R[2][var2] = 11184810;
+        rk.field_e.colorPalettes[2] = array$2;
+        rk.field_e.colorPalettes[2][var1] = 65793;
+        rk.field_e.colorPalettes[2][var2] = 11184810;
         int[] array$3 = new int[var3];
-        rk.field_e.field_R[3] = array$3;
-        rk.field_e.field_R[3][var1] = 65793;
-        rk.field_e.field_R[3][var2] = 4473924;
+        rk.field_e.colorPalettes[3] = array$3;
+        rk.field_e.colorPalettes[3][var1] = 65793;
+        rk.field_e.colorPalettes[3][var2] = 4473924;
     }
 
     final static long a(CharSequence param0, int param1) {

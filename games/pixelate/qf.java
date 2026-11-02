@@ -20,7 +20,7 @@ final class qf {
         if (param0 != 21983) {
           return;
         }
-        km.a(param1, (byte) 112);
+        MusicPatchPcmStream.a(param1, (byte) 112);
     }
 
     final static void a(int param0) {

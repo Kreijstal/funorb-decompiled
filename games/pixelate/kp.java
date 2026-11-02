@@ -8,8 +8,8 @@ final class kp extends DualLinkNode {
     private String[] field_y;
     private int[] field_x;
     static int[] field_z;
-    static oh field_v;
-    static vj field_t;
+    static HuffmanCodec field_v;
+    static PcmStreamMixer field_t;
     static String field_A;
 
     final void a(int param0, PacketBuffer param1) {
@@ -151,10 +151,10 @@ final class kp extends DualLinkNode {
     final static void c(byte param0) {
         int var1 = 75 / ((20 - param0) / 48);
         if (to.field_t != null) {
-          to.field_t.f();
+          to.field_t.shutdown();
         }
         if (ib.field_h != null) {
-          ib.field_h.f();
+          ib.field_h.shutdown();
         }
     }
 

@@ -21,27 +21,27 @@ final class bi {
         var2 = 4 + this.field_e + 8;
         if (!param0) {
           if (null != this.field_a) {
-            DelegatingCanvas.field_d.b(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
+            DelegatingCanvas.field_d.drawCentered(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
             var2 = var2 + (8 + pe.field_c);
           }
           for (var3 = 0; var3 < this.field_b.length; var3++) {
-            var2 = var2 + pe.field_c * DelegatingCanvas.field_d.a(this.field_b[var3], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
+            var2 = var2 + pe.field_c * DelegatingCanvas.field_d.drawParagraph(this.field_b[var3], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
             var2 += 8;
           }
           return;
         }
         bi.a(1);
         if (null != this.field_a) {
-          DelegatingCanvas.field_d.b(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
+          DelegatingCanvas.field_d.drawCentered(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
           var2 = var2 + (8 + pe.field_c);
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < this.field_b.length; var3Lifetime1++) {
-          var2 = var2 + pe.field_c * DelegatingCanvas.field_d.a(this.field_b[var3Lifetime1], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
+          var2 = var2 + pe.field_c * DelegatingCanvas.field_d.drawParagraph(this.field_b[var3Lifetime1], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
           var2 += 8;
         }
     }
 
-    final static Sprite a(String param0, String param1, fm param2, byte param3) {
+    final static Sprite a(String param0, String param1, ResourceArchive param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -55,11 +55,11 @@ final class bi {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(127, param0);
+          var4_int = param2.getGroupId(127, param0);
           if (param3 >= -19) {
             bi.b(25);
           }
-          var5 = param2.a((byte) -105, param1, var4_int);
+          var5 = param2.getFileId((byte) -105, param1, var4_int);
           stackIn_3_0 = dk.a(var5, param2, var4_int, -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,33 +101,33 @@ final class bi {
     final static tg b(int param0) {
         if (param0 != 4) {
           bi.a(-128);
-          if (null == ll.field_c) {
-            ll.field_c = new tg();
-            ll.field_c.a(4, he.field_d);
-            ll.field_c.field_p = 5;
-            ll.field_c.field_d = 7697781;
-            ll.field_c.field_q = 14;
-            ll.field_c.field_e = 2763306;
-            ll.field_c.field_o = 0;
-            ll.field_c.field_g = 4;
-            ll.field_c.field_n = 6;
-            ll.field_c.field_m = ep.field_b;
+          if (null == JaggrabDownloader.field_c) {
+            JaggrabDownloader.field_c = new tg();
+            JaggrabDownloader.field_c.a(4, he.field_d);
+            JaggrabDownloader.field_c.field_p = 5;
+            JaggrabDownloader.field_c.field_d = 7697781;
+            JaggrabDownloader.field_c.field_q = 14;
+            JaggrabDownloader.field_c.field_e = 2763306;
+            JaggrabDownloader.field_c.field_o = 0;
+            JaggrabDownloader.field_c.field_g = 4;
+            JaggrabDownloader.field_c.field_n = 6;
+            JaggrabDownloader.field_c.field_m = ep.field_b;
           }
-          return ll.field_c;
+          return JaggrabDownloader.field_c;
         }
-        if (null == ll.field_c) {
-          ll.field_c = new tg();
-          ll.field_c.a(4, he.field_d);
-          ll.field_c.field_p = 5;
-          ll.field_c.field_d = 7697781;
-          ll.field_c.field_q = 14;
-          ll.field_c.field_e = 2763306;
-          ll.field_c.field_o = 0;
-          ll.field_c.field_g = 4;
-          ll.field_c.field_n = 6;
-          ll.field_c.field_m = ep.field_b;
+        if (null == JaggrabDownloader.field_c) {
+          JaggrabDownloader.field_c = new tg();
+          JaggrabDownloader.field_c.a(4, he.field_d);
+          JaggrabDownloader.field_c.field_p = 5;
+          JaggrabDownloader.field_c.field_d = 7697781;
+          JaggrabDownloader.field_c.field_q = 14;
+          JaggrabDownloader.field_c.field_e = 2763306;
+          JaggrabDownloader.field_c.field_o = 0;
+          JaggrabDownloader.field_c.field_g = 4;
+          JaggrabDownloader.field_c.field_n = 6;
+          JaggrabDownloader.field_c.field_m = ep.field_b;
         }
-        return ll.field_c;
+        return JaggrabDownloader.field_c;
     }
 
     bi(String param0, String[] param1, boolean param2) {
@@ -147,7 +147,7 @@ final class bi {
             this.field_c = this.field_c + (pe.field_c + 8);
           }
           for (var4_int = 0; this.field_b.length > var4_int; var4_int++) {
-            this.field_c = this.field_c + pe.field_c * DelegatingCanvas.field_d.b(this.field_b[var4_int], 234);
+            this.field_c = this.field_c + pe.field_c * DelegatingCanvas.field_d.wrappedLineCount(this.field_b[var4_int], 234);
             this.field_c = this.field_c + 8;
           }
           this.field_e = 20;

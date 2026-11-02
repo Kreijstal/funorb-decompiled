@@ -44,12 +44,12 @@ final class gb {
         }
     }
 
-    final static hh[] a(byte param0) {
+    final static IndexedSprite[] a(byte param0) {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
-        hh[] var1 = new hh[im.field_Qb];
+        IndexedSprite[] var1 = new IndexedSprite[im.field_Qb];
         for (var2 = 0; var2 < im.field_Qb; var2++) {
-          var1[var2] = new hh(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], wo.field_f[var2], fl.field_g);
+          var1[var2] = new IndexedSprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], wo.field_f[var2], fl.field_g);
         }
         re.b(140);
         if (param0 != -96) {
@@ -81,7 +81,7 @@ final class gb {
               cm.a(89, var4 != 0, hc.field_M.field_Ub, hc.field_M.k(123), var3, param2);
             }
             hc.field_M = null;
-            jp.a(116);
+            ArchiveProvider.a(116);
           }
         }
     }

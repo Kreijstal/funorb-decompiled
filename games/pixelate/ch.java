@@ -6,7 +6,7 @@ import java.util.*;
 class ch extends ng implements j {
     static String field_H;
     static String field_G;
-    bb field_F;
+    IntrusiveDeque field_F;
 
     private final void a(int param0, Hashtable param1, int param2, StringBuilder param3) {
         StringBuilder discarded$3 = null;
@@ -15,7 +15,7 @@ class ch extends ng implements j {
         ng var6 = null;
         int var8 = 0;
         StringBuilder var9 = null;
-        nm var10 = null;
+        IntrusiveDequeCursor var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -25,7 +25,7 @@ class ch extends ng implements j {
         RuntimeException var5 = null;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          var10 = new nm(this.field_F);
+          var10 = new IntrusiveDequeCursor(this.field_F);
           if (param2 != 32) {
             var9 = (StringBuilder) null;
             this.a(-23, (Hashtable) null, -77, (StringBuilder) null);
@@ -65,7 +65,7 @@ class ch extends ng implements j {
         int var6 = 0;
         int var7 = 0;
         ng var8 = null;
-        nm var9 = null;
+        IntrusiveDequeCursor var9 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -73,7 +73,7 @@ class ch extends ng implements j {
         RuntimeException decompiledCaughtException = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          var9 = new nm(this.field_F);
+          var9 = new IntrusiveDequeCursor(this.field_F);
           var8 = (ng) (var9.d(0));
           while (var8 != null) {
             if (var8.b(0)) {
@@ -119,7 +119,7 @@ class ch extends ng implements j {
         ng var9 = null;
         int var10 = 0;
         StringBuilder var11 = null;
-        nm var12 = null;
+        IntrusiveDequeCursor var12 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -130,7 +130,7 @@ class ch extends ng implements j {
             var11 = (StringBuilder) null;
             this.a(95, (Hashtable) null, -28, (StringBuilder) null);
           }
-          var12 = new nm(this.field_F);
+          var12 = new IntrusiveDequeCursor(this.field_F);
           var9 = (ng) (var12.d(0));
           while (var9 != null) {
             if (var9.b(0)) {
@@ -159,10 +159,10 @@ class ch extends ng implements j {
     }
 
     final boolean a(int param0, ng param1) {
-        nm var3 = null;
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         ng var4 = null;
-        nm var5 = null;
+        IntrusiveDequeCursor var5 = null;
         ng var6 = null;
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -171,25 +171,25 @@ class ch extends ng implements j {
         RuntimeException decompiledCaughtException = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          if (this.field_F.a(param0)) {
+          if (this.field_F.isEmpty(param0)) {
             return false;
           }
-          var3 = new nm(this.field_F);
+          var3 = new IntrusiveDequeCursor(this.field_F);
           var4 = (ng) (var3.b(~param0));
           while (var4 != null) {
             if (var4.b(true)) {
-              var5 = new nm(this.field_F);
-              var5.a((byte) -99, var4);
-              var6 = (ng) (var5.e(-59));
+              var5 = new IntrusiveDequeCursor(this.field_F);
+              var5.lastFrom((byte) -99, var4);
+              var6 = (ng) (var5.previous(-59));
               while (var6 != null) {
                 if (!var6.a(param1, 27)) {
-                  var6 = (ng) (var5.e(-94));
+                  var6 = (ng) (var5.previous(-94));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (ng) (var3.e(-79));
+            var4 = (ng) (var3.previous(-79));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,7 +208,7 @@ class ch extends ng implements j {
 
     void a(int param0, int param1, int param2, ng param3) {
         RuntimeException runtimeException = null;
-        nm var5 = null;
+        IntrusiveDequeCursor var5 = null;
         ng var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -218,7 +218,7 @@ class ch extends ng implements j {
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
-          var5 = new nm(this.field_F);
+          var5 = new IntrusiveDequeCursor(this.field_F);
           var6 = (ng) (var5.d(0));
           while (var6 != null) {
             if (var6.b(param0 - 40)) {
@@ -246,25 +246,25 @@ class ch extends ng implements j {
     final boolean b(int param0, ng param1) {
         RuntimeException var3 = null;
         ng var4 = null;
-        nm var5 = null;
+        IntrusiveDequeCursor var5 = null;
         ng var6 = null;
         int var7 = 0;
-        nm var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          if (this.field_F.a(param0 ^ 10)) {
+          if (this.field_F.isEmpty(param0 ^ 10)) {
             return false;
           }
-          var8 = new nm(this.field_F);
+          var8 = new IntrusiveDequeCursor(this.field_F);
           var4 = (ng) (var8.d(0));
           while (var4 != null) {
             if (var4.b(true)) {
-              var5 = new nm(this.field_F);
-              var5.b((byte) -87, var4);
+              var5 = new IntrusiveDequeCursor(this.field_F);
+              var5.firstFrom((byte) -87, var4);
               var6 = (ng) (var5.a((byte) -104));
               while (var6 != null) {
                 if (!var6.a(param1, 27)) {
@@ -301,7 +301,7 @@ class ch extends ng implements j {
           ng var5 = (ng) null;
           this.a(-101, 97, (ng) null, '\006');
         }
-        nm var2 = new nm(this.field_F);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_F);
         ng var3 = (ng) (var2.d(0));
         while (var3 != null) {
           var3.h(2);
@@ -311,7 +311,7 @@ class ch extends ng implements j {
 
     void a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 <= 19) {
-          this.field_F = (bb) null;
+          this.field_F = (IntrusiveDeque) null;
         }
         super.a(param0, (byte) 126, param2, param3, param4);
         this.j(-8133);
@@ -322,14 +322,14 @@ class ch extends ng implements j {
         ng var9 = null;
         int var10 = 0;
         StringBuilder var11 = null;
-        nm var12 = null;
+        IntrusiveDequeCursor var12 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          var12 = new nm(this.field_F);
+          var12 = new IntrusiveDequeCursor(this.field_F);
           if (param0 != -58) {
             var11 = (StringBuilder) null;
             this.a(-76, (Hashtable) null, 78, (StringBuilder) null);
@@ -370,12 +370,12 @@ class ch extends ng implements j {
 
     ch(int param0, int param1, int param2, int param3, eb param4) {
         super(param0, param1, param2, param3, param4, (fn) null);
-        this.field_F = new bb();
+        this.field_F = new IntrusiveDeque();
     }
 
     final void b(ng param0, int param1) {
         try {
-          this.field_F.a(22125, param0);
+          this.field_F.addFirst(22125, param0);
           if (param1 != 80) {
             field_H = (String) null;
           }
@@ -391,7 +391,7 @@ class ch extends ng implements j {
     }
 
     final boolean a(ng param0, int param1) {
-        nm var3 = null;
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         ng var4 = null;
         int var5 = 0;
@@ -401,7 +401,7 @@ class ch extends ng implements j {
         RuntimeException decompiledCaughtException = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
-          var3 = new nm(this.field_F);
+          var3 = new IntrusiveDequeCursor(this.field_F);
           var4 = (ng) (var3.d(0));
           if (param1 != 27) {
             this.b(false);
@@ -429,7 +429,7 @@ class ch extends ng implements j {
 
     final void a(int param0, int param1, ng param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
-        nm var7 = null;
+        IntrusiveDequeCursor var7 = null;
         ng var8 = null;
         int var9 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -438,7 +438,7 @@ class ch extends ng implements j {
         RuntimeException decompiledCaughtException = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
-          var7 = new nm(this.field_F);
+          var7 = new IntrusiveDequeCursor(this.field_F);
           var8 = (ng) (var7.d(param3));
           while (var8 != null) {
             if (var8.b(0)) {
@@ -508,22 +508,22 @@ class ch extends ng implements j {
           null != this.field_y) {
           this.field_y.a((ng) (this), (byte) -124, param0, param2, true);
         }
-        nm var5 = new nm(this.field_F);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_F);
         int var7 = 101 % ((param3 - 70) / 49);
         ng var6 = (ng) (var5.b(-1));
         while (var6 != null) {
           var6.a(this.field_p + param0, param1, this.field_z + param2, (byte) -68);
-          var6 = (ng) (var5.e(-91));
+          var6 = (ng) (var5.previous(-91));
         }
     }
 
     String b(byte param0) {
-        nm var2;
+        IntrusiveDequeCursor var2;
         ng var3;
         String var4;
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
-        var2 = new nm(this.field_F);
+        var2 = new IntrusiveDequeCursor(this.field_F);
         if (param0 <= 16) {
           return (String) null;
         }
@@ -540,7 +540,7 @@ class ch extends ng implements j {
 
     ng k(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
-        nm var2 = new nm(this.field_F);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_F);
         ng var3_ref_ng = (ng) (var2.d(0));
         while (var3_ref_ng != null) {
           if (var3_ref_ng.b(true)) {
@@ -559,7 +559,7 @@ class ch extends ng implements j {
         if (param0 < 31) {
           field_H = (String) null;
         }
-        nm var3 = new nm(this.field_F);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_F);
         ng var4 = (ng) (var3.d(0));
         while (var4 != null) {
           var5 = var4.e(58);
@@ -573,7 +573,7 @@ class ch extends ng implements j {
 
     private final void j(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
-        nm var2 = new nm(this.field_F);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_F);
         ng var3 = (ng) (var2.d(param0 ^ param0));
         while (var3 != null) {
           var3.c((byte) 51);
@@ -581,7 +581,7 @@ class ch extends ng implements j {
         }
     }
 
-    final static void a(boolean param0, String param1, int param2, int param3, Sprite[] param4, int param5, int param6, int param7, Sprite[] param8, boolean param9, jl param10, int param11, byte param12, int param13, int param14) {
+    final static void a(boolean param0, String param1, int param2, int param3, Sprite[] param4, int param5, int param6, int param7, Sprite[] param8, boolean param9, BitmapFont param10, int param11, byte param12, int param13, int param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -595,7 +595,7 @@ class ch extends ng implements j {
         int var15_int = 0;
         RuntimeException var15 = null;
         try {
-          qm.a(param13, nl.field_c, param2, param11, new sb(param4), ao.field_d, MouseWheelHandler.field_d, mh.field_a, new sb(param8), param6, param11, param10, param7, param6, param10, param14, mj.field_k, 108, hd.field_n, param5);
+          qm.a(param13, NodeHashTable.field_c, param2, param11, new sb(param4), AudioService.field_d, MouseWheelHandler.field_d, mh.field_a, new sb(param8), param6, param11, param10, param7, param6, param10, param14, mj.field_k, 108, hd.field_n, param5);
           var15_int = 75 % ((param12 + 21) / 34);
           uh.a(param0, param9, param1, 0, param3);
           return;

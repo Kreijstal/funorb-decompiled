@@ -7,7 +7,7 @@ final class bj {
     static gp field_d;
     static int field_a;
     static int[] field_b;
-    static ua[] field_c;
+    static MusicTrack[] field_c;
 
     final static void a(byte param0) {
         if (un.field_l) {
@@ -50,6 +50,6 @@ final class bj {
     }
 
     static {
-        field_c = new ua[18];
+        field_c = new MusicTrack[18];
     }
 }

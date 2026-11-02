@@ -3,7 +3,7 @@
  */
 final class dh {
     static int[] field_d;
-    static bb field_a;
+    static IntrusiveDeque field_a;
     static String[] field_c;
     static ak[] field_b;
 
@@ -190,7 +190,7 @@ final class dh {
     }
 
     static {
-        field_a = new bb();
+        field_a = new IntrusiveDeque();
         field_c = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     }
 }

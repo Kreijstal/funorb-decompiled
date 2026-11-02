@@ -14,7 +14,7 @@ final class pb {
     private int field_h;
     private dd field_m;
     private int field_g;
-    static fm field_n;
+    static ResourceArchive field_n;
     private int field_o;
     private int field_b;
 
@@ -261,13 +261,13 @@ final class pb {
     }
 
     pb(dd param0, int param1, int param2) {
-        hh[] var7 = null;
+        IndexedSprite[] var7 = null;
         int var5 = 0;
         try {
           this.field_o = param2;
           this.field_m = param0;
           var7 = this.field_m.field_l;
-          hh[] var4 = var7;
+          IndexedSprite[] var4 = var7;
           this.field_g = var7[0].field_d * 16;
           this.field_d = 16 * var7[0].field_g;
           this.field_a = -this.field_g + gb.field_b.field_B >> 1;

@@ -20,8 +20,8 @@ final class ce {
         }
         rb.field_q = 0;
         se.field_o = null;
-        var2 = kj.field_s;
-        kj.field_s = pd.field_Eb;
+        var2 = ArchiveIndex.field_s;
+        ArchiveIndex.field_s = pd.field_Eb;
         pm.field_h.field_h = pm.field_h.field_h + 1;
         pd.field_Eb = var2;
         if (param1 == 51) {

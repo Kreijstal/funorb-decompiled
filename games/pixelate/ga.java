@@ -29,7 +29,7 @@ final class ga {
             fi.a(320, 349 - var5, var4, oc.field_S, var3_int);
             SoftwareRasterizer.f(0, -var5 + 355, 640, var4 / 2 + 343);
           }
-          rk.field_e.b(param1, 320, 360, 0, -1);
+          rk.field_e.drawCentered(param1, 320, 360, 0, -1);
           SoftwareRasterizer.c();
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ga.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -158,7 +158,7 @@ final class ga {
           var10_int = (7 + var10_int) / 8;
           k.field_k = new byte[var10_int];
           if (null == param5.field_L) {
-            param5.field_L = new bb();
+            param5.field_L = new IntrusiveDeque();
           }
           ImageProducerRasterBuffer.field_n = param5.field_L;
           ImageProducerRasterBuffer.field_n.e(param3 ^ -121);
@@ -168,20 +168,20 @@ final class ga {
           gi.field_a = -1;
           ui.field_e = -1;
           if (param9.field_L == null) {
-            param9.field_L = new bb();
+            param9.field_L = new IntrusiveDeque();
           }
           nk.field_a = param9.field_L;
           nk.field_a.e(123);
           dg.field_f = new vg(param2);
           if (null == param4.field_L) {
-            param4.field_L = new bb();
+            param4.field_L = new IntrusiveDeque();
           }
           wi.field_a = param4.field_L;
           if (param3 != 3) {
             field_d = 20;
           }
           wi.field_a.e(param3 ^ 91);
-          eh.field_f = new vg(param7);
+          SocketConnector.field_f = new vg(param7);
           bo.field_e = 0L;
           mh.field_b = param0;
           return;

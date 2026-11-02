@@ -21,12 +21,12 @@ final class op extends de {
 
     final static boolean g(int param0) {
         int var1 = -97 / ((55 - param0) / 62);
-        return rj.field_F == qo.field_n ? true : false;
+        return Js5NetworkRequest.field_F == qo.field_n ? true : false;
     }
 
     final static void b(int param0, int param1, boolean param2) {
         qe.field_u = param1;
-        bb.field_b = param0;
+        IntrusiveDeque.field_b = param0;
         if (!param2) {
           field_w = (String) null;
         }
@@ -86,7 +86,7 @@ final class op extends de {
         if (param0 == 0) {
           if (this.field_g.a(79)) {
             var4 = param2 ? 1 : 0;
-            la.a(ti.field_t, 16, var4 != 0, -25528);
+            la.a(MidiPcmStream.field_t, 16, var4 != 0, -25528);
           }
         } else {
           if (param0 == 1) {
@@ -100,7 +100,7 @@ final class op extends de {
             }
           } else {
             if (param0 != 2) {
-              if (uo.field_j <= 0 &&
+              if (BufferedRandomAccessFile.field_j <= 0 &&
                 this.field_g.a(74) &&
                 param0 > 2 &&
                 32 == this.field_k[param0]) {
@@ -189,7 +189,7 @@ final class op extends de {
         }
         if (1 == param1 ||
           2 == param1) {
-          return rn.field_b;
+          return SectorCacheStore.field_b;
         }
         return super.a(-28071, param1);
     }
@@ -377,7 +377,7 @@ final class op extends de {
     }
 
     final void a(byte param0, boolean param1, int param2) {
-        ob stackIn_16_0;
+        PaletteBitmapFont stackIn_16_0;
         String stackIn_16_1;
         int stackIn_16_2;
         int stackIn_16_3;
@@ -419,9 +419,9 @@ final class op extends de {
                 stackIn_16_0 = rk.field_e;
                 stackIn_16_1 = var6;
                 stackIn_16_2 = var9;
-                stackIn_16_3 = var10 + rk.field_e.field_w;
+                stackIn_16_3 = var10 + rk.field_e.maxAscent;
                 stackIn_17_4 = (!param1) ? 2 : 0;
-                ((ob) (Object) stackIn_16_0).b(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, -1);
+                ((PaletteBitmapFont) (Object) stackIn_16_0).drawCentered(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, -1);
                 if (this.a(true, param2 - 3)) {
                   stackIn_20_0 = ih.field_a;
                   stackIn_21_1 = (!param1) ? 0 : 1;

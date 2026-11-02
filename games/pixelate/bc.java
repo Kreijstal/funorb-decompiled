@@ -129,7 +129,7 @@ final class bc extends mg {
         int var3 = Pixelate.field_H ? 1 : 0;
         ie.a(SecondaryNodeDeque.field_e, w.field_s, true, aa.field_o, 0, 127, param0);
         for (var2_int = 0; var2_int < SecondaryNodeDeque.field_e; var2_int++) {
-          gn.field_A[param0 + var2_int] = var2_int;
+          ArchiveRequest.field_A[param0 + var2_int] = var2_int;
         }
         ie.a(param0 + SecondaryNodeDeque.field_e, ro.field_a, false, qn.field_k, param0, 81, param0 + param0);
         if (param1 < 1) {

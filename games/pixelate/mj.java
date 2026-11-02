@@ -67,7 +67,7 @@ final class mj {
 
     final static void a(int param0, sb param1, int param2, int param3, int param4, sb param5) {
         try {
-          uo.field_m = param1;
+          BufferedRandomAccessFile.field_m = param1;
           ProxyAuthenticationException.field_a = param2;
           lf.field_b = param4;
           wg.field_d = param5;
@@ -130,7 +130,7 @@ final class mj {
             return stackIn_17_0;
           }
           if (CanvasRasterBuffer.a(param1, (byte) 37)) {
-            stackIn_20_0 = sd.a(jp.field_b, 89, new String[]{param1});
+            stackIn_20_0 = sd.a(ArchiveProvider.field_b, 89, new String[]{param1});
             return stackIn_20_0;
           }
           var6 = aa.field_f;

@@ -13,7 +13,7 @@ final class ff {
     static String field_b;
     static ak field_a;
 
-    final static Sprite[] a(fm param0, int param1, int param2, int param3) {
+    final static Sprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -87,9 +87,9 @@ final class ff {
             stackIn_11_0 = sd.a(vl.field_R, 41, new String[]{param1});
             return stackIn_11_0;
           }
-          vp.field_Hb.a(var8, param2 + 1504642379);
+          vp.field_Hb.traverseFrom(var8, param2 + 1504642379);
           while (true) {
-            var7 = (im) (vp.field_Hb.f(param2 ^ -1504642185));
+            var7 = (im) (vp.field_Hb.last(param2 ^ -1504642185));
             if (var7 != null) {
               var7.field_Kb = var7.field_Kb - 1;
               continue;
@@ -146,10 +146,10 @@ final class ff {
         return var1;
     }
 
-    final static hh[] a(fm param0, int param1, int param2, byte param3) {
+    final static IndexedSprite[] a(ResourceArchive param0, int param1, int param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        hh[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

@@ -13,12 +13,12 @@ final class bf extends IntrusiveNode {
     static int[] field_r;
     private int field_s;
 
-    final static tc a(int param0, fm param1, String param2, fm param3, String param4) {
+    final static BinaryBitmapFont a(int param0, ResourceArchive param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        tc stackIn_2_0 = null;
-        tc stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -31,11 +31,11 @@ final class bf extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            stackIn_2_0 = (tc) null;
+            stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
-          var5_int = param3.a(param0 ^ 122, param4);
-          var6 = param3.a((byte) -111, param2, var5_int);
+          var5_int = param3.getGroupId(param0 ^ 122, param4);
+          var6 = param3.getFileId((byte) -111, param2, var5_int);
           stackIn_4_0 = um.a(param3, param1, var5_int, 121, var6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,7 +100,7 @@ final class bf extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = eh.a(param2, param1, (byte) 47, pf.field_d);
+          var4 = SocketConnector.a(param2, param1, (byte) 47, pf.field_d);
           var3 = var4;
           var4[1].field_A = var4[1].field_F;
           var4[3].field_B = var4[3].field_E;
@@ -244,7 +244,7 @@ final class bf extends IntrusiveNode {
         int var4 = 21 / ((param2 + 66) / 35);
     }
 
-    bf(hh param0) {
+    bf(IndexedSprite param0) {
         try {
           this.field_p = ad.a(param0, 21922);
           this.field_n = param0.field_f;

@@ -11,13 +11,13 @@ final class ra {
     static int field_g;
     static String field_f;
     static int field_c;
-    static ei field_b;
+    static PlatformTask field_b;
 
     public static void a(boolean param0) {
         field_b = null;
         field_e = null;
         if (param0) {
-          field_b = (ei) null;
+          field_b = (PlatformTask) null;
         }
         field_f = null;
         field_h = null;
@@ -105,9 +105,9 @@ final class ra {
         if (param3 != -32268) {
           field_f = (String) null;
         }
-        if (nm.field_c != 0 &&
+        if (IntrusiveDequeCursor.field_c != 0 &&
           var4 == 0) {
-          po.a(true);
+          SoundCache.a(true);
           param2 = false;
         }
         if (param2) {

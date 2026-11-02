@@ -25,7 +25,7 @@ final class pm {
     int field_k;
     private int field_m;
     private int field_n;
-    static rf field_h;
+    static Js5Transport field_h;
 
     public static void b(int param0) {
         field_l = null;
@@ -78,7 +78,7 @@ final class pm {
             var4 = fo.field_a[var3];
             if (var4 >= 0) {
               if (var4 == mj.field_c.field_j) {
-                var5 = sl.field_l;
+                var5 = IndexedSpriteState.field_l;
               } else {
                 var5 = ce.field_b;
               }
@@ -131,7 +131,7 @@ final class pm {
               if (var4 == mj.field_c.field_j) {
                 stackIn_44_0 = tm.field_N;
               } else {
-                stackIn_44_0 = ao.field_e;
+                stackIn_44_0 = AudioService.field_e;
               }
               var9 = stackIn_44_0;
               var1_int = var1_int + ko.field_fb;
@@ -141,10 +141,10 @@ final class pm {
               var1_int = var1_int + bd.field_c;
             }
             if (var4 < 0) {
-              bg.field_j.a(var6, var8Lifetime1, var1_int + ii.field_i, var5, -1);
+              bg.field_j.drawText(var6, var8Lifetime1, var1_int + ii.field_i, var5, -1);
               var1_int = var1_int + hq.field_r;
             } else {
-              ma.field_y.a(var6, var8Lifetime1, var1_int + ul.field_q, var5, -1);
+              ma.field_y.drawText(var6, var8Lifetime1, var1_int + ul.field_q, var5, -1);
               var1_int = var1_int + (gk.field_fb + (bd.field_c + ko.field_fb));
             }
           }
@@ -201,7 +201,7 @@ final class pm {
         hd stackIn_50_0 = null;
         int stackIn_51_1 = 0;
         int var6;
-        hh var7;
+        IndexedSprite var7;
         int var8;
         int var9;
         int var10;
@@ -236,7 +236,7 @@ final class pm {
                 var11 = var9 + 1 + (2 + this.field_d.field_o) * (var8 + 1);
                 var12 = this.field_d.field_o - var9 - 1 + var8 * this.field_d.field_o;
                 var13 = var15.field_r[var11] & 3;
-                if (~var13 == ~(255 & var7.field_n[var10])) {
+                if (~var13 == ~(255 & var7.indices[var10])) {
                   var15.field_r[var11] = (byte)bq.a((int) var15.field_r[var11], 4);
                 } else {
                   var15.field_r[var11] = (byte)cm.a((int) var15.field_r[var11], -5);
@@ -244,7 +244,7 @@ final class pm {
                     this.field_o = this.field_o + 1;
                   }
                 }
-                if ((255 & var7.field_n[var12]) != var13) {
+                if ((255 & var7.indices[var12]) != var13) {
                   this.field_b = false;
                 }
               }
@@ -300,7 +300,7 @@ final class pm {
         this.field_d.field_d = 0;
     }
 
-    final static void a(int param0, int param1, hh[] param2) {
+    final static void a(int param0, int param1, IndexedSprite[] param2) {
         try {
           if (param0 != 13728) {
             field_l = (Sprite[]) null;

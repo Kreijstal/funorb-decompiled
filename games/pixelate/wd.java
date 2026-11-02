@@ -170,7 +170,7 @@ final class wd {
             var4.field_wb = 0;
             var4.field_nb = 0;
             var4.field_S = 0;
-            var4 = (ak) (param0.field_L.f(1504642273));
+            var4 = (ak) (param0.field_L.last(1504642273));
             var2Lifetime1 = var4;
           }
           param0.field_wb = 0;

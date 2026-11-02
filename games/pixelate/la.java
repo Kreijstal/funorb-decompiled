@@ -36,7 +36,7 @@ final class la {
         var16 = null;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          var13 = vi.field_o;
+          var13 = MusicCrossfadeStream.field_o;
           if (param0 < 120) {
             field_a = (int[]) null;
           }
@@ -238,7 +238,7 @@ final class la {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        bb var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         uj var12 = null;
@@ -382,7 +382,7 @@ final class la {
             if (jm.field_b == param2) {
               var21 += 42;
             }
-            var33 = jl.a(var12.field_Hb.field_Db, var32, var21);
+            var33 = BitmapFont.a(var12.field_Hb.field_Db, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -491,7 +491,7 @@ final class la {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Sb.field_Db.b(var23, -MouseWheelHandler.field_c + (var12.field_K - MouseWheelHandler.field_c));
+              var24_intLifetime1 = var12.field_Sb.field_Db.wrappedLineCount(var23, -MouseWheelHandler.field_c + (var12.field_K - MouseWheelHandler.field_c));
               var12.field_Sb.field_cb = var23;
               var12.field_Sb.field_yb = var12.field_Tb * 256 / mh.field_b;
               var12.field_Sb.a(var19, fq.field_q * var24_intLifetime1, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
@@ -507,7 +507,7 @@ final class la {
               !var12.b((byte) -89)) {
               if (var12.field_Zb.field_P == 0) {
                 if (0 == var12.field_Mb.field_P) {
-                  oi.a(uo.field_a, 0, ji.field_c, (byte) -110, var12, 0, param2);
+                  oi.a(BufferedRandomAccessFile.field_a, 0, ji.field_c, (byte) -110, var12, 0, param2);
                 } else {
                   pe.a(7, param1, var12.field_Nb);
                 }
@@ -555,19 +555,19 @@ final class la {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Xb) {
-                  var24Lifetime2 = ll.field_g;
+                  var24Lifetime2 = JaggrabDownloader.field_g;
                 } else {
                   if (var7 > var12.field_Yb) {
                     var25_int = -var12.field_Yb + var7;
                     if (var25_int == 1) {
                       var24Lifetime2 = oe.field_Mb;
                     }
-                    var24Lifetime2 = sd.a(ll.field_f, 95, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = sd.a(JaggrabDownloader.field_f, 95, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var6 <= var12.field_Rb) {
                       if (0 != (var8 & ~var12.field_Ib)) {
                         var25_int = cl.a((byte) -100, var8 & ~var12.field_Ib);
-                        var24Lifetime2 = jp.field_d;
+                        var24Lifetime2 = ArchiveProvider.field_d;
                         if (var25_int > 0 &&
                           null != lc.field_l &&
                           lc.field_l.length >= var25_int &&
@@ -665,7 +665,7 @@ final class la {
                 up.field_o = (String) (var24Lifetime2);
               }
             }
-            var12 = (uj) (var10.f(1504642273));
+            var12 = (uj) (var10.last(1504642273));
           }
           if (param0 < 19) {
             field_a = (int[]) null;
@@ -689,22 +689,22 @@ final class la {
         int var4;
         ec.field_t = 0;
         nc.field_a = param0;
-        ti.field_t = param1;
-        if (ti.field_t == -4 ||
-          ti.field_t == -2 ||
-          ti.field_t == -5 ||
-          ti.field_t == 0 ||
-          ti.field_t == 12 ||
-          ti.field_t == 17) {
+        MidiPcmStream.field_t = param1;
+        if (MidiPcmStream.field_t == -4 ||
+          MidiPcmStream.field_t == -2 ||
+          MidiPcmStream.field_t == -5 ||
+          MidiPcmStream.field_t == 0 ||
+          MidiPcmStream.field_t == 12 ||
+          MidiPcmStream.field_t == 17) {
           dg.a(0, (byte) -91);
         }
-        if (tk.a((byte) -104, ti.field_t)) {
+        if (tk.a((byte) -104, MidiPcmStream.field_t)) {
           var4 = 0;
-          if (ti.field_t == 12) {
+          if (MidiPcmStream.field_t == 12) {
             var4 = -1;
           }
-          wo.b(-92, ti.field_t).a(2, var4, param2);
-          if (ti.field_t == 12) {
+          wo.b(-92, MidiPcmStream.field_t).a(2, var4, param2);
+          if (MidiPcmStream.field_t == 12) {
             id.a(param2, (byte) 110);
           }
         }
@@ -760,7 +760,7 @@ final class la {
               var10 = var12;
               var6 = var10;
               if (1 == var3) {
-                q.a(var12, var5_int, param0, var4, 9);
+                Bzip2Decoder.a(var12, var5_int, param0, var4, 9);
               } else {
                 var7 = fd.field_b;
                 synchronized (var7) {

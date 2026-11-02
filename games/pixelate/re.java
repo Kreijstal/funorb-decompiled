@@ -46,7 +46,7 @@ final class re {
         }
     }
 
-    final static void a(boolean param0, oh param1) {
+    final static void a(boolean param0, HuffmanCodec param1) {
         try {
           kp.field_v = param1;
           if (!param0) {
@@ -256,8 +256,8 @@ final class re {
             return false;
           }
           if (var4.field_f != null &&
-            !var4.field_d.a(var4.field_f, -1)) {
-            this.a((byte) -93, var2, var4.field_d.c(108, var4.field_f));
+            !var4.field_d.ensureGroupAvailableByName(var4.field_f, -1)) {
+            this.a((byte) -93, var2, var4.field_d.getGroupProgressByName(108, var4.field_f));
             return false;
           }
           if (var4.field_b < 0 &&

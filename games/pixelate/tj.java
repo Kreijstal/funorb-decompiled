@@ -4,7 +4,7 @@
 final class tj extends ah {
     private Object field_x;
     static String field_w;
-    static bb field_z;
+    static IntrusiveDeque field_z;
     static int field_y;
     static int field_v;
 
@@ -12,7 +12,7 @@ final class tj extends ah {
         field_z = null;
         field_w = null;
         if (param0 <= 77) {
-          field_z = (bb) null;
+          field_z = (IntrusiveDeque) null;
         }
     }
 
@@ -72,10 +72,10 @@ final class tj extends ah {
         }
     }
 
-    final static hh b(byte param0) {
-        hh var1 = new hh(field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], wo.field_f[0], fl.field_g);
+    final static IndexedSprite b(byte param0) {
+        IndexedSprite var1 = new IndexedSprite(field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], wo.field_f[0], fl.field_g);
         if (param0 >= -78) {
-          return (hh) null;
+          return (IndexedSprite) null;
         }
         re.b(140);
         return var1;
@@ -92,14 +92,14 @@ final class tj extends ah {
         ko.a(false, SecondaryNodeDequeIterator.field_b, param0 ^ -26047);
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, jl param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, jl param10, byte param11, int param12, int param13, int param14) {
+    final static void a(int param0, boolean param1, int param2, int param3, BitmapFont param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, BitmapFont param10, byte param11, int param12, int param13, int param14) {
         try {
           if (param11 != 122) {
             java.awt.Component var16 = (java.awt.Component) null;
             tj.a((byte) 102, (java.awt.Component) null);
           }
           Sprite[] var17 = (Sprite[]) null;
-          da.a((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, sl.field_l, qo.field_s, param7);
+          da.a((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, IndexedSpriteState.field_l, qo.field_s, param7);
           ai.a(param1, param11 ^ 124);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "tj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
@@ -256,6 +256,6 @@ final class tj extends ah {
     static {
         field_w = "This password contains your Player Name, and would be easy to guess";
         field_v = 20;
-        field_z = new bb();
+        field_z = new IntrusiveDeque();
     }
 }

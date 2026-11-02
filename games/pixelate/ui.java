@@ -122,8 +122,8 @@ final class ui {
         int stackIn_9_0 = 0;
         int var6;
         int var7;
-        ca.field_a[SecondaryNodeDeque.field_e] = param4;
-        gn.field_A[SecondaryNodeDeque.field_e] = SecondaryNodeDeque.field_e;
+        WhirlpoolHasher.field_a[SecondaryNodeDeque.field_e] = param4;
+        ArchiveRequest.field_A[SecondaryNodeDeque.field_e] = SecondaryNodeDeque.field_e;
         ep.field_c[SecondaryNodeDeque.field_e] = param3;
         if (w.field_s > param3) {
           ro.field_a = param3;

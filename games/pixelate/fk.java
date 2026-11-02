@@ -165,8 +165,8 @@ final class fk extends de {
     final void a(int param0) {
         jj var2;
         int var3;
-        ob var4;
-        tc var5;
+        PaletteBitmapFont var4;
+        BinaryBitmapFont var5;
         int var6;
         int var7;
         int var8_int;
@@ -187,19 +187,19 @@ final class fk extends de {
         }
         var2 = rg.field_e;
         var3 = hn.field_d;
-        rg.field_e = rj.field_C[0];
+        rg.field_e = Js5NetworkRequest.field_C[0];
         hn.field_d = 0;
         gj.field_W[1].b(0, 45);
         this.d((byte) 59);
         this.b((byte) -71);
         var4 = rk.field_e;
         var5 = qj.field_e;
-        var6 = var5.field_w + (var5.field_z + 1);
+        var6 = var5.maxAscent + (var5.maxDescent + 1);
         var7 = 200;
         if (this.field_r != 0) {
           if (1 == this.field_r) {
-            var7 = var7 + var5.a(ln.field_m[this.field_r][0], 50, var7, 540, 400, 16777215, 0, 0, 0, var6) * var6;
-            var8 = new dd(3, 3, 0, 0, 0, 262144, 0, 0, new hh[]{});
+            var7 = var7 + var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 400, 16777215, 0, 0, 0, var6) * var6;
+            var8 = new dd(3, 3, 0, 0, 0, 262144, 0, 0, new IndexedSprite[]{});
             var9 = new hd(var8);
             var10 = new kk(var9, 320, 350);
             var10.a(0, 0, 0, (byte) -68, 0);
@@ -213,14 +213,14 @@ final class fk extends de {
           } else {
             if (this.field_r != 2) {
               if (this.field_r == 3) {
-                var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
+                var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
                 var7 += 10;
-                var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][1], 50, var7, 540, 400, 16777215, 0, 0, 0, var6);
+                var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 50, var7, 540, 400, 16777215, 0, 0, 0, var6);
                 SpriteState.field_u.c(2);
                 for (var8_int = 3; 0 <= var8_int; var8_int--) {
                   stackIn_29_0 = (var8_int % 2 != 0) ? 0 : 20;
                   var9_int = stackIn_29_0;
-                  stackIn_31_0 = rj.field_C;
+                  stackIn_31_0 = Js5NetworkRequest.field_C;
                   if (var8_int >= 2) {
                     stackIn_32_1 = 3;
                   } else {
@@ -230,26 +230,26 @@ final class fk extends de {
                 }
               } else {
                 if (4 == this.field_r) {
-                  var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][0], 260, var7, 270, 400, 16777215, 0, 0, 0, var6);
+                  var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 260, var7, 270, 400, 16777215, 0, 0, 0, var6);
                   var7 += 10;
-                  var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][1], 260, var7, 270, 400, 16777215, 0, 0, 0, var6);
+                  var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 260, var7, 270, 400, 16777215, 0, 0, 0, var6);
                   for (var8_int = 0; var8_int < 8; var8_int++) {
-                    rj.field_C[var8_int].field_a[1].f(280 + 30 * var8_int, 350);
-                    rj.field_C[var8_int].field_a[0].f(var8_int * 30 + 270, 340);
+                    Js5NetworkRequest.field_C[var8_int].field_a[1].f(280 + 30 * var8_int, 350);
+                    Js5NetworkRequest.field_C[var8_int].field_a[0].f(var8_int * 30 + 270, 340);
                   }
                   ug.field_q.c((byte) 50);
                 } else {
                   if (this.field_r == 5) {
-                    var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][0], 50, var7 - 10, 380, 150, 16777215, 0, 0, 1, var6);
+                    var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7 - 10, 380, 150, 16777215, 0, 0, 1, var6);
                     qo.field_v.b(470, 160);
                   } else {
                     if (6 != this.field_r) {
                       if (this.field_r == 7) {
                         var7 += 10;
-                        var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
+                        var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
                         var8_int = 70;
                         jf.field_c.a((byte) -8);
-                        var4.a(ln.field_m[this.field_r][1], var8_int, 314, 0, -1);
+                        var4.drawText(ln.field_m[this.field_r][1], var8_int, 314, 0, -1);
                         var9_int = 2;
                         if (640 - var8_int > ProxyAuthenticationException.field_d &&
                           -var8_int + 640 - 170 < ProxyAuthenticationException.field_d &&
@@ -257,15 +257,15 @@ final class fk extends de {
                           bg.field_k > 290) {
                           var9_int++;
                         }
-                        var4.c(ln.field_m[this.field_r][var9_int], -var8_int + 640, 314, 0, -1);
+                        var4.drawRightAlignedText(ln.field_m[this.field_r][var9_int], -var8_int + 640, 314, 0, -1);
                       }
                     } else {
-                      var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
+                      var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
                       SoftwareRasterizer.f(0, 0, 640, 389);
                       g.field_r.a(false);
                       an.field_b.a(false);
-                      cg.field_H.c((byte) 119);
-                      lj.field_g.a(55, 0, 0);
+                      DiskCacheRequest.field_H.c((byte) 119);
+                      BoundedRandomAccessFile.field_g.a(55, 0, 0);
                       f.field_a.a(60, 0, 0);
                       SoftwareRasterizer.c();
                     }
@@ -278,35 +278,35 @@ final class fk extends de {
               var10_int = 30;
               var11 = 50;
               var7 += 30;
-              var4.c(ln.field_m[this.field_r][0], var8_int, var7 - 3, 0, -1);
-              var5.b(ln.field_m[this.field_r][4], (var11 >> 1) + var8_int - (-var10_int - pk.field_c[0].field_A), -4 + var7, 16777215, 0);
+              var4.drawRightAlignedText(ln.field_m[this.field_r][0], var8_int, var7 - 3, 0, -1);
+              var5.drawCentered(ln.field_m[this.field_r][4], (var11 >> 1) + var8_int - (-var10_int - pk.field_c[0].field_A), -4 + var7, 16777215, 0);
               pk.field_c[0].b(var8_int + var10_int, -pk.field_c[0].field_B + var7);
               pk.field_c[1].b(var11 + var10_int + (var8_int + pk.field_c[0].field_A), var7 - pk.field_c[1].field_B);
               var7 = var7 + var9_int;
-              var4.c(ln.field_m[this.field_r][1], var8_int, 2 + var7, 0, -1);
-              var5.b(ln.field_m[this.field_r][4], (var11 >> 1) + (pk.field_c[0].field_A + var8_int) + var10_int, -4 + var7, 16777215, 0);
+              var4.drawRightAlignedText(ln.field_m[this.field_r][1], var8_int, 2 + var7, 0, -1);
+              var5.drawCentered(ln.field_m[this.field_r][4], (var11 >> 1) + (pk.field_c[0].field_A + var8_int) + var10_int, -4 + var7, 16777215, 0);
               no.field_p[0].b(var10_int + var8_int, var7 - no.field_p[0].field_B);
               no.field_p[1].b(var11 + (var10_int + var8_int) + pk.field_c[0].field_A, -no.field_p[1].field_B + var7);
               var7 = var7 + var9_int;
-              var4.c(ln.field_m[this.field_r][2], var8_int, var7 + 2, 0, -1);
+              var4.drawRightAlignedText(ln.field_m[this.field_r][2], var8_int, var7 + 2, 0, -1);
               no.field_p[2].b(var8_int + var10_int, -no.field_p[0].field_B + var7);
               var7 = var7 + var9_int;
-              var4.c(ln.field_m[this.field_r][3], var8_int, 4 + var7, 0, -1);
+              var4.drawRightAlignedText(ln.field_m[this.field_r][3], var8_int, 4 + var7, 0, -1);
               no.field_p[3].b(var8_int + var10_int, -no.field_p[0].field_B + var7);
               var12 = 6;
-              rj.field_C[var12].field_f[0].b(70, 160);
-              rj.field_C[var12].field_f[1].b(470, 300);
+              Js5NetworkRequest.field_C[var12].field_f[0].b(70, 160);
+              Js5NetworkRequest.field_C[var12].field_f[1].b(470, 300);
             }
           }
         } else {
-          var7 = var7 + var5.a(ln.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6) * var6;
+          var7 = var7 + var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6) * var6;
           var7 += 10;
-          var7 = var7 + var6 * var5.a(ln.field_m[this.field_r][1], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
+          var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
           SpriteState.field_C.a(false);
           te.field_Qb.a(50, 0, 0);
         }
-        var4.b(pk.field_d[this.field_r], 320, 180, 0, -1);
-        var5.c(mj.a(4067, this.field_r), 590, 375, 16777215, 0);
+        var4.drawCentered(pk.field_d[this.field_r], 320, 180, 0, -1);
+        var5.drawRightAlignedText(mj.a(4067, this.field_r), 590, 375, 16777215, 0);
         hn.field_d = var3;
         rg.field_e = var2;
     }

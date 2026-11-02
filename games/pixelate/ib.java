@@ -6,7 +6,7 @@ final class ib {
     static String[] field_c;
     static int field_e;
     static int field_a;
-    static mm field_h;
+    static AudioOutput field_h;
     static int[] field_i;
     static boolean field_b;
     int field_d;

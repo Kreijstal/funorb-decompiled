@@ -7,7 +7,7 @@ final class cm extends IntrusiveNode {
     static String field_l;
     IntrusiveNode field_k;
     static ak field_o;
-    pp field_n;
+    PcmSampleStream field_n;
 
     final static boolean a(String param0, int param1) {
         int var2_int = 0;
@@ -155,19 +155,19 @@ final class cm extends IntrusiveNode {
           bg.field_k = ra.field_d;
           im.field_Jb = u.field_j;
           u.field_j = false;
-          nm.field_c = tl.field_a;
-          uo.field_a = c.field_X;
+          IntrusiveDequeCursor.field_c = tl.field_a;
+          BufferedRandomAccessFile.field_a = c.field_X;
           ji.field_c = IntrusiveNode.field_j;
           tl.field_a = 0;
         }
     }
 
-    cm(pp param0, IntrusiveNode param1) {
+    cm(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
-          this.field_p = param0.e();
+          this.field_p = param0.getTargetVolume();
           this.field_k = param1;
-          this.field_n.h(128 + ia.field_h * this.field_p >> 8);
+          this.field_n.setVolumeQ6(128 + ia.field_h * this.field_p >> 8);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "cm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

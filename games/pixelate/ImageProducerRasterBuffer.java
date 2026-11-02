@@ -6,7 +6,7 @@ import java.util.*;
 final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_o;
     private java.awt.image.ImageConsumer field_p;
-    static bb field_n;
+    static IntrusiveDeque field_n;
     static int field_l;
     static String field_m;
 
@@ -225,7 +225,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               jh.a(2, param0, param7, param4);
             }
             nk.field_e.field_Bb = 1;
-            nk.field_e.field_C = kj.field_l.field_C;
+            nk.field_e.field_C = ArchiveIndex.field_l.field_C;
             if (vn.field_g > 0) {
               ic.a(param0, param7, 3, param4);
             }
@@ -251,7 +251,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 jh.a(2, param0, param7, param4);
               }
               nk.field_e.field_Bb = 1;
-              nk.field_e.field_C = kj.field_l.field_C;
+              nk.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (vn.field_g > 0) {
                 ic.a(param0, param7, 3, param4);
               }
@@ -272,7 +272,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               if (0 < oo.field_b) {
                 jh.a(2, param0, param7, param4);
                 nk.field_e.field_Bb = 1;
-                nk.field_e.field_C = kj.field_l.field_C;
+                nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (vn.field_g > 0) {
                   ic.a(param0, param7, 3, param4);
                 }
@@ -291,7 +291,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 }
               } else {
                 nk.field_e.field_Bb = 1;
-                nk.field_e.field_C = kj.field_l.field_C;
+                nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (vn.field_g > 0) {
                   ic.a(param0, param7, 3, param4);
                   if (h.field_W > 0) {
@@ -355,7 +355,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 jh.a(2, param0, param7, param4);
               }
               nk.field_e.field_Bb = 1;
-              nk.field_e.field_C = kj.field_l.field_C;
+              nk.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (vn.field_g > 0) {
                 ic.a(param0, param7, 3, param4);
               }
@@ -381,7 +381,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   jh.a(2, param0, param7, param4);
                 }
                 nk.field_e.field_Bb = 1;
-                nk.field_e.field_C = kj.field_l.field_C;
+                nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (vn.field_g > 0) {
                   ic.a(param0, param7, 3, param4);
                 }
@@ -403,7 +403,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   jh.a(2, param0, param7, param4);
                 }
                 nk.field_e.field_Bb = 1;
-                nk.field_e.field_C = kj.field_l.field_C;
+                nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (vn.field_g > 0) {
                   ic.a(param0, param7, 3, param4);
                   if (h.field_W > 0) {
@@ -464,7 +464,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 jh.a(2, param0, param7, param4);
               }
               nk.field_e.field_Bb = 1;
-              nk.field_e.field_C = kj.field_l.field_C;
+              nk.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (vn.field_g > 0) {
                 ic.a(param0, param7, 3, param4);
               }
@@ -490,7 +490,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   jh.a(2, param0, param7, param4);
                 }
                 nk.field_e.field_Bb = 1;
-                nk.field_e.field_C = kj.field_l.field_C;
+                nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (vn.field_g > 0) {
                   ic.a(param0, param7, 3, param4);
                 }
@@ -511,7 +511,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 if (0 < oo.field_b) {
                   jh.a(2, param0, param7, param4);
                   nk.field_e.field_Bb = 1;
-                  nk.field_e.field_C = kj.field_l.field_C;
+                  nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                   if (vn.field_g > 0) {
                     ic.a(param0, param7, 3, param4);
                   }
@@ -530,7 +530,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   }
                 } else {
                   nk.field_e.field_Bb = 1;
-                  nk.field_e.field_C = kj.field_l.field_C;
+                  nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                   if (vn.field_g > 0) {
                     ic.a(param0, param7, 3, param4);
                     if (h.field_W > 0) {

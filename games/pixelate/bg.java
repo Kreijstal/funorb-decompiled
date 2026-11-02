@@ -10,7 +10,7 @@ abstract class bg {
     static byte[] field_d;
     static bd field_l;
     static String field_f;
-    static jl field_j;
+    static BitmapFont field_j;
     static String field_i;
     static String field_c;
     static int field_k;

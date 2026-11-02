@@ -4,7 +4,7 @@
 final class vc extends qm {
     private ml field_P;
     private int field_Q;
-    static bb field_O;
+    static IntrusiveDeque field_O;
     static String field_N;
 
     final void a(int param0, int param1, int param2, ng param3) {
@@ -56,7 +56,7 @@ final class vc extends qm {
         }
     }
 
-    final static void a(int param0, int param1, int param2, sb param3, int param4, sb param5, int param6, int param7, int param8, jl param9, int param10, int param11, int param12, sb param13, int param14, jl param15, byte param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, sb param3, int param4, sb param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, sb param13, int param14, BitmapFont param15, byte param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -77,7 +77,7 @@ final class vc extends qm {
           op.b(param8, param20, true);
           lg.a(param5, param2, -118, param3, param4, param1);
           pb.a(param12, param13, 16, param10);
-          ll.a((byte) -113, param19, param11, param14);
+          JaggrabDownloader.a((byte) -113, param19, param11, param14);
           var21_int = -33 / ((param16 - 20) / 57);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,7 +141,7 @@ final class vc extends qm {
         var5 = (this.field_E >> 1) + param2 + this.field_z;
         var7 = (this.field_C >> 1) + (this.field_p + param0);
         var9 = this.field_P.a((byte) 110);
-        if (uo.field_b == var9) {
+        if (BufferedRandomAccessFile.field_b == var9) {
           var17 = CanvasRasterBuffer.field_g[0];
           var10 = var17.field_A << 1;
           var11 = var17.field_B << 1;
@@ -211,8 +211,8 @@ final class vc extends qm {
           field_O = null;
           return;
         }
-        jl var2 = (jl) null;
-        vc.a(16, 19, 82, (sb) null, 15, (sb) null, -91, -16, 3, (jl) null, 119, -31, -67, (sb) null, -69, (jl) null, (byte) 15, -5, 94, -75, -69);
+        BitmapFont var2 = (BitmapFont) null;
+        vc.a(16, 19, 82, (sb) null, 15, (sb) null, -91, -16, 3, (BitmapFont) null, 119, -31, -67, (sb) null, -69, (BitmapFont) null, (byte) 15, -5, 94, -75, -69);
         field_N = null;
         field_O = null;
     }
@@ -226,7 +226,7 @@ final class vc extends qm {
     }
 
     static {
-        field_O = new bb();
+        field_O = new IntrusiveDeque();
         field_N = "Connection timed out. Please try using a different server.";
     }
 }

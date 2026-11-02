@@ -6,7 +6,7 @@ final class dc {
     static ak field_a;
 
     final static void a(byte param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
-        ei var3 = null;
+        PlatformTask var3 = null;
         int var4 = 0;
         PlatformTaskDispatcher var5 = null;
         RuntimeException stackIn_12_0 = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qn extends IntrusiveNode {
-    static fm field_l;
+    static ResourceArchive field_l;
     static int field_k;
     static String field_m;
     static int field_p;
@@ -16,7 +16,7 @@ final class qn extends IntrusiveNode {
         if (param0 != 59) {
           qn.a(-63);
         }
-        if (pm.field_h.a(false)) {
+        if (pm.field_h.pollTransport(false)) {
           return 0;
         }
         return ph.e(param0 + 25901);
@@ -106,7 +106,7 @@ final class qn extends IntrusiveNode {
         }
     }
 
-    final static int a(String param0, int param1, String[] param2, int param3, jl param4) {
+    final static int a(String param0, int param1, String[] param2, int param3, BitmapFont param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -133,7 +133,7 @@ final class qn extends IntrusiveNode {
         int var6Lifetime1;
         var13 = Pixelate.field_H ? 1 : 0;
         try {
-          var5_int = param4.c(param0);
+          var5_int = param4.textWidth(param0);
           if (var5_int <= param1 &&
             param0.indexOf("<br>") == -1) {
             param2[0] = param0;
@@ -153,7 +153,7 @@ final class qn extends IntrusiveNode {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param0.substring(var7, var9 + 1).trim();
-              var12 = param4.c(var11);
+              var12 = param4.textWidth(var11);
               if (param1 <= var12) {
                 var7 = var9 + 1;
                 incrementValue$1 = var6Lifetime1;

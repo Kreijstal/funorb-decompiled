@@ -90,7 +90,7 @@ final class rd extends IntrusiveNode {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            jp.field_c = param0;
+            ArchiveProvider.field_c = param0;
             try {
               if (param1 <= 124) {
                 var6 = (java.applet.Applet) null;
@@ -108,7 +108,7 @@ final class rd extends IntrusiveNode {
               if (param0.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var8 + "; Expires=" + po.a(10, hm.a(64) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + SoundCache.a(10, hm.a(64) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
               cq.a(param2, (byte) -121, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -156,7 +156,7 @@ final class rd extends IntrusiveNode {
           if (param1) {
             field_l = (byte[]) null;
           }
-          if (!(param0 > vi.field_o.position)) {
+          if (!(param0 > MusicCrossfadeStream.field_o.position)) {
             return true;
           }
           if (null == NodeHashTableIterator.field_e) {
@@ -164,16 +164,16 @@ final class rd extends IntrusiveNode {
           }
           int var2_int = NodeHashTableIterator.field_e.a(-70);
           if (var2_int > 0) {
-            if (!(-vi.field_o.position + param0 >= var2_int)) {
-              var2_int = param0 - vi.field_o.position;
+            if (!(-MusicCrossfadeStream.field_o.position + param0 >= var2_int)) {
+              var2_int = param0 - MusicCrossfadeStream.field_o.position;
             }
-            NodeHashTableIterator.field_e.a(vi.field_o.payload, vi.field_o.position, (byte) 119, var2_int);
+            NodeHashTableIterator.field_e.a(MusicCrossfadeStream.field_o.payload, MusicCrossfadeStream.field_o.position, (byte) 119, var2_int);
             jc.field_c = hm.a(64);
-            vi.field_o.position = vi.field_o.position + var2_int;
-            if (param0 > vi.field_o.position) {
+            MusicCrossfadeStream.field_o.position = MusicCrossfadeStream.field_o.position + var2_int;
+            if (param0 > MusicCrossfadeStream.field_o.position) {
               return false;
             }
-            vi.field_o.position = 0;
+            MusicCrossfadeStream.field_o.position = 0;
             return true;
           }
           try {

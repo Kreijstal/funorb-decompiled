@@ -21,7 +21,7 @@ final class bl {
         if (param0 >= -22) {
           bl.b(-59);
         }
-        nm.c(-1);
+        IntrusiveDequeCursor.c(-1);
         if (null != io.field_c) {
           stackIn_8_0 = (kn.a(true, io.field_c.field_mc)) ? 1 : 0;
         } else {

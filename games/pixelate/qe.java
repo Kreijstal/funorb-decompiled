@@ -6,9 +6,9 @@ final class qe extends DualLinkNode {
     static int[] field_v;
     String field_C;
     char[] field_x;
-    static jl field_A;
+    static BitmapFont field_A;
     char[] field_t;
-    static ll field_w;
+    static JaggrabDownloader field_w;
     boolean field_y;
     static int field_u;
     int[] field_z;
@@ -79,10 +79,10 @@ final class qe extends DualLinkNode {
         }
     }
 
-    final static eh a(String param0, int param1, byte param2) {
-        eg var3 = null;
+    final static SocketConnector a(String param0, int param1, byte param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        eg stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -91,11 +91,11 @@ final class qe extends DualLinkNode {
           if (param2 < 111) {
             field_v = (int[]) null;
           }
-          var3 = new eg();
-          ((eh) ((Object) var3)).field_e = param1;
-          ((eh) ((Object) var3)).field_b = param0;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_e = param1;
+          ((SocketConnector) ((Object) var3)).field_b = param0;
           stackIn_3_0 = var3;
-          return (eh) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

@@ -5,7 +5,7 @@ abstract class hn implements ml {
     static int field_a;
     private long field_c;
     static int field_d;
-    static fm field_e;
+    static ResourceArchive field_e;
     static Sprite field_b;
     static long field_f;
 
@@ -26,7 +26,7 @@ abstract class hn implements ml {
           var5 = (CharSequence) ((Object) param1);
           var4 = gk.b(var5, 353);
           param2.a((byte) 81, var4.length);
-          param2.position = param2.position + kp.field_v.a(param2.position, var4.length, param2.payload, 0, var4, param0);
+          param2.position = param2.position + kp.field_v.compress(param2.position, var4.length, param2.payload, 0, var4, param0);
           stackIn_1_0 = -var3_int + param2.position;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,7 +49,7 @@ abstract class hn implements ml {
         }
     }
 
-    final static void a(fm param0, int param1, fm param2, fm param3, boolean param4) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         an.field_e = ii.a((byte) 122, "");
         an.field_e.a(param1 - 27848, false);
         nn.a(param1 + 4740151, param3, param2, param0);
@@ -364,7 +364,7 @@ abstract class hn implements ml {
           return wh.field_o;
         }
         if (!((350L + this.field_c) <= hm.a(64))) {
-          return uo.field_b;
+          return BufferedRandomAccessFile.field_b;
         }
         return this.a(true);
     }
@@ -398,12 +398,12 @@ abstract class hn implements ml {
         }
         int var3 = bn.field_S != null ? 1 : 0;
         if (9 == ke.field_a &&
-          SpriteState.a(vi.field_F, up.field_h, um.field_o, hm.field_b, 500)) {
+          SpriteState.a(MusicCrossfadeStream.field_F, up.field_h, um.field_o, hm.field_b, 500)) {
           if (hm.field_b != 2 &&
             var3 != 0) {
             return false;
           }
-          return tg.a(um.field_o, vi.field_F, hm.field_b, param2 ^ -2, up.field_h);
+          return tg.a(um.field_o, MusicCrossfadeStream.field_F, hm.field_b, param2 ^ -2, up.field_h);
         }
         if (ke.field_a == 10) {
           if (var3 != 0) {

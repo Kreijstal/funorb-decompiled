@@ -84,13 +84,13 @@ final class aa {
         this.field_n = op.field_t;
         this.field_h = cl.field_h;
         if (param0) {
-          this.field_l = oh.field_g;
+          this.field_l = HuffmanCodec.field_g;
         } else {
           this.field_l = null;
         }
         this.field_j = fk.field_o;
         this.field_m = dd.field_a;
-        this.field_i = lj.field_d;
+        this.field_i = BoundedRandomAccessFile.field_d;
         this.field_e = kn.field_I;
         this.field_a = uc.field_n;
         this.field_k = cd.field_g;

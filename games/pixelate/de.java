@@ -9,7 +9,7 @@ abstract class de {
     static int field_j;
     int[] field_k;
     int field_l;
-    static bb field_b;
+    static IntrusiveDeque field_b;
     static int field_n;
     static boolean field_f;
     int field_m;
@@ -250,7 +250,7 @@ abstract class de {
           aa.field_p = null;
         }
         if (this.field_l == 6) {
-          ca.field_f = null;
+          WhirlpoolHasher.field_f = null;
         }
     }
 
@@ -347,7 +347,7 @@ abstract class de {
         try {
           this.a(PacketBuffer.field_o[this.field_k[param3]], param2, param3, param1, (byte) 89);
           if (param0 != 35) {
-            field_b = (bb) null;
+            field_b = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "de.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -407,15 +407,15 @@ abstract class de {
           var6_int = this.field_k[param2];
           if (var6_int == 8) {
             if (nc.field_a != 0 &&
-              0 != ti.field_t &&
+              0 != MidiPcmStream.field_t &&
               nc.field_a != 12 &&
-              ti.field_t != 12) {
+              MidiPcmStream.field_t != 12) {
               if (1 != nc.field_a &&
-                ti.field_t != 1) {
+                MidiPcmStream.field_t != 1) {
                 if ((nc.field_a == 2 ||
-                  ti.field_t == 2 ||
+                  MidiPcmStream.field_t == 2 ||
                   nc.field_a == 4 ||
-                  ti.field_t == 4)) {
+                  MidiPcmStream.field_t == 4)) {
                   param0 = mg.field_k;
                 }
               } else {
@@ -427,7 +427,7 @@ abstract class de {
               param0 = PacketBuffer.field_o[7];
             }
           }
-          var7 = sc.field_h.c(param0);
+          var7 = sc.field_h.textWidth(param0);
           var8 = this.a(param2, (byte) 90);
           var9 = this.a(param2, false);
           var10 = this.b(-98, param2);
@@ -451,7 +451,7 @@ abstract class de {
             of.field_a == 2)) {
             var14 = 1;
           }
-          sc.field_h.a(param0, var12, var10 + sc.field_h.field_w, var14, -1);
+          sc.field_h.drawText(param0, var12, var10 + sc.field_h.maxAscent, var14, -1);
           if (var6_int != 20 &&
             var6_int != 21) {
             return;
@@ -461,10 +461,10 @@ abstract class de {
           if (var6_int == 20) {
             stackIn_45_0 = 120 * ia.field_h / 256;
           } else {
-            stackIn_45_0 = wn.field_u * 120 / 256;
+            stackIn_45_0 = SocketJs5Transport.field_u * 120 / 256;
           }
           var15 = stackIn_45_0;
-          var16 = rj.field_C[0].field_a;
+          var16 = Js5NetworkRequest.field_C[0].field_a;
           var16[1].f(-7 + (var12 + var15), 7 + var10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -495,7 +495,7 @@ abstract class de {
         int var10 = 0;
         try {
           var6_int = 6;
-          var7 = var6_int + sc.field_h.c(param1) + sn.field_m.field_A;
+          var7 = var6_int + sc.field_h.textWidth(param1) + MusicPatch.field_m.field_A;
           var8 = param4 - var7 / 2;
           var9 = 420;
           var10 = 2;
@@ -506,8 +506,8 @@ abstract class de {
           if (param3 != -6) {
             field_n = -115;
           }
-          sn.field_m.b(var8, var9);
-          sc.field_h.a(param1, var6_int + var8 + sn.field_m.field_A, var9 + sc.field_h.field_w, var10, -1);
+          MusicPatch.field_m.b(var8, var9);
+          sc.field_h.drawText(param1, var6_int + var8 + MusicPatch.field_m.field_A, var9 + sc.field_h.maxAscent, var10, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "de.AB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -555,7 +555,7 @@ abstract class de {
             }
             this.a(this.field_g.field_j, (byte) -114, false);
           }
-          this.field_g.a(this.a(uo.field_a, ji.field_c, -125), this.a(ProxyAuthenticationException.field_d, bg.field_k, -115), -1);
+          this.field_g.a(this.a(BufferedRandomAccessFile.field_a, ji.field_c, -125), this.a(ProxyAuthenticationException.field_d, bg.field_k, -115), -1);
           if (-1 != this.field_g.field_j) {
             this.a(this.field_g.field_j, (byte) -128, true);
           }
@@ -578,7 +578,7 @@ abstract class de {
         int var5;
         int var6;
         int var7_int;
-        tc var7;
+        BinaryBitmapFont var7;
         int var8;
         int var9;
         var9 = Pixelate.field_H ? 1 : 0;
@@ -597,7 +597,7 @@ abstract class de {
                 if (var6 == 28) {
                   if (this.field_g.a(74)) {
                     var6 = param2 ? 1 : 0;
-                    la.a(ti.field_t, 16, var6 != 0, -25528);
+                    la.a(MidiPcmStream.field_t, 16, var6 != 0, -25528);
                   }
                 } else {
                   if (1 == var6) {
@@ -606,7 +606,7 @@ abstract class de {
                         ii.a(param2, 0, -4, (byte) 91, te.field_Ib);
                       } else {
                         var6 = param2 ? 1 : 0;
-                        la.a(ti.field_t, -4, var6 != 0, -25528);
+                        la.a(MidiPcmStream.field_t, -4, var6 != 0, -25528);
                       }
                     }
                     break regionExit1;
@@ -622,14 +622,14 @@ abstract class de {
                   if (var6 == 7) {
                     if (!(!this.field_g.a(91))) {
                       var6 = param2 ? 1 : 0;
-                      la.a(ti.field_t, 0, var6 != 0, -25528);
+                      la.a(MidiPcmStream.field_t, 0, var6 != 0, -25528);
                     }
                     break regionExit1;
                   }
                   if (24 == var6) {
                     if (!(!this.field_g.a(84))) {
                       var6 = param2 ? 1 : 0;
-                      la.a(ti.field_t, 12, var6 != 0, -25528);
+                      la.a(MidiPcmStream.field_t, 12, var6 != 0, -25528);
                       ce.field_a = true;
                     }
                     break regionExit1;
@@ -649,14 +649,14 @@ abstract class de {
                       if (var6 == 22) {
                         if (this.field_g.a(23)) {
                           var6 = param2 ? 1 : 0;
-                          la.a(ti.field_t, 8, var6 != 0, -25528);
+                          la.a(MidiPcmStream.field_t, 8, var6 != 0, -25528);
                         }
                       } else {
                         if (var6 == 5) {
                           if (!(!this.field_g.a(45))) {
                             ((fk) (oc.field_H[7])).a(2, 1, param2);
                             var6 = param2 ? 1 : 0;
-                            la.a(ti.field_t, 7, var6 != 0, -25528);
+                            la.a(MidiPcmStream.field_t, 7, var6 != 0, -25528);
                           }
                           break regionExit1;
                         }
@@ -664,7 +664,7 @@ abstract class de {
                           if (var6 == 4) {
                             if (!(!this.field_g.a(26))) {
                               var6 = param2 ? 1 : 0;
-                              la.a(ti.field_t, 6, var6 != 0, -25528);
+                              la.a(MidiPcmStream.field_t, 6, var6 != 0, -25528);
                             }
                             break regionExit1;
                           }
@@ -672,7 +672,7 @@ abstract class de {
                             if (!(!this.field_g.a(62))) {
                               if (this.field_l != 9) {
                                 var6 = param2 ? 1 : 0;
-                                la.a(ti.field_t, 5, var6 != 0, -25528);
+                                la.a(MidiPcmStream.field_t, 5, var6 != 0, -25528);
                               } else {
                                 var6 = param2 ? 1 : 0;
                                 stackIn_105_0 = (!gq.d(75)) ? 0 : 12;
@@ -711,7 +711,7 @@ abstract class de {
                             if (this.field_g.e(-97) &&
                               ia.field_h > 0) {
                               var5 = 1;
-                              sn.e(99);
+                              MusicPatch.e(99);
                             }
                             if (this.field_g.c(102) &&
                               ia.field_h < 256) {
@@ -749,7 +749,7 @@ abstract class de {
                                 fc.a((byte) -65);
                               }
                               if (!(!this.field_g.c(102))) {
-                                eg.e(-4767);
+                                ProxySocketConnector.e(-4767);
                               }
                               break regionExit1;
                             }
@@ -761,7 +761,7 @@ abstract class de {
                                   var6 = param2 ? 1 : 0;
                                   wl.field_b = false;
                                   var7 = qj.field_e;
-                                  u.a(((jl) ((Object) var7)).field_w + ((jl) ((Object) var7)).field_z, -879, ((jl) ((Object) var7)).field_w, 2, 320, 8, ab.field_c, var7, 240, bi.field_g, 8, var6 != 0);
+                                  u.a(((BitmapFont) ((Object) var7)).maxAscent + ((BitmapFont) ((Object) var7)).maxDescent, -879, ((BitmapFont) ((Object) var7)).maxAscent, 2, 320, 8, ab.field_c, var7, 240, bi.field_g, 8, var6 != 0);
                                 }
                               }
                             } else {
@@ -779,7 +779,7 @@ abstract class de {
                                   if (!(!this.field_g.a(117))) {
                                     if (md.field_Y) {
                                       var6 = param2 ? 1 : 0;
-                                      la.a(ti.field_t, -5, var6 != 0, -25528);
+                                      la.a(MidiPcmStream.field_t, -5, var6 != 0, -25528);
                                     }
                                     if (!(!oa.field_i)) {
                                       qj.a(false, 0, 11);
@@ -859,7 +859,7 @@ abstract class de {
                                     break;
                                   case 19:
                                     if (this.field_g.a(77)) {
-                                      d.a(0, ao.a(13867));
+                                      d.a(0, AudioService.a(13867));
                                     }
                                     break;
                                   case 34:
@@ -879,7 +879,7 @@ abstract class de {
                           if (this.field_g.a(59)) {
                             var6 = nc.field_a;
                             var7_int = param2 ? 1 : 0;
-                            la.a(ti.field_t, var6, var7_int != 0, -25528);
+                            la.a(MidiPcmStream.field_t, var6, var7_int != 0, -25528);
                           }
                         }
                       }
@@ -888,7 +888,7 @@ abstract class de {
                 }
               } else {
                 if (this.field_g.a(109)) {
-                  kj.a(-3 + param0, (byte) 127);
+                  ArchiveIndex.a(-3 + param0, (byte) 127);
                   var6 = param2 ? 1 : 0;
                   stackIn_61_0 = (!gq.d(90)) ? 0 : 12;
                   la.a(stackIn_61_0, -3, var6 != 0, -25528);
@@ -898,7 +898,7 @@ abstract class de {
               if (this.field_g.a(6)) {
                 ((op) (oc.field_H[17])).f(76);
                 var6 = param2 ? 1 : 0;
-                la.a(ti.field_t, 17, var6 != 0, -25528);
+                la.a(MidiPcmStream.field_t, 17, var6 != 0, -25528);
               }
             }
           } else {
@@ -913,6 +913,6 @@ abstract class de {
     }
 
     static {
-        field_b = new bb();
+        field_b = new IntrusiveDeque();
     }
 }

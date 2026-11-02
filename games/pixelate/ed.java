@@ -5,11 +5,11 @@ final class ed {
     static String field_a;
     static PacketBuffer field_b;
 
-    final static ob a(byte[] param0, int param1) {
-        ob var2 = null;
+    final static PaletteBitmapFont a(byte[] param0, int param1) {
+        PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        ob stackIn_5_0 = null;
-        ob stackIn_7_0 = null;
+        PaletteBitmapFont stackIn_5_0 = null;
+        PaletteBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -18,13 +18,13 @@ final class ed {
           if (param0 == null) {
             return null;
           }
-          var2 = new ob(param0, IntrusiveNode.field_b, e.field_b, gf.field_g, ge.field_c, fl.field_g, wo.field_f);
+          var2 = new PaletteBitmapFont(param0, IntrusiveNode.field_b, e.field_b, gf.field_g, ge.field_c, fl.field_g, wo.field_f);
           re.b(param1 ^ -28512);
           if (param1 == -28628) {
             stackIn_7_0 = var2;
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ob) null;
+          stackIn_5_0 = (PaletteBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

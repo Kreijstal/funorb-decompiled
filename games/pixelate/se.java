@@ -3,7 +3,7 @@
  */
 final class se extends jj {
     private fo[] field_m;
-    static ei field_o;
+    static PlatformTask field_o;
     private jm[] field_n;
 
     final static boolean b(boolean param0) {
@@ -63,7 +63,7 @@ final class se extends jj {
         return true;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, fm param3) {
+    final static Sprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_5_0 = null;
         Sprite[] stackIn_7_0 = null;
@@ -106,12 +106,12 @@ final class se extends jj {
           var4 = (rh) (de.field_b.c(1504642273));
           while (var4 != null) {
             sd.a((byte) -76, var4, param1);
-            var4 = (rh) (de.field_b.f(1504642273));
+            var4 = (rh) (de.field_b.last(1504642273));
           }
           var5 = (ue) (f.field_c.c(1504642273));
           while (var5 != null) {
             uj.a(param1, var5, 65536);
-            var5 = (ue) (f.field_c.f(1504642273));
+            var5 = (ue) (f.field_c.last(1504642273));
           }
           if (param0 <= 3) {
             se.b(true);
@@ -137,7 +137,7 @@ final class se extends jj {
         jm[] var2 = this.field_n;
         for (var3 = 0; var3 < var2.length; var3++) {
           var4 = var2[var3];
-          eh.field_c[var4.field_n].b((int)var4.field_m, var4.field_c, var4.field_a, var4.field_f, var4.field_t);
+          SocketConnector.field_c[var4.field_n].b((int)var4.field_m, var4.field_c, var4.field_a, var4.field_f, var4.field_t);
         }
         fo[] var2_array = this.field_m;
         int var6 = 0;
@@ -163,15 +163,15 @@ final class se extends jj {
         if (param0 != 3782) {
           se.b(true);
         }
-        if (!pf.field_d.a("benefits", -1)) {
+        if (!pf.field_d.ensureGroupAvailableByName("benefits", -1)) {
           return false;
         }
         ip.field_y = bi.a("benefits", "members_benefits_borders", pf.field_d, (byte) -89);
-        km.field_p = bi.a("benefits", "members_benefits_price", pf.field_d, (byte) -70);
+        MusicPatchPcmStream.field_p = bi.a("benefits", "members_benefits_price", pf.field_d, (byte) -70);
         SpriteState.field_t = bi.a("benefits", "members_benefits_logo", pf.field_d, (byte) -118);
-        li.field_h = eh.a("members_benefits_screenshots", "benefits", (byte) 47, pf.field_d);
-        bl.a(11833, ip.field_y, po.field_e);
-        ni.a(km.field_p, 2, 40, 40, 80, false, -2400, 15, rk.field_e, 80, 0);
+        li.field_h = SocketConnector.a("members_benefits_screenshots", "benefits", (byte) 47, pf.field_d);
+        bl.a(11833, ip.field_y, SoundCache.field_e);
+        ni.a(MusicPatchPcmStream.field_p, 2, 40, 40, 80, false, -2400, 15, rk.field_e, 80, 0);
         pb.a(-25960, li.field_h);
         sk.a(param0 ^ -3744, SpriteState.field_t);
         return true;
@@ -180,7 +180,7 @@ final class se extends jj {
     public static void f(int param0) {
         field_o = null;
         if (param0 != 21476) {
-          field_o = (ei) null;
+          field_o = (PlatformTask) null;
         }
     }
 
@@ -196,7 +196,7 @@ final class se extends jj {
           }
         }
         if (param0 != -1) {
-          field_o = (ei) null;
+          field_o = (PlatformTask) null;
         }
     }
 

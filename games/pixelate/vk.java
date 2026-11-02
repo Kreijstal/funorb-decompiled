@@ -10,7 +10,7 @@ class vk extends hb implements vo {
     static String field_sb;
     static ak field_mb;
     static Sprite[] field_tb;
-    private jl field_wb;
+    private BitmapFont field_wb;
     static int[] field_ub;
     private boolean field_pb;
 
@@ -25,7 +25,7 @@ class vk extends hb implements vo {
             field_ub = (int[]) null;
           }
           if (!this.field_nb) {
-            ae.a((byte) 71, ao.a(13867), "tochangedisplayname.ws");
+            ae.a((byte) 71, AudioService.a(13867), "tochangedisplayname.ws");
             return;
           }
           te.a(3, -2671);
@@ -58,7 +58,7 @@ class vk extends hb implements vo {
         field_tb = null;
     }
 
-    vk(kn param0, jl param1, String param2, boolean param3, boolean param4) {
+    vk(kn param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new vl((vk) null, param1, param2), 77, 10, 10);
         try {
           this.field_pb = param3 ? true : false;
@@ -262,7 +262,7 @@ class vk extends hb implements vo {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("me");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               var6 = 32 / ((param1 - 70) / 45);
               var5 = (CanvasRasterBuffer) (var4.newInstance());
               var5.a(param3, param2, param0, (byte) -100);

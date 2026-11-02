@@ -7,7 +7,7 @@ final class sc {
     static ak field_g;
     private String field_f;
     static byte[][] field_e;
-    static ob field_h;
+    static PaletteBitmapFont field_h;
     static BufferedSocket field_d;
     static String field_a;
     static String field_c;
@@ -41,14 +41,14 @@ final class sc {
         if (!wk.field_j.b(-3)) {
           return im.field_Mb;
         }
-        if (!wk.field_j.a("commonui", -1)) {
-          return g.field_q + " - " + wk.field_j.c(119, "commonui") + "%";
+        if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
+          return g.field_q + " - " + wk.field_j.getGroupProgressByName(119, "commonui") + "%";
         }
         if (!io.field_g.b(param0 ^ -16421)) {
           return CanvasRasterBuffer.field_f;
         }
-        if (!io.field_g.a("commonui", -1)) {
-          return pc.field_x + " - " + io.field_g.c(param0 ^ 16463, "commonui") + "%";
+        if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
+          return pc.field_x + " - " + io.field_g.getGroupProgressByName(param0 ^ 16463, "commonui") + "%";
         }
         if (!qo.field_u.b(-3)) {
           return jd.field_p;

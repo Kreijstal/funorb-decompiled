@@ -26,13 +26,13 @@ final class ni extends IntrusiveNode {
 
     final static um a(int param0, int param1) {
         um var2 = new um();
-        bq.field_a.a(22125, var2);
+        bq.field_a.addFirst(22125, var2);
         sd.a(true, param0);
         int var3 = -62 / ((param1 - 48) / 62);
         return var2;
     }
 
-    final static void a(Sprite param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, jl param8, int param9, int param10) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, int param10) {
         try {
           cl.field_d = param2;
           bl.field_c = param3;
@@ -62,8 +62,8 @@ final class ni extends IntrusiveNode {
         if (param0 == -31470) {
           return;
         }
-        jl var2 = (jl) null;
-        ni.a((Sprite) null, -53, -40, -46, -15, true, 64, 51, (jl) null, -14, -74);
+        BitmapFont var2 = (BitmapFont) null;
+        ni.a((Sprite) null, -53, -40, -46, -15, true, 64, 51, (BitmapFont) null, -14, -74);
     }
 
     final static int a(byte param0, int param1) {

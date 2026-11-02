@@ -4,7 +4,7 @@
 final class fh extends ch implements pn, vo {
     static fp field_Q;
     static String field_K;
-    static gm field_J;
+    static DiskCacheWorker field_J;
     static String field_R;
     a field_S;
     static String field_M;
@@ -88,7 +88,7 @@ final class fh extends ch implements pn, vo {
         RuntimeException var6 = null;
         try {
           if (param0 == this.field_N) {
-            nm.b(true);
+            IntrusiveDequeCursor.b(true);
           } else {
             if (param0 == this.field_P) {
               this.e((byte) 8);
@@ -258,7 +258,7 @@ final class fh extends ch implements pn, vo {
     public fh() {
         super(0, 0, 496, 0, (eb) null);
         this.field_O = new gk("", (fn) null, 12);
-        uc var1 = new uc(ep.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.field_w, -1, 2147483647, true);
+        uc var1 = new uc(ep.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.maxAscent, -1, 2147483647, true);
         ng var2 = new ng(uh.field_d, var1, (fn) null);
         this.field_P = new qm(ig.field_c, (fn) null);
         this.field_N = new qm(IntrusiveNode.field_f, (fn) null);

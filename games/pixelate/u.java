@@ -6,8 +6,8 @@ final class u {
     static wm field_d;
     static volatile boolean field_j;
     static Sprite field_k;
-    private fm field_c;
-    private fm field_m;
+    private ResourceArchive field_c;
+    private ResourceArchive field_m;
     static volatile int field_b;
     static String field_e;
     private le field_i;
@@ -17,7 +17,7 @@ final class u {
     static Sprite field_f;
     static String field_n;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite[] param6, jl param7, int param8, Sprite[] param9, int param10, boolean param11) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite[] param6, BitmapFont param7, int param8, Sprite[] param9, int param10, boolean param11) {
         try {
           if (param1 != -879) {
             field_h = 78;
@@ -72,7 +72,7 @@ final class u {
         field_l = null;
     }
 
-    u(int param0, fm param1, fm param2, hj param3) {
+    u(int param0, ResourceArchive param1, ResourceArchive param2, hj param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

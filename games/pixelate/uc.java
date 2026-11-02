@@ -9,7 +9,7 @@ class uc implements eb, af {
     int field_c;
     int field_h;
     int field_k;
-    jl field_a;
+    BitmapFont field_a;
     static boolean field_n;
     private boolean field_i;
     int field_g;
@@ -52,7 +52,7 @@ class uc implements eb, af {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
           uc.a(false, -120, (java.awt.Canvas) null);
         }
-        return this.field_a.field_z + this.field_a.field_w;
+        return this.field_a.maxDescent + this.field_a.maxAscent;
     }
 
     public final int a(byte param0, ng param1, int param2) {
@@ -109,7 +109,7 @@ class uc implements eb, af {
         java.awt.Frame var7 = null;
         int var9 = 0;
         bo[] var10 = null;
-        ei var11 = null;
+        PlatformTask var11 = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           if (!param0.a((byte) -125)) {
@@ -514,7 +514,7 @@ class uc implements eb, af {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -472248767) {
-            this.field_a = (jl) null;
+            this.field_a = (BitmapFont) null;
           }
           stackIn_3_0 = param0.field_q;
           return stackIn_3_0;
@@ -559,11 +559,11 @@ class uc implements eb, af {
             }
           } else {
             var4 = 0;
-            if (sn.field_s) {
-              sn.field_s = false;
+            if (MusicPatch.field_s) {
+              MusicPatch.field_s = false;
               var4 = 1;
             }
-            on.a(true, var4 != 0, sl.field_i, nl.a(false), sc.c(16422));
+            on.a(true, var4 != 0, IndexedSpriteState.field_i, NodeHashTable.a(false), sc.c(16422));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -580,7 +580,7 @@ class uc implements eb, af {
         }
     }
 
-    uc(jl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    uc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -753,33 +753,33 @@ class uc implements eb, af {
             var12 = this.field_d;
             if (var12 != 0) {
               if (var12 == 2) {
-                var11 = var10 - this.field_a.field_z;
+                var11 = var10 - this.field_a.maxDescent;
               } else {
                 if (3 != var12 &&
                   var12 != 1) {
                 }
-                var11 = (-this.field_a.field_z + (var10 - this.field_a.field_w) >> 1) + this.field_a.field_w;
+                var11 = (-this.field_a.maxDescent + (var10 - this.field_a.maxAscent) >> 1) + this.field_a.maxAscent;
               }
             } else {
-              var11 = this.field_a.field_w;
+              var11 = this.field_a.maxAscent;
             }
             var12Lifetime1 = this.field_l;
             if (0 != var12Lifetime1 &&
               3 != var12Lifetime1) {
               if (1 == var12Lifetime1) {
-                this.field_a.b(this.b(param2, -472248767), (var9_int >> 1) + this.b(param5, param2, param6 + 5, param7), this.a(99, param0, param3, param2) + var11, param4, param1);
+                this.field_a.drawCentered(this.b(param2, -472248767), (var9_int >> 1) + this.b(param5, param2, param6 + 5, param7), this.a(99, param0, param3, param2) + var11, param4, param1);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_a.c(this.b(param2, -472248767), var9_int + this.b(param5, param2, 2, param7), this.a(param6 + 59, param0, param3, param2) + var11, param4, param1);
+                  this.field_a.drawRightAlignedText(this.b(param2, -472248767), var9_int + this.b(param5, param2, 2, param7), this.a(param6 + 59, param0, param3, param2) + var11, param4, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_a.a(this.b(param2, param6 - 472248764), this.b(param5, param2, 2, param7), var11 + this.a(88, param0, param3, param2), param4, param1);
+              this.field_a.drawText(this.b(param2, param6 - 472248764), this.b(param5, param2, 2, param7), var11 + this.a(88, param0, param3, param2), param4, param1);
             }
           } else {
-            this.field_a.a(this.b(param2, -472248767), this.b(param5, param2, 2, param7), this.a(95, param0, param3, param2), var9_int, var10, param4, param1, this.field_l, this.field_d, this.field_j);
+            this.field_a.drawParagraph(this.b(param2, -472248767), this.b(param5, param2, 2, param7), this.a(95, param0, param3, param2), var9_int, var10, param4, param1, this.field_l, this.field_d, this.field_j);
           }
           ia.a((byte) 92);
           return;
@@ -825,12 +825,12 @@ class uc implements eb, af {
               if (var6 != 3 &&
                 var6 == 1) {
               }
-              var5 = this.field_a.field_w + (-this.field_a.field_z + var4 - this.field_a.field_w >> 1);
+              var5 = this.field_a.maxAscent + (-this.field_a.maxDescent + var4 - this.field_a.maxAscent >> 1);
             } else {
-              var5 = -this.field_a.field_z + var4;
+              var5 = -this.field_a.maxDescent + var4;
             }
           } else {
-            var5 = this.field_a.field_w;
+            var5 = this.field_a.maxAscent;
           }
           if (param0 != 3) {
             this.field_j = 122;
@@ -873,7 +873,7 @@ class uc implements eb, af {
         }
     }
 
-    uc(jl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    uc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_f = param4;
           this.field_i = param12 ? true : false;

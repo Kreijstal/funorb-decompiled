@@ -9,12 +9,12 @@ final class qh {
     static String[] field_d;
     static int field_b;
 
-    final static void a(byte param0, int param1, ua param2, boolean param3) {
+    final static void a(byte param0, int param1, MusicTrack param2, boolean param3) {
         if (param0 > -50) {
           return;
         }
         try {
-          ri.field_a.a(1000000, !param3 ? true : false, param1, (byte) 124, param2, 256);
+          ri.field_a.selectTrack(1000000, !param3 ? true : false, param1, (byte) 124, param2, 256);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

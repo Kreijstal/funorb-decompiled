@@ -5,7 +5,7 @@ final class lk extends jj {
     static int field_n;
     private int field_p;
     private int field_m;
-    static hh[] field_o;
+    static IndexedSprite[] field_o;
 
     final void c(int param0) {
         super.c(param0);

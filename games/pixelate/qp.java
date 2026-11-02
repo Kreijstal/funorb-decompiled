@@ -11,7 +11,7 @@ final class qp extends ie {
     private int field_M;
     private String field_I;
     static String field_L;
-    private jl field_J;
+    private BitmapFont field_J;
 
     final String b(byte param0) {
         int var2 = 0;
@@ -56,7 +56,7 @@ final class qp extends ie {
           return;
         }
         int var7 = !this.field_O ? 0 : -this.field_M + (this.field_E - this.field_R * 2);
-        this.field_J.a(this.field_I, var7 + (var5 + this.field_R), var6 + this.field_R, this.field_M - this.field_R, this.field_C - 2 * this.field_R, this.field_K, -1, !this.field_O ? 2 : 0, 1, this.field_J.field_w);
+        this.field_J.drawParagraph(this.field_I, var7 + (var5 + this.field_R), var6 + this.field_R, this.field_M - this.field_R, this.field_C - 2 * this.field_R, this.field_K, -1, !this.field_O ? 2 : 0, 1, this.field_J.maxAscent);
         int var8 = -35 % ((70 - param3) / 49);
     }
 
@@ -77,7 +77,7 @@ final class qp extends ie {
             null != var4.field_Nb) {
             return true;
           }
-          stackIn_10_0 = (null != io.field_c) && (null != ll.a(param1, 14428));
+          stackIn_10_0 = (null != io.field_c) && (null != JaggrabDownloader.a(param1, 14428));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class qp extends ie {
         }
     }
 
-    qp(int param0, int param1, int param2, int param3, ng param4, boolean param5, int param6, int param7, jl param8, int param9, String param10) {
+    qp(int param0, int param1, int param2, int param3, ng param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (eb) null, (fn) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -119,7 +119,7 @@ final class qp extends ie {
           this.field_J = param8;
           this.field_K = param9;
           var12_int = -this.field_R + this.field_M;
-          var13 = this.field_J.a(param10, var12_int, this.field_J.field_w) + 2 * this.field_R;
+          var13 = this.field_J.paragraphHeight(param10, var12_int, this.field_J.maxAscent) + 2 * this.field_R;
           if (var13 <= param3) {
             var13 = param3;
           } else {
@@ -161,7 +161,7 @@ final class qp extends ie {
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         boolean stackIn_13_0 = false;
-        if (null == eg.field_n) {
+        if (null == ProxySocketConnector.field_n) {
           if (null == hc.field_M) {
             if (param0) {
               if (jg.k(1)) {
@@ -181,18 +181,18 @@ final class qp extends ie {
           }
           if (hc.field_M.j(-1)) {
             hc.field_M = null;
-            jp.a(62);
+            ArchiveProvider.a(62);
             return true;
           }
         } else {
-          if (eg.field_n.a(-105)) {
-            jp.a(-99);
+          if (ProxySocketConnector.field_n.a(-105)) {
+            ArchiveProvider.a(-99);
             return true;
           }
           if (null != hc.field_M &&
             hc.field_M.j(-1)) {
             hc.field_M = null;
-            jp.a(62);
+            ArchiveProvider.a(62);
             return true;
           }
         }

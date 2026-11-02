@@ -139,7 +139,7 @@ final class fq extends de {
           }
           if (param0.field_l != null) {
             um.field_o = param0.field_n;
-            vi.field_F = param0.field_k;
+            MusicCrossfadeStream.field_F = param0.field_k;
             up.field_h = param0.field_l;
             hm.field_b = param0.field_j;
           }
@@ -181,7 +181,7 @@ final class fq extends de {
     }
 
     final static void g(byte param0) {
-        ql.a(ao.a(13867), -7624);
+        ql.a(AudioService.a(13867), -7624);
         if (param0 >= -46) {
           fq.g((byte) -70);
         }
@@ -191,7 +191,7 @@ final class fq extends de {
         int stackIn_15_0 = 0;
         String stackIn_28_0 = null;
         String var2;
-        ob var3_ref_ob;
+        PaletteBitmapFont var3_ref_ob;
         int var3;
         ue var4;
         String[] var5;
@@ -230,10 +230,10 @@ final class fq extends de {
                 var8 = 16777215;
                 var9 = 0;
                 var10 = 16711680;
-                var11 = var3_ref_ob.field_w + 150;
-                var3_ref_ob.c(kh.field_b, 150, var11, 0, 0);
-                var3_ref_ob.a(ij.field_q, 170, var11, 0, 0);
-                var3_ref_ob.c(lo.field_Kb, 500, var11, 0, 0);
+                var11 = var3_ref_ob.maxAscent + 150;
+                var3_ref_ob.drawRightAlignedText(kh.field_b, 150, var11, 0, 0);
+                var3_ref_ob.drawText(ij.field_q, 170, var11, 0, 0);
+                var3_ref_ob.drawRightAlignedText(lo.field_Kb, 500, var11, 0, 0);
                 var11 += 20;
                 for (var12 = 0; var12 < 10; var12++) {
                   if (var5[var12] != null) {
@@ -241,9 +241,9 @@ final class fq extends de {
                     var14 = var5[var12];
                     stackIn_15_0 = (var12 == var7) ? var10 : var8;
                     var15 = stackIn_15_0;
-                    qj.field_e.c(1 + var12 + ". ", 140, var11, var15, var9);
-                    qj.field_e.a(var14, 180, var11, var15, var9);
-                    qj.field_e.c(Integer.toString(var13), 480, var11, var15, var9);
+                    qj.field_e.drawRightAlignedText(1 + var12 + ". ", 140, var11, var15, var9);
+                    qj.field_e.drawText(var14, 180, var11, var15, var9);
+                    qj.field_e.drawRightAlignedText(Integer.toString(var13), 480, var11, var15, var9);
                     var2 = "";
                   }
                   var11 += 15;
@@ -251,8 +251,8 @@ final class fq extends de {
                 if (((null != wh.field_p)) &&
                   ((var7 == -1))) {
                   var12Lifetime1 = wh.field_p.field_k[0];
-                  qj.field_e.a(kn.field_J, 180, var11, var8, var9);
-                  qj.field_e.c(Integer.toString(var12Lifetime1), 480, var11, var8, var9);
+                  qj.field_e.drawText(kn.field_J, 180, var11, var8, var9);
+                  qj.field_e.drawRightAlignedText(Integer.toString(var12Lifetime1), 480, var11, var8, var9);
                 }
                 break regionExit1;
               }
@@ -265,15 +265,15 @@ final class fq extends de {
         if (param0 != 11) {
           field_o = (jj) null;
         }
-        var3 = 225 + rk.field_e.field_w;
-        rk.field_e.b(var2, 330, var3, 0, 0);
+        var3 = 225 + rk.field_e.maxAscent;
+        rk.field_e.drawCentered(var2, 330, var3, 0, 0);
         if (jg.a((byte) 96)) {
           stackIn_28_0 = mj.field_h;
         } else {
           stackIn_28_0 = pf.field_b;
         }
         var2Lifetime1 = stackIn_28_0;
-        qj.field_e.b(var2Lifetime1, 320, 330 + (rk.field_e.field_w + 12), 14540253, 3355443);
+        qj.field_e.drawCentered(var2Lifetime1, 320, 330 + (rk.field_e.maxAscent + 12), 14540253, 3355443);
     }
 
     static {

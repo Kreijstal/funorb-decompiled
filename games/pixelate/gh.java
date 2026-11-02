@@ -39,7 +39,7 @@ class gh extends uc {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            ao.a(var1, -20);
+            AudioService.a(var1, -20);
             aa.field_f.f(var1.position - var2, param0 ^ -9);
           }
           return;
@@ -112,8 +112,8 @@ class gh extends uc {
         this(he.field_d, param0);
     }
 
-    gh(jl param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_w, -1, 2147483647, false);
+    gh(BitmapFont param0, int param1) {
+        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
     }
 
     static {

@@ -85,10 +85,10 @@ class go extends rg {
               if (bc.a(var5_ref_String, 1)) {
                 var14 = (String) null;
                 var13 = (String) null;
-                ti.a(0, (String) null, (String) null, (byte) -76, 2, mp.field_c);
+                MidiPcmStream.a(0, (String) null, (String) null, (byte) -76, 2, mp.field_c);
                 var16 = (String) null;
                 var15 = (String) null;
-                ti.a(0, (String) null, (String) null, (byte) -21, 2, fd.field_d);
+                MidiPcmStream.a(0, (String) null, (String) null, (byte) -21, 2, fd.field_d);
                 nd.a((byte) -23);
                 return true;
               }
@@ -154,39 +154,39 @@ class go extends rg {
               }
               if (io.field_c == null) {
                 var34 = var8Lifetime1Lifetime6 + var33 + ": ";
-                var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var34);
+                var6Lifetime1 = var6Lifetime1 - vl.field_Q.textWidth(var34);
                 break regionExit1;
               }
               if (!nc.field_b) {
                 var37 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var38 = var37 + var33 + ": ";
-                var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var38);
+                var6Lifetime1 = var6Lifetime1 - vl.field_Q.textWidth(var38);
                 break regionExit1;
               }
               if (mn.field_f == null) {
                 var35 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var36 = var35 + var33 + ": ";
-                var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var36);
+                var6Lifetime1 = var6Lifetime1 - vl.field_Q.textWidth(var36);
                 break regionExit1;
               }
               var8Lifetime1Lifetime6 = "[" + mn.field_f + "] ";
             }
             var39 = var8Lifetime1Lifetime6 + var33 + ": ";
-            var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var39);
+            var6Lifetime1 = var6Lifetime1 - vl.field_Q.textWidth(var39);
             break regionExit1;
           }
           var44 = (CharSequence) ((Object) jo.field_k);
           var40 = sd.a(dg.field_b, 116, new String[]{ng.a(var44, -1)});
           var41 = sd.a(sk.field_c, 43, new String[]{var17});
-          var10 = vl.field_Q.c(var40);
-          var11 = vl.field_Q.c(var41);
+          var10 = vl.field_Q.textWidth(var40);
+          var11 = vl.field_Q.textWidth(var41);
           if (var11 >= var10) {
             var6Lifetime1 = var6Lifetime1 - var11;
           } else {
             var6Lifetime1 = var6Lifetime1 - var10;
           }
         }
-        if (vl.field_Q.c(mp.field_a.toString()) <= var6Lifetime1) {
+        if (vl.field_Q.textWidth(mp.field_a.toString()) <= var6Lifetime1) {
           return true;
         }
         nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);

@@ -7,7 +7,7 @@ final class id {
     boolean field_e;
     boolean field_g;
     String[] field_f;
-    static bb field_d;
+    static IntrusiveDeque field_d;
     String field_c;
     int field_a;
     static int field_b;
@@ -42,10 +42,10 @@ final class id {
 
     final static void a(int param0) {
         if (param0 < 40) {
-          field_d = (bb) null;
+          field_d = (IntrusiveDeque) null;
         }
-        fm.field_b = new pl();
-        ph.field_l.c(fm.field_b, -121);
+        ResourceArchive.field_b = new pl();
+        ph.field_l.c(ResourceArchive.field_b, -121);
     }
 
     final static void b(int param0) {
@@ -62,19 +62,19 @@ final class id {
           for (var1_int = 0; var1_int < 2; var1_int++) {
             im.field_Hb[var1_int] = new Sprite(64, 64);
           }
-          eg.a((byte) 99);
+          ProxySocketConnector.a((byte) 99);
           ClientException.field_f.a(19692);
-          ii.field_p = new hh[10];
+          ii.field_p = new IndexedSprite[10];
           for (var1_intLifetime1 = 0; var1_intLifetime1 < ii.field_p.length; var1_intLifetime1++) {
-            ii.field_p[var1_intLifetime1] = new hh(64, 64, 2);
-            for (var2 = 0; ii.field_p[var1_intLifetime1].field_n.length > var2; var2++) {
+            ii.field_p[var1_intLifetime1] = new IndexedSprite(64, 64, 2);
+            for (var2 = 0; ii.field_p[var1_intLifetime1].indices.length > var2; var2++) {
               if (ok.a(ea.field_b, param0 ^ -124, 9) > var1_intLifetime1) {
-                ii.field_p[var1_intLifetime1].field_n[var2] = (byte) 1;
+                ii.field_p[var1_intLifetime1].indices[var2] = (byte) 1;
               }
             }
           }
-          for (var1_intLifetime2 = 0; gg.field_z.length > var1_intLifetime2; var1_intLifetime2++) {
-            gg.field_z[var1_intLifetime2] = var1_intLifetime2 * 526344;
+          for (var1_intLifetime2 = 0; CachedArchiveProvider.field_z.length > var1_intLifetime2; var1_intLifetime2++) {
+            CachedArchiveProvider.field_z[var1_intLifetime2] = var1_intLifetime2 * 526344;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

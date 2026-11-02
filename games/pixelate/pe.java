@@ -19,7 +19,7 @@ final class pe {
         field_a = null;
     }
 
-    final static boolean a(fm param0, byte param1) {
+    final static boolean a(ResourceArchive param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;

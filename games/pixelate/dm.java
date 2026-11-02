@@ -49,7 +49,7 @@ final class dm extends vk implements vo {
           if (this.field_xb) {
             return super.c(false);
           }
-          var2 = gg.d((byte) 52);
+          var2 = CachedArchiveProvider.d((byte) 52);
           if (var2 != null) {
             this.a(var2, -127, false);
             return super.c(false);
@@ -62,7 +62,7 @@ final class dm extends vk implements vo {
         if (this.field_xb) {
           return super.c(false);
         }
-        var2Lifetime1 = gg.d((byte) 52);
+        var2Lifetime1 = CachedArchiveProvider.d((byte) 52);
         if (var2Lifetime1 != null) {
           this.a(var2Lifetime1, -127, false);
           return super.c(false);
@@ -100,7 +100,7 @@ final class dm extends vk implements vo {
                   fq.g((byte) -73);
                 }
                 this.field_yb = true;
-                var4 = ao.field_b;
+                var4 = AudioService.field_b;
               }
             } else {
               var4 = ek.field_e;
@@ -121,7 +121,7 @@ final class dm extends vk implements vo {
                 var5.a(17, -1, FullscreenFocusCanvas.field_e);
               }
             } else {
-              var5.a(1707, (fn) (this), vi.field_J);
+              var5.a(1707, (fn) (this), MusicCrossfadeStream.field_J);
             }
             if (3 != param0.field_a) {
               if (param0.field_a == 6) {
@@ -135,7 +135,7 @@ final class dm extends vk implements vo {
               this.c(new hc(this), -113);
               return;
             }
-            var5.a(1707, (fn) (this), vi.field_J);
+            var5.a(1707, (fn) (this), MusicCrossfadeStream.field_J);
           }
           this.c(var5, -115);
           return;
@@ -158,19 +158,19 @@ final class dm extends vk implements vo {
           SoftwareRasterizer.d();
           if (param2 != 0) {
             dm.a(true, false, -123);
-            rj.a(param2 ^ 91, param0);
+            Js5NetworkRequest.a(param2 ^ 91, param0);
             return;
           }
-          rj.a(param2 ^ 91, param0);
+          Js5NetworkRequest.a(param2 ^ 91, param0);
           return;
         }
         SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
         if (param2 != 0) {
           dm.a(true, false, -123);
-          rj.a(param2 ^ 91, param0);
+          Js5NetworkRequest.a(param2 ^ 91, param0);
           return;
         }
-        rj.a(param2 ^ 91, param0);
+        Js5NetworkRequest.a(param2 ^ 91, param0);
     }
 
     public final void a(qm param0, int param1, int param2, int param3, int param4) {
@@ -191,11 +191,11 @@ final class dm extends vk implements vo {
 
     final void h(byte param0) {
         if (param0 <= -96) {
-          this.a(pa.a(248, ao.field_b, (byte) -121), -127, true);
+          this.a(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
           return;
         }
         dm.a(true, false, -97);
-        this.a(pa.a(248, ao.field_b, (byte) -121), -127, true);
+        this.a(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
     }
 
     static {

@@ -12,7 +12,7 @@ final class al {
     static String field_g;
     private int field_j;
     static String field_d;
-    static hh[][][] field_c;
+    static IndexedSprite[][][] field_c;
     private int field_e;
     private int field_a;
     private int field_n;
@@ -248,10 +248,10 @@ final class al {
         SoftwareRasterizer.a(1 + var13, -63 + var14, 63, 63, 16777215);
         SoftwareRasterizer.a(2 + var13, var14 - 64 + 2, 61, 61, 0);
         var18 = var9 * var11 * 15 >> 16;
-        fi.a(6 + var16, var17 + 5, var13, var14 - 64, 6, var18, gg.field_z);
-        fi.a(-7 + (var15 + var16), 5 + var17, 64 + var13, var14 - 64, 6, var18, gg.field_z);
-        fi.a(var16 + 6, var15 + var17, var13, var14 - 1, 6, var18, gg.field_z);
-        fi.a(var16 - (-var15 + 7), var15 + var17, 64 + var13, var14 - 1, 6, var18, gg.field_z);
+        fi.a(6 + var16, var17 + 5, var13, var14 - 64, 6, var18, CachedArchiveProvider.field_z);
+        fi.a(-7 + (var15 + var16), 5 + var17, 64 + var13, var14 - 64, 6, var18, CachedArchiveProvider.field_z);
+        fi.a(var16 + 6, var15 + var17, var13, var14 - 1, 6, var18, CachedArchiveProvider.field_z);
+        fi.a(var16 - (-var15 + 7), var15 + var17, 64 + var13, var14 - 1, 6, var18, CachedArchiveProvider.field_z);
         var15 = var15 / 2;
         var19 = null;
         var20 = null;
@@ -389,11 +389,11 @@ final class al {
         if (param0 != 51) {
           return;
         }
-        field_c = (hh[][][]) null;
+        field_c = (IndexedSprite[][][]) null;
     }
 
     static {
-        field_c = new hh[6][6][];
+        field_c = new IndexedSprite[6][6][];
         field_d = "Resign";
         field_m = new int[8192];
     }

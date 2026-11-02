@@ -45,7 +45,7 @@ final class ip extends gh {
         field_x = null;
     }
 
-    private ip(jl param0, int param1) {
+    private ip(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

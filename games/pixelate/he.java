@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class he {
-    static bb field_b;
+    static IntrusiveDeque field_b;
     static ve field_f;
     static String field_c;
     static String field_e;
     static sb field_a;
-    static jl field_d;
+    static BitmapFont field_d;
 
     final static void a(byte param0, int param1, sm param2) {
         pc var3 = null;
@@ -51,7 +51,7 @@ final class he {
           field_b = null;
           return;
         }
-        field_b = (bb) null;
+        field_b = (IntrusiveDeque) null;
         field_a = null;
         field_e = null;
         field_c = null;
@@ -70,7 +70,7 @@ final class he {
           if (param0 != 0) {
             field_e = (String) null;
           }
-          in.a((java.awt.Component) ((Object) param1), 57);
+          MusicPatchNode.a((java.awt.Component) ((Object) param1), 57);
           tj.a((byte) -128, (java.awt.Component) ((Object) param1));
           if (gp.field_Lb == null) {
             return;
@@ -94,6 +94,6 @@ final class he {
     static {
         field_e = "You can ask to join this game";
         field_c = "Final Score: ";
-        field_b = new bb();
+        field_b = new IntrusiveDeque();
     }
 }

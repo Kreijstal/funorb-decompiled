@@ -7,7 +7,7 @@ final class ep {
     static String field_d;
     static int[] field_c;
     static ak field_a;
-    static jl field_b;
+    static BitmapFont field_b;
 
     final static int[] a(int[] param0, int param1) {
         int var7_int = 0;
@@ -366,11 +366,11 @@ final class ep {
               return;
             }
             if (fh.field_J != null) {
-              fh.field_J.a((byte) -92);
+              fh.field_J.shutdown((byte) -92);
             }
-            if (null != rj.field_G) {
+            if (null != Js5NetworkRequest.field_G) {
               try {
-                rj.field_G.a(true);
+                Js5NetworkRequest.field_G.a(true);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

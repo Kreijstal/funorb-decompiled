@@ -21,7 +21,7 @@ final class mc extends IntrusiveNode {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        hh[] var10 = null;
+        IndexedSprite[] var10 = null;
         dd var11 = null;
         ib var12 = null;
         rk stackIn_3_0 = null;
@@ -121,10 +121,10 @@ final class mc extends IntrusiveNode {
         try {
           if (pb.field_n != null &&
             pb.field_n.b(-3) &&
-            pb.field_n.a("benefits", -1) &&
+            pb.field_n.ensureGroupAvailableByName("benefits", -1) &&
             kf.field_p != null &&
             kf.field_p.b(param0 - 15) &&
-            kf.field_p.a("benefits", -1)) {
+            kf.field_p.ensureGroupAvailableByName("benefits", -1)) {
             go.field_i = bi.a("benefits", "headline", pb.field_n, (byte) -79);
             jc.field_a = bi.a("benefits", "blurbpane", pb.field_n, (byte) -97);
             wo.field_c = bi.a("benefits", "button", pb.field_n, (byte) -57);
@@ -132,8 +132,8 @@ final class mc extends IntrusiveNode {
             ka.field_P = bi.a("benefits", "menu_text", pb.field_n, (byte) -20);
             jh.field_O = bi.a("benefits", "button_frame", pb.field_n, (byte) -63);
             gp.field_Kb = bi.a("benefits", "arrow", pb.field_n, (byte) -125);
-            kc.field_r = (jl) ((Object) bf.a(0, kf.field_p, "large_font", pb.field_n, "benefits"));
-            qe.field_A = (jl) ((Object) bf.a(0, kf.field_p, "small_font", pb.field_n, "benefits"));
+            kc.field_r = (BitmapFont) ((Object) bf.a(0, kf.field_p, "large_font", pb.field_n, "benefits"));
+            qe.field_A = (BitmapFont) ((Object) bf.a(0, kf.field_p, "small_font", pb.field_n, "benefits"));
             var28 = SoftwareRasterizer.field_k;
             var2 = SoftwareRasterizer.field_j;
             var3 = SoftwareRasterizer.field_d;
@@ -147,18 +147,18 @@ final class mc extends IntrusiveNode {
             var13 = new Sprite(195, 221);
             var6 = var13.field_F / 2;
             var13.c();
-            kc.field_r.b(sd.a(vi.field_s, param0 + 24, new String[]{al.field_g}), var6, 40, 16777215, -1);
-            qe.field_A.b(sd.a(kf.field_n, 76, new String[]{al.field_g}), var6, 60, 16777215, -1);
-            kc.field_r.b(sd.a(ab.field_d, 73, new String[]{bl.field_g}), var6, 110, 16777215, -1);
-            qe.field_A.b(sd.a(kk.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
-            kc.field_r.b(ng.field_w, var6, 180, 16777215, -1);
-            qe.field_A.b(ri.field_d, var6, 200, 16777215, -1);
+            kc.field_r.drawCentered(sd.a(MusicCrossfadeStream.field_s, param0 + 24, new String[]{al.field_g}), var6, 40, 16777215, -1);
+            qe.field_A.drawCentered(sd.a(kf.field_n, 76, new String[]{al.field_g}), var6, 60, 16777215, -1);
+            kc.field_r.drawCentered(sd.a(ab.field_d, 73, new String[]{bl.field_g}), var6, 110, 16777215, -1);
+            qe.field_A.drawCentered(sd.a(kk.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
+            kc.field_r.drawCentered(ng.field_w, var6, 180, 16777215, -1);
+            qe.field_A.drawCentered(ri.field_d, var6, 200, 16777215, -1);
             de.a(0, 0, 1, var13, var13.field_F, -1, 3, var13.field_E);
             jc.field_a.c();
             var13.b(-jc.field_a.field_D + 18, 241 - jc.field_a.field_y);
             for (var7 = 0; tm.field_S.length > var7; var7++) {
               li.field_a[var7].c();
-              qe.field_A.a(tm.field_S[var7], 3, 3, -6 + li.field_a[var7].field_F, li.field_a[var7].field_E - 6, ug.field_k, -1, 1, 1, qe.field_A.field_z + qe.field_A.field_w);
+              qe.field_A.drawParagraph(tm.field_S[var7], 3, 3, -6 + li.field_a[var7].field_F, li.field_a[var7].field_E - 6, ug.field_k, -1, 1, 1, qe.field_A.maxDescent + qe.field_A.maxAscent);
               de.a(0, 0, 1, li.field_a[var7], li.field_a[var7].field_F, -1, 3, li.field_a[var7].field_E);
             }
             tm.field_S = null;
@@ -168,7 +168,7 @@ final class mc extends IntrusiveNode {
             SoftwareRasterizer.a(var28, var2, var3);
             SoftwareRasterizer.b(wi.field_f);
             pb.field_n = null;
-            ll.field_a = (wo.field_c.field_F - jh.field_O.field_F) / 2 + 434;
+            JaggrabDownloader.field_a = (wo.field_c.field_F - jh.field_O.field_F) / 2 + 434;
             bn.field_Q = (wo.field_c.field_E - jh.field_O.field_E) / 2 + 390;
             ui.field_b = (wo.field_c.field_E - jh.field_O.field_E) / 2 + 390;
             sd.field_K = 231 + (wo.field_c.field_F - jh.field_O.field_F) / 2;
@@ -183,8 +183,8 @@ final class mc extends IntrusiveNode {
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.a(wi.field_f);
             var15 = sd.a(jm.field_p, 93, new String[]{wp.field_b[gb.field_c]});
-            var5 = kc.field_r.a(var15, mp.field_f);
-            var6Lifetime1 = kc.field_r.a(var15, mp.field_f, kc.field_r.field_w + kc.field_r.field_z);
+            var5 = kc.field_r.getWrappedWidth(var15, mp.field_f);
+            var6Lifetime1 = kc.field_r.paragraphHeight(var15, mp.field_f, kc.field_r.maxAscent + kc.field_r.maxDescent);
             var7Lifetime1 = (mp.field_f - var5) / 2 + bl.field_c;
             var5 += 6;
             var8 = (vp.field_Lb - var6Lifetime1) / 2 + cl.field_d;
@@ -230,7 +230,7 @@ final class mc extends IntrusiveNode {
             FullscreenFocusCanvas.field_d.d();
             var9 = new Sprite(FullscreenFocusCanvas.field_d.field_A, FullscreenFocusCanvas.field_d.field_B);
             var9.c();
-            kc.field_r.a(var15, bl.field_c, cl.field_d, mp.field_f, vp.field_Lb, 16777215, -1, 1, 1, kc.field_r.field_w + kc.field_r.field_z);
+            kc.field_r.drawParagraph(var15, bl.field_c, cl.field_d, mp.field_f, vp.field_Lb, 16777215, -1, 1, 1, kc.field_r.maxAscent + kc.field_r.maxDescent);
             de.a(0, 0, 1, var9, var9.field_A, -1, 3, var9.field_B);
             FullscreenFocusCanvas.field_d.c();
             var9.b(0, 0);
@@ -252,7 +252,7 @@ final class mc extends IntrusiveNode {
             var5_ref_String = sd.a(dk.field_f, param0 + 18, new String[]{IntrusiveNode.field_i});
             IntrusiveNode.field_i = null;
             var17.c();
-            qe.field_A.a(var5_ref_String, 3, 3, var17.field_F - 6, -6 + var17.field_E, 16777215, -1, 0, 1, qe.field_A.field_w + qe.field_A.field_z);
+            qe.field_A.drawParagraph(var5_ref_String, 3, 3, var17.field_F - 6, -6 + var17.field_E, 16777215, -1, 0, 1, qe.field_A.maxAscent + qe.field_A.maxDescent);
             de.a(0, 0, 1, var17, var17.field_F, -1, 3, var17.field_E);
             qf.field_c.c();
             var17.b(199 - qf.field_c.field_D, -qf.field_c.field_y + 83);
@@ -265,22 +265,22 @@ final class mc extends IntrusiveNode {
             var2Lifetime3 = SoftwareRasterizer.field_j;
             var3Lifetime3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.a(wi.field_f);
-            var4 = 6 + qe.field_A.a(ri.field_i, 640);
+            var4 = 6 + qe.field_A.getWrappedWidth(ri.field_i, 640);
             var5Lifetime1 = jf.field_a.field_A + var4 + 20;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = var6Lifetime2 - (-jf.field_a.field_A - 20);
             qf.field_c.c();
-            qe.field_A.a(ri.field_i, -qf.field_c.field_D + var7Lifetime2, 155 - qf.field_c.field_y + qe.field_A.field_w + qe.field_A.field_z, 16777215, -1);
+            qe.field_A.drawText(ri.field_i, -qf.field_c.field_D + var7Lifetime2, 155 - qf.field_c.field_y + qe.field_A.maxAscent + qe.field_A.maxDescent, 16777215, -1);
             de.a(-qf.field_c.field_D + (var7Lifetime2 - 4), 155 - qf.field_c.field_y, 1, qf.field_c, var4, -1, 3, 50);
-            var8Lifetime1 = 155 - qf.field_c.field_y - (-qe.field_A.field_z - qe.field_A.field_w + (-3 + jf.field_a.field_B)) / 2;
+            var8Lifetime1 = 155 - qf.field_c.field_y - (-qe.field_A.maxDescent - qe.field_A.maxAscent + (-3 + jf.field_a.field_B)) / 2;
             jf.field_a.b(var6Lifetime2 - qf.field_c.field_D, var8Lifetime1);
             SoftwareRasterizer.a(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.b(wi.field_f);
             jf.field_a = null;
           }
           SoftwareRasterizer.a(wi.field_f);
-          SoftwareRasterizer.a(16, 16, 608, 112, 15, in.field_t, gq.field_n);
-          SoftwareRasterizer.a(231, 144, 393, 232, 15, in.field_t, gq.field_n);
+          SoftwareRasterizer.a(16, 16, 608, 112, 15, MusicPatchNode.field_t, gq.field_n);
+          SoftwareRasterizer.a(231, 144, 393, 232, 15, MusicPatchNode.field_t, gq.field_n);
           if (go.field_i != null) {
             go.field_i.b(0, 0);
           }
@@ -334,7 +334,7 @@ final class mc extends IntrusiveNode {
               nh.a(wo.field_c.field_E * 7 / 12, 64, 436, 392, 121, wo.field_c.field_F - 4);
             }
             stackIn_66_0 = bn.field_Q;
-            stackIn_66_1 = ll.field_a;
+            stackIn_66_1 = JaggrabDownloader.field_a;
             stackIn_67_2 = (a.field_I.field_j == 1);
             r.a(stackIn_66_0, stackIn_66_1, stackIn_67_2, -40);
           }
@@ -378,14 +378,14 @@ final class mc extends IntrusiveNode {
         }
     }
 
-    final static pp a(int param0, int param1) {
+    final static PcmSampleStream a(int param0, int param1) {
         ln var2 = null;
-        if (po.field_b.i(0) < 5) {
+        if (SoundCache.field_b.i(0) < 5) {
           if (param1 >= -117) {
             mc.a(17, -35);
           }
           var2 = new ln(param0);
-          po.field_b.a(22125, var2);
+          SoundCache.field_b.addFirst(22125, var2);
           return var2.field_o;
         }
         return null;

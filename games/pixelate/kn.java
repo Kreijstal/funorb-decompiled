@@ -7,13 +7,13 @@ final class kn extends ie {
     static volatile boolean field_K;
     static String field_J;
     static int field_I;
-    private bb field_N;
+    private IntrusiveDeque field_N;
     static wm field_M;
     static String field_P;
 
     final void d(byte param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
-        nm var2 = new nm(this.field_N);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_N);
         ud var3 = (ud) (var2.d(0));
         while (var3 != null) {
           if (var3.c(false)) {
@@ -37,7 +37,7 @@ final class kn extends ie {
           if (param0 != -6183) {
             field_L = true;
           }
-          this.field_N.b(param0 ^ -1392505192, var3);
+          this.field_N.addLast(param0 ^ -1392505192, var3);
           var3.field_N = true;
           var3.a((ng) (this), 27);
         } catch (RuntimeException runtimeException) {
@@ -46,14 +46,14 @@ final class kn extends ie {
     }
 
     final ng l(int param0) {
-        nm var2;
+        IntrusiveDequeCursor var2;
         ud var3;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         if (param0 < 48) {
           this.a((byte) 24);
         }
-        var2 = new nm(this.field_N);
+        var2 = new IntrusiveDequeCursor(this.field_N);
         var3 = (ud) (var2.d(0));
         while (var3 != null) {
           if (var3.field_N) {
@@ -69,29 +69,29 @@ final class kn extends ie {
         if (this.field_y != null) {
           this.field_y.a((ng) (this), (byte) -124, param0, param2, true);
         }
-        nm var5 = new nm(this.field_N);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_N);
         ng var6 = (ng) (var5.b(-1));
         int var7 = 47 / ((param3 - 70) / 49);
         while (var6 != null) {
           var6.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) 124);
-          var6 = (ng) (var5.e(-105));
+          var6 = (ng) (var5.previous(-105));
         }
     }
 
     public kn() {
-        super(0, 0, field_O, sl.field_c, (eb) null, (fn) null);
-        this.field_N = new bb();
+        super(0, 0, field_O, IndexedSpriteState.field_c, (eb) null, (fn) null);
+        this.field_N = new IntrusiveDeque();
     }
 
     final ud n(int param0) {
-        nm var2;
+        IntrusiveDequeCursor var2;
         ud var3;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         if (param0 != 640) {
           field_I = 105;
         }
-        var2 = new nm(this.field_N);
+        var2 = new IntrusiveDequeCursor(this.field_N);
         var3 = (ud) (var2.d(0));
         while (var3 != null) {
           if (var3.field_N) {
@@ -112,9 +112,9 @@ final class kn extends ie {
     final void e(byte param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         if (param0 != 54) {
-          this.field_N = (bb) null;
+          this.field_N = (IntrusiveDeque) null;
         }
-        nm var2 = new nm(this.field_N);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_N);
         ud var3 = (ud) (var2.d(param0 ^ 54));
         while (var3 != null) {
           var3.field_N = false;
@@ -135,9 +135,9 @@ final class kn extends ie {
     final void a(byte param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         if (param0 != -22) {
-          this.field_N = (bb) null;
+          this.field_N = (IntrusiveDeque) null;
         }
-        nm var2 = new nm(this.field_N);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_N);
         ud var3 = (ud) (var2.d(0));
         while (var3 != null) {
           if (var3.a((byte) 123)) {

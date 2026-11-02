@@ -49,7 +49,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
 
     final static void a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, String param6, int param7, int param8) {
         try {
-          kj.field_s = param3;
+          ArchiveIndex.field_s = param3;
           if (param7 != -21462) {
             String var10 = (String) null;
             KeyboardInputHandler.a(117, 59, -61, 116, (PlatformTaskDispatcher) null, -123, (String) null, 58, -63);
@@ -61,8 +61,8 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           pd.field_Eb = param5;
           lk.field_n = param1;
           ef.field_e = param4;
-          pm.field_h = (rf) ((Object) new wn());
-          fh.field_J = new gm(param4);
+          pm.field_h = (Js5Transport) ((Object) new SocketJs5Transport());
+          fh.field_J = new DiskCacheWorker(param4);
           ck.field_j = new am(pm.field_h, fh.field_J);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
@@ -156,11 +156,11 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              kj.a((char) var2_int, (byte) 111)) {
+              ArchiveIndex.a((char) var2_int, (byte) 111)) {
               var3 = 127 & 1 + jd.field_s;
               if (qn.field_p != var3) {
-                gn.field_z[jd.field_s] = -1;
-                fm.field_d[jd.field_s] = (char)var2_int;
+                ArchiveRequest.field_z[jd.field_s] = -1;
+                ResourceArchive.field_d[jd.field_s] = (char)var2_int;
                 jd.field_s = var3;
               }
             }
@@ -204,8 +204,8 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             if (var2_int >= 0) {
               var3 = 127 & 1 + jd.field_s;
               if (qn.field_p != var3) {
-                gn.field_z[jd.field_s] = var2_int;
-                fm.field_d[jd.field_s] = (char)0;
+                ArchiveRequest.field_z[jd.field_s] = var2_int;
+                ResourceArchive.field_d[jd.field_s] = (char)0;
                 jd.field_s = var3;
               }
             }

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vl extends ch implements vo {
-    private jl field_O;
+    private BitmapFont field_O;
     static ak field_J;
     private qm[] field_S;
     private vk field_M;
     private String field_N;
     private int[] field_I;
-    static jl field_Q;
+    static BitmapFont field_Q;
     static String field_R;
     private int field_P;
     static ak field_L;
@@ -25,7 +25,7 @@ final class vl extends ch implements vo {
 
     final void a(int param0, int param1, int param2, byte param3) {
         super.a(param0, param1, param2, (byte) -24);
-        this.field_O.a(this.field_N, 14 + (this.field_z + param2), this.field_p + param0 + 10, this.field_E - 28, this.field_C, 16777215, -1, 0, 0, this.field_O.field_w);
+        this.field_O.drawParagraph(this.field_N, 14 + (this.field_z + param2), this.field_p + param0 + 10, this.field_E - 28, this.field_C, 16777215, -1, 0, 0, this.field_O.maxAscent);
         int var5 = -57 / ((param3 - 70) / 49);
     }
 
@@ -50,7 +50,7 @@ final class vl extends ch implements vo {
         }
     }
 
-    vl(vk param0, jl param1, String param2) {
+    vl(vk param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (eb) null);
         int var4_int = 0;
         this.field_P = 0;
@@ -58,7 +58,7 @@ final class vl extends ch implements vo {
           this.field_M = param0;
           this.field_O = param1;
           this.field_N = param2;
-          var4_int = this.field_N == null ? 0 : this.field_O.a(this.field_N, 260, this.field_O.field_w);
+          var4_int = this.field_N == null ? 0 : this.field_O.paragraphHeight(this.field_N, 260, this.field_O.maxAscent);
           this.a(288, (byte) 55, 0, 0, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -164,7 +164,7 @@ final class vl extends ch implements vo {
     final static boolean b(int param0, int param1, int param2) {
         boolean stackIn_9_0 = false;
         if (ke.field_a == 13) {
-          po.a(true);
+          SoundCache.a(true);
           return true;
         }
         if (param0 == ke.field_a) {

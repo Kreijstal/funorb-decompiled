@@ -216,7 +216,7 @@ final class gj extends kb {
           return;
         }
         try {
-          ep.field_b.b(param0, param2 + (param4.field_z + (param4.field_E >> 1)), -5 + param4.field_p + param1, 16777215, -1);
+          ep.field_b.drawCentered(param0, param2 + (param4.field_z + (param4.field_E >> 1)), -5 + param4.field_p + param1, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "gj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

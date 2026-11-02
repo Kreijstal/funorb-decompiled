@@ -16,7 +16,7 @@ final class ef {
           na.a(true);
           return;
         }
-        pc var2 = vi.field_o;
+        pc var2 = MusicCrossfadeStream.field_o;
         var2.readInt(0);
         var2.readInt(0);
         var2.readInt(0);
@@ -68,14 +68,14 @@ final class ef {
         int var25Lifetime2;
         var26 = Pixelate.field_H ? 1 : 0;
         try {
-          var28 = vi.field_o;
+          var28 = MusicCrossfadeStream.field_o;
           var2 = var28.f(255);
           if (var2 == 0) {
             var3 = var28.a((byte) 86);
             var4 = (ue) (f.field_c.c(1504642273));
             while (var4 != null) {
               if (var4.field_o != var3) {
-                var4 = (ue) (f.field_c.f(1504642273));
+                var4 = (ue) (f.field_c.last(1504642273));
                 continue;
               }
               break;
@@ -172,7 +172,7 @@ final class ef {
             var6_ref_rh = (rh) (de.field_b.c(1504642273));
             while (var6_ref_rh != null) {
               if (var3 != var6_ref_rh.field_o) {
-                var6_ref_rh = (rh) (de.field_b.f(1504642273));
+                var6_ref_rh = (rh) (de.field_b.last(1504642273));
                 continue;
               }
               break;

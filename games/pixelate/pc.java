@@ -5,7 +5,7 @@ final class pc extends PacketBuffer {
     static String field_t;
     static int field_q;
     static int field_s;
-    private lh field_v;
+    private IsaacRandom field_v;
     static String field_u;
     static String field_x;
     static byte[][] field_w;
@@ -30,14 +30,14 @@ final class pc extends PacketBuffer {
           while (param3 > var5_int) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param0[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_v.a(256));
+            param0[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_v.nextInt(256));
             var5_int++;
             if (var6 != 0) {
               return;
             }
           }
           if (param2 < 25) {
-            this.field_v = (lh) null;
+            this.field_v = (IsaacRandom) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,7 +64,7 @@ final class pc extends PacketBuffer {
           }
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
-          this.payload[fieldTemp$1] = (byte)(param0 + this.field_v.a(256));
+          this.payload[fieldTemp$1] = (byte)(param0 + this.field_v.nextInt(256));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,7 +90,7 @@ final class pc extends PacketBuffer {
         im stackOut_17_0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        bb var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         im var7 = null;
@@ -193,7 +193,7 @@ final class pc extends PacketBuffer {
                   }
                   stackIn_45_0 = var7.field_Pb;
                   if (var14 > 0) {
-                    stackIn_46_1 = jl.a(var7.field_Pb.field_Db, var7.field_Fb, var14);
+                    stackIn_46_1 = BitmapFont.a(var7.field_Pb.field_Db, var7.field_Fb, var14);
                   } else {
                     stackIn_46_1 = var7.field_Fb;
                   }
@@ -230,32 +230,32 @@ final class pc extends PacketBuffer {
                     em.a((String) null, 0L, var16, -1, var7, -163, ma.field_z.field_Gb, (int[]) null, -1);
                     var5 = var7;
                     if (var7.field_Nb != null &&
-                      !ul.a(75, eg.field_n.field_h) &&
+                      !ul.a(75, ProxySocketConnector.field_n.field_h) &&
                       !ln.field_q) {
-                      if (!lh.field_g) {
-                        var17 = eg.field_n;
+                      if (!IsaacRandom.field_g) {
+                        var17 = ProxySocketConnector.field_n;
                         var18 = sd.a(nf.field_e, 46, new String[]{var16});
                         var17.field_b.a(var18, (byte) -105, 8);
                       }
-                      var17Lifetime1 = eg.field_n;
+                      var17Lifetime1 = ProxySocketConnector.field_n;
                       var18Lifetime1 = sd.a(ho.field_f, 101, new String[]{var16});
                       var17Lifetime1.field_b.a(var18Lifetime1, (byte) -102, 18);
                     }
                   }
-                  var7 = (im) (var4.f(1504642273));
+                  var7 = (im) (var4.last(1504642273));
                   continue;
                 }
               } else {
                 stackIn_95_0 = ma.field_z.field_Ib;
               }
               if (((ak) (stackIn_95_0)).field_P != 0) {
-                he.field_f = new ve(ma.field_z.field_Ib.field_tb, ma.field_z.field_Ib.field_gb, ma.field_z.field_Ib.field_K, ma.field_z.field_Ib.field_nb, jj.field_j, po.field_c, mg.field_h, mg.field_h);
+                he.field_f = new ve(ma.field_z.field_Ib.field_tb, ma.field_z.field_Ib.field_gb, ma.field_z.field_Ib.field_K, ma.field_z.field_Ib.field_nb, jj.field_j, SoundCache.field_c, mg.field_h, mg.field_h);
                 il.field_e = 0;
               }
               if (ma.field_z.field_Hb.field_P == 0) {
                 break;
               }
-              he.field_f = new ve(ma.field_z.field_Hb.field_tb, ma.field_z.field_Hb.field_gb, ma.field_z.field_Hb.field_K, ma.field_z.field_Hb.field_nb, hp.field_Fb, po.field_c, mg.field_h, mg.field_h);
+              he.field_f = new ve(ma.field_z.field_Hb.field_tb, ma.field_z.field_Hb.field_gb, ma.field_z.field_Hb.field_K, ma.field_z.field_Hb.field_nb, hp.field_Fb, SoundCache.field_c, mg.field_h, mg.field_h);
               il.field_e = 1;
               break;
             }
@@ -291,7 +291,7 @@ final class pc extends PacketBuffer {
           if (param0 != 0) {
             field_t = (String) null;
           }
-          this.field_v = new lh(param1);
+          this.field_v = new IsaacRandom(param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -376,7 +376,7 @@ final class pc extends PacketBuffer {
           }
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
-          stackIn_4_0 = 255 & this.payload[fieldTemp$1] - this.field_v.a(256);
+          stackIn_4_0 = 255 & this.payload[fieldTemp$1] - this.field_v.nextInt(256);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

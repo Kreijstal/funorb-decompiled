@@ -75,7 +75,7 @@ final class jm {
           for (var2 = 0; var2 < jj.field_b; var2++) {
             var7 = var1 + ' ';
             var1 = var7;
-            var3 = 255 & vi.field_o.payload[var2];
+            var3 = 255 & MusicCrossfadeStream.field_o.payload[var2];
             var4 = var3 >> 4;
             if (10 <= var4) {
               var4 += 55;

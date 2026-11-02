@@ -16,7 +16,7 @@ final class tg {
     static dj field_j;
     eb field_r;
     eb field_i;
-    jl field_m;
+    BitmapFont field_m;
     private int field_c;
     int field_e;
     eb field_a;
@@ -143,8 +143,8 @@ final class tg {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_m.c(param0);
-          var6 = this.field_m.field_z + this.field_m.field_D;
+          var5_int = this.field_m.textWidth(param0);
+          var6 = this.field_m.maxDescent + this.field_m.field_D;
           var7 = param2;
           if (param3 < 27) {
             this.field_e = 119;
@@ -158,7 +158,7 @@ final class tg {
           }
           SoftwareRasterizer.a(var7, var8, 6 + var5_int, 6 + var6, this.field_c);
           SoftwareRasterizer.d(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.field_e);
-          this.field_m.a(param0, 3 + var7, this.field_m.field_D + (var8 + 3), this.field_c, -1);
+          this.field_m.drawText(param0, 3 + var7, this.field_m.field_D + (var8 + 3), this.field_c, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -200,11 +200,11 @@ final class tg {
           var6 = this.field_g + this.field_o;
           var7 = this.field_q;
           if (var7 == -1) {
-            var7 = this.field_m.field_w + this.field_m.field_z;
+            var7 = this.field_m.maxAscent + this.field_m.maxDescent;
           }
           var8 = SoftwareRasterizer.field_j >> 2;
-          var9 = this.field_m.c(param0);
-          var10 = this.field_m.field_w + this.field_m.field_z;
+          var9 = this.field_m.textWidth(param0);
+          var10 = this.field_m.maxAscent + this.field_m.maxDescent;
           var11 = 1;
           if (var8 < var9 ||
             param0.indexOf("<br>") != -1) {
@@ -214,14 +214,14 @@ final class tg {
             } else {
               var12 = var8;
             }
-            if (rf.field_j == null) {
-              rf.field_j = new String[16];
+            if (Js5Transport.field_j == null) {
+              Js5Transport.field_j = new String[16];
             }
-            var11Lifetime1 = this.field_m.a(param0, new int[]{var12}, rf.field_j);
+            var11Lifetime1 = this.field_m.wrapText(param0, new int[]{var12}, Js5Transport.field_j);
             var9 = 0;
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_m.c(rf.field_j[var13Lifetime2]);
+              var14 = this.field_m.textWidth(Js5Transport.field_j[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -240,7 +240,7 @@ final class tg {
           }
           SoftwareRasterizer.a(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_d);
           SoftwareRasterizer.d(var12 + 1, 1 + var13Lifetime1, var9 - (-var5_int + 2), -2 + (var10 + var6), this.field_e);
-          this.field_m.a(param0, var12 + this.field_n, var13Lifetime1 + this.field_o, var9, var10, this.field_c, -1, 0, 0, var7);
+          this.field_m.drawParagraph(param0, var12 + this.field_n, var13Lifetime1 + this.field_o, var9, var10, this.field_c, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -256,7 +256,7 @@ final class tg {
         }
     }
 
-    final void a(int param0, jl param1) {
+    final void a(int param0, BitmapFont param1) {
         uc var17 = null;
         w var4 = null;
         Sprite[] var5 = null;
@@ -280,7 +280,7 @@ final class tg {
         w var14Lifetime1;
         w var14Lifetime2;
         try {
-          var17 = new uc(param1, 2, 2, 2236962, 1, 1, 1, param1.field_z + (param1.field_w + 2));
+          var17 = new uc(param1, 2, 2, 2236962, 1, 1, 1, param1.maxDescent + (param1.maxAscent + 2));
           var17.field_g = 16777215;
           this.field_a = (eb) ((Object) var17);
           var4 = new w();

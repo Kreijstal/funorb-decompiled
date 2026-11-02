@@ -9,7 +9,7 @@ final class dk {
     static boolean field_c;
     static String field_f;
 
-    final static Sprite a(int param0, fm param1, int param2, int param3) {
+    final static Sprite a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite stackIn_5_0 = null;
@@ -24,7 +24,7 @@ final class dk {
             return (Sprite) (stackIn_2_0);
           }
           if (param3 == -1) {
-            stackIn_7_0 = ca.a(0);
+            stackIn_7_0 = WhirlpoolHasher.a(0);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;
@@ -43,9 +43,9 @@ final class dk {
         }
     }
 
-    final static String a(String param0, int param1, String param2, fm param3) {
+    final static String a(String param0, int param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        fm var5 = null;
+        ResourceArchive var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -62,8 +62,8 @@ final class dk {
             return stackIn_2_0;
           }
           if (param1 != 0) {
-            var5 = (fm) null;
-            dk.a(-69, (fm) null, 92, 117);
+            var5 = (ResourceArchive) null;
+            dk.a(-69, (ResourceArchive) null, 92, 117);
           }
           stackIn_6_0 = param0 + " - " + param3.c(0) + "%";
           return stackIn_6_0;
@@ -97,13 +97,13 @@ final class dk {
         field_f = null;
         field_e = null;
         if (param0 >= -81) {
-          fm var2 = (fm) null;
-          dk.a((String) null, 119, (String) null, (fm) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          dk.a((String) null, 119, (String) null, (ResourceArchive) null);
         }
         field_a = (Sprite[][]) null;
     }
 
-    final static void a(boolean param0, fm param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         rl var5 = null;

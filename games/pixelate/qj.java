@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qj {
-    static tc field_e;
+    static BinaryBitmapFont field_e;
     static boolean field_b;
     static int[] field_a;
     static long field_d;
@@ -49,7 +49,7 @@ final class qj {
         field_e = null;
         field_a = null;
         if (param0) {
-          field_e = (tc) null;
+          field_e = (BinaryBitmapFont) null;
         }
     }
 

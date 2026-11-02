@@ -37,10 +37,10 @@ final class el {
         }
         if (sd.field_K > param2) {
           var3 = 98 / ((38 - param1) / 61);
-          if (ll.field_a > param2) {
+          if (JaggrabDownloader.field_a > param2) {
             return -1;
           }
-          if (ll.field_a + jh.field_O.field_F <= param2) {
+          if (JaggrabDownloader.field_a + jh.field_O.field_F <= param2) {
             return -1;
           }
           if (param0 < bn.field_Q) {
@@ -53,10 +53,10 @@ final class el {
         }
         if (param2 >= sd.field_K + jh.field_O.field_F) {
           var3Lifetime1 = 98 / ((38 - param1) / 61);
-          if (ll.field_a > param2) {
+          if (JaggrabDownloader.field_a > param2) {
             return -1;
           }
-          if (ll.field_a + jh.field_O.field_F <= param2) {
+          if (JaggrabDownloader.field_a + jh.field_O.field_F <= param2) {
             return -1;
           }
           if (param0 < bn.field_Q) {
@@ -72,10 +72,10 @@ final class el {
           return 0;
         }
         var3Lifetime2 = 98 / ((38 - param1) / 61);
-        if (ll.field_a > param2) {
+        if (JaggrabDownloader.field_a > param2) {
           return -1;
         }
-        if (ll.field_a + jh.field_O.field_F <= param2) {
+        if (JaggrabDownloader.field_a + jh.field_O.field_F <= param2) {
           return -1;
         }
         if (param0 < bn.field_Q) {
@@ -133,12 +133,12 @@ final class el {
         SoftwareRasterizer.c(param1, param5, (int)(-0.5f + param6), param2);
     }
 
-    final static fm a(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
+    final static ResourceArchive a(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
-          gg var8 = null;
-          fm stackIn_16_0 = null;
+          CachedArchiveProvider var8 = null;
+          ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 >= -100) {
             el.a(68, true, true, -71, -103, true);
@@ -147,25 +147,25 @@ final class el {
             var6 = null;
             var7 = null;
             if (ef.field_e.field_k != null) {
-              rj.field_G = new uo(ef.field_e.field_k, 5200, 0);
+              Js5NetworkRequest.field_G = new BufferedRandomAccessFile(ef.field_e.field_k, 5200, 0);
               ef.field_e.field_k = null;
-              var6 = new rn(255, rj.field_G, new uo(ef.field_e.field_m, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, Js5NetworkRequest.field_G, new BufferedRandomAccessFile(ef.field_e.field_m, 12000, 0), 2097152);
             }
-            if (null != rj.field_G) {
+            if (null != Js5NetworkRequest.field_G) {
               if (ug.field_l == null) {
-                ug.field_l = new uo[ef.field_e.field_u.length];
+                ug.field_l = new BufferedRandomAccessFile[ef.field_e.field_u.length];
               }
               if (null == ug.field_l[param3]) {
-                ug.field_l[param3] = new uo(ef.field_e.field_u[param3], 12000, 0);
+                ug.field_l[param3] = new BufferedRandomAccessFile(ef.field_e.field_u[param3], 12000, 0);
                 ef.field_e.field_u[param3] = null;
               }
-              var7 = new rn(param3, rj.field_G, ug.field_l[param3], 2097152);
+              var7 = new SectorCacheStore(param3, Js5NetworkRequest.field_G, ug.field_l[param3], 2097152);
             }
-            var8 = ck.field_j.a(param2, 6, param3, (rn) (var6), (rn) (var7));
+            var8 = ck.field_j.a(param2, 6, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param5) {
               var8.a(true);
             }
-            stackIn_16_0 = new fm(var8, param1, param4);
+            stackIn_16_0 = new ResourceArchive(var8, param1, param4);
             return stackIn_16_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

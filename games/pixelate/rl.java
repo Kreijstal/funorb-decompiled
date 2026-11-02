@@ -176,7 +176,7 @@ final class rl {
             }
             var2 = 1;
           }
-          mj.field_c.a(mi.a(uo.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, bg.field_k, (byte) -73), -1);
+          mj.field_c.a(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, bg.field_k, (byte) -73), -1);
           if (param0 <= 74) {
             rl.b((byte) -77);
           }

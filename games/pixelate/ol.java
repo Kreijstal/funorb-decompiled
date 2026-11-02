@@ -21,13 +21,13 @@ final class ol extends de {
           if (null != ib.field_f) {
             ln.a(75);
           }
-          m.a(ao.a(13867), -60);
+          m.a(AudioService.a(13867), -60);
         }
         if (var2 == 1) {
-          la.a(ti.field_t, 0, false, -25528);
+          la.a(MidiPcmStream.field_t, 0, false, -25528);
         }
         if (var2 == 2) {
-          la.a(ti.field_t, 0, true, -25528);
+          la.a(MidiPcmStream.field_t, 0, true, -25528);
         }
     }
 

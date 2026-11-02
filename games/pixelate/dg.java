@@ -3,7 +3,7 @@
  */
 final class dg {
     static boolean field_a;
-    static fm field_d;
+    static ResourceArchive field_d;
     static vg field_f;
     static String field_b;
     static String[] field_c;

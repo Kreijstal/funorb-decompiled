@@ -7,7 +7,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode field_r;
     DualLinkNode field_p;
     static String field_n;
-    static jl field_o;
+    static BitmapFont field_o;
     static String field_m;
     static int[] field_s;
     static String[] field_k;

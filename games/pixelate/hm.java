@@ -20,7 +20,7 @@ final class hm {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new og(param1);
-          wk.field_g.a(22125, var3);
+          wk.field_g.addFirst(22125, var3);
           dq.a(param2, -18989, var3);
           var4 = 55 / ((param0 - 68) / 46);
           stackIn_1_0 = var3;

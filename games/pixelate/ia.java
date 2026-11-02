@@ -9,7 +9,7 @@ final class ia implements eb {
     private int field_f;
     private int field_b;
     static int field_e;
-    private jl field_g;
+    private BitmapFont field_g;
     static int field_h;
 
     final static void a(boolean param0, String param1, int param2, java.applet.Applet param3) {
@@ -74,7 +74,7 @@ final class ia implements eb {
           SoftwareRasterizer.a(var1.field_t, var1.field_q, var1.field_u);
           SoftwareRasterizer.f(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
           var1.field_t = null;
-          vc.field_O.a(param0 ^ 22065, var1);
+          vc.field_O.addFirst(param0 ^ 22065, var1);
           return;
         }
         if (var1 == null) {
@@ -83,7 +83,7 @@ final class ia implements eb {
         SoftwareRasterizer.a(var1.field_t, var1.field_q, var1.field_u);
         SoftwareRasterizer.f(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
         var1.field_t = null;
-        vc.field_O.a(param0 ^ 22065, var1);
+        vc.field_O.addFirst(param0 ^ 22065, var1);
     }
 
     public static void a(int param0) {
@@ -100,7 +100,7 @@ final class ia implements eb {
         this.field_g = he.field_d;
     }
 
-    ia(jl param0, int param1, int param2) {
+    ia(BitmapFont param0, int param1, int param2) {
         try {
           this.field_f = param1;
           this.field_g = param0;
@@ -132,13 +132,13 @@ final class ia implements eb {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_g.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_q + "</u>", param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, var6_int, -1, this.field_f, this.field_b, this.field_g.field_w + this.field_g.field_z);
+          this.field_g.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_q + "</u>", param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, var6_int, -1, this.field_f, this.field_b, this.field_g.maxAscent + this.field_g.maxDescent);
           if (param1 != -124) {
             return;
           }
           if (param0.b(true)) {
-            var7 = this.field_g.c(param0.field_q);
-            var8 = this.field_g.field_z + this.field_g.field_w;
+            var7 = this.field_g.textWidth(param0.field_q);
+            var8 = this.field_g.maxDescent + this.field_g.maxAscent;
             var9 = param0.field_z + param3;
             if (this.field_f != 2) {
               if (1 == this.field_f) {

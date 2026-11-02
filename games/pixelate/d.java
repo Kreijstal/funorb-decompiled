@@ -20,7 +20,7 @@ final class d {
           field_b = -91;
           if (lo.field_Nb) {
             sd.field_I = true;
-            nl.a(0, false);
+            NodeHashTable.a(0, false);
             el.field_b = 0;
             return;
           }
@@ -28,7 +28,7 @@ final class d {
         }
         if (lo.field_Nb) {
           sd.field_I = true;
-          nl.a(0, false);
+          NodeHashTable.a(0, false);
           el.field_b = 0;
           return;
         }
@@ -77,7 +77,7 @@ final class d {
         }
     }
 
-    final static void a(fm param0, fm param1, boolean param2, byte[] param3, String[][] param4, int param5, hh[] param6, int[] param7, String[] param8, int param9, boolean param10, String[][] param11, int param12, int[] param13, Sprite[][] param14, fm param15, String[] param16, byte[] param17, Sprite[][] param18) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, byte[] param3, String[][] param4, int param5, IndexedSprite[] param6, int[] param7, String[] param8, int param9, boolean param10, String[][] param11, int param12, int[] param13, Sprite[][] param14, ResourceArchive param15, String[] param16, byte[] param17, Sprite[][] param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -114,7 +114,7 @@ final class d {
           var20 = (String[]) null;
           ge.a(param8, param12, param1, param17, param14, param5, param4, param15, param3, (String[]) null, param18, param6, param11, param0, param16, param7, 1, param10, param13, (byte) -41);
           if (!param2) {
-            d.a((fm) null, (fm) null, true, (byte[]) null, (String[][]) null, -25, (hh[]) null, (int[]) null, (String[]) null, -85, true, (String[][]) null, 103, (int[]) null, (Sprite[][]) null, (fm) null, (String[]) null, (byte[]) null, (Sprite[][]) null);
+            d.a((ResourceArchive) null, (ResourceArchive) null, true, (byte[]) null, (String[][]) null, -25, (IndexedSprite[]) null, (int[]) null, (String[]) null, -85, true, (String[][]) null, 103, (int[]) null, (Sprite[][]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (Sprite[][]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

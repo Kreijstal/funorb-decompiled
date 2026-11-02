@@ -50,7 +50,7 @@ final class h extends qm {
 
     final static void a(int param0, Sprite param1) {
         try {
-          ti.a(false);
+          MidiPcmStream.a(false);
           SoftwareRasterizer.a(param1.field_G, param1.field_A, param1.field_B);
           if (param0 >= -58) {
             field_V = (Sprite[]) null;

@@ -131,14 +131,14 @@ final class wo {
           for (var2 = 3; var2 > 0; var2--) {
             var1.c();
             SoftwareRasterizer.d();
-            rk.field_e.b(Integer.toString(var2), SoftwareRasterizer.field_j >> 1, SoftwareRasterizer.field_d, 0, -1);
+            rk.field_e.drawCentered(Integer.toString(var2), SoftwareRasterizer.field_j >> 1, SoftwareRasterizer.field_d, 0, -1);
             pm.field_l[-var2 + 3] = new Sprite(150, 90);
             pm.field_l[3 - var2].c();
             var1.d(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           }
           ClientException.field_f.a(param0 ^ 19695);
-          jg.field_J = rk.field_e.c(bb.field_e);
-          rf.field_n = rk.field_e.c(po.field_j);
+          jg.field_J = rk.field_e.textWidth(IntrusiveDeque.field_e);
+          Js5Transport.field_n = rk.field_e.textWidth(SoundCache.field_j);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wo.A(" + param0 + ')');
         }

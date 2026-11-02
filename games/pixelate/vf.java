@@ -106,7 +106,7 @@ final class vf {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        bb var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         im var6 = null;
         int var7 = 0;
@@ -168,7 +168,7 @@ final class vf {
             if (0 >= var10) {
               stackIn_21_1 = var6.field_Fb;
             } else {
-              stackIn_21_1 = jl.a(var6.field_Pb.field_Db, var6.field_Fb, var10);
+              stackIn_21_1 = BitmapFont.a(var6.field_Pb.field_Db, var6.field_Fb, var10);
             }
             stackIn_20_0.field_cb = stackIn_21_1;
             stackIn_24_0 = (var6.field_Pb.field_cb.equals(var6.field_Fb)) ? 0 : 1;
@@ -191,25 +191,25 @@ final class vf {
             }
             if (var6.field_P != 0) {
               em.a(var6.field_Fb, 0L, var6.field_Ib, -1, var6, -163, MouseWheelHandler.field_e.field_Gb, (int[]) null, -1);
-              var17 = eg.field_n;
+              var17 = ProxySocketConnector.field_n;
               var13_ref_String = k.field_n;
               var17.field_b.a(var13_ref_String, (byte) -107, 7);
-              var18 = eg.field_n;
-              var13 = uo.field_a;
+              var18 = ProxySocketConnector.field_n;
+              var13 = BufferedRandomAccessFile.field_a;
               var14 = ji.field_c;
               var18.field_b.b(0, var13, 43, var14, 0);
             }
             var5 = var6;
-            var6 = (im) (var4.f(1504642273));
+            var6 = (im) (var4.last(1504642273));
           }
           if (MouseWheelHandler.field_e.field_Ib.field_P != 0) {
-            he.field_f = new ve(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.field_gb, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.field_nb, dp.field_p, po.field_c, mg.field_h, mg.field_h);
+            he.field_f = new ve(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.field_gb, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.field_nb, dp.field_p, SoundCache.field_c, mg.field_h, mg.field_h);
             il.field_e = 2;
           }
           if (MouseWheelHandler.field_e.field_Hb.field_P == 0) {
             return;
           }
-          he.field_f = new ve(MouseWheelHandler.field_e.field_Hb.field_tb, MouseWheelHandler.field_e.field_Hb.field_gb, MouseWheelHandler.field_e.field_Hb.field_K, MouseWheelHandler.field_e.field_Hb.field_nb, ProxyAuthenticationException.field_f, po.field_c, mg.field_h, mg.field_h);
+          he.field_f = new ve(MouseWheelHandler.field_e.field_Hb.field_tb, MouseWheelHandler.field_e.field_Hb.field_gb, MouseWheelHandler.field_e.field_Hb.field_K, MouseWheelHandler.field_e.field_Hb.field_nb, ProxyAuthenticationException.field_f, SoundCache.field_c, mg.field_h, mg.field_h);
           il.field_e = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -56,7 +56,7 @@ abstract class lb extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = uj.a((byte) -127, lj.a((byte) 108), km.e(100));
+            var5_int = uj.a((byte) -127, BoundedRandomAccessFile.a((byte) 108), MusicPatchPcmStream.e(100));
             if (var5_int != -1) {
               hn.a((byte) -97, ii.field_y, var5_int, gi.field_b);
               gi.field_b = null;
@@ -68,7 +68,7 @@ abstract class lb extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = dn.a(wc.d(param0 + 0), (byte) 5, this.field_t, am.a(-13565), vi.b((byte) 127), pd.k(0), eg.f(8192));
+            var5_intLifetime1 = dn.a(wc.d(param0 + 0), (byte) 5, this.field_t, am.a(-13565), MusicCrossfadeStream.b((byte) 127), pd.k(0), ProxySocketConnector.f(8192));
             if (-1 != var5_intLifetime1) {
               rh.a(true, gi.field_b, ii.field_y, var5_intLifetime1);
               gi.field_b = null;
@@ -84,7 +84,7 @@ abstract class lb extends GameApplet {
             if (param2) {
               ol.field_o = false;
             } else {
-              var5_intLifetime2 = mi.a(this.field_A, (byte) 28, am.a(-13565), this.field_t, false, eg.f(8192));
+              var5_intLifetime2 = mi.a(this.field_A, (byte) 28, am.a(-13565), this.field_t, false, ProxySocketConnector.f(8192));
               if (-1 != var5_intLifetime2) {
                 if (0 == var5_intLifetime2) {
                   ff.field_d = vn.field_b;
@@ -100,41 +100,41 @@ abstract class lb extends GameApplet {
           }
           if (var4 == 4) {
             if (uj.field_Lb) {
-              vi.a(ao.a(param0 ^ 13867), 22770);
+              MusicCrossfadeStream.a(AudioService.a(param0 ^ 13867), 22770);
             } else {
               el.field_b = 10;
               lo.field_Nb = true;
             }
           }
           if (5 == var4) {
-            d.a(0, ao.a(13867));
+            d.a(0, AudioService.a(13867));
           }
           if (var4 == 6 &&
             sd.field_I) {
             el.field_b = 10;
           }
           if (var4 == 7) {
-            ip.a((byte) 93, ao.a(param0 + 13867));
+            ip.a((byte) 93, AudioService.a(param0 + 13867));
           }
           if (var4 == 8) {
-            vi.a(ao.a(13867), 22770);
+            MusicCrossfadeStream.a(AudioService.a(13867), 22770);
           }
           if (var4 == 9) {
-            fc.a(ao.a(param0 + 13867), (byte) 19);
+            fc.a(AudioService.a(param0 + 13867), (byte) 19);
           }
           if (var4 == 10) {
             aa.field_f.g(17, 15514);
           }
           if (var4 == 11) {
-            vf.a(ao.a(13867), 3279);
+            vf.a(AudioService.a(13867), 3279);
           }
           if (12 == var4) {
-            ae.a((byte) 71, ao.a(13867), sn.b((byte) 11));
+            ae.a((byte) 71, AudioService.a(13867), MusicPatch.b((byte) 11));
           }
           if (13 == var4) {
             try {
               if (null == qe.field_w) {
-                qe.field_w = new ll(mc.field_k, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                qe.field_w = new JaggrabDownloader(mc.field_k, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (qe.field_w.b((byte) -87)) {
                 var12 = qe.field_w.a(3);
@@ -266,10 +266,10 @@ abstract class lb extends GameApplet {
                     if (mj.field_b == 5) {
                       gp.a(true, aq.field_b, 5);
                     } else {
-                      gp.a(true, ll.field_k, 256);
+                      gp.a(true, JaggrabDownloader.field_k, 256);
                     }
                   } else {
-                    gp.a(true, rn.field_g, 256);
+                    gp.a(true, SectorCacheStore.field_g, 256);
                   }
                 }
               }
@@ -302,7 +302,7 @@ abstract class lb extends GameApplet {
           }
           wk.field_j = vm.a(true, (byte) 22, false, wg.field_e, 1);
           io.field_g = vm.a(true, (byte) 22, false, lo.field_Hb, 1);
-          qo.field_u = vm.a(true, (byte) 22, false, wn.field_r, 1);
+          qo.field_u = vm.a(true, (byte) 22, false, SocketJs5Transport.field_r, 1);
           qn.field_l = wk.field_j;
           dg.field_d = io.field_g;
           hf.field_q = 2;
@@ -310,10 +310,10 @@ abstract class lb extends GameApplet {
         if (hf.field_q == 2) {
           if (hn.field_e != null &&
             hn.field_e.b(-3)) {
-            if (!hn.field_e.b(param0 + 125, "")) {
+            if (!hn.field_e.hasGroupName(param0 + 125, "")) {
               hn.field_e = null;
             } else {
-              if (hn.field_e.a("", ~param0)) {
+              if (hn.field_e.ensureGroupAvailableByName("", ~param0)) {
                 uk.a(param0 + 31873, hn.field_e);
                 hn.field_e = null;
                 sf.a(param0 + 0);
@@ -327,8 +327,8 @@ abstract class lb extends GameApplet {
         if (hf.field_q == 3 &&
           gf.a(io.field_g, -123, wk.field_j, qo.field_u) &&
           pe.a(qo.field_u, (byte) -91)) {
-          gg.c((byte) 24);
-          rn.a((byte) 119);
+          CachedArchiveProvider.c((byte) 24);
+          SectorCacheStore.a((byte) 119);
           ad.field_r = FullscreenFocusCanvas.field_c;
           sd.field_I = false;
           hn.a(io.field_g, param0 + 27848, wk.field_j, qo.field_u, uj.field_Lb);
@@ -414,7 +414,7 @@ abstract class lb extends GameApplet {
         gp.field_Lb = bl.a(71);
         he.a(0, ec.field_u);
         wg.field_e = param6;
-        wn.field_r = param5;
+        SocketJs5Transport.field_r = param5;
         il.field_f = param7;
         lo.field_Hb = param3;
         ro.field_c = param2;
@@ -479,7 +479,7 @@ abstract class lb extends GameApplet {
                             nk.a(16711935);
                           }
                         } else {
-                          od.a(-5, vi.field_o, jj.field_b, mc.field_k);
+                          od.a(-5, MusicCrossfadeStream.field_o, jj.field_b, mc.field_k);
                         }
                       }
                     }
@@ -635,7 +635,7 @@ abstract class lb extends GameApplet {
         if (param0 != 21037) {
           this.a(false, false, true, true, true, false, -110);
         }
-        gj.a(var2, ao.a(param0 ^ 25606), true);
+        gj.a(var2, AudioService.a(param0 ^ 25606), true);
     }
 
     final int j(int param0) {
@@ -714,7 +714,7 @@ abstract class lb extends GameApplet {
         if (ol.field_o) {
           return -1;
         }
-        var2 = mi.a(this.field_A, (byte) 91, am.a(-13565), this.field_t, true, eg.f(8192));
+        var2 = mi.a(this.field_A, (byte) 91, am.a(-13565), this.field_t, true, ProxySocketConnector.f(8192));
         if (-1 == var2) {
           return -1;
         }
@@ -753,23 +753,23 @@ abstract class lb extends GameApplet {
     }
 
     private final void g(byte param0) {
-        int var2 = vi.field_o.f(255);
+        int var2 = MusicCrossfadeStream.field_o.f(255);
         if (param0 != 59) {
           this.field_B = -116;
         }
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = jj.field_b - 1;
         byte[] var5 = new byte[var4];
-        vi.field_o.b(var5, 0, 88, var4);
-        ia.a(var3 != 0, of.a(var5, 1), -33, ao.a(param0 ^ 13840));
+        MusicCrossfadeStream.field_o.b(var5, 0, 88, var4);
+        ia.a(var3 != 0, of.a(var5, 1), -33, AudioService.a(param0 ^ 13840));
     }
 
-    final static hh[] a(fm param0, int param1, String param2, String param3) {
+    final static IndexedSprite[] a(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        hh[] stackIn_1_0 = null;
+        IndexedSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -779,9 +779,9 @@ abstract class lb extends GameApplet {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(127, param2);
+          var4_int = param0.getGroupId(127, param2);
           var6 = 95 % ((param1 + 53) / 49);
-          var5 = param0.a((byte) -126, param3, var4_int);
+          var5 = param0.getFileId((byte) -126, param3, var4_int);
           stackIn_1_0 = ff.a(param0, var5, var4_int, (byte) 18);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -814,7 +814,7 @@ abstract class lb extends GameApplet {
         String var3;
         if (param0 > -88) {
           var3 = (String) null;
-          lb.a((fm) null, 29, (String) null, (String) null);
+          lb.a((ResourceArchive) null, 29, (String) null, (String) null);
         }
         if (65536L > (long)param1) {
           if (256L > (long)param1) {

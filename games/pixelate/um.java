@@ -76,10 +76,10 @@ final class um extends IntrusiveNode {
         }
     }
 
-    final static tc a(fm param0, fm param1, int param2, int param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, ResourceArchive param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
-        tc stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -95,7 +95,7 @@ final class um extends IntrusiveNode {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (tc) (stackIn_4_0);
+          return (BinaryBitmapFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

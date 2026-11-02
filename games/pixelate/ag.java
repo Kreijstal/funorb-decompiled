@@ -112,7 +112,7 @@ final class ag extends mg {
           }
           while (var4 != null) {
             em.a((byte) -7, var4, param1);
-            var4 = (lc) (rg.field_c.f(1504642273));
+            var4 = (lc) (rg.field_c.last(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

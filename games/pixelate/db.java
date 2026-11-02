@@ -8,7 +8,7 @@ class db extends qm {
     static boolean field_U;
     static byte[][] field_S;
     static int[] field_T;
-    private bb field_Q;
+    private IntrusiveDeque field_Q;
     private ni field_P;
 
     void a(int param0, int param1, int param2, byte param3) {
@@ -53,7 +53,7 @@ class db extends qm {
         int var16;
         int var7Lifetime1;
         var16 = Pixelate.field_H ? 1 : 0;
-        this.field_Q = new bb();
+        this.field_Q = new IntrusiveDeque();
         var2 = 0;
         if (param0 != 1829) {
           discarded$0 = this.b(64, -98, -83);
@@ -94,7 +94,7 @@ class db extends qm {
             if (var10 != null) {
               ((ni) (var10)).field_l = var15;
             }
-            this.field_Q.a(22125, var15);
+            this.field_Q.addFirst(22125, var15);
             var10 = var15;
           }
         }
@@ -174,7 +174,7 @@ class db extends qm {
         super.a(param0, (byte) 53, param2, param3, param4);
         this.a(1829);
         if (param1 < 19) {
-          this.field_Q = (bb) null;
+          this.field_Q = (IntrusiveDeque) null;
         }
     }
 
@@ -241,7 +241,7 @@ class db extends qm {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        ca var5 = null;
+        WhirlpoolHasher var5 = null;
         byte[] var6 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
@@ -254,14 +254,14 @@ class db extends qm {
           } else {
             var4 = param0;
           }
-          var5 = new ca();
+          var5 = new WhirlpoolHasher();
           var5.a((byte) 123);
           if (param2 != 1761872464) {
             field_N = (String) null;
           }
-          var5.a(var4, (long)(8 * param3), (byte) 115);
+          var5.updateBits(var4, (long)(8 * param3), (byte) 115);
           var6 = new byte[64];
-          var5.a(0, var6, param2 - 1761856307);
+          var5.finishDigest(0, var6, param2 - 1761856307);
           stackIn_9_0 = var6;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -314,7 +314,7 @@ class db extends qm {
             }
             var5 = var5.field_l;
           }
-          var4 = (ni) (this.field_Q.f(1504642273));
+          var4 = (ni) (this.field_Q.last(1504642273));
         }
         return null;
     }

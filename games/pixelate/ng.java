@@ -6,7 +6,7 @@ import java.util.*;
 class ng extends IntrusiveNode {
     int field_B;
     eb field_y;
-    static hh[] field_A;
+    static IndexedSprite[] field_A;
     boolean field_D;
     static double field_s;
     int field_x;
@@ -22,7 +22,7 @@ class ng extends IntrusiveNode {
     static int[] field_m;
     static String field_w;
     kd field_r;
-    static hh[] field_o;
+    static IndexedSprite[] field_o;
     int field_C;
     fn field_n;
 
@@ -40,7 +40,7 @@ class ng extends IntrusiveNode {
           if (param1 == 3) {
             return false;
           }
-          field_A = (hh[]) null;
+          field_A = (IndexedSprite[]) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -377,7 +377,7 @@ class ng extends IntrusiveNode {
           if (param1) {
             if (lp.field_i != 0) {
               if (var5 == 0) {
-                if (0 == nm.field_c) {
+                if (0 == IntrusiveDequeCursor.field_c) {
                   if (ef.field_b == 0 &&
                     db.field_R != 0) {
                     this.a(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
@@ -390,12 +390,12 @@ class ng extends IntrusiveNode {
                     }
                     if (var7 != 0 &&
                       var5 != 0 &&
-                      0 != nm.field_c) {
+                      0 != IntrusiveDequeCursor.field_c) {
                       this.h(2);
                     }
                   }
                 } else {
-                  if (this.a((byte) -58, this, nm.field_c, param0, uo.field_a, param3, ji.field_c)) {
+                  if (this.a((byte) -58, this, IntrusiveDequeCursor.field_c, param0, BufferedRandomAccessFile.field_a, param3, ji.field_c)) {
                     param1 = false;
                     if (ef.field_b == 0 &&
                       db.field_R != 0) {
@@ -410,7 +410,7 @@ class ng extends IntrusiveNode {
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
-                        0 != nm.field_c) {
+                        0 != IntrusiveDequeCursor.field_c) {
                         this.h(2);
                       }
                     }
@@ -428,7 +428,7 @@ class ng extends IntrusiveNode {
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
-                        0 != nm.field_c) {
+                        0 != IntrusiveDequeCursor.field_c) {
                         this.h(2);
                       }
                     }
@@ -438,7 +438,7 @@ class ng extends IntrusiveNode {
               }
               this.a(ProxyAuthenticationException.field_d, (byte) 80, param0, param3, bg.field_k, lp.field_i, this);
             }
-            if (0 == nm.field_c) {
+            if (0 == IntrusiveDequeCursor.field_c) {
               if (ef.field_b == 0 &&
                 db.field_R != 0) {
                 this.a(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
@@ -452,7 +452,7 @@ class ng extends IntrusiveNode {
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  0 != nm.field_c) {
+                  0 != IntrusiveDequeCursor.field_c) {
                   this.h(2);
                 }
               }
@@ -465,7 +465,7 @@ class ng extends IntrusiveNode {
               ij.a(-5516, this.b((byte) 37));
               return param1;
             }
-            if (!this.a((byte) -58, this, nm.field_c, param0, uo.field_a, param3, ji.field_c)) {
+            if (!this.a((byte) -58, this, IntrusiveDequeCursor.field_c, param0, BufferedRandomAccessFile.field_a, param3, ji.field_c)) {
               if (var5 == 0) {
                 if (ef.field_b == 0) {
                   if (db.field_R == 0) {
@@ -488,7 +488,7 @@ class ng extends IntrusiveNode {
                   }
                   if (var7 != 0 &&
                     var5 != 0 &&
-                    0 != nm.field_c) {
+                    0 != IntrusiveDequeCursor.field_c) {
                     this.h(2);
                     db.field_R = ef.field_b;
                     if (param2 == 99) {
@@ -526,7 +526,7 @@ class ng extends IntrusiveNode {
                     qf.field_a = null;
                   }
                   if (var5 != 0 &&
-                    0 != nm.field_c) {
+                    0 != IntrusiveDequeCursor.field_c) {
                     this.h(2);
                     db.field_R = ef.field_b;
                     if (param2 == 99) {
@@ -569,7 +569,7 @@ class ng extends IntrusiveNode {
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  0 != nm.field_c) {
+                  0 != IntrusiveDequeCursor.field_c) {
                   this.h(2);
                   db.field_R = ef.field_b;
                   if (param2 == 99) {
@@ -617,7 +617,7 @@ class ng extends IntrusiveNode {
             }
           }
           if (var5 != 0 &&
-            0 != nm.field_c) {
+            0 != IntrusiveDequeCursor.field_c) {
             this.h(2);
             db.field_R = ef.field_b;
             if (param2 == 99) {
@@ -787,7 +787,7 @@ class ng extends IntrusiveNode {
             this.a(param2, (byte) -2, param3, param0);
           }
           if (param1) {
-            field_o = (hh[]) null;
+            field_o = (IndexedSprite[]) null;
           }
           stackIn_6_0 = (StringBuilder) (param0);
           return stackIn_6_0;

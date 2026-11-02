@@ -50,8 +50,8 @@ final class ro {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fm.field_b != null) {
-            fm.field_b.field_W.a((byte) -98, args);
+          if (ResourceArchive.field_b != null) {
+            ResourceArchive.field_b.field_W.a((byte) -98, args);
           }
           if (param1 != 2) {
             return;
@@ -75,7 +75,7 @@ final class ro {
         }
     }
 
-    final static void a(boolean param0, Sprite[][] param1, int param2, int param3, fm param4, String[] param5, int[] param6, String[][] param7, hh[] param8, int param9, int[] param10, byte[] param11, String[][] param12, fm param13, Sprite[][] param14, byte[] param15, fm param16) {
+    final static void a(boolean param0, Sprite[][] param1, int param2, int param3, ResourceArchive param4, String[] param5, int[] param6, String[][] param7, IndexedSprite[] param8, int param9, int[] param10, byte[] param11, String[][] param12, ResourceArchive param13, Sprite[][] param14, byte[] param15, ResourceArchive param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -271,17 +271,17 @@ final class ro {
           if (gp.field_Kb != null) {
             var3 = 357 - gp.field_Kb.field_B / 2;
             var4 = 0;
-            if (nm.field_c != 0 &&
+            if (IntrusiveDequeCursor.field_c != 0 &&
               ji.field_c > var3 &&
               ji.field_c < gp.field_Kb.field_E + var3) {
-              if (-gp.field_Kb.field_F + 269 < uo.field_a &&
-                269 > uo.field_a) {
+              if (-gp.field_Kb.field_F + 269 < BufferedRandomAccessFile.field_a &&
+                269 > BufferedRandomAccessFile.field_a) {
                 jn.field_q = ui.field_a;
                 pm.field_e = false;
                 var4 = 1;
               }
-              if (586 < uo.field_a &&
-                uo.field_a < 586 + gp.field_Kb.field_F) {
+              if (586 < BufferedRandomAccessFile.field_a &&
+                BufferedRandomAccessFile.field_a < 586 + gp.field_Kb.field_F) {
                 var4 = 1;
                 pm.field_e = true;
                 jn.field_q = ui.field_a;
@@ -302,7 +302,7 @@ final class ro {
             }
           }
           if (param1) {
-            a.field_I.a(el.a(ji.field_c, (byte) 126, uo.field_a), el.a(bg.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
+            a.field_I.a(el.a(ji.field_c, (byte) 126, BufferedRandomAccessFile.field_a), el.a(bg.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
             if (a.field_I.a(19)) {
               if (a.field_I.field_j == 0) {
                 stackIn_63_0 = 3;

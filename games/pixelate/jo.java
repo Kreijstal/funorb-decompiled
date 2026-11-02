@@ -18,7 +18,7 @@ final class jo implements eb {
     private int field_i;
     static Sprite field_j;
     private int field_l;
-    private jl field_m;
+    private BitmapFont field_m;
     private int field_a;
     private int field_p;
     private int field_f;
@@ -37,7 +37,7 @@ final class jo implements eb {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          ei var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -147,7 +147,7 @@ final class jo implements eb {
             return;
           }
           var10 = this.field_q - (-this.field_f - this.field_b);
-          this.field_m.a(param0.field_q, param0.field_z + param3 + var10, this.field_d + (param0.field_p + param2), param0.field_E - (var10 + this.field_b), param0.field_C - (this.field_b << 1), this.field_g, this.field_i, this.field_e, this.field_o, 0);
+          this.field_m.drawParagraph(param0.field_q, param0.field_z + param3 + var10, this.field_d + (param0.field_p + param2), param0.field_E - (var10 + this.field_b), param0.field_C - (this.field_b << 1), this.field_g, this.field_i, this.field_e, this.field_o, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,7 +186,7 @@ final class jo implements eb {
         }
     }
 
-    jo(jl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    jo(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_e = 1;
         this.field_o = 1;
         try {

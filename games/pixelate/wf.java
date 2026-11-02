@@ -24,10 +24,10 @@ final class wf {
           try {
             var6 = new byte[24];
             var2 = var6;
-            if (null != vi.field_p) {
+            if (null != MusicCrossfadeStream.field_p) {
               try {
-                vi.field_p.a(0L, 123);
-                vi.field_p.a(var6, (byte) 0);
+                MusicCrossfadeStream.field_p.a(0L, 123);
+                MusicCrossfadeStream.field_p.a(var6, (byte) 0);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;
@@ -111,7 +111,7 @@ final class wf {
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(-1 + var2_int) != 34) {
-              stackIn_11_0 = gm.field_f;
+              stackIn_11_0 = DiskCacheWorker.field_f;
               return stackIn_11_0;
             }
             var3 = 0;
@@ -123,7 +123,7 @@ final class wf {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_24_0 = gm.field_f;
+                  stackIn_24_0 = DiskCacheWorker.field_f;
                   return stackIn_24_0;
                 }
                 var3 = 0;
@@ -143,13 +143,13 @@ final class wf {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_38_0 = gm.field_f;
+                stackIn_38_0 = DiskCacheWorker.field_f;
                 return stackIn_38_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (li.field_i.indexOf(var5Lifetime1) == -1) {
-                stackIn_42_0 = gm.field_f;
+                stackIn_42_0 = DiskCacheWorker.field_f;
                 return stackIn_42_0;
               }
               var3Lifetime1 = 0;

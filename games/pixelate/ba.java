@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ba {
-    static jl field_d;
+    static BitmapFont field_d;
     static int field_f;
     private int field_b;
     private int field_a;

@@ -26,7 +26,7 @@ final class hd {
     static int field_n;
     int field_i;
     static int field_q;
-    static fm field_c;
+    static ResourceArchive field_c;
     int field_e;
 
     final void a(int param0, PacketBuffer param1) {
@@ -403,7 +403,7 @@ final class hd {
         }
     }
 
-    final void a(hh param0, int param1) {
+    final void a(IndexedSprite param0, int param1) {
         byte[] var3 = null;
         int var4 = 0;
         int var6 = 0;
@@ -411,7 +411,7 @@ final class hd {
         int var7 = Pixelate.field_H ? 1 : 0;
         int var5Lifetime1;
         try {
-          var3 = param0.field_n;
+          var3 = param0.indices;
           for (var4 = 0; param0.field_a > var4; var4++) {
             for (var5 = 0; var5 < param0.field_f; var5++) {
               var6 = 1 + var5 + (1 + var4) * this.field_i;

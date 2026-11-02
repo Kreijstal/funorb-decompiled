@@ -18,7 +18,7 @@ final class vm {
         return null == dg.field_f ? null : (eq) (dg.field_f.a(-11434, (long)param0));
     }
 
-    final static fm a(boolean param0, byte param1, boolean param2, int param3, int param4) {
+    final static ResourceArchive a(boolean param0, byte param1, boolean param2, int param3, int param4) {
         if (param1 == 22) {
           return el.a(-107, param0, false, param3, param4, param2);
         }

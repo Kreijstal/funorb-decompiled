@@ -28,8 +28,8 @@ final class bh extends gf {
           if (ln.field_p == qn.field_p) {
             return false;
           }
-          ke.field_a = gn.field_z[qn.field_p];
-          nj.field_f = fm.field_d[qn.field_p];
+          ke.field_a = ArchiveRequest.field_z[qn.field_p];
+          nj.field_f = ResourceArchive.field_d[qn.field_p];
           qn.field_p = 1 + qn.field_p & 127;
           stackIn_8_0 = true;
         }
@@ -66,7 +66,7 @@ final class bh extends gf {
     final static void a(int param0, hf param1, int param2) {
         try {
           int var3_int = 113 / ((59 - param0) / 39);
-          dh.field_a.a(22125, param1);
+          dh.field_a.addFirst(22125, param1);
           id.a((byte) -109, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -108,8 +108,8 @@ final class bh extends gf {
           if (ln.field_p == qn.field_p) {
             return false;
           }
-          ke.field_a = gn.field_z[qn.field_p];
-          nj.field_f = fm.field_d[qn.field_p];
+          ke.field_a = ArchiveRequest.field_z[qn.field_p];
+          nj.field_f = ResourceArchive.field_d[qn.field_p];
           qn.field_p = 1 + qn.field_p & 127;
           stackIn_8_0 = true;
         }

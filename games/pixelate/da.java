@@ -6,7 +6,7 @@ final class da extends jj {
     static ea field_o;
     static int field_m;
 
-    final static void a(Sprite[] param0, int param1, Sprite[] param2, int param3, jl param4, int param5, int param6, jl param7, int param8, int param9, byte param10, int param11, int param12, int param13, int param14, int param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
+    final static void a(Sprite[] param0, int param1, Sprite[] param2, int param3, BitmapFont param4, int param5, int param6, BitmapFont param7, int param8, int param9, byte param10, int param11, int param12, int param13, int param14, int param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

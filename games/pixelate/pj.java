@@ -54,7 +54,7 @@ final class pj {
               return;
             }
             if (0 == h.field_W) {
-              nl.a(false, -102);
+              NodeHashTable.a(false, -102);
             }
             h.field_W = h.field_W + 1;
             return;
@@ -72,7 +72,7 @@ final class pj {
               return;
             }
             if (vn.field_g == 0) {
-              nl.a(true, -71);
+              NodeHashTable.a(true, -71);
             }
             vn.field_g = vn.field_g + 1;
             return;
@@ -118,13 +118,13 @@ final class pj {
           this.field_d = param3;
           this.field_f = false;
           this.field_j = 0;
-          var5_int = rk.field_e.c(param0);
+          var5_int = rk.field_e.textWidth(param0);
           if (var5_int > this.field_e.field_A) {
             this.field_e = new Sprite(10 + var5_int, this.field_e.field_B);
           }
           this.field_e.c();
           SoftwareRasterizer.d();
-          rk.field_e.b(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
+          rk.field_e.drawCentered(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
           ClientException.field_f.a(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

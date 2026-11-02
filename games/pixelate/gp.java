@@ -56,7 +56,7 @@ final class gp extends ak {
                 param1 = sd.a(vf.field_a, 79, new String[]{param1});
               }
               if (ke.field_d) {
-                param1 = lh.field_a;
+                param1 = IsaacRandom.field_a;
               }
               to.field_r.a(param2, 5804, param1);
             }

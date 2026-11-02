@@ -89,8 +89,8 @@ final class od extends ak {
             var17.field_p = param1.readInt(param0 ^ param0);
             var17.field_r = new int[var17.field_s];
             var17.field_q = new int[var17.field_s];
-            var17.field_l = new ei[var17.field_s];
-            var17.field_v = new ei[var17.field_s];
+            var17.field_l = new PlatformTask[var17.field_s];
+            var17.field_v = new PlatformTask[var17.field_s];
             var17.field_w = new byte[var17.field_s][][];
             var17.field_u = new int[var17.field_s];
             for (var5 = 0; var5 < var17.field_s; var5++) {
@@ -164,7 +164,7 @@ final class od extends ak {
                 var17.field_u[var5] = -5;
               }
             }
-            ma.field_o.a(22125, var17);
+            ma.field_o.addFirst(22125, var17);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -301,11 +301,11 @@ final class od extends ak {
         }
     }
 
-    final static sn a(fm param0, int param1, int param2) {
+    final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        sn stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -319,7 +319,7 @@ final class od extends ak {
           if (var4 == null) {
             return null;
           }
-          stackIn_6_0 = new sn(var4);
+          stackIn_6_0 = new MusicPatch(var4);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

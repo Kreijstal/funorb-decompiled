@@ -83,7 +83,7 @@ final class ve extends ak {
             }
             return true;
           }
-          if (!ti.a(124, (char) var3)) {
+          if (!MidiPcmStream.a(124, (char) var3)) {
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
                 this.field_Hb = 1;
@@ -152,7 +152,7 @@ final class ve extends ak {
             }
             return true;
           }
-          if (!ti.a(124, (char) var3Lifetime1)) {
+          if (!MidiPcmStream.a(124, (char) var3Lifetime1)) {
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
                 this.field_Hb = 1;
@@ -221,7 +221,7 @@ final class ve extends ak {
           this.field_Hb = 1;
           return true;
         }
-        if (!ti.a(124, (char) var3Lifetime2)) {
+        if (!MidiPcmStream.a(124, (char) var3Lifetime2)) {
           if (ke.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
               this.field_Hb = 1;
@@ -342,7 +342,7 @@ final class ve extends ak {
             if (!param1) {
               return this.field_Hb;
             }
-            if (nm.field_c == 0) {
+            if (IntrusiveDequeCursor.field_c == 0) {
               return this.field_Hb;
             }
             if (this.field_P != 0) {

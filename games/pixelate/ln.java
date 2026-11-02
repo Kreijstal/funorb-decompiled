@@ -8,7 +8,7 @@ final class ln extends IntrusiveNode {
     static String[][] field_m;
     static int field_p;
     static String field_k;
-    pp field_o;
+    PcmSampleStream field_o;
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
@@ -49,10 +49,10 @@ final class ln extends IntrusiveNode {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (jp.field_c == null) {
+            if (ArchiveProvider.field_c == null) {
               return param0.getParameter("settings");
             }
-            stackIn_16_0 = jp.field_c;
+            stackIn_16_0 = ArchiveProvider.field_c;
             return stackIn_16_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -83,7 +83,7 @@ final class ln extends IntrusiveNode {
     }
 
     ln(int param0) {
-        this.field_o = pp.a(SecondaryNodeDeque.field_f[param0], 100, ci.field_m[param0]);
+        this.field_o = PcmSampleStream.a(SecondaryNodeDeque.field_f[param0], 100, ci.field_m[param0]);
         mn.a(-21317, this.field_o);
     }
 

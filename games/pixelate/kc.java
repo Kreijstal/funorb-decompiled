@@ -5,7 +5,7 @@ final class kc extends mg {
     static String field_n;
     static String field_s;
     static String[] field_p;
-    static jl field_r;
+    static BitmapFont field_r;
     private boolean field_q;
     static ak field_u;
     private qo field_t;
@@ -105,7 +105,7 @@ final class kc extends mg {
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_o)) {
-            var3 = rn.a(param0, (byte) -99);
+            var3 = SectorCacheStore.a(param0, (byte) -99);
             if (!var3.d(121)) {
               stackIn_11_0 = tg.field_j;
               return stackIn_11_0;

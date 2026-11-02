@@ -3,7 +3,7 @@
  */
 final class oj extends jg implements vo {
     private qm field_O;
-    static bb field_P;
+    static IntrusiveDeque field_P;
     static int field_G;
     private gj field_Q;
     static int[] field_N;
@@ -82,7 +82,7 @@ final class oj extends jg implements vo {
         super(param0, param1, param2, param3, (eb) null);
         this.field_Q = new gj(new gh(10000536), mg.field_l, 0, 0, 140, 25);
         this.field_Q.a(new oa(), 20672);
-        this.field_O = new qm(vi.field_J, (fn) (this));
+        this.field_O = new qm(MusicCrossfadeStream.field_J, (fn) (this));
         this.field_L = new ng[]{(ng) ((Object) this.field_Q), (ng) ((Object) this.field_O)};
         this.field_O.field_y = (eb) ((Object) new ad());
         this.c((byte) 121);
@@ -90,13 +90,13 @@ final class oj extends jg implements vo {
 
     final void a(int param0, int param1, int param2, byte param3) {
         super.a(param0, param1, param2, (byte) 119);
-        ep.field_b.a(ng.field_v, 4 + param2 + this.field_z, ep.field_b.field_w + (param0 + this.field_p + 4), 16777215, -1);
+        ep.field_b.drawText(ng.field_v, 4 + param2 + this.field_z, ep.field_b.maxAscent + (param0 + this.field_p + 4), 16777215, -1);
         int var5 = -53 % ((70 - param3) / 49);
     }
 
     static {
         field_G = -1;
-        field_P = new bb();
+        field_P = new IntrusiveDeque();
         field_N = new int[]{2, 20, 21, 27, 6, 5, 9};
         field_R = "If you do nothing the game will revert to normal view in <%0> seconds.";
     }

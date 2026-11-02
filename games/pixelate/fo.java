@@ -58,7 +58,7 @@ final class fo {
         int var3 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         int var3Lifetime1;
-        nm.field_f.b(1600, 2272, this.field_p << 4, this.field_i << 4, this.field_k, this.field_l);
+        IntrusiveDequeCursor.field_f.b(1600, 2272, this.field_p << 4, this.field_i << 4, this.field_k, this.field_l);
         ki[] var6 = this.field_j;
         ki[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {

@@ -51,7 +51,7 @@ abstract class ud extends ch {
     }
 
     ud(kn param0, int param1, int param2) {
-        super(kn.field_O - param1 >> 1, sl.field_c - param2 >> 1, param1, param2, (eb) null);
+        super(kn.field_O - param1 >> 1, IndexedSpriteState.field_c - param2 >> 1, param1, param2, (eb) null);
         try {
           this.field_M = param0;
           this.field_N = false;
@@ -191,7 +191,7 @@ abstract class ud extends ch {
     }
 
     final void a(int param0, byte param1, int param2) {
-        this.a(param2, (byte) 88, -param0 + sl.field_c >> 1, kn.field_O - param2 >> 1, param0);
+        this.a(param2, (byte) 88, -param0 + IndexedSpriteState.field_c >> 1, kn.field_O - param2 >> 1, param0);
         if (param1 != -110) {
           field_K = true;
         }

@@ -14,7 +14,7 @@ final class no extends kd {
     private int field_k;
     private String field_m;
     private boolean field_o;
-    private jl field_l;
+    private BitmapFont field_l;
 
     final static void a(int param0, int param1, byte param2, boolean param3, int param4, int param5, eq param6, int param7) {
         int stackIn_4_0 = 0;
@@ -333,7 +333,7 @@ final class no extends kd {
         }
     }
 
-    final void a(int param0, int param1, String param2, jl param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, String param2, BitmapFont param3, int param4, int param5, int param6, int param7) {
         mn stackIn_34_0;
         mn stackIn_34_1;
         int stackIn_34_2;
@@ -341,7 +341,7 @@ final class no extends kd {
         mn stackIn_35_0 = null;
         mn stackIn_35_1 = null;
         int stackIn_35_4 = 0;
-        jl stackIn_39_0 = null;
+        BitmapFont stackIn_39_0 = null;
         int stackIn_40_1 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -362,7 +362,7 @@ final class no extends kd {
         var15 = Pixelate.field_H ? 1 : 0;
         try {
           if (param1 == ~param7) {
-            param7 = param3.field_M;
+            param7 = param3.lineAdvance;
           }
           if (param2 == null) {
             this.field_b = null;
@@ -387,9 +387,9 @@ final class no extends kd {
           this.field_k = param0;
           this.field_o = false;
           this.field_m = param2;
-          var16 = new String[1 + param3.b(param2, param0)];
+          var16 = new String[1 + param3.wrappedLineCount(param2, param0)];
           var17 = var16;
-          var10 = Math.max(1, param3.a(param2, new int[]{param0}, var17));
+          var10 = Math.max(1, param3.wrapText(param2, new int[]{param0}, var17));
           if (this.field_f == 3 &&
             var10 == 1) {
             this.field_f = 1;
@@ -397,7 +397,7 @@ final class no extends kd {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_f != 0) {
             if (1 == this.field_f) {
-              var11 = (this.field_q - var10 * this.field_e >> 1) + param3.field_w;
+              var11 = (this.field_q - var10 * this.field_e >> 1) + param3.maxAscent;
               decompiledFrameRemainder0 = (var15 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -406,21 +406,21 @@ final class no extends kd {
                 if (0 > var12) {
                   var12 = 0;
                 }
-                var11 = param3.field_w + var12;
+                var11 = param3.maxAscent + var12;
                 this.field_e = this.field_e + var12;
                 if (var15 != 0) {
-                  var11 = -(this.field_e * var10) + this.field_q - param3.field_z;
-                  var11 = param3.field_w;
+                  var11 = -(this.field_e * var10) + this.field_q - param3.maxDescent;
+                  var11 = param3.maxAscent;
                 }
               } else {
-                var11 = -(this.field_e * var10) + this.field_q - param3.field_z;
+                var11 = -(this.field_e * var10) + this.field_q - param3.maxDescent;
                 if (var15 != 0) {
-                  var11 = param3.field_w;
+                  var11 = param3.maxAscent;
                 }
               }
             }
           } else {
-            var11 = param3.field_w;
+            var11 = param3.maxAscent;
           }
           this.field_b = new mn[var10];
           var12Lifetime1 = 0;
@@ -431,8 +431,8 @@ final class no extends kd {
             }
             stackIn_34_0 = null;
             stackIn_34_1 = null;
-            stackIn_34_2 = var11 - param3.field_w;
-            stackIn_34_3 = var11 + param3.field_z;
+            stackIn_34_2 = var11 - param3.maxAscent;
+            stackIn_34_3 = var11 + param3.maxDescent;
             if (var13 != null) {
               stackIn_35_0 = null;
               stackIn_35_1 = null;
@@ -445,12 +445,12 @@ final class no extends kd {
             var14 = new mn(stackIn_34_2, stackIn_34_3, stackIn_35_4);
             var14.field_g[0] = 0;
             if (var13 != null) {
-              var14.field_g[var13.length()] = param3.c(var13);
-              stackIn_39_0 = (jl) (param3);
+              var14.field_g[var13.length()] = param3.textWidth(var13);
+              stackIn_39_0 = (BitmapFont) (param3);
               if (param5 != 3) {
                 stackIn_40_1 = 0;
               } else {
-                stackIn_40_1 = this.a(var13, param0, param3.c(var13), 60);
+                stackIn_40_1 = this.a(var13, param0, param3.textWidth(var13), 60);
               }
               an.a(stackIn_39_0, stackIn_40_1, (byte) -92, var14, var13);
             }
@@ -479,7 +479,7 @@ final class no extends kd {
         }
     }
 
-    final void a(String param0, boolean param1, int param2, jl param3, int param4) {
+    final void a(String param0, boolean param1, int param2, BitmapFont param3, int param4) {
         mn var8 = null;
         int var7 = 0;
         if (param0 == null) {
@@ -498,7 +498,7 @@ final class no extends kd {
           this.field_o = true;
           this.field_l = param3;
           var8 = this.a(param0, 0, param3, param2);
-          var7 = param3.c(param0);
+          var7 = param3.textWidth(param0);
           var8.field_g[0] = param4 - (var7 >> 1);
           var8.field_g[param0.length()] = param4 + (var7 >> 1);
           an.a(param3, 0, (byte) -92, var8, param0);
@@ -553,7 +553,7 @@ final class no extends kd {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        bb var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         uj var18_ref = null;
@@ -606,11 +606,11 @@ final class no extends kd {
                 wm.field_d.field_cb = fo.field_m.toUpperCase();
                 wm.field_d.field_rb = false;
                 if (var19 != 0) {
-                  wm.field_d.field_cb = ca.field_k.toUpperCase();
+                  wm.field_d.field_cb = WhirlpoolHasher.field_k.toUpperCase();
                   wm.field_d.field_rb = true;
                 }
               } else {
-                wm.field_d.field_cb = ca.field_k.toUpperCase();
+                wm.field_d.field_cb = WhirlpoolHasher.field_k.toUpperCase();
                 wm.field_d.field_rb = true;
               }
               wm.field_d.field_zb = bf.field_k.field_zb;
@@ -827,7 +827,7 @@ final class no extends kd {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var18_ref = (uj) (var17.f(1504642273));
+                      var18_ref = (uj) (var17.last(1504642273));
                       continue;
                     }
                   }
@@ -938,7 +938,7 @@ final class no extends kd {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_cb = sd.a(ao.field_i, 100, new String[]{Integer.toString(var9)});
+              var8.field_cb = sd.a(AudioService.field_i, 100, new String[]{Integer.toString(var9)});
             }
             qo.field_q.field_cb = sd.a(oe.field_Gb, param1 + 68, new String[]{Integer.toString(io.field_c.field_mc), Integer.toString(io.field_c.field_ec)});
           }
@@ -996,7 +996,7 @@ final class no extends kd {
           SoftwareRasterizer.d(244, 198, 367, 141, 0);
           if (wg.field_g == null) {
             if (null != qe.field_A) {
-              qe.field_A.a(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              qe.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -1011,7 +1011,7 @@ final class no extends kd {
           }
           if ((decompiledSharedTail1) &&
             (qe.field_A != null)) {
-            qe.field_A.a(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            qe.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
           }
           if (ui.field_k > jn.field_q) {
             var6 = wg.field_g[jc.field_b];
@@ -1020,11 +1020,11 @@ final class no extends kd {
               var3 = var2_int - 30;
               boolean decompiledSharedTail0 = !(pm.field_e);
               if (!decompiledSharedTail0) {
-                kj.a(var3 * -256 / 30, var6, 245, -123, 199, (var6.field_A - var3) * 256 / 30);
+                ArchiveIndex.a(var3 * -256 / 30, var6, 245, -123, 199, (var6.field_A - var3) * 256 / 30);
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
-                kj.a(256 * (-var3 + var6.field_A) / 30, var6, 245, 89, 199, -256 * var3 / 30);
+                ArchiveIndex.a(256 * (-var3 + var6.field_A) / 30, var6, 245, 89, 199, -256 * var3 / 30);
               }
             }
           }
@@ -1055,7 +1055,7 @@ final class no extends kd {
             if (stackIn_33_0 == var2) {
               return;
             }
-            qe.field_A.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            qe.field_A.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1072,7 +1072,7 @@ final class no extends kd {
         return -jc.field_c + hm.a(64);
     }
 
-    final void a(jl param0, int param1, int param2, boolean param3, String param4) {
+    final void a(BitmapFont param0, int param1, int param2, boolean param3, String param4) {
         mn var8 = null;
         mn var9 = null;
         if (param4 == null) {
@@ -1096,7 +1096,7 @@ final class no extends kd {
         try {
           var8 = this.a(param4, 0, param0, param1);
           var9 = var8;
-          var9.field_g[0] = -param0.c(param4) + param2;
+          var9.field_g[0] = -param0.textWidth(param4) + param2;
           var9.field_g[param4.length()] = param2;
           an.a(param0, 0, (byte) -92, var9, param4);
         } catch (RuntimeException runtimeException) {
@@ -1104,7 +1104,7 @@ final class no extends kd {
         }
     }
 
-    private final mn a(String param0, int param1, jl param2, int param3) {
+    private final mn a(String param0, int param1, BitmapFont param2, int param3) {
         mn var5 = null;
         RuntimeException var5_ref = null;
         mn var6 = null;
@@ -1117,7 +1117,7 @@ final class no extends kd {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new mn(-param2.field_w + param3, param3 + param2.field_z, param0.length());
+          var6 = new mn(-param2.maxAscent + param3, param3 + param2.maxDescent, param0.length());
           var5 = var6;
           if (param1 != 0) {
             stackIn_2_0 = (mn) null;
@@ -1146,7 +1146,7 @@ final class no extends kd {
         }
     }
 
-    final void a(String param0, int param1, jl param2, int param3, int param4) {
+    final void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
         mn var7 = null;
         int var6_int = -72 % ((param4 + 70) / 49);
         if (param0 == null) {
@@ -1167,7 +1167,7 @@ final class no extends kd {
           this.field_m = param0;
           var7 = this.a(param0, 0, param2, param1);
           var7.field_g[0] = param3;
-          var7.field_g[param0.length()] = param2.c(param0) + param3;
+          var7.field_g[param0.length()] = param2.textWidth(param0) + param3;
           an.a(param2, 0, (byte) -92, var7, param0);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "no.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

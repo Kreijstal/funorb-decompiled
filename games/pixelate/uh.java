@@ -205,7 +205,7 @@ final class uh {
             stackIn_25_0 = pl.field_J[var8Lifetime1];
             stackIn_25_1 = 8192;
             stackIn_26_2 = !(ProxyAuthenticationException.field_e[var8Lifetime1] < 0);
-            var9Lifetime1 = jp.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
+            var9Lifetime1 = ArchiveProvider.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
             if (ProxyAuthenticationException.field_e[var8Lifetime1] != -1) {
               var9Lifetime1 = var9Lifetime1 + ProxyAuthenticationException.field_a * 2;
             }

@@ -147,14 +147,14 @@ final class dp extends de {
         try {
           var2_int = ProxyAuthenticationException.field_d;
           var3 = bg.field_k;
-          var4 = mg.field_h.field_Db.b(param0, 500);
-          var5 = mg.field_h.field_Db.a(param0, 500) + 6;
+          var4 = mg.field_h.field_Db.wrappedLineCount(param0, 500);
+          var5 = mg.field_h.field_Db.getWrappedWidth(param0, 500) + 6;
           var6 = 2 + var4 * fq.field_q;
           var7 = ui.a(12, var2_int, var5, (byte) -1);
           var8 = pj.a(var6, var3, 20, (byte) 112);
           SoftwareRasterizer.a(var7, var8, var5, var6, 0);
           SoftwareRasterizer.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
-          mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 - mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
+          mg.field_h.field_Db.drawParagraph(param0, 3 + var7, nc.field_d + (1 + (var8 - mg.field_h.field_Db.maxAscent)), 500, 1000, 0, -1, 0, 0, fq.field_q);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

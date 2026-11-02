@@ -22,7 +22,7 @@ abstract class ka extends ud {
         return super.a((byte) 124);
     }
 
-    final static ak a(int param0, int param1, int param2, jl param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    final static ak a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         ak var13 = null;
         RuntimeException var13_ref = null;
         ak stackIn_3_0 = null;
@@ -116,7 +116,7 @@ abstract class ka extends ud {
 
     final static int m(int param0) {
         if (param0 != 22) {
-          ka.a(-69, 82, -115, (jl) null, -110, 125, 40, -83, 9, 8, -58, 81, 44);
+          ka.a(-69, 82, -115, (BitmapFont) null, -110, 125, 40, -83, 9, 8, -58, 81, 44);
         }
         return -qn.field_o + ia.field_e;
     }

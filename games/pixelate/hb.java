@@ -131,7 +131,7 @@ abstract class hb extends ka {
         }
         if (param0) {
           this.field_cb = 0;
-          this.field_lb = rf.field_i;
+          this.field_lb = Js5Transport.field_i;
           this.d(this.field_db, 114);
           this.field_bb.field_O = 0;
           this.field_db = null;
@@ -139,7 +139,7 @@ abstract class hb extends ka {
         }
         this.c(true);
         this.field_cb = 0;
-        this.field_lb = rf.field_i;
+        this.field_lb = Js5Transport.field_i;
         this.d(this.field_db, 114);
         this.field_bb.field_O = 0;
         this.field_db = null;
@@ -189,7 +189,7 @@ abstract class hb extends ka {
             return super.c(false);
           }
           if (fh.field_I != this.field_lb) {
-            if (this.field_lb != rf.field_i) {
+            if (this.field_lb != Js5Transport.field_i) {
               return super.c(false);
             }
             fieldTemp$0 = this.field_cb + 1;
@@ -219,7 +219,7 @@ abstract class hb extends ka {
           return super.c(false);
         }
         if (fh.field_I != this.field_lb) {
-          if (this.field_lb != rf.field_i) {
+          if (this.field_lb != Js5Transport.field_i) {
             return super.c(false);
           }
           fieldTemp$2 = this.field_cb + 1;
@@ -319,7 +319,7 @@ abstract class hb extends ka {
 
     final void e(boolean param0) {
         if (null != this.field_lb) {
-          if (rf.field_i != this.field_lb) {
+          if (Js5Transport.field_i != this.field_lb) {
             this.a(this.field_fb + 12 + this.field_db.field_C, (byte) -110, 12 + this.field_db.field_E);
             this.d(this.field_db, 111);
           }

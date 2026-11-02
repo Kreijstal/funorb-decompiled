@@ -137,25 +137,25 @@ final class fb extends ak {
           em.a((String) null, 0L, (String) null, param2.c((byte) 8), param2, -163, aj.field_k, (int[]) null, -1);
           if (param2.field_dc && (param2.field_Tb == 2 ||
             !(wo.field_h < 2))) {
-            var9 = eg.field_n;
+            var9 = ProxySocketConnector.field_n;
             var10 = sd.a(oe.field_Kb, 103, new String[]{param1});
             var9.field_b.a(var10, (byte) -112, 10);
           }
-          eg.field_n.c(-107);
+          ProxySocketConnector.field_n.c(-107);
           if (param0) {
-            if (ec.field_r == eg.field_n.field_m) {
-              var13 = eg.field_n;
+            if (ec.field_r == ProxySocketConnector.field_n.field_m) {
+              var13 = ProxySocketConnector.field_n;
               var14 = sd.a(kb.field_M, 77, new String[]{param1});
               var13.field_b.a(var14, (byte) -111, 16);
             } else {
-              var11 = eg.field_n;
+              var11 = ProxySocketConnector.field_n;
               var12 = sd.a(sd.field_J, 89, new String[]{param1});
               var11.field_b.a(var12, (byte) -61, 15);
             }
           }
           var6 = -41 / ((23 - param3) / 40);
-          var15 = eg.field_n;
-          var5 = uo.field_a;
+          var15 = ProxySocketConnector.field_n;
+          var5 = BufferedRandomAccessFile.field_a;
           var7 = ji.field_c;
           var15.field_b.b(0, var5, 62, var7, 0);
           return;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pf {
-    static fm field_d;
+    static ResourceArchive field_d;
     private int field_k;
     private int field_a;
     private int field_g;
@@ -397,7 +397,7 @@ final class pf {
         }
         this.field_g = 0;
         this.field_k = 0;
-        if (nm.field_c == 0) {
+        if (IntrusiveDequeCursor.field_c == 0) {
           if (this.field_i != 0 &&
             ef.field_b != 0) {
             if (this.field_a <= 0) {
@@ -405,7 +405,7 @@ final class pf {
             }
             this.field_a = this.field_a - 1;
           }
-          if (~nm.field_c == param2 &&
+          if (~IntrusiveDequeCursor.field_c == param2 &&
             0 == ef.field_b) {
             this.field_i = 0;
           }
@@ -431,11 +431,11 @@ final class pf {
         }
         this.field_j = param0;
         this.field_c = true;
-        this.field_i = nm.field_c;
-        this.field_k = nm.field_c;
+        this.field_i = IntrusiveDequeCursor.field_c;
+        this.field_k = IntrusiveDequeCursor.field_c;
         this.field_a = tj.field_v;
         if (this.field_i == 0) {
-          if (~nm.field_c == param2 &&
+          if (~IntrusiveDequeCursor.field_c == param2 &&
             0 == ef.field_b) {
             this.field_i = 0;
           }
@@ -461,7 +461,7 @@ final class pf {
           return;
         }
         if (ef.field_b == 0) {
-          if (~nm.field_c == param2 &&
+          if (~IntrusiveDequeCursor.field_c == param2 &&
             0 == ef.field_b) {
             this.field_i = 0;
           }
@@ -490,7 +490,7 @@ final class pf {
           this.field_a = gb.field_a;
         }
         this.field_a = this.field_a - 1;
-        if (~nm.field_c == param2 &&
+        if (~IntrusiveDequeCursor.field_c == param2 &&
           0 == ef.field_b) {
           this.field_i = 0;
         }
@@ -526,7 +526,7 @@ final class pf {
     }
 
     final static void b(int param0, int param1) {
-        td.field_d = gn.field_w[param0];
+        td.field_d = ArchiveRequest.field_w[param0];
         hm.field_a = un.field_k[param0];
         wa.field_a = ProxyAuthenticationException.field_c[param0];
         if (param1 != -31383) {
@@ -1024,7 +1024,7 @@ final class pf {
             gp.field_Lb.a(param1 + 18421, (java.awt.Component) ((Object) param0));
           }
           if (param1 != 0) {
-            field_d = (fm) null;
+            field_d = (ResourceArchive) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

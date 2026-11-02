@@ -85,7 +85,7 @@ final class ai {
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
         if (param1 == 6) {
-          if (uo.field_j <= 0) {
+          if (BufferedRandomAccessFile.field_j <= 0) {
             if (!jg.a((byte) 58)) {
               var2 = 1;
               if (vh.field_c != null) {
@@ -113,7 +113,7 @@ final class ai {
           }
         } else {
           field_C = (String) null;
-          if (uo.field_j <= 0) {
+          if (BufferedRandomAccessFile.field_j <= 0) {
             if (!jg.a((byte) 58)) {
               var2 = 1;
             } else {

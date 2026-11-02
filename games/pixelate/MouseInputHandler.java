@@ -66,7 +66,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             try {
               NodeHashTableIterator.field_e = new BufferedSocket((java.net.Socket) (ra.field_b.field_e), op.field_p);
               aa.field_f.position = 0;
-              var4 = vi.field_o;
+              var4 = MusicCrossfadeStream.field_o;
               var5 = var4;
               uk.field_s = ij.field_o;
               var5.position = 0;
@@ -255,11 +255,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static hh a(hh param0, boolean param1, int[] param2) {
-        hh var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, boolean param1, int[] param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        hh stackIn_2_0 = null;
-        hh stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -267,16 +267,16 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new hh(0, 0, 0);
-          var3.field_o = param2;
+          var3 = new IndexedSprite(0, 0, 0);
+          var3.palette = param2;
           var3.field_h = param0.field_h;
           var3.field_f = param0.field_f;
           if (param1) {
-            stackIn_2_0 = (hh) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var3.field_d = param0.field_d;
-          var3.field_n = param0.field_n;
+          var3.indices = param0.indices;
           var3.field_m = param0.field_m;
           var3.field_a = param0.field_a;
           var3.field_g = param0.field_g;
@@ -302,9 +302,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static fm a(int param0, byte param1) {
+    final static ResourceArchive a(int param0, byte param1) {
         if (param1 != 124) {
-          return (fm) null;
+          return (ResourceArchive) null;
         }
         return el.a(-115, true, false, param0, 1, false);
     }

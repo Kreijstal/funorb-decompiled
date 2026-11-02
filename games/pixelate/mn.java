@@ -37,7 +37,7 @@ final class mn {
             return -1 + this.field_g.length;
           }
           var5 = (String) null;
-          mn.a(-39, (fm) null, (String) null, (String) null, (String) null);
+          mn.a(-39, (ResourceArchive) null, (String) null, (String) null, (String) null);
           return -1 + this.field_g.length;
         }
         return 0;
@@ -63,7 +63,7 @@ final class mn {
         return 0;
     }
 
-    final static cm a(int param0, pp param1) {
+    final static cm a(int param0, PcmSampleStream param1) {
         cm var2 = null;
         RuntimeException var2_ref = null;
         cm stackIn_3_0 = null;
@@ -76,7 +76,7 @@ final class mn {
             field_a = (String) null;
           }
           var2 = new cm(param1, param1);
-          bo.field_d.a(22125, var2);
+          bo.field_d.addFirst(22125, var2);
           wi.field_d.a(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -111,7 +111,7 @@ final class mn {
         return false;
     }
 
-    final static String a(int param0, fm param1, String param2, String param3, String param4) {
+    final static String a(int param0, ResourceArchive param1, String param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -133,7 +133,7 @@ final class mn {
           if (param0 <= 43) {
             field_f = (String) null;
           }
-          stackIn_7_0 = param2 + " - " + param1.c(109, param3) + "%";
+          stackIn_7_0 = param2 + " - " + param1.getGroupProgressByName(109, param3) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

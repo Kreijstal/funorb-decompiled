@@ -28,7 +28,7 @@ final class oi {
           var8 = new dm(wa.field_c, param0);
           wa.field_c.b(-6183, var8);
           if (!og.a((byte) -96)) {
-            tm.field_X = rj.field_F;
+            tm.field_X = Js5NetworkRequest.field_F;
             MouseWheelHandler.field_b = null;
             oc.field_J = param2;
             nk.field_b = param3;
@@ -105,11 +105,11 @@ final class oi {
         int var12 = 0;
         try {
           em.a(param4.field_Fb, param4.field_Nb, param4.field_Ub, -1, param4, -163, param6, (int[]) null, -1);
-          eg.field_n.b(true, (byte) -98);
-          eg.field_n.a(0, (int[]) null, -3);
+          ProxySocketConnector.field_n.b(true, (byte) -98);
+          ProxySocketConnector.field_n.a(0, (int[]) null, -3);
           int var7_int = -127 / ((param3 - 0) / 38);
-          eg.field_n.b(8893);
-          var8 = eg.field_n;
+          ProxySocketConnector.field_n.b(8893);
+          var8 = ProxySocketConnector.field_n;
           var9 = param0;
           var10 = param2;
           var11 = param5;

@@ -8,11 +8,11 @@ public final class Pixelate extends lb {
 
     final void a(byte param0) {
         this.a(55, false, 4, 2, true, 12, 1, 0);
-        vi var3 = new vi();
+        MusicCrossfadeStream var3 = new MusicCrossfadeStream();
         var3.field_x.a(true, 9, 128);
         var3.field_H.a(true, 9, 128);
         kb.a(22050, mc.field_k, var3, true, (java.awt.Component) ((Object) ec.field_u), 127);
-        sl.field_l = 16777215;
+        IndexedSpriteState.field_l = 16777215;
         mh.field_a = 2;
         ce.field_b = 13421772;
         mj.field_k = 0;
@@ -131,7 +131,7 @@ public final class Pixelate extends lb {
                     ln.a(72);
                   }
                   if (2 == var2) {
-                    d.a(0, ao.a(13867));
+                    d.a(0, AudioService.a(13867));
                   }
                 }
                 stackIn_60_1 = true;
@@ -161,7 +161,7 @@ public final class Pixelate extends lb {
                   if (var2 == 3) {
                     wl.field_b = false;
                     var3_ref = qj.field_e;
-                    u.a(((jl) (var3_ref)).field_z + ((jl) (var3_ref)).field_w, -879, ((jl) (var3_ref)).field_w, 2, 320, 8, ab.field_c, (jl) (var3_ref), 240, bi.field_g, 8, true);
+                    u.a(((BitmapFont) (var3_ref)).maxDescent + ((BitmapFont) (var3_ref)).maxAscent, -879, ((BitmapFont) (var3_ref)).maxAscent, 2, 320, 8, ab.field_c, (BitmapFont) (var3_ref), 240, bi.field_g, 8, true);
                   } else {
                     if (var2 == 4) {
                       wl.field_b = true;
@@ -211,14 +211,14 @@ public final class Pixelate extends lb {
                     og.field_l = true;
                     mi.field_o = true;
                     if (md.field_Y) {
-                      ie.field_F = bb.field_a;
+                      ie.field_F = IntrusiveDeque.field_a;
                       stackIn_177_0 = (gq.d(115)) ? 12 : 0;
                       la.a(stackIn_177_0, 11, false, -25528);
                     } else {
                       stackIn_173_0 = (gq.d(100)) ? 12 : 0;
                       la.a(stackIn_173_0, 0, false, -25528);
                     }
-                    nm.a(0);
+                    IntrusiveDequeCursor.a(0);
                     wo.b(109, fc.field_e).a(2, 0, false);
                     oc.field_G = false;
                     md.field_Y = false;
@@ -250,28 +250,28 @@ public final class Pixelate extends lb {
             return;
           }
           if (mn.field_e == 9) {
-            nm.a(0);
-            ti.field_t = 11;
+            IntrusiveDequeCursor.a(0);
+            MidiPcmStream.field_t = 11;
             dj.field_c = false;
-            ie.field_F = vi.field_o.h(5);
+            ie.field_F = MusicCrossfadeStream.field_o.h(5);
             continue;
           }
           if (mn.field_e == 14) {
-            nm.a(0);
-            ga.a(150, ne.a(-1879863704, 2000), 1024, 3, hp.j(0), fb.b((byte) 79), rg.field_d, ne.a(-1879863704, 8), cl.field_f.length, sl.a(1));
+            IntrusiveDequeCursor.a(0);
+            ga.a(150, ne.a(-1879863704, 2000), 1024, 3, hp.j(0), fb.b((byte) 79), rg.field_d, ne.a(-1879863704, 8), cl.field_f.length, IndexedSpriteState.a(1));
             fc.a(ba.a(-26573), 64, nc.b(119));
-            ti.field_t = -2;
+            MidiPcmStream.field_t = -2;
             oc.field_G = true;
             dj.field_c = false;
             continue;
           }
           if (mn.field_e == 15) {
             if (oc.field_G) {
-              nm.a(0);
+              IntrusiveDequeCursor.a(0);
               ak.i(0);
               ek.a(true);
               og.field_l = true;
-              ti.field_t = 0;
+              MidiPcmStream.field_t = 0;
               oa.field_i = false;
               mi.field_o = true;
               md.field_Y = false;
@@ -291,7 +291,7 @@ public final class Pixelate extends lb {
             if (mn.field_e == 59) {
               if (md.field_Y ||
                 oa.field_i) {
-                nm.a(0);
+                IntrusiveDequeCursor.a(0);
                 if (md.field_Y) {
                   ro.field_e.a(false, 250, false);
                 }
@@ -299,7 +299,7 @@ public final class Pixelate extends lb {
                 dg.a(0, (byte) -117);
                 md.field_Y = false;
                 oa.field_i = false;
-                ti.field_t = -2;
+                MidiPcmStream.field_t = -2;
               }
               ia.field_d = false;
               continue;
@@ -314,7 +314,7 @@ public final class Pixelate extends lb {
             }
             if (var3_ref != null) {
               if (mn.field_e == 61) {
-                var4Lifetime1 = vi.field_o.readUnsignedMedium((byte) 13);
+                var4Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedMedium((byte) 13);
                 var5 = var4Lifetime1 >> 8;
                 var6 = (128 & var4Lifetime1) >> 7;
                 var7 = 127 & var4Lifetime1;
@@ -322,18 +322,18 @@ public final class Pixelate extends lb {
                 continue;
               }
               if (mn.field_e == 69) {
-                var4Lifetime1Lifetime1 = vi.field_o.a((byte) 41);
-                var5Lifetime2 = vi.field_o.a((byte) 14);
-                var6 = vi.field_o.a((byte) -117);
-                var7Lifetime2 = vi.field_o.f(255);
-                var8 = vi.field_o.f(255);
-                var9 = vi.field_o.f(255);
+                var4Lifetime1Lifetime1 = MusicCrossfadeStream.field_o.a((byte) 41);
+                var5Lifetime2 = MusicCrossfadeStream.field_o.a((byte) 14);
+                var6 = MusicCrossfadeStream.field_o.a((byte) -117);
+                var7Lifetime2 = MusicCrossfadeStream.field_o.f(255);
+                var8 = MusicCrossfadeStream.field_o.f(255);
+                var9 = MusicCrossfadeStream.field_o.f(255);
                 var19 = new byte[var9];
                 var17 = var19;
                 var13 = var17;
                 var22 = var13;
                 for (var11 = 0; var19.length > var11; var11++) {
-                  var13[var11] = vi.field_o.a(0);
+                  var13[var11] = MusicCrossfadeStream.field_o.a(0);
                 }
                 ((ii) (var3_ref)).a(var8, var6, var7Lifetime2, var4Lifetime1Lifetime1, (byte) 125, var5Lifetime2, var22);
                 continue;
@@ -343,14 +343,14 @@ public final class Pixelate extends lb {
                 continue;
               }
               if (62 == mn.field_e) {
-                var4Lifetime1Lifetime2 = vi.field_o.a(0);
-                var5Lifetime3 = vi.field_o.a((byte) -116);
-                var6 = vi.field_o.a((byte) -121);
+                var4Lifetime1Lifetime2 = MusicCrossfadeStream.field_o.a(0);
+                var5Lifetime3 = MusicCrossfadeStream.field_o.a((byte) -116);
+                var6 = MusicCrossfadeStream.field_o.a((byte) -121);
                 ((ii) (var3_ref)).a(var5Lifetime3, var4Lifetime1Lifetime2, var6, false);
                 continue;
               }
               if (mn.field_e == 64) {
-                var4Lifetime1Lifetime3 = vi.field_o.f(255);
+                var4Lifetime1Lifetime3 = MusicCrossfadeStream.field_o.f(255);
                 var5Lifetime4 = var4Lifetime1Lifetime3 & ~((ii) (var3_ref)).field_a.field_k;
                 ((ii) (var3_ref)).field_a.field_k = var4Lifetime1Lifetime3;
                 if (var5Lifetime4 != 1 &&
@@ -363,7 +363,7 @@ public final class Pixelate extends lb {
                 continue;
               }
               if (mn.field_e == 65) {
-                ((ii) (var3_ref)).field_a.field_p = vi.field_o.f(255);
+                ((ii) (var3_ref)).field_a.field_p = MusicCrossfadeStream.field_o.f(255);
                 if (null == ro.field_e) {
                   continue;
                 }
@@ -371,7 +371,7 @@ public final class Pixelate extends lb {
                 continue;
               }
               if (mn.field_e == 66) {
-                var4Lifetime1Lifetime4 = vi.field_o.f(255);
+                var4Lifetime1Lifetime4 = MusicCrossfadeStream.field_o.f(255);
                 var5Lifetime5 = ~((ii) (var3_ref)).field_o & var4Lifetime1Lifetime4;
                 ((ii) (var3_ref)).field_o = var4Lifetime1Lifetime4;
                 if (ro.field_e == null) {
@@ -388,7 +388,7 @@ public final class Pixelate extends lb {
                 continue;
               }
               if (71 == mn.field_e) {
-                var4Lifetime1Lifetime5 = vi.field_o.f(255);
+                var4Lifetime1Lifetime5 = MusicCrossfadeStream.field_o.f(255);
                 if (ro.field_e == null) {
                   continue;
                 }
@@ -405,28 +405,28 @@ public final class Pixelate extends lb {
             this.h(-12);
             continue;
           }
-          nm.a(0);
-          stackIn_91_0 = (vi.field_o.f(255) == 0) ? 0 : 1;
+          IntrusiveDequeCursor.a(0);
+          stackIn_91_0 = (MusicCrossfadeStream.field_o.f(255) == 0) ? 0 : 1;
           var3Lifetime1 = stackIn_91_0;
-          var4_ref_String__ = new String[vi.field_o.f(255)];
-          var5Lifetime1 = vi.field_o.a(0);
+          var4_ref_String__ = new String[MusicCrossfadeStream.field_o.f(255)];
+          var5Lifetime1 = MusicCrossfadeStream.field_o.a(0);
           if (var5Lifetime1 < 0) {
             var5Lifetime1 = -2;
           }
           for (var6 = 0; var6 < var4_ref_String__.length; var6++) {
-            var4_ref_String__[var6] = vi.field_o.e(118);
+            var4_ref_String__[var6] = MusicCrossfadeStream.field_o.e(118);
           }
-          var6 = vi.field_o.f(255);
-          var7Lifetime1 = vi.field_o.f(255);
-          var8Lifetime1 = vi.field_o.f(255);
-          var9Lifetime1 = vi.field_o.readInt(0);
+          var6 = MusicCrossfadeStream.field_o.f(255);
+          var7Lifetime1 = MusicCrossfadeStream.field_o.f(255);
+          var8Lifetime1 = MusicCrossfadeStream.field_o.f(255);
+          var9Lifetime1 = MusicCrossfadeStream.field_o.readInt(0);
           wh.field_p = null;
           stackIn_100_0 = (mn.field_e == 58);
           oa.field_i = stackIn_100_0;
           bg.a(2);
           var15 = new ii(var4_ref_String__, var5Lifetime1, var3Lifetime1 != 0, var9Lifetime1, var6, var7Lifetime1, var8Lifetime1);
-          var15.a((byte) 20, vi.field_o);
-          if (1 == vi.field_o.f(255)) {
+          var15.a((byte) 20, MusicCrossfadeStream.field_o);
+          if (1 == MusicCrossfadeStream.field_o.f(255)) {
             var15.f(-57);
           }
           if (mn.field_e != 57) {
@@ -442,21 +442,21 @@ public final class Pixelate extends lb {
             var16_ref.a((String) null, (byte) -4);
           }
           ia.field_d = false;
-          ti.field_t = -1;
+          MidiPcmStream.field_t = -1;
         }
     }
 
     final void c(int param0) {
         Pixelate.p(param0 - 19640);
         ph.a(111);
-        bb.a((byte) 76);
+        IntrusiveDeque.a((byte) 76);
         ef.a(true);
         ck.a((byte) -109);
         de.d(-1);
         uk.b(false);
         ab.a(false);
         oo.a(true);
-        vi.e(-97);
+        MusicCrossfadeStream.e(-97);
         ho.b(11799);
         jj.b(-4136);
         KeyboardInputHandler.a(-1);
@@ -467,12 +467,12 @@ public final class Pixelate extends lb {
         lb.c(true);
         ClientException.a(true);
         GameApplet.b(true);
-        ll.a((byte) -57);
+        JaggrabDownloader.a((byte) -57);
         MouseInputHandler.a(-116);
         MouseWheelHandler.a(false);
         SoftwareRasterizer.e();
-        fm.a(-34);
-        jl.a();
+        ResourceArchive.a(-34);
+        BitmapFont.releaseStatics();
         wp.b(param0 - 23028);
         PacketBuffer.b((byte) 114);
         hm.b((byte) 9);
@@ -494,10 +494,10 @@ public final class Pixelate extends lb {
         ii.b((byte) -101);
         dg.a(1048576);
         aq.a((byte) 119);
-        rf.c((byte) -53);
-        gm.a(-1);
+        Js5Transport.c((byte) -53);
+        DiskCacheWorker.a(-1);
         am.a((byte) -125);
-        uo.b(127);
+        BufferedRandomAccessFile.b(127);
         BufferedSocket.a((byte) -84);
         IntrusiveNode.d(-3);
         SpriteState.a((byte) -114);
@@ -509,14 +509,14 @@ public final class Pixelate extends lb {
         ea.a(true);
         rg.a(1762);
         pc.m(25208);
-        lh.c(7);
-        ti.h(-69);
-        nl.b(-101);
-        in.a(-69);
-        sg.g();
-        km.a((byte) 106);
-        po.a((byte) 91);
-        mm.d();
+        IsaacRandom.c(7);
+        MidiPcmStream.h(-69);
+        NodeHashTable.b(-101);
+        MusicPatchNode.a(-69);
+        MidiFileReader.g();
+        MusicPatchPcmStream.a((byte) 106);
+        SoundCache.a((byte) 91);
+        AudioOutput.d();
         nh.b((byte) 108);
         pf.b(65);
         tp.b(true);
@@ -528,9 +528,9 @@ public final class Pixelate extends lb {
         vg.a(true);
         uj.d(true);
         qj.a(false);
-        kj.b(117);
+        ArchiveIndex.b(117);
         vh.b(-8);
-        jp.b((byte) -63);
+        ArchiveProvider.b((byte) -63);
         rm.a((byte) -116);
         cn.a(-59);
         kn.m(param0 - 12614);
@@ -545,7 +545,7 @@ public final class Pixelate extends lb {
         tg.a(true);
         d.a(false);
         fg.a(9882);
-        qd.b();
+        VorbisSample.releaseStatics();
         nd.b(param0 - 23110);
         fi.a();
         jb.a((byte) 33);
@@ -588,11 +588,11 @@ public final class Pixelate extends lb {
         of.a((byte) 79);
         ej.a(-115);
         em.a(param0 ^ 23098);
-        oh.a(false);
+        HuffmanCodec.a(false);
         bf.a((byte) -91);
         nn.c(param0 - 23119);
         pm.b(0);
-        sl.a(false);
+        IndexedSpriteState.a(false);
         bj.b((byte) 109);
         fc.a(32);
         hq.f((byte) -49);
@@ -602,7 +602,7 @@ public final class Pixelate extends lb {
         fe.a(param0 ^ -23078);
         hp.b((byte) -15);
         aj.a((byte) -38);
-        lj.a(-1);
+        BoundedRandomAccessFile.a(-1);
         to.f((byte) 23);
         dp.e(param0 ^ 23116);
         fq.f((byte) -123);
@@ -611,20 +611,20 @@ public final class Pixelate extends lb {
         ij.e(-124);
         wa.a(0);
         ra.a(false);
-        ao.a(true);
+        AudioService.a(true);
         qi.b((byte) 106);
         dc.a(param0 ^ -23119);
         ta.a();
         lk.d(0);
         bm.d(0);
-        wn.f(111);
+        SocketJs5Transport.f(111);
         nj.b((byte) 97);
-        rj.c((byte) -104);
-        rn.a(512);
-        cg.i(100);
-        gg.e((byte) 45);
+        Js5NetworkRequest.c((byte) -104);
+        SectorCacheStore.a(512);
+        DiskCacheRequest.i(100);
+        CachedArchiveProvider.e((byte) 45);
         fj.a((byte) 119);
-        gn.b((byte) -106);
+        ArchiveRequest.b((byte) -106);
         qf.a(false);
         ic.e((byte) -63);
         uc.b(-120);
@@ -639,7 +639,7 @@ public final class Pixelate extends lb {
         ri.b(10);
         ap.a(11924);
         gf.c(param0 - 31989);
-        q.a();
+        Bzip2Decoder.a();
         ai.a((byte) -92);
         fd.b(-24465);
         ok.a((byte) -118);
@@ -654,9 +654,9 @@ public final class Pixelate extends lb {
         ka.l(127);
         ud.a(-43);
         ch.d((byte) -105);
-        nm.a(false);
+        IntrusiveDequeCursor.a(false);
         ce.a(true);
-        en.a();
+        VorbisFloor.releaseStatics();
         wf.a((byte) -66);
         qg.a((byte) 124);
         dn.a((byte) -41);
@@ -667,7 +667,7 @@ public final class Pixelate extends lb {
         qe.g(69);
         kp.d((byte) -58);
         le.a(1);
-        eh.d(29731);
+        SocketConnector.d(29731);
         ProxyAuthenticationException.a((byte) 73);
         k.d(false);
         ImageProducerRasterBuffer.c(-56);
@@ -677,12 +677,12 @@ public final class Pixelate extends lb {
         ul.c((byte) -69);
         jf.a(-31476);
         ee.d(-3);
-        ca.b(64);
+        WhirlpoolHasher.b(64);
         td.a(param0 - 23112);
         qn.a(-1);
-        sn.a(param0 ^ 23118);
+        MusicPatch.a(param0 ^ 23118);
         un.b((byte) -6);
-        qc.a();
+        SynthInstrument.releaseStatics();
         qp.a((byte) -84);
         gk.f(false);
         c.o(12669);
@@ -714,8 +714,8 @@ public final class Pixelate extends lb {
         ah.g(-520925311);
         wm.a(false);
         tj.j(109);
-        eg.g(-6835);
-        p.a();
+        ProxySocketConnector.g(-6835);
+        AudioFilter.releaseStatics();
         na.a((byte) 4);
         kb.a((byte) 125);
         NodeHashTableIterator.a(true);
@@ -820,7 +820,7 @@ public final class Pixelate extends lb {
         if (ib.field_f != null) {
           ln.a(121);
         }
-        sn.a((byte) -91);
+        MusicPatch.a((byte) -91);
     }
 
     final static void a(boolean param0, byte param1, int param2, boolean param3, int param4, int param5, int param6) {
@@ -861,7 +861,7 @@ public final class Pixelate extends lb {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        bb var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         eq var12 = null;
@@ -1144,7 +1144,7 @@ public final class Pixelate extends lb {
               } else {
                 var12.field_Nb.a(var31, fq.field_q, 0, 256, 68);
               }
-              var12.field_qc.field_cb = jl.a(var12.field_qc.field_Db, var32, 78);
+              var12.field_qc.field_cb = BitmapFont.a(var12.field_qc.field_Db, var32, 78);
               var12.field_qc.a(var31, fq.field_q, 70, 256, 78);
               if (var12.field_qc.field_W &&
                 !var12.field_qc.field_cb.equals(var32)) {
@@ -1154,7 +1154,7 @@ public final class Pixelate extends lb {
               if (var12.field_Mb) {
                 var12.field_Sb.field_cb = "/" + var12.field_ec;
                 var12.field_Yb.field_Bb = 2;
-                var33_int = (348 - var12.field_Sb.field_Db.c("/")) / 2;
+                var33_int = (348 - var12.field_Sb.field_Db.textWidth("/")) / 2;
                 var12.field_Yb.a(var31, fq.field_q, 150, 256, var33_int - 150);
                 var12.field_Sb.a(var31, fq.field_q, var33_int, 256, 198 - var33_int);
               } else {
@@ -1261,7 +1261,7 @@ public final class Pixelate extends lb {
                 }
                 var38 = var37.toString();
                 var12.field_Kb.field_cb = var38;
-                var39Lifetime1 = var12.field_Kb.field_Db.b(var38, var12.field_K - 2 * var12.field_Kb.field_C);
+                var39Lifetime1 = var12.field_Kb.field_Db.wrappedLineCount(var38, var12.field_K - 2 * var12.field_Kb.field_C);
                 var12.field_Kb.a(var31, fq.field_q * var39Lifetime1, 0, 256, var12.field_K);
                 var31 = var31 + fq.field_q * var39Lifetime1;
               }
@@ -1271,14 +1271,14 @@ public final class Pixelate extends lb {
                 var31 = var31 + fq.field_q;
               }
               if (var12.field_Ob) {
-                var12.field_lc.field_cb = sd.a(nl.field_h, param1 ^ 25, new String[]{var32});
+                var12.field_lc.field_cb = sd.a(NodeHashTable.field_h, param1 ^ 25, new String[]{var32});
                 var12.field_lc.a(var31, fq.field_q, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
                 var31 = var31 + fq.field_q;
               }
             }
             var33 = lg.a((byte) 121, var32, var12.field_Qb);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_rc.field_Db.b(var33, -MouseWheelHandler.field_c + var12.field_K - MouseWheelHandler.field_c);
+              var34_intLifetime1 = var12.field_rc.field_Db.wrappedLineCount(var33, -MouseWheelHandler.field_c + var12.field_K - MouseWheelHandler.field_c);
               var12.field_rc.field_cb = var33;
               var12.field_rc.field_yb = var12.field_Rb * 256 / mh.field_b;
               var12.field_rc.a(var31, fq.field_q * var34_intLifetime1, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
@@ -1348,7 +1348,7 @@ public final class Pixelate extends lb {
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_P != 0) {
               if (var12.j(433)) {
-                var12 = (eq) (var8.f(1504642273));
+                var12 = (eq) (var8.last(1504642273));
                 continue;
               }
               if (0 == var12.field_jc.field_P) {
@@ -1365,7 +1365,7 @@ public final class Pixelate extends lb {
                 }
               }
             }
-            var12 = (eq) (var8.f(1504642273));
+            var12 = (eq) (var8.last(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1407,13 +1407,13 @@ public final class Pixelate extends lb {
         if (param0 < 91) {
           field_G = (bd) null;
         }
-        if (ti.field_t == fc.field_e) {
+        if (MidiPcmStream.field_t == fc.field_e) {
           ie.a(true, 108, fc.field_e);
         } else {
-          if (0 > ti.field_t) {
+          if (0 > MidiPcmStream.field_t) {
             stackIn_12_0 = fc.field_e;
           } else {
-            stackIn_12_0 = ti.field_t;
+            stackIn_12_0 = MidiPcmStream.field_t;
           }
           var3 = stackIn_12_0;
           if (var3 < 0) {
@@ -1421,7 +1421,7 @@ public final class Pixelate extends lb {
           }
           var4 = wo.b(-51, var3);
           if (ec.field_t >= 16) {
-            ie.a(false, -93, ti.field_t);
+            ie.a(false, -93, MidiPcmStream.field_t);
             var4.a(-(ec.field_t << 4) + 512, true, true);
           } else {
             ie.a(false, 97, fc.field_e);
@@ -1430,9 +1430,9 @@ public final class Pixelate extends lb {
         }
         ho.a(ep.a(30022), 12402);
         if (fc.field_e == 4 ||
-          ti.field_t == 4) {
+          MidiPcmStream.field_t == 4) {
           var3Lifetime1 = 192;
-          if (ti.field_t != fc.field_e) {
+          if (MidiPcmStream.field_t != fc.field_e) {
             var3Lifetime1 = ec.field_t << 3;
             if (var3Lifetime1 > 192) {
               var3Lifetime1 = 192;
@@ -1443,23 +1443,23 @@ public final class Pixelate extends lb {
           }
           SoftwareRasterizer.a(0, nf.field_f, 640, -nf.field_f + 480, 0, var3Lifetime1);
         }
-        if (fc.field_e != ti.field_t &&
-          -2 == ti.field_t) {
+        if (fc.field_e != MidiPcmStream.field_t &&
+          -2 == MidiPcmStream.field_t) {
           var3Lifetime2 = -(ec.field_t << 4) + 256;
           if (var3Lifetime2 < 0) {
             var3Lifetime2 = 0;
           }
-          in.field_B.a(0, 0, var3Lifetime2);
-        } else if (ti.field_t != fc.field_e &&
+          MusicPatchNode.field_B.a(0, 0, var3Lifetime2);
+        } else if (MidiPcmStream.field_t != fc.field_e &&
           fc.field_e == -2) {
           var3Lifetime2 = ec.field_t << 4;
           if (var3Lifetime2 > 256) {
             var3Lifetime2 = 256;
           }
-          in.field_B.a(0, 0, var3Lifetime2);
+          MusicPatchNode.field_B.a(0, 0, var3Lifetime2);
         } else {
           if (fc.field_e != -2) {
-            in.field_B.b(0, 0);
+            MusicPatchNode.field_B.b(0, 0);
           }
         }
         un.a((byte) 87);
@@ -1501,29 +1501,29 @@ public final class Pixelate extends lb {
         ho.a(-29810);
         if (ji.field_b != null) {
           if (qn.field_l.b(-3) &&
-            qn.field_l.a("basic", -1)) {
+            qn.field_l.ensureGroupAvailableByName("basic", -1)) {
             if (qn.field_l.b(-3) &&
-              qn.field_l.a("arial13", -1)) {
+              qn.field_l.ensureGroupAvailableByName("arial13", -1)) {
               if (dg.field_d.b(-3) &&
-                dg.field_d.a("arial13", param1 ^ -5)) {
+                dg.field_d.ensureGroupAvailableByName("arial13", param1 ^ -5)) {
                 if (qn.field_l.b(-3) &&
-                  qn.field_l.a("lobby", -1)) {
+                  qn.field_l.ensureGroupAvailableByName("lobby", -1)) {
                   if (dg.field_d.b(param1 ^ -7) &&
-                    dg.field_d.a("lobby", -1)) {
+                    dg.field_d.ensureGroupAvailableByName("lobby", -1)) {
                     if (ji.field_b.b(-3) &&
                       ji.field_b.a((byte) 92)) {
                       if (PacketBuffer.field_p.b(param1 ^ -7) &&
                         PacketBuffer.field_p.a((byte) 92)) {
                         if (ab.field_f.b(-3) &&
                           ab.field_f.a((byte) 92)) {
-                          if (lj.field_c.b(-3) &&
-                            lj.field_c.a((byte) 92)) {
+                          if (BoundedRandomAccessFile.field_c.b(-3) &&
+                            BoundedRandomAccessFile.field_c.a((byte) 92)) {
                             if (pf.field_d.b(-3) &&
-                              pf.field_d.a("basic", -1)) {
+                              pf.field_d.ensureGroupAvailableByName("basic", -1)) {
                               if (hd.field_c.b(param1 ^ -7) &&
-                                hd.field_c.a("basic", -1)) {
-                                if (eh.field_a.b(-3) &&
-                                  eh.field_a.a((byte) 92)) {
+                                hd.field_c.ensureGroupAvailableByName("basic", -1)) {
+                                if (SocketConnector.field_a.b(-3) &&
+                                  SocketConnector.field_a.a((byte) 92)) {
                                   if (uk.field_u.b(-3) &&
                                     uk.field_u.a((byte) 92)) {
                                     li.a(85.0f, -1, rh.field_r);
@@ -1531,8 +1531,8 @@ public final class Pixelate extends lb {
                                     if (!param0) {
                                       return false;
                                     }
-                                    eh.c(5);
-                                    rf.a(new po(ji.field_b, PacketBuffer.field_p), 5088, PacketBuffer.field_p);
+                                    SocketConnector.c(5);
+                                    Js5Transport.a(new SoundCache(ji.field_b, PacketBuffer.field_p), 5088, PacketBuffer.field_p);
                                     ji.field_b = null;
                                     sf.a(param1 - 4);
                                     return false;
@@ -1540,7 +1540,7 @@ public final class Pixelate extends lb {
                                   li.a(80.0f, -1, dk.a(em.field_a, 0, jd.field_p, uk.field_u));
                                   return false;
                                 }
-                                li.a(75.0f, -1, mn.a(120, eh.field_a, em.field_a, "", jd.field_p));
+                                li.a(75.0f, -1, mn.a(120, SocketConnector.field_a, em.field_a, "", jd.field_p));
                                 return false;
                               }
                               li.a(75.0f, -1, mn.a(53, hd.field_c, pc.field_x, "basic", CanvasRasterBuffer.field_f));
@@ -1549,10 +1549,10 @@ public final class Pixelate extends lb {
                             li.a(75.0f, -1, mn.a(param1 + 113, pf.field_d, g.field_q, "basic", im.field_Mb));
                             return false;
                           }
-                          li.a(60.0f, -1, mn.a(61, lj.field_c, jh.field_I, "", fq.field_p));
+                          li.a(60.0f, -1, mn.a(61, BoundedRandomAccessFile.field_c, jh.field_I, "", fq.field_p));
                           return false;
                         }
-                        li.a(45.0f, -1, lj.a(ab.field_f, fq.field_p, jh.field_I, -22165, 0));
+                        li.a(45.0f, -1, BoundedRandomAccessFile.a(ab.field_f, fq.field_p, jh.field_I, -22165, 0));
                         return false;
                       }
                       li.a(40.0f, -1, mn.a(83, PacketBuffer.field_p, bm.field_n, "", l.field_u));
@@ -1583,18 +1583,18 @@ public final class Pixelate extends lb {
           sf.a(0);
           return false;
         }
-        if (lj.field_c != null) {
+        if (BoundedRandomAccessFile.field_c != null) {
           li.a(92.0f, param1 ^ -5, "Unpacking music");
           this.d(117);
-          lg.a(param1 - 1, lj.field_c);
-          lj.field_c = null;
+          lg.a(param1 - 1, BoundedRandomAccessFile.field_c);
+          BoundedRandomAccessFile.field_c = null;
         }
         if (ab.field_f != null) {
           li.a(94.0f, param1 - 5, ff.field_f);
           this.d(118);
           for (var3_int = 0; var3_int < 18; var3_int++) {
             if (bj.field_c[var3_int] != null &&
-              !ri.field_a.field_x.a(bj.field_c[var3_int], po.field_d, ab.field_f, 109, 176400)) {
+              !ri.field_a.field_x.prepareTrack(bj.field_c[var3_int], SoundCache.field_d, ab.field_f, 109, 176400)) {
               sf.a(0);
               return false;
             }
@@ -1602,19 +1602,19 @@ public final class Pixelate extends lb {
           ri.field_a.field_x.e(-38);
           ri.field_a.field_H.e(-38);
           ab.field_f = null;
-          po.field_d = null;
+          SoundCache.field_d = null;
           sf.a(0);
           return false;
         }
         if (null == hd.field_c) {
-          if (eh.field_a != null) {
-            re.a(true, new oh(eh.field_a.a((byte) 24, "huffman", "")));
-            eh.field_a = null;
+          if (SocketConnector.field_a != null) {
+            re.a(true, new HuffmanCodec(SocketConnector.field_a.a((byte) 24, "huffman", "")));
+            SocketConnector.field_a = null;
             sf.a(param1 - 4);
             return false;
           }
-          gn.a((byte) 112);
-          rj.i(7902);
+          ArchiveRequest.a((byte) 112);
+          Js5NetworkRequest.i(7902);
           wo.a(3);
           id.b(param1 - 2);
           nd.a(3);
@@ -1622,7 +1622,7 @@ public final class Pixelate extends lb {
             this.b(-87);
           }
           nd.b((byte) 37);
-          ti.field_t = 0;
+          MidiPcmStream.field_t = 0;
           fc.field_e = 14;
           wo.a(50, -37);
           jg.a(256, -113);
@@ -1658,41 +1658,41 @@ public final class Pixelate extends lb {
         lg.field_d[0] = bi.a("basic", "icon_singleplayer", pf.field_d, (byte) -45);
         lg.field_d[1] = bi.a("basic", "icon_puzzle", pf.field_d, (byte) -73);
         var3 = bi.a("basic", "locked", qn.field_l, (byte) -124);
-        sn.field_m = bi.a("basic", "icon_menu", pf.field_d, (byte) -105);
-        gj.field_W = eh.a("titles", "basic", (byte) 47, pf.field_d);
-        ih.field_a = eh.a("tick", "basic", (byte) 47, pf.field_d);
+        MusicPatch.field_m = bi.a("basic", "icon_menu", pf.field_d, (byte) -105);
+        gj.field_W = SocketConnector.a("titles", "basic", (byte) 47, pf.field_d);
+        ih.field_a = SocketConnector.a("tick", "basic", (byte) 47, pf.field_d);
         hp.field_Gb = bi.a("basic", "timer", pf.field_d, (byte) -86);
-        ll.field_m = eh.a("marker", "basic", (byte) 47, pf.field_d);
+        JaggrabDownloader.field_m = SocketConnector.a("marker", "basic", (byte) 47, pf.field_d);
         bf.a(5, "basic", "frame");
         ab.field_c = bf.a(param1 + 1, "basic", "frame_filled");
         bi.field_g = bf.a(5, "basic", "frame_raised");
-        in.field_B = bi.a("basic", "gameframe", pf.field_d, (byte) -25);
+        MusicPatchNode.field_B = bi.a("basic", "gameframe", pf.field_d, (byte) -25);
         hd.field_w = var3;
         gd.field_i = var3;
         qo.field_v = bi.a("basic", "instructions6", pf.field_d, (byte) -121);
-        pk.field_c = eh.a("instructions_keys", "basic", (byte) 47, pf.field_d);
-        no.field_p = eh.a("instructions_keys2", "basic", (byte) 47, pf.field_d);
+        pk.field_c = SocketConnector.a("instructions_keys", "basic", (byte) 47, pf.field_d);
+        no.field_p = SocketConnector.a("instructions_keys2", "basic", (byte) 47, pf.field_d);
         jk.field_a = bi.a("basic", "background_rushes", pf.field_d, (byte) -58);
         ad.field_w = bi.a("basic", "background_retro", pf.field_d, (byte) -78);
-        vk.field_tb = eh.a("sprites_retro", "basic", (byte) 47, pf.field_d);
+        vk.field_tb = SocketConnector.a("sprites_retro", "basic", (byte) 47, pf.field_d);
         jg.field_H = bi.a("basic", "background_bouncedown", pf.field_d, (byte) -117);
         hn.field_b = bi.a("basic", "sprites_bouncedown", pf.field_d, (byte) -125);
-        eh.field_c = eh.a("cloud", "basic", (byte) 47, pf.field_d);
-        nm.field_f = bi.a("basic", "kite", pf.field_d, (byte) -77);
+        SocketConnector.field_c = SocketConnector.a("cloud", "basic", (byte) 47, pf.field_d);
+        IntrusiveDequeCursor.field_f = bi.a("basic", "kite", pf.field_d, (byte) -77);
         hb.field_hb = bi.a("basic", "bow", pf.field_d, (byte) -30);
         jo.field_j = bi.a("basic", "lobby_logo", pf.field_d, (byte) -62);
-        em.a(eh.a("scrollbutton", "basic", (byte) 47, pf.field_d), -77);
+        em.a(SocketConnector.a("scrollbutton", "basic", (byte) 47, pf.field_d), -77);
         var4 = bi.a("basic", "background_fireworks", pf.field_d, (byte) -38);
         var5 = bi.a("basic", "sprite_fireworks", pf.field_d, (byte) -95);
         md.a(var4, var5, 80);
-        SecondaryNodeDequeIterator.a(0, eh.a("tiles0", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(1, eh.a("tiles1", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(2, eh.a("tiles2", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(3, eh.a("tiles3", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(4, eh.a("tiles4", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(5, eh.a("tiles5", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(6, eh.a("tiles6", "basic", (byte) 47, pf.field_d), (byte) -53);
-        SecondaryNodeDequeIterator.a(7, eh.a("tiles7", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(0, SocketConnector.a("tiles0", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(1, SocketConnector.a("tiles1", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(2, SocketConnector.a("tiles2", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(3, SocketConnector.a("tiles3", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(4, SocketConnector.a("tiles4", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(5, SocketConnector.a("tiles5", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(6, SocketConnector.a("tiles6", "basic", (byte) 47, pf.field_d), (byte) -53);
+        SecondaryNodeDequeIterator.a(7, SocketConnector.a("tiles7", "basic", (byte) 47, pf.field_d), (byte) -53);
         oo.field_c = new Sprite[22];
         oo.field_c[0] = bi.a("basic", "achievement0", pf.field_d, (byte) -75);
         oo.field_c[1] = bi.a("basic", "achievement1", pf.field_d, (byte) -57);
@@ -1733,14 +1733,14 @@ public final class Pixelate extends lb {
         var7 = new Sprite[fo.field_u.length][];
         for (var8 = 0; fo.field_u.length > var8; var8++) {
           if (null != fo.field_u[var8]) {
-            var7[var8] = eh.a(fo.field_u[var8], "basic", (byte) 47, pf.field_d);
+            var7[var8] = SocketConnector.a(fo.field_u[var8], "basic", (byte) 47, pf.field_d);
           }
         }
-        gg.a(true, lp.field_c, rg.field_d, qn.field_l, hp.field_Hb, la.field_c, var7, 2, 2, var7, uk.field_u, param1 + 29, ap.field_d, dg.field_d, cl.field_f);
+        CachedArchiveProvider.a(true, lp.field_c, rg.field_d, qn.field_l, hp.field_Hb, la.field_c, var7, 2, 2, var7, uk.field_u, param1 + 29, ap.field_d, dg.field_d, cl.field_f);
         fe.field_a = false;
         ri.a(200, (byte) -126);
         am.a(qn.field_l, true, dg.field_d);
-        eg.a((byte) -94, 0, 0, 16777215, (java.applet.Applet) (this), ic.field_bb);
+        ProxySocketConnector.a((byte) -94, 0, 0, 16777215, (java.applet.Applet) (this), ic.field_bb);
         hd.field_c = null;
         dg.field_d = null;
         sf.a(0);
@@ -1760,13 +1760,13 @@ public final class Pixelate extends lb {
         if (param0 != -18528) {
           Pixelate.a(false, (byte) -93, -109, true, 5, -125, 20);
         }
-        eh.field_a = MouseInputHandler.a(3, (byte) 124);
+        SocketConnector.field_a = MouseInputHandler.a(3, (byte) 124);
         pf.field_d = MouseInputHandler.a(5, (byte) 124);
         hd.field_c = MouseInputHandler.a(6, (byte) 124);
         ji.field_b = MouseInputHandler.a(7, (byte) 124);
         PacketBuffer.field_p = MouseInputHandler.a(8, (byte) 124);
         ab.field_f = MouseInputHandler.a(9, (byte) 124);
-        lj.field_c = MouseInputHandler.a(10, (byte) 124);
+        BoundedRandomAccessFile.field_c = MouseInputHandler.a(10, (byte) 124);
         uk.field_u = MouseInputHandler.a(11, (byte) 124);
         ho.a(-29810);
     }
@@ -1779,7 +1779,7 @@ public final class Pixelate extends lb {
         int stackIn_97_0 = 0;
         int stackIn_100_0 = 0;
         int var3;
-        tc var3_ref_tc;
+        BinaryBitmapFont var3_ref_tc;
         int var4;
         int var5;
         int var6;
@@ -1816,10 +1816,10 @@ public final class Pixelate extends lb {
                 if (wl.field_b) {
                   wl.field_b = false;
                   var3_ref_tc = qj.field_e;
-                  u.a(((jl) ((Object) var3_ref_tc)).field_z + ((jl) ((Object) var3_ref_tc)).field_w, -879, ((jl) ((Object) var3_ref_tc)).field_w, 2, 320, 8, ab.field_c, var3_ref_tc, 240, bi.field_g, 8, false);
+                  u.a(((BitmapFont) ((Object) var3_ref_tc)).maxDescent + ((BitmapFont) ((Object) var3_ref_tc)).maxAscent, -879, ((BitmapFont) ((Object) var3_ref_tc)).maxAscent, 2, 320, 8, ab.field_c, var3_ref_tc, 240, bi.field_g, 8, false);
                 }
-                if (tk.a((byte) -104, ti.field_t)) {
-                  nm.a(0);
+                if (tk.a((byte) -104, MidiPcmStream.field_t)) {
+                  IntrusiveDequeCursor.a(0);
                 }
                 ga.field_a = qo.field_A;
               } else {
@@ -1832,7 +1832,7 @@ public final class Pixelate extends lb {
           var4 = 0;
           mi.e(-124);
           if (!param0) {
-            if (fc.field_e == ti.field_t) {
+            if (fc.field_e == MidiPcmStream.field_t) {
               if (fc.field_e == -1) {
                 if (!oc.field_G) {
                   while (bh.$cfr$intArgs$b$c4997cb15529(123)) {
@@ -1862,10 +1862,10 @@ public final class Pixelate extends lb {
             } else {
               ec.field_t = ec.field_t + 1;
               if (ec.field_t == 32) {
-                nm.a(0);
+                IntrusiveDequeCursor.a(0);
               }
               f.b(0);
-              if ((ti.field_t == -1 ||
+              if ((MidiPcmStream.field_t == -1 ||
                 fc.field_e == -1) && null != rg.field_e) {
                 rg.field_e.c(-1);
               }
@@ -1903,10 +1903,10 @@ public final class Pixelate extends lb {
             ng.a(false);
           }
           boolean decompiledFrameRemainder0 = true;
-          if (ti.field_t != -2 &&
-            ti.field_t != -5 &&
-            ti.field_t != -4 && (ti.field_t != -1 ||
-            !oa.field_i) && 4 != ti.field_t) {
+          if (MidiPcmStream.field_t != -2 &&
+            MidiPcmStream.field_t != -5 &&
+            MidiPcmStream.field_t != -4 && (MidiPcmStream.field_t != -1 ||
+            !oa.field_i) && 4 != MidiPcmStream.field_t) {
             stackIn_61_0 = false;
             decompiledFrameRemainder0 = false;
           }
@@ -1937,7 +1937,7 @@ public final class Pixelate extends lb {
             qf.a(21983, var7);
           }
         }
-        if (ti.field_t == -3) {
+        if (MidiPcmStream.field_t == -3) {
           wh.field_p = null;
           ro.field_e = new ii();
           stackIn_97_0 = (!de.field_f) ? 0 : 1;
@@ -1945,19 +1945,19 @@ public final class Pixelate extends lb {
           stackIn_100_0 = (gq.d(108)) ? 12 : 0;
           la.a(stackIn_100_0, -1, var3Lifetime1 != 0, -25528);
         }
-        if (ti.field_t == -4) {
+        if (MidiPcmStream.field_t == -4) {
           aa.field_f.g(9, 15514);
           dj.field_c = true;
-          ti.field_t = fc.field_e;
+          MidiPcmStream.field_t = fc.field_e;
           ve.field_Kb = qh.field_c;
         }
         if (!param1) {
           discarded$0 = this.b(false, 93);
         }
-        if (ti.field_t == -5) {
+        if (MidiPcmStream.field_t == -5) {
           qg.a(io.field_c.c((byte) 8), 11, false);
           ia.field_d = true;
-          ti.field_t = fc.field_e;
+          MidiPcmStream.field_t = fc.field_e;
         }
     }
 

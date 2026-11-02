@@ -91,7 +91,7 @@ final class sd extends ie {
             if (0 <= var6_int) {
               stackIn_6_0 = 2 + var6_int;
               for (var5 = stackIn_6_0; var5 < var3_int; var5++) {
-                if (ti.a(121, param0.charAt(var5))) {
+                if (MidiPcmStream.a(121, param0.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -129,7 +129,7 @@ final class sd extends ie {
             }
             stackIn_19_0 = 2 + var8Lifetime1;
             for (var5Lifetime1 = stackIn_19_0; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (ti.a(112, param0.charAt(var5Lifetime1))) {
+              if (MidiPcmStream.a(112, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

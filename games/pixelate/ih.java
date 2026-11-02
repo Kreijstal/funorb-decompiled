@@ -12,10 +12,10 @@ final class ih {
 
     final static uc a(byte param0) {
         int var1 = 116 % ((3 - param0) / 36);
-        if (rf.field_d == null) {
-          rf.field_d = new uc(ep.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, ep.field_b.field_w, -1, 2147483647, true);
+        if (Js5Transport.field_d == null) {
+          Js5Transport.field_d = new uc(ep.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, ep.field_b.maxAscent, -1, 2147483647, true);
         }
-        return rf.field_d;
+        return Js5Transport.field_d;
     }
 
     public static void a(int param0) {

@@ -10,14 +10,14 @@ final class nk {
     static String field_g;
     static String field_h;
     static int field_i;
-    static bb field_a;
+    static IntrusiveDeque field_a;
 
     public static void a(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (!param0) {
-            nk.a((ak) null, (jl) null, (vp) null, (ak) null, (byte) 7, (ak) null, (ak) null, (ak) null, (ak) null, true, (ak) null, (ak) null);
+            nk.a((ak) null, (BitmapFont) null, (vp) null, (ak) null, (byte) 7, (ak) null, (ak) null, (ak) null, (ak) null, true, (ak) null, (ak) null);
           }
           field_d = null;
           field_g = null;
@@ -35,7 +35,7 @@ final class nk {
         }
     }
 
-    final static void a(ak param0, jl param1, vp param2, ak param3, byte param4, ak param5, ak param6, ak param7, ak param8, boolean param9, ak param10, ak param11) {
+    final static void a(ak param0, BitmapFont param1, vp param2, ak param3, byte param4, ak param5, ak param6, ak param7, ak param8, boolean param9, ak param10, ak param11) {
         String stackIn_30_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -100,7 +100,7 @@ final class nk {
           ki.field_k = new ak(0L, param3);
           ui.field_i.a(ki.field_k, (byte) 26);
           var17 = new ak(0L, (ak) null);
-          var17.field_L = new bb();
+          var17.field_L = new IntrusiveDeque();
           l.field_p = new gp(0L, var17, param8, param2);
           ki.field_k.a(l.field_p, (byte) 26);
           oc.field_U = new ak(0L, param5);
@@ -117,8 +117,8 @@ final class nk {
           oc.field_U.a(rh.field_y, (byte) 26);
           DelegatingCanvas.field_e = new ak[5];
           jo.field_n = new ak[5];
-          fm.field_f = new ak[5];
-          fm.field_h = new ak[5];
+          ResourceArchive.field_f = new ak[5];
+          ResourceArchive.field_h = new ak[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -144,17 +144,17 @@ final class nk {
                 var19 = stackIn_30_0;
               }
               if (decompiledFrameRemainder0) {
-                fm.field_f[var18] = new ak(0L, param11);
+                ResourceArchive.field_f[var18] = new ak(0L, param11);
                 jo.field_n[var18] = new ak(0L, oi.field_e, var19);
-                fm.field_h[var18] = new ak(0L, (ak) null);
-                fm.field_h[var18].field_kb = 1;
+                ResourceArchive.field_h[var18] = new ak(0L, (ak) null);
+                ResourceArchive.field_h[var18].field_kb = 1;
                 DelegatingCanvas.field_e[var18] = new ak(0L, oi.field_e);
                 DelegatingCanvas.field_e[var18].field_kb = 1;
-                fm.field_f[var18].a(jo.field_n[var18], (byte) 26);
-                fm.field_f[var18].a(fm.field_h[var18], (byte) 26);
-                fm.field_f[var18].a(DelegatingCanvas.field_e[var18], (byte) 26);
-                fm.field_f[var18].h(-257);
-                ui.field_i.a(fm.field_f[var18], (byte) 26);
+                ResourceArchive.field_f[var18].a(jo.field_n[var18], (byte) 26);
+                ResourceArchive.field_f[var18].a(ResourceArchive.field_h[var18], (byte) 26);
+                ResourceArchive.field_f[var18].a(DelegatingCanvas.field_e[var18], (byte) 26);
+                ResourceArchive.field_f[var18].h(-257);
+                ui.field_i.a(ResourceArchive.field_f[var18], (byte) 26);
                 qm.field_F = qm.field_F + 1;
               }
               var18++;
@@ -249,7 +249,7 @@ final class nk {
           if (param0 != 16711935) {
             nk.a(true);
           }
-          kn.field_J = vi.field_o.h(5);
+          kn.field_J = MusicCrossfadeStream.field_o.h(5);
           eq.field_Hb = dh.a((CharSequence) ((Object) kn.field_J), (byte) 44);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -322,8 +322,8 @@ final class nk {
                 if (!stackIn_22_0) {
                   var2.c(2779);
                 }
-                var2.field_n.h(var2.field_p * ia.field_h + 128 >> 8);
-                var2 = (cm) (rg.field_b.f(1504642273));
+                var2.field_n.setVolumeQ6(var2.field_p * ia.field_h + 128 >> 8);
+                var2 = (cm) (rg.field_b.last(1504642273));
                 return;
               }
             }
@@ -332,9 +332,9 @@ final class nk {
             }
             if (stackIn_22_0 ||
               var3 != 0) {
-              var2.field_n.h(128 + var2.field_p * ia.field_h >> 8);
+              var2.field_n.setVolumeQ6(128 + var2.field_p * ia.field_h >> 8);
             }
-            var2 = (cm) (bo.field_d.f(param0 + 1504642180));
+            var2 = (cm) (bo.field_d.last(param0 + 1504642180));
             if (var3 == 0) {
               continue;
             }
@@ -350,9 +350,9 @@ final class nk {
               if (!stackIn_22_0Lifetime1) {
                 var2Lifetime1.c(2779);
               } else {
-                var2Lifetime1.field_n.h(var2Lifetime1.field_p * ia.field_h + 128 >> 8);
+                var2Lifetime1.field_n.setVolumeQ6(var2Lifetime1.field_p * ia.field_h + 128 >> 8);
               }
-              var2Lifetime1 = (cm) (rg.field_b.f(1504642273));
+              var2Lifetime1 = (cm) (rg.field_b.last(1504642273));
             }
           }
           return;
@@ -376,7 +376,7 @@ final class nk {
           h.field_Q = param0;
           fh.field_L = param1;
           if (param2 != 5818) {
-            field_a = (bb) null;
+            field_a = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "nk.D(" + param0 + ',' + param1 + ',' + param2 + ')');

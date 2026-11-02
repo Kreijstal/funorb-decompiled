@@ -5,7 +5,7 @@ final class ab {
     static Sprite[] field_c;
     static ak field_a;
     static int field_b;
-    static fm field_f;
+    static ResourceArchive field_f;
     static String field_e;
     static String field_d;
     private static String field_z;

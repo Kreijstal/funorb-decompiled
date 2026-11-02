@@ -11,7 +11,7 @@ final class bo {
     int field_g;
     static String field_b;
     int field_j;
-    static bb field_d;
+    static IntrusiveDeque field_d;
     static int[] field_c;
     static long field_e;
 
@@ -26,7 +26,7 @@ final class bo {
           var4 = (og) (wk.field_g.c(1504642273));
           while (var4 != null) {
             dq.a(param0, -18989, var4);
-            var4 = (og) (wk.field_g.f(param1 + 1504642266));
+            var4 = (og) (wk.field_g.last(param1 + 1504642266));
           }
           if (param1 != 7) {
             field_k = (String) null;
@@ -34,7 +34,7 @@ final class bo {
           var2 = bq.field_a.c(1504642273);
           while (var2 != null) {
             sd.a(true, param0);
-            var2 = bq.field_a.f(1504642273);
+            var2 = bq.field_a.last(1504642273);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,7 +91,7 @@ final class bo {
         field_f = "Back";
         field_b = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_k = "Retry";
-        field_d = new bb();
+        field_d = new IntrusiveDeque();
         field_c = new int[16];
         for (var0 = 0; field_c.length > var0; var0++) {
           field_c[var0] = 256 / field_c.length * 65793 * var0;

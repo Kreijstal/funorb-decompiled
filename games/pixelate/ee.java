@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ee {
-    private bb field_b;
+    private IntrusiveDeque field_b;
     private rd[] field_e;
     static String field_c;
     static String field_a;
@@ -60,7 +60,7 @@ final class ee {
         im var6Lifetime1;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
-          var1 = vi.field_o;
+          var1 = MusicCrossfadeStream.field_o;
           var2 = var1.f(255);
           if (var2 == 0) {
             if (null == hq.field_q) {
@@ -95,7 +95,7 @@ final class ee {
               fieldTemp$0 = aj.field_t;
               aj.field_t = aj.field_t + 1;
               var6.field_Kb = fieldTemp$0;
-              bq.field_b.a(22125, var6);
+              bq.field_b.addFirst(22125, var6);
             }
             var6.field_Ib = var5;
             var6.field_Fb = var4_ref_String;
@@ -153,7 +153,7 @@ final class ee {
             fieldTemp$1 = f.field_q;
             f.field_q = f.field_q + 1;
             var6Lifetime1.field_Kb = fieldTemp$1;
-            vp.field_Hb.a(22125, var6Lifetime1);
+            vp.field_Hb.addFirst(22125, var6Lifetime1);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -172,12 +172,12 @@ final class ee {
                 break scanLoop1;
               }
               if (stackIn_50_0) {
-                var7_ref = (im) (vp.field_Hb.f(1504642273));
+                var7_ref = (im) (vp.field_Hb.last(1504642273));
                 continue;
               }
             }
             if (null == var7_ref) {
-              vp.field_Hb.a(22125, var6Lifetime1);
+              vp.field_Hb.addFirst(22125, var6Lifetime1);
               if (var9 == 0) {
                 return;
               }
@@ -286,7 +286,7 @@ final class ee {
         RuntimeException decompiledCaughtException = null;
         var2 = Pixelate.field_H ? 1 : 0;
         try {
-          this.field_b = new bb();
+          this.field_b = new IntrusiveDeque();
           this.field_e = new rd[10];
           var1_int = 0;
           while (var1_int < 10) {
@@ -334,7 +334,7 @@ final class ee {
 
     final void a(int param0, int param1, int param2) {
         try {
-          this.field_b.a(22125, this.a(param0, param2, (byte) 109));
+          this.field_b.addFirst(22125, this.a(param0, param2, (byte) 109));
           if (param1 != 0) {
             this.a(-120, 48, 81);
           }

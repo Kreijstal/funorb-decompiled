@@ -23,10 +23,10 @@ final class nn {
     static boolean field_i;
 
     final static void a(boolean param0) {
-        ma.field_o = new bb();
+        ma.field_o = new IntrusiveDeque();
         if (!param0) {
-          fm var2 = (fm) null;
-          nn.a(-1, (fm) null, (fm) null, (fm) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          nn.a(-1, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 
@@ -41,8 +41,8 @@ final class nn {
         int var6;
         int var7;
         int var8;
-        ob var9;
-        ob var10;
+        PaletteBitmapFont var9;
+        PaletteBitmapFont var10;
         int var4Lifetime1;
         int var5Lifetime1;
         int var5Lifetime2;
@@ -57,14 +57,14 @@ final class nn {
               stackIn_14_0 = (!oa.field_i) ? 0 : 110;
               var4 = stackIn_14_0;
               for (var5 = 0; 2 > var5; var5++) {
-                var9.b(sb.a(this.field_r[var5], 3), this.field_j[var5], -var4 + (this.field_q[var5] + 155), 0, -1);
+                var9.drawCentered(sb.a(this.field_r[var5], 3), this.field_j[var5], -var4 + (this.field_q[var5] + 155), 0, -1);
               }
               var5Lifetime2 = 20;
               stackIn_20_0 = (this.field_o) ? 1 : 0;
               var6 = stackIn_20_0;
               var7 = 1 - var6;
-              var10.a(this.field_s[var6], var5Lifetime2, 420 - var4, 0, -1);
-              var10.c(this.field_s[var7], -var5Lifetime2 + 640, -var4 + 420, 0, -1);
+              var10.drawText(this.field_s[var6], var5Lifetime2, 420 - var4, 0, -1);
+              var10.drawRightAlignedText(this.field_s[var7], -var5Lifetime2 + 640, -var4 + 420, 0, -1);
             }
             if (0 < this.field_k) {
               stackIn_25_0 = (!oa.field_i) ? 0 : 50;
@@ -78,7 +78,7 @@ final class nn {
               if (380 < this.field_k) {
                 var5Lifetime1 = -(5 * this.field_k) + 2150;
               }
-              var10.a(this.field_e, 320, -var4Lifetime1 + 130, 0, -1, var5Lifetime1);
+              var10.drawCenteredAlpha(this.field_e, 320, -var4Lifetime1 + 130, 0, -1, var5Lifetime1);
             }
             if (this.field_d > 0) {
               pm.field_l[3 - this.field_d].d(-(this.field_c >> 1) + 320, 40, this.field_c, 90);
@@ -86,10 +86,10 @@ final class nn {
           }
         } else {
           if (0 < this.field_p) {
-            fi.a(var10, po.field_j, Integer.toString(this.field_g.field_r), rf.field_n, 30, 50, 0, -1, this.field_p);
-            var9.b(sb.a(this.field_r[0], 3), 30, 415, 0, -1, this.field_p);
+            fi.a(var10, SoundCache.field_j, Integer.toString(this.field_g.field_r), Js5Transport.field_n, 30, 50, 0, -1, this.field_p);
+            var9.drawLeftAlpha(sb.a(this.field_r[0], 3), 30, 415, 0, -1, this.field_p);
             if (null != this.field_f) {
-              fi.a(var10, bb.field_e, this.field_f, jg.field_J, 30, 390, 0, -1, this.field_p);
+              fi.a(var10, IntrusiveDeque.field_e, this.field_f, jg.field_J, 30, 390, 0, -1, this.field_p);
             }
           }
         }
@@ -158,7 +158,7 @@ final class nn {
               var7Lifetime2 = var10;
               var7Lifetime3 = var10;
               if (param4 >= 0L) {
-                var7Lifetime4 = var10 + "; Expires=" + po.a(10, param4 * 1000L + hm.a(64)) + "; Max-Age=" + param4;
+                var7Lifetime4 = var10 + "; Expires=" + SoundCache.a(10, param4 * 1000L + hm.a(64)) + "; Max-Age=" + param4;
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }
@@ -218,14 +218,14 @@ final class nn {
         field_b = null;
     }
 
-    final static void a(int param0, fm param1, fm param2, fm param3) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         Sprite var17 = null;
-        hh[] var5 = null;
-        hh[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        hh[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
         Sprite var15 = null;
         Sprite var18 = null;
@@ -237,41 +237,41 @@ final class nn {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          fk.field_s = eh.a("frame_top", "commonui", (byte) 47, param2);
-          hd.field_v = eh.a("frame_bottom", "commonui", (byte) 47, param2);
+          fk.field_s = SocketConnector.a("frame_top", "commonui", (byte) 47, param2);
+          hd.field_v = SocketConnector.a("frame_bottom", "commonui", (byte) 47, param2);
           ge.field_g = bi.a("commonui", "jagex_logo_grey", param2, (byte) -74);
-          fc.field_d = eh.a("button", "commonui", (byte) 47, param2);
-          CanvasRasterBuffer.field_g = vi.a(param2, 20049, "validation", "commonui");
-          ep.field_b = (jl) ((Object) kk.a(param2, "commonui", 0, "arezzo12", param3));
-          he.field_d = (jl) ((Object) kk.a(param2, "commonui", 0, "arezzo14", param3));
-          ba.field_d = (jl) ((Object) kk.a(param2, "commonui", 0, "arezzo14bold", param3));
+          fc.field_d = SocketConnector.a("button", "commonui", (byte) 47, param2);
+          CanvasRasterBuffer.field_g = MusicCrossfadeStream.a(param2, 20049, "validation", "commonui");
+          ep.field_b = (BitmapFont) ((Object) kk.a(param2, "commonui", 0, "arezzo12", param3));
+          he.field_d = (BitmapFont) ((Object) kk.a(param2, "commonui", 0, "arezzo14", param3));
+          ba.field_d = (BitmapFont) ((Object) kk.a(param2, "commonui", 0, "arezzo14bold", param3));
           var17 = new Sprite(param1.a((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) ec.field_u));
           dq.a((byte) 31, "dropdown", "commonui", param2);
           var5 = lb.a(param2, param0 ^ 4767934, "commonui", "screen_options");
-          ng.field_A = new hh[4];
-          ng.field_o = new hh[4];
-          qg.field_a = new hh[4];
-          var6 = new hh[][]{qg.field_a, ng.field_A, ng.field_o};
+          ng.field_A = new IndexedSprite[4];
+          ng.field_o = new IndexedSprite[4];
+          qg.field_a = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{qg.field_a, ng.field_A, ng.field_o};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
-          var7[0] = var5[0].field_o;
+          var7[0] = var5[0].palette;
           for (var8 = 1; var8 < var19.length; var8++) {
             var7[var8] = (int[]) ((Object) var19[0].clone());
           }
-          var8Lifetime1 = var5[0].field_n[0];
+          var8Lifetime1 = var5[0].indices[0];
           var19[2][var8Lifetime1] = 16777215;
           var19[1][var8Lifetime1] = 2394342;
           var19[3][var8Lifetime1] = param0;
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
-            hh[] var10 = var14;
+            IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
               var14[var11_int] = MouseInputHandler.a(var5[var9], false, var19[var11_int]);
             }
           }
           var9Lifetime1 = var17.field_E;
-          ti.a(false);
+          MidiPcmStream.a(false);
           var17.c();
           SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);

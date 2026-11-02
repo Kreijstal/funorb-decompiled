@@ -14,7 +14,7 @@ final class kk {
     private int field_n;
     int field_t;
     private int field_e;
-    private bb field_q;
+    private IntrusiveDeque field_q;
     private int field_v;
     private int field_x;
     private int[] field_m;
@@ -71,7 +71,7 @@ final class kk {
         var7 = (tk) (this.field_q.c(1504642273));
         while (var7 != null) {
           var7.e(-123);
-          var7 = (tk) (this.field_q.f(1504642273));
+          var7 = (tk) (this.field_q.last(1504642273));
         }
         if (param0 >= -18) {
           this.a(-66, 3, -15, (byte) 3, 14);
@@ -143,7 +143,7 @@ final class kk {
             this.field_m[var4] = 1;
             if ((this.field_B.field_r[var4] & 4) != 0) {
               var5 = -1 + (3 & this.field_B.field_r[var4]);
-              this.field_q.a(22125, new tk(16 + (this.field_t + var3 * 32), var2 * 32 + (this.field_u + 16), var5, 0));
+              this.field_q.addFirst(22125, new tk(16 + (this.field_t + var3 * 32), var2 * 32 + (this.field_u + 16), var5, 0));
             }
           }
         }
@@ -186,7 +186,7 @@ final class kk {
           while (this.field_j - 1 > var6) {
             var4 = this.field_B.field_r[this.field_h * var6 + var2Lifetime1];
             if (0 != (4 & var4)) {
-              this.field_q.a(22125, new tk(32 * var2Lifetime1 + (16 + this.field_t), 32 * var6 + (16 + this.field_u), -1 + (3 & var4), var2Lifetime1 * 6 - 6));
+              this.field_q.addFirst(22125, new tk(32 * var2Lifetime1 + (16 + this.field_t), 32 * var6 + (16 + this.field_u), -1 + (3 & var4), var2Lifetime1 * 6 - 6));
             }
             var6++;
           }
@@ -203,11 +203,11 @@ final class kk {
         return this.field_i == 0 ? true : false;
     }
 
-    final static ld a(fm param0, String param1, int param2, String param3, fm param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, String param1, int param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ld stackIn_3_0 = null;
+        CoverageBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -222,9 +222,9 @@ final class kk {
           if (param2 != 0) {
             field_k = -40;
           }
-          var5_int = param0.a(param2 + 123, param1);
-          var6 = param0.a((byte) -112, param3, var5_int);
-          stackIn_3_0 = lh.a(param0, var5_int, 48077700, param4, var6);
+          var5_int = param0.getGroupId(param2 + 123, param1);
+          var6 = param0.getFileId((byte) -112, param3, var5_int);
+          stackIn_3_0 = IsaacRandom.a(param0, var5_int, 48077700, param4, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -457,7 +457,7 @@ final class kk {
         var17 = (tk) (this.field_q.c(1504642273));
         while (var17 != null) {
           var17.a((byte) -127);
-          var17 = (tk) (this.field_q.f(1504642273));
+          var17 = (tk) (this.field_q.last(1504642273));
         }
         if (0 < this.field_v &&
           this.field_i == 0 &&
@@ -556,7 +556,7 @@ final class kk {
           this.field_u = param2 - (this.field_B.field_a * 32 >> 1);
           this.field_j = this.field_B.field_a;
           this.field_h = this.field_B.field_i;
-          this.field_q = new bb();
+          this.field_q = new IntrusiveDeque();
           this.field_c = new Sprite(this.field_h * 32, 32 * this.field_j);
           this.field_z = 1;
           var4_int = this.field_B.b((byte) -60);

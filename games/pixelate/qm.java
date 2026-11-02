@@ -60,7 +60,7 @@ class qm extends ng {
             param0.h(2);
             this.field_K = true;
             if (param1 != 27) {
-              qm.a(-64, (sb) null, 111, 79, (sb) null, 120, -16, 109, (sb) null, 39, -126, (jl) null, 33, -16, (jl) null, -57, -112, -56, 119, 16);
+              qm.a(-64, (sb) null, 111, 79, (sb) null, 120, -16, 109, (sb) null, 39, -126, (BitmapFont) null, 33, -16, (BitmapFont) null, -57, -112, -56, 119, 16);
             }
             if (null != this.field_n &&
               this.field_n instanceof cc) {
@@ -290,7 +290,7 @@ class qm extends ng {
           var22Lifetime1 = param3[1] - param1[1];
           var23Lifetime1 = -param1[2] + param3[2];
           if (param4 < 3) {
-            qm.a(112, (sb) null, 29, 72, (sb) null, 76, -127, -121, (sb) null, -76, 4, (jl) null, -119, 13, (jl) null, 46, -72, 8, -22, -67);
+            qm.a(112, (sb) null, 29, 72, (sb) null, 76, -127, -121, (sb) null, -76, 4, (BitmapFont) null, -119, 13, (BitmapFont) null, 46, -72, 8, -22, -67);
           }
           var9 = var21Lifetime1 * param1[3] + param1[4] * var22Lifetime1 + var23Lifetime1 * param1[5] >> -ai.field_x + 16;
           var10 = var23Lifetime1 * param1[8] + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - ai.field_x;
@@ -320,7 +320,7 @@ class qm extends ng {
                 if (stackIn_67_0 < stackIn_67_1) {
                   qe.field_v[var23Lifetime2] = -2147483648;
                 } else {
-                  jp.field_a[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
+                  ArchiveProvider.field_a[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
                   al.field_m[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   qe.field_v[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 < var7_int) {
@@ -361,13 +361,13 @@ class qm extends ng {
                   var24Lifetime1Lifetime1 = param0.field_v[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_P[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_u[var23Lifetime2];
-                  eg.field_l[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15) >> 16);
+                  ProxySocketConnector.field_l[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15) >> 16);
                   dj.field_b[var23Lifetime2] = var10 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var13 + var19 * var26Lifetime1Lifetime1 >> 16);
                   kh.field_c[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_M[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_y[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_R[var23Lifetime2];
-                  eg.field_h[var23Lifetime2] = (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var18) >> 16) + var9;
+                  ProxySocketConnector.field_h[var23Lifetime2] = (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var18) >> 16) + var9;
                   ip.field_x[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 - (-(var16 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var19) >> 16);
                   le.field_b[var23Lifetime2] = (var14 * var24Lifetime1Lifetime1 - (-(var25Lifetime1Lifetime1 * var17) - var26Lifetime1Lifetime1 * var20) >> 16) + var11;
                   var23Lifetime2++;
@@ -409,7 +409,7 @@ class qm extends ng {
                   var21Lifetime2 = param0.field_p[var18];
                   wd.field_i[var18] = var12 * var20 + (var9 * var19 + var15 * var21Lifetime2) >> 16;
                   lo.field_Ib[var18] = var16 * var21Lifetime2 + var20 * var13 + var19 * var10 >> 16;
-                  wn.field_q[var18] = var17 * var21Lifetime2 + var11 * var19 + var14 * var20 >> 16;
+                  SocketJs5Transport.field_q[var18] = var17 * var21Lifetime2 + var11 * var19 + var14 * var20 >> 16;
                   var18++;
                 }
               }
@@ -417,7 +417,7 @@ class qm extends ng {
             stackIn_76_0 = var8;
             break;
           }
-          ca.a(stackIn_76_0, param0, false, var7_int, param2);
+          WhirlpoolHasher.a(stackIn_76_0, param0, false, var7_int, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -462,7 +462,7 @@ class qm extends ng {
         }
     }
 
-    final static void a(int param0, sb param1, int param2, int param3, sb param4, int param5, int param6, int param7, sb param8, int param9, int param10, jl param11, int param12, int param13, jl param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(int param0, sb param1, int param2, int param3, sb param4, int param5, int param6, int param7, sb param8, int param9, int param10, BitmapFont param11, int param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -624,7 +624,7 @@ class qm extends ng {
           field_G = null;
           field_L = null;
           if (param0 < 62) {
-            qm.a(8, (sb) null, 42, -55, (sb) null, 28, 88, -93, (sb) null, 77, 108, (jl) null, 5, -44, (jl) null, -125, -73, 115, -35, -117);
+            qm.a(8, (sb) null, 42, -55, (sb) null, 28, 88, -93, (sb) null, 77, 108, (BitmapFont) null, 5, -44, (BitmapFont) null, -125, -73, 115, -35, -117);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "qm.RA(" + param0 + ')');

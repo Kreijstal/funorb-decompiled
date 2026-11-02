@@ -58,13 +58,13 @@ final class wc extends jj {
         if (param0 != 0) {
           field_n = (ak) null;
         }
-        if (rj.field_F == tm.field_X) {
+        if (Js5NetworkRequest.field_F == tm.field_X) {
           return nk.field_b;
         }
         if (!an.field_e.d(param0 ^ 46)) {
           return an.field_e.b((byte) 114);
         }
-        if (rj.field_F == qo.field_n) {
+        if (Js5NetworkRequest.field_F == qo.field_n) {
           return an.field_e.b((byte) 116);
         }
         return h.field_U;

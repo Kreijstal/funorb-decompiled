@@ -110,7 +110,7 @@ final class md extends db {
         var24 = null;
         var14 = Pixelate.field_H ? 1 : 0;
         var6 = this.field_W.a((byte) 113);
-        if (var6 != uo.field_b &&
+        if (var6 != BufferedRandomAccessFile.field_b &&
           tg.field_j != var6) {
           var5 = this.field_W.b((byte) -7);
           if (var5 == null) {
@@ -126,7 +126,7 @@ final class md extends db {
           var9 = this.field_z + param2;
           var10 = var29.a(param0, (ng) (this), (byte) 107) + (var29.b(-117, (ng) (this)).b(1) >> 1);
           var11 = -23 / ((param3 - 70) / 49);
-          if (var6Lifetime1 != uo.field_b &&
+          if (var6Lifetime1 != BufferedRandomAccessFile.field_b &&
             tg.field_j != var6Lifetime1) {
             if (sk.field_a == var6Lifetime1) {
               var26 = CanvasRasterBuffer.field_g[2];
@@ -173,7 +173,7 @@ final class md extends db {
         var9Lifetime1 = this.field_z + param2;
         var10Lifetime1 = var28.a(param0, (ng) (this), (byte) 107) + (var28.b(-117, (ng) (this)).b(1) >> 1);
         var11Lifetime1 = -23 / ((param3 - 70) / 49);
-        if (var6Lifetime2 == uo.field_b) {
+        if (var6Lifetime2 == BufferedRandomAccessFile.field_b) {
           var19 = CanvasRasterBuffer.field_g[0];
           var12Lifetime1 = var19.field_A << 1;
           var13Lifetime1 = var19.field_B << 1;
@@ -225,7 +225,7 @@ final class md extends db {
 
     final static void a(rh param0, boolean param1, int param2) {
         try {
-          de.field_b.a(22125, param0);
+          de.field_b.addFirst(22125, param0);
           sd.a((byte) -52, param0, param2);
           if (!param1) {
             md.c(false);

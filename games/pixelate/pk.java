@@ -177,7 +177,7 @@ final class pk {
             var5.field_l = bm.a(var5.field_l, (byte) -128, param0, 16);
           }
           if (tj.a(param0, -32)) {
-            var5.field_n = nl.a(param0, var5.field_n, 16, param1 ^ -122);
+            var5.field_n = NodeHashTable.a(param0, var5.field_n, 16, param1 ^ -122);
             var6 = 0;
             var7 = 0;
             while (true) {
@@ -277,8 +277,8 @@ final class pk {
               var2 = sd.a(fg.field_d, 34, new String[]{jo.field_k});
             }
             if (un.field_l) {
-              ti.a(0, (String) null, (String) null, (byte) -82, 2, (String) (var2));
-              po.a(true);
+              MidiPcmStream.a(0, (String) null, (String) null, (byte) -82, 2, (String) (var2));
+              SoundCache.a(true);
             }
           }
           if (param0 <= 59) {
@@ -302,7 +302,7 @@ final class pk {
             if (2 == var6) {
               var4 = sd.a(dg.field_b, 73, new String[]{jo.field_k});
               var8 = sd.a(sk.field_c, 69, new String[]{var3});
-              var7 = -485 + (nf.field_d.field_K + rh.field_y.field_K + vl.field_Q.c(var8) - vl.field_Q.c(var4));
+              var7 = -485 + (nf.field_d.field_K + rh.field_y.field_K + vl.field_Q.textWidth(var8) - vl.field_Q.textWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -341,16 +341,16 @@ final class pk {
                 decompiledSharedTail0 = (var10 != 0);
               }
               if ((decompiledSharedTail0) &&
-                (lh.field_g)) {
+                (IsaacRandom.field_g)) {
                 var5 = "";
-                var4 = "<col=999999>" + var4 + ll.field_i + "</col>";
+                var4 = "<col=999999>" + var4 + JaggrabDownloader.field_i + "</col>";
               }
-              var9 = vl.field_Q.c(var4);
+              var9 = vl.field_Q.textWidth(var4);
               if (!ue.a((byte) 124)) {
                 if (nf.field_d.field_W &&
                   (-nf.field_d.field_tb + ProxyAuthenticationException.field_d) < var9) {
                   if (!ln.field_q) {
-                    var1 = ll.field_i;
+                    var1 = JaggrabDownloader.field_i;
                   } else {
                     var1 = "Broken!";
                   }
@@ -362,7 +362,7 @@ final class pk {
                 }
               }
             }
-            ap.a(var5, var7, ib.field_i[var6], 24092, var4 + jl.b(mp.field_a.toString()));
+            ap.a(var5, var7, ib.field_i[var6], 24092, var4 + BitmapFont.b(mp.field_a.toString()));
             if (!oo.field_d) {
               rh.field_y.field_W = false;
             }

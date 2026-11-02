@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class to extends de {
-    static mm field_t;
+    static AudioOutput field_t;
     static boolean field_s;
     static vk field_r;
-    static ti field_q;
+    static MidiPcmStream field_q;
     static String field_p;
     static String field_o;
 
@@ -49,7 +49,7 @@ final class to extends de {
 
     final void c(byte param0) {
         if (param0 > -13) {
-          field_t = (mm) null;
+          field_t = (AudioOutput) null;
         }
     }
 

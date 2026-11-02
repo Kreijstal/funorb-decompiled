@@ -125,12 +125,12 @@ final class pi extends ak {
     }
 
     final static Boolean c(byte param0) {
-        Boolean var1 = kj.field_j;
+        Boolean var1 = ArchiveIndex.field_j;
         if (param0 != 104) {
           CharSequence[] var2 = (CharSequence[]) null;
           pi.a((CharSequence[]) null, 88, -25, -27);
         }
-        kj.field_j = null;
+        ArchiveIndex.field_j = null;
         return var1;
     }
 
@@ -163,7 +163,7 @@ final class pi extends ak {
             return this.field_Mb[var3];
           }
         }
-        if (nm.field_c != 0) {
+        if (IntrusiveDequeCursor.field_c != 0) {
           return -1;
         }
         return this.field_Gb;

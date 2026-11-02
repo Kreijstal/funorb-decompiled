@@ -58,7 +58,7 @@ final class so {
         if (param0 != -3060) {
           this.field_a = 17;
         }
-        return new dd(this.field_m, this.field_k, this.field_j, 60, 30, lp.field_d, 0, 0, new hh[]{lk.field_o[this.field_e]});
+        return new dd(this.field_m, this.field_k, this.field_j, 60, 30, lp.field_d, 0, 0, new IndexedSprite[]{lk.field_o[this.field_e]});
     }
 
     final void b(boolean param0) {
@@ -101,12 +101,12 @@ final class so {
         }
         if (ik.field_a &&
           db.field_U) {
-          eh.c(5);
+          SocketConnector.c(5);
           ni.a(-31470);
           if (fc.field_e == 9 &&
             go.field_k == 0) {
             fc.field_e = 5;
-            la.a(ti.field_t, 5, false, -25528);
+            la.a(MidiPcmStream.field_t, 5, false, -25528);
           }
         }
     }
@@ -187,7 +187,7 @@ final class so {
           }
           var2 += 37;
         }
-        rk.field_e.a("Puzzle " + (this.field_e + 1), 30, 50, 0, -1);
+        rk.field_e.drawText("Puzzle " + (this.field_e + 1), 30, 50, 0, -1);
     }
 
     so(int param0, int param1, int param2, int param3, int param4, int[] param5) {

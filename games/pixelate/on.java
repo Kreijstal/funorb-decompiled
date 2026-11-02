@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class on extends hb {
-    static bb field_nb;
+    static IntrusiveDeque field_nb;
     static ak field_mb;
     static int field_ob;
     static ak field_pb;
@@ -45,7 +45,7 @@ final class on extends hb {
             return stackIn_6_0;
           }
           if (param0 == 3) {
-            stackIn_9_0 = sd.a(gg.field_v, param2 + 17298, new String[]{param1});
+            stackIn_9_0 = sd.a(CachedArchiveProvider.field_v, param2 + 17298, new String[]{param1});
             return stackIn_9_0;
           }
           if (param0 == 4) {
@@ -53,7 +53,7 @@ final class on extends hb {
             return stackIn_12_0;
           }
           if (param0 == 5) {
-            stackIn_16_0 = sd.a(ll.field_p, 38, new String[]{param1});
+            stackIn_16_0 = sd.a(JaggrabDownloader.field_p, 38, new String[]{param1});
             return stackIn_16_0;
           }
           if (param0 == 6) {
@@ -114,12 +114,12 @@ final class on extends hb {
         field_nb = null;
     }
 
-    final static ld a(byte[] param0, int param1) {
-        ld var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
         Object stackIn_2_0 = null;
-        ld stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -127,9 +127,9 @@ final class on extends hb {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (ld) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new ld(param0, IntrusiveNode.field_b, e.field_b, gf.field_g, ge.field_c, fl.field_g, wo.field_f);
+          var2 = new CoverageBitmapFont(param0, IntrusiveNode.field_b, e.field_b, gf.field_g, ge.field_c, fl.field_g, wo.field_f);
           re.b(140);
           if (param1 <= 25) {
             var3 = (byte[]) null;
@@ -173,7 +173,7 @@ final class on extends hb {
             }
             if (param1) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, uo.field_i, wp.field_c);
+              var9.fillRect(0, 0, BufferedRandomAccessFile.field_i, wp.field_c);
             }
             if (param2 == null) {
               param2 = new java.awt.Color(140, 17, 17);
@@ -195,11 +195,11 @@ final class on extends hb {
               var10.setFont(a.field_L);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-              var9.drawImage(jg.field_K, uo.field_i / 2 - 152, wp.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(jg.field_K, BufferedRandomAccessFile.field_i / 2 - 152, wp.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = uo.field_i / 2 - 152;
+              var7 = BufferedRandomAccessFile.field_i / 2 - 152;
               var8 = -18 + wp.field_c / 2;
               var9.setColor(param2);
               var9.drawRect(var7, var8, 303, 33);
@@ -216,7 +216,7 @@ final class on extends hb {
             }
             var9.setFont(a.field_L);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(tg.field_h, uo.field_i / 2 - tg.field_h.length() * 6 / 2, -26 + wp.field_c / 2);
+            var9.drawString(tg.field_h, BufferedRandomAccessFile.field_i / 2 - tg.field_h.length() * 6 / 2, -26 + wp.field_c / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -245,6 +245,6 @@ final class on extends hb {
     }
 
     static {
-        field_nb = new bb();
+        field_nb = new IntrusiveDeque();
     }
 }

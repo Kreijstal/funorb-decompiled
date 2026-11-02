@@ -239,7 +239,7 @@ final class ic extends ka implements vo {
               stackIn_34_0.field_cb = ((String) (Object) stackIn_35_1).toUpperCase();
               stackIn_37_0 = an.field_a;
               if (var8 != 0) {
-                stackIn_38_1 = oh.field_d;
+                stackIn_38_1 = HuffmanCodec.field_d;
               } else {
                 stackIn_38_1 = vk.field_sb;
               }
@@ -304,7 +304,7 @@ final class ic extends ka implements vo {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = nk.field_e.field_Db.c(var16) + nk.field_e.field_Db.a('.') * 3;
+              var10Lifetime1 = nk.field_e.field_Db.textWidth(var16) + nk.field_e.field_Db.a('.') * 3;
               if (16 == (48 & rb.field_o)) {
                 var9 = var16 + ".";
               }

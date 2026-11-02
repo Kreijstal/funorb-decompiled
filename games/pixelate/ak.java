@@ -40,8 +40,8 @@ class ak extends tp {
     int field_kb;
     int field_y;
     int field_mb;
-    jl field_Db;
-    bb field_L;
+    BitmapFont field_Db;
+    IntrusiveDeque field_L;
     static int[] field_db;
     private int field_I;
     Sprite field_H;
@@ -71,9 +71,9 @@ class ak extends tp {
         RuntimeException var3 = null;
         try {
           if (this.field_L == null) {
-            this.field_L = new bb();
+            this.field_L = new IntrusiveDeque();
           }
-          this.field_L.a(22125, param0);
+          this.field_L.addFirst(22125, param0);
           if (param1 != 26) {
             this.a(false, -2);
           }
@@ -106,7 +106,7 @@ class ak extends tp {
         var3 = 0;
         if (null != this.field_cb &&
           null != this.field_Db) {
-          var4_int = this.field_Db.a(this.field_cb, param1);
+          var4_int = this.field_Db.getWrappedWidth(this.field_cb, param1);
           if (var4_int > var3) {
             var3 = var4_int;
           }
@@ -124,7 +124,7 @@ class ak extends tp {
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (ak) (this.field_L.f(1504642273));
+            var4 = (ak) (this.field_L.last(1504642273));
           }
         }
         return var3;
@@ -159,7 +159,7 @@ class ak extends tp {
           while (var10_ref_ak != null) {
             var10_ref_ak.field_wb = -var10_ref_ak.field_S + var9;
             var9 = var9 + (var10_ref_ak.field_nb - (-var10_ref_ak.field_Z - param0));
-            var10_ref_ak = (ak) (this.field_L.f(1504642273));
+            var10_ref_ak = (ak) (this.field_L.last(1504642273));
           }
           var8 = -param0 + var9;
         }
@@ -187,7 +187,7 @@ class ak extends tp {
     }
 
     final void a(int param0, boolean param1) {
-        cg.field_I = !param1 ? true : false;
+        DiskCacheRequest.field_I = !param1 ? true : false;
         bm.field_q = !param1 ? true : false;
         if (param0 != -28476) {
           ak var4 = (ak) null;
@@ -389,39 +389,39 @@ class ak extends tp {
             null != this.field_qb) {
             var23Lifetime2 = var26 + this.field_qb;
           }
-          if (this.field_Db.c(var23Lifetime2) <= this.field_K - 2 * this.field_C &&
+          if (this.field_Db.textWidth(var23Lifetime2) <= this.field_K - 2 * this.field_C &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_kb != 1) {
               if (this.field_kb == 2) {
-                var22 = var22 + (this.field_nb - this.field_Db.field_z - this.field_Db.field_w);
+                var22 = var22 + (this.field_nb - this.field_Db.maxDescent - this.field_Db.maxAscent);
               }
             } else {
-              var22 = var22 + (-this.field_Db.field_z + (-this.field_Db.field_w + this.field_nb)) / 2;
+              var22 = var22 + (-this.field_Db.maxDescent + (-this.field_Db.maxAscent + this.field_nb)) / 2;
             }
             if (this.field_Bb == 0) {
-              this.field_Db.b(var23Lifetime2, this.field_tb + (this.field_C + var21), this.field_Db.field_w + this.field_gb + var22, var18, -1, this.field_yb);
+              this.field_Db.drawLeftAlpha(var23Lifetime2, this.field_tb + (this.field_C + var21), this.field_Db.maxAscent + this.field_gb + var22, var18, -1, this.field_yb);
             } else {
               if (this.field_Bb == 1) {
-                this.field_Db.a(var23Lifetime2, (-(2 * this.field_C) + this.field_K) / 2 + var21 + (this.field_tb + this.field_C), this.field_Db.field_w + (this.field_gb + var22), var18, -1, this.field_yb);
+                this.field_Db.drawCenteredAlpha(var23Lifetime2, (-(2 * this.field_C) + this.field_K) / 2 + var21 + (this.field_tb + this.field_C), this.field_Db.maxAscent + (this.field_gb + var22), var18, -1, this.field_yb);
               } else {
                 if (2 != this.field_Bb) {
-                  this.field_Db.a(var23Lifetime2, this.field_C + this.field_tb + var21, this.field_gb + var22, this.field_K - this.field_C * 2, this.field_nb, var18, -1, this.field_yb, this.field_Bb, this.field_kb, this.field_mb);
+                  this.field_Db.drawParagraphAlpha(var23Lifetime2, this.field_C + this.field_tb + var21, this.field_gb + var22, this.field_K - this.field_C * 2, this.field_nb, var18, -1, this.field_yb, this.field_Bb, this.field_kb, this.field_mb);
                 } else {
-                  this.field_Db.c(var23Lifetime2, this.field_K - (this.field_C * 2 - var21 - (this.field_tb + this.field_C)), this.field_gb + (var22 + this.field_Db.field_w), var18, -1, this.field_yb);
+                  this.field_Db.drawRightAlpha(var23Lifetime2, this.field_K - (this.field_C * 2 - var21 - (this.field_tb + this.field_C)), this.field_gb + (var22 + this.field_Db.maxAscent), var18, -1, this.field_yb);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_Db.a(var23Lifetime2, var21 + this.field_C + this.field_tb, var22 + this.field_gb, -(this.field_C * 2) + this.field_K, this.field_nb, var18, -1, this.field_yb, this.field_Bb, this.field_kb, this.field_mb);
+            this.field_Db.drawParagraphAlpha(var23Lifetime2, var21 + this.field_C + this.field_tb, var22 + this.field_gb, -(this.field_C * 2) + this.field_K, this.field_nb, var18, -1, this.field_yb, this.field_Bb, this.field_kb, this.field_mb);
           }
         }
         if (this.field_L != null) {
           var23_ref = (ak) (this.field_L.c(param6 + 1504642323));
           while (var23_ref != null) {
             var23_ref.a(param0, this.field_tb + var19, this.field_X, param3, this.field_K, param5, (byte) -50, var20 + this.field_gb, this.field_nb, param9, param10);
-            var23_ref = (ak) (this.field_L.f(1504642273));
+            var23_ref = (ak) (this.field_L.last(1504642273));
           }
         }
         SoftwareRasterizer.f(var12, var13, var14, var15);
@@ -481,20 +481,20 @@ class ak extends tp {
         var12 = SoftwareRasterizer.field_a;
         SoftwareRasterizer.d(this.field_tb, this.field_gb, this.field_K + this.field_tb, this.field_gb + this.field_nb);
         var13 = 0;
-        if (!cg.field_I &&
+        if (!DiskCacheRequest.field_I &&
           param2 &&
-          nm.field_c != 0 &&
-          uo.field_a >= SoftwareRasterizer.field_e &&
-          uo.field_a < SoftwareRasterizer.field_h &&
+          IntrusiveDequeCursor.field_c != 0 &&
+          BufferedRandomAccessFile.field_a >= SoftwareRasterizer.field_e &&
+          BufferedRandomAccessFile.field_a < SoftwareRasterizer.field_h &&
           ji.field_c >= SoftwareRasterizer.field_f &&
           ji.field_c < SoftwareRasterizer.field_a) {
           var13 = 1;
           this.field_Ab = -this.field_gb + ji.field_c;
-          this.field_P = nm.field_c;
-          this.field_ub = -this.field_tb + uo.field_a;
-          this.field_J = nm.field_c;
+          this.field_P = IntrusiveDequeCursor.field_c;
+          this.field_ub = -this.field_tb + BufferedRandomAccessFile.field_a;
+          this.field_J = IntrusiveDequeCursor.field_c;
         } else {
-          if (0 != nm.field_c) {
+          if (0 != IntrusiveDequeCursor.field_c) {
             this.field_J = 0;
           }
           this.field_P = 0;
@@ -517,7 +517,7 @@ class ak extends tp {
           bm.field_q = true;
         }
         if (var13 != 0) {
-          cg.field_I = true;
+          DiskCacheRequest.field_I = true;
         }
         SoftwareRasterizer.f(var9, var10, var11, var12);
         if (this.field_J != 0 &&
@@ -548,8 +548,8 @@ class ak extends tp {
     }
 
     final static void i(int param0) {
-        jp.a(-117);
-        uo.b(false);
+        ArchiveProvider.a(-117);
+        BufferedRandomAccessFile.b(false);
         hc.field_M = null;
         mj.a(false);
         if (param0 != 0) {

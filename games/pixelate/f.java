@@ -11,8 +11,8 @@ final class f implements eb {
     static int field_o;
     static String field_i;
     private int field_l;
-    static bb field_c;
-    private jl field_g;
+    static IntrusiveDeque field_c;
+    private BitmapFont field_g;
     static int[] field_d;
     static int[] field_f;
     static al field_a;
@@ -67,7 +67,7 @@ final class f implements eb {
           SoftwareRasterizer.b(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_g) {
             var13 = this.field_e + (var14.field_N + var14.field_O);
-            this.field_g.a(param0.field_q, var13 + param3 + param0.field_z, this.field_b + (param0.field_p + param2), -var13 - (this.field_e - param0.field_E), param0.field_C - (this.field_e << 1), this.field_r, this.field_l, 1, 1, 0);
+            this.field_g.drawParagraph(param0.field_q, var13 + param3 + param0.field_z, this.field_b + (param0.field_p + param2), -var13 - (this.field_e - param0.field_E), param0.field_C - (this.field_e << 1), this.field_r, this.field_l, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,7 +129,7 @@ final class f implements eb {
             if (param0.length() <= var3_int) {
               return true;
             }
-            if (oh.a(param0.charAt(var3_int), -67)) {
+            if (HuffmanCodec.a(param0.charAt(var3_int), -67)) {
               var3_int++;
               continue;
             }
@@ -168,7 +168,7 @@ final class f implements eb {
         field_p = null;
     }
 
-    f(jl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    f(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_l = param4;
           this.field_h = param6;
@@ -188,7 +188,7 @@ final class f implements eb {
         int var1;
         int var2;
         field_i = "No spectators";
-        field_c = new bb();
+        field_c = new IntrusiveDeque();
         field_d = new int[4];
         field_f = new int[768];
         for (var0 = 0; field_f.length > var0; var0++) {

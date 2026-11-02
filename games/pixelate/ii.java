@@ -24,7 +24,7 @@ final class ii {
     private boolean field_s;
     static String field_k;
     private boolean field_l;
-    static hh[] field_p;
+    static IndexedSprite[] field_p;
     private boolean field_r;
     int field_z;
     int field_o;
@@ -89,7 +89,7 @@ final class ii {
         }
         this.field_s = false;
         if (9 == this.field_a.field_r &&
-          uo.field_j <= 0) {
+          BufferedRandomAccessFile.field_j <= 0) {
           this.a(true, 250, false);
           return;
         }
@@ -158,7 +158,7 @@ final class ii {
             if (50 <= var5_int) {
               var5_int = -1;
             }
-            if (0 >= uo.field_j &&
+            if (0 >= BufferedRandomAccessFile.field_j &&
               var5_int >= 10) {
               var5_int = -1;
             }
@@ -183,7 +183,7 @@ final class ii {
         if (param1 != 250) {
           this.field_h = false;
         }
-        la.a(ti.field_t, 13, false, -25528);
+        la.a(MidiPcmStream.field_t, 13, false, -25528);
         return;
     }
 
@@ -198,9 +198,9 @@ final class ii {
         if (param1 != 58) {
           discarded$0 = this.a(-117, 64);
         }
-        pl.field_Y.a(22125, new ph(param0));
+        pl.field_Y.addFirst(22125, new ph(param0));
         if (!this.field_l) {
-          nj.field_h.a(param1 ^ 22103, new hf(param0, param2, sb.field_a, f.field_o, ap.field_f, lo.field_Mb));
+          nj.field_h.addFirst(param1 ^ 22103, new hf(param0, param2, sb.field_a, f.field_o, ap.field_f, lo.field_Mb));
         }
     }
 
@@ -270,7 +270,7 @@ final class ii {
     private final void a(boolean param0) {
         this.field_a.a(false, nf.field_a);
         this.field_a.field_v[1] = fo.field_g;
-        this.field_a.field_v[0] = sl.field_k;
+        this.field_a.field_v[0] = IndexedSpriteState.field_k;
         this.a(false, 250, false);
         if (!param0) {
           this.a(true, -55);
@@ -297,7 +297,7 @@ final class ii {
         else {
           this.field_x = 50;
         }
-        sl.field_k = param0;
+        IndexedSpriteState.field_k = param0;
         this.field_u = true;
         if (param3) {
           this.a(true);
@@ -442,7 +442,7 @@ final class ii {
         if (param0 != -110) {
           this.field_A = (pb) null;
         }
-        wn.c(0);
+        SocketJs5Transport.c(0);
         this.field_e.a(-82);
         this.field_A.d(param0 - 16778);
     }
@@ -505,7 +505,7 @@ final class ii {
           Thread var13 = null;
           String var14 = null;
           Exception var14_ref = null;
-          tc var17 = null;
+          BinaryBitmapFont var17 = null;
           var15 = Pixelate.field_H ? 1 : 0;
           try {
             rg.field_e.a(false);
@@ -533,7 +533,7 @@ final class ii {
             var5_ref_uh.b(-1);
           }
           if (oa.field_j == 0) {
-            vi.f(91);
+            MusicCrossfadeStream.f(91);
             this.field_j.c(param1 + 2);
             if (param0) {
               rm.a(0);
@@ -545,7 +545,7 @@ final class ii {
           } else {
             if (oa.field_j != 1) {
               if (oa.field_j == 2) {
-                vi.f(68);
+                MusicCrossfadeStream.f(68);
               }
             } else {
               un.field_j.f(param1 ^ 550);
@@ -559,16 +559,16 @@ final class ii {
           }
           if (pf.field_e &&
             cm.field_m) {
-            rk.field_e.a(Integer.toString(kk.field_k), 30, 100, 1, -1);
+            rk.field_e.drawText(Integer.toString(kk.field_k), 30, 100, 1, -1);
           }
           if (ud.field_K) {
             var3 = Runtime.getRuntime().totalMemory();
             var5_long = Runtime.getRuntime().freeMemory();
-            rk.field_e.c((var3 - var5_long) / 1024L + " kB / " + var3 / 1024L + " kB", 610, 100, 0, 0);
+            rk.field_e.drawRightAlignedText((var3 - var5_long) / 1024L + " kB / " + var3 / 1024L + " kB", 610, 100, 0, 0);
           }
           if (li.field_e) {
             var17 = qj.field_e;
-            var4 = var17.field_z + var17.field_w;
+            var4 = var17.maxDescent + var17.maxAscent;
             var5 = 30;
             var6 = var4 + 15;
             var7 = var5 + 110;
@@ -581,12 +581,12 @@ final class ii {
               if (!var12.getType().isArray()) {
                 var13 = Thread.currentThread();
                 var13.setName(var12.getName());
-                var17.c(var13.getName(), var7, var6, 16777215, 0);
+                var17.drawRightAlignedText(var13.getName(), var7, var6, 16777215, 0);
                 try {
                   var13.setName(var12.get(this.field_a).toString());
                   var14 = var13.getName();
                   if (var14 != null) {
-                    var17.a(var14, var7 + 15, var6, 16777215, 0);
+                    var17.drawText(var14, var7 + 15, var6, 16777215, 0);
                     decompiledRegionSelector0 = 1;
                   } else {
                     var6 = var6 + var4;
@@ -804,7 +804,7 @@ final class ii {
             var4Lifetime1 = 1;
           }
           if (param0 == 96 ||
-            cg.field_F == param0) {
+            DiskCacheRequest.field_F == param0) {
             var4Lifetime1 = 2;
           }
           if (97 == param0 ||
@@ -901,7 +901,7 @@ final class ii {
         try {
           kf.field_q = param2;
           int var5_int = 55 / ((2 - param3) / 55);
-          ch.a(param0, param4, 5, param1, ab.field_c, 320, rk.field_e.field_w, 10, bi.field_g, true, rk.field_e, rk.field_e.field_z + rk.field_e.field_w, (byte) 27, 15, 240);
+          ch.a(param0, param4, 5, param1, ab.field_c, 320, rk.field_e.maxAscent, 10, bi.field_g, true, rk.field_e, rk.field_e.maxDescent + rk.field_e.maxAscent, (byte) 27, 15, 240);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ii.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

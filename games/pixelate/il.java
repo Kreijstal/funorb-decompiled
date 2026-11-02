@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class il {
-    private fm field_a;
+    private ResourceArchive field_a;
     static vg field_d;
     static boolean field_g;
     private le field_h;
     static String field_c;
-    private fm field_b;
+    private ResourceArchive field_b;
     static int field_e;
     static int field_f;
 
@@ -19,19 +19,19 @@ final class il {
     }
 
     final qe a(int param0, boolean param1) {
-        fm stackIn_7_0 = null;
+        ResourceArchive stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_7_2 = 0;
         boolean stackIn_8_3;
-        fm stackIn_11_0 = null;
+        ResourceArchive stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
         boolean stackIn_12_3;
-        fm stackIn_29_0 = null;
+        ResourceArchive stackIn_29_0 = null;
         int stackIn_29_1 = 0;
         int stackIn_29_2 = 0;
         boolean stackIn_30_3;
-        fm stackIn_33_0 = null;
+        ResourceArchive stackIn_33_0 = null;
         int stackIn_33_1 = 0;
         int stackIn_33_2 = 0;
         boolean stackIn_34_3;
@@ -52,13 +52,13 @@ final class il {
             stackIn_33_1 = 0;
             stackIn_33_2 = param0;
             stackIn_34_3 = (param1) ? false : true;
-            var4 = ((fm) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_34_3);
+            var4 = ((ResourceArchive) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_34_3);
           } else {
             stackIn_29_0 = this.field_b;
             stackIn_29_1 = 0;
             stackIn_29_2 = 32767 & param0;
             stackIn_30_3 = (param1) ? false : true;
-            var4 = ((fm) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3);
+            var4 = ((ResourceArchive) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3);
           }
           var6 = new qe();
           if (var4 != null) {
@@ -80,13 +80,13 @@ final class il {
           stackIn_11_1 = 0;
           stackIn_11_2 = param0;
           stackIn_12_3 = (param1) ? false : true;
-          var4Lifetime1 = ((fm) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
+          var4Lifetime1 = ((ResourceArchive) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
         } else {
           stackIn_7_0 = this.field_b;
           stackIn_7_1 = 0;
           stackIn_7_2 = 32767 & param0;
           stackIn_8_3 = (param1) ? false : true;
-          var4Lifetime1 = ((fm) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
+          var4Lifetime1 = ((ResourceArchive) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
         }
         var5 = new qe();
         var3Lifetime2 = var5;
@@ -118,13 +118,13 @@ final class il {
           var2 = (uj) (ImageProducerRasterBuffer.field_n.c(1504642273));
           while (var2 != null) {
             if (var2.a(param1, (byte) -82)) {
-              var2 = (uj) (ImageProducerRasterBuffer.field_n.f(1504642273));
+              var2 = (uj) (ImageProducerRasterBuffer.field_n.last(1504642273));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            ImageProducerRasterBuffer.field_n.a(22125, param1);
+            ImageProducerRasterBuffer.field_n.addFirst(22125, param1);
             return;
           }
           stackIn_10_0 = 126;
@@ -154,7 +154,7 @@ final class il {
         field_c = null;
     }
 
-    il(int param0, fm param1, fm param2) {
+    il(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

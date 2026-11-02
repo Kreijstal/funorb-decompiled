@@ -76,7 +76,7 @@ final class up {
         }
         int var2 = (-this.field_b + 255) / 10;
         this.field_l.a(-var2 + 80, 180, this.field_b);
-        if (uo.field_j <= 0 &&
+        if (BufferedRandomAccessFile.field_j <= 0 &&
           10 <= this.field_m) {
           var3 = 3 * this.field_b >> 2;
           hd.field_w.a(-var2 + 96, 196, var3);
@@ -88,9 +88,9 @@ final class up {
         int var7 = 0;
         int var8 = 0;
         int var9 = Pixelate.field_H ? 1 : 0;
-        hh var10 = lk.field_o[this.field_m];
-        hh var11 = var10;
-        jj var3 = rj.field_C[gd.field_e[this.field_m].field_a];
+        IndexedSprite var10 = lk.field_o[this.field_m];
+        IndexedSprite var11 = var10;
+        jj var3 = Js5NetworkRequest.field_C[gd.field_e[this.field_m].field_a];
         this.field_l = new Sprite(160, 160);
         this.field_l.c();
         int var4 = param0 * (5 - var11.field_f);

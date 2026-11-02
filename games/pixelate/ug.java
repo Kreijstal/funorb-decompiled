@@ -7,7 +7,7 @@ final class ug extends IntrusiveNode {
     static int[] field_n;
     static vp field_s;
     static pb field_q;
-    static uo[] field_l;
+    static BufferedRandomAccessFile[] field_l;
     long field_o;
     static int field_k;
     static String field_p;

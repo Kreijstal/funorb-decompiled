@@ -13,7 +13,7 @@ final class dd {
     boolean field_i;
     private static long[] field_c;
     int field_h;
-    hh[] field_l;
+    IndexedSprite[] field_l;
     int field_g;
     int field_d;
     int field_j;
@@ -25,7 +25,7 @@ final class dd {
         if (param0 != 62) {
           dd.a('￑', (byte) 81);
         }
-        return new wm[]{rn.field_f, ej.field_b, w.field_w, gj.field_T, lb.field_r, DualLinkNode.field_l, lb.field_C, gn.field_u, pf.field_f, of.field_e, kn.field_M, u.field_d, gh.field_s, ad.field_u};
+        return new wm[]{SectorCacheStore.field_f, ej.field_b, w.field_w, gj.field_T, lb.field_r, DualLinkNode.field_l, lb.field_C, ArchiveRequest.field_u, pf.field_f, of.field_e, kn.field_M, u.field_d, gh.field_s, ad.field_u};
     }
 
     final void a(byte param0, Random param1) {
@@ -34,7 +34,7 @@ final class dd {
         int[] var11 = null;
         int[] var4 = null;
         int var9 = 0;
-        hh[] var5 = null;
+        IndexedSprite[] var5 = null;
         int var10 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -61,7 +61,7 @@ final class dd {
             var9++;
           }
           var6Lifetime1 = -119 % ((param0 + 53) / 60);
-          var5 = new hh[var3_int];
+          var5 = new IndexedSprite[var3_int];
           var10 = 0;
           var7Lifetime1 = var10;
           while (var3_int > var10) {
@@ -164,7 +164,7 @@ final class dd {
           var1 = nf.field_b.l(-24832);
         }
         if (param0 == var1.length()) {
-          var1 = cg.b(false);
+          var1 = DiskCacheRequest.b(false);
         }
         if (var1.length() == 0) {
           var1 = cd.field_d;
@@ -172,7 +172,7 @@ final class dd {
         return var1;
     }
 
-    dd(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, hh[] param8) {
+    dd(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, IndexedSprite[] param8) {
         try {
           this.field_l = param8;
           if ((30 & param2) == 30) {

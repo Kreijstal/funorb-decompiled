@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bq {
-    static bb field_a;
-    static bb field_b;
+    static IntrusiveDeque field_a;
+    static IntrusiveDeque field_b;
     static int field_d;
     static int field_c;
 
@@ -204,7 +204,7 @@ final class bq {
             }
             fo.field_a[1] = 0;
             vm.field_e[0] = vf.field_c;
-            vm.field_e[1] = sn.field_q;
+            vm.field_e[1] = MusicPatch.field_q;
             jj.field_h = new int[2];
             vm.field_e[4] = bh.field_m;
             vm.field_e[5] = "";
@@ -284,7 +284,7 @@ final class bq {
             }
             MouseInputHandler.field_b = stackIn_115_0 + stackIn_116_1;
           }
-          de.field_h = bb.field_b - (MouseInputHandler.field_b >> 1);
+          de.field_h = IntrusiveDeque.field_b - (MouseInputHandler.field_b >> 1);
           so.field_c = new int[vm.field_e.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = de.field_h;
@@ -328,9 +328,9 @@ final class bq {
         }
         if (tm.a((byte) 117)) {
           vd.a(param3, param1, param4, (byte) -86);
-          if (null != eg.field_n &&
-            eg.field_n.a(param4, param6, false, param5, param3)) {
-            jp.a(71);
+          if (null != ProxySocketConnector.field_n &&
+            ProxySocketConnector.field_n.a(param4, param6, false, param5, param3)) {
+            ArchiveProvider.a(71);
             param3 = false;
           }
           sm.a(param4, param3, 0);
@@ -347,6 +347,6 @@ final class bq {
     }
 
     static {
-        field_a = new bb();
+        field_a = new IntrusiveDeque();
     }
 }

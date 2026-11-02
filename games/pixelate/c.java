@@ -15,7 +15,7 @@ class c extends qm {
     static volatile int field_X;
     static String field_O;
     static CanvasRasterBuffer field_R;
-    static tc field_Y;
+    static BinaryBitmapFont field_Y;
 
     private final void d(boolean param0) {
         try {
@@ -139,12 +139,12 @@ class c extends qm {
     final static void m(int param0) {
         int var1 = (ni.field_q - 640) / 2;
         if (param0 < 18) {
-          field_Y = (tc) null;
+          field_Y = (BinaryBitmapFont) null;
         }
         int var2 = qh.field_c * qh.field_c;
         int var3 = var2 - oo.field_b * oo.field_b;
         ql.field_n.a(90, -210 + SoftwareRasterizer.field_d - 4, -(var3 * 199 / var2) + var1, 256, 199);
-        ti.field_E.a(0, -120 + SoftwareRasterizer.field_d - 4, 438 * var3 / var2 + var1 + 202, 256, 438);
+        MidiPcmStream.field_E.a(0, -120 + SoftwareRasterizer.field_d - 4, 438 * var3 / var2 + var1 + 202, 256, 438);
     }
 
     private final String a(byte param0) {

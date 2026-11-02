@@ -89,12 +89,12 @@ final class ue extends IntrusiveNode {
           var4 = (hf) (dh.field_a.c(1504642273));
           while (var4 != null) {
             id.a((byte) -117, var4, param0);
-            var4 = (hf) (dh.field_a.f(param1 + 1504642231));
+            var4 = (hf) (dh.field_a.last(param1 + 1504642231));
           }
           var2 = tj.field_z.c(1504642273);
           while (var2 != null) {
             ro.a(126, param0);
-            var2 = tj.field_z.f(1504642273);
+            var2 = tj.field_z.last(1504642273);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

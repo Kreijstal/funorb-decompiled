@@ -7,9 +7,9 @@ final class ma extends bg {
     private int field_v;
     private int field_A;
     private boolean field_w;
-    static jl field_y;
+    static BitmapFont field_y;
     private int field_r;
-    static bb field_o;
+    static IntrusiveDeque field_o;
     private int field_m;
     private int field_s;
     private int[] field_t;
@@ -187,7 +187,7 @@ final class ma extends bg {
           } catch (InterruptedException interruptedException) {
           }
           if (param0 != 37) {
-            field_o = (bb) null;
+            field_o = (IntrusiveDeque) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -271,7 +271,7 @@ final class ma extends bg {
         if (0 < this.field_v) {
           var3Lifetime1 = 2;
         }
-        ll.field_m[var3Lifetime1].b(-8 + (this.field_v + 320), -10 + this.field_m);
+        JaggrabDownloader.field_m[var3Lifetime1].b(-8 + (this.field_v + 320), -10 + this.field_m);
     }
 
     final void a(int param0, boolean param1) {
@@ -346,6 +346,6 @@ final class ma extends bg {
     }
 
     static {
-        field_o = new bb();
+        field_o = new IntrusiveDeque();
     }
 }

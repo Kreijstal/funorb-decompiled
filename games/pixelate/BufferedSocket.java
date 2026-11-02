@@ -7,7 +7,7 @@ final class BufferedSocket implements Runnable {
     static int field_k;
     static String field_i;
     private OutputStream field_j;
-    private ei field_m;
+    private PlatformTask field_m;
     private PlatformTaskDispatcher field_e;
     private int field_n;
     private int field_l;

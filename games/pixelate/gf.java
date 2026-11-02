@@ -52,10 +52,10 @@ abstract class gf {
             field_g = (int[]) null;
           }
           ig.a(-56);
-          var1 = po.field_b.c(1504642273);
+          var1 = SoundCache.field_b.c(1504642273);
           while (var1 instanceof ln) {
             var2 = var1.field_a;
-            if (((ln) (var1)).field_o.h()) {
+            if (((ln) (var1)).field_o.isSamplePositionOutOfRange()) {
               var1.c(2779);
             }
             var1 = var2;
@@ -68,7 +68,7 @@ abstract class gf {
         }
     }
 
-    final static boolean a(fm param0, int param1, fm param2, fm param3) {
+    final static boolean a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_17_0 = null;
@@ -81,16 +81,16 @@ abstract class gf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2.b(-3) &&
-            param2.a("commonui", -1)) {
+            param2.ensureGroupAvailableByName("commonui", -1)) {
             if (!param0.b(-3)) {
               return false;
             }
-            if (!param0.a("commonui", -1)) {
+            if (!param0.ensureGroupAvailableByName("commonui", -1)) {
               return false;
             }
             var4_int = -3 / ((-26 - param1) / 51);
             if (param3.b(-3) &&
-              param3.a("button.gif", -1)) {
+              param3.ensureGroupAvailableByName("button.gif", -1)) {
               return true;
             }
             return false;

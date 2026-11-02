@@ -32,7 +32,7 @@ final class ph extends IntrusiveNode {
           }
           try {
             if (0 == rb.field_q) {
-              se.field_o = ef.field_e.a(20278, bl.field_e, kj.field_s);
+              se.field_o = ef.field_e.a(20278, bl.field_e, ArchiveIndex.field_s);
               rb.field_q = rb.field_q + 1;
             }
             if (1 == rb.field_q) {
@@ -103,7 +103,7 @@ final class ph extends IntrusiveNode {
         field_m = null;
     }
 
-    final static void a(fm param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         RuntimeException var2 = null;
         ak var3 = null;
         ak var5 = null;

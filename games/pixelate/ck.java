@@ -176,7 +176,7 @@ final class ck {
         }
     }
 
-    final static void a(int param0, jl param1, fm param2) {
+    final static void a(int param0, BitmapFont param1, ResourceArchive param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -192,7 +192,7 @@ final class ck {
         int var9 = 0;
         Throwable var10 = null;
         Throwable var11 = null;
-        jl var12 = null;
+        BitmapFont var12 = null;
         int[] var16 = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
@@ -203,7 +203,7 @@ final class ck {
             jo.a(1, "QC1", (Throwable) null);
             return;
           }
-          param2.field_i = false;
+          param2.discardPackedGroups = false;
           param2.field_e = 0;
           w.field_y = new il(var3_int, param2, param2);
           jd.field_k = new u(var3_int, param2, param2, new dn());
@@ -214,8 +214,8 @@ final class ck {
             return;
           }
           oo.a(-1, var4);
-          var12 = (jl) null;
-          vl.field_L = ka.a(65793, 4020342, 65793, (jl) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
+          var12 = (BitmapFont) null;
+          vl.field_L = ka.a(65793, 4020342, 65793, (BitmapFont) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
           ue.field_t = ka.a(0, 0, 0, param1, 0, 16764006, 0, 0, 21, 0, 0, 0, 0);
           ve.field_Ib = ka.a(0, 0, 0, param1, 0, 16777215, 0, 0, 21, 0, 0, 0, 0);
           var5 = SoftwareRasterizer.field_j;
@@ -227,8 +227,8 @@ final class ck {
             SoftwareRasterizer.g(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
-          pi.field_Rb = lj.a(ue.field_t, ve.field_Ib, -55, vl.field_L, var4);
-          bn.field_I.field_L = new bb();
+          pi.field_Rb = BoundedRandomAccessFile.a(ue.field_t, ve.field_Ib, -55, vl.field_L, var4);
+          bn.field_I.field_L = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

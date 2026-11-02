@@ -30,7 +30,7 @@ final class ko extends ka {
         try {
           this.field_gb = param1;
           if (null != this.field_gb) {
-            var3_int = ba.field_d.a(this.field_gb, 260, ba.field_d.field_w);
+            var3_int = ba.field_d.paragraphHeight(this.field_gb, 260, ba.field_d.maxAscent);
             this.a(150 + var3_int, (byte) -110, 300);
           }
           this.field_bb = new oc(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -60,21 +60,21 @@ final class ko extends ka {
         if (!param2) {
           field_ib = (String) null;
           super.a(param0, param1, param2);
-          ba.field_d.b(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
+          ba.field_d.drawCentered(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
           if (this.field_gb != null) {
             SoftwareRasterizer.b(param0 + 20, 120 + param1 - 7, 260, 8421504);
-            ba.field_d.a(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.field_w);
+            ba.field_d.drawParagraph(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.maxAscent);
             return;
           }
           return;
         }
         super.a(param0, param1, param2);
-        ba.field_d.b(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
+        ba.field_d.drawCentered(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
         if (this.field_gb == null) {
           return;
         }
         SoftwareRasterizer.b(param0 + 20, 120 + param1 - 7, 260, 8421504);
-        ba.field_d.a(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.field_w);
+        ba.field_d.drawParagraph(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.maxAscent);
     }
 
     final void a(String param0, float param1, int param2, boolean param3) {

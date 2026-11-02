@@ -5,7 +5,7 @@ final class qg {
     static String field_c;
     static String[] field_d;
     static String field_b;
-    static hh[] field_a;
+    static IndexedSprite[] field_a;
 
     public static void a(byte param0) {
         field_d = null;

@@ -9,7 +9,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static ak field_h;
     static String field_g;
     static String field_a;
-    static tc field_d;
+    static BinaryBitmapFont field_d;
 
     public final void paint(java.awt.Graphics param0) {
         try {

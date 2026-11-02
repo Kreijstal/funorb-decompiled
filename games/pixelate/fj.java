@@ -41,12 +41,12 @@ final class fj {
             !pk.b(121) &&
             io.field_c == null &&
             bn.field_S == null) {
-            if (!lh.field_g) {
-              var5 = eg.field_n;
+            if (!IsaacRandom.field_g) {
+              var5 = ProxySocketConnector.field_n;
               var6 = kc.field_s;
               var5.field_b.a(var6, (byte) -33, 14);
             }
-            var7 = eg.field_n;
+            var7 = ProxySocketConnector.field_n;
             var8 = nn.field_h;
             var7.field_b.a(var8, (byte) -128, 20);
           }
@@ -54,25 +54,25 @@ final class fj {
             !pk.b(120) &&
             io.field_c != null &&
             param0.field_b == io.field_c.c((byte) 8)) {
-            if (!lh.field_g) {
-              var9 = eg.field_n;
+            if (!IsaacRandom.field_g) {
+              var9 = ProxySocketConnector.field_n;
               var10 = ee.field_c;
               var9.field_b.a(var10, (byte) -60, 14);
             }
-            var11 = eg.field_n;
+            var11 = ProxySocketConnector.field_n;
             var12 = od.field_Eb;
             var11.field_b.a(var12, (byte) -73, 20);
           }
-          eg.field_n.c(-24);
-          eg.field_n.b(false, (byte) -98);
-          eg.field_n.a(param0.field_j, param0.field_l, -3);
-          eg.field_n.b(8893);
+          ProxySocketConnector.field_n.c(-24);
+          ProxySocketConnector.field_n.b(false, (byte) -98);
+          ProxySocketConnector.field_n.a(param0.field_j, param0.field_l, -3);
+          ProxySocketConnector.field_n.b(8893);
           if (param1 <= 96) {
             field_a = -88;
           }
-          eg.field_n.a((byte) 99, param0);
-          var13 = eg.field_n;
-          var3 = uo.field_a;
+          ProxySocketConnector.field_n.a((byte) 99, param0);
+          var13 = ProxySocketConnector.field_n;
+          var3 = BufferedRandomAccessFile.field_a;
           var4 = ji.field_c;
           var13.field_b.b(0, var3, 88, var4, 0);
           return;

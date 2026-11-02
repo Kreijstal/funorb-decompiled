@@ -483,11 +483,11 @@ final class hc extends ch implements om, vo {
         int var6 = 0;
         try {
           this.field_O = param0;
-          this.field_K = new qm(vi.field_J, (fn) null);
+          this.field_K = new qm(MusicCrossfadeStream.field_J, (fn) null);
           this.field_K.field_y = (eb) ((Object) new ad());
-          var7 = sd.a(sl.field_e, 102, new String[]{this.e((byte) 62), this.a(-21)});
+          var7 = sd.a(IndexedSpriteState.field_e, 102, new String[]{this.e((byte) 62), this.a(-21)});
           var3 = 20;
-          var4 = new uc(he.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.field_w, -1, 2147483647, true);
+          var4 = new uc(he.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.maxAscent, -1, 2147483647, true);
           this.field_N = new db(var7, var4);
           this.field_N.field_l = "";
           this.field_N.a(IntrusiveNode.field_g, 0, 0);

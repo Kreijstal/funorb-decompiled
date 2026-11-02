@@ -14,7 +14,7 @@ final class th {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = fb.a(wo.field_h, (byte) 119, rj.field_I);
+          var2_int = fb.a(wo.field_h, (byte) 119, Js5NetworkRequest.field_I);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }
