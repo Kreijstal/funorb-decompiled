@@ -44,14 +44,14 @@ abstract class GraphicsRenderer {
 
     abstract int i();
 
-    final void e(int param0, int param1, int param2, int param3, int param4, int param5) {
-        if (param5 != 3105) {
+    final void drawRectOutlineAlpha(int argb, int height, int y, int width, int x, int obfuscationGuard) {
+        if (obfuscationGuard != 3105) {
           return;
         }
-        this.a(param4, param2, param3, param1, param0, 1);
+        this.drawRectOutline(x, y, width, height, argb, 1);
     }
 
-    abstract void c(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawLine(int x1, int y1, int x2, int y2, int argb, int blendMode);
 
     abstract void f(int param0, int param1);
 
@@ -107,7 +107,7 @@ abstract class GraphicsRenderer {
         }
     }
 
-    abstract void KA(int param0, int param1, int param2, int param3);
+    abstract void setClip(int left, int top, int right, int bottom);
 
     abstract void a(sm param0);
 
@@ -115,7 +115,7 @@ abstract class GraphicsRenderer {
 
     abstract boolean b();
 
-    abstract void aa(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void fillRect(int x, int y, int width, int height, int argb, int blendMode);
 
     abstract void a(za param0);
 
@@ -124,14 +124,14 @@ abstract class GraphicsRenderer {
     abstract gd a(int param0, int param1);
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.c(param1, param0, param2, param4, param3, param5);
+        this.drawLine(param1, param0, param2, param4, param3, param5);
     }
 
-    abstract RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2);
+    abstract RendererBitmapFont createFont(BitmapFontMetrics metrics, SpriteData[] glyphSprites, boolean param2);
 
     abstract void DA(int param0, int param1, int param2, int param3);
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawRectOutline(int x, int y, int width, int height, int argb, int blendMode);
 
     abstract sm a(ra param0, gd param1);
 
@@ -147,7 +147,7 @@ abstract class GraphicsRenderer {
         String stackIn_5_2 = null;
         try {
           int var7_int = -44 % ((param0 - 43) / 53);
-          RenderSprite stackIn_1_0 = this.a(param2, param3, param5, param4, param1, true);
+          RenderSprite stackIn_1_0 = this.createArgbSprite(param2, param3, param5, param4, param1, true);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,20 +163,20 @@ abstract class GraphicsRenderer {
         }
     }
 
-    abstract RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
+    abstract RenderSprite createArgbSprite(int[] pixels, int offset, int stride, int width, int height, boolean param5);
 
-    abstract void K(int[] param0);
+    abstract void getClip(int[] bounds);
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 != 28321) {
+    final void drawHorizontalLineAlpha(int y, int argb, int obfuscationGuard, int x, int length) {
+        if (obfuscationGuard != 28321) {
           return;
         }
-        this.U(param3, param0, param4, param1, 1);
+        this.drawHorizontalLine(x, y, length, argb, 1);
     }
 
-    abstract void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
+    abstract void copyPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride);
 
-    abstract void T(int param0, int param1, int param2, int param3);
+    abstract void intersectClip(int left, int top, int right, int bottom);
 
     final static void a(MusicTrack param0, byte param1, boolean param2, int param3) {
         String stackIn_19_2 = null;
@@ -228,7 +228,7 @@ abstract class GraphicsRenderer {
 
     abstract za c(int param0);
 
-    abstract void U(int param0, int param1, int param2, int param3, int param4);
+    abstract void drawHorizontalLine(int x, int y, int length, int argb, int blendMode);
 
     protected void finalize() {
         this.a(-9);
@@ -240,7 +240,7 @@ abstract class GraphicsRenderer {
 
     void a(RenderSprite param0, boolean param1) {
         try {
-          this.a(this.a(param0, param1 ? this.a(param0.a(), param0.b()) : null));
+          this.a(this.a(param0, param1 ? this.a(param0.getWidth(), param0.getHeight()) : null));
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ha.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -250,9 +250,9 @@ abstract class GraphicsRenderer {
 
     abstract boolean d();
 
-    final void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.aa(param5, param2, param1, param0, param4, 1);
-        if (param3 != -5782) {
+    final void fillRectAlpha(int height, int width, int y, int obfuscationGuard, int argb, int x) {
+        this.fillRect(x, y, width, height, argb, 1);
+        if (obfuscationGuard != -5782) {
           this.XA();
         }
     }

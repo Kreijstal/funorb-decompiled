@@ -48,25 +48,25 @@ final class MenuScreen {
         try {
           param1 = param1 * param4 >> 8;
           int var7_int = 15;
-          param3.d(10, param1 + 1, 8 + param2, -5782, -861274112, param0 - 2);
+          param3.fillRectAlpha(10, param1 + 1, 8 + param2, -5782, -861274112, param0 - 2);
           param0 = param0 - var7_int;
           param4 = param4 + (var7_int << 1);
-          CipherPacketBuffer.brassSliderSprites[0].a(param0, param2);
-          CipherPacketBuffer.brassSliderSprites[2].a(-CipherPacketBuffer.brassSliderSprites[2].d() + (param0 + param4), param2);
+          CipherPacketBuffer.brassSliderSprites[0].draw(param0, param2);
+          CipherPacketBuffer.brassSliderSprites[2].draw(-CipherPacketBuffer.brassSliderSprites[2].getFullWidth() + (param0 + param4), param2);
           bo var8 = fa.a(param3, true);
-          param4 = param4 + param0 - CipherPacketBuffer.brassSliderSprites[2].d();
+          param4 = param4 + param0 - CipherPacketBuffer.brassSliderSprites[2].getFullWidth();
           int var9 = param0;
-          param0 = param0 + CipherPacketBuffer.brassSliderSprites[0].d();
-          var8.a(param4, param0, CipherPacketBuffer.brassSliderSprites[2].c() + param2, param2, 126);
+          param0 = param0 + CipherPacketBuffer.brassSliderSprites[0].getFullWidth();
+          var8.a(param4, param0, CipherPacketBuffer.brassSliderSprites[2].getFullHeight() + param2, param2, 126);
           while (param4 > param0) {
-            CipherPacketBuffer.brassSliderSprites[1].a(param0, param2);
-            param0 = param0 + CipherPacketBuffer.brassSliderSprites[1].d();
+            CipherPacketBuffer.brassSliderSprites[1].draw(param0, param2);
+            param0 = param0 + CipherPacketBuffer.brassSliderSprites[1].getFullWidth();
           }
           if (param5 >= -11) {
             this.handleNavigationKey(-86);
           }
           var8.a(true);
-          CipherPacketBuffer.brassSliderSprites[3].a(var9 + param1, param2);
+          CipherPacketBuffer.brassSliderSprites[3].draw(var9 + param1, param2);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "nk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -263,7 +263,7 @@ final class MenuScreen {
                     int var23_int = var35[var29] % 100;
                     String var24 = var14[var29];
                     if (var16 == var29) {
-                      var30.d(16, var20Lifetime1 + (20 - var19Lifetime1), -12 + var17, obfuscationGuard ^ 13057, -7247318, var19Lifetime1 - 10);
+                      var30.fillRectAlpha(16, var20Lifetime1 + (20 - var19Lifetime1), -12 + var17, obfuscationGuard ^ 13057, -7247318, var19Lifetime1 - 10);
                       var21Lifetime1Lifetime1 = -256;
                     }
                     PacketBuffer.gameFont.drawText(var5, var5, -1 + (20 + var19Lifetime1), var24, 18731, var17);
@@ -291,7 +291,7 @@ final class MenuScreen {
                   var16 == -1) {
                   int var19Lifetime2 = 128;
                   int var20Lifetime2 = 512;
-                  var30.d(16, 20 + var20Lifetime2 - var19Lifetime2, var17 - 12, -5782, -7247318, var19Lifetime2 - 10);
+                  var30.fillRectAlpha(16, 20 + var20Lifetime2 - var19Lifetime2, var17 - 12, -5782, -7247318, var19Lifetime2 - 10);
                   int var21Lifetime2 = -256;
                   PacketBuffer.gameFont.drawText(var5, var5, 19 + var19Lifetime2, fj.playerDisplayName, 18731, var17);
                   PacketBuffer.gameFont.drawText(var6, var6, 20 + var19Lifetime2, fj.playerDisplayName, 18731, -1 + var17);
@@ -390,8 +390,8 @@ final class MenuScreen {
         try {
           bo var16 = fa.a(param4, true);
           var16.a(param3 + (param2 - 5), 5 + param2, -5 + (param5 + param0), param5 + 5, -71);
-          for (int var8 = 0; var8 < param0 - 10; var8 = var8 + qk.woodenTileSprite.c()) {
-            qk.woodenTileSprite.b(param2 + 5, var8 + (param5 + 5), -10 + param3, qk.woodenTileSprite.c());
+          for (int var8 = 0; var8 < param0 - 10; var8 = var8 + qk.woodenTileSprite.getFullHeight()) {
+            qk.woodenTileSprite.drawScaledPlain(param2 + 5, var8 + (param5 + 5), -10 + param3, qk.woodenTileSprite.getFullHeight());
           }
           var16.a(true);
           GraphicsRenderer var9 = param4;
@@ -679,25 +679,25 @@ final class MenuScreen {
           if (param5 != 24063) {
             return;
           }
-          SoftCacheReference.brassButtonSprites[0].a(param1, param4);
-          SoftCacheReference.brassButtonSprites[2].a(-SoftCacheReference.brassButtonSprites[2].d() + (param0 + param1), param4);
+          SoftCacheReference.brassButtonSprites[0].draw(param1, param4);
+          SoftCacheReference.brassButtonSprites[2].draw(-SoftCacheReference.brassButtonSprites[2].getFullWidth() + (param0 + param1), param4);
           bo var11 = fa.a(param2, true);
           bo var12 = var11;
-          int var8 = param0 + param1 - SoftCacheReference.brassButtonSprites[2].d();
-          param1 = param1 + SoftCacheReference.brassButtonSprites[0].d();
-          var12.a(var8, param1, param4 + SoftCacheReference.brassButtonSprites[2].c(), param4, 102);
+          int var8 = param0 + param1 - SoftCacheReference.brassButtonSprites[2].getFullWidth();
+          param1 = param1 + SoftCacheReference.brassButtonSprites[0].getFullWidth();
+          var12.a(var8, param1, param4 + SoftCacheReference.brassButtonSprites[2].getFullHeight(), param4, 102);
           while (var8 > param1) {
-            SoftCacheReference.brassButtonSprites[1].a(param1, param4);
-            param1 = param1 + SoftCacheReference.brassButtonSprites[1].d();
+            SoftCacheReference.brassButtonSprites[1].draw(param1, param4);
+            param1 = param1 + SoftCacheReference.brassButtonSprites[1].getFullWidth();
           }
           var12.a(true);
-          SocketConnector.levelRingSprites[21].b(param1 + 3, 9 + param4, 16, 16);
-          SocketConnector.levelRingSprites[21].b(-param0 + (20 + param1), 9 + param4, 16, 16);
-          HighscoreQuery.powerBulbSprites[0].b(param1 + 3, 9 + param4, 16, 16);
-          HighscoreQuery.powerBulbSprites[0].b(-param0 + param1 + 20, 9 + param4, 16, 16);
+          SocketConnector.levelRingSprites[21].drawScaledPlain(param1 + 3, 9 + param4, 16, 16);
+          SocketConnector.levelRingSprites[21].drawScaledPlain(-param0 + (20 + param1), 9 + param4, 16, 16);
+          HighscoreQuery.powerBulbSprites[0].drawScaledPlain(param1 + 3, 9 + param4, 16, 16);
+          HighscoreQuery.powerBulbSprites[0].drawScaledPlain(-param0 + param1 + 20, 9 + param4, 16, 16);
           if (param3) {
-            HighscoreQuery.powerBulbSprites[1].a(-15 + param1, -12 + param4, 1, 0, 2);
-            HighscoreQuery.powerBulbSprites[1].a(-param0 + param1 + 1, -12 + param4, 1, 0, 2);
+            HighscoreQuery.powerBulbSprites[1].drawBlended(-15 + param1, -12 + param4, 1, 0, 2);
+            HighscoreQuery.powerBulbSprites[1].drawBlended(-param0 + param1 + 1, -12 + param4, 1, 0, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -825,8 +825,8 @@ final class MenuScreen {
         try {
           bo var18 = fa.a(param1, true);
           var18.a(-5 + (param3 + param2), 5 + param2, param5 + param4 - 5, param4 + 5, -21);
-          for (int var9 = 0; param5 - 10 > var9; var9 = var9 + qk.woodenTileSprite.c()) {
-            qk.woodenTileSprite.a(5 + param2, param4 + var9 + 5, -10 + param3, qk.woodenTileSprite.c(), 2, param6, 0);
+          for (int var9 = 0; param5 - 10 > var9; var9 = var9 + qk.woodenTileSprite.getFullHeight()) {
+            qk.woodenTileSprite.drawScaled(5 + param2, param4 + var9 + 5, -10 + param3, qk.woodenTileSprite.getFullHeight(), 2, param6, 0);
           }
           var18.a(true);
           GraphicsRenderer var10 = param1;
@@ -930,7 +930,7 @@ final class MenuScreen {
             }
           }
           if (this.screenId == 0) {
-            mp.titleImage.a(44, 30 + verticalOffset);
+            mp.titleImage.draw(44, 30 + verticalOffset);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1005,13 +1005,13 @@ final class MenuScreen {
               var20 + 48 >= ic.field_b &&
               cf.field_g >= var21 &&
               cf.field_g <= var21 + 48) {
-              HighscoreQuery.powerBulbSprites[1].a(-28 + var20, var21 - 30, 108, 108, 0, 2004318071, 2);
+              HighscoreQuery.powerBulbSprites[1].drawScaled(-28 + var20, var21 - 30, 108, 108, 0, 2004318071, 2);
               var17 = var18;
             }
             if (this.selectedAchievementId == var18) {
-              HighscoreQuery.powerBulbSprites[1].a(-28 + var20, -30 + var21, 108, 108, 1, 0, 2);
+              HighscoreQuery.powerBulbSprites[1].drawScaled(-28 + var20, -30 + var21, 108, 108, 1, 0, 2);
             }
-            var19_ref_pa.a(var20, var21, 48, 48, 0, var5, 1);
+            var19_ref_pa.drawScaled(var20, var21, 48, 48, 0, var5, 1);
             if (this.pendingClickX >= var20 &&
               this.pendingClickX <= 48 + var20 &&
               var21 <= this.pendingClickY &&
@@ -1062,10 +1062,10 @@ final class MenuScreen {
             var15Lifetime1Lifetime1 += 32;
             PacketBuffer.gameFont.drawCenteredText(111, -1, -16777216, var15Lifetime1Lifetime1, var7Lifetime2Lifetime1, var18_ref_String);
           } else {
-            var7Lifetime2Lifetime1 = var7Lifetime2Lifetime1 - ((qe.field_f[var17] - 1) * lg.coinSprite.d() / 6 + lg.coinSprite.d() / 2 >> 2);
+            var7Lifetime2Lifetime1 = var7Lifetime2Lifetime1 - ((qe.field_f[var17] - 1) * lg.coinSprite.getFullWidth() / 6 + lg.coinSprite.getFullWidth() / 2 >> 2);
             for (int var19 = 0; qe.field_f[var17] > var19; var19++) {
-              lg.coinSprite.b(var7Lifetime2Lifetime1, 12 + var15Lifetime1Lifetime1, 32, 32);
-              var7Lifetime2Lifetime1 = var7Lifetime2Lifetime1 + (lg.coinSprite.d() / 3 >> 2);
+              lg.coinSprite.drawScaledPlain(var7Lifetime2Lifetime1, 12 + var15Lifetime1Lifetime1, 32, 32);
+              var7Lifetime2Lifetime1 = var7Lifetime2Lifetime1 + (lg.coinSprite.getFullWidth() / 3 >> 2);
             }
           }
           boolean stackIn_65_0 = !(0 == (var16 & 1 << var17));
@@ -1090,12 +1090,12 @@ final class MenuScreen {
           PacketBuffer.gameFont.drawCenteredText(118, var5, var6, var15Lifetime1Lifetime3, var7Lifetime2Lifetime3, lb.field_a[var17]);
           int var21Lifetime1 = verticalOffset + 200;
           if (var19Lifetime1) {
-            aa.achievementSprites[var17].a(256, var21Lifetime1, 0, var5, 1);
+            aa.achievementSprites[var17].drawBlended(256, var21Lifetime1, 0, var5, 1);
           } else if (qr.field_a <= 0 &&
             var12[var17]) {
-            ut.lockedSprite.a(256, var21Lifetime1, 0, var5, 1);
+            ut.lockedSprite.drawBlended(256, var21Lifetime1, 0, var5, 1);
           } else {
-            InstrumentEnvelope.unachievedSprite.a(256, var21Lifetime1, 0, var5, 1);
+            InstrumentEnvelope.unachievedSprite.drawBlended(256, var21Lifetime1, 0, var5, 1);
           }
           int var22 = 360 + verticalOffset;
           if (cn.b(true) ||
@@ -1500,16 +1500,16 @@ final class MenuScreen {
     private final void a(int param0, GraphicsRenderer param1, int param2, int param3, int param4) {
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          SoftCacheReference.brassButtonSprites[0].a(param4, param0);
-          SoftCacheReference.brassButtonSprites[2].a(-SoftCacheReference.brassButtonSprites[2].d() + (param4 + param3), param0);
+          SoftCacheReference.brassButtonSprites[0].draw(param4, param0);
+          SoftCacheReference.brassButtonSprites[2].draw(-SoftCacheReference.brassButtonSprites[2].getFullWidth() + (param4 + param3), param0);
           bo var10 = fa.a(param1, true);
           bo var11 = var10;
-          param3 = param4 + param3 - SoftCacheReference.brassButtonSprites[2].d();
-          param4 = param4 + SoftCacheReference.brassButtonSprites[0].d();
-          var11.a(param3, param4, param0 + SoftCacheReference.brassButtonSprites[2].c(), param0, 120);
+          param3 = param4 + param3 - SoftCacheReference.brassButtonSprites[2].getFullWidth();
+          param4 = param4 + SoftCacheReference.brassButtonSprites[0].getFullWidth();
+          var11.a(param3, param4, param0 + SoftCacheReference.brassButtonSprites[2].getFullHeight(), param0, 120);
           while (param4 < param3) {
-            SoftCacheReference.brassButtonSprites[1].a(param4, param0);
-            param4 = param4 + SoftCacheReference.brassButtonSprites[1].d();
+            SoftCacheReference.brassButtonSprites[1].draw(param4, param0);
+            param4 = param4 + SoftCacheReference.brassButtonSprites[1].getFullWidth();
           }
           var11.a(true);
           int var7 = -128 % ((param2 + 32) / 50);

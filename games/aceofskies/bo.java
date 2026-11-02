@@ -65,7 +65,7 @@ final class bo {
             this.field_d = this.field_b.field_b;
             if (!param0) {
               bo.a(65);
-              this.field_c.KA(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
+              this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
               var3 = this.field_b;
               var2 = var3;
               this.field_b = this.field_b.field_c;
@@ -74,7 +74,7 @@ final class bo {
               this.field_f = var3;
               return;
             }
-            this.field_c.KA(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
+            this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
             var3 = this.field_b;
             var2 = var3;
             this.field_b = this.field_b.field_c;
@@ -86,7 +86,7 @@ final class bo {
           this.field_d = this.field_b.field_b;
           if (!param0) {
             bo.a(65);
-            this.field_c.KA(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
+            this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
             fo var3Lifetime3 = this.field_b;
             fo var2Lifetime3 = var3Lifetime3;
             this.field_b = this.field_b.field_c;
@@ -95,7 +95,7 @@ final class bo {
             this.field_f = var3Lifetime3;
             return;
           }
-          this.field_c.KA(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
+          this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
           fo var3Lifetime4 = this.field_b;
           fo var2Lifetime4 = var3Lifetime4;
           this.field_b = this.field_b.field_c;
@@ -105,7 +105,7 @@ final class bo {
           return;
         }
         if (param0) {
-          this.field_c.KA(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
+          this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
           fo var3Lifetime1 = this.field_b;
           fo var2Lifetime1 = var3Lifetime1;
           this.field_b = this.field_b.field_c;
@@ -115,7 +115,7 @@ final class bo {
           return;
         }
         bo.a(65);
-        this.field_c.KA(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
+        this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
         fo var3Lifetime2 = this.field_b;
         fo var2Lifetime2 = var3Lifetime2;
         this.field_b = this.field_b.field_c;
@@ -126,7 +126,7 @@ final class bo {
 
     private final void b(int param0) {
         fo var2 = null;
-        this.field_c.K(this.field_e);
+        this.field_c.getClip(this.field_e);
         if (null != this.field_f) {
           var2 = this.field_f;
           this.field_f = this.field_f.field_c;
@@ -156,7 +156,7 @@ final class bo {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 120 % ((param4 - 25) / 44);
         this.b(884);
-        this.field_c.T(param1, param3, param0, param2);
+        this.field_c.intersectClip(param1, param3, param0, param2);
     }
 
     bo(GraphicsRenderer param0) {

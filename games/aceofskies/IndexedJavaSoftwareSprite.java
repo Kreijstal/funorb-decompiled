@@ -5,7 +5,7 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
     private byte[] field_F;
     private int[] field_E;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawBlended(int x, int y, int blendMode, int argb, int param4) {
         int stackIn_91_0 = 0;
         int stackIn_139_0 = 0;
         int var23Lifetime1;
@@ -15,35 +15,35 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
           throw new IllegalStateException();
         }
         int var6 = this.field_D.field_f;
-        param0 = param0 + this.field_g;
-        param1 = param1 + this.field_z;
-        int var7 = param1 * var6 + param0;
+        x = x + this.field_g;
+        y = y + this.field_z;
+        int var7 = y * var6 + x;
         int var8 = 0;
         int var9 = this.field_p;
         int var10 = this.field_o;
         int var11 = var6 - var10;
         int var12 = 0;
-        if (param1 < this.field_D.field_w) {
-          int var13_int = this.field_D.field_w - param1;
+        if (y < this.field_D.field_w) {
+          int var13_int = this.field_D.field_w - y;
           var9 = var9 - var13_int;
-          param1 = this.field_D.field_w;
+          y = this.field_D.field_w;
           var8 = var8 + var13_int * var10;
           var7 = var7 + var13_int * var6;
         }
-        if (param1 + var9 > this.field_D.field_D) {
-          var9 = var9 - (param1 + var9 - this.field_D.field_D);
+        if (y + var9 > this.field_D.field_D) {
+          var9 = var9 - (y + var9 - this.field_D.field_D);
         }
-        if (param0 < this.field_D.field_z) {
-          int var13_intLifetime1 = this.field_D.field_z - param0;
+        if (x < this.field_D.field_z) {
+          int var13_intLifetime1 = this.field_D.field_z - x;
           var10 = var10 - var13_intLifetime1;
-          param0 = this.field_D.field_z;
+          x = this.field_D.field_z;
           var8 = var8 + var13_intLifetime1;
           var7 = var7 + var13_intLifetime1;
           var12 = var12 + var13_intLifetime1;
           var11 = var11 + var13_intLifetime1;
         }
-        if (param0 + var10 > this.field_D.field_k) {
-          int var13_intLifetime2 = param0 + var10 - this.field_D.field_k;
+        if (x + var10 > this.field_D.field_k) {
+          int var13_intLifetime2 = x + var10 - this.field_D.field_k;
           var10 = var10 - var13_intLifetime2;
           var12 = var12 + var13_intLifetime2;
           var11 = var11 + var13_intLifetime2;
@@ -56,7 +56,7 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
           int[] var27 = var28;
           int[] var13 = var27;
           if (param4 == 0) {
-            if (param2 == 1) {
+            if (blendMode == 1) {
               for (int var14 = -var9; var14 < 0; var14++) {
                 int var15 = var7 + var10 - 3;
                 while (var7 < var15) {
@@ -94,10 +94,10 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               }
               return;
             }
-            if (param2 == 0) {
-              int var14Lifetime6 = (param3 & 16711680) >> 16;
-              int var15Lifetime6 = (param3 & 65280) >> 8;
-              int var16 = param3 & 255;
+            if (blendMode == 0) {
+              int var14Lifetime6 = (argb & 16711680) >> 16;
+              int var15Lifetime6 = (argb & 65280) >> 8;
+              int var16 = argb & 255;
               for (int var17 = -var9; var17 < 0; var17++) {
                 for (int var18 = -var10; var18 < 0; var18++) {
                   int incrementValue$23 = var8;
@@ -115,14 +115,14 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               }
               return;
             }
-            if (param2 == 3) {
+            if (blendMode == 3) {
               for (int var14Lifetime7 = -var9; var14Lifetime7 < 0; var14Lifetime7++) {
                 for (int var15Lifetime7 = -var10; var15Lifetime7 < 0; var15Lifetime7++) {
                   int incrementValue$21 = var8;
                   var8++;
                   int var16Lifetime6 = this.field_E[this.field_F[incrementValue$21] & 255];
-                  int var17Lifetime6 = var16Lifetime6 + param3;
-                  int var18Lifetime6 = (var16Lifetime6 & 16711935) + (param3 & 16711935);
+                  int var17Lifetime6 = var16Lifetime6 + argb;
+                  int var18Lifetime6 = (var16Lifetime6 & 16711935) + (argb & 16711935);
                   int var19Lifetime6 = (var18Lifetime6 & 16777472) + (var17Lifetime6 - var18Lifetime6 & 65536);
                   int incrementValue$22 = var7;
                   var7++;
@@ -133,14 +133,14 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               }
               return;
             }
-            if (param2 != 2) {
+            if (blendMode != 2) {
               throw new IllegalArgumentException();
             }
-            int var14Lifetime8 = param3 >>> 24;
+            int var14Lifetime8 = argb >>> 24;
             int var15Lifetime8 = 256 - var14Lifetime8;
-            int var16Lifetime7 = (param3 & 16711935) * var15Lifetime8 & -16711936;
-            int var17Lifetime7 = (param3 & 65280) * var15Lifetime8 & 16711680;
-            param3 = (var16Lifetime7 | var17Lifetime7) >>> 8;
+            int var16Lifetime7 = (argb & 16711935) * var15Lifetime8 & -16711936;
+            int var17Lifetime7 = (argb & 65280) * var15Lifetime8 & 16711680;
+            argb = (var16Lifetime7 | var17Lifetime7) >>> 8;
             for (int var18Lifetime7 = -var9; var18Lifetime7 < 0; var18Lifetime7++) {
               for (int var19Lifetime7 = -var10; var19Lifetime7 < 0; var19Lifetime7++) {
                 int incrementValue$19 = var8;
@@ -150,7 +150,7 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
                 int var17Lifetime8 = (var20Lifetime6 & 65280) * var14Lifetime8 & 16711680;
                 int incrementValue$20 = var7;
                 var7++;
-                var13[incrementValue$20] = ((var16Lifetime8 | var17Lifetime8) >>> 8) + param3;
+                var13[incrementValue$20] = ((var16Lifetime8 | var17Lifetime8) >>> 8) + argb;
               }
               var7 = var7 + var11;
               var8 = var8 + var12;
@@ -161,7 +161,7 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
             if (param4 != 2) {
               throw new IllegalArgumentException();
             }
-            if (param2 == 1) {
+            if (blendMode == 1) {
               for (int var14Lifetime1 = -var9; var14Lifetime1 < 0; var14Lifetime1++) {
                 for (int var15Lifetime1 = -var10; var15Lifetime1 < 0; var15Lifetime1++) {
                   int incrementValue$6 = var8;
@@ -185,10 +185,10 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               }
               return;
             }
-            if (param2 == 0) {
-              int var14Lifetime1Lifetime1 = (param3 & 16711680) >> 16;
-              int var15Lifetime1Lifetime1 = (param3 & 65280) >> 8;
-              int var16Lifetime1Lifetime1 = param3 & 255;
+            if (blendMode == 0) {
+              int var14Lifetime1Lifetime1 = (argb & 16711680) >> 16;
+              int var15Lifetime1Lifetime1 = (argb & 65280) >> 8;
+              int var16Lifetime1Lifetime1 = argb & 255;
               for (int var17Lifetime1Lifetime1 = -var9; var17Lifetime1Lifetime1 < 0; var17Lifetime1Lifetime1++) {
                 for (int var18Lifetime1Lifetime1 = -var10; var18Lifetime1Lifetime1 < 0; var18Lifetime1Lifetime1++) {
                   int incrementValue$4 = var8;
@@ -216,7 +216,7 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               }
               return;
             }
-            if (param2 == 3) {
+            if (blendMode == 3) {
               for (int var14Lifetime1Lifetime2 = -var9; var14Lifetime1Lifetime2 < 0; var14Lifetime1Lifetime2++) {
                 for (int var15Lifetime1Lifetime2 = -var10; var15Lifetime1Lifetime2 < 0; var15Lifetime1Lifetime2++) {
                   int incrementValue$2 = var8;
@@ -228,8 +228,8 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
                     stackIn_139_0 = this.field_E[var16Lifetime1Lifetime2];
                   }
                   int var17Lifetime1Lifetime2 = stackIn_139_0;
-                  int var18Lifetime1Lifetime2 = var17Lifetime1Lifetime2 + param3;
-                  int var19Lifetime1Lifetime2 = (var17Lifetime1Lifetime2 & 16711935) + (param3 & 16711935);
+                  int var18Lifetime1Lifetime2 = var17Lifetime1Lifetime2 + argb;
+                  int var19Lifetime1Lifetime2 = (var17Lifetime1Lifetime2 & 16711935) + (argb & 16711935);
                   int var20Lifetime1Lifetime2 = (var19Lifetime1Lifetime2 & 16777472) + (var18Lifetime1Lifetime2 - var19Lifetime1Lifetime2 & 65536);
                   int var17Lifetime1Lifetime2Lifetime1 = var18Lifetime1Lifetime2 - var20Lifetime1Lifetime2 | var20Lifetime1Lifetime2 - (var20Lifetime1Lifetime2 >>> 8);
                   int var20Lifetime1Lifetime2Lifetime1 = var28[var7];
@@ -245,14 +245,14 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               }
               return;
             }
-            if (param2 != 2) {
+            if (blendMode != 2) {
               throw new IllegalArgumentException();
             }
-            int var14Lifetime1Lifetime3 = param3 >>> 24;
+            int var14Lifetime1Lifetime3 = argb >>> 24;
             int var15Lifetime1Lifetime3 = 256 - var14Lifetime1Lifetime3;
-            int var16Lifetime1Lifetime3 = (param3 & 16711935) * var15Lifetime1Lifetime3 & -16711936;
-            int var17Lifetime1Lifetime3 = (param3 & 65280) * var15Lifetime1Lifetime3 & 16711680;
-            param3 = (var16Lifetime1Lifetime3 | var17Lifetime1Lifetime3) >>> 8;
+            int var16Lifetime1Lifetime3 = (argb & 16711935) * var15Lifetime1Lifetime3 & -16711936;
+            int var17Lifetime1Lifetime3 = (argb & 65280) * var15Lifetime1Lifetime3 & 16711680;
+            argb = (var16Lifetime1Lifetime3 | var17Lifetime1Lifetime3) >>> 8;
             for (int var18Lifetime1Lifetime3 = -var9; var18Lifetime1Lifetime3 < 0; var18Lifetime1Lifetime3++) {
               for (int var19Lifetime1Lifetime3 = -var10; var19Lifetime1Lifetime3 < 0; var19Lifetime1Lifetime3++) {
                 int incrementValue$0 = var8;
@@ -264,7 +264,7 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
                   int var21Lifetime1Lifetime1 = this.field_E[var20Lifetime1Lifetime3 & 255];
                   int var16Lifetime1Lifetime4 = (var21Lifetime1Lifetime1 & 16711935) * var14Lifetime1Lifetime3 & -16711936;
                   int var17Lifetime1Lifetime4 = (var21Lifetime1Lifetime1 & 65280) * var14Lifetime1Lifetime3 & 16711680;
-                  int var21Lifetime1Lifetime1Lifetime1 = ((var16Lifetime1Lifetime4 | var17Lifetime1Lifetime4) >>> 8) + param3;
+                  int var21Lifetime1Lifetime1Lifetime1 = ((var16Lifetime1Lifetime4 | var17Lifetime1Lifetime4) >>> 8) + argb;
                   int var22Lifetime1Lifetime1 = var28[var7];
                   int var23Lifetime2 = var21Lifetime1Lifetime1Lifetime1 + var22Lifetime1Lifetime1;
                   int var24Lifetime2 = (var21Lifetime1Lifetime1Lifetime1 & 16711935) + (var22Lifetime1Lifetime1 & 16711935);
@@ -279,7 +279,7 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
             }
             return;
           }
-          if (param2 == 1) {
+          if (blendMode == 1) {
             for (int var14Lifetime2 = -var9; var14Lifetime2 < 0; var14Lifetime2++) {
               for (int var15Lifetime2 = -var10; var15Lifetime2 < 0; var15Lifetime2++) {
                 int incrementValue$17 = var8;
@@ -302,9 +302,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
             }
             return;
           }
-          if (param2 == 0) {
-            if ((param3 & 16777215) == 16777215) {
-              int var14Lifetime3 = param3 >>> 24;
+          if (blendMode == 0) {
+            if ((argb & 16777215) == 16777215) {
+              int var14Lifetime3 = argb >>> 24;
               int var15Lifetime3 = 256 - var14Lifetime3;
               for (int var16Lifetime3 = -var9; var16Lifetime3 < 0; var16Lifetime3++) {
                 for (int var17Lifetime3 = -var10; var17Lifetime3 < 0; var17Lifetime3++) {
@@ -326,10 +326,10 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               }
               return;
             }
-            int var14Lifetime3Lifetime1 = (param3 & 16711680) >> 16;
-            int var15Lifetime3Lifetime1 = (param3 & 65280) >> 8;
-            int var16Lifetime3Lifetime1 = param3 & 255;
-            int var17Lifetime3Lifetime1 = param3 >>> 24;
+            int var14Lifetime3Lifetime1 = (argb & 16711680) >> 16;
+            int var15Lifetime3Lifetime1 = (argb & 65280) >> 8;
+            int var16Lifetime3Lifetime1 = argb & 255;
+            int var17Lifetime3Lifetime1 = argb >>> 24;
             int var18Lifetime3Lifetime1 = 256 - var17Lifetime3Lifetime1;
             for (int var19Lifetime3Lifetime1 = -var9; var19Lifetime3Lifetime1 < 0; var19Lifetime3Lifetime1++) {
               for (int var20Lifetime3Lifetime1 = -var10; var20Lifetime3Lifetime1 < 0; var20Lifetime3Lifetime1++) {
@@ -364,15 +364,15 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
             }
             return;
           }
-          if (param2 != 3) {
-            if (param2 != 2) {
+          if (blendMode != 3) {
+            if (blendMode != 2) {
               throw new IllegalArgumentException();
             }
-            int var14Lifetime4 = param3 >>> 24;
+            int var14Lifetime4 = argb >>> 24;
             int var15Lifetime4 = 256 - var14Lifetime4;
-            int var16Lifetime4 = (param3 & 16711935) * var15Lifetime4 & -16711936;
-            int var17Lifetime4 = (param3 & 65280) * var15Lifetime4 & 16711680;
-            param3 = (var16Lifetime4 | var17Lifetime4) >>> 8;
+            int var16Lifetime4 = (argb & 16711935) * var15Lifetime4 & -16711936;
+            int var17Lifetime4 = (argb & 65280) * var15Lifetime4 & 16711680;
+            argb = (var16Lifetime4 | var17Lifetime4) >>> 8;
             for (int var18Lifetime4 = -var9; var18Lifetime4 < 0; var18Lifetime4++) {
               for (int var19Lifetime4 = -var10; var19Lifetime4 < 0; var19Lifetime4++) {
                 int incrementValue$8 = var8;
@@ -386,7 +386,7 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
                   int var17Lifetime4Lifetime1 = (var21Lifetime3 & 65280) * var14Lifetime4 & 16711680;
                   int incrementValue$9 = var7;
                   var7++;
-                  var13[incrementValue$9] = ((var16Lifetime4Lifetime1 | var17Lifetime4Lifetime1) >>> 8) + param3;
+                  var13[incrementValue$9] = ((var16Lifetime4Lifetime1 | var17Lifetime4Lifetime1) >>> 8) + argb;
                 }
               }
               var7 = var7 + var11;
@@ -394,7 +394,7 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
             }
             return;
           }
-          int var14Lifetime5 = param3 >>> 24;
+          int var14Lifetime5 = argb >>> 24;
           int var15Lifetime5 = 256 - var14Lifetime5;
           for (int var16Lifetime5 = -var9; var16Lifetime5 < 0; var16Lifetime5++) {
             for (int var17Lifetime5 = -var10; var17Lifetime5 < 0; var17Lifetime5++) {
@@ -407,8 +407,8 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
                 stackIn_91_0 = this.field_E[var18Lifetime5];
               }
               int var19Lifetime5 = stackIn_91_0;
-              int var20Lifetime5 = var19Lifetime5 + param3;
-              int var21Lifetime4 = (var19Lifetime5 & 16711935) + (param3 & 16711935);
+              int var20Lifetime5 = var19Lifetime5 + argb;
+              int var21Lifetime4 = (var19Lifetime5 & 16711935) + (argb & 16711935);
               int var22Lifetime3 = (var21Lifetime4 & 16777472) + (var20Lifetime5 - var21Lifetime4 & 65536);
               var22Lifetime3 = var20Lifetime5 - var22Lifetime3 | var22Lifetime3 - (var22Lifetime3 >>> 8);
               if (var19Lifetime5 == 0 &&
@@ -2192,7 +2192,7 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawScaled(int x, int y, int destinationWidth, int destinationHeight, int param4, int param5, int param6, int param7) {
         int stackIn_44_0 = 0;
         int stackIn_97_0 = 0;
         int stackIn_142_0 = 0;
@@ -2200,8 +2200,8 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
           throw new IllegalStateException();
         }
         boolean decompiledFrameRemainder1 = true;
-        if (param2 > 0) {
-          if (param3 <= 0) {
+        if (destinationWidth > 0) {
+          if (destinationHeight <= 0) {
             return;
           }
           int var9 = 0;
@@ -2209,43 +2209,43 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
           int var11 = this.field_D.field_f;
           int var12 = this.field_g + this.field_o + this.field_m;
           int var13 = this.field_z + this.field_p + this.field_l;
-          int var14 = (var12 << 16) / param2;
-          int var15 = (var13 << 16) / param3;
+          int var14 = (var12 << 16) / destinationWidth;
+          int var15 = (var13 << 16) / destinationHeight;
           if (this.field_g > 0) {
             int var16 = ((this.field_g << 16) + var14 - 1) / var14;
-            param0 = param0 + var16;
+            x = x + var16;
             var9 = var9 + (var16 * var14 - (this.field_g << 16));
           }
           if (this.field_z > 0) {
             int var16Lifetime1 = ((this.field_z << 16) + var15 - 1) / var15;
-            param1 = param1 + var16Lifetime1;
+            y = y + var16Lifetime1;
             var10 = var10 + (var16Lifetime1 * var15 - (this.field_z << 16));
           }
           if (this.field_o < var12) {
-            param2 = ((this.field_o << 16) - var9 + var14 - 1) / var14;
+            destinationWidth = ((this.field_o << 16) - var9 + var14 - 1) / var14;
           }
           if (this.field_p < var13) {
-            param3 = ((this.field_p << 16) - var10 + var15 - 1) / var15;
+            destinationHeight = ((this.field_p << 16) - var10 + var15 - 1) / var15;
           }
-          int var16Lifetime2 = param0 + param1 * var11;
-          int var17 = var11 - param2;
-          if (param1 + param3 > this.field_D.field_D) {
-            param3 = param3 - (param1 + param3 - this.field_D.field_D);
+          int var16Lifetime2 = x + y * var11;
+          int var17 = var11 - destinationWidth;
+          if (y + destinationHeight > this.field_D.field_D) {
+            destinationHeight = destinationHeight - (y + destinationHeight - this.field_D.field_D);
           }
-          if (param1 < this.field_D.field_w) {
-            int var18_int = this.field_D.field_w - param1;
-            param3 = param3 - var18_int;
+          if (y < this.field_D.field_w) {
+            int var18_int = this.field_D.field_w - y;
+            destinationHeight = destinationHeight - var18_int;
             var16Lifetime2 = var16Lifetime2 + var18_int * var11;
             var10 = var10 + var15 * var18_int;
           }
-          if (param0 + param2 > this.field_D.field_k) {
-            int var18_intLifetime1 = param0 + param2 - this.field_D.field_k;
-            param2 = param2 - var18_intLifetime1;
+          if (x + destinationWidth > this.field_D.field_k) {
+            int var18_intLifetime1 = x + destinationWidth - this.field_D.field_k;
+            destinationWidth = destinationWidth - var18_intLifetime1;
             var17 = var17 + var18_intLifetime1;
           }
-          if (param0 < this.field_D.field_z) {
-            int var18_intLifetime2 = this.field_D.field_z - param0;
-            param2 = param2 - var18_intLifetime2;
+          if (x < this.field_D.field_z) {
+            int var18_intLifetime2 = this.field_D.field_z - x;
+            destinationWidth = destinationWidth - var18_intLifetime2;
             var16Lifetime2 = var16Lifetime2 + var18_intLifetime2;
             var9 = var9 + var14 * var18_intLifetime2;
             var17 = var17 + var18_intLifetime2;
@@ -2256,9 +2256,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
           if (param6 == 0) {
             if (param4 == 1) {
               int var19 = var9;
-              for (int var20 = -param3; var20 < 0; var20++) {
+              for (int var20 = -destinationHeight; var20 < 0; var20++) {
                 int var21 = (var10 >> 16) * this.field_o;
-                for (int var22 = -param2; var22 < 0; var22++) {
+                for (int var22 = -destinationWidth; var22 < 0; var22++) {
                   int incrementValue$13 = var16Lifetime2;
                   var16Lifetime2++;
                   var18[incrementValue$13] = this.field_E[this.field_F[(var9 >> 16) + var21] & 255];
@@ -2276,9 +2276,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
                 int var20Lifetime6 = (param5 & 65280) >> 8;
                 int var21Lifetime6 = param5 & 255;
                 int var22Lifetime6 = var9;
-                for (int var23 = -param3; var23 < 0; var23++) {
+                for (int var23 = -destinationHeight; var23 < 0; var23++) {
                   int var24 = (var10 >> 16) * this.field_o;
-                  for (int var25 = -param2; var25 < 0; var25++) {
+                  for (int var25 = -destinationWidth; var25 < 0; var25++) {
                     int var26 = this.field_E[this.field_F[(var9 >> 16) + var24] & 255];
                     int var27 = (var26 & 16711680) * var19Lifetime5 & -16777216;
                     int var28 = (var26 & 65280) * var20Lifetime6 & 16711680;
@@ -2296,9 +2296,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               }
               if (param4 == 3) {
                 int var19Lifetime6 = var9;
-                for (int var20Lifetime7 = -param3; var20Lifetime7 < 0; var20Lifetime7++) {
+                for (int var20Lifetime7 = -destinationHeight; var20Lifetime7 < 0; var20Lifetime7++) {
                   int var21Lifetime7 = (var10 >> 16) * this.field_o;
-                  for (int var22Lifetime7 = -param2; var22Lifetime7 < 0; var22Lifetime7++) {
+                  for (int var22Lifetime7 = -destinationWidth; var22Lifetime7 < 0; var22Lifetime7++) {
                     int var23Lifetime6 = this.field_F[(var9 >> 16) + var21Lifetime7];
                     if (var23Lifetime6 <= 0) {
                       stackIn_44_0 = 0;
@@ -2329,9 +2329,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               int var22Lifetime8 = (param5 & 65280) * var20Lifetime8 & 16711680;
               param5 = (var21Lifetime8 | var22Lifetime8) >>> 8;
               int var23Lifetime7 = var9;
-              for (int var24Lifetime6 = -param3; var24Lifetime6 < 0; var24Lifetime6++) {
+              for (int var24Lifetime6 = -destinationHeight; var24Lifetime6 < 0; var24Lifetime6++) {
                 int var25Lifetime6 = (var10 >> 16) * this.field_o;
-                for (int var26Lifetime6 = -param2; var26Lifetime6 < 0; var26Lifetime6++) {
+                for (int var26Lifetime6 = -destinationWidth; var26Lifetime6 < 0; var26Lifetime6++) {
                   int var27Lifetime6 = this.field_E[this.field_F[(var9 >> 16) + var25Lifetime6] & 255];
                   int var21Lifetime9 = (var27Lifetime6 & 16711935) * var19Lifetime7 & -16711936;
                   int var22Lifetime9 = (var27Lifetime6 & 65280) * var19Lifetime7 & 16711680;
@@ -2354,9 +2354,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               }
               if (param4 == 1) {
                 int var19Lifetime1 = var9;
-                for (int var20Lifetime1 = -param3; var20Lifetime1 < 0; var20Lifetime1++) {
+                for (int var20Lifetime1 = -destinationHeight; var20Lifetime1 < 0; var20Lifetime1++) {
                   int var21Lifetime1 = (var10 >> 16) * this.field_o;
-                  for (int var22Lifetime1 = -param2; var22Lifetime1 < 0; var22Lifetime1++) {
+                  for (int var22Lifetime1 = -destinationWidth; var22Lifetime1 < 0; var22Lifetime1++) {
                     int var23Lifetime1 = this.field_F[(var9 >> 16) + var21Lifetime1];
                     if (var23Lifetime1 == 0) {
                       var16Lifetime2++;
@@ -2383,9 +2383,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
                 int var20Lifetime1Lifetime1 = (param5 & 16711680) >> 16;
                 int var21Lifetime1Lifetime1 = (param5 & 65280) >> 8;
                 int var22Lifetime1Lifetime1 = param5 & 255;
-                for (int var23Lifetime1Lifetime1 = -param3; var23Lifetime1Lifetime1 < 0; var23Lifetime1Lifetime1++) {
+                for (int var23Lifetime1Lifetime1 = -destinationHeight; var23Lifetime1Lifetime1 < 0; var23Lifetime1Lifetime1++) {
                   int var24Lifetime1Lifetime1 = (var10 >> 16) * this.field_o;
-                  for (int var25Lifetime1Lifetime1 = -param2; var25Lifetime1Lifetime1 < 0; var25Lifetime1Lifetime1++) {
+                  for (int var25Lifetime1Lifetime1 = -destinationWidth; var25Lifetime1Lifetime1 < 0; var25Lifetime1Lifetime1++) {
                     int var26Lifetime1Lifetime1 = this.field_F[(var9 >> 16) + var24Lifetime1Lifetime1];
                     if (var26Lifetime1Lifetime1 == 0) {
                       var16Lifetime2++;
@@ -2413,9 +2413,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               }
               if (param4 == 3) {
                 int var19Lifetime1Lifetime2 = var9;
-                for (int var20Lifetime1Lifetime2 = -param3; var20Lifetime1Lifetime2 < 0; var20Lifetime1Lifetime2++) {
+                for (int var20Lifetime1Lifetime2 = -destinationHeight; var20Lifetime1Lifetime2 < 0; var20Lifetime1Lifetime2++) {
                   int var21Lifetime1Lifetime2 = (var10 >> 16) * this.field_o;
-                  for (int var22Lifetime1Lifetime2 = -param2; var22Lifetime1Lifetime2 < 0; var22Lifetime1Lifetime2++) {
+                  for (int var22Lifetime1Lifetime2 = -destinationWidth; var22Lifetime1Lifetime2 < 0; var22Lifetime1Lifetime2++) {
                     int var23Lifetime1Lifetime2 = this.field_F[(var9 >> 16) + var21Lifetime1Lifetime2];
                     if (var23Lifetime1Lifetime2 <= 0) {
                       stackIn_142_0 = 0;
@@ -2451,9 +2451,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               int var22Lifetime1Lifetime3 = (param5 & 65280) * var20Lifetime1Lifetime3 & 16711680;
               param5 = (var21Lifetime1Lifetime3 | var22Lifetime1Lifetime3) >>> 8;
               int var23Lifetime1Lifetime3 = var9;
-              for (int var24Lifetime1Lifetime3 = -param3; var24Lifetime1Lifetime3 < 0; var24Lifetime1Lifetime3++) {
+              for (int var24Lifetime1Lifetime3 = -destinationHeight; var24Lifetime1Lifetime3 < 0; var24Lifetime1Lifetime3++) {
                 int var25Lifetime1Lifetime3 = (var10 >> 16) * this.field_o;
-                for (int var26Lifetime1Lifetime3 = -param2; var26Lifetime1Lifetime3 < 0; var26Lifetime1Lifetime3++) {
+                for (int var26Lifetime1Lifetime3 = -destinationWidth; var26Lifetime1Lifetime3 < 0; var26Lifetime1Lifetime3++) {
                   int var27Lifetime1Lifetime3 = this.field_F[(var9 >> 16) + var25Lifetime1Lifetime3];
                   if (var27Lifetime1Lifetime3 == 0) {
                     var16Lifetime2++;
@@ -2480,9 +2480,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
             }
             if (param4 == 1) {
               int var19Lifetime2 = var9;
-              for (int var20Lifetime2 = -param3; var20Lifetime2 < 0; var20Lifetime2++) {
+              for (int var20Lifetime2 = -destinationHeight; var20Lifetime2 < 0; var20Lifetime2++) {
                 int var21Lifetime2 = (var10 >> 16) * this.field_o;
-                for (int var22Lifetime2 = -param2; var22Lifetime2 < 0; var22Lifetime2++) {
+                for (int var22Lifetime2 = -destinationWidth; var22Lifetime2 < 0; var22Lifetime2++) {
                   int var23Lifetime2 = this.field_F[(var9 >> 16) + var21Lifetime2];
                   if (var23Lifetime2 == 0) {
                     var16Lifetime2++;
@@ -2510,9 +2510,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
                 int var22Lifetime3 = (param5 & 65280) * var20Lifetime3 & 16711680;
                 param5 = (var21Lifetime3 | var22Lifetime3) >>> 8;
                 int var23Lifetime3 = var9;
-                for (int var24Lifetime2 = -param3; var24Lifetime2 < 0; var24Lifetime2++) {
+                for (int var24Lifetime2 = -destinationHeight; var24Lifetime2 < 0; var24Lifetime2++) {
                   int var25Lifetime2 = (var10 >> 16) * this.field_o;
-                  for (int var26Lifetime2 = -param2; var26Lifetime2 < 0; var26Lifetime2++) {
+                  for (int var26Lifetime2 = -destinationWidth; var26Lifetime2 < 0; var26Lifetime2++) {
                     int var27Lifetime2 = this.field_F[(var9 >> 16) + var25Lifetime2];
                     if (var27Lifetime2 == 0) {
                       var16Lifetime2++;
@@ -2535,9 +2535,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
               int var19Lifetime3Lifetime1 = var9;
               int var20Lifetime3Lifetime1 = param5 >>> 24;
               int var21Lifetime3Lifetime1 = 256 - var20Lifetime3Lifetime1;
-              for (int var22Lifetime3Lifetime1 = -param3; var22Lifetime3Lifetime1 < 0; var22Lifetime3Lifetime1++) {
+              for (int var22Lifetime3Lifetime1 = -destinationHeight; var22Lifetime3Lifetime1 < 0; var22Lifetime3Lifetime1++) {
                 int var23Lifetime3Lifetime1 = (var10 >> 16) * this.field_o;
-                for (int var24Lifetime2Lifetime1 = -param2; var24Lifetime2Lifetime1 < 0; var24Lifetime2Lifetime1++) {
+                for (int var24Lifetime2Lifetime1 = -destinationWidth; var24Lifetime2Lifetime1 < 0; var24Lifetime2Lifetime1++) {
                   int var25Lifetime2Lifetime1 = this.field_F[(var9 >> 16) + var23Lifetime3Lifetime1];
                   if (var25Lifetime2Lifetime1 <= 0) {
                     stackIn_97_0 = 0;
@@ -2568,9 +2568,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
             if ((param5 & 16777215) == 16777215) {
               int var20Lifetime4 = param5 >>> 24;
               int var21Lifetime4 = 256 - var20Lifetime4;
-              for (int var22Lifetime4 = -param3; var22Lifetime4 < 0; var22Lifetime4++) {
+              for (int var22Lifetime4 = -destinationHeight; var22Lifetime4 < 0; var22Lifetime4++) {
                 int var23Lifetime4 = (var10 >> 16) * this.field_o;
-                for (int var24Lifetime3 = -param2; var24Lifetime3 < 0; var24Lifetime3++) {
+                for (int var24Lifetime3 = -destinationWidth; var24Lifetime3 < 0; var24Lifetime3++) {
                   int var25Lifetime3 = this.field_F[(var9 >> 16) + var23Lifetime4];
                   if (var25Lifetime3 == 0) {
                     var16Lifetime2++;
@@ -2594,9 +2594,9 @@ final class IndexedJavaSoftwareSprite extends JavaSoftwareRenderSprite {
             int var22Lifetime5 = param5 & 255;
             int var23Lifetime5 = param5 >>> 24;
             int var24Lifetime4 = 256 - var23Lifetime5;
-            for (int var25Lifetime4 = -param3; var25Lifetime4 < 0; var25Lifetime4++) {
+            for (int var25Lifetime4 = -destinationHeight; var25Lifetime4 < 0; var25Lifetime4++) {
               int var26Lifetime4 = (var10 >> 16) * this.field_o;
-              for (int var27Lifetime4 = -param2; var27Lifetime4 < 0; var27Lifetime4++) {
+              for (int var27Lifetime4 = -destinationWidth; var27Lifetime4 < 0; var27Lifetime4++) {
                 boolean decompiledFrameRemainder0 = true;
                 int var28Lifetime3 = this.field_F[(var9 >> 16) + var26Lifetime4];
                 if (var28Lifetime3 == 0) {

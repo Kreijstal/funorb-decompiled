@@ -109,7 +109,7 @@ final class BitmapFontMetrics {
                                 try {
                                   int var11_int = td.a((CharSequence) ((Object) var10.substring(4)), (byte) 38);
                                   var5 = -1;
-                                  var6 = var6 + inlineImages[var11_int].d();
+                                  var6 = var6 + inlineImages[var11_int].getFullWidth();
                                   decompiledRegionSelector0 = false;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -252,7 +252,7 @@ final class BitmapFontMetrics {
                             (decompiledFrameRemainder0 = (null != param0))) {
                             try {
                               int var13_int = td.a((CharSequence) ((Object) var12_ref_String.substring(4)), (byte) 38);
-                              var7 = var7 + param0[var13_int].d();
+                              var7 = var7 + param0[var13_int].getFullWidth();
                               var6 = -1;
                               if (param2 < var7) {
                                 String stackIn_55_0 = var9 + "...";
@@ -462,7 +462,7 @@ final class BitmapFontMetrics {
                                 try {
                                   int var21_int = td.a((CharSequence) ((Object) var20.substring(4)), (byte) 38);
                                   var12 = -1;
-                                  var18 = var18 + inlineImages[var21_int].d();
+                                  var18 = var18 + inlineImages[var21_int].getFullWidth();
                                   decompiledRegionSelector0 = false;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;

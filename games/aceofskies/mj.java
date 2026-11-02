@@ -13,7 +13,7 @@ final class mj {
     final void a(boolean param0, vu param1) {
         GraphicsRenderer var4 = param1.field_c;
         GraphicsRenderer var3 = var4;
-        var4.KA(this.field_c[0], this.field_c[1], this.field_c[2], this.field_c[3]);
+        var4.setClip(this.field_c[0], this.field_c[1], this.field_c[2], this.field_c[3]);
         var4.DA(this.field_d[0], this.field_d[1], this.field_d[2], this.field_d[3]);
         var3.f(this.field_f, this.field_g);
         if (!param0) {
@@ -28,7 +28,7 @@ final class mj {
 
     final void a(vu param0, boolean param1) {
         GraphicsRenderer var3 = param0.field_c;
-        var3.K(this.field_c);
+        var3.getClip(this.field_c);
         this.field_d = var3.Y();
         if (param1) {
           return;

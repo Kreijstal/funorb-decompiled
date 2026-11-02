@@ -366,7 +366,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         jaggl.OpenGL.glFlush();
         jaggl.OpenGL.glReadBuffer(1029);
         jaggl.OpenGL.glDrawBuffer(1029);
-        this.KA(var1, var3, var2, var4);
+        this.setClip(var1, var3, var2, var4);
     }
 
     final HardwareTexture2D a(BufferElementType param0, int param1, int param2, int param3, hd param4) {
@@ -1093,19 +1093,19 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         return (HardwareVertexBuffer) ((Object) new OpenGlVertexBuffer(this, param0));
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void copyPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride) {
         try {
           this.c(true);
           this.a((HardwareTexture) null, -9135);
           this.e(true, 0);
           this.a((byte) 108);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
-          jaggl.OpenGL.glRasterPos2i(param0, param1);
-          jaggl.OpenGL.glDrawPixelsi(param2, param3, 32993, this.field_Bc, param4, param5);
+          jaggl.OpenGL.glRasterPos2i(x, y);
+          jaggl.OpenGL.glDrawPixelsi(width, height, 32993, this.field_Bc, pixels, offset);
           jaggl.OpenGL.glRasterPos2i(0, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "jc.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "jc.SA(" + x + ',' + y + ',' + width + ',' + height + ',' + (pixels != null ? "{...}" : "null") + ',' + offset + ',' + stride + ')');
         }
     }
 

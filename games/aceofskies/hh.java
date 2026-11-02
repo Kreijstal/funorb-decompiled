@@ -42,9 +42,9 @@ abstract class hh {
           int var4 = NetworkArchiveRequest.field_w;
           int var5 = 0;
           int var6 = 0;
-          param1.d(var4, var3, var6, -5782, -65281, var5);
+          param1.fillRectAlpha(var4, var3, var6, -5782, -65281, var5);
           var2.a(var3 + var5, var5, var4 + var6, var6, 70);
-          param1.SA(0, var6, SoftwareRasterizer.stride, var4, SoftwareRasterizer.framebuffer, var6 * SoftwareRasterizer.stride, SoftwareRasterizer.stride);
+          param1.copyPixels(0, var6, SoftwareRasterizer.stride, var4, SoftwareRasterizer.framebuffer, var6 * SoftwareRasterizer.stride, SoftwareRasterizer.stride);
           var2.a(true);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "hh.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

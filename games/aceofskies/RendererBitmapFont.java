@@ -347,15 +347,15 @@ abstract class RendererBitmapFont {
                       if (inlineImageBaselineOffsets != null) {
                         stackIn_26_0 = inlineImageBaselineOffsets[var16_int];
                       } else {
-                        stackIn_26_0 = var17.c();
+                        stackIn_26_0 = var17.getFullHeight();
                       }
                       int var18 = stackIn_26_0;
                       if ((MouseWheelInput.rendererCurrentTextColor & -16777216) != -16777216) {
-                        var17.a(penX, baselineY + this.metrics.lineAdvance - var18, 0, MouseWheelInput.rendererCurrentTextColor & -16777216 | 16777215, 1);
+                        var17.drawBlended(penX, baselineY + this.metrics.lineAdvance - var18, 0, MouseWheelInput.rendererCurrentTextColor & -16777216 | 16777215, 1);
                       } else {
-                        var17.a(penX, -var18 + this.metrics.lineAdvance + baselineY, 1, 0, 1);
+                        var17.drawBlended(penX, -var18 + this.metrics.lineAdvance + baselineY, 1, 0, 1);
                       }
-                      penX = penX + inlineImages[var16_int].d();
+                      penX = penX + inlineImages[var16_int].getFullWidth();
                       var11 = -1;
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
@@ -391,10 +391,10 @@ abstract class RendererBitmapFont {
                 }
                 int var15 = this.metrics.measureCharacterAdvance((byte) 109, var14);
                 if (rs.rendererStrikethroughColor != -1) {
-                  this.renderer.a(baselineY + (int)(0.7 * (double)this.metrics.lineAdvance), rs.rendererStrikethroughColor, 28321, penX, var15);
+                  this.renderer.drawHorizontalLineAlpha(baselineY + (int)(0.7 * (double)this.metrics.lineAdvance), rs.rendererStrikethroughColor, 28321, penX, var15);
                 }
                 if (PacketBuffer.rendererUnderlineColor != -1) {
-                  this.renderer.a(1 + (baselineY + this.metrics.lineAdvance), PacketBuffer.rendererUnderlineColor, 28321, penX, var15);
+                  this.renderer.drawHorizontalLineAlpha(1 + (baselineY + this.metrics.lineAdvance), PacketBuffer.rendererUnderlineColor, 28321, penX, var15);
                 }
                 penX = penX + var15;
                 var11 = var14;

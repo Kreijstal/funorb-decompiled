@@ -15,48 +15,48 @@ final class OpenGlRenderSprite extends RenderSprite {
     static int[] field_l;
     static int rendererSpaceExpansionQ8;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawBlended(int x, int y, int blendMode, int argb, int param4) {
         this.field_j.a(false, -128);
         this.field_g.g(1025208104);
         this.field_g.b((byte) -113, param4);
-        jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
-        param0 = param0 + this.field_c;
-        param1 = param1 + this.field_a;
+        jaggl.OpenGL.glColor4ub((byte)(argb >> 16), (byte)(argb >> 8), (byte)argb, (byte)(argb >> 24));
+        x = x + this.field_c;
+        y = y + this.field_a;
         if (this.field_f != null) {
-          this.a(false, param2);
+          this.a(false, blendMode);
           this.field_f.a(false, -128);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_j.field_p);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.field_j.field_p);
-          jaggl.OpenGL.glVertex2i(param0, param1);
+          jaggl.OpenGL.glVertex2i(x, y);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0, this.field_j.field_o + param1);
+          jaggl.OpenGL.glVertex2i(x, this.field_j.field_o + y);
           jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_j.field_r, 0.0f);
           jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, 0.0f);
-          jaggl.OpenGL.glVertex2i(this.field_j.field_q + param0, this.field_j.field_o + param1);
+          jaggl.OpenGL.glVertex2i(this.field_j.field_q + x, this.field_j.field_o + y);
           jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_j.field_r, this.field_j.field_p);
           jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, this.field_j.field_p);
-          jaggl.OpenGL.glVertex2i(this.field_j.field_q + param0, param1);
+          jaggl.OpenGL.glVertex2i(this.field_j.field_q + x, y);
           jaggl.OpenGL.glEnd();
           this.b(118);
         } else {
           this.field_g.a(this.field_j, 1);
-          this.field_g.a(param2, (byte) -39);
+          this.field_g.a(blendMode, (byte) -39);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.field_j.field_p);
-          jaggl.OpenGL.glVertex2i(param0, param1);
+          jaggl.OpenGL.glVertex2i(x, y);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0, param1 + this.field_j.field_o);
+          jaggl.OpenGL.glVertex2i(x, y + this.field_j.field_o);
           jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0 + this.field_j.field_q, param1 + this.field_j.field_o);
+          jaggl.OpenGL.glVertex2i(x + this.field_j.field_q, y + this.field_j.field_o);
           jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, this.field_j.field_p);
-          jaggl.OpenGL.glVertex2i(param0 + this.field_j.field_q, param1);
+          jaggl.OpenGL.glVertex2i(x + this.field_j.field_q, y);
           jaggl.OpenGL.glEnd();
         }
     }
 
-    final int c() {
+    final int getFullHeight() {
         return this.field_b + (this.field_j.field_o + this.field_a);
     }
 
@@ -71,8 +71,8 @@ final class OpenGlRenderSprite extends RenderSprite {
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
         if (this.field_e) {
-          float var11 = (float)this.d();
-          float var12 = (float)this.c();
+          float var11 = (float)this.getFullWidth();
+          float var12 = (float)this.getFullHeight();
           float var13 = (param2 - param0) / var11;
           float var14 = (param3 - param1) / var11;
           float var15 = (-param0 + param4) / var12;
@@ -171,15 +171,15 @@ final class OpenGlRenderSprite extends RenderSprite {
           }
         }
         if (param5 != -14164) {
-          this.a(46, 40, 8, -47, 93);
+          this.drawBlended(46, 40, 8, -47, 93);
         }
     }
 
-    final int a() {
+    final int getWidth() {
         return this.field_j.field_q;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawScaled(int x, int y, int destinationWidth, int destinationHeight, int param4, int param5, int param6, int param7) {
         int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         el stackIn_2_0 = this.field_j;
         boolean stackIn_3_1 = ((param7 & 1) == 0) ? false : true;
@@ -188,10 +188,10 @@ final class OpenGlRenderSprite extends RenderSprite {
         this.field_g.b((byte) -97, param6);
         jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
         if (this.field_e) {
-          float var9 = (float)param2 / (float)this.d();
-          float var10 = (float)param3 / (float)this.c();
-          float var11 = (float)this.field_c * var9 + (float)param0;
-          float var12 = (float)param1 + var10 * (float)this.field_a;
+          float var9 = (float)destinationWidth / (float)this.getFullWidth();
+          float var10 = (float)destinationHeight / (float)this.getFullHeight();
+          float var11 = (float)this.field_c * var9 + (float)x;
+          float var12 = (float)y + var10 * (float)this.field_a;
           float var13 = var11 + (float)this.field_j.field_q * var9;
           float var14 = (float)this.field_j.field_o * var10 + var12;
           if (null != this.field_f) {
@@ -231,13 +231,13 @@ final class OpenGlRenderSprite extends RenderSprite {
           this.field_g.a(param4, (byte) -39);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.field_j.field_p);
-          jaggl.OpenGL.glVertex2i(param0, param1);
+          jaggl.OpenGL.glVertex2i(x, y);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0, param1 + param3);
+          jaggl.OpenGL.glVertex2i(x, y + destinationHeight);
           jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0 + param2, param3 + param1);
+          jaggl.OpenGL.glVertex2i(x + destinationWidth, destinationHeight + y);
           jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, this.field_j.field_p);
-          jaggl.OpenGL.glVertex2i(param2 + param0, param1);
+          jaggl.OpenGL.glVertex2i(destinationWidth + x, y);
           jaggl.OpenGL.glEnd();
         } else {
           this.a(false, param4);
@@ -245,22 +245,22 @@ final class OpenGlRenderSprite extends RenderSprite {
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_j.field_p);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.field_j.field_p);
-          jaggl.OpenGL.glVertex2i(param0, param1);
+          jaggl.OpenGL.glVertex2i(x, y);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0, param1 + param3);
+          jaggl.OpenGL.glVertex2i(x, y + destinationHeight);
           jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_j.field_r, 0.0f);
           jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, 0.0f);
-          jaggl.OpenGL.glVertex2i(param2 + param0, param1 + param3);
+          jaggl.OpenGL.glVertex2i(destinationWidth + x, y + destinationHeight);
           jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_j.field_r, this.field_j.field_p);
           jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, this.field_j.field_p);
-          jaggl.OpenGL.glVertex2i(param0 + param2, param1);
+          jaggl.OpenGL.glVertex2i(x + destinationWidth, y);
           jaggl.OpenGL.glEnd();
           this.b(123);
         }
     }
 
-    final int b() {
+    final int getHeight() {
         return this.field_j.field_o;
     }
 
@@ -273,7 +273,7 @@ final class OpenGlRenderSprite extends RenderSprite {
         field_h = null;
     }
 
-    final int d() {
+    final int getFullWidth() {
         return this.field_c + (this.field_j.field_q + this.field_d);
     }
 

@@ -27,7 +27,7 @@ final class HardwareRenderSprite extends RenderSprite {
         field_m = null;
     }
 
-    final int c() {
+    final int getFullHeight() {
         return this.field_b + this.field_h + this.field_l;
     }
 
@@ -77,8 +77,8 @@ final class HardwareRenderSprite extends RenderSprite {
         this.field_e.a(GameKeyHandler.field_a, 1, 0);
         this.field_e.a((byte) -74, param7);
         if (this.field_j) {
-          float var13 = (float)this.d();
-          float var14 = (float)this.c();
+          float var13 = (float)this.getFullWidth();
+          float var14 = (float)this.getFullHeight();
           float var15 = (param2 - param0) / var13;
           float var16 = (-param1 + param3) / var13;
           float var17 = (-param0 + param4) / var14;
@@ -109,11 +109,11 @@ final class HardwareRenderSprite extends RenderSprite {
         this.field_e.a(ArchiveNetworkClient.field_i, 1, 0);
     }
 
-    final int b() {
+    final int getHeight() {
         return this.field_l;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawScaled(int x, int y, int destinationWidth, int destinationHeight, int param4, int param5, int param6, int param7) {
         ke stackIn_5_1 = null;
         ec var11 = this.field_e.y(-118);
         ec var10 = this.field_e.d(12343);
@@ -135,13 +135,13 @@ final class HardwareRenderSprite extends RenderSprite {
         this.field_e.a((byte) -74, param5);
         var10.b(this.field_g.a((float)this.field_l, (byte) -32), this.field_g.a(84, (float)this.field_k), 1.0f, -82);
         if (this.field_j) {
-          param2 = param2 * this.field_k / this.d();
-          param3 = param3 * this.field_l / this.c();
-          param0 = param0 + this.field_a * param2 / this.field_k;
-          param1 = param1 + this.field_h * param3 / this.field_l;
+          destinationWidth = destinationWidth * this.field_k / this.getFullWidth();
+          destinationHeight = destinationHeight * this.field_l / this.getFullHeight();
+          x = x + this.field_a * destinationWidth / this.field_k;
+          y = y + this.field_h * destinationHeight / this.field_l;
         }
-        var11.b((float)param3, (float)param2, 0.0f, 68);
-        var11.a(param1, param0, 0, -120);
+        var11.b((float)destinationHeight, (float)destinationWidth, 0.0f, 68);
+        var11.a(y, x, 0, -120);
         this.field_e.a(tr.field_a, (byte) -111);
         this.field_e.q((byte) 119);
         this.field_e.s(2);
@@ -150,25 +150,25 @@ final class HardwareRenderSprite extends RenderSprite {
         this.field_e.a(ArchiveNetworkClient.field_i, 1, 0);
     }
 
-    final int d() {
+    final int getFullWidth() {
         return this.field_d + (this.field_a + this.field_k);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawBlended(int x, int y, int blendMode, int argb, int param4) {
         ec var8 = this.field_e.y(-112);
         ec var7 = this.field_e.d(12343);
-        param1 = param1 + this.field_h;
-        param0 = param0 + this.field_a;
+        y = y + this.field_h;
+        x = x + this.field_a;
         this.field_g.a(jp.field_a, -31662);
         this.field_e.r((byte) 117);
         this.field_e.a(this.field_g, -9135);
         this.field_e.e(true, param4);
-        this.field_e.b(param2, false);
+        this.field_e.b(blendMode, false);
         this.field_e.a((byte) 120, 1, GameKeyHandler.field_a);
         this.field_e.a(GameKeyHandler.field_a, 1, 0);
-        this.field_e.a((byte) -74, param3);
+        this.field_e.a((byte) -74, argb);
         var8.b((float)this.field_l, (float)this.field_k, 0.0f, -83);
-        var8.a(param1, param0, 0, 124);
+        var8.a(y, x, 0, 124);
         var7.b(this.field_g.a((float)this.field_l, (byte) -32), this.field_g.a(118, (float)this.field_k), 1.0f, -94);
         this.field_e.a(tr.field_a, (byte) 55);
         this.field_e.q((byte) 73);
@@ -242,7 +242,7 @@ final class HardwareRenderSprite extends RenderSprite {
         }
     }
 
-    final int a() {
+    final int getWidth() {
         return this.field_k;
     }
 

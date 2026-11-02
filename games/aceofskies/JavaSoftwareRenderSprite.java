@@ -236,7 +236,7 @@ abstract class JavaSoftwareRenderSprite extends RenderSprite {
         }
     }
 
-    final int d() {
+    final int getFullWidth() {
         return this.field_g + this.field_o + this.field_m;
     }
 
@@ -379,13 +379,13 @@ abstract class JavaSoftwareRenderSprite extends RenderSprite {
 
     abstract void b(int param0, int param1);
 
-    final int a() {
+    final int getWidth() {
         return this.field_o;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
+    abstract void drawScaled(int x, int y, int destinationWidth, int destinationHeight, int param4, int param5, int param6, int param7);
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4);
+    abstract void drawBlended(int x, int y, int blendMode, int argb, int param4);
 
     final void a(int param0, int param1, int param2, int param3) {
         this.field_g = param0;
@@ -394,7 +394,7 @@ abstract class JavaSoftwareRenderSprite extends RenderSprite {
         this.field_l = param3;
     }
 
-    final int b() {
+    final int getHeight() {
         return this.field_p;
     }
 
@@ -404,7 +404,7 @@ abstract class JavaSoftwareRenderSprite extends RenderSprite {
         this.field_p = param2;
     }
 
-    final int c() {
+    final int getFullHeight() {
         return this.field_z + this.field_p + this.field_l;
     }
 
