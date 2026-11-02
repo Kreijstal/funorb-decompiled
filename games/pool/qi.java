@@ -5,20 +5,20 @@ import java.util.*;
 
 final class qi implements Iterable {
     static String field_h;
-    rg field_d;
+    DualLinkNode field_d;
     static int field_a;
     static int field_b;
     static int field_e;
     static int field_g;
     static boolean field_c;
-    static jg field_f;
+    static PcmSample field_f;
 
-    final static dd[] a(int param0, int param1, boolean param2, int param3, int param4, boolean param5) {
-        dd var20 = null;
-        dd var21 = null;
-        dd var22 = null;
-        dd var18 = null;
-        dd var19 = null;
+    final static Sprite[] a(int param0, int param1, boolean param2, int param3, int param4, boolean param5) {
+        Sprite var20 = null;
+        Sprite var21 = null;
+        Sprite var22 = null;
+        Sprite var18 = null;
+        Sprite var19 = null;
         int var8 = 0;
         Object var10 = null;
         Object var11 = null;
@@ -30,7 +30,7 @@ final class qi implements Iterable {
         int var8Lifetime1;
         if (param4 < -84) {
           var8 = qh.field_f;
-          var20 = new dd(16, param3);
+          var20 = new Sprite(16, param3);
           var20.e();
           qh.d(0, 0, 16, param3, param0, param1);
           var10 = null;
@@ -56,11 +56,11 @@ final class qi implements Iterable {
             qh.f(15, 4, 1, 0);
           }
           qh.a(var16, var7, var8);
-          return new dd[]{null, null, null, (dd) (var10), var20, (dd) (var11), null, null, null};
+          return new Sprite[]{null, null, null, (Sprite) (var10), var20, (Sprite) (var11), null, null, null};
         }
         field_e = 98;
         var8Lifetime1 = qh.field_f;
-        dd var17 = new dd(16, param3);
+        Sprite var17 = new Sprite(16, param3);
         var17.e();
         qh.d(0, 0, 16, param3, param0, param1);
         var10 = null;
@@ -86,7 +86,7 @@ final class qi implements Iterable {
           qh.f(15, 4, 1, 0);
         }
         qh.a(var16, var7, var8Lifetime1);
-        return new dd[]{null, null, null, (dd) (var10), var17, (dd) (var11), null, null, null};
+        return new Sprite[]{null, null, null, (Sprite) (var10), var17, (Sprite) (var11), null, null, null};
     }
 
     final static void a(byte param0) {
@@ -135,9 +135,9 @@ final class qi implements Iterable {
         return (Iterator) ((Object) new mn(this));
     }
 
-    final rg a(int param0) {
-        rg var2 = null;
-        rg var2Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 >= -87) {
           qi.a((byte) -89);
           var2 = this.field_d.field_q;
@@ -183,12 +183,12 @@ final class qi implements Iterable {
     }
 
     qi() {
-        this.field_d = new rg();
+        this.field_d = new DualLinkNode();
         this.field_d.field_n = this.field_d;
         this.field_d.field_q = this.field_d;
     }
 
-    final void a(byte param0, rg param1) {
+    final void a(byte param0, DualLinkNode param1) {
         try {
           if (param1.field_n != null) {
             param1.a(false);

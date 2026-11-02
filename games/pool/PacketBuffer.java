@@ -4,7 +4,7 @@
 class PacketBuffer extends IntrusiveNode {
     static String field_o;
     static String field_n;
-    static jg field_q;
+    static PcmSample field_q;
     static String field_m;
     static int[] field_p;
     static String field_r;
@@ -835,7 +835,7 @@ class PacketBuffer extends IntrusiveNode {
         int fieldTemp$0 = 0;
         try {
           if (param0 != -9946) {
-            field_q = (jg) null;
+            field_q = (PcmSample) null;
           }
           var3_int = param1.indexOf('\0');
           if (var3_int >= 0) {

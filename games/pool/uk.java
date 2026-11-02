@@ -4,17 +4,17 @@
 import java.util.*;
 
 final class uk implements Iterable {
-    static dd[] field_b;
+    static Sprite[] field_b;
     IntrusiveNode[] field_k;
     static boolean field_c;
     int field_h;
     static nm field_d;
     private static int field_f;
-    static dd field_g;
+    static Sprite field_g;
     static int field_a;
     static int field_l;
     static int field_m;
-    static dd[] field_i;
+    static Sprite[] field_i;
     private IntrusiveNode field_e;
     static int field_j;
 
@@ -50,7 +50,7 @@ final class uk implements Iterable {
               param2.field_q[var3_intLifetime2] = param2.field_q[var3_intLifetime2] - var6;
             }
             if (param1 >= -121) {
-              field_i = (dd[]) null;
+              field_i = (Sprite[]) null;
             }
             boolean decompiledFrameRemainder0 = true;
             if (param0.length == 12 && (65536 != param0[3] ||
@@ -101,7 +101,7 @@ final class uk implements Iterable {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, dd[] param11, int param12, lr param13, int param14, int param15, int param16, int param17, dd[] param18, dd[] param19, lr param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, Sprite[] param11, int param12, lr param13, int param14, int param15, int param16, int param17, Sprite[] param18, Sprite[] param19, lr param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -285,7 +285,7 @@ final class uk implements Iterable {
           field_a = 102;
         }
         qd.field_b.field_Rb.field_Cb = -qd.field_b.field_Rb.field_Db + var7Lifetime1;
-        if (rg.field_p &&
+        if (DualLinkNode.field_p &&
           null != uq.field_D) {
           gd.field_b = true;
         }
@@ -302,7 +302,7 @@ final class uk implements Iterable {
     public static void a(int param0) {
         field_g = null;
         if (param0 >= -37) {
-          field_g = (dd) null;
+          field_g = (Sprite) null;
         }
         field_b = null;
         field_i = null;
@@ -364,7 +364,7 @@ final class uk implements Iterable {
               mo.a("updatelinks", new Object[]{"options", var3 + "options.ws"}, param0 ^ 558370174, param1);
               mo.a("updatelinks", new Object[]{"terms", var3 + "terms.ws"}, param0 ^ 558370117, param1);
               if (param0 != 558370049) {
-                field_b = (dd[]) null;
+                field_b = (Sprite[]) null;
               }
               mo.a("updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, 125, param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

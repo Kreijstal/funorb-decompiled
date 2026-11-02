@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ap extends rg {
+final class ap extends DualLinkNode {
     int[] field_C;
     private String[] field_A;
     private int[] field_z;
@@ -53,8 +53,8 @@ final class ap extends rg {
         if (null != tl.field_N) {
           tl.field_N.a(param0, (byte) -46);
         }
-        if (qo.field_C != null) {
-          qo.field_C.b(param0, param1 - 3804437);
+        if (SpriteState.field_C != null) {
+          SpriteState.field_C.b(param0, param1 - 3804437);
         }
     }
 
@@ -134,10 +134,10 @@ final class ap extends rg {
     }
 
     final static void a(di param0, boolean param1, qb[] param2, int[] param3, di param4) {
-        dd[] dupTemp$0 = null;
-        dd[] dupTemp$1 = null;
-        dd[] dupTemp$2 = null;
-        dd[] dupTemp$3 = null;
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         qb[] var5 = null;
         qb[] var6 = null;
         int[] var6_array = null;
@@ -165,12 +165,12 @@ final class ap extends rg {
         vh var9 = null;
         vh var10 = null;
         vh var11 = null;
-        dd[] var12 = null;
-        dd[] var13 = null;
-        dd[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         vh var15 = null;
-        dd[] var16 = null;
-        dd[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;

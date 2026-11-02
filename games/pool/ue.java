@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ue {
-    static dd field_c;
+    static Sprite field_c;
     static String field_d;
     static IntrusiveDeque field_b;
     static int field_a;

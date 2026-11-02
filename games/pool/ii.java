@@ -19,21 +19,21 @@ final class ii {
         field_c = null;
     }
 
-    final static dd a(int param0, qb param1) {
+    final static Sprite a(int param0, qb param1) {
         RuntimeException var2 = null;
         int var5 = 0;
         int var6 = 0;
         qb var7 = null;
-        dd var9 = null;
+        Sprite var9 = null;
         int[] var15 = null;
         int[] var16 = null;
-        dd stackIn_1_0 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new dd(4 + param1.field_f, param1.field_g + 4);
+          var9 = new Sprite(4 + param1.field_f, param1.field_g + 4);
           var9.field_B = param1.field_d - 2;
           var9.field_G = param1.field_e - 2;
           var15 = new int[4];

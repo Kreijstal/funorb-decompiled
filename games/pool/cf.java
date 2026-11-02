@@ -14,13 +14,13 @@ final class cf {
     static IntrusiveDeque field_k;
     private IterableNodeHashTable field_f;
 
-    private final jg a(String param0, byte param1, int[] param2, String param3) {
+    private final PcmSample a(String param0, byte param1, int[] param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         Object stackIn_2_0 = null;
         Object stackIn_7_0 = null;
-        jg stackIn_9_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -33,7 +33,7 @@ final class cf {
           var5_int = this.field_h.b(param0, -1);
           if (0 > var5_int) {
             stackIn_2_0 = null;
-            return (jg) (stackIn_2_0);
+            return (PcmSample) (stackIn_2_0);
           }
           var6 = this.field_h.a(var5_int, param1 ^ 18, param3);
           if (param1 != 18) {
@@ -44,7 +44,7 @@ final class cf {
             return stackIn_9_0;
           }
           stackIn_7_0 = null;
-          return (jg) (stackIn_7_0);
+          return (PcmSample) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -94,20 +94,20 @@ final class cf {
         int[] var5 = null;
         int[] var6 = null;
         int[] var7 = null;
-        dd dupTemp$0 = null;
-        dd var14 = null;
-        dd var8 = null;
-        dd dupTemp$1 = null;
-        dd var15 = null;
-        dd dupTemp$2 = null;
-        dd var16 = null;
-        dd dupTemp$3 = null;
-        dd var17 = null;
-        dd dupTemp$4 = null;
-        dd var18 = null;
-        dd dupTemp$5 = null;
-        dd var19 = null;
-        dd[] var3 = null;
+        Sprite dupTemp$0 = null;
+        Sprite var14 = null;
+        Sprite var8 = null;
+        Sprite dupTemp$1 = null;
+        Sprite var15 = null;
+        Sprite dupTemp$2 = null;
+        Sprite var16 = null;
+        Sprite dupTemp$3 = null;
+        Sprite var17 = null;
+        Sprite dupTemp$4 = null;
+        Sprite var18 = null;
+        Sprite dupTemp$5 = null;
+        Sprite var19 = null;
+        Sprite[] var3 = null;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
@@ -117,16 +117,16 @@ final class cf {
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
-        dd[] var20 = null;
+        Sprite[] var20 = null;
         int var4 = 0;
         qb var21 = null;
         int var2_int = 0;
         int var9 = Pool.field_O;
-        dd var8Lifetime1;
-        dd var8Lifetime2;
-        dd var8Lifetime3;
-        dd var8Lifetime4;
-        dd var8Lifetime5;
+        Sprite var8Lifetime1;
+        Sprite var8Lifetime2;
+        Sprite var8Lifetime3;
+        Sprite var8Lifetime4;
+        Sprite var8Lifetime5;
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var2_intLifetime3;
@@ -139,7 +139,7 @@ final class cf {
           for (var2_intLifetime1 = 0; al.field_B.length > var2_intLifetime1; var2_intLifetime1++) {
             al.field_B[var2_intLifetime1].a(198123656, param1);
           }
-          uk.field_b = new dd[]{pf.a("", (byte) 46, "menu_background_modern", param1), pf.a("", (byte) 42, "menu_background_plasma", param1), pf.a("", (byte) 62, "menu_background_jungle", param1), pf.a("", (byte) 40, "menu_background_polar", param1), pf.a("", (byte) 76, "menu_background_shuttle", param1)};
+          uk.field_b = new Sprite[]{pf.a("", (byte) 46, "menu_background_modern", param1), pf.a("", (byte) 42, "menu_background_plasma", param1), pf.a("", (byte) 62, "menu_background_jungle", param1), pf.a("", (byte) 40, "menu_background_polar", param1), pf.a("", (byte) 76, "menu_background_shuttle", param1)};
           uj.field_c = pf.a("", (byte) 124, "select_table_thumbnail_modern", param1);
           nm.field_d = pf.a("", (byte) 120, "select_table_thumbnail_plasma", param1);
           sk.field_b = pf.a("", (byte) 121, "select_table_thumbnail_jungle", param1);
@@ -148,8 +148,8 @@ final class cf {
           pk.field_b = pf.a("", (byte) 50, "select_table_thumbnail_jungle_locked", param1);
           tq.field_n = pf.a("", (byte) 87, "select_table_thumbnail_polar_locked", param1);
           uk.field_g = pf.a("", (byte) 62, "select_table_thumbnail_shuttle_locked", param1);
-          ne.field_t = new dd[]{null, null, pk.field_b, tq.field_n, uk.field_g};
-          og.field_K = new dd[]{uj.field_c, nm.field_d, sk.field_b, im.field_Vb, wn.field_e};
+          ne.field_t = new Sprite[]{null, null, pk.field_b, tq.field_n, uk.field_g};
+          og.field_K = new Sprite[]{uj.field_c, nm.field_d, sk.field_b, im.field_Vb, wn.field_e};
           nn.field_a[0] = aj.a(cq.a(param0, 0), "", param1, "gameopt_listicons_turntime");
           nn.field_a[2] = aj.a(param0 + 0, "", param1, "gameopt_listicons_theme");
           nn.field_a[1] = aj.a(cq.a(param0, 0), "", param1, "gameopt_listicons_ruleset");
@@ -281,10 +281,10 @@ final class cf {
           lb.field_O = aj.a(0, "", param1, "hud_chat_tab_frame");
           dr.field_d = pf.a("", (byte) 95, "hud_chat_star", param1);
           var2_intLifetime4 = sa.field_h.b(ua.field_n);
-          ta.field_e = new dd(var2_intLifetime4, sa.field_h.field_C + sa.field_h.field_w + 1);
+          ta.field_e = new Sprite(var2_intLifetime4, sa.field_h.field_C + sa.field_h.field_w + 1);
           ta.field_e.e();
           sa.field_h.d(ua.field_n, 0, sa.field_h.field_C, 16777215, 1);
-          jh.field_e = new dd(dr.field_d.field_z + ta.field_e.field_z + 2, ta.field_e.field_A);
+          jh.field_e = new Sprite(dr.field_d.field_z + ta.field_e.field_z + 2, ta.field_e.field_A);
           jh.field_e.e();
           sa.field_h.d(ua.field_n, 0, sa.field_h.field_C, 16777215, 1);
           dr.field_d.c(2 + var2_intLifetime4, jh.field_e.field_A - dr.field_d.field_A >> 1);
@@ -300,13 +300,13 @@ final class cf {
           pf.a("", (byte) 98, "icon_extra_shot", param1);
           gd.field_e = pf.a("", (byte) 101, "icon_extra_visit", param1);
           oo.field_D = pf.a("", (byte) 90, "icon_snookered", param1);
-          sb.field_c = new dd[4];
+          sb.field_c = new Sprite[4];
           sb.field_c[0] = pf.a("", (byte) 108, "menu_eightball", param1);
           sb.field_c[1] = pf.a("", (byte) 107, "menu_nineball", param1);
           sb.field_c[2] = pf.a("", (byte) 63, "menu_killer", param1);
           sb.field_c[3] = pf.a("", (byte) 112, "menu_freeplay", param1);
           var20 = aj.a(0, "", param1, "tutorial_text_box");
-          ff.field_e = new dd[]{new dd(0, var20[0].field_y), var20[0], new dd(0, var20[0].field_y), new dd(0, var20[1].field_y), var20[1], new dd(0, var20[1].field_y), new dd(0, var20[2].field_y), var20[2], new dd(0, var20[2].field_y)};
+          ff.field_e = new Sprite[]{new Sprite(0, var20[0].field_y), var20[0], new Sprite(0, var20[0].field_y), new Sprite(0, var20[1].field_y), var20[1], new Sprite(0, var20[1].field_y), new Sprite(0, var20[2].field_y), var20[2], new Sprite(0, var20[2].field_y)};
           dq.field_e = aj.a(0, "", param1, "playerlist_button");
           vm.field_d = aj.a(0, "", param1, "tutorial_controls");
           qg.field_b = pf.a("", (byte) 52, "tutorial_box_progress", param1);
@@ -330,10 +330,10 @@ final class cf {
         }
     }
 
-    private final jg a(int[] param0, int param1, int param2, int param3) {
-        jg stackIn_2_0 = null;
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
+        PcmSample stackIn_2_0 = null;
         Object stackIn_14_0 = null;
-        jg stackIn_16_0 = null;
+        PcmSample stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -341,15 +341,15 @@ final class cf {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        jg var8 = null;
+        PcmSample var8 = null;
         gm var9 = null;
         int var10 = 0;
-        jg var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param2 >>> 12 | (param2 & -1610608641) << 4) ^ param3;
           var5_int = var5_int | param2 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (jg) (this.field_f.a(false, var6));
+          var8 = (PcmSample) (this.field_f.a(false, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -370,7 +370,7 @@ final class cf {
           var8Lifetime1 = var9.a(param0);
           if (var8Lifetime1 == null) {
             stackIn_14_0 = null;
-            return (jg) (stackIn_14_0);
+            return (PcmSample) (stackIn_14_0);
           }
           var9.unlink((byte) -117);
           this.field_f.a((byte) -128, var8Lifetime1, var6);
@@ -390,27 +390,27 @@ final class cf {
         }
     }
 
-    private final jg a(boolean param0, int param1, int param2, int[] param3) {
+    private final PcmSample a(boolean param0, int param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        jg var8 = null;
+        PcmSample var8 = null;
         mi var9 = null;
-        jg var10 = null;
-        jg stackIn_3_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_3_0 = null;
         Object stackIn_7_0 = null;
-        jg stackIn_10_0 = null;
-        jg stackIn_17_0 = null;
+        PcmSample stackIn_10_0 = null;
+        PcmSample stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jg var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param2 ^ (param1 >>> 12 | (param1 & 1879052287) << 4);
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int;
-          var8 = (jg) (this.field_f.a(false, var6));
+          var8 = (PcmSample) (this.field_f.a(false, var6));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -418,10 +418,10 @@ final class cf {
           if (param3 != null &&
             param3[0] <= 0) {
             stackIn_7_0 = null;
-            return (jg) (stackIn_7_0);
+            return (PcmSample) (stackIn_7_0);
           }
           if (!param0) {
-            stackIn_10_0 = (jg) null;
+            stackIn_10_0 = (PcmSample) null;
             return stackIn_10_0;
           }
           var9 = mi.a(this.field_h, param1, param2);
@@ -450,10 +450,10 @@ final class cf {
         }
     }
 
-    final jg a(String param0, boolean param1, String param2) {
+    final PcmSample a(String param0, boolean param1, String param2) {
         RuntimeException var4 = null;
         String var5 = null;
-        jg stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -487,12 +487,12 @@ final class cf {
         }
     }
 
-    private final jg a(String param0, String param1, int[] param2, byte param3) {
+    private final PcmSample a(String param0, String param1, int[] param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        jg stackIn_7_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -539,10 +539,10 @@ final class cf {
         }
     }
 
-    final jg a(int[] param0, int param1, int param2) {
+    final PcmSample a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
-        jg stackIn_3_0 = null;
-        jg stackIn_6_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_6_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -586,10 +586,10 @@ final class cf {
         }
     }
 
-    final jg a(String param0, String param1, byte param2) {
+    final PcmSample a(String param0, String param1, byte param2) {
         RuntimeException var4 = null;
         String var5 = null;
-        jg stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -649,10 +649,10 @@ final class cf {
         }
     }
 
-    final jg b(int[] param0, int param1, int param2) {
+    final PcmSample b(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
-        jg stackIn_3_0 = null;
-        jg stackIn_7_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

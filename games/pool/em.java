@@ -11,7 +11,7 @@ final class em extends ob {
     static int field_P;
     static ao field_J;
     static boolean field_N;
-    static dd field_M;
+    static Sprite field_M;
 
     private final boolean g(int param0, int param1) {
         int var3;
@@ -251,12 +251,12 @@ final class em extends ob {
         }
     }
 
-    final dd a(String param0, int param1, int param2, int param3) {
+    final Sprite a(String param0, int param1, int param2, int param3) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         int[] var6 = null;
-        dd stackIn_5_0 = null;
-        dd stackIn_7_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -397,7 +397,7 @@ final class em extends ob {
         }
     }
 
-    final static void a(String[] args, int param1, int param2, boolean param3, di param4, int param5, di param6, byte[] param7, int[] param8, di param9, String[][] param10, String[] param11, byte[] param12, qb[] param13, String[] param14, dd[][] param15, String[][] param16, byte param17, dd[][] param18, int[] param19) {
+    final static void a(String[] args, int param1, int param2, boolean param3, di param4, int param5, di param6, byte[] param7, int[] param8, di param9, String[][] param10, String[] param11, byte[] param12, qb[] param13, String[] param14, Sprite[][] param15, String[][] param16, byte param17, Sprite[][] param18, int[] param19) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -540,7 +540,7 @@ final class em extends ob {
         }
     }
 
-    final dd[] b(int param0, int param1) {
+    final Sprite[] b(int param0, int param1) {
         if (param1 != -34) {
           field_J = (ao) null;
         }

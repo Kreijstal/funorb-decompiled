@@ -338,7 +338,7 @@ class fe extends ei {
                         var13Lifetime1 = var18_int;
                       }
                       if (var18_int != 0 &&
-                        !rg.field_s) {
+                        !DualLinkNode.field_s) {
                         var11 = 1;
                       }
                     }
@@ -353,7 +353,7 @@ class fe extends ei {
                         var14 = var18_intLifetime1;
                       }
                       if (0 != var18_intLifetime1 &&
-                        !rg.field_s) {
+                        !DualLinkNode.field_s) {
                         var11 = 1;
                       }
                     }

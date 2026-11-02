@@ -12,7 +12,7 @@ final class db extends vh {
     private vh field_Rb;
     static nm field_Vb;
     static oh field_Qb;
-    static dd field_Wb;
+    static Sprite field_Wb;
     private int field_Mb;
     static cd field_Ub;
     static nq field_Sb;

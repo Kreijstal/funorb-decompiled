@@ -3,7 +3,7 @@
  */
 final class sm extends om {
     static aj field_C;
-    static dd field_z;
+    static Sprite field_z;
     static int field_D;
     static String field_B;
     static String field_E;

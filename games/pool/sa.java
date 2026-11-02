@@ -40,7 +40,7 @@ final class sa {
             return l.field_c;
           }
           if (ig.field_j.a(88)) {
-            return qo.field_x;
+            return SpriteState.field_x;
           }
           return l.field_c;
         }
@@ -48,7 +48,7 @@ final class sa {
           return l.field_c;
         }
         if (ig.field_j.a(88)) {
-          return qo.field_x;
+          return SpriteState.field_x;
         }
         return l.field_c;
     }

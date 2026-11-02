@@ -100,9 +100,9 @@ final class lc extends fe {
         int var10;
         int var11;
         int var12;
-        dd var13;
-        dd var14;
-        dd var15;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
         var12 = Pool.field_O;
         super.a(param0, (byte) -122, param2, param3);
         if (param0 != 0) {
@@ -131,7 +131,7 @@ final class lc extends fe {
             kj.a(104, sm.field_z);
             qh.d();
           } else {
-            sm.field_z = new dd(var10, var11);
+            sm.field_z = new Sprite(var10, var11);
             kj.a(56, sm.field_z);
           }
           var13.b(112, 144, var13.field_w << 4, var13.field_y << 4, -this.field_S << 10, 4096);

@@ -249,7 +249,7 @@ abstract class re {
                 param1 = eh.field_n;
               }
               param2 = 2;
-              vj.field_j.a(8, qo.field_x);
+              vj.field_j.a(8, SpriteState.field_x);
             }
             var3_int = 1;
             if (param2 == 10) {

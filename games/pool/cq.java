@@ -4,7 +4,7 @@
 final class cq {
     static String field_e;
     static int field_a;
-    static dd[] field_b;
+    static Sprite[] field_b;
     static vh field_d;
     static IntrusiveDeque field_g;
     static int field_c;
@@ -32,10 +32,10 @@ final class cq {
         return param0 ^ param1;
     }
 
-    final static dd[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         int var6 = Pool.field_O;
-        dd[] var7 = new dd[9];
-        dd[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         var7[0] = ad.a(param2, param0, 7);
         int var5 = 1;
         if (param1 != 4578) {

@@ -230,7 +230,7 @@ abstract class oe extends ch {
         if (ad.field_y == null ||
           !(ad.field_y.field_z >= this.field_l) ||
           !(this.field_y <= ad.field_y.field_A)) {
-          ad.field_y = new dd(this.field_l, this.field_y);
+          ad.field_y = new Sprite(this.field_l, this.field_y);
         }
         kj.a(117, ad.field_y);
         qh.d();

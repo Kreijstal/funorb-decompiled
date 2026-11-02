@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk extends kd {
+final class vk extends PcmStream {
     private int[] field_Y;
     private int[] field_T;
     static tf field_db;
@@ -14,7 +14,7 @@ final class vk extends kd {
     private int field_N;
     private int[] field_A;
     private gq field_Z;
-    static dd[] field_y;
+    static Sprite[] field_y;
     private int[] field_B;
     int[] field_U;
     private int[] field_p;
@@ -46,8 +46,8 @@ final class vk extends kd {
         return 0;
     }
 
-    final synchronized kd a() {
-        return (kd) ((Object) this.field_u);
+    final synchronized PcmStream a() {
+        return (PcmStream) ((Object) this.field_u);
     }
 
     final synchronized boolean a(cf param0, di param1, cg param2, int param3, int param4) {
@@ -381,7 +381,7 @@ final class vk extends kd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 118) {
-            field_y = (dd[]) null;
+            field_y = (Sprite[]) null;
           }
           var3_int = this.field_B[param1.field_t];
           if (var3_int >= 8192) {
@@ -803,7 +803,7 @@ final class vk extends kd {
         boolean stackIn_18_3;
         pr var5;
         int var6_int;
-        jg var6;
+        PcmSample var6;
         pr var7;
         pr var8;
         int var9;
@@ -1072,7 +1072,7 @@ final class vk extends kd {
         }
     }
 
-    final synchronized kd b() {
+    final synchronized PcmStream b() {
         return null;
     }
 

@@ -10,7 +10,7 @@ final class qp extends vh {
     private qp[] field_dc;
     private uo[] field_Vb;
     private int field_Lb;
-    static dd field_Rb;
+    static Sprite field_Rb;
     static String field_bc;
     private int field_Wb;
     static String[] field_fc;
@@ -305,7 +305,7 @@ final class qp extends vh {
               this.field_Nb[var13] == -1) {
               var14 = ue.field_c;
             }
-            this.field_Vb[var13] = new uo(0L, param2, (vh) null, param3, (dd) (var14), param6[var13]);
+            this.field_Vb[var13] = new uo(0L, param2, (vh) null, param3, (Sprite) (var14), param6[var13]);
             this.a(-126, this.field_Vb[var13]);
             var15 = var17.b(param6[var13]);
             if (var15 > this.field_Xb) {

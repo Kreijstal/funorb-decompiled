@@ -5,7 +5,7 @@ final class hj {
     static long field_c;
     static int field_f;
     static String field_h;
-    static jg field_j;
+    static PcmSample field_j;
     static int field_l;
     static int field_g;
     static int field_a;

@@ -5,7 +5,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     static String[] field_g;
     boolean field_n;
     static di field_m;
-    static dd field_h;
+    static Sprite field_h;
     static int field_c;
     static vh field_a;
     static en field_l;
@@ -273,7 +273,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static void a(dd[] param0, int param1) {
+    final static void a(Sprite[] param0, int param1) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -651,7 +651,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             ka.field_p = true;
           }
           if (param0 != 20171) {
-            field_h = (dd) null;
+            field_h = (Sprite) null;
           }
           if (null != oc.field_t) {
             oc.field_t.destroy();

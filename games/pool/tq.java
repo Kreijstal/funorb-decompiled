@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tq extends IntrusiveNode {
-    static dd field_n;
+    static Sprite field_n;
     static byte[] field_u;
     static boolean field_p;
     boolean field_s;
@@ -17,7 +17,7 @@ final class tq extends IntrusiveNode {
     static int field_q;
 
     final static boolean c(byte param0) {
-        if (!rg.field_p) {
+        if (!DualLinkNode.field_p) {
           return false;
         }
         if (hn.field_b != 0) {
@@ -31,8 +31,8 @@ final class tq extends IntrusiveNode {
 
     final static int[] a(int param0, int param1, boolean param2) {
         int var4 = 0;
-        dd var5 = new dd(1024, 64);
-        dd var3 = var5;
+        Sprite var5 = new Sprite(1024, 64);
+        Sprite var3 = var5;
         if (param2) {
           tq.a(57);
         }

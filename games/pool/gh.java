@@ -206,7 +206,7 @@ final class gh extends vc {
 
     final void b(int param0, di param1) {
         try {
-          this.field_B = new dd(param1.a(false, "nebula.jpg", ""), (java.awt.Component) ((Object) vj.a((byte) -73)));
+          this.field_B = new Sprite(param1.a(false, "nebula.jpg", ""), (java.awt.Component) ((Object) vj.a((byte) -73)));
           if (param0 != 5) {
             field_Q = (String) null;
           }

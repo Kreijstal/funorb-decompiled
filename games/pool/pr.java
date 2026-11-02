@@ -5,7 +5,7 @@ final class pr extends IntrusiveNode {
     int field_w;
     int field_A;
     int field_E;
-    jg field_C;
+    PcmSample field_C;
     int field_G;
     static int field_l;
     int field_B;

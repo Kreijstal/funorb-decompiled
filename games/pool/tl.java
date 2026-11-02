@@ -804,7 +804,7 @@ final class tl extends ob {
                     var12 = 1;
                   }
                   if (var16 != 0 &&
-                    !rg.field_s &&
+                    !DualLinkNode.field_s &&
                     0 >= mp.field_V) {
                     var10 = 1;
                   }
@@ -827,7 +827,7 @@ final class tl extends ob {
                   w.field_j[var7] != null) {
                   var16Lifetime2 = w.field_j[var7][var9];
                   if (var16Lifetime2 != 0 &&
-                    !rg.field_s &&
+                    !DualLinkNode.field_s &&
                     mp.field_V <= 0) {
                     var10 = 1;
                   }
@@ -1138,13 +1138,13 @@ final class tl extends ob {
         }
     }
 
-    final dd a(String param0, int param1, int param2, int param3) {
+    final Sprite a(String param0, int param1, int param2, int param3) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         String var6 = null;
         int[] var7 = null;
-        dd stackIn_6_0 = null;
-        dd stackIn_8_0 = null;
+        Sprite stackIn_6_0 = null;
+        Sprite stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

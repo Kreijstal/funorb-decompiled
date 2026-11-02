@@ -4,35 +4,35 @@
 import java.util.*;
 
 final class cj extends vc {
-    private jg field_Z;
-    private jg field_hb;
-    private jg field_lb;
-    private jg field_gb;
+    private PcmSample field_Z;
+    private PcmSample field_hb;
+    private PcmSample field_lb;
+    private PcmSample field_gb;
     static vh field_V;
-    private jg field_kb;
+    private PcmSample field_kb;
     static String field_U;
-    private jg field_db;
-    private jg field_W;
-    jg field_mb;
-    jg field_rb;
-    private jg field_ab;
+    private PcmSample field_db;
+    private PcmSample field_W;
+    PcmSample field_mb;
+    PcmSample field_rb;
+    private PcmSample field_ab;
     static boolean[] field_fb;
-    private jg field_jb;
-    private jg field_cb;
-    private jg field_qb;
-    private jg field_ib;
+    private PcmSample field_jb;
+    private PcmSample field_cb;
+    private PcmSample field_qb;
+    private PcmSample field_ib;
     static int field_eb;
-    private jg field_Y;
-    private jg field_R;
-    private jg field_X;
-    private jg field_T;
+    private PcmSample field_Y;
+    private PcmSample field_R;
+    private PcmSample field_X;
+    private PcmSample field_T;
     static String[] field_ob;
-    jg field_S;
-    private jg field_pb;
-    private jg field_sb;
-    private jg field_nb;
-    jg field_bb;
-    private jg field_Q;
+    PcmSample field_S;
+    private PcmSample field_pb;
+    private PcmSample field_sb;
+    private PcmSample field_nb;
+    PcmSample field_bb;
+    private PcmSample field_Q;
 
     final void c(boolean param0) {
         this.field_l = sa.field_g;
@@ -80,9 +80,9 @@ final class cj extends vc {
     final void b(int param0, di param1) {
         try {
           if (param0 != 5) {
-            this.field_gb = (jg) null;
+            this.field_gb = (PcmSample) null;
           }
-          this.field_B = new dd(param1.a(false, "tiki-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
+          this.field_B = new Sprite(param1.a(false, "tiki-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "cj.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -103,7 +103,7 @@ final class cj extends vc {
             tl.field_N.a(true, -1);
           }
           if (500 > ln.field_t) {
-            this.a(128, 50, (byte) 71, new jg[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
+            this.a(128, 50, (byte) 71, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
             if (ga.a(400, true, ea.field_r) == 0) {
               this.c(-4577, 32);
             }
@@ -111,14 +111,14 @@ final class cj extends vc {
             if (ln.field_t != 500) {
               if (ln.field_t < 2000) {
                 var3_int = (128 * ln.field_t - 64000) / 1500;
-                this.a(128 - var3_int * 7 / 8, 50, (byte) 34, new jg[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
+                this.a(128 - var3_int * 7 / 8, 50, (byte) 34, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
                 if (ga.a(800, true, ea.field_r) == 0) {
                   this.c(-4577, 128 - 7 * var3_int / 8 >> 2);
                 }
                 tl.field_N.a((byte) 77, -1, var3_int);
               } else {
                 if (ln.field_t < 11200) {
-                  this.a(8, 50, (byte) -101, new jg[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
+                  this.a(8, 50, (byte) -101, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
                 } else {
                   if (ln.field_t >= 12200) {
                     if (ln.field_t == 12200) {
@@ -128,7 +128,7 @@ final class cj extends vc {
                     }
                   } else {
                     var3_int = 128 * (12200 - ln.field_t) / 1000;
-                    this.a(128 - 7 * var3_int / 8, 50, (byte) -126, new jg[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
+                    this.a(128 - 7 * var3_int / 8, 50, (byte) -126, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, mc.field_j);
                     if (ga.a(800, true, ea.field_r) == 0) {
                       this.c(-4577, 128 - var3_int * 7 / 8 >> 2);
                     }
@@ -295,7 +295,7 @@ final class cj extends vc {
           var3_int++;
           this.field_O[incrementValue$39] = eg.a(param0, "", "tiki_table/tiki_side_a");
           if (param1 > -43) {
-            this.field_Z = (jg) null;
+            this.field_Z = (PcmSample) null;
           }
           incrementValue$40 = var3_int;
           var3_int++;
@@ -598,7 +598,7 @@ final class cj extends vc {
     final void c(int param0, di param1) {
         try {
           if (param0 != -23569) {
-            this.field_pb = (jg) null;
+            this.field_pb = (PcmSample) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "cj.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -1203,7 +1203,7 @@ final class cj extends vc {
 
     final int h(int param0) {
         if (param0 != 684) {
-          this.field_kb = (jg) null;
+          this.field_kb = (PcmSample) null;
         }
         return 11184810;
     }
@@ -1212,7 +1212,7 @@ final class cj extends vc {
         int var3 = 0;
         int stackIn_11_0 = 0;
         int var4;
-        jg var5;
+        PcmSample var5;
         int var6;
         int var7;
         var7 = Pool.field_O;
@@ -1245,7 +1245,7 @@ final class cj extends vc {
                                 if (var6 == 10) {
                                   mc.field_j[var3] = rq.a(126, nb.a(this.field_gb, 100, param1, ga.a(128, true, ea.field_r)));
                                 } else {
-                                  var5 = (jg) (mc.field_j[var3].field_o.field_n);
+                                  var5 = (PcmSample) (mc.field_j[var3].field_o.field_n);
                                   if (var5 != this.field_X &&
                                     this.field_cb != var5 &&
                                     var5 != this.field_Y &&

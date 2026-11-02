@@ -4,7 +4,7 @@
 final class jl {
     static String field_a;
     static String field_b;
-    static dd[][] field_d;
+    static Sprite[][] field_d;
     static rb field_e;
     static int field_c;
 
@@ -13,11 +13,11 @@ final class jl {
         field_a = null;
         field_e = null;
         if (param0 > 31) {
-          field_d = (dd[][]) null;
+          field_d = (Sprite[][]) null;
           return;
         }
         field_e = (rb) null;
-        field_d = (dd[][]) null;
+        field_d = (Sprite[][]) null;
     }
 
     final static boolean a(byte param0, di param1, int param2) {

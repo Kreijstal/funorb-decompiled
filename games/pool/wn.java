@@ -11,8 +11,8 @@ final class wn {
     static int field_j;
     static String field_c;
     static int field_l;
-    static jg field_b;
-    static dd field_e;
+    static PcmSample field_b;
+    static Sprite field_e;
     static int[] field_f;
     static int field_i;
     static int[] field_d;

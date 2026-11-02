@@ -156,7 +156,7 @@ public final class Pool extends ep {
             !ub.field_p &&
             !br.field_H) {
             if (ib.field_v &&
-              rg.field_p) {
+              DualLinkNode.field_p) {
               var3_int = 0;
             }
             i.a(10, var3_int != 0);
@@ -626,8 +626,8 @@ public final class Pool extends ep {
         hm.a(param0 + 144);
         vc.d((byte) 117);
         so.c(param0 ^ -9943);
-        qo.c((byte) 11);
-        rg.c(-3604);
+        SpriteState.c((byte) 11);
+        DualLinkNode.c(-3604);
         jc.a(param0 ^ -28);
         bh.a(false);
         wg.f(-1);
@@ -1604,15 +1604,15 @@ public final class Pool extends ep {
             om.field_u = pf.a("basic", (byte) 60, "orbcoin", sd.field_R);
             ig.a(ua.field_r, (byte) -12);
             ig.a(om.field_u, (byte) -12);
-            dq.field_k = new dd(32, 32);
+            dq.field_k = new Sprite(32, 32);
             dq.field_k.e();
             om.field_u.a(0, 0, 32, 32);
             sh.field_P.b(15100);
             om.field_u = null;
-            qo.a((byte) -72, true, of.field_Lb, sd.field_R, cp.field_a, 2, qk.field_c, 4, qp.field_Zb, s.field_d, nn.field_a, ve.field_q, r.field_n, te.field_p, ff.field_f);
+            SpriteState.a((byte) -72, true, of.field_Lb, sd.field_R, cp.field_a, 2, qk.field_c, 4, qp.field_Zb, s.field_d, nn.field_a, ve.field_q, r.field_n, te.field_p, ff.field_f);
             ac.field_n = pf.a("", (byte) 121, "lobby_game_logo", hr.field_q);
             we.field_m = ml.field_h;
-            rg.field_s = true;
+            DualLinkNode.field_s = true;
             dl.field_j = to.field_m;
             wj.a(200, -77);
             ec.a(0, 0, 37, vd.field_l, (java.applet.Applet) (this), 16777215);

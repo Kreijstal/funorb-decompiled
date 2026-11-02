@@ -4,31 +4,31 @@
 import java.util.*;
 
 final class fk extends oo {
-    private jg field_db;
+    private PcmSample field_db;
     static int field_Z;
-    private jg field_W;
+    private PcmSample field_W;
     private byte field_S;
     private int[] field_L;
     private nb field_bb;
-    private jg field_O;
-    private jg field_hb;
-    private jg field_fb;
-    private jg field_J;
+    private PcmSample field_O;
+    private PcmSample field_hb;
+    private PcmSample field_fb;
+    private PcmSample field_J;
     static lq field_cb;
-    private jg field_Y;
+    private PcmSample field_Y;
     static int field_ab;
     private ji[] field_K;
-    private jg field_Q;
+    private PcmSample field_Q;
     static int field_V;
-    private jg field_N;
+    private PcmSample field_N;
     private int[] field_R;
     static String field_eb;
     private int[] field_X;
     private int[] field_M;
     static hr field_gb;
-    private jg field_T;
-    private jg field_U;
-    private jg field_P;
+    private PcmSample field_T;
+    private PcmSample field_U;
+    private PcmSample field_P;
 
     final void a(al param0, int param1) {
         int var5_int = 0;
@@ -1140,7 +1140,7 @@ final class fk extends oo {
           var4 = var27;
           var5 = ro.field_v[1][var3_int];
           if (param0 != -25) {
-            this.field_Y = (jg) null;
+            this.field_Y = (PcmSample) null;
           }
           var35 = ro.field_v[2][var3_int];
           var30 = var35;
@@ -1285,7 +1285,7 @@ final class fk extends oo {
           this.field_bb = null;
         }
         if (param0) {
-          this.field_T = (jg) null;
+          this.field_T = (PcmSample) null;
         }
     }
 

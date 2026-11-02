@@ -4,12 +4,12 @@
 final class dq {
     static String[] field_j;
     static int[] field_i;
-    static dd[] field_e;
+    static Sprite[] field_e;
     static String field_c;
     static tm field_a;
     static long[] field_d;
     static lr field_f;
-    static dd field_k;
+    static Sprite field_k;
     static String field_b;
     static String field_g;
     static BufferedSocket field_h;
@@ -73,21 +73,21 @@ final class dq {
         }
     }
 
-    final static dd a(int param0, int param1, String param2) {
-        dd var3 = null;
+    final static Sprite a(int param0, int param1, String param2) {
+        Sprite var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
-        dd var8 = null;
-        dd stackIn_1_0 = null;
+        Sprite var8 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new dd(4 + mc.field_e.b(param2), mc.field_e.field_C - (-mc.field_e.field_w - 4));
+          var3 = new Sprite(4 + mc.field_e.b(param2), mc.field_e.field_C - (-mc.field_e.field_w - 4));
           var4 = new int[4];
           var5 = qh.field_d;
           var6 = qh.field_l;

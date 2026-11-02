@@ -4,7 +4,7 @@
 final class bk extends IntrusiveNode {
     int field_s;
     private int field_n;
-    private dd field_z;
+    private Sprite field_z;
     static String field_x;
     private IntrusiveDeque field_r;
     int field_l;
@@ -124,7 +124,7 @@ final class bk extends IntrusiveNode {
               param0.field_a.a(false, (byte) -122);
             }
           }
-          this.field_z = new dd(al.field_k.field_gb, this.field_t + 10);
+          this.field_z = new Sprite(al.field_k.field_gb, this.field_t + 10);
           this.field_z.e();
           sa.field_h.a(nf.field_Z, bi.field_d);
           sa.field_h.a(ef.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);

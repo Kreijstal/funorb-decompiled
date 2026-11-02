@@ -251,7 +251,7 @@ final class dk {
               }
             }
             dr.a(var5, 11468, pq.field_F[var6], var7, var4 + lr.a(td.field_c.toString()));
-            if (!rg.field_p) {
+            if (!DualLinkNode.field_p) {
               fj.field_j.field_W = false;
             }
             if (fj.field_j.field_W) {
@@ -349,13 +349,13 @@ final class dk {
     }
 
     final static void a(vh param0, byte param1) {
-        dd var2 = null;
+        Sprite var2 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        dd var2Lifetime1;
+        Sprite var2Lifetime1;
         try {
           if (param1 != 93) {
             dk.a((byte) 91, (String) null, (di) null, (String) null, (String) null);

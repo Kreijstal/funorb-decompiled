@@ -3,7 +3,7 @@
  */
 final class sk {
     static int field_a;
-    static dd field_b;
+    static Sprite field_b;
     static String field_e;
     static String field_c;
     static int field_d;
@@ -19,7 +19,7 @@ final class sk {
         field_b = null;
         field_c = null;
         if (param0 != 1) {
-          field_b = (dd) null;
+          field_b = (Sprite) null;
           field_e = null;
           return;
         }

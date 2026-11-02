@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uh extends ig {
-    static dd field_p;
+    static Sprite field_p;
     static int field_x;
     static int field_q;
     static String field_s;
@@ -34,7 +34,7 @@ final class uh extends ig {
           if (oq.field_z != null) {
             return;
           }
-          rg.field_p = false;
+          DualLinkNode.field_p = false;
           if (ea.field_z) {
             var5 = fg.field_e;
           } else {
@@ -115,7 +115,7 @@ final class uh extends ig {
         try {
           var3 = this.field_v.field_m.toLowerCase();
           if (!param1) {
-            field_p = (dd) null;
+            field_p = (Sprite) null;
           }
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {

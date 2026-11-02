@@ -8,7 +8,7 @@ final class wp implements si {
     static String field_b;
     static int field_d;
     static int field_c;
-    static dd field_a;
+    static Sprite field_a;
     static String field_e;
 
     final static byte[] a(int param0, byte[] param1) {
@@ -337,7 +337,7 @@ final class wp implements si {
           field_g = null;
           field_b = null;
           if (param0 != 0) {
-            field_a = (dd) null;
+            field_a = (Sprite) null;
           }
           field_f = null;
           field_a = null;

@@ -4,7 +4,7 @@
 final class pk {
     static vh field_a;
     static String field_c;
-    static dd field_b;
+    static Sprite field_b;
 
     final static String a(CharSequence param0, int param1) {
         int var2_int = 0;

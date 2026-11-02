@@ -3,24 +3,24 @@
  */
 final class tk {
     static vh field_f;
-    private rg field_d;
-    private rg field_g;
+    private DualLinkNode field_d;
+    private DualLinkNode field_g;
     static int field_i;
     static int[] field_e;
     private int field_a;
-    private rg[] field_c;
+    private DualLinkNode[] field_c;
     private int field_h;
     static vh field_k;
     private long field_b;
     static String field_j;
 
-    final rg a(int param0) {
-        rg var2;
-        rg var3;
-        rg var2Lifetime1;
-        rg var3Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
+        DualLinkNode var2Lifetime1;
+        DualLinkNode var3Lifetime1;
         if (param0 >= -52) {
-          this.field_c = (rg[]) null;
+          this.field_c = (DualLinkNode[]) null;
           if (this.field_d == null) {
             return null;
           }
@@ -60,12 +60,12 @@ final class tk {
         return var3Lifetime1;
     }
 
-    final rg b(int param0) {
+    final DualLinkNode b(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
-        rg var3;
-        rg var4;
-        rg var7;
+        DualLinkNode var3;
+        DualLinkNode var4;
+        DualLinkNode var7;
         if (0 >= this.field_h) {
           do {
             if (this.field_a <= this.field_h) {
@@ -103,10 +103,10 @@ final class tk {
         return var4;
     }
 
-    final rg a(byte param0) {
+    final DualLinkNode a(byte param0) {
         this.field_h = 0;
         if (param0 > -124) {
-          this.field_d = (rg) null;
+          this.field_d = (DualLinkNode) null;
           return this.b(103);
         }
         return this.b(103);
@@ -162,8 +162,8 @@ final class tk {
         field_e = null;
     }
 
-    final void a(int param0, long param1, rg param2) {
-        rg var5 = null;
+    final void a(int param0, long param1, DualLinkNode param2) {
+        DualLinkNode var5 = null;
         try {
           if (param2.field_n != null) {
             param2.a(false);
@@ -185,13 +185,13 @@ final class tk {
 
     tk(int param0) {
         int var2 = 0;
-        rg dupTemp$0 = null;
-        rg var3 = null;
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
         this.field_h = 0;
-        this.field_c = new rg[param0];
+        this.field_c = new DualLinkNode[param0];
         this.field_a = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new rg();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
           var3.field_n = var3;
@@ -199,11 +199,11 @@ final class tk {
         }
     }
 
-    final rg a(long param0, boolean param1) {
-        rg var4;
-        rg var5;
-        rg var4Lifetime1;
-        rg var5Lifetime1;
+    final DualLinkNode a(long param0, boolean param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
+        DualLinkNode var4Lifetime1;
+        DualLinkNode var5Lifetime1;
         this.field_b = param0;
         if (!param1) {
           var4 = this.field_c[(int)((long)(-1 + this.field_a) & param0)];

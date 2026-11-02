@@ -374,13 +374,13 @@ final class kj {
         }
     }
 
-    final static void a(int param0, dd param1) {
+    final static void a(int param0, Sprite param1) {
         try {
           uc.a((byte) 90);
           qh.a(param1.field_D, param1.field_w, param1.field_y);
           if (param0 < 38) {
-            dd var3 = (dd) null;
-            kj.a(30, (dd) null);
+            Sprite var3 = (Sprite) null;
+            kj.a(30, (Sprite) null);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "kj.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

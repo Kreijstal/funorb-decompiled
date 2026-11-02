@@ -309,9 +309,9 @@ class ei extends IntrusiveNode {
         return stackIn_18_0;
     }
 
-    final static dd[] a(byte param0, int param1) {
-        dd[] var4 = new dd[9];
-        dd[] var2 = var4;
+    final static Sprite[] a(byte param0, int param1) {
+        Sprite[] var4 = new Sprite[9];
+        Sprite[] var2 = var4;
         if (param0 > 4) {
           var4[4] = ad.a(param1, 64, 7);
           return var2;

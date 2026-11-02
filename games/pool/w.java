@@ -14,7 +14,7 @@ final class w {
     static String field_e;
     static String field_g;
     static int[][] field_j;
-    static dd field_f;
+    static Sprite field_f;
 
     public static void a(int param0) {
         field_i = null;

@@ -14,7 +14,7 @@ final class tg {
         try {
           be.f(-1);
           wd.field_Ub.k(-22216);
-          vj.field_j = new ui(qo.field_x, (String) null, ro.field_e, param1, param2);
+          vj.field_j = new ui(SpriteState.field_x, (String) null, ro.field_e, param1, param2);
           int var4_int = 113 % ((param0 + 67) / 53);
           tn.field_n = new ba(wd.field_Ub, vj.field_j);
           wd.field_Ub.b(tn.field_n, 30000);

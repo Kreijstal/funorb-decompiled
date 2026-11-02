@@ -3,7 +3,7 @@
  */
 final class sg extends ob {
     static jj field_J;
-    static dd[] field_M;
+    static Sprite[] field_M;
     static String field_N;
     static int field_P;
     static String field_Q;
@@ -122,7 +122,7 @@ final class sg extends ob {
         return 390;
     }
 
-    final static dd[] h(int param0) {
+    final static Sprite[] h(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var10 = null;
@@ -130,7 +130,7 @@ final class sg extends ob {
         int[] var9 = null;
         int[] var5 = null;
         int var6 = 0;
-        dd[] var1 = new dd[wf.field_d];
+        Sprite[] var1 = new Sprite[wf.field_d];
         if (param0 != 152) {
           PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
           sg.a((java.awt.Component) null, (vk) null, -111, (PlatformTaskDispatcher) null, -54, true);
@@ -144,14 +144,14 @@ final class sg extends ob {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = IntrusiveNode.field_h[rb.b((int) var10[var6], 255)];
           }
-          var1[var2] = new dd(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var11);
+          var1[var2] = new Sprite(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var11);
         }
         sh.h(-1);
         return var1;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        dd var7 = null;
+        Sprite var7 = null;
         int var8 = 0;
         if (!(this.g(1) <= param0)) {
           var7 = !this.a(param0, true) ? ne.field_t[param0] : og.field_K[param0];

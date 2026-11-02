@@ -210,7 +210,7 @@ final class rn implements Runnable {
         lq.a(param1, param6, 0, param11);
     }
 
-    final static void a(String[][] param0, String[] param1, String[] param2, int param3, byte param4, byte[] param5, dd[][] param6, dd[][] param7, int param8, int param9, String[] param10, int[] param11, String[][] param12, byte[] param13, di param14) {
+    final static void a(String[][] param0, String[] param1, String[] param2, int param3, byte param4, byte[] param5, Sprite[][] param6, Sprite[][] param7, int param8, int param9, String[] param10, int[] param11, String[][] param12, byte[] param13, di param14) {
         uo[] array$0 = null;
         uo[] array$1 = null;
         uo[] array$2 = null;
@@ -386,27 +386,27 @@ final class rn implements Runnable {
             oi.field_v[1] = new vh(0L, GameApplet.field_a, ab.field_h);
             array$0 = new uo[dg.field_T.length + 1];
             mc.field_f[1] = array$0;
-            mc.field_f[1][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b);
+            mc.field_f[1][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b);
             for (var17_intLifetime1 = 0; dg.field_T.length > var17_intLifetime1; var17_intLifetime1++) {
-              mc.field_f[1][1 + var17_intLifetime1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, Integer.toString(dg.field_T[var17_intLifetime1]));
+              mc.field_f[1][1 + var17_intLifetime1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, Integer.toString(dg.field_T[var17_intLifetime1]));
             }
           }
           oi.field_v[2] = new vh(0L, GameApplet.field_a, ve.field_o);
-          mc.field_f[2] = new uo[]{new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[0], mb.field_g), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[1], rm.field_f)};
+          mc.field_f[2] = new uo[]{new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[0], mb.field_g), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[1], rm.field_f)};
           if (1 < ji.field_g) {
             oi.field_v[3] = new vh(0L, GameApplet.field_a, pk.field_c);
             array$1 = new uo[1 + ji.field_g];
             mc.field_f[3] = array$1;
-            mc.field_f[3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b);
+            mc.field_f[3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < ji.field_g; var17_intLifetime2++) {
-              mc.field_f[3][var17_intLifetime2 + 1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, ln.field_r[var17_intLifetime2]);
+              mc.field_f[3][var17_intLifetime2 + 1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, ln.field_r[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param3 > var17_intLifetime3; var17_intLifetime3++) {
             oi.field_v[var17_intLifetime3 + 4] = new vh(0L, GameApplet.field_a, ck.field_R[var17_intLifetime3]);
             array$2 = new uo[rb.b(255, (int) gr.field_E[var17_intLifetime3]) + 1];
             mc.field_f[4 + var17_intLifetime3] = array$2;
-            mc.field_f[4 + var17_intLifetime3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) null, mq.field_b);
+            mc.field_f[4 + var17_intLifetime3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.field_b);
             for (var18 = 0; var18 < (255 & gr.field_E[var17_intLifetime3]); var18++) {
               if (null == jl.field_d) {
                 var19_ref = null;
@@ -426,7 +426,7 @@ final class rn implements Runnable {
               } else {
                 var20 = null;
               }
-              mc.field_f[4 + var17_intLifetime3][1 + var18] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (dd) (var19_ref), (String) (var20));
+              mc.field_f[4 + var17_intLifetime3][1 + var18] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param3 > var17_intLifetime4; var17_intLifetime4++) {

@@ -3,9 +3,9 @@
  */
 final class cl {
     static vh field_d;
-    static dd field_k;
+    static Sprite field_k;
     static int field_h;
-    static dd field_m;
+    static Sprite field_m;
     static int field_g;
     static java.awt.Font field_c;
     static String field_i;

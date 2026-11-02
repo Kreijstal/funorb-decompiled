@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qg {
-    static dd field_b;
+    static Sprite field_b;
     static int field_e;
     static boolean field_d;
     static vh field_f;

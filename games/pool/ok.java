@@ -240,7 +240,7 @@ abstract class ok extends tj {
         return super.a(false);
     }
 
-    final static dd j(byte param0) {
+    final static Sprite j(byte param0) {
         int var5_int = 0;
         int var6 = 0;
         int var1;
@@ -265,7 +265,7 @@ abstract class ok extends tj {
           for (var5_int = 0; var1 > var5_int; var5_int++) {
             var9[var5_int] = IntrusiveNode.field_h[rb.b((int) var17[var5_int], 255)];
           }
-          var3 = new dd(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var9);
+          var3 = new Sprite(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var9);
         } else {
           var18 = wg.field_Sb[0];
           var14 = new int[var1];
@@ -277,7 +277,7 @@ abstract class ok extends tj {
           var3 = new lp(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var14);
         }
         sh.h(-1);
-        return (dd) (var3);
+        return (Sprite) (var3);
     }
 
     ok(lq param0, ei param1, int param2, int param3, int param4) {
@@ -336,11 +336,11 @@ abstract class ok extends tj {
         }
     }
 
-    final static dd[] l(byte param0) {
+    final static Sprite[] l(byte param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
-        dd[] var1;
+        Sprite[] var1;
         int var3;
         int[] var6;
         int[] var8;
@@ -348,7 +348,7 @@ abstract class ok extends tj {
         int[] var13;
         byte[] var16;
         byte[] var17;
-        var1 = new dd[wf.field_d];
+        var1 = new Sprite[wf.field_d];
         if (param0 != 65) {
           ok.k((byte) -62);
         }
@@ -360,7 +360,7 @@ abstract class ok extends tj {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var8[var6_int] = IntrusiveNode.field_h[rb.b((int) var16[var6_int], 255)];
             }
-            var1[var2] = new dd(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var8);
+            var1[var2] = new Sprite(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var8);
           } else {
             var17 = wg.field_Sb[var2];
             var13 = new int[var3];
@@ -369,7 +369,7 @@ abstract class ok extends tj {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = md.a(rb.b((int) var17[var7], 255) << 24, IntrusiveNode.field_h[rb.b(255, (int) var16[var7])]);
             }
-            var1[var2] = (dd) ((Object) new lp(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var13));
+            var1[var2] = (Sprite) ((Object) new lp(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var13));
           }
         }
         sh.h(-1);

@@ -24,7 +24,7 @@ final class uo extends vh {
         return var5 + (param2 + var4) + param1 + param2;
     }
 
-    uo(long param0, vh param1, vh param2, vh param3, dd param4, String param5) {
+    uo(long param0, vh param1, vh param2, vh param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

@@ -4,7 +4,7 @@
 final class uj {
     static ie field_e;
     static di field_d;
-    static dd field_c;
+    static Sprite field_c;
     static String field_b;
     static int[] field_a;
 

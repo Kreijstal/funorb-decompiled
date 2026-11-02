@@ -7,7 +7,7 @@ final class mp extends ch implements tb {
     static String field_X;
     private String[] field_T;
     static IntrusiveDeque field_R;
-    static dd[] field_N;
+    static Sprite[] field_N;
     private jn field_Y;
     static String field_S;
     static int field_V;

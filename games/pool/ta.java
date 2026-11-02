@@ -5,10 +5,10 @@ final class ta {
     static gl field_h;
     static nl field_a;
     static vh[] field_b;
-    static dd field_e;
+    static Sprite field_e;
     static int field_c;
     static IntrusiveDeque field_i;
-    static dd[][] field_d;
+    static Sprite[][] field_d;
     static int field_f;
     static tq field_g;
 
@@ -38,14 +38,14 @@ final class ta {
         field_g = null;
         if (param0 == 24470) {
           field_e = null;
-          field_d = (dd[][]) null;
+          field_d = (Sprite[][]) null;
           field_b = null;
           field_i = null;
           return;
         }
         ta.a(false, -31);
         field_e = null;
-        field_d = (dd[][]) null;
+        field_d = (Sprite[][]) null;
         field_b = null;
         field_i = null;
     }

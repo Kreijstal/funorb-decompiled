@@ -184,13 +184,13 @@ final class up extends lh {
         return (int)(1000000000L / oh.field_e);
     }
 
-    final static dd[] a(dd[] param0, int param1) {
+    final static Sprite[] a(Sprite[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        dd var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        dd[] stackIn_3_0 = null;
-        dd[] stackIn_8_0 = null;
+        Sprite[] stackIn_3_0 = null;
+        Sprite[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -198,7 +198,7 @@ final class up extends lh {
         var4 = Pool.field_O;
         try {
           if (param1 != 12519) {
-            stackIn_3_0 = (dd[]) null;
+            stackIn_3_0 = (Sprite[]) null;
             return stackIn_3_0;
           }
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
@@ -208,7 +208,7 @@ final class up extends lh {
             param0[var2_int].field_w = param0[var2_int].field_z;
             param0[var2_int].field_y = param0[var2_int].field_A;
           }
-          stackIn_8_0 = (dd[]) (param0);
+          stackIn_8_0 = (Sprite[]) (param0);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

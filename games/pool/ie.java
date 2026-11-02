@@ -10,7 +10,7 @@ final class ie {
     static String field_b;
     static int field_h;
     static int[][] field_a;
-    static jg field_f;
+    static PcmSample field_f;
 
     final static void a(boolean param0, int param1, int param2) {
         int fieldTemp$0 = 0;
@@ -22,7 +22,7 @@ final class ie {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        dd var6 = null;
+        Sprite var6 = null;
         aa var7 = null;
         lk var8 = null;
         try {
@@ -205,7 +205,7 @@ final class ie {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        rg.a(tk.field_i, kj.field_j, param0, param1, param2 + 21166, ad.field_x, param3);
+        DualLinkNode.a(tk.field_i, kj.field_j, param0, param1, param2 + 21166, ad.field_x, param3);
         if (param2 != -17156) {
           field_b = (String) null;
         }
@@ -239,7 +239,7 @@ final class ie {
         }
         boolean decompiledFrameRemainder0 = true;
         if (rn.field_f.field_R != 0) {
-          if (!rg.field_s &&
+          if (!DualLinkNode.field_s &&
             mp.field_V <= 0 && (!(hq.field_i >= 2) ||
             !vj.field_c[12])) {
             gn.field_f = true;

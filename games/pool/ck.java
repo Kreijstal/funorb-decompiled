@@ -3,7 +3,7 @@
  */
 final class ck extends mh {
     static IntrusiveDeque field_W;
-    private dd field_U;
+    private Sprite field_U;
     private String field_X;
     private int field_V;
     static String[] field_R;
@@ -66,21 +66,21 @@ final class ck extends mh {
         int var14;
         String var18;
         Object var19;
-        dd var20;
-        dd var21;
-        dd var22;
-        dd var23;
+        Sprite var20;
+        Sprite var21;
+        Sprite var22;
+        Sprite var23;
         String var24;
         Object var25;
-        dd var26;
-        dd var27;
-        dd var28;
-        dd var29;
+        Sprite var26;
+        Sprite var27;
+        Sprite var28;
+        Sprite var29;
         Object var30;
-        dd var31;
-        dd var32;
-        dd var33;
-        dd var34;
+        Sprite var31;
+        Sprite var32;
+        Sprite var33;
+        Sprite var34;
         io var35;
         io var36;
         io var37;
@@ -123,18 +123,18 @@ final class ck extends mh {
             var12 = var21.field_w << 1;
             var13 = var21.field_y << 1;
             if (this.field_U == null) {
-              this.field_U = new dd(var12, var13);
+              this.field_U = new Sprite(var12, var13);
               kj.a(81, this.field_U);
             } else {
               if (this.field_U.field_z < var12) {
-                this.field_U = new dd(var12, var13);
+                this.field_U = new Sprite(var12, var13);
                 kj.a(81, this.field_U);
               } else {
                 if (var13 <= this.field_U.field_A) {
                   kj.a(53, this.field_U);
                   qh.d();
                 } else {
-                  this.field_U = new dd(var12, var13);
+                  this.field_U = new Sprite(var12, var13);
                   kj.a(81, this.field_U);
                 }
               }
@@ -166,7 +166,7 @@ final class ck extends mh {
             kj.a(53, this.field_U);
             qh.d();
           } else {
-            this.field_U = new dd(var12Lifetime4, var13Lifetime4);
+            this.field_U = new Sprite(var12Lifetime4, var13Lifetime4);
             kj.a(81, this.field_U);
           }
           var20.b(112, 144, var20.field_w << 4, var20.field_y << 4, -this.field_V << 10, 4096);
@@ -191,18 +191,18 @@ final class ck extends mh {
             var12Lifetime1 = var27.field_w << 1;
             var13Lifetime1 = var27.field_y << 1;
             if (this.field_U == null) {
-              this.field_U = new dd(var12Lifetime1, var13Lifetime1);
+              this.field_U = new Sprite(var12Lifetime1, var13Lifetime1);
               kj.a(81, this.field_U);
             } else {
               if (this.field_U.field_z < var12Lifetime1) {
-                this.field_U = new dd(var12Lifetime1, var13Lifetime1);
+                this.field_U = new Sprite(var12Lifetime1, var13Lifetime1);
                 kj.a(81, this.field_U);
               } else {
                 if (var13Lifetime1 <= this.field_U.field_A) {
                   kj.a(53, this.field_U);
                   qh.d();
                 } else {
-                  this.field_U = new dd(var12Lifetime1, var13Lifetime1);
+                  this.field_U = new Sprite(var12Lifetime1, var13Lifetime1);
                   kj.a(81, this.field_U);
                 }
               }
@@ -234,7 +234,7 @@ final class ck extends mh {
             kj.a(53, this.field_U);
             qh.d();
           } else {
-            this.field_U = new dd(var12Lifetime1Lifetime1, var13Lifetime1Lifetime1);
+            this.field_U = new Sprite(var12Lifetime1Lifetime1, var13Lifetime1Lifetime1);
             kj.a(81, this.field_U);
           }
           var26.b(112, 144, var26.field_w << 4, var26.field_y << 4, -this.field_V << 10, 4096);
@@ -261,15 +261,15 @@ final class ck extends mh {
           var12Lifetime2 = var32.field_w << 1;
           var13Lifetime2 = var32.field_y << 1;
           if (this.field_U == null) {
-            this.field_U = new dd(var12Lifetime2, var13Lifetime2);
+            this.field_U = new Sprite(var12Lifetime2, var13Lifetime2);
             kj.a(81, this.field_U);
           } else {
             if (this.field_U.field_z < var12Lifetime2) {
-              this.field_U = new dd(var12Lifetime2, var13Lifetime2);
+              this.field_U = new Sprite(var12Lifetime2, var13Lifetime2);
               kj.a(81, this.field_U);
             } else {
               if (var13Lifetime2 > this.field_U.field_A) {
-                this.field_U = new dd(var12Lifetime2, var13Lifetime2);
+                this.field_U = new Sprite(var12Lifetime2, var13Lifetime2);
                 kj.a(81, this.field_U);
               } else {
                 kj.a(53, this.field_U);
@@ -304,7 +304,7 @@ final class ck extends mh {
           kj.a(53, this.field_U);
           qh.d();
         } else {
-          this.field_U = new dd(var12Lifetime3, var13Lifetime3);
+          this.field_U = new Sprite(var12Lifetime3, var13Lifetime3);
           kj.a(81, this.field_U);
         }
         var31.b(112, 144, var31.field_w << 4, var31.field_y << 4, -this.field_V << 10, 4096);

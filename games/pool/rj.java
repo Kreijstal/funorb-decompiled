@@ -22,7 +22,7 @@ final class rj extends sq {
           sa.field_f = null;
           return true;
         }
-        if (!rg.field_p) {
+        if (!DualLinkNode.field_p) {
           if (!fm.field_H &&
             qi.field_a != 9 &&
             10 != qi.field_a &&
@@ -33,7 +33,7 @@ final class rj extends sq {
             if (!mp.g((byte) -108)) {
               return false;
             }
-            rg.field_p = true;
+            DualLinkNode.field_p = true;
             return true;
           }
           return tf.a(param2 + 15586, param0, param3);
@@ -45,12 +45,12 @@ final class rj extends sq {
         var4 = stackIn_22_0;
         if (80 == qi.field_a ||
           84 == qi.field_a) {
-          rg.field_p = false;
+          DualLinkNode.field_p = false;
           var4 = 1;
         }
         if (qi.field_a == 13) {
           cl.a(param2 + 14852);
-          rg.field_p = false;
+          DualLinkNode.field_p = false;
           var4 = 1;
         }
         return var4 != 0;
@@ -306,7 +306,7 @@ final class rj extends sq {
         return 1;
     }
 
-    final dd b(qe param0, int param1) {
+    final Sprite b(qe param0, int param1) {
         RuntimeException var3 = null;
         qe var4 = null;
         Object stackIn_3_0 = null;
@@ -321,7 +321,7 @@ final class rj extends sq {
           var4 = (qe) null;
           this.a(40, (byte) -54, (qe) null);
           stackIn_3_0 = null;
-          return (dd) (stackIn_3_0);
+          return (Sprite) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

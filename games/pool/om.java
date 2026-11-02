@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class om extends am {
-    static dd field_u;
+    static Sprite field_u;
     static String field_y;
     static int field_w;
     static int field_x;
@@ -148,7 +148,7 @@ class om extends am {
           if (nk.field_d &&
             jc.field_c) {
             if (ib.field_v &&
-              rg.field_p) {
+              DualLinkNode.field_p) {
               stackIn_141_0 = 1;
             } else {
               stackIn_141_0 = 0;
@@ -206,7 +206,7 @@ class om extends am {
               ba.field_ub.d(300, param1);
             }
           } else {
-            if (!rg.field_p) {
+            if (!DualLinkNode.field_p) {
               var3 = 0;
               stackIn_45_0 = (param1) && (cp.a((byte) 82)) && (var3 == 0);
               hr.a(stackIn_45_0, (byte) 50);

@@ -5,7 +5,7 @@ final class te extends IntrusiveNode {
     byte[] field_l;
     static byte[] field_p;
     static int[] field_o;
-    static dd field_n;
+    static Sprite field_n;
     static short[] field_m;
 
     public static void c(byte param0) {

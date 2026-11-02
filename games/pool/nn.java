@@ -5,7 +5,7 @@ final class nn {
     static boolean field_d;
     static oo[] field_b;
     static int field_c;
-    static dd[][] field_a;
+    static Sprite[][] field_a;
     static int[][] field_e;
 
     final static void a(boolean param0, int param1, int param2) {
@@ -51,7 +51,7 @@ final class nn {
 
     public static void a(int param0) {
         field_b = null;
-        field_a = (dd[][]) null;
+        field_a = (Sprite[][]) null;
         if (param0 != 16006) {
           return;
         }
@@ -157,6 +157,6 @@ final class nn {
     static {
         field_d = false;
         field_e = new int[64][3];
-        field_a = new dd[][]{null, null, null, null};
+        field_a = new Sprite[][]{null, null, null, null};
     }
 }

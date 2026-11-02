@@ -344,7 +344,7 @@ final class ProxySocketConnector extends SocketConnector {
           var5 = (CharSequence) ((Object) param2);
           di.field_a = hq.a(88, var5);
           c.field_d = param1;
-          rg.field_p = true;
+          DualLinkNode.field_p = true;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "kr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

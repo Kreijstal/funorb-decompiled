@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kk extends rg {
+abstract class kk extends DualLinkNode {
     static hj field_A;
     int field_y;
     static int[][] field_C;
@@ -141,7 +141,7 @@ abstract class kk extends rg {
           lk.field_o = true;
           ClientException.field_h = param2;
           if (ClientException.field_h == 0) {
-            var3_int = rg.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
+            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
             var4 = 3 + var3_int;
             IterableNodeHashTable.field_c = new int[var4];
             dq.field_j = new String[var4];
@@ -160,7 +160,7 @@ abstract class kk extends rg {
             IterableNodeHashTable.field_c[var4 - 1] = 1;
             mb.field_c[1] = 5;
           } else if (ClientException.field_h == 1) {
-            var3_int = rg.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
+            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, lg.field_v, dq.field_f, 0);
             var4 = 2 + var3_int;
             dq.field_j = new String[var4];
             IterableNodeHashTable.field_c = new int[var4];
@@ -178,9 +178,9 @@ abstract class kk extends rg {
           } else if (ClientException.field_h != 2) {
             if (ClientException.field_h == 3) {
               if (lg.field_s.field_k) {
-                var3_int = rg.a(wj.field_T, ih.field_c, ih.field_b, dq.field_f, param1 ^ 4);
+                var3_int = DualLinkNode.a(wj.field_T, ih.field_c, ih.field_b, dq.field_f, param1 ^ 4);
               } else {
-                var3_int = rg.a(wj.field_T, ih.field_c, lc.field_T, dq.field_f, 0);
+                var3_int = DualLinkNode.a(wj.field_T, ih.field_c, lc.field_T, dq.field_f, 0);
               }
               var4 = 2 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
@@ -197,7 +197,7 @@ abstract class kk extends rg {
               IterableNodeHashTable.field_c[-1 + var4] = 0;
               mb.field_c[0] = 5;
             } else if (4 == ClientException.field_h) {
-              var3_int = rg.a(wj.field_T, ih.field_c, wh.field_i, dq.field_f, 0);
+              var3_int = DualLinkNode.a(wj.field_T, ih.field_c, wh.field_i, dq.field_f, 0);
               var4 = 2 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
               dq.field_j = new String[var4];
@@ -216,7 +216,7 @@ abstract class kk extends rg {
               if (ClientException.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = rg.a(wj.field_T, ih.field_c, de.field_c, dq.field_f, param1 ^ 4);
+              var3_int = DualLinkNode.a(wj.field_T, ih.field_c, de.field_c, dq.field_f, param1 ^ 4);
               var4 = 3 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
               dq.field_j = new String[var4];
@@ -236,7 +236,7 @@ abstract class kk extends rg {
               mb.field_c[1] = 5;
             }
           } else {
-            var3_int = rg.a(wj.field_T, ih.field_c, nr.a(new String[]{"<br><%0><br>"}, param1 - 5, rl.field_g), dq.field_f, 0);
+            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, nr.a(new String[]{"<br><%0><br>"}, param1 - 5, rl.field_g), dq.field_f, 0);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ih.field_c[var5])) {
@@ -253,7 +253,7 @@ abstract class kk extends rg {
             rq.field_H = new String[-1 + var3_int - var4];
             qn.a(ih.field_c, 1 + var4, rq.field_H, 0, -var4 + var3_int - 1);
             var4 = -1;
-            var3_int = rg.a(wj.field_T, ih.field_c, nr.a(new String[]{"<br><%0><br>"}, -1, cf.field_j), dq.field_f, 0);
+            var3_int = DualLinkNode.a(wj.field_T, ih.field_c, nr.a(new String[]{"<br><%0><br>"}, -1, cf.field_j), dq.field_f, 0);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ih.field_c[var5])) {
                 continue;

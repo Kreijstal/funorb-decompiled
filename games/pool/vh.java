@@ -11,19 +11,19 @@ class vh extends o {
     private int field_bb;
     int field_V;
     private boolean field_U;
-    dd field_hb;
+    Sprite field_hb;
     private boolean field_ub;
     private int field_wb;
     private int field_rb;
     boolean field_pb;
     static String field_S;
     boolean field_Jb;
-    dd[] field_Y;
-    dd field_ab;
+    Sprite[] field_Y;
+    Sprite field_ab;
     boolean field_db;
     int field_ib;
-    dd[] field_X;
-    dd[] field_Gb;
+    Sprite[] field_X;
+    Sprite[] field_Gb;
     private int field_lb;
     int field_H;
     int field_eb;
@@ -31,7 +31,7 @@ class vh extends o {
     boolean field_J;
     static hq field_Ab;
     private int field_vb;
-    dd field_xb;
+    Sprite field_xb;
     String field_kb;
     int field_Cb;
     int field_K;
@@ -41,15 +41,15 @@ class vh extends o {
     int field_sb;
     String field_nb;
     IntrusiveDeque field_T;
-    dd field_yb;
+    Sprite field_yb;
     int field_Fb;
     int field_tb;
     boolean field_W;
-    dd[] field_Kb;
+    Sprite[] field_Kb;
     int field_R;
-    dd field_G;
+    Sprite field_G;
     private boolean field_fb;
-    dd[] field_F;
+    Sprite[] field_F;
     int field_Db;
     int field_qb;
     int field_P;
@@ -291,8 +291,8 @@ class vh extends o {
         int var13;
         int var14;
         int var15;
-        dd[] var16;
-        dd var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;
@@ -563,7 +563,7 @@ class vh extends o {
     final void a(boolean param0, boolean param1) {
         rc.field_d = !param0 ? true : false;
         if (param1) {
-          this.field_hb = (dd) null;
+          this.field_hb = (Sprite) null;
         }
         cl.field_f = !param0 ? true : false;
         this.a(0, true, qh.field_l, qh.field_f, (byte) 107, 0);
@@ -698,11 +698,11 @@ class vh extends o {
     }
 
     vh(String param0, vh param1, int param2, int param3, int param4, int param5, String param6) {
-        this(qo.a(112, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5, param6);
+        this(SpriteState.a(112, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5, param6);
     }
 
     vh(String param0, vh param1) {
-        this(qo.a(109, (CharSequence) ((Object) param0)), param1, 0, 0, 0, 0, (String) null);
+        this(SpriteState.a(109, (CharSequence) ((Object) param0)), param1, 0, 0, 0, 0, (String) null);
     }
 
     vh(long param0, vh param1, String param2) {
@@ -732,10 +732,10 @@ class vh extends o {
         return this.a(-126, 2147483647);
     }
 
-    final static dd a(int param0, di param1, int param2, int param3) {
+    final static Sprite a(int param0, di param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
-        dd stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -749,7 +749,7 @@ class vh extends o {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (dd) (stackIn_4_0);
+          return (Sprite) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

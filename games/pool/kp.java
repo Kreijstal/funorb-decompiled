@@ -34,7 +34,7 @@ final class kp {
         field_h = null;
     }
 
-    final static kf a(int param0, jg param1, int param2, int param3) {
+    final static kf a(int param0, PcmSample param1, int param2, int param3) {
         RuntimeException var4 = null;
         kf stackIn_2_0 = null;
         kf stackIn_4_0 = null;

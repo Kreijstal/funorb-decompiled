@@ -10,7 +10,7 @@ final class bf {
     static String field_e;
     int field_f;
     static boolean field_g;
-    static dd field_h;
+    static Sprite field_h;
     int field_a;
     int field_l;
     static vh field_c;

@@ -58,7 +58,7 @@ final class wg extends vh {
         this.field_Qb.b(0, 2147483647, var3Lifetime1, -var3Lifetime1 + this.field_gb, this.field_Db);
     }
 
-    wg(long param0, dd param1, dd param2, int param3, vh param4, String param5) {
+    wg(long param0, Sprite param1, Sprite param2, int param3, vh param4, String param5) {
         this(param0, (vh) null, param4, param5);
         try {
           this.field_Pb.field_yb = param1;

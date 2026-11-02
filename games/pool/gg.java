@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class gg implements ip {
-    static dd[] field_b;
+    static Sprite[] field_b;
     static boolean[] field_d;
     static int field_f;
     static String field_c;

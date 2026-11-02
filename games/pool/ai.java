@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai extends kd {
+final class ai extends PcmStream {
     private IntrusiveDeque field_s;
     private IntrusiveDeque field_q;
     private int field_p;
@@ -87,23 +87,23 @@ final class ai extends kd {
         }
     }
 
-    final kd a() {
-        return (kd) (this.field_s.c((byte) 102));
+    final PcmStream a() {
+        return (PcmStream) (this.field_s.c((byte) 102));
     }
 
-    final kd b() {
-        return (kd) (this.field_s.f((byte) -5));
+    final PcmStream b() {
+        return (PcmStream) (this.field_s.f((byte) -5));
     }
 
-    final synchronized void a(kd param0) {
+    final synchronized void a(PcmStream param0) {
         param0.unlink((byte) -117);
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        kd var4 = (kd) (this.field_s.c((byte) -90));
+        PcmStream var4 = (PcmStream) (this.field_s.c((byte) -90));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (kd) (this.field_s.f((byte) -5));
+          var4 = (PcmStream) (this.field_s.f((byte) -5));
         }
     }
 
@@ -144,7 +144,7 @@ final class ai extends kd {
         return;
     }
 
-    final synchronized void b(kd param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_s.a((byte) -84, param0);
     }
 
@@ -153,10 +153,10 @@ final class ai extends kd {
     }
 
     private final void c(int param0) {
-        kd var2 = (kd) (this.field_s.c((byte) -30));
+        PcmStream var2 = (PcmStream) (this.field_s.c((byte) -30));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (kd) (this.field_s.f((byte) -5));
+          var2 = (PcmStream) (this.field_s.f((byte) -5));
         }
     }
 

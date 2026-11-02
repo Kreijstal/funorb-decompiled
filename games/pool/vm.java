@@ -16,7 +16,7 @@ final class vm {
     private int[][] field_k;
     private float field_c;
     private int field_l;
-    static dd[] field_d;
+    static Sprite[] field_d;
     private so field_h;
     static String field_g;
 

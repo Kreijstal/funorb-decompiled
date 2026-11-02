@@ -194,7 +194,7 @@ final class hq {
     final void j(int param0) {
         int var9 = 0;
         int var10 = 0;
-        dd stackIn_21_0 = null;
+        Sprite stackIn_21_0 = null;
         int var2;
         int var3;
         int var4;

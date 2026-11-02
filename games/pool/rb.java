@@ -13,7 +13,7 @@ final class rb {
     static int field_g;
     String field_m;
     float field_c;
-    static dd[] field_d;
+    static Sprite[] field_d;
     static String[] field_n;
     private we[] field_j;
 

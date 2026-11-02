@@ -20,7 +20,7 @@ final class pn {
     String field_j;
     static hj field_k;
     static String field_a;
-    static dd field_l;
+    static Sprite field_l;
     static int field_s;
     static int[] field_r;
 

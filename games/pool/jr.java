@@ -5,7 +5,7 @@ final class jr extends tm {
     static int[][] field_o;
     static String[] field_l;
     static int field_n;
-    static dd[] field_m;
+    static Sprite[] field_m;
 
     final void a(di param0, byte param1) {
         eg dupTemp$1 = null;
@@ -238,9 +238,9 @@ final class jr extends tm {
         }
     }
 
-    final static dd[] a(int param0, byte param1, int param2) {
+    final static Sprite[] a(int param0, byte param1, int param2) {
         if (param1 != 20) {
-          return (dd[]) null;
+          return (Sprite[]) null;
         }
         return cq.a(1, 4578, param0, param2);
     }

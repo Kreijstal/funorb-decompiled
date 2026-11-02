@@ -712,7 +712,7 @@ final class qk {
                 }
                 var2 = cm.a("target_open_table", (byte) 40);
                 if (null != var2) {
-                  rg.field_t = a.a(var2, -4);
+                  DualLinkNode.field_t = a.a(var2, -4);
                 }
                 var2 = cm.a("target_black_ball", (byte) 97);
                 if (var2 != null) {
@@ -1258,7 +1258,7 @@ final class qk {
                 }
                 var2 = cm.a("status_out_of_lives", (byte) 82);
                 if (null != var2) {
-                  rg.field_l = a.a(var2, 124);
+                  DualLinkNode.field_l = a.a(var2, 124);
                 }
                 var2 = cm.a("status_resigned", (byte) 78);
                 if (var2 != null) {
@@ -1350,7 +1350,7 @@ final class qk {
                 }
                 var2 = cm.a("player_x2_are_offering_draw", (byte) 52);
                 if (null != var2) {
-                  rg.field_o = a.a(var2, 127);
+                  DualLinkNode.field_o = a.a(var2, 127);
                 }
                 var2 = cm.a("player_list_are_offering_draw", (byte) 83);
                 if (var2 != null) {

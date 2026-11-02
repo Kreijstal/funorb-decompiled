@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class o extends rg {
+class o extends DualLinkNode {
     static String field_D;
     static String field_z;
-    static dd field_C;
+    static Sprite field_C;
     static wh field_x;
     static int field_y;
     static String field_A;

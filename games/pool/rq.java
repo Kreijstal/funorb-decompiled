@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rq extends kd {
+final class rq extends PcmStream {
     private int[] field_u;
     private cg field_D;
     private int field_s;
@@ -534,7 +534,7 @@ final class rq extends kd {
         }
     }
 
-    final kd a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -549,7 +549,7 @@ final class rq extends kd {
         return 2;
     }
 
-    final kd b() {
+    final PcmStream b() {
         return null;
     }
 

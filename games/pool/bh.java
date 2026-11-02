@@ -4,7 +4,7 @@
 final class bh {
     static vh field_b;
     static String field_c;
-    static jg field_a;
+    static PcmSample field_a;
     static String field_d;
 
     final static void a(so[] param0, boolean param1, int param2, int param3, eg param4, int param5, int param6) {
@@ -54,7 +54,7 @@ final class bh {
         String var2 = (String) null;
         rf.a((String) null, -128, re.field_d);
         if (param0) {
-          field_a = (jg) null;
+          field_a = (PcmSample) null;
         }
     }
 

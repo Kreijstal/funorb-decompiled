@@ -213,7 +213,7 @@ final class da {
           wj.field_S[5] = bo.field_b;
           wj.field_S[11] = vf.field_Q;
           wj.field_S[2] = ln.field_l;
-          wj.field_S[9] = rg.field_t;
+          wj.field_S[9] = DualLinkNode.field_t;
           wj.field_S[12] = oq.field_C;
           wj.field_S[10] = me.field_w;
           for (var2Lifetime2 = 1; 9 >= var2Lifetime2; var2Lifetime2++) {

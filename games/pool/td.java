@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class td {
-    static dd field_g;
+    static Sprite field_g;
     static StringBuilder field_c;
     static nm field_e;
     static ph field_f;
-    static dd field_a;
+    static Sprite field_a;
     static boolean field_d;
     static int field_b;
 
@@ -25,7 +25,7 @@ final class td {
           var2_long = 0L;
           var4 = param1.length();
           if (param0 != 52) {
-            field_a = (dd) null;
+            field_a = (Sprite) null;
           }
           for (var5 = 0; var5 < var4; var5++) {
             var2_long = var2_long * 37L;

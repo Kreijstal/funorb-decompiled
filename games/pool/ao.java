@@ -9,7 +9,7 @@ final class ao extends vh {
     vh field_Ob;
     vh field_Qb;
     static int field_Rb;
-    static dd field_Pb;
+    static Sprite field_Pb;
 
     ao(long param0, ao param1, String param2, String param3) {
         this(param0, param1, param1.field_Sb.field_Sb, param1.field_Sb.field_Mb, param1.field_Ob, param2, param3);
@@ -181,7 +181,7 @@ final class ao extends vh {
     final static void a(int param0, String param1) {
         System.out.println("Error: " + dg.a(param0 ^ 76, "\n", param1, "%0a"));
         if (param0 != 55) {
-          field_Pb = (dd) null;
+          field_Pb = (Sprite) null;
         }
     }
 

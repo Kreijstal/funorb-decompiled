@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jg extends qm {
+final class PcmSample extends AbstractAudioSample {
     int field_p;
     int field_q;
     byte[] field_n;
     int field_m;
     boolean field_o;
 
-    jg(int param0, byte[] param1, int param2, int param3) {
+    PcmSample(int param0, byte[] param1, int param2, int param3) {
         this.field_p = param0;
         this.field_n = param1;
         this.field_m = param2;
         this.field_q = param3;
     }
 
-    jg(int param0, byte[] param1, int param2, int param3, boolean param4) {
+    PcmSample(int param0, byte[] param1, int param2, int param3, boolean param4) {
         this.field_p = param0;
         this.field_n = param1;
         this.field_m = param2;

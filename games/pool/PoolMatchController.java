@@ -645,7 +645,7 @@ final class PoolMatchController {
         StringBuilder stackIn_36_1 = null;
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
-        dd var4 = null;
+        Sprite var4 = null;
         RuntimeException var4_ref = null;
         qb[] var5 = null;
         qb[][] var6 = null;
@@ -653,10 +653,10 @@ final class PoolMatchController {
         int var8 = 0;
         int var9 = 0;
         qb[] var10 = null;
-        dd var10_ref = null;
+        Sprite var10_ref = null;
         int var11_int = 0;
-        dd var11 = null;
-        dd var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var13 = 0;
         var13 = Pool.field_O;
         try {
@@ -668,7 +668,7 @@ final class PoolMatchController {
           qk.field_a = (lr) ((Object) hn.a(param3, "commonui", "arezzo12", -25154, param2));
           lc.field_O = (lr) ((Object) hn.a(param3, "commonui", "arezzo14", -25154, param2));
           bi.field_e = (lr) ((Object) hn.a(param3, "commonui", "arezzo14bold", -25154, param2));
-          var4 = new dd(param0.a(false, "", "button.gif"), (java.awt.Component) ((Object) pa.field_K));
+          var4 = new Sprite(param0.a(false, "", "button.gif"), (java.awt.Component) ((Object) pa.field_K));
           tl.a(param2, 3812, "dropdown", "commonui");
           var5 = gr.a(param2, "commonui", -24155, "screen_options");
           vl.field_l = new qb[4];
@@ -712,20 +712,20 @@ final class PoolMatchController {
             break;
           }
           qh.e(stackIn_20_0, 0, qh.field_l, qh.field_f);
-          var10_ref = new dd(var9, var9);
+          var10_ref = new Sprite(var9, var9);
           var10_ref.e();
           var4.a(0, 0);
-          var11 = new dd(var9, var9);
+          var11 = new Sprite(var9, var9);
           var11.e();
           var4.a(var9 - var4.field_z, 0);
           if (param1 != -22764) {
             PoolMatchController.a(26, false, (di) null, (di) null, (di) null);
           }
-          var12 = new dd(var4.field_z - var9 * 2, var9);
+          var12 = new Sprite(var4.field_z - var9 * 2, var9);
           var12.e();
           var4.a(-var9, 0);
           oc.a(112);
-          jj.field_S = new dd[]{var10_ref, var12, var11};
+          jj.field_S = new Sprite[]{var10_ref, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -961,7 +961,7 @@ final class PoolMatchController {
           }
           if ((this.field_L & hq.field_c) != 0 &&
             param1 &&
-            !rg.field_p) {
+            !DualLinkNode.field_p) {
             lc.field_U.a(true, false);
             if (lc.field_U.field_R == 1) {
               param0 = true;
@@ -974,7 +974,7 @@ final class PoolMatchController {
           }
           if (param1) {
             if ((0 == (this.field_L & hq.field_c) ||
-              !rg.field_p) &&
+              !DualLinkNode.field_p) &&
               (this.i(-1) &&
               this.field_S < 0)) {
               this.J(0);
@@ -1218,7 +1218,7 @@ final class PoolMatchController {
                   if (var5_ref_String != null) {
                     em.$cfr$intArgs$a$c9c3307e6488(124, false, 1, var5_ref_String);
                   }
-                  var5_ref_String = this.a(jk.field_f, rn.field_h, rg.field_o, qp.field_bc, (byte) 61, this.field_I.field_x, fd.field_H, ae.field_f);
+                  var5_ref_String = this.a(jk.field_f, rn.field_h, DualLinkNode.field_o, qp.field_bc, (byte) 61, this.field_I.field_x, fd.field_H, ae.field_f);
                   if (var5_ref_String != null) {
                     em.$cfr$intArgs$a$c9c3307e6488(119, false, 1, var5_ref_String);
                   }
@@ -3550,7 +3550,7 @@ final class PoolMatchController {
           }
           if (!oj.c(-62)) {
             if (0 != (this.field_L & hq.field_c) &&
-              rg.field_p) {
+              DualLinkNode.field_p) {
               return;
             }
             if (this.field_q &&
@@ -3632,7 +3632,7 @@ final class PoolMatchController {
                 var2 = (qe) (this.field_I.j(53).next);
                 if ((sg.field_O & var2.field_s) != 0) {
                   var3 = gj.a(true, 3, nr.a(new String[]{this.e(-30360, this.field_I.field_A)}, -1, gr.field_A), (String) null);
-                  var3.field_q = qo.field_F;
+                  var3.field_q = SpriteState.field_F;
                   var3.field_r = 5;
                 }
                 if (0 != (var2.field_s & nr.field_Y)) {
@@ -5004,13 +5004,13 @@ final class PoolMatchController {
           tk.field_k = new vh();
           q.field_b = new vh();
           b.field_H = new vh();
-          qo.field_F = new vh();
+          SpriteState.field_F = new vh();
           df.field_f = new vh();
           ub.field_q = new vh();
           this.e(false);
           q.field_b.field_hb = mf.field_n;
           b.field_H.field_hb = iq.field_d;
-          qo.field_F.field_hb = gd.field_e;
+          SpriteState.field_F.field_hb = gd.field_e;
           df.field_f.field_hb = il.field_a;
           ub.field_q.field_hb = oo.field_D;
           if (kh.field_gc != nn.field_b[param1]) {
@@ -5131,7 +5131,7 @@ final class PoolMatchController {
                 stackIn_29_1 = Integer.toString(var5);
               }
             } else {
-              stackIn_29_1 = rg.field_l;
+              stackIn_29_1 = DualLinkNode.field_l;
             }
             discarded$7 = ((StringBuilder) (Object) stackIn_25_0).append(stackIn_29_1);
             discarded$8 = var3.append("</col>");
@@ -7681,9 +7681,9 @@ final class PoolMatchController {
             this.field_Z = -70;
           }
           if (this.field_I.field_y <= 0) {
-            qo.field_F.field_pb = false;
+            SpriteState.field_F.field_pb = false;
           } else {
-            param0 = this.a(-30818, param0, param1, qo.field_F);
+            param0 = this.a(-30818, param0, param1, SpriteState.field_F);
           }
           if (var4.field_u != 0) {
             param0 = this.a(-30818, param0, param1, df.field_f);
@@ -7720,8 +7720,8 @@ final class PoolMatchController {
           if (b.field_H.field_pb) {
             b.field_H.a(true, false);
           }
-          if (qo.field_F.field_pb) {
-            qo.field_F.a(true, false);
+          if (SpriteState.field_F.field_pb) {
+            SpriteState.field_F.a(true, false);
           }
           if (ub.field_q.field_pb) {
             ub.field_q.a(true, false);
@@ -7739,8 +7739,8 @@ final class PoolMatchController {
             stackIn_30_0 = 5;
             return stackIn_30_0;
           }
-          if (qo.field_F.field_pb &&
-            qo.field_F.field_W) {
+          if (SpriteState.field_F.field_pb &&
+            SpriteState.field_F.field_W) {
             stackIn_38_0 = 6;
             return stackIn_38_0;
           }

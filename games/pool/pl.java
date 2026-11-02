@@ -4,7 +4,7 @@
 final class pl {
     static String field_f;
     static vh field_b;
-    static dd field_a;
+    static Sprite field_a;
     static String field_d;
     static String field_c;
     static String field_e;

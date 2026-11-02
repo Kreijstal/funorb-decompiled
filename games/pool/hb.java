@@ -17,24 +17,24 @@ final class hb implements Iterator {
     static int field_l;
     static String field_g;
     static String field_d;
-    static dd field_k;
+    static Sprite field_k;
     static int field_s;
     static String field_r;
     static int field_a;
     static String field_p;
     static int field_e;
 
-    final static dd[] a(int param0, dd param1) {
-        dd[] var2 = null;
+    final static Sprite[] a(int param0, Sprite param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        dd[] var3 = null;
-        dd[] stackIn_3_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new dd[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = param1;
           if (param0 != -32344) {
@@ -103,31 +103,31 @@ final class hb implements Iterator {
         int var6 = 0;
         int var7 = 0;
         kn var11 = null;
-        dd var12 = null;
+        Sprite var12 = null;
         String var13 = null;
         kn var14 = null;
-        dd var15 = null;
+        Sprite var15 = null;
         String var16 = null;
         kn var17 = null;
-        dd var18 = null;
+        Sprite var18 = null;
         String var19 = null;
         kn var20 = null;
-        dd var21 = null;
+        Sprite var21 = null;
         String var22 = null;
         kn var23 = null;
-        dd var24 = null;
+        Sprite var24 = null;
         String var25 = null;
         kn var26 = null;
-        dd var27 = null;
+        Sprite var27 = null;
         String var28 = null;
         kn var29 = null;
-        dd var30 = null;
+        Sprite var30 = null;
         String var31 = null;
         kn var32 = null;
-        dd var33 = null;
+        Sprite var33 = null;
         String var34 = null;
         kn var35 = null;
-        dd var36 = null;
+        Sprite var36 = null;
         String var37 = null;
         kn var38 = null;
         RuntimeException stackIn_13_0 = null;
@@ -135,18 +135,18 @@ final class hb implements Iterator {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        dd var30Lifetime1;
-        dd var30Lifetime2;
-        dd var30Lifetime3;
-        dd var30Lifetime4;
-        dd var30Lifetime5;
-        dd var30Lifetime6;
-        dd var30Lifetime7;
-        dd var30Lifetime1Lifetime1;
-        dd var30Lifetime1Lifetime2;
-        dd var30Lifetime1Lifetime3;
-        dd var30Lifetime1Lifetime4;
-        dd var30Lifetime1Lifetime5;
+        Sprite var30Lifetime1;
+        Sprite var30Lifetime2;
+        Sprite var30Lifetime3;
+        Sprite var30Lifetime4;
+        Sprite var30Lifetime5;
+        Sprite var30Lifetime6;
+        Sprite var30Lifetime7;
+        Sprite var30Lifetime1Lifetime1;
+        Sprite var30Lifetime1Lifetime2;
+        Sprite var30Lifetime1Lifetime3;
+        Sprite var30Lifetime1Lifetime4;
+        Sprite var30Lifetime1Lifetime5;
         try {
           dr.a((String) null, param2, 0L, -1, (of) null, (String) null, 32540, param1, (int[]) null);
           if (0 == param2) {

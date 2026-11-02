@@ -5,11 +5,11 @@ final class nm {
     static String field_g;
     static int field_e;
     static int field_f;
-    static dd field_d;
+    static Sprite field_d;
     static boolean field_c;
     static vh field_a;
     static boolean field_b;
-    private dd[] field_h;
+    private Sprite[] field_h;
 
     final static void a(byte param0) {
         if (param0 != 41) {
@@ -39,7 +39,7 @@ final class nm {
         field_d = null;
     }
 
-    nm(dd[] param0) {
+    nm(Sprite[] param0) {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {

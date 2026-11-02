@@ -71,7 +71,7 @@ final class pa extends ob {
         return true;
     }
 
-    pa(dd param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    pa(Sprite param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 

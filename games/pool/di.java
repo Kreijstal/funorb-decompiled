@@ -881,7 +881,7 @@ final class di {
             stackIn_33_0 = var11_ref_RuntimeException;
             stackIn_33_1 = new StringBuilder();
             stackIn_34_2 = (param1 != null);
-            throw wm.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(qo.a(var9.length, var9, 0)).append(" ").append(qo.a(var9.length - 2, var9, param0 ^ 0)).append(" ").append(this.field_f.field_w[param3]).append(" ").append(this.field_f.field_v).toString());
+            throw wm.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(SpriteState.a(var9.length, var9, 0)).append(" ").append(SpriteState.a(var9.length - 2, var9, param0 ^ 0)).append(" ").append(this.field_f.field_w[param3]).append(" ").append(this.field_f.field_v).toString());
           }
           if (this.field_i) {
             this.field_l[param3] = null;

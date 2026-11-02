@@ -11,7 +11,7 @@ final class ne extends ig {
     static volatile int field_o;
     static int field_m;
     static od field_u;
-    static dd[] field_t;
+    static Sprite[] field_t;
     static int field_n;
 
     final na a(String param0, boolean param1) {

@@ -105,7 +105,7 @@ abstract class sq {
         field_c = null;
     }
 
-    abstract dd b(qe param0, int param1);
+    abstract Sprite b(qe param0, int param1);
 
     int m(int param0) {
         if (param0 != 0) {

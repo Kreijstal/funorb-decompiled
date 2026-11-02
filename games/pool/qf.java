@@ -18,7 +18,7 @@ final class qf {
     private int field_b;
     private int field_a;
     private hm field_p;
-    static dd field_k;
+    static Sprite field_k;
     private int field_h;
     static ai field_d;
 
@@ -62,7 +62,7 @@ final class qf {
 
     final void a(int[] param0, gh param1, int param2) {
         int var5 = 0;
-        dd[] var6 = null;
+        Sprite[] var6 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -73,8 +73,8 @@ final class qf {
         var5 = Pool.field_O;
         try {
           if (param2 <= 79) {
-            var6 = (dd[]) null;
-            qf.a(48, -85, 56, (byte) 112, -17, (dd[]) null);
+            var6 = (Sprite[]) null;
+            qf.a(48, -85, 56, (byte) 112, -17, (Sprite[]) null);
           }
           if (null == this.field_o) {
             this.field_p.a(this.field_g, -125);
@@ -151,7 +151,7 @@ final class qf {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, dd[] param5) {
+    final static void a(int param0, int param1, int param2, byte param3, int param4, Sprite[] param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -163,7 +163,7 @@ final class qf {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        dd[] var12 = null;
+        Sprite[] var12 = null;
         var11 = Pool.field_O;
         try {
           if (param5 != null &&
@@ -178,8 +178,8 @@ final class qf {
             var9 = param2 + var6_int;
             var10 = param2 + param4 - var7;
             if (param3 != 18) {
-              var12 = (dd[]) null;
-              qf.a(-32, 78, -31, (byte) 16, 88, (dd[]) null);
+              var12 = (Sprite[]) null;
+              qf.a(-32, 78, -31, (byte) 16, 88, (Sprite[]) null);
             }
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param5[1].e(param2, param0, param1);

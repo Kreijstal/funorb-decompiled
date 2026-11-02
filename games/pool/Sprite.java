@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class dd extends qo {
+class Sprite extends SpriteState {
     int[] field_D;
 
     final void f() {
@@ -73,7 +73,7 @@ class dd extends qo {
           if (var6 <= 0) {
             return;
           }
-          dd.a(qh.field_d, this.field_D, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          Sprite.a(qh.field_d, this.field_D, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -171,7 +171,7 @@ class dd extends qo {
           if (var5 <= 0) {
             return;
           }
-          dd.a(qh.field_d, this.field_D, var4, var3, var6, var5, var7, var8);
+          Sprite.a(qh.field_d, this.field_D, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -217,7 +217,7 @@ class dd extends qo {
           if (var6 <= 0) {
             return;
           }
-          dd.b(qh.field_d, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(qh.field_d, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -487,10 +487,10 @@ class dd extends qo {
         }
     }
 
-    final dd a() {
+    final Sprite a() {
         int var2 = 0;
         int var3 = 0;
-        dd var1 = new dd(this.field_z, this.field_A);
+        Sprite var1 = new Sprite(this.field_z, this.field_A);
         var1.field_w = this.field_w;
         var1.field_y = this.field_y;
         var1.field_G = this.field_w - this.field_z - this.field_G;
@@ -609,7 +609,7 @@ class dd extends qo {
           if (var6 <= 0) {
             return;
           }
-          dd.a(qh.field_d, this.field_D, var5, var4, var6);
+          Sprite.a(qh.field_d, this.field_D, var5, var4, var6);
           return;
         }
     }
@@ -909,7 +909,7 @@ class dd extends qo {
           if (var5 <= 0) {
             return;
           }
-          dd.b(qh.field_d, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.b(qh.field_d, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1376,7 +1376,7 @@ class dd extends qo {
         }
     }
 
-    dd(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_w = param0;
         this.field_y = param1;
         this.field_G = param2;
@@ -1386,9 +1386,9 @@ class dd extends qo {
         this.field_D = param6;
     }
 
-    final dd d() {
+    final Sprite d() {
         int var3 = 0;
-        dd var1 = new dd(this.field_z, this.field_A);
+        Sprite var1 = new Sprite(this.field_z, this.field_A);
         var1.field_w = this.field_w;
         var1.field_y = this.field_y;
         var1.field_G = this.field_G;
@@ -1499,7 +1499,7 @@ class dd extends qo {
         int var4 = param0 + (this.field_z >> 1) > qh.field_j ? qh.field_j - param0 << 1 : this.field_z;
         int var5 = param1 < qh.field_c ? qh.field_c - param1 << 1 : 0;
         int var6 = param1 + (this.field_A >> 1) > qh.field_g ? qh.field_g - param1 << 1 : this.field_A;
-        dd.a(this.field_D, var5 * this.field_z + var3, (param1 + (var5 >> 1)) * qh.field_l + (param0 + (var3 >> 1)), (this.field_z << 1) - (var4 - var3) + (this.field_z & 1), qh.field_l - (var4 - var3 >> 1), this.field_z, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.field_D, var5 * this.field_z + var3, (param1 + (var5 >> 1)) * qh.field_l + (param0 + (var3 >> 1)), (this.field_z << 1) - (var4 - var3) + (this.field_z & 1), qh.field_l - (var4 - var3 >> 1), this.field_z, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void c() {
@@ -1585,7 +1585,7 @@ class dd extends qo {
           if (var6 <= 0) {
             return;
           }
-          dd.a(qh.field_d, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(qh.field_d, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1657,7 +1657,7 @@ class dd extends qo {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          dd.b(qh.field_d, this.field_D, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.b(qh.field_d, this.field_D, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -2325,12 +2325,12 @@ class dd extends qo {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          dd.a(qh.field_d, this.field_D, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          Sprite.a(qh.field_d, this.field_D, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
 
-    dd(int param0, int param1) {
+    Sprite(int param0, int param1) {
         this.field_D = new int[param0 * param1];
         this.field_w = param0;
         this.field_z = param0;
@@ -2367,7 +2367,7 @@ class dd extends qo {
         }
     }
 
-    dd(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;
@@ -2435,9 +2435,9 @@ class dd extends qo {
             return;
           }
           if (param2 == 256) {
-            dd.a(0, 0, 0, qh.field_d, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, qh.field_d, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            dd.a(0, 0, 0, qh.field_d, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, qh.field_d, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -2601,7 +2601,7 @@ class dd extends qo {
           if (var6 <= 0) {
             return;
           }
-          dd.a(qh.field_d, this.field_D, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.a(qh.field_d, this.field_D, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -2647,7 +2647,7 @@ class dd extends qo {
           if (var5 <= 0) {
             return;
           }
-          dd.a(0, qh.field_d, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, qh.field_d, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

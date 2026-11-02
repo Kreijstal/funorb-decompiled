@@ -30,13 +30,13 @@ abstract class oo {
     private eg[][] field_f;
     static String field_c;
     cg field_i;
-    static dd field_D;
+    static Sprite field_D;
     double field_E;
     private int[][] field_g;
     int field_H;
     cg field_b;
     private p[][] field_o;
-    dd field_B;
+    Sprite field_B;
     private int field_t;
     private eg field_s;
 
@@ -714,7 +714,7 @@ abstract class oo {
         try {
           if (param0 != 3) {
             var5 = (kf[]) null;
-            this.a(-23, -100, (byte) -87, (jg[]) null, (kf[]) null);
+            this.a(-23, -100, (byte) -87, (PcmSample[]) null, (kf[]) null);
           }
           if (this.field_b != null) {
             tl.field_N.a(param1, param2, this.field_b, param0 ^ 79, 0);
@@ -957,7 +957,7 @@ abstract class oo {
         }
     }
 
-    final void a(int param0, int param1, byte param2, jg[] param3, kf[] param4) {
+    final void a(int param0, int param1, byte param2, PcmSample[] param3, kf[] param4) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;

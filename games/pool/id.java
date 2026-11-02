@@ -5,7 +5,7 @@ abstract class id {
     static jk field_c;
     static int field_b;
     static String field_d;
-    static dd[] field_a;
+    static Sprite[] field_a;
 
     abstract void a(java.awt.Component param0, int param1);
 
@@ -323,7 +323,7 @@ abstract class id {
 
     abstract int b(int param0);
 
-    final static void a(int param0, int param1, dd[] param2, int param3, byte param4) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, byte param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

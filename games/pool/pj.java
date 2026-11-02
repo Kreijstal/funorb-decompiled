@@ -126,7 +126,7 @@ final class pj extends ob {
     }
 
     pj(int param0, int param1, int param2, int param3, int param4, int[] param5) {
-        super((dd) null, param0, param1, param2, param3, param4, param5);
+        super((Sprite) null, param0, param1, param2, param3, param4, param5);
     }
 
     final void c(int param0) {
@@ -156,9 +156,9 @@ final class pj extends ob {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        dd var6 = null;
-        dd var7 = null;
-        dd var8 = null;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
         int var3Lifetime1;
         var4 = Pool.field_O;
         try {

@@ -245,17 +245,17 @@ final class vp extends sq {
         }
     }
 
-    final dd b(qe param0, int param1) {
+    final Sprite b(qe param0, int param1) {
         RuntimeException var3 = null;
-        dd stackIn_2_0 = null;
-        dd stackIn_6_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            stackIn_2_0 = (dd) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           if (param0.field_z != -1) {

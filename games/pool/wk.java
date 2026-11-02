@@ -6,7 +6,7 @@ final class wk extends ch implements tb {
     static String field_V;
     static int field_P;
     private lr field_Q;
-    static dd field_T;
+    static Sprite field_T;
     private fe[] field_R;
     static vh field_N;
     private int[] field_U;

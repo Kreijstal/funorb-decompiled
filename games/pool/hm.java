@@ -12,7 +12,7 @@ final class hm {
     int field_h;
     static String field_d;
     static int field_j;
-    static dd[] field_l;
+    static Sprite[] field_l;
     static long field_a;
 
     final void a(PacketBuffer param0, byte param1) {

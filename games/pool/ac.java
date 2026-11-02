@@ -3,7 +3,7 @@
  */
 final class ac extends tm {
     static String field_l;
-    static dd field_n;
+    static Sprite field_n;
     static vh field_p;
     static int[] field_r;
     static String field_q;

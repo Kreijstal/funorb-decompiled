@@ -5,11 +5,11 @@ final class ng extends am {
     private int field_z;
     static String field_B;
     static int field_w;
-    private dd[] field_y;
+    private Sprite[] field_y;
     static int field_s;
     static String field_v;
     private int field_r;
-    static dd[] field_t;
+    static Sprite[] field_t;
     static String field_x;
     static int[] field_A;
     private int field_u;
@@ -89,7 +89,7 @@ final class ng extends am {
         RuntimeException var10_ref = null;
         try {
           if (param4 != -117) {
-            field_t = (dd[]) null;
+            field_t = (Sprite[]) null;
           }
           while (true) {
             param7--;

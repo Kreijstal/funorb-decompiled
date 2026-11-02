@@ -4,7 +4,7 @@
 final class ag {
     static String field_g;
     private static int field_h;
-    static dd field_b;
+    static Sprite field_b;
     static vh field_f;
     static int field_e;
     static int field_a;
@@ -93,21 +93,21 @@ final class ag {
         }
     }
 
-    final static dd a(byte param0, int param1, String param2) {
+    final static Sprite a(byte param0, int param1, String param2) {
         RuntimeException var3 = null;
         int var6 = 0;
         int var7 = 0;
-        dd var8 = null;
-        dd var10 = null;
+        Sprite var8 = null;
+        Sprite var10 = null;
         int[] var16 = null;
         int[] var17 = null;
-        dd stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new dd(4 + ni.field_Z.b(param2), 4 + ni.field_Z.field_C + ni.field_Z.field_w);
+          var10 = new Sprite(4 + ni.field_Z.b(param2), 4 + ni.field_Z.field_C + ni.field_Z.field_w);
           var10.field_G = -2;
           var10.field_B = -2;
           var16 = new int[4];

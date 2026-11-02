@@ -4,15 +4,15 @@
 final class wo {
     static String[] field_b;
     static boolean field_c;
-    private rg field_d;
-    private rg field_e;
+    private DualLinkNode field_d;
+    private DualLinkNode field_e;
     static of field_f;
     static int field_a;
     static nl field_g;
 
-    final rg a(byte param0) {
+    final DualLinkNode a(byte param0) {
         int var3 = -47 % ((param0 - 25) / 39);
-        rg var2 = this.field_d.field_q;
+        DualLinkNode var2 = this.field_d.field_q;
         if (this.field_d != var2) {
           this.field_e = var2.field_q;
           return var2;
@@ -24,7 +24,7 @@ final class wo {
     final int b(int param0) {
         int var4 = Pool.field_O;
         int var2 = param0;
-        rg var3 = this.field_d.field_q;
+        DualLinkNode var3 = this.field_d.field_q;
         while (this.field_d != var3) {
           var2++;
           var3 = var3.field_q;
@@ -32,10 +32,10 @@ final class wo {
         return var2;
     }
 
-    final void a(rg param0, boolean param1) {
+    final void a(DualLinkNode param0, boolean param1) {
         try {
           if (param1) {
-            this.field_e = (rg) null;
+            this.field_e = (DualLinkNode) null;
           }
           if (param0.field_n != null) {
             param0.a(param1);
@@ -82,8 +82,8 @@ final class wo {
         }
     }
 
-    final rg a(int param0) {
-        rg var2 = this.field_d.field_q;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_d.field_q;
         if (this.field_d == var2) {
           return null;
         }
@@ -96,16 +96,16 @@ final class wo {
     }
 
     public wo() {
-        this.field_d = new rg();
+        this.field_d = new DualLinkNode();
         this.field_d.field_q = this.field_d;
         this.field_d.field_n = this.field_d;
     }
 
-    final rg b(byte param0) {
+    final DualLinkNode b(byte param0) {
         if (param0 > -66) {
-          return (rg) null;
+          return (DualLinkNode) null;
         }
-        rg var2 = this.field_e;
+        DualLinkNode var2 = this.field_e;
         if (var2 == this.field_d) {
           this.field_e = null;
           return null;

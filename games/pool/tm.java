@@ -7,7 +7,7 @@ abstract class tm {
     static int field_f;
     boolean field_g;
     nc[] field_j;
-    dd[] field_e;
+    Sprite[] field_e;
     private int[][] field_k;
     static IntrusiveDeque field_i;
     static ea field_b;

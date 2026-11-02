@@ -8,7 +8,7 @@ final class mq implements Runnable {
     static String field_b;
     static int field_f;
     static AsyncRequest field_c;
-    static dd field_a;
+    static Sprite field_a;
     static String field_g;
     volatile boolean field_d;
 

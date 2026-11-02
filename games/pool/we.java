@@ -10,7 +10,7 @@ final class we {
     String field_i;
     static IntrusiveDeque field_c;
     String field_b;
-    static dd field_k;
+    static Sprite field_k;
     static int[][] field_m;
     di field_h;
     static boolean field_e;

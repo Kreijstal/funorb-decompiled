@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gr extends rg {
+abstract class gr extends DualLinkNode {
     static hj field_G;
     static vh field_y;
     static String field_A;
     static int field_z;
-    static dd[] field_I;
+    static Sprite[] field_I;
     static int[] field_w;
     volatile boolean field_F;
     static int[] field_B;

@@ -9,7 +9,7 @@ final class g extends IntrusiveNode {
     static char[] field_o;
     static String field_w;
     byte[] field_v;
-    jg[] field_u;
+    PcmSample[] field_u;
     byte[] field_p;
     int field_q;
     static int[] field_l;
@@ -68,7 +68,7 @@ final class g extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_u[var8] = (jg) (var7);
+                  this.field_u[var8] = (PcmSample) (var7);
                   this.field_r[var8] = 0;
                 }
               }
@@ -239,7 +239,7 @@ final class g extends IntrusiveNode {
           this.field_v = new byte[128];
           this.field_n = new byte[128];
           this.field_r = new int[128];
-          this.field_u = new jg[128];
+          this.field_u = new PcmSample[128];
           this.field_p = new byte[128];
           this.field_s = new short[128];
           this.field_t = new kp[128];

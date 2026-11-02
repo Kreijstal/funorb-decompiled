@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl extends kd {
+final class gl extends PcmStream {
     private int[] field_u;
     private float field_q;
-    private kd field_A;
+    private PcmStream field_A;
     private float field_s;
     private float field_y;
     private float field_v;
@@ -42,7 +42,7 @@ final class gl extends kd {
         this.field_z = param0;
     }
 
-    final kd a() {
+    final PcmStream a() {
         return this.field_A;
     }
 
@@ -321,7 +321,7 @@ final class gl extends kd {
         this.field_q = (float)((double)this.field_w * Math.sqrt((double)(1.0f - this.field_C) * 0.5));
     }
 
-    final kd b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -356,7 +356,7 @@ final class gl extends kd {
         this.field_p = param0;
     }
 
-    gl(kd param0) {
+    gl(PcmStream param0) {
         this.field_x = new qc[8];
         this.field_x[0] = new qc(1116 * bp.field_h / 44100);
         this.field_x[1] = new qc(1188 * bp.field_h / 44100);

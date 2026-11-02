@@ -4,9 +4,9 @@
 final class ua extends ig {
     static int field_v;
     private boolean field_q;
-    static dd field_u;
+    static Sprite field_u;
     static String field_m;
-    static dd field_r;
+    static Sprite field_r;
     static int[] field_t;
     static int field_o;
     static String field_n;
@@ -34,7 +34,7 @@ final class ua extends ig {
             return stackIn_2_0;
           }
           if (param1 != 0) {
-            field_u = (dd) null;
+            field_u = (Sprite) null;
           }
           if (!param0.equals(this.field_p)) {
             var4 = sm.a(param0, 118);

@@ -5,7 +5,7 @@ final class mc extends sq {
     static int[] field_h;
     static int field_l;
     static kf[] field_j;
-    static dd field_k;
+    static Sprite field_k;
     static kl field_e;
     static String field_i;
     static int field_g;
@@ -206,10 +206,10 @@ final class mc extends sq {
         }
     }
 
-    final dd b(qe param0, int param1) {
+    final Sprite b(qe param0, int param1) {
         RuntimeException var3 = null;
-        dd stackIn_2_0 = null;
-        dd stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -219,7 +219,7 @@ final class mc extends sq {
             stackIn_4_0 = mf.field_n;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (dd) null;
+          stackIn_2_0 = (Sprite) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

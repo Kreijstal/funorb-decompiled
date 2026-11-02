@@ -140,7 +140,7 @@ final class ef {
         cm.field_L[4] = kf.field_l;
         if (param0 >= -12) {
           String var2 = (String) null;
-          ef.a(20, (dd) null, (String) null);
+          ef.a(20, (Sprite) null, (String) null);
         }
         cm.field_L[6] = eq.field_P;
         cm.field_L[21] = il.field_d;
@@ -152,7 +152,7 @@ final class ef {
         cm.field_L[17] = hk.field_u;
     }
 
-    final static void a(int param0, dd param1, String param2) {
+    final static void a(int param0, Sprite param1, String param2) {
         try {
           nr.field_N = param2;
           if (param0 != -2107) {

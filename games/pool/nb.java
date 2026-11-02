@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb extends kd {
+final class nb extends PcmStream {
     private int field_x;
     private int field_t;
     private int field_A;
@@ -153,7 +153,7 @@ final class nb extends kd {
         int fieldTemp$2 = 0;
         int discarded$4 = 0;
         int discarded$3 = 0;
-        jg var4;
+        PcmSample var4;
         int var5;
         int var6;
         int var7;
@@ -166,7 +166,7 @@ final class nb extends kd {
           this.a(param2);
           return;
         }
-        var4 = (jg) (this.field_n);
+        var4 = (PcmSample) (this.field_n);
         var5 = this.field_C << 8;
         var6 = this.field_z << 8;
         var7 = var4.field_n.length << 8;
@@ -618,7 +618,7 @@ final class nb extends kd {
     }
 
     final synchronized void g(int param0) {
-        int var2 = ((jg) (this.field_n)).field_n.length << 8;
+        int var2 = ((PcmSample) (this.field_n)).field_n.length << 8;
         if (param0 < -1) {
           param0 = -1;
         }
@@ -972,7 +972,7 @@ final class nb extends kd {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        jg var2;
+        PcmSample var2;
         int var3;
         int var4;
         int var5;
@@ -997,7 +997,7 @@ final class nb extends kd {
             this.h();
           }
         }
-        var2 = (jg) (this.field_n);
+        var2 = (PcmSample) (this.field_n);
         var3 = this.field_C << 8;
         var4 = this.field_z << 8;
         var5 = var2.field_n.length << 8;
@@ -1288,7 +1288,7 @@ final class nb extends kd {
         return this.field_x == -2147483648 ? 0 : this.field_x + 32 >> 6;
     }
 
-    final static nb a(jg param0, int param1, int param2, int param3) {
+    final static nb a(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_n == null) {
           return null;
         }
@@ -1298,7 +1298,7 @@ final class nb extends kd {
         return null;
     }
 
-    final static nb c(jg param0, int param1, int param2, int param3) {
+    final static nb c(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_n == null) {
           return null;
         }
@@ -1485,16 +1485,16 @@ final class nb extends kd {
         int var1 = this.field_v * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_p == 0) {
-          var1 = var1 - var1 * this.field_t / (((jg) (this.field_n)).field_n.length << 8);
+          var1 = var1 - var1 * this.field_t / (((PcmSample) (this.field_n)).field_n.length << 8);
         } else {
           if (this.field_p >= 0) {
-            var1 = var1 - var1 * this.field_C / ((jg) (this.field_n)).field_n.length;
+            var1 = var1 - var1 * this.field_C / ((PcmSample) (this.field_n)).field_n.length;
           }
         }
         return var1 > 255 ? 255 : var1;
     }
 
-    final kd a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -1505,14 +1505,14 @@ final class nb extends kd {
             if (this.field_w == -256 &&
               (this.field_t & 255) == 0) {
               if (bp.field_r) {
-                return nb.a(0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, 0, param3, param2, this);
+                return nb.a(0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, 0, param3, param2, this);
               }
-              return nb.b(((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, 0, param3, param2, this);
+              return nb.b(((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, 0, param3, param2, this);
             }
             if (bp.field_r) {
-              return nb.a(0, 0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, 0, param3, param2, this, this.field_w, param4);
+              return nb.a(0, 0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, 0, param3, param2, this, this.field_w, param4);
             }
-            return nb.b(0, 0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, 0, param3, param2, this, this.field_w, param4);
+            return nb.b(0, 0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, 0, param3, param2, this, this.field_w, param4);
           }
           var6 = param1 + this.field_A;
           if (var6 > param3) {
@@ -1522,15 +1522,15 @@ final class nb extends kd {
           if (this.field_w == -256 &&
             (this.field_t & 255) == 0) {
             if (!bp.field_r) {
-              param1 = nb.a(((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, this.field_D, 0, var6, param2, this);
+              param1 = nb.a(((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, this.field_D, 0, var6, param2, this);
             } else {
-              param1 = nb.a(0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, this.field_u, this.field_q, 0, var6, param2, this);
+              param1 = nb.a(0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, this.field_u, this.field_q, 0, var6, param2, this);
             }
           } else {
             if (!bp.field_r) {
-              param1 = nb.b(0, 0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, this.field_D, 0, var6, param2, this, this.field_w, param4);
+              param1 = nb.b(0, 0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, this.field_D, 0, var6, param2, this, this.field_w, param4);
             } else {
-              param1 = nb.b(0, 0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, this.field_u, this.field_q, 0, var6, param2, this, this.field_w, param4);
+              param1 = nb.b(0, 0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, this.field_u, this.field_q, 0, var6, param2, this, this.field_w, param4);
             }
           }
           this.field_A = this.field_A - param1;
@@ -1665,7 +1665,7 @@ final class nb extends kd {
         return param5;
     }
 
-    final static nb a(jg param0, int param1, int param2) {
+    final static nb a(PcmSample param0, int param1, int param2) {
         if (param0.field_n == null) {
           return null;
         }
@@ -1675,7 +1675,7 @@ final class nb extends kd {
         return null;
     }
 
-    final static nb b(jg param0, int param1, int param2) {
+    final static nb b(PcmSample param0, int param1, int param2) {
         if (param0.field_n == null) {
           return null;
         }
@@ -1685,7 +1685,7 @@ final class nb extends kd {
         return null;
     }
 
-    final static nb b(jg param0, int param1, int param2, int param3) {
+    final static nb b(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_n == null) {
           return null;
         }
@@ -1702,14 +1702,14 @@ final class nb extends kd {
             if (this.field_w == 256 &&
               (this.field_t & 255) == 0) {
               if (bp.field_r) {
-                return nb.b(0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, 0, param3, param2, this);
+                return nb.b(0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, 0, param3, param2, this);
               }
-              return nb.a(((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, 0, param3, param2, this);
+              return nb.a(((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, 0, param3, param2, this);
             }
             if (bp.field_r) {
-              return nb.c(0, 0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, 0, param3, param2, this, this.field_w, param4);
+              return nb.c(0, 0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, 0, param3, param2, this, this.field_w, param4);
             }
-            return nb.a(0, 0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, 0, param3, param2, this, this.field_w, param4);
+            return nb.a(0, 0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, 0, param3, param2, this, this.field_w, param4);
           }
           var6 = param1 + this.field_A;
           if (var6 > param3) {
@@ -1719,15 +1719,15 @@ final class nb extends kd {
           if (this.field_w == 256 &&
             (this.field_t & 255) == 0) {
             if (!bp.field_r) {
-              param1 = nb.b(((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, this.field_D, 0, var6, param2, this);
+              param1 = nb.b(((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, this.field_D, 0, var6, param2, this);
             } else {
-              param1 = nb.b(0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, this.field_u, this.field_q, 0, var6, param2, this);
+              param1 = nb.b(0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, this.field_u, this.field_q, 0, var6, param2, this);
             }
           } else {
             if (!bp.field_r) {
-              param1 = nb.d(0, 0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, this.field_D, 0, var6, param2, this, this.field_w, param4);
+              param1 = nb.d(0, 0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_v, this.field_D, 0, var6, param2, this, this.field_w, param4);
             } else {
-              param1 = nb.a(0, 0, ((jg) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, this.field_u, this.field_q, 0, var6, param2, this, this.field_w, param4);
+              param1 = nb.a(0, 0, ((PcmSample) (this.field_n)).field_n, param0, this.field_t, param1, this.field_r, this.field_s, this.field_u, this.field_q, 0, var6, param2, this, this.field_w, param4);
             }
           }
           this.field_A = this.field_A - param1;
@@ -1739,10 +1739,10 @@ final class nb extends kd {
     }
 
     final synchronized boolean i() {
-        return this.field_t < 0 || this.field_t >= ((jg) (this.field_n)).field_n.length << 8;
+        return this.field_t < 0 || this.field_t >= ((PcmSample) (this.field_n)).field_n.length << 8;
     }
 
-    final kd b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -1754,8 +1754,8 @@ final class nb extends kd {
         this.a(param0, param1, this.f());
     }
 
-    private nb(jg param0, int param1, int param2) {
-        this.field_n = (qm) ((Object) param0);
+    private nb(PcmSample param0, int param1, int param2) {
+        this.field_n = (AbstractAudioSample) ((Object) param0);
         this.field_C = param0.field_m;
         this.field_z = param0.field_q;
         this.field_y = param0.field_o;
@@ -1766,8 +1766,8 @@ final class nb extends kd {
         this.h();
     }
 
-    private nb(jg param0, int param1, int param2, int param3) {
-        this.field_n = (qm) ((Object) param0);
+    private nb(PcmSample param0, int param1, int param2, int param3) {
+        this.field_n = (AbstractAudioSample) ((Object) param0);
         this.field_C = param0.field_m;
         this.field_z = param0.field_q;
         this.field_y = param0.field_o;

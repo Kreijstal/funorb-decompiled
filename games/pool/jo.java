@@ -5,7 +5,7 @@ class jo extends ob {
     static boolean field_H;
     static String field_L;
     static int field_J;
-    private dd field_K;
+    private Sprite field_K;
     static String[] field_I;
 
     final void c(int param0) {
@@ -24,7 +24,7 @@ class jo extends ob {
           fq.a(-3405, -1, mg.a(true) ? 21 : 0, false);
           return;
         }
-        this.field_K = (dd) null;
+        this.field_K = (Sprite) null;
         fq.a(-3405, -1, mg.a(true) ? 21 : 0, false);
     }
 
@@ -466,7 +466,7 @@ class jo extends ob {
         field_L = null;
     }
 
-    jo(dd param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    jo(Sprite param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
         try {
           this.field_n = false;

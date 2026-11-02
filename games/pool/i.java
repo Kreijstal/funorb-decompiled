@@ -7,7 +7,7 @@ final class i extends IntrusiveNode {
     int field_p;
     private static int field_u;
     static vh field_l;
-    static dd field_o;
+    static Sprite field_o;
     int field_s;
     int field_r;
     static int field_m;

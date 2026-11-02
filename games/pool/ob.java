@@ -5,7 +5,7 @@ class ob extends jh {
     int field_s;
     gi field_G;
     ia field_B;
-    dd field_z;
+    Sprite field_z;
     boolean field_p;
     private int field_A;
     static int field_u;
@@ -75,12 +75,12 @@ class ob extends jh {
         Object var8;
         int var9;
         int var10;
-        dd var10_ref_dd;
+        Sprite var10_ref_dd;
         int var11;
         int var12;
         int var14;
         int var15;
-        dd[] var16;
+        Sprite[] var16;
         int[] var20;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -167,10 +167,10 @@ class ob extends jh {
         return;
     }
 
-    dd a(String param0, int param1, int param2, int param3) {
+    Sprite a(String param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
-        dd stackIn_2_0 = null;
-        dd stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -180,7 +180,7 @@ class ob extends jh {
             stackIn_4_0 = dq.a(param1, 0, param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (dd) null;
+          stackIn_2_0 = (Sprite) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -203,7 +203,7 @@ class ob extends jh {
         return -2;
     }
 
-    dd[] b(int param0, int param1) {
+    Sprite[] b(int param0, int param1) {
         int var3;
         if (param0 == this.field_B.field_h) {
           return ln.field_s;
@@ -882,7 +882,7 @@ class ob extends jh {
             for (var11 = 0; var9 > var11; var11++) {
               var10 = var10 + param1[var11 % param1.length];
             }
-            uh.field_p = new dd(param5, var10 + param0.field_w);
+            uh.field_p = new Sprite(param5, var10 + param0.field_w);
             var25 = new int[4];
             var26 = qh.field_d;
             var13 = qh.field_l;
@@ -1027,7 +1027,7 @@ class ob extends jh {
         this.a(false);
         if (fm.field_G == null ||
           !(fm.field_G.length >= this.field_B.field_e)) {
-          fm.field_G = new dd[this.field_B.field_e];
+          fm.field_G = new Sprite[this.field_B.field_e];
           mc.field_h = new int[this.field_B.field_e];
           jq.field_e = new String[this.field_B.field_e];
         }
@@ -1197,7 +1197,7 @@ class ob extends jh {
         return this.e(param0, -126);
     }
 
-    ob(dd param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ob(Sprite param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_q = false;
         this.field_n = true;
         this.field_z = null;

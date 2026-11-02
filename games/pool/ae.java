@@ -100,7 +100,7 @@ final class ae {
         int stackIn_66_1 = 0;
         boolean stackIn_67_2 = false;
         RuntimeException decompiledCaughtException = null;
-        dd var1 = null;
+        Sprite var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -112,12 +112,12 @@ final class ae {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        dd var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
-        dd var11 = null;
-        dd var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         String var14 = null;
-        dd var16 = null;
+        Sprite var16 = null;
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -160,13 +160,13 @@ final class ae {
             var2 = qh.field_l;
             var3 = qh.field_f;
             qh.a(ka.field_o);
-            var11 = new dd(4 + vq.field_Yb.field_z, 4 + vq.field_Yb.field_A);
+            var11 = new Sprite(4 + vq.field_Yb.field_z, 4 + vq.field_Yb.field_A);
             var11.e();
             vq.field_Yb.b(2, 2, er.field_X);
             hd.a(1, 2, var11.field_A, var11, 4, var11.field_z, 0, 0);
             vq.field_Yb = var11;
             w.field_f = vq.field_Yb.a();
-            var12 = new dd(195, 221);
+            var12 = new Sprite(195, 221);
             var6 = var12.field_z / 2;
             var12.e();
             de.field_d.b(nr.a(new String[]{sa.field_o}, -1, ul.field_l), var6, 40, 16777215, -1);
@@ -250,13 +250,13 @@ final class ae {
               ad.field_r = ad.field_r - var9_intLifetime3;
             }
             vn.field_j.c();
-            var9 = new dd(vn.field_j.field_w, vn.field_j.field_y);
+            var9 = new Sprite(vn.field_j.field_w, vn.field_j.field_y);
             var9.e();
             de.field_d.a(var14, se.field_h, rf.field_c, jc.field_h, IsaacCipher.field_e, 16777215, -1, 1, 1, de.field_d.field_C + de.field_d.field_w);
             hd.a(1, 3, var9.field_y, var9, param0 + 6, var9.field_w, 0, 0);
             vn.field_j.e();
             var9.c(0, 0);
-            ua.field_u = new dd(640, 480);
+            ua.field_u = new Sprite(640, 480);
             ua.field_u.e();
             vn.field_j.b((vn.field_j.field_w >> 1) + pq.field_m, (vn.field_j.field_y >> 1) + ad.field_r, ej.field_g, 4096);
             vn.field_j = null;
@@ -270,7 +270,7 @@ final class ae {
             var2Lifetime2 = qh.field_l;
             var3Lifetime2 = qh.field_f;
             qh.a(ka.field_o);
-            var16 = new dd(412, 43);
+            var16 = new Sprite(412, 43);
             var5_ref_String = nr.a(new String[]{nr.field_N}, -1, wm.field_cc);
             nr.field_N = null;
             var16.e();

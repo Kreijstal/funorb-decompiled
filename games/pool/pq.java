@@ -13,7 +13,7 @@ final class pq {
     static String field_D;
     static or field_i;
     private hm field_E;
-    static jg field_L;
+    static PcmSample field_L;
     int field_k;
     int field_I;
     static String[] field_C;

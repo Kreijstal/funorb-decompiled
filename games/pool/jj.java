@@ -5,7 +5,7 @@ final class jj extends fm implements tb {
     private fe field_O;
     private co field_N;
     static String field_P;
-    static dd[] field_S;
+    static Sprite[] field_S;
     static String field_R;
     static int field_F;
     static String field_Q;
@@ -171,7 +171,7 @@ final class jj extends fm implements tb {
         field_P = null;
         field_Q = null;
         if (param0 != 100) {
-          field_S = (dd[]) null;
+          field_S = (Sprite[]) null;
         }
     }
 
@@ -202,7 +202,7 @@ final class jj extends fm implements tb {
           var2_int = param0.length;
           var3 = new byte[var2_int];
           if (param1 != 91) {
-            field_S = (dd[]) null;
+            field_S = (Sprite[]) null;
           }
           qn.a(param0, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;

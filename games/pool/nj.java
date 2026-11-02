@@ -7,7 +7,7 @@ final class nj {
     static int field_c;
     static int field_d;
 
-    final static void a(dd[] param0, byte param1, int param2, int param3, int param4, int param5) {
+    final static void a(Sprite[] param0, byte param1, int param2, int param3, int param4, int param5) {
         int var22 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;

@@ -5,7 +5,7 @@ final class dl {
     tc field_c;
     int field_f;
     static boolean[][] field_j;
-    static dd field_h;
+    static Sprite field_h;
     static String field_i;
     static String field_a;
     static String field_d;

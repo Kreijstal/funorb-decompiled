@@ -4,7 +4,7 @@
 abstract class ig extends gg implements pe {
     private sl field_l;
     static String field_k;
-    static dd field_i;
+    static Sprite field_i;
     static so field_h;
     static qr field_j;
 
@@ -62,7 +62,7 @@ abstract class ig extends gg implements pe {
 
     abstract String a(String param0, int param1);
 
-    final static void a(dd param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;

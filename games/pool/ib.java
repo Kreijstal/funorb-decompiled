@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ib extends kd {
+final class ib extends PcmStream {
     IntrusiveDeque field_t;
     static bp field_s;
     static boolean field_v;
@@ -11,7 +11,7 @@ final class ib extends kd {
     static String[] field_q;
     ai field_p;
 
-    final kd b() {
+    final PcmStream b() {
         pr var1;
         while (true) {
           var1 = (pr) (this.field_t.f((byte) -5));
@@ -19,7 +19,7 @@ final class ib extends kd {
             return null;
           }
           if (null != var1.field_o) {
-            return (kd) ((Object) var1.field_o);
+            return (PcmStream) ((Object) var1.field_o);
           }
         }
     }
@@ -180,7 +180,7 @@ final class ib extends kd {
         return 0;
     }
 
-    final kd a() {
+    final PcmStream a() {
         pr var1 = (pr) (this.field_t.c((byte) 76));
         if (var1 == null) {
           return null;
@@ -188,7 +188,7 @@ final class ib extends kd {
         if (null == var1.field_o) {
           return this.b();
         }
-        return (kd) ((Object) var1.field_o);
+        return (PcmStream) ((Object) var1.field_o);
     }
 
     final void a(int[] param0, int param1, int param2) {

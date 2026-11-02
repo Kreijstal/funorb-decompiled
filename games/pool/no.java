@@ -7,7 +7,7 @@ abstract class no {
     static int[] field_s;
     static nl field_h;
     wo field_f;
-    static dd field_q;
+    static Sprite field_q;
     wo field_t;
     static int[] field_n;
     static hj field_g;

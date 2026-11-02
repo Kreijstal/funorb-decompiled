@@ -1373,7 +1373,7 @@ final class nk {
                 }
                 var2 = gg.a((byte) -82, "create");
                 if (var2 != null) {
-                  qo.field_E = a.a(var2, -59);
+                  SpriteState.field_E = a.a(var2, -59);
                 }
                 var2 = gg.a((byte) 122, "create_pleasechooseapassword");
                 if (var2 != null) {

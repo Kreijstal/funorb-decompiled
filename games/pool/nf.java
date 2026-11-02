@@ -18,7 +18,7 @@ final class nf extends ch implements jb, tb, jn {
     static int field_T;
     static long field_Q;
     static String field_db;
-    static dd[] field_V;
+    static Sprite[] field_V;
 
     private final int a(String param0, ei param1, int param2, int param3, String param4, int param5, byte param6) {
         RuntimeException var8 = null;
@@ -223,7 +223,7 @@ final class nf extends ch implements jb, tb, jn {
         var6 = Pool.field_O;
         try {
           if (param2 != -12147) {
-            field_V = (dd[]) null;
+            field_V = (Sprite[]) null;
           }
           if (param3 == 0) {
             ci.a("terms.ws", -127);
@@ -435,7 +435,7 @@ final class nf extends ch implements jb, tb, jn {
         this.field_ab = new ga("", (cc) null, 3);
         int var1 = 1;
         this.field_W = new ri("", (cc) null, var1 != 0);
-        this.field_U = new fe(qo.field_E, (cc) null);
+        this.field_U = new fe(SpriteState.field_E, (cc) null);
         this.field_Y = new fe(lc.field_Q, (cc) null);
         this.field_bb.field_p = sg.field_H;
         this.field_cb.field_p = ri.field_T;

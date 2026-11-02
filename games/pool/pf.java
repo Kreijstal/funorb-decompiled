@@ -7,9 +7,9 @@ final class pf {
     private int field_g;
     private int field_d;
     static of field_c;
-    dd[] field_j;
+    Sprite[] field_j;
     private int field_f;
-    dd field_b;
+    Sprite field_b;
     private int field_l;
     static hj field_e;
     static int field_k;
@@ -332,7 +332,7 @@ final class pf {
         }
     }
 
-    final pf a(dd[] param0, byte param1) {
+    final pf a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -374,11 +374,11 @@ final class pf {
         }
     }
 
-    final static dd a(String param0, byte param1, String param2, di param3) {
+    final static Sprite a(String param0, byte param1, String param2, di param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        dd stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -436,7 +436,7 @@ final class pf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 90) {
-            this.field_j = (dd[]) null;
+            this.field_j = (Sprite[]) null;
           }
           this.field_f = param0;
           return this;
@@ -449,7 +449,7 @@ final class pf {
 
     final static void a(boolean param0) {
         try {
-          rg.field_p = param0;
+          DualLinkNode.field_p = param0;
           hn.field_b = 0;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "pf.I(" + param0 + ')');

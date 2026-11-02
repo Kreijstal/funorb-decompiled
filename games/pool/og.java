@@ -5,10 +5,10 @@ final class og extends ob {
     static nl field_L;
     static String field_H;
     static int[] field_J;
-    static dd[] field_K;
+    static Sprite[] field_K;
     static int field_I;
 
-    og(dd param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    og(Sprite param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 

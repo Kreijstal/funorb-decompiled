@@ -280,12 +280,12 @@ final class ub extends se {
         StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
         RuntimeException decompiledCaughtException = null;
-        dd var12 = null;
+        Sprite var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        dd[] var16 = null;
+        Sprite[] var16 = null;
         vh var17 = null;
         int var18 = 0;
         String var19 = null;
@@ -307,7 +307,7 @@ final class ub extends se {
           ng.field_A[1] = 6356832;
           mc.field_g = 8421504;
           ng.field_A[3] = 16736511;
-          var12 = new dd(4, 4);
+          var12 = new Sprite(4, 4);
           var13 = var12.field_D;
           var14 = var12.field_D;
           var12.field_D[15] = 7368816;
@@ -315,7 +315,7 @@ final class ub extends se {
           var13[2] = 7368816;
           var15[8] = 7368816;
           var14[5] = 7368816;
-          var16 = new dd[9];
+          var16 = new Sprite[9];
           var16[4] = var12;
           fl.field_q = new vh(0L, param0);
           wa.field_hb = new vh(0L, param10);

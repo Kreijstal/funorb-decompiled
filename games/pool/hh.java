@@ -3,7 +3,7 @@
  */
 final class hh {
     static int field_a;
-    static dd[] field_f;
+    static Sprite[] field_f;
     static boolean field_c;
     static String field_d;
     static String field_b;

@@ -5,7 +5,7 @@ final class vn {
     static nl field_d;
     static IntrusiveDeque field_g;
     static int field_f;
-    static dd field_j;
+    static Sprite field_j;
     static int field_c;
     static int field_b;
     wd field_i;

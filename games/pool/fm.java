@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class fm extends ei implements lj {
-    static dd[] field_G;
+    static Sprite[] field_G;
     static boolean field_H;
     static jd[][] field_K;
     static String field_I;

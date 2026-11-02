@@ -119,10 +119,10 @@ abstract class tj extends oe {
           if (!vf.field_nb.a("commonui", 0)) {
             return 80;
           }
-          if (!rg.field_r.d(47)) {
+          if (!DualLinkNode.field_r.d(47)) {
             return 82;
           }
-          if (!rg.field_r.c(-63)) {
+          if (!DualLinkNode.field_r.c(-63)) {
             return 86;
           }
         } else {
@@ -138,10 +138,10 @@ abstract class tj extends oe {
           if (!vf.field_nb.a("commonui", param0 ^ 19535)) {
             return 60;
           }
-          if (!rg.field_r.d(114)) {
+          if (!DualLinkNode.field_r.d(114)) {
             return 70;
           }
-          if (!rg.field_r.c(-63)) {
+          if (!DualLinkNode.field_r.c(-63)) {
             return 80;
           }
         }

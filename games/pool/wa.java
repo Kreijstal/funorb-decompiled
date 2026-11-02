@@ -3,7 +3,7 @@
  */
 final class wa extends tj {
     static String field_ob;
-    static dd field_gb;
+    static Sprite field_gb;
     static vh field_hb;
     static int[] field_ib;
     private String field_pb;
@@ -132,7 +132,7 @@ final class wa extends tj {
 
     final static void m(int param0) {
         if (param0 != 8421504) {
-          field_gb = (dd) null;
+          field_gb = (Sprite) null;
           if (null != vl.field_m) {
             if (vl.field_m.field_i != null) {
               vl.field_m.field_i.field_Ib = false;

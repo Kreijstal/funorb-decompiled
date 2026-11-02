@@ -13,7 +13,7 @@ final class vl extends tm {
     static qb[] field_l;
     static String field_s;
 
-    final static void a(int param0, int param1, dd[] param2, int param3, dd[] param4, int param5, int param6, lr param7, int param8, int param9, dd[] param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, int param5, int param6, lr param7, int param8, int param9, Sprite[] param10, int param11, int param12, int param13, int param14) {
         RuntimeException runtimeException = null;
         int var15_int = 0;
         int var16 = 0;

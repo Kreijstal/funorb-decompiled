@@ -12,10 +12,10 @@ final class mm {
     static String field_e;
     double field_m;
     static String[] field_n;
-    static dd field_c;
+    static Sprite field_c;
     double field_h;
     static int field_b;
-    static dd field_j;
+    static Sprite field_j;
     double field_k;
 
     final void a(int[] param0, boolean param1) {
@@ -169,7 +169,7 @@ final class mm {
         try {
           this.field_f = (double)pf.b(126, param0.field_I.field_l[0].field_g);
           if (param1 != 1) {
-            field_j = (dd) null;
+            field_j = (Sprite) null;
           }
           this.field_m = (double)pf.b(param1 ^ 126, param0.field_I.field_l[0].field_k);
           this.b(3.141592653589793 * (double)param0.field_G.field_h / 1024.0, 3.141592653589793 * (double)(param0.field_G.field_k + 32) / 1024.0, 192.0, -6861);
@@ -311,7 +311,7 @@ final class mm {
 
     final void b(double param0, double param1, double param2, int param3) {
         if (param3 != -6861) {
-          field_c = (dd) null;
+          field_c = (Sprite) null;
         }
         this.a(param0, param1, param2, 144);
         this.c((byte) -40);
@@ -511,7 +511,7 @@ final class mm {
           }
           ci.a(param17, 26790, param10, param3, param5, param19);
           w.a(param9, -17, param2);
-          qo.a((byte) -82, param11, param8, param15);
+          SpriteState.a((byte) -82, param11, param8, param15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -271,7 +271,7 @@ final class sh extends ud {
           this.field_L.a(param0, (byte) -128, param2 + this.field_C, this.field_D + param3);
           return;
         }
-        dd var6 = new dd(this.field_L.field_l, this.field_L.field_y);
+        Sprite var6 = new Sprite(this.field_L.field_l, this.field_L.field_y);
         kj.a(110, var6);
         this.field_L.a(param0, (byte) -126, 0, 0);
         oc.a(118);

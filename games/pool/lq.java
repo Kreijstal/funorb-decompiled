@@ -9,7 +9,7 @@ final class lq extends ud {
     static so field_R;
     static int[] field_T;
     static String field_S;
-    static dd field_Q;
+    static Sprite field_Q;
     static String field_U;
     static String field_N;
     static int field_V;
@@ -287,9 +287,9 @@ final class lq extends ud {
     }
 
     final static void l(int param0) {
-        rg var2 = null;
+        DualLinkNode var2 = null;
         int var3 = Pool.field_O;
-        rg var2Lifetime1;
+        DualLinkNode var2Lifetime1;
         try {
           gi.field_t = 0;
           int var1_int = 83 % ((17 - param0) / 34);

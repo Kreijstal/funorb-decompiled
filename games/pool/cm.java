@@ -124,9 +124,9 @@ final class cm extends ob {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        dd var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        dd var5 = null;
+        Sprite var5 = null;
         var4 = Pool.field_O;
         try {
           if (cr.field_m != null) {
@@ -146,10 +146,10 @@ final class cm extends ob {
           }
           rf.field_g = pf.a("benefits", (byte) 118, "members_benefits_logo", hr.field_q);
           qp.field_Rb = pf.a("benefits", (byte) 69, "members_benefits_price", hr.field_q);
-          var5 = new dd(rl.field_h.a(false, "members_benefits_screenshots.jpg", "benefits/"), (java.awt.Component) ((Object) vj.a((byte) -67)));
-          dn.field_o = new dd[3];
+          var5 = new Sprite(rl.field_h.a(false, "members_benefits_screenshots.jpg", "benefits/"), (java.awt.Component) ((Object) vj.a((byte) -67)));
+          dn.field_o = new Sprite[3];
           for (var2 = 0; var2 < dn.field_o.length; var2++) {
-            var3 = new dd(var5.field_w, var5.field_y / dn.field_o.length);
+            var3 = new Sprite(var5.field_w, var5.field_y / dn.field_o.length);
             var3.e();
             var5.a(0, -var2 * var5.field_y / dn.field_o.length);
             dn.field_o[var2] = var3;

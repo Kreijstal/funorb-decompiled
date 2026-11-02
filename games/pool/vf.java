@@ -6,27 +6,27 @@ import java.util.*;
 final class vf extends vc {
     static int field_lb;
     static String field_Q;
-    private jg field_fb;
+    private PcmSample field_fb;
     private vm[] field_U;
-    jg field_X;
-    private jg field_Z;
-    private jg field_ib;
+    PcmSample field_X;
+    private PcmSample field_Z;
+    private PcmSample field_ib;
     static String field_gb;
-    private jg field_ab;
-    private jg field_cb;
-    private jg field_W;
-    private jg field_T;
-    jg field_hb;
-    private jg field_mb;
-    private jg field_jb;
-    private jg field_kb;
-    jg field_bb;
+    private PcmSample field_ab;
+    private PcmSample field_cb;
+    private PcmSample field_W;
+    private PcmSample field_T;
+    PcmSample field_hb;
+    private PcmSample field_mb;
+    private PcmSample field_jb;
+    private PcmSample field_kb;
+    PcmSample field_bb;
     static di field_nb;
-    private jg field_S;
-    jg field_Y;
-    private jg field_db;
-    private jg field_V;
-    private jg field_eb;
+    private PcmSample field_S;
+    PcmSample field_Y;
+    private PcmSample field_db;
+    private PcmSample field_V;
+    private PcmSample field_eb;
 
     final void i(int param0) {
         super.i(param0);
@@ -41,8 +41,8 @@ final class vf extends vc {
           for (var3_int = 0; var3_int < this.field_U.length; var3_int++) {
             this.field_U[var3_int].a(this, 10);
           }
-          this.a(24, 50, (byte) -121, new jg[]{this.field_V, this.field_W, this.field_T, this.field_db, this.field_fb}, Pool.field_N);
-          this.a(24, 50, (byte) 125, new jg[]{this.field_eb, this.field_Z, this.field_kb}, ca.field_g);
+          this.a(24, 50, (byte) -121, new PcmSample[]{this.field_V, this.field_W, this.field_T, this.field_db, this.field_fb}, Pool.field_N);
+          this.a(24, 50, (byte) 125, new PcmSample[]{this.field_eb, this.field_Z, this.field_kb}, ca.field_g);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vf.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -885,7 +885,7 @@ final class vf extends vc {
           }
           this.field_M = new int[this.field_O.length][3];
           if (param1 >= -43) {
-            this.field_V = (jg) null;
+            this.field_V = (PcmSample) null;
           }
           for (var4Lifetime3 = 0; this.field_O.length > var4Lifetime3; var4Lifetime3++) {
             ln.a(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
@@ -1015,7 +1015,7 @@ final class vf extends vc {
     final void c(int param0, di param1) {
         try {
           if (param0 != -23569) {
-            this.field_T = (jg) null;
+            this.field_T = (PcmSample) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vf.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -1129,9 +1129,9 @@ final class vf extends vc {
     final void b(int param0, di param1) {
         try {
           if (param0 != 5) {
-            this.field_fb = (jg) null;
+            this.field_fb = (PcmSample) null;
           }
-          this.field_B = new dd(param1.a(false, "polar-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
+          this.field_B = new Sprite(param1.a(false, "polar-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vf.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

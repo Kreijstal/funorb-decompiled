@@ -1048,14 +1048,14 @@ final class u {
     }
 
     final static vh a(byte param0, int param1, int param2, boolean param3, int param4) {
-        dd var5 = null;
+        Sprite var5 = null;
         RuntimeException var5_ref = null;
         vh var6 = null;
-        dd stackIn_7_0 = null;
+        Sprite stackIn_7_0 = null;
         vh stackIn_10_0 = null;
-        dd stackIn_11_1 = null;
+        Sprite stackIn_11_1 = null;
         vh stackIn_14_0 = null;
-        dd stackIn_15_1 = null;
+        Sprite stackIn_15_1 = null;
         vh stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {

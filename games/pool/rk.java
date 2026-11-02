@@ -12,7 +12,7 @@ final class rk {
     private int[] field_b;
     static String field_g;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, dd[] param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite[] param6) {
         int var22 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -292,7 +292,7 @@ final class rk {
                   var6 = var11_int;
                 }
                 if (0 != var11_int &&
-                  !rg.field_s) {
+                  !DualLinkNode.field_s) {
                   var5_int = 1;
                 }
               }
@@ -307,7 +307,7 @@ final class rk {
                   var7 = var11_intLifetime1;
                 }
                 if (var11_intLifetime1 != 0 &&
-                  !rg.field_s) {
+                  !DualLinkNode.field_s) {
                   var5_int = 1;
                 }
               }
@@ -592,7 +592,7 @@ final class rk {
                     ci.field_d[var27_int] != null) {
                     var30_int = ci.field_d[var27_int][var28];
                     if (var30_int != 0 &&
-                      !rg.field_s &&
+                      !DualLinkNode.field_s &&
                       !var12.field_Pb) {
                       var29 = 1;
                     }
@@ -604,7 +604,7 @@ final class rk {
                     w.field_j[var27_int] != null) {
                     var30_intLifetime1 = w.field_j[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
-                      !rg.field_s &&
+                      !DualLinkNode.field_s &&
                       !var12.field_Pb) {
                       var29 = 1;
                     }
@@ -1073,8 +1073,8 @@ final class rk {
 
     final static int b(boolean param0) {
         if (!param0) {
-          dd[] var2 = (dd[]) null;
-          rk.a(37, -53, 4, 85, 43, -30, (dd[]) null);
+          Sprite[] var2 = (Sprite[]) null;
+          rk.a(37, -53, 4, 85, 43, -30, (Sprite[]) null);
         }
         return di.field_e + (ol.field_e << 2) + (ec.field_i << 4);
     }

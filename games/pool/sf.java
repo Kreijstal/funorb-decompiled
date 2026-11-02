@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends rg {
+final class sf extends DualLinkNode {
     static int field_y;
     char[] field_w;
     static String field_z;

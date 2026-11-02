@@ -6,12 +6,12 @@ final class bq extends IntrusiveNode {
     static int field_p;
     static hj field_r;
     static Boolean field_q;
-    static dd field_n;
+    static Sprite field_n;
     static int field_m;
     static String field_s;
     static boolean field_o;
 
-    final static void a(int param0, dd param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           pq.field_m = param4;
           jc.field_h = param3;
@@ -22,7 +22,7 @@ final class bq extends IntrusiveNode {
           IsaacCipher.field_e = param2;
           vn.field_j = param1;
           if (param7 != -1) {
-            field_n = (dd) null;
+            field_n = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "bq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');

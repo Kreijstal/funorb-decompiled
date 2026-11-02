@@ -6,9 +6,9 @@ import java.util.*;
 final class mn implements Iterator {
     static vh field_e;
     static int field_a;
-    private rg field_b;
+    private DualLinkNode field_b;
     static int field_g;
-    private rg field_c;
+    private DualLinkNode field_c;
     static String field_d;
     private qi field_f;
 
@@ -69,9 +69,9 @@ final class mn implements Iterator {
           var1 = null;
           this.field_c = null;
         } else {
-          this.field_c = ((rg) (var1)).field_q;
+          this.field_c = ((DualLinkNode) (var1)).field_q;
         }
-        this.field_b = (rg) (var1);
+        this.field_b = (DualLinkNode) (var1);
         return var1;
     }
 

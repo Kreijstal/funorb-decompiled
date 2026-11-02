@@ -6,7 +6,7 @@ final class gd {
     static PacketBuffer field_f;
     static int field_g;
     static boolean field_b;
-    static dd field_e;
+    static Sprite field_e;
     static int[] field_a;
     static tk field_c;
 
@@ -38,10 +38,10 @@ final class gd {
           return ig.field_j.b(2);
         }
         if (param0) {
-          return qo.field_x;
+          return SpriteState.field_x;
         }
         gd.a(-107);
-        return qo.field_x;
+        return SpriteState.field_x;
     }
 
     static {

@@ -23,7 +23,7 @@ final class ad {
     static int field_x;
     static int[] field_o;
     static String field_b;
-    static dd field_y;
+    static Sprite field_y;
     static int field_r;
     static int field_c;
     static String field_t;
@@ -268,7 +268,7 @@ final class ad {
     ad(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_v = qo.a(param0.length, param0, 0);
+          this.field_v = SpriteState.a(param0.length, param0, 0);
           if (this.field_v != param1) {
             throw new RuntimeException();
           }
@@ -289,13 +289,13 @@ final class ad {
         }
     }
 
-    final static dd a(int param0, int param1, int param2) {
+    final static Sprite a(int param0, int param1, int param2) {
         int var4 = 0;
         if (param2 != 7) {
           ad.a(82);
         }
-        dd var5 = new dd(param1, param1);
-        dd var3 = var5;
+        Sprite var5 = new Sprite(param1, param1);
+        Sprite var3 = var5;
         for (var4 = 0; var4 < var3.field_D.length; var4++) {
           var5.field_D[var4] = param0;
         }

@@ -9,7 +9,7 @@ final class me extends ig {
     static di field_r;
     static int field_o;
     static int field_s;
-    static dd field_p;
+    static Sprite field_p;
     static so field_y;
     static String field_u;
     static int field_x;

@@ -15,7 +15,7 @@ final class im extends vh {
     static int field_Wb;
     int field_Xb;
     static boolean[] field_cc;
-    static dd field_Lb;
+    static Sprite field_Lb;
     int field_hc;
     long field_Mb;
     static String field_Ob;
@@ -23,7 +23,7 @@ final class im extends vh {
     int field_gc;
     static String[] field_ic;
     vh field_Zb;
-    static dd field_Vb;
+    static Sprite field_Vb;
     int field_bc;
     boolean field_mc;
     vh field_lc;
@@ -45,11 +45,11 @@ final class im extends vh {
         }
     }
 
-    final static dd[] a(int param0, int param1, int param2, di param3) {
+    final static Sprite[] a(int param0, int param1, int param2, di param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        dd[] stackIn_5_0 = null;
-        dd[] stackIn_7_0 = null;
+        Sprite[] stackIn_5_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -57,13 +57,13 @@ final class im extends vh {
         try {
           if (!vj.a(param0, param3, param1, (byte) 121)) {
             stackIn_2_0 = null;
-            return (dd[]) (stackIn_2_0);
+            return (Sprite[]) (stackIn_2_0);
           }
           if (param2 == 0) {
             stackIn_7_0 = ok.l((byte) 65);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (dd[]) null;
+          stackIn_5_0 = (Sprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

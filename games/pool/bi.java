@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bi {
-    static dd field_a;
+    static Sprite field_a;
     static int[] field_d;
     static lr field_e;
     static String field_c;
@@ -11,7 +11,7 @@ final class bi {
 
     final static void b(int param0) {
         if (param0 >= -50) {
-          field_a = (dd) null;
+          field_a = (Sprite) null;
         }
     }
 

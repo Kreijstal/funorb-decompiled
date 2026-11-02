@@ -54,9 +54,9 @@ final class mi {
         return new mi(new PacketBuffer(var3));
     }
 
-    final jg b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new jg(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
     private mi(PacketBuffer param0) {

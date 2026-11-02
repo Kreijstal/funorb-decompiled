@@ -4,7 +4,7 @@
 final class d {
     static eg field_b;
     static qq field_d;
-    static dd[] field_a;
+    static Sprite[] field_a;
     static vh field_e;
     static vh field_c;
     static vh field_f;

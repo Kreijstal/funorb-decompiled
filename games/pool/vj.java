@@ -148,7 +148,7 @@ final class vj {
         }
     }
 
-    final static kf a(byte param0, jg param1) {
+    final static kf a(byte param0, PcmSample param1) {
         RuntimeException var2 = null;
         kf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

@@ -10,7 +10,7 @@ class IntrusiveNode {
     long key;
     static vh field_e;
     static int[] field_h;
-    static jg field_a;
+    static PcmSample field_a;
     static IntrusiveDeque field_i;
     IntrusiveNode previous;
 

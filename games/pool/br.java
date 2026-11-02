@@ -10,7 +10,7 @@ final class br extends ob {
     static int field_I;
 
     br(int param0, int param1, int param2, int param3, int param4, int[] param5) {
-        super((dd) null, param0, param1, param2, param3, param4, param5);
+        super((Sprite) null, param0, param1, param2, param3, param4, param5);
     }
 
     final void b(int param0, boolean param1, int param2) {

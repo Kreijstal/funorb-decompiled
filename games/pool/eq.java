@@ -7,7 +7,7 @@ abstract class eq extends ch implements sc {
     static int field_R;
     static String field_T;
     static eh field_V;
-    static dd[] field_Q;
+    static Sprite[] field_Q;
     static String field_N;
     static int field_Y;
     static int field_U;
@@ -67,7 +67,7 @@ abstract class eq extends ch implements sc {
         field_Q = null;
         field_P = null;
         if (param0 != -12253) {
-          field_Q = (dd[]) null;
+          field_Q = (Sprite[]) null;
         }
     }
 
@@ -80,15 +80,15 @@ abstract class eq extends ch implements sc {
         ob discarded$0 = new ob(cl.field_m, 0, 180, 460, 160, 24, new int[]{39, 43, 0, 1, 5, 47, 4, 48, 22, 19});
         be discarded$1 = new be(14, 180, 460, 160, 24, rq.field_B);
         pa discarded$2 = new pa(lq.field_Q, 2, 180, 460, 160, 24, new int[]{50, 51, 8});
-        jo discarded$3 = new jo((dd) null, 3, 180, 460, 160, 24, ad.field_o);
-        jo discarded$4 = new jo((dd) null, 8, 180, 460, 160, 24, e.field_d);
-        jo discarded$5 = new jo((dd) null, 9, 180, 460, 160, 24, v.field_f);
-        jo discarded$6 = new jo((dd) null, 24, 180, 460, 160, 24, og.field_J);
-        jo discarded$7 = new jo((dd) null, 10, 180, 460, 160, 24, bl.field_r);
-        jo discarded$8 = new jo((dd) null, 11, 180, 460, 160, 24, tl.field_L);
-        jo discarded$9 = new jo((dd) null, 12, 180, 460, 160, 24, ob.field_m);
-        lb discarded$10 = new lb((dd) null, 23, 180, 460, 160, 24, new int[]{9, 3});
-        jo discarded$11 = new jo((dd) null, 22, 180, 460, 160, 24, new int[]{2, 21, 59, 60, 54, 55, 56, 57, 58});
+        jo discarded$3 = new jo((Sprite) null, 3, 180, 460, 160, 24, ad.field_o);
+        jo discarded$4 = new jo((Sprite) null, 8, 180, 460, 160, 24, e.field_d);
+        jo discarded$5 = new jo((Sprite) null, 9, 180, 460, 160, 24, v.field_f);
+        jo discarded$6 = new jo((Sprite) null, 24, 180, 460, 160, 24, og.field_J);
+        jo discarded$7 = new jo((Sprite) null, 10, 180, 460, 160, 24, bl.field_r);
+        jo discarded$8 = new jo((Sprite) null, 11, 180, 460, 160, 24, tl.field_L);
+        jo discarded$9 = new jo((Sprite) null, 12, 180, 460, 160, 24, ob.field_m);
+        lb discarded$10 = new lb((Sprite) null, 23, 180, 460, 160, 24, new int[]{9, 3});
+        jo discarded$11 = new jo((Sprite) null, 22, 180, 460, 160, 24, new int[]{2, 21, 59, 60, 54, 55, 56, 57, 58});
         em discarded$12 = new em(16, 180, 460, 410, 24, new int[]{23, 8});
         tl discarded$13 = new tl(15, 180, 460, 410, 24, new int[]{23, 8});
         b discarded$14 = new b(13, 70, 460, 400, 24, new int[]{25, 8, 26});

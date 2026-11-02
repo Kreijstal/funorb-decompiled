@@ -6,11 +6,11 @@ final class lm extends tm {
     }
 
     final static void i(int param0) {
-        dd var1 = null;
-        dd var3 = null;
+        Sprite var1 = null;
+        Sprite var3 = null;
         int var4 = 0;
         try {
-          var1 = new dd(540, 140);
+          var1 = new Sprite(540, 140);
           int var2 = -31 / ((79 - param0) / 34);
           kj.a(62, var1);
           fb.a();

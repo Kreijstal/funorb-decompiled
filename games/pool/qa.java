@@ -98,7 +98,7 @@ final class qa extends IntrusiveNode {
 
     final static void a(boolean param0, String param1, int param2, String param3) {
         try {
-          qo.field_x = param1;
+          SpriteState.field_x = param1;
           qg.field_a = param3;
           wf.a(param0, gg.field_a, -126);
           int var4_int = -110 % ((param2 + 30) / 57);

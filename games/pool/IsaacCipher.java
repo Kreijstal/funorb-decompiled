@@ -6,13 +6,13 @@ final class IsaacCipher {
     private int field_i;
     private int field_c;
     static int field_e;
-    static jg field_l;
+    static PcmSample field_l;
     static int field_d;
     static String field_g;
     static int[] field_h;
     private int[] field_j;
     private int[] field_a;
-    static dd[] field_f;
+    static Sprite[] field_f;
     static int[] field_b;
     private int field_k;
 
