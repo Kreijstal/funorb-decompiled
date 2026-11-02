@@ -37,7 +37,7 @@ final class fh extends vo {
           return null;
         }
         if (!(ScreenParticle.field_o >= NetworkGameClient.field_B + jp.field_b)) {
-          return qj.field_s;
+          return StrongCacheReference.field_s;
         }
         return null;
     }
@@ -115,7 +115,7 @@ final class fh extends vo {
             return stackIn_12_0;
           }
           if (Vector2.a(var5, 26035)) {
-            String stackIn_16_0 = mh.field_j;
+            String stackIn_16_0 = OpenGlVolumeTexture.field_j;
             return stackIn_16_0;
           }
           if (this.b(param0, -1)) {

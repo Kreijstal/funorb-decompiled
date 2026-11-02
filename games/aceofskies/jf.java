@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jf implements ir {
-    static hj field_a;
+    static FullscreenFocusCanvas field_a;
     static String field_b;
 
     final static boolean a(int param0) {
@@ -31,10 +31,10 @@ final class jf implements ir {
           fd.field_b = dt.a(param1, 19501, ad.field_T, param2, tt.field_d);
           uh.upgradeSounds = nc.a(param1, -76, param2, DualLinkNode.field_k, ht.field_j);
           hp.field_i = nc.a(param1, -114, param2, DualLinkNode.field_g, rj.field_c);
-          mh.field_o = bj.a(param2, "", wg.field_c).a();
-          gg.field_a = bj.a(param2, "", rg.field_C).a();
-          kq.field_b = bj.a(param2, "", np.field_e).a();
-          bj.a(param2, "", un.field_q).a();
+          OpenGlVolumeTexture.field_o = SynthesizedSoundEffect.a(param2, "", wg.field_c).a();
+          gg.field_a = SynthesizedSoundEffect.a(param2, "", rg.field_C).a();
+          kq.field_b = SynthesizedSoundEffect.a(param2, "", np.field_e).a();
+          SynthesizedSoundEffect.a(param2, "", ArchiveNetworkClient.field_q).a();
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "jf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -91,7 +91,7 @@ final class jf implements ir {
             !ac.field_d.equals(param0.getParameter("session"))) {
             var5 = ac.field_d;
           }
-          java.net.URL stackIn_7_0 = vj.a(param1, (String) (var3), (String) (var5), 122, -1);
+          java.net.URL stackIn_7_0 = OpenGlShaderObject.a(param1, (String) (var3), (String) (var5), 122, -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,10 +123,10 @@ final class jf implements ir {
 
     final static boolean a(int param0, boolean param1, byte param2, int param3) {
         if (param1) {
-          if (js.field_c[param0] > js.field_c[param3]) {
+          if (DualLinkDequeIterator.field_c[param0] > DualLinkDequeIterator.field_c[param3]) {
             return true;
           }
-          if (js.field_c[param3] > js.field_c[param0]) {
+          if (DualLinkDequeIterator.field_c[param3] > DualLinkDequeIterator.field_c[param0]) {
             return false;
           }
           if (ai.field_a[param0] > ai.field_a[param3]) {
@@ -154,10 +154,10 @@ final class jf implements ir {
         if (ai.field_a[param3] > ai.field_a[param0]) {
           return false;
         }
-        if (js.field_c[param3] < js.field_c[param0]) {
+        if (DualLinkDequeIterator.field_c[param3] < DualLinkDequeIterator.field_c[param0]) {
           return true;
         }
-        if (js.field_c[param3] > js.field_c[param0]) {
+        if (DualLinkDequeIterator.field_c[param3] > DualLinkDequeIterator.field_c[param0]) {
           return false;
         }
         int var4Lifetime1 = dd.field_c[param3] + qd.field_p[param3] + hg.field_C[param3];

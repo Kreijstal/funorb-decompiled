@@ -37,9 +37,9 @@ final class dt {
             for (int var7 = 0; var9[var6].length > var7; var7++) {
               if (param2 != null &&
                 param2[var6]) {
-                var9[var6][var7] = t.a(param0, "", param4[var6][var7]).a();
+                var9[var6][var7] = VorbisSample.a(param0, "", param4[var6][var7]).a();
               } else {
-                var9[var6][var7] = bj.a(param3, "", param4[var6][var7]).a();
+                var9[var6][var7] = SynthesizedSoundEffect.a(param3, "", param4[var6][var7]).a();
               }
             }
             var6++;
@@ -90,7 +90,7 @@ final class dt {
     final static void b(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          int[] var5 = hs.field_a;
+          int[] var5 = IterableDualLinkDeque.field_a;
           int[] var1 = var5;
           int var2 = 0;
           if (param0 != 8) {

@@ -3,7 +3,7 @@
  */
 final class ms {
     static String field_a;
-    private ti field_b;
+    private HardwareIndexBuffer field_b;
     static Sprite field_c;
     static int field_d;
 
@@ -11,7 +11,7 @@ final class ms {
         if (this.field_b != null) {
           this.field_b.a(4665);
           if (param0 != 29) {
-            this.field_b = (ti) null;
+            this.field_b = (HardwareIndexBuffer) null;
             return;
           }
           return;
@@ -19,7 +19,7 @@ final class ms {
         if (param0 == 29) {
           return;
         }
-        this.field_b = (ti) null;
+        this.field_b = (HardwareIndexBuffer) null;
     }
 
     public static void a(byte param0) {

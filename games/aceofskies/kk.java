@@ -46,44 +46,44 @@ final class kk extends bm implements mc {
         }
     }
 
-    final static int a(la param0, byte param1) {
+    final static int a(BufferElementType param0, byte param1) {
         String stackIn_31_2 = null;
         try {
-          if (param0 == la.field_a) {
+          if (param0 == BufferElementType.field_a) {
             int stackIn_2_0 = 5120;
             return stackIn_2_0;
           }
-          if (param0 == la.field_j) {
+          if (param0 == BufferElementType.field_j) {
             int stackIn_24_0 = 5122;
             return stackIn_24_0;
           }
-          if (param0 == la.field_e) {
+          if (param0 == BufferElementType.field_e) {
             int stackIn_6_0 = 5124;
             return stackIn_6_0;
           }
-          if (la.field_h == param0) {
+          if (BufferElementType.field_h == param0) {
             int stackIn_9_0 = 5121;
             return stackIn_9_0;
           }
-          if (param0 == la.field_b) {
+          if (param0 == BufferElementType.field_b) {
             int stackIn_12_0 = 5123;
             return stackIn_12_0;
           }
-          if (la.field_f == param0) {
+          if (BufferElementType.field_f == param0) {
             int stackIn_15_0 = 5125;
             return stackIn_15_0;
           }
-          if (param0 == la.field_d) {
+          if (param0 == BufferElementType.field_d) {
             int stackIn_22_0 = 5131;
             return stackIn_22_0;
           }
-          if (param0 == la.field_i) {
+          if (param0 == BufferElementType.field_i) {
             int stackIn_20_0 = 5126;
             return stackIn_20_0;
           }
           if (param1 >= -91) {
-            la var3 = (la) null;
-            kk.a((la) null, (byte) -56);
+            BufferElementType var3 = (BufferElementType) null;
+            kk.a((BufferElementType) null, (byte) -56);
           }
           throw new IllegalArgumentException("");
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ final class kk extends bm implements mc {
           return null;
         }
         if (this.field_k != null) {
-          gq.a(true, this.field_q + (-this.field_M + ic.field_b), cf.field_g);
+          WeightedObjectCache.a(true, this.field_q + (-this.field_M + ic.field_b), cf.field_g);
           return this.field_k;
         }
         return null;

@@ -1,0 +1,56 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class OpenGlVolumeTexture extends OpenGlTexture implements HardwareVolumeTexture {
+    static int[] field_l;
+    static String field_n;
+    static String field_j;
+    private int field_m;
+    private int field_i;
+    private int field_k;
+    static PcmSample field_o;
+
+    public final void a(byte param0) {
+        super.a(param0);
+    }
+
+    OpenGlVolumeTexture(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, int param4, byte[] param5) {
+        super(param0, 32879, param1, BufferElementType.field_h, param3 * param2 * param4, false);
+        try {
+          this.field_m = param4;
+          this.field_i = param3;
+          this.field_k = param2;
+          this.field_g.a((HardwareTexture) (this), -9135);
+          jaggl.OpenGL.glPixelStorei(3317, 1);
+          jaggl.OpenGL.glTexImage3Dub(this.field_e, 0, this.a(false), this.field_k, this.field_i, this.field_m, 0, WeightedObjectCache.a(this.field_h, -29824), 5121, param5, 0);
+          jaggl.OpenGL.glPixelStorei(3317, 4);
+        } catch (RuntimeException runtimeException) {
+          throw pn.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final void a(ke param0, int param1) {
+        try {
+          if (param1 != -31662) {
+            this.field_m = -6;
+          }
+          super.a(param0, param1 ^ 0);
+        } catch (RuntimeException runtimeException) {
+          throw pn.a((Throwable) ((Object) runtimeException), "mh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public static void a(int param0) {
+        field_o = null;
+        field_l = null;
+        field_n = null;
+        field_j = null;
+        int var1 = 99 / ((param0 - 85) / 38);
+    }
+
+    static {
+        field_n = "Play free version";
+        field_j = "This password contains repeated characters, and would be easy to guess";
+        field_l = new int[2];
+    }
+}

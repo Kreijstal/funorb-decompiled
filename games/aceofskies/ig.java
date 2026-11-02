@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ig extends RendererBitmapFont {
-    private tl field_h;
+    private HardwareVertexBuffer field_h;
     private boolean field_g;
-    private bf field_f;
-    private qi field_e;
+    private HardwareRenderer field_f;
+    private HardwareTexture2D field_e;
 
     final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
     }
 
-    ig(bf param0, BitmapFontMetrics param1, SpriteData[] param2, boolean param3) {
+    ig(HardwareRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int stackIn_22_2 = 0;
         int var8;
@@ -121,7 +121,7 @@ final class ig extends RendererBitmapFont {
               }
             }
           }
-          if (!param0.a(la.field_h, 0, ro.field_o)) {
+          if (!param0.a(BufferElementType.field_h, 0, OpenGlIndexBuffer.field_o)) {
             int[] var36 = new int[var35.length];
             int[] var28 = var36;
             int[] var8_ref_int__ = var28;
@@ -130,7 +130,7 @@ final class ig extends RendererBitmapFont {
             }
             this.field_e = param0.a(var36, var6Lifetime1, 0, false, var6Lifetime1);
           } else {
-            this.field_e = param0.a(var35, var6Lifetime1, true, var6Lifetime1, ro.field_o, false);
+            this.field_e = param0.a(var35, var6Lifetime1, true, var6Lifetime1, OpenGlIndexBuffer.field_o, false);
           }
           this.field_g = true;
         }
@@ -221,7 +221,7 @@ final class ig extends RendererBitmapFont {
           this.field_f.a(bd.field_C, true, bd.field_C);
         } else {
           this.field_f.a(bd.field_C, true, ru.field_a);
-          this.field_f.a((byte) 122, 0, bs.field_a);
+          this.field_f.a((byte) 122, 0, GameKeyHandler.field_a);
           this.field_f.a((byte) -74, color);
         }
         ec var6 = this.field_f.y(-108);
@@ -229,7 +229,7 @@ final class ig extends RendererBitmapFont {
         this.field_f.q((byte) 57);
         this.field_f.a(1, this.field_h, 0);
         this.field_f.a(this.field_f.field_Eb, (byte) 75);
-        this.field_f.a(true, qp.field_j, 2, glyph * 4);
+        this.field_f.a(true, OpenGlCubeTexture.field_j, 2, glyph * 4);
         if (this.field_g ||
           shadowPass) {
           this.field_f.a((byte) 118, 0, CipherPacketBuffer.field_p);

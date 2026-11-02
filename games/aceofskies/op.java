@@ -21,7 +21,7 @@ final class op {
             CharSequence var8 = (CharSequence) ((Object) param2);
             var4_long = AceOfSkies.a(var8, -47);
           }
-          fn stackIn_6_0 = wb.a(param3, (String) (var6), param0, var4_long, true);
+          fn stackIn_6_0 = WhirlpoolHasher.a(param3, (String) (var6), param0, var4_long, true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,12 +54,12 @@ final class op {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        t.a(param1.a("headers.packvorbis", (byte) -71, ""));
+        VorbisSample.a(param1.a("headers.packvorbis", (byte) -71, ""));
         if (param0 != 20786) {
           return;
         }
         try {
-          t var2 = t.a(param1, "jagex logo2.packvorbis", "");
+          VorbisSample var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "op.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

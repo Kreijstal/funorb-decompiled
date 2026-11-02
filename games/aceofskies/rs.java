@@ -90,7 +90,7 @@ final class rs extends ab implements ue, dn {
           if (this.field_z != param1) {
             return;
           }
-          fg.b(true);
+          CachedArchiveProvider.b(true);
           this.field_y.h((byte) 119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

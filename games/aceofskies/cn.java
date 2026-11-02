@@ -56,8 +56,8 @@ final class cn extends mi {
         if (param0 < -27) {
           return;
         }
-        rk var2 = (rk) null;
-        cn.a((rk) null, (byte) 13);
+        SystemTaskService var2 = (SystemTaskService) null;
+        cn.a((SystemTaskService) null, (byte) 13);
     }
 
     final static byte[] a(File param0, int param1, boolean param2) {
@@ -67,8 +67,8 @@ final class cn extends mi {
           try {
             try {
               if (param2) {
-                rk var4 = (rk) null;
-                cn.a((rk) null, (byte) -127);
+                SystemTaskService var4 = (SystemTaskService) null;
+                cn.a((SystemTaskService) null, (byte) -127);
               }
               byte[] var5 = new byte[param1];
               byte[] var3 = var5;
@@ -112,7 +112,7 @@ final class cn extends mi {
         throw new Error();
     }
 
-    final static boolean a(rk param0, byte param1) {
+    final static boolean a(SystemTaskService param0, byte param1) {
         String stackIn_8_2 = null;
         try {
           if (param1 == 75) {

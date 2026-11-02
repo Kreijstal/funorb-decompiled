@@ -23,7 +23,7 @@ final class nj extends aa {
         if (param0 != -8129) {
           return;
         }
-        ag.field_n = ka.b((byte) 116);
+        ArchiveRequest.field_n = ka.b((byte) 116);
         vn.field_f = new lt();
         hg.a(true, true, true);
     }

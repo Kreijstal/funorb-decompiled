@@ -6,7 +6,7 @@ final class gt extends DualLinkNode {
     private long field_p;
     int field_n;
     static String field_r;
-    private wl field_q;
+    private OpenGlRenderer field_q;
 
     protected final void finalize() throws Throwable {
         this.c((byte) -95);
@@ -39,7 +39,7 @@ final class gt extends DualLinkNode {
           if (!tq.c(true)) {
             throw new RuntimeException("");
           }
-          if (!ei.a("jaggl", (byte) -16)) {
+          if (!GzipInflater.a("jaggl", (byte) -16)) {
             throw new RuntimeException("");
           }
           if (param0 > -25) {
@@ -50,9 +50,9 @@ final class gt extends DualLinkNode {
           if (0L == var6) {
             throw new RuntimeException("");
           }
-          jc var8 = new jc(var9, param2, var6, param1, param3, param4);
+          HardwareOpenGlRenderer var8 = new HardwareOpenGlRenderer(var9, param2, var6, param1, param3, param4);
           var8.f((byte) 101);
-          jc stackIn_10_0 = var8;
+          HardwareOpenGlRenderer stackIn_10_0 = var8;
           return (GraphicsRenderer) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,14 +137,14 @@ final class gt extends DualLinkNode {
           }
           return;
         }
-        this.field_q = (wl) null;
+        this.field_q = (OpenGlRenderer) null;
         if (this.field_p > 0L) {
           this.field_q.field_kc.releasePbuffer(this.field_p);
           this.field_p = 0L;
         }
     }
 
-    gt(wl param0, int param1, int param2) {
+    gt(OpenGlRenderer param0, int param1, int param2) {
         try {
           this.field_n = param2 * param1;
           this.field_q = param0;

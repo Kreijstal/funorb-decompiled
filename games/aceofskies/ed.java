@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed extends cq implements qi {
+final class ed extends OpenGlTexture implements HardwareTexture2D {
     private int field_j;
     private int field_k;
     static int rendererJustificationRemainderQ8;
@@ -10,7 +10,7 @@ final class ed extends cq implements qi {
         String stackIn_6_2 = null;
         try {
           int var9_int = -48 / ((-58 - param0) / 45);
-          this.field_g.a((jj) (this), -9135);
+          this.field_g.a((HardwareTexture) (this), -9135);
           jaggl.OpenGL.glPixelStorei(3314, param3);
           jaggl.OpenGL.glTexSubImage2Di(this.field_e, 0, param2, param6, param4, param5, 32993, this.field_g.field_Bc, param7, param1);
           jaggl.OpenGL.glPixelStorei(3314, 0);
@@ -33,11 +33,11 @@ final class ed extends cq implements qi {
         String stackIn_6_2 = null;
         String stackIn_10_2 = null;
         try {
-          this.field_g.a((jj) (this), -9135);
+          this.field_g.a((HardwareTexture) (this), -9135);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           int var10_int = 49 % ((param4 - 67) / 37);
           jaggl.OpenGL.glPixelStorei(3314, param8);
-          jaggl.OpenGL.glTexSubImage2Dub(this.field_e, 0, param7, param0, param1, param3, gq.a(param6, -29824), 5121, param5, param2);
+          jaggl.OpenGL.glTexSubImage2Dub(this.field_e, 0, param7, param0, param1, param3, WeightedObjectCache.a(param6, -29824), 5121, param5, param2);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
           return;
@@ -65,10 +65,10 @@ final class ed extends cq implements qi {
         String stackIn_6_2 = null;
         String stackIn_10_2 = null;
         try {
-          this.field_g.a((jj) (this), -9135);
+          this.field_g.a((HardwareTexture) (this), -9135);
           int var10_int = 25 % ((param1 + 57) / 57);
           jaggl.OpenGL.glPixelStorei(3314, param5);
-          jaggl.OpenGL.glTexSubImage2Df(this.field_e, 0, param3, param2, param8, param6, gq.a(param7, -29824), 5121, param0, param4);
+          jaggl.OpenGL.glTexSubImage2Df(this.field_e, 0, param3, param2, param8, param6, WeightedObjectCache.a(param7, -29824), 5121, param0, param4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,21 +91,21 @@ final class ed extends cq implements qi {
         }
     }
 
-    ed(jc param0, hd param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
-        super(param0, 3553, param1, la.field_h, param2 * param3, param4);
+    ed(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+        super(param0, 3553, param1, BufferElementType.field_h, param2 * param3, param4);
         String stackIn_17_2 = null;
         String stackIn_21_2 = null;
         String stackIn_25_2 = null;
         try {
           this.field_j = param2;
           this.field_k = param3;
-          this.field_g.a((jj) (this), -9135);
+          this.field_g.a((HardwareTexture) (this), -9135);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           if (!param4 ||
             param7 != 0 ||
             param6 != 0) {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5121, param5, param6);
+            jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param2, param3, 0, WeightedObjectCache.a(this.field_h, -29824), 5121, param5, param6);
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
           if (param4 &&
@@ -163,7 +163,7 @@ final class ed extends cq implements qi {
           if (param2 != -127) {
             this.field_k = 119;
           }
-          this.field_g.a((jj) (this), -9135);
+          this.field_g.a((HardwareTexture) (this), -9135);
           int stackIn_6_0 = this.field_e;
           int stackIn_6_1 = 10242;
           stackIn_7_2 = (!param1) ? (33071) : (10497);
@@ -180,20 +180,20 @@ final class ed extends cq implements qi {
         }
     }
 
-    ed(jc param0, hd param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
-        super(param0, 3553, param1, la.field_i, param3 * param2, param4);
+    ed(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
+        super(param0, 3553, param1, BufferElementType.field_i, param3 * param2, param4);
         String stackIn_16_2 = null;
         String stackIn_20_2 = null;
         String stackIn_24_2 = null;
         try {
           this.field_k = param3;
           this.field_j = param2;
-          this.field_g.a((jj) (this), -9135);
+          this.field_g.a((HardwareTexture) (this), -9135);
           if (param4 ||
             param7 != 0 ||
             0 != param6) {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5126, param5, 4 * param6);
+            jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.a(false), param2, param3, 0, WeightedObjectCache.a(this.field_h, -29824), 5126, param5, 4 * param6);
             jaggl.OpenGL.glPixelStorei(3314, 0);
             if (!AceOfSkies.obfuscationControl) {
               return;
@@ -227,7 +227,7 @@ final class ed extends cq implements qi {
         }
     }
 
-    ed(jc param0, hd param1, la param2, int param3, int param4) {
+    ed(HardwareOpenGlRenderer param0, hd param1, BufferElementType param2, int param3, int param4) {
         super(param0, 3553, param1, param2, param3 * param4, false);
         String stackIn_7_2 = null;
         String stackIn_11_2 = null;
@@ -235,8 +235,8 @@ final class ed extends cq implements qi {
         try {
           this.field_k = param4;
           this.field_j = param3;
-          this.field_g.a((jj) (this), -9135);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param3, param4, 0, gq.a(this.field_h, -29824), kk.a(this.field_c, (byte) -96), (byte[]) null, 0);
+          this.field_g.a((HardwareTexture) (this), -9135);
+          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param3, param4, 0, WeightedObjectCache.a(this.field_h, -29824), kk.a(this.field_c, (byte) -96), (byte[]) null, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -353,12 +353,12 @@ final class ed extends cq implements qi {
             boolean stackIn_13_0 = stackOut_12_0;
             if (!var19) {
               if (stackIn_13_0) {
-                int var12 = qj.field_t[var9];
-                int var13 = ro.field_t[var9];
-                var14 = -var12 + qj.field_t[var10];
-                var15 = qj.field_t[var11] - var12;
-                var16 = -var13 + ro.field_t[var10];
-                var17 = ro.field_t[var11] - var13;
+                int var12 = StrongCacheReference.field_t[var9];
+                int var13 = OpenGlIndexBuffer.field_t[var9];
+                var14 = -var12 + StrongCacheReference.field_t[var10];
+                var15 = StrongCacheReference.field_t[var11] - var12;
+                var16 = -var13 + OpenGlIndexBuffer.field_t[var10];
+                var17 = OpenGlIndexBuffer.field_t[var11] - var13;
               }
               if (!stackIn_13_0 ||
                 !(-(var16 * var15) + var14 * var17 >= 0)) {
@@ -394,7 +394,7 @@ final class ed extends cq implements qi {
                         if (0 < param1.field_f &&
                           null != param1.field_x) {
                           byte dupTemp$0 = param1.field_x[var8];
-                          hs.field_a[dupTemp$0] = hs.field_a[dupTemp$0] + 1;
+                          IterableDualLinkDeque.field_a[dupTemp$0] = IterableDualLinkDeque.field_a[dupTemp$0] + 1;
                         }
                         AircraftDefinition.field_k = AircraftDefinition.field_k + 1;
                         break;
@@ -415,9 +415,9 @@ final class ed extends cq implements qi {
             null != param1.field_x) {
             int var8Lifetime1 = 0;
             int var9Lifetime1 = 0;
-            while (!(hs.field_a.length <= var9Lifetime1)) {
-              int var10Lifetime1 = hs.field_a[var9Lifetime1];
-              hs.field_a[var9Lifetime1] = var8Lifetime1;
+            while (!(IterableDualLinkDeque.field_a.length <= var9Lifetime1)) {
+              int var10Lifetime1 = IterableDualLinkDeque.field_a[var9Lifetime1];
+              IterableDualLinkDeque.field_a[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19) {
@@ -454,14 +454,14 @@ final class ed extends cq implements qi {
         }
     }
 
-    ed(jc param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
-        super(param0, 3553, lc.field_g, la.field_h, param1 * param2, param3);
+    ed(HardwareOpenGlRenderer param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
+        super(param0, 3553, IterableNodeHashTable.field_g, BufferElementType.field_h, param1 * param2, param3);
         String stackIn_16_2 = null;
         String stackIn_20_2 = null;
         try {
           this.field_j = param1;
           this.field_k = param2;
-          this.field_g.a((jj) (this), -9135);
+          this.field_g.a((HardwareTexture) (this), -9135);
           if (!param3 ||
             0 != param6 ||
             param5 != 0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pt {
-    static rk field_b;
+    static SystemTaskService field_b;
     static int field_a;
 
     public static void a(int param0) {

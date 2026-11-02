@@ -43,7 +43,7 @@ final class pq extends vo {
             return stackIn_2_0;
           }
           if (param1 == 72) {
-            String stackIn_7_0 = gh.field_o;
+            String stackIn_7_0 = BufferedRandomAccessFile.field_o;
             return stackIn_7_0;
           }
           String stackIn_5_0 = (String) null;

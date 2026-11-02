@@ -24,7 +24,7 @@ final class qe {
         field_e = null;
     }
 
-    qe(wl param0) {
+    qe(OpenGlRenderer param0) {
         String stackIn_18_2 = null;
         this.field_c = null;
         this.field_b = null;
@@ -37,7 +37,7 @@ final class qe {
           if (!this.field_d) {
             this.field_h = new nr[16];
             for (int var2_int = 0; 16 > var2_int; var2_int++) {
-              byte[] var23 = cs.a(false, var2_int * 32768, 32768, wl.field_Kb);
+              byte[] var23 = cs.a(false, var2_int * 32768, 32768, OpenGlRenderer.field_Kb);
               this.field_h[var2_int] = new nr(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
             }
             this.field_c = new nr[16];
@@ -47,7 +47,7 @@ final class qe {
             }
             return;
           }
-          byte[] var20 = PacketBuffer.a(false, wl.field_Kb, 50);
+          byte[] var20 = PacketBuffer.a(false, OpenGlRenderer.field_Kb, 50);
           this.field_j = new sr(param0, 6410, 128, 128, 16, var20, 6410);
           byte[] var21 = PacketBuffer.a(false, mq.field_e, -77);
           this.field_g = new sr(param0, 6410, 128, 128, 16, var21, 6410);

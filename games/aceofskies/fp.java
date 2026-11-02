@@ -21,10 +21,10 @@ final class fp extends IntrusiveNode {
           co.field_e = dupTemp$1;
           ff.field_b = dupTemp$1;
           if (MenuInputState.field_b.field_a != 1) {
-            ca.field_f = pj.field_f;
+            ca.field_f = RasterBuffer.field_f;
           } else {
             try {
-              ft.field_l = new vf((java.net.Socket) (MenuInputState.field_b.field_f), ii.field_j);
+              MidiNote.field_l = new BufferedSocket((java.net.Socket) (MenuInputState.field_b.field_f), ii.field_j);
               CipherPacketBuffer var4 = IntKeyLookup.incomingPacket;
               q.outgoingPacket.position = 0;
               var4.position = 0;
@@ -38,7 +38,7 @@ final class fp extends IntrusiveNode {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;
               IOException var3 = (IOException) (Object) decompiledCaughtException;
-              ca.field_f = pj.field_f;
+              ca.field_f = RasterBuffer.field_f;
               MenuInputState.field_b = null;
               return true;
             }

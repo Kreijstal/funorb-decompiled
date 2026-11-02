@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lm {
-    private tl field_d;
+    private HardwareVertexBuffer field_d;
     static byte[][][] field_c;
-    private tl field_a;
+    private HardwareVertexBuffer field_a;
     static String field_b;
-    private ti field_e;
+    private HardwareIndexBuffer field_e;
 
-    final void a(bf param0, int param1) {
+    final void a(HardwareRenderer param0, int param1) {
         try {
           this.field_d.a(24, -116, 786336);
           if (param1 != 0) {
-            this.field_e = (ti) null;
+            this.field_e = (HardwareIndexBuffer) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "lm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -101,7 +101,7 @@ final class lm {
         }
     }
 
-    lm(bf param0) {
+    lm(HardwareRenderer param0) {
         int var4_int = 0;
         int var5 = 0;
         String stackIn_24_2 = null;

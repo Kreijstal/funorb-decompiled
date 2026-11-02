@@ -76,8 +76,8 @@ final class de implements ir {
           while (ek.a((byte) -127)) {
             vn.field_f.a(param0 - 42, fr.field_e, bk.lastKeyCode);
           }
-          if (-1 != dh.field_c) {
-            int var1_int = dh.field_c;
+          if (-1 != InstrumentEnvelope.field_c) {
+            int var1_int = InstrumentEnvelope.field_c;
             oi.a(-1, param0 + 20573);
             int stackIn_9_0 = var1_int;
             return stackIn_9_0;

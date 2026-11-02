@@ -22,7 +22,7 @@ final class fo {
         ht.field_g = false;
         ScreenParticle.field_o = param0;
         we.field_c = -1;
-        qj.field_s = null;
+        StrongCacheReference.field_s = null;
     }
 
     final void a(byte param0, int param1, int param2, fo param3, int param4, RenderSprite param5, int param6) {

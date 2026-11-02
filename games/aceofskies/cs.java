@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cs {
-    private wl field_c;
-    static rk field_d;
+    private OpenGlRenderer field_c;
+    static SystemTaskService field_d;
     static int highscoreMode;
     private in field_b;
 
@@ -96,7 +96,7 @@ final class cs {
         aq var3 = kg.a("uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n", 35632, true, this.field_c);
         aq var2 = var3;
         if (var2 != null) {
-          this.field_b = br.a(this.field_c, new aq[]{var3}, (byte) -122);
+          this.field_b = ImageProducerCanvasImageBuffer.a(this.field_c, new aq[]{var3}, (byte) -122);
           return this.field_b != null ? true : false;
         }
         return this.field_b != null ? true : false;
@@ -116,10 +116,10 @@ final class cs {
             byte[] stackIn_8_0 = Bullet.a(var4, param2, (byte) 20, param1);
             return stackIn_8_0;
           }
-          if (!(param3 instanceof af)) {
+          if (!(param3 instanceof ByteStorage)) {
             throw new IllegalArgumentException();
           }
-          af var5 = (af) (param3);
+          ByteStorage var5 = (ByteStorage) (param3);
           byte[] stackIn_11_0 = var5.a(-19920, param1, param2);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,11 +179,11 @@ final class cs {
     public static void a(boolean param0) {
         field_d = null;
         if (!param0) {
-          field_d = (rk) null;
+          field_d = (SystemTaskService) null;
         }
     }
 
-    cs(wl param0) {
+    cs(OpenGlRenderer param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

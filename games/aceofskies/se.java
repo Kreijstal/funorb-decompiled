@@ -36,14 +36,14 @@ final class se {
             if (var3_int) {
               var1.readNullTerminatedText(-17883);
             }
-            cl var5 = fg.a(var4_ref_String, 17680);
+            cl var5 = CachedArchiveProvider.a(var4_ref_String, 17680);
             String var6 = var1.readNullTerminatedText(-17883);
             String var7 = vu.normalizePlayerName(125, (CharSequence) ((Object) var4_ref_String));
             if (var7 == null) {
               var7 = var4_ref_String;
             }
             if (null == var5) {
-              var5 = fg.a(var6, 17680);
+              var5 = CachedArchiveProvider.a(var6, 17680);
               if (null != var5) {
                 gi.field_g.a(var5, (long)var7.hashCode(), (byte) 56);
               }
@@ -84,8 +84,8 @@ final class se {
             lg.a(var4, 2);
             return;
           }
-          if (null == pj.field_a) {
-            pj.field_a = new es(128);
+          if (null == RasterBuffer.field_a) {
+            RasterBuffer.field_a = new es(128);
             wo.field_o = 0;
           }
           Object var3Lifetime1 = var1.readNullTerminatedText(-17883);
@@ -98,12 +98,12 @@ final class se {
           if (null == var6_ref) {
             var6_ref = kg.a(var5_ref, (byte) 61);
             if (var6_ref != null) {
-              pj.field_a.a(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
+              RasterBuffer.field_a.a(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
             }
           }
           if (var6_ref == null) {
             var6_ref = new cl();
-            pj.field_a.a(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
+            RasterBuffer.field_a.a(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
             int fieldTemp$1 = wo.field_o;
             wo.field_o = wo.field_o + 1;
             var6_ref.field_cb = fieldTemp$1;
@@ -138,7 +138,7 @@ final class se {
             stackIn_67_0 = -20;
             break;
           }
-          ml.$cfr$intArgs$a$9910ad98b3f5(stackIn_67_0, var7_ref, var6_ref);
+          InstrumentPatch.$cfr$intArgs$a$9910ad98b3f5(stackIn_67_0, var7_ref, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,9 +6,9 @@ final class ii extends vo {
     static RenderSprite[][] gaugeSprites;
     static String[] field_e;
     private uu field_h;
-    static dk field_m;
+    static DiskCacheWorker field_m;
     private boolean field_i;
-    static rk field_j;
+    static SystemTaskService field_j;
     static String field_l;
     static String field_g;
 
@@ -49,11 +49,11 @@ final class ii extends vo {
             int stackIn_3_0 = 34167;
             return stackIn_3_0;
           }
-          if (un.field_i == param1) {
+          if (ArchiveNetworkClient.field_i == param1) {
             int stackIn_6_0 = 34168;
             return stackIn_6_0;
           }
-          if (param1 == bs.field_a) {
+          if (param1 == GameKeyHandler.field_a) {
             int stackIn_10_0 = 34166;
             return stackIn_10_0;
           }
@@ -86,10 +86,10 @@ final class ii extends vo {
             this.field_i = true;
           }
           if (this.a(param0, 8192) != bt.field_a) {
-            String stackIn_9_0 = gh.field_o;
+            String stackIn_9_0 = BufferedRandomAccessFile.field_o;
             return stackIn_9_0;
           }
-          String stackIn_7_0 = dk.field_i;
+          String stackIn_7_0 = DiskCacheWorker.field_i;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,7 +114,7 @@ final class ii extends vo {
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_f)) {
-            id var3 = rq.a(-111, param0);
+            id var3 = MouseInputHandler.a(-111, param0);
             if (!var3.a(false)) {
               pt stackIn_6_0 = ce.field_t;
               return stackIn_6_0;

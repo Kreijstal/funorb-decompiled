@@ -5,12 +5,12 @@ final class du extends PacketBuffer {
     static as field_l;
     static String field_n;
     static String[] field_o;
-    static vf field_m;
+    static BufferedSocket field_m;
     static String[] menuActionLabels;
 
     final static void a(int param0, int param1, PcmStreamMixer param2, ResourceArchive param3) {
         try {
-          la.field_k = bl.a(113) * param0 / 1000;
+          BufferElementType.field_k = SectorCacheStore.a(113) * param0 / 1000;
           op.a(20786, param3);
           hn.a(param3, true);
           tr.a(param3, (byte) -88);
@@ -19,7 +19,7 @@ final class du extends PacketBuffer {
             field_l = (as) null;
           }
           aq.b(540);
-          it.field_c = 0 - la.field_k;
+          it.field_c = 0 - BufferElementType.field_k;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "du.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -10,7 +10,7 @@ class qd extends gg {
     private int field_o;
     private int[] field_k;
 
-    final static pj a(java.awt.Component param0, boolean param1, int param2, int param3) {
+    final static RasterBuffer a(java.awt.Component param0, boolean param1, int param2, int param3) {
         try {
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
@@ -19,18 +19,18 @@ class qd extends gg {
               field_p = (int[]) null;
             }
             try {
-              Class var4 = Class.forName("lf");
-              pj var5 = (pj) (var4.newInstance());
+              Class var4 = Class.forName("BufferedImageRasterBuffer");
+              RasterBuffer var5 = (RasterBuffer) (var4.newInstance());
               var5.a((byte) -61, param2, param3, param0);
-              pj stackIn_3_0 = var5;
+              RasterBuffer stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var4_ref = decompiledCaughtException;
-              dp var5_ref = new dp();
-              ((pj) ((Object) var5_ref)).a((byte) -58, param2, param3, param0);
-              dp stackIn_5_0 = var5_ref;
-              return (pj) ((Object) stackIn_5_0);
+              ImageProducerRasterBuffer var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a((byte) -58, param2, param3, param0);
+              ImageProducerRasterBuffer stackIn_5_0 = var5_ref;
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

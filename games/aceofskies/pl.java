@@ -69,7 +69,7 @@ final class pl {
           }
           HighscoreQuery query = (HighscoreQuery) (nh.pendingHighscoreQueries.first(268435455));
           while (query != null) {
-            ag.writeHighscoreQuery(opcode, 5, query);
+            ArchiveRequest.writeHighscoreQuery(opcode, 5, query);
             query = (HighscoreQuery) (nh.pendingHighscoreQueries.next((byte) 103));
           }
           return;

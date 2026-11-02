@@ -15,7 +15,7 @@ final class AircraftDefinition {
     static long field_j;
 
     final PcmSample getEngineSample(byte obfuscationGuard) {
-        if (gh.playerDefinition == this) {
+        if (BufferedRandomAccessFile.playerDefinition == this) {
           return lj.aircraftEngineSamples[0];
         }
         if (this == kk.field_N) {
@@ -37,7 +37,7 @@ final class AircraftDefinition {
         if (ju.field_k == this) {
           return lj.aircraftEngineSamples[5];
         }
-        if (this != ro.field_u) {
+        if (this != OpenGlIndexBuffer.field_u) {
           throw new RuntimeException();
         }
         return lj.aircraftEngineSamples[6];
@@ -51,7 +51,7 @@ final class AircraftDefinition {
     }
 
     final RenderSprite[] getSprites(int obfuscationGuard) {
-        if (gh.playerDefinition == this) {
+        if (BufferedRandomAccessFile.playerDefinition == this) {
           return hr.aircraftSprites[0];
         }
         if (this == kk.field_N) {
@@ -74,7 +74,7 @@ final class AircraftDefinition {
           if (ju.field_k == this) {
             return hr.aircraftSprites[5];
           }
-          if (this == ro.field_u) {
+          if (this == OpenGlIndexBuffer.field_u) {
             return hr.aircraftSprites[6];
           }
           throw new RuntimeException();
@@ -91,7 +91,7 @@ final class AircraftDefinition {
         if (ju.field_k == this) {
           return hr.aircraftSprites[5];
         }
-        if (this == ro.field_u) {
+        if (this == OpenGlIndexBuffer.field_u) {
           return hr.aircraftSprites[6];
         }
         throw new RuntimeException();

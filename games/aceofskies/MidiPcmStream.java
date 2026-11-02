@@ -5,7 +5,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_r;
     private int[] field_A;
     static int[] field_i;
-    private ft[][] field_E;
+    private MidiNote[][] field_E;
     private int[] field_F;
     private int field_C;
     private int[] field_w;
@@ -18,7 +18,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_D;
     int[] field_G;
     private IntrusiveNodeHashTable field_n;
-    private ft[][] field_K;
+    private MidiNote[][] field_K;
     private int[] field_I;
     private int[] field_s;
     private int[] field_N;
@@ -44,7 +44,7 @@ final class MidiPcmStream extends PcmStream {
         boolean var8 = (AceOfSkies.obfuscationControl);
         try {
           if (this.field_M.c()) {
-            int var4_int = this.field_M.field_e * this.field_C / tk.field_f;
+            int var4_int = this.field_M.field_e * this.field_C / AudioOutput.field_f;
             while (true) {
               long var5 = (long)param2 * (long)var4_int + this.field_j;
               if (0L <= this.field_u - var5) {
@@ -87,7 +87,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final void a(ft param0, boolean param1, boolean param2) {
+    final void a(MidiNote param0, boolean param1, boolean param2) {
         int var5 = 0;
         String stackIn_14_2 = null;
         try {
@@ -179,7 +179,7 @@ final class MidiPcmStream extends PcmStream {
     private final void a(boolean param0, int param1) {
         int stackIn_10_0 = 0;
         boolean var4 = (AceOfSkies.obfuscationControl);
-        ft var3 = (ft) (this.field_L.field_k.first(268435455));
+        MidiNote var3 = (MidiNote) (this.field_L.field_k.first(268435455));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
           stackIn_10_0 = param1;
@@ -190,7 +190,7 @@ final class MidiPcmStream extends PcmStream {
               this.field_E[var3.field_m][var3.field_n] = null;
               var3.field_p = 0;
             }
-            var3 = (ft) (this.field_L.field_k.next((byte) 103));
+            var3 = (MidiNote) (this.field_L.field_k.next((byte) 103));
             continue;
           }
           break;
@@ -210,7 +210,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void a(int param0, int param1, int param2, int param3) {
         boolean var7 = (AceOfSkies.obfuscationControl);
-        ft var8 = this.field_E[param3][param1];
+        MidiNote var8 = this.field_E[param3][param1];
         if (var8 == null) {
           return;
         }
@@ -221,7 +221,7 @@ final class MidiPcmStream extends PcmStream {
           decompiledFrameRemainder0 = ((var7));
         }
         if (decompiledFrameRemainder0) {
-          ft var6 = (ft) (this.field_L.field_k.first(268435455));
+          MidiNote var6 = (MidiNote) (this.field_L.field_k.first(268435455));
           while (var6 != null) {
             if (var7) {
               break;
@@ -231,7 +231,7 @@ final class MidiPcmStream extends PcmStream {
               var8 != var6) {
               var8.field_p = 0;
             } else {
-              var6 = (ft) (this.field_L.field_k.next((byte) 103));
+              var6 = (MidiNote) (this.field_L.field_k.next((byte) 103));
               continue;
             }
             break;
@@ -245,10 +245,10 @@ final class MidiPcmStream extends PcmStream {
         if (param0 != 0) {
           return;
         }
-        ml var4 = (ml) (this.field_n.firstForIteration(false));
+        InstrumentPatch var4 = (InstrumentPatch) (this.field_n.firstForIteration(false));
         while (var4 != null) {
           var4.a(true);
-          var4 = (ml) (this.field_n.nextForIteration(0));
+          var4 = (InstrumentPatch) (this.field_n.nextForIteration(0));
           if (!var3) {
             continue;
           }
@@ -261,7 +261,7 @@ final class MidiPcmStream extends PcmStream {
         boolean decompiledFrameCompleted0 = true;
         boolean var6 = (AceOfSkies.obfuscationControl);
         if (this.field_M.c()) {
-          int var2 = this.field_C * this.field_M.field_e / tk.field_f;
+          int var2 = this.field_C * this.field_M.field_e / AudioOutput.field_f;
           while (true) {
             long var3 = this.field_j + (long)param0 * (long)var2;
             if (this.field_u - var3 >= 0L) {
@@ -302,7 +302,7 @@ final class MidiPcmStream extends PcmStream {
           return;
         }
         if ((2 & this.field_G[param1]) != 0) {
-          ft var3 = (ft) (this.field_L.field_k.first(268435455));
+          MidiNote var3 = (MidiNote) (this.field_L.field_k.first(268435455));
           while (var3 != null) {
             if (var4) {
               break;
@@ -312,25 +312,25 @@ final class MidiPcmStream extends PcmStream {
               0 > var3.field_p) {
               var3.field_p = 0;
             }
-            var3 = (ft) (this.field_L.field_k.next((byte) 103));
+            var3 = (MidiNote) (this.field_L.field_k.next((byte) 103));
           }
         }
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
         Object stackIn_10_0 = null;
-        ft stackIn_20_1 = null;
+        MidiNote stackIn_20_1 = null;
         boolean stackIn_21_2 = false;
         boolean var10;
         regionExit1: {
           var10 = (AceOfSkies.obfuscationControl);
           this.a(64, param2, 0, param3);
           if (0 != (2 & this.field_G[param3])) {
-            ft var5 = (ft) (this.field_L.field_k.last((byte) -70));
+            MidiNote var5 = (MidiNote) (this.field_L.field_k.last((byte) -70));
             while (var5 != null) {
-              ft stackOut_4_0 = var5;
+              MidiNote stackOut_4_0 = var5;
               stackIn_10_0 = stackOut_4_0;
-              ft stackIn_5_0 = stackOut_4_0;
+              MidiNote stackIn_5_0 = stackOut_4_0;
               if (var10) {
                 break regionExit1;
               }
@@ -345,13 +345,13 @@ final class MidiPcmStream extends PcmStream {
                 var5.field_u = -var5.field_w + var6_int;
                 return;
               }
-              var5 = (ft) (this.field_L.field_k.previous(110));
+              var5 = (MidiNote) (this.field_L.field_k.previous(110));
             }
           }
           stackIn_10_0 = this.field_n.findByKey((byte) 106, (long)this.field_I[param3]);
         }
-        ml var11 = (ml) (stackIn_10_0);
-        ml var12 = var11;
+        InstrumentPatch var11 = (InstrumentPatch) (stackIn_10_0);
+        InstrumentPatch var12 = var11;
         if (var12 == null) {
           return;
         }
@@ -360,7 +360,7 @@ final class MidiPcmStream extends PcmStream {
           return;
         }
         int var8 = 5 / ((-31 - param0) / 43);
-        ft var7 = new ft();
+        MidiNote var7 = new MidiNote();
         var7.field_y = var12;
         var7.field_m = param3;
         var7.field_x = var6;
@@ -393,7 +393,7 @@ final class MidiPcmStream extends PcmStream {
           var7.field_e.d(-1);
         }
         if (var7.field_f >= 0) {
-          ft var9 = this.field_K[param3][var7.field_f];
+          MidiNote var9 = this.field_K[param3][var7.field_f];
           if (var9 != null &&
             var9.field_p < 0) {
             this.field_E[param3][var9.field_n] = null;
@@ -409,7 +409,7 @@ final class MidiPcmStream extends PcmStream {
     private final void c(int param0, int param1, int param2) {
         this.field_o[param0] = param1;
         if (param2 != 3830) {
-          int discarded$0 = this.b((byte) 103, (ft) null);
+          int discarded$0 = this.b((byte) 103, (MidiNote) null);
         }
         this.field_m[param0] = (int)(0.5 + Math.pow(2.0, (double)param1 * 0.00054931640625) * 2097152.0);
     }
@@ -498,7 +498,7 @@ final class MidiPcmStream extends PcmStream {
             stackIn_29_1 = 16;
           }
           if (stackIn_29_0 < stackIn_29_1) {
-            this.a(-128, (ft) null);
+            this.a(-128, (MidiNote) null);
           }
           return;
         }
@@ -623,7 +623,7 @@ final class MidiPcmStream extends PcmStream {
 
     }
 
-    final boolean a(int param0, ft param1) {
+    final boolean a(int param0, MidiNote param1) {
         String stackIn_18_2 = null;
         try {
           if (null != param1.field_e) {
@@ -671,11 +671,11 @@ final class MidiPcmStream extends PcmStream {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8 == null))) {
             int var9 = (int)var8.key;
-            ml var12 = (ml) (this.field_n.findByKey((byte) 106, (long)var9));
+            InstrumentPatch var12 = (InstrumentPatch) (this.field_n.findByKey((byte) 106, (long)var9));
             if (!var11) {
               boolean decompiledFrameRemainder0 = true;
               if (var12 == null) {
-                ml var13 = gu.a(var9, param3, 16652);
+                InstrumentPatch var13 = gu.a(var9, param3, 16652);
                 if (var13 == null) {
                   var6_int = false;
                   decompiledFrameRemainder0 = false;
@@ -755,7 +755,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final int b(int param0, ft param1) {
+    private final int b(int param0, MidiNote param1) {
         String stackIn_11_2 = null;
         try {
           int var3_int = this.field_p[param1.field_m];
@@ -783,15 +783,15 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final int a(byte param0, ft param1) {
+    private final int a(byte param0, MidiNote param1) {
         String stackIn_23_2 = null;
         try {
           if (this.field_l[param1.field_m] == 0) {
             int stackIn_2_0 = 0;
             return stackIn_2_0;
           }
-          dh var9 = param1.field_r;
-          dh var10 = var9;
+          InstrumentEnvelope var9 = param1.field_r;
+          InstrumentEnvelope var10 = var9;
           int var4 = 4096 + this.field_w[param1.field_m] * this.field_J[param1.field_m] >> 13;
           var4 = 16384 + var4 * var4 >> 15;
           var4 = 16384 + var4 * param1.field_h >> 15;
@@ -1035,12 +1035,12 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final int b(byte param0, ft param1) {
+    private final int b(byte param0, MidiNote param1) {
         String stackIn_17_2 = null;
         try {
           int var3_int = (param1.field_u * param1.field_q >> 12) + param1.field_w;
           var3_int = var3_int + (this.field_B[param1.field_m] * (-8192 + this.field_N[param1.field_m]) >> 12);
-          dh var4 = param1.field_r;
+          InstrumentEnvelope var4 = param1.field_r;
           if (param0 > -56) {
             this.b(-101, (byte) 115);
           }
@@ -1055,7 +1055,7 @@ final class MidiPcmStream extends PcmStream {
             double var7 = Math.sin((double)(511 & param1.field_z) * 0.01227184630308513);
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          int var5Lifetime1 = (int)((double)(256 * param1.field_x.sampleRate) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)tk.field_f + 0.5);
+          int var5Lifetime1 = (int)((double)(256 * param1.field_x.sampleRate) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)AudioOutput.field_f + 0.5);
           int stackIn_13_0 = (1 <= var5Lifetime1) ? var5Lifetime1 : 1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1072,7 +1072,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, ft param3, int[] param4) {
+    final boolean a(int param0, int param1, boolean param2, MidiNote param3, int[] param4) {
         int stackIn_34_0 = 0;
         int stackIn_34_1 = 0;
         int stackIn_54_0 = 0;
@@ -1081,7 +1081,7 @@ final class MidiPcmStream extends PcmStream {
         String stackIn_80_2 = null;
         boolean var11 = (AceOfSkies.obfuscationControl);
         try {
-          param3.field_i = tk.field_f / 100;
+          param3.field_i = AudioOutput.field_f / 100;
           if (0 <= param3.field_p && (null == param3.field_e ||
             param3.field_e.f())) {
             param3.a(11821);
@@ -1103,7 +1103,7 @@ final class MidiPcmStream extends PcmStream {
             param3.field_q = var6_int;
           }
           param3.field_e.g(this.b((byte) -76, param3));
-          dh var7 = param3.field_r;
+          InstrumentEnvelope var7 = param3.field_r;
           param3.field_j = param3.field_j + 1;
           boolean var8 = (param2);
           param3.field_z = param3.field_z + var7.field_i;
@@ -1269,7 +1269,7 @@ final class MidiPcmStream extends PcmStream {
     private final void b(int param0, byte param1) {
         int stackIn_16_0 = 0;
         boolean var4 = (AceOfSkies.obfuscationControl);
-        ft var3 = (ft) (this.field_L.field_k.first(268435455));
+        MidiNote var3 = (MidiNote) (this.field_L.field_k.first(268435455));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
           stackIn_16_0 = param0;
@@ -1277,7 +1277,7 @@ final class MidiPcmStream extends PcmStream {
             if (stackIn_16_0 < 0 ||
               var3.field_m == param0) {
               if (var3.field_e != null) {
-                var3.field_e.h(tk.field_f / 100);
+                var3.field_e.h(AudioOutput.field_f / 100);
                 if (var3.field_e.j()) {
                   this.field_L.field_i.addSubstream(var3.field_e);
                 }
@@ -1288,7 +1288,7 @@ final class MidiPcmStream extends PcmStream {
               }
               var3.unlink(-124);
             }
-            var3 = (ft) (this.field_L.field_k.next((byte) 103));
+            var3 = (MidiNote) (this.field_L.field_k.next((byte) 103));
             continue;
           }
           break;
@@ -1308,7 +1308,7 @@ final class MidiPcmStream extends PcmStream {
           this.a(6, 126, (MusicTrack) null, (ResourceArchive) null, (SoundCache) null);
         }
         if (0 != (4 & this.field_G[param0])) {
-          ft var3 = (ft) (this.field_L.field_k.first(268435455));
+          MidiNote var3 = (MidiNote) (this.field_L.field_k.first(268435455));
           while (var3 != null) {
             if (var4) {
               break;
@@ -1316,7 +1316,7 @@ final class MidiPcmStream extends PcmStream {
             if (~var3.field_m == ~param0) {
               var3.field_t = 0;
             }
-            var3 = (ft) (this.field_L.field_k.next((byte) 103));
+            var3 = (MidiNote) (this.field_L.field_k.next((byte) 103));
           }
         }
     }
@@ -1334,12 +1334,12 @@ final class MidiPcmStream extends PcmStream {
         this.field_m = new int[16];
         this.field_z = new int[16];
         this.field_G = new int[16];
-        this.field_K = new ft[16][128];
+        this.field_K = new MidiNote[16][128];
         this.field_N = new int[16];
         this.field_J = new int[16];
         this.field_l = new int[16];
         this.field_s = new int[16];
-        this.field_E = new ft[16][128];
+        this.field_E = new MidiNote[16][128];
         this.field_I = new int[16];
         this.field_C = 1000000;
         this.field_M = new k();

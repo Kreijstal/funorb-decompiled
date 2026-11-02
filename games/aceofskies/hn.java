@@ -15,15 +15,15 @@ final class hn {
           var10.j(91);
           GameCanvas.field_a = st.a(param1, var10);
           ia.field_a = new int[var3][];
-          gp.field_y = new wu[var3];
+          NetworkArchiveRequest.field_y = new wu[var3];
           for (int var4 = 0; var3 > var4; var4++) {
-            gp.field_y[var4] = sh.a(var8, (byte) -14);
+            NetworkArchiveRequest.field_y[var4] = sh.a(var8, (byte) -14);
           }
           var10.m((byte) 112);
           int var9 = 0;
           int var4Lifetime1 = var9;
           while (var3 > var9) {
-            wu var5 = gp.field_y[var9];
+            wu var5 = NetworkArchiveRequest.field_y[var9];
             var5.a(6, 1, 6, 6, false);
             var5.b(32767);
             int[] var6 = new int[]{var5.field_b + var5.field_N >> 1, var5.field_h + var5.field_J >> 1, var5.field_A + var5.field_s >> 1};

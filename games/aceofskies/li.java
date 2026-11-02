@@ -46,12 +46,12 @@ abstract class li implements sp {
         if (!param0) {
           this.a((byte) 120);
           if (!(kh.a(-113) >= (this.field_a + 350L))) {
-            return jc.field_Pc;
+            return HardwareOpenGlRenderer.field_Pc;
           }
           return this.c(0);
         }
         if (!(kh.a(-113) >= (this.field_a + 350L))) {
-          return jc.field_Pc;
+          return HardwareOpenGlRenderer.field_Pc;
         }
         return this.c(0);
     }
@@ -69,8 +69,8 @@ abstract class li implements sp {
           int var3_int = 101 % ((65 - param0) / 43);
           IntKeyLookup.field_a = false;
           ss.field_t = false;
-          if (ml.field_m != null &&
-            ml.field_m.field_z) {
+          if (InstrumentPatch.field_m != null &&
+            InstrumentPatch.field_m.field_z) {
             if (param1 != 8) {
             } else {
               if (!nf.field_a) {
@@ -93,7 +93,7 @@ abstract class li implements sp {
               if (ae.field_f) {
                 param2 = sl.field_n;
               }
-              ml.field_m.a((byte) -117, param1, param2);
+              InstrumentPatch.field_m.a((byte) -117, param1, param2);
             }
             if (256 != param1) {
               if (10 == param1) {

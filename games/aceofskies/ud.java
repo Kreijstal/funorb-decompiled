@@ -36,9 +36,9 @@ abstract class ud extends IntrusiveNode {
           BitmapFontMetrics.field_b = new int[param0 * 2];
         } else if (param0 > BitmapFontMetrics.field_b.length) {
           BitmapFontMetrics.field_b = new int[param0 * 2];
-          if (null == js.field_c ||
-            !(param0 <= js.field_c.length)) {
-            js.field_c = new int[2 * param0];
+          if (null == DualLinkDequeIterator.field_c ||
+            !(param0 <= DualLinkDequeIterator.field_c.length)) {
+            DualLinkDequeIterator.field_c = new int[2 * param0];
           }
           if (null == hg.field_C ||
             !(hg.field_C.length >= param0)) {
@@ -68,14 +68,14 @@ abstract class ud extends IntrusiveNode {
             sg.field_a = new boolean[2 * param0];
           }
           op.field_a = 2147483647;
-          ft.field_o = -2147483648;
+          MidiNote.field_o = -2147483648;
           nh.field_a = 2147483647;
-          os.field_w = 0;
+          DiskArchiveRequest.field_w = 0;
           fj.field_d = -2147483648;
           return;
         }
-        if (null == js.field_c) {
-          js.field_c = new int[2 * param0];
+        if (null == DualLinkDequeIterator.field_c) {
+          DualLinkDequeIterator.field_c = new int[2 * param0];
           if (null == hg.field_C) {
             hg.field_C = new int[param0 * 2];
             if (null == qd.field_p ||
@@ -152,8 +152,8 @@ abstract class ud extends IntrusiveNode {
               sg.field_a = new boolean[2 * param0];
             }
           }
-        } else if (param0 > js.field_c.length) {
-          js.field_c = new int[2 * param0];
+        } else if (param0 > DualLinkDequeIterator.field_c.length) {
+          DualLinkDequeIterator.field_c = new int[2 * param0];
           if (null == hg.field_C ||
             !(hg.field_C.length >= param0)) {
             hg.field_C = new int[param0 * 2];
@@ -261,9 +261,9 @@ abstract class ud extends IntrusiveNode {
           }
         }
         op.field_a = 2147483647;
-        ft.field_o = -2147483648;
+        MidiNote.field_o = -2147483648;
         nh.field_a = 2147483647;
-        os.field_w = 0;
+        DiskArchiveRequest.field_w = 0;
         fj.field_d = -2147483648;
     }
 

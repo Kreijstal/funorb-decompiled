@@ -159,7 +159,7 @@ final class jt extends PcmStream {
               }
             }
           }
-          if (tk.field_r) {
+          if (AudioOutput.field_r) {
             stackIn_34_0 = param2 << 1;
           } else {
             stackIn_34_0 = param2;
@@ -180,7 +180,7 @@ final class jt extends PcmStream {
               }
               this.field_n.b(this.field_i, 0, param2);
               this.field_p.b(this.field_o, 0, param2);
-              if (tk.field_r) {
+              if (AudioOutput.field_r) {
                 int localTemp$0 = param1 << 1;
                 param1 = localTemp$0;
                 stackIn_49_0 = localTemp$0;
@@ -207,7 +207,7 @@ final class jt extends PcmStream {
               this.field_i = new int[var6];
             }
             this.field_y.b(this.field_i, 0, param2);
-            if (tk.field_r) {
+            if (AudioOutput.field_r) {
               int localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_64_0 = localTemp$1;
@@ -256,7 +256,7 @@ final class jt extends PcmStream {
               } else {
                 var7Lifetime4 = var9 + "; Expires=" + bt.a(false, 1000L * param2 + kh.a(-83)) + "; Max-Age=" + param2;
               }
-              fe.a(param3, -7012, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.a(param3, -7012, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var6 = decompiledCaughtException;

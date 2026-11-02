@@ -19,22 +19,22 @@ final class rm {
     }
 
     final static boolean a(int param0) {
-        if (~ag.field_s == param0) {
+        if (~ArchiveRequest.field_s == param0) {
           if (!wo.a(1, true)) {
             return false;
           }
-          ag.field_s = IntKeyLookup.incomingPacket.readUnsignedByte(43);
+          ArchiveRequest.field_s = IntKeyLookup.incomingPacket.readUnsignedByte(43);
           IntKeyLookup.incomingPacket.position = 0;
         }
-        if (ag.field_s == -2) {
+        if (ArchiveRequest.field_s == -2) {
           if (wo.a(2, true)) {
-            ag.field_s = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
+            ArchiveRequest.field_s = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
             IntKeyLookup.incomingPacket.position = 0;
-            return wo.a(ag.field_s, true);
+            return wo.a(ArchiveRequest.field_s, true);
           }
           return false;
         }
-        return wo.a(ag.field_s, true);
+        return wo.a(ArchiveRequest.field_s, true);
     }
 
     static {

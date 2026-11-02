@@ -7,7 +7,7 @@ final class MenuInputState {
     private int keyCode;
     private int repeatCountdown;
     private boolean pointerSelection;
-    static en field_b;
+    static SystemTask field_b;
     static int field_h;
     static IndexedSprite[] field_i;
     private int pressedButton;
@@ -141,7 +141,7 @@ final class MenuInputState {
         if (this.heldButton == 0) {
           this.keyCode = bk.lastKeyCode;
           if (obfuscationGuard <= 122) {
-            field_b = (en) null;
+            field_b = (SystemTask) null;
             return;
           }
           return;
@@ -149,7 +149,7 @@ final class MenuInputState {
         if (obfuscationGuard > 122) {
           return;
         }
-        field_b = (en) null;
+        field_b = (SystemTask) null;
     }
 
     final void handleHorizontalKey(byte obfuscationGuard) {
@@ -204,7 +204,7 @@ final class MenuInputState {
         field_i = null;
         field_b = null;
         if (param0 >= -117) {
-          field_b = (en) null;
+          field_b = (SystemTask) null;
         }
     }
 
@@ -217,18 +217,18 @@ final class MenuInputState {
         }
         this.pressedButton = 0;
         this.keyCode = 0;
-        if (0 != vj.pressedMouseButton) {
+        if (0 != OpenGlShaderObject.pressedMouseButton) {
           this.repeatCountdown = pn.menuInitialRepeatDelay;
-          this.pressedButton = vj.pressedMouseButton;
+          this.pressedButton = OpenGlShaderObject.pressedMouseButton;
           this.pointerSelection = true;
-          this.heldButton = vj.pressedMouseButton;
+          this.heldButton = OpenGlShaderObject.pressedMouseButton;
           this.selectedIndex = pressedItemIndex;
         }
         if (obfuscationGuard != -24702) {
           return;
         }
         if (this.heldButton == 0) {
-          if (0 == vj.pressedMouseButton) {
+          if (0 == OpenGlShaderObject.pressedMouseButton) {
             if (vu.heldMouseButton != 0) {
               if (0 == this.heldButton) {
                 if (!this.pointerSelection &&
@@ -272,7 +272,7 @@ final class MenuInputState {
           return;
         }
         if (0 == vu.heldMouseButton) {
-          if (0 == vj.pressedMouseButton &&
+          if (0 == OpenGlShaderObject.pressedMouseButton &&
             vu.heldMouseButton == 0) {
             this.heldButton = 0;
           }
@@ -298,7 +298,7 @@ final class MenuInputState {
         }
         if (this.repeatCountdown > 0) {
           this.repeatCountdown = this.repeatCountdown - 1;
-          if (0 == vj.pressedMouseButton &&
+          if (0 == OpenGlShaderObject.pressedMouseButton &&
             vu.heldMouseButton == 0) {
             this.heldButton = 0;
           }
@@ -324,7 +324,7 @@ final class MenuInputState {
         }
         this.repeatCountdown = Pickup.menuRepeatDelay;
         this.repeatCountdown = this.repeatCountdown - 1;
-        if (0 != vj.pressedMouseButton) {
+        if (0 != OpenGlShaderObject.pressedMouseButton) {
           if (0 != this.heldButton) {
             return;
           }

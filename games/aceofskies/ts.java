@@ -3,7 +3,7 @@
  */
 final class ts extends RendererBitmapFont {
     private int[] field_e;
-    private kj field_f;
+    private JavaSoftwareRenderer field_f;
     private int[] field_j;
     private int[] field_h;
     private int[] field_i;
@@ -133,7 +133,7 @@ final class ts extends RendererBitmapFont {
         this.a(this.field_g[glyph], this.field_f.field_E, color, var15, var12, var9, var10, var13, var14, x, y, this.field_e[glyph], mask, maskX, maskY);
     }
 
-    ts(kj param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
+    ts(JavaSoftwareRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int stackIn_9_2 = 0;
         this.field_f = param0;

@@ -13,7 +13,7 @@ final class lk extends fu implements fq {
         this.field_b.a((byte) -120, (fq) (this));
     }
 
-    lk(wl param0, int param1, byte[] param2, int param3, boolean param4) {
+    lk(OpenGlRenderer param0, int param1, byte[] param2, int param3, boolean param4) {
         super(param0, 34962, param2, param3, param4);
     }
 

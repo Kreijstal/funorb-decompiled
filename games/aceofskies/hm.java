@@ -4,7 +4,7 @@
 final class hm extends ka {
     static int field_b;
 
-    hm(kj param0) {
+    hm(JavaSoftwareRenderer param0) {
     }
 
     static {

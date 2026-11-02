@@ -86,7 +86,7 @@ final class od extends lg {
         String stackIn_8_2 = null;
         try {
           if (param1 == 3) {
-            String stackIn_4_0 = gq.a(param0.length, param0, 21530, 0);
+            String stackIn_4_0 = WeightedObjectCache.a(param0.length, param0, 21530, 0);
             return stackIn_4_0;
           }
           String stackIn_2_0 = (String) null;

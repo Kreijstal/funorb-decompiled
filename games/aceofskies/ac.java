@@ -43,7 +43,7 @@ final class ac implements gd {
         }
     }
 
-    final static mo a(boolean param0, int param1, byte[] param2, jc param3) {
+    final static mo a(boolean param0, int param1, byte[] param2, HardwareOpenGlRenderer param3) {
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         try {

@@ -56,7 +56,7 @@ final class tg {
     final static boolean a(int param0) {
         if (param0 >= -87) {
           tg.a(120, -95);
-          if (ft.field_l == null) {
+          if (MidiNote.field_l == null) {
             return false;
           }
           if (ca.field_f == wq.field_e) {
@@ -64,7 +64,7 @@ final class tg {
           }
           return false;
         }
-        if (ft.field_l == null) {
+        if (MidiNote.field_l == null) {
           return false;
         }
         if (ca.field_f == wq.field_e) {

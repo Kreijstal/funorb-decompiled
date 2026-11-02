@@ -26,7 +26,7 @@ final class sr extends rt {
         }
     }
 
-    sr(wl param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
+    sr(OpenGlRenderer param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
         super(param0, 32879, param1, param3 * param2 * param4, false);
         this.field_o = -1;
         this.field_k = -1;
@@ -44,7 +44,7 @@ final class sr extends rt {
         }
     }
 
-    sr(wl param0, int param1, int param2, int param3, int param4) {
+    sr(OpenGlRenderer param0, int param1, int param2, int param3, int param4) {
         super(param0, 32879, param1, param3 * param2 * param4, false);
         this.field_o = -1;
         this.field_k = -1;

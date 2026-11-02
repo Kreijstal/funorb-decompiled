@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class it {
-    private kj field_b;
+    private JavaSoftwareRenderer field_b;
     static int field_c;
     Runnable field_a;
     le field_d;
@@ -40,7 +40,7 @@ final class it {
         }
     }
 
-    it(kj param0) {
+    it(JavaSoftwareRenderer param0) {
         String stackIn_8_2 = null;
         iu discarded$11 = new iu();
         try {

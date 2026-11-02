@@ -9,8 +9,8 @@ final class kg {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 18567) {
-          wl var2 = (wl) null;
-          kg.a((String) null, 109, true, (wl) null);
+          OpenGlRenderer var2 = (OpenGlRenderer) null;
+          kg.a((String) null, 109, true, (OpenGlRenderer) null);
         }
     }
 
@@ -54,10 +54,10 @@ final class kg {
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          ArchiveProvider.field_c = qg.a((byte) 3, param1, "commonui", "frame_top");
-          HighscoreQuery.field_k = qg.a((byte) 3, param1, "commonui", "frame_bottom");
+          ArchiveProvider.field_c = MouseWheelInput.a((byte) 3, param1, "commonui", "frame_top");
+          HighscoreQuery.field_k = MouseWheelInput.a((byte) 3, param1, "commonui", "frame_bottom");
           eo.field_b = ij.a(param1, "jagex_logo_grey", "commonui", 1);
-          u.field_i = qg.a((byte) 3, param1, "commonui", "button");
+          u.field_i = MouseWheelInput.a((byte) 3, param1, "commonui", "button");
           gu.field_c = tj.a("validation", "commonui", 1, param1);
           oi.field_c = (BitmapFont) ((Object) as.a(param3, -119, param1, "arezzo12", "commonui"));
           qo.field_b = (BitmapFont) ((Object) as.a(param3, -104, param1, "arezzo14", "commonui"));
@@ -66,9 +66,9 @@ final class kg {
           cd.a(param1, "commonui", "dropdown", param0 - 116);
           IndexedSprite[] var5 = iu.a(param1, "commonui", (byte) -86, "screen_options");
           MenuInputState.field_i = new IndexedSprite[param0];
-          dk.field_e = new IndexedSprite[4];
+          DiskCacheWorker.field_e = new IndexedSprite[4];
           sl.field_o = new IndexedSprite[4];
-          IndexedSprite[][] var6 = new IndexedSprite[][]{sl.field_o, dk.field_e, MenuInputState.field_i};
+          IndexedSprite[][] var6 = new IndexedSprite[][]{sl.field_o, DiskCacheWorker.field_e, MenuInputState.field_i};
           int[][] var19 = new int[4][];
           int[][] var16 = var19;
           int[][] var7 = var16;
@@ -167,7 +167,7 @@ final class kg {
         PacketBuffer.field_k = of.a(var5 * var2, -19, var4 * var2);
     }
 
-    final static aq a(String param0, int param1, boolean param2, wl param3) {
+    final static aq a(String param0, int param1, boolean param2, OpenGlRenderer param3) {
         String stackIn_18_2 = null;
         String stackIn_21_2 = null;
         try {
@@ -177,18 +177,18 @@ final class kg {
           long var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param1);
           jaggl.OpenGL.glShaderSourceARB(var4_long, param0);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, wl.field_m, 0);
-          if (0 == wl.field_m[0]) {
-            if (0 == wl.field_m[0]) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, OpenGlRenderer.field_m, 0);
+          if (0 == OpenGlRenderer.field_m[0]) {
+            if (0 == OpenGlRenderer.field_m[0]) {
               System.out.println("Shader compile failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, wl.field_m, 1);
-            if (wl.field_m[1] > 1) {
-              byte[] var10 = new byte[wl.field_m[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var4_long, wl.field_m[1], wl.field_m, 0, var10, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, OpenGlRenderer.field_m, 1);
+            if (OpenGlRenderer.field_m[1] > 1) {
+              byte[] var10 = new byte[OpenGlRenderer.field_m[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var4_long, OpenGlRenderer.field_m[1], OpenGlRenderer.field_m, 0, var10, 0);
               System.out.println(new String(var10));
             }
-            if (wl.field_m[0] == 0) {
+            if (OpenGlRenderer.field_m[0] == 0) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               Object stackIn_12_0 = null;
               return (aq) (stackIn_12_0);
@@ -220,7 +220,7 @@ final class kg {
         String stackIn_24_2 = null;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (null == pj.field_a) {
+          if (null == RasterBuffer.field_a) {
             return null;
           }
           if (param0 == null) {
@@ -234,7 +234,7 @@ final class kg {
           if (var2 == null) {
             return null;
           }
-          cl var3 = (cl) (pj.field_a.a(124, (long)var2.hashCode()));
+          cl var3 = (cl) (RasterBuffer.field_a.a(124, (long)var2.hashCode()));
           if (param1 != 61) {
             cl stackIn_13_0 = (cl) null;
             return stackIn_13_0;
@@ -246,7 +246,7 @@ final class kg {
             CharSequence var7 = (CharSequence) ((Object) var3.field_I);
             String var4 = vu.normalizePlayerName(param1 + 63, var7);
             if (!var4.equals(var2)) {
-              var3 = (cl) (pj.field_a.a(false));
+              var3 = (cl) (RasterBuffer.field_a.a(false));
               continue;
             }
             break;

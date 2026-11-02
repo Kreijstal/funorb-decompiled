@@ -27,9 +27,9 @@ final class nc {
           for (int var6 = 0; var6 < var5.length; var6++) {
             if (param4 != null &&
               param4[var6]) {
-              var5[var6] = t.a(param0, "", param3[var6]).a();
+              var5[var6] = VorbisSample.a(param0, "", param3[var6]).a();
             } else {
-              var5[var6] = bj.a(param2, "", param3[var6]).a();
+              var5[var6] = SynthesizedSoundEffect.a(param2, "", param3[var6]).a();
             }
           }
           if (param1 >= -72) {

@@ -16,7 +16,7 @@ abstract class ka {
             var1 = ec.b((byte) -128);
           }
           if (var1.length() == 0) {
-            var1 = vj.field_a;
+            var1 = OpenGlShaderObject.field_a;
           }
           return var1;
         }
@@ -29,7 +29,7 @@ abstract class ka {
           var1Lifetime1 = ec.b((byte) -128);
         }
         if (var1Lifetime1.length() == 0) {
-          var1Lifetime1 = vj.field_a;
+          var1Lifetime1 = OpenGlShaderObject.field_a;
         }
         return var1Lifetime1;
     }
@@ -56,9 +56,9 @@ abstract class ka {
             if (var4_ref_m != null &&
               var2_long > var4_ref_m.field_e) {
               var4_ref_m.unlink(-123);
-              ag.field_s = var4_ref_m.field_h.length;
+              ArchiveRequest.field_s = var4_ref_m.field_h.length;
               IntKeyLookup.incomingPacket.position = 0;
-              for (int var5_int = 0; ag.field_s > var5_int; var5_int++) {
+              for (int var5_int = 0; ArchiveRequest.field_s > var5_int; var5_int++) {
                 IntKeyLookup.incomingPacket.payload[var5_int] = var4_ref_m.field_h[var5_int];
               }
               ScoreSubmission.field_l = kg.field_b;
@@ -90,7 +90,7 @@ abstract class ka {
               }
               ec.field_g = IntKeyLookup.incomingPacket.j((byte) -53);
               IntKeyLookup.incomingPacket.position = 0;
-              ag.field_s = param1[ec.field_g];
+              ArchiveRequest.field_s = param1[ec.field_g];
             }
             if (!rm.a(0)) {
               return false;
@@ -110,8 +110,8 @@ abstract class ka {
                 var4 = 0;
               }
             }
-            m var5 = new m((long)var4 + var2_long, ec.field_g, new byte[ag.field_s]);
-            for (int var6 = 0; ag.field_s > var6; var6++) {
+            m var5 = new m((long)var4 + var2_long, ec.field_g, new byte[ArchiveRequest.field_s]);
+            for (int var6 = 0; ArchiveRequest.field_s > var6; var6++) {
               var5.field_h[var6] = IntKeyLookup.incomingPacket.payload[var6];
             }
             oo.field_T.addLast(88, var5);
@@ -132,7 +132,7 @@ abstract class ka {
         }
     }
 
-    final static void a(int param0, long param1, String param2, int param3, int param4, boolean param5, boolean param6, int param7, int param8, int param9, int param10, int param11, rk param12, int param13) {
+    final static void a(int param0, long param1, String param2, int param3, int param4, boolean param5, boolean param6, int param7, int param8, int param9, int param10, int param11, SystemTaskService param12, int param13) {
         try {
           String stackIn_17_2 = null;
           String stackIn_20_2 = null;
@@ -150,7 +150,7 @@ abstract class ka {
             ii.field_j = param12;
             sg.field_b = param10;
             ut.field_a = param8;
-            fs.field_a = param1;
+            BoundedRandomAccessFile.field_a = param1;
             ko.field_f = param13;
             te.field_h = param6;
             id.field_d = param9;
@@ -158,7 +158,7 @@ abstract class ka {
               return;
             }
             try {
-              BitmapFontMetrics.field_g = new gh(ii.field_j.field_g, 64, 0);
+              BitmapFontMetrics.field_g = new BufferedRandomAccessFile(ii.field_j.field_g, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

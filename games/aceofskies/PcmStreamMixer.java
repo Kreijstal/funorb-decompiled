@@ -21,7 +21,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void a(IntrusiveNode param0, va param1) {
         while (true) {
           if (param0 == this.field_j.sentinel) {
-            ml.$cfr$intArgs$a$9910ad98b3f5(-20, param0, param1);
+            InstrumentPatch.$cfr$intArgs$a$9910ad98b3f5(-20, param0, param1);
             this.field_i = ((va) (this.field_j.sentinel.next)).field_e;
             return;
           }
@@ -31,7 +31,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        ml.$cfr$intArgs$a$9910ad98b3f5(-20, param0, param1);
+        InstrumentPatch.$cfr$intArgs$a$9910ad98b3f5(-20, param0, param1);
         this.field_i = ((va) (this.field_j.sentinel.next)).field_e;
         return;
     }

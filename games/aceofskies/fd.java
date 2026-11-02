@@ -19,10 +19,10 @@ final class fd {
     }
 
     final static void a(int param0) {
-        if (wl.field_r == null) {
+        if (OpenGlRenderer.field_r == null) {
           lr var1 = new lr();
           byte[] var3 = var1.a(128, 128, (byte) -120, 16);
-          wl.field_r = sf.a(false, -137, var3);
+          OpenGlRenderer.field_r = sf.a(false, -137, var3);
         }
         if (param0 <= -50) {
           if (null == lg.field_l) {

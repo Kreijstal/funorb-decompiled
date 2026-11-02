@@ -31,7 +31,7 @@ final class bc extends to {
             int stackIn_10_0 = -1;
             return stackIn_10_0;
           }
-          String var3 = bl.field_g + var11;
+          String var3 = SectorCacheStore.field_g + var11;
           if (!rj.field_b.a(var3, -126, "")) {
             int stackIn_13_0 = -1;
             return stackIn_13_0;
@@ -46,7 +46,7 @@ final class bc extends to {
           int var6 = -26 / ((param1 + 35) / 33);
           Object var5 = null;
           try {
-            var12 = qc.a(true, var11);
+            var12 = CacheFileLocator.a(true, var11);
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             RuntimeException var7_ref_RuntimeException = (RuntimeException) (Object) decompiledCaughtException;

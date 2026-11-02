@@ -5,7 +5,7 @@ final class tu extends RendererBitmapFont {
     private int[] field_e;
     private int[] field_j;
     private int[] field_g;
-    private kj field_f;
+    private JavaSoftwareRenderer field_f;
     private int[] field_i;
     private byte[][] field_h;
 
@@ -308,7 +308,7 @@ final class tu extends RendererBitmapFont {
         }
     }
 
-    tu(kj param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
+    tu(JavaSoftwareRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         this.field_f = param0;
         this.field_i = param3;

@@ -157,7 +157,7 @@ final class bk extends hh {
         }
     }
 
-    bk(wl param0, qe param1) {
+    bk(OpenGlRenderer param0, qe param1) {
         super(param0);
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;

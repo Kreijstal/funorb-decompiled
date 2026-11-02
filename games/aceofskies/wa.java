@@ -3,9 +3,9 @@
  */
 final class wa implements sm {
     xa field_b;
-    j field_a;
+    NativeSoftwareRenderSprite field_a;
 
-    wa(oa param0, j param1, xa param2) {
+    wa(NativeSoftwareRenderer param0, NativeSoftwareRenderSprite param1, xa param2) {
         this.field_a = param1;
         this.field_b = param2;
     }

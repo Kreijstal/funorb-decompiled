@@ -8,7 +8,7 @@ final class qk {
     static int field_g;
     private DualLinkNode field_b;
     static SpriteData[] brassSliderSpriteData;
-    private er field_d;
+    private SecondaryNodeDeque field_d;
     private int field_c;
     private IntrusiveNodeHashTable field_h;
 
@@ -220,7 +220,7 @@ final class qk {
     qk(int param0) {
         int var2 = 0;
         this.field_b = new DualLinkNode();
-        this.field_d = new er();
+        this.field_d = new SecondaryNodeDeque();
         this.field_c = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
         }

@@ -25,7 +25,7 @@ abstract class gg {
         }
         for (int var3Lifetime1 = 0; 255 > var3Lifetime1; var3Lifetime1++) {
           int var4Lifetime1 = 255 - var3Lifetime1;
-          int var5 = bs.a(-1, var7, var4Lifetime1);
+          int var5 = GameKeyHandler.a(-1, var7, var4Lifetime1);
           int var6 = this.field_d[var5];
           this.field_d[var5] = this.field_d[var4Lifetime1];
           this.field_d[256 + var4Lifetime1] = (short) var6;
@@ -91,8 +91,8 @@ abstract class gg {
         }
         ss.field_t = false;
         oi.a(-1, 20665);
-        nb.field_c = dk.field_h;
-        ht.field_k = dk.field_h;
+        nb.field_c = DiskCacheWorker.field_h;
+        ht.field_k = DiskCacheWorker.field_h;
     }
 
     public static void a(boolean param0) {
@@ -158,12 +158,12 @@ abstract class gg {
                 var7 = var7 & 4095;
                 int var22 = var7 - 4096;
                 int var21 = -4096 + var6;
-                int var17 = ua.field_h[var5];
+                int var17 = OpenGlBuffer.field_h[var5];
                 int var20 = -4096 + var5;
                 int var23 = this.field_d[var15];
                 int var24 = this.field_d[var16];
-                int var18 = ua.field_h[var6];
-                int var19 = ua.field_h[var7];
+                int var18 = OpenGlBuffer.field_h[var6];
+                int var19 = OpenGlBuffer.field_h[var7];
                 int var26 = this.field_d[var23 + var14];
                 int var27 = this.field_d[var24 + var13];
                 int var28 = this.field_d[var14 + var24];

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class hh {
-    wl field_a;
+    OpenGlRenderer field_a;
     static hd field_c;
     static qk field_b;
 
@@ -22,7 +22,7 @@ abstract class hh {
         field_b = null;
     }
 
-    hh(wl param0) {
+    hh(OpenGlRenderer param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
@@ -39,7 +39,7 @@ abstract class hh {
             field_b = (qk) null;
           }
           int var3 = sh.field_u;
-          int var4 = gp.field_w;
+          int var4 = NetworkArchiveRequest.field_w;
           int var5 = 0;
           int var6 = 0;
           param1.d(var4, var3, var6, -5782, -65281, var5);
@@ -80,7 +80,7 @@ abstract class hh {
         return -114;
     }
 
-    final static void a(int param0, String param1, int param2, int param3, byte param4, rk param5, int param6, int param7, int param8) {
+    final static void a(int param0, String param1, int param2, int param3, byte param4, SystemTaskService param5, int param6, int param7, int param8) {
         RendererManager.field_f = param2;
         IntKeyLookup.field_b = param3;
         SoundCache.field_e = param8;
@@ -93,8 +93,8 @@ abstract class hh {
           uk.field_g = param6;
           hi.field_x = param1;
           ah.field_s = param0;
-          ul.field_r = (un) ((Object) new hf());
-          ii.field_m = new dk(param5);
+          ul.field_r = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
+          ii.field_m = new DiskCacheWorker(param5);
           om.field_c = new wq(ul.field_r, ii.field_m);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "hh.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');

@@ -24,7 +24,7 @@ final class ko extends pm {
             }
             byte[] var4 = new byte[var3_int];
             param0.position = param0.position + tq.field_i.a(0, var3_int, param0.payload, true, param0.position, var4);
-            String var5 = hf.a(26, var3_int, 0, var4);
+            String var5 = SocketArchiveNetworkClient.a(26, var3_int, 0, var4);
             String stackIn_7_0 = var5;
             return stackIn_7_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -59,7 +59,7 @@ final class ot {
         if (param0 > -23) {
           return (ResourceArchive) null;
         }
-        return lc.a(true, false, false, (byte) -65, 1, param1);
+        return IterableNodeHashTable.a(true, false, false, (byte) -65, 1, param1);
     }
 
     final void a(byte param0, int param1) {

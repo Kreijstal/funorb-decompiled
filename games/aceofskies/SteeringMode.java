@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SteeringMode {
-    static qg field_c;
+    static MouseWheelInput field_c;
     static eo field_a;
     static SpriteData[][] aircraftSpriteData;
     static volatile int field_e;

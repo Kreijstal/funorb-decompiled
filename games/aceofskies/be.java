@@ -7,7 +7,7 @@ final class be extends RendererBitmapFont {
     private int[] field_f;
     private int[] field_i;
     private int[] field_e;
-    private kj field_h;
+    private JavaSoftwareRenderer field_h;
     private int[] field_j;
 
     final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
@@ -167,7 +167,7 @@ final class be extends RendererBitmapFont {
         }
     }
 
-    be(kj param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
+    be(JavaSoftwareRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         this.field_h = param0;
         this.field_h = param0;

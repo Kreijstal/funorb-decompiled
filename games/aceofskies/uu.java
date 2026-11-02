@@ -122,7 +122,7 @@ final class uu extends vo {
             if (var3 != null) {
               if (var3.b(true) == fd.field_a &&
                 !param0.equals(this.field_f.field_f)) {
-                String stackIn_8_0 = rp.field_c;
+                String stackIn_8_0 = HardwareRenderSprite.field_c;
                 return stackIn_8_0;
               }
               String stackIn_10_0 = var3.a(true);
@@ -132,7 +132,7 @@ final class uu extends vo {
           if (param0.equals(this.field_f.field_f)) {
             return null;
           }
-          String stackIn_14_0 = rp.field_c;
+          String stackIn_14_0 = HardwareRenderSprite.field_c;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

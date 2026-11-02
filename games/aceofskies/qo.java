@@ -77,12 +77,12 @@ final class qo {
           int var2 = var10.readUnsignedByte(104);
           int var3 = var10.readUnsignedByte(-75);
           if (0 == var2) {
-            oh var4_ref_oh = (oh) (fg.field_r.first(268435455));
+            oh var4_ref_oh = (oh) (CachedArchiveProvider.field_r.first(268435455));
             if (var4_ref_oh == null) {
               te.b(true);
               return;
             }
-            int var5_int = ag.field_s - var10.position;
+            int var5_int = ArchiveRequest.field_s - var10.position;
             int[] var12 = var4_ref_oh.field_f;
             int[] var11 = var12;
             int[] var6 = var11;

@@ -123,17 +123,17 @@ final class ce extends ab implements dr, dn {
             int nameEntryCount = packet.readUnsignedByte(obfuscationGuard - 167);
             if (nameEntryCount != 0) {
               int entryLimit = query.entryLimit;
-              pe.highscoreNameEntries[0].alternateName = null;
+              NodeHashTableIterator.highscoreNameEntries[0].alternateName = null;
               int valuesPerEntry = query.valuesPerEntry;
-              pe.highscoreNameEntries[0].primaryName = fj.playerDisplayName;
-              pe.highscoreNameEntries[0].usedInUniqueView = false;
+              NodeHashTableIterator.highscoreNameEntries[0].primaryName = fj.playerDisplayName;
+              NodeHashTableIterator.highscoreNameEntries[0].usedInUniqueView = false;
               for (int nameEntryIndex = 1; nameEntryIndex < nameEntryCount; nameEntryIndex++) {
-                pe.highscoreNameEntries[nameEntryIndex].primaryName = packet.readNullTerminatedText(-17883);
-                pe.highscoreNameEntries[nameEntryIndex].usedInUniqueView = false;
+                NodeHashTableIterator.highscoreNameEntries[nameEntryIndex].primaryName = packet.readNullTerminatedText(-17883);
+                NodeHashTableIterator.highscoreNameEntries[nameEntryIndex].usedInUniqueView = false;
                 if (packet.readUnsignedByte(-47) != 1) {
-                  pe.highscoreNameEntries[nameEntryIndex].alternateName = null;
+                  NodeHashTableIterator.highscoreNameEntries[nameEntryIndex].alternateName = null;
                 } else {
-                  pe.highscoreNameEntries[nameEntryIndex].alternateName = packet.readNullTerminatedText(obfuscationGuard ^ -17839);
+                  NodeHashTableIterator.highscoreNameEntries[nameEntryIndex].alternateName = packet.readNullTerminatedText(obfuscationGuard ^ -17839);
                 }
               }
               String[][] dupTemp$0 = new String[3][entryLimit];
@@ -156,12 +156,12 @@ final class ce extends ab implements dr, dn {
               if (rowCount > 0) {
                 for (int rowIndex = 0; rowIndex < rowCount; rowIndex++) {
                   int nameIndex = packet.readUnsignedByte(obfuscationGuard ^ 69);
-                  String displayName = pe.highscoreNameEntries[nameIndex].primaryName;
+                  String displayName = NodeHashTableIterator.highscoreNameEntries[nameIndex].primaryName;
                   long submissionToken = packet.readLong((byte) -32);
                   int valuesStartPosition = packet.position;
                   if (entryLimit > rowIndex) {
                     namesByView[0][allRowCount] = displayName;
-                    alternateNamesByView[0][allRowCount] = pe.highscoreNameEntries[nameIndex].alternateName;
+                    alternateNamesByView[0][allRowCount] = NodeHashTableIterator.highscoreNameEntries[nameIndex].alternateName;
                     submissionTokensByView[0][allRowCount] = submissionToken;
                     allRowCount++;
                     for (int allValueIndex = 0; valuesPerEntry > allValueIndex; allValueIndex++) {
@@ -184,10 +184,10 @@ final class ce extends ab implements dr, dn {
                     }
                   }
                   if (entryLimit > uniqueRowCount &&
-                    !pe.highscoreNameEntries[nameIndex].usedInUniqueView) {
-                    pe.highscoreNameEntries[nameIndex].usedInUniqueView = true;
+                    !NodeHashTableIterator.highscoreNameEntries[nameIndex].usedInUniqueView) {
+                    NodeHashTableIterator.highscoreNameEntries[nameIndex].usedInUniqueView = true;
                     namesByView[2][uniqueRowCount] = displayName;
-                    alternateNamesByView[2][uniqueRowCount] = pe.highscoreNameEntries[nameIndex].alternateName;
+                    alternateNamesByView[2][uniqueRowCount] = NodeHashTableIterator.highscoreNameEntries[nameIndex].alternateName;
                     submissionTokensByView[2][uniqueRowCount] = submissionToken;
                     uniqueRowCount++;
                     packet.position = valuesStartPosition;
@@ -292,7 +292,7 @@ final class ce extends ab implements dr, dn {
             if (this.field_C) {
               ArchiveIndex.b(17);
             } else if (this.field_E) {
-              pj.b((byte) -75);
+              RasterBuffer.b((byte) -75);
             } else {
               PacketBuffer.i(-112);
             }
@@ -362,7 +362,7 @@ final class ce extends ab implements dr, dn {
             }
           } else {
             this.field_D = new mi(hg.field_z, (no) null);
-            this.field_z = new mi(mb.field_s, (no) null);
+            this.field_z = new mi(SoftCacheReference.field_s, (no) null);
             this.field_v.field_u = false;
           }
           this.field_v.field_e = (ir) ((Object) new sl(10000536));
@@ -380,7 +380,7 @@ final class ce extends ab implements dr, dn {
             this.field_w.field_k = cl.field_db;
           }
           if (this.field_C) {
-            this.field_z.field_k = gq.field_d;
+            this.field_z.field_k = WeightedObjectCache.field_d;
           } else if (this.field_E) {
             this.field_z.field_k = td.field_c;
             this.field_z.field_e = (ir) ((Object) new wg());
@@ -393,7 +393,7 @@ final class ce extends ab implements dr, dn {
             this.field_h = this.field_h + (5 + var7.measureWrappedHeight(this.field_y, this.field_q - 40, var7.maxAscent));
           }
           String var8 = kk.field_J;
-          gu var9 = lc.a(17123, bm.m(125));
+          gu var9 = IterableNodeHashTable.a(17123, bm.m(125));
           if (ef.field_k == var9) {
             var8 = hu.field_b;
           } else if (lp.field_f == var9) {
@@ -403,7 +403,7 @@ final class ce extends ab implements dr, dn {
           bc var12 = dupTemp$0;
           this.a(dupTemp$0, 1);
           this.field_h = this.field_h + (((ea) ((Object) var12)).field_n + 5);
-          bc dupTemp$1 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_x, false, 80, 3, var7, 16777215, vj.field_b);
+          bc dupTemp$1 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_x, false, 80, 3, var7, 16777215, OpenGlShaderObject.field_b);
           bc var13 = dupTemp$1;
           this.a(dupTemp$1, 1);
           this.field_D.field_o = (no) (this);

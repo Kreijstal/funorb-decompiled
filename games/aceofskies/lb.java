@@ -15,7 +15,7 @@ final class lb implements sm {
         if (ul.field_r.f(param0 + param0)) {
           return 0;
         }
-        return wl.t(19078);
+        return OpenGlRenderer.t(19078);
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -52,24 +52,24 @@ final class lb implements sm {
         }
     }
 
-    lb(kj param0, RenderSprite param1, ac param2) {
+    lb(JavaSoftwareRenderer param0, RenderSprite param1, ac param2) {
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
         try {
-          boolean decompiledSharedTail0 = !(!(param1 instanceof vh));
+          boolean decompiledSharedTail0 = !(!(param1 instanceof BinaryAlphaJavaSoftwareSprite));
           if (!decompiledSharedTail0) {
-            if (!(param1 instanceof jg)) {
+            if (!(param1 instanceof AlphaBlendedJavaSoftwareSprite)) {
               throw new RuntimeException();
             }
-            jg var5 = (jg) (param1);
+            AlphaBlendedJavaSoftwareSprite var5 = (AlphaBlendedJavaSoftwareSprite) (param1);
             this.field_b = var5.field_p;
             this.field_c = var5.field_o;
             this.field_d = var5.field_E;
             decompiledSharedTail0 = (AceOfSkies.obfuscationControl);
           }
           if (decompiledSharedTail0) {
-            vh var6 = (vh) (param1);
+            BinaryAlphaJavaSoftwareSprite var6 = (BinaryAlphaJavaSoftwareSprite) (param1);
             this.field_b = var6.field_p;
             this.field_c = var6.field_o;
             this.field_d = var6.field_E;

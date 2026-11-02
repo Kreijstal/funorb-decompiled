@@ -19,23 +19,23 @@ final class tj extends ao {
     private float field_j;
 
     final float[] a(byte param0) {
-        ml.field_h[1] = this.field_h;
-        ml.field_h[9] = this.field_p;
-        ml.field_h[12] = 0.0f;
-        ml.field_h[5] = this.field_j;
-        ml.field_h[14] = 0.0f;
-        ml.field_h[2] = this.field_f;
-        ml.field_h[13] = 0.0f;
-        ml.field_h[4] = this.field_l;
-        ml.field_h[6] = this.field_q;
-        ml.field_h[0] = this.field_i;
-        ml.field_h[10] = this.field_r;
-        ml.field_h[8] = this.field_s;
+        InstrumentPatch.field_h[1] = this.field_h;
+        InstrumentPatch.field_h[9] = this.field_p;
+        InstrumentPatch.field_h[12] = 0.0f;
+        InstrumentPatch.field_h[5] = this.field_j;
+        InstrumentPatch.field_h[14] = 0.0f;
+        InstrumentPatch.field_h[2] = this.field_f;
+        InstrumentPatch.field_h[13] = 0.0f;
+        InstrumentPatch.field_h[4] = this.field_l;
+        InstrumentPatch.field_h[6] = this.field_q;
+        InstrumentPatch.field_h[0] = this.field_i;
+        InstrumentPatch.field_h[10] = this.field_r;
+        InstrumentPatch.field_h[8] = this.field_s;
         if (param0 > 97) {
-          return ml.field_h;
+          return InstrumentPatch.field_h;
         }
         this.field_h = 1.0541695356369019f;
-        return ml.field_h;
+        return InstrumentPatch.field_h;
     }
 
     public static void b(byte param0) {
@@ -172,31 +172,31 @@ final class tj extends ao {
     }
 
     final float[] b(int param0) {
-        ml.field_h[12] = this.field_g;
-        ml.field_h[5] = this.field_j;
-        ml.field_h[2] = this.field_f;
-        ml.field_h[4] = this.field_l;
+        InstrumentPatch.field_h[12] = this.field_g;
+        InstrumentPatch.field_h[5] = this.field_j;
+        InstrumentPatch.field_h[2] = this.field_f;
+        InstrumentPatch.field_h[4] = this.field_l;
         if (param0 > 102) {
-          ml.field_h[8] = this.field_s;
-          ml.field_h[14] = this.field_e;
-          ml.field_h[13] = this.field_k;
-          ml.field_h[10] = this.field_r;
-          ml.field_h[9] = this.field_p;
-          ml.field_h[0] = this.field_i;
-          ml.field_h[1] = this.field_h;
-          ml.field_h[6] = this.field_q;
-          return ml.field_h;
+          InstrumentPatch.field_h[8] = this.field_s;
+          InstrumentPatch.field_h[14] = this.field_e;
+          InstrumentPatch.field_h[13] = this.field_k;
+          InstrumentPatch.field_h[10] = this.field_r;
+          InstrumentPatch.field_h[9] = this.field_p;
+          InstrumentPatch.field_h[0] = this.field_i;
+          InstrumentPatch.field_h[1] = this.field_h;
+          InstrumentPatch.field_h[6] = this.field_q;
+          return InstrumentPatch.field_h;
         }
         field_m = -21;
-        ml.field_h[8] = this.field_s;
-        ml.field_h[14] = this.field_e;
-        ml.field_h[13] = this.field_k;
-        ml.field_h[10] = this.field_r;
-        ml.field_h[9] = this.field_p;
-        ml.field_h[0] = this.field_i;
-        ml.field_h[1] = this.field_h;
-        ml.field_h[6] = this.field_q;
-        return ml.field_h;
+        InstrumentPatch.field_h[8] = this.field_s;
+        InstrumentPatch.field_h[14] = this.field_e;
+        InstrumentPatch.field_h[13] = this.field_k;
+        InstrumentPatch.field_h[10] = this.field_r;
+        InstrumentPatch.field_h[9] = this.field_p;
+        InstrumentPatch.field_h[0] = this.field_i;
+        InstrumentPatch.field_h[1] = this.field_h;
+        InstrumentPatch.field_h[6] = this.field_q;
+        return InstrumentPatch.field_h;
     }
 
     final static Sprite[] a(String param0, String param1, int param2, ResourceArchive param3) {

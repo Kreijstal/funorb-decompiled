@@ -19,9 +19,9 @@ final class qs {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 == null) {
-            decompiledFrameRemainder0 = (qj.field_s == null);
+            decompiledFrameRemainder0 = (StrongCacheReference.field_s == null);
           } else {
-            decompiledFrameRemainder0 = !(param1.equals(qj.field_s));
+            decompiledFrameRemainder0 = !(param1.equals(StrongCacheReference.field_s));
           }
           if (decompiledFrameRemainder0) {
             if (ht.field_g) {
@@ -55,7 +55,7 @@ final class qs {
             SpriteState.field_o = rs.field_v;
             ScreenParticle.field_o = 0;
           }
-          qj.field_s = param1;
+          StrongCacheReference.field_s = param1;
           if (param0 != -6939) {
             field_a = (Calendar) null;
           }

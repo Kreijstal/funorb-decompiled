@@ -22,7 +22,7 @@ final class td {
           if (param1 != 38) {
             field_d = (w) null;
           }
-          int stackIn_3_0 = ro.a(10, true, -98, param0);
+          int stackIn_3_0 = OpenGlIndexBuffer.a(10, true, -98, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -273,7 +273,7 @@ class ab extends ea implements vm {
         field_r = null;
         if (!param0) {
           int[] var2 = (int[]) null;
-          ab.a((wl) null, -29, true, (int[]) null, 99, -122, -8, -126);
+          ab.a((OpenGlRenderer) null, -29, true, (int[]) null, 99, -122, -8, -126);
         }
     }
 
@@ -505,7 +505,7 @@ class ab extends ea implements vm {
         }
     }
 
-    final static el a(wl param0, int param1, boolean param2, int[] param3, int param4, int param5, int param6, int param7) {
+    final static el a(OpenGlRenderer param0, int param1, boolean param2, int[] param3, int param4, int param5, int param6, int param7) {
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
         try {

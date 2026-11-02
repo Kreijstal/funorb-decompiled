@@ -24,7 +24,7 @@ final class te extends IntrusiveNode {
             CoverageBitmapFont stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
-          kf.f(1);
+          OpenGlUnderwaterEffect.f(1);
           CoverageBitmapFont stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,7 +73,7 @@ final class te extends IntrusiveNode {
         try {
           int var2 = 112 % ((param1 - 8) / 34);
           try {
-            fe.a("resizing", -15201, new Object[]{new Integer(param0)}, bm.m(110));
+            JavaScriptBridge.a("resizing", -15201, new Object[]{new Integer(param0)}, bm.m(110));
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             Throwable decompiledCaughtException = decompiledCaughtParameter0;
             Throwable var3 = decompiledCaughtException;
@@ -88,18 +88,18 @@ final class te extends IntrusiveNode {
     final static void b(boolean param0) {
         if (!param0) {
           field_i = -60L;
-          if (null != ft.field_l) {
-            ft.field_l.a(1);
-            ft.field_l = null;
+          if (null != MidiNote.field_l) {
+            MidiNote.field_l.a(1);
+            MidiNote.field_l = null;
             return;
           }
           return;
         }
-        if (null == ft.field_l) {
+        if (null == MidiNote.field_l) {
           return;
         }
-        ft.field_l.a(1);
-        ft.field_l = null;
+        MidiNote.field_l.a(1);
+        MidiNote.field_l = null;
     }
 
     static {

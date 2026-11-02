@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class io {
-    private jc field_b;
+    private HardwareOpenGlRenderer field_b;
     static String field_e;
     long field_d;
     static tf field_c;
@@ -36,7 +36,7 @@ final class io {
         }
     }
 
-    io(jc param0, long param1, vj[] param2) {
+    io(HardwareOpenGlRenderer param0, long param1, OpenGlShaderObject[] param2) {
         try {
           this.field_b = param0;
           this.field_d = param1;

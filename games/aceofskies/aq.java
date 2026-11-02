@@ -7,7 +7,7 @@ final class aq {
     static java.awt.Font field_b;
     long field_a;
     static java.util.zip.CRC32 field_d;
-    private wl field_c;
+    private OpenGlRenderer field_c;
 
     final static void b(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -72,7 +72,7 @@ final class aq {
         }
     }
 
-    aq(wl param0, long param1, int param2) {
+    aq(OpenGlRenderer param0, long param1, int param2) {
         try {
           this.field_a = param1;
           this.field_c = param0;

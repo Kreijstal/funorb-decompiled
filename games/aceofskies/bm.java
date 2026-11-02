@@ -12,7 +12,7 @@ class bm extends mi {
     private boolean field_y;
     private int field_D;
     private long field_F;
-    static rk field_I;
+    static SystemTaskService field_I;
     static int field_z;
     static int[] field_w;
 
@@ -151,7 +151,7 @@ class bm extends mi {
           if (param0 == -1) {
             return;
           }
-          field_I = (rk) null;
+          field_I = (SystemTaskService) null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -166,12 +166,12 @@ class bm extends mi {
           if (hu.field_a != null) {
             return hu.field_a;
           }
-          return (java.applet.Applet) ((Object) gh.field_f);
+          return (java.applet.Applet) ((Object) BufferedRandomAccessFile.field_f);
         }
         if (hu.field_a != null) {
           return hu.field_a;
         }
-        return (java.applet.Applet) ((Object) gh.field_f);
+        return (java.applet.Applet) ((Object) BufferedRandomAccessFile.field_f);
     }
 
     private final int e(byte param0) {
@@ -313,7 +313,7 @@ class bm extends mi {
         if (param0 == -75) {
           return;
         }
-        field_I = (rk) null;
+        field_I = (SystemTaskService) null;
     }
 
     bm(String param0, no param1, int param2) {
@@ -323,7 +323,7 @@ class bm extends mi {
         this.field_G = false;
         try {
           this.field_H = param2;
-          this.field_e = ag.field_n.field_n;
+          this.field_e = ArchiveRequest.field_n.field_n;
           this.a(-20975, param0, true);
           this.field_y = true;
           this.field_F = kh.a(-88);

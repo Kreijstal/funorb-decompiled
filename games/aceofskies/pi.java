@@ -48,7 +48,7 @@ final class pi extends mi {
           ea var12 = (ea) null;
           this.a((ea) null, (byte) -125);
         }
-        if (jc.field_Pc != var8 &&
+        if (HardwareOpenGlRenderer.field_Pc != var8 &&
           ce.field_t != var8) {
           if (var8 == bt.field_a) {
             Sprite var13 = gu.field_c[2];
@@ -111,7 +111,7 @@ final class pi extends mi {
           Throwable var8_ref_Throwable = null;
           int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
-            if (ft.field_l == null &&
+            if (MidiNote.field_l == null &&
               !fp.a((byte) 82, param5)) {
               int stackIn_5_0 = -1;
               return stackIn_5_0;
@@ -121,7 +121,7 @@ final class pi extends mi {
                 dq.field_a = op.a(param4, false, param1, false);
               } else {
                 String var10 = (String) null;
-                dq.field_a = wb.a(false, (String) null, param4, as.field_b, true);
+                dq.field_a = WhirlpoolHasher.a(false, (String) null, param4, as.field_b, true);
               }
               q.outgoingPacket.position = 0;
               q.outgoingPacket.writeByte(param2 - 1336879960, 14);
@@ -137,7 +137,7 @@ final class pi extends mi {
               } else {
                 ca.field_f = aj.field_u;
                 qs.field_b = var6_int;
-                ag.field_s = -1;
+                ArchiveRequest.field_s = -1;
               }
               IntKeyLookup.incomingPacket.position = 0;
             }
@@ -146,10 +146,10 @@ final class pi extends mi {
               of.field_a = IntKeyLookup.incomingPacket.readLong((byte) 90);
               IntKeyLookup.incomingPacket.position = 0;
               AceOfSkies.a(param0, param5, dq.field_a, param3, -12209);
-              ca.field_f = he.field_o;
+              ca.field_f = CacheReference.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ca.field_f == he.field_o &&
+            if (ca.field_f == CacheReference.field_o &&
               wo.a(1, true)) {
               int var6_intLifetime1 = IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ 63);
               fb.field_b = null;
@@ -159,7 +159,7 @@ final class pi extends mi {
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
                   ca.field_f = aj.field_u;
-                  ag.field_s = -1;
+                  ArchiveRequest.field_s = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -171,7 +171,7 @@ final class pi extends mi {
               }
               if (decompiledFrameRemainder0) {
                 ca.field_f = ScorchMark.field_a;
-                ag.field_s = -1;
+                ArchiveRequest.field_s = -1;
               }
             }
             if (ScorchMark.field_a == ca.field_f &&
@@ -197,16 +197,16 @@ final class pi extends mi {
                 IntKeyLookup.incomingPacket.readUnsignedByte(-83);
                 IntKeyLookup.incomingPacket.readUnsignedByte(105);
                 IntKeyLookup.incomingPacket.readInt((byte) 123);
-                ag.field_r = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
-                nc.field_c = new byte[ag.field_r];
-                for (int var8 = 0; ag.field_r > var8; var8++) {
+                ArchiveRequest.field_r = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
+                nc.field_c = new byte[ArchiveRequest.field_r];
+                for (int var8 = 0; ArchiveRequest.field_r > var8; var8++) {
                   nc.field_c[var8] = IntKeyLookup.incomingPacket.readByte(0);
                 }
               }
               fj.playerDisplayName = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
               CharSequence var12 = (CharSequence) ((Object) fj.playerDisplayName);
               cf.normalizedPlayerName = vu.normalizePlayerName(param2 ^ 127, var12);
-              un.field_c = IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ -95);
+              ArchiveNetworkClient.field_c = IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ -95);
               ca.field_f = wq.field_e;
               if (dq.field_a.a(-78) == SteeringMode.field_a) {
                 ef.field_k.a(bm.m(param2 + 113), (byte) 125);
@@ -220,14 +220,14 @@ final class pi extends mi {
               if (qr.field_a <= 0 &&
                 !g.field_k) {
                 try {
-                  fe.a("unzap", (byte) -108, bm.m(115));
+                  JavaScriptBridge.a("unzap", (byte) -108, bm.m(115));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  fe.a("zap", -15201, new Object[]{vf.a(as.field_b, 28304)}, bm.m(119));
+                  JavaScriptBridge.a("zap", -15201, new Object[]{BufferedSocket.a(as.field_b, 28304)}, bm.m(119));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -259,17 +259,17 @@ final class pi extends mi {
               if (7 == qs.field_b) {
                 qs.field_b = 3;
               }
-              rp.field_m = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
+              HardwareRenderSprite.field_m = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
               ld.field_d = false;
               int stackIn_82_0 = qs.field_b;
               return stackIn_82_0;
             }
-            if (null == ft.field_l) {
+            if (null == MidiNote.field_l) {
               if (ld.field_d) {
                 if (30000L < gm.g(-1)) {
-                  rp.field_m = rm.field_c;
+                  HardwareRenderSprite.field_m = rm.field_c;
                 } else {
-                  rp.field_m = jf.field_b;
+                  HardwareRenderSprite.field_m = jf.field_b;
                 }
                 ld.field_d = false;
                 int stackIn_93_0 = 3;

@@ -18,7 +18,7 @@ final class ld {
         cu.field_r = false;
         cn.field_z = null;
         cc.field_b = null;
-        gp.field_v = null;
+        NetworkArchiveRequest.field_v = null;
         if (param0 == 14183) {
           es.field_a = null;
           return;

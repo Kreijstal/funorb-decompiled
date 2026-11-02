@@ -94,7 +94,7 @@ final class MenuScreen {
           }
           return oo.menuRowSpacing[this.screenId] * itemIndex + bk.menuTop[this.screenId];
         }
-        if (ua.menuActions[this.screenId].length > 1) {
+        if (OpenGlBuffer.menuActions[this.screenId].length > 1) {
           return 382 + itemIndex * (12 + oo.menuRowSpacing[this.screenId]) - 4;
         }
         return -4 + (oo.menuRowSpacing[this.screenId] * itemIndex + 430);
@@ -111,7 +111,7 @@ final class MenuScreen {
           int var6_int = verticalOffset + this.getItemTop(itemIndex, true);
           int var7 = this.getItemLeft(itemIndex, 200);
           int discarded$0 = this.getItemRight(obfuscationGuard + 116, itemIndex);
-          int var8 = ua.menuActions[this.screenId][itemIndex];
+          int var8 = OpenGlBuffer.menuActions[this.screenId][itemIndex];
           String var9 = du.menuActionLabels[var8];
           if (var9 == null) {
             var9 = "ERROR: missing text";
@@ -181,7 +181,7 @@ final class MenuScreen {
         if (obfuscationGuard > -56) {
           return 82;
         }
-        for (int var4 = 0; ua.menuActions[this.screenId].length > var4; var4++) {
+        for (int var4 = 0; OpenGlBuffer.menuActions[this.screenId].length > var4; var4++) {
           int var5 = this.getItemTop(var4, true);
           if (this.isItemEnabled(var4, (byte) -17) &&
             pointerX >= this.getItemLeft(var4, 200) &&
@@ -220,7 +220,7 @@ final class MenuScreen {
         this.a(40 + var10, (byte) 86, var7 - 20, 40 + var9, var30, -20 + var8);
         String var11 = mf.field_a;
         if (oc.highscoreView == 1) {
-          var11 = wl.field_zc;
+          var11 = OpenGlRenderer.field_zc;
         }
         if (2 == oc.highscoreView) {
           var11 = jo.field_l;
@@ -318,7 +318,7 @@ final class MenuScreen {
         int var13 = kn.bigFontMetrics.maxAscent + (verticalOffset + 140 + 100);
         PacketBuffer.gameFont.drawCenteredText(117, var5, -1, var13, 320, var12Lifetime1);
         if (!cn.b(true)) {
-          stackIn_39_0 = fs.field_f;
+          stackIn_39_0 = BoundedRandomAccessFile.field_f;
         } else {
           stackIn_39_0 = bt.field_c;
         }
@@ -359,7 +359,7 @@ final class MenuScreen {
         }
         if (param0 < 126) {
           String var2 = (String) null;
-          MenuScreen.a((byte) 67, -122, (wl) null, (String) null);
+          MenuScreen.a((byte) 67, -122, (OpenGlRenderer) null, (String) null);
         }
         return (java.awt.Container) ((Object) bm.m(118));
     }
@@ -414,7 +414,7 @@ final class MenuScreen {
         int var6;
         int var7;
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
-        int var4 = ua.menuActions[this.screenId][itemIndex];
+        int var4 = OpenGlBuffer.menuActions[this.screenId][itemIndex];
         if (this.input.isActivated((byte) 125)) {
           bm.a((byte) -70, gg.field_a);
         } else if (var4 != this.previousActionId) {
@@ -679,16 +679,16 @@ final class MenuScreen {
           if (param5 != 24063) {
             return;
           }
-          mb.brassButtonSprites[0].a(param1, param4);
-          mb.brassButtonSprites[2].a(-mb.brassButtonSprites[2].d() + (param0 + param1), param4);
+          SoftCacheReference.brassButtonSprites[0].a(param1, param4);
+          SoftCacheReference.brassButtonSprites[2].a(-SoftCacheReference.brassButtonSprites[2].d() + (param0 + param1), param4);
           bo var11 = fa.a(param2, true);
           bo var12 = var11;
-          int var8 = param0 + param1 - mb.brassButtonSprites[2].d();
-          param1 = param1 + mb.brassButtonSprites[0].d();
-          var12.a(var8, param1, param4 + mb.brassButtonSprites[2].c(), param4, 102);
+          int var8 = param0 + param1 - SoftCacheReference.brassButtonSprites[2].d();
+          param1 = param1 + SoftCacheReference.brassButtonSprites[0].d();
+          var12.a(var8, param1, param4 + SoftCacheReference.brassButtonSprites[2].c(), param4, 102);
           while (var8 > param1) {
-            mb.brassButtonSprites[1].a(param1, param4);
-            param1 = param1 + mb.brassButtonSprites[1].d();
+            SoftCacheReference.brassButtonSprites[1].a(param1, param4);
+            param1 = param1 + SoftCacheReference.brassButtonSprites[1].d();
           }
           var12.a(true);
           jm.levelRingSprites[21].b(param1 + 3, 9 + param4, 16, 16);
@@ -754,7 +754,7 @@ final class MenuScreen {
         if (this.input.selectedIndex != -1) {
           this.handleAction(true, 3, this.input.selectedIndex);
         }
-        if (vj.pressedMouseButton != 0) {
+        if (OpenGlShaderObject.pressedMouseButton != 0) {
           this.pendingClickX = ln.field_c;
           this.pendingClickY = lq.field_a;
         }
@@ -767,7 +767,7 @@ final class MenuScreen {
         return 30;
     }
 
-    final static uf a(byte param0, int param1, wl param2, String param3) {
+    final static uf a(byte param0, int param1, OpenGlRenderer param2, String param3) {
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
         try {
@@ -808,9 +808,9 @@ final class MenuScreen {
 
     final static void decodeMenuResources(byte obfuscationGuard, ResourceArchive spriteArchive, ResourceArchive fontMetricsArchive) {
         try {
-          ka.field_a = qg.a((byte) 3, spriteArchive, "", "frame");
-          rg.field_F = qg.a((byte) 3, spriteArchive, "", "button_raised");
-          DualLinkNode.field_h = qg.a((byte) 3, spriteArchive, "", "button_frame");
+          ka.field_a = MouseWheelInput.a((byte) 3, spriteArchive, "", "frame");
+          rg.field_F = MouseWheelInput.a((byte) 3, spriteArchive, "", "button_raised");
+          DualLinkNode.field_h = MouseWheelInput.a((byte) 3, spriteArchive, "", "button_frame");
           bo.menuBitmapFont = (BitmapFont) ((Object) HighscoreNameEntry.a(spriteArchive, "b12", "", fontMetricsArchive, obfuscationGuard ^ -48));
           if (obfuscationGuard != -56) {
             field_g = (IntrusiveDeque) null;
@@ -853,7 +853,7 @@ final class MenuScreen {
           if (this.screenId == 0 ||
             1 == this.screenId ||
             this.screenId == 7) {
-            this.a(oo.menuRowSpacing[this.screenId] * ua.menuActions[this.screenId].length + 2 * var5, (byte) 86, -var4_int + dt.menuLeft[this.screenId], ClientException.menuRight[this.screenId] - (dt.menuLeft[this.screenId] - var4_int * 2), renderer, bk.menuTop[this.screenId] + (-var5 + verticalOffset));
+            this.a(oo.menuRowSpacing[this.screenId] * OpenGlBuffer.menuActions[this.screenId].length + 2 * var5, (byte) 86, -var4_int + dt.menuLeft[this.screenId], ClientException.menuRight[this.screenId] - (dt.menuLeft[this.screenId] - var4_int * 2), renderer, bk.menuTop[this.screenId] + (-var5 + verticalOffset));
           }
           boolean stackIn_9_0 = !(ln.field_d < 2);
           boolean var6 = stackIn_9_0;
@@ -963,7 +963,7 @@ final class MenuScreen {
         int var9 = 540;
         int var10 = 312;
         this.a(var10, (byte) 86, var7, var9, var25, var8);
-        String var11 = ro.field_p;
+        String var11 = OpenGlIndexBuffer.field_p;
         if (alternateView) {
           var11 = pm.field_d;
         }
@@ -996,7 +996,7 @@ final class MenuScreen {
                 var12[var18]) {
                 var19_ref_pa = ut.lockedSprite;
               } else {
-                var19_ref_pa = dh.unachievedSprite;
+                var19_ref_pa = InstrumentEnvelope.unachievedSprite;
               }
             }
             int var20 = var7Lifetime1;
@@ -1073,7 +1073,7 @@ final class MenuScreen {
           int var7Lifetime2Lifetime2 = 170;
           int var15Lifetime1Lifetime2 = 220 + verticalOffset;
           if (var19Lifetime1) {
-            PacketBuffer.gameFont.drawCenteredText(111, -14483644, var6, var15Lifetime1Lifetime2, var7Lifetime2Lifetime2, sk.field_d);
+            PacketBuffer.gameFont.drawCenteredText(111, -14483644, var6, var15Lifetime1Lifetime2, var7Lifetime2Lifetime2, RenderEffect.field_d);
           } else {
             PacketBuffer.gameFont.drawCenteredText(114, -56764, var6, var15Lifetime1Lifetime2, var7Lifetime2Lifetime2, jm.field_b);
           }
@@ -1082,7 +1082,7 @@ final class MenuScreen {
           var15Lifetime1Lifetime2 += 10;
           if (var13[var17] &&
             (var16 & 1 << var17) == 0) {
-            var18_ref_StringLifetime1 = pe.field_c;
+            var18_ref_StringLifetime1 = NodeHashTableIterator.field_c;
           }
           PacketBuffer.gameFont.drawParagraph(0, -(var20Lifetime1 / 2) + var7Lifetime2Lifetime2, var5, true, var6, 1, 8 + var15Lifetime1Lifetime2, hi.gameFontMetrics.maxAscent, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, var20Lifetime1, 480, var18_ref_StringLifetime1);
           int var7Lifetime2Lifetime3 = 320;
@@ -1095,7 +1095,7 @@ final class MenuScreen {
             var12[var17]) {
             ut.lockedSprite.a(256, var21Lifetime1, 0, var5, 1);
           } else {
-            dh.unachievedSprite.a(256, var21Lifetime1, 0, var5, 1);
+            InstrumentEnvelope.unachievedSprite.a(256, var21Lifetime1, 0, var5, 1);
           }
           int var22 = 360 + verticalOffset;
           if (cn.b(true) ||
@@ -1107,7 +1107,7 @@ final class MenuScreen {
     }
 
     final static int a(byte param0) {
-        if (bl.field_c < 2) {
+        if (SectorCacheStore.field_c < 2) {
           return 0;
         }
         if (param0 != 68) {
@@ -1336,7 +1336,7 @@ final class MenuScreen {
             au.a(st.field_b, 0, es.field_a, 0, var4);
             cc.field_b = new String[-var4 + (var3_int - 1)];
             au.a(st.field_b, 1 + var4, cc.field_b, 0, -1 - var4 + var3_int);
-            var3_int = ff.a(qk.field_g, sn.a(dh.field_d, 105, new String[]{"<br><%0><br>"}), st.field_b, -3, nh.field_c);
+            var3_int = ff.a(qk.field_g, sn.a(InstrumentEnvelope.field_d, 105, new String[]{"<br><%0><br>"}), st.field_b, -3, nh.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(st.field_b[var5])) {
@@ -1350,18 +1350,18 @@ final class MenuScreen {
             }
             cn.field_z = new String[var4];
             au.a(st.field_b, 0, cn.field_z, 0, var4);
-            gp.field_v = new String[-1 + var3_int - var4];
-            au.a(st.field_b, var4 + 1, gp.field_v, 0, -1 + var3_int - var4);
+            NetworkArchiveRequest.field_v = new String[-1 + var3_int - var4];
+            au.a(st.field_b, var4 + 1, NetworkArchiveRequest.field_v, 0, -1 + var3_int - var4);
             if (es.field_a.length >= cn.field_z.length) {
               stackIn_65_0 = es.field_a.length;
             } else {
               stackIn_65_0 = cn.field_z.length;
             }
             var5 = stackIn_65_0;
-            if (gp.field_v.length <= cc.field_b.length) {
+            if (NetworkArchiveRequest.field_v.length <= cc.field_b.length) {
               stackIn_68_0 = cc.field_b.length;
             } else {
-              stackIn_68_0 = gp.field_v.length;
+              stackIn_68_0 = NetworkArchiveRequest.field_v.length;
             }
             int var6 = stackIn_68_0;
             int var7 = 7 + var5 + var6;
@@ -1371,14 +1371,14 @@ final class MenuScreen {
               rn.field_a[var8] = -1;
             }
             ne.field_g[1] = du.field_n;
-            ne.field_g[0] = qg.field_b;
+            ne.field_g[0] = MouseWheelInput.field_b;
             rm.field_g = new int[2];
             rn.field_a[1] = 0;
             rm.field_g[1] = 2;
             ne.field_g[5] = "";
             rm.field_g[0] = 5;
             rn.field_a[3] = 1;
-            ne.field_g[2] = dk.field_a;
+            ne.field_g[2] = DiskCacheWorker.field_a;
             ne.field_g[4] = li.field_b;
             ne.field_g[3] = vl.field_a;
             for (int var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
@@ -1396,12 +1396,12 @@ final class MenuScreen {
             for (int var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               String[] stackIn_80_0 = ne.field_g;
               int stackIn_80_1 = var5 + (7 + var8Lifetime3);
-              int stackIn_80_2 = ~gp.field_v.length;
+              int stackIn_80_2 = ~NetworkArchiveRequest.field_v.length;
               int stackIn_80_3 = ~var8Lifetime3;
               if (stackIn_80_2 >= stackIn_80_3) {
                 stackIn_83_2 = "";
               } else {
-                stackIn_83_2 = gp.field_v[var8Lifetime3];
+                stackIn_83_2 = NetworkArchiveRequest.field_v[var8Lifetime3];
               }
               stackIn_80_0[stackIn_80_1] = stackIn_83_2;
             }
@@ -1441,18 +1441,18 @@ final class MenuScreen {
             }
           }
           ac.field_c = ri.field_a - (var3_intLifetime1 >> 1);
-          ro.field_q = (pp.field_a + as.field_c << 1) * pr.field_b.itemCount;
+          OpenGlIndexBuffer.field_q = (pp.field_a + as.field_c << 1) * pr.field_b.itemCount;
           je.field_a = -(var3_intLifetime1 >> 1) + (ri.field_a + var3_intLifetime1);
           for (int var4Lifetime2 = 0; var4Lifetime2 < ne.field_g.length; var4Lifetime2++) {
-            int stackIn_115_0 = ro.field_q;
+            int stackIn_115_0 = OpenGlIndexBuffer.field_q;
             if (0 > rn.field_a[var4Lifetime2]) {
               stackIn_116_1 = ce.field_u;
             } else {
               stackIn_116_1 = lp.field_h;
             }
-            ro.field_q = stackIn_115_0 + stackIn_116_1;
+            OpenGlIndexBuffer.field_q = stackIn_115_0 + stackIn_116_1;
           }
-          pt.field_a = -(ro.field_q >> 1) + Aircraft.field_o;
+          pt.field_a = -(OpenGlIndexBuffer.field_q >> 1) + Aircraft.field_o;
           nb.field_b = new int[ne.field_g.length][];
           int var4Lifetime3 = 0;
           int var5Lifetime3 = pt.field_a;
@@ -1489,7 +1489,7 @@ final class MenuScreen {
     private final void a(int param0, byte param1, String param2) {
         try {
           int var4_int = 104 % ((param1 - 5) / 54);
-          int var5 = 90 + dp.titleFontMetrics.measureTextWidth((byte) 94, param2);
+          int var5 = 90 + ImageProducerRasterBuffer.titleFontMetrics.measureTextWidth((byte) 94, param2);
           this.a(82, FlightSession.rendererManager.a((byte) 75), -(var5 >> 1) + 320, var5, param0 + 26, 60, 1442840524);
           kn.titleFont.drawCenteredText(111, -12046068, -1, 67 + param0, 320, param2);
         } catch (RuntimeException runtimeException) {
@@ -1500,16 +1500,16 @@ final class MenuScreen {
     private final void a(int param0, GraphicsRenderer param1, int param2, int param3, int param4) {
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          mb.brassButtonSprites[0].a(param4, param0);
-          mb.brassButtonSprites[2].a(-mb.brassButtonSprites[2].d() + (param4 + param3), param0);
+          SoftCacheReference.brassButtonSprites[0].a(param4, param0);
+          SoftCacheReference.brassButtonSprites[2].a(-SoftCacheReference.brassButtonSprites[2].d() + (param4 + param3), param0);
           bo var10 = fa.a(param1, true);
           bo var11 = var10;
-          param3 = param4 + param3 - mb.brassButtonSprites[2].d();
-          param4 = param4 + mb.brassButtonSprites[0].d();
-          var11.a(param3, param4, param0 + mb.brassButtonSprites[2].c(), param0, 120);
+          param3 = param4 + param3 - SoftCacheReference.brassButtonSprites[2].d();
+          param4 = param4 + SoftCacheReference.brassButtonSprites[0].d();
+          var11.a(param3, param4, param0 + SoftCacheReference.brassButtonSprites[2].c(), param0, 120);
           while (param4 < param3) {
-            mb.brassButtonSprites[1].a(param4, param0);
-            param4 = param4 + mb.brassButtonSprites[1].d();
+            SoftCacheReference.brassButtonSprites[1].a(param4, param0);
+            param4 = param4 + SoftCacheReference.brassButtonSprites[1].d();
           }
           var11.a(true);
           int var7 = -128 % ((param2 + 32) / 50);
@@ -1522,7 +1522,7 @@ final class MenuScreen {
         this.pendingClickX = -1;
         this.selectedAchievementId = -1;
         this.screenId = screenId;
-        this.input = new MenuInputState(ua.menuActions[screenId].length);
+        this.input = new MenuInputState(OpenGlBuffer.menuActions[screenId].length);
     }
 
     private final void handleNavigationKey(int obfuscationGuard) {
@@ -1581,7 +1581,7 @@ final class MenuScreen {
             if (this.input.selectedIndex < 0) {
               this.input.setSelectedIndex((byte) -117, 3);
             } else {
-              this.input.setSelectedIndex((byte) -101, qg.a((byte) -60, 3, this.input.selectedIndex - 1) + this.input.selectedIndex / 3 * 3);
+              this.input.setSelectedIndex((byte) -101, MouseWheelInput.a((byte) -60, 3, this.input.selectedIndex - 1) + this.input.selectedIndex / 3 * 3);
             }
           }
           if (bk.lastKeyCode == 97) {
@@ -1591,7 +1591,7 @@ final class MenuScreen {
             if (this.input.selectedIndex < 0) {
               this.input.setSelectedIndex((byte) -107, 4);
             }
-            this.input.setSelectedIndex((byte) -126, qg.a((byte) -98, 3, 1 + this.input.selectedIndex) + this.input.selectedIndex / 3 * 3);
+            this.input.setSelectedIndex((byte) -126, MouseWheelInput.a((byte) -98, 3, 1 + this.input.selectedIndex) + this.input.selectedIndex / 3 * 3);
           }
           if (99 == bk.lastKeyCode) {
             if (this.input.selectedIndex < 0) {
@@ -1600,7 +1600,7 @@ final class MenuScreen {
             if (this.input.selectedIndex < 0) {
               this.input.setSelectedIndex((byte) -121, 4);
             }
-            this.input.setSelectedIndex((byte) -113, qg.a((byte) 118, 6, this.input.selectedIndex + 3));
+            this.input.setSelectedIndex((byte) -113, MouseWheelInput.a((byte) 118, 6, this.input.selectedIndex + 3));
           }
           if (bk.lastKeyCode == 98) {
             if (0 > this.input.selectedIndex) {
@@ -1609,7 +1609,7 @@ final class MenuScreen {
             if (this.input.selectedIndex < 0) {
               this.input.setSelectedIndex((byte) -100, 4);
             }
-            this.input.setSelectedIndex((byte) -101, qg.a((byte) -78, 6, -3 + this.input.selectedIndex));
+            this.input.setSelectedIndex((byte) -101, MouseWheelInput.a((byte) -78, 6, -3 + this.input.selectedIndex));
           }
           this.input.captureKey((byte) 124);
           return;

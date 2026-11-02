@@ -8,7 +8,7 @@ final class je {
     final static boolean a(boolean param0) {
         if (param0) {
           je.a(false);
-          if (null == ft.field_l) {
+          if (null == MidiNote.field_l) {
             return false;
           }
           if (ca.field_f.a(true)) {
@@ -16,7 +16,7 @@ final class je {
           }
           return false;
         }
-        if (null == ft.field_l) {
+        if (null == MidiNote.field_l) {
           return false;
         }
         if (ca.field_f.a(true)) {

@@ -11,7 +11,7 @@ abstract class fa {
         String stackIn_17_2 = null;
         try {
           if (ns.field_a == param0) {
-            bo stackIn_2_0 = un.field_f;
+            bo stackIn_2_0 = ArchiveNetworkClient.field_f;
             return stackIn_2_0;
           }
           if (!param1) {
@@ -28,7 +28,7 @@ abstract class fa {
             var3 = new bo(param0);
             ca.field_i.put(123, (long)param0.field_c, new mq(param0, var3));
           }
-          un.field_f = var3;
+          ArchiveNetworkClient.field_f = var3;
           ns.field_a = param0;
           bo stackIn_13_0 = var3;
           return stackIn_13_0;

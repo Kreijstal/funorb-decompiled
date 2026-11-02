@@ -37,7 +37,7 @@ final class uh {
           if (param0 < 59) {
             upgradeSounds = (PcmSample[]) null;
           }
-          boolean stackIn_5_0 = !(!(param2 * param2 > lc.a(param3, false, param1)));
+          boolean stackIn_5_0 = !(!(param2 * param2 > IterableNodeHashTable.a(param3, false, param1)));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

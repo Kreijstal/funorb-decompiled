@@ -7,7 +7,7 @@ final class eg {
           if (!param0) {
             this.a(true);
           }
-          boolean stackIn_13_0 = (this == he.field_o) || (this == ScorchMark.field_a) || (wq.field_e == this);
+          boolean stackIn_13_0 = (this == CacheReference.field_o) || (this == ScorchMark.field_a) || (wq.field_e == this);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,8 +83,8 @@ final class eg {
               }
               else {
                 if (stackIn_57_0 <= stackIn_57_1) {
-                  qj.field_t[var24Lifetime1] = var28Lifetime1 / var30 + var21Lifetime2;
-                  ro.field_t[var24Lifetime1] = var22Lifetime2 + var29Lifetime1 / var30;
+                  StrongCacheReference.field_t[var24Lifetime1] = var28Lifetime1 / var30 + var21Lifetime2;
+                  OpenGlIndexBuffer.field_t[var24Lifetime1] = var22Lifetime2 + var29Lifetime1 / var30;
                   lp.field_d[var24Lifetime1] = var30;
                   if (var7_int > var30) {
                     var7_int = var30;
@@ -97,7 +97,7 @@ final class eg {
                 }
                 if (param4) {
                   wu.field_c[var24Lifetime1] = var28Lifetime1 >> im.field_f;
-                  tm.field_l[var24Lifetime1] = var29Lifetime1 >> im.field_f;
+                  OpenGlRenderSprite.field_l[var24Lifetime1] = var29Lifetime1 >> im.field_f;
                   ur.field_b[var24Lifetime1] = var30;
                 }
                 var24Lifetime1++;
@@ -126,7 +126,7 @@ final class eg {
                   var26Lifetime1Lifetime1 = param0.field_e[var24Lifetime1];
                   var27Lifetime1Lifetime1 = param0.field_j[var24Lifetime1];
                   ec.field_m[var24Lifetime1] = (var18 * var27Lifetime1Lifetime1 + (var15 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var12) >> 16) + var9;
-                  dk.field_g[var24Lifetime1] = (var27Lifetime1Lifetime1 * var19 + (var26Lifetime1Lifetime1 * var16 + var25Lifetime1Lifetime1 * var13) >> 16) + var10;
+                  DiskCacheWorker.field_g[var24Lifetime1] = (var27Lifetime1Lifetime1 * var19 + (var26Lifetime1Lifetime1 * var16 + var25Lifetime1Lifetime1 * var13) >> 16) + var10;
                   vo.field_d[var24Lifetime1] = (var25Lifetime1Lifetime1 * var14 + var17 * var26Lifetime1Lifetime1 + var20 * var27Lifetime1Lifetime1 >> 16) + var11;
                   var25Lifetime1Lifetime1 = param0.field_i[var24Lifetime1];
                   var26Lifetime1Lifetime1 = param0.field_M[var24Lifetime1];

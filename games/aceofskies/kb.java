@@ -39,7 +39,7 @@ final class kb extends vq {
     }
 
     kb(sp param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, pe.a((byte) -63));
+        super(param1, NodeHashTableIterator.a((byte) -63));
         try {
           this.field_B = param0;
           this.field_A = param1;
@@ -78,7 +78,7 @@ final class kb extends vq {
         Object var26 = null;
         int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         pt var6 = this.field_B.b(true);
-        if (jc.field_Pc == var6) {
+        if (HardwareOpenGlRenderer.field_Pc == var6) {
           String var17 = uu.field_g;
           if (!var17.equals(this.field_f)) {
             this.field_f = var17;
@@ -92,7 +92,7 @@ final class kb extends vq {
           if (param0 <= 64) {
             return;
           }
-          if (jc.field_Pc == var6 ||
+          if (HardwareOpenGlRenderer.field_Pc == var6 ||
             var6 == ce.field_t) {
             Sprite var19 = gu.field_c[0];
             int var11 = var19.fullWidth << 1;
@@ -157,7 +157,7 @@ final class kb extends vq {
           if (param0 <= 64) {
             return;
           }
-          if (jc.field_Pc == var6 ||
+          if (HardwareOpenGlRenderer.field_Pc == var6 ||
             var6 == ce.field_t) {
             Sprite var23 = gu.field_c[0];
             int var11Lifetime1 = var23.fullWidth << 1;
@@ -215,7 +215,7 @@ final class kb extends vq {
         if (param0 <= 64) {
           return;
         }
-        if (jc.field_Pc == var6 ||
+        if (HardwareOpenGlRenderer.field_Pc == var6 ||
           var6 == ce.field_t) {
           Sprite var27 = gu.field_c[0];
           int var11Lifetime2 = var27.fullWidth << 1;

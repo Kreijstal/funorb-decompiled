@@ -5,7 +5,7 @@ abstract class fu {
     int field_f;
     private int field_e;
     private boolean field_a;
-    wl field_b;
+    OpenGlRenderer field_b;
     private boolean field_c;
     static ng field_d;
 
@@ -40,11 +40,11 @@ abstract class fu {
           var4_int++;
         }
         Sprite var4 = new Sprite(pu.field_a, cc.field_i, lh.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], var3);
-        kf.f(1);
+        OpenGlUnderwaterEffect.f(1);
         return var4;
     }
 
-    fu(wl param0, int param1, byte[] param2, int param3, boolean param4) {
+    fu(OpenGlRenderer param0, int param1, byte[] param2, int param3, boolean param4) {
         this.field_c = false;
         try {
           this.field_a = param4 ? true : false;

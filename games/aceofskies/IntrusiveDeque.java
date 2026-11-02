@@ -64,11 +64,11 @@ final class IntrusiveDeque {
             int stackIn_4_0 = 34165;
             return stackIn_4_0;
           }
-          if (param1 == lo.field_j) {
+          if (param1 == OpenGlEnvironmentWaterEffect.field_j) {
             int stackIn_7_0 = 260;
             return stackIn_7_0;
           }
-          if (fs.field_d != param1) {
+          if (BoundedRandomAccessFile.field_d != param1) {
             throw new IllegalArgumentException();
           }
           int stackIn_11_0 = 34023;

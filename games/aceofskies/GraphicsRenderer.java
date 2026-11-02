@@ -20,7 +20,7 @@ abstract class GraphicsRenderer {
         String stackIn_8_2 = null;
         try {
           int var5_int = -65 % ((4 - param4) / 50);
-          oa stackIn_1_0 = new oa(param0, param2, param3, param1);
+          NativeSoftwareRenderer stackIn_1_0 = new NativeSoftwareRenderer(param0, param2, param3, param1);
           return (GraphicsRenderer) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ abstract class GraphicsRenderer {
     abstract sm a(ra param0, gd param1);
 
     final void a(int param0) {
-        vj.field_f[this.field_c] = false;
+        OpenGlShaderObject.field_f[this.field_c] = false;
         if (param0 != -9) {
           this.d();
         }
@@ -183,7 +183,7 @@ abstract class GraphicsRenderer {
         try {
           int var4_int = -3 / ((param1 - 13) / 46);
           if (null != DualLinkNode.field_e) {
-            dh.a(1000000, param3, param2, 1048576, param0);
+            InstrumentEnvelope.a(1000000, param3, param2, 1048576, param0);
           }
           if (mg.field_d != null) {
             Object var5 = um.field_m;
@@ -262,9 +262,9 @@ abstract class GraphicsRenderer {
           this.field_a = param0;
           int var2_int = -1;
           for (int var3 = 0; var3 < 8; var3++) {
-            if (!vj.field_f[var3]) {
+            if (!OpenGlShaderObject.field_f[var3]) {
               var2_int = var3;
-              vj.field_f[var3] = true;
+              OpenGlShaderObject.field_f[var3] = true;
               break;
             }
           }

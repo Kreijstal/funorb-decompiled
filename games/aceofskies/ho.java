@@ -4,7 +4,7 @@
 final class ho {
     static Object field_a;
     static int[] field_d;
-    static rq field_b;
+    static MouseInputHandler field_b;
     static int[] field_c;
     private static String field_z;
 
@@ -25,7 +25,7 @@ final class ho {
     static {
         field_z = "ho.A(";
         field_d = new int[256];
-        field_b = new rq();
+        field_b = new MouseInputHandler();
         field_c = new int[16];
     }
 }

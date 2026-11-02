@@ -3,7 +3,7 @@
  */
 final class um extends PcmStream {
     IntrusiveDeque field_k;
-    static tk field_m;
+    static AudioOutput field_m;
     static boolean field_j;
     static String field_n;
     private MidiPcmStream field_l;
@@ -14,7 +14,7 @@ final class um extends PcmStream {
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           this.field_i.b(param0, param1, param2);
-          ft var6 = (ft) (this.field_k.first(268435455));
+          MidiNote var6 = (MidiNote) (this.field_k.first(268435455));
           while (var6 != null) {
             boolean stackIn_4_0 = this.field_l.a(0, var6);
             boolean decompiledFrameCompleted0 = true;
@@ -35,7 +35,7 @@ final class um extends PcmStream {
                 var6.field_i = var6.field_i - var5;
               }
             }
-            var6 = (ft) (this.field_k.next((byte) 103));
+            var6 = (MidiNote) (this.field_k.next((byte) 103));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -52,19 +52,19 @@ final class um extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, ft param2) {
+    private final void a(int param0, int param1, MidiNote param2) {
         String stackIn_18_2 = null;
         try {
           if (~(4 & this.field_l.field_G[param2.field_m]) != param0 &&
             0 > param2.field_p) {
-            int var4_int = this.field_l.field_m[param2.field_m] / tk.field_f;
+            int var4_int = this.field_l.field_m[param2.field_m] / AudioOutput.field_f;
             int var5 = (var4_int + 1048575 - param2.field_t) / var4_int;
             param2.field_t = var4_int * param1 + param2.field_t & 1048575;
             if (var5 <= param1) {
               if (this.field_l.field_z[param2.field_m] != 0) {
                 param2.field_e = PcmSampleStream.a(param2.field_x, param2.field_e.l(), 0, param2.field_e.g());
                 MidiPcmStream stackIn_8_0 = this.field_l;
-                ft stackIn_8_1 = (ft) (param2);
+                MidiNote stackIn_8_1 = (MidiNote) (param2);
                 boolean stackIn_9_2 = !(param2.field_y.field_n[param2.field_n] >= 0);
                 ((MidiPcmStream) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2, true);
               } else {
@@ -106,7 +106,7 @@ final class um extends PcmStream {
         boolean stackIn_3_0 = ((var3 & 128) != 0);
         sj.field_b = stackIn_3_0;
         km.field_b = var8.readUnsignedByte(-100);
-        pe.field_g = var8.readLong((byte) 118);
+        NodeHashTableIterator.field_g = var8.readLong((byte) 118);
         if (2 == m.field_f) {
           jt.field_t = var8.readUnsignedShort((byte) 0);
           ot.field_a = var8.readUnsignedMedium((byte) -92);
@@ -116,11 +116,11 @@ final class um extends PcmStream {
         }
         boolean stackIn_9_0 = !(param1 != var8.readUnsignedByte(-89));
         boolean var4 = stackIn_9_0;
-        ku.field_g = var8.readNullTerminatedText(param1 - 17884);
+        DirectByteStorage.field_g = var8.readNullTerminatedText(param1 - 17884);
         if (var4) {
           tn.field_t = var8.readNullTerminatedText(-17883);
         } else {
-          tn.field_t = ku.field_g;
+          tn.field_t = DirectByteStorage.field_g;
         }
         if (1 == m.field_f) {
           var8.readUnsignedShort((byte) 0);
@@ -131,7 +131,7 @@ final class um extends PcmStream {
         }
         if (!param0) {
           ep.field_x = ko.a(var8, 80, (byte) -114);
-          ku.field_e = null;
+          DirectByteStorage.field_e = null;
           return new s(param0);
         }
         int var5 = var8.readUnsignedShort((byte) 0);
@@ -143,12 +143,12 @@ final class um extends PcmStream {
           } else {
             stackIn_23_0 = null;
           }
-          ku.field_e = stackIn_23_0;
+          DirectByteStorage.field_e = stackIn_23_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           Throwable decompiledCaughtException = decompiledCaughtParameter0;
           Exception var6 = (Exception) (Object) decompiledCaughtException;
           v.a("CC1", (byte) -52, (Throwable) ((Object) var6));
-          ku.field_e = null;
+          DirectByteStorage.field_e = null;
           ep.field_x = null;
           return new s(param0);
         }
@@ -156,7 +156,7 @@ final class um extends PcmStream {
     }
 
     final PcmStream b() {
-        ft var1 = (ft) (this.field_k.first(268435455));
+        MidiNote var1 = (MidiNote) (this.field_k.first(268435455));
         if (var1 == null) {
           return null;
         }
@@ -169,7 +169,7 @@ final class um extends PcmStream {
     final void a(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_i.a(param0);
-        ft var3 = (ft) (this.field_k.first(268435455));
+        MidiNote var3 = (MidiNote) (this.field_k.first(268435455));
         while (var3 != null) {
           boolean stackIn_4_0 = this.field_l.a(0, var3);
           boolean decompiledFrameCompleted0 = true;
@@ -188,15 +188,15 @@ final class um extends PcmStream {
               var3.field_i = var3.field_i - var2;
             }
           }
-          var3 = (ft) (this.field_k.next((byte) 103));
+          var3 = (MidiNote) (this.field_k.next((byte) 103));
         }
     }
 
     final PcmStream a() {
-        ft var1_ref = null;
+        MidiNote var1_ref = null;
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         do {
-          var1_ref = (ft) (this.field_k.next((byte) 103));
+          var1_ref = (MidiNote) (this.field_k.next((byte) 103));
           if (var1_ref == null) {
             return null;
           }
@@ -219,10 +219,10 @@ final class um extends PcmStream {
           ss.field_t = false;
           uf.field_e = null;
           if (nf.field_a) {
-            ml.field_m.l(88);
+            InstrumentPatch.field_m.l(88);
             return;
           }
-          var1 = un.field_c;
+          var1 = ArchiveNetworkClient.field_c;
           if (var1 > 0) {
             if (var1 == 1) {
               uf.field_e = qk.field_f;
@@ -231,7 +231,7 @@ final class um extends PcmStream {
             }
             uf.field_e = od.a(new CharSequence[]{(CharSequence) ((Object) uf.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_f)}, 3);
           }
-          ml.field_m.h((byte) 127);
+          InstrumentPatch.field_m.h((byte) 127);
           nj.c(98);
           return;
         }
@@ -239,9 +239,9 @@ final class um extends PcmStream {
         ss.field_t = false;
         uf.field_e = null;
         if (nf.field_a) {
-          ml.field_m.l(88);
+          InstrumentPatch.field_m.l(88);
         } else {
-          var1 = un.field_c;
+          var1 = ArchiveNetworkClient.field_c;
           if (var1 > 0) {
             if (var1 == 1) {
               uf.field_e = qk.field_f;
@@ -250,19 +250,19 @@ final class um extends PcmStream {
             }
             uf.field_e = od.a(new CharSequence[]{(CharSequence) ((Object) uf.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_f)}, 3);
           }
-          ml.field_m.h((byte) 127);
+          InstrumentPatch.field_m.h((byte) 127);
           nj.c(98);
         }
     }
 
-    private final void a(ft param0, byte param1, int param2, int param3, int[] param4, int param5) {
+    private final void a(MidiNote param0, byte param1, int param2, int param3, int[] param4, int param5) {
         String stackIn_25_2 = null;
         String stackIn_28_2 = null;
         int var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if ((4 & this.field_l.field_G[param0.field_m]) != 0 &&
             param0.field_p < 0) {
-            int var7_int = this.field_l.field_m[param0.field_m] / tk.field_f;
+            int var7_int = this.field_l.field_m[param0.field_m] / AudioOutput.field_f;
             while (true) {
               int var8 = (-param0.field_t + (var7_int + 1048575)) / var7_int;
               if (var8 > param2) {
@@ -273,7 +273,7 @@ final class um extends PcmStream {
               param2 = param2 - var8;
               param0.field_t = param0.field_t + (var7_int * var8 - 1048576);
               param5 = param5 + var8;
-              int var9 = tk.field_f / 100;
+              int var9 = AudioOutput.field_f / 100;
               int var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;
@@ -282,7 +282,7 @@ final class um extends PcmStream {
               if (this.field_l.field_z[param0.field_m] != 0) {
                 param0.field_e = PcmSampleStream.a(param0.field_x, var11.l(), 0, var11.g());
                 MidiPcmStream stackIn_12_0 = this.field_l;
-                ft stackIn_12_1 = (ft) (param0);
+                MidiNote stackIn_12_1 = (MidiNote) (param0);
                 boolean stackIn_13_2 = !(0 <= param0.field_y.field_n[param0.field_n]);
                 ((MidiPcmStream) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2, true);
                 param0.field_e.d(var9, var11.i());

@@ -39,7 +39,7 @@ final class hp extends eq {
         return false;
     }
 
-    hp(wl param0) {
+    hp(OpenGlRenderer param0) {
         super(param0);
     }
 

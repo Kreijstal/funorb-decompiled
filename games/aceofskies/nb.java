@@ -5,12 +5,12 @@ final class nb extends ka {
     static int[][] field_b;
     static dq field_c;
 
-    final static void a(int param0, wl param1) {
+    final static void a(int param0, OpenGlRenderer param1) {
         try {
-          if (null == wl.field_Kb) {
+          if (null == OpenGlRenderer.field_Kb) {
             od var7 = new od();
             byte[] var19 = var7.a(-959081435, 128, 128, 16);
-            wl.field_Kb = sf.a(false, param0 - 145, var19);
+            OpenGlRenderer.field_Kb = sf.a(false, param0 - 145, var19);
           }
           if (mq.field_e == null) {
             aj var9 = new aj();
@@ -33,12 +33,12 @@ final class nb extends ka {
 
     final static void a(int param0, int param1) {
         if (param0 != 10536) {
-          wl var3 = (wl) null;
-          nb.a(-6, (wl) null);
+          OpenGlRenderer var3 = (OpenGlRenderer) null;
+          nb.a(-6, (OpenGlRenderer) null);
         }
     }
 
-    nb(wl param0) {
+    nb(OpenGlRenderer param0) {
         try {
           hl discarded$0 = new hl((fq) null, 5126, 3, 0);
           hl discarded$1 = new hl((fq) null, 5126, 2, 0);

@@ -28,7 +28,7 @@ final class q extends rt {
         field_l = null;
     }
 
-    q(wl param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
+    q(OpenGlRenderer param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
         super(param0, 34067, param1, 6 * param2 * param2, param3);
         this.field_m = -1;
         this.field_n = -1;

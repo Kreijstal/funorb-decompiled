@@ -42,7 +42,7 @@ final class bg {
           int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             try {
-              String var3 = (String) (fe.a("getcookies", (byte) -108, param0));
+              String var3 = (String) (JavaScriptBridge.a("getcookies", (byte) -108, param0));
               if (param2 != -18) {
                 field_b = -1;
               }

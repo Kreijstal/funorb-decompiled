@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cu extends DualLinkNode implements ws {
-    private wl field_t;
+    private OpenGlRenderer field_t;
     int field_u;
     int field_v;
     private int field_n;
@@ -24,10 +24,10 @@ final class cu extends DualLinkNode implements ws {
 
     final static boolean a(byte param0, int param1, int param2) {
         if (param0 >= 101) {
-          return (wc.a((byte) -101, param1, param2) | dk.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
+          return (wc.a((byte) -101, param1, param2) | DiskCacheWorker.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
         }
         cu.c((byte) 81);
-        return (wc.a((byte) -101, param1, param2) | dk.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
+        return (wc.a((byte) -101, param1, param2) | DiskCacheWorker.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
     }
 
     public final void a(byte param0) {
@@ -68,7 +68,7 @@ final class cu extends DualLinkNode implements ws {
         ClientException.field_d.d(qk.field_e, -30244);
     }
 
-    cu(wl param0, int param1, int param2, int param3) {
+    cu(OpenGlRenderer param0, int param1, int param2, int param3) {
         this.field_n = -1;
         this.field_q = -1;
         try {

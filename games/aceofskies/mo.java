@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mo {
-    private jc field_b;
+    private HardwareOpenGlRenderer field_b;
     int field_d;
     static int[] field_c;
     static w field_a;
 
-    final static io a(int param0, jc param1, vj[] param2) {
+    final static io a(int param0, HardwareOpenGlRenderer param1, OpenGlShaderObject[] param2) {
         String stackIn_30_2 = null;
         String stackIn_33_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -85,7 +85,7 @@ final class mo {
         int var1 = -16 / ((param0 + 33) / 39);
     }
 
-    mo(jc param0, int param1, int param2) {
+    mo(HardwareOpenGlRenderer param0, int param1, int param2) {
         try {
           this.field_d = param2;
           this.field_b = param0;

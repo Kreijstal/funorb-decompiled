@@ -4,7 +4,7 @@
 final class i extends ka implements e {
     long field_nativeid;
 
-    private final native void oa(oa param0);
+    private final native void oa(NativeSoftwareRenderer param0);
 
     public final native void w(boolean param0);
 
@@ -14,7 +14,7 @@ final class i extends ka implements e {
         }
     }
 
-    i(oa param0) {
+    i(NativeSoftwareRenderer param0) {
         this.oa(param0);
     }
 }

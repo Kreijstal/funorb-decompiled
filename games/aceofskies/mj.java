@@ -8,7 +8,7 @@ final class mj {
     private int[] field_d;
     static boolean field_b;
     private long field_e;
-    static rk field_a;
+    static SystemTaskService field_a;
 
     final void a(boolean param0, vu param1) {
         GraphicsRenderer var4 = param1.field_c;

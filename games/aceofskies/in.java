@@ -5,7 +5,7 @@ final class in {
     static int[] field_b;
     long field_d;
     static RenderSprite[] scoreDigitSprites;
-    private wl field_a;
+    private OpenGlRenderer field_a;
 
     public static void a(boolean param0) {
         if (!param0) {
@@ -29,7 +29,7 @@ final class in {
         return var2;
     }
 
-    in(wl param0, long param1, aq[] param2) {
+    in(OpenGlRenderer param0, long param1, aq[] param2) {
         try {
           this.field_a = param0;
           this.field_d = param1;
@@ -48,7 +48,7 @@ final class in {
             return stackIn_4_0;
           }
           if (255 < var2_int) {
-            w stackIn_8_0 = ei.field_d;
+            w stackIn_8_0 = GzipInflater.field_d;
             return stackIn_8_0;
           }
           String[] var3 = ee.a((byte) 10, '.', param1);

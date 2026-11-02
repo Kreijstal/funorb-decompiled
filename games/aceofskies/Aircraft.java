@@ -376,7 +376,7 @@ final class Aircraft extends FlightBody {
         try {
           sn.a(param9, param7, 24097, param2);
           hh.a(param6, param18, -92, param20, param5);
-          mb.a(param8, param15, (byte) 121);
+          SoftCacheReference.a(param8, param15, (byte) 121);
           int var21_int = -4 / ((46 - param10) / 53);
           ef.a(119, param17, param4, param16, param13, param0);
           HighscoreQuery.a(param11, 25345, param3, param19);
@@ -431,7 +431,7 @@ final class Aircraft extends FlightBody {
             if (target.speed * 4.0 < (double)aimLead) {
               aimLead = 4 * (int)target.speed;
             }
-            if (this.definition != ro.field_u) {
+            if (this.definition != OpenGlIndexBuffer.field_u) {
               if (this.weaponHeat < 150) {
                 stackIn_16_1 = ht.field_i;
               } else {
@@ -448,20 +448,20 @@ final class Aircraft extends FlightBody {
               }
             }
             int targetLeadDistance = 15 * aimLead - 128;
-            if (this.definition == ro.field_u) {
+            if (this.definition == OpenGlIndexBuffer.field_u) {
               targetLeadDistance = 0;
             }
             target.moveForward((double)targetLeadDistance, 128);
             this.moveForward(20.0, obfuscationGuard ^ 203);
-            double forwardDistanceSquared = lc.a(this.position, false, target.position);
+            double forwardDistanceSquared = IterableNodeHashTable.a(this.position, false, target.position);
             this.moveForward(-20.0, 128);
             this.turn(-10.0, (byte) 25);
             this.moveForward(20.0, 128);
-            double leftDistanceSquared = lc.a(this.position, false, target.position);
+            double leftDistanceSquared = IterableNodeHashTable.a(this.position, false, target.position);
             this.moveForward(-20.0, obfuscationGuard ^ 203);
             this.turn(20.0, (byte) 25);
             this.moveForward(20.0, obfuscationGuard + 53);
-            double rightDistanceSquared = lc.a(this.position, false, target.position);
+            double rightDistanceSquared = IterableNodeHashTable.a(this.position, false, target.position);
             this.moveForward(-20.0, obfuscationGuard + 53);
             this.turn(-10.0, (byte) 25);
             double turnRate = this.definition.turnRate;
@@ -485,7 +485,7 @@ final class Aircraft extends FlightBody {
             if (obfuscationGuard != 75) {
               return;
             }
-            if (this.definition != ro.field_u) {
+            if (this.definition != OpenGlIndexBuffer.field_u) {
               int var14_int = turnDirection;
               if (var14_int == 1) {
                 this.bankOffset = this.bankOffset + 2;
@@ -504,7 +504,7 @@ final class Aircraft extends FlightBody {
               if (100 <= this.weaponHeat) {
                 return;
               }
-              if (ro.field_u == this.definition) {
+              if (OpenGlIndexBuffer.field_u == this.definition) {
                 IntrusiveDeque.field_a.setPolar256(10.0, (double)this.headingOffset + this.heading, 121);
                 rc.field_d.setFrom(this.position, true);
                 rc.field_d.subtract(target.position, obfuscationGuard ^ -30562);

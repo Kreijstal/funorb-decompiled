@@ -89,7 +89,7 @@ final class aj extends qd {
         field_w[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = 8 * (var0 - 1);
-            field_w[var0] = un.a(un.a(un.a(un.a(NetworkGameClient.a(4278190080L, field_t[4][var1 + 4]), un.a(un.a(un.a(NetworkGameClient.a(-72057594037927936L, field_t[0][var1]), NetworkGameClient.a(71776119061217280L, field_t[1][var1 + 1])), NetworkGameClient.a(field_t[2][2 + var1], 280375465082880L)), NetworkGameClient.a(1095216660480L, field_t[3][var1 + 3]))), NetworkGameClient.a(field_t[5][5 + var1], 16711680L)), NetworkGameClient.a(65280L, field_t[6][6 + var1])), NetworkGameClient.a(255L, field_t[7][var1 + 7]));
+            field_w[var0] = ArchiveNetworkClient.a(ArchiveNetworkClient.a(ArchiveNetworkClient.a(ArchiveNetworkClient.a(NetworkGameClient.a(4278190080L, field_t[4][var1 + 4]), ArchiveNetworkClient.a(ArchiveNetworkClient.a(ArchiveNetworkClient.a(NetworkGameClient.a(-72057594037927936L, field_t[0][var1]), NetworkGameClient.a(71776119061217280L, field_t[1][var1 + 1])), NetworkGameClient.a(field_t[2][2 + var1], 280375465082880L)), NetworkGameClient.a(1095216660480L, field_t[3][var1 + 3]))), NetworkGameClient.a(field_t[5][5 + var1], 16711680L)), NetworkGameClient.a(65280L, field_t[6][6 + var1])), NetworkGameClient.a(255L, field_t[7][var1 + 7]));
         }
     }
 }

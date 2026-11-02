@@ -36,11 +36,11 @@ final class HudMessage extends IntrusiveNode {
         if (this.fadeInTicks > this.ageTicks) {
           int var2 = (this.ageTicks << 8) / this.fadeInTicks;
           int var3 = (-this.ageTicks + this.fadeInTicks) * 80 / this.fadeInTicks;
-          PacketBuffer.gameFont.drawCenteredText(122, var2 << 24 | this.colour, -1, var3 + (-50 + gp.field_w), 320, this.text);
+          PacketBuffer.gameFont.drawCenteredText(122, var2 << 24 | this.colour, -1, var3 + (-50 + NetworkArchiveRequest.field_w), 320, this.text);
           return;
         }
         if (this.ageTicks < this.fadeInTicks + this.holdTicks) {
-          PacketBuffer.gameFont.drawCenteredText(102, this.colour | -16777216, -1, gp.field_w - 50, 320, this.text);
+          PacketBuffer.gameFont.drawCenteredText(102, this.colour | -16777216, -1, NetworkArchiveRequest.field_w - 50, 320, this.text);
           return;
         }
         int var2Lifetime1 = this.ageTicks - this.fadeInTicks - this.holdTicks;
@@ -49,7 +49,7 @@ final class HudMessage extends IntrusiveNode {
           return;
         }
         int var4 = 80 * var2Lifetime1 / this.fadeOutTicks;
-        PacketBuffer.gameFont.drawCenteredText(99, this.colour | var3Lifetime1 << 24, -1, exitBottomOffset + (gp.field_w - var4), sh.field_u >> 1, this.text);
+        PacketBuffer.gameFont.drawCenteredText(99, this.colour | var3Lifetime1 << 24, -1, exitBottomOffset + (NetworkArchiveRequest.field_w - var4), sh.field_u >> 1, this.text);
     }
 
     HudMessage(String text, int colour) {

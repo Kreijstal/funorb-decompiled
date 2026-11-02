@@ -93,7 +93,7 @@ final class s {
     }
 
     s(boolean param0) {
-        this.field_c = pe.field_g;
+        this.field_c = NodeHashTableIterator.field_g;
         this.field_j = ep.field_x;
         this.field_g = tn.field_t;
         this.field_a = jt.field_t;
@@ -101,7 +101,7 @@ final class s {
         this.field_e = sj.field_b;
         this.field_l = km.field_b;
         if (param0) {
-          this.field_k = ku.field_e;
+          this.field_k = DirectByteStorage.field_e;
         } else {
           this.field_k = null;
         }

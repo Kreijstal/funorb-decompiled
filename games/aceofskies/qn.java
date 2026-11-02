@@ -16,7 +16,7 @@ final class qn {
     }
 
     final static String b(int param0) {
-        if (2 > bl.field_c) {
+        if (2 > SectorCacheStore.field_c) {
           return ji.field_a;
         }
         if (ij.field_h != null) {

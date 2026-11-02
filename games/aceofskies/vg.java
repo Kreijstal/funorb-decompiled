@@ -8,7 +8,7 @@ final class vg extends pp {
     private boolean field_m;
     private int field_k;
     private int field_g;
-    static ei field_h;
+    static GzipInflater field_h;
     private String field_l;
     private int field_d;
     private int field_c;
@@ -186,7 +186,7 @@ final class vg extends pp {
           this.field_f = param1;
           this.field_c = param7;
           if (param3 != 127395681) {
-            field_h = (ei) null;
+            field_h = (GzipInflater) null;
           }
           this.field_m = false;
           this.field_l = param0;
@@ -277,7 +277,7 @@ final class vg extends pp {
     }
 
     static {
-        field_h = new ei();
+        field_h = new GzipInflater();
         field_j = new Hashtable();
         field_e = new int[256];
         for (int var1 = 0; var1 < 256; var1++) {

@@ -4,7 +4,7 @@
 final class lu {
     private wj field_b;
     static String field_a;
-    private wl field_d;
+    private OpenGlRenderer field_d;
     private IntrusiveDeque field_c;
 
     final void a(int param0) {
@@ -39,7 +39,7 @@ final class lu {
         return this.field_b != null ? true : false;
     }
 
-    lu(wl param0) {
+    lu(OpenGlRenderer param0) {
         this.field_c = new IntrusiveDeque();
         try {
           this.field_d = param0;

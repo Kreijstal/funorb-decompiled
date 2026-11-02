@@ -3,8 +3,8 @@
  */
 abstract class eq extends IntrusiveNode {
     private boolean field_f;
-    wl field_g;
-    static gh field_e;
+    OpenGlRenderer field_g;
+    static BufferedRandomAccessFile field_e;
 
     final static void a(byte param0, int param1) {
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -17,10 +17,10 @@ abstract class eq extends IntrusiveNode {
           if (param0 < 107) {
             eq.a((byte) 89, -36);
           }
-          oh var5 = (oh) (fg.field_r.first(268435455));
+          oh var5 = (oh) (CachedArchiveProvider.field_r.first(268435455));
           while (var5 != null) {
             ae.a(var5, param1, (byte) -15);
-            var5 = (oh) (fg.field_r.next((byte) 103));
+            var5 = (oh) (CachedArchiveProvider.field_r.next((byte) 103));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -37,7 +37,7 @@ abstract class eq extends IntrusiveNode {
         return this.field_f;
     }
 
-    eq(wl param0) {
+    eq(OpenGlRenderer param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
@@ -50,7 +50,7 @@ abstract class eq extends IntrusiveNode {
     public static void d(int param0) {
         field_e = null;
         if (param0 >= -36) {
-          field_e = (gh) null;
+          field_e = (BufferedRandomAccessFile) null;
         }
     }
 

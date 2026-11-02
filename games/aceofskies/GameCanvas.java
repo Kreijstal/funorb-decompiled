@@ -22,7 +22,7 @@ final class GameCanvas extends java.awt.Canvas {
             String var3 = (String) null;
             GameCanvas.a(true, (String) null);
           }
-          ua.a(ec.field_o, false, (byte) 82);
+          OpenGlBuffer.a(ec.field_o, false, (byte) 82);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

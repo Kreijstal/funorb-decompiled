@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae extends sk {
+final class ae extends RenderEffect {
     static boolean field_f;
     static String field_g;
     static String[] upgradeLabels;
@@ -29,8 +29,8 @@ final class ae extends sk {
 
     final void a(int param0, int param1, int param2) {
         if (param0 != 1786747298) {
-          jj var5 = (jj) null;
-          this.a(-40, -118, (jj) null);
+          HardwareTexture var5 = (HardwareTexture) null;
+          this.a(-40, -118, (HardwareTexture) null);
         }
     }
 
@@ -57,16 +57,16 @@ final class ae extends sk {
         return false;
     }
 
-    ae(bf param0) {
+    ae(HardwareRenderer param0) {
         super(param0);
     }
 
-    final void a(int param0, int param1, jj param2) {
+    final void a(int param0, int param1, HardwareTexture param2) {
         try {
           this.field_b.a(param2, -9135);
           if (param1 < 66) {
-            jj var5 = (jj) null;
-            this.a(-11, 5, (jj) null);
+            HardwareTexture var5 = (HardwareTexture) null;
+            this.a(-11, 5, (HardwareTexture) null);
           }
           this.field_b.b(param0, false);
         } catch (RuntimeException runtimeException) {
@@ -342,7 +342,7 @@ final class ae extends sk {
         return (byte) var2;
     }
 
-    final static void a(int param0, PacketBuffer param1, boolean param2, rk param3) {
+    final static void a(int param0, PacketBuffer param1, boolean param2, SystemTaskService param3) {
         try {
           String stackIn_40_2 = null;
           String stackIn_43_2 = null;
@@ -359,9 +359,9 @@ final class ae extends sk {
             var18.field_k = new byte[var18.field_g][][];
             var18.field_l = new int[var18.field_g];
             var18.field_e = new int[var18.field_g];
-            var18.field_h = new en[var18.field_g];
+            var18.field_h = new SystemTask[var18.field_g];
             var18.field_i = new int[var18.field_g];
-            var18.field_f = new en[var18.field_g];
+            var18.field_f = new SystemTask[var18.field_g];
             for (int var5 = 0; var18.field_g > var5; var5++) {
               try {
                 int var6_int = param1.readUnsignedByte(-74);
@@ -378,7 +378,7 @@ final class ae extends sk {
                   }
                   var18.field_l[var5] = var6_int;
                   var18.field_i[var5] = var9;
-                  var18.field_f[var5] = param3.a(var15, pe.a(var16, 1), 9);
+                  var18.field_f[var5] = param3.a(var15, NodeHashTableIterator.a(var16, 1), 9);
                 } else if (var6_int == 3 ||
                   var6_int == 4) {
                   String var20 = param1.readNullTerminatedText(-17883);
@@ -404,10 +404,10 @@ final class ae extends sk {
                   int var17 = 0;
                   int var13Lifetime1 = var17;
                   while (var9 > var17) {
-                    var12[var17] = pe.a(var10[var17], 1);
+                    var12[var17] = NodeHashTableIterator.a(var10[var17], 1);
                     var17++;
                   }
-                  var18.field_h[var5] = param3.a(pe.a(var20, 1), var12, var21, true);
+                  var18.field_h[var5] = param3.a(NodeHashTableIterator.a(var20, 1), var12, var21, true);
                   var18.field_k[var5] = var22;
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {

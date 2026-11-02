@@ -22,18 +22,18 @@ final class wo extends IntrusiveNode {
           if (IntKeyLookup.incomingPacket.position >= param0) {
             return true;
           }
-          if (null == ft.field_l) {
+          if (null == MidiNote.field_l) {
             return false;
           }
           if (!param1) {
             field_l = (char[]) null;
           }
-          int var2_int = ft.field_l.b(-118);
+          int var2_int = MidiNote.field_l.b(-118);
           if (var2_int > 0) {
             if (!(var2_int <= param0 - IntKeyLookup.incomingPacket.position)) {
               var2_int = param0 - IntKeyLookup.incomingPacket.position;
             }
-            ft.field_l.a(IntKeyLookup.incomingPacket.position, var2_int, IntKeyLookup.incomingPacket.payload, true);
+            MidiNote.field_l.a(IntKeyLookup.incomingPacket.position, var2_int, IntKeyLookup.incomingPacket.payload, true);
             ff.field_b = kh.a(-127);
             IntKeyLookup.incomingPacket.position = IntKeyLookup.incomingPacket.position + var2_int;
             if (!(IntKeyLookup.incomingPacket.position >= param0)) {

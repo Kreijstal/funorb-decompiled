@@ -42,13 +42,13 @@ final class im extends za {
     final static boolean a(boolean param0) {
         if (!param0) {
           im.a(false);
-          if (bl.field_c < 20) {
+          if (SectorCacheStore.field_c < 20) {
             return true;
           }
           if (!jr.a((byte) 32)) {
             return true;
           }
-          if (un.field_c <= 0) {
+          if (ArchiveNetworkClient.field_c <= 0) {
             return false;
           }
           if (!ur.b(-111)) {
@@ -56,13 +56,13 @@ final class im extends za {
           }
           return false;
         }
-        if (bl.field_c < 20) {
+        if (SectorCacheStore.field_c < 20) {
           return true;
         }
         if (!jr.a((byte) 32)) {
           return true;
         }
-        if (un.field_c <= 0) {
+        if (ArchiveNetworkClient.field_c <= 0) {
           return false;
         }
         if (!ur.b(-111)) {

@@ -78,7 +78,7 @@ final class HighscoreNameEntry {
             return (MonochromeBitmapFont) (stackIn_2_0);
           }
           MonochromeBitmapFont var2 = new MonochromeBitmapFont(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, fk.field_a);
-          kf.f(1);
+          OpenGlUnderwaterEffect.f(1);
           if (param1 != 544) {
             field_a = false;
           }
@@ -110,7 +110,7 @@ final class HighscoreNameEntry {
           }
           var1[var2] = new Sprite(pu.field_a, cc.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var5);
         }
-        kf.f(1);
+        OpenGlUnderwaterEffect.f(1);
         return var1;
     }
 

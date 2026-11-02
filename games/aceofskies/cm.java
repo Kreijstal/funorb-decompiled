@@ -247,7 +247,7 @@ final class cm extends jm {
           return iq.field_h;
         }
         if (param0 != -1) {
-          return lc.a(true, false, true, (byte) -65, 1, param0);
+          return IterableNodeHashTable.a(true, false, true, (byte) -65, 1, param0);
         }
         return iq.field_h;
     }

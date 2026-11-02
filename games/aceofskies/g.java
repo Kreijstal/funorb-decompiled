@@ -89,7 +89,7 @@ final class g extends hh {
         }
     }
 
-    g(wl param0) {
+    g(OpenGlRenderer param0) {
         super(param0);
         boolean stackIn_8_1 = false;
         boolean stackIn_11_2 = false;
@@ -198,8 +198,8 @@ final class g extends hh {
         } else {
           jaggl.OpenGL.glBindProgramARB(34336, this.field_a.field_E == 2147483647 ? this.field_m.field_a : this.field_n.field_a);
         }
-        var2.a((float)this.field_a.field_E, 0.0f, ua.field_c, -1.0f, -99, 0.0f);
-        jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, ua.field_c[0], ua.field_c[1], ua.field_c[2], ua.field_c[3]);
+        var2.a((float)this.field_a.field_E, 0.0f, OpenGlBuffer.field_c, -1.0f, -99, 0.0f);
+        jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, OpenGlBuffer.field_c[0], OpenGlBuffer.field_c[1], OpenGlBuffer.field_c[2], OpenGlBuffer.field_c[3]);
         int var3 = 50 % ((-33 - param0) / 55);
         jaggl.OpenGL.glEnable(34336);
         this.field_e = true;

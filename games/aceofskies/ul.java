@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ul extends sl {
-    static un field_r;
+    static ArchiveNetworkClient field_r;
     static String field_s;
     static String field_t;
 

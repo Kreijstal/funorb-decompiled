@@ -39,7 +39,7 @@ abstract class za extends IntrusiveNode {
 
     final static void registerMenuLayout(int rowSpacing, int[] actions, int top, int left, int screenId, int right, byte obfuscationGuard) {
         try {
-          ua.menuActions[screenId] = actions;
+          OpenGlBuffer.menuActions[screenId] = actions;
           dt.menuLeft[screenId] = left;
           int var7_int = -99 % ((24 - obfuscationGuard) / 63);
           ClientException.menuRight[screenId] = right;

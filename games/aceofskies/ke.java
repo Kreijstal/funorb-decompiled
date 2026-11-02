@@ -17,13 +17,13 @@ final class ke {
         }
     }
 
-    final static void a(int param0, rk param1, java.awt.Frame param2) {
+    final static void a(int param0, SystemTaskService param1, java.awt.Frame param2) {
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           while (true) {
-            en var3 = param1.a(param2, param0 + 15850);
+            SystemTask var3 = param1.a(param2, param0 + 15850);
             while (var3.field_a == 0) {
               IntrusiveNode.a(10L, false);
             }
@@ -39,7 +39,7 @@ final class ke {
             return;
           }
           java.awt.Frame var5 = (java.awt.Frame) null;
-          ke.a(32, (rk) null, (java.awt.Frame) null);
+          ke.a(32, (SystemTaskService) null, (java.awt.Frame) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

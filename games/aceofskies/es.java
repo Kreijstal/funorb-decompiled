@@ -101,7 +101,7 @@ final class es {
           String stackIn_26_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            Class var3 = (Class) (sk.field_e.get(param2));
+            Class var3 = (Class) (RenderEffect.field_e.get(param2));
             if (var3 != null) {
               if (var3.getClassLoader() == param0.getClassLoader()) {
                 return true;
@@ -128,13 +128,13 @@ final class es {
               var7.invoke((Object) (var8), new Object[]{Boolean.TRUE});
               var8.invoke((Object) (Runtime.getRuntime()), new Object[]{param0, var9.getPath()});
               var7.invoke((Object) (var8), new Object[]{Boolean.FALSE});
-              sk.field_e.put(param2, param0);
+              RenderEffect.field_e.put(param2, param0);
               return true;
             } catch (java.lang.NoSuchMethodException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               NoSuchMethodException var5_ref = (NoSuchMethodException) (Object) decompiledCaughtException;
               System.load(((File) (var4)).getPath());
-              sk.field_e.put(param2, ln.class);
+              RenderEffect.field_e.put(param2, ln.class);
               return true;
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

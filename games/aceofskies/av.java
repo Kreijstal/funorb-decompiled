@@ -7,7 +7,7 @@ final class av {
     static ej field_a;
 
     final static boolean a(boolean param0) {
-        if (ua.menuActions[0] != null) {
+        if (OpenGlBuffer.menuActions[0] != null) {
           return false;
         }
         za.registerMenuLayout(34, new int[]{0, 3, 22, 2, 14, 11}, 220, 210, 0, 430, (byte) -64);
@@ -23,8 +23,8 @@ final class av {
         if (oq.field_K < var1) {
           oq.field_K = var1;
         }
-        int var2 = 4 + dp.titleFontMetrics.field_a + dp.titleFontMetrics.maxDescent;
-        bk.menuTop[6] = var2 + 200 + (dp.titleFontMetrics.maxAscent + dp.titleFontMetrics.maxDescent);
+        int var2 = 4 + ImageProducerRasterBuffer.titleFontMetrics.field_a + ImageProducerRasterBuffer.titleFontMetrics.maxDescent;
+        bk.menuTop[6] = var2 + 200 + (ImageProducerRasterBuffer.titleFontMetrics.maxAscent + ImageProducerRasterBuffer.titleFontMetrics.maxDescent);
         if (!param0) {
           av.a((byte) -119);
         }

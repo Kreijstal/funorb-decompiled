@@ -15,7 +15,7 @@ final class vl {
           pg.a(ci.field_f, 116);
           ic.a(0);
           to.h(param0 ^ -26318);
-          bl.c(-18535);
+          SectorCacheStore.c(-18535);
           if (je.a(false)) {
             q.outgoingPacket.writeCipheredOpcode(54, 1);
             fr.a(param0 + 26270, 0);
@@ -27,7 +27,7 @@ final class vl {
         }
         ic.a(0);
         to.h(param0 ^ -26318);
-        bl.c(-18535);
+        SectorCacheStore.c(-18535);
         if (!je.a(false)) {
           te.b(true);
           return;

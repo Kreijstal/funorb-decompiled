@@ -4,7 +4,7 @@
 final class km {
     private ResourceArchive field_c;
     static int field_b;
-    private gq field_a;
+    private WeightedObjectCache field_a;
     private ResourceArchive field_d;
 
     final static int a(int param0) {
@@ -20,7 +20,7 @@ final class km {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           try {
-            if (!rk.field_f.startsWith("win")) {
+            if (!SystemTaskService.field_f.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&
