@@ -5,7 +5,7 @@ final class jl extends bj {
     static int[] field_s;
     private Object field_t;
     static cg field_v;
-    static uc field_u;
+    static MouseWheelInput field_u;
 
     final Object d(byte param0) {
         if (param0 < 49) {
@@ -36,7 +36,7 @@ final class jl extends bj {
         try {
           this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class jl extends bj {
           var2_int = param0.length;
           var3 = new byte[var2_int];
           if (param1 != 45) {
-            field_u = (uc) null;
+            field_u = (MouseWheelInput) null;
           }
           gp.a(param0, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
@@ -68,7 +68,7 @@ final class jl extends bj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

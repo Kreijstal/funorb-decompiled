@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qp {
-    static vn[] field_c;
+    static Sprite[] field_c;
     static String field_a;
     static int[] field_b;
 
@@ -32,7 +32,7 @@ final class qp {
           return mm.field_l;
         }
         if (var2 == 2) {
-          return ah.field_bb;
+          return Human.field_bb;
         }
         if (var2 == 3) {
           return cl.field_a;

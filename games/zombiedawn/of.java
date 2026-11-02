@@ -15,7 +15,7 @@ final class of {
     int field_p;
     io field_g;
     io field_a;
-    rb field_c;
+    Font field_c;
     io field_n;
     io field_s;
     private int field_j;
@@ -24,14 +24,14 @@ final class of {
     int field_i;
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
-        g.$cfr$intArgs$a$3aedf8649552(param3, 99, param1, param4, param0);
+        Mover.$cfr$intArgs$a$3aedf8649552(param3, 99, param1, param4, param0);
         if (param2 > -60) {
           this.field_k = 55;
         }
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
-        bi.e(param3, param4, param5, param0, param1);
+        Rasterizer.e(param3, param4, param5, param0, param1);
         if (param2 != -14) {
           this.field_f = 122;
         }
@@ -71,7 +71,7 @@ final class of {
             stackIn_9_0 = fg.field_m;
             return stackIn_9_0;
           }
-          var3 = de.a('.', param0, -124);
+          var3 = PacketBuffer.split('.', param0, -124);
           if (2 > var3.length) {
             stackIn_13_0 = bg.field_l;
             return stackIn_13_0;
@@ -84,7 +84,7 @@ final class of {
               return stackIn_21_0;
             }
             var6 = var4[var5];
-            var7 = tg.a(-126, var6);
+            var7 = GameKeyHandler.a(-126, var6);
             if (var7 == null) {
               var5++;
               continue;
@@ -103,7 +103,7 @@ final class of {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -118,27 +118,27 @@ final class of {
         int var3Lifetime1;
         var4 = ZombieDawn.field_J;
         try {
-          if (vo.field_a != null &&
-            vo.field_a[0] != null) {
-            var1_int = vo.field_a[0].field_w;
-            vo.field_a[0].e(0, 0);
-            vo.field_a[1].e(-var1_int + bd.field_e, 0);
-            vo.field_a[2].e(0, nh.field_P - var1_int);
-            vo.field_a[3].e(-var1_int + bd.field_e, -var1_int + nh.field_P);
-            g.$cfr$intArgs$a$3aedf8649552(0, 99, -var1_int + bd.field_e, nh.field_P, var1_int);
+          if (IntrusiveDeque.field_a != null &&
+            IntrusiveDeque.field_a[0] != null) {
+            var1_int = IntrusiveDeque.field_a[0].field_w;
+            IntrusiveDeque.field_a[0].drawWithOffsets(0, 0);
+            IntrusiveDeque.field_a[1].drawWithOffsets(-var1_int + bd.field_e, 0);
+            IntrusiveDeque.field_a[2].drawWithOffsets(0, nh.field_P - var1_int);
+            IntrusiveDeque.field_a[3].drawWithOffsets(-var1_int + bd.field_e, -var1_int + nh.field_P);
+            Mover.$cfr$intArgs$a$3aedf8649552(0, 99, -var1_int + bd.field_e, nh.field_P, var1_int);
             if (param0 != 11690) {
               return;
             }
             var3 = nh.field_P - var1_int;
-            for (var2 = var1_int; var2 < bi.field_b; var2 = var2 + ch.field_a.field_w) {
-              ch.field_a.e(var2, 0);
+            for (var2 = var1_int; var2 < Rasterizer.clipRight; var2 = var2 + ch.field_a.field_w) {
+              ch.field_a.drawWithOffsets(var2, 0);
               ch.field_a.f(var2, var3);
             }
-            bi.f(0, var1_int, bd.field_e, nh.field_P - var1_int);
+            Rasterizer.setClip(0, var1_int, bd.field_e, nh.field_P - var1_int);
             var2Lifetime1 = -var1_int + bd.field_e;
-            for (var3Lifetime1 = var1_int; bi.field_d > var3Lifetime1; var3Lifetime1 = var3Lifetime1 + hi.field_x.field_t) {
-              hi.field_x.e(0, var3Lifetime1);
-              hi.field_x.c(var2Lifetime1, var3Lifetime1);
+            for (var3Lifetime1 = var1_int; Rasterizer.clipBottom > var3Lifetime1; var3Lifetime1 = var3Lifetime1 + GameWorld.field_x.field_t) {
+              GameWorld.field_x.drawWithOffsets(0, var3Lifetime1);
+              GameWorld.field_x.drawMirrored(var2Lifetime1, var3Lifetime1);
             }
             pa.a(-21189);
             return;
@@ -147,7 +147,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "of.F(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "of.F(" + param0 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class of {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -198,16 +198,16 @@ final class of {
             this.a(60, -58, (byte) 14, 69, -115);
           }
           var7 = param1;
-          if (bi.field_f < 6 + (var5_int + var7)) {
-            var7 = -6 + (-var5_int + bi.field_f);
+          if (Rasterizer.width < 6 + (var5_int + var7)) {
+            var7 = -6 + (-var5_int + Rasterizer.width);
           }
           var8 = param2 - (this.field_c.field_w - 32);
-          if (bi.field_a < var8 + var6 + 6) {
-            var8 = -6 + (-var6 + bi.field_a);
+          if (Rasterizer.height < var8 + var6 + 6) {
+            var8 = -6 + (-var6 + Rasterizer.height);
           }
-          bi.c(var7, var8, 6 + var5_int, 6 + var6, this.field_j);
-          bi.b(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_k);
-          this.field_c.c(param0, var7 + 3, this.field_c.field_w + 3 + var8, this.field_j, -1);
+          Rasterizer.drawRectOutline(var7, var8, 6 + var5_int, 6 + var6, this.field_j);
+          Rasterizer.fillRect(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_k);
+          this.field_c.drawString(param0, var7 + 3, this.field_c.field_w + 3 + var8, this.field_j, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -219,14 +219,14 @@ final class of {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, rb param1) {
+    final void a(int param0, Font param1) {
         vf var17 = null;
         qo var4 = null;
-        vn[] var5 = null;
+        Sprite[] var5 = null;
         cd var16 = null;
         cd var18 = null;
         int var7_int = 0;
@@ -235,12 +235,12 @@ final class of {
         t discarded$0 = null;
         el discarded$1 = null;
         qo var8 = null;
-        vn[] var9 = null;
-        vn[] var10 = null;
-        vn dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         qo var11 = null;
         qo var12 = null;
-        vn var13 = null;
+        Sprite var13 = null;
         qo var14 = null;
         qo var19 = null;
         int var15 = ZombieDawn.field_J;
@@ -266,13 +266,13 @@ final class of {
           var4.a((byte) 73, 0).b((byte) -21, 15658734).a(tb.c(10066329, 8947848, -2967, 7829367), param0 ^ 37);
           var4.a((byte) 73, 1).a(tb.c(10066329, 11184810, -2967, 13421772), 33);
           var4.a((byte) 73, 3).a(tb.c(7829367, 8947848, param0 - 2971, 10066329), param0 ^ 37).a((byte) 126, 1).a(1, (byte) 57);
-          var5 = new vn[9];
+          var5 = new Sprite[9];
           var16 = new cd(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_z.length > var7_int; var7_int++) {
             var16.field_z[var7_int] = 1077952576;
           }
-          var5[4] = (vn) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) 73, 4).a(true, (byte) 74).a(var5, 33);
           var4.a((byte) 73, 5).a(ab.a(0, (byte) -36, 0, 0, 65793), 33).a(true, (byte) -113).b((byte) -21, -1);
           this.field_a = (io) ((Object) var4);
@@ -290,10 +290,10 @@ final class of {
           var8.a((byte) 73, 0).a(tb.c(7829367, 15658734, param0 ^ -2963, 10066329), param0 + 29).b((byte) -21, 1118481).a(-1, param0 ^ -107);
           var8.a((byte) 73, param0).a(true, (byte) 72).a(var5, param0 + 29);
           this.field_b = (io) ((Object) var8);
-          var9 = new vn[9];
-          var10 = new vn[9];
-          var9[4] = new vn(2, 1);
-          var10[4] = new vn(1, 2);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_z = new int[]{6710886, 7829367};
           var10[4].field_z = new int[]{6710886, 7829367};
@@ -303,7 +303,7 @@ final class of {
           var12.a(1, var10, 0);
           this.field_m = (io) ((Object) var4);
           this.field_s = (io) ((Object) var12);
-          var13 = new vn(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           this.field_p = 10;
           var14 = new qo(var4, true);
@@ -318,7 +318,7 @@ final class of {
           var19 = new qo(var4, true);
           var19.a(var13, 0);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "of.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "of.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -357,7 +357,7 @@ final class of {
           if (var7 == -1) {
             var7 = this.field_c.field_I + this.field_c.field_x;
           }
-          var8 = bi.field_f >> 2;
+          var8 = Rasterizer.width >> 2;
           var9 = this.field_c.b(param1);
           var10 = this.field_c.field_I + this.field_c.field_x;
           var11 = 1;
@@ -383,15 +383,15 @@ final class of {
             }
           }
           var12 = param0;
-          if (var5_int + (var9 + var12) > bi.field_f) {
-            var12 = -var9 + bi.field_f - var5_int;
+          if (var5_int + (var9 + var12) > Rasterizer.width) {
+            var12 = -var9 + Rasterizer.width - var5_int;
           }
           var13Lifetime1 = -this.field_c.field_w + (param2 + 32);
-          if (bi.field_a < var13Lifetime1 - (-var10 - var6)) {
+          if (Rasterizer.height < var13Lifetime1 - (-var10 - var6)) {
             var13Lifetime1 = -var6 - var10 + param2;
           }
-          bi.c(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_i);
-          bi.b(var12 + 1, var13Lifetime1 + 1, -2 + var9 + var5_int, var10 + var6 - 2, this.field_k);
+          Rasterizer.drawRectOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_i);
+          Rasterizer.fillRect(var12 + 1, var13Lifetime1 + 1, -2 + var9 + var5_int, var10 + var6 - 2, this.field_k);
           this.field_c.a(param1, var12 + this.field_r, this.field_q + var13Lifetime1, var9, var10, this.field_j, -1, 0, param3, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -404,12 +404,12 @@ final class of {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
-        bi.a(param3, param0, param2, param1, param6, param4);
+        Rasterizer.a(param3, param0, param2, param1, param6, param4);
         if (param5 > -88) {
           String var9 = (String) null;
           of.a((String) null, -19);

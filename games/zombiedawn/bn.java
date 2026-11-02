@@ -21,7 +21,7 @@ class bn extends ll {
             field_c = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "bn.J(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "bn.J(" + param0 + ')');
         }
     }
 
@@ -61,11 +61,11 @@ class bn extends ll {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, dj param1) {
+    final static void a(int param0, Js5Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2595_0;
             StringBuilder stackIn_2595_1;
@@ -76,9 +76,9 @@ class bn extends ll {
             int var3;
             int var4;
             int param0;
-            dj param1;
+            Js5Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, dj initialParam1) {
+            $CfrPartitionedBody(int initialParam0, Js5Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2595_0 = null;
@@ -130,7 +130,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_unable", 0);
                 if (var2 != null) {
-                  wk.field_z = gg.a(var2, (byte) 56);
+                  Camera.field_z = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_ineligible", 0);
                 if (var2 != null) {
@@ -166,7 +166,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("ticketing_gotowebsite", 0);
                 if (null != var2) {
-                  le.field_e = gg.a(var2, (byte) 56);
+                  IntrusiveNode.field_e = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("ticketing_waitingformessages", 0);
                 if (null != var2) {
@@ -1070,7 +1070,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("pleaselogin_member", 0);
                 if (null != var2) {
-                  hi.field_Y = gg.a(var2, (byte) 56);
+                  GameWorld.field_Y = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("invaliduserorpass", param0 ^ 32693);
                 if (var2 != null) {
@@ -1112,7 +1112,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("justplay", 0);
                 if (var2 != null) {
-                  hl.field_h = gg.a(var2, (byte) 56);
+                  NodeHashTableIterator.field_h = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("justplay_excl", param0 ^ 32693);
                 if (var2 != null) {
@@ -1164,7 +1164,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("connectionlost_reconnecting", param0 ^ 32693);
                 if (null != var2) {
-                  tg.field_a = gg.a(var2, (byte) 56);
+                  GameKeyHandler.field_a = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("connectionlost_withreason", 0);
                 if (var2 != null) {
@@ -1436,7 +1436,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_welcome", 0);
                 if (var2 != null) {
-                  tg.field_b = gg.a(var2, (byte) 56);
+                  GameKeyHandler.field_b = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_u13_welcome", 0);
                 if (null != var2) {
@@ -1580,7 +1580,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_password_tooltip", 0);
                 if (null != var2) {
-                  gm.field_f = gg.a(var2, (byte) 56);
+                  BufferedSocket.field_f = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_password_hint", 0);
                 if (null != var2) {
@@ -1596,7 +1596,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_email_confirm_tooltip", 0);
                 if (null != var2) {
-                  hi.field_pb = gg.a(var2, (byte) 56);
+                  GameWorld.field_pb = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_age_tooltip", 0);
                 if (var2 != null) {
@@ -1652,15 +1652,15 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_alert_doublespace", 0);
                 if (null != var2) {
-                  hl.field_f = gg.a(var2, (byte) 56);
+                  NodeHashTableIterator.field_f = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_alert_passchars", 0);
                 if (var2 != null) {
-                  dj.field_a = gg.a(var2, (byte) 56);
+                  Js5Archive.field_a = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_alert_passrepeated", 0);
                 if (var2 != null) {
-                  eo.field_i = gg.a(var2, (byte) 56);
+                  HumanFactory.field_i = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_alert_passlength", 0);
                 if (var2 != null) {
@@ -1812,7 +1812,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("waitingfor_graphics", 0);
                 if (var2 != null) {
-                  nb.field_o = gg.a(var2, (byte) 56);
+                  DualLinkNode.field_o = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("waitingfor_models", 0);
                 if (null != var2) {
@@ -2042,7 +2042,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("resumegame", param0 - 32693);
                 if (var2 != null) {
-                  sh.field_c = gg.a(var2, (byte) 56);
+                  ExceptionWrapper.field_c = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("resumetutorial", 0);
                 if (null != var2) {
@@ -2078,7 +2078,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("ok", 0);
                 if (var2 != null) {
-                  on.field_n = gg.a(var2, (byte) 56);
+                  TileMap.field_n = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("on", param0 ^ 32693);
                 if (var2 != null) {
@@ -2330,7 +2330,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("orbpoints_colon", 0);
                 if (var2 != null) {
-                  eo.field_j = gg.a(var2, (byte) 56);
+                  HumanFactory.field_j = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("orbcoins_colon", 0);
                 if (null != var2) {
@@ -2526,27 +2526,27 @@ class bn extends ll {
                 }
                 var2 = qn.a("quickchat_shortcut_help,0", 0);
                 if (null != var2) {
-                  ii.field_b[0] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[0] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_help,1", 0);
                 if (var2 != null) {
-                  ii.field_b[1] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[1] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_help,2", 0);
                 if (null != var2) {
-                  ii.field_b[2] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[2] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_help,3", param0 ^ 32693);
                 if (var2 != null) {
-                  ii.field_b[3] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[3] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_help,4", 0);
                 if (null != var2) {
-                  ii.field_b[4] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[4] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_help,5", param0 ^ 32693);
                 if (null != var2) {
-                  ii.field_b[5] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[5] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_keys,0", 0);
                 if (var2 != null) {
@@ -2798,7 +2798,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("me_extra_benefits", param0 ^ 32693);
                 if (var2 != null) {
-                  ag.field_e = gg.a(var2, (byte) 56);
+                  SecondaryNodeDequeIterator.field_e = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("hs_friend_tip", param0 ^ 32693);
                 if (var2 != null) {
@@ -2830,11 +2830,11 @@ class bn extends ll {
                 }
                 var2 = qn.a("rating_mode_long_name,0", 0);
                 if (null != var2) {
-                  hd.field_p[0] = gg.a(var2, (byte) 56);
+                  SpriteState.field_p[0] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("rating_mode_long_name,1", 0);
                 if (var2 != null) {
-                  hd.field_p[1] = gg.a(var2, (byte) 56);
+                  SpriteState.field_p[1] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("graphics_config_fixed_size", 0);
                 if (var2 != null) {
@@ -3097,12 +3097,12 @@ class bn extends ll {
                   } else {
                     stackIn_2596_2 = "{...}";
                   }
-                  throw sh.a((Throwable) ((Object) stackIn_2595_0), ((StringBuilder) (Object) stackIn_2595_1).append(stackIn_2596_2).append(')').toString());
+                  throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_2595_0), ((StringBuilder) (Object) stackIn_2595_1).append(stackIn_2596_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = ke.field_f;
+                  var4 = GameApplet.field_f;
                   var4++;
-                  ke.field_f = var4;
+                  GameApplet.field_f = var4;
                 }
             }
         }
@@ -3110,7 +3110,7 @@ class bn extends ll {
         decompiledBody.run();
     }
 
-    final void a(boolean param0, de param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -3133,15 +3133,15 @@ class bn extends ll {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final static vn a(String param0, dj param1, String param2, int param3) {
+    final static Sprite a(String param0, Js5Archive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        vn stackIn_4_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -3180,7 +3180,7 @@ class bn extends ll {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -3197,7 +3197,7 @@ class bn extends ll {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "bn.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "bn.C(" + param0 + ')');
         }
     }
 
@@ -3221,7 +3221,7 @@ class bn extends ll {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -3258,7 +3258,7 @@ class bn extends ll {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw sh.a((Throwable) ((Object) var1_ref2), "bn.H(" + param0 + ')');
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref2), "bn.H(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -3284,7 +3284,7 @@ class bn extends ll {
         field_f = true;
         field_g = new long[11];
         var0 = 0;
-        L0: while (var0 < 256) {
+        scanLoop1: while (var0 < 256) {
           var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
           if ((var0 & 1) == 0) {
             stackIn_6_0 = (long)(var1 >>> 8);

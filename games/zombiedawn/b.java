@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b extends le {
+final class b extends IntrusiveNode {
     static int field_l;
     int[] field_k;
     boolean field_o;
@@ -41,30 +41,30 @@ final class b extends le {
                 var4 = 0;
               }
             }
-            if (dp.field_e.field_j > 0) {
-              var14 = new byte[dp.field_e.field_j];
+            if (dp.field_e.position > 0) {
+              var14 = new byte[dp.field_e.position];
               var11 = var14;
               var8 = var11;
               var17 = var8;
               for (var6 = 0; var14.length > var6; var6++) {
-                var8[var6] = dp.field_e.field_h[var6];
+                var8[var6] = dp.field_e.payload[var6];
               }
-              var6_ref_bg = new bg((long)var4 + var2_long, dp.field_e.field_j, var17);
-              dj.field_m.a(0, var6_ref_bg);
-              dp.field_e.field_j = 0;
+              var6_ref_bg = new bg((long)var4 + var2_long, dp.field_e.position, var17);
+              Js5Archive.field_m.addFirst(0, var6_ref_bg);
+              dp.field_e.position = 0;
             }
-            var9 = (bg) (dj.field_m.b((byte) 26));
+            var9 = (bg) (Js5Archive.field_m.b((byte) 26));
             var13 = var9;
             if (var13 != null &&
               var2_long > var13.field_h) {
-              var13.b(-27598);
+              var13.unlink(-27598);
               var10 = 0;
               var6Lifetime1 = var10;
               while (var13.field_j > var10) {
-                dp.field_e.field_h[var10] = var9.field_m[var10];
+                dp.field_e.payload[var10] = var9.field_m[var10];
                 var10++;
               }
-              dp.field_e.field_j = var13.field_j;
+              dp.field_e.position = var13.field_j;
             }
           }
           vl.a((byte) -46, param0);
@@ -73,7 +73,7 @@ final class b extends le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "b.B(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "b.B(" + param0 + ',' + param1 + ')');
         }
     }
 

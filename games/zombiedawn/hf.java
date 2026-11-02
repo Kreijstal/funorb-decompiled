@@ -6,7 +6,7 @@ final class hf extends an {
     int field_G;
     static int field_I;
     private rl field_H;
-    static vn field_E;
+    static Sprite field_E;
     int field_K;
     private int field_J;
 
@@ -42,7 +42,7 @@ final class hf extends an {
                 hf.d((byte) -83);
               }
               var3 = (String) (qe.a(param1, "getcookies", -91));
-              var4 = de.a(';', var3, -126);
+              var4 = PacketBuffer.split(';', var3, -126);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -73,7 +73,7 @@ final class hf extends an {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -82,7 +82,7 @@ final class hf extends an {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var12 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -139,7 +139,7 @@ final class hf extends an {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class hf extends an {
         return this.field_H.a(param1, (byte) -110);
     }
 
-    final static tj a(dj param0, String param1, String param2, dj param3, byte param4) {
+    final static tj a(Js5Archive param0, String param1, String param2, Js5Archive param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -202,7 +202,7 @@ final class hf extends an {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class hf extends an {
 
     final int a(int param0) {
         if (param0 >= -73) {
-          field_E = (vn) null;
+          field_E = (Sprite) null;
         }
         return this.field_H.a(12);
     }

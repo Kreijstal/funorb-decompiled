@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cm {
-    static kd field_c;
+    static Zombie field_c;
     static km[] field_b;
     static String field_a;
 
@@ -24,7 +24,7 @@ final class cm {
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        return new ji(we.p((byte) -21), nb.c(0));
+        return new ji(we.p((byte) -21), DualLinkNode.c(0));
     }
 
     static {

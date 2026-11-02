@@ -33,7 +33,7 @@ final class jh {
         RuntimeException decompiledCaughtException = null;
         var4 = ZombieDawn.field_J;
         try {
-          var5 = (n) (dj.field_l.b((byte) 26));
+          var5 = (n) (Js5Archive.field_l.b((byte) 26));
           var1 = var5;
           if (var1 == null) {
             return false;
@@ -41,11 +41,11 @@ final class jh {
           var2 = 1 / ((-61 - param0) / 57);
           for (var3 = 0; var3 < var1.field_l; var3++) {
             if (null != var5.field_n[var3] &&
-              var5.field_n[var3].field_f == 0) {
+              var5.field_n[var3].status == 0) {
               return false;
             }
             if (var5.field_m[var3] != null &&
-              var5.field_m[var3].field_f == 0) {
+              var5.field_m[var3].status == 0) {
               return false;
             }
           }
@@ -53,7 +53,7 @@ final class jh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "jh.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "jh.B(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class jh {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        de var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -111,16 +111,16 @@ final class jh {
         int var13Lifetime1Lifetime1;
         var16 = ZombieDawn.field_J;
         try {
-          var17 = new de(va.a((byte) -122, param0));
-          var4 = var17.d((byte) -127);
+          var17 = new PacketBuffer(va.a((byte) -122, param0));
+          var4 = var17.readUnsignedByte((byte) -127);
           if (var4 >= 5 &&
             7 >= var4) {
             if (6 <= var4) {
-              this.field_e = var17.c(-51);
+              this.field_e = var17.readInt(-51);
             } else {
               this.field_e = 0;
             }
-            var5 = var17.d((byte) -125);
+            var5 = var17.readUnsignedByte((byte) -125);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
@@ -170,22 +170,22 @@ final class jh {
                 this.field_o[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_q; var10Lifetime1Lifetime1++) {
-                this.field_o[this.field_n[var10Lifetime1Lifetime1]] = var17.c(rd.b((int) param1, 41));
+                this.field_o[this.field_n[var10Lifetime1Lifetime1]] = var17.readInt(rd.b((int) param1, 41));
               }
               this.field_g = new mo(this.field_o);
             }
             for (var10Lifetime2 = 0; var10Lifetime2 < this.field_q; var10Lifetime2++) {
-              this.field_j[this.field_n[var10Lifetime2]] = var17.c(109);
+              this.field_j[this.field_n[var10Lifetime2]] = var17.readInt(109);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_q; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(64, 0, var21, 11240);
+                var17.readBytes(64, 0, var21, 11240);
                 this.field_f[this.field_n[var10Lifetime3]] = var21;
               }
             }
             for (var10Lifetime4 = 0; var10Lifetime4 < this.field_q; var10Lifetime4++) {
-              this.field_c[this.field_n[var10Lifetime4]] = var17.c(117);
+              this.field_c[this.field_n[var10Lifetime4]] = var17.readInt(117);
             }
             if (var4 < 7) {
               for (var10Lifetime5 = 0; this.field_q > var10Lifetime5; var10Lifetime5++) {
@@ -257,7 +257,7 @@ final class jh {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_b[var11Lifetime1][var14Lifetime1] = var17.c(param1 + 189);
+                  this.field_b[var11Lifetime1][var14Lifetime1] = var17.readInt(param1 + 189);
                 }
                 this.field_a[var11Lifetime1] = new mo(this.field_b[var11Lifetime1]);
               }
@@ -276,14 +276,14 @@ final class jh {
           } else {
             stackIn_103_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(',').append(param1).append(')').toString());
         }
     }
 
     jh(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_m = ii.a(8099, param0.length, param0);
+          this.field_m = SecondaryNodeDeque.a(8099, param0.length, param0);
           if (this.field_m != param1) {
             throw new RuntimeException();
           }
@@ -300,7 +300,7 @@ final class jh {
           }
           this.a(param0, (byte) -80);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

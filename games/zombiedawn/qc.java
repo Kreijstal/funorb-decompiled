@@ -24,12 +24,12 @@ final class qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "qc.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "qc.B(" + param0 + ')');
         }
     }
 
     final static void b(int param0) {
-        le var1 = null;
+        IntrusiveNode var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
@@ -38,26 +38,26 @@ final class qc {
           var1 = kn.field_L.b((byte) 26);
           while (var1 instanceof tm) {
             pc.a((byte) 13, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           var1 = se.field_m.b((byte) 26);
           while (var1 instanceof tm) {
             pc.a((byte) 13, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           if (param0 != 1400888196) {
             return;
           }
-          var1 = rm.field_e.b((byte) 26);
+          var1 = DelegatingCanvas.field_e.b((byte) 26);
           while (var1 instanceof tm) {
             pc.a((byte) 13, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "qc.A(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "qc.A(" + param0 + ')');
         }
     }
 

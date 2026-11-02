@@ -3,7 +3,7 @@
  */
 final class td {
     static af field_b;
-    static vo field_c;
+    static IntrusiveDeque field_c;
     static int field_d;
     static int field_a;
     static long field_e;
@@ -28,7 +28,7 @@ final class td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "td.A(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "td.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class td {
 
     final static void a(int param0) {
         if (i.field_Y) {
-          de.field_i = true;
+          PacketBuffer.field_i = true;
           int var1 = -64 / ((param0 - 77) / 35);
           lk.a(true, 116);
           fl.field_a = 0;
@@ -55,7 +55,7 @@ final class td {
 
     static {
         field_b = new af();
-        field_c = new vo();
+        field_c = new IntrusiveDeque();
         field_d = 50;
     }
 }

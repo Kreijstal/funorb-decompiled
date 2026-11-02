@@ -6,7 +6,7 @@ import java.io.*;
 final class i extends pn implements hh {
     static jp field_W;
     static String field_U;
-    static vn field_T;
+    static Sprite field_T;
     static float field_V;
     static boolean[] field_X;
     private an field_Z;
@@ -17,7 +17,7 @@ final class i extends pn implements hh {
           return;
         }
         if (!param0) {
-          field_T = (vn) null;
+          field_T = (Sprite) null;
           this.field_H = false;
           return;
         }
@@ -26,13 +26,13 @@ final class i extends pn implements hh {
 
     final static void a(bo param0, byte param1, int param2) {
         try {
-          mp.field_g.a(0, param0);
-          ag.a(param2, true, param0);
+          mp.field_g.addFirst(0, param0);
+          SecondaryNodeDequeIterator.a(param2, true, param0);
           if (param1 != 7) {
             field_V = -1.3851797580718994f;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "i.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "i.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class i extends pn implements hh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -107,14 +107,14 @@ final class i extends pn implements hh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     i(dn param0, sm param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        ga var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -140,12 +140,12 @@ final class i extends pn implements hh {
           } else {
             var3 = lo.field_n;
           }
-          var4 = new ga((String) (var3), (sk) null);
+          var4 = new UiWidget((String) (var3), (sk) null);
           var4.field_k = 0;
           var4.field_i = this.field_i;
           var4.field_n = 80;
           var4.field_j = 50;
-          var4.field_h = (io) ((Object) new vf(ii.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_h = (io) ((Object) new vf(SecondaryNodeDeque.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, 10);
           this.field_Z = this.a((byte) 53, (sk) (this), re.field_c);
           return;
@@ -165,7 +165,7 @@ final class i extends pn implements hh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -178,9 +178,9 @@ final class i extends pn implements hh {
           int stackIn_12_0 = 0;
           Throwable decompiledCaughtException = null;
           if (ao.field_F == null) {
-            ao.field_F = jm.field_B.a(2, tm.field_o, ci.field_c);
+            ao.field_F = jm.field_B.connectSocket(2, tm.field_o, ci.field_c);
           }
-          if (ao.field_F.field_f == 0) {
+          if (ao.field_F.status == 0) {
             return false;
           }
           dupTemp$1 = pd.a(-22826);
@@ -189,21 +189,21 @@ final class i extends pn implements hh {
           if (!param1) {
             field_X = (boolean[]) null;
           }
-          if (1 != ao.field_F.field_f) {
+          if (1 != ao.field_F.status) {
             ic.field_T = jc.field_l;
           } else {
             try {
-              sn.field_c = new gm((java.net.Socket) (ao.field_F.field_d), jm.field_B);
+              sn.field_c = new BufferedSocket((java.net.Socket) (ao.field_F.result), jm.field_B);
               var4 = fj.field_g;
               var5 = var4;
-              dp.field_e.field_j = 0;
+              dp.field_e.position = 0;
               stackIn_12_0 = (!param0) ? -1 : -2;
               em.field_U = stackIn_12_0;
-              wb.field_t = stackIn_12_0;
+              FunOrbApplet.field_t = stackIn_12_0;
               e.field_P = stackIn_12_0;
               ic.field_T = ui.field_g;
-              var5.field_j = 0;
-              uj.a(le.field_g, ba.field_b, (byte) -114, dp.field_e, kg.field_k);
+              var5.position = 0;
+              uj.a(IntrusiveNode.field_g, ba.field_b, (byte) -114, dp.field_e, kg.field_k);
               vl.a((byte) -46, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -254,14 +254,14 @@ final class i extends pn implements hh {
           if (uh.field_o == null) {
             return;
           }
-          var4 = sh.field_d;
+          var4 = ExceptionWrapper.field_d;
           synchronized (var4) {
             uh.field_o.a(param0, true, -1);
             if (te.field_kb == param3) {
               return;
             }
             uh.field_o.c(28013);
-            sh.field_d.d();
+            ExceptionWrapper.field_d.d();
             te.field_kb = param3;
             if (te.field_kb != null) {
               uh.field_o.a((byte) -22, te.field_kb, param1);
@@ -278,7 +278,7 @@ final class i extends pn implements hh {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) (stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) (stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dl {
-    private le field_g;
+    private IntrusiveNode field_g;
     static String[] field_h;
-    private le[] field_d;
+    private IntrusiveNode[] field_d;
     static String field_b;
     static String[] field_a;
     private int field_k;
-    private le field_j;
+    private IntrusiveNode field_j;
     static int field_f;
     private int field_i;
     static int field_c;
@@ -34,23 +34,23 @@ final class dl {
         field_h = null;
     }
 
-    final void a(int param0, long param1, le param2) {
-        le var5 = null;
+    final void a(int param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         RuntimeException var5_ref = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.field_d != null) {
-            param2.b(-27598);
+          if (param2.next != null) {
+            param2.unlink(-27598);
           }
           var5 = this.field_d[(int)((long)(-1 + this.field_i) & param1)];
-          param2.field_d = var5.field_d;
-          param2.field_b = var5;
-          param2.field_d.field_b = param2;
-          param2.field_f = param1;
-          param2.field_b.field_d = param2;
+          param2.next = var5.next;
+          param2.previous = var5;
+          param2.next.previous = param2;
+          param2.key = param1;
+          param2.previous.next = param2;
           if (param0 <= -95) {
             return;
           }
@@ -66,18 +66,18 @@ final class dl {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final le b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var2;
         int var3;
-        le var4;
-        le var8;
-        le var11;
+        IntrusiveNode var4;
+        IntrusiveNode var8;
+        IntrusiveNode var11;
         var3 = ZombieDawn.field_J;
         if (0 >= this.field_k) {
           do {
@@ -87,14 +87,14 @@ final class dl {
             }
             fieldTemp$1 = this.field_k;
             this.field_k = this.field_k + 1;
-            var4 = this.field_d[fieldTemp$1].field_b;
+            var4 = this.field_d[fieldTemp$1].previous;
           } while (this.field_d[this.field_k - 1] == var4);
-          this.field_j = var4.field_b;
+          this.field_j = var4.previous;
           return var4;
         }
         if (this.field_d[this.field_k - 1] != this.field_j) {
           var11 = this.field_j;
-          this.field_j = var11.field_b;
+          this.field_j = var11.previous;
           return var11;
         }
         do {
@@ -104,9 +104,9 @@ final class dl {
           }
           fieldTemp$0 = this.field_k;
           this.field_k = this.field_k + 1;
-          var8 = this.field_d[fieldTemp$0].field_b;
+          var8 = this.field_d[fieldTemp$0].previous;
         } while (this.field_d[this.field_k - 1] == var8);
-        this.field_j = var8.field_b;
+        this.field_j = var8.previous;
         return var8;
     }
 
@@ -118,10 +118,10 @@ final class dl {
         int var9 = 0;
         int var10 = 0;
         int var3 = rd.a(true, param2);
-        int var4 = fb.a(1311979239, param2);
+        int var4 = WorldObject.a(1311979239, param2);
         if (param0 == 0) {
           var5 = rd.a(true, param1);
-          var6 = fb.a(1311979239, param1);
+          var6 = WorldObject.a(1311979239, param1);
           var7 = (int)((long)var5 * (long)var3 >> 16);
           var8 = (int)((long)var3 * (long)var6 >> 16);
           var9 = (int)((long)var4 * (long)var5 >> 16);
@@ -131,33 +131,33 @@ final class dl {
         return (int[]) null;
     }
 
-    final le a(long param0, int param1) {
-        le var4;
-        le var5;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
         var6 = ZombieDawn.field_J;
         var4 = this.field_d[(int)((long)(this.field_i - 1) & param0)];
         if (param1 < 41) {
-          return (le) null;
+          return (IntrusiveNode) null;
         }
-        this.field_g = var4.field_b;
+        this.field_g = var4.previous;
         while (true) {
           if (var4 == this.field_g) {
             this.field_g = null;
             return null;
           }
-          if (~param0 != ~this.field_g.field_f) {
-            this.field_g = this.field_g.field_b;
+          if (~param0 != ~this.field_g.key) {
+            this.field_g = this.field_g.previous;
             continue;
           }
           break;
         }
         var5 = this.field_g;
-        this.field_g = this.field_g.field_b;
+        this.field_g = this.field_g.previous;
         return var5;
     }
 
-    final le a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 == -113) {
           this.field_k = 0;
           return this.b((byte) -56);
@@ -169,17 +169,17 @@ final class dl {
 
     dl(int param0) {
         int var2 = 0;
-        le dupTemp$1 = null;
-        le var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_k = 0;
         this.field_i = param0;
-        this.field_d = new le[param0];
+        this.field_d = new IntrusiveNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new le();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_d[var2] = dupTemp$1;
-          var3.field_b = var3;
-          var3.field_d = var3;
+          var3.previous = var3;
+          var3.next = var3;
         }
     }
 

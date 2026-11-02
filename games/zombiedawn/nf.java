@@ -8,7 +8,7 @@ final class nf {
     int field_a;
     byte[] field_b;
     byte[] field_h;
-    static vn field_d;
+    static Sprite field_d;
     int field_i;
     int field_f;
     int field_e;
@@ -18,7 +18,7 @@ final class nf {
           gk.field_F = param1;
           og.b(param0 ^ -114, param0);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "nf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class nf {
         field_d = null;
     }
 
-    final static la a(int param0, int param1, ec param2, int param3, boolean param4, int param5) {
+    final static la a(int param0, int param1, PlatformTaskDispatcher param2, int param3, boolean param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         la var7 = null;
@@ -68,7 +68,7 @@ final class nf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

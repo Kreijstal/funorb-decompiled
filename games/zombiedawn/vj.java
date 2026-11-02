@@ -10,9 +10,9 @@ final class vj extends al {
     static String[] field_p;
     static int field_q;
     static long field_n;
-    private vn field_r;
+    private Sprite field_r;
     static int field_o;
-    private vn field_u;
+    private Sprite field_u;
 
     final void a(int param0) {
         int var3;
@@ -70,7 +70,7 @@ final class vj extends al {
         int var11;
         String var12;
         int var14;
-        aj var15;
+        ClientException var15;
         StringWriter var16;
         String var17;
         String var18;
@@ -99,8 +99,8 @@ final class vj extends al {
         String var12Lifetime5Lifetime1;
         String var12Lifetime5Lifetime2;
         var14 = ZombieDawn.field_J;
-        if (param0 instanceof aj) {
-          var15 = (aj) ((Object) param0);
+        if (param0 instanceof ClientException) {
+          var15 = (ClientException) ((Object) param0);
           var2 = var15.field_b + " | ";
           var12 = var2;
           var2 = var12;
@@ -193,7 +193,7 @@ final class vj extends al {
     final int b(int param0, boolean param1) {
         if (!param1) {
           String var4 = (String) null;
-          vj.a((dj) null, (String) null, (String) null, -46);
+          vj.a((Js5Archive) null, (String) null, (String) null, -46);
         }
         if (!po.w(13296) &&
           param0 < 2) {
@@ -243,18 +243,18 @@ final class vj extends al {
         super.a((byte) -51);
         li.a(false);
         if (this.field_r == null) {
-          this.field_r = new vn(100, 100);
+          this.field_r = new Sprite(100, 100);
           ki.a((byte) -92, this.field_r);
-          bi.d();
+          Rasterizer.clear();
           jb.field_a[1].b(25, 25);
           for (var3 = 0; var3 < 5; var3++) {
             so.a(4424743);
           }
-          bi.h(2, 2, 0, 0, 100, 100);
+          Rasterizer.h(2, 2, 0, 0, 100, 100);
           pa.a(-21189);
-          this.field_u = new vn(100, 100);
+          this.field_u = new Sprite(100, 100);
           ki.a((byte) -94, this.field_u);
-          bi.d();
+          Rasterizer.clear();
           jb.field_a[1].b(25, 25);
           for (var3Lifetime3 = 0; var3Lifetime3 < 2; var3Lifetime3++) {
             so.a(16777215);
@@ -295,11 +295,11 @@ final class vj extends al {
             var18 = var6.field_k[ad.field_e];
             var9 = ph.a(wi.field_b, (byte) -93, ad.field_e, var6);
             var3Lifetime1Lifetime1 = var5.field_I + (89 + id.field_M);
-            var5.a(q.field_G[qm.field_b], bd.field_d, var3Lifetime1Lifetime1, 10, 0);
+            var5.drawStringCentered(q.field_G[qm.field_b], bd.field_d, var3Lifetime1Lifetime1, 10, 0);
             var3Lifetime1Lifetime1 = var3Lifetime1Lifetime1 + (var5.field_I + 10);
-            var5.b(og.field_z, 220 + (vh.field_b - 30), var3Lifetime1Lifetime1, 2, 0);
-            var5.c(lo.field_r, -10 + (220 + vh.field_b), var3Lifetime1Lifetime1, 2, 0);
-            var5.b(ZombieDawn.field_D, 20 + (440 + vh.field_b), var3Lifetime1Lifetime1, 2, 0);
+            var5.drawStringRightAligned(og.field_z, 220 + (vh.field_b - 30), var3Lifetime1Lifetime1, 2, 0);
+            var5.drawString(lo.field_r, -10 + (220 + vh.field_b), var3Lifetime1Lifetime1, 2, 0);
+            var5.drawStringRightAligned(ZombieDawn.field_D, 20 + (440 + vh.field_b), var3Lifetime1Lifetime1, 2, 0);
             var3Lifetime1Lifetime1 += 25;
             for (var10 = 0; 10 > var10; var10++) {
               stackIn_35_0 = (~var9 == ~var10) ? 16776960 : 16777215;
@@ -310,10 +310,10 @@ final class vj extends al {
                 if (var9 == var10) {
                   var11 = 16776960;
                 }
-                bj.field_q.b(var10 + 1 + ". ", -40 + (220 + vh.field_b), var3Lifetime1Lifetime1, var11, 0);
-                bj.field_q.c(var13, vh.field_b + 220, var3Lifetime1Lifetime1, var11, 0);
+                bj.field_q.drawStringRightAligned(var10 + 1 + ". ", -40 + (220 + vh.field_b), var3Lifetime1Lifetime1, var11, 0);
+                bj.field_q.drawString(var13, vh.field_b + 220, var3Lifetime1Lifetime1, var11, 0);
                 var2 = "";
-                bj.field_q.b(qi.a(true, 0, jp.field_a, (long)var12, (byte) 113), vh.field_b + 440, var3Lifetime1Lifetime1, var11, 0);
+                bj.field_q.drawStringRightAligned(qi.a(true, 0, jp.field_a, (long)var12, (byte) 113), vh.field_b + 440, var3Lifetime1Lifetime1, var11, 0);
               }
               var3Lifetime1Lifetime1 += 20;
             }
@@ -321,8 +321,8 @@ final class vj extends al {
               var9 == -1 &&
               qm.field_b == vl.field_b.field_bb) {
               var10Lifetime1 = 16776960;
-              bj.field_q.c(ce.field_r, 220 + vh.field_b, var3Lifetime1Lifetime1, var10Lifetime1, 0);
-              bj.field_q.b(Integer.toString(vl.field_b.field_G), vh.field_b + 440, var3Lifetime1Lifetime1, var10Lifetime1, 0);
+              bj.field_q.drawString(ce.field_r, 220 + vh.field_b, var3Lifetime1Lifetime1, var10Lifetime1, 0);
+              bj.field_q.drawStringRightAligned(Integer.toString(vl.field_b.field_G), vh.field_b + 440, var3Lifetime1Lifetime1, var10Lifetime1, 0);
             }
           } else {
             var2 = oj.field_g;
@@ -331,9 +331,9 @@ final class vj extends al {
           var2 = r.field_I;
         }
         var3Lifetime2 = 6 + id.field_M + 89 + sg.field_jb.field_I + 100;
-        sg.field_jb.a(var2, vh.field_b + 330, var3Lifetime2, 0, 0);
+        sg.field_jb.drawStringCentered(var2, vh.field_b + 330, var3Lifetime2, 0, 0);
         if (param0 > -35) {
-          this.field_u = (vn) null;
+          this.field_u = (Sprite) null;
         }
         if (po.w(13296)) {
           stackIn_54_0 = rn.field_a;
@@ -341,7 +341,7 @@ final class vj extends al {
           stackIn_54_0 = k.field_r;
         }
         var2Lifetime1 = stackIn_54_0;
-        bj.field_q.a(var2Lifetime1, bd.field_d, id.field_M + 412, 14540253, 3355443);
+        bj.field_q.drawStringCentered(var2Lifetime1, bd.field_d, id.field_M + 412, 14540253, 3355443);
     }
 
     final int a(int param0, int param1) {
@@ -358,7 +358,7 @@ final class vj extends al {
     }
 
     final static void c(int param0) {
-        le var1 = null;
+        IntrusiveNode var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
@@ -367,26 +367,26 @@ final class vj extends al {
           var1 = kn.field_L.b((byte) 26);
           while (var1 instanceof tm) {
             aa.a(119, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           var1 = se.field_m.b((byte) 26);
           while (var1 instanceof tm) {
             aa.a(10, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
-          var1 = rm.field_e.b((byte) 26);
+          var1 = DelegatingCanvas.field_e.b((byte) 26);
           if (param0 < 8) {
             vj.d(4);
           }
           while (var1 instanceof tm) {
             aa.a(48, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "vj.D(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "vj.D(" + param0 + ')');
         }
     }
 
@@ -414,7 +414,7 @@ final class vj extends al {
         return (param0 == 0 ? 50 : 470) + vh.field_b;
     }
 
-    final static v a(dj param0, String param1, String param2, int param3) {
+    final static v a(Js5Archive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -457,7 +457,7 @@ final class vj extends al {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

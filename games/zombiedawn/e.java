@@ -6,12 +6,12 @@ final class e extends hp implements hh {
     private an[] field_F;
     static String field_I;
     static int field_H;
-    private rb field_L;
+    private Font field_L;
     private int[] field_J;
     static dn field_S;
     private int field_N;
     private String field_Q;
-    static vn field_G;
+    static Sprite field_G;
     private sg field_R;
     static int field_P;
     static int field_K;
@@ -62,7 +62,7 @@ final class e extends hp implements hh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class e extends hp implements hh {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class e extends hp implements hh {
         this.field_F = var3;
     }
 
-    e(sg param0, rb param1, String param2) {
+    e(sg param0, Font param1, String param2) {
         super(0, 0, 288, 0, (io) null);
         int var4_int = 0;
         this.field_N = 0;
@@ -126,7 +126,7 @@ final class e extends hp implements hh {
           var4_int = this.field_Q != null ? this.field_L.b(this.field_Q, 260, this.field_L.field_I) : 0;
           this.a(44, 0, 0, 288, var4_int + 22);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class e extends hp implements hh {
         field_S = null;
         field_I = null;
         if (!param0) {
-          field_G = (vn) null;
+          field_G = (Sprite) null;
         }
         field_G = null;
     }
@@ -176,7 +176,7 @@ final class e extends hp implements hh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

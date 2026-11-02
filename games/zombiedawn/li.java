@@ -4,15 +4,15 @@
 import java.io.*;
 
 final class li implements Runnable {
-    private op field_j;
-    private op field_b;
-    private ec field_g;
+    private AsyncRequest field_j;
+    private AsyncRequest field_b;
+    private PlatformTaskDispatcher field_g;
     static v field_i;
     private DataInputStream field_e;
     static String field_f;
-    private de field_a;
+    private PacketBuffer field_a;
     private java.net.URL field_d;
-    private op field_k;
+    private AsyncRequest field_k;
     static v[] field_h;
     private int field_c;
 
@@ -35,12 +35,12 @@ final class li implements Runnable {
         boolean decompiledFrameRemainder1 = true;
         if (0 == this.field_c) {
           if (null == this.field_b) {
-            this.field_b = this.field_g.a(7645, this.field_d);
+            this.field_b = this.field_g.openUrlStream(7645, this.field_d);
           }
-          if (0 == this.field_b.field_f) {
+          if (0 == this.field_b.status) {
             return false;
           }
-          if (this.field_b.field_f != 1) {
+          if (this.field_b.status != 1) {
             this.field_b = null;
             decompiledFrameRemainder1 = false;
           }
@@ -49,12 +49,12 @@ final class li implements Runnable {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_c == 1) {
             if (null == this.field_k) {
-              this.field_k = this.field_g.a(2, this.field_d.getHost(), 443);
+              this.field_k = this.field_g.connectSocket(2, this.field_d.getHost(), 443);
             }
-            if (this.field_k.field_f == 0) {
+            if (this.field_k.status == 0) {
               return false;
             }
-            if (this.field_k.field_f != 1) {
+            if (this.field_k.status != 1) {
               this.field_k = null;
               decompiledFrameRemainder0 = false;
             }
@@ -63,10 +63,10 @@ final class li implements Runnable {
             if (null == this.field_e) {
               try {
                 if (this.field_c == 0) {
-                  this.field_e = (DataInputStream) (this.field_b.field_d);
+                  this.field_e = (DataInputStream) (this.field_b.result);
                 }
                 if (this.field_c == 1) {
-                  var4 = (java.net.Socket) (this.field_k.field_d);
+                  var4 = (java.net.Socket) (this.field_k.result);
                   var4.setSoTimeout(10000);
                   var3 = var4.getOutputStream();
                   var3.write(17);
@@ -74,7 +74,7 @@ final class li implements Runnable {
                   var3.write(pd.a((byte) 67, var5));
                   this.field_e = new DataInputStream(var4.getInputStream());
                 }
-                this.field_a.field_j = 0;
+                this.field_a.position = 0;
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = (IOException) (Object) decompiledCaughtException;
@@ -83,15 +83,15 @@ final class li implements Runnable {
               }
             }
             if (param0 <= 53) {
-              this.field_g = (ec) null;
+              this.field_g = (PlatformTaskDispatcher) null;
             }
             if (null == this.field_j) {
-              this.field_j = this.field_g.a(5, (Runnable) (this), true);
+              this.field_j = this.field_g.startThread(5, (Runnable) (this), true);
             }
-            if (this.field_j.field_f == 0) {
+            if (this.field_j.status == 0) {
               return false;
             }
-            if (this.field_j.field_f == 1) {
+            if (this.field_j.status == 1) {
               return false;
             }
             this.finalize();
@@ -101,7 +101,7 @@ final class li implements Runnable {
         return false;
     }
 
-    final static void a(int param0, wk param1) {
+    final static void a(int param0, Camera param1) {
         int var7 = 0;
         int stackIn_7_0 = 0;
         int stackIn_8_1 = 0;
@@ -121,11 +121,11 @@ final class li implements Runnable {
         int var10 = 0;
         var10 = ZombieDawn.field_J;
         try {
-          if (sh.field_e == 1 &&
+          if (ExceptionWrapper.field_e == 1 &&
             og.field_A) {
-            var2_int = param1.a(ne.field_c.a(true), (byte) -92);
-            var3 = param1.a(ne.field_c.f(param0 ^ -237220996), 0);
-            var4 = fb.a(1311979239, (int)(3L * tp.field_p << 5)) >> 15;
+            var2_int = param1.worldToScreenX(ne.field_c.getX(true), (byte) -92);
+            var3 = param1.worldToScreenY(ne.field_c.getY(param0 ^ -237220996), 0);
+            var4 = WorldObject.a(1311979239, (int)(3L * tp.field_p << 5)) >> 15;
             stackIn_7_0 = -8;
             if (var4 < 0) {
               stackIn_8_1 = var2_int;
@@ -139,12 +139,12 @@ final class li implements Runnable {
               stackIn_11_0 = -var4 + var2_int;
             }
             var6 = stackIn_11_0 + 8;
-            bi.a(var5, -1 + var3, -var5 + var6, 3, 0, 128);
+            Rasterizer.a(var5, -1 + var3, -var5 + var6, 3, 0, 128);
             for (var7 = 0; var7 < 100; var7++) {
               if (0 < pl.field_t[var7].field_H) {
-                var8 = param1.a(pl.field_t[var7].a(true), (byte) -108) + 4;
-                var9 = 4 + param1.a(pl.field_t[var7].f(237239984), 0);
-                bi.a(var8, var9, 0);
+                var8 = param1.worldToScreenX(pl.field_t[var7].getX(true), (byte) -108) + 4;
+                var9 = 4 + param1.worldToScreenY(pl.field_t[var7].getY(237239984), 0);
+                Rasterizer.setPixel(var8, var9, 0);
               }
             }
           }
@@ -163,7 +163,7 @@ final class li implements Runnable {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -177,16 +177,16 @@ final class li implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = ZombieDawn.field_J;
           try {
-            while (this.field_a.field_j < this.field_a.field_h.length) {
-              var1_int = this.field_e.read(this.field_a.field_h, this.field_a.field_j, -this.field_a.field_j + this.field_a.field_h.length);
+            while (this.field_a.position < this.field_a.payload.length) {
+              var1_int = this.field_e.read(this.field_a.payload, this.field_a.position, -this.field_a.position + this.field_a.payload.length);
               if (var1_int >= 0) {
-                this.field_a.field_j = this.field_a.field_j + var1_int;
+                this.field_a.position = this.field_a.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_a.field_j == this.field_a.field_h.length) {
-              throw li.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_a.field_h.length + " " + this.field_d));
+            if (this.field_a.position == this.field_a.payload.length) {
+              throw li.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_a.payload.length + " " + this.field_d));
             }
             var1 = this;
             synchronized (var1) {
@@ -212,26 +212,26 @@ final class li implements Runnable {
     }
 
     final static void a(boolean param0) {
-        bi.a(vh.field_b, id.field_M + 84, 640, 335, 0, 128);
+        Rasterizer.a(vh.field_b, id.field_M + 84, 640, 335, 0, 128);
         hk.field_H.b(vh.field_b, id.field_M + 84);
         if (param0) {
           field_h = (v[]) null;
         }
     }
 
-    li(ec param0, java.net.URL param1, int param2) {
+    li(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_d = param1;
           this.field_g = param0;
-          this.field_a = new de(param2);
+          this.field_a = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final de a(byte param0) {
+    final PacketBuffer a(byte param0) {
         if (param0 != -118) {
-          return (de) null;
+          return (PacketBuffer) null;
         }
         if (this.field_c == 3) {
           return this.field_a;
@@ -241,18 +241,18 @@ final class li implements Runnable {
 
     protected final void finalize() {
         if (this.field_b != null) {
-          if (null != this.field_b.field_d) {
+          if (null != this.field_b.result) {
             try {
-              ((DataInputStream) (this.field_b.field_d)).close();
+              ((DataInputStream) (this.field_b.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_b = null;
         }
         if (null != this.field_k) {
-          if (this.field_k.field_d != null) {
+          if (this.field_k.result != null) {
             try {
-              ((java.net.Socket) (this.field_k.field_d)).close();
+              ((java.net.Socket) (this.field_k.result)).close();
             } catch (Exception exception) {
             }
           }

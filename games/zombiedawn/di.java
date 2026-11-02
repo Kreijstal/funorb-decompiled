@@ -20,7 +20,7 @@ final class di extends hp implements hh {
         }
     }
 
-    final static void a(de param0, int param1, int param2, ec param3) {
+    final static void a(PacketBuffer param0, int param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -57,12 +57,12 @@ final class di extends hp implements hh {
           var14 = ZombieDawn.field_J;
           try {
             var18 = new n();
-            var18.field_l = param0.d((byte) -118);
-            var18.field_o = param0.c(102);
+            var18.field_l = param0.readUnsignedByte((byte) -118);
+            var18.field_o = param0.readInt(102);
             var18.field_i = new byte[var18.field_l][][];
             var18.field_q = new int[var18.field_l];
-            var18.field_m = new op[var18.field_l];
-            var18.field_n = new op[var18.field_l];
+            var18.field_m = new AsyncRequest[var18.field_l];
+            var18.field_n = new AsyncRequest[var18.field_l];
             if (param1 != 30) {
               return;
             }
@@ -70,7 +70,7 @@ final class di extends hp implements hh {
             var18.field_h = new int[var18.field_l];
             for (var5 = 0; var18.field_l > var5; var5++) {
               try {
-                var6_int = param0.d((byte) -124);
+                var6_int = param0.readUnsignedByte((byte) -124);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
@@ -78,7 +78,7 @@ final class di extends hp implements hh {
                     var6_int == 4) {
                     var20 = param0.a(true);
                     var21 = param0.a(true);
-                    var9 = param0.d((byte) -122);
+                    var9 = param0.readUnsignedByte((byte) -122);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
                       var10[var11_int] = param0.a(true);
@@ -88,10 +88,10 @@ final class di extends hp implements hh {
                     var11 = var19;
                     if (3 == var6_int) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param0.c(100);
+                        var13 = param0.readInt(100);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param0.a(var13, 0, var22[var12_int], 11240);
+                        param0.readBytes(var13, 0, var22[var12_int], 11240);
                       }
                     }
                     var18.field_h[var5] = var6_int;
@@ -110,7 +110,7 @@ final class di extends hp implements hh {
                   var15 = param0.a(true);
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.c(101);
+                    var9 = param0.readInt(101);
                   }
                   var18.field_h[var5] = var6_int;
                   var18.field_j[var5] = var9;
@@ -138,7 +138,7 @@ final class di extends hp implements hh {
                 var18.field_q[var5] = -5;
               }
             }
-            dj.field_l.a(0, var18);
+            Js5Archive.field_l.addFirst(0, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -156,7 +156,7 @@ final class di extends hp implements hh {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -166,7 +166,7 @@ final class di extends hp implements hh {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        fa.field_p = param0;
+        SpatialObject.field_p = param0;
         ma.field_k = param4;
         pf.field_g = param1;
         if (param3 != -116) {
@@ -178,7 +178,7 @@ final class di extends hp implements hh {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_k + param2;
         int var6 = this.field_j + param0;
-        ia.field_e.a(tg.field_b, 20 + var5, 20 + var6, this.field_i - 40, this.field_n - 50, 16777215, -1, 1, 0, ia.field_e.field_I);
+        ia.field_e.a(GameKeyHandler.field_b, 20 + var5, 20 + var6, this.field_i - 40, this.field_n - 50, 16777215, -1, 1, 0, ia.field_e.field_I);
         super.a(param0, param1, param2, param3 + param3);
     }
 
@@ -195,7 +195,7 @@ final class di extends hp implements hh {
             return;
           }
           if (this.field_H == param2) {
-            dj.a(109);
+            Js5Archive.a(109);
           } else {
             if (this.field_F == param2) {
               vj.d(69);
@@ -216,11 +216,11 @@ final class di extends hp implements hh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -253,7 +253,7 @@ final class di extends hp implements hh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ final class di extends hp implements hh {
         super(0, 0, 476, 225, (io) null);
         this.field_F = new an(hk.field_P, (sk) null);
         this.field_H = new an(vl.field_f, (sk) null);
-        this.field_N = new an(hl.field_h, (sk) null);
+        this.field_N = new an(NodeHashTableIterator.field_h, (sk) null);
         vm var1 = new vm();
         this.field_F.field_h = (io) ((Object) var1);
         this.field_H.field_h = (io) ((Object) var1);
@@ -288,7 +288,7 @@ final class di extends hp implements hh {
         v[] var1 = new v[t.field_h];
         int var2 = 104 / ((4 - param0) / 61);
         for (var3 = 0; t.field_h > var3; var3++) {
-          var1[var3] = new v(gl.field_F, kd.field_pb, sl.field_d[var3], bo.field_o[var3], bn.field_c[var3], uf.field_n[var3], vj.field_m[var3], j.field_a);
+          var1[var3] = new v(gl.field_F, Zombie.field_pb, sl.field_d[var3], bo.field_o[var3], bn.field_c[var3], uf.field_n[var3], vj.field_m[var3], j.field_a);
         }
         no.f((byte) -79);
         return var1;

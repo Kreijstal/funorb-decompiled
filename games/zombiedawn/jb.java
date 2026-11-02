@@ -4,12 +4,12 @@
 import java.util.*;
 
 final class jb implements io {
-    static vo field_b;
+    static IntrusiveDeque field_b;
     static String field_d;
     static String field_c;
-    static vn[] field_a;
+    static Sprite[] field_a;
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -17,7 +17,7 @@ final class jb implements io {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        vn var8 = null;
+        Sprite var8 = null;
         try {
           if (param0 != 16777215) {
             return;
@@ -25,13 +25,13 @@ final class jb implements io {
           var6_int = param3.field_k + param4;
           var7 = param2 + param3.field_j;
           pb.a(var6_int, param3.field_n, var7, 48, param3.field_i);
-          var8 = dj.field_k[1];
+          var8 = Js5Archive.field_k[1];
           if (param3 instanceof an &&
             ((an) (param3)).field_x) {
             var8.b(var6_int - (-1 - (-var8.field_r + param3.field_i >> 1)), 1 + var7 + (param3.field_n - var8.field_q >> 1), 256);
           }
           if (param3.e(-17741)) {
-            on.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 - 16777157, 2 + var7);
+            TileMap.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 - 16777157, 2 + var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,7 +44,7 @@ final class jb implements io {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -53,8 +53,8 @@ final class jb implements io {
           !(param0 <= j.field_b.length)) {
           j.field_b = new int[param0 * 2];
         }
-        if (null == dj.field_g) {
-          dj.field_g = new int[2 * param0];
+        if (null == Js5Archive.field_g) {
+          Js5Archive.field_g = new int[2 * param0];
           if (qo.field_r == null ||
             !(qo.field_r.length >= param0)) {
             qo.field_r = new int[2 * param0];
@@ -147,8 +147,8 @@ final class jb implements io {
             }
           }
         } else {
-          if (param0 > dj.field_g.length) {
-            dj.field_g = new int[2 * param0];
+          if (param0 > Js5Archive.field_g.length) {
+            Js5Archive.field_g = new int[2 * param0];
             if (qo.field_r == null ||
               !(qo.field_r.length >= param0)) {
               qo.field_r = new int[2 * param0];
@@ -331,7 +331,7 @@ final class jb implements io {
         }
         ub.field_d = -2147483648;
         if (!param1) {
-          field_a = (vn[]) null;
+          field_a = (Sprite[]) null;
         }
         qn.field_e = 0;
         fe.field_O = 2147483647;
@@ -366,9 +366,9 @@ final class jb implements io {
         return (String) null;
     }
 
-    final static void a(int param0, java.awt.Frame param1, ec param2) {
+    final static void a(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
-        op var4 = null;
+        AsyncRequest var4 = null;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -381,11 +381,11 @@ final class jb implements io {
         try {
           var3_int = -100 % ((62 - param0) / 39);
           while (true) {
-            var4 = param2.a(param1, (byte) 52);
-            while (var4.field_f == 0) {
+            var4 = param2.requestFrame(param1, (byte) 52);
+            while (var4.status == 0) {
               ld.a(10L, (byte) 115);
             }
-            if (var4.field_f != 1) {
+            if (var4.status != 1) {
               ld.a(100L, (byte) 70);
               continue;
             }
@@ -410,7 +410,7 @@ final class jb implements io {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -419,31 +419,31 @@ final class jb implements io {
           return ki.field_V;
         }
         if (f.field_i != null) {
-          if (!f.field_i.a((byte) 73)) {
+          if (!f.field_i.isIndexLoaded((byte) 73)) {
             return cj.field_e;
           }
           return l.field_g;
         }
-        if (!vo.field_d.a((byte) 73)) {
-          return nb.field_o;
+        if (!IntrusiveDeque.field_d.isIndexLoaded((byte) 73)) {
+          return DualLinkNode.field_o;
         }
-        if (!vo.field_d.a(-1, "commonui")) {
-          return el.field_m + " - " + vo.field_d.b("commonui", 88) + "%";
+        if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
+          return el.field_m + " - " + IntrusiveDeque.field_d.b("commonui", 88) + "%";
         }
         if (param0 >= -49) {
           return (String) null;
         }
-        if (!da.field_l.a((byte) 73)) {
+        if (!da.field_l.isIndexLoaded((byte) 73)) {
           return nd.field_d;
         }
         if (!da.field_l.a(-1, "commonui")) {
           return ba.field_e + " - " + da.field_l.b("commonui", 86) + "%";
         }
-        if (!al.field_a.a((byte) 73)) {
+        if (!al.field_a.isIndexLoaded((byte) 73)) {
           return ad.field_o;
         }
         if (!al.field_a.c(9001)) {
-          return lo.field_p + " - " + al.field_a.e(-94) + "%";
+          return lo.field_p + " - " + al.field_a.percentLoaded(-94) + "%";
         }
         return jh.field_l;
     }
@@ -486,7 +486,7 @@ final class jb implements io {
 
     static {
         field_d = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
-        field_b = new vo();
+        field_b = new IntrusiveDeque();
         field_c = "Continue";
     }
 }

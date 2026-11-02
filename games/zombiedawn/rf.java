@@ -24,15 +24,15 @@ abstract class rf {
             rf.a((java.awt.Component) null, -32);
           }
           sg.field_jb.field_O[param1][t.field_c] = param2;
-          sg.field_jb.field_O[param1][kd.field_nb[0]] = param3;
-          for (var5_int = 1; kd.field_nb.length > var5_int; var5_int++) {
-            sg.field_jb.field_O[param1][kd.field_nb[var5_int]] = qb.a(sg.field_jb.field_O[param1][kd.field_nb[var5_int - 1]], (byte) 91);
+          sg.field_jb.field_O[param1][Zombie.field_nb[0]] = param3;
+          for (var5_int = 1; Zombie.field_nb.length > var5_int; var5_int++) {
+            sg.field_jb.field_O[param1][Zombie.field_nb[var5_int]] = qb.a(sg.field_jb.field_O[param1][Zombie.field_nb[var5_int - 1]], (byte) 91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var5), "rf.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var5), "rf.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -54,7 +54,7 @@ abstract class rf {
             field_c = (cg) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

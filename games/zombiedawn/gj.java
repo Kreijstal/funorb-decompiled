@@ -5,7 +5,7 @@ final class gj {
     static String[] field_p;
     static String[] field_j;
     static rh field_v;
-    vn field_x;
+    Sprite field_x;
     private int field_h;
     static String[][] field_g;
     static int field_f;
@@ -19,16 +19,16 @@ final class gj {
     private int field_l;
     static String[] field_o;
     static int[] field_e;
-    vn[] field_t;
-    static dj field_i;
+    Sprite[] field_t;
+    static Js5Archive field_i;
     static int[][] field_b;
     static int[] field_u;
     static int[] field_n;
     static String field_c;
     static String field_m;
 
-    final void a(int param0, ga param1, int param2, qo param3, int param4) {
-        rb stackIn_21_0 = null;
+    final void a(int param0, UiWidget param1, int param2, qo param3, int param4) {
+        Font stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
         int stackIn_24_2 = 0;
@@ -98,7 +98,7 @@ final class gj {
             } else {
               stackIn_28_8 = 256;
             }
-            ((rb) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param3.field_h, param3.field_i, param3.field_n);
+            ((Font) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param3.field_h, param3.field_i, param3.field_n);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,7 +117,7 @@ final class gj {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class gj {
         this.field_t = null;
     }
 
-    final gj a(vn[] param0, int param1) {
+    final gj a(Sprite[] param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -162,7 +162,7 @@ final class gj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class gj {
     final gj a(int param0, int param1) {
         this.field_d = param0;
         if (param1 >= -107) {
-          this.field_x = (vn) null;
+          this.field_x = (Sprite) null;
         }
         return this;
     }
@@ -184,7 +184,7 @@ final class gj {
         return param0 & param1;
     }
 
-    final void a(qo param0, int param1, int param2, byte param3, ga param4, gj param5) {
+    final void a(qo param0, int param1, int param2, byte param3, UiWidget param4, gj param5) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -246,7 +246,7 @@ final class gj {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class gj {
         try {
           param1.field_d = this.field_d;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "gj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "gj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -359,7 +359,7 @@ final class gj {
             if (var7 > 255) {
               var7 = 255;
             }
-            field_b[var4][var3] = hi.a(hi.a(var5 << 16, var6 << 8), var7);
+            field_b[var4][var3] = GameWorld.a(GameWorld.a(var5 << 16, var6 << 8), var7);
           }
         }
         field_c = "Zombies remaining: ";

@@ -60,27 +60,27 @@ final class kf extends pn implements hh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     kf(dn param0) {
         super(param0, 200, 130);
-        ga var2 = null;
+        UiWidget var2 = null;
         try {
-          var2 = new ga(mf.field_a, (sk) null);
+          var2 = new UiWidget(mf.field_a, (sk) null);
           var2.field_n = 80;
           var2.field_i = this.field_i;
           var2.field_k = 0;
           var2.field_j = 50;
-          var2.field_h = (io) ((Object) new vf(ii.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.field_h = (io) ((Object) new vf(SecondaryNodeDeque.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var2, 10);
           if (po.w(13296)) {
             this.field_U = this.a(-1763, wd.field_w, (sk) (this));
           }
           this.field_W = this.a(-1763, re.field_c, (sk) (this));
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,11 +114,11 @@ final class kf extends pn implements hh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_11_0 = false;
@@ -129,10 +129,10 @@ final class kf extends pn implements hh {
         try {
           if (param1 == 98) {
             if (null == this.field_U) {
-              this.field_W.a((byte) 110, (ga) (this));
+              this.field_W.a((byte) 110, (UiWidget) (this));
               return true;
             }
-            this.field_U.a((byte) 100, (ga) (this));
+            this.field_U.a((byte) 100, (UiWidget) (this));
             return true;
           }
           var5_int = 122 / ((param0 + 83) / 32);
@@ -140,7 +140,7 @@ final class kf extends pn implements hh {
             stackIn_11_0 = super.a(75, param1, param2, param3);
             return stackIn_11_0;
           }
-          this.field_W.a((byte) 107, (ga) (this));
+          this.field_W.a((byte) 107, (UiWidget) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,7 +152,7 @@ final class kf extends pn implements hh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class wc extends qk {
-    static vn field_Pb;
+    static Sprite field_Pb;
     private int field_Qb;
     static volatile int field_Ob;
     static int[] field_Nb;
@@ -17,23 +17,23 @@ class wc extends qk {
           this.field_yb = null;
         }
         int var5 = -1;
-        le var6 = dj.field_e.field_R.b((byte) 26);
-        while (var6 instanceof fb) {
-          if (var6 instanceof kd &&
-            ((kd) (var6)).x(94)) {
-            var2 = ((kd) (var6)).a(true) - this.a(true);
-            var3 = ((kd) (var6)).f(237239984) - this.f(237239984);
+        IntrusiveNode var6 = Js5Archive.field_e.zombies.b((byte) 26);
+        while (var6 instanceof WorldObject) {
+          if (var6 instanceof Zombie &&
+            ((Zombie) (var6)).x(94)) {
+            var2 = ((Zombie) (var6)).getX(true) - this.getX(true);
+            var3 = ((Zombie) (var6)).getY(237239984) - this.getY(237239984);
             if (var3 > 0 &&
               var3 > Math.abs(var2)) {
               var4 = var3 * var3 + var2 * var2;
               if (var4 < var5 ||
                 -1 == var5) {
-                this.field_yb = (kd) (var6);
+                this.field_yb = (Zombie) (var6);
                 var5 = var4;
               }
             }
           }
-          var6 = var6.field_b;
+          var6 = var6.previous;
         }
         if (param0 != -44) {
           return;
@@ -42,7 +42,7 @@ class wc extends qk {
           this.field_yb = null;
         }
         if (null != this.field_yb) {
-          this.e(10, -6904);
+          this.setState(10, -6904);
           this.field_Gb = 10;
           this.field_U = kh.a(44, false);
           this.field_U.h(ge.field_c >> 1);
@@ -59,7 +59,7 @@ class wc extends qk {
         field_Nb = null;
     }
 
-    void a(byte param0, wk param1) {
+    void a(byte param0, Camera param1) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -71,12 +71,12 @@ class wc extends qk {
         int var5 = 0;
         int var6 = 0;
         try {
-          if (this.field_F == 20) {
+          if (this.state == 20) {
             return;
           }
-          var3_int = param1.a(this.a(true), (byte) -88);
-          var4 = param1.a(this.f(237239984), 0);
-          if (10 == this.field_F &&
+          var3_int = param1.worldToScreenX(this.getX(true), (byte) -88);
+          var4 = param1.worldToScreenY(this.getY(237239984), 0);
+          if (10 == this.state &&
             this.field_G == 1) {
             stackIn_8_0 = -1 + var4;
           } else {
@@ -88,17 +88,17 @@ class wc extends qk {
             this.g(30);
           }
           ld.field_l[this.field_t][var6].b(-24 + var3_int, var5 - 48);
-          ag.field_h.b(-24 + var3_int, -44 + var4);
+          SecondaryNodeDequeIterator.field_h.b(-24 + var3_int, -44 + var4);
           if (this.field_Gb > 0) {
             this.b(var3_int - 3, (byte) -99, var4);
           }
           if (b.field_h) {
-            bi.d(12 + var3_int, var4 + 24, 260, 16711680);
-            bi.e(var3_int, var4, var3_int + 260, var4 + 260, 16711680);
-            bi.e(var3_int, var4, var3_int - 260, 260 + var4, 16711680);
-            bj.field_q.c(Integer.toString(this.field_G), var3_int, var4, 16777215, 0);
-            bj.field_q.c(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
-            bj.field_q.c(Integer.toString(this.field_F), var3_int, var4 - 20, 16777215, 0);
+            Rasterizer.d(12 + var3_int, var4 + 24, 260, 16711680);
+            Rasterizer.e(var3_int, var4, var3_int + 260, var4 + 260, 16711680);
+            Rasterizer.e(var3_int, var4, var3_int - 260, 260 + var4, 16711680);
+            bj.field_q.drawString(Integer.toString(this.field_G), var3_int, var4, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.state), var3_int, var4 - 20, 16777215, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ class wc extends qk {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ class wc extends qk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ class wc extends qk {
         var12 = ZombieDawn.field_J;
         try {
           var14 = fj.field_g;
-          var2 = var14.d((byte) -124);
+          var2 = var14.readUnsignedByte((byte) -124);
           var3 = (mg) (bg.field_i.b((byte) 26));
           if (param0 <= 117) {
             return;
@@ -204,7 +204,7 @@ class wc extends qk {
             p.a(1);
             return;
           }
-          var4 = var14.d((byte) -124);
+          var4 = var14.readUnsignedByte((byte) -124);
           if (var4 != 0) {
             bb.field_b[0] = ce.field_r;
             var5 = var3.field_i;
@@ -215,9 +215,9 @@ class wc extends qk {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               aa.a(var14, -121);
               if (var6_intLifetime1 != 0) {
-                mp.a(var6_intLifetime1, e.field_H, ii.field_d, 1000, sn.field_e, rj.field_E);
+                mp.a(var6_intLifetime1, e.field_H, SecondaryNodeDeque.field_d, 1000, sn.field_e, rj.field_E);
               } else {
-                mp.a(var6_intLifetime1, e.field_H, ii.field_d, 1000, sn.field_e, rj.field_E);
+                mp.a(var6_intLifetime1, e.field_H, SecondaryNodeDeque.field_d, 1000, sn.field_e, rj.field_E);
               }
             }
             bf.a((byte) -35, var5);
@@ -229,7 +229,7 @@ class wc extends qk {
             while (var9 < var8) {
               var11 = qd.field_c[var9];
               var6[0][var10] = bb.field_b[var11];
-              var18[0][var10 * 4] = dj.field_g[var11];
+              var18[0][var10 * 4] = Js5Archive.field_g[var11];
               var18[0][1 + 4 * var10] = qo.field_r[var11];
               var18[0][2 + var10 * 4] = sg.field_kb[var11];
               var18[0][var10 * 4 + 3] = jd.field_d[var11];
@@ -247,7 +247,7 @@ class wc extends qk {
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = qd.field_c[var9Lifetime1 + var5];
               var6[1][var13] = bb.field_b[var11Lifetime1];
-              var18[1][4 * var13] = dj.field_g[var11Lifetime1];
+              var18[1][4 * var13] = Js5Archive.field_g[var11Lifetime1];
               var18[1][1 + 4 * var13] = qo.field_r[var11Lifetime1];
               var18[1][var13 * 4 + 2] = sg.field_kb[var11Lifetime1];
               var18[1][4 * var13 + 3] = jd.field_d[var11Lifetime1];
@@ -259,15 +259,15 @@ class wc extends qk {
               var13++;
               var9Lifetime1++;
             }
-            var3.b(-27598);
+            var3.unlink(-27598);
             return;
           }
-          var3.b(-27598);
+          var3.unlink(-27598);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "wc.PA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "wc.PA(" + param0 + ')');
         }
     }
 
@@ -280,12 +280,12 @@ class wc extends qk {
         if (this.field_Gb > 0) {
           this.field_Gb = this.field_Gb - 1;
         }
-        if (this.field_F != 0) {
-          if (this.field_F == 10) {
+        if (this.state != 0) {
+          if (this.state == 10) {
             this.field_N = this.field_N + 3;
             if (2 == this.field_G) {
               this.field_yb.z(0);
-              this.e(0, -6904);
+              this.setState(0, -6904);
             }
           }
         } else {
@@ -295,7 +295,7 @@ class wc extends qk {
             this.field_Qb = this.field_Qb - 1;
           }
         }
-        this.d(this.field_F, -26109);
+        this.d(this.state, -26109);
     }
 
     final void a(nc param0, byte param1) {
@@ -318,12 +318,12 @@ class wc extends qk {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void f(int param0, int param1) {
-        le var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ep var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -347,7 +347,7 @@ class wc extends qk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2_ref), "wc.UB(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2_ref), "wc.UB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -358,7 +358,7 @@ class wc extends qk {
     }
 
     static {
-        field_Pb = new vn(270, 70);
+        field_Pb = new Sprite(270, 70);
         field_Ob = 0;
         field_Nb = new int[8192];
     }

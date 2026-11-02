@@ -3,7 +3,7 @@
  */
 final class ca {
     static double field_a;
-    static vn[] field_b;
+    static Sprite[] field_b;
 
     final static void a(byte param0, String param1) {
         try {
@@ -13,7 +13,7 @@ final class ca {
           }
           ti.a(md.field_wb, false, false);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ca.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ca.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,19 +47,19 @@ final class ca {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final static vn[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var15 = 0;
         int var9;
-        vn[] var10;
+        Sprite[] var10;
         int var11;
-        vn[] var12_ref_vn__;
+        Sprite[] var12_ref_vn__;
         int var12;
         int var13;
-        vn var14;
+        Sprite var14;
         int var16;
         int var12Lifetime1;
         int var12Lifetime2;
@@ -70,7 +70,7 @@ final class ca {
         int var13Lifetime4;
         var16 = ZombieDawn.field_J;
         var9 = param3 + param5 + param2;
-        var10 = new vn[]{new vn(var9, var9), new vn(param6, var9), new vn(var9, var9), new vn(var9, param6), new vn(64, 64), new vn(var9, param6), new vn(var9, var9), new vn(param6, var9), new vn(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9), new Sprite(var9, param6), new Sprite(64, 64), new Sprite(var9, param6), new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9)};
         var11 = 73 % ((-38 - param8) / 56);
         var12_ref_vn__ = var10;
         for (var13 = 0; var13 < var12_ref_vn__.length; var13++) {
@@ -131,7 +131,7 @@ final class ca {
           }
           var5 = (lo) (c.field_b.b((byte) 26));
           while (var5 != null) {
-            ga.a(param0, 0, var5);
+            UiWidget.a(param0, 0, var5);
             var5 = (lo) (c.field_b.a(false));
           }
           if (param1 > -95) {
@@ -141,13 +141,13 @@ final class ca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "ca.D(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "ca.D(" + param0 + ',' + param1 + ')');
         }
     }
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_b = (vn[]) null;
+          field_b = (Sprite[]) null;
         }
         field_b = null;
     }
@@ -162,21 +162,21 @@ final class ca {
           } else {
             if (4 != param2) {
               if (param2 == 2 &&
-                ke.field_c.field_d == 4) {
+                GameApplet.field_c.field_d == 4) {
                 vl.field_b.c(9091);
               }
             } else {
               tp.a(109, true, w.field_a[9]);
             }
           }
-          if (ke.field_c.field_d == 0) {
+          if (GameApplet.field_c.field_d == 0) {
             if (param2 == 2) {
               qc.b(1400888196);
             } else {
               hm.a(9);
             }
           } else {
-            if (ke.field_c.field_d == 2 &&
+            if (GameApplet.field_c.field_d == 2 &&
               param2 == 0) {
               vj.c(74);
             }
@@ -189,9 +189,9 @@ final class ca {
         }
         sg.field_eb = jj.c(param2, 96);
         po.field_xb = 0;
-        if (ke.field_c.field_d == 1 &&
+        if (GameApplet.field_c.field_d == 1 &&
           sg.field_eb.field_d == 14 ||
-          ke.field_c.field_d == 14 &&
+          GameApplet.field_c.field_d == 14 &&
           sg.field_eb.field_d == 1) {
           po.field_xb = 31;
         }
@@ -199,7 +199,7 @@ final class ca {
           sg.field_eb.a((byte) 74, 0, param0);
         }
         if (sg.field_eb.field_d == 1 &&
-          ke.field_c.field_d != 14) {
+          GameApplet.field_c.field_d != 14) {
           ip.c(-94);
         }
         if (!param1) {

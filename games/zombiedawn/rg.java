@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rg extends pa {
-    static ra field_J;
+    static DualLinkDeque field_J;
     static int field_H;
     static String field_L;
     static int field_I;
@@ -17,7 +17,7 @@ final class rg extends pa {
           }
           r.a(param2, 126, false, param0);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rg.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rg.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class rg extends pa {
             return;
           }
           if (null != this.field_h) {
-            this.field_h.a(16777215, true, param0, (ga) (this), param2);
+            this.field_h.a(16777215, true, param0, (UiWidget) (this), param2);
           }
           if (this.field_i == 0) {
             return;
@@ -63,7 +63,7 @@ final class rg extends pa {
             }
             return;
           }
-          this.field_h.a(16777215, true, param0, (ga) (this), param2);
+          this.field_h.a(16777215, true, param0, (UiWidget) (this), param2);
         }
         if (this.field_i == 0) {
           return;
@@ -76,12 +76,12 @@ final class rg extends pa {
         }
     }
 
-    rg(int param0, int param1, int param2, int param3, io param4, ga param5) {
+    rg(int param0, int param1, int param2, int param3, io param4, UiWidget param5) {
         super(param0, param1, param2, param3, param4, (sk) null);
         try {
           this.field_z = param5;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class rg extends pa {
         field_L = null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -121,7 +121,7 @@ final class rg extends pa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class rg extends pa {
 
     final static void a(oi param0, boolean param1) {
         int var2_int = 0;
-        vn var3 = null;
+        Sprite var3 = null;
         if (hm.field_E == null) {
           return;
         }
@@ -140,20 +140,20 @@ final class rg extends pa {
           if (param1) {
             field_H = 9;
           }
-          var3 = new vn(var2_int, var2_int);
-          var3.a();
+          var3 = new Sprite(var2_int, var2_int);
+          var3.setAsRenderTarget();
           hm.field_E.d(0, 0, var2_int, var2_int);
           cn.field_f.b(44);
           hm.field_E = var3;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rg.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rg.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
         field_L = "Left-click or 'ESC': Skip cutscene";
         field_H = 4;
-        field_J = new ra();
+        field_J = new DualLinkDeque();
         field_I = 0;
         field_K = "DETONATE";
         field_F = -1;

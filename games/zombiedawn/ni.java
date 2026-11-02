@@ -7,7 +7,7 @@ final class ni {
     static fh field_c;
     static Calendar field_d;
     static boolean field_a;
-    static vn[] field_b;
+    static Sprite[] field_b;
 
     final static String a(int param0, int param1, int param2, CharSequence[] param3) {
         int var6_int = 0;
@@ -81,13 +81,13 @@ final class ni {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 != -1) {
-          field_b = (vn[]) null;
+          field_b = (Sprite[]) null;
         }
         field_d = null;
         field_c = null;
@@ -95,7 +95,7 @@ final class ni {
     }
 
     final static void a(byte param0) {
-        dj.field_l = new vo();
+        Js5Archive.field_l = new IntrusiveDeque();
         if (param0 != -78) {
           CharSequence[] var2 = (CharSequence[]) null;
           ni.a(40, 57, -80, (CharSequence[]) null);

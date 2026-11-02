@@ -6,7 +6,7 @@ final class ui {
     static String[] field_e;
     static lp field_b;
     static int field_d;
-    static vo field_f;
+    static IntrusiveDeque field_f;
     static String field_c;
     static String field_a;
 
@@ -22,7 +22,7 @@ final class ui {
         field_b = null;
     }
 
-    final static fi a(int param0) {
+    final static PcmMixer a(int param0) {
         if (param0 != 0) {
           field_g = (af) null;
           return t.field_i;

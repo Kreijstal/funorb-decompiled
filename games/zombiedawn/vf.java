@@ -10,17 +10,17 @@ class vf implements io, ak {
     int field_a;
     static int field_f;
     int field_g;
-    static fn field_c;
+    static PcmSampleStream field_c;
     int field_i;
     private boolean field_e;
     int field_j;
     private int field_q;
     int field_p;
-    rb field_m;
+    Font field_m;
     int field_b;
     int field_h;
 
-    public final vg a(int param0, ga param1) {
+    public final vg a(int param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         vg stackIn_7_0 = null;
@@ -50,13 +50,13 @@ class vf implements io, ak {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    public final int a(ga param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
-        ga var5 = null;
+        UiWidget var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -64,8 +64,8 @@ class vf implements io, ak {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            var5 = (ga) null;
-            this.a((byte) -2, (ga) null);
+            var5 = (UiWidget) null;
+            this.a((byte) -2, (UiWidget) null);
           }
           stackIn_3_0 = this.a(param0, 0, (byte) 24, param2);
           return stackIn_3_0;
@@ -79,15 +79,15 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    vf(rb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    vf(Font param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int b(ga param0, int param1, int param2) {
+    public final int b(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -112,11 +112,11 @@ class vf implements io, ak {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6, int param7) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -127,14 +127,14 @@ class vf implements io, ak {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        ga var14 = null;
+        UiWidget var14 = null;
         int var12Lifetime1;
         var13 = ZombieDawn.field_J;
         try {
-          g.$cfr$intArgs$a$3aedf8649552(param2 + param6.field_j, 99, param6.field_i + (param4 + param6.field_k), param6.field_n + (param6.field_j + param2), param4 + param6.field_k);
+          Mover.$cfr$intArgs$a$3aedf8649552(param2 + param6.field_j, 99, param6.field_i + (param4 + param6.field_k), param6.field_n + (param6.field_j + param2), param4 + param6.field_k);
           if (param7 < 3) {
-            var14 = (ga) null;
-            this.b((ga) null, 57, -8);
+            var14 = (UiWidget) null;
+            this.b((UiWidget) null, 57, -8);
           }
           boolean decompiledFrameRemainder0 = true;
           var9_int = this.a((byte) 123, param6);
@@ -157,16 +157,16 @@ class vf implements io, ak {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_m.a(this.b(12307, param6), (var9_int >> 1) + this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
+                this.field_m.drawStringCentered(this.b(12307, param6), (var9_int >> 1) + this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_m.b(this.b(12307, param6), this.a(true, param6, param0, param4) + var9_int, var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
+                  this.field_m.drawStringRightAligned(this.b(12307, param6), this.a(true, param6, param0, param4) + var9_int, var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_m.c(this.b(12307, param6), this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
+              this.field_m.drawString(this.b(12307, param6), this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
             }
           } else {
             this.field_m.a(this.b(12307, param6), this.a(true, param6, param0, param4), this.a(param6, param1, (byte) 24, param2), var9_int, var10, param3, param5, this.field_h, this.field_i, this.field_n);
@@ -183,13 +183,13 @@ class vf implements io, ak {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param7).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param7).append(')').toString());
         }
     }
 
-    String b(int param0, ga param1) {
+    String b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        ga var4 = null;
+        UiWidget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -197,8 +197,8 @@ class vf implements io, ak {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 12307) {
-            var4 = (ga) null;
-            this.b((byte) 77, (ga) null);
+            var4 = (UiWidget) null;
+            this.b((byte) 77, (UiWidget) null);
           }
           stackIn_3_0 = param1.field_o;
           return stackIn_3_0;
@@ -212,7 +212,7 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -227,11 +227,11 @@ class vf implements io, ak {
         try {
           int var2_int = 90 / ((-63 - param0) / 58);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(int param0, int param1, int param2, ga param3, int param4, int param5) {
+    public final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
@@ -267,7 +267,7 @@ class vf implements io, ak {
             }
             var10 = var18.a(104, var8);
             var11 = var18.a(-71, var9);
-            g.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param4 + (param3.field_k + param3.field_i), param3.field_n + (param3.field_j + param2), param4 + param3.field_k);
+            Mover.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param4 + (param3.field_k + param3.field_i), param3.field_n + (param3.field_j + param2), param4 + param3.field_k);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_b[var12];
               if (~var10 != ~var12) {
@@ -304,25 +304,25 @@ class vf implements io, ak {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    public void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         if (null == this.field_m) {
           return;
         }
         try {
           this.a(param2, (byte) 119, param4, param3);
           if (param0 != 16777215) {
-            this.field_m = (rb) null;
+            this.field_m = (Font) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    public final int a(boolean param0, ga param1) {
+    public final int a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -348,11 +348,11 @@ class vf implements io, ak {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, vn[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -432,69 +432,69 @@ class vf implements io, ak {
               var19 = param5 * var8 / (var8 + var9) + param0;
               var18 = param5 * var8 / (var8 + var9) + param0;
             }
-            bi.b(dd.field_c);
+            Rasterizer.saveClip(dd.field_c);
             if (param1[0] != null) {
-              bi.c(param2, param0, var16, var18);
+              Rasterizer.c(param2, param0, var16, var18);
               param1[0].b(param2, param0);
-              bi.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (null != param1[2]) {
-              bi.c(var17, param0, var10, var18);
+              Rasterizer.c(var17, param0, var10, var18);
               param1[2].b(var13, param0);
-              bi.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (param1[6] != null) {
-              bi.c(param2, var19, var16, var11);
+              Rasterizer.c(param2, var19, var16, var11);
               param1[6].b(param2, var15);
-              bi.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (param1[8] != null) {
-              bi.c(var17, var19, var10, var11);
+              Rasterizer.c(var17, var19, var10, var11);
               param1[8].b(var13, var15);
-              bi.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (null != param1[1] &&
               0 != param1[1].field_r) {
-              bi.c(var16, param0, var17, var18);
+              Rasterizer.c(var16, param0, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param1[1].field_r) {
                 param1[1].b(var20, param0);
               }
-              bi.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (param1[7] != null &&
               param1[7].field_r != 0) {
-              bi.c(var16, var19, var17, var11);
+              Rasterizer.c(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].field_r) {
                 param1[7].b(var20Lifetime1, var15);
               }
-              bi.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (null != param1[param3] &&
               0 != param1[3].field_q) {
-              bi.c(param2, var18, var16, var19);
+              Rasterizer.c(param2, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param1[3].field_q) {
                 param1[3].b(param2, var20Lifetime2);
               }
-              bi.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (param1[5] != null &&
               param1[5].field_q != 0) {
-              bi.c(var17, var18, var10, var19);
+              Rasterizer.c(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param1[5].field_q) {
                 param1[5].b(var13, var20Lifetime3);
               }
-              bi.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
             }
             if (null != param1[4] &&
               param1[4].field_r != 0 &&
               0 != param1[4].field_q) {
-              bi.c(var16, var18, var17, var19);
+              Rasterizer.c(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param1[4].field_q) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param1[4].field_r) {
                   param1[4].b(var21, var20Lifetime4);
                 }
               }
-              bi.a(dd.field_c);
+              Rasterizer.restoreClip(dd.field_c);
               return;
             }
             return;
@@ -510,7 +510,7 @@ class vf implements io, ak {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -531,11 +531,11 @@ class vf implements io, ak {
           param0.field_j = this.field_j;
           param0.field_b = this.field_b;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final int a(byte param0, ga param1) {
+    public final int a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -558,11 +558,11 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    private final int a(ga param0, int param1, byte param2, int param3) {
+    private final int a(UiWidget param0, int param1, byte param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -587,11 +587,11 @@ class vf implements io, ak {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final int a(ga param0, int param1) {
+    private final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -616,24 +616,24 @@ class vf implements io, ak {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(int param0, byte param1, int param2, ga param3) {
+    private final void a(int param0, byte param1, int param2, UiWidget param3) {
         try {
           this.a(0, 0, param0, this.field_l, param2, this.field_q, param3, 72);
           if (param1 <= 42) {
             this.field_p = -124;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final int b(byte param0, ga param1) {
+    public final int b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        ga var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -641,8 +641,8 @@ class vf implements io, ak {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -31) {
-            var4 = (ga) null;
-            this.a(62, 84, 6, -2, (ga) null);
+            var4 = (UiWidget) null;
+            this.a(62, 84, 6, -2, (UiWidget) null);
           }
           this.a(106, param1);
           stackIn_3_0 = param1.field_t.b((byte) 63) + (this.field_g + this.field_o);
@@ -657,11 +657,11 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    private final void c(int param0, ga param1) {
+    private final void c(int param0, UiWidget param1) {
         int discarded$0 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -673,7 +673,7 @@ class vf implements io, ak {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ga var8 = null;
+        UiWidget var8 = null;
         int var6Lifetime1;
         var7 = ZombieDawn.field_J;
         try {
@@ -712,8 +712,8 @@ class vf implements io, ak {
             }
           }
           if (param0 != 26289) {
-            var8 = (ga) null;
-            discarded$0 = this.a((ga) null, 125);
+            var8 = (UiWidget) null;
+            discarded$0 = this.a((UiWidget) null, 125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -726,11 +726,11 @@ class vf implements io, ak {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ga param4) {
+    public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
         vg var13 = null;
         vg var14 = null;
         int var7 = 0;
@@ -749,13 +749,13 @@ class vf implements io, ak {
             var10 = this.a(true, param4, var9, param1);
             var11 = this.a(param4, 1, param2) + Math.max(0, var8.field_b);
             var12 = this.a(param4, 1, param2) + Math.min(this.a(param4, -23803), Math.min(var8.field_g, var7 + 1 >= var14.field_b.length ? var8.field_g : var13.field_b[1 + var7].field_b));
-            g.$cfr$intArgs$a$3aedf8649552(param4.field_j + param2, 99, param4.field_i + (param4.field_k + param1), param4.field_n + (param2 + param4.field_j), param4.field_k + param1);
+            Mover.$cfr$intArgs$a$3aedf8649552(param4.field_j + param2, 99, param4.field_i + (param4.field_k + param1), param4.field_n + (param2 + param4.field_j), param4.field_k + param1);
             se.field_j.a(var12, this.field_a, (byte) -14, var10, var11, var10);
             pa.a(-21189);
           }
           int var6_int = -62 % ((param3 - 37) / 55);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -766,9 +766,9 @@ class vf implements io, ak {
         }
     }
 
-    private final int a(boolean param0, ga param1, int param2, int param3) {
+    private final int a(boolean param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
-        ga var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -776,8 +776,8 @@ class vf implements io, ak {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            var6 = (ga) null;
-            this.a(-121, false, -32, (ga) null, -20);
+            var6 = (UiWidget) null;
+            this.a(-121, false, -32, (UiWidget) null, -20);
           }
           stackIn_3_0 = param1.field_u + (param3 + param1.field_k + this.field_g + param2);
           return stackIn_3_0;
@@ -791,14 +791,14 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     protected vf() {
     }
 
-    vf(rb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    vf(Font param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_q = param6;
           this.field_n = param9;
@@ -814,11 +814,11 @@ class vf implements io, ak {
           this.field_b = param3;
           this.field_l = param5;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 
-    public final int a(ga param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int a(UiWidget param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -842,7 +842,7 @@ class vf implements io, ak {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

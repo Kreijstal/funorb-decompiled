@@ -4,8 +4,8 @@
 final class wh implements wa {
     static int field_b;
     static int field_c;
-    static vn[][] field_a;
-    static fn field_e;
+    static Sprite[][] field_a;
+    static PcmSampleStream field_e;
     static int[] field_d;
 
     public final void a(int param0, int param1, int param2) {
@@ -19,7 +19,7 @@ final class wh implements wa {
         int var3 = ZombieDawn.field_J;
         int var2Lifetime1;
         try {
-          vm.field_u = dj.field_e.field_H.a(8728);
+          vm.field_u = Js5Archive.field_e.navigation.a(8728);
           for (var1_int = 0; var1_int < vm.field_u.length; var1_int++) {
             for (var2 = 0; var2 < vm.field_u[0].length; var2++) {
               if (vm.field_u[var1_int][var2] != 0) {
@@ -29,7 +29,7 @@ final class wh implements wa {
           }
           var2Lifetime1 = 3 / ((27 - param0) / 47);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "wh.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wh.B(" + param0 + ')');
         }
     }
 
@@ -71,21 +71,21 @@ final class wh implements wa {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 != 0) {
-          field_a = (vn[][]) null;
+          field_a = (Sprite[][]) null;
         }
-        field_a = (vn[][]) null;
+        field_a = (Sprite[][]) null;
         field_d = null;
         field_e = null;
     }
 
     static {
-        field_a = new vn[4][];
+        field_a = new Sprite[4][];
         field_e = null;
         field_d = new int[256];
     }

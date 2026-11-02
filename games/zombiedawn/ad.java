@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ad extends vg {
-    private rb field_d;
+    private Font field_d;
     static String field_o;
     private int field_p;
     private boolean field_m;
-    static vn[] field_f;
+    static Sprite[] field_f;
     private int field_k;
     private String field_l;
-    static vo field_h;
+    static IntrusiveDeque field_h;
     private int field_j;
     private int field_i;
-    static vn[][] field_g;
+    static Sprite[][] field_g;
     static int field_e;
     private int field_n;
 
-    private final oe a(rb param0, boolean param1, String param2, int param3) {
+    private final oe a(Font param0, boolean param1, String param2, int param3) {
         oe discarded$1 = null;
         oe var5 = null;
         RuntimeException var5_ref = null;
@@ -29,7 +29,7 @@ final class ad extends vg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            discarded$1 = this.a((rb) null, false, (String) null, -57);
+            discarded$1 = this.a((Font) null, false, (String) null, -57);
           }
           var5 = new oe(param3 - param0.field_I, param3 + param0.field_x, param2.length());
           this.field_b = new oe[]{var5};
@@ -51,11 +51,11 @@ final class ad extends vg {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(String param0, int param1, rb param2, byte param3, int param4) {
+    final void a(String param0, int param1, Font param2, byte param3, int param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -85,7 +85,7 @@ final class ad extends vg {
           var6.field_e[param0.length()] = param4;
           ma.a(var6, 0, param0, param2, false);
           if (param3 != 83) {
-            this.a((String) null, (byte) 105, 37, (rb) null, 104, 15, -99, 98);
+            this.a((String) null, (byte) 105, 37, (Font) null, 104, 15, -99, 98);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -104,7 +104,7 @@ final class ad extends vg {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -187,12 +187,12 @@ final class ad extends vg {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
     public static void b(int param0) {
-        field_g = (vn[][]) null;
+        field_g = (Sprite[][]) null;
         field_h = null;
         if (param0 != -1819016370) {
           return;
@@ -201,11 +201,11 @@ final class ad extends vg {
           field_o = null;
           field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ad.M(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ad.M(" + param0 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, rb param4) {
+    final void a(int param0, int param1, int param2, String param3, Font param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -254,11 +254,11 @@ final class ad extends vg {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
-    final void a(String param0, byte param1, int param2, rb param3, int param4, int param5, int param6, int param7) {
+    final void a(String param0, byte param1, int param2, Font param3, int param4, int param5, int param6, int param7) {
         oe discarded$0 = null;
         oe stackIn_65_0;
         oe stackIn_65_1;
@@ -309,7 +309,7 @@ final class ad extends vg {
           this.field_d = param3;
           this.field_l = param0;
           if (param1 != -106) {
-            discarded$0 = this.a((rb) null, false, (String) null, 35);
+            discarded$0 = this.a((Font) null, false, (String) null, 35);
           }
           this.field_p = param6;
           this.field_k = param7;
@@ -404,7 +404,7 @@ final class ad extends vg {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -461,7 +461,7 @@ final class ad extends vg {
           var7_int = 2147483647;
           var8 = -2147483648;
           if (param3 != 50) {
-            field_g = (vn[][]) null;
+            field_g = (Sprite[][]) null;
           }
           var21 = param6[3] >> 2;
           var22 = param6[4] >> 2;
@@ -490,7 +490,7 @@ final class ad extends vg {
           var21Lifetime2 = en.field_a;
           var22Lifetime2 = en.field_i;
           var23Lifetime2 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (param2.field_k > var23Lifetime2) {
               var24Lifetime1 = param2.field_G[var23Lifetime2];
               var25Lifetime1 = param2.field_B[var23Lifetime2];
@@ -517,7 +517,7 @@ final class ad extends vg {
                 if (param4) {
                   ip.field_r[var23Lifetime2] = var27Lifetime1 >> f.field_a;
                   fm.field_G[var23Lifetime2] = var28Lifetime1 >> f.field_a;
-                  g.field_P[var23Lifetime2] = var29Lifetime1;
+                  Mover.field_P[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -543,7 +543,7 @@ final class ad extends vg {
                   var24Lifetime1 = param2.field_N[var23Lifetime2];
                   var25Lifetime1 = param2.field_i[var23Lifetime2];
                   var26Lifetime1 = param2.field_I[var23Lifetime2];
-                  rm.field_c[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var25Lifetime1 * var15 + var12 * var24Lifetime1) >> 16);
+                  DelegatingCanvas.field_c[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var25Lifetime1 * var15 + var12 * var24Lifetime1) >> 16);
                   lb.field_db[var23Lifetime2] = (var13 * var24Lifetime1 + (var16 * var25Lifetime1 + var26Lifetime1 * var19) >> 16) + var10;
                   ce.field_v[var23Lifetime2] = var11 + (var24Lifetime1 * var14 + var17 * var25Lifetime1 + var26Lifetime1 * var20 >> 16);
                   var24Lifetime1 = param2.field_D[var23Lifetime2];
@@ -573,7 +573,7 @@ final class ad extends vg {
                   stackIn_67_0 = og.field_y.length;
                   stackIn_67_1 = var18;
                   if (var30 != 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                   if (stackIn_67_0 <= stackIn_67_1) {
                     break;
@@ -616,11 +616,11 @@ final class ad extends vg {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
-    final void a(int param0, rb param1, String param2, int param3, int param4) {
+    final void a(int param0, Font param1, String param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         oe var6 = null;
         int var7 = 0;
@@ -668,7 +668,7 @@ final class ad extends vg {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -680,7 +680,7 @@ final class ad extends vg {
             ad.b(-91);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ad.I(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ad.I(" + param0 + ')');
         }
     }
 
@@ -689,7 +689,7 @@ final class ad extends vg {
 
     static {
         field_o = "Waiting for extra data";
-        field_h = new vo();
-        field_g = new vn[2][];
+        field_h = new IntrusiveDeque();
+        field_g = new Sprite[2][];
     }
 }

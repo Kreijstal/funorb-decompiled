@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class s extends le {
+final class s extends IntrusiveNode {
     int field_i;
-    fb field_h;
-    static vn field_j;
+    WorldObject field_h;
+    static Sprite field_j;
 
-    final static void a(long param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, ec param10, String param11, int param12, int param13) {
+    final static void a(long param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, PlatformTaskDispatcher param10, String param11, int param12, int param13) {
         try {
           RuntimeException stackIn_14_0 = null;
           StringBuilder stackIn_14_1 = null;
@@ -22,7 +22,7 @@ final class s extends le {
           try {
             fj.field_g = new am(param1);
             dp.field_e = new am(param7);
-            h.field_b = param5;
+            MouseInputHandler.field_b = param5;
             var15_int = 112 / ((56 - param12) / 57);
             jm.field_B = param10;
             cn.field_j = param13;
@@ -32,7 +32,7 @@ final class s extends le {
             kg.field_k = param9;
             ih.field_S = param2;
             ba.field_b = param3;
-            le.field_g = param6;
+            IntrusiveNode.field_g = param6;
             lg.field_u = param0;
             if (null == jm.field_B.field_b) {
               return;
@@ -61,7 +61,7 @@ final class s extends le {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -70,7 +70,7 @@ final class s extends le {
         }
     }
 
-    final static void a(byte param0, wk param1, ub param2) {
+    final static void a(byte param0, Camera param1, ub param2) {
         int var5 = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_53_0 = null;
@@ -82,8 +82,8 @@ final class s extends le {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        kd var6 = null;
-        qh var7 = null;
+        Zombie var6 = null;
+        Path var7 = null;
         int var8 = 0;
         var8 = ZombieDawn.field_J;
         try {
@@ -95,11 +95,11 @@ final class s extends le {
             lg.a(2, (byte) 100);
           }
           if (-1.0f == oc.field_c) {
-            oc.field_c = (float)param1.field_c;
+            oc.field_c = (float)param1.y;
           }
           if (oc.field_c > 240.0f) {
             oc.field_c = oc.field_c - i.field_V;
-            param1.field_c = (int)oc.field_c;
+            param1.y = (int)oc.field_c;
           }
           if (ac.field_m == 1428) {
             if (qj.field_f != null &&
@@ -131,11 +131,11 @@ final class s extends le {
                 if (ac.field_m % 2 == 0) {
                   param2.i(16777215);
                   if ((ac.field_m - 850) / 2 == 100) {
-                    ha.field_d.field_x = -50 + ha.field_d.f(237239984) << 16;
+                    ha.field_d.field_x = -50 + ha.field_d.getY(237239984) << 16;
                     for (var5 = 0; var5 < 5; var5++) {
-                      var6 = dj.field_e.a(10, (byte) 124, 90, 340, 380);
-                      var7 = new qh();
-                      var7.a(0, new kk(var6.a(true), var6.f(237239984) - 100));
+                      var6 = Js5Archive.field_e.spawnZombie(10, (byte) 124, 90, 340, 380);
+                      var7 = new Path();
+                      var7.addFirst(0, new Point(var6.getX(true), var6.getY(237239984) - 100));
                       var6.a(var7, true);
                     }
                   }
@@ -192,7 +192,7 @@ final class s extends le {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class s extends le {
         if (param0 <= -111) {
           return;
         }
-        field_j = (vn) null;
+        field_j = (Sprite) null;
     }
 
     final static String a(int param0, String param1, String[] param2) {
@@ -255,7 +255,7 @@ final class s extends le {
                 continue;
               }
               var5++;
-              var8 = ra.a((CharSequence) ((Object) var7_ref_String), 122);
+              var8 = DualLinkDeque.a((CharSequence) ((Object) var7_ref_String), 122);
               var4 = var4 + (param2[var8].length() + (-var5 + var6_int));
               continue;
             }
@@ -292,7 +292,7 @@ final class s extends le {
               continue;
             }
             var5Lifetime1++;
-            var10 = ra.a((CharSequence) ((Object) var9), param0 ^ 1938762718);
+            var10 = DualLinkDeque.a((CharSequence) ((Object) var9), param0 ^ 1938762718);
             discarded$1 = var6.append(param1.substring(var7, var8Lifetime1));
             discarded$2 = var6.append(param2[var10]);
             var7 = var5Lifetime1;
@@ -313,16 +313,16 @@ final class s extends le {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    s(fb param0, int param1) {
+    s(WorldObject param0, int param1) {
         try {
           this.field_i = param1;
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

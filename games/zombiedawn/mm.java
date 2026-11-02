@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class mm extends le {
+final class mm extends IntrusiveNode {
     static String field_l;
     static int field_i;
     static String field_j;
-    private vo field_h;
+    private IntrusiveDeque field_h;
     static float field_k;
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int var4 = 0;
         pb var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -39,7 +39,7 @@ final class mm extends le {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -80,8 +80,8 @@ final class mm extends le {
           var5 = (pb) (this.field_h.a(false));
         }
         if (param0 != -25687) {
-          ah var4 = (ah) null;
-          this.a((ah) null, (byte) 55);
+          Human var4 = (Human) null;
+          this.a((Human) null, (byte) 55);
         }
     }
 
@@ -94,30 +94,30 @@ final class mm extends le {
         }
         int var1 = 20;
         int var2 = 40;
-        int var3 = pb.a(so.field_a, 5, 1);
+        int var3 = pb.a(so.random, 5, 1);
         if (var3 == 0) {
-          ga.field_q = ga.field_q - 3;
+          UiWidget.field_q = UiWidget.field_q - 3;
         } else {
           if (var3 == 1) {
-            ga.field_q = ga.field_q + 3;
+            UiWidget.field_q = UiWidget.field_q + 3;
           }
         }
-        if (!(ga.field_q >= var2)) {
-          ga.field_q = var2;
+        if (!(UiWidget.field_q >= var2)) {
+          UiWidget.field_q = var2;
         }
-        if (ga.field_q > var1 + var2) {
-          ga.field_q = var1 + var2;
+        if (UiWidget.field_q > var1 + var2) {
+          UiWidget.field_q = var1 + var2;
         }
     }
 
-    final static dj a(int param0, byte param1) {
+    final static Js5Archive a(int param0, byte param1) {
         if (param1 >= -18) {
           field_i = -54;
         }
-        return hd.a(false, true, param0, 1, true, false);
+        return SpriteState.a(false, true, param0, 1, true, false);
     }
 
-    final boolean a(ah param0, byte param1) {
+    final boolean a(Human param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -129,8 +129,8 @@ final class mm extends le {
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawn.field_J;
         try {
-          var3_int = param0.a(true);
-          var4 = param0.f(237239984);
+          var3_int = param0.getX(true);
+          var4 = param0.getY(237239984);
           if (param1 <= 49) {
             mm.e((byte) 37);
           }
@@ -156,7 +156,7 @@ final class mm extends le {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ final class mm extends le {
           var3 = var4;
           var4 = var8_ref_boolean____;
         }
-        this.field_h = new vo();
+        this.field_h = new IntrusiveDeque();
         for (var7Lifetime1 = 0; var7Lifetime1 < var3.length; var7Lifetime1++) {
           var14 = 0;
           var8Lifetime1 = var14;
@@ -226,7 +226,7 @@ final class mm extends le {
             var11Lifetime1 = (param0 - var9Lifetime1) * (param0 - var9Lifetime1) + (-var10Lifetime1 + param1) * (param1 - var10Lifetime1);
             if (var11Lifetime1 < 81 &&
               var3[var7Lifetime1][var14]) {
-              this.field_h.a(0, new pb(var9Lifetime1, var10Lifetime1, var11Lifetime1));
+              this.field_h.addFirst(0, new pb(var9Lifetime1, var10Lifetime1, var11Lifetime1));
             }
             var14++;
           }

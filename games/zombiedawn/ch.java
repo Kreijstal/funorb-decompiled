@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ch {
-    static vn field_a;
+    static Sprite field_a;
     static int field_b;
     static String field_c;
 
@@ -95,8 +95,8 @@ final class ch {
               kn.field_F > 0) {
               fieldTemp$22 = kn.field_F - 1;
               kn.field_F = kn.field_F - 1;
-              var2_ref_byte__ = sh.field_j[fieldTemp$22];
-              sh.field_j[kn.field_F] = null;
+              var2_ref_byte__ = ExceptionWrapper.field_j[fieldTemp$22];
+              ExceptionWrapper.field_j[kn.field_F] = null;
               return var2_ref_byte__;
             }
             if (wg.field_j == null) {
@@ -135,8 +135,8 @@ final class ch {
           if (kn.field_F > 0) {
             fieldTemp$21 = kn.field_F - 1;
             kn.field_F = kn.field_F - 1;
-            var2_ref_byte__Lifetime5 = sh.field_j[fieldTemp$21];
-            sh.field_j[kn.field_F] = null;
+            var2_ref_byte__Lifetime5 = ExceptionWrapper.field_j[fieldTemp$21];
+            ExceptionWrapper.field_j[kn.field_F] = null;
             return var2_ref_byte__Lifetime5;
           }
           if (wg.field_j == null) {
@@ -187,8 +187,8 @@ final class ch {
           if (kn.field_F > 0) {
             fieldTemp$7 = kn.field_F - 1;
             kn.field_F = kn.field_F - 1;
-            var2_ref_byte__Lifetime2 = sh.field_j[fieldTemp$7];
-            sh.field_j[kn.field_F] = null;
+            var2_ref_byte__Lifetime2 = ExceptionWrapper.field_j[fieldTemp$7];
+            ExceptionWrapper.field_j[kn.field_F] = null;
             return var2_ref_byte__Lifetime2;
           }
           if (wg.field_j == null) {
@@ -235,8 +235,8 @@ final class ch {
         if (kn.field_F > 0) {
           fieldTemp$12 = kn.field_F - 1;
           kn.field_F = kn.field_F - 1;
-          var2_ref_byte__Lifetime4 = sh.field_j[fieldTemp$12];
-          sh.field_j[kn.field_F] = null;
+          var2_ref_byte__Lifetime4 = ExceptionWrapper.field_j[fieldTemp$12];
+          ExceptionWrapper.field_j[kn.field_F] = null;
           return var2_ref_byte__Lifetime4;
         }
         if (wg.field_j == null) {
@@ -285,7 +285,7 @@ final class ch {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

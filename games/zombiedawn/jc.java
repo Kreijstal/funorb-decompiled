@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc extends le {
+final class jc extends IntrusiveNode {
     static boolean[] field_r;
     int field_u;
     static int field_h;
@@ -14,7 +14,7 @@ final class jc extends le {
     boolean field_j;
     static String[] field_p;
     int[][] field_k;
-    static vn[] field_t;
+    static Sprite[] field_t;
     static int[] field_n;
 
     final static void a(byte param0, java.applet.Applet param1) {
@@ -31,7 +31,7 @@ final class jc extends le {
           var4 = -1L;
           pg.a(true, param1, var4, var2, var3);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -23,7 +23,7 @@ final class ih extends hp implements ok, hh {
             this.a((tb) null, 89);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ih.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ih.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class ih extends hp implements ok, hh {
         RuntimeException decompiledCaughtException = null;
         vm var6 = null;
         RuntimeException var6_ref = null;
-        rb var7 = null;
+        Font var7 = null;
         String var8 = null;
         sn var9 = null;
         q var12 = null;
@@ -91,7 +91,7 @@ final class ih extends hp implements ok, hh {
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = hl.field_h;
+              stackIn_18_3 = NodeHashTableIterator.field_h;
             }
             this.field_Q = new an(stackIn_18_3, (sk) null);
             if (this.field_L) {
@@ -139,12 +139,12 @@ final class ih extends hp implements ok, hh {
           dupTemp$0 = new q(10, this.field_j, -20 + this.field_i, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(dupTemp$0, 10);
-          this.field_j = this.field_j + (((ga) ((Object) var12)).field_n + 5);
+          this.field_j = this.field_j + (((UiWidget) ((Object) var12)).field_n + 5);
           dupTemp$1 = new q(10, this.field_j, this.field_i - 20, 25, this.field_M, false, 80, 3, var7, 16777215, ui.field_c);
           var13 = dupTemp$1;
           this.a(dupTemp$1, 10);
           this.field_R.field_v = (sk) (this);
-          this.field_j = this.field_j + (5 + ((ga) ((Object) var13)).field_n);
+          this.field_j = this.field_j + (5 + ((UiWidget) ((Object) var13)).field_n);
           if (null != this.field_K) {
             this.field_K.field_v = (sk) (this);
           }
@@ -197,7 +197,7 @@ final class ih extends hp implements ok, hh {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -214,7 +214,7 @@ final class ih extends hp implements ok, hh {
           ia.field_e.a(this.field_P, 20 + (param2 + this.field_k), param0 - (-this.field_j - 15), this.field_i - 40, this.field_n, 16777215, -1, 1, 0, ia.field_e.field_I);
         }
         if (this.field_K != null) {
-          bi.b(10 + param2, param0 + 134, -20 + this.field_i, 4210752);
+          Rasterizer.drawHorizontalLine(10 + param2, param0 + 134, -20 + this.field_i, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }
@@ -230,7 +230,7 @@ final class ih extends hp implements ok, hh {
           ma.field_r = -1;
           uo.field_d = false;
           vk.field_c = param0;
-          h.field_d = false;
+          MouseInputHandler.field_d = false;
           sm.field_a = -1;
           return;
         }
@@ -248,7 +248,7 @@ final class ih extends hp implements ok, hh {
           var3.a(false, false, var4);
           this.field_M.j(0);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ih.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ih.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -261,7 +261,7 @@ final class ih extends hp implements ok, hh {
         RuntimeException var3 = null;
         try {
           if (param0 == this.field_N) {
-            this.field_M.a((byte) 125, (ga) (this));
+            this.field_M.a((byte) 125, (UiWidget) (this));
           }
           var3_int = -126 / ((param1 - 35) / 38);
           if (this.field_M == param0) {
@@ -278,7 +278,7 @@ final class ih extends hp implements ok, hh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -324,11 +324,11 @@ final class ih extends hp implements ok, hh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -361,7 +361,7 @@ final class ih extends hp implements ok, hh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ final class ih extends hp implements ok, hh {
         if (param0 > -23) {
           return;
         }
-        if (eo.b(127) ||
+        if (HumanFactory.b(127) ||
           !(this.field_N.field_o.length() <= 0) &&
           !(this.field_M.field_o.length() <= 0)) {
           rg.a(this.field_N.field_o, -27, this.field_M.field_o);

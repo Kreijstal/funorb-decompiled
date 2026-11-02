@@ -3,28 +3,28 @@
  */
 final class ka {
     static byte[][] field_e;
-    private dj field_g;
+    private Js5Archive field_g;
     static String field_a;
     static byte[][] field_f;
     private dl field_c;
-    private dj field_b;
+    private Js5Archive field_b;
     static boolean[] field_h;
     private dl field_d;
 
-    private final gi a(int param0, int param1, int[] param2, boolean param3) {
+    private final PcmSample a(int param0, int param1, int[] param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        gi var8 = null;
+        PcmSample var8 = null;
         ml var9 = null;
-        gi var10 = null;
-        gi stackIn_5_0 = null;
-        gi stackIn_16_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_5_0 = null;
+        PcmSample stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gi var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           if (!param3) {
             field_e = (byte[][]) null;
@@ -32,7 +32,7 @@ final class ka {
           var5_int = param1 ^ ((268439551 & param0) << 4 | param0 >>> 12);
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int;
-          var8 = (gi) (this.field_d.a(var6, 75));
+          var8 = (PcmSample) (this.field_d.a(var6, 75));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -63,21 +63,21 @@ final class ka {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final gi a(int param0, boolean param1, int[] param2) {
+    final PcmSample a(int param0, boolean param1, int[] param2) {
         RuntimeException var4 = null;
         int[] var5 = null;
-        gi stackIn_3_0 = null;
-        gi stackIn_8_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_g.d(-1)) {
+          if (1 == this.field_g.groupCount(-1)) {
             stackIn_3_0 = this.a(0, param0, param2, true);
             return stackIn_3_0;
           }
@@ -100,7 +100,7 @@ final class ka {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -114,16 +114,16 @@ final class ka {
         field_e = (byte[][]) null;
     }
 
-    final gi a(int param0, int[] param1, int param2) {
+    final PcmSample a(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
-        gi stackIn_3_0 = null;
-        gi stackIn_9_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_b.d(param0 ^ -1856253637) == 1) {
+          if (this.field_b.groupCount(param0 ^ -1856253637) == 1) {
             stackIn_3_0 = this.a(param2, param1, 0, 117);
             return stackIn_3_0;
           }
@@ -145,32 +145,32 @@ final class ka {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final gi a(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        gi var8 = null;
+        PcmSample var8 = null;
         mb var9 = null;
-        gi stackIn_2_0 = null;
-        gi stackIn_5_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_5_0 = null;
         Object stackIn_17_0 = null;
-        gi stackIn_19_0 = null;
+        PcmSample stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gi var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param0 ^ (param2 >>> 12 | param2 << 4 & 65531);
           var5_int = var5_int | param2 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (gi) (this.field_d.a(var6, 58));
+          var8 = (PcmSample) (this.field_d.a(var6, 58));
           if (param3 < 95) {
-            stackIn_2_0 = (gi) null;
+            stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
           if (var8 != null) {
@@ -192,9 +192,9 @@ final class ka {
           var8Lifetime1 = var9.a(param1);
           if (var8Lifetime1 == null) {
             stackIn_17_0 = null;
-            return (gi) (stackIn_17_0);
+            return (PcmSample) (stackIn_17_0);
           }
-          var9.b(-27598);
+          var9.unlink(-27598);
           this.field_d.a(-102, var6, var8Lifetime1);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
@@ -208,18 +208,18 @@ final class ka {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    ka(dj param0, dj param1) {
+    ka(Js5Archive param0, Js5Archive param1) {
         this.field_c = new dl(256);
         this.field_d = new dl(256);
         try {
           this.field_g = param0;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

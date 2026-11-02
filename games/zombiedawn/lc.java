@@ -4,14 +4,14 @@
 final class lc {
     private int field_b;
     static char field_c;
-    private wm field_e;
+    private IterableNodeHashTable field_e;
     private int field_f;
     static int field_i;
     static volatile boolean field_d;
-    private ii field_g;
+    private SecondaryNodeDeque field_g;
     static int field_h;
-    static ec field_a;
-    static vn[] field_k;
+    static PlatformTaskDispatcher field_a;
+    static Sprite[] field_k;
     static int field_j;
 
     private final void a(long param0, int param1, int param2, Object param3) {
@@ -32,11 +32,11 @@ final class lc {
             this.a(var8, 108);
           }
           var6 = new jl(param3, param1);
-          this.field_e.a(param0, true, var6);
+          this.field_e.put(param0, true, var6);
           this.field_g.a(0, var6);
-          ((bj) ((Object) var6)).field_n = 0L;
+          ((bj) ((Object) var6)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "lc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,8 +51,8 @@ final class lc {
             return;
           }
           if (param0 != null) {
-            param0.b(-27598);
-            param0.c((byte) -79);
+            param0.unlink(-27598);
+            param0.unlinkSecondary((byte) -79);
             this.field_b = this.field_b + param0.field_r;
           }
           return;
@@ -66,7 +66,7 @@ final class lc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -86,15 +86,15 @@ final class lc {
             oe.field_c = jp.$cfr$intArgs$a$c44adeabe1a9(125, 48);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "lc.I(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lc.I(" + param0 + ',' + param1 + ')');
         }
     }
 
     private final void a(byte param0, long param1) {
-        bj var4 = (bj) (this.field_e.a(false, param1));
+        bj var4 = (bj) (this.field_e.get(false, param1));
         this.a(var4, param0 + 143);
         if (param0 != -20) {
-          field_k = (vn[]) null;
+          field_k = (Sprite[]) null;
         }
     }
 
@@ -105,7 +105,7 @@ final class lc {
           }
           this.a(param0, 1, 32500, param1);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "lc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class lc {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -152,19 +152,19 @@ final class lc {
         }
     }
 
-    final static void a(dj param0, dj param1, byte param2) {
+    final static void a(Js5Archive param0, Js5Archive param1, byte param2) {
         try {
           ge.field_b = param1;
           int var3_int = -117 / ((-21 - param2) / 34);
           nl.field_t = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "lc.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lc.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != -1) {
-          field_k = (vn[]) null;
+          field_k = (Sprite[]) null;
         }
         field_a = null;
         field_k = null;
@@ -184,7 +184,7 @@ final class lc {
 
     final Object a(long param0, int param1) {
         jl var6 = null;
-        bj var8 = (bj) (this.field_e.a(false, param0));
+        bj var8 = (bj) (this.field_e.get(false, param0));
         if (var8 == null) {
           return null;
         }
@@ -194,21 +194,21 @@ final class lc {
         }
         Object var5 = var8.d((byte) 87);
         if (var5 == null) {
-          var8.b(param1 ^ -1431649945);
-          var8.c((byte) -21);
+          var8.unlink(param1 ^ -1431649945);
+          var8.unlinkSecondary((byte) -21);
           this.field_b = this.field_b + var8.field_r;
           return null;
         }
         if (var8.b(true)) {
           var6 = new jl(var5, var8.field_r);
-          this.field_e.a(var8.field_f, true, var6);
+          this.field_e.put(var8.key, true, var6);
           this.field_g.a(0, var6);
-          ((bj) ((Object) var6)).field_n = 0L;
-          var8.b(-27598);
-          var8.c((byte) -60);
+          ((bj) ((Object) var6)).secondaryKey = 0L;
+          var8.unlink(-27598);
+          var8.unlinkSecondary((byte) -60);
         } else {
           this.field_g.a(0, var8);
-          var8.field_n = 0L;
+          var8.secondaryKey = 0L;
         }
         return var5;
     }

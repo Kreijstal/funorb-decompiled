@@ -3,14 +3,14 @@
  */
 final class fj extends pm {
     private tb field_f;
-    static vo field_i;
+    static IntrusiveDeque field_i;
     static char[] field_h;
     static am field_g;
 
-    final static vn a(vn param0, int param1, int param2, boolean param3) {
+    final static Sprite a(Sprite param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
-        vn stackIn_2_0 = null;
-        vn stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -18,10 +18,10 @@ final class fj extends pm {
         try {
           ki.a((byte) -116, md.field_vb);
           if (param2 != 339) {
-            stackIn_2_0 = (vn) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          bi.d();
+          Rasterizer.clear();
           param0.b(3, 3);
           ho.a(md.field_vb, param3, param1, -109);
           pa.a(-21189);
@@ -37,7 +37,7 @@ final class fj extends pm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class fj extends pm {
         try {
           this.field_f = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class fj extends pm {
         field_i = null;
         field_g = null;
         if (param0 >= -120) {
-          field_i = (vo) null;
+          field_i = (IntrusiveDeque) null;
         }
     }
 
@@ -113,7 +113,7 @@ final class fj extends pm {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class fj extends pm {
             var3 = ((mi) ((Object) this.field_f)).a(0);
             if (var3 != null &&
               var3.a((byte) -105) != mc.field_g) {
-              stackIn_5_0 = uc.field_b;
+              stackIn_5_0 = MouseWheelInput.field_b;
               return stackIn_5_0;
             }
           }
@@ -139,7 +139,7 @@ final class fj extends pm {
             this.field_f = (tb) null;
           }
           if (!param0.equals(this.field_f.field_o)) {
-            stackIn_11_0 = uc.field_b;
+            stackIn_11_0 = MouseWheelInput.field_b;
           } else {
             stackIn_11_0 = mc.field_g;
           }
@@ -154,12 +154,12 @@ final class fj extends pm {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
         field_h = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
-        field_i = new vo();
+        field_i = new IntrusiveDeque();
     }
 }

@@ -55,20 +55,20 @@ abstract class im {
         }
     }
 
-    final static void a(le param0, int param1, le param2) {
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         if (param1 != -30395) {
           return;
         }
         try {
-          if (param0.field_d != null) {
-            param0.b(-27598);
+          if (param0.next != null) {
+            param0.unlink(-27598);
           }
-          param0.field_b = param2.field_b;
-          param0.field_d = param2;
-          param0.field_d.field_b = param0;
-          param0.field_b.field_d = param0;
+          param0.previous = param2.previous;
+          param0.next = param2;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "im.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "im.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

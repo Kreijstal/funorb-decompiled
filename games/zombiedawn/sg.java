@@ -5,7 +5,7 @@ class sg extends ki implements hh {
     static boolean field_ib;
     static int[] field_kb;
     private boolean field_hb;
-    private rb field_nb;
+    private Font field_nb;
     private boolean field_gb;
     private boolean field_lb;
     static al field_eb;
@@ -17,7 +17,7 @@ class sg extends ki implements hh {
 
     public void a(int param0, int param1, an param2, int param3, int param4) {
         RuntimeException var6 = null;
-        ga var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -32,8 +32,8 @@ class sg extends ki implements hh {
           if (param1 == -6) {
             return;
           }
-          var7 = (ga) null;
-          this.a(105, -54, (ga) null, 'ﾵ');
+          var7 = (UiWidget) null;
+          this.a(105, -54, (UiWidget) null, 'ﾵ');
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,7 +45,7 @@ class sg extends ki implements hh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ class sg extends ki implements hh {
         this.b(20, var2Lifetime1);
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
@@ -92,7 +92,7 @@ class sg extends ki implements hh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -168,11 +168,11 @@ class sg extends ki implements hh {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    sg(dn param0, rb param1, String param2, boolean param3, boolean param4) {
+    sg(dn param0, Font param1, String param2, boolean param3, boolean param4) {
         super(param0, new e((sg) null, param1, param2), 77, 10, 10);
         try {
           this.field_nb = param1;
@@ -184,7 +184,7 @@ class sg extends ki implements hh {
           this.field_ob.field_F = true;
           this.a(this.field_ob, 10);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

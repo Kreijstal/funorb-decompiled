@@ -14,20 +14,20 @@ final class nk {
         throw new IllegalStateException();
     }
 
-    final static void a(dj param0, int param1, dj param2, dj param3, boolean param4) {
+    final static void a(Js5Archive param0, int param1, Js5Archive param2, Js5Archive param3, boolean param4) {
         try {
           gl.field_E = co.a("", param1 - 118);
           gl.field_E.a(false, -54);
           ll.a(param2, param3, param0, -19041);
           if (param1 != -1) {
-            dj var6 = (dj) null;
-            nk.a((dj) null, 101, (dj) null, (dj) null, false);
+            Js5Archive var6 = (Js5Archive) null;
+            nk.a((Js5Archive) null, 101, (Js5Archive) null, (Js5Archive) null, false);
           }
           mm.c((byte) -70);
           fk.field_F = ic.field_S;
           tk.field_a = ic.field_S;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "nk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class nk {
 
     final static boolean b(int param0) {
         lf.field_n = true;
-        qh.field_e = pd.a(-22826) + (long)param0;
+        Path.field_e = pd.a(-22826) + (long)param0;
         return 11 == fl.field_a ? true : false;
     }
 
@@ -80,7 +80,7 @@ final class nk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

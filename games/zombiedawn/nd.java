@@ -144,7 +144,7 @@ final class nd {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -171,8 +171,8 @@ final class nd {
             return stackIn_2_0;
           }
           var9 = new rc(param2, param8, param7, param0, param1, param6, param3);
-          hk.field_F.a(0, var9);
-          rm.a((byte) -108, param5, var9);
+          hk.field_F.addFirst(0, var9);
+          DelegatingCanvas.a((byte) -108, param5, var9);
           stackIn_4_0 = var9;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -185,7 +185,7 @@ final class nd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -195,19 +195,19 @@ final class nd {
         try {
           var5 = dp.field_e;
           var5.j(param1 ^ 10, param0);
-          var5.field_j = var5.field_j + 1;
-          var4 = var5.field_j;
-          var5.i(param1, 35);
-          var5.i(param2.field_i, -96);
-          var5.a(17087, param2.field_r);
-          var5.h(param1 ^ -126, param2.field_q);
-          var5.h(param1 ^ -110, param2.field_k);
-          var5.h(param1 ^ -113, param2.field_m);
-          var5.h(param1 ^ 87, param2.field_h);
-          var5.e(-126, var4);
-          var5.d(75, -var4 + var5.field_j);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(param1, 35);
+          var5.writeByte(param2.field_i, -96);
+          var5.writeSignedSmart(17087, param2.field_r);
+          var5.writeInt(param1 ^ -126, param2.field_q);
+          var5.writeInt(param1 ^ -110, param2.field_k);
+          var5.writeInt(param1 ^ -113, param2.field_m);
+          var5.writeInt(param1 ^ 87, param2.field_h);
+          var5.writeCrc32(-126, var4);
+          var5.writeLengthPrefixByte(75, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

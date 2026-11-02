@@ -3,12 +3,12 @@
  */
 final class kp extends rf {
     private java.nio.ByteBuffer field_e;
-    static dj field_f;
+    static Js5Archive field_f;
 
     final static void a(int param0, byte param1) {
         ea.field_a = 1000000000L / (long)param0;
         if (param1 != 3) {
-          field_f = (dj) null;
+          field_f = (Js5Archive) null;
         }
     }
 
@@ -31,7 +31,7 @@ final class kp extends rf {
           this.field_e.position(0);
           this.field_e.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "kp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

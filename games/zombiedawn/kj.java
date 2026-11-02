@@ -8,16 +8,16 @@ final class kj {
     static int field_c;
     static int[] field_b;
 
-    final static vn[] a(int param0, int param1, int param2, int param3, int param4) {
-        vn[] var6 = new vn[9];
-        vn[] var5 = var6;
-        vn dupTemp$0 = qk.c(param4, (byte) -71, param0);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = qk.c(param4, (byte) -71, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        vn dupTemp$1 = qk.c(param3, (byte) -71, param0);
+        Sprite dupTemp$1 = qk.c(param3, (byte) -71, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -59,7 +59,7 @@ final class kj {
         var4 = ZombieDawn.field_J;
         try {
           try {
-            if (!ec.field_n.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_n.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&
@@ -92,7 +92,7 @@ final class kj {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 

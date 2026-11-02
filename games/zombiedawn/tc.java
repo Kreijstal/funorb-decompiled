@@ -4,7 +4,7 @@
 class tc extends vf {
     static oi field_r;
     static int[] field_y;
-    static vn[] field_z;
+    static Sprite[] field_z;
     static String field_u;
     static int[] field_w;
     static String[] field_x;
@@ -45,15 +45,15 @@ class tc extends vf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    tc(rb param0, int param1) {
+    tc(Font param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_I, -1, 2147483647, false);
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -78,7 +78,7 @@ class tc extends vf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ class tc extends vf {
         ce.field_q = false;
         int var1 = 0 / ((30 - param0) / 51);
         if (nm.field_c) {
-          kk.field_i.m(96);
+          Point.field_i.m(96);
         } else {
           var2 = sd.field_b;
           if (0 < var2) {
@@ -102,9 +102,9 @@ class tc extends vf {
             } else {
               ed.field_c = pn.field_M;
             }
-            ed.field_c = gf.a(0, new CharSequence[]{(CharSequence) ((Object) ed.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) le.field_e)});
+            ed.field_c = gf.a(0, new CharSequence[]{(CharSequence) ((Object) ed.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IntrusiveNode.field_e)});
           }
-          kk.field_i.h((byte) 75);
+          Point.field_i.h((byte) 75);
           rl.c(9);
         }
     }
@@ -119,7 +119,7 @@ class tc extends vf {
         field_u = null;
         field_v = null;
         if (param0 != -26642) {
-          field_z = (vn[]) null;
+          field_z = (Sprite[]) null;
         }
     }
 

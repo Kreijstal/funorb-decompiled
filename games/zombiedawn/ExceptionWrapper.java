@@ -1,0 +1,299 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ExceptionWrapper implements Runnable {
+    static String field_c;
+    static int field_g;
+    static int field_a;
+    static int field_i;
+    static qf field_d;
+    static byte[][] field_j;
+    static int field_e;
+    private DualLinkDeque field_b;
+    private boolean field_l;
+    private Thread field_h;
+    static String field_f;
+    int field_k;
+
+    final wd a(byte param0, int param1, na param2, byte[] param3) {
+        wd var5 = null;
+        RuntimeException var5_ref = null;
+        wd stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 <= 37) {
+            ExceptionWrapper.a((byte) -26);
+          }
+          var5 = new wd();
+          var5.field_x = param2;
+          var5.field_A = param3;
+          var5.secondaryKey = (long)param1;
+          var5.field_r = false;
+          var5.field_v = 2;
+          this.a(true, var5);
+          stackIn_3_0 = var5;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5_ref = decompiledCaughtException;
+          stackIn_6_0 = var5_ref;
+          stackIn_6_1 = new StringBuilder().append("sh.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    private final void a(boolean param0, wd param1) {
+        synchronized (this.field_b) {
+          this.field_b.addLast(param1, (byte) -112);
+          this.field_k = this.field_k + 1;
+          if (!param0) {
+            String var5 = (String) null;
+            ExceptionWrapper.wrapException((Throwable) null, (String) null);
+          }
+          this.field_b.notifyAll();
+        }
+    }
+
+    public final void run() {
+        try {
+          InterruptedException interruptedException = null;
+          Object var2 = null;
+          int var5 = 0;
+          wd var7 = null;
+          int decompiledRegionSelector0 = 0;
+          int decompiledRegionSelector1 = 0;
+          Throwable decompiledCaughtException = null;
+          Exception var2_ref = null;
+          String var6 = null;
+          var5 = ZombieDawn.field_J;
+          while (!this.field_l) {
+            var2 = this.field_b;
+            synchronized (var2) {
+              var7 = (wd) (this.field_b.removeFirst(-90));
+              if (var7 == null) {
+                try {
+                  this.field_b.wait();
+                } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                }
+                decompiledRegionSelector0 = 0;
+              } else {
+                this.field_k = this.field_k - 1;
+                decompiledRegionSelector0 = 1;
+              }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              continue;
+            }
+            try {
+              boolean decompiledFrameRemainder0 = true;
+              if (2 != var7.field_v) {
+                if (var7.field_v == 3) {
+                  var7.field_A = var7.field_x.a(-65536, (int)var7.secondaryKey);
+                  decompiledRegionSelector1 = 1;
+                  decompiledFrameRemainder0 = false;
+                }
+                else {
+                  var7.field_q = false;
+                }
+              } else {
+                var7.field_x.a((int)var7.secondaryKey, var7.field_A, var7.field_A.length, (byte) -96);
+                var7.field_q = false;
+              }
+              if (decompiledFrameRemainder0) {
+                decompiledRegionSelector1 = 0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var6 = (String) null;
+              ae.a((Throwable) ((Object) var2_ref), 10331, (String) null);
+              decompiledRegionSelector1 = 1;
+            }
+            if (decompiledRegionSelector1 == 0) {
+              continue;
+            }
+            var7.field_q = false;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static ClientException wrapException(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
+        } else {
+          var2 = (ClientException) ((Object) param0);
+          var2.field_b = var2.field_b + ' ' + param1;
+        }
+        return var2;
+    }
+
+    final void a(boolean param0) {
+        try {
+          this.field_l = param0 ? true : false;
+          synchronized (this.field_b) {
+            this.field_b.notifyAll();
+          }
+          try {
+            this.field_h.join();
+          } catch (InterruptedException interruptedException) {
+          }
+          this.field_h = null;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final wd a(int param0, na param1, int param2) {
+        wd var4 = null;
+        RuntimeException var4_ref = null;
+        Object var5 = null;
+        Object var5_ref = null;
+        wd var6 = null;
+        int var8 = 0;
+        wd stackIn_4_0 = null;
+        wd stackIn_11_0 = null;
+        wd stackIn_18_0 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_22_2 = null;
+        Throwable decompiledCaughtException = null;
+        var8 = ZombieDawn.field_J;
+        try {
+          var4 = new wd();
+          var4.field_v = 1;
+          var5_ref = this.field_b;
+          synchronized (var5_ref) {
+            if (param2 >= -101) {
+              stackIn_4_0 = (wd) null;
+              return stackIn_4_0;
+            }
+            var6 = (wd) (this.field_b.c((byte) 34));
+            while (var6 != null) {
+              if ((long)param0 == var6.secondaryKey &&
+                var6.field_x == param1 &&
+                var6.field_v == 2) {
+                var4.field_A = var6.field_A;
+                var4.field_q = false;
+                stackIn_11_0 = var4;
+                return stackIn_11_0;
+              }
+              var6 = (wd) (this.field_b.a((byte) 114));
+            }
+          }
+          var4.field_A = param1.a(-65536, param0);
+          var4.field_r = true;
+          var4.field_q = false;
+          stackIn_18_0 = var4;
+          return stackIn_18_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_21_0 = var4_ref;
+          stackIn_21_1 = new StringBuilder().append("sh.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public static void a(byte param0) {
+        field_j = (byte[][]) null;
+        field_f = null;
+        field_d = null;
+        field_c = null;
+        if (param0 >= -117) {
+          field_f = (String) null;
+        }
+    }
+
+    final wd a(byte param0, na param1, int param2) {
+        wd var4 = null;
+        RuntimeException var4_ref = null;
+        wd var5 = null;
+        wd stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = new wd();
+          var4.field_r = false;
+          var4.secondaryKey = (long)param2;
+          var4.field_x = param1;
+          var4.field_v = 3;
+          this.a(true, var4);
+          if (param0 != -119) {
+            var5 = (wd) null;
+            this.a(false, (wd) null);
+          }
+          stackIn_3_0 = var4;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_6_0 = var4_ref;
+          stackIn_6_1 = new StringBuilder().append("sh.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    ExceptionWrapper(PlatformTaskDispatcher param0) {
+        AsyncRequest var2 = null;
+        this.field_b = new DualLinkDeque();
+        this.field_l = false;
+        this.field_k = 0;
+        try {
+          var2 = param0.startThread(5, (Runnable) (this), true);
+          while (0 == var2.status) {
+            ld.a(10L, (byte) 105);
+          }
+          if (2 == var2.status) {
+            throw new RuntimeException();
+          }
+          this.field_h = (Thread) (var2.result);
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_a = -1;
+        field_j = new byte[50][];
+        field_c = "Resume Game";
+        field_g = 70;
+        field_f = "The requirements and rewards for this will be shown once it has been achieved.";
+    }
+}

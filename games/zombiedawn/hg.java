@@ -21,28 +21,28 @@ final class hg {
     }
 
     final static void a(byte param0) {
-        vn var1 = null;
-        vn var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var4 = 0;
         int var5 = ZombieDawn.field_J;
         try {
-          var1 = new vn(540, 140);
+          var1 = new Sprite(540, 140);
           ki.a((byte) -122, var1);
           en.c();
-          bi.d();
-          ej.field_x = 0;
+          Rasterizer.clear();
+          LevelNavigation.field_x = 0;
           gk.j(30549);
           var2 = var1.e();
           int var3 = 1 / ((4 - param0) / 43);
           for (var4 = 0; var4 < 15; var4++) {
             var2.h(-2, -2, 16777215);
-            bi.h(4, 4, 0, 0, 540, 140);
+            Rasterizer.h(4, 4, 0, 0, 540, 140);
           }
-          wc.field_Pb.a();
-          var1.d(0, 0);
+          wc.field_Pb.setAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           pa.a(-21189);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hg.F(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hg.F(" + param0 + ')');
         }
     }
 
@@ -116,22 +116,22 @@ final class hg {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    final static vn a(int param0, int param1, dj param2, int param3) {
+    final static Sprite a(int param0, int param1, Js5Archive param2, int param3) {
         RuntimeException var4 = null;
-        vn stackIn_2_0 = null;
+        Sprite stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        vn stackIn_7_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -2) {
-            stackIn_2_0 = (vn) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           if (ph.a(param1, 31043, param0, param2)) {
@@ -139,7 +139,7 @@ final class hg {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (vn) (stackIn_5_0);
+          return (Sprite) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -150,7 +150,7 @@ final class hg {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -164,8 +164,8 @@ final class hg {
           IOException var2 = null;
           var3 = ZombieDawn.field_J;
           try {
-            if (null != tf.field_c) {
-              tf.field_c.d(31239);
+            if (null != SpatialBucket.field_c) {
+              SpatialBucket.field_c.d(31239);
             }
             if (he.field_d != null) {
               he.field_d.a(true);
@@ -198,7 +198,7 @@ final class hg {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw sh.a((Throwable) ((Object) var1), "hg.C(" + param0 + ')');
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "hg.C(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

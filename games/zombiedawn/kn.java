@@ -5,7 +5,7 @@ final class kn extends hp implements hh {
     static String field_J;
     static String field_I;
     private ri field_K;
-    static vo field_L;
+    static IntrusiveDeque field_L;
     private an[] field_G;
     private String[] field_H;
     static int field_F;
@@ -24,7 +24,7 @@ final class kn extends hp implements hh {
         try {
           this.field_K = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "kn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class kn extends hp implements hh {
         int var6 = 0;
         var6 = ZombieDawn.field_J;
         try {
-          this.field_x.b(97);
+          this.field_x.clear(97);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
@@ -79,7 +79,7 @@ final class kn extends hp implements hh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -88,13 +88,13 @@ final class kn extends hp implements hh {
         if (param3 != param1) {
           return;
         }
-        rb var5 = ia.field_e;
+        Font var5 = ia.field_e;
         if (null != this.field_H) {
           var5.a(ic.field_Q, param2 + this.field_k, param0 + this.field_j, this.field_i, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_x);
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -127,7 +127,7 @@ final class kn extends hp implements hh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -165,14 +165,14 @@ final class kn extends hp implements hh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     static {
         field_I = "Humans captured: ";
         field_J = "You have <%0> unread messages!";
-        field_L = new vo();
+        field_L = new IntrusiveDeque();
         field_F = 0;
     }
 }

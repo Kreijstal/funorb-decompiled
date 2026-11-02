@@ -13,7 +13,7 @@ final class a {
     static String field_l;
     private int field_b;
     static boolean field_c;
-    static dj field_h;
+    static Js5Archive field_h;
     private int field_i;
     static int field_m;
     static int[] field_g;
@@ -28,43 +28,43 @@ final class a {
         field_l = null;
     }
 
-    final void a(wk param0, int param1) {
+    final void a(Camera param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         if (!this.field_a) {
           return;
         }
         try {
-          var3_int = param0.a(this.field_i >> 16, (byte) -60);
+          var3_int = param0.worldToScreenX(this.field_i >> 16, (byte) -60);
           if (param1 != 8192) {
             a.a((byte) 123);
           }
-          var4 = param0.a(this.field_o >> 16, 0) - (this.field_k >> 16);
-          tf.field_b[this.field_b].b(-3 + var3_int, -3 + var4);
+          var4 = param0.worldToScreenY(this.field_o >> 16, 0) - (this.field_k >> 16);
+          SpatialBucket.field_b[this.field_b].b(-3 + var3_int, -3 + var4);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "a.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "a.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         this.field_i = param2;
-        this.field_o = param0 + (-(so.c(8) << 16) + 262144);
+        this.field_o = param0 + (-(so.randomInt(8) << 16) + 262144);
         this.field_k = param1 << 16;
         if (param3 > 57) {
-          this.field_j = (so.c(1) << 16) + 65536;
-          this.field_e = so.c(32768) - 114688;
+          this.field_j = (so.randomInt(1) << 16) + 65536;
+          this.field_e = so.randomInt(32768) - 114688;
           this.field_a = true;
-          this.field_d = 12 + so.c(3);
+          this.field_d = 12 + so.randomInt(3);
           this.field_n = 0;
           this.field_b = 0;
           so.a(sg.field_fb);
           return;
         }
         a.b((byte) -23);
-        this.field_j = (so.c(1) << 16) + 65536;
-        this.field_e = so.c(32768) - 114688;
+        this.field_j = (so.randomInt(1) << 16) + 65536;
+        this.field_e = so.randomInt(32768) - 114688;
         this.field_a = true;
-        this.field_d = 12 + so.c(3);
+        this.field_d = 12 + so.randomInt(3);
         this.field_n = 0;
         this.field_b = 0;
         so.a(sg.field_fb);
@@ -72,7 +72,7 @@ final class a {
 
     final static void a(byte param0) {
         if (param0 != 40) {
-          field_h = (dj) null;
+          field_h = (Js5Archive) null;
           pa.field_x = new va[]{};
           return;
         }
@@ -107,7 +107,7 @@ final class a {
           if (this.field_b != 2) {
             return;
           }
-          kh.a(so.c(1) + 153, false);
+          kh.a(so.randomInt(1) + 153, false);
           return;
         }
         this.field_j = this.field_j - 8192;
@@ -125,7 +125,7 @@ final class a {
         if (this.field_b != 2) {
           return;
         }
-        kh.a(so.c(1) + 153, false);
+        kh.a(so.randomInt(1) + 153, false);
         return;
     }
 

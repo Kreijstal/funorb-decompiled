@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-class id extends fb {
+class id extends WorldObject {
     boolean field_P;
     int field_F;
-    private fn field_K;
+    private PcmSampleStream field_K;
     static int field_I;
     static int field_N;
     boolean field_J;
@@ -21,8 +21,8 @@ class id extends fb {
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
         if (!param0) {
-          wk var5 = (wk) null;
-          this.a((byte) -30, (wk) null);
+          Camera var5 = (Camera) null;
+          this.a((byte) -30, (Camera) null);
         }
         for (var3 = 0; var3 < tl.field_g.length; var3++) {
           if (this.field_F == tl.field_g[var3]) {
@@ -32,7 +32,7 @@ class id extends fb {
             }
             this.field_F = oo.field_U[var3];
             if (this.field_z > 0) {
-              dj.field_e.field_u[this.field_z - 1] = dj.field_e.field_u[this.field_z - 1] - 1;
+              Js5Archive.field_e.field_u[this.field_z - 1] = Js5Archive.field_e.field_u[this.field_z - 1] - 1;
             }
             this.field_z = 0;
             return true;
@@ -41,7 +41,7 @@ class id extends fb {
         return false;
     }
 
-    void a(byte param0, wk param1) {
+    void a(byte param0, Camera param1) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -55,8 +55,8 @@ class id extends fb {
           if (param0 > -76) {
             this.b(true);
           }
-          var3_int = param1.a(this.a(true), (byte) -118);
-          var4 = param1.a(this.f(237239984), 0) - 24;
+          var3_int = param1.worldToScreenX(this.getX(true), (byte) -118);
+          var4 = param1.worldToScreenY(this.getY(237239984), 0) - 24;
           if (this.field_O && (var3_int < -48 ||
             var4 < -48 ||
             !(var3_int <= qj.field_d) ||
@@ -80,7 +80,7 @@ class id extends fb {
                 tm.field_h[this.field_F].f(var3_int, var4);
               }
             } else {
-              tm.field_h[this.field_F].c(var3_int, var4);
+              tm.field_h[this.field_F].drawMirrored(var3_int, var4);
             }
             if (this.field_O) {
               if (!this.field_P) {
@@ -90,13 +90,13 @@ class id extends fb {
                   tm.field_h[-8 + this.field_F].f(var3_int, var4 - 24);
                 }
               } else {
-                tm.field_h[this.field_F - 8].c(var3_int, -24 + var4);
+                tm.field_h[this.field_F - 8].drawMirrored(var3_int, -24 + var4);
               }
             }
           } else {
             if (ng.field_e &&
               this.field_E > 0) {
-              bi.g(8 + var3_int, 1 + var4, 14, bb.field_e[-1 + this.field_E]);
+              Rasterizer.g(8 + var3_int, 1 + var4, 14, bb.field_e[-1 + this.field_E]);
             }
             if (!this.field_P) {
               tm.field_h[this.field_F].g(var3_int, var4, bb.field_e[this.field_E - 1]);
@@ -111,7 +111,7 @@ class id extends fb {
             }
           }
           if (kc.field_Q) {
-            pc.field_k.a(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 12 + var3_int, -5 + var4, 16777215, 0);
+            pc.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 12 + var3_int, -5 + var4, 16777215, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -124,7 +124,7 @@ class id extends fb {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -136,41 +136,41 @@ class id extends fb {
     }
 
     private final void b(boolean param0) {
-        le var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         int var5;
-        ej var6;
-        ej var7;
+        LevelNavigation var6;
+        LevelNavigation var7;
         var5 = ZombieDawn.field_J;
         if (0 == this.field_z) {
           return;
         }
-        dj.field_e.field_u[-1 + this.field_z] = dj.field_e.field_u[-1 + this.field_z] - 1;
-        if (0 >= dj.field_e.field_u[-1 + this.field_z]) {
-          var2 = dj.field_e.field_R.field_b.field_b;
-          while (var2 instanceof fb) {
-            if (var2 instanceof ah &&
-              this.field_z == ((fb) (var2)).field_z) {
-              ((fb) (var2)).field_z = 0;
+        Js5Archive.field_e.field_u[-1 + this.field_z] = Js5Archive.field_e.field_u[-1 + this.field_z] - 1;
+        if (0 >= Js5Archive.field_e.field_u[-1 + this.field_z]) {
+          var2 = Js5Archive.field_e.zombies.sentinel.previous;
+          while (var2 instanceof WorldObject) {
+            if (var2 instanceof Human &&
+              this.field_z == ((WorldObject) (var2)).field_z) {
+              ((WorldObject) (var2)).field_z = 0;
             }
-            var2 = var2.field_b;
+            var2 = var2.previous;
           }
         }
         this.field_E = this.field_z;
         this.field_z = 0;
-        var6 = dj.field_e.field_H;
+        var6 = Js5Archive.field_e.navigation;
         var7 = var6;
-        var3 = this.a(param0) / 24;
-        var4 = this.f(237239984) / 24;
-        if (this.f(237239984) % 24 == 0) {
+        var3 = this.getX(param0) / 24;
+        var4 = this.getY(237239984) / 24;
+        if (this.getY(237239984) % 24 == 0) {
           var4--;
         }
-        var6.field_A.field_f[var4][var3] = eg.a(var6.field_A.field_f[var4][var3], -33554433);
+        var6.field_A.tiles[var4][var3] = eg.a(var6.field_A.tiles[var4][var3], -33554433);
         var7.field_A.a(param0, 14365, var4, false, var3);
         var6.field_A.field_t[var4 - 1][var3] = eg.a(var6.field_A.field_t[var4 - 1][var3], -33554433);
         if (this.field_O) {
-          var6.field_A.field_f[-1 + var4][var3] = eg.a(var6.field_A.field_f[-1 + var4][var3], -33554433);
+          var6.field_A.tiles[-1 + var4][var3] = eg.a(var6.field_A.tiles[-1 + var4][var3], -33554433);
           var7.field_A.a(true, 14365, -1 + var4, false, var3);
           var6.field_A.field_t[var4 - 1][var3] = eg.a(var6.field_A.field_t[var4 - 1][var3], -33554433);
         }
@@ -227,10 +227,10 @@ class id extends fb {
         int stackIn_36_0 = 0;
         int stackIn_36_1 = 0;
         int var2;
-        fb var2_ref_fb;
+        WorldObject var2_ref_fb;
         int var3;
         int var4_int;
-        fb var4;
+        WorldObject var4;
         int var5;
         int var6;
         va var7;
@@ -243,37 +243,37 @@ class id extends fb {
         if (param0 <= 95) {
           return;
         }
-        if (dj.field_e.field_r < 400 &&
-          dj.field_e.field_r > 200) {
+        if (Js5Archive.field_e.field_r < 400 &&
+          Js5Archive.field_e.field_r > 200) {
           var2 = 0;
           while (!(var2 >= ka.field_h.length)) {
             if (this.field_F != tl.field_g[var2]) {
               var2++;
               continue;
             }
-            if (dj.field_e.field_r >= 250 &&
-              0 != pb.a(so.field_a, 25, 1)) {
+            if (Js5Archive.field_e.field_r >= 250 &&
+              0 != pb.a(so.random, 25, 1)) {
               break;
             }
             if (!this.a(true, true)) {
               break;
             }
-            var3 = this.a(true) / 24;
-            var4_int = this.f(237239984) / 24;
-            if (this.f(237239984) % 24 == 0) {
+            var3 = this.getX(true) / 24;
+            var4_int = this.getY(237239984) / 24;
+            if (this.getY(237239984) % 24 == 0) {
               var4_int--;
             }
-            dj.field_e.field_H.field_A.field_f[var4_int][var3] = eg.a(dj.field_e.field_H.field_A.field_f[var4_int][var3], -33554433);
-            dj.field_e.field_H.field_A.field_f[-1 + var4_int][var3] = eg.a(dj.field_e.field_H.field_A.field_f[-1 + var4_int][var3], -33554433);
-            dj.field_e.field_H.field_A.a(true, 14365, var4_int, false, var3);
-            dj.field_e.field_H.field_A.a(true, 14365, var4_int - 1, false, var3);
-            if (pb.a(so.field_a, 2, 1) != 0) {
+            Js5Archive.field_e.navigation.field_A.tiles[var4_int][var3] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[var4_int][var3], -33554433);
+            Js5Archive.field_e.navigation.field_A.tiles[-1 + var4_int][var3] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[-1 + var4_int][var3], -33554433);
+            Js5Archive.field_e.navigation.field_A.a(true, 14365, var4_int, false, var3);
+            Js5Archive.field_e.navigation.field_A.a(true, 14365, var4_int - 1, false, var3);
+            if (pb.a(so.random, 2, 1) != 0) {
               break;
             }
             if (null != this.field_K) {
               pc.a((byte) 13, this.field_K);
             }
-            this.field_K = kh.a(pb.a(so.field_a, 2, 1) + 64, false);
+            this.field_K = kh.a(pb.a(so.random, 2, 1) + 64, false);
             break;
           }
         }
@@ -294,7 +294,7 @@ class id extends fb {
                 }
                 var4 = this.e((byte) 32);
               }
-              dj.field_e.b(true);
+              Js5Archive.field_e.b(true);
               wh.a((byte) -81);
               break;
             }
@@ -303,15 +303,15 @@ class id extends fb {
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_G) {
-          stackIn_36_0 = 12 + this.a(true);
+          stackIn_36_0 = 12 + this.getX(true);
           stackIn_36_1 = 24;
           var2Lifetime1 = stackIn_36_0 / stackIn_36_1;
-          var3Lifetime2 = (this.f(237239984) - 1) / 24;
+          var3Lifetime2 = (this.getY(237239984) - 1) / 24;
           if (0 <= var2Lifetime1 &&
             0 <= var3Lifetime2 &&
-            var2Lifetime1 < dj.field_e.field_H.field_A.field_f[0].length &&
-            var3Lifetime2 < dj.field_e.field_H.field_A.field_f.length) {
-            var7 = ub.a(127, dj.field_e.field_H.field_A.field_f[var3Lifetime2][var2Lifetime1]);
+            var2Lifetime1 < Js5Archive.field_e.navigation.field_A.tiles[0].length &&
+            var3Lifetime2 < Js5Archive.field_e.navigation.field_A.tiles.length) {
+            var7 = ub.a(127, Js5Archive.field_e.navigation.field_A.tiles[var3Lifetime2][var2Lifetime1]);
             if ((var7 != null)) {
               if (var7.field_h >= 0) {
                 if (var7.field_h <= 0) {

@@ -55,15 +55,15 @@ abstract class pn extends ei {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = ZombieDawn.field_J;
-        bi.f(6 + param0, param1 + 35, -12 + this.field_i, this.field_n - 40, 2105376, 0);
+        Rasterizer.f(6 + param0, param1 + 35, -12 + this.field_i, this.field_n - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param1;
         while (var4 > var7) {
-          if (var8 >= bi.field_l &&
-            var8 < bi.field_d) {
+          if (var8 >= Rasterizer.clipTop &&
+            var8 < Rasterizer.clipBottom) {
             var9 = var7 * (var6 - var5) / var4 + var5;
             var10 = 0;
             var11 = this.field_i;
@@ -76,7 +76,7 @@ abstract class pn extends ei {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  bi.field_c[param0 + var8 * bi.field_f + var10] = var13;
+                  Rasterizer.pixels[param0 + var8 * Rasterizer.width + var10] = var13;
                 }
                 var10++;
               }
@@ -91,7 +91,7 @@ abstract class pn extends ei {
                   if (var14 >= 420) {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    bi.field_c[var8 * bi.field_f + param0 + var11] = var15;
+                    Rasterizer.pixels[var8 * Rasterizer.width + param0 + var11] = var15;
                   } else {
                     var12Lifetime1 = var11 + 1;
                   }
@@ -104,7 +104,7 @@ abstract class pn extends ei {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            bi.b(param0 + var10, var8, var11 - var10, var9);
+            Rasterizer.drawHorizontalLine(param0 + var10, var8, var11 - var10, var9);
           }
           var8++;
           var7++;
@@ -120,14 +120,14 @@ abstract class pn extends ei {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          bi.b(param0, var8Lifetime1, 6, var9Lifetime1);
-          bi.b(param0 + this.field_i - 6, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer.drawHorizontalLine(param0 + this.field_i - 6, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
         we.field_Tb.b(this.field_i + param0 - 90, 10 + param1);
-        ke.a(65, param0 + 5, ad.field_f, -10 + this.field_i, param1 + 35);
-        ke.a(79, param0, dp.field_b, this.field_i, param1 + this.field_n - 22);
+        GameApplet.a(65, param0 + 5, ad.field_f, -10 + this.field_i, param1 + 35);
+        GameApplet.a(79, param0, dp.field_b, this.field_i, param1 + this.field_n - 22);
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
         var4Lifetime2 = -79 + this.field_n;
@@ -136,8 +136,8 @@ abstract class pn extends ei {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          bi.b(param0, var8Lifetime2, 6, var9Lifetime2);
-          bi.b(this.field_i + (param0 - 6), var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer.drawHorizontalLine(this.field_i + (param0 - 6), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -239,7 +239,7 @@ abstract class pn extends ei {
         this.field_P = this.field_i;
     }
 
-    final static void a(wk param0, int param1, ub param2) {
+    final static void a(Camera param0, int param1, ub param2) {
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
@@ -266,11 +266,11 @@ abstract class pn extends ei {
             lg.a(2 + var4 % (2 * var3_int) / var3_int * 2, (byte) -90);
           }
           if (-1.0f == oc.field_c) {
-            oc.field_c = (float)param0.field_c;
+            oc.field_c = (float)param0.y;
           }
           if (240.0f < oc.field_c) {
             oc.field_c = oc.field_c - i.field_V;
-            param0.field_c = (int)oc.field_c;
+            param0.y = (int)oc.field_c;
           }
           if (ac.field_m == 1562) {
             if (null != qj.field_f &&
@@ -307,11 +307,11 @@ abstract class pn extends ei {
             og.field_A = true;
             kh.a(64, false);
             vf.field_c = kh.a(150, false);
-            dj.field_e.field_R.a(0, ne.field_c);
+            Js5Archive.field_e.zombies.addFirst(0, ne.field_c);
             for (var5Lifetime1 = 0; pl.field_t.length > var5Lifetime1; var5Lifetime1++) {
-              dj.field_e.field_R.a(0, pl.field_t[var5Lifetime1]);
+              Js5Archive.field_e.zombies.addFirst(0, pl.field_t[var5Lifetime1]);
             }
-            dj.field_e.field_R.a(0, new jj(370, 550));
+            Js5Archive.field_e.zombies.addFirst(0, new jj(370, 550));
           } else {
             if (ac.field_m != 950) {
               if (ac.field_m != 700) {
@@ -370,7 +370,7 @@ abstract class pn extends ei {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
         }
     }
 

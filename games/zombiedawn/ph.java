@@ -6,11 +6,11 @@ final class ph {
     static ka field_a;
 
     final static void b(int param0) {
-        eo.field_f = null;
+        HumanFactory.field_f = null;
         if (param0 != 26311) {
           ph.b(64);
         }
-        on.field_i = null;
+        TileMap.field_i = null;
     }
 
     public static void a(int param0) {
@@ -30,14 +30,14 @@ final class ph {
             ph.a((rc) null, (byte) -23, 122, (jc) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ph.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ph.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, dj param3) {
+    final static boolean a(int param0, int param1, int param2, Js5Archive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        dj var5 = null;
+        Js5Archive var5 = null;
         byte[] var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -53,8 +53,8 @@ final class ph {
           if (param1 == 31043) {
             return true;
           }
-          var5 = (dj) null;
-          ph.a(-94, 1, -17, (dj) null);
+          var5 = (Js5Archive) null;
+          ph.a(-94, 1, -17, (Js5Archive) null);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,7 +66,7 @@ final class ph {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class ph {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 

@@ -28,21 +28,21 @@ final class dk extends wc {
         int var6 = var4 / 2;
         int var7 = -var4 + 8;
         if (this.field_cc == 2) {
-          bi.d(-var7 + param0 + 9, param2 - 15 - var7, var5 - 1, 0, 64);
-          bi.d(7 + param0, -20 + param2, -1 + var6, 0, 128);
-          bi.a(9 + param0 - var7 << 4, -var7 + (param2 - 15) << 4, var5 << 4, 250, dm.field_p);
-          bi.a(param0 + 7 << 4, -20 + param2 << 4, var6 << 4, 200, dm.field_r);
+          Rasterizer.d(-var7 + param0 + 9, param2 - 15 - var7, var5 - 1, 0, 64);
+          Rasterizer.d(7 + param0, -20 + param2, -1 + var6, 0, 128);
+          Rasterizer.a(9 + param0 - var7 << 4, -var7 + (param2 - 15) << 4, var5 << 4, 250, dm.field_p);
+          Rasterizer.a(param0 + 7 << 4, -20 + param2 << 4, var6 << 4, 200, dm.field_r);
         } else {
           if (this.field_cc != 1) {
-            bi.d(-2 + param0, -10 + (param2 - var7), var5 - 1, 0, 64);
-            bi.d(-2 + param0, -16 + param2, var6 - 1, 0, 128);
-            bi.a(param0 - 2 << 4, -var7 + param2 - 10 << 4, var5 << 4, 250, dm.field_p);
-            bi.a(param0 - 2 << 4, param2 - 16 << 4, var6 << 4, 200, dm.field_r);
+            Rasterizer.d(-2 + param0, -10 + (param2 - var7), var5 - 1, 0, 64);
+            Rasterizer.d(-2 + param0, -16 + param2, var6 - 1, 0, 128);
+            Rasterizer.a(param0 - 2 << 4, -var7 + param2 - 10 << 4, var5 << 4, 250, dm.field_p);
+            Rasterizer.a(param0 - 2 << 4, param2 - 16 << 4, var6 << 4, 200, dm.field_r);
           } else {
-            bi.d(var7 - 7 + param0, -var7 + (param2 - 15), -1 + var5, 0, 64);
-            bi.d(-4 + param0, param2 - 20, -1 + var6, 0, 128);
-            bi.a(var7 + (param0 - 7) << 4, param2 + (-15 - var7) << 4, var5 << 4, 250, dm.field_p);
-            bi.a(param0 - 4 << 4, param2 - 20 << 4, var6 << 4, 200, dm.field_r);
+            Rasterizer.d(var7 - 7 + param0, -var7 + (param2 - 15), -1 + var5, 0, 64);
+            Rasterizer.d(-4 + param0, param2 - 20, -1 + var6, 0, 128);
+            Rasterizer.a(var7 + (param0 - 7) << 4, param2 + (-15 - var7) << 4, var5 << 4, 250, dm.field_p);
+            Rasterizer.a(param0 - 4 << 4, param2 - 20 << 4, var6 << 4, 200, dm.field_r);
           }
         }
     }
@@ -59,13 +59,13 @@ final class dk extends wc {
         int var2Lifetime1;
         var5 = ZombieDawn.field_J;
         this.field_Wb = this.field_Wb + 1;
-        if (1 == this.field_F) {
+        if (1 == this.state) {
           this.field_V = false;
           this.g((byte) 87);
           this.h((byte) -91);
           this.field_V = true;
         }
-        if (this.field_F == 10 &&
+        if (this.state == 10 &&
           0 == this.field_Wb % 2) {
           this.field_Sb = (1 + this.field_Sb) % 40;
           this.field_bc[this.field_Sb].a(-327680 + this.field_x, 20, this.field_y - 393216, 65);
@@ -82,10 +82,10 @@ final class dk extends wc {
         if (this.field_Wb >= 200) {
           if (this.field_Wb != 200) {
             if (this.field_Wb == 250) {
-              this.e(1, -6904);
-              this.field_Y = var2Lifetime1 + this.a(true);
-              this.field_X = this.f(237239984);
-              this.c(0, 143360);
+              this.setState(1, -6904);
+              this.targetX = var2Lifetime1 + this.getX(true);
+              this.targetY = this.getY(237239984);
+              this.moveToward(0, 143360);
             } else {
               if (this.field_Wb >= 300 &&
                 this.field_Wb < 316) {
@@ -100,19 +100,19 @@ final class dk extends wc {
                   } else {
                     if (365 == this.field_Wb) {
                       this.field_U = dc.a((byte) 18, 113);
-                      this.e(1, -6904);
-                      this.field_Y = -var2Lifetime1 + this.a(true);
-                      this.field_X = this.f(237239984);
-                      this.c(0, 143360);
+                      this.setState(1, -6904);
+                      this.targetX = -var2Lifetime1 + this.getX(true);
+                      this.targetY = this.getY(237239984);
+                      this.moveToward(0, 143360);
                     } else {
                       if (this.field_Wb != 402) {
                         if (this.field_Wb >= 15930) {
                           if (this.field_Wb == 15930) {
-                            this.e(0, -6904);
+                            this.setState(0, -6904);
                             super.g(112);
                           } else {
                             if (this.field_Wb == 15980) {
-                              this.e(2, -6904);
+                              this.setState(2, -6904);
                               super.g(112);
                             } else {
                               if (this.field_Wb > 15980) {
@@ -120,12 +120,12 @@ final class dk extends wc {
                                   fieldTemp$0 = this.field_Yb;
                                   this.field_Yb = this.field_Yb + 1;
                                   if (fieldTemp$0 < 2) {
-                                    this.field_T = 0;
-                                    this.field_O = 0;
-                                    this.field_Y = this.a(true);
-                                    this.field_X = this.f(237239984);
+                                    this.velocityY = 0;
+                                    this.velocityX = 0;
+                                    this.targetX = this.getX(true);
+                                    this.targetY = this.getY(237239984);
                                     this.field_G = 0;
-                                    this.e(0, -6904);
+                                    this.setState(0, -6904);
                                     super.g(100);
                                     this.field_Wb = 15930;
                                   } else {
@@ -134,7 +134,7 @@ final class dk extends wc {
                                     this.field_Xb = this.field_Xb + var3;
                                   }
                                 } else {
-                                  if (this.field_F != 10) {
+                                  if (this.state != 10) {
                                     this.field_y = this.field_y - 12288;
                                   }
                                   super.g(125);
@@ -157,13 +157,13 @@ final class dk extends wc {
                         } else {
                           super.g(109);
                           if (null != this.field_yb &&
-                            this.field_F == 10) {
+                            this.state == 10) {
                             this.field_cc = 0;
-                            var3 = Math.abs(this.field_yb.a(true) - this.a(true));
-                            var4 = Math.abs(this.field_yb.f(237239984) - this.f(237239984));
+                            var3 = Math.abs(this.field_yb.getX(true) - this.getX(true));
+                            var4 = Math.abs(this.field_yb.getY(237239984) - this.getY(237239984));
                             if (var4 / 2 < var3) {
                               this.field_cc = this.field_cc + 1;
-                              if (this.field_yb.a(true) > this.a(true)) {
+                              if (this.field_yb.getX(true) > this.getX(true)) {
                                 this.field_cc = this.field_cc + 1;
                               }
                             }
@@ -172,7 +172,7 @@ final class dk extends wc {
                       } else {
                         kh.a(110, false);
                         jp.$cfr$intArgs$a$c44adeabe1a9(127, 100);
-                        this.e(0, -6904);
+                        this.setState(0, -6904);
                       }
                     }
                   }
@@ -181,7 +181,7 @@ final class dk extends wc {
             }
           } else {
             this.field_U = dc.a((byte) 18, 111);
-            this.e(3, -6904);
+            this.setState(3, -6904);
           }
         }
     }
@@ -203,10 +203,10 @@ final class dk extends wc {
         field_Tb = (int[][][]) null;
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int var8 = 0;
         int stackIn_16_0 = 0;
-        vn stackIn_29_0 = null;
+        Sprite stackIn_29_0 = null;
         int stackIn_29_1 = 0;
         int stackIn_30_2 = 0;
         RuntimeException stackIn_40_0 = null;
@@ -223,17 +223,17 @@ final class dk extends wc {
         int var9 = 0;
         var9 = ZombieDawn.field_J;
         try {
-          if (this.field_F == 20) {
+          if (this.state == 20) {
             return;
           }
-          var3_int = param1.a(this.a(true), (byte) -102);
-          var4 = param1.a(this.f(237239984), 0);
+          var3_int = param1.worldToScreenX(this.getX(true), (byte) -102);
+          var4 = param1.worldToScreenY(this.getY(237239984), 0);
           var5 = 0;
           var6 = var4;
           if (param0 > -76) {
             this.q((byte) -95);
           }
-          var7_int = this.field_F;
+          var7_int = this.state;
           if (var7_int != 0 &&
             var7_int != 1) {
             if (var7_int == 3) {
@@ -262,7 +262,7 @@ final class dk extends wc {
             }
             var6 = var6 + this.field_dc;
           }
-          stackIn_29_0 = nb.field_k[1];
+          stackIn_29_0 = DualLinkNode.field_k[1];
           stackIn_29_1 = -12;
           if (this.field_S != 3) {
             stackIn_30_2 = var3_int - 3;
@@ -292,7 +292,7 @@ final class dk extends wc {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -312,7 +312,7 @@ final class dk extends wc {
         this.field_Sb = 0;
         this.field_G = 0;
         this.field_Yb = 0;
-        this.field_F = 0;
+        this.state = 0;
         this.field_Wb = 0;
         this.field_V = true;
         this.field_dc = 0;

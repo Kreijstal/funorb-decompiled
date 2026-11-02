@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lo extends le {
+final class lo extends IntrusiveNode {
     int field_k;
     static int field_l;
     int[] field_o;
     static String field_p;
     static cg field_s;
-    static vn field_i;
+    static Sprite field_i;
     boolean field_h;
     static int field_m;
     static int field_j;

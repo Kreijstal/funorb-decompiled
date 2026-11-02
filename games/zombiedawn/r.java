@@ -3,7 +3,7 @@
  */
 final class r extends eh {
     private int[] field_E;
-    static eo field_G;
+    static HumanFactory field_G;
     private int field_K;
     private int field_D;
     private int[] field_C;
@@ -18,7 +18,7 @@ final class r extends eh {
         int var6 = 0;
         int var7 = ZombieDawn.field_J;
         int var4 = null != this.field_E ? this.field_E.length : 0;
-        ga[] var5 = new ga[param2 * var4];
+        UiWidget[] var5 = new UiWidget[param2 * var4];
         if (this.field_B != null &&
           this.field_B.length > 0 &&
           var5.length > 0 &&
@@ -50,20 +50,20 @@ final class r extends eh {
             field_J = (String) null;
           }
           var3_int = 0;
-          var4 = wm.field_d;
+          var4 = IterableNodeHashTable.field_d;
           while (var3_int < cj.field_h.length) {
-            var5 = hd.field_s[var3_int];
+            var5 = SpriteState.field_s[var3_int];
             if (var5 < 0) {
               var4 = var4 + vl.field_r;
             } else {
               var6 = tk.a(cj.field_h[var3_int], true, true);
               var7 = mo.field_b - (var6 >> 1);
               var4 = var4 + fe.field_H;
-              if (bf.a(-lk.field_f + var7, param0 ^ 6199969, param2, var4, (lk.field_f << 1) + var6, (cn.field_h << 1) + qh.field_f, param1)) {
+              if (bf.a(-lk.field_f + var7, param0 ^ 6199969, param2, var4, (lk.field_f << 1) + var6, (cn.field_h << 1) + Path.field_f, param1)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + ((cn.field_h << 1) + fe.field_H + qh.field_f);
+              var4 = var4 + ((cn.field_h << 1) + fe.field_H + Path.field_f);
             }
             var3_int++;
           }
@@ -72,7 +72,7 @@ final class r extends eh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "r.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "r.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class r extends eh {
         int var3;
         int var4;
         int var6;
-        ga var5;
+        UiWidget var5;
         var6 = ZombieDawn.field_J;
         var2 = 0;
         var3 = 0;
@@ -132,7 +132,7 @@ final class r extends eh {
         }
     }
 
-    final void a(int param0, ga param1, int param2) {
+    final void a(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         try {
@@ -148,11 +148,11 @@ final class r extends eh {
           }
           this.field_K = this.field_K + 1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "r.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "r.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -199,7 +199,7 @@ final class r extends eh {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class r extends eh {
           this.a(var10, 0);
           this.a(84, var9);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "r.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "r.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class r extends eh {
           this.field_C = (int[]) null;
         }
         int var4 = this.field_C == null ? 0 : this.field_C.length;
-        ga[] var5 = new ga[var4 * param1];
+        UiWidget[] var5 = new UiWidget[var4 * param1];
         if (this.field_B != null && 0 < this.field_B.length && var5.length > 0 &&
           param2 > 0) {
           gp.a(this.field_B, 0, var5, 0, var4 * Math.min(param2, param1));
@@ -238,11 +238,11 @@ final class r extends eh {
     final static void a(String param0, int param1, boolean param2, String param3) {
         try {
           lk.field_k = param0;
-          m.field_B = param3;
+          GameLoopApplet.field_B = param3;
           int var4_int = -81 % ((72 - param1) / 47);
           ti.a(md.field_wb, param2, false);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "r.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "r.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -270,11 +270,11 @@ final class r extends eh {
           this.c(0, var3_int, var4);
           this.d(-1, var4, var3_int);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "r.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "r.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -297,7 +297,7 @@ final class r extends eh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -306,7 +306,7 @@ final class r extends eh {
         int var6 = -60 % ((-23 - param0) / 48);
     }
 
-    private final void a(int param0, ga param1, int param2, int param3) {
+    private final void a(int param0, UiWidget param1, int param2, int param3) {
         int stackIn_3_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_6_0 = 0;
@@ -416,7 +416,7 @@ final class r extends eh {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -447,7 +447,7 @@ final class r extends eh {
           this.e(0, var4, var3_int);
           this.b((byte) 9, var4, var3_int);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "r.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "r.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

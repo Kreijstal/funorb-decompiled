@@ -471,7 +471,7 @@ final class jp {
             } else {
               stackIn_54_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param4).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -580,8 +580,8 @@ final class jp {
 
     final static void a(byte param0) {
         int var1 = -48 / ((param0 - 16) / 50);
-        if (null != kk.field_i) {
-          kk.field_i.h((byte) 74);
+        if (null != Point.field_i) {
+          Point.field_i.h((byte) 74);
         }
         ni.field_c = new fh();
         bm.field_d.b(20, ni.field_c);
@@ -653,15 +653,15 @@ final class jp {
         return true;
     }
 
-    final static fn a(byte param0, int param1) {
+    final static PcmSampleStream a(byte param0, int param1) {
         tm var2 = new tm(param1);
         var2.field_j.e(-1);
         if (param0 > 123) {
-          kn.field_L.a(0, var2);
+          kn.field_L.addFirst(0, var2);
           return var2.field_j;
         }
         field_a = -55;
-        kn.field_L.a(0, var2);
+        kn.field_L.addFirst(0, var2);
         return var2.field_j;
     }
 
@@ -874,15 +874,15 @@ final class jp {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static fn $cfr$intArgs$a$c44adeabe1a9(int param0, int param1) {
+    final static PcmSampleStream $cfr$intArgs$a$c44adeabe1a9(int param0, int param1) {
         tm var2 = new tm(param1);
         var2.field_j.e(-1);
         if (param0 > 123) {
-          kn.field_L.a(0, var2);
+          kn.field_L.addFirst(0, var2);
           return var2.field_j;
         }
         field_a = -55;
-        kn.field_L.a(0, var2);
+        kn.field_L.addFirst(0, var2);
         return var2.field_j;
     }
 }

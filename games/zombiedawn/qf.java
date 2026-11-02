@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class qf {
-    private sp field_f;
+    private PcmStream field_f;
     static boolean field_l;
     private int field_b;
     private boolean field_k;
@@ -18,21 +18,21 @@ class qf {
     private int field_i;
     private int field_a;
     private long field_o;
-    private sp[] field_t;
+    private PcmStream[] field_t;
     private long field_c;
     private int field_u;
-    private sp[] field_h;
+    private PcmStream[] field_h;
     private boolean field_e;
 
-    private final static void a(sp param0) {
-        param0.field_k = false;
+    private final static void a(PcmStream param0) {
+        param0.active = false;
         if (param0.field_h != null) {
           param0.field_h.field_h = 0;
         }
-        sp var1 = param0.c();
+        PcmStream var1 = param0.firstSubstream();
         while (var1 != null) {
           qf.a(var1);
-          var1 = param0.d();
+          var1 = param0.nextSubstream();
         }
     }
 
@@ -154,13 +154,13 @@ class qf {
         }
     }
 
-    final synchronized void b(sp param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_f = param0;
     }
 
-    private final void a(sp param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        sp var4 = this.field_h[var3];
+        PcmStream var4 = this.field_h[var3];
         if (var4 == null) {
           this.field_t[var3] = param0;
         } else {
@@ -170,7 +170,7 @@ class qf {
         param0.field_j = param1;
     }
 
-    final static qf a(ec param0, java.awt.Component param1, int param2, int param3) {
+    final static qf a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           od var4 = null;
           Throwable var4_ref = null;
@@ -210,7 +210,7 @@ class qf {
                 field_j == null) {
                 field_j = new cp();
                 field_j.field_b = param0;
-                param0.a(field_q, (Runnable) ((Object) field_j), true);
+                param0.startThread(field_q, (Runnable) ((Object) field_j), true);
               }
               if (field_j != null) {
                 if (field_j.field_c[param2] != null) {
@@ -242,20 +242,20 @@ class qf {
         int var7_int;
         Object var7;
         int var8_int;
-        sp[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        sp var11;
-        ik var12;
+        PcmStream var11;
+        AbstractAudioSample var12;
         int var13;
-        sp var14;
+        PcmStream var14;
         int var15_int;
-        sp var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        sp var14Lifetime1;
-        sp var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_l) {
           var3 = var3 << 1;
@@ -270,7 +270,7 @@ class qf {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -296,32 +296,32 @@ class qf {
                       var11 = var11.field_i;
                       continue;
                     }
-                    var11.field_k = true;
+                    var11.active = true;
                     var13 = var11.a();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_h = var12.field_h + var13;
                     }
                     if (var4 >= this.field_b) {
-                      break L3;
+                      break scanLoop1;
                     }
-                    var14Lifetime2 = var11.c();
+                    var14Lifetime2 = var11.firstSubstream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_j;
                       while (var14Lifetime2 != null) {
                         this.a(var14Lifetime2, var15_int * var14Lifetime2.b() >> 8);
-                        var14Lifetime2 = var11.d();
+                        var14Lifetime2 = var11.nextSubstream();
                       }
                     }
                     var15 = var11.field_i;
                     var11.field_i = null;
                     if (var10 != null) {
-                      ((sp) (var10)).field_i = var15;
+                      ((PcmStream) (var10)).field_i = var15;
                     } else {
                       this.field_t[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_h[var7_int] = (sp) (var10);
+                      this.field_h[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -342,8 +342,8 @@ class qf {
             this.field_h[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((sp) (var7)).field_i;
-              ((sp) (var7)).field_i = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_i;
+              ((PcmStream) (var7)).field_i = null;
               var7 = var10Lifetime1;
             }
           }
@@ -352,7 +352,7 @@ class qf {
           this.field_i = 0;
         }
         if (this.field_f != null) {
-          this.field_f.a(param0, 0, param1);
+          this.field_f.fill(param0, 0, param1);
         }
         this.field_d = pd.a(-22826);
     }
@@ -363,7 +363,7 @@ class qf {
           this.field_i = 0;
         }
         if (this.field_f != null) {
-          this.field_f.a(param0);
+          this.field_f.skip(param0);
           return;
         }
     }
@@ -429,8 +429,8 @@ class qf {
         this.field_o = 0L;
         this.field_e = true;
         this.field_n = 0;
-        this.field_h = new sp[8];
-        this.field_t = new sp[8];
+        this.field_h = new PcmStream[8];
+        this.field_t = new PcmStream[8];
         this.field_i = 0;
         this.field_c = 0L;
     }

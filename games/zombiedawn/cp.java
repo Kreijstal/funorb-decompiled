@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cp implements Runnable {
-    ec field_b;
+    PlatformTaskDispatcher field_b;
     volatile boolean field_a;
     volatile boolean field_d;
     volatile qf[] field_c;
@@ -64,7 +64,7 @@ final class cp implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), field_z);
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), field_z);
         }
     }
 

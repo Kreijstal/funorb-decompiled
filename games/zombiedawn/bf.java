@@ -18,11 +18,11 @@ final class bf {
         RuntimeException var2 = null;
         var3 = ZombieDawn.field_J;
         try {
-          wk.a(0, qn.field_e, param1, param0 + 35, true, fe.field_O, ub.field_d);
+          Camera.a(0, qn.field_e, param1, param0 + 35, true, fe.field_O, ub.field_d);
           for (var2_int = 0; var2_int < qn.field_e; var2_int++) {
             qd.field_c[param1 + var2_int] = var2_int;
           }
-          wk.a(param1, qn.field_e + param1, param1 + param1, param0 + 35, false, sg.field_pb, me.field_Db);
+          Camera.a(param1, qn.field_e + param1, param1 + param1, param0 + 35, false, sg.field_pb, me.field_Db);
           if (param0 != -35) {
             bf.a(112, 74, 60, -121, 40, -69, -113);
           }
@@ -33,7 +33,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "bf.A(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "bf.A(" + param0 + ',' + param1 + ')');
         }
     }
 

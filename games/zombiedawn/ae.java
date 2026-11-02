@@ -8,7 +8,7 @@ final class ae {
     static int[] field_c;
     static String[] field_b;
 
-    final static void a(dj param0, byte param1) {
+    final static void a(Js5Archive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         gd var5 = null;
@@ -27,12 +27,12 @@ final class ae {
         try {
           var8 = new am(param0.a("", -119, "logo.fo3d"));
           var10 = var8;
-          var3 = var10.d((byte) -119);
+          var3 = var10.readUnsignedByte((byte) -119);
           var10.h((byte) 75);
           if (param1 >= -109) {
             return;
           }
-          ag.field_a = pi.a(12, var10);
+          SecondaryNodeDequeIterator.field_a = pi.a(12, var10);
           ic.field_W = new gd[var3];
           eg.field_o = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
@@ -61,7 +61,7 @@ final class ae {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class ae {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class ae {
 
     final static void a(Throwable param0, int param1, String param2) {
         try {
-          ec stackIn_14_0;
+          PlatformTaskDispatcher stackIn_14_0;
           int stackIn_14_1;
           java.net.URL stackIn_14_2;
           java.net.URL stackIn_14_3;
@@ -133,7 +133,7 @@ final class ae {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          op var4 = null;
+          AsyncRequest var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -168,7 +168,7 @@ final class ae {
             stackIn_14_2 = null;
             stackIn_14_3 = null;
             stackIn_14_4 = b.field_m.getCodeBase();
-            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(ke.field_b).append("&u=");
+            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(GameApplet.field_b).append("&u=");
             if (null == i.field_U) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
@@ -178,12 +178,12 @@ final class ae {
               stackIn_15_3 = null;
               stackIn_15_6 = i.field_U;
             }
-            var4 = ((ec) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(ec.field_h).append("&v2=").append(ec.field_g).append("&e=").append(var10).toString()));
-            while (var4.field_f == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).openUrlStream(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_h).append("&v2=").append(PlatformTaskDispatcher.field_g).append("&e=").append(var10).toString()));
+            while (var4.status == 0) {
               ld.a(1L, (byte) 62);
             }
-            if (var4.field_f == 1) {
-              var5 = (DataInputStream) (var4.field_d);
+            if (var4.status == 1) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

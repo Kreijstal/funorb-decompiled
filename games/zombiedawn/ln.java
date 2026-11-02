@@ -31,20 +31,20 @@ abstract class ln {
         var8 = ZombieDawn.field_J;
         var2 = -59 / ((param1 + 17) / 52);
         var3 = fj.field_g;
-        var4 = var3.d((byte) -128);
+        var4 = var3.readUnsignedByte((byte) -128);
         cg.field_e = 127 & var4;
         stackIn_3_0 = ((var4 & 128) != 0);
         vi.field_d = stackIn_3_0;
-        ei.field_J = var3.d((byte) -125);
-        ce.field_s = var3.c(true);
+        ei.field_J = var3.readUnsignedByte((byte) -125);
+        ce.field_s = var3.readLong(true);
         if (cg.field_e != 2) {
           td.field_a = 0;
           ep.field_i = 0;
         } else {
           ep.field_i = var3.f(2);
-          td.field_a = var3.g(-1875);
+          td.field_a = var3.readUnsignedMedium(-1875);
         }
-        stackIn_9_0 = (1 != var3.d((byte) -115)) ? 0 : 1;
+        stackIn_9_0 = (1 != var3.readUnsignedByte((byte) -115)) ? 0 : 1;
         var5 = stackIn_9_0;
         ea.field_b = var3.a(true);
         if (var5 != 0) {
@@ -151,7 +151,7 @@ abstract class ln {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

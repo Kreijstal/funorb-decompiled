@@ -67,7 +67,7 @@ abstract class qb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ abstract class qb {
             if (var2.field_k.a((byte) 73)) {
               var2.field_n.g(ge.field_c * var2.field_i + 128 >> 8);
             } else {
-              var2.b(-27598);
+              var2.unlink(-27598);
             }
             var2 = (hn) (fj.field_i.a(false));
           }
@@ -100,7 +100,7 @@ abstract class qb {
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.field_k.a((byte) 73);
               if (!stackIn_14_0) {
-                var2Lifetime1.b(-27598);
+                var2Lifetime1.unlink(-27598);
               } else {
                 var2Lifetime1.field_n.g(128 + ge.field_c * var2Lifetime1.field_i >> 8);
               }
@@ -112,7 +112,7 @@ abstract class qb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2_ref), "qb.E(" + param0 + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2_ref), "qb.E(" + param0 + ',' + param1 + ')');
         }
     }
 

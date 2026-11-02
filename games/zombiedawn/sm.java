@@ -22,7 +22,7 @@ final class sm {
             stackIn_6_0 = re.field_g.b(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = wb.field_m.b(param2);
+          stackIn_4_0 = FunOrbApplet.field_m.b(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -34,7 +34,7 @@ final class sm {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

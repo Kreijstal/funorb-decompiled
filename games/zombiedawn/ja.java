@@ -25,14 +25,14 @@ final class ja {
         }
     }
 
-    final static on a(byte param0, byte[] param1) {
+    final static TileMap a(byte param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        on stackIn_6_0 = null;
-        on stackIn_9_0 = null;
-        on stackIn_11_0 = null;
-        on stackIn_13_0 = null;
+        TileMap stackIn_6_0 = null;
+        TileMap stackIn_9_0 = null;
+        TileMap stackIn_11_0 = null;
+        TileMap stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -49,7 +49,7 @@ final class ja {
             return stackIn_11_0;
           }
           if (var2_int == 5) {
-            stackIn_9_0 = gm.a(param1, -4);
+            stackIn_9_0 = BufferedSocket.a(param1, -4);
             return stackIn_9_0;
           }
           if (var2_int != 6) {
@@ -67,11 +67,11 @@ final class ja {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final static int a(byte param0, String[] param1, String param2, int param3, rb param4) {
+    final static int a(byte param0, String[] param1, String param2, int param3, Font param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -163,7 +163,7 @@ final class ja {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -184,8 +184,8 @@ final class ja {
         try {
           try {
             var9 = cj.field_d.getGraphics();
-            if (eo.field_f == null) {
-              eo.field_f = new java.awt.Font("Helvetica", 1, 13);
+            if (HumanFactory.field_f == null) {
+              HumanFactory.field_f = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
@@ -195,10 +195,10 @@ final class ja {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == on.field_i) {
-                on.field_i = cj.field_d.createImage(304, 34);
+              if (null == TileMap.field_i) {
+                TileMap.field_i = cj.field_d.createImage(304, 34);
               }
-              var10 = on.field_i.getGraphics();
+              var10 = TileMap.field_i.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param3, 30);
@@ -206,10 +206,10 @@ final class ja {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(param3 * 3 + 2, 2, -(3 * param3) + 300, 30);
-              var10.setFont(eo.field_f);
+              var10.setFont(HumanFactory.field_f);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
-              var9.drawImage(on.field_i, -152 + te.field_eb / 2, kj.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(TileMap.field_i, -152 + te.field_eb / 2, kj.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -221,14 +221,14 @@ final class ja {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, var8 + 1, 301, 31);
               var9.fillRect(2 + var7 + param3 * 3, 2 + var8, -(3 * param3) + 300, 30);
-              var9.setFont(eo.field_f);
+              var9.setFont(HumanFactory.field_f);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, var7 + (-(param0.length() * 6) + 304) / 2, var8 + 22);
             }
             if (ph.field_b == null) {
               return;
             }
-            var9.setFont(eo.field_f);
+            var9.setFont(HumanFactory.field_f);
             var9.setColor(java.awt.Color.white);
             var9.drawString(ph.field_b, te.field_eb / 2 - 6 * ph.field_b.length() / 2, kj.field_c / 2 - 26);
             return;
@@ -254,7 +254,7 @@ final class ja {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -265,14 +265,14 @@ final class ja {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static on $cfr$intArgs$a$362bc3736cea(int param0, byte[] param1) {
+    final static TileMap $cfr$intArgs$a$362bc3736cea(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        on stackIn_6_0 = null;
-        on stackIn_9_0 = null;
-        on stackIn_11_0 = null;
-        on stackIn_13_0 = null;
+        TileMap stackIn_6_0 = null;
+        TileMap stackIn_9_0 = null;
+        TileMap stackIn_11_0 = null;
+        TileMap stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -289,7 +289,7 @@ final class ja {
             return stackIn_11_0;
           }
           if (var2_int == 5) {
-            stackIn_9_0 = gm.a(param1, -4);
+            stackIn_9_0 = BufferedSocket.a(param1, -4);
             return stackIn_9_0;
           }
           if (var2_int != 6) {
@@ -307,7 +307,7 @@ final class ja {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 }

@@ -4,7 +4,7 @@
 final class nm {
     static boolean field_b;
     static boolean field_d;
-    static dj field_e;
+    static Js5Archive field_e;
     static boolean field_c;
     static boolean field_a;
     static int field_f;
@@ -16,11 +16,11 @@ final class nm {
           return;
         }
         am var2 = fj.field_g;
-        var2.c(param0 ^ 14826);
-        var2.c(param0 ^ 14820);
-        var2.c(-37);
-        var2.c(95);
-        var1.b(-27598);
+        var2.readInt(param0 ^ 14826);
+        var2.readInt(param0 ^ 14820);
+        var2.readInt(-37);
+        var2.readInt(95);
+        var1.unlink(-27598);
         if (param0 == 14740) {
           return;
         }

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ep extends le {
+final class ep extends IntrusiveNode {
     byte[] field_j;
     static volatile int field_m;
     static java.util.zip.CRC32 field_h;
@@ -27,7 +27,7 @@ final class ep extends le {
           }
           fc.field_Ob = 0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ep.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ep.C(" + param0 + ')');
         }
     }
 

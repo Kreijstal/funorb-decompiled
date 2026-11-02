@@ -5,7 +5,7 @@ abstract class ki extends pn {
     private int field_ab;
     static String field_V;
     private int field_cb;
-    private ga field_W;
+    private UiWidget field_W;
     private wl field_U;
     private mh field_Y;
     private int field_T;
@@ -36,7 +36,7 @@ abstract class ki extends pn {
         }
     }
 
-    void b(int param0, ga param1) {
+    void b(int param0, UiWidget param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -67,7 +67,7 @@ abstract class ki extends pn {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -147,14 +147,14 @@ abstract class ki extends pn {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final void a(ga param0, byte param1) {
+    private final void a(UiWidget param0, byte param1) {
         try {
           if (this.field_Y != null) {
-            this.field_Y.b(-27598);
+            this.field_Y.unlink(-27598);
           }
           int var3_int = -45 / ((-21 - param1) / 52);
           if (param0 == null) {
@@ -166,11 +166,11 @@ abstract class ki extends pn {
           this.a(this.field_Y, 10);
           this.field_W = null;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ki.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ki.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    boolean a(int param0, int param1, ga param2, char param3) {
+    boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -202,19 +202,19 @@ abstract class ki extends pn {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(byte param0, vn param1) {
+    final static void a(byte param0, Sprite param1) {
         hk.i(1584);
         if (param0 >= -76) {
           return;
         }
         try {
-          bi.a(param1.field_z, param1.field_r, param1.field_q);
+          Rasterizer.setBuffer(param1.field_z, param1.field_r, param1.field_q);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ki.EB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ki.EB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -231,7 +231,7 @@ abstract class ki extends pn {
         super.f((byte) -58);
     }
 
-    ki(dn param0, ga param1, int param2, int param3, int param4) {
+    ki(dn param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_i + 12, 12 + (param2 + param1.field_n));
         try {
           this.field_ab = param4;
@@ -240,7 +240,7 @@ abstract class ki extends pn {
           this.field_Z = param3;
           this.a(param1, (byte) -104);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -282,8 +282,8 @@ abstract class ki extends pn {
 
     public static void g(byte param0) {
         if (param0 < 41) {
-          vn var2 = (vn) null;
-          ki.a((byte) 10, (vn) null);
+          Sprite var2 = (Sprite) null;
+          ki.a((byte) 10, (Sprite) null);
         }
         field_V = null;
         field_bb = null;

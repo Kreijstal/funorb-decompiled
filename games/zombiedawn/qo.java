@@ -16,7 +16,7 @@ final class qo extends vf {
         }
     }
 
-    final void a(int param0, vn[] param1, int param2) {
+    final void a(int param0, Sprite[] param1, int param2) {
         int var4_int = param2;
         if (param0 != 1) {
           return;
@@ -27,7 +27,7 @@ final class qo extends vf {
           }
           this.field_u[param2].field_t = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "qo.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qo.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -44,13 +44,13 @@ final class qo extends vf {
         RuntimeException decompiledCaughtException = null;
         var2 = ZombieDawn.field_J;
         try {
-          e.field_S.a(nm.field_f, rm.field_b, true, true);
+          e.field_S.a(nm.field_f, DelegatingCanvas.field_b, true, true);
           e.field_S.g(-123);
           if (param0 >= -120) {
             stackIn_3_0 = -36;
             return stackIn_3_0;
           }
-          while (on.b(-54)) {
+          while (TileMap.b(-54)) {
             e.field_S.a(kg.field_i, (byte) 96, lc.field_c);
           }
           if (ba.field_s != -1) {
@@ -79,7 +79,7 @@ final class qo extends vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "qo.D(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "qo.D(" + param0 + ')');
         }
     }
 
@@ -88,11 +88,11 @@ final class qo extends vf {
         try {
           param0.a((byte) 125, param1, this);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "qo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, vn[] param1) {
+    final void a(int param0, Sprite[] param1) {
         int var4 = 0;
         gj[] var3 = null;
         gj var5 = null;
@@ -127,11 +127,11 @@ final class qo extends vf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, vn[] param2, int param3, vn[] param4, rb param5, int param6, int param7, int param8, byte param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, rb param18, vn[] param19) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, Font param5, int param6, int param7, int param8, byte param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, Font param18, Sprite[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -185,12 +185,12 @@ final class qo extends vf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
-        ga stackIn_3_0 = null;
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -207,10 +207,10 @@ final class qo extends vf {
           if (!(param3 instanceof an)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (ga) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
           var10 = (an) (stackIn_3_0);
-          g.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param3.field_i + (param4 + param3.field_k), param2 - (-param3.field_j - param3.field_n), param3.field_k + param4);
+          Mover.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param3.field_i + (param4 + param3.field_k), param2 - (-param3.field_j - param3.field_n), param3.field_k + param4);
           if (var10 != null) {
             param1 = param1 & var10.field_C;
           }
@@ -265,7 +265,7 @@ final class qo extends vf {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -339,11 +339,11 @@ final class qo extends vf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final void a(vn param0, int param1) {
+    final void a(Sprite param0, int param1) {
         int var4 = 0;
         gj[] var3 = null;
         gj var5 = null;
@@ -375,7 +375,7 @@ final class qo extends vf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

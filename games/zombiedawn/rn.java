@@ -30,8 +30,8 @@ final class rn {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        de var16 = null;
-        de var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -43,9 +43,9 @@ final class rn {
         int var4Lifetime5;
         var15 = ZombieDawn.field_J;
         try {
-          var16 = new de(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_j = -2 + param0.length;
+          var17.position = -2 + param0.length;
           t.field_h = var17.f(param1 + 2);
           bn.field_c = new int[t.field_h];
           uf.field_n = new int[t.field_h];
@@ -54,10 +54,10 @@ final class rn {
           vj.field_m = new byte[t.field_h][];
           jc.field_r = new boolean[t.field_h];
           bo.field_o = new int[t.field_h];
-          var17.field_j = -7 + (param0.length - t.field_h * 8);
+          var17.position = -7 + (param0.length - t.field_h * 8);
           gl.field_F = var17.f(2);
-          kd.field_pb = var17.f(2);
-          var3 = (255 & var17.d((byte) -125)) + 1;
+          Zombie.field_pb = var17.f(2);
+          var3 = (255 & var17.readUnsignedByte((byte) -125)) + 1;
           for (var4 = 0; var4 < t.field_h; var4++) {
             sl.field_d[var4] = var16.f(2);
           }
@@ -70,15 +70,15 @@ final class rn {
           for (var4Lifetime3 = param1; t.field_h > var4Lifetime3; var4Lifetime3++) {
             uf.field_n[var4Lifetime3] = var17.f(2);
           }
-          var17.field_j = -(t.field_h * 8) - 7 + param0.length - (var3 - 1) * 3;
+          var17.position = -(t.field_h * 8) - 7 + param0.length - (var3 - 1) * 3;
           j.field_a = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            j.field_a[var4Lifetime4] = var17.g(-1875);
+            j.field_a[var4Lifetime4] = var17.readUnsignedMedium(-1875);
             if (j.field_a[var4Lifetime4] == 0) {
               j.field_a[var4Lifetime4] = 1;
             }
           }
-          var17.field_j = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < t.field_h; var4Lifetime5++) {
             var5 = bn.field_c[var4Lifetime5];
             var6 = uf.field_n[var4Lifetime5];
@@ -92,14 +92,14 @@ final class rn {
             var9 = var19;
             ka.field_f[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.d((byte) -115);
+            var11 = var17.readUnsignedByte((byte) -115);
             if ((1 & var11) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var17.e((byte) 116);
+                var8[var12] = var17.readByte((byte) 116);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$1 = var17.e((byte) 116);
+                  dupTemp$1 = var17.readByte((byte) 116);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_30_0 = var10;
@@ -114,13 +114,13 @@ final class rn {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var13 * var5 + var12] = var17.e((byte) 116);
+                  var8[var13 * var5 + var12] = var17.readByte((byte) 116);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$0 = var17.e((byte) 116);
+                    dupTemp$0 = var17.readByte((byte) 116);
                     var9[var13 * var5 + var12] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_46_0 = var10;
@@ -147,7 +147,7 @@ final class rn {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -46,27 +46,27 @@ final class ml {
         return var3;
     }
 
-    final gi b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new gi(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
-    final static ml a(dj param0, String param1, String param2) {
+    final static ml a(Js5Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, -115, param1);
         if (var3 == null) {
           return null;
         }
-        return new ml(new de(var3));
+        return new ml(new PacketBuffer(var3));
     }
 
-    private ml(de param0) {
+    private ml(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_c = new ve[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.d((byte) -119);
+          var3 = param0.readUnsignedByte((byte) -119);
           if (var3 != 0) {
-            param0.field_j = param0.field_j - 1;
+            param0.position = param0.position - 1;
             this.field_c[var2] = new ve();
             this.field_c[var2].a(param0);
           }
@@ -75,11 +75,11 @@ final class ml {
         this.field_b = param0.f(2);
     }
 
-    final static ml a(dj param0, int param1, int param2) {
+    final static ml a(Js5Archive param0, int param1, int param2) {
         byte[] var3 = param0.a((byte) 51, param1, param2);
         if (var3 == null) {
           return null;
         }
-        return new ml(new de(var3));
+        return new ml(new PacketBuffer(var3));
     }
 }

@@ -2,58 +2,58 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pf {
-    static vn field_f;
+    static Sprite field_f;
     static volatile int field_c;
     private int field_a;
-    private nb[] field_i;
+    private DualLinkNode[] field_i;
     static int field_g;
-    private nb field_d;
+    private DualLinkNode field_d;
     private long field_e;
     static ug field_b;
     static char[] field_h;
 
-    final nb a(int param0, long param1) {
-        nb var4;
-        nb var5;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
-        nb var4Lifetime1;
-        nb var5Lifetime1;
+        DualLinkNode var4Lifetime1;
+        DualLinkNode var5Lifetime1;
         var6 = ZombieDawn.field_J;
         this.field_e = param1;
         if (param0 == 93) {
           var4 = this.field_i[(int)((long)(this.field_a - 1) & param1)];
-          this.field_d = var4.field_i;
+          this.field_d = var4.secondaryNext;
           while (true) {
             if (var4 == this.field_d) {
               this.field_d = null;
               return null;
             }
-            if (this.field_d.field_n != param1) {
-              this.field_d = this.field_d.field_i;
+            if (this.field_d.secondaryKey != param1) {
+              this.field_d = this.field_d.secondaryNext;
               continue;
             }
             break;
           }
           var5 = this.field_d;
-          this.field_d = this.field_d.field_i;
+          this.field_d = this.field_d.secondaryNext;
           return var5;
         }
         pf.a((byte) -112);
         var4Lifetime1 = this.field_i[(int)((long)(this.field_a - 1) & param1)];
-        this.field_d = var4Lifetime1.field_i;
+        this.field_d = var4Lifetime1.secondaryNext;
         while (true) {
           if (var4Lifetime1 == this.field_d) {
             this.field_d = null;
             return null;
           }
-          if (this.field_d.field_n != param1) {
-            this.field_d = this.field_d.field_i;
+          if (this.field_d.secondaryKey != param1) {
+            this.field_d = this.field_d.secondaryNext;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_d;
-        this.field_d = this.field_d.field_i;
+        this.field_d = this.field_d.secondaryNext;
         return var5Lifetime1;
     }
 
@@ -68,20 +68,20 @@ final class pf {
         field_f = null;
     }
 
-    final nb b(byte param0) {
-        nb var3 = null;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var3 = null;
         int var4 = ZombieDawn.field_J;
         if (null == this.field_d) {
           return null;
         }
-        nb var2 = this.field_i[(int)((long)(-1 + this.field_a) & this.field_e)];
+        DualLinkNode var2 = this.field_i[(int)((long)(-1 + this.field_a) & this.field_e)];
         while (this.field_d != var2) {
-          if (this.field_d.field_n == this.field_e) {
+          if (this.field_d.secondaryKey == this.field_e) {
             var3 = this.field_d;
-            this.field_d = this.field_d.field_i;
+            this.field_d = this.field_d.secondaryNext;
             return var3;
           }
-          this.field_d = this.field_d.field_i;
+          this.field_d = this.field_d.secondaryNext;
         }
         if (param0 >= -96) {
           this.field_a = 125;
@@ -92,35 +92,35 @@ final class pf {
         return null;
     }
 
-    final void a(int param0, long param1, nb param2) {
-        nb var5 = null;
+    final void a(int param0, long param1, DualLinkNode param2) {
+        DualLinkNode var5 = null;
         try {
-          if (null != param2.field_h) {
-            param2.c((byte) -53);
+          if (null != param2.secondaryPrevious) {
+            param2.unlinkSecondary((byte) -53);
           }
           var5 = this.field_i[(int)((long)(this.field_a - param0) & param1)];
-          param2.field_h = var5.field_h;
-          param2.field_i = var5;
-          param2.field_h.field_i = param2;
-          param2.field_n = param1;
-          param2.field_i.field_h = param2;
+          param2.secondaryPrevious = var5.secondaryPrevious;
+          param2.secondaryNext = var5;
+          param2.secondaryPrevious.secondaryNext = param2;
+          param2.secondaryKey = param1;
+          param2.secondaryNext.secondaryPrevious = param2;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     pf(int param0) {
         int var2 = 0;
-        nb dupTemp$0 = null;
-        nb var3 = null;
-        this.field_i = new nb[param0];
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
+        this.field_i = new DualLinkNode[param0];
         this.field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new nb();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_i[var2] = dupTemp$0;
-          var3.field_i = var3;
-          var3.field_h = var3;
+          var3.secondaryNext = var3;
+          var3.secondaryPrevious = var3;
         }
     }
 

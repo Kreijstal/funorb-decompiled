@@ -28,7 +28,7 @@ final class sj {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -41,7 +41,7 @@ final class sj {
         p.b(1, 27102);
     }
 
-    final static void a(int param0, int param1, int param2, vn param3) {
+    final static void a(int param0, int param1, int param2, Sprite param3) {
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -69,11 +69,11 @@ final class sj {
             if (var6 != 0) {
               if ((65535 & var6) == 0) {
                 var7 = var6 >> 16;
-                var9[var5] = hi.a(eg.a(var7 * eg.a(param0 >> 16, 255) << 8, 16711864), hi.a(eg.a(var7 * eg.a(param0 >> 8, 255), 65280), eg.a(255, param0) * var7 >> 8));
+                var9[var5] = GameWorld.a(eg.a(var7 * eg.a(param0 >> 16, 255) << 8, 16711864), GameWorld.a(eg.a(var7 * eg.a(param0 >> 8, 255), 65280), eg.a(255, param0) * var7 >> 8));
               } else {
                 if ((var6 & 16711935) == 0) {
                   var7 = var6 >> 8;
-                  var9[var5] = hi.a(hi.a(var7 * eg.a(255, param2) >> 8, eg.a(var7 * eg.a(param2 >> 8, 255), 65280)), eg.a(16711709, eg.a(255, param2 >> 16) * var7 << 8));
+                  var9[var5] = GameWorld.a(GameWorld.a(var7 * eg.a(255, param2) >> 8, eg.a(var7 * eg.a(param2 >> 8, 255), 65280)), eg.a(16711709, eg.a(255, param2 >> 16) * var7 << 8));
                 }
               }
             }
@@ -89,7 +89,7 @@ final class sj {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

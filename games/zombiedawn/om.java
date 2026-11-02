@@ -4,7 +4,7 @@
 final class om extends w {
     private int field_o;
     private pj field_s;
-    private sh field_n;
+    private ExceptionWrapper field_n;
     private na field_l;
     private dl field_p;
     private na field_q;
@@ -17,15 +17,15 @@ final class om extends w {
     private boolean field_m;
     private int field_i;
     private boolean field_e;
-    private vo field_c;
-    private vo field_g;
+    private IntrusiveDeque field_c;
+    private IntrusiveDeque field_g;
     private long field_u;
     private boolean field_f;
 
     final void b(int param0) {
         pj discarded$0 = null;
         pj discarded$1 = null;
-        le var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = ZombieDawn.field_J;
@@ -40,7 +40,7 @@ final class om extends w {
         }
         var2 = this.field_g.b((byte) 26);
         while (var2 != null) {
-          var3 = (int)var2.field_f;
+          var3 = (int)var2.key;
           if (0 <= var3 &&
             var3 < this.field_h.field_s &&
             0 != this.field_h.field_t[var3]) {
@@ -51,10 +51,10 @@ final class om extends w {
               discarded$1 = this.a(2, var3, 19);
             }
             if (1 == this.field_j[var3]) {
-              var2.b(param0 - 27598);
+              var2.unlink(param0 - 27598);
             }
           } else {
-            var2.b(param0 - 27598);
+            var2.unlink(param0 - 27598);
           }
           var2 = this.field_g.a(false);
         }
@@ -72,7 +72,7 @@ final class om extends w {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        vn var17 = null;
+        Sprite var17 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
@@ -95,32 +95,32 @@ final class om extends w {
           var8_int = param2 - param6 - param7;
           var9 = -param6 + (param1 - param7);
           var10 = param6 + (param2 + param7);
-          if (var8_int < bi.field_g) {
-            var8_int = bi.field_g;
+          if (var8_int < Rasterizer.clipLeft) {
+            var8_int = Rasterizer.clipLeft;
           }
-          if (bi.field_b < var10) {
-            var10 = bi.field_b;
+          if (Rasterizer.clipRight < var10) {
+            var10 = Rasterizer.clipRight;
           }
           var11 = param1 - (-param6 - param7);
-          if (bi.field_l > var9) {
-            var9 = bi.field_l;
+          if (Rasterizer.clipTop > var9) {
+            var9 = Rasterizer.clipTop;
           }
-          if (bi.field_d < var11) {
-            var11 = bi.field_d;
+          if (Rasterizer.clipBottom < var11) {
+            var11 = Rasterizer.clipBottom;
           }
           var12 = new int[32];
           var13 = 16711935 & param3;
           var14 = 65280 & param3;
           for (var15 = 0; var15 < 16; var15++) {
             var16 = var15 * param4 >> 4;
-            var12[var15] = hi.a(eg.a(-16711936, var16 * var13), eg.a(var16 * var14, 16711680)) >>> 8;
-            var12[31 - var15] = hi.a(eg.a(var13 * var16, -16711936), eg.a(var14 * var16, 16711680)) >>> 8;
+            var12[var15] = GameWorld.a(eg.a(-16711936, var16 * var13), eg.a(var16 * var14, 16711680)) >>> 8;
+            var12[31 - var15] = GameWorld.a(eg.a(var13 * var16, -16711936), eg.a(var14 * var16, 16711680)) >>> 8;
           }
           var15Lifetime1 = var10 - var8_int;
           var16Lifetime1 = -var9 + var11;
           if (0 < var15Lifetime1 &&
             var16Lifetime1 > 0) {
-            var17 = new vn(var15Lifetime1, var16Lifetime1);
+            var17 = new Sprite(var15Lifetime1, var16Lifetime1);
             var18 = param6 * param6;
             var19 = (param7 + param6) * (param6 + param7);
             var20 = 0;
@@ -140,51 +140,51 @@ final class om extends w {
                   if (var18 > var24) {
                     var28 = uf.a(var24 << 12, 12832);
                     var29 = -var28 + (param6 << 6);
-                    var30 = -((65536 - fb.a(1311979239, (var29 << 7) / param6)) * param5 >> 11) + var28;
+                    var30 = -((65536 - WorldObject.a(1311979239, (var29 << 7) / param6)) * param5 >> 11) + var28;
                     var30 = var30 - na.field_c[var25 % 256 + var22 % 256 * 256];
                     var27 = var23 * var30 / var28 + param2;
                     var26 = param1 + var21 * var30 / var28;
-                    if (var27 < bi.field_g) {
-                      var27 = bi.field_g;
+                    if (var27 < Rasterizer.clipLeft) {
+                      var27 = Rasterizer.clipLeft;
                     }
-                    if (var26 < bi.field_l) {
-                      var26 = bi.field_l;
+                    if (var26 < Rasterizer.clipTop) {
+                      var26 = Rasterizer.clipTop;
                     }
-                    if (var27 >= bi.field_b) {
-                      var27 = -1 + bi.field_b;
+                    if (var27 >= Rasterizer.clipRight) {
+                      var27 = -1 + Rasterizer.clipRight;
                     }
-                    if (bi.field_d <= var26) {
-                      var26 = -1 + bi.field_d;
+                    if (Rasterizer.clipBottom <= var26) {
+                      var26 = -1 + Rasterizer.clipBottom;
                     }
                   } else {
                     if (var19 > var24) {
                       var28 = uf.a(var24 << 12, 12832);
                       var29 = -(param6 << 6) + var28;
-                      var30 = -(param5 * (-fb.a(1311979239, (var29 << 7) / param7) + 65536) >> 11) + var28;
+                      var30 = -(param5 * (-WorldObject.a(1311979239, (var29 << 7) / param7) + 65536) >> 11) + var28;
                       var26 = param1 + var30 * var21 / var28;
                       var27 = param2 + var23 * var30 / var28;
-                      if (bi.field_l > var26) {
-                        var26 = bi.field_l;
+                      if (Rasterizer.clipTop > var26) {
+                        var26 = Rasterizer.clipTop;
                       }
-                      if (bi.field_g > var27) {
-                        var27 = bi.field_g;
+                      if (Rasterizer.clipLeft > var27) {
+                        var27 = Rasterizer.clipLeft;
                       }
-                      if (var27 >= bi.field_b) {
-                        var27 = -1 + bi.field_b;
+                      if (var27 >= Rasterizer.clipRight) {
+                        var27 = -1 + Rasterizer.clipRight;
                       }
-                      if (bi.field_d > var26) {
-                        var17.field_z[var20] = bi.field_c[var27 + bi.field_f * var26];
+                      if (Rasterizer.clipBottom > var26) {
+                        var17.field_z[var20] = Rasterizer.pixels[var27 + Rasterizer.width * var26];
                         var20++;
                         var25++;
                         var23++;
                         var24 = var24 + (2 * var23 - 1);
                         continue;
                       }
-                      var26 = bi.field_d - 1;
+                      var26 = Rasterizer.clipBottom - 1;
                     }
                   }
                 }
-                var17.field_z[var20] = bi.field_c[var27 + bi.field_f * var26];
+                var17.field_z[var20] = Rasterizer.pixels[var27 + Rasterizer.width * var26];
                 var20++;
                 var25++;
                 var23++;
@@ -193,14 +193,14 @@ final class om extends w {
               var22++;
               var21++;
             }
-            var17.e(var8_int, var9);
+            var17.drawWithOffsets(var8_int, var9);
             return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var8), "om.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var8), "om.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ final class om extends w {
         }
         this.field_m = true;
         if (this.field_c == null) {
-          this.field_c = new vo();
+          this.field_c = new IntrusiveDeque();
         }
     }
 
@@ -226,7 +226,7 @@ final class om extends w {
           return null;
         }
         byte[] var4 = var3.d(0);
-        var3.b(-27598);
+        var3.unlink(-27598);
         return var4;
     }
 
@@ -261,7 +261,7 @@ final class om extends w {
           param0 == 0 &&
           !var12.field_r &&
           var12.field_q) {
-          var12.b(-27598);
+          var12.unlink(-27598);
           var4 = null;
         }
         if (var4 == null) {
@@ -297,7 +297,7 @@ final class om extends w {
               var4 = this.field_n.a((byte) -119, this.field_l, param1);
             }
           }
-          this.field_p.a(-110, (long)param1, (le) (var4));
+          this.field_p.a(-110, (long)param1, (IntrusiveNode) (var4));
         }
         if (((pj) (var4)).field_q) {
           return null;
@@ -335,7 +335,7 @@ final class om extends w {
                 this.field_j[param1] = (byte) 1;
               }
               if (!((pj) (var4)).field_r) {
-                ((pj) (var4)).b(-27598);
+                ((pj) (var4)).unlink(-27598);
               }
               stackIn_59_0 = var4;
               return (pj) (stackIn_59_0);
@@ -345,13 +345,13 @@ final class om extends w {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_j[param1] = (byte)-1;
-            ((pj) (var4)).b(-27598);
+            ((pj) (var4)).unlink(-27598);
             if (((pj) (var4)).field_r) {
               if (this.field_d.b(122)) {
                 return null;
               }
               var4 = this.field_d.a((byte) 2, true, this.field_o, (byte) -95, param1);
-              this.field_p.a(-108, (long)param1, (le) (var4));
+              this.field_p.a(-108, (long)param1, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -387,7 +387,7 @@ final class om extends w {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_d.a(-90);
-          ((pj) (var4)).b(-27598);
+          ((pj) (var4)).unlink(-27598);
           if (!((pj) (var4)).field_r) {
             return null;
           }
@@ -395,7 +395,7 @@ final class om extends w {
             return null;
           }
           var4 = this.field_d.a((byte) 2, true, this.field_o, (byte) 111, param1);
-          this.field_p.a(-102, (long)param1, (le) (var4));
+          this.field_p.a(-102, (long)param1, (IntrusiveNode) (var4));
           return null;
         }
         var5[var18.length - 2] = (byte)(this.field_h.field_c[param1] >>> 8);
@@ -409,7 +409,7 @@ final class om extends w {
           }
         }
         if (!((pj) (var4)).field_r) {
-          ((pj) (var4)).b(-27598);
+          ((pj) (var4)).unlink(-27598);
         }
         return (pj) (var4);
     }
@@ -432,14 +432,14 @@ final class om extends w {
         pj discarded$0 = null;
         int var2_int;
         pj var2;
-        le var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        le var6;
-        le var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        le var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         var5 = ZombieDawn.field_J;
         if (param0 <= 13) {
           return;
@@ -453,31 +453,31 @@ final class om extends w {
             var2_int = 1;
             var3 = this.field_c.b((byte) 26);
             while (var3 != null) {
-              var4 = (int)var3.field_f;
+              var4 = (int)var3.key;
               if (this.field_j[var4] == 0) {
                 discarded$3 = this.a(1, var4, 106);
               }
               if (0 != this.field_j[var4]) {
-                var3.b(-27598);
+                var3.unlink(-27598);
               } else {
                 var2_int = 0;
               }
               var3 = this.field_c.a(false);
             }
-            L10: while (true) {
+            scanLoop1: while (true) {
               if (this.field_h.field_t.length > this.field_i) {
                 if (this.field_h.field_t[this.field_i] != 0) {
                   if (this.field_n.field_k >= 250) {
                     var2_int = 0;
-                    break L10;
+                    break scanLoop1;
                   }
                   if (this.field_j[this.field_i] == 0) {
                     discarded$2 = this.a(1, this.field_i, 68);
                   }
                   if (this.field_j[this.field_i] == 0) {
-                    var6 = new le();
-                    var6.field_f = (long)this.field_i;
-                    this.field_c.a(0, var6);
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_i;
+                    this.field_c.addFirst(0, var6);
                     var2_int = 0;
                   }
                 }
@@ -497,12 +497,12 @@ final class om extends w {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_c.b((byte) 26);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_f;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_j[var4Lifetime1] != 1) {
                   discarded$1 = this.a(2, var4Lifetime1, 127);
                 }
                 if (this.field_j[var4Lifetime1] == 1) {
-                  var3Lifetime1.b(-27598);
+                  var3Lifetime1.unlink(-27598);
                 } else {
                   var2_intLifetime1 = 0;
                 }
@@ -518,10 +518,10 @@ final class om extends w {
                     discarded$0 = this.a(2, this.field_i, 72);
                   }
                   if (this.field_j[this.field_i] != 1) {
-                    var7 = new le();
-                    var7.field_f = (long)this.field_i;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_i;
                     var2_intLifetime1 = 0;
-                    this.field_c.a(0, var7);
+                    this.field_c.addFirst(0, var7);
                   }
                   this.field_i = this.field_i + 1;
                   continue;
@@ -551,7 +551,7 @@ final class om extends w {
                 if (!var2.field_r) {
                   throw new RuntimeException();
                 }
-                var2.b(-27598);
+                var2.unlink(-27598);
               }
             }
             var2 = (pj) (this.field_p.b((byte) -40));
@@ -634,7 +634,7 @@ final class om extends w {
         return this.field_h;
     }
 
-    om(int param0, na param1, na param2, pc param3, sh param4, int param5, byte[] param6, int param7, boolean param8) {
+    om(int param0, na param1, na param2, pc param3, ExceptionWrapper param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -651,7 +651,7 @@ final class om extends w {
         RuntimeException var10 = null;
         this.field_p = new dl(16);
         this.field_i = 0;
-        this.field_g = new vo();
+        this.field_g = new IntrusiveDeque();
         this.field_u = 0L;
         try {
           this.field_l = param1;
@@ -660,7 +660,7 @@ final class om extends w {
             this.field_e = false;
           } else {
             this.field_e = true;
-            this.field_c = new vo();
+            this.field_c = new IntrusiveDeque();
           }
           this.field_d = param3;
           stackIn_7_1 = (param8);
@@ -708,7 +708,7 @@ final class om extends w {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

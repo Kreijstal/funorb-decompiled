@@ -47,7 +47,7 @@ final class va {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var2), "va.D(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "va.D(" + param0 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class va {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "va.A(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "va.A(" + param0 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class va {
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
         Throwable decompiledCaughtException = null;
-        de var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -96,20 +96,20 @@ final class va {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          var2 = new de(param1);
-          var3 = var2.d((byte) -118);
-          var4 = var2.c(-38);
-          if (var4 >= 0 && (m.field_z == 0 ||
-            !(var4 > m.field_z))) {
+          var2 = new PacketBuffer(param1);
+          var3 = var2.readUnsignedByte((byte) -118);
+          var4 = var2.readInt(-38);
+          if (var4 >= 0 && (GameLoopApplet.field_z == 0 ||
+            !(var4 > GameLoopApplet.field_z))) {
             if (var3 == 0) {
               var5_ref_byte__ = new byte[var4];
-              var2.a(var4, 0, var5_ref_byte__, 11240);
+              var2.readBytes(var4, 0, var5_ref_byte__, 11240);
               stackIn_14_0 = var5_ref_byte__;
               return stackIn_14_0;
             }
-            var5 = var2.c(-69);
-            if (var5 >= 0 && (0 == m.field_z ||
-              !(var5 > m.field_z))) {
+            var5 = var2.readInt(-69);
+            if (var5 >= 0 && (0 == GameLoopApplet.field_z ||
+              !(var5 > GameLoopApplet.field_z))) {
               var6 = new byte[var5];
               if (1 != var3) {
                 var7 = cn.field_d;
@@ -137,7 +137,7 @@ final class va {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -169,13 +169,13 @@ final class va {
             va.a((byte) -53, (byte[]) null);
           }
           var1 = fj.field_g;
-          var2 = var1.d((byte) -126);
+          var2 = var1.readUnsignedByte((byte) -126);
           if (var2 == 0) {
             if (nk.field_a == null) {
               nk.field_a = new pf(128);
               ih.field_J = 0;
             }
-            stackIn_15_0 = (var1.d((byte) -119) != 1) ? 0 : 1;
+            stackIn_15_0 = (var1.readUnsignedByte((byte) -119) != 1) ? 0 : 1;
             var3_int = stackIn_15_0;
             var4_ref_String = var1.a(true);
             if (var3_int != 0) {
@@ -199,7 +199,7 @@ final class va {
               fieldTemp$1 = ih.field_J;
               ih.field_J = ih.field_J + 1;
               var5_ref.field_kb = fieldTemp$1;
-              tp.field_m.a(param0 ^ 1545, var5_ref);
+              tp.field_m.addFirst(param0 ^ 1545, var5_ref);
             }
             var5_ref.field_lb = var4_ref_String;
             return;
@@ -225,7 +225,7 @@ final class va {
             w.field_b = 1;
             var3 = var1.a(true);
             oo.field_T = ((String) (var3)).intern();
-            var4 = var1.d((byte) -128);
+            var4 = var1.readUnsignedByte((byte) -128);
             rd.a(20348, var4);
             return;
           }
@@ -252,20 +252,20 @@ final class va {
             fieldTemp$0 = ne.field_b;
             ne.field_b = ne.field_b + 1;
             var6.field_kb = fieldTemp$0;
-            eb.field_d.a(0, var6);
+            eb.field_d.addFirst(0, var6);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
           var6.field_lb = var4_ref_StringLifetime1;
           var6.field_ib = (String) (var3Lifetime1);
-          var6.b(param0 - 29143);
+          var6.unlink(param0 - 29143);
           var7 = (oh) (eb.field_d.b((byte) 26));
-          L8: while (true) {
+          scanLoop1: while (true) {
             if (null != var7) {
               stackIn_68_0 = var6;
               if (var8 != 0) {
-                break L8;
+                break scanLoop1;
               }
               if (eh.a(stackIn_68_0, var7, (byte) 20)) {
                 var7 = (oh) (eb.field_d.a(false));
@@ -273,7 +273,7 @@ final class va {
               }
             }
             if (null == var7) {
-              eb.field_d.a(0, var6);
+              eb.field_d.addFirst(0, var6);
               if (var8 == 0) {
                 return;
               }
@@ -286,7 +286,7 @@ final class va {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "va.E(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "va.E(" + param0 + ')');
         }
     }
 
@@ -309,7 +309,7 @@ final class va {
             va.b((byte) -42);
           }
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!on.b(-114)))) {
+          while (!(decompiledNaturalLoopExit0 = (!TileMap.b(-114)))) {
             i.field_W.a(21657);
             stackIn_16_0 = i.field_W.d(-127);
             if (var7 == 0) {
@@ -366,7 +366,7 @@ final class va {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "va.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "va.C(" + param0 + ')');
         }
     }
 
@@ -381,7 +381,7 @@ final class va {
           this.field_f = param3;
           this.field_h = param4;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "va.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "va.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

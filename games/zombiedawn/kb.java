@@ -6,7 +6,7 @@ final class kb extends pm {
     static sm field_f;
     static String[] field_g;
     static String[] field_j;
-    static vn[] field_i;
+    static Sprite[] field_i;
 
     final String a(String param0, byte param1) {
         RuntimeException var3 = null;
@@ -17,9 +17,9 @@ final class kb extends pm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -94) {
-            field_i = (vn[]) null;
+            field_i = (Sprite[]) null;
           }
-          if (this.a(param0, 2) != uc.field_b) {
+          if (this.a(param0, 2) != MouseWheelInput.field_b) {
             return null;
           }
           stackIn_5_0 = sa.field_Z;
@@ -34,7 +34,7 @@ final class kb extends pm {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -61,16 +61,16 @@ final class kb extends pm {
           }
           var5 = (CharSequence) ((Object) param0);
           if (!sj.a((byte) -101, var5)) {
-            stackIn_4_0 = uc.field_b;
+            stackIn_4_0 = MouseWheelInput.field_b;
             return stackIn_4_0;
           }
           var6 = (CharSequence) ((Object) param0);
-          var3_int = ra.a(var6, 121);
+          var3_int = DualLinkDeque.a(var6, 121);
           if (var3_int > 0 &&
             130 >= var3_int) {
             return mc.field_g;
           }
-          stackIn_9_0 = uc.field_b;
+          stackIn_9_0 = MouseWheelInput.field_b;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,7 +82,7 @@ final class kb extends pm {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

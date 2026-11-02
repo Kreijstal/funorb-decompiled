@@ -38,7 +38,7 @@ final class ff {
               var10 = param0.getParameter("cookieprefix");
               var3 = var10 + "settings";
               var4 = (String) (qe.a(param0, "getcookies", -102));
-              var5 = de.a(';', var4, -125);
+              var5 = PacketBuffer.split(';', var4, -125);
               var6 = 30 / ((param1 + 23) / 59);
               for (var7 = 0; var5.length > var7; var7++) {
                 var8 = var5[var7].indexOf('=');
@@ -68,7 +68,7 @@ final class ff {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

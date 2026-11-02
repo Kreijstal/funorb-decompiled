@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ek extends fb {
+final class ek extends WorldObject {
     private int field_F;
     private int field_N;
     boolean field_G;
@@ -17,27 +17,27 @@ final class ek extends fb {
     static int field_J;
 
     final void j(int param0) {
-        this.b(-27598);
-        this.c((byte) -56);
-        td.field_c.a((le) (this), 87);
+        this.unlink(-27598);
+        this.unlinkSecondary((byte) -56);
+        td.field_c.addLast((IntrusiveNode) (this), 87);
         if (param0 != -18475) {
           ek.i(112);
         }
     }
 
     private final void f(byte param0) {
-        this.field_H = pb.a(so.field_a, 127, 1) + 128;
+        this.field_H = pb.a(so.random, 127, 1) + 128;
         if (param0 == -8) {
           this.field_F = 0;
-          this.field_y = this.field_N - (-pb.a(so.field_a, 24, param0 ^ -7) + 12) << 16;
-          this.field_x = this.field_L - 12 + pb.a(so.field_a, 24, 1) << 16;
+          this.field_y = this.field_N - (-pb.a(so.random, 24, param0 ^ -7) + 12) << 16;
+          this.field_x = this.field_L - 12 + pb.a(so.random, 24, 1) << 16;
           return;
         }
-        wk var3 = (wk) null;
-        this.a((byte) 119, (wk) null);
+        Camera var3 = (Camera) null;
+        this.a((byte) 119, (Camera) null);
         this.field_F = 0;
-        this.field_y = this.field_N - (-pb.a(so.field_a, 24, param0 ^ -7) + 12) << 16;
-        this.field_x = this.field_L - 12 + pb.a(so.field_a, 24, 1) << 16;
+        this.field_y = this.field_N - (-pb.a(so.random, 24, param0 ^ -7) + 12) << 16;
+        this.field_x = this.field_L - 12 + pb.a(so.random, 24, 1) << 16;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -51,14 +51,14 @@ final class ek extends fb {
           this.field_M = 0;
           this.f((byte) -8);
           var5 = bg.field_o.length;
-          this.field_D = pb.a(so.field_a, 10, 1);
-          this.field_K = pb.a(so.field_a, param2, 1);
-          this.field_F = pb.a(so.field_a, var5, 1);
+          this.field_D = pb.a(so.random, 10, 1);
+          this.field_K = pb.a(so.random, param2, 1);
+          this.field_F = pb.a(so.random, var5, 1);
           return;
         }
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int fieldTemp$2 = 0;
         RuntimeException runtimeException = null;
         int var3_int = 0;
@@ -75,13 +75,13 @@ final class ek extends fb {
               if (param0 >= -76) {
                 this.j(-76);
               }
-              var3_int = param1.a(this.a(true), (byte) -59);
-              var4 = param1.a(this.f(237239984), 0) - 24;
+              var3_int = param1.worldToScreenX(this.getX(true), (byte) -59);
+              var4 = param1.worldToScreenY(this.getY(237239984), 0) - 24;
               if (!km.a(21405, var3_int, param1, var4)) {
                 return;
               }
               if (!ng.field_e &&
-                dj.field_e.field_H.field_b[this.f(237239984) / 24][this.a(true) / 24]) {
+                Js5Archive.field_e.navigation.field_b[this.getY(237239984) / 24][this.getX(true) / 24]) {
                 return;
               }
               bg.field_o[this.field_F].e(var3_int, var4, this.field_H);
@@ -99,7 +99,7 @@ final class ek extends fb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

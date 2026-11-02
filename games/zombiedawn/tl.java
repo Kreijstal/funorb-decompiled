@@ -18,7 +18,7 @@ final class tl implements ug {
     private boolean field_m;
     private lo[] field_q;
     static String field_e;
-    private dj field_h;
+    private Js5Archive field_h;
     private int[] field_r;
 
     final void b(int param0, int param1) {
@@ -71,19 +71,19 @@ final class tl implements ug {
         a.field_h = pb.a(true, false, 2, true, 1);
         ZombieDawn.field_H = mm.a(3, (byte) -115);
         nm.field_e = pb.a(true, true, 8, true, 1);
-        gm.field_h = pb.a(true, false, 4, true, 1);
+        BufferedSocket.field_h = pb.a(true, false, 4, true, 1);
         qn.field_i = pb.a(true, false, 5, true, 1);
         an.field_B = pb.a(true, false, 6, true, 1);
         this.field_h = pb.a(true, false, 7, true, 1);
         bp.field_h = new jk(50);
-        dj var4 = nl.field_p;
-        dj var3 = gj.field_i;
-        bp.field_h.a("basic", nb.field_o, el.field_m, var4, (byte) -84);
-        bp.field_h.a("arialish12", nb.field_o, el.field_m, var4, (byte) -84);
-        bp.field_h.a("arialish12", nb.field_o, el.field_m, var3, (byte) -84);
+        Js5Archive var4 = nl.field_p;
+        Js5Archive var3 = gj.field_i;
+        bp.field_h.a("basic", DualLinkNode.field_o, el.field_m, var4, (byte) -84);
+        bp.field_h.a("arialish12", DualLinkNode.field_o, el.field_m, var4, (byte) -84);
+        bp.field_h.a("arialish12", DualLinkNode.field_o, el.field_m, var3, (byte) -84);
         bp.field_h.a((byte) -113, nm.field_e, ap.field_w, ea.field_d);
         bp.field_h.a(ao.field_I, qn.field_i, 1);
-        bp.field_h.a(ao.field_I, gm.field_h, 1);
+        bp.field_h.a(ao.field_I, BufferedSocket.field_h, 1);
         bp.field_h.a(u.field_f, an.field_B, 1);
         bp.field_h.a(u.field_f, this.field_h, 1);
         bp.field_h.a((byte) -98, ZombieDawn.field_H, ba.field_e, nd.field_d);
@@ -91,10 +91,10 @@ final class tl implements ug {
 
     private final void c(int param0) {
         int var9 = 0;
-        dj var3 = null;
+        Js5Archive var3 = null;
         int var4_int = 0;
         int var11 = 0;
-        dj var15 = null;
+        Js5Archive var15 = null;
         boolean stackIn_102_1 = false;
         Throwable decompiledCaughtException = null;
         float var4 = 0.0f;
@@ -104,15 +104,15 @@ final class tl implements ug {
         int var6 = 0;
         IllegalArgumentException var6_ref_IllegalArgumentException = null;
         v[] var7 = null;
-        vn[] var7_array = null;
+        Sprite[] var7_array = null;
         int var8 = 0;
-        vn[] var8_ref_vn__ = null;
-        vn var10 = null;
+        Sprite[] var8_ref_vn__ = null;
+        Sprite var10 = null;
         int var12 = 0;
         String var13 = null;
         ml var14 = null;
         v[] var16 = null;
-        vn[] var17 = null;
+        Sprite[] var17 = null;
         int var8Lifetime1;
         var11 = ZombieDawn.field_J;
         oh.d((byte) -95);
@@ -121,11 +121,11 @@ final class tl implements ug {
         if (param0 != 75) {
           this.a(60, -55);
         }
-        if (!rm.field_f &&
-          null != gm.field_h) {
+        if (!DelegatingCanvas.field_f &&
+          null != BufferedSocket.field_h) {
           oh.d((byte) -111);
           this.a(53.0f, 127, am.field_m);
-          ph.field_a = new ka(gm.field_h, qn.field_i);
+          ph.field_a = new ka(BufferedSocket.field_h, qn.field_i);
           for (var4_int = 0; tc.field_t > var4_int; var4_int++) {
             if (0 == tc.field_y[var4_int]) {
               var5_int = tc.field_s[var4_int];
@@ -133,7 +133,7 @@ final class tl implements ug {
                 var5_int == 68 ||
                 47 == var5_int) && null == vb.field_D[var5_int]) {
                 var13 = "sfx";
-                var14 = ml.a(gm.field_h, var13, tc.field_x[var4_int]);
+                var14 = ml.a(BufferedSocket.field_h, var13, tc.field_x[var4_int]);
                 if (var14 == null) {
                   return;
                 }
@@ -141,7 +141,7 @@ final class tl implements ug {
               }
             }
           }
-          rm.field_f = true;
+          DelegatingCanvas.field_f = true;
           ep.c((byte) -50);
           return;
         }
@@ -153,7 +153,7 @@ final class tl implements ug {
         }
         if (!sa.field_T &&
           null != this.field_h) {
-          this.a(eo.field_h[15], e.field_I, 55.0f, false, 20.0f);
+          this.a(HumanFactory.field_h[15], e.field_I, 55.0f, false, 20.0f);
           if (!this.a("zombie dawn titlescreen", 0, 0)) {
             return;
           }
@@ -192,7 +192,7 @@ final class tl implements ug {
               }
             }
             this.a(800, ji.field_a, 75.0f, false, 3.0f);
-            np.field_E = new vn(nm.field_e.a("map.jpg", param0 ^ -26, "jpg/"), (java.awt.Component) ((Object) cj.field_d));
+            np.field_E = new Sprite(nm.field_e.a("map.jpg", param0 ^ -26, "jpg/"), (java.awt.Component) ((Object) cj.field_d));
           }
           nm.field_e = null;
           this.a(param0 ^ 75, 78.0f);
@@ -226,10 +226,10 @@ final class tl implements ug {
           if (sg.field_jb == null) {
             return;
           }
-          b.field_j = ra.a(ZombieDawn.field_H, "basic", "font_title", 0, a.field_h);
+          b.field_j = DualLinkDeque.a(ZombieDawn.field_H, "basic", "font_title", 0, a.field_h);
           bj.field_q = gb.a("font_medium", -1, ZombieDawn.field_H, "basic", a.field_h);
           rg.a(bj.field_q, false);
-          tf.a((byte) 119);
+          SpatialBucket.a((byte) 119);
           if (be.field_j <= 0) {
             var16 = dd.a("membersexpansion", "screenshots", -1864, a.field_h);
             var7 = var16;
@@ -250,12 +250,12 @@ final class tl implements ug {
           hk.field_H = gf.a(a.field_h, "menu_pipebox", 8, "basic");
           pf.field_f = gf.a(a.field_h, "menu_pipebox2", 8, "basic");
           ql.field_g = gf.a(a.field_h, "menu_title", 8, "basic");
-          fb.field_w = vm.a((byte) 113, "menu_risinghands", "basic", a.field_h);
+          WorldObject.field_w = vm.a((byte) 113, "menu_risinghands", "basic", a.field_h);
           cn.field_a = vm.a((byte) 110, "menu_hand", "basic", a.field_h);
           lb.field_eb = vm.a((byte) 120, "engine_icons", "basic", a.field_h);
           ch.field_a = gf.a(a.field_h, "frameh", 8, "basic");
-          hi.field_x = gf.a(a.field_h, "framev", 8, "basic");
-          vo.field_a = vm.a((byte) -8, "framecorners", "basic", a.field_h);
+          GameWorld.field_x = gf.a(a.field_h, "framev", 8, "basic");
+          IntrusiveDeque.field_a = vm.a((byte) -8, "framecorners", "basic", a.field_h);
           this.a(var5, 0, var6, var4);
           ad.field_g[0] = vm.a((byte) -53, "character_zombie0", "basic", a.field_h);
           ad.field_g[1] = vm.a((byte) -15, "character_zombie1", "basic", a.field_h);
@@ -264,13 +264,13 @@ final class tl implements ug {
           af.field_d = gf.a(a.field_h, "levelselect_arrow", 8, "basic");
           dc.field_a[0] = gf.a(a.field_h, "levelselect", 8, "basic");
           nc.field_k = gf.a(a.field_h, "pipeframe_levelselect", param0 - 67, "basic");
-          ah.field_tb = af.field_d;
+          Human.field_tb = af.field_d;
           kb.field_i = vm.a((byte) -18, "powerups", "basic", a.field_h);
-          nb.field_k = vm.a((byte) 127, "character_common", "basic", a.field_h);
+          DualLinkNode.field_k = vm.a((byte) 127, "character_common", "basic", a.field_h);
           tp.a(vm.a((byte) -120, "hud", "basic", a.field_h), -10);
           w.a(vm.a((byte) 125, "popup", "basic", a.field_h), (byte) -97);
           this.a(var5, 0, var6, var4);
-          le.field_a = vm.a((byte) -124, "instructions_controls", "basic", a.field_h);
+          IntrusiveNode.field_a = vm.a((byte) -124, "instructions_controls", "basic", a.field_h);
           qn.field_k = vm.a((byte) -42, "instructions_survivors", "basic", a.field_h);
           l.field_b = vm.a((byte) 2, "instructions_zombies", "basic", a.field_h);
           this.a(var5, 0, var6, var4);
@@ -280,7 +280,7 @@ final class tl implements ug {
           bj.a("basic", -120, a.field_h, "button_depressed");
           jb.field_a = vm.a((byte) -104, "pin_flags", "basic", a.field_h);
           this.a(var5, param0 - 75, var6, var4);
-          ed.field_a = new vn[32];
+          ed.field_a = new Sprite[32];
           var17 = vm.a((byte) 126, "all_achievements", "basic", a.field_h);
           var7_array = var17;
           for (var8 = 0; var8 < 32; var8++) {
@@ -305,7 +305,7 @@ final class tl implements ug {
             bd.a(var10, false);
           }
           bd.a(e.field_G, false);
-          ed.field_b = new vn[f.field_j.length];
+          ed.field_b = new Sprite[f.field_j.length];
           var12 = 0;
           var8Lifetime1 = var12;
           while (var12 < ed.field_b.length) {
@@ -320,7 +320,7 @@ final class tl implements ug {
           ep.c((byte) -50);
           return;
         }
-        stackIn_102_1 = (r.field_F) && (rm.field_f) && (sa.field_T) && (eh.field_x) && (ti.field_a);
+        stackIn_102_1 = (r.field_F) && (DelegatingCanvas.field_f) && (sa.field_T) && (eh.field_x) && (ti.field_a);
         this.field_j = stackIn_102_1;
         if (this.field_j) {
           this.a(99.0f, 126, jh.field_l);
@@ -458,7 +458,7 @@ final class tl implements ug {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ final class tl implements ug {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -516,7 +516,7 @@ final class tl implements ug {
         if (null == this.field_q) {
           this.field_q = new lo[2];
           for (var2 = 0; var2 < 2; var2++) {
-            this.field_q[var2] = m.a((byte) -119, 1, 5, var2);
+            this.field_q[var2] = GameLoopApplet.a((byte) -119, 1, 5, var2);
           }
         }
         if (param0 != -110) {
@@ -552,7 +552,7 @@ final class tl implements ug {
           return false;
         }
         if (param0) {
-          this.field_h = (dj) null;
+          this.field_h = (Js5Archive) null;
         }
         for (var3 = 0; this.field_f > var3; var3++) {
           if (param1 == this.field_r[var3]) {
@@ -562,7 +562,7 @@ final class tl implements ug {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
         this.field_r[fieldTemp$0] = param1;
-        this.field_p = this.field_p + eo.field_h[param1];
+        this.field_p = this.field_p + HumanFactory.field_h[param1];
         return true;
     }
 
@@ -589,7 +589,7 @@ final class tl implements ug {
           var11 = param2 + var10 * param4;
           this.a(var11, 124, param1);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tl.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tl.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -633,16 +633,16 @@ final class tl implements ug {
             this.a(0.0f, 127, (String) null);
           }
           if (this.field_o == 0) {
-            this.field_o = eo.field_h[var2];
+            this.field_o = HumanFactory.field_h[var2];
           }
           var3 = this.field_p;
-          if (this.field_o < eo.field_h[var2]) {
-            var3 = var3 + (this.field_o - eo.field_h[var2]);
+          if (this.field_o < HumanFactory.field_h[var2]) {
+            var3 = var3 + (this.field_o - HumanFactory.field_h[var2]);
           }
           this.a((-((float)var3 / (float)this.field_a) + 1.0f) * 100.0f, 127, (String) null);
           pd.a(-22826);
           if (this.a(0, var2)) {
-            this.field_p = this.field_p - eo.field_h[var2];
+            this.field_p = this.field_p - HumanFactory.field_h[var2];
             for (var4 = 0; var4 < -1 + this.field_f; var4++) {
               this.field_r[var4] = this.field_r[var4 + 1];
             }
@@ -708,10 +708,10 @@ final class tl implements ug {
               }
               var7_ref_String = stackIn_12_0;
               if (tc.field_y[var5] == 0) {
-                var11 = ml.a(gm.field_h, var7_ref_String, tc.field_x[var5]);
+                var11 = ml.a(BufferedSocket.field_h, var7_ref_String, tc.field_x[var5]);
                 var8 = var11;
                 if (var8 == null) {
-                  gm.field_h.a(-1, var7_ref_String);
+                  BufferedSocket.field_h.a(-1, var7_ref_String);
                   return false;
                 }
                 vb.field_D[tc.field_s[var5]] = var11.b();
@@ -784,7 +784,7 @@ final class tl implements ug {
             o.field_d = vm.a((byte) 112, "blood", "game", a.field_h);
             jc.field_t = vm.a((byte) -76, "headlight", "game", a.field_h);
             s.field_j = gf.a(a.field_h, "tutorial", 8, "game");
-            ag.field_h = gf.a(a.field_h, "minigun", 8, "game");
+            SecondaryNodeDequeIterator.field_h = gf.a(a.field_h, "minigun", 8, "game");
             sl.field_c = vm.a((byte) -20, "hatch", "game", a.field_h);
             oj.field_f = gf.a(a.field_h, "grenade", 8, "game");
             tc.field_z = vm.a((byte) 121, "explosion", "game", a.field_h);
@@ -840,7 +840,7 @@ final class tl implements ug {
                   if (null == ob.field_c) {
                     ob.field_c = vm.a((byte) -77, "glass", "gameuk", a.field_h);
                   }
-                  tf.field_b = vm.a((byte) 20, "bulletcasing", "gameuk", a.field_h);
+                  SpatialBucket.field_b = vm.a((byte) 20, "bulletcasing", "gameuk", a.field_h);
                 } else {
                   if (var7 != 6 &&
                     var7 != 0 &&
@@ -848,7 +848,7 @@ final class tl implements ug {
                     this.field_d = dh.field_g;
                     f.field_d = gf.a(a.field_h, "pin_lit", 8, "menusuk");
                     if (f.field_d == null) {
-                      this.field_d = c.a(a.field_h, el.field_m, nb.field_o, "menusuk", (byte) -32);
+                      this.field_d = c.a(a.field_h, el.field_m, DualLinkNode.field_o, "menusuk", (byte) -32);
                       this.a(this.field_b, 125, this.field_d);
                       return false;
                     }

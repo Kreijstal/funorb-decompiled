@@ -6,7 +6,7 @@ final class ql extends pm {
     static String field_f;
     private String field_i;
     static float field_j;
-    static vn field_g;
+    static Sprite field_g;
 
     final static void d(int param0) {
         int var1 = 0;
@@ -14,7 +14,7 @@ final class ql extends pm {
         if (param0 == -160793343) {
           var1 = rf.a(false);
           var2 = co.b(param0 + 160780300);
-          cj.field_i.a(var1 + (af.field_b << 1), wm.field_d - ia.field_c, wh.field_c - af.field_b, (byte) -80, var2 + (ia.field_c << 1));
+          cj.field_i.a(var1 + (af.field_b << 1), IterableNodeHashTable.field_d - ia.field_c, wh.field_c - af.field_b, (byte) -80, var2 + (ia.field_c << 1));
           d.a(false);
           return;
         }
@@ -26,19 +26,19 @@ final class ql extends pm {
         if (!po.w(13296)) {
           var4 = dp.field_e;
           var4.j(11, param1);
-          var4.field_j = var4.field_j + 1;
-          var5 = var4.field_j;
-          var4.i(0, 97);
-          var4.a(param3, (byte) 105);
-          var4.i(param2, 82);
-          var4.a(param0, (byte) 105);
-          var4.d(60, var4.field_j - var5);
+          var4.position = var4.position + 1;
+          var5 = var4.position;
+          var4.writeByte(0, 97);
+          var4.writeShort(param3, (byte) 105);
+          var4.writeByte(param2, 82);
+          var4.writeShort(param0, (byte) 105);
+          var4.writeLengthPrefixByte(60, var4.position - var5);
           return;
         }
     }
 
     final rh a(String param0, int param1) {
-        eo var3 = null;
+        HumanFactory var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         rh stackIn_2_0 = null;
@@ -51,7 +51,7 @@ final class ql extends pm {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!ea.a(20000000, var4)) {
-            stackIn_2_0 = uc.field_b;
+            stackIn_2_0 = MouseWheelInput.field_b;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_i)) {
@@ -66,12 +66,12 @@ final class ql extends pm {
             }
           }
           if (param1 != 2) {
-            field_g = (vn) null;
+            field_g = (Sprite) null;
           }
           if (this.field_h) {
             stackIn_16_0 = mc.field_g;
           } else {
-            stackIn_16_0 = uc.field_b;
+            stackIn_16_0 = MouseWheelInput.field_b;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,7 +84,7 @@ final class ql extends pm {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class ql extends pm {
     final String a(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        eo var4 = null;
+        HumanFactory var4 = null;
         CharSequence var5 = null;
         String stackIn_4_0 = null;
         String stackIn_15_0 = null;
@@ -124,7 +124,7 @@ final class ql extends pm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -94) {
-            field_g = (vn) null;
+            field_g = (Sprite) null;
           }
           var5 = (CharSequence) ((Object) param0);
           var3 = ed.a(var5, (byte) -105);
@@ -159,7 +159,7 @@ final class ql extends pm {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

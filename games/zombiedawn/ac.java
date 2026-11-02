@@ -18,20 +18,20 @@ final class ac extends al {
           this.a((byte) -7, true);
         }
         if (-1 == param1) {
-          var3 = sh.field_a + 2;
-          this.a(sh.field_a, (byte) -126);
+          var3 = ExceptionWrapper.field_a + 2;
+          this.a(ExceptionWrapper.field_a, (byte) -126);
           qn.field_b = 15;
           this.field_h = this.field_p;
           this.field_b = this.field_n;
           qn.field_h = false;
           this.field_b.a(this.field_s.field_j, (byte) -95, this.b(true, ha.field_b, ei.field_K), var3);
-          sh.field_a = -1;
+          ExceptionWrapper.field_a = -1;
         }
     }
 
     final void b(int param0, int param1, int param2) {
         if (be.field_j <= 0 &&
-          sh.field_a == -1) {
+          ExceptionWrapper.field_a == -1) {
           param2 -= 80;
           if (qg.field_a[2] < param0 &&
             param0 < qg.field_a[2] + u.field_d[2] &&
@@ -72,7 +72,7 @@ final class ac extends al {
           return -1;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (-1 == sh.field_a) {
+        if (-1 == ExceptionWrapper.field_a) {
           param2 -= 80;
           var4 = -1;
           var5 = 3;
@@ -116,7 +116,7 @@ final class ac extends al {
             var5Lifetime1 = -1;
           }
           if (var5Lifetime1 != -1 &&
-            this.a(3 + var5Lifetime1, sh.field_a, 126)) {
+            this.a(3 + var5Lifetime1, ExceptionWrapper.field_a, 126)) {
             return var5Lifetime1 + 3;
           }
           if (param1 > (wi.field_c - 11) &&
@@ -155,10 +155,10 @@ final class ac extends al {
             if (16 != qn.field_b) {
               return;
             }
-            sh.field_a = kd.field_Db;
+            ExceptionWrapper.field_a = Zombie.field_Db;
             this.a(-1, (byte) -115);
-            cc.field_k.a();
-            bi.h(3, 3, 0, 0, 640, 341);
+            cc.field_k.setAsRenderTarget();
+            Rasterizer.h(3, 3, 0, 0, 640, 341);
             cn.field_f.b(-124);
             qn.field_b = 0;
             decompiledFrameRemainder0 = (var5 != 0);
@@ -168,10 +168,10 @@ final class ac extends al {
             return;
           }
         }
-        int fieldTemp$0 = wm.field_e + 1;
-        wm.field_e = wm.field_e + 1;
+        int fieldTemp$0 = IterableNodeHashTable.field_e + 1;
+        IterableNodeHashTable.field_e = IterableNodeHashTable.field_e + 1;
         if (fieldTemp$0 == 50) {
-          wm.field_e = 0;
+          IterableNodeHashTable.field_e = 0;
         }
         var3 = 0;
         boolean decompiledNaturalLoopExit0 = false;
@@ -225,7 +225,7 @@ final class ac extends al {
           this.field_p = this.field_h;
           this.field_n = this.field_b;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ac.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ac.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -243,12 +243,12 @@ final class ac extends al {
 
     private final void a(boolean param0, int param1, int param2, int param3) {
         int stackIn_13_0 = 0;
-        vn var6;
+        Sprite var6;
         int var7;
         int var8;
         int var9;
-        vn var10;
-        vn var11;
+        Sprite var10;
+        Sprite var11;
         int var7Lifetime1;
         var9 = ZombieDawn.field_J;
         var10 = f.field_d;
@@ -297,16 +297,16 @@ final class ac extends al {
         if (param1 == bn.field_i &&
           !this.field_b.field_j) {
           if (-1 != hn.field_q[param1]) {
-            ah.field_tb.c(-20 + vh.field_b + qg.field_a[param1], param3 + id.field_M + to.field_c[param1] + 17);
+            Human.field_tb.drawMirrored(-20 + vh.field_b + qg.field_a[param1], param3 + id.field_M + to.field_c[param1] + 17);
           }
           if (pd.field_a[param1] != -1 &&
             this.a(param1 + 3, -1, 117)) {
-            ah.field_tb.b(vh.field_b - (-qg.field_a[param1] - 55), id.field_M - (-to.field_c[param1] - param3 - 17));
+            Human.field_tb.b(vh.field_b - (-qg.field_a[param1] - 55), id.field_M - (-to.field_c[param1] - param3 - 17));
           }
         }
         if (be.field_j <= 0) {
-          var7Lifetime1 = wm.field_e;
-          var8 = 12 + wm.field_e;
+          var7Lifetime1 = IterableNodeHashTable.field_e;
+          var8 = 12 + IterableNodeHashTable.field_e;
           if (param1 == 1) {
             wd.field_y.b(vh.field_b + (qg.field_a[param1] + 2), param3 + (id.field_M + to.field_c[param1]) - 17, 50 + wd.field_z[var7Lifetime1] / 2);
           }
@@ -379,7 +379,7 @@ final class ac extends al {
         }
         boolean decompiledFrameRemainder3 = true;
         boolean decompiledFrameRemainder0 = true;
-        if (sh.field_a == -1) {
+        if (ExceptionWrapper.field_a == -1) {
           if (kg.field_i == 96) {
             boolean decompiledSharedTail0 = !(var2 < 2);
             if (!decompiledSharedTail0) {
@@ -444,7 +444,7 @@ final class ac extends al {
             }
             if (!(var2 < 0) ||
               var4 != 0) {
-              L21: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_b.field_d != 0 &&
                   this.field_b.field_d != 1) {
                   if (this.field_b.field_d != 2) {
@@ -476,10 +476,10 @@ final class ac extends al {
                 } else {
                   this.field_b.b(-1 + this.field_b.field_h, 120);
                 }
-                stackIn_65_0 = this.a(this.field_b.field_d, sh.field_a, 108) ? 1 : 0;
+                stackIn_65_0 = this.a(this.field_b.field_d, ExceptionWrapper.field_a, 108) ? 1 : 0;
                 do {
                   if (stackIn_65_0 == 0) {
-                    continue L21;
+                    continue scanLoop1;
                   }
                   stackIn_65_0 = 99;
                   stackIn_67_0 = stackIn_65_0;
@@ -511,7 +511,7 @@ final class ac extends al {
                   ((jp) (Object) stackIn_131_0).b(stackIn_129_1, 116);
                 }
                 this.field_b.b(-1 + this.field_b.field_h, 120);
-                stackIn_142_0 = this.a(this.field_b.field_d, sh.field_a, 108) ? 1 : 0;
+                stackIn_142_0 = this.a(this.field_b.field_d, ExceptionWrapper.field_a, 108) ? 1 : 0;
               }
             }
           }
@@ -522,7 +522,7 @@ final class ac extends al {
             }
             if (!(var2 < 0) ||
               var4 != 0) {
-              L38: while (true) {
+              scanLoop2: while (true) {
                 if (~this.field_b.field_d != ~(this.field_b.field_h - 1)) {
                   if (this.field_b.field_d != 0 &&
                     this.field_b.field_d != 1) {
@@ -561,10 +561,10 @@ final class ac extends al {
                   }
                   ((jp) (Object) stackIn_81_0).b(stackIn_82_1, param0 + 31524);
                 }
-                stackIn_84_0 = this.a(this.field_b.field_d, sh.field_a, -119) ? 1 : 0;
+                stackIn_84_0 = this.a(this.field_b.field_d, ExceptionWrapper.field_a, -119) ? 1 : 0;
                 do {
                   if (stackIn_84_0 == 0) {
-                    continue L38;
+                    continue scanLoop2;
                   }
                   stackIn_84_0 = kg.field_i;
                   stackIn_86_0 = stackIn_84_0;
@@ -596,7 +596,7 @@ final class ac extends al {
                   stackIn_112_1 = var3;
                 }
                 ((jp) (Object) stackIn_113_0).b(stackIn_112_1, param0 + 31524);
-                stackIn_118_0 = this.a(this.field_b.field_d, sh.field_a, -119) ? 1 : 0;
+                stackIn_118_0 = this.a(this.field_b.field_d, ExceptionWrapper.field_a, -119) ? 1 : 0;
               }
             }
           }
@@ -626,14 +626,14 @@ final class ac extends al {
 
     }
 
-    final static void a(ec param0, boolean param1, java.awt.Component param2, rj param3, int param4, int param5) {
+    final static void a(PlatformTaskDispatcher param0, boolean param1, java.awt.Component param2, rj param3, int param4, int param5) {
         try {
           wn.a(param4, param3, 1024, param2, param0, param4, param1, -112);
           if (param5 != -97) {
             field_t = 126;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ac.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ac.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -660,9 +660,9 @@ final class ac extends al {
 
     private final void a(int param0, byte param1) {
         int var3 = -9 / ((param1 + 11) / 63);
-        cc.field_k = new vn(640, 341);
-        cc.field_k.a();
-        bi.d();
+        cc.field_k = new Sprite(640, 341);
+        cc.field_k.setAsRenderTarget();
+        Rasterizer.clear();
         this.e(-122, 0);
         cn.field_f.b(13);
     }
@@ -731,7 +731,7 @@ final class ac extends al {
         vk.field_b[11] = bg.field_n;
         vk.field_b[7] = ui.field_a;
         vk.field_b[2] = p.field_c;
-        vk.field_b[1] = sh.field_c;
+        vk.field_b[1] = ExceptionWrapper.field_c;
         vk.field_b[12] = wg.field_l;
         vk.field_b[15] = rc.field_r;
         vk.field_b[0] = po.field_Ab;
@@ -769,7 +769,7 @@ final class ac extends al {
         int var4 = 0;
         var4 = ZombieDawn.field_J;
         if (param0) {
-          sh.field_a = -1;
+          ExceptionWrapper.field_a = -1;
           this.field_h = this.field_p;
           this.field_b = this.field_n;
         }

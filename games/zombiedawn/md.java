@@ -7,8 +7,8 @@ final class md extends sg implements hh {
     private fk field_sb;
     static String[] field_qb;
     private boolean field_ub;
-    static vn field_vb;
-    static vn field_tb;
+    static Sprite field_vb;
+    static Sprite field_tb;
 
     final static int a(boolean param0, String param1, String param2, int param3, byte param4, int param5, String param6) {
         ji var7 = null;
@@ -52,7 +52,7 @@ final class md extends sg implements hh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class md extends sg implements hh {
         field_vb = null;
     }
 
-    private final void a(boolean param0, eo param1, boolean param2) {
+    private final void a(boolean param0, HumanFactory param1, boolean param2) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -91,7 +91,7 @@ final class md extends sg implements hh {
                   var4 = fm.field_E;
                   this.field_ub = true;
                 } else {
-                  eo.a(true);
+                  HumanFactory.a(true);
                   var4 = fm.field_E;
                   this.field_ub = true;
                 }
@@ -143,7 +143,7 @@ final class md extends sg implements hh {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class md extends sg implements hh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class md extends sg implements hh {
           }
           ed.a(419);
           if (param1 != -6) {
-            field_vb = (vn) null;
+            field_vb = (Sprite) null;
             this.h((byte) -126);
           } else {
             this.h((byte) -126);
@@ -211,14 +211,14 @@ final class md extends sg implements hh {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final boolean j(int param0) {
-        eo var2;
+        HumanFactory var2;
         byte[] var3;
-        eo var2Lifetime1;
+        HumanFactory var2Lifetime1;
         if (param0 == 2634) {
           if (!this.field_H) {
             return super.j(param0 + 0);
@@ -253,7 +253,7 @@ final class md extends sg implements hh {
         try {
           this.field_sb = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "md.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "md.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -264,6 +264,6 @@ final class md extends sg implements hh {
     static {
         field_qb = new String[]{"Tutorial Tips: On", "Tutorial Tips: Off"};
         field_wb = "Logging in...";
-        field_vb = new vn(54, 54);
+        field_vb = new Sprite(54, 54);
     }
 }

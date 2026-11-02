@@ -15,21 +15,21 @@ final class fp extends an {
         if (param5 >= param4) {
           if (param1 <= param5) {
             if (param4 < param1) {
-              wd.a(param0, param2, param6, param1, param5, param4, false, param3, bi.field_c);
+              wd.a(param0, param2, param6, param1, param5, param4, false, param3, Rasterizer.pixels);
               if (param7 <= 51) {
                 fp.a(-83, false, -32, -105);
                 return;
               }
               return;
             }
-            wd.a(param0, param6, param2, param4, param5, param1, false, param3, bi.field_c);
+            wd.a(param0, param6, param2, param4, param5, param1, false, param3, Rasterizer.pixels);
             if (param7 <= 51) {
               fp.a(-83, false, -32, -105);
               return;
             }
             return;
           }
-          wd.a(param6, param2, param0, param5, param1, param4, false, param3, bi.field_c);
+          wd.a(param6, param2, param0, param5, param1, param4, false, param3, Rasterizer.pixels);
           if (param7 <= 51) {
             fp.a(-83, false, -32, -105);
             return;
@@ -37,7 +37,7 @@ final class fp extends an {
           return;
         }
         if (param1 > param4) {
-          wd.a(param6, param0, param2, param4, param1, param5, false, param3, bi.field_c);
+          wd.a(param6, param0, param2, param4, param1, param5, false, param3, Rasterizer.pixels);
           if (param7 <= 51) {
             fp.a(-83, false, -32, -105);
             return;
@@ -45,14 +45,14 @@ final class fp extends an {
           return;
         }
         if (param1 > param5) {
-          wd.a(param2, param0, param6, param1, param4, param5, false, param3, bi.field_c);
+          wd.a(param2, param0, param6, param1, param4, param5, false, param3, Rasterizer.pixels);
           if (param7 <= 51) {
             fp.a(-83, false, -32, -105);
             return;
           }
           return;
         }
-        wd.a(param2, param6, param0, param5, param4, param1, false, param3, bi.field_c);
+        wd.a(param2, param6, param0, param5, param4, param1, false, param3, Rasterizer.pixels);
         if (param7 <= 51) {
           fp.a(-83, false, -32, -105);
           return;
@@ -75,10 +75,10 @@ final class fp extends an {
           if (qp.field_b[param0] > qp.field_b[param3]) {
             return false;
           }
-          if (dj.field_g[param3] > dj.field_g[param0]) {
+          if (Js5Archive.field_g[param3] > Js5Archive.field_g[param0]) {
             return true;
           }
-          if (dj.field_g[param3] < dj.field_g[param0]) {
+          if (Js5Archive.field_g[param3] < Js5Archive.field_g[param0]) {
             return false;
           }
           if (param2 == 0) {
@@ -103,10 +103,10 @@ final class fp extends an {
           }
           return !(param0 >= param3);
         }
-        if (dj.field_g[param0] < dj.field_g[param3]) {
+        if (Js5Archive.field_g[param0] < Js5Archive.field_g[param3]) {
           return true;
         }
-        if (dj.field_g[param0] > dj.field_g[param3]) {
+        if (Js5Archive.field_g[param0] > Js5Archive.field_g[param3]) {
           return false;
         }
         if (qp.field_b[param3] > qp.field_b[param0]) {
@@ -141,7 +141,7 @@ final class fp extends an {
         return true;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -190,7 +190,7 @@ final class fp extends an {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

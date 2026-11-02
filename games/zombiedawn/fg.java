@@ -54,7 +54,7 @@ final class fg extends al {
         boolean decompiledFrameRemainder0 = true;
         var9 = id.field_M + 135;
         var10 = vh.field_b + 20;
-        sg.field_jb.c(gj.field_k[this.field_n][0], var10, var9, 0, 0);
+        sg.field_jb.drawString(gj.field_k[this.field_n][0], var10, var9, 0, 0);
         var20 = this.field_n;
         if (var20 != 0) {
           if (var20 == 1) {
@@ -66,7 +66,7 @@ final class fg extends al {
             }
             var13 = 24;
             var12 = var9 + 20;
-            le.field_a[1].b(-50 + var6, -8 + var12);
+            IntrusiveNode.field_a[1].b(-50 + var6, -8 + var12);
             if (var8 != 0) {
               var13 = 20;
             }
@@ -75,34 +75,34 @@ final class fg extends al {
             var15 = var12 - 20;
             var12 = var12 + (bj.field_q.a(gj.field_g[1][1], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
             lb.field_eb[3].b(var6 - 31, var12 + 3);
-            le.field_a[3].b(-20 + var6, var12 + 15);
+            IntrusiveNode.field_a[3].b(-20 + var6, var12 + 15);
             var12 = var12 + (var13 + bj.field_q.a(gj.field_g[1][2], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2);
-            le.field_a[5].b(-46 + var6, var12 + 2);
+            IntrusiveNode.field_a[5].b(-46 + var6, var12 + 2);
             var12 = var12 + (bj.field_q.a(gj.field_g[1][3], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
-            le.field_a[6].b(var6 - 60, var12 - 7);
+            IntrusiveNode.field_a[6].b(var6 - 60, var12 - 7);
             var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[1][4], var6, var12, var11, 50, 16777215, 0, 0, 0, var2));
-            le.field_a[0].b(var14, var15);
-            nb.field_k[0].e(var14 - 8, -4 + var15, 128);
-            nb.field_k[0].e(13 + var14, var15 + 14, 128);
-            nb.field_k[0].e(var14 + 41, var15 + 11, 128);
-            bi.c(var14 + 3, 14 + var15, 77, 47, 16777215);
-            bi.b(var14 + 4, 15 + var15, 75, 45, 10066431, 32);
-            bi.a(var14 + 5, var15 + 16, 73, 43, 3355647, 32);
+            IntrusiveNode.field_a[0].b(var14, var15);
+            DualLinkNode.field_k[0].e(var14 - 8, -4 + var15, 128);
+            DualLinkNode.field_k[0].e(13 + var14, var15 + 14, 128);
+            DualLinkNode.field_k[0].e(var14 + 41, var15 + 11, 128);
+            Rasterizer.drawRectOutline(var14 + 3, 14 + var15, 77, 47, 16777215);
+            Rasterizer.b(var14 + 4, 15 + var15, 75, 45, 10066431, 32);
+            Rasterizer.a(var14 + 5, var15 + 16, 73, 43, 3355647, 32);
           } else {
             if (var20 == 2) {
               var13 = 32;
               var12 = var9 + 40;
               var2 -= 4;
               lb.field_eb[8].b(var6 - 36, 4 + var12);
-              le.field_a[3].b(-25 + var6, var12 + 15);
+              IntrusiveNode.field_a[3].b(-25 + var6, var12 + 15);
               var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[this.field_n][0], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
-              le.field_a[4].b(-110 + var6, var12 - 10);
-              nb.field_k[0].e(var6 - 54, var12 - 3, 128);
-              le.field_a[3].b(-25 + var6, var12 + 30);
+              IntrusiveNode.field_a[4].b(-110 + var6, var12 - 10);
+              DualLinkNode.field_k[0].e(var6 - 54, var12 - 3, 128);
+              IntrusiveNode.field_a[3].b(-25 + var6, var12 + 30);
               var12 = var12 + (var13 + bj.field_q.a(gj.field_g[this.field_n][1], var6, var12, 340, 50, 16777215, 0, 0, 0, var2) * var2);
-              le.field_a[7].b(-63 + var6, 10 + var12);
+              IntrusiveNode.field_a[7].b(-63 + var6, 10 + var12);
               var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[this.field_n][2], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
-              le.field_a[9].b(var6 - 93, var12 + 10);
+              IntrusiveNode.field_a[9].b(var6 - 93, var12 + 10);
               var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[this.field_n][3], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
             } else {
               if (var20 != 3) {
@@ -152,13 +152,13 @@ final class fg extends al {
                               var18 = 3;
                               var17 = var5;
                               var19 = 3;
-                              bi.c(-var18 + var16, var17 - var19, cn.field_c[0].field_w + 2 * var18, var19 * 2 + cn.field_c[0].field_t, 0);
+                              Rasterizer.drawRectOutline(-var18 + var16, var17 - var19, cn.field_c[0].field_w + 2 * var18, var19 * 2 + cn.field_c[0].field_t, 0);
                               var18--;
                               var19--;
-                              bi.c(-var18 + var16, -var19 + var17, 2 * var18 + cn.field_c[0].field_w, 2 * var19 + cn.field_c[0].field_t, 16777215);
+                              Rasterizer.drawRectOutline(-var18 + var16, -var19 + var17, 2 * var18 + cn.field_c[0].field_w, 2 * var19 + cn.field_c[0].field_t, 16777215);
                               var19--;
                               var18--;
-                              bi.c(var16 - var18, -var19 + var17, var18 * 2 + cn.field_c[0].field_w, 2 * var19 + cn.field_c[0].field_t, 0);
+                              Rasterizer.drawRectOutline(var16 - var18, -var19 + var17, var18 * 2 + cn.field_c[0].field_w, 2 * var19 + cn.field_c[0].field_t, 0);
                               cn.field_c[0].b(var16, var17);
                               var4 = bj.field_q.a(gj.field_g[this.field_n][0], 195 + vh.field_b, 5 + var5, -170 + var3, 440, 16777215, 0, 0, 0, var2);
                             }
@@ -181,9 +181,9 @@ final class fg extends al {
               else {
                 si.field_Ub[0].b(vh.field_b + 8, id.field_M + 148);
                 si.field_Ub[1].b(70 + vh.field_b, id.field_M + 230);
-                sg.field_jb.c("1/5", 90 + vh.field_b, 202 + id.field_M, 2, -1);
-                sg.field_jb.c("3", 80 + vh.field_b, 285 + id.field_M, 1, -1);
-                sg.field_jb.c("2:15", vh.field_b + 75, id.field_M + 365, 0, -1);
+                sg.field_jb.drawString("1/5", 90 + vh.field_b, 202 + id.field_M, 2, -1);
+                sg.field_jb.drawString("3", 80 + vh.field_b, 285 + id.field_M, 1, -1);
+                sg.field_jb.drawString("2:15", vh.field_b + 75, id.field_M + 365, 0, -1);
                 var4 = bj.field_q.a(gj.field_g[3][0], 155 + vh.field_b, 170 + id.field_M, var3 - 140, 440, 16777215, 0, 0, 0, var2);
               }
             }
@@ -203,14 +203,14 @@ final class fg extends al {
           if (var7 != 0) {
             var5 -= 20;
           }
-          sg.field_jb.c(gj.field_k[0][1], var10, var5 + (var9 + 75), 0, 0);
+          sg.field_jb.drawString(gj.field_k[0][1], var10, var5 + (var9 + 75), 0, 0);
           bj.field_q.a(gj.field_g[0][1], var10, var5 + var9 + 95, var3, 440, 16777215, 0, 0, 0, var2);
           if (var7 == 0) {
             l.field_b[0].b(530 + vh.field_b, 150 + id.field_M);
             l.field_b[1].b(vh.field_b + 230, id.field_M + 242);
           }
         }
-        bj.field_q.b(uk.a(1 + this.field_n, (byte) 58, 1 + this.a(true)), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
+        bj.field_q.drawStringRightAligned(uk.a(1 + this.field_n, (byte) 58, 1 + this.a(true)), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
     }
 
     final int a(boolean param0, int param1) {
@@ -225,7 +225,7 @@ final class fg extends al {
         this.field_n = 0;
     }
 
-    final static vn d(int param0) {
+    final static Sprite d(int param0) {
         int var5 = 0;
         int var6 = 0;
         int var1;
@@ -239,7 +239,7 @@ final class fg extends al {
         byte[] var17;
         var7 = ZombieDawn.field_J;
         if (param0 > -98) {
-          return (vn) null;
+          return (Sprite) null;
         }
         var1 = uf.field_n[0] * bn.field_c[0];
         var17 = vj.field_m[0];
@@ -248,19 +248,19 @@ final class fg extends al {
           for (var5 = 0; var1 > var5; var5++) {
             var9[var5] = j.field_a[eg.a((int) var17[var5], 255)];
           }
-          var3 = new vn(gl.field_F, kd.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var9);
+          var3 = new Sprite(gl.field_F, Zombie.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var9);
         } else {
           var16 = ka.field_f[0];
           var13 = new int[var1];
           var11 = var13;
           var5_ref_int__ = var11;
           for (var6 = 0; var1 > var6; var6++) {
-            var5_ref_int__[var6] = hi.a(eg.a((int) var16[var6], 255) << 24, j.field_a[eg.a(255, (int) var17[var6])]);
+            var5_ref_int__[var6] = GameWorld.a(eg.a((int) var16[var6], 255) << 24, j.field_a[eg.a(255, (int) var17[var6])]);
           }
-          var3 = new cd(gl.field_F, kd.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var13);
+          var3 = new cd(gl.field_F, Zombie.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var13);
         }
         no.f((byte) -73);
-        return (vn) (var3);
+        return (Sprite) (var3);
     }
 
     final void a(int param0) {
@@ -347,7 +347,7 @@ final class fg extends al {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -372,12 +372,12 @@ final class fg extends al {
 
     final static jc a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = ZombieDawn.field_J;
-        jc var5 = (jc) (on.field_g.b((byte) 26));
+        jc var5 = (jc) (TileMap.field_g.b((byte) 26));
         while (var5 != null) {
           if (param3 == var5.field_s) {
             return var5;
           }
-          var5 = (jc) (on.field_g.a(false));
+          var5 = (jc) (TileMap.field_g.a(false));
         }
         jc var7 = new jc();
         var5 = var7;
@@ -387,7 +387,7 @@ final class fg extends al {
         if (param2 != 1) {
           return (jc) null;
         }
-        on.field_g.a(0, var5);
+        TileMap.field_g.addFirst(0, var5);
         pm.a(0, param0, var5);
         return var5;
     }

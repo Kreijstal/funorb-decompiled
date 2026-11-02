@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-class an extends ga {
-    static dj field_B;
+class an extends UiWidget {
+    static Js5Archive field_B;
     private boolean field_A;
     static String field_y;
     boolean field_x;
@@ -12,11 +12,11 @@ class an extends ga {
     private boolean field_D;
     boolean field_C;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, ga param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           if (param1 <= 1) {
-            ga var8 = (ga) null;
-            this.a((ga) null, (byte) -127, 26, -100);
+            UiWidget var8 = (UiWidget) null;
+            this.a((UiWidget) null, (byte) -127, 26, -100);
           }
           if (null != this.field_v &&
             this.field_v instanceof pe) {
@@ -24,11 +24,11 @@ class an extends ga {
           }
           this.field_m = 0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "an.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "an.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    void a(ga param0, byte param1, int param2, int param3) {
+    void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           super.a(param0, (byte) 104, param2, param3);
           this.field_z = 0;
@@ -44,7 +44,7 @@ class an extends ga {
             this.a(param3, 25, ha.field_b, ei.field_K, param2, param0);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ class an extends ga {
         return this.field_A;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -98,22 +98,22 @@ class an extends ga {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final static vn[] a(int param0, int param1, int param2, dj param3) {
+    final static Sprite[] a(int param0, int param1, int param2, Js5Archive param3) {
         RuntimeException var4 = null;
-        vn[] stackIn_2_0 = null;
+        Sprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        vn[] stackIn_7_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 118) {
-            stackIn_2_0 = (vn[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           if (ph.a(param0, 31043, param1, param3)) {
@@ -121,7 +121,7 @@ class an extends ga {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (vn[]) (stackIn_5_0);
+          return (Sprite[]) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -132,7 +132,7 @@ class an extends ga {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -144,7 +144,7 @@ class an extends ga {
         this.field_C = true;
     }
 
-    boolean a(int param0, int param1, ga param2, char param3) {
+    boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -169,11 +169,11 @@ class an extends ga {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    boolean a(byte param0, ga param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -193,7 +193,7 @@ class an extends ga {
           this.field_A = true;
           if (this.field_v != null &&
             this.field_v instanceof ef) {
-            ((ef) (this.field_v)).a(this.field_A, (ga) (this), (byte) 15);
+            ((ef) (this.field_v)).a(this.field_A, (UiWidget) (this), (byte) 15);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,11 +206,11 @@ class an extends ga {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, ec param1, Object param2) {
+    final static void a(int param0, PlatformTaskDispatcher param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -259,21 +259,21 @@ class an extends ga {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
     final void c(byte param0) {
-        dj var3 = null;
-        dj var3Lifetime1;
-        dj var3Lifetime2;
-        dj var3Lifetime3;
+        Js5Archive var3 = null;
+        Js5Archive var3Lifetime1;
+        Js5Archive var3Lifetime2;
+        Js5Archive var3Lifetime3;
         if (!this.field_A) {
           if (param0 == 57) {
             return;
           }
-          var3 = (dj) null;
-          an.a(-59, -128, -24, (dj) null);
+          var3 = (Js5Archive) null;
+          an.a(-59, -128, -24, (Js5Archive) null);
           return;
         }
         this.field_A = false;
@@ -281,24 +281,24 @@ class an extends ga {
           if (param0 == 57) {
             return;
           }
-          var3Lifetime1 = (dj) null;
-          an.a(-59, -128, -24, (dj) null);
+          var3Lifetime1 = (Js5Archive) null;
+          an.a(-59, -128, -24, (Js5Archive) null);
           return;
         }
         if (this.field_v instanceof ef) {
-          ((ef) (this.field_v)).a(this.field_A, (ga) (this), (byte) 15);
+          ((ef) (this.field_v)).a(this.field_A, (UiWidget) (this), (byte) 15);
           if (param0 == 57) {
             return;
           }
-          var3Lifetime2 = (dj) null;
-          an.a(-59, -128, -24, (dj) null);
+          var3Lifetime2 = (Js5Archive) null;
+          an.a(-59, -128, -24, (Js5Archive) null);
           return;
         }
         if (param0 == 57) {
           return;
         }
-        var3Lifetime3 = (dj) null;
-        an.a(-59, -128, -24, (dj) null);
+        var3Lifetime3 = (Js5Archive) null;
+        an.a(-59, -128, -24, (Js5Archive) null);
     }
 
     an(int param0, int param1, int param2, int param3, io param4, sk param5) {
@@ -353,7 +353,7 @@ class an extends ga {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class hm extends an {
-    private vo field_I;
-    static vn field_E;
+    private IntrusiveDeque field_I;
+    static Sprite field_E;
     private String[] field_K;
     private eg field_G;
     static long field_N;
@@ -13,17 +13,17 @@ class hm extends an {
     static int[][] field_F;
     static int field_J;
 
-    boolean a(byte param0, ga param1) {
+    boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        ga var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 67) {
-            var4 = (ga) null;
-            this.a((ga) null, (byte) 86, -110, -12);
+            var4 = (UiWidget) null;
+            this.a((UiWidget) null, (byte) 86, -110, -12);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -36,37 +36,37 @@ class hm extends an {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        le var1 = null;
+        IntrusiveNode var1 = null;
         int var2 = ZombieDawn.field_J;
         try {
           var1 = kn.field_L.b((byte) 26);
           while (var1 instanceof tm) {
             pc.a((byte) 13, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           var1 = se.field_m.b((byte) 26);
           while (var1 instanceof tm) {
             pc.a((byte) 13, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           if (param0 != 9) {
             hm.a(-124);
           }
-          var1 = rm.field_e.b((byte) 26);
+          var1 = DelegatingCanvas.field_e.b((byte) 26);
           while (var1 instanceof tm) {
             pc.a((byte) 13, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
-          kn.field_L.b(param0 ^ 67);
-          se.field_m.b(-61);
-          rm.field_e.b(68);
+          kn.field_L.clear(param0 ^ 67);
+          se.field_m.clear(-61);
+          DelegatingCanvas.field_e.clear(68);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hm.G(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hm.G(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ class hm extends an {
           }
           return null;
         }
-        this.field_I = (vo) null;
+        this.field_I = (IntrusiveDeque) null;
         var4Lifetime1 = (eg) (this.field_I.b((byte) 26));
         while (var4Lifetime1 != null) {
           var5Lifetime1 = var4Lifetime1;
@@ -138,13 +138,13 @@ class hm extends an {
         int stackIn_14_0 = 0;
         int var7Lifetime1;
         var16 = ZombieDawn.field_J;
-        this.field_I = new vo();
+        this.field_I = new IntrusiveDeque();
         if (param0 != -36) {
           return;
         }
         var2 = 0;
         var3 = (ak) ((Object) this.field_h);
-        var4 = var3.a(-113, (ga) (this));
+        var4 = var3.a(-113, (UiWidget) (this));
         while (true) {
           var5 = this.field_o.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -180,7 +180,7 @@ class hm extends an {
               ((eg) (var10)).field_h = var15;
             }
             var10 = var15;
-            this.field_I.a(0, var15);
+            this.field_I.addFirst(0, var15);
           }
         }
     }
@@ -204,7 +204,7 @@ class hm extends an {
         RuntimeException runtimeException = null;
         String[] var4 = null;
         int var6 = 0;
-        ga var7 = null;
+        UiWidget var7 = null;
         String[] var8 = null;
         String[] var9 = null;
         RuntimeException stackIn_15_0 = null;
@@ -226,8 +226,8 @@ class hm extends an {
             this.field_K = var9;
           }
           if (param1 != -21423) {
-            var7 = (ga) null;
-            this.a((ga) null, (byte) 100, -58, -75);
+            var7 = (UiWidget) null;
+            this.a((UiWidget) null, (byte) 100, -58, -75);
           }
           this.field_K[param0] = param2;
           return;
@@ -241,20 +241,20 @@ class hm extends an {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
         if (param2) {
-          this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (ga) (this)));
+          this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (UiWidget) (this)));
           return;
         }
         hm.g(-53);
-        this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (ga) (this)));
+        this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (UiWidget) (this)));
     }
 
-    void a(ga param0, byte param1, int param2, int param3) {
+    void a(UiWidget param0, byte param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         try {
@@ -267,7 +267,7 @@ class hm extends an {
             this.field_G = this.b(31677, var6, var7);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -282,10 +282,10 @@ class hm extends an {
           var6 = this.field_G;
           if (var6 == null) {
           } else {
-            var7 = var5.b((ga) (this), 128, param2);
-            var8 = var5.a((ga) (this), 1, param0);
+            var7 = var5.b((UiWidget) (this), 128, param2);
+            var8 = var5.a((UiWidget) (this), 1, param0);
             do {
-              on.b(var6.field_j + 2, var6.field_m + 2, var6.field_i + var7 - 2, param3 + 117, var6.field_k + var8 - 2);
+              TileMap.b(var6.field_j + 2, var6.field_m + 2, var6.field_i + var7 - 2, param3 + 117, var6.field_k + var8 - 2);
               var6 = var6.field_h;
             } while (var6 != null);
           }
@@ -332,7 +332,7 @@ class hm extends an {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -357,7 +357,7 @@ class hm extends an {
         try {
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -369,7 +369,7 @@ class hm extends an {
           field_F = (int[][]) null;
           return;
         }
-        field_E = (vn) null;
+        field_E = (Sprite) null;
         field_F = (int[][]) null;
     }
 

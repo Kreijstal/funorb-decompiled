@@ -33,11 +33,11 @@ final class ud implements io {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -56,20 +56,20 @@ final class ud implements io {
             field_c = (java.awt.Color) null;
           }
           if (param3.e(-17741)) {
-            on.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 ^ 16777172, var7 + 2);
+            TileMap.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 ^ 16777172, var7 + 2);
           }
-          bi.f(var6_int, var7, -2 + param3.field_i + var6_int, var7 + param3.field_n);
+          Rasterizer.setClip(var6_int, var7, -2 + param3.field_i + var6_int, var7 + param3.field_n);
           var8 = this.field_b.field_T.g(0);
           if (var8 != null) {
             var9 = var8.toString();
-            this.field_b.field_L.c(var9, 2 + var6_int, (this.field_b.field_L.field_I + param3.field_n >> 1) + (var7 - 1), 10000536, -1);
+            this.field_b.field_L.drawString(var9, 2 + var6_int, (this.field_b.field_L.field_I + param3.field_n >> 1) + (var7 - 1), 10000536, -1);
             if (this.field_b.e(param0 ^ -16759476) &&
               var9.startsWith(this.field_b.field_U)) {
               var10 = this.field_b.field_L.b(this.field_b.field_U);
-              bi.a(2 + var6_int, 2 + var7, var10, -4 + param3.field_n, 2188450, 100);
+              Rasterizer.a(2 + var6_int, 2 + var7, var10, -4 + param3.field_n, 2188450, 100);
             }
           }
-          bi.c();
+          Rasterizer.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class ud implements io {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class ud implements io {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class ud implements io {
         field_c = null;
     }
 
-    final static re[] a(int param0, ec param1) {
+    final static re[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         re[] stackIn_4_0 = null;
         re[] stackIn_11_0 = null;
@@ -152,7 +152,7 @@ final class ud implements io {
         re[] var4 = null;
         re var6 = null;
         int var7 = 0;
-        op var8 = null;
+        AsyncRequest var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = ZombieDawn.field_J;
@@ -162,14 +162,14 @@ final class ud implements io {
             return stackIn_4_0;
           }
           var8 = param1.a(param0 - 1);
-          while (var8.field_f == 0) {
+          while (var8.status == 0) {
             ld.a(10L, (byte) 84);
           }
-          if (var8.field_f == 2) {
+          if (var8.status == 2) {
             stackIn_11_0 = new re[]{};
             return stackIn_11_0;
           }
-          var10 = (int[]) (var8.field_d);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new re[var10.length >> 2];
@@ -193,7 +193,7 @@ final class ud implements io {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class ud implements io {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

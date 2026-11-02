@@ -3,8 +3,8 @@
  */
 final class ed {
     static String field_c;
-    static vn[] field_a;
-    static vn[] field_b;
+    static Sprite[] field_a;
+    static Sprite[] field_b;
 
     final static void a(int param0) {
         r.a(da.field_i, -49, true, to.field_d);
@@ -84,7 +84,7 @@ final class ed {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

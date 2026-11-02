@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mk {
-    static vn[] field_a;
+    static Sprite[] field_a;
 
     final static void a(int param0) {
         int var2 = 0;
@@ -21,16 +21,16 @@ final class mk {
           if (param0 > -100) {
             return;
           }
-          wo.field_xb.a(um.field_a, ah.field_eb, true, true);
+          wo.field_xb.a(um.field_a, Human.field_eb, true, true);
           wo.field_xb.g(-128);
-          while (on.b(102)) {
+          while (TileMap.b(102)) {
             wo.field_xb.a(kg.field_i, (byte) 106, lc.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "mk.A(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "mk.A(" + param0 + ')');
         }
     }
 

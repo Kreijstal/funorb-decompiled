@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rc extends le {
+final class rc extends IntrusiveNode {
     int field_o;
     int field_t;
     static sm field_h;
@@ -13,7 +13,7 @@ final class rc extends le {
     int field_m;
     int field_n;
     static String field_j;
-    static vn field_v;
+    static Sprite field_v;
     static int field_p;
     static String field_w;
     int[] field_k;
@@ -84,7 +84,7 @@ final class rc extends le {
           if (null != var44.field_F &&
             var44.field_p > 1) {
             var60 = var44.field_F;
-            ke.a(0, 0, jp.field_f, var60, 0);
+            GameApplet.a(0, 0, jp.field_f, var60, 0);
           } else {
             qc.a(1);
           }
@@ -149,12 +149,12 @@ final class rc extends le {
               stackIn_33_0 = param3.field_v[var14Lifetime1];
             }
             var20 = stackIn_33_0;
-            if (null != ag.field_a &&
+            if (null != SecondaryNodeDequeIterator.field_a &&
               param3.field_x != null &&
               param3.field_x.length > var14Lifetime1 &&
               param3.field_x[var14Lifetime1] != -1 &&
-              param3.field_x[var14Lifetime1] < ag.field_a.length) {
-              stackIn_41_0 = ag.field_a[param3.field_x[var14Lifetime1]];
+              param3.field_x[var14Lifetime1] < SecondaryNodeDequeIterator.field_a.length) {
+              stackIn_41_0 = SecondaryNodeDequeIterator.field_a[param3.field_x[var14Lifetime1]];
             } else {
               stackIn_41_0 = null;
             }
@@ -215,7 +215,7 @@ final class rc extends le {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -241,9 +241,9 @@ final class rc extends le {
             var4 = var3;
             var4 = var3;
           }
-          if (g.field_H != null &&
-            !g.field_H.equals(param1.getParameter("session"))) {
-            var4 = g.field_H;
+          if (Mover.field_H != null &&
+            !Mover.field_H.equals(param1.getParameter("session"))) {
+            var4 = Mover.field_H;
           }
           stackIn_10_0 = jp.a((byte) 97, param2, (String) (var4), (String) (var3), -1);
           return stackIn_10_0;
@@ -263,7 +263,7 @@ final class rc extends le {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class rc extends le {
           this.field_n = param1;
           this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

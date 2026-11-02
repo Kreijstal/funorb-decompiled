@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jm extends tc {
-    static ec field_B;
+    static PlatformTaskDispatcher field_B;
 
     final static int a(int param0, int param1) {
         int var3 = 0;
@@ -22,8 +22,8 @@ final class jm extends tc {
     }
 
     final static void a(String param0, String param1, int param2) {
-        if (kk.field_i != null) {
-          kk.field_i.h((byte) -34);
+        if (Point.field_i != null) {
+          Point.field_i.h((byte) -34);
         }
         he.field_a = new ih(param1, param0, false, true, true);
         if (param2 != -901373652) {
@@ -32,11 +32,11 @@ final class jm extends tc {
         try {
           bm.field_d.b(20, he.field_a);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jm.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jm.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final String b(int param0, ga param1) {
+    final String b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -45,7 +45,7 @@ final class jm extends tc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 12307) {
-            field_B = (ec) null;
+            field_B = (PlatformTaskDispatcher) null;
           }
           stackIn_3_0 = mo.a(95, param1.field_o.length(), '*');
           return stackIn_3_0;
@@ -59,7 +59,7 @@ final class jm extends tc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -67,14 +67,14 @@ final class jm extends tc {
         this(ia.field_e, param0);
     }
 
-    private jm(rb param0, int param1) {
+    private jm(Font param0, int param1) {
         super(param0, param1);
     }
 
     public static void a(boolean param0) {
         field_B = null;
         if (param0) {
-          field_B = (ec) null;
+          field_B = (PlatformTaskDispatcher) null;
         }
     }
 

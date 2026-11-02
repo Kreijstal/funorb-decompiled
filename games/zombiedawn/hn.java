@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hn extends le {
-    le field_k;
-    fn field_n;
+final class hn extends IntrusiveNode {
+    IntrusiveNode field_k;
+    PcmSampleStream field_n;
     int field_i;
     static char[] field_o;
     static int field_m;
     static double field_j;
-    static vn field_h;
-    static vn field_p;
+    static Sprite field_h;
+    static Sprite field_p;
     static int[] field_q;
     static int field_l;
 
@@ -41,7 +41,7 @@ final class hn extends le {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -62,7 +62,7 @@ final class hn extends le {
           pg.field_o = param3;
           el.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -72,14 +72,14 @@ final class hn extends le {
         ff.field_a = param2;
     }
 
-    hn(fn param0, le param1) {
+    hn(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
           this.field_i = param0.k();
           this.field_k = param1;
           this.field_n.g(128 + this.field_i * ge.field_c >> 8);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -89,6 +89,6 @@ final class hn extends le {
         field_j = Math.atan2(1.0, 0.0);
         field_q = new int[]{-1, 160, 342, 435};
         field_l = 8;
-        field_p = new vn(720, 560);
+        field_p = new Sprite(720, 560);
     }
 }

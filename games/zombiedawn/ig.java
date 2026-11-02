@@ -25,45 +25,45 @@ final class ig extends wo {
         int var8;
         int var7Lifetime1;
         var8 = ZombieDawn.field_J;
-        this.field_F = 0;
+        this.state = 0;
         super.l(param0);
-        var2 = this.a(true);
+        var2 = this.getX(true);
         var3 = var2 / 24;
-        var4 = this.f(param0 ^ 237239940);
+        var4 = this.getY(param0 ^ 237239940);
         var5 = var4 / 24;
-        var6 = 127 & this.l(param0 - 157);
-        if (this.field_F != 1) {
+        var6 = 127 & this.currentTile(param0 - 157);
+        if (this.state != 1) {
           if (var5 >= 34) {
             boolean decompiledFrameRemainder1 = true;
             var7 = 0;
             if (var6 == 10) {
-              this.field_X = var4;
-              this.field_Y = -96 + var2;
+              this.targetY = var4;
+              this.targetX = -96 + var2;
               var7 = 1;
             } else {
               if (var6 != 14 && (var2 < 1080 ||
                 500 >= var4)) {
                 if (var6 == 2) {
-                  this.field_Y = var2;
-                  this.field_X = var4 + 72;
+                  this.targetX = var2;
+                  this.targetY = var4 + 72;
                   var7 = 1;
                   decompiledFrameRemainder1 = false;
                 }
                 else {
                   if (var2 > 48) {
                     if (var4 <= 96) {
-                      this.field_Y = -24 + var2 + so.c(48);
+                      this.targetX = -24 + var2 + so.randomInt(48);
                       var7 = 1;
-                      this.field_X = -48 + (so.c(96) + 96);
+                      this.targetY = -48 + (so.randomInt(96) + 96);
                     } else {
                       if (var2 >= 1080) {
-                        this.field_Y = -24 - so.c(48) + 1008;
+                        this.targetX = -24 - so.randomInt(48) + 1008;
                         var7 = 1;
-                        this.field_X = so.c(48) + var4 - 24;
+                        this.targetY = so.randomInt(48) + var4 - 24;
                       } else {
                         if (!(1440 > var4)) {
-                          this.field_Y = so.c(48) + (var2 - 24);
-                          this.field_X = -24 + (so.c(8) + 1436);
+                          this.targetX = so.randomInt(48) + (var2 - 24);
+                          this.targetY = -24 + (so.randomInt(8) + 1436);
                           var7 = 1;
                         }
                       }
@@ -71,26 +71,26 @@ final class ig extends wo {
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    this.field_Y = 24 + (so.c(48) + 96);
+                    this.targetX = 24 + (so.randomInt(48) + 96);
                     var7 = 1;
-                    this.field_X = -24 + (var4 + so.c(48));
+                    this.targetY = -24 + (var4 + so.randomInt(48));
                     if (var7 != 0) {
-                      this.c(0, this.field_D);
-                      this.e(1, -6904);
+                      this.moveToward(0, this.field_D);
+                      this.setState(1, -6904);
                       this.field_Ab = false;
                     }
                     if (var6 == 3) {
-                      dj.field_e.a(this, (byte) 110);
-                      ho.a(this.f(237239984), (byte) 54, this.a(true));
-                      this.b(-27598);
+                      Js5Archive.field_e.a(this, (byte) 110);
+                      ho.a(this.getY(237239984), (byte) 54, this.getX(true));
+                      this.unlink(-27598);
                       this.d(0);
                     } else {
                       if (var2 <= -24) {
-                        this.b(-27598);
+                        this.unlink(-27598);
                         this.d(0);
                       } else {
-                        if (24 + dj.field_e.field_H.field_u <= var2) {
-                          this.b(-27598);
+                        if (24 + Js5Archive.field_e.navigation.width <= var2) {
+                          this.unlink(-27598);
                           this.d(0);
                         }
                       }
@@ -100,40 +100,40 @@ final class ig extends wo {
                 }
               }
               if (decompiledFrameRemainder1) {
-                this.field_X = var4;
-                this.field_Y = 96 + var2;
+                this.targetY = var4;
+                this.targetX = 96 + var2;
                 var7 = 1;
               }
             }
             if (var7 == 0) {
               if (var6 == 3) {
-                dj.field_e.a(this, (byte) 110);
-                ho.a(this.f(237239984), (byte) 54, this.a(true));
+                Js5Archive.field_e.a(this, (byte) 110);
+                ho.a(this.getY(237239984), (byte) 54, this.getX(true));
               } else {
                 if (var2 > -24 &&
-                  24 + dj.field_e.field_H.field_u > var2) {
+                  24 + Js5Archive.field_e.navigation.width > var2) {
                   return;
                 }
               }
-              this.b(-27598);
+              this.unlink(-27598);
               this.d(0);
               return;
             }
-            this.c(0, this.field_D);
-            this.e(1, -6904);
+            this.moveToward(0, this.field_D);
+            this.setState(1, -6904);
             this.field_Ab = false;
             if (var6 == 3) {
-              dj.field_e.a(this, (byte) 110);
-              ho.a(this.f(237239984), (byte) 54, this.a(true));
-              this.b(-27598);
+              Js5Archive.field_e.a(this, (byte) 110);
+              ho.a(this.getY(237239984), (byte) 54, this.getX(true));
+              this.unlink(-27598);
               this.d(0);
             } else {
               if (var2 <= -24) {
-                this.b(-27598);
+                this.unlink(-27598);
                 this.d(0);
               } else {
-                if (24 + dj.field_e.field_H.field_u <= var2) {
-                  this.b(-27598);
+                if (24 + Js5Archive.field_e.navigation.width <= var2) {
+                  this.unlink(-27598);
                   this.d(0);
                 }
               }
@@ -144,48 +144,48 @@ final class ig extends wo {
             3 < var3 &&
             var5 > 5) {
             if (var6 == 3) {
-              dj.field_e.a(this, (byte) 110);
-              ho.a(this.f(237239984), (byte) 54, this.a(true));
+              Js5Archive.field_e.a(this, (byte) 110);
+              ho.a(this.getY(237239984), (byte) 54, this.getX(true));
             } else {
               if (var2 > -24 &&
-                24 + dj.field_e.field_H.field_u > var2) {
+                24 + Js5Archive.field_e.navigation.width > var2) {
                 return;
               }
             }
-            this.b(-27598);
+            this.unlink(-27598);
             this.d(0);
             return;
           }
           boolean decompiledFrameRemainder0 = true;
           var7Lifetime1 = 0;
           if (var6 == 10) {
-            this.field_X = var4;
-            this.field_Y = -96 + var2;
+            this.targetY = var4;
+            this.targetX = -96 + var2;
             var7Lifetime1 = 1;
           } else {
             if (var6 != 14 && (var2 < 1080 ||
               500 >= var4)) {
               if (var6 == 2) {
-                this.field_Y = var2;
-                this.field_X = var4 + 72;
+                this.targetX = var2;
+                this.targetY = var4 + 72;
                 var7Lifetime1 = 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (var2 > 48) {
                   if (var4 <= 96) {
-                    this.field_Y = -24 + var2 + so.c(48);
+                    this.targetX = -24 + var2 + so.randomInt(48);
                     var7Lifetime1 = 1;
-                    this.field_X = -48 + (so.c(96) + 96);
+                    this.targetY = -48 + (so.randomInt(96) + 96);
                   } else {
                     if (var2 >= 1080) {
-                      this.field_Y = -24 - so.c(48) + 1008;
+                      this.targetX = -24 - so.randomInt(48) + 1008;
                       var7Lifetime1 = 1;
-                      this.field_X = so.c(48) + var4 - 24;
+                      this.targetY = so.randomInt(48) + var4 - 24;
                     } else {
                       if (!(1440 > var4)) {
-                        this.field_Y = so.c(48) + (var2 - 24);
-                        this.field_X = -24 + (so.c(8) + 1436);
+                        this.targetX = so.randomInt(48) + (var2 - 24);
+                        this.targetY = -24 + (so.randomInt(8) + 1436);
                         var7Lifetime1 = 1;
                       }
                     }
@@ -193,27 +193,27 @@ final class ig extends wo {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  this.field_Y = 24 + (so.c(48) + 96);
+                  this.targetX = 24 + (so.randomInt(48) + 96);
                   var7Lifetime1 = 1;
-                  this.field_X = -24 + (var4 + so.c(48));
+                  this.targetY = -24 + (var4 + so.randomInt(48));
                   if (var7Lifetime1 != 0) {
-                    this.c(0, this.field_D);
-                    this.e(1, -6904);
+                    this.moveToward(0, this.field_D);
+                    this.setState(1, -6904);
                     this.field_Ab = false;
                   }
                   if (var6 == 3) {
-                    dj.field_e.a(this, (byte) 110);
-                    ho.a(this.f(237239984), (byte) 54, this.a(true));
-                    this.b(-27598);
+                    Js5Archive.field_e.a(this, (byte) 110);
+                    ho.a(this.getY(237239984), (byte) 54, this.getX(true));
+                    this.unlink(-27598);
                     this.d(0);
                     return;
                   }
                   if (var2 <= -24) {
-                    this.b(-27598);
+                    this.unlink(-27598);
                     this.d(0);
                   } else {
-                    if (24 + dj.field_e.field_H.field_u <= var2) {
-                      this.b(-27598);
+                    if (24 + Js5Archive.field_e.navigation.width <= var2) {
+                      this.unlink(-27598);
                       this.d(0);
                       return;
                     }
@@ -223,27 +223,27 @@ final class ig extends wo {
               }
             }
             if (decompiledFrameRemainder0) {
-              this.field_X = var4;
-              this.field_Y = 96 + var2;
+              this.targetY = var4;
+              this.targetX = 96 + var2;
               var7Lifetime1 = 1;
             }
           }
           if (var7Lifetime1 != 0) {
-            this.c(0, this.field_D);
-            this.e(1, -6904);
+            this.moveToward(0, this.field_D);
+            this.setState(1, -6904);
             this.field_Ab = false;
           }
         }
         if (var6 == 3) {
-          dj.field_e.a(this, (byte) 110);
-          ho.a(this.f(237239984), (byte) 54, this.a(true));
+          Js5Archive.field_e.a(this, (byte) 110);
+          ho.a(this.getY(237239984), (byte) 54, this.getX(true));
         } else {
           if (var2 > -24 &&
-            24 + dj.field_e.field_H.field_u > var2) {
+            24 + Js5Archive.field_e.navigation.width > var2) {
             return;
           }
         }
-        this.b(-27598);
+        this.unlink(-27598);
         this.d(0);
     }
 
@@ -252,15 +252,15 @@ final class ig extends wo {
         if (param0 < 95) {
           this.g(18);
         }
-        if (this.f(237239984) - 48 <= dj.field_e.field_H.field_p &&
-          this.a(true) - 48 <= dj.field_e.field_H.field_u) {
+        if (this.getY(237239984) - 48 <= Js5Archive.field_e.navigation.height &&
+          this.getX(true) - 48 <= Js5Archive.field_e.navigation.width) {
           return;
         }
-        this.b(-27598);
+        this.unlink(-27598);
         this.d(0);
     }
 
-    final void a(wk param0, int param1) {
+    final void a(Camera param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -274,18 +274,18 @@ final class ig extends wo {
         RuntimeException var3 = null;
         var8 = ZombieDawn.field_J;
         try {
-          var3_int = param0.a(this.a(true), (byte) -103);
-          var4 = param0.a(this.f(237239984), 0);
-          bi.d(var3_int, var4, this.field_pb, 65535);
+          var3_int = param0.worldToScreenX(this.getX(true), (byte) -103);
+          var4 = param0.worldToScreenY(this.getY(237239984), 0);
+          Rasterizer.d(var3_int, var4, this.field_pb, 65535);
           if (param1 != 5060) {
             ig.m((byte) 7);
           }
-          bi.e(var3_int, var4, param0.a(this.field_Y, (byte) -128), param0.a(this.field_X, param1 - 5060), 16711935);
+          Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -128), param0.worldToScreenY(this.targetY, param1 - 5060), 16711935);
           for (var5 = 0; var5 < this.field_ub; var5++) {
-            var6 = param0.a(this.field_jb[var5], (byte) -115);
-            var7 = param0.a(this.field_gb[var5], 0);
-            bi.b(var6 - 1, var7 - 1, 3, 3, 0);
-            bi.a(var6, var7, 65280);
+            var6 = param0.worldToScreenX(this.field_jb[var5], (byte) -115);
+            var7 = param0.worldToScreenY(this.field_gb[var5], 0);
+            Rasterizer.fillRect(var6 - 1, var7 - 1, 3, 3, 0);
+            Rasterizer.setPixel(var6, var7, 65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -298,7 +298,7 @@ final class ig extends wo {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -324,13 +324,13 @@ final class ig extends wo {
     }
 
     final void d(byte param0) {
-        if (this.f(237239984) < 0) {
+        if (this.getY(237239984) < 0) {
           return;
         }
-        if (this.f(237239984) > dj.field_e.field_H.field_p) {
+        if (this.getY(237239984) > Js5Archive.field_e.navigation.height) {
           return;
         }
-        if (!(this.a(true) >= 0)) {
+        if (!(this.getX(true) >= 0)) {
           return;
         }
         int var2 = 57 % ((param0 - 66) / 50);
@@ -345,7 +345,7 @@ final class ig extends wo {
         return en.field_e[param1 & 2047];
     }
 
-    final static void a(rb param0, int param1, int param2, int param3, int param4, rb param5, int param6, int param7, int param8, mf param9, int param10, mf param11, int param12, mf param13, int param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(Font param0, int param1, int param2, int param3, int param4, Font param5, int param6, int param7, int param8, mf param9, int param10, mf param11, int param12, mf param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -361,7 +361,7 @@ final class ig extends wo {
         RuntimeException var20 = null;
         try {
           re.field_g = param0;
-          wb.field_m = param5;
+          FunOrbApplet.field_m = param5;
           di.a(param17, param10, param12, (byte) -116, param19);
           hn.a(1780, param14, param13, param8);
           ro.a(param4, param7, param9, param11, param16, -386);
@@ -405,7 +405,7 @@ final class ig extends wo {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
         }
     }
 

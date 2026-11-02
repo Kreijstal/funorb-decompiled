@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class ZombieDawn extends m {
+public final class ZombieDawn extends GameLoopApplet {
     private boolean field_F;
-    static dj field_H;
+    static Js5Archive field_H;
     static long[] field_E;
     private StringBuilder field_I;
     private StringBuilder field_G;
-    static rb field_K;
+    static Font field_K;
     static String field_D;
     public static int field_J;
 
@@ -30,10 +30,10 @@ public final class ZombieDawn extends m {
         return false;
     }
 
-    public final boolean a(char param0, int param1, int param2) {
-        if (null != ke.field_c &&
-          sg.field_eb == ke.field_c) {
-          return ke.field_c.a(param1, 65793, param0);
+    public final boolean onKeyTyped(char param0, int param1, int param2) {
+        if (null != GameApplet.field_c &&
+          sg.field_eb == GameApplet.field_c) {
+          return GameApplet.field_c.a(param1, 65793, param0);
         }
         if (param2 != 20) {
           return true;
@@ -41,7 +41,7 @@ public final class ZombieDawn extends m {
         return false;
     }
 
-    public final void a(int param0) {
+    public final void drawFrame(int param0) {
         al stackIn_5_0 = null;
         al var2;
         tj var2_ref;
@@ -68,12 +68,12 @@ public final class ZombieDawn extends m {
         int var14Lifetime1;
         int var5Lifetime1Lifetime1;
         var16 = field_J;
-        bi.d();
-        if (sg.field_eb != ke.field_c) {
-          if (ke.field_c.field_d == 0) {
+        Rasterizer.clear();
+        if (sg.field_eb != GameApplet.field_c) {
+          if (GameApplet.field_c.field_d == 0) {
             stackIn_5_0 = sg.field_eb;
           } else {
-            stackIn_5_0 = ke.field_c;
+            stackIn_5_0 = GameApplet.field_c;
           }
           var17 = stackIn_5_0;
           var2 = var17;
@@ -86,13 +86,13 @@ public final class ZombieDawn extends m {
             sg.field_eb.a((byte) -102);
             var17.a(512 - (po.field_xb << 4), (byte) -128, true);
           } else {
-            ke.field_c.b((byte) 120);
-            ke.field_c.a((byte) -118);
+            GameApplet.field_c.b((byte) 120);
+            GameApplet.field_c.a((byte) -118);
             var17.a(po.field_xb << 4, (byte) 46, false);
           }
         } else {
-          ke.field_c.b((byte) 112);
-          ke.field_c.a((byte) -86);
+          GameApplet.field_c.b((byte) 112);
+          GameApplet.field_c.a((byte) -86);
         }
         boolean decompiledFrameRemainder0 = true;
         if (oj.field_d.field_n && (0.0f < oj.field_d.field_b ||
@@ -101,7 +101,7 @@ public final class ZombieDawn extends m {
           var2_ref = sg.field_jb;
           var3 = 380;
           var4_ref_String = jh.field_l;
-          var5 = ((rb) ((Object) var2_ref)).b(var4_ref_String);
+          var5 = ((Font) ((Object) var2_ref)).b(var4_ref_String);
           if (var3 > var5) {
             var5 = var3 + 20;
           }
@@ -112,10 +112,10 @@ public final class ZombieDawn extends m {
           var10 = -(var5 / 2) + var8 - 10;
           var11 = 10 + (var5 / 2 + var8);
           var12 = var6 / 2 + var7;
-          g.$cfr$intArgs$a$3aedf8649552(var9, 99, var11, var12, var10);
+          Mover.$cfr$intArgs$a$3aedf8649552(var9, 99, var11, var12, var10);
           if (bd.field_e == 640 &&
             480 == nh.field_P) {
-            qk.field_Hb[0].e(0, 0);
+            qk.field_Hb[0].drawWithOffsets(0, 0);
             qk.field_Hb[0].b(0, 0, 256);
           } else {
             var13 = bd.field_e / 128;
@@ -123,22 +123,22 @@ public final class ZombieDawn extends m {
             qk.field_Hb[0].a(-var13, -var14, 2 * var13 + bd.field_e, var14 * 2 + nh.field_P);
             qk.field_Hb[0].b(-var13, -var14, bd.field_e + 2 * var13, var14 * 2 + nh.field_P, 150);
           }
-          bi.f(var10, var9, var8, var7);
+          Rasterizer.setClip(var10, var9, var8, var7);
           pf.field_f.b(var10, var9);
-          bi.f(var8, var9, var11, var7);
+          Rasterizer.setClip(var8, var9, var11, var7);
           pf.field_f.b(-pf.field_f.field_w + var11, var9);
-          bi.f(var10, var7, var8, var12);
+          Rasterizer.setClip(var10, var7, var8, var12);
           pf.field_f.b(var10, -pf.field_f.field_t + var12);
-          bi.f(var8, var7, var11, var12);
+          Rasterizer.setClip(var8, var7, var11, var12);
           pf.field_f.b(var11 - pf.field_f.field_w, -pf.field_f.field_t + var12);
-          bi.f(var10, var9, var11, var12);
-          ((rb) ((Object) var2_ref)).a(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
+          Rasterizer.setClip(var10, var9, var11, var12);
+          ((Font) ((Object) var2_ref)).drawStringCentered(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
           var13Lifetime1 = (int)(oj.field_d.field_b * (float)var3 / 100.0f);
-          bi.b(var8 - var3 / 2, 10 + var7, var3, 12, 0);
-          bi.f(-(var3 / 2) + var8, var7 + 10, var8 + (-(var3 / 2) + var13Lifetime1), var7 + 22);
+          Rasterizer.fillRect(var8 - var3 / 2, 10 + var7, var3, 12, 0);
+          Rasterizer.setClip(-(var3 / 2) + var8, var7 + 10, var8 + (-(var3 / 2) + var13Lifetime1), var7 + 22);
           if (bd.field_e == 640 &&
             480 == nh.field_P) {
-            qk.field_Hb[3].e(0, 0);
+            qk.field_Hb[3].drawWithOffsets(0, 0);
             qk.field_Hb[3].b(0, 0, 150);
           } else {
             var14Lifetime1 = bd.field_e / 128;
@@ -146,7 +146,7 @@ public final class ZombieDawn extends m {
             qk.field_Hb[3].a(-var14Lifetime1, -var15, var14Lifetime1 * 2 + bd.field_e, 2 * var15 + nh.field_P);
             qk.field_Hb[3].b(-var14Lifetime1, -var15, 2 * var14Lifetime1 + bd.field_e, 2 * var15 + nh.field_P, 150);
           }
-          bi.c(-(var3 / 2) + var8, var7 + 10, var3, 12, 4458504);
+          Rasterizer.drawRectOutline(-(var3 / 2) + var8, var7 + 10, var3, 12, 4458504);
           pa.a(param0 ^ 26807);
           decompiledFrameRemainder0 = false;
         }
@@ -172,8 +172,8 @@ public final class ZombieDawn extends m {
               var4 = var4 / 10;
             }
           }
-          pc.field_k.c(this.field_G.toString(), 5, 20, 16777215, 1);
-          pc.field_k.c(this.field_I.toString(), 5, 35, 16777215, 1);
+          pc.field_k.drawString(this.field_G.toString(), 5, 20, 16777215, 1);
+          pc.field_k.drawString(this.field_I.toString(), 5, 35, 16777215, 1);
         }
         if (param0 != -14964) {
           this.field_G = (StringBuilder) null;
@@ -184,10 +184,10 @@ public final class ZombieDawn extends m {
         sa.field_Y = this;
     }
 
-    final void o(int param0) {
-        if (ke.field_c.field_d == 6 &&
+    final void onLoadingFinished(int param0) {
+        if (GameApplet.field_c.field_d == 6 &&
           !nk.a(8, kg.field_g)) {
-          ke.field_c = jj.c(3, 123);
+          GameApplet.field_c = jj.c(3, 123);
           ca.a(false, true, 3);
         } else {
           if (dp.field_h != 2147483647) {
@@ -204,10 +204,10 @@ public final class ZombieDawn extends m {
     }
 
     final void g(boolean param0) {
-        ag.a(-107, param0);
+        SecondaryNodeDequeIterator.a(-107, param0);
         fh.i(0);
         mf.a((byte) -67);
-        ke.field_c = jj.c(11, 122);
+        GameApplet.field_c = jj.c(11, 122);
         ca.a(true, true, 1);
         kp.a(50, (byte) 3);
         if (!ng.field_e) {
@@ -224,11 +224,11 @@ public final class ZombieDawn extends m {
 
     final void a(int param0, int param1) {
         if (param1 < 27) {
-          field_K = (rb) null;
+          field_K = (Font) null;
         }
     }
 
-    public final void a(boolean param0, boolean param1) {
+    public final void runTick(boolean param0, boolean param1) {
         int var4;
         wg var5;
         var4 = field_J;
@@ -248,13 +248,13 @@ public final class ZombieDawn extends m {
           if (lf.field_h != null && (lf.field_h.field_w != bd.field_e ||
             lf.field_h.field_t != nh.field_P)) {
             lf.field_h = null;
-            lf.field_h = new vn(bd.field_e, nh.field_P);
+            lf.field_h = new Sprite(bd.field_e, nh.field_P);
           }
-          on.field_q = -1;
+          TileMap.field_q = -1;
         }
         if (!po.w(13296)) {
           while (true) {
-            var5 = (wg) (dn.field_D.f(123));
+            var5 = (wg) (dn.field_D.removeLast(123));
             if (var5 == null) {
               break;
             }
@@ -271,19 +271,19 @@ public final class ZombieDawn extends m {
         if (oj.field_d.field_n) {
           return;
         }
-        if (ke.field_c == sg.field_eb) {
-          ke.field_c.a((byte) -102, param0);
+        if (GameApplet.field_c == sg.field_eb) {
+          GameApplet.field_c.a((byte) -102, param0);
         } else {
           if (sg.field_eb.field_d == 0) {
             sg.field_eb.a((byte) -115, param0);
           }
           po.field_xb = po.field_xb + 1;
           if (po.field_xb == 32) {
-            if (ke.field_c.field_d == 3) {
+            if (GameApplet.field_c.field_d == 3) {
               bd.field_m = null;
             }
-            ke.field_c.a(sg.field_eb, 72);
-            ke.field_c = sg.field_eb;
+            GameApplet.field_c.a(sg.field_eb, 72);
+            GameApplet.field_c = sg.field_eb;
             po.field_xb = 0;
           }
         }
@@ -318,7 +318,7 @@ public final class ZombieDawn extends m {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -345,13 +345,13 @@ public final class ZombieDawn extends m {
     final void c(boolean param0) {
         ZombieDawn.k((byte) 114);
         mk.b(4);
-        vo.c((byte) -61);
-        bi.a();
-        rb.a();
+        IntrusiveDeque.c((byte) -61);
+        Rasterizer.a();
+        Font.a();
         am.j(-98);
         ff.a(-1);
         sb.a(false);
-        m.j((byte) -125);
+        GameLoopApplet.j((byte) -125);
         rn.a(-12637);
         fo.a(false);
         cm.a(0);
@@ -361,17 +361,17 @@ public final class ZombieDawn extends m {
         al.c((byte) 2);
         nl.d((byte) 69);
         ph.a(-1);
-        tg.a((byte) 85);
-        wb.f(false);
-        aj.a((byte) 86);
-        ke.b(40);
+        GameKeyHandler.a((byte) 85);
+        FunOrbApplet.f(false);
+        ClientException.a((byte) 86);
+        GameApplet.b(40);
         li.b(-72);
-        h.a(-14380);
-        uc.b(103);
-        dj.b(108);
+        MouseInputHandler.a(-14380);
+        MouseWheelInput.b(103);
+        Js5Archive.b(108);
         ob.a(41);
         mp.a(13);
-        de.e(27291);
+        PacketBuffer.e(27291);
         pd.a((byte) -117);
         ne.a((byte) 83);
         gf.a(true);
@@ -389,9 +389,9 @@ public final class ZombieDawn extends m {
         la.c(71);
         lg.a((byte) 49);
         ae.a(false);
-        hi.f(!param0 ? true : false);
+        GameWorld.f(!param0 ? true : false);
         tl.d(123);
-        le.b((byte) 61);
+        IntrusiveNode.b((byte) 61);
         jd.a((byte) 126);
         ta.a(false);
         mb.a();
@@ -404,10 +404,10 @@ public final class ZombieDawn extends m {
         fg.c(-25585);
         pl.d((byte) -95);
         pc.b(!param0 ? true : false);
-        sh.a((byte) -122);
+        ExceptionWrapper.a((byte) -122);
         bp.a(-16785);
         sf.c(0);
-        gm.a((byte) 105);
+        BufferedSocket.a((byte) 105);
         dl.a(-974314864);
         lf.a(-9742);
         jg.g();
@@ -419,25 +419,25 @@ public final class ZombieDawn extends m {
         jp.a(false);
         vd.a(128);
         ng.b((byte) -126);
-        nb.a(-107);
+        DualLinkNode.a(-107);
         da.c((byte) 93);
         dc.a(-79);
-        mj.a((byte) -86);
+        SpatialGrid.a((byte) -86);
         uk.a(-21);
         ro.b((byte) -99);
         vj.e((byte) 112);
         ap.a(false);
-        ej.b((byte) -115);
-        wk.a(60);
+        LevelNavigation.b((byte) -115);
+        Camera.a(60);
         ub.c((byte) 93);
         uh.c((byte) 73);
         qj.a(97);
-        kd.w(54);
-        ah.u(60);
-        on.a((byte) 122);
-        g.i(0);
-        kk.c((byte) -125);
-        fb.h(237239984);
+        Zombie.w(54);
+        Human.u(60);
+        TileMap.a((byte) 122);
+        Mover.i(0);
+        Point.c((byte) -125);
+        WorldObject.h(237239984);
         ig.x(-96);
         u.b(-71);
         co.d(28186);
@@ -446,7 +446,7 @@ public final class ZombieDawn extends m {
         d.a(6);
         nk.a(-11486);
         qb.a(-6633);
-        hd.d((byte) -77);
+        SpriteState.d((byte) -77);
         ei.a(123);
         dn.h(0);
         i.m(10);
@@ -508,7 +508,7 @@ public final class ZombieDawn extends m {
         wh.a(0);
         cb.e(112);
         pf.a((byte) 88);
-        rm.a(0);
+        DelegatingCanvas.a(0);
         to.a((byte) 113);
         mo.a(-76);
         rf.a(11021);
@@ -530,7 +530,7 @@ public final class ZombieDawn extends m {
         pi.d(-1);
         te.f((byte) 105);
         id.i(-72);
-        tf.c(-12220);
+        SpatialBucket.c(-12220);
         kc.c(!param0 ? true : false);
         mm.e((byte) 47);
         ck.d(1);
@@ -586,13 +586,13 @@ public final class ZombieDawn extends m {
         em.g((byte) -69);
         kp.b((byte) -119);
         cg.a(true);
-        ii.a((byte) -109);
+        SecondaryNodeDeque.a((byte) -109);
         bj.e(42);
         jl.e((byte) -113);
         se.c(32);
         uj.a(256);
-        hl.a((byte) 122);
-        ag.a((byte) 48);
+        NodeHashTableIterator.a((byte) 122);
+        SecondaryNodeDequeIterator.a((byte) 48);
         b.c((byte) -47);
         bo.c(7644);
         tk.b(-90);
@@ -618,7 +618,7 @@ public final class ZombieDawn extends m {
         ep.a(0);
         nn.c(2);
         sd.a(80);
-        eo.a(-25401);
+        HumanFactory.a(-25401);
         tm.a(-5364);
         cc.a(-27940);
         sn.a((byte) 93);
@@ -647,7 +647,7 @@ public final class ZombieDawn extends m {
         wl.a((byte) -86);
         eg.c(-26441);
         vk.a((byte) -90);
-        this.field_u = null;
+        this.host = null;
         this.field_I = null;
         this.field_G = null;
     }

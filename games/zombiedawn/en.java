@@ -33,15 +33,15 @@ final class en {
         if (field_b.length < field_d) {
           field_b = new int[cg.a(-922314526, field_d)];
         }
-        int var4 = param1 * bi.field_f + param0;
+        int var4 = param1 * Rasterizer.width + param0;
         for (var5 = 0; var5 < field_d; var5++) {
           field_b[var5] = var4;
-          var4 = var4 + bi.field_f;
+          var4 = var4 + Rasterizer.width;
         }
     }
 
     final static void c() {
-        en.a(bi.field_g, bi.field_l, bi.field_b, bi.field_d);
+        en.a(Rasterizer.clipLeft, Rasterizer.clipTop, Rasterizer.clipRight, Rasterizer.clipBottom);
     }
 
     static {

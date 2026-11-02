@@ -3,17 +3,17 @@
  */
 abstract class pc {
     static oi field_k;
-    ra field_a;
-    ra field_l;
-    ra field_f;
-    ra field_m;
+    DualLinkDeque field_a;
+    DualLinkDeque field_l;
+    DualLinkDeque field_f;
+    DualLinkDeque field_m;
     long field_g;
-    de field_b;
+    PacketBuffer field_b;
     int field_i;
     volatile int field_e;
     volatile int field_h;
     byte field_c;
-    de field_j;
+    PacketBuffer field_j;
     og field_d;
 
     final int a(boolean param0) {
@@ -34,17 +34,17 @@ abstract class pc {
         og var9 = new og();
         var9.field_C = param0;
         var9.field_r = param1 ? true : false;
-        var9.field_n = var7;
+        var9.secondaryKey = var7;
         if (!param1) {
           if (this.a(true) >= 20) {
             throw new RuntimeException();
           }
-          this.field_f.a(var9, (byte) -99);
+          this.field_f.addLast(var9, (byte) -99);
         } else {
           if (!(20 > this.e(-1216122784))) {
             throw new RuntimeException();
           }
-          this.field_a.a(var9, (byte) -124);
+          this.field_a.addLast(var9, (byte) -124);
         }
         return var9;
     }
@@ -67,18 +67,18 @@ abstract class pc {
         if (param0 > 118) {
           return this.a(true) >= 20 ? true : false;
         }
-        this.field_l = (ra) null;
+        this.field_l = (DualLinkDeque) null;
         return this.a(true) >= 20 ? true : false;
     }
 
-    final static void a(byte param0, fn param1) {
+    final static void a(byte param0, PcmSampleStream param1) {
         try {
-          t.field_i.a(param1);
+          t.field_i.removeSubstream(param1);
           if (param0 != 13) {
             pc.b(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,7 +86,7 @@ abstract class pc {
         if (param0 >= 96) {
           return this.e(-1216122784) >= 20 ? true : false;
         }
-        this.field_l = (ra) null;
+        this.field_l = (DualLinkDeque) null;
         return this.e(-1216122784) >= 20 ? true : false;
     }
 
@@ -108,15 +108,15 @@ abstract class pc {
     }
 
     pc() {
-        this.field_a = new ra();
-        this.field_l = new ra();
-        this.field_f = new ra();
-        this.field_m = new ra();
-        this.field_b = new de(6);
+        this.field_a = new DualLinkDeque();
+        this.field_l = new DualLinkDeque();
+        this.field_f = new DualLinkDeque();
+        this.field_m = new DualLinkDeque();
+        this.field_b = new PacketBuffer(6);
         this.field_h = 0;
         this.field_c = (byte) 0;
         this.field_e = 0;
-        this.field_j = new de(10);
+        this.field_j = new PacketBuffer(10);
     }
 
     static {

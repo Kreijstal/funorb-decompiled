@@ -11,18 +11,18 @@ final class jk {
     private int field_d;
     private j[] field_e;
 
-    final void a(String param0, dj param1, int param2) {
+    final void a(String param0, Js5Archive param1, int param2) {
         try {
           this.a(param1, -1, (String) null, param0, 25324, (String) null);
           if (param2 != 1) {
             jk.a(false, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jk.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jk.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    private final void a(dj param0, int param1, String param2, String param3, int param4, String param5) {
+    private final void a(Js5Archive param0, int param1, String param2, String param3, int param4, String param5) {
         j[] var9 = null;
         j var8 = null;
         j var10 = null;
@@ -49,7 +49,7 @@ final class jk {
           this.field_c = this.field_c + 1;
           this.field_e[fieldTemp$0] = var8;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class jk {
           return;
         }
         if (param0) {
-          bi.a(0, 0, bi.field_f, bi.field_a, 0, 192);
+          Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height, 0, 192);
         }
         if (!param1) {
           wo.field_xb.a(0, 0, 0);
@@ -115,7 +115,7 @@ final class jk {
             boolean decompiledFrameRemainder0 = true;
             if (cc.field_m[var3].field_j == param1.field_j) {
               var4 = cc.field_m[var3].a((byte) -78);
-              if (ej.field_d < nl.field_o[var4]) {
+              if (LevelNavigation.field_d < nl.field_o[var4]) {
                 nl.field_o[var4] = nl.field_o[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
@@ -141,11 +141,11 @@ final class jk {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
-    final void a(byte param0, dj param1, String param2, String param3) {
+    final void a(byte param0, Js5Archive param1, String param2, String param3) {
         try {
           this.a(param1, -1, (String) null, param3, 25324, param2);
           if (param0 > -90) {
@@ -153,7 +153,7 @@ final class jk {
             jk.a((byte) -18, (aa) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class jk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -200,14 +200,14 @@ final class jk {
         field_h = null;
     }
 
-    final void a(String param0, String param1, String param2, dj param3, byte param4) {
+    final void a(String param0, String param1, String param2, Js5Archive param3, byte param4) {
         try {
           this.a(param3, -1, param0, param1, param4 ^ -25280, param2);
           if (param4 != -84) {
             jk.b(-21);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "jk.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jk.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -217,7 +217,7 @@ final class jk {
         var3 = ZombieDawn.field_J;
         while (this.field_c > this.field_f) {
           var4 = this.field_e[this.field_f];
-          if (!var4.field_c.a((byte) 73)) {
+          if (!var4.field_c.isIndexLoaded((byte) 73)) {
             this.a(~param0, 0, var4);
             return false;
           }
@@ -235,7 +235,7 @@ final class jk {
             var4.field_i == null &&
             var4.field_k != null &&
             !var4.field_c.c(9001)) {
-            this.a(~param0, var4.field_c.e(-102), var4);
+            this.a(~param0, var4.field_c.percentLoaded(-102), var4);
             return false;
           }
           this.field_f = this.field_f + 1;

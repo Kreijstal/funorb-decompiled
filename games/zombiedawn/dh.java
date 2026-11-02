@@ -6,7 +6,7 @@ abstract class dh {
     int[] field_c;
     java.awt.Image field_f;
     int field_a;
-    static de field_e;
+    static PacketBuffer field_e;
     static String field_g;
     int field_d;
 
@@ -14,7 +14,7 @@ abstract class dh {
 
     final void b(int param0) {
         int var2 = -12 % ((param0 + 53) / 62);
-        bi.a(this.field_c, this.field_d, this.field_a);
+        Rasterizer.setBuffer(this.field_c, this.field_d, this.field_a);
     }
 
     abstract void a(int param0, int param1, java.awt.Component param2, int param3);
@@ -54,7 +54,7 @@ abstract class dh {
             return;
           }
         } else {
-          field_e = (de) null;
+          field_e = (PacketBuffer) null;
           if (rc.field_p == f.field_k) {
             fieldTemp$1 = ln.field_b;
             ln.field_b = ln.field_b + 1;
@@ -84,7 +84,7 @@ abstract class dh {
         }
         if (!po.w(13296)) {
           if (null != sc.field_c) {
-            gm.a(sc.field_c, (byte) 110, 3);
+            BufferedSocket.a(sc.field_c, (byte) 110, 3);
           }
           sl.a((byte) 47);
           if (hp.field_C) {
@@ -106,7 +106,7 @@ abstract class dh {
     }
 
     static {
-        field_e = new de(256);
+        field_e = new PacketBuffer(256);
         field_g = "Unpacking graphics";
     }
 }

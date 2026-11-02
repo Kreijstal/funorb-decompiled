@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tm extends le {
+final class tm extends IntrusiveNode {
     static int[] field_n;
-    static vn field_m;
+    static Sprite field_m;
     static int[] field_i;
     static int[] field_l;
-    static vn[] field_h;
-    fn field_j;
+    static Sprite[] field_h;
+    PcmSampleStream field_j;
     static int[] field_k;
     static String field_o;
 
-    final static void a(int param0, int param1, int param2, vn[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -32,8 +32,8 @@ final class tm extends le {
             var8 = param3[1].field_r;
             param3[0].c(param0, param2, param4);
             param3[2].c(-var7 + (param5 + param0), param2, param4);
-            bi.b(eo.field_c);
-            bi.c(param0 + var6_int, param2, param5 + param0 - var7, param3[1].field_q + param2);
+            Rasterizer.saveClip(HumanFactory.field_c);
+            Rasterizer.c(param0 + var6_int, param2, param5 + param0 - var7, param3[1].field_q + param2);
             var9 = param0 + var6_int;
             var10 = param0 + param5 - var7;
             for (param0 = var9; param0 < var10; param0 = param0 + var8) {
@@ -42,7 +42,7 @@ final class tm extends le {
             if (param1 != 32421) {
               tm.a(-59, (byte) 126, false, -69);
             }
-            bi.a(eo.field_c);
+            Rasterizer.restoreClip(HumanFactory.field_c);
             return;
           }
           return;
@@ -56,7 +56,7 @@ final class tm extends le {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class tm extends le {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -142,9 +142,9 @@ final class tm extends le {
         }
     }
 
-    final static eo a(byte param0, String param1) {
+    final static HumanFactory a(byte param0, String param1) {
         RuntimeException var2 = null;
-        eo stackIn_8_0 = null;
+        HumanFactory stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -158,16 +158,16 @@ final class tm extends le {
             field_n = (int[]) null;
           }
           if (tk.field_a == hm.field_H &&
-            param1.equals(kk.field_k)) {
+            param1.equals(Point.field_k)) {
             tk.field_a = ic.field_S;
             stackIn_8_0 = r.field_G;
             return stackIn_8_0;
           }
           r.field_G = null;
           tk.field_a = vh.field_c;
-          kk.field_k = param1;
+          Point.field_k = param1;
           stackIn_10_0 = null;
-          return (eo) (stackIn_10_0);
+          return (HumanFactory) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -178,12 +178,12 @@ final class tm extends le {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     tm(int param0) {
-        this.field_j = fn.a(vb.field_D[param0], 100, 256);
+        this.field_j = PcmSampleStream.a(vb.field_D[param0], 100, 256);
         aa.a(120, this.field_j);
     }
 
@@ -228,12 +228,12 @@ final class tm extends le {
           if (param1 == -77) {
             return;
           }
-          field_m = (vn) null;
+          field_m = (Sprite) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var4_ref), "tm.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var4_ref), "tm.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

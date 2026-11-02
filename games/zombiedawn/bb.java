@@ -6,10 +6,10 @@ final class bb {
     static int field_f;
     static String field_d;
     static String[] field_g;
-    static vn field_c;
+    static Sprite field_c;
     static String[] field_b;
     static int[] field_e;
-    static de field_h;
+    static PacketBuffer field_h;
     private static String field_z;
 
     public static void a(int param0) {

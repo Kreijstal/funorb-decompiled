@@ -6,7 +6,7 @@ final class el implements io {
     private int field_l;
     static String field_h;
     private int field_e;
-    private rb field_j;
+    private Font field_j;
     static int field_n;
     private int field_a;
     static String field_m;
@@ -73,7 +73,7 @@ final class el implements io {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -106,13 +106,13 @@ final class el implements io {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "el.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "el.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var10 = 0;
-        ga stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -126,28 +126,28 @@ final class el implements io {
         var11 = ZombieDawn.field_J;
         try {
           if (param3 instanceof hf) {
-            stackIn_4_0 = (ga) (param3);
+            stackIn_4_0 = (UiWidget) (param3);
           } else {
             stackIn_4_0 = null;
           }
           var12 = (hf) (stackIn_4_0);
           if (var12 != null) {
           }
-          bi.b(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, this.field_b);
+          Rasterizer.fillRect(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, this.field_b);
           if (param0 != 16777215) {
             el.a(-79);
           }
           var7 = -(var12.field_K * 2) + param3.field_i;
           var8 = param3.field_k + (param4 + var12.field_K);
           var9 = var12.field_G + (param2 + param3.field_j);
-          bi.e(var8, var9, var8 + var7, var9, this.field_l);
+          Rasterizer.e(var8, var9, var8 + var7, var9, this.field_l);
           for (var10 = var12.a(-85) - 1; var10 >= 0; var10--) {
-            bi.g(var8 + var12.a((byte) 58, var10) * var7 / var12.b(false), var9, this.field_e, this.field_f);
+            Rasterizer.g(var8 + var12.a((byte) 58, var10) * var7 / var12.b(false), var9, this.field_e, this.field_f);
           }
           if (null == this.field_j) {
             return;
           }
-          this.field_j.a(var12.field_o, var8 + var7 / 2, this.field_j.field_C + (var9 + var12.field_G), this.field_a, this.field_c);
+          this.field_j.drawStringCentered(var12.field_o, var8 + var7 / 2, this.field_j.field_C + (var9 + var12.field_G), this.field_a, this.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -159,11 +159,11 @@ final class el implements io {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    el(rb param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    el(Font param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_c = param2;
           this.field_e = param5;
@@ -173,7 +173,7 @@ final class el implements io {
           this.field_a = param1;
           this.field_b = param4;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

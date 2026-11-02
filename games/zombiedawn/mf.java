@@ -5,7 +5,7 @@ final class mf {
     static int field_d;
     static int field_c;
     static String field_a;
-    private vn[] field_b;
+    private Sprite[] field_b;
 
     final static void a(byte param0) {
         int var1_int = 0;
@@ -27,15 +27,15 @@ final class mf {
           }
           var3 = 14;
           var1_intLifetime1 = var3;
-          while (var3 < uc.field_a.length) {
-            uc.field_a[var3] = true;
+          while (var3 < MouseWheelInput.field_a.length) {
+            MouseWheelInput.field_a[var3] = true;
             var3++;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "mf.D(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "mf.D(" + param0 + ')');
         }
     }
 
@@ -71,11 +71,11 @@ final class mf {
         field_a = null;
     }
 
-    mf(vn[] param0) {
+    mf(Sprite[] param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

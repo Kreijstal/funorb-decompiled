@@ -31,7 +31,7 @@ final class em extends eh implements hh {
         this.a(var2 < var3 ? (-var2 + this.field_F.field_j << 16) / (var3 - var2) : 0, (byte) -98);
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
@@ -119,11 +119,11 @@ final class em extends eh implements hh {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, ga param2, char param3) {
+    final boolean a(int param0, int param1, UiWidget param2, char param3) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -196,7 +196,7 @@ final class em extends eh implements hh {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class em extends eh implements hh {
         }
     }
 
-    final static vn i(byte param0) {
+    final static Sprite i(byte param0) {
         int var5_int = 0;
         int var6 = ZombieDawn.field_J;
         int var1 = uf.field_n[0] * bn.field_c[0];
@@ -265,7 +265,7 @@ final class em extends eh implements hh {
         for (var5_int = 0; var1 > var5_int; var5_int++) {
           var4[var5_int] = j.field_a[eg.a(255, (int) var3[var5_int])];
         }
-        vn var5 = new vn(gl.field_F, kd.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var4);
+        Sprite var5 = new Sprite(gl.field_F, Zombie.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var4);
         no.f((byte) -110);
         return var5;
     }
@@ -489,7 +489,7 @@ final class em extends eh implements hh {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -559,13 +559,13 @@ final class em extends eh implements hh {
         this.field_T = true;
         this.field_E = 32768;
         try {
-          this.field_B = new ga[6];
+          this.field_B = new UiWidget[6];
           dupTemp$0 = new ij(param0, param1, param7, param8, (io) null, (sk) null, new an(0, 0, param7, param8, param6, (sk) null), false, false);
           this.field_F = dupTemp$0;
-          this.field_B[0] = (ga) ((Object) dupTemp$0);
+          this.field_B[0] = (UiWidget) ((Object) dupTemp$0);
           dupTemp$1 = new an(param0, param1, param7, param8, param5, (sk) null);
           this.field_I = dupTemp$1;
-          this.field_B[1] = (ga) ((Object) dupTemp$1);
+          this.field_B[1] = (UiWidget) ((Object) dupTemp$1);
           this.field_O = param9;
           stackIn_4_1 = (param11);
           this.field_X = stackIn_4_1;
@@ -598,7 +598,7 @@ final class em extends eh implements hh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -619,7 +619,7 @@ final class em extends eh implements hh {
         this.a(var2Lifetime1 < var3Lifetime1 ? (this.field_F.field_k - var2Lifetime1 << 16) / (var3Lifetime1 - var2Lifetime1) : 0, 89);
     }
 
-    final boolean a(byte param0, ga param1) {
+    final boolean a(byte param0, UiWidget param1) {
         ij var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_12_0 = null;
@@ -634,7 +634,7 @@ final class em extends eh implements hh {
           if (var3 == null) {
             return false;
           }
-          if (!((ga) ((Object) var3)).a((byte) 104, param1)) {
+          if (!((UiWidget) ((Object) var3)).a((byte) 104, param1)) {
             return false;
           }
           return true;
@@ -648,7 +648,7 @@ final class em extends eh implements hh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

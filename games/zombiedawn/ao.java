@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ao extends fb {
+final class ao extends WorldObject {
     static String field_G;
     static int field_J;
-    private fn field_K;
+    private PcmSampleStream field_K;
     private int field_E;
     static String field_I;
     private String field_D;
-    private fn field_H;
-    static op field_F;
+    private PcmSampleStream field_H;
+    static AsyncRequest field_F;
 
-    final static eo a(String[] args, int param1) {
-        eo var2 = null;
+    final static HumanFactory a(String[] args, int param1) {
+        HumanFactory var2 = null;
         RuntimeException var2_ref = null;
-        eo stackIn_3_0 = null;
+        HumanFactory stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new eo(false);
+          var2 = new HumanFactory(false);
           var2.field_g = args;
           if (param1 > -76) {
-            field_F = (op) null;
+            field_F = (AsyncRequest) null;
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -37,7 +37,7 @@ final class ao extends fb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -59,10 +59,10 @@ final class ao extends fb {
         }
     }
 
-    final void a(byte param0, wk param1) {
+    final void a(byte param0, Camera param1) {
         int var5 = 0;
-        int var3_int = param1.a(this.a(true), (byte) -94);
-        int var4 = param1.a(this.f(237239984), 0);
+        int var3_int = param1.worldToScreenX(this.getX(true), (byte) -94);
+        int var4 = param1.worldToScreenY(this.getY(237239984), 0);
         if (param0 >= -76) {
           return;
         }
@@ -82,15 +82,15 @@ final class ao extends fb {
             this.field_H.h(var5);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ao.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ao.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void g(int param0) {
         if (this.field_E <= 0) {
-          this.b(-27598);
+          this.unlink(-27598);
           if (param0 < 95) {
-            this.field_H = (fn) null;
+            this.field_H = (PcmSampleStream) null;
             return;
           }
           return;
@@ -99,7 +99,7 @@ final class ao extends fb {
         this.field_E = this.field_E - 7;
         if (this.field_E >= 0) {
           if (param0 < 95) {
-            this.field_H = (fn) null;
+            this.field_H = (PcmSampleStream) null;
             return;
           }
           return;
@@ -108,7 +108,7 @@ final class ao extends fb {
         if (param0 >= 95) {
           return;
         }
-        this.field_H = (fn) null;
+        this.field_H = (PcmSampleStream) null;
     }
 
     static {

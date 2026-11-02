@@ -269,32 +269,32 @@ final class ve {
         return 0;
     }
 
-    final void a(de param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_n = new ko();
         this.field_n.b(param0);
         this.field_v = new ko();
         this.field_v.b(param0);
-        int var2 = param0.d((byte) -117);
+        int var2 = param0.readUnsignedByte((byte) -117);
         if (var2 != 0) {
-          param0.field_j = param0.field_j - 1;
+          param0.position = param0.position - 1;
           this.field_p = new ko();
           this.field_p.b(param0);
           this.field_c = new ko();
           this.field_c.b(param0);
         }
-        var2 = param0.d((byte) -122);
+        var2 = param0.readUnsignedByte((byte) -122);
         if (var2 != 0) {
-          param0.field_j = param0.field_j - 1;
+          param0.position = param0.position - 1;
           this.field_d = new ko();
           this.field_d.b(param0);
           this.field_u = new ko();
           this.field_u.b(param0);
         }
-        var2 = param0.d((byte) -121);
+        var2 = param0.readUnsignedByte((byte) -121);
         if (var2 != 0) {
-          param0.field_j = param0.field_j - 1;
+          param0.position = param0.position - 1;
           this.field_t = new ko();
           this.field_t.b(param0);
           this.field_r = new ko();

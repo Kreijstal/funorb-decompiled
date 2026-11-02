@@ -6,7 +6,7 @@ final class ld extends bn {
     static int field_j;
     static int[] field_n;
     static boolean field_m;
-    static vn[][] field_l;
+    static Sprite[][] field_l;
 
     public static void d(int param0) {
         field_n = null;
@@ -14,7 +14,7 @@ final class ld extends bn {
         if (param0 != 25008) {
           field_j = 49;
         }
-        field_l = (vn[][]) null;
+        field_l = (Sprite[][]) null;
     }
 
     final static void a(long param0, byte param1) {
@@ -65,6 +65,6 @@ final class ld extends bn {
           }
         }
         field_m = true;
-        field_l = new vn[31][];
+        field_l = new Sprite[31][];
     }
 }

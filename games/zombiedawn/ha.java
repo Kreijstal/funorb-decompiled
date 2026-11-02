@@ -20,7 +20,7 @@ final class ha {
         if (param0 < 116) {
           field_d = (fc) null;
         }
-        fp.field_H = dj.field_e.field_H.field_u + 300;
+        fp.field_H = Js5Archive.field_e.navigation.width + 300;
         ac.field_t = -300;
     }
 
@@ -39,7 +39,7 @@ final class ha {
           var1 = ea.field_c;
           synchronized (var1) {
             nl.field_s = nl.field_s + 1;
-            he.field_e = wb.field_y;
+            he.field_e = FunOrbApplet.field_y;
             if (ih.field_F < 0) {
               var5 = 0;
               var2 = var5;
@@ -47,11 +47,11 @@ final class ha {
                 bo.field_p[var5] = false;
                 var5++;
               }
-              ih.field_F = uc.field_d;
+              ih.field_F = MouseWheelInput.field_d;
             } else {
-              while (ih.field_F != uc.field_d) {
-                var2 = nd.field_c[uc.field_d];
-                uc.field_d = 127 & 1 + uc.field_d;
+              while (ih.field_F != MouseWheelInput.field_d) {
+                var2 = nd.field_c[MouseWheelInput.field_d];
+                MouseWheelInput.field_d = 127 & 1 + MouseWheelInput.field_d;
                 if (var2 >= 0) {
                   bo.field_p[var2] = true;
                   continue;
@@ -59,13 +59,13 @@ final class ha {
                 bo.field_p[~var2] = false;
               }
             }
-            wb.field_y = je.field_c;
+            FunOrbApplet.field_y = je.field_c;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "ha.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "ha.B(" + param0 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class ha {
         if (param0 < 116) {
           field_d = (fc) null;
         }
-        fp.field_H = dj.field_e.field_H.field_u + 300;
+        fp.field_H = Js5Archive.field_e.navigation.width + 300;
         ac.field_t = -300;
     }
 }

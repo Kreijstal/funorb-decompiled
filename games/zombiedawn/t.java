@@ -4,9 +4,9 @@
 final class t implements io {
     private int field_a;
     private int field_l;
-    private rb field_g;
-    static fi field_m;
-    static fi field_i;
+    private Font field_g;
+    static PcmMixer field_m;
+    static PcmMixer field_i;
     private int field_f;
     private int field_j;
     private int field_k;
@@ -21,13 +21,13 @@ final class t implements io {
         df var2Lifetime1;
         if (!param0) {
           var2 = new df();
-          jj.field_D.a(0, var2);
+          jj.field_D.addFirst(0, var2);
           p.a(0, param1);
           return var2;
         }
         t.a(false, 81);
         var2Lifetime1 = new df();
-        jj.field_D.a(0, var2Lifetime1);
+        jj.field_D.addFirst(0, var2Lifetime1);
         p.a(0, param1);
         return var2Lifetime1;
     }
@@ -66,7 +66,7 @@ final class t implements io {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class t implements io {
         return ce.field_r;
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         fp var14 = null;
         int var7 = 0;
         int var8 = 0;
@@ -104,36 +104,36 @@ final class t implements io {
         int var12Lifetime1;
         try {
           var14 = param3 instanceof fp ? (fp) (param3) : null;
-          bi.b(param3.field_k + param4, param3.field_j + param2, param3.field_i, param3.field_n, this.field_a);
+          Rasterizer.fillRect(param3.field_k + param4, param3.field_j + param2, param3.field_i, param3.field_n, this.field_a);
           if (param0 != 16777215) {
-            this.field_g = (rb) null;
+            this.field_g = (Font) null;
           }
           if (var14 != null) {
           }
           var7 = var14.field_K + (param4 + param3.field_k);
           var8 = var14.field_G + param3.field_j + param2;
-          bi.g(var7, var8, var14.field_I, this.field_j);
+          Rasterizer.g(var7, var8, var14.field_I, this.field_j);
           if (-1 != var14.field_E) {
             var9 = 2.0 * (3.141592653589793 * (double)var14.field_E) / (double)var14.field_L;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_I);
             var12 = (int)(Math.cos(var9) * (double)var14.field_I);
-            bi.g(var11 + var7, var8 + var12, 1, this.field_d);
+            Rasterizer.g(var11 + var7, var8 + var12, 1, this.field_d);
           }
-          bi.g(var7, var8, 2, 1);
+          Rasterizer.g(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * ((double)var14.field_J * 3.141592653589793) / (double)var14.field_L;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_I);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_I);
-          bi.e(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
+          Rasterizer.e(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
           if (null != this.field_g) {
             var13 = this.field_e + (var14.field_I + var14.field_K);
             this.field_g.a(param3.field_o, var13 + param4 + param3.field_k, this.field_k + param3.field_j + param2, -this.field_e - (var13 - param3.field_i), param3.field_n - (this.field_e << 1), this.field_l, this.field_f, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "t.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "t.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    t(rb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    t(Font param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_g = param0;
           this.field_j = param5;
@@ -144,7 +144,7 @@ final class t implements io {
           this.field_f = param4;
           this.field_a = param7;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

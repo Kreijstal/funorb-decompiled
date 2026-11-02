@@ -7,7 +7,7 @@ final class sn {
     static boolean field_b;
     static int field_e;
     static String field_d;
-    static gm field_c;
+    static BufferedSocket field_c;
 
     final static ll a(byte param0, long param1, boolean param2, String param3, String param4) {
         RuntimeException var6 = null;
@@ -51,7 +51,7 @@ final class sn {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -59,21 +59,21 @@ final class sn {
         throw new IllegalStateException();
     }
 
-    final static vn a(int param0, double param1, byte param2) {
+    final static Sprite a(int param0, double param1, byte param2) {
         if (param2 > -31) {
           sn.a((byte) 27);
         }
-        vn var10 = new vn(640, 90);
+        Sprite var10 = new Sprite(640, 90);
         ki.a((byte) -97, var10);
-        vn var5 = new vn(640, 90);
+        Sprite var5 = new Sprite(640, 90);
         ki.a((byte) -94, var5);
-        bi.f(0, 5, 640, 75, 16777215, 1);
+        Rasterizer.f(0, 5, 640, 75, 16777215, 1);
         pa.a(-21189);
-        vn var6 = new vn(640, 90);
+        Sprite var6 = new Sprite(640, 90);
         ki.a((byte) -113, var6);
-        b.field_j.a(f.field_j[param0], 320, 65, 13631488, 1);
+        b.field_j.drawStringCentered(f.field_j[param0], 320, 65, 13631488, 1);
         pa.a(-21189);
-        vn var7 = new vn(640, 90);
+        Sprite var7 = new Sprite(640, 90);
         ki.a((byte) -123, var7);
         int var8 = (int)(param1 * 640.0);
         int var9 = (int)(param1 * 90.0);
@@ -93,10 +93,10 @@ final class sn {
         if (param0 != 12) {
           return false;
         }
-        return hl.a(param0 - 139, hc.a(param0 ^ 12));
+        return NodeHashTableIterator.a(param0 - 139, hc.a(param0 ^ 12));
     }
 
-    final static tj a(int param0, int param1, dj param2, dj param3, int param4) {
+    final static tj a(int param0, int param1, Js5Archive param2, Js5Archive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         tj stackIn_6_0 = null;
@@ -132,7 +132,7 @@ final class sn {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -153,21 +153,21 @@ final class sn {
           return;
         }
         try {
-          var5.field_j = var5.field_j + 1;
-          var4 = var5.field_j;
-          var5.i(1, 79);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, 79);
           if (param1.field_j == null) {
-            var5.i(0, 95);
+            var5.writeByte(0, 95);
           } else {
-            var5.i(param1.field_j.length, -90);
-            var5.a(param1.field_j, param1.field_j.length, 0, param2 ^ -27843);
+            var5.writeByte(param1.field_j.length, -90);
+            var5.writeBytes(param1.field_j, param1.field_j.length, 0, param2 ^ -27843);
           }
-          var5.e(-60, var4);
-          var5.field_j = var5.field_j - 4;
-          param1.field_k = var5.c(98);
-          var5.d(69, var5.field_j - var4);
+          var5.writeCrc32(-60, var4);
+          var5.position = var5.position - 4;
+          param1.field_k = var5.readInt(98);
+          var5.writeLengthPrefixByte(69, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class sn {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class sn {
         try {
           pg.a(true, param1, 31536000L, "jagex-last-login-method", this.field_a);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class sn {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -61,8 +61,8 @@ final class co {
           }
           break;
         }
-        var6Lifetime1 = new kc(param2, param1, hd.field_u[var7], param0, param3, hg.field_a[var7], si.field_Qb[var7]);
-        rg.field_J.a((nb) (var6Lifetime1), (byte) -119);
+        var6Lifetime1 = new kc(param2, param1, SpriteState.field_u[var7], param0, param3, hg.field_a[var7], si.field_Qb[var7]);
+        rg.field_J.addLast((DualLinkNode) (var6Lifetime1), (byte) -119);
         if (param4 == ch.field_b) {
           var6Lifetime1 = new te(param2, param1, 0, param0);
         }
@@ -100,25 +100,25 @@ final class co {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        le var1 = null;
-        le var2 = null;
+        IntrusiveNode var1 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        le var2Lifetime1;
-        le var2Lifetime2;
+        IntrusiveNode var2Lifetime1;
+        IntrusiveNode var2Lifetime2;
         var3 = ZombieDawn.field_J;
         try {
           var1 = kn.field_L.b((byte) 26);
           while (var1 instanceof tm) {
-            var2 = var1.field_b;
+            var2 = var1.previous;
             if (((tm) (var1)).field_j.l()) {
-              var1.b(-27598);
+              var1.unlink(-27598);
             }
             var1 = var2;
           }
@@ -127,17 +127,17 @@ final class co {
           }
           var1 = se.field_m.b((byte) 26);
           while (var1 instanceof tm) {
-            var2Lifetime1 = var1.field_b;
+            var2Lifetime1 = var1.previous;
             if (((tm) (var1)).field_j.l()) {
-              var1.b(-27598);
+              var1.unlink(-27598);
             }
             var1 = var2Lifetime1;
           }
-          var1 = rm.field_e.b((byte) 26);
+          var1 = DelegatingCanvas.field_e.b((byte) 26);
           while (var1 instanceof tm) {
-            var2Lifetime2 = var1.field_b;
+            var2Lifetime2 = var1.previous;
             if (((tm) (var1)).field_j.l()) {
-              var1.b(-27598);
+              var1.unlink(-27598);
             }
             var1 = var2Lifetime2;
           }
@@ -146,7 +146,7 @@ final class co {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "co.C(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "co.C(" + param0 + ')');
         }
     }
 

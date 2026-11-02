@@ -44,8 +44,8 @@ final class lk extends pm {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_h.a(param0, param1) == uc.field_b) {
-            stackIn_2_0 = uc.field_b;
+          if (this.field_h.a(param0, param1) == MouseWheelInput.field_b) {
+            stackIn_2_0 = MouseWheelInput.field_b;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_g)) {
@@ -60,7 +60,7 @@ final class lk extends pm {
           if (this.field_i) {
             stackIn_12_0 = mc.field_g;
           } else {
-            stackIn_12_0 = uc.field_b;
+            stackIn_12_0 = MouseWheelInput.field_b;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,7 +73,7 @@ final class lk extends pm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class lk extends pm {
         try {
           this.field_h = new fj(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,11 +100,11 @@ final class lk extends pm {
           if (param1 > -94) {
             field_k = (String) null;
           }
-          if (this.field_h.a(param0, 2) == uc.field_b) {
+          if (this.field_h.a(param0, 2) == MouseWheelInput.field_b) {
             stackIn_4_0 = this.field_h.a(param0, (byte) -119);
             return stackIn_4_0;
           }
-          if (this.a(param0, 2) != uc.field_b) {
+          if (this.a(param0, 2) != MouseWheelInput.field_b) {
             return sd.field_c;
           }
           stackIn_8_0 = ng.field_d;
@@ -119,7 +119,7 @@ final class lk extends pm {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -33,7 +33,7 @@ final class ho {
         }
     }
 
-    final static void a(vn param0, boolean param1, int param2, int param3) {
+    final static void a(Sprite param0, boolean param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -90,15 +90,15 @@ final class ho {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 118) {
-          vn var2 = (vn) null;
-          ho.a((vn) null, false, 18, -108);
+          Sprite var2 = (Sprite) null;
+          ho.a((Sprite) null, false, 18, -108);
         }
     }
 

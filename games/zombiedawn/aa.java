@@ -6,7 +6,7 @@ final class aa {
     private boolean field_h;
     int[] field_e;
     private int field_l;
-    static dj field_f;
+    static Js5Archive field_f;
     int field_i;
     int field_b;
     int field_j;
@@ -43,38 +43,38 @@ final class aa {
         field_g = null;
         field_a = null;
         if (param0 != -2008296413) {
-          de var2 = (de) null;
-          aa.a((de) null, -30);
+          PacketBuffer var2 = (PacketBuffer) null;
+          aa.a((PacketBuffer) null, -30);
         }
     }
 
-    final static void a(de param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
           sn.field_e = param0.f(2) << 5;
-          var2_int = param0.d((byte) -119);
+          var2_int = param0.readUnsignedByte((byte) -119);
           rj.field_E = (7 & var2_int) << 18;
           sn.field_e = sn.field_e + (var2_int >> 3);
           if (param1 > -93) {
             field_g = (String) null;
           }
           rj.field_E = rj.field_E + (param0.f(2) << 2);
-          var2_intLifetime1 = param0.d((byte) -117);
-          ii.field_d = (var2_intLifetime1 & 63) << 15;
+          var2_intLifetime1 = param0.readUnsignedByte((byte) -117);
+          SecondaryNodeDeque.field_d = (var2_intLifetime1 & 63) << 15;
           rj.field_E = rj.field_E + (var2_intLifetime1 >> 6);
-          ii.field_d = ii.field_d + (param0.d((byte) -127) << 7);
-          var2_intLifetime2 = param0.d((byte) -120);
+          SecondaryNodeDeque.field_d = SecondaryNodeDeque.field_d + (param0.readUnsignedByte((byte) -127) << 7);
+          var2_intLifetime2 = param0.readUnsignedByte((byte) -120);
           e.field_H = (1 & var2_intLifetime2) << 16;
-          ii.field_d = ii.field_d + (var2_intLifetime2 >> 1);
+          SecondaryNodeDeque.field_d = SecondaryNodeDeque.field_d + (var2_intLifetime2 >> 1);
           e.field_H = e.field_H + param0.f(2);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "aa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "aa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static hn a(int param0, fn param1) {
+    final static hn a(int param0, PcmSampleStream param1) {
         hn var2 = null;
         RuntimeException var2_ref = null;
         hn stackIn_3_0 = null;
@@ -87,8 +87,8 @@ final class aa {
             aa.a(31);
           }
           var2 = new hn(param1, param1);
-          fj.field_i.a(0, var2);
-          t.field_i.b(param1);
+          fj.field_i.addFirst(0, var2);
+          t.field_i.addSubstream(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,7 +101,7 @@ final class aa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

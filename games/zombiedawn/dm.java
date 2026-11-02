@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm extends nb {
+final class dm extends DualLinkNode {
     static String field_q;
     static String field_s;
     int[] field_u;
@@ -11,7 +11,7 @@ final class dm extends nb {
     private int[][] field_w;
     static int[] field_p;
 
-    final void a(de param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -25,7 +25,7 @@ final class dm extends nb {
             this.field_t = (String[]) null;
           }
           while (true) {
-            var3_int = param0.d((byte) -120);
+            var3_int = param0.readUnsignedByte((byte) -120);
             if (0 == var3_int) {
               return;
             }
@@ -41,7 +41,7 @@ final class dm extends nb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ final class dm extends nb {
         int var3 = ZombieDawn.field_J;
         if (this.field_u != null) {
           for (var2 = 0; this.field_u.length > var2; var2++) {
-            this.field_u[var2] = hi.a(this.field_u[var2], 32768);
+            this.field_u[var2] = GameWorld.a(this.field_u[var2], 32768);
           }
         }
         if (param0 != -76) {
@@ -96,7 +96,7 @@ final class dm extends nb {
         field_p = null;
     }
 
-    private final void a(de param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -115,17 +115,17 @@ final class dm extends nb {
             this.e(58);
           }
           if (param1 == 1) {
-            this.field_t = de.a('<', param0.a(true), -123);
+            this.field_t = PacketBuffer.split('<', param0.a(true), -123);
           } else {
             if (param1 == 2) {
-              var4_int = param0.d((byte) -122);
+              var4_int = param0.readUnsignedByte((byte) -122);
               this.field_u = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
                 this.field_u[var5] = param0.f(2);
               }
             } else {
               if (param1 == 3) {
-                var4_int = param0.d((byte) -127);
+                var4_int = param0.readUnsignedByte((byte) -127);
                 this.field_v = new int[var4_int];
                 this.field_w = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
@@ -158,7 +158,7 @@ final class dm extends nb {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -170,15 +170,15 @@ final class dm extends nb {
         field_p = new int[256];
         field_r = new int[256];
         for (var0 = 0; field_p.length > var0; var0++) {
-          field_p[var0] = hi.a(field_p[var0], var0 << 16);
-          field_p[var0] = hi.a(field_p[var0], var0 / 3 << 8);
+          field_p[var0] = GameWorld.a(field_p[var0], var0 << 16);
+          field_p[var0] = GameWorld.a(field_p[var0], var0 / 3 << 8);
         }
         int var1 = 0;
         var0Lifetime1 = var1;
         while (field_r.length > var1) {
-          field_r[var1] = hi.a(field_r[var1], var1 << 16);
-          field_r[var1] = hi.a(field_r[var1], var1 << 8);
-          field_r[var1] = hi.a(field_r[var1], var1);
+          field_r[var1] = GameWorld.a(field_r[var1], var1 << 16);
+          field_r[var1] = GameWorld.a(field_r[var1], var1 << 8);
+          field_r[var1] = GameWorld.a(field_r[var1], var1);
           var1++;
         }
     }

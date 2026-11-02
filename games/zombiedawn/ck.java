@@ -4,21 +4,21 @@
 import java.io.*;
 import java.util.*;
 
-final class ck extends le {
-    private fn field_j;
-    static vn field_i;
-    private fn field_r;
+final class ck extends IntrusiveNode {
+    private PcmSampleStream field_j;
+    static Sprite field_i;
+    private PcmSampleStream field_r;
     private int field_q;
     int field_o;
     private int field_p;
     private int field_m;
     static int field_n;
     private oj[] field_s;
-    private vo field_l;
+    private IntrusiveDeque field_l;
     private boolean field_h;
     private int field_k;
 
-    final void a(wk param0, byte param1) {
+    final void a(Camera param0, byte param1) {
         int var11 = 0;
         int stackIn_7_0 = 0;
         int stackIn_19_0 = 0;
@@ -40,8 +40,8 @@ final class ck extends le {
         int var6Lifetime1;
         var13 = ZombieDawn.field_J;
         try {
-          var3_int = param0.a(this.field_k, (byte) -91);
-          var4 = param0.a(this.field_p, 0);
+          var3_int = param0.worldToScreenX(this.field_k, (byte) -91);
+          var4 = param0.worldToScreenY(this.field_p, 0);
           if (param1 != 110) {
             ck.d(-107);
           }
@@ -103,7 +103,7 @@ final class ck extends le {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -116,24 +116,24 @@ final class ck extends le {
 
     final static boolean a(byte param0, int param1) {
         try {
-          if (param1 <= fj.field_g.field_j) {
+          if (param1 <= fj.field_g.position) {
             return true;
           }
           if (null == sn.field_c) {
             return false;
           }
-          int var2_int = sn.field_c.b((byte) -109);
+          int var2_int = sn.field_c.available((byte) -109);
           if (var2_int > 0) {
-            if (-fj.field_g.field_j + param1 < var2_int) {
-              var2_int = -fj.field_g.field_j + param1;
+            if (-fj.field_g.position + param1 < var2_int) {
+              var2_int = -fj.field_g.position + param1;
             }
-            sn.field_c.a(fj.field_g.field_j, var2_int, fj.field_g.field_h, 0);
+            sn.field_c.readFully(fj.field_g.position, var2_int, fj.field_g.payload, 0);
             pi.field_i = pd.a(-22826);
-            fj.field_g.field_j = fj.field_g.field_j + var2_int;
-            if (!(fj.field_g.field_j >= param1)) {
+            fj.field_g.position = fj.field_g.position + var2_int;
+            if (!(fj.field_g.position >= param1)) {
               return false;
             }
-            fj.field_g.field_j = 0;
+            fj.field_g.position = 0;
             return true;
           }
           try {
@@ -167,9 +167,9 @@ final class ck extends le {
         int stackIn_10_2 = 0;
         int var2;
         int var3_int;
-        le var3;
-        le var4;
-        fb var5;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
+        WorldObject var5;
         int var6;
         int var7;
         int var8;
@@ -199,47 +199,47 @@ final class ck extends le {
         this.field_q = stackIn_9_1 + stackIn_10_2;
         if (this.field_q > this.field_m) {
           if (this.field_h) {
-            dj.field_e.b(true);
+            Js5Archive.field_e.b(true);
             ck.a(-7, 6836);
           } else {
             ck.a(-5, 6836);
           }
-          this.b(param0 ^ 18347);
+          this.unlink(param0 ^ 18347);
         }
         var2 = this.field_q * this.field_q;
         var3 = this.field_l.b((byte) 26);
         while (var3 instanceof s) {
-          var4 = var3.field_b;
+          var4 = var3.previous;
           if (((s) (var3)).field_i < var2) {
-            var3.b(-27598);
+            var3.unlink(-27598);
             var5 = ((s) (var3)).field_h;
-            if (!(var5 instanceof kd)) {
-              if (var5 instanceof ah) {
-                ((ah) (var5)).c(this.field_k, 45, this.field_p);
+            if (!(var5 instanceof Zombie)) {
+              if (var5 instanceof Human) {
+                ((Human) (var5)).c(this.field_k, 45, this.field_p);
               } else {
                 if (var5 instanceof id &&
                   ((id) (var5)).a(true, false)) {
-                  var6 = var5.a(true) / 24;
-                  var7 = var5.f(237239984) / 24;
-                  if (var5.f(237239984) % 24 == 0) {
+                  var6 = var5.getX(true) / 24;
+                  var7 = var5.getY(237239984) / 24;
+                  if (var5.getY(237239984) % 24 == 0) {
                     var7--;
                   }
-                  dj.field_e.field_H.field_A.field_f[var7][var6] = eg.a(dj.field_e.field_H.field_A.field_f[var7][var6], -33554433);
-                  dj.field_e.field_H.field_A.field_f[var7 - 1][var6] = eg.a(dj.field_e.field_H.field_A.field_f[var7 - 1][var6], -33554433);
-                  dj.field_e.field_H.field_A.a(true, param0 + 25732, var7, false, var6);
-                  dj.field_e.field_H.field_A.a(true, 14365, var7 - 1, false, var6);
+                  Js5Archive.field_e.navigation.field_A.tiles[var7][var6] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[var7][var6], -33554433);
+                  Js5Archive.field_e.navigation.field_A.tiles[var7 - 1][var6] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[var7 - 1][var6], -33554433);
+                  Js5Archive.field_e.navigation.field_A.a(true, param0 + 25732, var7, false, var6);
+                  Js5Archive.field_e.navigation.field_A.a(true, 14365, var7 - 1, false, var6);
                   this.field_h = true;
                   if (null != this.field_r) {
                     pc.a((byte) 13, this.field_r);
                   }
-                  this.field_r = kh.a(pb.a(so.field_a, 2, 1) + 64, false);
+                  this.field_r = kh.a(pb.a(so.random, 2, 1) + 64, false);
                 }
               }
             } else {
               if (this.field_o == 1) {
-                ((kd) (var5)).c(401408, this.field_p, this.field_k);
+                ((Zombie) (var5)).c(401408, this.field_p, this.field_k);
               } else {
-                ((kd) (var5)).z(0);
+                ((Zombie) (var5)).z(0);
               }
             }
           }
@@ -258,7 +258,7 @@ final class ck extends le {
         }
         boolean decompiledFrameRemainder0 = true;
         if (param0 == -8 &&
-          !h.field_d && (vk.field_c == 7 &&
+          !MouseInputHandler.field_d && (vk.field_c == 7 &&
           vf.field_f == 3 ||
           vk.field_c == 7 &&
           vf.field_f == 4 ||
@@ -269,7 +269,7 @@ final class ck extends le {
           vk.field_c == 6 &&
           vf.field_f == 5)) {
           bo.a(97, -2);
-          h.field_d = true;
+          MouseInputHandler.field_d = true;
           decompiledFrameRemainder0 = false;
         }
         else {
@@ -615,7 +615,7 @@ final class ck extends le {
         int stackIn_39_0 = 0;
         int stackIn_40_1 = 0;
         int var4;
-        le var5;
+        IntrusiveNode var5;
         int var6;
         int var7;
         int var8;
@@ -628,7 +628,7 @@ final class ck extends le {
         this.field_r = null;
         this.field_j = null;
         this.field_h = false;
-        if (!dj.field_e.field_H.a(param0, param1, 106)) {
+        if (!Js5Archive.field_e.navigation.a(param0, param1, 106)) {
           param1 = param1 - (-4 + param1 % 24);
         }
         this.field_k = param0;
@@ -664,17 +664,17 @@ final class ck extends le {
             this.field_s[var5_int] = new oj(tk.field_d[var4Lifetime1 * var5_int] * 6.0f, 6.0f * tk.field_g[var5_int * var4Lifetime1]);
           }
         }
-        this.field_l = new vo();
+        this.field_l = new IntrusiveDeque();
         var4Lifetime2 = this.field_m * this.field_m;
-        var5 = dj.field_e.field_R.b((byte) 26);
-        while (var5 instanceof fb) {
-          if (var5 instanceof kd &&
-            9 != ((kd) (var5)).field_F ||
+        var5 = Js5Archive.field_e.zombies.b((byte) 26);
+        while (var5 instanceof WorldObject) {
+          if (var5 instanceof Zombie &&
+            9 != ((Zombie) (var5)).state ||
             var5 instanceof id ||
-            var5 instanceof ah &&
-            ((ah) (var5)).field_F != 2) {
-            var6 = ((fb) (var5)).a(true);
-            var7 = ((fb) (var5)).f(237239984);
+            var5 instanceof Human &&
+            ((Human) (var5)).state != 2) {
+            var6 = ((WorldObject) (var5)).getX(true);
+            var7 = ((WorldObject) (var5)).getY(237239984);
             var8 = -var6 + this.field_k;
             var9 = this.field_p - var7;
             var10 = var8 * var8 + var9 * var9;
@@ -683,7 +683,7 @@ final class ck extends le {
             if (!(var5 instanceof id)) {
               if (this.field_o != 1) {
                 stackIn_39_0 = var11;
-                if (dj.field_e.field_H.a(var7, this.field_p, var6, this.field_k, 124) == -1) {
+                if (Js5Archive.field_e.navigation.a(var7, this.field_p, var6, this.field_k, 124) == -1) {
                   stackIn_40_1 = 0;
                 } else {
                   stackIn_40_1 = 1;
@@ -692,10 +692,10 @@ final class ck extends le {
               }
             } else {
               stackIn_33_0 = var11;
-              if (dj.field_e.field_H.a(-24 + var7 - 26, this.field_p, var6, this.field_k, 110) == -1 &&
-                dj.field_e.field_H.a(-24 + var7 - 26, this.field_p, 24 + var6, this.field_k, 125) == -1 &&
-                dj.field_e.field_H.a(var7 + 2, this.field_p, var6, this.field_k, 109) == -1 &&
-                dj.field_e.field_H.a(2 + var7, this.field_p, var6 + 24, this.field_k, 111) == -1) {
+              if (Js5Archive.field_e.navigation.a(-24 + var7 - 26, this.field_p, var6, this.field_k, 110) == -1 &&
+                Js5Archive.field_e.navigation.a(-24 + var7 - 26, this.field_p, 24 + var6, this.field_k, 125) == -1 &&
+                Js5Archive.field_e.navigation.a(var7 + 2, this.field_p, var6, this.field_k, 109) == -1 &&
+                Js5Archive.field_e.navigation.a(2 + var7, this.field_p, var6 + 24, this.field_k, 111) == -1) {
                 stackIn_35_1 = 0;
               } else {
                 stackIn_35_1 = 1;
@@ -703,10 +703,10 @@ final class ck extends le {
               var11 = stackIn_33_0 & stackIn_35_1;
             }
             if (var11 != 0) {
-              this.field_l.a(0, new s((fb) (var5), var10));
+              this.field_l.addFirst(0, new s((WorldObject) (var5), var10));
             }
           }
-          var5 = var5.field_b;
+          var5 = var5.previous;
         }
         if (this.field_o != 2) {
           this.field_j = kh.a(0, false);

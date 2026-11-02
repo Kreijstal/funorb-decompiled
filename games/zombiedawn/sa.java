@@ -16,20 +16,20 @@ final class sa extends pn {
         if (param2 > -111) {
           this.m(-92);
           super.a(param0, param1, (byte) -121);
-          rk.field_b.a(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
+          rk.field_b.drawStringCentered(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
           if (this.field_X != null) {
-            bi.b(param0 + 20, -7 + (param1 + 120), 260, 8421504);
+            Rasterizer.drawHorizontalLine(param0 + 20, -7 + (param1 + 120), 260, 8421504);
             rk.field_b.a(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
             return;
           }
           return;
         }
         super.a(param0, param1, (byte) -121);
-        rk.field_b.a(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
+        rk.field_b.drawStringCentered(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
         if (this.field_X == null) {
           return;
         }
-        bi.b(param0 + 20, -7 + (param1 + 120), 260, 8421504);
+        Rasterizer.drawHorizontalLine(param0 + 20, -7 + (param1 + 120), 260, 8421504);
         rk.field_b.a(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
     }
 
@@ -43,7 +43,7 @@ final class sa extends pn {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 61 % ((param1 - 51) / 40);
-          stackIn_1_0 = tf.a(true, 5, param0, param2);
+          stackIn_1_0 = SpatialBucket.a(true, 5, param0, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,7 +55,7 @@ final class sa extends pn {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class sa extends pn {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class sa extends pn {
           this.field_ab = false;
           this.a(this.field_V, 10);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

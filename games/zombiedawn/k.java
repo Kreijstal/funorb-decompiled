@@ -11,7 +11,7 @@ final class k extends vf {
         int var1 = -126 % ((48 - param0) / 63);
     }
 
-    public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -29,7 +29,7 @@ final class k extends vf {
         int var12 = 0;
         int var13 = 0;
         try {
-          bi.c(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, 10197915);
+          Rasterizer.drawRectOutline(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, 10197915);
           if (param1) {
             stackIn_6_0 = (((an) (param3)).field_x) ? 1 : 0;
           } else {
@@ -59,7 +59,7 @@ final class k extends vf {
             k.a(-100, -115);
           }
           var10.a(var11, var12);
-          this.field_m.a(this.b(12307, param3), var13, param2, var9, -1);
+          this.field_m.drawStringCentered(this.b(12307, param3), var13, param2, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class k extends vf {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class k extends vf {
         int var2 = 0;
         int var3 = ZombieDawn.field_J;
         int var2Lifetime1;
-        hi.field_O = null;
+        GameWorld.field_O = null;
         if (param1 != 50) {
           field_r = (String) null;
           sb.field_a = null;
@@ -89,14 +89,14 @@ final class k extends vf {
           qj.field_e = var2;
           if (param0 != 51) {
             if (param0 != 50) {
-              tf.field_c.field_e = 1;
-              tf.field_c.field_h = tf.field_c.field_h + 1;
-              if (tf.field_c.field_h < 2) {
-                if (2 <= tf.field_c.field_h &&
+              SpatialBucket.field_c.field_e = 1;
+              SpatialBucket.field_c.field_h = SpatialBucket.field_c.field_h + 1;
+              if (SpatialBucket.field_c.field_h < 2) {
+                if (2 <= SpatialBucket.field_c.field_h &&
                   50 == param0) {
                   return 5;
                 }
-                if (tf.field_c.field_h < 4) {
+                if (SpatialBucket.field_c.field_h < 4) {
                   return -1;
                 }
                 return 1;
@@ -104,8 +104,8 @@ final class k extends vf {
               if (param0 == 51) {
                 return 2;
               }
-              if (2 > tf.field_c.field_h) {
-                if (tf.field_c.field_h < 4) {
+              if (2 > SpatialBucket.field_c.field_h) {
+                if (SpatialBucket.field_c.field_h < 4) {
                   return -1;
                 }
                 return 1;
@@ -113,19 +113,19 @@ final class k extends vf {
               if (50 == param0) {
                 return 5;
               }
-              if (tf.field_c.field_h < 4) {
+              if (SpatialBucket.field_c.field_h < 4) {
                 return -1;
               }
               return 1;
             }
-            tf.field_c.field_e = 5;
-            tf.field_c.field_h = tf.field_c.field_h + 1;
-            if (tf.field_c.field_h < 2) {
-              if (2 <= tf.field_c.field_h &&
+            SpatialBucket.field_c.field_e = 5;
+            SpatialBucket.field_c.field_h = SpatialBucket.field_c.field_h + 1;
+            if (SpatialBucket.field_c.field_h < 2) {
+              if (2 <= SpatialBucket.field_c.field_h &&
                 50 == param0) {
                 return 5;
               }
-              if (tf.field_c.field_h < 4) {
+              if (SpatialBucket.field_c.field_h < 4) {
                 return -1;
               }
               return 1;
@@ -133,8 +133,8 @@ final class k extends vf {
             if (param0 == 51) {
               return 2;
             }
-            if (2 > tf.field_c.field_h) {
-              if (tf.field_c.field_h < 4) {
+            if (2 > SpatialBucket.field_c.field_h) {
+              if (SpatialBucket.field_c.field_h < 4) {
                 return -1;
               }
               return 1;
@@ -142,22 +142,22 @@ final class k extends vf {
             if (50 == param0) {
               return 5;
             }
-            if (tf.field_c.field_h < 4) {
+            if (SpatialBucket.field_c.field_h < 4) {
               return -1;
             }
             return 1;
           }
-          tf.field_c.field_e = 2;
-          tf.field_c.field_h = tf.field_c.field_h + 1;
-          if (tf.field_c.field_h < 2) {
-            if (2 > tf.field_c.field_h) {
-              if (tf.field_c.field_h < 4) {
+          SpatialBucket.field_c.field_e = 2;
+          SpatialBucket.field_c.field_h = SpatialBucket.field_c.field_h + 1;
+          if (SpatialBucket.field_c.field_h < 2) {
+            if (2 > SpatialBucket.field_c.field_h) {
+              if (SpatialBucket.field_c.field_h < 4) {
                 return -1;
               }
               return 1;
             }
             if (50 != param0) {
-              if (tf.field_c.field_h >= 4) {
+              if (SpatialBucket.field_c.field_h >= 4) {
                 return 1;
               }
               return -1;
@@ -167,8 +167,8 @@ final class k extends vf {
           if (param0 == 51) {
             return 2;
           }
-          if (2 > tf.field_c.field_h) {
-            if (tf.field_c.field_h >= 4) {
+          if (2 > SpatialBucket.field_c.field_h) {
+            if (SpatialBucket.field_c.field_h >= 4) {
               return 1;
             }
             return -1;
@@ -176,7 +176,7 @@ final class k extends vf {
           if (50 == param0) {
             return 5;
           }
-          if (tf.field_c.field_h >= 4) {
+          if (SpatialBucket.field_c.field_h >= 4) {
             return 1;
           }
           return -1;
@@ -188,74 +188,74 @@ final class k extends vf {
         qj.field_e = var2Lifetime1;
         if (param0 != 51) {
           if (param0 != 50) {
-            tf.field_c.field_e = 1;
-            tf.field_c.field_h = tf.field_c.field_h + 1;
-            if (tf.field_c.field_h >= 2) {
+            SpatialBucket.field_c.field_e = 1;
+            SpatialBucket.field_c.field_h = SpatialBucket.field_c.field_h + 1;
+            if (SpatialBucket.field_c.field_h >= 2) {
               if (param0 != 51) {
-                if (2 <= tf.field_c.field_h &&
+                if (2 <= SpatialBucket.field_c.field_h &&
                   50 == param0) {
                   return 5;
                 }
-                if (tf.field_c.field_h >= 4) {
+                if (SpatialBucket.field_c.field_h >= 4) {
                   return 1;
                 }
                 return -1;
               }
               return 2;
             }
-            if (2 <= tf.field_c.field_h &&
+            if (2 <= SpatialBucket.field_c.field_h &&
               50 == param0) {
               return 5;
             }
-            if (tf.field_c.field_h >= 4) {
+            if (SpatialBucket.field_c.field_h >= 4) {
               return 1;
             }
             return -1;
           }
-          tf.field_c.field_e = 5;
-          tf.field_c.field_h = tf.field_c.field_h + 1;
-          if (tf.field_c.field_h >= 2) {
+          SpatialBucket.field_c.field_e = 5;
+          SpatialBucket.field_c.field_h = SpatialBucket.field_c.field_h + 1;
+          if (SpatialBucket.field_c.field_h >= 2) {
             if (param0 != 51) {
-              if (2 <= tf.field_c.field_h &&
+              if (2 <= SpatialBucket.field_c.field_h &&
                 50 == param0) {
                 return 5;
               }
-              if (tf.field_c.field_h >= 4) {
+              if (SpatialBucket.field_c.field_h >= 4) {
                 return 1;
               }
               return -1;
             }
             return 2;
           }
-          if (2 <= tf.field_c.field_h &&
+          if (2 <= SpatialBucket.field_c.field_h &&
             50 == param0) {
             return 5;
           }
-          if (tf.field_c.field_h >= 4) {
+          if (SpatialBucket.field_c.field_h >= 4) {
             return 1;
           }
           return -1;
         }
-        tf.field_c.field_e = 2;
-        tf.field_c.field_h = tf.field_c.field_h + 1;
-        if (tf.field_c.field_h >= 2) {
+        SpatialBucket.field_c.field_e = 2;
+        SpatialBucket.field_c.field_h = SpatialBucket.field_c.field_h + 1;
+        if (SpatialBucket.field_c.field_h >= 2) {
           if (param0 != 51) {
-            if (2 <= tf.field_c.field_h &&
+            if (2 <= SpatialBucket.field_c.field_h &&
               50 == param0) {
               return 5;
             }
-            if (tf.field_c.field_h >= 4) {
+            if (SpatialBucket.field_c.field_h >= 4) {
               return 1;
             }
             return -1;
           }
           return 2;
         }
-        if (2 <= tf.field_c.field_h &&
+        if (2 <= SpatialBucket.field_c.field_h &&
           50 == param0) {
           return 5;
         }
-        if (tf.field_c.field_h >= 4) {
+        if (SpatialBucket.field_c.field_h >= 4) {
           return 1;
         }
         return -1;
@@ -266,7 +266,7 @@ final class k extends vf {
           this.field_s = param0;
           this.field_m = ia.field_e;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

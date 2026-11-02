@@ -11394,6 +11394,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "zombiedawn": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/zombiedawn"
+      },
+      "inputTreeSha256": "24c601f41499c4927359bf70b61eea85671ac110b52dcf8a31246a7e10338ffc",
+      "sources": {
+        "files": 386,
+        "sha256": "dc45d1e02872d639b2d07c15a284aba945950d0e6c7bd18d43c7ac39a2a542f1"
+      },
+      "dictionary": {
+        "path": "decompilation/zombiedawn-naming.json",
+        "sha256": "d7676cdbb1fad520ac318cb561b0e4487b5df5e721b94335f8aac1679d9e4e0d"
+      },
+      "readingGuide": {
+        "path": "games/zombiedawn/README.md",
+        "sha256": "35a8054e7b803478027af5b625b2baf1b5f2c41bdabb399cd27e3062a13ff13c"
+      },
+      "rulesSha256": "e90462c2b2c9eabb2eb0eaf54796d8508f148670222571543d9a61b56aca63a0",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -13727,6 +13751,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 386,
+          "sha256": "dc45d1e02872d639b2d07c15a284aba945950d0e6c7bd18d43c7ac39a2a542f1"
         }
       },
       "zombiedawnmulti": {

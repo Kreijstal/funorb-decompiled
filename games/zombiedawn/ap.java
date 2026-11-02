@@ -143,7 +143,7 @@ final class ap extends al {
               }
               if (!param6) {
                 if (!param5) {
-                  if (dj.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.b(-25983)) {
                     stackIn_44_1 = kc.field_Y;
                   } else {
                     stackIn_44_1 = po.field_wb;
@@ -228,7 +228,7 @@ final class ap extends al {
               }
               if (!param6) {
                 if (!param5) {
-                  if (dj.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.b(-25983)) {
                     stackIn_91_1 = kc.field_Y;
                   } else {
                     stackIn_91_1 = po.field_wb;
@@ -294,7 +294,7 @@ final class ap extends al {
           if (param3 < -19) {
             if (!param6) {
               if (!param5) {
-                if (dj.field_e.b(-25983)) {
+                if (Js5Archive.field_e.b(-25983)) {
                   stackIn_125_1 = kc.field_Y;
                 } else {
                   stackIn_125_1 = po.field_wb;
@@ -326,7 +326,7 @@ final class ap extends al {
             this.a((byte) -39);
             if (!param6) {
               if (!param5) {
-                if (dj.field_e.b(-25983)) {
+                if (Js5Archive.field_e.b(-25983)) {
                   stackIn_142_1 = kc.field_Y;
                 } else {
                   stackIn_142_1 = po.field_wb;
@@ -380,7 +380,7 @@ final class ap extends al {
               }
             } else {
               if (!param5) {
-                if (dj.field_e.b(-25983)) {
+                if (Js5Archive.field_e.b(-25983)) {
                   stackIn_196_1 = kc.field_Y;
                 } else {
                   stackIn_196_1 = po.field_wb;
@@ -404,7 +404,7 @@ final class ap extends al {
               this.a((byte) -39);
               if (!param6) {
                 if (!param5) {
-                  if (dj.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.b(-25983)) {
                     stackIn_162_1 = kc.field_Y;
                   } else {
                     stackIn_162_1 = po.field_wb;
@@ -447,7 +447,7 @@ final class ap extends al {
                 }
               } else {
                 if (!param5) {
-                  if (dj.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.b(-25983)) {
                     stackIn_174_1 = kc.field_Y;
                   } else {
                     stackIn_174_1 = po.field_wb;
@@ -488,9 +488,9 @@ final class ap extends al {
         int var3;
         int var5;
         int var6;
-        hi var7;
-        hi var9;
-        hi var10;
+        GameWorld var7;
+        GameWorld var9;
+        GameWorld var10;
         int var5Lifetime1;
         int var5Lifetime2;
         var6 = ZombieDawn.field_J;
@@ -634,7 +634,7 @@ final class ap extends al {
           return;
         }
         if (this.field_y) {
-          var7 = dj.field_e;
+          var7 = Js5Archive.field_e;
           var5 = this.field_n;
           var7.field_eb = var7.field_eb + (var5 << 8);
           var7.field_G = var7.field_G + var5;
@@ -790,7 +790,7 @@ final class ap extends al {
           return;
         }
         if (1 == this.field_x) {
-          var9 = dj.field_e;
+          var9 = Js5Archive.field_e;
           var5Lifetime1 = (this.field_r + 1) / 2 * this.field_E + this.field_D * this.field_A;
           var9.field_eb = var9.field_eb + (var5Lifetime1 << 8);
           var9.field_g = var9.field_g - var9.field_K * var5Lifetime1;
@@ -948,7 +948,7 @@ final class ap extends al {
           this.field_B = 2;
           return;
         }
-        var10 = dj.field_e;
+        var10 = Js5Archive.field_e;
         var5Lifetime2 = (this.field_r + 1) / 2 * this.field_E + this.field_D * this.field_A;
         var10.field_eb = var10.field_eb + (var5Lifetime2 << 8);
         var10.field_g = var10.field_g - var10.field_K * var5Lifetime2;
@@ -1070,7 +1070,7 @@ final class ap extends al {
               var7 = kn.field_I;
             }
           }
-          sg.field_jb.b(var7, vh.field_b + 350, var5, this.field_G, var3);
+          sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
         } else {
           if (this.field_x == 2) {
             var9 = fm.field_I;
@@ -1092,7 +1092,7 @@ final class ap extends al {
                 var7 = kn.field_I;
               }
             }
-            sg.field_jb.b(var7, vh.field_b + 350, var5, this.field_G, var3);
+            sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
           } else {
             if (this.field_x == -1) {
               if (vl.field_b.f(-107) != 27) {
@@ -1101,7 +1101,7 @@ final class ap extends al {
                   return;
                 }
                 var5 = var5 + (var4 * (1 + sg.field_jb.a(var10, vh.field_b + 40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
-                sharedTailExit_1: {
+                regionExit1: {
                   if (param0 < -35) {
                     if (var5 < 205) {
                       var5 = 205;
@@ -1124,22 +1124,22 @@ final class ap extends al {
                       var7 = sa.field_bb;
                     } else {
                       if (!this.field_t) {
-                        sg.field_jb.b(var11, vh.field_b + 350, var5, this.field_G, var3);
-                        break sharedTailExit_1;
+                        sg.field_jb.drawStringRightAligned(var11, vh.field_b + 350, var5, this.field_G, var3);
+                        break regionExit1;
                       }
                       var7 = kn.field_I;
                     }
                   }
-                  sg.field_jb.b(var7, vh.field_b + 350, var5, this.field_G, var3);
+                  sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
                 }
-                sg.field_jb.c(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
+                sg.field_jb.drawString(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
                 var5 = var5 + (var4 + 5);
                 if (this.field_H) {
-                  sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
-                  sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
+                  sg.field_jb.drawStringRightAligned(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
+                  sg.field_jb.drawString(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
                 }
-                sg.field_jb.b(aj.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
-                sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
+                sg.field_jb.drawStringRightAligned(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
+                sg.field_jb.drawString(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
                 return;
               }
               var6 = hb.field_D[vl.field_b.field_bb];
@@ -1160,12 +1160,12 @@ final class ap extends al {
               } else {
                 if (this.field_t) {
                   var14 = kn.field_I;
-                  sg.field_jb.b(var14, vh.field_b + 350, var5, this.field_G, var3);
+                  sg.field_jb.drawStringRightAligned(var14, vh.field_b + 350, var5, this.field_G, var3);
                   decompiledFrameRemainder0 = false;
                 }
               }
               if (decompiledFrameRemainder0) {
-                sg.field_jb.b(var7, vh.field_b + 350, var5, this.field_G, var3);
+                sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
               }
             } else {
               if (var5 < 205) {
@@ -1177,40 +1177,40 @@ final class ap extends al {
               } else {
                 if (this.field_t) {
                   var15 = kn.field_I;
-                  sg.field_jb.b(var15, vh.field_b + 350, var5, this.field_G, var3);
-                  sg.field_jb.c(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
+                  sg.field_jb.drawStringRightAligned(var15, vh.field_b + 350, var5, this.field_G, var3);
+                  sg.field_jb.drawString(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
                   var5 = var5 + (var4 + 5);
                   if (this.field_H) {
-                    sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
-                    sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
+                    sg.field_jb.drawStringRightAligned(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
+                    sg.field_jb.drawString(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
                   }
-                  sg.field_jb.b(aj.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
-                  sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
+                  sg.field_jb.drawStringRightAligned(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
+                  sg.field_jb.drawString(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
                   return;
                 }
               }
-              sg.field_jb.b(var7, vh.field_b + 350, var5, this.field_G, var3);
+              sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
             }
           }
         }
-        sg.field_jb.c(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
+        sg.field_jb.drawString(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
         var5 = var5 + (var4 + 5);
         if (this.field_H) {
-          sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
-          sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
+          sg.field_jb.drawStringRightAligned(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
+          sg.field_jb.drawString(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
         }
-        sg.field_jb.b(aj.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
-        sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
+        sg.field_jb.drawStringRightAligned(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
+        sg.field_jb.drawString(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
     }
 
     final void b(byte param0) {
-        vn[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         int stackIn_5_1 = 0;
-        vn[] stackIn_9_0 = null;
+        Sprite[] stackIn_9_0 = null;
         int stackIn_10_1 = 0;
-        vn[] stackIn_18_0 = null;
+        Sprite[] stackIn_18_0 = null;
         int stackIn_19_1 = 0;
-        vn[] stackIn_23_0 = null;
+        Sprite[] stackIn_23_0 = null;
         int stackIn_24_1 = 0;
         int var3;
         var3 = ZombieDawn.field_J;
@@ -1218,18 +1218,18 @@ final class ap extends al {
           if (640 != bd.field_e) {
             stackIn_18_0 = qk.field_Hb;
             stackIn_19_1 = (2 != this.field_x) ? 2 : 3;
-            ((vn) (Object) stackIn_18_0[stackIn_19_1]).a(0, 0, bd.field_e, nh.field_P);
+            ((Sprite) (Object) stackIn_18_0[stackIn_19_1]).a(0, 0, bd.field_e, nh.field_P);
           } else {
             if (nh.field_P == 480) {
               if (this.field_x == 2) {
-                qk.field_Hb[3].e(0, 0);
+                qk.field_Hb[3].drawWithOffsets(0, 0);
               } else {
-                qk.field_Hb[2].e(0, 0);
+                qk.field_Hb[2].drawWithOffsets(0, 0);
               }
             } else {
               stackIn_23_0 = qk.field_Hb;
               stackIn_24_1 = (2 != this.field_x) ? 2 : 3;
-              ((vn) (Object) stackIn_23_0[stackIn_24_1]).a(0, 0, bd.field_e, nh.field_P);
+              ((Sprite) (Object) stackIn_23_0[stackIn_24_1]).a(0, 0, bd.field_e, nh.field_P);
             }
           }
         } else {
@@ -1237,18 +1237,18 @@ final class ap extends al {
           if (640 != bd.field_e) {
             stackIn_4_0 = qk.field_Hb;
             stackIn_5_1 = (2 != this.field_x) ? 2 : 3;
-            ((vn) (Object) stackIn_4_0[stackIn_5_1]).a(0, 0, bd.field_e, nh.field_P);
+            ((Sprite) (Object) stackIn_4_0[stackIn_5_1]).a(0, 0, bd.field_e, nh.field_P);
           } else {
             if (nh.field_P == 480) {
               if (this.field_x != 2) {
-                qk.field_Hb[2].e(0, 0);
+                qk.field_Hb[2].drawWithOffsets(0, 0);
               } else {
-                qk.field_Hb[3].e(0, 0);
+                qk.field_Hb[3].drawWithOffsets(0, 0);
               }
             } else {
               stackIn_9_0 = qk.field_Hb;
               stackIn_10_1 = (2 != this.field_x) ? 2 : 3;
-              ((vn) (Object) stackIn_9_0[stackIn_10_1]).a(0, 0, bd.field_e, nh.field_P);
+              ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).a(0, 0, bd.field_e, nh.field_P);
             }
           }
         }

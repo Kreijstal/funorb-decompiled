@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ti {
-    static vn field_g;
+    static Sprite field_g;
     static boolean field_a;
     static String field_d;
     static String field_f;
     static v[] field_e;
-    static vn[] field_c;
+    static Sprite[] field_c;
     static int field_b;
 
     final static void a(int param0, int param1, boolean param2) {
@@ -65,9 +65,9 @@ final class ti {
             var3_int = ja.a((byte) 16, jc.field_p, mf.field_a, di.field_O, ZombieDawn.field_K);
             var4 = 3 + var3_int;
             cj.field_h = new String[var4];
-            hd.field_s = new int[var4];
+            SpriteState.field_s = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              hd.field_s[var5] = -1;
+              SpriteState.field_s[var5] = -1;
             }
             qk.field_Kb = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -75,18 +75,18 @@ final class ti {
             }
             cj.field_h[-3 + var4] = "";
             cj.field_h[var4 - 2] = wd.field_w;
-            hd.field_s[var4 - 2] = 0;
+            SpriteState.field_s[var4 - 2] = 0;
             qk.field_Kb[0] = 4;
             cj.field_h[-1 + var4] = re.field_c;
-            hd.field_s[var4 - 1] = 1;
+            SpriteState.field_s[var4 - 1] = 1;
             qk.field_Kb[1] = 5;
           } else if (pg.field_p == 1) {
             var3_int = ja.a((byte) 16, jc.field_p, mf.field_a, di.field_O, ZombieDawn.field_K);
             var4 = 2 + var3_int;
             cj.field_h = new String[var4];
-            hd.field_s = new int[var4];
+            SpriteState.field_s = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              hd.field_s[var5] = -1;
+              SpriteState.field_s[var5] = -1;
             }
             qk.field_Kb = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -94,7 +94,7 @@ final class ti {
             }
             cj.field_h[var4 - 2] = "";
             cj.field_h[var4 - 1] = re.field_c;
-            hd.field_s[-1 + var4] = 0;
+            SpriteState.field_s[-1 + var4] = 0;
             qk.field_Kb[0] = 5;
           } else if (pg.field_p != 2) {
             if (pg.field_p == 3) {
@@ -105,9 +105,9 @@ final class ti {
               }
               var4 = var3_int + 2;
               cj.field_h = new String[var4];
-              hd.field_s = new int[var4];
+              SpriteState.field_s = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                hd.field_s[var5] = -1;
+                SpriteState.field_s[var5] = -1;
               }
               qk.field_Kb = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -115,15 +115,15 @@ final class ti {
               }
               cj.field_h[-2 + var4] = "";
               cj.field_h[-1 + var4] = re.field_c;
-              hd.field_s[-1 + var4] = 0;
+              SpriteState.field_s[-1 + var4] = 0;
               qk.field_Kb[0] = 5;
             } else if (pg.field_p == 4) {
               var3_int = ja.a((byte) 16, jc.field_p, d.field_a, di.field_O, ZombieDawn.field_K);
               var4 = var3_int + 2;
               cj.field_h = new String[var4];
-              hd.field_s = new int[var4];
+              SpriteState.field_s = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                hd.field_s[var5] = -1;
+                SpriteState.field_s[var5] = -1;
               }
               qk.field_Kb = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -131,7 +131,7 @@ final class ti {
               }
               cj.field_h[var4 - 2] = "";
               cj.field_h[var4 - 1] = re.field_c;
-              hd.field_s[-1 + var4] = 0;
+              SpriteState.field_s[-1 + var4] = 0;
               qk.field_Kb[0] = 5;
             } else {
               if (pg.field_p != 5) {
@@ -139,10 +139,10 @@ final class ti {
               }
               var3_int = ja.a((byte) 16, jc.field_p, hc.field_c, di.field_O, ZombieDawn.field_K);
               var4 = 3 + var3_int;
-              hd.field_s = new int[var4];
+              SpriteState.field_s = new int[var4];
               cj.field_h = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                hd.field_s[var5] = -1;
+                SpriteState.field_s[var5] = -1;
               }
               qk.field_Kb = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -150,10 +150,10 @@ final class ti {
               }
               cj.field_h[var4 - 3] = "";
               cj.field_h[-2 + var4] = ja.field_c;
-              hd.field_s[-2 + var4] = 0;
+              SpriteState.field_s[-2 + var4] = 0;
               qk.field_Kb[0] = 3;
               cj.field_h[var4 - 1] = re.field_c;
-              hd.field_s[-1 + var4] = 1;
+              SpriteState.field_s[-1 + var4] = 1;
               qk.field_Kb[1] = 5;
             }
           } else {
@@ -171,8 +171,8 @@ final class ti {
             }
             pn.field_R = new String[var4];
             gp.a(jc.field_p, 0, pn.field_R, 0, var4);
-            hl.field_b = new String[-1 - var4 + var3_int];
-            gp.a(jc.field_p, 1 + var4, hl.field_b, 0, var3_int - var4 - 1);
+            NodeHashTableIterator.field_b = new String[-1 - var4 + var3_int];
+            gp.a(jc.field_p, 1 + var4, NodeHashTableIterator.field_b, 0, var3_int - var4 - 1);
             var4 = -1;
             var3_int = ja.a((byte) 16, jc.field_p, s.a(1938762664, ma.field_q, new String[]{"<br><%0><br>"}), di.field_O, ZombieDawn.field_K);
             for (var5 = 0; var3_int > var5; var5++) {
@@ -195,19 +195,19 @@ final class ti {
               stackIn_57_0 = dl.field_h.length;
             }
             var5 = stackIn_57_0;
-            if (hl.field_b.length < bp.field_a.length) {
+            if (NodeHashTableIterator.field_b.length < bp.field_a.length) {
               stackIn_60_0 = bp.field_a.length;
             } else {
-              stackIn_60_0 = hl.field_b.length;
+              stackIn_60_0 = NodeHashTableIterator.field_b.length;
             }
             var6 = stackIn_60_0;
             var7 = var6 + var5 + 7;
-            hd.field_s = new int[var7];
+            SpriteState.field_s = new int[var7];
             cj.field_h = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
-              hd.field_s[var8] = -1;
+              SpriteState.field_s[var8] = -1;
             }
-            hd.field_s[1] = 0;
+            SpriteState.field_s[1] = 0;
             cj.field_h[1] = ap.field_s;
             qk.field_Kb = new int[2];
             cj.field_h[0] = bj.field_p;
@@ -216,7 +216,7 @@ final class ti {
             qk.field_Kb[0] = 5;
             cj.field_h[3] = ki.field_bb;
             cj.field_h[4] = ub.field_j;
-            hd.field_s[3] = 1;
+            SpriteState.field_s[3] = 1;
             cj.field_h[5] = "";
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_67_0 = cj.field_h;
@@ -229,7 +229,7 @@ final class ti {
               stackIn_67_0[stackIn_67_1] = stackIn_68_2;
             }
             cj.field_h[var5 + 6] = null;
-            hd.field_s[6 + var5] = -2;
+            SpriteState.field_s[6 + var5] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_72_0 = cj.field_h;
               stackIn_72_1 = var8Lifetime3 + (var5 + 7);
@@ -249,7 +249,7 @@ final class ti {
           for (var4Lifetime1 = 0; var4Lifetime1 < cj.field_h.length; var4Lifetime1++) {
             stackIn_88_0 = cj.field_h[var4Lifetime1];
             stackIn_88_1 = true;
-            stackIn_89_2 = !(hd.field_s[var4Lifetime1] < 0);
+            stackIn_89_2 = !(SpriteState.field_s[var4Lifetime1] < 0);
             var5Lifetime1 = tk.a(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -265,7 +265,7 @@ final class ti {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = hl.field_b;
+            var4_ref_String__Lifetime1 = NodeHashTableIterator.field_b;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = tk.a(var12, true, false);
@@ -284,19 +284,19 @@ final class ti {
           wh.field_c = mo.field_b - (var3_intLifetime1 >> 1);
           for (var4Lifetime2 = 0; cj.field_h.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_114_0 = p.field_d;
-            if (hd.field_s[var4Lifetime2] < 0) {
+            if (SpriteState.field_s[var4Lifetime2] < 0) {
               stackIn_115_1 = vl.field_r;
             } else {
-              stackIn_115_1 = qh.field_f;
+              stackIn_115_1 = Path.field_f;
             }
             p.field_d = stackIn_114_0 + stackIn_115_1;
           }
-          wm.field_d = -(p.field_d >> 1) + ff.field_a;
+          IterableNodeHashTable.field_d = -(p.field_d >> 1) + ff.field_a;
           hm.field_F = new int[cj.field_h.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = wm.field_d;
+          var5Lifetime3 = IterableNodeHashTable.field_d;
           while (cj.field_h.length > var4Lifetime3) {
-            var6Lifetime1 = hd.field_s[var4Lifetime3];
+            var6Lifetime1 = SpriteState.field_s[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = tk.a(cj.field_h[var4Lifetime3], true, true);
               var5Lifetime3 = var5Lifetime3 + fe.field_H;
@@ -305,8 +305,8 @@ final class ti {
               hm.field_F[var4Lifetime3][0] = var8Lifetime1 - lk.field_f;
               hm.field_F[var4Lifetime3][1] = var5Lifetime3;
               hm.field_F[var4Lifetime3][2] = (lk.field_f << 1) + var7Lifetime2;
-              hm.field_F[var4Lifetime3][3] = qh.field_f + (cn.field_h << 1);
-              var5Lifetime3 = var5Lifetime3 + ((cn.field_h << 1) + fe.field_H + qh.field_f);
+              hm.field_F[var4Lifetime3][3] = Path.field_f + (cn.field_h << 1);
+              var5Lifetime3 = var5Lifetime3 + ((cn.field_h << 1) + fe.field_H + Path.field_f);
             } else {
               var5Lifetime3 = var5Lifetime3 + vl.field_r;
             }
@@ -321,7 +321,7 @@ final class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "ti.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "ti.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -340,19 +340,19 @@ final class ti {
         try {
           pk.field_J = param1;
           ce.field_q = true;
-          kk.field_i = new sg(e.field_S, rk.field_b, param0, nm.field_c, pk.field_J);
+          Point.field_i = new sg(e.field_S, rk.field_b, param0, nm.field_c, pk.field_J);
           if (param2) {
             String var4 = (String) null;
             ti.a((String) null, false, true);
           }
-          e.field_S.a(kk.field_i, !param2 ? true : false);
+          e.field_S.a(Point.field_i, !param2 ? true : false);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ti.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ti.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        field_g = new vn(540, 140);
+        field_g = new Sprite(540, 140);
         field_d = "SCREECH";
         field_f = "Play free version";
         field_a = false;

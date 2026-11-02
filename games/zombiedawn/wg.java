@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg extends le {
+final class wg extends IntrusiveNode {
     static String field_o;
     static String field_l;
     int field_q;
@@ -21,7 +21,7 @@ final class wg extends le {
         field_j = (byte[][][]) null;
     }
 
-    final static v a(int param0, dj param1, int param2, int param3) {
+    final static v a(int param0, Js5Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -45,7 +45,7 @@ final class wg extends le {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

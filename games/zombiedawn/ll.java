@@ -5,23 +5,23 @@ abstract class ll {
     static boolean field_a;
 
     final static void a(int param0, int param1) {
-        if (ej.field_o == ob.field_b[param0]) {
-          ej.field_o = null;
+        if (LevelNavigation.field_o == ob.field_b[param0]) {
+          LevelNavigation.field_o = null;
         }
-        if (tm.field_h == kd.field_Fb[param0]) {
+        if (tm.field_h == Zombie.field_Fb[param0]) {
           tm.field_h = null;
         }
         if (param1 != 4767999) {
           return;
         }
-        vn[][] var4 = ob.field_b;
-        vn[][] var2 = var4;
-        kd.field_Fb[param0] = null;
+        Sprite[][] var4 = ob.field_b;
+        Sprite[][] var2 = var4;
+        Zombie.field_Fb[param0] = null;
         int var3 = param0;
         var4[var3] = null;
     }
 
-    final static void a(dj param0, dj param1, dj param2, int param3) {
+    final static void a(Js5Archive param0, Js5Archive param1, Js5Archive param2, int param3) {
         int var11_int = 0;
         v[] var5 = null;
         v[][] var6 = null;
@@ -29,14 +29,14 @@ abstract class ll {
         int var8 = 0;
         int var9 = 0;
         v[] var10 = null;
-        vn var11 = null;
-        vn var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var13 = 0;
         v[] var14 = null;
-        vn var15 = null;
+        Sprite var15 = null;
         int[][] var16 = null;
-        vn var17 = null;
-        vn var18 = null;
+        Sprite var17 = null;
+        Sprite var18 = null;
         int[][] var19 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -55,11 +55,11 @@ abstract class ll {
           dp.field_b = vm.a((byte) -44, "frame_bottom", "commonui", param1);
           we.field_Tb = gf.a(param1, "jagex_logo_grey", 8, "commonui");
           ia.field_d = vm.a((byte) -83, "button", "commonui", param1);
-          dj.field_k = df.a((byte) 24, "commonui", "validation", param1);
-          ii.field_a = (rb) ((Object) ra.a(param0, "commonui", "arezzo12", param3 + 19041, param1));
-          ia.field_e = (rb) ((Object) ra.a(param0, "commonui", "arezzo14", param3 + 19041, param1));
-          rk.field_b = (rb) ((Object) ra.a(param0, "commonui", "arezzo14bold", 0, param1));
-          var17 = new vn(param2.a("", param3 ^ 19000, "button.gif"), (java.awt.Component) ((Object) cj.field_d));
+          Js5Archive.field_k = df.a((byte) 24, "commonui", "validation", param1);
+          SecondaryNodeDeque.field_a = (Font) ((Object) DualLinkDeque.a(param0, "commonui", "arezzo12", param3 + 19041, param1));
+          ia.field_e = (Font) ((Object) DualLinkDeque.a(param0, "commonui", "arezzo14", param3 + 19041, param1));
+          rk.field_b = (Font) ((Object) DualLinkDeque.a(param0, "commonui", "arezzo14bold", 0, param1));
+          var17 = new Sprite(param2.a("", param3 ^ 19000, "button.gif"), (java.awt.Component) ((Object) cj.field_d));
           vj.a(param1, "dropdown", "commonui", 4424743);
           var5 = dd.a("commonui", "screen_options", -1864, param1);
           af.field_c = new v[4];
@@ -86,20 +86,20 @@ abstract class ll {
           }
           var9Lifetime1 = var17.field_t;
           hk.i(1584);
-          var17.a();
-          bi.a(0, 0, bi.field_f, bi.field_a);
-          var15 = new vn(var9Lifetime1, var9Lifetime1);
+          var17.setAsRenderTarget();
+          Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.a();
-          var17.e(0, 0);
-          var11 = new vn(var9Lifetime1, var9Lifetime1);
-          var11.a();
-          var17.e(var9Lifetime1 - var17.field_w, 0);
-          var12 = new vn(var17.field_w - 2 * var9Lifetime1, var9Lifetime1);
-          var12.a();
-          var17.e(-var9Lifetime1, 0);
+          var18.setAsRenderTarget();
+          var17.drawWithOffsets(0, 0);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
+          var11.setAsRenderTarget();
+          var17.drawWithOffsets(var9Lifetime1 - var17.field_w, 0);
+          var12 = new Sprite(var17.field_w - 2 * var9Lifetime1, var9Lifetime1);
+          var12.setAsRenderTarget();
+          var17.drawWithOffsets(-var9Lifetime1, 0);
           pa.a(-21189);
-          ia.field_d = new vn[]{var15, var12, var11};
+          ia.field_d = new Sprite[]{var15, var12, var11};
           if (param3 != -19041) {
             ll.a(110, -88);
           }
@@ -126,11 +126,11 @@ abstract class ll {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    abstract void a(boolean param0, de param1);
+    abstract void a(boolean param0, PacketBuffer param1);
 
     abstract nk a(byte param0);
 
@@ -163,8 +163,8 @@ abstract class ll {
           for (var3 = 0; n.field_r.length > var3; var3++) {
             var4 = la.field_b[var3];
             if (var4 >= 0) {
-              if (var4 == kk.field_m.field_d) {
-                var5 = ej.field_s;
+              if (var4 == Point.field_m.field_d) {
+                var5 = LevelNavigation.field_s;
               } else {
                 var5 = qi.field_E;
               }
@@ -177,7 +177,7 @@ abstract class ll {
             var7 = sm.a(stackIn_12_0, stackIn_13_1, var6);
             var8 = -(var7 >> 1) + im.field_d;
             if (var4 >= 0) {
-              if (kk.field_m.field_d != var4) {
+              if (Point.field_m.field_d != var4) {
                 stackIn_17_0 = dd.field_b;
               } else {
                 stackIn_17_0 = qi.field_G;
@@ -185,15 +185,15 @@ abstract class ll {
               var9 = stackIn_17_0;
               var2 = var2 + qb.field_i;
               if (var9 != null) {
-                var9.a((nb.field_m << 1) + var7, var2, -nb.field_m + var8, (byte) -118, ma.field_k + (lb.field_Y << 1));
+                var9.a((DualLinkNode.field_m << 1) + var7, var2, -DualLinkNode.field_m + var8, (byte) -118, ma.field_k + (lb.field_Y << 1));
               }
               var2 = var2 + lb.field_Y;
             }
             if (var4 >= 0) {
-              wb.field_m.c(var6, var8, pf.field_g + var2, var5, -1);
+              FunOrbApplet.field_m.drawString(var6, var8, pf.field_g + var2, var5, -1);
               var2 = var2 + (ma.field_k + lb.field_Y + qb.field_i);
             } else {
-              re.field_g.c(var6, var8, fa.field_p + var2, var5, -1);
+              re.field_g.drawString(var6, var8, SpatialObject.field_p + var2, var5, -1);
               var2 = var2 + mh.field_G;
             }
           }
@@ -201,7 +201,7 @@ abstract class ll {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "ll.A(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "ll.A(" + param0 + ')');
         }
     }
 

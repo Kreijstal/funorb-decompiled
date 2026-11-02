@@ -68,8 +68,8 @@ final class lj {
         var24 = null;
         var25 = null;
         param0.field_I = 1;
-        if (mj.field_g == null) {
-          mj.field_g = new int[param0.field_I * 100000];
+        if (SpatialGrid.field_g == null) {
+          SpatialGrid.field_g = new int[param0.field_I * 100000];
         }
         var26 = 1;
         while (true) {
@@ -240,14 +240,14 @@ final class lj {
                 param0.field_z[var4] = param0.field_z[var4] + param0.field_z[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(mj.field_g[var4] & 255);
+                var1 = (byte)(SpatialGrid.field_g[var4] & 255);
                 dupTemp$1 = param0.field_z[var1 & 255];
-                mj.field_g[dupTemp$1] = mj.field_g[dupTemp$1] | var4 << 8;
+                SpatialGrid.field_g[dupTemp$1] = SpatialGrid.field_g[dupTemp$1] | var4 << 8;
                 param0.field_z[var1 & 255] = param0.field_z[var1 & 255] + 1;
               }
-              param0.field_L = mj.field_g[param0.field_n] >> 8;
+              param0.field_L = SpatialGrid.field_g[param0.field_n] >> 8;
               param0.field_D = 0;
-              param0.field_L = mj.field_g[param0.field_L];
+              param0.field_L = SpatialGrid.field_g[param0.field_L];
               param0.field_c = (byte)(param0.field_L & 255);
               param0.field_L = param0.field_L >> 8;
               param0.field_D = param0.field_D + 1;
@@ -311,7 +311,7 @@ final class lj {
               }
               dupTemp$0 = param0.field_F[var1 & 255] & 255;
               param0.field_v[dupTemp$0] = param0.field_v[dupTemp$0] + 1;
-              mj.field_g[var14] = param0.field_F[var1 & 255] & 255;
+              SpatialGrid.field_g[var14] = param0.field_F[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -368,7 +368,7 @@ final class lj {
             var1 = param0.field_F[param0.field_i[param0.field_u[0]] & 255];
             param0.field_v[var1 & 255] = param0.field_v[var1 & 255] + var15;
             while (var15 > 0) {
-              mj.field_g[var14] = var1 & 255;
+              SpatialGrid.field_g[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -401,7 +401,7 @@ final class lj {
         var3 = param0.field_y;
         var4 = param0.field_D;
         var5 = param0.field_c;
-        var15 = mj.field_g;
+        var15 = SpatialGrid.field_g;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_L;
@@ -410,11 +410,11 @@ final class lj {
         var10 = param0.field_E;
         var11 = var10;
         var12 = param0.field_J + 1;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var3 > 0) {
             while (true) {
               if (var10 == 0) {
-                break L0;
+                break scanLoop1;
               }
               if (var3 != 1) {
                 var8[var9] = (byte)var2;
@@ -427,7 +427,7 @@ final class lj {
             }
             if (var10 == 0) {
               var3 = 1;
-              break L0;
+              break scanLoop1;
             }
             var8[var9] = (byte)var2;
             var9++;
@@ -448,11 +448,11 @@ final class lj {
                 var7 = var7 >> 8;
                 var4++;
                 if (var4 == var12) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 if (var1 != var5) {
                   var5 = var1;
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var3 = 3;
                 var7 = var15Lifetime1[var7];
@@ -460,11 +460,11 @@ final class lj {
                 var7 = var7 >> 8;
                 var4++;
                 if (var4 == var12) {
-                  continue L0;
+                  continue scanLoop1;
                 }
                 if (var1 != var5) {
                   var5 = var1;
-                  continue L0;
+                  continue scanLoop1;
                 }
                 var7 = var15Lifetime1[var7];
                 var1 = (byte)var7;
@@ -475,17 +475,17 @@ final class lj {
                 var5 = (byte)var7;
                 var7 = var7 >> 8;
                 var4++;
-                continue L0;
+                continue scanLoop1;
               }
               if (var10 == 0) {
                 var3 = 1;
-                break L0;
+                break scanLoop1;
               }
             } else {
               var5 = var1;
               if (var10 == 0) {
                 var3 = 1;
-                break L0;
+                break scanLoop1;
               }
             }
             var8[var9] = (byte)var2;
@@ -503,7 +503,7 @@ final class lj {
         param0.field_y = var3;
         param0.field_D = var4;
         param0.field_c = var5;
-        mj.field_g = var6;
+        SpatialGrid.field_g = var6;
         param0.field_L = var7;
         param0.field_h = var8;
         param0.field_k = var9;

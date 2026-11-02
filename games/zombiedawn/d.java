@@ -72,7 +72,7 @@ final class d {
         int var8Lifetime1;
         var10 = ZombieDawn.field_J;
         try {
-          var1_int = wm.field_d;
+          var1_int = IterableNodeHashTable.field_d;
           var2 = 0;
           if (pg.field_p == 2) {
             var3_long = pd.a(-22826) - ge.field_f;
@@ -82,7 +82,7 @@ final class d {
             }
           }
           for (var3 = 0; var3 < cj.field_h.length; var3++) {
-            var4 = hd.field_s[var3];
+            var4 = SpriteState.field_s[var3];
             if (var4 >= 0) {
               if (var4 != i.field_W.field_d) {
                 var5 = dl.field_f;
@@ -110,16 +110,16 @@ final class d {
                 }
                 var6 = stackIn_23_0;
               }
-              if (bp.field_a.length > hl.field_b.length) {
+              if (bp.field_a.length > NodeHashTableIterator.field_b.length) {
                 stackIn_27_0 = bp.field_a.length;
               } else {
-                stackIn_27_0 = hl.field_b.length;
+                stackIn_27_0 = NodeHashTableIterator.field_b.length;
               }
               var8 = stackIn_27_0;
               if (var3 >= var7 + 7 &&
                 var7 + (7 + var8) > var3) {
-                if (hl.field_b.length > -var7 - 7 + var3) {
-                  stackIn_33_0 = hl.field_b[var3 - 7 - var7];
+                if (NodeHashTableIterator.field_b.length > -var7 - 7 + var3) {
+                  stackIn_33_0 = NodeHashTableIterator.field_b[var3 - 7 - var7];
                 } else {
                   stackIn_33_0 = "";
                 }
@@ -137,21 +137,21 @@ final class d {
             if (var4 >= 0) {
               var1_int = var1_int + fe.field_H;
               if (var4 != i.field_W.field_d) {
-                stackIn_44_0 = de.field_k;
+                stackIn_44_0 = PacketBuffer.field_k;
               } else {
                 stackIn_44_0 = hp.field_B;
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(var7Lifetime1 + (lk.field_f << 1), var1_int, -lk.field_f + var8Lifetime1, (byte) -127, (cn.field_h << 1) + qh.field_f);
+                var9.a(var7Lifetime1 + (lk.field_f << 1), var1_int, -lk.field_f + var8Lifetime1, (byte) -127, (cn.field_h << 1) + Path.field_f);
               }
               var1_int = var1_int + cn.field_h;
             }
             if (0 <= var4) {
-              q.field_H.c(var6, var8Lifetime1, var1_int + el.field_n, var5, -1);
-              var1_int = var1_int + (qh.field_f + (fe.field_H + cn.field_h));
+              q.field_H.drawString(var6, var8Lifetime1, var1_int + el.field_n, var5, -1);
+              var1_int = var1_int + (Path.field_f + (fe.field_H + cn.field_h));
             } else {
-              ZombieDawn.field_K.c(var6, var8Lifetime1, var1_int + mh.field_F, var5, -1);
+              ZombieDawn.field_K.drawString(var6, var8Lifetime1, var1_int + mh.field_F, var5, -1);
               var1_int = var1_int + vl.field_r;
             }
           }
@@ -162,7 +162,7 @@ final class d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1), "d.B(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "d.B(" + param0 + ')');
         }
     }
 

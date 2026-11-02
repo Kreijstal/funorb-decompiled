@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ea {
-    static tg field_c;
+    static GameKeyHandler field_c;
     static String field_d;
     static String field_b;
     static long field_a;
@@ -30,7 +30,7 @@ final class ea {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -44,7 +44,7 @@ final class ea {
     }
 
     static {
-        field_c = new tg();
+        field_c = new GameKeyHandler();
         field_d = "Waiting for levels";
         field_a = 20000000L;
     }

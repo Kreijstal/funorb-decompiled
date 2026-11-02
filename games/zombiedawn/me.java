@@ -12,7 +12,7 @@ final class me extends wo {
 
     me(int param0, int param1, int param2) {
         super(param0, param1, param2);
-        this.field_Eb = -72 + (so.c(144) + param0);
+        this.field_Eb = -72 + (so.randomInt(144) + param0);
     }
 
     public static void x(int param0) {
@@ -51,8 +51,8 @@ final class me extends wo {
     }
 
     final void d(byte param0) {
-        if (this.f(237239984) < 0 ||
-          this.f(237239984) > dj.field_e.field_H.field_p) {
+        if (this.getY(237239984) < 0 ||
+          this.getY(237239984) > Js5Archive.field_e.navigation.height) {
           return;
         }
         int var2 = -66 % ((param0 - 66) / 50);
@@ -61,8 +61,8 @@ final class me extends wo {
 
     final void g(int param0) {
         super.g(99);
-        if (this.f(237239984) - 48 > dj.field_e.field_H.field_p) {
-          this.b(-27598);
+        if (this.getY(237239984) - 48 > Js5Archive.field_e.navigation.height) {
+          this.unlink(-27598);
           this.d(0);
           if (param0 > 95) {
             return;
@@ -79,26 +79,26 @@ final class me extends wo {
     final void l(byte param0) {
         int var2;
         int var3;
-        this.field_F = 0;
+        this.state = 0;
         super.l(param0);
         var2 = this.field_Eb;
         var3 = 672;
-        if (var3 - 24 > this.f(237239984) &&
-          this.f(237239984) >= 96) {
-          if (this.field_F != 0) {
+        if (var3 - 24 > this.getY(237239984) &&
+          this.getY(237239984) >= 96) {
+          if (this.state != 0) {
             return;
           }
           this.a(var2, (byte) 115, var3);
           return;
         }
-        this.field_Y = this.a(true);
-        this.field_X = 48 + this.f(param0 + 237239932);
-        this.c(0, this.field_D);
-        this.e(1, param0 - 6956);
+        this.targetX = this.getX(true);
+        this.targetY = 48 + this.getY(param0 + 237239932);
+        this.moveToward(0, this.field_D);
+        this.setState(1, param0 - 6956);
         this.g(param0 + 45);
     }
 
-    final static java.awt.Frame a(byte param0, int param1, int param2, ec param3, int param4, int param5) {
+    final static java.awt.Frame a(byte param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         int var8_int = 0;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;
@@ -113,7 +113,7 @@ final class me extends wo {
         java.awt.Frame var8 = null;
         int var9 = 0;
         re[] var10 = null;
-        op var11 = null;
+        AsyncRequest var11 = null;
         int var7Lifetime1;
         var9 = ZombieDawn.field_J;
         try {
@@ -145,14 +145,14 @@ final class me extends wo {
           }
           var11 = param3.a(param4, 1525233840, param5, param2, param1);
           var7Lifetime1 = 116 % ((47 - param0) / 60);
-          while (0 == var11.field_f) {
+          while (0 == var11.status) {
             ld.a(10L, (byte) 118);
           }
-          var8 = (java.awt.Frame) (var11.field_d);
+          var8 = (java.awt.Frame) (var11.result);
           if (var8 == null) {
             return null;
           }
-          if (2 != var11.field_f) {
+          if (2 != var11.status) {
             return var8;
           }
           jb.a(-41, var8, param3);
@@ -168,32 +168,32 @@ final class me extends wo {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     private final int f(int param0, int param1) {
         if (param1 != 0) {
-          ec var4 = (ec) null;
-          me.a((byte) 107, -40, 33, (ec) null, -118, -80);
+          PlatformTaskDispatcher var4 = (PlatformTaskDispatcher) null;
+          me.a((byte) 107, -40, 33, (PlatformTaskDispatcher) null, -118, -80);
           if (qd.field_f[param0] < 0) {
             return 0;
           }
-          if (h.field_e[param0] == -1) {
+          if (MouseInputHandler.field_e[param0] == -1) {
             return 0;
           }
-          return qd.field_f[param0] * h.field_e[param0];
+          return qd.field_f[param0] * MouseInputHandler.field_e[param0];
         }
         if (qd.field_f[param0] < 0) {
           return 0;
         }
-        if (h.field_e[param0] == -1) {
+        if (MouseInputHandler.field_e[param0] == -1) {
           return 0;
         }
-        return qd.field_f[param0] * h.field_e[param0];
+        return qd.field_f[param0] * MouseInputHandler.field_e[param0];
     }
 
-    final void a(wk param0, int param1) {
+    final void a(Camera param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -207,15 +207,15 @@ final class me extends wo {
         RuntimeException var3 = null;
         var8 = ZombieDawn.field_J;
         try {
-          var3_int = param0.a(this.a(true), (byte) -99);
-          var4 = param0.a(this.f(237239984), param1 ^ param1);
-          bi.d(var3_int, var4, this.field_pb, 65535);
-          bi.e(var3_int, var4, param0.a(this.field_Y, (byte) -71), param0.a(this.field_X, 0), 16711935);
+          var3_int = param0.worldToScreenX(this.getX(true), (byte) -99);
+          var4 = param0.worldToScreenY(this.getY(237239984), param1 ^ param1);
+          Rasterizer.d(var3_int, var4, this.field_pb, 65535);
+          Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -71), param0.worldToScreenY(this.targetY, 0), 16711935);
           for (var5 = 0; var5 < this.field_ub; var5++) {
-            var6 = param0.a(this.field_jb[var5], (byte) -114);
-            var7 = param0.a(this.field_gb[var5], 0);
-            bi.b(var6 - 1, var7 - 1, 3, 3, 0);
-            bi.a(var6, var7, 65280);
+            var6 = param0.worldToScreenX(this.field_jb[var5], (byte) -114);
+            var7 = param0.worldToScreenY(this.field_gb[var5], 0);
+            Rasterizer.fillRect(var6 - 1, var7 - 1, 3, 3, 0);
+            Rasterizer.setPixel(var6, var7, 65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,7 +228,7 @@ final class me extends wo {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

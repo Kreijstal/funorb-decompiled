@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bj extends nb {
+abstract class bj extends DualLinkNode {
     static oi field_q;
     static String field_p;
     int field_r;
@@ -96,7 +96,7 @@ abstract class bj extends nb {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -129,12 +129,12 @@ abstract class bj extends nb {
         this.field_r = param0;
     }
 
-    final static vn[] a(String param0, int param1, dj param2, String param3) {
-        vn[] var4 = null;
+    final static Sprite[] a(String param0, int param1, Js5Archive param2, String param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
-        vn[] var5 = null;
-        vn[] stackIn_2_0 = null;
-        vn[] stackIn_4_0 = null;
+        Sprite[] var5 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -149,7 +149,7 @@ abstract class bj extends nb {
           var5[3].field_q = var5[3].field_t;
           var5[1].field_r = var5[1].field_w;
           if (param1 > -117) {
-            stackIn_2_0 = (vn[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var5[5].field_q = var5[5].field_t;
@@ -178,7 +178,7 @@ abstract class bj extends nb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

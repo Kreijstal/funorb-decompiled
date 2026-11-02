@@ -3,11 +3,11 @@
  */
 final class nl extends al {
     static volatile int field_s;
-    static dj field_p;
-    static vn field_r;
+    static Js5Archive field_p;
+    static Sprite field_r;
     private int field_n;
     static int[] field_o;
-    static dj field_t;
+    static Js5Archive field_t;
     private int field_q;
     static cg field_m;
 
@@ -41,7 +41,7 @@ final class nl extends al {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -56,7 +56,7 @@ final class nl extends al {
         int var8;
         int var9;
         int var10;
-        vn var11;
+        Sprite var11;
         int var12;
         int var13;
         int var14;
@@ -66,7 +66,7 @@ final class nl extends al {
         String var19;
         int var21;
         String[] var22;
-        vn var23;
+        Sprite var23;
         String var24;
         String var25;
         int var8Lifetime1;
@@ -80,11 +80,11 @@ final class nl extends al {
         var2 = var22;
         var3 = gd.field_C;
         var4 = kj.field_d;
-        var5 = eo.field_j;
+        var5 = HumanFactory.field_j;
         var6 = sg.field_jb;
         var7 = bj.field_q;
         if (this.field_d == 6) {
-          var7.a(me.field_Hb, bd.field_d, id.field_M + 288 - 14, 16777215, 0);
+          var7.drawStringCentered(me.field_Hb, bd.field_d, id.field_M + 288 - 14, 16777215, 0);
         }
         var8 = na.field_f;
         var9 = 288;
@@ -93,13 +93,13 @@ final class nl extends al {
             var9Lifetime1 = id.field_M + cg.field_g[var10];
             var8Lifetime1 = ld.field_k[var10] + vh.field_b;
             if (this.field_d == 6) {
-              bi.a(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 3355443, 128);
+              Rasterizer.a(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 3355443, 128);
               if (this.g(var10, -7)) {
                 if (this.field_q == var10) {
-                  bi.a(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
+                  Rasterizer.a(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
                 }
                 if (this.field_n == var10) {
-                  bi.e(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
+                  Rasterizer.e(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
                 }
                 var11 = this.c(var10, true);
                 if (var11 == null) {
@@ -109,10 +109,10 @@ final class nl extends al {
               }
             } else {
               if (this.field_q == var10) {
-                bi.a(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
+                Rasterizer.a(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
               }
               if (this.field_n == var10) {
-                bi.e(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
+                Rasterizer.e(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
               }
               var11 = this.c(var10, true);
               if (var11 == null) {
@@ -123,7 +123,7 @@ final class nl extends al {
           }
         }
         var9Lifetime2 = 384;
-        var7.a(m.field_C, bd.field_d, id.field_M + var9Lifetime2 + 32, 16777215, 0);
+        var7.drawStringCentered(GameLoopApplet.field_C, bd.field_d, id.field_M + var9Lifetime2 + 32, 16777215, 0);
         var10Lifetime1 = -1;
         if (param0 >= -35) {
           return;
@@ -147,16 +147,16 @@ final class nl extends al {
           var16 = var7.field_I + var7.field_x;
           if (this.f(var10Lifetime1, -21) &&
             !this.g(var10Lifetime1, -7)) {
-            var25 = sh.field_f;
+            var25 = ExceptionWrapper.field_f;
             var7.a(var25, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
           } else {
             var24 = var3[var10Lifetime1];
             var18 = var16 * var7.a(var24, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
             var13 = var13 + (6 + (var18 + var16));
             var19 = var5 + 100 * cb.field_N[var10Lifetime1];
-            var7.c(var19, var12, var13, 16777215, 0);
+            var7.drawString(var19, var12, var13, 16777215, 0);
             var12 = var12 + (var7.b(var19) + 12);
-            var7.c(var4, var12, var13, 16777215, 0);
+            var7.drawString(var4, var12, var13, 16777215, 0);
             var12 = var12 + var7.b(var4);
             for (var20 = 0; var20 < cb.field_N[var10Lifetime1]; var20++) {
               hm.field_E.b(var20 * (hm.field_E.field_r >> 1) + var12, var13 - hm.field_E.field_q + 2);
@@ -165,18 +165,18 @@ final class nl extends al {
         }
     }
 
-    final static void a(int param0, fi param1, byte param2, dj param3) {
+    final static void a(int param0, PcmMixer param1, byte param2, Js5Archive param3) {
         try {
-          mj.field_b = nk.a((byte) 122) * param0 / 1000;
+          SpatialGrid.field_b = nk.a((byte) 122) * param0 / 1000;
           tp.a((byte) 124, param3);
           ae.a(param3, (byte) -128);
           mn.a(param3, true);
           ta.a(255);
           hg.a((byte) -101);
           int var4_int = -67 / ((param2 - 2) / 56);
-          ej.field_x = 0 - mj.field_b;
+          LevelNavigation.field_x = 0 - SpatialGrid.field_b;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "nl.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nl.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -191,16 +191,16 @@ final class nl extends al {
         }
     }
 
-    private final vn c(int param0, boolean param1) {
+    private final Sprite c(int param0, boolean param1) {
         if (this.g(param0, -7)) {
           return ed.field_a[param0];
         }
         if (be.field_j <= 0 &&
-          uc.field_a[param0]) {
+          MouseWheelInput.field_a[param0]) {
           return hf.field_E;
         }
         if (!param1) {
-          field_p = (dj) null;
+          field_p = (Js5Archive) null;
         }
         return e.field_G;
     }
@@ -227,7 +227,7 @@ final class nl extends al {
         var3 = -vh.field_b + ha.field_b;
         var4 = -id.field_M + ei.field_K;
         var5 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (ld.field_k.length > var5) {
             if (var3 >= ld.field_k[var5] &&
               40 + ld.field_k[var5] > var3 &&
@@ -235,16 +235,16 @@ final class nl extends al {
               var4 < 40 + cg.field_g[var5]) {
               this.field_n = var5;
               if (this.field_d != 6) {
-                break L1;
+                break scanLoop1;
               }
               if (0 > this.field_n) {
-                break L1;
+                break scanLoop1;
               }
               if (this.g(this.field_n, -7)) {
-                break L1;
+                break scanLoop1;
               }
               this.field_n = -1;
-              break L1;
+              break scanLoop1;
             }
             var5++;
             continue;
@@ -336,7 +336,7 @@ final class nl extends al {
     }
 
     private final boolean g(int param0, int param1) {
-        int[] var4 = param1 != ~this.field_d ? dj.field_i : kg.field_g;
+        int[] var4 = param1 != ~this.field_d ? Js5Archive.field_i : kg.field_g;
         int[] var3 = var4;
         return vi.a(param0, var4, -112);
     }
@@ -354,7 +354,7 @@ final class nl extends al {
         }
         boolean decompiledFrameRemainder0 = true;
         if (!this.g(param0, -7) && (!wf.field_P[param0] ||
-          uc.field_a[param0] &&
+          MouseWheelInput.field_a[param0] &&
           !(be.field_j > 0) &&
           !(lo.field_j >= 2))) {
           stackIn_10_0 = false;
@@ -421,7 +421,7 @@ final class nl extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var1_ref), "nl.HA(" + param0 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "nl.HA(" + param0 + ')');
         }
     }
 
@@ -469,7 +469,7 @@ final class nl extends al {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

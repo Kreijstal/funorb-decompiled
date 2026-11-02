@@ -16,7 +16,7 @@ final class ie {
         field_h = (int[][]) null;
     }
 
-    final void a(de param0, ko param1) {
+    final void a(PacketBuffer param0, ko param1) {
         int var3;
         int var4;
         int var5;
@@ -25,13 +25,13 @@ final class ie {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.d((byte) -124);
+        var3 = param0.readUnsignedByte((byte) -124);
         this.field_c[0] = var3 >> 4;
         this.field_c[1] = var3 & 15;
         if (var3 != 0) {
           this.field_b[0] = param0.f(2);
           this.field_b[1] = param0.f(2);
-          var4 = param0.d((byte) -122);
+          var4 = param0.readUnsignedByte((byte) -122);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_c[var5]; var6++) {
               this.field_g[var5][0][var6] = param0.f(2);

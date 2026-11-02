@@ -22,9 +22,9 @@ final class uo {
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (param0) {
-          bi.a(0, 0, bi.field_f, bi.field_a, 0, 192);
+          Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height, 0, 192);
         } else {
-          bi.d();
+          Rasterizer.clear();
         }
         if (param1 != -28518) {
           uo.a(true, 65, false);
@@ -94,7 +94,7 @@ final class uo {
           }
           this.b(20196);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "uo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "uo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

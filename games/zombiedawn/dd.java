@@ -8,18 +8,18 @@ final class dd {
 
     final static void a(int param0, wg param1, int param2) {
         try {
-          jb.field_b.a(0, param1);
+          jb.field_b.addFirst(0, param1);
           nd.a(param0, 1, param1);
           if (param2 > -6) {
-            dj var4 = (dj) null;
-            dd.a((String) null, (String) null, 118, (dj) null);
+            Js5Archive var4 = (Js5Archive) null;
+            dd.a((String) null, (String) null, 118, (Js5Archive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "dd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "dd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static v[] a(String param0, String param1, int param2, dj param3) {
+    final static v[] a(String param0, String param1, int param2, Js5Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -40,7 +40,7 @@ final class dd {
           }
           var4_int = param3.a(param0, (byte) 8);
           var5 = param3.a(var4_int, param1, true);
-          stackIn_3_0 = h.a(param3, var4_int, -87, var5);
+          stackIn_3_0 = MouseInputHandler.a(param3, var4_int, -87, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,7 +64,7 @@ final class dd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -75,8 +75,8 @@ final class dd {
           field_b = null;
           return;
         }
-        dj var2 = (dj) null;
-        dd.a((String) null, (String) null, 95, (dj) null);
+        Js5Archive var2 = (Js5Archive) null;
+        dd.a((String) null, (String) null, 95, (Js5Archive) null);
         field_a = null;
         field_c = null;
         field_b = null;

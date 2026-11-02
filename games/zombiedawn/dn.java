@@ -5,10 +5,10 @@ import java.io.*;
 
 final class dn extends pa {
     static wl field_I;
-    private vo field_H;
-    static vo field_D;
+    private IntrusiveDeque field_H;
+    static IntrusiveDeque field_D;
     static String field_G;
-    static vn field_E;
+    static Sprite field_E;
     static String field_J;
 
     final void b(int param0, boolean param1, int param2) {
@@ -112,7 +112,7 @@ final class dn extends pa {
           var22 = null;
           var12 = ZombieDawn.field_J;
           try {
-            var13 = (n) (dj.field_l.b((byte) 26));
+            var13 = (n) (Js5Archive.field_l.b((byte) 26));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -123,18 +123,18 @@ final class dn extends pa {
             var3 = 0;
             for (var4 = 0; var4 < var17.field_l; var4++) {
               if (null != var13.field_n[var4]) {
-                if (var13.field_n[var4].field_f == 2) {
+                if (var13.field_n[var4].status == 2) {
                   var13.field_q[var4] = -5;
                 }
-                if (var13.field_n[var4].field_f == 0) {
+                if (var13.field_n[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (var13.field_m[var4] != null) {
-                if (var13.field_m[var4].field_f == 2) {
+                if (var13.field_m[var4].status == 2) {
                   var13.field_q[var4] = -6;
                 }
-                if (var13.field_m[var4].field_f == 0) {
+                if (var13.field_m[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -142,36 +142,36 @@ final class dn extends pa {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_j;
-            param0.h(-116, var17.field_o);
+            var4 = param0.position;
+            param0.writeInt(-116, var17.field_o);
             for (var5 = 0; var17.field_l > var5; var5++) {
               if (var17.field_q[var5] != 0) {
-                param0.i(var17.field_q[var5], 111);
+                param0.writeByte(var17.field_q[var5], 111);
               } else {
                 try {
                   var6_int = var17.field_h[var5];
                   if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var17.field_n[var5].field_d);
+                    var15 = (java.lang.reflect.Field) (var17.field_n[var5].result);
                     var8 = var15.getInt((Object) null);
-                    param0.i(0, 64);
-                    param0.h(102, var8);
+                    param0.writeByte(0, 64);
+                    param0.writeInt(102, var8);
                   } else {
                     if (var6_int == 1) {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_n[var5].field_d);
+                      var16_ref = (java.lang.reflect.Field) (var17.field_n[var5].result);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_j[var5]);
-                      param0.i(0, 122);
+                      param0.writeByte(0, 122);
                     } else {
                       if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var17.field_n[var5].field_d);
+                        var26 = (java.lang.reflect.Field) (var17.field_n[var5].result);
                         var8 = var26.getModifiers();
-                        param0.i(0, 29);
-                        param0.h(73, var8);
+                        param0.writeByte(0, 29);
+                        param0.writeInt(73, var8);
                       }
                     }
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var17.field_m[var5].field_d);
+                    var28 = (java.lang.reflect.Method) (var17.field_m[var5].result);
                     var25 = var17.field_i[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var25.length > var10_int; var10_int++) {
@@ -180,77 +180,77 @@ final class dn extends pa {
                     }
                     var10 = var28.invoke((Object) null, var9);
                     if (var10 == null) {
-                      param0.i(0, 89);
+                      param0.writeByte(0, 89);
                     } else if (var10 instanceof Number) {
-                      param0.i(1, 12);
+                      param0.writeByte(1, 12);
                       param0.a(((Number) (var10)).longValue(), 121);
                     } else if (!(var10 instanceof String)) {
-                      param0.i(4, -119);
+                      param0.writeByte(4, -119);
                     } else {
-                      param0.i(2, 61);
-                      param0.a(128, (String) (var10));
+                      param0.writeByte(2, 61);
+                      param0.writeTerminatedString(128, (String) (var10));
                     }
                   } else {
                     if (var6_int == 4) {
-                      var27 = (java.lang.reflect.Method) (var17.field_m[var5].field_d);
+                      var27 = (java.lang.reflect.Method) (var17.field_m[var5].result);
                       var8Lifetime1 = var27.getModifiers();
-                      param0.i(0, -84);
-                      param0.h(69, var8Lifetime1);
+                      param0.writeByte(0, -84);
+                      param0.writeInt(69, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param0.i(-10, 74);
+                  param0.writeByte(-10, 74);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param0.i(-11, -95);
+                  param0.writeByte(-11, -95);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param0.i(-12, -113);
+                  param0.writeByte(-12, -113);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param0.i(-13, -90);
+                  param0.writeByte(-13, -90);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param0.i(-14, 18);
+                  param0.writeByte(-14, 18);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param0.i(-15, -113);
+                  param0.writeByte(-15, -113);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param0.i(-16, 53);
+                  param0.writeByte(-16, 53);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param0.i(-17, -95);
+                  param0.writeByte(-17, -95);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param0.i(-18, -103);
+                  param0.writeByte(-18, -103);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param0.i(-19, -91);
+                  param0.writeByte(-19, -91);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param0.i(-20, 37);
+                  param0.writeByte(-20, 37);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var6_ref11 = decompiledCaughtException;
-                  param0.i(-21, 58);
+                  param0.writeByte(-21, 58);
                 }
               }
             }
-            param0.e(-120, var4);
-            var17.b(-27598);
+            param0.writeCrc32(-120, var4);
+            var17.unlink(-27598);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -262,7 +262,7 @@ final class dn extends pa {
             } else {
               stackIn_68_2 = "{...}";
             }
-            throw sh.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(')').toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -271,11 +271,11 @@ final class dn extends pa {
         }
     }
 
-    final static vn[] f(byte param0) {
+    final static Sprite[] f(byte param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
-        vn[] var1;
+        Sprite[] var1;
         int var3;
         int[] var6;
         int var8;
@@ -286,9 +286,9 @@ final class dn extends pa {
         int[] var21;
         byte[] var22;
         var8 = ZombieDawn.field_J;
-        var1 = new vn[t.field_h];
+        var1 = new Sprite[t.field_h];
         if (param0 != 43) {
-          return (vn[]) null;
+          return (Sprite[]) null;
         }
         for (var2 = 0; var2 < t.field_h; var2++) {
           var3 = uf.field_n[var2] * bn.field_c[var2];
@@ -299,23 +299,23 @@ final class dn extends pa {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var9[var6_int] = j.field_a[eg.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new vn(gl.field_F, kd.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var21);
+            var1[var2] = new Sprite(gl.field_F, Zombie.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var21);
           } else {
             var22 = ka.field_f[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = hi.a(j.field_a[eg.a((int) var20[var7], 255)], eg.a((int) var22[var7], 255) << 24);
+              var6[var7] = GameWorld.a(j.field_a[eg.a((int) var20[var7], 255)], eg.a((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (vn) ((Object) new cd(gl.field_F, kd.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var16));
+            var1[var2] = (Sprite) ((Object) new cd(gl.field_F, Zombie.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var16));
           }
         }
         no.f((byte) -114);
         return var1;
     }
 
-    final ga f(int param0) {
+    final UiWidget f(int param0) {
         cj var2;
         ei var3;
         int var4;
@@ -343,25 +343,25 @@ final class dn extends pa {
         ei var3 = (ei) (var2.c((byte) -116));
         while (var3 != null) {
           if (var3.j(2634)) {
-            var3.b(-27598);
+            var3.unlink(-27598);
           }
           var3 = (ei) (var2.a((byte) 61));
         }
-        this.field_z = (ga) ((Object) this.c(true));
+        this.field_z = (UiWidget) ((Object) this.c(true));
     }
 
-    final void a(ga param0, boolean param1) {
+    final void a(UiWidget param0, boolean param1) {
         ei var3 = null;
         try {
           if (!(param0 instanceof ei)) {
             throw new IllegalArgumentException();
           }
           var3 = (ei) (param0);
-          this.field_H.a(var3, -112);
+          this.field_H.addLast(var3, -112);
           var3.field_H = param1 ? true : false;
-          var3.a((byte) 107, (ga) (this));
+          var3.a((byte) 107, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "dn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "dn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -397,7 +397,7 @@ final class dn extends pa {
         ei var3 = (ei) (var2.c((byte) -125));
         while (var3 != null) {
           if (var3.e((byte) 28)) {
-            var3.b(-27598);
+            var3.unlink(-27598);
           }
           var3 = (ei) (var2.a((byte) 61));
         }
@@ -405,7 +405,7 @@ final class dn extends pa {
 
     public dn() {
         super(0, 0, pk.field_N, b.field_l, (io) null, (sk) null);
-        this.field_H = new vo();
+        this.field_H = new IntrusiveDeque();
     }
 
     final static int a(int param0, boolean param1, int param2) {
@@ -434,7 +434,7 @@ final class dn extends pa {
               var6 = sm.a(32564, true, n.field_r[var3_int]);
               var7 = im.field_d - (var6 >> 1);
               var4 = var4 + qb.field_i;
-              if (bf.a(var7 - nb.field_m, 0, param2, var4, var6 + (nb.field_m << 1), (lb.field_Y << 1) + ma.field_k, param0)) {
+              if (bf.a(var7 - DualLinkNode.field_m, 0, param2, var4, var6 + (DualLinkNode.field_m << 1), (lb.field_Y << 1) + ma.field_k, param0)) {
                 stackIn_11_0 = var5;
                 return stackIn_11_0;
               }
@@ -449,31 +449,31 @@ final class dn extends pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) var3), "dn.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var3), "dn.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = ZombieDawn.field_J;
         if (this.field_h != null) {
-          this.field_h.a(16777215, true, param0, (ga) (this), param2);
+          this.field_h.a(16777215, true, param0, (UiWidget) (this), param2);
         }
         if (param3 != 0) {
           return;
         }
         cj var5 = new cj(this.field_H);
-        ga var6 = (ga) (var5.b((byte) -21));
+        UiWidget var6 = (UiWidget) (var5.b((byte) -21));
         while (var6 != null) {
           var6.a(this.field_j + param0, param1, this.field_k + param2, param3 ^ 0);
-          var6 = (ga) (var5.a(17));
+          var6 = (UiWidget) (var5.a(17));
         }
     }
 
     static {
         field_I = new wl();
         field_G = "Names cannot start or end with space or underscore";
-        field_D = new vo();
-        field_E = new vn(48, 48);
+        field_D = new IntrusiveDeque();
+        field_E = new Sprite(48, 48);
         field_J = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
     }
 }

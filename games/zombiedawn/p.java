@@ -32,8 +32,8 @@ final class p {
     final static void a(int param0, int param1) {
         am var2 = dp.field_e;
         var2.j(11, param1);
-        var2.i(1, 101);
-        var2.i(param0, 45);
+        var2.writeByte(1, 101);
+        var2.writeByte(param0, 45);
     }
 
     public static void a(boolean param0) {
@@ -47,14 +47,14 @@ final class p {
     final static void a(int param0) {
         if (param0 == 1) {
           if (sn.field_c != null) {
-            sn.field_c.a(-126);
+            sn.field_c.close(-126);
             sn.field_c = null;
           }
           return;
         }
         p.a(true);
         if (sn.field_c != null) {
-          sn.field_c.a(-126);
+          sn.field_c.close(-126);
           sn.field_c = null;
         }
     }

@@ -6,8 +6,8 @@ final class ia {
     static String field_a;
     static int field_c;
     static String field_f;
-    static rb field_e;
-    static vn[] field_d;
+    static Font field_e;
+    static Sprite[] field_d;
 
     public static void a(int param0) {
         field_e = null;

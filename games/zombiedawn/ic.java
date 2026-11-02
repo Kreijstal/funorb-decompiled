@@ -55,7 +55,7 @@ final class ic extends tb implements mi {
         field_W = null;
     }
 
-    final static String a(String param0, byte param1, String param2, dj param3) {
+    final static String a(String param0, byte param1, String param2, Js5Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
@@ -70,11 +70,11 @@ final class ic extends tb implements mi {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 121 / ((param1 + 44) / 61);
-          if (!param3.a((byte) 73)) {
+          if (!param3.isIndexLoaded((byte) 73)) {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }
-          stackIn_5_0 = param0 + " - " + param3.e(-105) + "%";
+          stackIn_5_0 = param0 + " - " + param3.percentLoaded(-105) + "%";
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ final class ic extends tb implements mi {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class ic extends tb implements mi {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class ic extends tb implements mi {
           this.field_V = param1;
           int var3_int = -18 / ((param0 + 34) / 34);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ic.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ic.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -213,17 +213,17 @@ final class ic extends tb implements mi {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(ga param0, byte param1, int param2, int param3) {
+    final void a(UiWidget param0, byte param1, int param2, int param3) {
         try {
           super.a(param0, (byte) 121, param2, param3);
           int var5_int = -112 % ((46 - param1) / 42);
           this.field_R = -param3 + ha.field_b - this.field_k;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "ic.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ic.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

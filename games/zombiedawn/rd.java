@@ -44,7 +44,7 @@ final class rd extends pa {
         return stackIn_5_0;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, ga param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         ij var7 = null;
         try {
           if (param1 < 1) {
@@ -66,16 +66,16 @@ final class rd extends pa {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rd.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rd.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private rd(int param0, int param1, int param2, int param3, io param4, sk param5, ga param6) {
+    private rd(int param0, int param1, int param2, int param3, io param4, sk param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_z = param6;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "rd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

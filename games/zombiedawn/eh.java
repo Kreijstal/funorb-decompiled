@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-abstract class eh extends ga implements jf {
+abstract class eh extends UiWidget implements jf {
     static boolean field_z;
     static boolean field_x;
     static int field_y;
     static int field_A;
-    ga[] field_B;
+    UiWidget[] field_B;
 
-    void a(ga param0, byte param1, int param2, int param3) {
+    void a(UiWidget param0, byte param1, int param2, int param3) {
         int var6 = 0;
-        ga[] var5 = null;
+        UiWidget[] var5 = null;
         int var7 = 0;
-        ga var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
-        ga[] var10 = null;
+        UiWidget[] var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -48,17 +48,17 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    boolean a(ga param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         int var9 = 0;
-        ga[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        ga var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        ga[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -92,17 +92,17 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var9 = 0;
-        ga[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        ga var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        ga[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -135,7 +135,7 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -187,11 +187,11 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(ga param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -214,16 +214,16 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     abstract void e(byte param0);
 
-    private final ga d(byte param0) {
-        ga[] var2;
+    private final UiWidget d(byte param0) {
+        UiWidget[] var2;
         int var3;
-        ga var4;
+        UiWidget var4;
         int var5;
         var5 = ZombieDawn.field_J;
         if (null == this.field_B) {
@@ -232,7 +232,7 @@ abstract class eh extends ga implements jf {
         var2 = this.field_B;
         var3 = 0;
         if (param0 <= 87) {
-          this.field_B = (ga[]) null;
+          this.field_B = (UiWidget[]) null;
         }
         while (var3 < var2.length) {
           var4 = var2[var3];
@@ -245,7 +245,7 @@ abstract class eh extends ga implements jf {
         return null;
     }
 
-    final boolean a(int param0, ga param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -268,15 +268,15 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final String d(int param0) {
         int var4 = 0;
         int var2;
-        ga[] var3;
-        ga var5;
+        UiWidget[] var3;
+        UiWidget var5;
         int var7;
         String var6;
         var7 = ZombieDawn.field_J;
@@ -344,11 +344,11 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static boolean a(boolean param0, dj param1) {
+    final static boolean a(boolean param0, Js5Archive param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -371,7 +371,7 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -389,18 +389,18 @@ abstract class eh extends ga implements jf {
           }
           mm.field_k = param1;
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "eh.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "eh.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        ga var6;
+        UiWidget var6;
         int var7;
         var7 = ZombieDawn.field_J;
         if (param1 == param3 &&
           this.field_h != null) {
-          this.field_h.a(16777215, true, param0, (ga) (this), param2);
+          this.field_h.a(16777215, true, param0, (UiWidget) (this), param2);
         }
         if (null != this.field_B) {
           for (var5 = -1 + this.field_B.length; 0 <= var5; var5--) {
@@ -418,9 +418,9 @@ abstract class eh extends ga implements jf {
         int var8 = 0;
         StringBuilder discarded$8 = null;
         StringBuilder discarded$7 = null;
-        ga var7 = null;
+        UiWidget var7 = null;
         int var9 = 0;
-        ga[] var10 = null;
+        UiWidget[] var10 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -466,17 +466,17 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
     final void c(byte param0) {
         int var3 = 0;
-        ga[] var2;
-        ga var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var5;
-        ga[] var7;
-        ga var6;
+        UiWidget[] var7;
+        UiWidget var6;
         var5 = ZombieDawn.field_J;
         var7 = this.field_B;
         var2 = var7;
@@ -487,18 +487,18 @@ abstract class eh extends ga implements jf {
           }
         }
         if (param0 != 57) {
-          var6 = (ga) null;
-          this.a((byte) 99, -77, (ga) null);
+          var6 = (UiWidget) null;
+          this.a((byte) 99, -77, (UiWidget) null);
         }
     }
 
-    boolean a(byte param0, ga param1) {
+    boolean a(byte param0, UiWidget param1) {
         int var4 = 0;
-        ga[] var3 = null;
+        UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
-        ga var5 = null;
+        UiWidget var5 = null;
         int var6 = 0;
-        ga[] var7 = null;
+        UiWidget[] var7 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -528,15 +528,15 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final boolean a(byte param0, int param1, ga param2) {
+    final boolean a(byte param0, int param1, UiWidget param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        ga var5 = null;
-        ga var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -576,7 +576,7 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -584,12 +584,12 @@ abstract class eh extends ga implements jf {
         super(param0, param1, param2, param3, param4, (sk) null);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, ga param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var8 = 0;
-        ga[] var7 = null;
-        ga var9 = null;
+        UiWidget[] var7 = null;
+        UiWidget var9 = null;
         int var10 = 0;
-        ga[] var11 = null;
+        UiWidget[] var11 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -622,15 +622,15 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
     final int c(int param0) {
         int var4 = 0;
         int var2;
-        ga[] var3;
-        ga var5;
+        UiWidget[] var3;
+        UiWidget var5;
         int var7;
         int var6;
         var7 = ZombieDawn.field_J;
@@ -648,15 +648,15 @@ abstract class eh extends ga implements jf {
         return var2;
     }
 
-    final boolean a(boolean param0, ga param1, int param2) {
+    final boolean a(boolean param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        ga var5 = null;
-        ga var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         oh var8 = null;
         Object stackIn_7_0 = null;
-        ga stackIn_7_1 = null;
+        UiWidget stackIn_7_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -698,7 +698,7 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -709,15 +709,15 @@ abstract class eh extends ga implements jf {
         return null != this.d((byte) 100) ? true : false;
     }
 
-    boolean a(int param0, int param1, ga param2, char param3) {
+    boolean a(int param0, int param1, UiWidget param2, char param3) {
         int var7 = 0;
-        ga[] var5 = null;
+        UiWidget[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
         int var6 = 0;
-        ga var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
-        ga[] var10 = null;
+        UiWidget[] var10 = null;
         boolean stackIn_17_0 = false;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -759,7 +759,7 @@ abstract class eh extends ga implements jf {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
         }
     }
 

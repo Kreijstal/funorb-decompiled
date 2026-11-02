@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tp extends sp {
+final class tp extends PcmStream {
     private boolean field_w;
     private wj field_n;
     private boolean field_x;
@@ -9,7 +9,7 @@ final class tp extends sp {
     private int[] field_z;
     private rj field_s;
     private rj field_v;
-    static vo field_m;
+    static IntrusiveDeque field_m;
     static long field_p;
     private int[] field_q;
     private wj field_l;
@@ -127,11 +127,11 @@ final class tp extends sp {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void fill(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -155,7 +155,7 @@ final class tp extends sp {
         var11 = ZombieDawn.field_J;
         try {
           if (this.field_y <= 0) {
-            this.a(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_x) {
@@ -212,7 +212,7 @@ final class tp extends sp {
           if (this.field_o < 256 && (this.field_l != null ||
             this.field_r != null)) {
             if (var4_int == 256) {
-              this.field_v.a(param0, param1, param2);
+              this.field_v.fill(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (this.field_z != null &&
@@ -223,8 +223,8 @@ final class tp extends sp {
                   this.field_q = new int[var6];
                   this.field_z = new int[var6];
                 }
-                this.field_v.a(this.field_z, 0, param2);
-                this.field_t.a(this.field_q, 0, param2);
+                this.field_v.fill(this.field_z, 0, param2);
+                this.field_t.fill(this.field_q, 0, param2);
                 if (qf.field_l) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
@@ -237,7 +237,7 @@ final class tp extends sp {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_q[var8] * var5 + var4_int * this.field_z[var8] >> 8);
                 }
               } else {
-                this.field_t.a(param0, param1, param2);
+                this.field_t.fill(param0, param1, param2);
               }
             }
           }
@@ -252,7 +252,7 @@ final class tp extends sp {
               this.field_z = new int[var6];
               this.field_q = new int[var6];
             }
-            this.field_s.a(this.field_z, 0, param2);
+            this.field_s.fill(this.field_z, 0, param2);
             if (qf.field_l) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -278,11 +278,11 @@ final class tp extends sp {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(byte param0, dj param1) {
+    final static void a(byte param0, Js5Archive param1) {
         mb var2 = null;
         if (param0 <= 120) {
           return;
@@ -292,11 +292,11 @@ final class tp extends sp {
           var2 = mb.a(param1, "jagex logo2.packvorbis", "");
           var2.b();
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final sp c() {
+    final PcmStream firstSubstream() {
         return null;
     }
 
@@ -304,18 +304,18 @@ final class tp extends sp {
         if (param0 != 0) {
           field_p = -26L;
         }
-        return new ji(ra.e((byte) -16), df.a(1));
+        return new ji(DualLinkDeque.e((byte) -16), df.a(1));
     }
 
-    final static fn b(byte param0, int param1) {
-        if (4 <= rm.field_e.d(-56)) {
+    final static PcmSampleStream b(byte param0, int param1) {
+        if (4 <= DelegatingCanvas.field_e.size(-56)) {
           return null;
         }
         if (param0 < 20) {
-          field_m = (vo) null;
+          field_m = (IntrusiveDeque) null;
         }
         tm var2 = new tm(param1);
-        rm.field_e.a(0, var2);
+        DelegatingCanvas.field_e.addFirst(0, var2);
         return var2.field_j;
     }
 
@@ -324,13 +324,13 @@ final class tp extends sp {
           param2.a(param0, true, param3);
           param2.a(param1, false);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tp.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final static vf c(int param0) {
         if (null == jo.field_Ob) {
-          jo.field_Ob = new vf(ii.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, ii.field_a.field_I, -1, 2147483647, true);
+          jo.field_Ob = new vf(SecondaryNodeDeque.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, SecondaryNodeDeque.field_a.field_I, -1, 2147483647, true);
         }
         int var1 = -78 / ((param0 - 59) / 48);
         return jo.field_Ob;
@@ -341,7 +341,7 @@ final class tp extends sp {
           i.a(256, param1, (byte) -115, param2);
           int var3_int = -119 / ((-38 - param0) / 47);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tp.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -356,41 +356,41 @@ final class tp extends sp {
         return 2;
     }
 
-    final static void a(vn[] param0, int param1) {
+    final static void a(Sprite[] param0, int param1) {
         try {
-          si.field_Ub = new vn[7];
-          vh.field_e = new vn[7];
-          pl.field_p = new vn(300, 200);
+          si.field_Ub = new Sprite[7];
+          vh.field_e = new Sprite[7];
+          pl.field_p = new Sprite(300, 200);
           si.field_Ub[0] = param0[0];
-          vh.field_e[0] = new vn(param0[0].field_w + 20, param0[0].field_t - param1);
+          vh.field_e[0] = new Sprite(param0[0].field_w + 20, param0[0].field_t - param1);
           si.field_Ub[1] = param0[1];
-          vh.field_e[1] = new vn(10 + param0[1].field_w, 10 + param0[1].field_t);
-          si.field_Ub[2] = new vn(150, 100);
-          vh.field_e[2] = new vn(150, 100);
-          si.field_Ub[3] = new vn(120, 50);
-          vh.field_e[3] = new vn(120, 50);
-          si.field_Ub[4] = new vn(300, 50);
-          vh.field_e[4] = new vn(300, 50);
-          si.field_Ub[5] = new vn(200, 90);
-          vh.field_e[5] = new vn(200, 90);
-          si.field_Ub[6] = new vn(200, 50);
-          vh.field_e[6] = new vn(200, 50);
-          vh.field_e[0].a();
+          vh.field_e[1] = new Sprite(10 + param0[1].field_w, 10 + param0[1].field_t);
+          si.field_Ub[2] = new Sprite(150, 100);
+          vh.field_e[2] = new Sprite(150, 100);
+          si.field_Ub[3] = new Sprite(120, 50);
+          vh.field_e[3] = new Sprite(120, 50);
+          si.field_Ub[4] = new Sprite(300, 50);
+          vh.field_e[4] = new Sprite(300, 50);
+          si.field_Ub[5] = new Sprite(200, 90);
+          vh.field_e[5] = new Sprite(200, 90);
+          si.field_Ub[6] = new Sprite(200, 50);
+          vh.field_e[6] = new Sprite(200, 50);
+          vh.field_e[0].setAsRenderTarget();
           si.field_Ub[0].h(5, 5, 16777215);
           oc.a((byte) 70);
           si.field_Ub[0].h(5, 5, 0);
-          vh.field_e[1].a();
+          vh.field_e[1].setAsRenderTarget();
           si.field_Ub[1].h(-35, 5, 16777215);
           so.a(16777215);
           oc.a((byte) -115);
           si.field_Ub[1].h(-35, 5, 0);
           cn.field_f.b(89);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "tp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final sp d() {
+    final PcmStream nextSubstream() {
         return null;
     }
 
@@ -401,17 +401,17 @@ final class tp extends sp {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         boolean decompiledFrameRemainder0 = true;
         var3 = ZombieDawn.field_J;
         if (0 < this.field_u) {
           if (this.field_l != null) {
-            this.field_v.a(param0);
+            this.field_v.skip(param0);
             if (1048576 <= this.field_u) {
               if ((!(0 >= this.field_o)) &&
                 ((null != this.field_n))) {
-                this.field_s.a(param0);
+                this.field_s.skip(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -419,19 +419,19 @@ final class tp extends sp {
               if (this.field_r == null) {
                 if ((!(0 >= this.field_o)) &&
                   ((null != this.field_n))) {
-                  this.field_s.a(param0);
+                  this.field_s.skip(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_t.a(param0);
+                this.field_t.skip(param0);
               }
             }
           } else {
             if (1048576 <= this.field_u) {
               if ((!(0 >= this.field_o)) &&
                 ((null != this.field_n))) {
-                this.field_s.a(param0);
+                this.field_s.skip(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -439,12 +439,12 @@ final class tp extends sp {
               if (this.field_r == null) {
                 if ((!(0 >= this.field_o)) &&
                   ((null != this.field_n))) {
-                  this.field_s.a(param0);
+                  this.field_s.skip(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_t.a(param0);
+                this.field_t.skip(param0);
               }
             }
           }
@@ -452,7 +452,7 @@ final class tp extends sp {
           if (1048576 <= this.field_u) {
             if ((!(0 >= this.field_o)) &&
               ((null != this.field_n))) {
-              this.field_s.a(param0);
+              this.field_s.skip(param0);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -460,18 +460,18 @@ final class tp extends sp {
             if (this.field_r == null) {
               if ((!(0 >= this.field_o)) &&
                 ((null != this.field_n))) {
-                this.field_s.a(param0);
+                this.field_s.skip(param0);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_t.a(param0);
+              this.field_t.skip(param0);
             }
           }
         }
         if ((decompiledFrameRemainder0) && (0 < this.field_o &&
           null != this.field_n)) {
-          this.field_s.a(param0);
+          this.field_s.skip(param0);
         }
         if (this.field_x) {
           if (0 < this.field_A &&
@@ -526,15 +526,15 @@ final class tp extends sp {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static fn $cfr$intArgs$b$3010b50b2764(int param0, int param1) {
-        if (4 <= rm.field_e.d(-56)) {
+    final static PcmSampleStream $cfr$intArgs$b$3010b50b2764(int param0, int param1) {
+        if (4 <= DelegatingCanvas.field_e.size(-56)) {
           return null;
         }
         if (param0 < 20) {
-          field_m = (vo) null;
+          field_m = (IntrusiveDeque) null;
         }
         tm var2 = new tm(param1);
-        rm.field_e.a(0, var2);
+        DelegatingCanvas.field_e.addFirst(0, var2);
         return var2.field_j;
     }
 }

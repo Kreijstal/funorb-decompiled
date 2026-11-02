@@ -18,7 +18,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
             pi.a(82, 39, (int[]) null, -71, (byte) 97, 95, -74, -52, -27, -83, -68, 66, 42, -121, 2, -104, -2);
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
             this.field_h = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pi.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pi.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
                   var25 = var25 + var27;
                   var29 = var29 + var31;
                   var17_int = var17_int + var19;
-                  var36Lifetime2 = var36Lifetime2 + bi.field_f;
+                  var36Lifetime2 = var36Lifetime2 + Rasterizer.width;
                 }
               }
               var36Lifetime3 = -param16 + param11;
@@ -369,7 +369,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
               var30 = var30 + var32;
               var22 = var22 + var24;
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + bi.field_f;
+              var35Lifetime1 = var35Lifetime1 + Rasterizer.width;
               var26 = var26 + var28;
               var21 = var21 + var23;
               var25 = var25 + var27;
@@ -387,7 +387,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -399,7 +399,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
           param0.setColorModel(this.field_j);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pi.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pi.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -408,13 +408,13 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         try {
           var3 = dp.field_e;
           var3.j(param0 - 14, param1);
-          var3.i(param2.field_h, 120);
+          var3.writeByte(param2.field_h, 120);
           if (param0 != 25) {
             field_k = (int[]) null;
           }
-          var3.a(param2.field_i, (byte) 105);
+          var3.writeShort(param2.field_i, (byte) 105);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pi.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pi.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -506,7 +506,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -528,7 +528,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
           param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
           this.b(-127);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pi.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pi.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -536,7 +536,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw sh.a((Throwable) ((Object) runtimeException), "pi.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pi.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
