@@ -18,29 +18,29 @@ final class id {
         try {
           od.field_s[0] = sa.field_d.nextInt();
           od.field_s[1] = sa.field_d.nextInt();
-          jb.field_c.field_n = 0;
+          jb.field_c.position = 0;
           od.field_s[2] = (int)(ij.field_l >> 32);
           od.field_s[3] = (int)ij.field_l;
           jb.field_c.b((byte) 60, od.field_s[0]);
           jb.field_c.b((byte) 60, od.field_s[1]);
           jb.field_c.b((byte) 60, od.field_s[2]);
           jb.field_c.b((byte) 60, od.field_s[3]);
-          ga.a(jb.field_c, 24);
+          ClientException.a(jb.field_c, 24);
           jb.field_c.a(param1, 103);
           param0.a(jb.field_c, (byte) -71);
-          wa.field_d.field_n = 0;
+          wa.field_d.position = 0;
           if (param2) {
             wa.field_d.b(90, 18);
           } else {
             wa.field_d.b(90, 16);
           }
-          wa.field_d.field_n = wa.field_d.field_n + 2;
-          var5_int = wa.field_d.field_n;
+          wa.field_d.position = wa.field_d.position + 2;
+          var5_int = wa.field_d.position;
           if (param3 <= 6) {
             id.a((byte) 2);
           }
           wa.field_d.b((byte) 60, rj.field_w);
-          wa.field_d.a(78, ul.field_f);
+          wa.field_d.a(78, MouseInputHandler.field_f);
           var6 = 0;
           if (ao.field_b) {
             var6 = var6 | 1;
@@ -64,7 +64,7 @@ final class id {
             wa.field_d.a(wh.field_u, (byte) -72);
           }
           ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
-          wa.field_d.c(wa.field_d.field_n - var5_int, 400369768);
+          wa.field_d.c(wa.field_d.position - var5_int, 400369768);
           jd.a((byte) -95, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

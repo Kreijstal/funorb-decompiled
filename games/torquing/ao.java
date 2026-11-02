@@ -80,14 +80,14 @@ abstract class ao {
         RuntimeException var2 = null;
         var3 = Torquing.field_u;
         try {
-          jg.a(param1, param0 ^ -8141, true, mc.field_l, 0, ga.field_c, vg.field_o);
+          jg.a(param1, param0 ^ -8141, true, mc.field_l, 0, ClientException.field_c, vg.field_o);
           if (param0 != 8191) {
             return;
           }
           for (var2_int = 0; var2_int < vg.field_o; var2_int++) {
             lp.field_g[param1 + var2_int] = var2_int;
           }
-          jg.a(param1 + param1, param0 ^ -8153, false, qd.field_g, param1, lj.field_d, param1 + vg.field_o);
+          jg.a(param1 + param1, param0 ^ -8153, false, qd.field_g, param1, SecondaryNodeDeque.field_d, param1 + vg.field_o);
           if (vg.field_o > param1) {
             vg.field_o = param1;
           }

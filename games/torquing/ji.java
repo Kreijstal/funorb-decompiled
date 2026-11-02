@@ -269,8 +269,8 @@ final class ji {
         try {
           var12 = ln.a(qk.field_p, j.field_q, param6, 103);
           var13 = ln.a(qk.field_p, j.field_q, param3, 81);
-          var14 = ln.a(qg.field_z, kn.field_e, param0, 73);
-          var15 = ln.a(qg.field_z, kn.field_e, param2, 113);
+          var14 = ln.a(qg.field_z, RasterBuffer.field_e, param0, 73);
+          var15 = ln.a(qg.field_z, RasterBuffer.field_e, param2, 113);
           var8_int = ln.a(qk.field_p, j.field_q, param6 + param7, 103);
           var9 = ln.a(qk.field_p, j.field_q, param3 - param7, 111);
           for (var16 = var12; var8_int > var16; var16++) {
@@ -279,8 +279,8 @@ final class ji {
           for (var16Lifetime1 = var13; var9 < var16Lifetime1; var16Lifetime1--) {
             di.a(var14, (byte) -108, param1, qd.field_a[var16Lifetime1], var15);
           }
-          var10 = ln.a(qg.field_z, kn.field_e, param0 + param7, 126);
-          var11 = ln.a(qg.field_z, kn.field_e, -param7 + param2, 76);
+          var10 = ln.a(qg.field_z, RasterBuffer.field_e, param0 + param7, 126);
+          var11 = ln.a(qg.field_z, RasterBuffer.field_e, -param7 + param2, 76);
           var16Lifetime2 = -88 / ((39 - param5) / 39);
           for (var17 = var8_int; var17 <= var9; var17++) {
             var23 = qd.field_a[var17];

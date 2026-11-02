@@ -65,7 +65,7 @@ final class bj extends rb {
           this.a(-111, (gm) null, -90, 97);
         }
         var6 = this.field_I.a((byte) -88);
-        if (q.field_a != var6 &&
+        if (IntrusiveNode.field_a != var6 &&
           gn.field_h != var6) {
           var25 = this.field_I.a(126);
           if (var25 == null) {
@@ -79,7 +79,7 @@ final class bj extends rb {
             var37 = (fe) ((Object) this.field_q);
             var9 = this.field_w + param3;
             var10 = var37.a((gm) (this), param2, -101) + (var37.b((byte) 116, (gm) (this)).b(false) >> 1);
-            if (var6 != q.field_a &&
+            if (var6 != IntrusiveNode.field_a &&
               var6 != gn.field_h) {
               if (var6 == so.field_u) {
                 var33 = wj.field_h[2];
@@ -127,7 +127,7 @@ final class bj extends rb {
           var36 = (fe) ((Object) this.field_q);
           var9Lifetime2 = this.field_w + param3;
           var10Lifetime2 = var36.a((gm) (this), param2, -101) + (var36.b((byte) 116, (gm) (this)).b(false) >> 1);
-          if (var6 != q.field_a &&
+          if (var6 != IntrusiveNode.field_a &&
             var6 != gn.field_h) {
             if (var6 == so.field_u) {
               var28 = wj.field_h[2];
@@ -177,7 +177,7 @@ final class bj extends rb {
         var35 = (fe) ((Object) this.field_q);
         var9Lifetime1 = this.field_w + param3;
         var10Lifetime1 = var35.a((gm) (this), param2, -101) + (var35.b((byte) 116, (gm) (this)).b(false) >> 1);
-        if (var6Lifetime1 != q.field_a &&
+        if (var6Lifetime1 != IntrusiveNode.field_a &&
           var6Lifetime1 != gn.field_h) {
           if (var6Lifetime1 == so.field_u) {
             var21 = wj.field_h[2];
@@ -229,7 +229,7 @@ final class bj extends rb {
     }
 
     bj(sk param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, no.b(true));
+        super(param1, BufferedSocket.b(true));
         try {
           this.field_J = param1;
           this.field_I = param0;

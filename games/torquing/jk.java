@@ -34,8 +34,8 @@ final class jk {
             } else {
               fq.field_F.a(false, hb.field_s, ra.field_e);
               of.field_l.d(hb.field_s, ra.field_e);
-              var1_int = la.field_j.field_s * vc.field_d / 100;
-              var2 = la.field_j.field_t * vc.field_d / 100;
+              var1_int = la.field_j.field_s * MouseWheelInput.field_d / 100;
+              var2 = la.field_j.field_t * MouseWheelInput.field_d / 100;
               la.field_j.b(-(var1_int / 2) + je.field_a, -(var2 / 2) + kc.field_v, var1_int, var2);
             }
           } else {

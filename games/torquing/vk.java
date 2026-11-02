@@ -3,7 +3,7 @@
  */
 final class vk extends am {
     private int field_D;
-    static hk field_B;
+    static GameApplet field_B;
     private int field_G;
     private int field_y;
     private int field_t;
@@ -11,7 +11,7 @@ final class vk extends am {
     static int[] field_z;
     private int field_v;
     private int field_w;
-    static no field_E;
+    static BufferedSocket field_E;
     static t field_s;
     private int field_u;
     static int field_A;
@@ -98,7 +98,7 @@ final class vk extends am {
         }
         var4 = -2048 + dp.field_a[param1];
         for (var5 = 0; ci.field_c > var5; var5++) {
-          var6 = q.field_b[var5] - 2048;
+          var6 = IntrusiveNode.field_b[var5] - 2048;
           var7 = var6 + this.field_u;
           if (var7 < -2048) {
             stackIn_16_0 = var7 + 4096;
@@ -211,7 +211,7 @@ final class vk extends am {
         ie.a(14837);
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

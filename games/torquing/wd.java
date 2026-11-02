@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends ta {
+final class wd extends DualLinkNode {
     private am[] field_t;
     private int[] field_s;
     private int[] field_q;
@@ -162,7 +162,7 @@ final class wd extends ta {
         if (param5 == param3) {
           lc.a(param1, param2, -123, param7, param6, param5, param0);
         } else {
-          if (kn.field_e > -param5 + param2) {
+          if (RasterBuffer.field_e > -param5 + param2) {
             wk.a(param1, param0, param6, param7, param2, param5, 0, param3);
           } else {
             if (qg.field_z < param2 + param5) {
@@ -236,7 +236,7 @@ final class wd extends ta {
         }
     }
 
-    wd(fj param0) {
+    wd(PacketBuffer param0) {
         int[] array$2 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

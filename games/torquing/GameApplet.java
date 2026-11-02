@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-public abstract class hk extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_e;
     public static boolean field_a;
     public static int field_b;
@@ -77,7 +77,7 @@ public abstract class hk extends java.applet.Applet implements Runnable, java.aw
           int var12 = 0;
           var12 = Torquing.field_u;
           try {
-            var2 = (pm) (ul.field_e.b(param1 ^ -2933));
+            var2 = (pm) (MouseInputHandler.field_e.b(param1 ^ -2933));
             if (var2 == null) {
               return;
             }
@@ -111,7 +111,7 @@ public abstract class hk extends java.applet.Applet implements Runnable, java.aw
               if (var3 != 0) {
                 return;
               }
-              var4 = param0.field_n;
+              var4 = param0.position;
               param0.b((byte) 60, var2.field_j);
             }
             var5 = 0;
@@ -442,9 +442,9 @@ public abstract class hk extends java.applet.Applet implements Runnable, java.aw
             var2 = il.field_q;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          k.field_d = (java.awt.Canvas) ((Object) new md((java.awt.Component) (this)));
+          k.field_d = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) k.field_d));
-          k.field_d.setSize(wk.field_d, ul.field_a);
+          k.field_d.setSize(wk.field_d, MouseInputHandler.field_a);
           k.field_d.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == un.field_b);
           if (!decompiledSharedTail0) {
@@ -637,7 +637,7 @@ public abstract class hk extends java.applet.Applet implements Runnable, java.aw
                 }
                 rd.b(36);
                 this.a(false);
-                mk.field_b = fd.a(0, ul.field_a, wk.field_d, (java.awt.Component) ((Object) k.field_d));
+                mk.field_b = fd.a(0, MouseInputHandler.field_a, wk.field_d, (java.awt.Component) ((Object) k.field_d));
                 this.c(-593);
                 df.field_q = lh.a(-24858);
                 do {
@@ -726,7 +726,7 @@ public abstract class hk extends java.applet.Applet implements Runnable, java.aw
           if (fieldTemp$1 > 50) {
             cf.field_c = true;
             jk.field_a = jk.field_a - 50;
-            k.field_d.setSize(wk.field_d, ul.field_a);
+            k.field_d.setSize(wk.field_d, MouseInputHandler.field_a);
             k.field_d.setVisible(true);
             boolean decompiledSharedTail0 = (un.field_b != null &&
               null == il.field_q);
@@ -782,7 +782,7 @@ public abstract class hk extends java.applet.Applet implements Runnable, java.aw
             stackIn_16_0 = param0;
           }
           if (!stackIn_16_0) {
-            hk.a(true, (String) null);
+            GameApplet.a(true, (String) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -987,7 +987,7 @@ public abstract class hk extends java.applet.Applet implements Runnable, java.aw
               vk.field_B = this;
               dq.field_m = param0;
               hg.field_a = 0;
-              ul.field_a = param3;
+              MouseInputHandler.field_a = param3;
               mi.field_s = param3;
               aq.field_d = 0;
               lg.field_B = ip.a(9);
@@ -1122,7 +1122,7 @@ public abstract class hk extends java.applet.Applet implements Runnable, java.aw
     public final void windowDeactivated(java.awt.event.WindowEvent param0) {
     }
 
-    protected hk() {
+    protected GameApplet() {
         this.field_e = false;
     }
 
@@ -1155,7 +1155,7 @@ public abstract class hk extends java.applet.Applet implements Runnable, java.aw
         try {
           var4 = new char[param0];
           if (!param1) {
-            hk.a((df) null, -7);
+            GameApplet.a((df) null, -7);
           }
           var5 = 0;
           var6 = 0;

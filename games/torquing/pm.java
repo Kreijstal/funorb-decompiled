@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pm extends q {
+final class pm extends IntrusiveNode {
     rc[] field_u;
     int[] field_q;
     byte[][][] field_o;

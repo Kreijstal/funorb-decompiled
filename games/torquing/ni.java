@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni extends q {
+final class ni extends IntrusiveNode {
     int field_k;
     static sm[] field_l;
     byte[] field_j;
@@ -251,7 +251,7 @@ final class ni extends q {
     final static k a(int param0, int param1) {
         int var3 = 0;
         int var4 = Torquing.field_u;
-        k[] var5 = vc.c(0);
+        k[] var5 = MouseWheelInput.c(0);
         k[] var2 = var5;
         for (var3 = 0; var5.length > var3; var3++) {
           if (~var5[var3].field_g == ~param1) {

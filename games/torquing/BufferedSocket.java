@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class no implements Runnable {
+final class BufferedSocket implements Runnable {
     private java.net.Socket field_b;
     private boolean field_c;
     private boolean field_h;
@@ -22,7 +22,7 @@ final class no implements Runnable {
     final void e(int param0) throws IOException {
         if (param0 != 22685) {
           vh var3 = (vh) null;
-          no.a((vh) null, -81);
+          BufferedSocket.a((vh) null, -81);
         }
         if (this.field_c) {
           return;
@@ -246,7 +246,7 @@ final class no implements Runnable {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (param0 <= kj.field_d.field_n) {
+          if (param0 <= kj.field_d.position) {
             return true;
           }
           if (vk.field_E == null) {
@@ -254,20 +254,20 @@ final class no implements Runnable {
           }
           try {
             if (param1 != 0) {
-              no.c(-9);
+              BufferedSocket.c(-9);
             }
             var2_int = vk.field_E.a(-85);
             if (var2_int > 0) {
-              if (var2_int > param0 - kj.field_d.field_n) {
-                var2_int = param0 - kj.field_d.field_n;
+              if (var2_int > param0 - kj.field_d.position) {
+                var2_int = param0 - kj.field_d.position;
               }
-              vk.field_E.a(var2_int, kj.field_d.field_n, kj.field_d.field_j, (byte) -74);
+              vk.field_E.a(var2_int, kj.field_d.position, kj.field_d.payload, (byte) -74);
               rb.field_C = km.b(~param1);
-              kj.field_d.field_n = kj.field_d.field_n + var2_int;
-              if (param0 > kj.field_d.field_n) {
+              kj.field_d.position = kj.field_d.position + var2_int;
+              if (param0 > kj.field_d.position) {
                 return false;
               }
-              kj.field_d.field_n = 0;
+              kj.field_d.position = 0;
               return true;
             }
             if (var2_int < 0) {
@@ -364,7 +364,7 @@ final class no implements Runnable {
             return stackIn_3_0;
           }
           if (param1 > -10) {
-            no.b(false);
+            BufferedSocket.b(false);
           }
           var8 = param0.a(100);
           while (var8.field_a == 0) {
@@ -416,7 +416,7 @@ final class no implements Runnable {
         this.a(true);
     }
 
-    no(java.net.Socket param0, vh param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, vh param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -439,7 +439,7 @@ final class no implements Runnable {
         field_j = null;
     }
 
-    private no(java.net.Socket param0, vh param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, vh param1, int param2) throws IOException {
         this.field_a = 0;
         this.field_m = 0;
         this.field_h = false;

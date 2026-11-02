@@ -313,12 +313,12 @@ class rb extends lg {
         }
     }
 
-    final static ga a(Throwable param0, String param1) {
-        ga var2 = null;
-        if (!(param0 instanceof ga)) {
-          var2 = new ga(param0, param1);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (ga) ((Object) param0);
+          var2 = (ClientException) ((Object) param0);
           var2.field_b = var2.field_b + ' ' + param1;
         }
         return var2;

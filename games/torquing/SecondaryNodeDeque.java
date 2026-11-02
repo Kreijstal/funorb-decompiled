@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class lj implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static int[] field_c;
     static String field_b;
-    ta field_a;
+    DualLinkNode field_a;
     static int field_d;
 
     public static void b(int param0) {
@@ -16,10 +16,10 @@ final class lj implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new wo(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final void a(ta param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           if (param0.field_j != null) {
             param0.h(0);
@@ -53,7 +53,7 @@ final class lj implements Iterable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = hk.a(param0.length, true, 0, param0);
+            stackIn_4_0 = GameApplet.a(param0.length, true, 0, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -72,8 +72,8 @@ final class lj implements Iterable {
         }
     }
 
-    final ta a(int param0) {
-        ta var2 = this.field_a.field_p;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_a.field_p;
         if (param0 != 4) {
           this.a(121);
           if (var2 != this.field_a) {
@@ -89,7 +89,7 @@ final class lj implements Iterable {
         return null;
     }
 
-    private lj() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 

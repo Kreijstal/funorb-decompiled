@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vg extends eh {
-    static fj field_k;
+    static PacketBuffer field_k;
     static int field_j;
     private boolean field_m;
     static int field_o;
@@ -380,7 +380,7 @@ final class vg extends eh {
     final void b(int param0, kh param1) {
         try {
           if (param0 != 0) {
-            field_k = (fj) null;
+            field_k = (PacketBuffer) null;
           }
           if (this.field_m) {
             param1 = this.a(-1, param1);

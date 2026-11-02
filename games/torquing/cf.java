@@ -3,7 +3,7 @@
  */
 final class cf {
     static int[] field_a;
-    private ta field_b;
+    private DualLinkNode field_b;
     static boolean field_f;
     static volatile boolean field_c;
     static int field_e;
@@ -40,9 +40,9 @@ final class cf {
         field_a = null;
     }
 
-    final void a(long param0, ta param1, int param2) {
+    final void a(long param0, DualLinkNode param1, int param2) {
         RuntimeException runtimeException = null;
-        ta var5 = null;
+        DualLinkNode var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -77,11 +77,11 @@ final class cf {
         }
     }
 
-    final ta a(long param0, int param1) {
+    final DualLinkNode a(long param0, int param1) {
         if (param1 != 4604) {
           this.field_h = (eb) null;
         }
-        ta var4 = (ta) (this.field_h.a(param0, (byte) 89));
+        DualLinkNode var4 = (DualLinkNode) (this.field_h.a(param0, (byte) 89));
         if (var4 != null) {
           this.field_d.a((byte) 118, var4);
         }
@@ -90,7 +90,7 @@ final class cf {
 
     cf(int param0) {
         int var2 = 0;
-        this.field_b = new ta();
+        this.field_b = new DualLinkNode();
         this.field_d = new gb();
         this.field_i = param0;
         for (var2 = 1; var2 + var2 < param0; var2 = var2 + var2) {

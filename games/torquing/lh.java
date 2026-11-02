@@ -90,7 +90,7 @@ final class lh {
         }
     }
 
-    lh(fj param0, fi param1) {
+    lh(PacketBuffer param0, fi param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;

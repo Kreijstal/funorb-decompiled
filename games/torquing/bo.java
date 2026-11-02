@@ -11,7 +11,7 @@ final class bo {
     static int field_d;
     static uc field_e;
     static ei field_l;
-    private fj field_h;
+    private PacketBuffer field_h;
     static String field_i;
     static int field_k;
 
@@ -80,7 +80,7 @@ final class bo {
               stackIn_9_0 = this.field_f[param2];
               return stackIn_9_0;
             }
-            this.field_h.field_n = param2 * 72 + 6;
+            this.field_h.position = param2 * 72 + 6;
             var6_int = this.field_h.c((byte) -127);
             var7 = this.field_h.c((byte) -49);
             var13 = new byte[64];
@@ -121,7 +121,7 @@ final class bo {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        fj var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -139,14 +139,14 @@ final class bo {
         if (this.field_b.field_r) {
           return false;
         }
-        var10 = new fj(this.field_b.c((byte) 119));
+        var10 = new PacketBuffer(this.field_b.c((byte) 119));
         if (param0 != -74) {
           field_l = (ei) null;
         }
-        var10.field_n = 5;
+        var10.position = 5;
         var3 = var10.i((byte) -101);
-        var10.field_n = var10.field_n + 72 * var3;
-        var13 = new byte[-var10.field_n + var10.field_j.length];
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.a(48, var13.length, var13, 0);
@@ -161,7 +161,7 @@ final class bo {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = np.a(5, var10.field_j, -5 + (var10.field_n - var13.length), -81);
+        var15 = np.a(5, var10.payload, -5 + (var10.position - var13.length), -81);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[var7 + 1] != var15[var7]) {
             throw new RuntimeException();

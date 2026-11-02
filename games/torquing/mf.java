@@ -77,7 +77,7 @@ final class mf extends am {
         field_z = null;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_13_1 = false;

@@ -259,7 +259,7 @@ class w extends to {
         this.field_P = -2147483648;
         this.field_w = false;
         try {
-          this.field_f = param0;
+          this.key = param0;
           this.a(-1, param1);
           if (param6 != null) {
             this.field_L = param6;

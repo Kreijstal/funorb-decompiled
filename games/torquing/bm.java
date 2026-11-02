@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm extends q {
+final class bm extends IntrusiveNode {
     String[][] field_p;
     int[][] field_n;
     long[][] field_m;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dl extends vc implements java.awt.event.MouseWheelListener {
+final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
     private int field_e;
 
     final void a(int param0, java.awt.Component param1) {
@@ -24,7 +24,7 @@ final class dl extends vc implements java.awt.event.MouseWheelListener {
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
-    dl() {
+    MouseWheelHandler() {
         this.field_e = 0;
     }
 

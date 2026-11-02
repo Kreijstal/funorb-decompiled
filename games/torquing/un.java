@@ -15,7 +15,7 @@ final class un {
     short field_d;
 
     final static int a(int param0) {
-        no.field_n.a(false);
+        BufferedSocket.field_n.a(false);
         if (param0 != 0) {
           return -2;
         }

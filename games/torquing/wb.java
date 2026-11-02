@@ -3,7 +3,7 @@
  */
 final class wb extends am {
     private int field_s;
-    static vc field_u;
+    static MouseWheelInput field_u;
     static String field_t;
 
     final static void a(int param0, String[] param1, byte param2, String param3) {
@@ -61,7 +61,7 @@ final class wb extends am {
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -69,7 +69,7 @@ final class wb extends am {
         RuntimeException var4 = null;
         try {
           if (param1 != 35) {
-            field_u = (vc) null;
+            field_u = (MouseWheelInput) null;
           }
           if (param2 == 0) {
             this.field_s = param0.i(7088);
@@ -157,7 +157,7 @@ final class wb extends am {
             ae.field_mb != null &&
             ae.field_mb.a(-12749) &&
             ae.field_mb.a(true, "benefits")) {
-            kn.field_f = mn.a(qm.field_a, "benefits", "headline", 86);
+            RasterBuffer.field_f = mn.a(qm.field_a, "benefits", "headline", 86);
             mk.field_a = mn.a(qm.field_a, "benefits", "blurbpane", param0 ^ -88);
             vk.field_s = mn.a(qm.field_a, "benefits", "button", 89);
             je.field_e = mn.a(qm.field_a, "benefits", "signup_text", 113);
@@ -206,7 +206,7 @@ final class wb extends am {
             nc.field_a = 390 + (vk.field_s.field_t - jg.field_t.field_t) / 2;
           }
           if (param0 != -1) {
-            field_u = (vc) null;
+            field_u = (MouseWheelInput) null;
           }
           if (null == jd.field_D) {
             return;
@@ -269,11 +269,11 @@ final class wb extends am {
             hb.a(0, false, var9, var9.field_u, var9.field_w, 1, 0, 3);
             j.field_F.e();
             var9.d(0, 0);
-            vc.field_b = new t(640, 480);
-            vc.field_b.e();
+            MouseWheelInput.field_b = new t(640, 480);
+            MouseWheelInput.field_b.e();
             j.field_F.a((j.field_F.field_w >> 1) + gi.field_d, Torquing.field_x + (j.field_F.field_u >> 1), tl.field_n, 4096);
             j.field_F = null;
-            vc.field_b.d();
+            MouseWheelInput.field_b.d();
             ph.a(var28, var2Lifetime1, var3Lifetime1);
             ph.a(mo.field_w);
           }
@@ -316,15 +316,15 @@ final class wb extends am {
           ph.b(mo.field_w);
           ph.a(16, 16, 608, 112, 15, ln.field_G, of.field_o);
           ph.a(231, 144, 393, 232, 15, ln.field_G, of.field_o);
-          if (kn.field_f != null) {
-            kn.field_f.d(0, 0);
+          if (RasterBuffer.field_f != null) {
+            RasterBuffer.field_f.d(0, 0);
           }
           if (null != mk.field_a) {
             mk.field_a.d(0, 0);
           }
           jd.field_D.d(0, 0);
-          if (vc.field_b != null) {
-            vc.field_b.d(0, 0);
+          if (MouseWheelInput.field_b != null) {
+            MouseWheelInput.field_b.d(0, 0);
           }
           if (vk.field_s != null &&
             jg.field_t != null) {

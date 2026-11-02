@@ -22,7 +22,7 @@ final class hh {
 
     final static boolean a(int param0) {
         hg.field_c = true;
-        ta.field_k = 15000L + km.b(-1);
+        DualLinkNode.field_k = 15000L + km.b(-1);
         if (param0 == 64) {
           return op.field_i == 11 ? true : false;
         }

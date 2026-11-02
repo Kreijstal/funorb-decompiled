@@ -41,7 +41,7 @@ final class gh {
             this.field_c.a((long)param0, var3, (byte) 116);
             return var3;
           }
-          var3.a(new fj(var4), (byte) 38);
+          var3.a(new PacketBuffer(var4), (byte) 38);
           if (32768 <= param0) {
             var3.d((byte) -91);
             this.field_c.a((long)param0, var3, (byte) 116);
@@ -60,7 +60,7 @@ final class gh {
         }
         p var7 = new p();
         if (var4Lifetime1 != null) {
-          var7.a(new fj(var4Lifetime1), (byte) 38);
+          var7.a(new PacketBuffer(var4Lifetime1), (byte) 38);
           if (32768 > param0) {
             this.field_c.a((long)param0, var7, (byte) 116);
             return var7;

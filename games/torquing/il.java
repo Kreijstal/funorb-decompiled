@@ -88,7 +88,7 @@ final class il extends gf {
           il.a((String) null, (la) null, (String) null, (byte) -45);
         }
         Torquing.field_w = in.field_a[param1];
-        md.field_b = oc.field_a[param1];
+        DelegatingCanvas.field_b = oc.field_a[param1];
     }
 
     il(tk param0) {
@@ -242,7 +242,7 @@ final class il extends gf {
                   var20 = var27.i((byte) -101);
                   var21 = cb.field_m[var20].field_d;
                   var22 = var27.b(67);
-                  var24 = var27.field_n;
+                  var24 = var27.position;
                   if (var19 < var6_int) {
                     var8[0][var12] = var21;
                     var9[0][var12] = cb.field_m[var20].field_c;
@@ -259,7 +259,7 @@ final class il extends gf {
                     var8[1][var13] = re.field_e;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var27.field_n = var24;
+                    var27.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
@@ -274,7 +274,7 @@ final class il extends gf {
                     var9[2][var14] = cb.field_m[var20].field_c;
                     var10[2][var14] = var22;
                     var14++;
-                    var27.field_n = var24;
+                    var27.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;

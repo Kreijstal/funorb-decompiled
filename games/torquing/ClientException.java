@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ga extends RuntimeException {
+final class ClientException extends RuntimeException {
     Throwable field_a;
     String field_b;
     static String[] field_d;
@@ -16,7 +16,7 @@ final class ga extends RuntimeException {
         }
     }
 
-    final static void a(fj param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -128,7 +128,7 @@ final class ga extends RuntimeException {
         }
     }
 
-    ga(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_b = param1;
         this.field_a = param0;
     }

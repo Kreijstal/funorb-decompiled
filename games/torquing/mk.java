@@ -4,7 +4,7 @@
 final class mk {
     static t field_a;
     static int[] field_c;
-    static kn field_b;
+    static RasterBuffer field_b;
 
     final static boolean a(byte param0) {
         if (param0 != 38) {
@@ -29,7 +29,7 @@ final class mk {
     final static void a(boolean param0) {
         v.field_j = dd.field_b + cl.field_b + ti.field_f + cl.field_b + mb.field_a;
         if (!param0) {
-          field_b = (kn) null;
+          field_b = (RasterBuffer) null;
         }
     }
 

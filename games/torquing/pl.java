@@ -97,9 +97,9 @@ final class pl extends am {
     }
 
     final static void b(int param0, int param1) {
-        if (vc.field_a == null ||
-          vc.field_a.length < param0) {
-          vc.field_a = new int[param0];
+        if (MouseWheelInput.field_a == null ||
+          MouseWheelInput.field_a.length < param0) {
+          MouseWheelInput.field_a = new int[param0];
         }
         if (param1 < 27) {
           pl.c(25);

@@ -104,10 +104,10 @@ class wk implements si {
           if (param3 >= j.field_q &&
             qk.field_p >= param3) {
             var57 = qd.field_a[param3];
-            var40 = ln.a(qg.field_z, kn.field_e, param4 - param5, 87);
-            var41 = ln.a(qg.field_z, kn.field_e, param4 + param5, 105);
-            var42 = ln.a(qg.field_z, kn.field_e, param4 - var11, param6 + 88);
-            var43 = ln.a(qg.field_z, kn.field_e, param4 + var11, 85);
+            var40 = ln.a(qg.field_z, RasterBuffer.field_e, param4 - param5, 87);
+            var41 = ln.a(qg.field_z, RasterBuffer.field_e, param4 + param5, 105);
+            var42 = ln.a(qg.field_z, RasterBuffer.field_e, param4 - var11, param6 + 88);
+            var43 = ln.a(qg.field_z, RasterBuffer.field_e, param4 + var11, 85);
             di.a(var40, (byte) 92, param1, var57, var42);
             di.a(var42, (byte) 30, param2, var57, var43);
             di.a(var43, (byte) -125, param1, var57, var41);
@@ -169,8 +169,8 @@ class wk implements si {
             if (qk.field_p < var40Lifetime1) {
               continue;
             }
-            var42Lifetime1 = ln.a(qg.field_z, kn.field_e, param4 + var8_int, 111);
-            var43Lifetime1 = ln.a(qg.field_z, kn.field_e, -var8_int + param4, 118);
+            var42Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, param4 + var8_int, 111);
+            var43Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, -var8_int + param4, 118);
             if (var39 == 0) {
               if (var40Lifetime1 >= j.field_q) {
                 di.a(var43Lifetime1, (byte) 66, param1, qd.field_a[var40Lifetime1], var42Lifetime1);
@@ -181,8 +181,8 @@ class wk implements si {
               di.a(var43Lifetime1, (byte) 23, param1, qd.field_a[var41Lifetime1], var42Lifetime1);
               continue;
             }
-            var44 = ln.a(qg.field_z, kn.field_e, var10 + param4, 104);
-            var45 = ln.a(qg.field_z, kn.field_e, -var10 + param4, 70);
+            var44 = ln.a(qg.field_z, RasterBuffer.field_e, var10 + param4, 104);
+            var45 = ln.a(qg.field_z, RasterBuffer.field_e, -var10 + param4, 70);
             if (j.field_q <= var40Lifetime1) {
               var58 = qd.field_a[var40Lifetime1];
               di.a(var43Lifetime1, (byte) -100, param1, var58, var45);
@@ -244,7 +244,7 @@ class wk implements si {
     }
 
     wd a(byte param0, int param1) {
-        ta var3 = this.field_e.a((long)param1, 4604);
+        DualLinkNode var3 = this.field_e.a((long)param1, 4604);
         if (var3 != null) {
           return (wd) (var3);
         }
@@ -255,7 +255,7 @@ class wk implements si {
         if (var4 == null) {
           return null;
         }
-        wd var5 = new wd(new fj(var4));
+        wd var5 = new wd(new PacketBuffer(var4));
         this.field_e.a((long)param1, var5, 0);
         return var5;
     }
@@ -277,7 +277,7 @@ class wk implements si {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
-        fj var7 = null;
+        PacketBuffer var7 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
@@ -301,7 +301,7 @@ class wk implements si {
         try {
           this.field_c = param2;
           this.field_f = param1;
-          var7 = new fj(param0.a(0, 100, 0));
+          var7 = new PacketBuffer(param0.a(0, 100, 0));
           this.field_g = var7.i(7088);
           this.field_b = new un[this.field_g];
           for (var5 = 0; var5 < this.field_g; var5++) {

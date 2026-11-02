@@ -24,7 +24,7 @@ final class hc {
     private int[][] field_x;
     private int field_n;
     private boolean[][] field_h;
-    static fj field_c;
+    static PacketBuffer field_c;
     private kh field_t;
     static String field_u;
     ti[] field_k;
@@ -370,7 +370,7 @@ final class hc {
           var4 = (lm) ((Object) this.field_a.b(0));
           while (var4 != null) {
             this.field_g.a(var4);
-            ((q) ((Object) var4)).f(0);
+            ((IntrusiveNode) ((Object) var4)).f(0);
             if (50L >= -var2 + km.b(-1)) {
               var4 = (lm) ((Object) this.field_a.f(-24059));
               continue;
@@ -1055,7 +1055,7 @@ final class hc {
           Throwable decompiledCaughtException = null;
           try {
             if (param3 != 8505) {
-              field_c = (fj) null;
+              field_c = (PacketBuffer) null;
             }
             var6 = null;
             if (hq.field_a.field_t != null) {
@@ -1074,7 +1074,7 @@ final class hc {
               }
               var7 = new pb(param2, jd.field_F, uj.field_b[param2], 2097152);
             }
-            var8 = no.field_n.a((pb) (var7), (byte) 101, param2, (pb) (var6), param0);
+            var8 = BufferedSocket.field_n.a((pb) (var7), (byte) 101, param2, (pb) (var6), param0);
             if (param4) {
               var8.d(-118);
             }

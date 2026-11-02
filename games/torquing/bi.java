@@ -97,7 +97,7 @@ final class bi {
           this.field_P.b(0, this.field_i);
           var4 = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
           var5_int = 42 % ((-34 - param0) / 44);
-          var6_ref_kh__ = vc.field_c;
+          var6_ref_kh__ = MouseWheelInput.field_c;
           for (var7 = 0; var7 < var6_ref_kh__.length; var7++) {
             var8 = var6_ref_kh__[var7];
             if (var8 != null) {
@@ -598,7 +598,7 @@ final class bi {
         }
     }
 
-    final static we a(fj param0, byte param1) {
+    final static we a(PacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         java.applet.Applet var3 = null;
         we stackIn_3_0 = null;
@@ -777,7 +777,7 @@ final class bi {
               gn.field_l == null) {
               if (this.field_U > 0 &&
                 !je.a((byte) 85)) {
-                var4 = vl.field_c;
+                var4 = IterableNodeHashTable.field_c;
                 var5 = var4;
                 if (var5 != null &&
                   null != var5.field_p &&
@@ -786,7 +786,7 @@ final class bi {
                   gn.field_l = new wc(11, 65524, this.field_M, this.field_o, this.field_l, this.field_j, new int[]{this.field_U});
                 } else {
                   gn.field_l = va.a(true, this.field_j, this.field_M, 11, this.field_o, 3, this.field_l, new int[]{this.field_U}, 65524);
-                  vl.field_c = null;
+                  IterableNodeHashTable.field_c = null;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -973,11 +973,11 @@ final class bi {
             }
           }
           sg.a(this.field_C.field_g[this.field_P.field_c], 80, 1365, -1, -12, 12);
-          sg.a(vc.field_c[1], 80, 1365, -1, -12, 12);
+          sg.a(MouseWheelInput.field_c[1], 80, 1365, -1, -12, 12);
           if (param0) {
             this.e(14);
           }
-          sg.a(vc.field_c[7], 80, 1365, -1, -12, 12);
+          sg.a(MouseWheelInput.field_c[7], 80, 1365, -1, -12, 12);
           var10 = (kh) (on.field_e.c((byte) -122));
           while (var10 != null) {
             sg.a(var10, 80, 1365, -1, -12, 12);
@@ -985,7 +985,7 @@ final class bi {
           }
           for (var3Lifetime1 = 9; var3Lifetime1 <= 16; var3Lifetime1++) {
             discarded$0 = this.field_C;
-            sg.a(vc.field_c[var3Lifetime1], 80, 1365, -1, -12, 12);
+            sg.a(MouseWheelInput.field_c[var3Lifetime1], 80, 1365, -1, -12, 12);
           }
           this.field_C.a(gj.field_i);
           var11 = (sb) (this.field_e.b(0));
@@ -1268,7 +1268,7 @@ final class bi {
             this.field_k = 0;
             this.field_T = ki.a("ff9040", "ffffff", -93, this.field_T.toString());
             this.g(62);
-            vl.field_c = null;
+            IterableNodeHashTable.field_c = null;
             if (!je.a((byte) 117)) {
               gn.field_l = va.a(true, this.field_j, this.field_M, 11, this.field_o, 3, this.field_l, new int[]{this.field_U}, 65524);
             }
@@ -1284,18 +1284,18 @@ final class bi {
           this.field_a[3] = var8;
           this.field_a[9] = var9_int;
           this.field_a[5] = -var9_int;
-          this.field_P.field_h.a(vc.field_c[1], this.field_a);
+          this.field_P.field_h.a(MouseWheelInput.field_c[1], this.field_a);
           var38 = (kh) (on.field_e.c((byte) -119));
           while (var38 != null) {
             this.field_P.field_h.a(var38, this.field_a);
             var38 = (kh) (on.field_e.b((byte) 72));
           }
           for (var10 = 9; var10 <= 16; var10++) {
-            this.field_P.field_h.a(vc.field_c[var10], this.field_a);
+            this.field_P.field_h.a(MouseWheelInput.field_c[var10], this.field_a);
           }
           this.field_a[0] = 1 + var7_int;
           if (0 == (7 & var7_int)) {
-            var30 = vc.field_c[9].field_l.field_m;
+            var30 = MouseWheelInput.field_c[9].field_l.field_m;
             var24 = var30;
             var10_ref_short__ = var24;
             var11_int = (short)(65535 & var30[0] + 1024);
@@ -1675,7 +1675,7 @@ final class bi {
           this.field_q = 1 + wi.field_a[param1];
           this.field_P = new vg();
           this.h(104);
-          vl.field_c = null;
+          IterableNodeHashTable.field_c = null;
           gn.field_l = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

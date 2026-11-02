@@ -15,7 +15,7 @@ final class tl extends eh {
     private int field_m;
     static int field_u;
 
-    final static ak a(fj param0, byte param1) {
+    final static ak a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ak stackIn_1_0 = null;
@@ -94,11 +94,11 @@ final class tl extends eh {
             if (param0 != -2) {
               return (kh) null;
             }
-            return vc.field_c[this.field_r];
+            return MouseWheelInput.field_c[this.field_r];
           }
           var2 = (kh) (on.field_e.a((long)this.field_k, (byte) 94));
           if (var2 == null) {
-            var8 = new kh(vc.field_c[this.field_r], true, false, true, true);
+            var8 = new kh(MouseWheelInput.field_c[this.field_r], true, false, true, true);
             var10 = var8;
             var2 = var10;
             if (this.field_k > 100) {
@@ -125,7 +125,7 @@ final class tl extends eh {
         }
         var2Lifetime1 = (kh) (og.field_k.a((long)this.field_k, (byte) 117));
         if (var2Lifetime1 == null) {
-          var7 = new kh(vc.field_c[this.field_r], true, false, true, true);
+          var7 = new kh(MouseWheelInput.field_c[this.field_r], true, false, true, true);
           var9 = var7;
           var2Lifetime1 = var9;
           if (this.field_k > 5) {
@@ -304,8 +304,8 @@ final class tl extends eh {
                             }
                             param0.a((byte) 113, 1000);
                             param0.field_e.a((byte) 54, new sb(nc.field_c, var7, var8, 3));
-                            param0.a((byte) -68, vc.field_c[this.field_r], 1092, 72);
-                            param0.field_i = vc.field_c[this.field_r];
+                            param0.a((byte) -68, MouseWheelInput.field_c[this.field_r], 1092, 72);
+                            param0.field_i = MouseWheelInput.field_c[this.field_r];
                             param0.field_z = param0.field_z | 1 << param0.field_d.field_s;
                             la.field_k[10].g();
                             jh.a(la.field_k[10], 0);

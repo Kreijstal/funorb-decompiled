@@ -82,7 +82,7 @@ final class lc extends ro {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7;
-        if (-param5 + param1 >= kn.field_e &&
+        if (-param5 + param1 >= RasterBuffer.field_e &&
           qg.field_z >= param1 + param5 &&
           j.field_q <= param3 - param5 &&
           param3 + param5 <= qk.field_p) {
@@ -285,7 +285,7 @@ final class lc extends ro {
           var30[0].a((byte) -15, 2);
           var31 = rh.a((byte) 116, var30, var4, hl.field_c);
           var31[0].a((byte) 101, 1);
-          var32 = rh.a((byte) 125, var31, var4, q.field_i);
+          var32 = rh.a((byte) 125, var31, var4, IntrusiveNode.field_i);
           var1Lifetime1 = var32;
           ln.a(1, 0, var32, (byte) -58);
           var1Lifetime1[-1 + var32.length].c(0);
@@ -301,7 +301,7 @@ final class lc extends ro {
             if (m.field_n[var10] != null) {
               var11_int = be.field_l[200];
               var12 = be.field_o[200];
-              var13_ref_rm = vc.field_c[var10].field_l;
+              var13_ref_rm = MouseWheelInput.field_c[var10].field_l;
               var14 = 99999;
               var15_int = -99999;
               for (var16 = 0; var16 < var13_ref_rm.field_f; var16++) {
@@ -322,7 +322,7 @@ final class lc extends ro {
               hh.field_e[var10] = var35;
               var35.e();
               be.a();
-              var17_ref_kh = vc.field_c[var10];
+              var17_ref_kh = MouseWheelInput.field_c[var10];
               var18 = new sg(1);
               var18.a(0, var17_ref_kh);
               var19 = new int[]{0, 0, 0, 65535, 0, 0, 0, var12, var11_int, 0, -var11_int, var12};
@@ -394,7 +394,7 @@ final class lc extends ro {
               var13 = var15_intLifetime1Lifetime1;
             }
           }
-          for (var14Lifetime2 = 0; ga.field_d.length > var14Lifetime2; var14Lifetime2++) {
+          for (var14Lifetime2 = 0; ClientException.field_d.length > var14Lifetime2; var14Lifetime2++) {
             var15 = new t(80, var13 + 1 - var12);
             var15.e();
             be.a();
@@ -405,7 +405,7 @@ final class lc extends ro {
             var11.a(0, 80, 1365, 0, -1, 0);
             be.field_b = -var12;
             var11.a(new int[]{0, 0, -1024, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535});
-            var41 = rh.a((byte) 120, var1Lifetime3, var15, ga.field_d[var3[var14Lifetime2]]);
+            var41 = rh.a((byte) 120, var1Lifetime3, var15, ClientException.field_d[var3[var14Lifetime2]]);
             var1Lifetime3 = var41;
             ln.a(0, dd.field_c.field_x, var41, (byte) -58);
           }

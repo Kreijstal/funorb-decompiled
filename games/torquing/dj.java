@@ -34,13 +34,13 @@ final class dj {
           jm.field_e[0] = param3.field_E[param7];
           jm.field_e[1] = param3.field_E[param0];
           jm.field_e[2] = param3.field_E[param1];
-          ml.field_d[2] = param4;
-          ml.field_d[1] = param2;
-          ml.field_d[0] = param5;
+          GameKeyHandler.field_d[2] = param4;
+          GameKeyHandler.field_d[1] = param2;
+          GameKeyHandler.field_d[0] = param5;
           il.field_p[1] = param8;
           il.field_p[0] = param10;
           il.field_p[2] = param6;
-          g.a(po.field_x, cl.field_e, jm.field_e, ml.field_d, il.field_p);
+          g.a(po.field_x, cl.field_e, jm.field_e, GameKeyHandler.field_d, il.field_p);
           cd.a(param3, -19729, 3);
           var20 = g.field_b;
           var17 = var20;

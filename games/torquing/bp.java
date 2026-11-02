@@ -23,8 +23,8 @@ final class bp {
           var7 = wa.field_d;
           var8 = var7;
           var8.f(91, param2);
-          var8.field_n = var8.field_n + 1;
-          var4 = var8.field_n;
+          var8.position = var8.position + 1;
+          var4 = var8.position;
           var8.b(90, param1);
           var8.a(param0.field_q, 118);
           var8.a(param0.field_n, param1 ^ 58);
@@ -38,7 +38,7 @@ final class bp {
             var7.b((byte) 60, param0.field_k[var5]);
           }
           var8.a(var4, true);
-          var8.c((byte) 48, var8.field_n - var4);
+          var8.c((byte) 48, var8.position - var4);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "bp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

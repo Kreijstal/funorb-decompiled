@@ -43,9 +43,9 @@ final class jn {
           !(param2 <= go.field_s.length)) {
           go.field_s = new boolean[2 * param2];
         }
-        lj.field_d = 2147483647;
+        SecondaryNodeDeque.field_d = 2147483647;
         qd.field_g = -2147483648;
-        ga.field_c = 2147483647;
+        ClientException.field_c = 2147483647;
         mc.field_l = -2147483648;
         vg.field_o = 0;
     }

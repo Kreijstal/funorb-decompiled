@@ -29,8 +29,8 @@ final class jg extends am {
         try {
           var11 = ln.a(qk.field_p, j.field_q, param4, 113);
           var12 = ln.a(qk.field_p, j.field_q, param6, 69);
-          var13 = ln.a(qg.field_z, kn.field_e, param5, 96);
-          var14 = ln.a(qg.field_z, kn.field_e, param1, 113);
+          var13 = ln.a(qg.field_z, RasterBuffer.field_e, param5, 96);
+          var14 = ln.a(qg.field_z, RasterBuffer.field_e, param1, 113);
           var7_int = ln.a(qk.field_p, j.field_q, param3 + param4, 99);
           var8 = ln.a(qk.field_p, j.field_q, -param3 + param6, 71);
           for (var15 = var11; var7_int > var15; var15++) {
@@ -39,8 +39,8 @@ final class jg extends am {
           for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
             di.a(var13, (byte) 90, param0, qd.field_a[var15Lifetime1], var14);
           }
-          var9 = ln.a(qg.field_z, kn.field_e, param5 + param3, 75);
-          var10 = ln.a(qg.field_z, kn.field_e, -param3 + param1, 119);
+          var9 = ln.a(qg.field_z, RasterBuffer.field_e, param5 + param3, 75);
+          var10 = ln.a(qg.field_z, RasterBuffer.field_e, -param3 + param1, 119);
           for (var15Lifetime2 = var7_int; var15Lifetime2 <= var8; var15Lifetime2++) {
             var21 = qd.field_a[var15Lifetime2];
             di.a(var13, (byte) -118, param0, var21, var9);
@@ -111,7 +111,7 @@ final class jg extends am {
         return re.field_e;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -217,7 +217,7 @@ final class jg extends am {
             for (var8Lifetime1 = param4; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               var9Lifetime1 = lp.field_g[var8Lifetime1];
               var10Lifetime1 = lp.field_g[1 + var8Lifetime1];
-              if (vc.a(param2, var10Lifetime1, 0, var9Lifetime1)) {
+              if (MouseWheelInput.a(param2, var10Lifetime1, 0, var9Lifetime1)) {
                 lp.field_g[var8Lifetime1] = var10Lifetime1;
                 lp.field_g[var8Lifetime1 + 1] = var9Lifetime1;
               }

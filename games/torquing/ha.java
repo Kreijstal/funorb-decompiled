@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ha {
-    static ml field_b;
+    static GameKeyHandler field_b;
     static jb[] field_d;
     static String field_c;
     static int field_a;
@@ -98,8 +98,8 @@ abstract class ha {
         try {
           var6_int = ln.a(qk.field_p, j.field_q, param4, 91);
           var7 = ln.a(qk.field_p, j.field_q, param5, 97);
-          var8 = ln.a(qg.field_z, kn.field_e, param0, 81);
-          var9 = ln.a(qg.field_z, kn.field_e, param3, 81);
+          var8 = ln.a(qg.field_z, RasterBuffer.field_e, param0, 81);
+          var9 = ln.a(qg.field_z, RasterBuffer.field_e, param3, 81);
           if (param2 > -45) {
             field_c = (String) null;
           }
@@ -117,6 +117,6 @@ abstract class ha {
     static {
         field_c = "Just play";
         field_a = -1;
-        field_b = new ml();
+        field_b = new GameKeyHandler();
     }
 }

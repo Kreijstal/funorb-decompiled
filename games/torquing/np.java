@@ -104,12 +104,12 @@ final class np extends ha {
           if (param0 != -13) {
             np.d(-95);
           }
-          if (q.field_g == mj.field_d) {
+          if (IntrusiveNode.field_g == mj.field_d) {
             return false;
           }
-          e.field_f = ol.field_c[q.field_g];
-          m.field_t = pe.field_H[q.field_g];
-          q.field_g = 127 & 1 + q.field_g;
+          e.field_f = ol.field_c[IntrusiveNode.field_g];
+          m.field_t = pe.field_H[IntrusiveNode.field_g];
+          IntrusiveNode.field_g = 127 & 1 + IntrusiveNode.field_g;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;
@@ -168,7 +168,7 @@ final class np extends ha {
         var4 = Torquing.field_u;
         if (param0 == -1) {
           if (null != j.field_a) {
-            lj.a(j.field_a, (byte) -101);
+            SecondaryNodeDeque.a(j.field_a, (byte) -101);
             j.field_a = null;
           }
         } else {
@@ -178,7 +178,7 @@ final class np extends ha {
           }
           if (j.field_a != ig.field_r[param0]) {
             if (null != j.field_a) {
-              lj.a(j.field_a, (byte) -103);
+              SecondaryNodeDeque.a(j.field_a, (byte) -103);
             }
             ni.a(ig.field_r[param0], true);
             j.field_a = ig.field_r[param0];

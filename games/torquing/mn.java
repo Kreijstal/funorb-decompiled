@@ -162,7 +162,7 @@ class mn extends aa implements ng {
                   this.c(var6, 33);
                   return;
                 }
-                var6.a(0, ml.field_c, (ca) (this));
+                var6.a(0, GameKeyHandler.field_c, (ca) (this));
               }
             } else {
               var6.a(cd.field_a, 5177, 8);
@@ -259,7 +259,7 @@ class mn extends aa implements ng {
           }
           this.field_D = false;
           if (this.field_eb) {
-            wo.a(107);
+            SecondaryNodeDequeIterator.a(107);
             return;
           }
           if (this.field_ab) {
@@ -273,7 +273,7 @@ class mn extends aa implements ng {
         }
         this.field_D = false;
         if (this.field_eb) {
-          wo.a(107);
+          SecondaryNodeDequeIterator.a(107);
           return;
         }
         if (!this.field_ab) {
@@ -328,7 +328,7 @@ class mn extends aa implements ng {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.field_Y) {
-            ul.a(0, "tochangedisplayname.ws", ip.a(9));
+            MouseInputHandler.a(0, "tochangedisplayname.ws", ip.a(9));
           } else {
             od.b(128, 3);
             this.b(true);

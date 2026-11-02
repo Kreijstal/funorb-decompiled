@@ -13,8 +13,8 @@ final class l {
         try {
           var5 = wa.field_d;
           var5.f(param2 ^ 117, param0);
-          var5.field_n = var5.field_n + 1;
-          var4 = var5.field_n;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.b(90, param2);
           var5.b(90, param1.field_p);
           var5.b(90, param1.field_m);
@@ -23,7 +23,7 @@ final class l {
           var5.b((byte) 60, param1.field_q);
           var5.b((byte) 60, param1.field_n);
           var5.a(var4, true);
-          var5.c((byte) 48, var5.field_n - var4);
+          var5.c((byte) 48, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "l.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -58,7 +58,7 @@ final class l {
         int var5_int = 0;
         byte[] var5 = null;
         byte[] var6 = null;
-        fj var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -71,7 +71,7 @@ final class l {
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         try {
-          var9 = new fj(param1);
+          var9 = new PacketBuffer(param1);
           var3 = var9.i((byte) -101);
           var4 = var9.c((byte) -102);
           if (param0 <= var4 && (0 == ee.field_v ||
@@ -93,9 +93,9 @@ final class l {
               if (var3 == 1) {
                 fc.a(var12, var5_int, param1, var4, 9);
               } else {
-                var7 = wo.field_d;
+                var7 = SecondaryNodeDequeIterator.field_d;
                 synchronized (var7) {
-                  wo.field_d.a((byte) -67, var9, var12);
+                  SecondaryNodeDequeIterator.field_d.a((byte) -67, var9, var12);
                 }
               }
               stackIn_19_0 = var6;
@@ -125,8 +125,8 @@ final class l {
           var5 = wa.field_d;
           df var3 = var5;
           var5.f(127, param1);
-          var5.field_n = var5.field_n + 1;
-          var4 = var5.field_n;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.b(90, param2);
           if (param0.field_j != null) {
             var5.b(90, param0.field_j.length);
@@ -135,9 +135,9 @@ final class l {
             var5.b(90, 0);
           }
           var5.a(var4, true);
-          var5.field_n = var5.field_n - 4;
+          var5.position = var5.position - 4;
           param0.field_k = var5.c((byte) -88);
-          var5.c((byte) 48, -var4 + var5.field_n);
+          var5.c((byte) 48, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "l.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

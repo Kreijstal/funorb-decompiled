@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh extends q {
+final class nh extends IntrusiveNode {
     static sm field_l;
     static String field_q;
     static String field_p;
@@ -12,7 +12,7 @@ final class nh extends q {
     static String field_o;
     int[] field_r;
 
-    final static void a(vh param0, int param1, fj param2, byte param3) {
+    final static void a(vh param0, int param1, PacketBuffer param2, byte param3) {
         try {
           int var5 = 0;
           int var12_int = 0;
@@ -132,7 +132,7 @@ final class nh extends q {
                 var19.field_t[var5] = -5;
               }
             }
-            ul.field_e.a((byte) 54, var19);
+            MouseInputHandler.field_e.a((byte) 54, var19);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -166,8 +166,8 @@ final class nh extends q {
         field_p = null;
         field_j = null;
         if (param0) {
-          fj var2 = (fj) null;
-          nh.a((vh) null, -6, (fj) null, (byte) -36);
+          PacketBuffer var2 = (PacketBuffer) null;
+          nh.a((vh) null, -6, (PacketBuffer) null, (byte) -36);
         }
     }
 

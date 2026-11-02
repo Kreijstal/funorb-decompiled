@@ -27,8 +27,8 @@ final class vd {
           var6_int = 72 % ((param1 + 9) / 50);
           if (qk.field_p >= param0 &&
             j.field_q <= param5) {
-            if (param4 < kn.field_e) {
-              param4 = kn.field_e;
+            if (param4 < RasterBuffer.field_e) {
+              param4 = RasterBuffer.field_e;
               var7 = 0;
             } else {
               if (qg.field_z < param4) {
@@ -38,9 +38,9 @@ final class vd {
                 var7 = 1;
               }
             }
-            if (param2 < kn.field_e) {
+            if (param2 < RasterBuffer.field_e) {
               var8 = 0;
-              param2 = kn.field_e;
+              param2 = RasterBuffer.field_e;
             } else {
               if (qg.field_z < param2) {
                 param2 = qg.field_z;
@@ -139,9 +139,9 @@ final class vd {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((fj) ((Object) var5)).i((byte) -101);
+            var6 = ((PacketBuffer) ((Object) var5)).i((byte) -101);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((fj) ((Object) var5)).c((byte) -65);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).c((byte) -65);
             }
             var14 = (nh) (to.field_q.b(0));
             if (var14 == null) {

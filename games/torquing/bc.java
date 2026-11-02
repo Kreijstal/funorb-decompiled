@@ -4,7 +4,7 @@
 abstract class bc {
     static ed field_a;
 
-    abstract void a(fj param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
     public static void a(byte param0) {
         field_a = null;

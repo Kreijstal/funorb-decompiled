@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static ei field_e;
     static int field_d;
     static int[] field_b;
@@ -82,7 +82,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           return wa.a((byte) -63, 1, 1, 1, param3, 3, param1, param2, param0);
         }
         java.applet.Applet var6 = (java.applet.Applet) null;
-        ul.a(-53, (String) null, (java.applet.Applet) null);
+        MouseInputHandler.a(-53, (String) null, (java.applet.Applet) null);
         return wa.a((byte) -63, 1, 1, 1, param3, 3, param1, param2, param0);
     }
 
@@ -96,7 +96,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           field_b = null;
           return;
         }
-        ul.a(91, -87, -114, -36, (byte) 126);
+        MouseInputHandler.a(91, -87, -114, -36, (byte) 126);
         field_c = null;
         field_b = null;
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class df extends fj {
+final class df extends PacketBuffer {
     static int field_u;
     static ha field_q;
     private gn field_t;
@@ -31,18 +31,18 @@ final class df extends fj {
     }
 
     final void f(int param0, int param1) {
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$0] = (byte)(this.field_t.b((byte) -103) + param1);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_t.b((byte) -103) + param1);
         int var3 = -58 / ((param0 - 23) / 48);
     }
 
     final int a(boolean param0) {
         int fieldTemp$0 = 0;
         if (param0) {
-          fieldTemp$0 = this.field_n;
-          this.field_n = this.field_n + 1;
-          return 255 & this.field_j[fieldTemp$0] - this.field_t.b((byte) -103);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return 255 & this.payload[fieldTemp$0] - this.field_t.b((byte) -103);
         }
         return -70;
     }
@@ -62,7 +62,7 @@ final class df extends fj {
     }
 
     final void j(byte param0) {
-        this.field_s = this.field_n * 8;
+        this.field_s = this.position * 8;
         if (param0 > -1) {
           field_p = (String) null;
         }
@@ -78,15 +78,15 @@ final class df extends fj {
         while (var4 < param0) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((la.field_h[var4] & this.field_j[incrementValue$0]) << param0 - var4);
+          var5 = var5 + ((la.field_h[var4] & this.payload[incrementValue$0]) << param0 - var4);
           param0 = param0 - var4;
           var4 = 8;
         }
         int var6 = -111 % ((param1 + 4) / 53);
         if (param0 != var4) {
-          var5 = var5 + (this.field_j[var3] >> -param0 + var4 & la.field_h[param0]);
+          var5 = var5 + (this.payload[var3] >> -param0 + var4 & la.field_h[param0]);
         } else {
-          var5 = var5 + (this.field_j[var3] & la.field_h[var4]);
+          var5 = var5 + (this.payload[var3] & la.field_h[var4]);
         }
         return var5;
     }
@@ -137,9 +137,9 @@ final class df extends fj {
             this.field_t = (gn) null;
           }
           for (var5_int = 0; param3 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_n;
-            this.field_n = this.field_n + 1;
-            param2[var5_int + param0] = (byte)(this.field_j[fieldTemp$0] - this.field_t.b((byte) -103));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_t.b((byte) -103));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -236,11 +236,11 @@ final class df extends fj {
 
     final void j(int param0) {
         if (param0 <= -126) {
-          this.field_n = (7 + this.field_s) / 8;
+          this.position = (7 + this.field_s) / 8;
           return;
         }
         field_r = (cd) null;
-        this.field_n = (7 + this.field_s) / 8;
+        this.position = (7 + this.field_s) / 8;
     }
 
     final static void a(int param0, double[] param1) {

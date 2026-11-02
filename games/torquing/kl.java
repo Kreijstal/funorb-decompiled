@@ -46,13 +46,13 @@ final class kl extends lf {
           return;
         }
         param0 = param0 - this.field_s;
-        this.field_q.field_h = this.field_h;
+        this.field_q.next = this.next;
         this.field_s = 0;
-        this.field_q.field_e = this.field_e;
-        this.field_h.field_e = (q) ((Object) this.field_q);
-        this.field_e.field_h = (q) ((Object) this.field_q);
-        this.field_h = null;
-        this.field_e = null;
+        this.field_q.previous = this.previous;
+        this.next.previous = (IntrusiveNode) ((Object) this.field_q);
+        this.previous.next = (IntrusiveNode) ((Object) this.field_q);
+        this.next = null;
+        this.previous = null;
         if (param0 > 0) {
           this.field_q.a(param0);
         }
@@ -70,7 +70,7 @@ final class kl extends lf {
         if (param1 != 16011) {
           return;
         }
-        if (param2 < kn.field_e) {
+        if (param2 < RasterBuffer.field_e) {
           ha.a(param2, param5, -126, param0, param3, param4);
           return;
         }
@@ -83,7 +83,7 @@ final class kl extends lf {
           return;
         }
         if (qk.field_p >= param4) {
-          ta.a(0, param4, param3, param5, param2, param0);
+          DualLinkNode.a(0, param4, param3, param5, param2, param0);
           return;
         }
         ha.a(param2, param5, -126, param0, param3, param4);
@@ -123,13 +123,13 @@ final class kl extends lf {
           }
           param1 = param1 + this.field_s;
           param2 = param2 - this.field_s;
-          this.field_q.field_h = this.field_h;
-          this.field_q.field_e = this.field_e;
+          this.field_q.next = this.next;
+          this.field_q.previous = this.previous;
           this.field_s = 0;
-          this.field_h.field_e = (q) ((Object) this.field_q);
-          this.field_e.field_h = (q) ((Object) this.field_q);
-          this.field_h = null;
-          this.field_e = null;
+          this.next.previous = (IntrusiveNode) ((Object) this.field_q);
+          this.previous.next = (IntrusiveNode) ((Object) this.field_q);
+          this.next = null;
+          this.previous = null;
           if (0 >= param2) {
             return;
           }

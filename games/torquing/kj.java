@@ -24,11 +24,11 @@ abstract class kj {
           var1 = wa.field_d;
           while (jd.g((byte) -126)) {
             var1.f(73, 8);
-            fieldTemp$0 = var1.field_n + 1;
-            var1.field_n = var1.field_n + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            hk.a(var1, -2933);
-            wa.field_d.c((byte) 48, -var2 + var1.field_n);
+            GameApplet.a(var1, -2933);
+            wa.field_d.c((byte) 48, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

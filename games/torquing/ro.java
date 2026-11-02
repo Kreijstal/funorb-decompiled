@@ -81,7 +81,7 @@ class ro extends am {
           if (!je.field_f.a(-12749)) {
             return Torquing.field_w;
           }
-          return md.field_b;
+          return DelegatingCanvas.field_b;
         }
         if (!lp.field_a.a(-12749)) {
           return bo.field_i;
@@ -132,7 +132,7 @@ class ro extends am {
         return true;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

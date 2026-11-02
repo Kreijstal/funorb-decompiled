@@ -27,7 +27,7 @@ final class ad extends gf {
           if (this.a(114, param1) != so.field_u) {
             return cp.field_h;
           }
-          stackIn_8_0 = ul.field_c;
+          stackIn_8_0 = MouseInputHandler.field_c;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

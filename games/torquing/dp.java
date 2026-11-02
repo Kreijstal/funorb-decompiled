@@ -22,7 +22,7 @@ abstract class dp {
           if (param3 != 4) {
             field_b = (t) null;
           }
-          stackIn_3_0 = bi.a(md.a(param0, 31094, param2, param1), param3 ^ -108);
+          stackIn_3_0 = bi.a(DelegatingCanvas.a(param0, 31094, param2, param1), param3 ^ -108);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

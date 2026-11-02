@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends q {
+final class qa extends IntrusiveNode {
     static String[] field_k;
     static String field_j;
     static String[] field_m;

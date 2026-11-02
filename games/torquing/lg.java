@@ -184,9 +184,9 @@ class lg extends gm {
           super.a(120, param1, param2, param3);
           int var5_int = 5 % ((param0 + 28) / 43);
           if (this.field_l != 0 &&
-            this.field_l != ul.field_d) {
+            this.field_l != MouseInputHandler.field_d) {
             if (this.a(k.field_e, n.field_t, param3, param2, 119) &&
-              ul.field_d == 0) {
+              MouseInputHandler.field_d == 0) {
               this.a(this.field_l, -param2 + k.field_e, -1, n.field_t - param3);
             }
             this.a(param2, param3, n.field_t, (byte) 120, param1, k.field_e);

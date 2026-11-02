@@ -168,10 +168,10 @@ final class la {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        fj var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        fj var29 = null;
-        fj var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -226,8 +226,8 @@ final class la {
             var35 = ui.a(true, this.field_f[param2], (byte) 37);
             var25 = var35;
             var9 = var25;
-            var26 = new fj(var35);
-            var26.a(5, param3, var26.field_j.length, param0 ^ 30937);
+            var26 = new PacketBuffer(var35);
+            var26.a(5, param3, var26.payload.length, param0 ^ 30937);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -255,10 +255,10 @@ final class la {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var5_int * var12 * 4;
-              var29 = new fj(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var15_int = 0;
-              var29.field_n = var11;
+              var29.position = var11;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
@@ -279,7 +279,7 @@ final class la {
               }
               var44 = new byte[var14_int];
               var14_intLifetime1 = 0;
-              var29.field_n = var11;
+              var29.position = var11;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
@@ -303,11 +303,11 @@ final class la {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * var5_int * var12;
-              var31 = new fj(var43);
+              var31 = new PacketBuffer(var43);
               var39 = new int[var5_int];
               var32 = var39;
               var14 = var32;
-              var31.field_n = var11;
+              var31.position = var11;
               for (var15_int = 0; var15_int < var12; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var17 < var5_int; var17++) {
@@ -323,7 +323,7 @@ final class la {
                 var15[var16] = array$1;
                 var39[var16] = 0;
               }
-              var31.field_n = var11;
+              var31.position = var11;
               var16 = 0;
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;
@@ -341,7 +341,7 @@ final class la {
                   var18 = var17;
                 }
                 if (this.field_l == 0) {
-                  var7[var18] = md.a((byte) -5, var40[var17], false);
+                  var7[var18] = DelegatingCanvas.a((byte) -5, var40[var17], false);
                 } else {
                   var7[var18] = var40[var17];
                 }
@@ -357,7 +357,7 @@ final class la {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = md.a((byte) -5, var43, false);
+            var7[var11] = DelegatingCanvas.a((byte) -5, var43, false);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -611,7 +611,7 @@ final class la {
         if (this.field_i) {
           this.field_f[param0] = this.field_a.a(param0, true);
         } else {
-          this.field_f[param0] = md.a((byte) -5, this.field_a.a(param0, true), false);
+          this.field_f[param0] = DelegatingCanvas.a((byte) -5, this.field_a.a(param0, true), false);
         }
         int var3 = -47 % ((32 - param1) / 62);
     }
@@ -992,16 +992,16 @@ final class la {
         }
     }
 
-    final static vc b(int param0) {
+    final static MouseWheelInput b(int param0) {
         try {
           Throwable var1 = null;
-          vc stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 <= 11) {
-            return (vc) null;
+            return (MouseWheelInput) null;
           }
           try {
-            stackIn_3_0 = (vc) (Class.forName("dl").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

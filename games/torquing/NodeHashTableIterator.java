@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class dh implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     static String field_d;
     static String[] field_a;
     private int field_c;
-    private q field_f;
-    private vl field_e;
-    private q field_b;
+    private IntrusiveNode field_f;
+    private IterableNodeHashTable field_e;
+    private IntrusiveNode field_b;
 
     public static void a(boolean param0) {
         if (!param0) {
@@ -88,7 +88,7 @@ final class dh implements Iterator {
             ha.field_a = nd.field_a;
           }
           if (jd.field_E &&
-            fj.field_m == lp.field_b) {
+            PacketBuffer.field_m == lp.field_b) {
             jd.field_E = false;
             lp.field_b = 0;
           }
@@ -111,12 +111,12 @@ final class dh implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        q var1;
+        IntrusiveNode var1;
         int var2;
         var2 = Torquing.field_u;
         if (this.field_b != this.field_e.field_a[-1 + this.field_c]) {
           var1 = this.field_b;
-          this.field_b = var1.field_e;
+          this.field_b = var1.previous;
           this.field_f = var1;
           return var1;
         }
@@ -126,9 +126,9 @@ final class dh implements Iterator {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          var1 = this.field_e.field_a[fieldTemp$0].field_e;
+          var1 = this.field_e.field_a[fieldTemp$0].previous;
         } while (this.field_e.field_a[-1 + this.field_c] == var1);
-        this.field_b = var1.field_e;
+        this.field_b = var1.previous;
         this.field_f = var1;
         return var1;
     }
@@ -146,13 +146,13 @@ final class dh implements Iterator {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          if (this.field_e.field_a[fieldTemp$0].field_e == this.field_e.field_a[this.field_c - 1]) {
+          if (this.field_e.field_a[fieldTemp$0].previous == this.field_e.field_a[this.field_c - 1]) {
             this.field_b = this.field_e.field_a[-1 + this.field_c];
             continue;
           }
           break;
         }
-        this.field_b = this.field_e.field_a[this.field_c - 1].field_e;
+        this.field_b = this.field_e.field_a[this.field_c - 1].previous;
         return true;
     }
 
@@ -165,12 +165,12 @@ final class dh implements Iterator {
     }
 
     private final void a(int param0) {
-        this.field_b = this.field_e.field_a[param0].field_e;
+        this.field_b = this.field_e.field_a[param0].previous;
         this.field_c = 1;
         this.field_f = null;
     }
 
-    dh(vl param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_f = null;
         try {
           this.field_e = param0;

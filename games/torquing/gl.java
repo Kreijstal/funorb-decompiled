@@ -158,12 +158,12 @@ final class gl extends me {
         if (null == this.b((byte) -126)) {
           return;
         }
-        q var2 = this.field_s.b(0);
+        IntrusiveNode var2 = this.field_s.b(0);
         if (param0 != -94) {
           this.field_m = false;
         }
         while (var2 != null) {
-          var3 = (int)var2.field_f;
+          var3 = (int)var2.key;
           if (var3 < 0) {
             var2.f(0);
           } else {
@@ -254,7 +254,7 @@ final class gl extends me {
               var4 = this.field_j.a((byte) 2, this.field_c, true, (byte) -51, param0);
             }
           }
-          this.field_t.a(false, (long)param0, (q) (var4));
+          this.field_t.a(false, (long)param0, (IntrusiveNode) (var4));
         }
         if (((nk) (var4)).field_r) {
           return null;
@@ -308,7 +308,7 @@ final class gl extends me {
                 return null;
               }
               var4 = this.field_j.a((byte) 2, this.field_c, true, (byte) -51, param0);
-              this.field_t.a(false, (long)param0, (q) (var4));
+              this.field_t.a(false, (long)param0, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -352,7 +352,7 @@ final class gl extends me {
             return null;
           }
           var4 = this.field_j.a((byte) 2, this.field_c, true, (byte) -51, param0);
-          this.field_t.a(false, (long)param0, (q) (var4));
+          this.field_t.a(false, (long)param0, (IntrusiveNode) (var4));
           return null;
         }
         var5[-2 + var18.length] = (byte)(this.field_v.field_q[param0] >>> 8);
@@ -376,14 +376,14 @@ final class gl extends me {
         nk discarded$2 = null;
         int var2_int;
         nk var2;
-        q var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        q var6;
-        q var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        q var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         var5 = Torquing.field_u;
         if (param0 != -1) {
           return;
@@ -397,7 +397,7 @@ final class gl extends me {
             var2_int = 1;
             var3 = this.field_e.b(0);
             while (var3 != null) {
-              var4 = (int)var3.field_f;
+              var4 = (int)var3.key;
               if (this.field_f[var4] == 0) {
                 discarded$1 = this.a(var4, 97, 1);
               }
@@ -408,19 +408,19 @@ final class gl extends me {
               }
               var3 = this.field_e.f(-24059);
             }
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (this.field_n < this.field_v.field_l.length) {
                 if (this.field_v.field_l[this.field_n] != 0) {
                   if (this.field_u.field_a >= 250) {
                     var2_int = 0;
-                    break L3;
+                    break scanLoop1;
                   }
                   if (0 == this.field_f[this.field_n]) {
                     discarded$0 = this.a(this.field_n, param0 + 123, 1);
                   }
                   if (this.field_f[this.field_n] == 0) {
-                    var7 = new q();
-                    var7.field_f = (long)this.field_n;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_n;
                     var2_int = 0;
                     this.field_e.a((byte) 54, var7);
                   }
@@ -441,7 +441,7 @@ final class gl extends me {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_e.b(0);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_f;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_f[var4Lifetime1] != 1) {
                   discarded$3 = this.a(var4Lifetime1, 124, 2);
                 }
@@ -462,8 +462,8 @@ final class gl extends me {
                     discarded$2 = this.a(this.field_n, 101, 2);
                   }
                   if (1 != this.field_f[this.field_n]) {
-                    var6 = new q();
-                    var6.field_f = (long)this.field_n;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_n;
                     this.field_e.a((byte) 54, var6);
                     var2_intLifetime1 = 0;
                   }

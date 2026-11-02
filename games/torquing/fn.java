@@ -7,7 +7,7 @@ final class fn {
     static int field_c;
     static String field_a;
 
-    final static am a(int param0, fj param1) {
+    final static am a(int param0, PacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -64,8 +64,8 @@ final class fn {
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-          fj var2 = (fj) null;
-          fn.a(15, (fj) null);
+          PacketBuffer var2 = (PacketBuffer) null;
+          fn.a(15, (PacketBuffer) null);
         }
     }
 

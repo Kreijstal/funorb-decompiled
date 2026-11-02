@@ -158,10 +158,10 @@ final class um extends gf {
         }
         var12 = (var7 << 12) / var6;
         var13 = -(var12 * param0 >> 12) + param2;
-        if (param3 < kn.field_e) {
-          var11 = (var12 * kn.field_e >> 12) + var13;
-          var9 = kn.field_e;
-          if (kn.field_e <= param0) {
+        if (param3 < RasterBuffer.field_e) {
+          var11 = (var12 * RasterBuffer.field_e >> 12) + var13;
+          var9 = RasterBuffer.field_e;
+          if (RasterBuffer.field_e <= param0) {
             if (qg.field_z < param0) {
               var10 = var13 + (qg.field_z * var12 >> 12);
               var8 = qg.field_z;
@@ -170,8 +170,8 @@ final class um extends gf {
               var10 = param2;
             }
           } else {
-            var10 = var13 + (var12 * kn.field_e >> 12);
-            var8 = kn.field_e;
+            var10 = var13 + (var12 * RasterBuffer.field_e >> 12);
+            var8 = RasterBuffer.field_e;
           }
           if (j.field_q <= var11) {
             if (var11 > qk.field_p) {
@@ -197,7 +197,7 @@ final class um extends gf {
         if (qg.field_z < param3) {
           var11Lifetime1 = var13 + (var12 * qg.field_z >> 12);
           var9Lifetime1 = qg.field_z;
-          if (kn.field_e <= param0) {
+          if (RasterBuffer.field_e <= param0) {
             if (qg.field_z < param0) {
               var10Lifetime1 = var13 + (qg.field_z * var12 >> 12);
               var8Lifetime1 = qg.field_z;
@@ -206,8 +206,8 @@ final class um extends gf {
               var10Lifetime1 = param2;
             }
           } else {
-            var10Lifetime1 = var13 + (var12 * kn.field_e >> 12);
-            var8Lifetime1 = kn.field_e;
+            var10Lifetime1 = var13 + (var12 * RasterBuffer.field_e >> 12);
+            var8Lifetime1 = RasterBuffer.field_e;
           }
           if (j.field_q > var11Lifetime1) {
             var11Lifetime1 = j.field_q;
@@ -232,9 +232,9 @@ final class um extends gf {
         }
         var9Lifetime2 = param3;
         var11Lifetime2 = param4;
-        if (kn.field_e > param0) {
-          var10Lifetime2 = var13 + (var12 * kn.field_e >> 12);
-          var8Lifetime2 = kn.field_e;
+        if (RasterBuffer.field_e > param0) {
+          var10Lifetime2 = var13 + (var12 * RasterBuffer.field_e >> 12);
+          var8Lifetime2 = RasterBuffer.field_e;
         } else {
           if (qg.field_z < param0) {
             var10Lifetime2 = var13 + (qg.field_z * var12 >> 12);

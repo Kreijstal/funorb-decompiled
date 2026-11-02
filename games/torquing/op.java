@@ -46,7 +46,7 @@ final class op extends wk implements ec {
         return ((vm) (Object) stackIn_4_0).a((si) (this), stackIn_4_2, stackIn_4_3, stackIn_6_4);
     }
 
-    final static void a(byte param0, fj param1, java.math.BigInteger param2, java.math.BigInteger param3, int param4, byte[] param5, int param6) {
+    final static void a(byte param0, PacketBuffer param1, java.math.BigInteger param2, java.math.BigInteger param3, int param4, byte[] param5, int param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -82,18 +82,18 @@ final class op extends wk implements ec {
             op.a(-68L, 80);
           }
           if (hc.field_c == null ||
-            !(var7_int <= hc.field_c.field_j.length)) {
-            hc.field_c = new fj(var7_int);
+            !(var7_int <= hc.field_c.payload.length)) {
+            hc.field_c = new PacketBuffer(var7_int);
           }
-          hc.field_c.field_n = 0;
+          hc.field_c.position = 0;
           hc.field_c.a(param4, param6, param5, (byte) -53);
           hc.field_c.d(var7_int, 114);
           hc.field_c.a(5479, var13);
           if (null == vg.field_k ||
-            !(vg.field_k.field_j.length >= 100)) {
-            vg.field_k = new fj(100);
+            !(vg.field_k.payload.length >= 100)) {
+            vg.field_k = new PacketBuffer(100);
           }
-          vg.field_k.field_n = 0;
+          vg.field_k.position = 0;
           vg.field_k.b(90, 10);
           var11 = 0;
           var9Lifetime1 = var11;
@@ -103,8 +103,8 @@ final class op extends wk implements ec {
           }
           vg.field_k.a(param4, param0 + 52);
           vg.field_k.a(param2, param3, -64);
-          param1.a(vg.field_k.field_n, 0, vg.field_k.field_j, (byte) -62);
-          param1.a(hc.field_c.field_n, 0, hc.field_c.field_j, (byte) -104);
+          param1.a(vg.field_k.position, 0, vg.field_k.payload, (byte) -62);
+          param1.a(hc.field_c.position, 0, hc.field_c.payload, (byte) -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ final class op extends wk implements ec {
           field_k = -28;
           var4 = this.field_m.a(param0, param1 + 161, 0);
           if (var4 != null) {
-            var3 = new vm(new fj(var4));
+            var3 = new vm(new PacketBuffer(var4));
             this.field_l.a((long)param0, var3, 0);
             return var3;
           }
@@ -157,7 +157,7 @@ final class op extends wk implements ec {
         }
         var4Lifetime1 = this.field_m.a(param0, param1 + 161, 0);
         if (var4Lifetime1 != null) {
-          var3 = new vm(new fj(var4Lifetime1));
+          var3 = new vm(new PacketBuffer(var4Lifetime1));
           this.field_l.a((long)param0, var3, 0);
           return var3;
         }
@@ -173,7 +173,7 @@ final class op extends wk implements ec {
             Thread.sleep(param0);
             if (param1 < 75) {
               var4 = (byte[]) null;
-              op.a((byte) -95, (fj) null, (java.math.BigInteger) null, (java.math.BigInteger) null, 124, (byte[]) null, -48);
+              op.a((byte) -95, (PacketBuffer) null, (java.math.BigInteger) null, (java.math.BigInteger) null, 124, (byte[]) null, -48);
               return;
             }
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {

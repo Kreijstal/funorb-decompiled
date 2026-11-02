@@ -148,7 +148,7 @@ final class om {
         }
         qg.field_z = param2;
         j.field_q = param0;
-        kn.field_e = param1;
+        RasterBuffer.field_e = param1;
         qk.field_p = param4;
     }
 

@@ -20,7 +20,7 @@ final class rf extends pc {
         }
         sm[] var1 = new sm[ti.field_g];
         for (var2 = 0; ti.field_g > var2; var2++) {
-          var1[var2] = new sm(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], pn.field_b[var2], cq.field_y);
+          var1[var2] = new sm(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], pn.field_b[var2], cq.field_y);
         }
         go.b(0);
         return var1;
@@ -201,9 +201,9 @@ final class rf extends pc {
         if (qp.field_j > 2) {
           qp.field_j = 2;
         }
-        fj.field_k = param0 >> 2 & 3;
-        if (fj.field_k > 2) {
-          fj.field_k = 2;
+        PacketBuffer.field_k = param0 >> 2 & 3;
+        if (PacketBuffer.field_k > 2) {
+          PacketBuffer.field_k = 2;
         }
         m.field_l = param0 & 3;
         if (m.field_l > 2) {

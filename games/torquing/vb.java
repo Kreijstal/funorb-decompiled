@@ -57,14 +57,14 @@ final class vb {
                 var9 != 0) {
                 eh.field_i = tp.a((byte) -51, false, param0, (String) null, qd.field_e);
               }
-              wa.field_d.field_n = 0;
+              wa.field_d.position = 0;
               wa.field_d.b(90, 14);
               wa.field_d.b(90, eh.field_i.a(false).field_a);
               jd.a((byte) -122, -1);
               ef.field_a = en.field_v;
             }
             if (en.field_v == ef.field_a &&
-              no.a(1, 0)) {
+              BufferedSocket.a(1, 0)) {
               var6_intLifetime1 = kj.field_d.i((byte) -101);
               if (0 != var6_intLifetime1) {
                 oo.field_a = -1;
@@ -75,20 +75,20 @@ final class vb {
                 var9 != 0) {
                 ef.field_a = aa.field_U;
               }
-              kj.field_d.field_n = 0;
+              kj.field_d.position = 0;
             }
             if (aa.field_U == ef.field_a &&
-              no.a(8, 0)) {
+              BufferedSocket.a(8, 0)) {
               ij.field_l = kj.field_d.b(48);
-              kj.field_d.field_n = 0;
+              kj.field_d.position = 0;
               id.a(eh.field_i, param5, param3, 19, param4);
               ef.field_a = qi.field_a;
             }
             if (ef.field_a == qi.field_a &&
-              no.a(1, 0)) {
+              BufferedSocket.a(1, 0)) {
               var6_intLifetime2 = kj.field_d.i((byte) -101);
               fa.field_e = var6_intLifetime2;
-              kj.field_d.field_n = 0;
+              kj.field_d.position = 0;
               wh.field_u = null;
               if (var6_intLifetime2 != 0 &&
                 1 != var6_intLifetime2) {
@@ -122,7 +122,7 @@ final class vb {
               }
               if (!param3) {
                 stackIn_71_0 = (0 != (4 & var7));
-                fj.field_l = stackIn_71_0;
+                PacketBuffer.field_l = stackIn_71_0;
                 stackIn_75_0 = ((var7 & 8) != 0);
                 qi.field_c = stackIn_75_0;
                 if (!qi.field_c) {
@@ -165,9 +165,9 @@ final class vb {
               if (null != var6) {
                 om.a((byte) -75, var6, ip.a(9));
               }
-              L22: {
+              regionExit1: {
                 if (!(wp.field_w <= 0) ||
-                  fj.field_l) {
+                  PacketBuffer.field_l) {
                   try {
                     hp.a(ip.a(param2 - 18), new Object[]{kp.a((byte) -87, qd.field_e)}, 28989, "zap");
                     decompiledRegionSelector0 = 0;
@@ -181,7 +181,7 @@ final class vb {
                     }
                   }
                   if (decompiledRegionSelector0 == 0) {
-                    break L22;
+                    break regionExit1;
                   }
                 }
                 try {
@@ -292,13 +292,13 @@ final class vb {
         try {
           var2_int = param1.length();
           var3 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var3 < var2_int) {
               var4 = param1.charAt(var3);
               stackIn_14_0 = 48;
               stackIn_14_1 = var4;
               if (var5 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_14_0 <= stackIn_14_1 &&
                 var4 <= 57) {
@@ -416,7 +416,7 @@ final class vb {
           var21 = be.field_g;
           var22 = be.field_b;
           var23 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param0.field_f > var23) {
               var24 = param0.field_B[var23];
               var25 = param0.field_j[var23];
@@ -429,7 +429,7 @@ final class vb {
               if (var30 != 0) {
                 if (stackIn_62_0 > stackIn_62_1) {
                   if (m.field_c.length <= var18) {
-                    break L2;
+                    break scanLoop1;
                   }
                   var19 = param0.field_q[var18];
                   var20 = param0.field_P[var18];
@@ -438,9 +438,9 @@ final class vb {
                   pm.field_s[var18] = var13 * var20 + var19 * var10 + var21 * var16 >> 16;
                   tm.field_e[var18] = var21 * var17 + var11 * var19 + var14 * var20 >> 16;
                   var18++;
-                  break L2;
+                  break scanLoop1;
                 }
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_62_0 >= stackIn_62_1) {
                 kh.field_m[var23] = var27 / var29 + var21;
@@ -485,7 +485,7 @@ final class vb {
                 var25 = param0.field_k[var23];
                 var26 = param0.field_h[var23];
                 pc.field_d[var23] = (var26 * var18 + (var24 * var12 + var15 * var25) >> 16) + var9;
-                no.field_j[var23] = (var16 * var25 + (var24 * var13 + var19 * var26) >> 16) + var10;
+                BufferedSocket.field_j[var23] = (var16 * var25 + (var24 * var13 + var19 * var26) >> 16) + var10;
                 up.field_b[var23] = var11 + (var20 * var26 + var25 * var17 + var14 * var24 >> 16);
                 var24 = param0.field_K[var23];
                 var25 = param0.field_D[var23];
@@ -502,7 +502,7 @@ final class vb {
             }
             if (decompiledFrameCompleted0) {
               if (!param5) {
-                break L2;
+                break scanLoop1;
               }
               var9 = param4[3];
               var10 = param4[4];
@@ -574,24 +574,24 @@ final class vb {
         int statePc = 0;
         Throwable caughtException = null;
         RuntimeException var3 = null;
-        stateLoop: while (true) {
+        scanLoop1: while (true) {
             switch (statePc) {
                 case 0: {
                     var6 = Torquing.field_u;
                     statePc = 1;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 1: {
                     try {
                         if (param1 == -485) {
                             statePc = 4;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 2. */
                             {
                                 field_e = (String) null;
                                 statePc = 4;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_1) {
@@ -600,7 +600,7 @@ final class vb {
                             throw vb.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 4: {
@@ -608,14 +608,14 @@ final class vb {
                         var3_int = (this.field_a.length >> 1) - 1;
                         var4 = param0 & var3_int;
                         statePc = 5;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_4) {
                         statePc = ((Object) stateCaught_4 instanceof RuntimeException ? 16 : -1);
                         if (statePc == -1) {
                             throw vb.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
                         }
                         caughtException = stateCaught_4;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 5: {
@@ -626,14 +626,14 @@ final class vb {
                             {
                                 stackIn_10_0 = param0;
                                 statePc = 10;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 6. */
                             {
                                 stackIn_7_0 = -1;
                                 statePc = 7;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_5) {
@@ -642,7 +642,7 @@ final class vb {
                             throw vb.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 7: {
@@ -650,7 +650,7 @@ final class vb {
                     stackIn_8_0 = stackIn_10_0;
                     if (var6 != 0) {
                         statePc = 10;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 8. */
                         {
@@ -665,7 +665,7 @@ final class vb {
                             {
                                 stackIn_14_0 = var5;
                                 statePc = 14;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 11. */
@@ -676,7 +676,7 @@ final class vb {
                                 {
                                     var4 = 1 + var4 & var3_int;
                                     statePc = 5;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
@@ -686,7 +686,7 @@ final class vb {
                             throw vb.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 14: {

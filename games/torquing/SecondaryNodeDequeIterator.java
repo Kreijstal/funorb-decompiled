@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class wo implements Iterator {
-    private lj field_a;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private SecondaryNodeDeque field_a;
     static tm field_d;
-    private ta field_c;
-    private ta field_b;
+    private DualLinkNode field_c;
+    private DualLinkNode field_b;
 
     final static void a(byte param0, int param1, int[] param2) {
         int var3_int = 0;
@@ -17,7 +17,7 @@ final class wo implements Iterator {
           param2[param1] = param2[param1] / var3_int;
           param2[1 + param1] = param2[1 + param1] / var3_int;
           if (param0 != 49) {
-            wo.a(-112, 3, 4, -83, true, -82);
+            SecondaryNodeDequeIterator.a(-112, 3, 4, -83, true, -82);
           }
           param2[2 + param1] = param2[2 + param1] / var3_int;
         } catch (RuntimeException runtimeException) {
@@ -31,9 +31,9 @@ final class wo implements Iterator {
           return;
         }
         if (param0 < 110) {
-          wo.a(-31);
+          SecondaryNodeDequeIterator.a(-31);
         }
-        if (param1 - param4 < kn.field_e) {
+        if (param1 - param4 < RasterBuffer.field_e) {
           a.a(param5, param1, param4, (byte) 123, param3, param2);
           return;
         }
@@ -55,7 +55,7 @@ final class wo implements Iterator {
     public static void a(boolean param0) {
         field_d = null;
         if (!param0) {
-          wo.a(-30, 57, -96, -102, false, -105);
+          SecondaryNodeDequeIterator.a(-30, 57, -96, -102, false, -105);
         }
     }
 
@@ -96,9 +96,9 @@ final class wo implements Iterator {
           var1 = null;
           this.field_c = null;
         } else {
-          this.field_c = ((ta) (var1)).field_p;
+          this.field_c = ((DualLinkNode) (var1)).field_p;
         }
-        this.field_b = (ta) (var1);
+        this.field_b = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -134,7 +134,7 @@ final class wo implements Iterator {
         }
     }
 
-    wo(lj param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_b = null;
         try {
           this.field_a = param0;

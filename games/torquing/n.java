@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n extends ta {
+final class n extends DualLinkNode {
     static String field_r;
     static int field_u;
     static int field_w;

@@ -120,7 +120,7 @@ final class jl extends rm {
         }
         var59 = new int[60][3];
         var11 = 0;
-        L2: while (true) {
+        scanLoop1: while (true) {
           stackIn_8_0 = -61;
           stackIn_8_1 = ~var11;
           if (stackIn_8_0 < stackIn_8_1) {
@@ -145,7 +145,7 @@ final class jl extends rm {
               }
             }
             var11++;
-            continue L2;
+            continue scanLoop1;
           }
           break;
         }

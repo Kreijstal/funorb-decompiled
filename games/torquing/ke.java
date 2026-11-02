@@ -85,7 +85,7 @@ final class ke {
         field_a = null;
     }
 
-    final static void a(int param0, fj param1) {
+    final static void a(int param0, PacketBuffer param1) {
         qc.field_bb = param1.i(7088) << 5;
         int var2_int = param1.i((byte) -101);
         if (param0 != 225225318) {

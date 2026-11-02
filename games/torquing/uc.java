@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uc extends ta {
+abstract class uc extends DualLinkNode {
     private byte[] field_z;
     private int[] field_H;
     private int[] field_M;

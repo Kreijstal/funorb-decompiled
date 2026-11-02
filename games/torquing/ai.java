@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai extends q {
+final class ai extends IntrusiveNode {
     long field_n;
     int field_j;
     static String field_l;

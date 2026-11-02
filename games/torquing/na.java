@@ -81,9 +81,9 @@ final class na extends jh {
     final static int a(da param0, String param1, int param2, da param3, int param4, boolean param5, int param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        fj stackIn_11_0 = null;
+        PacketBuffer stackIn_11_0 = null;
         String stackIn_12_1 = null;
-        fj stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         String stackIn_15_1 = null;
         int stackIn_36_0 = 0;
         int stackIn_47_0 = 0;
@@ -126,10 +126,10 @@ final class na extends jh {
           }
           if (ef.field_a == tb.field_o) {
             jl.field_T = null;
-            wa.field_d.field_n = 0;
+            wa.field_d.position = 0;
             if (param1 != null) {
               var9 = 0;
-              jb.field_c.field_n = 0;
+              jb.field_c.position = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
@@ -143,17 +143,17 @@ final class na extends jh {
               jb.field_c.b(90, param4);
               jb.field_c.b(90, var9);
               wa.field_d.b(90, 18);
-              wa.field_d.field_n = wa.field_d.field_n + 2;
-              var10 = wa.field_d.field_n;
+              wa.field_d.position = wa.field_d.position + 2;
+              var10 = wa.field_d.position;
               var11_ref_String = rb.a(-108, ip.a(9));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               wa.field_d.b((byte) 4, var11_ref_String);
               ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
-              wa.field_d.c(-var10 + wa.field_d.field_n, param2 + 400395746);
+              wa.field_d.c(-var10 + wa.field_d.position, param2 + 400395746);
             } else {
-              jb.field_c.field_n = 0;
+              jb.field_c.position = 0;
               jb.field_c.b((byte) 60, sa.field_d.nextInt());
               jb.field_c.b((byte) 60, sa.field_d.nextInt());
               stackIn_11_0 = jb.field_c;
@@ -162,31 +162,31 @@ final class na extends jh {
               } else {
                 stackIn_12_1 = var15;
               }
-              ((fj) (Object) stackIn_11_0).a(stackIn_12_1, (byte) -72);
+              ((PacketBuffer) (Object) stackIn_11_0).a(stackIn_12_1, (byte) -72);
               stackIn_14_0 = jb.field_c;
               if (param0.a((byte) -113)) {
                 stackIn_15_1 = var8;
               } else {
                 stackIn_15_1 = "";
               }
-              ((fj) (Object) stackIn_14_0).a(stackIn_15_1, (byte) -72);
+              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, (byte) -72);
               wa.field_d.b(90, 16);
-              wa.field_d.field_n = wa.field_d.field_n + 1;
-              var9 = wa.field_d.field_n;
+              wa.field_d.position = wa.field_d.position + 1;
+              var9 = wa.field_d.position;
               ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
-              wa.field_d.c((byte) 48, -var9 + wa.field_d.field_n);
+              wa.field_d.c((byte) 48, -var9 + wa.field_d.position);
             }
             jd.a((byte) -118, -1);
-            ef.field_a = q.field_c;
+            ef.field_a = IntrusiveNode.field_c;
           }
           if (param2 != -25978) {
             var14 = (da) null;
             na.a((da) null, (String) null, 121, (da) null, -99, true, 19);
           }
-          if (q.field_c == ef.field_a &&
-            no.a(1, param2 + 25978)) {
+          if (IntrusiveNode.field_c == ef.field_a &&
+            BufferedSocket.a(1, param2 + 25978)) {
             var9Lifetime1 = kj.field_d.i((byte) -101);
-            kj.field_d.field_n = 0;
+            kj.field_d.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
               kh.field_n = new String[var9Lifetime1 - 100];
@@ -201,9 +201,9 @@ final class na extends jh {
                 return stackIn_36_0;
               }
               if (var9Lifetime1 == 99) {
-                no.a(ol.b(-92), param2 ^ -25978);
+                BufferedSocket.a(ol.b(-92), param2 ^ -25978);
                 jl.field_T = new Boolean(ac.a(kj.field_d, 28066));
-                kj.field_d.field_n = 0;
+                kj.field_d.position = 0;
               } else {
                 fa.field_e = var9Lifetime1;
                 ef.field_a = ah.field_b;
@@ -213,10 +213,10 @@ final class na extends jh {
           }
           if (pl.field_s == ef.field_a) {
             var9Lifetime2 = 2;
-            if (no.a(var9Lifetime2, 0)) {
+            if (BufferedSocket.a(var9Lifetime2, 0)) {
               var10Lifetime1 = kj.field_d.i(7088);
-              kj.field_d.field_n = 0;
-              if (no.a(var10Lifetime1, 0)) {
+              kj.field_d.position = 0;
+              if (BufferedSocket.a(var10Lifetime1, 0)) {
                 var11 = kh.field_n.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   kh.field_n[var12] = kj.field_d.d(-7519);

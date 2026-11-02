@@ -6,7 +6,7 @@ import java.io.*;
 final class mm implements Runnable {
     static int field_g;
     static int field_d;
-    private fj field_i;
+    private PacketBuffer field_i;
     private rc field_f;
     private DataInputStream field_c;
     private rc field_a;
@@ -16,7 +16,7 @@ final class mm implements Runnable {
     private java.net.URL field_k;
     static boolean field_h;
 
-    final fj a(boolean param0) {
+    final PacketBuffer a(boolean param0) {
         if (this.field_e == 3) {
           return this.field_i;
         }
@@ -37,16 +37,16 @@ final class mm implements Runnable {
           Object var2_ref = null;
           var4 = Torquing.field_u;
           try {
-            while (this.field_i.field_j.length > this.field_i.field_n) {
-              var1_int = this.field_c.read(this.field_i.field_j, this.field_i.field_n, this.field_i.field_j.length - this.field_i.field_n);
+            while (this.field_i.payload.length > this.field_i.position) {
+              var1_int = this.field_c.read(this.field_i.payload, this.field_i.position, this.field_i.payload.length - this.field_i.position);
               if (var1_int >= 0) {
-                this.field_i.field_n = this.field_i.field_n + var1_int;
+                this.field_i.position = this.field_i.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_i.field_j.length == this.field_i.field_n) {
-              throw mm.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.field_j.length + " " + this.field_k));
+            if (this.field_i.payload.length == this.field_i.position) {
+              throw mm.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.payload.length + " " + this.field_k));
             }
             var1 = this;
             synchronized (var1) {
@@ -126,7 +126,7 @@ final class mm implements Runnable {
               var3.write(vg.a(var5, (byte) -126));
               this.field_c = new DataInputStream(var4.getInputStream());
             }
-            this.field_i.field_n = 0;
+            this.field_i.position = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
@@ -246,7 +246,7 @@ final class mm implements Runnable {
         try {
           this.field_j = param0;
           this.field_k = param1;
-          this.field_i = new fj(param2);
+          this.field_i = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "mm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

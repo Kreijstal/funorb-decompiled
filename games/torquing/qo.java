@@ -128,7 +128,7 @@ final class qo extends am {
         return var3;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -171,7 +171,7 @@ final class qo extends am {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        if (-param1 + param4 < kn.field_e) {
+        if (-param1 + param4 < RasterBuffer.field_e) {
           v.a(param2, param4, param0, (byte) 77, param1);
         } else {
           if (param1 + param4 > qg.field_z) {
@@ -220,7 +220,7 @@ final class qo extends am {
             return stackIn_2_0;
           }
           if (var6 != null) {
-            stackIn_7_0 = new lh(new fj(var6), param3);
+            stackIn_7_0 = new lh(new PacketBuffer(var6), param3);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

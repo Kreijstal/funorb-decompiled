@@ -98,7 +98,7 @@ final class ln extends jh {
     }
 
     public ln() {
-        super(0, 0, qj.field_f, kn.field_h, (el) null, (ca) null);
+        super(0, 0, qj.field_f, RasterBuffer.field_h, (el) null, (ca) null);
         this.field_E = new ei();
     }
 

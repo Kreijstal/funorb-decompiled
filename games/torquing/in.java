@@ -33,7 +33,7 @@ final class in {
             ao.field_b = param1;
             u.field_t = param7;
             ih.field_b = param2;
-            ul.field_f = param11;
+            MouseInputHandler.field_f = param11;
             if (null == u.field_t.field_c) {
               return;
             }

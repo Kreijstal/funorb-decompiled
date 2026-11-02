@@ -5,9 +5,9 @@ final class al {
     static int[] field_d;
     static String field_f;
     static int[] field_e;
-    private lj field_h;
+    private SecondaryNodeDeque field_h;
     static String field_c;
-    private vl field_a;
+    private IterableNodeHashTable field_a;
     private int field_b;
     private int field_g;
 
@@ -31,7 +31,7 @@ final class al {
           if (param1 > 51) {
             return;
           }
-          this.field_h = (lj) null;
+          this.field_h = (SecondaryNodeDeque) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,7 +124,7 @@ final class al {
           return var5;
         }
         en var6 = new en(var5, var7.field_t);
-        this.field_a.a(var7.field_f, (byte) 75, var6);
+        this.field_a.a(var7.key, (byte) 75, var6);
         this.field_h.a(var6, (byte) -66);
         ((d) ((Object) var6)).field_l = 0L;
         var7.f(0);

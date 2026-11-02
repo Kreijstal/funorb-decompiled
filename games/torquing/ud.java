@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends q {
+final class ud extends IntrusiveNode {
     boolean field_p;
     static int[] field_k;
     lm field_m;

@@ -102,16 +102,16 @@ final class mo extends am {
             ef.field_a = wj.field_i;
           } else {
             try {
-              vk.field_E = new no((java.net.Socket) (rh.field_b.field_d), u.field_t);
-              wa.field_d.field_n = 0;
+              vk.field_E = new BufferedSocket((java.net.Socket) (rh.field_b.field_d), u.field_t);
+              wa.field_d.position = 0;
               var4 = kj.field_d;
               var5 = var4;
-              var5.field_n = 0;
+              var5.position = 0;
               ef.field_a = tb.field_o;
               mm.field_d = !param1 ? -1 : -2;
               eb.field_f = !param1 ? -1 : -2;
               wk.field_h = !param1 ? -1 : -2;
-              q.a(vg.field_j, 107, tp.field_i, wa.field_d, ao.field_d);
+              IntrusiveNode.a(vg.field_j, 107, tp.field_i, wa.field_d, ao.field_d);
               jd.a((byte) -95, -1);
             } catch (IOException iOException) {
               ef.field_a = wj.field_i;
@@ -202,7 +202,7 @@ final class mo extends am {
           if (qc.field_db != null) {
             var3 = 357 - qc.field_db.field_u / 2;
             var4 = 0;
-            if (0 != ta.field_o &&
+            if (0 != DualLinkNode.field_o &&
               re.field_c > var3 &&
               re.field_c < var3 + qc.field_db.field_t) {
               if (wh.field_s > -qc.field_db.field_s + 269 &&
@@ -355,7 +355,7 @@ final class mo extends am {
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;

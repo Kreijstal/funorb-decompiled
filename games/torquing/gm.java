@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class gm extends q {
+class gm extends IntrusiveNode {
     int field_p;
     el field_q;
     int field_l;
@@ -79,8 +79,8 @@ class gm extends q {
               var5_int != 0) {
               this.a(da.field_g, param3, param2, n.field_t, this, param1, k.field_e);
             }
-            if (0 != ta.field_o) {
-              if (!this.a(ta.field_o, param1, param2, re.field_c, wh.field_s, this, (byte) 73)) {
+            if (0 != DualLinkNode.field_o) {
+              if (!this.a(DualLinkNode.field_o, param1, param2, re.field_c, wh.field_s, this, (byte) 73)) {
                 if (var5_int != 0) {
                   this.c((byte) 91);
                   if (var7 != 0) {
@@ -91,7 +91,7 @@ class gm extends q {
                 param0 = false;
               }
             }
-            if ((ul.field_d == 0) &&
+            if ((MouseInputHandler.field_d == 0) &&
               (v.field_b != 0)) {
               this.a(param2, param1, n.field_t, (byte) 111, this, k.field_e);
               var6 = lp.field_d;
@@ -102,18 +102,18 @@ class gm extends q {
                 lp.field_d = null;
               }
               if ((var7 != 0) && (var5_int != 0 &&
-                ta.field_o != 0)) {
+                DualLinkNode.field_o != 0)) {
                 this.c((byte) 113);
               }
             }
           } else {
             if (var5_int != 0 &&
-              ta.field_o != 0) {
+              DualLinkNode.field_o != 0) {
               this.c((byte) 113);
             }
           }
-          v.field_b = ul.field_d;
-          dh.a(this.b(0), -1);
+          v.field_b = MouseInputHandler.field_d;
+          NodeHashTableIterator.a(this.b(0), -1);
           stackIn_46_0 = param0;
           return stackIn_46_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

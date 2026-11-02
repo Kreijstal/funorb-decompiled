@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vc {
+abstract class MouseWheelInput {
     static kh[] field_c;
     static int[] field_a;
     static t field_b;

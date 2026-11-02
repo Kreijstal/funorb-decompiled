@@ -27,7 +27,7 @@ final class jj {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (param4 == 0) {
-            var11 = no.a(param0, -33);
+            var11 = BufferedSocket.a(param0, -33);
             var6 = var11;
             if (var6 == null) {
               return null;

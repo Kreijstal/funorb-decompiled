@@ -129,8 +129,8 @@ final class hb extends am {
         if (param0 > mc.field_l) {
           qd.field_g = param0;
         }
-        if (param0 < ga.field_c) {
-          lj.field_d = param0;
+        if (param0 < ClientException.field_c) {
+          SecondaryNodeDeque.field_d = param0;
         }
         wh.field_y[vg.field_o] = param1;
         vo.field_d[vg.field_o] = param4;
@@ -144,8 +144,8 @@ final class hb extends am {
         if (!(var7 <= qd.field_g)) {
           qd.field_g = var7;
         }
-        if (var7 < lj.field_d) {
-          lj.field_d = var7;
+        if (var7 < SecondaryNodeDeque.field_d) {
+          SecondaryNodeDeque.field_d = var7;
         }
         vg.field_o = vg.field_o + 1;
     }
@@ -183,7 +183,7 @@ final class hb extends am {
         }
         if (this.field_l.field_b) {
           for (var4 = 0; ci.field_c > var4; var4++) {
-            var5 = (q.field_b[var4] << 12) / this.field_z + this.field_v;
+            var5 = (IntrusiveNode.field_b[var4] << 12) / this.field_z + this.field_v;
             var6 = (dp.field_a[param1] << 12) / this.field_z + this.field_t;
             var7 = var5;
             var8 = var6;
@@ -216,7 +216,7 @@ final class hb extends am {
         return var15;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_16_0 = null;

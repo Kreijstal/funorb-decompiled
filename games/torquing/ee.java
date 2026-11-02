@@ -786,7 +786,7 @@ final class ee extends am {
           if (param0 == null) {
             return null;
           }
-          var2 = new li(param0, fj.field_o, na.field_G, vo.field_b, ij.field_o, cq.field_y, pn.field_b);
+          var2 = new li(param0, PacketBuffer.field_o, na.field_G, vo.field_b, ij.field_o, cq.field_y, pn.field_b);
           if (param1 != 7028) {
             ee.a(false);
           }
@@ -807,7 +807,7 @@ final class ee extends am {
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_13_0 = null;

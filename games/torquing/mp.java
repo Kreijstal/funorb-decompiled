@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mp extends ta {
+final class mp extends DualLinkNode {
     int field_r;
     int[] field_v;
     int[][] field_s;

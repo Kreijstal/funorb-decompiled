@@ -192,7 +192,7 @@ final class rj extends am {
         return var4;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int dupTemp$0 = 0;
         boolean stackIn_18_1 = false;
         RuntimeException stackIn_32_0 = null;
@@ -322,13 +322,13 @@ final class rj extends am {
             var18 = this.field_s[var16 & 255] & 255;
             if (!this.field_B) {
               for (var10 = 0; var10 < ci.field_c; var10++) {
-                var4_int = this.field_D * q.field_b[var10];
+                var4_int = this.field_D * IntrusiveNode.field_b[var10];
                 var6 = this.a(var12, var4_int * var8 >> 12, var11, var14, var17, 4096, var18);
                 param1[var10] = var6 * var9 >> 12;
               }
             } else {
               for (var10 = 0; ci.field_c > var10; var10++) {
-                var4_int = this.field_D * q.field_b[var10];
+                var4_int = this.field_D * IntrusiveNode.field_b[var10];
                 var6 = this.a(var12, var4_int * var8 >> 12, var11, var14, var17, 4096, var18);
                 var6 = var9 * var6 >> 12;
                 param1[var10] = (var6 >> 1) + 2048;
@@ -352,7 +352,7 @@ final class rj extends am {
               var14 = cf.field_a[var11];
               var18 = 255 & this.field_s[var16 & 255];
               for (var10 = 0; ci.field_c > var10; var10++) {
-                var4_int = q.field_b[var10] * this.field_D;
+                var4_int = IntrusiveNode.field_b[var10] * this.field_D;
                 var6 = this.a(var12, var4_int * var8 >> 12, var11, var14, var17, 4096, var18);
                 param1[var10] = var6 * var9 >> 12;
               }
@@ -377,14 +377,14 @@ final class rj extends am {
                 if (this.field_B &&
                   var7 == this.field_C - 1) {
                   for (var10 = 0; ci.field_c > var10; var10++) {
-                    var4_int = this.field_D * q.field_b[var10];
+                    var4_int = this.field_D * IntrusiveNode.field_b[var10];
                     var6 = this.a(var12, var8 * var4_int >> 12, var11, var14, var17, 4096, var18);
                     var6 = param1[var10] + (var6 * var9 >> 12);
                     param1[var10] = 2048 + (var6 >> 1);
                   }
                 } else {
                   for (var10 = 0; var10 < ci.field_c; var10++) {
-                    var4_int = this.field_D * q.field_b[var10];
+                    var4_int = this.field_D * IntrusiveNode.field_b[var10];
                     var6 = this.a(var12, var4_int * var8 >> 12, var11, var14, var17, 4096, var18);
                     param1[var10] = param1[var10] + (var6 * var9 >> 12);
                   }

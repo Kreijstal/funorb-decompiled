@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sl extends q {
+abstract class sl extends IntrusiveNode {
     int field_k;
     uh field_j;
 

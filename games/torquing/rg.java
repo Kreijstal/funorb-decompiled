@@ -61,7 +61,7 @@ final class rg extends am {
         int var36;
         int var37;
         int var38;
-        fj var39;
+        PacketBuffer var39;
         int[][] var40;
         int[] var42;
         int[] var43;
@@ -79,8 +79,8 @@ final class rg extends am {
         var38 = Torquing.field_u;
         var3 = this.field_l.a(param1, 25657);
         if (param0 < 86) {
-          var39 = (fj) null;
-          this.a((fj) null, 116, -30);
+          var39 = (PacketBuffer) null;
+          this.a((PacketBuffer) null, 116, -30);
         }
         if (this.field_l.field_b) {
           var47 = this.field_l.a(0);
@@ -116,7 +116,7 @@ final class rg extends am {
               var23 = ci.field_c - var8;
               var25 = ci.field_c;
             }
-            L4: {
+            regionExit1: {
               if (var11 == 0) {
                 var48Lifetime1 = var20;
                 var26_int = var9;
@@ -169,7 +169,7 @@ final class rg extends am {
                       }
                     }
                     var9 = var26_int;
-                    break L4;
+                    break regionExit1;
                   }
                   var28++;
                   var26_int++;
@@ -466,7 +466,7 @@ final class rg extends am {
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;

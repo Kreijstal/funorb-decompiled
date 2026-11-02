@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ka extends q {
+final class ka extends IntrusiveNode {
     int field_m;
     static int[][] field_n;
     int field_k;

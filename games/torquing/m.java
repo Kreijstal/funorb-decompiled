@@ -74,7 +74,7 @@ final class m {
           aq.field_d = (this.field_x - wk.field_d) / 2;
         }
         if (wk.field_d != this.field_f ||
-          ul.field_a != this.field_e) {
+          MouseInputHandler.field_a != this.field_e) {
           this.field_p.a(this.field_e, -6714, this.field_f);
         }
     }
@@ -115,7 +115,7 @@ final class m {
         if (param0 != -73) {
           this.field_g = 21;
         }
-        this.field_s = ul.field_a;
+        this.field_s = MouseInputHandler.field_a;
         this.field_u = wk.field_d;
         this.field_p.a(this.field_b, -6714, this.field_r);
         b.field_v = false;
@@ -234,7 +234,7 @@ final class m {
           }
         }
         if (wk.field_d != var2 ||
-          var3 != ul.field_a) {
+          var3 != MouseInputHandler.field_a) {
           this.field_p.a(var3, -6714, var2);
         }
         if (this.field_x > 0) {

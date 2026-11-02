@@ -15,7 +15,7 @@ final class oi {
     }
 
     final static sm a(byte param0) {
-        sm var1 = new sm(fm.field_E, rh.field_d, fj.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], pn.field_b[0], cq.field_y);
+        sm var1 = new sm(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], pn.field_b[0], cq.field_y);
         go.b(0);
         if (param0 < -59) {
           return var1;

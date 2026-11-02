@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui extends q {
+final class ui extends IntrusiveNode {
     int field_m;
     int field_j;
     static int field_k;

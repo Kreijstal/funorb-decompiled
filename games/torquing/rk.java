@@ -7,7 +7,7 @@ final class rk extends bc {
     static String field_e;
     private String field_b;
 
-    final void a(fj param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.a(this.field_c, (byte) -72);
           if (param1 != -71) {

@@ -4,14 +4,14 @@
 final class uk {
     static int[] field_a;
     static int[] field_b;
-    private ta field_f;
+    private DualLinkNode field_f;
     private int field_e;
-    private ta[] field_c;
+    private DualLinkNode[] field_c;
     private long field_d;
 
-    final ta b(int param0) {
-        ta var2;
-        ta var3;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
         var4 = Torquing.field_u;
         if (null == this.field_f) {
@@ -34,10 +34,10 @@ final class uk {
         return var3;
     }
 
-    final ta a(long param0, int param1) {
-        ta var4;
+    final DualLinkNode a(long param0, int param1) {
+        DualLinkNode var4;
         int var5_int;
-        ta var5;
+        DualLinkNode var5;
         int var6;
         var6 = Torquing.field_u;
         this.field_d = param0;
@@ -60,8 +60,8 @@ final class uk {
         return var5;
     }
 
-    final void a(ta param0, long param1, int param2) {
-        ta var5 = null;
+    final void a(DualLinkNode param0, long param1, int param2) {
+        DualLinkNode var5 = null;
         try {
           if (param2 != 0) {
             this.a(-67L, 6);
@@ -98,12 +98,12 @@ final class uk {
 
     uk(int param0) {
         int var2 = 0;
-        ta dupTemp$0 = null;
-        ta var3 = null;
-        this.field_c = new ta[param0];
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
+        this.field_c = new DualLinkNode[param0];
         this.field_e = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new ta();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
           var3.field_p = var3;

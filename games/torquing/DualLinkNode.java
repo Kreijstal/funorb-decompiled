@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ta extends q {
+class DualLinkNode extends IntrusiveNode {
     static int field_n;
     long field_l;
     static int field_o;
     static long field_k;
     static String field_m;
-    ta field_p;
-    ta field_j;
+    DualLinkNode field_p;
+    DualLinkNode field_j;
 
     final void h(int param0) {
         if (null == this.field_j) {
@@ -44,7 +44,7 @@ class ta extends q {
         int var1 = -7 % ((13 - param0) / 62);
     }
 
-    protected ta() {
+    protected DualLinkNode() {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -56,7 +56,7 @@ class ta extends q {
         try {
           var6_int = param2;
           if (param0 != 0) {
-            ta.g(-46);
+            DualLinkNode.g(-46);
           }
           while (param1 >= var6_int) {
             di.a(param4, (byte) -97, param3, qd.field_a[var6_int], param5);

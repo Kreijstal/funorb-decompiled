@@ -20,21 +20,21 @@ final class uh extends lf {
         }
     }
 
-    private final void a(q param0, sl param1) {
+    private final void a(IntrusiveNode param0, sl param1) {
         while (true) {
           if (param0 == this.field_q.field_b) {
             fi.a(param1, param0, -1240266932);
-            this.field_o = ((sl) (this.field_q.field_b.field_e)).field_k;
+            this.field_o = ((sl) (this.field_q.field_b.previous)).field_k;
             return;
           }
           if (((sl) (param0)).field_k <= param1.field_k) {
-            param0 = param0.field_e;
+            param0 = param0.previous;
             continue;
           }
           break;
         }
         fi.a(param1, param0, -1240266932);
-        this.field_o = ((sl) (this.field_q.field_b.field_e)).field_k;
+        this.field_o = ((sl) (this.field_q.field_b.previous)).field_k;
         return;
     }
 
@@ -43,7 +43,7 @@ final class uh extends lf {
           this.e();
           param0.field_j = this;
           param0.b();
-          this.a(this.field_q.field_b.field_e, param0);
+          this.a(this.field_q.field_b.previous, param0);
           return;
         }
         throw new RuntimeException();
@@ -96,7 +96,7 @@ final class uh extends lf {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_k = var5;
-              this.a(var3.field_e, var3);
+              this.a(var3.previous, var3);
             } else {
               var3.field_k = 0;
               this.b(var3);
@@ -129,7 +129,7 @@ final class uh extends lf {
         param0.f(0);
         param0.a();
         param0.field_j = null;
-        q var2 = this.field_q.field_b.field_e;
+        IntrusiveNode var2 = this.field_q.field_b.previous;
         if (var2 == this.field_q.field_b) {
           this.field_o = -1;
         } else {
@@ -181,7 +181,7 @@ final class uh extends lf {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_k = var7;
-              this.a(var5.field_e, var5);
+              this.a(var5.previous, var5);
             } else {
               var5.field_k = 0;
               this.b(var5);

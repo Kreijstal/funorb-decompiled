@@ -289,8 +289,8 @@ final class v {
           var6 = param4;
           var7 = -param4;
           var8 = -1;
-          var9 = ln.a(qg.field_z, kn.field_e, param1 + param4, 119);
-          var10 = ln.a(qg.field_z, kn.field_e, -param4 + param1, 94);
+          var9 = ln.a(qg.field_z, RasterBuffer.field_e, param1 + param4, 119);
+          var10 = ln.a(qg.field_z, RasterBuffer.field_e, -param4 + param1, 94);
           di.a(var10, (byte) 74, param2, qd.field_a[param0], var9);
           while (var6 > var5_int) {
             var8 += 2;
@@ -302,8 +302,8 @@ final class v {
               var12 = param0 + var6;
               if (var12 >= j.field_q &&
                 var11 <= qk.field_p) {
-                var13 = ln.a(qg.field_z, kn.field_e, param1 + var5_int, param3 ^ 29);
-                var14 = ln.a(qg.field_z, kn.field_e, param1 - var5_int, 92);
+                var13 = ln.a(qg.field_z, RasterBuffer.field_e, param1 + var5_int, param3 ^ 29);
+                var14 = ln.a(qg.field_z, RasterBuffer.field_e, param1 - var5_int, 92);
                 if (var12 <= qk.field_p) {
                   di.a(var14, (byte) -96, param2, qd.field_a[var12], var13);
                 }
@@ -321,8 +321,8 @@ final class v {
             if (qk.field_p < var11Lifetime1) {
               continue;
             }
-            var13Lifetime1 = ln.a(qg.field_z, kn.field_e, var6 + param1, param3 ^ 59);
-            var14Lifetime1 = ln.a(qg.field_z, kn.field_e, param1 - var6, 100);
+            var13Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, var6 + param1, param3 ^ 59);
+            var14Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, param1 - var6, 100);
             if (qk.field_p >= var12Lifetime1) {
               di.a(var14Lifetime1, (byte) -119, param2, qd.field_a[var12Lifetime1], var13Lifetime1);
             }

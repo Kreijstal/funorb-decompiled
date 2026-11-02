@@ -3,16 +3,16 @@
  */
 import java.util.*;
 
-final class vl implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static String[] field_d;
     int field_e;
-    private q field_b;
+    private IntrusiveNode field_b;
     static bm field_c;
-    q[] field_a;
+    IntrusiveNode[] field_a;
 
-    final void a(long param0, byte param1, q param2) {
-        q var5 = null;
-        if (param2.field_h != null) {
+    final void a(long param0, byte param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
+        if (param2.next != null) {
           param2.f(0);
         }
         if (param1 < 7) {
@@ -20,38 +20,38 @@ final class vl implements Iterable {
         }
         try {
           var5 = this.field_a[(int)((long)(this.field_e - 1) & param0)];
-          param2.field_h = var5.field_h;
-          param2.field_e = var5;
-          param2.field_h.field_e = param2;
-          param2.field_e.field_h = param2;
-          param2.field_f = param0;
+          param2.next = var5.next;
+          param2.previous = var5;
+          param2.next.previous = param2;
+          param2.previous.next = param2;
+          param2.key = param0;
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "vl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final q a(long param0, int param1) {
-        q var4;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var4;
         int var5;
-        q var6;
+        IntrusiveNode var6;
         int var7;
         var7 = Torquing.field_u;
         var4 = this.field_a[(int)((long)(this.field_e - 1) & param0)];
-        this.field_b = var4.field_e;
+        this.field_b = var4.previous;
         var5 = -94 % ((24 - param1) / 41);
         while (true) {
           if (this.field_b == var4) {
             this.field_b = null;
             return null;
           }
-          if (this.field_b.field_f != param0) {
-            this.field_b = this.field_b.field_e;
+          if (this.field_b.key != param0) {
+            this.field_b = this.field_b.previous;
             continue;
           }
           break;
         }
         var6 = this.field_b;
-        this.field_b = this.field_b.field_e;
+        this.field_b = this.field_b.previous;
         return var6;
     }
 
@@ -64,10 +64,10 @@ final class vl implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new dh(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    private vl() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 

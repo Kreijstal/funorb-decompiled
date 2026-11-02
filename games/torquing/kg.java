@@ -37,9 +37,9 @@ final class kg {
               var4_ref_ai.field_n < var2_long) {
               var4_ref_ai.f(0);
               oo.field_a = var4_ref_ai.field_k.length;
-              kj.field_d.field_n = 0;
+              kj.field_d.position = 0;
               for (var5_int = 0; var5_int < oo.field_a; var5_int++) {
-                kj.field_d.field_j[var5_int] = var4_ref_ai.field_k[var5_int];
+                kj.field_d.payload[var5_int] = var4_ref_ai.field_k[var5_int];
               }
               mm.field_d = eb.field_f;
               eb.field_f = wk.field_h;
@@ -64,12 +64,12 @@ final class kg {
         try {
           while (true) {
             if (stackIn_20_0 < 0) {
-              kj.field_d.field_n = 0;
-              if (!no.a(1, param1 - 21)) {
+              kj.field_d.position = 0;
+              if (!BufferedSocket.a(1, param1 - 21)) {
                 return false;
               }
               im.field_E = kj.field_d.a(true);
-              kj.field_d.field_n = 0;
+              kj.field_d.position = 0;
               oo.field_a = param0[im.field_E];
             }
             if (!ah.a(param1 ^ 23)) {
@@ -92,7 +92,7 @@ final class kg {
             }
             var5 = new ai((long)var4 + var2_long, im.field_E, new byte[oo.field_a]);
             for (var6 = 0; oo.field_a > var6; var6++) {
-              var5.field_k[var6] = kj.field_d.field_j[var6];
+              var5.field_k[var6] = kj.field_d.payload[var6];
             }
             qe.field_c.a((byte) 54, var5);
             im.field_E = -1;
@@ -113,7 +113,7 @@ final class kg {
     }
 
     final static void a(int param0) {
-        ul.field_e = new ei();
+        MouseInputHandler.field_e = new ei();
         if (param0 < 81) {
           field_c = (nh) null;
         }
@@ -157,7 +157,7 @@ final class kg {
         if (b.field_x < 2) {
           return 0;
         }
-        if (0 == sn.field_i) {
+        if (0 == ImageProducerRasterBuffer.field_i) {
           if (!lp.field_a.a(-12749)) {
             return 20;
           }

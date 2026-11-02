@@ -31,8 +31,8 @@ final class tf {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        fj var16 = null;
-        fj var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -44,18 +44,18 @@ final class tf {
         int var4Lifetime5;
         var15 = Torquing.field_u;
         try {
-          var16 = new fj(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_n = -2 + param1.length;
+          var17.position = -2 + param1.length;
           ti.field_g = var17.i(7088);
           fq.field_G = new byte[ti.field_g][];
-          fj.field_o = new int[ti.field_g];
+          PacketBuffer.field_o = new int[ti.field_g];
           ij.field_o = new int[ti.field_g];
           pn.field_b = new byte[ti.field_g][];
           na.field_G = new int[ti.field_g];
           lp.field_e = new boolean[ti.field_g];
           vo.field_b = new int[ti.field_g];
-          var17.field_n = -(8 * ti.field_g) - 7 + param1.length;
+          var17.position = -(8 * ti.field_g) - 7 + param1.length;
           fm.field_E = var17.i(7088);
           rh.field_d = var17.i(7088);
           var3 = (255 & var17.i((byte) -101)) + 1;
@@ -63,7 +63,7 @@ final class tf {
             return;
           }
           for (var4 = 0; ti.field_g > var4; var4++) {
-            fj.field_o[var4] = var16.i(7088);
+            PacketBuffer.field_o[var4] = var16.i(7088);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < ti.field_g; var4Lifetime1++) {
             na.field_G[var4Lifetime1] = var17.i(7088);
@@ -74,7 +74,7 @@ final class tf {
           for (var4Lifetime3 = 0; ti.field_g > var4Lifetime3; var4Lifetime3++) {
             ij.field_o[var4Lifetime3] = var17.i(7088);
           }
-          var17.field_n = param1.length - (7 + ti.field_g * 8 + 3 * (-1 + var3));
+          var17.position = param1.length - (7 + ti.field_g * 8 + 3 * (-1 + var3));
           cq.field_y = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
             cq.field_y[var4Lifetime4] = var17.e((byte) 62);
@@ -82,7 +82,7 @@ final class tf {
               cq.field_y[var4Lifetime4] = 1;
             }
           }
-          var17.field_n = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; ti.field_g > var4Lifetime5; var4Lifetime5++) {
             var5 = vo.field_b[var4Lifetime5];
             var6 = ij.field_o[var4Lifetime5];

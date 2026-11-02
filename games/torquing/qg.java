@@ -215,7 +215,7 @@ final class qg extends am {
             gp.field_K = 2147483647;
             ln.field_F = 2147483647;
             hl.field_a = 2147483647;
-            var15 = q.field_b[var14] * this.field_D + 2048;
+            var15 = IntrusiveNode.field_b[var14] * this.field_D + 2048;
             var16 = var15 >> 12;
             var17 = var16 + 1;
             for (var8 = var5 - 1; var6 >= var8; var8++) {
@@ -350,7 +350,7 @@ final class qg extends am {
         return var3;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int dupTemp$0 = 0;
         int var4_int = 0;
         int var5 = 0;

@@ -211,7 +211,7 @@ final class th extends hn implements ba, ng {
         this.field_H = new gp("", (ca) null, 12);
         pc var1 = new pc(sp.field_R, 0, 0, 0, 0, 16777215, -1, 3, 0, dg.field_e.field_x, -1, 2147483647, true);
         gm var2 = new gm(sa.field_a, var1, (ca) null);
-        this.field_B = new lg(dh.field_d, (ca) null);
+        this.field_B = new lg(NodeHashTableIterator.field_d, (ca) null);
         this.field_E = new lg(dg.field_j, (ca) null);
         this.field_H.field_n = ag.field_d;
         this.field_H.a(new il(this.field_H), 83);

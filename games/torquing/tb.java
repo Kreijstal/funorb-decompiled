@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb extends q {
+final class tb extends IntrusiveNode {
     int field_n;
     int field_p;
     static ce field_o;
@@ -48,7 +48,7 @@ final class tb extends q {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = cq.field_y[ie.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new t(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var21);
+            var1[var2] = new t(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var21);
           } else {
             var22 = fq.field_G[var2];
             var16 = new int[var3];
@@ -57,7 +57,7 @@ final class tb extends q {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = gm.a(ie.a((int) var22[var7], 255) << 24, cq.field_y[ie.a((int) var20[var7], 255)]);
             }
-            var1[var2] = (t) ((Object) new ep(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var16));
+            var1[var2] = (t) ((Object) new ep(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var16));
           }
           var2++;
         }

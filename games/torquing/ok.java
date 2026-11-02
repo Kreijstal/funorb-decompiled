@@ -41,7 +41,7 @@ final class ok extends lg {
           }
           if (param1 != 256) {
             var10 = (java.math.BigInteger) null;
-            ok.a((fj) null, (java.math.BigInteger) null, (fj) null, (java.math.BigInteger) null, -16);
+            ok.a((PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null, -16);
           }
           var17 = new int[256];
           var12 = var17;
@@ -106,19 +106,19 @@ final class ok extends lg {
     final static void a(byte param0) {
         if (param0 >= -81) {
           java.math.BigInteger var2 = (java.math.BigInteger) null;
-          ok.a((fj) null, (java.math.BigInteger) null, (fj) null, (java.math.BigInteger) null, -34);
+          ok.a((PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null, -34);
         }
-        if (sn.field_i == 3) {
+        if (ImageProducerRasterBuffer.field_i == 3) {
           de.field_c[4] = de.field_c[4] - 5;
         }
     }
 
-    final static void a(fj param0, java.math.BigInteger param1, fj param2, java.math.BigInteger param3, int param4) {
+    final static void a(PacketBuffer param0, java.math.BigInteger param1, PacketBuffer param2, java.math.BigInteger param3, int param4) {
         try {
           if (param4 != -4) {
             ok.a(-30);
           }
-          op.a((byte) 20, param2, param3, param1, param0.field_n, param0.field_j, 0);
+          op.a((byte) 20, param2, param3, param1, param0.position, param0.payload, 0);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "ok.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

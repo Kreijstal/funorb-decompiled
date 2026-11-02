@@ -146,7 +146,7 @@ final class ed {
             if (0 >= incrementValue$1) {
               return;
             }
-            sn.b((byte) 88);
+            ImageProducerRasterBuffer.b((byte) 88);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

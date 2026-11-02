@@ -51,7 +51,7 @@ abstract class eq implements sk {
           return df.field_r;
         }
         if (this.field_e + 350L > km.b(-1)) {
-          return q.field_a;
+          return IntrusiveNode.field_a;
         }
         if (param0 < -74) {
           return this.c(0);

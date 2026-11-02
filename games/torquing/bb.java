@@ -9,7 +9,7 @@ abstract class bb extends hn {
     abstract void b(int param0, int param1, byte param2);
 
     bb(ln param0, int param1, int param2) {
-        super(qj.field_f - param1 >> 1, -param2 + kn.field_h >> 1, param1, param2, (el) null);
+        super(qj.field_f - param1 >> 1, -param2 + RasterBuffer.field_h >> 1, param1, param2, (el) null);
         try {
           this.field_C = param0;
           this.field_D = false;
@@ -21,7 +21,7 @@ abstract class bb extends hn {
 
     final void a(int param0, byte param1, int param2) {
         if (param1 == -25) {
-          this.a((byte) 127, qj.field_f - param0 >> 1, -param2 + kn.field_h >> 1, param2, param0);
+          this.a((byte) 127, qj.field_f - param0 >> 1, -param2 + RasterBuffer.field_h >> 1, param2, param0);
           return;
         }
     }

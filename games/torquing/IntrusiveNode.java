@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class q {
-    q field_h;
+class IntrusiveNode {
+    IntrusiveNode next;
     static String field_i;
-    long field_f;
+    long key;
     static ce field_c;
     static int field_g;
-    q field_e;
+    IntrusiveNode previous;
     static int field_d;
     static int[] field_b;
     static cd field_a;
 
-    final static void a(int param0, int param1, int param2, fj param3, int param4) {
+    final static void a(int param0, int param1, int param2, PacketBuffer param3, int param4) {
         try {
           param3.b(90, 12);
           param3.a(17, 124);
@@ -20,8 +20,8 @@ class q {
           param3.a(param4, 71);
           param3.b(90, param0);
           if (param1 <= 94) {
-            fj var6 = (fj) null;
-            q.a(-127, 58, -29, (fj) null, -68);
+            PacketBuffer var6 = (PacketBuffer) null;
+            IntrusiveNode.a(-127, 58, -29, (PacketBuffer) null, -68);
           }
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "q.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -29,25 +29,25 @@ class q {
     }
 
     final void f(int param0) {
-        if (null == this.field_h) {
+        if (null == this.next) {
           return;
         }
         if (param0 == 0) {
-          this.field_h.field_e = this.field_e;
-          this.field_e.field_h = this.field_h;
-          this.field_h = null;
-          this.field_e = null;
+          this.next.previous = this.previous;
+          this.previous.next = this.next;
+          this.next = null;
+          this.previous = null;
           return;
         }
-        this.field_e = (q) null;
-        this.field_h.field_e = this.field_e;
-        this.field_e.field_h = this.field_h;
-        this.field_h = null;
-        this.field_e = null;
+        this.previous = (IntrusiveNode) null;
+        this.next.previous = this.previous;
+        this.previous.next = this.next;
+        this.next = null;
+        this.previous = null;
     }
 
     final boolean e(int param0) {
-        if (this.field_h == null) {
+        if (this.next == null) {
           return false;
         }
         if (param0 != 17) {
@@ -62,8 +62,8 @@ class q {
         field_c = null;
         field_a = null;
         if (param0 != 92) {
-          fj var2 = (fj) null;
-          q.a(81, 94, -8, (fj) null, -107);
+          PacketBuffer var2 = (PacketBuffer) null;
+          IntrusiveNode.a(81, 94, -8, (PacketBuffer) null, -107);
         }
     }
 

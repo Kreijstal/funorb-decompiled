@@ -49,7 +49,7 @@ final class ma {
         return 0;
     }
 
-    final void a(fj param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_r = new td();
@@ -58,7 +58,7 @@ final class ma {
         this.field_i.a(param0);
         int var2 = param0.i((byte) -101);
         if (var2 != 0) {
-          param0.field_n = param0.field_n - 1;
+          param0.position = param0.position - 1;
           this.field_s = new td();
           this.field_s.a(param0);
           this.field_p = new td();
@@ -66,7 +66,7 @@ final class ma {
         }
         var2 = param0.i((byte) -101);
         if (var2 != 0) {
-          param0.field_n = param0.field_n - 1;
+          param0.position = param0.position - 1;
           this.field_b = new td();
           this.field_b.a(param0);
           this.field_m = new td();
@@ -74,7 +74,7 @@ final class ma {
         }
         var2 = param0.i((byte) -101);
         if (var2 != 0) {
-          param0.field_n = param0.field_n - 1;
+          param0.position = param0.position - 1;
           this.field_a = new td();
           this.field_a.a(param0);
           this.field_j = new td();

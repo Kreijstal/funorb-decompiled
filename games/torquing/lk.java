@@ -36,7 +36,7 @@ final class lk extends am {
         var8 = Torquing.field_u;
         try {
           if (param2 == null) {
-            stackIn_3_0 = ml.field_b;
+            stackIn_3_0 = GameKeyHandler.field_b;
             return stackIn_3_0;
           }
           var3_int = param2.length();
@@ -73,10 +73,10 @@ final class lk extends am {
               stackIn_18_0 = cc.field_b;
               return stackIn_18_0;
             }
-            stackIn_13_0 = ml.field_b;
+            stackIn_13_0 = GameKeyHandler.field_b;
             return stackIn_13_0;
           }
-          stackIn_8_0 = ml.field_b;
+          stackIn_8_0 = GameKeyHandler.field_b;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,7 +152,7 @@ final class lk extends am {
         field_v = null;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;

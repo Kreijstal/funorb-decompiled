@@ -81,7 +81,7 @@ final class hi {
         this.field_d = hh.field_a;
         this.field_i = fd.field_a;
         if (param0) {
-          this.field_c = md.field_a;
+          this.field_c = DelegatingCanvas.field_a;
         } else {
           this.field_c = null;
         }

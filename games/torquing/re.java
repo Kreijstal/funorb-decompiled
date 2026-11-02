@@ -5,11 +5,11 @@ final class re {
     static int field_c;
     static double[] field_d;
     private ei field_a;
-    private q field_b;
+    private IntrusiveNode field_b;
     static String field_e;
 
-    final q a(byte param0) {
-        q var2 = this.field_a.field_b.field_e;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_a.field_b.previous;
         if (param0 < 21) {
           field_d = (double[]) null;
         }
@@ -17,15 +17,15 @@ final class re {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_e;
+        this.field_b = var2.previous;
         return var2;
     }
 
-    final q a(int param0, q param1) {
-        q var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
-        q stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -34,19 +34,19 @@ final class re {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_a.field_b.field_e;
+            var3 = this.field_a.field_b.previous;
           }
           if (param0 != 13771) {
             this.a(-112);
           }
           if (this.field_a.field_b != var3) {
-            this.field_b = var3.field_e;
+            this.field_b = var3.previous;
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }
           this.field_b = null;
           stackIn_7_0 = null;
-          return (q) (stackIn_7_0);
+          return (IntrusiveNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -72,9 +72,9 @@ final class re {
         var4 = Torquing.field_u;
         try {
           if (ci.field_c != param2) {
-            q.field_b = new int[param2];
+            IntrusiveNode.field_b = new int[param2];
             for (var3_int = 0; var3_int < param2; var3_int++) {
-              q.field_b[var3_int] = (var3_int << 12) / param2;
+              IntrusiveNode.field_b[var3_int] = (var3_int << 12) / param2;
             }
             ci.field_c = param2;
             jh.field_A = param2 - 1;
@@ -90,7 +90,7 @@ final class re {
                 var6++;
               }
             } else {
-              dp.field_a = q.field_b;
+              dp.field_a = IntrusiveNode.field_b;
             }
             um.field_o = param0;
             vp.field_I = param0 - 1;
@@ -165,7 +165,7 @@ final class re {
             field_c = 47;
           }
           var17 = new t(param2.a(-126, "", "button.gif"), (java.awt.Component) ((Object) k.field_d));
-          md.a("dropdown", 31094, param3, "commonui");
+          DelegatingCanvas.a("dropdown", 31094, param3, "commonui");
           var5 = ip.a(param3, -126, "commonui", "screen_options");
           jn.field_c = new sm[4];
           s.field_s = new sm[4];
@@ -232,21 +232,21 @@ final class re {
         }
     }
 
-    final q a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         if (!param0) {
-          return (q) null;
+          return (IntrusiveNode) null;
         }
-        q var2 = this.field_b;
+        IntrusiveNode var2 = this.field_b;
         if (this.field_a.field_b == var2) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_h;
+        this.field_b = var2.next;
         return var2;
     }
 
-    final q a(int param0) {
-        q var2 = this.field_a.field_b.field_h;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_a.field_b.next;
         if (this.field_a.field_b == var2) {
           this.field_b = null;
           return null;
@@ -254,7 +254,7 @@ final class re {
         if (param0 != 17514) {
           this.a((byte) 73);
         }
-        this.field_b = var2.field_h;
+        this.field_b = var2.next;
         return var2;
     }
 
@@ -266,40 +266,40 @@ final class re {
         field_e = null;
     }
 
-    final q b(boolean param0) {
-        q var2 = this.field_b;
+    final IntrusiveNode b(boolean param0) {
+        IntrusiveNode var2 = this.field_b;
         if (this.field_a.field_b == var2) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_e;
+        this.field_b = var2.previous;
         if (!param0) {
           this.a(true);
         }
         return var2;
     }
 
-    final q a(q param0, int param1) {
-        q var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
-        q stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            var3 = this.field_a.field_b.field_h;
+            var3 = this.field_a.field_b.next;
           } else {
             var3 = param0;
           }
           if (this.field_a.field_b == var3) {
             this.field_b = null;
             stackIn_5_0 = null;
-            return (q) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
-          this.field_b = var3.field_h;
+          this.field_b = var3.next;
           if (param1 != -27392) {
             re.a(7, 38, 13);
           }

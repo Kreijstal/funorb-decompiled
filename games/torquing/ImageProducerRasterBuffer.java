@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class sn extends kn implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_j;
     private java.awt.image.ImageConsumer field_k;
     static int field_i;
@@ -108,7 +108,7 @@ final class sn extends kn implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    sn() {
+    ImageProducerRasterBuffer() {
     }
 
     private final synchronized void b(int param0) {

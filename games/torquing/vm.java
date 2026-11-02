@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vm extends ta {
+final class vm extends DualLinkNode {
     private int field_t;
     private float field_r;
     private boolean field_s;
@@ -9,7 +9,7 @@ final class vm extends ta {
     private boolean field_v;
     wd field_u;
 
-    vm(fj param0) {
+    vm(PacketBuffer param0) {
         this.field_u = new wd(param0);
         this.field_v = param0.i((byte) -101) == 1 ? true : false;
         this.field_s = param0.i((byte) -101) == 1 ? true : false;

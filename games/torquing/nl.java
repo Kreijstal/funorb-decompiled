@@ -73,7 +73,7 @@ final class nl extends am {
         return var18;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -182,12 +182,12 @@ final class nl extends am {
           var3[var4_int] = cq.field_y[ie.a(255, (int) var2[var4_int])];
         }
         if (param0 == -8791) {
-          var4 = new t(fm.field_E, rh.field_d, fj.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], var3);
+          var4 = new t(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], var3);
           go.b(0);
           return var4;
         }
         field_y = (boolean[]) null;
-        var4Lifetime1 = new t(fm.field_E, rh.field_d, fj.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], var3);
+        var4Lifetime1 = new t(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], var3);
         go.b(0);
         return var4Lifetime1;
     }

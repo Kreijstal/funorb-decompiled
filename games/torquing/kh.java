@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kh extends q {
+final class kh extends IntrusiveNode {
     static int[] field_p;
     pj field_k;
     static int[] field_m;

@@ -137,7 +137,7 @@ final class mh {
             var19 = stackIn_63_0;
             param1 = 157;
             stackIn_65_0 = i.field_Q;
-            stackIn_65_1 = lj.field_b;
+            stackIn_65_1 = SecondaryNodeDeque.field_b;
             stackIn_65_2 = 104;
             stackIn_65_3 = 24 + param1;
             if (param0) {
@@ -774,7 +774,7 @@ final class mh {
         var6.e();
         var7 = ol.field_f[param1];
         var8 = im.field_L.a(-58, var7);
-        var9_ref_kh__ = vc.field_c;
+        var9_ref_kh__ = MouseWheelInput.field_c;
         var10 = 0;
         while (var10 < var9_ref_kh__.length) {
           var11_ref_kh = var9_ref_kh__[var10];
@@ -882,7 +882,7 @@ final class mh {
         var9 = Torquing.field_u;
         if ((this.field_h == 2 ||
           this.field_h == 3) &&
-          (decompiledFrameRemainder0 = (1 == ta.field_o)) &&
+          (decompiledFrameRemainder0 = (1 == DualLinkNode.field_o)) &&
           (decompiledFrameRemainder0 = !(re.field_c <= -8 + lp.field_c)) &&
           (decompiledFrameRemainder0 = !((8 + (um.field_m.field_x + lp.field_c)) <= re.field_c))) {
           if ((!((-8 + ea.field_v) < wh.field_s) ||
@@ -908,7 +908,7 @@ final class mh {
           }
         }
         if ((decompiledFrameRemainder0) && (this.field_h == 9 &&
-          0 != ta.field_o)) {
+          0 != DualLinkNode.field_o)) {
           if (nh.field_k != wi.field_a.length) {
             stackIn_27_0 = wi.field_a[nh.field_k];
           } else {
@@ -975,7 +975,7 @@ final class mh {
         }
         if (decompiledFrameCompleted0) {
           stackIn_55_0 = 0;
-          stackIn_55_1 = ta.field_o;
+          stackIn_55_1 = DualLinkNode.field_o;
         }
         if (stackIn_55_0 != stackIn_55_1) {
           this.field_j = wh.field_s;
@@ -1174,7 +1174,7 @@ final class mh {
           }
         }
         if (150 > this.field_i &&
-          ul.field_d == 0 &&
+          MouseInputHandler.field_d == 0 &&
           !i.field_P[13] &&
           !i.field_P[84] &&
           !i.field_P[83]) {
@@ -1184,7 +1184,7 @@ final class mh {
         stackIn_38_1 = true;
         stackIn_38_2 = 3;
         stackIn_38_3 = 1;
-        stackIn_39_4 = (ul.field_d == 0) ? false : true;
+        stackIn_39_4 = (MouseInputHandler.field_d == 0) ? false : true;
         ((Torquing) (Object) stackIn_38_0).a(stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_39_4);
     }
 
@@ -1536,7 +1536,7 @@ final class mh {
             }
             if (var12 >= 0 &&
               var11 >= 1) {
-              vc.field_a[var11] = var7_int;
+              MouseWheelInput.field_a[var11] = var7_int;
               var11--;
               var12 = var12 - (var11 << 1);
             }
@@ -1546,7 +1546,7 @@ final class mh {
               if (var8 > var9) {
                 var27 = qd.field_a[var9 + param4];
                 var28 = qd.field_a[param4 - var9];
-                var20 = vc.field_a[var9];
+                var20 = MouseWheelInput.field_a[var9];
                 var21 = param1 + var7_int;
                 var22 = -var7_int + param1;
                 var23 = param1 + var20;
@@ -1575,7 +1575,7 @@ final class mh {
               if (var7_int <= var11) {
                 stackIn_21_0 = var11;
               } else {
-                stackIn_21_0 = vc.field_a[var7_int];
+                stackIn_21_0 = MouseWheelInput.field_a[var7_int];
               }
               var22Lifetime1 = stackIn_21_0;
               var23Lifetime1 = var22Lifetime1 + param1;
@@ -1634,8 +1634,8 @@ final class mh {
         int var7_intLifetime2;
         int var8Lifetime2;
         int var7_intLifetime3;
-        L0: {
-          L1: {
+        regionExit1: {
+          regionExit2: {
             boolean decompiledFrameCompleted0 = true;
             var11 = Torquing.field_u;
             var5 = -86 % ((12 - param2) / 41);
@@ -1652,41 +1652,41 @@ final class mh {
               boolean decompiledFrameRemainder4 = true;
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
-              L15: {
-                L16: {
-                  L17: {
-                    L18: {
-                      L19: {
-                        L20: {
-                          L21: {
+              regionExit3: {
+                regionExit4: {
+                  regionExit5: {
+                    regionExit6: {
+                      regionExit7: {
+                        regionExit8: {
+                          regionExit9: {
                             boolean decompiledFrameRemainder0 = true;
                             var7_int = param0;
                             if ((var7_int != 0) &&
                               (decompiledFrameRemainder0 = (var7_int != 17 ||
                               var11 != 0))) {
                               if (4 == var7_int) {
-                                break L21;
+                                break regionExit9;
                               }
                               if (12 == var7_int) {
-                                break L20;
+                                break regionExit8;
                               }
                               if (var7_int == 11) {
-                                break L19;
+                                break regionExit7;
                               }
                               if (9 == var7_int &&
                                 var11 == 0) {
-                                break L18;
+                                break regionExit6;
                               }
                               if (var7_int == 18) {
-                                break L17;
+                                break regionExit5;
                               }
                               if (19 == var7_int &&
                                 var11 == 0) {
-                                break L16;
+                                break regionExit4;
                               }
                               if (var7_int == 14 &&
                                 var11 == 0) {
-                                break L15;
+                                break regionExit3;
                               }
                               decompiledFrameRemainder2 = (var7_int != 15 ||
                                 var11 != 0);
@@ -1710,7 +1710,7 @@ final class mh {
                                 (decompiledFrameRemainder12 = (var7_int != 13 ||
                                 var11 != 0))) {
                                 if (var7_int != 20) {
-                                  break L0;
+                                  break regionExit1;
                                 }
                                 decompiledFrameRemainder1 = (var11 != 0);
                               }
@@ -1730,13 +1730,13 @@ final class mh {
                               (decompiledFrameRemainder0)) {
                               if (!this.field_a.c(-97) &&
                                 !param3) {
-                                break L0;
+                                break regionExit1;
                               }
                               th.a(100, th.field_F[23]);
                               this.field_c.a(true, 9, 1, param1);
-                              ta.field_n = 0;
+                              DualLinkNode.field_n = 0;
                               if (var11 == 0) {
-                                break L1;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder12) &&
@@ -1753,7 +1753,7 @@ final class mh {
                               (decompiledFrameRemainder1)) {
                               if (!this.field_a.c(-97) &&
                                 !param3) {
-                                break L1;
+                                break regionExit2;
                               }
                               th.a(100, th.field_F[23]);
                               if (this.field_h == 9) {
@@ -1765,9 +1765,9 @@ final class mh {
                               ie.field_b = new bi(this.field_c, var7_int);
                               this.field_c.a(true, wi.field_a[var7_int], 3, param1);
                               stackIn_63_0 = (wp.field_w <= 0) ? 11 : 0;
-                              ta.field_n = stackIn_63_0;
+                              DualLinkNode.field_n = stackIn_63_0;
                               if (var11 == 0) {
-                                break L1;
+                                break regionExit2;
                               }
                             }
                           }
@@ -1785,14 +1785,14 @@ final class mh {
                             (decompiledFrameRemainder1)) {
                             if (!this.field_a.c(-97) &&
                               !param3) {
-                              break L0;
+                              break regionExit1;
                             }
                             this.field_c.a(true, -1, 10, param1);
                             th.a(100, th.field_F[23]);
                             stackIn_70_0 = (0 < wp.field_w) ? 0 : 11;
-                            ta.field_n = stackIn_70_0;
+                            DualLinkNode.field_n = stackIn_70_0;
                             if (var11 == 0) {
-                              break L1;
+                              break regionExit2;
                             }
                           }
                         }
@@ -1810,7 +1810,7 @@ final class mh {
                           (decompiledFrameRemainder1)) {
                           if (!this.field_a.c(-97) &&
                             !param3) {
-                            break L1;
+                            break regionExit2;
                           }
                           if (this.field_h == 10 &&
                             !je.a((byte) 41)) {
@@ -1823,22 +1823,22 @@ final class mh {
                             }
                             ((Torquing) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2, 1, param1);
                             if (var11 != 0) {
-                              if (ta.field_n == 11 &&
+                              if (DualLinkNode.field_n == 11 &&
                                 0 < wp.field_w) {
-                                ta.field_n = 0;
+                                DualLinkNode.field_n = 0;
                               }
-                              this.field_c.a(true, ta.field_n, 1, param1);
+                              this.field_c.a(true, DualLinkNode.field_n, 1, param1);
                             }
                           } else {
-                            if (ta.field_n == 11 &&
+                            if (DualLinkNode.field_n == 11 &&
                               0 < wp.field_w) {
-                              ta.field_n = 0;
+                              DualLinkNode.field_n = 0;
                             }
-                            this.field_c.a(true, ta.field_n, 1, param1);
+                            this.field_c.a(true, DualLinkNode.field_n, 1, param1);
                           }
                           th.a(100, th.field_F[23]);
                           if (var11 == 0) {
-                            break L1;
+                            break regionExit2;
                           }
                         }
                       }
@@ -1856,15 +1856,15 @@ final class mh {
                         (decompiledFrameRemainder1)) {
                         if (!this.field_a.c(-97) &&
                           !param3) {
-                          break L1;
+                          break regionExit2;
                         }
                         this.field_c.a(true, 4, 1, param1);
                         cm.field_m = 0;
                         a.field_e = 0;
                         th.a(100, th.field_F[23]);
-                        ta.field_n = this.field_h;
+                        DualLinkNode.field_n = this.field_h;
                         if (var11 == 0) {
-                          break L1;
+                          break regionExit2;
                         }
                       }
                     }
@@ -1882,7 +1882,7 @@ final class mh {
                       (decompiledFrameRemainder1)) {
                       if (!this.field_a.c(-97) &&
                         !param3) {
-                        break L1;
+                        break regionExit2;
                       }
                       if (!je.a((byte) 100)) {
                         stackIn_96_0 = this.field_c;
@@ -1931,7 +1931,7 @@ final class mh {
                       }
                       th.a(100, th.field_F[23]);
                       if (var11 == 0) {
-                        break L1;
+                        break regionExit2;
                       }
                     }
                   }
@@ -1960,14 +1960,14 @@ final class mh {
                       }
                     }
                     if (!this.field_a.c((byte) 76)) {
-                      break L1;
+                      break regionExit2;
                     }
                     var7_int = wi.field_a[rn.field_j];
                     if (var7_int > 0) {
                       rn.field_j = mk.field_c[-1 + var7_int];
                     }
                     if (var11 == 0) {
-                      break L1;
+                      break regionExit2;
                     }
                   }
                 }
@@ -2004,14 +2004,14 @@ final class mh {
                     }
                   }
                   if (!this.field_a.c((byte) 68)) {
-                    break L0;
+                    break regionExit1;
                   }
                   var7_int = hg.field_d[rn.field_j];
                   if (var7_int > 0) {
                     rn.field_j = rn.field_j - 1;
                   }
                   if (var11 == 0) {
-                    break L1;
+                    break regionExit2;
                   }
                 }
               }
@@ -2029,7 +2029,7 @@ final class mh {
                 (decompiledFrameRemainder1)) {
                 if (!this.field_a.c(-97) &&
                   !param3) {
-                  break L1;
+                  break regionExit2;
                 }
                 if (this.field_h != 6) {
                   if (this.field_h != 9) {
@@ -2060,7 +2060,7 @@ final class mh {
                 oo.field_b = 0;
                 th.a(100, th.field_F[23]);
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if ((decompiledFrameRemainder12) &&
@@ -2076,12 +2076,12 @@ final class mh {
                 (decompiledFrameRemainder1)) {
                 if (!this.field_a.c(-97) &&
                   !param3) {
-                  break L0;
+                  break regionExit1;
                 }
                 this.field_c.a(true, 11, 1, param1);
                 th.a(100, th.field_F[23]);
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if ((decompiledFrameRemainder12) &&
@@ -2099,12 +2099,12 @@ final class mh {
                   th.a(100, th.field_F[23]);
                 }
                 if (!this.field_a.b((byte) -108)) {
-                  break L1;
+                  break regionExit2;
                 }
                 sg.field_f = (2 + sg.field_f) % 3;
                 th.a(100, th.field_F[23]);
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if ((decompiledFrameRemainder12) &&
@@ -2118,19 +2118,19 @@ final class mh {
                 (decompiledFrameRemainder1)) {
                 if (!this.field_a.c(-97) &&
                   !param3) {
-                  break L0;
+                  break regionExit1;
                 }
                 if (null == dg.field_i) {
                   var7_intLifetime3 = param1 ? 1 : 0;
                   hm.a(var7_intLifetime3 != 0, um.field_m.field_x, (t[]) null, 0, i.field_Q, 0, (t[]) null, 3, 320, 0, 3 * um.field_m.field_x / 2, 240);
                   if (var11 == 0) {
-                    break L1;
+                    break regionExit2;
                   }
                 }
                 th.a(100, th.field_F[23]);
                 ug.a(-105);
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if ((decompiledFrameRemainder12) &&
@@ -2143,14 +2143,14 @@ final class mh {
                 (decompiledFrameRemainder1)) {
                 if (!this.field_a.c(-97) &&
                   !param3) {
-                  break L0;
+                  break regionExit1;
                 }
                 ie.field_b.b((byte) -103);
                 th.a(100, th.field_F[23]);
                 stackIn_171_0 = (0 >= wp.field_w) ? 11 : 0;
-                ta.field_n = stackIn_171_0;
+                DualLinkNode.field_n = stackIn_171_0;
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if ((decompiledFrameRemainder12) &&
@@ -2162,7 +2162,7 @@ final class mh {
                 (decompiledFrameRemainder1)) {
                 if (!this.field_a.c(-97) &&
                   !param3) {
-                  break L0;
+                  break regionExit1;
                 }
                 th.a(100, th.field_F[23]);
                 if (dg.field_i != null) {
@@ -2170,7 +2170,7 @@ final class mh {
                 }
                 to.a(ip.a(9), -46);
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if ((decompiledFrameRemainder12) &&
@@ -2181,14 +2181,14 @@ final class mh {
                 (decompiledFrameRemainder1)) {
                 if (!this.field_a.c(-97) &&
                   !param3) {
-                  break L0;
+                  break regionExit1;
                 }
                 ie.field_b.f(1000);
                 this.field_c.a(true, -1, 10, param1);
                 th.a(100, th.field_F[23]);
                 jh.a(la.field_k[ie.field_b.field_q], 0);
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if ((decompiledFrameRemainder12) &&
@@ -2198,23 +2198,23 @@ final class mh {
                 (decompiledFrameRemainder1)) {
                 if (!this.field_a.c(-97) &&
                   !param3) {
-                  break L1;
+                  break regionExit2;
                 }
                 if (hg.field_b.length <= a.field_e + 1) {
-                  break L0;
+                  break regionExit1;
                 }
                 a.field_e = a.field_e + 1;
                 cm.field_m = cm.field_m - 298;
                 th.a(100, th.field_F[23]);
                 if (~(-1 + hg.field_b.length) != ~a.field_e) {
-                  break L1;
+                  break regionExit2;
                 }
                 if (param1) {
-                  break L1;
+                  break regionExit2;
                 }
                 this.field_a.field_g = 1;
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if ((decompiledFrameRemainder12) &&
@@ -2223,23 +2223,23 @@ final class mh {
                 (decompiledFrameRemainder1)) {
                 if (!this.field_a.c(-97) &&
                   !param3) {
-                  break L0;
+                  break regionExit1;
                 }
                 if (a.field_e <= 0) {
-                  break L0;
+                  break regionExit1;
                 }
                 cm.field_m = cm.field_m + 298;
                 a.field_e = a.field_e - 1;
                 th.a(100, th.field_F[23]);
                 if (0 != a.field_e) {
-                  break L1;
+                  break regionExit2;
                 }
                 if (param1) {
-                  break L1;
+                  break regionExit2;
                 }
                 this.field_a.field_g = 2;
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if ((decompiledFrameRemainder12) &&
@@ -2247,11 +2247,11 @@ final class mh {
                 (decompiledFrameRemainder1)) {
                 if (!this.field_a.c(-97) &&
                   !param3) {
-                  break L0;
+                  break regionExit1;
                 }
                 cq.a(true, ip.a(9));
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if ((decompiledFrameRemainder12) &&
@@ -2289,18 +2289,18 @@ final class mh {
                   wj.a(123);
                 }
                 if (var6 == on.field_c) {
-                  break L1;
+                  break regionExit2;
                 }
                 if (ig.field_r[25] == null) {
                   ig.field_r[25] = nj.a(th.field_F[25], 100, 96);
                 }
                 if (ig.field_r[25].e(17)) {
-                  break L0;
+                  break regionExit1;
                 }
                 ig.field_r[25].c(0);
                 ni.a(ig.field_r[25], true);
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if (decompiledFrameRemainder1) {
@@ -2333,11 +2333,11 @@ final class mh {
                   bd.b(115);
                 }
                 if (!this.field_a.e(7632)) {
-                  break L1;
+                  break regionExit2;
                 }
                 ia.d(117);
                 if (var11 == 0) {
-                  break L1;
+                  break regionExit2;
                 }
               }
               if (this.field_a.e(7632)) {
@@ -2357,10 +2357,10 @@ final class mh {
                 th.a(100, th.field_F[23]);
               }
               if (!this.field_a.a((byte) -116)) {
-                break L1;
+                break regionExit2;
               }
               if (!this.field_a.f((byte) -60)) {
-                break L1;
+                break regionExit2;
               }
               var7 = hb.field_u[20];
               var8Lifetime1 = n.field_t;
@@ -2380,7 +2380,7 @@ final class mh {
               }
               if ((decompiledFrameCompleted0) &&
                 (var11 == 0)) {
-                break L1;
+                break regionExit2;
               }
             }
             if ((decompiledFrameCompleted0) && (this.field_a.c(-97) ||
@@ -2390,9 +2390,9 @@ final class mh {
               if (0 == this.field_h) {
                 if (tm.field_c != 6 &&
                   tm.field_c != 2) {
-                  break L0;
+                  break regionExit1;
                 }
-                ta.field_n = this.field_h;
+                DualLinkNode.field_n = this.field_h;
               }
             }
           }
@@ -2508,19 +2508,19 @@ final class mh {
         if (param0 != 93) {
           this.field_i = 4;
         }
-        L7: {
+        regionExit1: {
           boolean decompiledFrameCompleted0 = true;
           if (this.field_h == 2) {
             this.a(120, (byte) 92);
             if (var8 == 0) {
-              break L7;
+              break regionExit1;
             }
           }
           if (this.field_h == 3) {
             if (!je.a((byte) 95)) {
               this.a(27, (byte) 107);
               if (var8 == 0) {
-                break L7;
+                break regionExit1;
               }
             }
             var11 = om.field_e;
@@ -2557,7 +2557,7 @@ final class mh {
               }
               break;
             }
-            break L7;
+            break regionExit1;
           }
           if (this.field_h == 4) {
             var2 = cm.field_m + 298 * a.field_e;
@@ -2577,7 +2577,7 @@ final class mh {
             }
             if (decompiledFrameCompleted0) {
               ph.a();
-              break L7;
+              break regionExit1;
             }
           }
           if (decompiledFrameCompleted0) {
@@ -2636,17 +2636,17 @@ final class mh {
                     stackIn_83_4 = (fa.field_b != 0);
                     ((pk) (Object) stackIn_76_0).c(qn.a(stackIn_77_1, stackIn_79_2, stackIn_80_3, stackIn_83_4), 321, 329 + dd.field_c.field_x, 0, -1);
                     if (var8 == 0) {
-                      break L7;
+                      break regionExit1;
                     }
                   }
                   if (10 == this.field_h) {
                     i.field_Q.a(vf.field_m, 62, 250 + um.field_m.field_x, 315, 1000, 0, -1, 0, 0, 3 * um.field_m.field_x / 2);
                     if (var8 == 0) {
-                      break L7;
+                      break regionExit1;
                     }
                   }
                   if (this.field_h != 11) {
-                    break L7;
+                    break regionExit1;
                   }
                   wb.b(-1);
                   gd.field_a[da.field_a].b(245, 199);
@@ -2972,15 +2972,15 @@ final class mh {
           qh.field_c.a(ti.field_m, 130, var3, 380, 1000, 0, -1, 1, 0, qh.field_c.field_x * 3 / 2);
           return;
         }
-        if (null == vl.field_c) {
-          vl.field_c = bn.a(11, 3, 1, (byte) 44, 10);
+        if (null == IterableNodeHashTable.field_c) {
+          IterableNodeHashTable.field_c = bn.a(11, 3, 1, (byte) 44, 10);
         }
         if (param1 < 45) {
           this.a(-7, 127, -114, -69, 82, 6, 92, -22);
         }
-        L2: {
+        regionExit1: {
           boolean decompiledFrameRemainder0 = true;
-          var19 = vl.field_c;
+          var19 = IterableNodeHashTable.field_c;
           var20 = var19;
           if (!var20.field_k) {
             var4 = pm.field_p;
@@ -2996,12 +2996,12 @@ final class mh {
               var9 = 0;
               var10 = 7 + param0;
               var11 = 0;
-              L7: while (true) {
+              scanLoop2: while (true) {
                 if (10 >= var11) {
                   stackIn_34_0 = ~var11;
                   stackIn_34_1 = -11;
                   if (var18 != 0) {
-                    break L2;
+                    break regionExit1;
                   }
                   boolean decompiledFrameRemainder1 = true;
                   if (stackIn_34_0 != stackIn_34_1) {
@@ -3026,10 +3026,10 @@ final class mh {
                     }
                   } else {
                     if (ie.field_b == null) {
-                      break L7;
+                      break scanLoop2;
                     }
                     if (var9 != 0) {
-                      break L7;
+                      break scanLoop2;
                     }
                     var12 = 2;
                     var14 = re.field_e;

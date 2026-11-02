@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fj extends q {
+class PacketBuffer extends IntrusiveNode {
     static boolean field_l;
     static int field_m;
-    int field_n;
-    byte[] field_j;
+    int position;
+    byte[] payload;
     static int[] field_o;
     static int field_k;
 
     final void b(int param0, int param1) {
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$0] = (byte)param1;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)param1;
         if (param0 != 90) {
           String var4 = (String) null;
           this.a((byte) -79, (String) null);
@@ -21,44 +21,44 @@ class fj extends q {
 
     final int i(int param0) {
         if (param0 != 7088) {
-          this.field_n = 48;
+          this.position = 48;
         }
-        this.field_n = this.field_n + 2;
-        return ((this.field_j[this.field_n - 2] & 255) << 8) + (255 & this.field_j[this.field_n - 1]);
+        this.position = this.position + 2;
+        return ((this.payload[this.position - 2] & 255) << 8) + (255 & this.payload[this.position - 1]);
     }
 
     final void a(int param0, int param1) {
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$0] = (byte)(param0 >> 8);
-        int fieldTemp$1 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$1] = (byte)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 8);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)param0;
         if (param1 < 44) {
           field_o = (int[]) null;
         }
     }
 
     final void a(byte param0, int param1) {
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$0] = (byte)(param1 >> 16);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 16);
         if (param0 >= -92) {
           field_m = -7;
         }
-        int fieldTemp$1 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$1] = (byte)(param1 >> 8);
-        int fieldTemp$2 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$2] = (byte)param1;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 >> 8);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)param1;
     }
 
     final long b(int param0) {
         long var2 = (long)this.c((byte) -90) & 4294967295L;
         long var4 = (long)this.c((byte) -64) & 4294967295L;
         if (param0 <= 4) {
-          this.field_n = -98;
+          this.position = -98;
         }
         return (var2 << 32) + var4;
     }
@@ -75,10 +75,10 @@ class fj extends q {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.field_n = this.field_n + ni.a(this.field_n, var4, 0, -12421, this.field_j, param1.length());
-          fieldTemp$0 = this.field_n;
-          this.field_n = this.field_n + 1;
-          this.field_j[fieldTemp$0] = (byte) 0;
+          this.position = this.position + ni.a(this.position, var4, 0, -12421, this.payload, param1.length());
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "fj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -86,9 +86,9 @@ class fj extends q {
 
     final int a(byte param0) {
         if (param0 > -108) {
-          this.field_n = -67;
+          this.position = -67;
         }
-        int var2 = this.field_j[this.field_n] & 255;
+        int var2 = this.payload[this.position] & 255;
         if (128 > var2) {
           return this.i((byte) -101);
         }
@@ -102,21 +102,21 @@ class fj extends q {
         if (param0 <= 112) {
           return (String) null;
         }
-        var2 = this.field_n;
+        var2 = this.position;
         do {
-          fieldTemp$0 = this.field_n;
-          this.field_n = this.field_n + 1;
-        } while (this.field_j[fieldTemp$0] != 0);
-        var3 = -1 + (-var2 + this.field_n);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$0] != 0);
+        var3 = -1 + (-var2 + this.position);
         if (0 == var3) {
           return "";
         }
-        return hk.a(var3, true, var2, this.field_j);
+        return GameApplet.a(var3, true, var2, this.payload);
     }
 
     final boolean h(int param0) {
-        this.field_n = this.field_n - 4;
-        int var2 = nn.a(7655, this.field_j, 0, this.field_n);
+        this.position = this.position - 4;
+        int var2 = nn.a(7655, this.payload, 0, this.position);
         if (param0 != -31017) {
           return true;
         }
@@ -134,17 +134,17 @@ class fj extends q {
         java.math.BigInteger var7 = null;
         byte[] var8 = null;
         try {
-          var4_int = this.field_n;
-          this.field_n = 0;
+          var4_int = this.position;
+          this.position = 0;
           var5 = new byte[var4_int];
           this.a(48, var4_int, var5, 0);
           var6 = new java.math.BigInteger(var5);
           var7 = var6.modPow(param0, param1);
           if (param2 != -64) {
-            this.field_n = -46;
+            this.position = -46;
           }
           var8 = var7.toByteArray();
-          this.field_n = 0;
+          this.position = 0;
           this.a(var8.length, 73);
           this.a(var8.length, 0, var8, (byte) -101);
         } catch (RuntimeException runtimeException) {
@@ -156,32 +156,32 @@ class fj extends q {
         if (param0 < 17) {
           field_l = false;
         }
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        return this.field_j[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0];
     }
 
     final void b(byte param0, int param1) {
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$0] = (byte)(param1 >> 24);
-        int fieldTemp$1 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$1] = (byte)(param1 >> 16);
-        int fieldTemp$2 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$2] = (byte)(param1 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 24);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 >> 16);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(param1 >> 8);
         if (param0 != 60) {
           this.e((byte) 43);
         }
-        int fieldTemp$3 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$3] = (byte)param1;
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)param1;
     }
 
     final int g(int param0) {
-        this.field_n = this.field_n + 2;
-        int var2 = (65280 & this.field_j[-2 + this.field_n] << 8) + (this.field_j[this.field_n - 1] & 255);
+        this.position = this.position + 2;
+        int var2 = (65280 & this.payload[-2 + this.position] << 8) + (this.payload[this.position - 1] & 255);
         if (var2 > 32767) {
           var2 = var2 - 65536;
         }
@@ -199,20 +199,20 @@ class fj extends q {
         if (param0 != -7519) {
           this.d(56);
         }
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        var2 = this.field_j[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         if (0 != var2) {
           throw new IllegalStateException("");
         }
-        var3 = this.field_n;
+        var3 = this.position;
         do {
-          fieldTemp$1 = this.field_n;
-          this.field_n = this.field_n + 1;
-        } while (0 != this.field_j[fieldTemp$1]);
-        var4 = -var3 + this.field_n - 1;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+        } while (0 != this.payload[fieldTemp$1]);
+        var4 = -var3 + this.position - 1;
         if (var4 != 0) {
-          return hk.a(var4, true, var3, this.field_j);
+          return GameApplet.a(var4, true, var3, this.payload);
         }
         return "";
     }
@@ -280,7 +280,7 @@ class fj extends q {
     }
 
     final int c(int param0) {
-        if (param0 <= this.field_j[this.field_n]) {
+        if (param0 <= this.payload[this.position]) {
           return this.i(param0 ^ 7088);
         }
         return this.c((byte) -116) & 2147483647;
@@ -288,18 +288,18 @@ class fj extends q {
 
     final int i(byte param0) {
         if (param0 != -101) {
-          this.field_j = (byte[]) null;
+          this.payload = (byte[]) null;
         }
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        return 255 & this.field_j[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0];
     }
 
     final int g(byte param0) {
         if (param0 >= -114) {
           this.b(-105);
         }
-        int var2 = 255 & this.field_j[this.field_n];
+        int var2 = 255 & this.payload[this.position];
         if (var2 < 128) {
           return -64 + this.i((byte) -101);
         }
@@ -310,21 +310,21 @@ class fj extends q {
         if (param1 != -19642) {
           return;
         }
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$0] = (byte)(int)(param0 >> 32);
-        int fieldTemp$1 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$1] = (byte)(int)(param0 >> 24);
-        int fieldTemp$2 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$2] = (byte)(int)(param0 >> 16);
-        int fieldTemp$3 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$3] = (byte)(int)(param0 >> 8);
-        int fieldTemp$4 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$4] = (byte)(int)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 32);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 24);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 16);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 8);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)param0;
     }
 
     final void a(int param0, int param1, byte[] param2, byte param3) {
@@ -342,9 +342,9 @@ class fj extends q {
             return;
           }
           for (var5_int = param1; var5_int < param0 + param1; var5_int++) {
-            fieldTemp$0 = this.field_n;
-            this.field_n = this.field_n + 1;
-            this.field_j[fieldTemp$0] = param2[var5_int];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = param2[var5_int];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -376,9 +376,9 @@ class fj extends q {
             return;
           }
           for (var5_int = param3; param3 + param1 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_n;
-            this.field_n = this.field_n + 1;
-            param2[var5_int] = this.field_j[fieldTemp$0];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[var5_int] = this.payload[fieldTemp$0];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -396,53 +396,53 @@ class fj extends q {
     }
 
     final void c(byte param0, int param1) {
-        this.field_j[-param1 + this.field_n - 1] = (byte)param1;
+        this.payload[-param1 + this.position - 1] = (byte)param1;
         if (param0 != 48) {
           this.b((byte) -107, -29);
         }
     }
 
-    fj(int param0) {
-        this.field_j = mg.a(-95, param0);
-        this.field_n = 0;
+    PacketBuffer(int param0) {
+        this.payload = mg.a(-95, param0);
+        this.position = 0;
     }
 
     final void a(int param0, long param1) {
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$0] = (byte)(int)(param1 >> 56);
-        int fieldTemp$1 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$1] = (byte)(int)(param1 >> 48);
-        int fieldTemp$2 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$2] = (byte)(int)(param1 >> 40);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 56);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 48);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 40);
         int var4 = 4 % ((-37 - param0) / 53);
-        int fieldTemp$3 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$3] = (byte)(int)(param1 >> 32);
-        int fieldTemp$4 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$4] = (byte)(int)(param1 >> 24);
-        int fieldTemp$5 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$5] = (byte)(int)(param1 >> 16);
-        int fieldTemp$6 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$6] = (byte)(int)(param1 >> 8);
-        int fieldTemp$7 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$7] = (byte)(int)param1;
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 32);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param1 >> 24);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param1 >> 16);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)(param1 >> 8);
+        int fieldTemp$7 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$7] = (byte)(int)param1;
     }
 
     final void d(int param0, int param1) {
         int fieldTemp$0 = 0;
         int var4;
         var4 = Torquing.field_u;
-        while (param0 > this.field_n) {
-          fieldTemp$0 = this.field_n;
-          this.field_n = this.field_n + 1;
-          this.field_j[fieldTemp$0] = (byte) 0;
+        while (param0 > this.position) {
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         }
         if (param1 < 87) {
           this.b((byte) 84, 64);
@@ -467,16 +467,16 @@ class fj extends q {
         int var13 = 0;
         var13 = Torquing.field_u;
         try {
-          var5_int = this.field_n;
+          var5_int = this.position;
           if (param3 != 29269) {
             field_k = 91;
           }
-          this.field_n = param0;
+          this.position = param0;
           var6 = (-param0 + param2) / 8;
           var7 = 0;
           while (true) {
             if (var6 <= var7) {
-              this.field_n = var5_int;
+              this.position = var5_int;
               return;
             }
             var8 = this.c((byte) -91);
@@ -495,7 +495,7 @@ class fj extends q {
               }
               break;
             }
-            this.field_n = this.field_n - 8;
+            this.position = this.position - 8;
             this.b((byte) 60, var8);
             this.b((byte) 60, var9);
             var7++;
@@ -514,18 +514,18 @@ class fj extends q {
         }
     }
 
-    fj(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
-          this.field_n = 0;
-          this.field_j = param0;
+          this.position = 0;
+          this.payload = param0;
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String a(int param0) {
-        if (this.field_j[this.field_n] == 0) {
-          this.field_n = this.field_n + 1;
+        if (this.payload[this.position] == 0) {
+          this.position = this.position + 1;
           return null;
         }
         if (param0 != 19) {
@@ -540,10 +540,10 @@ class fj extends q {
     }
 
     final void c(int param0, int param1) {
-        this.field_j[this.field_n + (-param0 - 2)] = (byte)(param0 >> 8);
-        this.field_j[-1 + this.field_n - param0] = (byte)param0;
+        this.payload[this.position + (-param0 - 2)] = (byte)(param0 >> 8);
+        this.payload[-1 + this.position - param0] = (byte)param0;
         if (param1 != 400369768) {
-          this.field_n = 25;
+          this.position = 25;
         }
     }
 
@@ -560,14 +560,14 @@ class fj extends q {
           if (var3_int >= 0) {
             throw new IllegalArgumentException("");
           }
-          fieldTemp$0 = this.field_n;
-          this.field_n = this.field_n + 1;
-          this.field_j[fieldTemp$0] = (byte) 0;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param0);
-          this.field_n = this.field_n + ni.a(this.field_n, var4, 0, param1 ^ 12483, this.field_j, param0.length());
-          fieldTemp$1 = this.field_n;
-          this.field_n = this.field_n + 1;
-          this.field_j[fieldTemp$1] = (byte) 0;
+          this.position = this.position + ni.a(this.position, var4, 0, param1 ^ 12483, this.payload, param0.length());
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "fj.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -590,13 +590,13 @@ class fj extends q {
         int var10 = 0;
         var10 = Torquing.field_u;
         try {
-          var3_int = this.field_n / 8;
-          this.field_n = 0;
+          var3_int = this.position / 8;
+          this.position = 0;
           var4 = 0;
           while (true) {
             if (var4 >= var3_int) {
               if (param0 != 5479) {
-                this.field_j = (byte[]) null;
+                this.payload = (byte[]) null;
               }
               return;
             }
@@ -616,7 +616,7 @@ class fj extends q {
               }
               break;
             }
-            this.field_n = this.field_n - 8;
+            this.position = this.position - 8;
             this.b((byte) 60, var5);
             this.b((byte) 60, var6);
             var4++;
@@ -639,17 +639,17 @@ class fj extends q {
         if (!param1) {
           field_l = false;
         }
-        int var3 = nn.a(7655, this.field_j, param0, this.field_n);
+        int var3 = nn.a(7655, this.payload, param0, this.position);
         this.b((byte) 60, var3);
         return var3;
     }
 
     final int c(byte param0) {
-        this.field_n = this.field_n + 4;
+        this.position = this.position + 4;
         if (param0 >= -32) {
           return 65;
         }
-        return ((255 & this.field_j[this.field_n - 2]) << 8) + ((-16777216 & this.field_j[this.field_n - 4] << 24) + (this.field_j[-3 + this.field_n] << 16 & 16711680)) + (this.field_j[this.field_n - 1] & 255);
+        return ((255 & this.payload[this.position - 2]) << 8) + ((-16777216 & this.payload[this.position - 4] << 24) + (this.payload[-3 + this.position] << 16 & 16711680)) + (this.payload[this.position - 1] & 255);
     }
 
     final void a(int param0, byte param1) {
@@ -670,38 +670,38 @@ class fj extends q {
     }
 
     private final void a(long param0, int param1) {
-        int fieldTemp$0 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$0] = (byte)(int)(param0 >> 48);
-        int fieldTemp$1 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$1] = (byte)(int)(param0 >> 40);
-        int fieldTemp$2 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$2] = (byte)(int)(param0 >> 32);
-        int fieldTemp$3 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$3] = (byte)(int)(param0 >> 24);
-        int fieldTemp$4 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$4] = (byte)(int)(param0 >> 16);
-        int fieldTemp$5 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$5] = (byte)(int)(param0 >> 8);
-        int fieldTemp$6 = this.field_n;
-        this.field_n = this.field_n + 1;
-        this.field_j[fieldTemp$6] = (byte)(int)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 48);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 40);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 32);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 24);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param0 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param0 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)param0;
         if (param1 != -1731457392) {
           this.d(65);
         }
     }
 
     final int e(byte param0) {
-        this.field_n = this.field_n + 3;
+        this.position = this.position + 3;
         if (param0 != 62) {
           field_o = (int[]) null;
         }
-        return (255 & this.field_j[this.field_n - 1]) + ((this.field_j[this.field_n - 3] << 16 & 16711680) + ((this.field_j[-2 + this.field_n] & 255) << 8));
+        return (255 & this.payload[this.position - 1]) + ((this.payload[this.position - 3] << 16 & 16711680) + ((this.payload[-2 + this.position] & 255) << 8));
     }
 
     static {

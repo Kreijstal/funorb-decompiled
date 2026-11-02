@@ -149,13 +149,13 @@ final class ti {
           this.field_j = -1;
           var2_ref = (ud) (this.field_o.b(0));
           while (var2_ref != null) {
-            L1: {
+            regionExit1: {
               if (var2_ref.field_o == null) {
                 var2_ref.a(param0 - 4682);
                 if (var2_ref.field_p) {
                   je.a((byte) -43, var2_ref.field_o);
                   var2_ref.f(param0 ^ 4803);
-                  break L1;
+                  break regionExit1;
                 }
               }
               if (this.field_n != null) {

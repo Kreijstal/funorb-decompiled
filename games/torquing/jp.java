@@ -10,12 +10,12 @@ abstract class jp {
     static String field_e;
     gb field_m;
     gb field_b;
-    fj field_d;
+    PacketBuffer field_d;
     int field_l;
     long field_o;
     volatile int field_g;
     byte field_f;
-    fj field_c;
+    PacketBuffer field_c;
     volatile int field_k;
     ac field_j;
 
@@ -105,11 +105,11 @@ abstract class jp {
         this.field_h = new gb();
         this.field_m = new gb();
         this.field_b = new gb();
-        this.field_d = new fj(6);
+        this.field_d = new PacketBuffer(6);
         this.field_g = 0;
         this.field_k = 0;
         this.field_f = (byte) 0;
-        this.field_c = new fj(10);
+        this.field_c = new PacketBuffer(10);
     }
 
     static {

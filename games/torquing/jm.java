@@ -26,7 +26,7 @@ final class jm extends dp {
     }
 
     final static void a(int param0, int param1) {
-        q var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         qp var4 = null;
         RuntimeException decompiledCaughtException = null;

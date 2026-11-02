@@ -94,7 +94,7 @@ final class c {
         return pa.field_b;
     }
 
-    final static ll a(int param0, fj param1) {
+    final static ll a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         la var3 = null;
         ll stackIn_3_0 = null;

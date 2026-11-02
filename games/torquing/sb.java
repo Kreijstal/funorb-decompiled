@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb extends q {
+final class sb extends IntrusiveNode {
     private int field_m;
     private int field_k;
     private String field_o;
@@ -34,7 +34,7 @@ final class sb extends q {
         if (param0 != -80) {
           return true;
         }
-        return no.field_n.a((byte) -74);
+        return BufferedSocket.field_n.a((byte) -74);
     }
 
     final void c(int param0) {

@@ -1238,13 +1238,13 @@ final class sg {
           } else {
             stackIn_56_0 = 0;
           }
-          L17: {
+          regionExit1: {
             var24Lifetime1 = stackIn_56_0;
             if (var6.field_j != null &&
               var6.field_j[var20Lifetime1] != 0) {
               if (var6.field_j[var20Lifetime1] != 1) {
                 var15.field_l[var20Lifetime1] = -2;
-                break L17;
+                break regionExit1;
               }
               var25Lifetime1 = var59[var22Lifetime1] - var59[var21Lifetime1];
               var26Lifetime1 = var60[var22Lifetime1] - var60[var21Lifetime1];
@@ -1272,7 +1272,7 @@ final class sg {
                   var35 = param1 + (param3 * var31Lifetime1 + param4 * var32Lifetime1 + param5 * var33Lifetime1) / (var13 + var13 / 2);
                   var15.field_f[var20Lifetime1] = sg.a((int) var6.field_m[var20Lifetime1], var35, var24Lifetime1 != 0);
                   var15.field_l[var20Lifetime1] = -1;
-                  break L17;
+                  break regionExit1;
                 }
                 var31Lifetime1 = var31Lifetime1 >> 1;
                 var32Lifetime1 = var32Lifetime1 >> 1;

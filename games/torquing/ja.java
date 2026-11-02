@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends ta implements ec {
+final class ja extends DualLinkNode implements ec {
     private int[] field_s;
     private int field_q;
     private static cf field_r;
@@ -10,7 +10,7 @@ final class ja extends ta implements ec {
 
     final void b() {
         if (!this.a((byte) 73)) {
-          field_t.a((byte) 54, (q) (this));
+          field_t.a((byte) 54, (IntrusiveNode) (this));
         }
     }
 
@@ -98,7 +98,7 @@ final class ja extends ta implements ec {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int stackIn_5_0 = 0;
-        q stackIn_8_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
         int[] stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         int stackIn_20_2 = 0;

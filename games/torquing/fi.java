@@ -149,7 +149,7 @@ final class fi {
         String var6 = null;
         bp var7 = null;
         int var8 = 0;
-        q var9 = null;
+        IntrusiveNode var9 = null;
         bp stackIn_3_0 = null;
         bp stackIn_6_0 = null;
         bp stackIn_9_0 = null;
@@ -176,8 +176,8 @@ final class fi {
             return stackIn_9_0;
           }
           if (param0 > -90) {
-            var9 = (q) null;
-            fi.a((q) null, (q) null, 124);
+            var9 = (IntrusiveNode) null;
+            fi.a((IntrusiveNode) null, (IntrusiveNode) null, 124);
           }
           var4 = var3;
           var5 = 0;
@@ -270,18 +270,18 @@ final class fi {
         }
     }
 
-    final static void a(q param0, q param1, int param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
-          if (null != param0.field_h) {
+          if (null != param0.next) {
             param0.f(0);
           }
           if (param2 != -1240266932) {
             field_f = (String) null;
           }
-          param0.field_h = param1.field_h;
-          param0.field_e = param1;
-          param0.field_h.field_e = param0;
-          param0.field_e.field_h = param0;
+          param0.next = param1.next;
+          param0.previous = param1;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "fi.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -359,7 +359,7 @@ final class fi {
             stackIn_2_0 = null;
             return (vn) (stackIn_2_0);
           }
-          var2 = new vn(param1, fj.field_o, na.field_G, vo.field_b, ij.field_o, pn.field_b);
+          var2 = new vn(param1, PacketBuffer.field_o, na.field_G, vo.field_b, ij.field_o, pn.field_b);
           if (param0 != -9) {
             var3 = (byte[]) null;
             fi.a((byte) 17, (byte[]) null);

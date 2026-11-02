@@ -122,13 +122,13 @@ final class gj extends ao {
           if (param0 != 24417) {
             field_i = (int[]) null;
           }
-          ul.field_d = rn.field_f;
+          MouseInputHandler.field_d = rn.field_f;
           jl.field_S = jl.field_S + 1;
           n.field_t = qi.field_b;
           k.field_e = rn.field_b;
           he.field_a = n.field_x;
           n.field_x = false;
-          ta.field_o = vg.field_l;
+          DualLinkNode.field_o = vg.field_l;
           wh.field_s = fh.field_u;
           re.field_c = pf.field_r;
           vg.field_l = 0;

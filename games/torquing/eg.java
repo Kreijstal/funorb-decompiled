@@ -10,7 +10,7 @@ final class eg extends am {
     static String field_y;
     static la field_t;
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -86,7 +86,7 @@ final class eg extends am {
         if (this.field_l.field_b) {
           var4 = dp.field_a[param1];
           for (var5 = 0; var5 < ci.field_c; var5++) {
-            var6 = q.field_b[var5];
+            var6 = IntrusiveNode.field_b[var5];
             if (this.field_s < var6 &&
               var6 < -this.field_s + 4096 &&
               -this.field_s + 2048 < var4 &&

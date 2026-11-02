@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static sm[] field_a;
     static String field_b;
     static int[] field_d;
@@ -16,7 +16,7 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
             if (0 != var2_int && var2_int != 65535 &&
               fm.a((byte) 32, (char) var2_int)) {
               var3 = 127 & 1 + gn.field_d;
-              if (q.field_g != var3) {
+              if (IntrusiveNode.field_g != var3) {
                 ol.field_c[gn.field_d] = -1;
                 pe.field_H[gn.field_d] = (char)var2_int;
                 gn.field_d = var3;
@@ -91,7 +91,7 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           if (hb.field_y >= 0 &&
             var2_int >= 0) {
-            no.field_i[hb.field_y] = var2_int;
+            BufferedSocket.field_i[hb.field_y] = var2_int;
             hb.field_y = hb.field_y + 1 & 127;
             if (n.field_w == hb.field_y) {
               hb.field_y = -1;
@@ -99,7 +99,7 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           if (0 <= var2_int) {
             var3 = gn.field_d + 1 & 127;
-            if (q.field_g != var3) {
+            if (IntrusiveNode.field_g != var3) {
               ol.field_c[gn.field_d] = var2_int;
               pe.field_H[gn.field_d] = (char)0;
               gn.field_d = var3;
@@ -149,7 +149,7 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (hb.field_y >= 0 &&
               var2_int >= 0) {
-              no.field_i[hb.field_y] = ~var2_int;
+              BufferedSocket.field_i[hb.field_y] = ~var2_int;
               hb.field_y = 127 & 1 + hb.field_y;
               if (hb.field_y == n.field_w) {
                 hb.field_y = -1;

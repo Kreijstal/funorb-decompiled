@@ -14,27 +14,27 @@ final class jd extends jh {
           Throwable decompiledCaughtException = null;
           if (null != vk.field_E && (param1 < 0 ||
             w.field_cb == ef.field_a)) {
-            if (wa.field_d.field_n == 0 &&
+            if (wa.field_d.position == 0 &&
               km.b(-1) > 10000L + ak.field_k) {
               wa.field_d.f(-44, param1);
             }
             if (param0 > -48) {
               field_D = (t) null;
             }
-            if (wa.field_d.field_n > 0) {
+            if (wa.field_d.position > 0) {
               try {
-                vk.field_E.a(0, wa.field_d.field_j, (byte) 47, wa.field_d.field_n);
+                vk.field_E.a(0, wa.field_d.payload, (byte) 47, wa.field_d.position);
                 ak.field_k = km.b(-1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 ih.b(true);
               }
-              wa.field_d.field_n = 0;
+              wa.field_d.position = 0;
             }
             return;
           }
-          wa.field_d.field_n = 0;
+          wa.field_d.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -52,7 +52,7 @@ final class jd extends jh {
         RuntimeException decompiledCaughtException = null;
         var4 = Torquing.field_u;
         try {
-          var5 = (pm) (ul.field_e.b(0));
+          var5 = (pm) (MouseInputHandler.field_e.b(0));
           var1 = var5;
           if (var1 == null) {
             return false;
@@ -85,10 +85,10 @@ final class jd extends jh {
         if (wa.field_f) {
           return -1;
         }
-        if (dg.field_h > q.field_d) {
+        if (dg.field_h > IntrusiveNode.field_d) {
           return -1;
         }
-        if (q.field_d >= dg.field_h + cf.field_e) {
+        if (IntrusiveNode.field_d >= dg.field_h + cf.field_e) {
           return -1;
         }
         return il.field_l;
@@ -114,7 +114,7 @@ final class jd extends jh {
     }
 
     final static void a(boolean param0, int param1) {
-        q var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ni var4 = null;
         RuntimeException decompiledCaughtException = null;

@@ -261,8 +261,8 @@ final class hm extends am {
           this.a(1, false);
         }
         if (param0 <= 123) {
-          fj var3 = (fj) null;
-          this.a((fj) null, 19, 48);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((PacketBuffer) null, 19, 48);
         }
         this.d(255);
     }
@@ -287,7 +287,7 @@ final class hm extends am {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          fj var2 = null;
+          PacketBuffer var2 = null;
           if (nn.field_c.field_g >= 4) {
             if (nn.field_c.field_k == -1) {
               return 3;
@@ -315,12 +315,12 @@ final class hm extends am {
               }
             }
             if (pd.field_c == 2) {
-              up.field_a = new no((java.net.Socket) (rd.field_x.field_d), hq.field_a);
-              var2 = new fj(13);
-              q.a(um.field_r, 123, qg.field_A, var2, eg.field_x);
+              up.field_a = new BufferedSocket((java.net.Socket) (rd.field_x.field_d), hq.field_a);
+              var2 = new PacketBuffer(13);
+              IntrusiveNode.a(um.field_r, 123, qg.field_A, var2, eg.field_x);
               var2.b(90, 15);
               var2.b((byte) 60, gf.field_g);
-              up.field_a.a(0, var2.field_j, (byte) 64, 13);
+              up.field_a.a(0, var2.payload, (byte) 64, 13);
               pd.field_c = pd.field_c + 1;
               ro.field_v = 30000L + km.b(-1);
             }
@@ -452,7 +452,7 @@ final class hm extends am {
             stackIn_2_0 = -116;
             return stackIn_2_0;
           }
-          stackIn_7_0 = ga.a(!param0, param1, true, param2);
+          stackIn_7_0 = ClientException.a(!param0, param1, true, param2);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -468,7 +468,7 @@ final class hm extends am {
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;

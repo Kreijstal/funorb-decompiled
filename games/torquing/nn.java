@@ -12,12 +12,12 @@ final class nn {
     static java.util.zip.CRC32 field_d;
 
     final static void a(int param0) {
-        if (null != dh.field_a) {
+        if (null != NodeHashTableIterator.field_a) {
           return;
         }
         jp.field_n = new String[]{vk.field_x, to.field_r, mi.field_u, bq.field_b, w.field_gb, nc.field_b, un.field_f, bl.field_e};
         if (param0 < -21) {
-          dh.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
+          NodeHashTableIterator.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
           hq.field_d[2] = ai.field_m;
           hq.field_d[0] = ae.field_lb;
           hq.field_d[1] = qe.field_a;
@@ -31,8 +31,8 @@ final class nn {
           hb.field_u[20] = ae.field_lb + " / " + qe.field_a + " / " + ai.field_m;
           hb.field_u[5] = mi.field_v.toUpperCase();
           hb.field_u[11] = tp.field_n.toUpperCase();
-          hb.field_u[12] = kn.field_b.toUpperCase();
-          hb.field_u[1] = kn.field_b.toUpperCase();
+          hb.field_u[12] = RasterBuffer.field_b.toUpperCase();
+          hb.field_u[1] = RasterBuffer.field_b.toUpperCase();
           hb.field_u[9] = null;
           hb.field_u[8] = null;
           hb.field_u[14] = r.field_a.toUpperCase();
@@ -59,7 +59,7 @@ final class nn {
           return;
         }
         field_c = (jp) null;
-        dh.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
+        NodeHashTableIterator.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
         hq.field_d[2] = ai.field_m;
         hq.field_d[0] = ae.field_lb;
         hq.field_d[1] = qe.field_a;
@@ -73,8 +73,8 @@ final class nn {
         hb.field_u[20] = ae.field_lb + " / " + qe.field_a + " / " + ai.field_m;
         hb.field_u[5] = mi.field_v.toUpperCase();
         hb.field_u[11] = tp.field_n.toUpperCase();
-        hb.field_u[12] = kn.field_b.toUpperCase();
-        hb.field_u[1] = kn.field_b.toUpperCase();
+        hb.field_u[12] = RasterBuffer.field_b.toUpperCase();
+        hb.field_u[1] = RasterBuffer.field_b.toUpperCase();
         hb.field_u[9] = null;
         hb.field_u[8] = null;
         hb.field_u[14] = r.field_a.toUpperCase();

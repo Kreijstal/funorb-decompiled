@@ -9,7 +9,7 @@ final class we extends kj {
     private int field_i;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (kn.field_e <= param0 &&
+        if (RasterBuffer.field_e <= param0 &&
           param0 <= qg.field_z) {
           param4 = ln.a(qk.field_p, j.field_q, param4, param3 ^ -2574);
           param1 = ln.a(qk.field_p, j.field_q, param1, param3 ^ -2613);
@@ -43,7 +43,7 @@ final class we extends kj {
           var5 = this.field_k * param2 >> 12;
           var6 = this.field_i * param1 >> 12;
           var7 = this.field_j * param1 >> 12;
-          wo.a(120, var4, var7, var6, var5, this.field_a);
+          SecondaryNodeDequeIterator.a(120, var4, var7, var6, var5, this.field_a);
           return;
         }
         this.field_j = 39;
@@ -51,7 +51,7 @@ final class we extends kj {
         var5Lifetime1 = this.field_k * param2 >> 12;
         var6Lifetime1 = this.field_i * param1 >> 12;
         var7Lifetime1 = this.field_j * param1 >> 12;
-        wo.a(120, var4Lifetime1, var7Lifetime1, var6Lifetime1, var5Lifetime1, this.field_a);
+        SecondaryNodeDequeIterator.a(120, var4Lifetime1, var7Lifetime1, var6Lifetime1, var5Lifetime1, this.field_a);
     }
 
     final void a(int param0, int param1, byte param2) {

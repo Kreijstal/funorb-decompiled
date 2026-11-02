@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "torquing": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/torquing"
+      },
+      "inputTreeSha256": "d5b607927334e94f96a23b7311ef60890204fe2a23d66a0571322079a17eec67",
+      "sources": {
+        "files": 396,
+        "sha256": "b5db4fdc7e8da8fc452a049d1e3b9b5684d11e28b6f973d6d3e993543ead698f"
+      },
+      "dictionary": {
+        "path": "decompilation/torquing-naming.json",
+        "sha256": "f9e428ea3b0a3848f8dc69478198635f2e842b07eeacf62dd860fa0bb803480f"
+      },
+      "readingGuide": {
+        "path": "games/torquing/README.md",
+        "sha256": "129ec0efbff11172e5b701cbbc89f52ba7b9a2a554cd87e9143f9f21dc5c031e"
+      },
+      "rulesSha256": "ecf574e3e2b4173b748c7ebf532943b94559c385a62d8504a96e9366887870e2",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12382,6 +12406,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 396,
+          "sha256": "b5db4fdc7e8da8fc452a049d1e3b9b5684d11e28b6f973d6d3e993543ead698f"
         }
       },
       "trackcontroller": {

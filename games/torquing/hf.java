@@ -57,7 +57,7 @@ final class hf {
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param0.charAt(var6);
             if (ik.a((char) var7, (byte) -46)) {
-              var8 = ga.a((byte) 63, (char) var7);
+              var8 = ClientException.a((byte) 63, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

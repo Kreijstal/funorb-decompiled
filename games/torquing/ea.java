@@ -97,7 +97,7 @@ final class ea extends am {
         field_u = null;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         RuntimeException var4 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;

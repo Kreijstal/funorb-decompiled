@@ -33,7 +33,7 @@ final class wh extends am {
         return db.a(var5.toString(), 31108);
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_8_1 = false;
@@ -174,7 +174,7 @@ final class wh extends am {
               ih.b(true);
               return;
             }
-            var5_int = -var10.field_n + oo.field_a;
+            var5_int = -var10.position + oo.field_a;
             var12 = var4_ref_h.field_k;
             var11 = var12;
             var6 = var11;

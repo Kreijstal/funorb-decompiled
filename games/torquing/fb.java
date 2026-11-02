@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fb extends q {
+abstract class fb extends IntrusiveNode {
     int field_j;
 
     fb() {

@@ -16,13 +16,13 @@ final class qj {
         int var2Lifetime1;
         int var2Lifetime2;
         var3 = Torquing.field_u;
-        q.field_d = q.field_d + 1;
+        IntrusiveNode.field_d = IntrusiveNode.field_d + 1;
         if (param1 != il.field_l) {
           if (wa.field_f) {
             var2 = 0;
             if (param1 != -1) {
               if (wa.field_f) {
-                q.field_d = dg.field_h;
+                IntrusiveNode.field_d = dg.field_h;
                 ue.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
@@ -37,21 +37,21 @@ final class qj {
                   return;
                 }
                 if (!wa.field_f &&
-                  q.field_d < dg.field_h &&
+                  IntrusiveNode.field_d < dg.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
                   ue.field_h = k.field_e;
-                  q.field_d = 0;
+                  IntrusiveNode.field_d = 0;
                 }
                 if (wa.field_f &&
-                  q.field_d == p.field_u) {
+                  IntrusiveNode.field_d == p.field_u) {
                   wa.field_f = false;
-                  q.field_d = 0;
+                  IntrusiveNode.field_d = 0;
                 }
                 return;
               }
               if (var2 != 0) {
-                q.field_d = dg.field_h;
+                IntrusiveNode.field_d = dg.field_h;
                 ue.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
@@ -64,21 +64,21 @@ final class qj {
                   return;
                 }
                 if (!wa.field_f &&
-                  q.field_d < dg.field_h &&
+                  IntrusiveNode.field_d < dg.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
                   ue.field_h = k.field_e;
-                  q.field_d = 0;
+                  IntrusiveNode.field_d = 0;
                 }
                 if (wa.field_f &&
-                  q.field_d == p.field_u) {
+                  IntrusiveNode.field_d == p.field_u) {
                   wa.field_f = false;
-                  q.field_d = 0;
+                  IntrusiveNode.field_d = 0;
                 }
                 return;
               }
             }
-            q.field_d = 0;
+            IntrusiveNode.field_d = 0;
             ue.field_h = k.field_e;
             ro.field_w = n.field_t;
             if (-1 != param1) {
@@ -88,16 +88,16 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                q.field_d < dg.field_h &&
+                IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 ue.field_h = k.field_e;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               if (wa.field_f &&
-                q.field_d == p.field_u) {
+                IntrusiveNode.field_d == p.field_u) {
                 wa.field_f = false;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               return;
             }
@@ -107,16 +107,16 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                q.field_d < dg.field_h &&
+                IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 ue.field_h = k.field_e;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               if (wa.field_f &&
-                q.field_d == p.field_u) {
+                IntrusiveNode.field_d == p.field_u) {
                 wa.field_f = false;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               return;
             }
@@ -126,33 +126,33 @@ final class qj {
               return;
             }
             if (!wa.field_f &&
-              q.field_d < dg.field_h &&
+              IntrusiveNode.field_d < dg.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
               ue.field_h = k.field_e;
-              q.field_d = 0;
+              IntrusiveNode.field_d = 0;
               if (wa.field_f &&
-                q.field_d == p.field_u) {
+                IntrusiveNode.field_d == p.field_u) {
                 wa.field_f = false;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               return;
             }
             if (!wa.field_f) {
               return;
             }
-            if (q.field_d != p.field_u) {
+            if (IntrusiveNode.field_d != p.field_u) {
               return;
             }
             wa.field_f = false;
-            q.field_d = 0;
+            IntrusiveNode.field_d = 0;
             return;
           }
-          if (q.field_d < dg.field_h) {
+          if (IntrusiveNode.field_d < dg.field_h) {
             var2Lifetime1 = 0;
             if (param1 != -1) {
               if (wa.field_f) {
-                q.field_d = dg.field_h;
+                IntrusiveNode.field_d = dg.field_h;
                 ue.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
@@ -167,21 +167,21 @@ final class qj {
                   return;
                 }
                 if (!wa.field_f &&
-                  q.field_d < dg.field_h &&
+                  IntrusiveNode.field_d < dg.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
                   ue.field_h = k.field_e;
-                  q.field_d = 0;
+                  IntrusiveNode.field_d = 0;
                 }
                 if (wa.field_f &&
-                  q.field_d == p.field_u) {
+                  IntrusiveNode.field_d == p.field_u) {
                   wa.field_f = false;
-                  q.field_d = 0;
+                  IntrusiveNode.field_d = 0;
                 }
                 return;
               }
               if (var2Lifetime1 != 0) {
-                q.field_d = dg.field_h;
+                IntrusiveNode.field_d = dg.field_h;
                 ue.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
@@ -194,21 +194,21 @@ final class qj {
                   return;
                 }
                 if (!wa.field_f &&
-                  q.field_d < dg.field_h &&
+                  IntrusiveNode.field_d < dg.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
                   ue.field_h = k.field_e;
-                  q.field_d = 0;
+                  IntrusiveNode.field_d = 0;
                 }
                 if (wa.field_f &&
-                  q.field_d == p.field_u) {
+                  IntrusiveNode.field_d == p.field_u) {
                   wa.field_f = false;
-                  q.field_d = 0;
+                  IntrusiveNode.field_d = 0;
                 }
                 return;
               }
             }
-            q.field_d = 0;
+            IntrusiveNode.field_d = 0;
             ue.field_h = k.field_e;
             ro.field_w = n.field_t;
             if (-1 != param1) {
@@ -218,16 +218,16 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                q.field_d < dg.field_h &&
+                IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 ue.field_h = k.field_e;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               if (wa.field_f &&
-                q.field_d == p.field_u) {
+                IntrusiveNode.field_d == p.field_u) {
                 wa.field_f = false;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               return;
             }
@@ -237,16 +237,16 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                q.field_d < dg.field_h &&
+                IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 ue.field_h = k.field_e;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               if (wa.field_f &&
-                q.field_d == p.field_u) {
+                IntrusiveNode.field_d == p.field_u) {
                 wa.field_f = false;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               return;
             }
@@ -256,31 +256,31 @@ final class qj {
               return;
             }
             if (!wa.field_f &&
-              q.field_d < dg.field_h &&
+              IntrusiveNode.field_d < dg.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
               ue.field_h = k.field_e;
-              q.field_d = 0;
+              IntrusiveNode.field_d = 0;
               if (wa.field_f &&
-                q.field_d == p.field_u) {
+                IntrusiveNode.field_d == p.field_u) {
                 wa.field_f = false;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               return;
             }
             if (wa.field_f &&
-              q.field_d == p.field_u) {
+              IntrusiveNode.field_d == p.field_u) {
               wa.field_f = false;
-              q.field_d = 0;
+              IntrusiveNode.field_d = 0;
               return;
             }
             return;
           }
-          stackIn_175_0 = (cf.field_e + dg.field_h <= q.field_d) ? 0 : 1;
+          stackIn_175_0 = (cf.field_e + dg.field_h <= IntrusiveNode.field_d) ? 0 : 1;
           var2Lifetime2 = stackIn_175_0;
           if (param1 != -1) {
             if (wa.field_f) {
-              q.field_d = dg.field_h;
+              IntrusiveNode.field_d = dg.field_h;
               ue.field_h = k.field_e;
               ro.field_w = n.field_t;
               if (-1 == param1) {
@@ -295,21 +295,21 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                q.field_d < dg.field_h &&
+                IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 ue.field_h = k.field_e;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               if (wa.field_f &&
-                q.field_d == p.field_u) {
+                IntrusiveNode.field_d == p.field_u) {
                 wa.field_f = false;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               return;
             }
             if (var2Lifetime2 != 0) {
-              q.field_d = dg.field_h;
+              IntrusiveNode.field_d = dg.field_h;
               ue.field_h = k.field_e;
               ro.field_w = n.field_t;
               if (-1 == param1) {
@@ -322,24 +322,24 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                q.field_d < dg.field_h &&
+                IntrusiveNode.field_d < dg.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 ue.field_h = k.field_e;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               if (!wa.field_f) {
                 return;
               }
-              if (q.field_d != p.field_u) {
+              if (IntrusiveNode.field_d != p.field_u) {
                 return;
               }
               wa.field_f = false;
-              q.field_d = 0;
+              IntrusiveNode.field_d = 0;
               return;
             }
           }
-          q.field_d = 0;
+          IntrusiveNode.field_d = 0;
           ue.field_h = k.field_e;
           ro.field_w = n.field_t;
           if (-1 != param1) {
@@ -349,22 +349,22 @@ final class qj {
               return;
             }
             if (!wa.field_f &&
-              q.field_d < dg.field_h &&
+              IntrusiveNode.field_d < dg.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
               ue.field_h = k.field_e;
-              q.field_d = 0;
+              IntrusiveNode.field_d = 0;
               if (wa.field_f &&
-                q.field_d == p.field_u) {
+                IntrusiveNode.field_d == p.field_u) {
                 wa.field_f = false;
-                q.field_d = 0;
+                IntrusiveNode.field_d = 0;
               }
               return;
             }
             if (wa.field_f &&
-              q.field_d == p.field_u) {
+              IntrusiveNode.field_d == p.field_u) {
               wa.field_f = false;
-              q.field_d = 0;
+              IntrusiveNode.field_d = 0;
               return;
             }
             return;
@@ -375,16 +375,16 @@ final class qj {
               return;
             }
             if (!wa.field_f &&
-              q.field_d < dg.field_h &&
+              IntrusiveNode.field_d < dg.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
               ue.field_h = k.field_e;
-              q.field_d = 0;
+              IntrusiveNode.field_d = 0;
             }
             if (wa.field_f &&
-              q.field_d == p.field_u) {
+              IntrusiveNode.field_d == p.field_u) {
               wa.field_f = false;
-              q.field_d = 0;
+              IntrusiveNode.field_d = 0;
               return;
             }
             return;
@@ -396,16 +396,16 @@ final class qj {
           return;
         }
         if (!wa.field_f &&
-          q.field_d < dg.field_h &&
+          IntrusiveNode.field_d < dg.field_h &&
           he.field_a) {
           ro.field_w = n.field_t;
           ue.field_h = k.field_e;
-          q.field_d = 0;
+          IntrusiveNode.field_d = 0;
         }
         if (wa.field_f &&
-          q.field_d == p.field_u) {
+          IntrusiveNode.field_d == p.field_u) {
           wa.field_f = false;
-          q.field_d = 0;
+          IntrusiveNode.field_d = 0;
           return;
         }
     }

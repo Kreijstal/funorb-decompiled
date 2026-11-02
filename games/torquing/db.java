@@ -467,11 +467,11 @@ final class db {
         this.field_h = 0;
         this.field_e = 0;
         this.field_c = 0;
-        if (ta.field_o == 0) {
+        if (DualLinkNode.field_o == 0) {
           if (this.field_b != 0) {
-            if (ul.field_d == 0) {
-              if (ta.field_o == 0 &&
-                0 == ul.field_d) {
+            if (MouseInputHandler.field_d == 0) {
+              if (DualLinkNode.field_o == 0 &&
+                0 == MouseInputHandler.field_d) {
                 this.field_b = 0;
               }
               if (!param0) {
@@ -504,8 +504,8 @@ final class db {
             }
             this.field_f = this.field_f - 1;
           }
-          if (ta.field_o == 0) {
-            if (0 != ul.field_d) {
+          if (DualLinkNode.field_o == 0) {
+            if (0 != MouseInputHandler.field_d) {
               if (!param0) {
                 return;
               }
@@ -567,15 +567,15 @@ final class db {
           }
           return;
         }
-        this.field_b = ta.field_o;
-        this.field_c = ta.field_o;
-        this.field_e = ta.field_o;
+        this.field_b = DualLinkNode.field_o;
+        this.field_c = DualLinkNode.field_o;
+        this.field_e = DualLinkNode.field_o;
         this.field_g = param2;
         this.field_f = cm.field_n;
         this.field_k = true;
         if (this.field_b != 0) {
-          if (ul.field_d == 0) {
-            if (ta.field_o != 0) {
+          if (MouseInputHandler.field_d == 0) {
+            if (DualLinkNode.field_o != 0) {
               if (!param0) {
                 return;
               }
@@ -600,7 +600,7 @@ final class db {
               }
               return;
             }
-            if (0 == ul.field_d) {
+            if (0 == MouseInputHandler.field_d) {
               this.field_b = 0;
             }
             if (!param0) {
@@ -642,8 +642,8 @@ final class db {
           }
           this.field_f = this.field_f - 1;
         }
-        if (ta.field_o == 0) {
-          if (0 != ul.field_d) {
+        if (DualLinkNode.field_o == 0) {
+          if (0 != MouseInputHandler.field_d) {
             if (!param0) {
               return;
             }

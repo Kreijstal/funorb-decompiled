@@ -14,7 +14,7 @@ final class td {
     private int field_k;
     int field_e;
 
-    final void a(fj param0) {
+    final void a(PacketBuffer param0) {
         this.field_c = param0.i((byte) -101);
         this.field_e = param0.c((byte) -127);
         this.field_a = param0.c((byte) -76);
@@ -29,7 +29,7 @@ final class td {
         this.field_g = 0;
     }
 
-    final void b(fj param0) {
+    final void b(PacketBuffer param0) {
         int var2 = 0;
         this.field_b = param0.i((byte) -101);
         this.field_h = new int[this.field_b];

@@ -103,7 +103,7 @@ final class qn extends am {
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -238,7 +238,7 @@ final class qn extends am {
               }
               var5 = stackIn_24_0;
               var6 = 0;
-              for (var8 = (this.field_y * var5 >> 12) + q.field_b[var4]; var8 < 0; var8 += 4096) {
+              for (var8 = (this.field_y * var5 >> 12) + IntrusiveNode.field_b[var4]; var8 < 0; var8 += 4096) {
               }
               while (var8 > 4096) {
                 var8 -= 4096;

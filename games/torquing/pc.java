@@ -478,7 +478,7 @@ class pc implements el, fe {
           if (jl.field_W != null) {
             try {
               jl.field_W.a(false, 0L);
-              jl.field_W.a(-1, 24, kj.field_d.field_n, kj.field_d.field_j);
+              jl.field_W.a(-1, 24, kj.field_d.position, kj.field_d.payload);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -486,14 +486,14 @@ class pc implements el, fe {
               decompiledRegionSelector0 = 1;
             }
             if (decompiledRegionSelector0 == 0) {
-              kj.field_d.field_n = kj.field_d.field_n + 24;
+              kj.field_d.position = kj.field_d.position + 24;
               if (param0) {
                 field_n = (String) null;
               }
               return;
             }
           }
-          kj.field_d.field_n = kj.field_d.field_n + 24;
+          kj.field_d.position = kj.field_d.position + 24;
           if (!param0) {
             return;
           }

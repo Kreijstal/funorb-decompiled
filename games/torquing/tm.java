@@ -108,7 +108,7 @@ final class tm {
         }
     }
 
-    final void a(byte param0, fj param1, byte[] param2) {
+    final void a(byte param0, PacketBuffer param1, byte[] param2) {
         try {
           Exception exception = null;
           RuntimeException var4 = null;
@@ -119,13 +119,13 @@ final class tm {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param1.field_j[param1.field_n] == 31 &&
-              param1.field_j[1 + param1.field_n] == -117) {
+            if (param1.payload[param1.position] == 31 &&
+              param1.payload[1 + param1.position] == -117) {
               if (null == this.field_d) {
                 this.field_d = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_d.setInput(param1.field_j, 10 + param1.field_n, -param1.field_n - 18 + param1.field_j.length);
+                this.field_d.setInput(param1.payload, 10 + param1.position, -param1.position - 18 + param1.payload.length);
                 this.field_d.inflate(param2);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

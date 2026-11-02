@@ -81,7 +81,7 @@ final class cd {
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (hk.a(true, param0)) {
+          if (GameApplet.a(true, param0)) {
             return false;
           }
           if (fm.a((byte) -111, param0)) {

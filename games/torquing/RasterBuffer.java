@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kn {
+abstract class RasterBuffer {
     java.awt.Image field_c;
     int field_g;
     static String field_b;
@@ -17,7 +17,7 @@ abstract class kn {
           field_f = null;
           return;
         }
-        kn.a(-77, 104, 51, -92, -88, -93, -3, -81, -109, 127);
+        RasterBuffer.a(-77, 104, 51, -92, -88, -93, -3, -81, -109, 127);
         field_f = null;
     }
 

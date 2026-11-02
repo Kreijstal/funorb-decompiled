@@ -18,7 +18,7 @@ class e extends bc {
         field_b = null;
     }
 
-    final void a(fj param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.a(118, this.field_e);
           param0.a((byte) 107, this.field_c);

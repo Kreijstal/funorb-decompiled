@@ -21,16 +21,16 @@ final class fd {
     private int field_f;
     int[][] field_m;
 
-    final static kn a(int param0, int param1, int param2, java.awt.Component param3) {
+    final static RasterBuffer a(int param0, int param1, int param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          kn var5 = null;
-          sn var5_ref = null;
-          kn stackIn_2_0 = null;
-          kn stackIn_4_0 = null;
-          sn stackIn_6_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_2_0 = null;
+          RasterBuffer stackIn_4_0 = null;
+          ImageProducerRasterBuffer stackIn_6_0 = null;
           RuntimeException stackIn_9_0 = null;
           StringBuilder stackIn_9_1 = null;
           String stackIn_10_2 = null;
@@ -38,21 +38,21 @@ final class fd {
           try {
             try {
               var4 = Class.forName("fg");
-              var5 = (kn) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param3, (byte) 24, param1, param2);
               if (param0 == 0) {
                 stackIn_4_0 = var5;
                 return stackIn_4_0;
               }
-              stackIn_2_0 = (kn) null;
+              stackIn_2_0 = (RasterBuffer) null;
               return stackIn_2_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new sn();
-              ((kn) ((Object) var5_ref)).a(param3, (byte) 24, param1, param2);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param3, (byte) 24, param1, param2);
               stackIn_6_0 = var5_ref;
-              return (kn) ((Object) stackIn_6_0);
+              return (RasterBuffer) ((Object) stackIn_6_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -181,7 +181,7 @@ final class fd {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        fj var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -198,7 +198,7 @@ final class fd {
         int var13Lifetime1Lifetime1;
         var16 = Torquing.field_u;
         try {
-          var17 = new fj(l.a(0, param1));
+          var17 = new PacketBuffer(l.a(0, param1));
           var4 = var17.i((byte) -101);
           if (var4 >= 5 &&
             var4 <= 7) {

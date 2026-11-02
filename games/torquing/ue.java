@@ -100,10 +100,10 @@ final class ue {
           if (j.field_q <= param2 &&
             param2 <= qk.field_p) {
             var39 = qd.field_a[param2];
-            var16 = ln.a(qg.field_z, kn.field_e, -param4 + param1, 97);
-            var17 = ln.a(qg.field_z, kn.field_e, param1 + param4, 114);
-            var18 = ln.a(qg.field_z, kn.field_e, -var8 + param1, 88);
-            var19 = ln.a(qg.field_z, kn.field_e, var8 + param1, param0 + 15882);
+            var16 = ln.a(qg.field_z, RasterBuffer.field_e, -param4 + param1, 97);
+            var17 = ln.a(qg.field_z, RasterBuffer.field_e, param1 + param4, 114);
+            var18 = ln.a(qg.field_z, RasterBuffer.field_e, -var8 + param1, 88);
+            var19 = ln.a(qg.field_z, RasterBuffer.field_e, var8 + param1, param0 + 15882);
             di.a(var16, (byte) -125, param3, var39, var18);
             di.a(var18, (byte) -114, param6, var39, var19);
             di.a(var19, (byte) 108, param3, var39, var17);
@@ -120,7 +120,7 @@ final class ue {
             if (var12 >= 0 &&
               var11 >= 1) {
               var11--;
-              vc.field_a[var11] = var7_int;
+              MouseWheelInput.field_a[var11] = var7_int;
               var12 = var12 - (var11 << 1);
             }
             var7_int++;
@@ -132,8 +132,8 @@ final class ue {
               if (var16Lifetime1 >= j.field_q &&
                 qk.field_p >= var15) {
                 if (var8 <= var9) {
-                  var17Lifetime1 = ln.a(qg.field_z, kn.field_e, param1 + var7_int, param0 ^ -15853);
-                  var18Lifetime1 = ln.a(qg.field_z, kn.field_e, -var7_int + param1, 118);
+                  var17Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, param1 + var7_int, param0 ^ -15853);
+                  var18Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, -var7_int + param1, 118);
                   if (qk.field_p >= var16Lifetime1) {
                     di.a(var18Lifetime1, (byte) 76, param3, qd.field_a[var16Lifetime1], var17Lifetime1);
                   }
@@ -141,11 +141,11 @@ final class ue {
                     di.a(var18Lifetime1, (byte) 15, param3, qd.field_a[var15], var17Lifetime1);
                   }
                 } else {
-                  var17Lifetime1 = vc.field_a[var9];
-                  var18Lifetime1 = ln.a(qg.field_z, kn.field_e, var7_int + param1, 119);
-                  var19Lifetime1 = ln.a(qg.field_z, kn.field_e, param1 - var7_int, param0 ^ -15855);
-                  var20 = ln.a(qg.field_z, kn.field_e, var17Lifetime1 + param1, 95);
-                  var21 = ln.a(qg.field_z, kn.field_e, -var17Lifetime1 + param1, 96);
+                  var17Lifetime1 = MouseWheelInput.field_a[var9];
+                  var18Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, var7_int + param1, 119);
+                  var19Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, param1 - var7_int, param0 ^ -15855);
+                  var20 = ln.a(qg.field_z, RasterBuffer.field_e, var17Lifetime1 + param1, 95);
+                  var21 = ln.a(qg.field_z, RasterBuffer.field_e, -var17Lifetime1 + param1, 96);
                   if (var16Lifetime1 <= qk.field_p) {
                     var40 = qd.field_a[var16Lifetime1];
                     di.a(var19Lifetime1, (byte) -111, param3, var40, var21);
@@ -171,14 +171,14 @@ final class ue {
             }
             var17Lifetime1Lifetime1 = var9 + param1;
             var18Lifetime1Lifetime1 = param1 - var9;
-            if (kn.field_e > var17Lifetime1Lifetime1) {
+            if (RasterBuffer.field_e > var17Lifetime1Lifetime1) {
               continue;
             }
             if (qg.field_z < var18Lifetime1Lifetime1) {
               continue;
             }
-            var17Lifetime1Lifetime1 = ln.a(qg.field_z, kn.field_e, var17Lifetime1Lifetime1, 94);
-            var18Lifetime1Lifetime1 = ln.a(qg.field_z, kn.field_e, var18Lifetime1Lifetime1, 118);
+            var17Lifetime1Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, var17Lifetime1Lifetime1, 94);
+            var18Lifetime1Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, var18Lifetime1Lifetime1, 118);
             if (var7_int >= var8) {
               if (qk.field_p >= var16Lifetime1Lifetime1) {
                 di.a(var18Lifetime1Lifetime1, (byte) 51, param3, qd.field_a[var16Lifetime1Lifetime1], var17Lifetime1Lifetime1);
@@ -192,11 +192,11 @@ final class ue {
             if (var7_int <= var11) {
               stackIn_42_0 = var11;
             } else {
-              stackIn_42_0 = vc.field_a[var7_int];
+              stackIn_42_0 = MouseWheelInput.field_a[var7_int];
             }
             var19Lifetime1Lifetime1 = stackIn_42_0;
-            var20Lifetime1 = ln.a(qg.field_z, kn.field_e, param1 + var19Lifetime1Lifetime1, 100);
-            var21Lifetime1 = ln.a(qg.field_z, kn.field_e, param1 - var19Lifetime1Lifetime1, 81);
+            var20Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, param1 + var19Lifetime1Lifetime1, 100);
+            var21Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, param1 - var19Lifetime1Lifetime1, 81);
             if (var16Lifetime1Lifetime1 <= qk.field_p) {
               var42 = qd.field_a[var16Lifetime1Lifetime1];
               di.a(var18Lifetime1Lifetime1, (byte) -103, param3, var42, var21Lifetime1);

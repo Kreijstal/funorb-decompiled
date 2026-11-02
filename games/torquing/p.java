@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p extends ta {
+final class p extends DualLinkNode {
     int[] field_v;
     private String[] field_r;
     private int[] field_q;
@@ -20,7 +20,7 @@ final class p extends ta {
         field_t = null;
     }
 
-    private final void a(int param0, int param1, fj param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -81,7 +81,7 @@ final class p extends ta {
         }
     }
 
-    final void a(fj param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -130,7 +130,7 @@ final class p extends ta {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = cq.field_y[ie.a(255, (int) var4[var6])];
           }
-          var1[var2] = new t(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var5);
+          var1[var2] = new t(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var5);
         }
         go.b(param0 - 3499);
         if (param0 != 3499) {

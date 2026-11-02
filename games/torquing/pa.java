@@ -57,7 +57,7 @@ abstract class pa {
         }
         if (!param1) {
           np.field_m = Torquing.a(26657, 80, var8);
-          md.field_a = null;
+          DelegatingCanvas.field_a = null;
           return new hi(param1);
         }
         var5 = var8.i(param0 ^ -13616);
@@ -69,13 +69,13 @@ abstract class pa {
           } else {
             stackIn_25_0 = null;
           }
-          md.field_a = stackIn_25_0;
+          DelegatingCanvas.field_a = stackIn_25_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           nn.a("CC1", (Throwable) ((Object) var6), -9958);
           np.field_m = null;
-          md.field_a = null;
+          DelegatingCanvas.field_a = null;
           return new hi(param1);
         }
         return new hi(param1);

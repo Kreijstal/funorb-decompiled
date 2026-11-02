@@ -51,7 +51,7 @@ final class ki extends hn implements fp, ng, ba {
           if (var4 == so.field_u) {
             return false;
           }
-          if (var4 == q.field_a) {
+          if (var4 == IntrusiveNode.field_a) {
             return false;
           }
           if (var4 != df.field_r) {
@@ -245,7 +245,7 @@ final class ki extends hn implements fp, ng, ba {
         var3 = var3 + this.a((byte) 115, hm.field_v, 170, (gm) (this.field_B), var3);
         var3 = var3 + (this.a(ug.field_a, var3, 170, this.field_L, bj.field_K, true) + 5);
         var3 = var3 + (5 + this.a(de.field_b, var3, 170, this.field_E, ad.field_l, true));
-        var3 = var3 + this.a(170, ta.field_m, var3, this.field_I, 3);
+        var3 = var3 + this.a(170, DualLinkNode.field_m, var3, this.field_I, 3);
         na var4 = new na(46, var3, -90 + this.field_p, 25, this.field_F, true, -120 + this.field_p, 5, sp.field_R, 11579568, ce.field_a);
         this.a(var4, -6938);
         var3 = var3 + var4.field_o;

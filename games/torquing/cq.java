@@ -11,7 +11,7 @@ final class cq extends am {
     private int field_v;
     private int field_t;
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_19_0 = null;

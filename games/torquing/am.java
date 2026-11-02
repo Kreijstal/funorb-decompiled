@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class am extends q {
+abstract class am extends IntrusiveNode {
     int field_k;
     static String field_q;
     static String field_j;
@@ -63,14 +63,14 @@ abstract class am extends q {
           if (35 <= fh.field_r) {
             if (fh.field_r < 70) {
               if (-35 + fh.field_r - 35 > -5) {
-                vc.field_d = vc.field_d - 4;
+                MouseWheelInput.field_d = MouseWheelInput.field_d - 4;
                 if (param0 < 53) {
                   am.c((byte) 72);
                   return;
                 }
                 return;
               }
-              vc.field_d = vc.field_d + 4;
+              MouseWheelInput.field_d = MouseWheelInput.field_d + 4;
               if (param0 < 53) {
                 am.c((byte) 72);
                 return;
@@ -161,7 +161,7 @@ abstract class am extends q {
         return var5Lifetime1;
     }
 
-    void a(fj param0, int param1, int param2) {
+    void a(PacketBuffer param0, int param1, int param2) {
         try {
           if (param1 != 35) {
             field_n = false;

@@ -112,7 +112,7 @@ final class dq {
           }
           var5[4] = (t) ((Object) var19);
           var4.a(4, 4).a(-86, true).a(-2, var5);
-          var4.a(5, 4).a(-2, ul.a(65793, 0, 0, 0, (byte) 82)).a(-121, true).a((byte) 126, -1);
+          var4.a(5, 4).a(-2, MouseInputHandler.a(65793, 0, 0, 0, (byte) 82)).a(-121, true).a((byte) 126, -1);
           this.field_k = (el) ((Object) var4);
           var6 = new se(var4, true);
           var6.field_f = 0;

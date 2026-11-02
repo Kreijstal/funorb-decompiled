@@ -49,7 +49,7 @@ final class ij extends gf {
             stackIn_8_0 = dj.field_b;
             return stackIn_8_0;
           }
-          if (hk.a(true, var5)) {
+          if (GameApplet.a(true, var5)) {
             stackIn_12_0 = nh.field_q;
             return stackIn_12_0;
           }
@@ -218,7 +218,7 @@ final class ij extends gf {
             } else {
               var5 = null;
             }
-            var10.field_n = var10.field_n + 4;
+            var10.position = var10.position + 4;
             if (!var10.h(-31017)) {
               ih.b(true);
               return;

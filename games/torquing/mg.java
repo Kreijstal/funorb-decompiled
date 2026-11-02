@@ -232,7 +232,7 @@ final class mg {
           cl.field_d = param6;
           nn.field_c = (jp) ((Object) new fh());
           gh.field_a = new co(param4);
-          no.field_n = new bo(nn.field_c, gh.field_a);
+          BufferedSocket.field_n = new bo(nn.field_c, gh.field_a);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
