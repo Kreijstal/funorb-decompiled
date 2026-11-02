@@ -64,16 +64,16 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         }
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
-        param6 = param6 - param2;
-        for (int var8 = 0; var8 < param3; var8++) {
-          int var9 = (param1 + var8) * this.field_f + param0;
-          for (int var10 = 0; var10 < param2; var10++) {
-            int incrementValue$0 = param5;
-            param5++;
-            this.field_E[var9 + var10] = param4[incrementValue$0];
+    final void copyPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride) {
+        stride = stride - width;
+        for (int var8 = 0; var8 < height; var8++) {
+          int var9 = (y + var8) * this.field_f + x;
+          for (int var10 = 0; var10 < width; var10++) {
+            int incrementValue$0 = offset;
+            offset++;
+            this.field_E[var9 + var10] = pixels[incrementValue$0];
           }
-          param5 = param5 + param6;
+          offset = offset + stride;
         }
     }
 
@@ -189,56 +189,56 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         return (RenderSprite) (var7);
     }
 
-    final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void fillRect(int x, int y, int width, int height, int argb, int blendMode) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        if (param0 < this.field_z) {
-          param2 = param2 - (this.field_z - param0);
-          param0 = this.field_z;
+        if (x < this.field_z) {
+          width = width - (this.field_z - x);
+          x = this.field_z;
         }
-        if (param1 < this.field_w) {
-          param3 = param3 - (this.field_w - param1);
-          param1 = this.field_w;
+        if (y < this.field_w) {
+          height = height - (this.field_w - y);
+          y = this.field_w;
         }
-        if (param0 + param2 > this.field_k) {
-          param2 = this.field_k - param0;
+        if (x + width > this.field_k) {
+          width = this.field_k - x;
         }
-        if (param1 + param3 > this.field_D) {
-          param3 = this.field_D - param1;
+        if (y + height > this.field_D) {
+          height = this.field_D - y;
         }
-        if (param2 > 0) {
-          if (param3 > 0 &&
-            param0 <= this.field_k &&
-            param1 <= this.field_D) {
-            int var7 = this.field_f - param2;
-            int var8 = param0 + param1 * this.field_f;
-            int var9 = param4 >>> 24;
-            if (param5 != 0 && (param5 != 1 ||
+        if (width > 0) {
+          if (height > 0 &&
+            x <= this.field_k &&
+            y <= this.field_D) {
+            int var7 = this.field_f - width;
+            int var8 = x + y * this.field_f;
+            int var9 = argb >>> 24;
+            if (blendMode != 0 && (blendMode != 1 ||
               var9 != 255)) {
-              if (param5 == 1) {
-                param4 = ((param4 & 16711935) * var9 >> 8 & 16711935) + (((param4 & -16711936) >>> 8) * var9 & -16711936);
+              if (blendMode == 1) {
+                argb = ((argb & 16711935) * var9 >> 8 & 16711935) + (((argb & -16711936) >>> 8) * var9 & -16711936);
                 var10 = 256 - var9;
-                for (var11 = 0; var11 < param3; var11++) {
-                  for (var12 = -param2; var12 < 0; var12++) {
+                for (var11 = 0; var11 < height; var11++) {
+                  for (var12 = -width; var12 < 0; var12++) {
                     int var13 = this.field_E[var8];
                     var13 = ((var13 & 16711935) * var10 >> 8 & 16711935) + (((var13 & -16711936) >>> 8) * var10 & -16711936);
                     int incrementValue$1 = var8;
                     var8++;
-                    this.field_E[incrementValue$1] = param4 + var13;
+                    this.field_E[incrementValue$1] = argb + var13;
                   }
                   var8 = var8 + var7;
                 }
                 return;
               }
-              if (param5 != 2) {
+              if (blendMode != 2) {
                 throw new IllegalArgumentException();
               }
-              for (var10 = 0; var10 < param3; var10++) {
-                for (var11 = -param2; var11 < 0; var11++) {
+              for (var10 = 0; var10 < height; var10++) {
+                for (var11 = -width; var11 < 0; var11++) {
                   var12 = this.field_E[var8];
-                  int var13Lifetime1 = param4 + var12;
-                  int var14 = (param4 & 16711935) + (var12 & 16711935);
+                  int var13Lifetime1 = argb + var12;
+                  int var14 = (argb & 16711935) + (var12 & 16711935);
                   var12 = (var14 & 16777472) + (var13Lifetime1 - var14 & 65536);
                   int incrementValue$0 = var8;
                   var8++;
@@ -248,41 +248,41 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
               }
               return;
             }
-            var10 = param2 >> 3;
-            var11 = param2 & 7;
-            param2 = var8 - 1;
-            for (var12 = -param3; var12 < 0; var12++) {
+            var10 = width >> 3;
+            var11 = width & 7;
+            width = var8 - 1;
+            for (var12 = -height; var12 < 0; var12++) {
               if (var10 > 0) {
-                param0 = var10;
+                x = var10;
                 do {
-                  param2++;
-                  this.field_E[param2] = param4;
-                  param2++;
-                  this.field_E[param2] = param4;
-                  param2++;
-                  this.field_E[param2] = param4;
-                  param2++;
-                  this.field_E[param2] = param4;
-                  param2++;
-                  this.field_E[param2] = param4;
-                  param2++;
-                  this.field_E[param2] = param4;
-                  param2++;
-                  this.field_E[param2] = param4;
-                  param2++;
-                  this.field_E[param2] = param4;
-                  param0--;
-                } while (param0 > 0);
+                  width++;
+                  this.field_E[width] = argb;
+                  width++;
+                  this.field_E[width] = argb;
+                  width++;
+                  this.field_E[width] = argb;
+                  width++;
+                  this.field_E[width] = argb;
+                  width++;
+                  this.field_E[width] = argb;
+                  width++;
+                  this.field_E[width] = argb;
+                  width++;
+                  this.field_E[width] = argb;
+                  width++;
+                  this.field_E[width] = argb;
+                  x--;
+                } while (x > 0);
               }
               if (var11 > 0) {
-                param0 = var11;
+                x = var11;
                 do {
-                  param2++;
-                  this.field_E[param2] = param4;
-                  param0--;
-                } while (param0 > 0);
+                  width++;
+                  this.field_E[width] = argb;
+                  x--;
+                } while (x > 0);
               }
-              param2 = param2 + var7;
+              width = width + var7;
             }
           } else {
             return;
@@ -334,183 +334,183 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         return null;
     }
 
-    final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int x1, int y1, int x2, int y2, int argb, int blendMode) {
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        param2 = param2 - param0;
-        param3 = param3 - param1;
-        if (param3 == 0) {
-          if (param2 < 0) {
-            this.U(param0 + param2, param1, -param2 + 1, param4, param5);
+        x2 = x2 - x1;
+        y2 = y2 - y1;
+        if (y2 == 0) {
+          if (x2 < 0) {
+            this.drawHorizontalLine(x1 + x2, y1, -x2 + 1, argb, blendMode);
           } else {
-            this.U(param0, param1, param2 + 1, param4, param5);
+            this.drawHorizontalLine(x1, y1, x2 + 1, argb, blendMode);
           }
           return;
         }
-        if (param2 == 0) {
-          if (param3 < 0) {
-            this.b(param0, param1 + param3, -param3 + 1, param4, param5);
+        if (x2 == 0) {
+          if (y2 < 0) {
+            this.b(x1, y1 + y2, -y2 + 1, argb, blendMode);
           } else {
-            this.b(param0, param1, param3 + 1, param4, param5);
+            this.b(x1, y1, y2 + 1, argb, blendMode);
           }
           return;
         }
-        if (param2 + param3 < 0) {
-          param0 = param0 + param2;
-          param2 = -param2;
-          param1 = param1 + param3;
-          param3 = -param3;
+        if (x2 + y2 < 0) {
+          x1 = x1 + x2;
+          x2 = -x2;
+          y1 = y1 + y2;
+          y2 = -y2;
         }
-        if (param2 <= param3) {
-          param0 = param0 << 16;
-          param0 = param0 + 32768;
-          param2 = param2 << 16;
-          int var7 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
-          param3 = param3 + param1;
-          if (param1 < this.field_w) {
-            param0 = param0 + var7 * (this.field_w - param1);
-            param1 = this.field_w;
+        if (x2 <= y2) {
+          x1 = x1 << 16;
+          x1 = x1 + 32768;
+          x2 = x2 << 16;
+          int var7 = (int)Math.floor((double)x2 / (double)y2 + 0.5);
+          y2 = y2 + y1;
+          if (y1 < this.field_w) {
+            x1 = x1 + var7 * (this.field_w - y1);
+            y1 = this.field_w;
           }
-          if (param3 >= this.field_D) {
-            param3 = this.field_D - 1;
+          if (y2 >= this.field_D) {
+            y2 = this.field_D - 1;
           }
-          int var8 = param4 >>> 24;
-          if (param5 == 0 || param5 == 1 &&
+          int var8 = argb >>> 24;
+          if (blendMode == 0 || blendMode == 1 &&
             var8 == 255) {
-            while (param1 <= param3) {
-              int var9Lifetime3 = param0 >> 16;
+            while (y1 <= y2) {
+              int var9Lifetime3 = x1 >> 16;
               if (var9Lifetime3 >= this.field_z &&
                 var9Lifetime3 < this.field_k) {
-                this.field_E[var9Lifetime3 + param1 * this.field_f] = param4;
+                this.field_E[var9Lifetime3 + y1 * this.field_f] = argb;
               }
-              param0 = param0 + var7;
-              param1++;
+              x1 = x1 + var7;
+              y1++;
             }
-          } else if (param5 == 1) {
-            param4 = ((param4 & 16711935) * var8 >> 8 & 16711935) + ((param4 & 65280) * var8 >> 8 & 65280) + (var8 << 24);
+          } else if (blendMode == 1) {
+            argb = ((argb & 16711935) * var8 >> 8 & 16711935) + ((argb & 65280) * var8 >> 8 & 65280) + (var8 << 24);
             int var9 = 256 - var8;
-            while (param1 <= param3) {
-              int var10 = param0 >> 16;
+            while (y1 <= y2) {
+              int var10 = x1 >> 16;
               if (var10 >= this.field_z &&
                 var10 < this.field_k) {
-                int var11 = var10 + param1 * this.field_f;
+                int var11 = var10 + y1 * this.field_f;
                 int var12 = this.field_E[var11];
                 var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
-                this.field_E[var10 + param1 * this.field_f] = param4 + var12;
+                this.field_E[var10 + y1 * this.field_f] = argb + var12;
               }
-              param0 = param0 + var7;
-              param1++;
+              x1 = x1 + var7;
+              y1++;
             }
           } else {
-            if (param5 != 2) {
+            if (blendMode != 2) {
               throw new IllegalArgumentException();
             }
-            while (param1 <= param3) {
-              int var9Lifetime4 = param0 >> 16;
+            while (y1 <= y2) {
+              int var9Lifetime4 = x1 >> 16;
               if (var9Lifetime4 >= this.field_z &&
                 var9Lifetime4 < this.field_k) {
-                int var10Lifetime2 = var9Lifetime4 + param1 * this.field_f;
+                int var10Lifetime2 = var9Lifetime4 + y1 * this.field_f;
                 int var11Lifetime2 = this.field_E[var10Lifetime2];
-                int var12Lifetime2 = param4 + var11Lifetime2;
-                int var13 = (param4 & 16711935) + (var11Lifetime2 & 16711935);
+                int var12Lifetime2 = argb + var11Lifetime2;
+                int var13 = (argb & 16711935) + (var11Lifetime2 & 16711935);
                 int var11Lifetime2Lifetime1 = (var13 & 16777472) + (var12Lifetime2 - var13 & 65536);
                 this.field_E[var10Lifetime2] = var12Lifetime2 - var11Lifetime2Lifetime1 | var11Lifetime2Lifetime1 - (var11Lifetime2Lifetime1 >>> 8);
               }
-              param0 = param0 + var7;
-              param1++;
+              x1 = x1 + var7;
+              y1++;
             }
           }
         }
         else {
-          param1 = param1 << 16;
-          param1 = param1 + 32768;
-          param3 = param3 << 16;
-          int var7Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
-          param2 = param2 + param0;
-          if (param0 < this.field_z) {
-            param1 = param1 + var7Lifetime1 * (this.field_z - param0);
-            param0 = this.field_z;
+          y1 = y1 << 16;
+          y1 = y1 + 32768;
+          y2 = y2 << 16;
+          int var7Lifetime1 = (int)Math.floor((double)y2 / (double)x2 + 0.5);
+          x2 = x2 + x1;
+          if (x1 < this.field_z) {
+            y1 = y1 + var7Lifetime1 * (this.field_z - x1);
+            x1 = this.field_z;
           }
-          if (param2 >= this.field_k) {
-            param2 = this.field_k - 1;
+          if (x2 >= this.field_k) {
+            x2 = this.field_k - 1;
           }
-          int var8Lifetime1 = param4 >>> 24;
-          if (param5 != 0 && (param5 != 1 ||
+          int var8Lifetime1 = argb >>> 24;
+          if (blendMode != 0 && (blendMode != 1 ||
             var8Lifetime1 != 255)) {
-            if (param5 == 1) {
-              param4 = ((param4 & 16711935) * var8Lifetime1 >> 8 & 16711935) + ((param4 & 65280) * var8Lifetime1 >> 8 & 65280) + (var8Lifetime1 << 24);
+            if (blendMode == 1) {
+              argb = ((argb & 16711935) * var8Lifetime1 >> 8 & 16711935) + ((argb & 65280) * var8Lifetime1 >> 8 & 65280) + (var8Lifetime1 << 24);
               var9Lifetime1 = 256 - var8Lifetime1;
-              while (param0 <= param2) {
-                var10Lifetime1 = param1 >> 16;
+              while (x1 <= x2) {
+                var10Lifetime1 = y1 >> 16;
                 if (var10Lifetime1 >= this.field_w &&
                   var10Lifetime1 < this.field_D) {
-                  var11Lifetime1 = param0 + var10Lifetime1 * this.field_f;
+                  var11Lifetime1 = x1 + var10Lifetime1 * this.field_f;
                   var12Lifetime1 = this.field_E[var11Lifetime1];
                   var12Lifetime1 = ((var12Lifetime1 & 16711935) * var9Lifetime1 >> 8 & 16711935) + ((var12Lifetime1 & 65280) * var9Lifetime1 >> 8 & 65280);
-                  this.field_E[var11Lifetime1] = param4 + var12Lifetime1;
+                  this.field_E[var11Lifetime1] = argb + var12Lifetime1;
                 }
-                param1 = param1 + var7Lifetime1;
-                param0++;
+                y1 = y1 + var7Lifetime1;
+                x1++;
               }
             } else {
-              if (param5 != 2) {
+              if (blendMode != 2) {
                 throw new IllegalArgumentException();
               }
-              while (param0 <= param2) {
-                var9Lifetime1 = param1 >> 16;
+              while (x1 <= x2) {
+                var9Lifetime1 = y1 >> 16;
                 if (var9Lifetime1 >= this.field_w &&
                   var9Lifetime1 < this.field_D) {
-                  var10Lifetime1 = param0 + var9Lifetime1 * this.field_f;
+                  var10Lifetime1 = x1 + var9Lifetime1 * this.field_f;
                   var11Lifetime1 = this.field_E[var10Lifetime1];
-                  var12Lifetime1 = param4 + var11Lifetime1;
-                  int var13Lifetime1 = (param4 & 16711935) + (var11Lifetime1 & 16711935);
+                  var12Lifetime1 = argb + var11Lifetime1;
+                  int var13Lifetime1 = (argb & 16711935) + (var11Lifetime1 & 16711935);
                   var11Lifetime1 = (var13Lifetime1 & 16777472) + (var12Lifetime1 - var13Lifetime1 & 65536);
                   this.field_E[var10Lifetime1] = var12Lifetime1 - var11Lifetime1 | var11Lifetime1 - (var11Lifetime1 >>> 8);
                 }
-                param1 = param1 + var7Lifetime1;
-                param0++;
+                y1 = y1 + var7Lifetime1;
+                x1++;
               }
             }
             boolean decompiledFrameRemainder0 = false;
           }
           else {
-            while (param0 <= param2) {
-              int var9Lifetime2 = param1 >> 16;
+            while (x1 <= x2) {
+              int var9Lifetime2 = y1 >> 16;
               if (var9Lifetime2 >= this.field_w &&
                 var9Lifetime2 < this.field_D) {
-                this.field_E[param0 + var9Lifetime2 * this.field_f] = param4;
+                this.field_E[x1 + var9Lifetime2 * this.field_f] = argb;
               }
-              param1 = param1 + var7Lifetime1;
-              param0++;
+              y1 = y1 + var7Lifetime1;
+              x1++;
             }
           }
         }
 
     }
 
-    final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
-        int[] var4 = new int[param1.length];
-        int[] var5 = new int[param1.length];
+    final RendererBitmapFont createFont(BitmapFontMetrics metrics, SpriteData[] glyphSprites, boolean param2) {
+        int[] var4 = new int[glyphSprites.length];
+        int[] var5 = new int[glyphSprites.length];
         boolean var6 = false;
-        for (int var7 = 0; var7 < param1.length; var7++) {
-          var4[var7] = param1[var7].width;
-          var5[var7] = param1[var7].height;
-          if (param1[var7].alpha != null) {
+        for (int var7 = 0; var7 < glyphSprites.length; var7++) {
+          var4[var7] = glyphSprites[var7].width;
+          var5[var7] = glyphSprites[var7].height;
+          if (glyphSprites[var7].alpha != null) {
             var6 = true;
           }
         }
         if (!param2) {
           if (!var6) {
-            return (RendererBitmapFont) ((Object) new be(this, param0, param1, var4, var5));
+            return (RendererBitmapFont) ((Object) new be(this, metrics, glyphSprites, var4, var5));
           }
           throw new IllegalArgumentException("");
         }
         if (!var6) {
-          return (RendererBitmapFont) ((Object) new tu(this, param0, param1, var4, var5));
+          return (RendererBitmapFont) ((Object) new tu(this, metrics, glyphSprites, var4, var5));
         }
-        return (RendererBitmapFont) ((Object) new ts(this, param0, param1, var4, var5));
+        return (RendererBitmapFont) ((Object) new ts(this, metrics, glyphSprites, var4, var5));
     }
 
     private final void f(int param0) {
@@ -534,23 +534,23 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         }
     }
 
-    final void KA(int param0, int param1, int param2, int param3) {
-        if (param0 < 0) {
-          param0 = 0;
+    final void setClip(int left, int top, int right, int bottom) {
+        if (left < 0) {
+          left = 0;
         }
-        if (param1 < 0) {
-          param1 = 0;
+        if (top < 0) {
+          top = 0;
         }
-        if (param2 > this.field_f) {
-          param2 = this.field_f;
+        if (right > this.field_f) {
+          right = this.field_f;
         }
-        if (param3 > this.field_v) {
-          param3 = this.field_v;
+        if (bottom > this.field_v) {
+          bottom = this.field_v;
         }
-        this.field_z = param0;
-        this.field_k = param2;
-        this.field_w = param1;
-        this.field_D = param3;
+        this.field_z = left;
+        this.field_k = right;
+        this.field_w = top;
+        this.field_D = bottom;
         this.f();
     }
 
@@ -558,55 +558,55 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         return false;
     }
 
-    final void U(int param0, int param1, int param2, int param3, int param4) {
-        if (param1 >= this.field_w) {
-          if (param1 >= this.field_D) {
+    final void drawHorizontalLine(int x, int y, int length, int argb, int blendMode) {
+        if (y >= this.field_w) {
+          if (y >= this.field_D) {
             return;
           }
-          if (param0 < this.field_z) {
-            param2 = param2 - (this.field_z - param0);
-            param0 = this.field_z;
+          if (x < this.field_z) {
+            length = length - (this.field_z - x);
+            x = this.field_z;
           }
-          if (param0 + param2 > this.field_k) {
-            param2 = this.field_k - param0;
+          if (x + length > this.field_k) {
+            length = this.field_k - x;
           }
-          int var6 = param0 + param1 * this.field_f;
-          int var7 = param3 >>> 24;
-          if (param4 != 0 && (param4 != 1 ||
+          int var6 = x + y * this.field_f;
+          int var7 = argb >>> 24;
+          if (blendMode != 0 && (blendMode != 1 ||
             var7 != 255)) {
-            if (param4 == 1) {
-              param3 = ((param3 & 16711935) * var7 >> 8 & 16711935) + ((param3 & 65280) * var7 >> 8 & 65280) + (var7 << 24);
+            if (blendMode == 1) {
+              argb = ((argb & 16711935) * var7 >> 8 & 16711935) + ((argb & 65280) * var7 >> 8 & 65280) + (var7 << 24);
               int var8 = 256 - var7;
-              for (int var9 = 0; var9 < param2; var9++) {
+              for (int var9 = 0; var9 < length; var9++) {
                 int var10 = this.field_E[var6 + var9];
                 var10 = ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
-                this.field_E[var6 + var9] = param3 + var10;
+                this.field_E[var6 + var9] = argb + var10;
               }
               return;
             }
-            if (param4 != 2) {
+            if (blendMode != 2) {
               throw new IllegalArgumentException();
             }
-            for (int var8Lifetime2 = 0; var8Lifetime2 < param2; var8Lifetime2++) {
+            for (int var8Lifetime2 = 0; var8Lifetime2 < length; var8Lifetime2++) {
               int var9Lifetime1 = this.field_E[var6 + var8Lifetime2];
-              int var10Lifetime1 = param3 + var9Lifetime1;
-              int var11 = (param3 & 16711935) + (var9Lifetime1 & 16711935);
+              int var10Lifetime1 = argb + var9Lifetime1;
+              int var11 = (argb & 16711935) + (var9Lifetime1 & 16711935);
               int var9Lifetime1Lifetime1 = (var11 & 16777472) + (var10Lifetime1 - var11 & 65536);
               this.field_E[var6 + var8Lifetime2] = var10Lifetime1 - var9Lifetime1Lifetime1 | var9Lifetime1Lifetime1 - (var9Lifetime1Lifetime1 >>> 8);
             }
             return;
           }
-          for (int var8Lifetime1 = 0; var8Lifetime1 < param2; var8Lifetime1++) {
-            this.field_E[var6 + var8Lifetime1] = param3;
+          for (int var8Lifetime1 = 0; var8Lifetime1 < length; var8Lifetime1++) {
+            this.field_E[var6 + var8Lifetime1] = argb;
           }
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.U(param0, param1, param2, param4, param5);
-        this.U(param0, param1 + param3 - 1, param2, param4, param5);
-        this.b(param0, param1 + 1, param3 - 2, param4, param5);
-        this.b(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+    final void drawRectOutline(int x, int y, int width, int height, int argb, int blendMode) {
+        this.drawHorizontalLine(x, y, width, argb, blendMode);
+        this.drawHorizontalLine(x, y + height - 1, width, argb, blendMode);
+        this.b(x, y + 1, height - 2, argb, blendMode);
+        this.b(x + width - 1, y + 1, height - 2, argb, blendMode);
     }
 
     final gd a(int param0, int param1) {
@@ -692,16 +692,16 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         }
     }
 
-    final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final RenderSprite createArgbSprite(int[] pixels, int offset, int stride, int width, int height, boolean param5) {
         boolean var7 = false;
-        int var8 = param1;
+        int var8 = offset;
         int var9 = 0;
         scanLoop1: while (true) {
-          if (var9 < param4) {
-            for (int var10 = 0; var10 < param3; var10++) {
+          if (var9 < height) {
+            for (int var10 = 0; var10 < width; var10++) {
               int incrementValue$4 = var8;
               var8++;
-              int var11 = param0[incrementValue$4] >>> 24;
+              int var11 = pixels[incrementValue$4] >>> 24;
               if (var11 != 0 &&
                 var11 != 255) {
                 var7 = true;
@@ -714,9 +714,9 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
           break;
         }
         if (!var7) {
-          return (RenderSprite) ((Object) new BinaryAlphaJavaSoftwareSprite(this, param0, param1, param2, param3, param4, param5));
+          return (RenderSprite) ((Object) new BinaryAlphaJavaSoftwareSprite(this, pixels, offset, stride, width, height, param5));
         }
-        return (RenderSprite) ((Object) new AlphaBlendedJavaSoftwareSprite(this, param0, param1, param2, param3, param4, param5));
+        return (RenderSprite) ((Object) new AlphaBlendedJavaSoftwareSprite(this, pixels, offset, stride, width, height, param5));
     }
 
     final void a() {
@@ -748,18 +748,18 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         this.field_e[param0].a((Runnable) ((Object) Thread.currentThread()), 6);
     }
 
-    final void T(int param0, int param1, int param2, int param3) {
-        if (this.field_z < param0) {
-          this.field_z = param0;
+    final void intersectClip(int left, int top, int right, int bottom) {
+        if (this.field_z < left) {
+          this.field_z = left;
         }
-        if (this.field_w < param1) {
-          this.field_w = param1;
+        if (this.field_w < top) {
+          this.field_w = top;
         }
-        if (this.field_k > param2) {
-          this.field_k = param2;
+        if (this.field_k > right) {
+          this.field_k = right;
         }
-        if (this.field_D > param3) {
-          this.field_D = param3;
+        if (this.field_D > bottom) {
+          this.field_D = bottom;
         }
         this.f();
     }
@@ -834,11 +834,11 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         return this.field_y;
     }
 
-    final void K(int[] param0) {
-        param0[0] = this.field_z;
-        param0[1] = this.field_w;
-        param0[2] = this.field_k;
-        param0[3] = this.field_D;
+    final void getClip(int[] bounds) {
+        bounds[0] = this.field_z;
+        bounds[1] = this.field_w;
+        bounds[2] = this.field_k;
+        bounds[3] = this.field_D;
     }
 
     final void c() {

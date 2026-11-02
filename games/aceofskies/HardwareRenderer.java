@@ -124,22 +124,22 @@ abstract class HardwareRenderer extends GraphicsRenderer {
     private po field_k;
     boolean field_Cb;
 
-    final void T(int param0, int param1, int param2, int param3) {
+    final void intersectClip(int left, int top, int right, int bottom) {
         boolean var5 = false;
-        if (param0 > this.field_R) {
-          this.field_R = param0;
+        if (left > this.field_R) {
+          this.field_R = left;
           var5 = true;
         }
-        if (this.field_gc > param2) {
+        if (this.field_gc > right) {
           var5 = true;
-          this.field_gc = param2;
+          this.field_gc = right;
         }
-        if (param1 > this.field_Nb) {
-          this.field_Nb = param1;
+        if (top > this.field_Nb) {
+          this.field_Nb = top;
           var5 = true;
         }
-        if (this.field_V > param3) {
-          this.field_V = param3;
+        if (this.field_V > bottom) {
+          this.field_V = bottom;
           var5 = true;
         }
         if (var5) {
@@ -189,8 +189,8 @@ abstract class HardwareRenderer extends GraphicsRenderer {
 
     abstract HardwareIndexBuffer c(boolean param0, int param1);
 
-    final void U(int param0, int param1, int param2, int param3, int param4) {
-        this.c(param0, param1, param2 + param0, param1, param3, param4);
+    final void drawHorizontalLine(int x, int y, int length, int argb, int blendMode) {
+        this.drawLine(x, y, length + x, y, argb, blendMode);
     }
 
     abstract void N(int param0);
@@ -322,15 +322,15 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRectOutline(int x, int y, int width, int height, int argb, int blendMode) {
         float var7 = this.o((byte) 42);
         this.F(103);
-        this.a((byte) -74, param4);
+        this.a((byte) -74, argb);
         this.a((byte) 122, 0, GameKeyHandler.field_a);
         this.a(GameKeyHandler.field_a, 0, 0);
-        this.e(true, param5);
-        this.field_ec.b((float)(param3 - 1), (float)(param2 - 1), 1.0f, -125);
-        this.field_ec.b(-var7 + (float)param1, (byte) -125, 0.0f, -var7 + (float)param0);
+        this.e(true, blendMode);
+        this.field_ec.b((float)(height - 1), (float)(width - 1), 1.0f, -125);
+        this.field_ec.b(-var7 + (float)y, (byte) -125, 0.0f, -var7 + (float)x);
         this.q((byte) 127);
         this.b((byte) -120, false);
         this.a(bm.field_x, (byte) 127, 4);
@@ -359,7 +359,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
           this.field_Yb = this.field_Yb & -32;
         }
         if (param1) {
-          this.U(78, 60, 115, 111, 3);
+          this.drawHorizontalLine(78, 60, 115, 111, 3);
         }
     }
 
@@ -369,7 +369,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
           this.T(0);
         }
         if (param1 != -26973) {
-          this.c(127, -1, -89, 21, -67, 63);
+          this.drawLine(127, -1, -89, 21, -67, 63);
         }
     }
 
@@ -1038,14 +1038,14 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         return this.field_tb;
     }
 
-    final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void fillRect(int x, int y, int width, int height, int argb, int blendMode) {
         this.F(86);
-        this.a((byte) -74, param4);
+        this.a((byte) -74, argb);
         this.a((byte) 121, 0, GameKeyHandler.field_a);
         this.a(GameKeyHandler.field_a, 0, 0);
-        this.e(true, param5);
-        this.field_ec.b((float)param3, (float)param2, 1.0f, -84);
-        this.field_ec.a(param1, param0, 0, 125);
+        this.e(true, blendMode);
+        this.field_ec.b((float)height, (float)width, 1.0f, -84);
+        this.field_ec.a(y, x, 0, 125);
         this.q((byte) 110);
         this.b((byte) -126, false);
         this.s(2);
@@ -1271,22 +1271,22 @@ abstract class HardwareRenderer extends GraphicsRenderer {
 
     abstract void a(int param0, java.awt.Canvas param1, Object param2);
 
-    final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final RenderSprite createArgbSprite(int[] pixels, int offset, int stride, int width, int height, boolean param5) {
         String stackIn_5_2 = null;
         try {
-          HardwareRenderSprite stackIn_1_0 = new HardwareRenderSprite(this, param3, param4, param0, param1, param2);
+          HardwareRenderSprite stackIn_1_0 = new HardwareRenderSprite(this, width, height, pixels, offset, stride);
           return (RenderSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var7 = decompiledCaughtException;
           RuntimeException stackIn_4_0 = var7;
           StringBuilder stackIn_4_1 = new StringBuilder().append("bf.O(");
-          if (param0 == null) {
+          if (pixels == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(offset).append(',').append(stride).append(',').append(width).append(',').append(height).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1530,24 +1530,24 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         }
     }
 
-    final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
+    final RendererBitmapFont createFont(BitmapFontMetrics metrics, SpriteData[] glyphSprites, boolean param2) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
-          ig stackIn_1_0 = new ig(this, param0, param1, param2);
+          ig stackIn_1_0 = new ig(this, metrics, glyphSprites, param2);
           return (RendererBitmapFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_4_0 = var4;
           StringBuilder stackIn_4_1 = new StringBuilder().append("bf.E(");
-          if (param0 == null) {
+          if (metrics == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (glyphSprites == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -1562,14 +1562,14 @@ abstract class HardwareRenderer extends GraphicsRenderer {
 
     abstract void a(int param0, HardwareVertexBuffer param1, int param2);
 
-    final void K(int[] param0) {
+    final void getClip(int[] bounds) {
         try {
-          param0[1] = this.field_Nb;
-          param0[3] = this.field_V;
-          param0[0] = this.field_R;
-          param0[2] = this.field_gc;
+          bounds[1] = this.field_Nb;
+          bounds[3] = this.field_V;
+          bounds[0] = this.field_R;
+          bounds[2] = this.field_gc;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "bf.K(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "bf.K(" + (bounds != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1798,9 +1798,9 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7 = (float)(-param0) + (float)param2;
-        float var8 = (float)param3 - (float)param1;
+    final void drawLine(int x1, int y1, int x2, int y2, int argb, int blendMode) {
+        float var7 = (float)(-x1) + (float)x2;
+        float var8 = (float)y2 - (float)y1;
         if (var7 == 0.0f &&
           0.0f == var8) {
           var7 = 1.0f;
@@ -1809,14 +1809,14 @@ abstract class HardwareRenderer extends GraphicsRenderer {
           var7 = var7 * var9;
           var8 = var8 * var9;
         }
-        if (!this.a(var8 + (float)param3, (float)param0, (float)param1, 0.0f, (byte) 47, 0.0f, var7 + (float)param2)) {
+        if (!this.a(var8 + (float)y2, (float)x1, (float)y1, 0.0f, (byte) 47, 0.0f, var7 + (float)x2)) {
           return;
         }
         this.F(84);
-        this.a((byte) -74, param4);
+        this.a((byte) -74, argb);
         this.a((byte) 124, 0, GameKeyHandler.field_a);
         this.a(GameKeyHandler.field_a, 0, 0);
-        this.e(true, param5);
+        this.e(true, blendMode);
         this.a((byte) 120);
         this.b((byte) -117, false);
         this.D(0);
@@ -1855,7 +1855,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
 
     private final void d(byte param0) {
         if (param0 < 25) {
-          this.KA(-57, 60, -65, 127);
+          this.setClip(-57, 60, -65, 127);
         }
         if (!this.field_hb) {
           float[] var9 = this.field_U;
@@ -1935,18 +1935,18 @@ abstract class HardwareRenderer extends GraphicsRenderer {
 
     abstract void I(int param0);
 
-    final void KA(int param0, int param1, int param2, int param3) {
-        if (param0 <= 0 &&
-          param2 >= -1 + this.field_Z &&
-          0 >= param1 &&
-          this.field_jb - 1 <= param3) {
+    final void setClip(int left, int top, int right, int bottom) {
+        if (left <= 0 &&
+          right >= -1 + this.field_Z &&
+          0 >= top &&
+          this.field_jb - 1 <= bottom) {
           this.U(0);
           return;
         }
-        this.field_Nb = param1 < 0 ? 0 : param1;
-        this.field_R = param0 >= 0 ? param0 : 0;
-        this.field_V = this.field_Z >= param3 ? param3 : 0;
-        this.field_gc = param2 <= this.field_Z ? param2 : 0;
+        this.field_Nb = top < 0 ? 0 : top;
+        this.field_R = left >= 0 ? left : 0;
+        this.field_V = this.field_Z >= bottom ? bottom : 0;
+        this.field_gc = right <= this.field_Z ? right : 0;
         if (!this.field_Cb) {
           this.field_Cb = true;
           this.r(0);

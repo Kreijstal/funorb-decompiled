@@ -6,17 +6,17 @@ final class NativeSoftwareRenderSprite extends RenderSprite implements e {
 
     private final native void b(long param0, float param1, float param2, float param3, float param4, float param5, float param6, int param7, int param8, int param9, int param10);
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        this.RA(this.field_nativeid, param0, param1, param2, param3, param4, param5, param6, param7);
+    final void drawScaled(int x, int y, int destinationWidth, int destinationHeight, int param4, int param5, int param6, int param7) {
+        this.RA(this.field_nativeid, x, y, destinationWidth, destinationHeight, param4, param5, param6, param7);
     }
 
     private final native int M(long param0);
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        this.W(this.field_nativeid, param0, param1, param2, param3, param4);
+    final void drawBlended(int x, int y, int blendMode, int argb, int param4) {
+        this.W(this.field_nativeid, x, y, blendMode, argb, param4);
     }
 
-    final int c() {
+    final int getFullHeight() {
         return this.JA(this.field_nativeid);
     }
 
@@ -44,11 +44,11 @@ final class NativeSoftwareRenderSprite extends RenderSprite implements e {
         this.b(this.field_nativeid, param0, param1, param2, param3, param4, param5, param6, param7, param8, param9);
     }
 
-    final int a() {
+    final int getWidth() {
         return this.M(this.field_nativeid);
     }
 
-    final int d() {
+    final int getFullWidth() {
         return this.wa(this.field_nativeid);
     }
 
@@ -62,7 +62,7 @@ final class NativeSoftwareRenderSprite extends RenderSprite implements e {
 
     private final native int wa(long param0);
 
-    final int b() {
+    final int getHeight() {
         return this.I(this.field_nativeid);
     }
 

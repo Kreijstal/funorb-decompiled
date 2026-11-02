@@ -128,9 +128,9 @@ final class ScoreSubmission extends IntrusiveNode {
           }
           mp.titleImage = var6.createSprite(BoundedRandomAccessFile.titleImageData, false);
           dc.bulletSprite = var6.createSprite(RendererManager.bulletSpriteData, false);
-          se.bigGameFont = var6.a(kn.bigFontMetrics, q.bigFontSpriteData, true);
-          kn.titleFont = var6.a(ImageProducerRasterBuffer.titleFontMetrics, nc.titleFontSpriteData, true);
-          PacketBuffer.gameFont = var6.a(hi.gameFontMetrics, CipherPacketBuffer.fontSpriteData, true);
+          se.bigGameFont = var6.createFont(kn.bigFontMetrics, q.bigFontSpriteData, true);
+          kn.titleFont = var6.createFont(ImageProducerRasterBuffer.titleFontMetrics, nc.titleFontSpriteData, true);
+          PacketBuffer.gameFont = var6.createFont(hi.gameFontMetrics, CipherPacketBuffer.fontSpriteData, true);
           for (int var2Lifetime20 = 0; BufferElementType.achievementSpriteData.length > var2Lifetime20; var2Lifetime20++) {
             aa.achievementSprites[var2Lifetime20] = var6.createSprite(BufferElementType.achievementSpriteData[var2Lifetime20], false);
           }

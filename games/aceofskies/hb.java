@@ -246,23 +246,23 @@ final class hb {
             if (null == param9[3]) {
               stackIn_16_0 = 0;
             } else {
-              stackIn_16_0 = param9[3].d();
+              stackIn_16_0 = param9[3].getFullWidth();
             }
             int var11 = stackIn_16_0;
             if (param9[5] == null) {
               stackIn_20_0 = 0;
             } else {
-              stackIn_20_0 = param9[5].d();
+              stackIn_20_0 = param9[5].getFullWidth();
             }
             int var12 = stackIn_20_0;
             if (null == param9[1]) {
               stackIn_24_0 = 0;
             } else {
-              stackIn_24_0 = param9[1].c();
+              stackIn_24_0 = param9[1].getFullHeight();
             }
             int var13 = stackIn_24_0;
             if (param9[7] != null) {
-              stackIn_28_0 = param9[7].c();
+              stackIn_28_0 = param9[7].getFullHeight();
             } else {
               stackIn_28_0 = 0;
             }
@@ -288,32 +288,32 @@ final class hb {
             }
             if (null != param9[0]) {
               var10.a(var22, param2, var24, param0, 77);
-              param9[0].a(param2, param0, param3, param1, param4);
+              param9[0].drawBlended(param2, param0, param3, param1, param4);
               var10.a(true);
             }
             if (null != param9[2]) {
               var10.a(var15, var23, var24, param0, 84);
-              param9[2].a(var18, param0, param3, param1, param4);
+              param9[2].drawBlended(var18, param0, param3, param1, param4);
               var10.a(true);
             }
             if (param9[6] != null) {
               var10.a(var22, param2, var16, var25, -99);
-              param9[6].a(param2, var20, param3, param1, param4);
+              param9[6].drawBlended(param2, var20, param3, param1, param4);
               var10.a(true);
             }
             if (null != param9[8]) {
               var10.a(var15, var23, var16, var25, 118);
-              param9[8].a(var18, var20, param3, param1, param4);
+              param9[8].drawBlended(var18, var20, param3, param1, param4);
               var10.a(true);
             }
             boolean decompiledFrameCompleted3 = true;
             if (null != param9[1] &&
-              param9[1].d() != 0) {
+              param9[1].getFullWidth() != 0) {
               var10.a(var23, var22, var24, param0, 76);
               int var26 = var17;
               while (var18 > var26) {
-                param9[1].a(var26, param0, param3, param1, param4);
-                var26 = var26 + param9[1].d();
+                param9[1].drawBlended(var26, param0, param3, param1, param4);
+                var26 = var26 + param9[1].getFullWidth();
                 if (var28) {
                   decompiledFrameCompleted3 = false;
                   break;
@@ -325,12 +325,12 @@ final class hb {
             }
             boolean decompiledFrameCompleted2 = true;
             if (null != param9[7] &&
-              param9[7].d() != 0) {
+              param9[7].getFullWidth() != 0) {
               var10.a(var23, var22, var16, var25, 121);
               int var26Lifetime1 = var17;
               while (var18 > var26Lifetime1) {
-                param9[7].a(var26Lifetime1, var20, param3, param1, param4);
-                var26Lifetime1 = var26Lifetime1 + param9[7].d();
+                param9[7].drawBlended(var26Lifetime1, var20, param3, param1, param4);
+                var26Lifetime1 = var26Lifetime1 + param9[7].getFullWidth();
                 if (var28) {
                   decompiledFrameCompleted2 = false;
                   break;
@@ -342,12 +342,12 @@ final class hb {
             }
             boolean decompiledFrameCompleted1 = true;
             if (param9[3] != null &&
-              0 != param9[3].c()) {
+              0 != param9[3].getFullHeight()) {
               var10.a(var22, param2, var25, var24, -112);
               int var26Lifetime2 = var19;
               while (var26Lifetime2 < var20) {
-                param9[3].a(param2, var26Lifetime2, param3, param1, param4);
-                var26Lifetime2 = var26Lifetime2 + param9[3].c();
+                param9[3].drawBlended(param2, var26Lifetime2, param3, param1, param4);
+                var26Lifetime2 = var26Lifetime2 + param9[3].getFullHeight();
                 if (var28) {
                   decompiledFrameCompleted1 = false;
                   break;
@@ -359,12 +359,12 @@ final class hb {
             }
             boolean decompiledFrameCompleted0 = true;
             if (null != param9[5] &&
-              param9[5].c() != 0) {
+              param9[5].getFullHeight() != 0) {
               var10.a(var15, var23, var25, var24, 100);
               int var26Lifetime3 = var19;
               while (var20 > var26Lifetime3) {
-                param9[5].a(var18, var26Lifetime3, param3, param1, param4);
-                var26Lifetime3 = var26Lifetime3 + param9[5].c();
+                param9[5].drawBlended(var18, var26Lifetime3, param3, param1, param4);
+                var26Lifetime3 = var26Lifetime3 + param9[5].getFullHeight();
                 if (var28) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -375,8 +375,8 @@ final class hb {
               }
             }
             if (param9[4] != null &&
-              0 != param9[4].d() &&
-              param9[4].c() != 0) {
+              0 != param9[4].getFullWidth() &&
+              param9[4].getFullHeight() != 0) {
               var10.a(var23, var22, var25, var24, 93);
               int var26Lifetime4 = var19;
               while (var26Lifetime4 < var20) {
@@ -385,10 +385,10 @@ final class hb {
                 }
                 int var27 = var17;
                 while (var27 < var18) {
-                  param9[4].a(var27, var26Lifetime4, param3, param1, param4);
-                  var27 = var27 + param9[4].d();
+                  param9[4].drawBlended(var27, var26Lifetime4, param3, param1, param4);
+                  var27 = var27 + param9[4].getFullWidth();
                 }
-                var26Lifetime4 = var26Lifetime4 + param9[4].c();
+                var26Lifetime4 = var26Lifetime4 + param9[4].getFullHeight();
               }
               var10.a(true);
               return;

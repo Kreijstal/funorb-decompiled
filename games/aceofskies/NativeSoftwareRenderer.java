@@ -17,7 +17,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
 
     private final native void P(int param0, int param1, int param2, int param3, int param4);
 
-    final native void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
+    final native void copyPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride);
 
     private final native void MA(d param0, int param1, int param2);
 
@@ -59,8 +59,8 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
         this.n(((NativeSoftwareRenderSprite) (param0)).field_nativeid, 0L);
     }
 
-    final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.wa(param0, param1, param2, param3, param4, param5);
+    final void drawLine(int x1, int y1, int x2, int y2, int argb, int blendMode) {
+        this.wa(x1, y1, x2, y2, argb, blendMode);
     }
 
     private final void f(int param0) {
@@ -100,7 +100,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
         this.field_j = true;
     }
 
-    final native void K(int[] param0);
+    final native void getClip(int[] bounds);
 
     private final native void CA(short param0, int[] param1, short param2, int param3, byte param4, byte param5, int param6, boolean param7, byte param8, byte param9, byte param10, byte param11, boolean param12, boolean param13, boolean param14, boolean param15, boolean param16, byte param17, boolean param18, boolean param19, int param20);
 
@@ -183,8 +183,8 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
 
     public final native void w(boolean param0);
 
-    final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        return (RenderSprite) ((Object) new NativeSoftwareRenderSprite(this, param0, param1, param2, param3, param4, false));
+    final RenderSprite createArgbSprite(int[] pixels, int offset, int stride, int width, int height, boolean param5) {
+        return (RenderSprite) ((Object) new NativeSoftwareRenderSprite(this, pixels, offset, stride, width, height, false));
     }
 
     private final void a(java.awt.Canvas param0) {
@@ -200,7 +200,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
 
     private final native void va(za param0);
 
-    final native void KA(int param0, int param1, int param2, int param3);
+    final native void setClip(int left, int top, int right, int bottom);
 
     private final void g(int param0) {
         this.field_n = param0;
@@ -210,7 +210,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
         }
     }
 
-    final native void aa(int param0, int param1, int param2, int param3, int param4, int param5);
+    final native void fillRect(int x, int y, int width, int height, int argb, int blendMode);
 
     private final native void d(int param0);
 
@@ -255,41 +255,41 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
         return false;
     }
 
-    final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
-        int[] var4 = new int[param1.length];
-        int[] var5 = new int[param1.length];
+    final RendererBitmapFont createFont(BitmapFontMetrics metrics, SpriteData[] glyphSprites, boolean param2) {
+        int[] var4 = new int[glyphSprites.length];
+        int[] var5 = new int[glyphSprites.length];
         boolean var6 = false;
-        for (int var7 = 0; var7 < param1.length; var7++) {
-          var4[var7] = param1[var7].width;
-          var5[var7] = param1[var7].height;
-          if (param1[var7].alpha != null) {
+        for (int var7 = 0; var7 < glyphSprites.length; var7++) {
+          var4[var7] = glyphSprites[var7].width;
+          var5[var7] = glyphSprites[var7].height;
+          if (glyphSprites[var7].alpha != null) {
             var6 = true;
           }
         }
         if (!param2) {
           if (!var6) {
-            return (RendererBitmapFont) ((Object) new n(this, this.field_i, param0, param1, (RenderSprite[]) null));
+            return (RendererBitmapFont) ((Object) new n(this, this.field_i, metrics, glyphSprites, (RenderSprite[]) null));
           }
           throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
         }
         if (!var6) {
-          return (RendererBitmapFont) ((Object) new h(this, this.field_i, param0, param1, (RenderSprite[]) null));
+          return (RendererBitmapFont) ((Object) new h(this, this.field_i, metrics, glyphSprites, (RenderSprite[]) null));
         }
         throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
     }
 
-    final native void T(int param0, int param1, int param2, int param3);
+    final native void intersectClip(int left, int top, int right, int bottom);
 
     final void a(za param0) {
         this.field_i = (ya) (param0);
         this.va(param0);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.U(param0, param1, param2, param4, param5);
-        this.U(param0, param1 + param3 - 1, param2, param4, param5);
-        this.P(param0, param1 + 1, param3 - 1, param4, param5);
-        this.P(param0 + param2 - 1, param1 + 1, param3 - 1, param4, param5);
+    final void drawRectOutline(int x, int y, int width, int height, int argb, int blendMode) {
+        this.drawHorizontalLine(x, y, width, argb, blendMode);
+        this.drawHorizontalLine(x, y + height - 1, width, argb, blendMode);
+        this.P(x, y + 1, height - 1, argb, blendMode);
+        this.P(x + width - 1, y + 1, height - 1, argb, blendMode);
     }
 
     private final void g() {
@@ -304,7 +304,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
 
     private final native void ma(long param0);
 
-    final native void U(int param0, int param1, int param2, int param3, int param4);
+    final native void drawHorizontalLine(int x, int y, int length, int argb, int blendMode);
 
     private final native void wa(int param0, int param1, int param2, int param3, int param4, int param5);
 

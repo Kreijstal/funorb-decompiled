@@ -525,22 +525,22 @@ final class OpenGlRenderer extends GraphicsRenderer {
         this.field_Bc = true;
     }
 
-    final void K(int[] param0) {
+    final void getClip(int[] bounds) {
         try {
-          param0[3] = this.field_Q;
-          param0[0] = this.field_L;
-          param0[2] = this.field_d;
-          param0[1] = this.field_e;
+          bounds[3] = this.field_Q;
+          bounds[0] = this.field_L;
+          bounds[2] = this.field_d;
+          bounds[1] = this.field_e;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "wl.K(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "wl.K(" + (bounds != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int x1, int y1, int x2, int y2, int argb, int blendMode) {
         this.j(1);
-        this.b((byte) -122, param5);
-        float var7 = (float)param2 - (float)param0;
-        float var8 = (float)param3 - (float)param1;
+        this.b((byte) -122, blendMode);
+        float var7 = (float)x2 - (float)x1;
+        float var8 = (float)y2 - (float)y1;
         if (0.0f == var7 &&
           0.0f == var8) {
           var7 = 1.0f;
@@ -549,10 +549,10 @@ final class OpenGlRenderer extends GraphicsRenderer {
           var8 = var8 * var9;
           var7 = var7 * var9;
         }
-        jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
+        jaggl.OpenGL.glColor4ub((byte)(argb >> 16), (byte)(argb >> 8), (byte)argb, (byte)(argb >> 24));
         jaggl.OpenGL.glBegin(1);
-        jaggl.OpenGL.glVertex2f(0.3499999940395355f + (float)param0, (float)param1 + 0.3499999940395355f);
-        jaggl.OpenGL.glVertex2f(var7 + (float)param2 + 0.3499999940395355f, 0.3499999940395355f + (var8 + (float)param3));
+        jaggl.OpenGL.glVertex2f(0.3499999940395355f + (float)x1, (float)y1 + 0.3499999940395355f);
+        jaggl.OpenGL.glVertex2f(var7 + (float)x2 + 0.3499999940395355f, 0.3499999940395355f + (var8 + (float)y2));
         jaggl.OpenGL.glEnd();
     }
 
@@ -563,23 +563,23 @@ final class OpenGlRenderer extends GraphicsRenderer {
         this.field_Ac.addLast(80, var4);
     }
 
-    final void KA(int param0, int param1, int param2, int param3) {
-        if (param0 < 0) {
-          param0 = 0;
+    final void setClip(int left, int top, int right, int bottom) {
+        if (left < 0) {
+          left = 0;
         }
-        if (this.field_bb < param3) {
-          param3 = this.field_bb;
+        if (this.field_bb < bottom) {
+          bottom = this.field_bb;
         }
-        if (param2 > this.field_ec) {
-          param2 = this.field_ec;
+        if (right > this.field_ec) {
+          right = this.field_ec;
         }
-        if (param1 < 0) {
-          param1 = 0;
+        if (top < 0) {
+          top = 0;
         }
-        this.field_e = param1;
-        this.field_Q = param3;
-        this.field_d = param2;
-        this.field_L = param0;
+        this.field_e = top;
+        this.field_Q = bottom;
+        this.field_d = right;
+        this.field_L = left;
         jaggl.OpenGL.glEnable(3089);
         this.m(5149);
         this.v(0);
@@ -615,15 +615,15 @@ final class OpenGlRenderer extends GraphicsRenderer {
         this.field_kc.a();
     }
 
-    final void U(int param0, int param1, int param2, int param3, int param4) {
+    final void drawHorizontalLine(int x, int y, int length, int argb, int blendMode) {
         this.j(1);
-        this.b((byte) 35, param4);
-        float var6 = 0.3499999940395355f + (float)param0;
-        jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
-        float var7 = 0.3499999940395355f + (float)param1;
+        this.b((byte) 35, blendMode);
+        float var6 = 0.3499999940395355f + (float)x;
+        jaggl.OpenGL.glColor4ub((byte)(argb >> 16), (byte)(argb >> 8), (byte)argb, (byte)(argb >> 24));
+        float var7 = 0.3499999940395355f + (float)y;
         jaggl.OpenGL.glBegin(1);
         jaggl.OpenGL.glVertex2f(var6, var7);
-        jaggl.OpenGL.glVertex2f(var6 + (float)param2, var7);
+        jaggl.OpenGL.glVertex2f(var6 + (float)length, var7);
         jaggl.OpenGL.glEnd();
     }
 
@@ -949,18 +949,18 @@ final class OpenGlRenderer extends GraphicsRenderer {
         int var3Lifetime1 = 78 / ((param0 + 41) / 36);
     }
 
-    final void T(int param0, int param1, int param2, int param3) {
-        if (this.field_d > param2) {
-          this.field_d = param2;
+    final void intersectClip(int left, int top, int right, int bottom) {
+        if (this.field_d > right) {
+          this.field_d = right;
         }
-        if (this.field_Q > param3) {
-          this.field_Q = param3;
+        if (this.field_Q > bottom) {
+          this.field_Q = bottom;
         }
-        if (param1 > this.field_e) {
-          this.field_e = param1;
+        if (top > this.field_e) {
+          this.field_e = top;
         }
-        if (param0 > this.field_L) {
-          this.field_L = param0;
+        if (left > this.field_L) {
+          this.field_L = left;
         }
         jaggl.OpenGL.glEnable(3089);
         this.m(5149);
@@ -1430,14 +1430,14 @@ final class OpenGlRenderer extends GraphicsRenderer {
         this.field_zb.addLast(118, var3);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7 = 0.3499999940395355f + (float)param0;
-        float var8 = (float)param1 + 0.3499999940395355f;
-        float var9 = -1.0f + (var7 + (float)param2);
-        float var10 = -1.0f + (var8 + (float)param3);
+    final void drawRectOutline(int x, int y, int width, int height, int argb, int blendMode) {
+        float var7 = 0.3499999940395355f + (float)x;
+        float var8 = (float)y + 0.3499999940395355f;
+        float var9 = -1.0f + (var7 + (float)width);
+        float var10 = -1.0f + (var8 + (float)height);
         this.j(1);
-        this.b((byte) -124, param5);
-        jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
+        this.b((byte) -124, blendMode);
+        jaggl.OpenGL.glColor4ub((byte)(argb >> 16), (byte)(argb >> 8), (byte)argb, (byte)(argb >> 24));
         if (this.field_I) {
           jaggl.OpenGL.glDisable(32925);
         }
@@ -1539,14 +1539,14 @@ final class OpenGlRenderer extends GraphicsRenderer {
         return 2;
     }
 
-    final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7 = (float)param0 + 0.3499999940395355f;
-        float var8 = (float)param1 + 0.3499999940395355f;
-        float var9 = var7 + (float)param2;
+    final void fillRect(int x, int y, int width, int height, int argb, int blendMode) {
+        float var7 = (float)x + 0.3499999940395355f;
+        float var8 = (float)y + 0.3499999940395355f;
+        float var9 = var7 + (float)width;
         this.j(1);
-        float var10 = var8 + (float)param3;
-        this.b((byte) -118, param5);
-        jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
+        float var10 = var8 + (float)height;
+        this.b((byte) -118, blendMode);
+        jaggl.OpenGL.glColor4ub((byte)(argb >> 16), (byte)(argb >> 8), (byte)argb, (byte)(argb >> 24));
         if (this.field_I) {
           jaggl.OpenGL.glDisable(32925);
         }
@@ -1641,22 +1641,22 @@ final class OpenGlRenderer extends GraphicsRenderer {
         }
     }
 
-    final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final RenderSprite createArgbSprite(int[] pixels, int offset, int stride, int width, int height, boolean param5) {
         String stackIn_5_2 = null;
         try {
-          OpenGlRenderSprite stackIn_1_0 = new OpenGlRenderSprite(this, param3, param4, param0, param1, param2);
+          OpenGlRenderSprite stackIn_1_0 = new OpenGlRenderSprite(this, width, height, pixels, offset, stride);
           return (RenderSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var7 = decompiledCaughtException;
           RuntimeException stackIn_4_0 = var7;
           StringBuilder stackIn_4_1 = new StringBuilder().append("wl.O(");
-          if (param0 == null) {
+          if (pixels == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(offset).append(',').append(stride).append(',').append(width).append(',').append(height).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1942,7 +1942,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           jaggl.OpenGL.glFlush();
           jaggl.OpenGL.glReadBuffer(1029);
           jaggl.OpenGL.glDrawBuffer(1029);
-          this.KA(var1, var3, var2, var4);
+          this.setClip(var1, var3, var2, var4);
           return;
         }
     }
@@ -1962,9 +1962,9 @@ final class OpenGlRenderer extends GraphicsRenderer {
             }
             this.a(this.field_y, 32925);
             if (param1) {
-              OpenGlRenderbuffer var3 = (OpenGlRenderbuffer) (this.field_s.findByKey((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
+              OpenGlRenderbuffer var3 = (OpenGlRenderbuffer) (this.field_s.findByKey((byte) 106, (long)(this.field_j.getWidth() << 16 | this.field_j.getHeight())));
               if (var3 == null) {
-                OpenGlRenderbuffer var9 = new OpenGlRenderbuffer(this, 6402, this.field_j.a(), this.field_j.b());
+                OpenGlRenderbuffer var9 = new OpenGlRenderbuffer(this, 6402, this.field_j.getWidth(), this.field_j.getHeight());
                 var3 = var9;
                 this.field_rb = this.field_rb + var9.field_o;
                 while (this.field_rb > 2097152) {
@@ -1979,7 +1979,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
                   }
                   break;
                 }
-                this.field_s.put(106, (long)(this.field_j.a() << 16 | this.field_j.b()), var9);
+                this.field_s.put(106, (long)(this.field_j.getWidth() << 16 | this.field_j.getHeight()), var9);
               }
               this.field_Ec.a(var3, (byte) 123);
               this.field_y.a(var3, 8, (byte) 119);
@@ -1989,9 +1989,9 @@ final class OpenGlRenderer extends GraphicsRenderer {
             if (!this.field_Mb) {
               throw new RuntimeException("");
             }
-            gt var3_ref = (gt) (this.field_s.findByKey((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
+            gt var3_ref = (gt) (this.field_s.findByKey((byte) 106, (long)(this.field_j.getWidth() << 16 | this.field_j.getHeight())));
             if (var3_ref == null) {
-              gt var7 = new gt(this, this.field_j.a(), this.field_j.b());
+              gt var7 = new gt(this, this.field_j.getWidth(), this.field_j.getHeight());
               var3_ref = var7;
               this.field_rb = this.field_rb + var7.field_n * 4;
               while (this.field_rb > 2097152) {
@@ -2006,13 +2006,13 @@ final class OpenGlRenderer extends GraphicsRenderer {
                 }
                 break;
               }
-              this.field_s.put(115, (long)(this.field_j.a() << 16 | this.field_j.b()), var7);
+              this.field_s.put(115, (long)(this.field_j.getWidth() << 16 | this.field_j.getHeight()), var7);
             }
             this.field_Ec.a(var3_ref, (byte) 125);
             this.field_kc.setPbuffer(var3_ref.f(25766));
           }
-          this.field_ec = param0.a();
-          this.field_bb = param0.b();
+          this.field_ec = param0.getWidth();
+          this.field_bb = param0.getHeight();
           this.p(-123);
           this.o(0);
           this.l(24643);
@@ -2111,24 +2111,24 @@ final class OpenGlRenderer extends GraphicsRenderer {
     final void a(sm param0) {
     }
 
-    final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
+    final RendererBitmapFont createFont(BitmapFontMetrics metrics, SpriteData[] glyphSprites, boolean param2) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
-          mu stackIn_1_0 = new mu(this, param0, param1, param2);
+          mu stackIn_1_0 = new mu(this, metrics, glyphSprites, param2);
           return (RendererBitmapFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
           RuntimeException stackIn_4_0 = var4;
           StringBuilder stackIn_4_1 = new StringBuilder().append("wl.E(");
-          if (param0 == null) {
+          if (metrics == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (glyphSprites == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -2217,18 +2217,18 @@ final class OpenGlRenderer extends GraphicsRenderer {
         int var3 = -24 % ((param1 - 44) / 50);
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void copyPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride) {
         try {
           this.h(-59);
           this.a((rt) null, 1);
           this.b((byte) -118, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
-          jaggl.OpenGL.glRasterPos2i(param0, param1);
-          jaggl.OpenGL.glDrawPixelsi(param2, param3, 32993, this.field_tb, param4, param5);
+          jaggl.OpenGL.glRasterPos2i(x, y);
+          jaggl.OpenGL.glDrawPixelsi(width, height, 32993, this.field_tb, pixels, offset);
           jaggl.OpenGL.glRasterPos2i(0, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "wl.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "wl.SA(" + x + ',' + y + ',' + width + ',' + height + ',' + (pixels != null ? "{...}" : "null") + ',' + offset + ',' + stride + ')');
         }
     }
 

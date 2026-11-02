@@ -106,25 +106,25 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         this.field_Rc.SetScissorRect(this.field_Rb + this.field_R, this.field_Nb + this.field_Ib, this.field_gc, this.field_V);
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void copyPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride) {
         jagdx.IDirect3DSurface var12 = this.field_Rc.c(0);
-        jagdx.IDirect3DSurface var9 = this.field_Rc.a(param2, param3, 21, 0, 0, true);
-        if (jagdx.gf.a((byte) 93, var9.LockRect(0, 0, param2, param3, 0, this.field_Ec))) {
-          if (param6 == 0) {
-            param6 = param2;
+        jagdx.IDirect3DSurface var9 = this.field_Rc.a(width, height, 21, 0, 0, true);
+        if (jagdx.gf.a((byte) 93, var9.LockRect(0, 0, width, height, 0, this.field_Ec))) {
+          if (stride == 0) {
+            stride = width;
           }
           int var10 = this.field_Ec.getRowPitch();
-          if (param6 == param2 &&
-            var10 == 4 * param2) {
-            this.field_Ec.a(param4, param5, 0, param2 * param3);
+          if (stride == width &&
+            var10 == 4 * width) {
+            this.field_Ec.a(pixels, offset, 0, width * height);
           } else {
-            for (int var11 = 0; var11 < param3; var11++) {
-              this.field_Ec.a(param4, param6 * var11 + param5, var10 * var11, param2);
+            for (int var11 = 0; var11 < height; var11++) {
+              this.field_Ec.a(pixels, stride * var11 + offset, var10 * var11, width);
             }
           }
           var9.UnlockRect();
         }
-        this.field_Rc.StretchRect(var9, 0, 0, param2, param3, var12, param0, param1, param2, param3, 0);
+        this.field_Rc.StretchRect(var9, 0, 0, width, height, var12, x, y, width, height, 0);
         var9.a(1618);
         var12.a(1618);
     }

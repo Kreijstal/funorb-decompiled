@@ -955,7 +955,7 @@ public final class AceOfSkies extends NetworkGameClient {
               }
               if (decompiledSharedTail0) {
                 var9 = lb.field_a[var5.field_f];
-                aa.achievementSprites[var5.field_f].a(53 + (-180 + sh.field_u), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
+                aa.achievementSprites[var5.field_f].drawScaled(53 + (-180 + sh.field_u), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                 var8 += 65;
               }
               PacketBuffer.gameFont.drawParagraph(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
