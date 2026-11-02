@@ -17,49 +17,49 @@ final class no {
           int var2_int = 0;
           l var3 = null;
           int var8_int = 0;
-          ln[] var9_ref_ln__ = null;
+          Star[] var9_ref_ln__ = null;
           int var10_int = 0;
-          ln var13 = null;
+          Star var13 = null;
           int var14 = 0;
-          ln[] var15 = null;
-          ln var16 = null;
-          ln[] var17 = null;
+          Star[] var15 = null;
+          Star var16 = null;
+          Star[] var17 = null;
           Object var18 = null;
-          ln var18_ref = null;
-          ln var19 = null;
-          ln[] var20 = null;
-          ln var22 = null;
-          ln var26 = null;
+          Star var18_ref = null;
+          Star var19 = null;
+          Star[] var20 = null;
+          Star var22 = null;
+          Star var26 = null;
           Throwable decompiledCaughtException = null;
           RuntimeException var2 = null;
           jn var4 = null;
           Object var5 = null;
-          ln var8 = null;
+          Star var8 = null;
           int var9 = 0;
-          ln var10 = null;
-          ln[] var21 = null;
-          fs var23 = null;
-          sd var24 = null;
-          fs var25 = null;
-          sd var27 = null;
-          fs var28 = null;
-          ln var29 = null;
-          ln var30 = null;
-          ln var31 = null;
-          sd var32 = null;
-          ln var13Lifetime1;
-          ln var13Lifetime2;
-          ln var13Lifetime3;
-          ln var22Lifetime1;
-          ln var26Lifetime1;
-          ln var26Lifetime2;
-          ln var29Lifetime1;
-          ln var29Lifetime2;
-          ln var22Lifetime2;
-          ln var22Lifetime3;
-          ln var13Lifetime2Lifetime1;
-          ln var26Lifetime1Lifetime1;
-          ln var29Lifetime1Lifetime1;
+          Star var10 = null;
+          Star[] var21 = null;
+          Player var23 = null;
+          Territory var24 = null;
+          Player var25 = null;
+          Territory var27 = null;
+          Player var28 = null;
+          Star var29 = null;
+          Star var30 = null;
+          Star var31 = null;
+          Territory var32 = null;
+          Star var13Lifetime1;
+          Star var13Lifetime2;
+          Star var13Lifetime3;
+          Star var22Lifetime1;
+          Star var26Lifetime1;
+          Star var26Lifetime2;
+          Star var29Lifetime1;
+          Star var29Lifetime2;
+          Star var22Lifetime2;
+          Star var22Lifetime3;
+          Star var13Lifetime2Lifetime1;
+          Star var26Lifetime1Lifetime1;
+          Star var29Lifetime1Lifetime1;
           int var10_intLifetime1;
           int var10_intLifetime2;
           var18 = null;
@@ -101,7 +101,7 @@ final class no {
                 }
               }
               if (var8_int > 0) {
-                var9_ref_ln__ = new ln[var18_ref.field_D.length + var8_int];
+                var9_ref_ln__ = new Star[var18_ref.field_D.length + var8_int];
                 var8_int = 0;
                 for (var10_intLifetime1 = 0; var18_ref.field_D.length > var10_intLifetime1; var10_intLifetime1++) {
                   var9_ref_ln__[var10_intLifetime1] = var18_ref.field_D[var10_intLifetime1];
@@ -162,7 +162,7 @@ final class no {
             }
             var5 = null;
             if (kb.field_x == 5) {
-              var23 = new fs(1, hn.field_f[1], or.field_b[1], DualLinkNode.field_k[1], ho.field_e[1]);
+              var23 = new Player(1, hn.field_f[1], or.field_b[1], DualLinkNode.field_k[1], ho.field_e[1]);
               var5 = var23;
               var3.field_e[6].field_t = var23;
               var3.field_e[6].field_y = var23;
@@ -171,7 +171,7 @@ final class no {
               var23.field_m = new lo(var23, var3.field_e[7]);
               var23.field_m.a(-21771, var3.field_e[7]);
               var23.field_m.a(-21771, var3.field_e[6]);
-              var24 = new sd(var23, var3.field_e[7]);
+              var24 = new Territory(var23, var3.field_e[7]);
               var24.a(-21771, var3.field_e[7]);
               var24.a(-21771, var3.field_e[6]);
               var3.field_e[6].field_R = var24;
@@ -180,7 +180,7 @@ final class no {
               var23.field_q = new um(var3.field_e[7].field_x + var3.field_e[6].field_x);
             }
             if (6 == kb.field_x) {
-              var25 = new fs(2, hn.field_f[2], or.field_b[2], DualLinkNode.field_k[2], ho.field_e[2]);
+              var25 = new Player(2, hn.field_f[2], or.field_b[2], DualLinkNode.field_k[2], ho.field_e[2]);
               var5 = var25;
               var26Lifetime2 = var3.field_e[17];
               var29Lifetime1 = var26Lifetime2;
@@ -189,14 +189,14 @@ final class no {
               var26Lifetime2.field_t = var25;
               var25.field_m = new lo(var25, var26Lifetime2);
               var25.field_m.a(-21771, var26Lifetime2);
-              var27 = new sd(var25, var26Lifetime2);
+              var27 = new Territory(var25, var26Lifetime2);
               var27.a(-21771, var26Lifetime2);
               var26Lifetime2.field_R = var27;
               var25.field_i.a((byte) -113, var27);
               var25.field_q = new um(var26Lifetime2.field_x);
             }
             if (kb.field_x == 7) {
-              var28 = new fs(3, hn.field_f[3], or.field_b[3], DualLinkNode.field_k[3], ho.field_e[3]);
+              var28 = new Player(3, hn.field_f[3], or.field_b[3], DualLinkNode.field_k[3], ho.field_e[3]);
               var5 = var28;
               var29Lifetime2 = var3.field_e[37];
               var30 = var3.field_e[36];
@@ -219,7 +219,7 @@ final class no {
               var28.field_m.a(-21771, var8);
               var28.field_m.a(-21771, var31);
               var28.field_m.a(-21771, var10);
-              var32 = new sd(var28, var29Lifetime2);
+              var32 = new Territory(var28, var29Lifetime2);
               var32.a(-21771, var29Lifetime2);
               var32.a(-21771, var30);
               var32.a(-21771, var8);
@@ -234,10 +234,10 @@ final class no {
               var28.field_q = new um(var31.field_x + var8.field_x + (var30.field_x + var29Lifetime2.field_x) + var10.field_x);
             }
             if (var5 != null) {
-              oq.field_a.a(2, (fs) (var5));
+              oq.field_a.a(2, (Player) (var5));
               oq.field_a.field_z.a(-128, oq.field_a.field_P.field_v);
               oq.field_a.field_Y.a(oq.field_a.field_P.field_v, 1);
-              uq.field_m.a(re.a("<col=<%0>>" + ((fs) (var5)).field_t + "</col>", 4371, new String[]{Integer.toString(((fs) (var5)).field_s, 16)}), 27275, "player" + ((fs) (var5)).field_x);
+              uq.field_m.a(re.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);
             }
             qj.a(ol.field_g, -1);
             return;

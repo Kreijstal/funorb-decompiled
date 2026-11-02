@@ -6,7 +6,7 @@ final class og implements iq {
     static bg field_b;
     static String field_a;
 
-    final static uj a(int param0, mn param1, fs param2, dc param3, int param4) {
+    final static uj a(int param0, mn param1, Player param2, GameState param3, int param4) {
         RuntimeException var5 = null;
         cj stackIn_5_0 = null;
         sc stackIn_8_0 = null;
@@ -149,7 +149,7 @@ final class og implements iq {
         }
     }
 
-    final static void a(int param0, ln[] param1, int param2, int param3) {
+    final static void a(int param0, Star[] param1, int param2, int param3) {
         int var5 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_62_0 = null;

@@ -14,12 +14,12 @@ final class sh implements fo {
         l var4;
         int var5;
         vl var6;
-        ln[] var7;
-        ln var9;
+        Star[] var7;
+        Star var9;
         int var10;
         int var11;
         int var12;
-        ln var13;
+        Star var13;
         int var14;
         int var11Lifetime1;
         int var12Lifetime1;
@@ -65,7 +65,7 @@ final class sh implements fo {
         return var4;
     }
 
-    final static void a(sd param0, int param1) {
+    final static void a(Territory param0, int param1) {
         int[] var11 = null;
         int[] var9 = null;
         int[] var7 = null;

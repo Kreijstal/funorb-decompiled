@@ -36,7 +36,7 @@ final class tr extends ia {
     static String field_pb;
     static int field_Lb;
 
-    private final void c(ln param0, int param1) {
+    private final void c(Star param0, int param1) {
         if (param1 != 2) {
           return;
         }
@@ -53,52 +53,52 @@ final class tr extends ia {
     }
 
     private final void f(int param0) {
-        ln[] var2;
+        Star[] var2;
         int var2_int;
         int var3;
-        ln[] var3_ref_ln__;
+        Star[] var3_ref_ln__;
         int var4;
         int var7;
-        fs[] var8;
-        ln[] var9;
-        ln var10;
-        ln var11;
+        Player[] var8;
+        Star[] var9;
+        Star var10;
+        Star var11;
         bh var12;
-        ln var13;
+        Star var13;
         bh var14;
-        ln var15;
+        Star var15;
         bh var16;
-        ln[] var17;
-        ln var18;
+        Star[] var17;
+        Star var18;
         bh var19;
-        ln var20;
-        ln[] var21;
-        ln var22;
+        Star var20;
+        Star[] var21;
+        Star var22;
         bh var23;
-        ln var24;
+        Star var24;
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
-        ln[] var2Lifetime1;
-        ln[] var2Lifetime2;
-        ln[] var2Lifetime3;
-        ln[] var3_ref_ln__Lifetime1;
-        ln[] var3_ref_ln__Lifetime2;
-        ln[] var3_ref_ln__Lifetime3;
-        ln var11Lifetime1;
-        ln var15Lifetime1;
-        ln var15Lifetime2;
-        ln var15Lifetime3;
-        ln var11Lifetime2;
-        ln var15Lifetime1Lifetime1;
-        ln var15Lifetime2Lifetime1;
+        Star[] var2Lifetime1;
+        Star[] var2Lifetime2;
+        Star[] var2Lifetime3;
+        Star[] var3_ref_ln__Lifetime1;
+        Star[] var3_ref_ln__Lifetime2;
+        Star[] var3_ref_ln__Lifetime3;
+        Star var11Lifetime1;
+        Star var15Lifetime1;
+        Star var15Lifetime2;
+        Star var15Lifetime3;
+        Star var11Lifetime2;
+        Star var15Lifetime1Lifetime1;
+        Star var15Lifetime2Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 29201) {
-          var8 = (fs[]) null;
-          this.a(-13, (fs[]) null);
+          var8 = (Player[]) null;
+          this.a(-13, (Player[]) null);
         }
         if (!(this.field_I > 1024.0f)) {
           var17 = this.field_O.field_e;
@@ -223,7 +223,7 @@ final class tr extends ia {
         }
     }
 
-    private final mg a(ln param0, int param1, int param2, int param3) {
+    private final mg a(Star param0, int param1, int param2, int param3) {
         int var10_int = 0;
         mg stackIn_10_0 = null;
         Object stackIn_20_0 = null;
@@ -241,8 +241,8 @@ final class tr extends ia {
         int var7 = 0;
         boolean[] var8 = null;
         int[] var9 = null;
-        ln var10 = null;
-        ln var11 = null;
+        Star var10 = null;
+        Star var11 = null;
         double var11_double = 0.0;
         int var12 = 0;
         int var13 = 0;
@@ -418,9 +418,9 @@ final class tr extends ia {
         double var8;
         int[] var8_ref_int__;
         int var8_int;
-        ln var9_ref_ln;
+        Star var9_ref_ln;
         double var9;
-        ln var10;
+        Star var10;
         double var10_double;
         int var11_int;
         double var11;
@@ -441,7 +441,7 @@ final class tr extends ia {
         double var21;
         int var23;
         int var24;
-        ln var25;
+        Star var25;
         int[] var26;
         boolean[] var27;
         int[] var28;
@@ -452,8 +452,8 @@ final class tr extends ia {
         mg var3_ref_mgLifetime1;
         var24 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 92) {
-          var25 = (ln) null;
-          this.b((ln) null, -92);
+          var25 = (Star) null;
+          this.b((Star) null, -92);
         }
         if (this.field_rb == null) {
           return;
@@ -761,12 +761,12 @@ final class tr extends ia {
         int var14_int = 0;
         Sprite stackIn_6_0 = null;
         Sprite stackIn_9_0 = null;
-        fs stackIn_12_0 = null;
+        Player stackIn_12_0 = null;
         int stackIn_15_0 = 0;
         int[] stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         int stackIn_20_2 = 0;
-        fs[] stackIn_25_0 = null;
+        Player[] stackIn_25_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_32_0 = 0;
         int stackIn_38_0 = 0;
@@ -778,15 +778,15 @@ final class tr extends ia {
         int stackIn_58_1 = 0;
         vn var4;
         int var5;
-        ln var6;
+        Star var6;
         int var7;
         int var8;
         int var9;
         int var10;
         Sprite var11;
-        fs[] var12;
+        Player[] var12;
         int var12_int;
-        fs[] var14;
+        Player[] var14;
         int var15;
         int var16;
         int var17;
@@ -801,7 +801,7 @@ final class tr extends ia {
         int var26;
         int[] var27;
         int var28;
-        fs var29;
+        Player var29;
         Sprite var30;
         Sprite var31;
         int var18Lifetime1;
@@ -822,7 +822,7 @@ final class tr extends ia {
               stackIn_15_0 = this.field_Z[var6.field_p].field_g;
             }
             qc.a(stackIn_15_0, 18117, this.field_D[var6.field_p], 160);
-            var12 = new fs[var4.field_q.length];
+            var12 = new Player[var4.field_q.length];
             var27 = new int[var4.field_q.length];
             for (var14_int = 0; var14_int < var12.length; var14_int++) {
               stackIn_19_0 = var27;
@@ -836,7 +836,7 @@ final class tr extends ia {
               var12[var14_int] = var4.field_q[var14_int];
             }
             ak.a(var27, -65, var12);
-            var14 = new fs[var12.length];
+            var14 = new Player[var12.length];
             var15 = (-1 + var14.length) / 2;
             var14[var15] = var12[0];
             var16 = 1;
@@ -933,7 +933,7 @@ final class tr extends ia {
         }
     }
 
-    private final void a(ln param0, byte param1) {
+    private final void a(Star param0, byte param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -1004,7 +1004,7 @@ final class tr extends ia {
         }
     }
 
-    private final void a(boolean param0, ln param1, int param2) {
+    private final void a(boolean param0, Star param1, int param2) {
         RuntimeException stackIn_87_0 = null;
         StringBuilder stackIn_87_1 = null;
         String stackIn_88_2 = null;
@@ -1016,14 +1016,14 @@ final class tr extends ia {
         Object var6 = null;
         mg var6_ref = null;
         int var7 = 0;
-        ln var7_ref_ln = null;
+        Star var7_ref_ln = null;
         boolean[] var8 = null;
         int var8_int = 0;
         int[] var9 = null;
         int var9_int = 0;
         int var10_int = 0;
-        ln var10 = null;
-        ln var11 = null;
+        Star var10 = null;
+        Star var11 = null;
         double var11_double = 0.0;
         int var11_int = 0;
         int var12 = 0;
@@ -1291,17 +1291,17 @@ final class tr extends ia {
         }
     }
 
-    private final void a(int param0, ln param1, int param2) {
+    private final void a(int param0, Star param1, int param2) {
         int stackIn_3_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fs var4 = null;
+        Player var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        fs var7 = null;
+        Player var7 = null;
         try {
           var7 = this.field_Z[param1.field_p];
           var4 = var7;
@@ -1325,7 +1325,7 @@ final class tr extends ia {
             }
             gf.c(this.field_i[param1.field_p] - 1, -1 + this.field_J[param1.field_p], var6, 0, 128);
           }
-          if (param1.field_I.equalsIgnoreCase("sol")) {
+          if (param1.name.equalsIgnoreCase("sol")) {
             this.a(-71, param1);
           }
           if (param0 != 11746) {
@@ -1346,12 +1346,12 @@ final class tr extends ia {
         }
     }
 
-    final void a(int param0, fs[] param1) {
+    final void a(int param0, Player[] param1) {
         try {
           this.field_ib = param1;
           if (param0 >= -123) {
-            ln var4 = (ln) null;
-            this.d((ln) null, -124);
+            Star var4 = (Star) null;
+            this.d((Star) null, -124);
           }
           this.field_cb = new int[this.field_ib.length][];
           this.j(0);
@@ -1562,14 +1562,14 @@ final class tr extends ia {
         cg.i(0);
     }
 
-    private final void a(boolean param0, ln param1) {
+    private final void a(boolean param0, Star param1) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        fs var4 = null;
+        Player var4 = null;
         int var5 = 0;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -1612,7 +1612,7 @@ final class tr extends ia {
         }
     }
 
-    private final void b(int param0, ln param1) {
+    private final void b(int param0, Star param1) {
         try {
           if (~this.field_T == param0) {
             this.a(param1, false);
@@ -1744,7 +1744,7 @@ final class tr extends ia {
         }
     }
 
-    private final void b(ln param0, boolean param1) {
+    private final void b(Star param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         double var5_double = 0.0;
@@ -1865,7 +1865,7 @@ final class tr extends ia {
         }
     }
 
-    private final void d(ln param0, int param1) {
+    private final void d(Star param0, int param1) {
         int var6 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -1930,22 +1930,22 @@ final class tr extends ia {
     }
 
     private final void a(int param0, int param1, byte param2) {
-        ln[] var4;
+        Star[] var4;
         int var5;
         int var6;
-        ln var6_ref_ln;
-        ln var7;
+        Star var6_ref_ln;
+        Star var7;
         int var7_int;
         int var8;
         int var9;
         int var10;
         int var11;
         int var12;
-        ln[] var13;
+        Star[] var13;
         int var5Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
-        ln[] var4Lifetime1;
+        Star[] var4Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         var13 = this.field_O.field_e;
         var4 = var13;
@@ -2023,7 +2023,7 @@ final class tr extends ia {
         this.a(this.field_hb, true, true, true);
     }
 
-    private final void a(ln param0, boolean param1) {
+    private final void a(Star param0, boolean param1) {
         int stackIn_21_0 = 0;
         boolean stackIn_26_0 = false;
         RuntimeException stackIn_47_0 = null;
@@ -2032,7 +2032,7 @@ final class tr extends ia {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        fs var4 = null;
+        Player var4 = null;
         mg var5_ref_mg = null;
         int var5 = 0;
         int[] var6 = null;
@@ -2129,9 +2129,9 @@ final class tr extends ia {
         }
     }
 
-    private final void b(ln param0, int param1) {
+    private final void b(Star param0, int param1) {
         int var3_int = 0;
-        fs var4 = null;
+        Player var4 = null;
         int var5 = 0;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_28_0 = null;
@@ -2173,12 +2173,12 @@ final class tr extends ia {
           } else {
             ek.field_z.d(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, var5);
             if (this.field_X &&
-              me.field_j) {
+              VictoryChecker.field_j) {
               ek.field_z.a(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, RasterBuffer.field_f);
             }
             SpriteState.field_y.f(-(SpriteState.field_y.field_z / 2) + this.field_i[param0.field_p], -72 + (-(this.field_n * 7 / 10) + this.field_J[param0.field_p]));
             rs.field_Cb.c(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], -41 + this.field_J[var3_int] - 7 * this.field_n / 10, 16777215, -1);
-            rs.field_Cb.c(param0.field_I, this.field_i[var3_int], this.field_J[var3_int] - 7 * this.field_n / 10 - 11, 16777215, -1);
+            rs.field_Cb.c(param0.name, this.field_i[var3_int], this.field_J[var3_int] - 7 * this.field_n / 10 - 11, 16777215, -1);
             if (param0.field_L > 0 &&
               param0.field_B < 6) {
               gf.b(em.field_c[0] + (this.field_i[var3_int] << 4), (this.field_J[var3_int] - (7 * this.field_n / 10 + 45) << 4) + ul.field_Db[0], 50, 7, h.field_s);
@@ -2283,11 +2283,11 @@ final class tr extends ia {
         di var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        fs var7 = null;
+        Player var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ln var11 = null;
+        Star var11 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -2392,8 +2392,8 @@ final class tr extends ia {
             }
           }
           if (param0 != -3) {
-            var11 = (ln) null;
-            this.a((ln) null, false);
+            var11 = (Star) null;
+            this.a((Star) null, false);
           }
           var4_ref = (di) (this.field_V.d(0));
           while (var4_ref != null) {
@@ -2419,7 +2419,7 @@ final class tr extends ia {
         }
     }
 
-    private final void a(fs param0, int param1, int param2, int param3, int param4, int param5, vn param6) {
+    private final void a(Player param0, int param1, int param2, int param3, int param4, int param5, vn param6) {
         int stackIn_3_0 = 0;
         int[] stackIn_10_0 = null;
         int stackIn_11_1 = 0;
@@ -2743,8 +2743,8 @@ final class tr extends ia {
     private final mg c(int param0, int param1, byte param2) {
         int var6 = 0;
         mg var4;
-        ln[] var5;
-        ln var7;
+        Star[] var5;
+        Star var7;
         int var8;
         mg var4Lifetime1;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -2977,17 +2977,17 @@ final class tr extends ia {
     private final void h(int param0) {
         int var7 = 0;
         int var10 = 0;
-        ln stackIn_18_0 = null;
-        ln stackIn_18_1 = null;
+        Star stackIn_18_0 = null;
+        Star stackIn_18_1 = null;
         int stackIn_37_0 = 0;
         int var2;
         int var3;
         int var4;
-        ln[] var5;
+        Star[] var5;
         int var6;
-        ln var8;
-        ln[] var9;
-        ln var11;
+        Star var8;
+        Star[] var9;
+        Star var11;
         int var12;
         int var13;
         int var14;
@@ -3001,7 +3001,7 @@ final class tr extends ia {
         int var22;
         Object var23;
         cs var23_ref;
-        ln var24_ref_ln;
+        Star var24_ref_ln;
         int var24;
         int var25;
         int var26;
@@ -3009,8 +3009,8 @@ final class tr extends ia {
         int var28;
         int var29;
         int var30;
-        ln var31;
-        ln var32;
+        Star var31;
+        Star var32;
         var23 = null;
         var30 = ShatteredPlansClient.field_F ? 1 : 0;
         var4 = 44100;
@@ -3142,7 +3142,7 @@ final class tr extends ia {
               if (var5 == null) {
                 this.field_o.a(10, 0, ub.field_Bb);
               } else {
-                this.field_o.a(10, 0, re.a(vo.field_c, 4371, new String[]{or.field_d[((qm) (var5)).field_o], this.field_p.field_I}));
+                this.field_o.a(10, 0, re.a(vo.field_c, 4371, new String[]{or.field_d[((qm) (var5)).field_o], this.field_p.name}));
               }
             }
           }
@@ -3155,26 +3155,26 @@ final class tr extends ia {
     }
 
     private final void b(int param0, int param1, int param2) {
-        ln[] var4;
+        Star[] var4;
         int var5;
         int var7;
-        fs var8;
-        fs var9;
+        Player var8;
+        Player var9;
         int var10_int;
         Sprite var10;
         int var11;
         int var12;
         int var13;
         int var14;
-        ln[] var15;
-        ln var16;
-        ln var17;
+        Star[] var15;
+        Star var16;
+        Star var17;
         int var5Lifetime1;
         int var7Lifetime1;
         int var11Lifetime1;
-        ln[] var4Lifetime1;
-        fs var8Lifetime1;
-        fs var9Lifetime1;
+        Star[] var4Lifetime1;
+        Player var8Lifetime1;
+        Player var9Lifetime1;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         var15 = this.field_O.field_e;
         var4 = var15;
@@ -3350,11 +3350,11 @@ final class tr extends ia {
         }
     }
 
-    private final void e(ln param0, int param1) {
-        ln stackIn_22_0 = null;
-        ln stackIn_22_1 = null;
-        ln stackIn_29_0 = null;
-        ln stackIn_29_1 = null;
+    private final void e(Star param0, int param1) {
+        Star stackIn_22_0 = null;
+        Star stackIn_22_1 = null;
+        Star stackIn_29_0 = null;
+        Star stackIn_29_1 = null;
         int stackIn_53_0 = 0;
         int stackIn_54_1 = 0;
         int stackIn_56_0 = 0;
@@ -3410,7 +3410,7 @@ final class tr extends ia {
           }
           var7Lifetime2 = var3_int / 6;
           for (var8Lifetime1 = 0; var8Lifetime1 < var4.length; var8Lifetime1++) {
-            stackIn_29_0 = (ln) (param0);
+            stackIn_29_0 = (Star) (param0);
             stackIn_29_1 = var4[var8Lifetime1].field_q;
             if (stackIn_29_0 == stackIn_29_1 ||
               var4[var8Lifetime1].field_o == 3 &&
@@ -3478,7 +3478,7 @@ final class tr extends ia {
         }
     }
 
-    tr(l param0, fs[] param1, fs param2, boolean param3, boolean param4) {
+    tr(l param0, Player[] param1, Player param2, boolean param3, boolean param4) {
         int var11 = 0;
         int var12 = 0;
         int var6_int = 0;

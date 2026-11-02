@@ -6,7 +6,7 @@ abstract class qo {
     static int field_a;
     static int[] field_c;
     ha[] field_d;
-    static ln field_e;
+    static Star field_e;
 
     final int a(byte param0, int param1) {
         ha var4 = null;

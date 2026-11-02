@@ -80,16 +80,16 @@ final class bg {
 
     final static void a(int param0, int param1) {
         int var2 = (182 - IntrusiveDeque.field_a[0].field_z) / (param1 - 1);
-        dc.field_F = new Sprite(var2, 2);
+        GameState.field_F = new Sprite(var2, 2);
         IntrusiveDeque.field_d = new Sprite(var2 + IntrusiveDeque.field_a[0].field_z / 4, 2);
         ra.a(param0 + 2499);
-        dc.field_F.e();
-        gf.f(0, 0, dc.field_F.field_z, 10790052);
-        gf.f(0, 1, dc.field_F.field_z, 16777215);
-        dc.field_F.field_B[0] = ui.a(0, dc.field_F.field_B[0], -90, 185);
-        dc.field_F.field_B[1] = ui.a(0, dc.field_F.field_B[1], -94, 220);
-        dc.field_F.field_B[var2] = ui.a(0, dc.field_F.field_B[var2], -118, 185);
-        dc.field_F.field_B[1 + var2] = ui.a(0, dc.field_F.field_B[var2 + 1], -96, 220);
+        GameState.field_F.e();
+        gf.f(0, 0, GameState.field_F.field_z, 10790052);
+        gf.f(0, 1, GameState.field_F.field_z, 16777215);
+        GameState.field_F.field_B[0] = ui.a(0, GameState.field_F.field_B[0], -90, 185);
+        GameState.field_F.field_B[1] = ui.a(0, GameState.field_F.field_B[1], -94, 220);
+        GameState.field_F.field_B[var2] = ui.a(0, GameState.field_F.field_B[var2], -118, 185);
+        GameState.field_F.field_B[1 + var2] = ui.a(0, GameState.field_F.field_B[var2 + 1], -96, 220);
         IntrusiveDeque.field_d.e();
         gf.f(0, 0, IntrusiveDeque.field_d.field_z, 10790052);
         gf.f(0, 1, IntrusiveDeque.field_d.field_z, 16777215);

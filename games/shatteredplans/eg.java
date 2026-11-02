@@ -4,10 +4,10 @@
 final class eg extends IntrusiveNode {
     static String field_s;
     int field_l;
-    fs field_w;
-    ln field_p;
+    Player field_w;
+    Star field_p;
     IntrusiveDeque field_v;
-    fs field_i;
+    Player field_i;
     static qr field_u;
     int field_n;
     static String[] field_x;
@@ -15,8 +15,8 @@ final class eg extends IntrusiveNode {
     static in field_q;
     int[] field_k;
     static int field_o;
-    sd field_m;
-    fs[] field_h;
+    Territory field_m;
+    Player[] field_h;
     static int field_t;
     static String field_r;
 
@@ -114,14 +114,14 @@ final class eg extends IntrusiveNode {
           this.field_v.a((byte) -113, new ne(param2, param3, param0));
           this.field_n = this.field_n + param3;
           if (param1 != 0) {
-            this.field_w = (fs) null;
+            this.field_w = (Player) null;
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "eg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    eg(ln param0, fs[] param1, int[] param2) {
+    eg(Star param0, Player[] param1, int[] param2) {
         try {
           this.field_h = param1;
           this.field_p = param0;

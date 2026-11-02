@@ -27,10 +27,10 @@ final class aq extends IntrusiveNode {
           if (GameApplet.field_f[param2] > GameApplet.field_f[param0]) {
             return false;
           }
-          if (dc.field_c[param2] < dc.field_c[param0]) {
+          if (GameState.field_c[param2] < GameState.field_c[param0]) {
             return true;
           }
-          if (dc.field_c[param2] > dc.field_c[param0]) {
+          if (GameState.field_c[param2] > GameState.field_c[param0]) {
             return false;
           }
           var4 = aj.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
@@ -43,10 +43,10 @@ final class aq extends IntrusiveNode {
           }
           return !(param0 <= param2);
         }
-        if (dc.field_c[param0] > dc.field_c[param2]) {
+        if (GameState.field_c[param0] > GameState.field_c[param2]) {
           return true;
         }
-        if (dc.field_c[param0] < dc.field_c[param2]) {
+        if (GameState.field_c[param0] < GameState.field_c[param2]) {
           return false;
         }
         if (GameApplet.field_f[param0] > GameApplet.field_f[param2]) {

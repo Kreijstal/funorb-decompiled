@@ -444,7 +444,7 @@ final class gn extends o {
             }
           }
           this.field_z.a(param1, true, param0, param3, this);
-          ln.f((byte) 124);
+          Star.f((byte) 124);
           if (param4 != 12) {
             var10 = (Sprite) null;
             this.a(100, (Sprite) null);

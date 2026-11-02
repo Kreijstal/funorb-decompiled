@@ -8,7 +8,7 @@ final class d {
     static String field_c;
     static am field_a;
     static Sprite[] field_b;
-    static ln field_d;
+    static Star field_d;
 
     final static boolean a(ve param0, ve param1, byte param2) {
         int var3_int = 0;
@@ -119,7 +119,7 @@ final class d {
           if (param0 != -12) {
             d.a(-116);
           }
-          stackIn_3_0 = param1 + hi.a(1 - param1 + param2, param3, -11);
+          stackIn_3_0 = param1 + TaskAi.a(1 - param1 + param2, param3, -11);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

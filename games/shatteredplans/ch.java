@@ -212,7 +212,7 @@ final class ch implements wr {
           var2 = 0;
           if (var1_int != 0 &&
             0 <= ns.field_nb.field_c) {
-            var2 = fs.field_y[ns.field_nb.field_c];
+            var2 = Player.field_y[ns.field_nb.field_c];
             if (var2 == 2) {
               oi.a(true);
             }

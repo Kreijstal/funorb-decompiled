@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class hi implements uj {
-    private fs field_w;
+final class TaskAi implements uj {
+    private Player field_w;
     static String field_d;
     static qr field_o;
     private int field_x;
     private int field_j;
     private IntrusiveDeque field_l;
-    private dc field_m;
+    private GameState field_m;
     private int field_t;
     private mn field_c;
     static vr field_a;
@@ -35,34 +35,34 @@ final class hi implements uj {
         co var3;
         int var4;
         int var5;
-        sd var6;
+        Territory var6;
         int var7;
         int var8;
-        fs var9;
+        Player var9;
         int var10;
         int var7Lifetime1;
         int var10Lifetime1;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 <= 26) {
-          var9 = (fs) null;
-          this.a((fs) null, (byte) 115);
+          var9 = (Player) null;
+          this.a((Player) null, (byte) 115);
         }
         var3 = (co) (this.field_l.d(0));
         while (var3 != null) {
           var4 = 0;
           var5 = 0;
-          var6 = (sd) (this.field_w.field_i.d(0));
+          var6 = (Territory) (this.field_w.field_i.d(0));
           while (var6 != null) {
             if (var6 != var3.field_n.field_R) {
               var4++;
-              var6 = (sd) (this.field_w.field_i.a((byte) -71));
+              var6 = (Territory) (this.field_w.field_i.a((byte) -71));
               continue;
             }
             var5 = 1;
             break;
           }
           if (var5 == 0) {
-            throw new RuntimeException("Star to be garrisoned (" + var3.field_n.field_I + ") doesn't appear to be in any of the AI's territories.");
+            throw new RuntimeException("Star to be garrisoned (" + var3.field_n.name + ") doesn't appear to be in any of the AI's territories.");
           }
           if (!this.field_y[var4]) {
             var2 = var3.field_i - var3.field_n.field_x;
@@ -155,14 +155,14 @@ final class hi implements uj {
         int var6 = 0;
         int var2;
         Object var3;
-        sd var3_ref;
-        ln[] var4;
+        Territory var3_ref;
+        Star[] var4;
         int var5;
-        ln var7;
+        Star var7;
         int var8;
         int var9;
         int var2Lifetime1;
-        sd var3_refLifetime1;
+        Territory var3_refLifetime1;
         var3 = null;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_n = new int[this.field_w.field_i.e(0)];
@@ -176,13 +176,13 @@ final class hi implements uj {
             var7.field_x > var7.field_N) {
             q.field_Ab[var7.field_p] = var7.field_x - var7.field_N;
             if (var7.field_J < q.field_Ab[var7.field_p]) {
-              throw new RuntimeException(var7.field_I + ": available=" + q.field_Ab[var7.field_p] + ", garrison_next=" + var7.field_J);
+              throw new RuntimeException(var7.name + ": available=" + q.field_Ab[var7.field_p] + ", garrison_next=" + var7.field_J);
             }
-            var3_ref = (sd) (this.field_w.field_i.d(0));
+            var3_ref = (Territory) (this.field_w.field_i.d(0));
             var8 = 0;
             for (var2 = 0; var2 < this.field_n.length; var2++) {
               if (var7.field_R != var3_ref) {
-                var3_ref = (sd) (this.field_w.field_i.a((byte) -71));
+                var3_ref = (Territory) (this.field_w.field_i.a((byte) -71));
                 continue;
               }
               var8 = 1;
@@ -190,7 +190,7 @@ final class hi implements uj {
               break;
             }
             if (var8 == 0) {
-              throw new RuntimeException("Star owned by " + this.field_w.field_t + " is not in any of its Territories: " + var7.field_I);
+              throw new RuntimeException("Star owned by " + this.field_w.name + " is not in any of its Territories: " + var7.name);
             }
           } else {
             q.field_Ab[var7.field_p] = 0;
@@ -201,10 +201,10 @@ final class hi implements uj {
             this.field_i[var2Lifetime1] = this.field_w.field_m.field_x;
           }
         } else {
-          var3_refLifetime1 = (sd) (this.field_w.field_i.d(0));
+          var3_refLifetime1 = (Territory) (this.field_w.field_i.d(0));
           for (var2Lifetime1 = 0; var2Lifetime1 < this.field_i.length; var2Lifetime1++) {
             this.field_i[var2Lifetime1] = var3_refLifetime1.field_x;
-            var3_refLifetime1 = (sd) (this.field_w.field_i.a((byte) -71));
+            var3_refLifetime1 = (Territory) (this.field_w.field_i.a((byte) -71));
           }
         }
     }
@@ -219,14 +219,14 @@ final class hi implements uj {
         wf[] var4;
         wf var5_ref_wf;
         wf var6;
-        ln var8;
+        Star var8;
         int var9;
-        sd var10;
+        Territory var10;
         int var2Lifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 7270) {
-          var10 = (sd) null;
-          this.a((sd) null, -28, (byte) 100);
+          var10 = (Territory) null;
+          this.a((Territory) null, -28, (byte) 100);
         }
         var3_ref_wf__ = this.field_e;
         for (var4_int = 0; var3_ref_wf__.length > var4_int; var4_int++) {
@@ -270,7 +270,7 @@ final class hi implements uj {
                 var3 = 1;
               }
               if (kq.field_c[var2Lifetime1] > 0) {
-                throw new RuntimeException(this.field_w.field_t + " has run out of available fleets, but has not yet met its defender allocation at " + var6.field_n.field_I + ".");
+                throw new RuntimeException(this.field_w.name + " has run out of available fleets, but has not yet met its defender allocation at " + var6.field_n.name + ".");
               }
             }
           }
@@ -278,20 +278,20 @@ final class hi implements uj {
     }
 
     private final void h(int param0) {
-        ln var3 = null;
+        Star var3 = null;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_l.a(0);
         if (param0 != 100) {
           this.a(62);
         }
-        sd var2 = (sd) (this.field_w.field_i.d(0));
+        Territory var2 = (Territory) (this.field_w.field_i.d(0));
         while (var2 != null) {
           var3 = var2.j(param0 ^ 18257);
           while (var3 != null) {
             this.field_l.a((byte) -113, new co(var3, this.field_m.field_o.field_l, no.field_f));
             var3 = var2.h(-23410);
           }
-          var2 = (sd) (this.field_w.field_i.a((byte) -71));
+          var2 = (Territory) (this.field_w.field_i.a((byte) -71));
         }
     }
 
@@ -301,7 +301,7 @@ final class hi implements uj {
         int var3;
         int var4;
         int var5;
-        sd var6_ref_sd;
+        Territory var6_ref_sd;
         int var7;
         ac var8;
         int var9;
@@ -367,7 +367,7 @@ final class hi implements uj {
           }
           var4Lifetime1Lifetime1 = 1;
           var5 = 0;
-          var6_ref_sd = (sd) (this.field_w.field_i.d(0));
+          var6_ref_sd = (Territory) (this.field_w.field_i.d(0));
           while (var6_ref_sd != null) {
             var7 = 0;
             var8 = (ac) (this.field_u.d(0));
@@ -383,7 +383,7 @@ final class hi implements uj {
               var4Lifetime1Lifetime1 = 0;
             }
             var5++;
-            var6_ref_sd = (sd) (this.field_w.field_i.a((byte) -71));
+            var6_ref_sd = (Territory) (this.field_w.field_i.a((byte) -71));
           }
           var2Lifetime1 = 0;
           if (var4Lifetime1Lifetime1 != 0 &&
@@ -395,7 +395,7 @@ final class hi implements uj {
             var2Lifetime1 = var2Lifetime1 + this.field_i[var6];
           }
           if (var2Lifetime1 > 0) {
-            throw new RuntimeException(this.field_w.field_t + " hasn't allocated any more idle fleets this loop, even though there are DefendTasks.");
+            throw new RuntimeException(this.field_w.name + " hasn't allocated any more idle fleets this loop, even though there are DefendTasks.");
           }
         }
     }
@@ -404,27 +404,27 @@ final class hi implements uj {
         int var7 = 0;
         int var3_int = 0;
         int var5 = 0;
-        fs stackIn_8_0 = null;
-        fs stackIn_8_1 = null;
-        fs stackIn_28_0 = null;
-        fs stackIn_28_1 = null;
+        Player stackIn_8_0 = null;
+        Player stackIn_8_1 = null;
+        Player stackIn_28_0 = null;
+        Player stackIn_28_1 = null;
         int var2;
-        ln[] var3;
+        Star[] var3;
         int var4;
         int var6;
-        ln[] var6_ref_ln__;
+        Star[] var6_ref_ln__;
         int var9;
-        ln var10;
+        Star var10;
         int var11;
         int var12;
-        ln[] var13;
-        ln var14;
-        ln var15;
-        ln[] var16;
-        ln var17;
-        ln[] var18;
-        ln[] var19;
-        ln var20;
+        Star[] var13;
+        Star var14;
+        Star var15;
+        Star[] var16;
+        Star var17;
+        Star[] var18;
+        Star[] var19;
+        Star var20;
         int var4Lifetime1;
         int var6Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -458,7 +458,7 @@ final class hi implements uj {
           }
           return;
         }
-        var3 = new ln[var2];
+        var3 = new Star[var2];
         var4Lifetime1 = 0;
         var16 = this.field_m.field_g.field_e;
         for (var6 = 0; var6 < var16.length; var6++) {
@@ -505,23 +505,23 @@ final class hi implements uj {
         StringBuilder stackIn_75_1 = null;
         String stackIn_76_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sd var4 = null;
+        Territory var4 = null;
         RuntimeException var4_ref = null;
-        sd var5 = null;
+        Territory var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ln[] var10_ref_ln__ = null;
+        Star[] var10_ref_ln__ = null;
         int var10 = 0;
         int var11 = 0;
         int var13 = 0;
-        ln[] var14 = null;
-        ln var15 = null;
-        ln[] var16 = null;
-        ln var17 = null;
-        ln var17Lifetime1;
-        ln var17Lifetime2;
+        Star[] var14 = null;
+        Star var15 = null;
+        Star[] var16 = null;
+        Star var17 = null;
+        Star var17Lifetime1;
+        Star var17Lifetime2;
         int var11Lifetime1;
         int var11Lifetime2;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -530,18 +530,18 @@ final class hi implements uj {
           var6 = 0;
           var7 = 0;
           var8 = 99 % ((param2 - 37) / 48);
-          var4 = (sd) (this.field_w.field_i.d(0));
+          var4 = (Territory) (this.field_w.field_i.d(0));
           while (var4 != null) {
             if (var4 != var5) {
               var6++;
-              var4 = (sd) (this.field_w.field_i.a((byte) -71));
+              var4 = (Territory) (this.field_w.field_i.a((byte) -71));
               continue;
             }
             var7 = 1;
             break;
           }
           if (var7 == 0) {
-            throw new RuntimeException("DefendTask's star does not appear to be in AI's territory: " + param0.field_n.field_I + ".");
+            throw new RuntimeException("DefendTask's star does not appear to be in AI's territory: " + param0.field_n.name + ".");
           }
           var9 = (-this.field_t + 50) * param0.field_i / 250 + param0.field_i;
           if (param1) {
@@ -653,7 +653,7 @@ final class hi implements uj {
         }
     }
 
-    public final void a(fs param0, int param1) {
+    public final void a(Player param0, int param1) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -672,7 +672,7 @@ final class hi implements uj {
           }
           var3_int = this.field_q[param0.field_x];
           if (param1 != 7686) {
-            this.field_w = (fs) null;
+            this.field_w = (Player) null;
           }
           var7 = var3_int;
           if (var7 != 1 &&
@@ -782,7 +782,7 @@ final class hi implements uj {
 
     private final void d(int param0) {
         int var2 = 0;
-        sd var2_ref_sd;
+        Territory var2_ref_sd;
         int var3;
         int var4;
         int var5;
@@ -790,7 +790,7 @@ final class hi implements uj {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_s = new int[this.field_w.field_i.e(0)][4];
         if (param0 < 104) {
-          this.field_w = (fs) null;
+          this.field_w = (Player) null;
         }
         if (this.field_m.field_o.field_i) {
           for (var2 = 0; var2 < 4; var2++) {
@@ -803,12 +803,12 @@ final class hi implements uj {
             }
           }
         } else {
-          var2_ref_sd = (sd) (this.field_w.field_i.d(0));
+          var2_ref_sd = (Territory) (this.field_w.field_i.d(0));
           for (var3 = 0; this.field_s.length > var3; var3++) {
             for (var4 = 0; var4 < 4; var4++) {
               this.field_s[var3][var4] = -var2_ref_sd.field_u[var4] + 1 + var2_ref_sd.field_u[var2_ref_sd.field_w[0]];
             }
-            var2_ref_sd = (sd) (this.field_w.field_i.a((byte) -71));
+            var2_ref_sd = (Territory) (this.field_w.field_i.a((byte) -71));
           }
         }
     }
@@ -879,14 +879,14 @@ final class hi implements uj {
 
     private final void c(int param0) {
         int var3 = 0;
-        ln var4;
+        Star var4;
         int var8;
-        ln[] var9;
-        fs stackIn_5_0 = null;
-        fs stackIn_5_1 = null;
-        ln[] var5;
+        Star[] var9;
+        Player stackIn_5_0 = null;
+        Player stackIn_5_1 = null;
+        Star[] var5;
         int var6;
-        ln var7;
+        Star var7;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_k.a(0);
         if (param0 != -30426) {
@@ -925,7 +925,7 @@ final class hi implements uj {
           var5 = var3[var4];
           if (!(var5 instanceof ac)) {
             if (!(var5 instanceof kl)) {
-              throw new RuntimeException("prioritizedTasks contains invalid task for Star " + var5.field_n.field_I + ".");
+              throw new RuntimeException("prioritizedTasks contains invalid task for Star " + var5.field_n.name + ".");
             }
             this.a((byte) -124, (kl) (var5), param0);
           } else {
@@ -941,9 +941,9 @@ final class hi implements uj {
         return 8;
     }
 
-    private final void a(int param0, byte param1, ln param2, ln param3) {
-        fs stackIn_37_0 = null;
-        fs stackIn_37_1 = null;
+    private final void a(int param0, byte param1, Star param2, Star param3) {
+        Player stackIn_37_0 = null;
+        Player stackIn_37_1 = null;
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
@@ -966,11 +966,11 @@ final class hi implements uj {
               throw new RuntimeException();
             }
             if (this.field_w != param3.field_y) {
-              throw new RuntimeException(this.field_w.field_t + " is attempting to move fleets from a system it does not own: " + param3.field_I + ".");
+              throw new RuntimeException(this.field_w.name + " is attempting to move fleets from a system it does not own: " + param3.name + ".");
             }
             if (param2.field_R != param3.field_R &&
               !param3.b(param2, (byte) 10)) {
-              throw new RuntimeException(this.field_w.field_t + " is attempting an invalid move from " + param3.field_I + " to " + param2.field_I + ".");
+              throw new RuntimeException(this.field_w.name + " is attempting an invalid move from " + param3.name + " to " + param2.name + ".");
             }
             var5 = (mg) (param3.field_s.c(-128));
             while (var5 != null) {
@@ -1000,7 +1000,7 @@ final class hi implements uj {
               return;
             }
             if (param3.field_J < param0) {
-              throw new RuntimeException("Trying to move " + param0 + " fleets from " + param3.field_I + " to " + param2.field_I + " but garrison_next is only " + param3.field_J + ".");
+              throw new RuntimeException("Trying to move " + param0 + " fleets from " + param3.name + " to " + param2.name + " but garrison_next is only " + param3.field_J + ".");
             }
             param3.field_J = param3.field_J - param0;
             var5Lifetime1 = (mg) (MouseInputHandler.field_g.d(0));
@@ -1044,11 +1044,11 @@ final class hi implements uj {
         }
     }
 
-    private final int a(boolean param0, ln[] param1, ln param2, int param3, int param4) {
+    private final int a(boolean param0, Star[] param1, Star param2, int param3, int param4) {
         int var13 = 0;
         int dupTemp$0 = 0;
-        fs stackIn_4_0 = null;
-        fs stackIn_4_1 = null;
+        Player stackIn_4_0 = null;
+        Player stackIn_4_1 = null;
         int stackIn_51_0 = 0;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
@@ -1062,10 +1062,10 @@ final class hi implements uj {
         int var8 = 0;
         int var9 = 0;
         Object var10 = null;
-        sd var10_ref = null;
+        Territory var10_ref = null;
         int var11 = 0;
-        ln[] var12 = null;
-        ln var14 = null;
+        Star[] var12 = null;
+        Star var14 = null;
         int var15 = 0;
         Object var10Lifetime1;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -1091,14 +1091,14 @@ final class hi implements uj {
                     var8 = param4;
                   }
                   var9 = 0;
-                  var10_ref = (sd) (this.field_w.field_i.d(0));
+                  var10_ref = (Territory) (this.field_w.field_i.d(0));
                   while (var10_ref != null) {
                     if (var10_ref == param1[var11].field_R) {
                       decompiledFrameCompleted0 = false;
                       break;
                     }
                     var9++;
-                    var10_ref = (sd) (this.field_w.field_i.a((byte) -71));
+                    var10_ref = (Territory) (this.field_w.field_i.a((byte) -71));
                   }
                   decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                 }
@@ -1122,19 +1122,19 @@ final class hi implements uj {
                       var8 = param4;
                     }
                     var9 = 0;
-                    var10_ref = (sd) (this.field_w.field_i.d(0));
+                    var10_ref = (Territory) (this.field_w.field_i.d(0));
                     while (var10_ref != null) {
                       if (var10_ref == param1[var11].field_R) {
                         break;
                       }
                       var9++;
-                      var10_ref = (sd) (this.field_w.field_i.a((byte) -71));
+                      var10_ref = (Territory) (this.field_w.field_i.a((byte) -71));
                     }
                   }
                 }
                 if (decompiledFrameRemainder1) {
                   if (var10_ref == null) {
-                    throw new RuntimeException("Cannot find territory of star " + this.field_w.field_t + " wants to attack from: " + param1[var11].field_I + ".");
+                    throw new RuntimeException("Cannot find territory of star " + this.field_w.name + " wants to attack from: " + param1[var11].name + ".");
                   }
                   if (this.field_n[var9] < var8) {
                     var8 = this.field_n[var9];
@@ -1179,7 +1179,7 @@ final class hi implements uj {
         }
     }
 
-    public final void a(fs param0, byte param1) {
+    public final void a(Player param0, byte param1) {
         int var3_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1236,7 +1236,7 @@ final class hi implements uj {
         }
     }
 
-    private final void a(ln param0, int param1) {
+    private final void a(Star param0, int param1) {
         Object stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -1245,14 +1245,14 @@ final class hi implements uj {
         qm var4 = null;
         try {
           if (this.field_w.field_u[0] < 5) {
-            throw new RuntimeException(this.field_w.field_t + " is trying to deploy a Defensive Net it doesn't have at star " + param0.field_I);
+            throw new RuntimeException(this.field_w.name + " is trying to deploy a Defensive Net it doesn't have at star " + param0.name);
           }
           if (!no.field_b) {
             if (this.field_w != param0.field_y) {
-              throw new RuntimeException(this.field_w.field_t + " is trying to deploy a Defensive Net in a system it doesn't own: " + param0.field_I);
+              throw new RuntimeException(this.field_w.name + " is trying to deploy a Defensive Net in a system it doesn't own: " + param0.name);
             }
             if (param0.field_u) {
-              throw new RuntimeException(this.field_w.field_t + " is trying to deploy a Defensive Net in a system that already has one: " + param0.field_I);
+              throw new RuntimeException(this.field_w.name + " is trying to deploy a Defensive Net in a system that already has one: " + param0.name);
             }
             vj.field_E.a((byte) -113, new qm(0, this.field_w, param0));
             no.field_b = true;
@@ -1273,9 +1273,9 @@ final class hi implements uj {
             break;
           }
           if (var3 != null) {
-            throw new RuntimeException(this.field_w.field_t + " is trying to deploy a Defensive Net it has already used." + " Already deployed at star " + ((qm) (var3)).field_q.field_I + ", now trying to deploy ot " + param0.field_I);
+            throw new RuntimeException(this.field_w.name + " is trying to deploy a Defensive Net it has already used." + " Already deployed at star " + ((qm) (var3)).field_q.name + ", now trying to deploy ot " + param0.name);
           }
-          throw new RuntimeException(this.field_w.field_t + "'s deployedDefensiveNet variable incorrectly set to true.");
+          throw new RuntimeException(this.field_w.name + "'s deployedDefensiveNet variable incorrectly set to true.");
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -1290,7 +1290,7 @@ final class hi implements uj {
         }
     }
 
-    private final int a(int param0, fs param1, int param2) {
+    private final int a(int param0, Player param1, int param2) {
         int var10_int = 0;
         int var14 = 0;
         int stackIn_5_0 = 0;
@@ -1301,8 +1301,8 @@ final class hi implements uj {
         int stackIn_41_0 = 0;
         int stackIn_45_0 = 0;
         int stackIn_52_0 = 0;
-        fs stackIn_55_0 = null;
-        fs stackIn_55_1 = null;
+        Player stackIn_55_0 = null;
+        Player stackIn_55_1 = null;
         int stackIn_59_0 = 0;
         int stackIn_63_0 = 0;
         int stackIn_66_0 = 0;
@@ -1314,18 +1314,18 @@ final class hi implements uj {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        fs var5 = null;
-        fs var6 = null;
+        Player var5 = null;
+        Player var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ln[] var9_ref_ln__ = null;
+        Star[] var9_ref_ln__ = null;
         int var9 = 0;
         int[] var10 = null;
         int var11 = 0;
-        ln var11_ref_ln = null;
+        Star var11_ref_ln = null;
         int var12 = 0;
-        ln[] var13 = null;
-        ln var15 = null;
+        Star[] var13 = null;
+        Star var15 = null;
         int var16 = 0;
         int var12Lifetime1;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -1391,7 +1391,7 @@ final class hi implements uj {
             }
             if (this.field_g == -1) {
               stackIn_55_0 = var6;
-              stackIn_55_1 = (fs) (param1);
+              stackIn_55_1 = (Player) (param1);
               if (stackIn_55_0 == stackIn_55_1) {
                 stackIn_59_0 = (var5 == this.field_w) ? -3 : -2;
                 return stackIn_59_0;
@@ -1440,7 +1440,7 @@ final class hi implements uj {
         }
     }
 
-    private final void a(int param0, int param1, sd param2) {
+    private final void a(int param0, int param1, Territory param2) {
         int var9 = 0;
         Object stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -1450,8 +1450,8 @@ final class hi implements uj {
         int var5 = 0;
         int var6_int = 0;
         qa var6 = null;
-        ln var6_ref = null;
-        ln var7 = null;
+        Star var6_ref = null;
+        Star var7 = null;
         int var8 = 0;
         int var10 = 0;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -1484,11 +1484,11 @@ final class hi implements uj {
           var6_ref = param2.j(18229);
           while (var6_ref != null) {
             if (var6_ref != var4) {
-              this.a(var6_ref.field_x, (byte) 110, (ln) (var4), var6_ref);
+              this.a(var6_ref.field_x, (byte) 110, (Star) (var4), var6_ref);
             }
             var6_ref = param2.h(-23410);
           }
-          this.a(-1, (ln) (var4), param2.field_x);
+          this.a(-1, (Star) (var4), param2.field_x);
           this.field_i[param0] = 0;
           this.field_n[param0] = 0;
           this.field_y[param0] = true;
@@ -1507,7 +1507,7 @@ final class hi implements uj {
         }
     }
 
-    private final void a(int param0, ln param1, int param2) {
+    private final void a(int param0, Star param1, int param2) {
         qa var4 = null;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -1553,8 +1553,8 @@ final class hi implements uj {
         int var4_int = 0;
         int var2;
         int var3;
-        fs[] var4;
-        fs var5;
+        Player[] var4;
+        Player var5;
         int var6;
         int var7;
         int var8;
@@ -1673,7 +1673,7 @@ final class hi implements uj {
         }
     }
 
-    private final int[] b(fs param0, int param1) {
+    private final int[] b(Player param0, int param1) {
         int var11 = 0;
         int stackIn_8_0 = 0;
         int[] stackIn_10_0 = null;
@@ -1687,13 +1687,13 @@ final class hi implements uj {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         boolean[] var4 = null;
-        ln[] var5 = null;
+        Star[] var5 = null;
         int var6 = 0;
         int var7 = 0;
-        ln var8 = null;
+        Star var8 = null;
         int var9 = 0;
-        ln[] var10 = null;
-        ln var12 = null;
+        Star[] var10 = null;
+        Star var12 = null;
         int var13 = 0;
         int var14 = 0;
         int[] var15 = null;
@@ -1765,8 +1765,8 @@ final class hi implements uj {
     public final void a(int param0) {
         int var4 = 0;
         int var2;
-        fs[] var3;
-        fs var5;
+        Player[] var3;
+        Player var5;
         int var7;
         int var6;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -1797,11 +1797,11 @@ final class hi implements uj {
         int var10;
         int var11;
         int var12;
-        ln var13;
+        Star var13;
         lo var14;
-        ln var15;
-        ln[] var16;
-        ln var17;
+        Star var15;
+        Star[] var16;
+        Star var17;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -1916,17 +1916,17 @@ final class hi implements uj {
           }
         }
         if (var2 != null) {
-          var6_ref2 = new qm(1, this.field_w, (ln) (var2));
+          var6_ref2 = new qm(1, this.field_w, (Star) (var2));
           vj.field_E.a((byte) -113, var6_ref2);
         }
         return;
     }
 
     private final void e(int param0) {
-        ln var4 = null;
+        Star var4 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_u.a(param0 + 0);
-        sd var6 = (sd) (this.field_w.field_i.d(0));
+        Territory var6 = (Territory) (this.field_w.field_i.d(0));
         int var3 = param0;
         while (var6 != null) {
           var4 = var6.j(18229);
@@ -1937,11 +1937,11 @@ final class hi implements uj {
             var4 = var6.h(-23410);
           }
           var3++;
-          var6 = (sd) (this.field_w.field_i.a((byte) -71));
+          var6 = (Territory) (this.field_w.field_i.a((byte) -71));
         }
     }
 
-    private final void a(sd param0, int param1, byte param2) {
+    private final void a(Territory param0, int param1, byte param2) {
         int stackIn_32_0 = 0;
         int stackIn_40_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -1950,19 +1950,19 @@ final class hi implements uj {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        ln var5 = null;
-        ln[] var5_array = null;
+        Star var5 = null;
+        Star[] var5_array = null;
         int var6 = 0;
-        ln[] var6_ref_ln__ = null;
-        ln var7_ref_ln = null;
+        Star[] var6_ref_ln__ = null;
+        Star var7_ref_ln = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ln var10 = null;
+        Star var10 = null;
         int var11 = 0;
-        ln[] var12 = null;
-        ln var13 = null;
-        ln[] var14 = null;
+        Star[] var12 = null;
+        Star var13 = null;
+        Star[] var14 = null;
         int var7Lifetime1;
         int var7Lifetime2;
         int var8Lifetime1;
@@ -1993,7 +1993,7 @@ final class hi implements uj {
             }
             return;
           }
-          var14 = new ln[var4_int];
+          var14 = new Star[var4_int];
           var5_array = var14;
           var6 = 0;
           var7_ref_ln = param0.j(18229);
@@ -2125,11 +2125,11 @@ final class hi implements uj {
     private final void i(int param0) {
         int var3 = 0;
         int var6 = 0;
-        ln var4;
+        Star var4;
         int var8;
-        ln[] var9;
-        ln[] var5;
-        ln var7;
+        Star[] var9;
+        Star[] var5;
+        Star var7;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         var9 = this.field_m.field_g.field_e;
         for (var3 = 0; var9.length > var3; var3++) {
@@ -2165,7 +2165,7 @@ final class hi implements uj {
         co var3;
         int var4;
         int var5;
-        ln var6;
+        Star var6;
         int var7;
         int var2Lifetime1;
         int var4Lifetime1;
@@ -2175,7 +2175,7 @@ final class hi implements uj {
         while (var3 != null) {
           var2 = var3.field_n.field_p;
           if (0 > kq.field_c[var2]) {
-            throw new RuntimeException(this.field_m.field_g.field_e[var2].field_I + " has " + kq.field_c[var2] + " fleets assigned to garrison it!");
+            throw new RuntimeException(this.field_m.field_g.field_e[var2].name + " has " + kq.field_c[var2] + " fleets assigned to garrison it!");
           }
           if (kq.field_c[var2] < q.field_Ab[var2]) {
             q.field_Ab[var2] = q.field_Ab[var2] - kq.field_c[var2];
@@ -2236,11 +2236,11 @@ final class hi implements uj {
     private final void e(byte param0) {
         int var11 = 0;
         int var17 = 0;
-        sd stackIn_68_0 = null;
-        sd stackIn_68_1 = null;
-        sd var2;
-        sd var3;
-        sd var4_ref_sd;
+        Territory stackIn_68_0 = null;
+        Territory stackIn_68_1 = null;
+        Territory var2;
+        Territory var3;
+        Territory var4_ref_sd;
         int var4;
         Object var5_ref;
         int var5;
@@ -2248,35 +2248,35 @@ final class hi implements uj {
         Object var7;
         int var8;
         int var9_int;
-        ln[] var9;
-        ln var10_ref_ln;
+        Star[] var9;
+        Star var10_ref_ln;
         int var10;
-        ln var12;
+        Star var12;
         int var13;
-        ln[] var14_ref_ln__;
+        Star[] var14_ref_ln__;
         int var14;
         int var15;
         int var16;
-        ln var18;
+        Star var18;
         int var19;
-        ln[] var20;
+        Star[] var20;
         Object var21;
-        sd var21_ref;
+        Territory var21_ref;
         Object var22;
-        sd var22_ref;
-        ln var23;
+        Territory var22_ref;
+        Star var23;
         int var8Lifetime1;
         int var8Lifetime2;
         int var9_intLifetime1;
         int var15Lifetime1;
         int var16Lifetime1;
         int var16Lifetime2;
-        sd var2Lifetime1;
-        sd var3Lifetime1;
+        Territory var2Lifetime1;
+        Territory var3Lifetime1;
         Object var6Lifetime1;
         Object var7Lifetime1;
         Object var7Lifetime2;
-        ln var10_ref_lnLifetime1;
+        Star var10_ref_lnLifetime1;
         int var15Lifetime1Lifetime1;
         var22 = null;
         var21 = null;
@@ -2287,22 +2287,22 @@ final class hi implements uj {
         if (50 > this.field_t &&
           this.field_j < 50 &&
           this.field_w.field_i.e(0) > 1) {
-          var22_ref = (sd) (this.field_w.field_i.d(0));
+          var22_ref = (Territory) (this.field_w.field_i.d(0));
           var3 = var22_ref;
-          var21_ref = (sd) (this.field_w.field_i.a((byte) -71));
+          var21_ref = (Territory) (this.field_w.field_i.a((byte) -71));
           if (var21_ref.g(-98) > var22_ref.g(107)) {
             var2 = var22_ref;
             var3 = var21_ref;
           } else {
             var2 = var21_ref;
           }
-          var4_ref_sd = (sd) (this.field_w.field_i.a((byte) -71));
+          var4_ref_sd = (Territory) (this.field_w.field_i.a((byte) -71));
           while (var4_ref_sd != null) {
             if (var4_ref_sd.g(-115) > var3.g(-111)) {
               var2 = var3;
               var3 = var4_ref_sd;
             }
-            var4_ref_sd = (sd) (this.field_w.field_i.a((byte) -71));
+            var4_ref_sd = (Territory) (this.field_w.field_i.a((byte) -71));
           }
           var5_ref = null;
           var6 = null;
@@ -2353,25 +2353,25 @@ final class hi implements uj {
           }
           if (var5_ref != null &&
             var6 != null) {
-            vj.field_E.a((byte) -113, new qm(3, this.field_w, (ln) (var5_ref), (ln) (var6)));
+            vj.field_E.a((byte) -113, new qm(3, this.field_w, (Star) (var5_ref), (Star) (var6)));
             return;
           }
           throw new RuntimeException("TaskAI has more than one territory but can't find a star in each to link with a Tannhauser");
         }
-        var2Lifetime1 = (sd) (this.field_w.field_i.d(0));
-        var3Lifetime1 = (sd) (this.field_w.field_i.a((byte) -71));
+        var2Lifetime1 = (Territory) (this.field_w.field_i.d(0));
+        var3Lifetime1 = (Territory) (this.field_w.field_i.a((byte) -71));
         while (var3Lifetime1 != null) {
           if (var3Lifetime1.g(-48) > var2Lifetime1.g(84)) {
             var2Lifetime1 = var3Lifetime1;
           }
-          var3Lifetime1 = (sd) (this.field_w.field_i.a((byte) -71));
+          var3Lifetime1 = (Territory) (this.field_w.field_i.a((byte) -71));
         }
         var5 = 0;
         var6Lifetime1 = null;
         var7Lifetime1 = var2Lifetime1.j(18229);
         while (var7Lifetime1 != null) {
-          var4 = ((ln) (var7Lifetime1)).field_x;
-          if (((ln) (var7Lifetime1)).field_u ||
+          var4 = ((Star) (var7Lifetime1)).field_x;
+          if (((Star) (var7Lifetime1)).field_u ||
             qo.field_e == var7Lifetime1) {
             var4 = var4 * 2;
           }
@@ -2391,7 +2391,7 @@ final class hi implements uj {
         for (var11 = 0; var11 < var9.length; var11++) {
           var12 = var9[var11];
           stackIn_68_0 = var12.field_R;
-          stackIn_68_1 = ((ln) (var6Lifetime1)).field_R;
+          stackIn_68_1 = ((Star) (var6Lifetime1)).field_R;
           if (stackIn_68_0 != stackIn_68_1 && (var12.field_y == this.field_w ||
             null == var12.field_y ||
             !this.field_w.field_h[var12.field_y.field_x]) && (var12.field_y != this.field_w ||
@@ -2402,7 +2402,7 @@ final class hi implements uj {
               var23 = var14_ref_ln__[var15];
               var7Lifetime2 = var23;
               var7Lifetime2 = var23;
-              if (((ln) (var6Lifetime1)).field_R != var23.field_R) {
+              if (((Star) (var6Lifetime1)).field_R != var23.field_R) {
                 continue;
               }
               var13 = 1;
@@ -2422,7 +2422,7 @@ final class hi implements uj {
               if (this.field_h &&
                 var12.field_L == 2) {
                 if (!this.field_m.field_o.field_i) {
-                  var16Lifetime1 = ((ln) (var6Lifetime1)).field_R.field_r;
+                  var16Lifetime1 = ((Star) (var6Lifetime1)).field_R.field_r;
                 } else {
                   var16Lifetime1 = this.field_w.field_m.field_r;
                 }
@@ -2462,12 +2462,12 @@ final class hi implements uj {
           }
         }
         if (var7Lifetime2 != null) {
-          vj.field_E.a((byte) -113, new qm(3, this.field_w, (ln) (var6Lifetime1), (ln) (var7Lifetime2)));
+          vj.field_E.a((byte) -113, new qm(3, this.field_w, (Star) (var6Lifetime1), (Star) (var7Lifetime2)));
         }
         return;
     }
 
-    private final void a(byte param0, ln param1) {
+    private final void a(byte param0, Star param1) {
         Object stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -2476,11 +2476,11 @@ final class hi implements uj {
         qm var4 = null;
         try {
           if (5 > this.field_w.field_u[2]) {
-            throw new RuntimeException(this.field_w.field_t + " is trying to deploy a Stellar Bomb it doesn't have at star " + param1.field_I);
+            throw new RuntimeException(this.field_w.name + " is trying to deploy a Stellar Bomb it doesn't have at star " + param1.name);
           }
           if (!mr.field_f) {
             if (this.field_w == param1.field_y) {
-              throw new RuntimeException(this.field_w.field_t + " is trying to Stellar Bomb itself at star " + param1.field_I);
+              throw new RuntimeException(this.field_w.name + " is trying to Stellar Bomb itself at star " + param1.name);
             }
             if (param0 != -82) {
               return;
@@ -2501,12 +2501,12 @@ final class hi implements uj {
             break;
           }
           if (var3 == null) {
-            throw new RuntimeException(this.field_w.field_t + "'s deployedStellarBomb variable incorrectly set to true.");
+            throw new RuntimeException(this.field_w.name + "'s deployedStellarBomb variable incorrectly set to true.");
           }
           if (((qm) (var3)).field_q == km.field_u) {
-            throw new RuntimeException(this.field_w.field_t + " is trying to deploy a Stellar Bomb it has already used." + " Already deployed at star " + ((qm) (var3)).field_q.field_I + ", now trying to deploy at " + param1.field_I);
+            throw new RuntimeException(this.field_w.name + " is trying to deploy a Stellar Bomb it has already used." + " Already deployed at star " + ((qm) (var3)).field_q.name + ", now trying to deploy at " + param1.name);
           }
-          throw new RuntimeException(this.field_w.field_t + ": TaskAI.deployStellarBomb: targetStellarBomb is not the star the ProjectUse points at." + " targetStellarBomb: " + km.field_u.field_I + ", bomb.s1: " + ((qm) (var3)).field_q);
+          throw new RuntimeException(this.field_w.name + ": TaskAI.deployStellarBomb: targetStellarBomb is not the star the ProjectUse points at." + " targetStellarBomb: " + km.field_u.name + ", bomb.s1: " + ((qm) (var3)).field_q);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -2529,45 +2529,45 @@ final class hi implements uj {
         StringBuilder stackIn_158_1 = null;
         String stackIn_159_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ln[] var4 = null;
+        Star[] var4 = null;
         RuntimeException var4_ref = null;
         int var6 = 0;
         int var7 = 0;
         int[] var8 = null;
         int var9 = 0;
-        sd var9_ref_sd = null;
+        Territory var9_ref_sd = null;
         int var10 = 0;
         int var11 = 0;
-        ln[] var11_ref_ln__ = null;
+        Star[] var11_ref_ln__ = null;
         int var12_int = 0;
-        ln[] var12 = null;
-        ln var13_ref_ln = null;
+        Star[] var12 = null;
+        Star var13_ref_ln = null;
         int var13 = 0;
-        ln var14 = null;
+        Star var14 = null;
         int var15 = 0;
         int[] var15_ref_int__ = null;
-        ln var16_ref_ln = null;
+        Star var16_ref_ln = null;
         int var16 = 0;
-        ln[] var17 = null;
+        Star[] var17 = null;
         int var18 = 0;
-        ln var19 = null;
+        Star var19 = null;
         int var20 = 0;
         Object var21 = null;
-        sd var21_ref = null;
+        Territory var21_ref = null;
         int var22 = 0;
-        ln[] var23 = null;
+        Star[] var23 = null;
         int[] var25 = null;
-        ln[] var26 = null;
-        ln[] var27 = null;
-        ln var28 = null;
-        ln[] var29 = null;
+        Star[] var26 = null;
+        Star[] var27 = null;
+        Star var28 = null;
+        Star[] var29 = null;
         int[] var30 = null;
         int[] var32 = null;
         int[] var33 = null;
         int[] var35 = null;
-        ln var19Lifetime1;
-        ln var19Lifetime2;
-        ln var19Lifetime1Lifetime1;
+        Star var19Lifetime1;
+        Star var19Lifetime2;
+        Star var19Lifetime1Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
         int var9Lifetime1;
@@ -2593,18 +2593,18 @@ final class hi implements uj {
             if (var23[var8_int].field_y == this.field_w) {
               var7Lifetime1 = 0;
               var6Lifetime1 = 0;
-              var9_ref_sd = (sd) (this.field_w.field_i.d(0));
+              var9_ref_sd = (Territory) (this.field_w.field_i.d(0));
               while (var9_ref_sd != null) {
                 if (var23[var8_int].field_R != var9_ref_sd) {
                   var6Lifetime1++;
-                  var9_ref_sd = (sd) (this.field_w.field_i.a((byte) -71));
+                  var9_ref_sd = (Territory) (this.field_w.field_i.a((byte) -71));
                   continue;
                 }
                 var7Lifetime1 = 1;
                 break;
               }
               if (var7Lifetime1 == 0) {
-                throw new RuntimeException("Can't find the Territory of a star owned by the AI: " + var23[var8_int].field_I);
+                throw new RuntimeException("Can't find the Territory of a star owned by the AI: " + var23[var8_int].name);
               }
               var35[var8_int] = var6Lifetime1;
             } else {
@@ -2726,7 +2726,7 @@ final class hi implements uj {
               }
             }
             var11Lifetime2 = 0;
-            var29 = (ln[]) ((Object) var4.clone());
+            var29 = (Star[]) ((Object) var4.clone());
             var12 = var29;
             var13Lifetime1 = 1;
             while (var13Lifetime1 != 0) {
@@ -2751,7 +2751,7 @@ final class hi implements uj {
               if (this.field_m.field_o.field_i) {
                 if (var10Lifetime2 > this.field_i[0] &&
                   param2) {
-                  throw new RuntimeException(this.field_w.field_t + " has decided to attack a system, but appears not to have sufficient fleets to carry through.");
+                  throw new RuntimeException(this.field_w.name + " has decided to attack a system, but appears not to have sufficient fleets to carry through.");
                 }
                 var15Lifetime1Lifetime1 = var10Lifetime2;
                 if (var10Lifetime2 > this.field_i[0]) {
@@ -2787,17 +2787,17 @@ final class hi implements uj {
                         var19Lifetime1Lifetime1 = var17[var18];
                         if (this.field_w == var19Lifetime1Lifetime1.field_y) {
                           var20 = 0;
-                          var21_ref = (sd) (this.field_w.field_i.d(0));
+                          var21_ref = (Territory) (this.field_w.field_i.d(0));
                           while (var21_ref != null) {
                             if (var21_ref != var19Lifetime1Lifetime1.field_R) {
                               var20++;
-                              var21_ref = (sd) (this.field_w.field_i.a((byte) -71));
+                              var21_ref = (Territory) (this.field_w.field_i.a((byte) -71));
                               continue;
                             }
                             break;
                           }
                           if (var21_ref == null) {
-                            throw new RuntimeException("Cannot find Territory that " + this.field_w.field_t + "'s star belongs to: " + var19Lifetime1Lifetime1.field_I);
+                            throw new RuntimeException("Cannot find Territory that " + this.field_w.name + "'s star belongs to: " + var19Lifetime1Lifetime1.name);
                           }
                           if (var20 == var33[var16]) {
                             if (this.field_i[var20] <= var10Lifetime2) {
@@ -2828,7 +2828,7 @@ final class hi implements uj {
             }
             if (var10Lifetime2 > 0 &&
               param2) {
-              throw new RuntimeException("After full attack movement, " + this.field_w.field_t + " still hasn't sent enough fleets to " + param1.field_n.field_I);
+              throw new RuntimeException("After full attack movement, " + this.field_w.name + " still hasn't sent enough fleets to " + param1.field_n.name);
             }
             return;
           }
@@ -2847,7 +2847,7 @@ final class hi implements uj {
         }
     }
 
-    hi(fs param0, dc param1, mn param2) {
+    TaskAi(Player param0, GameState param1, mn param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

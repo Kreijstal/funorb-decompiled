@@ -4,7 +4,7 @@
 final class qa extends DualLinkNode {
     int field_v;
     static int field_t;
-    ln field_u;
+    Star field_u;
     static IntrusiveDeque field_r;
     static vd field_w;
     static Sprite field_q;
@@ -30,7 +30,7 @@ final class qa extends DualLinkNode {
         field_s = (String[][]) null;
     }
 
-    qa(ln param0, int param1) {
+    qa(Star param0, int param1) {
         try {
           this.field_u = param0;
           this.field_v = param1;

@@ -9,7 +9,7 @@ final class ho {
     static int field_a;
     static char field_h;
     static String field_g;
-    static fs field_d;
+    static Player field_d;
     static byte[] field_i;
     static int[] field_e;
 

@@ -5,19 +5,19 @@ import java.util.*;
 
 final class vn extends IntrusiveNode {
     int field_z;
-    fs field_k;
+    Player field_k;
     int field_x;
     int field_n;
-    fs field_j;
-    fs[] field_q;
+    Player field_j;
+    Player[] field_q;
     int field_u;
     int[] field_m;
     static int[] field_r;
     static String field_p;
     int[] field_v;
-    ln field_o;
-    sd field_h;
-    fs field_l;
+    Star field_o;
+    Territory field_h;
+    Player field_l;
     static String field_A;
     static String field_i;
     static rn field_w;
@@ -46,7 +46,7 @@ final class vn extends IntrusiveNode {
           if (param0 != -14145) {
             vn.e(-71);
           }
-          ln.f((byte) -101);
+          Star.f((byte) -101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

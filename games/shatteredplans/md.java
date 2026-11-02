@@ -54,7 +54,7 @@ final class md extends UiWidget {
           gf.f(var8 + this.field_H, var7, this.field_H, var13Lifetime1);
           gf.f(-this.field_H + var8, var7, this.field_H, var13Lifetime1);
         }
-        ln.f((byte) 111);
+        Star.f((byte) 111);
         return var15;
     }
 
@@ -144,13 +144,13 @@ final class md extends UiWidget {
           for (var6 = -this.field_P + param2; var5_int > var6; var6 = var6 + param0.field_z) {
             param0.f(var6, param1);
           }
-          ln.f((byte) -64);
+          Star.f((byte) -64);
           if (gf.field_i <= param2 + this.field_R.field_z) {
             aq.a((byte) -90, this.field_S);
             param0.f(-this.field_P, 0);
             param0.f(-this.field_P + this.field_H * 2, 0);
             this.field_N.e(0, 0);
-            ln.f((byte) -91);
+            Star.f((byte) -91);
             this.field_S.f(param2, param1);
           }
           if (gf.field_l >= -this.field_R.field_z + var5_int) {
@@ -160,7 +160,7 @@ final class md extends UiWidget {
             param0.f(-var7, 0);
             param0.f(this.field_H * 2 - var7, 0);
             this.field_R.e(0, 0);
-            ln.f((byte) 111);
+            Star.f((byte) 111);
             this.field_S.f(-this.field_R.field_z + var5_int, param1);
             return;
           }
@@ -224,7 +224,7 @@ final class md extends UiWidget {
         if (this.field_y < 65536) {
           BufferedSocket.a(-6187, var5 + this.field_x, var6 + this.field_n, var6, var5 + (this.field_y * this.field_x >> 16));
           this.a(this.field_z[1], var6, var5, -1);
-          ln.f((byte) -78);
+          Star.f((byte) -78);
         }
     }
 
@@ -233,26 +233,26 @@ final class md extends UiWidget {
         int var1 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1Lifetime1;
-        ln.field_F = new Sprite(182 - IntrusiveDeque.field_a[0].field_z * 3 / 4, rs.field_Cb.field_J);
+        Star.field_F = new Sprite(182 - IntrusiveDeque.field_a[0].field_z * 3 / 4, rs.field_Cb.field_J);
         ra.a(param0 - 106);
-        ln.field_F.e();
-        for (var1 = 1; -1 + ln.field_F.field_w > var1; var1++) {
-          var2 = (-var1 + ln.field_F.field_w / 2) * (ln.field_F.field_w / 2 - var1);
-          gf.f(0, var1, ln.field_F.field_z, 328965 * (ln.field_F.field_w / 2 * (ln.field_F.field_w / 2) - var2));
+        Star.field_F.e();
+        for (var1 = 1; -1 + Star.field_F.field_w > var1; var1++) {
+          var2 = (-var1 + Star.field_F.field_w / 2) * (Star.field_F.field_w / 2 - var1);
+          gf.f(0, var1, Star.field_F.field_z, 328965 * (Star.field_F.field_w / 2 * (Star.field_F.field_w / 2) - var2));
         }
-        gf.f(param0, 0, ln.field_F.field_z, 1052688);
-        gf.f(0, -1 + ln.field_F.field_w, ln.field_F.field_z, 1052688);
-        for (var1Lifetime1 = 0; var1Lifetime1 < ln.field_F.field_w; var1Lifetime1++) {
-          gf.a(-1 + ln.field_F.field_z, var1Lifetime1, ui.a(1052688, ln.field_F.field_B[-1 + (var1Lifetime1 + 1) * ln.field_F.field_z], -114, 128));
+        gf.f(param0, 0, Star.field_F.field_z, 1052688);
+        gf.f(0, -1 + Star.field_F.field_w, Star.field_F.field_z, 1052688);
+        for (var1Lifetime1 = 0; var1Lifetime1 < Star.field_F.field_w; var1Lifetime1++) {
+          gf.a(-1 + Star.field_F.field_z, var1Lifetime1, ui.a(1052688, Star.field_F.field_B[-1 + (var1Lifetime1 + 1) * Star.field_F.field_z], -114, 128));
         }
-        gf.a(ln.field_F.field_z - 2, 1, ui.a(1052688, ln.field_F.field_B[ln.field_F.field_z * 2 - 2], -83, 128));
-        gf.a(ln.field_F.field_z - 3, 1, ui.a(1052688, ln.field_F.field_B[-3 + ln.field_F.field_z * 2], -78, 192));
-        gf.a(-2 + ln.field_F.field_z, 2, ui.a(1052688, ln.field_F.field_B[-2 + ln.field_F.field_z * 3], -110, 192));
-        gf.a(ln.field_F.field_z - 2, ln.field_F.field_w - 2, ui.a(1052688, ln.field_F.field_B[ln.field_F.field_z * (ln.field_F.field_w - 1) - 2], param0 - 117, 128));
-        gf.a(-3 + ln.field_F.field_z, -2 + ln.field_F.field_w, ui.a(1052688, ln.field_F.field_B[-3 + (-1 + ln.field_F.field_w) * ln.field_F.field_z], -125, 192));
-        gf.a(-2 + ln.field_F.field_z, -3 + ln.field_F.field_w, ui.a(1052688, ln.field_F.field_B[-2 + ln.field_F.field_z * (-2 + ln.field_F.field_w)], -111, 192));
+        gf.a(Star.field_F.field_z - 2, 1, ui.a(1052688, Star.field_F.field_B[Star.field_F.field_z * 2 - 2], -83, 128));
+        gf.a(Star.field_F.field_z - 3, 1, ui.a(1052688, Star.field_F.field_B[-3 + Star.field_F.field_z * 2], -78, 192));
+        gf.a(-2 + Star.field_F.field_z, 2, ui.a(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * 3], -110, 192));
+        gf.a(Star.field_F.field_z - 2, Star.field_F.field_w - 2, ui.a(1052688, Star.field_F.field_B[Star.field_F.field_z * (Star.field_F.field_w - 1) - 2], param0 - 117, 128));
+        gf.a(-3 + Star.field_F.field_z, -2 + Star.field_F.field_w, ui.a(1052688, Star.field_F.field_B[-3 + (-1 + Star.field_F.field_w) * Star.field_F.field_z], -125, 192));
+        gf.a(-2 + Star.field_F.field_z, -3 + Star.field_F.field_w, ui.a(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * (-2 + Star.field_F.field_w)], -111, 192));
         cg.i(param0 + 0);
-        return ln.field_F;
+        return Star.field_F;
     }
 
     private final Sprite h(int param0) {
@@ -276,7 +276,7 @@ final class md extends UiWidget {
             gf.a(var6, var5, var9 << 8 | var9 | var9 << 16);
           }
         }
-        ln.f((byte) 110);
+        Star.f((byte) 110);
         return var3;
     }
 

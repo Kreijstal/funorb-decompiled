@@ -209,9 +209,9 @@ final class ClientException extends RuntimeException {
     final static int a(int param0, int param1, byte param2) {
         if (param2 < 81) {
           field_d = -104;
-          return hi.a(param0 + (-param1 + 1), tg.field_b, -11) + param1;
+          return TaskAi.a(param0 + (-param1 + 1), tg.field_b, -11) + param1;
         }
-        return hi.a(param0 + (-param1 + 1), tg.field_b, -11) + param1;
+        return TaskAi.a(param0 + (-param1 + 1), tg.field_b, -11) + param1;
     }
 
     public static void b(int param0) {

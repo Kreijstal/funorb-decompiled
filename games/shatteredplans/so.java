@@ -150,7 +150,7 @@ final class so extends qe {
         }
     }
 
-    so(ln param0) {
+    so(Star param0) {
         double var2_double = 0.0;
         int var4 = 0;
         try {

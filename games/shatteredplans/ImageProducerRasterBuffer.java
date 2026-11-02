@@ -38,7 +38,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, me.field_e, nn.field_b);
+              var9.fillRect(0, 0, VictoryChecker.field_e, nn.field_b);
             }
             if (param4 == null) {
               param4 = new java.awt.Color(140, 17, 17);
@@ -57,11 +57,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               var10.setFont(ha.field_a);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(6 * param0.length()) + 304) / 2, 22);
-              var9.drawImage(IterableNodeHashTable.field_a, me.field_e / 2 - 152, -18 + nn.field_b / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(IterableNodeHashTable.field_a, VictoryChecker.field_e / 2 - 152, -18 + nn.field_b / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = me.field_e / 2 - 152;
+              var7 = VictoryChecker.field_e / 2 - 152;
               var8 = nn.field_b / 2 - 18;
               var9.setColor(param4);
               var9.drawRect(var7, var8, 303, 33);
@@ -76,7 +76,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             if (gd.field_a != null) {
               var9.setFont(ha.field_a);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(gd.field_a, me.field_e / 2 - 6 * gd.field_a.length() / 2, -26 + nn.field_b / 2);
+              var9.drawString(gd.field_a, VictoryChecker.field_e / 2 - 6 * gd.field_a.length() / 2, -26 + nn.field_b / 2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

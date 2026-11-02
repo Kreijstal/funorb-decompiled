@@ -391,7 +391,7 @@ final class js {
           pc.field_q = tp.field_b;
           ol.field_g = hm.field_q;
           jc.field_r = fe.field_B;
-          me.field_j = false;
+          VictoryChecker.field_j = false;
           td.field_L = false;
           se.field_k = false;
           if (param0 != -10) {

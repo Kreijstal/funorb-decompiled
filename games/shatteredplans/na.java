@@ -162,9 +162,9 @@ final class na {
           bk.field_b[1] = np.field_l;
           bk.field_b[5] = rk.field_m;
           bk.field_b[10] = nd.field_b;
-          bk.field_b[9] = ln.field_P;
+          bk.field_b[9] = Star.field_P;
           bk.field_b[8] = nr.field_s;
-          bk.field_b[7] = me.field_f;
+          bk.field_b[7] = VictoryChecker.field_f;
           bk.field_b[2] = nf.field_m;
           bk.field_b[3] = wa.field_i;
           w.field_J[0] = new String[5];

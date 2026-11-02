@@ -148,9 +148,9 @@ class qr extends hm {
         }
     }
 
-    final static dc a(int param0, int param1, String[] param2, vr param3, int param4, int param5) {
+    final static GameState a(int param0, int param1, String[] param2, vr param3, int param4, int param5) {
         try {
-          dc stackIn_17_0 = null;
+          GameState stackIn_17_0 = null;
           RuntimeException stackIn_22_0 = null;
           StringBuilder stackIn_22_1 = null;
           String stackIn_23_2 = null;
@@ -167,13 +167,13 @@ class qr extends hm {
           int var12 = 0;
           int var13 = 0;
           int var14 = 0;
-          dc var15 = null;
+          GameState var15 = null;
           hs var16 = null;
           vl var17 = null;
           pc var18 = null;
           var14 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
-            var15 = new dc(param0, param3, param4, param2);
+            var15 = new GameState(param0, param3, param4, param2);
             var7 = param2.length;
             var8 = var7 * md.field_J[param5];
             if (param1 != 50) {
@@ -1013,7 +1013,7 @@ class qr extends hm {
           ak.field_z.e();
           var6.c(0, -qa.field_q.field_w);
           ak.field_z.field_x = qa.field_q.field_w;
-          ln.f((byte) 85);
+          Star.f((byte) 85);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "qr.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

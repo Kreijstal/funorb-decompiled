@@ -173,7 +173,7 @@ final class qh extends vd {
         mr.field_g.c(var8Lifetime1, 3 + this.field_t, 64);
         for (var10 = var7Lifetime3; var10 < var8Lifetime1; var10++) {
           var9 = 64 + 192 * (-var10 + var8Lifetime1) / (var8Lifetime1 - var7Lifetime3);
-          me.field_h.c(var10, this.field_t + 3, var9);
+          VictoryChecker.field_h.c(var10, this.field_t + 3, var9);
         }
         rs.field_Cb.c(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
         vd var12 = (vd) (this.field_l.f(3725));

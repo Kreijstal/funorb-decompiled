@@ -3,10 +3,10 @@
  */
 final class mg extends cn {
     static int field_A;
-    ln field_B;
-    fs field_G;
+    Star field_B;
+    Player field_G;
     static String field_E;
-    ln field_y;
+    Star field_y;
     int field_z;
     static boolean field_C;
     static String field_D;
@@ -42,7 +42,7 @@ final class mg extends cn {
         return gb.field_n;
     }
 
-    mg(ln param0, ln param1, int param2) {
+    mg(Star param0, Star param1, int param2) {
         try {
           this.field_B = param1;
           this.field_y = param0;
@@ -53,7 +53,7 @@ final class mg extends cn {
         }
     }
 
-    mg(ln param0, ln param1, fs param2, int param3) {
+    mg(Star param0, Star param1, Player param2, int param3) {
         try {
           this.field_z = param3;
           this.field_G = param2;
@@ -64,9 +64,9 @@ final class mg extends cn {
         }
     }
 
-    final static ln a(dc param0, PacketBuffer param1, int param2) {
+    final static Star a(GameState param0, PacketBuffer param1, int param2) {
         RuntimeException var3 = null;
-        ln stackIn_3_0 = null;
+        Star stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

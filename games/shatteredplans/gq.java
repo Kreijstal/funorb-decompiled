@@ -108,11 +108,11 @@ final class gq {
         }
     }
 
-    final static ln a(ln[] param0, int param1, PacketBuffer param2) {
+    final static Star a(Star[] param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ln stackIn_2_0 = null;
-        ln stackIn_6_0 = null;
+        Star stackIn_2_0 = null;
+        Star stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -122,7 +122,7 @@ final class gq {
         try {
           var3_int = param2.j(-74);
           if (param1 != -2284) {
-            stackIn_2_0 = (ln) null;
+            stackIn_2_0 = (Star) null;
             return stackIn_2_0;
           }
           if (param0.length <= var3_int) {

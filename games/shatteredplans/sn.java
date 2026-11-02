@@ -42,7 +42,7 @@ final class sn {
         if (var5 < 256) {
           gf.c(0, 0, gf.field_b, gf.field_k, 0, 256 - var5);
         }
-        ln.f((byte) -47);
+        Star.f((byte) -47);
         if (param1 != 28318) {
           return;
         }
@@ -84,9 +84,9 @@ final class sn {
         return String.valueOf(param0);
     }
 
-    final static void a(int[] param0, byte param1, sd param2) {
+    final static void a(int[] param0, byte param1, Territory param2) {
         int var3_int = 0;
-        ln var4 = null;
+        Star var4 = null;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

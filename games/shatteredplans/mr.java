@@ -19,13 +19,13 @@ final class mr implements fo {
     public final l a(byte param0) throws jn {
         int var6 = 0;
         l var3;
-        ln[] var4;
+        Star[] var4;
         int var5;
-        ln var7;
+        Star var7;
         int var8;
         int var9;
         int var10;
-        ln var11;
+        Star var11;
         int var12;
         pc var13;
         int var9Lifetime1;

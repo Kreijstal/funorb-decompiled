@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class ln extends DualLinkNode {
+final class Star extends DualLinkNode {
     int field_C;
     int field_Q;
-    sd field_R;
+    Territory field_R;
     static Sprite[][] field_O;
     int field_z;
-    String field_I;
+    String name;
     int field_S;
     static String field_U;
     static String field_P;
     static String field_q;
     static int field_w;
-    ln[] field_D;
+    Star[] field_D;
     int field_x;
     static Sprite field_F;
     int field_B;
@@ -27,8 +27,8 @@ final class ln extends DualLinkNode {
     IntrusiveDeque field_T;
     int field_N;
     boolean field_u;
-    fs field_t;
-    fs field_y;
+    Player field_t;
+    Player field_y;
     int field_L;
     static Sprite field_K;
     int field_A;
@@ -42,7 +42,7 @@ final class ln extends DualLinkNode {
         int var2;
         int var3;
         int var6;
-        ln var5;
+        Star var5;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_D == null) {
           return;
@@ -71,7 +71,7 @@ final class ln extends DualLinkNode {
         field_H = null;
         field_P = null;
         if (param0 != 0) {
-          ln.e(-26);
+          Star.e(-26);
         }
         field_o = null;
         field_K = null;
@@ -81,9 +81,9 @@ final class ln extends DualLinkNode {
         field_O = (Sprite[][]) null;
     }
 
-    final void a(ln param0, byte param1) {
-        ln[] var7 = null;
-        ln[] var8 = null;
+    final void a(Star param0, byte param1) {
+        Star[] var7 = null;
+        Star[] var8 = null;
         int var4 = 0;
         int var5 = 0;
         int incrementValue$0 = 0;
@@ -92,14 +92,14 @@ final class ln extends DualLinkNode {
           return;
         }
         if (this.field_D.length == 1) {
-          this.field_D = new ln[]{};
+          this.field_D = new Star[]{};
           param0.a(this, (byte) -124);
           return;
         }
         try {
-          var7 = new ln[-1 + this.field_D.length];
+          var7 = new Star[-1 + this.field_D.length];
           var8 = var7;
-          ln[] var3 = var8;
+          Star[] var3 = var8;
           var4 = 0;
           for (var5 = 0; this.field_D.length > var5; var5++) {
             if (param0 != this.field_D[var5]) {
@@ -118,11 +118,11 @@ final class ln extends DualLinkNode {
         }
     }
 
-    final void a(byte param0, ln param1) {
+    final void a(byte param0, Star param1) {
         int var4 = 0;
-        ln[] var3 = null;
+        Star[] var3 = null;
         int var5 = 0;
-        ln[] var6 = null;
+        Star[] var6 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -131,7 +131,7 @@ final class ln extends DualLinkNode {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (null != this.field_D) {
-            var6 = new ln[1 + this.field_D.length];
+            var6 = new Star[1 + this.field_D.length];
             var3 = var6;
             for (var4 = 0; var4 < this.field_D.length; var4++) {
               var6[var4] = this.field_D[var4];
@@ -139,7 +139,7 @@ final class ln extends DualLinkNode {
             var3[this.field_D.length] = param1;
             this.field_D = var3;
           } else {
-            this.field_D = new ln[]{param1};
+            this.field_D = new Star[]{param1};
           }
           if (param0 > -74) {
             field_q = (String) null;
@@ -168,7 +168,7 @@ final class ln extends DualLinkNode {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ln var7 = null;
+        Star var7 = null;
         int[] var8 = null;
         int var9 = 0;
         int[] var10 = null;
@@ -194,8 +194,8 @@ final class ln extends DualLinkNode {
           var15 = var8;
           var4 = 0;
           if (param1 < 61) {
-            var7 = (ln) null;
-            this.a((ln) null, (byte) 104);
+            var7 = (Star) null;
+            this.a((Star) null, (byte) 104);
           }
           var8[2] = 4 * this.field_G[3];
           var8[3] = 4 * this.field_G[2];
@@ -236,14 +236,14 @@ final class ln extends DualLinkNode {
         }
     }
 
-    final boolean b(ln param0, byte param1) {
-        ln[] var3 = null;
+    final boolean b(Star param0, byte param1) {
+        Star[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        ln var5 = null;
+        Star var5 = null;
         int var6 = 0;
-        ln[] var7 = null;
-        ln stackIn_13_1 = null;
+        Star[] var7 = null;
+        Star stackIn_13_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -259,7 +259,7 @@ final class ln extends DualLinkNode {
           while (true) {
             if (var7.length <= var4) {
               if (param1 != 10) {
-                stackIn_13_1 = (ln) null;
+                stackIn_13_1 = (Star) null;
                 this.a(stackIn_13_1, (byte) 102);
               }
               return false;
@@ -298,7 +298,7 @@ final class ln extends DualLinkNode {
         ql.field_p.a((byte) -113, var1);
     }
 
-    ln(int param0, int param1, int param2, int param3) {
+    Star(int param0, int param1, int param2, int param3) {
         this.field_G = new int[4];
         this.field_z = param3;
         this.field_p = param0;

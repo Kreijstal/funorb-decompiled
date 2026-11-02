@@ -156,7 +156,7 @@ final class di extends IntrusiveNode {
         }
     }
 
-    final static void a(ln param0, boolean param1, PacketBuffer param2) {
+    final static void a(Star param0, boolean param1, PacketBuffer param2) {
         PacketBuffer stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -245,7 +245,7 @@ final class di extends IntrusiveNode {
           stackIn_29_1 = (param1) && (!ti.field_e);
           ((qr) (Object) stackIn_28_0).b(stackIn_29_1, 115);
         }
-        ln.f((byte) 123);
+        Star.f((byte) 123);
     }
 
     di() {
@@ -369,7 +369,7 @@ final class di extends IntrusiveNode {
           if (wg.field_a.field_yb.field_rb == 0) {
             return;
           }
-          lg.field_e = new jp(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, ln.field_E, h.field_v, SpriteState.field_u, SpriteState.field_u);
+          lg.field_e = new jp(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, Star.field_E, h.field_v, SpriteState.field_u, SpriteState.field_u);
           ia.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

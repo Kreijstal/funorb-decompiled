@@ -65,7 +65,7 @@ final class fb extends qr {
         field_gc = null;
     }
 
-    final static lp a(int param0, int param1, int param2, int param3, fs param4, int param5, fs[] param6, dc param7) {
+    final static lp a(int param0, int param1, int param2, int param3, Player param4, int param5, Player[] param6, GameState param7) {
         int var12_int = 0;
         int stackIn_9_0 = 0;
         lp stackIn_32_0 = null;
@@ -80,10 +80,10 @@ final class fb extends qr {
         RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
-        fs[] var11_ref_fs__ = null;
+        Player[] var11_ref_fs__ = null;
         int var11 = 0;
         b var12 = null;
-        fs var13 = null;
+        Player var13 = null;
         ff var13_ref = null;
         qk var13_ref2 = null;
         String var14 = null;
@@ -208,7 +208,7 @@ final class fb extends qr {
         }
         mf.a(true, param5);
         if (qa.field_t > param9) {
-          hi.a(param0, param9 ^ -26671, param5, param2);
+          TaskAi.a(param0, param9 ^ -26671, param5, param2);
         }
         dn.field_f.field_y = 1;
         dn.field_f.field_kb = fg.field_b.field_kb;
@@ -230,7 +230,7 @@ final class fb extends qr {
         }
         ga.a(param1, (byte) 116, param3, param6, param2, param4, param8);
         dm.a(param4, 0, ro.field_a, param1, param2);
-        ln.field_w = ln.field_w + 1;
+        Star.field_w = Star.field_w + 1;
     }
 
     final int g(int param0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh extends me {
+final class nh extends VictoryChecker {
     static bc field_l;
     private int field_k;
     private int[] field_n;
@@ -70,12 +70,12 @@ final class nh extends me {
         return param1 >= 0 ? true : false;
     }
 
-    final fs[] b(int param0) {
+    final Player[] b(int param0) {
         int var5_int = 0;
         int var6 = 0;
         int var2;
         double var3;
-        fs[] var5;
+        Player[] var5;
         double var6_double;
         double var7;
         int var9;
@@ -105,9 +105,9 @@ final class nh extends me {
           }
         }
         if (var2 == 0) {
-          return new fs[]{};
+          return new Player[]{};
         }
-        var5 = new fs[var2];
+        var5 = new Player[var2];
         for (var6 = 0; this.field_i.length > var6; var6++) {
           if (this.field_n[var6] != 0) {
             var7 = (double)(this.field_k - this.field_o[var6]) / (double)this.field_n[var6];
@@ -195,7 +195,7 @@ final class nh extends me {
         }
     }
 
-    nh(fs[] param0) {
+    nh(Player[] param0) {
         super(param0);
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -239,7 +239,7 @@ final class nh extends me {
         return cc.field_n * this.field_o.length + rs.field_Cb.field_J;
     }
 
-    final boolean a(dc param0, byte param1) {
+    final boolean a(GameState param0, byte param1) {
         int stackIn_41_0 = 0;
         int stackIn_41_1 = 0;
         RuntimeException stackIn_65_0 = null;
@@ -250,12 +250,12 @@ final class nh extends me {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        ln var5_ref_ln = null;
+        Star var5_ref_ln = null;
         int var6 = 0;
         int var7 = 0;
-        dc var8 = null;
+        GameState var8 = null;
         int var9 = 0;
-        sd var10 = null;
+        Territory var10 = null;
         int var4Lifetime1;
         int var5Lifetime1;
         int var3_intLifetime1;
@@ -280,7 +280,7 @@ final class nh extends me {
           }
           for (var3_intLifetime1 = 0; var3_intLifetime1 < this.field_i.length; var3_intLifetime1++) {
             this.field_n[var3_intLifetime1] = 0;
-            var10 = (sd) (this.field_i[var3_intLifetime1].field_i.d(0));
+            var10 = (Territory) (this.field_i[var3_intLifetime1].field_i.d(0));
             while (var10 != null) {
               var5_ref_ln = var10.j(18229);
               while (var5_ref_ln != null) {
@@ -303,13 +303,13 @@ final class nh extends me {
                 }
                 var5_ref_ln = var10.h(-23410);
               }
-              var10 = (sd) (this.field_i[var3_intLifetime1].field_i.a((byte) -71));
+              var10 = (Territory) (this.field_i[var3_intLifetime1].field_i.a((byte) -71));
             }
             this.field_o[var3_intLifetime1] = this.field_o[var3_intLifetime1] + this.field_n[var3_intLifetime1];
           }
           if (param1 < 23) {
-            var8 = (dc) null;
-            this.a((dc) null, (byte) -96);
+            var8 = (GameState) null;
+            this.a((GameState) null, (byte) -96);
           }
           var3_intLifetime2 = 0;
           var4Lifetime1 = 0;
@@ -334,7 +334,7 @@ final class nh extends me {
             var5++;
           }
           if (var3_intLifetime2 != 0) {
-            this.field_g = new fs[var3_intLifetime2];
+            this.field_g = new Player[var3_intLifetime2];
             var9 = 0;
             var5Lifetime1 = var9;
             while (this.field_i.length > var9) {
@@ -371,7 +371,7 @@ final class nh extends me {
         sp.field_r = param1;
     }
 
-    final void a(byte param0, dc param1, kq param2) {
+    final void a(byte param0, GameState param1, kq param2) {
         int var7_int = 0;
         int var10_int = 0;
         RuntimeException stackIn_34_0 = null;
@@ -385,11 +385,11 @@ final class nh extends me {
         RuntimeException var4_ref = null;
         int var5 = 0;
         int[] var6 = null;
-        fs[] var7 = null;
+        Player[] var7 = null;
         int[] var8 = null;
         int var8_int = 0;
         int[] var9 = null;
-        fs[] var10 = null;
+        Player[] var10 = null;
         int var11 = 0;
         int var12 = 0;
         double var13 = 0.0;
@@ -449,7 +449,7 @@ final class nh extends me {
             lh.a((byte) -93, var4, (int[]) ((Object) this.field_o.clone()));
           }
           var23 = new qk[]{new qk(0, 0, 182, rs.field_Cb.field_J, re.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(this.field_k)}))};
-          var7 = new fs[this.field_i.length];
+          var7 = new Player[this.field_i.length];
           var28 = new int[this.field_i.length];
           var22 = var28;
           var8 = var22;

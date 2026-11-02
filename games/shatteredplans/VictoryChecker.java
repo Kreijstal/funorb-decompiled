@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class me {
+abstract class VictoryChecker {
     static Sprite field_h;
     static boolean field_a;
     static String field_c;
-    fs[] field_i;
+    Player[] field_i;
     static qr field_d;
-    fs[] field_g;
+    Player[] field_g;
     static String field_f;
     static boolean field_j;
     static int field_e;
@@ -26,7 +26,7 @@ abstract class me {
         return stackIn_6_0;
     }
 
-    abstract fs[] b(int param0);
+    abstract Player[] b(int param0);
 
     public static void a(boolean param0) {
         field_d = null;
@@ -38,7 +38,7 @@ abstract class me {
         field_c = null;
     }
 
-    boolean a(dc param0, byte param1) {
+    boolean a(GameState param0, byte param1) {
         int var7 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -47,10 +47,10 @@ abstract class me {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object var4 = null;
-        fs[] var5_ref_fs__ = null;
+        Player[] var5_ref_fs__ = null;
         int var5 = 0;
         int var6 = 0;
-        fs var7_ref_fs = null;
+        Player var7_ref_fs = null;
         int var8 = 0;
         int var9 = 0;
         int var6Lifetime1;
@@ -73,7 +73,7 @@ abstract class me {
           }
           if (var3_int != 0) {
             if (var3_int == 1) {
-              this.field_g = new fs[]{(fs) (var4)};
+              this.field_g = new Player[]{(Player) (var4)};
               return true;
             }
             var9 = 0;
@@ -98,7 +98,7 @@ abstract class me {
           if (0 >= var5Lifetime1) {
             return true;
           }
-          this.field_g = new fs[var5Lifetime1];
+          this.field_g = new Player[var5Lifetime1];
           var6Lifetime2 = 0;
           for (var7 = 0; var7 < this.field_i.length; var7++) {
             if (this.field_b[var7] &&
@@ -122,12 +122,12 @@ abstract class me {
         }
     }
 
-    final boolean a(byte param0, fs param1) {
+    final boolean a(byte param0, Player param1) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        fs[] var4 = null;
-        fs var6 = null;
+        Player[] var4 = null;
+        Player var6 = null;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -163,15 +163,15 @@ abstract class me {
 
     abstract void a(int param0, PacketBuffer param1);
 
-    final fs[] a(byte param0) {
+    final Player[] a(byte param0) {
         if (param0 != -23) {
           byte[] var3 = (byte[]) null;
-          me.a(-73, (byte[]) null, -98);
+          VictoryChecker.a(-73, (byte[]) null, -98);
         }
         return this.field_g;
     }
 
-    abstract void a(byte param0, dc param1, kq param2);
+    abstract void a(byte param0, GameState param1, kq param2);
 
     final static int a(int param0, byte[] param1, int param2) {
         RuntimeException var3 = null;
@@ -184,7 +184,7 @@ abstract class me {
         try {
           if (param0 < 50) {
             var4 = (byte[]) null;
-            me.a(-118, (byte[]) null, -21);
+            VictoryChecker.a(-118, (byte[]) null, -21);
           }
           stackIn_3_0 = bs.a(param2, param1, (byte) -53, 0);
           return stackIn_3_0;
@@ -202,7 +202,7 @@ abstract class me {
         }
     }
 
-    me(fs[] param0) {
+    VictoryChecker(Player[] param0) {
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

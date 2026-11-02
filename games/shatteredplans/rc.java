@@ -98,7 +98,7 @@ final class rc extends tn {
         }
     }
 
-    final static lp a(byte param0, sd param1, em param2, boolean param3) {
+    final static lp a(byte param0, Territory param1, em param2, boolean param3) {
         int var11_int = 0;
         String dupTemp$0 = null;
         int var18 = 0;
@@ -147,12 +147,12 @@ final class rc extends tn {
           var21.field_h = param1;
           var5 = new ff(-5 + (40 - (-((5 + dm.field_d[0].field_z) * 4) - k.field_d.field_z)), rs.field_Cb.field_J - 7, fj.field_r);
           var21.a(var5, 8);
-          var22 = param1.field_q.field_I;
+          var22 = param1.field_q.name;
           var6 = var22;
           var6Lifetime1 = var22;
           var6Lifetime2 = var22;
           if (param3) {
-            var6Lifetime2 = var22 + " (" + param1.field_o.field_t + ")";
+            var6Lifetime2 = var22 + " (" + param1.field_o.name + ")";
           }
           var7 = new kb(0, 0, 209, param1.field_o.field_k, var6Lifetime2, 16777215, false);
           var21.a(var7, 8);
@@ -189,7 +189,7 @@ final class rc extends tn {
           }
           if (param0 <= 117) {
             var20 = (em) null;
-            rc.a((byte) -57, (sd) null, (em) null, true);
+            rc.a((byte) -57, (Territory) null, (em) null, true);
           }
           var13 = new qk(20 + 4 * dm.field_d[0].field_z + 40, dm.field_d[0].field_w + (var7.field_i + var8), k.field_d.field_z, rs.field_Cb.field_J, Integer.toString(var12));
           var21.a(var13, 8);

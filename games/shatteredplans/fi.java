@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fi extends IntrusiveNode implements ag {
-    ln field_k;
+    Star field_k;
     static String field_i;
     static String field_j;
     static String field_h;
@@ -33,7 +33,7 @@ final class fi extends IntrusiveNode implements ag {
             return stackIn_7_0;
           }
           if (7 == param0) {
-            stackIn_11_0 = dc.field_a;
+            stackIn_11_0 = GameState.field_a;
             return stackIn_11_0;
           }
           if (8 == param0) {
@@ -125,7 +125,7 @@ final class fi extends IntrusiveNode implements ag {
         }
     }
 
-    fi(ln param0, ln param1) {
+    fi(Star param0, Star param1) {
         try {
           this.field_k = param1;
           this.field_l = (int)(0.5 + Math.sqrt((double)((-param0.field_A + param1.field_A) * (-param0.field_A + param1.field_A) + (param1.field_S - param0.field_S) * (-param0.field_S + param1.field_S))));

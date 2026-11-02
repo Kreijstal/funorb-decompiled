@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class sd extends DualLinkNode {
+class Territory extends DualLinkNode {
     int field_x;
     private IntrusiveDeque field_s;
     static int field_p;
-    fs field_o;
+    Player field_o;
     int[] field_w;
     int field_r;
-    ln field_q;
+    Star field_q;
     int[] field_u;
     static boolean field_v;
     static String field_t;
     static String field_y;
 
-    void a(int param0, ln param1) {
+    void a(int param0, Star param1) {
         if (param0 != -21771) {
           return;
         }
@@ -25,19 +25,19 @@ class sd extends DualLinkNode {
         }
     }
 
-    ln h(int param0) {
+    Star h(int param0) {
         if (param0 == -23410) {
-          return (ln) (this.field_s.a((byte) -71));
+          return (Star) (this.field_s.a((byte) -71));
         }
         this.e(126);
-        return (ln) (this.field_s.a((byte) -71));
+        return (Star) (this.field_s.a((byte) -71));
     }
 
-    ln i(int param0) {
+    Star i(int param0) {
         if (param0 > -16) {
-          return (ln) null;
+          return (Star) null;
         }
-        return (ln) (this.field_s.h(43));
+        return (Star) (this.field_s.h(43));
     }
 
     public static void f(int param0) {
@@ -72,15 +72,15 @@ class sd extends DualLinkNode {
         return this.field_s.e(0);
     }
 
-    ln j(int param0) {
+    Star j(int param0) {
         if (param0 == 18229) {
-          return (ln) (this.field_s.d(0));
+          return (Star) (this.field_s.d(0));
         }
         this.g(-119);
-        return (ln) (this.field_s.d(0));
+        return (Star) (this.field_s.d(0));
     }
 
-    sd(fs param0, ln param1) {
+    Territory(Player param0, Star param1) {
         try {
           this.field_q = param1;
           this.field_o = param0;

@@ -233,7 +233,7 @@ final class hl extends kg {
           aq.a((byte) -107, gg.field_e);
         }
         var14.b(112, 144, var14.field_o << 4, var14.field_p << 4, -this.field_F << 10, 4096);
-        ln.f((byte) -94);
+        Star.f((byte) -94);
         gg.field_e.c(var5 - var14.field_o, -var14.field_p + var6, 256);
         return;
     }

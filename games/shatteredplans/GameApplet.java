@@ -326,7 +326,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_78_0 > stackIn_78_1) {
                     break;
                   }
-                  me.field_a = true;
+                  VictoryChecker.field_a = true;
                   break;
                 }
               }
@@ -344,9 +344,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                dc.d(22943);
+                GameState.d(22943);
                 this.f(0);
-                so.field_q = in.a((java.awt.Component) ((Object) tm.field_i), 16, me.field_e, nn.field_b);
+                so.field_q = in.a((java.awt.Component) ((Object) tm.field_i), 16, VictoryChecker.field_e, nn.field_b);
                 this.c(-1);
                 oe.field_d = ij.b(115);
                 do {
@@ -592,7 +592,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               gn.field_B = 0;
               ts.field_G = this;
-              me.field_e = param6;
+              VictoryChecker.field_e = param6;
               tj.field_h = param6;
               td.field_G = param5;
               gs.field_k = 0;
@@ -647,7 +647,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (ts.field_G == this &&
             !fc.field_a) {
             oq.field_e = true;
-            if (me.field_a &&
+            if (VictoryChecker.field_a &&
               pr.a(14274) - nh.field_m > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
@@ -829,7 +829,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             mk.field_a = mk.field_a - 50;
             oq.field_e = true;
-            tm.field_i.setSize(me.field_e, nn.field_b);
+            tm.field_i.setSize(VictoryChecker.field_e, nn.field_b);
             tm.field_i.setVisible(true);
             if (uf.field_b != null &&
               null == cg.field_K) {
@@ -1076,7 +1076,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           tm.field_i = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) tm.field_i));
-          tm.field_i.setSize(me.field_e, nn.field_b);
+          tm.field_i.setSize(VictoryChecker.field_e, nn.field_b);
           tm.field_i.setVisible(true);
           if (uf.field_b == var2) {
             var3 = uf.field_b.getInsets();

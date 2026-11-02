@@ -83,7 +83,7 @@ abstract class w extends WidgetContainer {
         gf.b();
         this.a(0, 103, 0);
         super.a(param0, param1, -param2 - this.field_q, -param3 - this.field_m);
-        ln.f((byte) -50);
+        Star.f((byte) -50);
         ci.field_r.a(this.field_m + param3, this.field_q + param2, this.field_G);
     }
 

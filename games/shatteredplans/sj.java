@@ -61,7 +61,7 @@ final class sj {
         String var9 = null;
         int var10 = 0;
         int var11 = 0;
-        fs var12 = null;
+        Player var12 = null;
         Object var5Lifetime1;
         int var4Lifetime1;
         int var4Lifetime2;
@@ -78,11 +78,11 @@ final class sj {
           boolean decompiledFrameRemainder0 = true;
           var3 = new boolean[4];
           if (var2 != null) {
-            var4 = ((sd) ((Object) var2)).field_u[((sd) ((Object) var2)).field_w[3]];
+            var4 = ((Territory) ((Object) var2)).field_u[((Territory) ((Object) var2)).field_w[3]];
             if (var4 != 0) {
               var5_int = 0;
               for (var6 = 0; var6 < 4; var6++) {
-                if (0 == ((sd) ((Object) var2)).field_u[((sd) ((Object) var2)).field_w[var6]]) {
+                if (0 == ((Territory) ((Object) var2)).field_u[((Territory) ((Object) var2)).field_w[var6]]) {
                   var5_int++;
                 }
               }
@@ -90,9 +90,9 @@ final class sj {
               var5_intLifetime2 = 0;
               var7_int = 0;
               while (var7_int < 4) {
-                var8 = ((sd) ((Object) var2)).field_w[var7_int];
+                var8 = ((Territory) ((Object) var2)).field_w[var7_int];
                 stackIn_18_0 = -1;
-                stackIn_18_1 = ~((sd) ((Object) var2)).field_u[var8];
+                stackIn_18_1 = ~((Territory) ((Object) var2)).field_u[var8];
                 if (stackIn_18_0 == stackIn_18_1) {
                   var9 = re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(gm.field_k[var8], 16), h.field_x[var8]});
                   var6_ref = var9;

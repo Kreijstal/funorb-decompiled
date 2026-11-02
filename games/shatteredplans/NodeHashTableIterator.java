@@ -17,8 +17,8 @@ final class NodeHashTableIterator implements Iterator {
         field_e = null;
         field_b = null;
         if (param0 != -1) {
-          ln var2 = (ln) null;
-          NodeHashTableIterator.a((ln) null, (byte) -77);
+          Star var2 = (Star) null;
+          NodeHashTableIterator.a((Star) null, (byte) -77);
         }
     }
 
@@ -35,7 +35,7 @@ final class NodeHashTableIterator implements Iterator {
         return wg.field_a.field_Eb;
     }
 
-    final static void a(ln param0, byte param1) {
+    final static void a(Star param0, byte param1) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -48,7 +48,7 @@ final class NodeHashTableIterator implements Iterator {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ln var10 = null;
+        Star var10 = null;
         db var11 = null;
         mg var3Lifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -57,8 +57,8 @@ final class NodeHashTableIterator implements Iterator {
             return;
           }
           if (param1 < 35) {
-            var10 = (ln) null;
-            NodeHashTableIterator.a((ln) null, (byte) -17);
+            var10 = (Star) null;
+            NodeHashTableIterator.a((Star) null, (byte) -17);
           }
           var11 = new db();
           var11.a(param0.field_s.a(-123), 32);
@@ -129,8 +129,8 @@ final class NodeHashTableIterator implements Iterator {
         try {
           aj.field_a.a((byte) -113, new de(param1));
           if (param0 != 0) {
-            ln var3 = (ln) null;
-            NodeHashTableIterator.a((ln) null, (byte) 103);
+            Star var3 = (Star) null;
+            NodeHashTableIterator.a((Star) null, (byte) 103);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "fl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

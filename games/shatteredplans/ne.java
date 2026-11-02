@@ -4,10 +4,10 @@
 final class ne extends IntrusiveNode {
     int field_r;
     static boolean field_s;
-    ln field_k;
+    Star field_k;
     static qh field_l;
     static int field_o;
-    fs field_h;
+    Player field_h;
     int field_i;
     static String field_n;
     static String field_q;
@@ -255,7 +255,7 @@ final class ne extends IntrusiveNode {
         }
     }
 
-    ne(fs param0, int param1, int param2, int param3) {
+    ne(Player param0, int param1, int param2, int param3) {
         try {
           this.field_h = param0;
           this.field_k = null;

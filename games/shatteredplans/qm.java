@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qm extends DualLinkNode {
-    ln field_r;
-    ln field_q;
+    Star field_r;
+    Star field_q;
     int field_o;
-    fs field_p;
+    Player field_p;
 
-    qm(int param0, fs param1, ln param2) {
+    qm(int param0, Player param1, Star param2) {
         try {
           this.field_o = param0;
           this.field_r = null;
@@ -18,7 +18,7 @@ final class qm extends DualLinkNode {
         }
     }
 
-    qm(int param0, fs param1, ln param2, ln param3) {
+    qm(int param0, Player param1, Star param2, Star param3) {
         try {
           this.field_p = param1;
           this.field_r = param3;

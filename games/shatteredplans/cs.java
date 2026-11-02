@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cs extends IntrusiveNode {
-    ln field_n;
+    Star field_n;
     static fg field_j;
-    ln field_k;
+    Star field_k;
     static boolean field_i;
     static v field_l;
     int field_m;
@@ -51,7 +51,7 @@ final class cs extends IntrusiveNode {
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
-    cs(ln param0, ln param1, int param2) {
+    cs(Star param0, Star param1, int param2) {
         try {
           this.field_k = param1;
           this.field_m = param2;

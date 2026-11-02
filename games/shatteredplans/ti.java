@@ -132,7 +132,7 @@ final class ti {
         }
     }
 
-    final static int a(byte param0, ln[] param1) {
+    final static int a(byte param0, Star[] param1) {
         int var6 = 0;
         int var9 = 0;
         int stackIn_25_0 = 0;
@@ -145,12 +145,12 @@ final class ti {
         IntrusiveDeque var3 = null;
         IntrusiveDeque var4 = null;
         int var5 = 0;
-        ln var7 = null;
-        ln[] var8 = null;
-        ln var10 = null;
+        Star var7 = null;
+        Star[] var8 = null;
+        Star var10 = null;
         int var11 = 0;
-        ln var12 = null;
-        ln var13 = null;
+        Star var12 = null;
+        Star var13 = null;
         int var2_intLifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -170,7 +170,7 @@ final class ti {
               var4.a((byte) -113, var12);
               {
                 while (!(var4.g(-121))) {
-                  var13 = (ln) (var4.h(80));
+                  var13 = (Star) (var4.h(80));
                   var3.a((byte) -113, var13);
                   var13.field_x = var5;
                   if (var13.field_D == null) {
@@ -185,10 +185,10 @@ final class ti {
                   }
                 }
                 {
-                  var7 = (ln) (var3.d(0));
+                  var7 = (Star) (var3.d(0));
                   while (var7 != null) {
                     var7.field_x = var5;
-                    var7 = (ln) (var3.a((byte) -71));
+                    var7 = (Star) (var3.a((byte) -71));
                   }
                   var3.a(0);
                   var5++;

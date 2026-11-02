@@ -20,7 +20,7 @@ final class kr extends Exception {
         field_c = null;
     }
 
-    final static void a(byte param0, ln param1) {
+    final static void a(byte param0, Star param1) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;

@@ -84,7 +84,7 @@ final class kq {
         int var4 = 0;
         jh var5 = null;
         qk var6 = null;
-        sd var7 = null;
+        Territory var7 = null;
         String var8 = null;
         int var9 = 0;
         int var4Lifetime1;
@@ -98,7 +98,7 @@ final class kq {
             while (!(var3.field_d.length <= var4)) {
               var5 = var3.field_d[var4];
               var6 = var3.field_i[var4];
-              var7 = (sd) (var5.field_h);
+              var7 = (Territory) (var5.field_h);
               stackOut_9_0 = var5.f(244874369);
               stackIn_27_0 = stackOut_9_0 ? 1 : 0;
               stackIn_10_0 = stackOut_9_0;
@@ -197,7 +197,7 @@ final class kq {
               (decompiledFrameRemainder4) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, re.a(wp.field_c, 4371, new String[]{this.field_s.field_c.field_q.field_I, Integer.toString(this.field_s.field_c.field_x)}));
+              this.a(10, 0, re.a(wp.field_c, 4371, new String[]{this.field_s.field_c.field_q.name, Integer.toString(this.field_s.field_c.field_x)}));
               if (var9 == 0) {
                 return;
               }
@@ -254,24 +254,24 @@ final class kq {
 
     private final void d(int param0, int param1) {
         int[][] discarded$0 = null;
-        fs stackIn_50_0 = null;
-        fs stackIn_50_1 = null;
+        Player stackIn_50_0 = null;
+        Player stackIn_50_1 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        ln[] var3 = null;
+        Star[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        ln var5 = null;
-        ln[] var6 = null;
+        Star var5 = null;
+        Star[] var6 = null;
         int var7 = 0;
-        ln var8 = null;
+        Star var8 = null;
         int var9 = 0;
-        ln[] var3Lifetime1;
-        ln var5Lifetime1;
-        ln[] var3Lifetime2;
-        ln[] var3Lifetime3;
-        ln var5Lifetime2;
-        ln var5Lifetime3;
+        Star[] var3Lifetime1;
+        Star var5Lifetime1;
+        Star[] var3Lifetime2;
+        Star[] var3Lifetime3;
+        Star var5Lifetime2;
+        Star var5Lifetime3;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
@@ -379,19 +379,19 @@ final class kq {
         StringBuilder stackIn_120_1 = null;
         String stackIn_121_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ln[] var2 = null;
+        Star[] var2 = null;
         int var2_int = 0;
         String var2_ref = null;
         RuntimeException var2_ref2 = null;
         int var3 = 0;
-        ln var4 = null;
+        Star var4 = null;
         int var5 = 0;
-        ln[] var2Lifetime1;
+        Star[] var2Lifetime1;
         String var2_refLifetime1;
         String var2_refLifetime2;
         String var2_refLifetime3;
         String var2_refLifetime4;
-        ln var4Lifetime1;
+        Star var4Lifetime1;
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var3Lifetime1;
@@ -523,7 +523,7 @@ final class kq {
               return;
             }
             if (var2_refLifetime4.equalsIgnoreCase("garrison")) {
-              me.field_j = true;
+              VictoryChecker.field_j = true;
               return;
             }
             if (var2_refLifetime4.equalsIgnoreCase("resources")) {
@@ -554,7 +554,7 @@ final class kq {
         }
     }
 
-    private final void a(byte param0, fs param1) {
+    private final void a(byte param0, Player param1) {
         int stackIn_16_0 = 0;
         fe[] stackIn_19_0 = null;
         int stackIn_20_1 = 0;
@@ -564,7 +564,7 @@ final class kq {
         int stackIn_28_1 = 0;
         int stackIn_84_0 = 0;
         String stackIn_92_0 = null;
-        fs stackIn_115_0 = null;
+        Player stackIn_115_0 = null;
         int stackIn_122_0 = 0;
         RuntimeException stackIn_133_0 = null;
         StringBuilder stackIn_133_1 = null;
@@ -574,7 +574,7 @@ final class kq {
         RuntimeException var3_ref = null;
         int var4 = 0;
         fe var5 = null;
-        fs var5_ref = null;
+        Player var5_ref = null;
         ff[] var6_ref_ff__ = null;
         int var6 = 0;
         lp var7 = null;
@@ -633,10 +633,10 @@ final class kq {
                 if ((1 << this.field_s.field_n.field_x & param1.field_A) == 0) {
                   if (0 == (1 << param1.field_x & this.field_s.field_n.field_A)) {
                     var5.a((byte) 2, 3375155, eb.field_e);
-                    var7.field_o = re.a(jg.field_f, 4371, new String[]{param1.field_t});
+                    var7.field_o = re.a(jg.field_f, 4371, new String[]{param1.name});
                     var9 = (vd) (var7.field_l.d(0));
                     while (null != var9) {
-                      var9.field_o = re.a(jg.field_f, 4371, new String[]{param1.field_t});
+                      var9.field_o = re.a(jg.field_f, 4371, new String[]{param1.name});
                       var9 = (vd) (var7.field_l.a((byte) -71));
                       if (var11 != 0) {
                         decompiledFrameCompleted4 = false;
@@ -650,10 +650,10 @@ final class kq {
                   if ((decompiledFrameRemainder0) &&
                     (decompiledFrameCompleted4)) {
                     var5.a((byte) -54, 3375155, il.field_hb);
-                    var7.field_o = re.a(gn.field_x, 4371, new String[]{param1.field_t});
+                    var7.field_o = re.a(gn.field_x, 4371, new String[]{param1.name});
                     var9 = (vd) (var7.field_l.d(0));
                     while (null != var9) {
-                      var9.field_o = re.a(gn.field_x, 4371, new String[]{param1.field_t});
+                      var9.field_o = re.a(gn.field_x, 4371, new String[]{param1.name});
                       var9 = (vd) (var7.field_l.a((byte) -71));
                       if (var11 != 0) {
                         decompiledFrameCompleted3 = false;
@@ -669,10 +669,10 @@ final class kq {
                   (decompiledFrameCompleted4) &&
                   (decompiledFrameCompleted3)) {
                   var5.a((byte) -109, 3375155, fb.field_gc);
-                  var7.field_o = re.a(mf.field_u, 4371, new String[]{param1.field_t});
+                  var7.field_o = re.a(mf.field_u, 4371, new String[]{param1.name});
                   var9 = (vd) (var7.field_l.d(0));
                   while (var9 != null) {
-                    var9.field_o = re.a(mf.field_u, 4371, new String[]{param1.field_t});
+                    var9.field_o = re.a(mf.field_u, 4371, new String[]{param1.name});
                     var9 = (vd) (var7.field_l.a((byte) -71));
                     if (var11 != 0) {
                       decompiledFrameCompleted2 = false;
@@ -1453,7 +1453,7 @@ final class kq {
     }
 
     private final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
-        fs var7 = null;
+        Player var7 = null;
         int var8 = 0;
         if (param4 != 58) {
           return;
@@ -1463,7 +1463,7 @@ final class kq {
           var8 = var7.field_s;
           rs.field_Cb.c(this.field_l[param0][param2], param5 + 27, param1, var8, -1, param3);
           rs.field_Cb.d(eh.field_I[this.field_q[param0][param2]], 37 + param5, param1, var8, -1, param3);
-          rs.field_Cb.d(var7.field_t, param5 + 67, param1, var8, -1, param3);
+          rs.field_Cb.d(var7.name, param5 + 67, param1, var8, -1, param3);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "kq.FB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -1577,7 +1577,7 @@ final class kq {
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
-        fs var6 = this.field_s.field_P.field_v[param0];
+        Player var6 = this.field_s.field_P.field_v[param0];
         if (param1 != 2) {
           return;
         }
@@ -1585,7 +1585,7 @@ final class kq {
           var7 = var6.field_s;
           rs.field_Cb.b(this.field_l[param2][param0], param3 + 27, param4, var7, -1);
           rs.field_Cb.d(eh.field_I[this.field_q[param2][param0]], param3 + 37, param4, var7, -1);
-          rs.field_Cb.d(var6.field_t, 67 + param3, param4, var7, -1);
+          rs.field_Cb.d(var6.name, 67 + param3, param4, var7, -1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "kq.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -1646,7 +1646,7 @@ final class kq {
           this.field_S.d(false);
           var2 = (rh) (this.field_j.field_x);
           if (param0 != 428) {
-            this.a(95, (sd) null, true);
+            this.a(95, (Territory) null, true);
           }
           var3 = 0;
           while (4 > var3) {
@@ -1728,16 +1728,16 @@ final class kq {
         int stackIn_44_0 = 0;
         int[] stackIn_58_0 = null;
         RuntimeException decompiledCaughtException = null;
-        dc var3 = null;
+        GameState var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
-        fs[] var7 = null;
+        Player[] var7 = null;
         int var8 = 0;
         int var9_int = 0;
-        fs var9 = null;
+        Player var9 = null;
         int[][] var10 = null;
         um var10_ref = null;
         int var11_int = 0;
@@ -1926,18 +1926,18 @@ final class kq {
         boolean stackOut_10_0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
-        ln[] var3_ref_ln__ = null;
-        fs[] var3_ref_fs__ = null;
+        Star[] var3_ref_ln__ = null;
+        Player[] var3_ref_fs__ = null;
         int var3 = 0;
         int var4_int = 0;
         int[] var4 = null;
-        fs[] var4_array = null;
-        ln var5_ref_ln = null;
-        fs var5_ref_fs = null;
+        Player[] var4_array = null;
+        Star var5_ref_ln = null;
+        Player var5_ref_fs = null;
         int var5 = 0;
-        sd var6 = null;
+        Territory var6 = null;
         int var6_int = 0;
-        fs var6_ref = null;
+        Player var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         lp var9 = null;
@@ -1973,14 +1973,14 @@ final class kq {
               stackIn_11_0 = stackOut_10_0;
               if (var10 == 0) {
                 if (!stackIn_11_0) {
-                  var6 = (sd) (var5_ref_fs.field_i.d(0));
+                  var6 = (Territory) (var5_ref_fs.field_i.d(0));
                   while (null != var6) {
                     stackIn_9_0 = ~var6.field_r;
                     stackIn_9_1 = -1;
                     if (stackIn_9_0 < stackIn_9_1) {
                       var2[var5_ref_fs.field_x] = var2[var5_ref_fs.field_x] + var6.field_r;
                     }
-                    var6 = (sd) (var5_ref_fs.field_i.a((byte) -71));
+                    var6 = (Territory) (var5_ref_fs.field_i.a((byte) -71));
                   }
                 } else {
                   if (0 < var5_ref_fs.field_m.field_r) {
@@ -2066,7 +2066,7 @@ final class kq {
         }
     }
 
-    final void a(fs[] param0, int param1) {
+    final void a(Player[] param0, int param1) {
         int[] array$0 = null;
         int[] array$1 = null;
         RuntimeException stackIn_43_0 = null;
@@ -2077,11 +2077,11 @@ final class kq {
         RuntimeException var3_ref = null;
         boolean[] var4 = null;
         int var5 = 0;
-        fs[] var6 = null;
+        Player[] var6 = null;
         int[][] var6_array = null;
         int var7_int = 0;
         int[][] var7 = null;
-        fs var8_ref_fs = null;
+        Player var8_ref_fs = null;
         int var8 = 0;
         int var9 = 0;
         int var8Lifetime1;
@@ -2158,7 +2158,7 @@ final class kq {
             this.field_Z = var7;
           }
           if (kb.field_x == 7) {
-            this.field_s.field_P.field_x = (me) ((Object) new qg(param0));
+            this.field_s.field_P.field_x = (VictoryChecker) ((Object) new qg(param0));
             this.field_s.field_P.field_x.a((byte) -24, this.field_s.field_P, this);
           }
           return;
@@ -2365,7 +2365,7 @@ final class kq {
             var8 = stackIn_140_0;
             if (this.field_s.field_n == null &&
               var6Lifetime2 == 0) {
-              var8 = re.a(vp.field_t, 4371, new String[]{this.field_s.field_P.field_v[this.field_s.field_P.field_k].field_t});
+              var8 = re.a(vp.field_t, 4371, new String[]{this.field_s.field_P.field_v[this.field_s.field_P.field_k].name});
             }
           }
           if (this.field_s.field_n != null &&
@@ -2509,7 +2509,7 @@ final class kq {
         em var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        sd var4 = null;
+        Territory var4 = null;
         String var5 = null;
         int var6 = 0;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -2520,7 +2520,7 @@ final class kq {
           }
           var3 = 0;
           while (var3 < var2.field_i.length) {
-            var4 = (sd) (var2.field_i[var3].field_h);
+            var4 = (Territory) (var2.field_i[var3].field_h);
             var2.field_i[var3].a((byte) -122, Integer.toString(var4.field_x));
             if (var6 != 0) {
               return;
@@ -2656,10 +2656,10 @@ final class kq {
         int var2_int = 0;
         RuntimeException var2 = null;
         int[][] var3 = null;
-        fs[] var4_ref_fs__ = null;
+        Player[] var4_ref_fs__ = null;
         int var4 = 0;
         int var5 = 0;
-        fs var6_ref_fs = null;
+        Player var6_ref_fs = null;
         int var6 = 0;
         int[] var7_ref_int__ = null;
         int var7 = 0;
@@ -2831,7 +2831,7 @@ final class kq {
         int var6 = 0;
         int[] var7 = null;
         String var8 = null;
-        me var9 = null;
+        VictoryChecker var9 = null;
         int var10 = 0;
         Sprite var11 = null;
         ArgbSprite var12 = null;
@@ -3113,10 +3113,10 @@ final class kq {
 
     final void n(int param0) {
         RuntimeException decompiledCaughtException = null;
-        fs[] var2 = null;
+        Player[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        fs var4 = null;
+        Player var4 = null;
         int var5 = 0;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -3229,9 +3229,9 @@ final class kq {
         lp[] var5_array = null;
         lp var6_ref_lp = null;
         int var6 = 0;
-        sd var7 = null;
+        Territory var7 = null;
         lp var7_ref = null;
-        fs var8 = null;
+        Player var8 = null;
         int var9 = 0;
         int var5_intLifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -3336,7 +3336,7 @@ final class kq {
                 this.field_W.d(false);
               }
               if (var4_ref_qh == this.field_nb) {
-                this.field_g.field_o = hi.field_d;
+                this.field_g.field_o = TaskAi.field_d;
                 this.field_g.d(false);
               }
               var4_ref_qh.field_A = false;
@@ -3417,14 +3417,14 @@ final class kq {
               if (!this.field_nb.field_s) {
                 this.a(40, this.field_nb);
                 this.field_nb.field_s = true;
-                this.field_g.field_o = hi.field_d;
+                this.field_g.field_o = TaskAi.field_d;
                 if (var9 != 0) {
                   this.field_nb.field_s = false;
-                  this.field_g.field_o = hi.field_d;
+                  this.field_g.field_o = TaskAi.field_d;
                 }
               } else {
                 this.field_nb.field_s = false;
-                this.field_g.field_o = hi.field_d;
+                this.field_g.field_o = TaskAi.field_d;
               }
               this.field_nb.field_A = false;
               this.field_g.d(false);
@@ -3538,7 +3538,7 @@ final class kq {
               var5_int = 0;
               while (!(var5_int >= var4_ref_em.field_f.length)) {
                 var6_ref_lp = var4_ref_em.field_f[var5_int];
-                var7 = (sd) (var6_ref_lp.field_h);
+                var7 = (Territory) (var6_ref_lp.field_h);
                 stackOut_231_0 = var6_ref_lp.a((byte) -10, dn.field_h);
                 stackIn_289_0 = stackOut_231_0 ? 1 : 0;
                 stackIn_232_0 = stackOut_231_0;
@@ -3589,7 +3589,7 @@ final class kq {
                 var6 = 0;
                 while (var6 < var5_array.length) {
                   var7_ref = var5_array[var6];
-                  var8 = (fs) (var7_ref.field_h);
+                  var8 = (Player) (var7_ref.field_h);
                   if (var9 != 0) {
                     decompiledFrameCompleted0 = false;
                     break;
@@ -3740,12 +3740,12 @@ final class kq {
         int stackIn_125_1 = 0;
         RuntimeException decompiledCaughtException = null;
         ad var2 = null;
-        fs[] var2_array = null;
+        Player[] var2_array = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         int var3_int = 0;
-        dc var3 = null;
-        fs var4_ref_fs = null;
+        GameState var3 = null;
+        Player var4_ref_fs = null;
         int var4 = 0;
         int var5 = 0;
         Object var6_ref = null;
@@ -4594,15 +4594,15 @@ final class kq {
         em var2 = null;
         RuntimeException var2_ref = null;
         lp var3_ref_lp = null;
-        sd var3_ref_sd = null;
-        fs[] var3_ref_fs__ = null;
+        Territory var3_ref_sd = null;
+        Player[] var3_ref_fs__ = null;
         int var3 = 0;
         lp var4_ref_lp = null;
         int var4 = 0;
         lp var5 = null;
-        fs var5_ref = null;
+        Player var5_ref = null;
         lp var6 = null;
-        sd var6_ref = null;
+        Territory var6_ref = null;
         lp var7 = null;
         lp var8 = null;
         int var9 = 0;
@@ -4640,7 +4640,7 @@ final class kq {
               var2.field_i = new qk[this.field_s.field_n.field_i.e(0)];
               this.field_e.field_A = false;
               this.field_mb.d(false);
-              var3_ref_sd = (sd) (this.field_s.field_n.field_i.d(0));
+              var3_ref_sd = (Territory) (this.field_s.field_n.field_i.d(0));
               if (var3_ref_sd != null) {
                 var4_ref_lp = rc.a((byte) 120, var3_ref_sd, var2, true);
                 var4_ref_lp.a((byte) 52, this.field_e.field_z.field_k, this.field_e.field_z.field_t + this.field_e.field_z.field_y);
@@ -4649,7 +4649,7 @@ final class kq {
                   this.field_e.field_A = true;
                   this.field_mb.g(param0 ^ -15994);
                 }
-                var3_ref_sd = (sd) (this.field_s.field_n.field_i.a((byte) -71));
+                var3_ref_sd = (Territory) (this.field_s.field_n.field_i.a((byte) -71));
                 while (var3_ref_sd != null) {
                   var5 = rc.a((byte) 123, var3_ref_sd, var2, false);
                   var5.a((byte) 126, this.field_e.field_z.field_k, this.field_e.field_z.field_t + this.field_e.field_z.field_y);
@@ -4664,7 +4664,7 @@ final class kq {
                     this.field_e.field_A = true;
                     this.field_mb.g(95);
                   }
-                  var3_ref_sd = (sd) (this.field_s.field_n.field_i.a((byte) -71));
+                  var3_ref_sd = (Territory) (this.field_s.field_n.field_i.a((byte) -71));
                 }
               }
             }
@@ -4695,17 +4695,17 @@ final class kq {
                 decompiledFrameRemainder0 = (var9 != 0);
               }
               if (decompiledFrameRemainder0) {
-                var6_ref = (sd) (var5_ref.field_i.d(0));
+                var6_ref = (Territory) (var5_ref.field_i.d(0));
                 if (var6_ref != null) {
                   var7 = an.a((byte) -76, true, var6_ref);
                   var7.a((byte) 52, this.field_e.field_z.field_k, this.field_e.field_z.field_y + this.field_e.field_z.field_t);
                   this.field_e.field_z.a(var7, 8);
-                  var6_ref = (sd) (var5_ref.field_i.a((byte) -71));
+                  var6_ref = (Territory) (var5_ref.field_i.a((byte) -71));
                   while (null != var6_ref) {
                     var8 = an.a((byte) -76, false, var6_ref);
                     var8.a((byte) 51, this.field_e.field_z.field_k, this.field_e.field_z.field_y + this.field_e.field_z.field_t);
                     this.field_e.field_z.a(var8, param0 ^ -15915);
-                    var6_ref = (sd) (var5_ref.field_i.a((byte) -71));
+                    var6_ref = (Territory) (var5_ref.field_i.a((byte) -71));
                     if (var9 != 0) {
                       decompiledFrameCompleted0 = false;
                       break;
@@ -4750,7 +4750,7 @@ final class kq {
         RuntimeException decompiledCaughtException = null;
         ad var2 = null;
         RuntimeException var2_ref = null;
-        sd var3 = null;
+        Territory var3 = null;
         int var4 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -4768,7 +4768,7 @@ final class kq {
           if (var2.field_e.d((byte) 34) &&
             this.field_s.field_m != 2) {
             if (!this.field_s.field_P.field_o.field_i) {
-              var3 = (sd) (this.field_s.field_n.field_i.d(0));
+              var3 = (Territory) (this.field_s.field_n.field_i.d(0));
               while (null != var3) {
                 stackIn_28_0 = -1;
                 stackIn_28_1 = ~var3.field_x;
@@ -4780,7 +4780,7 @@ final class kq {
                   this.a(-2, var3, true);
                   return;
                 }
-                var3 = (sd) (this.field_s.field_n.field_i.a((byte) -71));
+                var3 = (Territory) (this.field_s.field_n.field_i.a((byte) -71));
               }
               decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
             }
@@ -4842,7 +4842,7 @@ final class kq {
         }
     }
 
-    final void a(int param0, fs[] param1, int[] param2, int[] param3, fs[] param4, qk[] param5, byte param6, int param7) {
+    final void a(int param0, Player[] param1, int[] param2, int[] param3, Player[] param4, qk[] param5, byte param6, int param7) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -4935,7 +4935,7 @@ final class kq {
         }
     }
 
-    private final void a(int param0, sd param1, boolean param2) {
+    private final void a(int param0, Territory param1, boolean param2) {
         StringBuilder stackIn_17_0 = null;
         String stackIn_18_1 = null;
         StringBuilder stackIn_30_0 = null;
@@ -4949,10 +4949,10 @@ final class kq {
         RuntimeException var4_ref = null;
         int var5_int = 0;
         ad var5 = null;
-        ln var5_ref = null;
+        Star var5_ref = null;
         jh var6 = null;
         qk var7 = null;
-        sd var8 = null;
+        Territory var8 = null;
         String var9 = null;
         int var10 = 0;
         String var9Lifetime1;
@@ -4969,7 +4969,7 @@ final class kq {
           while (!(decompiledNaturalLoopExit0 = (!(var4.field_d.length > var5_int)))) {
             var6 = var4.field_d[var5_int];
             var7 = var4.field_i[var5_int];
-            var8 = (sd) (var6.field_h);
+            var8 = (Territory) (var6.field_h);
             stackIn_36_0 = var6.f(param0 + 244874371);
             if (var10 == 0) {
               if (stackIn_36_0) {
@@ -5055,7 +5055,7 @@ final class kq {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         qr var3_ref_qr = null;
-        fs var4 = null;
+        Player var4 = null;
         qr var4_ref = null;
         int var5 = 0;
         int stackIn_45_0Lifetime1;
@@ -5102,7 +5102,7 @@ final class kq {
           this.field_y.a((byte) -113, this.field_mb);
           if (this.field_nb != null) {
             this.field_g = new jh(k.field_d.field_z + h.field_F.field_z + 515, 25, wl.field_d.field_z, wl.field_d.field_w, -1, wl.field_d, (String) null, 0, -1, nr.field_k, (String) null, 0);
-            this.field_g.field_o = hi.field_d;
+            this.field_g.field_o = TaskAi.field_d;
             this.field_y.a((byte) -113, this.field_g);
           }
           if (this.field_s.field_n != null) {
@@ -5155,8 +5155,8 @@ final class kq {
                 if (stackIn_45_0 > stackIn_45_1) {
                   var4 = this.field_s.field_P.field_v[var3];
                   jr.a("playercol" + var3, 1904, re.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
-                  jr.a("player" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_t}));
-                  jr.a("playerhome" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.field_I}));
+                  jr.a("player" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
+                  jr.a("playerhome" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
                   var3++;
                   return;
                 }
@@ -5242,8 +5242,8 @@ final class kq {
               }
               var4 = this.field_s.field_P.field_v[var3];
               jr.a("playercol" + var3, 1904, re.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
-              jr.a("player" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_t}));
-              jr.a("playerhome" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.field_I}));
+              jr.a("player" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
+              jr.a("playerhome" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
               var3++;
               if (var6 != 0) {
                 return;

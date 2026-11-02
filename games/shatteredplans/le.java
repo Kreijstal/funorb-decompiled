@@ -125,7 +125,7 @@ abstract class le {
         }
         discarded$0 = cg.field_E.append((char) var4);
         var5Lifetime1 = 485;
-        var17 = ln.field_o;
+        var17 = Star.field_o;
         var16 = v.a(var17, (byte) 17);
         var18 = var16;
         if (em.field_h == 2) {

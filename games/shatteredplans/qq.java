@@ -35,10 +35,10 @@ final class qq extends IntrusiveNode {
     static String field_t;
     static Sprite field_n;
 
-    final static mg a(dc param0, int param1, PacketBuffer param2) {
-        ln var3 = null;
+    final static mg a(GameState param0, int param1, PacketBuffer param2) {
+        Star var3 = null;
         RuntimeException var3_ref = null;
-        ln var4 = null;
+        Star var4 = null;
         int var5 = 0;
         int var6 = 0;
         mg stackIn_1_0 = null;

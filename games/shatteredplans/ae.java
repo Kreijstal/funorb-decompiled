@@ -76,7 +76,7 @@ final class ae {
             if (0 != var5) {
               var6 = var4.field_i;
               rf.field_j[0].field_b = null;
-              rf.field_j[0].field_d = ln.field_o;
+              rf.field_j[0].field_d = Star.field_o;
               var7 = var4.field_k;
               rf.field_j[0].field_a = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
@@ -118,7 +118,7 @@ final class ae {
                   }
                   if (var21 != null &&
                     jp.a(var21, (byte) -105)) {
-                    var8[1][var13] = ln.field_o;
+                    var8[1][var13] = Star.field_o;
                     var9[1][var13] = null;
                     var34[1][var13] = var22;
                     var13++;

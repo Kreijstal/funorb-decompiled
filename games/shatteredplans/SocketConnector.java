@@ -6,7 +6,7 @@ import java.io.*;
 abstract class SocketConnector {
     int port;
     static String field_e;
-    static ln field_b;
+    static Star field_b;
     static String field_c;
     String host;
     static qr field_d;
@@ -36,6 +36,6 @@ abstract class SocketConnector {
     static {
         field_e = "Select a system adjacent to a friendly system to cause a destructive stellar flare, or right click to cancel this project.";
         field_c = "The Achievements system is currently unavailable.";
-        field_b = new ln(-1, -1, -1, -1);
+        field_b = new Star(-1, -1, -1, -1);
     }
 }

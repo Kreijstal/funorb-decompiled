@@ -252,10 +252,10 @@ final class pe extends WidgetContainer implements op, bp {
         int stackIn_40_0 = 0;
         RuntimeException decompiledCaughtException = null;
         eg var1 = null;
-        ln[] var1_array = null;
+        Star[] var1_array = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
-        ln var3 = null;
+        Star var3 = null;
         int var4 = 0;
         int var5 = 0;
         eg var1Lifetime1;
@@ -307,7 +307,7 @@ final class pe extends WidgetContainer implements op, bp {
               stackIn_40_0 = var3.field_y.field_s;
             }
             var4 = stackIn_40_0;
-            uq.field_m.a(re.a("<col=<%0>>" + var3.field_I + "</col>", 4371, new String[]{Integer.toString(var4, 16)}), 27275, "star" + var3.field_p);
+            uq.field_m.a(re.a("<col=<%0>>" + var3.name + "</col>", 4371, new String[]{Integer.toString(var4, 16)}), 27275, "star" + var3.field_p);
             var2++;
           }
           return;
@@ -449,7 +449,7 @@ final class pe extends WidgetContainer implements op, bp {
                   var26Lifetime1 = param6.field_H[var23Lifetime2];
                   kr.field_e[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + var12 * var24Lifetime1 + var15 * var25Lifetime1 >> 16);
                   MouseWheelInput.field_f[var23Lifetime2] = (var24Lifetime1 * var13 - (-(var16 * var25Lifetime1) - var19 * var26Lifetime1) >> 16) + var10;
-                  dc.field_s[var23Lifetime2] = (var26Lifetime1 * var20 + var24Lifetime1 * var14 + var25Lifetime1 * var17 >> 16) + var11;
+                  GameState.field_s[var23Lifetime2] = (var26Lifetime1 * var20 + var24Lifetime1 * var14 + var25Lifetime1 * var17 >> 16) + var11;
                   var24Lifetime1 = param6.field_a[var23Lifetime2];
                   var25Lifetime1 = param6.field_c[var23Lifetime2];
                   var26Lifetime1 = param6.field_l[var23Lifetime2];

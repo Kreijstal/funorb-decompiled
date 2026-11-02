@@ -112,7 +112,7 @@ class j extends ka {
         }
     }
 
-    int d(ln param0, int param1) {
+    int d(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
@@ -159,11 +159,11 @@ class j extends ka {
         return 1 != this.field_h ? param0 * 3 >> 2 : 7 * param0 >> 3;
     }
 
-    j(dc param0, fs param1, mn param2, int param3) {
+    j(GameState param0, Player param1, mn param2, int param3) {
         super(param0, param1, param2, param3);
     }
 
-    final int b(byte param0, ln param1) {
+    final int b(byte param0, Star param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

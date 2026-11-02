@@ -223,7 +223,7 @@ final class uo {
                 } else {
                   var10_ref_String = ui.field_k;
                 }
-                if ((16 & ln.field_w) == 0 &&
+                if ((16 & Star.field_w) == 0 &&
                   !ti.field_e) {
                   go.field_I.field_F = ea.field_a.field_lb;
                 }

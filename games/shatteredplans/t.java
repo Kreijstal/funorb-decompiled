@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class t {
-    private ln[] field_d;
+    private Star[] field_d;
     static int field_f;
     static String field_e;
     static String field_b;
@@ -21,16 +21,16 @@ final class t {
         boolean stackIn_62_1;
         jd stackIn_62_2;
         jd stackIn_62_3;
-        ln stackIn_62_4;
-        ln stackIn_62_5;
+        Star stackIn_62_4;
+        Star stackIn_62_5;
         jd stackIn_63_2;
         jd stackIn_63_3;
-        ln stackIn_63_6;
-        ln var5;
+        Star stackIn_63_6;
+        Star var5;
         IntrusiveDeque var6;
         int var7;
         int var8;
-        ln[] var9_ref_ln__;
+        Star[] var9_ref_ln__;
         int var9;
         nc[] var10;
         Object var12;
@@ -48,8 +48,8 @@ final class t {
         int var18;
         int var20;
         int var21;
-        ln[] var22;
-        ln var23;
+        Star[] var22;
+        Star var23;
         nc[] var24;
         IntrusiveDeque var25;
         nc[] var26;
@@ -216,7 +216,7 @@ final class t {
         }
     }
 
-    t(ln[] param0) {
+    t(Star[] param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

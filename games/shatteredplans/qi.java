@@ -4,8 +4,8 @@
 final class qi extends IntrusiveNode {
     static String field_m;
     static int field_j;
-    ln field_l;
-    fs field_k;
+    Star field_l;
+    Player field_k;
     static IntrusiveDeque field_h;
     int field_i;
 
@@ -77,7 +77,7 @@ final class qi extends IntrusiveNode {
         }
     }
 
-    qi(ln param0, fs param1, int param2) {
+    qi(Star param0, Player param1, int param2) {
         try {
           this.field_k = param1;
           this.field_i = param2;

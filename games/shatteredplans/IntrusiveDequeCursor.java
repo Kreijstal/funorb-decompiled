@@ -235,13 +235,13 @@ final class IntrusiveDequeCursor {
                 stackIn_94_0 = 0;
               }
               var2 = stackIn_94_0;
-              stackIn_99_0 = (param1) && (var2 == 0) && (me.a(45));
+              stackIn_99_0 = (param1) && (var2 == 0) && (VictoryChecker.a(45));
               qr.a(stackIn_99_0, (byte) 112);
               if (v.field_b) {
                 if (!sr.field_h) {
                   return;
                 }
-                stackIn_106_0 = (param1) && (me.a(119));
+                stackIn_106_0 = (param1) && (VictoryChecker.a(119));
                 kh.a(stackIn_106_0, false);
               }
             }
@@ -257,13 +257,13 @@ final class IntrusiveDequeCursor {
               stackIn_74_0 = 0;
             }
             var2Lifetime4 = stackIn_74_0;
-            stackIn_79_0 = (param1) && (var2Lifetime4 == 0) && (me.a(45));
+            stackIn_79_0 = (param1) && (var2Lifetime4 == 0) && (VictoryChecker.a(45));
             qr.a(stackIn_79_0, (byte) 112);
             if (v.field_b) {
               if (!sr.field_h) {
                 return;
               }
-              stackIn_86_0 = (param1) && (me.a(119));
+              stackIn_86_0 = (param1) && (VictoryChecker.a(119));
               kh.a(stackIn_86_0, false);
             }
           }
@@ -287,13 +287,13 @@ final class IntrusiveDequeCursor {
             stackIn_14_0 = 0;
           }
           var2Lifetime1 = stackIn_14_0;
-          stackIn_19_0 = (param1) && (var2Lifetime1 == 0) && (me.a(45));
+          stackIn_19_0 = (param1) && (var2Lifetime1 == 0) && (VictoryChecker.a(45));
           qr.a(stackIn_19_0, (byte) 112);
           if (v.field_b) {
             if (!sr.field_h) {
               return;
             }
-            stackIn_27_0 = (param1) && (me.a(119));
+            stackIn_27_0 = (param1) && (VictoryChecker.a(119));
             kh.a(stackIn_27_0, false);
           }
           return;
@@ -307,26 +307,26 @@ final class IntrusiveDequeCursor {
         }
         if (!v.field_b) {
           var2Lifetime2 = 0;
-          stackIn_39_0 = (param1) && (var2Lifetime2 == 0) && (me.a(45));
+          stackIn_39_0 = (param1) && (var2Lifetime2 == 0) && (VictoryChecker.a(45));
           qr.a(stackIn_39_0, (byte) 112);
           if (v.field_b) {
             if (!sr.field_h) {
               return;
             }
-            stackIn_46_0 = (param1) && (me.a(119));
+            stackIn_46_0 = (param1) && (VictoryChecker.a(119));
             kh.a(stackIn_46_0, false);
           }
           return;
         }
         stackIn_51_0 = (!sr.field_h) ? 0 : 1;
         var2Lifetime3 = stackIn_51_0;
-        stackIn_56_0 = (param1) && (var2Lifetime3 == 0) && (me.a(45));
+        stackIn_56_0 = (param1) && (var2Lifetime3 == 0) && (VictoryChecker.a(45));
         qr.a(stackIn_56_0, (byte) 112);
         if (v.field_b) {
           if (!sr.field_h) {
             return;
           }
-          stackIn_63_0 = (param1) && (me.a(119));
+          stackIn_63_0 = (param1) && (VictoryChecker.a(119));
           kh.a(stackIn_63_0, false);
         }
     }

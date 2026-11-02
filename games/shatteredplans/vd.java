@@ -160,9 +160,9 @@ class vd extends IntrusiveNode {
               !(param1 <= WidgetContainer.field_y.length)) {
               WidgetContainer.field_y = new int[2 * param1];
             }
-            if (null == dc.field_c ||
-              !(dc.field_c.length >= param1)) {
-              dc.field_c = new int[param1 * 2];
+            if (null == GameState.field_c ||
+              !(GameState.field_c.length >= param1)) {
+              GameState.field_c = new int[param1 * 2];
             }
             if (lg.field_d == null ||
               !(param1 + param0 <= lg.field_d.length)) {
@@ -190,9 +190,9 @@ class vd extends IntrusiveNode {
               !(param1 <= WidgetContainer.field_y.length)) {
               WidgetContainer.field_y = new int[2 * param1];
             }
-            if (null == dc.field_c ||
-              !(dc.field_c.length >= param1)) {
-              dc.field_c = new int[param1 * 2];
+            if (null == GameState.field_c ||
+              !(GameState.field_c.length >= param1)) {
+              GameState.field_c = new int[param1 * 2];
             }
             if (lg.field_d == null) {
               lg.field_d = new int[2 * (param0 + param1)];
@@ -231,9 +231,9 @@ class vd extends IntrusiveNode {
               !(param1 <= WidgetContainer.field_y.length)) {
               WidgetContainer.field_y = new int[2 * param1];
             }
-            if (null == dc.field_c ||
-              !(dc.field_c.length >= param1)) {
-              dc.field_c = new int[param1 * 2];
+            if (null == GameState.field_c ||
+              !(GameState.field_c.length >= param1)) {
+              GameState.field_c = new int[param1 * 2];
             }
             if (lg.field_d == null ||
               !(param1 + param0 <= lg.field_d.length)) {
@@ -258,9 +258,9 @@ class vd extends IntrusiveNode {
                 !(param1 <= WidgetContainer.field_y.length)) {
                 WidgetContainer.field_y = new int[2 * param1];
               }
-              if (null == dc.field_c ||
-                !(dc.field_c.length >= param1)) {
-                dc.field_c = new int[param1 * 2];
+              if (null == GameState.field_c ||
+                !(GameState.field_c.length >= param1)) {
+                GameState.field_c = new int[param1 * 2];
               }
               if (lg.field_d == null ||
                 !(param1 + param0 <= lg.field_d.length)) {
@@ -283,9 +283,9 @@ class vd extends IntrusiveNode {
                 !(param1 <= WidgetContainer.field_y.length)) {
                 WidgetContainer.field_y = new int[2 * param1];
               }
-              if (null == dc.field_c ||
-                !(dc.field_c.length >= param1)) {
-                dc.field_c = new int[param1 * 2];
+              if (null == GameState.field_c ||
+                !(GameState.field_c.length >= param1)) {
+                GameState.field_c = new int[param1 * 2];
               }
               if (lg.field_d == null) {
                 lg.field_d = new int[2 * (param0 + param1)];

@@ -332,7 +332,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static String a(ln param0, int param1) {
+    final static String a(Star param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
@@ -351,7 +351,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (param1 > -3) {
             field_h = (String) null;
           }
-          stackIn_6_0 = re.a("<col=<%0>>" + param0.field_I + "</col>", 4371, new String[]{Integer.toString(var2_int, 16)});
+          stackIn_6_0 = re.a("<col=<%0>>" + param0.name + "</col>", 4371, new String[]{Integer.toString(var2_int, 16)});
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -495,8 +495,8 @@ final class ProxySocketConnector extends SocketConnector {
         ch.field_c.f(var1, var2);
         gf.d(0, ch.field_c.field_p + var2, 640, 480, 0);
         if (param0 != 8421504) {
-          ln var4 = (ln) null;
-          ProxySocketConnector.a((ln) null, 30);
+          Star var4 = (Star) null;
+          ProxySocketConnector.a((Star) null, 30);
         }
     }
 

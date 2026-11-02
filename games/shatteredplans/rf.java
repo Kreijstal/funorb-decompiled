@@ -26,7 +26,7 @@ final class rf extends IntrusiveNode {
         var2.b(var2.position - var3, (byte) 126);
     }
 
-    rf(fs param0, fs param1) {
+    rf(Player param0, Player param1) {
     }
 
     public static void c(boolean param0) {

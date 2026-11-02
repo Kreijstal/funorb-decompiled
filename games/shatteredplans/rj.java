@@ -59,7 +59,7 @@ final class rj extends ka {
         }
     }
 
-    rj(dc param0, fs param1, mn param2) {
+    rj(GameState param0, Player param1, mn param2) {
         super(param0, param1, param2, 5);
     }
 
@@ -70,7 +70,7 @@ final class rj extends ka {
         return param0 >> 1;
     }
 
-    final int b(ln param0, int param1) {
+    final int b(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -116,7 +116,7 @@ final class rj extends ka {
         return new int[]{16, 18};
     }
 
-    final int d(ln param0, int param1) {
+    final int d(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;

@@ -201,7 +201,7 @@ final class ei {
               mr.field_g.c(var9Lifetime1, 3 + param4, 64);
               for (var11 = var8Lifetime1; var11 < var9Lifetime1; var11++) {
                 var10 = 192 * (var9Lifetime1 - var11) / (-var8Lifetime1 + var9Lifetime1) + 64;
-                me.field_h.c(var11, 3 + param4, var10);
+                VictoryChecker.field_h.c(var11, 3 + param4, var10);
               }
               return;
             }

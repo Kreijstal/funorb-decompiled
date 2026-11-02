@@ -187,8 +187,8 @@ final class qj {
         cr.field_b = param1;
     }
 
-    final static qa a(byte param0, dc param1, PacketBuffer param2) {
-        ln var3 = null;
+    final static qa a(byte param0, GameState param1, PacketBuffer param2) {
+        Star var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         qa stackIn_3_0 = null;

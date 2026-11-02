@@ -6,12 +6,12 @@ final class kd {
     static String field_c;
     static int field_a;
 
-    final static void a(vr param0, boolean param1, ln param2, byte param3) {
+    final static void a(vr param0, boolean param1, Star param2, byte param3) {
         int var5 = 0;
-        ln[] var4 = null;
-        ln var6 = null;
+        Star[] var4 = null;
+        Star var6 = null;
         int var7 = 0;
-        ln[] var8 = null;
+        Star[] var8 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -245,7 +245,7 @@ final class kd {
           for (var3 = 0; var3 < kr.field_f.length; var3++) {
             var4 = ss.field_a[var3];
             if (0 <= var4) {
-              if (dc.field_l.field_c == var4) {
+              if (GameState.field_l.field_c == var4) {
                 var5 = es.field_n;
               } else {
                 var5 = ah.field_P;
@@ -297,7 +297,7 @@ final class kd {
             var8Lifetime1 = -(var7Lifetime1 >> 1) + cn.field_w;
             if (0 <= var4) {
               var1_int = var1_int + sm.field_b;
-              if (dc.field_l.field_c == var4) {
+              if (GameState.field_l.field_c == var4) {
                 stackIn_45_0 = cs.field_l;
               } else {
                 stackIn_45_0 = kr.field_a;

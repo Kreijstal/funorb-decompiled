@@ -9,7 +9,7 @@ final class l {
     static String field_i;
     static String field_d;
     static qr field_a;
-    ln[] field_e;
+    Star[] field_e;
     int[][] field_h;
     int field_b;
     static bc field_g;
@@ -21,7 +21,7 @@ final class l {
         this.field_h = wb.a(this.field_e, 0);
         if (param0 != 80) {
           PacketBuffer var3 = (PacketBuffer) null;
-          this.a((byte) 42, (fs[]) null, (PacketBuffer) null);
+          this.a((byte) 42, (Player[]) null, (PacketBuffer) null);
         }
     }
 
@@ -42,16 +42,16 @@ final class l {
         this.field_c = mb.a(this.field_e, false);
     }
 
-    private final void a(fs param0, vr param1, int param2, ln param3) {
-        sd var5 = null;
+    private final void a(Player param0, vr param1, int param2, Star param3) {
+        Territory var5 = null;
         lo var6 = null;
         try {
           if (param2 != 32447) {
-            this.field_e = (ln[]) null;
+            this.field_e = (Star[]) null;
           }
           param3.field_t = param0;
           param3.field_y = param0;
-          var5 = new sd(param0, param3);
+          var5 = new Territory(param0, param3);
           var5.a(param2 ^ -11190, param3);
           param3.field_R = var5;
           var6 = new lo(param0, param3);
@@ -64,7 +64,7 @@ final class l {
         }
     }
 
-    final void a(PacketBuffer param0, fs[] param1, int param2) {
+    final void a(PacketBuffer param0, Player[] param1, int param2) {
         int var6 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -74,22 +74,22 @@ final class l {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        ln[] var5 = null;
-        ln var7 = null;
+        Star[] var5 = null;
+        Star var7 = null;
         int var8 = 0;
-        ln[] var9_ref_ln__ = null;
+        Star[] var9_ref_ln__ = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ln[] var13 = null;
-        ln var14 = null;
-        ln var15 = null;
-        ln[] var9_ref_ln__Lifetime1;
-        ln var15Lifetime1;
-        ln var15Lifetime2;
-        ln var15Lifetime3;
-        ln var15Lifetime2Lifetime1;
+        Star[] var13 = null;
+        Star var14 = null;
+        Star var15 = null;
+        Star[] var9_ref_ln__Lifetime1;
+        Star var15Lifetime1;
+        Star var15Lifetime2;
+        Star var15Lifetime3;
+        Star var15Lifetime2Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -172,11 +172,11 @@ final class l {
         }
     }
 
-    final void a(fs[] param0, vr param1, int param2) {
+    final void a(Player[] param0, vr param1, int param2) {
         int var4_int = 0;
-        ln[] var5 = null;
+        Star[] var5 = null;
         int var6 = 0;
-        ln var7 = null;
+        Star var7 = null;
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -232,7 +232,7 @@ final class l {
         }
     }
 
-    final void a(byte param0, fs[] param1, PacketBuffer param2) {
+    final void a(byte param0, Player[] param1, PacketBuffer param2) {
         int var6 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -242,8 +242,8 @@ final class l {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        ln[] var5 = null;
-        ln var7 = null;
+        Star[] var5 = null;
+        Star var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -263,7 +263,7 @@ final class l {
           var5 = this.field_e;
           for (var6 = 0; var6 < var5.length; var6++) {
             var7 = var5[var6];
-            b.a(2232, param2, var7.field_I);
+            b.a(2232, param2, var7.name);
             param2.d(var7.field_A, param0 ^ -170);
             param2.d(var7.field_S, 255);
             param2.c(var7.field_z, (byte) -92);
@@ -317,12 +317,12 @@ final class l {
         }
     }
 
-    final void a(int param0, PacketBuffer param1, fs[] param2) {
+    final void a(int param0, PacketBuffer param1, Player[] param2) {
         int var5 = 0;
-        ln[] var4 = null;
-        ln var6 = null;
+        Star[] var4 = null;
+        Star var6 = null;
         int var7 = 0;
-        ln[] var8 = null;
+        Star[] var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -367,7 +367,7 @@ final class l {
         this.field_l = param2;
         this.field_b = param1;
         this.field_j = (Random) ((Object) new ea((long)this.field_l));
-        this.field_e = new ln[param3];
+        this.field_e = new Star[param3];
     }
 
     static {

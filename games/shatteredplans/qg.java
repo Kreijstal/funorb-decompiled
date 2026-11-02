@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qg extends me {
+final class qg extends VictoryChecker {
     private int[] field_s;
     static int field_q;
     static String field_o;
@@ -49,7 +49,7 @@ final class qg extends me {
         }
     }
 
-    final void a(byte param0, dc param1, kq param2) {
+    final void a(byte param0, GameState param1, kq param2) {
         int var7_int = 0;
         int var10_int = 0;
         RuntimeException stackIn_45_0 = null;
@@ -62,11 +62,11 @@ final class qg extends me {
         RuntimeException var4_ref = null;
         int var5 = 0;
         int[] var6 = null;
-        fs[] var7 = null;
+        Player[] var7 = null;
         int[] var8 = null;
         int var8_int = 0;
         int[] var9 = null;
-        fs[] var10 = null;
+        Player[] var10 = null;
         int var11 = 0;
         int var12 = 0;
         double var13 = 0.0;
@@ -117,7 +117,7 @@ final class qg extends me {
             lh.a((byte) 50, var4, (int[]) ((Object) this.field_n.clone()));
           }
           var27 = new qk[]{new qk(0, 0, 182, rs.field_Cb.field_J, re.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(10)}))};
-          var7 = new fs[this.field_i.length];
+          var7 = new Player[this.field_i.length];
           var32 = new int[this.field_i.length];
           var26 = var32;
           var8 = var26;
@@ -147,10 +147,10 @@ final class qg extends me {
               }
             }
             if (var12 == 0) {
-              var10 = new fs[]{};
+              var10 = new Player[]{};
               var11 = 0;
             } else {
-              var10 = new fs[var12];
+              var10 = new Player[var12];
               var21 = 0;
               var15Lifetime1 = var21;
               while (var21 < this.field_i.length) {
@@ -198,7 +198,7 @@ final class qg extends me {
         return 4 * cc.field_n + rs.field_Cb.field_J;
     }
 
-    final boolean a(dc param0, byte param1) {
+    final boolean a(GameState param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -209,7 +209,7 @@ final class qg extends me {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if ((param0.field_w & 1) != 0) {
-            this.field_g = new fs[1];
+            this.field_g = new Player[1];
             for (var3_int = 1; param0.field_v.length > var3_int; var3_int++) {
               if ((param0.field_w & 1 << var3_int) == 0) {
                 this.field_g[0] = param0.field_v[var3_int];
@@ -226,7 +226,7 @@ final class qg extends me {
           if (0 == (4 & param0.field_w)) {
             return false;
           }
-          this.field_g = new fs[1];
+          this.field_g = new Player[1];
           this.field_g[0] = param0.field_v[0];
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -243,7 +243,7 @@ final class qg extends me {
         }
     }
 
-    qg(fs[] param0) {
+    qg(Player[] param0) {
         super(param0);
         try {
           this.field_n = new int[this.field_i.length];
@@ -253,11 +253,11 @@ final class qg extends me {
         }
     }
 
-    final fs[] b(int param0) {
+    final Player[] b(int param0) {
         if (param0 != 0) {
           this.field_n = (int[]) null;
         }
-        return new fs[]{};
+        return new Player[]{};
     }
 
     public static void c(int param0) {

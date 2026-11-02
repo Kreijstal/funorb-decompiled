@@ -36,12 +36,12 @@ final class co extends wf {
         }
     }
 
-    co(ln param0, boolean param1, boolean[] param2) {
+    co(Star param0, boolean param1, boolean[] param2) {
         super(param0);
         int var5 = 0;
-        ln[] var4 = null;
-        ln var6 = null;
-        ln[] var8 = null;
+        Star[] var4 = null;
+        Star var6 = null;
+        Star[] var8 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

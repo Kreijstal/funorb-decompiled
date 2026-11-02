@@ -30,7 +30,7 @@ final class oi {
         RuntimeException var2 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          ln.field_K = mf.a(param1, "", "starfield", false);
+          Star.field_K = mf.a(param1, "", "starfield", false);
           mp.field_e = new Sprite[6];
           for (var2_int = 0; var2_int < 6; var2_int++) {
             mp.field_e[var2_int] = vr.a(param1, var2_int + 1, 1);

@@ -71,13 +71,13 @@ final class jg implements Runnable {
         }
     }
 
-    final static dc a(vr param0, String[] param1, int param2, int param3, int param4) {
+    final static GameState a(vr param0, String[] param1, int param2, int param3, int param4) {
         try {
-          dc var5 = null;
+          GameState var5 = null;
           RuntimeException var5_ref = null;
           vi var6 = null;
-          dc stackIn_3_0 = null;
-          dc stackIn_8_0 = null;
+          GameState stackIn_3_0 = null;
+          GameState stackIn_8_0 = null;
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;
           String stackIn_12_2 = null;
@@ -86,13 +86,13 @@ final class jg implements Runnable {
           Throwable decompiledCaughtException = null;
           jn var6_ref = null;
           try {
-            var5 = new dc(param2, param0, -1, param1);
+            var5 = new GameState(param2, param0, -1, param1);
             try {
               if (false) throw (jn) null;
               var6 = new vi();
               var5.field_g = var6.a((byte) -116);
               if (param3 != -22379) {
-                stackIn_3_0 = (dc) null;
+                stackIn_3_0 = (GameState) null;
                 return stackIn_3_0;
               }
               var5.field_g.a(var5.field_v, param0, param3 + 22383);

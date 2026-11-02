@@ -194,7 +194,7 @@ final class bk {
           if (var2 != null) {
             cq.a(-73, ho.field_c, (String) null, (String) (var2), 0);
           } else {
-            var4 = ln.field_o;
+            var4 = Star.field_o;
             var4 = v.a(var4, (byte) 19);
             var5 = "";
             var6 = "|";

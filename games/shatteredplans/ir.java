@@ -106,7 +106,7 @@ final class ir extends WidgetContainer implements dl, bp {
     final static void l(int param0) {
         eb.field_f = new String[cb.field_j];
         eb.field_f[11] = wg.field_g;
-        eb.field_f[21] = fs.field_j;
+        eb.field_f[21] = Player.field_j;
         eb.field_f[7] = ls.field_c;
         eb.field_f[16] = ga.field_o;
         eb.field_f[18] = no.field_a;

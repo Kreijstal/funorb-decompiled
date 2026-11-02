@@ -5,7 +5,7 @@ class ka implements uj {
     int field_o;
     static String field_m;
     int field_k;
-    fs field_n;
+    Player field_n;
     static bc field_e;
     static boolean field_a;
     static String field_f;
@@ -15,12 +15,12 @@ class ka implements uj {
     int[] field_i;
     private int[] field_d;
     int field_h;
-    dc field_g;
+    GameState field_g;
     int[] field_c;
 
     private final int a(byte param0, int param1, int param2, int[] param3) {
-        fs stackIn_30_0 = null;
-        fs stackIn_30_1 = null;
+        Player stackIn_30_0 = null;
+        Player stackIn_30_1 = null;
         int stackIn_46_0 = 0;
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
@@ -32,17 +32,17 @@ class ka implements uj {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        ln var9 = null;
+        Star var9 = null;
         int var10_int = 0;
-        ln[] var10 = null;
+        Star[] var10 = null;
         int var11 = 0;
-        ln var12 = null;
+        Star var12 = null;
         int var13 = 0;
         int var14 = 0;
-        ln[] var15 = null;
-        ln var9Lifetime1;
-        ln[] var10Lifetime1;
-        ln var12Lifetime1;
+        Star[] var15 = null;
+        Star var9Lifetime1;
+        Star[] var10Lifetime1;
+        Star var12Lifetime1;
         int var8Lifetime1;
         int var11Lifetime1;
         int var11Lifetime1Lifetime1;
@@ -134,12 +134,12 @@ class ka implements uj {
         }
     }
 
-    final int a(int param0, ln param1) {
+    final int a(int param0, Star param1) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ln[] var4 = null;
-        ln var6 = null;
+        Star[] var4 = null;
+        Star var6 = null;
         mg var7 = null;
         int var8 = 0;
         int stackIn_18_0 = 0;
@@ -172,7 +172,7 @@ class ka implements uj {
             var3_int = 1;
           }
           if (param0 != -5) {
-            this.field_n = (fs) null;
+            this.field_n = (Player) null;
           }
           stackIn_18_0 = var3_int;
           return stackIn_18_0;
@@ -190,15 +190,15 @@ class ka implements uj {
         }
     }
 
-    private final void a(sd param0, int[] param1, int param2) {
+    private final void a(Territory param0, int[] param1, int param2) {
         int var5 = 0;
-        ln[] var4 = null;
+        Star[] var4 = null;
         int var6 = 0;
-        ln var7 = null;
+        Star var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ln[] var11 = null;
+        Star[] var11 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -246,7 +246,7 @@ class ka implements uj {
         }
     }
 
-    private final int a(int param0, boolean param1, int param2, ln param3) {
+    private final int a(int param0, boolean param1, int param2, Star param3) {
         int stackIn_5_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_30_0 = 0;
@@ -257,13 +257,13 @@ class ka implements uj {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        ln[] var6_ref_ln__ = null;
+        Star[] var6_ref_ln__ = null;
         int var6 = 0;
         int var7_int = 0;
-        ln[] var7 = null;
+        Star[] var7 = null;
         int var8 = 0;
-        ln var8_ref_ln = null;
-        ln var9 = null;
+        Star var8_ref_ln = null;
+        Star var9 = null;
         int var9_int = 0;
         int var10 = 0;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -356,7 +356,7 @@ class ka implements uj {
         }
     }
 
-    int d(ln param0, int param1) {
+    int d(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
@@ -385,7 +385,7 @@ class ka implements uj {
         }
     }
 
-    private final void c(int param0, sd param1) {
+    private final void c(int param0, Territory param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -417,7 +417,7 @@ class ka implements uj {
         int var4 = 0;
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        ln var2 = mj.field_yb.j(18229);
+        Star var2 = mj.field_yb.j(18229);
         int var3 = param0;
         while (var2 != null) {
           var4 = var2.field_p;
@@ -429,15 +429,15 @@ class ka implements uj {
         return var3;
     }
 
-    int a(int param0, int param1, fs param2) {
+    int a(int param0, int param1, Player param2) {
         int var14 = 0;
         int[] dupTemp$0 = null;
         int var11 = 0;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        fs stackIn_23_0 = null;
-        fs stackIn_23_1 = null;
+        Player stackIn_23_0 = null;
+        Player stackIn_23_1 = null;
         int stackIn_34_0 = 0;
         int stackIn_37_0 = 0;
         int stackIn_41_0 = 0;
@@ -451,17 +451,17 @@ class ka implements uj {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        fs var5 = null;
-        fs var6 = null;
+        Player var5 = null;
+        Player var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ln[] var9 = null;
+        Star[] var9 = null;
         int[] var9_array = null;
         int var10 = 0;
-        ln var11_ref_ln = null;
+        Star var11_ref_ln = null;
         int var12 = 0;
-        ln[] var13 = null;
-        ln var15 = null;
+        Star[] var13 = null;
+        Star var15 = null;
         int var16 = 0;
         int[] var17 = null;
         int var10Lifetime1;
@@ -492,7 +492,7 @@ class ka implements uj {
                 for (var14 = 0; var13.length > var14; var14++) {
                   var15 = var13[var14];
                   stackIn_23_0 = var15.field_y;
-                  stackIn_23_1 = (fs) (param2);
+                  stackIn_23_1 = (Player) (param2);
                   if (stackIn_23_0 == stackIn_23_1) {
                     var12 = 1;
                     var7 = var7 + var15.field_x;
@@ -561,7 +561,7 @@ class ka implements uj {
 
     public final void b(byte param0) {
         int discarded$0 = 0;
-        sd var2;
+        Territory var2;
         int var3;
         int var4;
         int var5;
@@ -576,7 +576,7 @@ class ka implements uj {
         if (param0 >= -3) {
           discarded$0 = this.a(-67, 25, -122);
         }
-        var2 = (sd) (this.field_n.field_i.d(0));
+        var2 = (Territory) (this.field_n.field_i.d(0));
         var3 = 1;
         while (var2 != null) {
           if (this.field_g.field_o.field_i) {
@@ -593,7 +593,7 @@ class ka implements uj {
           } else {
             this.a(var2.field_x, var2, (byte) -54);
           }
-          var2 = (sd) (this.field_n.field_i.a((byte) -71));
+          var2 = (Territory) (this.field_n.field_i.a((byte) -71));
         }
         if (this.field_g.field_o.field_h) {
           if (this.field_n.field_u[0] >= 5) {
@@ -615,7 +615,7 @@ class ka implements uj {
         return;
     }
 
-    public final void a(fs param0, byte param1) {
+    public final void a(Player param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int var7 = 0;
@@ -630,7 +630,7 @@ class ka implements uj {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 != -42) {
-            this.d((ln) null, 1);
+            this.d((Star) null, 1);
           }
           var3_int = this.field_b[param0.field_x];
           var7 = var3_int;
@@ -673,7 +673,7 @@ class ka implements uj {
     }
 
     private final int a(int param0, int param1, int param2) {
-        ln var4;
+        Star var4;
         int var5;
         int var6;
         int var7;
@@ -710,7 +710,7 @@ class ka implements uj {
         return var5;
     }
 
-    int c(ln param0, int param1) {
+    int c(Star param0, int param1) {
         int var4 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -750,7 +750,7 @@ class ka implements uj {
         Object var2;
         int var3;
         int var4_int;
-        ln var6;
+        Star var6;
         int var9;
         qm var4;
         int var7;
@@ -776,7 +776,7 @@ class ka implements uj {
           }
         }
         if (var2 != null) {
-          var4 = new qm(0, this.field_n, (ln) (var2));
+          var4 = new qm(0, this.field_n, (Star) (var2));
           lh.field_G.a((byte) -113, var4);
         }
     }
@@ -784,7 +784,7 @@ class ka implements uj {
     private final void c(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
-        ln var6;
+        Star var6;
         int var7;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param2 < ~param1) {
@@ -808,7 +808,7 @@ class ka implements uj {
         }
     }
 
-    final int[] a(byte param0, fs param1) {
+    final int[] a(byte param0, Player param1) {
         int var11 = 0;
         int stackIn_6_0 = 0;
         int[] stackIn_8_0 = null;
@@ -822,13 +822,13 @@ class ka implements uj {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         boolean[] var4 = null;
-        ln[] var5 = null;
+        Star[] var5 = null;
         int var6 = 0;
         int var7 = 0;
-        ln var8 = null;
+        Star var8 = null;
         int var9 = 0;
-        ln[] var10 = null;
-        ln var12 = null;
+        Star[] var10 = null;
+        Star var12 = null;
         int var13 = 0;
         int var14 = 0;
         int[] var15 = null;
@@ -893,7 +893,7 @@ class ka implements uj {
         }
     }
 
-    void a(int param0, sd param1, byte param2) {
+    void a(int param0, Territory param1, byte param2) {
         int var10 = 0;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
@@ -901,15 +901,15 @@ class ka implements uj {
         RuntimeException decompiledCaughtException = null;
         int[] var4 = null;
         RuntimeException var4_ref = null;
-        ln var5 = null;
-        ln var6_ref_ln = null;
+        Star var5 = null;
+        Star var6_ref_ln = null;
         int var6 = 0;
         int var7_int = 0;
         Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        ln var12 = null;
+        Star var12 = null;
         int[] var13 = null;
         int var8Lifetime1;
         int var9Lifetime1;
@@ -1028,15 +1028,15 @@ class ka implements uj {
           rl.field_b[var2] = false;
         }
         if (param0 != -17286) {
-          this.a((byte) -58, (ln) null);
+          this.a((byte) -58, (Star) null);
         }
     }
 
     public final void a(int param0) {
         int[] var2;
-        fs[] var3;
+        Player[] var3;
         int var4;
-        fs var5;
+        Player var5;
         int var7;
         int[] var8;
         int var6;
@@ -1064,11 +1064,11 @@ class ka implements uj {
     int a(byte param0, int param1) {
         int var8 = 0;
         int var3;
-        ln var4;
+        Star var4;
         int var5;
         int var6;
-        ln[] var7_ref_ln__;
-        ln var9;
+        Star[] var7_ref_ln__;
+        Star var9;
         int var10;
         int var7;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -1112,7 +1112,7 @@ class ka implements uj {
         return new int[]{14, 15};
     }
 
-    private final void a(ln param0, ln param1, int param2, int param3) {
+    private final void a(Star param0, Star param1, int param2, int param3) {
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
@@ -1205,21 +1205,21 @@ class ka implements uj {
         }
     }
 
-    private final void a(int param0, sd param1) {
+    private final void a(int param0, Territory param1) {
         int var8 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        ln var3 = null;
+        Star var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        ln var5_ref_ln = null;
+        Star var5_ref_ln = null;
         Object var6 = null;
-        ln[] var7 = null;
-        ln var9 = null;
+        Star[] var7 = null;
+        Star var9 = null;
         int var10 = 0;
         int var4Lifetime1;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -1235,11 +1235,11 @@ class ka implements uj {
               for (var8 = 0; var7.length > var8; var8++) {
                 var9 = var7[var8];
                 if (param1 == var9.field_R && (var6 == null ||
-                  !(((ln) (var6)).field_J >= var9.field_J))) {
+                  !(((Star) (var6)).field_J >= var9.field_J))) {
                   var6 = var9;
                 }
               }
-              this.a(u.field_c[var3_int], 86, (ln) (var6));
+              this.a(u.field_c[var3_int], 86, (Star) (var6));
               u.field_c[var3_int] = 0;
               this.c(0, cq.field_E, -1);
             }
@@ -1276,9 +1276,9 @@ class ka implements uj {
         int var3;
         int var4;
         lo var5;
-        sd var5_ref;
+        Territory var5_ref;
         qm var5_ref2;
-        ln var6;
+        Star var6;
         int var7;
         int var8;
         int var9;
@@ -1318,7 +1318,7 @@ class ka implements uj {
             var6 = var5.h(param0 - 49949);
           }
         } else {
-          var5_ref = (sd) (this.field_n.field_i.d(0));
+          var5_ref = (Territory) (this.field_n.field_i.d(0));
           while (var5_ref != null) {
             var6 = var5_ref.j(18229);
             while (var6 != null) {
@@ -1347,11 +1347,11 @@ class ka implements uj {
               }
               var6 = var5_ref.h(-23410);
             }
-            var5_ref = (sd) (this.field_n.field_i.a((byte) -71));
+            var5_ref = (Territory) (this.field_n.field_i.a((byte) -71));
           }
         }
         if (var2 != null) {
-          var5_ref2 = new qm(1, this.field_n, (ln) (var2));
+          var5_ref2 = new qm(1, this.field_n, (Star) (var2));
           lh.field_G.a((byte) -113, var5_ref2);
         }
     }
@@ -1368,7 +1368,7 @@ class ka implements uj {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ln var9 = null;
+        Star var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1432,21 +1432,21 @@ class ka implements uj {
     }
 
     int b(int param0, int param1) {
-        fs stackIn_10_0 = null;
-        fs stackIn_10_1 = null;
+        Player stackIn_10_0 = null;
+        Player stackIn_10_1 = null;
         int var3;
-        ln var4;
+        Star var4;
         int var5;
-        ln[] var6;
+        Star[] var6;
         int var7;
-        ln var8;
+        Star var8;
         int var9;
-        ln[] var10;
-        ln var11;
+        Star[] var10;
+        Star var11;
         int var12;
         int var7Lifetime1;
-        ln[] var6Lifetime1;
-        ln var8Lifetime1;
+        Star[] var6Lifetime1;
+        Star var8Lifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 != -1799) {
           this.b(114, -80);
@@ -1500,7 +1500,7 @@ class ka implements uj {
         }
     }
 
-    public final void a(fs param0, int param1) {
+    public final void a(Player param0, int param1) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -1591,7 +1591,7 @@ class ka implements uj {
         }
     }
 
-    private final int[] b(int param0, sd param1) {
+    private final int[] b(int param0, Territory param1) {
         int[] stackIn_19_0 = null;
         int[] stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -1600,11 +1600,11 @@ class ka implements uj {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ln var4 = null;
+        Star var4 = null;
         int var6 = 0;
-        ln var7 = null;
+        Star var7 = null;
         int var8 = 0;
-        ln[] var9 = null;
+        Star[] var9 = null;
         int[] var10 = null;
         int var11 = 0;
         int var6Lifetime1;
@@ -1681,7 +1681,7 @@ class ka implements uj {
           }
         }
         if (var2 != null) {
-          var4 = new qm(2, this.field_n, (ln) (var2));
+          var4 = new qm(2, this.field_n, (Star) (var2));
           lh.field_G.a((byte) -113, var4);
         }
     }
@@ -1689,20 +1689,20 @@ class ka implements uj {
     void e(byte param0) {
         int var4_int = 0;
         int var7_int = 0;
-        sd stackIn_23_0 = null;
-        sd stackIn_23_1 = null;
+        Territory stackIn_23_0 = null;
+        Territory stackIn_23_1 = null;
         Object var2;
         int var3;
-        sd var4;
+        Territory var4;
         Object var5;
         int var6;
         qm var7;
-        ln var8;
+        Star var8;
         int var9;
-        ln[] var10_ref_ln__;
+        Star[] var10_ref_ln__;
         int var10;
         int var11;
-        ln var12_ref_ln;
+        Star var12_ref_ln;
         int var12;
         int var13;
         int var14;
@@ -1716,9 +1716,9 @@ class ka implements uj {
         var3 = 0;
         for (var4_int = 0; var4_int < this.field_o; var4_int++) {
           var5 = this.field_g.field_g.field_e[var4_int];
-          if (((ln) (var5)).field_y == this.field_n) {
+          if (((Star) (var5)).field_y == this.field_n) {
             var6 = oe.field_i[var4_int];
-            if (((ln) (var5)).field_u) {
+            if (((Star) (var5)).field_u) {
               var6 = 2 * var6 + 5;
             }
             if (var3 < var6) {
@@ -1730,7 +1730,7 @@ class ka implements uj {
         if (var2 == null) {
           return;
         }
-        var4 = ((ln) (var2)).field_R;
+        var4 = ((Star) (var2)).field_R;
         if (var4 == null) {
           return;
         }
@@ -1742,7 +1742,7 @@ class ka implements uj {
         for (var7_int = 0; this.field_o > var7_int; var7_int++) {
           var8 = this.field_g.field_g.field_e[var7_int];
           stackIn_23_0 = var8.field_R;
-          stackIn_23_1 = ((ln) (var2)).field_R;
+          stackIn_23_1 = ((Star) (var2)).field_R;
           if (stackIn_23_0 != stackIn_23_1 && (var8.field_y == this.field_n ||
             var8.field_y == null ||
             !this.field_n.field_h[var8.field_y.field_x])) {
@@ -1750,7 +1750,7 @@ class ka implements uj {
             var10_ref_ln__ = var8.field_D;
             for (var11 = 0; var11 < var10_ref_ln__.length; var11++) {
               var12_ref_ln = var10_ref_ln__[var11];
-              if (var12_ref_ln.field_R != ((ln) (var2)).field_R) {
+              if (var12_ref_ln.field_R != ((Star) (var2)).field_R) {
                 continue;
               }
               var9 = 1;
@@ -1781,17 +1781,17 @@ class ka implements uj {
           }
         }
         if (var5Lifetime1 != null) {
-          var7 = new qm(3, this.field_n, (ln) (var2), (ln) (var5Lifetime1));
+          var7 = new qm(3, this.field_n, (Star) (var2), (Star) (var5Lifetime1));
           lh.field_G.a((byte) -113, var7);
         }
         return;
     }
 
-    int a(byte param0, ln param1) {
+    int a(byte param0, Star param1) {
         int var5 = 0;
         int var3_int = 0;
-        ln[] var4 = null;
-        ln var6 = null;
+        Star[] var4 = null;
+        Star var6 = null;
         int var7 = 0;
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -1830,12 +1830,12 @@ class ka implements uj {
         }
     }
 
-    private final int a(ln param0, int param1) {
+    private final int a(Star param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ln[] var4 = null;
-        ln var6 = null;
+        Star[] var4 = null;
+        Star var6 = null;
         int var7 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -1869,7 +1869,7 @@ class ka implements uj {
         }
     }
 
-    private final void a(int param0, int param1, ln param2) {
+    private final void a(int param0, int param1, Star param2) {
         int var7 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -1880,7 +1880,7 @@ class ka implements uj {
         int var5 = 0;
         int[] var6 = null;
         int var8 = 0;
-        ln var9 = null;
+        Star var9 = null;
         int var10 = 0;
         int var11 = 0;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -1936,7 +1936,7 @@ class ka implements uj {
         }
     }
 
-    int b(byte param0, ln param1) {
+    int b(byte param0, Star param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1974,7 +1974,7 @@ class ka implements uj {
         field_m = null;
     }
 
-    private final int a(ln param0, int param1, byte param2) {
+    private final int a(Star param0, int param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -2024,7 +2024,7 @@ class ka implements uj {
         }
     }
 
-    int a(ln param0, byte param1) {
+    int a(Star param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_9_0 = 0;
@@ -2087,7 +2087,7 @@ class ka implements uj {
 
     public final int a(boolean param0) {
         if (param0) {
-          this.a(-105, (ln) null);
+          this.a(-105, (Star) null);
         }
         return this.field_h;
     }
@@ -2096,7 +2096,7 @@ class ka implements uj {
         int var4_int = 0;
         int var2;
         int var3;
-        fs var4;
+        Player var4;
         int var5;
         int var6;
         int var7;
@@ -2122,7 +2122,7 @@ class ka implements uj {
           }
         }
         if (param0 != -63) {
-          this.a(113, 108, (fs) null);
+          this.a(113, 108, (Player) null);
         }
         if (this.field_l &&
           this.field_g.field_o.field_j) {
@@ -2161,7 +2161,7 @@ class ka implements uj {
         }
     }
 
-    int b(ln param0, int param1) {
+    int b(Star param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -2194,12 +2194,12 @@ class ka implements uj {
         int[] var5;
         int var7;
         int var8;
-        ln var9;
+        Star var9;
         mg var10;
         int var11;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 >= -124) {
-          this.a((fs) null, (byte) -78);
+          this.a((Player) null, (byte) -78);
         }
         var4 = 0;
         var5 = ik.a(u.field_c, this.field_o, (byte) 49);
@@ -2306,7 +2306,7 @@ class ka implements uj {
         return this.field_l;
     }
 
-    private final void a(byte param0, int param1, ln param2) {
+    private final void a(byte param0, int param1, Star param2) {
         qa var4 = null;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -2350,7 +2350,7 @@ class ka implements uj {
         }
     }
 
-    ka(dc param0, fs param1, mn param2, int param3) {
+    ka(GameState param0, Player param1, mn param2, int param3) {
         try {
           this.field_l = true;
           this.field_g = param0;

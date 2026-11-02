@@ -61,7 +61,7 @@ final class r implements Runnable {
           var5 = var15.j(-87);
           if (var5 != 0) {
             var6 = var3.field_j;
-            wb.field_a[0] = ln.field_o;
+            wb.field_a[0] = Star.field_o;
             for (var7_int = 1; var5 > var7_int; var7_int++) {
               wb.field_a[var7_int] = var15.e(-1);
             }
@@ -181,7 +181,7 @@ final class r implements Runnable {
           }
           rf.field_h.e();
           var1.d(0, 0);
-          ln.f((byte) -70);
+          Star.f((byte) -70);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "r.D(" + param0 + ')');
         }

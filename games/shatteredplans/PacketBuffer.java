@@ -687,7 +687,7 @@ class PacketBuffer extends IntrusiveNode {
           ImageProducerRasterBuffer.field_i = 0;
           er.field_g = false;
           ph.field_g = false;
-          me.field_j = false;
+          VictoryChecker.field_j = false;
           se.field_k = false;
           js.field_b = new sq[8];
           wl.field_a = new vi();

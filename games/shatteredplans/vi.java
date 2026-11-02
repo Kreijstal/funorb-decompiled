@@ -6,10 +6,10 @@ final class vi extends hs {
 
     private final void e(int param0) {
         RuntimeException decompiledCaughtException = null;
-        ln[] var2 = null;
+        Star[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        ln var4 = null;
+        Star var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -934,7 +934,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("mu_game_has_started", 511);
                 if (var2 != null) {
-                  dc.field_a = IterableNodeHashTable.a(var2, 17746);
+                  GameState.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("mu_you_declined_invite", 511);
                 if (null != var2) {
@@ -1586,7 +1586,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("gameopt_needchanging2", 511);
                 if (var2 != null) {
-                  sd.field_y = IterableNodeHashTable.a(var2, 17746);
+                  Territory.field_y = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("gameopt_mightchange", 511);
                 if (var2 != null) {
@@ -1720,7 +1720,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("rule_2_1", 511);
                 if (null != var2) {
-                  fs.field_j = IterableNodeHashTable.a(var2, 17746);
+                  Player.field_j = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("rule_2_2", 511);
                 if (null != var2) {
@@ -2460,7 +2460,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("enterignore_del", 511);
                 if (null != var2) {
-                  ln.field_E = IterableNodeHashTable.a(var2, 17746);
+                  Star.field_E = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("text_removed_from_game", 511);
                 if (null != var2) {
@@ -3394,7 +3394,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("fs_accept_countdown_pl", 511);
                 if (null != var2) {
-                  ln.field_U = IterableNodeHashTable.a(var2, 17746);
+                  Star.field_U = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("fs_nonmember", 511);
                 if (var2 != null) {
@@ -3869,10 +3869,10 @@ final class vi extends hs {
         t var4 = null;
         try {
           var2 = new l(pe.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
-          this.field_f = new ln[1];
+          this.field_f = new Star[1];
           this.field_f[0] = this.a(0, this.field_c, this.field_b, -50, 0);
-          this.field_f[0].field_I = mh.field_h[21];
-          this.field_f[0].field_D = new ln[]{};
+          this.field_f[0].name = mh.field_h[21];
+          this.field_f[0].field_D = new Star[]{};
           this.e(1);
           var2.field_e = this.field_f;
           var2.a(26253);
@@ -3897,7 +3897,7 @@ final class vi extends hs {
         l var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
-        ln[] var5 = null;
+        Star[] var5 = null;
         int var6_int = 0;
         t var6 = null;
         int var7 = 0;
@@ -3919,26 +3919,26 @@ final class vi extends hs {
             case 1:
               if (param2) {
                 this.field_c = 1;
-                this.field_f = new ln[1];
+                this.field_f = new Star[1];
                 this.field_d = 1;
                 this.field_b = 1;
               }
               var4 = new l(pe.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
               this.field_f[0] = this.a(0, this.field_c, this.field_b, -25, 0);
-              this.field_f[0].field_I = mh.field_h[21];
+              this.field_f[0].name = mh.field_h[21];
               if (var7 == 0) {
                 break;
               }
             case 2:
               if (param2) {
-                this.field_f = new ln[2];
+                this.field_f = new Star[2];
                 this.field_b = 1;
                 this.field_c = 2;
                 this.field_d = 2;
               }
               var4 = this.a(32, 1, false);
               this.field_f[1] = this.a(1, this.field_c, this.field_b, -119, 1);
-              this.field_f[1].field_I = mh.field_h[247];
+              this.field_f[1].name = mh.field_h[247];
               if (var7 == 0) {
                 break;
               }
@@ -3947,15 +3947,15 @@ final class vi extends hs {
                 this.field_c = 5;
                 this.field_d = 5;
                 this.field_b = 2;
-                this.field_f = new ln[this.field_b * this.field_c];
+                this.field_f = new Star[this.field_b * this.field_c];
               }
               var4 = this.a(23, 2, false);
               this.field_f[3] = this.a(3, this.field_c, this.field_b, -54, 2);
-              this.field_f[3].field_I = mh.field_h[206];
+              this.field_f[3].name = mh.field_h[206];
               this.field_f[4] = this.a(4, this.field_c, this.field_b, -71, 3);
-              this.field_f[4].field_I = mh.field_h[220];
+              this.field_f[4].name = mh.field_h[220];
               this.field_f[3 + this.field_c] = this.a(this.field_c + 3, this.field_c, this.field_b, 113, 4);
-              this.field_f[this.field_c + 3].field_I = mh.field_h[94];
+              this.field_f[this.field_c + 3].name = mh.field_h[94];
               if (var7 == 0) {
                 break;
               }
@@ -3964,11 +3964,11 @@ final class vi extends hs {
                 this.field_d = 6;
                 this.field_c = 5;
                 this.field_b = 4;
-                this.field_f = new ln[this.field_c * this.field_b];
+                this.field_f = new Star[this.field_c * this.field_b];
               }
               var4 = this.a(58, 3, false);
               this.field_f[this.field_c * 3 + 4] = this.a(3 * this.field_c + 4, this.field_c, this.field_b, -81, 5);
-              this.field_f[this.field_c * 3 + 4].field_I = mh.field_h[186];
+              this.field_f[this.field_c * 3 + 4].name = mh.field_h[186];
               if (var7 == 0) {
                 break;
               }
@@ -3977,13 +3977,13 @@ final class vi extends hs {
                 this.field_d = 8;
                 this.field_b = 5;
                 this.field_c = 5;
-                this.field_f = new ln[this.field_b * this.field_c];
+                this.field_f = new Star[this.field_b * this.field_c];
               }
               var4 = this.a(59, 4, false);
               this.field_f[this.field_c * 3 + 3] = this.a(3 + this.field_c * 3, this.field_c, this.field_b, 109, 6);
-              this.field_f[3 + this.field_c * 3].field_I = mh.field_h[231];
+              this.field_f[3 + this.field_c * 3].name = mh.field_h[231];
               this.field_f[this.field_c * 4 + 3] = this.a(4 * this.field_c + 3, this.field_c, this.field_b, 114, 7);
-              this.field_f[3 + 4 * this.field_c].field_I = mh.field_h[86];
+              this.field_f[3 + 4 * this.field_c].name = mh.field_h[86];
               if (var7 == 0) {
                 break;
               }
@@ -3992,31 +3992,31 @@ final class vi extends hs {
                 this.field_c = 8;
                 this.field_b = 8;
                 this.field_d = 19;
-                this.field_f = new ln[this.field_b * this.field_c];
+                this.field_f = new Star[this.field_b * this.field_c];
               }
               var4 = this.a(34, 5, false);
               this.field_f[this.field_c * 6 + 2] = this.a(this.field_c * 6 + 2, this.field_c, this.field_b, 122, 8);
-              this.field_f[6 * this.field_c + 2].field_I = mh.field_h[149];
+              this.field_f[6 * this.field_c + 2].name = mh.field_h[149];
               this.field_f[3 + this.field_c * 6] = this.a(3 + 6 * this.field_c, this.field_c, this.field_b, 121, 9);
-              this.field_f[3 + 6 * this.field_c].field_I = mh.field_h[244];
+              this.field_f[3 + 6 * this.field_c].name = mh.field_h[244];
               this.field_f[2 + 7 * this.field_c] = this.a(7 * this.field_c + 2, this.field_c, this.field_b, 125, 10);
-              this.field_f[2 + 7 * this.field_c].field_I = mh.field_h[82];
+              this.field_f[2 + 7 * this.field_c].name = mh.field_h[82];
               this.field_f[3 + this.field_c * 7] = this.a(7 * this.field_c + 3, this.field_c, this.field_b, 121, 11);
-              this.field_f[3 + this.field_c * 7].field_I = mh.field_h[245];
+              this.field_f[3 + this.field_c * 7].name = mh.field_h[245];
               this.field_f[4 + this.field_c * 7] = this.a(this.field_c * 7 + 4, this.field_c, this.field_b, -125, 12);
-              this.field_f[4 + this.field_c * 7].field_I = mh.field_h[242];
+              this.field_f[4 + this.field_c * 7].name = mh.field_h[242];
               this.field_f[5 + 6 * this.field_c] = this.a(5 + 6 * this.field_c, this.field_c, this.field_b, 125, 13);
-              this.field_f[5 + this.field_c * 6].field_I = mh.field_h[204];
+              this.field_f[5 + this.field_c * 6].name = mh.field_h[204];
               this.field_f[7 * this.field_c + 5] = this.a(5 + 7 * this.field_c, this.field_c, this.field_b, 121, 14);
-              this.field_f[this.field_c * 7 + 5].field_I = mh.field_h[226];
+              this.field_f[this.field_c * 7 + 5].name = mh.field_h[226];
               this.field_f[6 * this.field_c + 6] = this.a(6 * this.field_c + 6, this.field_c, this.field_b, -14, 15);
-              this.field_f[6 + this.field_c * 6].field_I = mh.field_h[165];
+              this.field_f[6 + this.field_c * 6].name = mh.field_h[165];
               this.field_f[6 + 5 * this.field_c] = this.a(6 + this.field_c * 5, this.field_c, this.field_b, 120, 16);
-              this.field_f[6 + 5 * this.field_c].field_I = mh.field_h[216];
+              this.field_f[6 + 5 * this.field_c].name = mh.field_h[216];
               this.field_f[6 * this.field_c + 7] = this.a(7 + 6 * this.field_c, this.field_c, this.field_b, 105, 17);
-              this.field_f[this.field_c * 6 + 7].field_I = mh.field_h[109];
+              this.field_f[this.field_c * 6 + 7].name = mh.field_h[109];
               this.field_f[this.field_c * 5 + 5] = this.a(5 * this.field_c + 5, this.field_c, this.field_b, -28, 18);
-              this.field_f[this.field_c * 5 + 5].field_I = mh.field_h[255];
+              this.field_f[this.field_c * 5 + 5].name = mh.field_h[255];
               if (var7 == 0) {
                 break;
               }
@@ -4025,47 +4025,47 @@ final class vi extends hs {
                 this.field_d = 38;
                 this.field_c = 14;
                 this.field_b = 8;
-                this.field_f = new ln[this.field_b * this.field_c];
+                this.field_f = new Star[this.field_b * this.field_c];
               }
               var4 = this.a(64, 6, false);
               this.field_f[7 + 3 * this.field_c] = this.a(3 * this.field_c + 7, this.field_c, this.field_b, 117, 19);
-              this.field_f[3 * this.field_c + 7].field_I = mh.field_h[170];
+              this.field_f[3 * this.field_c + 7].name = mh.field_h[170];
               this.field_f[this.field_c * 4 + 8] = this.a(4 * this.field_c + 8, this.field_c, this.field_b, 108, 20);
-              this.field_f[8 + this.field_c * 4].field_I = mh.field_h[195];
+              this.field_f[8 + this.field_c * 4].name = mh.field_h[195];
               this.field_f[8 + this.field_c * 2] = this.a(this.field_c * 2 + 8, this.field_c, this.field_b, 119, 21);
-              this.field_f[8 + 2 * this.field_c].field_I = mh.field_h[228];
+              this.field_f[8 + 2 * this.field_c].name = mh.field_h[228];
               this.field_f[8 + this.field_c * 3] = this.a(8 + 3 * this.field_c, this.field_c, this.field_b, 118, 22);
-              this.field_f[3 * this.field_c + 8].field_I = mh.field_h[148];
+              this.field_f[3 * this.field_c + 8].name = mh.field_h[148];
               this.field_f[9 + this.field_c * 4] = this.a(9 + 4 * this.field_c, this.field_c, this.field_b, 120, 23);
-              this.field_f[9 + 4 * this.field_c].field_I = mh.field_h[181];
+              this.field_f[9 + 4 * this.field_c].name = mh.field_h[181];
               this.field_f[9 + this.field_c * 3] = this.a(this.field_c * 3 + 9, this.field_c, this.field_b, -105, 24);
-              this.field_f[this.field_c * 3 + 9].field_I = ks.field_c + " WHL-2";
+              this.field_f[this.field_c * 3 + 9].name = ks.field_c + " WHL-2";
               this.field_f[10 + 2 * this.field_c] = this.a(10 + this.field_c * 2, this.field_c, this.field_b, 119, 25);
-              this.field_f[2 * this.field_c + 10].field_I = mh.field_h[214];
+              this.field_f[2 * this.field_c + 10].name = mh.field_h[214];
               this.field_f[3 * this.field_c + 10] = this.a(10 + this.field_c * 3, this.field_c, this.field_b, -11, 26);
-              this.field_f[3 * this.field_c + 10].field_I = mh.field_h[241];
+              this.field_f[3 * this.field_c + 10].name = mh.field_h[241];
               this.field_f[4 * this.field_c + 10] = this.a(4 * this.field_c + 10, this.field_c, this.field_b, 122, 27);
-              this.field_f[this.field_c * 4 + 10].field_I = mh.field_h[250];
+              this.field_f[this.field_c * 4 + 10].name = mh.field_h[250];
               this.field_f[4 * this.field_c + 11] = this.a(this.field_c * 4 + 11, this.field_c, this.field_b, -123, 28);
-              this.field_f[this.field_c * 4 + 11].field_I = mh.field_h[169];
+              this.field_f[this.field_c * 4 + 11].name = mh.field_h[169];
               this.field_f[10 + 5 * this.field_c] = this.a(this.field_c * 5 + 10, this.field_c, this.field_b, 127, 29);
-              this.field_f[5 * this.field_c + 10].field_I = mh.field_h[28];
+              this.field_f[5 * this.field_c + 10].name = mh.field_h[28];
               this.field_f[5 * this.field_c + 11] = this.a(this.field_c * 5 + 11, this.field_c, this.field_b, -50, 30);
-              this.field_f[11 + 5 * this.field_c].field_I = mh.field_h[212];
+              this.field_f[11 + 5 * this.field_c].name = mh.field_h[212];
               this.field_f[this.field_c * 4 + 12] = this.a(4 * this.field_c + 12, this.field_c, this.field_b, 112, 31);
-              this.field_f[12 + 4 * this.field_c].field_I = mh.field_h[190];
+              this.field_f[12 + 4 * this.field_c].name = mh.field_h[190];
               this.field_f[12 + 3 * this.field_c] = this.a(12 + this.field_c * 3, this.field_c, this.field_b, -78, 32);
-              this.field_f[3 * this.field_c + 12].field_I = mh.field_h[122];
+              this.field_f[3 * this.field_c + 12].name = mh.field_h[122];
               this.field_f[4 * this.field_c + 13] = this.a(this.field_c * 4 + 13, this.field_c, this.field_b, 118, 33);
-              this.field_f[13 + 4 * this.field_c].field_I = mh.field_h[125];
+              this.field_f[13 + 4 * this.field_c].name = mh.field_h[125];
               this.field_f[5 * this.field_c + 12] = this.a(12 + this.field_c * 5, this.field_c, this.field_b, 109, 34);
-              this.field_f[12 + 5 * this.field_c].field_I = mh.field_h[246];
+              this.field_f[12 + 5 * this.field_c].name = mh.field_h[246];
               this.field_f[11 + this.field_c * 6] = this.a(6 * this.field_c + 11, this.field_c, this.field_b, -36, 35);
-              this.field_f[this.field_c * 6 + 11].field_I = mh.field_h[253];
+              this.field_f[this.field_c * 6 + 11].name = mh.field_h[253];
               this.field_f[this.field_c * 6 + 12] = this.a(6 * this.field_c + 12, this.field_c, this.field_b, -93, 36);
-              this.field_f[6 * this.field_c + 12].field_I = mh.field_h[91];
+              this.field_f[6 * this.field_c + 12].name = mh.field_h[91];
               this.field_f[13 + 6 * this.field_c] = this.a(13 + 6 * this.field_c, this.field_c, this.field_b, -80, 37);
-              this.field_f[this.field_c * 6 + 13].field_I = mh.field_h[152];
+              this.field_f[this.field_c * 6 + 13].name = mh.field_h[152];
               if (var7 == 0) {
                 break;
               }
@@ -4074,7 +4074,7 @@ final class vi extends hs {
           }
           if (param2) {
             this.e(1);
-            var5 = new ln[this.field_d];
+            var5 = new Star[this.field_d];
             var6_int = 0;
             while (true) {
               if (this.field_f.length > var6_int) {

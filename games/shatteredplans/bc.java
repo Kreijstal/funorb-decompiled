@@ -315,7 +315,7 @@ final class bc {
           param2 < 0 ||
           this.field_f.field_m.length <= param1 ||
           this.field_f.field_m[param1] <= param2) {
-          if (!sd.field_v) {
+          if (!Territory.field_v) {
             return false;
           }
           throw new IllegalArgumentException(param1 + " " + param2);
@@ -507,7 +507,7 @@ final class bc {
         if (param1 < 0 ||
           this.field_f.field_m.length <= param1 ||
           this.field_f.field_m[param1] == 0) {
-          if (sd.field_v) {
+          if (Territory.field_v) {
             throw new IllegalArgumentException(Integer.toString(param1));
           }
           return false;
@@ -794,7 +794,7 @@ final class bc {
             stackIn_36_0 = var11_ref_RuntimeException;
             stackIn_36_1 = new StringBuilder();
             stackIn_37_2 = (param1 != null);
-            throw r.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(me.a(63, var9, var9.length)).append(" ").append(me.a(59, var9, var9.length - 2)).append(" ").append(this.field_f.field_f[param2]).append(" ").append(this.field_f.field_c).toString());
+            throw r.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(VictoryChecker.a(63, var9, var9.length)).append(" ").append(VictoryChecker.a(59, var9, var9.length - 2)).append(" ").append(this.field_f.field_f[param2]).append(" ").append(this.field_f.field_c).toString());
           }
           if (this.field_j) {
             this.field_m[param2] = null;

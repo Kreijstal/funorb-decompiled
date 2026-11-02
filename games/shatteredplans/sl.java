@@ -174,7 +174,7 @@ final class sl extends PacketBuffer {
         }
     }
 
-    final static lp a(int param0, int param1, fs param2, int param3) {
+    final static lp a(int param0, int param1, Player param2, int param3) {
         RuntimeException var4 = null;
         uc var5 = null;
         ff var6 = null;

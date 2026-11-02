@@ -9,7 +9,7 @@ final class hg extends ka {
     static String field_s;
     static ap field_q;
 
-    hg(dc param0, fs param1, mn param2) {
+    hg(GameState param0, Player param1, mn param2) {
         super(param0, param1, param2, 6);
     }
 
@@ -17,14 +17,14 @@ final class hg extends ka {
         so.a(0, param8, 16777215, param9, param2, param6, param11, param5, param0, param4, param10, param1, param7, param3);
     }
 
-    final int a(int param0, int param1, fs param2) {
+    final int a(int param0, int param1, Player param2) {
         int var9 = 0;
         int var13 = 0;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
-        fs stackIn_17_0 = null;
-        fs stackIn_17_1 = null;
+        Player stackIn_17_0 = null;
+        Player stackIn_17_1 = null;
         int stackIn_33_0 = 0;
         int stackIn_38_0 = 0;
         int stackIn_42_0 = 0;
@@ -34,15 +34,15 @@ final class hg extends ka {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        fs var5 = null;
+        Player var5 = null;
         int var6 = 0;
         int var7 = 0;
-        ln[] var8_ref_ln__ = null;
+        Star[] var8_ref_ln__ = null;
         int var8 = 0;
-        ln var10 = null;
+        Star var10 = null;
         int var11 = 0;
-        ln[] var12 = null;
-        ln var14 = null;
+        Star[] var12 = null;
+        Star var14 = null;
         int var15 = 0;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -213,7 +213,7 @@ final class hg extends ka {
         int var2;
         int var3;
         int var4;
-        fs var5;
+        Player var5;
         int var6;
         int var7;
         int var8;

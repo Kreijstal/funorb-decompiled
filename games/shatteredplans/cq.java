@@ -31,8 +31,8 @@ final class cq extends WidgetContainer implements bp {
           var1_int = 0;
           var2 = param0 ? 1 : 0;
           while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
-            dc.field_l.b(0);
-            if (dc.field_l.a((byte) -46)) {
+            GameState.field_l.b(0);
+            if (GameState.field_l.a((byte) -46)) {
               var1_int = 1;
             }
             if (oq.field_j != 13) {
@@ -40,14 +40,14 @@ final class cq extends WidgetContainer implements bp {
             }
             var2 = 1;
           }
-          dc.field_l.a(-1, kq.a(nh.field_p, td.field_P, 16777215), kq.a(pd.field_k, bb.field_b, 16777215));
-          if (dc.field_l.a((byte) -76)) {
+          GameState.field_l.a(-1, kq.a(nh.field_p, td.field_P, 16777215), kq.a(pd.field_k, bb.field_b, 16777215));
+          if (GameState.field_l.a((byte) -76)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            dc.field_l.field_c >= 0) {
-            var3 = ShatteredPlansClient.field_E[dc.field_l.field_c];
+            GameState.field_l.field_c >= 0) {
+            var3 = ShatteredPlansClient.field_E[GameState.field_l.field_c];
             if (2 == var3 ||
               var3 == 5) {
               jf.b((byte) -15);

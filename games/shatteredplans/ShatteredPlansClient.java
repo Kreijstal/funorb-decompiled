@@ -71,7 +71,7 @@ public final class ShatteredPlansClient extends tl {
         es.field_n = 2805974;
         em.a(us.b(0), 1);
         this.a(false, true, -2839, true, true, false, false);
-        td.field_K = hi.field_a;
+        td.field_K = TaskAi.field_a;
         ae.field_a[71] = 4;
         ae.field_a[74] = -2;
         ae.field_a[58] = -2;
@@ -833,10 +833,10 @@ public final class ShatteredPlansClient extends tl {
         sp.a(3);
         wc.a(-23092);
         ea.a((byte) -109);
-        fs.a(param0 ^ -24065);
+        Player.a(param0 ^ -24065);
         ho.a(520);
-        dc.e((byte) -67);
-        ln.e(param0 ^ -24069);
+        GameState.e((byte) -67);
+        Star.e(param0 ^ -24069);
         mg.g((byte) -106);
         qa.e(21758);
         an.b(true);
@@ -846,7 +846,7 @@ public final class ShatteredPlansClient extends tl {
         jj.c(45);
         hp.b((byte) -64);
         nh.b((byte) 59);
-        me.a(true);
+        VictoryChecker.a(true);
         jb.a(30);
         vs.a(param0 ^ -24162);
         oo.a(4);
@@ -868,10 +868,10 @@ public final class ShatteredPlansClient extends tl {
         dd.a(param0 ^ 27074);
         dg.f((byte) -124);
         ka.d((byte) 79);
-        hi.f(param0 ^ 24118);
+        TaskAi.f(param0 ^ 24118);
         as.a(param0 ^ -24081);
         vn.a((byte) 68);
-        sd.f(-28714);
+        Territory.f(-28714);
         eg.a(param0 + 24195);
         hj.a((byte) 12);
         ne.c(false);
@@ -1284,7 +1284,7 @@ public final class ShatteredPlansClient extends tl {
           }
           var5 = MouseInputHandler.field_f * MouseInputHandler.field_f;
           var6 = -(NodeHashTableIterator.field_h * NodeHashTableIterator.field_h) + var5;
-          var7 = 120 * var6 / var5 + fs.field_z;
+          var7 = 120 * var6 / var5 + Player.field_z;
           fa.a(var7, (byte) -47);
           if (uc.field_v > 0) {
             uc.field_v = uc.field_v - 1;
@@ -1314,7 +1314,7 @@ public final class ShatteredPlansClient extends tl {
         if (gr.field_o == -5) {
           tq.field_b = null;
           var12 = new String[]{hn.field_f[0]};
-          ce.field_x = new km(false, true, 0, hi.field_a, 0, var12, 0, false, (kq) null);
+          ce.field_x = new km(false, true, 0, TaskAi.field_a, 0, var12, 0, false, (kq) null);
           stackIn_107_0 = (!uh.field_i) ? 0 : 1;
           var4Lifetime2 = stackIn_107_0;
           ta.a(0, -1, (byte) 96, var4Lifetime2 != 0);
@@ -1441,7 +1441,7 @@ public final class ShatteredPlansClient extends tl {
         }
         if (!cj.field_x ||
           !cs.field_i) {
-          qr.a(me.a(30), (byte) 111);
+          qr.a(VictoryChecker.a(30), (byte) 111);
         }
         if (eb.field_b > 0) {
           gf.c(0, 0, 640, 480, 0, eb.field_b);
@@ -1453,7 +1453,7 @@ public final class ShatteredPlansClient extends tl {
           if (kh.f((byte) -67)) {
             stackIn_69_0 = 95;
             stackIn_71_1 = (null != bj.field_K) || (br.field_i);
-            fs.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_71_1);
+            Player.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_71_1);
           } else {
             if (!i.c(0)) {
               if (!this.field_G.g(27)) {

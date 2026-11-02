@@ -466,7 +466,7 @@ final class dm {
                   }
                 } else {
                   if (var26Lifetime1 != 0) {
-                    var24Lifetime2 = var34 + "<br>" + sd.field_y + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + Territory.field_y + (String) (var25);
                   } else {
                     var24Lifetime2 = var34 + "<br>" + re.a(ef.field_e, param1 + 4371, new String[]{(String) (var25)});
                   }

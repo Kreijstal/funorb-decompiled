@@ -28,7 +28,7 @@ final class n extends IntrusiveNode {
         field_j = null;
     }
 
-    n(fs param0, fs param1, String param2) {
+    n(Player param0, Player param1, String param2) {
         try {
           this.field_i = 0;
         } catch (RuntimeException runtimeException) {

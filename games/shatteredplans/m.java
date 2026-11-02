@@ -47,7 +47,7 @@ final class m extends mc {
         return false;
     }
 
-    final static void a(byte param0, fs[] param1, PacketBuffer param2, int param3, IntrusiveDeque param4, int param5, me param6, fs param7, l param8, boolean param9) {
+    final static void a(byte param0, Player[] param1, PacketBuffer param2, int param3, IntrusiveDeque param4, int param5, VictoryChecker param6, Player param7, l param8, boolean param9) {
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
         String stackIn_64_2 = null;
@@ -67,12 +67,12 @@ final class m extends mc {
         int var11 = 0;
         int var12_int = 0;
         cs var12 = null;
-        sd var12_ref = null;
+        Territory var12_ref = null;
         int var13 = 0;
         lo var13_ref_lo = null;
         int var14 = 0;
-        ln var14_ref_ln = null;
-        ln var15 = null;
+        Star var14_ref_ln = null;
+        Star var15 = null;
         int var16 = 0;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -98,7 +98,7 @@ final class m extends mc {
             field_v = (String) null;
           }
           for (var11Lifetime1 = 0; param1.length > var11Lifetime1; var11Lifetime1++) {
-            var12_ref = (sd) (param1[var11Lifetime1].field_i.d(0));
+            var12_ref = (Territory) (param1[var11Lifetime1].field_i.d(0));
             while (var12_ref != null) {
               im.a(var12_ref.field_o, param2, 9555);
               di.a(var12_ref.field_q, false, param2);
@@ -111,7 +111,7 @@ final class m extends mc {
                 }
                 var14_ref_ln = var12_ref.h(-23410);
               }
-              var12_ref = (sd) (param1[var11Lifetime1].field_i.a((byte) -71));
+              var12_ref = (Territory) (param1[var11Lifetime1].field_i.a((byte) -71));
             }
           }
           var11Lifetime2 = 0;
@@ -480,7 +480,7 @@ final class m extends mc {
           eg.field_u.field_U = id.a(2, param4, "lobby", "downbutton_mouseheld");
           eg.field_u.field_ob = id.a(2, param4, "lobby", "downbutton_disabled");
           se.field_m = new ur(0L, sk.field_k, eg.field_u, sj.field_c, ml.field_l);
-          ih.field_g = new am(0L, (qr) null, me.field_d, se.field_m, jf.field_b, (String) null, (String) null);
+          ih.field_g = new am(0L, (qr) null, VictoryChecker.field_d, se.field_m, jf.field_b, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

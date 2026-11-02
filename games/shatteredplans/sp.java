@@ -80,8 +80,8 @@ final class sp {
           var6.field_r = 0;
           var7 = new gn(var4, true);
           var7.field_r = 0;
-          var7.a((byte) 8, hi.a(8947848, (byte) -16));
-          var7.a(82, 1).a(hi.a(11184810, (byte) -16), -93).a((byte) 71, 2236962);
+          var7.a((byte) 8, TaskAi.a(8947848, (byte) -16));
+          var7.a(82, 1).a(TaskAi.a(11184810, (byte) -16), -93).a((byte) 71, 2236962);
           this.field_a = (iq) ((Object) new tf(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new i(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new tp(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
@@ -149,17 +149,17 @@ final class sp {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        ln[] var3 = null;
+        Star[] var3 = null;
         mg var3_ref = null;
         qm var3_ref2 = null;
         int var4 = 0;
         int var6 = 0;
-        ln[] var7 = null;
-        ln[] var8 = null;
+        Star[] var7 = null;
+        Star[] var8 = null;
         int var9 = 0;
-        ln var10 = null;
-        ln var11 = null;
-        ln[] var3Lifetime1;
+        Star var10 = null;
+        Star var11 = null;
+        Star[] var3Lifetime1;
         int var4Lifetime1;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {

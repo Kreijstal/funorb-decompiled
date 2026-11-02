@@ -142,7 +142,7 @@ final class ub extends qr {
           if (param9 != 0) {
             field_Cb = (String) null;
           }
-          fs.a(param16, param4, false);
+          Player.a(param16, param4, false);
           bs.a(param13, param8, param14, (byte) 102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

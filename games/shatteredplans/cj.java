@@ -8,7 +8,7 @@ final class cj extends j {
     static String field_t;
     static String field_v;
 
-    final int a(ln param0, byte param1) {
+    final int a(Star param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_8_0 = 0;
@@ -45,25 +45,25 @@ final class cj extends j {
         }
     }
 
-    cj(dc param0, fs param1, mn param2) {
+    cj(GameState param0, Player param1, mn param2) {
         super(param0, param1, param2, 2);
     }
 
     final int b(int param0, int param1) {
         int var7 = 0;
-        fs stackIn_9_0 = null;
-        fs stackIn_9_1 = null;
+        Player stackIn_9_0 = null;
+        Player stackIn_9_1 = null;
         int stackIn_26_0 = 0;
         int stackIn_27_1 = 0;
         int var3;
-        ln var4;
+        Star var4;
         int var5;
-        ln[] var6;
-        ln var8;
+        Star[] var6;
+        Star var8;
         int var9;
-        ln[] var10;
+        Star[] var10;
         int var11;
-        ln var12;
+        Star var12;
         int var13;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         var3 = 0;
@@ -133,7 +133,7 @@ final class cj extends j {
         field_v = null;
     }
 
-    final int d(ln param0, int param1) {
+    final int d(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
@@ -335,11 +335,11 @@ final class cj extends j {
     final int a(byte param0, int param1) {
         int var8 = 0;
         int var3;
-        ln var4;
+        Star var4;
         int var5;
         int var6;
-        ln[] var7_ref_ln__;
-        ln var9;
+        Star[] var7_ref_ln__;
+        Star var9;
         int var10;
         int var7;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;

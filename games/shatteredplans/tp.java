@@ -158,11 +158,11 @@ final class tp implements iq {
         if (um.field_k < vc.field_c.length) {
           fieldTemp$0 = um.field_k;
           um.field_k = um.field_k + 1;
-          sd.field_t = vc.field_c[fieldTemp$0];
+          Territory.field_t = vc.field_c[fieldTemp$0];
           var1 = -8 % ((-21 - param0) / 42);
           return;
         }
-        sd.field_t = null;
+        Territory.field_t = null;
         var1Lifetime1 = -8 % ((-21 - param0) / 42);
     }
 

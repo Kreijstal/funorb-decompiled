@@ -45,7 +45,7 @@ final class an {
         field_b = null;
     }
 
-    final static lp a(byte param0, boolean param1, sd param2) {
+    final static lp a(byte param0, boolean param1, Territory param2) {
         int var6_int = 0;
         String dupTemp$0 = null;
         lp stackIn_13_0 = null;
@@ -73,12 +73,12 @@ final class an {
         try {
           var13 = new lp(0, 0, 209, 50);
           var13.field_h = param2;
-          var12 = param2.field_q.field_I;
+          var12 = param2.field_q.name;
           var4 = var12;
           var4Lifetime1 = var12;
           var4Lifetime2 = var12;
           if (param1) {
-            var4Lifetime2 = var12 + " (" + param2.field_o.field_t + ")";
+            var4Lifetime2 = var12 + " (" + param2.field_o.name + ")";
           }
           if (param0 != -76) {
             an.b(true);
@@ -86,28 +86,28 @@ final class an {
           var5 = new kb(0, 0, 209, param2.field_o.field_k, var4Lifetime2, 16777215, false);
           var13.a(var5, 8);
           for (var6_int = 0; 4 > var6_int; var6_int++) {
-            var7_ref_ff = new ff(40 + var6_int * (5 + fs.field_a[var6_int].field_z), var5.field_i + 7, fs.field_a[var6_int]);
+            var7_ref_ff = new ff(40 + var6_int * (5 + Player.field_a[var6_int].field_z), var5.field_i + 7, Player.field_a[var6_int]);
             var13.a(var7_ref_ff, param0 ^ -68);
             var8_int = param2.field_r + param2.field_u[var6_int];
             if (var8_int < 0) {
               var8_int = 0;
             }
-            var11 = new qk(40 + var6_int * (fs.field_a[var6_int].field_z + 5), 7 + var5.field_i + fs.field_a[var6_int].field_w / 8, fs.field_a[var6_int].field_z, fs.field_a[var6_int].field_w, Integer.toString(var8_int));
+            var11 = new qk(40 + var6_int * (Player.field_a[var6_int].field_z + 5), 7 + var5.field_i + Player.field_a[var6_int].field_w / 8, Player.field_a[var6_int].field_z, Player.field_a[var6_int].field_w, Integer.toString(var8_int));
             var9_ref = var11;
             var13.a(var9_ref, param0 ^ -68);
             dupTemp$0 = ne.field_m[var6_int];
             var11.field_o = dupTemp$0;
             var7_ref_ff.field_o = dupTemp$0;
           }
-          var6 = new b(k.field_d.field_z / 2 + (fs.field_a[0].field_z + 5) * 4 + 40, 6 + var5.field_i, k.field_d.field_z * 2, -2 + k.field_d.field_w, 2, 534312);
+          var6 = new b(k.field_d.field_z / 2 + (Player.field_a[0].field_z + 5) * 4 + 40, 6 + var5.field_i, k.field_d.field_z * 2, -2 + k.field_d.field_w, 2, 534312);
           var13.a(var6, param0 ^ -68);
           var7 = param2.field_r;
           if (var7 < 0) {
             var7 = 0;
           }
-          var8 = new qk(k.field_d.field_z + 4 * (5 + fs.field_a[0].field_z) + 40, var5.field_i + (7 + fs.field_a[0].field_w / 8), 3 * k.field_d.field_z / 2, k.field_d.field_w, Integer.toString(var7));
+          var8 = new qk(k.field_d.field_z + 4 * (5 + Player.field_a[0].field_z) + 40, var5.field_i + (7 + Player.field_a[0].field_w / 8), 3 * k.field_d.field_z / 2, k.field_d.field_w, Integer.toString(var7));
           var13.a(var8, 8);
-          var9 = new ff(40 + 4 * (fs.field_a[0].field_z + 5), 5 + var5.field_i, k.field_d);
+          var9 = new ff(40 + 4 * (Player.field_a[0].field_z + 5), 5 + var5.field_i, k.field_d);
           var13.a(var9, 8);
           var9.field_o = si.field_w;
           var8.field_o = si.field_w;

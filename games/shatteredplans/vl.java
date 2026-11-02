@@ -23,7 +23,7 @@ final class vl extends hs {
         field_q = null;
     }
 
-    final int[] a(Random param0, ln[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws jn {
+    final int[] a(Random param0, Star[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws jn {
         int[] stackIn_8_0 = null;
         int[] stackIn_30_0 = null;
         RuntimeException stackIn_33_0 = null;
@@ -194,7 +194,7 @@ final class vl extends hs {
           var12 = new Sprite(var17.field_z - 2 * var9, var9);
           var12.e();
           var17.c(-var9, 0);
-          ln.f((byte) 67);
+          Star.f((byte) 67);
           kl.field_q = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "vl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -208,7 +208,7 @@ final class vl extends hs {
         RuntimeException decompiledCaughtException = null;
         Object var3 = null;
         int var4_int = 0;
-        ln[] var4 = null;
+        Star[] var4 = null;
         int var5 = 0;
         int var6_int = 0;
         t var6 = null;
@@ -249,17 +249,17 @@ final class vl extends hs {
               var15[var5Lifetime2] = var7;
             }
           }
-          this.field_f = new ln[this.field_c * this.field_b];
-          var4 = new ln[this.field_d];
+          this.field_f = new Star[this.field_c * this.field_b];
+          var4 = new Star[this.field_d];
           var5Lifetime1 = 0;
           var11 = 0;
           var6_intLifetime1 = var11;
           while (this.field_f.length > var11) {
             if (ac.field_t[var11]) {
               var4[var5Lifetime1] = this.a(var11, this.field_c, this.field_b, -8, var5Lifetime1);
-              var4[var5Lifetime1].field_I = mh.field_h[((int[]) (var3))[var5Lifetime1]];
+              var4[var5Lifetime1].name = mh.field_h[((int[]) (var3))[var5Lifetime1]];
               if (var5Lifetime1 == 36) {
-                var4[var5Lifetime1].field_I = "SOL";
+                var4[var5Lifetime1].name = "SOL";
               }
               this.field_f[var11] = var4[var5Lifetime1];
               var5Lifetime1++;

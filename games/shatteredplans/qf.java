@@ -106,7 +106,7 @@ final class qf {
           if (param0 <= 0) {
             qf.a(119, 68, -5, 5);
           }
-          stackIn_3_0 = hi.a(param1, param2, -11);
+          stackIn_3_0 = TaskAi.a(param1, param2, -11);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class qf {
     }
 
     final static void b(byte param0) {
-        jh.a(SpriteState.field_u, ho.field_j, un.field_g, me.field_d, 0);
+        jh.a(SpriteState.field_u, ho.field_j, un.field_g, VictoryChecker.field_d, 0);
         int var1 = -114 / ((param0 - 34) / 56);
     }
 

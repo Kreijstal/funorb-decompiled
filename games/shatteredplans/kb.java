@@ -14,11 +14,11 @@ final class kb extends vd {
     static ArgbSprite field_w;
 
     final static void f(int param0) {
-        ln.field_o = sa.field_a.e(-1);
+        Star.field_o = sa.field_a.e(-1);
         if (param0 >= -82) {
           return;
         }
-        CharSequence var2 = (CharSequence) ((Object) ln.field_o);
+        CharSequence var2 = (CharSequence) ((Object) Star.field_o);
         ci.field_d = ji.a(var2, true);
     }
 
@@ -104,17 +104,17 @@ final class kb extends vd {
             for (var9 = 0; var9 < var8; var9++) {
               pr.field_d[var9] = -1;
             }
-            fs.field_y = new int[2];
+            Player.field_y = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
               t.field_c[var9] = ks.field_b[var9];
             }
             t.field_c[var8 - 3] = "";
             t.field_c[-2 + var8] = var6;
             pr.field_d[var8 - 2] = 0;
-            fs.field_y[0] = 1;
+            Player.field_y[0] = 1;
             t.field_c[-1 + var8] = nf.field_i;
             pr.field_d[-1 + var8] = 1;
-            fs.field_y[1] = 2;
+            Player.field_y[1] = 2;
           } else {
             if (1 != na.field_r) {
               throw new IllegalArgumentException();
@@ -126,16 +126,16 @@ final class kb extends vd {
             for (var9 = 0; var9 < var8; var9++) {
               pr.field_d[var9] = -1;
             }
-            fs.field_y = new int[1];
+            Player.field_y = new int[1];
             for (var9 = 0; var9 < var7; var9++) {
               t.field_c[var9] = ks.field_b[var9];
             }
             t.field_c[-2 + var8] = "";
             t.field_c[var8 - 1] = nf.field_i;
             pr.field_d[-1 + var8] = 0;
-            fs.field_y[0] = 2;
+            Player.field_y[0] = 2;
           }
-          ns.field_nb.field_b = fs.field_y.length;
+          ns.field_nb.field_b = Player.field_y.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; t.field_c.length > var8Lifetime1; var8Lifetime1++) {
             stackIn_29_0 = !(pr.field_d[var8Lifetime1] < 0);

@@ -161,7 +161,7 @@ final class hd extends IntrusiveNode {
         int var2 = 0;
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var1_int = ln.field_H.length;
+        int var1_int = Star.field_H.length;
         kb.field_A = 0;
         if (param0) {
           return;

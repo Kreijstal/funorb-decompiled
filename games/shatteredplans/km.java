@@ -3,7 +3,7 @@
  */
 final class km implements mn {
     private int[] field_r;
-    static ln field_u;
+    static Star field_u;
     private int field_D;
     int field_S;
     private int[] field_t;
@@ -14,13 +14,13 @@ final class km implements mn {
     private int[] field_U;
     int field_N;
     boolean[] field_V;
-    sd field_c;
+    Territory field_c;
     boolean field_L;
     int field_i;
     private boolean[] field_w;
     int field_q;
     private db field_o;
-    dc field_P;
+    GameState field_P;
     static String field_a;
     private int field_I;
     private boolean field_G;
@@ -34,16 +34,16 @@ final class km implements mn {
     static String field_A;
     private int field_k;
     private int field_F;
-    private sd[] field_l;
+    private Territory[] field_l;
     private IntrusiveDeque field_H;
     kq field_Y;
     private int[] field_C;
     private int field_x;
     private boolean field_b;
-    private fs[] field_R;
+    private Player[] field_R;
     tr field_z;
     private wb field_v;
-    private ln field_K;
+    private Star field_K;
     boolean field_f;
     boolean field_W;
     private boolean field_T;
@@ -53,9 +53,9 @@ final class km implements mn {
     private boolean field_y;
     private int[] field_p;
     static String field_X;
-    fs field_n;
+    Player field_n;
 
-    private final void a(fs param0, String param1, byte param2) {
+    private final void a(Player param0, String param1, byte param2) {
         int stackIn_16_0 = 0;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -81,10 +81,10 @@ final class km implements mn {
           if (this.field_W) {
             return;
           }
-          var4 = param0.field_t + ": ";
+          var4 = param0.name + ": ";
           var5 = ji.field_I.field_K;
           if (this.field_f) {
-            var5 = var5 - ho.field_f.c("[" + re.a(he.field_q, 4371, new String[]{this.field_P.field_v[0].field_t}) + "] ");
+            var5 = var5 - ho.field_f.c("[" + re.a(he.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
           }
           if (this.field_f) {
             stackIn_16_0 = 0;
@@ -99,7 +99,7 @@ final class km implements mn {
             var10 = 0;
             while (var9.length > var10) {
               var11 = var9[var10];
-              md.a(1, var4 + var11, var6, ln.field_o, this.field_P.field_v[0].field_t, -16169);
+              md.a(1, var4 + var11, var6, Star.field_o, this.field_P.field_v[0].name, -16169);
               var10++;
               if (var12 != 0) {
                 return;
@@ -109,7 +109,7 @@ final class km implements mn {
               return;
             }
           }
-          md.a(1, var4 + param1, var6, ln.field_o, this.field_P.field_v[0].field_t, -16169);
+          md.a(1, var4 + param1, var6, Star.field_o, this.field_P.field_v[0].name, -16169);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,10 +131,10 @@ final class km implements mn {
         }
     }
 
-    private final void a(byte param0, fs param1) {
+    private final void a(byte param0, Player param1) {
         RuntimeException runtimeException = null;
-        sd var3 = null;
-        ln var4_ref_ln = null;
+        Territory var3 = null;
+        Star var4_ref_ln = null;
         int var4 = 0;
         int var5 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -143,7 +143,7 @@ final class km implements mn {
         RuntimeException decompiledCaughtException = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var3 = (sd) (param1.field_i.d(0));
+          var3 = (Territory) (param1.field_i.d(0));
           scanLoop1: while (var3 != null) {
             var4_ref_ln = var3.j(18229);
             while (true) {
@@ -157,7 +157,7 @@ final class km implements mn {
                 }
               } else {
                 var3.b((byte) -89);
-                var3 = (sd) (param1.field_i.a((byte) -71));
+                var3 = (Territory) (param1.field_i.a((byte) -71));
               }
               break;
             }
@@ -233,12 +233,12 @@ final class km implements mn {
         }
     }
 
-    private final void a(fs param0, int param1) {
-        fs stackIn_9_0 = null;
-        fs stackIn_9_1 = null;
+    private final void a(Player param0, int param1) {
+        Player stackIn_9_0 = null;
+        Player stackIn_9_1 = null;
         int stackIn_59_0 = 0;
         boolean stackIn_64_0 = false;
-        ln stackIn_76_0 = null;
+        Star stackIn_76_0 = null;
         int stackIn_81_0 = 0;
         int stackIn_85_0 = 0;
         int stackIn_89_0 = 0;
@@ -252,32 +252,32 @@ final class km implements mn {
         boolean stackOut_63_0;
         boolean stackOut_90_0;
         boolean stackOut_123_0;
-        ln[] var3 = null;
+        Star[] var3 = null;
         RuntimeException var3_ref = null;
-        ln[] var4_ref_ln__ = null;
+        Star[] var4_ref_ln__ = null;
         int var4 = 0;
         int var5_int = 0;
-        ln[] var5 = null;
-        ln var6_ref_ln = null;
+        Star[] var5 = null;
+        Star var6_ref_ln = null;
         int var6 = 0;
         mg var7 = null;
         int var7_int = 0;
-        ln var7_ref = null;
-        ln[] var8_ref_ln__ = null;
+        Star var7_ref = null;
+        Star[] var8_ref_ln__ = null;
         int var8 = 0;
         int var9 = 0;
-        ln var10 = null;
-        ln[] var10_array = null;
+        Star var10 = null;
+        Star[] var10_array = null;
         int var11 = 0;
-        ln var12 = null;
+        Star var12 = null;
         int var13 = 0;
-        ln stackIn_76_0Lifetime1;
-        ln var6_ref_lnLifetime1;
-        ln[] var10_arrayLifetime1;
-        ln var12Lifetime1;
-        ln var6_ref_lnLifetime1Lifetime1;
-        ln[] var10_arrayLifetime1Lifetime1;
-        ln var12Lifetime1Lifetime1;
+        Star stackIn_76_0Lifetime1;
+        Star var6_ref_lnLifetime1;
+        Star[] var10_arrayLifetime1;
+        Star var12Lifetime1;
+        Star var6_ref_lnLifetime1Lifetime1;
+        Star[] var10_arrayLifetime1Lifetime1;
+        Star var12Lifetime1Lifetime1;
         int stackIn_85_0Lifetime1;
         boolean stackIn_117_0Lifetime1;
         int var8Lifetime1;
@@ -317,7 +317,7 @@ final class km implements mn {
               }
               if (decompiledFrameCompleted3) {
                 stackIn_9_0 = stackIn_76_0.field_y;
-                stackIn_9_1 = (fs) (param0);
+                stackIn_9_1 = (Player) (param0);
                 scanLoop2: while (true) {
                   boolean decompiledSharedTail0 = (stackIn_9_0 == stackIn_9_1);
                   if (!decompiledSharedTail0) {
@@ -335,7 +335,7 @@ final class km implements mn {
                   }
                   var7 = (mg) (var6_ref_ln.field_s.c(-128));
                   while (null != var7) {
-                    stackIn_9_0 = (fs) (param0);
+                    stackIn_9_0 = (Player) (param0);
                     stackIn_9_1 = var7.field_G;
                     if (var13 != 0) {
                       continue scanLoop2;
@@ -356,7 +356,7 @@ final class km implements mn {
                     var9 = 0;
                     while (var9 < var8_ref_ln__.length) {
                       var10 = var8_ref_ln__[var9];
-                      stackIn_9_0 = (fs) (param0);
+                      stackIn_9_0 = (Player) (param0);
                       stackIn_9_1 = var10.field_y;
                       if (var13 != 0) {
                         continue scanLoop2;
@@ -562,8 +562,8 @@ final class km implements mn {
     }
 
     private final void b(int param0, PacketBuffer param1, int param2) {
-        dc stackIn_14_0 = null;
-        dc stackIn_19_0 = null;
+        GameState stackIn_14_0 = null;
+        GameState stackIn_19_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -571,10 +571,10 @@ final class km implements mn {
         qa var4 = null;
         RuntimeException var4_ref = null;
         mg var5 = null;
-        ln[] var6 = null;
+        Star[] var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ln var9 = null;
+        Star var9 = null;
         int var10 = 0;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -763,8 +763,8 @@ final class km implements mn {
         }
     }
 
-    public final void a(int param0, byte param1, fs param2, fs param3, int param4) {
-        fs stackIn_4_0 = null;
+    public final void a(int param0, byte param1, Player param2, Player param3, int param4) {
+        Player stackIn_4_0 = null;
         String stackIn_14_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -774,10 +774,10 @@ final class km implements mn {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        fs var7 = null;
+        Player var7 = null;
         String[] var8 = null;
         String var9 = null;
-        fs var10 = null;
+        Player var10 = null;
         try {
           var6_int = -91 / ((-70 - param1) / 36);
           if (this.field_f) {
@@ -795,13 +795,13 @@ final class km implements mn {
           }
           var9 = var8[vc.a((byte) -39, var8.length)];
           var10 = this.field_P.field_v[this.field_P.field_m[-1 + this.field_P.field_r]];
-          var9 = vm.a(var10.field_t, 108, "largestplayer", var9);
-          var9 = vm.a(this.field_n.field_t, 124, "you", var9);
-          var9 = vm.a(param3.field_t, 121, "me", var9);
+          var9 = vm.a(var10.name, 108, "largestplayer", var9);
+          var9 = vm.a(this.field_n.name, 124, "you", var9);
+          var9 = vm.a(param3.name, 121, "me", var9);
           if (this.field_P.field_g.field_e.length <= param0) {
             stackIn_14_0 = "";
           } else {
-            stackIn_14_0 = this.field_P.field_g.field_e[param0].field_I;
+            stackIn_14_0 = this.field_P.field_g.field_e[param0].name;
           }
           var9 = vm.a(stackIn_14_0, 100, "system", var9);
           this.a(param3, var9, (byte) 51);
@@ -1025,7 +1025,7 @@ final class km implements mn {
         }
     }
 
-    private final void a(int param0, ln param1, ln param2, int param3) {
+    private final void a(int param0, Star param1, Star param2, int param3) {
         RuntimeException runtimeException = null;
         qm var5 = null;
         int var6 = 0;
@@ -1094,7 +1094,7 @@ final class km implements mn {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         boolean stackIn_4_0 = false;
-        ln stackIn_22_0 = null;
+        Star stackIn_22_0 = null;
         Object stackIn_74_0 = null;
         boolean stackIn_78_0 = false;
         int stackIn_94_0 = 0;
@@ -1102,7 +1102,7 @@ final class km implements mn {
         int stackIn_98_1 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_3_0;
-        ln stackOut_21_0;
+        Star stackOut_21_0;
         boolean stackOut_77_0;
         int[] var3 = null;
         RuntimeException var3_ref = null;
@@ -1118,7 +1118,7 @@ final class km implements mn {
         int var7 = 0;
         ne var8 = null;
         int var8_int = 0;
-        fs[] var8_array = null;
+        Player[] var8_array = null;
         mg var9 = null;
         as var10 = null;
         int var11 = 0;
@@ -1145,7 +1145,7 @@ final class km implements mn {
                   var7_ref_mg = (mg) (var4);
                   if (var7_ref_mg.field_G == null) {
                     var5 = 1;
-                    discarded$0 = var6.append("Fleet from " + var7_ref_mg.field_y.field_I + " to " + var7_ref_mg.field_B.field_I + " has no owner.\n");
+                    discarded$0 = var6.append("Fleet from " + var7_ref_mg.field_y.name + " to " + var7_ref_mg.field_B.name + " has no owner.\n");
                   } else {
                     this.field_z.field_c.a((byte) -113, qn.a(-121, var7_ref_mg));
                     if (var7_ref_mg.field_z > this.field_z.field_y) {
@@ -1228,7 +1228,7 @@ final class km implements mn {
                   var7_ref_hj = (hj) (var4);
                   if (var7_ref_hj.field_j == null) {
                     var5 = 1;
-                    discarded$1 = var6.append("Construction event at " + var7_ref_hj.field_i.field_I + " has no owner.\n");
+                    discarded$1 = var6.append("Construction event at " + var7_ref_hj.field_i.name + " has no owner.\n");
                   } else {
                     if (var7_ref_hj.field_j != this.field_n) {
                       this.field_z.a(var7_ref_hj.field_j, var7_ref_hj.field_i, false, var7_ref_hj.field_h);
@@ -1491,9 +1491,9 @@ final class km implements mn {
         }
     }
 
-    private final void a(boolean param0, int param1, ln param2, ln param3) {
-        ln stackIn_18_0 = null;
-        ln stackIn_18_1 = null;
+    private final void a(boolean param0, int param1, Star param2, Star param3) {
+        Star stackIn_18_0 = null;
+        Star stackIn_18_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -1508,7 +1508,7 @@ final class km implements mn {
           var5 = (mg) (param3.field_T.d(0));
           scanLoop1: while (true) {
             if (null != var5) {
-              stackIn_18_0 = (ln) (param2);
+              stackIn_18_0 = (Star) (param2);
               stackIn_18_1 = var5.field_B;
               if (var6 != 0) {
                 break scanLoop1;
@@ -1533,8 +1533,8 @@ final class km implements mn {
             } else {
               var5.field_z = var5.field_z + param1;
             }
-            stackIn_18_0 = (ln) (param3);
-            stackIn_18_1 = (ln) (param3);
+            stackIn_18_0 = (Star) (param3);
+            stackIn_18_1 = (Star) (param3);
             break;
           }
           stackIn_18_0.field_J = stackIn_18_1.field_J - param1;
@@ -1649,7 +1649,7 @@ final class km implements mn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 54) {
-            this.field_c = (sd) null;
+            this.field_c = (Territory) null;
           }
           var2_int = 0;
           if (di.field_p[81]) {
@@ -1709,7 +1709,7 @@ final class km implements mn {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        ln var5 = null;
+        Star var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var3_intLifetime1;
@@ -1842,9 +1842,9 @@ final class km implements mn {
     }
 
     final void a(int param0) {
-        ln[] var2 = null;
+        Star[] var2 = null;
         int var3 = 0;
-        ln var4 = null;
+        Star var4 = null;
         int var5 = 0;
         int var6 = 0;
         int[] stackIn_13_0 = null;
@@ -1855,9 +1855,9 @@ final class km implements mn {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_R.length < this.field_P.field_g.field_e.length) {
-            this.field_R = new fs[this.field_P.field_g.field_e.length];
+            this.field_R = new Player[this.field_P.field_g.field_e.length];
             this.field_C = new int[this.field_P.field_g.field_e.length];
-            this.field_l = new sd[this.field_P.field_g.field_e.length];
+            this.field_l = new Territory[this.field_P.field_g.field_e.length];
           }
           var2 = this.field_P.field_g.field_e;
           var3 = 0;
@@ -1883,7 +1883,7 @@ final class km implements mn {
           }
           if ((decompiledNaturalLoopExit0) &&
             (param0 != 2)) {
-            this.field_l = (sd[]) null;
+            this.field_l = (Territory[]) null;
           }
           this.field_z.a(this.field_C, true, this.field_l, this.field_R, true);
           return;
@@ -1900,7 +1900,7 @@ final class km implements mn {
         RuntimeException var2_ref = null;
         try {
           if (param0 < 122) {
-            this.a((fs) null, -117);
+            this.a((Player) null, -117);
           }
           if (this.field_f) {
             if (-1 != this.field_k) {
@@ -1949,7 +1949,7 @@ final class km implements mn {
         }
     }
 
-    private final void a(fs param0, fs param1, boolean param2) {
+    private final void a(Player param0, Player param1, boolean param2) {
         String var4 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -1961,22 +1961,22 @@ final class km implements mn {
         try {
           if (this.field_n != param0) {
             if (param1 == this.field_n) {
-              var4 = re.a(wf.field_h, 4371, new String[]{param0.field_t});
-              this.field_H.a(new n(param0, (fs) null, var4), 0);
+              var4 = re.a(wf.field_h, 4371, new String[]{param0.name});
+              this.field_H.a(new n(param0, (Player) null, var4), 0);
               if (ShatteredPlansClient.field_F) {
-                var4 = re.a(ud.field_b, 4371, new String[]{param1.field_t});
-                this.field_H.a(new n(param1, (fs) null, var4), 0);
+                var4 = re.a(ud.field_b, 4371, new String[]{param1.name});
+                this.field_H.a(new n(param1, (Player) null, var4), 0);
               }
             }
           } else {
-            var4 = re.a(ud.field_b, 4371, new String[]{param1.field_t});
-            this.field_H.a(new n(param1, (fs) null, var4), 0);
+            var4 = re.a(ud.field_b, 4371, new String[]{param1.name});
+            this.field_H.a(new n(param1, (Player) null, var4), 0);
           }
           if (null != this.field_s[param1.field_x]) {
             this.field_s[param1.field_x].a(param0, 7686);
           }
           if (!param2) {
-            this.a(true, 25, (ln) null, (ln) null);
+            this.a(true, 25, (Star) null, (Star) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2025,7 +2025,7 @@ final class km implements mn {
           this.field_P.c(0);
           this.field_P.b(param2, 0);
           if (param0 <= 89) {
-            this.field_n = (fs) null;
+            this.field_n = (Player) null;
           }
           this.b(param1, 123);
           this.field_z.field_d = param1;
@@ -2041,7 +2041,7 @@ final class km implements mn {
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
-        dc stackIn_13_0 = null;
+        GameState stackIn_13_0 = null;
         int stackIn_18_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -2119,9 +2119,9 @@ final class km implements mn {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        fs var8_ref_fs = null;
+        Player var8_ref_fs = null;
         int var8 = 0;
-        fs var9 = null;
+        Player var9 = null;
         int var10 = 0;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -2188,7 +2188,7 @@ final class km implements mn {
         }
     }
 
-    private final void a(int param0, ln param1, int param2) {
+    private final void a(int param0, Star param1, int param2) {
         RuntimeException runtimeException = null;
         qm var4 = null;
         int var5 = 0;
@@ -2243,7 +2243,7 @@ final class km implements mn {
         boolean stackIn_27_0 = false;
         Object stackIn_49_0 = null;
         boolean stackIn_51_0 = false;
-        fs stackIn_93_0 = null;
+        Player stackIn_93_0 = null;
         eg stackIn_108_0 = null;
         Object stackIn_116_0 = null;
         int stackIn_128_0 = 0;
@@ -2264,8 +2264,8 @@ final class km implements mn {
         int[] var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        ln[] var11_ref_ln__ = null;
-        fs[] var11_ref_fs__ = null;
+        Star[] var11_ref_ln__ = null;
+        Player[] var11_ref_fs__ = null;
         IntrusiveNode var11_ref_oh = null;
         int var11 = 0;
         int var12 = 0;
@@ -2274,25 +2274,25 @@ final class km implements mn {
         qi var12_ref_qi = null;
         qm var12_ref_qm = null;
         mg var12_ref_mg = null;
-        ln var13 = null;
-        fs var13_ref = null;
+        Star var13 = null;
+        Player var13_ref = null;
         int var13_int = 0;
-        fs[] var13_array = null;
+        Player[] var13_array = null;
         ne var13_ref2 = null;
         um var13_ref3 = null;
         int var14_int = 0;
         um var14 = null;
         int var15_int = 0;
-        sd var15 = null;
-        fs var15_ref = null;
+        Territory var15 = null;
+        Player var15_ref = null;
         int var16 = 0;
         Object stackIn_49_0Lifetime1;
-        fs var13_refLifetime1;
+        Player var13_refLifetime1;
         int var12Lifetime1;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!param0) {
-            this.field_R = (fs[]) null;
+            this.field_R = (Player[]) null;
           }
           var3 = new int[this.field_P.field_r];
           var4 = new int[this.field_P.field_r];
@@ -2336,10 +2336,10 @@ final class km implements mn {
                   break scanLoop1;
                 }
                 if (!stackIn_27_0) {
-                  var15 = (sd) (var13_ref.field_i.d(0));
+                  var15 = (Territory) (var13_ref.field_i.d(0));
                   while (var15 != null) {
                     var4[var14_int] = var4[var14_int] + var15.field_r;
-                    var15 = (sd) (var13_ref.field_i.a((byte) -71));
+                    var15 = (Territory) (var13_ref.field_i.a((byte) -71));
                   }
                 } else {
                   if (null != var13_ref.field_m) {
@@ -2501,7 +2501,7 @@ final class km implements mn {
         }
     }
 
-    public final void a(byte param0, fs param1, fs param2) {
+    public final void a(byte param0, Player param1, Player param2) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -2587,7 +2587,7 @@ final class km implements mn {
         }
     }
 
-    final void a(int param0, fs param1) {
+    final void a(int param0, Player param1) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -2647,16 +2647,16 @@ final class km implements mn {
         boolean stackIn_12_0 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
-        fs[] var2 = null;
+        Player[] var2 = null;
         mg var2_ref = null;
         RuntimeException var2_ref2 = null;
         int var3_int = 0;
         qa var3 = null;
-        fs var4 = null;
+        Player var4 = null;
         qm var4_ref = null;
-        ln[] var5 = null;
+        Star[] var5 = null;
         int var6 = 0;
-        ln var7 = null;
+        Star var7 = null;
         int var8 = 0;
         int var2_intLifetime1;
         int var3_intLifetime1;
@@ -2744,7 +2744,7 @@ final class km implements mn {
             oq.field_j == 16) {
             sm.field_e = true;
             em.a(mq.c((byte) 73), 1);
-            this.field_s[this.field_h] = (uj) ((Object) new hi(this.field_n, this.field_P, (mn) (this)));
+            this.field_s[this.field_h] = (uj) ((Object) new TaskAi(this.field_n, this.field_P, (mn) (this)));
             var2_ref = (mg) (this.field_P.field_p.a(true));
             while (null != var2_ref) {
               this.a(var2_ref, -var2_ref.field_z, 10755);
@@ -2830,21 +2830,21 @@ final class km implements mn {
         int stackIn_47_0 = 0;
         int stackIn_53_0 = 0;
         int stackIn_132_0 = 0;
-        fs stackIn_143_0 = null;
+        Player stackIn_143_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
-        ln[] var4 = null;
-        ln var4_ref = null;
+        Star[] var4 = null;
+        Star var4_ref = null;
         gm var4_ref2 = null;
         RuntimeException var4_ref3 = null;
         int var5_int = 0;
-        ln[] var5 = null;
-        fs var5_ref = null;
+        Star[] var5 = null;
+        Player var5_ref = null;
         sf var5_ref2 = null;
         int var6 = 0;
-        ln var6_ref_ln = null;
+        Star var6_ref_ln = null;
         int var7_int = 0;
-        ln var7 = null;
+        Star var7 = null;
         int var8 = 0;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -3129,15 +3129,15 @@ final class km implements mn {
     private final void d(byte param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        fs[] var2 = null;
+        Player[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        fs var4 = null;
-        sd var5 = null;
+        Player var4 = null;
+        Territory var5 = null;
         int var6 = 0;
-        fs[] var2Lifetime1;
-        fs var4Lifetime1;
+        Player[] var2Lifetime1;
+        Player var4Lifetime1;
         int var3Lifetime1;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -3173,10 +3173,10 @@ final class km implements mn {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
-                var5 = (sd) (var4Lifetime1.field_i.d(0));
+                var5 = (Territory) (var4Lifetime1.field_i.d(0));
                 while (null != var5) {
                   var5.field_x = 0;
-                  var5 = (sd) (var4Lifetime1.field_i.a((byte) -71));
+                  var5 = (Territory) (var4Lifetime1.field_i.a((byte) -71));
                 }
                 var3Lifetime1++;
               }
@@ -3205,7 +3205,7 @@ final class km implements mn {
             }
           }
           if (param0 != -81) {
-            this.a(false, 84, (ln) null, (ln) null);
+            this.a(false, 84, (Star) null, (Star) null);
           }
           this.field_n = this.field_P.field_v[this.field_h];
           this.field_S = mb.field_o[this.field_P.field_J];
@@ -3374,7 +3374,7 @@ final class km implements mn {
         }
     }
 
-    private final void a(fs param0, int param1, fs param2) {
+    private final void a(Player param0, int param1, Player param2) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -3387,28 +3387,28 @@ final class km implements mn {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_n == param0) {
-            var4 = re.a(jb.field_a, 4371, new String[]{param2.field_t});
+            var4 = re.a(jb.field_a, 4371, new String[]{param2.name});
             this.field_H.a(new n(param0, param2, var4), 0);
             if (var5 != 0) {
               if (param2 == this.field_n) {
-                var4 = re.a(se.field_c, 4371, new String[]{param0.field_t});
+                var4 = re.a(se.field_c, 4371, new String[]{param0.name});
                 this.field_H.a(new n(param2, param0, var4), 0);
-                var4 = re.a(lh.field_A, 4371, new String[]{param0.field_t, param2.field_t});
+                var4 = re.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
                 this.field_H.a(new n(param2, param0, var4), 0);
               } else {
-                var4 = re.a(lh.field_A, 4371, new String[]{param0.field_t, param2.field_t});
+                var4 = re.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
                 this.field_H.a(new n(param2, param0, var4), 0);
               }
             }
           } else {
             boolean decompiledSharedTail0 = (param2 != this.field_n);
             if (!decompiledSharedTail0) {
-              var4 = re.a(se.field_c, 4371, new String[]{param0.field_t});
+              var4 = re.a(se.field_c, 4371, new String[]{param0.name});
               this.field_H.a(new n(param2, param0, var4), 0);
               decompiledSharedTail0 = (var5 != 0);
             }
             if (decompiledSharedTail0) {
-              var4 = re.a(lh.field_A, 4371, new String[]{param0.field_t, param2.field_t});
+              var4 = re.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
               this.field_H.a(new n(param2, param0, var4), 0);
             }
           }
@@ -3516,22 +3516,22 @@ final class km implements mn {
     }
 
     private final void a(boolean param0) {
-        ln stackIn_46_0 = null;
+        Star stackIn_46_0 = null;
         int stackIn_88_0 = 0;
         int stackIn_88_1 = 0;
         Throwable decompiledCaughtException = null;
-        ln[] var2 = null;
+        Star[] var2 = null;
         int var2_int = 0;
         Exception var2_ref = null;
         mg var2_ref2 = null;
         RuntimeException var2_ref3 = null;
         int var3_int = 0;
         qa var3 = null;
-        ln var4 = null;
+        Star var4 = null;
         qm var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        ln stackIn_46_0Lifetime1;
+        Star stackIn_46_0Lifetime1;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           System.gc();
@@ -3572,8 +3572,8 @@ final class km implements mn {
               !(this.field_P.field_g.field_e.length <= this.field_R.length)) {
               var2_int = this.field_P.field_g.field_e.length;
               this.field_C = new int[var2_int];
-              this.field_R = new fs[var2_int];
-              this.field_l = new sd[var2_int];
+              this.field_R = new Player[var2_int];
+              this.field_l = new Territory[var2_int];
             }
             var2 = this.field_P.field_g.field_e;
             var3_int = 0;
@@ -3713,8 +3713,8 @@ final class km implements mn {
         tr stackIn_6_1;
         tr stackIn_6_2;
         l stackIn_6_3;
-        fs[] stackIn_6_4;
-        fs stackIn_6_5;
+        Player[] stackIn_6_4;
+        Player stackIn_6_5;
         boolean stackIn_6_6;
         tr stackIn_7_1 = null;
         tr stackIn_7_2 = null;
@@ -3727,10 +3727,10 @@ final class km implements mn {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3_ref_String = null;
-        fs[] var3_ref_fs__ = null;
+        Player[] var3_ref_fs__ = null;
         int var3 = 0;
         int var4 = 0;
-        fs var5 = null;
+        Player var5 = null;
         int var6 = 0;
         Object stackIn_6_0Lifetime1;
         tr stackIn_6_1Lifetime1;
@@ -3810,7 +3810,7 @@ final class km implements mn {
             return;
           }
           if (sm.field_e) {
-            this.field_s[this.field_h] = (uj) ((Object) new hi(this.field_n, this.field_P, (mn) (this)));
+            this.field_s[this.field_h] = (uj) ((Object) new TaskAi(this.field_n, this.field_P, (mn) (this)));
           }
           var3_ref_fs__ = this.field_P.field_v;
           var4 = 0;
@@ -3859,7 +3859,7 @@ final class km implements mn {
             decompiledSharedTail0 = (var6 != 0);
           }
           if (decompiledSharedTail0) {
-            this.field_z.a((sd) (this.field_n.field_i.d(0)), param0 ^ -82);
+            this.field_z.a((Territory) (this.field_n.field_i.d(0)), param0 ^ -82);
           }
           this.field_z.a(false);
           return;
@@ -3904,10 +3904,10 @@ final class km implements mn {
         }
     }
 
-    private final void a(ln param0, int param1) {
+    private final void a(Star param0, int param1) {
         int stackIn_12_0 = 0;
         int stackIn_58_0 = 0;
-        ln stackIn_65_0 = null;
+        Star stackIn_65_0 = null;
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
@@ -3916,9 +3916,9 @@ final class km implements mn {
         RuntimeException var3 = null;
         int var4 = 0;
         qa var5 = null;
-        sd var6 = null;
-        ln var6_ref = null;
-        ln var7 = null;
+        Territory var6 = null;
+        Star var6_ref = null;
+        Star var7 = null;
         int var8 = 0;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -3945,7 +3945,7 @@ final class km implements mn {
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder1 = true;
             if (null != var5) {
-              stackIn_65_0 = (ln) (param0);
+              stackIn_65_0 = (Star) (param0);
               decompiledFrameRemainder1 = (var8 == 0);
               if ((decompiledFrameRemainder1) &&
                 (stackIn_65_0 != var5.field_u)) {
@@ -3973,7 +3973,7 @@ final class km implements mn {
                     break scanLoop1;
                   }
                 }
-                var6 = (sd) (this.field_n.field_i.d(param1 + 83));
+                var6 = (Territory) (this.field_n.field_i.d(param1 + 83));
                 scanLoop2: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var6 != null) {
@@ -3981,7 +3981,7 @@ final class km implements mn {
                     decompiledFrameRemainder0 = (var8 == 0);
                     if ((decompiledFrameRemainder0) && (stackIn_58_0 == ~var6.field_x ||
                       var8 != 0)) {
-                      var6 = (sd) (this.field_n.field_i.a((byte) -71));
+                      var6 = (Territory) (this.field_n.field_i.a((byte) -71));
                       continue;
                     }
                   }
@@ -4049,13 +4049,13 @@ final class km implements mn {
         RuntimeException decompiledCaughtException = null;
         int[] var2 = null;
         RuntimeException var2_ref = null;
-        ln[] var3 = null;
-        fs[] var3_array = null;
+        Star[] var3 = null;
+        Player[] var3_array = null;
         int var4 = 0;
-        ln var5 = null;
-        fs var5_ref = null;
+        Star var5 = null;
+        Player var5_ref = null;
         int var6 = 0;
-        sd var7 = null;
+        Territory var7 = null;
         int var8 = 0;
         int var4Lifetime1;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -4077,7 +4077,7 @@ final class km implements mn {
           }
           if ((decompiledNaturalLoopExit0) &&
             (param0 != 44)) {
-            this.a((fs) null, (String) null, (byte) -53);
+            this.a((Player) null, (String) null, (byte) -53);
           }
           var3_array = this.field_P.field_v;
           var4Lifetime1 = 0;
@@ -4089,7 +4089,7 @@ final class km implements mn {
               var6 = var5_ref.field_x;
               boolean decompiledSharedTail0 = !(!this.field_P.field_o.field_i);
               if (!decompiledSharedTail0) {
-                var7 = (sd) (var5_ref.field_i.d(param0 ^ 44));
+                var7 = (Territory) (var5_ref.field_i.d(param0 ^ 44));
                 while (var7 != null) {
                   stackIn_16_0 = 0;
                   stackIn_16_1 = var7.field_r;
@@ -4099,7 +4099,7 @@ final class km implements mn {
                   if (stackIn_16_0 < stackIn_16_1) {
                     var2[var6] = var2[var6] + var7.field_r;
                   }
-                  var7 = (sd) (var5_ref.field_i.a((byte) -71));
+                  var7 = (Territory) (var5_ref.field_i.a((byte) -71));
                 }
                 decompiledSharedTail0 = (var8 != 0);
               }
@@ -4124,7 +4124,7 @@ final class km implements mn {
         }
     }
 
-    final void a(fs param0, byte param1) {
+    final void a(Player param0, byte param1) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -4200,7 +4200,7 @@ final class km implements mn {
     }
 
     km(boolean param0, boolean param1, int param2, vr param3, int param4, String[] param5, int param6, boolean param7, kq param8) {
-        fs stackIn_21_0 = null;
+        Player stackIn_21_0 = null;
         String stackIn_22_1 = null;
         boolean stackIn_27_0 = false;
         int stackIn_34_0 = 0;
@@ -4216,10 +4216,10 @@ final class km implements mn {
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_26_0;
         int var10_int = 0;
-        fs[] var10 = null;
+        Player[] var10 = null;
         RuntimeException var10_ref = null;
         int var11 = 0;
-        fs var12 = null;
+        Player var12 = null;
         int var13 = 0;
         int var10_intLifetime1;
         int var10_intLifetime2;
@@ -4257,7 +4257,7 @@ final class km implements mn {
             var10_int = 1;
             while (true) {
               if (this.field_P.field_r > var10_int) {
-                this.field_P.field_v[var10_int].field_t = hn.field_f[var10_int];
+                this.field_P.field_v[var10_int].name = hn.field_f[var10_int];
                 var10_int++;
                 if (var13 == 0) {
                   continue;
@@ -4267,9 +4267,9 @@ final class km implements mn {
                 if (w.d(true)) {
                   stackIn_22_1 = hn.field_f[0];
                 } else {
-                  stackIn_22_1 = ln.field_o;
+                  stackIn_22_1 = Star.field_o;
                 }
-                stackIn_21_0.field_t = stackIn_22_1;
+                stackIn_21_0.name = stackIn_22_1;
               }
               break;
             }
@@ -4286,7 +4286,7 @@ final class km implements mn {
                 break;
               }
               if (stackIn_27_0) {
-                this.field_P.field_v[var10_intLifetime2].field_t = hn.field_f[var10_intLifetime2];
+                this.field_P.field_v[var10_intLifetime2].name = hn.field_f[var10_intLifetime2];
               }
               var10_intLifetime2++;
             }
@@ -4304,7 +4304,7 @@ final class km implements mn {
           }
           stackIn_44_1 = (this.field_n != null);
           this.field_b = stackIn_44_1;
-          this.field_s = (uj[]) ((Object) new hi[this.field_P.field_v.length]);
+          this.field_s = (uj[]) ((Object) new TaskAi[this.field_P.field_v.length]);
           var10 = this.field_P.field_v;
           var11 = 0;
           scanLoop1: while (true) {
@@ -4328,7 +4328,7 @@ final class km implements mn {
                     }
                     if (stackIn_80_0 != ~var10_intLifetime1 ||
                       var13 != 0) {
-                      this.field_s[var10_intLifetime1] = (uj) ((Object) new hi(this.field_P.field_v[var10_intLifetime1], this.field_P, (mn) (this)));
+                      this.field_s[var10_intLifetime1] = (uj) ((Object) new TaskAi(this.field_P.field_v[var10_intLifetime1], this.field_P, (mn) (this)));
                       this.field_s[var10_intLifetime1].a(true, -6861);
                     }
                     var10_intLifetime1++;

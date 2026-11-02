@@ -258,7 +258,7 @@ final class fc {
               }
             }
             if (var5 != null) {
-              if (!fs.a(-68, this.field_k) &&
+              if (!Player.a(-68, this.field_k) &&
                 !bg.field_g) {
                 if (!ae.field_b) {
                   this.field_j.a(1, 8, re.a(tk.field_B, 4371, new String[]{var7}));

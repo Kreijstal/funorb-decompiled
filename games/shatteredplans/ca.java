@@ -47,7 +47,7 @@ final class ca extends IntrusiveNode {
         }
     }
 
-    ca(fs param0) {
+    ca(Player param0) {
     }
 
     final static void a(java.applet.Applet param0, bc param1, bc param2, bc param3, boolean param4, bc param5) {

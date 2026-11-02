@@ -57,7 +57,7 @@ final class ul extends qr {
         WidgetContainer.field_y[wm.field_c] = param5;
         int var6 = param5 + param3 + param2;
         int var7 = param0 != var6 ? 1000 * param2 / var6 : 0;
-        dc.field_c[wm.field_c] = var7;
+        GameState.field_c[wm.field_c] = var7;
         if (var7 <= s.field_e) {
           wm.field_c = wm.field_c + 1;
           if (!(ff.field_u <= var7)) {

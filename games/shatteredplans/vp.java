@@ -116,12 +116,12 @@ class vp extends DualLinkNode {
         this.field_q = null;
     }
 
-    final static eg a(byte param0, ln param1) {
+    final static eg a(byte param0, Star param1) {
         int var5 = 0;
         IntrusiveNode var2 = null;
         eg var3 = null;
-        fs[] var4 = null;
-        fs var6 = null;
+        Player[] var4 = null;
+        Player var6 = null;
         int var7 = 0;
         eg stackIn_3_0 = null;
         eg stackIn_19_0 = null;

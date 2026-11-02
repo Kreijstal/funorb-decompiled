@@ -26,7 +26,7 @@ final class mj extends qr {
     static bg field_Rb;
     static byte[][] field_Bb;
     long field_Ib;
-    static sd field_yb;
+    static Territory field_yb;
     static io field_Sb;
 
     final static void a(int param0, boolean param1) {

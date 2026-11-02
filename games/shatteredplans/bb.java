@@ -172,14 +172,14 @@ final class bb {
               var9 = var16;
               var10Lifetime1 = dn.field_f.field_nb.c(var16) + 3 * dn.field_f.field_nb.a('.');
               dn.field_f.field_kb = (-var10Lifetime1 + dn.field_f.field_K) / 2;
-              if (16 == (ln.field_w & 48)) {
+              if (16 == (Star.field_w & 48)) {
                 var9 = var16 + ".";
               }
               dn.field_f.field_y = 0;
-              if ((48 & ln.field_w) == 32) {
+              if ((48 & Star.field_w) == 32) {
                 var9 = (String) (var9) + "..";
               }
-              if ((48 & ln.field_w) == 48) {
+              if ((48 & Star.field_w) == 48) {
                 var9 = (String) (var9) + "...";
               }
               dn.field_f.field_z = (String) (var9);

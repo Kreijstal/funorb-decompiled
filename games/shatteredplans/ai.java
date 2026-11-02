@@ -42,7 +42,7 @@ final class ai {
             for (var11 = param2; param3 > var11; var11++) {
               var12 = lg.field_d[var11];
               if (!param1) {
-                stackIn_25_0 = dc.field_c[var12];
+                stackIn_25_0 = GameState.field_c[var12];
               } else {
                 stackIn_25_0 = GameApplet.field_f[var12];
               }

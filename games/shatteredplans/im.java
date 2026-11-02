@@ -32,7 +32,7 @@ final class im {
         ms.b(20975);
     }
 
-    final static void a(fs param0, PacketBuffer param1, int param2) {
+    final static void a(Player param0, PacketBuffer param1, int param2) {
         RuntimeException var3 = null;
         PacketBuffer var4 = null;
         PacketBuffer stackIn_2_0 = null;
@@ -55,7 +55,7 @@ final class im {
             return;
           }
           var4 = (PacketBuffer) null;
-          im.a((fs) null, (PacketBuffer) null, -30);
+          im.a((Player) null, (PacketBuffer) null, -30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -137,7 +137,7 @@ final class ah extends ts {
               }
             }
             var20.b(112, 144, var20.field_o << 4, var20.field_p << 4, -this.field_N << 10, 4096);
-            ln.f((byte) -63);
+            Star.f((byte) -63);
             this.field_V.c(var9 - (var20.field_o >> 1), -var20.field_p + var10, 256);
             return;
           }
@@ -167,7 +167,7 @@ final class ah extends ts {
             aq.a((byte) -31, this.field_V);
           }
           var19.b(112, 144, var19.field_o << 4, var19.field_p << 4, -this.field_N << 10, 4096);
-          ln.f((byte) -63);
+          Star.f((byte) -63);
           this.field_V.c(var9 - (var19.field_o >> 1), -var19.field_p + var10, 256);
           return;
         }
@@ -204,7 +204,7 @@ final class ah extends ts {
               }
             }
             var26.b(112, 144, var26.field_o << 4, var26.field_p << 4, -this.field_N << 10, 4096);
-            ln.f((byte) -63);
+            Star.f((byte) -63);
             this.field_V.c(var9Lifetime1 - (var26.field_o >> 1), -var26.field_p + var10Lifetime1, 256);
             return;
           }
@@ -234,7 +234,7 @@ final class ah extends ts {
             aq.a((byte) -31, this.field_V);
           }
           var25.b(112, 144, var25.field_o << 4, var25.field_p << 4, -this.field_N << 10, 4096);
-          ln.f((byte) -63);
+          Star.f((byte) -63);
           this.field_V.c(var9Lifetime1 - (var25.field_o >> 1), -var25.field_p + var10Lifetime1, 256);
           return;
         }
@@ -287,7 +287,7 @@ final class ah extends ts {
             }
           }
           var31.b(112, 144, var31.field_o << 4, var31.field_p << 4, -this.field_N << 10, 4096);
-          ln.f((byte) -63);
+          Star.f((byte) -63);
           this.field_V.c(var9Lifetime2 - (var31.field_o >> 1), -var31.field_p + var10Lifetime2, 256);
           return;
         }
@@ -314,7 +314,7 @@ final class ah extends ts {
             aq.a((byte) -31, this.field_V);
           }
           var40.b(112, 144, var40.field_o << 4, var40.field_p << 4, -this.field_N << 10, 4096);
-          ln.f((byte) -63);
+          Star.f((byte) -63);
           this.field_V.c(var9Lifetime3 - (var40.field_o >> 1), -var40.field_p + var10Lifetime3, 256);
           return;
         }
@@ -344,7 +344,7 @@ final class ah extends ts {
           aq.a((byte) -31, this.field_V);
         }
         var39.b(112, 144, var39.field_o << 4, var39.field_p << 4, -this.field_N << 10, 4096);
-        ln.f((byte) -63);
+        Star.f((byte) -63);
         this.field_V.c(var9Lifetime3 - (var39.field_o >> 1), -var39.field_p + var10Lifetime3, 256);
     }
 

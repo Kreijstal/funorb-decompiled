@@ -293,18 +293,18 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
               if ((var22Lifetime1 + 320) >= var31) {
                 gf.g(var17, var19, var31 >> 4, var32 >> 4, 0);
                 gf.b(var31, var32, 64, var29, fe.field_x);
-                p.field_A[sd.field_p] = var31;
-                np.field_f[sd.field_p] = var32;
-                fieldTemp$0 = sd.field_p + 1;
-                sd.field_p = sd.field_p + 1;
+                p.field_A[Territory.field_p] = var31;
+                np.field_f[Territory.field_p] = var32;
+                fieldTemp$0 = Territory.field_p + 1;
+                Territory.field_p = Territory.field_p + 1;
                 if (fieldTemp$0 == 600) {
-                  sd.field_p = 0;
+                  Territory.field_p = 0;
                 }
               }
             }
             stackIn_57_0 = (600 > var25Lifetime1) ? var25Lifetime1 : 600;
             var30Lifetime1 = stackIn_57_0;
-            var31Lifetime1 = -1 + sd.field_p;
+            var31Lifetime1 = -1 + Territory.field_p;
             for (var32Lifetime1 = 0; var30Lifetime1 > var32Lifetime1; var32Lifetime1++) {
               if (var31Lifetime1 < 0) {
                 var31Lifetime1 += 600;

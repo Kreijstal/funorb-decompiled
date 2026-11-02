@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nr extends IntrusiveNode {
-    ln field_p;
-    ln[] field_j;
+    Star field_p;
+    Star[] field_j;
     static fg field_m;
     static boolean[][] field_q;
     static Sprite field_k;
@@ -40,7 +40,7 @@ final class nr extends IntrusiveNode {
         return (java.awt.Container) ((Object) kq.f((byte) 125));
     }
 
-    nr(ln param0, int param1) {
+    nr(Star param0, int param1) {
         try {
           this.field_j = null;
           this.field_p = param0;
@@ -49,7 +49,7 @@ final class nr extends IntrusiveNode {
         }
     }
 
-    nr(ln param0, int[] param1, ln[] param2) {
+    nr(Star param0, int[] param1, Star[] param2) {
         int var4_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

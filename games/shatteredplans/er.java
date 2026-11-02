@@ -118,7 +118,7 @@ final class er {
           if (param4 < 97) {
             er.a(-92, 119, -115, 97, 9);
           }
-          if (hi.field_o.field_rb != 0 &&
+          if (TaskAi.field_o.field_rb != 0 &&
             !bg.field_g) {
             if (ae.field_b) {
               ClientException.a(true);
@@ -450,7 +450,7 @@ final class er {
         }
     }
 
-    final static Sprite a(int param0, byte param1, int param2, fs param3, int param4) {
+    final static Sprite a(int param0, byte param1, int param2, Player param3, int param4) {
         Sprite stackIn_3_0 = null;
         Sprite stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;

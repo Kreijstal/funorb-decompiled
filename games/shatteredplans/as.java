@@ -11,14 +11,14 @@ final class as extends IntrusiveNode {
     int field_n;
     int field_j;
     static String field_i;
-    ln field_s;
+    Star field_s;
     int field_z;
     int[] field_o;
     int field_r;
     int field_v;
     int[] field_l;
-    fs field_m;
-    ln field_q;
+    Player field_m;
+    Star field_q;
     int field_k;
     static String field_h;
 

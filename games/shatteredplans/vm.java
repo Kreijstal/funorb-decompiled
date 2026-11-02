@@ -188,7 +188,7 @@ final class vm extends qr {
               ih.a(gi.field_a, 2, var5, em.field_h, (String) null, param3);
               un.a(gi.field_a, (byte) 123, hd.field_k, em.field_h, var5);
               jp.g((byte) 119);
-              dc.a(-5883);
+              GameState.a(-5883);
             } else {
               mm.d(param0 ^ -16705);
               jp.g((byte) 119);

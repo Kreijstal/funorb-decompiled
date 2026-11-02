@@ -806,7 +806,7 @@ abstract class tl extends GameApplet {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (0 == param2) {
-            var10 = dc.a(param1, (byte) -57);
+            var10 = GameState.a(param1, (byte) -57);
             var6 = var10;
             if (var6 == null) {
               stackIn_8_0 = null;

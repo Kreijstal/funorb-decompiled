@@ -287,7 +287,7 @@ final class rq implements iq {
                       var16 = var7.field_Ab;
                       tp.a((int[]) null, 0L, (String) null, var16, 293, d.field_a.field_Db, var7, -1, -1);
                       if (null != var7.field_xb &&
-                        !fs.a(62, hp.field_m.field_k) &&
+                        !Player.a(62, hp.field_m.field_k) &&
                         !bg.field_g) {
                         if (!ae.field_b) {
                           var17 = hp.field_m;

@@ -286,7 +286,7 @@ final class sm {
         param1 += 8;
         var10 = nc.field_t;
         for (var11 = 0; -1 + var5 > var11; var11++) {
-          var12 = ln.field_H[var11];
+          var12 = Star.field_H[var11];
           if (12 < var12) {
             var12 = 12;
           }
@@ -304,7 +304,7 @@ final class sm {
           }
           ks.a(-18166, 16, 2458760, -1, var6, param1);
           mh.a(var13, -16 + var6, 16 + param1, 2458760, false);
-          var14_intLifetime1 = -12 + ln.field_H[var11];
+          var14_intLifetime1 = -12 + Star.field_H[var11];
           if (var14_intLifetime1 > 0) {
             var15_ref_String = pe.field_J[var11];
             var16 = rs.field_Cb.c(var15_ref_String);
@@ -328,7 +328,7 @@ final class sm {
         stackIn_48_0 = (this.field_a != 7) ? 16 : 8;
         var12Lifetime2 = stackIn_48_0;
         ks.a(-18166, var12Lifetime2, 2458760, 1, var6 - 16, var11Lifetime1 + 15 + param1);
-        var13Lifetime1 = ln.field_H[var5 - 1] << 2;
+        var13Lifetime1 = Star.field_H[var5 - 1] << 2;
         if (0 != var13Lifetime1) {
           var14 = pe.field_J[var5 - 1];
           var15 = rs.field_Cb.c(var14);
@@ -388,7 +388,7 @@ final class sm {
         int var4Lifetime3;
         int var6Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = ln.field_H.length;
+        var2 = Star.field_H.length;
         var3 = ac.field_w + 147;
         var4 = 0;
         if (param0 >= -31) {
@@ -408,19 +408,19 @@ final class sm {
           var5 = o.field_s;
         }
         nc.field_t = 0;
-        for (var4Lifetime1 = 0; var4Lifetime1 < ln.field_H.length; var4Lifetime1++) {
-          var6 = ln.field_H[var4Lifetime1];
+        for (var4Lifetime1 = 0; var4Lifetime1 < Star.field_H.length; var4Lifetime1++) {
+          var6 = Star.field_H[var4Lifetime1];
           if (var5 == var4Lifetime1) {
             var6++;
             if (var6 <= 24) {
-              ln.field_H[var4Lifetime1] = var6;
+              Star.field_H[var4Lifetime1] = var6;
             } else {
               var6 = 24;
             }
           } else {
             var6--;
             if (var6 >= 0) {
-              ln.field_H[var4Lifetime1] = var6;
+              Star.field_H[var4Lifetime1] = var6;
             } else {
               var6 = 0;
             }
@@ -819,7 +819,7 @@ final class sm {
               if (((var11 == 0)) &&
                 (!(ri.field_I.field_h + ri.field_I.field_i + ri.field_I.field_r <= 0))) {
                 var6Lifetime1Lifetime1 = 2805974;
-                this.a(ln.field_o, ri.field_I.field_i, (byte) -120, ri.field_I.field_l, var4, ri.field_I.field_r, var7, -1, var6Lifetime1Lifetime1, ri.field_I.field_h);
+                this.a(Star.field_o, ri.field_I.field_i, (byte) -120, ri.field_I.field_l, var4, ri.field_I.field_r, var7, -1, var6Lifetime1Lifetime1, ri.field_I.field_h);
               }
               break regionExit1;
             }
@@ -874,7 +874,7 @@ final class sm {
         this.field_g = -1;
         qg.field_q = cl.field_n;
         for (var4 = 1; 6 > var4; var4++) {
-          ln.field_H[var4] = 0;
+          Star.field_H[var4] = 0;
         }
         o.field_s = 0;
         if (this.field_a == 8) {
@@ -882,7 +882,7 @@ final class sm {
         }
         ne.field_o = -1;
         nc.field_t = 24;
-        ln.field_H[0] = 24;
+        Star.field_H[0] = 24;
         if (cb.field_i == null && (6 == this.field_a ||
           this.field_a == 7)) {
           hd.c(false);
@@ -1146,7 +1146,7 @@ final class sm {
                 this.a(-5, nn.field_a, 139 + (5 + param3), 40 + param0 + 5, param0 + 85, var9Lifetime1, var10Lifetime1, (byte) 62, 5 + param3 + 139, var11);
                 this.a(var11, 5 + (param0 + 130), var9Lifetime1, 70 + param0 + 5, ProxySocketConnector.field_i, 5, var10Lifetime1, 100 + (5 + param0), (byte) 110, 188 + (5 + param3));
                 this.a(var11, param0 + 130, var9Lifetime1, 95 + param0, kj.field_e, 10, var10Lifetime1, 5 + (param0 + 260), (byte) 110, param3 + 235);
-                this.a(var11, 264 + param0 + 5, var9Lifetime1, 5 + (param0 + 110), ln.field_q, 25, var10Lifetime1, 5 + (param0 + 294), (byte) 110, 210 + (5 + param3));
+                this.a(var11, 264 + param0 + 5, var9Lifetime1, 5 + (param0 + 110), Star.field_q, 25, var10Lifetime1, 5 + (param0 + 294), (byte) 110, 210 + (5 + param3));
                 param0 += 150;
                 var12 = 400;
                 if (ai.field_e == 1) {
@@ -1533,7 +1533,7 @@ final class sm {
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         var4 = 20 + (this.b(false) + qg.field_r[this.field_a]);
         var5 = 10 + this.h(-121);
-        var6 = ln.field_H.length;
+        var6 = Star.field_H.length;
         if (param1 > var4) {
           return -1;
         }
@@ -1556,7 +1556,7 @@ final class sm {
         var8 = -12 % ((param0 - 41) / 43);
         var9 = nc.field_t;
         for (var10 = 0; var6 > var10; var10++) {
-          var11 = ln.field_H[var10];
+          var11 = Star.field_H[var10];
           if (var11 > 12) {
             var11 = 12;
           }
@@ -2060,7 +2060,7 @@ final class sm {
             rs.field_Cb.a(a.field_i, var2Lifetime1 + 10, (var23 + 1) * rs.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           } else {
             if (!oe.field_e) {
-              mp.field_b.d(me.field_c.toUpperCase(), var2Lifetime1 + 10, mp.field_b.field_J + (6 + var20), 2805974, -1);
+              mp.field_b.d(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, mp.field_b.field_J + (6 + var20), 2805974, -1);
               rs.field_Cb.a(rk.field_l, 10 + var2Lifetime1, var20 + 14 + rs.field_Cb.field_J, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             } else {
               mp.field_b.d(ol.field_j.toUpperCase(), 10 + var2Lifetime1, var20 + 6 + mp.field_b.field_J, 2805974, -1);
@@ -2219,7 +2219,7 @@ final class sm {
     private final void a(int param0, byte param1) {
         int var5 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var3 = ln.field_H.length;
+        int var3 = Star.field_H.length;
         int var4 = ac.field_w + 147;
         for (var5 = 0; var5 < var3; var5++) {
           var4 = var4 - cb.field_i[var5];
@@ -2232,7 +2232,7 @@ final class sm {
         }
         int var6 = var5 + param0;
         if (var6 >= 0 &&
-          ln.field_H.length > var6) {
+          Star.field_H.length > var6) {
           this.d(4, var6);
         }
     }
@@ -2240,7 +2240,7 @@ final class sm {
     sm(int param0) {
         this.field_a = param0;
         this.field_d = new np(qg.field_p[this.field_a].length);
-        ln.field_H = new int[pe.field_J.length];
+        Star.field_H = new int[pe.field_J.length];
         this.a(0, (byte) 28, false);
     }
 
@@ -2409,9 +2409,9 @@ final class sm {
                                                             }
                                                           }
                                                           if (var5 == 29) {
-                                                            if (hi.field_a != td.field_K) {
+                                                            if (TaskAi.field_a != td.field_K) {
                                                               oq.field_i[29] = tp.field_k;
-                                                              td.field_K = hi.field_a;
+                                                              td.field_K = TaskAi.field_a;
                                                             } else {
                                                               td.field_K = ec.field_s;
                                                               oq.field_i[29] = og.field_a;
@@ -2796,7 +2796,7 @@ final class sm {
               this.field_d.b(0);
             } else {
               if (oq.field_j == 103) {
-                this.d(4, ln.field_H.length - 1);
+                this.d(4, Star.field_H.length - 1);
               } else {
                 this.field_d.b(0);
               }

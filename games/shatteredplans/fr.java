@@ -21,11 +21,11 @@ final class fr extends qs {
           return;
         }
         if (fj.field_t.field_k) {
-          il.a(var1, 0, var2, ln.field_K);
+          il.a(var1, 0, var2, Star.field_K);
           gf.f(0, 0, 640, 0);
           return;
         }
-        ln.field_K.c(-var1 >> 4, -var2 >> 4);
+        Star.field_K.c(-var1 >> 4, -var2 >> 4);
     }
 
     final void h(int param0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fs {
+final class Player {
     int field_x;
     Sprite field_c;
     int field_A;
@@ -26,7 +26,7 @@ final class fs {
     static fg field_l;
     Sprite field_d;
     um field_q;
-    String field_t;
+    String name;
     static String field_j;
     static int[] field_y;
 
@@ -74,7 +74,7 @@ final class fs {
           return;
         }
         String var2 = (String) null;
-        fs.a(-14, (String) null);
+        Player.a(-14, (String) null);
         field_y = null;
         field_j = null;
         field_l = null;
@@ -96,13 +96,13 @@ final class fs {
         }
     }
 
-    fs(int param0, String param1, int param2, int param3, int param4) {
+    Player(int param0, String param1, int param2, int param3, int param4) {
         try {
           this.field_k = param3;
           this.field_s = param4;
           this.field_x = param0;
           this.field_g = param2;
-          this.field_t = param1;
+          this.name = param1;
           this.field_i = new IntrusiveDeque();
           this.field_w = 0;
           this.field_f = null;

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sc extends ka {
-    private ln field_r;
+    private Star field_r;
     static String field_p;
-    private ln[] field_t;
+    private Star[] field_t;
     static boolean field_q;
     private int field_s;
 
-    final int a(int param0, int param1, fs param2) {
+    final int a(int param0, int param1, Player param2) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -44,15 +44,15 @@ final class sc extends ka {
     public final void a(byte param0) {
         int incrementValue$0 = 0;
         int var2;
-        ln[] var3;
+        Star[] var3;
         int var4;
         int var6;
-        ln[] var7;
-        ln var9;
-        ln var8;
-        ln var10;
+        Star[] var7;
+        Star var9;
+        Star var8;
+        Star var10;
         int var4Lifetime1;
-        ln[] var3Lifetime1;
+        Star[] var3Lifetime1;
         int var2Lifetime1;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = 0;
@@ -65,7 +65,7 @@ final class sc extends ka {
             var2++;
           }
         }
-        this.field_t = new ln[var2];
+        this.field_t = new Star[var2];
         var2Lifetime1 = 0;
         var3Lifetime1 = this.field_g.field_g.field_e;
         for (var4Lifetime1 = 0; var3Lifetime1.length > var4Lifetime1; var4Lifetime1++) {
@@ -81,7 +81,7 @@ final class sc extends ka {
         super.a(param0);
     }
 
-    final int b(ln param0, int param1) {
+    final int b(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -120,13 +120,13 @@ final class sc extends ka {
         }
     }
 
-    final int c(ln param0, int param1) {
+    final int c(Star param0, int param1) {
         int var7 = 0;
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        ln[] var6 = null;
-        ln var8 = null;
+        Star[] var6 = null;
+        Star var8 = null;
         int var9 = 0;
         int var10 = 0;
         int stackIn_11_0 = 0;
@@ -851,7 +851,7 @@ final class sc extends ka {
         return new int[]{14, 16};
     }
 
-    sc(dc param0, fs param1, mn param2) {
+    sc(GameState param0, Player param1, mn param2) {
         super(param0, param1, param2, 4);
         this.field_r = null;
         this.field_t = null;
@@ -863,30 +863,30 @@ final class sc extends ka {
         int var4;
         Object var5;
         int var6;
-        ln[] var7;
+        Star[] var7;
         qm var7_ref;
         int var8;
-        ln var9;
+        Star var9;
         int var10;
         int var11;
         int var12;
-        ln var13;
-        ln[] var14;
-        ln var15;
-        ln var16;
+        Star var13;
+        Star[] var14;
+        Star var15;
+        Star var16;
         int var4Lifetime1;
         int var6Lifetime1;
         int var8Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
         Object var5Lifetime1;
-        ln[] var7Lifetime1;
-        ln var9Lifetime1;
-        ln var9Lifetime2;
-        ln var15Lifetime1;
+        Star[] var7Lifetime1;
+        Star var9Lifetime1;
+        Star var9Lifetime2;
+        Star var15Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 101) {
-          this.field_r = (ln) null;
+          this.field_r = (Star) null;
         }
         var2 = null;
         var3 = 0;
@@ -910,7 +910,7 @@ final class sc extends ka {
         if (var2 == null) {
           return;
         }
-        var4Lifetime1 = ((ln) (var2)).field_p;
+        var4Lifetime1 = ((Star) (var2)).field_p;
         var5Lifetime1 = null;
         var6Lifetime1 = 2147483647;
         var14 = this.field_t;
@@ -950,7 +950,7 @@ final class sc extends ka {
           }
         }
         if (null != var5Lifetime1) {
-          var7_ref = new qm(3, this.field_n, (ln) (var2), (ln) (var5Lifetime1));
+          var7_ref = new qm(3, this.field_n, (Star) (var2), (Star) (var5Lifetime1));
           lh.field_G.a((byte) -113, var7_ref);
         }
         return;
@@ -964,7 +964,7 @@ final class sc extends ka {
         int var3;
         qm var4;
         int var5;
-        ln var6;
+        Star var6;
         int var7;
         int var8;
         int var9;
@@ -1010,17 +1010,17 @@ final class sc extends ka {
           this.a((byte) 23);
         }
         if (var2 != null) {
-          var4 = new qm(2, this.field_n, (ln) (var2));
+          var4 = new qm(2, this.field_n, (Star) (var2));
           lh.field_G.a((byte) -113, var4);
         }
     }
 
-    final void a(int param0, sd param1, byte param2) {
-        ln var4 = null;
+    final void a(int param0, Territory param1, byte param2) {
+        Star var4 = null;
         int var5 = 0;
-        ln[] var6 = null;
+        Star[] var6 = null;
         int var7 = 0;
-        ln var8 = null;
+        Star var8 = null;
         int var9 = 0;
         int var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {

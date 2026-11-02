@@ -14,13 +14,13 @@ final class rd implements fo {
     public final l a(byte param0) throws jn {
         int var5 = 0;
         hs var3;
-        ln[] var4_ref_ln__;
+        Star[] var4_ref_ln__;
         int var4;
-        ln var6;
+        Star var6;
         int var7;
         int var8;
         int var9;
-        ln var10;
+        Star var10;
         int var11;
         l var12;
         int var8Lifetime1;

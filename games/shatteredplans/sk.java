@@ -68,7 +68,7 @@ final class sk extends IntrusiveNode {
         try {
           var9 = dh.field_c.a((byte) 47, var5);
           BufferedSocket.field_h = var9.f(80);
-          if (em.field_a.equals(ln.field_o)) {
+          if (em.field_a.equals(Star.field_o)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var9.field_o;

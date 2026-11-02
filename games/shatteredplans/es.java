@@ -10,8 +10,8 @@ final class es extends IntrusiveNode {
     static int field_m;
     int field_k;
     int field_h;
-    ln field_p;
-    fs field_i;
+    Star field_p;
+    Player field_i;
     int field_o;
 
     final static boolean a(int param0, int param1) {
@@ -162,7 +162,7 @@ final class es extends IntrusiveNode {
         field_l = null;
     }
 
-    es(ln param0, fs param1, int param2, int param3) {
+    es(Star param0, Player param1, int param2, int param3) {
         try {
           this.field_o = param2;
           this.field_p = param0;
@@ -174,7 +174,7 @@ final class es extends IntrusiveNode {
         }
     }
 
-    es(ln param0, fs param1, int param2, int param3, int param4) {
+    es(Star param0, Player param1, int param2, int param3, int param4) {
         try {
           this.field_h = param3;
           this.field_p = param0;

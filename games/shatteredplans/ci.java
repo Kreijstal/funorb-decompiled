@@ -261,7 +261,7 @@ final class ci {
     ci(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_c = me.a(62, param0, param0.length);
+          this.field_c = VictoryChecker.a(62, param0, param0.length);
           if (this.field_c != param1) {
             throw new RuntimeException();
           }

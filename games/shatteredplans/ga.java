@@ -734,11 +734,11 @@ final class ga extends tn {
                 var12.field_Kb.a(var53_ref.field_o, var12.field_Mb.field_mb, (byte) 127, 0, var34_int);
                 var34_int = var34_int + (qo.field_b + var53_ref.field_o);
               }
-              if (null != ln.field_O) {
+              if (null != Star.field_O) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < em.field_k; var36Lifetime1++) {
-                  if (ln.field_O[var36Lifetime1] != null &&
+                  if (Star.field_O[var36Lifetime1] != null &&
                     0 != (var14Lifetime1 & 1 << var36Lifetime1 + ml.field_j)) {
-                    var42 = ln.field_O[var36Lifetime1][var12.field_dc[var36Lifetime1] & 255];
+                    var42 = Star.field_O[var36Lifetime1][var12.field_dc[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_xb[var36Lifetime1].field_pb = var42;
                     var12.field_xb[var36Lifetime1].a(var54.field_o, var12.field_Mb.field_mb, (byte) 92, 0, var34_int);

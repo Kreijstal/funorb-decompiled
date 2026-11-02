@@ -3,7 +3,7 @@
  */
 class qe extends IntrusiveNode {
     static String field_l;
-    ln field_h;
+    Star field_h;
     gm field_i;
     static fg field_k;
     static Sprite field_j;

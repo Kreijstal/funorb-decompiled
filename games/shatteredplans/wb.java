@@ -55,7 +55,7 @@ final class wb {
         return var2;
     }
 
-    final static int[][] a(ln[] param0, int param1) {
+    final static int[][] a(Star[] param0, int param1) {
         int[][] stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -66,10 +66,10 @@ final class wb {
         int[][] var3 = null;
         int var4 = 0;
         int var5 = 0;
-        ln[] var5_ref_ln__ = null;
+        Star[] var5_ref_ln__ = null;
         int var6 = 0;
         int var7 = 0;
-        ln var7_ref_ln = null;
+        Star var7_ref_ln = null;
         int var8 = 0;
         int var9 = 0;
         int[][] var10 = null;

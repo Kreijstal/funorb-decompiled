@@ -283,7 +283,7 @@ final class mh {
 
     final static void b(int param0) {
         p.field_A = new int[600];
-        sd.field_p = 0;
+        Territory.field_p = 0;
         if (param0 != 1674225316) {
           mh.b((byte) -95);
         }

@@ -9,7 +9,7 @@ class hs implements fo {
     int field_h;
     static nf field_j;
     static int[] field_i;
-    ln[] field_f;
+    Star[] field_f;
     int field_d;
     int field_c;
     private int field_k;
@@ -20,12 +20,12 @@ class hs implements fo {
 
     private final void a(l param0, int param1) {
         int var3_int = 0;
-        ln[] var8 = null;
-        ln var11 = null;
-        ln[] var9 = null;
+        Star[] var8 = null;
+        Star var11 = null;
+        Star[] var9 = null;
         int var10 = 0;
-        ln var12 = null;
-        ln var6 = null;
+        Star var12 = null;
+        Star var6 = null;
         int var5 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         int var5Lifetime1;
@@ -45,7 +45,7 @@ class hs implements fo {
             var12 = var9[var10];
             var6 = var12;
             if (var12.field_D == null) {
-              var6.field_D = new ln[]{};
+              var6.field_D = new Star[]{};
             }
             var10++;
           }
@@ -57,10 +57,10 @@ class hs implements fo {
 
     private final void c(l param0, int param1) {
         int var4 = 0;
-        ln[] var3 = null;
-        ln var5 = null;
+        Star[] var3 = null;
+        Star var5 = null;
         int var6 = 0;
-        ln[] var7 = null;
+        Star[] var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -96,10 +96,10 @@ class hs implements fo {
         int var2 = 0;
         int var8 = 0;
         int stackIn_10_0 = 0;
-        ln var3;
+        Star var3;
         int var4;
         int var5;
-        ln[] var6;
+        Star[] var6;
         int var7;
         int var9;
         int var7Lifetime1;
@@ -117,7 +117,7 @@ class hs implements fo {
             var4 = var2 / this.field_c;
             stackIn_10_0 = (var4 % 2 != 0) ? 0 : 1;
             var5 = stackIn_10_0;
-            var6 = new ln[6];
+            var6 = new Star[6];
             if (var4 != 0 && (var5 == 0 ||
               var2 % this.field_c != 0)) {
               if (var5 == 0) {
@@ -173,12 +173,12 @@ class hs implements fo {
               var6[5] = this.field_f[var7Lifetime5];
             }
             var3.field_r = new jd[6];
-            var3.field_r[0] = new jd(var3, var6[0], (ln) null, var3.field_A, (int)(-(0.5 * (200.0 * rh.field_d)) + (double)var3.field_S), 0);
-            var3.field_r[1] = new jd(var3, var6[1], (ln) null, 100 + var3.field_A, (int)(-(0.25 * (rh.field_d * 200.0)) + (double)var3.field_S), 0);
-            var3.field_r[2] = new jd(var3, var6[2], (ln) null, 100 + var3.field_A, (int)(0.25 * (rh.field_d * 200.0) + (double)var3.field_S), 0);
-            var3.field_r[3] = new jd(var3, var6[3], (ln) null, var3.field_A, (int)(rh.field_d * 200.0 * 0.5 + (double)var3.field_S), 0);
-            var3.field_r[4] = new jd(var3, var6[4], (ln) null, -100 + var3.field_A, (int)((double)var3.field_S + 0.25 * (rh.field_d * 200.0)), 0);
-            var3.field_r[5] = new jd(var3, var6[5], (ln) null, -100 + var3.field_A, (int)((double)var3.field_S - 200.0 * rh.field_d * 0.25), 0);
+            var3.field_r[0] = new jd(var3, var6[0], (Star) null, var3.field_A, (int)(-(0.5 * (200.0 * rh.field_d)) + (double)var3.field_S), 0);
+            var3.field_r[1] = new jd(var3, var6[1], (Star) null, 100 + var3.field_A, (int)(-(0.25 * (rh.field_d * 200.0)) + (double)var3.field_S), 0);
+            var3.field_r[2] = new jd(var3, var6[2], (Star) null, 100 + var3.field_A, (int)(0.25 * (rh.field_d * 200.0) + (double)var3.field_S), 0);
+            var3.field_r[3] = new jd(var3, var6[3], (Star) null, var3.field_A, (int)(rh.field_d * 200.0 * 0.5 + (double)var3.field_S), 0);
+            var3.field_r[4] = new jd(var3, var6[4], (Star) null, -100 + var3.field_A, (int)((double)var3.field_S + 0.25 * (rh.field_d * 200.0)), 0);
+            var3.field_r[5] = new jd(var3, var6[5], (Star) null, -100 + var3.field_A, (int)((double)var3.field_S - 200.0 * rh.field_d * 0.25), 0);
             for (var8 = 0; 6 > var8; var8++) {
               var3.field_r[var8].field_g = (int)(0.5 * (rh.field_d * 200.0));
             }
@@ -422,7 +422,7 @@ class hs implements fo {
         try {
           if (param0 != 95) {
             Random var6 = (Random) null;
-            this.a((ln) null, (byte) 67, (Random) null);
+            this.a((Star) null, (byte) 67, (Random) null);
           }
           this.a(param1, param3, 4);
           this.a(param3, param2, 0);
@@ -460,7 +460,7 @@ class hs implements fo {
     }
 
     void a(boolean param0, l param1) throws jn {
-        ln stackIn_39_0 = null;
+        Star stackIn_39_0 = null;
         Object stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
@@ -469,18 +469,18 @@ class hs implements fo {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
-        ln[] var6 = null;
+        Star[] var6 = null;
         int var7_int = 0;
         t var7 = null;
-        ln var8 = null;
+        Star var8 = null;
         int var9 = 0;
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        ln[] var13 = null;
+        Star[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        ln[] var6Lifetime1;
+        Star[] var6Lifetime1;
         int var5Lifetime1;
         int var6_intLifetime1;
         int var7_intLifetime1;
@@ -525,9 +525,9 @@ class hs implements fo {
               }
             }
           } else {
-            this.field_f = new ln[this.field_b * this.field_c];
+            this.field_f = new Star[this.field_b * this.field_c];
           }
-          param1.field_e = new ln[this.field_d];
+          param1.field_e = new Star[this.field_d];
           if (this.field_k < 50) {
             while (var5Lifetime1 < this.field_d) {
               var6_intLifetime1 = qf.a((byte) 110, this.field_f.length, param1.field_j);
@@ -554,7 +554,7 @@ class hs implements fo {
               }
             }
           }
-          var6Lifetime1 = new ln[this.field_d];
+          var6Lifetime1 = new Star[this.field_d];
           if (param0) {
             return;
           }
@@ -562,7 +562,7 @@ class hs implements fo {
             stackIn_39_0 = this.field_f[var7_intLifetime3];
             if (stackIn_39_0 != null) {
               if (this.field_f[var7_intLifetime3] != SocketConnector.field_b) {
-                this.field_f[var7_intLifetime3].field_I = mh.field_h[((int[]) (var3))[this.field_f[var7_intLifetime3].field_p]];
+                this.field_f[var7_intLifetime3].name = mh.field_h[((int[]) (var3))[this.field_f[var7_intLifetime3].field_p]];
                 var6Lifetime1[this.field_f[var7_intLifetime3].field_p] = this.field_f[var7_intLifetime3];
               } else {
                 this.field_f[var7_intLifetime3] = null;
@@ -591,7 +591,7 @@ class hs implements fo {
     private final void a(l param0, int[] param1, int param2) {
         int var4_int = 0;
         int dupTemp$1 = 0;
-        ln var5 = null;
+        Star var5 = null;
         int var6 = 0;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -635,7 +635,7 @@ class hs implements fo {
         }
     }
 
-    private final void a(ln param0, byte param1, Random param2) {
+    private final void a(Star param0, byte param1, Random param2) {
         int dupTemp$2 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -687,7 +687,7 @@ class hs implements fo {
     private final void a(int[] param0, l param1, int param2) throws jn {
         int var4_int = 0;
         int var5 = 0;
-        ln var6 = null;
+        Star var6 = null;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           for (var4_int = 0; var4_int < param0.length; var4_int++) {
@@ -722,8 +722,8 @@ class hs implements fo {
         int[] var11 = null;
         int var12 = 0;
         int var13 = 0;
-        ln var13_ref_ln = null;
-        ln var14 = null;
+        Star var13_ref_ln = null;
+        Star var14 = null;
         int var15 = 0;
         int var16 = 0;
         int[] var17 = null;
@@ -843,14 +843,14 @@ class hs implements fo {
         String stackIn_46_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        ln var5 = null;
+        Star var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ln[] var12 = null;
+        Star[] var12 = null;
         int var7Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -950,12 +950,12 @@ class hs implements fo {
 
     private final void a(byte param0, l param1) {
         int var4 = 0;
-        ln var5 = null;
+        Star var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ln[] var10 = null;
+        Star[] var10 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -997,7 +997,7 @@ class hs implements fo {
         }
     }
 
-    final ln a(int param0, int param1, int param2, int param3, int param4) {
+    final Star a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = param0 / param1;
         int var8 = -123 / ((52 - param3) / 52);
         int var7 = var6 % 2 == 0 ? 1 : 0;
@@ -1006,10 +1006,10 @@ class hs implements fo {
         int var10 = (int)(0.5 * (200.0 * rh.field_d));
         var10 = (int)((double)var6 * (0.75 * (rh.field_d * 200.0))) + var10;
         int var11 = 0;
-        return new ln(param4, var9, var10, var11);
+        return new Star(param4, var9, var10, var11);
     }
 
-    int[] a(Random param0, ln[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws jn {
+    int[] a(Random param0, Star[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws jn {
         int var12_int = 0;
         int incrementValue$0 = 0;
         int var20 = 0;
@@ -1038,7 +1038,7 @@ class hs implements fo {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        ln var21 = null;
+        Star var21 = null;
         int var23 = 0;
         int var24 = 0;
         l var25 = null;

@@ -265,7 +265,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_no_achievement", 127);
                 if (var2 != null) {
-                  me.field_c = IterableNodeHashTable.a(var2, 17746);
+                  VictoryChecker.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("achievement_criteria,0", 119);
                 if (null != var2) {
@@ -1053,7 +1053,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_instructions_sf_incoming", 109);
                 if (null != var2) {
-                  ln.field_q = IterableNodeHashTable.a(var2, 17746);
+                  Star.field_q = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_icon_occupied", 110);
                 if (null != var2) {
@@ -1700,7 +1700,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_stat_desc_research_wasted", 116);
                 if (var2 != null) {
-                  me.field_f = IterableNodeHashTable.a(var2, 17746);
+                  VictoryChecker.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_desc_attacks_successful", 116);
                 if (var2 != null) {
@@ -1708,7 +1708,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_stat_desc_attacks_failed", 99);
                 if (null != var2) {
-                  ln.field_P = IterableNodeHashTable.a(var2, 17746);
+                  Star.field_P = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_desc_defences_successful", 102);
                 if (null != var2) {
@@ -2038,7 +2038,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipVictoryButtonShow", 102);
                 if (null != var2) {
-                  hi.field_d = IterableNodeHashTable.a(var2, 17746);
+                  TaskAi.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipProductionButtonHide", 112);
                 if (null != var2) {

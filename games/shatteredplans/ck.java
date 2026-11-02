@@ -98,7 +98,7 @@ final class ck {
           us.field_a = var22[3];
           GameKeyHandler.field_b = var22[1];
           ci.field_p = var22[2];
-          fs.field_a = va.a("icon_circles", param6 + 8, "", param0);
+          Player.field_a = va.a("icon_circles", param6 + 8, "", param0);
           dm.field_d = va.a("production_icons", 0, "", param0);
           aq.field_i = ds.a(true, param0, "", "production_button");
           hq.field_a = ds.a(true, param0, "", "production_button_down");
@@ -121,7 +121,7 @@ final class ck {
           ei.field_a = ds.a(true, param0, "", "ready_button_down");
           jl.field_W = ds.a(true, param0, "", "shine_left");
           mr.field_g = ds.a(true, param0, "", "shine_right");
-          me.field_h = ds.a(true, param0, "", "shine_mid");
+          VictoryChecker.field_h = ds.a(true, param0, "", "shine_mid");
           SpriteState.field_q = ds.a(true, param0, "", "combat_hex_white");
           ra.a(-116);
           SpriteState.field_q.e();

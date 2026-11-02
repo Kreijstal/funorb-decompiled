@@ -65,7 +65,7 @@ final class tb {
           gm.field_l = param11;
           qk.field_x = param10;
           wa.field_d = param3;
-          ln.field_O = param9;
+          Star.field_O = param9;
           ei.field_f = param2;
           nl.field_a = param1;
           ec.field_v = param6;
@@ -85,7 +85,7 @@ final class tb {
           lp.field_v = new qr(0L, (qr) null);
           gm.field_m = new qr(0L, td.field_N, gd.field_c);
           sf.field_f = new qr(0L, vm.field_Cb, mk.field_b);
-          ls.field_a = new ub(0L, new qr(0L, (qr) null), me.field_d, se.field_m);
+          ls.field_a = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, se.field_m);
           lp.field_v.a(param13 ^ -7962, gm.field_m);
           if (ns.field_pb) {
             lp.field_v.a(4, sf.field_f);
@@ -107,7 +107,7 @@ final class tb {
           ta.field_d = new qr(0L, jr.field_h, fa.field_T);
           ea.field_c = new qr(0L, jr.field_h, WidgetContainer.field_z);
           hq.field_b = new qr(0L, vm.field_Cb, pc.field_o);
-          qs.field_y = new ub(0L, new qr(0L, (qr) null), me.field_d, se.field_m);
+          qs.field_y = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, se.field_m);
           gb.field_m = new qr(0L, ea.field_a, GameApplet.field_a.toUpperCase());
           gb.field_m.field_s = ns.field_pb;
           stackIn_6_0 = null;
@@ -147,7 +147,7 @@ final class tb {
           so.field_v = new qr(0L, ho.field_j);
           so.field_v.a(4, io.field_c);
           so.field_v.a(4, SocketConnector.field_d);
-          IntrusiveNode.field_c = new qr(0L, me.field_d);
+          IntrusiveNode.field_c = new qr(0L, VictoryChecker.field_d);
           IntrusiveNode.field_c.a(SpriteState.field_u, false);
           var16 = IntrusiveNode.field_c;
           IntrusiveNode.field_c.field_G = 1;
@@ -157,7 +157,7 @@ final class tb {
           ac.field_x.field_y = 1;
           lr.field_a = new qr(0L, td.field_N, gd.field_c);
           vd.field_q = new qr(0L, vm.field_Cb, mk.field_b);
-          ro.field_a = new ub(0L, new qr(0L, (qr) null), me.field_d, se.field_m);
+          ro.field_a = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, se.field_m);
           so.field_t.a(4, ac.field_x);
           so.field_t.a(4, lr.field_a);
           if (ns.field_pb) {
