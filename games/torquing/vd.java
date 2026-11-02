@@ -4,7 +4,7 @@
 final class vd {
     static String field_d;
     static wl field_c;
-    static la field_e;
+    static ResourceArchive field_e;
     static int field_f;
     static String field_b;
     static String field_a;
@@ -27,8 +27,8 @@ final class vd {
           var6_int = 72 % ((param1 + 9) / 50);
           if (qk.field_p >= param0 &&
             j.field_q <= param5) {
-            if (param4 < kn.field_e) {
-              param4 = kn.field_e;
+            if (param4 < RasterBuffer.field_e) {
+              param4 = RasterBuffer.field_e;
               var7 = 0;
             } else {
               if (qg.field_z < param4) {
@@ -38,9 +38,9 @@ final class vd {
                 var7 = 1;
               }
             }
-            if (param2 < kn.field_e) {
+            if (param2 < RasterBuffer.field_e) {
               var8 = 0;
-              param2 = kn.field_e;
+              param2 = RasterBuffer.field_e;
             } else {
               if (qg.field_z < param2) {
                 param2 = qg.field_z;
@@ -91,7 +91,7 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var6), "vd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var6), "vd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -113,13 +113,13 @@ final class vd {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        df var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         qp var11 = null;
-        df var12 = null;
+        IsaacPacketBuffer var12 = null;
         int[] var13 = null;
         nh var14 = null;
         nh var15 = null;
@@ -139,9 +139,9 @@ final class vd {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((fj) ((Object) var5)).i((byte) -101);
+            var6 = ((PacketBuffer) ((Object) var5)).i((byte) -101);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((fj) ((Object) var5)).c((byte) -65);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).c((byte) -65);
             }
             var14 = (nh) (to.field_q.b(0));
             if (var14 == null) {
@@ -151,12 +151,12 @@ final class vd {
             var14.field_r = var3;
             var14.field_n = true;
             var14.field_m = var16[0];
-            var14.f(0);
+            var14.unlink(0);
             return;
           }
           if (var2 != 1) {
             if (2 != var2) {
-              nn.a("A1: " + me.a(-1), (Throwable) null, param0 - 37870);
+              nn.a("A1: " + ArchiveSource.a(-1), (Throwable) null, param0 - 37870);
               ih.b(true);
             } else {
               var15 = (nh) (to.field_q.b(param0 - 27912));
@@ -167,7 +167,7 @@ final class vd {
               var15.field_r = kb.a((byte) -91);
               var15.field_m = var15.field_r[0];
               var15.field_n = true;
-              var15.f(0);
+              var15.unlink(0);
             }
           } else {
             var11 = (qp) (tl.field_p.b(0));
@@ -175,13 +175,13 @@ final class vd {
               ih.b(true);
               return;
             }
-            var11.f(0);
+            var11.unlink(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class vd {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 

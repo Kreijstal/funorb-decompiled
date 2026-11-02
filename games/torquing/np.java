@@ -76,7 +76,7 @@ final class np extends ha {
           return;
         }
         try {
-          param0.a(of.field_m * 64 / 160);
+          param0.a(VertexMesh.field_m * 64 / 160);
           if (param1) {
             param0.g();
           }
@@ -90,7 +90,7 @@ final class np extends ha {
           }
           ti.field_e.a(vd.field_c);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "np.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "np.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -104,12 +104,12 @@ final class np extends ha {
           if (param0 != -13) {
             np.d(-95);
           }
-          if (q.field_g == mj.field_d) {
+          if (IntrusiveNode.field_g == mj.field_d) {
             return false;
           }
-          e.field_f = ol.field_c[q.field_g];
-          m.field_t = pe.field_H[q.field_g];
-          q.field_g = 127 & 1 + q.field_g;
+          e.field_f = ol.field_c[IntrusiveNode.field_g];
+          m.field_t = pe.field_H[IntrusiveNode.field_g];
+          IntrusiveNode.field_g = 127 & 1 + IntrusiveNode.field_g;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;
@@ -159,7 +159,7 @@ final class np extends ha {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -168,17 +168,17 @@ final class np extends ha {
         var4 = Torquing.field_u;
         if (param0 == -1) {
           if (null != j.field_a) {
-            lj.a(j.field_a, (byte) -101);
+            SecondaryNodeDeque.a(j.field_a, (byte) -101);
             j.field_a = null;
           }
         } else {
           if (ig.field_r[param0] == null) {
-            ig.field_r[param0] = nj.a(th.field_F[param0], 100, param2);
+            ig.field_r[param0] = PcmSampleStream.a(th.field_F[param0], 100, param2);
             ig.field_r[param0].d(-1);
           }
           if (j.field_a != ig.field_r[param0]) {
             if (null != j.field_a) {
-              lj.a(j.field_a, (byte) -103);
+              SecondaryNodeDeque.a(j.field_a, (byte) -103);
             }
             ni.a(ig.field_r[param0], true);
             j.field_a = ig.field_r[param0];

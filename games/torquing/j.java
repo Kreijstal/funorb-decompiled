@@ -17,14 +17,14 @@ final class j {
     byte[] field_e;
     byte[][] field_f;
     byte[] field_A;
-    static nj field_a;
+    static PcmSampleStream field_a;
     int[] field_y;
     int[] field_i;
     int[][] field_k;
     int field_t;
     int field_g;
     int field_E;
-    static t field_F;
+    static Sprite field_F;
     int[] field_G;
     int field_z;
     byte field_h;
@@ -49,7 +49,7 @@ final class j {
         try {
           h.a((java.awt.Component) ((Object) param0), -8662);
           var2_int = -50 / ((-56 - param1) / 59);
-          sa.a((java.awt.Component) ((Object) param0), true);
+          AudioService.a((java.awt.Component) ((Object) param0), true);
           if (wb.field_u == null) {
             return;
           }
@@ -65,7 +65,7 @@ final class j {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class j {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

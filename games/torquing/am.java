@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class am extends q {
+abstract class am extends IntrusiveNode {
     int field_k;
     static String field_q;
     static String field_j;
@@ -57,20 +57,20 @@ abstract class am extends q {
 
     final static void a(int param0) {
         int var2 = Torquing.field_u;
-        int fieldTemp$0 = fh.field_r + 1;
-        fh.field_r = fh.field_r + 1;
+        int fieldTemp$0 = SocketJs5Transport.field_r + 1;
+        SocketJs5Transport.field_r = SocketJs5Transport.field_r + 1;
         if (100 != fieldTemp$0) {
-          if (35 <= fh.field_r) {
-            if (fh.field_r < 70) {
-              if (-35 + fh.field_r - 35 > -5) {
-                vc.field_d = vc.field_d - 4;
+          if (35 <= SocketJs5Transport.field_r) {
+            if (SocketJs5Transport.field_r < 70) {
+              if (-35 + SocketJs5Transport.field_r - 35 > -5) {
+                MouseWheelInput.field_d = MouseWheelInput.field_d - 4;
                 if (param0 < 53) {
                   am.c((byte) 72);
                   return;
                 }
                 return;
               }
-              vc.field_d = vc.field_d + 4;
+              MouseWheelInput.field_d = MouseWheelInput.field_d + 4;
               if (param0 < 53) {
                 am.c((byte) 72);
                 return;
@@ -96,9 +96,9 @@ abstract class am extends q {
         cq.field_w = null;
         jb.field_b = null;
         hj.field_c = null;
-        of.field_l = null;
+        VertexMesh.field_l = null;
         nh.field_l = null;
-        la.field_j = null;
+        ResourceArchive.field_j = null;
         if (param0 >= 53) {
           return;
         }
@@ -161,13 +161,13 @@ abstract class am extends q {
         return var5Lifetime1;
     }
 
-    void a(fj param0, int param1, int param2) {
+    void a(PacketBuffer param0, int param1, int param2) {
         try {
           if (param1 != 35) {
             field_n = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "am.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "am.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

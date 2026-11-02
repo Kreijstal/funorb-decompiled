@@ -7,7 +7,7 @@ final class ol {
     static String field_e;
     static String field_b;
     static String field_a;
-    static hc[] field_f;
+    static Level[] field_f;
 
     final static void a(String param0, boolean param1, java.applet.Applet param2) {
         try {
@@ -28,7 +28,7 @@ final class ol {
             }
             j.a(param1, param2);
           } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ol.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ol.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -122,7 +122,7 @@ final class ol {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(')').toString());
         }
     }
 

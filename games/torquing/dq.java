@@ -5,17 +5,17 @@ final class dq {
     int field_b;
     int field_c;
     int field_h;
-    el field_a;
+    WidgetRenderer field_a;
     int field_f;
-    el field_n;
+    WidgetRenderer field_n;
     int field_e;
     static int field_m;
-    el field_i;
+    WidgetRenderer field_i;
     private int field_l;
     int field_p;
     uc field_j;
-    el field_k;
-    el field_g;
+    WidgetRenderer field_k;
+    WidgetRenderer field_g;
     int field_d;
     private boolean field_o;
 
@@ -33,18 +33,18 @@ final class dq {
           var5_int = this.field_j.a(param0);
           var6 = this.field_j.field_s + this.field_j.field_t;
           var7 = param2;
-          if (6 + (var5_int + var7) > ph.field_j) {
-            var7 = ph.field_j + (-var5_int - 6);
+          if (6 + (var5_int + var7) > SoftwareRasterizer.field_j) {
+            var7 = SoftwareRasterizer.field_j + (-var5_int - 6);
           }
           var8 = -this.field_j.field_s + param1 + 32;
-          if (ph.field_d < 6 + (var8 + var6)) {
-            var8 = -var6 + (ph.field_d - 6);
+          if (SoftwareRasterizer.field_d < 6 + (var8 + var6)) {
+            var8 = -var6 + (SoftwareRasterizer.field_d - 6);
           }
           if (param3 != -41) {
             this.field_j = (uc) null;
           }
-          ph.c(var7, var8, var5_int + 6, 6 + var6, this.field_l);
-          ph.d(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_c);
+          SoftwareRasterizer.c(var7, var8, var5_int + 6, 6 + var6, this.field_l);
+          SoftwareRasterizer.d(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_c);
           this.field_j.b(param0, 3 + var7, this.field_j.field_s + var8 + 3, this.field_l, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,28 +57,28 @@ final class dq {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(uc param0, byte param1) {
         pc var18 = null;
         se var4 = null;
-        t[] var5 = null;
-        ep var17 = null;
-        ep var19 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var17 = null;
+        ArgbSprite var19 = null;
         int var7_int = 0;
         se var6 = null;
         se var7 = null;
         ld discarded$0 = null;
         rn discarded$1 = null;
         se var8 = null;
-        t[] var9 = null;
-        t[] var10 = null;
-        t dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         se var11 = null;
         se var12 = null;
-        t var13 = null;
+        Sprite var13 = null;
         se var14 = null;
         se var20 = null;
         int var15 = Torquing.field_u;
@@ -86,7 +86,7 @@ final class dq {
         se var14Lifetime2;
         try {
           var18 = new pc(param0, 2, 2, 2236962, 1, 1, 1, param0.field_t + param0.field_x + 2);
-          this.field_n = (el) ((Object) var18);
+          this.field_n = (WidgetRenderer) ((Object) var18);
           var18.field_h = 16777215;
           var4 = new se();
           var18.a(-97, var4);
@@ -104,38 +104,38 @@ final class dq {
           var4.a(0, 4).a((byte) 101, 15658734).a(-2, ak.a(10066329, 7829367, 8947848, (byte) -124));
           var4.a(1, 4).a(-2, ak.a(10066329, 13421772, 11184810, (byte) -124));
           var4.a(3, 4).a(-2, ak.a(7829367, 10066329, 8947848, (byte) -124)).a(1, (byte) -113).b((byte) 123, 1);
-          var5 = new t[9];
-          var17 = new ep(32, 32);
+          var5 = new Sprite[9];
+          var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var7_int = 0; var7_int < var19.field_y.length; var7_int++) {
             var17.field_y[var7_int] = 1077952576;
           }
-          var5[4] = (t) ((Object) var19);
+          var5[4] = (Sprite) ((Object) var19);
           var4.a(4, 4).a(-86, true).a(-2, var5);
-          var4.a(5, 4).a(-2, ul.a(65793, 0, 0, 0, (byte) 82)).a(-121, true).a((byte) 126, -1);
-          this.field_k = (el) ((Object) var4);
+          var4.a(5, 4).a(-2, MouseInputHandler.a(65793, 0, 0, 0, (byte) 82)).a(-121, true).a((byte) 126, -1);
+          this.field_k = (WidgetRenderer) ((Object) var4);
           var6 = new se(var4, true);
           var6.field_f = 0;
           var7 = new se(var4, true);
           var7.field_f = 0;
-          var7.a(0, gj.a(true, 8947848));
-          var7.a(1, 4).a(-2, gj.a(true, 11184810)).a((byte) 119, 2236962);
-          this.field_i = (el) ((Object) new oj(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          var7.a(0, ProxySocketConnector.a(true, 8947848));
+          var7.a(1, 4).a(-2, ProxySocketConnector.a(true, 11184810)).a((byte) 119, 2236962);
+          this.field_i = (WidgetRenderer) ((Object) new oj(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ld(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new rn(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new se();
           var18.a(109, var8);
           var8.a(0, 4).a(-2, ak.a(7829367, 10066329, 15658734, (byte) -124)).a((byte) 126, 1118481).a(-1, -26249);
           var8.a(4, 4).a(-97, true).a(-2, var5);
-          this.field_g = (el) ((Object) var8);
+          this.field_g = (WidgetRenderer) ((Object) var8);
           if (param1 > -115) {
             String var16 = (String) null;
             this.a((String) null, 11, 13, (byte) -16);
           }
-          var9 = new t[9];
-          var10 = new t[9];
-          var9[4] = new t(2, 1);
-          var10[4] = new t(1, 2);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_y = new int[]{6710886, 7829367};
           var10[4].field_y = new int[]{6710886, 7829367};
@@ -143,7 +143,7 @@ final class dq {
           var12 = new se();
           var11.a(var9, 0, (byte) 100);
           var12.a(var10, 0, (byte) 116);
-          var13 = new t(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_y = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new se(var4, true);
           var14.a((byte) -57, var13.c());
@@ -157,7 +157,7 @@ final class dq {
           var20 = new se(var4, true);
           var20.a((byte) -57, var13);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "dq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "dq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -186,12 +186,12 @@ final class dq {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ph.b(param3, param5, param1, param2, param6, param4);
+        SoftwareRasterizer.b(param3, param5, param1, param2, param6, param4);
         if (param0 != 16777215) {
           String var9 = (String) null;
           this.a(125, 88, -122, (String) null);
@@ -199,7 +199,7 @@ final class dq {
     }
 
     final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        ph.a(param3, param0, param5, param1, param4);
+        SoftwareRasterizer.a(param3, param0, param5, param1, param4);
         if (param2) {
           String var8 = (String) null;
           this.a(62, (String) null, 56, 0);
@@ -234,7 +234,7 @@ final class dq {
           if (param1 == ~var7) {
             var7 = this.field_j.field_t + this.field_j.field_x;
           }
-          var8 = ph.field_j >> 2;
+          var8 = SoftwareRasterizer.field_j >> 2;
           var9 = this.field_j.a(param3);
           var10 = this.field_j.field_x + this.field_j.field_t;
           var11 = 1;
@@ -260,15 +260,15 @@ final class dq {
             }
           }
           var12 = param0;
-          if (ph.field_j < var12 - (-var9 - var5_int)) {
-            var12 = -var9 + (ph.field_j - var5_int);
+          if (SoftwareRasterizer.field_j < var12 - (-var9 - var5_int)) {
+            var12 = -var9 + (SoftwareRasterizer.field_j - var5_int);
           }
           var13Lifetime1 = -this.field_j.field_s + (param2 + 32);
-          if (ph.field_d < var10 + (var13Lifetime1 + var6)) {
+          if (SoftwareRasterizer.field_d < var10 + (var13Lifetime1 + var6)) {
             var13Lifetime1 = -var6 + (param2 - var10);
           }
-          ph.c(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_e);
-          ph.d(1 + var12, 1 + var13Lifetime1, -2 + var9 + var5_int, -2 + var6 + var10, this.field_c);
+          SoftwareRasterizer.c(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_e);
+          SoftwareRasterizer.d(1 + var12, 1 + var13Lifetime1, -2 + var9 + var5_int, -2 + var6 + var10, this.field_c);
           this.field_j.a(param3, var12 + this.field_d, this.field_h + var13Lifetime1, var9, var10, this.field_l, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -281,7 +281,7 @@ final class dq {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

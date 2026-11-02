@@ -82,11 +82,11 @@ final class mg {
             }
             return new byte[param1];
           }
-          if (gl.field_q > 0) {
-            fieldTemp$18 = gl.field_q - 1;
-            gl.field_q = gl.field_q - 1;
+          if (CachedArchiveSource.field_q > 0) {
+            fieldTemp$18 = CachedArchiveSource.field_q - 1;
+            CachedArchiveSource.field_q = CachedArchiveSource.field_q - 1;
             var2_ref_byte__Lifetime5 = mb.field_b[fieldTemp$18];
-            mb.field_b[gl.field_q] = null;
+            mb.field_b[CachedArchiveSource.field_q] = null;
             return var2_ref_byte__Lifetime5;
           }
           if (5000 == param1 &&
@@ -122,11 +122,11 @@ final class mg {
           return new byte[param1];
         }
         if (param1 == 100 &&
-          gl.field_q > 0) {
-          fieldTemp$2 = gl.field_q - 1;
-          gl.field_q = gl.field_q - 1;
+          CachedArchiveSource.field_q > 0) {
+          fieldTemp$2 = CachedArchiveSource.field_q - 1;
+          CachedArchiveSource.field_q = CachedArchiveSource.field_q - 1;
           var2_ref_byte__Lifetime1 = mb.field_b[fieldTemp$2];
-          mb.field_b[gl.field_q] = null;
+          mb.field_b[CachedArchiveSource.field_q] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (5000 != param1) {
@@ -217,7 +217,7 @@ final class mg {
         return new byte[param1];
     }
 
-    final static void a(int param0, int param1, int param2, int param3, vh param4, int param5, String param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, String param6, int param7, int param8) {
         tl.field_u = param7;
         um.field_r = param1;
         if (param0 != -1) {
@@ -230,11 +230,11 @@ final class mg {
           eg.field_x = param5;
           qg.field_A = param8;
           cl.field_d = param6;
-          nn.field_c = (jp) ((Object) new fh());
+          nn.field_c = (Js5Transport) ((Object) new SocketJs5Transport());
           gh.field_a = new co(param4);
-          no.field_n = new bo(nn.field_c, gh.field_a);
+          BufferedSocket.field_n = new bo(nn.field_c, gh.field_a);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ final class mg {
         field_a = (double[][]) null;
         if (param0 >= -23) {
           String var2 = (String) null;
-          mg.a(-36, 74, 14, 75, (vh) null, 80, (String) null, -11, -19);
+          mg.a(-36, 74, 14, 75, (PlatformTaskDispatcher) null, 80, (String) null, -11, -19);
         }
     }
 

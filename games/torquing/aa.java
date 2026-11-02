@@ -10,18 +10,18 @@ abstract class aa extends im {
     private int field_N;
     private qd field_S;
     static byte[] field_X;
-    private gm field_V;
+    private UiWidget field_V;
     static volatile long field_Q;
     private fq field_T;
 
-    private final void b(byte param0, gm param1) {
+    private final void b(byte param0, UiWidget param1) {
         try {
           if (null != this.field_T) {
-            this.field_T.f(0);
+            this.field_T.unlink(0);
           }
           int var3_int = 54 % ((-33 - param0) / 56);
           if (param1 != null) {
-            param1.a((byte) 125, 6, this.field_N + 6, param1.field_o, param1.field_p);
+            param1.a((byte) 125, 6, this.field_N + 6, param1.height, param1.width);
             this.field_T = new fq(param1);
           } else {
             this.field_T = new fq();
@@ -29,11 +29,11 @@ abstract class aa extends im {
           this.a(this.field_T, -6938);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "aa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "aa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    void c(gm param0, int param1) {
+    void c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -44,8 +44,8 @@ abstract class aa extends im {
           if (param1 != 33) {
             return;
           }
-          if (this.field_S == gn.field_b) {
-            this.b(this.field_N + 12 + this.field_V.field_o, (byte) -15, this.field_O, this.field_V.field_p + 12);
+          if (this.field_S == IsaacCipher.field_b) {
+            this.b(this.field_N + 12 + this.field_V.height, (byte) -15, this.field_O, this.field_V.width + 12);
             this.field_P = 0;
             return;
           }
@@ -65,12 +65,12 @@ abstract class aa extends im {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    aa(ln param0, gm param1, int param2, int param3, int param4) {
-        super(param0, param1.field_p + 12, param1.field_o + 12 + param2);
+    aa(ln param0, UiWidget param1, int param2, int param3, int param4) {
+        super(param0, param1.width + 12, param1.height + 12 + param2);
         try {
           this.field_R = param3;
           this.field_W = param3;
@@ -78,7 +78,7 @@ abstract class aa extends im {
           this.field_N = param2;
           this.b((byte) -124, param1);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "aa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "aa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -106,8 +106,8 @@ abstract class aa extends im {
               }
               return super.h(param0 + 0);
             }
-            this.field_S = gn.field_b;
-            this.b(this.field_V.field_o + (12 + this.field_N), (byte) -15, this.field_O, 12 + this.field_V.field_p);
+            this.field_S = IsaacCipher.field_b;
+            this.b(this.field_V.height + (12 + this.field_N), (byte) -15, this.field_O, 12 + this.field_V.width);
             this.field_T.field_D = 0;
             this.field_P = 0;
             if (param0 != -7) {
@@ -148,7 +148,7 @@ abstract class aa extends im {
         return super.h(param0 + 0);
     }
 
-    boolean a(int param0, gm param1, char param2, int param3) {
+    boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -180,7 +180,7 @@ abstract class aa extends im {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ abstract class aa extends im {
           return;
         }
         if (ql.field_s != this.field_S) {
-          this.a(this.field_V.field_p + 12, (byte) -25, this.field_N + 12 + this.field_V.field_o);
+          this.a(this.field_V.width + 12, (byte) -25, this.field_N + 12 + this.field_V.height);
           this.b((byte) -101, this.field_V);
         } else {
           this.field_S = null;

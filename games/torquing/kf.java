@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends gm {
+final class kf extends UiWidget {
     private int field_y;
     int field_L;
     static String field_B;
@@ -10,13 +10,13 @@ final class kf extends gm {
     private int field_I;
     private int field_J;
     private int field_A;
-    private t field_G;
+    private Sprite field_G;
     static int field_F;
     boolean field_M;
-    private t field_H;
-    private t field_E;
+    private Sprite field_H;
+    private Sprite field_E;
     private int field_z;
-    private t[] field_C;
+    private Sprite[] field_C;
 
     public static void a(boolean param0) {
         if (param0) {
@@ -27,13 +27,13 @@ final class kf extends gm {
     }
 
     private final void h(int param0) {
-        this.field_C = new t[]{this.b(this.field_J, this.field_I, (byte) 49), this.b(this.field_y, this.field_z, (byte) 49)};
+        this.field_C = new Sprite[]{this.b(this.field_J, this.field_I, (byte) 49), this.b(this.field_y, this.field_z, (byte) 49)};
         this.field_E = this.b(false);
         if (param0 != -917474783) {
           kf.a(84);
         }
         this.field_H = this.field_E.b();
-        this.field_G = new t(this.field_o >> 1, this.field_o);
+        this.field_G = new Sprite(this.height >> 1, this.height);
     }
 
     final static String a(String param0, char param1, String param2, int param3) {
@@ -105,11 +105,11 @@ final class kf extends gm {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final t b(int param0, int param1, byte param2) {
+    private final Sprite b(int param0, int param1, byte param2) {
         int var6 = 0;
         int var5;
         int var7;
@@ -119,17 +119,17 @@ final class kf extends gm {
         int var11;
         int var12;
         int var13;
-        t var14;
+        Sprite var14;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         var13 = Torquing.field_u;
-        var14 = new t(this.field_A * 2, this.field_o);
-        tm.a((byte) -116, var14);
-        var5 = this.field_o >> 1;
-        for (var6 = 0; this.field_o > var6; var6++) {
+        var14 = new Sprite(this.field_A * 2, this.height);
+        GzipDecompressor.a((byte) -116, var14);
+        var5 = this.height >> 1;
+        for (var6 = 0; this.height > var6; var6++) {
           var7 = (var6 >> 1) * (2 * this.field_A - 1) % (2 * this.field_A);
           var8 = 16711935 & param0;
           var9 = 65280 & param0;
@@ -141,8 +141,8 @@ final class kf extends gm {
             stackIn_7_0 = var9 | var8;
           }
           var12 = stackIn_7_0;
-          ph.b(var7, var6, this.field_A, var12);
-          ph.b(var7 - this.field_A * 2, var6, this.field_A, var12);
+          SoftwareRasterizer.b(var7, var6, this.field_A, var12);
+          SoftwareRasterizer.b(var7 - this.field_A * 2, var6, this.field_A, var12);
           var8Lifetime1 = 16711935 & param1;
           var9Lifetime1 = 65280 & param1;
           if (256 <= var11) {
@@ -151,8 +151,8 @@ final class kf extends gm {
             stackIn_10_0 = (var11 * var8Lifetime1 & -16711936 | 16711680 & var9Lifetime1 * var11) >>> 8;
           }
           var12Lifetime1 = stackIn_10_0;
-          ph.b(var7 + this.field_A, var6, this.field_A, var12Lifetime1);
-          ph.b(var7 - this.field_A, var6, this.field_A, var12Lifetime1);
+          SoftwareRasterizer.b(var7 + this.field_A, var6, this.field_A, var12Lifetime1);
+          SoftwareRasterizer.b(var7 - this.field_A, var6, this.field_A, var12Lifetime1);
         }
         if (param2 != 49) {
           this.c(-42, -27, (byte) -8);
@@ -186,7 +186,7 @@ final class kf extends gm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "kf.F(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "kf.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -196,24 +196,24 @@ final class kf extends gm {
         this.h(-917474783);
     }
 
-    private final t b(boolean param0) {
+    private final Sprite b(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Torquing.field_u;
-        int var2 = this.field_o >> 1;
-        t var3 = new t(var2, this.field_o);
-        tm.a((byte) 81, var3);
-        for (var4 = 0; var4 < this.field_o; var4++) {
+        int var2 = this.height >> 1;
+        Sprite var3 = new Sprite(var2, this.height);
+        GzipDecompressor.a((byte) 81, var3);
+        for (var4 = 0; var4 < this.height; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.field_o - var4));
+            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.height - var4));
             var8 = 1;
             if (var6 < 1.0) {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = 1.0 <= var6 ? 255 : (int)(var6 * 255.0);
             }
-            ph.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         if (param0) {
@@ -240,7 +240,7 @@ final class kf extends gm {
         return var1;
     }
 
-    private final void a(int param0, t param1, byte param2, int param3) {
+    private final void a(int param0, Sprite param1, byte param2, int param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -252,28 +252,28 @@ final class kf extends gm {
         int var8 = 0;
         var8 = Torquing.field_u;
         try {
-          var5_int = param0 + this.field_p;
-          ld.a(var5_int - this.field_E.field_s, param0 + this.field_E.field_s, this.field_o + param3, param3, (byte) -99);
+          var5_int = param0 + this.width;
+          ld.a(var5_int - this.field_E.field_s, param0 + this.field_E.field_s, this.height + param3, param3, (byte) -99);
           var6 = param0 - this.field_x;
           if (param2 <= 105) {
-            this.field_C = (t[]) null;
+            this.field_C = (Sprite[]) null;
           }
           while (var5_int > var6) {
             param1.d(var6, param3);
             var6 = var6 + param1.field_s;
           }
           r.a(124);
-          if (param0 + this.field_E.field_s >= ph.field_k) {
-            tm.a((byte) -119, this.field_G);
+          if (param0 + this.field_E.field_s >= SoftwareRasterizer.field_k) {
+            GzipDecompressor.a((byte) -119, this.field_G);
             param1.d(-this.field_x, 0);
             param1.d(-this.field_x + 2 * this.field_A, 0);
             this.field_H.a(0, 0);
             r.a(124);
             this.field_G.d(param0, param3);
           }
-          if (var5_int - this.field_E.field_s <= ph.field_a) {
-            tm.a((byte) 119, this.field_G);
-            for (var7 = -this.field_E.field_s + this.field_p + this.field_x; var7 > 2 * this.field_A; var7 = var7 - 2 * this.field_A) {
+          if (var5_int - this.field_E.field_s <= SoftwareRasterizer.field_a) {
+            GzipDecompressor.a((byte) 119, this.field_G);
+            for (var7 = -this.field_E.field_s + this.width + this.field_x; var7 > 2 * this.field_A; var7 = var7 - 2 * this.field_A) {
             }
             param1.d(-var7, 0);
             param1.d(2 * this.field_A - var7, 0);
@@ -293,7 +293,7 @@ final class kf extends gm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class kf extends gm {
         this.field_y = 8355711 & param1 >> 1;
         this.field_I = param0;
         if (param2 != 125) {
-          this.field_G = (t) null;
+          this.field_G = (Sprite) null;
         }
         this.field_J = param1;
         this.field_z = (param0 & 16711422) >> 1;
@@ -323,17 +323,17 @@ final class kf extends gm {
         if (param1 > -7) {
           this.field_x = -1;
         }
-        int var5 = this.field_w + param3;
-        int var6 = this.field_k + param2;
+        int var5 = this.x + param3;
+        int var6 = this.y + param2;
         this.a(var5, this.field_C[0], (byte) 125, var6);
         if (this.field_L < 65536) {
-          ld.a(this.field_p + var5, var5 + (this.field_p * this.field_L >> 16), this.field_o + var6, var6, (byte) -98);
+          ld.a(this.width + var5, var5 + (this.width * this.field_L >> 16), this.height + var6, var6, (byte) -98);
           this.a(var5, this.field_C[1], (byte) 124, var6);
           r.a(125);
         }
     }
 
-    final void a(int param0, gm param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -360,7 +360,7 @@ final class kf extends gm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

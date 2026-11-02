@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vg extends eh {
-    static fj field_k;
+    static PacketBuffer field_k;
     static int field_j;
     private boolean field_m;
     static int field_o;
@@ -136,7 +136,7 @@ final class vg extends eh {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class vg extends eh {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -284,7 +284,7 @@ final class vg extends eh {
         this.field_n[2] = this.field_n[2] + var14 * var12;
     }
 
-    final sg a(int param0, hc param1) {
+    final sg a(int param0, Level param1) {
         int var4_int = 0;
         int var6 = 0;
         int stackIn_17_0 = 0;
@@ -294,7 +294,7 @@ final class vg extends eh {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        kh var4 = null;
+        Model var4 = null;
         int var5 = 0;
         int var7 = 0;
         tl[] var8 = null;
@@ -353,7 +353,7 @@ final class vg extends eh {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -373,21 +373,21 @@ final class vg extends eh {
           }
           param1[1] = this.field_f[1];
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "vg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "vg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(int param0, kh param1) {
+    final void b(int param0, Model param1) {
         try {
           if (param0 != 0) {
-            field_k = (fj) null;
+            field_k = (PacketBuffer) null;
           }
           if (this.field_m) {
             param1 = this.a(-1, param1);
           }
           this.field_h.a(this.field_c, param1);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "vg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "vg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -442,25 +442,25 @@ final class vg extends eh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    private final kh a(int param0, kh param1) {
-        kh var3 = null;
+    private final Model a(int param0, Model param1) {
+        Model var3 = null;
         RuntimeException var3_ref = null;
-        kh stackIn_2_0 = null;
-        kh stackIn_4_0 = null;
+        Model stackIn_2_0 = null;
+        Model stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            stackIn_2_0 = (kh) null;
+            stackIn_2_0 = (Model) null;
             return stackIn_2_0;
           }
-          var3 = new kh(new rm(new rm[]{param1.field_l, gb.field_c.field_l}, 2));
+          var3 = new Model(new MeshGeometry(new MeshGeometry[]{param1.field_l, gb.field_c.field_l}, 2));
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -473,7 +473,7 @@ final class vg extends eh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -484,11 +484,11 @@ final class vg extends eh {
         field_k = null;
     }
 
-    final static la a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 != -27646) {
-          return (la) null;
+          return (ResourceArchive) null;
         }
-        return hc.a(false, true, param1, 8505, false, 1);
+        return Level.a(false, true, param1, 8505, false, 1);
     }
 
     private final void a(double[] param0, int param1) {
@@ -507,7 +507,7 @@ final class vg extends eh {
           this.c(param1 ^ param1);
           this.field_h.a(tp.field_a, this.field_f);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "vg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "vg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

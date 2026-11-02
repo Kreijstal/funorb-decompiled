@@ -18,9 +18,9 @@ final class wn extends am {
     final int[] a(byte param0, int param1) {
         if (param0 <= 86) {
           this.a((byte) 88, -87);
-          return q.field_b;
+          return IntrusiveNode.field_b;
         }
-        return q.field_b;
+        return IntrusiveNode.field_b;
     }
 
     static {

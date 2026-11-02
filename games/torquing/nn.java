@@ -8,16 +8,16 @@ final class nn {
     static af[][] field_a;
     static int field_e;
     static byte field_b;
-    static jp field_c;
+    static Js5Transport field_c;
     static java.util.zip.CRC32 field_d;
 
     final static void a(int param0) {
-        if (null != dh.field_a) {
+        if (null != NodeHashTableIterator.field_a) {
           return;
         }
-        jp.field_n = new String[]{vk.field_x, to.field_r, mi.field_u, bq.field_b, w.field_gb, nc.field_b, un.field_f, bl.field_e};
+        Js5Transport.field_n = new String[]{vk.field_x, to.field_r, mi.field_u, bq.field_b, w.field_gb, nc.field_b, un.field_f, bl.field_e};
         if (param0 < -21) {
-          dh.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
+          NodeHashTableIterator.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
           hq.field_d[2] = ai.field_m;
           hq.field_d[0] = ae.field_lb;
           hq.field_d[1] = qe.field_a;
@@ -31,8 +31,8 @@ final class nn {
           hb.field_u[20] = ae.field_lb + " / " + qe.field_a + " / " + ai.field_m;
           hb.field_u[5] = mi.field_v.toUpperCase();
           hb.field_u[11] = tp.field_n.toUpperCase();
-          hb.field_u[12] = kn.field_b.toUpperCase();
-          hb.field_u[1] = kn.field_b.toUpperCase();
+          hb.field_u[12] = RasterBuffer.field_b.toUpperCase();
+          hb.field_u[1] = RasterBuffer.field_b.toUpperCase();
           hb.field_u[9] = null;
           hb.field_u[8] = null;
           hb.field_u[14] = r.field_a.toUpperCase();
@@ -42,7 +42,7 @@ final class nn {
           hb.field_u[21] = rk.field_e.toUpperCase();
           hb.field_u[22] = te.field_t.toUpperCase();
           hb.field_u[23] = gp.field_M.toUpperCase();
-          po.field_t[2] = wf.field_q;
+          po.field_t[2] = SpriteState.field_q;
           po.field_t[1] = hh.field_c;
           po.field_t[0] = ro.field_t;
           oh.field_a = oh.field_a.toUpperCase();
@@ -58,8 +58,8 @@ final class nn {
           ol.field_b = ol.field_b.toUpperCase();
           return;
         }
-        field_c = (jp) null;
-        dh.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
+        field_c = (Js5Transport) null;
+        NodeHashTableIterator.field_a = new String[]{ld.field_b, hm.field_t, da.field_e, qj.field_a, qa.field_j};
         hq.field_d[2] = ai.field_m;
         hq.field_d[0] = ae.field_lb;
         hq.field_d[1] = qe.field_a;
@@ -73,8 +73,8 @@ final class nn {
         hb.field_u[20] = ae.field_lb + " / " + qe.field_a + " / " + ai.field_m;
         hb.field_u[5] = mi.field_v.toUpperCase();
         hb.field_u[11] = tp.field_n.toUpperCase();
-        hb.field_u[12] = kn.field_b.toUpperCase();
-        hb.field_u[1] = kn.field_b.toUpperCase();
+        hb.field_u[12] = RasterBuffer.field_b.toUpperCase();
+        hb.field_u[1] = RasterBuffer.field_b.toUpperCase();
         hb.field_u[9] = null;
         hb.field_u[8] = null;
         hb.field_u[14] = r.field_a.toUpperCase();
@@ -84,7 +84,7 @@ final class nn {
         hb.field_u[21] = rk.field_e.toUpperCase();
         hb.field_u[22] = te.field_t.toUpperCase();
         hb.field_u[23] = gp.field_M.toUpperCase();
-        po.field_t[2] = wf.field_q;
+        po.field_t[2] = SpriteState.field_q;
         po.field_t[1] = hh.field_c;
         po.field_t[0] = ro.field_t;
         oh.field_a = oh.field_a.toUpperCase();
@@ -132,13 +132,13 @@ final class nn {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
-          vh stackIn_13_0;
+          PlatformTaskDispatcher stackIn_13_0;
           int stackIn_13_1;
           java.net.URL stackIn_13_2;
           java.net.URL stackIn_13_3;
@@ -150,7 +150,7 @@ final class nn {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          rc var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -189,17 +189,17 @@ final class nn {
               stackIn_14_3 = null;
               stackIn_14_6 = vd.field_b;
             }
-            var4 = ((vh) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(vh.field_u).append("&v2=").append(vh.field_v).append("&e=").append(var7).toString()));
-            while (var4.field_a == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var7).toString()));
+            while (var4.status == 0) {
               ub.a(1976, 1L);
             }
             if (param2 != -9958) {
               field_b = (byte) -127;
             }
-            if (var4.field_a != 1) {
+            if (var4.status != 1) {
               return;
             }
-            var5 = (DataInputStream) (var4.field_d);
+            var5 = (DataInputStream) (var4.result);
             var5.read();
             var5.close();
             return;
@@ -223,7 +223,7 @@ final class nn {
             nn.a(-46, (byte[]) null, -63, -109);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "nn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "nn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

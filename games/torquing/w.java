@@ -14,17 +14,17 @@ class w extends to {
     private int field_Y;
     private int field_J;
     private int field_T;
-    private t[] field_D;
-    private t field_C;
-    private t field_W;
+    private Sprite[] field_D;
+    private Sprite field_C;
+    private Sprite field_W;
     private int field_eb;
-    private t field_R;
+    private Sprite field_R;
     private int field_M;
     private boolean field_S;
     private int field_bb;
-    private t[] field_X;
-    private t[] field_v;
-    private t[] field_hb;
+    private Sprite[] field_X;
+    private Sprite[] field_v;
+    private Sprite[] field_hb;
     private int field_I;
     private int field_P;
     static ln field_G;
@@ -32,13 +32,13 @@ class w extends to {
     private int field_B;
     static ce field_cb;
     private int field_A;
-    private t field_y;
+    private Sprite field_y;
     private int field_db;
     private boolean field_w;
-    private t field_K;
+    private Sprite field_K;
     private String field_H;
     private int field_Z;
-    private t[] field_t;
+    private Sprite[] field_t;
     private int field_O;
     private boolean field_V;
     static boolean field_F;
@@ -79,7 +79,7 @@ class w extends to {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var7), "w.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var7), "w.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -217,7 +217,7 @@ class w extends to {
           } else {
             stackIn_101_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
         }
     }
 
@@ -259,13 +259,13 @@ class w extends to {
         this.field_P = -2147483648;
         this.field_w = false;
         try {
-          this.field_f = param0;
+          this.key = param0;
           this.a(-1, param1);
           if (param6 != null) {
             this.field_L = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "w.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "w.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

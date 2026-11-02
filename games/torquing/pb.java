@@ -70,7 +70,7 @@ final class pb {
                 var9 = 120 % ((-33 - param3) / 62);
                 var8 = 0;
                 var10 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param4 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var11 = 0;
@@ -86,7 +86,7 @@ final class pb {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (255 & aa.field_X[6]) + (65280 & aa.field_X[5] << 8) + ((255 & aa.field_X[4]) << 16);
                         var14 = aa.field_X[7] & 255;
@@ -102,7 +102,7 @@ final class pb {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (aa.field_X[7] << 8 & 65280) + ((aa.field_X[6] & 255) << 16) + (255 & aa.field_X[8]);
                         var12 = (255 & aa.field_X[3]) + ((65280 & aa.field_X[2] << 8) + ((aa.field_X[0] & 255) << 24)) + ((aa.field_X[1] & 255) << 16);
@@ -193,7 +193,7 @@ final class pb {
             } else {
               stackIn_69_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -373,15 +373,15 @@ final class pb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static t[] a(String param0, int param1, String param2, la param3) {
+    final static Sprite[] a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        t[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -417,7 +417,7 @@ final class pb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -431,7 +431,7 @@ final class pb {
           this.field_b = param3;
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

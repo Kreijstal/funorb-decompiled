@@ -7,24 +7,24 @@ final class fq extends jh {
     static byte[][] field_G;
     static boolean field_E;
 
-    fq(gm param0) {
-        super(param0.field_w, param0.field_k, param0.field_p, param0.field_o, (el) null, (ca) null);
+    fq(UiWidget param0) {
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetRenderer) null, (ca) null);
         try {
-          param0.a((byte) -83, 0, 0, this.field_o, this.field_p);
+          param0.a((byte) -83, 0, 0, this.height, this.width);
           this.field_D = 256;
           this.field_C = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "fq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public fq() {
-        super(0, 0, 0, 0, (el) null, (ca) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null, (ca) null);
         this.field_D = 256;
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        t var5 = null;
+        Sprite var5 = null;
         if (0 != param0) {
           return;
         }
@@ -35,15 +35,15 @@ final class fq extends jh {
           return;
         }
         if (256 == this.field_D) {
-          this.field_C.a(param0, (byte) -70, param2 + this.field_k, this.field_w + param3);
+          this.field_C.a(param0, (byte) -70, param2 + this.y, this.x + param3);
           return;
         }
         if (param1 <= -7) {
-          var5 = new t(this.field_C.field_p, this.field_C.field_o);
-          tm.a((byte) 34, var5);
+          var5 = new Sprite(this.field_C.width, this.field_C.height);
+          GzipDecompressor.a((byte) 34, var5);
           this.field_C.a(param0, (byte) -61, 0, 0);
           r.a(122);
-          var5.e(param3 + this.field_w, this.field_k + param2, this.field_D);
+          var5.e(param3 + this.x, this.y + param2, this.field_D);
           return;
         }
     }
@@ -56,18 +56,18 @@ final class fq extends jh {
         field_F = null;
     }
 
-    final static void a(boolean param0, int param1, gg param2, int param3) {
+    final static void a(boolean param0, int param1, PcmSample param2, int param3) {
         try {
           if (param0) {
             field_F = (dg) null;
           }
           tb.field_l.a(param2, param1, on.field_c * param3 / 160);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "fq.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fq.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static sm[] a(la param0, int param1, int param2, int param3) {
+    final static sm[] a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         sm[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -93,7 +93,7 @@ final class fq extends jh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class fq extends jh {
         var4 = Torquing.field_u;
         try {
           try {
-            if (!vh.field_i.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_i.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&
@@ -146,7 +146,7 @@ final class fq extends jh {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl extends lf {
+final class kl extends PcmStream {
     static int field_r;
     private int field_s;
     static String field_n;
     static uc field_o;
-    static t field_p;
+    static Sprite field_p;
     static String field_t;
     static String field_u;
-    private lf field_q;
+    private PcmStream field_q;
 
-    final static void a(byte param0, la param1) {
-        t var2 = null;
+    final static void a(byte param0, ResourceArchive param1) {
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new t(param1.a(-116, "", "final_frame.jpg"), (java.awt.Component) ((Object) k.field_d));
+          var2 = new Sprite(param1.a(-116, "", "final_frame.jpg"), (java.awt.Component) ((Object) k.field_d));
           var3 = var2.field_s;
           var4 = var2.field_t;
           bp.a((byte) -56);
-          cl.field_a = new t(var3, var4 * 3 / 4);
+          cl.field_a = new Sprite(var3, var4 * 3 / 4);
           cl.field_a.e();
           var2.b(0, 0);
-          de.field_a = new t(var3, -cl.field_a.field_t + var4);
+          de.field_a = new Sprite(var3, -cl.field_a.field_t + var4);
           de.field_a.e();
           if (param0 != 66) {
             field_o = (uc) null;
@@ -32,7 +32,7 @@ final class kl extends lf {
           de.field_a.field_r = cl.field_a.field_t;
           r.a(126);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "kl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "kl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,23 +46,23 @@ final class kl extends lf {
           return;
         }
         param0 = param0 - this.field_s;
-        this.field_q.field_h = this.field_h;
+        this.field_q.next = this.next;
         this.field_s = 0;
-        this.field_q.field_e = this.field_e;
-        this.field_h.field_e = (q) ((Object) this.field_q);
-        this.field_e.field_h = (q) ((Object) this.field_q);
-        this.field_h = null;
-        this.field_e = null;
+        this.field_q.previous = this.previous;
+        this.next.previous = (IntrusiveNode) ((Object) this.field_q);
+        this.previous.next = (IntrusiveNode) ((Object) this.field_q);
+        this.next = null;
+        this.previous = null;
         if (param0 > 0) {
           this.field_q.a(param0);
         }
     }
 
-    final lf c() {
+    final PcmStream c() {
         return null;
     }
 
-    final lf b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -70,7 +70,7 @@ final class kl extends lf {
         if (param1 != 16011) {
           return;
         }
-        if (param2 < kn.field_e) {
+        if (param2 < RasterBuffer.field_e) {
           ha.a(param2, param5, -126, param0, param3, param4);
           return;
         }
@@ -83,7 +83,7 @@ final class kl extends lf {
           return;
         }
         if (qk.field_p >= param4) {
-          ta.a(0, param4, param3, param5, param2, param0);
+          DualLinkNode.a(0, param4, param3, param5, param2, param0);
           return;
         }
         ha.a(param2, param5, -126, param0, param3, param4);
@@ -123,13 +123,13 @@ final class kl extends lf {
           }
           param1 = param1 + this.field_s;
           param2 = param2 - this.field_s;
-          this.field_q.field_h = this.field_h;
-          this.field_q.field_e = this.field_e;
+          this.field_q.next = this.next;
+          this.field_q.previous = this.previous;
           this.field_s = 0;
-          this.field_h.field_e = (q) ((Object) this.field_q);
-          this.field_e.field_h = (q) ((Object) this.field_q);
-          this.field_h = null;
-          this.field_e = null;
+          this.next.previous = (IntrusiveNode) ((Object) this.field_q);
+          this.previous.next = (IntrusiveNode) ((Object) this.field_q);
+          this.next = null;
+          this.previous = null;
           if (0 >= param2) {
             return;
           }
@@ -145,17 +145,17 @@ final class kl extends lf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    kl(lf param0, int param1) {
+    kl(PcmStream param0, int param1) {
         try {
           this.field_q = param0;
           this.field_s = param1;
           this.field_m = this.field_q.field_m;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ha {
-    static ml field_b;
+    static GameKeyHandler field_b;
     static jb[] field_d;
     static String field_c;
     static int field_a;
@@ -70,7 +70,7 @@ abstract class ha {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -98,8 +98,8 @@ abstract class ha {
         try {
           var6_int = ln.a(qk.field_p, j.field_q, param4, 91);
           var7 = ln.a(qk.field_p, j.field_q, param5, 97);
-          var8 = ln.a(qg.field_z, kn.field_e, param0, 81);
-          var9 = ln.a(qg.field_z, kn.field_e, param3, 81);
+          var8 = ln.a(qg.field_z, RasterBuffer.field_e, param0, 81);
+          var9 = ln.a(qg.field_z, RasterBuffer.field_e, param3, 81);
           if (param2 > -45) {
             field_c = (String) null;
           }
@@ -110,13 +110,13 @@ abstract class ha {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var6), "ha.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var6), "ha.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
         field_c = "Just play";
         field_a = -1;
-        field_b = new ml();
+        field_b = new GameKeyHandler();
     }
 }

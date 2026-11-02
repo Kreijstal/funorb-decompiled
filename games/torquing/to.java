@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class to extends ta {
-    static ei field_s;
+class to extends DualLinkNode {
+    static IntrusiveDeque field_s;
     static String field_r;
-    static ei field_q;
+    static IntrusiveDeque field_q;
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
@@ -39,7 +39,7 @@ class to extends ta {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -62,8 +62,8 @@ class to extends ta {
     }
 
     static {
-        field_s = new ei();
+        field_s = new IntrusiveDeque();
         field_r = "Squared Away";
-        field_q = new ei();
+        field_q = new IntrusiveDeque();
     }
 }

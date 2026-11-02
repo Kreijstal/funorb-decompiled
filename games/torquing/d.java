@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class d extends ta {
+abstract class d extends DualLinkNode {
     int field_t;
     static int field_s;
     static String field_q;
@@ -18,8 +18,8 @@ abstract class d extends ta {
     }
 
     final static void d(byte param0) {
-        if (gn.field_m != null) {
-          gn.field_m.b(true);
+        if (IsaacCipher.field_m != null) {
+          IsaacCipher.field_m.b(true);
         }
         je.field_g = new th();
         if (param0 <= -43) {
@@ -38,7 +38,7 @@ abstract class d extends ta {
           eb.field_c = param0;
           od.b(param1 + 97, 12);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "d.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "d.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

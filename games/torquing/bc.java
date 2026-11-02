@@ -4,7 +4,7 @@
 abstract class bc {
     static ed field_a;
 
-    abstract void a(fj param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
     public static void a(byte param0) {
         field_a = null;
@@ -22,7 +22,7 @@ abstract class bc {
           ol.a("", true, param0);
           gq.a(25530, param0);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "bc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

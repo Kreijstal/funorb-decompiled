@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vp extends hn implements ng {
+final class vp extends WidgetContainer implements ng {
     static int field_E;
-    static la field_D;
+    static ResourceArchive field_D;
     static int field_I;
     static String[] field_C;
     private ba field_B;
@@ -25,7 +25,7 @@ final class vp extends hn implements ng {
         int var6 = 0;
         var6 = Torquing.field_u;
         try {
-          this.field_y.a(0);
+          this.children.a(0);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
@@ -36,17 +36,17 @@ final class vp extends hn implements ng {
             var4 = new je(dg.field_e, 0, 1);
             this.field_H = new lg[1 + var3_int];
             if (param1 >= -41) {
-              field_D = (la) null;
+              field_D = (ResourceArchive) null;
             }
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_H[var5] = new lg(this.field_J[var5], (ca) (this));
-              this.field_H[var5].field_q = (el) ((Object) var4);
+              this.field_H[var5].renderer = (WidgetRenderer) ((Object) var4);
               this.field_H[var5].field_n = ai.field_l;
               this.field_H[var5].a((byte) 123, 0, 20 + var5 * 16, 15, 80);
               this.a(this.field_H[var5], -6938);
             }
             this.field_H[var3_int] = new lg(jf.field_b, (ca) (this));
-            this.field_H[var3_int].field_q = (el) ((Object) var4);
+            this.field_H[var3_int].renderer = (WidgetRenderer) ((Object) var4);
             this.field_H[var3_int].a((byte) -36, 0, (var3_int + 1) * 16 + 20, 15, 100);
             this.a(this.field_H[var3_int], -6938);
             return;
@@ -63,16 +63,16 @@ final class vp extends hn implements ng {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
     vp(ba param0) {
-        super(0, 0, 0, 0, (el) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_B = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "vp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "vp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class vp extends hn implements ng {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class vp extends hn implements ng {
         }
         uc var5 = dg.field_e;
         if (null != this.field_J) {
-          var5.a(bi.field_I, param3 + this.field_w, param2 + this.field_k, this.field_p, 20, 16777215, -1, 0, 0, var5.field_t + var5.field_x);
+          var5.a(bi.field_I, param3 + this.x, param2 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_t + var5.field_x);
         }
     }
 
@@ -156,7 +156,7 @@ final class vp extends hn implements ng {
         }
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -189,7 +189,7 @@ final class vp extends hn implements ng {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

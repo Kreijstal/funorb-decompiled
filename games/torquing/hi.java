@@ -79,9 +79,9 @@ final class hi {
         this.field_e = dg.field_m;
         this.field_f = n.field_u;
         this.field_d = hh.field_a;
-        this.field_i = fd.field_a;
+        this.field_i = ArchiveIndex.field_a;
         if (param0) {
-          this.field_c = md.field_a;
+          this.field_c = DelegatingCanvas.field_a;
         } else {
           this.field_c = null;
         }

@@ -12,18 +12,18 @@ final class po extends am {
     static String field_y;
     static int[] field_x;
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        fj var5 = null;
+        PacketBuffer var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 35) {
-            var5 = (fj) null;
-            this.a((fj) null, 56, 26);
+            var5 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, 56, 26);
           }
           var4_int = param2;
           if (var4_int != 0) {
@@ -41,7 +41,7 @@ final class po extends am {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

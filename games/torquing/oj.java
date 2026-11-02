@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj implements el {
+final class oj implements WidgetRenderer {
     private int field_b;
     private int field_e;
     private int field_n;
@@ -17,8 +17,8 @@ final class oj implements el {
     private int field_j;
     static String field_a;
 
-    public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
-        gm stackIn_3_0 = null;
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -31,7 +31,7 @@ final class oj implements el {
         ok var11 = null;
         try {
           if (param4 instanceof ok) {
-            stackIn_3_0 = (gm) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }
@@ -40,24 +40,24 @@ final class oj implements el {
             param3 = param3 & var11.field_x;
           }
           var7 = 5592405;
-          ph.d(param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, this.field_d);
+          SoftwareRasterizer.d(param4.x + param2, param4.y + param1, param4.width, param4.height, this.field_d);
           if (param3) {
             var7 = 16777215;
           }
-          var8 = param4.field_w + param2 + this.field_k;
-          var9 = this.field_j + param4.field_k + param1;
-          ph.e(var8, var9, this.field_i, this.field_e, 5592405);
+          var8 = param4.x + param2 + this.field_k;
+          var9 = this.field_j + param4.y + param1;
+          SoftwareRasterizer.e(var8, var9, this.field_i, this.field_e, 5592405);
           if (param0 <= 89) {
             return;
           }
-          ph.d(var8, var9, this.field_i, this.field_e, var7);
+          SoftwareRasterizer.d(var8, var9, this.field_i, this.field_e, var7);
           if (var11.field_A) {
-            ph.a(var8, var9, var8 + this.field_i, this.field_e + var9, 1);
-            ph.a(this.field_i + var8, var9, var8, this.field_e + var9, 1);
+            SoftwareRasterizer.a(var8, var9, var8 + this.field_i, this.field_e + var9, 1);
+            SoftwareRasterizer.a(this.field_i + var8, var9, var8, this.field_e + var9, 1);
           }
           if (null != this.field_c) {
             var10 = this.field_i + this.field_k + this.field_b;
-            this.field_c.a(param4.field_m, var10 + (param2 + param4.field_w), param4.field_k + (param1 + this.field_g), param4.field_p - var10 - this.field_b, -(this.field_b << 1) + param4.field_o, this.field_f, this.field_n, this.field_m, this.field_h, 0);
+            this.field_c.a(param4.text, var10 + (param2 + param4.x), param4.y + (param1 + this.field_g), param4.width - var10 - this.field_b, -(this.field_b << 1) + param4.height, this.field_f, this.field_n, this.field_m, this.field_h, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,11 +70,11 @@ final class oj implements el {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, short param1, int param2, boolean param3, boolean param4, int param5, int param6, short param7, int param8, kh param9) {
+    final static void a(int param0, short param1, int param2, boolean param3, boolean param4, int param5, int param6, short param7, int param8, Model param9) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -102,8 +102,8 @@ final class oj implements el {
         mp var26 = null;
         int var27 = 0;
         int var28 = 0;
-        rm var29 = null;
-        rm var30 = null;
+        MeshGeometry var29 = null;
+        MeshGeometry var30 = null;
         var28 = Torquing.field_u;
         try {
           var29 = param9.field_l;
@@ -163,7 +163,7 @@ final class oj implements el {
                   }
                 }
                 pm.a(param9, -27226, 1);
-                var25 = var30.a(param5, param6, param8, (byte)(param0 & 1), (byte)(var24 >> 24), param1, param7);
+                var25 = var30.addVertex(param5, param6, param8, (byte)(param0 & 1), (byte)(var24 >> 24), param1, param7);
                 var26 = param9.field_q;
                 if (var26 != null) {
                   var26.field_q[var25] = (short)var24;
@@ -225,7 +225,7 @@ final class oj implements el {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ final class oj implements el {
           this.field_c = param0;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

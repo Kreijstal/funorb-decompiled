@@ -4,11 +4,11 @@
 class wk implements si {
     static int field_d;
     private cf field_e;
-    static ei field_a;
-    private la field_f;
+    static IntrusiveDeque field_a;
+    private ResourceArchive field_f;
     private int field_g;
     private un[] field_b;
-    private la field_c;
+    private ResourceArchive field_c;
     static int field_h;
 
     public final un a(int param0, byte param1) {
@@ -104,10 +104,10 @@ class wk implements si {
           if (param3 >= j.field_q &&
             qk.field_p >= param3) {
             var57 = qd.field_a[param3];
-            var40 = ln.a(qg.field_z, kn.field_e, param4 - param5, 87);
-            var41 = ln.a(qg.field_z, kn.field_e, param4 + param5, 105);
-            var42 = ln.a(qg.field_z, kn.field_e, param4 - var11, param6 + 88);
-            var43 = ln.a(qg.field_z, kn.field_e, param4 + var11, 85);
+            var40 = ln.a(qg.field_z, RasterBuffer.field_e, param4 - param5, 87);
+            var41 = ln.a(qg.field_z, RasterBuffer.field_e, param4 + param5, 105);
+            var42 = ln.a(qg.field_z, RasterBuffer.field_e, param4 - var11, param6 + 88);
+            var43 = ln.a(qg.field_z, RasterBuffer.field_e, param4 + var11, 85);
             di.a(var40, (byte) 92, param1, var57, var42);
             di.a(var42, (byte) 30, param2, var57, var43);
             di.a(var43, (byte) -125, param1, var57, var41);
@@ -169,8 +169,8 @@ class wk implements si {
             if (qk.field_p < var40Lifetime1) {
               continue;
             }
-            var42Lifetime1 = ln.a(qg.field_z, kn.field_e, param4 + var8_int, 111);
-            var43Lifetime1 = ln.a(qg.field_z, kn.field_e, -var8_int + param4, 118);
+            var42Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, param4 + var8_int, 111);
+            var43Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, -var8_int + param4, 118);
             if (var39 == 0) {
               if (var40Lifetime1 >= j.field_q) {
                 di.a(var43Lifetime1, (byte) 66, param1, qd.field_a[var40Lifetime1], var42Lifetime1);
@@ -181,8 +181,8 @@ class wk implements si {
               di.a(var43Lifetime1, (byte) 23, param1, qd.field_a[var41Lifetime1], var42Lifetime1);
               continue;
             }
-            var44 = ln.a(qg.field_z, kn.field_e, var10 + param4, 104);
-            var45 = ln.a(qg.field_z, kn.field_e, -var10 + param4, 70);
+            var44 = ln.a(qg.field_z, RasterBuffer.field_e, var10 + param4, 104);
+            var45 = ln.a(qg.field_z, RasterBuffer.field_e, -var10 + param4, 70);
             if (j.field_q <= var40Lifetime1) {
               var58 = qd.field_a[var40Lifetime1];
               di.a(var43Lifetime1, (byte) -100, param1, var58, var45);
@@ -200,20 +200,20 @@ class wk implements si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var8), "wk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var8), "wk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    final static void a(int param0, t[] param1, t[] param2, int param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, uc param11, int param12, int param13, uc param14) {
-        t[] var16 = (t[]) null;
-        pl.a(param12, 0, param4, (t[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, param3, param11, param0, 0, param9, param6, param10, 480, uf.field_c, param5, 127);
+    final static void a(int param0, Sprite[] param1, Sprite[] param2, int param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, uc param11, int param12, int param13, uc param14) {
+        Sprite[] var16 = (Sprite[]) null;
+        pl.a(param12, 0, param4, (Sprite[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, param3, param11, param0, 0, param9, param6, param10, 480, TooltipPanel.field_c, param5, 127);
         if (param8 <= 109) {
           return;
         }
         try {
           Torquing.a(-49, param7);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "wk.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "wk.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -238,13 +238,13 @@ class wk implements si {
     public static void a(byte param0) {
         if (param0 > -63) {
           uc var2 = (uc) null;
-          wk.a(102, (t[]) null, (t[]) null, -29, -22, -52, 122, false, 50, -59, -118, (uc) null, -35, 64, (uc) null);
+          wk.a(102, (Sprite[]) null, (Sprite[]) null, -29, -22, -52, 122, false, 50, -59, -118, (uc) null, -35, 64, (uc) null);
         }
         field_a = null;
     }
 
     wd a(byte param0, int param1) {
-        ta var3 = this.field_e.a((long)param1, 4604);
+        DualLinkNode var3 = this.field_e.a((long)param1, 4604);
         if (var3 != null) {
           return (wd) (var3);
         }
@@ -255,12 +255,12 @@ class wk implements si {
         if (var4 == null) {
           return null;
         }
-        wd var5 = new wd(new fj(var4));
+        wd var5 = new wd(new PacketBuffer(var4));
         this.field_e.a((long)param1, var5, 0);
         return var5;
     }
 
-    wk(la param0, la param1, la param2) {
+    wk(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2) {
         un stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
         un stackIn_19_0 = null;
@@ -277,7 +277,7 @@ class wk implements si {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
-        fj var7 = null;
+        PacketBuffer var7 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
@@ -301,8 +301,8 @@ class wk implements si {
         try {
           this.field_c = param2;
           this.field_f = param1;
-          var7 = new fj(param0.a(0, 100, 0));
-          this.field_g = var7.i(7088);
+          var7 = new PacketBuffer(param0.a(0, 100, 0));
+          this.field_g = var7.readUnsignedShort(7088);
           this.field_b = new un[this.field_g];
           for (var5 = 0; var5 < this.field_g; var5++) {
             if (1 == var7.i((byte) -101)) {
@@ -350,7 +350,7 @@ class wk implements si {
           }
           for (var5Lifetime8 = 0; this.field_g > var5Lifetime8; var5Lifetime8++) {
             if (null != this.field_b[var5Lifetime8]) {
-              this.field_b[var5Lifetime8].field_d = (short)var7.i(7088);
+              this.field_b[var5Lifetime8].field_d = (short)var7.readUnsignedShort(7088);
             }
           }
           for (var5Lifetime9 = 0; var5Lifetime9 < this.field_g; var5Lifetime9++) {
@@ -433,12 +433,12 @@ class wk implements si {
           } else {
             stackIn_120_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
         }
     }
 
     static {
         field_h = -1;
-        field_a = new ei();
+        field_a = new IntrusiveDeque();
     }
 }

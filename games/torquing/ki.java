@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends hn implements fp, ng, ba {
+final class ki extends WidgetContainer implements fp, ng, ba {
     static m field_D;
     vp field_M;
     private rb field_C;
@@ -13,7 +13,7 @@ final class ki extends hn implements fp, ng, ba {
     private ok field_F;
     private gp field_L;
     private gp field_I;
-    static t field_H;
+    static Sprite field_H;
     private lg field_N;
 
     public final void a(byte param0, String param1) {
@@ -27,7 +27,7 @@ final class ki extends hn implements fp, ng, ba {
           var4 = param1;
           ((tk) ((Object) var3)).a(false, var4, true);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,10 +51,10 @@ final class ki extends hn implements fp, ng, ba {
           if (var4 == so.field_u) {
             return false;
           }
-          if (var4 == q.field_a) {
+          if (var4 == IntrusiveNode.field_a) {
             return false;
           }
-          if (var4 != df.field_r) {
+          if (var4 != IsaacPacketBuffer.field_r) {
             return true;
           }
           return false;
@@ -68,7 +68,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -77,8 +77,8 @@ final class ki extends hn implements fp, ng, ba {
           ((il) (this.field_E.a(-10116))).e(-40);
           return;
         }
-        gm var3 = (gm) null;
-        this.a(119, (gm) null, '\f', -86);
+        UiWidget var3 = (UiWidget) null;
+        this.a(119, (UiWidget) null, '\f', -86);
         ((il) (this.field_E.a(-10116))).e(-40);
     }
 
@@ -87,7 +87,7 @@ final class ki extends hn implements fp, ng, ba {
           return "<u=2164A2><col=2164A2>";
         }
         String var3 = (String) null;
-        int discarded$0 = this.a((String) null, 86, -114, (gm) null, (String) null, true);
+        int discarded$0 = this.a((String) null, 86, -114, (UiWidget) null, (String) null, true);
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -117,7 +117,7 @@ final class ki extends hn implements fp, ng, ba {
             return;
           }
           var7 = (String) null;
-          discarded$0 = this.a((String) null, -82, -103, (gm) null, (String) null, false);
+          discarded$0 = this.a((String) null, -82, -103, (UiWidget) null, (String) null, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,11 +129,11 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    private final int a(String param0, int param1, int param2, gm param3, String param4, boolean param5) {
+    private final int a(String param0, int param1, int param2, UiWidget param3, String param4, boolean param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -172,7 +172,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class ki extends hn implements fp, ng, ba {
     }
 
     public ki() {
-        super(0, 0, 496, 0, (el) null);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_E = new gp("", (ca) null, 12);
         this.field_K = new gp("", (ca) null, 100);
         this.field_G = new gp("", (ca) null, 100);
@@ -218,7 +218,7 @@ final class ki extends hn implements fp, ng, ba {
         this.field_G.field_n = pf.field_j;
         this.field_B.field_n = oi.field_a;
         this.field_L.field_n = ud.field_j;
-        this.field_I.field_n = df.field_p;
+        this.field_I.field_n = IsaacPacketBuffer.field_p;
         this.field_F.field_n = l.field_b;
         this.field_E.a(new il(this.field_E), 112);
         this.field_K.a(new tn(this.field_K), 99);
@@ -227,47 +227,47 @@ final class ki extends hn implements fp, ng, ba {
         this.field_L.a(new um(this.field_L, this.field_B), 86);
         this.field_I.a(new ab(this.field_I), 76);
         this.field_J.field_x = false;
-        this.field_J.field_q = (el) ((Object) new rf());
-        this.field_N.field_q = (el) ((Object) new je());
-        this.field_E.field_q = (el) ((Object) new ig(10000536));
+        this.field_J.renderer = (WidgetRenderer) ((Object) new rf());
+        this.field_N.renderer = (WidgetRenderer) ((Object) new je());
+        this.field_E.renderer = (WidgetRenderer) ((Object) new ig(10000536));
         ig dupTemp$0 = new ig(10000536);
-        this.field_G.field_q = (el) ((Object) dupTemp$0);
-        this.field_K.field_q = (el) ((Object) dupTemp$0);
-        this.field_I.field_q = (el) ((Object) new ig(10000536));
-        this.field_F.field_q = (el) ((Object) new kb());
+        this.field_G.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_K.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_I.renderer = (WidgetRenderer) ((Object) new ig(10000536));
+        this.field_F.renderer = (WidgetRenderer) ((Object) new kb());
         io dupTemp$1 = new io(10000536);
-        this.field_L.field_q = (el) ((Object) dupTemp$1);
-        this.field_B.field_q = (el) ((Object) dupTemp$1);
+        this.field_L.renderer = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_B.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = ff.a(new String[]{this.j(-94), this.k(-128)}, 0, km.field_a);
         int var3 = 20;
-        var3 = var3 + this.a((byte) 106, a.field_b, 170, (gm) (this.field_K), var3);
+        var3 = var3 + this.a((byte) 106, a.field_b, 170, (UiWidget) (this.field_K), var3);
         var3 = var3 + (this.a(this.field_G, var3, (byte) -63, qn.field_E, 170, "", 20) + 5);
-        var3 = var3 + this.a((byte) 115, hm.field_v, 170, (gm) (this.field_B), var3);
+        var3 = var3 + this.a((byte) 115, hm.field_v, 170, (UiWidget) (this.field_B), var3);
         var3 = var3 + (this.a(ug.field_a, var3, 170, this.field_L, bj.field_K, true) + 5);
         var3 = var3 + (5 + this.a(de.field_b, var3, 170, this.field_E, ad.field_l, true));
-        var3 = var3 + this.a(170, ta.field_m, var3, this.field_I, 3);
-        na var4 = new na(46, var3, -90 + this.field_p, 25, this.field_F, true, -120 + this.field_p, 5, sp.field_R, 11579568, ce.field_a);
+        var3 = var3 + this.a(170, DualLinkNode.field_m, var3, this.field_I, 3);
+        na var4 = new na(46, var3, -90 + this.width, 25, this.field_F, true, -120 + this.width, 5, sp.field_R, 11579568, ce.field_a);
         this.a(var4, -6938);
-        var3 = var3 + var4.field_o;
+        var3 = var3 + var4.height;
         pc var5 = new pc(dg.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, dg.field_e.field_x, -1, 2147483647, true);
         this.field_C = new rb(var2, var5);
         this.field_C.field_n = "";
-        this.field_C.a(0, (byte) -100, jp.field_e);
-        this.field_C.a(1, (byte) -91, jp.field_e);
-        this.field_C.field_t = (ca) (this);
-        this.field_C.a((byte) 46, 46, -90 + this.field_p, var3);
-        var3 = var3 + (this.field_C.field_o + 15);
+        this.field_C.a(0, (byte) -100, Js5Transport.field_e);
+        this.field_C.a(1, (byte) -91, Js5Transport.field_e);
+        this.field_C.listener = (ca) (this);
+        this.field_C.a((byte) 46, 46, -90 + this.width, var3);
+        var3 = var3 + (this.field_C.height + 15);
         this.a(this.field_C, -6938);
         int var6 = 4;
         int var7 = 200;
         this.field_J.a((byte) 123, 496 - var7 >> 1, var3, 40, var7);
         this.field_N.a((byte) -11, 3 + var6, var3 + 15, 40, 60);
-        this.field_N.field_t = (ca) (this);
-        this.field_J.field_t = (ca) (this);
+        this.field_N.listener = (ca) (this);
+        this.field_J.listener = (ca) (this);
         this.a(this.field_J, -6938);
         this.a(this.field_N, -6938);
         this.field_M = new vp((ba) (this));
-        this.field_M.a((byte) 123, 60 + (this.field_E.field_p + this.field_E.field_w), 20 + this.field_E.field_k, 150, -this.field_E.field_w + (this.field_p - this.field_E.field_p) - 60);
+        this.field_M.a((byte) 123, 60 + (this.field_E.width + this.field_E.x), 20 + this.field_E.y, 150, -this.field_E.x + (this.width - this.field_E.width) - 60);
         this.a(this.field_M, -6938);
         this.a((byte) 125, 0, 0, var3 - (-55 - var6), 496);
     }
@@ -278,13 +278,13 @@ final class ki extends hn implements fp, ng, ba {
         }
         int var2 = param0;
         try {
-          var2 = Integer.parseInt(this.field_I.field_m);
+          var2 = Integer.parseInt(this.field_I.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return vf.a(this, this.field_B.field_m, var2, this.field_F.field_A, param0 ^ -7014, this.field_K.field_m, this.field_E.field_m);
+        return vf.a(this, this.field_B.text, var2, this.field_F.field_A, param0 ^ -7014, this.field_K.text, this.field_E.text);
     }
 
-    private final int a(int param0, String param1, int param2, gm param3, int param4) {
+    private final int a(int param0, String param1, int param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
         ub var7 = null;
         int var8 = 0;
@@ -302,8 +302,8 @@ final class ki extends hn implements fp, ng, ba {
           var7 = new ub(((wg) ((Object) param3)).a(-10116));
           var8 = -12 % ((param4 - 62) / 48);
           this.a(var7, -6938);
-          var7.a((byte) 123, 3 + var9.field_w + var9.field_p, (var9.field_o - 15 >> 1) + var9.field_k, 15, 15);
-          stackIn_1_0 = var9.field_o;
+          var7.a((byte) 123, 3 + var9.x + var9.width, (var9.height - 15 >> 1) + var9.y, 15, 15);
+          stackIn_1_0 = var9.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -321,7 +321,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -423,7 +423,7 @@ final class ki extends hn implements fp, ng, ba {
         if (bh.field_a == mg.field_b) {
           return rf.field_u;
         }
-        if (kh.field_o == mg.field_b) {
+        if (Model.field_o == mg.field_b) {
           return on.field_b;
         }
         if (param0 != 20) {
@@ -439,7 +439,7 @@ final class ki extends hn implements fp, ng, ba {
         return on.field_b;
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -472,17 +472,17 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, gm param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           int var5_int = -8 % ((-28 - param0) / 43);
           super.a(-84, param1, param2, param3);
           this.field_J.field_x = this.h(19545);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ki.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ki.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -493,7 +493,7 @@ final class ki extends hn implements fp, ng, ba {
         return "</col></u>";
     }
 
-    private final int a(gm param0, int param1, byte param2, String param3, int param4, String param5, int param6) {
+    private final int a(UiWidget param0, int param1, byte param2, String param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         bj var9 = null;
         na var10 = null;
@@ -514,10 +514,10 @@ final class ki extends hn implements fp, ng, ba {
             stackIn_2_0 = -56;
             return stackIn_2_0;
           }
-          var9 = new bj(((wg) ((Object) param0)).a(-10116), param5, 126, var10.field_o + param1, param4 + 50, param6);
-          var9.field_t = (ca) (this);
+          var9 = new bj(((wg) ((Object) param0)).a(-10116), param5, 126, var10.height + param1, param4 + 50, param6);
+          var9.listener = (ca) (this);
           this.a(var9, -6938);
-          stackIn_4_0 = var9.field_o + var10.field_o;
+          stackIn_4_0 = var9.height + var10.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -541,11 +541,11 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    private final int a(byte param0, String param1, int param2, gm param3, int param4) {
+    private final int a(byte param0, String param1, int param2, UiWidget param3, int param4) {
         na var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -563,7 +563,7 @@ final class ki extends hn implements fp, ng, ba {
             return stackIn_2_0;
           }
           this.a(var6, -6938);
-          stackIn_4_0 = var6.field_o;
+          stackIn_4_0 = var6.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -581,7 +581,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -600,13 +600,13 @@ final class ki extends hn implements fp, ng, ba {
               discarded$2 = this.l(-1);
             }
           } else {
-            of.b((byte) 105);
+            VertexMesh.b((byte) 105);
           }
           if (param0 < -85) {
             return;
           }
           var7 = (String) null;
-          discarded$3 = this.a((String) null, 31, 19, (gm) null, (String) null, false);
+          discarded$3 = this.a((String) null, 31, 19, (UiWidget) null, (String) null, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -618,7 +618,7 @@ final class ki extends hn implements fp, ng, ba {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

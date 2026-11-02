@@ -7,10 +7,10 @@ final class kp {
     int field_a;
     static int field_d;
 
-    final static void a(t param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int param8) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int param8) {
         try {
           tl.field_n = param8;
-          hn.field_x = param4;
+          WidgetContainer.field_x = param4;
           Torquing.field_x = param1;
           if (param7) {
             field_d = 19;
@@ -21,14 +21,14 @@ final class kp {
           lb.field_y = param5;
           up.field_d = param2;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "kp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "kp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final int a(byte param0) {
         int stackIn_7_0 = 0;
         if (param0 <= 28) {
-          kp.a((t) null, -4, -74, -59, 77, 61, 43, true, -81);
+          kp.a((Sprite) null, -4, -74, -59, 77, 61, 43, true, -81);
         }
         if (null != this.field_b &&
           this.field_b.length != 0) {
@@ -51,30 +51,30 @@ final class kp {
         int var12 = 0;
         var12 = Torquing.field_u;
         try {
-          if (ph.field_k > param2) {
-            param0 = param0 - (ph.field_k - param2);
-            param2 = ph.field_k;
+          if (SoftwareRasterizer.field_k > param2) {
+            param0 = param0 - (SoftwareRasterizer.field_k - param2);
+            param2 = SoftwareRasterizer.field_k;
           }
-          if (param5 < ph.field_c) {
-            param1 = param1 - (ph.field_c - param5);
-            param5 = ph.field_c;
+          if (param5 < SoftwareRasterizer.field_c) {
+            param1 = param1 - (SoftwareRasterizer.field_c - param5);
+            param5 = SoftwareRasterizer.field_c;
           }
-          if (ph.field_a < param2 + param0) {
-            param0 = ph.field_a - param2;
+          if (SoftwareRasterizer.field_a < param2 + param0) {
+            param0 = SoftwareRasterizer.field_a - param2;
           }
-          if (ph.field_h < param5 + param1) {
-            param1 = -param5 + ph.field_h;
+          if (SoftwareRasterizer.field_h < param5 + param1) {
+            param1 = -param5 + SoftwareRasterizer.field_h;
           }
           if (0 < param0 &&
             param1 > 0) {
             if (param3 != 16) {
               field_d = 3;
             }
-            var6_int = param5 * ph.field_j + param2;
-            var7 = ph.field_j - param0;
+            var6_int = param5 * SoftwareRasterizer.field_j + param2;
+            var7 = SoftwareRasterizer.field_j - param0;
             for (param5 = -param1; param5 < 0; param5++) {
               for (param2 = -param0; param2 < 0; param2++) {
-                var8 = ph.field_e[var6_int];
+                var8 = SoftwareRasterizer.field_e[var6_int];
                 if (param4 < ((var8 & 65280) >> 8) &&
                   (var8 >> 8 & 255) >= (var8 & 16711680) >> 16) {
                   var9 = (510 & var8 >> 15) - 60;
@@ -84,7 +84,7 @@ final class kp {
                   var10 = 65280 & var8;
                   var10 = 65280 & -(var10 >> 5) + (var10 >> 1);
                   var11 = (var8 & 255) >> 3;
-                  ph.field_e[var6_int] = gm.a(gm.a(var10, var9 << 16), var11);
+                  SoftwareRasterizer.field_e[var6_int] = UiWidget.a(UiWidget.a(var10, var9 << 16), var11);
                 }
                 var6_int++;
               }
@@ -96,7 +96,7 @@ final class kp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var6), "kp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var6), "kp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -166,13 +166,13 @@ final class kp {
         return var6.toString();
     }
 
-    final static void a(double param0, int param1, double param2, double[] param3, hc param4) {
+    final static void a(double param0, int param1, double param2, double[] param3, Level param4) {
         try {
-          wf.c((byte) 76);
+          SpriteState.c((byte) 76);
           param4.a(param2, param3, (byte) 37, param0);
           int var7_int = -98 % ((param1 - 5) / 55);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "kp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "kp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

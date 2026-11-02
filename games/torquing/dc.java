@@ -6,7 +6,7 @@ final class dc {
     static long field_c;
     static ln field_a;
 
-    final static li a(String param0, la param1, la param2, boolean param3, String param4) {
+    final static li a(String param0, ResourceArchive param1, ResourceArchive param2, boolean param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -27,7 +27,7 @@ final class dc {
           if (param3) {
             field_b = (String) null;
           }
-          stackIn_3_0 = ao.a(-97, var5_int, var6, param1, param2);
+          stackIn_3_0 = SocketConnector.a(-97, var5_int, var6, param1, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,7 +57,7 @@ final class dc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -71,8 +71,8 @@ final class dc {
         try {
           aq.field_c = false;
           cf.field_f = false;
-          if (gn.field_m != null &&
-            gn.field_m.field_D) {
+          if (IsaacCipher.field_m != null &&
+            IsaacCipher.field_m.field_D) {
             if (param0 == 8) {
               if (!ff.field_a) {
                 param1 = cl.field_c;
@@ -94,7 +94,7 @@ final class dc {
               if (nk.field_t) {
                 param1 = pn.field_a;
               }
-              gn.field_m.a(param0, param1, param2 ^ -259);
+              IsaacCipher.field_m.a(param0, param1, param2 ^ -259);
             }
             if (param0 != 256 &&
               param0 != 10 &&
@@ -117,16 +117,16 @@ final class dc {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static boolean b(boolean param0) {
         if (param0) {
-          return kh.field_o == mg.field_b ? true : false;
+          return Model.field_o == mg.field_b ? true : false;
         }
         field_b = (String) null;
-        return kh.field_o == mg.field_b ? true : false;
+        return Model.field_o == mg.field_b ? true : false;
     }
 
     public static void a(boolean param0) {

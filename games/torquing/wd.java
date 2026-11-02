@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends ta {
+final class wd extends DualLinkNode {
     private am[] field_t;
     private int[] field_s;
     private int[] field_q;
@@ -20,7 +20,7 @@ final class wd extends ta {
         }
     }
 
-    final int[] a(boolean param0, la param1, int param2, double param3, boolean param4, int param5, si param6, int param7) {
+    final int[] a(boolean param0, ResourceArchive param1, int param2, double param3, boolean param4, int param5, si param6, int param7) {
         int var10_int = 0;
         int var19 = 0;
         int[] stackIn_40_0 = null;
@@ -55,7 +55,7 @@ final class wd extends ta {
         int var15Lifetime1;
         var24 = Torquing.field_u;
         try {
-          ue.field_g = param6;
+          RandomAccessCacheFile.field_g = param6;
           vf.field_a = param1;
           for (var10_int = 0; this.field_t.length > var10_int; var10_int++) {
             this.field_t[var10_int].a(param7, param5 + 17749, param2);
@@ -151,7 +151,7 @@ final class wd extends ta {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param7).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class wd extends ta {
         if (param5 == param3) {
           lc.a(param1, param2, -123, param7, param6, param5, param0);
         } else {
-          if (kn.field_e > -param5 + param2) {
+          if (RasterBuffer.field_e > -param5 + param2) {
             wk.a(param1, param0, param6, param7, param2, param5, 0, param3);
           } else {
             if (qg.field_z < param2 + param5) {
@@ -182,7 +182,7 @@ final class wd extends ta {
         }
     }
 
-    final boolean a(int param0, la param1, si param2) {
+    final boolean a(int param0, ResourceArchive param1, si param2) {
         int var4_int = 0;
         int var6 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -232,11 +232,11 @@ final class wd extends ta {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
-    wd(fj param0) {
+    wd(PacketBuffer param0) {
         int[] array$2 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -325,7 +325,7 @@ final class wd extends ta {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

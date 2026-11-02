@@ -27,7 +27,7 @@ final class ad extends gf {
           if (this.a(114, param1) != so.field_u) {
             return cp.field_h;
           }
-          stackIn_8_0 = ul.field_c;
+          stackIn_8_0 = MouseInputHandler.field_c;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -39,7 +39,7 @@ final class ad extends gf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class ad extends gf {
           if (!param1.equals(this.field_m)) {
             var3 = vf.a(param1, 0);
             if (!var3.c(484)) {
-              stackIn_9_0 = gn.field_h;
+              stackIn_9_0 = IsaacCipher.field_h;
               return stackIn_9_0;
             }
             this.field_m = param1;
@@ -86,7 +86,7 @@ final class ad extends gf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class ad extends gf {
         try {
           this.field_p = new um(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

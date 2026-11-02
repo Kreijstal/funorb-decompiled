@@ -57,7 +57,7 @@ final class co implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class co implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class co implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -266,22 +266,22 @@ final class co implements Runnable {
         return true;
     }
 
-    co(vh param0) {
-        rc var2 = null;
+    co(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_e = new gb();
         this.field_c = false;
         this.field_a = 0;
         try {
           var2 = param0.a((byte) -126, 5, (Runnable) (this));
-          while (var2.field_a == 0) {
+          while (var2.status == 0) {
             ub.a(1976, 10L);
           }
-          if (var2.field_a == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_b = (Thread) (var2.field_d);
+          this.field_b = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

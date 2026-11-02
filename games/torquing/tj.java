@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tj extends q {
+final class tj extends IntrusiveNode {
     static int[] field_m;
     static String field_j;
     int field_k;
-    static t[] field_n;
+    static Sprite[] field_n;
     static int field_l;
 
     public static void a(int param0) {

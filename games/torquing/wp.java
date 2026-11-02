@@ -7,11 +7,11 @@ final class wp extends am {
     private int field_z;
     private int field_x;
     private int[] field_u;
-    static t[] field_v;
+    static Sprite[] field_v;
     private int[] field_t;
     static int field_y;
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -33,7 +33,7 @@ final class wp extends am {
                 this.field_z = param0.i((byte) -101);
               }
             } else {
-              this.field_s = param0.i(param1 ^ 7059);
+              this.field_s = param0.readUnsignedShort(param1 ^ 7059);
             }
           }
           return;
@@ -47,7 +47,7 @@ final class wp extends am {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -55,10 +55,10 @@ final class wp extends am {
         if (param0 >= -51) {
           return (da) null;
         }
-        return new da(of.d((byte) -77), sd.b(2));
+        return new da(VertexMesh.d((byte) -77), sd.b(2));
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, t[] param5) {
+    final static void a(int param0, int param1, int param2, boolean param3, int param4, Sprite[] param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -79,19 +79,19 @@ final class wp extends am {
             var8 = param5[1].field_w;
             param5[0].c(param4, param0, param1);
             param5[2].c(param2 + param4 - var7, param0, param1);
-            ph.b(lj.field_c);
-            ph.f(var6_int + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
+            SoftwareRasterizer.b(SecondaryNodeDeque.field_c);
+            SoftwareRasterizer.f(var6_int + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
             var9 = var6_int + param4;
             var10 = -var7 + (param4 + param2);
             param4 = var9;
             if (param3) {
-              field_v = (t[]) null;
+              field_v = (Sprite[]) null;
             }
             while (var10 > param4) {
               param5[1].c(param4, param0, param1);
               param4 = param4 + var8;
             }
-            ph.a(lj.field_c);
+            SoftwareRasterizer.a(SecondaryNodeDeque.field_c);
             return;
           }
           return;
@@ -105,7 +105,7 @@ final class wp extends am {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -157,13 +157,13 @@ final class wp extends am {
           if (this.field_z == 0) {
             var5 = 0;
             var6 = 0;
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (var6 < this.field_x) {
                 if (var4 >= this.field_t[var6] &&
                   this.field_t[var6 + 1] > var4) {
                   if (var4 < this.field_u[var6]) {
                     var5 = 4096;
-                    break L3;
+                    break scanLoop1;
                   }
                   dk.a(var13, 0, ci.field_c, var5);
                   return var3;
@@ -181,7 +181,7 @@ final class wp extends am {
             while (!(ci.field_c <= var5Lifetime1)) {
               var6Lifetime1 = 0;
               var7 = 0;
-              var8 = q.field_b[var5Lifetime1];
+              var8 = IntrusiveNode.field_b[var5Lifetime1];
               var9 = this.field_z;
               if (var9 == 1) {
                 var6Lifetime1 = var8;
@@ -196,15 +196,15 @@ final class wp extends am {
               }
               var11 = 0;
               var9Lifetime1 = var11;
-              L8: while (true) {
+              scanLoop2: while (true) {
                 if (var11 < this.field_x) {
                   if (this.field_t[var11] <= var6Lifetime1 &&
                     var6Lifetime1 < this.field_t[var11 + 1]) {
                     if (var6Lifetime1 >= this.field_u[var11]) {
-                      break L8;
+                      break scanLoop2;
                     }
                     var7 = 4096;
-                    break L8;
+                    break scanLoop2;
                   }
                   var11++;
                   continue;

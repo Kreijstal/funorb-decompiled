@@ -5,7 +5,7 @@ final class wa extends ih {
     static double field_e;
     static String field_c;
     static boolean field_f;
-    static df field_d;
+    static IsaacPacketBuffer field_d;
 
     public static void a(int param0) {
         field_d = null;
@@ -15,9 +15,9 @@ final class wa extends ih {
         }
     }
 
-    final static cp a(boolean param0, fj param1) {
+    final static cp a(boolean param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        fj var3 = null;
+        PacketBuffer var3 = null;
         cp stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -25,8 +25,8 @@ final class wa extends ih {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            var3 = (fj) null;
-            wa.a(true, (fj) null);
+            var3 = (PacketBuffer) null;
+            wa.a(true, (PacketBuffer) null);
           }
           stackIn_3_0 = new cp(param1.g(65536), param1.g(65536), param1.g(65536), param1.g(65536), param1.g(65536), param1.g(65536), param1.g(65536), param1.g(65536), param1.e((byte) 62), param1.i((byte) -101));
           return stackIn_3_0;
@@ -40,22 +40,22 @@ final class wa extends ih {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
-        fj var7 = null;
+        PacketBuffer var7 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var5_intLifetime1;
         var6 = Torquing.field_u;
         try {
           if (!param2) {
-            var7 = (fj) null;
-            wa.a(false, (fj) null);
+            var7 = (PacketBuffer) null;
+            wa.a(false, (PacketBuffer) null);
           }
           if (param3 < param4) {
             var5_int = param3;
@@ -82,7 +82,7 @@ final class wa extends ih {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var5), "wa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var5), "wa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class wa extends ih {
         return stackIn_12_0;
     }
 
-    final static t[] a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
@@ -108,11 +108,11 @@ final class wa extends ih {
         int stackIn_34_0 = 0;
         int stackIn_45_0 = 0;
         int var9 = 0;
-        t[] var10 = null;
-        t[] var11_ref_t__ = null;
+        Sprite[] var10 = null;
+        Sprite[] var11_ref_t__ = null;
         int var11 = 0;
         int var12 = 0;
-        t var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -122,15 +122,15 @@ final class wa extends ih {
         int var12Lifetime2Lifetime2;
         var15 = Torquing.field_u;
         var9 = param2 - (-param3 - param1);
-        var10 = new t[]{new t(var9, var9), new t(param5, var9), new t(var9, var9), new t(var9, param5), new t(64, 64), new t(var9, param5), new t(var9, var9), new t(param5, var9), new t(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param5, var9), new Sprite(var9, var9), new Sprite(var9, param5), new Sprite(64, 64), new Sprite(var9, param5), new Sprite(var9, var9), new Sprite(param5, var9), new Sprite(var9, var9)};
         var11_ref_t__ = var10;
         var12 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var11_ref_t__.length > var12) {
             var13 = var11_ref_t__[var12];
             stackIn_11_0 = 0;
             if (var15 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var14 = stackIn_11_0;
             while (var13.field_y.length > var14) {
@@ -138,17 +138,17 @@ final class wa extends ih {
               var14++;
             }
             var12++;
-            continue L0;
+            continue scanLoop1;
           }
           stackIn_11_0 = 0;
           break;
         }
         var11 = stackIn_11_0;
-        L6: while (true) {
+        scanLoop2: while (true) {
           if (param2 > var11) {
             stackIn_22_0 = 0;
             if (var15 != 0) {
-              break L6;
+              break scanLoop2;
             }
             var12Lifetime1 = stackIn_22_0;
             while (var12Lifetime1 < var9) {
@@ -159,7 +159,7 @@ final class wa extends ih {
               var12Lifetime1++;
             }
             var11++;
-            continue L6;
+            continue scanLoop2;
           }
           stackIn_22_0 = 0;
           break;
@@ -190,11 +190,11 @@ final class wa extends ih {
             stackIn_34_0 = 0;
           }
           var11Lifetime1 = stackIn_34_0;
-          L19: while (true) {
+          scanLoop3: while (true) {
             if (param5 > var11Lifetime1) {
               stackIn_45_0 = 0;
               if (var15 != 0) {
-                break L19;
+                break scanLoop3;
               }
               var12Lifetime2Lifetime1 = stackIn_45_0;
               while (var12Lifetime2Lifetime1 < param2) {
@@ -205,16 +205,16 @@ final class wa extends ih {
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
-              continue L19;
+              continue scanLoop3;
             }
             var11Lifetime1 = 0;
             stackIn_45_0 = param0;
             break;
           }
           if (stackIn_45_0 != -63) {
-            return (t[]) null;
+            return (Sprite[]) null;
           }
-          L25: while (param5 >> 1 > var11Lifetime1) {
+          scanLoop4: while (param5 >> 1 > var11Lifetime1) {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param1 > var12Lifetime2Lifetime2) {
@@ -232,7 +232,7 @@ final class wa extends ih {
               break;
             }
             if (var15 == 0) {
-              continue L25;
+              continue scanLoop4;
             }
             break;
           }

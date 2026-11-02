@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pc implements el, fe {
+class pc implements WidgetRenderer, fe {
     int field_e;
     uc field_m;
     int field_h;
@@ -19,18 +19,18 @@ class pc implements el, fe {
     static String field_i;
     int field_o;
 
-    private final void a(gm param0, int param1, int param2, int param3) {
+    private final void a(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.a(-2, param0, param1, this.field_h, 0, param2, 0, this.field_c);
           if (param3 != -546) {
             this.field_a = -66;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pc.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pc.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, kh param5, short param6, short param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Model param5, short param6, short param7, int param8) {
         RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
@@ -52,8 +52,8 @@ class pc implements el, fe {
         int var27 = 0;
         int var28 = 0;
         int var29 = 0;
-        rm var30 = null;
-        rm var31 = null;
+        MeshGeometry var30 = null;
+        MeshGeometry var31 = null;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -127,11 +127,11 @@ class pc implements el, fe {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
-    private final int c(gm param0, int param1) {
+    private final int c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -141,7 +141,7 @@ class pc implements el, fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 8557) {
-            stackIn_4_0 = -this.field_p + (param0.field_o - this.field_o);
+            stackIn_4_0 = -this.field_p + (param0.height - this.field_o);
             return stackIn_4_0;
           }
           stackIn_2_0 = -106;
@@ -156,11 +156,11 @@ class pc implements el, fe {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public final void a(int param0, gm param1, int param2, boolean param3, int param4) {
+    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         kp var8 = null;
@@ -196,7 +196,7 @@ class pc implements el, fe {
               stackIn_5_3 = var8.field_a;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            ld.a(param1.field_p + (param0 + param1.field_w), param0 + param1.field_w, param1.field_o + param4 + param1.field_k, param1.field_k + param4, (byte) -116);
+            ld.a(param1.width + (param0 + param1.x), param0 + param1.x, param1.height + param4 + param1.y, param1.y + param4, (byte) -116);
             ah.field_c.a(var11, var12, false, var10, this.field_j, var10);
             r.a(126);
           }
@@ -215,11 +215,11 @@ class pc implements el, fe {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public final int a(byte param0, gm param1) {
+    public final int a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -242,13 +242,13 @@ class pc implements el, fe {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    String c(byte param0, gm param1) {
+    String c(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        gm var4 = null;
+        UiWidget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -256,10 +256,10 @@ class pc implements el, fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 65) {
-            var4 = (gm) null;
-            this.a((byte) -109, (gm) null);
+            var4 = (UiWidget) null;
+            this.a((byte) -109, (UiWidget) null);
           }
-          stackIn_3_0 = param1.field_m;
+          stackIn_3_0 = param1.text;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -271,11 +271,11 @@ class pc implements el, fe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public final int a(gm param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;
@@ -297,11 +297,11 @@ class pc implements el, fe {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public final uj b(byte param0, gm param1) {
+    public final uj b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         uj stackIn_2_0 = null;
         uj stackIn_10_0 = null;
@@ -334,7 +334,7 @@ class pc implements el, fe {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -355,11 +355,11 @@ class pc implements el, fe {
           param1.field_o = this.field_o;
           param1.field_p = this.field_p;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pc.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pc.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final int b(gm param0, int param1) {
+    public final int b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -369,7 +369,7 @@ class pc implements el, fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -1) {
-            stackIn_4_0 = -this.field_e + (-this.field_k + param0.field_p);
+            stackIn_4_0 = -this.field_e + (-this.field_k + param0.width);
             return stackIn_4_0;
           }
           stackIn_2_0 = -14;
@@ -384,11 +384,11 @@ class pc implements el, fe {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(int param0, gm param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -402,7 +402,7 @@ class pc implements el, fe {
         int var12Lifetime1;
         var13 = Torquing.field_u;
         try {
-          ld.a(param1.field_p + (param1.field_w + param2), param2 + param1.field_w, param5 + param1.field_k + param1.field_o, param1.field_k + param5, (byte) -105);
+          ld.a(param1.width + (param1.x + param2), param2 + param1.x, param5 + param1.y + param1.height, param1.y + param5, (byte) -105);
           if (param0 != -2) {
             field_d = (int[]) null;
           }
@@ -453,7 +453,7 @@ class pc implements el, fe {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -478,7 +478,7 @@ class pc implements el, fe {
           if (jl.field_W != null) {
             try {
               jl.field_W.a(false, 0L);
-              jl.field_W.a(-1, 24, kj.field_d.field_n, kj.field_d.field_j);
+              jl.field_W.a(-1, 24, kj.field_d.position, kj.field_d.payload);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -486,14 +486,14 @@ class pc implements el, fe {
               decompiledRegionSelector0 = 1;
             }
             if (decompiledRegionSelector0 == 0) {
-              kj.field_d.field_n = kj.field_d.field_n + 24;
+              kj.field_d.position = kj.field_d.position + 24;
               if (param0) {
                 field_n = (String) null;
               }
               return;
             }
           }
-          kj.field_d.field_n = kj.field_d.field_n + 24;
+          kj.field_d.position = kj.field_d.position + 24;
           if (!param0) {
             return;
           }
@@ -505,7 +505,7 @@ class pc implements el, fe {
         }
     }
 
-    private final int a(int param0, int param1, int param2, gm param3) {
+    private final int a(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -515,7 +515,7 @@ class pc implements el, fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 2) {
-            stackIn_4_0 = param3.field_j + this.field_k + (param3.field_w + (param1 + param0));
+            stackIn_4_0 = param3.field_j + this.field_k + (param3.x + (param1 + param0));
             return stackIn_4_0;
           }
           stackIn_2_0 = 11;
@@ -530,7 +530,7 @@ class pc implements el, fe {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -542,7 +542,7 @@ class pc implements el, fe {
         return this.field_m.field_t + this.field_m.field_x;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, gm param5) {
+    public final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -583,7 +583,7 @@ class pc implements el, fe {
           }
           var10 = var18.b(var8, (byte) 110);
           var11 = var18.b(var9, (byte) 110);
-          ld.a(param5.field_p + (param5.field_w + param0), param5.field_w + param0, param5.field_o + param5.field_k + param4, param4 + param5.field_k, (byte) -97);
+          ld.a(param5.width + (param5.x + param0), param5.x + param0, param5.height + param5.y + param4, param4 + param5.y, (byte) -97);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_c[var12];
             if (var12 == var10) {
@@ -602,7 +602,7 @@ class pc implements el, fe {
               }
             }
             var15 = stackIn_20_0;
-            ah.field_c.a(param3 + 1436133735, -var14 + var15, var13.field_a, this.a(var14, param0, param3 ^ -1419356518, param5), this.field_b >>> 24, var13.field_c + param5.field_v + (this.field_p + param5.field_k) + param4, this.field_b);
+            ah.field_c.a(param3 + 1436133735, -var14 + var15, var13.field_a, this.a(var14, param0, param3 ^ -1419356518, param5), this.field_b >>> 24, var13.field_c + param5.field_v + (this.field_p + param5.y) + param4, this.field_b);
           }
           r.a(127);
           return;
@@ -616,11 +616,11 @@ class pc implements el, fe {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
-    public final int a(gm param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -644,11 +644,11 @@ class pc implements el, fe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public void a(int param0, int param1, int param2, boolean param3, gm param4) {
+    public void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         if (param0 < 89) {
           this.a(false);
         }
@@ -658,11 +658,11 @@ class pc implements el, fe {
         try {
           this.a(param4, param2, param1, -546);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pc.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pc.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int a(byte param0, gm param1, int param2, int param3) {
+    private final int a(byte param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -672,7 +672,7 @@ class pc implements el, fe {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 58 % ((param0 - 36) / 35);
-          stackIn_1_0 = this.field_p + (param2 - (-param1.field_k - (param1.field_v + param3)));
+          stackIn_1_0 = this.field_p + (param2 - (-param1.y - (param1.field_v + param3)));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -684,11 +684,11 @@ class pc implements el, fe {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final int a(int param0, int param1, gm param2) {
+    public final int a(int param0, int param1, UiWidget param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -711,11 +711,11 @@ class pc implements el, fe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public final int a(int param0, int param1, gm param2, int param3, int param4, int param5) {
+    public final int a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -739,14 +739,14 @@ class pc implements el, fe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     protected pc() {
     }
 
-    private final void a(boolean param0, gm param1) {
+    private final void a(boolean param0, UiWidget param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -815,7 +815,7 @@ class pc implements el, fe {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -835,7 +835,7 @@ class pc implements el, fe {
           this.field_f = param7;
           this.field_j = param10;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

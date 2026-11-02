@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fn {
-    private t[] field_d;
+    private Sprite[] field_d;
     static boolean field_b;
     static int field_c;
     static String field_a;
 
-    final static am a(int param0, fj param1) {
+    final static am a(int param0, PacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -49,23 +49,23 @@ final class fn {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    fn(t[] param0) {
+    fn(Sprite[] param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-          fj var2 = (fj) null;
-          fn.a(15, (fj) null);
+          PacketBuffer var2 = (PacketBuffer) null;
+          fn.a(15, (PacketBuffer) null);
         }
     }
 

@@ -41,7 +41,7 @@ abstract class im extends bb {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Torquing.field_u;
-        ph.a(param1 + 6, 35 + param0, this.field_p - 12, this.field_o - 40, 2105376, 0);
+        SoftwareRasterizer.a(param1 + 6, 35 + param0, this.width - 12, this.height - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -51,11 +51,11 @@ abstract class im extends bb {
         var7 = 0;
         var8 = param0;
         while (var4 > var7) {
-          if (var8 >= ph.field_c &&
-            ph.field_h > var8) {
+          if (var8 >= SoftwareRasterizer.field_c &&
+            SoftwareRasterizer.field_h > var8) {
             var9 = var5 + (-var5 + var6) * var7 / var4;
             var10 = 0;
-            var11 = this.field_p;
+            var11 = this.width;
             if (var7 <= 20) {
               while (var10 <= 20) {
                 var12 = (-var7 + 20) * (-var7 + 20) + (20 - var10) * (20 - var10);
@@ -65,7 +65,7 @@ abstract class im extends bb {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  ph.field_e[var10 + (param1 + var8 * ph.field_j)] = var13;
+                  SoftwareRasterizer.field_e[var10 + (param1 + var8 * SoftwareRasterizer.field_j)] = var13;
                 }
                 var10++;
               }
@@ -79,7 +79,7 @@ abstract class im extends bb {
                   if (420 <= var14) {
                     var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    ph.field_e[param1 + (var8 * ph.field_j + var11)] = var15;
+                    SoftwareRasterizer.field_e[param1 + (var8 * SoftwareRasterizer.field_j + var11)] = var15;
                   } else {
                     var12Lifetime1 = 1 + var11;
                   }
@@ -91,7 +91,7 @@ abstract class im extends bb {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            ph.b(var10 + param1, var8, -var10 + var11, var9);
+            SoftwareRasterizer.b(var10 + param1, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -104,24 +104,24 @@ abstract class im extends bb {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          ph.b(param1, var8Lifetime1, 6, var9Lifetime1);
-          ph.b(param1 + this.field_p - 6, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.b(param1, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.b(param1 + this.width - 6, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        rp.field_h.d(param1 + this.field_p - 90, 10 + param0);
-        hg.a(false, param1 + 5, this.field_p - 10, 35 + param0, hh.field_b);
-        hg.a(false, param1, this.field_p, -22 + (param0 + this.field_o), vf.field_i);
+        rp.field_h.d(param1 + this.width - 90, 10 + param0);
+        hg.a(false, param1 + 5, this.width - 10, 35 + param0, hh.field_b);
+        hg.a(false, param1, this.width, -22 + (param0 + this.height), vf.field_i);
         var5Lifetime2 = 169;
-        var4Lifetime2 = this.field_o - 79;
+        var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var7Lifetime2 = 0;
         var8Lifetime2 = 57 + param0;
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          ph.b(param1, var8Lifetime2, 6, var9Lifetime2);
-          ph.b(param1 + this.field_p - 6, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.b(param1, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.b(param1 + this.width - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -133,11 +133,11 @@ abstract class im extends bb {
           return;
         }
         this.field_H = param0;
-        this.field_M = this.field_o;
+        this.field_M = this.height;
         if (param1 != -15) {
           im.l(59);
         }
-        this.field_I = this.field_p;
+        this.field_I = this.width;
         this.field_G = param3;
         this.field_K = param2;
         this.field_F = 0;

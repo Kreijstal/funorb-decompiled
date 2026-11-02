@@ -261,8 +261,8 @@ final class hm extends am {
           this.a(1, false);
         }
         if (param0 <= 123) {
-          fj var3 = (fj) null;
-          this.a((fj) null, 19, 48);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((PacketBuffer) null, 19, 48);
         }
         this.d(255);
     }
@@ -287,7 +287,7 @@ final class hm extends am {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          fj var2 = null;
+          PacketBuffer var2 = null;
           if (nn.field_c.field_g >= 4) {
             if (nn.field_c.field_k == -1) {
               return 3;
@@ -306,21 +306,21 @@ final class hm extends am {
               pd.field_c = pd.field_c + 1;
             }
             if (pd.field_c == 1) {
-              if (rd.field_x.field_a == 2) {
+              if (rd.field_x.status == 2) {
                 stackIn_15_0 = pg.a(-1, (byte) -56);
                 return stackIn_15_0;
               }
-              if (rd.field_x.field_a == 1) {
+              if (rd.field_x.status == 1) {
                 pd.field_c = pd.field_c + 1;
               }
             }
             if (pd.field_c == 2) {
-              up.field_a = new no((java.net.Socket) (rd.field_x.field_d), hq.field_a);
-              var2 = new fj(13);
-              q.a(um.field_r, 123, qg.field_A, var2, eg.field_x);
-              var2.b(90, 15);
+              up.field_a = new BufferedSocket((java.net.Socket) (rd.field_x.result), hq.field_a);
+              var2 = new PacketBuffer(13);
+              IntrusiveNode.a(um.field_r, 123, qg.field_A, var2, eg.field_x);
+              var2.writeByte(90, 15);
               var2.b((byte) 60, gf.field_g);
-              up.field_a.a(0, var2.field_j, (byte) 64, 13);
+              up.field_a.a(0, var2.payload, (byte) 64, 13);
               pd.field_c = pd.field_c + 1;
               ro.field_v = 30000L + km.b(-1);
             }
@@ -361,7 +361,7 @@ final class hm extends am {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, t param3) {
+    final static void a(byte param0, int param1, int param2, Sprite param3) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -383,29 +383,29 @@ final class hm extends am {
             return;
           }
           var6 = param3.field_s;
-          if (ph.field_c > param1) {
-            var7 = ph.field_c - param1;
-            param1 = ph.field_c;
+          if (SoftwareRasterizer.field_c > param1) {
+            var7 = SoftwareRasterizer.field_c - param1;
+            param1 = SoftwareRasterizer.field_c;
             var4_int = var4_int + var6 * var7;
             var5 = var5 - var7;
           }
-          if (param2 < ph.field_k) {
-            var7Lifetime1 = -param2 + ph.field_k;
-            param2 = ph.field_k;
+          if (param2 < SoftwareRasterizer.field_k) {
+            var7Lifetime1 = -param2 + SoftwareRasterizer.field_k;
+            param2 = SoftwareRasterizer.field_k;
             var6 = var6 - var7Lifetime1;
             var4_int = var4_int + var7Lifetime1;
           }
-          if (ph.field_h < var5 + param1) {
-            var5 = var5 - (-ph.field_h + var5 + param1);
+          if (SoftwareRasterizer.field_h < var5 + param1) {
+            var5 = var5 - (-SoftwareRasterizer.field_h + var5 + param1);
           }
-          if (ph.field_a < var6 + param2) {
-            var7Lifetime2 = -ph.field_a + (var6 + param2);
+          if (SoftwareRasterizer.field_a < var6 + param2) {
+            var7Lifetime2 = -SoftwareRasterizer.field_a + (var6 + param2);
             var6 = var6 - var7Lifetime2;
           }
           if (0 < var6 &&
             var5 > 0) {
-            var7Lifetime3 = param2 + param1 * ph.field_j;
-            la.a(0, var4_int, param3.field_y, -var6 + ph.field_j, ph.field_e, var6, var5, var7Lifetime3, 65280, param3.field_s - var6);
+            var7Lifetime3 = param2 + param1 * SoftwareRasterizer.field_j;
+            ResourceArchive.a(0, var4_int, param3.field_y, -var6 + SoftwareRasterizer.field_j, SoftwareRasterizer.field_e, var6, var5, var7Lifetime3, 65280, param3.field_s - var6);
             return;
           }
           return;
@@ -419,18 +419,18 @@ final class hm extends am {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, int param1, t[] param2, int param3, uc param4, int param5, t[] param6, int param7, int param8, int param9, int param10, int param11) {
+    final static void a(boolean param0, int param1, Sprite[] param2, int param3, uc param4, int param5, Sprite[] param6, int param7, int param8, int param9, int param10, int param11) {
         try {
           if (param7 != 3) {
             field_s = (int[]) null;
           }
           wk.a(param3, param2, param6, param9, param1, param8, param10, param0, 112, param11, param5, param4, param1, param10, param4);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "hm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "hm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
         }
     }
 
@@ -452,7 +452,7 @@ final class hm extends am {
             stackIn_2_0 = -116;
             return stackIn_2_0;
           }
-          stackIn_7_0 = ga.a(!param0, param1, true, param2);
+          stackIn_7_0 = ClientException.a(!param0, param1, true, param2);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -464,11 +464,11 @@ final class hm extends am {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;
@@ -484,7 +484,7 @@ final class hm extends am {
             if (var4_int == 0) {
               this.field_w = new int[param0.i((byte) -101)][4];
               for (var5 = 0; this.field_w.length > var5; var5++) {
-                this.field_w[var5][0] = param0.i(7088);
+                this.field_w[var5][0] = param0.readUnsignedShort(7088);
                 this.field_w[var5][1] = param0.i((byte) -101) << 4;
                 this.field_w[var5][2] = param0.i((byte) -101) << 4;
                 this.field_w[var5][3] = param0.i((byte) -101) << 4;
@@ -507,7 +507,7 @@ final class hm extends am {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -586,7 +586,7 @@ final class hm extends am {
                 var3 = 255;
               }
             }
-            this.field_x[var6] = gm.a(var4, gm.a(var3 << 8, var2 << 16));
+            this.field_x[var6] = UiWidget.a(var4, UiWidget.a(var3 << 8, var2 << 16));
           }
         }
     }

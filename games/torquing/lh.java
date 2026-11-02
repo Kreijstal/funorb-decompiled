@@ -15,7 +15,7 @@ final class lh {
     int[] field_i;
     private int[] field_s;
     int[] field_K;
-    gg[] field_o;
+    PcmSample[] field_o;
     int[] field_p;
     int[] field_N;
     int[] field_w;
@@ -59,7 +59,7 @@ final class lh {
         int var3 = 0;
         int var2;
         int var5;
-        gg var4;
+        PcmSample var4;
         var5 = Torquing.field_u;
         if (this.field_a == null) {
           return;
@@ -90,7 +90,7 @@ final class lh {
         }
     }
 
-    lh(fj param0, fi param1) {
+    lh(PacketBuffer param0, fi param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;
@@ -155,7 +155,7 @@ final class lh {
           }
           for (var5Lifetime2 = 0; this.field_d > var5Lifetime2; var5Lifetime2++) {
             this.field_j[var5Lifetime2] = 1 + param0.i((byte) -101);
-            var6 = param0.i(7088);
+            var6 = param0.readUnsignedShort(7088);
             var16 = new byte[var6];
             if (var6 > 0) {
               param0.a(48, var6, var16, 0);
@@ -176,9 +176,9 @@ final class lh {
           this.field_g = new int[this.field_r][];
           this.field_e = new int[this.field_r][];
           this.field_i = new int[this.field_r];
-          var5Lifetime3 = param0.i(7088);
+          var5Lifetime3 = param0.readUnsignedShort(7088);
           this.field_x = new int[var5Lifetime3];
-          this.field_o = new gg[var5Lifetime3];
+          this.field_o = new PcmSample[var5Lifetime3];
           this.field_F = new int[var5Lifetime3];
           this.field_z = new int[var5Lifetime3];
           this.field_w = new int[var5Lifetime3];
@@ -246,7 +246,7 @@ final class lh {
                 var4Lifetime1Lifetime4 = dupTemp$11;
                 this.field_f[var6Lifetime1][var11Lifetime3] = ie.a(dupTemp$11, 255);
               }
-              this.field_i[var6Lifetime1] = param0.i(7088);
+              this.field_i[var6Lifetime1] = param0.readUnsignedShort(7088);
               for (var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {
                 this.field_v[var5Lifetime4] = param0.e((byte) 62);
                 this.field_w[var5Lifetime4] = param0.e((byte) 62);
@@ -256,15 +256,15 @@ final class lh {
                 this.field_y[var5Lifetime4] = param0.i((byte) -101);
                 this.field_x[var5Lifetime4] = param0.i((byte) -101);
                 this.field_C[var5Lifetime4] = param0.f((byte) 25) - 1;
-                this.field_n[var5Lifetime4] = param0.i(7088);
-                this.field_s[var5Lifetime4] = param0.i(7088);
+                this.field_n[var5Lifetime4] = param0.readUnsignedShort(7088);
+                this.field_s[var5Lifetime4] = param0.readUnsignedShort(7088);
                 var5Lifetime4++;
               }
             }
           }
           this.a((byte) -71);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "lh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "lh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

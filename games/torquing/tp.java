@@ -15,9 +15,9 @@ final class tp {
     static int field_o;
     static long[][] field_e;
     static long[] field_m;
-    private ei field_d;
+    private IntrusiveDeque field_d;
     boolean field_b;
-    static kh field_a;
+    static Model field_a;
 
     final int[] a(int param0, int param1) {
         boolean stackIn_6_1 = false;
@@ -53,7 +53,7 @@ final class tp {
             var4 = (ui) (this.field_d.c(-6938));
             var3 = new ui(param0, var4.field_j);
             this.field_c[var4.field_m] = null;
-            var4.f(0);
+            var4.unlink(0);
           }
           this.field_c[param0] = var3;
         }
@@ -65,7 +65,7 @@ final class tp {
         int var3 = Torquing.field_u;
         int var2 = 0;
         if (param0 < 97) {
-          field_a = (kh) null;
+          field_a = (Model) null;
         }
         while (this.field_k > var2) {
           this.field_f[var2] = null;
@@ -128,7 +128,7 @@ final class tp {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class tp {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -187,7 +187,7 @@ final class tp {
     tp(int param0, int param1, int param2) {
         this.field_l = -1;
         this.field_j = 0;
-        this.field_d = new ei();
+        this.field_d = new IntrusiveDeque();
         this.field_b = false;
         this.field_p = param1;
         this.field_k = param0;

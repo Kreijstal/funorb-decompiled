@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class je implements el {
+final class je implements WidgetRenderer {
     private int field_d;
     private int field_b;
-    static la field_f;
+    static ResourceArchive field_f;
     static String field_i;
     static int field_a;
     static th field_g;
-    static t field_e;
+    static Sprite field_e;
     private uc field_h;
     static boolean field_c;
 
-    public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -37,27 +37,27 @@ final class je implements el {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_m + "</u>", param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, var6_int, -1, this.field_b, this.field_d, this.field_h.field_t + this.field_h.field_x);
+          this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.text + "</u>", param4.x + param2, param4.y + param1, param4.width, param4.height, var6_int, -1, this.field_b, this.field_d, this.field_h.field_t + this.field_h.field_x);
           if (!param4.g(2)) {
             return;
           }
-          var7 = this.field_h.a(param4.field_m);
+          var7 = this.field_h.a(param4.text);
           var8 = this.field_h.field_x + this.field_h.field_t;
-          var9 = param4.field_w + param2;
-          var10 = param4.field_k + param1;
+          var9 = param4.x + param2;
+          var10 = param4.y + param1;
           if (this.field_b != 2) {
             if (1 == this.field_b) {
-              var9 = var9 + (-var7 + param4.field_p >> 1);
+              var9 = var9 + (-var7 + param4.width >> 1);
             }
           } else {
-            var9 = var9 + (param4.field_p - var7);
+            var9 = var9 + (param4.width - var7);
           }
           if (this.field_d != 2) {
             if (1 == this.field_d) {
-              var10 = var10 + (param4.field_o - var8 >> 1);
+              var10 = var10 + (param4.height - var8 >> 1);
             }
           } else {
-            var10 = var10 + (-var8 + param4.field_o);
+            var10 = var10 + (-var8 + param4.height);
           }
           he.a(-2 + var9, var8, var10 + 2, 2, 4 + var7);
           return;
@@ -71,7 +71,7 @@ final class je implements el {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -83,11 +83,11 @@ final class je implements el {
         field_f = null;
     }
 
-    final static kh a(la param0, String param1, String param2, byte param3) {
-        rm var4 = null;
+    final static Model a(ResourceArchive param0, String param1, String param2, byte param3) {
+        MeshGeometry var4 = null;
         RuntimeException var4_ref = null;
         Object stackIn_4_0 = null;
-        kh stackIn_6_0 = null;
+        Model stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -97,16 +97,16 @@ final class je implements el {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = rm.a(param0, param1, param2);
+          var4 = MeshGeometry.a(param0, param1, param2);
           if (param3 > -116) {
             field_a = -35;
           }
           if (var4 != null) {
-            stackIn_6_0 = new kh(var4);
+            stackIn_6_0 = new Model(var4);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (kh) (stackIn_4_0);
+          return (Model) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
@@ -129,7 +129,7 @@ final class je implements el {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class je implements el {
             return;
           }
           var3 = (String) null;
-          je.a((la) null, (String) null, (String) null, (byte) 82);
+          je.a((ResourceArchive) null, (String) null, (String) null, (byte) 82);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,11 +167,11 @@ final class je implements el {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final static pp a(int param0, int param1, vh param2, int param3, int param4, int param5) {
+    final static pp a(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         pp var7 = null;
@@ -210,7 +210,7 @@ final class je implements el {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -234,7 +234,7 @@ final class je implements el {
           this.field_h = param0;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

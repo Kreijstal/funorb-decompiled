@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ub extends lg {
-    static mm field_G;
+    static UrlRequest field_G;
     private int field_H;
     private sk field_F;
     static int field_E;
@@ -16,10 +16,10 @@ final class ub extends lg {
         int var9;
         int var10;
         int var11;
-        t var13;
-        t var14;
-        t var15;
-        t var16;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = Torquing.field_u;
@@ -30,27 +30,27 @@ final class ub extends lg {
         if (param1 > -7) {
           return;
         }
-        var5 = (this.field_p >> 1) + this.field_w + param3;
-        var6 = this.field_k + param2 + (this.field_o >> 1);
+        var5 = (this.width >> 1) + this.x + param3;
+        var6 = this.y + param2 + (this.height >> 1);
         var8 = this.field_F.a((byte) -87);
-        if (var8 == q.field_a) {
+        if (var8 == IntrusiveNode.field_a) {
           var16 = wj.field_h[0];
           var9 = var16.field_w << 1;
           var10 = var16.field_u << 1;
           if (dp.field_b == null) {
-            dp.field_b = new t(var9, var10);
-            tm.a((byte) 99, dp.field_b);
+            dp.field_b = new Sprite(var9, var10);
+            GzipDecompressor.a((byte) 99, dp.field_b);
           } else {
             if (dp.field_b.field_s < var9) {
-              dp.field_b = new t(var9, var10);
-              tm.a((byte) 99, dp.field_b);
+              dp.field_b = new Sprite(var9, var10);
+              GzipDecompressor.a((byte) 99, dp.field_b);
             } else {
               if (var10 > dp.field_b.field_t) {
-                dp.field_b = new t(var9, var10);
-                tm.a((byte) 99, dp.field_b);
+                dp.field_b = new Sprite(var9, var10);
+                GzipDecompressor.a((byte) 99, dp.field_b);
               } else {
-                tm.a((byte) -105, dp.field_b);
-                ph.b();
+                GzipDecompressor.a((byte) -105, dp.field_b);
+                SoftwareRasterizer.b();
               }
             }
           }
@@ -59,7 +59,7 @@ final class ub extends lg {
           dp.field_b.a(-var16.field_w + var5, -var16.field_u + var6, 256);
           return;
         }
-        if (gn.field_h != var8) {
+        if (IsaacCipher.field_h != var8) {
           if (var8 == so.field_u) {
             var14 = wj.field_h[2];
             var14.a(-(var14.field_s >> 1) + var5, var6 - (var14.field_t >> 1), 256);
@@ -76,19 +76,19 @@ final class ub extends lg {
         var9Lifetime1 = var15.field_w << 1;
         var10Lifetime1 = var15.field_u << 1;
         if (dp.field_b == null) {
-          dp.field_b = new t(var9Lifetime1, var10Lifetime1);
-          tm.a((byte) 99, dp.field_b);
+          dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
+          GzipDecompressor.a((byte) 99, dp.field_b);
         } else {
           if (dp.field_b.field_s < var9Lifetime1) {
-            dp.field_b = new t(var9Lifetime1, var10Lifetime1);
-            tm.a((byte) 99, dp.field_b);
+            dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
+            GzipDecompressor.a((byte) 99, dp.field_b);
           } else {
             if (var10Lifetime1 > dp.field_b.field_t) {
-              dp.field_b = new t(var9Lifetime1, var10Lifetime1);
-              tm.a((byte) 99, dp.field_b);
+              dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
+              GzipDecompressor.a((byte) 99, dp.field_b);
             } else {
-              tm.a((byte) -105, dp.field_b);
-              ph.b();
+              GzipDecompressor.a((byte) -105, dp.field_b);
+              SoftwareRasterizer.b();
             }
           }
         }
@@ -130,7 +130,7 @@ final class ub extends lg {
         }
     }
 
-    final boolean a(gm param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -151,17 +151,17 @@ final class ub extends lg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, gm param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_H = this.field_H + 1;
           int var5_int = -105 % ((param0 + 28) / 43);
           super.a(-84, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ub.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ub.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class ub extends lg {
         try {
           this.field_F = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

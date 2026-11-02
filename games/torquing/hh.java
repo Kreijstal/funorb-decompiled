@@ -4,9 +4,9 @@
 final class hh {
     static boolean[] field_d;
     static int field_a;
-    static t[] field_b;
+    static Sprite[] field_b;
     static String field_c;
-    static t[] field_e;
+    static Sprite[] field_e;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -22,7 +22,7 @@ final class hh {
 
     final static boolean a(int param0) {
         hg.field_c = true;
-        ta.field_k = 15000L + km.b(-1);
+        DualLinkNode.field_k = 15000L + km.b(-1);
         if (param0 == 64) {
           return op.field_i == 11 ? true : false;
         }

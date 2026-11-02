@@ -5,7 +5,7 @@ import java.util.*;
 
 final class rg extends am {
     private int field_B;
-    static la field_v;
+    static ResourceArchive field_v;
     private int field_A;
     private int field_s;
     private int field_w;
@@ -61,7 +61,7 @@ final class rg extends am {
         int var36;
         int var37;
         int var38;
-        fj var39;
+        PacketBuffer var39;
         int[][] var40;
         int[] var42;
         int[] var43;
@@ -79,8 +79,8 @@ final class rg extends am {
         var38 = Torquing.field_u;
         var3 = this.field_l.a(param1, 25657);
         if (param0 < 86) {
-          var39 = (fj) null;
-          this.a((fj) null, 116, -30);
+          var39 = (PacketBuffer) null;
+          this.a((PacketBuffer) null, 116, -30);
         }
         if (this.field_l.field_b) {
           var47 = this.field_l.a(0);
@@ -116,7 +116,7 @@ final class rg extends am {
               var23 = ci.field_c - var8;
               var25 = ci.field_c;
             }
-            L4: {
+            regionExit1: {
               if (var11 == 0) {
                 var48Lifetime1 = var20;
                 var26_int = var9;
@@ -169,7 +169,7 @@ final class rg extends am {
                       }
                     }
                     var9 = var26_int;
-                    break L4;
+                    break regionExit1;
                   }
                   var28++;
                   var26_int++;
@@ -443,7 +443,7 @@ final class rg extends am {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -466,7 +466,7 @@ final class rg extends am {
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -482,32 +482,32 @@ final class rg extends am {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_y = param0.i(param1 + 7053);
+              this.field_y = param0.readUnsignedShort(param1 + 7053);
             } else {
               if (var4_int == 2) {
-                this.field_t = param0.i(7088);
+                this.field_t = param0.readUnsignedShort(7088);
               } else {
                 if (var4_int == 3) {
-                  this.field_A = param0.i(param1 + 7053);
+                  this.field_A = param0.readUnsignedShort(param1 + 7053);
                 } else {
                   if (var4_int != 4) {
                     if (var4_int != 5) {
                       if (var4_int != 6) {
                         if (var4_int == 7) {
-                          this.field_z = param0.i(7088);
+                          this.field_z = param0.readUnsignedShort(7088);
                         } else {
                           if (8 == var4_int) {
-                            this.field_u = param0.i(7088);
+                            this.field_u = param0.readUnsignedShort(7088);
                           }
                         }
                       } else {
                         this.field_x = param0.i((byte) -101);
                       }
                     } else {
-                      this.field_w = param0.i(7088);
+                      this.field_w = param0.readUnsignedShort(7088);
                     }
                   } else {
-                    this.field_D = param0.i(7088);
+                    this.field_D = param0.readUnsignedShort(7088);
                   }
                 }
               }
@@ -526,13 +526,13 @@ final class rg extends am {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static uh a(boolean param0) {
+    final static PcmStreamMixer a(boolean param0) {
         if (!param0) {
-          return (uh) null;
+          return (PcmStreamMixer) null;
         }
         return tn.field_l;
     }
@@ -545,7 +545,7 @@ final class rg extends am {
         field_v = null;
     }
 
-    final static void a(int param0, int param1, of param2, int param3, byte param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, VertexMesh param2, int param3, byte param4, int param5, int param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -591,7 +591,7 @@ final class rg extends am {
         int var40 = 0;
         int[] var41 = null;
         int var44 = 0;
-        of var45 = null;
+        VertexMesh var45 = null;
         int[] var50 = null;
         int[] var55 = null;
         byte[] var61 = null;
@@ -621,7 +621,7 @@ final class rg extends am {
           var65 = new int[param2.field_C];
           var63 = m.field_c;
           var62 = pm.field_s;
-          var64 = tm.field_e;
+          var64 = GzipDecompressor.field_e;
           for (var13 = 0; param2.field_C > var13; var13++) {
             var14 = var62[var13] * param7 + (var63[var13] * param0 + param3 * var64[var13]) >> 8;
             if (var14 < 0) {
@@ -650,7 +650,7 @@ final class rg extends am {
             var65[var13] = var15Lifetime2;
           }
           if (param4 < 120) {
-            field_v = (la) null;
+            field_v = (ResourceArchive) null;
           }
           var44 = 0;
           var13Lifetime1 = var44;
@@ -687,11 +687,11 @@ final class rg extends am {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = kh.field_m[var15Lifetime1];
+            var22 = Model.field_m[var15Lifetime1];
             var23 = u.field_w[var15Lifetime1];
-            var24 = kh.field_m[var16];
+            var24 = Model.field_m[var16];
             var25 = u.field_w[var16];
-            var26 = kh.field_m[var17];
+            var26 = Model.field_m[var17];
             var27 = u.field_w[var17];
             if (var18 == var19 &&
               var20 == var19) {
@@ -744,7 +744,7 @@ final class rg extends am {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

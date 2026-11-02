@@ -32,11 +32,11 @@ final class qg extends am {
         vo.field_a[91] = 42;
         if (param0 > -45) {
           String var2 = (String) null;
-          qg.a((la) null, (la) null, (String) null, (String) null, 100);
+          qg.a((ResourceArchive) null, (ResourceArchive) null, (String) null, (String) null, 100);
         }
     }
 
-    final static vn a(la param0, la param1, String param2, String param3, int param4) {
+    final static vn a(ResourceArchive param0, ResourceArchive param1, String param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -89,13 +89,13 @@ final class qg extends am {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void a(double param0, double[] param1, int param2, double param3, boolean param4) {
         boolean stackIn_16_0 = false;
-        gg[] stackIn_16_1 = null;
+        PcmSample[] stackIn_16_1 = null;
         int stackIn_17_2 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -136,7 +136,7 @@ final class qg extends am {
                 } else {
                   stackIn_17_2 = 26;
                 }
-                ip.a(stackIn_16_0, nj.a(stackIn_16_1[stackIn_17_2], var8, var7_int));
+                ip.a(stackIn_16_0, PcmSampleStream.a(stackIn_16_1[stackIn_17_2], var8, var7_int));
               }
               if (0.0 == param0 &&
                 var8 > 150) {
@@ -162,7 +162,7 @@ final class qg extends am {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class qg extends am {
             gp.field_K = 2147483647;
             ln.field_F = 2147483647;
             hl.field_a = 2147483647;
-            var15 = q.field_b[var14] * this.field_D + 2048;
+            var15 = IntrusiveNode.field_b[var14] * this.field_D + 2048;
             var16 = var15 >> 12;
             var17 = var16 + 1;
             for (var8 = var5 - 1; var6 >= var8; var8++) {
@@ -350,7 +350,7 @@ final class qg extends am {
         return var3;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int dupTemp$0 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -384,7 +384,7 @@ final class qg extends am {
                   this.field_t = param0.i((byte) -101);
                 }
               } else {
-                this.field_s = param0.i(7088);
+                this.field_s = param0.readUnsignedShort(7088);
               }
             } else {
               this.field_x = param0.i((byte) -101);
@@ -405,7 +405,7 @@ final class qg extends am {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

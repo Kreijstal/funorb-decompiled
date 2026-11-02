@@ -28,32 +28,32 @@ final class i extends im implements ng {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gm var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (ab.field_l == param1) {
             var3 = ak.field_h;
           } else {
             if (bl.field_b == param1) {
-              this.field_o = this.field_o + 10;
+              this.height = this.height + 10;
               var3 = wj.field_j;
               if (nh.a(-116)) {
-                this.field_o = this.field_o + 20;
+                this.height = this.height + 20;
                 var3 = jg.field_v;
               }
             } else {
               if (param1 == ip.field_b) {
                 var3 = dn.field_c;
-                this.field_o = this.field_o + 30;
+                this.height = this.height + 30;
               }
             }
           }
-          var4 = new gm((String) (var3), (ca) null);
-          var4.field_o = 80;
-          var4.field_w = 0;
-          var4.field_p = this.field_p;
-          var4.field_k = 50;
-          var4.field_q = (el) ((Object) new pc(sp.field_R, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4 = new UiWidget((String) (var3), (ca) null);
+          var4.height = 80;
+          var4.x = 0;
+          var4.width = this.width;
+          var4.y = 50;
+          var4.renderer = (WidgetRenderer) ((Object) new pc(sp.field_R, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, -6938);
           this.field_O = this.a((ca) (this), true, qd.field_i);
           return;
@@ -73,7 +73,7 @@ final class i extends im implements ng {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class i extends im implements ng {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -173,10 +173,10 @@ final class i extends im implements ng {
           if (!param1) {
             field_R = true;
           }
-          var4.field_q = (el) ((Object) new rf());
-          var5 = -6 + this.field_o;
-          this.field_o = this.field_o + 38;
-          var4.a((byte) -85, 15, var5, 30, -16 + (-14 + this.field_p));
+          var4.renderer = (WidgetRenderer) ((Object) new rf());
+          var5 = -6 + this.height;
+          this.height = this.height + 38;
+          var4.a((byte) -85, 15, var5, 30, -16 + (-14 + this.width));
           this.a(var4, -6938);
           this.e((byte) 88);
           stackIn_3_0 = var4;
@@ -197,7 +197,7 @@ final class i extends im implements ng {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

@@ -5,9 +5,9 @@ final class rh {
     static bp field_c;
     static String field_a;
     static int field_d;
-    static rc field_b;
+    static PlatformTask field_b;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, t[] param5) {
+    final static void a(int param0, int param1, byte param2, int param3, int param4, Sprite[] param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -92,71 +92,71 @@ final class rh {
               var19 = param3 + param1 * var8 / (var9 + var8);
               var18 = param3 + param1 * var8 / (var9 + var8);
             }
-            ph.b(al.field_d);
+            SoftwareRasterizer.b(al.field_d);
             if (null != param5[0]) {
-              ph.f(param0, param3, var16, var18);
+              SoftwareRasterizer.f(param0, param3, var16, var18);
               param5[0].d(param0, param3);
-              ph.a(al.field_d);
+              SoftwareRasterizer.a(al.field_d);
             }
             if (null != param5[2]) {
-              ph.f(var17, param3, var10, var18);
+              SoftwareRasterizer.f(var17, param3, var10, var18);
               param5[2].d(var13, param3);
-              ph.a(al.field_d);
+              SoftwareRasterizer.a(al.field_d);
             }
             if (param5[6] != null) {
-              ph.f(param0, var19, var16, var11);
+              SoftwareRasterizer.f(param0, var19, var16, var11);
               param5[6].d(param0, var15);
-              ph.a(al.field_d);
+              SoftwareRasterizer.a(al.field_d);
             }
             if (null != param5[8]) {
-              ph.f(var17, var19, var10, var11);
+              SoftwareRasterizer.f(var17, var19, var10, var11);
               param5[8].d(var13, var15);
-              ph.a(al.field_d);
+              SoftwareRasterizer.a(al.field_d);
             }
             if (null != param5[1] &&
               0 != param5[1].field_w) {
-              ph.f(var16, param3, var17, var18);
+              SoftwareRasterizer.f(var16, param3, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param5[1].field_w) {
                 param5[1].d(var20, param3);
               }
-              ph.a(al.field_d);
+              SoftwareRasterizer.a(al.field_d);
             }
             if (null != param5[7] &&
               param5[7].field_w != 0) {
-              ph.f(var16, var19, var17, var11);
+              SoftwareRasterizer.f(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param5[7].field_w) {
                 param5[7].d(var20Lifetime1, var15);
               }
-              ph.a(al.field_d);
+              SoftwareRasterizer.a(al.field_d);
             }
             if (param5[3] != null &&
               param5[3].field_u != 0) {
-              ph.f(param0, var18, var16, var19);
+              SoftwareRasterizer.f(param0, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param5[3].field_u) {
                 param5[3].d(param0, var20Lifetime2);
               }
-              ph.a(al.field_d);
+              SoftwareRasterizer.a(al.field_d);
             }
             if (param5[5] != null &&
               param5[5].field_u != 0) {
-              ph.f(var17, var18, var10, var19);
+              SoftwareRasterizer.f(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param5[5].field_u) {
                 param5[5].d(var13, var20Lifetime3);
               }
-              ph.a(al.field_d);
+              SoftwareRasterizer.a(al.field_d);
             }
             if (param5[4] != null &&
               param5[4].field_w != 0) {
               if (param5[4].field_u == 0) {
                 return;
               }
-              ph.f(var16, var18, var17, var19);
+              SoftwareRasterizer.f(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param5[4].field_u) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_w) {
                   param5[4].d(var21, var20Lifetime4);
                 }
               }
-              ph.a(al.field_d);
+              SoftwareRasterizer.a(al.field_d);
             }
             return;
           }
@@ -171,18 +171,18 @@ final class rh {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
         }
     }
 
-    final static uf[] a(byte param0, uf[] param1, t param2, String param3) {
+    final static TooltipPanel[] a(byte param0, TooltipPanel[] param1, Sprite param2, String param3) {
         RuntimeException var4 = null;
         int var5 = 0;
-        uf[] var6 = null;
-        uf var7 = null;
-        uf var8 = null;
-        uf var9 = null;
-        uf[] stackIn_3_0 = null;
+        TooltipPanel[] var6 = null;
+        TooltipPanel var7 = null;
+        TooltipPanel var8 = null;
+        TooltipPanel var9 = null;
+        TooltipPanel[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -195,15 +195,15 @@ final class rh {
           var5 = -105 / ((52 - param0) / 57);
           var8 = param1[-1 + param1.length];
           if (!var8.a(param2, param3, 250)) {
-            var7 = new uf(var8.field_b, var8.field_j, var8.field_m, var8.field_k, var8.field_e, var8.field_o, var8.field_d);
+            var7 = new TooltipPanel(var8.field_b, var8.field_j, var8.field_m, var8.field_k, var8.field_e, var8.field_o, var8.field_d);
             var9 = var7;
             var9.a(param2, param3, 250);
-            var6 = new uf[1 + param1.length];
+            var6 = new TooltipPanel[1 + param1.length];
             dk.a(param1, 0, var6, 0, param1.length);
             var6[param1.length] = var7;
             param1 = var6;
           }
-          stackIn_3_0 = (uf[]) (param1);
+          stackIn_3_0 = (TooltipPanel[]) (param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -227,7 +227,7 @@ final class rh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -238,8 +238,8 @@ final class rh {
           di.a(param3, (byte) 56, param4, qd.field_a[param2], param1);
         }
         if (param0 > -107) {
-          t[] var6 = (t[]) null;
-          rh.a(-75, 48, (byte) 27, -12, -103, (t[]) null);
+          Sprite[] var6 = (Sprite[]) null;
+          rh.a(-75, 48, (byte) 27, -12, -103, (Sprite[]) null);
         }
     }
 
@@ -286,7 +286,7 @@ final class rh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class jb {
     int field_a;
-    static fj field_c;
+    static PacketBuffer field_c;
     static String field_e;
     static int field_d;
     static ia field_b;
@@ -21,7 +21,7 @@ final class jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "jb.A(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "jb.A(" + param0 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class jb {
           var8[0] = 0.0;
           var9[1] = 0.0;
           var10 = null;
-          L1: while (null == var10) {
+          scanLoop1: while (null == var10) {
             var10 = ll.a(mg.field_a, vf.field_e, (byte) 123);
             if (null != var10) {
               var11_int = 0;
@@ -102,7 +102,7 @@ final class jb {
                 var12_ref_double__[8] = 0.0;
                 var11_intLifetime2++;
                 if (var17 != 0) {
-                  continue L1;
+                  continue scanLoop1;
                 }
               }
               if (var17 == 0) {
@@ -138,11 +138,11 @@ final class jb {
               var15[var16] = 0.0;
               var14Lifetime1++;
               if (var17 != 0) {
-                continue L1;
+                continue scanLoop1;
               }
             }
             if (var17 == 0) {
-              continue L1;
+              continue scanLoop1;
             }
             break;
           }
@@ -192,7 +192,7 @@ final class jb {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -210,15 +210,15 @@ final class jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "jb.B(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "jb.B(" + param0 + ')');
         }
     }
 
-    final static t[] a(int param0, la param1, String param2, String param3) {
+    final static Sprite[] a(int param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        t[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -230,7 +230,7 @@ final class jb {
         try {
           var4_int = param1.a(-1, param3);
           if (param0 != 0) {
-            jb.a(-44, (la) null, (String) null, (String) null);
+            jb.a(-44, (ResourceArchive) null, (String) null, (String) null);
           }
           var5 = param1.a(param2, -110, var4_int);
           stackIn_4_0 = gk.a(105, var4_int, param1, var5);
@@ -257,12 +257,12 @@ final class jb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     static {
-        field_c = new fj(256);
+        field_c = new PacketBuffer(256);
         field_d = -1;
     }
 

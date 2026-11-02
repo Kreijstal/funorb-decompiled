@@ -51,7 +51,7 @@ final class mj {
             var8 = param0[var5_int] << var6 & 255 | (param0[1 + var5_int] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_h[this.field_e] = (byte)gm.a((int) this.field_h[this.field_e], var8 >>> var7);
+              this.field_h[this.field_e] = (byte)UiWidget.a((int) this.field_h[this.field_e], var8 >>> var7);
               this.field_b = this.field_b + (-var7 + 8);
               this.field_e = this.field_e + 1;
               if (this.field_b == 512) {
@@ -71,7 +71,7 @@ final class mj {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param0[var5_int] << var6 & 255;
-            this.field_h[this.field_e] = (byte)gm.a((int) this.field_h[this.field_e], var8Lifetime1 >>> var7);
+            this.field_h[this.field_e] = (byte)UiWidget.a((int) this.field_h[this.field_e], var8Lifetime1 >>> var7);
           }
           if (param1 + (long)var7 < 8L) {
             this.field_b = (int)((long)this.field_b + param1);
@@ -98,7 +98,7 @@ final class mj {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class mj {
         int var8 = 0;
         var8 = Torquing.field_u;
         try {
-          this.field_h[this.field_e] = (byte)gm.a((int) this.field_h[this.field_e], param2 >>> ie.a(7, this.field_b));
+          this.field_h[this.field_e] = (byte)UiWidget.a((int) this.field_h[this.field_e], param2 >>> ie.a(7, this.field_b));
           this.field_e = this.field_e + 1;
           if (this.field_e > 32) {
             while (64 > this.field_e) {
@@ -160,7 +160,7 @@ final class mj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 

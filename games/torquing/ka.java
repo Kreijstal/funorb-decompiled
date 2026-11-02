@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ka extends q {
+final class ka extends IntrusiveNode {
     int field_m;
     static int[][] field_n;
     int field_k;
@@ -163,8 +163,8 @@ final class ka extends q {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            fd.field_k = new String[var4];
-            dk.a(dd.field_e, 0, fd.field_k, 0, var4);
+            ArchiveIndex.field_k = new String[var4];
+            dk.a(dd.field_e, 0, ArchiveIndex.field_k, 0, var4);
             ib.field_c = new String[-1 - var4 + var3_int];
             dk.a(dd.field_e, var4 + 1, ib.field_c, 0, -1 + var3_int - var4);
             var3_int = rf.a(dd.field_e, bo.field_e, field_j, 122, ff.a(new String[]{"<br><%0><br>"}, 0, k.field_f));
@@ -181,18 +181,18 @@ final class ka extends q {
             }
             qh.field_b = new String[var4];
             dk.a(dd.field_e, 0, qh.field_b, 0, var4);
-            me.field_a = new String[var3_int - var4 - 1];
-            dk.a(dd.field_e, 1 + var4, me.field_a, 0, -1 + var3_int - var4);
-            if (fd.field_k.length < qh.field_b.length) {
+            ArchiveSource.field_a = new String[var3_int - var4 - 1];
+            dk.a(dd.field_e, 1 + var4, ArchiveSource.field_a, 0, -1 + var3_int - var4);
+            if (ArchiveIndex.field_k.length < qh.field_b.length) {
               stackIn_30_0 = qh.field_b.length;
             } else {
-              stackIn_30_0 = fd.field_k.length;
+              stackIn_30_0 = ArchiveIndex.field_k.length;
             }
             var5 = stackIn_30_0;
-            if (ib.field_c.length >= me.field_a.length) {
+            if (ib.field_c.length >= ArchiveSource.field_a.length) {
               stackIn_33_0 = ib.field_c.length;
             } else {
-              stackIn_33_0 = me.field_a.length;
+              stackIn_33_0 = ArchiveSource.field_a.length;
             }
             var6 = stackIn_33_0;
             var7 = var5 + (7 + var6);
@@ -208,7 +208,7 @@ final class ka extends q {
             di.field_e[1] = 2;
             di.field_e[0] = 5;
             wh.field_z[5] = "";
-            wh.field_z[2] = gn.field_f;
+            wh.field_z[2] = IsaacCipher.field_f;
             mn.field_Z[3] = 1;
             wh.field_z[3] = fo.field_E;
             wh.field_z[4] = gp.field_Q;
@@ -227,8 +227,8 @@ final class ka extends q {
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_46_0 = wh.field_z;
               stackIn_46_1 = 7 + var5 + var8Lifetime3;
-              if (var8Lifetime3 < me.field_a.length) {
-                stackIn_47_2 = me.field_a[var8Lifetime3];
+              if (var8Lifetime3 < ArchiveSource.field_a.length) {
+                stackIn_47_2 = ArchiveSource.field_a[var8Lifetime3];
               } else {
                 stackIn_47_2 = "";
               }
@@ -249,7 +249,7 @@ final class ka extends q {
             ka.a(true, '+');
           }
           if (2 == go.field_x) {
-            var10 = fd.field_k;
+            var10 = ArchiveIndex.field_k;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
@@ -269,7 +269,7 @@ final class ka extends q {
           }
           bh.field_b = vk.field_A + var3_intLifetime1 - (var3_intLifetime1 >> 1);
           v.field_a = -(var3_intLifetime1 >> 1) + vk.field_A;
-          ii.field_k = (hn.field_z + ln.field_D << 1) * kb.field_g.field_i;
+          ii.field_k = (WidgetContainer.field_z + ln.field_D << 1) * kb.field_g.field_i;
           for (var4Lifetime2 = 0; wh.field_z.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_116_0 = ii.field_k;
             if (0 <= mn.field_Z[var4Lifetime2]) {
@@ -289,14 +289,14 @@ final class ka extends q {
               var5Lifetime3 = var5Lifetime3 + bp.field_e;
             } else {
               var7Lifetime2 = mh.a(true, -119, wh.field_z[var4Lifetime3]);
-              var5Lifetime3 = var5Lifetime3 + hn.field_z;
+              var5Lifetime3 = var5Lifetime3 + WidgetContainer.field_z;
               var8Lifetime1 = vk.field_A - (var7Lifetime2 >> 1);
               kb.field_e[var4Lifetime3] = new int[4];
               kb.field_e[var4Lifetime3][0] = -aq.field_b + var8Lifetime1;
               kb.field_e[var4Lifetime3][1] = var5Lifetime3;
               kb.field_e[var4Lifetime3][2] = var7Lifetime2 + (aq.field_b << 1);
               kb.field_e[var4Lifetime3][3] = (ln.field_D << 1) + kp.field_d;
-              var5Lifetime3 = var5Lifetime3 + (hn.field_z + ((ln.field_D << 1) + kp.field_d));
+              var5Lifetime3 = var5Lifetime3 + (WidgetContainer.field_z + ((ln.field_D << 1) + kp.field_d));
             }
             var4Lifetime3++;
           }
@@ -309,7 +309,7 @@ final class ka extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var3), "ka.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var3), "ka.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -480,12 +480,12 @@ final class ka extends q {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(int param0, java.awt.Frame param1, vh param2) {
-        rc var3 = null;
+    final static void a(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -498,10 +498,10 @@ final class ka extends q {
         try {
           while (true) {
             var3 = param2.a(false, param1);
-            while (0 == var3.field_a) {
+            while (0 == var3.status) {
               ub.a(1976, 10L);
             }
-            if (var3.field_a != 1) {
+            if (var3.status != 1) {
               ub.a(1976, 100L);
               continue;
             }
@@ -529,7 +529,7 @@ final class ka extends q {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

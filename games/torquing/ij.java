@@ -35,7 +35,7 @@ final class ij extends gf {
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = this.field_m.field_m.toLowerCase();
+          var6 = this.field_m.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (0 == var4.length()) {
             stackIn_2_0 = null;
@@ -49,7 +49,7 @@ final class ij extends gf {
             stackIn_8_0 = dj.field_b;
             return stackIn_8_0;
           }
-          if (hk.a(true, var5)) {
+          if (GameApplet.a(true, var5)) {
             stackIn_12_0 = nh.field_q;
             return stackIn_12_0;
           }
@@ -65,7 +65,7 @@ final class ij extends gf {
             stackIn_33_0 = ci.field_b;
             return stackIn_33_0;
           }
-          if (tm.a(true, var5, var6)) {
+          if (GzipDecompressor.a(true, var5, var6)) {
             stackIn_23_0 = jn.field_a;
             return stackIn_23_0;
           }
@@ -89,7 +89,7 @@ final class ij extends gf {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class ij extends gf {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = 15 % ((79 - param0) / 43);
-          var3 = this.field_n.field_m.toLowerCase();
+          var3 = this.field_n.text.toLowerCase();
           var5 = param1.toLowerCase();
           if (var3.length() > 0) {
             if (var5.length() <= 0) {
@@ -137,7 +137,7 @@ final class ij extends gf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class ij extends gf {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_m.field_m.toLowerCase();
+          var3 = this.field_m.text.toLowerCase();
           if (param0 <= 62) {
             stackIn_2_0 = (cd) null;
             return stackIn_2_0;
@@ -185,7 +185,7 @@ final class ij extends gf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ final class ij extends gf {
         Object var5 = null;
         int var6 = 0;
         qa var9 = null;
-        df var10 = null;
+        IsaacPacketBuffer var10 = null;
         byte[] var14 = null;
         var6 = Torquing.field_u;
         try {
@@ -218,12 +218,12 @@ final class ij extends gf {
             } else {
               var5 = null;
             }
-            var10.field_n = var10.field_n + 4;
+            var10.position = var10.position + 4;
             if (!var10.h(-31017)) {
               ih.b(true);
               return;
             }
-            var9.f(0);
+            var9.unlink(0);
           } else {
             if (1 == var2) {
               var3 = var10.c((byte) -59);
@@ -239,9 +239,9 @@ final class ij extends gf {
                 ih.b(true);
                 return;
               }
-              var4_ref_ni.f(0);
+              var4_ref_ni.unlink(0);
             } else {
-              nn.a("A1: " + me.a(-1), (Throwable) null, -9958);
+              nn.a("A1: " + ArchiveSource.a(-1), (Throwable) null, -9958);
               ih.b(true);
             }
           }
@@ -252,7 +252,7 @@ final class ij extends gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "ij.O(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "ij.O(" + param0 + ')');
         }
     }
 
@@ -262,7 +262,7 @@ final class ij extends gf {
           this.field_m = param1;
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -345,7 +345,7 @@ final class ij extends gf {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
         }
     }
 

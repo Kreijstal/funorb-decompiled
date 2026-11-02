@@ -15,11 +15,11 @@ final class oh {
           return;
         }
         if (null == d.field_r) {
-          gm.c(-68);
+          UiWidget.c(-68);
           return;
         }
         d.field_r.h((byte) 86);
-        gm.c(-68);
+        UiWidget.c(-68);
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
@@ -119,7 +119,7 @@ final class oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var6), "oh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var6), "oh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

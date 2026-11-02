@@ -3,10 +3,10 @@
  */
 final class dj {
     static int[] field_c;
-    static t[] field_a;
+    static Sprite[] field_a;
     static String field_b;
 
-    final static int a(int param0, int param1, int param2, rm param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final static int a(int param0, int param1, int param2, MeshGeometry param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var14 = 0;
         int fieldTemp$1 = 0;
         int[] var11 = null;
@@ -34,13 +34,13 @@ final class dj {
           jm.field_e[0] = param3.field_E[param7];
           jm.field_e[1] = param3.field_E[param0];
           jm.field_e[2] = param3.field_E[param1];
-          ml.field_d[2] = param4;
-          ml.field_d[1] = param2;
-          ml.field_d[0] = param5;
+          GameKeyHandler.field_d[2] = param4;
+          GameKeyHandler.field_d[1] = param2;
+          GameKeyHandler.field_d[0] = param5;
           il.field_p[1] = param8;
           il.field_p[0] = param10;
           il.field_p[2] = param6;
-          g.a(po.field_x, cl.field_e, jm.field_e, ml.field_d, il.field_p);
+          g.a(po.field_x, cl.field_e, jm.field_e, GameKeyHandler.field_d, il.field_p);
           cd.a(param3, -19729, 3);
           var20 = g.field_b;
           var17 = var20;
@@ -77,7 +77,7 @@ final class dj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 

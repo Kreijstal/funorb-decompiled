@@ -197,28 +197,28 @@ final class te extends am {
         }
         if (param3 < param6) {
           if (param6 < param5) {
-            tk.a(param0, param5, param1, param3, param4, param6, ph.field_e, param7, (byte) 122);
+            tk.a(param0, param5, param1, param3, param4, param6, SoftwareRasterizer.field_e, param7, (byte) 122);
           } else {
             if (param5 > param3) {
-              tk.a(param0, param6, param1, param3, param7, param5, ph.field_e, param4, (byte) 126);
+              tk.a(param0, param6, param1, param3, param7, param5, SoftwareRasterizer.field_e, param4, (byte) 126);
             } else {
-              tk.a(param7, param6, param1, param5, param0, param3, ph.field_e, param4, (byte) 126);
+              tk.a(param7, param6, param1, param5, param0, param3, SoftwareRasterizer.field_e, param4, (byte) 126);
             }
           }
         } else {
           if (param5 <= param3) {
             if (param6 < param5) {
-              tk.a(param4, param3, param1, param6, param7, param5, ph.field_e, param0, (byte) 122);
+              tk.a(param4, param3, param1, param6, param7, param5, SoftwareRasterizer.field_e, param0, (byte) 122);
             } else {
-              tk.a(param7, param3, param1, param5, param4, param6, ph.field_e, param0, (byte) 116);
+              tk.a(param7, param3, param1, param5, param4, param6, SoftwareRasterizer.field_e, param0, (byte) 116);
             }
           } else {
-            tk.a(param4, param5, param1, param6, param0, param3, ph.field_e, param7, (byte) 119);
+            tk.a(param4, param5, param1, param6, param0, param3, SoftwareRasterizer.field_e, param7, (byte) 119);
           }
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_13_1 = false;
@@ -256,7 +256,7 @@ final class te extends am {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

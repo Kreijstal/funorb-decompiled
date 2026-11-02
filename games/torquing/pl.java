@@ -6,7 +6,7 @@ final class pl extends am {
     static String field_u;
     static String field_t;
 
-    final static void a(int param0, int param1, int param2, t[] param3, int param4, t[] param5, int param6, int param7, uc param8, t[] param9, int param10, uc param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4, Sprite[] param5, int param6, int param7, uc param8, Sprite[] param9, int param10, uc param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -59,7 +59,7 @@ final class pl extends am {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -97,9 +97,9 @@ final class pl extends am {
     }
 
     final static void b(int param0, int param1) {
-        if (vc.field_a == null ||
-          vc.field_a.length < param0) {
-          vc.field_a = new int[param0];
+        if (MouseWheelInput.field_a == null ||
+          MouseWheelInput.field_a.length < param0) {
+          MouseWheelInput.field_a = new int[param0];
         }
         if (param1 < 27) {
           pl.c(25);

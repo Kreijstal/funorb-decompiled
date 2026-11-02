@@ -3,7 +3,7 @@
  */
 final class jm extends dp {
     private java.nio.ByteBuffer field_c;
-    static hc field_d;
+    static Level field_d;
     static int[] field_e;
 
     final byte[] a(int param0) {
@@ -26,7 +26,7 @@ final class jm extends dp {
     }
 
     final static void a(int param0, int param1) {
-        q var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         qp var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -47,7 +47,7 @@ final class jm extends dp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2_ref), "jm.B(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "jm.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class jm extends dp {
           this.field_c.position(0);
           this.field_c.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "jm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "jm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

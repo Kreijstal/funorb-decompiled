@@ -26,25 +26,25 @@ final class lb extends nk {
         return this.field_A;
     }
 
-    final static void a(int param0, t[] param1, t[] param2, int param3) {
-        t[] var5 = null;
+    final static void a(int param0, Sprite[] param1, Sprite[] param2, int param3) {
+        Sprite[] var5 = null;
         try {
           wp.field_v = param2;
-          ao.field_a = param1;
+          SocketConnector.field_a = param1;
           wp.field_v[4] = null;
-          var5 = ao.field_a;
-          t[] var4 = var5;
+          var5 = SocketConnector.field_a;
+          Sprite[] var4 = var5;
           var5[param3] = null;
           bo.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "lb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "lb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final int b(int param0) {
         if (param0 <= 91) {
-          t[] var3 = (t[]) null;
-          lb.a(100, (t[]) null, (t[]) null, -50);
+          Sprite[] var3 = (Sprite[]) null;
+          lb.a(100, (Sprite[]) null, (Sprite[]) null, -50);
           if (this.field_r) {
             return 0;
           }

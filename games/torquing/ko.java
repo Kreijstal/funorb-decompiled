@@ -55,12 +55,12 @@ final class ko extends IOException {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8;
         var8 = Torquing.field_u;
-        if (kn.field_e <= param6 &&
+        if (RasterBuffer.field_e <= param6 &&
           qg.field_z >= param3 &&
           j.field_q <= param4 &&
           param1 <= qk.field_p) {
           if (1 == param2) {
-            wo.a(param6, param0, param1, param3, true, param4);
+            SecondaryNodeDequeIterator.a(param6, param0, param1, param3, true, param4);
           } else {
             w.a((byte) 72, param6, param2, param3, param4, param1, param0);
           }

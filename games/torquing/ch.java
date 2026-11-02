@@ -9,7 +9,7 @@ final class ch extends am {
         int var7;
         boolean decompiledFrameRemainder0 = true;
         var7 = Torquing.field_u;
-        var4 = q.field_b[param1];
+        var4 = IntrusiveNode.field_b[param1];
         var5 = dp.field_a[param2];
         var6 = (float)Math.atan2((double)(-2048 + var4), (double)(var5 - param0));
         if ((double)var6 >= -3.141592653589793 &&
@@ -109,11 +109,11 @@ final class ch extends am {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         if (param1 != 35) {
           return;
         }
@@ -122,7 +122,7 @@ final class ch extends am {
             this.field_p = param0.i((byte) -101) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ch.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ch.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

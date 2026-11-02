@@ -20,7 +20,7 @@ final class aj extends jh {
         od.b(128, 17);
     }
 
-    final void a(int param0, gm param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         int stackIn_9_1 = 0;
         int stackIn_12_2 = 0;
         int stackIn_18_1 = 0;
@@ -39,19 +39,19 @@ final class aj extends jh {
             this.field_l == 1) {
             var5_int = n.field_t - this.field_K - param3;
             var6 = k.field_e + (-this.field_G - param2);
-            if (this.field_w != var5_int ||
-              this.field_k != var6) {
-              this.field_k = var6;
-              this.field_w = var5_int;
-              if (this.field_t instanceof sj) {
-                ((sj) (this.field_t)).a(param2, this, (byte) -83, param3);
+            if (this.x != var5_int ||
+              this.y != var6) {
+              this.y = var6;
+              this.x = var5_int;
+              if (this.listener instanceof sj) {
+                ((sj) (this.listener)).a(param2, this, (byte) -83, param3);
               }
             }
           } else {
             if (this.field_H) {
-              if (this.field_w != this.field_D) {
-                var5_int = this.field_D - this.field_w;
-                stackIn_9_1 = this.field_w;
+              if (this.x != this.field_D) {
+                var5_int = this.field_D - this.x;
+                stackIn_9_1 = this.x;
                 if (Math.abs(var5_int) <= 2) {
                   if (var5_int > 0) {
                     stackIn_12_2 = 1;
@@ -61,11 +61,11 @@ final class aj extends jh {
                 } else {
                   stackIn_12_2 = var5_int >> 1;
                 }
-                this.field_w = stackIn_9_1 + stackIn_12_2;
+                this.x = stackIn_9_1 + stackIn_12_2;
               }
-              if (this.field_k != this.field_I) {
-                var5_int = -this.field_k + this.field_I;
-                stackIn_18_1 = this.field_k;
+              if (this.y != this.field_I) {
+                var5_int = -this.y + this.field_I;
+                stackIn_18_1 = this.y;
                 if (Math.abs(var5_int) > 2) {
                   stackIn_19_2 = var5_int >> 1;
                 } else {
@@ -75,7 +75,7 @@ final class aj extends jh {
                     stackIn_19_2 = -1;
                   }
                 }
-                this.field_k = stackIn_18_1 + stackIn_19_2;
+                this.y = stackIn_18_1 + stackIn_19_2;
               }
             }
           }
@@ -92,11 +92,11 @@ final class aj extends jh {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, gm param4, int param5) {
+    final void a(int param0, int param1, int param2, byte param3, UiWidget param4, int param5) {
         super.a(param0, param1, param2, (byte) 124, param4, param5);
         if (param3 < 109) {
           return;
@@ -104,7 +104,7 @@ final class aj extends jh {
         try {
           this.field_l = 0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "aj.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "aj.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class aj extends jh {
         StringBuilder discarded$70 = null;
         StringBuilder discarded$71 = null;
         RuntimeException var5 = null;
-        gm var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -122,8 +122,8 @@ final class aj extends jh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 117) {
-            var6 = (gm) null;
-            this.a(68, -37, 53, -107, -120, (gm) null, (byte) 32);
+            var6 = (UiWidget) null;
+            this.a(68, -37, 53, -107, -120, (UiWidget) null, (byte) 32);
           }
           if (this.a(param1 ^ -31757, param0, param2, param3)) {
             this.a(param0, param3, true, param2);
@@ -152,21 +152,21 @@ final class aj extends jh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void f(byte param0) {
         super.f((byte) 121);
-        this.field_C.a((byte) 125, 0, 0, this.field_o, this.field_p);
+        this.field_C.a((byte) 125, 0, 0, this.height, this.width);
         if (param0 >= 103) {
-          this.field_I = this.field_k;
-          this.field_D = this.field_w;
+          this.field_I = this.y;
+          this.field_D = this.x;
           return;
         }
     }
 
-    private aj(int param0, int param1, int param2, int param3, el param4, ca param5, gm param6, boolean param7, boolean param8) {
+    private aj(int param0, int param1, int param2, int param3, WidgetRenderer param4, ca param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_I = 2147483647;
         this.field_D = 2147483647;
@@ -175,7 +175,7 @@ final class aj extends jh {
           this.field_C = param6;
           this.field_H = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "aj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "aj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -220,11 +220,11 @@ final class aj extends jh {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_13_0 = 0;
@@ -246,8 +246,8 @@ final class aj extends jh {
             return stackIn_13_0 != 0;
           }
           if (param0 == 1) {
-            this.field_K = -param1 + param4 - this.field_w;
-            this.field_G = -param2 + param3 - this.field_k;
+            this.field_K = -param1 + param4 - this.x;
+            this.field_G = -param2 + param3 - this.y;
             lp.field_d = this;
           }
           this.field_l = param0;
@@ -262,7 +262,7 @@ final class aj extends jh {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(')').toString());
         }
     }
 

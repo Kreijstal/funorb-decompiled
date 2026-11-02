@@ -3,10 +3,10 @@
  */
 final class bp {
     static int field_f;
-    static ei field_a;
+    static IntrusiveDeque field_a;
     static int field_d;
     static int[] field_b;
-    static la field_c;
+    static ResourceArchive field_c;
     static int field_e;
 
     public final String toString() {
@@ -14,8 +14,8 @@ final class bp {
     }
 
     final static void a(wc param0, int param1, int param2) {
-        df var7 = null;
-        df var8 = null;
+        IsaacPacketBuffer var7 = null;
+        IsaacPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Torquing.field_u;
@@ -23,9 +23,9 @@ final class bp {
           var7 = wa.field_d;
           var8 = var7;
           var8.f(91, param2);
-          var8.field_n = var8.field_n + 1;
-          var4 = var8.field_n;
-          var8.b(90, param1);
+          var8.position = var8.position + 1;
+          var4 = var8.position;
+          var8.writeByte(90, param1);
           var8.a(param0.field_q, 118);
           var8.a(param0.field_n, param1 ^ 58);
           var8.a(param0.field_m, 88);
@@ -33,14 +33,14 @@ final class bp {
           var8.b((byte) 60, param0.field_r);
           var8.b((byte) 60, param0.field_o);
           var8.b((byte) 60, param0.field_j);
-          var8.b(90, param0.field_k.length);
+          var8.writeByte(90, param0.field_k.length);
           for (var5 = 0; var5 < param0.field_k.length; var5++) {
             var7.b((byte) 60, param0.field_k[var5]);
           }
           var8.a(var4, true);
-          var8.c((byte) 48, var8.field_n - var4);
+          var8.c((byte) 48, var8.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "bp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -61,12 +61,12 @@ final class bp {
         if (var1 == null) {
           var1 = new bg();
         }
-        var1.a(ph.field_e, ph.field_c, ph.field_h, ph.field_d, ph.field_j, ph.field_a, ph.field_k, 17830);
+        var1.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_c, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d, SoftwareRasterizer.field_j, SoftwareRasterizer.field_a, SoftwareRasterizer.field_k, 17830);
         bf.field_a.a((byte) 54, var1);
     }
 
     static {
-        field_a = new ei();
+        field_a = new IntrusiveDeque();
         field_d = 4;
         field_b = new int[]{28, 28, 112, 397, 421, 0, 156, 156, 156, 156, 56, 156};
     }

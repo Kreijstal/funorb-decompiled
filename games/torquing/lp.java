@@ -6,7 +6,7 @@ final class lp {
     static boolean[] field_e;
     static int[] field_g;
     static int field_c;
-    static la field_a;
+    static ResourceArchive field_a;
     static boolean field_f;
     static int field_b;
 
@@ -72,15 +72,15 @@ final class lp {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static int[] a(int param0, boolean param1, int param2) {
         int var3 = ah.a((byte) 127, param0);
-        int var4 = ao.b(2048, param0);
+        int var4 = SocketConnector.b(2048, param0);
         int var5 = ah.a((byte) 127, param2);
-        int var6 = ao.b(2048, param2);
+        int var6 = SocketConnector.b(2048, param2);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         if (param1) {

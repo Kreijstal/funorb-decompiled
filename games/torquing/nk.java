@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nk extends ta {
+abstract class nk extends DualLinkNode {
     static int[] field_s;
     boolean field_w;
     boolean field_v;
     static String field_q;
-    static vh field_u;
+    static PlatformTaskDispatcher field_u;
     static boolean field_t;
     volatile boolean field_r;
     private static String field_z;

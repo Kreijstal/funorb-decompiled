@@ -9,7 +9,7 @@ final class ip {
 
     final static boolean a(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
-        nj var3 = null;
+        PcmSampleStream var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -17,8 +17,8 @@ final class ip {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -28) {
-            var3 = (nj) null;
-            ip.a(false, (nj) null);
+            var3 = (PcmSampleStream) null;
+            ip.a(false, (PcmSampleStream) null);
           }
           stackIn_3_0 = ij.a(true, 10, param1, -98);
           return stackIn_3_0;
@@ -32,7 +32,7 @@ final class ip {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -63,9 +63,9 @@ final class ip {
         return (java.applet.Applet) ((Object) vk.field_B);
     }
 
-    final static void a(boolean param0, nj param1) {
+    final static void a(boolean param0, PcmSampleStream param1) {
         mc var2 = null;
-        nj var3 = null;
+        PcmSampleStream var3 = null;
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -78,7 +78,7 @@ final class ip {
           while (var2 != null) {
             var3 = var2.field_j;
             if (var3.e()) {
-              var2.f(0);
+              var2.unlink(0);
             } else {
               if (var3.field_m == param1.field_m &&
                 var3.k() == param1.k() &&
@@ -102,11 +102,11 @@ final class ip {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    final static sm[] a(la param0, int param1, String param2, String param3) {
+    final static sm[] a(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -149,7 +149,7 @@ final class ip {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

@@ -6,21 +6,21 @@ abstract class af {
     static String field_b;
 
     final static void a(boolean param0) {
-        t var1 = null;
-        t var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = Torquing.field_u;
         try {
-          var1 = new t(540, 140);
-          tm.a((byte) -121, var1);
+          var1 = new Sprite(540, 140);
+          GzipDecompressor.a((byte) -121, var1);
           be.a();
-          ph.b();
+          SoftwareRasterizer.b();
           jh.field_z = 0;
           so.b(119);
           var2 = var1.c();
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);
-            ph.d(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
           }
           if (!param0) {
             af.a(-61);
@@ -29,7 +29,7 @@ abstract class af {
           var1.c(0, 0);
           r.a(126);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
         }
     }
 

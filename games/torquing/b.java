@@ -69,7 +69,7 @@ final class b extends am {
         if (this.field_l.field_b) {
           var4 = dp.field_a[param1];
           for (var5 = 0; var5 < ci.field_c; var5++) {
-            var7[var5] = this.d(-5951, var4, q.field_b[var5]) % 4096;
+            var7[var5] = this.d(-5951, var4, IntrusiveNode.field_b[var5]) % 4096;
           }
         }
         return var3;

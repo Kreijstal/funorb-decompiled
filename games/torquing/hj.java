@@ -15,20 +15,20 @@ final class hj {
     }
 
     final static void a(boolean param0, int param1) {
-        df var2 = wa.field_d;
+        IsaacPacketBuffer var2 = wa.field_d;
         var2.f(-40, param1);
         if (param0) {
           field_c = (sm) null;
         }
-        var2.b(90, 1);
-        var2.b(90, 2);
+        var2.writeByte(90, 1);
+        var2.writeByte(90, 2);
     }
 
-    final static t a(byte param0, int param1, int param2) {
+    final static Sprite a(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Torquing.field_u;
-        t var6 = new t(param2, param2);
-        t var3 = var6;
+        Sprite var6 = new Sprite(param2, param2);
+        Sprite var3 = var6;
         for (var4 = 0; var4 < var3.field_y.length; var4++) {
           var6.field_y[var4] = param1;
         }
@@ -200,7 +200,7 @@ final class hj {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param9).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param9).append(')').toString());
         }
     }
 

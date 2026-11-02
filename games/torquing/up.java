@@ -6,7 +6,7 @@ final class up {
     static int[] field_b;
     static int field_d;
     static String field_h;
-    static no field_a;
+    static BufferedSocket field_a;
     static int[] field_e;
     private String field_c;
     private boolean field_g;
@@ -35,7 +35,7 @@ final class up {
 
     final String a(byte param0) {
         if (param0 >= -93) {
-          field_a = (no) null;
+          field_a = (BufferedSocket) null;
           return this.field_c;
         }
         return this.field_c;
@@ -54,7 +54,7 @@ final class up {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

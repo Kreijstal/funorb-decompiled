@@ -85,7 +85,7 @@ final class tc {
         int stackIn_54_1 = 0;
         int stackIn_67_0 = 0;
         int stackIn_68_1 = 0;
-        fj var1;
+        PacketBuffer var1;
         int var2;
         tc[] var3;
         int var4;
@@ -111,35 +111,35 @@ final class tc {
         int var7_intLifetime4;
         int var8Lifetime1;
         int var8Lifetime2;
-        var1 = new fj(param0);
-        var1.field_n = param0.length - 2;
-        var2 = var1.i(7088);
+        var1 = new PacketBuffer(param0);
+        var1.position = param0.length - 2;
+        var2 = var1.readUnsignedShort(7088);
         var3 = new tc[var2];
         for (var4 = 0; var4 < var2; var4++) {
           var3[var4] = new tc();
         }
-        var1.field_n = param0.length - 7 - var2 * 8;
-        var4Lifetime1 = var1.i(7088);
-        var5 = var1.i(7088);
+        var1.position = param0.length - 7 - var2 * 8;
+        var4Lifetime1 = var1.readUnsignedShort(7088);
+        var5 = var1.readUnsignedShort(7088);
         var6 = (var1.i((byte) -101) & 255) + 1;
         for (var7_int = 0; var7_int < var2; var7_int++) {
-          var3[var7_int].field_h = var1.i(7088);
+          var3[var7_int].field_h = var1.readUnsignedShort(7088);
         }
         for (var7_intLifetime1 = 0; var7_intLifetime1 < var2; var7_intLifetime1++) {
-          var3[var7_intLifetime1].field_b = var1.i(7088);
+          var3[var7_intLifetime1].field_b = var1.readUnsignedShort(7088);
         }
         for (var7_intLifetime2 = 0; var7_intLifetime2 < var2; var7_intLifetime2++) {
-          var3[var7_intLifetime2].field_d = var1.i(7088);
+          var3[var7_intLifetime2].field_d = var1.readUnsignedShort(7088);
         }
         for (var7_intLifetime3 = 0; var7_intLifetime3 < var2; var7_intLifetime3++) {
-          var3[var7_intLifetime3].field_e = var1.i(7088);
+          var3[var7_intLifetime3].field_e = var1.readUnsignedShort(7088);
         }
         for (var7_intLifetime4 = 0; var7_intLifetime4 < var2; var7_intLifetime4++) {
           var8_ref_tc = var3[var7_intLifetime4];
           var8_ref_tc.field_f = var4Lifetime1 - var8_ref_tc.field_d - var8_ref_tc.field_h;
           var8_ref_tc.field_c = var5 - var8_ref_tc.field_e - var8_ref_tc.field_b;
         }
-        var1.field_n = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
+        var1.position = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
         var17 = new int[var6];
         var16 = var17;
         var7 = var16;
@@ -152,7 +152,7 @@ final class tc {
         for (var8Lifetime1 = 0; var8Lifetime1 < var2; var8Lifetime1++) {
           var3[var8Lifetime1].field_g = var7;
         }
-        var1.field_n = 0;
+        var1.position = 0;
         for (var8Lifetime2 = 0; var8Lifetime2 < var2; var8Lifetime2++) {
           var9 = var3[var8Lifetime2];
           var10 = var9.field_d * var9.field_e;
@@ -218,7 +218,7 @@ final class tc {
         return var3;
     }
 
-    final static tc a(la param0, int param1, int param2) {
+    final static tc a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, 100, param2);
         if (var3 == null) {
           return null;
@@ -271,7 +271,7 @@ final class tc {
         return var2;
     }
 
-    final static tc a(la param0, int param1) {
+    final static tc a(ResourceArchive param0, int param1) {
         byte[] var2 = param0.b(param1, (byte) 95);
         if (var2 == null) {
           return null;

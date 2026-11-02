@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ho extends q {
+final class ho extends IntrusiveNode {
     private static float[] field_D;
     private int field_Q;
     private int field_L;
@@ -58,7 +58,7 @@ final class ho extends q {
         field_I = null;
     }
 
-    private final static boolean a(la param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_t) {
           var1 = param0.a(0, 100, 0);
@@ -70,7 +70,7 @@ final class ho extends q {
         return true;
     }
 
-    final static ho a(la param0, String param1, String param2) {
+    final static ho a(ResourceArchive param0, String param1, String param2) {
         try {
           ho var4_ref = null;
           if (!ho.a(param0)) {
@@ -476,7 +476,7 @@ final class ho extends q {
         return (float[]) (var17);
     }
 
-    final static ho a(la param0, int param1, int param2) {
+    final static ho a(ResourceArchive param0, int param1, int param2) {
         try {
           ho var4_ref = null;
           if (!ho.a(param0)) {
@@ -511,7 +511,7 @@ final class ho extends q {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final gg a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -561,7 +561,7 @@ final class ho extends q {
         this.field_B = null;
         var12 = this.field_l;
         this.field_l = null;
-        return new gg(this.field_M, var12, this.field_L, this.field_F, this.field_A);
+        return new PcmSample(this.field_M, var12, this.field_L, this.field_F, this.field_A);
     }
 
     final static int a() {
@@ -577,7 +577,7 @@ final class ho extends q {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        fj var2 = new fj(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_M = var2.c((byte) -47);
         this.field_Q = var2.c((byte) -43);
         this.field_L = var2.c((byte) -102);
@@ -603,7 +603,7 @@ final class ho extends q {
         }
     }
 
-    final gg c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -635,7 +635,7 @@ final class ho extends q {
           }
         }
         this.field_B = null;
-        return new gg(this.field_M, var1, this.field_L, this.field_F, this.field_A);
+        return new PcmSample(this.field_M, var1, this.field_L, this.field_F, this.field_A);
     }
 
     private ho(byte[] param0) throws IOException {

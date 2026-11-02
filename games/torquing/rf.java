@@ -6,10 +6,10 @@ final class rf extends pc {
     private int field_y;
     static boolean[] field_x;
     private int field_v;
-    private t[] field_s;
+    private Sprite[] field_s;
     private int field_w;
     static String field_u;
-    static ei field_t;
+    static IntrusiveDeque field_t;
     static int[] field_r;
 
     final static sm[] a(byte param0) {
@@ -20,13 +20,13 @@ final class rf extends pc {
         }
         sm[] var1 = new sm[ti.field_g];
         for (var2 = 0; ti.field_g > var2; var2++) {
-          var1[var2] = new sm(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], pn.field_b[var2], cq.field_y);
+          var1[var2] = new sm(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], pn.field_b[var2], cq.field_y);
         }
         go.b(0);
         return var1;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -38,7 +38,7 @@ final class rf extends pc {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        gm var9 = null;
+        UiWidget var9 = null;
         try {
           if (!param4.field_s) {
             stackIn_6_0 = (param4.g(2)) ? 1 : 0;
@@ -47,8 +47,8 @@ final class rf extends pc {
           }
           var6_int = stackIn_6_0;
           if (param0 <= 89) {
-            var9 = (gm) null;
-            this.a(-79, -81, -76, false, (gm) null);
+            var9 = (UiWidget) null;
+            this.a(-79, -81, -76, false, (UiWidget) null);
           }
           if (param4 instanceof lg) {
             param3 = param3 & ((lg) (param4)).field_x;
@@ -65,8 +65,8 @@ final class rf extends pc {
           var7 = stackIn_15_0;
           stackIn_18_0 = (!param3) ? 7105644 : 16777215;
           var8 = stackIn_18_0;
-          wp.a(param1 + (param4.field_k + (-this.field_s[0].field_u + param4.field_o >> 1)), var7, param4.field_p, false, param4.field_w + param2, this.field_s);
-          this.field_m.a(param4.field_m, param2 + param4.field_w, -2 + (param1 + param4.field_k), param4.field_p, param4.field_o, var8, -1, 1, 1, this.field_m.field_x);
+          wp.a(param1 + (param4.y + (-this.field_s[0].field_u + param4.height >> 1)), var7, param4.width, false, param4.x + param2, this.field_s);
+          this.field_m.a(param4.text, param2 + param4.x, -2 + (param1 + param4.y), param4.width, param4.height, var8, -1, 1, 1, this.field_m.field_x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class rf extends pc {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class rf extends pc {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -201,9 +201,9 @@ final class rf extends pc {
         if (qp.field_j > 2) {
           qp.field_j = 2;
         }
-        fj.field_k = param0 >> 2 & 3;
-        if (fj.field_k > 2) {
-          fj.field_k = 2;
+        PacketBuffer.field_k = param0 >> 2 & 3;
+        if (PacketBuffer.field_k > 2) {
+          PacketBuffer.field_k = 2;
         }
         m.field_l = param0 & 3;
         if (m.field_l > 2) {
@@ -225,6 +225,6 @@ final class rf extends pc {
         field_x[4] = true;
         field_x[11] = true;
         field_x[3] = true;
-        field_t = new ei();
+        field_t = new IntrusiveDeque();
     }
 }

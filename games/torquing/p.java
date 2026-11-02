@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p extends ta {
+final class p extends DualLinkNode {
     int[] field_v;
     private String[] field_r;
     private int[] field_q;
     private int[][] field_s;
     static ce field_t;
-    static t field_w;
+    static Sprite field_w;
     static fn field_x;
     static int field_u;
 
     public static void b(int param0) {
         field_x = null;
         if (param0 != 29841) {
-          field_w = (t) null;
+          field_w = (Sprite) null;
         }
         field_w = null;
         field_t = null;
     }
 
-    private final void a(int param0, int param1, fj param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -42,21 +42,21 @@ final class p extends ta {
               var4_int = param2.i((byte) -101);
               this.field_v = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_v[var5] = param2.i(7088);
+                this.field_v[var5] = param2.readUnsignedShort(7088);
               }
             } else if (param0 == 3) {
               var4_int = param2.i((byte) -101);
               this.field_s = new int[var4_int][];
               this.field_q = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                var6 = param2.i(7088);
+                var6 = param2.readUnsignedShort(7088);
                 var7 = ni.a(89, var6);
                 if (var7 != null) {
                   this.field_q[var5] = var6;
                   array$0 = new int[var7.field_a];
                   this.field_s[var5] = array$0;
                   for (var8 = 0; var7.field_a > var8; var8++) {
-                    this.field_s[var5][var8] = param2.i(7088);
+                    this.field_s[var5][var8] = param2.readUnsignedShort(7088);
                   }
                 }
               }
@@ -77,11 +77,11 @@ final class p extends ta {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    final void a(fj param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -111,18 +111,18 @@ final class p extends ta {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static t[] a(int param0) {
+    final static Sprite[] a(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = Torquing.field_u;
-        t[] var1 = new t[ti.field_g];
+        Sprite[] var1 = new Sprite[ti.field_g];
         for (var2 = 0; ti.field_g > var2; var2++) {
           var3 = ij.field_o[var2] * vo.field_b[var2];
           var4 = pn.field_b[var2];
@@ -130,7 +130,7 @@ final class p extends ta {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = cq.field_y[ie.a(255, (int) var4[var6])];
           }
-          var1[var2] = new t(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var5);
+          var1[var2] = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var5);
         }
         go.b(param0 - 3499);
         if (param0 != 3499) {
@@ -144,7 +144,7 @@ final class p extends ta {
         int var3 = Torquing.field_u;
         if (this.field_v != null) {
           for (var2 = 0; var2 < this.field_v.length; var2++) {
-            this.field_v[var2] = gm.a(this.field_v[var2], 32768);
+            this.field_v[var2] = UiWidget.a(this.field_v[var2], 32768);
           }
         }
         if (param0 >= -28) {

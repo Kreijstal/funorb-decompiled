@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-class lg extends gm {
+class lg extends UiWidget {
     static java.applet.Applet field_B;
     private boolean field_y;
     boolean field_x;
     boolean field_A;
     private boolean field_z;
 
-    boolean a(int param0, gm param1, char param2, int param3) {
+    boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -35,7 +35,7 @@ class lg extends gm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -56,15 +56,15 @@ class lg extends gm {
           return;
         }
         this.field_z = false;
-        if (null == this.field_t) {
+        if (null == this.listener) {
           if (param0 >= 89) {
             return;
           }
           this.c((byte) 22);
           return;
         }
-        if (this.field_t instanceof ek) {
-          ((ek) (this.field_t)).a(14381, this.field_z, (gm) (this));
+        if (this.listener instanceof ek) {
+          ((ek) (this.listener)).a(14381, this.field_z, (UiWidget) (this));
           if (param0 >= 89) {
             return;
           }
@@ -81,7 +81,7 @@ class lg extends gm {
         this(param0, ah.field_c.field_k, param1);
     }
 
-    lg(String param0, el param1, ca param2) {
+    lg(String param0, WidgetRenderer param1, ca param2) {
         super(param0, param1, param2);
         this.field_y = true;
         this.field_z = false;
@@ -92,26 +92,26 @@ class lg extends gm {
         if (param2 != -1) {
           Hashtable var6 = (Hashtable) null;
           this.a((StringBuilder) null, (byte) -119, (Hashtable) null, -87);
-          if (null != this.field_t) {
-            if (this.field_t instanceof ng) {
-              ((ng) (this.field_t)).a((byte) -116, this, param0, param1, param3);
+          if (null != this.listener) {
+            if (this.listener instanceof ng) {
+              ((ng) (this.listener)).a((byte) -116, this, param0, param1, param3);
             }
             return;
           }
           return;
         }
-        if (null == this.field_t) {
+        if (null == this.listener) {
           return;
         }
-        if (this.field_t instanceof ng) {
-          ((ng) (this.field_t)).a((byte) -116, this, param0, param1, param3);
+        if (this.listener instanceof ng) {
+          ((ng) (this.listener)).a((byte) -116, this, param0, param1, param3);
           return;
         }
     }
 
-    boolean a(gm param0, boolean param1) {
+    boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
-        gm var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -121,13 +121,13 @@ class lg extends gm {
             this.field_y) {
             param0.c((byte) 91);
             this.field_z = true;
-            if (null != this.field_t &&
-              this.field_t instanceof ek) {
-              ((ek) (this.field_t)).a(14381, this.field_z, (gm) (this));
+            if (null != this.listener &&
+              this.listener instanceof ek) {
+              ((ek) (this.listener)).a(14381, this.field_z, (UiWidget) (this));
             }
             if (param1) {
-              var4 = (gm) null;
-              this.a(93, 79, 114, (byte) -114, (gm) null, -45);
+              var4 = (UiWidget) null;
+              this.a(93, 79, 114, (byte) -114, (UiWidget) null, -45);
             }
             return true;
           }
@@ -142,23 +142,23 @@ class lg extends gm {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, gm param4, int param5) {
+    final void a(int param0, int param1, int param2, byte param3, UiWidget param4, int param5) {
         try {
-          if (this.field_t != null &&
-            this.field_t instanceof ck) {
-            ((ck) (this.field_t)).a(param1, this, param2, param5, param0, -710);
+          if (this.listener != null &&
+            this.listener instanceof ck) {
+            ((ck) (this.listener)).a(param1, this, param2, param5, param0, -710);
           }
           if (param3 < 109) {
-            gm var8 = (gm) null;
-            this.a((gm) null, true);
+            UiWidget var8 = (UiWidget) null;
+            this.a((UiWidget) null, true);
           }
           this.field_l = 0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "lg.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "lg.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -179,20 +179,20 @@ class lg extends gm {
         field_B = (java.applet.Applet) null;
     }
 
-    void a(int param0, gm param1, int param2, int param3) {
+    void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(120, param1, param2, param3);
           int var5_int = 5 % ((param0 + 28) / 43);
           if (this.field_l != 0 &&
-            this.field_l != ul.field_d) {
+            this.field_l != MouseInputHandler.field_d) {
             if (this.a(k.field_e, n.field_t, param3, param2, 119) &&
-              ul.field_d == 0) {
+              MouseInputHandler.field_d == 0) {
               this.a(this.field_l, -param2 + k.field_e, -1, n.field_t - param3);
             }
             this.a(param2, param3, n.field_t, (byte) 120, param1, k.field_e);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "lg.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "lg.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -203,7 +203,7 @@ class lg extends gm {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -214,9 +214,9 @@ class lg extends gm {
             this.a(param3, param4, param1, param2, 81)) {
             this.a(param5, false);
             this.field_l = param0;
-            if (null != this.field_t &&
-              this.field_t instanceof ck) {
-              ((ck) (this.field_t)).a(param0, param4, param3, param2, this, -78, param1);
+            if (null != this.listener &&
+              this.listener instanceof ck) {
+              ((ck) (this.listener)).a(param0, param4, param3, param2, this, -78, param1);
             }
             return true;
           }
@@ -235,7 +235,7 @@ class lg extends gm {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ class lg extends gm {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -329,7 +329,7 @@ class lg extends gm {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -337,7 +337,7 @@ class lg extends gm {
         this.field_y = true;
         this.field_z = false;
         this.field_x = true;
-        this.field_q = ah.field_c.field_a;
+        this.renderer = ah.field_c.field_a;
     }
 
     static {

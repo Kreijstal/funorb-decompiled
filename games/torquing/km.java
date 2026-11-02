@@ -9,14 +9,14 @@ final class km {
         if (param0 > 28) {
           aq.field_c = false;
           od.b(128, -1);
-          kh.field_o = tp.field_h;
+          Model.field_o = tp.field_h;
           bh.field_a = tp.field_h;
           return;
         }
         field_a = (String) null;
         aq.field_c = false;
         od.b(128, -1);
-        kh.field_o = tp.field_h;
+        Model.field_o = tp.field_h;
         bh.field_a = tp.field_h;
     }
 
@@ -44,23 +44,23 @@ final class km {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "km.A(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "km.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     final synchronized static long b(int param0) {
         long var1 = System.currentTimeMillis();
         if (var1 < j.field_p) {
-          la.field_g = la.field_g + (-var1 + j.field_p);
+          ResourceArchive.field_g = ResourceArchive.field_g + (-var1 + j.field_p);
           if (param0 == -1) {
             j.field_p = var1;
-            return var1 + la.field_g;
+            return var1 + ResourceArchive.field_g;
           }
           return -53L;
         }
         if (param0 == -1) {
           j.field_p = var1;
-          return var1 + la.field_g;
+          return var1 + ResourceArchive.field_g;
         }
         return -53L;
     }

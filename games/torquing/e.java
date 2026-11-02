@@ -5,7 +5,7 @@ class e extends bc {
     private String field_c;
     static String field_d;
     private long field_e;
-    static la field_b;
+    static ResourceArchive field_b;
     static int field_f;
 
     public static void b(boolean param0) {
@@ -18,7 +18,7 @@ class e extends bc {
         field_b = null;
     }
 
-    final void a(fj param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.a(118, this.field_e);
           param0.a((byte) 107, this.field_c);
@@ -26,7 +26,7 @@ class e extends bc {
             e.b(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "e.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "e.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ class e extends bc {
           this.field_e = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "e.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "e.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

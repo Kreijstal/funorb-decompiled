@@ -59,7 +59,7 @@ final class m {
             return;
           }
           this.field_o = this.field_m;
-          if (df.field_u >= this.field_d) {
+          if (IsaacPacketBuffer.field_u >= this.field_d) {
             this.a(true);
           } else {
             this.field_i = false;
@@ -74,7 +74,7 @@ final class m {
           aq.field_d = (this.field_x - wk.field_d) / 2;
         }
         if (wk.field_d != this.field_f ||
-          ul.field_a != this.field_e) {
+          MouseInputHandler.field_a != this.field_e) {
           this.field_p.a(this.field_e, -6714, this.field_f);
         }
     }
@@ -84,7 +84,7 @@ final class m {
         if (param0 != -19) {
           m.c(120);
         }
-        stackIn_6_0 = (df.field_u >= this.field_d) && (wp.field_w > 0);
+        stackIn_6_0 = (IsaacPacketBuffer.field_u >= this.field_d) && (wp.field_w > 0);
         return stackIn_6_0;
     }
 
@@ -115,7 +115,7 @@ final class m {
         if (param0 != -73) {
           this.field_g = 21;
         }
-        this.field_s = ul.field_a;
+        this.field_s = MouseInputHandler.field_a;
         this.field_u = wk.field_d;
         this.field_p.a(this.field_b, -6714, this.field_r);
         b.field_v = false;
@@ -139,9 +139,9 @@ final class m {
         RuntimeException var6_ref = null;
         var8 = Torquing.field_u;
         try {
-          hc.field_u = param1.getParameter("overxgames");
-          if (null == hc.field_u) {
-            hc.field_u = "0";
+          Level.field_u = param1.getParameter("overxgames");
+          if (null == Level.field_u) {
+            Level.field_u = "0";
           }
           rj.field_y = param1.getParameter("overxachievements");
           if (null == rj.field_y) {
@@ -149,20 +149,20 @@ final class m {
           }
           var6 = param1.getParameter("currency");
           if (var6 == null) {
-            gj.field_j = 2;
+            ProxySocketConnector.field_j = 2;
           } else {
             if (!ip.a((byte) -42, (CharSequence) ((Object) var6))) {
-              gj.field_j = 2;
+              ProxySocketConnector.field_j = 2;
             } else {
-              gj.field_j = kc.a((byte) -84, (CharSequence) ((Object) var6));
+              ProxySocketConnector.field_j = kc.a((byte) -84, (CharSequence) ((Object) var6));
             }
           }
           fa.field_c = param0;
-          of.field_o = param2;
+          VertexMesh.field_o = param2;
           ln.field_G = param5;
-          ln.field_H = new t[param3.length];
+          ln.field_H = new Sprite[param3.length];
           for (var7 = param4; var7 < param3.length; var7++) {
-            ln.field_H[var7] = new t(317, 34);
+            ln.field_H[var7] = new Sprite(317, 34);
           }
           ik.field_k = param3;
           return;
@@ -182,7 +182,7 @@ final class m {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -234,7 +234,7 @@ final class m {
           }
         }
         if (wk.field_d != var2 ||
-          var3 != ul.field_a) {
+          var3 != MouseInputHandler.field_a) {
           this.field_p.a(var3, -6714, var2);
         }
         if (this.field_x > 0) {

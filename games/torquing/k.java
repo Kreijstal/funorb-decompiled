@@ -30,13 +30,13 @@ final class k {
           param0 = 6;
         }
         if (param0 == 7) {
-          ph.a(1, 1, 638, 239, 723726, 2303291);
-          ph.a(1, 240, 638, 70, 2303291, 3487838);
-          ph.a(1, 310, 638, 50, 3487838, 4739447);
-          ph.a(1, 360, 638, 40, 4739447, 6712964);
-          ph.a(1, 400, 638, 35, 6712964, 10063235);
-          ph.a(1, 435, 638, 25, 10063235, 14721899);
-          ph.a(1, 460, 638, 19, 14721899, 16359760);
+          SoftwareRasterizer.a(1, 1, 638, 239, 723726, 2303291);
+          SoftwareRasterizer.a(1, 240, 638, 70, 2303291, 3487838);
+          SoftwareRasterizer.a(1, 310, 638, 50, 3487838, 4739447);
+          SoftwareRasterizer.a(1, 360, 638, 40, 4739447, 6712964);
+          SoftwareRasterizer.a(1, 400, 638, 35, 6712964, 10063235);
+          SoftwareRasterizer.a(1, 435, 638, 25, 10063235, 14721899);
+          SoftwareRasterizer.a(1, 460, 638, 19, 14721899, 16359760);
         } else {
           var2 = 1208736;
           var3 = 13426923;
@@ -48,7 +48,7 @@ final class k {
             var3 = 1207964;
             var2 = 402741;
           }
-          ph.a(1, 1, 638, 478, var2, var3);
+          SoftwareRasterizer.a(1, 1, 638, 478, var2, var3);
         }
     }
 
@@ -97,7 +97,7 @@ final class k {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var3), "k.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var3), "k.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

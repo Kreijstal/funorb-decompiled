@@ -33,7 +33,7 @@ final class wh extends am {
         return db.a(var5.toString(), 31108);
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_8_1 = false;
@@ -46,7 +46,7 @@ final class wh extends am {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_v = param0.i(param1 ^ 7059);
+            this.field_v = param0.readUnsignedShort(param1 ^ 7059);
           } else {
             if (var4_int == 1) {
               stackIn_8_1 = (param0.i((byte) -101) == 1);
@@ -67,7 +67,7 @@ final class wh extends am {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class wh extends am {
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        df var10 = null;
+        IsaacPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         var8 = Torquing.field_u;
@@ -174,7 +174,7 @@ final class wh extends am {
               ih.b(true);
               return;
             }
-            var5_int = -var10.field_n + oo.field_a;
+            var5_int = -var10.position + oo.field_a;
             var12 = var4_ref_h.field_k;
             var11 = var12;
             var6 = var11;
@@ -185,7 +185,7 @@ final class wh extends am {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.i((byte) -101) << ie.a(768, var7 << 8));
             }
             var4_ref_h.field_n = true;
-            var4_ref_h.f(0);
+            var4_ref_h.unlink(0);
             return;
           }
           if (var2 == 1) {
@@ -200,19 +200,19 @@ final class wh extends am {
               break;
             }
             if (var5 != null) {
-              var5.f(0);
+              var5.unlink(0);
               return;
             }
             ih.b(true);
             return;
           }
-          nn.a("LR1: " + me.a(-1), (Throwable) null, -9958);
+          nn.a("LR1: " + ArchiveSource.a(-1), (Throwable) null, -9958);
           ih.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "wh.E(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "wh.E(" + param0 + ')');
         }
     }
 
@@ -293,7 +293,7 @@ final class wh extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var6), "wh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var6), "wh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -365,7 +365,7 @@ final class wh extends am {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

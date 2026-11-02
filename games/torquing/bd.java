@@ -3,11 +3,11 @@
  */
 final class bd extends am {
     static char[] field_t;
-    static ei field_s;
+    static IntrusiveDeque field_s;
     private int field_v;
     private int field_x;
     private int field_u;
-    static t field_w;
+    static Sprite field_w;
     static double field_y;
 
     public static void a(boolean param0) {
@@ -44,7 +44,7 @@ final class bd extends am {
         int var9;
         int var10;
         int var11;
-        fj var12;
+        PacketBuffer var12;
         int[] var13;
         int[] var14;
         int var4Lifetime1;
@@ -63,9 +63,9 @@ final class bd extends am {
             return var3;
           }
           for (var4 = 0; ci.field_c > var4; var4++) {
-            L1: {
-              L2: {
-                var5 = q.field_b[var4];
+            regionExit1: {
+              regionExit2: {
+                var5 = IntrusiveNode.field_b[var4];
                 var6 = dp.field_a[param1];
                 var7 = this.field_u * var5 >> 12;
                 var8 = this.field_x * var6 >> 12;
@@ -78,10 +78,10 @@ final class bd extends am {
                     var7 -= 4;
                   }
                   if (var7 != 1) {
-                    break L2;
+                    break regionExit2;
                   }
                   if (this.field_v > var9) {
-                    break L2;
+                    break regionExit2;
                   }
                 }
                 if (var9 < this.field_v) {
@@ -91,26 +91,26 @@ final class bd extends am {
                     var7 -= 4;
                   }
                   if (var7 > 0) {
-                    break L2;
+                    break regionExit2;
                   }
                 }
                 var14[var4] = 4096;
-                break L1;
+                break regionExit1;
               }
               var14[var4] = 0;
             }
           }
           return var3;
         }
-        var12 = (fj) null;
-        this.a((fj) null, -77, 90);
+        var12 = (PacketBuffer) null;
+        this.a((PacketBuffer) null, -77, 90);
         if (!this.field_l.field_b) {
           return var3;
         }
         for (var4Lifetime1 = 0; ci.field_c > var4Lifetime1; var4Lifetime1++) {
-          L10: {
-            L11: {
-              var5Lifetime1 = q.field_b[var4Lifetime1];
+          regionExit3: {
+            regionExit4: {
+              var5Lifetime1 = IntrusiveNode.field_b[var4Lifetime1];
               var6Lifetime1 = dp.field_a[param1];
               var7Lifetime1 = this.field_u * var5Lifetime1 >> 12;
               var8Lifetime1 = this.field_x * var6Lifetime1 >> 12;
@@ -123,15 +123,15 @@ final class bd extends am {
                   var7Lifetime1 -= 4;
                 }
                 if (var7Lifetime1 != 1) {
-                  break L11;
+                  break regionExit4;
                 }
                 if (this.field_v > var9Lifetime1) {
-                  break L11;
+                  break regionExit4;
                 }
               }
               if (var9Lifetime1 >= this.field_v) {
                 var14[var4Lifetime1] = 4096;
-                break L10;
+                break regionExit3;
               }
               for (var7Lifetime1 = var7Lifetime1 - var8Lifetime1; var7Lifetime1 < 0; var7Lifetime1 += 4) {
               }
@@ -140,7 +140,7 @@ final class bd extends am {
               }
               if (var7Lifetime1 <= 0) {
                 var14[var4Lifetime1] = 4096;
-                break L10;
+                break regionExit3;
               }
             }
             var14[var4Lifetime1] = 0;
@@ -149,7 +149,7 @@ final class bd extends am {
         return var3;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -166,7 +166,7 @@ final class bd extends am {
           if (var4_int != 0) {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                this.field_v = param0.i(param1 + 7053);
+                this.field_v = param0.readUnsignedShort(param1 + 7053);
               }
             } else {
               this.field_x = param0.i((byte) -101);
@@ -185,7 +185,7 @@ final class bd extends am {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -196,17 +196,17 @@ final class bd extends am {
     final static void b(int param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (of.field_m <= 20) {
+        if (VertexMesh.field_m <= 20) {
           ea.b(-19, 0);
           var1 = -12 % ((40 - param0) / 47);
           return;
         }
-        ea.b(-60, of.field_m - 20);
+        ea.b(-60, VertexMesh.field_m - 20);
         var1Lifetime1 = -12 % ((40 - param0) / 47);
     }
 
     static {
         field_t = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
-        field_s = new ei();
+        field_s = new IntrusiveDeque();
     }
 }

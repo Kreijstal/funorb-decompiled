@@ -6,12 +6,12 @@ final class cq extends am {
     private int field_s;
     static int field_u;
     private int[] field_z;
-    static t field_w;
+    static Sprite field_w;
     static int[] field_y;
     private int field_v;
     private int field_t;
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -27,11 +27,11 @@ final class cq extends am {
           }
           var5 = param2;
           if (var5 == 0) {
-            this.field_s = param0.i(7088);
+            this.field_s = param0.readUnsignedShort(7088);
           } else {
             if (var5 != 1) {
               if (2 == var5) {
-                this.field_t = param0.i(7088);
+                this.field_t = param0.readUnsignedShort(7088);
               } else {
                 if (var5 != 3) {
                   if (var5 == 4) {
@@ -41,11 +41,11 @@ final class cq extends am {
                     this.field_z[2] = ie.a(255, var4_int) >> 12;
                   }
                 } else {
-                  this.field_v = param0.i(7088);
+                  this.field_v = param0.readUnsignedShort(7088);
                 }
               }
             } else {
-              this.field_x = param0.i(7088);
+              this.field_x = param0.readUnsignedShort(7088);
             }
           }
           return;
@@ -59,7 +59,7 @@ final class cq extends am {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class cq extends am {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -143,7 +143,7 @@ final class cq extends am {
         int[] var40Lifetime1;
         var16 = Torquing.field_u;
         if (param0 != -29116) {
-          field_w = (t) null;
+          field_w = (Sprite) null;
         }
         var27 = this.field_r.a(15142, param1);
         var19 = var27;
@@ -235,7 +235,7 @@ final class cq extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var3), "cq.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var3), "cq.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

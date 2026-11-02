@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pf extends q implements lm {
+final class pf extends IntrusiveNode implements lm {
     static String field_j;
     private int field_s;
     private int field_o;
@@ -170,7 +170,7 @@ final class pf extends q implements lm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class pf extends q implements lm {
           this.field_t = param0[2];
           this.field_s = -param2[2] + param2[0];
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pf.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pf.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -241,7 +241,7 @@ final class pf extends q implements lm {
           this.field_p[3] = -((-param2[0] + param2[1]) * (-param1[0] + param1[var5])) + (param1[1] - param1[0]) * (param2[var5] - param2[0]);
           this.field_p[4] = -((-param0[0] + param0[1]) * (-param2[0] + param2[var5])) + (-param2[0] + param2[1]) * (param0[var5] - param0[0]);
           this.field_p[5] = -((param0[var5] - param0[0]) * (param1[1] - param1[0])) + (param1[var5] - param1[0]) * (-param0[0] + param0[1]);
-          wo.a((byte) 49, 3, this.field_p);
+          SecondaryNodeDequeIterator.a((byte) 49, 3, this.field_p);
           if (0 > qm.a(true, param1[0] + 12, 1 + param0[0], 0, this.field_p, -12 + param2[0])) {
             this.field_p[4] = this.field_p[4] * -1;
             this.field_p[5] = this.field_p[5] * -1;
@@ -257,7 +257,7 @@ final class pf extends q implements lm {
             this.field_p[3 + var7] = -((param2[var9] - param2[var8]) * -12) + 12 * (-param1[var8] + param1[var9]);
             this.field_p[var7 + 4] = (-param2[var8] + param2[var9]) * -1 - 12 * (param0[var9] - param0[var8]);
             this.field_p[5 + var7] = (param0[var9] - param0[var8]) * -12 - (param1[var9] - param1[var8]) * -1;
-            wo.a((byte) 49, 3 + var7, this.field_p);
+            SecondaryNodeDequeIterator.a((byte) 49, 3 + var7, this.field_p);
             var10 = (1 + var6) % var4_int;
             if (qm.a(true, param1[var10], param0[var10], var7, this.field_p, param2[var10]) < 0) {
               this.field_p[var7 + 3] = this.field_p[var7 + 3] * -1;
@@ -288,7 +288,7 @@ final class pf extends q implements lm {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

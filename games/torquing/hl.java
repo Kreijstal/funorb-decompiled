@@ -16,7 +16,7 @@ final class hl {
         field_b = null;
     }
 
-    final static double[] a(double param0, double[] param1, boolean param2, int param3, boolean param4, boolean param5, double param6, double param7, hc param8, double[] param9, double[] param10) {
+    final static double[] a(double param0, double[] param1, boolean param2, int param3, boolean param4, boolean param5, double param6, double param7, Level param8, double[] param9, double[] param10) {
         int var17 = 0;
         double[] stackIn_3_0 = null;
         double[] stackIn_12_0 = null;
@@ -55,19 +55,19 @@ final class hl {
           bd.c(0);
           for (var17 = 0; 4 > var17; var17++) {
             kp.a(param7, 72, param6, mf.field_z, param8);
-            gm.a(param4, param10, -128, param6, param1, param0, param5, mf.field_z, hf.field_b, param2);
+            UiWidget.a(param4, param10, -128, param6, param1, param0, param5, mf.field_z, hf.field_b, param2);
             if (1 != qd.field_d &&
               qd.field_d != 3) {
               ap.a(param0 / (double)var19[var17], hf.field_b, var21);
               ap.a(param9, param0 / (double)var15[var17], hf.field_b, mf.field_z);
-              df.a(param3 ^ -6073, mf.field_z);
+              IsaacPacketBuffer.a(param3 ^ -6073, mf.field_z);
               continue;
             }
             ap.a(mf.field_z, param0, hf.field_b, var21);
             break;
           }
           aj.a((byte) -56, param2, param9, param7);
-          df.a(3, var21);
+          IsaacPacketBuffer.a(3, var21);
           stackIn_12_0 = var16;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class hl {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

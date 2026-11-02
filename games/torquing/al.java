@@ -5,9 +5,9 @@ final class al {
     static int[] field_d;
     static String field_f;
     static int[] field_e;
-    private lj field_h;
+    private SecondaryNodeDeque field_h;
     static String field_c;
-    private vl field_a;
+    private IterableNodeHashTable field_a;
     private int field_b;
     private int field_g;
 
@@ -24,14 +24,14 @@ final class al {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null) {
-            param0.f(0);
-            param0.h(0);
+            param0.unlink(0);
+            param0.unlinkSecondary(0);
             this.field_g = this.field_g + param0.field_t;
           }
           if (param1 > 51) {
             return;
           }
-          this.field_h = (lj) null;
+          this.field_h = (SecondaryNodeDeque) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ final class al {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class al {
           }
           this.a(1, param0, param1, true);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "al.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "al.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -86,11 +86,11 @@ final class al {
             this.a(var6, 111);
           }
           var6_ref = new en(param2, param0);
-          this.field_a.a(param1, (byte) 92, var6_ref);
+          this.field_a.put(param1, (byte) 92, var6_ref);
           this.field_h.a(var6_ref, (byte) -60);
           ((d) ((Object) var6_ref)).field_l = 0L;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "al.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "al.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -113,8 +113,8 @@ final class al {
         }
         Object var5 = var7.b(12);
         if (var5 == null) {
-          var7.f(0);
-          var7.h(0);
+          var7.unlink(0);
+          var7.unlinkSecondary(0);
           this.field_g = this.field_g + var7.field_t;
           return null;
         }
@@ -124,11 +124,11 @@ final class al {
           return var5;
         }
         en var6 = new en(var5, var7.field_t);
-        this.field_a.a(var7.field_f, (byte) 75, var6);
+        this.field_a.put(var7.key, (byte) 75, var6);
         this.field_h.a(var6, (byte) -66);
         ((d) ((Object) var6)).field_l = 0L;
-        var7.f(0);
-        var7.h(0);
+        var7.unlink(0);
+        var7.unlinkSecondary(0);
         return var5;
     }
 

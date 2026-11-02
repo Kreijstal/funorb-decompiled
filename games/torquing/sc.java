@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sc extends hn implements fp, ng {
+final class sc extends WidgetContainer implements fp, ng {
     private nm field_C;
     private rb field_D;
     private lg field_E;
@@ -16,7 +16,7 @@ final class sc extends hn implements fp, ng {
     }
 
     sc(nm param0) {
-        super(0, 0, 288, 0, (el) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         pc var4 = null;
@@ -25,27 +25,27 @@ final class sc extends hn implements fp, ng {
         try {
           this.field_C = param0;
           this.field_E = new lg(vd.field_d, (ca) null);
-          this.field_E.field_q = (el) ((Object) new rf());
-          var7 = ff.a(new String[]{this.h(-29996), this.i(119)}, 0, md.field_d);
+          this.field_E.renderer = (WidgetRenderer) ((Object) new rf());
+          var7 = ff.a(new String[]{this.h(-29996), this.i(119)}, 0, DelegatingCanvas.field_d);
           var3 = 20;
           var4 = new pc(dg.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, dg.field_e.field_x, -1, 2147483647, true);
           this.field_D = new rb(var7, var4);
           this.field_D.field_n = "";
-          this.field_D.a(0, (byte) -115, jp.field_e);
-          this.field_D.a(1, (byte) -93, jp.field_e);
-          this.field_D.field_p = -40 + this.field_p;
-          this.field_D.field_t = (ca) (this);
-          this.field_D.a((byte) 46, 26, this.field_p - 40, var3);
-          var3 = var3 + (15 + this.field_D.field_o);
+          this.field_D.a(0, (byte) -115, Js5Transport.field_e);
+          this.field_D.a(1, (byte) -93, Js5Transport.field_e);
+          this.field_D.width = -40 + this.width;
+          this.field_D.listener = (ca) (this);
+          this.field_D.a((byte) 46, 26, this.width - 40, var3);
+          var3 = var3 + (15 + this.field_D.height);
           this.a(this.field_D, -6938);
           var5 = 4;
           var6 = 200;
           this.field_E.a((byte) -97, 300 - var6 >> 1, var3, 40, var6);
-          this.field_E.field_t = (ca) (this);
+          this.field_E.listener = (ca) (this);
           this.a(this.field_E, -6938);
           this.a((byte) -49, 0, 0, var3 - (-55 - var5), 300);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,16 +71,16 @@ final class sc extends hn implements fp, ng {
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, wk.field_d, ul.field_a);
+              var9.fillRect(0, 0, wk.field_d, MouseInputHandler.field_a);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (of.field_u == null) {
-                of.field_u = k.field_d.createImage(304, 34);
+              if (VertexMesh.field_u == null) {
+                VertexMesh.field_u = k.field_d.createImage(304, 34);
               }
-              var10 = of.field_u.getGraphics();
+              var10 = VertexMesh.field_u.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, param0 * 3, 30);
@@ -91,12 +91,12 @@ final class sc extends hn implements fp, ng {
               var10.setFont(vb.field_d);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-              var9.drawImage(of.field_u, wk.field_d / 2 - 152, -18 + ul.field_a / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(VertexMesh.field_u, wk.field_d / 2 - 152, -18 + MouseInputHandler.field_a / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               exception = (Exception) (Object) decompiledCaughtException;
               var7 = -152 + wk.field_d / 2;
-              var8 = ul.field_a / 2 - 18;
+              var8 = MouseInputHandler.field_a / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(2 + var7, var8 + 2, 3 * param0, 30);
@@ -112,7 +112,7 @@ final class sc extends hn implements fp, ng {
             }
             var9.setFont(vb.field_d);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(rh.field_a, wk.field_d / 2 - rh.field_a.length() * 6 / 2, ul.field_a / 2 - 26);
+            var9.drawString(rh.field_a, wk.field_d / 2 - rh.field_a.length() * 6 / 2, MouseInputHandler.field_a / 2 - 26);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -136,7 +136,7 @@ final class sc extends hn implements fp, ng {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class sc extends hn implements fp, ng {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -205,11 +205,11 @@ final class sc extends hn implements fp, ng {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -242,7 +242,7 @@ final class sc extends hn implements fp, ng {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

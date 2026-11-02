@@ -84,12 +84,12 @@ final class mo extends am {
 
     final static boolean a(int param0, boolean param1) {
         try {
-          df var4 = null;
-          df var5 = null;
+          IsaacPacketBuffer var4 = null;
+          IsaacPacketBuffer var5 = null;
           if (null == rh.field_b) {
             rh.field_b = u.field_t.a(ih.field_b, ea.field_t, param0 ^ -369);
           }
-          if (rh.field_b.field_a == 0) {
+          if (rh.field_b.status == 0) {
             return false;
           }
           if (param0 != 269) {
@@ -98,20 +98,20 @@ final class mo extends am {
           long dupTemp$0 = km.b(-1);
           ak.field_k = dupTemp$0;
           rb.field_C = dupTemp$0;
-          if (1 != rh.field_b.field_a) {
+          if (1 != rh.field_b.status) {
             ef.field_a = wj.field_i;
           } else {
             try {
-              vk.field_E = new no((java.net.Socket) (rh.field_b.field_d), u.field_t);
-              wa.field_d.field_n = 0;
+              vk.field_E = new BufferedSocket((java.net.Socket) (rh.field_b.result), u.field_t);
+              wa.field_d.position = 0;
               var4 = kj.field_d;
               var5 = var4;
-              var5.field_n = 0;
+              var5.position = 0;
               ef.field_a = tb.field_o;
-              mm.field_d = !param1 ? -1 : -2;
+              UrlRequest.field_d = !param1 ? -1 : -2;
               eb.field_f = !param1 ? -1 : -2;
               wk.field_h = !param1 ? -1 : -2;
-              q.a(vg.field_j, 107, tp.field_i, wa.field_d, ao.field_d);
+              IntrusiveNode.a(vg.field_j, 107, tp.field_i, wa.field_d, SocketConnector.field_d);
               jd.a((byte) -95, -1);
             } catch (IOException iOException) {
               ef.field_a = wj.field_i;
@@ -202,7 +202,7 @@ final class mo extends am {
           if (qc.field_db != null) {
             var3 = 357 - qc.field_db.field_u / 2;
             var4 = 0;
-            if (0 != ta.field_o &&
+            if (0 != DualLinkNode.field_o &&
               re.field_c > var3 &&
               re.field_c < var3 + qc.field_db.field_t) {
               if (wh.field_s > -qc.field_db.field_s + 269 &&
@@ -272,7 +272,7 @@ final class mo extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "mo.E(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "mo.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -355,7 +355,7 @@ final class mo extends am {
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -391,7 +391,7 @@ final class mo extends am {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -472,7 +472,7 @@ final class mo extends am {
         return;
     }
 
-    final static void a(t param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -526,7 +526,7 @@ final class mo extends am {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

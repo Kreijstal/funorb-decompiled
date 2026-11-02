@@ -4,7 +4,7 @@
 final class he {
     static boolean field_a;
     private String field_c;
-    static la field_b;
+    static ResourceArchive field_b;
 
     public static void a(int param0) {
         field_b = null;
@@ -14,7 +14,7 @@ final class he {
         }
     }
 
-    final static boolean a(hc param0, double param1, double[] param2, int param3, double param4) {
+    final static boolean a(Level param0, double param1, double[] param2, int param3, double param4) {
         int var9 = 0;
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -36,7 +36,7 @@ final class he {
           kp.a(0.0, param3 - 16777300, param4, param2, param0);
           ee.a(false, new double[3], param2, param4, param1, 106);
           if (param3 != 16777215) {
-            field_b = (la) null;
+            field_b = (ResourceArchive) null;
           }
           var15 = ll.a(mg.field_a, vf.field_e, (byte) 121);
           var14 = var15;
@@ -73,7 +73,7 @@ final class he {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class he {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class he {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -145,81 +145,81 @@ final class he {
           if (param3 != 2) {
             return;
           }
-          if (ph.field_k < param0) {
+          if (SoftwareRasterizer.field_k < param0) {
             stackIn_6_0 = param0;
           } else {
-            stackIn_6_0 = ph.field_k;
+            stackIn_6_0 = SoftwareRasterizer.field_k;
           }
           var7 = stackIn_6_0;
-          if (param2 > ph.field_c) {
+          if (param2 > SoftwareRasterizer.field_c) {
             stackIn_9_0 = param2;
           } else {
-            stackIn_9_0 = ph.field_c;
+            stackIn_9_0 = SoftwareRasterizer.field_c;
           }
           var8 = stackIn_9_0;
-          if (ph.field_a <= var5_int) {
-            stackIn_12_0 = ph.field_a;
+          if (SoftwareRasterizer.field_a <= var5_int) {
+            stackIn_12_0 = SoftwareRasterizer.field_a;
           } else {
             stackIn_12_0 = var5_int;
           }
           var9 = stackIn_12_0;
-          if (ph.field_h > var6) {
+          if (SoftwareRasterizer.field_h > var6) {
             stackIn_15_0 = var6;
           } else {
-            stackIn_15_0 = ph.field_h;
+            stackIn_15_0 = SoftwareRasterizer.field_h;
           }
           var10 = stackIn_15_0;
-          if (param0 >= ph.field_k &&
-            ph.field_a > param0) {
-            var11 = param0 + ph.field_j * var8;
+          if (param0 >= SoftwareRasterizer.field_k &&
+            SoftwareRasterizer.field_a > param0) {
+            var11 = param0 + SoftwareRasterizer.field_j * var8;
             var12 = 1 - (-var10 + var8) >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              ph.field_e[var11] = 16777215;
-              var11 = var11 + 2 * ph.field_j;
+              SoftwareRasterizer.field_e[var11] = 16777215;
+              var11 = var11 + 2 * SoftwareRasterizer.field_j;
             }
           }
-          if (param2 >= ph.field_c &&
-            ph.field_h > var6) {
-            var11Lifetime1 = var7 + param2 * ph.field_j;
+          if (param2 >= SoftwareRasterizer.field_c &&
+            SoftwareRasterizer.field_h > var6) {
+            var11Lifetime1 = var7 + param2 * SoftwareRasterizer.field_j;
             var12Lifetime1 = var9 + (1 - var7) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              ph.field_e[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_e[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (var5_int >= ph.field_k &&
-            ph.field_a > var5_int) {
-            var11Lifetime2 = ((1 & var5_int - param0) + var8) * ph.field_j + var5_int;
+          if (var5_int >= SoftwareRasterizer.field_k &&
+            SoftwareRasterizer.field_a > var5_int) {
+            var11Lifetime2 = ((1 & var5_int - param0) + var8) * SoftwareRasterizer.field_j + var5_int;
             var12Lifetime2 = var10 + (1 - var8) >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              ph.field_e[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + ph.field_j * 2;
+              SoftwareRasterizer.field_e[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_j * 2;
             }
           }
-          if (ph.field_c <= param2) {
-            if (var6 >= ph.field_h) {
+          if (SoftwareRasterizer.field_c <= param2) {
+            if (var6 >= SoftwareRasterizer.field_h) {
               return;
             }
-            var11Lifetime3 = ph.field_j * var6 + var7 + (var6 - param2 & 1);
+            var11Lifetime3 = SoftwareRasterizer.field_j * var6 + var7 + (var6 - param2 & 1);
             var12Lifetime3 = 1 + var9 - var7 >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 break;
               }
-              ph.field_e[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_e[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -227,7 +227,7 @@ final class he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var5), "he.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var5), "he.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -243,16 +243,16 @@ final class he {
           if (param0 != 1) {
             he.a(-116);
           }
-          if (kh.field_o == mg.field_b) {
+          if (Model.field_o == mg.field_b) {
             return null;
           }
-          if (ag.field_c == kh.field_o &&
+          if (ag.field_c == Model.field_o &&
             param1.equals(on.field_b)) {
-            kh.field_o = tp.field_h;
+            Model.field_o = tp.field_h;
             stackIn_8_0 = qi.field_d;
             return stackIn_8_0;
           }
-          kh.field_o = mg.field_b;
+          Model.field_o = mg.field_b;
           qi.field_d = null;
           on.field_b = param1;
           stackIn_10_0 = null;
@@ -267,7 +267,7 @@ final class he {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class he {
           }
           ni.a((byte) 102, param0, this.field_c, 31536000L, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "he.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "he.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

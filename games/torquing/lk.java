@@ -36,7 +36,7 @@ final class lk extends am {
         var8 = Torquing.field_u;
         try {
           if (param2 == null) {
-            stackIn_3_0 = ml.field_b;
+            stackIn_3_0 = GameKeyHandler.field_b;
             return stackIn_3_0;
           }
           var3_int = param2.length();
@@ -73,10 +73,10 @@ final class lk extends am {
               stackIn_18_0 = cc.field_b;
               return stackIn_18_0;
             }
-            stackIn_13_0 = ml.field_b;
+            stackIn_13_0 = GameKeyHandler.field_b;
             return stackIn_13_0;
           }
-          stackIn_8_0 = ml.field_b;
+          stackIn_8_0 = GameKeyHandler.field_b;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,7 +88,7 @@ final class lk extends am {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class lk extends am {
         field_v = null;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -166,13 +166,13 @@ final class lk extends am {
           if (var4_int != 0) {
             if (1 != var4_int) {
               if (var4_int == 2) {
-                this.field_w = param0.i(param1 ^ 7059);
+                this.field_w = param0.readUnsignedShort(param1 ^ 7059);
               }
             } else {
-              this.field_u = param0.i(7088);
+              this.field_u = param0.readUnsignedShort(7088);
             }
           } else {
-            this.field_s = param0.i(7088);
+            this.field_s = param0.readUnsignedShort(7088);
           }
           if (param1 != 35) {
             lk.a('ﾻ', -28);
@@ -188,7 +188,7 @@ final class lk extends am {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

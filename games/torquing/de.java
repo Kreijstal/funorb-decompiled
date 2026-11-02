@@ -5,7 +5,7 @@ abstract class de {
     static String field_b;
     static int[] field_c;
     static int[] field_d;
-    static t field_a;
+    static Sprite field_a;
     private static String field_z;
 
     public static void a(byte param0) {

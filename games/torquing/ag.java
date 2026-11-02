@@ -44,10 +44,10 @@ final class ag {
             bp.a(var4, 1, param1);
             var4 = (wc) (so.field_t.f(-24059));
           }
-          var5 = (bm) (gl.field_d.b(0));
+          var5 = (bm) (CachedArchiveSource.field_d.b(0));
           while (var5 != null) {
             mc.a((byte) 85, param1, var5);
-            var5 = (bm) (gl.field_d.f(-24059));
+            var5 = (bm) (CachedArchiveSource.field_d.f(-24059));
           }
           if (param0 == -45) {
             return;
@@ -57,7 +57,7 @@ final class ag {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2), "ag.B(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2), "ag.B(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 final class ac extends nk {
     byte field_y;
     int field_x;
-    fj field_z;
+    PacketBuffer field_z;
     static String field_A;
 
     public static void c(int param0) {
@@ -37,7 +37,7 @@ final class ac extends nk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -52,20 +52,20 @@ final class ac extends nk {
 
     final byte[] c(byte param0) {
         if (param0 <= 102) {
-          this.field_z = (fj) null;
+          this.field_z = (PacketBuffer) null;
           if (this.field_r) {
             throw new RuntimeException();
           }
-          if (this.field_z.field_j.length - this.field_y <= this.field_z.field_n) {
-            return this.field_z.field_j;
+          if (this.field_z.payload.length - this.field_y <= this.field_z.position) {
+            return this.field_z.payload;
           }
           throw new RuntimeException();
         }
         if (this.field_r) {
           throw new RuntimeException();
         }
-        if (this.field_z.field_j.length - this.field_y <= this.field_z.field_n) {
-          return this.field_z.field_j;
+        if (this.field_z.payload.length - this.field_y <= this.field_z.position) {
+          return this.field_z.payload;
         }
         throw new RuntimeException();
     }
@@ -124,7 +124,7 @@ final class ac extends nk {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -134,22 +134,22 @@ final class ac extends nk {
           if (this.field_z == null) {
             return 0;
           }
-          return 100 * this.field_z.field_n / (this.field_z.field_j.length - this.field_y);
+          return 100 * this.field_z.position / (this.field_z.payload.length - this.field_y);
         }
         if (this.field_z == null) {
           return 0;
         }
-        return 100 * this.field_z.field_n / (this.field_z.field_j.length - this.field_y);
+        return 100 * this.field_z.position / (this.field_z.payload.length - this.field_y);
     }
 
     ac() {
     }
 
-    final static boolean a(fj param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        fj var4 = null;
+        PacketBuffer var4 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -161,8 +161,8 @@ final class ac extends nk {
           stackIn_3_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_3_0;
           if (param1 != 28066) {
-            var4 = (fj) null;
-            ac.a((fj) null, -59);
+            var4 = (PacketBuffer) null;
+            ac.a((PacketBuffer) null, -59);
           }
           stackIn_6_0 = var3;
           return stackIn_6_0 != 0;
@@ -176,7 +176,7 @@ final class ac extends nk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

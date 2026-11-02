@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dg extends af {
-    static t[] field_g;
+    static Sprite[] field_g;
     int field_c;
     static int field_h;
     static String field_m;
@@ -20,36 +20,36 @@ final class dg extends af {
         int var10Lifetime2;
         param1 = param1 + (this.field_k.field_a + this.field_c);
         param2 = param2 + (this.field_d + this.field_k.field_g);
-        int var4 = param2 * ph.field_j + param1;
+        int var4 = param2 * SoftwareRasterizer.field_j + param1;
         if (param0) {
           this.b(97);
         }
         int var5 = 0;
         int var6 = this.field_k.field_d;
         int var7 = this.field_k.field_c;
-        int var8 = -var7 + ph.field_j;
-        if (!(param2 >= ph.field_c)) {
-          var10 = -param2 + ph.field_c;
-          var4 = var4 + ph.field_j * var10;
+        int var8 = -var7 + SoftwareRasterizer.field_j;
+        if (!(param2 >= SoftwareRasterizer.field_c)) {
+          var10 = -param2 + SoftwareRasterizer.field_c;
+          var4 = var4 + SoftwareRasterizer.field_j * var10;
           var6 = var6 - var10;
-          param2 = ph.field_c;
+          param2 = SoftwareRasterizer.field_c;
           var5 = var5 + var10 * var7;
         }
         int var9 = 0;
-        if (ph.field_k > param1) {
-          var10Lifetime1 = ph.field_k - param1;
+        if (SoftwareRasterizer.field_k > param1) {
+          var10Lifetime1 = SoftwareRasterizer.field_k - param1;
           var5 = var5 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
-          param1 = ph.field_k;
+          param1 = SoftwareRasterizer.field_k;
           var7 = var7 - var10Lifetime1;
         }
-        if (ph.field_h < var6 + param2) {
-          var6 = var6 - (-ph.field_h + (var6 + param2));
+        if (SoftwareRasterizer.field_h < var6 + param2) {
+          var6 = var6 - (-SoftwareRasterizer.field_h + (var6 + param2));
         }
-        if (!(ph.field_a >= var7 + param1)) {
-          var10Lifetime2 = -ph.field_a + param1 + var7;
+        if (!(SoftwareRasterizer.field_a >= var7 + param1)) {
+          var10Lifetime2 = -SoftwareRasterizer.field_a + param1 + var7;
           var7 = var7 - var10Lifetime2;
           var8 = var8 + var10Lifetime2;
           var9 = var9 + var10Lifetime2;
@@ -58,7 +58,7 @@ final class dg extends af {
           return;
         }
         if (var6 > 0) {
-          wh.a(0, var5, this.field_k.field_l, var6, this.field_l, var8, ph.field_e, (byte) 29, var9, var4, var7, this.field_k.field_k);
+          wh.a(0, var5, this.field_k.field_l, var6, this.field_l, var8, SoftwareRasterizer.field_e, (byte) 29, var9, var4, var7, this.field_k.field_k);
           return;
         }
     }
@@ -91,7 +91,7 @@ final class dg extends af {
           this.field_c = param1;
           this.field_d = param2;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

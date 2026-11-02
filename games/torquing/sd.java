@@ -41,7 +41,7 @@ final class sd extends am {
         var4 = dp.field_a[param1];
         var5 = -2048 + var4 >> 1;
         for (var6 = 0; ci.field_c > var6; var6++) {
-          var8 = q.field_b[var6];
+          var8 = IntrusiveNode.field_b[var6];
           var9 = var8 - 2048 >> 1;
           if (this.field_v == 0) {
             var7 = this.field_u * (-var4 + var8);
@@ -50,7 +50,7 @@ final class sd extends am {
             var7 = (int)(Math.sqrt((double)((float)var10 / 4096.0f)) * 4096.0);
             var7 = (int)(3.141592653589793 * (double)(this.field_u * var7));
           }
-          L3: {
+          regionExit1: {
             var7 = var7 - (var7 & -4096);
             if (this.field_t == 0) {
               var7 = jh.field_x[(var7 & 4091) >> 4] + 4096 >> 1;
@@ -62,7 +62,7 @@ final class sd extends am {
                 }
                 var7 = 2048 - var7 << 1;
                 var14[var6] = var7;
-                break L3;
+                break regionExit1;
               }
             }
             var14[var6] = var7;
@@ -71,7 +71,7 @@ final class sd extends am {
         return var12;
     }
 
-    final static void a(rm param0, int param1, int param2) {
+    final static void a(MeshGeometry param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -136,7 +136,7 @@ final class sd extends am {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -152,11 +152,11 @@ final class sd extends am {
         this.field_v = 0;
     }
 
-    final static la a(boolean param0, int param1, byte param2, int param3, boolean param4) {
+    final static ResourceArchive a(boolean param0, int param1, byte param2, int param3, boolean param4) {
         if (param2 > -62) {
-          return (la) null;
+          return (ResourceArchive) null;
         }
-        return hc.a(false, param0, param3, 8505, param4, param1);
+        return Level.a(false, param0, param3, 8505, param4, param1);
     }
 
     final static boolean b(int param0) {
@@ -167,7 +167,7 @@ final class sd extends am {
         return !qk.field_q.c(484) ? true : false;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -204,7 +204,7 @@ final class sd extends am {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

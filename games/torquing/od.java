@@ -14,9 +14,9 @@ final class od extends am {
         int var4 = 0;
         super.a(param0, param1, param2);
         if (this.field_x >= 0 &&
-          null != ue.field_g) {
-          var4 = ue.field_g.a(this.field_x, (byte) 98).field_h ? 64 : 128;
-          this.field_w = ue.field_g.a((byte) -6, var4, false, 1.0f, this.field_x, var4);
+          null != RandomAccessCacheFile.field_g) {
+          var4 = RandomAccessCacheFile.field_g.a(this.field_x, (byte) 98).field_h ? 64 : 128;
+          this.field_w = RandomAccessCacheFile.field_g.a((byte) -6, var4, false, 1.0f, this.field_x, var4);
           this.field_y = var4;
           this.field_v = var4;
         }
@@ -71,7 +71,7 @@ final class od extends am {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class od extends am {
         if (param0 != -8431868) {
           od.b(-101, -66);
         }
-        of.field_u = null;
+        VertexMesh.field_u = null;
         vb.field_d = null;
     }
 
@@ -94,7 +94,7 @@ final class od extends am {
         this.field_w = null;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -105,7 +105,7 @@ final class od extends am {
             this.f((byte) -99);
           }
           if (param2 == 0) {
-            this.field_x = param0.i(7088);
+            this.field_x = param0.readUnsignedShort(7088);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,7 +118,7 @@ final class od extends am {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

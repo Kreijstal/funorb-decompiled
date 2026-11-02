@@ -5,12 +5,12 @@ final class eg extends am {
     private int field_s;
     static int field_w;
     static int field_x;
-    static la field_v;
+    static ResourceArchive field_v;
     static long field_u;
     static String field_y;
-    static la field_t;
+    static ResourceArchive field_t;
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -20,7 +20,7 @@ final class eg extends am {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_s = param0.i(7088);
+            this.field_s = param0.readUnsignedShort(7088);
           }
           if (param1 != 35) {
             field_u = -102L;
@@ -36,7 +36,7 @@ final class eg extends am {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -47,16 +47,16 @@ final class eg extends am {
 
     final static void a(int param0, int param1, fn param2, int param3, fn param4, boolean param5) {
         try {
-          hn.field_z = param1;
+          WidgetContainer.field_z = param1;
           id.field_b = param4;
           aq.field_b = param3;
           ln.field_D = param0;
           kc.field_x = param2;
           if (!param5) {
-            field_v = (la) null;
+            field_v = (ResourceArchive) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "eg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "eg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class eg extends am {
         if (this.field_l.field_b) {
           var4 = dp.field_a[param1];
           for (var5 = 0; var5 < ci.field_c; var5++) {
-            var6 = q.field_b[var5];
+            var6 = IntrusiveNode.field_b[var5];
             if (this.field_s < var6 &&
               var6 < -this.field_s + 4096 &&
               -this.field_s + 2048 < var4 &&
@@ -152,7 +152,7 @@ final class eg extends am {
 
     public static void b(int param0) {
         if (param0 >= -17) {
-          field_t = (la) null;
+          field_t = (ResourceArchive) null;
         }
         field_v = null;
         field_y = null;

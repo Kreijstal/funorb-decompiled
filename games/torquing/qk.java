@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qk extends q {
+final class qk extends IntrusiveNode {
     int field_j;
     int field_s;
     int field_o;
@@ -32,11 +32,11 @@ final class qk extends q {
             field_r = (k) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "qk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "qk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1, t[] param2, byte param3) {
+    final static void a(int param0, int param1, Sprite[] param2, byte param3) {
         try {
           p.field_x = new fn(param2);
           if (param3 != -4) {
@@ -46,7 +46,7 @@ final class qk extends q {
           wp.field_y = param1;
           w.c((byte) 109);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "qk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "qk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

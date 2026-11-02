@@ -202,7 +202,7 @@ final class nf {
         var10 = field_o[1];
         var11 = field_o[2];
         if (var2 == 3) {
-          stackIn_28_0 = !(var6Lifetime3 >= ph.field_k) || !(var7Lifetime3 >= ph.field_k) || !(var8Lifetime3 >= ph.field_k) || !(var6Lifetime3 <= ph.field_a) || !(var7Lifetime3 <= ph.field_a) || !(var8Lifetime3 <= ph.field_a);
+          stackIn_28_0 = !(var6Lifetime3 >= SoftwareRasterizer.field_k) || !(var7Lifetime3 >= SoftwareRasterizer.field_k) || !(var8Lifetime3 >= SoftwareRasterizer.field_k) || !(var6Lifetime3 <= SoftwareRasterizer.field_a) || !(var7Lifetime3 <= SoftwareRasterizer.field_a) || !(var8Lifetime3 <= SoftwareRasterizer.field_a);
           be.field_q = stackIn_28_0;
           var12 = field_r & 3;
           if (var12 != 0) {
@@ -222,7 +222,7 @@ final class nf {
           }
         }
         if (var2 == 4) {
-          stackIn_48_0 = !(var6Lifetime3 >= ph.field_k) || !(var7Lifetime3 >= ph.field_k) || !(var8Lifetime3 >= ph.field_k) || !(var6Lifetime3 <= ph.field_a) || !(var7Lifetime3 <= ph.field_a) || !(var8Lifetime3 <= ph.field_a) || !(field_g[3] >= 0) || !(field_g[3] <= ph.field_a);
+          stackIn_48_0 = !(var6Lifetime3 >= SoftwareRasterizer.field_k) || !(var7Lifetime3 >= SoftwareRasterizer.field_k) || !(var8Lifetime3 >= SoftwareRasterizer.field_k) || !(var6Lifetime3 <= SoftwareRasterizer.field_a) || !(var7Lifetime3 <= SoftwareRasterizer.field_a) || !(var8Lifetime3 <= SoftwareRasterizer.field_a) || !(field_g[3] >= 0) || !(field_g[3] <= SoftwareRasterizer.field_a);
           be.field_q = stackIn_48_0;
           var12Lifetime1 = field_r & 3;
           if (var12Lifetime1 != 0) {
@@ -307,7 +307,7 @@ final class nf {
           var11 = field_q[1];
           var12 = field_q[2];
           if (!field_h) {
-            stackIn_18_0 = !(var10_int >= ph.field_k) || !(var11 >= ph.field_k) || !(var12 >= ph.field_k) || !(var10_int <= ph.field_a) || !(var11 <= ph.field_a) || !(var12 <= ph.field_a);
+            stackIn_18_0 = !(var10_int >= SoftwareRasterizer.field_k) || !(var11 >= SoftwareRasterizer.field_k) || !(var12 >= SoftwareRasterizer.field_k) || !(var10_int <= SoftwareRasterizer.field_a) || !(var11 <= SoftwareRasterizer.field_a) || !(var12 <= SoftwareRasterizer.field_a);
             field_m = stackIn_18_0;
           }
           nf.a();

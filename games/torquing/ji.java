@@ -20,7 +20,7 @@ final class ji {
         int var10 = 0;
         int var12 = 0;
         int var13 = 0;
-        rm var14 = null;
+        MeshGeometry var14 = null;
         int var8Lifetime1;
         int var9Lifetime1;
         var13 = Torquing.field_u;
@@ -28,36 +28,36 @@ final class ji {
           var6_int = param1.a(param3);
           var7 = param1.field_t + param1.field_x;
           if (param0) {
-            var14 = (rm) null;
-            ji.a((rm) null, 115);
+            var14 = (MeshGeometry) null;
+            ji.a((MeshGeometry) null, 115);
           }
           var8 = 1;
           if (param4 < var6_int) {
             var9 = var6_int / param4;
-            if (uf.field_q == null) {
-              uf.field_q = new String[16];
+            if (TooltipPanel.field_q == null) {
+              TooltipPanel.field_q = new String[16];
             }
             var10 = param4 + (var6_int % param4 + var9 - 1) / var9 * 2;
-            var8Lifetime1 = param1.a(param3, new int[]{var10}, uf.field_q);
+            var8Lifetime1 = param1.a(param3, new int[]{var10}, TooltipPanel.field_q);
             var7 = var7 * var8Lifetime1;
             var6_int = 0;
             for (var11 = 0; var11 < var8Lifetime1; var11++) {
-              var12 = param1.a(uf.field_q[var11]);
+              var12 = param1.a(TooltipPanel.field_q[var11]);
               if (var12 > var6_int) {
                 var6_int = var12;
               }
             }
           }
           var9Lifetime1 = ro.field_w;
-          if (ph.field_j < 6 + var9Lifetime1 + var6_int) {
-            var9Lifetime1 = ph.field_j - var6_int - 6;
+          if (SoftwareRasterizer.field_j < 6 + var9Lifetime1 + var6_int) {
+            var9Lifetime1 = SoftwareRasterizer.field_j - var6_int - 6;
           }
-          var10 = 32 - param1.field_s + ue.field_h;
-          if (var7 + var10 + 6 > ph.field_d) {
-            var10 = ue.field_h + (-var7 - 6);
+          var10 = 32 - param1.field_s + RandomAccessCacheFile.field_h;
+          if (var7 + var10 + 6 > SoftwareRasterizer.field_d) {
+            var10 = RandomAccessCacheFile.field_h + (-var7 - 6);
           }
-          ph.c(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param2);
-          ph.d(var9Lifetime1 + 1, 1 + var10, var6_int + 4, var7 + 4, param5);
+          SoftwareRasterizer.c(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param2);
+          SoftwareRasterizer.d(var9Lifetime1 + 1, 1 + var10, var6_int + 4, var7 + 4, param5);
           param1.a(param3, 3 + var9Lifetime1, 3 + var10, var6_int, var7, param2, -1, 0, 0, param1.field_x + param1.field_t);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class ji {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class ji {
         return new he[]{mf.field_u, h.field_l, jf.field_c};
     }
 
-    final static void a(rm param0, int param1) {
+    final static void a(MeshGeometry param0, int param1) {
         int var2_int = 0;
         int[] var28 = null;
         int[] var18 = null;
@@ -150,7 +150,7 @@ final class ji {
           param0.field_E = var12;
           param0.field_f = param0.field_f + 1;
           param0.field_M = var3_ref_int__;
-          var2_intLifetime1 = param0.field_g;
+          var2_intLifetime1 = param0.vertexCount;
           var3 = var2_intLifetime1 + 1;
           var31 = new int[var3];
           var21 = var31;
@@ -163,12 +163,12 @@ final class ji {
           var33 = new int[var3];
           var23 = var33;
           var6 = var23;
-          dk.a(param0.field_o, 0, var31, 0, var2_intLifetime1);
+          dk.a(param0.vertexX, 0, var31, 0, var2_intLifetime1);
           var37 = new short[var3];
           var27 = var37;
           var7 = var27;
-          dk.a(param0.field_y, 0, var32, 0, var2_intLifetime1);
-          dk.a(param0.field_q, 0, var33, 0, var2_intLifetime1);
+          dk.a(param0.vertexY, 0, var32, 0, var2_intLifetime1);
+          dk.a(param0.vertexZ, 0, var33, 0, var2_intLifetime1);
           if (null != param0.field_j) {
             var34 = new byte[var3];
             var24 = var34;
@@ -199,17 +199,17 @@ final class ji {
             param0.field_A = var17;
           }
           dk.a(param0.field_m, 0, var37, 0, var2_intLifetime1);
-          param0.field_q = var6;
-          param0.field_o = var4Lifetime1;
+          param0.vertexZ = var6;
+          param0.vertexX = var4Lifetime1;
           param0.field_m = var7;
-          param0.field_y = var5Lifetime1;
-          var6[param0.field_g] = param0.field_f + param1;
-          var5Lifetime1[param0.field_g] = param0.field_f + param1;
-          var4Lifetime1[param0.field_g] = param0.field_f + param1;
-          param0.field_A[param0.field_g] = (short)-32768;
-          param0.field_g = param0.field_g + 1;
+          param0.vertexY = var5Lifetime1;
+          var6[param0.vertexCount] = param0.field_f + param1;
+          var5Lifetime1[param0.vertexCount] = param0.field_f + param1;
+          var4Lifetime1[param0.vertexCount] = param0.field_f + param1;
+          param0.field_A[param0.vertexCount] = (short)-32768;
+          param0.vertexCount = param0.vertexCount + 1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ji.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ji.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -228,7 +228,7 @@ final class ji {
           if (11 == op.field_i) {
             oc.a((byte) 105);
           }
-          fh.a(aj.field_E, (byte) -98, mh.field_g, ob.field_b);
+          SocketJs5Transport.a(aj.field_E, (byte) -98, mh.field_g, ob.field_b);
           ni.a(param1, 0, 0, 122);
           if (param0 != -99) {
             field_a = (int[]) null;
@@ -244,7 +244,7 @@ final class ji {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -269,8 +269,8 @@ final class ji {
         try {
           var12 = ln.a(qk.field_p, j.field_q, param6, 103);
           var13 = ln.a(qk.field_p, j.field_q, param3, 81);
-          var14 = ln.a(qg.field_z, kn.field_e, param0, 73);
-          var15 = ln.a(qg.field_z, kn.field_e, param2, 113);
+          var14 = ln.a(qg.field_z, RasterBuffer.field_e, param0, 73);
+          var15 = ln.a(qg.field_z, RasterBuffer.field_e, param2, 113);
           var8_int = ln.a(qk.field_p, j.field_q, param6 + param7, 103);
           var9 = ln.a(qk.field_p, j.field_q, param3 - param7, 111);
           for (var16 = var12; var8_int > var16; var16++) {
@@ -279,8 +279,8 @@ final class ji {
           for (var16Lifetime1 = var13; var9 < var16Lifetime1; var16Lifetime1--) {
             di.a(var14, (byte) -108, param1, qd.field_a[var16Lifetime1], var15);
           }
-          var10 = ln.a(qg.field_z, kn.field_e, param0 + param7, 126);
-          var11 = ln.a(qg.field_z, kn.field_e, -param7 + param2, 76);
+          var10 = ln.a(qg.field_z, RasterBuffer.field_e, param0 + param7, 126);
+          var11 = ln.a(qg.field_z, RasterBuffer.field_e, -param7 + param2, 76);
           var16Lifetime2 = -88 / ((39 - param5) / 39);
           for (var17 = var8_int; var17 <= var9; var17++) {
             var23 = qd.field_a[var17];
@@ -292,7 +292,7 @@ final class ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var8), "ji.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var8), "ji.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

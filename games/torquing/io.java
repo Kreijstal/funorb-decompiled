@@ -35,11 +35,11 @@ final class io extends ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1_ref), "io.P(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "io.P(" + param0 + ')');
         }
     }
 
-    final String c(byte param0, gm param1) {
+    final String c(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -49,7 +49,7 @@ final class io extends ig {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 65) {
-            stackIn_4_0 = ff.a(param1.field_m.length(), '*', true);
+            stackIn_4_0 = ff.a(param1.text.length(), '*', true);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -64,7 +64,7 @@ final class io extends ig {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class io extends ig {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ii extends q {
+final class ii extends IntrusiveNode {
     static String[] field_j;
     static boolean field_n;
     static String field_m;
@@ -13,25 +13,25 @@ final class ii extends q {
 
     final static void a(int param0, int param1, qk param2) {
         int var4 = 0;
-        df var5 = wa.field_d;
+        IsaacPacketBuffer var5 = wa.field_d;
         var5.f(95, param1);
         if (param0 != 32) {
           return;
         }
         try {
-          var5.field_n = var5.field_n + 1;
-          var4 = var5.field_n;
-          var5.b(90, 1);
-          var5.b(90, param2.field_k);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(90, 1);
+          var5.writeByte(90, param2.field_k);
           var5.a(param2.field_o, (byte) 106);
           var5.b((byte) 60, param2.field_n);
           var5.b((byte) 60, param2.field_m);
           var5.b((byte) 60, param2.field_s);
           var5.b((byte) 60, param2.field_j);
           var5.a(var4, true);
-          var5.c((byte) 48, var5.field_n - var4);
+          var5.c((byte) 48, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ii.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ii.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class ii extends q {
             return;
           }
           if (!pl.b(-109)) {
-            ph.b();
+            SoftwareRasterizer.b();
             jf.a(param2 ^ -527, 320, 240);
             ni.a(param0, 0, 0, -109);
             return;
@@ -80,7 +80,7 @@ final class ii extends q {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class ii extends q {
         String var11;
         int var12;
         int var13;
-        ga var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -135,11 +135,11 @@ final class ii extends q {
         if (param1 != 0) {
           return (String) null;
         }
-        if (!(param0 instanceof ga)) {
+        if (!(param0 instanceof ClientException)) {
           var2 = "";
           var11 = var2;
         } else {
-          var14 = (ga) ((Object) param0);
+          var14 = (ClientException) ((Object) param0);
           param0 = var14.field_a;
           var2 = var14.field_b + " | ";
         }
@@ -202,7 +202,7 @@ final class ii extends q {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param5 != 2124) {
           field_k = -109;
-          if (param4 < kn.field_e) {
+          if (param4 < RasterBuffer.field_e) {
             ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
             return;
           }
@@ -221,7 +221,7 @@ final class ii extends q {
           ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
           return;
         }
-        if (param4 < kn.field_e) {
+        if (param4 < RasterBuffer.field_e) {
           ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
           return;
         }

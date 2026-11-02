@@ -3,7 +3,7 @@
  */
 final class vk extends am {
     private int field_D;
-    static hk field_B;
+    static GameApplet field_B;
     private int field_G;
     private int field_y;
     private int field_t;
@@ -11,8 +11,8 @@ final class vk extends am {
     static int[] field_z;
     private int field_v;
     private int field_w;
-    static no field_E;
-    static t field_s;
+    static BufferedSocket field_E;
+    static Sprite field_s;
     private int field_u;
     static int field_A;
 
@@ -98,7 +98,7 @@ final class vk extends am {
         }
         var4 = -2048 + dp.field_a[param1];
         for (var5 = 0; ci.field_c > var5; var5++) {
-          var6 = q.field_b[var5] - 2048;
+          var6 = IntrusiveNode.field_b[var5] - 2048;
           var7 = var6 + this.field_u;
           if (var7 < -2048) {
             stackIn_16_0 = var7 + 4096;
@@ -211,7 +211,7 @@ final class vk extends am {
         ie.a(14837);
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -226,33 +226,33 @@ final class vk extends am {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_u = param0.i(7088);
+            this.field_u = param0.readUnsignedShort(7088);
             return;
           }
           if (1 == var4_int) {
-            this.field_y = param0.i(7088);
+            this.field_y = param0.readUnsignedShort(7088);
             return;
           }
           if (var4_int == 2) {
-            this.field_v = param0.i(7088);
+            this.field_v = param0.readUnsignedShort(7088);
             return;
           }
           if (var4_int == 3) {
-            this.field_t = param0.i(7088);
+            this.field_t = param0.readUnsignedShort(7088);
             return;
           }
           if (4 == var4_int) {
-            this.field_G = param0.i(7088);
+            this.field_G = param0.readUnsignedShort(7088);
             return;
           }
           if (var4_int == 5) {
-            this.field_w = param0.i(7088);
+            this.field_w = param0.readUnsignedShort(7088);
             return;
           }
           if (var4_int != 6) {
             return;
           }
-          this.field_D = param0.i(7088);
+          this.field_D = param0.readUnsignedShort(7088);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -264,7 +264,7 @@ final class vk extends am {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class vk extends am {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

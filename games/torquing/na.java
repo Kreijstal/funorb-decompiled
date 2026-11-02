@@ -12,8 +12,8 @@ final class na extends jh {
     private String field_D;
     static String[] field_I;
 
-    na(int param0, int param1, int param2, int param3, gm param4, boolean param5, int param6, int param7, uc param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (el) null, (ca) null);
+    na(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, uc param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetRenderer) null, (ca) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -74,16 +74,16 @@ final class na extends jh {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     final static int a(da param0, String param1, int param2, da param3, int param4, boolean param5, int param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        fj stackIn_11_0 = null;
+        PacketBuffer stackIn_11_0 = null;
         String stackIn_12_1 = null;
-        fj stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         String stackIn_15_1 = null;
         int stackIn_36_0 = 0;
         int stackIn_47_0 = 0;
@@ -126,70 +126,70 @@ final class na extends jh {
           }
           if (ef.field_a == tb.field_o) {
             jl.field_T = null;
-            wa.field_d.field_n = 0;
+            wa.field_d.position = 0;
             if (param1 != null) {
               var9 = 0;
-              jb.field_c.field_n = 0;
+              jb.field_c.position = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
-              jb.field_c.b((byte) 60, sa.field_d.nextInt());
-              jb.field_c.b((byte) 60, sa.field_d.nextInt());
+              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
               jb.field_c.a(var15, (byte) -72);
               jb.field_c.a(var8, (byte) -72);
               var17 = (CharSequence) ((Object) param1);
               jb.field_c.a(lp.a(var17, 109), (byte) -72);
               jb.field_c.a(param6, 109);
-              jb.field_c.b(90, param4);
-              jb.field_c.b(90, var9);
-              wa.field_d.b(90, 18);
-              wa.field_d.field_n = wa.field_d.field_n + 2;
-              var10 = wa.field_d.field_n;
+              jb.field_c.writeByte(90, param4);
+              jb.field_c.writeByte(90, var9);
+              wa.field_d.writeByte(90, 18);
+              wa.field_d.position = wa.field_d.position + 2;
+              var10 = wa.field_d.position;
               var11_ref_String = rb.a(-108, ip.a(9));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               wa.field_d.b((byte) 4, var11_ref_String);
               ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
-              wa.field_d.c(-var10 + wa.field_d.field_n, param2 + 400395746);
+              wa.field_d.c(-var10 + wa.field_d.position, param2 + 400395746);
             } else {
-              jb.field_c.field_n = 0;
-              jb.field_c.b((byte) 60, sa.field_d.nextInt());
-              jb.field_c.b((byte) 60, sa.field_d.nextInt());
+              jb.field_c.position = 0;
+              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
               stackIn_11_0 = jb.field_c;
               if (!param3.a((byte) 104)) {
                 stackIn_12_1 = "";
               } else {
                 stackIn_12_1 = var15;
               }
-              ((fj) (Object) stackIn_11_0).a(stackIn_12_1, (byte) -72);
+              ((PacketBuffer) (Object) stackIn_11_0).a(stackIn_12_1, (byte) -72);
               stackIn_14_0 = jb.field_c;
               if (param0.a((byte) -113)) {
                 stackIn_15_1 = var8;
               } else {
                 stackIn_15_1 = "";
               }
-              ((fj) (Object) stackIn_14_0).a(stackIn_15_1, (byte) -72);
-              wa.field_d.b(90, 16);
-              wa.field_d.field_n = wa.field_d.field_n + 1;
-              var9 = wa.field_d.field_n;
+              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, (byte) -72);
+              wa.field_d.writeByte(90, 16);
+              wa.field_d.position = wa.field_d.position + 1;
+              var9 = wa.field_d.position;
               ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
-              wa.field_d.c((byte) 48, -var9 + wa.field_d.field_n);
+              wa.field_d.c((byte) 48, -var9 + wa.field_d.position);
             }
             jd.a((byte) -118, -1);
-            ef.field_a = q.field_c;
+            ef.field_a = IntrusiveNode.field_c;
           }
           if (param2 != -25978) {
             var14 = (da) null;
             na.a((da) null, (String) null, 121, (da) null, -99, true, 19);
           }
-          if (q.field_c == ef.field_a &&
-            no.a(1, param2 + 25978)) {
+          if (IntrusiveNode.field_c == ef.field_a &&
+            BufferedSocket.a(1, param2 + 25978)) {
             var9Lifetime1 = kj.field_d.i((byte) -101);
-            kj.field_d.field_n = 0;
+            kj.field_d.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
-              kh.field_n = new String[var9Lifetime1 - 100];
+              Model.field_n = new String[var9Lifetime1 - 100];
               ef.field_a = pl.field_s;
             } else {
               if (248 == var9Lifetime1) {
@@ -201,9 +201,9 @@ final class na extends jh {
                 return stackIn_36_0;
               }
               if (var9Lifetime1 == 99) {
-                no.a(ol.b(-92), param2 ^ -25978);
+                BufferedSocket.a(ol.b(-92), param2 ^ -25978);
                 jl.field_T = new Boolean(ac.a(kj.field_d, 28066));
-                kj.field_d.field_n = 0;
+                kj.field_d.position = 0;
               } else {
                 fa.field_e = var9Lifetime1;
                 ef.field_a = ah.field_b;
@@ -213,13 +213,13 @@ final class na extends jh {
           }
           if (pl.field_s == ef.field_a) {
             var9Lifetime2 = 2;
-            if (no.a(var9Lifetime2, 0)) {
-              var10Lifetime1 = kj.field_d.i(7088);
-              kj.field_d.field_n = 0;
-              if (no.a(var10Lifetime1, 0)) {
-                var11 = kh.field_n.length;
+            if (BufferedSocket.a(var9Lifetime2, 0)) {
+              var10Lifetime1 = kj.field_d.readUnsignedShort(7088);
+              kj.field_d.position = 0;
+              if (BufferedSocket.a(var10Lifetime1, 0)) {
+                var11 = Model.field_n.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  kh.field_n[var12] = kj.field_d.d(-7519);
+                  Model.field_n[var12] = kj.field_d.d(-7519);
                 }
                 ih.b(true);
                 lh.field_J = false;
@@ -283,7 +283,7 @@ final class na extends jh {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -296,17 +296,17 @@ final class na extends jh {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        int var5 = this.field_w + param3;
+        int var5 = this.x + param3;
         if (param1 >= -7) {
           this.b(85);
         }
-        int var6 = param2 + this.field_k;
+        int var6 = param2 + this.y;
         super.a(param0, (byte) -91, param2, param3);
         if (param0 != 0) {
           return;
         }
-        int var7 = !this.field_J ? 0 : -this.field_H + (this.field_p - 2 * this.field_M);
-        this.field_L.a(this.field_D, var5 - (-var7 - this.field_M), var6 + this.field_M, -this.field_M + this.field_H, this.field_o - 2 * this.field_M, this.field_F, -1, !this.field_J ? 2 : 0, 1, this.field_L.field_x);
+        int var7 = !this.field_J ? 0 : -this.field_H + (this.width - 2 * this.field_M);
+        this.field_L.a(this.field_D, var5 - (-var7 - this.field_M), var6 + this.field_M, -this.field_M + this.field_H, this.height - 2 * this.field_M, this.field_F, -1, !this.field_J ? 2 : 0, 1, this.field_L.field_x);
     }
 
     final String b(int param0) {

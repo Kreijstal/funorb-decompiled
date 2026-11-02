@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends hn implements wm, ng {
+final class pe extends WidgetContainer implements wm, ng {
     static String field_M;
     private lg field_B;
     private boolean field_I;
     private lg field_D;
-    static t field_J;
+    static Sprite field_J;
     private String field_N;
     private lg field_K;
     private boolean field_F;
@@ -16,7 +16,7 @@ final class pe extends hn implements wm, ng {
     private boolean field_G;
     static char[] field_H;
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -49,7 +49,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -62,7 +62,7 @@ final class pe extends hn implements wm, ng {
     }
 
     pe(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (el) null);
+        super(0, 0, 310, 190, (WidgetRenderer) null);
         na dupTemp$0 = null;
         na dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -122,15 +122,15 @@ final class pe extends hn implements wm, ng {
             this.field_B = new lg(pf.field_q, (ca) null);
             this.field_C.field_x = false;
           }
-          this.field_C.field_q = (el) ((Object) new ig(10000536));
-          this.field_L.field_q = (el) ((Object) new io(10000536));
+          this.field_C.renderer = (WidgetRenderer) ((Object) new ig(10000536));
+          this.field_L.renderer = (WidgetRenderer) ((Object) new io(10000536));
           var6 = new rf();
-          this.field_K.field_q = (el) ((Object) var6);
+          this.field_K.renderer = (WidgetRenderer) ((Object) var6);
           if (null != this.field_B) {
-            this.field_B.field_q = (el) ((Object) var6);
+            this.field_B.renderer = (WidgetRenderer) ((Object) var6);
           }
           if (this.field_D != null) {
-            this.field_D.field_q = (el) ((Object) var6);
+            this.field_D.renderer = (WidgetRenderer) ((Object) var6);
           }
           this.field_C.field_n = eo.field_e;
           if (this.field_D != null) {
@@ -141,62 +141,62 @@ final class pe extends hn implements wm, ng {
           } else {
             if (this.field_F) {
               this.field_B.field_n = ll.field_m;
-              this.field_B.field_q = (el) ((Object) new je());
+              this.field_B.renderer = (WidgetRenderer) ((Object) new je());
             } else {
-              this.field_B.field_q = (el) ((Object) new je());
+              this.field_B.renderer = (WidgetRenderer) ((Object) new je());
             }
           }
-          this.field_k = 15;
+          this.y = 15;
           var7 = dg.field_e;
           if (this.field_N != null) {
-            this.field_k = this.field_k + (5 + var7.a(this.field_N, this.field_p - 40, var7.field_x));
+            this.y = this.y + (5 + var7.a(this.field_N, this.width - 40, var7.field_x));
           }
           var8 = hq.field_c;
           var9 = go.a(false, ip.a(9));
           if (var9 != mf.field_u) {
             if (h.field_l == var9) {
-              var8 = gj.field_g;
+              var8 = ProxySocketConnector.field_g;
             }
           } else {
             var8 = go.field_v;
           }
-          dupTemp$0 = new na(10, this.field_k, this.field_p - 20, 25, this.field_C, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new na(10, this.y, this.width - 20, 25, this.field_C, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(dupTemp$0, -6938);
-          this.field_k = this.field_k + (((gm) ((Object) var12)).field_o + 5);
-          dupTemp$1 = new na(10, this.field_k, -20 + this.field_p, 25, this.field_L, false, 80, 3, var7, 16777215, hm.field_v);
+          this.y = this.y + (((UiWidget) ((Object) var12)).height + 5);
+          dupTemp$1 = new na(10, this.y, -20 + this.width, 25, this.field_L, false, 80, 3, var7, 16777215, hm.field_v);
           var13 = dupTemp$1;
           this.a(dupTemp$1, -6938);
-          this.field_K.field_t = (ca) (this);
-          this.field_k = this.field_k + (5 + ((gm) ((Object) var13)).field_o);
+          this.field_K.listener = (ca) (this);
+          this.y = this.y + (5 + ((UiWidget) ((Object) var13)).height);
           if (this.field_D != null) {
-            this.field_D.field_t = (ca) (this);
+            this.field_D.listener = (ca) (this);
           }
           if (null != this.field_B) {
-            this.field_B.field_t = (ca) (this);
+            this.field_B.listener = (ca) (this);
           }
           if (this.field_D == null) {
-            this.field_K.a((byte) -46, 8, this.field_k, 30, -16 + this.field_p);
-            this.field_k = this.field_k + 35;
+            this.field_K.a((byte) -46, 8, this.y, 30, -16 + this.width);
+            this.y = this.y + 35;
           } else {
-            this.field_K.a((byte) -97, 85, this.field_k, 30, this.field_p - 95);
-            this.field_k = this.field_k + 60;
+            this.field_K.a((byte) -97, 85, this.y, 30, this.width - 95);
+            this.y = this.y + 60;
           }
           if (null != this.field_D) {
-            this.field_D.a((byte) -18, 8, this.field_k, 30, this.field_p - 6 - 10);
-            this.field_k = this.field_k + 35;
+            this.field_D.a((byte) -18, 8, this.y, 30, this.width - 6 - 10);
+            this.y = this.y + 35;
           }
           if (null != this.field_B) {
             if (!this.field_G &&
               !this.field_F) {
-              this.field_B.a((byte) -21, 8, this.field_k, 20, 40);
-              this.field_k = this.field_k + 25;
+              this.field_B.a((byte) -21, 8, this.y, 20, 40);
+              this.y = this.y + 25;
             } else {
-              this.field_B.a((byte) -13, 8, this.field_k, 30, -6 + this.field_p - 10);
-              this.field_k = this.field_k + 35;
+              this.field_B.a((byte) -13, 8, this.y, 30, -6 + this.width - 10);
+              this.y = this.y + 35;
             }
           }
-          this.a((byte) 123, 0, 0, 3 + this.field_k, this.field_p);
+          this.a((byte) 123, 0, 0, 3 + this.y, this.width);
           this.a(this.field_K, -6938);
           if (this.field_D != null) {
             this.a(this.field_D, -6938);
@@ -221,7 +221,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -241,7 +241,7 @@ final class pe extends hn implements wm, ng {
             eq.field_a = param1;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pe.C(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pe.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -249,10 +249,10 @@ final class pe extends hn implements wm, ng {
         if (param0 >= -68) {
           this.field_B = (lg) null;
         }
-        if (this.field_C.field_m == null) {
+        if (this.field_C.text == null) {
           return "";
         }
-        return this.field_C.field_m;
+        return this.field_C.text;
     }
 
     final void a(int param0, String param1) {
@@ -267,7 +267,7 @@ final class pe extends hn implements wm, ng {
           var3.a(false, var4, true);
           this.field_L.i((byte) 68);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pe.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pe.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class pe extends hn implements wm, ng {
             this.i(127);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -291,7 +291,7 @@ final class pe extends hn implements wm, ng {
         }
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2, df param3) {
+    final static byte[] a(int param0, int param1, byte[] param2, IsaacPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -309,7 +309,7 @@ final class pe extends hn implements wm, ng {
         try {
           var4_int = param3.e(param1, -90);
           if (param0 <= 74) {
-            field_J = (t) null;
+            field_J = (Sprite) null;
           }
           if (var4_int == 0) {
             return null;
@@ -347,35 +347,35 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
     private final void a(byte param0) {
         if (vg.d(0) ||
-          !(this.field_C.field_m.length() <= 0) &&
-          !(0 >= this.field_L.field_m.length())) {
-          sa.a(this.field_C.field_m, 122, this.field_L.field_m);
+          !(this.field_C.text.length() <= 0) &&
+          !(0 >= this.field_L.text.length())) {
+          AudioService.a(this.field_C.text, 122, this.field_L.text);
         }
         if (param0 < 120) {
-          this.a(99, (gm) null, 'ﾠ', 63);
+          this.a(99, (UiWidget) null, 'ﾠ', 63);
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
         if (null != this.field_N) {
-          dg.field_e.a(this.field_N, param3 + this.field_w + 20, param2 + this.field_k + 15, -40 + this.field_p, this.field_o, 16777215, -1, 1, 0, dg.field_e.field_x);
+          dg.field_e.a(this.field_N, param3 + this.x + 20, param2 + this.y + 15, -40 + this.width, this.height, 16777215, -1, 1, 0, dg.field_e.field_x);
         }
         if (param1 >= -7) {
           this.field_C = (tk) null;
         }
         if (null != this.field_D) {
-          ph.b(param3 + 10, 134 + param2, -20 + this.field_p, 4210752);
+          SoftwareRasterizer.b(param3 + 10, 134 + param2, -20 + this.width, 4210752);
         }
         super.a(param0, (byte) -98, param2, param3);
     }
 
-    final static jb[] a(byte param0, df param1) {
+    final static jb[] a(byte param0, IsaacPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -402,7 +402,7 @@ final class pe extends hn implements wm, ng {
           var3 = param1.e(12, -73);
           var4 = new jb[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (df.a(param1, -103)) {
+            if (IsaacPacketBuffer.a(param1, -103)) {
               var6 = new jb();
               param1.e(24, -59);
               param1.e(24, 55);
@@ -429,7 +429,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -444,7 +444,7 @@ final class pe extends hn implements wm, ng {
             this.field_F = false;
           }
           if (this.field_C == param0) {
-            this.field_L.a((gm) (this), false);
+            this.field_L.a((UiWidget) (this), false);
           }
           if (this.field_L == param0) {
             this.a((byte) 124);
@@ -460,7 +460,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -489,7 +489,7 @@ final class pe extends hn implements wm, ng {
                   if (!this.field_F) {
                     ka.a((byte) -110);
                   } else {
-                    of.b((byte) 105);
+                    VertexMesh.b((byte) 105);
                   }
                 }
               }
@@ -506,7 +506,7 @@ final class pe extends hn implements wm, ng {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

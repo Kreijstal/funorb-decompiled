@@ -10,7 +10,7 @@ final class en extends d {
         try {
           this.field_u = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "en.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "en.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class en extends d {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        df var14 = null;
+        IsaacPacketBuffer var14 = null;
         int[][] var18 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
@@ -59,9 +59,9 @@ final class en extends d {
           var4 = var14.i((byte) -101);
           if (0 != var4) {
             var5 = var3_ref.field_l;
-            vl.field_d[0] = re.field_e;
+            IterableNodeHashTable.field_d[0] = re.field_e;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              vl.field_d[var6_int] = var14.h((byte) 124);
+              IterableNodeHashTable.field_d[var6_int] = var14.h((byte) 124);
             }
             jn.a(var5, 3328, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -72,7 +72,7 @@ final class en extends d {
                 hb.a(eg.field_w, qc.field_bb, false, bf.field_c, um.field_p, var6_intLifetime1);
               }
             }
-            ao.a(8191, var5);
+            SocketConnector.a(8191, var5);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
             var8 = vg.field_o;
@@ -80,12 +80,12 @@ final class en extends d {
             var10 = 0;
             while (var9 < var8) {
               var11 = lp.field_g[var9];
-              var6[0][var10] = vl.field_d[var11];
+              var6[0][var10] = IterableNodeHashTable.field_d[var11];
               var18[0][4 * var10] = il.field_o[var11];
               var18[0][var10 * 4 + 1] = wh.field_y[var11];
               var18[0][4 * var10 + 2] = vo.field_d[var11];
               var18[0][var10 * 4 + 3] = vp.field_F[var11];
-              if (bn.a(vl.field_d[var11], -17310) &&
+              if (bn.a(IterableNodeHashTable.field_d[var11], -17310) &&
                 wh.field_y[var11] + (vo.field_d[var11] + vp.field_F[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -98,12 +98,12 @@ final class en extends d {
             var10Lifetime1 = var13;
             while (var9Lifetime1 < var8) {
               var11Lifetime1 = lp.field_g[var9Lifetime1 + var5];
-              var6[1][var13] = vl.field_d[var11Lifetime1];
+              var6[1][var13] = IterableNodeHashTable.field_d[var11Lifetime1];
               var18[1][var13 * 4] = il.field_o[var11Lifetime1];
               var18[1][4 * var13 + 1] = wh.field_y[var11Lifetime1];
               var18[1][2 + var13 * 4] = vo.field_d[var11Lifetime1];
               var18[1][4 * var13 + 3] = vp.field_F[var11Lifetime1];
-              if (bn.a(vl.field_d[var11Lifetime1], -17310) &&
+              if (bn.a(IterableNodeHashTable.field_d[var11Lifetime1], -17310) &&
                 vp.field_F[var11Lifetime1] + wh.field_y[var11Lifetime1] + vo.field_d[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
@@ -111,15 +111,15 @@ final class en extends d {
               var13++;
               var9Lifetime1++;
             }
-            var3_ref.f(0);
+            var3_ref.unlink(0);
             return;
           }
-          var3_ref.f(0);
+          var3_ref.unlink(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "en.F(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "en.F(" + param0 + ')');
         }
     }
 

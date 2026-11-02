@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fi {
-    private la field_a;
+    private ResourceArchive field_a;
     private eb field_d;
-    private la field_b;
+    private ResourceArchive field_b;
     static String field_f;
     private eb field_e;
     static String field_c;
 
-    final gg a(int param0, int param1, byte param2) {
+    final PcmSample a(int param0, int param1, byte param2) {
         if (param2 == -84) {
           return this.a((int[]) null, param2 ^ -21825, param0, param1);
         }
@@ -17,36 +17,36 @@ final class fi {
         return this.a((int[]) null, param2 ^ -21825, param0, param1);
     }
 
-    final gg b(int param0, int param1, byte param2) {
+    final PcmSample b(int param0, int param1, byte param2) {
         if (param2 == 122) {
           return this.a(param1, param0, (int[]) null, (byte) 73);
         }
         int[] var5 = (int[]) null;
-        gg discarded$0 = this.a((int[]) null, -25, -2, -31);
+        PcmSample discarded$0 = this.a((int[]) null, -25, -2, -31);
         return this.a(param1, param0, (int[]) null, (byte) 73);
     }
 
-    private final gg a(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        gg var8 = null;
+        PcmSample var8 = null;
         cg var9 = null;
-        gg var10 = null;
-        gg stackIn_3_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_3_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_10_0 = null;
-        gg stackIn_16_0 = null;
+        PcmSample stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gg var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = ((param3 & -805302273) << 4 | param3 >>> 12) ^ param2;
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int;
-          var8 = (gg) (this.field_e.a(var6, (byte) 98));
+          var8 = (PcmSample) (this.field_e.a(var6, (byte) 98));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -54,21 +54,21 @@ final class fi {
           if (param0 != null &&
             param0[0] <= 0) {
             stackIn_7_0 = null;
-            return (gg) (stackIn_7_0);
+            return (PcmSample) (stackIn_7_0);
           }
           var9 = cg.a(this.field_b, param3, param2);
           if (var9 == null) {
             stackIn_10_0 = null;
-            return (gg) (stackIn_10_0);
+            return (PcmSample) (stackIn_10_0);
           }
           if (param1 != 21779) {
-            this.field_a = (la) null;
+            this.field_a = (ResourceArchive) null;
           }
           var10 = var9.b();
           var8Lifetime1 = var10;
           this.field_e.a(false, var6, var8Lifetime1);
           if (param0 != null) {
-            param0[0] = param0[0] - var10.field_n.length;
+            param0[0] = param0[0] - var10.data.length;
           }
           stackIn_16_0 = var8Lifetime1;
           return stackIn_16_0;
@@ -82,17 +82,17 @@ final class fi {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final gg a(String param0, String param1, int[] param2, byte param3) {
+    private final PcmSample a(String param0, String param1, int[] param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         Object stackIn_5_0 = null;
-        gg stackIn_7_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -113,7 +113,7 @@ final class fi {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (gg) (stackIn_5_0);
+          return (PcmSample) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -136,7 +136,7 @@ final class fi {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class fi {
         String var6 = null;
         bp var7 = null;
         int var8 = 0;
-        q var9 = null;
+        IntrusiveNode var9 = null;
         bp stackIn_3_0 = null;
         bp stackIn_6_0 = null;
         bp stackIn_9_0 = null;
@@ -176,8 +176,8 @@ final class fi {
             return stackIn_9_0;
           }
           if (param0 > -90) {
-            var9 = (q) null;
-            fi.a((q) null, (q) null, 124);
+            var9 = (IntrusiveNode) null;
+            fi.a((IntrusiveNode) null, (IntrusiveNode) null, 124);
           }
           var4 = var3;
           var5 = 0;
@@ -206,30 +206,30 @@ final class fi {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
-    private final gg a(int param0, int param1, int[] param2, byte param3) {
+    private final PcmSample a(int param0, int param1, int[] param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        gg var8 = null;
+        PcmSample var8 = null;
         ho var9 = null;
         int var10 = 0;
-        gg stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         Object stackIn_11_0 = null;
-        gg stackIn_17_0 = null;
+        PcmSample stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gg var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param0 << 4 & 65528 | param0 >>> 12) ^ param1;
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (gg) (this.field_e.a(var6, (byte) 91));
+          var8 = (PcmSample) (this.field_e.a(var6, (byte) 91));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -244,7 +244,7 @@ final class fi {
             var9 = ho.a(this.field_a, param0, param1);
             if (var9 == null) {
               stackIn_11_0 = null;
-              return (gg) (stackIn_11_0);
+              return (PcmSample) (stackIn_11_0);
             }
             this.field_d.a(false, var6, var9);
           }
@@ -252,7 +252,7 @@ final class fi {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.f(0);
+          var9.unlink(0);
           this.field_e.a(false, var6, var8Lifetime1);
           stackIn_17_0 = var8Lifetime1;
           return stackIn_17_0;
@@ -266,24 +266,24 @@ final class fi {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(q param0, q param1, int param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
-          if (null != param0.field_h) {
-            param0.f(0);
+          if (null != param0.next) {
+            param0.unlink(0);
           }
           if (param2 != -1240266932) {
             field_f = (String) null;
           }
-          param0.field_h = param1.field_h;
-          param0.field_e = param1;
-          param0.field_h.field_e = param0;
-          param0.field_e.field_h = param0;
+          param0.next = param1.next;
+          param0.previous = param1;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "fi.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fi.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -298,20 +298,20 @@ final class fi {
         field_c = null;
     }
 
-    fi(la param0, la param1) {
+    fi(ResourceArchive param0, ResourceArchive param1) {
         this.field_d = new eb(256);
         this.field_e = new eb(256);
         try {
           this.field_a = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "fi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final gg a(String param0, int param1, String param2) {
+    final PcmSample a(String param0, int param1, String param2) {
         RuntimeException var4 = null;
-        gg stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -340,7 +340,7 @@ final class fi {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class fi {
             stackIn_2_0 = null;
             return (vn) (stackIn_2_0);
           }
-          var2 = new vn(param1, fj.field_o, na.field_G, vo.field_b, ij.field_o, pn.field_b);
+          var2 = new vn(param1, PacketBuffer.field_o, na.field_G, vo.field_b, ij.field_o, pn.field_b);
           if (param0 != -9) {
             var3 = (byte[]) null;
             fi.a((byte) 17, (byte[]) null);
@@ -377,7 +377,7 @@ final class fi {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

@@ -46,40 +46,40 @@ final class cg {
         return var3;
     }
 
-    final gg b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new gg(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
-    private cg(fj param0) {
+    private cg(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new ma[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.i((byte) -101);
           if (var3 != 0) {
-            param0.field_n = param0.field_n - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new ma();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_b = param0.i(7088);
-        this.field_c = param0.i(7088);
+        this.field_b = param0.readUnsignedShort(7088);
+        this.field_c = param0.readUnsignedShort(7088);
     }
 
-    final static cg a(la param0, String param1, String param2) {
+    final static cg a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(-113, param2, param1);
         if (var3 == null) {
           return null;
         }
-        return new cg(new fj(var3));
+        return new cg(new PacketBuffer(var3));
     }
 
-    final static cg a(la param0, int param1, int param2) {
+    final static cg a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, 100, param2);
         if (var3 == null) {
           return null;
         }
-        return new cg(new fj(var3));
+        return new cg(new PacketBuffer(var3));
     }
 }

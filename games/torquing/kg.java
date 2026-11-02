@@ -35,13 +35,13 @@ final class kg {
             var4_ref_ai = (ai) (qe.field_c.b(param1 - 21));
             if (var4_ref_ai != null &&
               var4_ref_ai.field_n < var2_long) {
-              var4_ref_ai.f(0);
+              var4_ref_ai.unlink(0);
               oo.field_a = var4_ref_ai.field_k.length;
-              kj.field_d.field_n = 0;
+              kj.field_d.position = 0;
               for (var5_int = 0; var5_int < oo.field_a; var5_int++) {
-                kj.field_d.field_j[var5_int] = var4_ref_ai.field_k[var5_int];
+                kj.field_d.payload[var5_int] = var4_ref_ai.field_k[var5_int];
               }
-              mm.field_d = eb.field_f;
+              UrlRequest.field_d = eb.field_f;
               eb.field_f = wk.field_h;
               wk.field_h = fa.field_e;
               fa.field_e = var4_ref_ai.field_j;
@@ -58,25 +58,25 @@ final class kg {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
         stackIn_20_0 = im.field_E;
         try {
           while (true) {
             if (stackIn_20_0 < 0) {
-              kj.field_d.field_n = 0;
-              if (!no.a(1, param1 - 21)) {
+              kj.field_d.position = 0;
+              if (!BufferedSocket.a(1, param1 - 21)) {
                 return false;
               }
               im.field_E = kj.field_d.a(true);
-              kj.field_d.field_n = 0;
+              kj.field_d.position = 0;
               oo.field_a = param0[im.field_E];
             }
             if (!ah.a(param1 ^ 23)) {
               return false;
             }
             if (wh.field_x == 0) {
-              mm.field_d = eb.field_f;
+              UrlRequest.field_d = eb.field_f;
               eb.field_f = wk.field_h;
               wk.field_h = fa.field_e;
               fa.field_e = im.field_E;
@@ -85,14 +85,14 @@ final class kg {
             }
             var4 = wh.field_x;
             if (0.0 != u.field_s) {
-              var4 = (int)((double)var4 + sa.field_d.nextGaussian() * u.field_s);
+              var4 = (int)((double)var4 + AudioService.field_d.nextGaussian() * u.field_s);
               if (var4 < 0) {
                 var4 = 0;
               }
             }
             var5 = new ai((long)var4 + var2_long, im.field_E, new byte[oo.field_a]);
             for (var6 = 0; oo.field_a > var6; var6++) {
-              var5.field_k[var6] = kj.field_d.field_j[var6];
+              var5.field_k[var6] = kj.field_d.payload[var6];
             }
             qe.field_c.a((byte) 54, var5);
             im.field_E = -1;
@@ -108,12 +108,12 @@ final class kg {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        ul.field_e = new ei();
+        MouseInputHandler.field_e = new IntrusiveDeque();
         if (param0 < 81) {
           field_c = (nh) null;
         }
@@ -135,21 +135,21 @@ final class kg {
     }
 
     kg(sg param0, int param1, int param2) {
-        rm var4 = null;
-        kh var5 = null;
+        MeshGeometry var4 = null;
+        Model var5 = null;
         try {
           this.field_b = param1;
           this.field_d = param0;
-          var4 = new rm(1, 1, 0);
+          var4 = new MeshGeometry(1, 1, 0);
           var4.a(0, 0, 0);
-          var4.a(0, 0, 0, (byte) 0, (byte) 0, (short)param2, (short) -1);
+          var4.addVertex(0, 0, 0, (byte) 0, (byte) 0, (short)param2, (short) -1);
           this.field_a = (pj) (var4.a(80, 1365, -1, -12, 12));
           this.field_a.field_z[0] = (short)param2;
-          var5 = new kh();
+          var5 = new Model();
           var5.field_k = this.field_a;
           param0.a(param1, var5);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class kg {
         if (b.field_x < 2) {
           return 0;
         }
-        if (0 == sn.field_i) {
+        if (0 == ImageProducerRasterBuffer.field_i) {
           if (!lp.field_a.a(-12749)) {
             return 20;
           }

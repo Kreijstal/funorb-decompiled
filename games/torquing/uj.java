@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class uj {
-    static ei field_a;
+    static IntrusiveDeque field_a;
     static o[] field_b;
     kp[] field_c;
 
@@ -15,8 +15,8 @@ abstract class uj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (gn.field_m != null) {
-            gn.field_m.b(true);
+          if (IsaacCipher.field_m != null) {
+            IsaacCipher.field_m.b(true);
           }
           un.field_k = new pe(param2, param0, false, true, true);
           hb.field_x.c(un.field_k, param1 + 32115);
@@ -40,7 +40,7 @@ abstract class uj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ abstract class uj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ abstract class uj {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ abstract class uj {
         int var6;
         var7 = Torquing.field_u;
         if (!param0) {
-          field_a = (ei) null;
+          field_a = (IntrusiveDeque) null;
         }
         var2 = -1;
         if (this.field_c != null) {
@@ -264,6 +264,6 @@ abstract class uj {
     }
 
     static {
-        field_a = new ei();
+        field_a = new IntrusiveDeque();
     }
 }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk extends lf {
-    static t field_o;
-    uh field_r;
-    static t field_n;
+final class kk extends PcmStream {
+    static Sprite field_o;
+    PcmStreamMixer field_r;
+    static Sprite field_n;
     private int[] field_p;
     static String field_q;
 
@@ -12,7 +12,7 @@ final class kk extends lf {
         return 0;
     }
 
-    final lf b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -25,8 +25,8 @@ final class kk extends lf {
         field_o = null;
     }
 
-    final lf c() {
-        return (lf) ((Object) this.field_r);
+    final PcmStream c() {
+        return (PcmStream) ((Object) this.field_r);
     }
 
     final int d() {
@@ -51,7 +51,7 @@ final class kk extends lf {
         int var5 = 0;
         var6 = Torquing.field_u;
         try {
-          if (!pi.field_r) {
+          if (!AudioOutput.field_r) {
             stackIn_4_0 = param2;
           } else {
             stackIn_4_0 = param2 << 1;
@@ -64,7 +64,7 @@ final class kk extends lf {
             this.field_p = new int[var4_int];
           }
           this.field_r.b(this.field_p, 0, param2);
-          if (pi.field_r) {
+          if (AudioOutput.field_r) {
             param1 = param1 << 1;
           }
           var5 = 0;
@@ -86,12 +86,12 @@ final class kk extends lf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     kk() {
-        this.field_r = new uh();
+        this.field_r = new PcmStreamMixer();
     }
 
     static {

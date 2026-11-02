@@ -47,21 +47,21 @@ class ah extends qf {
 
     final static boolean a(int param0) {
         if (oo.field_a == -1) {
-          if (!no.a(1, 0)) {
+          if (!BufferedSocket.a(1, 0)) {
             return false;
           }
           oo.field_a = kj.field_d.i((byte) -101);
-          kj.field_d.field_n = 0;
+          kj.field_d.position = 0;
         }
         if (oo.field_a == -2) {
-          if (!no.a(2, 0)) {
+          if (!BufferedSocket.a(2, 0)) {
             return false;
           }
-          oo.field_a = kj.field_d.i(7088);
-          kj.field_d.field_n = 0;
+          oo.field_a = kj.field_d.readUnsignedShort(7088);
+          kj.field_d.position = 0;
         }
         if (param0 == 2) {
-          return no.a(oo.field_a, 0);
+          return BufferedSocket.a(oo.field_a, 0);
         }
         return true;
     }

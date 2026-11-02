@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pm extends q {
-    rc[] field_u;
+final class pm extends IntrusiveNode {
+    PlatformTask[] field_u;
     int[] field_q;
     byte[][][] field_o;
-    rc[] field_n;
+    PlatformTask[] field_n;
     int field_l;
     static int[] field_s;
     static String field_p;
@@ -15,7 +15,7 @@ final class pm extends q {
     int[] field_t;
     int field_j;
 
-    final static void a(kh param0, int param1, int param2) {
+    final static void a(Model param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int[] var26 = null;
@@ -46,13 +46,13 @@ final class pm extends q {
         short[] var34 = null;
         short[] var25 = null;
         short[] var15 = null;
-        rm var16 = param0.field_l;
+        MeshGeometry var16 = param0.field_l;
         if (param1 != -27226) {
           return;
         }
         try {
-          if (param2 + var16.field_g > var16.field_o.length) {
-            var4 = var16.field_g;
+          if (param2 + var16.vertexCount > var16.vertexX.length) {
+            var4 = var16.vertexCount;
             var5 = 3 * (param2 + var4) / 2;
             var26 = new int[var5];
             var17 = var26;
@@ -72,22 +72,22 @@ final class pm extends q {
             var31 = new short[var5];
             var22 = var31;
             var11 = var22;
-            dk.a(var16.field_o, 0, var26, 0, var4);
+            dk.a(var16.vertexX, 0, var26, 0, var4);
             var32 = new short[var5];
             var23 = var32;
             var12 = var23;
-            dk.a(var16.field_y, 0, var27, 0, var4);
-            dk.a(var16.field_q, 0, var28, 0, var4);
+            dk.a(var16.vertexY, 0, var27, 0, var4);
+            dk.a(var16.vertexZ, 0, var28, 0, var4);
             dk.a(var16.field_j, 0, var29, 0, var4);
             dk.a(var16.field_D, 0, var30, 0, var4);
             dk.a(var16.field_m, 0, var31, 0, var4);
             dk.a(var16.field_A, 0, var32, 0, var4);
-            var16.field_q = var8;
-            var16.field_y = var7;
+            var16.vertexZ = var8;
+            var16.vertexY = var7;
             var16.field_m = var11;
             var16.field_j = var9;
             var16.field_D = var10;
-            var16.field_o = var6;
+            var16.vertexX = var6;
             var16.field_A = var12;
             var13 = param0.field_q;
             if (var13.field_u != null) {
@@ -104,7 +104,7 @@ final class pm extends q {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "pm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

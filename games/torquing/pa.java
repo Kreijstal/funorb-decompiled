@@ -18,13 +18,13 @@ abstract class pa {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        df var8 = null;
+        IsaacPacketBuffer var8 = null;
         p var9 = null;
         var7 = Torquing.field_u;
         var8 = kj.field_d;
         var3 = var8.i((byte) -101);
         stackIn_3_0 = ((var3 & 128) != 0);
-        fd.field_a = stackIn_3_0;
+        ArchiveIndex.field_a = stackIn_3_0;
         n.field_u = var3 & 127;
         hh.field_a = var8.i((byte) -101);
         pm.field_r = var8.b(9);
@@ -32,7 +32,7 @@ abstract class pa {
           bg.field_n = 0;
           oh.field_b = 0;
         } else {
-          bg.field_n = var8.i(7088);
+          bg.field_n = var8.readUnsignedShort(7088);
           oh.field_b = var8.e((byte) 62);
         }
         stackIn_9_0 = (var8.i((byte) -101) != 1) ? 0 : 1;
@@ -44,11 +44,11 @@ abstract class pa {
           dg.field_m = var8.h((byte) 119);
         }
         if (n.field_u == 1) {
-          var8.i(7088);
+          var8.readUnsignedShort(7088);
           var8.h((byte) 125);
         } else {
           if (n.field_u == 4) {
-            var8.i(7088);
+            var8.readUnsignedShort(7088);
             var8.h((byte) 125);
           }
         }
@@ -57,10 +57,10 @@ abstract class pa {
         }
         if (!param1) {
           np.field_m = Torquing.a(26657, 80, var8);
-          md.field_a = null;
+          DelegatingCanvas.field_a = null;
           return new hi(param1);
         }
-        var5 = var8.i(param0 ^ -13616);
+        var5 = var8.readUnsignedShort(param0 ^ -13616);
         try {
           var9 = qg.field_C.a(var5, 32767);
           np.field_m = var9.c((byte) -127);
@@ -69,13 +69,13 @@ abstract class pa {
           } else {
             stackIn_25_0 = null;
           }
-          md.field_a = stackIn_25_0;
+          DelegatingCanvas.field_a = stackIn_25_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           nn.a("CC1", (Throwable) ((Object) var6), -9958);
           np.field_m = null;
-          md.field_a = null;
+          DelegatingCanvas.field_a = null;
           return new hi(param1);
         }
         return new hi(param1);

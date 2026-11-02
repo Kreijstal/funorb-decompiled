@@ -7,9 +7,9 @@ abstract class eh {
     sg field_h;
     int[] field_f;
     static bc field_i;
-    static ei field_b;
+    static IntrusiveDeque field_b;
     double[] field_g;
-    hc field_a;
+    Level field_a;
     static String field_e;
 
     eh() {
@@ -18,7 +18,7 @@ abstract class eh {
 
     final static void c(byte param0) {
         if (param0 != 90) {
-          field_b = (ei) null;
+          field_b = (IntrusiveDeque) null;
           gp.j((byte) -34);
           od.b(128, 4);
           return;
@@ -113,25 +113,25 @@ abstract class eh {
           this.field_h.b(this.field_d);
           return;
         }
-        this.field_a = (hc) null;
+        this.field_a = (Level) null;
         this.field_h.d(this.field_c);
         this.field_h.b(this.field_d);
     }
 
     final void c(int param0) {
-        ei.field_c.field_e = this.field_g[9];
-        ei.field_c.field_b = this.field_g[8];
-        ei.field_c.field_d = this.field_g[7];
+        IntrusiveDeque.field_c.field_e = this.field_g[9];
+        IntrusiveDeque.field_c.field_b = this.field_g[8];
+        IntrusiveDeque.field_c.field_d = this.field_g[7];
         this.field_f[param0] = (int)(0.5 + this.field_g[0]);
-        ei.field_c.field_a = this.field_g[6];
+        IntrusiveDeque.field_c.field_a = this.field_g[6];
         this.field_f[2] = (int)(0.5 + this.field_g[2]);
         this.field_f[1] = (int)(this.field_g[1] + 0.5);
-        ei.field_c.a((byte) -127);
-        this.field_g[7] = ei.field_c.field_d;
-        this.field_g[9] = ei.field_c.field_e;
-        this.field_g[8] = ei.field_c.field_b;
-        this.field_g[6] = ei.field_c.field_a;
-        ei.field_c.a(this.field_f, (byte) 118);
+        IntrusiveDeque.field_c.a((byte) -127);
+        this.field_g[7] = IntrusiveDeque.field_c.field_d;
+        this.field_g[9] = IntrusiveDeque.field_c.field_e;
+        this.field_g[8] = IntrusiveDeque.field_c.field_b;
+        this.field_g[6] = IntrusiveDeque.field_c.field_a;
+        IntrusiveDeque.field_c.a(this.field_f, (byte) 118);
         this.field_h.a(this.field_c, this.field_f[0], this.field_f[1], this.field_f[2]);
     }
 

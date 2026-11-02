@@ -5,14 +5,14 @@ abstract class kj {
     int field_c;
     int field_a;
     int field_e;
-    static df field_d;
-    static t field_b;
+    static IsaacPacketBuffer field_d;
+    static Sprite field_b;
     static String field_f;
 
     final static void a(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        df var1 = null;
+        IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -24,17 +24,17 @@ abstract class kj {
           var1 = wa.field_d;
           while (jd.g((byte) -126)) {
             var1.f(73, 8);
-            fieldTemp$0 = var1.field_n + 1;
-            var1.field_n = var1.field_n + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            hk.a(var1, -2933);
-            wa.field_d.c((byte) 48, -var2 + var1.field_n);
+            GameApplet.a(var1, -2933);
+            wa.field_d.c((byte) 48, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1_ref), "kj.I(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "kj.I(" + param0 + ')');
         }
     }
 
@@ -238,7 +238,7 @@ abstract class kj {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         be.field_p > var37) {
-                        fh.a(-1709787119, var21, var38, var29, var25, 0, 0, var37 + var36Lifetime2, 0, param5);
+                        SocketJs5Transport.a(-1709787119, var21, var38, var29, var25, 0, 0, var37 + var36Lifetime2, 0, param5);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
@@ -248,9 +248,9 @@ abstract class kj {
                         var38 = be.field_p - var37 - 1;
                       }
                       if (var37 < 0) {
-                        fh.a(-1709787119, var21 - var39 * var37, var37 + var38, -(var41 * var37) + var29, var25 - var37 * var40, var40, var41, var36Lifetime2, var39, param5);
+                        SocketJs5Transport.a(-1709787119, var21 - var39 * var37, var37 + var38, -(var41 * var37) + var29, var25 - var37 * var40, var40, var41, var36Lifetime2, var39, param5);
                       } else {
-                        fh.a(-1709787119, var21, var38, var29, var25, var40, var41, var36Lifetime2 + var37, var39, param5);
+                        SocketJs5Transport.a(-1709787119, var21, var38, var29, var25, var40, var41, var36Lifetime2 + var37, var39, param5);
                       }
                     }
                   }
@@ -260,7 +260,7 @@ abstract class kj {
                   }
                   var29 = var29 + var31;
                   var22 = var22 + var24;
-                  var36Lifetime2 = var36Lifetime2 + ph.field_j;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_j;
                   var18 = var18 + var20;
                   var30 = var30 + var32;
                   var26 = var26 + var28;
@@ -325,7 +325,7 @@ abstract class kj {
                 if (0 == var37Lifetime1) {
                   if (var36Lifetime1 >= 0 &&
                     be.field_p > var36Lifetime1) {
-                    fh.a(param7 - 2098657503, var21, var37Lifetime1, var29, var25, 0, 0, var36Lifetime1 + var35Lifetime1, 0, param5);
+                    SocketJs5Transport.a(param7 - 2098657503, var21, var37Lifetime1, var29, var25, 0, 0, var36Lifetime1 + var35Lifetime1, 0, param5);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -335,9 +335,9 @@ abstract class kj {
                     var37Lifetime1 = be.field_p - var36Lifetime1 - 1;
                   }
                   if (var36Lifetime1 < 0) {
-                    fh.a(-1709787119, -(var36Lifetime1 * var38Lifetime1) + var21, var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, -(var39Lifetime1 * var36Lifetime1) + var25, var39Lifetime1, var40Lifetime1, var35Lifetime1, var38Lifetime1, param5);
+                    SocketJs5Transport.a(-1709787119, -(var36Lifetime1 * var38Lifetime1) + var21, var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, -(var39Lifetime1 * var36Lifetime1) + var25, var39Lifetime1, var40Lifetime1, var35Lifetime1, var38Lifetime1, param5);
                   } else {
-                    fh.a(-1709787119, var21, var37Lifetime1, var29, var25, var39Lifetime1, var40Lifetime1, var36Lifetime1 + var35Lifetime1, var38Lifetime1, param5);
+                    SocketJs5Transport.a(-1709787119, var21, var37Lifetime1, var29, var25, var39Lifetime1, var40Lifetime1, var36Lifetime1 + var35Lifetime1, var38Lifetime1, param5);
                   }
                 }
               }
@@ -347,7 +347,7 @@ abstract class kj {
               }
               var25 = var25 + var27;
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + ph.field_j;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_j;
               var22 = var22 + var24;
               var21 = var21 + var23;
               var30 = var30 + var32;
@@ -368,7 +368,7 @@ abstract class kj {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 

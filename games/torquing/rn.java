@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rn implements el {
+final class rn implements WidgetRenderer {
     private uc field_c;
     static byte field_e;
     private int field_k;
@@ -24,9 +24,9 @@ final class rn implements el {
         field_a = null;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int var10 = 0;
-        gm stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -42,26 +42,26 @@ final class rn implements el {
           if (!(param4 instanceof ri)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (gm) (param4);
+            stackIn_4_0 = (UiWidget) (param4);
           }
           var12 = (ri) (stackIn_4_0);
-          ph.d(param2 + param4.field_w, param1 + param4.field_k, param4.field_p, param4.field_o, this.field_i);
+          SoftwareRasterizer.d(param2 + param4.x, param1 + param4.y, param4.width, param4.height, this.field_i);
           if (var12 != null) {
           }
           if (param0 < 89) {
             return;
           }
-          var7 = -(2 * var12.field_F) + param4.field_p;
-          var8 = param4.field_w + param2 + var12.field_F;
-          var9 = var12.field_C + (param1 + param4.field_k);
-          ph.a(var8, var9, var7 + var8, var9, this.field_g);
+          var7 = -(2 * var12.field_F) + param4.width;
+          var8 = param4.x + param2 + var12.field_F;
+          var9 = var12.field_C + (param1 + param4.y);
+          SoftwareRasterizer.a(var8, var9, var7 + var8, var9, this.field_g);
           for (var10 = var12.a(0) - 1; 0 <= var10; var10--) {
-            ph.d(var8 + var7 * var12.b(var10, 0) / var12.a((byte) -108), var9, this.field_k, this.field_h);
+            SoftwareRasterizer.d(var8 + var7 * var12.b(var10, 0) / var12.a((byte) -108), var9, this.field_k, this.field_h);
           }
           if (this.field_c == null) {
             return;
           }
-          this.field_c.c(var12.field_m, var7 / 2 + var8, var12.field_C + var9 + this.field_c.field_q, this.field_l, this.field_d);
+          this.field_c.c(var12.text, var7 / 2 + var8, var12.field_C + var9 + this.field_c.field_q, this.field_l, this.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class rn implements el {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class rn implements el {
           this.field_k = param5;
           this.field_i = param4;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n extends ta {
+final class n extends DualLinkNode {
     static String field_r;
     static int field_u;
     static int field_w;
@@ -9,7 +9,7 @@ final class n extends ta {
     static String[] field_s;
     byte[] field_v;
     static volatile boolean field_x;
-    static la field_q;
+    static ResourceArchive field_q;
 
     public static void a(int param0) {
         field_s = null;
@@ -24,7 +24,7 @@ final class n extends ta {
         try {
           this.field_v = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

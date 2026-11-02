@@ -5,7 +5,7 @@ final class wj extends e {
     static ce field_i;
     static java.applet.Applet field_g;
     static String field_j;
-    static t[] field_h;
+    static Sprite[] field_h;
     static sm field_k;
 
     final static void a(int param0) {

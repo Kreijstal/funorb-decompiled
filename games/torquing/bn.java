@@ -19,12 +19,12 @@ abstract class bn {
 
     final static bm a(int param0, int param1, int param2, byte param3, int param4) {
         int var6 = Torquing.field_u;
-        bm var5 = (bm) (gl.field_d.b(0));
+        bm var5 = (bm) (CachedArchiveSource.field_d.b(0));
         while (var5 != null) {
           if (~param0 == ~var5.field_s) {
             return var5;
           }
-          var5 = (bm) (gl.field_d.f(-24059));
+          var5 = (bm) (CachedArchiveSource.field_d.f(-24059));
         }
         bm var8 = new bm();
         bm var9 = var8;
@@ -32,7 +32,7 @@ abstract class bn {
         if (param3 == 44) {
           var9.field_o = param2;
           var9.field_s = param0;
-          gl.field_d.a((byte) 54, var9);
+          CachedArchiveSource.field_d.a((byte) 54, var9);
           mc.a((byte) 85, param1, var9);
           return var9;
         }
@@ -40,7 +40,7 @@ abstract class bn {
         bn.a((String) null, 73);
         var9.field_o = param2;
         var9.field_s = param0;
-        gl.field_d.a((byte) 54, var9);
+        CachedArchiveSource.field_d.a((byte) 54, var9);
         mc.a((byte) 85, param1, var9);
         return var9;
     }
@@ -77,7 +77,7 @@ abstract class bn {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mc extends q {
+final class mc extends IntrusiveNode {
     static int field_l;
     static k field_k;
-    nj field_j;
+    PcmSampleStream field_j;
     static double field_m;
 
     final static void c(int param0) {
@@ -31,7 +31,7 @@ final class mc extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "mc.B(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "mc.B(" + param0 + ')');
         }
     }
 
@@ -44,20 +44,20 @@ final class mc extends q {
     }
 
     final static void a(byte param0, int param1, bm param2) {
-        df var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           if (param0 != 85) {
             mc.a(95);
           }
           var3 = wa.field_d;
           var3.f(-71, param1);
-          var3.b(90, 5);
-          var3.b(90, 0);
+          var3.writeByte(90, 5);
+          var3.writeByte(90, 0);
           var3.a(param2.field_s, 93);
-          var3.b(90, param2.field_q);
-          var3.b(90, param2.field_o);
+          var3.writeByte(90, param2.field_q);
+          var3.writeByte(90, param2.field_o);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "mc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "mc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class mc extends q {
             } else {
               stackIn_24_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -128,11 +128,11 @@ final class mc extends q {
         }
     }
 
-    mc(nj param0) {
+    mc(PcmSampleStream param0) {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "mc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "mc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

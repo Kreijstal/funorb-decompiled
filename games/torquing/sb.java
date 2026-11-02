@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb extends q {
+final class sb extends IntrusiveNode {
     private int field_m;
     private int field_k;
     private String field_o;
@@ -24,7 +24,7 @@ final class sb extends q {
           this.field_j = this.field_j - 2;
           this.field_m = this.field_m - this.field_l;
           if (this.field_j < 16) {
-            this.f(0);
+            this.unlink(0);
           }
           return;
         }
@@ -34,7 +34,7 @@ final class sb extends q {
         if (param0 != -80) {
           return true;
         }
-        return no.field_n.a((byte) -74);
+        return BufferedSocket.field_n.a((byte) -74);
     }
 
     final void c(int param0) {
@@ -50,7 +50,7 @@ final class sb extends q {
           this.field_o = param0;
           this.field_l = param3;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

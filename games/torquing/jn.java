@@ -43,9 +43,9 @@ final class jn {
           !(param2 <= go.field_s.length)) {
           go.field_s = new boolean[2 * param2];
         }
-        lj.field_d = 2147483647;
+        SecondaryNodeDeque.field_d = 2147483647;
         qd.field_g = -2147483648;
-        ga.field_c = 2147483647;
+        ClientException.field_c = 2147483647;
         mc.field_l = -2147483648;
         vg.field_o = 0;
     }
@@ -98,7 +98,7 @@ final class jn {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class jn {
           for (var3 = 0; var3 < wh.field_z.length; var3++) {
             var4 = mn.field_Z[var3];
             if (var4 < 0) {
-              var5 = uf.field_c;
+              var5 = TooltipPanel.field_c;
             } else {
               if (var4 != kb.field_g.field_g) {
                 var5 = cc.field_c;
@@ -151,25 +151,25 @@ final class jn {
             var6 = wh.field_z[var3];
             if (go.field_x == 2 &&
               var2 == 1) {
-              if (qh.field_b.length > fd.field_k.length) {
+              if (qh.field_b.length > ArchiveIndex.field_k.length) {
                 stackIn_18_0 = qh.field_b.length;
               } else {
-                stackIn_18_0 = fd.field_k.length;
+                stackIn_18_0 = ArchiveIndex.field_k.length;
               }
               var7 = stackIn_18_0;
               if (var3 >= 6 &&
                 var3 < var7 + 6) {
-                if (-var7 + (fd.field_k.length + (var3 - 6)) < 0) {
+                if (-var7 + (ArchiveIndex.field_k.length + (var3 - 6)) < 0) {
                   stackIn_24_0 = "";
                 } else {
-                  stackIn_24_0 = fd.field_k[-var7 + (-6 + var3 + fd.field_k.length)];
+                  stackIn_24_0 = ArchiveIndex.field_k[-var7 + (-6 + var3 + ArchiveIndex.field_k.length)];
                 }
                 var6 = stackIn_24_0;
               }
-              if (me.field_a.length <= ib.field_c.length) {
+              if (ArchiveSource.field_a.length <= ib.field_c.length) {
                 stackIn_28_0 = ib.field_c.length;
               } else {
-                stackIn_28_0 = me.field_a.length;
+                stackIn_28_0 = ArchiveSource.field_a.length;
               }
               var8 = stackIn_28_0;
               if (var3 >= 7 + var7 &&
@@ -194,7 +194,7 @@ final class jn {
                 stackIn_43_0 = kc.field_x;
               }
               var9 = stackIn_43_0;
-              var1_int = var1_int + hn.field_z;
+              var1_int = var1_int + WidgetContainer.field_z;
               if (var9 != null) {
                 var9.a(-aq.field_b + var8Lifetime1, (ln.field_D << 1) + kp.field_d, (aq.field_b << 1) + var7Lifetime1, (byte) 119, var1_int);
               }
@@ -202,7 +202,7 @@ final class jn {
             }
             if (0 <= var4) {
               sp.field_Q.b(var6, var8Lifetime1, var1_int + bi.field_p, var5, -1);
-              var1_int = var1_int + (hn.field_z + (ln.field_D + kp.field_d));
+              var1_int = var1_int + (WidgetContainer.field_z + (ln.field_D + kp.field_d));
             } else {
               bo.field_e.b(var6, var8Lifetime1, var1_int + bp.field_f, var5, -1);
               var1_int = var1_int + bp.field_e;
@@ -212,7 +212,7 @@ final class jn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "jn.C(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1), "jn.C(" + param0 + ')');
         }
     }
 

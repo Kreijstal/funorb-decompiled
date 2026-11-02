@@ -15,16 +15,16 @@ final class rj extends am {
     private short[] field_x;
     static int field_w;
 
-    final static void a(int param0, String param1, t param2) {
+    final static void a(int param0, String param1, Sprite param2) {
         try {
           hf.field_a = param1;
           if (param0 >= -43) {
-            t var4 = (t) null;
-            rj.a(87, (String) null, (t) null);
+            Sprite var4 = (Sprite) null;
+            rj.a(87, (String) null, (Sprite) null);
           }
           jd.field_D = param2;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "rj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "rj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class rj extends am {
         return var4;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int dupTemp$0 = 0;
         boolean stackIn_18_1 = false;
         RuntimeException stackIn_32_0 = null;
@@ -257,7 +257,7 @@ final class rj extends am {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -322,13 +322,13 @@ final class rj extends am {
             var18 = this.field_s[var16 & 255] & 255;
             if (!this.field_B) {
               for (var10 = 0; var10 < ci.field_c; var10++) {
-                var4_int = this.field_D * q.field_b[var10];
+                var4_int = this.field_D * IntrusiveNode.field_b[var10];
                 var6 = this.a(var12, var4_int * var8 >> 12, var11, var14, var17, 4096, var18);
                 param1[var10] = var6 * var9 >> 12;
               }
             } else {
               for (var10 = 0; ci.field_c > var10; var10++) {
-                var4_int = this.field_D * q.field_b[var10];
+                var4_int = this.field_D * IntrusiveNode.field_b[var10];
                 var6 = this.a(var12, var4_int * var8 >> 12, var11, var14, var17, 4096, var18);
                 var6 = var9 * var6 >> 12;
                 param1[var10] = (var6 >> 1) + 2048;
@@ -352,7 +352,7 @@ final class rj extends am {
               var14 = cf.field_a[var11];
               var18 = 255 & this.field_s[var16 & 255];
               for (var10 = 0; ci.field_c > var10; var10++) {
-                var4_int = q.field_b[var10] * this.field_D;
+                var4_int = IntrusiveNode.field_b[var10] * this.field_D;
                 var6 = this.a(var12, var4_int * var8 >> 12, var11, var14, var17, 4096, var18);
                 param1[var10] = var6 * var9 >> 12;
               }
@@ -377,14 +377,14 @@ final class rj extends am {
                 if (this.field_B &&
                   var7 == this.field_C - 1) {
                   for (var10 = 0; ci.field_c > var10; var10++) {
-                    var4_int = this.field_D * q.field_b[var10];
+                    var4_int = this.field_D * IntrusiveNode.field_b[var10];
                     var6 = this.a(var12, var8 * var4_int >> 12, var11, var14, var17, 4096, var18);
                     var6 = param1[var10] + (var6 * var9 >> 12);
                     param1[var10] = 2048 + (var6 >> 1);
                   }
                 } else {
                   for (var10 = 0; var10 < ci.field_c; var10++) {
-                    var4_int = this.field_D * q.field_b[var10];
+                    var4_int = this.field_D * IntrusiveNode.field_b[var10];
                     var6 = this.a(var12, var4_int * var8 >> 12, var11, var14, var17, 4096, var18);
                     param1[var10] = param1[var10] + (var6 * var9 >> 12);
                   }
@@ -406,7 +406,7 @@ final class rj extends am {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(')').toString());
         }
     }
 

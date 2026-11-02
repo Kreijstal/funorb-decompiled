@@ -21,7 +21,7 @@ final class ri extends lg {
         return -1;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         int var12 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -43,7 +43,7 @@ final class ri extends lg {
             return false;
           }
           var8_int = -param1 + (param4 - this.field_F);
-          var9 = this.field_p - 2 * this.field_F;
+          var9 = this.width - 2 * this.field_F;
           if (var9 < var8_int) {
             var8_int = var9;
           }
@@ -81,7 +81,7 @@ final class ri extends lg {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
         }
     }
 

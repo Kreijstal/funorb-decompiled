@@ -14,17 +14,17 @@ final class jo {
     }
 
     final static void a(boolean param0, int param1, og param2) {
-        df var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           if (!param0) {
             field_a = (String) null;
           }
           var3 = wa.field_d;
           var3.f(-121, param1);
-          var3.b(90, param2.field_j);
-          var3.b(90, param2.field_l);
+          var3.writeByte(90, param2.field_j);
+          var3.writeByte(90, param2.field_l);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "jo.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "jo.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -8,8 +8,8 @@ final class hq {
     private boolean field_g;
     private int field_b;
     static String[] field_d;
-    static vh field_a;
-    static t[] field_h;
+    static PlatformTaskDispatcher field_a;
+    static Sprite[] field_h;
     static String field_e;
 
     private final int a(byte param0, int param1) {

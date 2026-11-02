@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jj {
-    final static java.awt.Frame a(vh param0, int param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_32_0 = null;
@@ -17,9 +17,9 @@ final class jj {
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        vh var10 = null;
+        PlatformTaskDispatcher var10 = null;
         sf[] var11 = null;
-        rc var12 = null;
+        PlatformTask var12 = null;
         var9 = Torquing.field_u;
         try {
           if (!param0.a((byte) 13)) {
@@ -27,7 +27,7 @@ final class jj {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (param4 == 0) {
-            var11 = no.a(param0, -33);
+            var11 = BufferedSocket.a(param0, -33);
             var6 = var11;
             if (var6 == null) {
               return null;
@@ -48,19 +48,19 @@ final class jj {
             }
           }
           var12 = param0.a(true, param2, param1, param5, param4);
-          while (var12.field_a == 0) {
+          while (var12.status == 0) {
             ub.a(1976, 10L);
           }
           if (param3 != 0) {
-            var10 = (vh) null;
-            jj.a((vh) null, 19, 84, -43, 52, 100);
+            var10 = (PlatformTaskDispatcher) null;
+            jj.a((PlatformTaskDispatcher) null, 19, 84, -43, 52, 100);
           }
-          var7 = (java.awt.Frame) (var12.field_d);
+          var7 = (java.awt.Frame) (var12.result);
           if (var7 == null) {
             stackIn_32_0 = null;
             return (java.awt.Frame) (stackIn_32_0);
           }
-          if (var12.field_a != 2) {
+          if (var12.status != 2) {
             stackIn_37_0 = var7;
             return stackIn_37_0;
           }
@@ -77,7 +77,7 @@ final class jj {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class jj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

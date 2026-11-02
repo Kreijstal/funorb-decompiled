@@ -3,7 +3,7 @@
  */
 final class gd {
     static sm[] field_a;
-    static t field_b;
+    static Sprite field_b;
     static int field_c;
 
     public static void a(byte param0) {
@@ -16,7 +16,7 @@ final class gd {
         field_b = null;
     }
 
-    final static vn a(la param0, int param1, la param2, int param3, int param4) {
+    final static vn a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         vn stackIn_4_0 = null;
@@ -49,7 +49,7 @@ final class gd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class gd {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class gd {
     }
 
     static {
-        field_b = new t(640, 480);
+        field_b = new Sprite(640, 480);
         field_c = 0;
     }
 }

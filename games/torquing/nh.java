@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh extends q {
+final class nh extends IntrusiveNode {
     static sm field_l;
     static String field_q;
     static String field_p;
@@ -12,7 +12,7 @@ final class nh extends q {
     static String field_o;
     int[] field_r;
 
-    final static void a(vh param0, int param1, fj param2, byte param3) {
+    final static void a(PlatformTaskDispatcher param0, int param1, PacketBuffer param2, byte param3) {
         try {
           int var5 = 0;
           int var12_int = 0;
@@ -54,9 +54,9 @@ final class nh extends q {
             var19.field_l = param2.i((byte) -101);
             var19.field_j = param2.c((byte) -121);
             var19.field_t = new int[var19.field_l];
-            var19.field_n = new rc[var19.field_l];
+            var19.field_n = new PlatformTask[var19.field_l];
             var19.field_k = new int[var19.field_l];
-            var19.field_u = new rc[var19.field_l];
+            var19.field_u = new PlatformTask[var19.field_l];
             var19.field_q = new int[var19.field_l];
             var19.field_o = new byte[var19.field_l][][];
             var6 = 31 / ((param3 + 71) / 33);
@@ -91,10 +91,10 @@ final class nh extends q {
                     var18 = 0;
                     var14Lifetime1 = var18;
                     while (var18 < var10) {
-                      var13[var18] = ei.a((byte) -112, var11[var18]);
+                      var13[var18] = IntrusiveDeque.a((byte) -112, var11[var18]);
                       var18++;
                     }
-                    var19.field_n[var5] = param0.a(var13, -30475, var9, ei.a((byte) -117, var21));
+                    var19.field_n[var5] = param0.a(var13, -30475, var9, IntrusiveDeque.a((byte) -117, var21));
                     var19.field_o[var5] = var22;
                   }
                 } else {
@@ -108,7 +108,7 @@ final class nh extends q {
                   }
                   var19.field_q[var5] = var7_int;
                   var19.field_k[var5] = var10;
-                  var19.field_u[var5] = param0.a(ei.a((byte) -116, var16), true, var17);
+                  var19.field_u[var5] = param0.a(IntrusiveDeque.a((byte) -116, var16), true, var17);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class nh extends q {
                 var19.field_t[var5] = -5;
               }
             }
-            ul.field_e.a((byte) 54, var19);
+            MouseInputHandler.field_e.a((byte) 54, var19);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -150,7 +150,7 @@ final class nh extends q {
             } else {
               stackIn_40_2 = "{...}";
             }
-            throw rb.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(')').toString());
+            throw rb.wrapThrowable((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -166,8 +166,8 @@ final class nh extends q {
         field_p = null;
         field_j = null;
         if (param0) {
-          fj var2 = (fj) null;
-          nh.a((vh) null, -6, (fj) null, (byte) -36);
+          PacketBuffer var2 = (PacketBuffer) null;
+          nh.a((PlatformTaskDispatcher) null, -6, (PacketBuffer) null, (byte) -36);
         }
     }
 

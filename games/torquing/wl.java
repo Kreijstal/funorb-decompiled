@@ -55,7 +55,7 @@ final class wl extends sl {
     private int field_R;
     private int[] field_lb;
     private int[] field_G;
-    private nj[] field_V;
+    private PcmSampleStream[] field_V;
     private int field_z;
     private int[] field_n;
     private int field_u;
@@ -192,10 +192,10 @@ final class wl extends sl {
           this.field_eb = this.field_eb + 1;
         }
         for (var15 = 0; var15 < this.field_x.field_M; var15++) {
-          L55: {
+          regionExit1: {
             if (this.field_J != 0) {
               if (this.field_v[var15] < 0) {
-                break L55;
+                break regionExit1;
               }
               var16 = this.field_v[var15];
             } else {
@@ -899,7 +899,7 @@ final class wl extends sl {
         this.field_L = new int[this.field_x.field_M];
         this.field_nb = new int[this.field_x.field_M];
         this.field_D = new boolean[this.field_x.field_M];
-        this.field_V = new nj[this.field_x.field_M];
+        this.field_V = new PcmSampleStream[this.field_x.field_M];
         this.c();
     }
 
@@ -996,16 +996,16 @@ final class wl extends sl {
               param2 = 256;
             }
           }
-          this.field_V[param0].a(pi.field_c >> 7, param1 * this.field_R * this.field_z >> 12, param2);
+          this.field_V[param0].a(AudioOutput.field_c >> 7, param1 * this.field_R * this.field_z >> 12, param2);
         }
     }
 
-    final int a(uh param0) {
+    final int a(PcmStreamMixer param0) {
         if (this.f() &&
           !this.field_jb) {
           return -1;
         }
-        int var3 = pi.field_c;
+        int var3 = AudioOutput.field_c;
         int var4 = (var3 << 9) + (var3 << 7);
         return var4 / (this.field_W * this.field_hb);
     }
@@ -1021,27 +1021,27 @@ final class wl extends sl {
 
     private final void a(int param0, int param1) {
         if (this.field_V[param0] != null) {
-          this.field_V[param0].b(param1 * 256 / pi.field_c);
+          this.field_V[param0].b(param1 * 256 / AudioOutput.field_c);
         }
     }
 
     private final void b(int param0) {
         if (this.field_V[param0] != null) {
-          this.field_V[param0].h(pi.field_c >> 7);
+          this.field_V[param0].h(AudioOutput.field_c >> 7);
           this.field_V[param0] = null;
         }
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        gg stackIn_14_0 = null;
+        PcmSample stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
-        nj stackIn_17_0 = null;
+        PcmSampleStream stackIn_17_0 = null;
         int stackIn_18_1 = 0;
-        nj stackIn_20_0 = null;
+        PcmSampleStream stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         Throwable decompiledCaughtException = null;
-        nj var7 = null;
+        PcmSampleStream var7 = null;
         Object var8 = null;
         this.b(param0);
         if (param3 > field_E[7999] &&
@@ -1061,23 +1061,23 @@ final class wl extends sl {
             param5 = 0;
           }
           stackIn_14_0 = this.field_x.field_o[param1];
-          stackIn_14_1 = param3 * 256 / pi.field_c;
+          stackIn_14_1 = param3 * 256 / AudioOutput.field_c;
           if (param2 == 0) {
             stackIn_15_2 = param4 * this.field_R * this.field_z >> 12;
           } else {
             stackIn_15_2 = 0;
           }
-          var7 = nj.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
+          var7 = PcmSampleStream.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
           var7.d(this.field_x.field_w[param1], this.field_x.field_t[param1]);
           stackIn_17_0 = var7;
           stackIn_18_1 = (this.field_x.field_y[param1] == 0) ? 0 : -1;
-          ((nj) (Object) stackIn_17_0).d(stackIn_18_1);
+          ((PcmSampleStream) (Object) stackIn_17_0).d(stackIn_18_1);
           stackIn_20_0 = var7;
           stackIn_21_1 = (this.field_x.field_y[param1] != 2) ? false : true;
-          ((nj) (Object) stackIn_20_0).a(stackIn_21_1);
+          ((PcmSampleStream) (Object) stackIn_20_0).a(stackIn_21_1);
           if (param2 != 0) {
             var7.c(param2);
-            var7.a(pi.field_c >> 7, param4 * this.field_R * this.field_z >> 12, param5);
+            var7.a(AudioOutput.field_c >> 7, param4 * this.field_R * this.field_z >> 12, param5);
           }
           this.field_V[param0] = var7;
           if (this.field_j != null) {

@@ -3,7 +3,7 @@
  */
 final class ti {
     private ja field_d;
-    static uf[] field_l;
+    static TooltipPanel[] field_l;
     static String field_m;
     private int field_j;
     static boolean field_k;
@@ -12,9 +12,9 @@ final class ti {
     static String field_f;
     int[] field_h;
     private boolean field_i;
-    static uh field_e;
+    static PcmStreamMixer field_e;
     int field_c;
-    private ei field_o;
+    private IntrusiveDeque field_o;
     static int field_g;
     int[] field_a;
 
@@ -51,7 +51,7 @@ final class ti {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class ti {
           var3 = (ud) (this.field_o.b(param1 ^ param1));
           while (var3 != null) {
             if (param0.a(var3.field_m)) {
-              var3.f(0);
+              var3.unlink(0);
               if (var3.field_o != null) {
                 je.a((byte) -43, var3.field_o);
               }
@@ -92,7 +92,7 @@ final class ti {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -149,13 +149,13 @@ final class ti {
           this.field_j = -1;
           var2_ref = (ud) (this.field_o.b(0));
           while (var2_ref != null) {
-            L1: {
+            regionExit1: {
               if (var2_ref.field_o == null) {
                 var2_ref.a(param0 - 4682);
                 if (var2_ref.field_p) {
                   je.a((byte) -43, var2_ref.field_o);
-                  var2_ref.f(param0 ^ 4803);
-                  break L1;
+                  var2_ref.unlink(param0 ^ 4803);
+                  break regionExit1;
                 }
               }
               if (this.field_n != null) {
@@ -180,7 +180,7 @@ final class ti {
               var2_ref.a(param0 - 4682);
               if (var2_ref.field_p) {
                 je.a((byte) -43, var2_ref.field_o);
-                var2_ref.f(param0 ^ 4803);
+                var2_ref.unlink(param0 ^ 4803);
                 decompiledFrameRemainder0 = false;
               }
             }
@@ -203,7 +203,7 @@ final class ti {
         this.a(-93, 64);
     }
 
-    final static void a(la param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         ho var2 = null;
         try {
           ho.a(param0.a(-125, "", "headers.packvorbis"));
@@ -213,7 +213,7 @@ final class ti {
           var2 = ho.a(param0, "jagex logo2.packvorbis", "");
           var2.c();
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ti.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ti.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -252,7 +252,7 @@ final class ti {
           this.b((byte) 62);
           this.field_j = -1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ti.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ti.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -318,9 +318,9 @@ final class ti {
           this.field_h = param1;
           this.field_a = param2;
           this.field_c = param3;
-          this.field_o = new ei();
+          this.field_o = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class qf {
-    static ei field_a;
+    static IntrusiveDeque field_a;
     private static String field_z;
 
     public static void a(boolean param0) {
@@ -16,6 +16,6 @@ class qf {
 
     static {
         field_z = "qf.F(";
-        field_a = new ei();
+        field_a = new IntrusiveDeque();
     }
 }

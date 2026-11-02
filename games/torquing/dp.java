@@ -3,11 +3,11 @@
  */
 abstract class dp {
     static int[] field_a;
-    static t field_b;
+    static Sprite field_b;
 
     abstract byte[] a(int param0);
 
-    final static af a(String param0, String param1, la param2, byte param3) {
+    final static af a(String param0, String param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
         af stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -20,9 +20,9 @@ abstract class dp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 4) {
-            field_b = (t) null;
+            field_b = (Sprite) null;
           }
-          stackIn_3_0 = bi.a(md.a(param0, 31094, param2, param1), param3 ^ -108);
+          stackIn_3_0 = bi.a(DelegatingCanvas.a(param0, 31094, param2, param1), param3 ^ -108);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,7 +46,7 @@ abstract class dp {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

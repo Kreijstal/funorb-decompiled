@@ -37,14 +37,14 @@ final class qo extends am {
 
     final static void g(byte param0) {
         i.field_R = false;
-        me.field_a = null;
+        ArchiveSource.field_a = null;
         ib.field_c = null;
         qh.field_b = null;
         if (param0 != -68) {
-          la var2 = (la) null;
-          qo.a(47, -32, -37, (fi) null, (la) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          qo.a(47, -32, -37, (fi) null, (ResourceArchive) null);
         }
-        fd.field_k = null;
+        ArchiveIndex.field_k = null;
     }
 
     final int[][] a(int param0, int param1) {
@@ -128,7 +128,7 @@ final class qo extends am {
         return var3;
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -142,7 +142,7 @@ final class qo extends am {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_u = param0.i(7088);
+              this.field_u = param0.readUnsignedShort(7088);
             } else {
               if (2 == var4_int) {
                 stackIn_11_1 = (param0.i((byte) -101) == 1);
@@ -150,7 +150,7 @@ final class qo extends am {
               }
             }
           } else {
-            this.field_s = param0.i(param1 + 7053);
+            this.field_s = param0.readUnsignedShort(param1 + 7053);
           }
           if (param1 != 35) {
             this.a((byte) -121, -73);
@@ -166,12 +166,12 @@ final class qo extends am {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        if (-param1 + param4 < kn.field_e) {
+        if (-param1 + param4 < RasterBuffer.field_e) {
           v.a(param2, param4, param0, (byte) 77, param1);
         } else {
           if (param1 + param4 > qg.field_z) {
@@ -199,7 +199,7 @@ final class qo extends am {
         this.field_s = 0;
     }
 
-    final static lh a(int param0, int param1, int param2, fi param3, la param4) {
+    final static lh a(int param0, int param1, int param2, fi param3, ResourceArchive param4) {
         byte[] var5 = null;
         RuntimeException var5_ref = null;
         byte[] var6 = null;
@@ -220,7 +220,7 @@ final class qo extends am {
             return stackIn_2_0;
           }
           if (var6 != null) {
-            stackIn_7_0 = new lh(new fj(var6), param3);
+            stackIn_7_0 = new lh(new PacketBuffer(var6), param3);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
@@ -241,7 +241,7 @@ final class qo extends am {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

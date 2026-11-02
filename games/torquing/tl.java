@@ -7,7 +7,7 @@ final class tl extends eh {
     private int field_o;
     private int field_j;
     private lm field_q;
-    static ei field_p;
+    static IntrusiveDeque field_p;
     tl field_t;
     private int field_k;
     static String field_s;
@@ -15,7 +15,7 @@ final class tl extends eh {
     private int field_m;
     static int field_u;
 
-    final static ak a(fj param0, byte param1) {
+    final static ak a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ak stackIn_1_0 = null;
@@ -37,7 +37,7 @@ final class tl extends eh {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,30 +75,30 @@ final class tl extends eh {
         return (lm) ((Object) new ej(this.field_g[0], this.field_g[1], this.field_g[2], (double)this.e(-109)));
     }
 
-    final kh d(int param0) {
+    final Model d(int param0) {
         int var5 = 0;
-        kh var2;
+        Model var2;
         int var3;
         int var4;
         int var6;
-        kh var7;
-        kh var8;
-        kh var9;
-        kh var10;
+        Model var7;
+        Model var8;
+        Model var9;
+        Model var10;
         int var3Lifetime1;
         int var4Lifetime1;
-        kh var2Lifetime1;
+        Model var2Lifetime1;
         var6 = Torquing.field_u;
         if (this.field_r != 2) {
           if (this.field_r != 1) {
             if (param0 != -2) {
-              return (kh) null;
+              return (Model) null;
             }
-            return vc.field_c[this.field_r];
+            return MouseWheelInput.field_c[this.field_r];
           }
-          var2 = (kh) (on.field_e.a((long)this.field_k, (byte) 94));
+          var2 = (Model) (on.field_e.a((long)this.field_k, (byte) 94));
           if (var2 == null) {
-            var8 = new kh(vc.field_c[this.field_r], true, false, true, true);
+            var8 = new Model(MouseWheelInput.field_c[this.field_r], true, false, true, true);
             var10 = var8;
             var2 = var10;
             if (this.field_k > 100) {
@@ -114,7 +114,7 @@ final class tl extends eh {
             } else {
               var3 = 127;
             }
-            for (var4 = var10.field_l.field_g - 1; var4 >= 0; var4--) {
+            for (var4 = var10.field_l.vertexCount - 1; var4 >= 0; var4--) {
               if (var8.field_l.field_m[var4] == 127) {
                 var8.field_l.field_m[var4] = (short)var3;
               }
@@ -123,9 +123,9 @@ final class tl extends eh {
           }
           return var2;
         }
-        var2Lifetime1 = (kh) (og.field_k.a((long)this.field_k, (byte) 117));
+        var2Lifetime1 = (Model) (og.field_k.a((long)this.field_k, (byte) 117));
         if (var2Lifetime1 == null) {
-          var7 = new kh(vc.field_c[this.field_r], true, false, true, true);
+          var7 = new Model(MouseWheelInput.field_c[this.field_r], true, false, true, true);
           var9 = var7;
           var2Lifetime1 = var9;
           if (this.field_k > 5) {
@@ -160,9 +160,9 @@ final class tl extends eh {
             var4Lifetime1 = 0;
             var3Lifetime1 = 32;
           }
-          for (var5 = var9.field_l.field_g - 1; var5 >= 0; var5--) {
+          for (var5 = var9.field_l.vertexCount - 1; var5 >= 0; var5--) {
             if (var7.field_l.field_m[var5] != 127) {
-              var9.field_l.field_m[var5] = (short)gm.a(ie.a((int) var7.field_l.field_m[var5], var4Lifetime1), var3Lifetime1);
+              var9.field_l.field_m[var5] = (short)UiWidget.a(ie.a((int) var7.field_l.field_m[var5], var4Lifetime1), var3Lifetime1);
             }
           }
           og.field_k.a(false, (long)this.field_k, var9);
@@ -183,7 +183,7 @@ final class tl extends eh {
     }
 
     final void a(bi param0, int param1) {
-        ei stackIn_43_0;
+        IntrusiveDeque stackIn_43_0;
         int stackIn_43_1;
         sb stackIn_43_2;
         sb stackIn_43_3;
@@ -193,7 +193,7 @@ final class tl extends eh {
         sb stackIn_44_2;
         sb stackIn_44_3;
         int stackIn_44_7;
-        ei stackIn_47_0;
+        IntrusiveDeque stackIn_47_0;
         int stackIn_47_1;
         sb stackIn_47_2;
         sb stackIn_47_3;
@@ -224,7 +224,7 @@ final class tl extends eh {
           if (param1 != 19) {
             return;
           }
-          var13 = gj.field_i;
+          var13 = ProxySocketConnector.field_i;
           var12 = var13;
           var11 = var12;
           var3 = var11;
@@ -237,8 +237,8 @@ final class tl extends eh {
           if (0 == var9) {
             param0.g(param1 ^ 111);
             th.a(100, th.field_F[18]);
-            la.field_k[11].a(false);
-            jh.a(la.field_k[11], 0);
+            ResourceArchive.field_k[11].a(false);
+            jh.a(ResourceArchive.field_k[11], 0);
           } else {
             if (var9 != 1) {
               if (var9 == 2) {
@@ -259,7 +259,7 @@ final class tl extends eh {
                   stackIn_48_3 = null;
                   stackIn_48_7 = 3;
                 }
-                ((ei) (Object) stackIn_47_0).a((byte) stackIn_47_1, new sb(stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_48_7));
+                ((IntrusiveDeque) (Object) stackIn_47_0).a((byte) stackIn_47_1, new sb(stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_48_7));
                 th.a(100, th.field_F[7]);
               } else {
                 if (var9 == 4) {
@@ -304,11 +304,11 @@ final class tl extends eh {
                             }
                             param0.a((byte) 113, 1000);
                             param0.field_e.a((byte) 54, new sb(nc.field_c, var7, var8, 3));
-                            param0.a((byte) -68, vc.field_c[this.field_r], 1092, 72);
-                            param0.field_i = vc.field_c[this.field_r];
-                            param0.field_z = param0.field_z | 1 << param0.field_d.field_s;
-                            la.field_k[10].g();
-                            jh.a(la.field_k[10], 0);
+                            param0.a((byte) -68, MouseWheelInput.field_c[this.field_r], 1092, 72);
+                            param0.field_i = MouseWheelInput.field_c[this.field_r];
+                            param0.field_z = param0.field_z | 1 << param0.field_d.id;
+                            ResourceArchive.field_k[10].g();
+                            jh.a(ResourceArchive.field_k[10], 0);
                             return;
                           }
                           param0.field_e.a((byte) 54, new sb(Integer.toString(1000), var7, var8, 2));
@@ -346,7 +346,7 @@ final class tl extends eh {
                 stackIn_44_3 = null;
                 stackIn_44_7 = 2;
               }
-              ((ei) (Object) stackIn_43_0).a((byte) stackIn_43_1, new sb(stackIn_43_4, stackIn_43_5, stackIn_43_6, stackIn_44_7));
+              ((IntrusiveDeque) (Object) stackIn_43_0).a((byte) stackIn_43_1, new sb(stackIn_43_4, stackIn_43_5, stackIn_43_6, stackIn_44_7));
               th.a(param1 + 81, th.field_F[19]);
               th.a(100, th.field_F[6]);
             }
@@ -362,7 +362,7 @@ final class tl extends eh {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -388,14 +388,14 @@ final class tl extends eh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     private final int e(int param0) {
         int var5 = 0;
         int var2;
-        rm var3;
+        MeshGeometry var3;
         int var4;
         int var6;
         int var7;
@@ -457,6 +457,6 @@ final class tl extends eh {
     static {
         field_l = new ui(0, 0);
         field_s = "Orb points: <%0>";
-        field_p = new ei();
+        field_p = new IntrusiveDeque();
     }
 }

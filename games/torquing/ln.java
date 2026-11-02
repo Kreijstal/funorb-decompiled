@@ -3,13 +3,13 @@
  */
 final class ln extends jh {
     static int field_F;
-    private ei field_E;
-    static t[] field_H;
+    private IntrusiveDeque field_E;
+    static Sprite[] field_H;
     static int field_D;
     static int field_G;
 
-    final static void a(int param0, int param1, uf[] param2, byte param3) {
-        uf var4 = null;
+    final static void a(int param0, int param1, TooltipPanel[] param2, byte param3) {
+        TooltipPanel var4 = null;
         try {
           if (param3 != -58) {
             field_G = 10;
@@ -17,7 +17,7 @@ final class ln extends jh {
           var4 = param2[param2.length - 1];
           var4.a(param0, param1, 86);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ln.NA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ln.NA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -37,17 +37,17 @@ final class ln extends jh {
 
     final void a(int param0, byte param1, int param2, int param3) {
         int var7 = Torquing.field_u;
-        if (null != this.field_q) {
-          this.field_q.a(114, param2, param3, true, (gm) (this));
+        if (null != this.renderer) {
+          this.renderer.a(114, param2, param3, true, (UiWidget) (this));
         }
         re var5 = new re(this.field_E);
         if (param1 > -7) {
           return;
         }
-        gm var6 = (gm) (var5.a(17514));
+        UiWidget var6 = (UiWidget) (var5.a(17514));
         while (var6 != null) {
-          var6.a(param0, (byte) -58, param2 + this.field_k, param3 + this.field_w);
-          var6 = (gm) (var5.a(true));
+          var6.a(param0, (byte) -58, param2 + this.y, param3 + this.x);
+          var6 = (UiWidget) (var5.a(true));
         }
     }
 
@@ -60,11 +60,11 @@ final class ln extends jh {
         bb var3 = (bb) (var2.a((byte) 95));
         while (var3 != null) {
           if (var3.h(-7)) {
-            var3.f(0);
+            var3.unlink(0);
           }
           var3 = (bb) (var2.b(true));
         }
-        this.field_C = (gm) ((Object) this.a(0));
+        this.field_C = (UiWidget) ((Object) this.a(0));
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
@@ -81,7 +81,7 @@ final class ln extends jh {
         }
     }
 
-    final void a(gm param0, byte param1) {
+    final void a(UiWidget param0, byte param1) {
         bb var3 = null;
         try {
           if (!(param0 instanceof bb)) {
@@ -91,27 +91,27 @@ final class ln extends jh {
           this.field_E.b((byte) 68, var3);
           var3.field_D = true;
           int var4 = 107 % ((param1 - 18) / 61);
-          var3.a((gm) (this), false);
+          var3.a((UiWidget) (this), false);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "ln.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ln.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public ln() {
-        super(0, 0, qj.field_f, kn.field_h, (el) null, (ca) null);
-        this.field_E = new ei();
+        super(0, 0, qj.field_f, RasterBuffer.field_h, (WidgetRenderer) null, (ca) null);
+        this.field_E = new IntrusiveDeque();
     }
 
     final void b(boolean param0) {
         int var4 = Torquing.field_u;
         re var2 = new re(this.field_E);
         if (param0) {
-          this.field_E = (ei) null;
+          this.field_E = (IntrusiveDeque) null;
         }
         bb var3 = (bb) (var2.a((byte) 68));
         while (var3 != null) {
           if (var3.a((byte) 122)) {
-            var3.f(0);
+            var3.unlink(0);
           }
           var3 = (bb) (var2.b(true));
         }
@@ -139,13 +139,13 @@ final class ln extends jh {
         oe.a(true, param1, false);
     }
 
-    final gm a(boolean param0) {
+    final UiWidget a(boolean param0) {
         re var2;
         bb var3;
         int var4;
         var4 = Torquing.field_u;
         if (!param0) {
-          this.field_E = (ei) null;
+          this.field_E = (IntrusiveDeque) null;
         }
         var2 = new re(this.field_E);
         var3 = (bb) (var2.a((byte) 99));

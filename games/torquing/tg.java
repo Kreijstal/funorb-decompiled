@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tg extends hk {
+abstract class tg extends GameApplet {
     private int field_k;
     private int field_r;
     private boolean field_o;
@@ -22,15 +22,15 @@ abstract class tg extends hk {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        sn.field_i = this.field_k;
-        il.a((byte) 52, sn.field_i);
-        in.a(this.field_l, this.field_o, this.field_i, param0, sn.field_i, 5000, this.field_r, nk.field_u, param2, this.field_p, 0, this.field_s, 5000, this.field_m);
-        mg.a(-1, sn.field_i, this.field_r, this.field_m, nk.field_u, this.field_l, this.field_i, this.field_p, param0);
+        ImageProducerRasterBuffer.field_i = this.field_k;
+        il.a((byte) 52, ImageProducerRasterBuffer.field_i);
+        in.a(this.field_l, this.field_o, this.field_i, param0, ImageProducerRasterBuffer.field_i, 5000, this.field_r, nk.field_u, param2, this.field_p, 0, this.field_s, 5000, this.field_m);
+        mg.a(-1, ImageProducerRasterBuffer.field_i, this.field_r, this.field_m, nk.field_u, this.field_l, this.field_i, this.field_p, param0);
         qg.d(-125);
-        wb.field_u = la.b(26);
+        wb.field_u = ResourceArchive.b(26);
         j.a(k.field_d, (byte) -125);
         b.field_w = param6;
-        uf.field_p = param1;
+        TooltipPanel.field_p = param1;
         gf.field_k = param5;
         ug.field_b = param4;
         tp.field_g = param7;
@@ -48,7 +48,7 @@ abstract class tg extends hk {
         try {
           var1 = ha.field_b;
           synchronized (var1) {
-            q.field_g = mj.field_d;
+            IntrusiveNode.field_g = mj.field_d;
             po.field_w = po.field_w + 1;
             if (0 > hb.field_y) {
               for (var2 = 0; var2 < 112; var2++) {
@@ -57,7 +57,7 @@ abstract class tg extends hk {
               hb.field_y = n.field_w;
             } else {
               while (n.field_w != hb.field_y) {
-                var2 = no.field_i[n.field_w];
+                var2 = BufferedSocket.field_i[n.field_w];
                 n.field_w = 127 & n.field_w + 1;
                 if (var2 >= 0) {
                   i.field_P[var2] = true;
@@ -66,7 +66,7 @@ abstract class tg extends hk {
                 i.field_P[~var2] = false;
               }
             }
-            mj.field_d = gn.field_d;
+            mj.field_d = IsaacCipher.field_d;
           }
           if (param0 > -26) {
             tg.m(67);
@@ -75,7 +75,7 @@ abstract class tg extends hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1_ref), "tg.R(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "tg.R(" + param0 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ abstract class tg extends hk {
           ki.field_D.a((byte) -110);
         }
         tg.m(param0 ^ -104);
-        gj.c(24417);
+        ProxySocketConnector.c(24417);
         if (!sf.a(param0 ^ -24) &&
           11 != op.field_i) {
           ra.a((byte) 75);
@@ -120,7 +120,7 @@ abstract class tg extends hk {
             dc.a(2, gh.field_b, 2);
             pp.a(false);
             gk.field_a = true;
-            ta.field_k = km.b(-1) + 15000L;
+            DualLinkNode.field_k = km.b(-1) + 15000L;
           }
         }
         if (aj.field_J == -1 ||
@@ -136,7 +136,7 @@ abstract class tg extends hk {
           }
           if (aj.field_J != -1 &&
             aj.field_J != 0) {
-            ta.field_k = km.b(-1) + 15000L;
+            DualLinkNode.field_k = km.b(-1) + 15000L;
           }
         }
         if (aj.field_J != -1 &&
@@ -186,7 +186,7 @@ abstract class tg extends hk {
         if ((-1 != aj.field_J &&
           aj.field_J != 0 ||
           mk.a((byte) 38)) &&
-          ta.field_k <= km.b(-1)) {
+          DualLinkNode.field_k <= km.b(-1)) {
           gk.field_a = false;
           if (aj.field_J != -1 &&
             aj.field_J != 0) {
@@ -203,7 +203,7 @@ abstract class tg extends hk {
           b.field_x = 1;
         }
         if (1 == b.field_x) {
-          if (sn.field_i != 0) {
+          if (ImageProducerRasterBuffer.field_i != 0) {
             je.field_f = vg.a(-27646, b.field_w);
           }
           lp.field_a = sd.a(true, 1, (byte) -125, tp.field_g, false);
@@ -220,7 +220,7 @@ abstract class tg extends hk {
               je.field_f = null;
             } else {
               if (je.field_f.a(true, "")) {
-                fh.a(7, je.field_f);
+                SocketJs5Transport.a(7, je.field_f);
                 je.field_f = null;
                 cf.a(param0 ^ 6648);
               }
@@ -237,7 +237,7 @@ abstract class tg extends hk {
           mk.a(true);
           ob.field_b = vo.field_e;
           r.field_c = false;
-          fd.a(ao.field_b, lp.field_a, 0, kb.field_a, eg.field_v);
+          ArchiveIndex.a(SocketConnector.field_b, lp.field_a, 0, kb.field_a, eg.field_v);
           if (ra.field_a ||
             null != vo.field_c) {
             stackIn_100_0 = !(ra.field_a);
@@ -261,8 +261,8 @@ abstract class tg extends hk {
           b.field_x = 10;
         }
         if (b.field_x == 10) {
-          if (0 != sn.field_i) {
-            rd.field_z = vg.a(-27646, uf.field_p);
+          if (0 != ImageProducerRasterBuffer.field_i) {
+            rd.field_z = vg.a(-27646, TooltipPanel.field_p);
           }
           b.field_x = 11;
         }
@@ -270,7 +270,7 @@ abstract class tg extends hk {
         if (b.field_x == 11) {
           if (null != rd.field_z && (!rd.field_z.a(-12749) ||
             !rd.field_z.c(-19375))) {
-            df.a(0.0f, -84, il.a(Torquing.field_w, rd.field_z, md.field_b, (byte) 78));
+            IsaacPacketBuffer.a(0.0f, -84, il.a(Torquing.field_w, rd.field_z, DelegatingCanvas.field_b, (byte) 78));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -287,7 +287,7 @@ abstract class tg extends hk {
           if (null != a.field_c) {
             stackIn_133_0 = (!a.field_c.b(param0 ^ 23)) ? 0 : 1;
             var3Lifetime2 = stackIn_133_0;
-            df.a(a.field_c.field_l, 75, a.field_c.field_h);
+            IsaacPacketBuffer.a(a.field_c.field_l, 75, a.field_c.field_h);
           }
           if (var3Lifetime2 != 0) {
             b.field_x = 20;
@@ -387,17 +387,17 @@ abstract class tg extends hk {
                                 return;
                               }
                               if (18 == var2) {
-                                mm.a((byte) 60);
+                                UrlRequest.a((byte) 60);
                                 return;
                               }
-                              nn.a("MGS1: " + me.a(-1), (Throwable) null, -9958);
+                              nn.a("MGS1: " + ArchiveSource.a(-1), (Throwable) null, -9958);
                               ih.b(true);
                               return;
                             }
                             stackIn_29_0 = -11936;
                             stackIn_30_1 = (var2 == 12);
                             var4 = pa.a(stackIn_29_0, stackIn_30_1);
-                            ga.a(false, var4);
+                            ClientException.a(false, var4);
                           }
                         }
                       } else {
@@ -413,11 +413,11 @@ abstract class tg extends hk {
               }
             }
           } else {
-            uf.b(-109);
+            TooltipPanel.b(-109);
           }
           return;
         }
-        nn.a("MGS2: " + me.a(-1), (Throwable) null, -9958);
+        nn.a("MGS2: " + ArchiveSource.a(-1), (Throwable) null, -9958);
         ih.b(true);
     }
 
@@ -479,7 +479,7 @@ abstract class tg extends hk {
         int var4 = -1 + oo.field_a;
         byte[] var5 = new byte[var4];
         kj.field_d.b(0, param0 + 7, var5, var4);
-        a.a(var3 != 0, lj.a(var5, false), ip.a(9), 3);
+        a.a(var3 != 0, SecondaryNodeDeque.a(var5, false), ip.a(9), 3);
     }
 
     private final void d(byte param0) {
@@ -494,7 +494,7 @@ abstract class tg extends hk {
           this.a((byte) 88, param0, 480, 640, param1);
           int var4_int = 56 % ((28 - param2) / 53);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "tg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "tg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -536,7 +536,7 @@ abstract class tg extends hk {
         lg.h(-128);
         dc.a(var2, pl.field_u, 2);
         gk.field_a = true;
-        ta.field_k = 15000L + km.b(-1);
+        DualLinkNode.field_k = 15000L + km.b(-1);
         return var2;
     }
 
@@ -550,14 +550,14 @@ abstract class tg extends hk {
         int var3;
         boolean stackIn_11_1 = false;
         var3 = Torquing.field_u;
-        if (la.a(true)) {
+        if (ResourceArchive.a(true)) {
           stackIn_11_1 = (dg.field_i != null);
           discarded$4 = this.a(stackIn_11_1, false, true);
         } else {
           if (b.field_x >= 10) {
             if (pl.b(-115)) {
               if (op.field_i != 0) {
-                ue.a(-16513, da.field_g);
+                RandomAccessCacheFile.a(-16513, da.field_g);
               } else {
                 discarded$5 = this.a(false, false, true);
               }
@@ -652,7 +652,7 @@ abstract class tg extends hk {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -668,11 +668,11 @@ abstract class tg extends hk {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          fj var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Torquing.field_u;
-          var4 = vb.a(da.field_g, sn.field_i, param0, 32);
+          var4 = vb.a(da.field_g, ImageProducerRasterBuffer.field_i, param0, 32);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -680,8 +680,8 @@ abstract class tg extends hk {
             stackIn_6_0 = !param2;
             var5_int = uj.a(hb.a(stackIn_6_0), (byte) 75, wp.b(-118));
             if (-1 != var5_int) {
-              wb.a(var5_int, kh.field_n, (byte) -94, pl.field_u);
-              kh.field_n = null;
+              wb.a(var5_int, Model.field_n, (byte) -94, pl.field_u);
+              Model.field_n = null;
               pl.field_u = null;
             }
             var11 = qd.a(-112);
@@ -690,11 +690,11 @@ abstract class tg extends hk {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = od.a(wd.a(-19), -124, fo.i(17543), of.d((byte) -87), this.field_q, oc.a(false), ki.i(20));
+            var5_intLifetime1 = od.a(wd.a(-19), -124, fo.i(17543), VertexMesh.d((byte) -87), this.field_q, oc.a(false), ki.i(20));
             if (var5_intLifetime1 != -1) {
-              gk.a(-5006, pl.field_u, kh.field_n, var5_intLifetime1);
+              gk.a(-5006, pl.field_u, Model.field_n, var5_intLifetime1);
               pl.field_u = null;
-              kh.field_n = null;
+              Model.field_n = null;
             }
           }
           if (3 == var4) {
@@ -721,7 +721,7 @@ abstract class tg extends hk {
             }
           }
           if (var4 == 4) {
-            if (!ao.field_b) {
+            if (!SocketConnector.field_b) {
               op.field_i = 10;
               kb.field_h = true;
             } else {
@@ -754,21 +754,21 @@ abstract class tg extends hk {
             gq.a(25530, ip.a(9));
           }
           if (12 == var4) {
-            ul.a(0, ah.c(2048), ip.a(9));
+            MouseInputHandler.a(0, ah.c(2048), ip.a(9));
           }
           if (var4 == 13) {
             try {
               if (null == ub.field_G) {
-                ub.field_G = new mm(nk.field_u, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                ub.field_G = new UrlRequest(nk.field_u, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (ub.field_G.a(3)) {
                 var12 = ub.field_G.a(true);
                 if (var12 == null) {
                   var9 = (String) null;
-                  hn.a((String) null, (byte) -126);
+                  WidgetContainer.a((String) null, (byte) -126);
                 } else {
-                  var7 = hk.a(var12.field_n, true, 0, var12.field_j);
-                  hn.a(var7, (byte) -84);
+                  var7 = GameApplet.a(var12.position, true, 0, var12.payload);
+                  WidgetContainer.a(var7, (byte) -84);
                 }
                 ub.field_G = null;
               }
@@ -777,7 +777,7 @@ abstract class tg extends hk {
               var5 = (Exception) (Object) decompiledCaughtException;
               nn.a("S1", (Throwable) ((Object) var5), -9958);
               var10 = (String) null;
-              hn.a((String) null, (byte) -87);
+              WidgetContainer.a((String) null, (byte) -87);
               ub.field_G = null;
             }
           }

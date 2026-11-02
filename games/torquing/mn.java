@@ -11,11 +11,11 @@ class mn extends aa implements ng {
     private boolean field_fb;
     private kf field_db;
 
-    final static t a(la param0, String param1, String param2, int param3) {
+    final static Sprite a(ResourceArchive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        t stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -54,7 +54,7 @@ class mn extends aa implements ng {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ class mn extends aa implements ng {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ class mn extends aa implements ng {
                   this.c(var6, 33);
                   return;
                 }
-                var6.a(0, ml.field_c, (ca) (this));
+                var6.a(0, GameKeyHandler.field_c, (ca) (this));
               }
             } else {
               var6.a(cd.field_a, 5177, 8);
@@ -180,7 +180,7 @@ class mn extends aa implements ng {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ class mn extends aa implements ng {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ class mn extends aa implements ng {
           }
           this.field_D = false;
           if (this.field_eb) {
-            wo.a(107);
+            SecondaryNodeDequeIterator.a(107);
             return;
           }
           if (this.field_ab) {
@@ -273,7 +273,7 @@ class mn extends aa implements ng {
         }
         this.field_D = false;
         if (this.field_eb) {
-          wo.a(107);
+          SecondaryNodeDequeIterator.a(107);
           return;
         }
         if (!this.field_ab) {
@@ -286,7 +286,7 @@ class mn extends aa implements ng {
         fo var2 = null;
         this.field_db.c(4210752, 2121792, (byte) 125);
         if (param0 == -20041) {
-          var2 = new fo(this, this.field_cb, kh.field_j);
+          var2 = new fo(this, this.field_cb, Model.field_j);
           var2.a(pn.field_c, 5177, 15);
           this.c(var2, 33);
           return;
@@ -315,20 +315,20 @@ class mn extends aa implements ng {
           this.field_db.field_M = true;
           this.a(this.field_db, -6938);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public void a(byte param0, lg param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
-        gm var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.field_Y) {
-            ul.a(0, "tochangedisplayname.ws", ip.a(9));
+            MouseInputHandler.a(0, "tochangedisplayname.ws", ip.a(9));
           } else {
             od.b(128, 3);
             this.b(true);
@@ -336,8 +336,8 @@ class mn extends aa implements ng {
           if (param0 < -85) {
             return;
           }
-          var7 = (gm) null;
-          this.a(-44, (gm) null, 'Z', 47);
+          var7 = (UiWidget) null;
+          this.a(-44, (UiWidget) null, 'Z', 47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -349,11 +349,11 @@ class mn extends aa implements ng {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -379,7 +379,7 @@ class mn extends aa implements ng {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

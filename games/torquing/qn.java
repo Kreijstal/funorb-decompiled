@@ -103,7 +103,7 @@ final class qn extends am {
         }
     }
 
-    final void a(fj param0, int param1, int param2) {
+    final void a(PacketBuffer param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -122,24 +122,24 @@ final class qn extends am {
               this.field_w = param0.i((byte) -101);
             } else {
               if (var4_int == 2) {
-                this.field_C = param0.i(7088);
+                this.field_C = param0.readUnsignedShort(7088);
               } else {
                 if (var4_int == 3) {
-                  this.field_D = param0.i(param1 ^ 7059);
+                  this.field_D = param0.readUnsignedShort(param1 ^ 7059);
                 } else {
                   if (var4_int == 4) {
-                    this.field_u = param0.i(7088);
+                    this.field_u = param0.readUnsignedShort(7088);
                   } else {
                     if (var4_int != 5) {
                       if (6 == var4_int) {
-                        this.field_t = param0.i(7088);
+                        this.field_t = param0.readUnsignedShort(7088);
                       } else {
                         if (var4_int == 7) {
-                          this.field_x = param0.i(7088);
+                          this.field_x = param0.readUnsignedShort(7088);
                         }
                       }
                     } else {
-                      this.field_B = param0.i(7088);
+                      this.field_B = param0.readUnsignedShort(7088);
                     }
                   }
                 }
@@ -159,7 +159,7 @@ final class qn extends am {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class qn extends am {
               }
               var5 = stackIn_24_0;
               var6 = 0;
-              for (var8 = (this.field_y * var5 >> 12) + q.field_b[var4]; var8 < 0; var8 += 4096) {
+              for (var8 = (this.field_y * var5 >> 12) + IntrusiveNode.field_b[var4]; var8 < 0; var8 += 4096) {
               }
               while (var8 > 4096) {
                 var8 -= 4096;

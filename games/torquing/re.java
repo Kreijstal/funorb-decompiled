@@ -4,12 +4,12 @@
 final class re {
     static int field_c;
     static double[] field_d;
-    private ei field_a;
-    private q field_b;
+    private IntrusiveDeque field_a;
+    private IntrusiveNode field_b;
     static String field_e;
 
-    final q a(byte param0) {
-        q var2 = this.field_a.field_b.field_e;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_a.field_b.previous;
         if (param0 < 21) {
           field_d = (double[]) null;
         }
@@ -17,15 +17,15 @@ final class re {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_e;
+        this.field_b = var2.previous;
         return var2;
     }
 
-    final q a(int param0, q param1) {
-        q var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
-        q stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -34,19 +34,19 @@ final class re {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_a.field_b.field_e;
+            var3 = this.field_a.field_b.previous;
           }
           if (param0 != 13771) {
             this.a(-112);
           }
           if (this.field_a.field_b != var3) {
-            this.field_b = var3.field_e;
+            this.field_b = var3.previous;
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }
           this.field_b = null;
           stackIn_7_0 = null;
-          return (q) (stackIn_7_0);
+          return (IntrusiveNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -57,14 +57,14 @@ final class re {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
-        la var5 = null;
+        ResourceArchive var5 = null;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -72,9 +72,9 @@ final class re {
         var4 = Torquing.field_u;
         try {
           if (ci.field_c != param2) {
-            q.field_b = new int[param2];
+            IntrusiveNode.field_b = new int[param2];
             for (var3_int = 0; var3_int < param2; var3_int++) {
-              q.field_b[var3_int] = (var3_int << 12) / param2;
+              IntrusiveNode.field_b[var3_int] = (var3_int << 12) / param2;
             }
             ci.field_c = param2;
             jh.field_A = param2 - 1;
@@ -90,32 +90,32 @@ final class re {
                 var6++;
               }
             } else {
-              dp.field_a = q.field_b;
+              dp.field_a = IntrusiveNode.field_b;
             }
             um.field_o = param0;
             vp.field_I = param0 - 1;
           }
           if (param1 != 0) {
-            var5 = (la) null;
-            re.a((la) null, false, (la) null, (la) null);
+            var5 = (ResourceArchive) null;
+            re.a((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var3), "re.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var3), "re.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(la param0, boolean param1, la param2, la param3) {
+    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         int var11_int = 0;
         String stackIn_3_0 = null;
-        la stackIn_3_1 = null;
-        la stackIn_3_2 = null;
+        ResourceArchive stackIn_3_1 = null;
+        ResourceArchive stackIn_3_2 = null;
         boolean stackIn_4_3 = false;
         String stackIn_6_0 = null;
-        la stackIn_6_1 = null;
-        la stackIn_6_2 = null;
+        ResourceArchive stackIn_6_1 = null;
+        ResourceArchive stackIn_6_2 = null;
         boolean stackIn_7_3 = false;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -132,14 +132,14 @@ final class re {
         int var8 = 0;
         int var9 = 0;
         sm[] var10 = null;
-        t var11 = null;
-        t var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var13 = 0;
         sm[] var14 = null;
-        t var15 = null;
+        Sprite var15 = null;
         int[][] var16 = null;
-        t var17 = null;
-        t var18 = null;
+        Sprite var17 = null;
+        Sprite var18 = null;
         int[][] var19 = null;
         int var8Lifetime1;
         int var9Lifetime1;
@@ -151,21 +151,21 @@ final class re {
           dg.field_g = pb.a("button", -1, "commonui", param3);
           wj.field_h = jb.a(0, param3, "validation", "commonui");
           stackIn_3_0 = "commonui";
-          stackIn_3_1 = (la) (param3);
-          stackIn_3_2 = (la) (param0);
+          stackIn_3_1 = (ResourceArchive) (param3);
+          stackIn_3_2 = (ResourceArchive) (param0);
           stackIn_4_3 = !(param1);
           sp.field_R = (uc) ((Object) dc.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3, "arezzo12"));
           dg.field_e = (uc) ((Object) dc.a("commonui", param3, param0, false, "arezzo14"));
           stackIn_6_0 = "commonui";
-          stackIn_6_1 = (la) (param3);
-          stackIn_6_2 = (la) (param0);
+          stackIn_6_1 = (ResourceArchive) (param3);
+          stackIn_6_2 = (ResourceArchive) (param0);
           stackIn_7_3 = !(param1);
           pe.field_E = (uc) ((Object) dc.a(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_7_3, "arezzo14bold"));
           if (!param1) {
             field_c = 47;
           }
-          var17 = new t(param2.a(-126, "", "button.gif"), (java.awt.Component) ((Object) k.field_d));
-          md.a("dropdown", 31094, param3, "commonui");
+          var17 = new Sprite(param2.a(-126, "", "button.gif"), (java.awt.Component) ((Object) k.field_d));
+          DelegatingCanvas.a("dropdown", 31094, param3, "commonui");
           var5 = ip.a(param3, -126, "commonui", "screen_options");
           jn.field_c = new sm[4];
           s.field_s = new sm[4];
@@ -192,19 +192,19 @@ final class re {
           var9Lifetime1 = var17.field_t;
           bp.a((byte) -95);
           var17.e();
-          ph.e(0, 0, ph.field_j, ph.field_d);
-          var15 = new t(var9Lifetime1, var9Lifetime1);
+          SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.e();
           var17.b(0, 0);
-          var11 = new t(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.e();
           var17.b(-var17.field_s + var9Lifetime1, 0);
-          var12 = new t(var17.field_s - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new Sprite(var17.field_s - var9Lifetime1 * 2, var9Lifetime1);
           var12.e();
           var17.b(-var9Lifetime1, 0);
           r.a(125);
-          dg.field_g = new t[]{var15, var12, var11};
+          dg.field_g = new Sprite[]{var15, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -228,25 +228,25 @@ final class re {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
-    final q a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         if (!param0) {
-          return (q) null;
+          return (IntrusiveNode) null;
         }
-        q var2 = this.field_b;
+        IntrusiveNode var2 = this.field_b;
         if (this.field_a.field_b == var2) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_h;
+        this.field_b = var2.next;
         return var2;
     }
 
-    final q a(int param0) {
-        q var2 = this.field_a.field_b.field_h;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_a.field_b.next;
         if (this.field_a.field_b == var2) {
           this.field_b = null;
           return null;
@@ -254,7 +254,7 @@ final class re {
         if (param0 != 17514) {
           this.a((byte) 73);
         }
-        this.field_b = var2.field_h;
+        this.field_b = var2.next;
         return var2;
     }
 
@@ -266,40 +266,40 @@ final class re {
         field_e = null;
     }
 
-    final q b(boolean param0) {
-        q var2 = this.field_b;
+    final IntrusiveNode b(boolean param0) {
+        IntrusiveNode var2 = this.field_b;
         if (this.field_a.field_b == var2) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_e;
+        this.field_b = var2.previous;
         if (!param0) {
           this.a(true);
         }
         return var2;
     }
 
-    final q a(q param0, int param1) {
-        q var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
-        q stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            var3 = this.field_a.field_b.field_h;
+            var3 = this.field_a.field_b.next;
           } else {
             var3 = param0;
           }
           if (this.field_a.field_b == var3) {
             this.field_b = null;
             stackIn_5_0 = null;
-            return (q) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
-          this.field_b = var3.field_h;
+          this.field_b = var3.next;
           if (param1 != -27392) {
             re.a(7, 38, 13);
           }
@@ -315,15 +315,15 @@ final class re {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    re(ei param0) {
+    re(IntrusiveDeque param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -338,9 +338,9 @@ final class re {
 
     final static void a(boolean param0, boolean param1, boolean param2) {
         if (param1) {
-          ph.b(0, 0, ph.field_j, ph.field_d, 0, 192);
+          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
         } else {
-          ph.b();
+          SoftwareRasterizer.b();
         }
         jm.a(param1, -127);
         if (!param0) {

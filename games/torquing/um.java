@@ -15,7 +15,7 @@ final class um extends gf {
         try {
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "um.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "um.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class um extends gf {
             stackIn_8_0 = (cd) null;
             return stackIn_8_0;
           }
-          if (!param1.equals(this.field_n.field_m)) {
+          if (!param1.equals(this.field_n.text)) {
             stackIn_12_0 = so.field_u;
           } else {
             stackIn_12_0 = so.field_s;
@@ -58,7 +58,7 @@ final class um extends gf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class um extends gf {
             var3 = ((wg) ((Object) this.field_n)).a(param0 ^ 10235);
             if (var3 != null) {
               if (var3.a((byte) -91) == so.field_s &&
-                !param1.equals(this.field_n.field_m)) {
+                !param1.equals(this.field_n.text)) {
                 stackIn_9_0 = hm.field_u;
                 return stackIn_9_0;
               }
@@ -88,7 +88,7 @@ final class um extends gf {
               return stackIn_11_0;
             }
           }
-          if (param1.equals(this.field_n.field_m)) {
+          if (param1.equals(this.field_n.text)) {
             return null;
           }
           stackIn_15_0 = hm.field_u;
@@ -103,7 +103,7 @@ final class um extends gf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -115,10 +115,10 @@ final class um extends gf {
           sp.field_Q = param2;
           bo.field_e = param0;
           ka.field_j = param1;
-          cl.a(-67, ph.field_j / 2, ph.field_d / 2);
+          cl.a(-67, SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_d / 2);
           nb.a(param2.field_s, -108, param0.field_s, param0.field_t + param0.field_s, param2.field_t + param2.field_s);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "um.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "um.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -158,10 +158,10 @@ final class um extends gf {
         }
         var12 = (var7 << 12) / var6;
         var13 = -(var12 * param0 >> 12) + param2;
-        if (param3 < kn.field_e) {
-          var11 = (var12 * kn.field_e >> 12) + var13;
-          var9 = kn.field_e;
-          if (kn.field_e <= param0) {
+        if (param3 < RasterBuffer.field_e) {
+          var11 = (var12 * RasterBuffer.field_e >> 12) + var13;
+          var9 = RasterBuffer.field_e;
+          if (RasterBuffer.field_e <= param0) {
             if (qg.field_z < param0) {
               var10 = var13 + (qg.field_z * var12 >> 12);
               var8 = qg.field_z;
@@ -170,8 +170,8 @@ final class um extends gf {
               var10 = param2;
             }
           } else {
-            var10 = var13 + (var12 * kn.field_e >> 12);
-            var8 = kn.field_e;
+            var10 = var13 + (var12 * RasterBuffer.field_e >> 12);
+            var8 = RasterBuffer.field_e;
           }
           if (j.field_q <= var11) {
             if (var11 > qk.field_p) {
@@ -197,7 +197,7 @@ final class um extends gf {
         if (qg.field_z < param3) {
           var11Lifetime1 = var13 + (var12 * qg.field_z >> 12);
           var9Lifetime1 = qg.field_z;
-          if (kn.field_e <= param0) {
+          if (RasterBuffer.field_e <= param0) {
             if (qg.field_z < param0) {
               var10Lifetime1 = var13 + (qg.field_z * var12 >> 12);
               var8Lifetime1 = qg.field_z;
@@ -206,8 +206,8 @@ final class um extends gf {
               var10Lifetime1 = param2;
             }
           } else {
-            var10Lifetime1 = var13 + (var12 * kn.field_e >> 12);
-            var8Lifetime1 = kn.field_e;
+            var10Lifetime1 = var13 + (var12 * RasterBuffer.field_e >> 12);
+            var8Lifetime1 = RasterBuffer.field_e;
           }
           if (j.field_q > var11Lifetime1) {
             var11Lifetime1 = j.field_q;
@@ -232,9 +232,9 @@ final class um extends gf {
         }
         var9Lifetime2 = param3;
         var11Lifetime2 = param4;
-        if (kn.field_e > param0) {
-          var10Lifetime2 = var13 + (var12 * kn.field_e >> 12);
-          var8Lifetime2 = kn.field_e;
+        if (RasterBuffer.field_e > param0) {
+          var10Lifetime2 = var13 + (var12 * RasterBuffer.field_e >> 12);
+          var8Lifetime2 = RasterBuffer.field_e;
         } else {
           if (qg.field_z < param0) {
             var10Lifetime2 = var13 + (qg.field_z * var12 >> 12);

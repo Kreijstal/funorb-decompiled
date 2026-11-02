@@ -21,7 +21,7 @@ final class va extends lg {
         try {
           if (param0 != null &&
             param0.length() >= fa.field_d) {
-            if (param0.length() > jp.field_i) {
+            if (param0.length() > Js5Transport.field_i) {
               return true;
             }
             if (param1 != 25326) {
@@ -40,24 +40,24 @@ final class va extends lg {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(h param0, byte param1, int param2) {
-        df var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           var3 = wa.field_d;
           var3.f(-58, param2);
-          var3.b(90, 2);
+          var3.writeByte(90, 2);
           if (param1 <= 117) {
             Random var4 = (Random) null;
             va.a(82, (byte) 63, (Random) null);
           }
-          var3.b(90, 0);
-          var3.b(90, param0.field_m);
+          var3.writeByte(90, 0);
+          var3.writeByte(90, param0.field_m);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "va.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "va.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -92,11 +92,11 @@ final class va extends lg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -117,8 +117,8 @@ final class va extends lg {
             va.a(56, (CharSequence) null);
             return false;
           }
-          var8_int = param4 - this.field_G - (param1 + this.field_w);
-          var9 = -this.field_k + (-param2 - this.field_F + param3);
+          var8_int = param4 - this.field_G - (param1 + this.x);
+          var9 = -this.y + (-param2 - this.field_F + param3);
           if (this.field_C * this.field_C > var9 * var9 + var8_int * var8_int) {
             var10 = Math.atan2((double)var9, (double)var8_int) - wa.field_e;
             if (0.0 > var10) {
@@ -147,7 +147,7 @@ final class va extends lg {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param6).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class va extends lg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param8).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class va extends lg {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

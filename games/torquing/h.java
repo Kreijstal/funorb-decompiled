@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends q {
+final class h extends IntrusiveNode {
     int[] field_k;
     static he field_l;
     boolean field_n;
@@ -28,7 +28,7 @@ final class h extends q {
           param0.addKeyListener(ha.field_b);
           param0.addFocusListener(ha.field_b);
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "h.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "h.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

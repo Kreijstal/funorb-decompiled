@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl extends rm {
+final class jl extends MeshGeometry {
     static volatile int field_S;
     static Boolean field_T;
     static String field_U;
@@ -120,7 +120,7 @@ final class jl extends rm {
         }
         var59 = new int[60][3];
         var11 = 0;
-        L2: while (true) {
+        scanLoop1: while (true) {
           stackIn_8_0 = -61;
           stackIn_8_1 = ~var11;
           if (stackIn_8_0 < stackIn_8_1) {
@@ -145,7 +145,7 @@ final class jl extends rm {
               }
             }
             var11++;
-            continue L2;
+            continue scanLoop1;
           }
           break;
         }
@@ -203,12 +203,12 @@ final class jl extends rm {
           }
           var12 = 0;
           var13Lifetime1 = 0;
-          while (var13Lifetime1 < this.field_g) {
-            stackIn_50_0 = ~this.field_o[var13Lifetime1];
+          while (var13Lifetime1 < this.vertexCount) {
+            stackIn_50_0 = ~this.vertexX[var13Lifetime1];
             stackIn_50_1 = ~var11Lifetime2;
             if (stackIn_50_0 == stackIn_50_1 ||
-              this.field_y[var13Lifetime1] == var11Lifetime2 ||
-              var11Lifetime2 == this.field_q[var13Lifetime1]) {
+              this.vertexY[var13Lifetime1] == var11Lifetime2 ||
+              var11Lifetime2 == this.vertexZ[var13Lifetime1]) {
               var12++;
             }
             var13Lifetime1++;
@@ -216,12 +216,12 @@ final class jl extends rm {
           stackIn_50_0Lifetime1 = ~var12;
           stackIn_50_1Lifetime1 = -6;
           if (stackIn_50_0Lifetime1 == stackIn_50_1Lifetime1) {
-            for (var13Lifetime1Lifetime1 = 0; this.field_g > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
-              stackIn_40_0Lifetime1 = this.field_o[var13Lifetime1Lifetime1];
+            for (var13Lifetime1Lifetime1 = 0; this.vertexCount > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
+              stackIn_40_0Lifetime1 = this.vertexX[var13Lifetime1Lifetime1];
               stackIn_40_1Lifetime1 = var11Lifetime2;
               if (stackIn_40_0Lifetime1 == stackIn_40_1Lifetime1 ||
-                var11Lifetime2 == this.field_y[var13Lifetime1Lifetime1] ||
-                var11Lifetime2 == this.field_q[var13Lifetime1Lifetime1]) {
+                var11Lifetime2 == this.vertexY[var13Lifetime1Lifetime1] ||
+                var11Lifetime2 == this.vertexZ[var13Lifetime1Lifetime1]) {
                 this.field_m[var13Lifetime1Lifetime1] = (short)32;
               }
             }
@@ -240,18 +240,18 @@ final class jl extends rm {
           discarded$1 = this.a(-98, 102, 31, -9, false, 113);
         }
         while (true) {
-          if (var7 >= this.field_g) {
-            return super.a(param3, param0, param1, (byte)param2, (byte) -1, (short)param5, (short) -1);
+          if (var7 >= this.vertexCount) {
+            return super.addVertex(param3, param0, param1, (byte)param2, (byte) -1, (short)param5, (short) -1);
           }
-          if ((param3 != this.field_o[var7] ||
-            param0 != this.field_y[var7] ||
-            param1 != this.field_q[var7]) &&
-            (param3 != this.field_y[var7] ||
-            param0 != this.field_q[var7] ||
-            this.field_o[var7] != param1) &&
-            (param3 != this.field_q[var7] ||
-            this.field_o[var7] != param0 ||
-            this.field_y[var7] != param1)) {
+          if ((param3 != this.vertexX[var7] ||
+            param0 != this.vertexY[var7] ||
+            param1 != this.vertexZ[var7]) &&
+            (param3 != this.vertexY[var7] ||
+            param0 != this.vertexZ[var7] ||
+            this.vertexX[var7] != param1) &&
+            (param3 != this.vertexZ[var7] ||
+            this.vertexX[var7] != param0 ||
+            this.vertexY[var7] != param1)) {
             var7++;
             continue;
           }

@@ -3,7 +3,7 @@
  */
 final class cf {
     static int[] field_a;
-    private ta field_b;
+    private DualLinkNode field_b;
     static boolean field_f;
     static volatile boolean field_c;
     static int field_e;
@@ -16,7 +16,7 @@ final class cf {
         int var1_int = 0;
         int var2 = Torquing.field_u;
         int var1_intLifetime1;
-        df.field_q.b(30752);
+        IsaacPacketBuffer.field_q.b(30752);
         for (var1_int = 0; 32 > var1_int; var1_int++) {
           ui.field_l[var1_int] = 0L;
         }
@@ -29,7 +29,7 @@ final class cf {
         try {
           oi.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ')');
         }
     }
 
@@ -40,9 +40,9 @@ final class cf {
         field_a = null;
     }
 
-    final void a(long param0, ta param1, int param2) {
+    final void a(long param0, DualLinkNode param1, int param2) {
         RuntimeException runtimeException = null;
-        ta var5 = null;
+        DualLinkNode var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -52,12 +52,12 @@ final class cf {
             this.field_i = this.field_i - 1;
           } else {
             var5 = this.field_d.a(param2 ^ 7);
-            var5.f(param2 + 0);
-            var5.h(0);
+            var5.unlink(param2 + 0);
+            var5.unlinkSecondary(0);
             if (this.field_b == var5) {
               var5 = this.field_d.a(-45);
-              var5.f(0);
-              var5.h(param2 ^ 0);
+              var5.unlink(0);
+              var5.unlinkSecondary(param2 ^ 0);
             }
           }
           this.field_h.a(false, param0, param1);
@@ -73,15 +73,15 @@ final class cf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final ta a(long param0, int param1) {
+    final DualLinkNode a(long param0, int param1) {
         if (param1 != 4604) {
           this.field_h = (eb) null;
         }
-        ta var4 = (ta) (this.field_h.a(param0, (byte) 89));
+        DualLinkNode var4 = (DualLinkNode) (this.field_h.a(param0, (byte) 89));
         if (var4 != null) {
           this.field_d.a((byte) 118, var4);
         }
@@ -90,7 +90,7 @@ final class cf {
 
     cf(int param0) {
         int var2 = 0;
-        this.field_b = new ta();
+        this.field_b = new DualLinkNode();
         this.field_d = new gb();
         this.field_i = param0;
         for (var2 = 1; var2 + var2 < param0; var2 = var2 + var2) {

@@ -10,7 +10,7 @@ final class sg {
     private ti[] field_D;
     private static int[] field_d;
     private static int[] field_t;
-    static t[] field_e;
+    static Sprite[] field_e;
     private int[] field_F;
     int field_y;
     private int[][] field_v;
@@ -22,23 +22,23 @@ final class sg {
     private int[] field_p;
     private static int[] field_k;
     private static int[] field_E;
-    private static kh field_b;
+    private static Model field_b;
     private int[] field_m;
     private int field_j;
     private boolean[] field_x;
     private int field_A;
-    kh[] field_g;
+    Model[] field_g;
     private int[][] field_G;
     private static boolean[] field_w;
     private int[] field_i;
     private int[] field_h;
     private static int[] field_n;
     private int[] field_q;
-    static t[] field_a;
+    static Sprite[] field_a;
 
     final static void c() {
-        field_b = new kh();
-        field_b.field_k = (pj) (new rm(0, 0, 0).a(0, 0, 1, 0, 0));
+        field_b = new Model();
+        field_b.field_k = (pj) (new MeshGeometry(0, 0, 0).a(0, 0, 1, 0, 0));
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -240,13 +240,13 @@ final class sg {
         int var2;
         int var3;
         int var4;
-        t var5;
+        Sprite var5;
         int var5_int;
         int var6;
         int var7;
-        t var8;
-        t var9;
-        t var10;
+        Sprite var8;
+        Sprite var9;
+        Sprite var10;
         int var11;
         int var12;
         int var7Lifetime1;
@@ -455,7 +455,7 @@ final class sg {
         }
     }
 
-    final void a(int param0, kh param1) {
+    final void a(int param0, Model param1) {
         mp dupTemp$4 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -471,7 +471,7 @@ final class sg {
         }
         var3 = stackIn_3_0;
         if (param1.field_k == null) {
-          stackIn_6_0 = param1.field_l.field_g;
+          stackIn_6_0 = param1.field_l.vertexCount;
         } else {
           stackIn_6_0 = param1.field_k.field_x;
         }
@@ -760,35 +760,35 @@ final class sg {
         return false;
     }
 
-    private final static void a(int param0, int param1, int param2, t param3, int param4, t param5, int param6, t param7) {
+    private final static void a(int param0, int param1, int param2, Sprite param3, int param4, Sprite param5, int param6, Sprite param7) {
         int var13 = 0;
         int var8 = 0;
         int var9 = param3.field_t;
         int var10 = param3.field_s;
-        int var11 = ph.field_j - var10;
+        int var11 = SoftwareRasterizer.field_j - var10;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
         int var13Lifetime3;
-        if (param1 < ph.field_c) {
-          var13 = ph.field_c - param1;
+        if (param1 < SoftwareRasterizer.field_c) {
+          var13 = SoftwareRasterizer.field_c - param1;
           var9 = var9 - var13;
-          param1 = ph.field_c;
+          param1 = SoftwareRasterizer.field_c;
           var8 = var8 + var13 * var10;
         }
-        if (param1 + var9 > ph.field_h) {
-          var9 = var9 - (param1 + var9 - ph.field_h);
+        if (param1 + var9 > SoftwareRasterizer.field_h) {
+          var9 = var9 - (param1 + var9 - SoftwareRasterizer.field_h);
         }
-        if (param0 < ph.field_k) {
-          var13Lifetime1 = ph.field_k - param0;
+        if (param0 < SoftwareRasterizer.field_k) {
+          var13Lifetime1 = SoftwareRasterizer.field_k - param0;
           var10 = var10 - var13Lifetime1;
-          param0 = ph.field_k;
+          param0 = SoftwareRasterizer.field_k;
           var8 = var8 + var13Lifetime1;
           var12 = var12 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
         }
-        if (param0 + var10 > ph.field_a) {
-          var13Lifetime2 = param0 + var10 - ph.field_a;
+        if (param0 + var10 > SoftwareRasterizer.field_a) {
+          var13Lifetime2 = param0 + var10 - SoftwareRasterizer.field_a;
           var10 = var10 - var13Lifetime2;
           var12 = var12 + var13Lifetime2;
           var11 = var11 + var13Lifetime2;
@@ -797,13 +797,13 @@ final class sg {
           if (var9 <= 0) {
             return;
           }
-          var13Lifetime3 = param0 + param1 * ph.field_j;
-          sg.a(ph.field_e, param2, param3.field_y, param4, param5.field_y, param6, param7.field_y, var8, var13Lifetime3, var10, var9, var11, var12);
+          var13Lifetime3 = param0 + param1 * SoftwareRasterizer.field_j;
+          sg.a(SoftwareRasterizer.field_e, param2, param3.field_y, param4, param5.field_y, param6, param7.field_y, var8, var13Lifetime3, var10, var9, var11, var12);
           return;
         }
     }
 
-    final void a(kh param0, int[] param1) {
+    final void a(Model param0, int[] param1) {
         int var6 = 0;
         int var11 = 0;
         mp var3;
@@ -987,7 +987,7 @@ final class sg {
         return var1;
     }
 
-    private final void a(kh param0) {
+    private final void a(Model param0) {
         mp var2 = null;
         int var3 = 0;
         int[] var20 = null;
@@ -1027,12 +1027,12 @@ final class sg {
         }
     }
 
-    final static void a(kh param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(Model param0, int param1, int param2, int param3, int param4, int param5) {
         dd dupTemp$0 = null;
         dd dupTemp$1 = null;
         dd dupTemp$2 = null;
         int stackIn_56_0 = 0;
-        rm var6;
+        MeshGeometry var6;
         mp var7;
         int var10;
         int var11;
@@ -1125,21 +1125,21 @@ final class sg {
         param5 = var58[9] * var10 + var58[10] * var11 + var58[11] * param5 >> 16;
         var12 = (int)Math.sqrt((double)(param3 * param3 + param4 * param4 + param5 * param5));
         var13 = param2 * var12 >> 8;
-        var14 = var6.field_o.length;
+        var14 = var6.vertexX.length;
         if (param0.field_k != null) {
           var15 = param0.field_k;
         } else {
           var39 = new pj(new pj[]{}, 0);
           var15 = var39;
           var39.field_k = var6.field_f;
-          var39.field_x = var6.field_g;
+          var39.field_x = var6.vertexCount;
           var39.field_m = var6.field_k;
           var39.field_j = var6.field_M;
           var39.field_y = var6.field_B;
           var39.field_v = var6.field_E;
-          var39.field_p = var6.field_o;
-          var39.field_u = var6.field_y;
-          var39.field_t = var6.field_q;
+          var39.field_p = var6.vertexX;
+          var39.field_u = var6.vertexY;
+          var39.field_t = var6.vertexZ;
           if (var6.field_u != null) {
             var39.field_h = sg.a(var6.field_u);
             var39.field_g = sg.a(var6.field_n);
@@ -1164,9 +1164,9 @@ final class sg {
           for (var20 = 0; var20 < var14; var20++) {
             if (var6.field_j == null ||
               var6.field_j[var20] == 0) {
-              var21 = var6.field_o[var20];
-              var22 = var6.field_y[var20];
-              var23 = var6.field_q[var20];
+              var21 = var6.vertexX[var20];
+              var22 = var6.vertexY[var20];
+              var23 = var6.vertexZ[var20];
               var24 = var59[var22] - var59[var21];
               var25 = var60[var22] - var60[var21];
               var26 = var61[var22] - var61[var21];
@@ -1230,21 +1230,21 @@ final class sg {
           }
         }
         for (var20Lifetime1 = 0; var20Lifetime1 < var14; var20Lifetime1++) {
-          var21Lifetime1 = var6.field_o[var20Lifetime1];
-          var22Lifetime1 = var6.field_y[var20Lifetime1];
-          var23Lifetime1 = var6.field_q[var20Lifetime1];
+          var21Lifetime1 = var6.vertexX[var20Lifetime1];
+          var22Lifetime1 = var6.vertexY[var20Lifetime1];
+          var23Lifetime1 = var6.vertexZ[var20Lifetime1];
           if (var6.field_D != null) {
             stackIn_56_0 = (var6.field_D[var20Lifetime1] != -1) ? 1 : 0;
           } else {
             stackIn_56_0 = 0;
           }
-          L17: {
+          regionExit1: {
             var24Lifetime1 = stackIn_56_0;
             if (var6.field_j != null &&
               var6.field_j[var20Lifetime1] != 0) {
               if (var6.field_j[var20Lifetime1] != 1) {
                 var15.field_l[var20Lifetime1] = -2;
-                break L17;
+                break regionExit1;
               }
               var25Lifetime1 = var59[var22Lifetime1] - var59[var21Lifetime1];
               var26Lifetime1 = var60[var22Lifetime1] - var60[var21Lifetime1];
@@ -1272,7 +1272,7 @@ final class sg {
                   var35 = param1 + (param3 * var31Lifetime1 + param4 * var32Lifetime1 + param5 * var33Lifetime1) / (var13 + var13 / 2);
                   var15.field_f[var20Lifetime1] = sg.a((int) var6.field_m[var20Lifetime1], var35, var24Lifetime1 != 0);
                   var15.field_l[var20Lifetime1] = -1;
-                  break L17;
+                  break regionExit1;
                 }
                 var31Lifetime1 = var31Lifetime1 >> 1;
                 var32Lifetime1 = var32Lifetime1 >> 1;
@@ -1422,7 +1422,7 @@ final class sg {
 
     sg(int param0) {
         this.field_y = param0;
-        this.field_g = new kh[param0];
+        this.field_g = new Model[param0];
         this.field_F = new int[param0];
         this.field_h = new int[param0];
         this.field_i = new int[param0];

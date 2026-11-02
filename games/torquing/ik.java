@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ik extends q {
+final class ik extends IntrusiveNode {
     private int field_q;
     int[] field_s;
     int field_r;
@@ -12,7 +12,7 @@ final class ik extends q {
     int field_p;
     static String[] field_k;
     private int[] field_o;
-    t field_j;
+    Sprite field_j;
     int field_n;
 
     final static boolean a(char param0, byte param1) {
@@ -60,7 +60,7 @@ final class ik extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var2_ref), "ik.B(" + param0 + ',' + param1 + ')');
+          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "ik.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class ik extends q {
             var5 = -var8 + var10;
           }
         }
-        this.field_j = new t(1 + var4 - var3, -var5 + 1 + var6);
+        this.field_j = new Sprite(1 + var4 - var3, -var5 + 1 + var6);
         this.field_j.field_r = var5 + this.field_n;
         this.field_j.field_v = var3;
         if (-1 == this.field_p) {
@@ -112,20 +112,20 @@ final class ik extends q {
             this.field_j.field_v = 640;
           }
         }
-        var16 = ph.field_e;
-        var8Lifetime1 = ph.field_j;
-        var9Lifetime1 = ph.field_d;
+        var16 = SoftwareRasterizer.field_e;
+        var8Lifetime1 = SoftwareRasterizer.field_j;
+        var9Lifetime1 = SoftwareRasterizer.field_d;
         this.field_j.e();
         stackIn_23_0 = (param0 != 6) ? 16777215 : 1;
         var10Lifetime1 = stackIn_23_0;
         for (var11 = 0; this.field_s.length > var11; var11++) {
-          ph.d(-var3 + this.field_s[var11], -var5 + this.field_m[var11], this.field_o[var11], var10Lifetime1);
+          SoftwareRasterizer.d(-var3 + this.field_s[var11], -var5 + this.field_m[var11], this.field_o[var11], var10Lifetime1);
         }
         this.field_p = param0;
         if (param1) {
           ik.a((byte) 45);
         }
-        ph.a(var16, var8Lifetime1, var9Lifetime1);
+        SoftwareRasterizer.a(var16, var8Lifetime1, var9Lifetime1);
     }
 
     final void a(int param0) {
@@ -138,11 +138,11 @@ final class ik extends q {
         if (this.field_j != null) {
           if (this.field_q < 0 &&
             var2 + this.field_j.field_v + this.field_j.field_s < 0) {
-            this.f(param0 + 2857);
+            this.unlink(param0 + 2857);
           } else {
             if (0 < this.field_q &&
               var2 + this.field_j.field_v > 640) {
-              this.f(0);
+              this.unlink(0);
             }
           }
         }
