@@ -57,7 +57,7 @@ final class rk {
             if (var23 < 0) {
               var23 = 0;
             }
-            var24 = df.field_d[var23 * 640 + var22];
+            var24 = Rasterizer.field_d[var23 * 640 + var22];
             var25 = 64;
             if (var25 < 0) {
               var25 = -var25;
@@ -69,7 +69,7 @@ final class rk {
             var26 = (var26 | var26 >>> 1) & 1077952512;
             incrementValue$1 = var15;
             var15++;
-            df.field_d[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
+            Rasterizer.field_d[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
             var16 = var16 + var17;
             var17 = var17 + param3;
             continue;
@@ -94,7 +94,7 @@ final class rk {
             if (var23Lifetime1 < 0) {
               var23Lifetime1 = 0;
             }
-            var24Lifetime1 = df.field_d[var23Lifetime1 * 640 + var22Lifetime1];
+            var24Lifetime1 = Rasterizer.field_d[var23Lifetime1 * 640 + var22Lifetime1];
             var25Lifetime1 = 64;
             if (var25Lifetime1 < 0) {
               var25Lifetime1 = -var25Lifetime1;
@@ -105,7 +105,7 @@ final class rk {
             var26Lifetime1 = (var26Lifetime1 & -1073692672) + (var25Lifetime1 & 12582912);
             var26Lifetime1 = (var26Lifetime1 | var26Lifetime1 >>> 1) & 1077952512;
             var15Lifetime1--;
-            df.field_d[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
+            Rasterizer.field_d[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
             continue;
           }
           break;
@@ -172,10 +172,10 @@ final class rk {
               var22 = 639;
             }
             var23 = param0 + (var14 * var21 + 131072 >> 18);
-            if (var23 > df.field_f - 1) {
-              var23 = df.field_f - 1;
+            if (var23 > Rasterizer.field_f - 1) {
+              var23 = Rasterizer.field_f - 1;
             }
-            var24 = df.field_d[var23 * 640 + var22];
+            var24 = Rasterizer.field_d[var23 * 640 + var22];
             var25 = 64;
             if (var25 < 0) {
               throw new Error();
@@ -187,7 +187,7 @@ final class rk {
             var26 = (var26 | var26 >>> 1) & 1077952512;
             incrementValue$1 = var15;
             var15++;
-            df.field_d[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
+            Rasterizer.field_d[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
             var16 = var16 + var17;
             var17 = var17 + param3;
             continue;
@@ -209,10 +209,10 @@ final class rk {
               var22Lifetime1 = 0;
             }
             var23Lifetime1 = param0 + (var14 * var21Lifetime1 + 131072 >> 18);
-            if (var23Lifetime1 > df.field_f - 1) {
-              var23Lifetime1 = df.field_f - 1;
+            if (var23Lifetime1 > Rasterizer.field_f - 1) {
+              var23Lifetime1 = Rasterizer.field_f - 1;
             }
-            var24Lifetime1 = df.field_d[var23Lifetime1 * 640 + var22Lifetime1];
+            var24Lifetime1 = Rasterizer.field_d[var23Lifetime1 * 640 + var22Lifetime1];
             var25Lifetime1 = 64;
             if (var25Lifetime1 < 0) {
               var25Lifetime1 = -var25Lifetime1;
@@ -223,7 +223,7 @@ final class rk {
             var26Lifetime1 = (var26Lifetime1 & -1073692672) + (var25Lifetime1 & 12582912);
             var26Lifetime1 = (var26Lifetime1 | var26Lifetime1 >>> 1) & 1077952512;
             var15Lifetime1--;
-            df.field_d[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
+            Rasterizer.field_d[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
             continue;
           }
           break;
@@ -308,17 +308,17 @@ final class rk {
         var12 = var12 - param4;
         var13 = var13 + param4;
         var14 = var14 + param4;
-        if (var11 < df.field_i) {
-          var11 = df.field_i;
+        if (var11 < Rasterizer.field_i) {
+          var11 = Rasterizer.field_i;
         }
-        if (var12 < df.field_g) {
-          var12 = df.field_g;
+        if (var12 < Rasterizer.field_g) {
+          var12 = Rasterizer.field_g;
         }
-        if (var13 > df.field_k) {
-          var13 = df.field_k;
+        if (var13 > Rasterizer.field_k) {
+          var13 = Rasterizer.field_k;
         }
-        if (var14 > df.field_h) {
-          var14 = df.field_h;
+        if (var14 > Rasterizer.field_h) {
+          var14 = Rasterizer.field_h;
         }
         ai.field_h = 256 / param4;
         nn.field_a = param5 * 128 / param4;
@@ -327,7 +327,7 @@ final class rk {
         hn.field_w = (var11 - param0) * var7;
         ah.field_k = (var11 - param0) * var8;
         tm.field_h = param6;
-        rk.a(param0, param1, param4, 0, 0, var9, df.field_d, var12 * df.field_e + var11, param5, var7, var8, var12 - var14, var11 - var13, df.field_e - (var13 - var11));
+        rk.a(param0, param1, param4, 0, 0, var9, Rasterizer.field_d, var12 * Rasterizer.field_e + var11, param5, var7, var8, var12 - var14, var11 - var13, Rasterizer.field_e - (var13 - var11));
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -349,8 +349,8 @@ final class rk {
         if (var8 < 0) {
           var8 = 0;
         }
-        if (var10 > df.field_f) {
-          var10 = df.field_f;
+        if (var10 > Rasterizer.field_f) {
+          var10 = Rasterizer.field_f;
         }
         if (var6 < 0) {
           var6 = 0;
@@ -361,8 +361,8 @@ final class rk {
         if (var9 < 0) {
           var9 = 0;
         }
-        if (var9 > df.field_f) {
-          var9 = df.field_f;
+        if (var9 > Rasterizer.field_f) {
+          var9 = Rasterizer.field_f;
         }
         int var11 = (var6 << 4) - param0;
         var11 = var11 * var11;

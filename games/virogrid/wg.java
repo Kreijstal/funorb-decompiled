@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class wg {
-    private mg[] field_g;
+    private Sprite[] field_g;
     static boolean field_f;
     static String field_b;
     static int field_e;
@@ -66,7 +66,7 @@ final class wg {
         tm.a(param0, param4, param2, param3, param1, this.field_g);
     }
 
-    wg(mg[] param0) {
+    wg(Sprite[] param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
@@ -74,7 +74,7 @@ final class wg {
         }
     }
 
-    final static void a(int param0, int param1, int param2, long param3, pd param4, boolean param5, int param6, boolean param7, int param8, int param9, int param10, String param11, int param12, int param13) {
+    final static void a(int param0, int param1, int param2, long param3, PlatformTaskDispatcher param4, boolean param5, int param6, boolean param7, int param8, int param9, int param10, String param11, int param12, int param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -99,7 +99,7 @@ final class wg {
             }
             vi.field_n = param3;
             cj.field_c = param2;
-            el.field_k = param7;
+            BufferedSocket.field_k = param7;
             tn.field_i = param13;
             if (qc.field_f.field_o == null) {
               return;

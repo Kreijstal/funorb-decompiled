@@ -3,7 +3,7 @@
  */
 final class lc {
     static String field_d;
-    static mg[] field_c;
+    static Sprite[] field_c;
     static String[] field_e;
     static PacketBuffer field_b;
     static String field_h;

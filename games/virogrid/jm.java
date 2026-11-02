@@ -4,7 +4,7 @@
 final class jm {
     static String field_a;
     d field_c;
-    static km field_b;
+    static UiWidget field_b;
     static String field_d;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -74,7 +74,7 @@ final class jm {
 
     final static void a(int param0, int param1, int param2) {
         if (param2 != -2) {
-          field_b = (km) null;
+          field_b = (UiWidget) null;
         }
         j.field_b = param0;
         si.field_a = param0;
@@ -87,7 +87,7 @@ final class jm {
         int var2 = 0;
         int var3 = 0;
         if (param1 != -102) {
-          field_b = (km) null;
+          field_b = (UiWidget) null;
         }
         vf.field_c = param0;
         if (db.field_D != ve.field_t) {
@@ -182,12 +182,12 @@ final class jm {
         }
     }
 
-    jm(String param0, km param1) {
+    jm(String param0, UiWidget param1) {
         String[] var3 = null;
-        km[] var4 = null;
+        UiWidget[] var4 = null;
         try {
           var3 = new String[]{param0, ng.field_Y, tl.field_k};
-          var4 = new km[]{param1, dg.field_E, (km) ((Object) lg.field_a)};
+          var4 = new UiWidget[]{param1, dg.field_E, (UiWidget) ((Object) lg.field_a)};
           this.field_c = new d(0L, ve.field_w, var3, sl.field_h, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "jm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

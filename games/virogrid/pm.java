@@ -10,8 +10,8 @@ final class pm extends IntrusiveNode {
     static String field_g;
     int field_r;
     int field_m;
-    static me field_l;
-    static km field_n;
+    static MouseInputHandler field_l;
+    static UiWidget field_n;
     static int field_k;
     static byte[] field_p;
     static e field_j;
@@ -19,7 +19,7 @@ final class pm extends IntrusiveNode {
     final static v a(int param0, byte[] param1) {
         v var2 = null;
         RuntimeException var2_ref = null;
-        eh var3 = null;
+        Js5Archive var3 = null;
         v stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -27,13 +27,13 @@ final class pm extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -9618) {
-            var3 = (eh) null;
-            pm.a((eh) null, -49);
+            var3 = (Js5Archive) null;
+            pm.a((Js5Archive) null, -49);
           }
           if (param1 == null) {
             return null;
           }
-          var2 = new v(param1, el.field_w, mb.field_bb, db.field_k, gb.field_F, lj.field_j);
+          var2 = new v(param1, BufferedSocket.field_w, mb.field_bb, db.field_k, gb.field_F, lj.field_j);
           pe.b((byte) -28);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -63,8 +63,8 @@ final class pm extends IntrusiveNode {
           field_n = null;
           return;
         }
-        eh var2 = (eh) null;
-        pm.a((eh) null, -125);
+        Js5Archive var2 = (Js5Archive) null;
+        pm.a((Js5Archive) null, -125);
         field_q = null;
         field_g = null;
         field_l = null;
@@ -74,7 +74,7 @@ final class pm extends IntrusiveNode {
         field_n = null;
     }
 
-    final static void a(eh param0, int param1) {
+    final static void a(Js5Archive param0, int param1) {
         int var5_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -140,7 +140,7 @@ final class pm extends IntrusiveNode {
         field_i = "Invite more players, or alternatively try changing the '<%0>' setting.";
         field_s = "Buying or selling an account";
         field_q = new lc(0, 2, 2, 1);
-        mg discarded$0 = new mg(0, 0);
-        field_l = new me();
+        Sprite discarded$0 = new Sprite(0, 0);
+        field_l = new MouseInputHandler();
     }
 }

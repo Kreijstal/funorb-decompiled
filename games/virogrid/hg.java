@@ -7,7 +7,7 @@ final class hg extends PacketBuffer {
     private mm field_s;
     static String field_o;
     static char[] field_q;
-    static km field_p;
+    static UiWidget field_p;
 
     final void g(int param0, int param1) {
         int fieldTemp$0 = this.position;

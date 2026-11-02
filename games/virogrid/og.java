@@ -15,11 +15,11 @@ final class og implements Runnable {
     static boolean[] field_j;
     static int field_b;
     private DataInputStream field_i;
-    private pd field_f;
+    private PlatformTaskDispatcher field_f;
     static String field_n;
     private int field_h;
     static String[] field_o;
-    static km[] field_g;
+    static UiWidget[] field_g;
     static String[] field_t;
     private un field_d;
     private java.net.URL field_r;
@@ -468,7 +468,7 @@ final class og implements Runnable {
         }
     }
 
-    og(pd param0, java.net.URL param1, int param2) {
+    og(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_f = param0;
           this.field_r = param1;

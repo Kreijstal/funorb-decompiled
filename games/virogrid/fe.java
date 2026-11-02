@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe extends km {
+final class fe extends UiWidget {
     static String field_Kb;
     static boolean field_Fb;
     private StringBuilder field_Eb;
     static String field_Lb;
-    private km field_Jb;
-    private km field_Hb;
+    private UiWidget field_Jb;
+    private UiWidget field_Hb;
     private int field_Ib;
     static boolean field_Gb;
 
@@ -106,7 +106,7 @@ final class fe extends km {
               if (var30 == 0) {
                 if (stackIn_67_0 >= stackIn_67_1) {
                   en.field_Hb[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
-                  ld.field_h[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
+                  GameKeyHandler.field_h[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   dn.field_a[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 > var8) {
                     var8 = var29Lifetime1;
@@ -276,7 +276,7 @@ final class fe extends km {
         }
     }
 
-    fe(int param0, int param1, int param2, int param3, String param4, km param5, km param6, km param7) {
+    fe(int param0, int param1, int param2, int param3, String param4, UiWidget param5, UiWidget param6, UiWidget param7) {
         super(0L, param5);
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -296,9 +296,9 @@ final class fe extends km {
         int var13 = 0;
         this.field_Ib = 0;
         try {
-          this.field_Jb = new km(0L, param6, param4);
+          this.field_Jb = new UiWidget(0L, param6, param4);
           this.a(0, this.field_Jb);
-          this.field_Hb = new km(0L, param7);
+          this.field_Hb = new UiWidget(0L, param7);
           this.field_Hb.field_E = 16764006;
           this.a(0, this.field_Hb);
           this.field_Hb.field_eb = "|";
@@ -383,14 +383,14 @@ final class fe extends km {
             var7 = sf.a((byte) 121, var5, pm.field_j, 480, gg.field_I);
             var8 = var7 + 2;
             vg.field_F = new String[var8];
-            wf.field_f = new int[var8];
+            RasterBuffer.field_f = new int[var8];
             var9 = 0;
             do {
               if (var8 <= var9) {
                 ia.field_e = new int[1];
                 break;
               }
-              wf.field_f[var9] = -1;
+              RasterBuffer.field_f[var9] = -1;
               var9++;
             } while (var10 == 0);
             var9 = 0;
@@ -398,7 +398,7 @@ final class fe extends km {
               if (var7 <= var9) {
                 vg.field_F[var8 - 2] = "";
                 vg.field_F[-1 + var8] = je.field_I;
-                wf.field_f[-1 + var8] = 0;
+                RasterBuffer.field_f[-1 + var8] = 0;
                 ia.field_e[0] = 2;
                 break;
               }
@@ -410,7 +410,7 @@ final class fe extends km {
           if (decompiledFrameRemainder0) {
             var7 = sf.a((byte) 124, var5, pm.field_j, 480, gg.field_I);
             var8 = var7 + 3;
-            wf.field_f = new int[var8];
+            RasterBuffer.field_f = new int[var8];
             vg.field_F = new String[var8];
             var9 = 0;
             do {
@@ -418,7 +418,7 @@ final class fe extends km {
                 ia.field_e = new int[2];
                 break;
               }
-              wf.field_f[var9] = -1;
+              RasterBuffer.field_f[var9] = -1;
               var9++;
             } while (var10 == 0);
             var9 = 0;
@@ -426,10 +426,10 @@ final class fe extends km {
               if (var7 <= var9) {
                 vg.field_F[-3 + var8] = "";
                 vg.field_F[-2 + var8] = var6;
-                wf.field_f[-2 + var8] = 0;
+                RasterBuffer.field_f[-2 + var8] = 0;
                 ia.field_e[0] = 1;
                 vg.field_F[-1 + var8] = je.field_I;
-                wf.field_f[-1 + var8] = 1;
+                RasterBuffer.field_f[-1 + var8] = 1;
                 break;
               }
               vg.field_F[var9] = gg.field_I[var9];
@@ -443,11 +443,11 @@ final class fe extends km {
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (!(vg.field_F.length > var8)))) {
             stackIn_60_0 = -1;
-            stackIn_60_1 = ~wf.field_f[var8];
+            stackIn_60_1 = ~RasterBuffer.field_f[var8];
             if (var10 == 0) {
               stackIn_50_0 = !(stackIn_60_0 < stackIn_60_1);
               var9 = an.a(stackIn_50_0, (byte) 57, vg.field_F[var8]);
-              if (-1 != wf.field_f[var8]) {
+              if (-1 != RasterBuffer.field_f[var8]) {
                 var9 = var9 + dj.field_e * 2;
               }
               if (var9 > var7) {
@@ -473,7 +473,7 @@ final class fe extends km {
           while (!(decompiledNaturalLoopExit0 = (!(var8 < vg.field_F.length)))) {
             stackIn_74_0 = lj.field_g;
             stackIn_74_1 = -1;
-            stackIn_74_2 = ~wf.field_f[var8];
+            stackIn_74_2 = ~RasterBuffer.field_f[var8];
             if (var10 == 0) {
               if (stackIn_74_1 >= stackIn_74_2) {
                 stackIn_72_1 = di.field_o;

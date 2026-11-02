@@ -12,7 +12,7 @@ final class qd {
     int field_d;
     static ai[] field_m;
     int field_l;
-    static km field_f;
+    static UiWidget field_f;
     static String field_g;
     static ml field_i;
     static int field_c;
@@ -122,7 +122,7 @@ final class qd {
         ge.field_b = -1;
     }
 
-    final static eh a(boolean param0, int param1, boolean param2, int param3, byte param4) {
+    final static Js5Archive a(boolean param0, int param1, boolean param2, int param3, byte param4) {
         if (param4 >= 40) {
           return va.a(param1, false, param3, -116, param2, param0);
         }
@@ -136,7 +136,7 @@ final class qd {
         field_f = null;
         field_m = null;
         if (!param0) {
-          field_f = (km) null;
+          field_f = (UiWidget) null;
         }
     }
 

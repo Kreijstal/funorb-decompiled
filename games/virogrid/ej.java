@@ -106,7 +106,7 @@ final class ej extends ec {
     }
 
     final static void a(boolean param0, int param1) {
-        df.c();
+        Rasterizer.c();
         if (param1 != 25680) {
           ej.a(true, 87);
         }

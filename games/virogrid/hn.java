@@ -24,27 +24,27 @@ final class hn extends IntrusiveNode {
     static int[][] field_v;
 
     final static void a(int param0, boolean param1) {
-        km stackIn_9_0 = null;
+        UiWidget stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        km stackIn_13_0 = null;
+        UiWidget stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
-        km stackIn_20_0 = null;
+        UiWidget stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
-        km stackIn_24_0 = null;
+        UiWidget stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
-        km stackIn_29_0 = null;
+        UiWidget stackIn_29_0 = null;
         boolean stackIn_30_1 = false;
-        km stackIn_33_0 = null;
+        UiWidget stackIn_33_0 = null;
         boolean stackIn_34_1 = false;
-        km stackIn_42_0 = null;
+        UiWidget stackIn_42_0 = null;
         boolean stackIn_43_1 = false;
-        km stackIn_46_0 = null;
+        UiWidget stackIn_46_0 = null;
         boolean stackIn_47_1 = false;
-        km stackIn_51_0 = null;
+        UiWidget stackIn_51_0 = null;
         boolean stackIn_52_1 = false;
-        km stackIn_55_0 = null;
+        UiWidget stackIn_55_0 = null;
         boolean stackIn_56_1 = false;
-        GameApplet.a(df.field_f, 6, -640 + df.field_e >> 1, df.field_e + 640 >> 1, 0);
+        GameApplet.a(Rasterizer.field_f, 6, -640 + Rasterizer.field_e >> 1, Rasterizer.field_e + 640 >> 1, 0);
         if (param0 != -1781) {
           return;
         }
@@ -54,45 +54,45 @@ final class hn extends IntrusiveNode {
           }
           stackIn_9_0 = fd.field_y;
           stackIn_10_1 = (param1) && (!ao.field_Gb);
-          ((km) (Object) stackIn_9_0).a(stackIn_10_1, 24960);
+          ((UiWidget) (Object) stackIn_9_0).a(stackIn_10_1, 24960);
           stackIn_13_0 = hg.field_p;
           stackIn_14_1 = (param1) && (!ao.field_Gb);
-          ((km) (Object) stackIn_13_0).a(stackIn_14_1, 24960);
+          ((UiWidget) (Object) stackIn_13_0).a(stackIn_14_1, 24960);
         }
         if (0 < field_h) {
           if (ak.field_e == null) {
             stackIn_20_0 = ao.field_Eb;
             stackIn_21_1 = (param1) && (!ad.field_h);
-            ((km) (Object) stackIn_20_0).a(stackIn_21_1, 24960);
+            ((UiWidget) (Object) stackIn_20_0).a(stackIn_21_1, 24960);
             stackIn_24_0 = dm.field_r;
             stackIn_25_1 = (param1) && (!ad.field_h);
-            ((km) (Object) stackIn_24_0).a(stackIn_25_1, 24960);
+            ((UiWidget) (Object) stackIn_24_0).a(stackIn_25_1, 24960);
           } else {
             ak.field_e.b(ao.field_Eb.field_tb, 0);
             stackIn_29_0 = ao.field_Eb;
             stackIn_30_1 = (param1) && (!ad.field_h);
-            ((km) (Object) stackIn_29_0).a(stackIn_30_1, 24960);
+            ((UiWidget) (Object) stackIn_29_0).a(stackIn_30_1, 24960);
             stackIn_33_0 = dm.field_r;
             stackIn_34_1 = (param1) && (!ad.field_h);
-            ((km) (Object) stackIn_33_0).a(stackIn_34_1, 24960);
+            ((UiWidget) (Object) stackIn_33_0).a(stackIn_34_1, 24960);
           }
         } else {
           if (th.field_z > 0) {
             if (ak.field_e == null) {
               stackIn_42_0 = ao.field_Eb;
               stackIn_43_1 = (param1) && (!ad.field_h);
-              ((km) (Object) stackIn_42_0).a(stackIn_43_1, 24960);
+              ((UiWidget) (Object) stackIn_42_0).a(stackIn_43_1, 24960);
               stackIn_46_0 = dm.field_r;
               stackIn_47_1 = (param1) && (!ad.field_h);
-              ((km) (Object) stackIn_46_0).a(stackIn_47_1, 24960);
+              ((UiWidget) (Object) stackIn_46_0).a(stackIn_47_1, 24960);
             } else {
               ak.field_e.b(ao.field_Eb.field_tb, 0);
               stackIn_51_0 = ao.field_Eb;
               stackIn_52_1 = (param1) && (!ad.field_h);
-              ((km) (Object) stackIn_51_0).a(stackIn_52_1, 24960);
+              ((UiWidget) (Object) stackIn_51_0).a(stackIn_52_1, 24960);
               stackIn_55_0 = dm.field_r;
               stackIn_56_1 = (param1) && (!ad.field_h);
-              ((km) (Object) stackIn_55_0).a(stackIn_56_1, 24960);
+              ((UiWidget) (Object) stackIn_55_0).a(stackIn_56_1, 24960);
             }
           }
         }
@@ -125,7 +125,7 @@ final class hn extends IntrusiveNode {
         return 1900 + new Date().getYear();
     }
 
-    final static boolean a(eh param0, int param1, int param2, byte param3) {
+    final static boolean a(Js5Archive param0, int param1, int param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;

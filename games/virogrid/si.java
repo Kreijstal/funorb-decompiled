@@ -18,7 +18,7 @@ final class si {
         return var2;
     }
 
-    private final static void b(int param0, int param1, int param2, mg param3, int param4, int param5, int param6) {
+    private final static void b(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
         if (param2 == 0) {
           return;
         }
@@ -29,17 +29,17 @@ final class si {
           var8 = var8 - param1 * var7;
           param1 = 0;
         }
-        if (param1 + param2 > df.field_f) {
-          param2 = df.field_f - param1;
+        if (param1 + param2 > Rasterizer.field_f) {
+          param2 = Rasterizer.field_f - param1;
         }
-        int var9 = df.field_e * param1 + param0;
+        int var9 = Rasterizer.field_e * param1 + param0;
         while (true) {
           param2--;
           if (param2 < 0) {
             break;
           }
-          df.field_d[var9] = param3.field_B[(var8 >> 16) * param3.field_w + param4];
-          var9 = var9 + df.field_e;
+          Rasterizer.field_d[var9] = param3.field_B[(var8 >> 16) * param3.field_w + param4];
+          var9 = var9 + Rasterizer.field_e;
           var8 = var8 + var7;
         }
     }
@@ -72,7 +72,7 @@ final class si {
         return new double[]{param0[0], param0[1], param0[2], var11[0], var11[1], var11[2], var12[0], var12[1], var12[2], var3[0], var3[1], var3[2]};
     }
 
-    private final static void a(int param0, int param1, int param2, mg param3, int param4, int param5, int param6) {
+    private final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
         int var7;
         int var8;
         int var9;
@@ -105,10 +105,10 @@ final class si {
           var8 = var8 - param1 * var7;
           param1 = 0;
         }
-        if (param1 + param2 > df.field_f) {
-          param2 = df.field_f - param1;
+        if (param1 + param2 > Rasterizer.field_f) {
+          param2 = Rasterizer.field_f - param1;
         }
-        var9 = df.field_e * param1 + param0;
+        var9 = Rasterizer.field_e * param1 + param0;
         var13 = param4 >> 16;
         var14 = param4 >> 12 & 15;
         var15 = 16 - var14;
@@ -164,14 +164,14 @@ final class si {
           var10Lifetime1 = var11 | var12;
           var10Lifetime1 = (var10Lifetime1 & 16579836) >> 2;
           var10Lifetime1 = var10Lifetime1 * 3;
-          var10Lifetime1 = var10Lifetime1 + ((df.field_d[var9] & 16579836) >> 2);
-          df.field_d[var9] = var10Lifetime1;
-          var9 = var9 + df.field_e;
+          var10Lifetime1 = var10Lifetime1 + ((Rasterizer.field_d[var9] & 16579836) >> 2);
+          Rasterizer.field_d[var9] = var10Lifetime1;
+          var9 = var9 + Rasterizer.field_e;
           var8 = var8 + var7;
         }
     }
 
-    final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, mg param5, int param6, int param7, int param8, int param9, boolean param10) {
+    final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, Sprite param5, int param6, int param7, int param8, int param9, boolean param10) {
         double var17_double;
         double var19_double;
         double var21_double;
@@ -292,8 +292,8 @@ final class si {
           var37 = var37 - (double)var17 * var39;
           var17 = 0;
         }
-        if (var18 > df.field_e - 1) {
-          var18 = df.field_e - 1;
+        if (var18 > Rasterizer.field_e - 1) {
+          var18 = Rasterizer.field_e - 1;
         }
         if (!param10) {
           for (var41Lifetime1 = var17; var41Lifetime1 <= var18; var41Lifetime1++) {

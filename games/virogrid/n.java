@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class n extends wf {
+final class n extends RasterBuffer {
     private java.awt.Component field_n;
 
     public n() {

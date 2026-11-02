@@ -6,13 +6,13 @@ final class jj {
     private int field_b;
     private boolean field_d;
     private int field_e;
-    mg[] field_k;
+    Sprite[] field_k;
     private int field_l;
-    mg field_c;
+    Sprite field_c;
     static hh field_f;
     static String field_g;
-    static km field_a;
-    static km field_m;
+    static UiWidget field_a;
+    static UiWidget field_m;
     static String field_i;
     private int field_h;
     static GameApplet field_n;
@@ -41,7 +41,7 @@ final class jj {
         field_m = null;
     }
 
-    final jj a(int param0, mg[] param1) {
+    final jj a(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         jj stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -87,12 +87,12 @@ final class jj {
         }
     }
 
-    final static mg[] a(String param0, eh param1, boolean param2, String param3) {
+    final static Sprite[] a(String param0, Js5Archive param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        mg[] stackIn_2_0 = null;
-        mg[] stackIn_4_0 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -108,7 +108,7 @@ final class jj {
             stackIn_4_0 = tm.a(param1, var4_int, 4, var5);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (mg[]) null;
+          stackIn_2_0 = (Sprite[]) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,7 +144,7 @@ final class jj {
         return this;
     }
 
-    final static void a(int param0, km param1, byte[] param2, int param3, km param4, int param5, int param6, int param7, int param8, km param9) {
+    final static void a(int param0, UiWidget param1, byte[] param2, int param3, UiWidget param4, int param5, int param6, int param7, int param8, UiWidget param9) {
         int var11 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -167,7 +167,7 @@ final class jj {
           vb.field_h = param2.length;
           kn.field_E = new byte[(7 + la.field_l) / param3];
           la.field_h = null;
-          ld.field_c = false;
+          GameKeyHandler.field_c = false;
           wl.field_d = null;
           var10_int = 0;
           for (var11 = 0; var11 < lk.field_Pb.length; var11++) {
@@ -358,7 +358,7 @@ final class jj {
 
     final jj b(int param0, int param1) {
         if (param1 != -26973) {
-          field_m = (km) null;
+          field_m = (UiWidget) null;
         }
         this.field_e = param0;
         return this;

@@ -6,7 +6,7 @@ final class jk {
     static IntrusiveDeque field_a;
     static boolean[] field_d;
     static String field_e;
-    static km field_b;
+    static UiWidget field_b;
     static String field_f;
 
     final static int a(int param0, int param1) {

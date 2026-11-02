@@ -14,7 +14,7 @@ final class dj {
     static ml[] field_f;
     ga field_a;
     String field_g;
-    km field_d;
+    UiWidget field_d;
     static int field_e;
 
     private final boolean b(int param0, int param1, int param2) {
@@ -202,7 +202,7 @@ final class dj {
         if (param1 != 17) {
           return false;
         }
-        km.field_yb = new bg(this.field_d.field_Bb, this.field_d.field_J, this.field_d.field_K, this.field_d.field_ub, param0, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, IntrusiveDequeCursor.field_e, this.field_g, this.field_i);
+        UiWidget.field_yb = new bg(this.field_d.field_Bb, this.field_d.field_J, this.field_d.field_K, this.field_d.field_ub, param0, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, IntrusiveDequeCursor.field_e, this.field_g, this.field_i);
         return true;
     }
 
@@ -536,7 +536,7 @@ final class dj {
         return true;
     }
 
-    dj(km param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    dj(UiWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_a = new ga(sd.field_f);
           this.field_k = param6;
@@ -565,7 +565,7 @@ final class dj {
           this.field_j = param0.field_n;
           if (param0.field_n == 0) {
             if (ca.field_D == 0) {
-              this.field_a.a(1, el.field_g, 12);
+              this.field_a.a(1, BufferedSocket.field_g, 12);
             }
             this.field_a.a(1, f.field_h, 13);
           }
@@ -581,8 +581,8 @@ final class dj {
           if (param0.field_n != 2) {
             return;
           }
-          if (el.field_t == 0) {
-            this.field_a.a(1, rl.field_v, 12);
+          if (BufferedSocket.field_t == 0) {
+            this.field_a.a(1, SpriteState.field_v, 12);
           }
           this.field_a.a(1, mi.field_a, 13);
           return;

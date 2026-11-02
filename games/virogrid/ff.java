@@ -23,22 +23,22 @@ final class ff {
         int var12;
         int var15;
         if (param0 >= param2.length) {
-          df.b(0, 0, df.field_e, df.field_f, param1);
+          Rasterizer.b(0, 0, Rasterizer.field_e, Rasterizer.field_f, param1);
           return;
         }
         var3 = param2[param0];
         if (var3 == 0) {
           return;
         }
-        var4 = df.field_d;
-        var5 = df.field_i;
-        var6 = df.field_g;
-        var7 = df.field_k - var5;
-        var8 = df.field_h - var6;
-        var9 = df.field_e - var7;
-        var10 = var5 + var6 * df.field_e;
+        var4 = Rasterizer.field_d;
+        var5 = Rasterizer.field_i;
+        var6 = Rasterizer.field_g;
+        var7 = Rasterizer.field_k - var5;
+        var8 = Rasterizer.field_h - var6;
+        var9 = Rasterizer.field_e - var7;
+        var10 = var5 + var6 * Rasterizer.field_e;
         var11 = var6 - 1 << 2;
-        var12 = df.field_k;
+        var12 = Rasterizer.field_k;
         for (var13 = -var8; var13 < 0; var13++) {
           var11 = var11 + 4 & 12;
           for (var14 = -var7; var14 < 0; var14++) {

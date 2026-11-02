@@ -30,9 +30,9 @@ final class ha {
         int var10;
         int var11;
         var11 = Virogrid.field_F ? 1 : 0;
-        if (!param2 && (eb.field_f != df.field_e ||
-          df.field_f != f.field_b) && (ca.field_M.field_b == df.field_f &&
-          ca.field_M.field_c == df.field_e)) {
+        if (!param2 && (eb.field_f != Rasterizer.field_e ||
+          Rasterizer.field_f != f.field_b) && (ca.field_M.field_b == Rasterizer.field_f &&
+          ca.field_M.field_c == Rasterizer.field_e)) {
           if (null == wl.field_d) {
             if (la.field_h != null) {
               hm.a(true, true);
@@ -73,7 +73,7 @@ final class ha {
         pi.a(param4, param6, param9, (byte) -106, param5, param0, param1);
         lb.a(param6, param0, wm.field_r, param1, 21547);
         var10 = 92 / ((24 - param3) / 45);
-        rl.field_y = rl.field_y + 1;
+        SpriteState.field_y = SpriteState.field_y + 1;
     }
 
     final oa a(int param0, int param1, boolean param2, gl param3, gl param4) {

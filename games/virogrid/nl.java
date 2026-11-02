@@ -8,12 +8,12 @@ final class nl extends aj {
     private jj field_y;
     static int field_u;
 
-    final void a(byte param0, mg param1) {
+    final void a(byte param0, Sprite param1) {
         int var4 = 0;
         jj[] var3 = null;
         jj var5 = null;
         int var6 = 0;
-        mg var7 = null;
+        Sprite var7 = null;
         jj[] var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -31,8 +31,8 @@ final class nl extends aj {
             }
           }
           if (param0 >= -113) {
-            var7 = (mg) null;
-            this.a((byte) -103, (mg) null);
+            var7 = (Sprite) null;
+            this.a((byte) -103, (Sprite) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,7 +49,7 @@ final class nl extends aj {
         }
     }
 
-    final void a(mg[] param0, int param1) {
+    final void a(Sprite[] param0, int param1) {
         int var4 = 0;
         jj[] var3 = null;
         jj var5 = null;
@@ -245,7 +245,7 @@ final class nl extends aj {
         }
     }
 
-    final void a(int param0, mg[] param1, byte param2) {
+    final void a(int param0, Sprite[] param1, byte param2) {
         int var4_int = 0;
         if (param2 >= -119) {
           return;
@@ -274,7 +274,7 @@ final class nl extends aj {
         if (param0 != 4) {
           return -116;
         }
-        return (qe.field_m << 2) + (ca.field_D << 4) + el.field_t;
+        return (qe.field_m << 2) + (ca.field_D << 4) + BufferedSocket.field_t;
     }
 
     public static void c(int param0) {

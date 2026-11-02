@@ -12,7 +12,7 @@ final class la extends IntrusiveNode {
     static String field_m;
     int field_j;
 
-    final static void a(int param0, eh param1) {
+    final static void a(int param0, Js5Archive param1) {
         gj var2 = null;
         if (param0 != 1048576) {
           return;

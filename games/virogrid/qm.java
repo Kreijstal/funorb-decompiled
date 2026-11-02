@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends km {
+final class qm extends UiWidget {
     static String field_Ob;
-    static mg[] field_Kb;
+    static Sprite[] field_Kb;
     static IntrusiveDeque field_Mb;
-    private km field_Fb;
-    private km field_Jb;
+    private UiWidget field_Fb;
+    private UiWidget field_Jb;
     static String field_Hb;
-    private km field_Nb;
-    private km field_Eb;
+    private UiWidget field_Nb;
+    private UiWidget field_Eb;
     private int field_Ib;
-    private km field_Lb;
+    private UiWidget field_Lb;
     static String field_Gb;
-    private km field_Pb;
+    private UiWidget field_Pb;
 
     final boolean g(int param0) {
         if (this.field_Nb.field_nb != 0) {
@@ -71,8 +71,8 @@ final class qm extends km {
         return oi.field_d;
     }
 
-    qm(long param0, km param1, km param2, km param3, km param4) {
-        super(param0, (km) null);
+    qm(long param0, UiWidget param1, UiWidget param2, UiWidget param3, UiWidget param4) {
+        super(param0, (UiWidget) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -84,24 +84,24 @@ final class qm extends km {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        km var9 = null;
-        km var10 = null;
+        UiWidget var9 = null;
+        UiWidget var10 = null;
         try {
-          this.field_Fb = new km(0L, param1);
-          this.field_Nb = new km(0L, param2);
+          this.field_Fb = new UiWidget(0L, param1);
+          this.field_Nb = new UiWidget(0L, param2);
           this.a(0, this.field_Fb);
           this.a(0, this.field_Nb);
-          this.field_Eb = new km(0L, (km) null);
+          this.field_Eb = new UiWidget(0L, (UiWidget) null);
           this.a(0, this.field_Eb);
-          this.field_Lb = new km(0L, param3);
-          this.field_Jb = new km(0L, param3);
+          this.field_Lb = new UiWidget(0L, param3);
+          this.field_Jb = new UiWidget(0L, param3);
           var9 = this.field_Lb;
           var10 = var9;
           this.field_Jb.field_ib = true;
           var10.field_ib = true;
           this.field_Eb.a(0, this.field_Lb);
           this.field_Eb.a(0, this.field_Jb);
-          this.field_Pb = new km(0L, param4);
+          this.field_Pb = new UiWidget(0L, param4);
           this.field_Pb.field_X = true;
           this.field_Eb.a(0, this.field_Pb);
           return;
@@ -192,7 +192,7 @@ final class qm extends km {
         int stackIn_5_4;
         int stackIn_5_5;
         boolean stackIn_6_6 = false;
-        km stackIn_21_0 = null;
+        UiWidget stackIn_21_0 = null;
         String stackIn_22_1 = null;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -223,7 +223,7 @@ final class qm extends km {
           stackIn_5_3 = false;
           stackIn_5_4 = 2;
           stackIn_5_5 = param0 * (6 + 3 * pg.field_e);
-          stackIn_6_6 = (wf.field_d == lg.field_a.field_Ib);
+          stackIn_6_6 = (RasterBuffer.field_d == lg.field_a.field_Ib);
           var3_int = ((um) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
           var4 = lg.field_a.field_Lb.field_W;
           if (oa.field_q != 2 &&
@@ -240,9 +240,9 @@ final class qm extends km {
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_W) {
-              var6.field_Eb = new km(0L, gg.field_F);
+              var6.field_Eb = new UiWidget(0L, gg.field_F);
               var6.a(0, var6.field_Eb);
-              var6.field_Mb = new km(0L, gg.field_F);
+              var6.field_Mb = new UiWidget(0L, gg.field_F);
               var6.a(0, var6.field_Mb);
               var6.b((byte) 42);
               var7 = 1;
@@ -277,7 +277,7 @@ final class qm extends km {
               var6.field_kb = pg.field_e - var6.field_ub;
             }
             if (var7 != 0) {
-              lg.field_a.field_Lb.a(2, var6, (km) (var5), (byte) 109);
+              lg.field_a.field_Lb.a(2, var6, (UiWidget) (var5), (byte) 109);
             }
             if (null != var6.field_Mb &&
               var6.field_Mb.field_S) {
@@ -375,17 +375,17 @@ final class qm extends km {
           var11 = (var9 / 2 + param1 * var10) / var9;
         }
         int var12 = var8 / 2 + var11;
-        km var14 = this.field_Fb;
+        UiWidget var14 = this.field_Fb;
         var14.field_tb = 0;
         var14.field_F = 0;
         var14.field_ub = var5;
         var14.field_K = this.field_K;
-        km var15 = this.field_Nb;
+        UiWidget var15 = this.field_Nb;
         var15.field_K = this.field_K;
         var15.field_ub = -var6 + this.field_ub;
         var15.field_F = var6;
         var15.field_tb = 0;
-        km var16 = this.field_Eb;
+        UiWidget var16 = this.field_Eb;
         var16.field_tb = 0;
         var16.field_F = var5;
         var16.field_K = this.field_K;
@@ -393,17 +393,17 @@ final class qm extends km {
           return;
         }
         var16.field_ub = var7;
-        km var17 = this.field_Lb;
+        UiWidget var17 = this.field_Lb;
         var17.field_K = this.field_K;
         var17.field_F = 0;
         var17.field_tb = 0;
         var17.field_ub = var12;
-        km var18 = this.field_Jb;
+        UiWidget var18 = this.field_Jb;
         var18.field_tb = 0;
         var18.field_K = this.field_K;
         var18.field_ub = -var12 + var7;
         var18.field_F = var12;
-        km var19 = this.field_Pb;
+        UiWidget var19 = this.field_Pb;
         this.field_Eb.field_Y = param2 < param0 ? true : false;
         this.field_Nb.field_Y = param2 < param0 ? true : false;
         this.field_Fb.field_Y = param2 < param0 ? true : false;

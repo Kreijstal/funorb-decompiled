@@ -64,7 +64,7 @@ final class ne {
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           try {
-            if (!pd.field_x.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_x.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&
@@ -114,7 +114,7 @@ final class ne {
         if (param0 != -52) {
           return (String) null;
         }
-        if (ao.field_Kb == cb.field_c) {
+        if (ao.field_Kb == MouseWheelInput.field_c) {
           return ve.field_u;
         }
         if (!w.field_I.b(-88)) {
@@ -123,41 +123,41 @@ final class ne {
         return pm.field_g;
     }
 
-    final static mg[] a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        mg var16 = null;
-        int[] var18 = df.field_d;
+    final static Sprite[] a(int param0, int param1, int param2, byte param3, int param4, int param5) {
+        Sprite var16 = null;
+        int[] var18 = Rasterizer.field_d;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
-        int var7 = df.field_e;
-        int var8 = df.field_f;
-        mg var9 = new mg(param1, -(param1 * 2) + param0);
+        int var7 = Rasterizer.field_e;
+        int var8 = Rasterizer.field_f;
+        Sprite var9 = new Sprite(param1, -(param1 * 2) + param0);
         var9.b();
-        df.a(0, 0, param1, param0 - 2 * param1, param5, param4);
-        mg var10 = new mg(param1, param1);
+        Rasterizer.a(0, 0, param1, param0 - 2 * param1, param5, param4);
+        Sprite var10 = new Sprite(param1, param1);
         var10.b();
-        df.b(0, 0, param1, param1, param5);
-        mg var11 = new mg(16, param1);
+        Rasterizer.b(0, 0, param1, param1, param5);
+        Sprite var11 = new Sprite(16, param1);
         var11.b();
-        df.b(0, 0, 16, param1, param5);
-        mg var12 = new mg(param1, param1);
+        Rasterizer.b(0, 0, 16, param1, param5);
+        Sprite var12 = new Sprite(param1, param1);
         var12.b();
-        df.b(0, 0, param1, param1, param4);
-        mg var13 = new mg(16, param1);
+        Rasterizer.b(0, 0, param1, param1, param4);
+        Sprite var13 = new Sprite(16, param1);
         var13.b();
         if (param3 != 106) {
           field_c = (um) null;
         }
-        df.b(0, 0, 16, param1, param4);
+        Rasterizer.b(0, 0, 16, param1, param4);
         Object var14 = null;
         if (param2 > 0) {
-          var16 = new mg(16, 16);
+          var16 = new Sprite(16, 16);
           var14 = var16;
           var16.b();
-          df.b(0, 0, 16, 16, param2);
+          Rasterizer.b(0, 0, 16, 16, param2);
         }
-        df.a(var18, var7, var8);
-        return new mg[]{var10, var11, var10, var9, (mg) (var14), var9, var12, var13, var12};
+        Rasterizer.a(var18, var7, var8);
+        return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
     final static void a(int param0) {

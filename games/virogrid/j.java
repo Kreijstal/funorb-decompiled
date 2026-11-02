@@ -10,7 +10,7 @@ final class j implements Iterator {
     private IntrusiveNode field_d;
     static boolean field_g;
     private int field_c;
-    static mg[] field_k;
+    static Sprite[] field_k;
     static e field_h;
     static int field_l;
     static int field_b;
@@ -183,7 +183,7 @@ final class j implements Iterator {
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            stackIn_7_0 = cb.field_a;
+            stackIn_7_0 = MouseWheelInput.field_a;
             return stackIn_7_0;
           }
           if (param0.charAt(0) == 34) {
@@ -261,7 +261,7 @@ final class j implements Iterator {
           if (dj.field_n < 20) {
             return true;
           }
-          if (!me.b(9)) {
+          if (!MouseInputHandler.b(9)) {
             return true;
           }
           if (mf.field_h <= 0) {
@@ -275,7 +275,7 @@ final class j implements Iterator {
         if (dj.field_n < 20) {
           return true;
         }
-        if (!me.b(9)) {
+        if (!MouseInputHandler.b(9)) {
           return true;
         }
         if (mf.field_h <= 0) {

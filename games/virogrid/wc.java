@@ -5,11 +5,11 @@ import java.util.*;
 
 final class wc {
     static Calendar field_l;
-    private eh field_i;
+    private Js5Archive field_i;
     private sl field_d;
     static String field_g;
-    static km field_k;
-    private eh field_h;
+    static UiWidget field_k;
+    private Js5Archive field_h;
     static ml field_a;
     static String field_b;
     static int field_m;
@@ -123,7 +123,7 @@ final class wc {
         }
     }
 
-    wc(int param0, eh param1, eh param2) {
+    wc(int param0, Js5Archive param1, Js5Archive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

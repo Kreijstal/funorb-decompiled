@@ -76,7 +76,7 @@ abstract class bk {
 
     final static rm a(int param0) {
         int var2 = 66 % ((77 - param0) / 34);
-        rm var1 = new rm(oj.field_Kb, se.field_d, el.field_w[0], mb.field_bb[0], db.field_k[0], gb.field_F[0], lj.field_j[0], k.field_c);
+        rm var1 = new rm(oj.field_Kb, se.field_d, BufferedSocket.field_w[0], mb.field_bb[0], db.field_k[0], gb.field_F[0], lj.field_j[0], k.field_c);
         pe.b((byte) -28);
         return var1;
     }

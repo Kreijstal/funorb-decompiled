@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ib {
-    static mg[] field_b;
+    static Sprite[] field_b;
     static String field_a;
 
     final static void a(byte param0) {

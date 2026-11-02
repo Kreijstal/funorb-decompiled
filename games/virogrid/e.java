@@ -348,10 +348,10 @@ abstract class e extends DualLinkNode {
               }
               param1 = param1 + this.field_u[var8];
               if (field_I != -1) {
-                df.b(var11, param2 + (int)((double)this.field_J * 0.7), param1 - var11, field_I);
+                Rasterizer.b(var11, param2 + (int)((double)this.field_J * 0.7), param1 - var11, field_I);
               }
               if (field_D != -1) {
-                df.b(var11, param2 + this.field_J + 1, param1 - var11, field_D);
+                Rasterizer.b(var11, param2 + this.field_J + 1, param1 - var11, field_D);
               }
               var5 = var8;
             }

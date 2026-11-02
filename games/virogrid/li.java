@@ -41,7 +41,7 @@ final class li {
             }
           }
           if (fl.field_i != this.field_h ||
-            this.field_r != km.field_B) {
+            this.field_r != UiWidget.field_B) {
             this.field_n.a(this.field_r, this.field_h, (byte) 125);
           }
           return;
@@ -89,9 +89,9 @@ final class li {
 
     final h a(int param0) {
         this.field_g = fl.field_i;
-        this.field_v = km.field_B;
+        this.field_v = UiWidget.field_B;
         this.field_n.a(this.field_p, this.field_e, (byte) 106);
-        km.field_Db = false;
+        UiWidget.field_Db = false;
         if (param0 != 11) {
           li.a(true);
         }
@@ -128,7 +128,7 @@ final class li {
           }
           if (oi.field_g != 0 &&
             hm.field_c == 10) {
-            el.a(12229, true);
+            BufferedSocket.a(12229, true);
           }
           if (oi.field_g != 0) {
             qa.field_e = GameApplet.a(-123, ii.field_b, a.field_y);
@@ -143,7 +143,7 @@ final class li {
             } else {
               if (2 == wn.field_C &&
                 5 == qa.field_e) {
-                el.a(true, (byte) -106);
+                BufferedSocket.a(true, (byte) -106);
               }
             }
           }
@@ -184,11 +184,11 @@ final class li {
             fa.field_k = (double)(hk.field_Jb - tm.field_g + 200);
             sf.field_M = (double)nl.field_u;
           } else {
-            var2_double = (double)(nl.field_u - (df.field_e >> 1)) / 512.0;
+            var2_double = (double)(nl.field_u - (Rasterizer.field_e >> 1)) / 512.0;
             var4 = (double)(-tm.field_g + hk.field_Jb) / 512.0;
             var6 = -nk.field_K[2] / (nk.field_K[11] + (nk.field_K[5] * var2_double + var4 * nk.field_K[8]));
             sf.field_M = 4.0 * ((var2_double * nk.field_K[3] + var4 * nk.field_K[6] + nk.field_K[9]) * var6 + nk.field_K[0]);
-            fa.field_k = (double)(-(df.field_f >> 1) + 440) + (nk.field_K[1] + (nk.field_K[10] + (var2_double * nk.field_K[4] + nk.field_K[7] * var4)) * var6) * 4.0;
+            fa.field_k = (double)(-(Rasterizer.field_f >> 1) + 440) + (nk.field_K[1] + (nk.field_K[10] + (var2_double * nk.field_K[4] + nk.field_K[7] * var4)) * var6) * 4.0;
             if (0.0 > nk.field_K[11]) {
               sf.field_M = 320.0 - sf.field_M;
             } else {
@@ -234,7 +234,7 @@ final class li {
               var4Lifetime1 < 530.0 &&
               var6Lifetime1 > 0.0 &&
               var6Lifetime1 < 400.0) {
-              gd.field_n.a(new pm((int)(16.0 * var4Lifetime1), (int)(var6Lifetime1 * 16.0), Math.min(ke.field_p.field_c, ke.field_p.field_i * var3 + ke.field_p.field_a)), (byte) -38);
+              ImageProducerRasterBuffer.field_n.a(new pm((int)(16.0 * var4Lifetime1), (int)(var6Lifetime1 * 16.0), Math.min(ke.field_p.field_c, ke.field_p.field_i * var3 + ke.field_p.field_a)), (byte) -38);
             }
           }
           if (db.b((byte) 13, 0) &&
@@ -377,7 +377,7 @@ final class li {
                     return;
                   }
                   var9_int = var9_int + var12;
-                  var17Lifetime2 = var17Lifetime2 + df.field_e;
+                  var17Lifetime2 = var17Lifetime2 + Rasterizer.field_e;
                   var11 = var11 + var13;
                 }
               }
@@ -428,7 +428,7 @@ final class li {
                 return;
               }
               var9_int = var9_int + var12;
-              var16Lifetime1 = var16Lifetime1 + df.field_e;
+              var16Lifetime1 = var16Lifetime1 + Rasterizer.field_e;
               var11 = var11 + var13;
             }
             return;
@@ -485,7 +485,7 @@ final class li {
           }
         }
         if (var2 != fl.field_i ||
-          var3 != km.field_B) {
+          var3 != UiWidget.field_B) {
           this.field_n.a(var3, var2, (byte) 40);
         }
         if (param0 != 22) {

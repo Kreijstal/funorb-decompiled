@@ -128,7 +128,7 @@ final class a extends cc {
         }
     }
 
-    final static v a(String param0, eh param1, int param2, String param3, eh param4) {
+    final static v a(String param0, Js5Archive param1, int param2, String param3, Js5Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -280,7 +280,7 @@ final class a extends cc {
         }
     }
 
-    final static void a(int param0, eh param1) {
+    final static void a(int param0, Js5Archive param1) {
         RuntimeException stackIn_376_0 = null;
         StringBuilder stackIn_376_1 = null;
         String stackIn_377_2 = null;
@@ -478,7 +478,7 @@ final class a extends cc {
           }
           var2Lifetime21 = jl.a("TEXT_3D", true);
           if (null != var2Lifetime21) {
-            ld.field_f = i.a(-2022, var2Lifetime21);
+            GameKeyHandler.field_f = i.a(-2022, var2Lifetime21);
           }
           var2Lifetime22 = jl.a("TEXT_SWITCH_2D", true);
           if (var2Lifetime22 != null) {
@@ -573,7 +573,7 @@ final class a extends cc {
           }
           var2Lifetime44 = jl.a("TEXT_VIEWCONTROLS_ZOOMIN", true);
           if (null != var2Lifetime44) {
-            cb.field_b = i.a(param0 ^ -2034, var2Lifetime44);
+            MouseWheelInput.field_b = i.a(param0 ^ -2034, var2Lifetime44);
           }
           var2Lifetime45 = jl.a("TEXT_VIEWCONTROLS_CENTRE", true);
           if (var2Lifetime45 != null) {
@@ -701,11 +701,11 @@ final class a extends cc {
           }
           var2Lifetime76 = jl.a("gameoptlabels,0", true);
           if (null != var2Lifetime76) {
-            wf.field_e[0] = i.a(jd.a(param0, -2034), var2Lifetime76);
+            RasterBuffer.field_e[0] = i.a(jd.a(param0, -2034), var2Lifetime76);
           }
           var2Lifetime77 = jl.a("gameoptlabels,1", true);
           if (null != var2Lifetime77) {
-            wf.field_e[1] = i.a(-2022, var2Lifetime77);
+            RasterBuffer.field_e[1] = i.a(-2022, var2Lifetime77);
           }
           var2Lifetime78 = jl.a("gameoptnames,0,0", true);
           if (null != var2Lifetime78) {

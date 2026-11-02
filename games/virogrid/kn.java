@@ -45,7 +45,7 @@ final class kn extends ec {
           this.field_x.a((byte) 37, param1 + this.field_l, this.field_u + param2, param3);
           return;
         }
-        mg var5 = new mg(this.field_x.field_g, this.field_x.field_m);
+        Sprite var5 = new Sprite(this.field_x.field_g, this.field_x.field_m);
         kb.a(var5, 16865);
         this.field_x.a(param0, 0, 0, param3);
         ai.a(true);

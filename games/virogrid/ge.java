@@ -4,7 +4,7 @@
 final class ge {
     static int field_b;
     static int field_d;
-    static eh field_c;
+    static Js5Archive field_c;
     static String field_a;
     static String field_e;
 

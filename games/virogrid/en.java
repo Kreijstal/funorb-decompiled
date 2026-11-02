@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-final class en extends km {
-    private km field_Ib;
+final class en extends UiWidget {
+    private UiWidget field_Ib;
     static int[] field_Hb;
-    private km field_Gb;
+    private UiWidget field_Gb;
     static String field_Eb;
     static int field_Jb;
     static boolean field_Fb;
@@ -28,7 +28,7 @@ final class en extends km {
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
-          pd stackIn_12_0;
+          PlatformTaskDispatcher stackIn_12_0;
           java.net.URL stackIn_12_1;
           java.net.URL stackIn_12_2;
           java.net.URL stackIn_12_3;
@@ -63,13 +63,13 @@ final class en extends km {
             var8 = kn.a(var7, (byte) -33, "%40", "@");
             var9 = kn.a(var8, (byte) -33, "%26", "&");
             var10 = kn.a(var9, (byte) -33, "%23", "#");
-            if (wf.field_m == null) {
+            if (RasterBuffer.field_m == null) {
               return;
             }
             stackIn_12_0 = qn.field_R;
             stackIn_12_1 = null;
             stackIn_12_2 = null;
-            stackIn_12_3 = wf.field_m.getCodeBase();
+            stackIn_12_3 = RasterBuffer.field_m.getCodeBase();
             stackIn_12_4 = new StringBuilder().append("clienterror.ws?c=").append(db.field_v).append("&u=");
             if (mf.field_f == null) {
               stackIn_13_1 = null;
@@ -80,7 +80,7 @@ final class en extends km {
               stackIn_13_2 = null;
               stackIn_13_5 = mf.field_f;
             }
-            var4 = ((pd) (Object) stackIn_12_0).a(new java.net.URL(stackIn_12_3, ((StringBuilder) (Object) stackIn_12_4).append(stackIn_13_5).append("&v1=").append(pd.field_q).append("&v2=").append(pd.field_k).append("&e=").append(var10).toString()), true);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_12_0).a(new java.net.URL(stackIn_12_3, ((StringBuilder) (Object) stackIn_12_4).append(stackIn_13_5).append("&v1=").append(PlatformTaskDispatcher.field_q).append("&v2=").append(PlatformTaskDispatcher.field_k).append("&e=").append(var10).toString()), true);
             while (0 == var4.field_a) {
               mm.a(-14, 1L);
             }
@@ -100,11 +100,11 @@ final class en extends km {
         }
     }
 
-    private en(long param0, km param1, km param2, String param3) {
-        super(param0, (km) null);
+    private en(long param0, UiWidget param1, UiWidget param2, String param3) {
+        super(param0, (UiWidget) null);
         try {
-          this.field_Ib = new km(0L, param1);
-          this.field_Gb = new km(0L, param2);
+          this.field_Ib = new UiWidget(0L, param1);
+          this.field_Gb = new UiWidget(0L, param2);
           this.field_Gb.field_V = param3;
           this.a(0, this.field_Ib);
           this.a(0, this.field_Gb);
@@ -175,8 +175,8 @@ final class en extends km {
         this(param0, param1.field_Ib, param1.field_Gb, param2);
     }
 
-    en(long param0, mg param1, mg param2, int param3, km param4, String param5) {
-        this(param0, (km) null, param4, param5);
+    en(long param0, Sprite param1, Sprite param2, int param3, UiWidget param4, String param5) {
+        this(param0, (UiWidget) null, param4, param5);
         try {
           this.field_Ib.field_D = param3;
           this.field_Ib.field_jb = param1;

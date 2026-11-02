@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends km {
+final class oj extends UiWidget {
     private char[] field_Jb;
     private int field_Lb;
     private int field_Ob;
@@ -11,7 +11,7 @@ final class oj extends km {
     private int field_Nb;
     static java.awt.Image field_Gb;
     private static long[] field_Mb;
-    static eh field_Fb;
+    static Js5Archive field_Fb;
     static int field_Vb;
     static int field_Kb;
     private int field_Pb;
@@ -21,7 +21,7 @@ final class oj extends km {
     private hk[] field_Ib;
     private int field_Rb;
     static int field_Yb;
-    static el field_Ub;
+    static BufferedSocket field_Ub;
     private int field_Tb;
 
     final boolean i(int param0) {
@@ -45,7 +45,7 @@ final class oj extends km {
         return var2 != 0;
     }
 
-    oj(long param0, km param1, km param2, km param3, oj[] param4, int[] param5, String[] param6, char[] param7) {
+    oj(long param0, UiWidget param1, UiWidget param2, UiWidget param3, oj[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -94,7 +94,7 @@ final class oj extends km {
               -1 == this.field_Sb[var13]) {
               var14 = da.field_h;
             }
-            this.field_Ib[var13] = new hk(0L, param2, (km) null, param3, (mg) (var14), param6[var13]);
+            this.field_Ib[var13] = new hk(0L, param2, (UiWidget) null, param3, (Sprite) (var14), param6[var13]);
             this.a(0, this.field_Ib[var13]);
             var15 = var17.a(param6[var13]);
             if (var15 > this.field_Eb) {
@@ -324,14 +324,14 @@ final class oj extends km {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          wf.a(param10, param17, 0, param14);
+          RasterBuffer.a(param10, param17, 0, param14);
           vb.a(param0, (byte) 90, param16, param20, param18);
           bj.a(param8, 23, param15);
           if (param12 != -29) {
             field_Yb = 64;
           }
           sh.a((byte) -40, param9, param19, param11, param2, param5);
-          ld.a(param12 ^ 28, param3, param6, param1);
+          GameKeyHandler.a(param12 ^ 28, param3, param6, param1);
           qd.a(param4, (byte) 41, param7, param13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -536,14 +536,14 @@ final class oj extends km {
               em.field_c = 80.0f;
             }
           }
-          var1 = (pm) (gd.field_n.a((byte) -122));
+          var1 = (pm) (ImageProducerRasterBuffer.field_n.a((byte) -122));
           while (var1 != null) {
             fieldTemp$3 = var1.field_r - 1;
             var1.field_r = var1.field_r - 1;
             if (0 == fieldTemp$3) {
               var1.a(false);
             }
-            var1 = (pm) (gd.field_n.a(16213));
+            var1 = (pm) (ImageProducerRasterBuffer.field_n.a(16213));
           }
           var2 = (ij) (sk.field_a.a((byte) -69));
           while (var2 != null) {

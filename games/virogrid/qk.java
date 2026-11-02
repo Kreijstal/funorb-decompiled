@@ -21,7 +21,7 @@ final class qk {
     }
 
     final static void a(boolean param0, int param1, byte param2, boolean param3, boolean param4) {
-        km stackIn_18_0 = null;
+        UiWidget stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
@@ -35,11 +35,11 @@ final class qk {
         boolean stackIn_136_0 = false;
         boolean stackIn_152_0 = false;
         int stackIn_158_0 = 0;
-        km stackIn_178_0 = null;
+        UiWidget stackIn_178_0 = null;
         boolean stackIn_179_1 = false;
-        km stackIn_185_0 = null;
+        UiWidget stackIn_185_0 = null;
         boolean stackIn_186_1 = false;
-        km stackIn_190_0 = null;
+        UiWidget stackIn_190_0 = null;
         boolean stackIn_191_1 = false;
         Object stackIn_192_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -47,9 +47,9 @@ final class qk {
         boolean stackOut_135_0;
         boolean stackOut_151_0;
         RuntimeException var5 = null;
-        km var6 = null;
-        km var7 = null;
-        km var8 = null;
+        UiWidget var6 = null;
+        UiWidget var7 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         String var9_ref_String = null;
         String var10_ref_String = null;
@@ -71,12 +71,12 @@ final class qk {
         lk var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        km var22 = null;
+        UiWidget var22 = null;
         int[] var23 = null;
         String var24 = null;
         String var25 = null;
         int[] var26 = null;
-        km var27 = null;
+        UiWidget var27 = null;
         int stackIn_54_0Lifetime1;
         int stackIn_54_1Lifetime1;
         int stackIn_63_0Lifetime1;
@@ -124,7 +124,7 @@ final class qk {
                 } else {
                   var10_ref_String = w.field_M;
                 }
-                if ((rl.field_y & 16) == 0 &&
+                if ((SpriteState.field_y & 16) == 0 &&
                   !ad.field_h) {
                   ed.field_c.field_vb = bd.field_b.field_x;
                 }
@@ -472,16 +472,16 @@ final class qk {
           if (decompiledFrameCompleted1) {
             stackIn_178_0 = ao.field_Eb;
             stackIn_179_1 = (param3) && (!param0) && (!ad.field_h);
-            ((km) (Object) stackIn_178_0).a(stackIn_179_1, (byte) 94);
+            ((UiWidget) (Object) stackIn_178_0).a(stackIn_179_1, (byte) 94);
             if (param2 < 1) {
               return;
             }
             stackIn_185_0 = dm.field_r;
             stackIn_186_1 = (param3) && (!param0) && (!ad.field_h);
-            ((km) (Object) stackIn_185_0).a(stackIn_186_1, (byte) 123);
+            ((UiWidget) (Object) stackIn_185_0).a(stackIn_186_1, (byte) 123);
             stackIn_190_0 = pm.field_n;
             stackIn_191_1 = (param3) && (!param0) && (ad.field_h);
-            ((km) (Object) stackIn_190_0).a(stackIn_191_1, (byte) 122);
+            ((UiWidget) (Object) stackIn_190_0).a(stackIn_191_1, (byte) 122);
             he.field_pc.field_c.g(0);
             stackIn_192_0 = null;
           }
@@ -566,27 +566,27 @@ final class qk {
 
     final static void a(boolean param0) {
         RuntimeException runtimeException = null;
-        mg var1 = null;
-        mg var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
-          var1 = new mg(540, 140);
+          var1 = new Sprite(540, 140);
           kb.a(var1, 16865);
           if (param0) {
             qk.a(true);
           }
           fk.a();
-          df.c();
+          Rasterizer.c();
           kf.field_e = 0;
           cm.a(11);
           var2 = var1.d();
           var3 = 0;
           while (var3 < 15) {
             var2.d(-2, -2, 16777215);
-            df.d(4, 4, 0, 0, 540, 140);
+            Rasterizer.d(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;
@@ -646,7 +646,7 @@ final class qk {
               q.a("document.cookie=\"" + var5 + "\"", -17107, param1);
             } catch (Throwable throwable) {
             }
-            wf.a(param1, 49);
+            RasterBuffer.a(param1, 49);
           } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) ((Object) runtimeException), "qk.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }

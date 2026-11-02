@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class um extends km {
-    km field_Jb;
+final class um extends UiWidget {
+    UiWidget field_Jb;
     static String field_Ib;
-    km field_Eb;
+    UiWidget field_Eb;
     static volatile int field_Fb;
     static int field_Gb;
     qm field_Hb;
@@ -100,10 +100,10 @@ final class um extends km {
         }
     }
 
-    um(long param0, km param1, km param2, qm param3) {
-        super(param0, (km) null);
+    um(long param0, UiWidget param1, UiWidget param2, qm param3) {
+        super(param0, (UiWidget) null);
         try {
-          this.field_Eb = new km(0L, param2);
+          this.field_Eb = new UiWidget(0L, param2);
           this.field_Hb = new qm(0L, param3);
           this.a(0, this.field_Eb);
           this.a(0, this.field_Hb);
@@ -120,7 +120,7 @@ final class um extends km {
         int var2 = 58 / ((param0 + 85) / 39);
         rm[] var1 = new rm[rj.field_h];
         for (var3 = 0; var3 < rj.field_h; var3++) {
-          var1[var3] = new rm(oj.field_Kb, se.field_d, el.field_w[var3], mb.field_bb[var3], db.field_k[var3], gb.field_F[var3], lj.field_j[var3], k.field_c);
+          var1[var3] = new rm(oj.field_Kb, se.field_d, BufferedSocket.field_w[var3], mb.field_bb[var3], db.field_k[var3], gb.field_F[var3], lj.field_j[var3], k.field_c);
         }
         pe.b((byte) -28);
         return var1;

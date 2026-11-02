@@ -8,7 +8,7 @@ final class lm implements Runnable {
     volatile boolean field_f;
     volatile boolean field_d;
     volatile ua[] field_h;
-    pd field_b;
+    PlatformTaskDispatcher field_b;
     static on field_e;
     static int field_j;
     static String field_k;
@@ -30,7 +30,7 @@ final class lm implements Runnable {
         if (var1 == null) {
           var1 = new qg();
         }
-        var1.a(df.field_d, df.field_i, df.field_h, (byte) -45, df.field_e, df.field_f, df.field_g, df.field_k);
+        var1.a(Rasterizer.field_d, Rasterizer.field_i, Rasterizer.field_h, (byte) -45, Rasterizer.field_e, Rasterizer.field_f, Rasterizer.field_g, Rasterizer.field_k);
         if (param0 != 0) {
           return;
         }
@@ -157,40 +157,40 @@ final class lm implements Runnable {
         }
     }
 
-    final static mg[] a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
-        mg var13 = null;
-        mg var14 = null;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
+        Sprite var13 = null;
+        Sprite var14 = null;
         int var6 = 51 / ((34 - param1) / 32);
-        int[] var18 = df.field_d;
-        int var8 = df.field_e;
-        int var9 = df.field_f;
-        mg var10 = new mg(16, param2);
+        int[] var18 = Rasterizer.field_d;
+        int var8 = Rasterizer.field_e;
+        int var9 = Rasterizer.field_f;
+        Sprite var10 = new Sprite(16, param2);
         var10.b();
-        df.a(0, 0, 16, param2, param3, param0);
+        Rasterizer.a(0, 0, 16, param2, param3, param0);
         Object var11 = null;
         if (param5) {
           var13 = var10.d();
           var11 = var13;
           var13.b();
-          df.b(0, 0, 5, 0);
-          df.b(0, 1, 3, 0);
-          df.b(0, 2, 2, 0);
-          df.b(0, 3, 1, 0);
-          df.b(0, 4, 1, 0);
+          Rasterizer.b(0, 0, 5, 0);
+          Rasterizer.b(0, 1, 3, 0);
+          Rasterizer.b(0, 2, 2, 0);
+          Rasterizer.b(0, 3, 1, 0);
+          Rasterizer.b(0, 4, 1, 0);
         }
         Object var12 = null;
         if (param4) {
           var14 = var10.d();
           var12 = var14;
           var14.b();
-          df.b(11, 0, 5, 0);
-          df.b(13, 1, 3, 0);
-          df.b(14, 2, 2, 0);
-          df.b(15, 3, 1, 0);
-          df.b(15, 4, 1, 0);
+          Rasterizer.b(11, 0, 5, 0);
+          Rasterizer.b(13, 1, 3, 0);
+          Rasterizer.b(14, 2, 2, 0);
+          Rasterizer.b(15, 3, 1, 0);
+          Rasterizer.b(15, 4, 1, 0);
         }
-        df.a(var18, var8, var9);
-        return new mg[]{null, null, null, (mg) (var11), var10, (mg) (var12), null, null, null};
+        Rasterizer.a(var18, var8, var9);
+        return new Sprite[]{null, null, null, (Sprite) (var11), var10, (Sprite) (var12), null, null, null};
     }
 
     static long a(long param0, long param1) {

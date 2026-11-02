@@ -4,7 +4,7 @@
 final class qi {
     static sc field_b;
     static int field_d;
-    static km field_e;
+    static UiWidget field_e;
     static int field_f;
     static String field_a;
     static wk field_c;
@@ -75,16 +75,16 @@ final class qi {
                 }
                 var6 = stackIn_24_0;
               }
-              if (de.field_rb.length <= eh.field_j.length) {
-                stackIn_28_0 = eh.field_j.length;
+              if (de.field_rb.length <= Js5Archive.field_j.length) {
+                stackIn_28_0 = Js5Archive.field_j.length;
               } else {
                 stackIn_28_0 = de.field_rb.length;
               }
               var8 = stackIn_28_0;
               if (var3 >= 7 + var7 &&
                 var3 < var8 + (7 + var7)) {
-                if (-7 + (var3 - var7) < eh.field_j.length) {
-                  stackIn_33_0 = eh.field_j[var3 - 7 - var7];
+                if (-7 + (var3 - var7) < Js5Archive.field_j.length) {
+                  stackIn_33_0 = Js5Archive.field_j[var3 - 7 - var7];
                 } else {
                   stackIn_33_0 = "";
                 }
@@ -107,7 +107,7 @@ final class qi {
               var9 = stackIn_44_0;
               var1_int = var1_int + oh.field_d;
               if (var9 != null) {
-                var9.a(var8Lifetime1 - eh.field_d, (bj.field_j << 1) + mi.field_c, false, var7Lifetime1 + (eh.field_d << 1), var1_int);
+                var9.a(var8Lifetime1 - Js5Archive.field_d, (bj.field_j << 1) + mi.field_c, false, var7Lifetime1 + (Js5Archive.field_d << 1), var1_int);
               }
               var1_int = var1_int + bj.field_j;
             }

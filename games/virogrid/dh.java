@@ -5,7 +5,7 @@ final class dh extends IntrusiveNode {
     static String field_l;
     static int field_r;
     int field_h;
-    static km field_k;
+    static UiWidget field_k;
     int field_g;
     int field_u;
     int field_m;

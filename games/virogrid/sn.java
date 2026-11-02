@@ -28,8 +28,8 @@ final class sn extends qe {
           while (nd.b((byte) -123)) {
             tm.field_l.a(um.field_Gb, nm.field_d, -98);
           }
-          if (el.field_r != -1) {
-            var1_int = el.field_r;
+          if (BufferedSocket.field_r != -1) {
+            var1_int = BufferedSocket.field_r;
             kf.a(-1, -1);
             stackIn_8_0 = var1_int;
             return stackIn_8_0;
@@ -38,7 +38,7 @@ final class sn extends qe {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (ao.field_Kb == cb.field_c) {
+          if (ao.field_Kb == MouseWheelInput.field_c) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -108,11 +108,11 @@ final class sn extends qe {
         }
     }
 
-    final static mg a(eh param0, String param1, String param2, boolean param3) {
+    final static Sprite a(Js5Archive param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        mg stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -209,7 +209,7 @@ final class sn extends qe {
           }
           if (param0 != -26358) {
             var6 = (String) null;
-            sn.a((eh) null, (String) null, (String) null, false);
+            sn.a((Js5Archive) null, (String) null, (String) null, false);
           }
           if (var7.length() <= 0) {
             stackIn_21_0 = ne.field_f;
@@ -219,7 +219,7 @@ final class sn extends qe {
             stackIn_25_0 = ec.field_A;
             return stackIn_25_0;
           }
-          if (me.a(var5, var7, true)) {
+          if (MouseInputHandler.a(var5, var7, true)) {
             stackIn_28_0 = kn.field_G;
             return stackIn_28_0;
           }

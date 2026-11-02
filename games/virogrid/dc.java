@@ -10,7 +10,7 @@ abstract class dc extends gg {
     private int field_ab;
     static int field_O;
     private int field_T;
-    static km field_R;
+    static UiWidget field_R;
     private int field_U;
     private int field_S;
     static boolean[] field_Y;
@@ -137,7 +137,7 @@ abstract class dc extends gg {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Virogrid.field_F ? 1 : 0;
-        df.a(6 + param2, param0 + 35, this.field_g - 12, this.field_m - 40, 2105376, 0);
+        Rasterizer.a(6 + param2, param0 + 35, this.field_g - 12, this.field_m - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -147,8 +147,8 @@ abstract class dc extends gg {
           this.a((byte) -48);
         }
         while (var4 > var7) {
-          if (var8 >= df.field_g &&
-            var8 < df.field_h) {
+          if (var8 >= Rasterizer.field_g &&
+            var8 < Rasterizer.field_h) {
             var9 = var7 * (-var5 + var6) / var4 + var5;
             var10 = 0;
             var11 = this.field_g;
@@ -161,7 +161,7 @@ abstract class dc extends gg {
                   }
                   var13 = var9 * (-var12 + 462) / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  df.field_d[param2 + df.field_e * var8 + var10] = var13;
+                  Rasterizer.field_d[param2 + Rasterizer.field_e * var8 + var10] = var13;
                 }
                 var10++;
               }
@@ -175,7 +175,7 @@ abstract class dc extends gg {
                   if (var14 >= 420) {
                     var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    df.field_d[var8 * df.field_e + param2 + var11] = var15;
+                    Rasterizer.field_d[var8 * Rasterizer.field_e + param2 + var11] = var15;
                   } else {
                     var12Lifetime1 = var11 + 1;
                   }
@@ -187,7 +187,7 @@ abstract class dc extends gg {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            df.b(param2 + var10, var8, -var10 + var11, var9);
+            Rasterizer.b(param2 + var10, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -200,8 +200,8 @@ abstract class dc extends gg {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          df.b(param2, var8Lifetime1, 6, var9Lifetime1);
-          df.b(this.field_g + (param2 - 6), var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer.b(param2, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer.b(this.field_g + (param2 - 6), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
@@ -216,8 +216,8 @@ abstract class dc extends gg {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          df.b(param2, var8Lifetime2, 6, var9Lifetime2);
-          df.b(this.field_g + param2 - 6, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer.b(param2, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer.b(this.field_g + param2 - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

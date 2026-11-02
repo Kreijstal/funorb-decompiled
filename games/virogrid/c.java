@@ -7,7 +7,7 @@ final class c {
     static int field_a;
     static String field_c;
     static String field_f;
-    static mg field_d;
+    static Sprite field_d;
 
     final static String a(CharSequence param0, boolean param1) {
         int var6 = 0;
@@ -155,7 +155,7 @@ final class c {
         field_b = null;
         field_f = null;
         if (param0) {
-          field_d = (mg) null;
+          field_d = (Sprite) null;
         }
         field_e = null;
     }

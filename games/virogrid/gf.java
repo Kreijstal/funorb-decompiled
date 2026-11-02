@@ -687,11 +687,11 @@ abstract class gf extends fi implements ja {
             }
             var21 = stackIn_39_0;
             var22 = en.field_Hb[var15Lifetime1];
-            var23 = ld.field_h[var15Lifetime1];
+            var23 = GameKeyHandler.field_h[var15Lifetime1];
             var24 = en.field_Hb[var16];
-            var25 = ld.field_h[var16];
+            var25 = GameKeyHandler.field_h[var16];
             var26 = en.field_Hb[var17];
-            var27 = ld.field_h[var17];
+            var27 = GameKeyHandler.field_h[var17];
             if (var18 == var19 &&
               var19 == var20) {
               var28 = var55[var18];

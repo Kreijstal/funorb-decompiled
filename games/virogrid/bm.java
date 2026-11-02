@@ -71,7 +71,7 @@ final class bm extends ie {
         }
     }
 
-    final static mg[] a(int param0, int param1, int param2, byte param3) {
+    final static Sprite[] a(int param0, int param1, int param2, byte param3) {
         if (param3 < -68) {
           return he.b(param2, 1, param1, (byte) 89, param0);
         }

@@ -11,17 +11,17 @@ final class vj {
           field_a = null;
           return;
         }
-        eh var2 = (eh) null;
-        vj.a((eh) null, (eh) null, true, false);
+        Js5Archive var2 = (Js5Archive) null;
+        vj.a((Js5Archive) null, (Js5Archive) null, true, false);
         field_a = null;
     }
 
-    final static void a(eh param0, eh param1, boolean param2, boolean param3) {
+    final static void a(Js5Archive param0, Js5Archive param1, boolean param2, boolean param3) {
         try {
           kb.a(pl.field_a, IntrusiveDequeCursor.field_e, ub.field_z, ti.field_h, ke.field_u, da.field_n, IntrusiveDeque.field_a, wn.field_m, param2, -112, em.field_d, nb.field_r);
           j.field_k = ke.a(32, param1, "lobby", "chatfilter");
           hn.field_i[1] = ng.field_Y;
-          hn.field_i[0] = eh.field_g;
+          hn.field_i[0] = Js5Archive.field_g;
           hn.field_i[2] = jk.field_f;
           kb.a(db.field_h, false, param0);
           if (!param3) {

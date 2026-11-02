@@ -8,10 +8,10 @@ final class sf extends fd implements ta {
     private int[] field_N;
     private int field_H;
     static String field_K;
-    static eh field_O;
+    static Js5Archive field_O;
     static int field_I;
     static int field_F;
-    static mg[][] field_J;
+    static Sprite[][] field_J;
     private sh field_G;
     private e field_L;
 
@@ -178,9 +178,9 @@ final class sf extends fd implements ta {
         field_K = null;
         field_O = null;
         if (param0 <= 52) {
-          field_J = (mg[][]) null;
+          field_J = (Sprite[][]) null;
         }
-        field_J = (mg[][]) null;
+        field_J = (Sprite[][]) null;
     }
 
     private final void a(int param0, int param1) {

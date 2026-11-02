@@ -43,13 +43,13 @@ final class rj implements ol {
           var13 = (gb) (stackIn_6_0);
           if (var13 == null) {
           }
-          df.b(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_k);
+          Rasterizer.b(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_k);
           var7 = param1.field_g - var13.field_J * 2;
           var8 = param1.field_l + (param0 + var13.field_J);
           var9 = var13.field_K + param1.field_u + param3;
-          df.a(var8, var9, var8 + var7, var9, this.field_a);
+          Rasterizer.a(var8, var9, var8 + var7, var9, this.field_a);
           for (var10 = -1 + var13.d((byte) -108); var10 >= 0; var10--) {
-            df.c(var7 * var13.a(-1, var10) / var13.a(2147483647) + var8, var9, this.field_b, this.field_e);
+            Rasterizer.c(var7 * var13.a(-1, var10) / var13.a(2147483647) + var8, var9, this.field_b, this.field_e);
           }
           if (this.field_g == null) {
             return;
@@ -136,25 +136,25 @@ final class rj implements ol {
         }
         if (param1 < param5) {
           if (param7 > param5) {
-            li.a(param1, param6, param5, df.field_d, param7, param0, param2, param3, (byte) -105);
+            li.a(param1, param6, param5, Rasterizer.field_d, param7, param0, param2, param3, (byte) -105);
             return;
           }
           if (param7 > param1) {
-            li.a(param1, param6, param7, df.field_d, param5, param3, param2, param0, (byte) 112);
+            li.a(param1, param6, param7, Rasterizer.field_d, param5, param3, param2, param0, (byte) 112);
             return;
           }
-          li.a(param7, param3, param1, df.field_d, param5, param6, param2, param0, (byte) -58);
+          li.a(param7, param3, param1, Rasterizer.field_d, param5, param6, param2, param0, (byte) -58);
           return;
         }
         if (param7 > param1) {
-          li.a(param5, param0, param1, df.field_d, param7, param6, param2, param3, (byte) 75);
+          li.a(param5, param0, param1, Rasterizer.field_d, param7, param6, param2, param3, (byte) 75);
           return;
         }
         if (param5 >= param7) {
-          li.a(param7, param3, param5, df.field_d, param1, param0, param2, param6, (byte) -59);
+          li.a(param7, param3, param5, Rasterizer.field_d, param1, param0, param2, param6, (byte) -59);
           return;
         }
-        li.a(param5, param0, param7, df.field_d, param1, param3, param2, param6, (byte) -68);
+        li.a(param5, param0, param7, Rasterizer.field_d, param1, param3, param2, param6, (byte) -68);
     }
 
     static {

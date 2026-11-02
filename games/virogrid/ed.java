@@ -5,8 +5,8 @@ final class ed {
     static String field_f;
     static int field_b;
     static String field_e;
-    static mg field_d;
-    static km field_c;
+    static Sprite field_d;
+    static UiWidget field_c;
     static int field_a;
 
     public static void a(byte param0) {

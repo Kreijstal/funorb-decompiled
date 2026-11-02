@@ -6,7 +6,7 @@ abstract class dm extends DualLinkNode {
     static int[] field_w;
     static wc field_v;
     static int field_u;
-    static km field_r;
+    static UiWidget field_r;
     static String field_s;
     static int[] field_x;
     static String field_q;

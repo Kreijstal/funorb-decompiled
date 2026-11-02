@@ -6,7 +6,7 @@ final class ln {
     static String field_c;
     static String field_a;
     private IntrusiveNode field_e;
-    static km[] field_i;
+    static UiWidget[] field_i;
     private IntrusiveNode[] field_b;
     private int field_h;
     static int field_g;
@@ -15,23 +15,23 @@ final class ln {
     final static boolean a(int param0, byte param1, int param2, int param3) {
         if (param1 != 104) {
           PacketBuffer var5 = (PacketBuffer) null;
-          ln.a(68, -61, (pd) null, (PacketBuffer) null);
+          ln.a(68, -61, (PlatformTaskDispatcher) null, (PacketBuffer) null);
         }
         if (null != md.field_e &&
           md.field_e.b(param1 ^ 21)) {
           ch.a(true);
           return true;
         }
-        if (km.field_yb != null &&
-          km.field_yb.d(false)) {
-          km.field_yb = null;
+        if (UiWidget.field_yb != null &&
+          UiWidget.field_yb.d(false)) {
+          UiWidget.field_yb = null;
           ch.a(true);
           return true;
         }
         if (s.b((byte) -109)) {
           return true;
         }
-        if (cb.a(-13079, param2, param3, param0)) {
+        if (MouseWheelInput.a(-13079, param2, param3, param0)) {
           return true;
         }
         return false;
@@ -45,7 +45,7 @@ final class ln {
         return this.a(110);
     }
 
-    final static boolean a(byte param0, eh param1, eh param2, eh param3) {
+    final static boolean a(byte param0, Js5Archive param1, Js5Archive param2, Js5Archive param3) {
         RuntimeException var4 = null;
         cj var5 = null;
         RuntimeException stackIn_19_0 = null;
@@ -144,8 +144,8 @@ final class ln {
             hf.field_D[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < qh.field_K; var2_intLifetime1++) {
-            if (param0.field_n == el.field_s[var2_intLifetime1].field_n) {
-              dupTemp$3 = el.field_s[var2_intLifetime1].b(-6761);
+            if (param0.field_n == BufferedSocket.field_s[var2_intLifetime1].field_n) {
+              dupTemp$3 = BufferedSocket.field_s[var2_intLifetime1].b(-6761);
               hf.field_D[dupTemp$3] = hf.field_D[dupTemp$3] + 1;
             }
           }
@@ -154,8 +154,8 @@ final class ln {
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < qh.field_K; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param0.field_n == el.field_s[var3].field_n) {
-              var4 = el.field_s[var3].b(-6761);
+            if (param0.field_n == BufferedSocket.field_s[var3].field_n) {
+              var4 = BufferedSocket.field_s[var3].b(-6761);
               if (nb.field_s < hf.field_D[var4]) {
                 hf.field_D[var4] = hf.field_D[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -164,7 +164,7 @@ final class ln {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              el.field_s[incrementValue$2] = el.field_s[var3];
+              BufferedSocket.field_s[incrementValue$2] = BufferedSocket.field_s[var3];
             }
           }
           if (param1 <= 88) {
@@ -173,7 +173,7 @@ final class ln {
           qh.field_K = var2_intLifetime2;
           fieldTemp$1 = qh.field_K;
           qh.field_K = qh.field_K + 1;
-          el.field_s[fieldTemp$1] = param0;
+          BufferedSocket.field_s[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,7 +189,7 @@ final class ln {
         }
     }
 
-    final static void a(int param0, int param1, pd param2, PacketBuffer param3) {
+    final static void a(int param0, int param1, PlatformTaskDispatcher param2, PacketBuffer param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -384,7 +384,7 @@ final class ln {
           param0.next = var5.next;
           if (param1 < 0) {
             PacketBuffer var6 = (PacketBuffer) null;
-            ln.a(-57, -4, (pd) null, (PacketBuffer) null);
+            ln.a(-57, -4, (PlatformTaskDispatcher) null, (PacketBuffer) null);
           }
           param0.next.previous = param0;
           param0.key = param2;

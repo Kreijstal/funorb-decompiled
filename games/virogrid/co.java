@@ -130,7 +130,7 @@ final class co {
             }
             var4_int = stackIn_12_0;
           } else {
-            stackIn_5_0 = (ld.field_c) ? 0 : 1;
+            stackIn_5_0 = (GameKeyHandler.field_c) ? 0 : 1;
             var4_int = stackIn_5_0;
           }
           var5 = 0;
@@ -388,7 +388,7 @@ final class co {
               if (var16Lifetime1 == 0 &&
                 0 <= var9 &&
                 null != nb.field_q && (!param1 ||
-                !ld.field_c)) {
+                !GameKeyHandler.field_c)) {
                 vi.field_l = false;
                 ud.field_b = false;
                 if (ub.field_D == null) {
@@ -493,12 +493,12 @@ final class co {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = el.field_a;
+                      var22 = BufferedSocket.field_a;
                       if (var15 > 0 &&
-                        null != me.field_a &&
-                        var15 <= me.field_a.length &&
-                        null != me.field_a[var15 - 1]) {
-                        var22 = me.field_a[var15 - 1][0];
+                        null != MouseInputHandler.field_a &&
+                        var15 <= MouseInputHandler.field_a.length &&
+                        null != MouseInputHandler.field_a[var15 - 1]) {
+                        var22 = MouseInputHandler.field_a[var15 - 1][0];
                       }
                       if (var21 == null) {
                         var21 = var22;

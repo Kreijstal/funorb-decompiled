@@ -12,7 +12,7 @@ final class wn extends IntrusiveNode {
     int field_o;
     int field_u;
     rc field_E;
-    static km field_m;
+    static UiWidget field_m;
     static String field_n;
     int field_s;
     int field_F;
@@ -26,7 +26,7 @@ final class wn extends IntrusiveNode {
     int field_g;
     int field_h;
     qd field_t;
-    static eh field_i;
+    static Js5Archive field_i;
     int field_r;
     static int[] field_j;
 
@@ -74,7 +74,7 @@ final class wn extends IntrusiveNode {
         ji.a((byte) -51, af.field_a, 6);
         if (param0 <= 95) {
           field_n = (String) null;
-          ji.a((byte) -82, el.field_h, 8);
+          ji.a((byte) -82, BufferedSocket.field_h, 8);
           if (!pg.a((byte) -126)) {
             ji.a((byte) -87, kb.field_d, 2);
             ji.a((byte) -74, sb.field_c, 3);
@@ -86,7 +86,7 @@ final class wn extends IntrusiveNode {
           ag.field_f[8] = ag.field_f[8] + 32;
           return;
         }
-        ji.a((byte) -82, el.field_h, 8);
+        ji.a((byte) -82, BufferedSocket.field_h, 8);
         if (pg.a((byte) -126)) {
           ag.field_f[8] = ag.field_f[8] + 32;
           return;

@@ -5,7 +5,7 @@ final class CellFlip extends IntrusiveNode {
     int field_h;
     boolean field_q;
     int phase;
-    static km field_o;
+    static UiWidget field_o;
     int field_k;
     static int[] field_p;
     static String field_m;

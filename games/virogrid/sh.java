@@ -44,20 +44,20 @@ class sh extends mb implements ta {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (cb.field_c == ao.field_Kb) {
+          if (MouseWheelInput.field_c == ao.field_Kb) {
             return null;
           }
           if (param0 != 648093968) {
             stackIn_5_0 = (ck) null;
             return stackIn_5_0;
           }
-          if (rg.field_d == cb.field_c &&
+          if (rg.field_d == MouseWheelInput.field_c &&
             param1.equals(ve.field_u)) {
-            cb.field_c = kh.field_e;
+            MouseWheelInput.field_c = kh.field_e;
             stackIn_12_0 = de.field_ob;
             return stackIn_12_0;
           }
-          cb.field_c = ao.field_Kb;
+          MouseWheelInput.field_c = ao.field_Kb;
           de.field_ob = null;
           ve.field_u = param1;
           stackIn_10_0 = null;
@@ -88,13 +88,13 @@ class sh extends mb implements ta {
     }
 
     final static int b(int param0, int param1, int param2, int param3) {
-        if (!(param2 + param3 > df.field_e)) {
+        if (!(param2 + param3 > Rasterizer.field_e)) {
           return param2;
         }
         if (param2 + (param1 - param3) >= param0) {
           return param1 + param2 - param3;
         }
-        return df.field_e - param3;
+        return Rasterizer.field_e - param3;
     }
 
     final boolean a(fi param0, char param1, int param2, int param3) {
@@ -201,7 +201,7 @@ class sh extends mb implements ta {
           if (param0 != -40) {
             sh.g(true);
           }
-          eh.field_d = param5;
+          Js5Archive.field_d = param5;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "sh.WB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -400,7 +400,7 @@ class sh extends mb implements ta {
                   var22 = var22 + var24;
                   var18 = var18 + var20;
                   var25 = var25 + var27;
-                  var36Lifetime2 = var36Lifetime2 + df.field_e;
+                  var36Lifetime2 = var36Lifetime2 + Rasterizer.field_e;
                   var21 = var21 + var23;
                   var17_int = var17_int + var19;
                 }
@@ -558,7 +558,7 @@ class sh extends mb implements ta {
               var17_int = var17_int + var19;
               var25 = var25 + var27;
               var22 = var22 + var24;
-              var35Lifetime1 = var35Lifetime1 + df.field_e;
+              var35Lifetime1 = var35Lifetime1 + Rasterizer.field_e;
             }
             return;
           }

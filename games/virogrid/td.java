@@ -9,8 +9,8 @@ final class td {
     static ml[] field_d;
     static un field_b;
     static int field_h;
-    static mg[] field_g;
-    static eh field_a;
+    static Sprite[] field_g;
+    static Js5Archive field_a;
     static int field_f;
 
     final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
@@ -84,11 +84,11 @@ final class td {
         field_a = null;
     }
 
-    final static mg[] a(int param0, int param1, int param2, eh param3) {
+    final static Sprite[] a(int param0, int param1, int param2, Js5Archive param3) {
         RuntimeException var4 = null;
-        eh var5 = null;
+        Js5Archive var5 = null;
         Object stackIn_2_0 = null;
-        mg[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -96,11 +96,11 @@ final class td {
         try {
           if (!hn.a(param3, param2, param0, (byte) 109)) {
             stackIn_2_0 = null;
-            return (mg[]) (stackIn_2_0);
+            return (Sprite[]) (stackIn_2_0);
           }
           if (param1 != 6887) {
-            var5 = (eh) null;
-            td.a(37, -9, -75, (eh) null);
+            var5 = (Js5Archive) null;
+            td.a(37, -9, -75, (Js5Archive) null);
           }
           stackIn_6_0 = kd.c(true);
           return stackIn_6_0;

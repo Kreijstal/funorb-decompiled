@@ -67,7 +67,7 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_c = null;
     }
 
-    final void a(int param0, pd param1) {
+    final void a(int param0, PlatformTaskDispatcher param1) {
         try {
           ah.a((byte) 31, param1, this.field_e);
           if (param0 != 109) {

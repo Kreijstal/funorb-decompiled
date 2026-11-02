@@ -573,7 +573,7 @@ final class gj extends IntrusiveNode {
         return new ml(this.field_K, var1, this.field_C, this.field_o, this.field_t);
     }
 
-    final static gj a(eh param0, String param1, String param2) {
+    final static gj a(Js5Archive param0, String param1, String param2) {
         try {
           gj var4_ref = null;
           if (!gj.a(param0)) {
@@ -692,7 +692,7 @@ final class gj extends IntrusiveNode {
         }
     }
 
-    private final static boolean a(eh param0) {
+    private final static boolean a(Js5Archive param0) {
         byte[] var1 = null;
         if (!field_G) {
           var1 = param0.a(0, 0, 0);
@@ -710,7 +710,7 @@ final class gj extends IntrusiveNode {
         field_z = 0;
     }
 
-    final static gj a(eh param0, int param1, int param2) {
+    final static gj a(Js5Archive param0, int param1, int param2) {
         try {
           gj var4_ref = null;
           if (!gj.a(param0)) {

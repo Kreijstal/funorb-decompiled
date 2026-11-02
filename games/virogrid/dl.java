@@ -13,13 +13,13 @@ final class dl {
           field_d = null;
           return;
         }
-        km var2 = (km) null;
-        dl.a((km) null, (byte) -42, (km) null);
+        UiWidget var2 = (UiWidget) null;
+        dl.a((UiWidget) null, (byte) -42, (UiWidget) null);
         field_a = null;
         field_d = null;
     }
 
-    final static void a(km param0, byte param1, km param2) {
+    final static void a(UiWidget param0, byte param1, UiWidget param2) {
         RuntimeException var3 = null;
         int[] var4 = null;
         RuntimeException stackIn_16_0 = null;
@@ -48,7 +48,7 @@ final class dl {
             return;
           }
           var4 = (int[]) null;
-          dl.a((km) null, (km) null, -53, (km) null, (int[]) null);
+          dl.a((UiWidget) null, (UiWidget) null, -53, (UiWidget) null, (int[]) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,7 +97,7 @@ final class dl {
         return true;
     }
 
-    final static oj a(km param0, km param1, int param2, km param3, int[] param4) {
+    final static oj a(UiWidget param0, UiWidget param1, int param2, UiWidget param3, int[] param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;

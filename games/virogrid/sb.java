@@ -9,10 +9,10 @@ final class sb implements Runnable {
     static int[] field_b;
     private boolean field_f;
     private Thread field_g;
-    static cb field_d;
+    static MouseWheelInput field_d;
     int field_e;
 
-    final static mg[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = -56 / ((param1 + 9) / 63);
         return kh.a(1, param4, (byte) -105, param3, param2, 3, 1, param0, 1);
     }
@@ -42,7 +42,7 @@ final class sb implements Runnable {
               var7 = var8;
               var7Lifetime1 = var8;
               if (param4 != -2) {
-                field_d = (cb) null;
+                field_d = (MouseWheelInput) null;
               }
               var9 = param0 + "=" + param1 + "; version=1; path=/; domain=" + var8;
               var7Lifetime2 = var9;
@@ -488,7 +488,7 @@ final class sb implements Runnable {
         }
     }
 
-    sb(pd param0) {
+    sb(PlatformTaskDispatcher param0) {
         un var2 = null;
         this.field_h = new qk();
         this.field_f = false;

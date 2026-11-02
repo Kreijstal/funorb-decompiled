@@ -5,7 +5,7 @@ final class pa extends in {
     IntrusiveDeque field_k;
     private i field_m;
     static ob field_l;
-    static km field_o;
+    static UiWidget field_o;
     r field_n;
 
     final static int[] a(int param0, int param1, int param2) {
@@ -221,7 +221,7 @@ final class pa extends in {
               }
               stackIn_58_0 = ((var7 & 16) != 0);
               wd.field_a = stackIn_58_0;
-              if (el.field_k) {
+              if (BufferedSocket.field_k) {
                 sh.field_qb.readUnsignedByte(11132);
                 sh.field_qb.readUnsignedByte(param3 + 11189);
                 sh.field_qb.readInt((byte) 98);
@@ -286,7 +286,7 @@ final class pa extends in {
               if (7 == ci.field_q) {
                 ci.field_q = 3;
               }
-              ld.field_g = sh.field_qb.h(param3 ^ 68);
+              GameKeyHandler.field_g = sh.field_qb.h(param3 ^ 68);
               fh.field_e = false;
               stackIn_97_0 = ci.field_q;
               return stackIn_97_0;
@@ -294,9 +294,9 @@ final class pa extends in {
             if (null == oj.field_Ub) {
               if (fh.field_e) {
                 if (af.b(param3 ^ 69) <= 30000L) {
-                  ld.field_g = ll.field_a;
+                  GameKeyHandler.field_g = ll.field_a;
                 } else {
-                  ld.field_g = wa.field_L;
+                  GameKeyHandler.field_g = wa.field_L;
                 }
                 fh.field_e = false;
                 stackIn_105_0 = 3;
@@ -347,7 +347,7 @@ final class pa extends in {
 
     public static void c(boolean param0) {
         if (!param0) {
-          field_o = (km) null;
+          field_o = (UiWidget) null;
         }
         field_l = null;
         field_o = null;

@@ -7,7 +7,7 @@ final class sd {
     static String field_d;
     static int field_e;
     static ga field_f;
-    static km field_a;
+    static UiWidget field_a;
     static String field_b;
 
     public static void a(byte param0) {
@@ -62,10 +62,10 @@ final class sd {
         if (param2 != 2) {
           return;
         }
-        if (param0 == el.field_t) {
+        if (param0 == BufferedSocket.field_t) {
           return;
         }
-        el.field_t = param0;
+        BufferedSocket.field_t = param0;
         ad.field_l = true;
         sh.a((byte) -112, param1);
     }

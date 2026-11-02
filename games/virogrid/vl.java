@@ -14,7 +14,7 @@ final class vl implements kj {
     private int field_c;
     private int field_a;
     private int field_h;
-    private eh field_l;
+    private Js5Archive field_l;
 
     public final int a(byte param0, int param1) {
         if (param0 > -61) {
@@ -181,7 +181,7 @@ final class vl implements kj {
         return this.field_h == 64 ? true : false;
     }
 
-    vl(eh param0, eh param1, int param2, int param3) {
+    vl(Js5Archive param0, Js5Archive param1, int param2, int param3) {
         int var7 = 0;
         int[] var5 = null;
         int var6 = 0;

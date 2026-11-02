@@ -7,9 +7,9 @@ final class jg {
     static String field_c;
     private ln field_h;
     static String[] field_g;
-    private eh field_d;
+    private Js5Archive field_d;
     static int field_e;
-    private eh field_f;
+    private Js5Archive field_f;
     private ln field_a;
 
     final ml a(byte param0, String param1, String param2) {
@@ -180,7 +180,7 @@ final class jg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            this.field_f = (eh) null;
+            this.field_f = (Js5Archive) null;
           }
           if (this.field_d.e(46) == 1) {
             stackIn_4_0 = this.a(param0, (byte) 90, param1, 0);
@@ -205,7 +205,7 @@ final class jg {
         }
     }
 
-    final static void a(String[] args, String[] param1, String[][] param2, byte[] param3, eh param4, mg[][] param5, String[][] param6, byte[] param7, int param8, int param9, boolean param10, rm[] param11, int param12, eh param13, int[] param14, eh param15, byte param16, int[] param17, String[] param18, mg[][] param19) {
+    final static void a(String[] args, String[] param1, String[][] param2, byte[] param3, Js5Archive param4, Sprite[][] param5, String[][] param6, byte[] param7, int param8, int param9, boolean param10, rm[] param11, int param12, Js5Archive param13, int[] param14, Js5Archive param15, byte param16, int[] param17, String[] param18, Sprite[][] param19) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -247,8 +247,8 @@ final class jg {
           var20_int = -124 % ((param16 + 36) / 51);
           vj.a(param13, param4, param10, true);
           ak.c(-7597);
-          ld.a(0);
-          el.a(true);
+          GameKeyHandler.a(0);
+          BufferedSocket.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -503,7 +503,7 @@ final class jg {
         }
     }
 
-    jg(eh param0, eh param1) {
+    jg(Js5Archive param0, Js5Archive param1) {
         this.field_h = new ln(256);
         this.field_a = new ln(256);
         try {

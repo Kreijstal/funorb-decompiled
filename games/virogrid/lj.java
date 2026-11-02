@@ -60,7 +60,7 @@ final class lj implements ol {
           if (param0 < 96) {
             return;
           }
-          el.a(true, (byte) -106);
+          BufferedSocket.a(true, (byte) -106);
           vm.field_d[0] = (double)field_r * Math.sin((double)cf.field_c);
           vm.field_d[2] = (double)field_r * Math.cos((double)cf.field_c);
           gb.c((byte) -44);
@@ -106,17 +106,17 @@ final class lj implements ol {
             this.a(107, (fi) null, true, -95, -123);
           }
           var7 = 5592405;
-          df.b(param0 + param1.field_l, param1.field_u + param3, param1.field_g, param1.field_m, this.field_l);
+          Rasterizer.b(param0 + param1.field_l, param1.field_u + param3, param1.field_g, param1.field_m, this.field_l);
           if (param2) {
             var7 = 16777215;
           }
           var8 = param0 - (-param1.field_l - this.field_f);
           var9 = this.field_a + (param3 + param1.field_u);
-          df.f(var8, var9, this.field_n, this.field_o, 5592405);
-          df.b(var8, var9, this.field_n, this.field_o, var7);
+          Rasterizer.f(var8, var9, this.field_n, this.field_o, 5592405);
+          Rasterizer.b(var8, var9, this.field_n, this.field_o, var7);
           if (var6.field_z) {
-            df.a(var8, var9, this.field_n + var8, this.field_o + var9, 1);
-            df.a(var8 + this.field_n, var9, var8, this.field_o + var9, 1);
+            Rasterizer.a(var8, var9, this.field_n + var8, this.field_o + var9, 1);
+            Rasterizer.a(var8 + this.field_n, var9, var8, this.field_o + var9, 1);
           }
           if (null != this.field_p) {
             var10 = this.field_n + (this.field_f + this.field_e);
@@ -200,11 +200,11 @@ final class lj implements ol {
             if (var19 == 0) {
               if (stackIn_12_0) {
                 var12 = en.field_Hb[var9];
-                var13 = ld.field_h[var9];
+                var13 = GameKeyHandler.field_h[var9];
                 var14 = en.field_Hb[var10] - var12;
                 var15 = en.field_Hb[var11] - var12;
-                var16 = ld.field_h[var10] - var13;
-                var17 = -var13 + ld.field_h[var11];
+                var16 = GameKeyHandler.field_h[var10] - var13;
+                var17 = -var13 + GameKeyHandler.field_h[var11];
               }
               if (!stackIn_12_0 ||
                 !(var14 * var17 - var15 * var16 >= 0)) {

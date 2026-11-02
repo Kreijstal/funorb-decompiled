@@ -4,7 +4,7 @@
 final class hf extends aj {
     private int field_u;
     private int field_B;
-    private mg[] field_x;
+    private Sprite[] field_x;
     private int field_y;
     static java.awt.Color field_v;
     static int field_C;

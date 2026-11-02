@@ -4,7 +4,7 @@
 final class ee {
     static String field_f;
     static String field_b;
-    static km field_e;
+    static UiWidget field_e;
     static il field_a;
     static wl field_c;
     static String field_d;

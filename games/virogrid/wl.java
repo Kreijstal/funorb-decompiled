@@ -21,7 +21,7 @@ final class wl {
     final static boolean b(byte param0) {
         if (param0 >= -60) {
           java.awt.Component var2 = (java.awt.Component) null;
-          wl.a((pd) null, (i) null, 10, 112, false, (java.awt.Component) null, -74, 75);
+          wl.a((PlatformTaskDispatcher) null, (i) null, 10, 112, false, (java.awt.Component) null, -74, 75);
           if (null == oj.field_Ub) {
             return false;
           }
@@ -80,7 +80,7 @@ final class wl {
         }
     }
 
-    final static void a(pd param0, i param1, int param2, int param3, boolean param4, java.awt.Component param5, int param6, int param7) {
+    final static void a(PlatformTaskDispatcher param0, i param1, int param2, int param3, boolean param4, java.awt.Component param5, int param6, int param7) {
         try {
           ua.a(param6, param4, 10);
           ae.field_g = ua.a(param0, param5, 0, param7);

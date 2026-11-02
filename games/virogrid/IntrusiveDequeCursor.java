@@ -8,7 +8,7 @@ final class IntrusiveDequeCursor {
     static kf field_c;
     private IntrusiveDeque field_g;
     private IntrusiveNode field_b;
-    static km field_e;
+    static UiWidget field_e;
     static wg field_h;
     static String field_f;
     static String field_d;

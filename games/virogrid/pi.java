@@ -31,7 +31,7 @@ final class pi {
     final static void a(boolean param0, int param1, int param2, byte param3, int param4, int param5, boolean param6) {
         int var18_int = 0;
         int var22_int = 0;
-        km dupTemp$0 = null;
+        UiWidget dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -44,25 +44,25 @@ final class pi {
         int stackIn_3_5;
         boolean stackIn_4_6 = false;
         he stackIn_12_0;
-        km stackIn_12_1;
-        km stackIn_12_2;
+        UiWidget stackIn_12_1;
+        UiWidget stackIn_12_2;
         long stackIn_12_3;
-        km stackIn_13_1 = null;
-        km stackIn_13_2 = null;
-        km stackIn_13_4 = null;
+        UiWidget stackIn_13_1 = null;
+        UiWidget stackIn_13_2 = null;
+        UiWidget stackIn_13_4 = null;
         he stackIn_31_0;
-        km stackIn_31_1;
-        km stackIn_31_2;
+        UiWidget stackIn_31_1;
+        UiWidget stackIn_31_2;
         long stackIn_31_3;
-        km stackIn_32_1;
-        km stackIn_32_2;
-        km stackIn_32_4;
+        UiWidget stackIn_32_1;
+        UiWidget stackIn_32_2;
+        UiWidget stackIn_32_4;
         int stackIn_36_0 = 0;
         int stackIn_71_0 = 0;
         int stackIn_82_0 = 0;
-        mg[] stackIn_84_0 = null;
+        Sprite[] stackIn_84_0 = null;
         int stackIn_85_1 = 0;
-        mg[] stackIn_92_0 = null;
+        Sprite[] stackIn_92_0 = null;
         int stackIn_93_1 = 0;
         String stackIn_154_0 = null;
         String stackIn_163_0 = null;
@@ -76,19 +76,19 @@ final class pi {
         he var12 = null;
         int var13 = 0;
         int var14 = 0;
-        km var18 = null;
-        km var19 = null;
-        km var20 = null;
-        km var21 = null;
-        km var22 = null;
-        km var23 = null;
-        km var24 = null;
-        km var25 = null;
-        km var26 = null;
-        km var27 = null;
-        km var28 = null;
-        km var29 = null;
-        km var30 = null;
+        UiWidget var18 = null;
+        UiWidget var19 = null;
+        UiWidget var20 = null;
+        UiWidget var21 = null;
+        UiWidget var22 = null;
+        UiWidget var23 = null;
+        UiWidget var24 = null;
+        UiWidget var25 = null;
+        UiWidget var26 = null;
+        UiWidget var27 = null;
+        UiWidget var28 = null;
+        UiWidget var29 = null;
+        UiWidget var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -105,23 +105,23 @@ final class pi {
         int var40 = 0;
         int var41 = 0;
         String var42 = null;
-        mg var43 = null;
-        km var44 = null;
-        km var45 = null;
-        km var46 = null;
-        km var47 = null;
-        km var48 = null;
-        km var49 = null;
-        km var50 = null;
+        Sprite var43 = null;
+        UiWidget var44 = null;
+        UiWidget var45 = null;
+        UiWidget var46 = null;
+        UiWidget var47 = null;
+        UiWidget var48 = null;
+        UiWidget var49 = null;
+        UiWidget var50 = null;
         Object var51 = null;
-        mg var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        mg var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        mg var53_ref = null;
+        Sprite var53_ref = null;
         Object var54 = null;
-        mg var54_ref = null;
-        mg var55 = null;
+        Sprite var54_ref = null;
+        Sprite var55 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -143,7 +143,7 @@ final class pi {
           stackIn_3_3 = false;
           stackIn_3_4 = 2;
           stackIn_3_5 = (8 + 4 * pg.field_e) * param1;
-          stackIn_4_6 = (ch.field_a == wf.field_d);
+          stackIn_4_6 = (ch.field_a == RasterBuffer.field_d);
           var7_int = ((um) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
           var8 = ch.field_a.field_Jb.field_W;
           if (param3 > -97) {
@@ -156,19 +156,19 @@ final class pi {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_W == null) {
-              var12.field_Lb = new km(0L, jd.field_d);
+              var12.field_Lb = new UiWidget(0L, jd.field_d);
               var14 = param4 | param2;
               var12.a(0, var12.field_Lb);
               var12.field_Lb.field_lb = 1;
-              var12.field_Vb = new km(0L, gg.field_F);
+              var12.field_Vb = new UiWidget(0L, gg.field_F);
               var12.a(0, var12.field_Vb);
-              var12.field_Nb = new km(0L, jd.field_d);
+              var12.field_Nb = new UiWidget(0L, jd.field_d);
               var12.a(0, var12.field_Nb);
               var12.field_Nb.field_z = 0;
-              var12.field_Gb = new km(0L, jd.field_d);
+              var12.field_Gb = new UiWidget(0L, jd.field_d);
               var12.a(0, var12.field_Gb);
               var12.field_Gb.field_z = 0;
-              var12.field_oc = new km(0L, gg.field_F);
+              var12.field_oc = new UiWidget(0L, gg.field_F);
               var12.a(0, var12.field_oc);
               var12.field_oc.field_lb = 2;
               stackIn_12_0 = var12;
@@ -184,22 +184,22 @@ final class pi {
                 stackIn_13_2 = null;
                 stackIn_13_4 = gg.field_F;
               }
-              stackIn_12_0.field_Yb = new km(stackIn_12_3, stackIn_13_4);
+              stackIn_12_0.field_Yb = new UiWidget(stackIn_12_3, stackIn_13_4);
               var12.a(0, var12.field_Yb);
-              var12.field_jc = new km[vb.field_h];
-              var12.field_rc = new km(0L, (km) null);
+              var12.field_jc = new UiWidget[vb.field_h];
+              var12.field_rc = new UiWidget(0L, (UiWidget) null);
               if (0 != (1 << rf.field_h & var14)) {
                 var12.field_Yb.a(0, var12.field_rc);
               }
-              var12.field_hc = new km(0L, (km) null);
+              var12.field_hc = new UiWidget(0L, (UiWidget) null);
               if ((1 << ak.field_a & var14) != 0) {
                 var12.field_Yb.a(0, var12.field_hc);
               }
-              var12.field_Fb = new km(0L, (km) null);
+              var12.field_Fb = new UiWidget(0L, (UiWidget) null);
               if ((var14 & 1 << qn.field_K) != 0) {
                 var12.field_Yb.a(0, var12.field_Fb);
               }
-              var12.field_qc = new km(0L, (km) null);
+              var12.field_qc = new UiWidget(0L, (UiWidget) null);
               if ((var14 & 1 << bl.field_z) != 0) {
                 var12.field_Yb.a(0, var12.field_qc);
               }
@@ -211,7 +211,7 @@ final class pi {
               var45.field_D = 1;
               var46.field_D = 1;
               for (var18_int = 0; var18_int < vb.field_h; var18_int++) {
-                var12.field_jc[var18_int] = new km(0L, (km) null);
+                var12.field_jc[var18_int] = new UiWidget(0L, (UiWidget) null);
                 if (0 != (var14 & 1 << hc.field_c + var18_int)) {
                   var12.field_Yb.a(0, var12.field_jc[var18_int]);
                 }
@@ -230,19 +230,19 @@ final class pi {
                 stackIn_32_2 = null;
                 stackIn_32_4 = gg.field_F;
               }
-              stackIn_31_0.field_Kb = new km(stackIn_31_3, stackIn_32_4);
+              stackIn_31_0.field_Kb = new UiWidget(stackIn_31_3, stackIn_32_4);
               var12.a(0, var12.field_Kb);
               var12.field_Kb.field_lb = 2;
-              var12.field_uc = new km(0L, gg.field_F);
+              var12.field_uc = new UiWidget(0L, gg.field_F);
               var12.a(0, var12.field_uc);
-              var12.field_bc = new km(0L, IntrusiveDequeCursor.field_e);
+              var12.field_bc = new UiWidget(0L, IntrusiveDequeCursor.field_e);
               var12.a(0, var12.field_bc);
-              var12.field_Ob = new km(0L, IntrusiveDequeCursor.field_e);
+              var12.field_Ob = new UiWidget(0L, IntrusiveDequeCursor.field_e);
               var12.a(0, var12.field_Ob);
-              var12.field_Tb = new km(0L, ti.field_h);
+              var12.field_Tb = new UiWidget(0L, ti.field_h);
               var12.a(0, var12.field_Tb);
               var12.b((byte) 42);
-              var12.field_tc = new km(0L, id.field_a);
+              var12.field_tc = new UiWidget(0L, id.field_a);
               var13 = 1;
               var12.a(0, var12.field_tc);
             }
@@ -336,7 +336,7 @@ final class pi {
                     if (var12.field_lc == 2) {
                       var12.field_tc.field_V = nh.field_a;
                     } else {
-                      var12.field_Lb.field_V = wf.field_k;
+                      var12.field_Lb.field_V = RasterBuffer.field_k;
                     }
                   }
                 }
@@ -344,7 +344,7 @@ final class pi {
                 if (!var12.field_Ib &&
                   !var12.field_dc) {
                   if (var12.field_Sb) {
-                    var12.field_Lb.field_V = el.field_b;
+                    var12.field_Lb.field_V = BufferedSocket.field_b;
                   } else {
                     var12.field_Lb.field_V = hk.field_Eb;
                   }
@@ -503,7 +503,7 @@ final class pi {
               var12.field_kb = var31 - var12.field_ub;
             }
             if (var13 != 0) {
-              ch.field_a.field_Jb.a(2, var12, (km) (var11), (byte) 98);
+              ch.field_a.field_Jb.a(2, var12, (UiWidget) (var11), (byte) 98);
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < vb.field_h; var34_intLifetime2++) {
               if (var12.field_jc[var34_intLifetime2].field_S) {
@@ -596,7 +596,7 @@ final class pi {
           try {
             var3 = new java.net.URL(param2.getCodeBase(), param0);
             var3 = og.a(-1, param2, var3);
-            eh.a(var3.toString(), param2, (byte) -25, true);
+            Js5Archive.a(var3.toString(), param2, (byte) -25, true);
           } catch (Exception exception) {
             exception.printStackTrace();
           }

@@ -6,7 +6,7 @@ final class vn {
     private int field_a;
     private hl[] field_c;
 
-    final static vn a(eh param0, int param1, int param2) {
+    final static vn a(Js5Archive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, param2, 0);
         if (var3 == null) {
           return null;

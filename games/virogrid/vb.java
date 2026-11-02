@@ -9,12 +9,12 @@ final class vb {
     int field_m;
     String field_e;
     static String field_g;
-    eh field_f;
+    Js5Archive field_f;
     String field_b;
     static int[] field_a;
     static String field_i;
     static String field_d;
-    static mg field_l;
+    static Sprite field_l;
 
     final static lc a(byte param0, int param1) {
         int var3 = 0;

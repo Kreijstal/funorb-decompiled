@@ -16,7 +16,7 @@ abstract class od extends GameApplet {
     private int field_z;
     private boolean field_x;
     private boolean field_u;
-    static km field_y;
+    static UiWidget field_y;
     private int field_k;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
@@ -78,9 +78,9 @@ abstract class od extends GameApplet {
           if (var4 == 1) {
             var5 = ii.a(hh.a(-30890), je.h(true), 27984);
             if (-1 != var5) {
-              al.a(ld.field_g, var5, jf.field_b, 100);
+              al.a(GameKeyHandler.field_g, var5, jf.field_b, 100);
               jf.field_b = null;
-              ld.field_g = null;
+              GameKeyHandler.field_g = null;
             }
             var12 = fi.e(true);
             if (var12 != null) {
@@ -88,25 +88,25 @@ abstract class od extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = ld.a((byte) 2, ag.a(true), jl.a(-127), ne.a((byte) -52), eh.d(86), f.a(8), this.field_k);
+            var5Lifetime1 = GameKeyHandler.a((byte) 2, ag.a(true), jl.a(-127), ne.a((byte) -52), Js5Archive.d(86), f.a(8), this.field_k);
             if (-1 != var5Lifetime1) {
-              fn.a(var5Lifetime1, 105, jf.field_b, ld.field_g);
+              fn.a(var5Lifetime1, 105, jf.field_b, GameKeyHandler.field_g);
               jf.field_b = null;
-              ld.field_g = null;
+              GameKeyHandler.field_g = null;
             }
           }
           if (var4 == 3) {
             if (nh.field_o != -1 &&
               0 != nh.field_o) {
               nh.field_o = -1;
-              rl.e(true);
+              SpriteState.e(true);
             }
             if (!param2) {
               var5Lifetime2 = pa.a(f.a(8), false, this.field_k, (byte) -57, this.field_u, ne.a((byte) -52));
               if (var5Lifetime2 != -1) {
                 if (var5Lifetime2 != 0) {
-                  a.a(ld.field_g, var5Lifetime2, false);
-                  ld.field_g = null;
+                  a.a(GameKeyHandler.field_g, var5Lifetime2, false);
+                  GameKeyHandler.field_g = null;
                 } else {
                   ae.field_d = md.field_a;
                   sg.a(-2);
@@ -287,7 +287,7 @@ abstract class od extends GameApplet {
             this.a(-25296, "reconnect");
           }
           ve.c((byte) -105);
-          a.a(ld.field_g, var2, false);
+          a.a(GameKeyHandler.field_g, var2, false);
           ri.field_f = true;
           hc.field_a = hc.a(-9986) + 15000L;
           return var2;
@@ -410,7 +410,7 @@ abstract class od extends GameApplet {
           var3 = 1200 * wh.a((byte) 5);
           if (this.field_q ||
             !(lj.c(-28791807) <= var3) &&
-            !(km.e(-87) <= var3)) {
+            !(UiWidget.e(-87) <= var3)) {
             this.field_q = false;
             tn.a(false);
             ve.c((byte) -50);
@@ -491,7 +491,7 @@ abstract class od extends GameApplet {
           if (nh.field_o != -1 &&
             0 != nh.field_o) {
             nh.field_o = -1;
-            rl.e(true);
+            SpriteState.e(true);
           }
         }
         if (0 == nh.field_o &&
@@ -594,7 +594,7 @@ abstract class od extends GameApplet {
           }
         }
         if (!param0 &&
-          km.field_Db) {
+          UiWidget.field_Db) {
           af.a((byte) -116, fi.field_v);
           this.e(21616);
           nn.a(fi.field_v, (byte) -124);
@@ -611,7 +611,7 @@ abstract class od extends GameApplet {
         di.field_r[6] = true;
     }
 
-    final static void a(pd param0, Object param1, byte param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, byte param2) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -679,7 +679,7 @@ abstract class od extends GameApplet {
         la.field_k = param0;
         if (param2) {
           Object var5 = (Object) null;
-          od.a((pd) null, (Object) null, (byte) -5);
+          od.a((PlatformTaskDispatcher) null, (Object) null, (byte) -5);
         }
         sf.field_I = param3;
         na.field_Hb = param1;
@@ -702,7 +702,7 @@ abstract class od extends GameApplet {
         if (param0 != 1) {
           od.a(36, 8, true, 93);
         }
-        if (me.b(param0 ^ 102)) {
+        if (MouseInputHandler.b(param0 ^ 102)) {
           stackIn_11_1 = 30;
           stackIn_12_2 = (null != ih.field_b);
           discarded$4 = this.a(stackIn_11_1, stackIn_12_2, false);
@@ -730,7 +730,7 @@ abstract class od extends GameApplet {
         int var4 = ba.field_a - 1;
         byte[] var5 = new byte[var4];
         sh.field_qb.a(-121, 0, var5, var4);
-        eh.a(i.a(param0 + 4709, var5), mb.g((byte) -95), (byte) -25, var3 != 0);
+        Js5Archive.a(i.a(param0 + 4709, var5), mb.g((byte) -95), (byte) -25, var3 != 0);
     }
 
     final int c(boolean param0, int param1) {
@@ -789,7 +789,7 @@ abstract class od extends GameApplet {
                               return;
                             }
                             stackIn_28_0 = (var2 == 12);
-                            var3 = el.a(stackIn_28_0, 0);
+                            var3 = BufferedSocket.a(stackIn_28_0, 0);
                             cf.a(var3, (byte) 78);
                           }
                         } else {
@@ -805,10 +805,10 @@ abstract class od extends GameApplet {
                 }
               }
             } else {
-              km.d((byte) 76);
+              UiWidget.d((byte) 76);
             }
           } else {
-            el.e(-2);
+            BufferedSocket.e(-2);
           }
           return;
         }

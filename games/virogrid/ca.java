@@ -8,7 +8,7 @@ final class ca extends fd implements bo, ta {
     private boolean field_I;
     private tg field_J;
     private tg field_P;
-    static wf field_M;
+    static RasterBuffer field_M;
     private String field_S;
     private boolean field_H;
     private tg field_F;
@@ -81,7 +81,7 @@ final class ca extends fd implements bo, ta {
           var1_int = 0;
           var2 = 0;
           if (param0 != 2) {
-            field_M = (wf) null;
+            field_M = (RasterBuffer) null;
           }
           while (nd.b((byte) -103)) {
             co.field_k.e(-126);
@@ -433,7 +433,7 @@ final class ca extends fd implements bo, ta {
                 } else {
                   if (!(kh.field_d >= ve.field_t)) {
                     if (kh.field_d == 0) {
-                      ld.a(0);
+                      GameKeyHandler.a(0);
                     }
                     kh.field_d = kh.field_d + 1;
                   }
@@ -467,7 +467,7 @@ final class ca extends fd implements bo, ta {
           dj.field_h.a(this.field_S, this.field_l + param1 + 20, param2 - (-this.field_u - 15), -40 + this.field_g, this.field_m, 16777215, -1, 1, 0, dj.field_h.field_H);
         }
         if (this.field_J != null) {
-          df.b(param1 + 10, param2 + 134, -20 + this.field_g, 4210752);
+          Rasterizer.b(param1 + 10, param2 + 134, -20 + this.field_g, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

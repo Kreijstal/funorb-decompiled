@@ -6,7 +6,7 @@ final class CellAnimator {
     bi field_j;
     int field_e;
     int field_k;
-    static mg[] field_f;
+    static Sprite[] field_f;
     static int[] field_i;
     byte[][] displayedCells;
     static byte[] field_a;
@@ -88,7 +88,7 @@ final class CellAnimator {
 
     final static ka a(byte param0, int param1) {
         if (param0 <= 63) {
-          field_f = (mg[]) null;
+          field_f = (Sprite[]) null;
         }
         ka var2 = new ka();
         tf.field_a.a(var2, (byte) -50);
@@ -111,7 +111,7 @@ final class CellAnimator {
         field_a = null;
         field_i = null;
         if (param0 != -314) {
-          field_f = (mg[]) null;
+          field_f = (Sprite[]) null;
         }
         field_f = null;
     }

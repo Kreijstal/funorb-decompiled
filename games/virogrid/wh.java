@@ -3,8 +3,8 @@
  */
 abstract class wh {
     static rm[] field_b;
-    static km field_d;
-    static km field_a;
+    static UiWidget field_d;
+    static UiWidget field_a;
     static int[] field_c;
 
     abstract void a(byte[] param0, byte param1);
@@ -112,9 +112,9 @@ abstract class wh {
               gk.field_g.b(gk.field_g.position - var9, -1);
             }
             al.b(-1, -1);
-            ug.field_a = me.field_e;
+            ug.field_a = MouseInputHandler.field_e;
           }
-          if (me.field_e == ug.field_a &&
+          if (MouseInputHandler.field_e == ug.field_a &&
             wg.a(1, 0)) {
             var9Lifetime1 = sh.field_qb.readUnsignedByte(11132);
             sh.field_qb.position = 0;
@@ -125,7 +125,7 @@ abstract class wh {
             } else {
               if (var9Lifetime1 == 248) {
                 sj.a(mb.g((byte) -112), 20298);
-                ld.field_g = wf.field_a;
+                GameKeyHandler.field_g = RasterBuffer.field_a;
                 tn.a(false);
                 fh.field_e = false;
                 stackIn_32_0 = var9Lifetime1;
@@ -165,7 +165,7 @@ abstract class wh {
           if (k.field_a == ug.field_a &&
             GameSession.c((byte) 48)) {
             if (255 != ci.field_q) {
-              ld.field_g = sh.field_qb.h(-118);
+              GameKeyHandler.field_g = sh.field_qb.h(-118);
             } else {
               var9_ref_String = sh.field_qb.f(123);
               if (var9_ref_String != null) {
@@ -180,9 +180,9 @@ abstract class wh {
           if (oj.field_Ub == null) {
             if (fh.field_e) {
               if (30000L >= af.b(-126)) {
-                ld.field_g = ll.field_a;
+                GameKeyHandler.field_g = ll.field_a;
               } else {
-                ld.field_g = wa.field_L;
+                GameKeyHandler.field_g = wa.field_L;
               }
               fh.field_e = false;
               stackIn_62_0 = 249;
@@ -288,7 +288,7 @@ abstract class wh {
                           }
                           gb.a(-2, var5, var4 != 0, var3);
                         } else {
-                          el.a(12229, param1);
+                          BufferedSocket.a(12229, param1);
                         }
                       } else {
                         if (var3 != 4) {
@@ -309,12 +309,12 @@ abstract class wh {
                               } else {
                                 if (10 != var3) {
                                   if (var3 == 11) {
-                                    vg.field_I.b((byte) -45);
+                                    vg.field_I.resign((byte) -45);
                                     var3 = param1 ? 1 : 0;
                                     gb.a(-2, 0, var3 != 0, -1);
                                   } else {
                                     if (var3 == 18) {
-                                      vg.field_I.a((byte) 70);
+                                      vg.field_I.restartGame((byte) 70);
                                       var3 = param1 ? 1 : 0;
                                       gb.a(-2, 0, var3 != 0, -1);
                                     } else {

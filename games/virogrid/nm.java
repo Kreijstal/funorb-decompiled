@@ -28,10 +28,10 @@ final class nm {
         rj.field_d = null;
         de.field_rb = null;
         if (param0 != 1) {
-          eh var2 = (eh) null;
-          nm.a((byte[]) null, (rm[]) null, (int[]) null, (String[][]) null, (byte[]) null, (eh) null, 27, (String[]) null, (String[][]) null, (mg[][]) null, true, (mg[][]) null, -1, (int[]) null, (byte) -43, (String[]) null, (eh) null, (eh) null, 123);
+          Js5Archive var2 = (Js5Archive) null;
+          nm.a((byte[]) null, (rm[]) null, (int[]) null, (String[][]) null, (byte[]) null, (Js5Archive) null, 27, (String[]) null, (String[][]) null, (Sprite[][]) null, true, (Sprite[][]) null, -1, (int[]) null, (byte) -43, (String[]) null, (Js5Archive) null, (Js5Archive) null, 123);
         }
-        eh.field_j = null;
+        Js5Archive.field_j = null;
         dh.field_o = null;
     }
 
@@ -96,7 +96,7 @@ final class nm {
         }
     }
 
-    final static void a(byte[] param0, rm[] param1, int[] param2, String[][] param3, byte[] param4, eh param5, int param6, String[] param7, String[][] param8, mg[][] param9, boolean param10, mg[][] param11, int param12, int[] param13, byte param14, String[] param15, eh param16, eh param17, int param18) {
+    final static void a(byte[] param0, rm[] param1, int[] param2, String[][] param3, byte[] param4, Js5Archive param5, int param6, String[] param7, String[][] param8, Sprite[][] param9, boolean param10, Sprite[][] param11, int param12, int[] param13, byte param14, String[] param15, Js5Archive param16, Js5Archive param17, int param18) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -316,7 +316,7 @@ final class nm {
               if (!ei.field_c.field_a) {
                 var4 = sf.a((byte) 127, fd.field_x, j.field_h, rf.field_b, CellFlip.field_l);
               } else {
-                var4 = sf.a((byte) 120, eh.field_h, j.field_h, rf.field_b, CellFlip.field_l);
+                var4 = sf.a((byte) 120, Js5Archive.field_h, j.field_h, rf.field_b, CellFlip.field_l);
               }
               var5 = 2 + var4;
               mn.field_c = new String[var5];
@@ -352,7 +352,7 @@ final class nm {
               if (IntrusiveDeque.field_d != 5) {
                 throw new IllegalArgumentException();
               }
-              var4 = sf.a((byte) 123, el.field_i, j.field_h, rf.field_b, CellFlip.field_l);
+              var4 = sf.a((byte) 123, BufferedSocket.field_i, j.field_h, rf.field_b, CellFlip.field_l);
               var5 = var4 + 3;
               mn.field_c = new String[var5];
               wg.field_h = new int[var5];
@@ -386,8 +386,8 @@ final class nm {
             }
             rj.field_d = new String[var5];
             ek.a(CellFlip.field_l, 0, rj.field_d, 0, var5);
-            eh.field_j = new String[-1 + var4 - var5];
-            ek.a(CellFlip.field_l, 1 + var5, eh.field_j, 0, -var5 + var4 - 1);
+            Js5Archive.field_j = new String[-1 + var4 - var5];
+            ek.a(CellFlip.field_l, 1 + var5, Js5Archive.field_j, 0, -var5 + var4 - 1);
             var4 = sf.a((byte) 124, oi.a(new String[]{"<br><%0><br>"}, mh.field_e, 2), j.field_h, rf.field_b, CellFlip.field_l);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
@@ -410,8 +410,8 @@ final class nm {
               stackIn_52_0 = rj.field_d.length;
             }
             var6 = stackIn_52_0;
-            if (de.field_rb.length <= eh.field_j.length) {
-              stackIn_55_0 = eh.field_j.length;
+            if (de.field_rb.length <= Js5Archive.field_j.length) {
+              stackIn_55_0 = Js5Archive.field_j.length;
             } else {
               stackIn_55_0 = de.field_rb.length;
             }
@@ -477,7 +477,7 @@ final class nm {
                 var4Lifetime1 = var8Lifetime1;
               }
             }
-            var5_ref_String__Lifetime1 = eh.field_j;
+            var5_ref_String__Lifetime1 = Js5Archive.field_j;
             for (var6Lifetime2Lifetime1 = 0; var5_ref_String__Lifetime1.length > var6Lifetime2Lifetime1; var6Lifetime2Lifetime1++) {
               var13 = var5_ref_String__Lifetime1[var6Lifetime2Lifetime1];
               var8Lifetime1Lifetime1 = gl.a(1492912648, false, var13);
@@ -511,9 +511,9 @@ final class nm {
               var6Lifetime3 = var6Lifetime3 + oh.field_d;
               var9Lifetime1 = -(var8Lifetime2 >> 1) + hn.field_q;
               hn.field_v[var5Lifetime3] = new int[4];
-              hn.field_v[var5Lifetime3][0] = var9Lifetime1 - eh.field_d;
+              hn.field_v[var5Lifetime3][0] = var9Lifetime1 - Js5Archive.field_d;
               hn.field_v[var5Lifetime3][1] = var6Lifetime3;
-              hn.field_v[var5Lifetime3][2] = (eh.field_d << 1) + var8Lifetime2;
+              hn.field_v[var5Lifetime3][2] = (Js5Archive.field_d << 1) + var8Lifetime2;
               var6Lifetime3 = var6Lifetime3 + ((bj.field_j << 1) + (oh.field_d + mi.field_c));
               hn.field_v[var5Lifetime3][3] = (bj.field_j << 1) + mi.field_c;
             }

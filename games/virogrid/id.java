@@ -18,7 +18,7 @@ final class id {
     static int field_r;
     static int field_c;
     int field_q;
-    static km field_a;
+    static UiWidget field_a;
     ol field_b;
     private int field_d;
 
@@ -26,7 +26,7 @@ final class id {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
-        km stackIn_6_0 = null;
+        UiWidget stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
         int stackIn_10_2;
@@ -37,13 +37,13 @@ final class id {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          f.field_b = df.field_f;
-          eb.field_f = df.field_e;
+          f.field_b = Rasterizer.field_f;
+          eb.field_f = Rasterizer.field_e;
           je.f(-17491);
           dd.field_b.a(36, 0, 0, -2 + (fd.field_y.field_ub - 40), fd.field_y.field_K);
           qd.field_f.a(0, pg.field_e, ij.field_k.field_K, (byte) -75, 0);
           if (param0 >= -96) {
-            field_a = (km) null;
+            field_a = (UiWidget) null;
           }
           var1_int = pg.field_e + 2;
           stackIn_6_0 = ij.field_m;
@@ -61,7 +61,7 @@ final class id {
           } else {
             stackIn_11_5 = var1_int;
           }
-          ((km) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_10_2, stackIn_10_3, (byte) stackIn_10_4, stackIn_11_5);
+          ((UiWidget) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_10_2, stackIn_10_3, (byte) stackIn_10_4, stackIn_11_5);
           rc.d(-20);
           s.field_b.a(0, 40, fd.field_y.field_K, (byte) -55, fd.field_y.field_ub - 40);
           ng.field_Z.a(0, 30, hg.field_p.field_K, (byte) -44, 0);
@@ -109,21 +109,21 @@ final class id {
     final void a(byte param0, e param1) {
         ql discarded$6 = null;
         rj discarded$7 = null;
-        mg dupTemp$8 = null;
+        Sprite dupTemp$8 = null;
         RuntimeException runtimeException = null;
         aj var3 = null;
         nl var4 = null;
-        mg[] var5 = null;
+        Sprite[] var5 = null;
         kc var6 = null;
         nl var6_ref = null;
         int var7_int = 0;
         nl var7 = null;
         nl var8 = null;
-        mg[] var9 = null;
-        mg[] var10 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
         nl var11 = null;
         nl var12 = null;
-        mg var13 = null;
+        Sprite var13 = null;
         nl var14 = null;
         int var15 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -157,12 +157,12 @@ final class id {
           }
           var4.a((byte) 119, 1).a(-8779, bm.a(10066329, 11184810, 13421772, (byte) -82));
           var4.a((byte) 96, 3).a(-8779, bm.a(7829367, 8947848, 10066329, (byte) -116)).a((byte) 64, 1).a(1, 127);
-          var5 = new mg[9];
+          var5 = new Sprite[9];
           var6 = new kc(32, 32);
           var7_int = 0;
           do {
             if (!(var6.field_B.length > var7_int)) {
-              var5[4] = (mg) ((Object) var6);
+              var5[4] = (Sprite) ((Object) var6);
               var4.a((byte) 123, 4).a(true, 0).a(-8779, var5);
               var4.a((byte) 100, 5).a(-8779, sb.a(65793, (byte) 125, 0, 0, 0)).a(true, 0).b(true, -1);
               this.field_l = (ol) ((Object) var4);
@@ -185,10 +185,10 @@ final class id {
           var8.a((byte) 78, 0).a(-8779, bm.a(7829367, 15658734, 10066329, (byte) -85)).b(true, 1118481).b(-1, -26973);
           var8.a((byte) 109, 4).a(true, 0).a(-8779, var5);
           this.field_h = (ol) ((Object) var8);
-          var9 = new mg[9];
-          var10 = new mg[9];
-          var9[4] = new mg(2, 1);
-          var10[4] = new mg(1, 2);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$8 = var9[4];
           dupTemp$8.field_B = new int[]{6710886, 7829367};
           var10[4].field_B = new int[]{6710886, 7829367};
@@ -196,7 +196,7 @@ final class id {
           var12 = new nl();
           var11.a(0, var9, (byte) -123);
           var12.a(0, var10, (byte) -125);
-          var13 = new mg(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new nl(var4, true);
           var14.a((byte) -119, var13.d());
@@ -373,7 +373,7 @@ final class id {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 32) {
-            field_a = (km) null;
+            field_a = (UiWidget) null;
           }
           param0 = param0 & 8191;
           if (param0 < 4096) {
@@ -404,7 +404,7 @@ final class id {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 54) {
-            field_a = (km) null;
+            field_a = (UiWidget) null;
           }
           var2_int = 0;
           if (0 == param0) {
@@ -414,7 +414,7 @@ final class id {
             var2_int = qe.field_m;
           }
           if (param0 == 2) {
-            var2_int = el.field_t;
+            var2_int = BufferedSocket.field_t;
           }
           stackIn_10_0 = var2_int;
           return stackIn_10_0;
@@ -440,15 +440,15 @@ final class id {
           var5_int = this.field_o.a(param0);
           var6 = this.field_o.field_A + this.field_o.field_G;
           var7 = param3;
-          if (6 + var5_int + var7 > df.field_e) {
-            var7 = -6 + df.field_e - var5_int;
+          if (6 + var5_int + var7 > Rasterizer.field_e) {
+            var7 = -6 + Rasterizer.field_e - var5_int;
           }
           var8 = 32 + param2 - this.field_o.field_A;
-          if (df.field_f < var8 + (var6 + 6)) {
-            var8 = -6 + df.field_f - var6;
+          if (Rasterizer.field_f < var8 + (var6 + 6)) {
+            var8 = -6 + Rasterizer.field_f - var6;
           }
-          df.e(var7, var8, var5_int + 6, var6 + 6, this.field_d);
-          df.b(var7 + 1, var8 + 1, 4 + var5_int, var6 + 4, this.field_e);
+          Rasterizer.e(var7, var8, var5_int + 6, var6 + 6, this.field_d);
+          Rasterizer.b(var7 + 1, var8 + 1, 4 + var5_int, var6 + 4, this.field_e);
           this.field_o.b(param0, 3 + var7, this.field_o.field_A + var8 + 3, this.field_d, -1);
           var9 = 95 % ((37 - param1) / 46);
           return;
@@ -532,7 +532,7 @@ final class id {
             var7 = this.field_o.field_G + this.field_o.field_H;
           }
           boolean decompiledFrameCompleted0 = true;
-          var8 = df.field_e >> 2;
+          var8 = Rasterizer.field_e >> 2;
           var9 = this.field_o.a(param2);
           var10 = this.field_o.field_G + this.field_o.field_H;
           var11 = 1;
@@ -569,18 +569,18 @@ final class id {
           }
           if (decompiledFrameCompleted0) {
             var12 = param3;
-            stackIn_29_0 = ~df.field_e;
+            stackIn_29_0 = ~Rasterizer.field_e;
             stackIn_29_1 = ~(var9 + var12 + var5_int);
           }
           if (stackIn_29_0 > stackIn_29_1) {
-            var12 = -var5_int + df.field_e - var9;
+            var12 = -var5_int + Rasterizer.field_e - var9;
           }
           var13Lifetime1 = 32 - this.field_o.field_A + param1;
-          if (df.field_f < (var6 + var10 + var13Lifetime1)) {
+          if (Rasterizer.field_f < (var6 + var10 + var13Lifetime1)) {
             var13Lifetime1 = -var6 + param1 - var10;
           }
-          df.e(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_s);
-          df.b(1 + var12, var13Lifetime1 + 1, var9 + var5_int - 2, var10 + var6 - 2, this.field_e);
+          Rasterizer.e(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_s);
+          Rasterizer.b(1 + var12, var13Lifetime1 + 1, var9 + var5_int - 2, var10 + var6 - 2, this.field_e);
           this.field_o.a(param2, var12 + this.field_g, this.field_q + var13Lifetime1, var9, var10, this.field_d, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -604,7 +604,7 @@ final class id {
           if (param5 < 83) {
             this.field_s = 102;
           }
-          df.b(param4, param1, param3, param2, param6, param0);
+          Rasterizer.b(param4, param1, param3, param2, param6, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -620,7 +620,7 @@ final class id {
           if (param1 > -7) {
             this.field_n = -91;
           }
-          df.a(param3, param0, param4, param5, param2);
+          Rasterizer.a(param3, param0, param4, param5, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

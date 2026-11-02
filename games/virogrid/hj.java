@@ -19,9 +19,9 @@ final class hj extends IntrusiveNode {
         this.field_i = param0;
     }
 
-    final static rm a(eh param0, int param1, int param2) {
+    final static rm a(Js5Archive param0, int param1, int param2) {
         RuntimeException var3 = null;
-        eh var4 = null;
+        Js5Archive var4 = null;
         rm stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -32,8 +32,8 @@ final class hj extends IntrusiveNode {
             return null;
           }
           if (param2 != 12) {
-            var4 = (eh) null;
-            hj.a((eh) null, -36, 3);
+            var4 = (Js5Archive) null;
+            hj.a((Js5Archive) null, -36, 3);
           }
           stackIn_6_0 = bk.a(121);
           return stackIn_6_0;
@@ -63,7 +63,7 @@ final class hj extends IntrusiveNode {
         }
     }
 
-    final static km c(int param0) {
+    final static UiWidget c(int param0) {
         if (param0 < 43) {
           field_h = 95;
           return wm.field_r.field_Jb;

@@ -13,12 +13,12 @@ final class oi {
 
     private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         int discarded$0 = 0;
-        mg var7;
+        Sprite var7;
         int var8;
-        mg var9;
-        mg var10;
-        mg stackIn_4_0 = null;
-        mg stackIn_10_0 = null;
+        Sprite var9;
+        Sprite var10;
+        Sprite stackIn_4_0 = null;
+        Sprite stackIn_10_0 = null;
         var8 = Virogrid.field_F ? 1 : 0;
         if (param4 == 32) {
           if ((1 << param3 & rn.field_c) != 0) {
@@ -31,7 +31,7 @@ final class oi {
           var10.d(-16 + param0, param5 - 16);
         } else {
           if ((1 << param3 & rn.field_c) != 0) {
-            stackIn_4_0 = cb.field_d[param3];
+            stackIn_4_0 = MouseWheelInput.field_d[param3];
           } else {
             stackIn_4_0 = mj.field_F;
           }
@@ -277,14 +277,14 @@ final class oi {
         int var5;
         int var7;
         var7 = Virogrid.field_F ? 1 : 0;
-        df.b(100, 0, 10, 400, 0);
-        df.b(530, 0, 10, 400, 0);
+        Rasterizer.b(100, 0, 10, 400, 0);
+        Rasterizer.b(530, 0, 10, 400, 0);
         stackIn_2_0 = 110;
         stackIn_2_1 = 0;
         stackIn_2_2 = 420;
         stackIn_2_3 = 400;
         stackIn_3_4 = (param1 == 1) ? 127 : 263172;
-        df.b(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4);
+        Rasterizer.b(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4);
         if (this.field_e == 10) {
           return;
         }
@@ -294,7 +294,7 @@ final class oi {
         }
         var5 = 40;
         if (this.field_e == 0) {
-          eh.field_l.a(-(eh.field_l.field_j / 2) + 320, 20);
+          Js5Archive.field_l.a(-(Js5Archive.field_l.field_j / 2) + 320, 20);
         } else {
           hd.field_b.b(lc.field_e[this.field_e], var4, var5, 1141646, -1);
         }
@@ -509,10 +509,10 @@ final class oi {
         regionExit1: {
           re.field_o.c(qe.field_j.toUpperCase(), 310, var5, var3, -1);
           re.field_o.c(aj.field_h.toUpperCase(), 368, var4, var3, -1);
-          re.field_o.c(rl.field_s.toUpperCase(), 420, var5, var3, -1);
+          re.field_o.c(SpriteState.field_s.toUpperCase(), 420, var5, var3, -1);
           re.field_o.c(ql.field_s.toUpperCase(), 458, var4, var3, -1);
           var4 += 24;
-          re.field_o.c(rl.field_o.toUpperCase(), 500, var5, var3, -1);
+          re.field_o.c(SpriteState.field_o.toUpperCase(), 500, var5, var3, -1);
           if (mm.field_j.field_s) {
             if (mm.field_j.field_j != null) {
               var6 = qg.field_s.toUpperCase();
@@ -535,7 +535,7 @@ final class oi {
                   } else {
                     stackIn_27_4 = 996169;
                   }
-                  df.b(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4);
+                  Rasterizer.b(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4);
                   var6 = "";
                   this.a(178, var8[3 + var10 * 4], var7[var10], var4, var8[4 * var10 + 2], var3, var10, var8[4 * var10 + 1], var8[var10 * 4]);
                 }
@@ -599,7 +599,7 @@ final class oi {
           return;
         }
         if (!qe.field_k &&
-          !eh.field_e) {
+          !Js5Archive.field_e) {
           if (this.field_e != 8) {
           } else {
             vm.field_c = param0 ? -1 : this.a((int)param2, -94, (int)param1);
@@ -993,7 +993,7 @@ final class oi {
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
         if (!qe.field_k &&
-          !eh.field_e) {
+          !Js5Archive.field_e) {
           while (nd.b((byte) -125)) {
             if (um.field_Gb != 13) {
               this.a(0);
@@ -1166,7 +1166,7 @@ final class oi {
           case 16:
             stackIn_6_0 = new StringBuilder().append(var19);
             if (gb.field_H.field_g) {
-              stackIn_7_1 = ld.field_f;
+              stackIn_7_1 = GameKeyHandler.field_f;
             } else {
               stackIn_7_1 = sd.field_b;
             }
@@ -1202,14 +1202,14 @@ final class oi {
           return;
         }
         var12 = var12 + ok.field_L;
-        df.e(var12, -1 + var13 / 2 + var11, 121, 2, var16);
+        Rasterizer.e(var12, -1 + var13 / 2 + var11, 121, 2, var16);
         if (14 == var6) {
           stackIn_64_0 = 120 * ag.field_c / 256;
         } else {
           stackIn_64_0 = c.field_a * 120 / 256;
         }
         var17 = stackIn_64_0;
-        df.e(var17 + var12 - 1, 3 + var11, 3, -6 + var13, var16);
+        Rasterizer.e(var17 + var12 - 1, 3 + var11, 3, -6 + var13, var16);
         return;
     }
 

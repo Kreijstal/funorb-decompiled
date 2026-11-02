@@ -55,7 +55,7 @@ final class db {
         qh.field_K = 0;
         nb.field_s = param1;
         hf.field_D = new int[3];
-        el.field_s = new cj[15 * param1];
+        BufferedSocket.field_s = new cj[15 * param1];
         if (param0 < 33) {
           field_v = -82;
         }
@@ -63,10 +63,10 @@ final class db {
 
     final static boolean b(int param0) {
         if (param0 == 16) {
-          return ao.field_Kb == cb.field_c ? true : false;
+          return ao.field_Kb == MouseWheelInput.field_c ? true : false;
         }
         db.b((byte) 58, 113);
-        return ao.field_Kb == cb.field_c ? true : false;
+        return ao.field_Kb == MouseWheelInput.field_c ? true : false;
     }
 
     final static boolean b(byte param0, int param1) {
@@ -80,7 +80,7 @@ final class db {
         return (1 << param1 & la.field_g) != 0 ? true : false;
     }
 
-    final static String a(eh param0, String param1, byte param2, String param3) {
+    final static String a(Js5Archive param0, String param1, byte param2, String param3) {
         RuntimeException var4 = null;
         String var5 = null;
         String stackIn_2_0 = null;
@@ -100,7 +100,7 @@ final class db {
           }
           if (param2 > -36) {
             var5 = (String) null;
-            db.a((eh) null, (String) null, (byte) 85, (String) null);
+            db.a((Js5Archive) null, (String) null, (byte) 85, (String) null);
           }
           stackIn_6_0 = param1 + " - " + param0.a(-2677) + "%";
           return stackIn_6_0;

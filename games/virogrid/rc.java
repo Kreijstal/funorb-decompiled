@@ -15,7 +15,7 @@ final class rc extends IntrusiveNode {
     static String[] field_h;
 
     final static void d(int param0) {
-        me.field_d.a(0, 18, -(ql.field_d ? 40 + (2 + (oc.field_k + 2)) : 0) + ij.field_m.field_K, (byte) -52, 0);
+        MouseInputHandler.field_d.a(0, 18, -(ql.field_d ? 40 + (2 + (oc.field_k + 2)) : 0) + ij.field_m.field_K, (byte) -52, 0);
         wm.field_m.a(-40 - oc.field_k + (ij.field_m.field_K - 2), 18, oc.field_k + 42, (byte) -69, 0);
         GameBoard.field_j.a(20, -127, ij.field_m.field_K, 2, param0 + ij.field_m.field_ub, 0, oc.field_k);
     }

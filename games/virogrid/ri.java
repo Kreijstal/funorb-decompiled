@@ -59,17 +59,17 @@ final class ri {
         }
     }
 
-    final static km b(byte param0) {
+    final static UiWidget b(byte param0) {
         RuntimeException var1 = null;
-        km stackIn_2_0 = null;
-        km stackIn_4_0 = null;
+        UiWidget stackIn_2_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 27) {
             stackIn_4_0 = ao.d(true);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (km) null;
+          stackIn_2_0 = (UiWidget) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

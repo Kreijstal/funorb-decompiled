@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lk extends km {
+final class lk extends UiWidget {
     boolean field_Sb;
     static int[] field_Tb;
     static byte[] field_Pb;
     int field_Gb;
-    km field_Lb;
+    UiWidget field_Lb;
     String field_Nb;
     long field_Ib;
     long field_Ob;
     boolean field_Xb;
-    km field_Hb;
+    UiWidget field_Hb;
     int field_Wb;
     int field_Rb;
     int field_Ub;
     int field_Vb;
-    km field_Mb;
+    UiWidget field_Mb;
     boolean field_Jb;
-    km field_Kb;
-    km field_Yb;
+    UiWidget field_Kb;
+    UiWidget field_Yb;
     String field_Eb;
     int field_Fb;
     static il field_Qb;
@@ -102,7 +102,7 @@ final class lk extends km {
     }
 
     lk(String param0, String param1, long param2) {
-        super(0L, (km) null);
+        super(0L, (UiWidget) null);
         CharSequence var6 = null;
         try {
           this.field_Ob = param2;

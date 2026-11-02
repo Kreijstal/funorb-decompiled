@@ -8,7 +8,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode field_h;
     static String field_g;
     static String field_i;
-    static km field_m;
+    static UiWidget field_m;
     DualLinkNode field_k;
 
     final void c(int param0) {
@@ -56,12 +56,12 @@ class DualLinkNode extends IntrusiveNode {
         int var3 = 0;
         int var3Lifetime1;
         if (param0) {
-          df.b(0, 0, df.field_e, df.field_f, 0, 192);
+          Rasterizer.b(0, 0, Rasterizer.field_e, Rasterizer.field_f, 0, 192);
           ci.b(param0, -126);
           var3 = -121 / ((79 - param1) / 35);
           return;
         }
-        df.c();
+        Rasterizer.c();
         ci.b(param0, -126);
         var3Lifetime1 = -121 / ((79 - param1) / 35);
     }

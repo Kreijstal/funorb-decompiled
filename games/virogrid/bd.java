@@ -6,7 +6,7 @@ final class bd {
     static IntrusiveDeque field_c;
     static int field_e;
     static String[] field_a;
-    static km field_b;
+    static UiWidget field_b;
 
     public static void a(int param0) {
         field_d = null;
@@ -18,7 +18,7 @@ final class bd {
         field_c = null;
     }
 
-    final static rm a(int param0, int param1, int param2, eh param3) {
+    final static rm a(int param0, int param1, int param2, Js5Archive param3) {
         RuntimeException var4 = null;
         java.applet.Applet var5 = null;
         rm stackIn_6_0 = null;

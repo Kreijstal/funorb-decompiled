@@ -4,7 +4,7 @@
 final class ab extends gf implements ta {
     static String field_I;
     static int[] field_H;
-    static km field_K;
+    static UiWidget field_K;
     static il field_L;
     private jb field_M;
     static bk field_G;

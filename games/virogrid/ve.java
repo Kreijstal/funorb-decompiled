@@ -10,7 +10,7 @@ final class ve extends qe {
     static int field_o;
     static int field_s;
     static int[] field_A;
-    static km field_w;
+    static UiWidget field_w;
     static int[] field_B;
     static String field_n;
     static ao field_q;
@@ -71,12 +71,12 @@ final class ve extends qe {
             ve.a(38, -113, (byte) -85);
           }
           while (var3_int < vg.field_F.length) {
-            var5 = wf.field_f[var3_int];
+            var5 = RasterBuffer.field_f[var3_int];
             if (var5 >= 0) {
               var6 = an.a(true, (byte) 114, vg.field_F[var3_int]);
               var4 = var4 + hd.field_e;
               var7 = mh.field_g - (var6 >> 1);
-              if (wf.a(var7 - dj.field_e, param1, var6 + (dj.field_e << 1), true, var4, param0, (ng.field_P << 1) + di.field_o)) {
+              if (RasterBuffer.a(var7 - dj.field_e, param1, var6 + (dj.field_e << 1), true, var4, param0, (ng.field_P << 1) + di.field_o)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }

@@ -127,8 +127,8 @@ final class ob {
           var6 = 2 + var4 * pg.field_e;
           var7 = sh.b(0, 12, var2_int, var5);
           var8 = IntrusiveDeque.a(-1, var6, var3, 20);
-          df.e(var7, var8, var5, var6, 0);
-          df.b(var7 + 1, var8 + 1, var5 - 2, -2 + var6, 16777088);
+          Rasterizer.e(var7, var8, var5, var6, 0);
+          Rasterizer.b(var7 + 1, var8 + 1, var5 - 2, -2 + var6, 16777088);
           ti.field_h.field_C.a(param1, 3 + var7, -ti.field_h.field_C.field_H + var8 - (-1 - rf.field_e), 500, 1000, 0, -1, 0, 0, pg.field_e);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

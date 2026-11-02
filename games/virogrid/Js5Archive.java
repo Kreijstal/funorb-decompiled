@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh {
+final class Js5Archive {
     boolean field_b;
     private sj field_c;
     private ba field_i;
@@ -140,7 +140,7 @@ final class eh {
             if (param2 != -25) {
               return;
             }
-            if (pd.field_x.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_x.startsWith("win") &&
               ne.a(10448, param0)) {
               return;
             }
@@ -179,7 +179,7 @@ final class eh {
 
     final int e(int param0) {
         if (param0 <= 11) {
-          eh.a((String) (((Object[]) (this.field_a[7]))[1]), (java.applet.Applet) (this.field_a[35]), (byte) -84, false);
+          Js5Archive.a((String) (((Object[]) (this.field_a[7]))[1]), (java.applet.Applet) (this.field_a[35]), (byte) -84, false);
         }
         if (!this.c(0)) {
           return -1;
@@ -214,7 +214,7 @@ final class eh {
         if (!w.field_I.b(-73)) {
           return w.field_I.a(32);
         }
-        if (ao.field_Kb == cb.field_c) {
+        if (ao.field_Kb == MouseWheelInput.field_c) {
           return w.field_I.a(32);
         }
         return pm.field_g;
@@ -733,7 +733,7 @@ final class eh {
     public static void a(byte param0) {
         if (param0 != -104) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          eh.a((String) null, (java.applet.Applet) null, (byte) -81, true);
+          Js5Archive.a((String) null, (java.applet.Applet) null, (byte) -81, true);
         }
         field_j = null;
         field_g = null;
@@ -777,7 +777,7 @@ final class eh {
         return this.field_i.a(-7, param1);
     }
 
-    final static ch[] a(int param0, pd param1) {
+    final static ch[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         ch[] stackIn_3_0 = null;
         ch[] stackIn_12_0 = null;
@@ -1016,7 +1016,7 @@ final class eh {
         return false;
     }
 
-    eh(ba param0, boolean param1, int param2) {
+    Js5Archive(ba param0, boolean param1, int param2) {
         this.field_c = null;
         try {
           if (param2 < 0 ||

@@ -26,13 +26,13 @@ final class vi extends bk {
         fe.field_Fb = false;
         if (param0 < -113) {
           kf.a(-1, -1);
-          cb.field_c = kh.field_e;
+          MouseWheelInput.field_c = kh.field_e;
           pa.field_l = kh.field_e;
           return;
         }
         vi.b((byte) -39);
         kf.a(-1, -1);
-        cb.field_c = kh.field_e;
+        MouseWheelInput.field_c = kh.field_e;
         pa.field_l = kh.field_e;
     }
 

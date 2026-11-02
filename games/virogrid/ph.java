@@ -7,7 +7,7 @@ import java.util.*;
 final class ph extends rn {
     private java.net.ProxySelector field_j;
     static long field_i;
-    static mg[] field_m;
+    static Sprite[] field_m;
     static wm[] field_n;
     static int[] field_o;
     static int[][] field_l;

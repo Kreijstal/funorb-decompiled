@@ -76,7 +76,7 @@ final class ch {
         fi.field_t.j(-4236);
     }
 
-    final static void a(int param0, pd param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
         ok.field_G = param8;
         co.field_g = param4;
         ed.field_b = param3;
@@ -100,7 +100,7 @@ final class ch {
     final static void a(boolean param0) {
         if (null == md.field_e) {
           md.field_e = null;
-          wf.field_d = null;
+          RasterBuffer.field_d = null;
           if (param0) {
             return;
           }
@@ -109,7 +109,7 @@ final class ch {
         }
         if (null == md.field_e.field_d) {
           md.field_e = null;
-          wf.field_d = null;
+          RasterBuffer.field_d = null;
           if (param0) {
             return;
           }
@@ -118,7 +118,7 @@ final class ch {
         }
         md.field_e.field_d.field_xb = false;
         md.field_e = null;
-        wf.field_d = null;
+        RasterBuffer.field_d = null;
         if (param0) {
           return;
         }

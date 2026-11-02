@@ -56,7 +56,7 @@ final class ok extends fd implements im, ta {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, e param9, int param10, mg[] param11, int param12, int param13, int param14, int param15, mg[] param16, e param17, mg[] param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, e param9, int param10, Sprite[] param11, int param12, int param13, int param14, int param15, Sprite[] param16, e param17, Sprite[] param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -200,17 +200,17 @@ final class ok extends fd implements im, ta {
             field_J = true;
           }
           if (0 == param0) {
-            wf.a("terms.ws", 12);
+            RasterBuffer.a("terms.ws", 12);
             return;
           }
           if (param0 == 1) {
-            wf.a("privacy.ws", 12);
+            RasterBuffer.a("privacy.ws", 12);
             return;
           }
           if (param0 != 2) {
             return;
           }
-          wf.a("conduct.ws", 12);
+          RasterBuffer.a("conduct.ws", 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

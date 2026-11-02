@@ -12,12 +12,12 @@ final class qn extends tg {
     static IntrusiveDeque field_P;
     int field_O;
     int field_M;
-    static eh field_I;
+    static Js5Archive field_I;
     static java.util.zip.CRC32 field_S;
     static String field_L;
-    static km field_J;
-    static km field_H;
-    static pd field_R;
+    static UiWidget field_J;
+    static UiWidget field_H;
+    static PlatformTaskDispatcher field_R;
 
     public static void c(byte param0) {
         field_I = null;

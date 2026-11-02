@@ -36,7 +36,7 @@ final class fm {
           sh.field_rb = var1_int + dg.field_x;
           var2 = tl.field_i;
           for (var3 = 0; vg.field_F.length > var3; var3++) {
-            var4 = wf.field_f[var3];
+            var4 = RasterBuffer.field_f[var3];
             if (var4 >= 0) {
               if (var4 != g.field_b.field_d) {
                 var5 = na.field_Hb;

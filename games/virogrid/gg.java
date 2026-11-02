@@ -4,11 +4,11 @@
 abstract class gg extends fd {
     private je field_L;
     static int[][] field_E;
-    static km field_F;
+    static UiWidget field_F;
     boolean field_G;
     static String[] field_I;
     static PacketBuffer field_D;
-    static km field_M;
+    static UiWidget field_M;
     static String field_N;
     private int field_H;
     static String field_J;
@@ -29,10 +29,10 @@ abstract class gg extends fd {
         if (b.field_Eb == null ||
           !(b.field_Eb.field_w >= this.field_g) ||
           !(b.field_Eb.field_p >= this.field_m)) {
-          b.field_Eb = new mg(this.field_g, this.field_m);
+          b.field_Eb = new Sprite(this.field_g, this.field_m);
         }
         kb.a(b.field_Eb, 16865);
-        df.c();
+        Rasterizer.c();
         this.b(0, 23, 0);
         super.a(param0, -param1 - this.field_l, -param2 - this.field_u, param3);
         ai.a(true);
@@ -100,7 +100,7 @@ abstract class gg extends fd {
     final void c(int param0, int param1, int param2) {
         this.a(param0, true, mn.field_a - param0 >> 1, mm.field_i - param2 >> 1, param2);
         if (param1 < 106) {
-          field_F = (km) null;
+          field_F = (UiWidget) null;
         }
     }
 
@@ -150,7 +150,7 @@ abstract class gg extends fd {
     final static void a(int param0, wg param1, boolean param2, int param3) {
         try {
           if (!param2) {
-            field_F = (km) null;
+            field_F = (UiWidget) null;
           }
           jf.field_o = param1;
           oe.field_f = param0;

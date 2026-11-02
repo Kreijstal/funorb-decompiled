@@ -8,7 +8,7 @@ final class pn extends dk {
     static String field_C;
     static String field_A;
     static String field_w;
-    private el field_B;
+    private BufferedSocket field_B;
     static String field_y;
     static boolean field_x;
 
@@ -134,7 +134,7 @@ final class pn extends dk {
               var7 = gl.a(1492912648, true, mn.field_c[var4]);
               var8 = -(var7 >> 1) + hn.field_q;
               var5 = var5 + oh.field_d;
-              if (wf.a(-eh.field_d + var8, param1, (eh.field_d << 1) + var7, true, var5, param0, mi.field_c + (bj.field_j << 1))) {
+              if (RasterBuffer.a(-Js5Archive.field_d + var8, param1, (Js5Archive.field_d << 1) + var7, true, var5, param0, mi.field_c + (bj.field_j << 1))) {
                 stackIn_7_0 = var6;
                 return stackIn_7_0;
               }
@@ -186,7 +186,7 @@ final class pn extends dk {
               }
               this.field_B = null;
             }
-            this.field_B = (el) (param2);
+            this.field_B = (BufferedSocket) (param2);
             this.b(false);
             this.a(param1, -13919);
             this.field_n.position = 0;

@@ -180,7 +180,7 @@ final class wk extends fd implements fc, ta {
         super(0, 0, 496, 0, (ol) null);
         this.field_D = new vd("", (cd) null, 12);
         aj var1 = new aj(dk.field_j, 0, 0, 0, 0, 16777215, -1, 3, 0, dj.field_h.field_H, -1, 2147483647, true);
-        fi var2 = new fi(ld.field_e, var1, (cd) null);
+        fi var2 = new fi(GameKeyHandler.field_e, var1, (cd) null);
         this.field_E = new tg(kb.field_a, (cd) null);
         this.field_G = new tg(vb.field_g, (cd) null);
         this.field_D.field_h = sd.field_c;

@@ -209,7 +209,7 @@ abstract class mb extends dc {
         field_db = (int[][]) null;
     }
 
-    final static void a(int param0, byte param1, mg[] param2, int param3, int param4) {
+    final static void a(int param0, byte param1, Sprite[] param2, int param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -230,8 +230,8 @@ abstract class mb extends dc {
             var7 = param2[1].field_u;
             param2[0].d(param3, param4);
             param2[2].d(-var6 + param0 + param3, param4);
-            df.b(od.field_m);
-            df.h(param3 + var5_int, param4, -var6 + param0 + param3, param2[1].field_z + param4);
+            Rasterizer.b(od.field_m);
+            Rasterizer.h(param3 + var5_int, param4, -var6 + param0 + param3, param2[1].field_z + param4);
             if (param1 != -117) {
               return;
             }
@@ -240,7 +240,7 @@ abstract class mb extends dc {
             for (param3 = var8; var9 > param3; param3 = param3 + var7) {
               param2[1].d(param3, param4);
             }
-            df.a(od.field_m);
+            Rasterizer.a(od.field_m);
             return;
           }
           return;

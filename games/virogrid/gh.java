@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class gh extends km {
+final class gh extends UiWidget {
     static String field_Kb;
     String field_Pb;
     int field_Nb;
     String field_Jb;
-    km field_Eb;
+    UiWidget field_Eb;
     static nh field_Ib;
-    km field_Mb;
+    UiWidget field_Mb;
     String field_Hb;
     String field_Ob;
     static String field_Fb;
     static String field_Lb;
-    km field_Gb;
+    UiWidget field_Gb;
 
     final static String a(long param0, byte param1) {
         int var7 = 0;
@@ -46,7 +46,7 @@ final class gh extends km {
     }
 
     gh() {
-        super(0L, (km) null);
+        super(0L, (UiWidget) null);
     }
 
     static {

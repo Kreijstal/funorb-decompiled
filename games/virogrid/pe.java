@@ -8,7 +8,7 @@ final class pe extends IntrusiveNode {
     static int field_k;
     int field_i;
 
-    final static void a(java.awt.Component param0, i param1, pd param2, boolean param3, byte param4, int param5) {
+    final static void a(java.awt.Component param0, i param1, PlatformTaskDispatcher param2, boolean param3, byte param4, int param5) {
         if (param4 >= -4) {
           return;
         }
@@ -28,12 +28,12 @@ final class pe extends IntrusiveNode {
         int var10 = Virogrid.field_F ? 1 : 0;
         int var9Lifetime1;
         try {
-          var5_int = df.field_e * param0 + param2;
-          var6 = param4 * df.field_e + var5_int;
+          var5_int = Rasterizer.field_e * param0 + param2;
+          var6 = param4 * Rasterizer.field_e + var5_int;
           var7 = (param1 & 16711422) >> 1;
           var8 = 0;
-          for (var9 = var5_int; var6 > var9; var9 = var9 + df.field_e) {
-            df.field_d[var9] = 0 == var8 % 2 ? var7 : param1;
+          for (var9 = var5_int; var6 > var9; var9 = var9 + Rasterizer.field_e) {
+            Rasterizer.field_d[var9] = 0 == var8 % 2 ? var7 : param1;
             var8++;
           }
           var9Lifetime1 = -57 / ((-54 - param3) / 53);
@@ -47,7 +47,7 @@ final class pe extends IntrusiveNode {
         int var1 = -99 / ((-23 - param0) / 53);
     }
 
-    final static String a(String param0, String param1, eh param2, int param3, int param4) {
+    final static String a(String param0, String param1, Js5Archive param2, int param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -216,7 +216,7 @@ final class pe extends IntrusiveNode {
           field_k = 63;
         }
         mb.field_bb = null;
-        el.field_w = null;
+        BufferedSocket.field_w = null;
     }
 
     pe(jh param0, IntrusiveNode param1) {

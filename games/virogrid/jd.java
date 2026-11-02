@@ -8,7 +8,7 @@ final class jd {
     private java.util.zip.Inflater field_c;
     static String field_e;
     static String field_b;
-    static km field_d;
+    static UiWidget field_d;
 
     final static boolean a(int param0, String param1) {
         int var2_int = 0;
@@ -24,7 +24,7 @@ final class jd {
         try {
           if (param0 != -685) {
             var5 = (rm[]) null;
-            jd.a((eh) null, (byte) -118, (int[]) null, (eh) null, (rm[]) null);
+            jd.a((Js5Archive) null, (byte) -118, (int[]) null, (Js5Archive) null, (rm[]) null);
           }
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
@@ -127,11 +127,11 @@ final class jd {
         this(-1, 1000000, 1000000);
     }
 
-    final static void a(eh param0, byte param1, int[] param2, eh param3, rm[] param4) {
-        mg[] dupTemp$0 = null;
-        mg[] dupTemp$1 = null;
-        mg[] dupTemp$2 = null;
-        mg[] dupTemp$3 = null;
+    final static void a(Js5Archive param0, byte param1, int[] param2, Js5Archive param3, rm[] param4) {
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         rm[] var5 = null;
         int[] var6 = null;
         rm[] var6_array = null;
@@ -155,16 +155,16 @@ final class jd {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         v var7 = null;
-        km var8 = null;
-        km var9 = null;
-        km var10 = null;
-        km var11 = null;
-        mg[] var12 = null;
-        mg[] var13 = null;
-        mg[] var14 = null;
-        km var15 = null;
-        mg[] var16 = null;
-        mg[] var17 = null;
+        UiWidget var8 = null;
+        UiWidget var9 = null;
+        UiWidget var10 = null;
+        UiWidget var11 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
+        UiWidget var15 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int var7_intLifetime1;
         var18 = Virogrid.field_F ? 1 : 0;
         try {
@@ -230,48 +230,48 @@ final class jd {
           var7.a(var5, var24);
           db.field_h.a(var5, var24);
           em.field_d.a(var5, var24);
-          var8 = new km(0L, (km) null);
+          var8 = new UiWidget(0L, (UiWidget) null);
           var8.field_C = (e) ((Object) var7);
           var8.field_fb = pg.field_e;
           var8.field_E = 16777215;
           var8.field_D = 1;
           var9 = var8;
           var9.field_lb = 1;
-          var10 = new km(0L, (km) null);
+          var10 = new UiWidget(0L, (UiWidget) null);
           var10.field_E = 16777215;
           var10.field_fb = pg.field_e;
           var10.field_C = (e) ((Object) db.field_h);
           var11 = var10;
           var10.field_D = 1;
           var11.field_lb = 1;
-          kh.field_b = new km(0L, var8);
+          kh.field_b = new UiWidget(0L, var8);
           kh.field_b.field_vb = he.a(ke.a(32, param3, "lobby", "heading"), 0);
-          wn.field_m = new km(0L, (km) null);
+          wn.field_m = new UiWidget(0L, (UiWidget) null);
           wn.field_m.field_vb = lm.a(4210752, 124, 120, 8421504, false, false);
-          IntrusiveDeque.field_a = new km(0L, (km) null);
+          IntrusiveDeque.field_a = new UiWidget(0L, (UiWidget) null);
           IntrusiveDeque.field_a.field_vb = ne.a(114, 3, 1, (byte) 106, 6316128, 6316128);
-          s.field_f = new km(0L, (km) null);
+          s.field_f = new UiWidget(0L, (UiWidget) null);
           s.field_f.field_vb = he.a(ke.a(32, param3, "lobby", "popup"), 0);
           var12 = he.a(ke.a(32, param3, "lobby", "popup_mouseover"), 0);
           var13 = ke.a(32, param3, "lobby", "button");
           var14 = he.a(ke.a(32, param3, "lobby", "tab_active"), 0);
-          wh.field_a = new km(0L, var8);
+          wh.field_a = new UiWidget(0L, var8);
           wh.field_a.field_vb = var14;
-          eb.field_b = new km(0L, (km) null);
+          eb.field_b = new UiWidget(0L, (UiWidget) null);
           eb.field_b.field_qb = sn.a(param3, "closebutton", "lobby", false);
           eb.field_b.field_sb = sn.a(param3, "closebutton_mouseover", "lobby", false);
-          me.field_c = new km(0L, var8);
-          me.field_c.field_vb = lm.a(2039583, -78, 40, 3815994, true, true);
-          ag.field_d = new km(0L, var10);
+          MouseInputHandler.field_c = new UiWidget(0L, var8);
+          MouseInputHandler.field_c.field_vb = lm.a(2039583, -78, 40, 3815994, true, true);
+          ag.field_d = new UiWidget(0L, var10);
           ag.field_d.field_z = 2;
           ag.field_d.field_vb = lm.a(2039583, 71, 30, 3815994, false, true);
-          jm.field_b = new km(0L, var10);
+          jm.field_b = new UiWidget(0L, var10);
           jm.field_b.field_z = 2;
           jm.field_b.field_vb = lm.a(2039583, -93, 30, 3815994, false, false);
-          he.field_Jb = new km(0L, var10);
+          he.field_Jb = new UiWidget(0L, var10);
           he.field_Jb.field_z = 2;
           he.field_Jb.field_vb = lm.a(2039583, -17, 30, 3815994, true, false);
-          ti.field_h = new km(0L, (km) null);
+          ti.field_h = new UiWidget(0L, (UiWidget) null);
           ti.field_h.field_E = 13421772;
           ti.field_h.field_C = (e) ((Object) db.field_h);
           if (param1 <= 17) {
@@ -279,29 +279,29 @@ final class jd {
           }
           ti.field_h.field_D = 1;
           ti.field_h.field_fb = pg.field_e;
-          IntrusiveDequeCursor.field_e = new km(0L, ti.field_h);
+          IntrusiveDequeCursor.field_e = new UiWidget(0L, ti.field_h);
           IntrusiveDequeCursor.field_e.field_E = 16764006;
           IntrusiveDequeCursor.field_e.field_db = 8421504;
           IntrusiveDequeCursor.field_e.field_ab = 16777215;
           IntrusiveDequeCursor.field_e.field_bb = 16777215;
           IntrusiveDequeCursor.field_e.field_A = 16777215;
-          var15 = new km(0L, IntrusiveDequeCursor.field_e);
+          var15 = new UiWidget(0L, IntrusiveDequeCursor.field_e);
           var15.field_E = 16777215;
           var15.field_C = (e) ((Object) var7);
           var15.field_fb = pg.field_e;
-          da.field_n = new km(0L, ti.field_h);
+          da.field_n = new UiWidget(0L, ti.field_h);
           da.field_n.field_vb = lm.a(2236962, -38, 16, 2236962, false, false);
           da.field_n.field_z = 2;
-          ke.field_u = new km(0L, ti.field_h);
+          ke.field_u = new UiWidget(0L, ti.field_h);
           ke.field_u.field_vb = lm.a(1513239, 99, 16, 1513239, false, false);
           ke.field_u.field_z = 2;
-          field_d = new km(0L, da.field_n);
+          field_d = new UiWidget(0L, da.field_n);
           field_d.b(18003, IntrusiveDequeCursor.field_e);
-          gg.field_F = new km(0L, ke.field_u);
+          gg.field_F = new UiWidget(0L, ke.field_u);
           gg.field_F.b(18003, IntrusiveDequeCursor.field_e);
           var16 = ke.a(32, param3, "lobby", "button_mouseover");
           sd.field_f = new ga(s.field_f, var12, ti.field_h, IntrusiveDequeCursor.field_e, 3, 2, dl.field_b, 3, pg.field_e);
-          od.field_y = new km(0L, IntrusiveDequeCursor.field_e);
+          od.field_y = new UiWidget(0L, IntrusiveDequeCursor.field_e);
           od.field_y.field_x = var16;
           od.field_y.field_vb = var13;
           od.field_y.field_O = 1;
@@ -312,34 +312,34 @@ final class jd {
           od.field_y.field_cb = ke.a(32, param3, "lobby", "button_active");
           od.field_y.field_L = ke.a(32, param3, "lobby", "button_disabled");
           od.field_y.field_lb = 1;
-          ve.field_w = new km(0L, IntrusiveDequeCursor.field_e);
+          ve.field_w = new UiWidget(0L, IntrusiveDequeCursor.field_e);
           ve.field_w.field_lb = 1;
           ve.field_w.field_vb = he.a(ke.a(32, param3, "lobby", "tab_inactive"), 0);
           ve.field_w.field_x = he.a(ke.a(32, param3, "lobby", "tab_mouseover"), 0);
           ve.field_w.field_cb = var14;
-          sl.field_h = new km(0L, (km) null);
+          sl.field_h = new UiWidget(0L, (UiWidget) null);
           sl.field_h.field_vb = ne.a(206, 3, -1, (byte) 106, 1127256, 1856141);
-          cc.field_w = new km(0L, (km) null);
+          cc.field_w = new UiWidget(0L, (UiWidget) null);
           cc.field_w.field_vb = ne.a(290, 3, -1, (byte) 106, 6052956, 11579568);
-          bd.field_b = new km(0L, var15);
+          bd.field_b = new UiWidget(0L, var15);
           bd.field_b.field_zb = 1;
           bd.field_b.field_lb = 1;
           bd.field_b.field_O = 1;
           bd.field_b.field_hb = 1;
           bd.field_b.field_R = 1;
-          fa.field_n = new km(0L, bd.field_b);
-          eb.field_c = new km(0L, IntrusiveDequeCursor.field_e);
+          fa.field_n = new UiWidget(0L, bd.field_b);
+          eb.field_c = new UiWidget(0L, IntrusiveDequeCursor.field_e);
           eb.field_c.field_lb = 1;
           eb.field_c.field_O = 1;
           eb.field_c.field_hb = 1;
           eb.field_c.field_R = 1;
           eb.field_c.field_zb = 1;
-          id.field_a = new km(0L, eb.field_c);
-          kf.field_g = new km(0L, eb.field_c);
-          mf.field_j = new km(0L, bd.field_b);
-          pl.field_a = new km(0L, eb.field_c);
-          nb.field_r = new km(0L, eb.field_c);
-          vf.field_e = new km(0L, eb.field_c);
+          id.field_a = new UiWidget(0L, eb.field_c);
+          kf.field_g = new UiWidget(0L, eb.field_c);
+          mf.field_j = new UiWidget(0L, bd.field_b);
+          pl.field_a = new UiWidget(0L, eb.field_c);
+          nb.field_r = new UiWidget(0L, eb.field_c);
+          vf.field_e = new UiWidget(0L, eb.field_c);
           eb.field_c.field_vb = he.a(ke.a(32, param3, "lobby", "smallbutton"), 0);
           eb.field_c.field_x = he.a(ke.a(32, param3, "lobby", "smallbutton_mouseover"), 0);
           dupTemp$0 = he.a(ke.a(32, param3, "lobby", "smallbutton_active"), 0);
@@ -381,28 +381,28 @@ final class jd {
           nb.field_r.field_T = dupTemp$3;
           var17 = ke.a(32, param3, "lobby", "checkbox");
           vd.field_Z = new en(0L, var17[1], var17[0], 1, IntrusiveDequeCursor.field_e, (String) null);
-          ld.field_b = new km(0L, (km) null);
-          ld.field_b.field_vb = qc.a(109, sn.a(param3, "slideregion", "lobby", false));
-          ld.field_b.field_x = qc.a(125, sn.a(param3, "slideregion_mouseover", "lobby", false));
-          ld.field_b.field_T = qc.a(91, sn.a(param3, "slideregion_mouseheld", "lobby", false));
-          ld.field_b.field_L = qc.a(63, sn.a(param3, "slideregion_disabled", "lobby", false));
-          pb.field_p = new km(0L, (km) null);
+          GameKeyHandler.field_b = new UiWidget(0L, (UiWidget) null);
+          GameKeyHandler.field_b.field_vb = qc.a(109, sn.a(param3, "slideregion", "lobby", false));
+          GameKeyHandler.field_b.field_x = qc.a(125, sn.a(param3, "slideregion_mouseover", "lobby", false));
+          GameKeyHandler.field_b.field_T = qc.a(91, sn.a(param3, "slideregion_mouseheld", "lobby", false));
+          GameKeyHandler.field_b.field_L = qc.a(63, sn.a(param3, "slideregion_disabled", "lobby", false));
+          pb.field_p = new UiWidget(0L, (UiWidget) null);
           pb.field_p.field_vb = he.a(ke.a(32, param3, "lobby", "dragbar"), 0);
           pb.field_p.field_x = he.a(ke.a(32, param3, "lobby", "dragbar_mouseover"), 0);
           pb.field_p.field_T = he.a(ke.a(32, param3, "lobby", "dragbar_mouseheld"), 0);
           pb.field_p.field_L = he.a(ke.a(32, param3, "lobby", "dragbar_disabled"), 0);
-          ab.field_K = new km(0L, (km) null);
+          ab.field_K = new UiWidget(0L, (UiWidget) null);
           ab.field_K.field_qb = sn.a(param3, "upbutton", "lobby", false);
           ab.field_K.field_sb = sn.a(param3, "upbutton_mouseover", "lobby", false);
           ab.field_K.field_y = sn.a(param3, "upbutton_mouseheld", "lobby", false);
           ab.field_K.field_rb = sn.a(param3, "upbutton_disabled", "lobby", false);
-          tf.field_d = new km(0L, (km) null);
+          tf.field_d = new UiWidget(0L, (UiWidget) null);
           tf.field_d.field_qb = sn.a(param3, "downbutton", "lobby", false);
           tf.field_d.field_sb = sn.a(param3, "downbutton_mouseover", "lobby", false);
           tf.field_d.field_y = sn.a(param3, "downbutton_mouseheld", "lobby", false);
           tf.field_d.field_rb = sn.a(param3, "downbutton_disabled", "lobby", false);
-          ub.field_z = new qm(0L, ab.field_K, tf.field_d, ld.field_b, pb.field_p);
-          gg.field_K = new ao(0L, (km) null, gg.field_M, ub.field_z, eb.field_c, (String) null, (String) null);
+          ub.field_z = new qm(0L, ab.field_K, tf.field_d, GameKeyHandler.field_b, pb.field_p);
+          gg.field_K = new ao(0L, (UiWidget) null, gg.field_M, ub.field_z, eb.field_c, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -512,7 +512,7 @@ final class jd {
               var5 = var6;
               var5Lifetime1 = var6;
               if (param0 > -13) {
-                field_d = (km) null;
+                field_d = (UiWidget) null;
               }
               var4 = param2.getParameter("cookiehost");
               var5Lifetime2 = var4;
@@ -528,7 +528,7 @@ final class jd {
               q.a("document.cookie=\"" + var5Lifetime6 + "\"", -17107, param2);
             } catch (Throwable throwable) {
             }
-            wf.a(param2, 49);
+            RasterBuffer.a(param2, 49);
           } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) ((Object) runtimeException), "jd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

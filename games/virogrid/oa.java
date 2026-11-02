@@ -25,24 +25,24 @@ final class oa extends ba {
     private boolean field_d;
     private long field_w;
 
-    final static void a(byte param0, eh param1) {
-        km var6 = null;
-        km var7 = null;
-        km var3 = null;
+    final static void a(byte param0, Js5Archive param1) {
+        UiWidget var6 = null;
+        UiWidget var7 = null;
+        UiWidget var3 = null;
         try {
           qg.field_u = sn.a(param1, "display_name_changed", "basic", false);
           ve.field_q = new ao(0L, gg.field_K, dc.field_Z, hm.field_a);
           lg.field_a = new ao(0L, gg.field_K, kh.field_a, a.field_A);
-          dg.field_E = new km(0L, (km) null);
-          ee.field_e = new km(0L, ti.field_h);
+          dg.field_E = new UiWidget(0L, (UiWidget) null);
+          ee.field_e = new UiWidget(0L, ti.field_h);
           ee.field_e.field_lb = 1;
-          se.field_c = new km(0L, ag.field_d, tl.field_h);
+          se.field_c = new UiWidget(0L, ag.field_d, tl.field_h);
           if (param0 > -16) {
             int[] var4 = (int[]) null;
             oa.a(90, (String) null, -60L, 66, (int[]) null);
           }
-          DualLinkNode.field_m = new km(0L, he.field_Jb, ke.field_s);
-          tf.field_c = new km(0L, IntrusiveDequeCursor.field_e);
+          DualLinkNode.field_m = new UiWidget(0L, he.field_Jb, ke.field_s);
+          tf.field_c = new UiWidget(0L, IntrusiveDequeCursor.field_e);
           dg.field_E.a(0, ee.field_e);
           dg.field_E.a(0, se.field_c);
           dg.field_E.a(0, DualLinkNode.field_m);

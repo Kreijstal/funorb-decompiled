@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gd extends wf implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_s;
     private java.awt.image.ImageConsumer field_o;
     static wl field_r;
@@ -64,7 +64,7 @@ final class gd extends wf implements java.awt.image.ImageProducer, java.awt.imag
         field_p = null;
         field_q = null;
         if (param0 < 67) {
-          gd.b((byte) 93);
+          ImageProducerRasterBuffer.b((byte) 93);
           field_r = null;
           return;
         }
@@ -141,7 +141,7 @@ final class gd extends wf implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    gd() {
+    ImageProducerRasterBuffer() {
     }
 
     static {

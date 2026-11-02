@@ -66,7 +66,7 @@ abstract class dk {
               }
             }
             if (2 == ij.field_q) {
-              ng.field_N = new el((java.net.Socket) (vm.field_b.field_f), ii.field_a);
+              ng.field_N = new BufferedSocket((java.net.Socket) (vm.field_b.field_f), ii.field_a);
               var2 = new PacketBuffer(13);
               hj.a(fd.field_C, var2, rj.field_l, ed.field_b, 12);
               var2.a(15, param0 ^ -26);

@@ -24,7 +24,7 @@ class ua {
     private int field_l;
     private int field_o;
 
-    final static ua a(pd param0, java.awt.Component param1, int param2, int param3) {
+    final static ua a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           tc var4 = null;
           Throwable var4_ref = null;

@@ -12,10 +12,10 @@ final class qg extends IntrusiveNode {
     int field_t;
     static ul field_r;
     int field_i;
-    static mg[] field_j;
+    static Sprite[] field_j;
     int field_o;
     static int field_n;
-    static mg field_u;
+    static Sprite field_u;
     static il field_h;
     static int field_w;
     static int field_g;
@@ -108,7 +108,7 @@ final class qg extends IntrusiveNode {
           field_r = null;
           return;
         }
-        field_j = (mg[]) null;
+        field_j = (Sprite[]) null;
         field_r = null;
     }
 

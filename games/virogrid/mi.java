@@ -54,7 +54,7 @@ abstract class mi implements le {
           mi.e(-16);
           hn.a(-1781, param0);
           if (en.field_Fb) {
-            df.g(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
+            Rasterizer.g(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
             he.field_pc.field_c.a(param0, 24960);
             la.a(param1 ^ 8271, param0);
             return;
@@ -67,7 +67,7 @@ abstract class mi implements le {
           la.a(param1 ^ 8271, param0);
           return;
         }
-        df.g(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
+        Rasterizer.g(he.field_pc.field_c.field_tb, he.field_pc.field_c.field_F, he.field_pc.field_c.field_K, he.field_pc.field_c.field_ub);
         he.field_pc.field_c.a(param0, 24960);
         la.a(param1 ^ 8271, param0);
     }
@@ -131,7 +131,7 @@ abstract class mi implements le {
           return wm.field_v;
         }
         if (!(hc.a(param0 + 12257) >= 350L + this.field_b)) {
-          return gd.field_r;
+          return ImageProducerRasterBuffer.field_r;
         }
         if (param0 == -22243) {
           return this.f(-843083384);

@@ -85,7 +85,7 @@ abstract class ie {
         }
     }
 
-    final static vh a(boolean param0, int param1, int param2, eh param3, eh param4) {
+    final static vh a(boolean param0, int param1, int param2, Js5Archive param3, Js5Archive param4) {
         RuntimeException var5 = null;
         vh stackIn_2_0 = null;
         vh stackIn_7_0 = null;

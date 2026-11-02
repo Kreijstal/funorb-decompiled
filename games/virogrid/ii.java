@@ -4,10 +4,10 @@
 final class ii {
     private byte[] field_c;
     private int[] field_f;
-    static pd field_a;
+    static PlatformTaskDispatcher field_a;
     private int[] field_e;
     static int field_b;
-    static km field_d;
+    static UiWidget field_d;
 
     final static void b(byte param0) {
         vi.b((byte) -123);
@@ -43,7 +43,7 @@ final class ii {
         try {
           var7_int = 0;
           if (param2 != -7089) {
-            field_d = (km) null;
+            field_d = (UiWidget) null;
           }
           param0 = param0 + param3;
           var8 = param1 << 3;
@@ -366,7 +366,7 @@ final class ii {
                   }
                   if (var5 >= 2 &&
                     !param1) {
-                    stackIn_30_0 = km.field_P;
+                    stackIn_30_0 = UiWidget.field_P;
                     return stackIn_30_0;
                   }
                 }
@@ -536,7 +536,7 @@ final class ii {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 27984) {
-            field_a = (pd) null;
+            field_a = (PlatformTaskDispatcher) null;
           }
           var4 = (String) null;
           stackIn_3_0 = wh.a(0, false, 0, true, (String) null, param1, param0);

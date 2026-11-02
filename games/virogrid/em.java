@@ -76,7 +76,7 @@ final class em {
         }
     }
 
-    final static v a(int param0, int param1, eh param2, boolean param3, eh param4) {
+    final static v a(int param0, int param1, Js5Archive param2, boolean param3, Js5Archive param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         v stackIn_6_0 = null;

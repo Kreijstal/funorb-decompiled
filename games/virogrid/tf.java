@@ -4,8 +4,8 @@
 final class tf {
     int field_b;
     static IntrusiveDeque field_a;
-    static km field_c;
-    static km field_d;
+    static UiWidget field_c;
+    static UiWidget field_d;
 
     final static void a(byte param0) {
         sd.field_e = 0;

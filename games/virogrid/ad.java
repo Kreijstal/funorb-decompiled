@@ -4,13 +4,13 @@
 final class ad {
     static String field_f;
     static String field_a;
-    static mg field_b;
+    static Sprite field_b;
     static String field_j;
-    private eh field_k;
+    private Js5Archive field_k;
     private sl field_d;
     static boolean field_h;
     static boolean field_l;
-    private eh field_e;
+    private Js5Archive field_e;
     static int field_i;
     static int field_c;
     static double[] field_g;
@@ -76,7 +76,7 @@ final class ad {
         field_g = null;
     }
 
-    ad(int param0, eh param1, eh param2, be param3) {
+    ad(int param0, Js5Archive param1, Js5Archive param2, be param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

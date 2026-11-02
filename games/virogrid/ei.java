@@ -5,7 +5,7 @@ final class ei {
     static GameSession field_b;
     static String field_e;
     static volatile int field_f;
-    static pd field_c;
+    static PlatformTaskDispatcher field_c;
     static boolean[] field_d;
     static boolean field_a;
 

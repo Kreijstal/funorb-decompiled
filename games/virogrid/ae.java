@@ -28,7 +28,7 @@ final class ae implements ol {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        mg var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param1.field_l + param0;
           if (param4 != -23294) {

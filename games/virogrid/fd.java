@@ -5,7 +5,7 @@ import java.util.*;
 
 class fd extends fi implements ja {
     static String field_x;
-    static km field_y;
+    static UiWidget field_y;
     static String[] field_A;
     static int[] field_B;
     IntrusiveDeque field_z;
@@ -139,9 +139,9 @@ class fd extends fi implements ja {
           return;
         }
         int var7 = 3;
-        df.c(param3, param5, param2, param6, (param6 >> 1) - 2, !param4 ? 1063506 : 1264494);
+        Rasterizer.c(param3, param5, param2, param6, (param6 >> 1) - 2, !param4 ? 1063506 : 1264494);
         int var8 = 2 * var7;
-        df.c(param3 + var7, var7 + param5, -var8 + param2, param6 - var8, -var7 + ((param6 >> 1) - 2), 2);
+        Rasterizer.c(param3 + var7, var7 + param5, -var8 + param2, param6 - var8, -var7 + ((param6 >> 1) - 2), 2);
     }
 
     final void a(fi param0, byte param1) {

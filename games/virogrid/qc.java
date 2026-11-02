@@ -5,8 +5,8 @@ final class qc {
     private vb[] field_g;
     private int field_e;
     String field_j;
-    static pd field_f;
-    static km field_i;
+    static PlatformTaskDispatcher field_f;
+    static UiWidget field_i;
     static int field_c;
     float field_a;
     private int field_d;
@@ -57,7 +57,7 @@ final class qc {
             return stackIn_3_0;
           }
           if (255 < var2_int) {
-            stackIn_7_0 = cb.field_a;
+            stackIn_7_0 = MouseWheelInput.field_a;
             return stackIn_7_0;
           }
           var3 = ql.a(param1, (byte) -123, '.');
@@ -129,25 +129,25 @@ final class qc {
         return true;
     }
 
-    final static mg[] a(int param0, mg param1) {
-        mg[] var2 = null;
+    final static Sprite[] a(int param0, Sprite param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        mg[] var3 = null;
-        mg[] stackIn_2_0 = null;
-        mg[] stackIn_4_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new mg[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = param1;
           if (param0 >= 16) {
             stackIn_4_0 = var2;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (mg[]) null;
+          stackIn_2_0 = (Sprite[]) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,15 +164,15 @@ final class qc {
     }
 
     final static void a(int param0) {
-        ph.field_l[me.field_b] = df.field_d;
-        pb.field_i[me.field_b] = df.field_i;
-        CellAnimator.field_i[me.field_b] = df.field_k;
-        ng.field_O[me.field_b] = df.field_g;
-        qe.field_h[me.field_b] = df.field_h;
-        kn.field_K[me.field_b] = df.field_e;
-        se.field_e[me.field_b] = df.field_f;
+        ph.field_l[MouseInputHandler.field_b] = Rasterizer.field_d;
+        pb.field_i[MouseInputHandler.field_b] = Rasterizer.field_i;
+        CellAnimator.field_i[MouseInputHandler.field_b] = Rasterizer.field_k;
+        ng.field_O[MouseInputHandler.field_b] = Rasterizer.field_g;
+        qe.field_h[MouseInputHandler.field_b] = Rasterizer.field_h;
+        kn.field_K[MouseInputHandler.field_b] = Rasterizer.field_e;
+        se.field_e[MouseInputHandler.field_b] = Rasterizer.field_f;
         if (param0 > 96) {
-          me.field_b = me.field_b + 1;
+          MouseInputHandler.field_b = MouseInputHandler.field_b + 1;
           return;
         }
     }

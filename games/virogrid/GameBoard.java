@@ -19,7 +19,7 @@ final class GameBoard {
     boolean field_x;
     static String field_o;
     byte[][] cells;
-    int field_y;
+    int difficulty;
     int field_a;
     int field_D;
     private boolean[] field_h;
@@ -465,7 +465,7 @@ final class GameBoard {
         }
         var2Lifetime1 = 1;
         if (param0 != 20602) {
-          this.field_y = -14;
+          this.difficulty = -14;
         }
         for (var3 = 0; this.cells.length > var3; var3++) {
           for (var4 = 0; var4 < this.cells[0].length; var4++) {
@@ -891,7 +891,7 @@ final class GameBoard {
         this.field_w = -1;
         this.field_a = -1;
         try {
-          this.field_y = param0;
+          this.difficulty = param0;
           if (param1.length != 2) {
             throw new RuntimeException();
           }

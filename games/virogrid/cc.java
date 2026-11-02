@@ -3,9 +3,9 @@
  */
 class cc extends aj {
     static float field_x;
-    static mg field_u;
+    static Sprite field_u;
     static String[] field_v;
-    static km field_w;
+    static UiWidget field_w;
 
     final static lc[] a(byte param0) {
         if (param0 == -104) {
@@ -173,7 +173,7 @@ class cc extends aj {
     }
 
     static {
-        field_u = new mg(270, 70);
+        field_u = new Sprite(270, 70);
         field_v = new String[]{"2D - Fastest", "2D - Best", "3D - Fastest", "3D - Best"};
     }
 }

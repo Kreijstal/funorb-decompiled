@@ -18,22 +18,22 @@ final class rf {
         var17 = Virogrid.field_F ? 1 : 0;
         if (param1 > param8) {
           if (param1 < param10) {
-            sh.a(df.field_d, param11, param5, param15, param13, param3, param7, param10, param12, param14, param2, param9, param6, param4, param1, param8, 0);
+            sh.a(Rasterizer.field_d, param11, param5, param15, param13, param3, param7, param10, param12, param14, param2, param9, param6, param4, param1, param8, 0);
           } else {
             if (param8 < param10) {
-              sh.a(df.field_d, param11, param12, param15, param13, param14, param4, param1, param5, param3, param6, param9, param2, param7, param10, param8, 0);
+              sh.a(Rasterizer.field_d, param11, param12, param15, param13, param14, param4, param1, param5, param3, param6, param9, param2, param7, param10, param8, 0);
             } else {
-              sh.a(df.field_d, param4, param13, param3, param12, param14, param11, param1, param5, param15, param6, param2, param9, param7, param8, param10, 0);
+              sh.a(Rasterizer.field_d, param4, param13, param3, param12, param14, param11, param1, param5, param15, param6, param2, param9, param7, param8, param10, 0);
             }
           }
         } else {
           if (param8 < param10) {
-            sh.a(df.field_d, param7, param13, param14, param5, param3, param11, param10, param12, param15, param2, param6, param9, param4, param8, param1, 0);
+            sh.a(Rasterizer.field_d, param7, param13, param14, param5, param3, param11, param10, param12, param15, param2, param6, param9, param4, param8, param1, 0);
           } else {
             if (param10 > param1) {
-              sh.a(df.field_d, param7, param12, param14, param5, param15, param4, param8, param13, param3, param9, param6, param2, param11, param10, param1, 0);
+              sh.a(Rasterizer.field_d, param7, param12, param14, param5, param15, param4, param8, param13, param3, param9, param6, param2, param11, param10, param1, 0);
             } else {
-              sh.a(df.field_d, param4, param5, param3, param12, param15, param7, param8, param13, param14, param9, param2, param6, param11, param1, param10, 0);
+              sh.a(Rasterizer.field_d, param4, param5, param3, param12, param15, param7, param8, param13, param14, param9, param2, param6, param11, param1, param10, 0);
             }
           }
         }
@@ -47,8 +47,8 @@ final class rf {
         int var2 = (eb.field_f - 640) / 2;
         int var3 = ve.field_t * ve.field_t;
         int var4 = var3 - param0 * param0;
-        ao.field_Eb.a(var2 - var4 * 199 / var3, -90 + (param1 + df.field_f) - 120, 199, (byte) -67, 90);
-        dm.field_r.a(var2 + 202 + 438 * var4 / var3, -124 + df.field_f, 438, (byte) -95, 0);
+        ao.field_Eb.a(var2 - var4 * 199 / var3, -90 + (param1 + Rasterizer.field_f) - 120, 199, (byte) -67, 90);
+        dm.field_r.a(var2 + 202 + 438 * var4 / var3, -124 + Rasterizer.field_f, 438, (byte) -95, 0);
     }
 
     public static void a(int param0) {

@@ -4,13 +4,13 @@
 import java.util.*;
 
 final class eb implements Iterable {
-    static km field_b;
+    static UiWidget field_b;
     static int field_f;
     static String field_a;
     static int field_d;
     static String field_g;
     DualLinkNode field_e;
-    static km field_c;
+    static UiWidget field_c;
 
     final void a(boolean param0, DualLinkNode param1) {
         RuntimeException stackIn_8_0 = null;
@@ -74,21 +74,21 @@ final class eb implements Iterable {
     final static void a(boolean param0, boolean param1, int param2, boolean param3) {
         int stackIn_11_0 = 0;
         String stackIn_24_0 = null;
-        km stackIn_36_0 = null;
+        UiWidget stackIn_36_0 = null;
         String stackIn_37_1 = null;
-        km stackIn_39_0 = null;
+        UiWidget stackIn_39_0 = null;
         String[] stackIn_39_1 = null;
         String stackIn_40_2 = null;
-        km stackIn_70_0 = null;
+        UiWidget stackIn_70_0 = null;
         boolean stackIn_71_1 = false;
-        km stackIn_75_0 = null;
+        UiWidget stackIn_75_0 = null;
         boolean stackIn_76_1 = false;
-        km stackIn_80_0 = null;
+        UiWidget stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        km var5 = null;
-        km var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -99,9 +99,9 @@ final class eb implements Iterable {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        km var15 = null;
+        UiWidget var15 = null;
         String var16 = null;
-        km var17 = null;
+        UiWidget var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -153,7 +153,7 @@ final class eb implements Iterable {
               }
             }
             ii.field_d.field_Y = true;
-            if (!ld.field_c) {
+            if (!GameKeyHandler.field_c) {
               stackIn_36_0 = ii.field_d;
               if (var8 != 0) {
                 stackIn_37_1 = IntrusiveDeque.field_g;
@@ -229,14 +229,14 @@ final class eb implements Iterable {
               var9 = var16;
               var10Lifetime1 = jk.field_b.field_C.a(var16) + 3 * jk.field_b.field_C.a('.');
               jk.field_b.field_lb = 0;
-              if ((rl.field_y & 48) == 16) {
+              if ((SpriteState.field_y & 48) == 16) {
                 var9 = var16 + ".";
               }
               jk.field_b.field_z = (-var10Lifetime1 + jk.field_b.field_K) / 2;
-              if ((48 & rl.field_y) == 32) {
+              if ((48 & SpriteState.field_y) == 32) {
                 var9 = (String) (var9) + "..";
               }
-              if ((48 & rl.field_y) == 48) {
+              if ((48 & SpriteState.field_y) == 48) {
                 var9 = (String) (var9) + "...";
               }
               jk.field_b.field_V = (String) (var9);
@@ -245,13 +245,13 @@ final class eb implements Iterable {
           }
           stackIn_70_0 = ao.field_Eb;
           stackIn_71_1 = (param3) && (!param1) && (!ad.field_h);
-          ((km) (Object) stackIn_70_0).a(stackIn_71_1, (byte) 89);
+          ((UiWidget) (Object) stackIn_70_0).a(stackIn_71_1, (byte) 89);
           stackIn_75_0 = dm.field_r;
           stackIn_76_1 = (param3) && (!param1) && (!ad.field_h);
-          ((km) (Object) stackIn_75_0).a(stackIn_76_1, (byte) 103);
+          ((UiWidget) (Object) stackIn_75_0).a(stackIn_76_1, (byte) 103);
           stackIn_80_0 = pm.field_n;
           stackIn_81_1 = (param3) && (!param1) && (ad.field_h);
-          ((km) (Object) stackIn_80_0).a(stackIn_81_1, (byte) 100);
+          ((UiWidget) (Object) stackIn_80_0).a(stackIn_81_1, (byte) 100);
           he.field_pc.field_c.g(0);
           if (param0) {
             field_f = 123;
@@ -261,7 +261,7 @@ final class eb implements Iterable {
               ub.b(param2, -12508);
             }
             if (0 != ii.field_d.field_nb) {
-              if (!ld.field_c) {
+              if (!GameKeyHandler.field_c) {
                 em.a((byte) -55, param2);
               } else {
                 qa.a(3, param2);

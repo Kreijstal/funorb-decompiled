@@ -18,7 +18,7 @@ class wa extends tg {
     static int field_K;
     static String field_S;
     static String field_L;
-    static km field_I;
+    static UiWidget field_I;
 
     final void a(String param0, int param1, boolean param2) {
         int dupTemp$1 = 0;
@@ -574,7 +574,7 @@ class wa extends tg {
         }
     }
 
-    final static mg[] a(byte param0, int param1, int param2) {
+    final static Sprite[] a(byte param0, int param1, int param2) {
         int var3 = -45 / ((param0 + 20) / 33);
         return ak.a(param1, param2, 1, (byte) 121);
     }

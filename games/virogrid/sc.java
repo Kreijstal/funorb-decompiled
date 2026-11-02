@@ -5,7 +5,7 @@ final class sc extends IntrusiveNode {
     ln field_h;
     byte[] field_g;
 
-    final static sc a(eh param0, String param1, String param2) {
+    final static sc a(Js5Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, 100, param2);
         if (var3 == null) {
           return null;

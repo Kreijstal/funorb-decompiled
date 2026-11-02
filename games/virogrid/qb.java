@@ -48,7 +48,7 @@ final class qb extends ll {
     private int[][] field_y;
     private byte[] field_I;
 
-    final static qb a(eh param0, String param1, String param2) {
+    final static qb a(Js5Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, 100, param2);
         if (var3 == null) {
           return null;

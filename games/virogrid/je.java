@@ -85,11 +85,11 @@ final class je extends ec {
         int var1 = (-640 + eb.field_f) / 2;
         int var2 = ve.field_t * ve.field_t;
         int var3 = var2 - kh.field_d * kh.field_d;
-        fd.field_y.a(-(199 * var3 / var2) + var1, -124 + df.field_f - 90, 199, (byte) -115, 90);
+        fd.field_y.a(-(199 * var3 / var2) + var1, -124 + Rasterizer.field_f - 90, 199, (byte) -115, 90);
         if (param0 != -17491) {
           je.h(84);
         }
-        hg.field_p.a(var1 - (-202 - 438 * var3 / var2), -120 + (df.field_f - 4), 438, (byte) -42, 0);
+        hg.field_p.a(var1 - (-202 - 438 * var3 / var2), -120 + (Rasterizer.field_f - 4), 438, (byte) -42, 0);
     }
 
     final void i(int param0) {

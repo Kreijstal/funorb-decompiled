@@ -7,7 +7,7 @@ final class mk extends dc implements ta {
     static int[] field_gb;
     static int[] field_eb;
     static String field_fb;
-    static mg field_bb;
+    static Sprite field_bb;
 
     private final void g(boolean param0) {
         if (!this.field_G) {
@@ -155,7 +155,7 @@ final class mk extends dc implements ta {
             } else {
               if (param1 == lb.field_a) {
                 this.field_m = this.field_m + 30;
-                var3 = el.field_i;
+                var3 = BufferedSocket.field_i;
               }
             }
           } else {

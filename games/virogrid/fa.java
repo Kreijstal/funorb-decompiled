@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fa extends IntrusiveNode {
-    static km field_n;
+    static UiWidget field_n;
     static String field_h;
     static long field_l;
     static double field_k;
@@ -11,11 +11,11 @@ final class fa extends IntrusiveNode {
     byte[] field_g;
     static String field_m;
 
-    final static km c(int param0) {
+    final static UiWidget c(int param0) {
         if (param0 != 16777215) {
           fa.d(64);
         }
-        return rl.d(true);
+        return SpriteState.d(true);
     }
 
     public static void d(int param0) {
@@ -56,7 +56,7 @@ final class fa extends IntrusiveNode {
         var10 = Virogrid.field_F ? 1 : 0;
         try {
           if (vg.field_I != null) {
-            stackIn_6_0 = vg.field_I.field_g ? 1 : 0;
+            stackIn_6_0 = vg.field_I.online ? 1 : 0;
           } else {
             stackIn_6_0 = (ei.field_b == null) ? 0 : 1;
           }
@@ -99,12 +99,12 @@ final class fa extends IntrusiveNode {
                 pe.field_k = pe.field_k - 1;
               }
             }
-            df.a(651 + (-var4 - 8), -pe.field_k + var2, 8 + var4, 52, 4, 0, 200);
+            Rasterizer.a(651 + (-var4 - 8), -pe.field_k + var2, 8 + var4, 52, 4, 0, 200);
             var6 = (int)kd.field_t - 8;
             var7 = 16;
             if (var6 > 8 &&
               var7 > 8) {
-              df.e(646 - (int)kd.field_t, 2 + (var2 - 20), var6, var7, 4, 1141646);
+              Rasterizer.e(646 - (int)kd.field_t, 2 + (var2 - 20), var6, var7, 4, 1141646);
             }
             var8 = null;
             if (he.field_ec == 1) {
@@ -143,7 +143,7 @@ final class fa extends IntrusiveNode {
                 var5Lifetime1 = 16777215;
               }
               var6Lifetime1 = 26 * var4Lifetime1 + 764 - (int)kd.field_t * 2 + 10;
-              df.e(6 + var6Lifetime1, var2 - 16, 22, 16, 4, 1141646);
+              Rasterizer.e(6 + var6Lifetime1, var2 - 16, 22, 16, 4, 1141646);
               if (var3_intLifetime1 != 256) {
                 kd.field_p[var4Lifetime1].b(var6Lifetime1 + 12, var2 - 13, var5Lifetime1);
               } else {
@@ -174,7 +174,7 @@ final class fa extends IntrusiveNode {
                   var3 = vb.field_i;
                 } else {
                   if (4 == var4Lifetime2) {
-                    var3 = cb.field_b;
+                    var3 = MouseWheelInput.field_b;
                   } else {
                     if (var4Lifetime2 == 5) {
                       var3 = ia.field_a;
@@ -188,8 +188,8 @@ final class fa extends IntrusiveNode {
           var5Lifetime2 = 20;
           var6Lifetime2 = nl.field_u - var4Lifetime3;
           var7Lifetime1 = hk.field_Jb;
-          df.c(var6Lifetime2, -var5Lifetime2 + (var7Lifetime1 + 2), var4Lifetime3, var5Lifetime2, 4, 0);
-          df.e(var6Lifetime2 + 3, -16 + var7Lifetime1, var4Lifetime3 - 6, 16, 4, 1141646);
+          Rasterizer.c(var6Lifetime2, -var5Lifetime2 + (var7Lifetime1 + 2), var4Lifetime3, var5Lifetime2, 4, 0);
+          Rasterizer.e(var6Lifetime2 + 3, -16 + var7Lifetime1, var4Lifetime3 - 6, 16, 4, 1141646);
           vg.field_H.b(var3, 8 + var6Lifetime2, -2 + var7Lifetime1 - vg.field_H.field_G, 16777215, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

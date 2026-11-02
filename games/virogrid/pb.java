@@ -5,7 +5,7 @@ final class pb extends IntrusiveNode {
     static String field_m;
     int field_o;
     int field_j;
-    static km field_p;
+    static UiWidget field_p;
     static String field_k;
     static int[] field_i;
     pb field_q;
@@ -18,7 +18,7 @@ final class pb extends IntrusiveNode {
 
     final static boolean a(int param0) {
         if (param0 != 4) {
-          field_p = (km) null;
+          field_p = (UiWidget) null;
           if (null == kk.field_q) {
             return false;
           }
@@ -36,7 +36,7 @@ final class pb extends IntrusiveNode {
         return false;
     }
 
-    final static void a(byte[] param0, eh param1, String[] param2, int param3, boolean param4, int param5, byte[] param6, rm[] param7, eh param8, int[] param9, String[][] param10, int[] param11, String[][] param12, boolean param13, eh param14, mg[][] param15, mg[][] param16) {
+    final static void a(byte[] param0, Js5Archive param1, String[] param2, int param3, boolean param4, int param5, byte[] param6, rm[] param7, Js5Archive param8, int[] param9, String[][] param10, int[] param11, String[][] param12, boolean param13, Js5Archive param14, Sprite[][] param15, Sprite[][] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -71,7 +71,7 @@ final class pb extends IntrusiveNode {
           var18 = (String[]) null;
           nm.a(param6, param7, param9, param12, param0, param8, 1, (String[]) null, param10, param16, param4, param15, param5, param11, (byte) -94, param2, param1, param14, param3);
           if (param13) {
-            pb.a((byte[]) null, (eh) null, (String[]) null, 25, false, 29, (byte[]) null, (rm[]) null, (eh) null, (int[]) null, (String[][]) null, (int[]) null, (String[][]) null, false, (eh) null, (mg[][]) null, (mg[][]) null);
+            pb.a((byte[]) null, (Js5Archive) null, (String[]) null, 25, false, 29, (byte[]) null, (rm[]) null, (Js5Archive) null, (int[]) null, (String[][]) null, (int[]) null, (String[][]) null, false, (Js5Archive) null, (Sprite[][]) null, (Sprite[][]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

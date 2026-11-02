@@ -9,7 +9,7 @@ abstract class ec extends fi implements ja {
     fi field_x;
     static String field_D;
     static String field_A;
-    static km field_C;
+    static UiWidget field_C;
 
     final boolean a(int param0, fi param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
@@ -43,7 +43,7 @@ abstract class ec extends fi implements ja {
         String var2 = super.d(41);
         String var3Lifetime1;
         if (param0 < 35) {
-          field_C = (km) null;
+          field_C = (UiWidget) null;
           if (this.field_x == null) {
             return var2;
           }

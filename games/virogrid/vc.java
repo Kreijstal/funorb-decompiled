@@ -7,7 +7,7 @@ final class vc extends dc {
     static String field_db;
     static int field_bb;
     private String field_lb;
-    static mg[][] field_fb;
+    static Sprite[][] field_fb;
     static int[] field_jb;
     private String field_kb;
     private boolean field_ib;
@@ -20,7 +20,7 @@ final class vc extends dc {
         if (param1 < 8) {
           vc.g((byte) 3);
           if (this.field_kb != null) {
-            df.b(20 + param2, 113 + param0, 260, 8421504);
+            Rasterizer.b(20 + param2, 113 + param0, 260, 8421504);
             on.field_b.a(this.field_kb, param2 + 20, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, on.field_b.field_H);
             return;
           }
@@ -29,7 +29,7 @@ final class vc extends dc {
         if (this.field_kb == null) {
           return;
         }
-        df.b(20 + param2, 113 + param0, 260, 8421504);
+        Rasterizer.b(20 + param2, 113 + param0, 260, 8421504);
         on.field_b.a(this.field_kb, param2 + 20, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, on.field_b.field_H);
     }
 
@@ -48,7 +48,7 @@ final class vc extends dc {
         if (param0 < 57) {
           return;
         }
-        field_fb = (mg[][]) null;
+        field_fb = (Sprite[][]) null;
         field_jb = null;
     }
 
@@ -140,7 +140,7 @@ final class vc extends dc {
         }
     }
 
-    final static rm a(eh param0, String param1, String param2, byte param3) {
+    final static rm a(Js5Archive param0, String param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

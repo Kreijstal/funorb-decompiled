@@ -7,7 +7,7 @@ final class ti implements ol {
     static e field_g;
     private int field_e;
     static String field_c;
-    static km field_h;
+    static UiWidget field_h;
     static kf field_i;
     private e field_d;
     static int field_b;

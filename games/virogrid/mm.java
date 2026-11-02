@@ -13,7 +13,7 @@ final class mm {
     static int field_i;
     private int field_h;
 
-    final static boolean a(int param0, int param1, eh param2) {
+    final static boolean a(int param0, int param1, Js5Archive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -173,8 +173,8 @@ final class mm {
           var5 = var5 + var10;
         }
         if (param0 < 7) {
-          eh var12 = (eh) null;
-          mm.a(119, -92, (eh) null);
+          Js5Archive var12 = (Js5Archive) null;
+          mm.a(119, -92, (Js5Archive) null);
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
           var4 = var4 + this.field_g[1 + var2Lifetime1];

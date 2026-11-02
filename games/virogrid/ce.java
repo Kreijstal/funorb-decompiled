@@ -140,14 +140,14 @@ final class ce extends ec {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          eh var3 = null;
+          Js5Archive var3 = null;
           hg var5 = null;
           hg var6 = null;
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (param0 >= -35) {
-            var3 = (eh) null;
-            ce.a(47, -49, (eh) null, -99);
+            var3 = (Js5Archive) null;
+            ce.a(47, -49, (Js5Archive) null, -99);
           }
           if (td.field_b == null) {
             td.field_b = qc.field_f.a(uh.field_b, 27402, fj.field_c);
@@ -162,7 +162,7 @@ final class ce extends ec {
             ug.field_a = bd.field_d;
           } else {
             try {
-              oj.field_Ub = new el((java.net.Socket) (td.field_b.field_f), qc.field_f);
+              oj.field_Ub = new BufferedSocket((java.net.Socket) (td.field_b.field_f), qc.field_f);
               var5 = sh.field_qb;
               var6 = var5;
               gk.field_g.position = 0;
@@ -198,7 +198,7 @@ final class ce extends ec {
         field_H = null;
     }
 
-    final static rm[] a(int param0, int param1, eh param2, int param3) {
+    final static rm[] a(int param0, int param1, Js5Archive param2, int param3) {
         RuntimeException var4 = null;
         rm[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;

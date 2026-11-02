@@ -7,7 +7,7 @@ class PacketBuffer extends IntrusiveNode {
     static String field_j;
     int position;
     byte[] payload;
-    static eh field_k;
+    static Js5Archive field_k;
     static rm[] field_h;
 
     final String f(int param0) {

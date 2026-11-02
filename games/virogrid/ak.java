@@ -8,28 +8,28 @@ final class ak {
     static int field_a;
     static String[] field_b;
     static int[] field_f;
-    static km[] field_d;
-    static mg field_e;
+    static UiWidget[] field_d;
+    static Sprite field_e;
 
-    final static void a(int param0, km param1) {
-        km var5 = null;
-        km var2 = null;
+    final static void a(int param0, UiWidget param1) {
+        UiWidget var5 = null;
+        UiWidget var2 = null;
         int var3 = Virogrid.field_F ? 1 : 0;
-        km var2Lifetime1;
+        UiWidget var2Lifetime1;
         try {
-          var5 = (km) (param1.field_W.a((byte) -89));
+          var5 = (UiWidget) (param1.field_W.a((byte) -89));
           var2 = var5;
           while (var5 != null) {
             var5.field_ub = 0;
             var5.field_Cb = 0;
             var5.field_kb = 0;
             var5.field_F = 0;
-            var5 = (km) (param1.field_W.a(param0 - 164));
+            var5 = (UiWidget) (param1.field_W.a(param0 - 164));
             var2Lifetime1 = var5;
           }
           if (param0 != 16377) {
-            km var4 = (km) null;
-            ak.a(97, (km) null);
+            UiWidget var4 = (UiWidget) null;
+            ak.a(97, (UiWidget) null);
           }
           param1.field_F = 0;
           param1.field_kb = 0;
@@ -92,11 +92,11 @@ final class ak {
         return j.field_l == 11 ? true : false;
     }
 
-    final static mg[] a(int param0, int param1, int param2, byte param3) {
+    final static Sprite[] a(int param0, int param1, int param2, byte param3) {
         int var5 = 0;
         int var6 = Virogrid.field_F ? 1 : 0;
-        mg[] var8 = new mg[9];
-        mg[] var4 = var8;
+        Sprite[] var8 = new Sprite[9];
+        Sprite[] var4 = var8;
         var8[0] = eg.a(param2, (byte) 29, param0);
         for (var5 = 1; var5 < 9; var5++) {
           var8[var5] = var8[0];
@@ -113,17 +113,17 @@ final class ak {
         se.field_f = new String[ad.field_c];
         se.field_f[19] = rk.field_d;
         se.field_f[13] = ej.field_H;
-        se.field_f[16] = el.field_f;
+        se.field_f[16] = BufferedSocket.field_f;
         se.field_f[5] = eg.field_G;
         se.field_f[4] = s.field_h;
         if (param0 != -7597) {
-          field_d = (km[]) null;
+          field_d = (UiWidget[]) null;
         }
         se.field_f[11] = ql.field_e;
         se.field_f[18] = wm.field_Q;
         se.field_f[7] = kd.field_n;
         se.field_f[17] = cg.field_g;
-        se.field_f[9] = ld.field_a;
+        se.field_f[9] = GameKeyHandler.field_a;
         se.field_f[15] = mk.field_fb;
         se.field_f[20] = gf.field_D;
         se.field_f[6] = pm.field_s;

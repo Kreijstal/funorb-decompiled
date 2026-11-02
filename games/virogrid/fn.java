@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fn {
-    static km field_d;
+    static UiWidget field_d;
     static String[] field_b;
     static String field_g;
     static String field_f;
     static IntrusiveDeque field_a;
     static int field_c;
-    static km field_e;
+    static UiWidget field_e;
 
     final static boolean a(int param0, int param1, byte param2) {
         StringBuilder discarded$0 = null;
@@ -75,7 +75,7 @@ final class fn {
                 gf.a((String) null, 0, false, am.field_d, 2, (String) null);
                 var16 = (String) null;
                 var15 = (String) null;
-                gf.a((String) null, 0, false, rl.field_q, 2, (String) null);
+                gf.a((String) null, 0, false, SpriteState.field_q, 2, (String) null);
                 re.c((byte) 121);
                 return true;
               }
@@ -208,7 +208,7 @@ final class fn {
         var2 = Virogrid.field_F ? 1 : 0;
         try {
           la.field_h = null;
-          ld.field_c = false;
+          GameKeyHandler.field_c = false;
           wl.field_d = null;
           if (ci.field_o != null) {
             ci.field_o.a(false);
@@ -310,10 +310,10 @@ final class fn {
         int var2 = Virogrid.field_F ? 1 : 0;
         try {
           if (param0 != -69) {
-            field_e = (km) null;
+            field_e = (UiWidget) null;
           }
           for (var1_int = 0; qh.field_K > var1_int; var1_int++) {
-            el.field_s[var1_int] = null;
+            BufferedSocket.field_s[var1_int] = null;
           }
           qh.field_K = 0;
         } catch (RuntimeException runtimeException) {

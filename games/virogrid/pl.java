@@ -5,7 +5,7 @@ final class pl {
     static int field_b;
     static int field_c;
     static String field_f;
-    static km field_a;
+    static UiWidget field_a;
     static String field_d;
     static String field_e;
 

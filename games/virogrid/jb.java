@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jb extends rd {
-    static km field_J;
+    static UiWidget field_J;
     private wa field_F;
     private wa field_G;
     private boolean field_E;
-    static mg[] field_I;
+    static Sprite[] field_I;
     private wa field_H;
 
     final boolean h(int param0) {

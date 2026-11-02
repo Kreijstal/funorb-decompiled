@@ -4,7 +4,7 @@
 final class b extends sh implements ta {
     private qh field_Ab;
     static long field_Gb;
-    static mg field_Eb;
+    static Sprite field_Eb;
     static String field_Cb;
     private boolean field_Fb;
     private boolean field_Bb;
@@ -44,11 +44,11 @@ final class b extends sh implements ta {
         }
     }
 
-    final static mg[] a(String param0, eh param1, int param2, String param3) {
-        mg[] var4 = null;
+    final static Sprite[] a(String param0, Js5Archive param1, int param2, String param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
-        mg[] var5 = null;
-        mg[] stackIn_1_0 = null;
+        Sprite[] var5 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -236,84 +236,84 @@ final class b extends sh implements ta {
         try {
           var5_int = param2 + param3;
           var6 = param4 + param0;
-          if (df.field_i >= param2) {
-            stackIn_4_0 = df.field_i;
+          if (Rasterizer.field_i >= param2) {
+            stackIn_4_0 = Rasterizer.field_i;
           } else {
             stackIn_4_0 = param2;
           }
           var7 = stackIn_4_0;
-          if (df.field_g < param0) {
+          if (Rasterizer.field_g < param0) {
             stackIn_7_0 = param0;
           } else {
-            stackIn_7_0 = df.field_g;
+            stackIn_7_0 = Rasterizer.field_g;
           }
           var8 = stackIn_7_0;
-          if (var5_int < df.field_k) {
+          if (var5_int < Rasterizer.field_k) {
             stackIn_10_0 = var5_int;
           } else {
-            stackIn_10_0 = df.field_k;
+            stackIn_10_0 = Rasterizer.field_k;
           }
           var9 = stackIn_10_0;
           if (param1 <= 1) {
             field_Db = true;
           }
-          if (var6 < df.field_h) {
+          if (var6 < Rasterizer.field_h) {
             stackIn_15_0 = var6;
           } else {
-            stackIn_15_0 = df.field_h;
+            stackIn_15_0 = Rasterizer.field_h;
           }
           var10 = stackIn_15_0;
-          if (df.field_i <= param2 &&
-            param2 < df.field_k) {
-            var11 = var8 * df.field_e + param2;
+          if (Rasterizer.field_i <= param2 &&
+            param2 < Rasterizer.field_k) {
+            var11 = var8 * Rasterizer.field_e + param2;
             var12 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              df.field_d[var11] = 16777215;
-              var11 = var11 + df.field_e * 2;
+              Rasterizer.field_d[var11] = 16777215;
+              var11 = var11 + Rasterizer.field_e * 2;
             }
           }
-          if (param0 >= df.field_g &&
-            var6 < df.field_h) {
-            var11Lifetime1 = var7 + df.field_e * param0;
+          if (param0 >= Rasterizer.field_g &&
+            var6 < Rasterizer.field_h) {
+            var11Lifetime1 = var7 + Rasterizer.field_e * param0;
             var12Lifetime1 = var9 + (1 - var7) >> 1;
             while (true) {
               var12Lifetime1--;
               if (0 > var12Lifetime1) {
                 break;
               }
-              df.field_d[var11Lifetime1] = 16777215;
+              Rasterizer.field_d[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (var5_int >= df.field_i &&
-            var5_int < df.field_k) {
-            var11Lifetime2 = (var8 + (var5_int - param2 & 1)) * df.field_e + var5_int;
+          if (var5_int >= Rasterizer.field_i &&
+            var5_int < Rasterizer.field_k) {
+            var11Lifetime2 = (var8 + (var5_int - param2 & 1)) * Rasterizer.field_e + var5_int;
             var12Lifetime2 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              df.field_d[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + 2 * df.field_e;
+              Rasterizer.field_d[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + 2 * Rasterizer.field_e;
             }
           }
-          if (df.field_g <= param0) {
-            if (var6 >= df.field_h) {
+          if (Rasterizer.field_g <= param0) {
+            if (var6 >= Rasterizer.field_h) {
               return;
             }
-            var11Lifetime3 = (1 & var6 - param0) + df.field_e * var6 + var7;
+            var11Lifetime3 = (1 & var6 - param0) + Rasterizer.field_e * var6 + var7;
             var12Lifetime3 = -var7 + 1 + var9 >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 return;
               }
-              df.field_d[var11Lifetime3] = 16777215;
+              Rasterizer.field_d[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }

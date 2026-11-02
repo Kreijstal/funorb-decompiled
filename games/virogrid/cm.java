@@ -4,7 +4,7 @@
 final class cm extends IntrusiveNode {
     static il field_k;
     static String field_i;
-    static km field_h;
+    static UiWidget field_h;
     static String field_g;
     static String field_j;
 
@@ -153,13 +153,13 @@ final class cm extends IntrusiveNode {
                 uh.a((byte) 114, param0);
               }
             } else {
-              df.c();
+              Rasterizer.c();
               fh.a(240, 0, 320);
               td.a(-30179, param0, 0, 0);
             }
           }
           if (param1 != -47) {
-            field_h = (km) null;
+            field_h = (UiWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

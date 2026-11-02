@@ -3,7 +3,7 @@
  */
 final class dn {
     static lc field_d;
-    static mg field_c;
+    static Sprite field_c;
     static String field_b;
     static int[] field_a;
 

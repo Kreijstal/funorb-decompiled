@@ -10,21 +10,21 @@ final class md {
     static dj field_e;
     static boolean field_d;
     static vc field_i;
-    static eh field_h;
+    static Js5Archive field_h;
 
-    final static mg[] a(boolean param0, int param1) {
-        mg[] var3 = null;
-        mg[] var2 = null;
-        mg[] var3Lifetime1;
-        mg[] var2Lifetime1;
+    final static Sprite[] a(boolean param0, int param1) {
+        Sprite[] var3 = null;
+        Sprite[] var2 = null;
+        Sprite[] var3Lifetime1;
+        Sprite[] var2Lifetime1;
         if (param0) {
-          var3 = new mg[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = eg.a(64, (byte) 40, param1);
           return var2;
         }
         md.a(2);
-        var3Lifetime1 = new mg[9];
+        var3Lifetime1 = new Sprite[9];
         var2Lifetime1 = var3Lifetime1;
         var3Lifetime1[4] = eg.a(64, (byte) 40, param1);
         return var2Lifetime1;
@@ -112,7 +112,7 @@ final class md {
           if (wg.field_c) {
             var6 = var6 | 1;
           }
-          if (el.field_k) {
+          if (BufferedSocket.field_k) {
             var6 = var6 | 4;
           }
           if (param2) {

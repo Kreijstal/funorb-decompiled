@@ -72,7 +72,7 @@ final class bl extends nb {
         int var9Lifetime1;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
-          var7_int = el.a(126, param1);
+          var7_int = BufferedSocket.a(126, param1);
           if (dk.field_m == null) {
             dk.field_m = new java.security.SecureRandom();
           }

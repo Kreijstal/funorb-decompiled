@@ -5,7 +5,7 @@ class IntrusiveNode {
     IntrusiveNode next;
     long key;
     static IntrusiveDeque field_c;
-    static km field_b;
+    static UiWidget field_b;
     static String field_e;
     IntrusiveNode previous;
 
@@ -14,7 +14,7 @@ class IntrusiveNode {
           return false;
         }
         if (param0) {
-          field_b = (km) null;
+          field_b = (UiWidget) null;
           return true;
         }
         return true;

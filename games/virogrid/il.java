@@ -344,7 +344,7 @@ final class il extends cn {
                 break regionExit1;
               }
               if (param1 &&
-                this.a(eh.field_n + fk.field_j, wm.field_F + fk.field_k, field_O[var9], field_O[var10], field_O[var11], var12, var13, var14_int)) {
+                this.a(Js5Archive.field_n + fk.field_j, wm.field_F + fk.field_k, field_O[var9], field_O[var10], field_O[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = w.field_K;
                 w.field_K = w.field_K + 1;
                 bc.field_b[fieldTemp$13] = param2;
@@ -806,8 +806,8 @@ final class il extends cn {
         if (field_B > field_p) {
           field_B = field_p;
         }
-        var1Lifetime2 = fk.field_m[0] % df.field_e;
-        var2Lifetime2 = fk.field_m[0] / df.field_e;
+        var1Lifetime2 = fk.field_m[0] % Rasterizer.field_e;
+        var2Lifetime2 = fk.field_m[0] / Rasterizer.field_e;
         field_k = field_k + var1Lifetime2;
         field_I = field_I + var1Lifetime2;
         field_B = field_B + var2Lifetime2;

@@ -68,7 +68,7 @@ abstract class hm {
         int var6 = 0;
         int var11 = 0;
         int stackIn_6_0 = 0;
-        km stackIn_8_0;
+        UiWidget stackIn_8_0;
         int stackIn_8_1;
         int stackIn_8_2;
         int stackIn_8_3;
@@ -80,10 +80,10 @@ abstract class hm {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        km var7 = null;
+        UiWidget var7 = null;
         int var7_int = 0;
         int var8 = 0;
-        km var8_ref_km = null;
+        UiWidget var8_ref_km = null;
         hk var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -92,11 +92,11 @@ abstract class hm {
         int var13 = 0;
         var13 = Virogrid.field_F ? 1 : 0;
         try {
-          f.field_b = df.field_f;
+          f.field_b = Rasterizer.field_f;
           if (!param1) {
             hm.a((String) null, 18L, 31);
           }
-          eb.field_f = df.field_e;
+          eb.field_f = Rasterizer.field_e;
           if (param0) {
             stackIn_6_0 = hn.field_h;
           } else {
@@ -114,7 +114,7 @@ abstract class hm {
           } else {
             stackIn_9_4 = 4 + (oc.field_k + 40);
           }
-          ((km) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3 - stackIn_9_4, (byte) -105, 2 + pg.field_e);
+          ((UiWidget) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3 - stackIn_9_4, (byte) -105, 2 + pg.field_e);
           gn.field_F.a(-oc.field_k + (ia.field_d.field_K - 42), 18, 42 + oc.field_k, (byte) -107, 2 + pg.field_e);
           wm.field_r.a(2 + pg.field_e + 20, -114, ia.field_d.field_K, 2, -pg.field_e + (ia.field_d.field_ub - 2 - 20), 0, oc.field_k);
           CellFlip.field_o.a(0, 40, ao.field_Eb.field_K, (byte) -120, -40 + ao.field_Eb.field_ub);
@@ -215,7 +215,7 @@ abstract class hm {
               }
             }
           }
-          pm.field_n.a(df.field_e - 360 >> 1, -130 + (df.field_f - 14), 360, (byte) -97, 10);
+          pm.field_n.a(Rasterizer.field_e - 360 >> 1, -130 + (Rasterizer.field_f - 14), 360, (byte) -97, 10);
           jj.field_m.a(0, 24, pm.field_n.field_K, (byte) -69, 0);
           jb.field_J.a(0, -24 + pm.field_n.field_ub, pm.field_n.field_K, (byte) -77, 24);
           jb.field_J.field_vb = ne.a(jb.field_J.field_ub, 3, 1, (byte) 106, 8421504, 11579568);

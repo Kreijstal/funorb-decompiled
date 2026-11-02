@@ -396,10 +396,10 @@ final class bj extends IntrusiveNode {
             }
           }
           if (3 != var2) {
-            ld.field_c = false;
+            GameKeyHandler.field_c = false;
             return;
           }
-          ld.field_c = true;
+          GameKeyHandler.field_c = true;
           for (var3Lifetime2 = 0; var3Lifetime2 < kn.field_E.length; var3Lifetime2++) {
             kn.field_E[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) -88);
           }

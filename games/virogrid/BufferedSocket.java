@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class el implements Runnable {
+final class BufferedSocket implements Runnable {
     static boolean field_k;
     static String field_i;
     private boolean field_l;
@@ -17,7 +17,7 @@ final class el implements Runnable {
     static String field_a;
     private int field_c;
     private byte[] field_v;
-    static eh field_d;
+    static Js5Archive field_d;
     private int field_m;
     static int field_r;
     static int[] field_w;
@@ -26,7 +26,7 @@ final class el implements Runnable {
     static String field_f;
     private int field_u;
     static int field_t;
-    private pd field_o;
+    private PlatformTaskDispatcher field_o;
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
         int var5_int = 0;
@@ -39,7 +39,7 @@ final class el implements Runnable {
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           if (param2 != -1) {
-            el.a(false);
+            BufferedSocket.a(false);
           }
           if (this.field_l) {
             return;
@@ -301,7 +301,7 @@ final class el implements Runnable {
         int stackIn_16_0 = 0;
         ad.field_g[2] = 0.0;
         ad.field_g[0] = 1.0;
-        el.a(false, (byte) -106);
+        BufferedSocket.a(false, (byte) -106);
         mj.field_D = 262144;
         ao.field_Hb = 52.5f;
         we.field_k = 50.0f;
@@ -423,7 +423,7 @@ final class el implements Runnable {
         }
     }
 
-    el(java.net.Socket param0, pd param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -450,7 +450,7 @@ final class el implements Runnable {
         return this.field_e.read();
     }
 
-    private el(java.net.Socket param0, pd param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_l = false;
         this.field_p = false;
         this.field_c = 0;

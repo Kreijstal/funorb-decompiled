@@ -8,7 +8,7 @@ final class pc {
     static long field_b;
     static String field_e;
 
-    final static vh a(eh param0, int param1, String param2, String param3, eh param4) {
+    final static vh a(Js5Archive param0, int param1, String param2, String param3, Js5Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -60,7 +60,7 @@ final class pc {
         }
     }
 
-    final static void a(mg param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -75,11 +75,11 @@ final class pc {
           pj.a(param0, 256);
           if (db.b((byte) 13, 0) &&
             sh.a(4712, 100) != 0) {
-            df.b(0, 0, 200, 400, 0);
+            Rasterizer.b(0, 0, 200, 400, 0);
             ul.b((byte) 96);
             return;
           }
-          df.b(0, 0, 200, 400, 8421504);
+          Rasterizer.b(0, 0, 200, 400, 8421504);
           if (param1 > -24) {
             pc.a(111);
           }

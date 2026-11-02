@@ -3,11 +3,11 @@
  */
 final class sj {
     int[] field_i;
-    static eh field_l;
+    static Js5Archive field_l;
     int[] field_n;
     int[] field_m;
     int[][] field_r;
-    static mg field_j;
+    static Sprite field_j;
     int[] field_c;
     private int[] field_t;
     private byte[] field_s;
@@ -263,7 +263,7 @@ final class sj {
         try {
           param0.a(param2, param3);
           if (param1) {
-            field_l = (eh) null;
+            field_l = (Js5Archive) null;
           }
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "sj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

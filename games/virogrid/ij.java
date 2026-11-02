@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ij extends IntrusiveNode {
-    static km field_m;
+    static UiWidget field_m;
     static String field_i;
     int field_o;
     boolean field_p;
     int field_l;
-    static km field_k;
+    static UiWidget field_k;
     static nh[] field_n;
     static String field_h;
     static int field_q;
@@ -222,8 +222,8 @@ final class ij extends IntrusiveNode {
         try {
           var2_int = 0;
           var3 = 21 / ((-72 - param0) / 41);
-          for (var4 = -(df.field_e * df.field_f); var4 < 0; var4++) {
-            var5 = df.field_d[var2_int];
+          for (var4 = -(Rasterizer.field_e * Rasterizer.field_f); var4 < 0; var4++) {
+            var5 = Rasterizer.field_d[var2_int];
             var6 = var5 & 16711935;
             var5 = var5 & 65280;
             var6 = var6 * param1;
@@ -233,7 +233,7 @@ final class ij extends IntrusiveNode {
             var5 = (var6 | var5) >> 8;
             incrementValue$2 = var2_int;
             var2_int++;
-            df.field_d[incrementValue$2] = var5;
+            Rasterizer.field_d[incrementValue$2] = var5;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

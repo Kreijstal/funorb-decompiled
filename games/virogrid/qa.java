@@ -5,9 +5,9 @@ final class qa implements be {
     static int field_e;
     static double field_b;
     static String field_a;
-    static km field_c;
+    static UiWidget field_c;
     static String field_f;
-    static km field_d;
+    static UiWidget field_d;
 
     final static void a(int param0, int param1) {
         hg var2 = gk.field_g;

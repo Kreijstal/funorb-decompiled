@@ -5,7 +5,7 @@ final class pj {
     static il field_a;
     static int[] field_d;
     static String field_b;
-    static eh field_c;
+    static Js5Archive field_c;
     static String field_e;
 
     final static void a(int param0) {
@@ -62,7 +62,7 @@ final class pj {
         }
     }
 
-    final static void a(mg param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         try {
           qc.a(param1 - 142);
           if (param1 != 256) {

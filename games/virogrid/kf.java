@@ -9,7 +9,7 @@ final class kf {
     static il field_c;
     private long field_d;
     private int field_b;
-    static km field_g;
+    static UiWidget field_g;
     private DualLinkNode[] field_f;
     private int field_a;
 
@@ -76,7 +76,7 @@ final class kf {
         if (param1 != -1) {
           return;
         }
-        el.field_r = param0;
+        BufferedSocket.field_r = param0;
     }
 
     final DualLinkNode a(boolean param0) {

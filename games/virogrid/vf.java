@@ -6,7 +6,7 @@ final class vf {
     static on field_b;
     static aj field_f;
     static String field_a;
-    static km field_e;
+    static UiWidget field_e;
     static int field_c;
 
     final static void a(int param0) {
@@ -59,7 +59,7 @@ final class vf {
             return stackIn_6_0;
           }
           if (var2_int > 63) {
-            stackIn_10_0 = cb.field_a;
+            stackIn_10_0 = MouseWheelInput.field_a;
             return stackIn_10_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {

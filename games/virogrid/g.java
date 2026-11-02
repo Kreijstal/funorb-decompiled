@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class g {
-    static eh field_a;
+    static Js5Archive field_a;
     static tn field_b;
     static boolean field_c;
     static String field_d;

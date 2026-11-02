@@ -3,7 +3,7 @@
  */
 final class IntrusiveDeque {
     static int field_d;
-    static km field_a;
+    static UiWidget field_a;
     static int field_h;
     static ul field_b;
     static byte[] field_e;
@@ -16,7 +16,7 @@ final class IntrusiveDeque {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0) {
-          field_a = (km) null;
+          field_a = (UiWidget) null;
           var2 = this.field_i.next;
           if (this.field_i == var2) {
             this.field_c = null;
@@ -75,13 +75,13 @@ final class IntrusiveDeque {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (df.field_f >= param1 + param3 + param2) {
+        if (Rasterizer.field_f >= param1 + param3 + param2) {
           return param2 + param3;
         }
         if (~(-param1 + param2) <= param0) {
           return param2 - param1;
         }
-        return -param1 + df.field_f;
+        return -param1 + Rasterizer.field_f;
     }
 
     final IntrusiveNode d(int param0) {
@@ -291,7 +291,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final static eh a(int param0, int param1) {
+    final static Js5Archive a(int param0, int param1) {
         if (param0 >= 32) {
           return va.a(1, false, param1, -105, true, false);
         }

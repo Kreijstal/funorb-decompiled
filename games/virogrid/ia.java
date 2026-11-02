@@ -3,7 +3,7 @@
  */
 final class ia {
     static Boolean field_b;
-    static km field_d;
+    static UiWidget field_d;
     static boolean field_c;
     static String field_a;
     static int[] field_e;

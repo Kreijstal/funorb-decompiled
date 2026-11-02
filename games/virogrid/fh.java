@@ -58,10 +58,10 @@ final class fh {
         }
         kb.a(ag.field_g, 16865);
         fk.a();
-        df.c();
+        Rasterizer.c();
         cm.a(11);
         if (var5 < 256) {
-          df.b(0, 0, df.field_e, df.field_f, 0, 256 - var5);
+          Rasterizer.b(0, 0, Rasterizer.field_e, Rasterizer.field_f, 0, 256 - var5);
         }
         ai.a(true);
         if (kf.field_e < 150) {

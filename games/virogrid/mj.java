@@ -6,7 +6,7 @@ final class mj extends dm {
     static String field_y;
     static int field_D;
     static String field_G;
-    static mg field_F;
+    static Sprite field_F;
     static int field_E;
     static int field_z;
     static String field_A;
@@ -45,7 +45,7 @@ final class mj extends dm {
 
     final boolean d(int param0) {
         if (param0 < 65) {
-          field_F = (mg) null;
+          field_F = (Sprite) null;
           return false;
         }
         return false;

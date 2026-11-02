@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class d extends km {
+final class d extends UiWidget {
     static String[] field_Kb;
     static String field_Gb;
-    private km field_Jb;
+    private UiWidget field_Jb;
     static int[] field_Lb;
     int field_Hb;
-    private km[] field_Fb;
-    private km[] field_Ib;
+    private UiWidget[] field_Fb;
+    private UiWidget[] field_Ib;
     static long field_Eb;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -23,17 +23,17 @@ final class d extends km {
         this.b(param0, param4, param3 ^ -20132);
     }
 
-    final static km h(int param0) {
+    final static UiWidget h(int param0) {
         if (param0 != 0) {
-          return (km) null;
+          return (UiWidget) null;
         }
         return ve.field_q.field_Lb;
     }
 
     final void g(int param0) {
         int var2 = 0;
-        km dupTemp$0 = null;
-        km dupTemp$1 = null;
+        UiWidget dupTemp$0 = null;
+        UiWidget dupTemp$1 = null;
         int var3;
         var3 = Virogrid.field_F ? 1 : 0;
         for (var2 = param0; this.field_Fb.length > var2; var2++) {
@@ -51,7 +51,7 @@ final class d extends km {
     }
 
     private final void b(int param0, int param1, int param2) {
-        km dupTemp$0 = null;
+        UiWidget dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -143,7 +143,7 @@ final class d extends km {
           md.field_g = new byte[rj.field_h][];
           gb.field_F = new int[rj.field_h];
           lj.field_j = new byte[rj.field_h][];
-          el.field_w = new int[rj.field_h];
+          BufferedSocket.field_w = new int[rj.field_h];
           var17.position = -(8 * rj.field_h) + param1.length - 7;
           oj.field_Kb = var17.readUnsignedShort((byte) -108);
           se.field_d = var17.readUnsignedShort((byte) 90);
@@ -152,7 +152,7 @@ final class d extends km {
             return;
           }
           for (var4 = 0; var4 < rj.field_h; var4++) {
-            el.field_w[var4] = var16.readUnsignedShort((byte) -112);
+            BufferedSocket.field_w[var4] = var16.readUnsignedShort((byte) -112);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < rj.field_h; var4Lifetime1++) {
             mb.field_bb[var4Lifetime1] = var17.readUnsignedShort((byte) 53);
@@ -246,8 +246,8 @@ final class d extends km {
         }
     }
 
-    d(long param0, km param1, String[] param2, km param3, km[] param4, int param5) {
-        super(param0, (km) null);
+    d(long param0, UiWidget param1, String[] param2, UiWidget param3, UiWidget[] param4, int param5) {
+        super(param0, (UiWidget) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -260,15 +260,15 @@ final class d extends km {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        km var9 = null;
+        UiWidget var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Fb = new km[param2.length];
-          this.field_Jb = new km(0L, param3);
+          this.field_Fb = new UiWidget[param2.length];
+          this.field_Jb = new UiWidget(0L, param3);
           this.field_Ib = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new km(0L, param1);
+            var9 = new UiWidget(0L, param1);
             var9.field_V = param2[var8_int];
             this.field_Fb[var8_int] = var9;
             this.a(0, var9);

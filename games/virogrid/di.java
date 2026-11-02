@@ -4,7 +4,7 @@
 final class di extends qe {
     private String field_s;
     static int field_o;
-    static km field_n;
+    static UiWidget field_n;
     private boolean field_p;
     static IntrusiveDeque field_v;
     static String field_q;

@@ -40,13 +40,13 @@ final class bi {
               }
               if (he.h(-120)) {
                 var4 = (String) null;
-                jl.a(ld.field_d, ve.field_o, hn.field_n, param0, (byte) 39, (String) null);
+                jl.a(GameKeyHandler.field_d, ve.field_o, hn.field_n, param0, (byte) 39, (String) null);
               }
               return true;
             }
             if (he.h(-120)) {
               var4Lifetime3 = (String) null;
-              jl.a(ld.field_d, ve.field_o, hn.field_n, param0, (byte) 39, (String) null);
+              jl.a(GameKeyHandler.field_d, ve.field_o, hn.field_n, param0, (byte) 39, (String) null);
               return true;
             }
             return true;
@@ -78,7 +78,7 @@ final class bi {
           if (var3 == 0) {
             if (he.h(-120)) {
               var4Lifetime1 = (String) null;
-              jl.a(ld.field_d, ve.field_o, hn.field_n, param0, (byte) 39, (String) null);
+              jl.a(GameKeyHandler.field_d, ve.field_o, hn.field_n, param0, (byte) 39, (String) null);
               return true;
             }
             return true;
@@ -87,7 +87,7 @@ final class bi {
         }
         if (he.h(-120)) {
           var4Lifetime2 = (String) null;
-          jl.a(ld.field_d, ve.field_o, hn.field_n, param0, (byte) 39, (String) null);
+          jl.a(GameKeyHandler.field_d, ve.field_o, hn.field_n, param0, (byte) 39, (String) null);
           return true;
         }
         return true;

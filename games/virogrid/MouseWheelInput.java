@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cb {
+abstract class MouseWheelInput {
     static hh field_a;
     static String field_b;
     static ob field_c;
-    static mg[] field_d;
+    static Sprite[] field_d;
 
     abstract int a(int param0);
 

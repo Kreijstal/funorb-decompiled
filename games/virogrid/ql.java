@@ -20,7 +20,7 @@ final class ql implements ol {
     private int field_n;
     private int field_r;
     static ha field_q;
-    static eh field_m;
+    static Js5Archive field_m;
     private e field_g;
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -113,7 +113,7 @@ final class ql implements ol {
           if (mj.a(param2, param1, (byte) 113)) {
             return false;
           }
-          if (me.a(param2, param1, true)) {
+          if (MouseInputHandler.a(param2, param1, true)) {
             return false;
           }
           if (!w.a(param2, param1, false)) {
@@ -140,7 +140,7 @@ final class ql implements ol {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, pd param2, int param3, int param4, boolean param5) {
+    final static java.awt.Frame a(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, boolean param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_27_0 = null;
@@ -166,7 +166,7 @@ final class ql implements ol {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (param4 == 0) {
-            var11 = eh.a(105, param2);
+            var11 = Js5Archive.a(105, param2);
             var6 = var11;
             if (var6 == null) {
               return null;
@@ -234,26 +234,26 @@ final class ql implements ol {
         int var12Lifetime1;
         try {
           var14 = param1 instanceof qn ? (qn) (param1) : null;
-          df.b(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_h);
+          Rasterizer.b(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_h);
           if (var14 == null) {
           }
           var7 = var14.field_M + (param0 + param1.field_l);
           var8 = var14.field_N + (param3 + param1.field_u);
-          df.c(var7, var8, var14.field_F, this.field_c);
+          Rasterizer.c(var7, var8, var14.field_F, this.field_c);
           if (-1 != var14.field_O) {
             var9 = 2.0 * ((double)var14.field_O * 3.141592653589793) / (double)var14.field_Q;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_F);
             var12 = (int)(Math.cos(var9) * (double)var14.field_F);
-            df.c(var11 + var7, var12 + var8, 1, this.field_r);
+            Rasterizer.c(var11 + var7, var12 + var8, 1, this.field_r);
           }
           if (param4 != -23294) {
             ql.a((byte) -39, -110, 72, -97, -121, -28, 103);
           }
-          df.c(var7, var8, 2, 1);
+          Rasterizer.c(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_G * 2.0 / (double)var14.field_Q;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_F);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_F);
-          df.a(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          Rasterizer.a(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null != this.field_g) {
             var13 = var14.field_F + var14.field_M + this.field_b;
             this.field_g.a(param1.field_n, var13 + (param1.field_l + param0), param1.field_u + param3 + this.field_n, -var13 + (-this.field_b + param1.field_g), param1.field_m - (this.field_b << 1), this.field_l, this.field_a, 1, 1, 0);

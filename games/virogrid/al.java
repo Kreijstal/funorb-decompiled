@@ -69,7 +69,7 @@ final class al extends mi implements bo, wi {
         RuntimeException var4_ref = null;
         var5 = Virogrid.field_F ? 1 : 0;
         try {
-          cb.field_c = rg.field_d;
+          MouseWheelInput.field_c = rg.field_d;
           if (param3 != 100) {
             var6 = (String) null;
             al.a((String) null, -66, 0.017817853018641472f);
