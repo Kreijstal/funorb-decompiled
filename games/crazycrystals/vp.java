@@ -7,18 +7,18 @@ final class vp {
     private long field_f;
     private int field_h;
     static int[] field_a;
-    private ij field_c;
+    private DualLinkNode field_c;
     static dl[][] field_i;
-    private ij[] field_e;
+    private DualLinkNode[] field_e;
     static int field_b;
 
-    final ij b(int param0) {
-        ij var3 = null;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var3 = null;
         int var4 = CrazyCrystals.field_B;
         if (this.field_c == null) {
           return null;
         }
-        ij var2 = this.field_e[(int)(this.field_f & (long)(this.field_h - 1))];
+        DualLinkNode var2 = this.field_e[(int)(this.field_f & (long)(this.field_h - 1))];
         while (var2 != this.field_c) {
           if (this.field_f == this.field_c.field_k) {
             var3 = this.field_c;
@@ -35,11 +35,11 @@ final class vp {
         return null;
     }
 
-    final void a(ij param0, long param1, byte param2) {
-        ij var5 = null;
+    final void a(DualLinkNode param0, long param1, byte param2) {
+        DualLinkNode var5 = null;
         try {
           if (param2 <= 33) {
-            this.a((ij) null, 115L, (byte) -90);
+            this.a((DualLinkNode) null, 115L, (byte) -90);
           }
           if (null != param0.field_g) {
             param0.a(1);
@@ -55,11 +55,11 @@ final class vp {
         }
     }
 
-    final ij a(long param0, boolean param1) {
-        ij var5 = null;
+    final DualLinkNode a(long param0, boolean param1) {
+        DualLinkNode var5 = null;
         int var6 = CrazyCrystals.field_B;
         this.field_f = param0;
-        ij var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_h))];
+        DualLinkNode var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_h))];
         this.field_c = var4.field_j;
         if (!param1) {
           this.field_f = -86L;
@@ -109,12 +109,12 @@ final class vp {
 
     vp(int param0) {
         int var2 = 0;
-        ij dupTemp$0 = null;
-        ij var3 = null;
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
         this.field_h = param0;
-        this.field_e = new ij[param0];
+        this.field_e = new DualLinkNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new ij();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_e[var2] = dupTemp$0;
           var3.field_j = var3;

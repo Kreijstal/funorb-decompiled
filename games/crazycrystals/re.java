@@ -103,7 +103,7 @@ final class re extends ue {
           stackIn_34_0 = (this.field_b.field_c == 7) ? 16777215 : 12640511;
           var6Lifetime3 = stackIn_34_0;
           if (rb.field_h >= 2 &&
-            a.field_b == this) {
+            MouseInputHandler.field_b == this) {
             if (!sg.field_a) {
               return;
             }
@@ -131,7 +131,7 @@ final class re extends ue {
             var2_int <= 4 &&
             this.field_b.a(true)) {
             var3 = jl.field_c[var2_int];
-            a.field_b = (ue) ((Object) new da(this, var2_int, this.field_d[var2_int].field_d, var3));
+            MouseInputHandler.field_b = (ue) ((Object) new da(this, var2_int, this.field_d[var2_int].field_d, var3));
             return true;
           }
           if (var2_int == 5 &&
@@ -220,17 +220,17 @@ final class re extends ue {
           }
           if (var2_int == 8 &&
             this.field_b.a(true)) {
-            a.field_b = (ue) ((Object) new m(this, 8, cp.field_h, 0, 70, false));
+            MouseInputHandler.field_b = (ue) ((Object) new m(this, 8, cp.field_h, 0, 70, false));
             return true;
           }
           if (var2_int == 9 &&
             this.field_b.a(true)) {
-            a.field_b = (ue) ((Object) new m(this, 9, fq.field_G, 1, 25, false));
+            MouseInputHandler.field_b = (ue) ((Object) new m(this, 9, fq.field_G, 1, 25, false));
             return true;
           }
           if (10 == var2_int &&
             this.field_b.a(true)) {
-            a.field_b = (ue) ((Object) new vn((m) null, this, false));
+            MouseInputHandler.field_b = (ue) ((Object) new vn((m) null, this, false));
             return true;
           }
           if (var2_int == 11) {

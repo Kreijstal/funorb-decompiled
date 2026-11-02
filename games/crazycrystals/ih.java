@@ -9,7 +9,7 @@ final class ih {
     static int field_a;
     static String field_d;
 
-    final void a(byte[] param0, ng param1, int param2) {
+    final void a(byte[] param0, PacketBuffer param1, int param2) {
         try {
           if (param1.field_h[param1.field_f] != 31 ||
             -117 != param1.field_h[1 + param1.field_f]) {

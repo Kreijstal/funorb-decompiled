@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ib extends ij {
+abstract class ib extends DualLinkNode {
     static String field_m;
     int field_n;
     static int[] field_l;
@@ -17,7 +17,7 @@ abstract class ib extends ij {
     }
 
     final static void e(int param0) {
-        md var3 = null;
+        CipherPacketBuffer var3 = null;
         sc var1 = (sc) (hd.field_c.g(32073));
         int var2 = -21 / ((param0 - 61) / 40);
         if (var1 != null) {

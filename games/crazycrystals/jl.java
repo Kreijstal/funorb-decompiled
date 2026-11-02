@@ -35,7 +35,7 @@ final class jl {
         }
     }
 
-    final static void a(int param0, ng param1, byte[] param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5, int param6) {
+    final static void a(int param0, PacketBuffer param1, byte[] param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -57,7 +57,7 @@ final class jl {
         int var9Lifetime1;
         var10 = CrazyCrystals.field_B;
         try {
-          var7_int = eb.a((byte) -113, param4);
+          var7_int = NetworkGameClient.a((byte) -113, param4);
           if (null == sl.field_s) {
             sl.field_s = new java.security.SecureRandom();
           }
@@ -69,7 +69,7 @@ final class jl {
           }
           if (null == ek.field_e ||
             !(ek.field_e.field_h.length >= var7_int)) {
-            ek.field_e = new ng(var7_int);
+            ek.field_e = new PacketBuffer(var7_int);
           }
           ek.field_e.field_f = 0;
           ek.field_e.a(param0, param4, 97, param2);
@@ -77,7 +77,7 @@ final class jl {
           ek.field_e.a(-268435456, var13);
           if (ek.field_g == null ||
             !(ek.field_g.field_h.length >= 100)) {
-            ek.field_g = new ng(100);
+            ek.field_g = new PacketBuffer(100);
           }
           ek.field_g.field_f = 0;
           ek.field_g.a(true, 10);

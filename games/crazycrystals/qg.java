@@ -54,7 +54,7 @@ final class qg {
         int var15 = 0;
         int var16 = 0;
         byte[] var17 = null;
-        ng var18 = null;
+        PacketBuffer var18 = null;
         byte[] var22 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -71,7 +71,7 @@ final class qg {
         int var13Lifetime1Lifetime1;
         var16 = CrazyCrystals.field_B;
         try {
-          var18 = new ng(b.a(param1, -1));
+          var18 = new PacketBuffer(b.a(param1, -1));
           var4 = var18.h(255);
           if (var4 >= 5 &&
             var4 <= 7) {

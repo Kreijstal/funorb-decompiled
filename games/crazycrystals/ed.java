@@ -47,7 +47,7 @@ final class ed extends om {
     }
 
     final static void a(byte param0, int param1, sc param2) {
-        md var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = tp.field_f;
           var3.d(8, param1);

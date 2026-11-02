@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int field_a;
     static ue field_b;
     static dl field_c;
@@ -182,7 +182,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
           mh.a(param7, -20, param1);
           f.a(param16, param15, param17, param13, param14, (byte) 104);
           u.a(param6, param12, 250, param9);
-          vf.a(param11, (byte) 118, param10, param19);
+          KeyboardInputHandler.a(param11, (byte) 118, param10, param19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -231,7 +231,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         field_c = null;
         if (!param0) {
           hj var2 = (hj) null;
-          a.a(74, 5, -18, 74, -59, (vc) null, -54, -86, (vc) null, -31, 85, -40, (hj) null, (hj) null, 11, (hj) null, -17, -43, 64, -124, 62);
+          MouseInputHandler.a(74, 5, -18, 74, -59, (vc) null, -54, -86, (vc) null, -31, 85, -40, (hj) null, (hj) null, 11, (hj) null, -17, -43, 64, -124, 62);
         }
     }
 
@@ -269,7 +269,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         dj.field_t = false;
         if (param0 != 63) {
           var3 = (CharSequence) null;
-          a.a(-70, (CharSequence) null);
+          MouseInputHandler.a(-70, (CharSequence) null);
         }
         if (ne.field_d) {
           sp.field_a.l(126);
@@ -363,7 +363,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
           rd.field_h = true;
           am.field_g = param1;
           if (am.field_g == 0) {
-            var3_int = v.a(ec.field_m, ug.field_a, -27815, vk.field_L, eb.field_y);
+            var3_int = v.a(ec.field_m, IntrusiveNodeHashTable.field_a, -27815, vk.field_L, NetworkGameClient.field_y);
             var4 = 3 + var3_int;
             ub.field_b = new int[var4];
             je.field_i = new String[var4];
@@ -372,7 +372,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
             }
             sn.field_a = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              je.field_i[var5] = eb.field_y[var5];
+              je.field_i[var5] = NetworkGameClient.field_y[var5];
             }
             je.field_i[var4 - 3] = "";
             je.field_i[-2 + var4] = ig.field_m;
@@ -382,7 +382,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
             ub.field_b[-1 + var4] = 1;
             sn.field_a[1] = 5;
           } else if (am.field_g == 1) {
-            var3_int = v.a(ec.field_m, ug.field_a, -27815, vk.field_L, eb.field_y);
+            var3_int = v.a(ec.field_m, IntrusiveNodeHashTable.field_a, -27815, vk.field_L, NetworkGameClient.field_y);
             var4 = var3_int + 2;
             ub.field_b = new int[var4];
             je.field_i = new String[var4];
@@ -391,7 +391,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
             }
             sn.field_a = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              je.field_i[var5] = eb.field_y[var5];
+              je.field_i[var5] = NetworkGameClient.field_y[var5];
             }
             je.field_i[var4 - 2] = "";
             je.field_i[var4 - 1] = qo.field_o;
@@ -400,9 +400,9 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
           } else if (am.field_g != 2) {
             if (3 == am.field_g) {
               if (te.field_a.field_h) {
-                var3_int = v.a(ec.field_m, ib.field_m, -27815, vk.field_L, eb.field_y);
+                var3_int = v.a(ec.field_m, ib.field_m, -27815, vk.field_L, NetworkGameClient.field_y);
               } else {
-                var3_int = v.a(ec.field_m, gn.field_U, -27815, vk.field_L, eb.field_y);
+                var3_int = v.a(ec.field_m, gn.field_U, -27815, vk.field_L, NetworkGameClient.field_y);
               }
               var4 = var3_int + 2;
               ub.field_b = new int[var4];
@@ -412,14 +412,14 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               }
               sn.field_a = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                je.field_i[var5] = eb.field_y[var5];
+                je.field_i[var5] = NetworkGameClient.field_y[var5];
               }
               je.field_i[var4 - 2] = "";
               je.field_i[-1 + var4] = qo.field_o;
               ub.field_b[-1 + var4] = 0;
               sn.field_a[0] = 5;
             } else if (am.field_g == 4) {
-              var3_int = v.a(ec.field_m, nh.field_C, -27815, vk.field_L, eb.field_y);
+              var3_int = v.a(ec.field_m, nh.field_C, -27815, vk.field_L, NetworkGameClient.field_y);
               var4 = var3_int + 2;
               ub.field_b = new int[var4];
               je.field_i = new String[var4];
@@ -428,7 +428,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               }
               sn.field_a = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                je.field_i[var5] = eb.field_y[var5];
+                je.field_i[var5] = NetworkGameClient.field_y[var5];
               }
               je.field_i[var4 - 2] = "";
               je.field_i[-1 + var4] = qo.field_o;
@@ -438,7 +438,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               if (am.field_g != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = v.a(ec.field_m, fn.field_i, -27815, vk.field_L, eb.field_y);
+              var3_int = v.a(ec.field_m, fn.field_i, -27815, vk.field_L, NetworkGameClient.field_y);
               var4 = var3_int + 3;
               je.field_i = new String[var4];
               ub.field_b = new int[var4];
@@ -447,7 +447,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               }
               sn.field_a = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                je.field_i[var5] = eb.field_y[var5];
+                je.field_i[var5] = NetworkGameClient.field_y[var5];
               }
               je.field_i[var4 - 3] = "";
               je.field_i[-2 + var4] = ia.field_h;
@@ -458,10 +458,10 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               sn.field_a[1] = 5;
             }
           } else {
-            var3_int = v.a(ec.field_m, ci.a(new String[]{"<br><%0><br>"}, rg.field_b, 3), -27815, vk.field_L, eb.field_y);
+            var3_int = v.a(ec.field_m, ci.a(new String[]{"<br><%0><br>"}, rg.field_b, 3), -27815, vk.field_L, NetworkGameClient.field_y);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(eb.field_y[var5])) {
+              if (!"<%0>".equals(NetworkGameClient.field_y[var5])) {
                 continue;
               }
               var4 = var5;
@@ -471,13 +471,13 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               throw new IllegalStateException();
             }
             jl.field_a = new String[var4];
-            eg.a(eb.field_y, 0, jl.field_a, 0, var4);
+            eg.a(NetworkGameClient.field_y, 0, jl.field_a, 0, var4);
             lo.field_c = new String[-1 + var3_int - var4];
-            eg.a(eb.field_y, 1 + var4, lo.field_c, 0, -1 + (-var4 + var3_int));
-            var3_int = v.a(ec.field_m, ci.a(new String[]{"<br><%0><br>"}, jg.field_t, 3), -27815, vk.field_L, eb.field_y);
+            eg.a(NetworkGameClient.field_y, 1 + var4, lo.field_c, 0, -1 + (-var4 + var3_int));
+            var3_int = v.a(ec.field_m, ci.a(new String[]{"<br><%0><br>"}, jg.field_t, 3), -27815, vk.field_L, NetworkGameClient.field_y);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(eb.field_y[var5])) {
+              if (!"<%0>".equals(NetworkGameClient.field_y[var5])) {
                 continue;
               }
               var4 = var5;
@@ -487,9 +487,9 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               throw new IllegalStateException();
             }
             sl.field_r = new String[var4];
-            eg.a(eb.field_y, 0, sl.field_r, 0, var4);
+            eg.a(NetworkGameClient.field_y, 0, sl.field_r, 0, var4);
             ne.field_a = new String[-var4 + (var3_int - 1)];
-            eg.a(eb.field_y, 1 + var4, ne.field_a, 0, -1 + (-var4 + var3_int));
+            eg.a(NetworkGameClient.field_y, 1 + var4, ne.field_a, 0, -1 + (-var4 + var3_int));
             if (jl.field_a.length < sl.field_r.length) {
               stackIn_59_0 = sl.field_r.length;
             } else {
@@ -516,7 +516,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
             sn.field_a[1] = 2;
             sn.field_a[0] = 5;
             je.field_i[2] = jk.field_h;
-            je.field_i[3] = jb.field_a;
+            je.field_i[3] = IntrusiveNode.field_a;
             je.field_i[4] = ca.field_g;
             ub.field_b[3] = 1;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
@@ -613,7 +613,7 @@ final class a implements java.awt.event.MouseListener, java.awt.event.MouseMotio
           if (2 == am.field_g) {
             lb.field_l.a((byte) 41, param2, -1, -1);
           } else {
-            lb.field_l.a((byte) 41, param2, be.a(-1013410975, qh.field_i, bm.field_h), 0);
+            lb.field_l.a((byte) 41, param2, be.a(-1013410975, qh.field_i, IsaacRandom.field_h), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

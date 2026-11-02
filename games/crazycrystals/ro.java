@@ -549,7 +549,7 @@ final class ro extends pn implements Cloneable {
           if (param0 != 23525) {
             this.a(-44, -106, 68, (f[][]) null, 106, 20, 110, -87);
           }
-          stackIn_3_0 = ng.a(sn.field_b, param1, new ro(this.field_m, new kp(-1)), (byte) -83, qk.field_z);
+          stackIn_3_0 = PacketBuffer.a(sn.field_b, param1, new ro(this.field_m, new kp(-1)), (byte) -83, qk.field_z);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

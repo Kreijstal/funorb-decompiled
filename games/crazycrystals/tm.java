@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tm {
-    static a field_b;
-    private jb field_h;
+    static MouseInputHandler field_b;
+    private IntrusiveNode field_h;
     private wb field_g;
     static am field_f;
     static String field_c;
@@ -11,11 +11,11 @@ final class tm {
     static f[][] field_d;
     static int[] field_a;
 
-    final jb a(byte param0) {
-        jb var2 = this.field_g.field_a.field_b;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_g.field_a.field_b;
         if (param0 <= 27) {
-          jb var3 = (jb) null;
-          this.a((byte) 51, (jb) null);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a((byte) 51, (IntrusiveNode) null);
           if (this.field_g.field_a == var2) {
             this.field_h = null;
             return null;
@@ -31,11 +31,11 @@ final class tm {
         return var2;
     }
 
-    final jb a(byte param0, jb param1) {
-        jb var3 = null;
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        jb stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -52,7 +52,7 @@ final class tm {
           if (this.field_g.field_a == var3) {
             this.field_h = null;
             stackIn_8_0 = null;
-            return (jb) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_h = var3.field_b;
           stackIn_10_0 = var3;
@@ -71,8 +71,8 @@ final class tm {
         }
     }
 
-    final jb c(int param0) {
-        jb var2 = this.field_h;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_h;
         if (var2 == this.field_g.field_a) {
           this.field_h = null;
           return null;
@@ -82,12 +82,12 @@ final class tm {
         return var2;
     }
 
-    final jb a(jb param0, int param1) {
-        jb var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
-        jb stackIn_8_0 = null;
-        jb stackIn_10_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -101,14 +101,14 @@ final class tm {
           if (var3 == this.field_g.field_a) {
             this.field_h = null;
             stackIn_5_0 = null;
-            return (jb) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           this.field_h = var3.field_d;
           if (param1 == 200) {
             stackIn_10_0 = var3;
             return stackIn_10_0;
           }
-          stackIn_8_0 = (jb) null;
+          stackIn_8_0 = (IntrusiveNode) null;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -157,7 +157,7 @@ final class tm {
           }
           return stackIn_15_0;
         }
-        field_b = (a) null;
+        field_b = (MouseInputHandler) null;
         param0 = param0 & 8191;
         if (param0 >= 4096) {
           if (param0 >= 6144) {
@@ -175,8 +175,8 @@ final class tm {
         return stackIn_5_0;
     }
 
-    final jb d(int param0) {
-        jb var2 = this.field_g.field_a.field_d;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_g.field_a.field_d;
         if (param0 <= 8) {
           field_a = (int[]) null;
           if (var2 != this.field_g.field_a) {
@@ -243,9 +243,9 @@ final class tm {
         }
     }
 
-    final jb b(int param0) {
+    final IntrusiveNode b(int param0) {
         int var3 = 109 / ((52 - param0) / 43);
-        jb var2 = this.field_h;
+        IntrusiveNode var2 = this.field_h;
         if (var2 == this.field_g.field_a) {
           this.field_h = null;
           return null;
@@ -263,7 +263,7 @@ final class tm {
     }
 
     static {
-        field_b = new a();
+        field_b = new MouseInputHandler();
         field_a = new int[]{100, 200, 300, 500, 1000, 100, 300, 500, 100, 200, 500, 1000, 500, 200, 500, 1000, 100};
         field_c = "The account name you use to access RuneScape and other Jagex.com games";
     }

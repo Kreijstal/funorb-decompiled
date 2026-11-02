@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ni implements Runnable {
-    private km field_e;
+    private SecondaryIntrusiveDeque field_e;
     static int field_b;
     int field_c;
     private boolean field_d;
@@ -289,7 +289,7 @@ final class ni implements Runnable {
 
     ni(un param0) {
         gb var2 = null;
-        this.field_e = new km();
+        this.field_e = new SecondaryIntrusiveDeque();
         this.field_d = false;
         this.field_c = 0;
         try {

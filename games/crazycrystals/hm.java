@@ -28,8 +28,8 @@ final class hm {
           vk.a(param0 ^ 3095, true, true);
           return;
         }
-        ng var2 = (ng) null;
-        hm.a((ng) null, -93);
+        PacketBuffer var2 = (PacketBuffer) null;
+        hm.a((PacketBuffer) null, -93);
         qe.field_g = new ol();
         vk.a(param0 ^ 3095, true, true);
     }
@@ -41,13 +41,13 @@ final class hm {
           var3 = param2 >>> 31;
           return -var3 + (param2 + var3) / param0;
         }
-        ng var4 = (ng) null;
-        hm.a((ng) null, 46);
+        PacketBuffer var4 = (PacketBuffer) null;
+        hm.a((PacketBuffer) null, 46);
         var3Lifetime1 = param2 >>> 31;
         return -var3Lifetime1 + (param2 + var3Lifetime1) / param0;
     }
 
-    final static boolean a(ng param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -13,7 +13,7 @@ final class uf {
     static db field_e;
     int field_f;
     private long field_g;
-    static vf field_c;
+    static KeyboardInputHandler field_c;
 
     final int a(boolean param0) {
         if (this.field_j) {
@@ -69,12 +69,12 @@ final class uf {
         this.field_h = fb.field_b;
         this.field_d = na.field_kb;
         this.field_f = lj.field_b;
-        this.field_b = md.field_s;
-        this.field_g = vf.field_d;
+        this.field_b = CipherPacketBuffer.field_s;
+        this.field_g = KeyboardInputHandler.field_d;
     }
 
     static {
         field_i = new boolean[64];
-        field_c = new vf();
+        field_c = new KeyboardInputHandler();
     }
 }

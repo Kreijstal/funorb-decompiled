@@ -6,7 +6,7 @@ import java.io.*;
 final class ai implements Runnable {
     private gb field_m;
     static int[] field_j;
-    private ng field_k;
+    private PacketBuffer field_k;
     private gb field_g;
     private DataInputStream field_e;
     private gb field_f;
@@ -90,14 +90,14 @@ final class ai implements Runnable {
         this.field_f = null;
     }
 
-    final ng a(byte param0) {
+    final PacketBuffer a(byte param0) {
         if (3 == this.field_d) {
           return this.field_k;
         }
         if (param0 == -111) {
           return null;
         }
-        return (ng) null;
+        return (PacketBuffer) null;
     }
 
     public static void a(int param0) {
@@ -230,9 +230,9 @@ final class ai implements Runnable {
     final static int a(rh param0, boolean param1, String param2, int param3, rh param4, byte param5, int param6) {
         int var12 = 0;
         int stackIn_7_0 = 0;
-        ng stackIn_13_0 = null;
+        PacketBuffer stackIn_13_0 = null;
         String stackIn_14_1 = null;
-        ng stackIn_16_0 = null;
+        PacketBuffer stackIn_16_0 = null;
         String stackIn_17_1 = null;
         int stackIn_33_0 = 0;
         int stackIn_46_0 = 0;
@@ -311,14 +311,14 @@ final class ai implements Runnable {
               } else {
                 stackIn_14_1 = var14;
               }
-              ((ng) (Object) stackIn_13_0).a(stackIn_14_1, (byte) -93);
+              ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1, (byte) -93);
               stackIn_16_0 = sp.field_c;
               if (param4.a(-113)) {
                 stackIn_17_1 = var8;
               } else {
                 stackIn_17_1 = "";
               }
-              ((ng) (Object) stackIn_16_0).a(stackIn_17_1, (byte) -115);
+              ((PacketBuffer) (Object) stackIn_16_0).a(stackIn_17_1, (byte) -115);
               tp.field_f.a(true, 16);
               tp.field_f.field_f = tp.field_f.field_f + 1;
               var9 = tp.field_f.field_f;
@@ -436,7 +436,7 @@ final class ai implements Runnable {
         try {
           this.field_a = param0;
           this.field_i = param1;
-          this.field_k = new ng(param2);
+          this.field_k = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "ai.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -28,8 +28,8 @@ final class ae extends og implements vd {
         this.field_B.field_l = (bi) (this);
         this.field_E.field_l = (bi) (this);
         this.field_z.field_l = (bi) (this);
-        this.field_E.field_t = pg.field_c;
-        this.field_z.field_t = md.field_o;
+        this.field_E.field_t = GameCanvas.field_c;
+        this.field_z.field_t = CipherPacketBuffer.field_o;
         this.b(this.field_B, 1);
         this.b(this.field_E, -5);
         this.b(this.field_z, -115);

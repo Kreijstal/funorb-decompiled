@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rm extends jb {
+final class rm extends IntrusiveNode {
     byte[] field_g;
     fc field_f;
 
@@ -10,7 +10,7 @@ final class rm extends jb {
         if (var3 == null) {
           return null;
         }
-        return new rm(new ng(var3));
+        return new rm(new PacketBuffer(var3));
     }
 
     final void b() {
@@ -118,7 +118,7 @@ final class rm extends jb {
         this.field_f = null;
     }
 
-    private rm(ng param0) {
+    private rm(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -147,7 +147,7 @@ final class rm extends jb {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        ng stackIn_84_0 = null;
+        PacketBuffer stackIn_84_0 = null;
         int stackIn_84_1 = 0;
         int stackIn_85_2 = 0;
         int stackIn_91_0 = 0;
@@ -200,7 +200,7 @@ final class rm extends jb {
         int var48;
         int var49;
         int var50;
-        ng var51;
+        PacketBuffer var51;
         int var52;
         int var53;
         int var54;
@@ -421,7 +421,7 @@ final class rm extends jb {
         var50 = param0.field_f;
         param0.field_f = param0.field_f + var5 * 3;
         this.field_g = new byte[var4];
-        var51 = new ng(this.field_g);
+        var51 = new PacketBuffer(this.field_g);
         var51.a(1297377380, -16384);
         var51.a(6, -16384);
         stackIn_84_0 = var51;
@@ -431,7 +431,7 @@ final class rm extends jb {
         } else {
           stackIn_85_2 = 1;
         }
-        ((ng) (Object) stackIn_84_0).c(stackIn_84_1, stackIn_85_2);
+        ((PacketBuffer) (Object) stackIn_84_0).c(stackIn_84_1, stackIn_85_2);
         var51.c(-161478600, var2);
         var51.c(-161478600, var3);
         param0.field_f = var13Lifetime1;

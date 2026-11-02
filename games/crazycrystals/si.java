@@ -22,7 +22,7 @@ final class si {
     }
 
     final static void a(int param0, boolean param1) {
-        jb var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         ca var4 = null;

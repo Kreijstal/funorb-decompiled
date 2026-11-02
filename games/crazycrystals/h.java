@@ -32,8 +32,8 @@ final class h {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ng var16 = null;
-        ng var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -45,19 +45,19 @@ final class h {
         int var4Lifetime5;
         var15 = CrazyCrystals.field_B;
         try {
-          var16 = new ng(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
           var17.field_f = -2 + param0.length;
           mg.field_a = var17.c((byte) -7);
           jm.field_a = new int[mg.field_a];
           uo.field_k = new int[mg.field_a];
-          ng.field_g = new byte[mg.field_a][];
+          PacketBuffer.field_g = new byte[mg.field_a][];
           rh.field_a = new boolean[mg.field_a];
           je.field_c = new int[mg.field_a];
           ui.field_c = new byte[mg.field_a][];
           uo.field_l = new int[mg.field_a];
           var17.field_f = param0.length - (7 + mg.field_a * 8);
-          km.field_c = var17.c((byte) -7);
+          SecondaryIntrusiveDeque.field_c = var17.c((byte) -7);
           if (!param1) {
             h.a((byte) 24, 15);
           }
@@ -95,7 +95,7 @@ final class h {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            ng.field_g[var4Lifetime5] = var21;
+            PacketBuffer.field_g[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.h(255);
             if (0 == (1 & var11)) {

@@ -324,7 +324,7 @@ final class ep extends f implements Cloneable {
           if (param0 != 23525) {
             this.a(-24, -83, 51, true, 50, -127);
           }
-          stackIn_3_0 = ng.a(qh.field_g, param1, new ep(new kp(-1), this.field_k), (byte) -83, rb.field_j);
+          stackIn_3_0 = PacketBuffer.a(qh.field_g, param1, new ep(new kp(-1), this.field_k), (byte) -83, rb.field_j);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

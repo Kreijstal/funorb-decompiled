@@ -15,7 +15,7 @@ final class gl {
     private RandomAccessFile field_b;
     static String field_f;
     static long field_i;
-    static wa field_h;
+    static GameAppletShell field_h;
 
     final long a(int param0) throws IOException {
         if (param0 != 48) {

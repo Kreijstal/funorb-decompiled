@@ -71,7 +71,7 @@ final class s extends ke {
         }
     }
 
-    final static String a(ng param0, int param1, int param2) {
+    final static String a(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;

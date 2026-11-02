@@ -104,7 +104,7 @@ final class da extends ue {
         super(param3 + 5);
         this.field_o = -1;
         try {
-          if (!(a.field_b instanceof da)) {
+          if (!(MouseInputHandler.field_b instanceof da)) {
             co.field_x = 0;
           }
           this.field_m = param3;
@@ -376,7 +376,7 @@ final class da extends ue {
                 var8 = (-var4[0].length + var4.length + 1) / 2;
               }
             }
-            this.field_p = md.a(var9, true, var8, 82, var4);
+            this.field_p = CipherPacketBuffer.a(var9, true, var8, 82, var4);
           } else {
             this.field_p = (f[][]) null;
           }
@@ -647,8 +647,8 @@ final class da extends ue {
             }
             if (var4 == 0 &&
               h.field_b < mb.field_f &&
-              var3 < bm.field_h &&
-              bm.field_h < qk.field_H.field_u + var3) {
+              var3 < IsaacRandom.field_h &&
+              IsaacRandom.field_h < qk.field_H.field_u + var3) {
               if (-qk.field_H.field_l + 269 < qh.field_i &&
                 qh.field_i < 269) {
                 mb.field_f = h.field_b;
@@ -660,7 +660,7 @@ final class da extends ue {
             }
           }
           if (param0) {
-            bc.field_f.a(0, og.a(0, dp.field_h, to.field_a), og.a(0, bm.field_h, qh.field_i));
+            bc.field_f.a(0, og.a(0, dp.field_h, to.field_a), og.a(0, IsaacRandom.field_h, qh.field_i));
             if (bc.field_f.a(true)) {
               if (0 == bc.field_f.field_c) {
                 stackIn_59_0 = 3;
@@ -718,7 +718,7 @@ final class da extends ue {
             co.field_x = co.field_x - 1;
           }
           if (co.field_x == 0) {
-            a.field_b = (ue) ((Object) this.field_n);
+            MouseInputHandler.field_b = (ue) ((Object) this.field_n);
             this.field_n.a(this.field_b.field_i, -13880);
           }
           this.field_n.a(param0);
@@ -1211,7 +1211,7 @@ final class da extends ue {
           if (var3 >= this.field_g && (1 != this.field_r ||
             var3 != 20 &&
             var3 != 40)) {
-            var4 = ug.field_d;
+            var4 = IntrusiveNodeHashTable.field_d;
             var7 = var4;
             var7Lifetime6 = var4;
           }
@@ -1224,16 +1224,16 @@ final class da extends ue {
           var7Lifetime5 = null;
           if (this.field_r == 1) {
             if (var3 == 0) {
-              var7Lifetime5 = md.field_t[0];
+              var7Lifetime5 = CipherPacketBuffer.field_t[0];
             }
             if (var3 == 20) {
-              var7Lifetime5 = md.field_t[1];
+              var7Lifetime5 = CipherPacketBuffer.field_t[1];
             }
             if (var3 == 40) {
-              var7Lifetime5 = md.field_t[2];
+              var7Lifetime5 = CipherPacketBuffer.field_t[2];
             }
             if (var3 == 60) {
-              var7Lifetime5 = md.field_t[3];
+              var7Lifetime5 = CipherPacketBuffer.field_t[3];
             }
           }
           this.field_d[var3] = (ik) ((Object) new an(-go.field_l.a(var12) + 410, this.b(var3, -15), var6 + var4, 0, (String) (var7Lifetime5)));

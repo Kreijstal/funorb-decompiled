@@ -40,7 +40,7 @@ final class ia extends ln {
           }
           if (pe.field_i == -1 &&
             ce.field_gb == -1) {
-            ce.field_gb = bm.field_h;
+            ce.field_gb = IsaacRandom.field_h;
             pe.field_i = qh.field_i;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -87,7 +87,7 @@ final class ia extends ln {
           kf.field_f = param1;
           if (!co.field_F &&
             cl.field_o < ih.field_a &&
-            ij.field_h) {
+            DualLinkNode.field_h) {
             rf.field_G = ce.field_gb;
             ni.field_b = pe.field_i;
             cl.field_o = 0;

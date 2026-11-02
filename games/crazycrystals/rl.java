@@ -15,7 +15,7 @@ abstract class rl extends oh {
     final static void d(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        md var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -119,7 +119,7 @@ abstract class rl extends oh {
           var3 = param2;
           mb.field_g = mb.field_g + var3;
           sa.n(-26);
-          a.field_b = null;
+          MouseInputHandler.field_b = null;
           qn.field_n = 0;
           gh.field_C = 0;
           return;

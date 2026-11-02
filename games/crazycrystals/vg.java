@@ -60,7 +60,7 @@ final class vg {
           var1 = mk.field_b.i(-1);
         }
         if (0 == var1.length()) {
-          var1 = bm.b((byte) 89);
+          var1 = IsaacRandom.b((byte) 89);
         }
         if (var1.length() == 0) {
           var1 = ck.field_eb;

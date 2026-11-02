@@ -147,7 +147,7 @@ final class am {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        ng var5 = null;
+        PacketBuffer var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -190,7 +190,7 @@ final class am {
           }
           kf.field_c = kf.field_c + ee.field_m.field_v;
           me.field_b = me.field_b + ee.field_m.field_v;
-          var5 = new ng(param1.b(0, 0, 0));
+          var5 = new PacketBuffer(param1.b(0, 0, 0));
           mi.field_A = new int[480];
           var6 = 0;
           var7 = 0;

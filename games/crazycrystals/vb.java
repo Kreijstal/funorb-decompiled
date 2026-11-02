@@ -32,7 +32,7 @@ final class vb extends pn implements Cloneable {
           if (param0 != 23525) {
             this.b(-84, -83, 69, false, 69, 108);
           }
-          stackIn_3_0 = ng.a(dq.field_F, param1, new vb(new kp(-1)), (byte) -83, nk.field_m);
+          stackIn_3_0 = PacketBuffer.a(dq.field_F, param1, new vb(new kp(-1)), (byte) -83, nk.field_m);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

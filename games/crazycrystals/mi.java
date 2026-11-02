@@ -105,7 +105,7 @@ final class mi extends ea implements Cloneable {
           if (param0 != 23525) {
             this.e(115, 40, (f[][]) null, -25);
           }
-          stackIn_3_0 = ng.a(ec.field_n, param1, new mi(new kp(-1), true), (byte) -83, ch.field_c);
+          stackIn_3_0 = PacketBuffer.a(ec.field_n, param1, new mi(new kp(-1), true), (byte) -83, ch.field_c);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

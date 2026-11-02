@@ -109,9 +109,9 @@ final class so {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_b[0][var0] = jb.a(var12, jb.a(jb.a(jb.a(var10 << 24, jb.a(jb.a(jb.a(var2 << 56, var2 << 48), var6 << 40), var2 << 32)), var8 << 16), var4 << 8));
+            field_b[0][var0] = IntrusiveNode.a(var12, IntrusiveNode.a(IntrusiveNode.a(IntrusiveNode.a(var10 << 24, IntrusiveNode.a(IntrusiveNode.a(IntrusiveNode.a(var2 << 56, var2 << 48), var6 << 40), var2 << 32)), var8 << 16), var4 << 8));
             for (var14 = 1; 8 > var14; var14++) {
-                field_b[var14][var0] = jb.a(field_b[var14 - 1][var0] << 56, field_b[var14 - 1][var0] >>> 8);
+                field_b[var14][var0] = IntrusiveNode.a(field_b[var14 - 1][var0] << 56, field_b[var14 - 1][var0] >>> 8);
             }
             var0++;
         }
@@ -120,7 +120,7 @@ final class so {
         var0 = var15;
         while (var15 <= 10) {
             var1 = var15 * 8 - 8;
-            field_a[var15] = km.a(ao.a(field_b[7][7 + var1], 255L), km.a(km.a(ao.a(field_b[5][var1 + 5], 16711680L), km.a(ao.a(4278190080L, field_b[4][var1 + 4]), km.a(km.a(ao.a(280375465082880L, field_b[2][var1 + 2]), km.a(ao.a(field_b[0][var1], -72057594037927936L), ao.a(field_b[1][1 + var1], 71776119061217280L))), ao.a(1095216660480L, field_b[3][var1 + 3])))), ao.a(field_b[6][var1 + 6], 65280L)));
+            field_a[var15] = SecondaryIntrusiveDeque.a(ao.a(field_b[7][7 + var1], 255L), SecondaryIntrusiveDeque.a(SecondaryIntrusiveDeque.a(ao.a(field_b[5][var1 + 5], 16711680L), SecondaryIntrusiveDeque.a(ao.a(4278190080L, field_b[4][var1 + 4]), SecondaryIntrusiveDeque.a(SecondaryIntrusiveDeque.a(ao.a(280375465082880L, field_b[2][var1 + 2]), SecondaryIntrusiveDeque.a(ao.a(field_b[0][var1], -72057594037927936L), ao.a(field_b[1][1 + var1], 71776119061217280L))), ao.a(1095216660480L, field_b[3][var1 + 3])))), ao.a(field_b[6][var1 + 6], 65280L)));
             var15++;
         }
         field_h = new wb();

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends jb {
+final class pe extends IntrusiveNode {
     int field_f;
     int[] field_k;
     int field_m;
@@ -46,7 +46,7 @@ final class pe extends jb {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        md var14 = null;
+        CipherPacketBuffer var14 = null;
         int[][] var18 = null;
         int var6_intLifetime1;
         int var9Lifetime1;

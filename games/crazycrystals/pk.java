@@ -5,7 +5,7 @@ final class pk {
     private ld field_e;
     private ee[] field_a;
     private java.math.BigInteger field_h;
-    private ng field_i;
+    private PacketBuffer field_i;
     static String field_f;
     private ni field_d;
     private java.math.BigInteger field_g;
@@ -107,7 +107,7 @@ final class pk {
     }
 
     final static void a(int param0, pp param1, byte param2) {
-        md var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -147,7 +147,7 @@ final class pk {
         Object var5 = null;
         int var6 = 0;
         w var8 = null;
-        md var9 = null;
+        CipherPacketBuffer var9 = null;
         byte[] var13 = null;
         var6 = CrazyCrystals.field_B;
         try {
@@ -193,7 +193,7 @@ final class pk {
               var4_ref_qp.a(false);
               return;
             }
-            wp.a((Throwable) null, "A1: " + ug.a(-1815), 21862);
+            wp.a((Throwable) null, "A1: " + IntrusiveNodeHashTable.a(-1815), 21862);
             jj.a(4);
           }
           return;
@@ -211,7 +211,7 @@ final class pk {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        ng var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -229,7 +229,7 @@ final class pk {
         if (this.field_e.field_n) {
           return false;
         }
-        var10 = new ng(this.field_e.e(113));
+        var10 = new PacketBuffer(this.field_e.e(113));
         var10.field_f = 5;
         var3 = var10.h(255);
         var10.field_f = var10.field_f + var3 * 72;

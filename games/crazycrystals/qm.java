@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class qm extends jb {
+class qm extends IntrusiveNode {
     int field_s;
     String field_t;
     wo field_i;
@@ -102,7 +102,7 @@ class qm extends jb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(bm.field_h, param3, false, param2, qh.field_i) ? 1 : 0;
+          var5_int = this.a(IsaacRandom.field_h, param3, false, param2, qh.field_i) ? 1 : 0;
           var6 = 125 % ((-50 - param1) / 59);
           if ((this.field_m ? 1 : 0) != var5_int) {
             stackIn_5_1 = (var5_int != 0);
@@ -354,7 +354,7 @@ class qm extends jb {
         oj var13;
         oj var6Lifetime1;
         oj var6Lifetime2;
-        L0: {
+        regionExit1: {
           var7 = CrazyCrystals.field_B;
           this.a(this, -125, param0, param3);
           var5 = this.e(-111) ? 1 : 0;
@@ -364,7 +364,7 @@ class qm extends jb {
                 if (pj.field_v == 0) {
                   if (gg.field_c == 0 &&
                     qk.field_D != 0) {
-                    this.a(bm.field_h, param0, param3, qh.field_i, this, 0);
+                    this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
                     var8 = ok.field_e;
                     var6 = var8;
                     if (var8 != null) {
@@ -385,7 +385,7 @@ class qm extends jb {
                     if (var7 == 0) {
                       if (gg.field_c == 0 &&
                         qk.field_D != 0) {
-                        this.a(bm.field_h, param0, param3, qh.field_i, this, 0);
+                        this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
                         var9 = ok.field_e;
                         var6Lifetime1 = var9;
                         if (var9 != null) {
@@ -400,12 +400,12 @@ class qm extends jb {
                           this.b((byte) -110);
                         }
                       }
-                      break L0;
+                      break regionExit1;
                     }
                   }
                   if (((gg.field_c == 0)) &&
                     ((qk.field_D != 0))) {
-                    this.a(bm.field_h, param0, param3, qh.field_i, this, 0);
+                    this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
                     var11 = ok.field_e;
                     var6Lifetime2 = var11;
                     if (var11 != null) {
@@ -416,25 +416,25 @@ class qm extends jb {
                     }
                   }
                 }
-                break L0;
+                break regionExit1;
               }
-              this.a(1, bm.field_h, this, qh.field_i, param0, param3, of.field_H);
+              this.a(1, IsaacRandom.field_h, this, qh.field_i, param0, param3, of.field_H);
             }
-            L16: {
+            regionExit2: {
               if (pj.field_v != 0) {
                 if (this.a(param3, dp.field_h, this, false, param0, pj.field_v, to.field_a)) {
                   param2 = false;
                   if (var7 == 0) {
-                    break L16;
+                    break regionExit2;
                   }
                 }
                 if (var5 != 0) {
                   this.b((byte) -118);
                   if (gg.field_c == 0) {
                     if (qk.field_D == 0) {
-                      break L0;
+                      break regionExit1;
                     }
-                    this.a(bm.field_h, param0, param3, qh.field_i, this, 0);
+                    this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
                     var12 = ok.field_e;
                     if (var12 != null) {
                       if (var12.field_l instanceof sk) {
@@ -444,18 +444,18 @@ class qm extends jb {
                     }
                     if (var7 != 0) {
                       if (pj.field_v == 0) {
-                        break L0;
+                        break regionExit1;
                       }
                       this.b((byte) -110);
                     }
                   }
-                  break L0;
+                  break regionExit1;
                 }
               }
             }
             if ((gg.field_c == 0) &&
               (qk.field_D != 0)) {
-              this.a(bm.field_h, param0, param3, qh.field_i, this, 0);
+              this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
               var13 = ok.field_e;
               if (var13 != null) {
                 if (var13.field_l instanceof sk) {

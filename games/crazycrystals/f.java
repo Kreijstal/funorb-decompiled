@@ -640,7 +640,7 @@ abstract class f {
           bn.field_c = param4;
           qo.field_k = param3;
           qh.field_h = param1;
-          a.field_a = param2;
+          MouseInputHandler.field_a = param2;
           to.field_d = param0;
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "f.WB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

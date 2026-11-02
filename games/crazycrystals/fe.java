@@ -37,7 +37,7 @@ final class fe extends l {
 
     final l a(int param0) {
         nj.field_k = kk.field_a[0].length;
-        ij.a(0, param0, 0, kk.field_a);
+        DualLinkNode.a(0, param0, 0, kk.field_a);
         nj.field_k = 0;
         if (!(this.field_f.field_o > this.field_i)) {
           jj.field_b = jj.field_b - (~jj.field_b >> 3);
@@ -170,7 +170,7 @@ final class fe extends l {
           cn.field_e = new am(kg.a(lb.field_d, 95 + (int)(Math.random() * 11.0), 0));
           jj.field_c = new am(kg.a(an.field_s, 100, 0));
           m.field_n = new am(kg.a(cl.field_m, 100, 0));
-          a.field_d = new am(kg.a(ab.field_z, 100, 0));
+          MouseInputHandler.field_d = new am(kg.a(ab.field_z, 100, 0));
           rb.field_g = new am(kg.a(sa.field_nb, 100, 0));
           ln.field_f = new am(kg.a(tg.field_c, 100, 0));
           oj.field_E = new am(kg.a(va.field_b, 100, 0));

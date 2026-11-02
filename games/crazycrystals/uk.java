@@ -40,7 +40,7 @@ final class uk extends nf {
           this.field_h = this.field_h + 1;
           stackIn_6_0 = (!q.field_a[ma.field_n[param1]].a((byte) 107, param2)) ? 25 : 50;
           ph.a(stackIn_6_0, (byte) 107, param1, param4);
-          stackIn_7_0 = bm.field_g;
+          stackIn_7_0 = IsaacRandom.field_g;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class uk extends nf {
                     return;
                   }
                   ol.field_z[1] = b.a(oe.a(param0, -9762), (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.a(false, var7, "puzzle1p.ccl", ""))), ro.field_r);
-                  ol.field_z[2] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.a(false, var7, "puzzle2p.ccl", ""))), pg.field_e);
+                  ol.field_z[2] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.a(false, var7, "puzzle2p.ccl", ""))), GameCanvas.field_e);
                   ol.field_z[3] = b.a(param0 + 9762, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.a(false, var7, "puzzle3p.ccl", ""))), qg.field_c);
                   ol.field_z[4] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.a(false, var7, "arcade1p.ccl", ""))), kk.field_k);
                   pd.field_f = null;
@@ -146,15 +146,15 @@ final class uk extends nf {
               if (rc.a(-63)) {
                 return;
               }
-              if (null == eb.field_p) {
-                eb.field_p = qa.a((byte) 121, 4);
+              if (null == NetworkGameClient.field_p) {
+                NetworkGameClient.field_p = qa.a((byte) 121, 4);
               }
-              if (eb.field_p.field_k) {
-                fk.field_s = eb.field_p.field_f;
+              if (NetworkGameClient.field_p.field_k) {
+                fk.field_s = NetworkGameClient.field_p.field_f;
                 pc.field_y = pc.field_y & ~fk.field_s;
                 gh.field_y = true;
                 fk.field_s = fk.field_s + pc.field_y;
-                eb.field_p = null;
+                NetworkGameClient.field_p = null;
                 return;
               }
             }

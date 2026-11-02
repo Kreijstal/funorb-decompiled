@@ -293,7 +293,7 @@ final class p extends uc {
           sj.field_c = fieldTemp$7;
           gj.field_n = -(jn.field_p * 26 / 2) + 241;
           this.field_e = new jh(jn.field_p);
-          this.field_e.a(-1, param0, this.field_e.a((byte) -24, 26, qh.field_i, 325, gj.field_n, 157, bm.field_h));
+          this.field_e.a(-1, param0, this.field_e.a((byte) -24, 26, qh.field_i, 325, gj.field_n, 157, IsaacRandom.field_h));
           var2_int = go.field_l.a(fa.field_m);
           var3 = go.field_l.a(cc.field_b);
           if (var3 > var2_int) {

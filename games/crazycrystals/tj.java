@@ -7,7 +7,7 @@ final class tj extends od {
     private int field_k;
     private int field_j;
 
-    private final void a(jb param0, rj param1) {
+    private final void a(IntrusiveNode param0, rj param1) {
         while (true) {
           if (param0 == this.field_m.field_a) {
             rf.a(param0, param1, 47);
@@ -78,7 +78,7 @@ final class tj extends od {
     private final void a(rj param0) {
         param0.a(false);
         param0.a();
-        jb var2 = this.field_m.field_a.field_b;
+        IntrusiveNode var2 = this.field_m.field_a.field_b;
         if (var2 == this.field_m.field_a) {
           this.field_j = -1;
         } else {

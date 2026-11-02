@@ -526,7 +526,7 @@ final class io extends rf {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = pg.a((byte) 112, param4, param0, param1, param3, param5);
+          var8 = GameCanvas.a((byte) 112, param4, param0, param1, param3, param5);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;

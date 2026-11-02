@@ -4,12 +4,12 @@
 import java.io.*;
 import java.util.*;
 
-final class ug implements Iterable {
+final class IntrusiveNodeHashTable implements Iterable {
     static String field_a;
     int field_e;
-    private jb field_b;
+    private IntrusiveNode field_b;
     static String field_d;
-    jb[] field_c;
+    IntrusiveNode[] field_c;
 
     final static void a(byte param0) {
         try {
@@ -36,7 +36,7 @@ final class ug implements Iterable {
               }
             }
             if (param0 != -127) {
-              ug.a((byte) 124);
+              IntrusiveNodeHashTable.a((byte) 124);
             }
             if (li.field_d != null) {
               for (var1_int = 0; var1_int < li.field_d.length; var1_int++) {
@@ -65,7 +65,7 @@ final class ug implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ii(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     public static void b(int param0) {
@@ -115,10 +115,10 @@ final class ug implements Iterable {
         return var1;
     }
 
-    final jb a(long param0, int param1) {
-        jb var6 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var6 = null;
         int var7 = CrazyCrystals.field_B;
-        jb var4 = this.field_c[(int)((long)(-1 + this.field_e) & param0)];
+        IntrusiveNode var4 = this.field_c[(int)((long)(-1 + this.field_e) & param0)];
         int var5 = -65 % ((param1 + 31) / 54);
         this.field_b = var4.field_b;
         while (var4 != this.field_b) {
@@ -133,12 +133,12 @@ final class ug implements Iterable {
         return null;
     }
 
-    private ug() throws Throwable {
+    private IntrusiveNodeHashTable() throws Throwable {
         throw new Error();
     }
 
-    final void a(long param0, byte param1, jb param2) {
-        jb var5 = null;
+    final void a(long param0, byte param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param2.field_d) {
             param2.a(false);

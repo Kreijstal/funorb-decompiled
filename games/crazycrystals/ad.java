@@ -55,7 +55,7 @@ final class ad extends um {
           this.field_i = this.field_i + 1;
           this.field_g = this.field_g + param3;
           ph.a(100, (byte) 107, param1, param4);
-          stackIn_3_0 = bm.field_g;
+          stackIn_3_0 = IsaacRandom.field_g;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

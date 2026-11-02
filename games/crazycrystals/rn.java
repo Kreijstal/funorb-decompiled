@@ -27,7 +27,7 @@ final class rn extends rd {
           }
           this.field_l = this.field_l + param3;
           this.field_m = this.field_m + 1;
-          stackIn_3_0 = new mi(bm.field_g, true);
+          stackIn_3_0 = new mi(IsaacRandom.field_g, true);
           return (f) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

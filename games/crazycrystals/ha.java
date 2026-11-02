@@ -51,7 +51,7 @@ final class ha {
         if (var3 == null) {
           return null;
         }
-        return new ha(new ng(var3));
+        return new ha(new PacketBuffer(var3));
     }
 
     final static ha a(db param0, String param1, String param2) {
@@ -59,7 +59,7 @@ final class ha {
         if (var3 == null) {
           return null;
         }
-        return new ha(new ng(var3));
+        return new ha(new PacketBuffer(var3));
     }
 
     final ko b() {
@@ -67,7 +67,7 @@ final class ha {
         return new ko(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
-    private ha(ng param0) {
+    private ha(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new nm[10];

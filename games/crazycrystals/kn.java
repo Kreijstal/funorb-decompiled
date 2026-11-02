@@ -38,7 +38,7 @@ final class kn extends bo implements Cloneable {
           if (param0 != 23525) {
             this.a(-78, (ea) null, 7, -88, (byte) 87, 74, (f[][]) null);
           }
-          stackIn_3_0 = ng.a(dq.field_H, param1, new kn(new kp(-1)), (byte) -83, wi.field_b);
+          stackIn_3_0 = PacketBuffer.a(dq.field_H, param1, new kn(new kp(-1)), (byte) -83, wi.field_b);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

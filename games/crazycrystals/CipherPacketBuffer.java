@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends ng {
+final class CipherPacketBuffer extends PacketBuffer {
     static int field_q;
     static sj field_u;
     private int field_l;
     static db field_p;
     static int[] field_k;
     static String[] field_t;
-    private bm field_r;
+    private IsaacRandom field_r;
     static long field_m;
     static String field_s;
     static String field_o;
     static String field_n;
 
-    md(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 
@@ -89,7 +89,7 @@ final class md extends ng {
 
     final void a(int[] param0, boolean param1) {
         try {
-          this.field_r = new bm(param0);
+          this.field_r = new IsaacRandom(param0);
           if (!param1) {
             this.d(42, 32);
           }
@@ -196,7 +196,7 @@ final class md extends ng {
     final void k(int param0) {
         if (param0 != -2321) {
           db var3 = (db) null;
-          md.a(6, -104, (db) null);
+          CipherPacketBuffer.a(6, -104, (db) null);
           this.field_f = (this.field_l + 7) / 8;
           return;
         }
@@ -216,7 +216,7 @@ final class md extends ng {
         field_p = null;
     }
 
-    md(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 
@@ -238,7 +238,7 @@ final class md extends ng {
             return (dk) (stackIn_2_0);
           }
           if (param1 < 74) {
-            md.a(-108, true, 93, 119, (f[][]) null);
+            CipherPacketBuffer.a(-108, true, 93, 119, (f[][]) null);
           }
           stackIn_6_0 = new dk(var4);
           return stackIn_6_0;

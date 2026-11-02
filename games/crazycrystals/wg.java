@@ -869,7 +869,7 @@ final class wg extends od {
             var9 = (int)var8.field_e;
             var10 = (dk) (this.field_D.a((long)var9, 0));
             if (var10 == null) {
-              var10 = md.a(var9, 103, param0);
+              var10 = CipherPacketBuffer.a(var9, 103, param0);
               if (var10 != null) {
                 this.field_D.a(-22072, (long)var9, var10);
               } else {

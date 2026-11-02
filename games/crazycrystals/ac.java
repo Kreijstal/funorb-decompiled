@@ -23,9 +23,9 @@ final class ac extends nf {
           }
           this.field_h = this.field_h + 1;
           if (q.field_a[ma.field_n[param1]].a((byte) 105, param2)) {
-            stackIn_6_0 = new cd(bm.field_g, 0, 0, 0, 0);
+            stackIn_6_0 = new cd(IsaacRandom.field_g, 0, 0, 0, 0);
           } else {
-            stackIn_6_0 = new gh(bm.field_g, 0, 0);
+            stackIn_6_0 = new gh(IsaacRandom.field_g, 0, 0);
           }
           return (f) (stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
