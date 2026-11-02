@@ -135,7 +135,7 @@ final class fc extends qk {
             fb.a(var5Lifetime1 + 2, var4, (byte) 98, md.a(var5Lifetime1, param0, 105));
           }
           if (param1 >= 45) {
-            stackIn_11_0 = gm.a(var4, -27);
+            stackIn_11_0 = BufferedSocket.a(var4, -27);
             return stackIn_11_0;
           }
           stackIn_9_0 = (on) null;
@@ -164,7 +164,7 @@ final class fc extends qk {
 
     private final void p(byte param0) {
         int var5;
-        le var6;
+        IntrusiveNode var6;
         int var7;
         boolean stackIn_23_1 = false;
         int var2;
@@ -179,7 +179,7 @@ final class fc extends qk {
         while (var6 instanceof fb) {
           if (var6 instanceof kd) {
             if (!((kd) (var6)).x(91)) {
-              var6 = var6.field_b;
+              var6 = var6.previous;
               continue;
             }
             var2 = ((kd) (var6)).a(true) - this.a(true);
@@ -194,7 +194,7 @@ final class fc extends qk {
               }
             }
           }
-          var6 = var6.field_b;
+          var6 = var6.previous;
         }
         if (var5 > 67600) {
           this.field_yb = null;

@@ -25,7 +25,7 @@ final class mj {
     }
 
     final static void a(int param0, int param1) {
-        le var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         bo var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -37,7 +37,7 @@ final class mj {
           }
           var4 = (bo) (mp.field_g.b((byte) 26));
           while (var4 != null) {
-            ag.a(param0, true, var4);
+            SecondaryNodeDequeIterator.a(param0, true, var4);
             var4 = (bo) (mp.field_g.a(false));
           }
           var2 = qi.field_J.b((byte) 26);
@@ -139,7 +139,7 @@ final class mj {
         this.field_k = this.a(1, this.field_c, this.field_l);
         if (null != this.field_a) {
           this.field_a = this.field_k.a(-6116);
-          L7: while (true) {
+          scanLoop1: while (true) {
             if (null == this.field_a) {
               this.field_l = this.field_l + 1;
               if (this.field_j < this.field_l) {
@@ -147,7 +147,7 @@ final class mj {
                 this.field_l = this.field_f;
                 if (this.field_h < this.field_c) {
                   this.field_a = null;
-                  break L7;
+                  break scanLoop1;
                 }
               }
               this.field_k = this.a(1, this.field_c, this.field_l);
@@ -172,7 +172,7 @@ final class mj {
           stackIn_5_1 = null;
         }
         this.field_a = stackIn_5_1;
-        L13: while (true) {
+        scanLoop2: while (true) {
           if (null == this.field_a) {
             this.field_l = this.field_l + 1;
             if (this.field_j < this.field_l) {
@@ -180,7 +180,7 @@ final class mj {
               this.field_l = this.field_f;
               if (this.field_h < this.field_c) {
                 this.field_a = null;
-                break L13;
+                break scanLoop2;
               }
             }
             this.field_k = this.a(1, this.field_c, this.field_l);
@@ -271,7 +271,7 @@ final class mj {
           if (param0 != 3490) {
             field_b = 29;
           }
-          le.field_c = 0;
+          IntrusiveNode.field_c = 0;
         } catch (RuntimeException runtimeException) {
           throw sh.a((Throwable) ((Object) runtimeException), "mj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

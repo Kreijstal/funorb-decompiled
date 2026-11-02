@@ -71,19 +71,19 @@ final class tl implements ug {
         a.field_h = pb.a(true, false, 2, true, 1);
         ZombieDawn.field_H = mm.a(3, (byte) -115);
         nm.field_e = pb.a(true, true, 8, true, 1);
-        gm.field_h = pb.a(true, false, 4, true, 1);
+        BufferedSocket.field_h = pb.a(true, false, 4, true, 1);
         qn.field_i = pb.a(true, false, 5, true, 1);
         an.field_B = pb.a(true, false, 6, true, 1);
         this.field_h = pb.a(true, false, 7, true, 1);
         bp.field_h = new jk(50);
         dj var4 = nl.field_p;
         dj var3 = gj.field_i;
-        bp.field_h.a("basic", nb.field_o, el.field_m, var4, (byte) -84);
-        bp.field_h.a("arialish12", nb.field_o, el.field_m, var4, (byte) -84);
-        bp.field_h.a("arialish12", nb.field_o, el.field_m, var3, (byte) -84);
+        bp.field_h.a("basic", DualLinkNode.field_o, el.field_m, var4, (byte) -84);
+        bp.field_h.a("arialish12", DualLinkNode.field_o, el.field_m, var4, (byte) -84);
+        bp.field_h.a("arialish12", DualLinkNode.field_o, el.field_m, var3, (byte) -84);
         bp.field_h.a((byte) -113, nm.field_e, ap.field_w, ea.field_d);
         bp.field_h.a(ao.field_I, qn.field_i, 1);
-        bp.field_h.a(ao.field_I, gm.field_h, 1);
+        bp.field_h.a(ao.field_I, BufferedSocket.field_h, 1);
         bp.field_h.a(u.field_f, an.field_B, 1);
         bp.field_h.a(u.field_f, this.field_h, 1);
         bp.field_h.a((byte) -98, ZombieDawn.field_H, ba.field_e, nd.field_d);
@@ -121,11 +121,11 @@ final class tl implements ug {
         if (param0 != 75) {
           this.a(60, -55);
         }
-        if (!rm.field_f &&
-          null != gm.field_h) {
+        if (!DelegatingCanvas.field_f &&
+          null != BufferedSocket.field_h) {
           oh.d((byte) -111);
           this.a(53.0f, 127, am.field_m);
-          ph.field_a = new ka(gm.field_h, qn.field_i);
+          ph.field_a = new ka(BufferedSocket.field_h, qn.field_i);
           for (var4_int = 0; tc.field_t > var4_int; var4_int++) {
             if (0 == tc.field_y[var4_int]) {
               var5_int = tc.field_s[var4_int];
@@ -133,7 +133,7 @@ final class tl implements ug {
                 var5_int == 68 ||
                 47 == var5_int) && null == vb.field_D[var5_int]) {
                 var13 = "sfx";
-                var14 = ml.a(gm.field_h, var13, tc.field_x[var4_int]);
+                var14 = ml.a(BufferedSocket.field_h, var13, tc.field_x[var4_int]);
                 if (var14 == null) {
                   return;
                 }
@@ -141,7 +141,7 @@ final class tl implements ug {
               }
             }
           }
-          rm.field_f = true;
+          DelegatingCanvas.field_f = true;
           ep.c((byte) -50);
           return;
         }
@@ -266,11 +266,11 @@ final class tl implements ug {
           nc.field_k = gf.a(a.field_h, "pipeframe_levelselect", param0 - 67, "basic");
           ah.field_tb = af.field_d;
           kb.field_i = vm.a((byte) -18, "powerups", "basic", a.field_h);
-          nb.field_k = vm.a((byte) 127, "character_common", "basic", a.field_h);
+          DualLinkNode.field_k = vm.a((byte) 127, "character_common", "basic", a.field_h);
           tp.a(vm.a((byte) -120, "hud", "basic", a.field_h), -10);
           w.a(vm.a((byte) 125, "popup", "basic", a.field_h), (byte) -97);
           this.a(var5, 0, var6, var4);
-          le.field_a = vm.a((byte) -124, "instructions_controls", "basic", a.field_h);
+          IntrusiveNode.field_a = vm.a((byte) -124, "instructions_controls", "basic", a.field_h);
           qn.field_k = vm.a((byte) -42, "instructions_survivors", "basic", a.field_h);
           l.field_b = vm.a((byte) 2, "instructions_zombies", "basic", a.field_h);
           this.a(var5, 0, var6, var4);
@@ -320,7 +320,7 @@ final class tl implements ug {
           ep.c((byte) -50);
           return;
         }
-        stackIn_102_1 = (r.field_F) && (rm.field_f) && (sa.field_T) && (eh.field_x) && (ti.field_a);
+        stackIn_102_1 = (r.field_F) && (DelegatingCanvas.field_f) && (sa.field_T) && (eh.field_x) && (ti.field_a);
         this.field_j = stackIn_102_1;
         if (this.field_j) {
           this.a(99.0f, 126, jh.field_l);
@@ -708,10 +708,10 @@ final class tl implements ug {
               }
               var7_ref_String = stackIn_12_0;
               if (tc.field_y[var5] == 0) {
-                var11 = ml.a(gm.field_h, var7_ref_String, tc.field_x[var5]);
+                var11 = ml.a(BufferedSocket.field_h, var7_ref_String, tc.field_x[var5]);
                 var8 = var11;
                 if (var8 == null) {
-                  gm.field_h.a(-1, var7_ref_String);
+                  BufferedSocket.field_h.a(-1, var7_ref_String);
                   return false;
                 }
                 vb.field_D[tc.field_s[var5]] = var11.b();
@@ -784,7 +784,7 @@ final class tl implements ug {
             o.field_d = vm.a((byte) 112, "blood", "game", a.field_h);
             jc.field_t = vm.a((byte) -76, "headlight", "game", a.field_h);
             s.field_j = gf.a(a.field_h, "tutorial", 8, "game");
-            ag.field_h = gf.a(a.field_h, "minigun", 8, "game");
+            SecondaryNodeDequeIterator.field_h = gf.a(a.field_h, "minigun", 8, "game");
             sl.field_c = vm.a((byte) -20, "hatch", "game", a.field_h);
             oj.field_f = gf.a(a.field_h, "grenade", 8, "game");
             tc.field_z = vm.a((byte) 121, "explosion", "game", a.field_h);
@@ -848,7 +848,7 @@ final class tl implements ug {
                     this.field_d = dh.field_g;
                     f.field_d = gf.a(a.field_h, "pin_lit", 8, "menusuk");
                     if (f.field_d == null) {
-                      this.field_d = c.a(a.field_h, el.field_m, nb.field_o, "menusuk", (byte) -32);
+                      this.field_d = c.a(a.field_h, el.field_m, DualLinkNode.field_o, "menusuk", (byte) -32);
                       this.a(this.field_b, 125, this.field_d);
                       return false;
                     }

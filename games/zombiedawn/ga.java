@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ga extends le {
+class ga extends IntrusiveNode {
     static int field_q;
     int field_k;
     int field_p;

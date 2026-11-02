@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rc extends le {
+final class rc extends IntrusiveNode {
     int field_o;
     int field_t;
     static sm field_h;
@@ -84,7 +84,7 @@ final class rc extends le {
           if (null != var44.field_F &&
             var44.field_p > 1) {
             var60 = var44.field_F;
-            ke.a(0, 0, jp.field_f, var60, 0);
+            GameApplet.a(0, 0, jp.field_f, var60, 0);
           } else {
             qc.a(1);
           }
@@ -149,12 +149,12 @@ final class rc extends le {
               stackIn_33_0 = param3.field_v[var14Lifetime1];
             }
             var20 = stackIn_33_0;
-            if (null != ag.field_a &&
+            if (null != SecondaryNodeDequeIterator.field_a &&
               param3.field_x != null &&
               param3.field_x.length > var14Lifetime1 &&
               param3.field_x[var14Lifetime1] != -1 &&
-              param3.field_x[var14Lifetime1] < ag.field_a.length) {
-              stackIn_41_0 = ag.field_a[param3.field_x[var14Lifetime1]];
+              param3.field_x[var14Lifetime1] < SecondaryNodeDequeIterator.field_a.length) {
+              stackIn_41_0 = SecondaryNodeDequeIterator.field_a[param3.field_x[var14Lifetime1]];
             } else {
               stackIn_41_0 = null;
             }

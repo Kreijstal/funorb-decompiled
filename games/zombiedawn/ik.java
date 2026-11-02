@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ik extends le {
+abstract class ik extends IntrusiveNode {
     int field_h;
 
     ik() {

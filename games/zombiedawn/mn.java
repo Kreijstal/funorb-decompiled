@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn extends le {
+final class mn extends IntrusiveNode {
     private int field_l;
     private int field_k;
     private ej field_i;
@@ -95,8 +95,8 @@ final class mn extends le {
 
     final boolean b(boolean param0) {
         int var2_int;
-        nb var2;
-        nb var3;
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
         String var5;
         var4 = ZombieDawn.field_J;
@@ -139,7 +139,7 @@ final class mn extends le {
             }
             if (this.field_o <= 0) {
               this.a(0);
-              this.b(-27598);
+              this.unlink(-27598);
               return true;
             }
           }
@@ -165,7 +165,7 @@ final class mn extends le {
         int var5_int = 0;
         wk var5 = null;
         ek var6_ref_ek = null;
-        le var7 = null;
+        IntrusiveNode var7 = null;
         int var10 = 0;
         vo var11 = null;
         var10 = ZombieDawn.field_J;

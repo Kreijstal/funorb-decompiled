@@ -103,13 +103,13 @@ final class kd extends g {
           var3_int = param1.a(this.a(true), (byte) -75) - 24;
           var4 = param1.a(this.f(237239984), param0) - 48;
           if (this.field_cb) {
-            nb.field_k[0].b(var3_int, var4, 128, 16711680);
+            DualLinkNode.field_k[0].b(var3_int, var4, 128, 16711680);
           } else {
             if (this.field_tb) {
-              nb.field_k[0].b(var3_int, var4);
+              DualLinkNode.field_k[0].b(var3_int, var4);
             } else {
               if (this.field_qb) {
-                nb.field_k[0].e(var3_int, var4, 96);
+                DualLinkNode.field_k[0].e(var3_int, var4, 96);
               }
             }
           }
@@ -333,7 +333,7 @@ final class kd extends g {
           if (this.field_F == 8) {
             ki.a((byte) -99, md.field_vb);
             bi.d();
-            nb.field_k[cg.field_d[8] + this.field_G + this.field_Cb].b(0, 0);
+            DualLinkNode.field_k[cg.field_d[8] + this.field_G + this.field_Cb].b(0, 0);
             pa.a(-21189);
             ho.a(md.field_vb, this.o((byte) -83), this.field_fb, -128);
             md.field_vb.b(this.field_kb + var3_int, var4 + this.field_mb);
@@ -366,7 +366,7 @@ final class kd extends g {
             qj.field_d >= var3_int &&
             me.field_Bb >= var4) {
             if (this.field_F != 17) {
-              stackIn_36_0 = nb.field_k[1];
+              stackIn_36_0 = DualLinkNode.field_k[1];
               stackIn_36_1 = 12;
               if (this.field_S == 3) {
                 stackIn_37_2 = -5 + var3_int;
@@ -574,7 +574,7 @@ final class kd extends g {
         ej var2;
         Object var3;
         Object var4;
-        le var5;
+        IntrusiveNode var5;
         ah var6;
         qh var7;
         int var8;
@@ -593,7 +593,7 @@ final class kd extends g {
           var2 = dj.field_e.field_H;
           var3 = null;
           var4 = null;
-          var5 = dj.field_e.field_R.field_b.field_b;
+          var5 = dj.field_e.field_R.field_b.previous;
           while (var5 != dj.field_e.field_R.field_b) {
             stackOut_12_0 = var5 instanceof ah;
             stackIn_30_0 = stackOut_12_0 ? 1 : 0;
@@ -606,7 +606,7 @@ final class kd extends g {
                 if (var7 != null) {
                   if (this.field_F == 4 &&
                     pb.a(so.field_a, 2, param0 - 17303) != 0) {
-                    var5 = var5.field_b;
+                    var5 = var5.previous;
                     continue;
                   }
                   if (var4 == null ||
@@ -617,7 +617,7 @@ final class kd extends g {
                 }
               }
             }
-            var5 = var5.field_b;
+            var5 = var5.previous;
           }
           if (var3 != null) {
             this.a((qh) (var4), true);
@@ -659,7 +659,7 @@ final class kd extends g {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        le var7 = null;
+        IntrusiveNode var7 = null;
         int var8 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -688,7 +688,7 @@ final class kd extends g {
             var5 = param0.a(((kk) (var7)).field_l, (byte) -90);
             var6 = param0.a(((kk) (var7)).field_h, 0);
             this.a(var4Lifetime1, 0, var3_intLifetime1, var6, var5);
-            var7 = var7.field_b;
+            var7 = var7.previous;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1081,7 +1081,7 @@ final class kd extends g {
                 }
               } else {
                 if (this.field_F == 7) {
-                  L21: {
+                  regionExit1: {
                     if (this.field_wb.field_F != 18 &&
                       this.field_wb.field_F != 20) {
                       fieldTemp$4 = this.field_Eb;
@@ -1104,7 +1104,7 @@ final class kd extends g {
                             this.B(-128);
                           }
                         }
-                        break L21;
+                        break regionExit1;
                       }
                     }
                     this.field_wb = null;
@@ -1222,7 +1222,7 @@ final class kd extends g {
                                   dj.field_e.field_e.a(0, this.field_rb);
                                 }
                                 if (this.field_rb.c(123)) {
-                                  this.field_rb.b(-27598);
+                                  this.field_rb.unlink(-27598);
                                   this.field_rb = null;
                                   this.e(4, -6904);
                                 }
@@ -1257,7 +1257,7 @@ final class kd extends g {
                         dj.field_e.a(this, true);
                         if (this.field_rb != null) {
                           this.field_rb.c((byte) -64);
-                          this.field_rb.b(-27598);
+                          this.field_rb.unlink(-27598);
                           this.field_rb = null;
                         }
                       }

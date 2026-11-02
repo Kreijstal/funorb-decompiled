@@ -174,7 +174,7 @@ final class kg extends pm {
           var3 = this.field_h.field_o.toLowerCase();
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_2_0 = uc.field_b;
+            stackIn_2_0 = MouseWheelInput.field_b;
             return stackIn_2_0;
           }
           if (param1 != 2) {
@@ -182,13 +182,13 @@ final class kg extends pm {
             return stackIn_5_0;
           }
           if (!on.a((byte) -23, var4, var3)) {
-            stackIn_8_0 = uc.field_b;
+            stackIn_8_0 = MouseWheelInput.field_b;
             return stackIn_8_0;
           }
           if (!this.b(param0, 1)) {
             return mc.field_g;
           }
-          stackIn_12_0 = uc.field_b;
+          stackIn_12_0 = MouseWheelInput.field_b;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

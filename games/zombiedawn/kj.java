@@ -59,7 +59,7 @@ final class kj {
         var4 = ZombieDawn.field_J;
         try {
           try {
-            if (!ec.field_n.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_n.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

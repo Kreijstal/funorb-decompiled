@@ -259,13 +259,13 @@ final class va {
           }
           var6.field_lb = var4_ref_StringLifetime1;
           var6.field_ib = (String) (var3Lifetime1);
-          var6.b(param0 - 29143);
+          var6.unlink(param0 - 29143);
           var7 = (oh) (eb.field_d.b((byte) 26));
-          L8: while (true) {
+          scanLoop1: while (true) {
             if (null != var7) {
               stackIn_68_0 = var6;
               if (var8 != 0) {
-                break L8;
+                break scanLoop1;
               }
               if (eh.a(stackIn_68_0, var7, (byte) 20)) {
                 var7 = (oh) (eb.field_d.a(false));

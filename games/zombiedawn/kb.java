@@ -19,7 +19,7 @@ final class kb extends pm {
           if (param1 > -94) {
             field_i = (vn[]) null;
           }
-          if (this.a(param0, 2) != uc.field_b) {
+          if (this.a(param0, 2) != MouseWheelInput.field_b) {
             return null;
           }
           stackIn_5_0 = sa.field_Z;
@@ -61,7 +61,7 @@ final class kb extends pm {
           }
           var5 = (CharSequence) ((Object) param0);
           if (!sj.a((byte) -101, var5)) {
-            stackIn_4_0 = uc.field_b;
+            stackIn_4_0 = MouseWheelInput.field_b;
             return stackIn_4_0;
           }
           var6 = (CharSequence) ((Object) param0);
@@ -70,7 +70,7 @@ final class kb extends pm {
             130 >= var3_int) {
             return mc.field_g;
           }
-          stackIn_9_0 = uc.field_b;
+          stackIn_9_0 = MouseWheelInput.field_b;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -88,7 +88,7 @@ final class ao extends fb {
 
     final void g(int param0) {
         if (this.field_E <= 0) {
-          this.b(-27598);
+          this.unlink(-27598);
           if (param0 < 95) {
             this.field_H = (fn) null;
             return;

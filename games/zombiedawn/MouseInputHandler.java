@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int field_a;
     static boolean field_d;
     static int field_b;
@@ -176,7 +176,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         try {
           if (param2 > -68) {
             var5 = (vn[]) null;
-            h.a((vn[]) null, -98, 92, (byte) 28, 20);
+            MouseInputHandler.a((vn[]) null, -98, 92, (byte) 28, 20);
           }
           if (ph.a(param1, 31043, param3, param0)) {
             return di.a(-79);
@@ -223,11 +223,11 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
             pf.field_c = param0.getY();
             pd.a(-22826);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              nb.field_j = 1;
-              le.field_c = 1;
+              DualLinkNode.field_j = 1;
+              IntrusiveNode.field_c = 1;
             } else {
-              nb.field_j = 2;
-              le.field_c = 2;
+              DualLinkNode.field_j = 2;
+              IntrusiveNode.field_c = 2;
             }
             var2_int = param0.getModifiers();
             kg.field_l = true;
@@ -266,7 +266,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         try {
           if (ng.field_b != null) {
             wc.field_Ob = 0;
-            le.field_c = 0;
+            IntrusiveNode.field_c = 0;
             kg.field_l = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 4) != 0) {
@@ -302,7 +302,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         RuntimeException var2 = null;
         try {
           if (null != ng.field_b) {
-            le.field_c = 0;
+            IntrusiveNode.field_c = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -322,7 +322,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
     public static void a(int param0) {
         field_e = null;
         if (param0 != -14380) {
-          h.a(-106);
+          MouseInputHandler.a(-106);
         }
     }
 

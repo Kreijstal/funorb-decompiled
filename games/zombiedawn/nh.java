@@ -16,7 +16,7 @@ final class nh extends hp implements hh {
     private boolean field_S;
     private int field_M;
     private int field_V;
-    static ke field_J;
+    static GameApplet field_J;
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
         RuntimeException var8 = null;
@@ -53,7 +53,7 @@ final class nh extends hp implements hh {
     final boolean e(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -17741) {
-          field_J = (ke) null;
+          field_J = (GameApplet) null;
         }
         stackIn_7_0 = (this.field_S) || (super.e(-17741));
         return stackIn_7_0;
@@ -119,7 +119,7 @@ final class nh extends hp implements hh {
         }
     }
 
-    final static boolean a(byte param0, ec param1) {
+    final static boolean a(byte param0, PlatformTaskDispatcher param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -298,7 +298,7 @@ final class nh extends hp implements hh {
         }
         this.c(this.field_k, this.field_j, this.field_i, this.field_M, 27);
         this.field_H = false;
-        this.field_F.b(-27598);
+        this.field_F.unlink(-27598);
     }
 
     nh(Object[] param0, int param1, int param2) {

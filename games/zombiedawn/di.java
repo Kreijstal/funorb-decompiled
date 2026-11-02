@@ -20,7 +20,7 @@ final class di extends hp implements hh {
         }
     }
 
-    final static void a(de param0, int param1, int param2, ec param3) {
+    final static void a(de param0, int param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -178,7 +178,7 @@ final class di extends hp implements hh {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_k + param2;
         int var6 = this.field_j + param0;
-        ia.field_e.a(tg.field_b, 20 + var5, 20 + var6, this.field_i - 40, this.field_n - 50, 16777215, -1, 1, 0, ia.field_e.field_I);
+        ia.field_e.a(GameKeyHandler.field_b, 20 + var5, 20 + var6, this.field_i - 40, this.field_n - 50, 16777215, -1, 1, 0, ia.field_e.field_I);
         super.a(param0, param1, param2, param3 + param3);
     }
 
@@ -261,7 +261,7 @@ final class di extends hp implements hh {
         super(0, 0, 476, 225, (io) null);
         this.field_F = new an(hk.field_P, (sk) null);
         this.field_H = new an(vl.field_f, (sk) null);
-        this.field_N = new an(hl.field_h, (sk) null);
+        this.field_N = new an(NodeHashTableIterator.field_h, (sk) null);
         vm var1 = new vm();
         this.field_F.field_h = (io) ((Object) var1);
         this.field_H.field_h = (io) ((Object) var1);

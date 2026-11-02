@@ -6,7 +6,7 @@ final class mh extends pa {
     static cg field_I;
     static int field_F;
     static int field_G;
-    static ec field_E;
+    static PlatformTaskDispatcher field_E;
 
     public static void e(byte param0) {
         field_I = null;
@@ -47,7 +47,7 @@ final class mh extends pa {
         }
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, ec param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, PlatformTaskDispatcher param6, int param7, int param8) {
         try {
           qj.field_e = param1;
           lc.field_a = param6;
@@ -57,8 +57,8 @@ final class mh extends pa {
           ha.field_a = param0;
           nd.field_a = param5;
           if (param7 != 0) {
-            ec var10 = (ec) null;
-            mh.a(55, -23, -91, (String) null, 112, -70, (ec) null, 37, -64);
+            PlatformTaskDispatcher var10 = (PlatformTaskDispatcher) null;
+            mh.a(55, -23, -91, (String) null, 112, -70, (PlatformTaskDispatcher) null, 37, -64);
           }
           uj.field_d = param8;
           tf.field_c = (pc) ((Object) new lh());

@@ -131,7 +131,7 @@ final class fj extends pm {
             var3 = ((mi) ((Object) this.field_f)).a(0);
             if (var3 != null &&
               var3.a((byte) -105) != mc.field_g) {
-              stackIn_5_0 = uc.field_b;
+              stackIn_5_0 = MouseWheelInput.field_b;
               return stackIn_5_0;
             }
           }
@@ -139,7 +139,7 @@ final class fj extends pm {
             this.field_f = (tb) null;
           }
           if (!param0.equals(this.field_f.field_o)) {
-            stackIn_11_0 = uc.field_b;
+            stackIn_11_0 = MouseWheelInput.field_b;
           } else {
             stackIn_11_0 = mc.field_g;
           }

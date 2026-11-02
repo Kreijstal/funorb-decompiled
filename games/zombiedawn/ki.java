@@ -154,7 +154,7 @@ abstract class ki extends pn {
     private final void a(ga param0, byte param1) {
         try {
           if (this.field_Y != null) {
-            this.field_Y.b(-27598);
+            this.field_Y.unlink(-27598);
           }
           int var3_int = -45 / ((-21 - param1) / 52);
           if (param0 == null) {

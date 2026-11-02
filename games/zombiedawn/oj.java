@@ -29,7 +29,7 @@ final class oj {
           hc.field_b.field_i = 7697781;
           hc.field_b.field_k = 2763306;
           hc.field_b.field_h = 4;
-          hc.field_b.field_c = ii.field_a;
+          hc.field_b.field_c = SecondaryNodeDeque.field_a;
           hc.field_b.field_r = 6;
           if (param0 == 0) {
             return hc.field_b;

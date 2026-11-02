@@ -244,7 +244,7 @@ final class rj extends sp {
             if (0 > var3.field_k) {
               this.field_G[var3.field_z][var3.field_i] = null;
             }
-            var3.b(-27598);
+            var3.unlink(-27598);
           }
           var3 = (lf) (this.field_J.field_s.a(false));
         }
@@ -360,7 +360,7 @@ final class rj extends sp {
           if (param1.field_k < 0) {
             return true;
           }
-          param1.b(param0 - 57894);
+          param1.unlink(param0 - 57894);
           if (param1.field_B > 0 &&
             param1 == this.field_x[param1.field_z][param1.field_B]) {
             this.field_x[param1.field_z][param1.field_B] = null;
@@ -481,7 +481,7 @@ final class rj extends sp {
           }
           var9 = (bh) (param0.field_h.a((byte) -113));
           while (var9 != null) {
-            var10 = (int)var9.field_f;
+            var10 = (int)var9.key;
             var11 = (ma) (this.field_A.a((long)var10, 101));
             if (var11 == null) {
               var11 = vk.a(param2, var10, 0);
@@ -1004,7 +1004,7 @@ final class rj extends sp {
           if (param2.field_k >= 0 && (param2.field_E == null ||
             param2.field_E.l())) {
             param2.c((byte) 125);
-            param2.b(-27598);
+            param2.unlink(-27598);
             if (param2.field_B > 0) {
               if (this.field_x[param2.field_z][param2.field_B] != param2) {
                 return true;
@@ -1090,7 +1090,7 @@ final class rj extends sp {
           }
           param2.c((byte) 123);
           if (param2.field_k >= 0) {
-            param2.b(-27598);
+            param2.unlink(-27598);
             if (param2.field_B > 0 &&
               this.field_x[param2.field_z][param2.field_B] == param2) {
               this.field_x[param2.field_z][param2.field_B] = null;

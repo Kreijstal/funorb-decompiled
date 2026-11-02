@@ -256,7 +256,7 @@ class cb extends ce {
         this.field_z = -2147483648;
         this.field_W = -1;
         try {
-          this.field_f = param0;
+          this.key = param0;
           this.a(-2147483648, param1);
           if (param6 != null) {
             this.field_Z = param6;

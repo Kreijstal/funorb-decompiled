@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n extends le {
+final class n extends IntrusiveNode {
     int[] field_q;
     op[] field_m;
     static java.awt.Frame field_p;
@@ -25,16 +25,16 @@ final class n extends le {
         field_r = null;
     }
 
-    final static uc c(byte param0) {
+    final static MouseWheelInput c(byte param0) {
         try {
           Throwable var1 = null;
-          uc stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 < 81) {
               n.a(8);
             }
-            stackIn_3_0 = (uc) (Class.forName("ol").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

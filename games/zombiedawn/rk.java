@@ -40,7 +40,7 @@ final class rk {
           }
           dp.field_e.field_j = dp.field_e.field_j + 2;
           var5_int = dp.field_e.field_j;
-          dp.field_e.h(-108, h.field_b);
+          dp.field_e.h(-108, MouseInputHandler.field_b);
           dp.field_e.a(lg.field_u, -80);
           var6 = 0;
           if (ih.field_S) {

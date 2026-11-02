@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rm extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static int[] field_c;
     static boolean field_f;
     private java.awt.Component field_a;
@@ -60,7 +60,7 @@ final class rm extends java.awt.Canvas {
     final static int a(int param0, int param1, boolean param2) {
         if (param2) {
           rc var4 = (rc) null;
-          rm.a((byte) -68, 88, (rc) null);
+          DelegatingCanvas.a((byte) -68, 88, (rc) null);
         }
         int var3 = param1 >>> 31;
         return (var3 + param1) / param0 - var3;
@@ -118,7 +118,7 @@ final class rm extends java.awt.Canvas {
         return var1 != 0;
     }
 
-    rm(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

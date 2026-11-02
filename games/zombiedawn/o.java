@@ -44,7 +44,7 @@ final class o {
           this.a(-1, 0, 622, 0, 47, ui.field_b, var16, this.field_j);
           pa.a(-21189);
           this.field_g = new vn(475, 24);
-          this.a(ag.field_e, 0, (byte) 112, this.field_g, var16, -4, ui.field_b, 475, 0.75f, 24);
+          this.a(SecondaryNodeDequeIterator.field_e, 0, (byte) 112, this.field_g, var16, -4, ui.field_b, 475, 0.75f, 24);
           var14 = gk.a(526344, -116, 526344);
           var12 = var14;
           var10 = var12;

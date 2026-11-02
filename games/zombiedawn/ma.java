@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma extends le {
+final class ma extends IntrusiveNode {
     gi[] field_o;
     static String field_q;
     byte[] field_h;
@@ -590,7 +590,7 @@ final class ma extends le {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (var30 - var27Lifetime6Lifetime1) / 2 + var28_int * (-var27Lifetime6Lifetime1 + var30);
               for (var33 = var27Lifetime6Lifetime1; var33 < var30; var33++) {
-                var34 = rm.a(-var27Lifetime6Lifetime1 + var30, var32, false);
+                var34 = DelegatingCanvas.a(-var27Lifetime6Lifetime1 + var30, var32, false);
                 this.field_m[var33] = (byte)(var34 * this.field_m[var33] + 32 >> 6);
                 var32 = var32 + (var31 - var28_int);
               }
@@ -629,7 +629,7 @@ final class ma extends le {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = rm.a(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, var32Lifetime1, false);
+                var34Lifetime1 = DelegatingCanvas.a(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, var32Lifetime1, false);
                 var35 = var34Lifetime1 + (this.field_h[var37] & 255);
                 if (0 > var35) {
                   var35 = 0;

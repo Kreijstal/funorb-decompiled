@@ -674,7 +674,7 @@ abstract class g extends fb {
           this.field_y = this.field_Y << 16;
           return true;
         }
-        sharedTailExit_0: {
+        regionExit1: {
           if (this.field_T > 0) {
             if (this.field_x > var3) {
               var5Lifetime4 = 1;
@@ -698,7 +698,7 @@ abstract class g extends fb {
                 }
                 return false;
               }
-              break sharedTailExit_0;
+              break regionExit1;
             }
             if (this.field_T < 0) {
               stackIn_253_0 = (this.field_x >= var3) ? 0 : 1;

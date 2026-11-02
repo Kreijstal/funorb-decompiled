@@ -151,7 +151,7 @@ final class pl extends al {
             n.field_k[param2] != 0) {
             stackIn_14_0 = (b.field_q == param2) ? 2 : 0;
             var6_int = stackIn_14_0;
-            sg.field_jb.b(cj.field_a[qd.field_e][param2], te.field_T[param2] + param3, ag.field_b[param2] + param1, var6_int, -1, n.field_k[param2]);
+            sg.field_jb.b(cj.field_a[qd.field_e][param2], te.field_T[param2] + param3, SecondaryNodeDequeIterator.field_b[param2] + param1, var6_int, -1, n.field_k[param2]);
           }
           if (b.field_q == param2 &&
             !this.field_b.field_j) {
@@ -532,7 +532,7 @@ final class pl extends al {
           } catch (Throwable throwable) {
           }
           var3_int = 60 % ((6 - param1) / 62);
-          hl.a(param2, 1);
+          NodeHashTableIterator.a(param2, 1);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -844,7 +844,7 @@ final class pl extends al {
             if (ce.field_p != 16) {
               return;
             }
-            rg.field_F = wm.field_b;
+            rg.field_F = IterableNodeHashTable.field_b;
             this.f(-1, -257);
             i.field_T.a();
             bi.h(3, 3, 0, 0, 640, 341);
@@ -925,7 +925,7 @@ final class pl extends al {
             this.field_b.a(this.field_s.field_j, (byte) -125, this.b(true, ha.field_b, ei.field_K), var3_int);
             rg.field_F = -1;
           } else {
-            wm.field_b = param1;
+            IterableNodeHashTable.field_b = param1;
             fm.field_F = true;
             this.field_h = this.field_o;
             this.field_b = this.field_s;

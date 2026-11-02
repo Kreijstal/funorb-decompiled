@@ -235,7 +235,7 @@ final class jo extends qk {
               }
             }
             if (jd.field_a == 2) {
-              sb.field_a = new gm((java.net.Socket) (hi.field_O.field_d), lc.field_a);
+              sb.field_a = new BufferedSocket((java.net.Socket) (hi.field_O.field_d), lc.field_a);
               var2_ref_de = new de(13);
               uj.a(ha.field_a, uj.field_d, (byte) -114, var2_ref_de, nd.field_a);
               var2_ref_de.i(15, -101);

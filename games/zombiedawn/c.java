@@ -8,10 +8,10 @@ final class c {
 
     final static cg[] b(int param0) {
         if (param0 == 19795) {
-          return new cg[]{kl.field_p, hl.field_d, rf.field_c, hl.field_g, uj.field_a, mh.field_I, lo.field_s, nl.field_m, bd.field_q, be.field_i, nb.field_l, jl.field_v, mp.field_b, se.field_n};
+          return new cg[]{kl.field_p, NodeHashTableIterator.field_d, rf.field_c, NodeHashTableIterator.field_g, uj.field_a, mh.field_I, lo.field_s, nl.field_m, bd.field_q, be.field_i, DualLinkNode.field_l, jl.field_v, mp.field_b, se.field_n};
         }
         c.a('ￄ', 89);
-        return new cg[]{kl.field_p, hl.field_d, rf.field_c, hl.field_g, uj.field_a, mh.field_I, lo.field_s, nl.field_m, bd.field_q, be.field_i, nb.field_l, jl.field_v, mp.field_b, se.field_n};
+        return new cg[]{kl.field_p, NodeHashTableIterator.field_d, rf.field_c, NodeHashTableIterator.field_g, uj.field_a, mh.field_I, lo.field_s, nl.field_m, bd.field_q, be.field_i, DualLinkNode.field_l, jl.field_v, mp.field_b, se.field_n};
     }
 
     public static void a(boolean param0) {

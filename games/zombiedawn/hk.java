@@ -18,7 +18,7 @@ final class hk extends fb {
     static String[] field_J;
 
     final void g(int param0) {
-        le var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         int var5;
@@ -59,13 +59,13 @@ final class hk extends fb {
                   ((kd) (var2)).field_Gb = this.field_I * 7 >> 2;
                 }
               }
-              var2 = var2.field_b;
+              var2 = var2.previous;
             }
           } else {
-            this.b(-27598);
+            this.unlink(-27598);
           }
         } else {
-          this.b(-27598);
+          this.unlink(-27598);
         }
     }
 
@@ -260,7 +260,7 @@ final class hk extends fb {
           var1 = new uf();
         }
         var1.a(bi.field_l, (byte) -29, bi.field_f, bi.field_b, bi.field_d, bi.field_c, bi.field_g, bi.field_a);
-        rm.field_d.a(param0 ^ param0, var1);
+        DelegatingCanvas.field_d.a(param0 ^ param0, var1);
     }
 
     static {

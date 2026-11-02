@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class mb extends le {
+final class mb extends IntrusiveNode {
     private static boolean field_n;
     private boolean field_F;
     private int field_p;
@@ -347,7 +347,7 @@ final class mb extends le {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = wm.a(var5 - 1, (byte) 113);
+          var10 = IterableNodeHashTable.a(var5 - 1, (byte) 113);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = ij.a(var11, true, var10);
           }
@@ -516,7 +516,7 @@ final class mb extends le {
         int var18_intLifetime2;
         mb.a(this.field_t[param0], 0);
         mb.c();
-        var2 = mb.d(wm.a(field_N.length - 1, (byte) 26));
+        var2 = mb.d(IterableNodeHashTable.a(field_N.length - 1, (byte) 26));
         var3 = field_M[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_l;
@@ -635,7 +635,7 @@ final class mb extends le {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = wm.a(var4 - 1, (byte) 59);
+          var25Lifetime2 = IterableNodeHashTable.a(var4 - 1, (byte) 59);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;

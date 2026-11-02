@@ -10,7 +10,7 @@ final class fh extends hp implements ri, hh {
     public fh() {
         super(0, 0, 496, 0, (io) null);
         this.field_F = new ic("", (sk) null, 12);
-        vf var1 = new vf(ii.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_e.field_I, -1, 2147483647, true);
+        vf var1 = new vf(SecondaryNodeDeque.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_e.field_I, -1, 2147483647, true);
         ga var2 = new ga(rc.field_j, var1, (sk) null);
         this.field_H = new an(on.field_n, (sk) null);
         this.field_G = new an(vi.field_b, (sk) null);

@@ -22,7 +22,7 @@ final class wi {
             if (param3 != -20517) {
               return;
             }
-            if (ec.field_n.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_n.startsWith("win") &&
               kj.a(param0, 27994)) {
               return;
             }

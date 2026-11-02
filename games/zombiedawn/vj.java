@@ -70,7 +70,7 @@ final class vj extends al {
         int var11;
         String var12;
         int var14;
-        aj var15;
+        ClientException var15;
         StringWriter var16;
         String var17;
         String var18;
@@ -99,8 +99,8 @@ final class vj extends al {
         String var12Lifetime5Lifetime1;
         String var12Lifetime5Lifetime2;
         var14 = ZombieDawn.field_J;
-        if (param0 instanceof aj) {
-          var15 = (aj) ((Object) param0);
+        if (param0 instanceof ClientException) {
+          var15 = (ClientException) ((Object) param0);
           var2 = var15.field_b + " | ";
           var12 = var2;
           var2 = var12;
@@ -358,7 +358,7 @@ final class vj extends al {
     }
 
     final static void c(int param0) {
-        le var1 = null;
+        IntrusiveNode var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
@@ -367,20 +367,20 @@ final class vj extends al {
           var1 = kn.field_L.b((byte) 26);
           while (var1 instanceof tm) {
             aa.a(119, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           var1 = se.field_m.b((byte) 26);
           while (var1 instanceof tm) {
             aa.a(10, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
-          var1 = rm.field_e.b((byte) 26);
+          var1 = DelegatingCanvas.field_e.b((byte) 26);
           if (param0 < 8) {
             vj.d(4);
           }
           while (var1 instanceof tm) {
             aa.a(48, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

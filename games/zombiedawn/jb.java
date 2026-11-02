@@ -366,7 +366,7 @@ final class jb implements io {
         return (String) null;
     }
 
-    final static void a(int param0, java.awt.Frame param1, ec param2) {
+    final static void a(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         op var4 = null;
         int var5 = 0;
@@ -425,7 +425,7 @@ final class jb implements io {
           return l.field_g;
         }
         if (!vo.field_d.a((byte) 73)) {
-          return nb.field_o;
+          return DualLinkNode.field_o;
         }
         if (!vo.field_d.a(-1, "commonui")) {
           return el.field_m + " - " + vo.field_d.b("commonui", 88) + "%";

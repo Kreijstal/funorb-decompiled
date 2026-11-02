@@ -66,7 +66,7 @@ abstract class m extends wb implements ib {
         }
         int var4 = 35 / ((param0 + 27) / 44);
         if (wn.field_b) {
-          rm.a(false);
+          DelegatingCanvas.a(false);
           uh.a(-126, 0, 0, var2);
         } else {
           this.l(29268);

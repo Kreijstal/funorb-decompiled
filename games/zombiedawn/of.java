@@ -84,7 +84,7 @@ final class of {
               return stackIn_21_0;
             }
             var6 = var4[var5];
-            var7 = tg.a(-126, var6);
+            var7 = GameKeyHandler.a(-126, var6);
             if (var7 == null) {
               var5++;
               continue;

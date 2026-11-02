@@ -66,7 +66,7 @@ final class na {
                 this.field_b.a(param3 ^ 109242722, cg.field_c, 0, 6);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param4) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -82,7 +82,7 @@ final class na {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (65280 & cg.field_c[2] << 8) + (255 & cg.field_c[3]);
                         var13 = 255 & cg.field_c[7];
@@ -98,7 +98,7 @@ final class na {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = 255 & cg.field_c[9];
                         var12 = (cg.field_c[5] & 255) + (cg.field_c[4] << 8 & 65280);

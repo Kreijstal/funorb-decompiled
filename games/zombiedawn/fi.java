@@ -15,21 +15,21 @@ final class fi extends sp {
         this.field_n.a(param0, 97);
     }
 
-    private final void a(le param0, bc param1) {
+    private final void a(IntrusiveNode param0, bc param1) {
         while (true) {
           if (param0 == this.field_l.field_b) {
             we.a(param0, 0, param1);
-            this.field_m = ((bc) (this.field_l.field_b.field_b)).field_h;
+            this.field_m = ((bc) (this.field_l.field_b.previous)).field_h;
             return;
           }
           if (((bc) (param0)).field_h <= param1.field_h) {
-            param0 = param0.field_b;
+            param0 = param0.previous;
             continue;
           }
           break;
         }
         we.a(param0, 0, param1);
-        this.field_m = ((bc) (this.field_l.field_b.field_b)).field_h;
+        this.field_m = ((bc) (this.field_l.field_b.previous)).field_h;
         return;
     }
 
@@ -61,7 +61,7 @@ final class fi extends sp {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_h = var7;
-              this.a(var5.field_b, var5);
+              this.a(var5.previous, var5);
             } else {
               var5.field_h = 0;
               this.a(var5);
@@ -72,7 +72,7 @@ final class fi extends sp {
     }
 
     final synchronized void a(sp param0) {
-        param0.b(-27598);
+        param0.unlink(-27598);
     }
 
     private final void c(int param0) {
@@ -96,9 +96,9 @@ final class fi extends sp {
     }
 
     private final void a(bc param0) {
-        param0.b(-27598);
+        param0.unlink(-27598);
         param0.a();
-        le var2 = this.field_l.field_b.field_b;
+        IntrusiveNode var2 = this.field_l.field_b.previous;
         if (var2 == this.field_l.field_b) {
           this.field_m = -1;
         } else {
@@ -150,7 +150,7 @@ final class fi extends sp {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_h = var5;
-              this.a(var3.field_b, var3);
+              this.a(var3.previous, var3);
             } else {
               var3.field_h = 0;
               this.a(var3);

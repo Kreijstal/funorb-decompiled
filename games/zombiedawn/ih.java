@@ -91,7 +91,7 @@ final class ih extends hp implements ok, hh {
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = hl.field_h;
+              stackIn_18_3 = NodeHashTableIterator.field_h;
             }
             this.field_Q = new an(stackIn_18_3, (sk) null);
             if (this.field_L) {
@@ -230,7 +230,7 @@ final class ih extends hp implements ok, hh {
           ma.field_r = -1;
           uo.field_d = false;
           vk.field_c = param0;
-          h.field_d = false;
+          MouseInputHandler.field_d = false;
           sm.field_a = -1;
           return;
         }

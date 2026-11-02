@@ -286,7 +286,7 @@ final class ip extends sp {
                   }
                   if (2 <= var5 &&
                     !param1) {
-                    stackIn_31_0 = hl.field_f;
+                    stackIn_31_0 = NodeHashTableIterator.field_f;
                     return stackIn_31_0;
                   }
                 }

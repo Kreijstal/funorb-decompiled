@@ -24,7 +24,7 @@ final class cm {
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        return new ji(we.p((byte) -21), nb.c(0));
+        return new ji(we.p((byte) -21), DualLinkNode.c(0));
     }
 
     static {

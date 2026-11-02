@@ -139,12 +139,12 @@ final class sh implements Runnable {
         }
     }
 
-    final static aj a(Throwable param0, String param1) {
-        aj var2 = null;
-        if (!(param0 instanceof aj)) {
-          var2 = new aj(param0, param1);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (aj) ((Object) param0);
+          var2 = (ClientException) ((Object) param0);
           var2.field_b = var2.field_b + ' ' + param1;
         }
         return var2;
@@ -270,7 +270,7 @@ final class sh implements Runnable {
         }
     }
 
-    sh(ec param0) {
+    sh(PlatformTaskDispatcher param0) {
         op var2 = null;
         this.field_b = new ra();
         this.field_l = false;

@@ -39,7 +39,7 @@ final class we extends qk {
         int var5_int = 0;
         String var5 = null;
         int var6 = 0;
-        le var7 = null;
+        IntrusiveNode var7 = null;
         try {
           var3_int = param0.a(this.a(true), (byte) -77);
           var4 = param0.a(this.f(237239984), 0);
@@ -55,8 +55,8 @@ final class we extends qk {
             bj.field_q.c(Integer.toString(this.field_yb.field_F), var5_int, var6 - 48, 16777215, 0);
           }
           if (param1 != 5060) {
-            var7 = (le) null;
-            we.a((le) null, 97, (le) null);
+            var7 = (IntrusiveNode) null;
+            we.a((IntrusiveNode) null, 97, (IntrusiveNode) null);
           }
           bi.e(var3_int, var4, param0.a(this.field_Y, (byte) -94), param0.a(this.field_X, param1 - 5060), 16711935);
           var5 = Integer.toString(this.field_F);
@@ -189,18 +189,18 @@ final class we extends qk {
         this.field_Pb = pb.a(so.field_a, 4, 1);
     }
 
-    final static void a(le param0, int param1, le param2) {
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         try {
-          if (null != param2.field_d) {
-            param2.b(-27598);
+          if (null != param2.next) {
+            param2.unlink(-27598);
           }
-          param2.field_d = param0.field_d;
+          param2.next = param0.next;
           if (param1 != 0) {
             we.w(112);
           }
-          param2.field_b = param0;
-          param2.field_d.field_b = param2;
-          param2.field_b.field_d = param2;
+          param2.previous = param0;
+          param2.next.previous = param2;
+          param2.previous.next = param2;
         } catch (RuntimeException runtimeException) {
           throw sh.a((Throwable) ((Object) runtimeException), "we.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

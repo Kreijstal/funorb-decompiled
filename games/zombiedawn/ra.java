@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ra {
-    private nb field_a;
-    private nb field_b;
+    private DualLinkNode field_a;
+    private DualLinkNode field_b;
 
-    final nb a(byte param0) {
-        nb var2 = this.field_b;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_b;
         if (var2 == this.field_a) {
           this.field_b = null;
           return null;
@@ -20,8 +20,8 @@ final class ra {
         return var2;
     }
 
-    final nb a(int param0) {
-        nb var2 = this.field_a.field_i;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_a.field_i;
         if (var2 != this.field_a) {
           var2.c((byte) -50);
           int var3 = 111 / ((38 - param0) / 57);
@@ -30,7 +30,7 @@ final class ra {
         return null;
     }
 
-    final void a(nb param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           if (null != param0.field_h) {
             param0.c((byte) -58);
@@ -39,7 +39,7 @@ final class ra {
           param0.field_i = this.field_a;
           param0.field_h.field_i = param0;
           if (param1 > -89) {
-            this.field_a = (nb) null;
+            this.field_a = (DualLinkNode) null;
           }
           param0.field_i.field_h = param0;
         } catch (RuntimeException runtimeException) {
@@ -110,7 +110,7 @@ final class ra {
               return;
             }
             var4_ref_df.field_k = true;
-            var4_ref_df.b(-27598);
+            var4_ref_df.unlink(-27598);
             return;
           }
           if (1 != var3) {
@@ -128,7 +128,7 @@ final class ra {
             break;
           }
           if (var5 != null) {
-            var5.b(-27598);
+            var5.unlink(-27598);
             return;
           }
           p.a(1);
@@ -143,7 +143,7 @@ final class ra {
     final int a(boolean param0) {
         int var4 = ZombieDawn.field_J;
         int var2 = 0;
-        nb var3 = this.field_a.field_i;
+        DualLinkNode var3 = this.field_a.field_i;
         if (param0) {
           ra.e((byte) 21);
           while (this.field_a != var3) {
@@ -222,17 +222,17 @@ final class ra {
     }
 
     public ra() {
-        this.field_a = new nb();
+        this.field_a = new DualLinkNode();
         this.field_a.field_i = this.field_a;
         this.field_a.field_h = this.field_a;
     }
 
     final void b(int param0) {
-        nb var5 = null;
-        nb var4 = null;
+        DualLinkNode var5 = null;
+        DualLinkNode var4 = null;
         int var3 = ZombieDawn.field_J;
         if (param0 < 37) {
-          this.field_b = (nb) null;
+          this.field_b = (DualLinkNode) null;
           while (true) {
             var5 = this.field_a.field_i;
             if (this.field_a == var5) {
@@ -253,10 +253,10 @@ final class ra {
         this.field_b = null;
     }
 
-    final nb c(byte param0) {
-        nb var2 = this.field_a.field_i;
+    final DualLinkNode c(byte param0) {
+        DualLinkNode var2 = this.field_a.field_i;
         if (param0 != 34) {
-          this.field_a = (nb) null;
+          this.field_a = (DualLinkNode) null;
           if (this.field_a == var2) {
             this.field_b = null;
             return null;

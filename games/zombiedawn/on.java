@@ -608,7 +608,7 @@ final class on {
               stackIn_21_0 = 0;
             }
             var3_int = stackIn_21_0;
-            L8: while (true) {
+            scanLoop1: while (true) {
               stackIn_23_0 = var3_int;
               stackIn_23_1 = param0.length;
               if (stackIn_23_0 < stackIn_23_1) {
@@ -634,7 +634,7 @@ final class on {
                   var4Lifetime1++;
                 }
                 var3_int++;
-                continue L8;
+                continue scanLoop1;
               }
               break;
             }

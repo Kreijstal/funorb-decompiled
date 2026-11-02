@@ -3,32 +3,32 @@
  */
 import java.util.*;
 
-final class wm implements Iterable {
-    le[] field_c;
-    private le field_a;
+final class IterableNodeHashTable implements Iterable {
+    IntrusiveNode[] field_c;
+    private IntrusiveNode field_a;
     static int field_e;
     static int field_d;
     int field_f;
     static int field_b;
 
-    final le a(boolean param0, long param1) {
-        le var5 = null;
+    final IntrusiveNode a(boolean param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = ZombieDawn.field_J;
-        le var4 = this.field_c[(int)((long)(-1 + this.field_f) & param1)];
-        this.field_a = var4.field_b;
+        IntrusiveNode var4 = this.field_c[(int)((long)(-1 + this.field_f) & param1)];
+        this.field_a = var4.previous;
         while (var4 != this.field_a) {
-          if (this.field_a.field_f == param1) {
+          if (this.field_a.key == param1) {
             var5 = this.field_a;
-            this.field_a = this.field_a.field_b;
+            this.field_a = this.field_a.previous;
             return var5;
           }
-          this.field_a = this.field_a.field_b;
+          this.field_a = this.field_a.previous;
         }
         if (!param0) {
           this.field_a = null;
           return null;
         }
-        wm.a(17, (byte) 50);
+        IterableNodeHashTable.a(17, (byte) 50);
         this.field_a = null;
         return null;
     }
@@ -94,30 +94,30 @@ final class wm implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new hl(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final void a(long param0, boolean param1, le param2) {
-        le var5 = null;
+    final void a(long param0, boolean param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param2.field_d) {
-            param2.b(-27598);
+          if (null != param2.next) {
+            param2.unlink(-27598);
           }
           var5 = this.field_c[(int)((long)(this.field_f - 1) & param0)];
-          param2.field_b = var5;
+          param2.previous = var5;
           if (!param1) {
             this.iterator();
           }
-          param2.field_d = var5.field_d;
-          param2.field_d.field_b = param2;
-          param2.field_f = param0;
-          param2.field_b.field_d = param2;
+          param2.next = var5.next;
+          param2.next.previous = param2;
+          param2.key = param0;
+          param2.previous.next = param2;
         } catch (RuntimeException runtimeException) {
           throw sh.a((Throwable) ((Object) runtimeException), "wm.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private wm() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 

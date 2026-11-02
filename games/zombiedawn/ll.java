@@ -56,7 +56,7 @@ abstract class ll {
           we.field_Tb = gf.a(param1, "jagex_logo_grey", 8, "commonui");
           ia.field_d = vm.a((byte) -83, "button", "commonui", param1);
           dj.field_k = df.a((byte) 24, "commonui", "validation", param1);
-          ii.field_a = (rb) ((Object) ra.a(param0, "commonui", "arezzo12", param3 + 19041, param1));
+          SecondaryNodeDeque.field_a = (rb) ((Object) ra.a(param0, "commonui", "arezzo12", param3 + 19041, param1));
           ia.field_e = (rb) ((Object) ra.a(param0, "commonui", "arezzo14", param3 + 19041, param1));
           rk.field_b = (rb) ((Object) ra.a(param0, "commonui", "arezzo14bold", 0, param1));
           var17 = new vn(param2.a("", param3 ^ 19000, "button.gif"), (java.awt.Component) ((Object) cj.field_d));
@@ -185,7 +185,7 @@ abstract class ll {
               var9 = stackIn_17_0;
               var2 = var2 + qb.field_i;
               if (var9 != null) {
-                var9.a((nb.field_m << 1) + var7, var2, -nb.field_m + var8, (byte) -118, ma.field_k + (lb.field_Y << 1));
+                var9.a((DualLinkNode.field_m << 1) + var7, var2, -DualLinkNode.field_m + var8, (byte) -118, ma.field_k + (lb.field_Y << 1));
               }
               var2 = var2 + lb.field_Y;
             }

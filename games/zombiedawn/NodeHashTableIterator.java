@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class hl implements Iterator {
-    private le field_e;
+final class NodeHashTableIterator implements Iterator {
+    private IntrusiveNode field_e;
     static String field_f;
     static cg field_d;
-    private wm field_a;
-    private le field_c;
+    private IterableNodeHashTable field_a;
+    private IntrusiveNode field_c;
     static String field_h;
     static cg field_g;
     private int field_i;
@@ -18,18 +18,18 @@ final class hl implements Iterator {
         if (this.field_c == null) {
           throw new IllegalStateException();
         }
-        this.field_c.b(-27598);
+        this.field_c.unlink(-27598);
         this.field_c = null;
     }
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        le var1;
+        IntrusiveNode var1;
         int var2;
         var2 = ZombieDawn.field_J;
         if (this.field_a.field_c[-1 + this.field_i] != this.field_e) {
           var1 = this.field_e;
-          this.field_e = var1.field_b;
+          this.field_e = var1.previous;
           this.field_c = var1;
           return var1;
         }
@@ -39,9 +39,9 @@ final class hl implements Iterator {
           }
           fieldTemp$0 = this.field_i;
           this.field_i = this.field_i + 1;
-          var1 = this.field_a.field_c[fieldTemp$0].field_b;
+          var1 = this.field_a.field_c[fieldTemp$0].previous;
         } while (this.field_a.field_c[-1 + this.field_i] == var1);
-        this.field_e = var1.field_b;
+        this.field_e = var1.previous;
         this.field_c = var1;
         return var1;
     }
@@ -49,7 +49,7 @@ final class hl implements Iterator {
     private final void a(int param0) {
         this.field_c = null;
         if (param0 == 11936) {
-          this.field_e = this.field_a.field_c[0].field_b;
+          this.field_e = this.field_a.field_c[0].previous;
           this.field_i = 1;
           return;
         }
@@ -175,13 +175,13 @@ final class hl implements Iterator {
           }
           fieldTemp$0 = this.field_i;
           this.field_i = this.field_i + 1;
-          if (this.field_a.field_c[fieldTemp$0].field_b == this.field_a.field_c[-1 + this.field_i]) {
+          if (this.field_a.field_c[fieldTemp$0].previous == this.field_a.field_c[-1 + this.field_i]) {
             this.field_e = this.field_a.field_c[this.field_i - 1];
             continue;
           }
           break;
         }
-        this.field_e = this.field_a.field_c[-1 + this.field_i].field_b;
+        this.field_e = this.field_a.field_c[-1 + this.field_i].previous;
         return true;
     }
 
@@ -196,7 +196,7 @@ final class hl implements Iterator {
         field_b = null;
     }
 
-    hl(wm param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_c = null;
         try {
           this.field_a = param0;

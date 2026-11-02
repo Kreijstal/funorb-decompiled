@@ -14,7 +14,7 @@ final class ql extends pm {
         if (param0 == -160793343) {
           var1 = rf.a(false);
           var2 = co.b(param0 + 160780300);
-          cj.field_i.a(var1 + (af.field_b << 1), wm.field_d - ia.field_c, wh.field_c - af.field_b, (byte) -80, var2 + (ia.field_c << 1));
+          cj.field_i.a(var1 + (af.field_b << 1), IterableNodeHashTable.field_d - ia.field_c, wh.field_c - af.field_b, (byte) -80, var2 + (ia.field_c << 1));
           d.a(false);
           return;
         }
@@ -51,7 +51,7 @@ final class ql extends pm {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!ea.a(20000000, var4)) {
-            stackIn_2_0 = uc.field_b;
+            stackIn_2_0 = MouseWheelInput.field_b;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_i)) {
@@ -71,7 +71,7 @@ final class ql extends pm {
           if (this.field_h) {
             stackIn_16_0 = mc.field_g;
           } else {
-            stackIn_16_0 = uc.field_b;
+            stackIn_16_0 = MouseWheelInput.field_b;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

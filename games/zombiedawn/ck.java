@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class ck extends le {
+final class ck extends IntrusiveNode {
     private fn field_j;
     static vn field_i;
     private fn field_r;
@@ -167,8 +167,8 @@ final class ck extends le {
         int stackIn_10_2 = 0;
         int var2;
         int var3_int;
-        le var3;
-        le var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         fb var5;
         int var6;
         int var7;
@@ -204,14 +204,14 @@ final class ck extends le {
           } else {
             ck.a(-5, 6836);
           }
-          this.b(param0 ^ 18347);
+          this.unlink(param0 ^ 18347);
         }
         var2 = this.field_q * this.field_q;
         var3 = this.field_l.b((byte) 26);
         while (var3 instanceof s) {
-          var4 = var3.field_b;
+          var4 = var3.previous;
           if (((s) (var3)).field_i < var2) {
-            var3.b(-27598);
+            var3.unlink(-27598);
             var5 = ((s) (var3)).field_h;
             if (!(var5 instanceof kd)) {
               if (var5 instanceof ah) {
@@ -258,7 +258,7 @@ final class ck extends le {
         }
         boolean decompiledFrameRemainder0 = true;
         if (param0 == -8 &&
-          !h.field_d && (vk.field_c == 7 &&
+          !MouseInputHandler.field_d && (vk.field_c == 7 &&
           vf.field_f == 3 ||
           vk.field_c == 7 &&
           vf.field_f == 4 ||
@@ -269,7 +269,7 @@ final class ck extends le {
           vk.field_c == 6 &&
           vf.field_f == 5)) {
           bo.a(97, -2);
-          h.field_d = true;
+          MouseInputHandler.field_d = true;
           decompiledFrameRemainder0 = false;
         }
         else {
@@ -615,7 +615,7 @@ final class ck extends le {
         int stackIn_39_0 = 0;
         int stackIn_40_1 = 0;
         int var4;
-        le var5;
+        IntrusiveNode var5;
         int var6;
         int var7;
         int var8;
@@ -706,7 +706,7 @@ final class ck extends le {
               this.field_l.a(0, new s((fb) (var5), var10));
             }
           }
-          var5 = var5.field_b;
+          var5 = var5.previous;
         }
         if (this.field_o != 2) {
           this.field_j = kh.a(0, false);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jm extends tc {
-    static ec field_B;
+    static PlatformTaskDispatcher field_B;
 
     final static int a(int param0, int param1) {
         int var3 = 0;
@@ -45,7 +45,7 @@ final class jm extends tc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 12307) {
-            field_B = (ec) null;
+            field_B = (PlatformTaskDispatcher) null;
           }
           stackIn_3_0 = mo.a(95, param1.field_o.length(), '*');
           return stackIn_3_0;
@@ -74,7 +74,7 @@ final class jm extends tc {
     public static void a(boolean param0) {
         field_B = null;
         if (param0) {
-          field_B = (ec) null;
+          field_B = (PlatformTaskDispatcher) null;
         }
     }
 

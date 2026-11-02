@@ -17,9 +17,9 @@ final class ek extends fb {
     static int field_J;
 
     final void j(int param0) {
-        this.b(-27598);
+        this.unlink(-27598);
         this.c((byte) -56);
-        td.field_c.a((le) (this), 87);
+        td.field_c.a((IntrusiveNode) (this), 87);
         if (param0 != -18475) {
           ek.i(112);
         }

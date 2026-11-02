@@ -196,7 +196,7 @@ final class nl extends al {
           return ed.field_a[param0];
         }
         if (be.field_j <= 0 &&
-          uc.field_a[param0]) {
+          MouseWheelInput.field_a[param0]) {
           return hf.field_E;
         }
         if (!param1) {
@@ -227,7 +227,7 @@ final class nl extends al {
         var3 = -vh.field_b + ha.field_b;
         var4 = -id.field_M + ei.field_K;
         var5 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (ld.field_k.length > var5) {
             if (var3 >= ld.field_k[var5] &&
               40 + ld.field_k[var5] > var3 &&
@@ -235,16 +235,16 @@ final class nl extends al {
               var4 < 40 + cg.field_g[var5]) {
               this.field_n = var5;
               if (this.field_d != 6) {
-                break L1;
+                break scanLoop1;
               }
               if (0 > this.field_n) {
-                break L1;
+                break scanLoop1;
               }
               if (this.g(this.field_n, -7)) {
-                break L1;
+                break scanLoop1;
               }
               this.field_n = -1;
-              break L1;
+              break scanLoop1;
             }
             var5++;
             continue;
@@ -354,7 +354,7 @@ final class nl extends al {
         }
         boolean decompiledFrameRemainder0 = true;
         if (!this.g(param0, -7) && (!wf.field_P[param0] ||
-          uc.field_a[param0] &&
+          MouseWheelInput.field_a[param0] &&
           !(be.field_j > 0) &&
           !(lo.field_j >= 2))) {
           stackIn_10_0 = false;

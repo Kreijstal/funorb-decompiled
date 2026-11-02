@@ -5,7 +5,7 @@ final class jl extends bj {
     static int[] field_s;
     private Object field_t;
     static cg field_v;
-    static uc field_u;
+    static MouseWheelInput field_u;
 
     final Object d(byte param0) {
         if (param0 < 49) {
@@ -53,7 +53,7 @@ final class jl extends bj {
           var2_int = param0.length;
           var3 = new byte[var2_int];
           if (param1 != 45) {
-            field_u = (uc) null;
+            field_u = (MouseWheelInput) null;
           }
           gp.a(param0, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;

@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class ii implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static int field_d;
     static rb field_a;
-    nb field_c;
+    DualLinkNode field_c;
     static String[] field_b;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ag(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     public static void a(byte param0) {
@@ -48,8 +48,8 @@ final class ii implements Iterable {
         }
     }
 
-    final nb a(int param0) {
-        nb var2 = this.field_c.field_i;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_c.field_i;
         if (param0 < 46) {
           field_d = 104;
           if (var2 != this.field_c) {
@@ -65,7 +65,7 @@ final class ii implements Iterable {
         return null;
     }
 
-    final void a(int param0, nb param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
           if (param1.field_h != null) {
             param1.c((byte) -12);
@@ -75,7 +75,7 @@ final class ii implements Iterable {
           param1.field_h.field_i = param1;
           if (param0 != 0) {
             byte[] var4 = (byte[]) null;
-            ii.a(-82, 33, (byte[]) null);
+            SecondaryNodeDeque.a(-82, 33, (byte[]) null);
           }
           param1.field_i.field_h = param1;
         } catch (RuntimeException runtimeException) {
@@ -83,7 +83,7 @@ final class ii implements Iterable {
         }
     }
 
-    private ii() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 

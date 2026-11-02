@@ -12,7 +12,7 @@ abstract class pa extends ga implements jf {
     static String field_A;
 
     final static void a(int param0) {
-        uf var1 = (uf) (rm.field_d.a(0));
+        uf var1 = (uf) (DelegatingCanvas.field_d.a(0));
         if (var1 == null) {
           throw new IllegalStateException();
         }

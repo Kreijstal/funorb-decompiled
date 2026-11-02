@@ -308,14 +308,14 @@ final class tp extends sp {
     }
 
     final static fn b(byte param0, int param1) {
-        if (4 <= rm.field_e.d(-56)) {
+        if (4 <= DelegatingCanvas.field_e.d(-56)) {
           return null;
         }
         if (param0 < 20) {
           field_m = (vo) null;
         }
         tm var2 = new tm(param1);
-        rm.field_e.a(0, var2);
+        DelegatingCanvas.field_e.a(0, var2);
         return var2.field_j;
     }
 
@@ -330,7 +330,7 @@ final class tp extends sp {
 
     final static vf c(int param0) {
         if (null == jo.field_Ob) {
-          jo.field_Ob = new vf(ii.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, ii.field_a.field_I, -1, 2147483647, true);
+          jo.field_Ob = new vf(SecondaryNodeDeque.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, SecondaryNodeDeque.field_a.field_I, -1, 2147483647, true);
         }
         int var1 = -78 / ((param0 - 59) / 48);
         return jo.field_Ob;
@@ -527,14 +527,14 @@ final class tp extends sp {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static fn $cfr$intArgs$b$3010b50b2764(int param0, int param1) {
-        if (4 <= rm.field_e.d(-56)) {
+        if (4 <= DelegatingCanvas.field_e.d(-56)) {
           return null;
         }
         if (param0 < 20) {
           field_m = (vo) null;
         }
         tm var2 = new tm(param1);
-        rm.field_e.a(0, var2);
+        DelegatingCanvas.field_e.a(0, var2);
         return var2.field_j;
     }
 }

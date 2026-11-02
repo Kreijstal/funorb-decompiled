@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg extends le {
+final class wg extends IntrusiveNode {
     static String field_o;
     static String field_l;
     int field_q;

@@ -172,7 +172,7 @@ final class nd {
           }
           var9 = new rc(param2, param8, param7, param0, param1, param6, param3);
           hk.field_F.a(0, var9);
-          rm.a((byte) -108, param5, var9);
+          DelegatingCanvas.a((byte) -108, param5, var9);
           stackIn_4_0 = var9;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

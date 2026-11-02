@@ -210,7 +210,7 @@ class an extends ga {
         }
     }
 
-    final static void a(int param0, ec param1, Object param2) {
+    final static void a(int param0, PlatformTaskDispatcher param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

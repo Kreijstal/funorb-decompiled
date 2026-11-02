@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hn extends le {
-    le field_k;
+final class hn extends IntrusiveNode {
+    IntrusiveNode field_k;
     fn field_n;
     int field_i;
     static char[] field_o;
@@ -72,7 +72,7 @@ final class hn extends le {
         ff.field_a = param2;
     }
 
-    hn(fn param0, le param1) {
+    hn(fn param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
           this.field_i = param0.k();

@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ag implements Iterator {
-    private ii field_f;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private SecondaryNodeDeque field_f;
     static f[] field_a;
     static int[] field_b;
     static vn field_h;
-    private nb field_d;
-    private nb field_g;
+    private DualLinkNode field_d;
+    private DualLinkNode field_g;
     static String field_c;
     static String field_e;
 
@@ -117,16 +117,16 @@ final class ag implements Iterator {
     public final Object next() {
         Object var1 = this.field_g;
         if (this.field_f.field_c != var1) {
-          this.field_g = ((nb) (var1)).field_i;
+          this.field_g = ((DualLinkNode) (var1)).field_i;
         } else {
           this.field_g = null;
           var1 = null;
         }
-        this.field_d = (nb) (var1);
+        this.field_d = (DualLinkNode) (var1);
         return var1;
     }
 
-    ag(ii param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_d = null;
         try {
           this.field_f = param0;

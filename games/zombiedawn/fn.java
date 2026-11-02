@@ -237,7 +237,7 @@ final class fn extends sp {
           this.field_n = 0;
           this.field_u = 0;
           this.field_y = 0;
-          this.b(-27598);
+          this.unlink(-27598);
           return true;
         }
         if (this.field_y >= var1) {
@@ -979,7 +979,7 @@ final class fn extends sp {
               this.field_n = 0;
               this.field_u = 0;
               this.field_y = 0;
-              this.b(-27598);
+              this.unlink(-27598);
               param0 = this.field_l;
             }
             this.field_l = 0;
@@ -997,7 +997,7 @@ final class fn extends sp {
         if (this.field_t < 0) {
           if (this.field_m <= 0) {
             this.e();
-            this.b(-27598);
+            this.unlink(-27598);
             return;
           }
           this.field_t = 0;
@@ -1005,7 +1005,7 @@ final class fn extends sp {
         if (this.field_t >= var5) {
           if (this.field_m >= 0) {
             this.e();
-            this.b(-27598);
+            this.unlink(-27598);
             return;
           }
           this.field_t = var5 - 1;
@@ -1118,7 +1118,7 @@ final class fn extends sp {
           if (this.field_t >= var5) {
             this.field_t = var5;
             this.e();
-            this.b(-27598);
+            this.unlink(-27598);
           }
           return;
         }
@@ -1127,7 +1127,7 @@ final class fn extends sp {
         }
         this.field_t = -1;
         this.e();
-        this.b(-27598);
+        this.unlink(-27598);
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, fn param10) {
@@ -1311,7 +1311,7 @@ final class fn extends sp {
         if (this.field_t < 0) {
           if (this.field_m <= 0) {
             this.e();
-            this.b(-27598);
+            this.unlink(-27598);
             return;
           }
           this.field_t = 0;
@@ -1319,7 +1319,7 @@ final class fn extends sp {
         if (this.field_t >= var7) {
           if (this.field_m >= 0) {
             this.e();
-            this.b(-27598);
+            this.unlink(-27598);
             return;
           }
           this.field_t = var7 - 1;
@@ -1446,7 +1446,7 @@ final class fn extends sp {
           if (this.field_t >= var7) {
             this.field_t = var7;
             this.e();
-            this.b(-27598);
+            this.unlink(-27598);
           }
           return;
         }
@@ -1456,7 +1456,7 @@ final class fn extends sp {
         }
         this.field_t = -1;
         this.e();
-        this.b(-27598);
+        this.unlink(-27598);
         return;
     }
 
@@ -1657,7 +1657,7 @@ final class fn extends sp {
         int var2Lifetime1;
         if (param0 == 0) {
           this.g(0);
-          this.b(-27598);
+          this.unlink(-27598);
           return;
         }
         if (this.field_u != 0) {
@@ -1717,7 +1717,7 @@ final class fn extends sp {
         this.field_l = 0;
         this.field_o = 0;
         this.field_y = 0;
-        this.b(-27598);
+        this.unlink(-27598);
     }
 
     final synchronized void f(int param0) {

@@ -84,7 +84,7 @@ abstract class dh {
         }
         if (!po.w(13296)) {
           if (null != sc.field_c) {
-            gm.a(sc.field_c, (byte) 110, 3);
+            BufferedSocket.a(sc.field_c, (byte) 110, 3);
           }
           sl.a((byte) 47);
           if (hp.field_C) {

@@ -21,7 +21,7 @@ final class dp implements io {
         try {
           var4 = (rc) (hk.field_F.b((byte) 26));
           while (var4 != null) {
-            rm.a((byte) -109, param0, var4);
+            DelegatingCanvas.a((byte) -109, param0, var4);
             var4 = (rc) (hk.field_F.a(false));
           }
           if (param1 != -4) {

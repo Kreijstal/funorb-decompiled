@@ -34,7 +34,7 @@ abstract class w {
             bj.field_q.a(qp.a(var2_int, 90), 100, 17, 16777215, -1);
             qp.field_c[var2_int] = so.a(mk.field_a[var2_int]);
           }
-          al.field_f = ul.a(false, tg.field_c);
+          al.field_f = ul.a(false, GameKeyHandler.field_c);
           fk.field_K = ul.a(false, gj.field_m);
           tb.field_G = ul.a(false, km.field_b);
           rc.field_v = ul.a(false, hc.field_a);

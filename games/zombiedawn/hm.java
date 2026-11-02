@@ -41,30 +41,30 @@ class hm extends an {
     }
 
     final static void a(int param0) {
-        le var1 = null;
+        IntrusiveNode var1 = null;
         int var2 = ZombieDawn.field_J;
         try {
           var1 = kn.field_L.b((byte) 26);
           while (var1 instanceof tm) {
             pc.a((byte) 13, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           var1 = se.field_m.b((byte) 26);
           while (var1 instanceof tm) {
             pc.a((byte) 13, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           if (param0 != 9) {
             hm.a(-124);
           }
-          var1 = rm.field_e.b((byte) 26);
+          var1 = DelegatingCanvas.field_e.b((byte) 26);
           while (var1 instanceof tm) {
             pc.a((byte) 13, ((tm) (var1)).field_j);
-            var1 = var1.field_b;
+            var1 = var1.previous;
           }
           kn.field_L.b(param0 ^ 67);
           se.field_m.b(-61);
-          rm.field_e.b(68);
+          DelegatingCanvas.field_e.b(68);
         } catch (RuntimeException runtimeException) {
           throw sh.a((Throwable) ((Object) runtimeException), "hm.G(" + param0 + ')');
         }

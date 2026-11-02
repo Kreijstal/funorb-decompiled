@@ -27,7 +27,7 @@ final class i extends pn implements hh {
     final static void a(bo param0, byte param1, int param2) {
         try {
           mp.field_g.a(0, param0);
-          ag.a(param2, true, param0);
+          SecondaryNodeDequeIterator.a(param2, true, param0);
           if (param1 != 7) {
             field_V = -1.3851797580718994f;
           }
@@ -145,7 +145,7 @@ final class i extends pn implements hh {
           var4.field_i = this.field_i;
           var4.field_n = 80;
           var4.field_j = 50;
-          var4.field_h = (io) ((Object) new vf(ii.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_h = (io) ((Object) new vf(SecondaryNodeDeque.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, 10);
           this.field_Z = this.a((byte) 53, (sk) (this), re.field_c);
           return;
@@ -193,7 +193,7 @@ final class i extends pn implements hh {
             ic.field_T = jc.field_l;
           } else {
             try {
-              sn.field_c = new gm((java.net.Socket) (ao.field_F.field_d), jm.field_B);
+              sn.field_c = new BufferedSocket((java.net.Socket) (ao.field_F.field_d), jm.field_B);
               var4 = fj.field_g;
               var5 = var4;
               dp.field_e.field_j = 0;
@@ -203,7 +203,7 @@ final class i extends pn implements hh {
               e.field_P = stackIn_12_0;
               ic.field_T = ui.field_g;
               var5.field_j = 0;
-              uj.a(le.field_g, ba.field_b, (byte) -114, dp.field_e, kg.field_k);
+              uj.a(IntrusiveNode.field_g, ba.field_b, (byte) -114, dp.field_e, kg.field_k);
               vl.a((byte) -46, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

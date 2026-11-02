@@ -447,14 +447,14 @@ final class te extends id {
               this.field_hb.k(0);
               if (!(this.field_hb instanceof kd) ||
                 ((kd) (this.field_hb)).i((byte) -126)) {
-                stackIn_113_0 = uc.field_c;
+                stackIn_113_0 = MouseWheelInput.field_c;
                 stackIn_113_1 = 1;
-                uc.field_c = stackIn_113_0 + stackIn_113_1;
+                MouseWheelInput.field_c = stackIn_113_0 + stackIn_113_1;
               }
               if (16 == this.field_hb.field_t) {
                 dj.field_e.a(234, 21, (byte) -23);
               }
-              if (uc.field_c == 20) {
+              if (MouseWheelInput.field_c == 20) {
                 dj.field_e.a(235, 20, (byte) -23);
               }
               ck.a(-10, 6836);
@@ -498,7 +498,7 @@ final class te extends id {
         this.field_Z = this.a(true);
         this.field_gb = -48 + this.f(237239984);
         this.field_cb = 90;
-        uc.field_c = 0;
+        MouseWheelInput.field_c = 0;
         int var5 = 0;
         this.field_jb[var5] = 7;
         this.field_Y[var5] = -50;

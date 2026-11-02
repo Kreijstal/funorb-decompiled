@@ -111,7 +111,7 @@ final class cn {
           return;
         }
         pn.field_R = null;
-        hl.field_b = null;
+        NodeHashTableIterator.field_b = null;
         bp.field_a = null;
         dl.field_h = null;
     }

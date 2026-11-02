@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sp extends le {
+abstract class sp extends IntrusiveNode {
     int field_j;
     ik field_h;
     volatile boolean field_k;

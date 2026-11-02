@@ -168,10 +168,10 @@ final class ac extends al {
             return;
           }
         }
-        int fieldTemp$0 = wm.field_e + 1;
-        wm.field_e = wm.field_e + 1;
+        int fieldTemp$0 = IterableNodeHashTable.field_e + 1;
+        IterableNodeHashTable.field_e = IterableNodeHashTable.field_e + 1;
         if (fieldTemp$0 == 50) {
-          wm.field_e = 0;
+          IterableNodeHashTable.field_e = 0;
         }
         var3 = 0;
         boolean decompiledNaturalLoopExit0 = false;
@@ -305,8 +305,8 @@ final class ac extends al {
           }
         }
         if (be.field_j <= 0) {
-          var7Lifetime1 = wm.field_e;
-          var8 = 12 + wm.field_e;
+          var7Lifetime1 = IterableNodeHashTable.field_e;
+          var8 = 12 + IterableNodeHashTable.field_e;
           if (param1 == 1) {
             wd.field_y.b(vh.field_b + (qg.field_a[param1] + 2), param3 + (id.field_M + to.field_c[param1]) - 17, 50 + wd.field_z[var7Lifetime1] / 2);
           }
@@ -444,7 +444,7 @@ final class ac extends al {
             }
             if (!(var2 < 0) ||
               var4 != 0) {
-              L21: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_b.field_d != 0 &&
                   this.field_b.field_d != 1) {
                   if (this.field_b.field_d != 2) {
@@ -479,7 +479,7 @@ final class ac extends al {
                 stackIn_65_0 = this.a(this.field_b.field_d, sh.field_a, 108) ? 1 : 0;
                 do {
                   if (stackIn_65_0 == 0) {
-                    continue L21;
+                    continue scanLoop1;
                   }
                   stackIn_65_0 = 99;
                   stackIn_67_0 = stackIn_65_0;
@@ -522,7 +522,7 @@ final class ac extends al {
             }
             if (!(var2 < 0) ||
               var4 != 0) {
-              L38: while (true) {
+              scanLoop2: while (true) {
                 if (~this.field_b.field_d != ~(this.field_b.field_h - 1)) {
                   if (this.field_b.field_d != 0 &&
                     this.field_b.field_d != 1) {
@@ -564,7 +564,7 @@ final class ac extends al {
                 stackIn_84_0 = this.a(this.field_b.field_d, sh.field_a, -119) ? 1 : 0;
                 do {
                   if (stackIn_84_0 == 0) {
-                    continue L38;
+                    continue scanLoop2;
                   }
                   stackIn_84_0 = kg.field_i;
                   stackIn_86_0 = stackIn_84_0;
@@ -626,7 +626,7 @@ final class ac extends al {
 
     }
 
-    final static void a(ec param0, boolean param1, java.awt.Component param2, rj param3, int param4, int param5) {
+    final static void a(PlatformTaskDispatcher param0, boolean param1, java.awt.Component param2, rj param3, int param4, int param5) {
         try {
           wn.a(param4, param3, 1024, param2, param0, param4, param1, -112);
           if (param5 != -97) {

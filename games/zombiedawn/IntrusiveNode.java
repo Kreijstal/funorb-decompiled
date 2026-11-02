@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class le {
+class IntrusiveNode {
     static vn[] field_a;
     static String field_e;
     static int field_g;
-    le field_d;
-    le field_b;
+    IntrusiveNode next;
+    IntrusiveNode previous;
     static volatile int field_c;
-    long field_f;
+    long key;
 
     public static void b(byte param0) {
         field_e = null;
@@ -20,25 +20,25 @@ class le {
         field_a = null;
     }
 
-    final void b(int param0) {
-        if (this.field_d == null) {
+    final void unlink(int param0) {
+        if (this.next == null) {
           return;
         }
-        this.field_d.field_b = this.field_b;
-        this.field_b.field_d = this.field_d;
+        this.next.previous = this.previous;
+        this.previous.next = this.next;
         if (param0 == -27598) {
-          this.field_b = null;
-          this.field_d = null;
+          this.previous = null;
+          this.next = null;
           return;
         }
     }
 
     final boolean a(byte param0) {
         if (param0 == 73) {
-          return this.field_d != null ? true : false;
+          return this.next != null ? true : false;
         }
         field_c = 68;
-        if (this.field_d == null) {
+        if (this.next == null) {
           return false;
         }
         return true;

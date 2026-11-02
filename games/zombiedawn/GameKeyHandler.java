@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tg implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_a;
     static String field_c;
     static String field_b;
@@ -97,7 +97,7 @@ final class tg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var2_int >= 0) {
               nd.field_c[ih.field_F] = var2_int;
               ih.field_F = 1 + ih.field_F & 127;
-              if (ih.field_F == uc.field_d) {
+              if (ih.field_F == MouseWheelInput.field_d) {
                 ih.field_F = -1;
               }
             }
@@ -153,7 +153,7 @@ final class tg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               0 <= var2_int) {
               nd.field_c[ih.field_F] = ~var2_int;
               ih.field_F = 1 + ih.field_F & 127;
-              if (ih.field_F == uc.field_d) {
+              if (ih.field_F == MouseWheelInput.field_d) {
                 ih.field_F = -1;
               }
             }
@@ -189,7 +189,7 @@ final class tg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         fj.field_g.d((byte) -122);
         if (param0 < 110) {
           String var2 = (String) null;
-          tg.a(-42, (String) null);
+          GameKeyHandler.a(-42, (String) null);
         }
     }
 

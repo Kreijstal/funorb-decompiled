@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg extends le {
+final class mg extends IntrusiveNode {
     static int field_j;
     int field_i;
     int field_h;
@@ -22,7 +22,7 @@ final class mg extends le {
             var1 = (hn) (fj.field_i.b((byte) 26));
             while (var1 != null) {
               if (!var1.field_k.a((byte) 73)) {
-                var1.b(-27598);
+                var1.unlink(-27598);
               }
               var1 = (hn) (fj.field_i.a(false));
             }
@@ -30,7 +30,7 @@ final class mg extends le {
               var1Lifetime1 = (hn) (sf.field_n.b((byte) 26));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_k.a((byte) 73)) {
-                  var1Lifetime1.b(-27598);
+                  var1Lifetime1.unlink(-27598);
                 }
                 var1Lifetime1 = (hn) (sf.field_n.a(false));
               }

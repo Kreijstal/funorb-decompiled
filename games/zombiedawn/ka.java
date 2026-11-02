@@ -194,7 +194,7 @@ final class ka {
             stackIn_17_0 = null;
             return (gi) (stackIn_17_0);
           }
-          var9.b(-27598);
+          var9.unlink(-27598);
           this.field_d.a(-102, var6, var8Lifetime1);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;

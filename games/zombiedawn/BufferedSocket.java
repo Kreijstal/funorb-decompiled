@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class gm implements Runnable {
+final class BufferedSocket implements Runnable {
     private OutputStream field_d;
     private int field_n;
     private int field_g;
     static int field_k;
     static dj field_h;
-    private ec field_m;
+    private PlatformTaskDispatcher field_m;
     static String field_f;
     private byte[] field_e;
     private InputStream field_a;
@@ -115,7 +115,7 @@ final class gm implements Runnable {
 
     final int b(byte param0) throws IOException {
         if (param0 >= -2) {
-          gm.b(6);
+          BufferedSocket.b(6);
           if (!this.field_b) {
             return this.field_a.available();
           }
@@ -134,7 +134,7 @@ final class gm implements Runnable {
           return;
         }
         rc var2 = (rc) null;
-        gm.a((rc) null, (byte) -84, 22);
+        BufferedSocket.a((rc) null, (byte) -84, 22);
         field_f = null;
         field_h = null;
     }
@@ -147,7 +147,7 @@ final class gm implements Runnable {
           return this.field_a.read();
         }
         rc var3 = (rc) null;
-        gm.a((rc) null, (byte) 8, -92);
+        BufferedSocket.a((rc) null, (byte) 8, -92);
         return this.field_a.read();
     }
 
@@ -264,7 +264,7 @@ final class gm implements Runnable {
         }
         try {
           hk.field_F.a(0, param0);
-          rm.a((byte) -92, param2, param0);
+          DelegatingCanvas.a((byte) -92, param2, param0);
         } catch (RuntimeException runtimeException) {
           throw sh.a((Throwable) ((Object) runtimeException), "gm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -334,11 +334,11 @@ final class gm implements Runnable {
         throw new IOException();
     }
 
-    gm(java.net.Socket param0, ec param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
-    private gm(java.net.Socket param0, ec param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_n = 0;
         this.field_b = false;
         this.field_j = 0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ea {
-    static tg field_c;
+    static GameKeyHandler field_c;
     static String field_d;
     static String field_b;
     static long field_a;
@@ -44,7 +44,7 @@ final class ea {
     }
 
     static {
-        field_c = new tg();
+        field_c = new GameKeyHandler();
         field_d = "Waiting for levels";
         field_a = 20000000L;
     }

@@ -171,10 +171,10 @@ abstract class ah extends g {
           return da.field_n;
         }
         if (7 == var2) {
-          return h.field_a;
+          return MouseInputHandler.field_a;
         }
         if (var2 == 8) {
-          return h.field_a;
+          return MouseInputHandler.field_a;
         }
         if (var2 == 9) {
           return gg.field_b;
@@ -204,31 +204,31 @@ abstract class ah extends g {
           return qc.field_a;
         }
         if (var2 == 28) {
-          return ke.field_h;
+          return GameApplet.field_h;
         }
         if (var2 == 18) {
-          return ke.field_h;
+          return GameApplet.field_h;
         }
         if (var2 == 19) {
           return jc.field_h;
         }
         if (var2 == 29) {
-          return h.field_a;
+          return MouseInputHandler.field_a;
         }
         if (var2 == 26) {
-          return h.field_a;
+          return MouseInputHandler.field_a;
         }
         if (var2 == 24) {
-          return h.field_a;
+          return MouseInputHandler.field_a;
         }
         if (var2 == 25) {
-          return h.field_a;
+          return MouseInputHandler.field_a;
         }
         if (22 == var2) {
-          return h.field_a;
+          return MouseInputHandler.field_a;
         }
         if (var2 == 21) {
-          return h.field_a;
+          return MouseInputHandler.field_a;
         }
         if (var2 == 30) {
           return da.field_n;
@@ -313,30 +313,30 @@ abstract class ah extends g {
         var3 = -110 % ((param0 - 24) / 52);
         var2 = 0;
         for (var4 = 0; var4 < this.field_ub; var4++) {
-          h.field_e[var4] = 0;
+          MouseInputHandler.field_e[var4] = 0;
           if (0 >= this.field_z) {
             stackIn_8_0 = (mf.a(this.field_gb[var4], this.field_jb[var4], 0)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
-          L6: {
+          regionExit1: {
             var5 = stackIn_8_0;
             if (-1 + this.field_ub != var4 && (var5 == 0 ||
               -1 == dj.field_e.field_H.a(this.field_gb[var4], this.f(237239984), this.field_jb[var4], this.a(true), 124))) {
-              h.field_e[var4] = -1;
-              break L6;
+              MouseInputHandler.field_e[var4] = -1;
+              break regionExit1;
             }
             var6 = this.b(250, 16);
             while (var6 != null) {
-              L10: {
+              regionExit2: {
                 if ((!(var6 instanceof kd) ||
                   !((kd) (var6)).x(53)) &&
                   !(var6 instanceof vb)) {
                   if (0 == this.field_z) {
-                    break L10;
+                    break regionExit2;
                   }
                   if (!(var6 instanceof id)) {
-                    break L10;
+                    break regionExit2;
                   }
                   if (this.field_z != var6.field_z) {
                     var6 = this.e((byte) 32);
@@ -350,19 +350,19 @@ abstract class ah extends g {
                     continue;
                   }
                   var2 = 1;
-                  h.field_e[var4] = -1 - var9;
+                  MouseInputHandler.field_e[var4] = -1 - var9;
                   var6 = this.e((byte) 32);
                   continue;
                 }
                 var7Lifetime1 = this.field_jb[var4] - var6.a(true);
                 var8Lifetime1 = this.field_gb[var4] - var6.f(237239984);
                 var9Lifetime1 = var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1;
-                if (0 != h.field_e[var4] &&
-                  h.field_e[var4] <= var9Lifetime1) {
+                if (0 != MouseInputHandler.field_e[var4] &&
+                  MouseInputHandler.field_e[var4] <= var9Lifetime1) {
                   var6 = this.e((byte) 32);
                   continue;
                 }
-                h.field_e[var4] = var9Lifetime1;
+                MouseInputHandler.field_e[var4] = var9Lifetime1;
               }
               var6 = this.e((byte) 32);
             }
@@ -370,11 +370,11 @@ abstract class ah extends g {
         }
         if (var2 != 0) {
           for (var4Lifetime1 = 0; this.field_ub > var4Lifetime1; var4Lifetime1++) {
-            if (h.field_e[var4Lifetime1] > 0) {
-              h.field_e[var4Lifetime1] = 0;
+            if (MouseInputHandler.field_e[var4Lifetime1] > 0) {
+              MouseInputHandler.field_e[var4Lifetime1] = 0;
             }
-            if (h.field_e[var4Lifetime1] < -1) {
-              h.field_e[var4Lifetime1] = -h.field_e[var4Lifetime1] + 1000000;
+            if (MouseInputHandler.field_e[var4Lifetime1] < -1) {
+              MouseInputHandler.field_e[var4Lifetime1] = -MouseInputHandler.field_e[var4Lifetime1] + 1000000;
             }
           }
         }
@@ -429,7 +429,7 @@ abstract class ah extends g {
               qj.field_d >= var3_int &&
               var4 <= me.field_Bb) {
               if (this.field_F != 17) {
-                stackIn_20_0 = nb.field_k[1];
+                stackIn_20_0 = DualLinkNode.field_k[1];
                 stackIn_20_1 = 12;
                 if (this.field_S == 3) {
                   stackIn_21_2 = -2 + var3_int;
@@ -532,7 +532,7 @@ abstract class ah extends g {
                 pc.field_k.a(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, -5 + var4, 16777215, 0);
               }
               if (this.field_ob) {
-                nb.field_k[0].b(var3_int, var4, 128, 16711680);
+                DualLinkNode.field_k[0].b(var3_int, var4, 128, 16711680);
               }
               return;
             }
@@ -573,8 +573,8 @@ abstract class ah extends g {
           return -120;
         }
         while (this.field_ub > var3) {
-          if (-1 != h.field_e[var3] && (-1 == var2 ||
-            !(h.field_e[var3] < h.field_e[var2]))) {
+          if (-1 != MouseInputHandler.field_e[var3] && (-1 == var2 ||
+            !(MouseInputHandler.field_e[var3] < MouseInputHandler.field_e[var2]))) {
             var2 = var3;
           }
           var3++;
@@ -637,7 +637,7 @@ abstract class ah extends g {
         boolean stackIn_92_1 = false;
         int stackIn_96_1 = 0;
         int var2;
-        le var3;
+        IntrusiveNode var3;
         int var4;
         int var2Lifetime1;
         var4 = ZombieDawn.field_J;
@@ -660,7 +660,7 @@ abstract class ah extends g {
           }
           return;
         }
-        L2: {
+        regionExit1: {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_F == 0) {
             fieldTemp$0 = this.field_vb + 1;
@@ -686,7 +686,7 @@ abstract class ah extends g {
             fieldTemp$1 = this.field_qb;
             this.field_qb = this.field_qb + 1;
             if (fieldTemp$1 < 5) {
-              break L2;
+              break regionExit1;
             }
             this.field_qb = 0;
             this.l((byte) 52);
@@ -735,7 +735,7 @@ abstract class ah extends g {
                   this.field_O = 0;
                 }
               }
-              break L2;
+              break regionExit1;
             }
             if (this.field_F == 1) {
               fieldTemp$6 = this.field_qb;
@@ -746,7 +746,7 @@ abstract class ah extends g {
                 var3 = dj.field_e.field_lb.b((byte) 26);
                 while (var3 instanceof mm) {
                   var2 = var2 != 0 | ((mm) (var3)).a(this, (byte) 108) ? 1 : 0;
-                  var3 = var3.field_b;
+                  var3 = var3.previous;
                 }
                 if (!this.field_nb &&
                   var2 != 0) {
@@ -765,7 +765,7 @@ abstract class ah extends g {
                 this.e(0, -6904);
                 this.l((byte) 52);
               }
-              break L2;
+              break regionExit1;
             }
             if (23 == this.field_F) {
               fieldTemp$5 = this.field_qb;
@@ -776,7 +776,7 @@ abstract class ah extends g {
                 var3 = dj.field_e.field_lb.b((byte) 26);
                 while (var3 instanceof mm) {
                   var2Lifetime1 = var2Lifetime1 != 0 | ((mm) (var3)).a(this, (byte) 79) ? 1 : 0;
-                  var3 = var3.field_b;
+                  var3 = var3.previous;
                 }
                 if (!this.field_nb &&
                   var2Lifetime1 != 0) {
@@ -796,14 +796,14 @@ abstract class ah extends g {
                 this.e(0, -6904);
                 this.l((byte) 52);
               }
-              break L2;
+              break regionExit1;
             }
             if (this.field_F != 3) {
               if (this.field_F == 16) {
                 fieldTemp$3 = this.field_qb;
                 this.field_qb = this.field_qb + 1;
                 if (fieldTemp$3 < 5) {
-                  break L2;
+                  break regionExit1;
                 }
                 this.field_qb = 0;
                 decompiledFrameRemainder0 = (this.field_cb == null ||
@@ -812,7 +812,7 @@ abstract class ah extends g {
                   this.field_cb = null;
                   this.e(0, -6904);
                   this.l((byte) 52);
-                  break L2;
+                  break regionExit1;
                 }
               }
               if ((decompiledFrameRemainder0) &&
@@ -961,7 +961,7 @@ abstract class ah extends g {
           return;
         }
         this.e(18, -6904);
-        this.b(-27598);
+        this.unlink(-27598);
         this.d(0);
         if (!(0 >= this.field_z)) {
           dj.field_e.field_J[-1 + this.field_z] = dj.field_e.field_J[-1 + this.field_z] - 1;
@@ -1002,7 +1002,7 @@ abstract class ah extends g {
         if (var2 == 0) {
           return false;
         }
-        L1: {
+        regionExit1: {
           if (var2 != 1 &&
             var2 != 2) {
             if (var2 != 3 &&
@@ -1051,7 +1051,7 @@ abstract class ah extends g {
                             return true;
                           }
                           stackIn_35_0 = false;
-                          break L1;
+                          break regionExit1;
                         }
                         return false;
                     }

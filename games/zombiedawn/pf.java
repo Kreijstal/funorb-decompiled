@@ -5,19 +5,19 @@ final class pf {
     static vn field_f;
     static volatile int field_c;
     private int field_a;
-    private nb[] field_i;
+    private DualLinkNode[] field_i;
     static int field_g;
-    private nb field_d;
+    private DualLinkNode field_d;
     private long field_e;
     static ug field_b;
     static char[] field_h;
 
-    final nb a(int param0, long param1) {
-        nb var4;
-        nb var5;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
-        nb var4Lifetime1;
-        nb var5Lifetime1;
+        DualLinkNode var4Lifetime1;
+        DualLinkNode var5Lifetime1;
         var6 = ZombieDawn.field_J;
         this.field_e = param1;
         if (param0 == 93) {
@@ -68,13 +68,13 @@ final class pf {
         field_f = null;
     }
 
-    final nb b(byte param0) {
-        nb var3 = null;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var3 = null;
         int var4 = ZombieDawn.field_J;
         if (null == this.field_d) {
           return null;
         }
-        nb var2 = this.field_i[(int)((long)(-1 + this.field_a) & this.field_e)];
+        DualLinkNode var2 = this.field_i[(int)((long)(-1 + this.field_a) & this.field_e)];
         while (this.field_d != var2) {
           if (this.field_d.field_n == this.field_e) {
             var3 = this.field_d;
@@ -92,8 +92,8 @@ final class pf {
         return null;
     }
 
-    final void a(int param0, long param1, nb param2) {
-        nb var5 = null;
+    final void a(int param0, long param1, DualLinkNode param2) {
+        DualLinkNode var5 = null;
         try {
           if (null != param2.field_h) {
             param2.c((byte) -53);
@@ -111,12 +111,12 @@ final class pf {
 
     pf(int param0) {
         int var2 = 0;
-        nb dupTemp$0 = null;
-        nb var3 = null;
-        this.field_i = new nb[param0];
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
+        this.field_i = new DualLinkNode[param0];
         this.field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new nb();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_i[var2] = dupTemp$0;
           var3.field_i = var3;

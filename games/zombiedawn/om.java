@@ -25,7 +25,7 @@ final class om extends w {
     final void b(int param0) {
         pj discarded$0 = null;
         pj discarded$1 = null;
-        le var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = ZombieDawn.field_J;
@@ -40,7 +40,7 @@ final class om extends w {
         }
         var2 = this.field_g.b((byte) 26);
         while (var2 != null) {
-          var3 = (int)var2.field_f;
+          var3 = (int)var2.key;
           if (0 <= var3 &&
             var3 < this.field_h.field_s &&
             0 != this.field_h.field_t[var3]) {
@@ -51,10 +51,10 @@ final class om extends w {
               discarded$1 = this.a(2, var3, 19);
             }
             if (1 == this.field_j[var3]) {
-              var2.b(param0 - 27598);
+              var2.unlink(param0 - 27598);
             }
           } else {
-            var2.b(param0 - 27598);
+            var2.unlink(param0 - 27598);
           }
           var2 = this.field_g.a(false);
         }
@@ -226,7 +226,7 @@ final class om extends w {
           return null;
         }
         byte[] var4 = var3.d(0);
-        var3.b(-27598);
+        var3.unlink(-27598);
         return var4;
     }
 
@@ -261,7 +261,7 @@ final class om extends w {
           param0 == 0 &&
           !var12.field_r &&
           var12.field_q) {
-          var12.b(-27598);
+          var12.unlink(-27598);
           var4 = null;
         }
         if (var4 == null) {
@@ -297,7 +297,7 @@ final class om extends w {
               var4 = this.field_n.a((byte) -119, this.field_l, param1);
             }
           }
-          this.field_p.a(-110, (long)param1, (le) (var4));
+          this.field_p.a(-110, (long)param1, (IntrusiveNode) (var4));
         }
         if (((pj) (var4)).field_q) {
           return null;
@@ -335,7 +335,7 @@ final class om extends w {
                 this.field_j[param1] = (byte) 1;
               }
               if (!((pj) (var4)).field_r) {
-                ((pj) (var4)).b(-27598);
+                ((pj) (var4)).unlink(-27598);
               }
               stackIn_59_0 = var4;
               return (pj) (stackIn_59_0);
@@ -345,13 +345,13 @@ final class om extends w {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_j[param1] = (byte)-1;
-            ((pj) (var4)).b(-27598);
+            ((pj) (var4)).unlink(-27598);
             if (((pj) (var4)).field_r) {
               if (this.field_d.b(122)) {
                 return null;
               }
               var4 = this.field_d.a((byte) 2, true, this.field_o, (byte) -95, param1);
-              this.field_p.a(-108, (long)param1, (le) (var4));
+              this.field_p.a(-108, (long)param1, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -387,7 +387,7 @@ final class om extends w {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_d.a(-90);
-          ((pj) (var4)).b(-27598);
+          ((pj) (var4)).unlink(-27598);
           if (!((pj) (var4)).field_r) {
             return null;
           }
@@ -395,7 +395,7 @@ final class om extends w {
             return null;
           }
           var4 = this.field_d.a((byte) 2, true, this.field_o, (byte) 111, param1);
-          this.field_p.a(-102, (long)param1, (le) (var4));
+          this.field_p.a(-102, (long)param1, (IntrusiveNode) (var4));
           return null;
         }
         var5[var18.length - 2] = (byte)(this.field_h.field_c[param1] >>> 8);
@@ -409,7 +409,7 @@ final class om extends w {
           }
         }
         if (!((pj) (var4)).field_r) {
-          ((pj) (var4)).b(-27598);
+          ((pj) (var4)).unlink(-27598);
         }
         return (pj) (var4);
     }
@@ -432,14 +432,14 @@ final class om extends w {
         pj discarded$0 = null;
         int var2_int;
         pj var2;
-        le var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        le var6;
-        le var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        le var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         var5 = ZombieDawn.field_J;
         if (param0 <= 13) {
           return;
@@ -453,30 +453,30 @@ final class om extends w {
             var2_int = 1;
             var3 = this.field_c.b((byte) 26);
             while (var3 != null) {
-              var4 = (int)var3.field_f;
+              var4 = (int)var3.key;
               if (this.field_j[var4] == 0) {
                 discarded$3 = this.a(1, var4, 106);
               }
               if (0 != this.field_j[var4]) {
-                var3.b(-27598);
+                var3.unlink(-27598);
               } else {
                 var2_int = 0;
               }
               var3 = this.field_c.a(false);
             }
-            L10: while (true) {
+            scanLoop1: while (true) {
               if (this.field_h.field_t.length > this.field_i) {
                 if (this.field_h.field_t[this.field_i] != 0) {
                   if (this.field_n.field_k >= 250) {
                     var2_int = 0;
-                    break L10;
+                    break scanLoop1;
                   }
                   if (this.field_j[this.field_i] == 0) {
                     discarded$2 = this.a(1, this.field_i, 68);
                   }
                   if (this.field_j[this.field_i] == 0) {
-                    var6 = new le();
-                    var6.field_f = (long)this.field_i;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_i;
                     this.field_c.a(0, var6);
                     var2_int = 0;
                   }
@@ -497,12 +497,12 @@ final class om extends w {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_c.b((byte) 26);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_f;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_j[var4Lifetime1] != 1) {
                   discarded$1 = this.a(2, var4Lifetime1, 127);
                 }
                 if (this.field_j[var4Lifetime1] == 1) {
-                  var3Lifetime1.b(-27598);
+                  var3Lifetime1.unlink(-27598);
                 } else {
                   var2_intLifetime1 = 0;
                 }
@@ -518,8 +518,8 @@ final class om extends w {
                     discarded$0 = this.a(2, this.field_i, 72);
                   }
                   if (this.field_j[this.field_i] != 1) {
-                    var7 = new le();
-                    var7.field_f = (long)this.field_i;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_i;
                     var2_intLifetime1 = 0;
                     this.field_c.a(0, var7);
                   }
@@ -551,7 +551,7 @@ final class om extends w {
                 if (!var2.field_r) {
                   throw new RuntimeException();
                 }
-                var2.b(-27598);
+                var2.unlink(-27598);
               }
             }
             var2 = (pj) (this.field_p.b((byte) -40));

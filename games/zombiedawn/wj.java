@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends le {
+final class wj extends IntrusiveNode {
     dl field_h;
     byte[] field_i;
 

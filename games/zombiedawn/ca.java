@@ -162,21 +162,21 @@ final class ca {
           } else {
             if (4 != param2) {
               if (param2 == 2 &&
-                ke.field_c.field_d == 4) {
+                GameApplet.field_c.field_d == 4) {
                 vl.field_b.c(9091);
               }
             } else {
               tp.a(109, true, w.field_a[9]);
             }
           }
-          if (ke.field_c.field_d == 0) {
+          if (GameApplet.field_c.field_d == 0) {
             if (param2 == 2) {
               qc.b(1400888196);
             } else {
               hm.a(9);
             }
           } else {
-            if (ke.field_c.field_d == 2 &&
+            if (GameApplet.field_c.field_d == 2 &&
               param2 == 0) {
               vj.c(74);
             }
@@ -189,9 +189,9 @@ final class ca {
         }
         sg.field_eb = jj.c(param2, 96);
         po.field_xb = 0;
-        if (ke.field_c.field_d == 1 &&
+        if (GameApplet.field_c.field_d == 1 &&
           sg.field_eb.field_d == 14 ||
-          ke.field_c.field_d == 14 &&
+          GameApplet.field_c.field_d == 14 &&
           sg.field_eb.field_d == 1) {
           po.field_xb = 31;
         }
@@ -199,7 +199,7 @@ final class ca {
           sg.field_eb.a((byte) 74, 0, param0);
         }
         if (sg.field_eb.field_d == 1 &&
-          ke.field_c.field_d != 14) {
+          GameApplet.field_c.field_d != 14) {
           ip.c(-94);
         }
         if (!param1) {

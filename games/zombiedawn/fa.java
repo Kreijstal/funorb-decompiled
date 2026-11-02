@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class fa extends nb {
+class fa extends DualLinkNode {
     fa field_q;
     fa field_r;
     static int field_p;

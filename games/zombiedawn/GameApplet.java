@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class ke extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_j;
     static al field_c;
     static int field_b;
@@ -91,7 +91,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          cj.field_d = (java.awt.Canvas) ((Object) new rm((java.awt.Component) (this)));
+          cj.field_d = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) cj.field_d));
           cj.field_d.setSize(te.field_eb, kj.field_c);
           cj.field_d.setVisible(true);
@@ -179,7 +179,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
             param3 > 0) {
             var5_int = param2[0].field_r;
             if (param0 <= 10) {
-              ke.a(-53, 77, (vn[]) null, 65, -32);
+              GameApplet.a(-53, 77, (vn[]) null, 65, -32);
             }
             var6 = param2[2].field_r;
             var7 = param2[1].field_r;
@@ -318,7 +318,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
 
     final void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6) {
         try {
-          ec dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_24_0 = null;
           StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
@@ -351,7 +351,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               if (param4 != -14384) {
                 field_h = -97;
               }
-              dupTemp$0 = new ec(param6, param2, param1, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param6, param2, param1, true);
               vh.field_a = dupTemp$0;
               mh.field_E = dupTemp$0;
               var8 = vh.field_a.a(1, (Runnable) (this), true);
@@ -762,7 +762,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected ke() {
+    protected GameApplet() {
         this.field_j = false;
     }
 
@@ -826,11 +826,11 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != ec.field_h) {
-                var1 = ec.field_h.toLowerCase();
+              if (null != PlatformTaskDispatcher.field_h) {
+                var1 = PlatformTaskDispatcher.field_h.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = ec.field_g;
+                  var2 = PlatformTaskDispatcher.field_g;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -872,8 +872,8 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (ec.field_g != null))) {
-                stackIn_64_0 = ec.field_g.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskDispatcher.field_g != null))) {
+                stackIn_64_0 = PlatformTaskDispatcher.field_g.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -882,8 +882,8 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (ec.field_g.length() > var1_int) {
-                    var3 = ec.field_g.charAt(var1_int);
+                  if (PlatformTaskDispatcher.field_g.length() > var1_int) {
+                    var3 = PlatformTaskDispatcher.field_g.charAt(var1_int);
                     stackIn_76_0 = ~var3;
                     stackIn_76_1 = -49;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -910,7 +910,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 if (null != bh.field_i) {
                   var1 = bh.field_i;
                 }
-                var2_ref = ec.field_d;
+                var2_ref = PlatformTaskDispatcher.field_d;
                 if (null != var2_ref) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});

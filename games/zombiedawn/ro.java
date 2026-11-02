@@ -10,7 +10,7 @@ final class ro {
         lb.field_Y = param0;
         qb.field_i = param4;
         dd.field_b = param2;
-        nb.field_m = param1;
+        DualLinkNode.field_m = param1;
         if (param5 != -386) {
           return;
         }

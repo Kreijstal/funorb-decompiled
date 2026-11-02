@@ -490,7 +490,7 @@ final class ad extends vg {
           var21Lifetime2 = en.field_a;
           var22Lifetime2 = en.field_i;
           var23Lifetime2 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (param2.field_k > var23Lifetime2) {
               var24Lifetime1 = param2.field_G[var23Lifetime2];
               var25Lifetime1 = param2.field_B[var23Lifetime2];
@@ -543,7 +543,7 @@ final class ad extends vg {
                   var24Lifetime1 = param2.field_N[var23Lifetime2];
                   var25Lifetime1 = param2.field_i[var23Lifetime2];
                   var26Lifetime1 = param2.field_I[var23Lifetime2];
-                  rm.field_c[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var25Lifetime1 * var15 + var12 * var24Lifetime1) >> 16);
+                  DelegatingCanvas.field_c[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var25Lifetime1 * var15 + var12 * var24Lifetime1) >> 16);
                   lb.field_db[var23Lifetime2] = (var13 * var24Lifetime1 + (var16 * var25Lifetime1 + var26Lifetime1 * var19) >> 16) + var10;
                   ce.field_v[var23Lifetime2] = var11 + (var24Lifetime1 * var14 + var17 * var25Lifetime1 + var26Lifetime1 * var20 >> 16);
                   var24Lifetime1 = param2.field_D[var23Lifetime2];
@@ -573,7 +573,7 @@ final class ad extends vg {
                   stackIn_67_0 = og.field_y.length;
                   stackIn_67_1 = var18;
                   if (var30 != 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                   if (stackIn_67_0 <= stackIn_67_1) {
                     break;

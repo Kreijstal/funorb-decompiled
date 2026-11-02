@@ -132,7 +132,7 @@ final class wf extends hm {
           var10 = var39.a((ga) (this), param3 + 1, param0) + (var39.a(112, (ga) (this)).a((byte) 102) >> 1);
           if (var6 != se.field_l &&
             gj.field_v != var6) {
-            if (var6 == uc.field_b) {
+            if (var6 == MouseWheelInput.field_b) {
               var20 = dj.field_k[2];
               var20.b(var9, -(var20.field_t >> 1) + var10, 256);
               return;
@@ -182,7 +182,7 @@ final class wf extends hm {
           var10Lifetime1 = var40.a((ga) (this), param3 + 1, param0) + (var40.a(112, (ga) (this)).a((byte) 102) >> 1);
           if (var6 != se.field_l &&
             gj.field_v != var6) {
-            if (var6 == uc.field_b) {
+            if (var6 == MouseWheelInput.field_b) {
               var25 = dj.field_k[2];
               var25.b(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
               return;
@@ -232,7 +232,7 @@ final class wf extends hm {
           var10Lifetime2 = var42.a((ga) (this), param3 + 1, param0) + (var42.a(112, (ga) (this)).a((byte) 102) >> 1);
           if (var6Lifetime1 != se.field_l &&
             gj.field_v != var6Lifetime1) {
-            if (var6Lifetime1 == uc.field_b) {
+            if (var6Lifetime1 == MouseWheelInput.field_b) {
               var37 = dj.field_k[2];
               var37.b(var9Lifetime2, -(var37.field_t >> 1) + var10Lifetime2, 256);
               return;
@@ -304,7 +304,7 @@ final class wf extends hm {
           return;
         }
         if (gj.field_v != var6Lifetime2) {
-          if (var6Lifetime2 == uc.field_b) {
+          if (var6Lifetime2 == MouseWheelInput.field_b) {
             var34 = dj.field_k[2];
             var34.b(var9Lifetime3, -(var34.field_t >> 1) + var10Lifetime3, 256);
             return;

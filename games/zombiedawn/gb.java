@@ -257,7 +257,7 @@ final class gb extends fb {
                   }
                 }
               }
-              this.b(-27598);
+              this.unlink(-27598);
               return;
             }
             var8 = (kd) (this.e((byte) 32));

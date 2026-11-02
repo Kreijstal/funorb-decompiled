@@ -62,7 +62,7 @@ final class me extends wo {
     final void g(int param0) {
         super.g(99);
         if (this.f(237239984) - 48 > dj.field_e.field_H.field_p) {
-          this.b(-27598);
+          this.unlink(-27598);
           this.d(0);
           if (param0 > 95) {
             return;
@@ -98,7 +98,7 @@ final class me extends wo {
         this.g(param0 + 45);
     }
 
-    final static java.awt.Frame a(byte param0, int param1, int param2, ec param3, int param4, int param5) {
+    final static java.awt.Frame a(byte param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         int var8_int = 0;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;
@@ -174,23 +174,23 @@ final class me extends wo {
 
     private final int f(int param0, int param1) {
         if (param1 != 0) {
-          ec var4 = (ec) null;
-          me.a((byte) 107, -40, 33, (ec) null, -118, -80);
+          PlatformTaskDispatcher var4 = (PlatformTaskDispatcher) null;
+          me.a((byte) 107, -40, 33, (PlatformTaskDispatcher) null, -118, -80);
           if (qd.field_f[param0] < 0) {
             return 0;
           }
-          if (h.field_e[param0] == -1) {
+          if (MouseInputHandler.field_e[param0] == -1) {
             return 0;
           }
-          return qd.field_f[param0] * h.field_e[param0];
+          return qd.field_f[param0] * MouseInputHandler.field_e[param0];
         }
         if (qd.field_f[param0] < 0) {
           return 0;
         }
-        if (h.field_e[param0] == -1) {
+        if (MouseInputHandler.field_e[param0] == -1) {
           return 0;
         }
-        return qd.field_f[param0] * h.field_e[param0];
+        return qd.field_f[param0] * MouseInputHandler.field_e[param0];
     }
 
     final void a(wk param0, int param1) {

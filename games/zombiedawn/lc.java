@@ -4,13 +4,13 @@
 final class lc {
     private int field_b;
     static char field_c;
-    private wm field_e;
+    private IterableNodeHashTable field_e;
     private int field_f;
     static int field_i;
     static volatile boolean field_d;
-    private ii field_g;
+    private SecondaryNodeDeque field_g;
     static int field_h;
-    static ec field_a;
+    static PlatformTaskDispatcher field_a;
     static vn[] field_k;
     static int field_j;
 
@@ -51,7 +51,7 @@ final class lc {
             return;
           }
           if (param0 != null) {
-            param0.b(-27598);
+            param0.unlink(-27598);
             param0.c((byte) -79);
             this.field_b = this.field_b + param0.field_r;
           }
@@ -194,17 +194,17 @@ final class lc {
         }
         Object var5 = var8.d((byte) 87);
         if (var5 == null) {
-          var8.b(param1 ^ -1431649945);
+          var8.unlink(param1 ^ -1431649945);
           var8.c((byte) -21);
           this.field_b = this.field_b + var8.field_r;
           return null;
         }
         if (var8.b(true)) {
           var6 = new jl(var5, var8.field_r);
-          this.field_e.a(var8.field_f, true, var6);
+          this.field_e.a(var8.key, true, var6);
           this.field_g.a(0, var6);
           ((bj) ((Object) var6)).field_n = 0L;
-          var8.b(-27598);
+          var8.unlink(-27598);
           var8.c((byte) -60);
         } else {
           this.field_g.a(0, var8);

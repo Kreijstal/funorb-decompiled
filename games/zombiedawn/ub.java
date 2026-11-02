@@ -207,7 +207,7 @@ final class ub {
     }
 
     final void d(byte param0) {
-        le var2;
+        IntrusiveNode var2;
         int var3;
         var3 = ZombieDawn.field_J;
         this.field_k = 0;
@@ -225,7 +225,7 @@ final class ub {
               k.field_t = k.field_t + 1;
             }
           }
-          var2 = var2.field_b;
+          var2 = var2.previous;
         }
         k.field_t = k.field_t - dj.field_e.field_db;
         if (param0 != -106) {

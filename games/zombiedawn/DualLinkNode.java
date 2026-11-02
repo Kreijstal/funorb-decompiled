@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class nb extends le {
+class DualLinkNode extends IntrusiveNode {
     long field_n;
-    nb field_i;
+    DualLinkNode field_i;
     static cg field_l;
     static volatile int field_j;
-    nb field_h;
+    DualLinkNode field_h;
     static String field_o;
     static vn[] field_k;
     static int field_m;
@@ -20,7 +20,7 @@ class nb extends le {
         this.field_i = null;
         this.field_h = null;
         if (param0 >= -6) {
-          this.field_i = (nb) null;
+          this.field_i = (DualLinkNode) null;
         }
     }
 
@@ -44,7 +44,7 @@ class nb extends le {
         return vh.field_c == tk.field_a ? true : false;
     }
 
-    protected nb() {
+    protected DualLinkNode() {
     }
 
     static {

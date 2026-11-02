@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tm extends le {
+final class tm extends IntrusiveNode {
     static int[] field_n;
     static vn field_m;
     static int[] field_i;

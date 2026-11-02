@@ -166,7 +166,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("ticketing_gotowebsite", 0);
                 if (null != var2) {
-                  le.field_e = gg.a(var2, (byte) 56);
+                  IntrusiveNode.field_e = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("ticketing_waitingformessages", 0);
                 if (null != var2) {
@@ -1112,7 +1112,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("justplay", 0);
                 if (var2 != null) {
-                  hl.field_h = gg.a(var2, (byte) 56);
+                  NodeHashTableIterator.field_h = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("justplay_excl", param0 ^ 32693);
                 if (var2 != null) {
@@ -1164,7 +1164,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("connectionlost_reconnecting", param0 ^ 32693);
                 if (null != var2) {
-                  tg.field_a = gg.a(var2, (byte) 56);
+                  GameKeyHandler.field_a = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("connectionlost_withreason", 0);
                 if (var2 != null) {
@@ -1436,7 +1436,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_welcome", 0);
                 if (var2 != null) {
-                  tg.field_b = gg.a(var2, (byte) 56);
+                  GameKeyHandler.field_b = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_u13_welcome", 0);
                 if (null != var2) {
@@ -1580,7 +1580,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_password_tooltip", 0);
                 if (null != var2) {
-                  gm.field_f = gg.a(var2, (byte) 56);
+                  BufferedSocket.field_f = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_password_hint", 0);
                 if (null != var2) {
@@ -1652,7 +1652,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("create_alert_doublespace", 0);
                 if (null != var2) {
-                  hl.field_f = gg.a(var2, (byte) 56);
+                  NodeHashTableIterator.field_f = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("create_alert_passchars", 0);
                 if (var2 != null) {
@@ -1812,7 +1812,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("waitingfor_graphics", 0);
                 if (var2 != null) {
-                  nb.field_o = gg.a(var2, (byte) 56);
+                  DualLinkNode.field_o = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("waitingfor_models", 0);
                 if (null != var2) {
@@ -2526,27 +2526,27 @@ class bn extends ll {
                 }
                 var2 = qn.a("quickchat_shortcut_help,0", 0);
                 if (null != var2) {
-                  ii.field_b[0] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[0] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_help,1", 0);
                 if (var2 != null) {
-                  ii.field_b[1] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[1] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_help,2", 0);
                 if (null != var2) {
-                  ii.field_b[2] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[2] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_help,3", param0 ^ 32693);
                 if (var2 != null) {
-                  ii.field_b[3] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[3] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_help,4", 0);
                 if (null != var2) {
-                  ii.field_b[4] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[4] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_help,5", param0 ^ 32693);
                 if (null != var2) {
-                  ii.field_b[5] = gg.a(var2, (byte) 56);
+                  SecondaryNodeDeque.field_b[5] = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("quickchat_shortcut_keys,0", 0);
                 if (var2 != null) {
@@ -2798,7 +2798,7 @@ class bn extends ll {
                 }
                 var2 = qn.a("me_extra_benefits", param0 ^ 32693);
                 if (var2 != null) {
-                  ag.field_e = gg.a(var2, (byte) 56);
+                  SecondaryNodeDequeIterator.field_e = gg.a(var2, (byte) 56);
                 }
                 var2 = qn.a("hs_friend_tip", param0 ^ 32693);
                 if (var2 != null) {
@@ -3100,9 +3100,9 @@ class bn extends ll {
                   throw sh.a((Throwable) ((Object) stackIn_2595_0), ((StringBuilder) (Object) stackIn_2595_1).append(stackIn_2596_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = ke.field_f;
+                  var4 = GameApplet.field_f;
                   var4++;
-                  ke.field_f = var4;
+                  GameApplet.field_f = var4;
                 }
             }
         }
@@ -3284,7 +3284,7 @@ class bn extends ll {
         field_f = true;
         field_g = new long[11];
         var0 = 0;
-        L0: while (var0 < 256) {
+        scanLoop1: while (var0 < 256) {
           var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
           if ((var0 & 1) == 0) {
             stackIn_6_0 = (long)(var1 >>> 8);

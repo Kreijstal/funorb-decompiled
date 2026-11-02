@@ -126,8 +126,8 @@ abstract class pn extends ei {
           var8Lifetime1++;
         }
         we.field_Tb.b(this.field_i + param0 - 90, 10 + param1);
-        ke.a(65, param0 + 5, ad.field_f, -10 + this.field_i, param1 + 35);
-        ke.a(79, param0, dp.field_b, this.field_i, param1 + this.field_n - 22);
+        GameApplet.a(65, param0 + 5, ad.field_f, -10 + this.field_i, param1 + 35);
+        GameApplet.a(79, param0, dp.field_b, this.field_i, param1 + this.field_n - 22);
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
         var4Lifetime2 = -79 + this.field_n;

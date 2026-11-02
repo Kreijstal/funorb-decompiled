@@ -50,7 +50,7 @@ final class r extends eh {
             field_J = (String) null;
           }
           var3_int = 0;
-          var4 = wm.field_d;
+          var4 = IterableNodeHashTable.field_d;
           while (var3_int < cj.field_h.length) {
             var5 = hd.field_s[var3_int];
             if (var5 < 0) {

@@ -100,17 +100,17 @@ final class so {
 
     final static void b(vo param0) {
         Object var1;
-        le var1_ref;
-        le var2;
+        IntrusiveNode var1_ref;
+        IntrusiveNode var2;
         while (!so.a(param0)) {
           var1_ref = param0.b((byte) 26);
           while (var1_ref instanceof fb) {
-            if (!(var1_ref.field_b instanceof fb)) {
+            if (!(var1_ref.previous instanceof fb)) {
               break;
             }
-            var2 = var1_ref.field_b;
+            var2 = var1_ref.previous;
             if (((fb) (var1_ref)).field_x > ((fb) (var2)).field_x) {
-              var1_ref.b(-27598);
+              var1_ref.unlink(-27598);
               im.a(var1_ref, -30395, var2);
             }
             var1_ref = var2;
@@ -277,14 +277,14 @@ final class so {
     }
 
     private final static boolean a(vo param0) {
-        le var1;
+        IntrusiveNode var1;
         var1 = param0.b((byte) 26);
         while (var1 instanceof fb) {
-          if (var1.field_b instanceof fb) {
-            if (((fb) (var1)).field_x > ((fb) (var1.field_b)).field_x) {
+          if (var1.previous instanceof fb) {
+            if (((fb) (var1)).field_x > ((fb) (var1.previous)).field_x) {
               return false;
             }
-            var1 = var1.field_b;
+            var1 = var1.previous;
             continue;
           }
           break;

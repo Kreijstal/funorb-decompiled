@@ -72,7 +72,7 @@ final class d {
         int var8Lifetime1;
         var10 = ZombieDawn.field_J;
         try {
-          var1_int = wm.field_d;
+          var1_int = IterableNodeHashTable.field_d;
           var2 = 0;
           if (pg.field_p == 2) {
             var3_long = pd.a(-22826) - ge.field_f;
@@ -110,16 +110,16 @@ final class d {
                 }
                 var6 = stackIn_23_0;
               }
-              if (bp.field_a.length > hl.field_b.length) {
+              if (bp.field_a.length > NodeHashTableIterator.field_b.length) {
                 stackIn_27_0 = bp.field_a.length;
               } else {
-                stackIn_27_0 = hl.field_b.length;
+                stackIn_27_0 = NodeHashTableIterator.field_b.length;
               }
               var8 = stackIn_27_0;
               if (var3 >= var7 + 7 &&
                 var7 + (7 + var8) > var3) {
-                if (hl.field_b.length > -var7 - 7 + var3) {
-                  stackIn_33_0 = hl.field_b[var3 - 7 - var7];
+                if (NodeHashTableIterator.field_b.length > -var7 - 7 + var3) {
+                  stackIn_33_0 = NodeHashTableIterator.field_b[var3 - 7 - var7];
                 } else {
                   stackIn_33_0 = "";
                 }

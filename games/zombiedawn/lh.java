@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class lh extends pc {
-    private gm field_n;
+    private BufferedSocket field_n;
 
     private final void f(int param0) {
         try {
@@ -297,7 +297,7 @@ final class lh extends pc {
             this.field_n = null;
           }
           if (param0 < 58) {
-            this.field_n = (gm) null;
+            this.field_n = (BufferedSocket) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -331,7 +331,7 @@ final class lh extends pc {
               }
               this.field_n = null;
             }
-            this.field_n = (gm) (param1);
+            this.field_n = (BufferedSocket) (param1);
             this.f(-87);
             this.a(67, param0);
             this.field_j.field_j = 0;
@@ -406,7 +406,7 @@ final class lh extends pc {
         this.field_n = null;
         this.field_c = (byte)(int)(1.0 + 255.0 * Math.random());
         if (param0 > -89) {
-          this.field_n = (gm) null;
+          this.field_n = (BufferedSocket) null;
         }
     }
 

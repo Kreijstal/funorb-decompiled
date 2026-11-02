@@ -1101,7 +1101,7 @@ final class ap extends al {
                   return;
                 }
                 var5 = var5 + (var4 * (1 + sg.field_jb.a(var10, vh.field_b + 40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
-                sharedTailExit_1: {
+                regionExit1: {
                   if (param0 < -35) {
                     if (var5 < 205) {
                       var5 = 205;
@@ -1125,7 +1125,7 @@ final class ap extends al {
                     } else {
                       if (!this.field_t) {
                         sg.field_jb.b(var11, vh.field_b + 350, var5, this.field_G, var3);
-                        break sharedTailExit_1;
+                        break regionExit1;
                       }
                       var7 = kn.field_I;
                     }
@@ -1138,7 +1138,7 @@ final class ap extends al {
                   sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
                   sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
                 }
-                sg.field_jb.b(aj.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
+                sg.field_jb.b(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
                 sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
                 return;
               }
@@ -1184,7 +1184,7 @@ final class ap extends al {
                     sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
                     sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
                   }
-                  sg.field_jb.b(aj.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
+                  sg.field_jb.b(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
                   sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
                   return;
                 }
@@ -1199,7 +1199,7 @@ final class ap extends al {
           sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
           sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
         }
-        sg.field_jb.b(aj.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
+        sg.field_jb.b(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
         sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
     }
 

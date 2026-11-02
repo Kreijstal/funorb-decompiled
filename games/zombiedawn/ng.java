@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ng {
-    static h field_b;
+    static MouseInputHandler field_b;
     static boolean field_e;
     static vn[] field_c;
     static fk field_a;
     static String field_d;
 
     final static void a(int param0) {
-        ag.field_c = bj.field_p + " <b>" + ap.field_s + "</b> " + oo.field_S + " <b>" + ki.field_bb + "</b> " + ub.field_j + "<br>" + "<br>" + id.field_L;
+        SecondaryNodeDequeIterator.field_c = bj.field_p + " <b>" + ap.field_s + "</b> " + oo.field_S + " <b>" + ki.field_bb + "</b> " + ub.field_j + "<br>" + "<br>" + id.field_L;
         if (param0 < 74) {
-          field_b = (h) null;
+          field_b = (MouseInputHandler) null;
         }
     }
 
@@ -46,7 +46,7 @@ final class ng {
     }
 
     static {
-        field_b = new h();
+        field_b = new MouseInputHandler();
         field_e = false;
         field_d = "Email address is unavailable";
     }

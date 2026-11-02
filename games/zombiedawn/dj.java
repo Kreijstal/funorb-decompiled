@@ -104,7 +104,7 @@ final class dj {
             param0[1] != 0 ||
             0 != param0[2] ||
             param0[3] != 0)) {
-            var36 = ag.a(this.field_j[param2], (byte) 125, true);
+            var36 = SecondaryNodeDequeIterator.a(this.field_j[param2], (byte) 125, true);
             var26 = var36;
             var9 = var26;
             var27 = new de(var36);
@@ -112,7 +112,7 @@ final class dj {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = ag.a(this.field_j[param2], (byte) 88, false);
+            var9 = SecondaryNodeDequeIterator.a(this.field_j[param2], (byte) 88, false);
           }
           if (param3 > -28) {
             var23 = (String) null;
@@ -129,7 +129,7 @@ final class dj {
             stackIn_38_0 = var11_ref_RuntimeException;
             stackIn_38_1 = new StringBuilder();
             stackIn_39_2 = (param0 != null);
-            throw sh.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(ii.a(8099, var9.length, var9)).append(" ").append(ii.a(8099, var9.length - 2, var9)).append(" ").append(this.field_b.field_j[param2]).append(" ").append(this.field_b.field_m).toString());
+            throw sh.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(SecondaryNodeDeque.a(8099, var9.length, var9)).append(" ").append(SecondaryNodeDeque.a(8099, var9.length - 2, var9)).append(" ").append(this.field_b.field_j[param2]).append(" ").append(this.field_b.field_m).toString());
           }
           if (this.field_f) {
             this.field_j[param2] = null;
@@ -351,7 +351,7 @@ final class dj {
             throw new RuntimeException("");
           }
           if (null != this.field_c[param2][param1]) {
-            var7 = ag.a(this.field_c[param2][param1], (byte) 98, false);
+            var7 = SecondaryNodeDequeIterator.a(this.field_c[param2][param1], (byte) 98, false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

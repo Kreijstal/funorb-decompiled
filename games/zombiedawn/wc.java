@@ -17,7 +17,7 @@ class wc extends qk {
           this.field_yb = null;
         }
         int var5 = -1;
-        le var6 = dj.field_e.field_R.b((byte) 26);
+        IntrusiveNode var6 = dj.field_e.field_R.b((byte) 26);
         while (var6 instanceof fb) {
           if (var6 instanceof kd &&
             ((kd) (var6)).x(94)) {
@@ -33,7 +33,7 @@ class wc extends qk {
               }
             }
           }
-          var6 = var6.field_b;
+          var6 = var6.previous;
         }
         if (param0 != -44) {
           return;
@@ -88,7 +88,7 @@ class wc extends qk {
             this.g(30);
           }
           ld.field_l[this.field_t][var6].b(-24 + var3_int, var5 - 48);
-          ag.field_h.b(-24 + var3_int, -44 + var4);
+          SecondaryNodeDequeIterator.field_h.b(-24 + var3_int, -44 + var4);
           if (this.field_Gb > 0) {
             this.b(var3_int - 3, (byte) -99, var4);
           }
@@ -215,9 +215,9 @@ class wc extends qk {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               aa.a(var14, -121);
               if (var6_intLifetime1 != 0) {
-                mp.a(var6_intLifetime1, e.field_H, ii.field_d, 1000, sn.field_e, rj.field_E);
+                mp.a(var6_intLifetime1, e.field_H, SecondaryNodeDeque.field_d, 1000, sn.field_e, rj.field_E);
               } else {
-                mp.a(var6_intLifetime1, e.field_H, ii.field_d, 1000, sn.field_e, rj.field_E);
+                mp.a(var6_intLifetime1, e.field_H, SecondaryNodeDeque.field_d, 1000, sn.field_e, rj.field_E);
               }
             }
             bf.a((byte) -35, var5);
@@ -259,10 +259,10 @@ class wc extends qk {
               var13++;
               var9Lifetime1++;
             }
-            var3.b(-27598);
+            var3.unlink(-27598);
             return;
           }
-          var3.b(-27598);
+          var3.unlink(-27598);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -323,7 +323,7 @@ class wc extends qk {
     }
 
     final static void f(int param0, int param1) {
-        le var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ep var4 = null;
         RuntimeException decompiledCaughtException = null;

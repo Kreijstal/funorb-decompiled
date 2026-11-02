@@ -138,7 +138,7 @@ final class ud implements io {
         field_c = null;
     }
 
-    final static re[] a(int param0, ec param1) {
+    final static re[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         re[] stackIn_4_0 = null;
         re[] stackIn_11_0 = null;

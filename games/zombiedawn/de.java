@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class de extends le {
+class de extends IntrusiveNode {
     static boolean field_i;
     static mf field_k;
     byte[] field_h;
@@ -435,7 +435,7 @@ class de extends le {
               }
               if (!param4) {
                 stackIn_44_0 = ((4 & var7) != 0);
-                h.field_c = stackIn_44_0;
+                MouseInputHandler.field_c = stackIn_44_0;
                 stackIn_47_0 = ((8 & var7) != 0);
                 jh.field_i = stackIn_47_0;
                 if (jh.field_i) {
@@ -468,7 +468,7 @@ class de extends le {
                 qg.a(165, hc.a(0), var11);
               }
               if (be.field_j <= 0 &&
-                !h.field_c) {
+                !MouseInputHandler.field_c) {
                 try {
                   qe.a(hc.a(0), "unzap", -108);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

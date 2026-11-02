@@ -136,7 +136,7 @@ class id extends fb {
     }
 
     private final void b(boolean param0) {
-        le var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         int var5;
@@ -148,13 +148,13 @@ class id extends fb {
         }
         dj.field_e.field_u[-1 + this.field_z] = dj.field_e.field_u[-1 + this.field_z] - 1;
         if (0 >= dj.field_e.field_u[-1 + this.field_z]) {
-          var2 = dj.field_e.field_R.field_b.field_b;
+          var2 = dj.field_e.field_R.field_b.previous;
           while (var2 instanceof fb) {
             if (var2 instanceof ah &&
               this.field_z == ((fb) (var2)).field_z) {
               ((fb) (var2)).field_z = 0;
             }
-            var2 = var2.field_b;
+            var2 = var2.previous;
           }
         }
         this.field_E = this.field_z;

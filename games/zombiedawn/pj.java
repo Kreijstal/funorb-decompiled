@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pj extends nb {
+abstract class pj extends DualLinkNode {
     static int[] field_u;
     boolean field_t;
     boolean field_r;

@@ -27,8 +27,8 @@ final class mf {
           }
           var3 = 14;
           var1_intLifetime1 = var3;
-          while (var3 < uc.field_a.length) {
-            uc.field_a[var3] = true;
+          while (var3 < MouseWheelInput.field_a.length) {
+            MouseWheelInput.field_a[var3] = true;
             var3++;
           }
           return;

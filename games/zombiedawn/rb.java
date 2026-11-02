@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rb extends nb {
+abstract class rb extends DualLinkNode {
     int field_I;
     private int[] field_s;
     private int[] field_r;

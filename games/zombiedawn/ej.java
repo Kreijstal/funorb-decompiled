@@ -416,7 +416,7 @@ final class ej {
               }
             }
             var4.field_j = true;
-            var4.b(-27598);
+            var4.unlink(-27598);
             return;
           }
           if (1 == var2) {
@@ -435,7 +435,7 @@ final class ej {
               return;
             }
             var6_ref_rc.field_s = var4_long;
-            var6_ref_rc.b(-27598);
+            var6_ref_rc.unlink(-27598);
             return;
           }
           ae.a((Throwable) null, 10331, "HS1: " + cb.f(3));
@@ -714,7 +714,7 @@ final class ej {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        le var15 = null;
+        IntrusiveNode var15 = null;
         int var15_int = 0;
         int var16 = 0;
         int var17 = 0;

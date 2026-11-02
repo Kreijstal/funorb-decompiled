@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vh {
-    static ec field_a;
+    static PlatformTaskDispatcher field_a;
     static vn[] field_e;
     static nk field_d;
     static int field_b;

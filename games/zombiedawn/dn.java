@@ -250,7 +250,7 @@ final class dn extends pa {
               }
             }
             param0.e(-120, var4);
-            var17.b(-27598);
+            var17.unlink(-27598);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -343,7 +343,7 @@ final class dn extends pa {
         ei var3 = (ei) (var2.c((byte) -116));
         while (var3 != null) {
           if (var3.j(2634)) {
-            var3.b(-27598);
+            var3.unlink(-27598);
           }
           var3 = (ei) (var2.a((byte) 61));
         }
@@ -397,7 +397,7 @@ final class dn extends pa {
         ei var3 = (ei) (var2.c((byte) -125));
         while (var3 != null) {
           if (var3.e((byte) 28)) {
-            var3.b(-27598);
+            var3.unlink(-27598);
           }
           var3 = (ei) (var2.a((byte) 61));
         }
@@ -434,7 +434,7 @@ final class dn extends pa {
               var6 = sm.a(32564, true, n.field_r[var3_int]);
               var7 = im.field_d - (var6 >> 1);
               var4 = var4 + qb.field_i;
-              if (bf.a(var7 - nb.field_m, 0, param2, var4, var6 + (nb.field_m << 1), (lb.field_Y << 1) + ma.field_k, param0)) {
+              if (bf.a(var7 - DualLinkNode.field_m, 0, param2, var4, var6 + (DualLinkNode.field_m << 1), (lb.field_Y << 1) + ma.field_k, param0)) {
                 stackIn_11_0 = var5;
                 return stackIn_11_0;
               }

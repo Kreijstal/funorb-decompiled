@@ -32,7 +32,7 @@ final class ae {
           if (param1 >= -109) {
             return;
           }
-          ag.field_a = pi.a(12, var10);
+          SecondaryNodeDequeIterator.field_a = pi.a(12, var10);
           ic.field_W = new gd[var3];
           eg.field_o = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
@@ -121,7 +121,7 @@ final class ae {
 
     final static void a(Throwable param0, int param1, String param2) {
         try {
-          ec stackIn_14_0;
+          PlatformTaskDispatcher stackIn_14_0;
           int stackIn_14_1;
           java.net.URL stackIn_14_2;
           java.net.URL stackIn_14_3;
@@ -168,7 +168,7 @@ final class ae {
             stackIn_14_2 = null;
             stackIn_14_3 = null;
             stackIn_14_4 = b.field_m.getCodeBase();
-            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(ke.field_b).append("&u=");
+            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(GameApplet.field_b).append("&u=");
             if (null == i.field_U) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
@@ -178,7 +178,7 @@ final class ae {
               stackIn_15_3 = null;
               stackIn_15_6 = i.field_U;
             }
-            var4 = ((ec) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(ec.field_h).append("&v2=").append(ec.field_g).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_h).append("&v2=").append(PlatformTaskDispatcher.field_g).append("&e=").append(var10).toString()));
             while (var4.field_f == 0) {
               ld.a(1L, (byte) 62);
             }

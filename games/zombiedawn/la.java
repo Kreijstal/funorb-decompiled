@@ -49,7 +49,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final void a(ec param0, byte param1) {
+    final void a(PlatformTaskDispatcher param0, byte param1) {
         try {
           jb.a(113, this.field_e, param0);
           if (param1 <= 112) {

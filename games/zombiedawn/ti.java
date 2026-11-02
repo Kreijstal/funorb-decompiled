@@ -171,8 +171,8 @@ final class ti {
             }
             pn.field_R = new String[var4];
             gp.a(jc.field_p, 0, pn.field_R, 0, var4);
-            hl.field_b = new String[-1 - var4 + var3_int];
-            gp.a(jc.field_p, 1 + var4, hl.field_b, 0, var3_int - var4 - 1);
+            NodeHashTableIterator.field_b = new String[-1 - var4 + var3_int];
+            gp.a(jc.field_p, 1 + var4, NodeHashTableIterator.field_b, 0, var3_int - var4 - 1);
             var4 = -1;
             var3_int = ja.a((byte) 16, jc.field_p, s.a(1938762664, ma.field_q, new String[]{"<br><%0><br>"}), di.field_O, ZombieDawn.field_K);
             for (var5 = 0; var3_int > var5; var5++) {
@@ -195,10 +195,10 @@ final class ti {
               stackIn_57_0 = dl.field_h.length;
             }
             var5 = stackIn_57_0;
-            if (hl.field_b.length < bp.field_a.length) {
+            if (NodeHashTableIterator.field_b.length < bp.field_a.length) {
               stackIn_60_0 = bp.field_a.length;
             } else {
-              stackIn_60_0 = hl.field_b.length;
+              stackIn_60_0 = NodeHashTableIterator.field_b.length;
             }
             var6 = stackIn_60_0;
             var7 = var6 + var5 + 7;
@@ -265,7 +265,7 @@ final class ti {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = hl.field_b;
+            var4_ref_String__Lifetime1 = NodeHashTableIterator.field_b;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = tk.a(var12, true, false);
@@ -291,10 +291,10 @@ final class ti {
             }
             p.field_d = stackIn_114_0 + stackIn_115_1;
           }
-          wm.field_d = -(p.field_d >> 1) + ff.field_a;
+          IterableNodeHashTable.field_d = -(p.field_d >> 1) + ff.field_a;
           hm.field_F = new int[cj.field_h.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = wm.field_d;
+          var5Lifetime3 = IterableNodeHashTable.field_d;
           while (cj.field_h.length > var4Lifetime3) {
             var6Lifetime1 = hd.field_s[var4Lifetime3];
             if (var6Lifetime1 >= 0) {

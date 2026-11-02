@@ -13,7 +13,7 @@ final class wn {
         return hd.a(false, true, param1, param3, param0, param4);
     }
 
-    final static void a(int param0, rj param1, int param2, java.awt.Component param3, ec param4, int param5, boolean param6, int param7) {
+    final static void a(int param0, rj param1, int param2, java.awt.Component param3, PlatformTaskDispatcher param4, int param5, boolean param6, int param7) {
         try {
           qf.a(param5, param6, 10);
           sh.field_d = qf.a(param4, param3, 0, param0);
@@ -35,8 +35,8 @@ final class wn {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 0) {
-          ec var2 = (ec) null;
-          wn.a(3, (rj) null, 66, (java.awt.Component) null, (ec) null, -13, false, 43);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          wn.a(3, (rj) null, 66, (java.awt.Component) null, (PlatformTaskDispatcher) null, -13, false, 43);
         }
     }
 

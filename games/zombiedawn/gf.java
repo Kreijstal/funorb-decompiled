@@ -32,7 +32,7 @@ final class gf {
             var5_ref_bg = (bg) (ui.field_f.b((byte) 26));
             if (var5_ref_bg != null &&
               var5_ref_bg.field_h < var3) {
-              var5_ref_bg.b(-27598);
+              var5_ref_bg.unlink(-27598);
               jd.field_b = var5_ref_bg.field_m.length;
               fj.field_g.field_j = 0;
               for (var6_int = 0; var6_int < jd.field_b; var6_int++) {
@@ -188,7 +188,7 @@ final class gf {
         mp.field_e = true;
         nm.field_c = true;
         e.field_S.j(-636330975);
-        ti.a(tg.field_a, false, false);
+        ti.a(GameKeyHandler.field_a, false, false);
     }
 
     final static int a(int param0, int param1) {

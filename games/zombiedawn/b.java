@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b extends le {
+final class b extends IntrusiveNode {
     static int field_l;
     int[] field_k;
     boolean field_o;
@@ -57,7 +57,7 @@ final class b extends le {
             var13 = var9;
             if (var13 != null &&
               var2_long > var13.field_h) {
-              var13.b(-27598);
+              var13.unlink(-27598);
               var10 = 0;
               var6Lifetime1 = var10;
               while (var13.field_j > var10) {

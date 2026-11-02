@@ -423,7 +423,7 @@ final class fk extends hp implements oa, hh, ri {
         this.field_N.field_s = sn.field_d;
         this.field_G.field_s = c.field_a;
         this.field_M.field_s = hi.field_pb;
-        this.field_P.field_s = gm.field_f;
+        this.field_P.field_s = BufferedSocket.field_f;
         this.field_Q.field_s = qo.field_t;
         this.field_R.field_s = lm.field_D;
         this.field_O.field_s = kf.field_V;
@@ -453,7 +453,7 @@ final class fk extends hp implements oa, hh, ri {
         var3 = var3 + (this.a(var3, this.field_Q, jj.field_J, gk.field_I, -24519, 170) + 5);
         var3 = var3 + (this.a(var3, this.field_N, a.field_l, b.field_i, -24519, 170) + 5);
         var3 = var3 + this.a(-55, var3, 170, bp.field_j, this.field_R);
-        q var4 = new q(46, var3, this.field_i - 90, 25, this.field_O, true, this.field_i - 120, 5, ii.field_a, 11579568, ji.field_d);
+        q var4 = new q(46, var3, this.field_i - 90, 25, this.field_O, true, this.field_i - 120, 5, SecondaryNodeDeque.field_a, 11579568, ji.field_d);
         this.a(var4, 10);
         var3 = var3 + var4.field_n;
         vf var5 = new vf(ia.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, ia.field_e.field_I, -1, 2147483647, true);
@@ -511,7 +511,7 @@ final class fk extends hp implements oa, hh, ri {
             return true;
           }
           var4 = var3.a((byte) -89);
-          if (var4 == uc.field_b) {
+          if (var4 == MouseWheelInput.field_b) {
             return false;
           }
           if (param0 != 77) {

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class mm extends le {
+final class mm extends IntrusiveNode {
     static String field_l;
     static int field_i;
     static String field_j;

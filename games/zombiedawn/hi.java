@@ -735,7 +735,7 @@ final class hi {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
-        le var6 = null;
+        IntrusiveNode var6 = null;
         kd var7 = null;
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -763,7 +763,7 @@ final class hi {
                 }
               }
             }
-            var6 = var6.field_b;
+            var6 = var6.previous;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1399,7 +1399,7 @@ final class hi {
         try {
           param0.d(0);
           param0.c((byte) -48);
-          param0.b(-27598);
+          param0.unlink(-27598);
           this.field_gb.d((byte) -106);
           if (!param1) {
             this.e(69);
@@ -1777,7 +1777,7 @@ final class hi {
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_157_0;
         int var4_int = 0;
-        le var4 = null;
+        IntrusiveNode var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         var5 = ZombieDawn.field_J;
@@ -1794,7 +1794,7 @@ final class hi {
             this.field_Q.a(3158064, 0);
             return true;
           }
-          if (~gm.field_k == ~param0) {
+          if (~BufferedSocket.field_k == ~param0) {
             this.field_Q.a(3158064, 1);
             return true;
           }
@@ -1915,7 +1915,7 @@ final class hi {
                     !((kd) (var4)).p(11312)) {
                     ((kd) (var4)).z(0);
                   }
-                  var4 = var4.field_b;
+                  var4 = var4.previous;
                   continue;
                 }
                 break;
@@ -1978,9 +1978,9 @@ final class hi {
     private final void g(int param0) {
         int stackIn_29_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        le var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
-        le var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         int var5 = 0;
         var5 = ZombieDawn.field_J;
@@ -1991,7 +1991,7 @@ final class hi {
           var2 = this.field_R.b((byte) 26);
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var2 instanceof fb)))) {
-            var3 = var2.field_b;
+            var3 = var2.previous;
             stackIn_29_0 = this.field_ib;
             if (var5 == 0) {
               if (stackIn_29_0 == -1 &&
@@ -2000,8 +2000,8 @@ final class hi {
               }
               if (var2 instanceof kd &&
                 ((kd) (var2)).f(237239984) < 200) {
-                var2.b(-27598);
-                ((nb) (var2)).c((byte) -10);
+                var2.unlink(-27598);
+                ((DualLinkNode) (var2)).c((byte) -10);
                 this.field_i.a(0, new ao(((kd) (var2)).a(true), 200, fl.field_e, false));
                 var4 = fl.field_e;
                 this.field_g = this.field_g - var4 * this.field_K;
@@ -2045,7 +2045,7 @@ final class hi {
         int stackIn_180_1 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
-        le var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         ck var4 = null;
@@ -2174,7 +2174,7 @@ final class hi {
           }
           this.field_H.a(this.field_S, 1, true, false);
           var2 = this.field_v.b((byte) 26);
-          L20: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != var2) {
               ((mn) (var2)).a(this.field_S, -516);
@@ -2191,7 +2191,7 @@ final class hi {
                 ((gk) (var2)).a((byte) -82, this.field_S);
                 var2 = this.field_d.a(false);
                 if (var14 != 0) {
-                  break L20;
+                  break scanLoop1;
                 }
               }
             }
@@ -2563,7 +2563,7 @@ final class hi {
                 var13_int = -1;
                 stackIn_63_0 = 0;
                 var14 = stackIn_63_0;
-                L12: while (true) {
+                scanLoop1: while (true) {
                   stackIn_31_0 = var8.length;
                   stackIn_31_1 = var14;
                   if (stackIn_31_0 > stackIn_31_1) {
@@ -2579,7 +2579,7 @@ final class hi {
                       var15++;
                     }
                     var14++;
-                    continue L12;
+                    continue scanLoop1;
                   }
                   break;
                 }
@@ -2618,7 +2618,7 @@ final class hi {
                 var14Lifetime1 = -1;
                 var15Lifetime1 = -1;
                 var16 = 0;
-                L27: while (true) {
+                scanLoop2: while (true) {
                   stackIn_68_0 = var8.length;
                   stackIn_68_1 = var16;
                   if (stackIn_68_0 > stackIn_68_1) {
@@ -2634,7 +2634,7 @@ final class hi {
                       var17++;
                     }
                     var16++;
-                    continue L27;
+                    continue scanLoop2;
                   }
                   break;
                 }
@@ -2956,7 +2956,7 @@ final class hi {
                 var6_ref = new me(var4_int, var5, 3);
               }
               this.field_f = this.field_f + 1;
-              this.field_R.a(0, (le) (var6_ref));
+              this.field_R.a(0, (IntrusiveNode) (var6_ref));
               this.field_gb.d((byte) -106);
               ((ah) (var6_ref)).d((byte) 124);
               decompiledFrameRemainder1 = (var9 != 0);
@@ -3097,7 +3097,7 @@ final class hi {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int stackIn_10_0 = 0;
-        le stackIn_29_0 = null;
+        IntrusiveNode stackIn_29_0 = null;
         boolean stackIn_56_0 = false;
         int stackIn_63_0 = 0;
         boolean stackIn_130_0 = false;
@@ -3108,13 +3108,13 @@ final class hi {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        le var5_ref_le = null;
+        IntrusiveNode var5_ref_le = null;
         ck var5_ref_ck = null;
         mm var5_ref_mm = null;
         nc var5_ref_nc = null;
         ao var5_ref_ao = null;
         int var5 = 0;
-        le var6 = null;
+        IntrusiveNode var6 = null;
         Object var6_ref = null;
         mn var6_ref2 = null;
         mn var7_ref_mn = null;
@@ -3162,7 +3162,7 @@ final class hi {
             var5_ref_le = this.field_R.b((byte) 26);
             boolean decompiledNaturalLoopExit1 = false;
             while (!(decompiledNaturalLoopExit1 = (!(var5_ref_le instanceof fb)))) {
-              var6 = var5_ref_le.field_b;
+              var6 = var5_ref_le.previous;
               ((fb) (var5_ref_le)).g(119);
               stackIn_29_0 = var5_ref_le;
               if (var13 == 0) {
@@ -3711,7 +3711,7 @@ final class hi {
           qb.field_b = -1;
           this.field_r = 0;
           this.field_fb = 0;
-          uc.field_c = 0;
+          MouseWheelInput.field_c = 0;
           this.field_H = new ej(this.field_mb);
           this.field_u = new int[3];
           this.field_J = new int[3];
@@ -3755,12 +3755,12 @@ final class hi {
               if (stackIn_19_0 &&
                 var4.field_C &&
                 vi.field_a) {
-                var4.b(-27598);
+                var4.unlink(-27598);
               } else {
                 if (var4 instanceof ah) {
                   if (var4.field_C &&
                     !vi.field_a) {
-                    var4.b(-27598);
+                    var4.unlink(-27598);
                     decompiledFrameRemainder3 = false;
                   }
                   else {
@@ -3940,28 +3940,28 @@ final class hi {
           }
           boolean decompiledFrameCompleted3 = true;
           boolean decompiledFrameCompleted1 = true;
-          L54: {
+          regionExit1: {
             boolean decompiledFrameCompleted2 = true;
             if (this.field_h == -1) {
               this.field_H.field_A.field_o = -1;
               this.field_H.field_A.field_c = -1;
               if (5 != this.field_q) {
                 if (this.field_q != 6) {
-                  break L54;
+                  break regionExit1;
                 }
                 var6_ref_boolean____ = new boolean[4][6];
                 var7_ref_boolean____ = new boolean[4][6];
                 var8 = 0;
-                L56: while (true) {
+                scanLoop2: while (true) {
                   stackIn_251_0 = -4;
-                  L57: while (true) {
+                  scanLoop3: while (true) {
                     boolean decompiledFrameRemainder0 = true;
                     if (stackIn_251_0 >= ~var8) {
                       stackIn_257_0 = 5;
                       decompiledFrameRemainder0 = (var17 == 0);
                       if ((decompiledFrameRemainder0) &&
                         (stackIn_257_0 >= var8)) {
-                        break L57;
+                        break scanLoop3;
                       }
                     }
                     if (decompiledFrameRemainder0) {
@@ -3977,7 +3977,7 @@ final class hi {
                         var11 = 0;
                         stackIn_251_0 = 0;
                         if (var17 != 0) {
-                          continue L57;
+                          continue scanLoop3;
                         }
                         var12 = stackIn_251_0;
                         while (var12 < 6) {
@@ -4013,14 +4013,14 @@ final class hi {
                       break;
                     }
                     if (var17 == 0) {
-                      continue L56;
+                      continue scanLoop2;
                     }
                     break;
                   }
                   break;
                 }
                 var9_ref_kc = (kc) (rg.field_J.c((byte) 34));
-                L72: while (true) {
+                scanLoop4: while (true) {
                   if (var9_ref_kc != null) {
                     stackIn_304_0 = ~var9_ref_kc.field_V;
                     stackIn_304_1 = -2;
@@ -4030,9 +4030,9 @@ final class hi {
                         var10 = new qh();
                         var10.a(0, new kk(var9_ref_kd.a(true), this.field_H.field_p - 168 + so.c(96)));
                         var9_ref_kd.a(var10, true);
-                        break L54;
+                        break regionExit1;
                       }
-                      break L72;
+                      break scanLoop4;
                     }
                     if (stackIn_304_0 == stackIn_304_1) {
                       var10_intLifetime1 = (var9_ref_kc.a(true) - 168) / 168;
@@ -4059,13 +4059,13 @@ final class hi {
                     var10Lifetime1.a(0, new kk(var9_ref_kdLifetime1.a(true), this.field_H.field_p - 168 + so.c(96)));
                     var9_ref_kdLifetime1.a(var10Lifetime1, true);
                     if (var17 != 0) {
-                      break L54;
+                      break regionExit1;
                     }
                   }
                   break;
                 }
                 if (var17 == 0) {
-                  break L54;
+                  break regionExit1;
                 }
               }
               this.field_s = new int[10];
@@ -4096,7 +4096,7 @@ final class hi {
               }
               var6Lifetime2 = stackIn_320_0 - stackIn_320_1;
               var7Lifetime2 = 0;
-              L85: while (true) {
+              scanLoop5: while (true) {
                 boolean decompiledFrameRemainder5 = true;
                 if (this.field_mb.field_r > var7Lifetime2) {
                   var8Lifetime3 = 127 & this.field_H.c(var7Lifetime2, 89, var6Lifetime2);
@@ -4107,7 +4107,7 @@ final class hi {
                       var8Lifetime3 = this.field_H.c(var7Lifetime2, 109, var6Lifetime2) & 127;
                       stackIn_340_0 = ~var8Lifetime3;
                       stackIn_340_1 = -8;
-                      break L85;
+                      break scanLoop5;
                     }
                     decompiledFrameRemainder5 = false;
                   }
@@ -4135,7 +4135,7 @@ final class hi {
                     stackIn_340_0 = ~var8Lifetime3;
                     stackIn_340_1 = -8;
                     if (var17 != 0) {
-                      break L85;
+                      break scanLoop5;
                     }
                     if (stackIn_340_0 == stackIn_340_1) {
                       this.field_D[this.field_k] = 24 * var6Lifetime2 - 12;

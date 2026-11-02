@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class pb extends le {
+final class pb extends IntrusiveNode {
     private int field_o;
     private int field_k;
     private int field_h;
@@ -97,16 +97,16 @@ final class pb extends le {
         }
         var1 = ng.field_b;
         synchronized (var1) {
-          kc.field_R = le.field_c;
+          kc.field_R = IntrusiveNode.field_c;
           wc.field_Ob = wc.field_Ob + 1;
           ha.field_b = lf.field_m;
           ei.field_K = vg.field_c;
           ll.field_a = kg.field_l;
           kg.field_l = false;
-          ci.field_d = nb.field_j;
+          ci.field_d = DualLinkNode.field_j;
           nc.field_j = ep.field_m;
           hp.field_D = pf.field_c;
-          nb.field_j = 0;
+          DualLinkNode.field_j = 0;
         }
         return;
     }
@@ -196,7 +196,7 @@ final class pb extends le {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.d((byte) -116) << (eg.a(var7, 3) << 8));
             }
             var4_ref_lo.field_h = true;
-            var4_ref_lo.b(-27598);
+            var4_ref_lo.unlink(-27598);
             return;
           }
           if (var2 == 1) {
@@ -214,7 +214,7 @@ final class pb extends le {
               p.a(1);
               return;
             }
-            var5.b(-27598);
+            var5.unlink(-27598);
             return;
           }
           ae.a((Throwable) null, 10331, "LR1: " + cb.f(3));

@@ -44,7 +44,7 @@ final class qo extends vf {
         RuntimeException decompiledCaughtException = null;
         var2 = ZombieDawn.field_J;
         try {
-          e.field_S.a(nm.field_f, rm.field_b, true, true);
+          e.field_S.a(nm.field_f, DelegatingCanvas.field_b, true, true);
           e.field_S.g(-123);
           if (param0 >= -120) {
             stackIn_3_0 = -36;

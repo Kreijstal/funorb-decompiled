@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends le {
+final class bg extends IntrusiveNode {
     byte[] field_m;
     static vo field_i;
     int field_j;

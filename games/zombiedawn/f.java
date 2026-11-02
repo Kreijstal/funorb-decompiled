@@ -42,13 +42,13 @@ final class f {
         }
         try {
           int var2_int = -124 % ((-64 - param0) / 39);
-          var3 = (aj.field_a * 5 >> 2) + nk.field_c;
+          var3 = (ClientException.field_a * 5 >> 2) + nk.field_c;
           var4 = uo.field_h + (rh.field_a >> 1);
           var5 = param1.a(nk.field_c, (byte) -87);
           var6 = param1.a(uo.field_h, 0);
           var7 = pj.a(var6, 82, var5) * 5 >> 2;
           oe.field_c.h(var7);
-          bi.f(var5, var6, var5 + aj.field_a, var6 + rh.field_a);
+          bi.f(var5, var6, var5 + ClientException.field_a, var6 + rh.field_a);
           bi.a(param1.a(var3, (byte) -89) << 4, param1.a(var4, 0) << 4, pl.field_r, ga.field_q, b.field_p);
           bi.c();
         } catch (RuntimeException runtimeException) {

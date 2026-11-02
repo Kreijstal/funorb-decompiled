@@ -75,7 +75,7 @@ final class fm extends an {
             }
             var12.field_o = true;
             var12.field_k = var3;
-            var12.b(-27598);
+            var12.unlink(-27598);
             return;
           }
           if (var2 != 1) {
@@ -90,7 +90,7 @@ final class fm extends an {
               }
               var14.field_k = ae.a(14821);
               var14.field_o = true;
-              var14.b(-27598);
+              var14.unlink(-27598);
             }
           } else {
             var11 = (bo) (mp.field_g.b((byte) 26));
@@ -98,7 +98,7 @@ final class fm extends an {
               p.a(1);
               return;
             }
-            var11.b(-27598);
+            var11.unlink(-27598);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

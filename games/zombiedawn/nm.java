@@ -20,7 +20,7 @@ final class nm {
         var2.c(param0 ^ 14820);
         var2.c(-37);
         var2.c(95);
-        var1.b(-27598);
+        var1.unlink(-27598);
         if (param0 == 14740) {
           return;
         }

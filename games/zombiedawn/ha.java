@@ -47,11 +47,11 @@ final class ha {
                 bo.field_p[var5] = false;
                 var5++;
               }
-              ih.field_F = uc.field_d;
+              ih.field_F = MouseWheelInput.field_d;
             } else {
-              while (ih.field_F != uc.field_d) {
-                var2 = nd.field_c[uc.field_d];
-                uc.field_d = 127 & 1 + uc.field_d;
+              while (ih.field_F != MouseWheelInput.field_d) {
+                var2 = nd.field_c[MouseWheelInput.field_d];
+                MouseWheelInput.field_d = 127 & 1 + MouseWheelInput.field_d;
                 if (var2 >= 0) {
                   bo.field_p[var2] = true;
                   continue;

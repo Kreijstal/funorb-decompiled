@@ -91,7 +91,7 @@ abstract class qb {
             if (var2.field_k.a((byte) 73)) {
               var2.field_n.g(ge.field_c * var2.field_i + 128 >> 8);
             } else {
-              var2.b(-27598);
+              var2.unlink(-27598);
             }
             var2 = (hn) (fj.field_i.a(false));
           }
@@ -100,7 +100,7 @@ abstract class qb {
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.field_k.a((byte) 73);
               if (!stackIn_14_0) {
-                var2Lifetime1.b(-27598);
+                var2Lifetime1.unlink(-27598);
               } else {
                 var2Lifetime1.field_n.g(128 + ge.field_c * var2Lifetime1.field_i >> 8);
               }

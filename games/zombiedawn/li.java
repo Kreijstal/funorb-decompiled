@@ -6,7 +6,7 @@ import java.io.*;
 final class li implements Runnable {
     private op field_j;
     private op field_b;
-    private ec field_g;
+    private PlatformTaskDispatcher field_g;
     static v field_i;
     private DataInputStream field_e;
     static String field_f;
@@ -83,7 +83,7 @@ final class li implements Runnable {
               }
             }
             if (param0 <= 53) {
-              this.field_g = (ec) null;
+              this.field_g = (PlatformTaskDispatcher) null;
             }
             if (null == this.field_j) {
               this.field_j = this.field_g.a(5, (Runnable) (this), true);
@@ -219,7 +219,7 @@ final class li implements Runnable {
         }
     }
 
-    li(ec param0, java.net.URL param1, int param2) {
+    li(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_d = param1;
           this.field_g = param0;

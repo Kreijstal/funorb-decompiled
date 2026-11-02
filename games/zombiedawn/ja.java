@@ -49,7 +49,7 @@ final class ja {
             return stackIn_11_0;
           }
           if (var2_int == 5) {
-            stackIn_9_0 = gm.a(param1, -4);
+            stackIn_9_0 = BufferedSocket.a(param1, -4);
             return stackIn_9_0;
           }
           if (var2_int != 6) {
@@ -289,7 +289,7 @@ final class ja {
             return stackIn_11_0;
           }
           if (var2_int == 5) {
-            stackIn_9_0 = gm.a(param1, -4);
+            stackIn_9_0 = BufferedSocket.a(param1, -4);
             return stackIn_9_0;
           }
           if (var2_int != 6) {

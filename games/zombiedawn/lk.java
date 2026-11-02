@@ -44,8 +44,8 @@ final class lk extends pm {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_h.a(param0, param1) == uc.field_b) {
-            stackIn_2_0 = uc.field_b;
+          if (this.field_h.a(param0, param1) == MouseWheelInput.field_b) {
+            stackIn_2_0 = MouseWheelInput.field_b;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_g)) {
@@ -60,7 +60,7 @@ final class lk extends pm {
           if (this.field_i) {
             stackIn_12_0 = mc.field_g;
           } else {
-            stackIn_12_0 = uc.field_b;
+            stackIn_12_0 = MouseWheelInput.field_b;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,11 +100,11 @@ final class lk extends pm {
           if (param1 > -94) {
             field_k = (String) null;
           }
-          if (this.field_h.a(param0, 2) == uc.field_b) {
+          if (this.field_h.a(param0, 2) == MouseWheelInput.field_b) {
             stackIn_4_0 = this.field_h.a(param0, (byte) -119);
             return stackIn_4_0;
           }
-          if (this.a(param0, 2) != uc.field_b) {
+          if (this.a(param0, 2) != MouseWheelInput.field_b) {
             return sd.field_c;
           }
           stackIn_8_0 = ng.field_d;

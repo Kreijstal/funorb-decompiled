@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class s extends le {
+final class s extends IntrusiveNode {
     int field_i;
     fb field_h;
     static vn field_j;
 
-    final static void a(long param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, ec param10, String param11, int param12, int param13) {
+    final static void a(long param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, PlatformTaskDispatcher param10, String param11, int param12, int param13) {
         try {
           RuntimeException stackIn_14_0 = null;
           StringBuilder stackIn_14_1 = null;
@@ -22,7 +22,7 @@ final class s extends le {
           try {
             fj.field_g = new am(param1);
             dp.field_e = new am(param7);
-            h.field_b = param5;
+            MouseInputHandler.field_b = param5;
             var15_int = 112 / ((56 - param12) / 57);
             jm.field_B = param10;
             cn.field_j = param13;
@@ -32,7 +32,7 @@ final class s extends le {
             kg.field_k = param9;
             ih.field_S = param2;
             ba.field_b = param3;
-            le.field_g = param6;
+            IntrusiveNode.field_g = param6;
             lg.field_u = param0;
             if (null == jm.field_B.field_b) {
               return;

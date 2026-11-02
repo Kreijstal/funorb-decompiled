@@ -262,7 +262,7 @@ final class dk extends wc {
             }
             var6 = var6 + this.field_dc;
           }
-          stackIn_29_0 = nb.field_k[1];
+          stackIn_29_0 = DualLinkNode.field_k[1];
           stackIn_29_1 = -12;
           if (this.field_S != 3) {
             stackIn_30_2 = var3_int - 3;

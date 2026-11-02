@@ -13,14 +13,14 @@ final class nj extends pn implements hh {
         ga var3 = null;
         try {
           this.field_V = pd.a(-22826);
-          var3 = new ga(ag.field_c, (sk) null);
+          var3 = new ga(SecondaryNodeDequeIterator.field_c, (sk) null);
           var3.field_i = this.field_i;
           var3.field_n = 100;
           var3.field_j = 50;
           var3.field_k = 0;
-          var3.field_h = (io) ((Object) new vf(ii.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var3.field_h = (io) ((Object) new vf(SecondaryNodeDeque.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var3, 10);
-          this.field_U = new ga(ag.field_c, (sk) null);
+          this.field_U = new ga(SecondaryNodeDequeIterator.field_c, (sk) null);
           this.field_U.field_k = 0;
           this.field_U.field_j = 20 + var3.field_n + var3.field_j;
           this.field_U.field_i = this.field_i;

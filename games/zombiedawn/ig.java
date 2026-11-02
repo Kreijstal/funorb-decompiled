@@ -82,15 +82,15 @@ final class ig extends wo {
                     if (var6 == 3) {
                       dj.field_e.a(this, (byte) 110);
                       ho.a(this.f(237239984), (byte) 54, this.a(true));
-                      this.b(-27598);
+                      this.unlink(-27598);
                       this.d(0);
                     } else {
                       if (var2 <= -24) {
-                        this.b(-27598);
+                        this.unlink(-27598);
                         this.d(0);
                       } else {
                         if (24 + dj.field_e.field_H.field_u <= var2) {
-                          this.b(-27598);
+                          this.unlink(-27598);
                           this.d(0);
                         }
                       }
@@ -115,7 +115,7 @@ final class ig extends wo {
                   return;
                 }
               }
-              this.b(-27598);
+              this.unlink(-27598);
               this.d(0);
               return;
             }
@@ -125,15 +125,15 @@ final class ig extends wo {
             if (var6 == 3) {
               dj.field_e.a(this, (byte) 110);
               ho.a(this.f(237239984), (byte) 54, this.a(true));
-              this.b(-27598);
+              this.unlink(-27598);
               this.d(0);
             } else {
               if (var2 <= -24) {
-                this.b(-27598);
+                this.unlink(-27598);
                 this.d(0);
               } else {
                 if (24 + dj.field_e.field_H.field_u <= var2) {
-                  this.b(-27598);
+                  this.unlink(-27598);
                   this.d(0);
                 }
               }
@@ -152,7 +152,7 @@ final class ig extends wo {
                 return;
               }
             }
-            this.b(-27598);
+            this.unlink(-27598);
             this.d(0);
             return;
           }
@@ -204,16 +204,16 @@ final class ig extends wo {
                   if (var6 == 3) {
                     dj.field_e.a(this, (byte) 110);
                     ho.a(this.f(237239984), (byte) 54, this.a(true));
-                    this.b(-27598);
+                    this.unlink(-27598);
                     this.d(0);
                     return;
                   }
                   if (var2 <= -24) {
-                    this.b(-27598);
+                    this.unlink(-27598);
                     this.d(0);
                   } else {
                     if (24 + dj.field_e.field_H.field_u <= var2) {
-                      this.b(-27598);
+                      this.unlink(-27598);
                       this.d(0);
                       return;
                     }
@@ -243,7 +243,7 @@ final class ig extends wo {
             return;
           }
         }
-        this.b(-27598);
+        this.unlink(-27598);
         this.d(0);
     }
 
@@ -256,7 +256,7 @@ final class ig extends wo {
           this.a(true) - 48 <= dj.field_e.field_H.field_u) {
           return;
         }
-        this.b(-27598);
+        this.unlink(-27598);
         this.d(0);
     }
 

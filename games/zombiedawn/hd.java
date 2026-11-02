@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class hd extends nb {
+abstract class hd extends DualLinkNode {
     static int[] field_u;
     static String[] field_p;
     int field_q;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wb extends ke {
+abstract class wb extends GameApplet {
     static int field_t;
     private boolean field_s;
     private long field_p;
@@ -289,7 +289,7 @@ abstract class wb extends ke {
                                 return;
                               }
                               if (var2 == 18) {
-                                tg.a(param0 ^ -114);
+                                GameKeyHandler.a(param0 ^ -114);
                                 return;
                               }
                               ae.a((Throwable) null, param0 ^ -10321, "MGS1: " + cb.f(3));
@@ -750,7 +750,7 @@ abstract class wb extends ke {
         jh.field_k = param7;
         mp.field_d = param5;
         this.g(17);
-        gm.b(-23148);
+        BufferedSocket.b(-23148);
     }
 
     final void i(byte param0) {

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ep extends le {
+final class ep extends IntrusiveNode {
     byte[] field_j;
     static volatile int field_m;
     static java.util.zip.CRC32 field_h;

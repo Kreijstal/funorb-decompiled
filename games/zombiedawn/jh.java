@@ -283,7 +283,7 @@ final class jh {
     jh(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_m = ii.a(8099, param0.length, param0);
+          this.field_m = SecondaryNodeDeque.a(8099, param0.length, param0);
           if (this.field_m != param1) {
             throw new RuntimeException();
           }

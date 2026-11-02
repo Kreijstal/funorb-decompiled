@@ -79,7 +79,7 @@ abstract class qg {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            hl.a(param1, 1);
+            NodeHashTableIterator.a(param1, 1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

@@ -7,7 +7,7 @@ final class sn {
     static boolean field_b;
     static int field_e;
     static String field_d;
-    static gm field_c;
+    static BufferedSocket field_c;
 
     final static ll a(byte param0, long param1, boolean param2, String param3, String param4) {
         RuntimeException var6 = null;
@@ -93,7 +93,7 @@ final class sn {
         if (param0 != 12) {
           return false;
         }
-        return hl.a(param0 - 139, hc.a(param0 ^ 12));
+        return NodeHashTableIterator.a(param0 - 139, hc.a(param0 ^ 12));
     }
 
     final static tj a(int param0, int param1, dj param2, dj param3, int param4) {

@@ -112,7 +112,7 @@ final class np extends an {
           tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
           return;
         }
-        if (var8 == uc.field_b) {
+        if (var8 == MouseWheelInput.field_b) {
           var14 = dj.field_k[2];
           var14.b(-(var14.field_w >> 1) + var5, -(var14.field_t >> 1) + var6, 256);
           return;

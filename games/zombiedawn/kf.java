@@ -73,7 +73,7 @@ final class kf extends pn implements hh {
           var2.field_i = this.field_i;
           var2.field_k = 0;
           var2.field_j = 50;
-          var2.field_h = (io) ((Object) new vf(ii.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.field_h = (io) ((Object) new vf(SecondaryNodeDeque.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var2, 10);
           if (po.w(13296)) {
             this.field_U = this.a(-1763, wd.field_w, (sk) (this));

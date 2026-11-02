@@ -62,12 +62,12 @@ final class aa {
           }
           rj.field_E = rj.field_E + (param0.f(2) << 2);
           var2_intLifetime1 = param0.d((byte) -117);
-          ii.field_d = (var2_intLifetime1 & 63) << 15;
+          SecondaryNodeDeque.field_d = (var2_intLifetime1 & 63) << 15;
           rj.field_E = rj.field_E + (var2_intLifetime1 >> 6);
-          ii.field_d = ii.field_d + (param0.d((byte) -127) << 7);
+          SecondaryNodeDeque.field_d = SecondaryNodeDeque.field_d + (param0.d((byte) -127) << 7);
           var2_intLifetime2 = param0.d((byte) -120);
           e.field_H = (1 & var2_intLifetime2) << 16;
-          ii.field_d = ii.field_d + (var2_intLifetime2 >> 1);
+          SecondaryNodeDeque.field_d = SecondaryNodeDeque.field_d + (var2_intLifetime2 >> 1);
           e.field_H = e.field_H + param0.f(2);
         } catch (RuntimeException runtimeException) {
           throw sh.a((Throwable) ((Object) runtimeException), "aa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

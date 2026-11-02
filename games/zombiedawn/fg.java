@@ -66,7 +66,7 @@ final class fg extends al {
             }
             var13 = 24;
             var12 = var9 + 20;
-            le.field_a[1].b(-50 + var6, -8 + var12);
+            IntrusiveNode.field_a[1].b(-50 + var6, -8 + var12);
             if (var8 != 0) {
               var13 = 20;
             }
@@ -75,16 +75,16 @@ final class fg extends al {
             var15 = var12 - 20;
             var12 = var12 + (bj.field_q.a(gj.field_g[1][1], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
             lb.field_eb[3].b(var6 - 31, var12 + 3);
-            le.field_a[3].b(-20 + var6, var12 + 15);
+            IntrusiveNode.field_a[3].b(-20 + var6, var12 + 15);
             var12 = var12 + (var13 + bj.field_q.a(gj.field_g[1][2], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2);
-            le.field_a[5].b(-46 + var6, var12 + 2);
+            IntrusiveNode.field_a[5].b(-46 + var6, var12 + 2);
             var12 = var12 + (bj.field_q.a(gj.field_g[1][3], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
-            le.field_a[6].b(var6 - 60, var12 - 7);
+            IntrusiveNode.field_a[6].b(var6 - 60, var12 - 7);
             var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[1][4], var6, var12, var11, 50, 16777215, 0, 0, 0, var2));
-            le.field_a[0].b(var14, var15);
-            nb.field_k[0].e(var14 - 8, -4 + var15, 128);
-            nb.field_k[0].e(13 + var14, var15 + 14, 128);
-            nb.field_k[0].e(var14 + 41, var15 + 11, 128);
+            IntrusiveNode.field_a[0].b(var14, var15);
+            DualLinkNode.field_k[0].e(var14 - 8, -4 + var15, 128);
+            DualLinkNode.field_k[0].e(13 + var14, var15 + 14, 128);
+            DualLinkNode.field_k[0].e(var14 + 41, var15 + 11, 128);
             bi.c(var14 + 3, 14 + var15, 77, 47, 16777215);
             bi.b(var14 + 4, 15 + var15, 75, 45, 10066431, 32);
             bi.a(var14 + 5, var15 + 16, 73, 43, 3355647, 32);
@@ -94,15 +94,15 @@ final class fg extends al {
               var12 = var9 + 40;
               var2 -= 4;
               lb.field_eb[8].b(var6 - 36, 4 + var12);
-              le.field_a[3].b(-25 + var6, var12 + 15);
+              IntrusiveNode.field_a[3].b(-25 + var6, var12 + 15);
               var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[this.field_n][0], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
-              le.field_a[4].b(-110 + var6, var12 - 10);
-              nb.field_k[0].e(var6 - 54, var12 - 3, 128);
-              le.field_a[3].b(-25 + var6, var12 + 30);
+              IntrusiveNode.field_a[4].b(-110 + var6, var12 - 10);
+              DualLinkNode.field_k[0].e(var6 - 54, var12 - 3, 128);
+              IntrusiveNode.field_a[3].b(-25 + var6, var12 + 30);
               var12 = var12 + (var13 + bj.field_q.a(gj.field_g[this.field_n][1], var6, var12, 340, 50, 16777215, 0, 0, 0, var2) * var2);
-              le.field_a[7].b(-63 + var6, 10 + var12);
+              IntrusiveNode.field_a[7].b(-63 + var6, 10 + var12);
               var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[this.field_n][2], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
-              le.field_a[9].b(var6 - 93, var12 + 10);
+              IntrusiveNode.field_a[9].b(var6 - 93, var12 + 10);
               var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[this.field_n][3], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
             } else {
               if (var20 != 3) {

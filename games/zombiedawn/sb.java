@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sb {
-    static gm field_a;
+    static BufferedSocket field_a;
     private static String field_z;
 
     public static void a(boolean param0) {

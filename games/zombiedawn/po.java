@@ -223,7 +223,7 @@ final class po extends ah {
         int var13Lifetime1;
         var19 = ZombieDawn.field_J;
         try {
-          var5_int = wm.a((param3 - param1) * 3, (byte) -95);
+          var5_int = IterableNodeHashTable.a((param3 - param1) * 3, (byte) -95);
           var6 = 3 * param1;
           nl.c(param0 ^ -30006);
           var7 = var5_int - 10;
@@ -370,7 +370,7 @@ final class po extends ah {
     private final kd m(byte param0) {
         Object var2 = null;
         int var3 = 0;
-        le var4 = null;
+        IntrusiveNode var4 = null;
         int var10 = 0;
         Object stackIn_22_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -402,7 +402,7 @@ final class po extends ah {
                 var2 = (kd) (var4);
               }
             }
-            var4 = var4.field_b;
+            var4 = var4.previous;
             if (var10 == 0) {
               continue;
             }
