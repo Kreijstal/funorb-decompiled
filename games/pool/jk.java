@@ -222,7 +222,7 @@ final class jk {
         vh stackIn_28_0 = null;
         int stackIn_28_1 = 0;
         boolean stackIn_29_2 = false;
-        wh.a(-640 + qh.field_l >> 1, 0, qh.field_l + 640 >> 1, (byte) -88, qh.field_f);
+        wh.a(-640 + SoftwareRasterizer.width >> 1, 0, SoftwareRasterizer.width + 640 >> 1, (byte) -88, SoftwareRasterizer.height);
         if (param1 <= 116) {
           return;
         }

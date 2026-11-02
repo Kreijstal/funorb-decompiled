@@ -578,11 +578,11 @@ final class gh extends vc {
           var35 = ij.field_o;
           var93 = oh.field_d;
           var35.b((byte) -116, 0, var35.field_j.length, var93);
-          qh.f(0, 0, qh.field_l, qh.field_f, 51);
+          SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 51);
           this.a(param1, param0 ^ -61);
           for (var5Lifetime2 = 0; var5Lifetime2 < kk.field_C[0].length; var5Lifetime2++) {
             if (s.field_b[2][var5Lifetime2] >= 0) {
-              qh.a(s.field_b[0][var5Lifetime2], s.field_b[1][var5Lifetime2], var5Lifetime2 % ng.field_t.length + 2 << 3, 255, dg.field_K);
+              SoftwareRasterizer.a(s.field_b[0][var5Lifetime2], s.field_b[1][var5Lifetime2], var5Lifetime2 % ng.field_t.length + 2 << 3, 255, dg.field_K);
             }
           }
           hb.field_k.a(qk.field_d, uh.field_t[1], 4096, (byte) 113, uh.field_t[0]);

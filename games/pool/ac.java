@@ -226,7 +226,7 @@ final class ac extends tm {
     final static void b(int param0, byte param1) {
         int var2 = 99 % ((-11 - param1) / 49);
         fm.field_M = fm.field_M + param0;
-        tq.field_q = (no.field_q.field_y + sa.field_h.field_C >> 1) + fm.field_M;
+        tq.field_q = (no.field_q.field_y + sa.field_h.maxAscent >> 1) + fm.field_M;
     }
 
     final void a(di param0, byte param1) {

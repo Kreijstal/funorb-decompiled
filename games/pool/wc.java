@@ -10,10 +10,10 @@ final class wc {
     boolean field_e;
     String[] field_c;
 
-    final static an a(di param0, int param1, int param2, di param3, int param4) {
+    final static BinaryBitmapFont a(di param0, int param1, int param2, di param3, int param4) {
         RuntimeException var5 = null;
         di var6 = null;
-        an stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

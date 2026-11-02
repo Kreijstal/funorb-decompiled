@@ -15,7 +15,7 @@ final class sb {
         return j.a(3, param0, (byte) 126);
     }
 
-    final static qb a(int param0, di param1, int param2) {
+    final static IndexedSprite a(int param0, di param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

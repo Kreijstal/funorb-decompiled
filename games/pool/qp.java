@@ -23,7 +23,7 @@ final class qp extends vh {
     private qp field_Qb;
     private int field_Pb;
     static String field_Ob;
-    static lr field_ec;
+    static BitmapFont field_ec;
 
     final void a(byte param0, int param1, int param2) {
         int var4_int = 0;
@@ -280,8 +280,8 @@ final class qp extends vh {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        lr var17 = null;
-        lr var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_ac = -1;
         try {
           this.field_dc = param4;
@@ -290,7 +290,7 @@ final class qp extends vh {
           this.field_cc = this.field_Nb.length;
           var17 = param3.field_I;
           var18 = var17;
-          this.field_Ub = var18.field_C + 2 + var18.field_w;
+          this.field_Ub = var18.maxAscent + 2 + var18.maxDescent;
           this.field_Xb = 0;
           this.field_Vb = new uo[this.field_cc];
           this.field_Lb = this.field_cc * this.field_Ub;

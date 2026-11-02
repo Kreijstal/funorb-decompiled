@@ -34,7 +34,7 @@ abstract class iq {
     }
 
     final void b(int param0) {
-        qh.a(this.field_h, this.field_e, this.field_k);
+        SoftwareRasterizer.setTarget(this.field_h, this.field_e, this.field_k);
         if (param0 != 15100) {
           this.b(78);
         }

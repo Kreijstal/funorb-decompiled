@@ -136,7 +136,7 @@ final class j implements fp {
           var9 = bo.field_a[1];
           if (param4 instanceof fe &&
             ((fe) (param4)).field_G) {
-            var9.c(var6_int + (1 + (param4.field_l - var9.field_w >> 1)), (param4.field_y - var9.field_y >> 1) + (1 + var8), 256);
+            var9.drawAdditive(var6_int + (1 + (param4.field_l - var9.field_w >> 1)), (param4.field_y - var9.field_y >> 1) + (1 + var8), 256);
           }
           if (!param4.d(126)) {
             return;

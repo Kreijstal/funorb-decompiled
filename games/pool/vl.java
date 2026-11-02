@@ -10,10 +10,10 @@ final class vl extends tm {
     static volatile boolean field_q;
     static kn field_m;
     private static int[][] field_n;
-    static qb[] field_l;
+    static IndexedSprite[] field_l;
     static String field_s;
 
-    final static void a(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, int param5, int param6, lr param7, int param8, int param9, Sprite[] param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, int param5, int param6, BitmapFont param7, int param8, int param9, Sprite[] param10, int param11, int param12, int param13, int param14) {
         RuntimeException runtimeException = null;
         int var15_int = 0;
         int var16 = 0;
@@ -31,7 +31,7 @@ final class vl extends tm {
           if (param11 != -1373633266) {
             return;
           }
-          var15_int = param7.field_w + param7.field_L;
+          var15_int = param7.maxDescent + param7.field_L;
           var16 = param7.field_L;
           eh.a(param5, var16, param4, param7, param1, param10, param14, param6, 19539, param0, param2, var16, param13, param7, param3, param8, param12, param9, var15_int, var15_int);
           return;
@@ -140,7 +140,7 @@ final class vl extends tm {
           }
           if (param0 != -1) {
             if (param0 == -2) {
-              qh.b(0, 0, qh.field_l, qh.field_f, 0);
+              SoftwareRasterizer.drawRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0);
               if (var5 == 0) {
                 return;
               }
@@ -151,11 +151,11 @@ final class vl extends tm {
               }
               if (!(param0 >= 0) ||
                 var5 != 0) {
-                qh.b(0, 0, qh.field_l, qh.field_f, 0);
+                SoftwareRasterizer.drawRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0);
                 if (var5 != 0) {
                   om.a(-96, false);
                   if (param0 < 0) {
-                    qh.g(0, 0, qh.field_l, qh.field_f);
+                    SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                     s.field_c[param0].b((byte) 108);
                   } else {
                     s.field_c[param0].b((byte) 108);
@@ -164,7 +164,7 @@ final class vl extends tm {
               }} else {
               om.a(-96, false);
               if (param0 < 0) {
-                qh.g(0, 0, qh.field_l, qh.field_f);
+                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                 if (var5 != 0) {
                   s.field_c[param0].b((byte) 108);
                 }
@@ -393,8 +393,8 @@ final class vl extends tm {
                   break scanLoop1;
                 }
                 if (stackIn_27_0 < stackIn_27_1) {
-                  kp.field_i[param2][var19Lifetime2] = (qh.field_b + fb.field_q << 2) + (kp.field_i[param2][var19Lifetime2] << 11) / var20Lifetime2;
-                  field_n[param2][var19Lifetime2] = (qh.field_c + fb.field_d << 2) + (field_n[param2][var19Lifetime2] << 11) / var20Lifetime2;
+                  kp.field_i[param2][var19Lifetime2] = (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 2) + (kp.field_i[param2][var19Lifetime2] << 11) / var20Lifetime2;
+                  field_n[param2][var19Lifetime2] = (SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 2) + (field_n[param2][var19Lifetime2] << 11) / var20Lifetime2;
                   stackIn_15_0 = jr.field_o[param2];
                   stackIn_15_1 = var19Lifetime2;
                   if (0 != var19Lifetime2 &&
@@ -635,11 +635,11 @@ final class vl extends tm {
           }
           var15 = (long)param3[4] * var9 + (long)param3[3] * var7 + (long)param3[5] * var11;
           var17 = var9 * (long)param3[7] + (var7 * (long)param3[6] + var11 * (long)param3[8]);
-          var15 = (var15 << 13) / var13 + (long)(qh.field_b + fb.field_q << 4);
-          var17 = (var17 << 13) / var13 + (long)(qh.field_c + fb.field_d << 4);
-          qh.a((int)(var15 >> 4), (int)(var17 >> 4), -2 + ((int)(2147483648L / var13) * (256 - param0) >> 8), 0, 224);
+          var15 = (var15 << 13) / var13 + (long)(SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 4);
+          var17 = (var17 << 13) / var13 + (long)(SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 4);
+          SoftwareRasterizer.a((int)(var15 >> 4), (int)(var17 >> 4), -2 + ((int)(2147483648L / var13) * (256 - param0) >> 8), 0, 224);
           if (2147483647L > 127L * (34359738368L / var13) * (34359738368L / var13)) {
-            qh.a((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - param0) >> 8, 127, dg.a(-9, param2));
+            SoftwareRasterizer.a((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - param0) >> 8, 127, dg.a(-9, param2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

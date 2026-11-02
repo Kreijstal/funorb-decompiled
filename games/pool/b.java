@@ -22,11 +22,11 @@ final class b extends ob {
         if (param0 >= 36) {
           var3 = rj.field_h;
           if (rn.field_a[this.field_I] == pl.field_f) {
-            pl.field_a.c(qh.field_l - pl.field_a.field_z >> 1, -mc.field_e.field_C + var3);
+            pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -mc.field_e.maxAscent + var3);
             var3 += 5;
             if (bq.field_p != this.field_I ||
               null == cm.field_K) {
-              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3 + 10, sa.field_h, true, qh.field_l - var2 >> 1);
+              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
               cm.field_K = ef.a("</col>", rb.field_n[this.field_I], (byte) 4, "<col=aaaaff>");
               bq.field_p = this.field_I;
             }
@@ -34,29 +34,29 @@ final class b extends ob {
             dupTemp$2 = rn.field_a[this.field_I];
             pl.field_f = dupTemp$2;
             pl.field_a = dq.a(4, 0, dupTemp$2);
-            pl.field_a.c(qh.field_l - pl.field_a.field_z >> 1, -mc.field_e.field_C + var3);
+            pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -mc.field_e.maxAscent + var3);
             var3 += 5;
             if (bq.field_p != this.field_I ||
               null == cm.field_K) {
-              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3 + 10, sa.field_h, true, qh.field_l - var2 >> 1);
+              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
               cm.field_K = ef.a("</col>", rb.field_n[this.field_I], (byte) 4, "<col=aaaaff>");
               bq.field_p = this.field_I;
             }
           }
-          sa.field_h.a(nf.field_Z, bi.field_d);
+          sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
           this.a(sa.field_h, aj.field_Ob[gj.field_S][this.field_I], 10 + var3, -16097, cm.field_K, var2, 13421772);
-          nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1), var3, 190);
+          nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3, 190);
           this.b(10 + var3, false);
           if (this.field_I != qd.field_k) {
             qd.field_k = this.field_I;
             GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
           }
-          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.field_C + 60);
+          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.maxAscent + 60);
           var4 = dp.a(104);
           if (var4 == -1) {
             return;
           }
-          qa.a((byte) 71, qh.field_l >> 1, sa.field_h, re.field_e[var4], 15658734, 4144959);
+          qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, re.field_e[var4], 15658734, 4144959);
           if (null == this.field_G) {
             return;
           }
@@ -66,26 +66,26 @@ final class b extends ob {
         this.b((byte) -57, -26);
         var3Lifetime1 = rj.field_h;
         if (rn.field_a[this.field_I] == pl.field_f) {
-          pl.field_a.c(qh.field_l - pl.field_a.field_z >> 1, -mc.field_e.field_C + var3Lifetime1);
+          pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -mc.field_e.maxAscent + var3Lifetime1);
           var3Lifetime1 += 5;
           if (bq.field_p != this.field_I ||
             null == cm.field_K) {
-            ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3Lifetime1 + 10, sa.field_h, true, qh.field_l - var2 >> 1);
+            ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
             cm.field_K = ef.a("</col>", rb.field_n[this.field_I], (byte) 4, "<col=aaaaff>");
             bq.field_p = this.field_I;
           }
-          sa.field_h.a(nf.field_Z, bi.field_d);
+          sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
           this.a(sa.field_h, aj.field_Ob[gj.field_S][this.field_I], 10 + var3Lifetime1, -16097, cm.field_K, var2, 13421772);
-          nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1), var3Lifetime1, 190);
+          nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3Lifetime1, 190);
           this.b(10 + var3Lifetime1, false);
           if (this.field_I != qd.field_k) {
             qd.field_k = this.field_I;
             GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
           }
-          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.field_C + 60);
+          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.maxAscent + 60);
           var4Lifetime1 = dp.a(104);
           if (var4Lifetime1 != -1) {
-            qa.a((byte) 71, qh.field_l >> 1, sa.field_h, re.field_e[var4Lifetime1], 15658734, 4144959);
+            qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, re.field_e[var4Lifetime1], 15658734, 4144959);
             if (null != this.field_G) {
               this.field_G.a(15658734, 0, 128, -1, true, 0);
             }
@@ -95,24 +95,24 @@ final class b extends ob {
         dupTemp$3 = rn.field_a[this.field_I];
         pl.field_f = dupTemp$3;
         pl.field_a = dq.a(4, 0, dupTemp$3);
-        pl.field_a.c(qh.field_l - pl.field_a.field_z >> 1, -mc.field_e.field_C + var3Lifetime1);
+        pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -mc.field_e.maxAscent + var3Lifetime1);
         var3Lifetime1 += 5;
         if (bq.field_p != this.field_I) {
-          ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3Lifetime1 + 10, sa.field_h, true, qh.field_l - var2 >> 1);
+          ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
           cm.field_K = ef.a("</col>", rb.field_n[this.field_I], (byte) 4, "<col=aaaaff>");
           bq.field_p = this.field_I;
-          sa.field_h.a(nf.field_Z, bi.field_d);
+          sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
           this.a(sa.field_h, aj.field_Ob[gj.field_S][this.field_I], 10 + var3Lifetime1, -16097, cm.field_K, var2, 13421772);
-          nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1), var3Lifetime1, 190);
+          nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3Lifetime1, 190);
           this.b(10 + var3Lifetime1, false);
           if (this.field_I != qd.field_k) {
             qd.field_k = this.field_I;
             GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
           }
-          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.field_C + 60);
+          GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.maxAscent + 60);
           var4Lifetime2 = dp.a(104);
           if (var4Lifetime2 != -1) {
-            qa.a((byte) 71, qh.field_l >> 1, sa.field_h, re.field_e[var4Lifetime2], 15658734, 4144959);
+            qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, re.field_e[var4Lifetime2], 15658734, 4144959);
             if (null != this.field_G) {
               this.field_G.a(15658734, 0, 128, -1, true, 0);
             }
@@ -120,24 +120,24 @@ final class b extends ob {
           return;
         }
         if (null == cm.field_K) {
-          ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3Lifetime1 + 10, sa.field_h, true, qh.field_l - var2 >> 1);
+          ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.field_n[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
           cm.field_K = ef.a("</col>", rb.field_n[this.field_I], (byte) 4, "<col=aaaaff>");
           bq.field_p = this.field_I;
         }
-        sa.field_h.a(nf.field_Z, bi.field_d);
+        sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
         this.a(sa.field_h, aj.field_Ob[gj.field_S][this.field_I], 10 + var3Lifetime1, -16097, cm.field_K, var2, 13421772);
-        nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1), var3Lifetime1, 190);
+        nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3Lifetime1, 190);
         this.b(10 + var3Lifetime1, false);
         if (this.field_I != qd.field_k) {
           qd.field_k = this.field_I;
           GameApplet.field_h = dq.a(2, 0, aq.a(this.field_I, 121));
         }
-        GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.field_C + 60);
+        GameApplet.field_h.c(620 - GameApplet.field_h.field_z, -mc.field_e.maxAscent + 60);
         var4Lifetime3 = dp.a(104);
         if (var4Lifetime3 == -1) {
           return;
         }
-        qa.a((byte) 71, qh.field_l >> 1, sa.field_h, re.field_e[var4Lifetime3], 15658734, 4144959);
+        qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, re.field_e[var4Lifetime3], 15658734, 4144959);
         if (null == this.field_G) {
           return;
         }

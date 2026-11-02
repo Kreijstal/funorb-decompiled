@@ -112,7 +112,7 @@ final class sd extends ch implements jb, tb {
           this.field_P.field_z = (fp) ((Object) new ng());
           var7 = nr.a(new String[]{this.h((byte) 44), this.g((byte) 99)}, -1, hb.field_g);
           var3 = 20;
-          var4 = new am(lc.field_O, 0, 0, 0, 0, 16777215, -1, 3, 0, lc.field_O.field_C, -1, 2147483647, true);
+          var4 = new am(lc.field_O, 0, 0, 0, 0, 16777215, -1, 3, 0, lc.field_O.maxAscent, -1, 2147483647, true);
           this.field_S = new mh(var7, var4);
           this.field_S.field_p = "";
           this.field_S.a((byte) 68, cn.field_b, 0);

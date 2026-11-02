@@ -15,7 +15,7 @@ final class nq {
     private boolean field_f;
     private int field_n;
     int field_h;
-    lr field_i;
+    BitmapFont field_i;
     int field_e;
 
     final static boolean a(byte param0, int param1) {
@@ -49,7 +49,7 @@ final class nq {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        qh.d(param1, param5, param4, param2, param3);
+        SoftwareRasterizer.drawLine(param1, param5, param4, param2, param3);
         if (param0 != -1) {
           this.field_f = true;
         }
@@ -111,14 +111,14 @@ final class nq {
           var6 = this.field_h + this.field_b;
           var7 = this.field_g;
           if (var7 == -1) {
-            var7 = this.field_i.field_C + this.field_i.field_w;
+            var7 = this.field_i.maxAscent + this.field_i.maxDescent;
           }
-          var8 = qh.field_l >> 2;
+          var8 = SoftwareRasterizer.width >> 2;
           var9 = this.field_i.b(param2);
           if (param1 != 10066329) {
             return;
           }
-          var10 = this.field_i.field_w + this.field_i.field_C;
+          var10 = this.field_i.maxDescent + this.field_i.maxAscent;
           var11 = 1;
           if (var9 > var8 ||
             -1 != param2.indexOf("<br>")) {
@@ -142,16 +142,16 @@ final class nq {
             }
           }
           var12 = param3;
-          if (var5_int + var12 + var9 > qh.field_l) {
-            var12 = -var5_int - var9 + qh.field_l;
+          if (var5_int + var12 + var9 > SoftwareRasterizer.width) {
+            var12 = -var5_int - var9 + SoftwareRasterizer.width;
           }
           var13Lifetime1 = -this.field_i.field_L + (param0 + 32);
-          if (qh.field_f < var6 + var13Lifetime1 + var10) {
+          if (SoftwareRasterizer.height < var6 + var13Lifetime1 + var10) {
             var13Lifetime1 = -var6 - var10 + param0;
           }
-          qh.b(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_e);
-          qh.f(var12 + 1, 1 + var13Lifetime1, -2 + (var5_int + var9), -2 + var6 + var10, this.field_a);
-          this.field_i.a(param2, var12 + this.field_m, var13Lifetime1 + this.field_h, var9, var10, this.field_n, -1, 0, 0, var7);
+          SoftwareRasterizer.drawRectangle(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_e);
+          SoftwareRasterizer.fillRectangle(var12 + 1, 1 + var13Lifetime1, -2 + (var5_int + var9), -2 + var6 + var10, this.field_a);
+          this.field_i.drawParagraph(param2, var12 + this.field_m, var13Lifetime1 + this.field_h, var9, var10, this.field_n, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,7 +168,7 @@ final class nq {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
-        qh.c(param6, param3, param0, param2, param4, param1);
+        SoftwareRasterizer.fillRectangleAlpha(param6, param3, param0, param2, param4, param1);
         if (param5 < 69) {
           this.field_g = 36;
         }
@@ -208,20 +208,20 @@ final class nq {
         int var8 = 0;
         try {
           var5_int = this.field_i.b(param0);
-          var6 = this.field_i.field_w + this.field_i.field_L;
+          var6 = this.field_i.maxDescent + this.field_i.field_L;
           if (param2 > -62) {
             this.field_a = -110;
           }
           var7 = param1;
-          if (6 + var5_int + var7 > qh.field_l) {
-            var7 = -6 - var5_int + qh.field_l;
+          if (6 + var5_int + var7 > SoftwareRasterizer.width) {
+            var7 = -6 - var5_int + SoftwareRasterizer.width;
           }
           var8 = -this.field_i.field_L + (param3 + 32);
-          if (qh.field_f < 6 + var8 + var6) {
-            var8 = qh.field_f + (-var6 - 6);
+          if (SoftwareRasterizer.height < 6 + var8 + var6) {
+            var8 = SoftwareRasterizer.height + (-var6 - 6);
           }
-          qh.b(var7, var8, 6 + var5_int, 6 + var6, this.field_n);
-          qh.f(1 + var7, var8 + 1, var5_int + 4, var6 + 4, this.field_a);
+          SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, 6 + var6, this.field_n);
+          SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5_int + 4, var6 + 4, this.field_a);
           this.field_i.d(param0, var7 + 3, this.field_i.field_L + (var8 + 3), this.field_n, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -238,11 +238,11 @@ final class nq {
         }
     }
 
-    final void a(lr param0, int param1) {
+    final void a(BitmapFont param0, int param1) {
         int var7_int = 0;
         lg var19 = null;
         int var15 = Pool.field_O;
-        am var17 = new am(param0, 2, 2, 2236962, 1, 1, 1, param0.field_w + param0.field_C + 2);
+        am var17 = new am(param0, 2, 2, 2236962, 1, 1, 1, param0.maxDescent + param0.maxAscent + 2);
         var17.field_d = 16777215;
         this.field_c = (fp) ((Object) var17);
         lg var4 = new lg();
@@ -262,8 +262,8 @@ final class nq {
         var4.b(1, 0).a(fj.a(11184810, 10066329, 13421772, false), (byte) 76);
         var4.b(3, 0).a(fj.a(8947848, 7829367, 10066329, false), (byte) 64).a(1, -1).a(1, (byte) 90);
         Sprite[] var5 = new Sprite[9];
-        lp var16 = new lp(32, 32);
-        lp var18 = var16;
+        ArgbSprite var16 = new ArgbSprite(32, 32);
+        ArgbSprite var18 = var16;
         for (var7_int = 0; var7_int < var18.field_D.length; var7_int++) {
           var16.field_D[var7_int] = 1077952576;
         }
@@ -320,9 +320,9 @@ final class nq {
 
     final static void a(vk param0, PlatformTaskDispatcher param1, java.awt.Component param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         try {
-          bp.a(param7, param6, 10);
-          ib.field_s = bp.a(param1, param2, 0, param3);
-          kk.field_D = bp.a(param1, param2, 1, param5);
+          AudioOutput.a(param7, param6, 10);
+          ib.field_s = AudioOutput.a(param1, param2, 0, param3);
+          kk.field_D = AudioOutput.a(param1, param2, 1, param5);
           qf.field_d = new ai();
           or.field_b = param5 * 1000 / param7;
           kk.field_D.a(qf.field_d);

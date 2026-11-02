@@ -5,7 +5,7 @@ abstract class kk extends DualLinkNode {
     static hj field_A;
     int field_y;
     static int[][] field_C;
-    static bp field_D;
+    static AudioOutput field_D;
     static String field_B;
     static String field_E;
     static float field_w;
@@ -50,29 +50,29 @@ abstract class kk extends DualLinkNode {
           stackIn_14_0 = param1 + or.field_a;
         }
         na.field_c = stackIn_14_0;
-        if (ic.field_a < qh.field_c << 2) {
-          if (qh.field_c << 2 > na.field_c) {
-            na.field_c = qh.field_c << 2;
+        if (ic.field_a < SoftwareRasterizer.clipTop << 2) {
+          if (SoftwareRasterizer.clipTop << 2 > na.field_c) {
+            na.field_c = SoftwareRasterizer.clipTop << 2;
           }
-          ic.field_a = qh.field_c << 2;
+          ic.field_a = SoftwareRasterizer.clipTop << 2;
         }
-        if (qh.field_b << 2 > hd.field_I) {
-          hd.field_I = qh.field_b << 2;
-          if (wh.field_f < qh.field_b << 2) {
-            wh.field_f = qh.field_b << 2;
-          }
-        }
-        if (na.field_c > qh.field_g << 2) {
-          na.field_c = qh.field_g << 2;
-          if (ic.field_a > qh.field_g << 2) {
-            ic.field_a = qh.field_g << 2;
+        if (SoftwareRasterizer.clipLeft << 2 > hd.field_I) {
+          hd.field_I = SoftwareRasterizer.clipLeft << 2;
+          if (wh.field_f < SoftwareRasterizer.clipLeft << 2) {
+            wh.field_f = SoftwareRasterizer.clipLeft << 2;
           }
         }
-        if (wh.field_f > qh.field_j << 2) {
-          if (hd.field_I > qh.field_j << 2) {
-            hd.field_I = qh.field_j << 2;
+        if (na.field_c > SoftwareRasterizer.clipBottom << 2) {
+          na.field_c = SoftwareRasterizer.clipBottom << 2;
+          if (ic.field_a > SoftwareRasterizer.clipBottom << 2) {
+            ic.field_a = SoftwareRasterizer.clipBottom << 2;
           }
-          wh.field_f = qh.field_j << 2;
+        }
+        if (wh.field_f > SoftwareRasterizer.clipRight << 2) {
+          if (hd.field_I > SoftwareRasterizer.clipRight << 2) {
+            hd.field_I = SoftwareRasterizer.clipRight << 2;
+          }
+          wh.field_f = SoftwareRasterizer.clipRight << 2;
         }
     }
 
@@ -249,9 +249,9 @@ abstract class kk extends DualLinkNode {
               throw new IllegalStateException();
             }
             hk.field_n = new String[var4];
-            qn.a(ih.field_c, 0, hk.field_n, 0, var4);
+            ArrayOperations.copy(ih.field_c, 0, hk.field_n, 0, var4);
             rq.field_H = new String[-1 + var3_int - var4];
-            qn.a(ih.field_c, 1 + var4, rq.field_H, 0, -var4 + var3_int - 1);
+            ArrayOperations.copy(ih.field_c, 1 + var4, rq.field_H, 0, -var4 + var3_int - 1);
             var4 = -1;
             var3_int = DualLinkNode.a(wj.field_T, ih.field_c, nr.a(new String[]{"<br><%0><br>"}, -1, cf.field_j), dq.field_f, 0);
             for (var5 = 0; var3_int > var5; var5++) {
@@ -265,9 +265,9 @@ abstract class kk extends DualLinkNode {
               throw new IllegalStateException();
             }
             va.field_W = new String[var4];
-            qn.a(ih.field_c, 0, va.field_W, 0, var4);
+            ArrayOperations.copy(ih.field_c, 0, va.field_W, 0, var4);
             fo.field_a = new String[-1 + (var3_int - var4)];
-            qn.a(ih.field_c, 1 + var4, fo.field_a, 0, -1 + (-var4 + var3_int));
+            ArrayOperations.copy(ih.field_c, 1 + var4, fo.field_a, 0, -1 + (-var4 + var3_int));
             if (hk.field_n.length >= va.field_W.length) {
               stackIn_52_0 = hk.field_n.length;
             } else {

@@ -58,15 +58,15 @@ final class er extends fe {
           var5 = (-im.field_fc + 250 << 8) / 50;
         }
         kj.a(63, un.field_c);
-        fb.a();
-        qh.d();
+        TriangleRasterizer.useRasterClip();
+        SoftwareRasterizer.clear();
         gi.a(-21818);
         if (var5 < 256) {
-          qh.c(0, 0, qh.field_l, qh.field_f, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
         oc.a(112);
         if (im.field_fc < 150) {
-          un.field_c.b(var3, var4);
+          un.field_c.drawHalfSize(var3, var4);
           var6 = -125 + im.field_fc;
           if (var6 <= 0) {
             var6 = im.field_fc - 140;
@@ -94,7 +94,7 @@ final class er extends fe {
           }
           if (20 > var6) {
             var7Lifetime8 = var6 * 256 / 20;
-            ci.field_h.c(var3, var4, var7Lifetime8);
+            ci.field_h.drawAdditive(var3, var4, var7Lifetime8);
             var6 = im.field_fc - 140;
             if (0 < var6) {
               var7Lifetime8 = 256;
@@ -107,7 +107,7 @@ final class er extends fe {
             return;
           }
           if (var6 < 30) {
-            ci.field_h.c(var3, var4, 256);
+            ci.field_h.drawAdditive(var3, var4, 256);
             var6 = im.field_fc - 140;
             if (0 < var6) {
               var7Lifetime9 = 256;
@@ -120,7 +120,7 @@ final class er extends fe {
             return;
           }
           var7Lifetime10 = (-var6 + 50) * 256 / 20;
-          ci.field_h.c(var3, var4, var7Lifetime10);
+          ci.field_h.drawAdditive(var3, var4, var7Lifetime10);
           var6Lifetime3 = im.field_fc - 140;
           if (0 < var6Lifetime3) {
             var7Lifetime11 = 256;
@@ -160,7 +160,7 @@ final class er extends fe {
         }
         if (20 > var6Lifetime1) {
           var7Lifetime3 = var6Lifetime1 * 256 / 20;
-          ci.field_h.c(var3, var4, var7Lifetime3);
+          ci.field_h.drawAdditive(var3, var4, var7Lifetime3);
           var6Lifetime1 = im.field_fc - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime3Lifetime1 = 256;
@@ -173,7 +173,7 @@ final class er extends fe {
           return;
         }
         if (var6Lifetime1 < 30) {
-          ci.field_h.c(var3, var4, 256);
+          ci.field_h.drawAdditive(var3, var4, 256);
           var6Lifetime1 = im.field_fc - 140;
           if (0 >= var6Lifetime1) {
             return;
@@ -186,7 +186,7 @@ final class er extends fe {
           return;
         }
         var7Lifetime5 = (-var6Lifetime1 + 50) * 256 / 20;
-        ci.field_h.c(var3, var4, var7Lifetime5);
+        ci.field_h.drawAdditive(var3, var4, var7Lifetime5);
         var6Lifetime2 = im.field_fc - 140;
         if (0 >= var6Lifetime2) {
           return;
@@ -240,7 +240,7 @@ final class er extends fe {
         }
     }
 
-    final static void a(int param0, String param1, int param2, int param3, lr param4, boolean param5, int param6) {
+    final static void a(int param0, String param1, int param2, int param3, BitmapFont param4, boolean param5, int param6) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -254,7 +254,7 @@ final class er extends fe {
         int var10 = 0;
         try {
           var7_int = param4.b(param1) + 6;
-          var8 = param4.field_w + param4.field_C + 6;
+          var8 = param4.maxDescent + param4.maxAscent + 6;
           var9 = param2 - var7_int / 2;
           if (var9 >= 0) {
             if (var9 + var7_int > 640) {
@@ -268,7 +268,7 @@ final class er extends fe {
           if (!param5) {
             field_X = 49;
           }
-          var10 = -3 + (-param4.field_C + param0);
+          var10 = -3 + (-param4.maxAscent + param0);
           if (var10 < 0) {
             param0 = param0 - var10;
             var10 = 0;
@@ -278,8 +278,8 @@ final class er extends fe {
               var10 = 480 - var8;
             }
           }
-          qh.a(var9, var10, var7_int, var8, 3, 0, 128);
-          param4.b(param1, param2, param0, param6, param3);
+          SoftwareRasterizer.a(var9, var10, var7_int, var8, 3, 0, 128);
+          param4.drawCentered(param1, param2, param0, param6, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

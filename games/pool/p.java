@@ -309,7 +309,7 @@ final class p implements eb {
           if (param0 <= 20) {
             this.a(-74, 99, 4);
           }
-          sa.field_h.b(param1, (int)(0.5f + var5[0]), (int)(0.5f + var5[1]), 16764142, 1);
+          sa.field_h.drawCentered(param1, (int)(0.5f + var5[0]), (int)(0.5f + var5[1]), 16764142, 1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "p.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

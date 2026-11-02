@@ -11,8 +11,8 @@ class om extends am {
     static int[] field_s;
     static int[] field_r;
 
-    om(lr param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
+    om(BitmapFont param0, int param1) {
+        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
     }
 
     final static double[] a(int param0, double[] param1) {

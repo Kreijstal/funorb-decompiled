@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bp {
+class AudioOutput {
     private long field_g;
-    private static int field_m;
+    private static int serviceThreadPriority;
     private int field_e;
     private static mq field_u;
     int[] field_l;
-    private PcmStream field_p;
-    static boolean field_r;
+    private PcmStream rootStream;
+    static boolean stereo;
     private boolean field_s;
     private int field_t;
     private long field_b;
     private long field_d;
-    private PcmStream[] field_j;
-    private int field_o;
+    private PcmStream[] priorityTails;
+    private int framesUntilScheduling;
     private int field_c;
-    private PcmStream[] field_f;
+    private PcmStream[] priorityHeads;
     private int field_i;
     private int field_a;
     private int field_q;
-    static int field_h;
+    static int sampleRate;
     private boolean field_n;
     private int field_k;
 
@@ -32,24 +32,24 @@ class bp {
           param0 > 48000) {
           throw new IllegalArgumentException();
         }
-        field_h = param0;
-        field_r = param1 ? true : false;
-        field_m = param2;
+        sampleRate = param0;
+        stereo = param1 ? true : false;
+        serviceThreadPriority = param2;
     }
 
     void a(int param0) throws Exception {
     }
 
-    private final void a(PcmStream param0, int param1) {
-        int var3 = param1 >> 5;
-        PcmStream var4 = this.field_j[var3];
+    private final void enqueueByPriority(PcmStream stream, int priority) {
+        int var3 = priority >> 5;
+        PcmStream var4 = this.priorityTails[var3];
         if (var4 == null) {
-          this.field_f[var3] = param0;
+          this.priorityHeads[var3] = stream;
         } else {
-          var4.field_o = param0;
+          var4.field_o = stream;
         }
-        this.field_j[var3] = param0;
-        param0.field_m = param1;
+        this.priorityTails[var3] = stream;
+        stream.field_m = priority;
     }
 
     void a(java.awt.Component param0) throws Exception {
@@ -58,7 +58,7 @@ class bp {
     void a() {
     }
 
-    final static bp a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
@@ -68,7 +68,7 @@ class bp {
           int stackIn_11_2 = 0;
           JavaSoundAudioOutput stackIn_21_0 = null;
           Throwable decompiledCaughtException = null;
-          if (field_h == 0) {
+          if (sampleRate == 0) {
             throw new IllegalStateException();
           }
           if (param2 >= 0 &&
@@ -81,37 +81,37 @@ class bp {
               var4 = var5;
               stackIn_10_0 = var4;
               stackIn_10_1 = 256;
-              if (!field_r) {
+              if (!stereo) {
                 stackIn_11_2 = 1;
               } else {
                 stackIn_11_2 = 2;
               }
-              ((bp) ((Object) stackIn_10_0)).field_l = new int[stackIn_10_1 * stackIn_11_2];
-              ((bp) ((Object) var4)).field_t = param3;
-              ((bp) ((Object) var4)).a(param1);
-              ((bp) ((Object) var4)).field_a = (param3 & -1024) + 1024;
-              if (((bp) ((Object) var4)).field_a > 16384) {
-                ((bp) ((Object) var4)).field_a = 16384;
+              ((AudioOutput) ((Object) stackIn_10_0)).field_l = new int[stackIn_10_1 * stackIn_11_2];
+              ((AudioOutput) ((Object) var4)).field_t = param3;
+              ((AudioOutput) ((Object) var4)).a(param1);
+              ((AudioOutput) ((Object) var4)).field_a = (param3 & -1024) + 1024;
+              if (((AudioOutput) ((Object) var4)).field_a > 16384) {
+                ((AudioOutput) ((Object) var4)).field_a = 16384;
               }
-              ((bp) ((Object) var4)).a(((bp) ((Object) var4)).field_a);
-              if (field_m > 0 &&
+              ((AudioOutput) ((Object) var4)).a(((AudioOutput) ((Object) var4)).field_a);
+              if (serviceThreadPriority > 0 &&
                 field_u == null) {
                 field_u = new mq();
                 field_u.field_i = param0;
-                param0.a(102, field_m, (Runnable) ((Object) field_u));
+                param0.a(102, serviceThreadPriority, (Runnable) ((Object) field_u));
               }
               if (field_u != null) {
                 if (field_u.field_e[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_u.field_e[param2] = (bp) ((Object) var5);
+                field_u.field_e[param2] = (AudioOutput) ((Object) var5);
               }
               stackIn_21_0 = var4;
-              return (bp) ((Object) stackIn_21_0);
+              return (AudioOutput) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              return new bp();
+              return new AudioOutput();
             }
           }
           throw new IllegalArgumentException();
@@ -123,7 +123,7 @@ class bp {
     }
 
     final synchronized void a(PcmStream param0) {
-        this.field_p = param0;
+        this.rootStream = param0;
     }
 
     public static void c() {
@@ -146,8 +146,8 @@ class bp {
               this.field_g = var1 - 6000L;
             }
             while (var1 > this.field_g + 5000L) {
-              this.b(256);
-              this.field_g = this.field_g + (long)(256000 / field_h);
+              this.skipFrames(256);
+              this.field_g = this.field_g + (long)(256000 / sampleRate);
               var1 = rl.a((byte) -120);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -225,13 +225,13 @@ class bp {
         }
     }
 
-    private final void b(int param0) {
-        this.field_o = this.field_o - param0;
-        if (this.field_o < 0) {
-          this.field_o = 0;
+    private final void skipFrames(int frameCount) {
+        this.framesUntilScheduling = this.framesUntilScheduling - frameCount;
+        if (this.framesUntilScheduling < 0) {
+          this.framesUntilScheduling = 0;
         }
-        if (this.field_p != null) {
-          this.field_p.a(param0);
+        if (this.rootStream != null) {
+          this.rootStream.skip(frameCount);
           return;
         }
     }
@@ -259,16 +259,16 @@ class bp {
         PcmStream var14Lifetime1;
         PcmStream var14Lifetime2;
         var3 = param1;
-        if (field_r) {
+        if (stereo) {
           var3 = var3 << 1;
         }
-        qn.a(param0, 0, var3);
-        this.field_o = this.field_o - param1;
-        if (this.field_p != null &&
-          this.field_o <= 0) {
-          this.field_o = this.field_o + (field_h >> 4);
-          bp.b(this.field_p);
-          this.a(this.field_p, this.field_p.c());
+        ArrayOperations.clearInts(param0, 0, var3);
+        this.framesUntilScheduling = this.framesUntilScheduling - param1;
+        if (this.rootStream != null &&
+          this.framesUntilScheduling <= 0) {
+          this.framesUntilScheduling = this.framesUntilScheduling + (sampleRate >> 4);
+          AudioOutput.b(this.rootStream);
+          this.enqueueByPriority(this.rootStream, this.rootStream.c());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -286,7 +286,7 @@ class bp {
                 if ((var9 & 1) != 0) {
                   var5 = var5 & ~(1 << var7_int);
                   var10 = null;
-                  var11 = this.field_f[var7_int];
+                  var11 = this.priorityHeads[var7_int];
                   var14 = var11;
                   var14Lifetime1 = var11;
                   while (var11 != null) {
@@ -311,7 +311,7 @@ class bp {
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_m;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
                         var14Lifetime2 = var11.b();
                       }
                     }
@@ -320,10 +320,10 @@ class bp {
                     if (var10 != null) {
                       ((PcmStream) (var10)).field_o = var15;
                     } else {
-                      this.field_f[var7_int] = var15;
+                      this.priorityHeads[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_j[var7_int] = (PcmStream) (var10);
+                      this.priorityTails[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -338,10 +338,10 @@ class bp {
             break;
           }
           for (var6Lifetime1 = 0; var6Lifetime1 < 8; var6Lifetime1++) {
-            var7 = this.field_f[var6Lifetime1];
-            var8 = this.field_f;
+            var7 = this.priorityHeads[var6Lifetime1];
+            var8 = this.priorityHeads;
             var9Lifetime1 = var6Lifetime1;
-            this.field_j[var6Lifetime1] = null;
+            this.priorityTails[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
               var10Lifetime1 = ((PcmStream) (var7)).field_o;
@@ -350,11 +350,11 @@ class bp {
             }
           }
         }
-        if (this.field_o < 0) {
-          this.field_o = 0;
+        if (this.framesUntilScheduling < 0) {
+          this.framesUntilScheduling = 0;
         }
-        if (this.field_p != null) {
-          this.field_p.a(param0, 0, param1);
+        if (this.rootStream != null) {
+          this.rootStream.a(param0, 0, param1);
         }
         this.field_g = rl.a((byte) -125);
     }
@@ -366,7 +366,7 @@ class bp {
         }
         PcmStream var1 = param0.a();
         while (var1 != null) {
-          bp.b(var1);
+          AudioOutput.b(var1);
           var1 = param0.b();
         }
     }
@@ -401,18 +401,18 @@ class bp {
         return this.field_a;
     }
 
-    bp() {
+    AudioOutput() {
         this.field_e = 32;
         this.field_s = false;
         this.field_g = rl.a((byte) -104);
         this.field_b = 0L;
         this.field_d = 0L;
         this.field_c = 0;
-        this.field_o = 0;
-        this.field_j = new PcmStream[8];
+        this.framesUntilScheduling = 0;
+        this.priorityTails = new PcmStream[8];
         this.field_n = true;
         this.field_k = 0;
-        this.field_f = new PcmStream[8];
+        this.priorityHeads = new PcmStream[8];
         this.field_i = 0;
     }
 }

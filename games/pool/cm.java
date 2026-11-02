@@ -261,7 +261,7 @@ final class cm extends ob {
         if (param0 >= -62) {
           this.d(4, 111);
         }
-        nm.field_a = new vh(-1L, (vh) null, var2, var3, qh.field_l - 2 * var2, -var3 + var4 + (qh.field_f - var3), (String) null);
+        nm.field_a = new vh(-1L, (vh) null, var2, var3, SoftwareRasterizer.width - 2 * var2, -var3 + var4 + (SoftwareRasterizer.height - var3), (String) null);
         IterableNodeHashTable.field_e = new vh(-1L, (vh) null, 40, 50, 240, 200, (String) null);
         IterableNodeHashTable.field_e.field_Fb = 1;
         IterableNodeHashTable.field_e.field_F = rm.field_g;

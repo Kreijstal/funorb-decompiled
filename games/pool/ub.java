@@ -195,7 +195,7 @@ final class ub extends se {
             field_p = false;
           }
           if (ok.field_mb == null) {
-            ok.field_mb = new am(qk.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, qk.field_a.field_C, -1, 2147483647, true);
+            ok.field_mb = new am(qk.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, qk.field_a.maxAscent, -1, 2147483647, true);
           }
           stackIn_8_0 = ok.field_mb;
           return stackIn_8_0;
@@ -254,7 +254,7 @@ final class ub extends se {
         }
     }
 
-    final static void a(vh param0, lr param1, vh param2, db param3, vh param4, vh param5, vh param6, vh param7, boolean param8, vh param9, vh param10, byte param11) {
+    final static void a(vh param0, BitmapFont param1, vh param2, db param3, vh param4, vh param5, vh param6, vh param7, boolean param8, vh param9, vh param10, byte param11) {
         String stackIn_13_0 = null;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;

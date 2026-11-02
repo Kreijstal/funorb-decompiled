@@ -274,7 +274,7 @@ abstract class ok extends tj {
           for (var6 = 0; var6 < var1; var6++) {
             var5[var6] = md.a(rb.b(-16777216, var18[var6] << 24), IntrusiveNode.field_h[rb.b(255, (int) var17[var6])]);
           }
-          var3 = new lp(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var14);
+          var3 = new ArgbSprite(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var14);
         }
         sh.h(-1);
         return (Sprite) (var3);
@@ -369,7 +369,7 @@ abstract class ok extends tj {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = md.a(rb.b((int) var17[var7], 255) << 24, IntrusiveNode.field_h[rb.b(255, (int) var16[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new lp(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var13));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var13));
           }
         }
         sh.h(-1);

@@ -237,31 +237,31 @@ final class qe extends IntrusiveNode {
         int var10 = 0;
         int var11 = 0;
         try {
-          if (param5 < qh.field_b) {
-            param0 = param0 - (-param5 + qh.field_b);
-            param5 = qh.field_b;
+          if (param5 < SoftwareRasterizer.clipLeft) {
+            param0 = param0 - (-param5 + SoftwareRasterizer.clipLeft);
+            param5 = SoftwareRasterizer.clipLeft;
           }
-          if (param3 < qh.field_c) {
-            param1 = param1 - (-param3 + qh.field_c);
-            param3 = qh.field_c;
+          if (param3 < SoftwareRasterizer.clipTop) {
+            param1 = param1 - (-param3 + SoftwareRasterizer.clipTop);
+            param3 = SoftwareRasterizer.clipTop;
           }
-          if (qh.field_j < param0 + param5) {
-            param0 = qh.field_j - param5;
+          if (SoftwareRasterizer.clipRight < param0 + param5) {
+            param0 = SoftwareRasterizer.clipRight - param5;
           }
-          if (qh.field_g < param3 + param1) {
-            param1 = qh.field_g - param3;
+          if (SoftwareRasterizer.clipBottom < param3 + param1) {
+            param1 = SoftwareRasterizer.clipBottom - param3;
           }
           if (param0 > 0 &&
             param1 > 0) {
-            var6_int = param5 + qh.field_l * param3;
-            var7 = -param0 + qh.field_l;
+            var6_int = param5 + SoftwareRasterizer.width * param3;
+            var7 = -param0 + SoftwareRasterizer.width;
             param3 = -param1;
             if (param4 < 94) {
               return;
             }
             while (0 > param3) {
               for (param5 = -param0; 0 > param5; param5++) {
-                var8 = qh.field_d[var6_int];
+                var8 = SoftwareRasterizer.pixels[var6_int];
                 if (param2 < (65280 & var8) >> 8 &&
                   (var8 & 65280) >> 8 >= (var8 & 16711680) >> 16) {
                   var9 = ((16711680 & var8) >> 15) - 60;
@@ -271,7 +271,7 @@ final class qe extends IntrusiveNode {
                   var10 = 65280 & var8;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = (255 & var8) >> 3;
-                  qh.field_d[var6_int] = md.a(var11, md.a(var9 << 16, var10));
+                  SoftwareRasterizer.pixels[var6_int] = md.a(var11, md.a(var9 << 16, var10));
                 }
                 var6_int++;
               }

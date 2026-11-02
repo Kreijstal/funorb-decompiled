@@ -60,7 +60,7 @@ final class ug extends no {
         this.field_c = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    final static IntrusiveDeque a(int[] param0, int param1, String param2, int param3, lr param4, boolean param5, int param6) {
+    final static IntrusiveDeque a(int[] param0, int param1, String param2, int param3, BitmapFont param4, boolean param5, int param6) {
         int var11 = 0;
         int var13 = 0;
         IntrusiveDeque stackIn_2_0 = null;
@@ -133,7 +133,7 @@ final class ug extends no {
                           if (var18 <= var16 &&
                             var18 + var23 > var16) {
                             var25 = param4.b(var8[var21].substring(0, var16 - var18));
-                            var20.field_r = 1 + param4.field_C + param4.field_w;
+                            var20.field_r = 1 + param4.maxAscent + param4.maxDescent;
                             var20.field_m = param6 + var25;
                             var20.field_q = var22;
                             if (var17 >= var18 &&
@@ -386,7 +386,7 @@ final class ug extends no {
           sp var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          lr var17 = null;
+          BitmapFont var17 = null;
           sp var2Lifetime1;
           var16 = Pool.field_O;
           if (null != this.field_w) {
@@ -435,8 +435,8 @@ final class ug extends no {
               var2Lifetime1 = (sp) (this.field_t.b((byte) -112));
             }
             if (param0 != -2147483648) {
-              var17 = (lr) null;
-              ug.a((int[]) null, 69, (String) null, 35, (lr) null, true, -63);
+              var17 = (BitmapFont) null;
+              ug.a((int[]) null, 69, (String) null, 35, (BitmapFont) null, true, -63);
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
               var3_int = this.field_w.d(75);

@@ -479,28 +479,28 @@ abstract class oo {
         if (var25 > 1) {
           return;
         }
-        if (var18Lifetime1 >> 4 < qh.field_b &&
-          var21Lifetime1 >> 4 < qh.field_b &&
-          var16Lifetime1 >> 4 < qh.field_b &&
-          var14Lifetime2 >> 4 < qh.field_b) {
+        if (var18Lifetime1 >> 4 < SoftwareRasterizer.clipLeft &&
+          var21Lifetime1 >> 4 < SoftwareRasterizer.clipLeft &&
+          var16Lifetime1 >> 4 < SoftwareRasterizer.clipLeft &&
+          var14Lifetime2 >> 4 < SoftwareRasterizer.clipLeft) {
           return;
         }
-        if (var19Lifetime1 >> 4 < qh.field_c &&
-          var22Lifetime1 >> 4 < qh.field_c &&
-          var17Lifetime1 >> 4 < qh.field_c &&
-          var15Lifetime1 >> 4 < qh.field_c) {
+        if (var19Lifetime1 >> 4 < SoftwareRasterizer.clipTop &&
+          var22Lifetime1 >> 4 < SoftwareRasterizer.clipTop &&
+          var17Lifetime1 >> 4 < SoftwareRasterizer.clipTop &&
+          var15Lifetime1 >> 4 < SoftwareRasterizer.clipTop) {
           return;
         }
-        if (var18Lifetime1 >> 4 >= qh.field_j &&
-          var21Lifetime1 >> 4 >= qh.field_j &&
-          var16Lifetime1 >> 4 >= qh.field_j &&
-          var14Lifetime2 >> 4 >= qh.field_j) {
+        if (var18Lifetime1 >> 4 >= SoftwareRasterizer.clipRight &&
+          var21Lifetime1 >> 4 >= SoftwareRasterizer.clipRight &&
+          var16Lifetime1 >> 4 >= SoftwareRasterizer.clipRight &&
+          var14Lifetime2 >> 4 >= SoftwareRasterizer.clipRight) {
           return;
         }
-        if (var19Lifetime1 >> 4 >= qh.field_g &&
-          var22Lifetime1 >> 4 >= qh.field_g &&
-          var17Lifetime1 >> 4 >= qh.field_g &&
-          var15Lifetime1 >> 4 >= qh.field_g) {
+        if (var19Lifetime1 >> 4 >= SoftwareRasterizer.clipBottom &&
+          var22Lifetime1 >> 4 >= SoftwareRasterizer.clipBottom &&
+          var17Lifetime1 >> 4 >= SoftwareRasterizer.clipBottom &&
+          var15Lifetime1 >> 4 >= SoftwareRasterizer.clipBottom) {
           return;
         }
         if ((var18Lifetime1 > 16384 ||
@@ -620,17 +620,17 @@ abstract class oo {
         } else {
           var44 = var47Lifetime3;
         }
-        if (var42 < qh.field_b) {
-          var42 = qh.field_b;
+        if (var42 < SoftwareRasterizer.clipLeft) {
+          var42 = SoftwareRasterizer.clipLeft;
         }
-        if (var43 > qh.field_j) {
-          var43 = qh.field_j;
+        if (var43 > SoftwareRasterizer.clipRight) {
+          var43 = SoftwareRasterizer.clipRight;
         }
-        if (var44 < qh.field_c) {
-          var44 = qh.field_c;
+        if (var44 < SoftwareRasterizer.clipTop) {
+          var44 = SoftwareRasterizer.clipTop;
         }
-        if (var45 > qh.field_g) {
-          var45 = qh.field_g;
+        if (var45 > SoftwareRasterizer.clipBottom) {
+          var45 = SoftwareRasterizer.clipBottom;
         }
         for (var46Lifetime4 = var44; var46Lifetime4 < var45; var46Lifetime4++) {
           var47Lifetime4 = (var46Lifetime4 << 4) - var22Lifetime1;
@@ -654,10 +654,10 @@ abstract class oo {
                 var58 = 0;
               }
               if (var58 < 256) {
-                var59 = qh.field_d[var51 + var52];
+                var59 = SoftwareRasterizer.pixels[var51 + var52];
                 var60 = (var59 & 65280) * var58 >> 8 & 65280;
                 var59 = (var59 & 16711935) * var58 >> 8 & 16711935;
-                qh.field_d[var51 + var52] = var59 | var60;
+                SoftwareRasterizer.pixels[var51 + var52] = var59 | var60;
               }
             }
           }
@@ -1347,9 +1347,9 @@ abstract class oo {
         if (this.field_m <= 0) {
           this.field_m = 1;
         }
-        fb.field_p = this.field_z;
+        TriangleRasterizer.field_p = this.field_z;
         this.field_t = 132072 / (3 * this.field_m);
-        fb.b(this.field_z);
+        TriangleRasterizer.b(this.field_z);
     }
 
     private final void a(bf[] param0, int param1) {

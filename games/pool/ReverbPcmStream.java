@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl extends PcmStream {
+final class ReverbPcmStream extends PcmStream {
     private int[] field_u;
-    private float field_q;
-    private PcmStream field_A;
-    private float field_s;
-    private float field_y;
+    private float crossChannelGain;
+    private PcmStream inputStream;
+    private float dampingStep;
+    private float dampingTimeMicros;
     private float field_v;
-    private float field_r;
-    private float field_w;
+    private float sameChannelGain;
+    private float wetGain;
     private qc[] field_t;
     private float field_z;
-    private float field_C;
+    private float stereoWidth;
     private qc[] field_x;
     private go[] field_E;
     private float field_p;
@@ -26,15 +26,15 @@ final class gl extends PcmStream {
         return 8;
     }
 
-    final synchronized void c(float param0) {
-        this.field_C = param0;
-        this.field_r = (float)((double)this.field_w * Math.sqrt((double)(1.0f + this.field_C) * 0.5));
-        this.field_q = (float)((double)this.field_w * Math.sqrt((double)(1.0f - this.field_C) * 0.5));
+    final synchronized void setStereoWidth(float width) {
+        this.stereoWidth = width;
+        this.sameChannelGain = (float)((double)this.wetGain * Math.sqrt((double)(1.0f + this.stereoWidth) * 0.5));
+        this.crossChannelGain = (float)((double)this.wetGain * Math.sqrt((double)(1.0f - this.stereoWidth) * 0.5));
     }
 
-    final synchronized void a(int param0) {
-        if (this.field_A != null) {
-          this.field_A.a(param0);
+    final synchronized void skip(int length) {
+        if (this.inputStream != null) {
+          this.inputStream.skip(length);
         }
     }
 
@@ -43,7 +43,7 @@ final class gl extends PcmStream {
     }
 
     final PcmStream a() {
-        return this.field_A;
+        return this.inputStream;
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
@@ -102,22 +102,22 @@ final class gl extends PcmStream {
           if (var4 > 256) {
             var4 = 256;
           }
-          if (this.field_A != null) {
-            this.field_A.a(this.field_u, 0, var4);
+          if (this.inputStream != null) {
+            this.inputStream.a(this.field_u, 0, var4);
           }
           var5 = 0;
           for (var6 = 0; var6 < 8; var6++) {
-            var5 = gl.a(var5, this.field_x[var6].field_c, this.field_x[var6].field_a, var4);
+            var5 = ReverbPcmStream.a(var5, this.field_x[var6].field_c, this.field_x[var6].field_a, var4);
           }
           for (var6Lifetime1 = 0; var6Lifetime1 < 4; var6Lifetime1++) {
-            var5 = gl.a(var5, this.field_E[var6Lifetime1].field_a, this.field_E[var6Lifetime1].field_b, var4);
+            var5 = ReverbPcmStream.a(var5, this.field_E[var6Lifetime1].field_a, this.field_E[var6Lifetime1].field_b, var4);
           }
-          if (bp.field_r) {
+          if (AudioOutput.stereo) {
             for (var6Lifetime2 = 0; var6Lifetime2 < 8; var6Lifetime2++) {
-              var5 = gl.a(var5, this.field_t[var6Lifetime2].field_c, this.field_t[var6Lifetime2].field_a, var4);
+              var5 = ReverbPcmStream.a(var5, this.field_t[var6Lifetime2].field_c, this.field_t[var6Lifetime2].field_a, var4);
             }
             for (var6Lifetime2Lifetime1 = 0; var6Lifetime2Lifetime1 < 4; var6Lifetime2Lifetime1++) {
-              var5 = gl.a(var5, this.field_F[var6Lifetime2Lifetime1].field_a, this.field_F[var6Lifetime2Lifetime1].field_b, var4);
+              var5 = ReverbPcmStream.a(var5, this.field_F[var6Lifetime2Lifetime1].field_a, this.field_F[var6Lifetime2Lifetime1].field_b, var4);
             }
             var4 = var4 << 1;
             param1 = param1 << 1;
@@ -137,11 +137,11 @@ final class gl extends PcmStream {
             var5 = var5 >> 1;
           }
           var7Lifetime1 = (int)(this.field_z * 4096.0f);
-          var8 = (int)(this.field_s * 4096.0f);
+          var8 = (int)(this.dampingStep * 4096.0f);
           var9 = (int)(this.field_p * 4096.0f);
           var10 = (int)(this.field_v * 65536.0f);
-          if (!bp.field_r) {
-            var11 = (int)(this.field_w * 4096.0f);
+          if (!AudioOutput.stereo) {
+            var11 = (int)(this.wetGain * 4096.0f);
             for (var12 = 0; var12 < var4; var12++) {
               var13 = this.field_u[var12] >> var6Lifetime4;
               var14 = var13 * var10 >> 16;
@@ -182,8 +182,8 @@ final class gl extends PcmStream {
               }
             }
           } else {
-            var11 = (int)(this.field_r * 4096.0f);
-            var12 = (int)(this.field_q * 4096.0f);
+            var11 = (int)(this.sameChannelGain * 4096.0f);
+            var12 = (int)(this.crossChannelGain * 4096.0f);
             var13 = 0;
             {
               while (!(var13 >= var4)) {
@@ -267,16 +267,16 @@ final class gl extends PcmStream {
               }
             }
           }
-          if (this.field_A == null) {
+          if (this.inputStream == null) {
             continue;
           }
-          qn.a(this.field_u, 0, var4);
+          ArrayOperations.clearInts(this.field_u, 0, var4);
         }
     }
 
     private final void e() {
         int var1;
-        if (!bp.field_r) {
+        if (!AudioOutput.stereo) {
           if (this.field_t != null) {
             for (var1 = 0; var1 < 8; var1++) {
               this.field_x[var1].a();
@@ -297,37 +297,37 @@ final class gl extends PcmStream {
               this.field_E[var1].a();
             }
             this.field_t = new qc[8];
-            this.field_t[0] = new qc(1139 * bp.field_h / 44100);
-            this.field_t[1] = new qc(1211 * bp.field_h / 44100);
-            this.field_t[2] = new qc(1300 * bp.field_h / 44100);
-            this.field_t[3] = new qc(1379 * bp.field_h / 44100);
-            this.field_t[4] = new qc(1445 * bp.field_h / 44100);
-            this.field_t[5] = new qc(1514 * bp.field_h / 44100);
-            this.field_t[6] = new qc(1580 * bp.field_h / 44100);
-            this.field_t[7] = new qc(1640 * bp.field_h / 44100);
+            this.field_t[0] = new qc(1139 * AudioOutput.sampleRate / 44100);
+            this.field_t[1] = new qc(1211 * AudioOutput.sampleRate / 44100);
+            this.field_t[2] = new qc(1300 * AudioOutput.sampleRate / 44100);
+            this.field_t[3] = new qc(1379 * AudioOutput.sampleRate / 44100);
+            this.field_t[4] = new qc(1445 * AudioOutput.sampleRate / 44100);
+            this.field_t[5] = new qc(1514 * AudioOutput.sampleRate / 44100);
+            this.field_t[6] = new qc(1580 * AudioOutput.sampleRate / 44100);
+            this.field_t[7] = new qc(1640 * AudioOutput.sampleRate / 44100);
             this.field_F = new go[4];
-            this.field_F[0] = new go(579 * bp.field_h / 44100);
-            this.field_F[1] = new go(464 * bp.field_h / 44100);
-            this.field_F[2] = new go(364 * bp.field_h / 44100);
-            this.field_F[3] = new go(248 * bp.field_h / 44100);
+            this.field_F[0] = new go(579 * AudioOutput.sampleRate / 44100);
+            this.field_F[1] = new go(464 * AudioOutput.sampleRate / 44100);
+            this.field_F[2] = new go(364 * AudioOutput.sampleRate / 44100);
+            this.field_F[3] = new go(248 * AudioOutput.sampleRate / 44100);
             this.field_u = new int[512];
           }
         }
     }
 
-    final synchronized void e(float param0) {
-        this.field_w = param0;
-        this.field_r = (float)((double)this.field_w * Math.sqrt((double)(1.0f + this.field_C) * 0.5));
-        this.field_q = (float)((double)this.field_w * Math.sqrt((double)(1.0f - this.field_C) * 0.5));
+    final synchronized void setWetGain(float gain) {
+        this.wetGain = gain;
+        this.sameChannelGain = (float)((double)this.wetGain * Math.sqrt((double)(1.0f + this.stereoWidth) * 0.5));
+        this.crossChannelGain = (float)((double)this.wetGain * Math.sqrt((double)(1.0f - this.stereoWidth) * 0.5));
     }
 
     final PcmStream b() {
         return null;
     }
 
-    final synchronized void b(float param0) {
-        this.field_y = param0;
-        this.field_s = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_y * (float)bp.field_h));
+    final synchronized void setDampingTimeMicros(float halfLifeMicros) {
+        this.dampingTimeMicros = halfLifeMicros;
+        this.dampingStep = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.dampingTimeMicros * (float)AudioOutput.sampleRate));
     }
 
     private final static int a(int param0, int[] param1, int param2, int param3) {
@@ -356,31 +356,31 @@ final class gl extends PcmStream {
         this.field_p = param0;
     }
 
-    gl(PcmStream param0) {
+    ReverbPcmStream(PcmStream param0) {
         this.field_x = new qc[8];
-        this.field_x[0] = new qc(1116 * bp.field_h / 44100);
-        this.field_x[1] = new qc(1188 * bp.field_h / 44100);
-        this.field_x[2] = new qc(1277 * bp.field_h / 44100);
-        this.field_x[3] = new qc(1356 * bp.field_h / 44100);
-        this.field_x[4] = new qc(1422 * bp.field_h / 44100);
-        this.field_x[5] = new qc(1491 * bp.field_h / 44100);
-        this.field_x[6] = new qc(1557 * bp.field_h / 44100);
-        this.field_x[7] = new qc(1617 * bp.field_h / 44100);
+        this.field_x[0] = new qc(1116 * AudioOutput.sampleRate / 44100);
+        this.field_x[1] = new qc(1188 * AudioOutput.sampleRate / 44100);
+        this.field_x[2] = new qc(1277 * AudioOutput.sampleRate / 44100);
+        this.field_x[3] = new qc(1356 * AudioOutput.sampleRate / 44100);
+        this.field_x[4] = new qc(1422 * AudioOutput.sampleRate / 44100);
+        this.field_x[5] = new qc(1491 * AudioOutput.sampleRate / 44100);
+        this.field_x[6] = new qc(1557 * AudioOutput.sampleRate / 44100);
+        this.field_x[7] = new qc(1617 * AudioOutput.sampleRate / 44100);
         this.field_E = new go[4];
-        this.field_E[0] = new go(556 * bp.field_h / 44100);
-        this.field_E[1] = new go(441 * bp.field_h / 44100);
-        this.field_E[2] = new go(341 * bp.field_h / 44100);
-        this.field_E[3] = new go(225 * bp.field_h / 44100);
-        if (!bp.field_r) {
+        this.field_E[0] = new go(556 * AudioOutput.sampleRate / 44100);
+        this.field_E[1] = new go(441 * AudioOutput.sampleRate / 44100);
+        this.field_E[2] = new go(341 * AudioOutput.sampleRate / 44100);
+        this.field_E[3] = new go(225 * AudioOutput.sampleRate / 44100);
+        if (!AudioOutput.stereo) {
           this.field_u = new int[256];
         }
         this.e();
         this.a(0.04500000178813934f);
-        this.e(1.0f);
+        this.setWetGain(1.0f);
         this.f(0.8399999737739563f);
         this.d(1.0f);
-        this.b(7000.0f);
-        this.c(1.0f);
-        this.field_A = param0;
+        this.setDampingTimeMicros(7000.0f);
+        this.setStereoWidth(1.0f);
+        this.inputStream = param0;
     }
 }

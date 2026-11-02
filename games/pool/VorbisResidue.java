@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki {
+final class VorbisResidue {
     private int field_e;
     private int field_a;
     private int field_d;
@@ -24,7 +24,7 @@ final class ki {
         int var11;
         int var12;
         int var13;
-        h var14;
+        VorbisCodebook var14;
         int var15;
         int[] var19;
         int[] var22;
@@ -40,7 +40,7 @@ final class ki {
         if (param2) {
           return;
         }
-        var4Lifetime1 = gm.field_t[this.field_d].field_e;
+        var4Lifetime1 = VorbisSample.codebooks[this.field_d].field_e;
         var5 = this.field_a - this.field_c;
         var6 = var5 / this.field_f;
         var22 = new int[var6];
@@ -50,7 +50,7 @@ final class ki {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = gm.field_t[this.field_d].b();
+              var10 = VorbisSample.codebooks[this.field_d].decodeScalar();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.field_e;
@@ -65,11 +65,11 @@ final class ki {
               var12 = this.field_b[var11Lifetime1 * 8 + var8];
               if (var12 >= 0) {
                 var13 = this.field_c + var9 * this.field_f;
-                var14 = gm.field_t[var12];
+                var14 = VorbisSample.codebooks[var12];
                 if (this.field_g != 0) {
                   var15 = 0;
                   while (var15 < this.field_f) {
-                    var28 = var14.c();
+                    var28 = var14.decodeVector();
                     for (var17 = 0; var17 < var14.field_e; var17++) {
                       param0[var13 + var15] = param0[var13 + var15] + var28[var17];
                       var15++;
@@ -78,7 +78,7 @@ final class ki {
                 } else {
                   var15 = this.field_f / var14.field_e;
                   for (var16 = 0; var16 < var15; var16++) {
-                    var27 = var14.c();
+                    var27 = var14.decodeVector();
                     for (var18 = 0; var18 < var14.field_e; var18++) {
                       param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                     }
@@ -96,25 +96,25 @@ final class ki {
         return;
     }
 
-    ki() {
+    VorbisResidue() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_g = gm.a(16);
-        this.field_c = gm.a(24);
-        this.field_a = gm.a(24);
-        this.field_f = gm.a(24) + 1;
-        this.field_e = gm.a(6) + 1;
-        this.field_d = gm.a(8);
+        this.field_g = VorbisSample.readBits(16);
+        this.field_c = VorbisSample.readBits(24);
+        this.field_a = VorbisSample.readBits(24);
+        this.field_f = VorbisSample.readBits(24) + 1;
+        this.field_e = VorbisSample.readBits(6) + 1;
+        this.field_d = VorbisSample.readBits(8);
         int[] var1 = new int[this.field_e];
         for (var2 = 0; var2 < this.field_e; var2++) {
           var3 = 0;
-          var4 = gm.a(3);
-          var5 = gm.c() != 0 ? 1 : 0;
+          var4 = VorbisSample.readBits(3);
+          var5 = VorbisSample.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = gm.a(5);
+            var3 = VorbisSample.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class ki {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_e * 8) {
-          this.field_b[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? gm.a(8) : -1;
+          this.field_b[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisSample.readBits(8) : -1;
           var6++;
         }
     }

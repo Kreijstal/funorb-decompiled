@@ -17,28 +17,28 @@ final class wf {
           var9_int = -param5 + param6 + param3.field_G + param4;
           var10 = param3.field_G + (param6 - (-param4 - param7));
           var11 = param3.field_B - (-param8 - (param3.field_A >> 1));
-          qh.d(var9_int, 0, var10, var11 + param2);
-          param3.c(param6 - 1, -1 + param8, param1);
-          param3.c(-1 + param6, param8 + 1, param1);
+          SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param2);
+          param3.drawAdditive(param6 - 1, -1 + param8, param1);
+          param3.drawAdditive(-1 + param6, param8 + 1, param1);
           if (param0 > -9) {
             Sprite var12 = (Sprite) null;
             wf.a(39, -40, -90, (Sprite) null, 42, 37, -34, 83, 88);
           }
-          qh.b(ka.field_o);
-          qh.d(var9_int + 1, 0, var10 + 1, var11 + param2);
-          param3.c(param6 + 1, param8 - 1, param1);
-          param3.c(1 + param6, 1 + param8, param1);
-          qh.b(ka.field_o);
+          SoftwareRasterizer.restoreClip(ka.field_o);
+          SoftwareRasterizer.intersectClip(var9_int + 1, 0, var10 + 1, var11 + param2);
+          param3.drawAdditive(param6 + 1, param8 - 1, param1);
+          param3.drawAdditive(1 + param6, 1 + param8, param1);
+          SoftwareRasterizer.restoreClip(ka.field_o);
           var10Lifetime1 = -param5 + param6 + param3.field_G + (param3.field_z - param4);
           var9_intLifetime1 = param3.field_G - (-param3.field_z - param6 + (param4 + param7));
-          qh.d(var9_intLifetime1, var11 - param2, var10Lifetime1, 480);
-          param3.c(-1 + param6, param8 - 1, param1);
-          param3.c(param6 - 1, param8 + 1, param1);
-          qh.b(ka.field_o);
-          qh.d(1 + var9_intLifetime1, var11 - param2, var10Lifetime1 + 1, 480);
-          param3.c(param6 + 1, -1 + param8, param1);
-          param3.c(param6 + 1, 1 + param8, param1);
-          qh.b(ka.field_o);
+          SoftwareRasterizer.intersectClip(var9_intLifetime1, var11 - param2, var10Lifetime1, 480);
+          param3.drawAdditive(-1 + param6, param8 - 1, param1);
+          param3.drawAdditive(param6 - 1, param8 + 1, param1);
+          SoftwareRasterizer.restoreClip(ka.field_o);
+          SoftwareRasterizer.intersectClip(1 + var9_intLifetime1, var11 - param2, var10Lifetime1 + 1, 480);
+          param3.drawAdditive(param6 + 1, -1 + param8, param1);
+          param3.drawAdditive(param6 + 1, 1 + param8, param1);
+          SoftwareRasterizer.restoreClip(ka.field_o);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "wf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

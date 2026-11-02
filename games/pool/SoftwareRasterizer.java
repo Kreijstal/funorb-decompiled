@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh {
-    static int[] field_a;
-    static int[] field_d;
-    static int field_c;
-    static int[] field_k;
-    static int field_f;
-    static int field_j;
-    private static int[] field_i;
-    static int field_g;
-    private static int[] field_h;
-    static int field_l;
-    static int field_b;
-    private static int[] field_e;
+final class SoftwareRasterizer {
+    static int[] scanlineMaskWidths;
+    static int[] pixels;
+    static int clipTop;
+    static int[] scanlineMaskStarts;
+    static int height;
+    static int clipRight;
+    private static int[] blurColumnRedSums;
+    static int clipBottom;
+    private static int[] blurColumnBlueSums;
+    static int width;
+    static int clipLeft;
+    private static int[] blurColumnGreenSums;
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$7 = 0;
@@ -69,35 +69,35 @@ final class qh {
         int var21Lifetime1Lifetime1;
         int var21Lifetime1Lifetime2;
         int var21Lifetime1Lifetime3;
-        if (field_i == null ||
-          !(field_i.length >= param8)) {
-          field_i = new int[param8];
-          field_e = new int[param8];
-          field_h = new int[param8];
+        if (blurColumnRedSums == null ||
+          !(blurColumnRedSums.length >= param8)) {
+          blurColumnRedSums = new int[param8];
+          blurColumnGreenSums = new int[param8];
+          blurColumnBlueSums = new int[param8];
         }
-        var27 = field_i;
+        var27 = blurColumnRedSums;
         var24 = var27;
         var9 = var24;
-        var28 = field_e;
+        var28 = blurColumnGreenSums;
         var25 = var28;
         var10 = var25;
-        var29 = field_h;
+        var29 = blurColumnBlueSums;
         var26 = var29;
         var11 = var26;
-        qn.a(var27, 0, param8);
-        qn.a(var28, 0, param8);
-        qn.a(var29, 0, param8);
+        ArrayOperations.clearInts(var27, 0, param8);
+        ArrayOperations.clearInts(var28, 0, param8);
+        ArrayOperations.clearInts(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {
           var13 = 0;
         }
-        var14 = param7 + var13 * field_l;
+        var14 = param7 + var13 * width;
         var15 = param4 + param3;
         var16 = 0;
-        if (var15 >= field_f) {
-          var16 = var15 - field_f + 1;
-          var15 = field_f - 1;
+        if (var15 >= height) {
+          var16 = var15 - height + 1;
+          var15 = height - 1;
         }
         var17 = var15 - var13 + 1;
         while (var13 <= var15) {
@@ -110,7 +110,7 @@ final class qh {
           var14 = var14 + param6;
           var13++;
         }
-        var14 = var14 + var16 * field_l;
+        var14 = var14 + var16 * width;
         for (var18Lifetime1 = 0; var18Lifetime1 < param8; var18Lifetime1++) {
           incrementValue$7 = param2;
           param2++;
@@ -122,12 +122,12 @@ final class qh {
         if (0 < var18Lifetime2) {
           var18Lifetime2 = 0;
         }
-        var19 = param7 + (param4 - param3) * field_l;
+        var19 = param7 + (param4 - param3) * width;
         if (var13Lifetime1 < var18Lifetime2) {
-          var19 = var19 + (var18Lifetime2 - var13Lifetime1) * field_l;
+          var19 = var19 + (var18Lifetime2 - var13Lifetime1) * width;
         }
         while (var13Lifetime1 < var18Lifetime2) {
-          if (var13Lifetime1 + param4 + param5 + param3 < field_g) {
+          if (var13Lifetime1 + param4 + param5 + param3 < clipBottom) {
             for (var20 = 0; var20 < param8; var20++) {
               param1 = param0[var14++];
               var9[var20] = var9[var20] + (param1 >> 16 & 255);
@@ -137,7 +137,7 @@ final class qh {
             var14 = var14 + param6;
             var17++;
           } else {
-            var14 = var14 + field_l;
+            var14 = var14 + width;
           }
           for (var20Lifetime3 = 0; var20Lifetime3 < param8; var20Lifetime3++) {
             var21 = var27[var20Lifetime3] / var17;
@@ -150,7 +150,7 @@ final class qh {
           param2 = param2 + param6;
           var13Lifetime1++;
         }
-        var18Lifetime3 = field_f - param4 - param5 - param3;
+        var18Lifetime3 = height - param4 - param5 - param3;
         if (0 < var18Lifetime3) {
           var18Lifetime3 = 0;
         }
@@ -256,48 +256,48 @@ final class qh {
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
-        if (param0 < 0) {
-          param0 = 0;
+    final static void setClip(int left, int top, int right, int bottom) {
+        if (left < 0) {
+          left = 0;
         }
-        if (param1 < 0) {
-          param1 = 0;
+        if (top < 0) {
+          top = 0;
         }
-        if (param2 > field_l) {
-          param2 = field_l;
+        if (right > width) {
+          right = width;
         }
-        if (param3 > field_f) {
-          param3 = field_f;
+        if (bottom > height) {
+          bottom = height;
         }
-        field_b = param0;
-        field_c = param1;
-        field_j = param2;
-        field_g = param3;
-        qh.b();
+        clipLeft = left;
+        clipTop = top;
+        clipRight = right;
+        clipBottom = bottom;
+        SoftwareRasterizer.b();
     }
 
-    final static void b(int param0, int param1, int param2) {
+    final static void plotAdditive(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var4Lifetime1;
-        if (param0 >= field_b) {
-          if (param1 < field_c ||
-            param0 >= field_j ||
-            param1 >= field_g) {
+        if (param0 >= clipLeft) {
+          if (param1 < clipTop ||
+            param0 >= clipRight ||
+            param1 >= clipBottom) {
             return;
           }
-          var3 = param0 + param1 * field_l;
-          var4 = field_d[var3];
+          var3 = param0 + param1 * width;
+          var4 = pixels[var3];
           var5 = param2 + var4;
           param2 = (param2 & 16711935) + (var4 & 16711935);
           var4Lifetime1 = (param2 & 16777472) + (var5 - param2 & 65536);
-          field_d[var3] = var5 - var4Lifetime1 | var4Lifetime1 - (var4Lifetime1 >>> 8);
+          pixels[var3] = var5 - var4Lifetime1 | var4Lifetime1 - (var4Lifetime1 >>> 8);
           return;
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3) {
+    final static void grayscaleRectangle(int x, int y, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -306,50 +306,50 @@ final class qh {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$0 = 0;
-        if (param0 < field_b) {
-          param2 = param2 - (field_b - param0);
-          param0 = field_b;
+        if (x < clipLeft) {
+          param2 = param2 - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param0 + param2 > field_j) {
-          param2 = field_j - param0;
+        if (x + param2 > clipRight) {
+          param2 = clipRight - x;
         }
-        if (param1 < field_c) {
-          param3 = param3 - (field_c - param1);
-          param1 = field_c;
+        if (y < clipTop) {
+          param3 = param3 - (clipTop - y);
+          y = clipTop;
         }
-        if (param1 + param3 > field_g) {
-          param3 = field_g - param1;
+        if (y + param3 > clipBottom) {
+          param3 = clipBottom - y;
         }
-        int var4 = param0 + param1 * field_l;
+        int var4 = x + y * width;
         if (param2 > 0) {
           if (param3 <= 0) {
             return;
           }
           for (var5 = 0; var5 < param3; var5++) {
             for (var6 = 0; var6 < param2; var6++) {
-              var7 = field_d[var4];
+              var7 = pixels[var4];
               var8 = var7 >> 15 & 510;
               var9 = var7 >> 8 & 255;
               var10 = var7 & 255;
               var11 = (var10 + var8) / 3 + var9 >> 1;
               incrementValue$0 = var4;
               var4++;
-              field_d[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
+              pixels[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
             }
-            var4 = var4 + (field_l - param2);
+            var4 = var4 + (width - param2);
           }
           return;
         }
     }
 
-    final static void a(int[] param0, int param1, int param2) {
-        field_d = param0;
-        field_l = param1;
-        field_f = param2;
-        qh.c(0, 0, param1, param2);
+    final static void setTarget(int[] targetPixels, int targetWidth, int targetHeight) {
+        pixels = targetPixels;
+        width = targetWidth;
+        height = targetHeight;
+        SoftwareRasterizer.setClip(0, 0, targetWidth, targetHeight);
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void fillCircle(int centerX, int centerY, int radius, int color) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -376,47 +376,47 @@ final class qh {
         int var13Lifetime1;
         int var14Lifetime1;
         int var15Lifetime1;
-        if (param2 == 0) {
-          qh.a(param0, param1, param3);
+        if (radius == 0) {
+          SoftwareRasterizer.setPixel(centerX, centerY, color);
           return;
         }
-        if (param2 < 0) {
-          param2 = -param2;
+        if (radius < 0) {
+          radius = -radius;
         }
-        var4 = param1 - param2;
-        if (var4 < field_c) {
-          var4 = field_c;
+        var4 = centerY - radius;
+        if (var4 < clipTop) {
+          var4 = clipTop;
         }
-        var5 = param1 + param2 + 1;
-        if (var5 > field_g) {
-          var5 = field_g;
+        var5 = centerY + radius + 1;
+        if (var5 > clipBottom) {
+          var5 = clipBottom;
         }
         var6 = var4;
-        var7 = param2 * param2;
+        var7 = radius * radius;
         var8 = 0;
-        var9 = param1 - var6;
+        var9 = centerY - var6;
         var10 = var9 * var9;
         var11 = var10 - var9;
-        if (param1 > var5) {
-          param1 = var5;
+        if (centerY > var5) {
+          centerY = var5;
         }
-        while (var6 < param1) {
+        while (var6 < centerY) {
           while (true) {
             if (var11 > var7 &&
               var10 > var7) {
-              var12 = param0 - var8 + 1;
-              if (var12 < field_b) {
-                var12 = field_b;
+              var12 = centerX - var8 + 1;
+              if (var12 < clipLeft) {
+                var12 = clipLeft;
               }
-              var13 = param0 + var8;
-              if (var13 > field_j) {
-                var13 = field_j;
+              var13 = centerX + var8;
+              if (var13 > clipRight) {
+                var13 = clipRight;
               }
-              var14 = var12 + var6 * field_l;
+              var14 = var12 + var6 * width;
               for (var15 = var12; var15 < var13; var15++) {
                 incrementValue$4 = var14;
                 var14++;
-                field_d[incrementValue$4] = param3;
+                pixels[incrementValue$4] = color;
               }
               var6++;
               incrementValue$3 = var9;
@@ -431,8 +431,8 @@ final class qh {
             var11 = var11 + (incrementValue$5 + var8);
           }
         }
-        var8Lifetime1 = param2;
-        var9Lifetime1 = var6 - param1;
+        var8Lifetime1 = radius;
+        var9Lifetime1 = var6 - centerY;
         var11Lifetime1 = var9Lifetime1 * var9Lifetime1 + var7;
         var10Lifetime1 = var11Lifetime1 - var8Lifetime1;
         var11Lifetime1 = var11Lifetime1 - var9Lifetime1;
@@ -447,19 +447,19 @@ final class qh {
             }
             break;
           }
-          var12Lifetime1 = param0 - var8Lifetime1;
-          if (var12Lifetime1 < field_b) {
-            var12Lifetime1 = field_b;
+          var12Lifetime1 = centerX - var8Lifetime1;
+          if (var12Lifetime1 < clipLeft) {
+            var12Lifetime1 = clipLeft;
           }
-          var13Lifetime1 = param0 + var8Lifetime1;
-          if (var13Lifetime1 > field_j - 1) {
-            var13Lifetime1 = field_j - 1;
+          var13Lifetime1 = centerX + var8Lifetime1;
+          if (var13Lifetime1 > clipRight - 1) {
+            var13Lifetime1 = clipRight - 1;
           }
-          var14Lifetime1 = var12Lifetime1 + var6 * field_l;
+          var14Lifetime1 = var12Lifetime1 + var6 * width;
           for (var15Lifetime1 = var12Lifetime1; var15Lifetime1 <= var13Lifetime1; var15Lifetime1++) {
             incrementValue$2 = var14Lifetime1;
             var14Lifetime1++;
-            field_d[incrementValue$2] = param3;
+            pixels[incrementValue$2] = color;
           }
           var6++;
           var11Lifetime1 = var11Lifetime1 + (var9Lifetime1 + var9Lifetime1);
@@ -470,7 +470,7 @@ final class qh {
         return;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static void fillRoundedRectangle(int x, int y, int param2, int param3, int cornerRadius, int color) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$6 = 0;
@@ -508,26 +508,26 @@ final class qh {
         int var19Lifetime2;
         int var20Lifetime1;
         int var20Lifetime2;
-        if (param4 == 0) {
-          qh.f(param0, param1, param2, param3, param5);
+        if (cornerRadius == 0) {
+          SoftwareRasterizer.fillRectangle(x, y, param2, param3, color);
           return;
         }
-        if (param4 < 0) {
-          param4 = -param4;
+        if (cornerRadius < 0) {
+          cornerRadius = -cornerRadius;
         }
-        var6 = param0 + param4;
-        var7 = param1 + param4;
-        var8 = param1;
-        if (var8 < field_c) {
-          var8 = field_c;
+        var6 = x + cornerRadius;
+        var7 = y + cornerRadius;
+        var8 = y;
+        if (var8 < clipTop) {
+          var8 = clipTop;
         }
-        var9 = param1 + param3;
-        if (var9 > field_g) {
-          var9 = field_g;
+        var9 = y + param3;
+        if (var9 > clipBottom) {
+          var9 = clipBottom;
         }
-        var10 = param2 - param4 - param4 - 1;
+        var10 = param2 - cornerRadius - cornerRadius - 1;
         var11 = var8;
-        var12 = param4 * param4;
+        var12 = cornerRadius * cornerRadius;
         var13 = 0;
         var14 = var7 - var11;
         var15 = var14 * var14;
@@ -540,18 +540,18 @@ final class qh {
             if (var16 > var12 &&
               var15 > var12) {
               var17 = var6 - var13 + 1;
-              if (var17 < field_b) {
-                var17 = field_b;
+              if (var17 < clipLeft) {
+                var17 = clipLeft;
               }
               var18 = var6 + var10 + var13;
-              if (var18 > field_j) {
-                var18 = field_j;
+              if (var18 > clipRight) {
+                var18 = clipRight;
               }
-              var19 = var17 + var11 * field_l;
+              var19 = var17 + var11 * width;
               for (var20 = var17; var20 < var18; var20++) {
                 incrementValue$5 = var19;
                 var19++;
-                field_d[incrementValue$5] = param5;
+                pixels[incrementValue$5] = color;
               }
               var11++;
               incrementValue$4 = var14;
@@ -567,31 +567,31 @@ final class qh {
           }
         }
         var14Lifetime1 = var11 - var7;
-        var17Lifetime1 = param0;
-        if (var17Lifetime1 < field_b) {
-          var17Lifetime1 = field_b;
+        var17Lifetime1 = x;
+        if (var17Lifetime1 < clipLeft) {
+          var17Lifetime1 = clipLeft;
         }
-        var18Lifetime1 = param0 + param2;
-        if (var18Lifetime1 > field_j) {
-          var18Lifetime1 = field_j;
+        var18Lifetime1 = x + param2;
+        if (var18Lifetime1 > clipRight) {
+          var18Lifetime1 = clipRight;
         }
-        var19Lifetime1 = var17Lifetime1 + var11 * field_l;
-        var20Lifetime1 = field_l + var17Lifetime1 - var18Lifetime1;
-        var21 = param1 + param3 - param4 - 1;
-        if (var21 > field_g) {
-          var21 = field_g;
+        var19Lifetime1 = var17Lifetime1 + var11 * width;
+        var20Lifetime1 = width + var17Lifetime1 - var18Lifetime1;
+        var21 = y + param3 - cornerRadius - 1;
+        if (var21 > clipBottom) {
+          var21 = clipBottom;
         }
         while (var11 < var21) {
           for (var22 = var17Lifetime1; var22 < var18Lifetime1; var22++) {
             incrementValue$3 = var19Lifetime1;
             var19Lifetime1++;
-            field_d[incrementValue$3] = param5;
+            pixels[incrementValue$3] = color;
           }
           var11++;
           var19Lifetime1 = var19Lifetime1 + var20Lifetime1;
         }
         var14Lifetime2 = 0;
-        var13Lifetime1 = param4;
+        var13Lifetime1 = cornerRadius;
         var16Lifetime1 = var14Lifetime2 * var14Lifetime2 + var12;
         var15Lifetime1 = var16Lifetime1 - var13Lifetime1;
         var16Lifetime1 = var16Lifetime1 - var14Lifetime2;
@@ -607,18 +607,18 @@ final class qh {
             break;
           }
           var17Lifetime2 = var6 - var13Lifetime1;
-          if (var17Lifetime2 < field_b) {
-            var17Lifetime2 = field_b;
+          if (var17Lifetime2 < clipLeft) {
+            var17Lifetime2 = clipLeft;
           }
           var18Lifetime2 = var6 + var10 + var13Lifetime1;
-          if (var18Lifetime2 > field_j - 1) {
-            var18Lifetime2 = field_j - 1;
+          if (var18Lifetime2 > clipRight - 1) {
+            var18Lifetime2 = clipRight - 1;
           }
-          var19Lifetime2 = var17Lifetime2 + var11 * field_l;
+          var19Lifetime2 = var17Lifetime2 + var11 * width;
           for (var20Lifetime2 = var17Lifetime2; var20Lifetime2 <= var18Lifetime2; var20Lifetime2++) {
             incrementValue$2 = var19Lifetime2;
             var19Lifetime2++;
-            field_d[incrementValue$2] = param5;
+            pixels[incrementValue$2] = color;
           }
           var11++;
           var16Lifetime1 = var16Lifetime1 + (var14Lifetime2 + var14Lifetime2);
@@ -693,15 +693,15 @@ final class qh {
         if (0 < var9) {
           var9 = 0;
         }
-        var10 = field_l - param4 - param5 - param3;
+        var10 = width - param4 - param5 - param3;
         if (0 < var10) {
           var10 = 0;
         }
         var11 = 0;
         var12 = param4 + param3 + 1;
-        if (field_l < var12) {
-          var11 = var12 - field_l;
-          var12 = field_l;
+        if (width < var12) {
+          var11 = var12 - width;
+          var12 = width;
         }
         for (var13 = -param7; var13 < 0; var13++) {
           var14 = 0;
@@ -731,7 +731,7 @@ final class qh {
           param0[incrementValue$0] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
           for (var19Lifetime1 = 1 - param5; var19Lifetime1 < var9; var19Lifetime1++) {
             var18++;
-            if (param4 + param5 + var19Lifetime1 + param3 < field_j) {
+            if (param4 + param5 + var19Lifetime1 + param3 < clipRight) {
               param1 = param0[var17];
               var17++;
               var14 = var14 + (param1 >> 16 & 255);
@@ -821,7 +821,7 @@ final class qh {
         }
     }
 
-    final static void g(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawVerticalLineAlpha(int x, int y, int length, int color, int alpha256) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -832,45 +832,45 @@ final class qh {
         int var10 = 0;
         int var11 = 0;
         int var14 = 0;
-        if (param0 >= field_b) {
-          if (param0 >= field_j) {
+        if (x >= clipLeft) {
+          if (x >= clipRight) {
             return;
           }
-          if (param1 < field_c) {
-            param2 = param2 - (field_c - param1);
-            param1 = field_c;
+          if (y < clipTop) {
+            length = length - (clipTop - y);
+            y = clipTop;
           }
-          if (param1 + param2 > field_g) {
-            param2 = field_g - param1;
+          if (y + length > clipBottom) {
+            length = clipBottom - y;
           }
-          var5 = 256 - param4;
-          var6 = (param3 >> 16 & 255) * param4;
-          var7 = (param3 >> 8 & 255) * param4;
-          var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * field_l;
-          for (var13 = 0; var13 < param2; var13++) {
-            var9 = (field_d[var12] >> 16 & 255) * var5;
-            var10 = (field_d[var12] >> 8 & 255) * var5;
-            var11 = (field_d[var12] & 255) * var5;
+          var5 = 256 - alpha256;
+          var6 = (color >> 16 & 255) * alpha256;
+          var7 = (color >> 8 & 255) * alpha256;
+          var8 = (color & 255) * alpha256;
+          var12 = x + y * width;
+          for (var13 = 0; var13 < length; var13++) {
+            var9 = (pixels[var12] >> 16 & 255) * var5;
+            var10 = (pixels[var12] >> 8 & 255) * var5;
+            var11 = (pixels[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-            field_d[var12] = var14;
-            var12 = var12 + field_l;
+            pixels[var12] = var14;
+            var12 = var12 + width;
           }
           return;
         }
     }
 
     private final static void b() {
-        field_k = null;
-        field_a = null;
+        scanlineMaskStarts = null;
+        scanlineMaskWidths = null;
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
-        qh.a(field_d, 0, param2 + param3 * field_l, param0, param2, param4, field_l - param4, param5);
-        qh.a(field_d, 0, param2 + param3 * field_l, param1, param3, param5, field_l - param4, param2, param4);
+        SoftwareRasterizer.a(pixels, 0, param2 + param3 * width, param0, param2, param4, width - param4, param5);
+        SoftwareRasterizer.a(pixels, 0, param2 + param3 * width, param1, param3, param5, width - param4, param2, param4);
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleAlpha(int x, int y, int param2, int param3, int color, int alpha256) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;
@@ -878,69 +878,69 @@ final class qh {
         int var7;
         int var8;
         int var11;
-        if (param0 < field_b) {
-          param2 = param2 - (field_b - param0);
-          param0 = field_b;
+        if (x < clipLeft) {
+          param2 = param2 - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param1 < field_c) {
-          param3 = param3 - (field_c - param1);
-          param1 = field_c;
+        if (y < clipTop) {
+          param3 = param3 - (clipTop - y);
+          y = clipTop;
         }
-        if (param0 + param2 > field_j) {
-          param2 = field_j - param0;
+        if (x + param2 > clipRight) {
+          param2 = clipRight - x;
         }
-        if (param1 + param3 > field_g) {
-          param3 = field_g - param1;
+        if (y + param3 > clipBottom) {
+          param3 = clipBottom - y;
         }
-        param4 = ((param4 & 16711935) * param5 >> 8 & 16711935) + ((param4 & 65280) * param5 >> 8 & 65280);
-        var6 = 256 - param5;
-        var7 = field_l - param2;
-        var8 = param0 + param1 * field_l;
+        color = ((color & 16711935) * alpha256 >> 8 & 16711935) + ((color & 65280) * alpha256 >> 8 & 65280);
+        var6 = 256 - alpha256;
+        var7 = width - param2;
+        var8 = x + y * width;
         for (var9 = 0; var9 < param3; var9++) {
           for (var10 = -param2; var10 < 0; var10++) {
-            var11 = field_d[var8];
+            var11 = pixels[var8];
             var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
             incrementValue$0 = var8;
             var8++;
-            field_d[incrementValue$0] = param4 + var11;
+            pixels[incrementValue$0] = color + var11;
           }
           var8 = var8 + var7;
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3) {
-        if (field_b < param0) {
-          field_b = param0;
+    final static void intersectClip(int left, int top, int right, int bottom) {
+        if (clipLeft < left) {
+          clipLeft = left;
         }
-        if (field_c < param1) {
-          field_c = param1;
+        if (clipTop < top) {
+          clipTop = top;
         }
-        if (field_j > param2) {
-          field_j = param2;
+        if (clipRight > right) {
+          clipRight = right;
         }
-        if (field_g > param3) {
-          field_g = param3;
+        if (clipBottom > bottom) {
+          clipBottom = bottom;
         }
-        qh.b();
+        SoftwareRasterizer.b();
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
+    final static void drawHorizontalLine(int x, int y, int length, int color) {
         int var4 = 0;
         int var5 = 0;
-        if (param1 >= field_c) {
-          if (param1 >= field_g) {
+        if (y >= clipTop) {
+          if (y >= clipBottom) {
             return;
           }
-          if (param0 < field_b) {
-            param2 = param2 - (field_b - param0);
-            param0 = field_b;
+          if (x < clipLeft) {
+            length = length - (clipLeft - x);
+            x = clipLeft;
           }
-          if (param0 + param2 > field_j) {
-            param2 = field_j - param0;
+          if (x + length > clipRight) {
+            length = clipRight - x;
           }
-          var4 = param0 + param1 * field_l;
-          for (var5 = 0; var5 < param2; var5++) {
-            field_d[var4 + var5] = param3;
+          var4 = x + y * width;
+          for (var5 = 0; var5 < length; var5++) {
+            pixels[var4 + var5] = color;
           }
           return;
         }
@@ -989,11 +989,11 @@ final class qh {
         int var23Lifetime1;
         int var23Lifetime2;
         if (param6 == 256) {
-          qh.a(param0, param1, param2, param3, param4, param5);
+          SoftwareRasterizer.fillRoundedRectangle(param0, param1, param2, param3, param4, param5);
           return;
         }
         if (param4 == 0) {
-          qh.c(param0, param1, param2, param3, param5, param6);
+          SoftwareRasterizer.fillRectangleAlpha(param0, param1, param2, param3, param5, param6);
           return;
         }
         var7 = 256 - param6;
@@ -1004,12 +1004,12 @@ final class qh {
         var8 = param0 + param4;
         var9 = param1 + param4;
         var10 = param1;
-        if (var10 < field_c) {
-          var10 = field_c;
+        if (var10 < clipTop) {
+          var10 = clipTop;
         }
         var11 = param1 + param3;
-        if (var11 > field_g) {
-          var11 = field_g;
+        if (var11 > clipBottom) {
+          var11 = clipBottom;
         }
         var12 = param2 - param4 - param4 - 1;
         var13 = var10;
@@ -1026,20 +1026,20 @@ final class qh {
             if (var18 > var14 &&
               var17 > var14) {
               var19 = var8 - var15 + 1;
-              if (var19 < field_b) {
-                var19 = field_b;
+              if (var19 < clipLeft) {
+                var19 = clipLeft;
               }
               var20 = var8 + var12 + var15;
-              if (var20 > field_j) {
-                var20 = field_j;
+              if (var20 > clipRight) {
+                var20 = clipRight;
               }
-              var21 = var19 + var13 * field_l;
+              var21 = var19 + var13 * width;
               for (var22 = var19; var22 < var20; var22++) {
-                var23 = field_d[var21];
+                var23 = pixels[var21];
                 var23 = ((var23 & 16711935) * var7 >> 8 & 16711935) + ((var23 & 65280) * var7 >> 8 & 65280);
                 incrementValue$5 = var21;
                 var21++;
-                field_d[incrementValue$5] = param5 + var23;
+                pixels[incrementValue$5] = param5 + var23;
               }
               var13++;
               incrementValue$4 = var16;
@@ -1056,26 +1056,26 @@ final class qh {
         }
         var16Lifetime1 = var13 - var9;
         var19Lifetime1 = param0;
-        if (var19Lifetime1 < field_b) {
-          var19Lifetime1 = field_b;
+        if (var19Lifetime1 < clipLeft) {
+          var19Lifetime1 = clipLeft;
         }
         var20Lifetime1 = param0 + param2;
-        if (var20Lifetime1 > field_j) {
-          var20Lifetime1 = field_j;
+        if (var20Lifetime1 > clipRight) {
+          var20Lifetime1 = clipRight;
         }
-        var21Lifetime1 = var19Lifetime1 + var13 * field_l;
-        var22Lifetime1 = field_l + var19Lifetime1 - var20Lifetime1;
+        var21Lifetime1 = var19Lifetime1 + var13 * width;
+        var22Lifetime1 = width + var19Lifetime1 - var20Lifetime1;
         var23Lifetime1 = param1 + param3 - param4 - 1;
-        if (var23Lifetime1 > field_g) {
-          var23Lifetime1 = field_g;
+        if (var23Lifetime1 > clipBottom) {
+          var23Lifetime1 = clipBottom;
         }
         while (var13 < var23Lifetime1) {
           for (var24 = var19Lifetime1; var24 < var20Lifetime1; var24++) {
-            var25 = field_d[var21Lifetime1];
+            var25 = pixels[var21Lifetime1];
             var25 = ((var25 & 16711935) * var7 >> 8 & 16711935) + ((var25 & 65280) * var7 >> 8 & 65280);
             incrementValue$3 = var21Lifetime1;
             var21Lifetime1++;
-            field_d[incrementValue$3] = param5 + var25;
+            pixels[incrementValue$3] = param5 + var25;
           }
           var13++;
           var21Lifetime1 = var21Lifetime1 + var22Lifetime1;
@@ -1097,20 +1097,20 @@ final class qh {
             break;
           }
           var19Lifetime2 = var8 - var15Lifetime1;
-          if (var19Lifetime2 < field_b) {
-            var19Lifetime2 = field_b;
+          if (var19Lifetime2 < clipLeft) {
+            var19Lifetime2 = clipLeft;
           }
           var20Lifetime2 = var8 + var12 + var15Lifetime1;
-          if (var20Lifetime2 > field_j - 1) {
-            var20Lifetime2 = field_j - 1;
+          if (var20Lifetime2 > clipRight - 1) {
+            var20Lifetime2 = clipRight - 1;
           }
-          var21Lifetime2 = var19Lifetime2 + var13 * field_l;
+          var21Lifetime2 = var19Lifetime2 + var13 * width;
           for (var22Lifetime2 = var19Lifetime2; var22Lifetime2 <= var20Lifetime2; var22Lifetime2++) {
-            var23Lifetime2 = field_d[var21Lifetime2];
+            var23Lifetime2 = pixels[var21Lifetime2];
             var23Lifetime2 = ((var23Lifetime2 & 16711935) * var7 >> 8 & 16711935) + ((var23Lifetime2 & 65280) * var7 >> 8 & 65280);
             incrementValue$2 = var21Lifetime2;
             var21Lifetime2++;
-            field_d[incrementValue$2] = param5 + var23Lifetime2;
+            pixels[incrementValue$2] = param5 + var23Lifetime2;
           }
           var13++;
           var18Lifetime1 = var18Lifetime1 + (var16Lifetime2 + var16Lifetime2);
@@ -1121,27 +1121,27 @@ final class qh {
         return;
     }
 
-    final static void g(int param0, int param1, int param2, int param3) {
-        if (param0 < field_b) {
-          param2 = param2 - (field_b - param0);
-          param0 = field_b;
+    final static void darkenRectangle(int x, int y, int rectangleWidth, int rectangleHeight) {
+        if (x < clipLeft) {
+          rectangleWidth = rectangleWidth - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param1 < field_c) {
-          param3 = param3 - (field_c - param1);
-          param1 = field_c;
+        if (y < clipTop) {
+          rectangleHeight = rectangleHeight - (clipTop - y);
+          y = clipTop;
         }
-        if (param0 + param2 > field_j) {
-          param2 = field_j - param0;
+        if (x + rectangleWidth > clipRight) {
+          rectangleWidth = clipRight - x;
         }
-        if (param1 + param3 > field_g) {
-          param3 = field_g - param1;
+        if (y + rectangleHeight > clipBottom) {
+          rectangleHeight = clipBottom - y;
         }
-        int var4 = field_l - param2;
-        int var5 = param0 + param1 * field_l;
-        qh.a(var5, field_d, 0, param2, -param3, var4);
+        int var4 = width - rectangleWidth;
+        int var5 = x + y * width;
+        SoftwareRasterizer.a(var5, pixels, 0, rectangleWidth, -rectangleHeight, var4);
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
+    private final static void addRadialGlowScanlines(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
         int var18 = 0;
         while (param17 < 0) {
           param3 = param14;
@@ -1166,12 +1166,12 @@ final class qh {
         }
     }
 
-    final static void b(int[] param0) {
-        field_b = param0[0];
-        field_c = param0[1];
-        field_j = param0[2];
-        field_g = param0[3];
-        qh.b();
+    final static void restoreClip(int[] param0) {
+        clipLeft = param0[0];
+        clipTop = param0[1];
+        clipRight = param0[2];
+        clipBottom = param0[3];
+        SoftwareRasterizer.b();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -1217,7 +1217,7 @@ final class qh {
           return;
         }
         if (param4 == 256) {
-          qh.a(param0, param1, param2, param3);
+          SoftwareRasterizer.fillCircle(param0, param1, param2, param3);
           return;
         }
         if (param2 < 0) {
@@ -1228,12 +1228,12 @@ final class qh {
         var7 = (param3 >> 8 & 255) * param4;
         var8 = (param3 & 255) * param4;
         var12 = param1 - param2;
-        if (var12 < field_c) {
-          var12 = field_c;
+        if (var12 < clipTop) {
+          var12 = clipTop;
         }
         var13 = param1 + param2 + 1;
-        if (var13 > field_g) {
-          var13 = field_g;
+        if (var13 > clipBottom) {
+          var13 = clipBottom;
         }
         var14 = var12;
         var15 = param2 * param2;
@@ -1249,22 +1249,22 @@ final class qh {
             if (var19 > var15 &&
               var18 > var15) {
               var20 = param0 - var16 + 1;
-              if (var20 < field_b) {
-                var20 = field_b;
+              if (var20 < clipLeft) {
+                var20 = clipLeft;
               }
               var21 = param0 + var16;
-              if (var21 > field_j) {
-                var21 = field_j;
+              if (var21 > clipRight) {
+                var21 = clipRight;
               }
-              var22 = var20 + var14 * field_l;
+              var22 = var20 + var14 * width;
               for (var23 = var20; var23 < var21; var23++) {
-                var9 = (field_d[var22] >> 16 & 255) * var5;
-                var10 = (field_d[var22] >> 8 & 255) * var5;
-                var11 = (field_d[var22] & 255) * var5;
+                var9 = (pixels[var22] >> 16 & 255) * var5;
+                var10 = (pixels[var22] >> 8 & 255) * var5;
+                var11 = (pixels[var22] & 255) * var5;
                 var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
                 incrementValue$4 = var22;
                 var22++;
-                field_d[incrementValue$4] = var24;
+                pixels[incrementValue$4] = var24;
               }
               var14++;
               incrementValue$3 = var17;
@@ -1296,23 +1296,23 @@ final class qh {
             break;
           }
           var20Lifetime1 = param0 - var16Lifetime1;
-          if (var20Lifetime1 < field_b) {
-            var20Lifetime1 = field_b;
+          if (var20Lifetime1 < clipLeft) {
+            var20Lifetime1 = clipLeft;
           }
           var21Lifetime1 = param0 + var16Lifetime1;
-          if (var21Lifetime1 > field_j - 1) {
-            var21Lifetime1 = field_j - 1;
+          if (var21Lifetime1 > clipRight - 1) {
+            var21Lifetime1 = clipRight - 1;
           }
-          var25 = var20Lifetime1 + var14 * field_l;
+          var25 = var20Lifetime1 + var14 * width;
           var22Lifetime1 = var25;
           for (var23Lifetime1 = var20Lifetime1; var23Lifetime1 <= var21Lifetime1; var23Lifetime1++) {
-            var9Lifetime1 = (field_d[var25] >> 16 & 255) * var5;
-            var10Lifetime1 = (field_d[var25] >> 8 & 255) * var5;
-            var11Lifetime1 = (field_d[var25] & 255) * var5;
+            var9Lifetime1 = (pixels[var25] >> 16 & 255) * var5;
+            var10Lifetime1 = (pixels[var25] >> 8 & 255) * var5;
+            var11Lifetime1 = (pixels[var25] & 255) * var5;
             var24Lifetime1 = (var6 + var9Lifetime1 >> 8 << 16) + (var7 + var10Lifetime1 >> 8 << 8) + (var8 + var11Lifetime1 >> 8);
             incrementValue$2 = var25;
             var25++;
-            field_d[incrementValue$2] = var24Lifetime1;
+            pixels[incrementValue$2] = var24Lifetime1;
           }
           var14++;
           var19Lifetime1 = var19Lifetime1 + (var17 + var17);
@@ -1323,173 +1323,173 @@ final class qh {
         return;
     }
 
-    public static void a() {
-        field_d = null;
-        field_k = null;
-        field_a = null;
-        field_i = null;
-        field_e = null;
-        field_h = null;
+    public static void releaseStatics() {
+        pixels = null;
+        scanlineMaskStarts = null;
+        scanlineMaskWidths = null;
+        blurColumnRedSums = null;
+        blurColumnGreenSums = null;
+        blurColumnBlueSums = null;
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
+    final static void drawVerticalLine(int x, int y, int length, int color) {
         int var4 = 0;
         int var5 = 0;
-        if (param0 >= field_b) {
-          if (param0 >= field_j) {
+        if (x >= clipLeft) {
+          if (x >= clipRight) {
             return;
           }
-          if (param1 < field_c) {
-            param2 = param2 - (field_c - param1);
-            param1 = field_c;
+          if (y < clipTop) {
+            length = length - (clipTop - y);
+            y = clipTop;
           }
-          if (param1 + param2 > field_g) {
-            param2 = field_g - param1;
+          if (y + length > clipBottom) {
+            length = clipBottom - y;
           }
-          var4 = param0 + param1 * field_l;
+          var4 = x + y * width;
           var5 = 0;
-          while (var5 < param2) {
-            field_d[var4] = param3;
+          while (var5 < length) {
+            pixels[var4] = color;
             var5++;
-            var4 = var4 + field_l;
+            var4 = var4 + width;
           }
           return;
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        if (param0 >= field_b) {
-          if (param1 < field_c ||
-            param0 >= field_j ||
-            param1 >= field_g) {
+    final static void setPixel(int x, int y, int color) {
+        if (x >= clipLeft) {
+          if (y < clipTop ||
+            x >= clipRight ||
+            y >= clipBottom) {
             return;
           }
-          field_d[param0 + param1 * field_l] = param2;
+          pixels[x + y * width] = color;
           return;
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillRectangle(int x, int y, int param2, int param3, int color) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
-        if (param0 < field_b) {
-          param2 = param2 - (field_b - param0);
-          param0 = field_b;
+        if (x < clipLeft) {
+          param2 = param2 - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param1 < field_c) {
-          param3 = param3 - (field_c - param1);
-          param1 = field_c;
+        if (y < clipTop) {
+          param3 = param3 - (clipTop - y);
+          y = clipTop;
         }
-        if (param0 + param2 > field_j) {
-          param2 = field_j - param0;
+        if (x + param2 > clipRight) {
+          param2 = clipRight - x;
         }
-        if (param1 + param3 > field_g) {
-          param3 = field_g - param1;
+        if (y + param3 > clipBottom) {
+          param3 = clipBottom - y;
         }
-        int var5 = field_l - param2;
-        int var6 = param0 + param1 * field_l;
+        int var5 = width - param2;
+        int var6 = x + y * width;
         for (var7 = -param3; var7 < 0; var7++) {
           for (var8 = -param2; var8 < 0; var8++) {
             incrementValue$0 = var6;
             var6++;
-            field_d[incrementValue$0] = param4;
+            pixels[incrementValue$0] = color;
           }
           var6 = var6 + var5;
         }
     }
 
-    final static void a(int[] param0) {
-        param0[0] = field_b;
-        param0[1] = field_c;
-        param0[2] = field_j;
-        param0[3] = field_g;
+    final static void saveClip(int[] param0) {
+        param0[0] = clipLeft;
+        param0[1] = clipTop;
+        param0[2] = clipRight;
+        param0[3] = clipBottom;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
-        qh.f(param0, param1, param2, param4);
-        qh.f(param0, param1 + param3 - 1, param2, param4);
-        qh.b(param0, param1, param3, param4);
-        qh.b(param0 + param2 - 1, param1, param3, param4);
+    final static void drawRectangle(int x, int y, int param2, int param3, int color) {
+        SoftwareRasterizer.drawHorizontalLine(x, y, param2, color);
+        SoftwareRasterizer.drawHorizontalLine(x, y + param3 - 1, param2, color);
+        SoftwareRasterizer.drawVerticalLine(x, y, param3, color);
+        SoftwareRasterizer.drawVerticalLine(x + param2 - 1, y, param3, color);
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawLine(int x1, int y1, int x2, int y2, int color) {
         int var5;
         int var6;
         int var5Lifetime1;
         int var6Lifetime1;
-        param2 = param2 - param0;
-        param3 = param3 - param1;
-        if (param3 == 0) {
-          if (param2 < 0) {
-            qh.f(param0 + param2, param1, -param2 + 1, param4);
+        x2 = x2 - x1;
+        y2 = y2 - y1;
+        if (y2 == 0) {
+          if (x2 < 0) {
+            SoftwareRasterizer.drawHorizontalLine(x1 + x2, y1, -x2 + 1, color);
           } else {
-            qh.f(param0, param1, param2 + 1, param4);
+            SoftwareRasterizer.drawHorizontalLine(x1, y1, x2 + 1, color);
           }
           return;
         }
-        if (param2 == 0) {
-          if (param3 < 0) {
-            qh.b(param0, param1 + param3, -param3 + 1, param4);
+        if (x2 == 0) {
+          if (y2 < 0) {
+            SoftwareRasterizer.drawVerticalLine(x1, y1 + y2, -y2 + 1, color);
           } else {
-            qh.b(param0, param1, param3 + 1, param4);
+            SoftwareRasterizer.drawVerticalLine(x1, y1, y2 + 1, color);
           }
           return;
         }
-        if (param2 + param3 < 0) {
-          param0 = param0 + param2;
-          param2 = -param2;
-          param1 = param1 + param3;
-          param3 = -param3;
+        if (x2 + y2 < 0) {
+          x1 = x1 + x2;
+          x2 = -x2;
+          y1 = y1 + y2;
+          y2 = -y2;
         }
-        if (param2 <= param3) {
-          param0 = param0 << 16;
-          param0 = param0 + 32768;
-          param2 = param2 << 16;
-          var5 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
-          param3 = param3 + param1;
-          if (param1 < field_c) {
-            param0 = param0 + var5 * (field_c - param1);
-            param1 = field_c;
+        if (x2 <= y2) {
+          x1 = x1 << 16;
+          x1 = x1 + 32768;
+          x2 = x2 << 16;
+          var5 = (int)Math.floor((double)x2 / (double)y2 + 0.5);
+          y2 = y2 + y1;
+          if (y1 < clipTop) {
+            x1 = x1 + var5 * (clipTop - y1);
+            y1 = clipTop;
           }
-          if (param3 >= field_g) {
-            param3 = field_g - 1;
+          if (y2 >= clipBottom) {
+            y2 = clipBottom - 1;
           }
-          while (param1 <= param3) {
-            var6 = param0 >> 16;
-            if (var6 >= field_b &&
-              var6 < field_j) {
-              field_d[var6 + param1 * field_l] = param4;
+          while (y1 <= y2) {
+            var6 = x1 >> 16;
+            if (var6 >= clipLeft &&
+              var6 < clipRight) {
+              pixels[var6 + y1 * width] = color;
             }
-            param0 = param0 + var5;
-            param1++;
+            x1 = x1 + var5;
+            y1++;
           }
           return;
         }
-        param1 = param1 << 16;
-        param1 = param1 + 32768;
-        param3 = param3 << 16;
-        var5Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
-        param2 = param2 + param0;
-        if (param0 < field_b) {
-          param1 = param1 + var5Lifetime1 * (field_b - param0);
-          param0 = field_b;
+        y1 = y1 << 16;
+        y1 = y1 + 32768;
+        y2 = y2 << 16;
+        var5Lifetime1 = (int)Math.floor((double)y2 / (double)x2 + 0.5);
+        x2 = x2 + x1;
+        if (x1 < clipLeft) {
+          y1 = y1 + var5Lifetime1 * (clipLeft - x1);
+          x1 = clipLeft;
         }
-        if (param2 >= field_j) {
-          param2 = field_j - 1;
+        if (x2 >= clipRight) {
+          x2 = clipRight - 1;
         }
-        while (param0 <= param2) {
-          var6Lifetime1 = param1 >> 16;
-          if (var6Lifetime1 >= field_c &&
-            var6Lifetime1 < field_g) {
-            field_d[param0 + var6Lifetime1 * field_l] = param4;
+        while (x1 <= x2) {
+          var6Lifetime1 = y1 >> 16;
+          if (var6Lifetime1 >= clipTop &&
+            var6Lifetime1 < clipBottom) {
+            pixels[x1 + var6Lifetime1 * width] = color;
           }
-          param1 = param1 + var5Lifetime1;
-          param0++;
+          y1 = y1 + var5Lifetime1;
+          x1++;
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawLineBlendedInclusive(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6;
         int var7;
         int var8;
@@ -1512,17 +1512,17 @@ final class qh {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            qh.e(param0 + param2, param1, -param2 + 1, param4, param5);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param0 + param2, param1, -param2 + 1, param4, param5);
           } else {
-            qh.e(param0, param1, param2 + 1, param4, param5);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param0, param1, param2 + 1, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            qh.g(param0, param1 + param3, -param3 + 1, param4, param5);
+            SoftwareRasterizer.drawVerticalLineAlpha(param0, param1 + param3, -param3 + 1, param4, param5);
           } else {
-            qh.g(param0, param1, param3 + 1, param4, param5);
+            SoftwareRasterizer.drawVerticalLineAlpha(param0, param1, param3 + 1, param4, param5);
           }
           return;
         }
@@ -1542,23 +1542,23 @@ final class qh {
           param2 = param2 << 16;
           var10 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
           param3 = param3 + param1;
-          if (param1 < field_c) {
-            param0 = param0 + var10 * (field_c - param1);
-            param1 = field_c;
+          if (param1 < clipTop) {
+            param0 = param0 + var10 * (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param3 >= field_g) {
-            param3 = field_g - 1;
+          if (param3 >= clipBottom) {
+            param3 = clipBottom - 1;
           }
           while (param1 <= param3) {
             var11 = param0 >> 16;
-            if (var11 >= field_b &&
-              var11 < field_j) {
-              var12 = var11 + param1 * field_l;
-              var13 = (field_d[var12] >> 16 & 255) * var6;
-              var14 = (field_d[var12] >> 8 & 255) * var6;
-              var15 = (field_d[var12] & 255) * var6;
+            if (var11 >= clipLeft &&
+              var11 < clipRight) {
+              var12 = var11 + param1 * width;
+              var13 = (pixels[var12] >> 16 & 255) * var6;
+              var14 = (pixels[var12] >> 8 & 255) * var6;
+              var15 = (pixels[var12] & 255) * var6;
               var16 = (var7 + var13 >> 8 << 16) + (var8 + var14 >> 8 << 8) + (var9 + var15 >> 8);
-              field_d[var12] = var16;
+              pixels[var12] = var16;
             }
             param0 = param0 + var10;
             param1++;
@@ -1570,23 +1570,23 @@ final class qh {
         param3 = param3 << 16;
         var10Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
         param2 = param2 + param0;
-        if (param0 < field_b) {
-          param1 = param1 + var10Lifetime1 * (field_b - param0);
-          param0 = field_b;
+        if (param0 < clipLeft) {
+          param1 = param1 + var10Lifetime1 * (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param2 >= field_j) {
-          param2 = field_j - 1;
+        if (param2 >= clipRight) {
+          param2 = clipRight - 1;
         }
         while (param0 <= param2) {
           var11Lifetime1 = param1 >> 16;
-          if (var11Lifetime1 >= field_c &&
-            var11Lifetime1 < field_g) {
-            var12Lifetime1 = param0 + var11Lifetime1 * field_l;
-            var13Lifetime1 = (field_d[var12Lifetime1] >> 16 & 255) * var6;
-            var14Lifetime1 = (field_d[var12Lifetime1] >> 8 & 255) * var6;
-            var15Lifetime1 = (field_d[var12Lifetime1] & 255) * var6;
+          if (var11Lifetime1 >= clipTop &&
+            var11Lifetime1 < clipBottom) {
+            var12Lifetime1 = param0 + var11Lifetime1 * width;
+            var13Lifetime1 = (pixels[var12Lifetime1] >> 16 & 255) * var6;
+            var14Lifetime1 = (pixels[var12Lifetime1] >> 8 & 255) * var6;
+            var15Lifetime1 = (pixels[var12Lifetime1] & 255) * var6;
             var16Lifetime1 = (var7 + var13Lifetime1 >> 8 << 16) + (var8 + var14Lifetime1 >> 8 << 8) + (var9 + var15Lifetime1 >> 8);
-            field_d[var12Lifetime1] = var16Lifetime1;
+            pixels[var12Lifetime1] = var16Lifetime1;
           }
           param1 = param1 + var10Lifetime1;
           param0++;
@@ -1600,17 +1600,17 @@ final class qh {
         int var7 = param0 + param2 + 15 >> 4;
         int var8 = param1 - param2 >> 4;
         int var9 = param1 + param2 + 15 >> 4;
-        if (var6 < field_b) {
-          var6 = field_b;
+        if (var6 < clipLeft) {
+          var6 = clipLeft;
         }
-        if (var7 > field_j) {
-          var7 = field_j;
+        if (var7 > clipRight) {
+          var7 = clipRight;
         }
-        if (var8 < field_c) {
-          var8 = field_c;
+        if (var8 < clipTop) {
+          var8 = clipTop;
         }
-        if (var9 > field_g) {
-          var9 = field_g;
+        if (var9 > clipBottom) {
+          var9 = clipBottom;
         }
         int var10 = (var6 << 4) - param0;
         var10 = var10 * var10;
@@ -1630,20 +1630,20 @@ final class qh {
         int var19 = var17 - var16;
         int var20 = var18 - var17;
         int var21 = var20 - var19;
-        int var22 = var6 + var8 * field_l;
-        int var23 = field_l + var6 - var7;
-        qh.a(0, 0, 0, 0, 0, var15, var5, var22, field_d, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        int var22 = var6 + var8 * width;
+        int var23 = width + var6 - var7;
+        SoftwareRasterizer.addRadialGlowScanlines(0, 0, 0, 0, 0, var15, var5, var22, pixels, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
-    final static void c() {
-        field_b = 0;
-        field_c = 0;
-        field_j = field_l;
-        field_g = field_f;
-        qh.b();
+    final static void resetClip() {
+        clipLeft = 0;
+        clipTop = 0;
+        clipRight = width;
+        clipBottom = height;
+        SoftwareRasterizer.b();
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawHorizontalLineAlpha(int x, int y, int length, int color, int alpha256) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1655,30 +1655,30 @@ final class qh {
         int var11 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
-        if (param1 >= field_c) {
-          if (param1 >= field_g) {
+        if (y >= clipTop) {
+          if (y >= clipBottom) {
             return;
           }
-          if (param0 < field_b) {
-            param2 = param2 - (field_b - param0);
-            param0 = field_b;
+          if (x < clipLeft) {
+            length = length - (clipLeft - x);
+            x = clipLeft;
           }
-          if (param0 + param2 > field_j) {
-            param2 = field_j - param0;
+          if (x + length > clipRight) {
+            length = clipRight - x;
           }
-          var5 = 256 - param4;
-          var6 = (param3 >> 16 & 255) * param4;
-          var7 = (param3 >> 8 & 255) * param4;
-          var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * field_l;
-          for (var13 = 0; var13 < param2; var13++) {
-            var9 = (field_d[var12] >> 16 & 255) * var5;
-            var10 = (field_d[var12] >> 8 & 255) * var5;
-            var11 = (field_d[var12] & 255) * var5;
+          var5 = 256 - alpha256;
+          var6 = (color >> 16 & 255) * alpha256;
+          var7 = (color >> 8 & 255) * alpha256;
+          var8 = (color & 255) * alpha256;
+          var12 = x + y * width;
+          for (var13 = 0; var13 < length; var13++) {
+            var9 = (pixels[var12] >> 16 & 255) * var5;
+            var10 = (pixels[var12] >> 8 & 255) * var5;
+            var11 = (pixels[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
             incrementValue$0 = var12;
             var12++;
-            field_d[incrementValue$0] = var14;
+            pixels[incrementValue$0] = var14;
           }
           return;
         }
@@ -1689,12 +1689,12 @@ final class qh {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          qh.e(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          qh.g(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRasterizer.drawHorizontalLineAlpha(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRasterizer.drawVerticalLineAlpha(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
-    final static void d() {
+    final static void clear() {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1705,42 +1705,42 @@ final class qh {
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
         int var0 = 0;
-        int var1 = field_l * field_f - 7;
+        int var1 = width * height - 7;
         while (var0 < var1) {
           incrementValue$0 = var0;
           var0++;
-          field_d[incrementValue$0] = 0;
+          pixels[incrementValue$0] = 0;
           incrementValue$1 = var0;
           var0++;
-          field_d[incrementValue$1] = 0;
+          pixels[incrementValue$1] = 0;
           incrementValue$2 = var0;
           var0++;
-          field_d[incrementValue$2] = 0;
+          pixels[incrementValue$2] = 0;
           incrementValue$3 = var0;
           var0++;
-          field_d[incrementValue$3] = 0;
+          pixels[incrementValue$3] = 0;
           incrementValue$4 = var0;
           var0++;
-          field_d[incrementValue$4] = 0;
+          pixels[incrementValue$4] = 0;
           incrementValue$5 = var0;
           var0++;
-          field_d[incrementValue$5] = 0;
+          pixels[incrementValue$5] = 0;
           incrementValue$6 = var0;
           var0++;
-          field_d[incrementValue$6] = 0;
+          pixels[incrementValue$6] = 0;
           incrementValue$7 = var0;
           var0++;
-          field_d[incrementValue$7] = 0;
+          pixels[incrementValue$7] = 0;
         }
         var1 += 7;
         while (var0 < var1) {
           incrementValue$8 = var0;
           var0++;
-          field_d[incrementValue$8] = 0;
+          pixels[incrementValue$8] = 0;
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillVerticalGradient(int x, int y, int param2, int param3, int topColor, int bottomColor) {
         int var10 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
@@ -1753,31 +1753,31 @@ final class qh {
         int var13;
         var6 = 0;
         var7 = 65536 / param3;
-        if (param0 < field_b) {
-          param2 = param2 - (field_b - param0);
-          param0 = field_b;
+        if (x < clipLeft) {
+          param2 = param2 - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param1 < field_c) {
-          var6 = var6 + (field_c - param1) * var7;
-          param3 = param3 - (field_c - param1);
-          param1 = field_c;
+        if (y < clipTop) {
+          var6 = var6 + (clipTop - y) * var7;
+          param3 = param3 - (clipTop - y);
+          y = clipTop;
         }
-        if (param0 + param2 > field_j) {
-          param2 = field_j - param0;
+        if (x + param2 > clipRight) {
+          param2 = clipRight - x;
         }
-        if (param1 + param3 > field_g) {
-          param3 = field_g - param1;
+        if (y + param3 > clipBottom) {
+          param3 = clipBottom - y;
         }
-        var8 = field_l - param2;
-        var9 = param0 + param1 * field_l;
+        var8 = width - param2;
+        var9 = x + y * width;
         for (var10 = -param3; var10 < 0; var10++) {
           var11 = 65536 - var6 >> 8;
           var12 = var6 >> 8;
-          var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+          var13 = ((topColor & 16711935) * var11 + (bottomColor & 16711935) * var12 & -16711936) + ((topColor & 65280) * var11 + (bottomColor & 65280) * var12 & 16711680) >>> 8;
           for (var14 = -param2; var14 < 0; var14++) {
             incrementValue$0 = var9;
             var9++;
-            field_d[incrementValue$0] = var13;
+            pixels[incrementValue$0] = var13;
           }
           var9 = var9 + var8;
           var6 = var6 + var7;
@@ -1785,9 +1785,9 @@ final class qh {
     }
 
     static {
-        field_c = 0;
-        field_g = 0;
-        field_j = 0;
-        field_b = 0;
+        clipTop = 0;
+        clipBottom = 0;
+        clipRight = 0;
+        clipLeft = 0;
     }
 }

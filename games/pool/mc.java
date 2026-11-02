@@ -6,7 +6,7 @@ final class mc extends sq {
     static int field_l;
     static kf[] field_j;
     static Sprite field_k;
-    static kl field_e;
+    static PaletteBitmapFont field_e;
     static String field_i;
     static int field_g;
     static uo[][] field_f;
@@ -22,7 +22,7 @@ final class mc extends sq {
           kh.field_Vb.field_cb = 0;
           kh.field_Vb.field_gb = 320;
           kh.field_Vb.field_V = kh.field_Vb.field_F[3].field_z;
-          var1 = kh.field_Vb.field_I.b(kh.field_Vb.field_nb, -kh.field_Vb.field_F[3].field_z + (kh.field_Vb.field_gb - kh.field_Vb.field_F[5].field_z), 2 + kh.field_Vb.field_I.field_G);
+          var1 = kh.field_Vb.field_I.measureWrappedHeight(kh.field_Vb.field_nb, -kh.field_Vb.field_F[3].field_z + (kh.field_Vb.field_gb - kh.field_Vb.field_F[5].field_z), 2 + kh.field_Vb.field_I.baselineHeight);
           hk.field_t.field_gb = hk.field_t.field_I.b(hk.field_t.field_nb) + hk.field_t.field_F[3].field_z + hk.field_t.field_F[5].field_z;
           hk.field_t.field_qb = kh.field_Vb.field_F[3].field_z;
           hk.field_t.field_Db = 20;

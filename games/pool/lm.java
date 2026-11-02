@@ -13,17 +13,17 @@ final class lm extends tm {
           var1 = new Sprite(540, 140);
           int var2 = -31 / ((79 - param0) / 34);
           kj.a(62, var1);
-          fb.a();
-          qh.d();
+          TriangleRasterizer.useRasterClip();
+          SoftwareRasterizer.clear();
           im.field_fc = 0;
           gi.a(-21818);
           var3 = var1.d();
           for (var4 = 0; 15 > var4; var4++) {
             var3.f(-2, -2, 16777215);
-            qh.e(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.e(4, 4, 0, 0, 540, 140);
           }
           ci.field_h.e();
-          var1.b(0, 0);
+          var1.drawHalfSize(0, 0);
           oc.a(126);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "lm.E(" + param0 + ')');

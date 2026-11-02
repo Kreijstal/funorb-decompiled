@@ -13,7 +13,7 @@ abstract class SpriteState extends DualLinkNode {
     static vh field_F;
     int field_G;
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static void a(byte param0, int param1, int param2, int param3) {
         lq.field_V = param2;
@@ -42,7 +42,7 @@ abstract class SpriteState extends DualLinkNode {
         param4 = (var6 & 15) + (param4 << 4);
         int var7 = this.field_y << 3;
         param1 = (param1 << 4) + (15 & var7);
-        this.a(var6, var7, param4, param1, param0, param2);
+        this.rotateNearest(var6, var7, param4, param1, param0, param2);
     }
 
     final static void a(byte param0, boolean param1, byte[] param2, di param3, di param4, int param5, String[][] param6, int param7, di param8, String[] param9, Sprite[][] param10, String[][] param11, int[] param12, byte[] param13, Sprite[][] param14) {
@@ -75,7 +75,7 @@ abstract class SpriteState extends DualLinkNode {
           if (param0 != -72) {
             return;
           }
-          pm.a(param13, param2, param11, param8, param14, param5, (qb[]) null, (int[]) null, param10, param7, param9, param4, param1, param12, param3, param6, param0 ^ 6033);
+          pm.a(param13, param2, param11, param8, param14, param5, (IndexedSprite[]) null, (int[]) null, param10, param7, param9, param4, param1, param12, param3, param6, param0 ^ 6033);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -52,7 +52,7 @@ final class lg extends am {
             }
             return;
           }
-          qn.a(this.field_u, 0, param1.field_u, 0, 6);
+          ArrayOperations.copy(this.field_u, 0, param1.field_u, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -5,7 +5,7 @@ import java.io.*;
 
 final class de {
     static vh field_b;
-    static lr field_d;
+    static BitmapFont field_d;
     static String field_f;
     static String field_c;
     static String field_e;
@@ -178,17 +178,17 @@ final class de {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (!(param0 + param2 > qh.field_l)) {
+        if (!(param0 + param2 > SoftwareRasterizer.width)) {
           return param2;
         }
         if (param1 + param2 - param0 >= 0) {
           return param2 + (param1 - param0);
         }
         if (param3 == 0) {
-          return qh.field_l - param0;
+          return SoftwareRasterizer.width - param0;
         }
         field_f = (String) null;
-        return qh.field_l - param0;
+        return SoftwareRasterizer.width - param0;
     }
 
     static {

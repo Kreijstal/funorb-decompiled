@@ -47,7 +47,7 @@ final class ir {
             if (-1L != this.field_j &&
               ((long)this.field_k.length + this.field_j) < (this.field_f + (long)param0)) {
               var5_int = (int)(-this.field_f - (-this.field_j - (long)this.field_k.length));
-              qn.a(param1, param2, this.field_k, (int)(this.field_f - this.field_j), var5_int);
+              ArrayOperations.copy(param1, param2, this.field_k, (int)(this.field_f - this.field_j), var5_int);
               param0 = param0 - var5_int;
               this.field_f = this.field_f + (long)var5_int;
               param2 = param2 + var5_int;
@@ -61,7 +61,7 @@ final class ir {
               if (this.field_j == -1L) {
                 this.field_j = this.field_f;
               }
-              qn.a(param1, param2, this.field_k, (int)(-this.field_j + this.field_f), param0);
+              ArrayOperations.copy(param1, param2, this.field_k, (int)(-this.field_j + this.field_f), param0);
               this.field_f = this.field_f + (long)param0;
               if ((long)this.field_q < (this.field_f - this.field_j)) {
                 this.field_q = (int)(this.field_f - this.field_j);
@@ -100,7 +100,7 @@ final class ir {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(var7 - var5_long);
-              qn.a(param1, (int)((long)param2 + (var5_long - this.field_f)), this.field_c, (int)(-this.field_d + var5_long), var9);
+              ArrayOperations.copy(param1, (int)((long)param2 + (var5_long - this.field_f)), this.field_c, (int)(-this.field_d + var5_long), var9);
             }
             this.field_f = this.field_f + (long)param0;
             return;
@@ -226,7 +226,7 @@ final class ir {
             if (this.field_j != -1L &&
               this.field_j <= this.field_f &&
               ((long)param1 + this.field_f) <= ((long)this.field_q + this.field_j)) {
-              qn.a(this.field_k, (int)(-this.field_j + this.field_f), param3, param2, param1);
+              ArrayOperations.copy(this.field_k, (int)(-this.field_j + this.field_f), param3, param2, param1);
               this.field_f = this.field_f + (long)param1;
               return;
             }
@@ -239,7 +239,7 @@ final class ir {
               if (var9_int > param1) {
                 var9_int = param1;
               }
-              qn.a(this.field_c, (int)(-this.field_d + this.field_f), param3, param2, var9_int);
+              ArrayOperations.copy(this.field_c, (int)(-this.field_d + this.field_f), param3, param2, var9_int);
               param2 = param2 + var9_int;
               param1 = param1 - var9_int;
               this.field_f = this.field_f + (long)var9_int;
@@ -273,7 +273,7 @@ final class ir {
               if (var9_intLifetime1Lifetime1 > this.field_o) {
                 var9_intLifetime1Lifetime1 = this.field_o;
               }
-              qn.a(this.field_c, 0, param3, param2, var9_intLifetime1Lifetime1);
+              ArrayOperations.copy(this.field_c, 0, param3, param2, var9_intLifetime1Lifetime1);
               param1 = param1 - var9_intLifetime1Lifetime1;
               param2 = param2 + var9_intLifetime1Lifetime1;
               this.field_f = this.field_f + (long)var9_intLifetime1Lifetime1;
@@ -316,7 +316,7 @@ final class ir {
               if (var9 > -1L &&
                 var9 < var11) {
                 var13 = (int)(-var9 + var11);
-                qn.a(this.field_k, (int)(-this.field_j + var9), param3, var7 + (int)(-var5_long + var9), var13);
+                ArrayOperations.copy(this.field_k, (int)(-this.field_j + var9), param3, var7 + (int)(-var5_long + var9), var13);
                 if (this.field_f < var11) {
                   param1 = (int)((long)param1 - (var11 - this.field_f));
                   this.field_f = var11;
@@ -413,7 +413,7 @@ final class ir {
           if (-1L < var2 &&
             var4 > var2) {
             var6 = (int)(var4 - var2);
-            qn.a(this.field_k, (int)(var2 - this.field_j), this.field_c, (int)(var2 - this.field_d), var6);
+            ArrayOperations.copy(this.field_k, (int)(var2 - this.field_j), this.field_c, (int)(var2 - this.field_d), var6);
           }
           this.field_q = 0;
           this.field_j = -1L;

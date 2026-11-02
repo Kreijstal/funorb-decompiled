@@ -140,26 +140,26 @@ final class bl {
           0 < this.field_f &&
           this.field_G > 0) {
           boolean decompiledFrameRemainder0 = true;
-          if ((!(this.field_o < qh.field_b) ||
-            !(this.field_C < qh.field_b) ||
-            !(this.field_n < qh.field_b) ||
-            !(qh.field_b > this.field_I)) &&
-            (decompiledFrameRemainder0 = !(this.field_o < qh.field_j)) &&
-            (decompiledFrameRemainder0 = !(this.field_C < qh.field_j)) &&
-            (decompiledFrameRemainder0 = !(this.field_n < qh.field_j))) {
-            decompiledFrameRemainder0 = !(this.field_I < qh.field_j);
+          if ((!(this.field_o < SoftwareRasterizer.clipLeft) ||
+            !(this.field_C < SoftwareRasterizer.clipLeft) ||
+            !(this.field_n < SoftwareRasterizer.clipLeft) ||
+            !(SoftwareRasterizer.clipLeft > this.field_I)) &&
+            (decompiledFrameRemainder0 = !(this.field_o < SoftwareRasterizer.clipRight)) &&
+            (decompiledFrameRemainder0 = !(this.field_C < SoftwareRasterizer.clipRight)) &&
+            (decompiledFrameRemainder0 = !(this.field_n < SoftwareRasterizer.clipRight))) {
+            decompiledFrameRemainder0 = !(this.field_I < SoftwareRasterizer.clipRight);
           }
           if (decompiledFrameRemainder0) {
-            if (qh.field_c > this.field_l &&
-              this.field_a < qh.field_c &&
-              this.field_q < qh.field_c &&
-              this.field_p < qh.field_c) {
+            if (SoftwareRasterizer.clipTop > this.field_l &&
+              this.field_a < SoftwareRasterizer.clipTop &&
+              this.field_q < SoftwareRasterizer.clipTop &&
+              this.field_p < SoftwareRasterizer.clipTop) {
               return;
             }
-            if (!(qh.field_g > this.field_l) &&
-              !(qh.field_g > this.field_a) &&
-              !(qh.field_g > this.field_q) &&
-              !(qh.field_g > this.field_p)) {
+            if (!(SoftwareRasterizer.clipBottom > this.field_l) &&
+              !(SoftwareRasterizer.clipBottom > this.field_a) &&
+              !(SoftwareRasterizer.clipBottom > this.field_q) &&
+              !(SoftwareRasterizer.clipBottom > this.field_p)) {
               return;
             }
           }
@@ -179,19 +179,19 @@ final class bl {
             var5 = 3 * (this.field_I - this.field_o) / 2 * this.field_y / 256;
             var6 = this.field_y * ((-this.field_l + this.field_p) * 3 / 2) / 256;
             var7 = (-this.field_y + 256 << 8) / 256;
-            qh.b(-var3 + this.field_o, this.field_l - var4, this.field_C - var3, this.field_a - var4, 10044586, var7);
-            qh.b(var3 + this.field_n, this.field_q + var4, var3 + this.field_I, this.field_p + var4, 10044586, var7);
-            qh.b(this.field_o - var3, -var4 + this.field_l, this.field_n - var3, this.field_q - var4, 10044586, var7);
-            qh.b(var3 + this.field_C, var4 + this.field_a, var3 + this.field_I, var4 + this.field_p, 10044586, var7);
-            qh.b(this.field_o - var5, this.field_l - var6, -var5 + this.field_C, -var6 + this.field_a, 10044586, var7);
-            qh.b(this.field_n + var5, var6 + this.field_q, var5 + this.field_I, var6 + this.field_p, 10044586, var7);
-            qh.b(this.field_o - var5, -var6 + this.field_l, this.field_n - var5, this.field_q - var6, 10044586, var7);
-            qh.b(var5 + this.field_C, var6 + this.field_a, this.field_I + var5, this.field_p + var6, 10044586, var7);
+            SoftwareRasterizer.drawLineBlendedInclusive(-var3 + this.field_o, this.field_l - var4, this.field_C - var3, this.field_a - var4, 10044586, var7);
+            SoftwareRasterizer.drawLineBlendedInclusive(var3 + this.field_n, this.field_q + var4, var3 + this.field_I, this.field_p + var4, 10044586, var7);
+            SoftwareRasterizer.drawLineBlendedInclusive(this.field_o - var3, -var4 + this.field_l, this.field_n - var3, this.field_q - var4, 10044586, var7);
+            SoftwareRasterizer.drawLineBlendedInclusive(var3 + this.field_C, var4 + this.field_a, var3 + this.field_I, var4 + this.field_p, 10044586, var7);
+            SoftwareRasterizer.drawLineBlendedInclusive(this.field_o - var5, this.field_l - var6, -var5 + this.field_C, -var6 + this.field_a, 10044586, var7);
+            SoftwareRasterizer.drawLineBlendedInclusive(this.field_n + var5, var6 + this.field_q, var5 + this.field_I, var6 + this.field_p, 10044586, var7);
+            SoftwareRasterizer.drawLineBlendedInclusive(this.field_o - var5, -var6 + this.field_l, this.field_n - var5, this.field_q - var6, 10044586, var7);
+            SoftwareRasterizer.drawLineBlendedInclusive(var5 + this.field_C, var6 + this.field_a, this.field_I + var5, this.field_p + var6, 10044586, var7);
           }
-          qh.d(this.field_o, this.field_l, this.field_C, this.field_a, var2);
-          qh.d(this.field_n, this.field_q, this.field_I, this.field_p, var2);
-          qh.d(this.field_o, this.field_l, this.field_n, this.field_q, var2);
-          qh.d(this.field_C, this.field_a, this.field_I, this.field_p, var2);
+          SoftwareRasterizer.drawLine(this.field_o, this.field_l, this.field_C, this.field_a, var2);
+          SoftwareRasterizer.drawLine(this.field_n, this.field_q, this.field_I, this.field_p, var2);
+          SoftwareRasterizer.drawLine(this.field_o, this.field_l, this.field_n, this.field_q, var2);
+          SoftwareRasterizer.drawLine(this.field_C, this.field_a, this.field_I, this.field_p, var2);
           if (param0 != 67) {
             var9 = (int[]) null;
             this.a(-121, (int[]) null);

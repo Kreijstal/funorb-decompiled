@@ -87,9 +87,9 @@ final class bk extends IntrusiveNode {
           }
           this.field_y = op.field_f;
           if (this.field_p.indexOf("<img=") == -1) {
-            this.field_y = sa.field_h.field_G;
+            this.field_y = sa.field_h.baselineHeight;
           }
-          this.field_t = sa.field_h.b(this.field_p, this.field_n, this.field_y);
+          this.field_t = sa.field_h.measureWrappedHeight(this.field_p, this.field_n, this.field_y);
           if (param0.field_d.field_e != this.next &&
             !pl.field_b.field_pb) {
             pl.field_b.field_pb = true;
@@ -126,8 +126,8 @@ final class bk extends IntrusiveNode {
           }
           this.field_z = new Sprite(al.field_k.field_gb, this.field_t + 10);
           this.field_z.e();
-          sa.field_h.a(nf.field_Z, bi.field_d);
-          sa.field_h.a(ef.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
+          sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
+          sa.field_h.drawParagraph(ef.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
           this.field_r = ug.a(new int[]{this.field_y}, this.field_n, this.field_p, 7, sa.field_h, true, 10);
           sh.field_P.b(15100);
           return;

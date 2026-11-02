@@ -61,11 +61,11 @@ final class fn extends vh {
         return true;
     }
 
-    final static an a(byte param0, byte[] param1) {
-        an var2 = null;
+    final static BinaryBitmapFont a(byte param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        an stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -73,9 +73,9 @@ final class fn extends vh {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (an) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new an(param1, el.field_I, ih.field_d, pd.field_a, rc.field_f, v.field_b);
+          var2 = new BinaryBitmapFont(param1, el.field_I, ih.field_d, pd.field_a, rc.field_f, v.field_b);
           sh.h(-1);
           if (param0 < 119) {
             fn.f(-82);
@@ -155,7 +155,7 @@ final class fn extends vh {
     final static void b(int param0, int param1) {
         int var2 = ir.field_h * ir.field_h;
         int var3 = -(param1 * param1) + var2;
-        ff.a(-24, qh.field_f - 120 + var3 * 120 / var2);
+        ff.a(-24, SoftwareRasterizer.height - 120 + var3 * 120 / var2);
         if (param0 == 5938) {
           return;
         }

@@ -6,7 +6,7 @@ final class hc {
         if (param0 != 2047) {
           return -81;
         }
-        return fb.field_j[2047 & param1];
+        return TriangleRasterizer.cosineTable[2047 & param1];
     }
 
     final static so a(eg param0, int[] param1, byte param2) {

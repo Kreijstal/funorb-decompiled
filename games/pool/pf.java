@@ -101,7 +101,7 @@ final class pf {
         }
     }
 
-    final static void a(int param0, int param1, int param2, lr param3, String param4) {
+    final static void a(int param0, int param1, int param2, BitmapFont param3, String param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -117,17 +117,17 @@ final class pf {
         int var8 = 0;
         try {
           var5_int = param3.b(param4);
-          var6 = param3.field_w + param3.field_L;
+          var6 = param3.maxDescent + param3.field_L;
           var7 = pa.field_H;
-          if (6 + var7 + var5_int > qh.field_l) {
-            var7 = -var5_int + qh.field_l - 6;
+          if (6 + var7 + var5_int > SoftwareRasterizer.width) {
+            var7 = -var5_int + SoftwareRasterizer.width - 6;
           }
           var8 = 32 + (-param3.field_L + pm.field_p);
-          if (qh.field_f < var8 + var6 + 6) {
-            var8 = -6 - var6 + qh.field_f;
+          if (SoftwareRasterizer.height < var8 + var6 + 6) {
+            var8 = -6 - var6 + SoftwareRasterizer.height;
           }
-          qh.b(var7, var8, var5_int + 6, var6 + 6, param1);
-          qh.f(1 + var7, var8 + 1, var5_int + param2, 4 + var6, param0);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5_int + 6, var6 + 6, param1);
+          SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5_int + param2, 4 + var6, param0);
           param3.d(param4, var7 + 3, param3.field_L + (var8 + 3), param1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -501,17 +501,17 @@ final class pf {
     }
 
     final void a(int param0, int param1, ei param2, lg param3, int param4) {
-        lr stackIn_25_0 = null;
+        BitmapFont stackIn_25_0 = null;
         String stackIn_25_1 = null;
         int stackIn_26_2 = 0;
-        lr stackIn_29_0;
+        BitmapFont stackIn_29_0;
         String stackIn_29_1;
         int stackIn_29_2;
         int stackIn_29_3;
-        lr stackIn_30_0 = null;
+        BitmapFont stackIn_30_0 = null;
         String stackIn_30_1 = null;
         int stackIn_30_4 = 0;
-        lr stackIn_33_0;
+        BitmapFont stackIn_33_0;
         String stackIn_33_1;
         int stackIn_33_2;
         int stackIn_33_3;
@@ -519,7 +519,7 @@ final class pf {
         int stackIn_33_5;
         int stackIn_33_6;
         int stackIn_33_7;
-        lr stackIn_34_0;
+        BitmapFont stackIn_34_0;
         String stackIn_34_1;
         int stackIn_34_2;
         int stackIn_34_8;
@@ -602,7 +602,7 @@ final class pf {
               stackIn_34_2 = stackIn_29_2;
               stackIn_34_8 = 256;
             }
-            ((lr) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2, stackIn_33_3, stackIn_33_4, stackIn_33_5, stackIn_33_6, stackIn_33_7, stackIn_34_8, param3.field_m, param3.field_p, param3.field_b);
+            ((BitmapFont) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2, stackIn_33_3, stackIn_33_4, stackIn_33_5, stackIn_33_6, stackIn_33_7, stackIn_34_8, param3.field_m, param3.field_p, param3.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -14,10 +14,10 @@ final class el extends ob {
         int[] stackIn_6_0 = null;
         int stackIn_37_0 = 0;
         int stackIn_41_0 = 0;
-        an stackIn_46_0 = null;
+        BinaryBitmapFont stackIn_46_0 = null;
         String stackIn_47_1 = null;
         int stackIn_56_0 = 0;
-        an stackIn_64_0 = null;
+        BinaryBitmapFont stackIn_64_0 = null;
         String stackIn_65_1 = null;
         int var2;
         int var3_int;
@@ -43,7 +43,7 @@ final class el extends ob {
         var2 = stackIn_3_0;
         var3_int = 60;
         var4 = 120;
-        nj.a(rm.field_g, (byte) 91, -(var3_int * 2) + qh.field_l, var3_int, var4, qh.field_f - 220);
+        nj.a(rm.field_g, (byte) 91, -(var3_int * 2) + SoftwareRasterizer.width, var3_int, var4, SoftwareRasterizer.height - 220);
         if (var2 != 0) {
           stackIn_6_0 = hp.field_c;
         } else {
@@ -71,20 +71,20 @@ final class el extends ob {
           var7 = this.g(-45, var6);
           var8 = this.d(var6, true);
           if (var6 == uk.field_j) {
-            td.field_g.e(var7 - var5, -var5 + var8);
+            td.field_g.drawQuarterSize(var7 - var5, -var5 + var8);
           } else {
             if (var6 == kh.field_Gc) {
-              te.field_n.e(-var5 + var7, var8 - var5);
+              te.field_n.drawQuarterSize(-var5 + var7, var8 - var5);
             }
           }
           regionExit1: {
             if (fe.a(var15, -13671, var6)) {
-              IsaacCipher.field_f[var6].e(var7, var8);
+              IsaacCipher.field_f[var6].drawQuarterSize(var7, var8);
             } else {
               if (var2 != 0) {
                 break regionExit1;
               }
-              tf.a(-17104, var6).e(var7, var8);
+              tf.a(-17104, var6).drawQuarterSize(var7, var8);
             }
             var4Lifetime1++;
             if (var4Lifetime1 % 10 == 0) {
@@ -95,7 +95,7 @@ final class el extends ob {
             }
           }
         }
-        nj.a(vk.field_y, (byte) -81, 500, -500 + qh.field_l >> 1, 205, 165);
+        nj.a(vk.field_y, (byte) -81, 500, -500 + SoftwareRasterizer.width >> 1, 205, 165);
         if (uk.field_j == -1) {
           stackIn_37_0 = kh.field_Gc;
         } else {
@@ -103,7 +103,7 @@ final class el extends ob {
         }
         var6Lifetime1 = stackIn_37_0;
         if (var6Lifetime1 != -1) {
-          ni.field_Z.d(md.field_a[var6Lifetime1], 225, ni.field_Z.field_C + 215, 16777215, -1);
+          ni.field_Z.d(md.field_a[var6Lifetime1], 225, ni.field_Z.maxAscent + 215, 16777215, -1);
           stackIn_41_0 = (!fe.a(var15, -13671, var6Lifetime1)) ? 0 : 1;
           var7Lifetime1 = stackIn_41_0;
           stackIn_46_0 = sa.field_h;
@@ -117,13 +117,13 @@ final class el extends ob {
               stackIn_47_1 = bc.field_g;
             }
           }
-          ((an) (Object) stackIn_46_0).d(stackIn_47_1, 225, sa.field_h.field_C + 240, 13412966, -1);
+          ((BinaryBitmapFont) (Object) stackIn_46_0).d(stackIn_47_1, 225, sa.field_h.maxAscent + 240, 13412966, -1);
           if (var7Lifetime1 != 0) {
             IsaacCipher.field_f[var6Lifetime1].c(85, 225);
           } else {
             tf.a(-17104, var6Lifetime1).c(85, 225);
           }
-          var8 = sa.field_h.field_G + 5;
+          var8 = sa.field_h.baselineHeight + 5;
           if (cj.field_fb[var6Lifetime1]) {
             stackIn_56_0 = (var7Lifetime1 != 0) ? 1 : 0;
           } else {
@@ -140,7 +140,7 @@ final class el extends ob {
               vm.field_g = ef.a("</col>", kc.field_d[var6Lifetime1], (byte) 4, "<col=aaaaff>");
               ao.field_Lb = ug.a(new int[]{var8}, 260, kc.field_d[var6Lifetime1], 260, sa.field_h, true, 225);
               uo.field_Qb = var6Lifetime1;
-              qi.field_b = sa.field_h.b(vm.field_g, 260, var8);
+              qi.field_b = sa.field_h.measureWrappedHeight(vm.field_g, 260, var8);
             }
           }
           stackIn_64_0 = sa.field_h;
@@ -149,28 +149,28 @@ final class el extends ob {
           } else {
             stackIn_65_1 = kb.field_c;
           }
-          ((an) (Object) stackIn_64_0).a(stackIn_65_1, 225, 260, 260, 70, 13421772, -1, 0, 1, var8);
-          sa.field_h.d(sd.field_W + ch.field_J[var6Lifetime1] * 100, 225, 340 + sa.field_h.field_C, 13421772, -1);
-          sa.field_h.d(ri.field_R, 345, sa.field_h.field_C + 340, 13421772, -1);
+          ((BinaryBitmapFont) (Object) stackIn_64_0).drawParagraph(stackIn_65_1, 225, 260, 260, 70, 13421772, -1, 0, 1, var8);
+          sa.field_h.d(sd.field_W + ch.field_J[var6Lifetime1] * 100, 225, 340 + sa.field_h.maxAscent, 13421772, -1);
+          sa.field_h.d(ri.field_R, 345, sa.field_h.maxAscent + 340, 13421772, -1);
           var10 = 345 + sa.field_h.b(ri.field_R);
-          var11 = (-dq.field_k.field_A + sa.field_h.field_w + sa.field_h.field_C >> 1) + 340;
+          var11 = (-dq.field_k.field_A + sa.field_h.maxDescent + sa.field_h.maxAscent >> 1) + 340;
           for (var12 = 0; ch.field_J[var6Lifetime1] > var12; var12++) {
             dq.field_k.c(var10, var11);
             var10 = var10 + dq.field_k.field_z / 3;
           }
         } else {
-          mc.field_e.b(fd.field_L, qh.field_l >> 1, 215 + mc.field_e.field_C, 4, -1);
+          mc.field_e.drawCentered(fd.field_L, SoftwareRasterizer.width >> 1, 215 + mc.field_e.maxAscent, 4, -1);
           if (hk.b(-107)) {
             var7Lifetime1 = 215 + this.field_x >> 1;
-            mc.field_e.a(ra.field_a, qh.field_l >> 2, -mc.field_e.field_G + var7Lifetime1, qh.field_l >> 1, 240, 4, -1, 0, 0, 0);
+            mc.field_e.drawParagraph(ra.field_a, SoftwareRasterizer.width >> 2, -mc.field_e.baselineHeight + var7Lifetime1, SoftwareRasterizer.width >> 1, 240, 4, -1, 0, 0, 0);
           }
         }
         if (this.field_B.field_e == 1) {
-          sa.field_h.a(ab.field_a, 220, 390, 360, 36, 15658734, -1, 1, 1, 0);
+          sa.field_h.drawParagraph(ab.field_a, 220, 390, 360, 36, 15658734, -1, 1, 1, 0);
         }
         var7Lifetime2 = dp.a(104);
         if (-1 != var7Lifetime2) {
-          qa.a((byte) 71, qh.field_l >> 1, sa.field_h, re.field_e[var7Lifetime2], 15658734, 4144959);
+          qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, re.field_e[var7Lifetime2], 15658734, 4144959);
           if (this.field_G != null) {
             this.field_G.a(15658734, 0, 128, -1, true, 70 - qi.field_b >> 1);
           }
@@ -218,7 +218,7 @@ final class el extends ob {
         if (param0 >= 0) {
           field_H = (int[]) null;
         }
-        return (-468 + qh.field_l >> 1) + (var3 < 13 ? param1 * 36 : -(pp.a(true) ? 18 : 0) + (param1 - 13) * 36);
+        return (-468 + SoftwareRasterizer.width >> 1) + (var3 < 13 ? param1 * 36 : -(pp.a(true) ? 18 : 0) + (param1 - 13) * 36);
     }
 
     final int d(int param0, int param1) {

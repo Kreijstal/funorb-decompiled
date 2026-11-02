@@ -90,75 +90,75 @@ final class rk {
             }
             var19 = var15;
             var20 = var16;
-            qh.a(mb.field_b);
+            SoftwareRasterizer.saveClip(mb.field_b);
             if (var19 > var20) {
               var20 = var9 * param5 / (var9 + var10) + param1;
               var19 = var9 * param5 / (var9 + var10) + param1;
             }
             if (null != param6[0]) {
-              qh.d(param3, param1, var17, var19);
+              SoftwareRasterizer.intersectClip(param3, param1, var17, var19);
               param6[0].a(param3, param1, param2);
-              qh.b(mb.field_b);
+              SoftwareRasterizer.restoreClip(mb.field_b);
             }
             if (null != param6[2]) {
-              qh.d(var18, param1, var11, var19);
+              SoftwareRasterizer.intersectClip(var18, param1, var11, var19);
               param6[2].a(var14, param1, param2);
-              qh.b(mb.field_b);
+              SoftwareRasterizer.restoreClip(mb.field_b);
             }
             if (param6[6] != null) {
-              qh.d(param3, var20, var17, var12);
+              SoftwareRasterizer.intersectClip(param3, var20, var17, var12);
               param6[6].a(param3, var16, param2);
-              qh.b(mb.field_b);
+              SoftwareRasterizer.restoreClip(mb.field_b);
             }
             if (param6[8] != null) {
-              qh.d(var18, var20, var11, var12);
+              SoftwareRasterizer.intersectClip(var18, var20, var11, var12);
               param6[8].a(var14, var16, param2);
-              qh.b(mb.field_b);
+              SoftwareRasterizer.restoreClip(mb.field_b);
             }
             if (param6[1] != null &&
               param6[1].field_w != 0) {
-              qh.d(var17, param1, var18, var19);
+              SoftwareRasterizer.intersectClip(var17, param1, var18, var19);
               for (var21 = var13; var21 < var14; var21 = var21 + param6[1].field_w) {
                 param6[1].a(var21, param1, param2);
               }
-              qh.b(mb.field_b);
+              SoftwareRasterizer.restoreClip(mb.field_b);
             }
             if (param6[7] != null &&
               0 != param6[7].field_w) {
-              qh.d(var17, var20, var18, var12);
+              SoftwareRasterizer.intersectClip(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param6[7].field_w) {
                 param6[7].a(var21Lifetime1, var16, param2);
               }
-              qh.b(mb.field_b);
+              SoftwareRasterizer.restoreClip(mb.field_b);
             }
             if (param6[3] != null &&
               0 != param6[3].field_y) {
-              qh.d(param3, var19, var17, var20);
+              SoftwareRasterizer.intersectClip(param3, var19, var17, var20);
               for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param6[3].field_y) {
                 param6[3].a(param3, var21Lifetime2, param2);
               }
-              qh.b(mb.field_b);
+              SoftwareRasterizer.restoreClip(mb.field_b);
             }
             if (param6[5] != null &&
               param6[5].field_y != 0) {
-              qh.d(var18, var19, var11, var20);
+              SoftwareRasterizer.intersectClip(var18, var19, var11, var20);
               for (var21Lifetime3 = var15; var16 > var21Lifetime3; var21Lifetime3 = var21Lifetime3 + param6[5].field_y) {
                 param6[5].a(var14, var21Lifetime3, param2);
               }
-              qh.b(mb.field_b);
+              SoftwareRasterizer.restoreClip(mb.field_b);
             }
             if (param6[4] != null &&
               0 != param6[4].field_w) {
               if (0 == param6[4].field_y) {
                 return;
               }
-              qh.d(var17, var19, var18, var20);
+              SoftwareRasterizer.intersectClip(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param6[4].field_y) {
                 for (var22 = var13; var22 < var14; var22 = var22 + param6[4].field_w) {
                   param6[4].a(var22, var21Lifetime4, param2);
                 }
               }
-              qh.b(mb.field_b);
+              SoftwareRasterizer.restoreClip(mb.field_b);
             }
             return;
           }
@@ -185,8 +185,8 @@ final class rk {
         RuntimeException var1 = null;
         try {
           de.a(-100);
-          var1_int = 4 + sa.field_h.field_w + sa.field_h.field_C;
-          qh.c(0, -var1_int + 376, 32 + aq.field_a.length * 32, var1_int + 112, 8421504, 127);
+          var1_int = 4 + sa.field_h.maxDescent + sa.field_h.maxAscent;
+          SoftwareRasterizer.fillRectangleAlpha(0, -var1_int + 376, 32 + aq.field_a.length * 32, var1_int + 112, 8421504, 127);
           var2 = 0;
           var3 = 56 / ((-35 - param0) / 33);
           while (var2 < aq.field_a.length) {
@@ -371,7 +371,7 @@ final class rk {
             if (ci.field_c == param2) {
               var21 += 42;
             }
-            var34 = lr.a(var12.field_ac.field_I, var33, var21);
+            var34 = BitmapFont.truncateText(var12.field_ac.field_I, var33, var21);
             var20 = var34;
             stackIn_62_0 = (var34.equals(var12.field_jc)) ? 0 : 1;
             var22 = stackIn_62_0;
@@ -477,7 +477,7 @@ final class rk {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_kc.field_I.b(var23, -kj.field_j + (var12.field_gb - kj.field_j));
+              var24_intLifetime1 = var12.field_kc.field_I.countWrappedLines(var23, -kj.field_j + (var12.field_gb - kj.field_j));
               var12.field_kc.field_Eb = var12.field_gc * 256 / mq.field_f;
               var12.field_kc.field_nb = var23;
               var12.field_kc.b(var19, 2147483647, kj.field_j, -(2 * kj.field_j) + var12.field_gb, ad.field_x * var24_intLifetime1);

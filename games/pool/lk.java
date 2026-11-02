@@ -27,10 +27,10 @@ final class lk extends IntrusiveNode {
 
     final void c(int param0) {
         int var2 = sa.field_h.b(this.field_x);
-        this.field_n = new Sprite(2 + var2, sa.field_h.field_C - (-sa.field_h.field_w - 2));
+        this.field_n = new Sprite(2 + var2, sa.field_h.maxAscent - (-sa.field_h.maxDescent - 2));
         this.field_n.e();
-        sa.field_h.a(nf.field_Z, bi.field_d);
-        sa.field_h.d(this.field_x, 1, 1 + sa.field_h.field_C, this.field_s, param0);
+        sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
+        sa.field_h.d(this.field_x, 1, 1 + sa.field_h.maxAscent, this.field_s, param0);
         sh.field_P.b(param0 ^ -15101);
         this.field_n.e((16711423 & this.field_s) >> 1);
     }

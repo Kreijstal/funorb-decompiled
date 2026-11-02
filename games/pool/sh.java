@@ -284,13 +284,13 @@ final class sh extends ud {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (param3 + (param1 + param0) <= qh.field_f) {
+        if (param3 + (param1 + param0) <= SoftwareRasterizer.height) {
           return param3 + param1;
         }
         if (~(-param0 + param1) <= param2) {
           return -param0 + param1;
         }
-        return qh.field_f - param0;
+        return SoftwareRasterizer.height - param0;
     }
 
     sh(ei param0) {

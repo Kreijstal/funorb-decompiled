@@ -15,13 +15,13 @@ abstract class PcmStream extends IntrusiveNode {
         if (this.field_l) {
           this.a(param0, param1, param2);
         } else {
-          this.a(param2);
+          this.skip(param2);
         }
     }
 
     abstract void a(int[] param0, int param1, int param2);
 
-    abstract void a(int param0);
+    abstract void skip(int length);
 
     abstract PcmStream b();
 

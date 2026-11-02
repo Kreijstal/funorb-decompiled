@@ -130,7 +130,7 @@ final class ka extends ig {
         if (param0 > -71) {
           field_r = 25;
           if (fm.field_H) {
-            qh.g(qh.field_b, qh.field_c, qh.field_j - qh.field_b, qh.field_g - qh.field_c);
+            SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
             e.field_a.a((byte) -79, false);
             return;
           }
@@ -139,7 +139,7 @@ final class ka extends ig {
         if (!fm.field_H) {
           return;
         }
-        qh.g(qh.field_b, qh.field_c, qh.field_j - qh.field_b, qh.field_g - qh.field_c);
+        SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
         e.field_a.a((byte) -79, false);
     }
 

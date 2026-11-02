@@ -85,7 +85,7 @@ final class cf {
 
     final static void a(int param0, di param1) {
         oo var10 = null;
-        qb var11 = null;
+        IndexedSprite var11 = null;
         int[] var25 = null;
         int[] var23 = null;
         int[] var13 = null;
@@ -119,7 +119,7 @@ final class cf {
         int incrementValue$14 = 0;
         Sprite[] var20 = null;
         int var4 = 0;
-        qb var21 = null;
+        IndexedSprite var21 = null;
         int var2_int = 0;
         int var9 = Pool.field_O;
         Sprite var8Lifetime1;
@@ -281,12 +281,12 @@ final class cf {
           lb.field_O = aj.a(0, "", param1, "hud_chat_tab_frame");
           dr.field_d = pf.a("", (byte) 95, "hud_chat_star", param1);
           var2_intLifetime4 = sa.field_h.b(ua.field_n);
-          ta.field_e = new Sprite(var2_intLifetime4, sa.field_h.field_C + sa.field_h.field_w + 1);
+          ta.field_e = new Sprite(var2_intLifetime4, sa.field_h.maxAscent + sa.field_h.maxDescent + 1);
           ta.field_e.e();
-          sa.field_h.d(ua.field_n, 0, sa.field_h.field_C, 16777215, 1);
+          sa.field_h.d(ua.field_n, 0, sa.field_h.maxAscent, 16777215, 1);
           jh.field_e = new Sprite(dr.field_d.field_z + ta.field_e.field_z + 2, ta.field_e.field_A);
           jh.field_e.e();
-          sa.field_h.d(ua.field_n, 0, sa.field_h.field_C, 16777215, 1);
+          sa.field_h.d(ua.field_n, 0, sa.field_h.maxAscent, 16777215, 1);
           dr.field_d.c(2 + var2_intLifetime4, jh.field_e.field_A - dr.field_d.field_A >> 1);
           sh.field_P.b(15100);
           wp.field_a = pf.a("", (byte) 60, "slider", param1);
@@ -319,7 +319,7 @@ final class cf {
             var21.field_b = var21.field_g;
             var21.field_h = var21.field_f;
             var21.field_d = 0;
-            bi.field_d[var4] = var21.field_b + sa.field_h.field_C - sa.field_h.field_w >> 1;
+            bi.field_d[var4] = var21.field_b + sa.field_h.maxAscent - sa.field_h.maxDescent >> 1;
             if (op.field_f < var21.field_g) {
               op.field_f = var21.field_g;
             }
@@ -342,7 +342,7 @@ final class cf {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        gm var9 = null;
+        VorbisSample var9 = null;
         int var10 = 0;
         PcmSample var8Lifetime1;
         try {
@@ -359,15 +359,15 @@ final class cf {
             return null;
           }
           var10 = -125 % ((param1 - 64) / 36);
-          var9 = (gm) (this.field_e.a(false, var6));
+          var9 = (VorbisSample) (this.field_e.a(false, var6));
           if (var9 == null) {
-            var9 = gm.a(this.field_d, param2, param3);
+            var9 = VorbisSample.a(this.field_d, param2, param3);
             if (var9 == null) {
               return null;
             }
             this.field_e.a((byte) -128, var9, var6);
           }
-          var8Lifetime1 = var9.a(param0);
+          var8Lifetime1 = var9.decodeToPcm(param0);
           if (var8Lifetime1 == null) {
             stackIn_14_0 = null;
             return (PcmSample) (stackIn_14_0);
@@ -395,7 +395,7 @@ final class cf {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        mi var9 = null;
+        SoundEffect var9 = null;
         PcmSample var10 = null;
         PcmSample stackIn_3_0 = null;
         Object stackIn_7_0 = null;
@@ -424,11 +424,11 @@ final class cf {
             stackIn_10_0 = (PcmSample) null;
             return stackIn_10_0;
           }
-          var9 = mi.a(this.field_h, param1, param2);
+          var9 = SoundEffect.a(this.field_h, param1, param2);
           if (var9 == null) {
             return null;
           }
-          var10 = var9.b();
+          var10 = var9.toPcmSample();
           var8Lifetime1 = var10;
           this.field_f.a((byte) -126, var8Lifetime1, var6);
           if (param3 != null) {

@@ -38,7 +38,7 @@ final class wm extends vh {
           if (param1 > -125) {
             wm.f((byte) -116);
           }
-          var6_int = param0.field_I.b(param0.field_nb, -(param0.field_tb * 2) + param4, param0.field_M);
+          var6_int = param0.field_I.measureWrappedHeight(param0.field_nb, -(param0.field_tb * 2) + param4, param0.field_M);
           param0.b(param2, 2147483647, 0, param4, var6_int);
           param3.a(-93, param0);
           param2 = param2 + (var6_int - 0);
@@ -368,7 +368,7 @@ final class wm extends vh {
           this.field_Tb.a(123, this.field_Mb);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Mb.field_I.b(this.field_Mb.field_nb, var15_int);
+          var17Lifetime1 = this.field_Mb.field_I.countWrappedLines(this.field_Mb.field_nb, var15_int);
           this.field_Mb.b(var16Lifetime1, 2147483647, 13, var15_int, ad.field_x * var17Lifetime1);
           var16Lifetime1 = var16Lifetime1 + ad.field_x * var17Lifetime1;
           this.field_Tb.b(24, 2147483647, 0, 13 + var15_int + 13, var16Lifetime1 + 10);

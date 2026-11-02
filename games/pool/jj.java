@@ -204,7 +204,7 @@ final class jj extends fm implements tb {
           if (param1 != 91) {
             field_S = (Sprite[]) null;
           }
-          qn.a(param0, 0, var3, 0, var2_int);
+          ArrayOperations.copy(param0, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -224,7 +224,7 @@ final class jj extends fm implements tb {
     final void a(int param0, byte param1, int param2, int param3) {
         int var5 = 17 % ((-42 - param1) / 53);
         super.a(param0, (byte) 110, param2, param3);
-        qk.field_a.d(bl.field_t, this.field_C + (param2 + 4), 4 + (param3 + this.field_D) + qk.field_a.field_C, 16777215, -1);
+        qk.field_a.d(bl.field_t, this.field_C + (param2 + 4), 4 + (param3 + this.field_D) + qk.field_a.maxAscent, 16777215, -1);
     }
 
     final void f(byte param0) {

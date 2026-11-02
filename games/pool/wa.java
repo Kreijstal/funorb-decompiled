@@ -33,10 +33,10 @@ final class wa extends tj {
 
     final void a(int param0, int param1, int param2) {
         super.a(param0, param1, param2);
-        bi.field_e.b(this.field_nb, param0 + (this.field_l >> 1), param1 + 103, 16777215, -1);
+        bi.field_e.drawCentered(this.field_nb, param0 + (this.field_l >> 1), param1 + 103, 16777215, -1);
         if (null != this.field_pb) {
-          qh.f(param0 + 20, -7 + (param1 + 120), 260, 8421504);
-          bi.field_e.a(this.field_pb, param0 + 20, 8 + (param1 + 120), 260, 100, 16777215, -1, 1, 0, bi.field_e.field_C);
+          SoftwareRasterizer.drawHorizontalLine(param0 + 20, -7 + (param1 + 120), 260, 8421504);
+          bi.field_e.drawParagraph(this.field_pb, param0 + 20, 8 + (param1 + 120), 260, 100, 16777215, -1, 1, 0, bi.field_e.maxAscent);
         }
     }
 
@@ -46,7 +46,7 @@ final class wa extends tj {
         try {
           this.field_pb = param1;
           if (null != this.field_pb) {
-            var3_int = bi.field_e.b(this.field_pb, 260, bi.field_e.field_C);
+            var3_int = bi.field_e.measureWrappedHeight(this.field_pb, 260, bi.field_e.maxAscent);
             this.b(150 + var3_int, 31936, 300);
           }
           this.field_kb = new gj(13, 50, 274, 30, 15, 2113632, 4210752);

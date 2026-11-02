@@ -33,12 +33,12 @@ final class hn {
         return kc.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + df.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final static wl a(di param0, String param1, String param2, int param3, di param4) {
+    final static AlphaFont a(di param0, String param1, String param2, int param3, di param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        wl stackIn_2_0 = null;
-        wl stackIn_4_0 = null;
+        AlphaFont stackIn_2_0 = null;
+        AlphaFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -51,7 +51,7 @@ final class hn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -25154) {
-            stackIn_2_0 = (wl) null;
+            stackIn_2_0 = (AlphaFont) null;
             return stackIn_2_0;
           }
           var5_int = param4.b(param1, -1);
@@ -113,38 +113,38 @@ final class hn {
             hn.a((di) null, (String) null, (String) null, 35, (di) null);
           }
           var1_int = 0;
-          var2 = -7 + qh.field_l * qh.field_f;
+          var2 = -7 + SoftwareRasterizer.width * SoftwareRasterizer.height;
           while (var1_int < var2) {
             incrementValue$11 = var1_int;
             var1_int++;
-            qh.field_d[incrementValue$11] = -1;
+            SoftwareRasterizer.pixels[incrementValue$11] = -1;
             incrementValue$12 = var1_int;
             var1_int++;
-            qh.field_d[incrementValue$12] = -1;
+            SoftwareRasterizer.pixels[incrementValue$12] = -1;
             incrementValue$13 = var1_int;
             var1_int++;
-            qh.field_d[incrementValue$13] = -1;
+            SoftwareRasterizer.pixels[incrementValue$13] = -1;
             incrementValue$14 = var1_int;
             var1_int++;
-            qh.field_d[incrementValue$14] = -1;
+            SoftwareRasterizer.pixels[incrementValue$14] = -1;
             incrementValue$15 = var1_int;
             var1_int++;
-            qh.field_d[incrementValue$15] = -1;
+            SoftwareRasterizer.pixels[incrementValue$15] = -1;
             incrementValue$16 = var1_int;
             var1_int++;
-            qh.field_d[incrementValue$16] = -1;
+            SoftwareRasterizer.pixels[incrementValue$16] = -1;
             incrementValue$17 = var1_int;
             var1_int++;
-            qh.field_d[incrementValue$17] = -1;
+            SoftwareRasterizer.pixels[incrementValue$17] = -1;
             incrementValue$18 = var1_int;
             var1_int++;
-            qh.field_d[incrementValue$18] = -1;
+            SoftwareRasterizer.pixels[incrementValue$18] = -1;
           }
           var2 += 7;
           while (var2 > var1_int) {
             incrementValue$10 = var1_int;
             var1_int++;
-            qh.field_d[incrementValue$10] = -1;
+            SoftwareRasterizer.pixels[incrementValue$10] = -1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

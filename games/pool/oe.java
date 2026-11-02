@@ -233,7 +233,7 @@ abstract class oe extends ch {
           ad.field_y = new Sprite(this.field_l, this.field_y);
         }
         kj.a(117, ad.field_y);
-        qh.d();
+        SoftwareRasterizer.clear();
         this.a(0, 0, 260);
         super.a(param0, (byte) 48, -this.field_C - param2, -this.field_D - param3);
         oc.a(117);

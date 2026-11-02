@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qk {
-    static lr field_a;
+    static BitmapFont field_a;
     static vh field_f;
     static volatile int field_g;
     static int field_d;

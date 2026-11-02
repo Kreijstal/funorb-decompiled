@@ -29,12 +29,12 @@ final class tc {
         int[] var4 = new int[this.a(param1, (byte) -41)];
         int[] var3 = var4;
         if (param0 == 28083) {
-          qn.a(this.field_e, 0, var4, 0, this.field_e.length);
+          ArrayOperations.copy(this.field_e, 0, var4, 0, this.field_e.length);
           this.field_e = var4;
           return;
         }
         this.field_b = -28;
-        qn.a(this.field_e, 0, var4, 0, this.field_e.length);
+        ArrayOperations.copy(this.field_e, 0, var4, 0, this.field_e.length);
         this.field_e = var4;
     }
 
@@ -71,7 +71,7 @@ final class tc {
           throw new ArrayIndexOutOfBoundsException(param0);
         }
         if (param0 != this.field_c) {
-          qn.a(this.field_e, param0 + 1, this.field_e, param0, -param0 + this.field_c);
+          ArrayOperations.copy(this.field_e, param0 + 1, this.field_e, param0, -param0 + this.field_c);
           if (param1 >= 16) {
             this.field_c = this.field_c - 1;
             return;

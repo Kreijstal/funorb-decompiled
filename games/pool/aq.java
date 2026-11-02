@@ -71,7 +71,7 @@ final class aq {
     }
 
     final static void b(int param0) {
-        of.field_Ob = -no.field_q.field_w + qh.field_l >> 1;
+        of.field_Ob = -no.field_q.field_w + SoftwareRasterizer.width >> 1;
         fm.field_M = -no.field_q.field_A;
         vk.field_H = of.field_Ob + 224;
         ac.b(param0, (byte) -94);

@@ -32,12 +32,12 @@ final class co extends eq {
           var12 = param5[4] * param1 + param9 * param5[3] + param7 * param5[5] >> 7;
           var13 = param7 * param5[8] + param1 * param5[7] + param5[6] * param9 >> 7;
           var14 = param5[4] * param8 + (param6 * param5[3] + param2 * param5[5]) >> 7;
-          var13 = fb.field_d + (qh.field_c + var13 / var10_int);
-          var12 = fb.field_q + (qh.field_b + var12 / var10_int);
+          var13 = TriangleRasterizer.projectionCenterY + (SoftwareRasterizer.clipTop + var13 / var10_int);
+          var12 = TriangleRasterizer.projectionCenterX + (SoftwareRasterizer.clipLeft + var12 / var10_int);
           var15 = param8 * param5[param0] + param6 * param5[6] + param2 * param5[8] >> 7;
-          var14 = var14 / var11 + fb.field_q + qh.field_b;
-          var15 = fb.field_d + qh.field_c + var15 / var11;
-          qh.b(var12, var13, var14, var15, param4, param3);
+          var14 = var14 / var11 + TriangleRasterizer.projectionCenterX + SoftwareRasterizer.clipLeft;
+          var15 = TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop + var15 / var11;
+          SoftwareRasterizer.drawLineBlendedInclusive(var12, var13, var14, var15, param4, param3);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "co.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
@@ -258,7 +258,7 @@ final class co extends eq {
           return;
         }
         try {
-          qk.field_a.b(param4, (param3.field_l >> 1) + param0 + param3.field_C, -5 + (param3.field_D + param1), 16777215, -1);
+          qk.field_a.drawCentered(param4, (param3.field_l >> 1) + param0 + param3.field_C, -5 + (param3.field_D + param1), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "co.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

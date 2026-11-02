@@ -150,30 +150,30 @@ final class hd extends ob {
         int[] var30 = null;
         var19 = Pool.field_O;
         try {
-          if (qh.field_b > param6) {
-            param5 = param5 - (-param6 + qh.field_b);
-            param6 = qh.field_b;
+          if (SoftwareRasterizer.clipLeft > param6) {
+            param5 = param5 - (-param6 + SoftwareRasterizer.clipLeft);
+            param6 = SoftwareRasterizer.clipLeft;
           }
-          if (qh.field_j < param6 + param5) {
-            param5 = qh.field_j - param6;
+          if (SoftwareRasterizer.clipRight < param6 + param5) {
+            param5 = SoftwareRasterizer.clipRight - param6;
           }
-          if (param7 < qh.field_c) {
-            param2 = param2 - (qh.field_c - param7);
-            param7 = qh.field_c;
+          if (param7 < SoftwareRasterizer.clipTop) {
+            param2 = param2 - (SoftwareRasterizer.clipTop - param7);
+            param7 = SoftwareRasterizer.clipTop;
           }
-          if (param2 + param7 > qh.field_g) {
-            param2 = qh.field_g - param7;
+          if (param2 + param7 > SoftwareRasterizer.clipBottom) {
+            param2 = SoftwareRasterizer.clipBottom - param7;
           }
           if (param5 > 0 &&
             0 < param2) {
             var21 = param3.d();
-            var30 = qh.field_d;
-            var10 = qh.field_l;
-            var11 = qh.field_f;
+            var30 = SoftwareRasterizer.pixels;
+            var10 = SoftwareRasterizer.width;
+            var11 = SoftwareRasterizer.height;
             var29 = new int[param4];
-            qh.a(var29);
+            SoftwareRasterizer.saveClip(var29);
             param3.e();
-            qh.d(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param6 + param3.field_z * param7;
             var14 = param3.field_z - param5;
             var25 = var21.field_D;
@@ -185,19 +185,19 @@ final class hd extends ob {
                 if (var18 != 0) {
                   if (var17 > 0 &&
                     0 == var15[-1 + var13]) {
-                    qh.a(var17, var16, param1, param0);
+                    SoftwareRasterizer.fillCircle(var17, var16, param1, param0);
                   } else {
                     if (var16 > 0 &&
                       var15[var13 - param3.field_z] == 0) {
-                      qh.a(var17, var16, param1, param0);
+                      SoftwareRasterizer.fillCircle(var17, var16, param1, param0);
                     } else {
                       if (var17 < param3.field_z - 1 &&
                         0 == var15[1 + var13]) {
-                        qh.a(var17, var16, param1, param0);
+                        SoftwareRasterizer.fillCircle(var17, var16, param1, param0);
                       } else {
                         if (var16 < param3.field_A - 1 &&
                           0 == var15[param3.field_z + var13]) {
-                          qh.a(var17, var16, param1, param0);
+                          SoftwareRasterizer.fillCircle(var17, var16, param1, param0);
                         }
                       }
                     }
@@ -208,8 +208,8 @@ final class hd extends ob {
               var13 = var13 + var14;
             }
             var21.c(-param3.field_G, -param3.field_B);
-            qh.a(var30, var10, var11);
-            qh.b(var29);
+            SoftwareRasterizer.setTarget(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;

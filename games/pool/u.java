@@ -292,24 +292,24 @@ final class u {
                 if ((-var53 | (-var52 | -var51)) < 0) {
                   if (4 + var29 + param22 > qp.field_Yb.length) {
                     var54 = new int[var29 + (param22 + 104)];
-                    qn.a(qp.field_Yb, 0, var54, 0, nk.field_a);
+                    ArrayOperations.copy(qp.field_Yb, 0, var54, 0, nk.field_a);
                     qp.field_Yb = var54;
                     var54Lifetime4 = new int[104 + param22 + var29];
-                    qn.a(sa.field_r, 0, var54Lifetime4, 0, nk.field_a);
+                    ArrayOperations.copy(sa.field_r, 0, var54Lifetime4, 0, nk.field_a);
                     sa.field_r = var54Lifetime4;
                     var54Lifetime5 = new int[param22 - (-var29 - 104)];
-                    qn.a(ro.field_d, 0, var54Lifetime5, 0, nk.field_a);
+                    ArrayOperations.copy(ro.field_d, 0, var54Lifetime5, 0, nk.field_a);
                     ro.field_d = var54Lifetime5;
                   }
                   if ((4 + (var31 + param22)) > eh.field_w.length) {
                     var54Lifetime1 = new int[104 + (var31 + param22)];
-                    qn.a(eh.field_w, 0, var54Lifetime1, 0, de.field_a);
+                    ArrayOperations.copy(eh.field_w, 0, var54Lifetime1, 0, de.field_a);
                     eh.field_w = var54Lifetime1;
                     var54Lifetime1Lifetime1 = new int[var31 + (param22 + 104)];
-                    qn.a(mj.field_a, 0, var54Lifetime1Lifetime1, 0, de.field_a);
+                    ArrayOperations.copy(mj.field_a, 0, var54Lifetime1Lifetime1, 0, de.field_a);
                     mj.field_a = var54Lifetime1Lifetime1;
                     var54Lifetime1Lifetime2 = new int[var31 + param22 + 104];
-                    qn.a(sa.field_w, 0, var54Lifetime1Lifetime2, 0, de.field_a);
+                    ArrayOperations.copy(sa.field_w, 0, var54Lifetime1Lifetime2, 0, de.field_a);
                     sa.field_w = var54Lifetime1Lifetime2;
                   }
                   var55 = nk.field_a;
@@ -518,23 +518,23 @@ final class u {
                   nk.field_a = var55;
                   if (hi.field_k.length < (-2 + (var30 + param12 + var57))) {
                     var54Lifetime2 = new int[98 + param12 - (-var30 - var57)];
-                    qn.a(hi.field_k, 0, var54Lifetime2, 0, var33Lifetime2);
+                    ArrayOperations.copy(hi.field_k, 0, var54Lifetime2, 0, var33Lifetime2);
                     hi.field_k = var54Lifetime2;
                     var54Lifetime2Lifetime1 = new int[var57 + (var30 + param12 + 98)];
-                    qn.a(vn.field_h, 0, var54Lifetime2Lifetime1, 0, var33Lifetime2);
+                    ArrayOperations.copy(vn.field_h, 0, var54Lifetime2Lifetime1, 0, var33Lifetime2);
                     vn.field_h = var54Lifetime2Lifetime1;
                     var54Lifetime2Lifetime2 = new int[98 + (var30 + param12) + var57];
-                    qn.a(nr.field_P, 0, var54Lifetime2Lifetime2, 0, var33Lifetime2);
+                    ArrayOperations.copy(nr.field_P, 0, var54Lifetime2Lifetime2, 0, var33Lifetime2);
                     nr.field_P = var54Lifetime2Lifetime2;
                     if (null != param5) {
                       var54Lifetime2Lifetime3 = new int[param12 + var30 + var57 + 98];
-                      qn.a(gp.field_e, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      ArrayOperations.copy(gp.field_e, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
                       gp.field_e = var54Lifetime2Lifetime3;
                       var54Lifetime2Lifetime3 = new int[var57 + (var30 + param12 + 98)];
-                      qn.a(te.field_o, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      ArrayOperations.copy(te.field_o, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
                       te.field_o = var54Lifetime2Lifetime3;
                       var54Lifetime2Lifetime3 = new int[var57 + (var30 + param12) + 98];
-                      qn.a(hf.field_d, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      ArrayOperations.copy(hf.field_d, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
                       hf.field_d = var54Lifetime2Lifetime3;
                     }
                   }
@@ -575,23 +575,23 @@ final class u {
                   var33Lifetime2 = eq.field_R;
                   if (wn.field_d.length < (-2 + var58 + param12 + var32)) {
                     var54Lifetime3 = new int[param12 + (var32 + var58 + 98)];
-                    qn.a(wn.field_d, 0, var54Lifetime3, 0, var33Lifetime2);
+                    ArrayOperations.copy(wn.field_d, 0, var54Lifetime3, 0, var33Lifetime2);
                     wn.field_d = var54Lifetime3;
                     var54Lifetime3Lifetime1 = new int[98 + (var58 + var32) + param12];
-                    qn.a(f.field_b, 0, var54Lifetime3Lifetime1, 0, var33Lifetime2);
+                    ArrayOperations.copy(f.field_b, 0, var54Lifetime3Lifetime1, 0, var33Lifetime2);
                     f.field_b = var54Lifetime3Lifetime1;
                     var54Lifetime3Lifetime2 = new int[98 + (var58 + (var32 + param12))];
-                    qn.a(nk.field_b, 0, var54Lifetime3Lifetime2, 0, var33Lifetime2);
+                    ArrayOperations.copy(nk.field_b, 0, var54Lifetime3Lifetime2, 0, var33Lifetime2);
                     nk.field_b = var54Lifetime3Lifetime2;
                     if (param5 != null) {
                       var54Lifetime3Lifetime3 = new int[98 + (var32 + param12) + var58];
-                      qn.a(la.field_d, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
+                      ArrayOperations.copy(la.field_d, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
                       la.field_d = var54Lifetime3Lifetime3;
                       var54Lifetime3Lifetime3 = new int[98 + var58 + (var32 + param12)];
-                      qn.a(sl.field_V, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
+                      ArrayOperations.copy(sl.field_V, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
                       sl.field_V = var54Lifetime3Lifetime3;
                       var54Lifetime3Lifetime3 = new int[98 + var58 + (var32 + param12)];
-                      qn.a(rb.field_b, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
+                      ArrayOperations.copy(rb.field_b, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
                       rb.field_b = var54Lifetime3Lifetime3;
                     }
                   }

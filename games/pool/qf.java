@@ -173,8 +173,8 @@ final class qf {
             var8 = param5[1].field_w;
             param5[0].e(param2, param0, param1);
             param5[2].e(-var7 + (param2 + param4), param0, param1);
-            qh.a(sq.field_a);
-            qh.d(var6_int + param2, param0, param4 + (param2 - var7), param0 + param5[1].field_y);
+            SoftwareRasterizer.saveClip(sq.field_a);
+            SoftwareRasterizer.intersectClip(var6_int + param2, param0, param4 + (param2 - var7), param0 + param5[1].field_y);
             var9 = param2 + var6_int;
             var10 = param2 + param4 - var7;
             if (param3 != 18) {
@@ -184,7 +184,7 @@ final class qf {
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param5[1].e(param2, param0, param1);
             }
-            qh.b(sq.field_a);
+            SoftwareRasterizer.restoreClip(sq.field_a);
             return;
           }
           return;

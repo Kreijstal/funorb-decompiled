@@ -86,7 +86,7 @@ final class a {
             wd.field_Ub.b(of.field_Nb, 30000);
           }
           of.field_Nb.a(param0, 2113632, param3, param2);
-          qh.d();
+          SoftwareRasterizer.clear();
           to.a((byte) -118, param1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "a.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -44,10 +44,10 @@ final class pn {
         field_i = null;
     }
 
-    final static qb[] a(int param0, di param1, int param2, int param3) {
+    final static IndexedSprite[] a(int param0, di param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        qb[] stackIn_6_0 = null;
+        IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -55,7 +55,7 @@ final class pn {
         try {
           if (!vj.a(param2, param1, param0, (byte) 121)) {
             stackIn_2_0 = null;
-            return (qb[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param3 != 120) {
             field_i = (String[]) null;
@@ -126,7 +126,7 @@ final class pn {
         }
         try {
           var3 = sh.field_P.field_k;
-          var4 = t.field_b.field_I.b(param1, 272, t.field_b.field_M);
+          var4 = t.field_b.field_I.measureWrappedHeight(param1, 272, t.field_b.field_M);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           ln.field_q.b(var5, param0 ^ 2147483572, (-320 + var2_int) / 2, 320, -(var5 * 2) - 120 + var3);
           ln.field_q.field_F = rp.a(32450, 3, 2105376, ln.field_q.field_Db, 11579568, 8421504);

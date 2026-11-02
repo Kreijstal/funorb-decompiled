@@ -13,7 +13,7 @@ final class vk extends PcmStream {
     private int[] field_v;
     private int field_N;
     private int[] field_A;
-    private gq field_Z;
+    private MidiFileReader field_Z;
     static Sprite[] field_y;
     private int[] field_B;
     int[] field_U;
@@ -334,7 +334,7 @@ final class vk extends PcmStream {
         var8 = Pool.field_O;
         try {
           if (this.field_Z.a()) {
-            var4_int = this.field_N * this.field_Z.field_f / bp.field_h;
+            var4_int = this.field_N * this.field_Z.field_f / AudioOutput.sampleRate;
             while (true) {
               var5 = this.field_ab + (long)var4_int * (long)param2;
               if (0L <= this.field_D - var5) {
@@ -491,7 +491,7 @@ final class vk extends PcmStream {
             var7 = Math.sin((double)(param1.field_s & 511) * 0.01227184630308513);
             var3_int = var3_int + (int)((double)var5 * var7);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(param1.field_C.field_p * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)bp.field_h);
+          var5Lifetime1 = (int)(0.5 + (double)(param1.field_C.field_p * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.sampleRate);
           stackIn_13_0 = (1 > var5Lifetime1) ? 1 : var5Lifetime1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -659,20 +659,20 @@ final class vk extends PcmStream {
             }
             return;
           }
-          while (~var3 == ~this.field_Z.field_g[var2]) {
-            this.field_Z.a(var2);
-            var6 = this.field_Z.d(var2);
+          while (~var3 == ~this.field_Z.trackTicks[var2]) {
+            this.field_Z.seekTrack(var2);
+            var6 = this.field_Z.readMessage(var2);
             if (var6 != 1) {
               if ((var6 & 128) != 0) {
                 this.b(var6, -122);
               }
               this.field_Z.f(var2);
-              this.field_Z.e(var2);
+              this.field_Z.saveTrackPosition(var2);
               continue;
             }
             this.field_Z.c();
-            this.field_Z.e(var2);
-            if (this.field_Z.f()) {
+            this.field_Z.saveTrackPosition(var2);
+            if (this.field_Z.isDone()) {
               if (this.field_C != null) {
                 this.a(this.field_C, 8821, this.field_M);
                 this.d((byte) -89);
@@ -680,17 +680,17 @@ final class vk extends PcmStream {
               }
               if (this.field_M &&
                 var3 != 0) {
-                this.field_Z.a(var4);
+                this.field_Z.reset(var4);
               } else {
                 this.b(true, 123);
-                this.field_Z.e();
+                this.field_Z.release();
                 return;
               }
             }
             break;
           }
-          var2 = this.field_Z.b();
-          var3 = this.field_Z.field_g[var2];
+          var2 = this.field_Z.nextTrack();
+          var3 = this.field_Z.trackTicks[var2];
           var4 = this.field_Z.b(var3);
         }
     }
@@ -734,12 +734,12 @@ final class vk extends PcmStream {
             this.a();
           }
           for (var6 = 0; var5_int > var6; var6++) {
-            this.field_Z.a(var6);
+            this.field_Z.seekTrack(var6);
             this.field_Z.f(var6);
-            this.field_Z.e(var6);
+            this.field_Z.saveTrackPosition(var6);
           }
-          this.field_X = this.field_Z.b();
-          this.field_t = this.field_Z.field_g[this.field_X];
+          this.field_X = this.field_Z.nextTrack();
+          this.field_t = this.field_Z.trackTicks[this.field_X];
           this.field_D = this.field_Z.b(this.field_t);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vk.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -781,7 +781,7 @@ final class vk extends PcmStream {
           if (0 > param1 ||
             param1 == var3.field_t) {
             if (null != var3.field_o) {
-              var3.field_o.c(bp.field_h / 100);
+              var3.field_o.c(AudioOutput.sampleRate / 100);
               if (var3.field_o.g()) {
                 this.field_u.field_p.b(var3.field_o);
               }
@@ -1126,7 +1126,7 @@ final class vk extends PcmStream {
     }
 
     final synchronized void a(boolean param0, int param1) {
-        this.field_Z.e();
+        this.field_Z.release();
         this.field_C = null;
         if (param1 != -1) {
           pr var4 = (pr) null;
@@ -1142,31 +1142,31 @@ final class vk extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int length) {
         int var2;
         long var3;
         int var6;
         int var5;
         var6 = Pool.field_O;
         if (this.field_Z.a()) {
-          var2 = this.field_Z.field_f * this.field_N / bp.field_h;
+          var2 = this.field_Z.field_f * this.field_N / AudioOutput.sampleRate;
           while (true) {
-            var3 = (long)param0 * (long)var2 + this.field_ab;
+            var3 = (long)length * (long)var2 + this.field_ab;
             if (0L <= this.field_D - var3) {
               this.field_ab = var3;
               break;
             }
             var5 = (int)((-this.field_ab + this.field_D + ((long)var2 - 1L)) / (long)var2);
             this.field_ab = this.field_ab + (long)var5 * (long)var2;
-            this.field_u.a(var5);
-            param0 = param0 - var5;
+            this.field_u.skip(var5);
+            length = length - var5;
             this.d((byte) -89);
             if (!this.field_Z.a()) {
               break;
             }
           }
         }
-        this.field_u.a(param0);
+        this.field_u.skip(length);
     }
 
     final boolean a(int param0, int[] param1, int param2, int param3, pr param4) {
@@ -1184,7 +1184,7 @@ final class vk extends PcmStream {
         int var11 = 0;
         var11 = Pool.field_O;
         try {
-          param4.field_D = bp.field_h / 100;
+          param4.field_D = AudioOutput.sampleRate / 100;
           if (param4.field_G >= 0 && (param4.field_o == null ||
             param4.field_o.i())) {
             param4.a(param3 ^ 3);
@@ -1267,7 +1267,7 @@ final class vk extends PcmStream {
           }
           param4.field_o.c(param4.field_D);
           if (param1 == null) {
-            param4.field_o.a(param0);
+            param4.field_o.skip(param0);
           } else {
             param4.field_o.a(param1, param2, param0);
           }
@@ -1324,7 +1324,7 @@ final class vk extends PcmStream {
         this.field_L = new int[16];
         this.field_I = new pr[16][128];
         this.field_A = new int[16];
-        this.field_Z = new gq();
+        this.field_Z = new MidiFileReader();
         this.field_u = new ib(this);
         this.field_z = new IterableNodeHashTable(128);
         this.a((byte) -127, -1, 256);

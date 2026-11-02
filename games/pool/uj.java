@@ -55,26 +55,26 @@ final class uj {
           var8 = -var15[2] + param3[2];
           var9 = var8 * var15[11] + var15[9] * var6 + var15[10] * var7 >> 16;
           if (0 >= var9) {
-            param2[1] = qh.field_f >> 1;
-            param2[0] = qh.field_l >> 1;
+            param2[1] = SoftwareRasterizer.height >> 1;
+            param2[0] = SoftwareRasterizer.width >> 1;
             return;
           }
           param2[1] = var15[8] * var8 + (var6 * var15[6] + var15[7] * var7) >> 7;
           param2[0] = var7 * var15[4] + (var6 * var15[3] + var15[5] * var8) >> 7;
-          param2[1] = fb.field_d + param2[1] / var9;
-          param2[0] = fb.field_q + param2[0] / var9;
+          param2[1] = TriangleRasterizer.projectionCenterY + param2[1] / var9;
+          param2[0] = TriangleRasterizer.projectionCenterX + param2[0] / var9;
           var10 = param1.field_K.field_A >> 1;
           param2[1] = param2[1] - var10;
           var11 = param1.field_K.field_z >> 1;
-          if (-var11 + qh.field_l < param2[0]) {
-            param2[0] = qh.field_l - var11;
+          if (-var11 + SoftwareRasterizer.width < param2[0]) {
+            param2[0] = SoftwareRasterizer.width - var11;
           } else {
             if (var11 > param2[0]) {
               param2[0] = var11;
             }
           }
-          if (-var10 + qh.field_f < param2[1]) {
-            param2[1] = qh.field_f - var10;
+          if (-var10 + SoftwareRasterizer.height < param2[1]) {
+            param2[1] = SoftwareRasterizer.height - var10;
             return;
           }
           if (param2[1] >= var10) {

@@ -256,7 +256,7 @@ final class wh {
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         int var5 = 35 / ((-27 - param3) / 38);
         uc.a((byte) -106);
-        qh.d(param0, param1, param2, param4);
+        SoftwareRasterizer.intersectClip(param0, param1, param2, param4);
     }
 
     public static void a(byte param0) {

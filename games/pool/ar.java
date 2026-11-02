@@ -16,7 +16,7 @@ final class ar implements eb {
           return;
         }
         try {
-          qh.a(this.field_h, this.field_f, this.field_b, 127, dq.field_a.b(this.field_d, 0));
+          SoftwareRasterizer.a(this.field_h, this.field_f, this.field_b, 127, dq.field_a.b(this.field_d, 0));
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ar.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -70,7 +70,7 @@ final class ar implements eb {
           param1.field_Gb = ln.field_s;
           param1.field_Fb = 1;
           param1.field_cb = 1;
-          param1.field_I = (lr) ((Object) sa.field_h);
+          param1.field_I = (BitmapFont) ((Object) sa.field_h);
           param1.field_F = rm.field_g;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ar.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -107,7 +107,7 @@ final class ai extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int length) {
         int var2 = 0;
         rd var3 = null;
         int var5 = 0;
@@ -115,17 +115,17 @@ final class ai extends PcmStream {
         Object var4 = null;
         do {
           if (this.field_p < 0) {
-            this.c(param0);
+            this.c(length);
             return;
           }
-          if (this.field_r + param0 < this.field_p) {
-            this.field_r = this.field_r + param0;
-            this.c(param0);
+          if (this.field_r + length < this.field_p) {
+            this.field_r = this.field_r + length;
+            this.c(length);
             return;
           }
           var2 = this.field_p - this.field_r;
           this.c(var2);
-          param0 = param0 - var2;
+          length = length - var2;
           this.field_r = this.field_r + var2;
           this.e();
           var3 = (rd) (this.field_q.c((byte) -51));
@@ -140,7 +140,7 @@ final class ai extends PcmStream {
               this.a(var3);
             }
           }
-        } while (param0 != 0);
+        } while (length != 0);
         return;
     }
 
@@ -155,7 +155,7 @@ final class ai extends PcmStream {
     private final void c(int param0) {
         PcmStream var2 = (PcmStream) (this.field_s.c((byte) -30));
         while (var2 != null) {
-          var2.a(param0);
+          var2.skip(param0);
           var2 = (PcmStream) (this.field_s.f((byte) -5));
         }
     }

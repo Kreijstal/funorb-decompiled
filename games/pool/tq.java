@@ -37,10 +37,10 @@ final class tq extends IntrusiveNode {
           tq.a(57);
         }
         for (var4 = 0; var3.field_D.length > var4; var4++) {
-          var5.field_D[var4] = fb.field_b[var4];
+          var5.field_D[var4] = TriangleRasterizer.colorPalette[var4];
         }
         var3.e();
-        qh.c(0, 0, qh.field_l, qh.field_f, param0, param1);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, param0, param1);
         sh.field_P.b(15100);
         return var3.field_D;
     }

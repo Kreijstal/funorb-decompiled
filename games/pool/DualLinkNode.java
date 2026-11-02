@@ -34,8 +34,8 @@ class DualLinkNode extends IntrusiveNode {
         field_l = null;
         field_r = null;
         if (param0 != -3604) {
-          lr var2 = (lr) null;
-          DualLinkNode.a(-30, (String[]) null, (String) null, (lr) null, -45);
+          BitmapFont var2 = (BitmapFont) null;
+          DualLinkNode.a(-30, (String[]) null, (String) null, (BitmapFont) null, -45);
         }
         field_t = null;
     }
@@ -86,7 +86,7 @@ class DualLinkNode extends IntrusiveNode {
         la.a(-57, param1, param2, param5, var7, param3, param0, param6);
     }
 
-    final static int a(int param0, String[] param1, String param2, lr param3, int param4) {
+    final static int a(int param0, String[] param1, String param2, BitmapFont param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

@@ -23,19 +23,19 @@ final class hq {
     private final void a(int param0, int param1) {
         int var3 = al.field_k.field_qb;
         int var4 = al.field_k.field_eb;
-        int var5 = qh.field_l - ep.field_s.field_z >> 1;
+        int var5 = SoftwareRasterizer.width - ep.field_s.field_z >> 1;
         al.field_k.field_qb = al.field_k.field_qb - var5;
-        int var6 = -ep.field_s.field_A + qh.field_f;
+        int var6 = -ep.field_s.field_A + SoftwareRasterizer.height;
         al.field_k.field_eb = al.field_k.field_eb - var6;
         ep.field_s.e();
-        qh.d();
+        SoftwareRasterizer.clear();
         this.c((byte) -109);
         al.field_k.a((byte) -79, false);
         this.field_h.a(false);
         al.field_k.field_qb = var3;
         al.field_k.field_eb = var4;
         sh.field_P.b(15100);
-        qh.c(5 + al.field_k.field_qb, 5 + al.field_k.field_eb, -10 + al.field_k.field_gb, al.field_k.field_Db - param0, 0, 128 * param1 >> 8);
+        SoftwareRasterizer.fillRectangleAlpha(5 + al.field_k.field_qb, 5 + al.field_k.field_eb, -10 + al.field_k.field_gb, al.field_k.field_Db - param0, 0, 128 * param1 >> 8);
         ep.field_s.d(var5, var6, param1, param1);
     }
 
@@ -159,7 +159,7 @@ final class hq {
           var2 = this.field_l.c((byte) -111);
           var3 = this.field_h.c((byte) -122);
           al.field_k.field_Db = (var2 * (25 - ng.field_s) + ng.field_s * var3) / 25;
-          al.field_k.field_eb = -al.field_k.field_Db + qh.field_f - 5;
+          al.field_k.field_eb = -al.field_k.field_Db + SoftwareRasterizer.height - 5;
           this.e(1);
           ng.field_s = ng.field_s + 1;
           if (ng.field_s > 25) {
@@ -215,17 +215,17 @@ final class hq {
           }
         } else {
           if (ng.field_s >= 0) {
-            qh.c(al.field_k.field_qb + 5, 5 + al.field_k.field_eb, al.field_k.field_gb - 10, -10 + al.field_k.field_Db, 0, 128);
+            SoftwareRasterizer.fillRectangleAlpha(al.field_k.field_qb + 5, 5 + al.field_k.field_eb, al.field_k.field_gb - 10, -10 + al.field_k.field_Db, 0, 128);
             this.c((byte) -109);
             var2 = al.field_k.field_qb;
             al.field_k.field_qb = al.field_k.field_qb - 160;
             var3 = al.field_k.field_eb;
             al.field_k.field_eb = al.field_k.field_eb - 240;
             ep.field_s.e();
-            qh.d();
+            SoftwareRasterizer.clear();
             this.field_l.a(false);
             hk.field_r.e();
-            qh.d();
+            SoftwareRasterizer.clear();
             this.c((byte) -109);
             this.field_h.a(false);
             var4 = -5 + (-qa.field_v.field_Db + (al.field_k.field_Db + al.field_k.field_eb));
@@ -237,17 +237,17 @@ final class hq {
             sh.field_P.b(15100);
             al.field_k.a((byte) -79, false);
             qa.field_v.a((byte) -79, false);
-            if (qh.field_b > var6) {
-              var6 = qh.field_b;
+            if (SoftwareRasterizer.clipLeft > var6) {
+              var6 = SoftwareRasterizer.clipLeft;
             }
-            if (qh.field_g < var4) {
-              var4 = qh.field_g;
+            if (SoftwareRasterizer.clipBottom < var4) {
+              var4 = SoftwareRasterizer.clipBottom;
             }
-            if (var7 > qh.field_j) {
-              var7 = qh.field_j;
+            if (var7 > SoftwareRasterizer.clipRight) {
+              var7 = SoftwareRasterizer.clipRight;
             }
-            if (var5 < qh.field_c) {
-              var5 = qh.field_c;
+            if (var5 < SoftwareRasterizer.clipTop) {
+              var5 = SoftwareRasterizer.clipTop;
             }
             var8 = -var6 + (var7 + (var4 - var5));
             for (var9 = var5; var4 > var9; var9++) {
@@ -259,13 +259,13 @@ final class hq {
                 }
                 var11 = stackIn_21_0.field_D[ep.field_s.field_z * var9 + var10];
                 if (var11 != 0) {
-                  qh.a(var10 + 160, 240 + var9, var11);
+                  SoftwareRasterizer.setPixel(var10 + 160, 240 + var9, var11);
                 }
               }
             }
           } else {
             if (ca.field_i < 0) {
-              qh.c(5 + al.field_k.field_qb, al.field_k.field_eb + 5, -10 + al.field_k.field_gb, al.field_k.field_Db - 10, 0, 128);
+              SoftwareRasterizer.fillRectangleAlpha(5 + al.field_k.field_qb, al.field_k.field_eb + 5, -10 + al.field_k.field_gb, al.field_k.field_Db - 10, 0, 128);
               this.c((byte) -109);
               al.field_k.a((byte) -79, false);
               qa.field_v.a((byte) -79, false);
@@ -590,20 +590,20 @@ final class hq {
         while (this.field_d.field_e != var7.previous) {
           var8 = (var3 + 1) * (-qg.field_b.field_G + qg.field_b.field_w) / (this.field_k - 1) + qg.field_b.field_G + al.field_k.field_qb;
           var9 = var4;
-          if (var9 < qh.field_b) {
-            var9 = qh.field_b;
+          if (var9 < SoftwareRasterizer.clipLeft) {
+            var9 = SoftwareRasterizer.clipLeft;
           }
           var10 = var8;
-          if (qh.field_j < var10) {
-            var10 = qh.field_j;
+          if (SoftwareRasterizer.clipRight < var10) {
+            var10 = SoftwareRasterizer.clipRight;
           }
           var11 = var5;
-          if (qh.field_c > var11) {
-            var11 = qh.field_c;
+          if (SoftwareRasterizer.clipTop > var11) {
+            var11 = SoftwareRasterizer.clipTop;
           }
           var12 = var6;
-          if (var12 > qh.field_g) {
-            var12 = qh.field_g;
+          if (var12 > SoftwareRasterizer.clipBottom) {
+            var12 = SoftwareRasterizer.clipBottom;
           }
           for (var13 = var11; var13 < var12; var13++) {
             var14 = var13 - var5;
@@ -642,15 +642,15 @@ final class hq {
               }
               var20Lifetime1 = var17 - var4;
               if (var14 + var20Lifetime1 >= var7.field_u * (-var4 + (var8 + qg.field_b.field_A)) / var7.field_l) {
-                qh.field_d[qh.field_l * var13 + var17] = var18;
+                SoftwareRasterizer.pixels[SoftwareRasterizer.width * var13 + var17] = var18;
               } else {
                 if (this.field_h == var7) {
-                  qh.field_d[qh.field_l * var13 + var17] = md.a(md.a(rb.b(16711898, (-nj.field_c + 256) * (rb.b(16744119, var18) >> 16) + (rb.b(var19, 16714394) >> 16) * nj.field_c << 8), rb.b((256 - nj.field_c) * rb.b(var18 >> 8, 255) + (rb.b(65295, var19) >> 8) * nj.field_c, 65280)), rb.b(nj.field_c * rb.b(var19, 255) + (256 - nj.field_c) * rb.b(var18, 255) >> 8, 255));
+                  SoftwareRasterizer.pixels[SoftwareRasterizer.width * var13 + var17] = md.a(md.a(rb.b(16711898, (-nj.field_c + 256) * (rb.b(16744119, var18) >> 16) + (rb.b(var19, 16714394) >> 16) * nj.field_c << 8), rb.b((256 - nj.field_c) * rb.b(var18 >> 8, 255) + (rb.b(65295, var19) >> 8) * nj.field_c, 65280)), rb.b(nj.field_c * rb.b(var19, 255) + (256 - nj.field_c) * rb.b(var18, 255) >> 8, 255));
                 } else {
                   if (var7.field_u > var7.field_l) {
-                    qh.field_d[var17 + qh.field_l * var13] = var18;
+                    SoftwareRasterizer.pixels[var17 + SoftwareRasterizer.width * var13] = var18;
                   } else {
-                    qh.field_d[var17 + qh.field_l * var13] = var19;
+                    SoftwareRasterizer.pixels[var17 + SoftwareRasterizer.width * var13] = var19;
                   }
                 }
               }
@@ -702,7 +702,7 @@ final class hq {
         this.a((bk) (this.field_d.c((byte) 109)), 1);
         this.g(-94);
         al.field_k.field_Db = null == this.field_h ? 10 : this.field_h.c((byte) -112);
-        al.field_k.field_eb = -5 - al.field_k.field_Db + qh.field_f;
+        al.field_k.field_eb = -5 - al.field_k.field_Db + SoftwareRasterizer.height;
         this.e(1);
         this.field_a.n(0);
         if (param0 != -1) {

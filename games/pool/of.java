@@ -175,10 +175,10 @@ final class of extends vh {
           if (var9 == null) {
             return;
           }
-          qh.a(kg.field_t);
+          SoftwareRasterizer.saveClip(kg.field_t);
           var4 = var9.field_A;
           param2 = param2 - (var4 >> 1);
-          qh.c(param0, param2, param0 + 230, var4 + param2);
+          SoftwareRasterizer.setClip(param0, param2, param0 + 230, var4 + param2);
           var5 = 0;
           var6 = new aa(ne.field_r);
           if (param1) {
@@ -201,7 +201,7 @@ final class of extends vh {
             }
             break;
           }
-          qh.b(kg.field_t);
+          SoftwareRasterizer.restoreClip(kg.field_t);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

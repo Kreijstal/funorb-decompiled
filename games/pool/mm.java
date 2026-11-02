@@ -487,7 +487,7 @@ final class mm {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, lr param4, int param5, int param6, int param7, int param8, int param9, nm param10, int param11, int param12, nm param13, lr param14, int param15, int param16, int param17, int param18, nm param19) {
+    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, nm param10, int param11, int param12, nm param13, BitmapFont param14, int param15, int param16, int param17, int param18, nm param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

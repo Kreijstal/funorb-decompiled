@@ -215,11 +215,11 @@ final class hi extends mb {
         return null;
     }
 
-    final static kl a(int param0, int param1, int param2, di param3, di param4) {
+    final static PaletteBitmapFont a(int param0, int param1, int param2, di param3, di param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        kl stackIn_4_0 = null;
+        PaletteBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -229,7 +229,7 @@ final class hi extends mb {
         try {
           if (!vj.a(param1, param4, param2, (byte) 121)) {
             stackIn_2_0 = null;
-            return (kl) (stackIn_2_0);
+            return (PaletteBitmapFont) (stackIn_2_0);
           }
           var5_int = 41 / ((param0 + 73) / 41);
           stackIn_4_0 = ta.a(16908, param3.a(105, param2, param1));

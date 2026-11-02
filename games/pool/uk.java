@@ -101,7 +101,7 @@ final class uk implements Iterable {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, Sprite[] param11, int param12, lr param13, int param14, int param15, int param16, int param17, Sprite[] param18, Sprite[] param19, lr param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, Sprite[] param11, int param12, BitmapFont param13, int param14, int param15, int param16, int param17, Sprite[] param18, Sprite[] param19, BitmapFont param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -244,7 +244,7 @@ final class uk implements Iterable {
                 ib.field_r = ib.field_r + 1;
               }
               var10 = PacketBuffer.a((byte) -24, var8_ref_pn);
-              var11 = var10 + lr.a(var8_ref_pn.field_f);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_pn.field_f);
               var12 = fn.a(var8_ref_pn, -55);
               var8_ref_pn.field_u = new vh(0L, kb.field_h, var11);
               var8_ref_pn.field_u.field_P = -(var12 >> 1 & 8355711) + (var12 + ((16711423 & kb.field_h.field_P) >> 1));

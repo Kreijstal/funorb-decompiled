@@ -6,7 +6,7 @@ final class gj extends ei {
     static Sprite field_T;
     static java.applet.Applet field_W;
     static int field_S;
-    static lr field_R;
+    static BitmapFont field_R;
     private int field_Q;
     private int field_I;
     private int field_M;
@@ -45,13 +45,13 @@ final class gj extends ei {
           var10 = var6 - var5;
           var11 = (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5)) + 128;
           var12 = var11 >= 256 ? var8 | var9 : (var8 * var11 & -16711936 | var11 * var9 & 16711680) >>> 8;
-          qh.f(var7, var6, this.field_Q, var12);
-          qh.f(-(this.field_Q * 2) + var7, var6, this.field_Q, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_Q, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(this.field_Q * 2) + var7, var6, this.field_Q, var12);
           var9Lifetime1 = param0 & 65280;
           var8Lifetime1 = 16711935 & param0;
           var12Lifetime1 = 256 > var11 ? (-16711936 & var8Lifetime1 * var11 | var9Lifetime1 * var11 & 16711680) >>> 8 : var8Lifetime1 | var9Lifetime1;
-          qh.f(this.field_Q + var7, var6, this.field_Q, var12Lifetime1);
-          qh.f(-this.field_Q + var7, var6, this.field_Q, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_Q + var7, var6, this.field_Q, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_Q + var7, var6, this.field_Q, var12Lifetime1);
         }
         oc.a(122);
         return var13;
@@ -116,7 +116,7 @@ final class gj extends ei {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(var6 >= 1.0) ? (int)(var6 * 255.0) : 255;
             }
-            qh.a(var5, var4, var8 | var8 << 8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 | var8 << 8 | var8 << 16);
           }
         }
         if (param0 != 16711422) {
@@ -145,7 +145,7 @@ final class gj extends ei {
             this.field_U = (Sprite) null;
           }
           oc.a(121);
-          if (qh.field_b <= param1 + this.field_U.field_z) {
+          if (SoftwareRasterizer.clipLeft <= param1 + this.field_U.field_z) {
             kj.a(43, this.field_H);
             param3.c(-this.field_J, 0);
             param3.c(-this.field_J + 2 * this.field_Q, 0);
@@ -153,7 +153,7 @@ final class gj extends ei {
             oc.a(114);
             this.field_H.c(param1, param2);
           }
-          if (var5_int - this.field_U.field_z <= qh.field_j) {
+          if (var5_int - this.field_U.field_z <= SoftwareRasterizer.clipRight) {
             kj.a(86, this.field_H);
             for (var7 = -this.field_U.field_z + (this.field_l + this.field_J); var7 > this.field_Q * 2; var7 = var7 - this.field_Q * 2) {
             }
@@ -202,7 +202,7 @@ final class gj extends ei {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 2) {
-            field_R = (lr) null;
+            field_R = (BitmapFont) null;
           }
           stackIn_6_0 = (2 <= param1) && (!nj.a(param1, 125, param0, ml.field_h));
           return stackIn_6_0;

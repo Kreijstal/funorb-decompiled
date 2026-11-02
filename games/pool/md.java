@@ -21,11 +21,11 @@ final class md {
     }
 
     final static void a(int param0) {
-        fb.b(0.6000000238418579f);
-        fb.a();
-        fb.b(320, 240);
+        TriangleRasterizer.b(0.6000000238418579f);
+        TriangleRasterizer.useRasterClip();
+        TriangleRasterizer.setProjectionCenter(320, 240);
         hr.field_q.field_k = 0;
-        fb.a(new dp(ep.field_F, hr.field_q, param0, 128));
+        TriangleRasterizer.a(new dp(ep.field_F, hr.field_q, param0, 128));
         di.a(0);
     }
 

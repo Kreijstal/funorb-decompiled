@@ -104,13 +104,13 @@ final class bo {
                   var24 < 0) {
                   var25 = (int)Math.sqrt((double)(var22 * var22 + var17 * var17));
                   if (param6 >= var25) {
-                    qh.b(var21 >> 2, var16 >> 2, param9[param1 - var25 * param1 / param6]);
+                    SoftwareRasterizer.plotAdditive(var21 >> 2, var16 >> 2, param9[param1 - var25 * param1 / param6]);
                   }
                 } else if (param10 != 2 &&
                   var14 < var24) {
                   var25 = (int)Math.sqrt((double)(var18 * var18 + var23 * var23));
                   if (param3 >= var25) {
-                    qh.b(var21 >> 2, var16 >> 2, param9[param1 - param1 * var25 / param3]);
+                    SoftwareRasterizer.plotAdditive(var21 >> 2, var16 >> 2, param9[param1 - param1 * var25 / param3]);
                   }
                 } else {
                   var25 = var13 * var22 - var20 >> 2;
@@ -119,7 +119,7 @@ final class bo {
                   }
                   var26 = ((var14 - var24) * param6 + var24 * param3) / var14;
                   if (var25 < var15 * var26 >> 2) {
-                    qh.b(var21 >> 2, var16 >> 2, param9[param1 - (var25 << 2) * param1 / var26 / var15]);
+                    SoftwareRasterizer.plotAdditive(var21 >> 2, var16 >> 2, param9[param1 - (var25 << 2) * param1 / var26 / var15]);
                   }
                 }
               }
@@ -222,7 +222,7 @@ final class bo {
           }
           for (var2 = 1; lq.field_T.length > var2; var2++) {
             var3 = lq.field_T[var2];
-            qn.a(tl.field_I, var2 << 4, tl.field_I, var1_int, var3);
+            ArrayOperations.copy(tl.field_I, var2 << 4, tl.field_I, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
@@ -292,13 +292,13 @@ final class bo {
                   var24 < 0) {
                   var25 = (int)Math.sqrt((double)(var22 * var22 + var17 * var17));
                   if (param6 >= var25) {
-                    qh.b(var21 >> 2, var16 >> 2, param9[param1 - var25 * param1 / param6]);
+                    SoftwareRasterizer.plotAdditive(var21 >> 2, var16 >> 2, param9[param1 - var25 * param1 / param6]);
                   }
                 } else if (param10 != 2 &&
                   var14 < var24) {
                   var25 = (int)Math.sqrt((double)(var18 * var18 + var23 * var23));
                   if (param3 >= var25) {
-                    qh.b(var21 >> 2, var16 >> 2, param9[param1 - param1 * var25 / param3]);
+                    SoftwareRasterizer.plotAdditive(var21 >> 2, var16 >> 2, param9[param1 - param1 * var25 / param3]);
                   }
                 } else {
                   var25 = var13 * var22 - var20 >> 2;
@@ -307,7 +307,7 @@ final class bo {
                   }
                   var26 = ((var14 - var24) * param6 + var24 * param3) / var14;
                   if (var25 < var15 * var26 >> 2) {
-                    qh.b(var21 >> 2, var16 >> 2, param9[param1 - (var25 << 2) * param1 / var26 / var15]);
+                    SoftwareRasterizer.plotAdditive(var21 >> 2, var16 >> 2, param9[param1 - (var25 << 2) * param1 / var26 / var15]);
                   }
                 }
               }

@@ -23,7 +23,7 @@ final class ClientException extends RuntimeException {
         }
         jk.a(param0, 118);
         if (ji.field_f) {
-          qh.g(na.field_e.field_i.field_qb, na.field_e.field_i.field_eb, na.field_e.field_i.field_gb, na.field_e.field_i.field_Db);
+          SoftwareRasterizer.darkenRectangle(na.field_e.field_i.field_qb, na.field_e.field_i.field_eb, na.field_e.field_i.field_gb, na.field_e.field_i.field_Db);
           na.field_e.field_i.a((byte) -79, param0);
         }
         tl.d(param1 ^ -5, param0);

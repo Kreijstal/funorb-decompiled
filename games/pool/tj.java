@@ -209,7 +209,7 @@ abstract class tj extends oe {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Pool.field_O;
-        qh.d(6 + param0, param1 + 35, this.field_l - 12, this.field_y - 40, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(6 + param0, param1 + 35, this.field_l - 12, this.field_y - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -219,8 +219,8 @@ abstract class tj extends oe {
         var7 = 0;
         var8 = param1;
         while (var7 < var4) {
-          if (var8 >= qh.field_c &&
-            var8 < qh.field_g) {
+          if (var8 >= SoftwareRasterizer.clipTop &&
+            var8 < SoftwareRasterizer.clipBottom) {
             var9 = var7 * (var6 - var5) / var4 + var5;
             var10 = 0;
             var11 = this.field_l;
@@ -233,7 +233,7 @@ abstract class tj extends oe {
                   }
                   var13 = var9 * (-var12 + 462) / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  qh.field_d[var10 + qh.field_l * var8 + param0] = var13;
+                  SoftwareRasterizer.pixels[var10 + SoftwareRasterizer.width * var8 + param0] = var13;
                 }
                 var10++;
               }
@@ -250,7 +250,7 @@ abstract class tj extends oe {
                   } else {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    qh.field_d[param0 + (qh.field_l * var8 + var11)] = var15;
+                    SoftwareRasterizer.pixels[param0 + (SoftwareRasterizer.width * var8 + var11)] = var15;
                   }
                   var13Lifetime1++;
                   var11++;
@@ -261,7 +261,7 @@ abstract class tj extends oe {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            qh.f(var10 + param0, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param0, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -274,8 +274,8 @@ abstract class tj extends oe {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          qh.f(param0, var8Lifetime1, 6, var9Lifetime1);
-          qh.f(this.field_l + param0 - 6, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_l + param0 - 6, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -290,8 +290,8 @@ abstract class tj extends oe {
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          qh.f(param0, var8Lifetime2, 6, var9Lifetime2);
-          qh.f(param0 - (-this.field_l + 6), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0 - (-this.field_l + 6), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

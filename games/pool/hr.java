@@ -157,9 +157,9 @@ final class hr {
         }
         try {
           ag.a(param3, param0, 9);
-          qh.d((int)param0[0], -4 + (int)param0[1], (int)param0[0], 4 + (int)param0[1], param1);
+          SoftwareRasterizer.drawLine((int)param0[0], -4 + (int)param0[1], (int)param0[0], 4 + (int)param0[1], param1);
           int var4_int = 91 / ((55 - param2) / 46);
-          qh.d((int)param0[0] - 4, (int)param0[1], (int)param0[0] + 4, (int)param0[1], param1);
+          SoftwareRasterizer.drawLine((int)param0[0] - 4, (int)param0[1], (int)param0[0] + 4, (int)param0[1], param1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "hr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -190,8 +190,8 @@ final class hr {
           if (var10 == 0L) {
             var10 = 1L;
           }
-          param1[0] = (int)((long)fb.field_q + rj.a(512L, (byte) -48, var6_long) / var10);
-          param1[1] = (int)((long)fb.field_d + rj.a(512L, (byte) -48, var8) / var10);
+          param1[0] = (int)((long)TriangleRasterizer.projectionCenterX + rj.a(512L, (byte) -48, var6_long) / var10);
+          param1[1] = (int)((long)TriangleRasterizer.projectionCenterY + rj.a(512L, (byte) -48, var8) / var10);
           param1[2] = (int)var10;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "hr.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');

@@ -26,11 +26,11 @@ final class sk {
         field_e = null;
     }
 
-    final static kl a(di param0, int param1, String param2, String param3, di param4) {
+    final static PaletteBitmapFont a(di param0, int param1, String param2, String param3, di param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        kl stackIn_3_0 = null;
+        PaletteBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

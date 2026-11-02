@@ -47,7 +47,7 @@ final class uc {
         if (var1 == null) {
           var1 = new tn();
         }
-        var1.a(qh.field_l, qh.field_f, qh.field_b, qh.field_g, -95, qh.field_j, qh.field_d, qh.field_c);
+        var1.a(SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, -95, SoftwareRasterizer.clipRight, SoftwareRasterizer.pixels, SoftwareRasterizer.clipTop);
         nf.field_S.b((byte) 83, var1);
     }
 

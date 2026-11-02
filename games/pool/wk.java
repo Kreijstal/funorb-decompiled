@@ -5,7 +5,7 @@ final class wk extends ch implements tb {
     private qq field_W;
     static String field_V;
     static int field_P;
-    private lr field_Q;
+    private BitmapFont field_Q;
     static Sprite field_T;
     private fe[] field_R;
     static vh field_N;
@@ -58,7 +58,7 @@ final class wk extends ch implements tb {
 
     final void a(int param0, byte param1, int param2, int param3) {
         super.a(param0, (byte) 78, param2, param3);
-        this.field_Q.a(this.field_O, 14 + param2 + this.field_C, this.field_D + (param3 + 10), this.field_l - 28, this.field_y, 16777215, -1, 0, 0, this.field_Q.field_C);
+        this.field_Q.drawParagraph(this.field_O, 14 + param2 + this.field_C, this.field_D + (param3 + 10), this.field_l - 28, this.field_y, 16777215, -1, 0, 0, this.field_Q.maxAscent);
         int var5 = 6 % ((-42 - param1) / 53);
     }
 
@@ -122,7 +122,7 @@ final class wk extends ch implements tb {
         RuntimeException var1 = null;
         int var1_intLifetime1;
         try {
-          fb.a();
+          TriangleRasterizer.useRasterClip();
           ob.field_i = 11;
           cp.field_d = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {
@@ -146,7 +146,7 @@ final class wk extends ch implements tb {
         }
     }
 
-    wk(qq param0, lr param1, String param2) {
+    wk(qq param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (fp) null);
         int var4_int = 0;
         this.field_S = 0;
@@ -154,7 +154,7 @@ final class wk extends ch implements tb {
           this.field_Q = param1;
           this.field_W = param0;
           this.field_O = param2;
-          var4_int = null == this.field_O ? 0 : this.field_Q.b(this.field_O, 260, this.field_Q.field_C);
+          var4_int = null == this.field_O ? 0 : this.field_Q.measureWrappedHeight(this.field_O, 260, this.field_Q.maxAscent);
           this.a(288, 0, var4_int + 22, false, 0);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -332,7 +332,7 @@ final class wk extends ch implements tb {
               var9 = var14;
               var9 = var14;
               var9 = var14;
-              var10Lifetime1 = gi.field_o.field_I.b(var14) + 3 * gi.field_o.field_I.a('.');
+              var10Lifetime1 = gi.field_o.field_I.b(var14) + 3 * gi.field_o.field_I.measureCharacterAdvance('.');
               if ((48 & va.field_V) == 16) {
                 var9 = var14 + ".";
               }
@@ -429,7 +429,7 @@ final class wk extends ch implements tb {
         }
     }
 
-    final static void a(int param0, int param1, lr param2, int param3, lr param4, int param5, int param6, nm param7, int param8, int param9, nm param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, nm param18, int param19, int param20) {
+    final static void a(int param0, int param1, BitmapFont param2, int param3, BitmapFont param4, int param5, int param6, nm param7, int param8, int param9, nm param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, nm param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

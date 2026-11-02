@@ -174,14 +174,14 @@ final class pp {
           return;
         }
         try {
-          var4 = uo.field_Lb.field_I.b(param0, 500);
+          var4 = uo.field_Lb.field_I.countWrappedLines(param0, 500);
           var5 = 6 + uo.field_Lb.field_I.a(param0, 500);
           var6 = 2 + var4 * ad.field_x;
           var7 = de.a(var5, 12, var2_int, 0);
           var8 = sh.a(var6, var3, -1, 20);
-          qh.b(var7, var8, var5, var6, 0);
-          qh.f(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
-          uo.field_Lb.field_I.a(param0, 3 + var7, wh.field_b + (var8 + 1 - uo.field_Lb.field_I.field_C), 500, 1000, 0, -1, 0, 0, ad.field_x);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
+          uo.field_Lb.field_I.drawParagraph(param0, 3 + var7, wh.field_b + (var8 + 1 - uo.field_Lb.field_I.maxAscent), 500, 1000, 0, -1, 0, 0, ad.field_x);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "pp.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

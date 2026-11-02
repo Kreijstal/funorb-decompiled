@@ -127,19 +127,19 @@ final class pr extends IntrusiveNode {
             ga.a(param0, fo.field_c[var8][3], false);
             ga.a(param0, fo.field_c[var8][4], false);
             if (fo.field_c[var8][0][2] < 0) {
-              fo.field_c[var8][0][1] = qh.field_f;
+              fo.field_c[var8][0][1] = SoftwareRasterizer.height;
             }
             if (fo.field_c[var8][1][2] < 0) {
-              fo.field_c[var8][1][1] = qh.field_f;
+              fo.field_c[var8][1][1] = SoftwareRasterizer.height;
             }
             if (fo.field_c[var8][2][2] < 0) {
-              fo.field_c[var8][2][1] = qh.field_f;
+              fo.field_c[var8][2][1] = SoftwareRasterizer.height;
             }
             if (fo.field_c[var8][3][2] < 0) {
-              fo.field_c[var8][3][1] = qh.field_f;
+              fo.field_c[var8][3][1] = SoftwareRasterizer.height;
             }
             if (fo.field_c[var8][4][2] < 0) {
-              fo.field_c[var8][4][1] = qh.field_f;
+              fo.field_c[var8][4][1] = SoftwareRasterizer.height;
             }
             var8++;
           }

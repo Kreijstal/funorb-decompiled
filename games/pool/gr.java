@@ -57,12 +57,12 @@ abstract class gr extends DualLinkNode {
         field_H = null;
     }
 
-    final static qb[] a(di param0, String param1, int param2, String param3) {
+    final static IndexedSprite[] a(di param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        qb[] stackIn_2_0 = null;
-        qb[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_2_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -78,7 +78,7 @@ abstract class gr extends DualLinkNode {
             stackIn_4_0 = pn.a(var5, param0, var4_int, 120);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (qb[]) null;
+          stackIn_2_0 = (IndexedSprite[]) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -71,8 +71,8 @@ final class eh extends IntrusiveNode {
           field_l = null;
           return;
         }
-        lr var2 = (lr) null;
-        eh.a(-96, 113, (Sprite[]) null, (lr) null, -106, (Sprite[]) null, 56, -114, -28, 47, (Sprite[]) null, -80, -127, (lr) null, -116, -112, -82, 45, -61, -51);
+        BitmapFont var2 = (BitmapFont) null;
+        eh.a(-96, 113, (Sprite[]) null, (BitmapFont) null, -106, (Sprite[]) null, 56, -114, -28, 47, (Sprite[]) null, -80, -127, (BitmapFont) null, -116, -112, -82, 45, -61, -51);
         field_p = null;
         field_s = null;
         field_n = null;
@@ -81,7 +81,7 @@ final class eh extends IntrusiveNode {
         field_l = null;
     }
 
-    final static void a(int param0, int param1, Sprite[] param2, lr param3, int param4, Sprite[] param5, int param6, int param7, int param8, int param9, Sprite[] param10, int param11, int param12, lr param13, int param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(int param0, int param1, Sprite[] param2, BitmapFont param3, int param4, Sprite[] param5, int param6, int param7, int param8, int param9, Sprite[] param10, int param11, int param12, BitmapFont param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

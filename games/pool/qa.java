@@ -5,7 +5,7 @@ final class qa extends IntrusiveNode {
     int field_s;
     static String field_u;
     qa field_l;
-    static lr field_t;
+    static BitmapFont field_t;
     int field_p;
     static String field_m;
     int field_q;
@@ -184,7 +184,7 @@ final class qa extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, int param1, lr param2, String param3, int param4, int param5) {
+    final static void a(byte param0, int param1, BitmapFont param2, String param3, int param4, int param5) {
         int var11 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -205,7 +205,7 @@ final class qa extends IntrusiveNode {
         var13 = Pool.field_O;
         try {
           var6_int = param2.b(param3);
-          var7 = param2.field_w + param2.field_C;
+          var7 = param2.maxDescent + param2.maxAscent;
           var8 = 1;
           if (var6_int > param1) {
             var9 = var6_int / param1;
@@ -227,16 +227,16 @@ final class qa extends IntrusiveNode {
             return;
           }
           var9Lifetime1 = pa.field_H;
-          if (var9Lifetime1 + var6_int + 6 > qh.field_l) {
-            var9Lifetime1 = -6 - var6_int + qh.field_l;
+          if (var9Lifetime1 + var6_int + 6 > SoftwareRasterizer.width) {
+            var9Lifetime1 = -6 - var6_int + SoftwareRasterizer.width;
           }
           var10 = -param2.field_L + (pm.field_p + 32);
-          if (qh.field_f < var7 + (var10 + 6)) {
+          if (SoftwareRasterizer.height < var7 + (var10 + 6)) {
             var10 = pm.field_p + (-var7 - 6);
           }
-          qh.b(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param4);
-          qh.f(1 + var9Lifetime1, 1 + var10, var6_int + 4, 4 + var7, param5);
-          param2.a(param3, 3 + var9Lifetime1, var10 + 3, var6_int, var7, param4, -1, 0, 0, param2.field_w + param2.field_C);
+          SoftwareRasterizer.drawRectangle(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param4);
+          SoftwareRasterizer.fillRectangle(1 + var9Lifetime1, 1 + var10, var6_int + 4, 4 + var7, param5);
+          param2.drawParagraph(param3, 3 + var9Lifetime1, var10 + 3, var6_int, var7, param4, -1, 0, 0, param2.maxDescent + param2.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

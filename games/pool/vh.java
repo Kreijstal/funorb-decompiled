@@ -35,7 +35,7 @@ class vh extends o {
     String field_kb;
     int field_Cb;
     int field_K;
-    lr field_I;
+    BitmapFont field_I;
     int field_Bb;
     int field_Z;
     int field_sb;
@@ -279,7 +279,7 @@ class vh extends o {
     }
 
     final void a(byte param0, boolean param1) {
-        this.a(false, 0, (byte) 85, false, false, qh.field_f, 0, qh.field_l, param1, false, true);
+        this.a(false, 0, (byte) 85, false, false, SoftwareRasterizer.height, 0, SoftwareRasterizer.width, param1, false, true);
         if (param0 != -79) {
           this.field_Cb = 21;
         }
@@ -307,11 +307,11 @@ class vh extends o {
         String var23Lifetime2;
         this.field_ib = this.field_eb + param6;
         this.field_sb = this.field_qb + param1;
-        var12 = qh.field_b;
-        var13 = qh.field_c;
-        var14 = qh.field_j;
-        var15 = qh.field_g;
-        qh.d(this.field_sb, this.field_ib, this.field_gb + this.field_sb, this.field_ib + this.field_Db);
+        var12 = SoftwareRasterizer.clipLeft;
+        var13 = SoftwareRasterizer.clipTop;
+        var14 = SoftwareRasterizer.clipRight;
+        var15 = SoftwareRasterizer.clipBottom;
+        SoftwareRasterizer.intersectClip(this.field_sb, this.field_ib, this.field_gb + this.field_sb, this.field_ib + this.field_Db);
         if (!this.field_ub) {
           param4 = this.field_W;
           stackIn_5_0 = (this.field_jb != 0);
@@ -432,21 +432,21 @@ class vh extends o {
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_cb != 1) {
               if (this.field_cb == 2) {
-                var22 = var22 + (this.field_Db - (this.field_I.field_w + this.field_I.field_C));
+                var22 = var22 + (this.field_Db - (this.field_I.maxDescent + this.field_I.maxAscent));
               }
             } else {
-              var22 = var22 + (this.field_Db - (this.field_I.field_C + this.field_I.field_w)) / 2;
+              var22 = var22 + (this.field_Db - (this.field_I.maxAscent + this.field_I.maxDescent)) / 2;
             }
             if (0 == this.field_Fb) {
-              this.field_I.b(var23Lifetime2, this.field_tb + (this.field_sb + var21), this.field_I.field_C + (var22 + this.field_ib), var18, -1, this.field_Eb);
+              this.field_I.drawLeftAlpha(var23Lifetime2, this.field_tb + (this.field_sb + var21), this.field_I.maxAscent + (var22 + this.field_ib), var18, -1, this.field_Eb);
             } else {
               if (this.field_Fb == 1) {
-                this.field_I.a(var23Lifetime2, (-(this.field_tb * 2) + this.field_gb) / 2 + var21 + (this.field_sb + this.field_tb), this.field_I.field_C + var22 + this.field_ib, var18, -1, this.field_Eb);
+                this.field_I.drawCenteredAlpha(var23Lifetime2, (-(this.field_tb * 2) + this.field_gb) / 2 + var21 + (this.field_sb + this.field_tb), this.field_I.maxAscent + var22 + this.field_ib, var18, -1, this.field_Eb);
               } else {
                 if (this.field_Fb != 2) {
                   this.field_I.a(var23Lifetime2, this.field_tb + (this.field_sb + var21), this.field_ib + var22, -(2 * this.field_tb) + this.field_gb, this.field_Db, var18, -1, this.field_Eb, this.field_Fb, this.field_cb, this.field_M);
                 } else {
-                  this.field_I.c(var23Lifetime2, this.field_tb + (this.field_sb + var21 - (-this.field_gb + this.field_tb * 2)), this.field_I.field_C + var22 + this.field_ib, var18, -1, this.field_Eb);
+                  this.field_I.drawRightAlpha(var23Lifetime2, this.field_tb + (this.field_sb + var21 - (-this.field_gb + this.field_tb * 2)), this.field_I.maxAscent + var22 + this.field_ib, var18, -1, this.field_Eb);
                 }
               }
             }
@@ -463,7 +463,7 @@ class vh extends o {
             var23_ref = (vh) (this.field_T.f((byte) -5));
           }
         }
-        qh.c(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     final void a(vh param0, int param1, vh param2, int param3) {
@@ -566,7 +566,7 @@ class vh extends o {
           this.field_hb = (Sprite) null;
         }
         cl.field_f = !param0 ? true : false;
-        this.a(0, true, qh.field_l, qh.field_f, (byte) 107, 0);
+        this.a(0, true, SoftwareRasterizer.width, SoftwareRasterizer.height, (byte) 107, 0);
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
@@ -628,20 +628,20 @@ class vh extends o {
         this.field_ib = param0 + this.field_eb;
         this.field_Cb = this.field_Cb - var7Lifetime3;
         this.field_Db = this.field_Db + var7Lifetime3;
-        var8 = qh.field_b;
-        var9 = qh.field_c;
+        var8 = SoftwareRasterizer.clipLeft;
+        var9 = SoftwareRasterizer.clipTop;
         var11 = 123 % ((28 - param4) / 34);
-        var10 = qh.field_j;
-        var12 = qh.field_g;
-        qh.d(this.field_sb, this.field_ib, this.field_sb + this.field_gb, this.field_Db + this.field_ib);
+        var10 = SoftwareRasterizer.clipRight;
+        var12 = SoftwareRasterizer.clipBottom;
+        SoftwareRasterizer.intersectClip(this.field_sb, this.field_ib, this.field_sb + this.field_gb, this.field_Db + this.field_ib);
         var13 = 0;
         if (!rc.field_d &&
           param1 &&
           0 != ne.field_s &&
-          qh.field_b <= lq.field_W &&
-          lq.field_W < qh.field_j &&
-          qh.field_c <= ua.field_o &&
-          qh.field_g > ua.field_o) {
+          SoftwareRasterizer.clipLeft <= lq.field_W &&
+          lq.field_W < SoftwareRasterizer.clipRight &&
+          SoftwareRasterizer.clipTop <= ua.field_o &&
+          SoftwareRasterizer.clipBottom > ua.field_o) {
           this.field_Hb = ua.field_o - this.field_ib;
           var13 = 1;
           this.field_R = ne.field_s;
@@ -656,7 +656,7 @@ class vh extends o {
         if (0 == cd.field_b) {
           this.field_jb = 0;
         }
-        stackIn_33_1 = (!cl.field_f) && (qh.field_b <= wn.field_i) && (wn.field_i < qh.field_j) && (gg.field_f >= qh.field_c) && (qh.field_g > gg.field_f);
+        stackIn_33_1 = (!cl.field_f) && (SoftwareRasterizer.clipLeft <= wn.field_i) && (wn.field_i < SoftwareRasterizer.clipRight) && (gg.field_f >= SoftwareRasterizer.clipTop) && (SoftwareRasterizer.clipBottom > gg.field_f);
         this.field_db = stackIn_33_1;
         stackIn_38_1 = (this.field_db) && (this.field_jb == cd.field_b) && (param1);
         this.field_W = stackIn_38_1;
@@ -673,7 +673,7 @@ class vh extends o {
         if (this.field_db) {
           cl.field_f = true;
         }
-        qh.c(var8, var9, var10, var12);
+        SoftwareRasterizer.setClip(var8, var9, var10, var12);
         if (this.field_jb != 0 &&
           this.field_Jb) {
           this.field_qb = -param5 + (wn.field_i - this.field_mb);

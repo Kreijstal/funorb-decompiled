@@ -7,7 +7,7 @@ class qq extends ok implements tb {
     static String field_zb;
     private gj field_Ab;
     private boolean field_sb;
-    private lr field_wb;
+    private BitmapFont field_wb;
     private boolean field_ub;
     static int field_xb;
     private boolean field_vb;
@@ -193,7 +193,7 @@ class qq extends ok implements tb {
           if (param0) {
             return;
           }
-          this.field_wb = (lr) null;
+          this.field_wb = (BitmapFont) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -209,7 +209,7 @@ class qq extends ok implements tb {
         }
     }
 
-    qq(lq param0, lr param1, String param2, boolean param3, boolean param4) {
+    qq(lq param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new wk((qq) null, param1, param2), 77, 10, 10);
         try {
           this.field_vb = false;

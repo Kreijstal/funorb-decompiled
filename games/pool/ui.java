@@ -95,7 +95,7 @@ final class ui extends ch implements pe, tb {
         RuntimeException decompiledCaughtException = null;
         ng var6 = null;
         RuntimeException var6_ref = null;
-        lr var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         ml var9 = null;
         n var11 = null;
@@ -163,7 +163,7 @@ final class ui extends ch implements pe, tb {
           this.field_D = 15;
           var7 = lc.field_O;
           if (this.field_T != null) {
-            this.field_D = this.field_D + (5 + var7.b(this.field_T, -40 + this.field_l, var7.field_C));
+            this.field_D = this.field_D + (5 + var7.measureWrappedHeight(this.field_T, -40 + this.field_l, var7.maxAscent));
           }
           var8 = vi.field_d;
           var9 = aj.a(hk.d(76), 5137);
@@ -285,10 +285,10 @@ final class ui extends ch implements pe, tb {
     final void a(int param0, byte param1, int param2, int param3) {
         int var5 = -3 % ((param1 + 42) / 53);
         if (null != this.field_T) {
-          lc.field_O.a(this.field_T, 20 + (this.field_C + param2), this.field_D + (param3 + 15), this.field_l - 40, this.field_y, 16777215, -1, 1, 0, lc.field_O.field_C);
+          lc.field_O.drawParagraph(this.field_T, 20 + (this.field_C + param2), this.field_D + (param3 + 15), this.field_l - 40, this.field_y, 16777215, -1, 1, 0, lc.field_O.maxAscent);
         }
         if (null != this.field_W) {
-          qh.f(10 + param2, 134 + param3, -20 + this.field_l, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param2, 134 + param3, -20 + this.field_l, 4210752);
         }
         super.a(param0, (byte) 23, param2, param3);
     }

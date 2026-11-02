@@ -95,7 +95,7 @@ final class fo implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 vc.a(true, param2);
               }
             } else {
-              qh.d();
+              SoftwareRasterizer.clear();
               er.a(240, false, 320);
               fe.a(0, 0, (byte) -89, param2);
             }
@@ -196,9 +196,9 @@ final class fo implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static qb a(byte param0) {
+    final static IndexedSprite a(byte param0) {
         int var2 = 77 % ((20 - param0) / 41);
-        qb var1 = new qb(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], v.field_b[0], IntrusiveNode.field_h);
+        IndexedSprite var1 = new IndexedSprite(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], v.field_b[0], IntrusiveNode.field_h);
         sh.h(-1);
         return var1;
     }

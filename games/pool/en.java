@@ -77,10 +77,10 @@ final class en {
           return;
         }
         if (ne.field_w != sq.field_b) {
-          qh.f(0, 0, qh.field_l, qh.field_f, 0);
+          SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0);
           return;
         }
-        qh.d();
+        SoftwareRasterizer.clear();
     }
 
     private en() throws Throwable {

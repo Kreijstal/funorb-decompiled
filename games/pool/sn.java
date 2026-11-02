@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sn extends gg implements pe, ha {
-    static qb[] field_h;
+    static IndexedSprite[] field_h;
     static String field_l;
     static String field_j;
     eq field_i;

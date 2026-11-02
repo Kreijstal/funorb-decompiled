@@ -83,16 +83,16 @@ final class tl extends ob {
           }
           sa.field_h.d(param8, 95, param7, param6, -1);
           var12 = Integer.toString(param4);
-          sa.field_h.b(var12, se.field_i[0], param7, param6, -1);
+          sa.field_h.drawCentered(var12, se.field_i[0], param7, param6, -1);
           var13 = var10_int >= 50 ? "50+" : Integer.toString(var10_int);
           String var11 = var13;
-          sa.field_h.b(var13, se.field_i[1], param7, param6, -1);
+          sa.field_h.drawCentered(var13, se.field_i[1], param7, param6, -1);
           var14 = param1 + "%";
-          sa.field_h.b(var14, se.field_i[2], param7, param6, -1);
+          sa.field_h.drawCentered(var14, se.field_i[2], param7, param6, -1);
           var15 = param2 + "%";
-          sa.field_h.b(var15, se.field_i[3], param7, param6, -1);
+          sa.field_h.drawCentered(var15, se.field_i[3], param7, param6, -1);
           var16 = param3 + "%";
-          sa.field_h.b(var16, se.field_i[4], param7, param6, -1);
+          sa.field_h.drawCentered(var16, se.field_i[4], param7, param6, -1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "tl.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
@@ -193,15 +193,15 @@ final class tl extends ob {
         int var40Lifetime2;
         try {
           if (param14 >= 0 &&
-            param2 < fb.field_o) {
+            param2 < TriangleRasterizer.clipHeight) {
             if (param7 < 0 &&
               param5 < 0 &&
               param6 < 0) {
               return;
             }
-            if (param7 >= fb.field_k &&
-              param5 >= fb.field_k &&
-              fb.field_k <= param6) {
+            if (param7 >= TriangleRasterizer.clipWidth &&
+              param5 >= TriangleRasterizer.clipWidth &&
+              TriangleRasterizer.clipWidth <= param6) {
               return;
             }
             var34 = param14 - param2;
@@ -266,17 +266,17 @@ final class tl extends ob {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = fb.field_m[param2];
+                var36Lifetime2 = TriangleRasterizer.scanlineOffsets[param2];
                 while (param1 > param2) {
                   var37 = var17_int >> 16;
-                  if (fb.field_k > var37) {
+                  if (TriangleRasterizer.clipWidth > var37) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 != 0) {
                       var39 = (-var21 + var22) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (var30 - var29) / var38;
-                      if (var38 + var37 >= fb.field_k) {
-                        var38 = -1 + (fb.field_k - var37);
+                      if (var38 + var37 >= TriangleRasterizer.clipWidth) {
+                        var38 = -1 + (TriangleRasterizer.clipWidth - var37);
                       }
                       if (var37 >= 0) {
                         ng.a(var29, var25, var40, var36Lifetime2 + var37, (byte) -117, var41, var21, var38, param16, var39);
@@ -285,13 +285,13 @@ final class tl extends ob {
                       }
                     } else {
                       if (var37 >= 0 &&
-                        var37 < fb.field_k) {
+                        var37 < TriangleRasterizer.clipWidth) {
                         ng.a(var29, var25, 0, var36Lifetime2 + var37, (byte) -117, 0, var21, var38, param16, 0);
                       }
                     }
                   }
                   param2++;
-                  if (fb.field_o <= param2) {
+                  if (TriangleRasterizer.clipHeight <= param2) {
                     return;
                   }
                   var17_int = var17_int + var19;
@@ -302,7 +302,7 @@ final class tl extends ob {
                   var26 = var26 + var28;
                   var18 = var18 + var20;
                   var22 = var22 + var24;
-                  var36Lifetime2 = var36Lifetime2 + qh.field_l;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.width;
                 }
               }
               var36Lifetime3 = -param1 + param14;
@@ -422,25 +422,25 @@ final class tl extends ob {
               var17_int = var17_int + param2 * var19;
               param2 = 0;
             }
-            var35Lifetime1 = fb.field_m[param2];
+            var35Lifetime1 = TriangleRasterizer.scanlineOffsets[param2];
             if (param10 != -49) {
               field_J = (nl) null;
             }
             while (param14 > param2) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < fb.field_k) {
+              if (var36Lifetime1 < TriangleRasterizer.clipWidth) {
                 var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (0 == var37Lifetime1) {
                   if (var36Lifetime1 >= 0 &&
-                    var36Lifetime1 < fb.field_k) {
+                    var36Lifetime1 < TriangleRasterizer.clipWidth) {
                     ng.a(var29, var25, 0, var36Lifetime1 + var35Lifetime1, (byte) -117, 0, var21, var37Lifetime1, param16, 0);
                   }
                 } else {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
                   var39Lifetime1 = (var26 - var25) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (fb.field_k <= var37Lifetime1 + var36Lifetime1) {
-                    var37Lifetime1 = -var36Lifetime1 + fb.field_k - 1;
+                  if (TriangleRasterizer.clipWidth <= var37Lifetime1 + var36Lifetime1) {
+                    var37Lifetime1 = -var36Lifetime1 + TriangleRasterizer.clipWidth - 1;
                   }
                   if (var36Lifetime1 < 0) {
                     ng.a(-(var40Lifetime1 * var36Lifetime1) + var29, var25 - var36Lifetime1 * var39Lifetime1, var39Lifetime1, var35Lifetime1, (byte) -117, var40Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, var37Lifetime1 + var36Lifetime1, param16, var38Lifetime1);
@@ -450,7 +450,7 @@ final class tl extends ob {
                 }
               }
               param2++;
-              if (fb.field_o <= param2) {
+              if (TriangleRasterizer.clipHeight <= param2) {
                 return;
               }
               var26 = var26 + var28;
@@ -459,7 +459,7 @@ final class tl extends ob {
               var25 = var25 + var27;
               var30 = var30 + var32;
               var21 = var21 + var23;
-              var35Lifetime1 = var35Lifetime1 + qh.field_l;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.width;
               var18 = var18 + var20;
               var29 = var29 + var31;
             }
@@ -1091,11 +1091,11 @@ final class tl extends ob {
         }
     }
 
-    final static qb a(di param0, int param1, String param2, String param3) {
+    final static IndexedSprite a(di param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        qb stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -1246,19 +1246,19 @@ final class tl extends ob {
           tm.field_b = wp.a(0, 10, (byte) 68, 7);
         }
         var2 = 170;
-        nj.a(vk.field_y, (byte) 65, 520, 60, 150, ni.field_Z.field_G + 176 + 16);
+        nj.a(vk.field_y, (byte) 65, 520, 60, 150, ni.field_Z.baselineHeight + 176 + 16);
         var3 = 2;
         var3Lifetime1 = 15658734;
-        ni.field_Z.b(eq.field_T, se.field_i[0], var2, var3Lifetime1, -1);
-        ni.field_Z.b(jf.field_n, se.field_i[1], var2, var3Lifetime1, -1);
-        ni.field_Z.b(vj.field_b, se.field_i[2], var2, var3Lifetime1, -1);
-        ni.field_Z.b(qe.field_G, se.field_i[3], var2, var3Lifetime1, -1);
-        ni.field_Z.b(um.field_a, se.field_i[4], var2, var3Lifetime1, -1);
+        ni.field_Z.drawCentered(eq.field_T, se.field_i[0], var2, var3Lifetime1, -1);
+        ni.field_Z.drawCentered(jf.field_n, se.field_i[1], var2, var3Lifetime1, -1);
+        ni.field_Z.drawCentered(vj.field_b, se.field_i[2], var2, var3Lifetime1, -1);
+        ni.field_Z.drawCentered(qe.field_G, se.field_i[3], var2, var3Lifetime1, -1);
+        ni.field_Z.drawCentered(um.field_a, se.field_i[4], var2, var3Lifetime1, -1);
         if (param0 <= 36) {
           return;
         }
         regionExit1: {
-          var2 = var2 + (8 + (ni.field_Z.field_w + sa.field_h.field_C));
+          var2 = var2 + (8 + (ni.field_Z.maxDescent + sa.field_h.maxAscent));
           if (!tm.field_b.field_v) {
             var4 = cl.field_j;
           } else {
@@ -1270,7 +1270,7 @@ final class tl extends ob {
               for (var8 = 0; var8 < 10; var8++) {
                 if (var5 != null) {
                   stackIn_18_0 = 62;
-                  stackIn_18_1 = var2 - sa.field_h.field_C;
+                  stackIn_18_1 = var2 - sa.field_h.maxAscent;
                   stackIn_18_2 = 516;
                   stackIn_18_3 = 16;
                   if ((1 & var8) == 0) {
@@ -1278,7 +1278,7 @@ final class tl extends ob {
                   } else {
                     stackIn_19_4 = 4146281;
                   }
-                  qh.f(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_19_4);
+                  SoftwareRasterizer.fillRectangle(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_19_4);
                   var3Lifetime2 = 13421772;
                   var9 = var5[var8];
                   if (or.a((byte) 3, var9)) {
@@ -1300,13 +1300,13 @@ final class tl extends ob {
           }
         }
         if (var4 != null) {
-          sa.field_h.b((String) (var4), qh.field_l >> 1, 245, 16777215, -1);
+          sa.field_h.drawCentered((String) (var4), SoftwareRasterizer.width >> 1, 245, 16777215, -1);
         }
         return;
     }
 
     private final void f(int param0) {
-        sa.field_h.b(ra.field_a, param0, 380, 15658734, -1);
+        sa.field_h.drawCentered(ra.field_a, param0, 380, 15658734, -1);
     }
 
     final static String a(int param0, int param1, byte[] param2, int param3) {

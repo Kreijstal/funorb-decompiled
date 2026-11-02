@@ -51,7 +51,7 @@ final class ng extends am {
           stackIn_16_0 = (!param0) ? 7105644 : 16777215;
           var9 = stackIn_16_0;
           qf.a((param4.field_y - this.field_y[0].field_y >> 1) + (param3 + param4.field_D), var8, param4.field_C + param1, (byte) 18, param4.field_l, this.field_y);
-          this.field_a.a(param4.field_m, param1 + param4.field_C, -2 + (param3 + param4.field_D), param4.field_l, param4.field_y, var9, -1, 1, 1, this.field_a.field_C);
+          this.field_a.drawParagraph(param4.field_m, param1 + param4.field_C, -2 + (param3 + param4.field_D), param4.field_l, param4.field_y, var9, -1, 1, 1, this.field_a.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

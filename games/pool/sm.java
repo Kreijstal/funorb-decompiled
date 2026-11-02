@@ -20,7 +20,7 @@ final class sm extends om {
         field_C = null;
     }
 
-    private sm(lr param0, int param1) {
+    private sm(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

@@ -33,7 +33,7 @@ final class dh extends IntrusiveNode {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4;
-        qb var6;
+        IndexedSprite var6;
         byte[] var7;
         int[] var8;
         int var9;

@@ -9,7 +9,7 @@ abstract class id {
 
     abstract void a(java.awt.Component param0, int param1);
 
-    final static vh a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, lr param9, int param10, int param11, int param12) {
+    final static vh a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12) {
         vh var13 = null;
         RuntimeException var13_ref = null;
         vh stackIn_1_0 = null;
@@ -282,14 +282,14 @@ abstract class id {
         Object var1 = null;
         int var2 = 0;
         int var4 = 0;
-        lr var5 = null;
+        BitmapFont var5 = null;
         Throwable decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = Pool.field_O;
         try {
           if (param0 != 127) {
-            var5 = (lr) null;
-            id.a(61, -54, 2, 71, 91, -21, -24, 76, 60, (lr) null, -98, -116, 30);
+            var5 = (BitmapFont) null;
+            id.a(61, -54, 2, 71, 91, -21, -24, 76, 60, (BitmapFont) null, -98, -116, 30);
           }
           var1 = wn.field_a;
           synchronized (var1) {
@@ -347,14 +347,14 @@ abstract class id {
             }
             param2[0].c(param3, param0);
             param2[2].c(-var6 + (param1 + param3), param0);
-            qh.a(sq.field_a);
-            qh.d(param3 + var5_int, param0, -var6 + (param3 + param1), param0 + param2[1].field_y);
+            SoftwareRasterizer.saveClip(sq.field_a);
+            SoftwareRasterizer.intersectClip(param3 + var5_int, param0, -var6 + (param3 + param1), param0 + param2[1].field_y);
             var8 = param3 + var5_int;
             var9 = param1 + param3 - var6;
             for (param3 = var8; param3 < var9; param3 = param3 + var7) {
               param2[1].c(param3, param0);
             }
-            qh.b(sq.field_a);
+            SoftwareRasterizer.restoreClip(sq.field_a);
             return;
           }
           return;

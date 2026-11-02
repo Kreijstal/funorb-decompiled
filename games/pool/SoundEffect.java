@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi {
-    private int field_c;
-    private pb[] field_b;
-    private int field_a;
+final class SoundEffect {
+    private int loopEndMillis;
+    private SoundTone[] field_b;
+    private int loopStartMillis;
 
-    private final byte[] a() {
+    private final byte[] mix() {
         int var4 = 0;
         int var8 = 0;
         int var1;
@@ -46,32 +46,32 @@ final class mi {
         return var3;
     }
 
-    final static mi a(di param0, int param1, int param2) {
+    final static SoundEffect a(di param0, int param1, int param2) {
         byte[] var3 = param0.a(102, param2, param1);
         if (var3 == null) {
           return null;
         }
-        return new mi(new PacketBuffer(var3));
+        return new SoundEffect(new PacketBuffer(var3));
     }
 
-    final PcmSample b() {
-        byte[] var1 = this.a();
-        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
+    final PcmSample toPcmSample() {
+        byte[] var1 = this.mix();
+        return new PcmSample(22050, var1, 22050 * this.loopStartMillis / 1000, 22050 * this.loopEndMillis / 1000);
     }
 
-    private mi(PacketBuffer param0) {
+    private SoundEffect(PacketBuffer param0) {
         int var2 = 0;
         int var3;
-        this.field_b = new pb[10];
+        this.field_b = new SoundTone[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.readUnsignedByte(-64);
           if (var3 != 0) {
             param0.position = param0.position - 1;
-            this.field_b[var2] = new pb();
+            this.field_b[var2] = new SoundTone();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_a = param0.readUnsignedShort(-1034);
-        this.field_c = param0.readUnsignedShort(-1034);
+        this.loopStartMillis = param0.readUnsignedShort(-1034);
+        this.loopEndMillis = param0.readUnsignedShort(-1034);
     }
 }

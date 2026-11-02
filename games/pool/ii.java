@@ -19,11 +19,11 @@ final class ii {
         field_c = null;
     }
 
-    final static Sprite a(int param0, qb param1) {
+    final static Sprite a(int param0, IndexedSprite param1) {
         RuntimeException var2 = null;
         int var5 = 0;
         int var6 = 0;
-        qb var7 = null;
+        IndexedSprite var7 = null;
         Sprite var9 = null;
         int[] var15 = null;
         int[] var16 = null;
@@ -37,10 +37,10 @@ final class ii {
           var9.field_B = param1.field_d - 2;
           var9.field_G = param1.field_e - 2;
           var15 = new int[4];
-          var16 = qh.field_d;
-          var5 = qh.field_l;
-          var6 = qh.field_f;
-          qh.a(var15);
+          var16 = SoftwareRasterizer.pixels;
+          var5 = SoftwareRasterizer.width;
+          var6 = SoftwareRasterizer.height;
+          SoftwareRasterizer.saveClip(var15);
           var9.e();
           param1.field_d = 0;
           var7 = param1;
@@ -50,8 +50,8 @@ final class ii {
           param1.a(2, param0);
           var9.e(4144959);
           var9.e(65793);
-          qh.a(var16, var5, var6);
-          qh.b(var15);
+          SoftwareRasterizer.setTarget(var16, var5, var6);
+          SoftwareRasterizer.restoreClip(var15);
           stackIn_1_0 = var9;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

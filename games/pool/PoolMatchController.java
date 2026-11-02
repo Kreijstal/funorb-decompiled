@@ -77,9 +77,9 @@ final class PoolMatchController {
           if (param0 != 4476) {
             this.field_c = (hq) null;
           }
-          this.field_U = this.field_E + qh.field_f >> 1;
+          this.field_U = this.field_E + SoftwareRasterizer.height >> 1;
           this.field_n = id.field_a[3].field_z + 18 + id.field_a[5].field_z;
-          this.field_P = qh.field_f - this.field_E >> 1;
+          this.field_P = SoftwareRasterizer.height - this.field_E >> 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -647,12 +647,12 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         Sprite var4 = null;
         RuntimeException var4_ref = null;
-        qb[] var5 = null;
-        qb[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        qb[] var10 = null;
+        IndexedSprite[] var10 = null;
         Sprite var10_ref = null;
         int var11_int = 0;
         Sprite var11 = null;
@@ -665,16 +665,16 @@ final class PoolMatchController {
           me.field_p = pf.a("commonui", (byte) 124, "jagex_logo_grey", param2);
           jj.field_S = aj.a(0, "commonui", param2, "button");
           bo.field_a = ep.a(param1 ^ -22692, param2, "validation", "commonui");
-          qk.field_a = (lr) ((Object) hn.a(param3, "commonui", "arezzo12", -25154, param2));
-          lc.field_O = (lr) ((Object) hn.a(param3, "commonui", "arezzo14", -25154, param2));
-          bi.field_e = (lr) ((Object) hn.a(param3, "commonui", "arezzo14bold", -25154, param2));
+          qk.field_a = (BitmapFont) ((Object) hn.a(param3, "commonui", "arezzo12", -25154, param2));
+          lc.field_O = (BitmapFont) ((Object) hn.a(param3, "commonui", "arezzo14", -25154, param2));
+          bi.field_e = (BitmapFont) ((Object) hn.a(param3, "commonui", "arezzo14bold", -25154, param2));
           var4 = new Sprite(param0.a(false, "", "button.gif"), (java.awt.Component) ((Object) pa.field_K));
           tl.a(param2, 3812, "dropdown", "commonui");
           var5 = gr.a(param2, "commonui", -24155, "screen_options");
-          vl.field_l = new qb[4];
-          la.field_c = new qb[4];
-          sn.field_h = new qb[4];
-          var6 = new qb[][]{vl.field_l, sn.field_h, la.field_c};
+          vl.field_l = new IndexedSprite[4];
+          la.field_c = new IndexedSprite[4];
+          sn.field_h = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{vl.field_l, sn.field_h, la.field_c};
           var7 = new int[4][];
           var7[0] = var5[0].field_i;
           var8 = 1;
@@ -711,7 +711,7 @@ final class PoolMatchController {
             stackIn_20_0 = 0;
             break;
           }
-          qh.e(stackIn_20_0, 0, qh.field_l, qh.field_f);
+          SoftwareRasterizer.grayscaleRectangle(stackIn_20_0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var10_ref = new Sprite(var9, var9);
           var10_ref.e();
           var4.a(0, 0);
@@ -822,10 +822,10 @@ final class PoolMatchController {
             var4 = this.b(-16439);
             var5 = fl.field_q.field_ib - il.field_f.field_y >> 1;
             var6 = this.b(this.field_Q, 0, var3);
-            qh.a(ho.field_s);
-            qh.c(var4 + 5, -var6 + (7 + (var5 + var3)), var2_int + (var4 + 5), var5 - (-7 - var3));
+            SoftwareRasterizer.saveClip(ho.field_s);
+            SoftwareRasterizer.setClip(var4 + 5, -var6 + (7 + (var5 + var3)), var2_int + (var4 + 5), var5 - (-7 - var3));
             v.field_c.c(var4, var5);
-            qh.b(ho.field_s);
+            SoftwareRasterizer.restoreClip(ho.field_s);
             il.field_f.c(var4, var5);
             if ((2L & pd.field_i) != 0L) {
               sa.field_h.c("power=" + this.field_Q + ", bar_filled=" + var6, var4, var5, 16777215, 1);
@@ -1773,10 +1773,10 @@ final class PoolMatchController {
         pq var4 = null;
         int var3Lifetime1;
         try {
-          qh.a(bk.field_w);
-          qh.c(t.field_e + gg.field_b[3].field_z, (fl.field_q.field_ib >> 1) - 240 + this.field_P - 16, t.field_e + gg.field_b[3].field_z + 18, -240 - (-(fl.field_q.field_ib >> 1) - 16) + this.field_U);
-          fb.a();
-          fb.b(320 + t.field_e, fl.field_q.field_ib >> 1);
+          SoftwareRasterizer.saveClip(bk.field_w);
+          SoftwareRasterizer.setClip(t.field_e + gg.field_b[3].field_z, (fl.field_q.field_ib >> 1) - 240 + this.field_P - 16, t.field_e + gg.field_b[3].field_z + 18, -240 - (-(fl.field_q.field_ib >> 1) - 16) + this.field_U);
+          TriangleRasterizer.useRasterClip();
+          TriangleRasterizer.setProjectionCenter(320 + t.field_e, fl.field_q.field_ib >> 1);
           for (var2_int = 0; this.field_C > var2_int; var2_int++) {
             var3 = this.field_ib[var2_int];
             var4 = this.field_I.field_l[var3];
@@ -1789,9 +1789,9 @@ final class PoolMatchController {
           if (param0 != 32) {
             this.field_G = (kj) null;
           }
-          qh.b(bk.field_w);
-          fb.a();
-          fb.b(320, 240);
+          SoftwareRasterizer.restoreClip(bk.field_w);
+          TriangleRasterizer.useRasterClip();
+          TriangleRasterizer.setProjectionCenter(320, 240);
           nj.a(id.field_a, (byte) -82, this.field_n, t.field_e, -240 + (fl.field_q.field_ib >> 1) - 8 + this.field_P - id.field_a[1].field_y, 16 + (this.field_E - (-id.field_a[1].field_y - id.field_a[7].field_y)));
           if (0L != (pd.field_i & 268435456L)) {
             var2 = null;
@@ -2116,7 +2116,7 @@ final class PoolMatchController {
             var3_int = 60;
             var4 = 55;
             if (!iq.field_i && (!(wn.field_i >= 0) ||
-              !((qh.field_l >> 1) > wn.field_i) ||
+              !((SoftwareRasterizer.width >> 1) > wn.field_i) ||
               !(0 <= gg.field_f) ||
               !(gg.field_f < var4))) {
               if (!(0 >= lk.field_u)) {
@@ -2140,13 +2140,13 @@ final class PoolMatchController {
             var7Lifetime1 = of.field_Ob;
             var8Lifetime1 = no.field_q.field_A + fm.field_M + 2;
             var9 = 16 + var6 - (-eq.field_Q[4].field_z - eq.field_Q[6].field_z);
-            var10 = 4 + eq.field_Q[1].field_A + (var5.length * sa.field_h.field_G + eq.field_Q[7].field_A);
-            var4Lifetime1 = var8Lifetime1 + eq.field_Q[1].field_A + sa.field_h.field_G;
-            qh.a(var7Lifetime1, var8Lifetime1, var9, var10, 8, 4144959, 192 * lk.field_u >> 8);
+            var10 = 4 + eq.field_Q[1].field_A + (var5.length * sa.field_h.baselineHeight + eq.field_Q[7].field_A);
+            var4Lifetime1 = var8Lifetime1 + eq.field_Q[1].field_A + sa.field_h.baselineHeight;
+            SoftwareRasterizer.a(var7Lifetime1, var8Lifetime1, var9, var10, 8, 4144959, 192 * lk.field_u >> 8);
             rk.a(114, var8Lifetime1, lk.field_u, var7Lifetime1, var9, var10, eq.field_Q);
             for (var11 = 0; var5.length > var11; var11++) {
-              sa.field_h.b(var5[var11], var3_int, var4Lifetime1, 15658734, 2039583, lk.field_u);
-              var4Lifetime1 = var4Lifetime1 + sa.field_h.field_G;
+              sa.field_h.drawLeftAlpha(var5[var11], var3_int, var4Lifetime1, 15658734, 2039583, lk.field_u);
+              var4Lifetime1 = var4Lifetime1 + sa.field_h.baselineHeight;
             }
           }
           if (0 != (this.field_L & sk.field_d)) {
@@ -2229,7 +2229,7 @@ final class PoolMatchController {
           if (param0 != -16439) {
             this.c((qe) null, 120);
           }
-          stackIn_4_0 = qh.field_l - ((65536 - hc.a(2047, this.field_l)) * (1 + il.field_f.field_w) >> 17);
+          stackIn_4_0 = SoftwareRasterizer.width - ((65536 - hc.a(2047, this.field_l)) * (1 + il.field_f.field_w) >> 17);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2456,7 +2456,7 @@ final class PoolMatchController {
             -no.field_q.field_A < fm.field_M)) {
             ac.b(-1, (byte) 69);
           }
-          tq.field_q = (sa.field_h.field_C + no.field_q.field_y >> 1) + fm.field_M;
+          tq.field_q = (sa.field_h.maxAscent + no.field_q.field_y >> 1) + fm.field_M;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2632,21 +2632,21 @@ final class PoolMatchController {
           if (param2 != 27) {
             this.field_T = false;
           }
-          var4_int = -sa.field_h.field_w + qh.field_f;
+          var4_int = -sa.field_h.maxDescent + SoftwareRasterizer.height;
           var5 = new aa(param1);
           var6 = (qe) (var5.a(0));
           while (var6 != null) {
             if (var6.field_q >= 3) {
               sa.field_h.d(var6.a(true), param0, var4_int, 16724787, 1);
-              var4_int = var4_int - 5 * (sa.field_h.field_w + sa.field_h.field_C) / 4;
-              if (sa.field_h.field_C >= var4_int) {
+              var4_int = var4_int - 5 * (sa.field_h.maxDescent + sa.field_h.maxAscent) / 4;
+              if (sa.field_h.maxAscent >= var4_int) {
                 return;
               }
             }
             if (var6.field_q >= 2) {
               sa.field_h.d(var6.c(param2 ^ 26864), param0, var4_int, 16724787, 1);
-              var4_int = var4_int - (sa.field_h.field_C + sa.field_h.field_w) * 5 / 4;
-              if (sa.field_h.field_C >= var4_int) {
+              var4_int = var4_int - (sa.field_h.maxAscent + sa.field_h.maxDescent) * 5 / 4;
+              if (sa.field_h.maxAscent >= var4_int) {
                 return;
               }
             }
@@ -2655,17 +2655,17 @@ final class PoolMatchController {
               if (var6.field_q != 0) {
                 sa.field_h.d(var6.e(0), param0, var4_int, 16750899, 1);
               } else {
-                sa.field_h.b(var6.e(0), param0, var4_int, 16750899, 1, 128);
+                sa.field_h.drawLeftAlpha(var6.e(0), param0, var4_int, 16750899, 1, 128);
               }
-              var4_int = var4_int - 5 * (sa.field_h.field_C + sa.field_h.field_w) / 4;
-              if (var4_int <= sa.field_h.field_C) {
+              var4_int = var4_int - 5 * (sa.field_h.maxAscent + sa.field_h.maxDescent) / 4;
+              if (var4_int <= sa.field_h.maxAscent) {
                 return;
               }
             }
             if (var6.field_q >= 0) {
               sa.field_h.d(var6.a(param2 ^ 26, this.field_I), param0, var4_int, 10092339, 1);
-              var4_int = var4_int - (sa.field_h.field_w + sa.field_h.field_C) * 5 / 4;
-              if (sa.field_h.field_C >= var4_int) {
+              var4_int = var4_int - (sa.field_h.maxDescent + sa.field_h.maxAscent) * 5 / 4;
+              if (sa.field_h.maxAscent >= var4_int) {
                 return;
               }
             }
@@ -3843,10 +3843,10 @@ final class PoolMatchController {
                   sa.field_v = var7_ref_StringLifetime2;
                   ig.field_i = ic.a(1, param0, 320, var7_ref_StringLifetime2, 4);
                 }
-                ig.field_i.c(qh.field_l - ig.field_i.field_z >> 1, 80);
+                ig.field_i.c(SoftwareRasterizer.width - ig.field_i.field_z >> 1, 80);
                 if ((f.field_f & this.field_L) == 0) {
-                  sa.field_h.a(nf.field_Z, bi.field_d);
-                  sa.field_h.b(fl.field_m, qh.field_l >> 1, 150, 16777215, 0);
+                  sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
+                  sa.field_h.drawCentered(fl.field_m, SoftwareRasterizer.width >> 1, 150, 16777215, 0);
                 }
               }
             } else {
@@ -3885,7 +3885,7 @@ final class PoolMatchController {
               if (var9 == -1) {
                 sa.field_h.d(var8, vk.field_H + 4, tq.field_q, 16777215, 0);
               } else {
-                sa.field_h.b(var8, 4 + vk.field_H, tq.field_q, 16777215, 0, (o.a(var9, (byte) -64) >> 11) + 191);
+                sa.field_h.drawLeftAlpha(var8, 4 + vk.field_H, tq.field_q, 16777215, 0, (o.a(var9, (byte) -64) >> 11) + 191);
               }
             }
             of.a(353, false, (no.field_q.field_y >> 1) + fm.field_M);
@@ -3930,16 +3930,16 @@ final class PoolMatchController {
             var2[var5_int] = (float)mn.field_g;
           }
           sa.field_h.d("audio falloff start=" + re.field_a + " speed=" + k.a((long)ap.field_G, 3, true, 8) + " (" + ap.field_G + ")" + ", slope=" + ue.field_e, 10, 50, 65280, 3355443);
-          qh.d(0, 440, 0, 445, 65280);
+          SoftwareRasterizer.drawLine(0, 440, 0, 445, 65280);
           sa.field_h.d("camera", 1, 460, 65280, 1);
-          qh.d(qh.field_l / 2, 440, qh.field_l / 2, 445, 65280);
-          sa.field_h.b("table length dist", qh.field_l / 2, 460, 65280, 1);
-          qh.d(-1 + qh.field_l, 440, qh.field_l - 1, 445, 65280);
-          sa.field_h.c("2x table length dist", -1 + qh.field_l, 460, 65280, 1);
+          SoftwareRasterizer.drawLine(SoftwareRasterizer.width / 2, 440, SoftwareRasterizer.width / 2, 445, 65280);
+          sa.field_h.drawCentered("table length dist", SoftwareRasterizer.width / 2, 460, 65280, 1);
+          SoftwareRasterizer.drawLine(-1 + SoftwareRasterizer.width, 440, SoftwareRasterizer.width - 1, 445, 65280);
+          sa.field_h.c("2x table length dist", -1 + SoftwareRasterizer.width, 460, 65280, 1);
           var5 = -16.0f;
           var6 = 300.0f;
           for (var7 = 1; var7 < 640; var7++) {
-            qh.d(var7 - 1, -(int)((-var5 + var2[-1 + var7]) * 480.0f / (-var5 + var6)) + 479, var7, 479 - (int)((var2[var7] - var5) * 480.0f / (var6 - var5)), 65280);
+            SoftwareRasterizer.drawLine(var7 - 1, -(int)((-var5 + var2[-1 + var7]) * 480.0f / (-var5 + var6)) + 479, var7, 479 - (int)((var2[var7] - var5) * 480.0f / (var6 - var5)), 65280);
           }
           if (param0 < 43) {
             this.field_N = 27;
@@ -4390,10 +4390,10 @@ final class PoolMatchController {
         int stackIn_53_0 = 0;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
-        an stackIn_88_0 = null;
+        BinaryBitmapFont stackIn_88_0 = null;
         StringBuilder stackIn_88_1 = null;
         String stackIn_89_2 = null;
-        an stackIn_96_0 = null;
+        BinaryBitmapFont stackIn_96_0 = null;
         String stackIn_97_1 = null;
         int stackIn_154_0 = 0;
         int stackIn_182_0 = 0;
@@ -4485,7 +4485,7 @@ final class PoolMatchController {
           }
           if ((pd.field_i & 16L) != 0L &&
             !this.field_I.a(this.field_G.field_e, this.field_G.field_h, this.field_G.field_k, 359, this.field_Q, this.field_G.field_d)) {
-            sa.field_h.b("cue intersects something!", 320, 240, 16764142, 1);
+            sa.field_h.drawCentered("cue intersects something!", 320, 240, 16764142, 1);
           }
           if ((8192L & pd.field_i) != 0L) {
             for (var3_int = 0; var3_int < this.field_I.field_c.length; var3_int++) {
@@ -4497,13 +4497,13 @@ final class PoolMatchController {
               if (var8 > 0) {
                 var9 = 320 + (this.field_ab[3] * var5 + (var6 * this.field_ab[4] + this.field_ab[5] * var7) >> 7) / var8;
                 var10 = (var6 * this.field_ab[7] + (this.field_ab[6] * var5 + var7 * this.field_ab[8]) >> 7) / var8 + 240;
-                if (qh.field_b < var9 &&
-                  var9 < qh.field_j &&
-                  var10 > qh.field_c &&
-                  qh.field_g > var10) {
-                  sa.field_h.b("wall " + var3_int, var9, var10, 16768409, 3355443);
-                  qh.d(-4 + var9, var10, var9 + 4, var10, 16768409);
-                  qh.d(var9, -4 + var10, var9, var10 + 4, 16768409);
+                if (SoftwareRasterizer.clipLeft < var9 &&
+                  var9 < SoftwareRasterizer.clipRight &&
+                  var10 > SoftwareRasterizer.clipTop &&
+                  SoftwareRasterizer.clipBottom > var10) {
+                  sa.field_h.drawCentered("wall " + var3_int, var9, var10, 16768409, 3355443);
+                  SoftwareRasterizer.drawLine(-4 + var9, var10, var9 + 4, var10, 16768409);
+                  SoftwareRasterizer.drawLine(var9, -4 + var10, var9, var10 + 4, 16768409);
                 }
               }
             }
@@ -4516,13 +4516,13 @@ final class PoolMatchController {
               if (0 < var8Lifetime5) {
                 var9Lifetime3 = (this.field_ab[4] * var6Lifetime4 + (this.field_ab[3] * var5Lifetime7 + this.field_ab[5] * var7Lifetime5) >> 7) / var8Lifetime5 + 320;
                 var10Lifetime3 = 240 + (var5Lifetime7 * this.field_ab[6] + var6Lifetime4 * this.field_ab[7] + var7Lifetime5 * this.field_ab[8] >> 7) / var8Lifetime5;
-                if (qh.field_b < var9Lifetime3 &&
-                  qh.field_j > var9Lifetime3 &&
-                  var10Lifetime3 > qh.field_c &&
-                  var10Lifetime3 < qh.field_g) {
+                if (SoftwareRasterizer.clipLeft < var9Lifetime3 &&
+                  SoftwareRasterizer.clipRight > var9Lifetime3 &&
+                  var10Lifetime3 > SoftwareRasterizer.clipTop &&
+                  var10Lifetime3 < SoftwareRasterizer.clipBottom) {
                   sa.field_h.d("point " + var3_intLifetime8, var9Lifetime3, var10Lifetime3, 14522879, 3355443);
-                  qh.d(-4 + var9Lifetime3, var10Lifetime3, var9Lifetime3 + 4, var10Lifetime3, 16768409);
-                  qh.d(var9Lifetime3, var10Lifetime3 - 4, var9Lifetime3, var10Lifetime3 + 4, 16768409);
+                  SoftwareRasterizer.drawLine(-4 + var9Lifetime3, var10Lifetime3, var9Lifetime3 + 4, var10Lifetime3, 16768409);
+                  SoftwareRasterizer.drawLine(var9Lifetime3, var10Lifetime3 - 4, var9Lifetime3, var10Lifetime3 + 4, 16768409);
                 }
               }
             }
@@ -4547,16 +4547,16 @@ final class PoolMatchController {
                   stackIn_54_2 = "potted: ";
                 }
                 er.a(stackIn_53_0, ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(var6_ref_pq.b(param0 - 12350)).toString(), var7Lifetime1, 1, sa.field_h, true, 11193599);
-                var8Lifetime1 = var8Lifetime1 - (sa.field_h.field_w + sa.field_h.field_C);
+                var8Lifetime1 = var8Lifetime1 - (sa.field_h.maxDescent + sa.field_h.maxAscent);
                 if (ap.field_D != null &&
                   ap.field_D[var5Lifetime1] != null) {
                   er.a(var8Lifetime1, "finished: " + ap.field_D[var5Lifetime1].field_o.i(), var7Lifetime1, 1, sa.field_h, true, 11193599);
-                  var8Lifetime1 = var8Lifetime1 - (sa.field_h.field_C + sa.field_h.field_w);
+                  var8Lifetime1 = var8Lifetime1 - (sa.field_h.maxAscent + sa.field_h.maxDescent);
                 }
                 er.a(var8Lifetime1, "@" + var6_ref_pq.field_g + "," + var6_ref_pq.field_k, var7Lifetime1, 1, sa.field_h, true, 65535);
-                var8Lifetime1 = var8Lifetime1 - (sa.field_h.field_C + sa.field_h.field_w);
+                var8Lifetime1 = var8Lifetime1 - (sa.field_h.maxAscent + sa.field_h.maxDescent);
                 er.a(var8Lifetime1, Integer.toString(var5Lifetime1), var7Lifetime1, 1, sa.field_h, true, 11193599);
-                var8Lifetime1 = var8Lifetime1 - (sa.field_h.field_w + sa.field_h.field_C);
+                var8Lifetime1 = var8Lifetime1 - (sa.field_h.maxDescent + sa.field_h.maxAscent);
               }
             }
           }
@@ -4571,10 +4571,10 @@ final class PoolMatchController {
           }
           if ((pd.field_i & 65536L) != 0L) {
             sa.field_h.d("Generated balls: Segments=" + ne.field_v + ", slices=" + hr.field_b + ", polys/ball=" + ne.field_v * (hr.field_b * 2), 10, 70, 16772795, 1);
-            var3_intLifetime1 = -sa.field_h.field_w + 480 - 4;
+            var3_intLifetime1 = -sa.field_h.maxDescent + 480 - 4;
             for (var4Lifetime1 = 0; var4Lifetime1 < pd.field_f.length; var4Lifetime1++) {
               sa.field_h.d(var4Lifetime1 + ": " + pd.field_f[var4Lifetime1] + " dist=" + tc.field_d[var4Lifetime1], 300, var3_intLifetime1, 16772829, 0);
-              var3_intLifetime1 = var3_intLifetime1 - 3 * sa.field_h.field_C / 2;
+              var3_intLifetime1 = var3_intLifetime1 - 3 * sa.field_h.maxAscent / 2;
             }
           }
           if (param0 != 300) {
@@ -4584,20 +4584,20 @@ final class PoolMatchController {
             rk.a((byte) 114);
           }
           if (0L != (8192L & pd.field_i)) {
-            var3_intLifetime2 = 476 - sa.field_h.field_w;
+            var3_intLifetime2 = 476 - sa.field_h.maxDescent;
             sa.field_h.d("currentplayer " + this.field_I.field_A + ", extra shots " + this.field_I.field_z + ", extra visits " + this.field_I.field_y, 300, var3_intLifetime2, 16772829, 0);
-            var3_intLifetime2 = var3_intLifetime2 - sa.field_h.field_C * 3 / 2;
+            var3_intLifetime2 = var3_intLifetime2 - sa.field_h.maxAscent * 3 / 2;
           }
           if ((2L & pd.field_i) != 0L) {
-            var3_intLifetime3 = -4 - sa.field_h.field_w + 480;
+            var3_intLifetime3 = -4 - sa.field_h.maxDescent + 480;
             sa.field_h.d("cur cam ang " + (int)(this.field_eb.a(true) * 180.0 / 3.141592653589793) + ", " + (int)(180.0 * this.field_eb.a((byte) 106) / 3.141592653589793) + ", dist " + this.field_eb.d(param0 ^ 292), 300, var3_intLifetime3, 16772829, 0);
-            var3_intLifetime3 = var3_intLifetime3 - 3 * sa.field_h.field_C / 2;
+            var3_intLifetime3 = var3_intLifetime3 - 3 * sa.field_h.maxAscent / 2;
             sa.field_h.d("drag " + this.field_t + ", prev=" + this.field_N + ", " + this.field_k, 300, var3_intLifetime3, 16772829, 0);
-            var3_intLifetime3 = var3_intLifetime3 - 3 * sa.field_h.field_C / 2;
+            var3_intLifetime3 = var3_intLifetime3 - 3 * sa.field_h.maxAscent / 2;
             sa.field_h.d("cur tgt " + this.field_eb.field_f / 576.0 + ", " + this.field_eb.field_m / 288.0 + ", " + (this.field_eb.field_k + 8.0) / 512.0, 300, var3_intLifetime3, 16772829, 0);
-            var3_intLifetime3 = var3_intLifetime3 - sa.field_h.field_C * 3 / 2;
+            var3_intLifetime3 = var3_intLifetime3 - sa.field_h.maxAscent * 3 / 2;
             sa.field_h.d("cur pos " + this.field_eb.field_d / 576.0 + ", " + this.field_eb.field_a / 288.0 + ", " + this.field_eb.field_h / 512.0, 300, var3_intLifetime3, 16772829, 0);
-            var3_intLifetime3 = var3_intLifetime3 - 3 * sa.field_h.field_C / 2;
+            var3_intLifetime3 = var3_intLifetime3 - 3 * sa.field_h.maxAscent / 2;
             var4_ref_qe = new qe();
             var5_ref_qe = var4_ref_qe;
             var6_ref_kj = this.field_G;
@@ -4607,9 +4607,9 @@ final class PoolMatchController {
             var5_ref_qe.field_D = (byte)var6_ref_kj.field_d;
             var5_ref_qe.field_C = (short)((var6_ref_kj.field_h + 1024) % 2048);
             sa.field_h.d(var4_ref_qe.e(param0 - 300), 300, var3_intLifetime3, 16772829, 0);
-            var3_intLifetime3 = var3_intLifetime3 - sa.field_h.field_C * 3 / 2;
+            var3_intLifetime3 = var3_intLifetime3 - sa.field_h.maxAscent * 3 / 2;
             sa.field_h.d("cue ang " + this.field_G.field_h + ", " + this.field_G.field_k + ", power " + this.field_Q + ", loc " + id.field_c.field_l[0] + ",  " + id.field_c.field_l[1] + ", " + id.field_c.field_l[2], 300, var3_intLifetime3, 16772829, 0);
-            var3_intLifetime3 = var3_intLifetime3 - sa.field_h.field_C * 3 / 2;
+            var3_intLifetime3 = var3_intLifetime3 - sa.field_h.maxAscent * 3 / 2;
             stackIn_88_0 = sa.field_h;
             stackIn_88_1 = new StringBuilder().append("shot_camera_strategy  ").append(this.field_Z);
             if (this.field_T) {
@@ -4617,8 +4617,8 @@ final class PoolMatchController {
             } else {
               stackIn_89_2 = "";
             }
-            ((an) (Object) stackIn_88_0).d(((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).toString(), 300, var3_intLifetime3, 16772829, 0);
-            var3_intLifetime3 = var3_intLifetime3 - 3 * sa.field_h.field_C / 2;
+            ((BinaryBitmapFont) (Object) stackIn_88_0).d(((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).toString(), 300, var3_intLifetime3, 16772829, 0);
+            var3_intLifetime3 = var3_intLifetime3 - 3 * sa.field_h.maxAscent / 2;
             sa.field_h.d("camera_location " + this.field_M, 300, var3_intLifetime3, 16772829, 0);
           }
           if ((2048L & pd.field_i) != 0L) {
@@ -4628,7 +4628,7 @@ final class PoolMatchController {
             } else {
               stackIn_97_1 = "|>";
             }
-            ((an) (Object) stackIn_96_0).d(stackIn_97_1, -(sa.field_h.field_C * 2) + 640, -10 + (480 + (-(2 * sa.field_h.field_w) - sa.field_h.field_C)), 16777215, 1);
+            ((BinaryBitmapFont) (Object) stackIn_96_0).d(stackIn_97_1, -(sa.field_h.maxAscent * 2) + 640, -10 + (480 + (-(2 * sa.field_h.maxDescent) - sa.field_h.maxAscent)), 16777215, 1);
           }
           if ((128L & pd.field_i) != 0L) {
             this.h((byte) -28);
@@ -4661,14 +4661,14 @@ final class PoolMatchController {
                   var7_ref_String = var7_ref_String + ", " + var6_ref_tc.a(var8Lifetime2, param0 + 1929);
                 }
                 sa.field_h.d(var7_ref_String, var3_intLifetime4, var4Lifetime2, 10066329, 8947848);
-                var4Lifetime2 = var4Lifetime2 + sa.field_h.field_G;
+                var4Lifetime2 = var4Lifetime2 + sa.field_h.baselineHeight;
               }
             }
           }
           if ((67108864L & pd.field_i) != 0L) {
             var3_intLifetime5 = 60;
             var4Lifetime3 = 0;
-            while (!(qh.field_f <= var3_intLifetime5)) {
+            while (!(SoftwareRasterizer.height <= var3_intLifetime5)) {
               if (md.field_a.length <= var4Lifetime3) {
                 break;
               }
@@ -4681,7 +4681,7 @@ final class PoolMatchController {
               }
               if (md.field_a[var4Lifetime3] != var5_ref_String) {
                 sa.field_h.d(var5_ref_String, 40, var3_intLifetime5, 16764074, 1);
-                var3_intLifetime5 = var3_intLifetime5 + sa.field_h.field_G;
+                var3_intLifetime5 = var3_intLifetime5 + sa.field_h.baselineHeight;
               }
               var4Lifetime3++;
             }
@@ -4694,7 +4694,7 @@ final class PoolMatchController {
             var7Lifetime3 = 60;
             var8Lifetime3 = 40;
             var9Lifetime1 = 80;
-            while (qh.field_f > var7Lifetime3) {
+            while (SoftwareRasterizer.height > var7Lifetime3) {
               if (null != var4_ref_qeLifetime1) {
                 if (null != var4_ref_qeLifetime1.field_U) {
                   var10Lifetime1 = 0;
@@ -4712,7 +4712,7 @@ final class PoolMatchController {
                   } else {
                     var6Lifetime2 = var6Lifetime2 + var10Lifetime1;
                   }
-                  var7Lifetime3 = var7Lifetime3 + sa.field_h.field_G;
+                  var7Lifetime3 = var7Lifetime3 + sa.field_h.baselineHeight;
                 }
                 var4_ref_qeLifetime1 = (qe) (var3_ref2.b(-96));
                 continue;
@@ -4721,7 +4721,7 @@ final class PoolMatchController {
             }
             sa.field_h.d("p1=" + var5Lifetime4, var8Lifetime3, var7Lifetime3, 16764074, 1);
             sa.field_h.d("p2=" + var6Lifetime2, var9Lifetime1, var7Lifetime3, 16764074, 1);
-            var7Lifetime3 = var7Lifetime3 + sa.field_h.field_G;
+            var7Lifetime3 = var7Lifetime3 + sa.field_h.baselineHeight;
           }
           if ((pd.field_i & 262144L) != 0L &&
             pq.field_i != null) {
@@ -4769,18 +4769,18 @@ final class PoolMatchController {
             }
           }
           if ((pd.field_i & 536870912L) != 0L) {
-            var3_intLifetime7 = 480 - sa.field_h.field_w - 4;
+            var3_intLifetime7 = 480 - sa.field_h.maxDescent - 4;
             if (this.field_I.field_f instanceof af) {
               var4_ref_af = (af) (this.field_I.field_f);
               sa.field_h.d("groups allocations: {" + var4_ref_af.field_g[0] + ", " + var4_ref_af.field_g[1] + "}", 300, var3_intLifetime7, 16772829, 0);
-              var3_intLifetime7 = var3_intLifetime7 - sa.field_h.field_C * 3 / 2;
+              var3_intLifetime7 = var3_intLifetime7 - sa.field_h.maxAscent * 3 / 2;
             }
             sa.field_h.d("shot mode: " + this.field_T, 300, var3_intLifetime7, 16772829, 0);
-            var3_intLifetime7 = var3_intLifetime7 - 3 * sa.field_h.field_C / 2;
+            var3_intLifetime7 = var3_intLifetime7 - 3 * sa.field_h.maxAscent / 2;
             sa.field_h.d("ruleset: " + this.field_I.field_f.getClass().getName(), 300, var3_intLifetime7, 16772829, 0);
-            var3_intLifetime7 = var3_intLifetime7 - sa.field_h.field_C * 3 / 2;
+            var3_intLifetime7 = var3_intLifetime7 - sa.field_h.maxAscent * 3 / 2;
             sa.field_h.d("cg.currentplayer: " + this.field_I.field_A, 300, var3_intLifetime7, 16772829, 0);
-            var3_intLifetime7 = var3_intLifetime7 - 3 * sa.field_h.field_C / 2;
+            var3_intLifetime7 = var3_intLifetime7 - 3 * sa.field_h.maxAscent / 2;
             var4Lifetime5 = 0;
             var5Lifetime6 = 0;
             var6Lifetime3 = 3456;
@@ -8723,9 +8723,9 @@ final class PoolMatchController {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.a(sa.field_h.field_w, this.field_I.field_u, (byte) 27);
+          this.a(sa.field_h.maxDescent, this.field_I.field_u, (byte) 27);
           if (this.field_I.field_i != null) {
-            this.a(sa.field_h.field_w + 320, this.field_I.field_i, (byte) 27);
+            this.a(sa.field_h.maxDescent + 320, this.field_I.field_i, (byte) 27);
           }
           if (param0 != -28) {
             this.g(35);

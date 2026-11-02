@@ -21,9 +21,9 @@ final class mp extends ch implements tb {
         if (param0 != 0) {
           return;
         }
-        lr var6 = lc.field_O;
+        BitmapFont var6 = lc.field_O;
         if (this.field_T != null) {
-          var6.a(oc.field_h, this.field_C + param2, this.field_D + param3, this.field_l, 20, 16777215, -1, 0, 0, var6.field_w + var6.field_C);
+          var6.drawParagraph(oc.field_h, this.field_C + param2, this.field_D + param3, this.field_l, 20, 16777215, -1, 0, 0, var6.maxDescent + var6.maxAscent);
         }
     }
 
@@ -134,9 +134,9 @@ final class mp extends ch implements tb {
         if (param5 != 13375) {
           return;
         }
-        if (!param4 && (fr.field_s != qh.field_l ||
-          qh.field_f != f.field_h) && (qh.field_f == sh.field_P.field_k &&
-          sh.field_P.field_e == qh.field_l)) {
+        if (!param4 && (fr.field_s != SoftwareRasterizer.width ||
+          SoftwareRasterizer.height != f.field_h) && (SoftwareRasterizer.height == sh.field_P.field_k &&
+          sh.field_P.field_e == SoftwareRasterizer.width)) {
           if (null == em.field_L) {
             if (tp.field_e == null) {
               f.a(48);

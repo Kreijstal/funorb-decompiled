@@ -3,7 +3,7 @@
  */
 final class ib extends PcmStream {
     IntrusiveDeque field_t;
-    static bp field_s;
+    static AudioOutput field_s;
     static boolean field_v;
     static int field_r;
     private vk field_w;
@@ -26,7 +26,7 @@ final class ib extends PcmStream {
 
     final static void c(int param0) {
         if (param0 > -21) {
-          field_s = (bp) null;
+          field_s = (AudioOutput) null;
           lf.a(17, (byte) 77);
           return;
         }
@@ -51,10 +51,10 @@ final class ib extends PcmStream {
           }
           if ((this.field_w.field_F[param1.field_t] & 4) != 0) {
             if (param1.field_G >= 0) {
-              param1.field_o.a(param0);
+              param1.field_o.skip(param0);
               return;
             }
-            var4_int = this.field_w.field_L[param1.field_t] / bp.field_h;
+            var4_int = this.field_w.field_L[param1.field_t] / AudioOutput.sampleRate;
             var5 = (-param1.field_y + (var4_int + 1048575)) / var4_int;
             param1.field_y = param1.field_y + var4_int * param0 & 1048575;
             if (var5 <= param0) {
@@ -74,7 +74,7 @@ final class ib extends PcmStream {
               param0 = param1.field_y / var4_int;
             }
           }
-          param1.field_o.a(param0);
+          param1.field_o.skip(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,7 +112,7 @@ final class ib extends PcmStream {
         try {
           if ((4 & this.field_w.field_F[param2.field_t]) != 0 &&
             param2.field_G < 0) {
-            var7_int = this.field_w.field_L[param2.field_t] / bp.field_h;
+            var7_int = this.field_w.field_L[param2.field_t] / AudioOutput.sampleRate;
             while (true) {
               var8 = (1048575 + var7_int - param2.field_y) / var7_int;
               if (param4 < var8) {
@@ -123,7 +123,7 @@ final class ib extends PcmStream {
               param4 = param4 - var8;
               param2.field_y = param2.field_y + (-1048576 + var8 * var7_int);
               param0 = param0 + var8;
-              var9 = bp.field_h / 100;
+              var9 = AudioOutput.sampleRate / 100;
               var10 = 262144 / var7_int;
               if (var9 > var10) {
                 var9 = var10;
@@ -276,19 +276,19 @@ final class ib extends PcmStream {
         }
     }
 
-    final void a(int param0) {
+    final void skip(int length) {
         int var2;
         pr var3;
         int var4;
         boolean stackIn_4_0 = false;
         var4 = Pool.field_O;
-        this.field_p.a(param0);
+        this.field_p.skip(length);
         var3 = (pr) (this.field_t.c((byte) -20));
         while (var3 != null) {
           stackIn_4_0 = this.field_w.a(-16257, var3);
           boolean decompiledFrameCompleted0 = true;
           if (!stackIn_4_0) {
-            var2 = param0;
+            var2 = length;
             while (var2 > var3.field_D) {
               this.a(var3.field_D, var3, 1048575);
               var2 = var2 - var3.field_D;

@@ -54,64 +54,64 @@ final class rp {
         Sprite var24 = null;
         int var8 = 0;
         Object var14 = null;
-        int[] var18 = qh.field_d;
+        int[] var18 = SoftwareRasterizer.pixels;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
-        int var7 = qh.field_l;
+        int var7 = SoftwareRasterizer.width;
         int var8Lifetime1;
         if (param0 == 32450) {
-          var8 = qh.field_f;
+          var8 = SoftwareRasterizer.height;
           var25 = new Sprite(param1, -(param1 * 2) + param3);
           var25.e();
-          qh.d(0, 0, param1, -(param1 * 2) + param3, param4, param5);
+          SoftwareRasterizer.fillVerticalGradient(0, 0, param1, -(param1 * 2) + param3, param4, param5);
           var26 = new Sprite(param1, param1);
           var26.e();
-          qh.f(0, 0, param1, param1, param4);
+          SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param4);
           var27 = new Sprite(16, param1);
           var27.e();
-          qh.f(0, 0, 16, param1, param4);
+          SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param4);
           var28 = new Sprite(param1, param1);
           var28.e();
-          qh.f(0, 0, param1, param1, param5);
+          SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param5);
           var29 = new Sprite(16, param1);
           var29.e();
-          qh.f(0, 0, 16, param1, param5);
+          SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param5);
           var14 = null;
           if (param2 > 0) {
             var30 = new Sprite(16, 16);
             var14 = var30;
             var30.e();
-            qh.f(0, 0, 16, 16, param2);
+            SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param2);
           }
-          qh.a(var18, var7, var8);
+          SoftwareRasterizer.setTarget(var18, var7, var8);
           return new Sprite[]{var26, var27, var26, var25, (Sprite) (var14), var25, var28, var29, var28};
         }
         rp.a((byte) -47);
-        var8Lifetime1 = qh.field_f;
+        var8Lifetime1 = SoftwareRasterizer.height;
         Sprite var19 = new Sprite(param1, -(param1 * 2) + param3);
         var19.e();
-        qh.d(0, 0, param1, -(param1 * 2) + param3, param4, param5);
+        SoftwareRasterizer.fillVerticalGradient(0, 0, param1, -(param1 * 2) + param3, param4, param5);
         Sprite var20 = new Sprite(param1, param1);
         var20.e();
-        qh.f(0, 0, param1, param1, param4);
+        SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param4);
         Sprite var21 = new Sprite(16, param1);
         var21.e();
-        qh.f(0, 0, 16, param1, param4);
+        SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param4);
         Sprite var22 = new Sprite(param1, param1);
         var22.e();
-        qh.f(0, 0, param1, param1, param5);
+        SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param5);
         Sprite var23 = new Sprite(16, param1);
         var23.e();
-        qh.f(0, 0, 16, param1, param5);
+        SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param5);
         var14 = null;
         if (param2 > 0) {
           var24 = new Sprite(16, 16);
           var14 = var24;
           var24.e();
-          qh.f(0, 0, 16, 16, param2);
+          SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param2);
         }
-        qh.a(var18, var7, var8Lifetime1);
+        SoftwareRasterizer.setTarget(var18, var7, var8Lifetime1);
         return new Sprite[]{var20, var21, var20, var19, (Sprite) (var14), var19, var22, var23, var22};
     }
 

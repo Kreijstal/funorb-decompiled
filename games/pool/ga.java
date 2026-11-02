@@ -313,8 +313,8 @@ final class ga extends sl implements sc {
           if (param1[2] == 0) {
             param1[2] = -1;
           }
-          param1[0] = fb.field_q + var3_int / param1[2];
-          param1[1] = var4 / param1[2] + fb.field_d;
+          param1[0] = TriangleRasterizer.projectionCenterX + var3_int / param1[2];
+          param1[1] = var4 / param1[2] + TriangleRasterizer.projectionCenterY;
           if (param2) {
             ga.m(-17);
           }

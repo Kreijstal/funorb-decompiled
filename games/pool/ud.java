@@ -204,10 +204,10 @@ abstract class ud extends ei implements lj {
         ka.a(true, -var1 + (32 + ec.field_b));
     }
 
-    final static qb a(qb param0, byte param1, int[] param2) {
-        qb var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, byte param1, int[] param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        qb stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -215,7 +215,7 @@ abstract class ud extends ei implements lj {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new qb(0, 0, 0);
+          var3 = new IndexedSprite(0, 0, 0);
           var3.field_i = param2;
           var3.field_e = param0.field_e;
           var3.field_d = param0.field_d;

@@ -134,7 +134,7 @@ final class pj extends ob {
         if (param0 <= 36) {
           return;
         }
-        this.a(mc.field_e, new int[]{mc.field_e.field_G}, 100, -16097, ng.field_B, 320, 4);
+        this.a(mc.field_e, new int[]{mc.field_e.baselineHeight}, 100, -16097, ng.field_B, 320, 4);
         this.b(100, false);
     }
 
@@ -162,11 +162,11 @@ final class pj extends ob {
         int var3Lifetime1;
         var4 = Pool.field_O;
         try {
-          qh.b(243, 197, 369, 143, 16777215);
-          qh.f(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangle(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (nf.field_V == null) {
             if (null != so.field_h) {
-              so.field_h.a(o.field_A, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              so.field_h.drawParagraph(o.field_A, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -178,7 +178,7 @@ final class pj extends ob {
             var6.c(245, 199);
           } else {
             if (so.field_h != null) {
-              so.field_h.a(o.field_A, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              so.field_h.drawParagraph(o.field_A, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (ug.field_u < hj.field_l) {
@@ -210,7 +210,7 @@ final class pj extends ob {
               var5++;
             }
             if (var2 != null) {
-              so.field_h.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+              so.field_h.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
               return;
             }
           }

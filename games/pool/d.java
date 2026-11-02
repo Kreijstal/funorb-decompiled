@@ -174,7 +174,7 @@ final class d {
               if (var10 <= 0) {
                 stackIn_20_1 = var6.field_Zb;
               } else {
-                stackIn_20_1 = lr.a(var6.field_Pb.field_I, var6.field_Zb, var10);
+                stackIn_20_1 = BitmapFont.truncateText(var6.field_Pb.field_I, var6.field_Zb, var10);
               }
               stackIn_19_0.field_nb = stackIn_20_1;
               stackIn_23_0 = (var6.field_Pb.field_nb.equals(var6.field_Zb)) ? 0 : 1;

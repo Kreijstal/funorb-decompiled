@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class n extends ud {
-    private lr field_X;
+    private BitmapFont field_X;
     static ia field_W;
     private boolean field_V;
     private String field_U;
@@ -43,7 +43,7 @@ final class n extends ud {
         }
         int var7 = 126 / ((param1 + 42) / 53);
         int var8 = this.field_V ? -(this.field_P * 2) + (this.field_l - this.field_ab) : 0;
-        this.field_X.a(this.field_U, this.field_P + var8 + var5, this.field_P + var6, -this.field_P + this.field_ab, this.field_y - 2 * this.field_P, this.field_O, -1, this.field_V ? 0 : 2, 1, this.field_X.field_C);
+        this.field_X.drawParagraph(this.field_U, this.field_P + var8 + var5, this.field_P + var6, -this.field_P + this.field_ab, this.field_y - 2 * this.field_P, this.field_O, -1, this.field_V ? 0 : 2, 1, this.field_X.maxAscent);
     }
 
     final static boolean h(int param0) {
@@ -138,7 +138,7 @@ final class n extends ud {
         return ml.field_c[var4];
     }
 
-    n(int param0, int param1, int param2, int param3, ei param4, boolean param5, int param6, int param7, lr param8, int param9, String param10) {
+    n(int param0, int param1, int param2, int param3, ei param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (fp) null, (cc) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -164,7 +164,7 @@ final class n extends ud {
           this.field_V = stackIn_4_1;
           this.field_O = param9;
           var12_int = this.field_ab - this.field_P;
-          var13 = this.field_X.b(param10, var12_int, this.field_X.field_C) + 2 * this.field_P;
+          var13 = this.field_X.measureWrappedHeight(param10, var12_int, this.field_X.maxAscent) + 2 * this.field_P;
           if (var13 <= param3) {
             var13 = param3;
           } else {

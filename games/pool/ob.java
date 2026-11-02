@@ -61,7 +61,7 @@ class ob extends jh {
           ja.a(this.field_k, this.field_A, true, this.field_r, this.field_o);
         }
         if (null != this.field_z) {
-          this.field_z.c(qh.field_l - this.field_z.field_z >> 1, 10);
+          this.field_z.c(SoftwareRasterizer.width - this.field_z.field_z >> 1, 10);
         }
     }
 
@@ -155,7 +155,7 @@ class ob extends jh {
         var11 = var11 + pq.field_H;
         var20 = al.field_B[0].b(0, 0);
         for (var14 = var11; var14 <= 120 + var11; var14 += 20) {
-          qh.a(var14 << 4, -2 + var12 / 2 + var7 << 4, 16 - var11 + var14, var20.length - 1, var20);
+          SoftwareRasterizer.a(var14 << 4, -2 + var12 / 2 + var7 << 4, 16 - var11 + var14, var20.length - 1, var20);
         }
         if (20 == var3) {
           stackIn_39_0 = ec.field_b * 120 / 256;
@@ -846,7 +846,7 @@ class ob extends jh {
         }
     }
 
-    final void a(lr param0, int[] param1, int param2, int param3, String param4, int param5, int param6) {
+    final void a(BitmapFont param0, int[] param1, int param2, int param3, String param4, int param5, int param6) {
         int var11 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -882,23 +882,23 @@ class ob extends jh {
             for (var11 = 0; var9 > var11; var11++) {
               var10 = var10 + param1[var11 % param1.length];
             }
-            uh.field_p = new Sprite(param5, var10 + param0.field_w);
+            uh.field_p = new Sprite(param5, var10 + param0.maxDescent);
             var25 = new int[4];
-            var26 = qh.field_d;
-            var13 = qh.field_l;
-            var14 = qh.field_f;
-            qh.a(var25);
+            var26 = SoftwareRasterizer.pixels;
+            var13 = SoftwareRasterizer.width;
+            var14 = SoftwareRasterizer.height;
+            SoftwareRasterizer.saveClip(var25);
             uh.field_p.e();
             var15 = 0;
-            var16 = param0.field_C;
+            var16 = param0.maxAscent;
             while (var15 < var9) {
               param0.d(var18[var15], 0, var16, param6, -1);
               var15++;
               var16 = var16 + param1[var15 % param1.length];
             }
             sh.field_P.b(15100);
-            qh.a(var26, var13, var14);
-            qh.b(var25);
+            SoftwareRasterizer.setTarget(var26, var13, var14);
+            SoftwareRasterizer.restoreClip(var25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -942,7 +942,7 @@ class ob extends jh {
     }
 
     void b(byte param0) {
-        qh.g(0, 0, qh.field_l, qh.field_f);
+        SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
         if (param0 != 108) {
           field_y = (int[]) null;
         }
@@ -969,7 +969,7 @@ class ob extends jh {
     }
 
     final void b(int param0, boolean param1) {
-        uh.field_p.c(qh.field_l - uh.field_p.field_z >> 1, param0);
+        uh.field_p.c(SoftwareRasterizer.width - uh.field_p.field_z >> 1, param0);
         if (param1) {
           this.a(-32, 52, true);
         }
@@ -995,7 +995,7 @@ class ob extends jh {
     }
 
     final void b(int param0) {
-        qh.f(param0, 0, qh.field_l, qh.field_f, 0);
+        SoftwareRasterizer.fillRectangle(param0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0);
     }
 
     void e(byte param0) {
@@ -1040,8 +1040,8 @@ class ob extends jh {
           }
         }
         if (0 == this.field_E) {
-          cl.field_k.c(0, qh.field_f - cl.field_k.field_y);
-          od.field_a.c(qh.field_l - od.field_a.field_w, qh.field_f - od.field_a.field_y);
+          cl.field_k.c(0, SoftwareRasterizer.height - cl.field_k.field_y);
+          od.field_a.c(SoftwareRasterizer.width - od.field_a.field_w, SoftwareRasterizer.height - od.field_a.field_y);
         }
     }
 
@@ -1187,7 +1187,7 @@ class ob extends jh {
         if (param2 != -10) {
           return;
         }
-        this.a(qh.field_l - 2 * param0, param1, param0, -param1 + var4 + (qh.field_f - param1), 0);
+        this.a(SoftwareRasterizer.width - 2 * param0, param1, param0, -param1 + var4 + (SoftwareRasterizer.height - param1), 0);
     }
 
     boolean a(int param0, boolean param1) {

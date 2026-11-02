@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mq implements Runnable {
-    volatile bp[] field_e;
+    volatile AudioOutput[] field_e;
     PlatformTaskDispatcher field_i;
     volatile boolean field_h;
     static String field_b;
@@ -58,7 +58,7 @@ final class mq implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        bp var2 = null;
+        AudioOutput var2 = null;
         int var4 = Pool.field_O;
         this.field_h = true;
         try {
@@ -81,7 +81,7 @@ final class mq implements Runnable {
     }
 
     mq() {
-        this.field_e = new bp[2];
+        this.field_e = new AudioOutput[2];
         this.field_d = false;
         this.field_h = false;
     }

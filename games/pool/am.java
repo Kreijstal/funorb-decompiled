@@ -8,7 +8,7 @@ class am implements fp, io {
     private int field_l;
     int field_d;
     int field_m;
-    lr field_a;
+    BitmapFont field_a;
     static int field_q;
     int field_g;
     static PoolMatchController field_e;
@@ -229,7 +229,7 @@ class am implements fp, io {
         }
     }
 
-    am(lr param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    am(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -363,15 +363,15 @@ class am implements fp, io {
           var6 = this.field_p;
           if (var6 != 0) {
             if (2 == var6) {
-              var5 = var4 - this.field_a.field_w;
+              var5 = var4 - this.field_a.maxDescent;
             } else {
               if (3 != var6 &&
                 1 == var6) {
               }
-              var5 = this.field_a.field_C + (-this.field_a.field_w + (var4 - this.field_a.field_C) >> 1);
+              var5 = this.field_a.maxAscent + (-this.field_a.maxDescent + (var4 - this.field_a.maxAscent) >> 1);
             }
           } else {
-            var5 = this.field_a.field_C;
+            var5 = this.field_a.maxAscent;
           }
           if (param1) {
             var8 = (ei) null;
@@ -478,7 +478,7 @@ class am implements fp, io {
         if (param0 != -10492) {
           return 54;
         }
-        return this.field_a.field_C + this.field_a.field_w;
+        return this.field_a.maxAscent + this.field_a.maxDescent;
     }
 
     final static boolean a(byte param0, int[] param1, float[] param2) {
@@ -725,22 +725,22 @@ class am implements fp, io {
           if (!this.field_o) {
             var12 = this.field_p;
             if (0 == var12) {
-              var11 = this.field_a.field_C;
+              var11 = this.field_a.maxAscent;
             } else {
               if (var12 != 2) {
                 if (var12 != 3 &&
                   var12 != 1) {
                 }
-                var11 = (var10 - this.field_a.field_C - this.field_a.field_w >> 1) + this.field_a.field_C;
+                var11 = (var10 - this.field_a.maxAscent - this.field_a.maxDescent >> 1) + this.field_a.maxAscent;
               } else {
-                var11 = -this.field_a.field_w + var10;
+                var11 = -this.field_a.maxDescent + var10;
               }
             }
             var12Lifetime1 = this.field_m;
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_a.b(this.c(-1, param2), this.a(param3, (byte) 11, param6, param2) + (var9_int >> 1), this.a(param2, param0, param5, (byte) 125) + var11, param1, param4);
+                this.field_a.drawCentered(this.c(-1, param2), this.a(param3, (byte) 11, param6, param2) + (var9_int >> 1), this.a(param2, param0, param5, (byte) 125) + var11, param1, param4);
               } else {
                 if ((var12Lifetime1 == 2)) {
                   this.field_a.c(this.c(-1, param2), this.a(param3, (byte) 11, param6, param2) + var9_int, this.a(param2, param0, param5, (byte) 106) + var11, param1, param4);
@@ -752,7 +752,7 @@ class am implements fp, io {
               this.field_a.d(this.c(param7 ^ 21, param2), this.a(param3, (byte) 11, param6, param2), var11 + this.a(param2, param0, param5, (byte) 92), param1, param4);
             }
           } else {
-            this.field_a.a(this.c(param7 ^ 21, param2), this.a(param3, (byte) 11, param6, param2), this.a(param2, param0, param5, (byte) 70), var9_int, var10, param1, param4, this.field_m, this.field_p, this.field_b);
+            this.field_a.drawParagraph(this.c(param7 ^ 21, param2), this.a(param3, (byte) 11, param6, param2), this.a(param2, param0, param5, (byte) 70), var9_int, var10, param1, param4, this.field_m, this.field_p, this.field_b);
           }
           oc.a(114);
           return;
@@ -782,7 +782,7 @@ class am implements fp, io {
     protected am() {
     }
 
-    am(lr param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    am(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_l = param6;
           this.field_p = param8;

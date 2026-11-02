@@ -405,16 +405,16 @@ public final class Pool extends ep {
             pn.field_l.a(0, 0, (sg.field_P << 8) / 32);
           } else {
             var3_int = dp.a(sg.field_P, 32, 108);
-            qh.c(0, 0, var3_int, qh.field_f);
-            fb.a();
-            fb.b(320, 240);
+            SoftwareRasterizer.setClip(0, 0, var3_int, SoftwareRasterizer.height);
+            TriangleRasterizer.useRasterClip();
+            TriangleRasterizer.setProjectionCenter(320, 240);
             vl.a(sq.field_b, -21972, false, jc.field_c);
-            qh.c(var3_int, 0, qh.field_l, qh.field_f);
-            fb.a();
-            fb.b(320, 240);
+            SoftwareRasterizer.setClip(var3_int, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
+            TriangleRasterizer.useRasterClip();
+            TriangleRasterizer.setProjectionCenter(320, 240);
             vl.a(ne.field_w, -21972, false, nk.field_d);
-            qh.c();
-            fb.a();
+            SoftwareRasterizer.resetClip();
+            TriangleRasterizer.useRasterClip();
             nn.a(true, 32, sg.field_P);
           }
         } else {
@@ -430,17 +430,17 @@ public final class Pool extends ep {
         }
         if (de.field_g) {
           if (ne.field_w < 0) {
-            qh.d();
+            SoftwareRasterizer.clear();
           } else {
             s.field_c[ne.field_w].c(87);
-            qh.g(0, 0, qh.field_l, qh.field_f);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           }
-          var3_intLifetime1 = qh.field_l - 400 >> 1;
-          var4_int = qh.field_f - 140 >> 1;
+          var3_intLifetime1 = SoftwareRasterizer.width - 400 >> 1;
+          var4_int = SoftwareRasterizer.height - 140 >> 1;
           nj.a(rm.field_g, (byte) 14, 400, var3_intLifetime1, var4_int, 140);
-          mc.field_e.a(kh.field_gc.field_l, 20 + var3_intLifetime1, 20 + var4_int, 360, 64, 1, -1, 1, 1, 0);
-          qh.f(20 + var3_intLifetime1, -20 + (140 + (var4_int - 20)), 360, 20, 0);
-          qh.f(20 + (var3_intLifetime1 + 2), -20 + (140 + var4_int) - 18, kh.field_gc.field_H * 356 / (kh.field_gc.field_G - 1), 16, 16615680);
+          mc.field_e.drawParagraph(kh.field_gc.field_l, 20 + var3_intLifetime1, 20 + var4_int, 360, 64, 1, -1, 1, 1, 0);
+          SoftwareRasterizer.fillRectangle(20 + var3_intLifetime1, -20 + (140 + (var4_int - 20)), 360, 20, 0);
+          SoftwareRasterizer.fillRectangle(20 + (var3_intLifetime1 + 2), -20 + (140 + var4_int) - 18, kh.field_gc.field_H * 356 / (kh.field_gc.field_G - 1), 16, 16615680);
         }
         var3 = (bq) (ui.field_U.c((byte) -102));
         if (var3 != null) {
@@ -454,11 +454,11 @@ public final class Pool extends ep {
               var4_intLifetime1 = 8;
             }
           }
-          IsaacCipher.field_f[var3.field_l].c(8, var4_intLifetime1, 32, 32);
-          mc.field_e.d(md.field_a[var3.field_l], 48, var4_intLifetime1 + mc.field_e.field_C, 4, 1);
+          IsaacCipher.field_f[var3.field_l].drawScaled(8, var4_intLifetime1, 32, 32);
+          mc.field_e.d(md.field_a[var3.field_l], 48, var4_intLifetime1 + mc.field_e.maxAscent, 4, 1);
         }
         if (bj.c(1)) {
-          qh.g(0, 0, qh.field_l, qh.field_f);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           hq.h(-29322);
         }
         if (ue.a(param0 - 109)) {
@@ -472,25 +472,25 @@ public final class Pool extends ep {
         } else {
           if (md.a((byte) -84) &&
             !bj.c(1)) {
-            qh.g(0, 0, qh.field_l, qh.field_f);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
             hk.c(1527590113);
           }
         }
         if (me.field_o != me.field_s) {
           var4_intLifetime2 = uk.field_m * 256 / 16;
           if (var4_intLifetime2 > 0) {
-            qh.c(0, 0, qh.field_l, qh.field_f, 0, var4_intLifetime2);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var4_intLifetime2);
           }
         }
         if ((32L & pd.field_i) != 0L) {
-          sa.field_h.d(Integer.toString(un.field_g), 640 - sa.field_h.field_C * 2, 475 - sa.field_h.field_w, 16777215, 1);
+          sa.field_h.d(Integer.toString(un.field_g), 640 - sa.field_h.maxAscent * 2, 475 - sa.field_h.maxDescent, 16777215, 1);
         }
         if ((pd.field_i & 64L) != 0L) {
           var4 = Runtime.getRuntime().totalMemory();
           var6 = Runtime.getRuntime().freeMemory();
           var8 = (int)(var4 - var6) / 1024;
           var9 = (int)(var4 / 1024L);
-          sa.field_h.d(var8 + "/" + var9, -((sa.field_h.field_C + sa.field_h.field_w) * 4) + (640 - 2 * sa.field_h.field_C), -((sa.field_h.field_w + sa.field_h.field_C) * 3 / 2) - 5 + 480 - sa.field_h.field_w, 16777215, 1);
+          sa.field_h.d(var8 + "/" + var9, -((sa.field_h.maxAscent + sa.field_h.maxDescent) * 4) + (640 - 2 * sa.field_h.maxAscent), -((sa.field_h.maxDescent + sa.field_h.maxAscent) * 3 / 2) - 5 + 480 - sa.field_h.maxDescent, 16777215, 1);
         }
         fe.a(0, 0, (byte) 85, var11);
         return;
@@ -498,7 +498,7 @@ public final class Pool extends ep {
 
     final void h(byte param0) {
         Pool.c(false);
-        fb.b();
+        TriangleRasterizer.releaseStatics();
         dp.c(param0 ^ -3723);
         bq.c((byte) -101);
         IntrusiveDeque.d(-102);
@@ -526,7 +526,7 @@ public final class Pool extends ep {
         ej.a(true);
         MouseHandler.a((byte) -109);
         id.a((byte) 35);
-        qh.a();
+        SoftwareRasterizer.releaseStatics();
         di.e(0);
         PacketBuffer.e(4109);
         rl.a(-125);
@@ -560,16 +560,16 @@ public final class Pool extends ep {
         hg.b(false);
         c.a(-13679);
         eg.f();
-        lr.a();
+        BitmapFont.a();
         cf.a(param0 + 28774);
         PoolMatchController.c(true);
         nk.d(param0 + 28);
         IntrusiveNode.b((byte) 115);
         vk.c(-819201);
         IterableNodeHashTable.a((byte) 91);
-        gq.g();
+        MidiFileReader.g();
         ib.d(-1);
-        bp.c();
+        AudioOutput.c();
         rq.c((byte) 75);
         cb.a(param0 + 28583);
         ic.a(-512);
@@ -708,7 +708,7 @@ public final class Pool extends ep {
         f.a((byte) 105);
         gk.i((byte) -82);
         am.a((byte) 119);
-        gm.a();
+        VorbisSample.releaseStatics();
         oc.c(-47);
         bc.a((byte) -8);
         bo.b((byte) 45);
@@ -719,7 +719,7 @@ public final class Pool extends ep {
         qg.a(0);
         wi.b(-30521);
         mb.c(4);
-        rh.a();
+        Bzip2Decoder.a();
         uq.a(-8090);
         ja.a(726237729);
         qk.a(param0 ^ 32);
@@ -738,7 +738,7 @@ public final class Pool extends ep {
         oe.h(-1);
         ch.f(2);
         rp.a((byte) 13);
-        mr.a();
+        VorbisFloor1.releaseStatics();
         cp.b(true);
         hf.a(0);
         wp.a(0);
@@ -756,7 +756,7 @@ public final class Pool extends ep {
         pc.a(-24420);
         dj.a(true);
         ld.c(8);
-        pb.a();
+        SoundTone.a();
         te.c((byte) 127);
         e.a(true);
         q.a(101);
@@ -798,7 +798,7 @@ public final class Pool extends ep {
         hj.a((byte) -103);
         fd.i(param0 ^ -28);
         ProxySocketConnector.c(15296);
-        on.a();
+        AudioFilter.a();
         sk.a(param0 ^ -27);
         hb.a(0);
         mn.a(19000);
@@ -1648,7 +1648,7 @@ public final class Pool extends ep {
           tl.field_N.a((byte) -125, -1, 256);
           ij.field_u = ul.field_m;
           tl.field_N.a(ul.field_m, 8821, true);
-          uk.a(mc.field_e.field_L, 8, sa.field_h.field_w + sa.field_h.field_L, 240, mc.field_e.field_L + mc.field_e.field_w, 2, vk.field_y[0].field_z + 5, 5 + vk.field_y[0].field_A, 8, 480, 3, rm.field_g, -23994, sa.field_h, 4, 13421772, sa.field_h.field_L, 320, vk.field_y, rm.field_g, mc.field_e);
+          uk.a(mc.field_e.field_L, 8, sa.field_h.maxDescent + sa.field_h.field_L, 240, mc.field_e.field_L + mc.field_e.maxDescent, 2, vk.field_y[0].field_z + 5, 5 + vk.field_y[0].field_A, 8, 480, 3, rm.field_g, -23994, sa.field_h, 4, 13421772, sa.field_h.field_L, 320, vk.field_y, rm.field_g, mc.field_e);
           vl.a(240, vk.field_y[0].field_A + 5, rm.field_g, 8, rm.field_g, 4, 8, mc.field_e, 5 + vk.field_y[0].field_z, 2, vk.field_y, -1373633266, 2, 3, 320);
           fm.a(0);
           return true;

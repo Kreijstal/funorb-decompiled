@@ -9,7 +9,7 @@ final class pd implements fp {
     static boolean field_g;
     static long field_i;
     private int field_c;
-    private lr field_b;
+    private BitmapFont field_b;
     static String field_e;
 
     final static void a(int param0) {
@@ -69,10 +69,10 @@ final class pd implements fp {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_m + "</u>", param1 + param4.field_C, param3 + param4.field_D, param4.field_l, param4.field_y, var6_int, -1, this.field_h, this.field_c, this.field_b.field_w + this.field_b.field_C);
+          this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_m + "</u>", param1 + param4.field_C, param3 + param4.field_D, param4.field_l, param4.field_y, var6_int, -1, this.field_h, this.field_c, this.field_b.maxDescent + this.field_b.maxAscent);
           if (param4.d(-52)) {
             var7 = this.field_b.b(param4.field_m);
-            var8 = this.field_b.field_C + this.field_b.field_w;
+            var8 = this.field_b.maxAscent + this.field_b.maxDescent;
             var9 = param4.field_C + param1;
             var10 = param3 + param4.field_D;
             if (this.field_h == 2) {
@@ -113,7 +113,7 @@ final class pd implements fp {
         this.field_b = lc.field_O;
     }
 
-    pd(lr param0, int param1, int param2) {
+    pd(BitmapFont param0, int param1, int param2) {
         try {
           this.field_h = param1;
           this.field_b = param0;

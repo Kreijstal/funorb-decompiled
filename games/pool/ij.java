@@ -59,17 +59,17 @@ final class ij extends IntrusiveNode {
         this.field_F = null;
         this.field_H = 25;
         this.field_v = 12;
-        this.field_z = new int[]{qh.field_l >> 1, qh.field_f >> 1};
+        this.field_z = new int[]{SoftwareRasterizer.width >> 1, SoftwareRasterizer.height >> 1};
         this.field_m = param0;
-        this.field_L = new int[]{qh.field_l >> 1, qh.field_f >> 1};
-        this.field_x = new int[]{qh.field_l >> 1, qh.field_f >> 1};
+        this.field_L = new int[]{SoftwareRasterizer.width >> 1, SoftwareRasterizer.height >> 1};
+        this.field_x = new int[]{SoftwareRasterizer.width >> 1, SoftwareRasterizer.height >> 1};
         this.field_B = 50;
     }
 
     final void a(String param0, byte param1, String param2) {
         int var12 = 0;
         int stackIn_7_0 = 0;
-        an stackIn_15_0;
+        BinaryBitmapFont stackIn_15_0;
         String stackIn_15_1;
         int stackIn_15_2;
         int stackIn_15_3;
@@ -106,8 +106,8 @@ final class ij extends IntrusiveNode {
             return;
           }
           this.field_B = 25 * param2.length() / 16;
-          var6 = sa.field_h.b(param2, 320, sa.field_h.field_G + 3);
-          var7 = 5 + mc.field_e.field_C + (mc.field_e.field_w + var6);
+          var6 = sa.field_h.measureWrappedHeight(param2, 320, sa.field_h.baselineHeight + 3);
+          var7 = 5 + mc.field_e.maxAscent + (mc.field_e.maxDescent + var6);
           stackIn_7_0 = (var5 >= 320) ? var5 : 320;
           var8 = stackIn_7_0;
           this.field_K = new Sprite(var8, var7);
@@ -125,7 +125,7 @@ final class ij extends IntrusiveNode {
           stackIn_15_0 = sa.field_h;
           stackIn_15_1 = (String) (param2);
           stackIn_15_2 = (-320 + var8) / 2;
-          stackIn_15_3 = mc.field_e.field_w + (mc.field_e.field_C + 5);
+          stackIn_15_3 = mc.field_e.maxDescent + (mc.field_e.maxAscent + 5);
           stackIn_15_4 = 320;
           stackIn_15_5 = var6;
           stackIn_15_6 = 16777215;
@@ -135,7 +135,7 @@ final class ij extends IntrusiveNode {
           } else {
             stackIn_16_8 = 3;
           }
-          ((an) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_15_4, stackIn_15_5, stackIn_15_6, stackIn_15_7, stackIn_16_8, 0, 3 + sa.field_h.field_G);
+          ((BinaryBitmapFont) (Object) stackIn_15_0).drawParagraph(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_15_4, stackIn_15_5, stackIn_15_6, stackIn_15_7, stackIn_16_8, 0, 3 + sa.field_h.baselineHeight);
           sh.field_P.b(15100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

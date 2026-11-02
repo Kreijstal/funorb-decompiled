@@ -16,12 +16,12 @@ final class me extends ig {
     private ne field_q;
     static int field_n;
 
-    final static qb[] h(int param0) {
+    final static IndexedSprite[] h(int param0) {
         int var2 = 0;
         int var3 = Pool.field_O;
-        qb[] var1 = new qb[wf.field_d];
+        IndexedSprite[] var1 = new IndexedSprite[wf.field_d];
         for (var2 = param0; wf.field_d > var2; var2++) {
-          var1[var2] = new qb(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], v.field_b[var2], IntrusiveNode.field_h);
+          var1[var2] = new IndexedSprite(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], v.field_b[var2], IntrusiveNode.field_h);
         }
         sh.h(-1);
         return var1;

@@ -78,8 +78,8 @@ final class oc {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        qh.a(var1.field_q, var1.field_v, var1.field_l);
-        qh.c(var1.field_t, var1.field_s, var1.field_m, var1.field_r);
+        SoftwareRasterizer.setTarget(var1.field_q, var1.field_v, var1.field_l);
+        SoftwareRasterizer.setClip(var1.field_t, var1.field_s, var1.field_m, var1.field_r);
         if (param0 <= 111) {
           field_t = (java.applet.Applet) null;
         }

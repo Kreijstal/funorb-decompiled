@@ -107,8 +107,8 @@ final class pl {
               if (0 == var16) {
                 var16 = -1;
               }
-              param5[var12_int] = fb.field_q + (qh.field_b + var17 / var16);
-              param0[var12_int] = var18 / var16 + fb.field_d + qh.field_c;
+              param5[var12_int] = TriangleRasterizer.projectionCenterX + (SoftwareRasterizer.clipLeft + var17 / var16);
+              param0[var12_int] = var18 / var16 + TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop;
               param9[var12_int] = var16;
               var12_int++;
               var13++;

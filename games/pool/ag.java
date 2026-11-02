@@ -33,8 +33,8 @@ final class ag {
           var3_float = param1[1] * (float)param0[4] / 65536.0f + param1[0] * (float)param0[3] / 65536.0f + (float)param0[5] * param1[2] / 65536.0f;
           var4 = param1[0] * (float)param0[6] / 65536.0f + param1[1] * (float)param0[7] / 65536.0f + (float)param0[8] * param1[2] / 65536.0f;
           var5 = param1[0] * (float)param0[param2] / 65536.0f + param1[1] * (float)param0[10] / 65536.0f + param1[2] * (float)param0[11] / 65536.0f;
-          param1[0] = (float)fb.field_q + 512.0f * var3_float / var5;
-          param1[1] = 512.0f * var4 / var5 + (float)fb.field_d;
+          param1[0] = (float)TriangleRasterizer.projectionCenterX + 512.0f * var3_float / var5;
+          param1[1] = 512.0f * var4 / var5 + (float)TriangleRasterizer.projectionCenterY;
           param1[2] = var5;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ag.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -107,19 +107,19 @@ final class ag {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new Sprite(4 + ni.field_Z.b(param2), 4 + ni.field_Z.field_C + ni.field_Z.field_w);
+          var10 = new Sprite(4 + ni.field_Z.b(param2), 4 + ni.field_Z.maxAscent + ni.field_Z.maxDescent);
           var10.field_G = -2;
           var10.field_B = -2;
           var16 = new int[4];
-          var17 = qh.field_d;
-          var6 = qh.field_l;
-          var7 = qh.field_f;
-          qh.a(var16);
+          var17 = SoftwareRasterizer.pixels;
+          var6 = SoftwareRasterizer.width;
+          var7 = SoftwareRasterizer.height;
+          SoftwareRasterizer.saveClip(var16);
           var10.e();
-          ni.field_Z.d(param2, 2, 2 + ni.field_Z.field_C, param1, -1);
+          ni.field_Z.d(param2, 2, 2 + ni.field_Z.maxAscent, param1, -1);
           var10.e(4144959);
-          qh.a(var17, var6, var7);
-          qh.b(var16);
+          SoftwareRasterizer.setTarget(var17, var6, var7);
+          SoftwareRasterizer.restoreClip(var16);
           var10.field_y = var10.field_A;
           var10.field_w = var10.field_z;
           var10.field_B = 0;

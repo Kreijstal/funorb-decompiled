@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qb extends bb {
+final class IndexedSprite extends bb {
     byte[] field_j;
     int[] field_i;
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPaletteRows(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -97,33 +97,33 @@ final class qb extends bb {
         int var9Lifetime2;
         param0 = param0 + this.field_e;
         param1 = param1 + this.field_d;
-        int var3 = param0 + param1 * qh.field_l;
+        int var3 = param0 + param1 * SoftwareRasterizer.width;
         int var4 = 0;
         int var5 = this.field_g;
         int var6 = this.field_f;
-        int var7 = qh.field_l - var6;
+        int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
-        if (param1 < qh.field_c) {
-          var9 = qh.field_c - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var9 = SoftwareRasterizer.clipTop - param1;
           var5 = var5 - var9;
-          param1 = qh.field_c;
+          param1 = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * qh.field_l;
+          var3 = var3 + var9 * SoftwareRasterizer.width;
         }
-        if (param1 + var5 > qh.field_g) {
-          var5 = var5 - (param1 + var5 - qh.field_g);
+        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < qh.field_b) {
-          var9Lifetime1 = qh.field_b - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = qh.field_b;
+          param0 = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > qh.field_j) {
-          var9Lifetime2 = param0 + var6 - qh.field_j;
+        if (param0 + var6 > SoftwareRasterizer.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -132,7 +132,7 @@ final class qb extends bb {
           var5 <= 0) {
           return;
         }
-        qb.b(qh.field_d, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.copyNonzeroPaletteRows(SoftwareRasterizer.pixels, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -141,33 +141,33 @@ final class qb extends bb {
         int var10Lifetime2;
         param0 = param0 + this.field_e;
         param1 = param1 + this.field_d;
-        int var4 = param0 + param1 * qh.field_l;
+        int var4 = param0 + param1 * SoftwareRasterizer.width;
         int var5 = 0;
         int var6 = this.field_g;
         int var7 = this.field_f;
-        int var8 = qh.field_l - var7;
+        int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
-        if (param1 < qh.field_c) {
-          var10 = qh.field_c - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var10 = SoftwareRasterizer.clipTop - param1;
           var6 = var6 - var10;
-          param1 = qh.field_c;
+          param1 = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * qh.field_l;
+          var4 = var4 + var10 * SoftwareRasterizer.width;
         }
-        if (param1 + var6 > qh.field_g) {
-          var6 = var6 - (param1 + var6 - qh.field_g);
+        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < qh.field_b) {
-          var10Lifetime1 = qh.field_b - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = qh.field_b;
+          param0 = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > qh.field_j) {
-          var10Lifetime2 = param0 + var7 - qh.field_j;
+        if (param0 + var7 > SoftwareRasterizer.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -176,7 +176,7 @@ final class qb extends bb {
           var6 <= 0) {
           return;
         }
-        qb.a(qh.field_d, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.blendPaletteRowsWithAlpha(SoftwareRasterizer.pixels, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void a() {
@@ -196,7 +196,7 @@ final class qb extends bb {
         this.field_e = this.field_h - this.field_f - this.field_e;
     }
 
-    qb(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+    IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
         this.field_h = param0;
         this.field_b = param1;
         this.field_e = param2;
@@ -207,7 +207,7 @@ final class qb extends bb {
         this.field_i = param7;
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendPaletteRowsWithAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -233,7 +233,7 @@ final class qb extends bb {
         }
     }
 
-    qb(int param0, int param1, int param2) {
+    IndexedSprite(int param0, int param1, int param2) {
         this.field_f = param0;
         this.field_h = param0;
         this.field_g = param1;

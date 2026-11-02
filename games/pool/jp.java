@@ -211,7 +211,7 @@ final class jp extends ch implements jn, tb {
     public jp() {
         super(0, 0, 496, 0, (fp) null);
         this.field_O = new ga("", (cc) null, 12);
-        am var1 = new am(qk.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, lc.field_O.field_C, -1, 2147483647, true);
+        am var1 = new am(qk.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, lc.field_O.maxAscent, -1, 2147483647, true);
         ei var2 = new ei(ij.field_s, var1, (cc) null);
         this.field_Q = new fe(wn.field_c, (cc) null);
         this.field_U = new fe(be.field_K, (cc) null);

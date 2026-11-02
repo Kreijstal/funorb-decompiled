@@ -78,7 +78,7 @@ final class ic {
           var9 = stackIn_3_0;
           var10 = 0;
           var17 = 0;
-          var11 = -fb.field_q + qh.field_j;
+          var11 = -TriangleRasterizer.projectionCenterX + SoftwareRasterizer.clipRight;
           var13 = -512;
           var18 = 256;
           var15 = var11;
@@ -100,7 +100,7 @@ final class ic {
             }
           }
           var13Lifetime1 = 512;
-          var11Lifetime1 = qh.field_b - fb.field_q;
+          var11Lifetime1 = SoftwareRasterizer.clipLeft - TriangleRasterizer.projectionCenterX;
           var15Lifetime1 = -var11Lifetime1;
           var16Lifetime1 = var11Lifetime1 * var8 - var6_int * 512;
           var14 = -512;
@@ -123,7 +123,7 @@ final class ic {
           if (param5 != 4) {
             field_a = -4;
           }
-          var12 = -fb.field_d + qh.field_g;
+          var12 = -TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipBottom;
           var15Lifetime2 = var12;
           var16Lifetime2 = var12 * var8 - var7 * 512;
           if (0 != var16Lifetime2) {
@@ -143,7 +143,7 @@ final class ic {
             }
           }
           var14Lifetime1 = 512;
-          var12Lifetime1 = qh.field_c - fb.field_d;
+          var12Lifetime1 = SoftwareRasterizer.clipTop - TriangleRasterizer.projectionCenterY;
           var15Lifetime3 = -var12Lifetime1;
           var16Lifetime3 = -(512 * var7) + var12Lifetime1 * var8;
           if (var16Lifetime3 != 0) {
@@ -228,8 +228,8 @@ final class ic {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = mc.field_e.b(param3, param2);
-          var6 = var5_int * mc.field_e.field_G + mc.field_e.field_w;
+          var5_int = mc.field_e.countWrappedLines(param3, param2);
+          var6 = var5_int * mc.field_e.baselineHeight + mc.field_e.maxDescent;
           if (!param1) {
             ic.a(-50);
           }
@@ -237,16 +237,16 @@ final class ic {
           var7.field_B = -2;
           var7.field_G = -2;
           var19 = new int[4];
-          var20 = qh.field_d;
-          var10 = qh.field_l;
-          var11 = qh.field_f;
-          qh.a(var19);
+          var20 = SoftwareRasterizer.pixels;
+          var10 = SoftwareRasterizer.width;
+          var11 = SoftwareRasterizer.height;
+          SoftwareRasterizer.saveClip(var19);
           var7.e();
-          mc.field_e.a(param3, 2, 2, param2, var6, param4, -1, param0, 0, mc.field_e.field_G * 3 / 4);
+          mc.field_e.drawParagraph(param3, 2, 2, param2, var6, param4, -1, param0, 0, mc.field_e.baselineHeight * 3 / 4);
           var7.e(4144959);
           var7.e(65793);
-          qh.a(var20, var10, var11);
-          qh.b(var19);
+          SoftwareRasterizer.setTarget(var20, var10, var11);
+          SoftwareRasterizer.restoreClip(var19);
           var7.b();
           var7.field_y = var7.field_A;
           var7.field_w = var7.field_z;

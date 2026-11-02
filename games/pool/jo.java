@@ -11,7 +11,7 @@ class jo extends ob {
     final void c(int param0) {
         super.c(92);
         if (this.field_K != null) {
-          this.field_K.c(qh.field_l - this.field_K.field_z >> 1, 80);
+          this.field_K.c(SoftwareRasterizer.width - this.field_K.field_z >> 1, 80);
         }
         if (param0 > 36) {
           return;
@@ -78,8 +78,8 @@ class jo extends ob {
         var1.field_p = true;
         var1.field_x = 365;
         int var2 = 240;
-        var1.field_C = -20 + (qh.field_l >> 1);
-        var1.field_t = (qh.field_l >> 1) - var2 - 20;
+        var1.field_C = -20 + (SoftwareRasterizer.width >> 1);
+        var1.field_t = (SoftwareRasterizer.width >> 1) - var2 - 20;
         ob var6 = s.field_c[7];
         var6.a(40, 85, -10);
         var6.field_q = true;
@@ -105,16 +105,16 @@ class jo extends ob {
         var10.field_x = 120;
         ob var11 = s.field_c[14];
         var11.field_p = true;
-        var11.a(-320 + qh.field_l, 140, 160, 300, 0);
+        var11.a(-320 + SoftwareRasterizer.width, 140, 160, 300, 0);
         var11.field_s = 30;
-        var11.field_C = 240 + qh.field_l >> 1;
+        var11.field_C = 240 + SoftwareRasterizer.width >> 1;
         var11.field_x = 200;
-        var11.field_t = -240 + qh.field_l >> 1;
+        var11.field_t = -240 + SoftwareRasterizer.width >> 1;
         var11.field_q = false;
         ob var12 = s.field_c[2];
-        var12.a(-320 + qh.field_l, 140, 160, 280, 0);
-        var12.field_C = qh.field_l + 240 >> 1;
-        var12.field_t = qh.field_l - 240 >> 1;
+        var12.a(-320 + SoftwareRasterizer.width, 140, 160, 280, 0);
+        var12.field_C = SoftwareRasterizer.width + 240 >> 1;
+        var12.field_t = SoftwareRasterizer.width - 240 >> 1;
         var12.field_p = true;
         var12.field_q = true;
         var12.field_s = 50;

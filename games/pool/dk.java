@@ -27,12 +27,12 @@ final class dk {
         var8 = param3 - 64 - param0[2];
         var9 = param0[9] * var6 + param0[10] * var7 + param0[11] * var8 >> 16;
         if (var9 > 0) {
-          var10 = (qh.field_b + fb.field_q << 4) + (param0[3] * var6 + param0[4] * var7 + param0[5] * var8 >> 3) / var9;
-          var11 = (qh.field_c + fb.field_d << 4) + (param0[6] * var6 + param0[7] * var7 + param0[8] * var8 >> 3) / var9;
+          var10 = (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 4) + (param0[3] * var6 + param0[4] * var7 + param0[5] * var8 >> 3) / var9;
+          var11 = (SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 4) + (param0[6] * var6 + param0[7] * var7 + param0[8] * var8 >> 3) / var9;
           param4 = param4 / var9;
           if (param4 > -23170 &&
             param4 < 23170) {
-            qh.a(var10, var11, param4, 4, bc.field_c);
+            SoftwareRasterizer.a(var10, var11, param4, 4, bc.field_c);
           }
         }
     }
@@ -250,7 +250,7 @@ final class dk {
                 }
               }
             }
-            dr.a(var5, 11468, pq.field_F[var6], var7, var4 + lr.a(td.field_c.toString()));
+            dr.a(var5, 11468, pq.field_F[var6], var7, var4 + BitmapFont.escapeMarkup(td.field_c.toString()));
             if (!DualLinkNode.field_p) {
               fj.field_j.field_W = false;
             }

@@ -335,7 +335,7 @@ final class mk {
               } else {
                 var12.field_Tb.b(var31, 2147483647, 0, 68, ad.field_x);
               }
-              var12.field_cc.field_nb = lr.a(var12.field_cc.field_I, var32, 78);
+              var12.field_cc.field_nb = BitmapFont.truncateText(var12.field_cc.field_I, var32, 78);
               var12.field_cc.b(var31, 2147483647, 70, 78, ad.field_x);
               if (var12.field_cc.field_W &&
                 !var12.field_cc.field_nb.equals(var32)) {
@@ -452,7 +452,7 @@ final class mk {
                 }
                 var38 = var37.toString();
                 var12.field_jc.field_nb = var38;
-                var39Lifetime1 = var12.field_jc.field_I.b(var38, var12.field_gb - 2 * var12.field_jc.field_tb);
+                var39Lifetime1 = var12.field_jc.field_I.countWrappedLines(var38, var12.field_gb - 2 * var12.field_jc.field_tb);
                 var12.field_jc.b(var31, param1 ^ 2147483647, 0, var12.field_gb, var39Lifetime1 * ad.field_x);
                 var31 = var31 + var39Lifetime1 * ad.field_x;
               }
@@ -471,7 +471,7 @@ final class mk {
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Cc.field_I.b(var33, -kj.field_j - kj.field_j + var12.field_gb);
+              var34_intLifetime1 = var12.field_Cc.field_I.countWrappedLines(var33, -kj.field_j - kj.field_j + var12.field_gb);
               var12.field_Cc.field_Eb = var12.field_Mb * 256 / mq.field_f;
               var12.field_Cc.field_nb = var33;
               var12.field_Cc.b(var31, 2147483647, kj.field_j, var12.field_gb - 2 * kj.field_j, ad.field_x * var34_intLifetime1);

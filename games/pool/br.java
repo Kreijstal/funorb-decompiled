@@ -63,7 +63,7 @@ final class br extends ob {
         if (param0 > 36) {
           var4 = oe.field_O;
           var4 = var4 + " " + o.a('#', "<br><br>", nr.a(new String[]{de.field_f}, -1, n.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
-          this.a(sa.field_h, new int[]{sa.field_h.field_G}, 140, -16097, var4, 280, 15658734);
+          this.a(sa.field_h, new int[]{sa.field_h.baselineHeight}, 140, -16097, var4, 280, 15658734);
           this.b(140, false);
           return;
         }

@@ -6,7 +6,7 @@ final class la {
     static int[] field_d;
     static int field_a;
     static String field_g;
-    static qb[] field_c;
+    static IndexedSprite[] field_c;
     static int field_b;
     static int field_e;
     static int field_f;

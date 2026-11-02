@@ -381,7 +381,7 @@ final class kh extends vh {
         }
     }
 
-    final static qb a(int param0, int param1, byte param2, di param3) {
+    final static IndexedSprite a(int param0, int param1, byte param2, di param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -519,7 +519,7 @@ final class kh extends vh {
         }
     }
 
-    final static void a(String param0, vj param1, int param2, int param3, lr param4) {
+    final static void a(String param0, vj param1, int param2, int param3, BitmapFont param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -550,7 +550,7 @@ final class kh extends vh {
               if (var8 == 32) {
                 var5_int = var5_int + param3;
               }
-              param1.field_h[var7] = param1.field_h[0] + (var5_int >> 8) + param4.b(param0.substring(0, 1 + var7)) - param4.a((char) var8);
+              param1.field_h[var7] = param1.field_h[0] + (var5_int >> 8) + param4.b(param0.substring(0, 1 + var7)) - param4.measureCharacterAdvance((char) var8);
             } else {
               param1.field_h[var7] = var6;
             }

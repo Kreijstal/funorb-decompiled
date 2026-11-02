@@ -5,7 +5,7 @@ final class m {
     static String field_a;
     static volatile boolean field_d;
     static String field_b;
-    static lr field_c;
+    static BitmapFont field_c;
     static int field_f;
     static int field_e;
     private static String field_z;

@@ -142,7 +142,7 @@ abstract class re {
             } else {
               var2 = var5.field_E * var5.field_K.field_z >> 12;
               var3 = var5.field_E * var5.field_K.field_A >> 12;
-              var5.field_K.b(var5.field_J - (var2 >> 1), -(var3 >> 1) + var5.field_C, var2, var3, var5.field_w);
+              var5.field_K.drawScaledAlpha(var5.field_J - (var2 >> 1), -(var3 >> 1) + var5.field_C, var2, var3, var5.field_w);
             }
             if (pd.field_i == 0L) {
               return;
@@ -159,7 +159,7 @@ abstract class re {
                 } else {
                   stackIn_17_5 = 3355443;
                 }
-                qh.a(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4, stackIn_17_5, var5.field_w / 2 + 128);
+                SoftwareRasterizer.a(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4, stackIn_17_5, var5.field_w / 2 + 128);
                 continue;
               }
               break;
@@ -176,7 +176,7 @@ abstract class re {
                 } else {
                   stackIn_24_5 = 3407667;
                 }
-                qh.a(stackIn_23_0, stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_24_5, var5.field_w / 2 + 128);
+                SoftwareRasterizer.a(stackIn_23_0, stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_24_5, var5.field_w / 2 + 128);
                 continue;
               }
               break;
@@ -193,7 +193,7 @@ abstract class re {
                 } else {
                   stackIn_31_5 = 3355443;
                 }
-                qh.a(stackIn_30_0, stackIn_30_1, stackIn_30_2, stackIn_30_3, stackIn_30_4, stackIn_31_5, var5.field_w / 2 + 128);
+                SoftwareRasterizer.a(stackIn_30_0, stackIn_30_1, stackIn_30_2, stackIn_30_3, stackIn_30_4, stackIn_31_5, var5.field_w / 2 + 128);
                 continue;
               }
               break;
@@ -212,7 +212,7 @@ abstract class re {
               } else {
                 stackIn_38_5 = 3407667;
               }
-              qh.a(stackIn_37_0, stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_37_4, stackIn_38_5, var5.field_w / 2 + 128);
+              SoftwareRasterizer.a(stackIn_37_0, stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_37_4, stackIn_38_5, var5.field_w / 2 + 128);
             }
           }
           return;

@@ -133,18 +133,18 @@ final class ap extends DualLinkNode {
         field_D = null;
     }
 
-    final static void a(di param0, boolean param1, qb[] param2, int[] param3, di param4) {
+    final static void a(di param0, boolean param1, IndexedSprite[] param2, int[] param3, di param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
         Sprite[] dupTemp$3 = null;
-        qb[] var5 = null;
-        qb[] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var19 = null;
-        qb[] var20 = null;
+        IndexedSprite[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
@@ -160,7 +160,7 @@ final class ap extends DualLinkNode {
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        an var7 = null;
+        BinaryBitmapFont var7 = null;
         vh var8 = null;
         vh var9 = null;
         vh var10 = null;
@@ -180,7 +180,7 @@ final class ap extends DualLinkNode {
           var5 = var20;
           gf.field_a = var20.length;
           if (param2 != null) {
-            var6 = new qb[param2.length + gf.field_a];
+            var6 = new IndexedSprite[param2.length + gf.field_a];
             for (var7_int = 0; gf.field_a > var7_int; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
@@ -217,11 +217,11 @@ final class ap extends DualLinkNode {
           var7 = he.a(param4, "largefont", 0, param0, "lobby");
           ae.field_a = he.a(param4, "generalfont", 0, param0, "lobby");
           ol.field_c = he.a(param4, "chatfont", 0, param0, "lobby");
-          var7.a(var5, var24);
-          ae.field_a.a(var5, var24);
-          ol.field_c.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          ae.field_a.setInlineSprites(var5, var24);
+          ol.field_c.setInlineSprites(var5, var24);
           var8 = new vh(0L, (vh) null);
-          var8.field_I = (lr) ((Object) var7);
+          var8.field_I = (BitmapFont) ((Object) var7);
           var8.field_M = ad.field_x;
           var8.field_N = 16777215;
           var9 = var8;
@@ -230,7 +230,7 @@ final class ap extends DualLinkNode {
           var10 = new vh(0L, (vh) null);
           var10.field_M = ad.field_x;
           var10.field_N = 16777215;
-          var10.field_I = (lr) ((Object) ae.field_a);
+          var10.field_I = (BitmapFont) ((Object) ae.field_a);
           var10.field_cb = 1;
           var11 = var10;
           var11.field_Fb = 1;
@@ -263,7 +263,7 @@ final class ap extends DualLinkNode {
           sd.field_Q.field_F = qi.a(3815994, 2039583, true, 30, -107, false);
           uo.field_Lb = new vh(0L, (vh) null);
           uo.field_Lb.field_cb = 1;
-          uo.field_Lb.field_I = (lr) ((Object) ae.field_a);
+          uo.field_Lb.field_I = (BitmapFont) ((Object) ae.field_a);
           uo.field_Lb.field_N = 13421772;
           uo.field_Lb.field_M = ad.field_x;
           ei.field_A = new vh(0L, uo.field_Lb);
@@ -275,7 +275,7 @@ final class ap extends DualLinkNode {
           var15 = new vh(0L, ei.field_A);
           var15.field_M = ad.field_x;
           var15.field_N = 16777215;
-          var15.field_I = (lr) ((Object) var7);
+          var15.field_I = (BitmapFont) ((Object) var7);
           pa.field_M = new vh(0L, uo.field_Lb);
           pa.field_M.field_F = qi.a(2236962, 2236962, false, 16, -125, false);
           pa.field_M.field_tb = 2;

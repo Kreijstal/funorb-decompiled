@@ -484,7 +484,7 @@ final class ia {
         try {
           param1.field_N = 16777215;
           param1.field_Fb = 1;
-          param1.field_I = (lr) ((Object) sa.field_h);
+          param1.field_I = (BitmapFont) ((Object) sa.field_h);
           param1.field_F = rm.field_g;
           param1.field_X = null;
           if (!param0) {

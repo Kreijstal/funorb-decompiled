@@ -132,7 +132,7 @@ final class ck extends mh {
               } else {
                 if (var13 <= this.field_U.field_A) {
                   kj.a(53, this.field_U);
-                  qh.d();
+                  SoftwareRasterizer.clear();
                 } else {
                   this.field_U = new Sprite(var12, var13);
                   kj.a(81, this.field_U);
@@ -141,20 +141,20 @@ final class ck extends mh {
             }
             var21.b(112, 144, var21.field_w << 4, var21.field_y << 4, -this.field_V << 10, 4096);
             oc.a(126);
-            this.field_U.c(var9 - (var21.field_w >> 1), var11 - var21.field_y, 256);
+            this.field_U.drawAdditive(var9 - (var21.field_w >> 1), var11 - var21.field_y, 256);
             return;
           }
           if (no.field_k != var6) {
             if (gp.field_d == var6) {
               var22 = bo.field_a[2];
-              var22.c(var9, var11 - (var22.field_A >> 1), 256);
+              var22.drawAdditive(var9, var11 - (var22.field_A >> 1), 256);
               return;
             }
             if (ProxySocketConnector.field_e != var6) {
               return;
             }
             var23 = bo.field_a[1];
-            var23.c(var9, var11 - (var23.field_A >> 1), 256);
+            var23.drawAdditive(var9, var11 - (var23.field_A >> 1), 256);
             return;
           }
           var20 = bo.field_a[0];
@@ -164,14 +164,14 @@ final class ck extends mh {
             this.field_U.field_z >= var12Lifetime4 &&
             var13Lifetime4 <= this.field_U.field_A) {
             kj.a(53, this.field_U);
-            qh.d();
+            SoftwareRasterizer.clear();
           } else {
             this.field_U = new Sprite(var12Lifetime4, var13Lifetime4);
             kj.a(81, this.field_U);
           }
           var20.b(112, 144, var20.field_w << 4, var20.field_y << 4, -this.field_V << 10, 4096);
           oc.a(126);
-          this.field_U.c(var9 - (var20.field_w >> 1), var11 - var20.field_y, 256);
+          this.field_U.drawAdditive(var9 - (var20.field_w >> 1), var11 - var20.field_y, 256);
           return;
         }
         if (var6 == no.field_k) {
@@ -200,7 +200,7 @@ final class ck extends mh {
               } else {
                 if (var13Lifetime1 <= this.field_U.field_A) {
                   kj.a(53, this.field_U);
-                  qh.d();
+                  SoftwareRasterizer.clear();
                 } else {
                   this.field_U = new Sprite(var12Lifetime1, var13Lifetime1);
                   kj.a(81, this.field_U);
@@ -209,20 +209,20 @@ final class ck extends mh {
             }
             var27.b(112, 144, var27.field_w << 4, var27.field_y << 4, -this.field_V << 10, 4096);
             oc.a(126);
-            this.field_U.c(var9Lifetime1 - (var27.field_w >> 1), var11Lifetime1 - var27.field_y, 256);
+            this.field_U.drawAdditive(var9Lifetime1 - (var27.field_w >> 1), var11Lifetime1 - var27.field_y, 256);
             return;
           }
           if (no.field_k != var6) {
             if (gp.field_d == var6) {
               var28 = bo.field_a[2];
-              var28.c(var9Lifetime1, var11Lifetime1 - (var28.field_A >> 1), 256);
+              var28.drawAdditive(var9Lifetime1, var11Lifetime1 - (var28.field_A >> 1), 256);
               return;
             }
             if (ProxySocketConnector.field_e != var6) {
               return;
             }
             var29 = bo.field_a[1];
-            var29.c(var9Lifetime1, var11Lifetime1 - (var29.field_A >> 1), 256);
+            var29.drawAdditive(var9Lifetime1, var11Lifetime1 - (var29.field_A >> 1), 256);
             return;
           }
           var26 = bo.field_a[0];
@@ -232,14 +232,14 @@ final class ck extends mh {
             this.field_U.field_z >= var12Lifetime1Lifetime1 &&
             var13Lifetime1Lifetime1 <= this.field_U.field_A) {
             kj.a(53, this.field_U);
-            qh.d();
+            SoftwareRasterizer.clear();
           } else {
             this.field_U = new Sprite(var12Lifetime1Lifetime1, var13Lifetime1Lifetime1);
             kj.a(81, this.field_U);
           }
           var26.b(112, 144, var26.field_w << 4, var26.field_y << 4, -this.field_V << 10, 4096);
           oc.a(126);
-          this.field_U.c(var9Lifetime1 - (var26.field_w >> 1), var11Lifetime1 - var26.field_y, 256);
+          this.field_U.drawAdditive(var9Lifetime1 - (var26.field_w >> 1), var11Lifetime1 - var26.field_y, 256);
           return;
         }
         var5 = this.field_S.a(126);
@@ -273,26 +273,26 @@ final class ck extends mh {
                 kj.a(81, this.field_U);
               } else {
                 kj.a(53, this.field_U);
-                qh.d();
+                SoftwareRasterizer.clear();
               }
             }
           }
           var32.b(112, 144, var32.field_w << 4, var32.field_y << 4, -this.field_V << 10, 4096);
           oc.a(126);
-          this.field_U.c(var9Lifetime2 - (var32.field_w >> 1), var11Lifetime2 - var32.field_y, 256);
+          this.field_U.drawAdditive(var9Lifetime2 - (var32.field_w >> 1), var11Lifetime2 - var32.field_y, 256);
           return;
         }
         if (no.field_k != var6Lifetime1) {
           if (gp.field_d == var6Lifetime1) {
             var33 = bo.field_a[2];
-            var33.c(var9Lifetime2, var11Lifetime2 - (var33.field_A >> 1), 256);
+            var33.drawAdditive(var9Lifetime2, var11Lifetime2 - (var33.field_A >> 1), 256);
             return;
           }
           if (ProxySocketConnector.field_e != var6Lifetime1) {
             return;
           }
           var34 = bo.field_a[1];
-          var34.c(var9Lifetime2, var11Lifetime2 - (var34.field_A >> 1), 256);
+          var34.drawAdditive(var9Lifetime2, var11Lifetime2 - (var34.field_A >> 1), 256);
           return;
         }
         var31 = bo.field_a[0];
@@ -302,14 +302,14 @@ final class ck extends mh {
           this.field_U.field_z >= var12Lifetime3 &&
           var13Lifetime3 <= this.field_U.field_A) {
           kj.a(53, this.field_U);
-          qh.d();
+          SoftwareRasterizer.clear();
         } else {
           this.field_U = new Sprite(var12Lifetime3, var13Lifetime3);
           kj.a(81, this.field_U);
         }
         var31.b(112, 144, var31.field_w << 4, var31.field_y << 4, -this.field_V << 10, 4096);
         oc.a(126);
-        this.field_U.c(var9Lifetime2 - (var31.field_w >> 1), var11Lifetime2 - var31.field_y, 256);
+        this.field_U.drawAdditive(var9Lifetime2 - (var31.field_w >> 1), var11Lifetime2 - var31.field_y, 256);
     }
 
     public static void a(int param0) {

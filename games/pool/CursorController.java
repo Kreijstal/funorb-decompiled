@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg {
-    private java.awt.Robot field_b;
-    private java.awt.Component field_a;
+final class CursorController {
+    private java.awt.Robot robot;
+    private java.awt.Component hiddenCursorComponent;
 
     public final void showcursor(java.awt.Component param0, boolean param1) {
         try {
@@ -14,16 +14,16 @@ final class vg {
               throw new NullPointerException();
             }
           }
-          if (this.field_a == param0) {
+          if (this.hiddenCursorComponent == param0) {
             return;
           }
-          if (null != this.field_a) {
-            this.field_a.setCursor((java.awt.Cursor) null);
-            this.field_a = null;
+          if (null != this.hiddenCursorComponent) {
+            this.hiddenCursorComponent.setCursor((java.awt.Cursor) null);
+            this.hiddenCursorComponent = null;
           }
           if (param0 != null) {
             param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
-            this.field_a = param0;
+            this.hiddenCursorComponent = param0;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -32,13 +32,13 @@ final class vg {
         }
     }
 
-    public vg() throws Exception {
+    public CursorController() throws Exception {
         java.awt.Robot var2 = new java.awt.Robot();
-        this.field_b = var2;
+        this.robot = var2;
     }
 
     public final void movemouse(int param0, int param1) {
-        this.field_b.mouseMove(param0, param1);
+        this.robot.mouseMove(param0, param1);
     }
 
     public final void setcustomcursor(java.awt.Component param0, int[] param1, int param2, int param3, java.awt.Point param4) {

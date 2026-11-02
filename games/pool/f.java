@@ -55,8 +55,8 @@ final class f {
     }
 
     final static void a(int param0) {
-        field_h = qh.field_f;
-        fr.field_s = qh.field_l;
+        field_h = SoftwareRasterizer.height;
+        fr.field_s = SoftwareRasterizer.width;
         qi.a((byte) -95);
         kg.field_l.a(ir.field_a.field_Db - 40 - 2, ir.field_a.field_gb, 0, 0, (byte) -124);
         pm.field_m.b(0, 2147483647, 0, sn.field_m.field_gb, ad.field_x);

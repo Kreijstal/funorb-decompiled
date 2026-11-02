@@ -13,7 +13,7 @@ final class ni extends vc {
     private so field_jb;
     private so field_R;
     private boolean[] field_kb;
-    static an field_Z;
+    static BinaryBitmapFont field_Z;
     private PcmSample field_cb;
     static GameApplet field_ib;
     private PcmSample field_X;
@@ -75,7 +75,7 @@ final class ni extends vc {
                   54 + var7 > lq.field_W) {
                   var3_int = 1;
                 } else {
-                  if (-qh.field_l + this.field_B.field_z > var6) {
+                  if (-SoftwareRasterizer.width + this.field_B.field_z > var6) {
                     var7 = 1289 + var6;
                     if (lq.field_W > var7 &&
                       54 + var7 > lq.field_W) {
@@ -406,17 +406,17 @@ final class ni extends vc {
               }
             }
           }
-          if (qh.field_b > var6) {
-            var6 = qh.field_b;
+          if (SoftwareRasterizer.clipLeft > var6) {
+            var6 = SoftwareRasterizer.clipLeft;
           }
-          if (qh.field_c > var8Lifetime1) {
-            var8Lifetime1 = qh.field_c;
+          if (SoftwareRasterizer.clipTop > var8Lifetime1) {
+            var8Lifetime1 = SoftwareRasterizer.clipTop;
           }
-          if (qh.field_g < var9) {
-            var9 = qh.field_g;
+          if (SoftwareRasterizer.clipBottom < var9) {
+            var9 = SoftwareRasterizer.clipBottom;
           }
-          if (qh.field_j < var7Lifetime1) {
-            var7Lifetime1 = qh.field_j;
+          if (SoftwareRasterizer.clipRight < var7Lifetime1) {
+            var7Lifetime1 = SoftwareRasterizer.clipRight;
           }
           for (var5Lifetime2 = -1 + eo.field_Qb; sb.field_d <= var5Lifetime2; var5Lifetime2--) {
             th.field_l[var5Lifetime2].c(6710886, oh.field_d);

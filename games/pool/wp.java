@@ -43,7 +43,7 @@ final class wp implements si {
               !(var5 > sb.field_b))) {
               var6 = new byte[var5];
               if (1 == var3) {
-                rh.a(var6, var5, param1, var4, 9);
+                Bzip2Decoder.a(var6, var5, param1, var4, 9);
               } else {
                 var7 = db.field_Qb;
                 synchronized (var7) {
@@ -167,7 +167,7 @@ final class wp implements si {
               if (var14 <= 0) {
                 stackIn_31_1 = var7.field_Zb;
               } else {
-                stackIn_31_1 = lr.a(var7.field_Pb.field_I, var7.field_Zb, var14);
+                stackIn_31_1 = BitmapFont.truncateText(var7.field_Pb.field_I, var7.field_Zb, var14);
               }
               stackIn_30_0.field_nb = stackIn_31_1;
               var7.field_Pb.b(var9, 2147483647, var13, var14, ad.field_x);

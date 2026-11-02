@@ -474,9 +474,9 @@ final class di {
 
     final static void a(boolean param0, byte param1, boolean param2) {
         if (param2) {
-          qh.c(0, 0, qh.field_l, qh.field_f, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
         } else {
-          qh.d();
+          SoftwareRasterizer.clear();
         }
         to.a((byte) -39, param2);
         if (param1 <= 84) {
@@ -928,7 +928,7 @@ final class di {
                     var21 = var33[var20];
                   }
                   if (param2 == var21) {
-                    qn.a(var42, var17, var43, var14_intLifetime1, var19);
+                    ArrayOperations.copy(var42, var17, var43, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -966,7 +966,7 @@ final class di {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
                   var18 = var18 + var30.readInt(true);
-                  qn.a(var35, var16, var39[var19], var38[var19], var18);
+                  ArrayOperations.copy(var35, var16, var39[var19], var38[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;
                 }

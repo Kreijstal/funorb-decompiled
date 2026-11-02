@@ -8,13 +8,13 @@ final class so {
     int[] field_j;
     so[] field_b;
     static hq[] field_g;
-    static lr field_h;
+    static BitmapFont field_h;
     eg field_i;
     int[][] field_c;
     private nc[] field_e;
     int[] field_d;
 
-    final static void a(String[][] param0, int param1, di param2, Sprite[][] param3, String[][] param4, int param5, int param6, Sprite[][] param7, String[] param8, byte[] param9, int param10, int[] param11, di param12, String[] param13, byte[] param14, int[] param15, di param16, boolean param17, qb[] param18) {
+    final static void a(String[][] param0, int param1, di param2, Sprite[][] param3, String[][] param4, int param5, int param6, Sprite[][] param7, String[] param8, byte[] param9, int param10, int[] param11, di param12, String[] param13, byte[] param14, int[] param15, di param16, boolean param17, IndexedSprite[] param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -46,14 +46,14 @@ final class so {
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var19 = null;
-        qb[] var20 = null;
+        IndexedSprite[] var20 = null;
         String[] var21 = null;
         try {
           var21 = (String[]) null;
           em.a((String[]) null, 1, param1, param17, param16, param10, param2, param14, param11, param12, param0, param8, param9, param18, param13, param3, param4, (byte) -75, param7, param15);
           if (param5 != -25) {
-            var20 = (qb[]) null;
-            so.a((String[][]) null, -73, (di) null, (Sprite[][]) null, (String[][]) null, 7, 14, (Sprite[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (di) null, (String[]) null, (byte[]) null, (int[]) null, (di) null, false, (qb[]) null);
+            var20 = (IndexedSprite[]) null;
+            so.a((String[][]) null, -73, (di) null, (Sprite[][]) null, (String[][]) null, 7, 14, (Sprite[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (di) null, (String[]) null, (byte[]) null, (int[]) null, (di) null, false, (IndexedSprite[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -340,11 +340,11 @@ final class so {
               if (var13[var15 + 1] == 0) {
                 var13[1 + var15] = 1;
               }
-              var11[var15] = (var11[var15] << 9) / var13[var15] + fb.field_q;
-              var12[var15] = (var12[var15] << 9) / var13[var15] + fb.field_d;
-              var11[var15 + 1] = (var11[1 + var15] << 9) / var13[1 + var15] + fb.field_q;
-              var12[1 + var15] = (var12[var15 + 1] << 9) / var13[var15 + 1] + fb.field_d;
-              qh.d(var11[var15], var12[var15], var11[var15 + 1], var12[var15 + 1], var14[var15 >> 1]);
+              var11[var15] = (var11[var15] << 9) / var13[var15] + TriangleRasterizer.projectionCenterX;
+              var12[var15] = (var12[var15] << 9) / var13[var15] + TriangleRasterizer.projectionCenterY;
+              var11[var15 + 1] = (var11[1 + var15] << 9) / var13[1 + var15] + TriangleRasterizer.projectionCenterX;
+              var12[1 + var15] = (var12[var15 + 1] << 9) / var13[var15 + 1] + TriangleRasterizer.projectionCenterY;
+              SoftwareRasterizer.drawLine(var11[var15], var12[var15], var11[var15 + 1], var12[var15 + 1], var14[var15 >> 1]);
             }
           }
           return;
@@ -642,9 +642,9 @@ final class so {
           if (var8 == 0) {
             var8 = -1;
           }
-          var7Lifetime1 = fb.field_d + var10 / var8;
-          var6_intLifetime1 = var9 / var8 + fb.field_q;
-          sa.field_h.b(param1, var6_intLifetime1, var7Lifetime1, 16764142, param0);
+          var7Lifetime1 = TriangleRasterizer.projectionCenterY + var10 / var8;
+          var6_intLifetime1 = var9 / var8 + TriangleRasterizer.projectionCenterX;
+          sa.field_h.drawCentered(param1, var6_intLifetime1, var7Lifetime1, 16764142, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

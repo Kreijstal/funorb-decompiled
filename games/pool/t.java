@@ -181,7 +181,7 @@ final class t {
 
     final static void a(int param0, boolean param1) {
         if (null != sa.field_f) {
-          qh.g(qh.field_b, qh.field_c, qh.field_j - qh.field_b, qh.field_g - qh.field_c);
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
           sa.field_f.a((byte) -79, param1);
         }
         if (param0 == 48) {

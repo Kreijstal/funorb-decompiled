@@ -115,8 +115,8 @@ abstract class tm {
           if (var8 <= 0) {
             return;
           }
-          var7Lifetime1 = (qh.field_c + fb.field_d << 4) + var10 / var8;
-          var6_intLifetime1 = (qh.field_b + fb.field_q << 4) + var9 / var8;
+          var7Lifetime1 = (SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY << 4) + var10 / var8;
+          var6_intLifetime1 = (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 4) + var9 / var8;
           var11 = 32 + 589824 / var8;
           if (!param0) {
             stackIn_10_0 = ff.field_h;
@@ -130,7 +130,7 @@ abstract class tm {
             ff.field_a[var13] = md.a(md.a(rb.b(no.field_n[param2] * rb.b(var15[var13], 65280) >>> 8, 973143808), rb.b(-16776974, rb.b(16711680, var15[var13]) * no.field_n[param2]) >>> 8), rb.b(-1912602369, no.field_n[param2] * rb.b(255, var15[var13]) >>> 8));
           }
           if (2147483647L > 64L * ((long)var11 * (long)var11)) {
-            qh.a(var6_intLifetime1, var7Lifetime1, var11, 64, ff.field_a);
+            SoftwareRasterizer.a(var6_intLifetime1, var7Lifetime1, var11, 64, ff.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

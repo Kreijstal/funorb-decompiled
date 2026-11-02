@@ -37,12 +37,12 @@ abstract class bb {
           var11 = param1[3] * param2 - (-(param6 * param1[4]) - param1[5] * param7) >> 7;
           var12 = param7 * param1[8] + param6 * param1[7] + param1[6] * param2 >> 7;
           var13 = param0 * param1[4] + param1[3] * param5 + param8 * param1[5] >> 7;
-          var13 = qh.field_b - (-fb.field_q - var13 / var10);
-          var12 = var12 / var9_int + (qh.field_c + fb.field_d);
-          var11 = var11 / var9_int + qh.field_b + fb.field_q;
+          var13 = SoftwareRasterizer.clipLeft - (-TriangleRasterizer.projectionCenterX - var13 / var10);
+          var12 = var12 / var9_int + (SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY);
+          var11 = var11 / var9_int + SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX;
           var14 = param8 * param1[8] + param1[6] * param5 + param0 * param1[7] >> 7;
-          var14 = qh.field_c - (-fb.field_d - var14 / var10);
-          qh.d(var11, var12, var13, var14, param4);
+          var14 = SoftwareRasterizer.clipTop - (-TriangleRasterizer.projectionCenterY - var14 / var10);
+          SoftwareRasterizer.drawLine(var11, var12, var13, var14, param4);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "bb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -147,7 +147,7 @@ abstract class bb {
         if (param2 != 99) {
           bb.a((byte) 28, -74, 125L);
         }
-        return (qh.field_b + fb.field_q << 2) + (param1 << 11) / param0;
+        return (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 2) + (param1 << 11) / param0;
     }
 
     static {

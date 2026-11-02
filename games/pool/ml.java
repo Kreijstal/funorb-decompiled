@@ -114,25 +114,25 @@ final class ml {
           var7 = (param0 << 8) + param4.field_G * var6_int;
           param2 = param2 + param4.field_G;
           param3 = param3 + param4.field_B;
-          var8 = param2 + qh.field_l * param3;
+          var8 = param2 + SoftwareRasterizer.width * param3;
           var9 = 0;
           var10 = param4.field_A;
           var11 = param4.field_z;
-          var12 = qh.field_l - var11;
+          var12 = SoftwareRasterizer.width - var11;
           var13 = 0;
-          if (param3 < qh.field_c) {
-            var14 = -param3 + qh.field_c;
-            var8 = var8 + var14 * qh.field_l;
+          if (param3 < SoftwareRasterizer.clipTop) {
+            var14 = -param3 + SoftwareRasterizer.clipTop;
+            var8 = var8 + var14 * SoftwareRasterizer.width;
             var9 = var9 + var11 * var14;
-            param3 = qh.field_c;
+            param3 = SoftwareRasterizer.clipTop;
             var10 = var10 - var14;
           }
-          if (var10 + param3 > qh.field_g) {
-            var10 = var10 - (-qh.field_g + (var10 + param3));
+          if (var10 + param3 > SoftwareRasterizer.clipBottom) {
+            var10 = var10 - (-SoftwareRasterizer.clipBottom + (var10 + param3));
           }
-          if (param2 < qh.field_b) {
-            var14Lifetime1 = -param2 + qh.field_b;
-            param2 = qh.field_b;
+          if (param2 < SoftwareRasterizer.clipLeft) {
+            var14Lifetime1 = -param2 + SoftwareRasterizer.clipLeft;
+            param2 = SoftwareRasterizer.clipLeft;
             var8 = var8 + var14Lifetime1;
             var13 = var13 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
@@ -140,8 +140,8 @@ final class ml {
             var7 = var7 + var6_int * var14Lifetime1;
             var12 = var12 + var14Lifetime1;
           }
-          if (param2 + var11 > qh.field_j) {
-            var14Lifetime2 = param2 + (var11 - qh.field_j);
+          if (param2 + var11 > SoftwareRasterizer.clipRight) {
+            var14Lifetime2 = param2 + (var11 - SoftwareRasterizer.clipRight);
             var12 = var12 + var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
@@ -167,11 +167,11 @@ final class ml {
                   var17 = param4.field_D[incrementValue$0];
                   if (0 != var17) {
                     if (var15 <= 255) {
-                      var18 = qh.field_d[var8];
+                      var18 = SoftwareRasterizer.pixels[var8];
                       var19 = 16711935 & var16 * (var18 & 16711935) + (var17 & 16711935) * var15 >> 8;
-                      qh.field_d[var8] = var19 + rb.b(65280, rb.b(var17, 65280) * var15 + var16 * rb.b(var18, 65280) >> 8);
+                      SoftwareRasterizer.pixels[var8] = var19 + rb.b(65280, rb.b(var17, 65280) * var15 + var16 * rb.b(var18, 65280) >> 8);
                     } else {
-                      qh.field_d[var8] = var17;
+                      SoftwareRasterizer.pixels[var8] = var17;
                     }
                   }
                   var8++;

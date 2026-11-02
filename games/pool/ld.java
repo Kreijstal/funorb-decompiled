@@ -48,7 +48,7 @@ final class ld {
             this.field_k = this.field_k + 1;
             this.field_a[fieldTemp$1] = (byte) 0;
           }
-          qn.a(this.field_d, 0, this.field_a, 32, 32);
+          ArrayOperations.copy(this.field_d, 0, this.field_a, 32, 32);
           this.b(124);
           if (param1 <= 97) {
             this.a((byte[]) null, -112, 52L);

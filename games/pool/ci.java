@@ -57,11 +57,11 @@ final class ci {
 
     final void c(int param0) {
         int var2 = 0;
-        sa.field_h.a(this.b((byte) 36) + ": " + Integer.toString(this.a(-195801560), 16), this.field_r, this.field_g, 15658734, -1);
+        sa.field_h.drawString(this.b((byte) 36) + ": " + Integer.toString(this.a(-195801560), 16), this.field_r, this.field_g, 15658734, -1);
         if (param0 == 3) {
-          qh.f(this.field_j, this.field_e, 16, 80, 3381555);
+          SoftwareRasterizer.fillRectangle(this.field_j, this.field_e, 16, 80, 3381555);
           var2 = this.field_q - (this.a(param0 ^ -195801557) - this.field_b) * 80 / (this.field_o - this.field_b);
-          qh.d(this.field_j, var2, this.field_l, var2, 16764006);
+          SoftwareRasterizer.drawLine(this.field_j, var2, this.field_l, var2, 16764006);
           return;
         }
     }
@@ -268,11 +268,11 @@ final class ci {
         this.field_o = param0;
         this.field_b = param1;
         this.field_n = param2;
-        int var5 = sa.field_h.field_C + (18 + sa.field_h.field_w);
+        int var5 = sa.field_h.maxAscent + (18 + sa.field_h.maxDescent);
         if (param3 == -6) {
           this.field_g = 472;
-          this.field_r = var5 * this.field_n + sa.field_h.field_C;
-          this.field_j = sa.field_h.field_w + (this.field_r + 2);
+          this.field_r = var5 * this.field_n + sa.field_h.maxAscent;
+          this.field_j = sa.field_h.maxDescent + (this.field_r + 2);
           this.field_l = this.field_j + 16;
           this.field_e = 392;
           this.field_q = 80 + this.field_e;

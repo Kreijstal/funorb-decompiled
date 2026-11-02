@@ -907,9 +907,9 @@ final class cj extends vc {
           this.a(param1, 9291);
           pr.a(gr.field_w, false);
           this.a(256, 3, 256, (byte) -86);
-          var6 = fb.field_b;
+          var6 = TriangleRasterizer.colorPalette;
           for (var5Lifetime1 = ln.field_u.length - 1; 1 < var5Lifetime1; var5Lifetime1--) {
-            fb.field_b = dn.field_m[-1 + var5Lifetime1];
+            TriangleRasterizer.colorPalette = dn.field_m[-1 + var5Lifetime1];
             var22 = ln.field_u[var5Lifetime1];
             var40 = gr.field_w;
             var22.a((byte) -122, 0, var22.field_j.length, var40);
@@ -917,7 +917,7 @@ final class cj extends vc {
               ln.field_u[var5Lifetime1].a(gr.field_w, 0);
             }
           }
-          fb.field_b = dn.field_m[0];
+          TriangleRasterizer.colorPalette = dn.field_m[0];
           if (param0 != -55) {
             var12 = (eg) null;
             this.a((int[]) null, (IntrusiveDeque[]) null, (eg) null, -92);
@@ -928,7 +928,7 @@ final class cj extends vc {
           if ((pd.field_i & 256L) != 0L) {
             ln.field_u[1].a(gr.field_w, 0);
           }
-          fb.field_b = var6;
+          TriangleRasterizer.colorPalette = var6;
           var26 = ln.field_u[0];
           var42 = gr.field_w;
           var26.a((byte) -98, 0, var26.field_j.length, var42);
@@ -1029,17 +1029,17 @@ final class cj extends vc {
           cj.a(fo.field_c[param1][1][1], fo.field_c[param1][2][1], 13421772, param0, param2);
         }
         if (fo.field_c[param1][3][1] != fo.field_c[param1][2][0]) {
-          qh.c(0, fo.field_c[param1][2][1], qh.field_l, fo.field_c[param1][3][1] - fo.field_c[param1][2][1], 13421772, param2);
+          SoftwareRasterizer.fillRectangleAlpha(0, fo.field_c[param1][2][1], SoftwareRasterizer.width, fo.field_c[param1][3][1] - fo.field_c[param1][2][1], 13421772, param2);
         }
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var8 = 0;
         int var5 = param4 - param3;
-        int var6 = qh.field_j - qh.field_b;
+        int var6 = SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft;
         int var7 = param1 - param0;
         for (var8 = 0; var8 < var7; var8++) {
-          qh.e(qh.field_b, param0 + var8, var6, param2, param3 + var8 * var5 / var7);
+          SoftwareRasterizer.drawHorizontalLineAlpha(SoftwareRasterizer.clipLeft, param0 + var8, var6, param2, param3 + var8 * var5 / var7);
         }
     }
 
@@ -1171,20 +1171,20 @@ final class cj extends vc {
           if (param1 != 9291) {
             return;
           }
-          qh.d(0, var3_int, 640, -var3_int + 480, this.field_v, 16128);
+          SoftwareRasterizer.fillVerticalGradient(0, var3_int, 640, -var3_int + 480, this.field_v, 16128);
           var4 = this.field_B.field_z << 1;
           var5 = this.field_B.field_A << 1;
           var6 = (int)(-param0.field_eb.a(true) * (double)var4 / 2.0 / 3.141592653589793);
           var7 = -200 + var3_int;
           if (0 < var7) {
-            qh.f(0, 0, 640, var7, this.field_B.field_D[0]);
+            SoftwareRasterizer.fillRectangle(0, 0, 640, var7, this.field_B.field_D[0]);
           }
-          this.field_B.c(var6 - var4, var7, var4, var5);
-          for (var8 = this.field_B.field_A + var7; var8 < qh.field_g; var8++) {
+          this.field_B.drawScaled(var6 - var4, var7, var4, var5);
+          for (var8 = this.field_B.field_A + var7; var8 < SoftwareRasterizer.clipBottom; var8++) {
             this.field_B.d(this.field_B.field_A - 1, -var4 + var6, var8);
           }
           if (-640 + this.field_B.field_z > var6 >> 16) {
-            this.field_B.c(var6, var7, var4, var5);
+            this.field_B.drawScaled(var6, var7, var4, var5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

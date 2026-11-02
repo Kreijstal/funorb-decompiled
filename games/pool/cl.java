@@ -64,11 +64,11 @@ final class cl {
         }
     }
 
-    final static wl a(byte[] param0, boolean param1) {
-        wl var2 = null;
+    final static AlphaFont a(byte[] param0, boolean param1) {
+        AlphaFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        wl stackIn_6_0 = null;
+        AlphaFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -76,9 +76,9 @@ final class cl {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (wl) (stackIn_2_0);
+            return (AlphaFont) (stackIn_2_0);
           }
-          var2 = new wl(param0, el.field_I, ih.field_d, pd.field_a, rc.field_f, IntrusiveNode.field_h, v.field_b);
+          var2 = new AlphaFont(param0, el.field_I, ih.field_d, pd.field_a, rc.field_f, IntrusiveNode.field_h, v.field_b);
           sh.h(-1);
           if (!param1) {
             field_j = (String) null;
@@ -115,7 +115,7 @@ final class cl {
           return;
         }
         try {
-          qh.d((int)param3[0], (int)param3[param1], (int)param4[0], (int)param4[1], param0);
+          SoftwareRasterizer.drawLine((int)param3[0], (int)param3[param1], (int)param4[0], (int)param4[1], param0);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "cl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

@@ -80,21 +80,21 @@ class mh extends fe {
         RuntimeException decompiledCaughtException = null;
         var10 = Pool.field_O;
         try {
-          qh.f(param0, param1, 1 + param3, 10000536);
-          qh.f(param0, param1 + param2, 1 + param3, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param0, param1, 1 + param3, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param0, param1 + param2, 1 + param3, 12105912);
           var5_int = 1;
           var6 = param2;
-          if (qh.field_c > var5_int + param1) {
-            var5_int = -param1 + qh.field_c;
+          if (SoftwareRasterizer.clipTop > var5_int + param1) {
+            var5_int = -param1 + SoftwareRasterizer.clipTop;
           }
-          if (param1 + var6 > qh.field_g) {
-            var6 = qh.field_g - param1;
+          if (param1 + var6 > SoftwareRasterizer.clipBottom) {
+            var6 = SoftwareRasterizer.clipBottom - param1;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + 48 * var7 / param2;
             var9 = var8 << 8 | var8 << 16 | var8;
-            qh.field_d[qh.field_l * (var7 + param1) + param0] = var9;
-            qh.field_d[(param1 + var7) * qh.field_l + param0 + param3] = var9;
+            SoftwareRasterizer.pixels[SoftwareRasterizer.width * (var7 + param1) + param0] = var9;
+            SoftwareRasterizer.pixels[(param1 + var7) * SoftwareRasterizer.width + param0 + param3] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

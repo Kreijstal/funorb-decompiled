@@ -149,11 +149,11 @@ final class he {
         }
     }
 
-    final static an a(di param0, String param1, int param2, di param3, String param4) {
+    final static BinaryBitmapFont a(di param0, String param1, int param2, di param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        an stackIn_1_0 = null;
+        BinaryBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

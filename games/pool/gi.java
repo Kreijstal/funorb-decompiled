@@ -41,13 +41,13 @@ final class gi extends IntrusiveNode {
     final void a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
         int var7 = this.field_q + param5;
         int var8 = param1 + this.field_m;
-        qh.e(var8 - 1, var7, this.field_l + 1, param0, param2);
-        qh.e(var8 - 1, param3 + var7 + this.field_r, 1 + this.field_l, param0, param2);
+        SoftwareRasterizer.drawHorizontalLineAlpha(var8 - 1, var7, this.field_l + 1, param0, param2);
+        SoftwareRasterizer.drawHorizontalLineAlpha(var8 - 1, param3 + var7 + this.field_r, 1 + this.field_l, param0, param2);
         if (param4) {
-          qh.g(var8 - 2, var7, this.field_r, param0, param2);
+          SoftwareRasterizer.drawVerticalLineAlpha(var8 - 2, var7, this.field_r, param0, param2);
         }
         if (this.field_s == null) {
-          qh.g(this.field_l + var8, var7, this.field_r, param0, param2);
+          SoftwareRasterizer.drawVerticalLineAlpha(this.field_l + var8, var7, this.field_r, param0, param2);
         } else {
           this.field_s.a(param0, param1, param2, -1, false, param5);
         }

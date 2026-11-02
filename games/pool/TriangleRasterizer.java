@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb {
-    static int field_k;
+final class TriangleRasterizer {
+    static int clipWidth;
     private static boolean field_g;
     private static boolean field_h;
-    static in field_i;
-    static int[] field_m;
-    static boolean field_n;
-    static int[] field_j;
-    static int field_q;
-    static int field_o;
+    static in textureProvider;
+    static int[] scanlineOffsets;
+    static boolean clipHorizontalSpans;
+    static int[] cosineTable;
+    static int projectionCenterX;
+    static int clipHeight;
     private static int[] field_e;
     private static boolean field_l;
-    static int field_c;
-    static int[] field_a;
-    static int[] field_b;
-    static int field_d;
+    static int blendAlpha;
+    static int[] sineTable;
+    static int[] colorPalette;
+    static int projectionCenterY;
     static float field_p;
     static int[] field_f;
 
-    final static void a() {
-        fb.a(qh.field_b, qh.field_c, qh.field_j, qh.field_g);
+    final static void useRasterClip() {
+        TriangleRasterizer.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     final static void b(float param0) {
-        fb.a(param0);
-        fb.c(0, 512);
+        TriangleRasterizer.a(param0);
+        TriangleRasterizer.c(0, 512);
     }
 
     private final static void c(int param0, int param1) {
@@ -126,7 +126,7 @@ final class fb {
             }
             incrementValue$0 = var2;
             var2++;
-            field_b[incrementValue$0] = var20;
+            colorPalette[incrementValue$0] = var20;
           }
         }
     }
@@ -136,7 +136,7 @@ final class fb {
         field_p = (float)((double)field_p + (Math.random() * 0.03 - 0.015));
     }
 
-    private final static int a(int param0, int param1) {
+    private final static int scaleHslLightness(int param0, int param1) {
         param1 = param1 * (param0 & 127) >> 7;
         if (param1 < 2) {
           param1 = 2;
@@ -149,7 +149,7 @@ final class fb {
     }
 
     final static void a(in param0) {
-        field_i = param0;
+        textureProvider = param0;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
@@ -198,9 +198,9 @@ final class fb {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        if (field_n) {
-          if (param6 > field_k) {
-            param6 = field_k;
+        if (clipHorizontalSpans) {
+          if (param6 > clipWidth) {
+            param6 = clipWidth;
           }
           if (param5 < 0) {
             param5 = 0;
@@ -213,7 +213,7 @@ final class fb {
         param7 = param7 + param8 * param5;
         var17 = param6 - param5;
         if (!field_h) {
-          var23 = param5 - field_q;
+          var23 = param5 - projectionCenterX;
           param9 = param9 + (param12 >> 3) * var23;
           param10 = param10 + (param13 >> 3) * var23;
           param11 = param11 + (param14 >> 3) * var23;
@@ -409,7 +409,7 @@ final class fb {
             }
           }
         } else {
-          var23 = param5 - field_q;
+          var23 = param5 - projectionCenterX;
           param9 = param9 + (param12 >> 3) * var23;
           param10 = param10 + (param13 >> 3) * var23;
           param11 = param11 + (param14 >> 3) * var23;
@@ -625,9 +625,9 @@ final class fb {
         int var8Lifetime2;
         int var8Lifetime3;
         int var8Lifetime4;
-        if (field_n) {
-          if (param5 > field_k) {
-            param5 = field_k;
+        if (clipHorizontalSpans) {
+          if (param5 > clipWidth) {
+            param5 = clipWidth;
           }
           if (param4 < 0) {
             param4 = 0;
@@ -638,7 +638,7 @@ final class fb {
         }
         param1 = param1 + param4;
         param3 = param5 - param4 >> 2;
-        if (field_c == 0) {
+        if (blendAlpha == 0) {
           while (true) {
             param3--;
             if (param3 < 0) {
@@ -658,7 +658,7 @@ final class fb {
           }
         }
         regionExit1: {
-          if (field_c == 254) {
+          if (blendAlpha == 254) {
             while (true) {
               param3--;
               if (param3 < 0) {
@@ -687,8 +687,8 @@ final class fb {
               param0[incrementValue$16] = param0[param1];
             }
           }
-          var6 = field_c;
-          var7 = 256 - field_c;
+          var6 = blendAlpha;
+          var7 = 256 - blendAlpha;
           param2 = ((param2 & 16711935) * var7 >> 8 & 16711935) + ((param2 & 65280) * var7 >> 8 & 65280);
           while (true) {
             param3--;
@@ -725,7 +725,7 @@ final class fb {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int localTemp$2 = 0;
@@ -773,14 +773,14 @@ final class fb {
         var20 = (var14 * var9 - var13 * var11 << 8) / var18;
         if (param0 <= param1 &&
           param0 <= param2) {
-          if (param0 >= field_o) {
+          if (param0 >= clipHeight) {
             return;
           }
-          if (param1 > field_o) {
-            param1 = field_o;
+          if (param1 > clipHeight) {
+            param1 = clipHeight;
           }
-          if (param2 > field_o) {
-            param2 = field_o;
+          if (param2 > clipHeight) {
+            param2 = clipHeight;
           }
           param6 = (param6 << 8) - var19 * param3 + var19;
           if (param1 >= param2) {
@@ -804,52 +804,52 @@ final class fb {
               var15 <= var16)) {
               param1 = param1 - param2;
               param2 = param2 - param0;
-              param0 = field_m[param0];
+              param0 = scanlineOffsets[param0];
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  fb.a(qh.field_d, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
                   param4 = param4 + var17;
                   param3 = param3 + var16;
                   param6 = param6 + var20;
-                  param0 = param0 + qh.field_l;
+                  param0 = param0 + SoftwareRasterizer.width;
                   continue;
                 }
                 break;
               }
               param1--;
               while (param1 >= 0) {
-                fb.a(qh.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var15;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + qh.field_l;
+                param0 = param0 + SoftwareRasterizer.width;
                 param1--;
               }
               return;
             }
             param1 = param1 - param2;
             param2 = param2 - param0;
-            param0 = field_m[param0];
+            param0 = scanlineOffsets[param0];
             while (true) {
               param2--;
               if (param2 >= 0) {
-                fb.a(qh.field_d, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
                 param4 = param4 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + qh.field_l;
+                param0 = param0 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              fb.a(qh.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var15;
               param3 = param3 + var16;
               param6 = param6 + var20;
-              param0 = param0 + qh.field_l;
+              param0 = param0 + SoftwareRasterizer.width;
               param1--;
             }
             return;
@@ -874,65 +874,65 @@ final class fb {
             var17 <= var15)) {
             param2 = param2 - param1;
             param1 = param1 - param0;
-            param0 = field_m[param0];
+            param0 = scanlineOffsets[param0];
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fb.a(qh.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + qh.field_l;
+                param0 = param0 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              fb.a(qh.field_d, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
               param5 = param5 + var17;
               param4 = param4 + var15;
               param6 = param6 + var20;
-              param0 = param0 + qh.field_l;
+              param0 = param0 + SoftwareRasterizer.width;
               param2--;
             }
             return;
           }
           param2 = param2 - param1;
           param1 = param1 - param0;
-          param0 = field_m[param0];
+          param0 = scanlineOffsets[param0];
           while (true) {
             param1--;
             if (param1 >= 0) {
-              fb.a(qh.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var17;
               param3 = param3 + var16;
               param6 = param6 + var20;
-              param0 = param0 + qh.field_l;
+              param0 = param0 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            fb.a(qh.field_d, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
             param5 = param5 + var17;
             param4 = param4 + var15;
             param6 = param6 + var20;
-            param0 = param0 + qh.field_l;
+            param0 = param0 + SoftwareRasterizer.width;
             param2--;
           }
           return;
         }
         if (param1 > param2) {
-          if (param2 >= field_o) {
+          if (param2 >= clipHeight) {
             return;
           }
-          if (param0 > field_o) {
-            param0 = field_o;
+          if (param0 > clipHeight) {
+            param0 = clipHeight;
           }
-          if (param1 > field_o) {
-            param1 = field_o;
+          if (param1 > clipHeight) {
+            param1 = clipHeight;
           }
           param8 = (param8 << 8) - var19 * param5 + var19;
           if (param0 >= param1) {
@@ -953,52 +953,52 @@ final class fb {
             if (var15 >= var17) {
               param0 = param0 - param1;
               param1 = param1 - param2;
-              param2 = field_m[param2];
+              param2 = scanlineOffsets[param2];
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fb.a(qh.field_d, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
                   param3 = param3 + var15;
                   param5 = param5 + var17;
                   param8 = param8 + var20;
-                  param2 = param2 + qh.field_l;
+                  param2 = param2 + SoftwareRasterizer.width;
                   continue;
                 }
                 break;
               }
               param0--;
               while (param0 >= 0) {
-                fb.a(qh.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var16;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + qh.field_l;
+                param2 = param2 + SoftwareRasterizer.width;
                 param0--;
               }
               return;
             }
             param0 = param0 - param1;
             param1 = param1 - param2;
-            param2 = field_m[param2];
+            param2 = scanlineOffsets[param2];
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fb.a(qh.field_d, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
                 param3 = param3 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + qh.field_l;
+                param2 = param2 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param0--;
             while (param0 >= 0) {
-              fb.a(qh.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var16;
               param5 = param5 + var17;
               param8 = param8 + var20;
-              param2 = param2 + qh.field_l;
+              param2 = param2 + SoftwareRasterizer.width;
               param0--;
             }
             return;
@@ -1020,64 +1020,64 @@ final class fb {
           if (var15 >= var17) {
             param1 = param1 - param0;
             param0 = param0 - param2;
-            param2 = field_m[param2];
+            param2 = scanlineOffsets[param2];
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fb.a(qh.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + qh.field_l;
+                param2 = param2 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              fb.a(qh.field_d, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
               param4 = param4 + var15;
               param3 = param3 + var16;
               param8 = param8 + var20;
-              param2 = param2 + qh.field_l;
+              param2 = param2 + SoftwareRasterizer.width;
               param1--;
             }
             return;
           }
           param1 = param1 - param0;
           param0 = param0 - param2;
-          param2 = field_m[param2];
+          param2 = scanlineOffsets[param2];
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fb.a(qh.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var15;
               param5 = param5 + var17;
               param8 = param8 + var20;
-              param2 = param2 + qh.field_l;
+              param2 = param2 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param1--;
           while (param1 >= 0) {
-            fb.a(qh.field_d, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
             param4 = param4 + var15;
             param3 = param3 + var16;
             param8 = param8 + var20;
-            param2 = param2 + qh.field_l;
+            param2 = param2 + SoftwareRasterizer.width;
             param1--;
           }
           return;
         }
-        if (param1 >= field_o) {
+        if (param1 >= clipHeight) {
           return;
         }
-        if (param2 > field_o) {
-          param2 = field_o;
+        if (param2 > clipHeight) {
+          param2 = clipHeight;
         }
-        if (param0 > field_o) {
-          param0 = field_o;
+        if (param0 > clipHeight) {
+          param0 = clipHeight;
         }
         param7 = (param7 << 8) - var19 * param4 + var19;
         if (param2 >= param0) {
@@ -1098,52 +1098,52 @@ final class fb {
           if (var16 >= var15) {
             param2 = param2 - param0;
             param0 = param0 - param1;
-            param1 = field_m[param1];
+            param1 = scanlineOffsets[param1];
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fb.a(qh.field_d, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
                 param5 = param5 + var16;
                 param4 = param4 + var15;
                 param7 = param7 + var20;
-                param1 = param1 + qh.field_l;
+                param1 = param1 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              fb.a(qh.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var17;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + qh.field_l;
+              param1 = param1 + SoftwareRasterizer.width;
               param2--;
             }
             return;
           }
           param2 = param2 - param0;
           param0 = param0 - param1;
-          param1 = field_m[param1];
+          param1 = scanlineOffsets[param1];
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fb.a(qh.field_d, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
               param5 = param5 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + qh.field_l;
+              param1 = param1 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            fb.a(qh.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var17;
             param4 = param4 + var15;
             param7 = param7 + var20;
-            param1 = param1 + qh.field_l;
+            param1 = param1 + SoftwareRasterizer.width;
             param2--;
           }
           return;
@@ -1168,58 +1168,58 @@ final class fb {
           var16 <= var17)) {
           param0 = param0 - param2;
           param2 = param2 - param1;
-          param1 = field_m[param1];
+          param1 = scanlineOffsets[param1];
           while (true) {
             param2--;
             if (param2 >= 0) {
-              fb.a(qh.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + qh.field_l;
+              param1 = param1 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param0--;
           while (param0 >= 0) {
-            fb.a(qh.field_d, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
             param3 = param3 + var16;
             param5 = param5 + var17;
             param7 = param7 + var20;
-            param1 = param1 + qh.field_l;
+            param1 = param1 + SoftwareRasterizer.width;
             param0--;
           }
           return;
         }
         param0 = param0 - param2;
         param2 = param2 - param1;
-        param1 = field_m[param1];
+        param1 = scanlineOffsets[param1];
         while (true) {
           param2--;
           if (param2 >= 0) {
-            fb.a(qh.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var16;
             param4 = param4 + var15;
             param7 = param7 + var20;
-            param1 = param1 + qh.field_l;
+            param1 = param1 + SoftwareRasterizer.width;
             continue;
           }
           break;
         }
         param0--;
         while (param0 >= 0) {
-          fb.a(qh.field_d, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
+          TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
           param3 = param3 + var16;
           param5 = param5 + var17;
           param7 = param7 + var20;
-          param1 = param1 + qh.field_l;
+          param1 = param1 + SoftwareRasterizer.width;
           param0--;
         }
         return;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawFlatTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int localTemp$2 = 0;
@@ -1243,14 +1243,14 @@ final class fb {
         }
         if (param0 <= param1 &&
           param0 <= param2) {
-          if (param0 >= field_o) {
+          if (param0 >= clipHeight) {
             return;
           }
-          if (param1 > field_o) {
-            param1 = field_o;
+          if (param1 > clipHeight) {
+            param1 = clipHeight;
           }
-          if (param2 > field_o) {
-            param2 = field_o;
+          if (param2 > clipHeight) {
+            param2 = clipHeight;
           }
           if (param1 >= param2) {
             localTemp$0 = param3 << 16;
@@ -1272,48 +1272,48 @@ final class fb {
               var8 <= var7)) {
               param1 = param1 - param2;
               param2 = param2 - param0;
-              param0 = field_m[param0];
+              param0 = scanlineOffsets[param0];
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  fb.a(qh.field_d, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param4 >> 16);
                   param4 = param4 + var9;
                   param3 = param3 + var7;
-                  param0 = param0 + qh.field_l;
+                  param0 = param0 + SoftwareRasterizer.width;
                   continue;
                 }
                 break;
               }
               param1--;
               while (param1 >= 0) {
-                fb.a(qh.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var8;
                 param3 = param3 + var7;
-                param0 = param0 + qh.field_l;
+                param0 = param0 + SoftwareRasterizer.width;
                 param1--;
               }
               return;
             }
             param1 = param1 - param2;
             param2 = param2 - param0;
-            param0 = field_m[param0];
+            param0 = scanlineOffsets[param0];
             while (true) {
               param2--;
               if (param2 >= 0) {
-                fb.a(qh.field_d, param0, param6, 0, param4 >> 16, param3 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param4 >> 16, param3 >> 16);
                 param4 = param4 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + qh.field_l;
+                param0 = param0 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              fb.a(qh.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var8;
               param3 = param3 + var7;
-              param0 = param0 + qh.field_l;
+              param0 = param0 + SoftwareRasterizer.width;
               param1--;
             }
             return;
@@ -1337,61 +1337,61 @@ final class fb {
             var9 <= var8)) {
             param2 = param2 - param1;
             param1 = param1 - param0;
-            param0 = field_m[param0];
+            param0 = scanlineOffsets[param0];
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fb.a(qh.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + qh.field_l;
+                param0 = param0 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              fb.a(qh.field_d, param0, param6, 0, param4 >> 16, param5 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param4 >> 16, param5 >> 16);
               param5 = param5 + var9;
               param4 = param4 + var8;
-              param0 = param0 + qh.field_l;
+              param0 = param0 + SoftwareRasterizer.width;
               param2--;
             }
             return;
           }
           param2 = param2 - param1;
           param1 = param1 - param0;
-          param0 = field_m[param0];
+          param0 = scanlineOffsets[param0];
           while (true) {
             param1--;
             if (param1 >= 0) {
-              fb.a(qh.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var9;
               param3 = param3 + var7;
-              param0 = param0 + qh.field_l;
+              param0 = param0 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            fb.a(qh.field_d, param0, param6, 0, param5 >> 16, param4 >> 16);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param0, param6, 0, param5 >> 16, param4 >> 16);
             param5 = param5 + var9;
             param4 = param4 + var8;
-            param0 = param0 + qh.field_l;
+            param0 = param0 + SoftwareRasterizer.width;
             param2--;
           }
           return;
         }
         if (param1 > param2) {
-          if (param2 >= field_o) {
+          if (param2 >= clipHeight) {
             return;
           }
-          if (param0 > field_o) {
-            param0 = field_o;
+          if (param0 > clipHeight) {
+            param0 = clipHeight;
           }
-          if (param1 > field_o) {
-            param1 = field_o;
+          if (param1 > clipHeight) {
+            param1 = clipHeight;
           }
           if (param0 >= param1) {
             localTemp$2 = param5 << 16;
@@ -1410,48 +1410,48 @@ final class fb {
             if (var8 >= var9) {
               param0 = param0 - param1;
               param1 = param1 - param2;
-              param2 = field_m[param2];
+              param2 = scanlineOffsets[param2];
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fb.a(qh.field_d, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param3 >> 16);
                   param3 = param3 + var8;
                   param5 = param5 + var9;
-                  param2 = param2 + qh.field_l;
+                  param2 = param2 + SoftwareRasterizer.width;
                   continue;
                 }
                 break;
               }
               param0--;
               while (param0 >= 0) {
-                fb.a(qh.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var7;
                 param5 = param5 + var9;
-                param2 = param2 + qh.field_l;
+                param2 = param2 + SoftwareRasterizer.width;
                 param0--;
               }
               return;
             }
             param0 = param0 - param1;
             param1 = param1 - param2;
-            param2 = field_m[param2];
+            param2 = scanlineOffsets[param2];
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fb.a(qh.field_d, param2, param6, 0, param3 >> 16, param5 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param3 >> 16, param5 >> 16);
                 param3 = param3 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + qh.field_l;
+                param2 = param2 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param0--;
             while (param0 >= 0) {
-              fb.a(qh.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var7;
               param5 = param5 + var9;
-              param2 = param2 + qh.field_l;
+              param2 = param2 + SoftwareRasterizer.width;
               param0--;
             }
             return;
@@ -1472,60 +1472,60 @@ final class fb {
           if (var8 >= var9) {
             param1 = param1 - param0;
             param0 = param0 - param2;
-            param2 = field_m[param2];
+            param2 = scanlineOffsets[param2];
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fb.a(qh.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + qh.field_l;
+                param2 = param2 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              fb.a(qh.field_d, param2, param6, 0, param3 >> 16, param4 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param3 >> 16, param4 >> 16);
               param4 = param4 + var8;
               param3 = param3 + var7;
-              param2 = param2 + qh.field_l;
+              param2 = param2 + SoftwareRasterizer.width;
               param1--;
             }
             return;
           }
           param1 = param1 - param0;
           param0 = param0 - param2;
-          param2 = field_m[param2];
+          param2 = scanlineOffsets[param2];
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fb.a(qh.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var8;
               param5 = param5 + var9;
-              param2 = param2 + qh.field_l;
+              param2 = param2 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param1--;
           while (param1 >= 0) {
-            fb.a(qh.field_d, param2, param6, 0, param4 >> 16, param3 >> 16);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param2, param6, 0, param4 >> 16, param3 >> 16);
             param4 = param4 + var8;
             param3 = param3 + var7;
-            param2 = param2 + qh.field_l;
+            param2 = param2 + SoftwareRasterizer.width;
             param1--;
           }
           return;
         }
-        if (param1 >= field_o) {
+        if (param1 >= clipHeight) {
           return;
         }
-        if (param2 > field_o) {
-          param2 = field_o;
+        if (param2 > clipHeight) {
+          param2 = clipHeight;
         }
-        if (param0 > field_o) {
-          param0 = field_o;
+        if (param0 > clipHeight) {
+          param0 = clipHeight;
         }
         if (param2 >= param0) {
           localTemp$4 = param4 << 16;
@@ -1544,48 +1544,48 @@ final class fb {
           if (var7 >= var8) {
             param2 = param2 - param0;
             param0 = param0 - param1;
-            param1 = field_m[param1];
+            param1 = scanlineOffsets[param1];
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fb.a(qh.field_d, param1, param6, 0, param4 >> 16, param5 >> 16);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param5 >> 16);
                 param5 = param5 + var7;
                 param4 = param4 + var8;
-                param1 = param1 + qh.field_l;
+                param1 = param1 + SoftwareRasterizer.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              fb.a(qh.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var9;
               param4 = param4 + var8;
-              param1 = param1 + qh.field_l;
+              param1 = param1 + SoftwareRasterizer.width;
               param2--;
             }
             return;
           }
           param2 = param2 - param0;
           param0 = param0 - param1;
-          param1 = field_m[param1];
+          param1 = scanlineOffsets[param1];
           while (true) {
             param0--;
             if (param0 >= 0) {
-              fb.a(qh.field_d, param1, param6, 0, param5 >> 16, param4 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param5 >> 16, param4 >> 16);
               param5 = param5 + var7;
               param4 = param4 + var8;
-              param1 = param1 + qh.field_l;
+              param1 = param1 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            fb.a(qh.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var9;
             param4 = param4 + var8;
-            param1 = param1 + qh.field_l;
+            param1 = param1 + SoftwareRasterizer.width;
             param2--;
           }
           return;
@@ -1609,59 +1609,59 @@ final class fb {
           var7 <= var9)) {
           param0 = param0 - param2;
           param2 = param2 - param1;
-          param1 = field_m[param1];
+          param1 = scanlineOffsets[param1];
           while (true) {
             param2--;
             if (param2 >= 0) {
-              fb.a(qh.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var7;
               param4 = param4 + var8;
-              param1 = param1 + qh.field_l;
+              param1 = param1 + SoftwareRasterizer.width;
               continue;
             }
             break;
           }
           param0--;
           while (param0 >= 0) {
-            fb.a(qh.field_d, param1, param6, 0, param5 >> 16, param3 >> 16);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param5 >> 16, param3 >> 16);
             param3 = param3 + var7;
             param5 = param5 + var9;
-            param1 = param1 + qh.field_l;
+            param1 = param1 + SoftwareRasterizer.width;
             param0--;
           }
           return;
         }
         param0 = param0 - param2;
         param2 = param2 - param1;
-        param1 = field_m[param1];
+        param1 = scanlineOffsets[param1];
         while (true) {
           param2--;
           if (param2 >= 0) {
-            fb.a(qh.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var7;
             param4 = param4 + var8;
-            param1 = param1 + qh.field_l;
+            param1 = param1 + SoftwareRasterizer.width;
             continue;
           }
           break;
         }
         param0--;
         while (param0 >= 0) {
-          fb.a(qh.field_d, param1, param6, 0, param3 >> 16, param5 >> 16);
+          TriangleRasterizer.a(SoftwareRasterizer.pixels, param1, param6, 0, param3 >> 16, param5 >> 16);
           param3 = param3 + var7;
           param5 = param5 + var9;
-          param1 = param1 + qh.field_l;
+          param1 = param1 + SoftwareRasterizer.width;
           param0--;
         }
         return;
     }
 
-    final static void b(int param0, int param1) {
-        int var2 = field_m[0];
-        int var3 = var2 / qh.field_l;
-        int var4 = var2 - var3 * qh.field_l;
-        field_q = param0 - var4;
-        field_d = param1 - var3;
+    final static void setProjectionCenter(int param0, int param1) {
+        int var2 = scanlineOffsets[0];
+        int var3 = var2 / SoftwareRasterizer.width;
+        int var4 = var2 - var3 * SoftwareRasterizer.width;
+        projectionCenterX = param0 - var4;
+        projectionCenterY = param1 - var3;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
@@ -1703,13 +1703,13 @@ final class fb {
         int var41Lifetime3;
         int var41Lifetime4;
         int var41Lifetime1Lifetime1;
-        var43 = field_i.a(true, param18, field_p);
+        var43 = textureProvider.a(true, param18, field_p);
         var42 = var43;
         var19 = var42;
         if (var19 != null &&
-          field_c <= 10) {
-          field_h = field_i.a(param18, 55);
-          stackIn_6_0 = (field_i.a(param18, (byte) -91) == 0);
+          blendAlpha <= 10) {
+          field_h = textureProvider.a(param18, 55);
+          stackIn_6_0 = (textureProvider.a(param18, (byte) -91) == 0);
           field_l = stackIn_6_0;
           var20 = param4 - param3;
           var21 = param1 - param0;
@@ -1752,14 +1752,14 @@ final class fb {
           var40 = param10 * param17 - param16 * param11 << 5;
           if (param0 <= param1 &&
             param0 <= param2) {
-            if (param0 >= field_o) {
+            if (param0 >= clipHeight) {
               return;
             }
-            if (param1 > field_o) {
-              param1 = field_o;
+            if (param1 > clipHeight) {
+              param1 = clipHeight;
             }
-            if (param2 > field_o) {
-              param2 = field_o;
+            if (param2 > clipHeight) {
+              param2 = clipHeight;
             }
             param6 = (param6 << 9) - var30 * param3 + var30;
             if (param1 >= param2) {
@@ -1777,7 +1777,7 @@ final class fb {
                 param5 = param5 - var27 * param2;
                 param2 = 0;
               }
-              var41 = param0 - field_d;
+              var41 = param0 - projectionCenterY;
               var32 = var32 + var34 * var41;
               var35 = var35 + var37 * var41;
               var38 = var38 + var40 * var41;
@@ -1786,15 +1786,15 @@ final class fb {
                 var27 <= var26)) {
                 param1 = param1 - param2;
                 param2 = param2 - param0;
-                param0 = field_m[param0];
+                param0 = scanlineOffsets[param0];
                 while (true) {
                   param2--;
                   if (param2 >= 0) {
-                    fb.a(qh.field_d, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                    TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                     param4 = param4 + var28;
                     param3 = param3 + var26;
                     param6 = param6 + var31;
-                    param0 = param0 + qh.field_l;
+                    param0 = param0 + SoftwareRasterizer.width;
                     var32 = var32 + var34;
                     var35 = var35 + var37;
                     var38 = var38 + var40;
@@ -1804,11 +1804,11 @@ final class fb {
                 }
                 param1--;
                 while (param1 >= 0) {
-                  fb.a(qh.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var27;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + qh.field_l;
+                  param0 = param0 + SoftwareRasterizer.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1818,15 +1818,15 @@ final class fb {
               }
               param1 = param1 - param2;
               param2 = param2 - param0;
-              param0 = field_m[param0];
+              param0 = scanlineOffsets[param0];
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  fb.a(qh.field_d, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + qh.field_l;
+                  param0 = param0 + SoftwareRasterizer.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1836,11 +1836,11 @@ final class fb {
               }
               param1--;
               while (param1 >= 0) {
-                fb.a(qh.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
-                param0 = param0 + qh.field_l;
+                param0 = param0 + SoftwareRasterizer.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1862,7 +1862,7 @@ final class fb {
               param4 = param4 - var27 * param1;
               param1 = 0;
             }
-            var41Lifetime4 = param0 - field_d;
+            var41Lifetime4 = param0 - projectionCenterY;
             var32 = var32 + var34 * var41Lifetime4;
             var35 = var35 + var37 * var41Lifetime4;
             var38 = var38 + var40 * var41Lifetime4;
@@ -1871,15 +1871,15 @@ final class fb {
               var28 <= var27)) {
               param2 = param2 - param1;
               param1 = param1 - param0;
-              param0 = field_m[param0];
+              param0 = scanlineOffsets[param0];
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fb.a(qh.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + qh.field_l;
+                  param0 = param0 + SoftwareRasterizer.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1889,11 +1889,11 @@ final class fb {
               }
               param2--;
               while (param2 >= 0) {
-                fb.a(qh.field_d, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param4 = param4 + var27;
                 param6 = param6 + var31;
-                param0 = param0 + qh.field_l;
+                param0 = param0 + SoftwareRasterizer.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1903,15 +1903,15 @@ final class fb {
             }
             param2 = param2 - param1;
             param1 = param1 - param0;
-            param0 = field_m[param0];
+            param0 = scanlineOffsets[param0];
             while (true) {
               param1--;
               if (param1 >= 0) {
-                fb.a(qh.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
-                param0 = param0 + qh.field_l;
+                param0 = param0 + SoftwareRasterizer.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1921,11 +1921,11 @@ final class fb {
             }
             param2--;
             while (param2 >= 0) {
-              fb.a(qh.field_d, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
               param5 = param5 + var28;
               param4 = param4 + var27;
               param6 = param6 + var31;
-              param0 = param0 + qh.field_l;
+              param0 = param0 + SoftwareRasterizer.width;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -1934,14 +1934,14 @@ final class fb {
             return;
           }
           if (param1 > param2) {
-            if (param2 >= field_o) {
+            if (param2 >= clipHeight) {
               return;
             }
-            if (param0 > field_o) {
-              param0 = field_o;
+            if (param0 > clipHeight) {
+              param0 = clipHeight;
             }
-            if (param1 > field_o) {
-              param1 = field_o;
+            if (param1 > clipHeight) {
+              param1 = clipHeight;
             }
             param8 = (param8 << 9) - var30 * param5 + var30;
             if (param0 >= param1) {
@@ -1959,22 +1959,22 @@ final class fb {
                 param4 = param4 - var26 * param1;
                 param1 = 0;
               }
-              var41Lifetime1 = param2 - field_d;
+              var41Lifetime1 = param2 - projectionCenterY;
               var32 = var32 + var34 * var41Lifetime1;
               var35 = var35 + var37 * var41Lifetime1;
               var38 = var38 + var40 * var41Lifetime1;
               if (var27 >= var28) {
                 param0 = param0 - param1;
                 param1 = param1 - param2;
-                param2 = field_m[param2];
+                param2 = scanlineOffsets[param2];
                 while (true) {
                   param1--;
                   if (param1 >= 0) {
-                    fb.a(qh.field_d, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                    TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                     param3 = param3 + var27;
                     param5 = param5 + var28;
                     param8 = param8 + var31;
-                    param2 = param2 + qh.field_l;
+                    param2 = param2 + SoftwareRasterizer.width;
                     var32 = var32 + var34;
                     var35 = var35 + var37;
                     var38 = var38 + var40;
@@ -1984,11 +1984,11 @@ final class fb {
                 }
                 param0--;
                 while (param0 >= 0) {
-                  fb.a(qh.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var26;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + qh.field_l;
+                  param2 = param2 + SoftwareRasterizer.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1998,15 +1998,15 @@ final class fb {
               }
               param0 = param0 - param1;
               param1 = param1 - param2;
-              param2 = field_m[param2];
+              param2 = scanlineOffsets[param2];
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  fb.a(qh.field_d, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param3 = param3 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + qh.field_l;
+                  param2 = param2 + SoftwareRasterizer.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -2016,11 +2016,11 @@ final class fb {
               }
               param0--;
               while (param0 >= 0) {
-                fb.a(qh.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var26;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
-                param2 = param2 + qh.field_l;
+                param2 = param2 + SoftwareRasterizer.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2042,22 +2042,22 @@ final class fb {
               param3 = param3 - var26 * param0;
               param0 = 0;
             }
-            var41Lifetime1Lifetime1 = param2 - field_d;
+            var41Lifetime1Lifetime1 = param2 - projectionCenterY;
             var32 = var32 + var34 * var41Lifetime1Lifetime1;
             var35 = var35 + var37 * var41Lifetime1Lifetime1;
             var38 = var38 + var40 * var41Lifetime1Lifetime1;
             if (var27 >= var28) {
               param1 = param1 - param0;
               param0 = param0 - param2;
-              param2 = field_m[param2];
+              param2 = scanlineOffsets[param2];
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  fb.a(qh.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + qh.field_l;
+                  param2 = param2 + SoftwareRasterizer.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -2067,11 +2067,11 @@ final class fb {
               }
               param1--;
               while (param1 >= 0) {
-                fb.a(qh.field_d, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param3 = param3 + var26;
                 param8 = param8 + var31;
-                param2 = param2 + qh.field_l;
+                param2 = param2 + SoftwareRasterizer.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2081,15 +2081,15 @@ final class fb {
             }
             param1 = param1 - param0;
             param0 = param0 - param2;
-            param2 = field_m[param2];
+            param2 = scanlineOffsets[param2];
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fb.a(qh.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
-                param2 = param2 + qh.field_l;
+                param2 = param2 + SoftwareRasterizer.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2099,11 +2099,11 @@ final class fb {
             }
             param1--;
             while (param1 >= 0) {
-              fb.a(qh.field_d, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param8 = param8 + var31;
-              param2 = param2 + qh.field_l;
+              param2 = param2 + SoftwareRasterizer.width;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -2111,14 +2111,14 @@ final class fb {
             }
             return;
           }
-          if (param1 >= field_o) {
+          if (param1 >= clipHeight) {
             return;
           }
-          if (param2 > field_o) {
-            param2 = field_o;
+          if (param2 > clipHeight) {
+            param2 = clipHeight;
           }
-          if (param0 > field_o) {
-            param0 = field_o;
+          if (param0 > clipHeight) {
+            param0 = clipHeight;
           }
           param7 = (param7 << 9) - var30 * param4 + var30;
           if (param2 >= param0) {
@@ -2136,22 +2136,22 @@ final class fb {
               param3 = param3 - var28 * param0;
               param0 = 0;
             }
-            var41Lifetime2 = param1 - field_d;
+            var41Lifetime2 = param1 - projectionCenterY;
             var32 = var32 + var34 * var41Lifetime2;
             var35 = var35 + var37 * var41Lifetime2;
             var38 = var38 + var40 * var41Lifetime2;
             if (var26 >= var27) {
               param2 = param2 - param0;
               param0 = param0 - param1;
-              param1 = field_m[param1];
+              param1 = scanlineOffsets[param1];
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  fb.a(qh.field_d, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var26;
                   param4 = param4 + var27;
                   param7 = param7 + var31;
-                  param1 = param1 + qh.field_l;
+                  param1 = param1 + SoftwareRasterizer.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -2161,11 +2161,11 @@ final class fb {
               }
               param2--;
               while (param2 >= 0) {
-                fb.a(qh.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var28;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + qh.field_l;
+                param1 = param1 + SoftwareRasterizer.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2175,15 +2175,15 @@ final class fb {
             }
             param2 = param2 - param0;
             param0 = param0 - param1;
-            param1 = field_m[param1];
+            param1 = scanlineOffsets[param1];
             while (true) {
               param0--;
               if (param0 >= 0) {
-                fb.a(qh.field_d, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + qh.field_l;
+                param1 = param1 + SoftwareRasterizer.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2193,11 +2193,11 @@ final class fb {
             }
             param2--;
             while (param2 >= 0) {
-              fb.a(qh.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var28;
               param4 = param4 + var27;
               param7 = param7 + var31;
-              param1 = param1 + qh.field_l;
+              param1 = param1 + SoftwareRasterizer.width;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -2219,7 +2219,7 @@ final class fb {
             param5 = param5 - var28 * param2;
             param2 = 0;
           }
-          var41Lifetime3 = param1 - field_d;
+          var41Lifetime3 = param1 - projectionCenterY;
           var32 = var32 + var34 * var41Lifetime3;
           var35 = var35 + var37 * var41Lifetime3;
           var38 = var38 + var40 * var41Lifetime3;
@@ -2228,15 +2228,15 @@ final class fb {
             var26 <= var28)) {
             param0 = param0 - param2;
             param2 = param2 - param1;
-            param1 = field_m[param1];
+            param1 = scanlineOffsets[param1];
             while (true) {
               param2--;
               if (param2 >= 0) {
-                fb.a(qh.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + qh.field_l;
+                param1 = param1 + SoftwareRasterizer.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2246,11 +2246,11 @@ final class fb {
             }
             param0--;
             while (param0 >= 0) {
-              fb.a(qh.field_d, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param5 = param5 + var28;
               param7 = param7 + var31;
-              param1 = param1 + qh.field_l;
+              param1 = param1 + SoftwareRasterizer.width;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -2260,15 +2260,15 @@ final class fb {
           }
           param0 = param0 - param2;
           param2 = param2 - param1;
-          param1 = field_m[param1];
+          param1 = scanlineOffsets[param1];
           while (true) {
             param2--;
             if (param2 >= 0) {
-              fb.a(qh.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param4 = param4 + var27;
               param7 = param7 + var31;
-              param1 = param1 + qh.field_l;
+              param1 = param1 + SoftwareRasterizer.width;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -2278,11 +2278,11 @@ final class fb {
           }
           param0--;
           while (param0 >= 0) {
-            fb.a(qh.field_d, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+            TriangleRasterizer.a(SoftwareRasterizer.pixels, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
             param3 = param3 + var26;
             param5 = param5 + var28;
             param7 = param7 + var31;
-            param1 = param1 + qh.field_l;
+            param1 = param1 + SoftwareRasterizer.width;
             var32 = var32 + var34;
             var35 = var35 + var37;
             var38 = var38 + var40;
@@ -2290,22 +2290,22 @@ final class fb {
           }
           return;
         }
-        var20Lifetime1 = field_i.b(108, param18);
-        fb.a(param0, param1, param2, param3, param4, param5, fb.a(var20Lifetime1, param6), fb.a(var20Lifetime1, param7), fb.a(var20Lifetime1, param8));
+        var20Lifetime1 = textureProvider.b(108, param18);
+        TriangleRasterizer.drawShadedTriangle(param0, param1, param2, param3, param4, param5, TriangleRasterizer.scaleHslLightness(var20Lifetime1, param6), TriangleRasterizer.scaleHslLightness(var20Lifetime1, param7), TriangleRasterizer.scaleHslLightness(var20Lifetime1, param8));
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        field_k = param2 - param0;
-        field_o = param3 - param1;
-        fb.c();
-        if (field_m.length < field_o) {
-          field_m = new int[te.a(-17931, field_o)];
+        clipWidth = param2 - param0;
+        clipHeight = param3 - param1;
+        TriangleRasterizer.c();
+        if (scanlineOffsets.length < clipHeight) {
+          scanlineOffsets = new int[te.a(-17931, clipHeight)];
         }
-        int var4 = param1 * qh.field_l + param0;
-        for (var5 = 0; var5 < field_o; var5++) {
-          field_m[var5] = var4;
-          var4 = var4 + qh.field_l;
+        int var4 = param1 * SoftwareRasterizer.width + param0;
+        for (var5 = 0; var5 < clipHeight; var5++) {
+          scanlineOffsets[var5] = var4;
+          var4 = var4 + SoftwareRasterizer.width;
         }
     }
 
@@ -2320,9 +2320,9 @@ final class fb {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        if (field_n) {
-          if (param5 > field_k) {
-            param5 = field_k;
+        if (clipHorizontalSpans) {
+          if (param5 > clipWidth) {
+            param5 = clipWidth;
           }
           if (param4 < 0) {
             param4 = 0;
@@ -2335,20 +2335,20 @@ final class fb {
         param6 = param6 + param7 * param4;
         if (!field_g) {
           param3 = param5 - param4;
-          if (field_c == 0) {
+          if (blendAlpha == 0) {
             do {
               incrementValue$14 = param1;
               param1++;
-              param0[incrementValue$14] = field_b[param6 >> 8];
+              param0[incrementValue$14] = colorPalette[param6 >> 8];
               param6 = param6 + param7;
               param3--;
             } while (param3 > 0);
             return;
           }
-          var8 = field_c;
-          var9 = 256 - field_c;
+          var8 = blendAlpha;
+          var9 = 256 - blendAlpha;
           do {
-            param2 = field_b[param6 >> 8];
+            param2 = colorPalette[param6 >> 8];
             param6 = param6 + param7;
             param2 = ((param2 & 16711935) * var9 >> 8 & 16711935) + ((param2 & 65280) * var9 >> 8 & 65280);
             var10 = param0[param1];
@@ -2362,10 +2362,10 @@ final class fb {
         boolean decompiledFrameRemainder0 = true;
         param3 = param5 - param4 >> 2;
         param7 = param7 << 2;
-        if (field_c == 0) {
+        if (blendAlpha == 0) {
           if (param3 > 0) {
             do {
-              param2 = field_b[param6 >> 8];
+              param2 = colorPalette[param6 >> 8];
               param6 = param6 + param7;
               param0[param1++] = param2;
               param0[param1++] = param2;
@@ -2378,7 +2378,7 @@ final class fb {
           if (param3 <= 0) {
             return;
           }
-          param2 = field_b[param6 >> 8];
+          param2 = colorPalette[param6 >> 8];
           do {
             param0[param1++] = param2;
             param3--;
@@ -2386,11 +2386,11 @@ final class fb {
           decompiledFrameRemainder0 = false;
         }
         else {
-          var8 = field_c;
-          var9 = 256 - field_c;
+          var8 = blendAlpha;
+          var9 = 256 - blendAlpha;
           if (param3 > 0) {
             do {
-              param2 = field_b[param6 >> 8];
+              param2 = colorPalette[param6 >> 8];
               param6 = param6 + param7;
               param2 = ((param2 & 16711935) * var9 >> 8 & 16711935) + ((param2 & 65280) * var9 >> 8 & 65280);
               var10 = param0[param1];
@@ -2414,7 +2414,7 @@ final class fb {
           }
           param3 = param5 - param4 & 3;
           if (param3 > 0) {
-            param2 = field_b[param6 >> 8];
+            param2 = colorPalette[param6 >> 8];
             param2 = ((param2 & 16711935) * var9 >> 8 & 16711935) + ((param2 & 65280) * var9 >> 8 & 65280);
             do {
               var10 = param0[param1];
@@ -2428,19 +2428,19 @@ final class fb {
 
     }
 
-    public static void b() {
-        field_m = null;
-        field_b = null;
-        field_i = null;
+    public static void releaseStatics() {
+        scanlineOffsets = null;
+        colorPalette = null;
+        textureProvider = null;
         field_e = null;
         field_f = null;
-        field_a = null;
-        field_j = null;
+        sineTable = null;
+        cosineTable = null;
     }
 
     private final static void c() {
-        field_q = field_k / 2;
-        field_d = field_o / 2;
+        projectionCenterX = clipWidth / 2;
+        projectionCenterY = clipHeight / 2;
     }
 
     static {
@@ -2450,12 +2450,12 @@ final class fb {
         field_g = true;
         field_h = false;
         field_e = new int[512];
-        field_m = new int[1024];
-        field_j = new int[2048];
-        field_a = new int[2048];
-        field_n = false;
-        field_b = new int[65536];
-        field_c = 0;
+        scanlineOffsets = new int[1024];
+        cosineTable = new int[2048];
+        sineTable = new int[2048];
+        clipHorizontalSpans = false;
+        colorPalette = new int[65536];
+        blendAlpha = 0;
         field_f = new int[2048];
         field_l = false;
         field_p = 1.0f;
@@ -2466,8 +2466,8 @@ final class fb {
           field_f[var0Lifetime1] = 65536 / var0Lifetime1;
         }
         for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
-          field_a[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
-          field_j[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
+          sineTable[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          cosineTable[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
         }
     }
 }

@@ -8,7 +8,7 @@ final class cg extends IntrusiveNode {
     final void b() {
         int[] var1;
         int[] var2;
-        gq var4;
+        MidiFileReader var4;
         int var5;
         int var6;
         int var7;
@@ -43,26 +43,26 @@ final class cg extends IntrusiveNode {
         var22 = var1;
         var18[9] = 128;
         var22[9] = 128;
-        var4 = new gq(this.field_l);
+        var4 = new MidiFileReader(this.field_l);
         var5 = var4.d();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.a(var6);
+          var4.seekTrack(var6);
           var4.f(var6);
-          var4.e(var6);
+          var4.saveTrackPosition(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.b();
-          var7 = var4.field_g[var6Lifetime1];
+          var6Lifetime1 = var4.nextTrack();
+          var7 = var4.trackTicks[var6Lifetime1];
           while (true) {
-            if (var4.field_g[var6Lifetime1] != var7) {
+            if (var4.trackTicks[var6Lifetime1] != var7) {
               break;
             }
-            var4.a(var6Lifetime1);
-            var8 = var4.d(var6Lifetime1);
+            var4.seekTrack(var6Lifetime1);
+            var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
               var4.c();
-              var4.e(var6Lifetime1);
-              if (var4.f()) {
+              var4.saveTrackPosition(var6Lifetime1);
+              if (var4.isDone()) {
                 return;
               }
               break;
@@ -99,7 +99,7 @@ final class cg extends IntrusiveNode {
               }
             }
             var4.f(var6Lifetime1);
-            var4.e(var6Lifetime1);
+            var4.saveTrackPosition(var6Lifetime1);
           }
         }
     }

@@ -487,13 +487,13 @@ final class vf extends vc {
         int var24;
         int var16Lifetime1;
         int var16Lifetime1Lifetime1;
-        var3 = 65536 / qh.field_l;
-        if (qh.field_c <= param1) {
+        var3 = 65536 / SoftwareRasterizer.width;
+        if (SoftwareRasterizer.clipTop <= param1) {
           stackIn_3_0 = param1;
         } else {
-          stackIn_3_0 = qh.field_c;
+          stackIn_3_0 = SoftwareRasterizer.clipTop;
         }
-        for (var4 = stackIn_3_0; var4 < qh.field_g; var4++) {
+        for (var4 = stackIn_3_0; var4 < SoftwareRasterizer.clipBottom; var4++) {
           var5 = var4 - 240;
           var6 = var4 - param1;
           if (var6 >= 5) {
@@ -502,9 +502,9 @@ final class vf extends vc {
             var6 = (5 - var6) * 127 / 5;
           }
           var7 = 127 - var6;
-          var12 = param0[9] + (param0[3] * (qh.field_b - 320) + param0[6] * var5 >> 9) >> 1;
-          var13 = param0[10] + (param0[4] * (qh.field_b - 320) + param0[7] * var5 >> 9) >> 1;
-          var14 = param0[11] + (param0[5] * (qh.field_b - 320) + param0[8] * var5 >> 9) >> 1;
+          var12 = param0[9] + (param0[3] * (SoftwareRasterizer.clipLeft - 320) + param0[6] * var5 >> 9) >> 1;
+          var13 = param0[10] + (param0[4] * (SoftwareRasterizer.clipLeft - 320) + param0[7] * var5 >> 9) >> 1;
+          var14 = param0[11] + (param0[5] * (SoftwareRasterizer.clipLeft - 320) + param0[8] * var5 >> 9) >> 1;
           var15 = var12 * var12 + var13 * var13 + var14 * var14 >> 16;
           if (var15 > 0) {
             var15 = rf.a(var15, -128);
@@ -515,9 +515,9 @@ final class vf extends vc {
               var16 = lh.a(var14, (byte) -90, (long)(ec.field_f - param0[2]));
               var8 = param0[0] + (var16 * var12 >> 16) >> 3;
               var10 = param0[1] + (var16 * var13 >> 16) >> 3;
-              var12 = param0[9] + (param0[3] * (qh.field_j - 320) + param0[6] * var5 >> 9) >> 1;
-              var13 = param0[10] + (param0[4] * (qh.field_j - 320) + param0[7] * var5 >> 9) >> 1;
-              var14 = param0[11] + (param0[5] * (qh.field_j - 320) + param0[8] * var5 >> 9) >> 1;
+              var12 = param0[9] + (param0[3] * (SoftwareRasterizer.clipRight - 320) + param0[6] * var5 >> 9) >> 1;
+              var13 = param0[10] + (param0[4] * (SoftwareRasterizer.clipRight - 320) + param0[7] * var5 >> 9) >> 1;
+              var14 = param0[11] + (param0[5] * (SoftwareRasterizer.clipRight - 320) + param0[8] * var5 >> 9) >> 1;
               var15 = var12 * var12 + var13 * var13 + var14 * var14 >> 16;
               if (var15 > 0) {
                 var15 = rf.a(var15, -121);
@@ -532,11 +532,11 @@ final class vf extends vc {
                   var13 = var11 - var10;
                   var14 = var12 * var3;
                   var15 = var13 * var3;
-                  var16Lifetime1Lifetime1 = (var8 << 16) + var14 * qh.field_b;
-                  var17 = (var10 << 16) + var15 * qh.field_b;
-                  var18 = var4 * qh.field_l + qh.field_b;
-                  for (var19 = qh.field_b; var19 < qh.field_j; var19++) {
-                    if (qh.field_d[var18] == -1) {
+                  var16Lifetime1Lifetime1 = (var8 << 16) + var14 * SoftwareRasterizer.clipLeft;
+                  var17 = (var10 << 16) + var15 * SoftwareRasterizer.clipLeft;
+                  var18 = var4 * SoftwareRasterizer.width + SoftwareRasterizer.clipLeft;
+                  for (var19 = SoftwareRasterizer.clipLeft; var19 < SoftwareRasterizer.clipRight; var19++) {
+                    if (SoftwareRasterizer.pixels[var18] == -1) {
                       var20 = ((var16Lifetime1Lifetime1 >> 16 & 255) << 8) + (var17 >> 16 & 255);
                       var21 = di.field_g >> 0;
                       var22 = 256 - var21;
@@ -546,7 +546,7 @@ final class vf extends vc {
                       if (var6 != 0) {
                         var23 = ((var23 & 65280) * var7 >> 7) + (60928 * var6 >> 7) & 65280 | ((var23 & 16711935) * var7 >> 7) + (15597806 * var6 >> 7) & 16711935;
                       }
-                      qh.field_d[var18] = var23;
+                      SoftwareRasterizer.pixels[var18] = var23;
                     }
                     var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 + var14;
                     var17 = var17 + var15;
@@ -1043,9 +1043,9 @@ final class vf extends vc {
           if (var3_int > 0) {
             var6 = (int)((double)var4 * -param1.field_eb.a(param0) / 2.0 / 3.141592653589793);
             var7 = -var5 + var3_int;
-            this.field_B.c(var6 - var4, var7, var4, var5);
+            this.field_B.drawScaled(var6 - var4, var7, var4, var5);
             if (-640 + var4 > var6) {
-              this.field_B.c(var6, var7, var4, var5);
+              this.field_B.drawScaled(var6, var7, var4, var5);
             }
           }
           return;

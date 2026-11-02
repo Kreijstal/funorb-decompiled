@@ -260,19 +260,19 @@ final class pq {
           null == wm.field_Xb ||
           null == mp.field_R) {
           wm.field_Xb = new ai();
-          ta.field_h = new gl(wm.field_Xb);
+          ta.field_h = new ReverbPcmStream(wm.field_Xb);
           qf.field_d.b(ta.field_h);
           mp.field_R = new IntrusiveDeque();
         }
         ta.field_h.a(param1);
         ta.field_h.f(param4);
-        ta.field_h.b(param5);
-        ta.field_h.e(param0);
+        ta.field_h.setDampingTimeMicros(param5);
+        ta.field_h.setWetGain(param0);
         if (param6 != -1) {
           field_J = (hj) null;
         }
         ta.field_h.d(param2);
-        ta.field_h.c(param3);
+        ta.field_h.setStereoWidth(param3);
     }
 
     final void b(boolean param0) {

@@ -16,7 +16,7 @@ final class nd implements fp {
     static int field_l;
     static PlatformTaskDispatcher field_a;
     static String field_b;
-    private lr field_h;
+    private BitmapFont field_h;
     static vh field_c;
 
     final static so a(int param0, eg param1, int[] param2) {
@@ -94,17 +94,17 @@ final class nd implements fp {
           var13 = (va) (stackIn_4_0);
           if (var13 != null) {
           }
-          qh.f(param1 + param4.field_C, param3 + param4.field_D, param4.field_l, param4.field_y, this.field_n);
+          SoftwareRasterizer.fillRectangle(param1 + param4.field_C, param3 + param4.field_D, param4.field_l, param4.field_y, this.field_n);
           var7 = -(2 * var13.field_Q) + param4.field_l;
           var8 = var13.field_Q + (param4.field_C + param1);
           var9 = param3 - (-param4.field_D - var13.field_R);
-          qh.d(var8, var9, var7 + var8, var9, this.field_p);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_p);
           var10 = 87 % ((param2 - 2) / 41);
           for (var11 = var13.g(0) - 1; var11 >= 0; var11--) {
-            qh.a(var7 * var13.b((byte) -37, var11) / var13.f(0) + var8, var9, this.field_f, this.field_d);
+            SoftwareRasterizer.fillCircle(var7 * var13.b((byte) -37, var11) / var13.f(0) + var8, var9, this.field_f, this.field_d);
           }
           if (null != this.field_h) {
-            this.field_h.b(var13.field_m, var7 / 2 + var8, var9 + (this.field_h.field_G + var13.field_R), this.field_o, this.field_k);
+            this.field_h.drawCentered(var13.field_m, var7 / 2 + var8, var9 + (this.field_h.baselineHeight + var13.field_R), this.field_o, this.field_k);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -234,7 +234,7 @@ final class nd implements fp {
         }
     }
 
-    nd(lr param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    nd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_h = param0;
           this.field_k = param2;

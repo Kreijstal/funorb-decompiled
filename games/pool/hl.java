@@ -5,7 +5,7 @@ final class hl implements fp {
     private int field_b;
     private int field_i;
     static String field_c;
-    private lr field_e;
+    private BitmapFont field_e;
     private int field_j;
     private int field_g;
     private int field_h;
@@ -103,22 +103,22 @@ final class hl implements fp {
             param0 = param0 & var12.field_I;
           }
           var7 = 5592405;
-          qh.f(param4.field_C + param1, param4.field_D + param3, param4.field_l, param4.field_y, this.field_f);
+          SoftwareRasterizer.fillRectangle(param4.field_C + param1, param4.field_D + param3, param4.field_l, param4.field_y, this.field_f);
           if (param0) {
             var7 = 16777215;
           }
           var10 = 8 / ((param2 - 2) / 41);
           var8 = param1 - (-param4.field_C - this.field_o);
           var9 = this.field_k + (param3 + param4.field_D);
-          qh.c(var8, var9, this.field_g, this.field_j, 5592405);
-          qh.f(var8, var9, this.field_g, this.field_j, var7);
+          SoftwareRasterizer.c(var8, var9, this.field_g, this.field_j, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_g, this.field_j, var7);
           if (var12.field_G) {
-            qh.d(var8, var9, var8 + this.field_g, this.field_j + var9, 1);
-            qh.d(this.field_g + var8, var9, var8, var9 + this.field_j, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_g, this.field_j + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_g + var8, var9, var8, var9 + this.field_j, 1);
           }
           if (null != this.field_e) {
             var11 = this.field_g + this.field_o + this.field_m;
-            this.field_e.a(param4.field_m, var11 + (param1 + param4.field_C), this.field_d + (param3 + param4.field_D), -var11 + (-this.field_m + param4.field_l), -(this.field_m << 1) + param4.field_y, this.field_l, this.field_i, this.field_b, this.field_h, 0);
+            this.field_e.drawParagraph(param4.field_m, var11 + (param1 + param4.field_C), this.field_d + (param3 + param4.field_D), -var11 + (-this.field_m + param4.field_l), -(this.field_m << 1) + param4.field_y, this.field_l, this.field_i, this.field_b, this.field_h, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,7 +161,7 @@ final class hl implements fp {
         }
     }
 
-    hl(lr param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    hl(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_b = 1;
         this.field_h = 1;
         try {

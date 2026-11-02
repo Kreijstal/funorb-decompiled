@@ -136,7 +136,7 @@ final class nr extends ch implements tb {
         int var6 = 83 / ((param1 + 42) / 53);
         int var5 = this.field_C + param2;
         int var7 = this.field_D + param3;
-        lc.field_O.a(vm.field_m, 20 + var5, 20 + var7, this.field_l - 40, this.field_y - 50, 16777215, -1, 1, 0, lc.field_O.field_C);
+        lc.field_O.drawParagraph(vm.field_m, 20 + var5, 20 + var7, this.field_l - 40, this.field_y - 50, 16777215, -1, 1, 0, lc.field_O.maxAscent);
         super.a(param0, (byte) 92, param2, param3);
     }
 

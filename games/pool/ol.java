@@ -6,7 +6,7 @@ final class ol {
     static int field_a;
     static int field_e;
     static String field_b;
-    static an field_c;
+    static BinaryBitmapFont field_c;
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         RuntimeException stackIn_79_0 = null;
@@ -32,15 +32,15 @@ final class ol {
         int var17Lifetime2;
         try {
           if (param6 >= 0 &&
-            param5 < fb.field_o) {
+            param5 < TriangleRasterizer.clipHeight) {
             if (param2 < 0 &&
               param4 < 0 &&
               param7 < 0) {
               return;
             }
-            if (param2 >= fb.field_k &&
-              fb.field_k <= param4 &&
-              fb.field_k <= param7) {
+            if (param2 >= TriangleRasterizer.clipWidth &&
+              TriangleRasterizer.clipWidth <= param4 &&
+              TriangleRasterizer.clipWidth <= param7) {
               return;
             }
             var14 = param6 - param5;
@@ -75,19 +75,19 @@ final class ol {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = fb.field_m[param5];
+                var16Lifetime2 = TriangleRasterizer.scanlineOffsets[param5];
                 while (param3 > param5) {
                   var17 = var9_int >> 16;
-                  if (var17 < fb.field_k) {
+                  if (var17 < TriangleRasterizer.clipWidth) {
                     var18 = -(var9_int >> 16) + (var10 >> 16);
                     if (0 == var18) {
                       if (0 <= var17 &&
-                        var17 < fb.field_k) {
+                        var17 < TriangleRasterizer.clipWidth) {
                         fd.a(param0, param1, var16Lifetime2 + var17, var18, 2);
                       }
                     } else {
-                      if (fb.field_k <= var17 + var18) {
-                        var18 = -1 + (fb.field_k - var17);
+                      if (TriangleRasterizer.clipWidth <= var17 + var18) {
+                        var18 = -1 + (TriangleRasterizer.clipWidth - var17);
                       }
                       if (var17 < 0) {
                         fd.a(param0, param1, var16Lifetime2, var17 + var18, param8 - 19545);
@@ -97,12 +97,12 @@ final class ol {
                     }
                   }
                   param5++;
-                  if (fb.field_o <= param5) {
+                  if (TriangleRasterizer.clipHeight <= param5) {
                     return;
                   }
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + qh.field_l;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.width;
                 }
               }
               var16Lifetime3 = -param3 + param6;
@@ -153,22 +153,22 @@ final class ol {
               var9_int = var9_int + param5 * var11;
               param5 = 0;
             }
-            var15Lifetime1 = fb.field_m[param5];
+            var15Lifetime1 = TriangleRasterizer.scanlineOffsets[param5];
             if (param8 != 19547) {
-              field_c = (an) null;
+              field_c = (BinaryBitmapFont) null;
             }
             while (param6 > param5) {
               var16Lifetime1 = var9_int >> 16;
-              if (fb.field_k > var16Lifetime1) {
+              if (TriangleRasterizer.clipWidth > var16Lifetime1) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (var17Lifetime1 == 0) {
                   if (0 <= var16Lifetime1 &&
-                    fb.field_k > var16Lifetime1) {
+                    TriangleRasterizer.clipWidth > var16Lifetime1) {
                     fd.a(param0, param1, var16Lifetime1 + var15Lifetime1, var17Lifetime1, 2);
                   }
                 } else {
-                  if (var16Lifetime1 + var17Lifetime1 >= fb.field_k) {
-                    var17Lifetime1 = -1 + fb.field_k - var16Lifetime1;
+                  if (var16Lifetime1 + var17Lifetime1 >= TriangleRasterizer.clipWidth) {
+                    var17Lifetime1 = -1 + TriangleRasterizer.clipWidth - var16Lifetime1;
                   }
                   if (var16Lifetime1 >= 0) {
                     fd.a(param0, param1, var16Lifetime1 + var15Lifetime1, var17Lifetime1, 2);
@@ -178,12 +178,12 @@ final class ol {
                 }
               }
               param5++;
-              if (param5 >= fb.field_o) {
+              if (param5 >= TriangleRasterizer.clipHeight) {
                 return;
               }
               var10 = var10 + var12;
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + qh.field_l;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.width;
             }
             return;
           }

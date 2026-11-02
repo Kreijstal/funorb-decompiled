@@ -43,10 +43,10 @@ final class cd {
         try {
           var7 = param2[5] * param5 + param2[3] * param0 + param1 * param2[4] >> 7;
           var8 = param2[6] * param0 + (param1 * param2[7] + param2[8] * param5) >> 7;
-          var7 = fb.field_q + var7 / var6_int;
-          var8 = fb.field_d + var8 / var6_int;
-          qh.d(-4 + var7, var8, 4 + var7, var8, param3);
-          qh.d(var7, var8 - 4, var7, var8 + 4, param3);
+          var7 = TriangleRasterizer.projectionCenterX + var7 / var6_int;
+          var8 = TriangleRasterizer.projectionCenterY + var8 / var6_int;
+          SoftwareRasterizer.drawLine(-4 + var7, var8, 4 + var7, var8, param3);
+          SoftwareRasterizer.drawLine(var7, var8 - 4, var7, var8 + 4, param3);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "cd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

@@ -1532,8 +1532,8 @@ final class al {
         int var15 = 0;
         var13 = Pool.field_O;
         try {
-          fr.field_s = qh.field_l;
-          f.field_h = qh.field_f;
+          fr.field_s = SoftwareRasterizer.width;
+          f.field_h = SoftwareRasterizer.height;
           stackIn_3_0 = -127;
           if (param0) {
             stackIn_4_1 = PoolMatchController.field_z;
@@ -1659,7 +1659,7 @@ final class al {
               }
             }
           }
-          de.field_b.b(10, 2147483647, qh.field_l - 360 >> 1, 360, -134 + qh.field_f - 10);
+          de.field_b.b(10, 2147483647, SoftwareRasterizer.width - 360 >> 1, 360, -134 + SoftwareRasterizer.height - 10);
           Pool.field_P.b(0, 2147483647, 0, de.field_b.field_gb, 24);
           aa.field_b.b(24, 2147483647, 0, de.field_b.field_gb, -24 + de.field_b.field_Db);
           aa.field_b.field_F = rp.a(32450, 3, 1, aa.field_b.field_Db, 11579568, 8421504);
@@ -1862,7 +1862,7 @@ final class al {
     }
 
     final static void i(int param0) {
-        field_k = new vh(0L, (vh) null, qh.field_l - ff.field_e[4].field_z >> 1, -120 + qh.field_f, ff.field_e[4].field_z, qh.field_f, (String) null);
+        field_k = new vh(0L, (vh) null, SoftwareRasterizer.width - ff.field_e[4].field_z >> 1, -120 + SoftwareRasterizer.height, ff.field_e[4].field_z, SoftwareRasterizer.height, (String) null);
         ia.a(true, field_k);
         field_k.field_F = ff.field_e;
         qa.field_v = new vh("tut_close", (vh) null);

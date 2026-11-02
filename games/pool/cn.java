@@ -7,10 +7,10 @@ final class cn extends java.awt.Canvas {
     static String field_b;
     private java.awt.Component field_c;
 
-    final static wl a(di param0, int param1, int param2, di param3, int param4) {
+    final static AlphaFont a(di param0, int param1, int param2, di param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
-        wl stackIn_6_0 = null;
+        AlphaFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -26,7 +26,7 @@ final class cn extends java.awt.Canvas {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (wl) (stackIn_4_0);
+          return (AlphaFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

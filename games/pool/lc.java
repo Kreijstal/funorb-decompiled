@@ -12,7 +12,7 @@ final class lc extends fe {
     static int field_V;
     static String field_T;
     static String field_R;
-    static lr field_O;
+    static BitmapFont field_O;
 
     final static void a(boolean param0, String param1, int param2, int param3, long param4, int param5) {
         int var7_int = 0;
@@ -116,10 +116,10 @@ final class lc extends fe {
           no.field_k != var9) {
           if (var9 == gp.field_d) {
             var15 = bo.field_a[2];
-            var15.c(-(var15.field_z >> 1) + var5, var6 - (var15.field_A >> 1), 256);
+            var15.drawAdditive(-(var15.field_z >> 1) + var5, var6 - (var15.field_A >> 1), 256);
           } else if (var9 == ProxySocketConnector.field_e) {
             var14 = bo.field_a[1];
-            var14.c(-(var14.field_z >> 1) + var5, -(var14.field_A >> 1) + var6, 256);
+            var14.drawAdditive(-(var14.field_z >> 1) + var5, -(var14.field_A >> 1) + var6, 256);
           }
         } else {
           var13 = bo.field_a[0];
@@ -129,14 +129,14 @@ final class lc extends fe {
             sm.field_z.field_z >= var10 &&
             sm.field_z.field_A >= var11) {
             kj.a(104, sm.field_z);
-            qh.d();
+            SoftwareRasterizer.clear();
           } else {
             sm.field_z = new Sprite(var10, var11);
             kj.a(56, sm.field_z);
           }
           var13.b(112, 144, var13.field_w << 4, var13.field_y << 4, -this.field_S << 10, 4096);
           oc.a(112);
-          sm.field_z.c(-var13.field_w + var5, var6 - var13.field_y, 256);
+          sm.field_z.drawAdditive(-var13.field_w + var5, var6 - var13.field_y, 256);
         }
     }
 

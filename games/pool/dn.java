@@ -85,8 +85,8 @@ final class dn extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0 * sa.field_h.field_G;
-          var5 = param2 * sa.field_h.field_G;
+          var4_int = param0 * sa.field_h.baselineHeight;
+          var5 = param2 * sa.field_h.baselineHeight;
           sa.field_h.d(param3.field_g + ": " + param3.b((byte) 115), var4_int, var5, 16777215, 3355443);
           if (param3.field_i != null) {
             param2++;

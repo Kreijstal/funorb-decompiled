@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class JavaSoundAudioOutput extends bp {
+final class JavaSoundAudioOutput extends AudioOutput {
     private byte[] field_w;
     private javax.sound.sampled.SourceDataLine field_v;
     private javax.sound.sampled.AudioFormat field_x;
@@ -9,7 +9,7 @@ final class JavaSoundAudioOutput extends bp {
     private static String field_z;
 
     final int e() {
-        return this.field_y - (this.field_v.available() >> (field_r ? 2 : 1));
+        return this.field_y - (this.field_v.available() >> (stereo ? 2 : 1));
     }
 
     final void a() {
@@ -23,7 +23,7 @@ final class JavaSoundAudioOutput extends bp {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;
-        if (field_r) {
+        if (stereo) {
           var1 = var1 << 1;
         }
         for (var2 = 0; var2 < var1; var2++) {
@@ -43,7 +43,7 @@ final class JavaSoundAudioOutput extends bp {
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
-          var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, param0 << (field_r ? 2 : 1));
+          var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, param0 << (stereo ? 2 : 1));
           this.field_v = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var2)));
           this.field_v.open();
           this.field_v.start();
@@ -90,9 +90,9 @@ final class JavaSoundAudioOutput extends bp {
         stackIn_15_0 = this;
         stackIn_15_1 = null;
         stackIn_15_2 = null;
-        stackIn_15_3 = (float)field_h;
+        stackIn_15_3 = (float)sampleRate;
         stackIn_15_4 = 16;
-        if (!field_r) {
+        if (!stereo) {
           stackIn_16_1 = null;
           stackIn_16_2 = null;
           stackIn_16_5 = 1;
@@ -103,7 +103,7 @@ final class JavaSoundAudioOutput extends bp {
         }
         this.field_x = new javax.sound.sampled.AudioFormat(stackIn_15_3, stackIn_15_4, stackIn_16_5, true, false);
         stackIn_18_1 = 256;
-        if (!field_r) {
+        if (!stereo) {
           stackIn_19_2 = 1;
         } else {
           stackIn_19_2 = 2;

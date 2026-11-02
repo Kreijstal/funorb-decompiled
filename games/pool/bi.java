@@ -4,7 +4,7 @@
 final class bi {
     static Sprite field_a;
     static int[] field_d;
-    static lr field_e;
+    static BitmapFont field_e;
     static String field_c;
     static boolean field_f;
     static String[] field_b;

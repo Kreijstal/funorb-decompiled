@@ -7,7 +7,7 @@ final class vd implements fp {
     private int field_e;
     static String[] field_l;
     private int field_b;
-    private lr field_h;
+    private BitmapFont field_h;
     private int field_i;
     private int field_a;
     private int field_j;
@@ -56,25 +56,25 @@ final class vd implements fp {
           var15 = !(param4 instanceof er) ? null : (er) (param4);
           if (var15 != null) {
           }
-          qh.f(param1 + param4.field_C, param4.field_D + param3, param4.field_l, param4.field_y, this.field_k);
+          SoftwareRasterizer.fillRectangle(param1 + param4.field_C, param4.field_D + param3, param4.field_l, param4.field_y, this.field_k);
           var7 = var15.field_U + (param4.field_C + param1);
           var8 = var15.field_P + param3 + param4.field_D;
-          qh.a(var7, var8, var15.field_O, this.field_i);
+          SoftwareRasterizer.fillCircle(var7, var8, var15.field_O, this.field_i);
           if (-1 != var15.field_V) {
             var9 = 2.0 * (3.141592653589793 * (double)var15.field_V) / (double)var15.field_Z;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_O);
             var12 = (int)(Math.cos(var9) * (double)var15.field_O);
-            qh.a(var11 + var7, var8 + var12, 1, this.field_a);
+            SoftwareRasterizer.fillCircle(var11 + var7, var8 + var12, 1, this.field_a);
           }
-          qh.a(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * ((double)var15.field_Y * 3.141592653589793) / (double)var15.field_Z;
           int var13 = 63 % ((param2 - 2) / 41);
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_O);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_O);
-          qh.d(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_h != null) {
             var14 = this.field_b + var15.field_O + var15.field_U;
-            this.field_h.a(param4.field_m, var14 + (param1 + param4.field_C), this.field_j + (param3 + param4.field_D), -var14 + (-this.field_b + param4.field_l), param4.field_y - (this.field_b << 1), this.field_e, this.field_d, 1, 1, 0);
+            this.field_h.drawParagraph(param4.field_m, var14 + (param1 + param4.field_C), this.field_j + (param3 + param4.field_D), -var14 + (-this.field_b + param4.field_l), param4.field_y - (this.field_b << 1), this.field_e, this.field_d, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -83,10 +83,10 @@ final class vd implements fp {
 
     final static int a(int param0, byte param1, int param2) {
         if (param1 > 65) {
-          return (fb.field_d + qh.field_c << 2) + (param2 << 11) / param0;
+          return (TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop << 2) + (param2 << 11) / param0;
         }
         field_f = (String) null;
-        return (fb.field_d + qh.field_c << 2) + (param2 << 11) / param0;
+        return (TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop << 2) + (param2 << 11) / param0;
     }
 
     public static void a(int param0) {
@@ -98,7 +98,7 @@ final class vd implements fp {
         }
     }
 
-    vd(lr param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    vd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_d = param4;
           this.field_k = param7;

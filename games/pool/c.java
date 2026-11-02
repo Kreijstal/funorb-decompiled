@@ -8,7 +8,7 @@ final class c {
     static vh field_e;
     static long field_d;
 
-    final static void a(lr param0, boolean param1, di param2) {
+    final static void a(BitmapFont param0, boolean param1, di param2) {
         int var8 = 0;
         di stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
@@ -26,7 +26,7 @@ final class c {
         int var9 = 0;
         Throwable var10 = null;
         Throwable var11 = null;
-        lr var12 = null;
+        BitmapFont var12 = null;
         int[] var16 = null;
         var9 = Pool.field_O;
         try {
@@ -50,19 +50,19 @@ final class c {
             return;
           }
           gp.a((byte) 58, var4);
-          var12 = (lr) null;
-          tp.field_i = id.a(1127256, 0, 0, 4020342, 1513239, 65793, 5138823, 1513239, 65793, (lr) null, 8947848, 2245737, 65793);
+          var12 = (BitmapFont) null;
+          tp.field_i = id.a(1127256, 0, 0, 4020342, 1513239, 65793, 5138823, 1513239, 65793, (BitmapFont) null, 8947848, 2245737, 65793);
           bf.field_c = id.a(0, 0, 16764006, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
           br.field_J = id.a(0, 0, 16777215, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
-          var5 = qh.field_l;
-          var6 = qh.field_f;
-          var16 = qh.field_d;
+          var5 = SoftwareRasterizer.width;
+          var6 = SoftwareRasterizer.height;
+          var16 = SoftwareRasterizer.pixels;
           ue.field_c = new Sprite(10, 14);
           ue.field_c.e();
           for (var8 = 2; var8 < 7; var8++) {
-            qh.b(var8, var8 + 1, 14 - (var8 << 1), 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
-          qh.a(var16, var5, var6);
+          SoftwareRasterizer.setTarget(var16, var5, var6);
           w.field_b = hk.a(br.field_J, bf.field_c, var4, tp.field_i, (byte) 112);
           e.field_a.field_T = new IntrusiveDeque();
           return;

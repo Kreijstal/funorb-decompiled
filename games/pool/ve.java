@@ -10,7 +10,7 @@ final class ve extends op {
     static int[] field_w;
     static String[][] field_q;
     static String field_o;
-    private lr field_i;
+    private BitmapFont field_i;
     static ml field_l;
     private int field_r;
     private int field_s;
@@ -46,7 +46,7 @@ final class ve extends op {
         }
     }
 
-    private final vj a(lr param0, int param1, boolean param2, String param3) {
+    private final vj a(BitmapFont param0, int param1, boolean param2, String param3) {
         vj var5 = null;
         RuntimeException var5_ref = null;
         vj stackIn_4_0 = null;
@@ -60,7 +60,7 @@ final class ve extends op {
           if (!param2) {
             this.field_t = (String) null;
           }
-          var5 = new vj(param1 - param0.field_C, param1 + param0.field_w, param3.length());
+          var5 = new vj(param1 - param0.maxAscent, param1 + param0.maxDescent, param3.length());
           this.field_b = new vj[]{var5};
           stackIn_4_0 = var5;
           return stackIn_4_0;
@@ -84,7 +84,7 @@ final class ve extends op {
         }
     }
 
-    final void a(int param0, String param1, lr param2, boolean param3, int param4) {
+    final void a(int param0, String param1, BitmapFont param2, boolean param3, int param4) {
         RuntimeException runtimeException = null;
         vj var6 = null;
         RuntimeException stackIn_22_0 = null;
@@ -189,7 +189,7 @@ final class ve extends op {
         }
     }
 
-    final void a(lr param0, int param1, int param2, String param3, boolean param4) {
+    final void a(BitmapFont param0, int param1, int param2, String param3, boolean param4) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -243,7 +243,7 @@ final class ve extends op {
         }
     }
 
-    final void a(String param0, lr param1, boolean param2, int param3, int param4) {
+    final void a(String param0, BitmapFont param1, boolean param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         vj var6 = null;
         RuntimeException stackIn_28_0 = null;
@@ -296,7 +296,7 @@ final class ve extends op {
         }
     }
 
-    final void a(int param0, String param1, lr param2, int param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, String param1, BitmapFont param2, int param3, int param4, int param5, int param6, int param7) {
         vj stackIn_63_0;
         vj stackIn_63_1;
         int stackIn_63_2;
@@ -326,7 +326,7 @@ final class ve extends op {
         var15 = Pool.field_O;
         try {
           if (param4 == param7) {
-            param4 = param2.field_G;
+            param4 = param2.baselineHeight;
           }
           if (param1 == null) {
             this.field_b = null;
@@ -351,7 +351,7 @@ final class ve extends op {
           this.field_r = param6;
           this.field_k = false;
           this.field_i = param2;
-          var9 = new String[1 + param2.b(param1, param5)];
+          var9 = new String[1 + param2.countWrappedLines(param1, param5)];
           var10 = Math.max(1, param2.a(param1, new int[]{param5}, var9));
           if (3 == this.field_r &&
             var10 == 1) {
@@ -360,7 +360,7 @@ final class ve extends op {
           boolean decompiledFrameRemainder0 = true;
           this.field_b = new vj[var10];
           if (this.field_r == 0) {
-            var11 = param2.field_C;
+            var11 = param2.maxAscent;
             decompiledFrameRemainder0 = (var15 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -370,20 +370,20 @@ final class ve extends op {
                 if (var12 < 0) {
                   var12 = 0;
                 }
-                var11 = var12 + param2.field_C;
+                var11 = var12 + param2.maxAscent;
                 this.field_v = this.field_v + var12;
                 if (var15 != 0) {
-                  var11 = -(this.field_v * var10) - param2.field_w + this.field_u;
-                  var11 = (this.field_u - this.field_v * var10 >> 1) + param2.field_C;
+                  var11 = -(this.field_v * var10) - param2.maxDescent + this.field_u;
+                  var11 = (this.field_u - this.field_v * var10 >> 1) + param2.maxAscent;
                 }
               } else {
-                var11 = -(this.field_v * var10) - param2.field_w + this.field_u;
+                var11 = -(this.field_v * var10) - param2.maxDescent + this.field_u;
                 if (var15 != 0) {
-                  var11 = (this.field_u - this.field_v * var10 >> 1) + param2.field_C;
+                  var11 = (this.field_u - this.field_v * var10 >> 1) + param2.maxAscent;
                 }
               }
             } else {
-              var11 = (this.field_u - this.field_v * var10 >> 1) + param2.field_C;
+              var11 = (this.field_u - this.field_v * var10 >> 1) + param2.maxAscent;
             }
           }
           var12Lifetime1 = 0;
@@ -394,8 +394,8 @@ final class ve extends op {
             }
             stackIn_63_0 = null;
             stackIn_63_1 = null;
-            stackIn_63_2 = -param2.field_C + var11;
-            stackIn_63_3 = param2.field_w + var11;
+            stackIn_63_2 = -param2.maxAscent + var11;
+            stackIn_63_3 = param2.maxDescent + var11;
             if (var13 == null) {
               stackIn_64_0 = null;
               stackIn_64_1 = null;
@@ -545,8 +545,8 @@ final class ve extends op {
           var9 = param2[3] * var21Lifetime1 + var22Lifetime1 * param2[4] + param2[5] * var23Lifetime1 >> 16 - ob.field_i;
           var10 = param2[8] * var23Lifetime1 + var21Lifetime1 * param2[6] + var22Lifetime1 * param2[7] >> 16 - ob.field_i;
           var11 = var21Lifetime1 * param2[9] - (-(var22Lifetime1 * param2[10]) - var23Lifetime1 * param2[11]) >> 16;
-          var21Lifetime2 = fb.field_q;
-          var22Lifetime2 = fb.field_d;
+          var21Lifetime2 = TriangleRasterizer.projectionCenterX;
+          var22Lifetime2 = TriangleRasterizer.projectionCenterY;
           for (var23Lifetime2 = 0; param6.field_k > var23Lifetime2; var23Lifetime2++) {
             var24Lifetime1 = param6.field_m[var23Lifetime2];
             var25Lifetime1 = param6.field_s[var23Lifetime2];

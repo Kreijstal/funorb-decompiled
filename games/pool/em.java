@@ -70,18 +70,18 @@ final class em extends ob {
         regionExit1: {
           if (eq.field_V.field_u) {
             if (null != eq.field_V.field_m) {
-              nj.a(vk.field_y, (byte) -87, 320, 160, 160, 165 + ni.field_Z.field_G + 16);
+              nj.a(vk.field_y, (byte) -87, 320, 160, 160, 165 + ni.field_Z.baselineHeight + 16);
               var2 = ni.field_S;
               var3 = eq.field_V.field_m[hd.field_J];
               var15 = eq.field_V.field_z[hd.field_J];
               var5 = 180;
-              ni.field_Z.b(vi.field_b, 438, var5, 15658734, -1);
-              var5 = var5 + (ni.field_Z.field_C + 8);
+              ni.field_Z.drawCentered(vi.field_b, 438, var5, 15658734, -1);
+              var5 = var5 + (ni.field_Z.maxAscent + 8);
               var6 = lc.a(hd.field_J, param0 ^ -3, eq.field_V, ti.field_d);
               for (var7 = 0; var7 < 10; var7++) {
                 if (null != var3[var7]) {
                   stackIn_13_0 = 162;
-                  stackIn_13_1 = -sa.field_h.field_C + var5;
+                  stackIn_13_1 = -sa.field_h.maxAscent + var5;
                   stackIn_13_2 = 316;
                   stackIn_13_3 = 15;
                   if ((1 & var7) == 0) {
@@ -89,7 +89,7 @@ final class em extends ob {
                   } else {
                     stackIn_14_4 = 4146281;
                   }
-                  qh.f(stackIn_13_0, stackIn_13_1, stackIn_13_2, stackIn_13_3, stackIn_14_4);
+                  SoftwareRasterizer.fillRectangle(stackIn_13_0, stackIn_13_1, stackIn_13_2, stackIn_13_3, stackIn_14_4);
                   var8 = 15658734;
                   var9 = var15[var7];
                   if (var7 == var6) {
@@ -99,7 +99,7 @@ final class em extends ob {
                   sa.field_h.c(var7 + 1 + ". ", 190, var5, var8, -1);
                   sa.field_h.d(var10, 190, var5, var8, -1);
                   var2 = "";
-                  sa.field_h.b(lh.b(-var9, (byte) -80), 440, var5, var8, -1);
+                  sa.field_h.drawCentered(lh.b(-var9, (byte) -80), 440, var5, var8, -1);
                 }
                 var5 += 15;
               }
@@ -108,7 +108,7 @@ final class em extends ob {
                 ((ti.field_d.field_l == fd.field_O))) {
                 var7Lifetime1 = ti.field_d.field_z[0];
                 sa.field_h.d(di.field_j, 190, var5, 16764057, -1);
-                sa.field_h.b(lh.b(-var7Lifetime1, (byte) -80), 440, var5, 16764057, -1);
+                sa.field_h.drawCentered(lh.b(-var7Lifetime1, (byte) -80), 440, var5, 16764057, -1);
               }
               break regionExit1;
             }
@@ -117,7 +117,7 @@ final class em extends ob {
             var2 = cl.field_j;
           }
         }
-        sa.field_h.b(var2, qh.field_l >> 1, 202, 16777215, -1);
+        sa.field_h.drawCentered(var2, SoftwareRasterizer.width >> 1, 202, 16777215, -1);
         if (param0 != -3) {
           field_P = -127;
         }
@@ -345,7 +345,7 @@ final class em extends ob {
           field_P = -120;
         }
         String var2 = !hk.b(66) ? va.field_P : ra.field_a;
-        sa.field_h.b(var2, 320, 380, 15658734, -1);
+        sa.field_h.drawCentered(var2, 320, 380, 15658734, -1);
     }
 
     final void b(int param0, boolean param1, int param2) {
@@ -397,7 +397,7 @@ final class em extends ob {
         }
     }
 
-    final static void a(String[] args, int param1, int param2, boolean param3, di param4, int param5, di param6, byte[] param7, int[] param8, di param9, String[][] param10, String[] param11, byte[] param12, qb[] param13, String[] param14, Sprite[][] param15, String[][] param16, byte param17, Sprite[][] param18, int[] param19) {
+    final static void a(String[] args, int param1, int param2, boolean param3, di param4, int param5, di param6, byte[] param7, int[] param8, di param9, String[][] param10, String[] param11, byte[] param12, IndexedSprite[] param13, String[] param14, Sprite[][] param15, String[][] param16, byte param17, Sprite[][] param18, int[] param19) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

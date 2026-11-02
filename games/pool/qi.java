@@ -22,70 +22,70 @@ final class qi implements Iterable {
         int var8 = 0;
         Object var10 = null;
         Object var11 = null;
-        int[] var16 = qh.field_d;
+        int[] var16 = SoftwareRasterizer.pixels;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = qh.field_l;
+        int var7 = SoftwareRasterizer.width;
         int var8Lifetime1;
         if (param4 < -84) {
-          var8 = qh.field_f;
+          var8 = SoftwareRasterizer.height;
           var20 = new Sprite(16, param3);
           var20.e();
-          qh.d(0, 0, 16, param3, param0, param1);
+          SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param0, param1);
           var10 = null;
           if (param5) {
             var21 = var20.d();
             var10 = var21;
             var21.e();
-            qh.f(0, 0, 5, 0);
-            qh.f(0, 1, 3, 0);
-            qh.f(0, 2, 2, 0);
-            qh.f(0, 3, 1, 0);
-            qh.f(0, 4, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
           }
           var11 = null;
           if (param2) {
             var22 = var20.d();
             var11 = var22;
             var22.e();
-            qh.f(11, 0, 5, 0);
-            qh.f(13, 1, 3, 0);
-            qh.f(14, 2, 2, 0);
-            qh.f(15, 3, 1, 0);
-            qh.f(15, 4, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+            SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+            SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+            SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
           }
-          qh.a(var16, var7, var8);
+          SoftwareRasterizer.setTarget(var16, var7, var8);
           return new Sprite[]{null, null, null, (Sprite) (var10), var20, (Sprite) (var11), null, null, null};
         }
         field_e = 98;
-        var8Lifetime1 = qh.field_f;
+        var8Lifetime1 = SoftwareRasterizer.height;
         Sprite var17 = new Sprite(16, param3);
         var17.e();
-        qh.d(0, 0, 16, param3, param0, param1);
+        SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param0, param1);
         var10 = null;
         if (param5) {
           var18 = var17.d();
           var10 = var18;
           var18.e();
-          qh.f(0, 0, 5, 0);
-          qh.f(0, 1, 3, 0);
-          qh.f(0, 2, 2, 0);
-          qh.f(0, 3, 1, 0);
-          qh.f(0, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         var11 = null;
         if (param2) {
           var19 = var17.d();
           var11 = var19;
           var19.e();
-          qh.f(11, 0, 5, 0);
-          qh.f(13, 1, 3, 0);
-          qh.f(14, 2, 2, 0);
-          qh.f(15, 3, 1, 0);
-          qh.f(15, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
-        qh.a(var16, var7, var8Lifetime1);
+        SoftwareRasterizer.setTarget(var16, var7, var8Lifetime1);
         return new Sprite[]{null, null, null, (Sprite) (var10), var17, (Sprite) (var11), null, null, null};
     }
 
@@ -98,15 +98,15 @@ final class qi implements Iterable {
         if (param0 < -71) {
           var2 = ir.field_h * ir.field_h;
           var3 = -(hb.field_a * hb.field_a) + var2;
-          ir.field_a.b(90, 2147483647, -(199 * var3 / var2) + var1, 199, -90 + (qh.field_f - 120) - 4);
-          oi.field_n.b(0, 2147483647, var1 + (202 + var3 * 438 / var2), 438, qh.field_f - 120 - 4);
+          ir.field_a.b(90, 2147483647, -(199 * var3 / var2) + var1, 199, -90 + (SoftwareRasterizer.height - 120) - 4);
+          oi.field_n.b(0, 2147483647, var1 + (202 + var3 * 438 / var2), 438, SoftwareRasterizer.height - 120 - 4);
           return;
         }
         field_b = 3;
         var2Lifetime1 = ir.field_h * ir.field_h;
         var3Lifetime1 = -(hb.field_a * hb.field_a) + var2Lifetime1;
-        ir.field_a.b(90, 2147483647, -(199 * var3Lifetime1 / var2Lifetime1) + var1, 199, -90 + (qh.field_f - 120) - 4);
-        oi.field_n.b(0, 2147483647, var1 + (202 + var3Lifetime1 * 438 / var2Lifetime1), 438, qh.field_f - 120 - 4);
+        ir.field_a.b(90, 2147483647, -(199 * var3Lifetime1 / var2Lifetime1) + var1, 199, -90 + (SoftwareRasterizer.height - 120) - 4);
+        oi.field_n.b(0, 2147483647, var1 + (202 + var3Lifetime1 * 438 / var2Lifetime1), 438, SoftwareRasterizer.height - 120 - 4);
     }
 
     final static void a(int param0, String param1) {

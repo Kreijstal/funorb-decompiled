@@ -6,7 +6,7 @@ import java.io.*;
 final class sa {
     static int[] field_m;
     byte field_x;
-    static an field_h;
+    static BinaryBitmapFont field_h;
     static String field_y;
     int field_u;
     static boolean field_k;

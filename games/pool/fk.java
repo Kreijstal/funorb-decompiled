@@ -208,7 +208,7 @@ final class fk extends oo {
         param0[0] = param0[0] >> 8;
         param0[1] = param0[1] >> 8;
         param0[2] = param0[2] >> 8;
-        var1 = 65536 / qh.field_l;
+        var1 = 65536 / SoftwareRasterizer.width;
         mf.field_l = mf.field_l & 127;
         me.field_x = -64 + mf.field_l;
         gn.field_b = 0 + mf.field_l;
@@ -229,7 +229,7 @@ final class fk extends oo {
         ll.field_c = 384 + mf.field_l;
         nm.field_f = v.field_i[192 + (mf.field_l >> 1)];
         jp.field_V = ll.field_c * ll.field_c;
-        var2 = qh.field_c;
+        var2 = SoftwareRasterizer.clipTop;
         var3 = 256 - var16[2];
         var4 = var16[8] * var3;
         var5 = var16[11] * var3;
@@ -237,7 +237,7 @@ final class fk extends oo {
         var7 = ll.field_c - var16[1];
         var8 = var16[9] * var6 + var16[10] * var7 + var5 >> 16;
         if (var8 > 0) {
-          var9 = qh.field_c + fb.field_d + (var16[6] * var6 + var16[7] * var7 + var4) >> 7 / var8;
+          var9 = SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY + (var16[6] * var6 + var16[7] * var7 + var4) >> 7 / var8;
           if (var9 > 0 &&
             var9 < var2) {
             var2 = var9;
@@ -247,7 +247,7 @@ final class fk extends oo {
         var7Lifetime1 = ll.field_c - var16[1];
         var8Lifetime1 = var16[9] * var6Lifetime1 + var16[10] * var7Lifetime1 + var5 >> 16;
         if (var8Lifetime1 > 0) {
-          var9Lifetime1 = qh.field_c + fb.field_d + (var16[6] * var6Lifetime1 + var16[7] * var7Lifetime1 + var4) >> 7 / var8Lifetime1;
+          var9Lifetime1 = SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY + (var16[6] * var6Lifetime1 + var16[7] * var7Lifetime1 + var4) >> 7 / var8Lifetime1;
           if (var9Lifetime1 > 0 &&
             var9Lifetime1 < var2) {
             var2 = var9Lifetime1;
@@ -257,7 +257,7 @@ final class fk extends oo {
         var7Lifetime2 = -ll.field_c - var16[1];
         var8Lifetime2 = var16[9] * var6Lifetime2 + var16[10] * var7Lifetime2 + var5 >> 16;
         if (var8Lifetime2 > 0) {
-          var9Lifetime2 = qh.field_c + fb.field_d + (var16[6] * var6Lifetime2 + var16[7] * var7Lifetime2 + var4) >> 7 / var8Lifetime2;
+          var9Lifetime2 = SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY + (var16[6] * var6Lifetime2 + var16[7] * var7Lifetime2 + var4) >> 7 / var8Lifetime2;
           if (var9Lifetime2 > 0 &&
             var9Lifetime2 < var2) {
             var2 = var9Lifetime2;
@@ -267,18 +267,18 @@ final class fk extends oo {
         var7Lifetime3 = -ll.field_c - var16[1];
         var8Lifetime3 = var16[9] * var6Lifetime3 + var16[10] * var7Lifetime3 + var5 >> 16;
         if (var8Lifetime3 > 0) {
-          var9Lifetime3 = qh.field_c + fb.field_d + (var16[6] * var6Lifetime3 + var16[7] * var7Lifetime3 + var4) >> 7 / var8Lifetime3;
+          var9Lifetime3 = SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY + (var16[6] * var6Lifetime3 + var16[7] * var7Lifetime3 + var4) >> 7 / var8Lifetime3;
           if (var9Lifetime3 > 0 &&
             var9Lifetime3 < var2) {
             var2 = var9Lifetime3;
           }
         }
-        var3Lifetime1 = var2 * qh.field_l;
-        for (var4Lifetime1 = var2; var4Lifetime1 < qh.field_g; var4Lifetime1++) {
+        var3Lifetime1 = var2 * SoftwareRasterizer.width;
+        for (var4Lifetime1 = var2; var4Lifetime1 < SoftwareRasterizer.clipBottom; var4Lifetime1++) {
           var5Lifetime1 = var4Lifetime1 - 240;
-          var10 = var16[9] + (var16[3] * (qh.field_b - 320) + var16[6] * var5Lifetime1 >> 9) >> 1;
-          var11 = var16[10] + (var16[4] * (qh.field_b - 320) + var16[7] * var5Lifetime1 >> 9) >> 1;
-          var12 = var16[11] + (var16[5] * (qh.field_b - 320) + var16[8] * var5Lifetime1 >> 9) >> 1;
+          var10 = var16[9] + (var16[3] * (SoftwareRasterizer.clipLeft - 320) + var16[6] * var5Lifetime1 >> 9) >> 1;
+          var11 = var16[10] + (var16[4] * (SoftwareRasterizer.clipLeft - 320) + var16[7] * var5Lifetime1 >> 9) >> 1;
+          var12 = var16[11] + (var16[5] * (SoftwareRasterizer.clipLeft - 320) + var16[8] * var5Lifetime1 >> 9) >> 1;
           var13 = var10 * var10 + var11 * var11 + var12 * var12 >> 16;
           if (var13 > 0) {
             var13 = rf.a(var13, -126);
@@ -289,9 +289,9 @@ final class fk extends oo {
               var14 = lh.a(var12, (byte) -62, (long)(256 - var16[2]));
               var6Lifetime4 = var16[0] + (var14 * var10 >> 16);
               var8Lifetime4 = var16[1] + (var14 * var11 >> 16);
-              var10 = var16[9] + (var16[3] * (qh.field_j - 320) + var16[6] * var5Lifetime1 >> 9) >> 1;
-              var11 = var16[10] + (var16[4] * (qh.field_j - 320) + var16[7] * var5Lifetime1 >> 9) >> 1;
-              var12 = var16[11] + (var16[5] * (qh.field_j - 320) + var16[8] * var5Lifetime1 >> 9) >> 1;
+              var10 = var16[9] + (var16[3] * (SoftwareRasterizer.clipRight - 320) + var16[6] * var5Lifetime1 >> 9) >> 1;
+              var11 = var16[10] + (var16[4] * (SoftwareRasterizer.clipRight - 320) + var16[7] * var5Lifetime1 >> 9) >> 1;
+              var12 = var16[11] + (var16[5] * (SoftwareRasterizer.clipRight - 320) + var16[8] * var5Lifetime1 >> 9) >> 1;
               var13 = var10 * var10 + var11 * var11 + var12 * var12 >> 16;
               if (var13 > 0) {
                 var13 = rf.a(var13, -126);
@@ -304,10 +304,10 @@ final class fk extends oo {
                   var9Lifetime4 = var16[1] + (var14Lifetime1 * var11 >> 16);
                   var10 = (var9Lifetime4 - var8Lifetime4) * var1;
                   var11 = (var7Lifetime4 - var6Lifetime4) * var1;
-                  var12 = (var8Lifetime4 << 16) + qh.field_b * var10;
-                  var13 = (var6Lifetime4 << 16) + qh.field_b * var11;
+                  var12 = (var8Lifetime4 << 16) + SoftwareRasterizer.clipLeft * var10;
+                  var13 = (var6Lifetime4 << 16) + SoftwareRasterizer.clipLeft * var11;
                   fk.a(0, 0, 0, 0, var12, var13, var10, var11, var3Lifetime1);
-                  var3Lifetime1 = var3Lifetime1 + qh.field_l;
+                  var3Lifetime1 = var3Lifetime1 + SoftwareRasterizer.width;
                 }
               }
             }
@@ -331,7 +331,7 @@ final class fk extends oo {
         int var10;
         int var11;
         int var12;
-        for (var9 = qh.field_b; var9 < qh.field_j; var9++) {
+        for (var9 = SoftwareRasterizer.clipLeft; var9 < SoftwareRasterizer.clipRight; var9++) {
           var10 = param4 >> 16;
           var11 = param5 >> 16;
           if (var11 <= ll.field_c &&
@@ -352,11 +352,11 @@ final class fk extends oo {
                 param1 = 255 - param1 >> 1;
                 param2 = (param0 & 16711935) * param1;
                 param0 = (param2 & -16711936) + (param0 * param1 - param2 & 16711680) >>> 8;
-                param2 = qh.field_d[param8];
+                param2 = SoftwareRasterizer.pixels[param8];
                 param3 = param0 + param2;
                 param0 = (param0 & 16711935) + (param2 & 16711935);
                 param2 = (param0 & 16777472) + (param3 - param0 & 65536);
-                qh.field_d[param8] = param3 - param2 | param2 - (param2 >>> 8);
+                SoftwareRasterizer.pixels[param8] = param3 - param2 | param2 - (param2 >>> 8);
               } else {
                 if (param1 > IterableNodeHashTable.field_h &&
                   param1 < rb.field_g) {
@@ -368,11 +368,11 @@ final class fk extends oo {
                   param1 = 255 - param1 >> 1;
                   param2 = (param0 & 16711935) * param1;
                   param0 = (param2 & -16711936) + (param0 * param1 - param2 & 16711680) >>> 8;
-                  param2 = qh.field_d[param8];
+                  param2 = SoftwareRasterizer.pixels[param8];
                   param3 = param0 + param2;
                   param0 = (param0 & 16711935) + (param2 & 16711935);
                   param2 = (param0 & 16777472) + (param3 - param0 & 65536);
-                  qh.field_d[param8] = param3 - param2 | param2 - (param2 >>> 8);
+                  SoftwareRasterizer.pixels[param8] = param3 - param2 | param2 - (param2 >>> 8);
                 } else {
                   if (param1 > eq.field_Y &&
                     param1 < gn.field_d) {
@@ -384,11 +384,11 @@ final class fk extends oo {
                     param1 = 255 - param1 >> 1;
                     param2 = (param0 & 16711935) * param1;
                     param0 = (param2 & -16711936) + (param0 * param1 - param2 & 16711680) >>> 8;
-                    param2 = qh.field_d[param8];
+                    param2 = SoftwareRasterizer.pixels[param8];
                     param3 = param0 + param2;
                     param0 = (param0 & 16711935) + (param2 & 16711935);
                     param2 = (param0 & 16777472) + (param3 - param0 & 65536);
-                    qh.field_d[param8] = param3 - param2 | param2 - (param2 >>> 8);
+                    SoftwareRasterizer.pixels[param8] = param3 - param2 | param2 - (param2 >>> 8);
                   } else {
                     if (param1 > mp.field_O &&
                       param1 < ll.field_c) {
@@ -400,11 +400,11 @@ final class fk extends oo {
                       param1 = 255 - param1 >> 1;
                       param2 = (param0 & 16711935) * param1;
                       param0 = (param2 & -16711936) + (param0 * param1 - param2 & 16711680) >>> 8;
-                      param2 = qh.field_d[param8];
+                      param2 = SoftwareRasterizer.pixels[param8];
                       param3 = param0 + param2;
                       param0 = (param0 & 16711935) + (param2 & 16711935);
                       param2 = (param0 & 16777472) + (param3 - param0 & 65536);
-                      qh.field_d[param8] = param3 - param2 | param2 - (param2 >>> 8);
+                      SoftwareRasterizer.pixels[param8] = param3 - param2 | param2 - (param2 >>> 8);
                     }
                   }
                 }
@@ -1178,10 +1178,10 @@ final class fk extends oo {
                 var23 > 0) {
                 var24 = var16[-1 + var17];
                 var25 = 48 + var24.field_g * 208 / 4096;
-                qh.b(var10, var11, var18, var19, 1140241, var25);
-                qh.b(var10, var11, var13, var14, 1140241, var25);
-                qh.b(var18, var19, var21, var22, 1140241, var25);
-                qh.b(var13, var14, var21, var22, 1140241, var25);
+                SoftwareRasterizer.drawLineBlendedInclusive(var10, var11, var18, var19, 1140241, var25);
+                SoftwareRasterizer.drawLineBlendedInclusive(var10, var11, var13, var14, 1140241, var25);
+                SoftwareRasterizer.drawLineBlendedInclusive(var18, var19, var21, var22, 1140241, var25);
+                SoftwareRasterizer.drawLineBlendedInclusive(var13, var14, var21, var22, 1140241, var25);
               }
               var10 = var18;
               var13 = var21;

@@ -14,7 +14,7 @@ final class nf extends ch implements jb, tb, jn {
     private ri field_W;
     private ga field_ab;
     private ga field_X;
-    static qb[] field_Z;
+    static IndexedSprite[] field_Z;
     static int field_T;
     static long field_Q;
     static String field_db;
@@ -473,7 +473,7 @@ final class nf extends ch implements jb, tb, jn {
         n var4 = new n(46, var3, -90 + this.field_l, 25, this.field_W, true, -120 + this.field_l, 5, qk.field_a, 11579568, ab.field_b);
         this.a(true, var4);
         var3 = var3 + var4.field_y;
-        am var5 = new am(lc.field_O, 0, 0, 0, 0, 16777215, -1, 0, 0, lc.field_O.field_C, -1, 2147483647, true);
+        am var5 = new am(lc.field_O, 0, 0, 0, 0, 16777215, -1, 0, 0, lc.field_O.maxAscent, -1, 2147483647, true);
         this.field_N = new mh(var2, var5);
         this.field_N.field_p = "";
         this.field_N.a((byte) 73, cn.field_b, 0);
