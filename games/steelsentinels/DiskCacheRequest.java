@@ -81,25 +81,25 @@ final class DiskCacheRequest extends ArchiveRequest {
           field_J = (String) null;
           if (tangent16 >= 0) {
             if (tangent16 > 65536) {
-              return 2048 - vn.field_m[134217728 / tangent16];
+              return 2048 - DateOfBirthValidator.field_m[134217728 / tangent16];
             }
-            return vn.field_m[tangent16 >> 5];
+            return DateOfBirthValidator.field_m[tangent16 >> 5];
           }
           if (-65536 <= tangent16) {
-            return -vn.field_m[-tangent16 >> 5];
+            return -DateOfBirthValidator.field_m[-tangent16 >> 5];
           }
-          return vn.field_m[134217728 / -tangent16] - 2048;
+          return DateOfBirthValidator.field_m[134217728 / -tangent16] - 2048;
         }
         if (tangent16 >= 0) {
           if (tangent16 > 65536) {
-            return 2048 - vn.field_m[134217728 / tangent16];
+            return 2048 - DateOfBirthValidator.field_m[134217728 / tangent16];
           }
-          return vn.field_m[tangent16 >> 5];
+          return DateOfBirthValidator.field_m[tangent16 >> 5];
         }
         if (-65536 <= tangent16) {
-          return -vn.field_m[-tangent16 >> 5];
+          return -DateOfBirthValidator.field_m[-tangent16 >> 5];
         }
-        return vn.field_m[134217728 / -tangent16] - 2048;
+        return DateOfBirthValidator.field_m[134217728 / -tangent16] - 2048;
     }
 
     final int g(int param0) {

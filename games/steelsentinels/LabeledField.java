@@ -183,8 +183,8 @@ final class LabeledField extends SingleChildContainer {
           field_eb[var0] = var0 * 197376;
         }
         for (var0Lifetime1 = 0; var0Lifetime1 < 16; var0Lifetime1++) {
-          field_W[16 + var0Lifetime1] = vn.a(field_W[16 + var0Lifetime1], var0Lifetime1 * 393216);
-          field_eb[16 + var0Lifetime1] = vn.a(field_eb[16 + var0Lifetime1], 6 * var0Lifetime1);
+          field_W[16 + var0Lifetime1] = DateOfBirthValidator.a(field_W[16 + var0Lifetime1], var0Lifetime1 * 393216);
+          field_eb[16 + var0Lifetime1] = DateOfBirthValidator.a(field_eb[16 + var0Lifetime1], 6 * var0Lifetime1);
         }
         for (var0Lifetime2 = 0; var0Lifetime2 < 32; var0Lifetime2++) {
           field_X[var0Lifetime2] = 257 * var0Lifetime2;

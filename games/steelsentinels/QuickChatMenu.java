@@ -74,11 +74,11 @@ final class QuickChatMenu extends SceneWidget {
                 var6 = 1;
               }
               if (NameAvailabilityValidator.a(var6, 1) == 2) {
-                il.a(1, var6, param1, -18853);
+                TextLayoutLine.a(1, var6, param1, -18853);
               }
               var8 = (String) null;
-              oe.a(param2, en.field_e, -6988, ib.field_b, var5, (String) null);
-              qj.a(ImageProducerRasterBuffer.field_p, en.field_e, ib.field_b, -29368, var5);
+              QuickChatPhraseCache.a(param2, en.field_e, -6988, ib.field_b, var5, (String) null);
+              SentinelAnimationEditor.a(ImageProducerRasterBuffer.field_p, en.field_e, ib.field_b, -29368, var5);
               WidgetStyleLayer.a(2);
               wi.c((byte) -119);
             }

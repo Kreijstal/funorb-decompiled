@@ -305,17 +305,17 @@
       "inputTreeSha256": "6478eb5845afc293d37ad893c4eafe6eb3b6d55555de4c0af0c477822e7a4de1",
       "sources": {
         "files": 347,
-        "sha256": "65537cda560c5c3a3a50dff637fd3b6f4c069092471d3dc5307d15330797e7b6"
+        "sha256": "12ee9d5906f456b548df9b2f6dc9ff8ea926c1b85b2a11fc012cab218fb334f1"
       },
       "dictionary": {
         "path": "decompilation/steelsentinels-naming.json",
-        "sha256": "2fecec2ca692e46d22a96f0e981bb8eb0dc1facc170e01cd4868c12ce9a3e35b"
+        "sha256": "cbfe9b703668ef6fae674ab8dcca08a6f66c46f222587355290f44b2eaf91b09"
       },
       "readingGuide": {
         "path": "games/steelsentinels/README.md",
-        "sha256": "0b14145d17aa76560aa5d832ed7a9516ac1d9627411b19fb2c72d722cfc7306c"
+        "sha256": "133c9ae7644b5928eb7f370533ce0f4b0a1abedc9459900b2c86f4f325f2591b"
       },
-      "rulesSha256": "ed1038377529c055bb48248173958e86aa8c57a301e4f7f3fb6fbb9fd50f17b1",
+      "rulesSha256": "7b2c8fcaebef597fe6fd4ca60b75e67e83c7ed102ad3bbc44bf41e75125490f3",
       "compiler": {
         "base": {
           "repository": "Kreijstal/java-tools",
@@ -12059,7 +12059,7 @@
         },
         "publishedSources": {
           "files": 347,
-          "sha256": "65537cda560c5c3a3a50dff637fd3b6f4c069092471d3dc5307d15330797e7b6"
+          "sha256": "12ee9d5906f456b548df9b2f6dc9ff8ea926c1b85b2a11fc012cab218fb334f1"
         }
       },
       "stellarshard": {

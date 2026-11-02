@@ -536,7 +536,7 @@ final class MembershipPromotionScreen {
 
     private final void a(int param0) {
         try {
-          re.a(Projectile.d((byte) -21), 9268);
+          NumericDateInputWidget.a(Projectile.d((byte) -21), 9268);
         } catch (Exception exception) {
           exception.printStackTrace();
         }

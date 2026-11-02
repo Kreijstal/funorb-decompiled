@@ -588,7 +588,7 @@ final class ne extends DualNode {
               if (stackIn_72_0 >= stackIn_72_1) {
                 this.field_C = 0;
               }
-              this.field_P.field_E[this.field_C] = nc.a(this.field_O, (byte) -114).field_o[nc.a(this.field_O, (byte) -113).field_p[this.field_C]];
+              this.field_P.field_E[this.field_C] = WeightedLruCache.a(this.field_O, (byte) -114).field_o[WeightedLruCache.a(this.field_O, (byte) -113).field_p[this.field_C]];
               if (this.field_P.field_E[this.field_C] == 0) {
                 var6Lifetime2--;
               }
@@ -940,7 +940,7 @@ final class ne extends DualNode {
             this.field_E = false;
           }
           if (!this.field_B.field_h) {
-            var4 = nc.a(this.field_O, (byte) -97);
+            var4 = WeightedLruCache.a(this.field_O, (byte) -97);
             this.field_P = new RgbSprite(var4.field_a, var4.field_i);
             this.field_P.field_H = var4.field_n / 2;
             this.field_P.field_D = var4.field_j / 2;

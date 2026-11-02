@@ -196,7 +196,7 @@ final class SentinelDesigner {
                         continue;
                       }
                     } else {
-                      vn.d(-65);
+                      DateOfBirthValidator.d(-65);
                     }
                     break;
                   }
@@ -216,7 +216,7 @@ final class SentinelDesigner {
                     }
                   }
                   if (decompiledFrameCompleted2) {
-                    vn.d(-78);
+                    DateOfBirthValidator.d(-78);
                   }
                 }
               }
@@ -425,7 +425,7 @@ final class SentinelDesigner {
               if (null != wb.field_c) {
                 SoundCache.c(0);
               }
-              re.a(Projectile.d((byte) -21), 9268);
+              NumericDateInputWidget.a(Projectile.d((byte) -21), 9268);
             }
             if (var3_intLifetime2 == 1) {
               var4 = GzipDecoder.field_g;
@@ -448,7 +448,7 @@ final class SentinelDesigner {
             return;
           }
           if (!SectorCacheStore.field_n &&
-            !da.field_d) {
+            !TextLayout.field_d) {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (!UiContainer.f(22759)))) {
               stackIn_387_0 = 13;
@@ -508,7 +508,7 @@ final class SentinelDesigner {
                     va.field_k[var3_intLifetime3] = 0;
                     var3_intLifetime3++;
                   }
-                  vn.d(-66);
+                  DateOfBirthValidator.d(-66);
                   var3_intLifetime3Lifetime1 = GzipDecoder.field_g;
                   if (var3_intLifetime3Lifetime1 == 5 ||
                     var3_intLifetime3Lifetime1 == 6 ||
@@ -571,7 +571,7 @@ final class SentinelDesigner {
                 var3 = decompiledCaughtException;
                 System.err.println("Update constr: " + var3);
                 var3.printStackTrace();
-                vn.d(-58);
+                DateOfBirthValidator.d(-58);
                 var4 = 0;
                 while (true) {
                   if (va.field_k.length > var4) {
@@ -1186,7 +1186,7 @@ final class SentinelDesigner {
             }
             if (var15Lifetime1 != 0 ||
               !ve.a(QuickChatPhraseDefinition.field_B, param0 - 47, var12Lifetime1)) {
-              var16_ref_String = oe.field_a[var12Lifetime1].toUpperCase();
+              var16_ref_String = QuickChatPhraseCache.field_a[var12Lifetime1].toUpperCase();
               var17Lifetime2 = 330;
               var18Lifetime1 = var17Lifetime2 + BoundedUrlRequest.field_d.paragraphHeight(var16_ref_String, 252, 0);
               if (var18Lifetime1 <= 382) {
@@ -2329,7 +2329,7 @@ final class SentinelDesigner {
                                                                       break regionExit1;
                                                                     }
                                                                     if (ni.b(111)) {
-                                                                      si.field_y = false;
+                                                                      CachedTextLayout.field_y = false;
                                                                       var6 = 0;
                                                                       oc.a(99, var6, SocialListPanel.field_dc, param2, true);
                                                                       if (var10 == 0) {
@@ -2480,7 +2480,7 @@ final class SentinelDesigner {
                                                                     }
                                                                     if (!this.a(124, param1)) {
                                                                       var4_int = 0;
-                                                                      km.field_a = sj.field_C + "<br>" + DialWidgetPainter.field_l;
+                                                                      km.field_a = MusicCrossfadeStream.field_C + "<br>" + DialWidgetPainter.field_l;
                                                                       if (var10 == 0) {
                                                                         break regionExit1;
                                                                       }
@@ -2490,7 +2490,7 @@ final class SentinelDesigner {
                                                                       RegistrationRequestDialog.field_Ob = 1;
                                                                       SocketJs5Transport.field_A = null;
                                                                       ImageProducerRasterBuffer.field_B = null;
-                                                                      vn.d(-52);
+                                                                      DateOfBirthValidator.d(-52);
                                                                       var6 = 0;
                                                                       while (true) {
                                                                         if (var6 < va.field_k.length) {
@@ -2506,7 +2506,7 @@ final class SentinelDesigner {
                                                                       }
                                                                       dc.field_g = 0;
                                                                     }
-                                                                    re.field_eb = -1;
+                                                                    NumericDateInputWidget.field_eb = -1;
                                                                     var6 = param2 ? 1 : 0;
                                                                     var7 = GzipDecoder.field_g;
                                                                     if (5 == var7 ||
@@ -2708,7 +2708,7 @@ final class SentinelDesigner {
                                                           }
                                                         }
                                                         var6 = param2 ? 1 : 0;
-                                                        si.field_y = false;
+                                                        CachedTextLayout.field_y = false;
                                                         GradientOutlineTextPainter.a(-4, var6 != 0);
                                                         if (var10 == 0) {
                                                           break regionExit1;
@@ -2833,7 +2833,7 @@ final class SentinelDesigner {
                                       if (!this.field_g.isForwardAction(0)) {
                                         break regionExit1;
                                       }
-                                      on.field_j = 0;
+                                      EmailCredentials.field_j = 0;
                                       if (var10 == 0) {
                                         break regionExit1;
                                       }
@@ -2841,7 +2841,7 @@ final class SentinelDesigner {
                                     if (!this.field_g.isForwardAction(0)) {
                                       break regionExit1;
                                     }
-                                    on.field_j = 1;
+                                    EmailCredentials.field_j = 1;
                                     if (var10 == 0) {
                                       break regionExit1;
                                     }
@@ -2849,7 +2849,7 @@ final class SentinelDesigner {
                                   if (!this.field_g.isForwardAction(0)) {
                                     break regionExit1;
                                   }
-                                  si.field_y = false;
+                                  CachedTextLayout.field_y = false;
                                   if (20 == this.field_c ||
                                     this.field_c == 19) {
                                     stackIn_737_0 = (fm.field_f[0] < 3) ? 20 : 19;
@@ -2935,7 +2935,7 @@ final class SentinelDesigner {
                         SocketJs5Transport.field_A = null;
                         ImageProducerRasterBuffer.field_B = null;
                         RegistrationRequestDialog.field_Ob = 1;
-                        vn.d(-68);
+                        DateOfBirthValidator.d(-68);
                         var6 = 0;
                         while (true) {
                           if (var6 < va.field_k.length) {
@@ -3070,7 +3070,7 @@ final class SentinelDesigner {
             if (!tj.field_a) {
               stackIn_923_2 = RasterBuffer.field_d;
             } else {
-              stackIn_923_2 = qj.field_u;
+              stackIn_923_2 = SentinelAnimationEditor.field_u;
             }
             stackIn_922_0[stackIn_922_1] = stackIn_923_2;
             if (!ni.b(75)) {
@@ -3304,12 +3304,12 @@ final class SentinelDesigner {
         try {
           if (ContentTransitionDialog.field_sb != null) {
             if (dm.field_c) {
-              ValidationHelpWidget.field_lb.a(lc.field_a, pg.field_w);
+              ValidationHelpWidget.field_lb.a(lc.field_a, AlternateUsernameCredentials.field_w);
               if (var3 != 0) {
-                ValidationHelpWidget.field_lb.a(SoundCache.field_a, pg.field_w);
+                ValidationHelpWidget.field_lb.a(SoundCache.field_a, AlternateUsernameCredentials.field_w);
               }
             } else {
-              ValidationHelpWidget.field_lb.a(SoundCache.field_a, pg.field_w);
+              ValidationHelpWidget.field_lb.a(SoundCache.field_a, AlternateUsernameCredentials.field_w);
             }
             boolean decompiledSharedTail0 = (ClientException.field_e ||
               LoginForm.field_U != 0);
@@ -3359,7 +3359,7 @@ final class SentinelDesigner {
           if (!param0) {
             this.field_g = (MenuInputState) null;
           }
-          vn.field_o = 4;
+          DateOfBirthValidator.field_o = 4;
           if (param1) {
             stackIn_30_0 = ce.field_t;
           } else {
@@ -3531,7 +3531,7 @@ final class SentinelDesigner {
                 GzipDecoder.field_g == 3 ||
                 4 == SceneWidget.field_Jb ||
                 4 == GzipDecoder.field_g)) {
-                var7 = fb.field_k;
+                var7 = UsernameCredentials.field_k;
                 if (var24 != 0) {
                   var7 = ImageProducerRasterBuffer.field_A[7];
                 }
@@ -3543,7 +3543,7 @@ final class SentinelDesigner {
           var9Lifetime1 = -1;
           if (var4_int == 38) {
             boolean decompiledFrameRemainder1 = true;
-            var7 = oe.field_j;
+            var7 = QuickChatPhraseCache.field_j;
             var10_int = param0 / 10;
             var11 = param0 % 10;
             var12_ref = null;
@@ -3644,9 +3644,9 @@ final class SentinelDesigner {
             var4_int == 16 &&
             DropTargetWidget.field_R == 0 ||
             var4_int == 17 &&
-            on.field_j == 0 ||
+            EmailCredentials.field_j == 0 ||
             var4_int == 18 &&
-            on.field_j == 1) {
+            EmailCredentials.field_j == 1) {
             var20Lifetime2 = ja.field_e;
           }
           var20Lifetime3 = pl.field_T;
@@ -3850,9 +3850,9 @@ final class SentinelDesigner {
             var13_int = -11 + param2;
             var14 = 13;
             var15 = 0;
-            while (!(var15 >= oe.field_h.length - 1)) {
-              var16 = oe.field_h[var15];
-              var17 = oe.field_h[var15 + 1];
+            while (!(var15 >= QuickChatPhraseCache.field_h.length - 1)) {
+              var16 = QuickChatPhraseCache.field_h[var15];
+              var17 = QuickChatPhraseCache.field_h[var15 + 1];
               SoftwareRaster.a(var16 + 3, var13_int, var17 - (var16 + 5), var14, 12105);
               var15++;
               if (var18 == 0) {
@@ -3862,20 +3862,20 @@ final class SentinelDesigner {
             }
           }
           var13 = param0;
-          ((BitmapFont) ((Object) var10)).drawLeft(var13, 5 + oe.field_h[0], param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).drawLeft(var13, 5 + QuickChatPhraseCache.field_h[0], param2, var11, -1);
           var13Lifetime1 = Integer.toString(param5);
-          ((BitmapFont) ((Object) var10)).c(var13Lifetime1, -1 + oe.field_h[2] - 5, param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).c(var13Lifetime1, -1 + QuickChatPhraseCache.field_h[2] - 5, param2, var11, -1);
           var13Lifetime2 = Integer.toString(var12);
-          ((BitmapFont) ((Object) var10)).c(var13Lifetime2, oe.field_h[3] - 5 - 1, param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).c(var13Lifetime2, QuickChatPhraseCache.field_h[3] - 5 - 1, param2, var11, -1);
           var13Lifetime3 = param7 + "%";
-          ((BitmapFont) ((Object) var10)).c(var13Lifetime3, -6 + oe.field_h[4], param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).c(var13Lifetime3, -6 + QuickChatPhraseCache.field_h[4], param2, var11, -1);
           var13Lifetime4 = param6 + "%";
           if (param8 > -125) {
             this.a(-34, false, -5);
           }
-          ((BitmapFont) ((Object) var10)).c(var13Lifetime4, -6 + oe.field_h[5], param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).c(var13Lifetime4, -6 + QuickChatPhraseCache.field_h[5], param2, var11, -1);
           var13Lifetime5 = param4 + "%";
-          ((BitmapFont) ((Object) var10)).c(var13Lifetime5, oe.field_h[6] - 5 - 1, param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).c(var13Lifetime5, QuickChatPhraseCache.field_h[6] - 5 - 1, param2, var11, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4124,7 +4124,7 @@ final class SentinelDesigner {
                 GzipDecoder.field_g == 3 ||
                 4 == SceneWidget.field_Jb ||
                 GzipDecoder.field_g == 4)) {
-                var12 = fb.field_k;
+                var12 = UsernameCredentials.field_k;
               }
             }
           }
@@ -4931,7 +4931,7 @@ final class SentinelDesigner {
           }
           boolean decompiledFrameCompleted0 = true;
           var3 = 1021128;
-          if (oe.field_h[5] == 0) {
+          if (QuickChatPhraseCache.field_h[5] == 0) {
             var5_int = ((BitmapFont) ((Object) var2)).textWidth("10000%");
             var6_int = 5;
             while (var6_int > 0) {
@@ -4942,7 +4942,7 @@ final class SentinelDesigner {
                 break;
               }
               var7_intLifetime1 = stackIn_19_0;
-              oe.field_h[var6_int] = -var7_intLifetime1 + oe.field_h[var6_int + 1];
+              QuickChatPhraseCache.field_h[var6_int] = -var7_intLifetime1 + QuickChatPhraseCache.field_h[var6_int + 1];
               var6_int--;
             }
           }
@@ -4958,24 +4958,24 @@ final class SentinelDesigner {
             }
             if (decompiledFrameRemainder0) {
               var5 = wb.field_d;
-              var6 = qi.field_j.field_z[on.field_j];
-              var7 = qi.field_j.field_x[on.field_j];
+              var6 = qi.field_j.field_z[EmailCredentials.field_j];
+              var7 = qi.field_j.field_x[EmailCredentials.field_j];
               SoftwareRaster.h(48, 88, 544, 286, 1130327);
               SoftwareRaster.g(48, 109, 544, 1130327);
               var8 = 1;
               do {
-                if (!(oe.field_h.length - 1 > var8)) {
-                  ((BitmapFont) ((Object) var2)).drawLeft(pe.field_h[0], 2 + oe.field_h[0], var4, var3, -1);
-                  ((BitmapFont) ((Object) var2)).c(pe.field_h[1], -2 + (oe.field_h[2] - 1), var4, var3, -1);
-                  ((BitmapFont) ((Object) var2)).c(pe.field_h[2], -1 + oe.field_h[3] - 2, var4, var3, -1);
-                  ((BitmapFont) ((Object) var2)).c(pe.field_h[3], -1 + (-2 + oe.field_h[4]), var4, var3, -1);
-                  ((BitmapFont) ((Object) var2)).c(pe.field_h[4], -2 + (oe.field_h[5] - 1), var4, var3, -1);
-                  ((BitmapFont) ((Object) var2)).c(pe.field_h[5], -1 + (-2 + oe.field_h[6]), var4, var3, -1);
+                if (!(QuickChatPhraseCache.field_h.length - 1 > var8)) {
+                  ((BitmapFont) ((Object) var2)).drawLeft(pe.field_h[0], 2 + QuickChatPhraseCache.field_h[0], var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).c(pe.field_h[1], -2 + (QuickChatPhraseCache.field_h[2] - 1), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).c(pe.field_h[2], -1 + QuickChatPhraseCache.field_h[3] - 2, var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).c(pe.field_h[3], -1 + (-2 + QuickChatPhraseCache.field_h[4]), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).c(pe.field_h[4], -2 + (QuickChatPhraseCache.field_h[5] - 1), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).c(pe.field_h[5], -1 + (-2 + QuickChatPhraseCache.field_h[6]), var4, var3, -1);
                   var4 = 126;
                   var8 = 0;
                   break;
                 }
-                SoftwareRaster.d(oe.field_h[var8], 88, 286, 1130327);
+                SoftwareRaster.d(QuickChatPhraseCache.field_h[var8], 88, 286, 1130327);
                 var8++;
               } while (var12 == 0);
               var9 = 0;
@@ -5154,7 +5154,7 @@ final class SentinelDesigner {
           if (param0 < 50) {
             SentinelDesigner.a(-98, (CharSequence) null);
           }
-          stackIn_4_0 = sj.field_y.a(param1, -742, "");
+          stackIn_4_0 = MusicCrossfadeStream.field_y.a(param1, -742, "");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5324,12 +5324,12 @@ final class SentinelDesigner {
               }
               var4 = 12;
               var2_int = -1 + va.field_d;
-              ArchiveRequest.field_D[0] = vn.a(ArchiveRequest.field_D[0], 67108864);
+              ArchiveRequest.field_D[0] = DateOfBirthValidator.a(ArchiveRequest.field_D[0], 67108864);
               var3 = 0;
-              ArchiveRequest.field_D[1] = vn.a(ArchiveRequest.field_D[1], 1);
-              ArchiveRequest.field_D[0] = vn.a(ArchiveRequest.field_D[0], 1073741824);
-              rn.field_D[1] = vn.a(rn.field_D[1], 131072);
-              ArchiveRequest.field_D[0] = vn.a(ArchiveRequest.field_D[0], 16777216);
+              ArchiveRequest.field_D[1] = DateOfBirthValidator.a(ArchiveRequest.field_D[1], 1);
+              ArchiveRequest.field_D[0] = DateOfBirthValidator.a(ArchiveRequest.field_D[0], 1073741824);
+              rn.field_D[1] = DateOfBirthValidator.a(rn.field_D[1], 131072);
+              ArchiveRequest.field_D[0] = DateOfBirthValidator.a(ArchiveRequest.field_D[0], 16777216);
             }
             if (va.field_d == 13) {
               NodeIterator.field_f = 2;
@@ -5439,7 +5439,7 @@ final class SentinelDesigner {
                     var5 = var3;
                     while (var5 < var4) {
                       var6 = FunOrbClient.field_z[var5];
-                      rn.field_D[var6 >> 5] = vn.a(rn.field_D[var6 >> 5], 1 << ec.a(var6, 31));
+                      rn.field_D[var6 >> 5] = DateOfBirthValidator.a(rn.field_D[var6 >> 5], 1 << ec.a(var6, 31));
                       var7 = ne.a(var6, (byte) 28);
                       var8 = var7;
                       stackIn_385_0 = 0;
@@ -5450,7 +5450,7 @@ final class SentinelDesigner {
                       var9_int = stackIn_385_0;
                       while (var9_int < var8.length) {
                         var10 = var8[var9_int];
-                        rn.field_D[var10 >> 5] = vn.a(rn.field_D[var10 >> 5], 1 << ec.a(31, var10));
+                        rn.field_D[var10 >> 5] = DateOfBirthValidator.a(rn.field_D[var10 >> 5], 1 << ec.a(31, var10));
                         var9_int++;
                       }
                       var8 = LoadingProgressDialog.b(var6, (byte) -110);
@@ -5458,7 +5458,7 @@ final class SentinelDesigner {
                       var10 = 0;
                       while (var9.length > var10) {
                         var11 = var9[var10];
-                        ArchiveRequest.field_D[var11 >> 5] = vn.a(ArchiveRequest.field_D[var11 >> 5], 1 << ec.a(var11, 31));
+                        ArchiveRequest.field_D[var11 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var11 >> 5], 1 << ec.a(var11, 31));
                         var10++;
                       }
                       var5++;
@@ -5588,7 +5588,7 @@ final class SentinelDesigner {
                         DraggableWidget.field_G = 0;
                         PasswordFieldPainter.field_v = 0;
                         var5 = 55;
-                        rn.field_D[var5 >> 5] = vn.a(rn.field_D[var5 >> 5], 1 << ec.a(var5, 31));
+                        rn.field_D[var5 >> 5] = DateOfBirthValidator.a(rn.field_D[var5 >> 5], 1 << ec.a(var5, 31));
                         break;
                       }
                       ArchiveRequest.field_D[var5] = 0;
@@ -5603,8 +5603,8 @@ final class SentinelDesigner {
                         break;
                       }
                       var9_int = var7[var8_int];
-                      rn.field_D[var9_int >> 5] = vn.a(rn.field_D[var9_int >> 5], 1 << ec.a(31, var9_int));
-                      DraggableWidget.field_G = DraggableWidget.field_G + sj.field_v[var9_int];
+                      rn.field_D[var9_int >> 5] = DateOfBirthValidator.a(rn.field_D[var9_int >> 5], 1 << ec.a(31, var9_int));
+                      DraggableWidget.field_G = DraggableWidget.field_G + MusicCrossfadeStream.field_v[var9_int];
                       var8_int++;
                     } while (var12 == 0);
                     var8 = var7;
@@ -5617,7 +5617,7 @@ final class SentinelDesigner {
                         break;
                       }
                       var10 = var8[var9_int];
-                      ArchiveRequest.field_D[var10 >> 5] = vn.a(ArchiveRequest.field_D[var10 >> 5], 1 << ec.a(31, var10));
+                      ArchiveRequest.field_D[var10 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var10 >> 5], 1 << ec.a(31, var10));
                       DraggableWidget.field_G = DraggableWidget.field_G + qf.field_h[var10];
                       var9_int++;
                     } while (var12 == 0);
@@ -5653,7 +5653,7 @@ final class SentinelDesigner {
                     var5 = 0;
                     while (var5 < 3) {
                       var6 = FunOrbClient.field_z[var5];
-                      rn.field_D[var6 >> 5] = vn.a(rn.field_D[var6 >> 5], 1 << ec.a(31, var6));
+                      rn.field_D[var6 >> 5] = DateOfBirthValidator.a(rn.field_D[var6 >> 5], 1 << ec.a(31, var6));
                       var7 = ne.a(var6, (byte) 28);
                       var8 = var7;
                       stackIn_385_0 = 0;
@@ -5664,8 +5664,8 @@ final class SentinelDesigner {
                       var9_int = stackIn_385_0;
                       while (var9_int < var8.length) {
                         var10 = var8[var9_int];
-                        rn.field_D[var10 >> 5] = vn.a(rn.field_D[var10 >> 5], 1 << ec.a(31, var10));
-                        DraggableWidget.field_G = DraggableWidget.field_G + sj.field_v[var10];
+                        rn.field_D[var10 >> 5] = DateOfBirthValidator.a(rn.field_D[var10 >> 5], 1 << ec.a(31, var10));
+                        DraggableWidget.field_G = DraggableWidget.field_G + MusicCrossfadeStream.field_v[var10];
                         var9_int++;
                       }
                       var8 = LoadingProgressDialog.b(var6, (byte) -93);
@@ -5673,7 +5673,7 @@ final class SentinelDesigner {
                       var10 = 0;
                       while (var9.length > var10) {
                         var11 = var9[var10];
-                        ArchiveRequest.field_D[var11 >> 5] = vn.a(ArchiveRequest.field_D[var11 >> 5], 1 << ec.a(31, var11));
+                        ArchiveRequest.field_D[var11 >> 5] = DateOfBirthValidator.a(ArchiveRequest.field_D[var11 >> 5], 1 << ec.a(31, var11));
                         DraggableWidget.field_G = DraggableWidget.field_G + qf.field_h[var11];
                         var10++;
                       }
@@ -5754,7 +5754,7 @@ final class SentinelDesigner {
                 if ((decompiledFrameCompleted2) &&
                   (decompiledFrameCompleted1) &&
                   (decompiledFrameCompleted0)) {
-                  vn.d(-57);
+                  DateOfBirthValidator.d(-57);
                   var5 = 0;
                   while (true) {
                     if (va.field_k.length > var5) {
@@ -5808,7 +5808,7 @@ final class SentinelDesigner {
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0)) {
-                  jn.a(true, (byte) 114, 200, me.field_f);
+                  jn.a(true, (byte) 114, 200, LoginCredentials.field_f);
                   if (var12 == 0) {
                     return;
                   }
@@ -6059,7 +6059,7 @@ final class SentinelDesigner {
                 stackIn_93_0 = 0;
               }
               var13 = stackIn_93_0;
-              fb.a(var12, var10, "TESTING", var11_int, var9, param0 + 12490);
+              UsernameCredentials.a(var12, var10, "TESTING", var11_int, var9, param0 + 12490);
               if (var13 != 0 &&
                 !hg.field_h) {
                 CombatWorld.c(-2483, 97);
@@ -6172,7 +6172,7 @@ final class SentinelDesigner {
             var5_int = this.d((byte) 114);
             CachedArchiveProvider.field_j.a(0, -5, 80, 7);
             CachedArchiveProvider.field_j.a(0, 474 - var5_int, 80, 2 + var5_int / 8);
-            si.c(103);
+            CachedTextLayout.c(103);
             if (var3 != 0 ||
               this.field_c == 7 &&
               !ClientException.field_e &&
@@ -6482,7 +6482,7 @@ final class SentinelDesigner {
               var5_ref = decompiledCaughtException;
               hl.field_v = SentinelDesigner.a(ReflectionCheck.field_x, (byte) 118, di.field_c);
               uc.field_b = cj.a(param0 ^ 95, di.field_c, hl.field_v);
-              vn.d(param0 - 119);
+              DateOfBirthValidator.d(param0 - 119);
               System.err.println("Draw config: " + var5_ref);
               var5_ref.printStackTrace();
             }
@@ -6595,7 +6595,7 @@ final class SentinelDesigner {
             }
           }
           ln.field_c = DialWidgetPainter.field_q[1];
-          km.field_a = pg.field_y;
+          km.field_a = AlternateUsernameCredentials.field_y;
           var5 = null;
           if ((BoundedRandomAccessFile.field_q & 128) != 0) {
             var5_ref3 = t.field_e[-128 + BoundedRandomAccessFile.field_q];
@@ -6897,8 +6897,8 @@ final class SentinelDesigner {
           if (param0 > -28) {
             this.q(-72);
           }
-          var2_int = ha.field_V;
-          ha.field_V = -1;
+          var2_int = DateInputWidget.field_V;
+          DateInputWidget.field_V = -1;
           ClientException.field_e = false;
           if (0 != LoginForm.field_U) {
             ClientException.field_e = true;
@@ -6994,7 +6994,7 @@ final class SentinelDesigner {
                 }
                 boolean decompiledFrameRemainder0 = true;
                 if (IntrusiveNode.field_f[var7_int].field_kb) {
-                  ha.field_V = var7_int;
+                  DateInputWidget.field_V = var7_int;
                   if ((VerticalScrollbar.field_gc != 1) &&
                     (decompiledFrameRemainder0 = (var2_int != var7_int))) {
                     var2_int = var7_int;
@@ -7158,7 +7158,7 @@ final class SentinelDesigner {
                             }
                             var21++;
                             if (var26 != 0) {
-                              var18[var23].field_Pb = sj.field_F;
+                              var18[var23].field_Pb = MusicCrossfadeStream.field_F;
                             }
                           }
                         } else {
@@ -7197,7 +7197,7 @@ final class SentinelDesigner {
                         }
                       } else if (!ArticulatedPart.f((byte) -87)) {
                         var18[var23] = new SceneWidget(-1L, var6Lifetime1);
-                        var18[var23].field_Pb = sj.field_F;
+                        var18[var23].field_Pb = MusicCrossfadeStream.field_F;
                         var22_int = var22_int + (var18[var23].field_Pb.field_A + 4);
                       } else {
                         var17_int++;
@@ -7314,8 +7314,8 @@ final class SentinelDesigner {
             stackIn_314_0 = new SceneWidget();
           }
           var13 = stackIn_314_0;
-          var13.field_db = sj.field_x[1];
-          var13.field_Pb = sj.field_x[0];
+          var13.field_db = MusicCrossfadeStream.field_x[1];
+          var13.field_Pb = MusicCrossfadeStream.field_x[0];
           var14_refLifetime1 = new SceneWidget();
           var14_refLifetime1.field_Pb = SocialListEntry.field_Zb[0];
           var14_refLifetime1.field_db = SocialListEntry.field_Zb[1];
@@ -7495,7 +7495,7 @@ final class SentinelDesigner {
           if (param1 != 44) {
             SentinelDesigner.d(-110, -20);
           }
-          da.a(param0, 25104);
+          TextLayout.a(param0, 25104);
           ProxySocketConnector.a(false, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7958,7 +7958,7 @@ final class SentinelDesigner {
           if (NameAvailabilityValidator.field_q == 99) {
             if (!(this.field_g.field_e >= 0) ||
               !(this.field_g.field_e <= 1)) {
-              this.field_g.a(0, on.field_j);
+              this.field_g.a(0, EmailCredentials.field_j);
               if (var3 != 0) {
                 this.field_g.a(0, 2);
               }
@@ -7970,10 +7970,10 @@ final class SentinelDesigner {
             if (this.field_g.field_e != 2) {
               this.field_g.a(0, 2);
               if (var3 != 0) {
-                this.field_g.a(0, on.field_j);
+                this.field_g.a(0, EmailCredentials.field_j);
               }
             } else {
-              this.field_g.a(0, on.field_j);
+              this.field_g.a(0, EmailCredentials.field_j);
             }
           }
           var2_int = -16 / ((44 - param0) / 62);

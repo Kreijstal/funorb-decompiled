@@ -88,7 +88,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           this.field_R = param0;
           this.field_W = new TextButton(SocialListEntry.field_Sb, (UiListener) null);
           this.field_W.field_p = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
-          var7 = SocketConnector.a(si.field_w, -39, new String[]{this.linkOpenMarkup(0), this.j(-114)});
+          var7 = SocketConnector.a(CachedTextLayout.field_w, -39, new String[]{this.linkOpenMarkup(0), this.j(-114)});
           var3 = 20;
           var4 = new TextWidgetPainter(tj.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, tj.field_e.field_G, -1, 2147483647, true);
           this.field_Z = new TextHotspotWidget(var7, var4);
@@ -116,11 +116,11 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         SocialListPanel.field_ec = new SceneWidget(0L, (SceneWidget) null);
         SocialListPanel.field_ec.a(RegistrationRequestDialog.field_Tb.field_d, 126);
         SocialListPanel.field_ec.a(QuickChatCategory.field_E, 127);
-        fb.field_r = new SceneWidget(0L, AudioService.field_a);
+        UsernameCredentials.field_r = new SceneWidget(0L, AudioService.field_a);
         nd.field_a = new SceneWidget(0L, (SceneWidget) null);
         if (param1) {
-          fb.field_r.a(tf.field_a, 121);
-          fb.field_r.a(nd.field_a, 119);
+          UsernameCredentials.field_r.a(tf.field_a, 121);
+          UsernameCredentials.field_r.a(nd.field_a, 119);
           nd.field_a.a(fl.field_c, 120);
           nd.field_a.a(Js5ArchiveManager.field_i, 118);
           ef.a(1, param0);
@@ -227,13 +227,13 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
     }
 
     final static void h(byte param0) {
-        da.field_b = new AccountRegistrationPanel();
+        TextLayout.field_b = new AccountRegistrationPanel();
         if (param0 == 45) {
-          ci.field_a.transitionToContent(da.field_b, -22908735);
+          ci.field_a.transitionToContent(TextLayout.field_b, -22908735);
           return;
         }
         field_P = (String) null;
-        ci.field_a.transitionToContent(da.field_b, -22908735);
+        ci.field_a.transitionToContent(TextLayout.field_b, -22908735);
     }
 
     private final String linkOpenMarkup(int param0) {

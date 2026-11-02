@@ -49,7 +49,7 @@ final class ai extends IntrusiveNode {
               var6 = DirectByteStorage.field_m;
               var13 = TickClock.field_i.field_s;
               for (var4 = 0; var4 < 8; var4++) {
-                var6[var4] = vn.a(var6[var4], var13[var4]);
+                var6[var4] = DateOfBirthValidator.a(var6[var4], var13[var4]);
               }
               var8 = ce.field_t;
               var14 = TickClock.field_i.field_s;

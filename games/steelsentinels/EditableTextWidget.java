@@ -48,7 +48,7 @@ class EditableTextWidget extends TextButton {
 
     final static void n(int param0) {
         String var2 = (String) null;
-        nc.a(kf.field_o, (String) null, -80);
+        WeightedLruCache.a(kf.field_o, (String) null, -80);
         if (param0 != 0) {
           EditableTextWidget.d(true);
         }
@@ -534,7 +534,7 @@ class EditableTextWidget extends TextButton {
     }
 
     private final void e(boolean param0) {
-        da var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;

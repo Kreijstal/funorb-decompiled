@@ -39,17 +39,17 @@ final class TabbedPanel extends SceneWidget {
     }
 
     final static String b(long param0, int param1) {
-        pg.field_x.setTime(new Date(param0));
-        int var3 = pg.field_x.get(7);
-        int var4 = pg.field_x.get(5);
-        int var5 = pg.field_x.get(2);
-        int var6 = pg.field_x.get(1);
+        AlternateUsernameCredentials.field_x.setTime(new Date(param0));
+        int var3 = AlternateUsernameCredentials.field_x.get(7);
+        int var4 = AlternateUsernameCredentials.field_x.get(5);
+        int var5 = AlternateUsernameCredentials.field_x.get(2);
+        int var6 = AlternateUsernameCredentials.field_x.get(1);
         if (param1 != 0) {
           return (String) null;
         }
-        int var7 = pg.field_x.get(11);
-        int var8 = pg.field_x.get(12);
-        int var9 = pg.field_x.get(13);
+        int var7 = AlternateUsernameCredentials.field_x.get(11);
+        int var8 = AlternateUsernameCredentials.field_x.get(12);
+        int var9 = AlternateUsernameCredentials.field_x.get(13);
         return cf.field_t[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + CombatWorld.field_jb[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
@@ -374,7 +374,7 @@ final class TabbedPanel extends SceneWidget {
             var11 <= 0) {
             return;
           }
-          vn.d(-106);
+          DateOfBirthValidator.d(-106);
           for (var12Lifetime2 = 0; va.field_k.length > var12Lifetime2; var12Lifetime2++) {
             va.field_k[var12Lifetime2] = 0;
           }

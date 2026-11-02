@@ -281,7 +281,7 @@ final class DiskCacheWorker implements Runnable {
             }
             if (un.field_h[0][2].field_K) {
               if (kk.a(-28548)) {
-                UiTheme.field_i = da.field_c;
+                UiTheme.field_i = TextLayout.field_c;
               } else {
                 UiTheme.field_i = SocketConnector.a(BoundedUrlRequest.field_a, -75, new String[]{nf.field_b.field_Xb});
               }
@@ -305,7 +305,7 @@ final class DiskCacheWorker implements Runnable {
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            rb.field_i[var7 / 8] = (byte)vn.a((int) rb.field_i[var7 / 8], 1 << var7 % 8);
+            rb.field_i[var7 / 8] = (byte)DateOfBirthValidator.a((int) rb.field_i[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_65_0 = (!param3) ? 0 : -1;
@@ -629,7 +629,7 @@ final class DiskCacheWorker implements Runnable {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = si.field_u;
+                      var22 = CachedTextLayout.field_u;
                       if (var15 > 0 &&
                         null != in.field_b &&
                         in.field_b.length >= var15 &&
@@ -786,7 +786,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              sj.a((String) null, -36, (Throwable) ((Object) var2_ref));
+              MusicCrossfadeStream.a((String) null, -36, (Throwable) ((Object) var2_ref));
             }
             var7.field_z = false;
           }

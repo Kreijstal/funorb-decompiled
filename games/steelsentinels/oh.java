@@ -97,7 +97,7 @@ final class oh {
           SoundCache.field_f = param13;
           ViewportController.field_l = param1;
           hg.field_i = cf.a("gameprivacy", "lobby", (byte) -19, param14);
-          ha.field_Q = cf.a("ratedgame", "lobby", (byte) -98, param14);
+          DateInputWidget.field_Q = cf.a("ratedgame", "lobby", (byte) -98, param14);
           jn.field_d = cf.a("opentome", "lobby", (byte) -57, param14);
           AccountMessagePanel.field_Z = cf.a("allowspectators", "lobby", (byte) -51, param14);
           HuffmanDecoder.field_j = new String[5];
@@ -105,9 +105,9 @@ final class oh {
           HuffmanDecoder.field_j[2] = dm.field_d;
           HuffmanDecoder.field_j[4] = fm.field_g;
           HuffmanDecoder.field_j[0] = NameAvailabilityValidator.field_x;
-          HuffmanDecoder.field_j[1] = vn.field_l;
+          HuffmanDecoder.field_j[1] = DateOfBirthValidator.field_l;
           fl.field_c = new SceneWidget(0L, (SceneWidget) null);
-          PacketBuffer.field_o = new SceneWidget(0L, sj.field_J, uj.field_g);
+          PacketBuffer.field_o = new SceneWidget(0L, MusicCrossfadeStream.field_J, uj.field_g);
           uj.field_j = new SceneWidget((long)param5, kb.field_b, sf.field_l);
           TabbedPanel.field_Sb = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), IntKeyLookup.field_h, NodeHashTable.field_j);
           fl.field_c.a(PacketBuffer.field_o, 119);
@@ -125,7 +125,7 @@ final class oh {
           BufferedSocket.field_i = new SceneWidget(0L, gm.field_c, NodeIterator.field_i.toUpperCase());
           qi.field_c = new SceneWidget(0L, ParticleEffect.field_E, ProxySocketConnector.field_q.toUpperCase());
           IterableNodeHashTable.field_d = new SceneWidget(0L, ce.field_o);
-          ReportAbuseDialog.field_bc = new SceneWidget(0L, sj.field_J, cf.field_p);
+          ReportAbuseDialog.field_bc = new SceneWidget(0L, MusicCrossfadeStream.field_J, cf.field_p);
           dj.field_d = new SceneWidget(0L, im.field_f, field_c);
           BattleTerrain.field_q = new SceneWidget(0L, im.field_f, vf.field_f);
           pe.field_v = new SceneWidget(0L, im.field_f, NameSuggestionsPanel.field_Q);
@@ -164,12 +164,12 @@ final class oh {
             pc.field_q.a(qm.field_b, 122);
           }
           pc.field_q.a(uc.field_j, param5 + 121);
-          sj.field_z = new SceneWidget(0L, bd.field_f);
-          sj.field_z.field_Kb = 1;
-          sj.field_z.field_Fb = 0;
+          MusicCrossfadeStream.field_z = new SceneWidget(0L, bd.field_f);
+          MusicCrossfadeStream.field_z.field_Kb = 1;
+          MusicCrossfadeStream.field_z.field_Fb = 0;
           LoginForm.field_gb = new SceneWidget(0L, DialWidgetPainter.field_e, Sentinel.field_D.toUpperCase());
           fl.field_b = new SceneWidget(0L, AudioService.field_a);
-          fl.field_b.a(sj.field_z, 122);
+          fl.field_b.a(MusicCrossfadeStream.field_z, 122);
           fl.field_b.a(LoginForm.field_gb, 122);
           Projectile.field_J = new SceneWidget(0L, IntKeyLookup.field_h);
           Projectile.field_J.b(bd.field_f, param5 ^ 6402);
@@ -179,7 +179,7 @@ final class oh {
           HuffmanDecoder.field_i = new SceneWidget(0L, (SceneWidget) null);
           uj.field_e = new SceneWidget(0L, bd.field_f);
           uj.field_e.field_Kb = 1;
-          NanoTickClock.field_u = new SceneWidget(0L, sj.field_J, uj.field_g);
+          NanoTickClock.field_u = new SceneWidget(0L, MusicCrossfadeStream.field_J, uj.field_g);
           NameAvailabilityValidator.field_p = new SceneWidget(0L, kb.field_b, sf.field_l);
           NanoTickClock.field_t = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), IntKeyLookup.field_h, NodeHashTable.field_j);
           HuffmanDecoder.field_i.a(uj.field_e, 120);
@@ -467,7 +467,7 @@ final class oh {
           te.field_b = 2;
           SocketConnector.field_b = 15;
           va.field_e = 2;
-          da.field_g = 4;
+          TextLayout.field_g = 4;
           km.field_g = 11;
           var7 = vd.a(param4, "lobby", param2, -1, "largefont");
           ContentTransitionDialog.field_kb = vd.a(param4, "lobby", param2, -1, "generalfont");
@@ -493,8 +493,8 @@ final class oh {
           ParticleEffect.field_E.field_I = NameAvailabilityValidator.a(0, cf.a("heading", "lobby", (byte) -30, param2));
           CipherPacketBuffer.field_H = new SceneWidget(0L, (SceneWidget) null);
           CipherPacketBuffer.field_H.field_I = DialWidget.a(param1, 8421504, false, -22, 120, 4210752);
-          nc.field_n = new SceneWidget(0L, (SceneWidget) null);
-          nc.field_n.field_I = se.a(3, 1, 6316128, 114, 6316128, 13574);
+          WeightedLruCache.field_n = new SceneWidget(0L, (SceneWidget) null);
+          WeightedLruCache.field_n.field_I = se.a(3, 1, 6316128, 114, 6316128, 13574);
           kf.field_y = new SceneWidget(0L, (SceneWidget) null);
           kf.field_y.field_I = NameAvailabilityValidator.a(0, cf.a("popup", "lobby", (byte) -94, param2));
           var12 = NameAvailabilityValidator.a(0, cf.a("popup_mouseover", "lobby", (byte) -110, param2));
@@ -507,9 +507,9 @@ final class oh {
           hg.field_e.field_db = rl.a(param2, "lobby", "closebutton_mouseover", param1);
           c.field_p = new SceneWidget(0L, var8);
           c.field_p.field_I = DialWidget.a(true, 3815994, true, -100, 40, 2039583);
-          sj.field_J = new SceneWidget(0L, var10);
-          sj.field_J.field_ub = 2;
-          sj.field_J.field_I = DialWidget.a(true, 3815994, false, -15, 30, 2039583);
+          MusicCrossfadeStream.field_J = new SceneWidget(0L, var10);
+          MusicCrossfadeStream.field_J.field_ub = 2;
+          MusicCrossfadeStream.field_J.field_I = DialWidget.a(true, 3815994, false, -15, 30, 2039583);
           im.field_f = new SceneWidget(0L, var10);
           im.field_f.field_ub = 2;
           im.field_f.field_I = DialWidget.a(false, 3815994, false, -52, 30, 2039583);
@@ -577,7 +577,7 @@ final class oh {
           ContentTransitionDialog.field_wb.field_Qb = 1;
           ContentTransitionDialog.field_wb.field_ab = 1;
           ArchiveProvider.field_f = new SceneWidget(0L, ContentTransitionDialog.field_wb);
-          co.field_c = new SceneWidget(0L, ContentTransitionDialog.field_wb);
+          QuickChatCategoryCache.field_c = new SceneWidget(0L, ContentTransitionDialog.field_wb);
           gm.field_c = new SceneWidget(0L, MenuInputState.field_j);
           NameAvailabilityValidator.field_o = new SceneWidget(0L, ContentTransitionDialog.field_wb);
           ArchiveIndex.field_s = new SceneWidget(0L, ContentTransitionDialog.field_wb);
@@ -598,9 +598,9 @@ final class oh {
           ArchiveProvider.field_f.field_I = NameAvailabilityValidator.a(0, cf.a("greenbutton", "lobby", (byte) -84, param2));
           ArchiveProvider.field_f.field_Ab = NameAvailabilityValidator.a(0, cf.a("greenbutton_mouseover", "lobby", (byte) -50, param2));
           ArchiveProvider.field_f.field_mb = NameAvailabilityValidator.a(0, cf.a("greenbutton_mouseheld", "lobby", (byte) -68, param2));
-          co.field_c.field_I = NameAvailabilityValidator.a(0, cf.a("redbutton", "lobby", (byte) -105, param2));
-          co.field_c.field_Ab = NameAvailabilityValidator.a(0, cf.a("redbutton_mouseover", "lobby", (byte) -24, param2));
-          co.field_c.field_mb = NameAvailabilityValidator.a(0, cf.a("redbutton_mouseheld", "lobby", (byte) -99, param2));
+          QuickChatCategoryCache.field_c.field_I = NameAvailabilityValidator.a(0, cf.a("redbutton", "lobby", (byte) -105, param2));
+          QuickChatCategoryCache.field_c.field_Ab = NameAvailabilityValidator.a(0, cf.a("redbutton_mouseover", "lobby", (byte) -24, param2));
+          QuickChatCategoryCache.field_c.field_mb = NameAvailabilityValidator.a(0, cf.a("redbutton_mouseheld", "lobby", (byte) -99, param2));
           gm.field_c.field_I = NameAvailabilityValidator.a(0, cf.a("backbutton", "lobby", (byte) -109, param2));
           gm.field_c.field_Ab = NameAvailabilityValidator.a(0, cf.a("backbutton_mouseover", "lobby", (byte) -31, param2));
           gm.field_c.field_mb = NameAvailabilityValidator.a(0, cf.a("backbutton_mouseheld", "lobby", (byte) -62, param2));

@@ -154,7 +154,7 @@ final class MarkerSlider extends TextButton {
           var3_array = var14;
           var4Lifetime1 = 0;
           var5 = 0;
-          if (si.field_p) {
+          if (CachedTextLayout.field_p) {
             var5 = (byte)(var5 | 1);
           }
           if (ModalStack.field_V) {

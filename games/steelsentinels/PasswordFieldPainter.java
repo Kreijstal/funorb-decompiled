@@ -59,7 +59,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           if (param0 != -1) {
             field_y = (String) null;
           }
-          stackIn_3_0 = vn.a('*', -7477, param1.field_y.length());
+          stackIn_3_0 = DateOfBirthValidator.a('*', -7477, param1.field_y.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

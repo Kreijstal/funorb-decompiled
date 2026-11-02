@@ -22,7 +22,7 @@ final class tm {
         SceneWidget stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         boolean stackIn_22_2 = false;
-        bh.a(param0 + 2);
+        SentinelCommandSimulator.a(param0 + 2);
         if (ba.field_b >= 0) {
           Explosion.field_C.field_S = SocketConnector.a(MarkerSliderPainter.field_g, -34, new String[]{Integer.toString(ba.field_b)});
         } else {

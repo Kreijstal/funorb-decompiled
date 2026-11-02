@@ -57,7 +57,7 @@ final class Checkbox extends TextButton {
 
     final static void a(boolean param0) {
         FullscreenFocusCanvas.a(param0);
-        RegistrationRequestDialog.a(10, SocketConnector.field_b, SceneWidgetNode.field_y[0].field_z, da.field_g, ReflectionCheck.field_G, te.field_b);
+        RegistrationRequestDialog.a(10, SocketConnector.field_b, SceneWidgetNode.field_y[0].field_z, TextLayout.field_g, ReflectionCheck.field_G, te.field_b);
     }
 
     private Checkbox(String param0, UiListener param1) {

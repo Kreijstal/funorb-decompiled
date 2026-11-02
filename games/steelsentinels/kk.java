@@ -11,7 +11,7 @@ final class kk {
     static int field_d;
     static ak field_c;
 
-    final static void a(il param0, int param1, int param2, String param3, BitmapFont param4) {
+    final static void a(TextLayoutLine param0, int param1, int param2, String param3, BitmapFont param4) {
         int var8 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -102,7 +102,7 @@ final class kk {
         try {
           if (param0 != 34) {
             var5 = (BitmapFont) null;
-            kk.a((il) null, -122, -42, (String) null, (BitmapFont) null);
+            kk.a((TextLayoutLine) null, -122, -42, (String) null, (BitmapFont) null);
           }
           var6 = IntrusiveNode.field_c;
           var1 = var6;
@@ -202,7 +202,7 @@ final class kk {
           }
           if (param1 != -4097) {
             var11 = (BitmapFont) null;
-            kk.a((il) null, -28, -91, (String) null, (BitmapFont) null);
+            kk.a((TextLayoutLine) null, -28, -91, (String) null, (BitmapFont) null);
           }
           stackIn_35_0 = var6;
           return (String) (stackIn_35_0);

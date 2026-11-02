@@ -87,7 +87,7 @@ class TextButton extends UiComponent {
 
     final static void a(String param0, byte param1) {
         try {
-          on.field_k = param0;
+          EmailCredentials.field_k = param0;
           if (param1 != -107) {
             String var3 = (String) null;
             TextButton.a((String) null, (byte) 82);
@@ -288,11 +288,11 @@ class TextButton extends UiComponent {
         try {
           super.updateHover(param0, 87, param2, param3);
           if (this.field_w != 0) {
-            if (nc.field_d == this.field_w) {
+            if (WeightedLruCache.field_d == this.field_w) {
               return;
             }
             if (this.a(DelegatingCanvas.field_c, param3, (byte) 81, oh.field_f, param0) &&
-              nc.field_d == 0) {
+              WeightedLruCache.field_d == 0) {
               this.b(this.field_w, (byte) -123, oh.field_f - param0, -param3 + DelegatingCanvas.field_c);
             }
             this.onPointerReleased((byte) -14, oh.field_f, param3, param0, param2, DelegatingCanvas.field_c);

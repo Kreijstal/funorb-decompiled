@@ -69,7 +69,7 @@ abstract class wi extends DualNode {
           var7 = var5_int - 10;
           if (param1.field_K > 0 &&
             null != param1.field_P) {
-            fb.b(0);
+            UsernameCredentials.b(0);
           }
           if (param4 != 2147483647) {
             return;

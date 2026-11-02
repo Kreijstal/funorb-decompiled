@@ -20,7 +20,7 @@ final class km {
         if (param0 > -97) {
           return true;
         }
-        return 250 < vn.field_h ? true : false;
+        return 250 < DateOfBirthValidator.field_h ? true : false;
     }
 
     final static void a(boolean param0) {
@@ -223,7 +223,7 @@ final class km {
             var22 = DialWidget.a(var4_int, (byte) 127);
             for (var6 = 0; var22.length - 8 > var6; var6++) {
               if (var22[var6] == param0) {
-                return SocketConnector.a(si.field_F, -66, new String[]{cd.field_c[var3]});
+                return SocketConnector.a(CachedTextLayout.field_F, -66, new String[]{cd.field_c[var3]});
               }
             }
           }

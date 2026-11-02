@@ -213,7 +213,7 @@ final class ci {
         if (null != AudioService.field_i) {
           AudioService.field_i.b(param0, (byte) -114);
         }
-        bh.a((byte) -115, param0);
+        SentinelCommandSimulator.a((byte) -115, param0);
         int var2 = 40 % ((param1 - 49) / 45);
         if (FunOrbClient.field_x != null) {
           FunOrbClient.field_x.a(param0, (byte) 127);

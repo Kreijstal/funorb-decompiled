@@ -38,17 +38,17 @@ final class sa {
         if (!WidgetStyleLayer.field_k.a("commonui", (byte) 90)) {
           return en.field_f + " - " + WidgetStyleLayer.field_k.getGroupProgressByName((byte) 78, "commonui") + "%";
         }
-        if (!oe.field_d.ensureIndex(true)) {
+        if (!QuickChatPhraseCache.field_d.ensureIndex(true)) {
           return og.field_c;
         }
-        if (!oe.field_d.a("commonui", (byte) 90)) {
-          return kb.field_c + " - " + oe.field_d.getGroupProgressByName((byte) 103, "commonui") + "%";
+        if (!QuickChatPhraseCache.field_d.a("commonui", (byte) 90)) {
+          return kb.field_c + " - " + QuickChatPhraseCache.field_d.getGroupProgressByName((byte) 103, "commonui") + "%";
         }
         if (!IconLabelControl.field_bc.ensureIndex(true)) {
           return sl.field_l;
         }
         if (!IconLabelControl.field_bc.ensureAllGroupsAvailable(25)) {
-          return qj.field_i + " - " + IconLabelControl.field_bc.a((byte) -33) + "%";
+          return SentinelAnimationEditor.field_i + " - " + IconLabelControl.field_bc.a((byte) -33) + "%";
         }
         return GameApplet.field_a;
     }

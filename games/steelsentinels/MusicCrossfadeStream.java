@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sj extends PcmStream {
+final class MusicCrossfadeStream extends PcmStream {
     static SceneWidget field_J;
     static String field_C;
     static int[] field_v;
@@ -42,7 +42,7 @@ final class sj extends PcmStream {
         field_v = null;
         if (param0) {
           Throwable var2 = (Throwable) null;
-          sj.a((String) null, -123, (Throwable) null);
+          MusicCrossfadeStream.a((String) null, -123, (Throwable) null);
         }
         field_J = null;
         field_C = null;
@@ -308,7 +308,7 @@ final class sj extends PcmStream {
           try {
             var3 = "";
             if (param2 != null) {
-              var3 = pg.a((byte) -85, param2);
+              var3 = AlternateUsernameCredentials.a((byte) -85, param2);
             }
             if (param0 != null) {
               if (param2 != null) {
@@ -397,7 +397,7 @@ final class sj extends PcmStream {
         try {
           var1_int = 0;
           if (!param0) {
-            sj.a(false);
+            MusicCrossfadeStream.a(false);
           }
           for (var2 = 0; var2 < 640; var2++) {
             var3 = 374.0 + (double)(var2 - 320) * (0.000234375 * (double)(var2 - 320));
@@ -420,7 +420,7 @@ final class sj extends PcmStream {
               var12 = var12 * (-var9 + 256) / 256;
               var13 = var13 * (256 - var9) / 256;
               var9 = var9 * 6 / 7;
-              SoftwareRaster.field_g[var10] = vn.a(vn.a(var11 << 16, var12 << 8), var13);
+              SoftwareRaster.field_g[var10] = DateOfBirthValidator.a(DateOfBirthValidator.a(var11 << 16, var12 << 8), var13);
             }
             SoftwareRaster.d(var2, var6, -var6 + var7, 4210752);
             if (var8 >= 0) {
@@ -432,7 +432,7 @@ final class sj extends PcmStream {
               var13Lifetime1 = (var13Lifetime1 * (256 - var8) + var14) / 256;
               var12Lifetime1 = (var14 + var12Lifetime1 * (256 - var8)) / 256;
               var11Lifetime1 = (var14 + var11Lifetime1 * (256 - var8)) / 256;
-              SoftwareRaster.field_g[var10Lifetime1] = vn.a(var13Lifetime1, vn.a(var11Lifetime1 << 16, var12Lifetime1 << 8));
+              SoftwareRaster.field_g[var10Lifetime1] = DateOfBirthValidator.a(var13Lifetime1, DateOfBirthValidator.a(var11Lifetime1 << 16, var12Lifetime1 << 8));
               var10Lifetime1Lifetime1 = var2 + SoftwareRaster.field_c * var7;
               var13Lifetime1Lifetime1 = 255 & SoftwareRaster.field_g[var10Lifetime1Lifetime1];
               var14Lifetime1 = 16384 - var8 * 64;
@@ -441,7 +441,7 @@ final class sj extends PcmStream {
               var11Lifetime1Lifetime1 = (var11Lifetime1Lifetime1 * var8 + var14Lifetime1) / 256;
               var13Lifetime1Lifetime1 = (var13Lifetime1Lifetime1 * var8 + var14Lifetime1) / 256;
               var12Lifetime1Lifetime1 = (var8 * var12Lifetime1Lifetime1 + var14Lifetime1) / 256;
-              SoftwareRaster.field_g[var10Lifetime1Lifetime1] = vn.a(vn.a(var12Lifetime1Lifetime1 << 8, var11Lifetime1Lifetime1 << 16), var13Lifetime1Lifetime1);
+              SoftwareRaster.field_g[var10Lifetime1Lifetime1] = DateOfBirthValidator.a(DateOfBirthValidator.a(var12Lifetime1Lifetime1 << 8, var11Lifetime1Lifetime1 << 16), var13Lifetime1Lifetime1);
             }
           }
           stackIn_17_0 = var1_int;
@@ -460,7 +460,7 @@ final class sj extends PcmStream {
         this.field_A = param0;
     }
 
-    final synchronized void a(int param0, MusicTrack param1, int param2, int param3, boolean param4, int param5) {
+    final synchronized void selectTrack(int param0, MusicTrack param1, int param2, int param3, boolean param4, int param5) {
         boolean stackIn_20_1 = false;
         int stackIn_33_0 = 0;
         MidiPcmStream stackIn_43_0 = null;
@@ -577,7 +577,7 @@ final class sj extends PcmStream {
         return null;
     }
 
-    private sj() throws Throwable {
+    private MusicCrossfadeStream() throws Throwable {
         throw new Error();
     }
 

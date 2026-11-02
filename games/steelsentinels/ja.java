@@ -8,7 +8,7 @@ final class ja {
     static int field_f;
     static int[][] field_b;
     static RgbSprite[] field_e;
-    static sj field_g;
+    static MusicCrossfadeStream field_g;
     static int field_i;
     static IndexedSprite[] field_d;
 
@@ -103,7 +103,7 @@ final class ja {
           ja.b(-72, true);
         }
         if (param0 >= 200) {
-          return nc.a(param0 - 199, (byte) -114).toRgbSprite();
+          return WeightedLruCache.a(param0 - 199, (byte) -114).toRgbSprite();
         }
         if (param0 < rh.field_v.length) {
           return rh.field_v[param0];

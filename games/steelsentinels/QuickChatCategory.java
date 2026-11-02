@@ -69,7 +69,7 @@ final class QuickChatCategory extends DualNode {
         int var2Lifetime1;
         if (this.field_A != null) {
           for (var2 = 0; var2 < this.field_A.length; var2++) {
-            this.field_A[var2] = vn.a(this.field_A[var2], 32768);
+            this.field_A[var2] = DateOfBirthValidator.a(this.field_A[var2], 32768);
           }
         }
         if (param0 != -3) {
@@ -79,7 +79,7 @@ final class QuickChatCategory extends DualNode {
           var4 = 0;
           var2Lifetime1 = var4;
           while (var4 < this.field_C.length) {
-            this.field_C[var4] = vn.a(this.field_C[var4], 32768);
+            this.field_C[var4] = DateOfBirthValidator.a(this.field_C[var4], 32768);
             var4++;
           }
         }
@@ -195,7 +195,7 @@ final class QuickChatCategory extends DualNode {
             return null;
           }
           if (0 == param4) {
-            var10 = nc.a(38, param2);
+            var10 = WeightedLruCache.a(38, param2);
             var6 = var10;
             if (var6 == null) {
               stackIn_8_0 = null;

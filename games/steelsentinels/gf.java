@@ -12,7 +12,7 @@ final class gf {
         int var2;
         int var3;
         var3 = SteelSentinels.obfuscationControl;
-        ha.field_T = null;
+        DateInputWidget.field_T = null;
         nf.field_c = null;
         DualNodeDequeIterator.field_d = 0;
         var2 = ih.field_n;
@@ -128,7 +128,7 @@ final class gf {
             DialWidgetPainter.field_q[var4Lifetime2].a(0, 0);
           }
           rh.field_v[24].bindRasterTarget();
-          si.field_E[1].drawScaled(0, 0, 4 * var1_intLifetime1, var1_intLifetime1 * 4);
+          CachedTextLayout.field_E[1].drawScaled(0, 0, 4 * var1_intLifetime1, var1_intLifetime1 * 4);
           Checkbox.field_bb.b((byte) 122);
           ValidationHelpWidget.field_rb = new RgbSprite[20];
           for (var4Lifetime3 = 0; 20 > var4Lifetime3; var4Lifetime3++) {
@@ -150,7 +150,7 @@ final class gf {
         if (param0 > -86) {
           return;
         }
-        nc.field_q = false;
+        WeightedLruCache.field_q = false;
     }
 
     public static void b(int param0) {

@@ -164,7 +164,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               rn.field_C.field_I = MenuInputState.field_j.field_I;
               if (ja.field_a > 0) {
                 if (1 != ja.field_a) {
-                  var10_ref_String = SocketConnector.a(sj.field_B, param0 - 83, new String[]{Integer.toString(ja.field_a)});
+                  var10_ref_String = SocketConnector.a(MusicCrossfadeStream.field_B, param0 - 83, new String[]{Integer.toString(ja.field_a)});
                   if (var19 != 0) {
                     var10_ref_String = ih.field_o;
                   }
@@ -319,7 +319,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                       decompiledSharedTail1 = (var19 != 0);
                     }
                     if (decompiledSharedTail1) {
-                      var14_ref_String = SocketConnector.a(il.field_b, -61, new String[]{(String) (var11_ref)});
+                      var14_ref_String = SocketConnector.a(TextLayoutLine.field_b, -61, new String[]{(String) (var11_ref)});
                     }
                   } else {
                     var13_ref_String = ib.field_a;
@@ -485,7 +485,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (param0 != 0) {
               TextWidgetPainter.a(126, false, true, true, 60);
             }
-            stackIn_176_0 = fb.field_r;
+            stackIn_176_0 = UsernameCredentials.field_r;
             stackIn_176_1 = -5;
             stackIn_177_2 = (param1) && (!param2) && (GzipDecoder.field_c);
             ((SceneWidget) (Object) stackIn_176_0).a((byte) stackIn_176_1, stackIn_177_2);
@@ -602,7 +602,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           jn.field_g = false;
         }
         if (NameAvailabilityValidator.field_q == 13) {
-          pg.d(88);
+          AlternateUsernameCredentials.d(88);
           jn.field_g = false;
           var4 = 1;
         }
@@ -684,7 +684,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         var7 = SteelSentinels.obfuscationControl;
         try {
           if (null == param0.field_s) {
-            param0.field_s = (da) ((Object) new si());
+            param0.field_s = (TextLayout) ((Object) new CachedTextLayout());
           }
           boolean decompiledFrameRemainder4 = true;
           boolean decompiledFrameRemainder3 = true;
@@ -728,27 +728,27 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            if (!(param0.field_s instanceof si)) {
+            if (!(param0.field_s instanceof CachedTextLayout)) {
               return;
             }
-            ((si) (param0.field_s)).a(0, this.c(-1, param0), 97, var5, this.field_f);
+            ((CachedTextLayout) (param0.field_s)).a(0, this.c(-1, param0), 97, var5, this.field_f);
             if (var7 == 0) {
               return;
             }
           }
           if (decompiledFrameRemainder1) {
-            if (!(param0.field_s instanceof si)) {
+            if (!(param0.field_s instanceof CachedTextLayout)) {
               return;
             }
-            ((si) (param0.field_s)).b(var3_int >> 1, this.c(-1, param0), var5, -1385548511, this.field_f);
+            ((CachedTextLayout) (param0.field_s)).b(var3_int >> 1, this.c(-1, param0), var5, -1385548511, this.field_f);
             if (var7 == 0) {
               return;
             }
           }
-          if (!(param0.field_s instanceof si)) {
+          if (!(param0.field_s instanceof CachedTextLayout)) {
             return;
           }
-          ((si) (param0.field_s)).a(this.c(-1, param0), true, var3_int, var5, this.field_f);
+          ((CachedTextLayout) (param0.field_s)).a(this.c(-1, param0), true, var3_int, var5, this.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -926,9 +926,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final da b(int param0, UiComponent param1) {
+    public final TextLayout b(int param0, UiComponent param1) {
         RuntimeException var3 = null;
-        da stackIn_9_0 = null;
+        TextLayout stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -938,10 +938,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             this.field_k = -75;
           }
           if (null == param1.field_s) {
-            param1.field_s = (da) ((Object) new si());
+            param1.field_s = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (this.field_i) {
-            ((si) (param1.field_s)).a(this.a(param0 + 5547, param1), this.field_a, this.field_m, this.c(-1, param1), this.field_j, this.field_f, this.d(param0 - 2, param1), param0 + 2);
+            ((CachedTextLayout) (param1.field_s)).a(this.a(param0 + 5547, param1), this.field_a, this.field_m, this.c(-1, param1), this.field_j, this.field_f, this.d(param0 - 2, param1), param0 + 2);
             if (SteelSentinels.obfuscationControl != 0) {
               this.a(param1, (byte) 125);
             }
@@ -1006,12 +1006,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        il var13 = null;
+        TextLayoutLine var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        da var17 = null;
-        da var18 = null;
+        TextLayout var17 = null;
+        TextLayout var18 = null;
         var16 = SteelSentinels.obfuscationControl;
         try {
           if (~param3 == ~param5) {
@@ -1211,13 +1211,13 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
-        il var8 = null;
+        TextLayoutLine var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        da var13 = null;
-        da var14 = null;
+        TextLayout var13 = null;
+        TextLayout var14 = null;
         try {
           if (param4 <= 70) {
             TextWidgetPainter.a(-106, 84, -5, false);

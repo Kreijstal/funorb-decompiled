@@ -35,7 +35,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         }
         int var5 = this.field_o + param2;
         int var6 = param0 + this.field_z;
-        tj.field_e.a(qj.field_j, var5 + 20, var6 + 20, -40 + this.field_x, -50 + this.field_E, 16777215, -1, 1, 0, tj.field_e.field_G);
+        tj.field_e.a(SentinelAnimationEditor.field_j, var5 + 20, var6 + 20, -40 + this.field_x, -50 + this.field_E, 16777215, -1, 1, 0, tj.field_e.field_G);
         super.drawLayer(param0, (byte) -106, param2, param3);
     }
 
@@ -51,7 +51,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         try {
           var6_int = 70 % ((param1 + 85) / 36);
           if (this.field_Y == param3) {
-            il.a(125);
+            TextLayoutLine.a(125);
           } else {
             if (param3 != this.field_P) {
               if (this.field_W == param3) {

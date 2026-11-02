@@ -82,7 +82,7 @@ final class WhirlpoolHasher {
               var17 = var17 + var18;
               incrementValue$1 = var16;
               var16++;
-              SoftwareRaster.field_g[incrementValue$1] = vn.a(var27 - (var27 >>> 8), var25Lifetime2) >>> 6;
+              SoftwareRaster.field_g[incrementValue$1] = DateOfBirthValidator.a(var27 - (var27 >>> 8), var25Lifetime2) >>> 6;
               var18 = var18 + param12;
               continue;
             }
@@ -117,7 +117,7 @@ final class WhirlpoolHasher {
               var27Lifetime1 = (12582912 & var26Lifetime1) + (var27Lifetime1 & -1073692672);
               var27Lifetime1 = 1077952512 & (var27Lifetime1 | var27Lifetime1 >>> 1);
               var16Lifetime1--;
-              SoftwareRaster.field_g[var16Lifetime1] = vn.a(var25Lifetime1Lifetime1, -(var27Lifetime1 >>> 8) + var27Lifetime1) >>> 6;
+              SoftwareRaster.field_g[var16Lifetime1] = DateOfBirthValidator.a(var25Lifetime1Lifetime1, -(var27Lifetime1 >>> 8) + var27Lifetime1) >>> 6;
               continue;
             }
             break;
@@ -252,7 +252,7 @@ final class WhirlpoolHasher {
             var8 = param2[var5_int] << var6 & 255 | (255 & param2[var5_int + 1]) >>> -var6 + 8;
             if (0 <= var8 &&
               var8 < 256) {
-              this.field_b[this.field_l] = (byte)vn.a((int) this.field_b[this.field_l], var8 >>> var7);
+              this.field_b[this.field_l] = (byte)DateOfBirthValidator.a((int) this.field_b[this.field_l], var8 >>> var7);
               this.field_i = this.field_i + (8 - var7);
               this.field_l = this.field_l + 1;
               if (this.field_i == 512) {
@@ -272,7 +272,7 @@ final class WhirlpoolHasher {
             stackIn_16_0 = param2[var5_int] << var6;
             stackIn_16_1 = 255;
             var8Lifetime1 = stackIn_16_0 & stackIn_16_1;
-            this.field_b[this.field_l] = (byte)vn.a((int) this.field_b[this.field_l], var8Lifetime1 >>> var7);
+            this.field_b[this.field_l] = (byte)DateOfBirthValidator.a((int) this.field_b[this.field_l], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -341,7 +341,7 @@ final class WhirlpoolHasher {
           if (!param1) {
             this.field_k = (long[]) null;
           }
-          this.field_b[this.field_l] = (byte)vn.a((int) this.field_b[this.field_l], 128 >>> ec.a(this.field_i, 7));
+          this.field_b[this.field_l] = (byte)DateOfBirthValidator.a((int) this.field_b[this.field_l], 128 >>> ec.a(this.field_i, 7));
           this.field_l = this.field_l + 1;
           if (this.field_l > 32) {
             while (this.field_l < 64) {

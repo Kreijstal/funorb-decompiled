@@ -280,7 +280,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     public final void onAction(int param0, byte param1, int param2, TextButton param3, int param4) {
         try {
           if (this.field_T == param3) {
-            il.a(103);
+            TextLayoutLine.a(103);
           } else {
             if (param3 == this.field_U) {
               this.i(55);

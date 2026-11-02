@@ -117,7 +117,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (null != this.index.groupDigests &&
                 null != this.index.groupDigests[param1]) {
                 var30 = this.index.groupDigests[param1];
-                var29 = co.a((byte) -37, -2 + var18.length, 0, var18);
+                var29 = QuickChatCategoryCache.a((byte) -37, -2 + var18.length, 0, var18);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
@@ -170,7 +170,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             if (null != this.index.groupDigests &&
               null != this.index.groupDigests[param1]) {
               var27 = this.index.groupDigests[param1];
-              var28 = co.a((byte) -37, var18.length - 2, 0, var18);
+              var28 = QuickChatCategoryCache.a((byte) -37, var18.length - 2, 0, var18);
               for (var9 = 0; var9 < 64; var9++) {
                 if (~var27[var9] != ~var28[var9]) {
                   throw new RuntimeException();
@@ -586,10 +586,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (!WidgetStyleLayer.field_k.a("commonui", (byte) 90)) {
             return 57;
           }
-          if (!oe.field_d.ensureIndex(true)) {
+          if (!QuickChatPhraseCache.field_d.ensureIndex(true)) {
             return 71;
           }
-          if (!oe.field_d.a("commonui", (byte) 90)) {
+          if (!QuickChatPhraseCache.field_d.a("commonui", (byte) 90)) {
             return 80;
           }
           if (!IconLabelControl.field_bc.ensureIndex(true)) {
@@ -605,10 +605,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (!WidgetStyleLayer.field_k.a("commonui", (byte) 90)) {
             return 40;
           }
-          if (!oe.field_d.ensureIndex(true)) {
+          if (!QuickChatPhraseCache.field_d.ensureIndex(true)) {
             return 50;
           }
-          if (!oe.field_d.a("commonui", (byte) 90)) {
+          if (!QuickChatPhraseCache.field_d.a("commonui", (byte) 90)) {
             return 60;
           }
           if (!IconLabelControl.field_bc.ensureIndex(true)) {

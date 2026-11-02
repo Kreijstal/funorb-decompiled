@@ -34,7 +34,7 @@ abstract class SocketConnector {
         RuntimeException decompiledCaughtException = null;
         var6 = SteelSentinels.obfuscationControl;
         try {
-          var2 = ha.a(param1, "jagex-last-login-method", -15645);
+          var2 = DateInputWidget.a(param1, "jagex-last-login-method", -15645);
           if (var2 == null) {
             stackIn_4_0 = DraggableWidget.field_Y;
             return stackIn_4_0;

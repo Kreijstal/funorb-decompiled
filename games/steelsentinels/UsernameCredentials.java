@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fb extends me {
+class UsernameCredentials extends LoginCredentials {
     static String field_n;
     static ResourceArchive field_h;
     static SceneWidget field_r;
@@ -86,7 +86,7 @@ class fb extends me {
         return QuickChatHelpDialog.field_Sb;
     }
 
-    fb(long param0, String param1) {
+    UsernameCredentials(long param0, String param1) {
         try {
           this.field_m = param1;
           this.field_i = param0;
@@ -108,7 +108,7 @@ class fb extends me {
           field_h = null;
           return;
         }
-        fb.b((byte) 119);
+        UsernameCredentials.b((byte) 119);
         field_n = null;
         field_h = null;
     }

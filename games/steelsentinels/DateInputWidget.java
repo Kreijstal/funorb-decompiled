@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ha extends UiContainer implements ValidationProvider {
+abstract class DateInputWidget extends UiContainer implements ValidationProvider {
     static String field_R;
     static RgbSprite[] field_Q;
     static String field_S;
-    private vn field_U;
+    private DateOfBirthValidator field_U;
     static int field_V;
     static SystemTask field_T;
     static String field_P;
@@ -134,7 +134,7 @@ abstract class ha extends UiContainer implements ValidationProvider {
 
     abstract int k(int param0);
 
-    ha(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+    DateInputWidget(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);
     }
 
@@ -207,7 +207,7 @@ abstract class ha extends UiContainer implements ValidationProvider {
 
     abstract boolean i(int param0);
 
-    void a(byte param0, vn param1) {
+    void a(byte param0, DateOfBirthValidator param1) {
         try {
           this.field_U = param1;
           this.field_U.field_n = this;
@@ -224,7 +224,7 @@ abstract class ha extends UiContainer implements ValidationProvider {
         field_T = null;
         if (!param0) {
           String var2 = (String) null;
-          ha.a((java.applet.Applet) null, (String) null, 37);
+          DateInputWidget.a((java.applet.Applet) null, (String) null, 37);
         }
         field_S = null;
         field_P = null;

@@ -103,7 +103,7 @@ final class DraggableWidget extends SingleChildContainer {
           if (param6 == 1) {
             this.field_R = param0 - (this.field_z + param4);
             this.field_Z = -param2 + (param3 - this.field_o);
-            nc.field_e = this;
+            WeightedLruCache.field_e = this;
           }
           this.field_w = param6;
           return true;

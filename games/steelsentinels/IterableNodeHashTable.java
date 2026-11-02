@@ -179,7 +179,7 @@ final class IterableNodeHashTable implements Iterable {
         SceneWidget.field_Jb = param3;
         boolean decompiledFrameRemainder0 = true;
         if (~GzipDecoder.field_g == param2) {
-          if (qj.field_q[98] == null) {
+          if (SentinelAnimationEditor.field_q[98] == null) {
             GzipDecoder.field_g = param0;
             LoginForm.field_U = 0;
             decompiledFrameRemainder0 = !(!DropTargetWidget.a(GzipDecoder.field_g, ~param2));
@@ -195,14 +195,14 @@ final class IterableNodeHashTable implements Iterable {
               if (0 != GzipDecoder.field_g) {
                 return;
               }
-              if (null != qj.field_q[96]) {
-                TextFieldValidator.a(6940, qj.field_q[96]);
+              if (null != SentinelAnimationEditor.field_q[96]) {
+                TextFieldValidator.a(6940, SentinelAnimationEditor.field_q[96]);
               }
               return;
             }
           }
           if (decompiledFrameRemainder0) {
-            TextFieldValidator.a(6940, qj.field_q[98]);
+            TextFieldValidator.a(6940, SentinelAnimationEditor.field_q[98]);
           }
         }
         if (decompiledFrameRemainder0) {
@@ -222,8 +222,8 @@ final class IterableNodeHashTable implements Iterable {
         if (0 != GzipDecoder.field_g) {
           return;
         }
-        if (null != qj.field_q[96]) {
-          TextFieldValidator.a(6940, qj.field_q[96]);
+        if (null != SentinelAnimationEditor.field_q[96]) {
+          TextFieldValidator.a(6940, SentinelAnimationEditor.field_q[96]);
         }
     }
 

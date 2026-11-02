@@ -47,12 +47,12 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
             var5 = var4;
             for (var6 = 0; var6 < var5.length; var6++) {
               var7 = var5[var6];
-              sj.a(param1.playerNames[0], var7, 0, (byte) 21, (String) null, 1);
+              MusicCrossfadeStream.a(param1.playerNames[0], var7, 0, (byte) 21, (String) null, 1);
               ln.field_e = ln.field_e - 1;
             }
             return;
           }
-          sj.a(param1.playerNames[0], param0, 0, (byte) 21, (String) null, 1);
+          MusicCrossfadeStream.a(param1.playerNames[0], param0, 0, (byte) 21, (String) null, 1);
           ln.field_e = ln.field_e - 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -75,7 +75,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2, me param3, int param4) {
+    final static void a(boolean param0, int param1, boolean param2, LoginCredentials param3, int param4) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -117,7 +117,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           if (param2) {
             var6 = var6 | 8;
           }
-          if (on.field_k != null) {
+          if (EmailCredentials.field_k != null) {
             var6 = var6 | 16;
           }
           mm.field_g.writeByte((byte) 124, var6);
@@ -126,8 +126,8 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
             var7 = "";
           }
           mm.field_g.a(var7, -67);
-          if (null != on.field_k) {
-            mm.field_g.a(13588, on.field_k);
+          if (null != EmailCredentials.field_k) {
+            mm.field_g.a(13588, EmailCredentials.field_k);
           }
           qi.a(AccountNoticeDialog.field_ib, ne.field_y, mm.field_g, qe.field_d, 5);
           mm.field_g.c(param1 ^ 28, -var5_int + mm.field_g.position);

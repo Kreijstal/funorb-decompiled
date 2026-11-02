@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class da {
+abstract class TextLayout {
     static String field_c;
     static boolean field_d;
-    il[] field_h;
+    TextLayoutLine[] field_h;
     static RgbSprite[] field_e;
     static String field_a;
     static AccountRegistrationPanel field_b;
@@ -68,7 +68,7 @@ abstract class da {
     final int a(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
-        il var6;
+        TextLayoutLine var6;
         int var7;
         int var8;
         var8 = SteelSentinels.obfuscationControl;
@@ -102,15 +102,15 @@ abstract class da {
     final static void a(ResourceArchive param0, int param1, int param2, PcmStreamMixer param3) {
         try {
           if (param1 <= 67) {
-            da.a(true, -102);
+            TextLayout.a(true, -102);
           }
-          vc.field_c = param2 * sj.a((byte) -108) / 1000;
+          vc.field_c = param2 * MusicCrossfadeStream.a((byte) -108) / 1000;
           Sprite.a(param0, 1728986241);
           DialWidget.a((byte) 90, param0);
           SocialListEntry.a(77, param0);
           ValidationIndicator.a(true);
           CombatWorld.a(true);
-          vn.field_h = 0 - vc.field_c;
+          DateOfBirthValidator.field_h = 0 - vc.field_c;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "da.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -119,8 +119,8 @@ abstract class da {
     final int b(byte param0) {
         int var4 = 0;
         int var2;
-        il[] var3;
-        il var5;
+        TextLayoutLine[] var3;
+        TextLayoutLine var5;
         int var7;
         int var6;
         var7 = SteelSentinels.obfuscationControl;
@@ -133,7 +133,7 @@ abstract class da {
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
-              var6 = var5.b(-1);
+              var6 = var5.width(-1);
               if (var2 < var6) {
                 var2 = var6;
               }
@@ -207,11 +207,11 @@ abstract class da {
 
     final int b(int param0, int param1) {
         int var3 = 0;
-        il var4 = null;
+        TextLayoutLine var4 = null;
         int var5 = SteelSentinels.obfuscationControl;
         if (param0 != -1) {
           ResourceArchive var6 = (ResourceArchive) null;
-          da.a((ResourceArchive) null, (ResourceArchive) null, -88, (ResourceArchive) null);
+          TextLayout.a((ResourceArchive) null, (ResourceArchive) null, -88, (ResourceArchive) null);
         }
         for (var3 = 0; var3 < this.field_h.length; var3++) {
           var4 = this.field_h[var3];
@@ -296,13 +296,13 @@ abstract class da {
 
     final int a(int param0, int param1) {
         int var4 = 0;
-        il var5 = null;
+        TextLayoutLine var5 = null;
         int var6 = SteelSentinels.obfuscationControl;
         if (param0 != 1) {
           field_b = (AccountRegistrationPanel) null;
         }
-        il[] var7 = this.field_h;
-        il[] var3 = var7;
+        TextLayoutLine[] var7 = this.field_h;
+        TextLayoutLine[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
           if (var5.field_f.length > param1) {
@@ -325,7 +325,7 @@ abstract class da {
           SoftwareRaster.f(RegistrationRequestDialog.field_Tb.field_d.field_Y, RegistrationRequestDialog.field_Tb.field_d.field_eb, RegistrationRequestDialog.field_Tb.field_d.field_zb, RegistrationRequestDialog.field_Tb.field_d.field_Lb);
           RegistrationRequestDialog.field_Tb.field_d.a(param0, (byte) 127);
         }
-        il.a(param0, (byte) -125);
+        TextLayoutLine.a(param0, (byte) -125);
     }
 
     public static void a(boolean param0) {

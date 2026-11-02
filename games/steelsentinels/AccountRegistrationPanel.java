@@ -115,7 +115,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_hb.field_p = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = SocketConnector.a(te.field_e, -95, new String[]{this.j(-99), this.linkEndMarkup(170)});
         int var3 = 20;
-        var3 = var3 + this.a(this.field_Y, 170, nc.field_i, var3, 126);
+        var3 = var3 + this.a(this.field_Y, 170, WeightedLruCache.field_i, var3, 126);
         var3 = var3 + (5 + this.a(var3, true, GrowableIntList.field_m, this.field_jb, "", 20, 170));
         var3 = var3 + this.a(this.field_hb, 170, jh.field_c, var3, 126);
         var3 = var3 + (this.a(ParticleEffect.field_N, 170, GrowableIntList.field_b, 12973, this.field_Q, var3) + 5);

@@ -17,7 +17,7 @@ final class qe {
           }
           param0.removeKeyListener(MouseInputHandler.field_i);
           param0.removeFocusListener(MouseInputHandler.field_i);
-          qj.field_h = -1;
+          SentinelAnimationEditor.field_h = -1;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "qe.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -29,7 +29,7 @@ final class qe {
             qe.a(16, 30, -14);
           }
           MatchingTextValidator.field_p = param0;
-          on.field_n = param2;
+          EmailCredentials.field_n = param2;
           SingleChildContainer.field_I = param1;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "qe.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

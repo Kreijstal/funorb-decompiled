@@ -35,7 +35,7 @@ final class be {
           }
           if (var2 != 0) {
             if (var2 != 1) {
-              sj.a("A1: " + ci.a((byte) 94), -126, (Throwable) null);
+              MusicCrossfadeStream.a("A1: " + ci.a((byte) 94), -126, (Throwable) null);
               LoginForm.m(param0 ^ -16880);
               return;
             }
@@ -174,7 +174,7 @@ final class be {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              sj.a("MGR1: " + param2, -85, (Throwable) null);
+              MusicCrossfadeStream.a("MGR1: " + param2, -85, (Throwable) null);
             }
             if (param1 > 0) {
               return;

@@ -59,7 +59,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           if (fm.field_b.field_Eb != 0) {
             FunOrbClient.field_x = new ReportAbuseDialog(fm.field_b.field_Rb, fm.field_b.field_cb, fm.field_b.field_zb, fm.field_b.field_Lb, param2, AudioService.field_a, ClientException.field_g, hg.field_e, bd.field_f, QuickChatHelpDialog.field_Tb, ParticleEffect.field_K, (String) null, 0L);
           }
-          var9 = Sprite.a(param3, da.field_g, 85, SocketConnector.field_b);
+          var9 = Sprite.a(param3, TextLayout.field_g, 85, SocketConnector.field_b);
           if (var9 != null) {
             ph.a(var9, -1);
           }

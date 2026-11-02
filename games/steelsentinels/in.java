@@ -215,7 +215,7 @@ final class in {
                     var7 = ThreeSliceButtonPainter.a(false, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new cc(var23, var24, var3_longLifetime2);
-                      me.field_b.a(var7, 1, var3_longLifetime2);
+                      LoginCredentials.field_b.a(var7, 1, var3_longLifetime2);
                       nf.field_b.field_wc = nf.field_b.field_wc + 1;
                     }
                     var7.field_ac = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -60);
@@ -268,7 +268,7 @@ final class in {
                     GameplayController.field_G = ((PacketBuffer) ((Object) var1)).g((byte) -124);
                     return;
                   }
-                  sj.a("L1: " + ci.a((byte) 94), -106, (Throwable) null);
+                  MusicCrossfadeStream.a("L1: " + ci.a((byte) 94), -106, (Throwable) null);
                   LoginForm.m(-82);
                   return;
                 }
@@ -398,7 +398,7 @@ final class in {
             return null;
           }
           if (param1 >= 97) {
-            stackIn_7_0 = nc.a(param0.getFile(param4, (byte) 38, param2), 7045);
+            stackIn_7_0 = WeightedLruCache.a(param0.getFile(param4, (byte) 38, param2), 7045);
             return stackIn_7_0;
           }
           stackIn_5_0 = (PaletteBitmapFont) null;

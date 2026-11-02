@@ -164,7 +164,7 @@ final class WidgetStyleLayer {
               var12.h(-123);
               var12.field_hc = new SceneWidget(0L, ArchiveProvider.field_f);
               var12.a(var12.field_hc, 127);
-              var12.field_Yb = new SceneWidget(0L, co.field_c);
+              var12.field_Yb = new SceneWidget(0L, QuickChatCategoryCache.field_c);
               var13 = 1;
               var12.a(var12.field_Yb, 118);
             }
@@ -257,7 +257,7 @@ final class WidgetStyleLayer {
                 kk.a(-28548) &&
                 ~var12.field_ec != ~GameplayController.field_G) {
                 if (null != var12.field_hc.field_S) {
-                  var26 = var12.field_hc.g(-2147483648) + da.field_g * 2;
+                  var26 = var12.field_hc.g(-2147483648) + TextLayout.field_g * 2;
                   var12.field_hc.a(0, var19, SocketConnector.field_b, var25_int, var26);
                   var25_int = var25_int + var26;
                 }
@@ -265,7 +265,7 @@ final class WidgetStyleLayer {
                   if (NanoTickClock.field_t == param2) {
                     var26Lifetime2 = 40;
                   } else {
-                    var26Lifetime2 = var12.field_Yb.g(-2147483648) + 2 * da.field_g;
+                    var26Lifetime2 = var12.field_Yb.g(-2147483648) + 2 * TextLayout.field_g;
                   }
                   var12.field_Yb.a(0, var19, SocketConnector.field_b, var25_int, var26Lifetime2);
                   var25_int = var25_int + var26Lifetime2;
@@ -307,10 +307,10 @@ final class WidgetStyleLayer {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_cc.field_L.wrappedLineCount(var23, -da.field_g + (-da.field_g + var12.field_zb));
+              var24_intLifetime1 = var12.field_cc.field_L.wrappedLineCount(var23, -TextLayout.field_g + (-TextLayout.field_g + var12.field_zb));
               var12.field_cc.field_S = var23;
               var12.field_cc.field_V = var12.field_Ub * 256 / Js5ArchiveManager.field_l;
-              var12.field_cc.a(0, var19, var24_intLifetime1 * SocketConnector.field_b, da.field_g, -(da.field_g * 2) + var12.field_zb);
+              var12.field_cc.a(0, var19, var24_intLifetime1 * SocketConnector.field_b, TextLayout.field_g, -(TextLayout.field_g * 2) + var12.field_zb);
               var19 = var19 + SocketConnector.field_b * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
@@ -363,7 +363,7 @@ final class WidgetStyleLayer {
                   } else {
                     var25_int = -var12.field_dc + var7;
                     if (1 == var25_int) {
-                      var24Lifetime2 = SocketConnector.a(si.field_C, param4 - 126, new String[]{var20});
+                      var24Lifetime2 = SocketConnector.a(CachedTextLayout.field_C, param4 - 126, new String[]{var20});
                     }
                     var24Lifetime2 = SocketConnector.a(AccountRequestDialog.field_zb, -36, new String[]{var20, Integer.toString(var25_int)});
                   }
@@ -765,7 +765,7 @@ final class WidgetStyleLayer {
           IntKeyLookup.field_i.l(param0 ^ -125);
         }
         if (ib.field_b != 0) {
-          pg.d(86);
+          AlternateUsernameCredentials.d(86);
         }
         ed.field_i = 0;
     }

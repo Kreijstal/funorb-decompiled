@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class me {
+abstract class LoginCredentials {
     static dk field_b;
     static volatile int field_d;
     static int[] field_g;

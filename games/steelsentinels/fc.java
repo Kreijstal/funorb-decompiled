@@ -67,16 +67,16 @@ final class fc {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        if (qj.field_q == null) {
+        if (SentinelAnimationEditor.field_q == null) {
           var3 = -3 % ((param0 + 20) / 47);
           return null;
         }
-        if (qj.field_q[param1] == null) {
+        if (SentinelAnimationEditor.field_q[param1] == null) {
           var3Lifetime1 = -3 % ((param0 + 20) / 47);
           return null;
         }
         if (param2 == -1) {
-          return fl.a((byte) 41, qj.field_q[param1], ResourceArchive.field_e[param1]);
+          return fl.a((byte) 41, SentinelAnimationEditor.field_q[param1], ResourceArchive.field_e[param1]);
         }
         var3Lifetime2 = 0;
         if (BoundedUrlRequest.field_i != null) {
@@ -84,19 +84,19 @@ final class fc {
           var4 = Math.max(64, -(192 * Math.abs(var3Lifetime2) / 1280) + 256);
           var4 = ResourceArchive.field_e[param1] * var4 / 256;
           var5 = Math.max(0, Math.min(256, var3Lifetime2 / 10 + 128));
-          return RegistrationRequestDialog.a(var4, var5, 248, qj.field_q[param1]);
+          return RegistrationRequestDialog.a(var4, var5, 248, SentinelAnimationEditor.field_q[param1]);
         }
-        if (null != si.field_A) {
-          var3Lifetime2 = -320 + si.field_A.d(true, param2);
+        if (null != CachedTextLayout.field_A) {
+          var3Lifetime2 = -320 + CachedTextLayout.field_A.d(true, param2);
           var4Lifetime1 = Math.max(64, -(192 * Math.abs(var3Lifetime2) / 1280) + 256);
           var4Lifetime1 = ResourceArchive.field_e[param1] * var4Lifetime1 / 256;
           var5Lifetime1 = Math.max(0, Math.min(256, var3Lifetime2 / 10 + 128));
-          return RegistrationRequestDialog.a(var4Lifetime1, var5Lifetime1, 248, qj.field_q[param1]);
+          return RegistrationRequestDialog.a(var4Lifetime1, var5Lifetime1, 248, SentinelAnimationEditor.field_q[param1]);
         }
         var4Lifetime2 = Math.max(64, -(192 * Math.abs(var3Lifetime2) / 1280) + 256);
         var4Lifetime2 = ResourceArchive.field_e[param1] * var4Lifetime2 / 256;
         var5Lifetime2 = Math.max(0, Math.min(256, var3Lifetime2 / 10 + 128));
-        return RegistrationRequestDialog.a(var4Lifetime2, var5Lifetime2, 248, qj.field_q[param1]);
+        return RegistrationRequestDialog.a(var4Lifetime2, var5Lifetime2, 248, SentinelAnimationEditor.field_q[param1]);
     }
 
     final static java.net.URL a(int param0, java.net.URL param1, String param2, String param3, int param4) {

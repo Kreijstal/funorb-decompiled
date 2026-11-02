@@ -20,17 +20,17 @@ abstract class WeightedCacheEntry extends DualNode {
         if (param0 <= 56) {
           field_E = (String) null;
         }
-        stackIn_5_0 = !(si.field_p);
-        si.field_p = stackIn_5_0;
+        stackIn_5_0 = !(CachedTextLayout.field_p);
+        CachedTextLayout.field_p = stackIn_5_0;
         stackIn_7_0 = ImageProducerRasterBuffer.field_A;
         stackIn_7_1 = 41;
-        if (si.field_p) {
+        if (CachedTextLayout.field_p) {
           stackIn_8_2 = hf.field_b;
         } else {
           stackIn_8_2 = fm.field_h;
         }
         stackIn_7_0[stackIn_7_1] = stackIn_8_2;
-        if (si.field_p &&
+        if (CachedTextLayout.field_p &&
           BoundedUrlRequest.field_i != null &&
           null != BoundedUrlRequest.field_i.controlledSentinel) {
           BoundedUrlRequest.field_i.field_V = -(BoundedUrlRequest.field_i.controlledSentinel.worldY >> 4) + BoundedUrlRequest.field_i.field_E - 3200;

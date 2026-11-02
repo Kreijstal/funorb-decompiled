@@ -98,7 +98,7 @@ final class te {
                     }
                     if (decompiledFrameRemainder1) {
                       if (var6 == 2 &&
-                        sj.field_v[var12.componentId] <= PasswordFieldPainter.field_v) {
+                        MusicCrossfadeStream.field_v[var12.componentId] <= PasswordFieldPainter.field_v) {
                         var6 = 1;
                       }
                       if (var7 != 0) {
@@ -109,7 +109,7 @@ final class te {
                         var13.a(0, param1, 18, 0, var5);
                         param0.a(var13, 125);
                         if (param2) {
-                          stackIn_71_0 = qj.field_c;
+                          stackIn_71_0 = SentinelAnimationEditor.field_c;
                         } else {
                           stackIn_71_0 = RasterBuffer.field_h;
                         }
@@ -222,14 +222,14 @@ final class te {
               var9 != 0) {
               var5 = var4_ref_String;
             }
-            var6 = da.a(var4_ref_String, (byte) -41);
+            var6 = TextLayout.a(var4_ref_String, (byte) -41);
             var7 = var1.h(1);
             var8 = AlphaContainer.a(1, (CharSequence) ((Object) var4_ref_String));
             if (var8 == null) {
               var8 = var4_ref_String;
             }
             if (null == var6) {
-              var6 = da.a(var7, (byte) -41);
+              var6 = TextLayout.a(var7, (byte) -41);
               if (null != var6) {
                 SocketConnector.field_h.a(var6, 1, (long)var8.hashCode());
               }
@@ -261,7 +261,7 @@ final class te {
               return;
             }
             if (4 != var2) {
-              sj.a("F1: " + ci.a((byte) 94), param0 ^ -93, (Throwable) null);
+              MusicCrossfadeStream.a("F1: " + ci.a((byte) 94), param0 ^ -93, (Throwable) null);
               LoginForm.m(75);
               return;
             }

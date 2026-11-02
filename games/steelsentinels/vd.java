@@ -83,7 +83,7 @@ final class vd {
                 GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
               }
             } else {
-              bh.a(0);
+              SentinelCommandSimulator.a(0);
               if (0 < bd.field_c) {
                 GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
               }
@@ -103,7 +103,7 @@ final class vd {
             (fj.field_f > 0)) {
             fj.field_f = fj.field_f - 1;
             if (SentinelCommand.field_t > 0) {
-              bh.a(0);
+              SentinelCommandSimulator.a(0);
               if (0 < bd.field_c) {
                 GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
               }
@@ -129,7 +129,7 @@ final class vd {
         }
         if (decompiledFrameRemainder0) {
           if (SentinelCommand.field_t > 0) {
-            bh.a(0);
+            SentinelCommandSimulator.a(0);
           }
           if (0 < bd.field_c) {
             GzipDecoder.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);

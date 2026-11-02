@@ -91,7 +91,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "error_js5connect");
                 if (var2 != null) {
-                  pg.field_s = IntKeyLookup.a(13, var2);
+                  AlternateUsernameCredentials.field_s = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "login_gameupdated");
                 if (null != var2) {
@@ -419,7 +419,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mu_gameopt_reject_x_from_game");
                 if (var2 != null) {
-                  bh.field_o = IntKeyLookup.a(13, var2);
+                  SentinelCommandSimulator.field_o = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_gameopt_invite_x_to_game");
                 if (var2 != null) {
@@ -431,7 +431,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "unable_to_send_message_password_a");
                 if (null != var2) {
-                  il.field_e = IntKeyLookup.a(13, var2);
+                  TextLayoutLine.field_e = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "unable_to_send_message_password_b");
                 if (var2 != null) {
@@ -523,7 +523,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "find_opponents_plural");
                 if (null != var2) {
-                  ha.field_P = IntKeyLookup.a(13, var2);
+                  DateInputWidget.field_P = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rated_game_tips_setup_singular");
                 if (null != var2) {
@@ -551,7 +551,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "join_requests_many");
                 if (var2 != null) {
-                  sj.field_B = IntKeyLookup.a(13, var2);
+                  MusicCrossfadeStream.field_B = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "xs_game");
                 if (null != var2) {
@@ -659,7 +659,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "you_can_ask_to_join");
                 if (var2 != null) {
-                  fb.field_p = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_p = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "you_cannot_join_in_progress");
                 if (var2 != null) {
@@ -703,7 +703,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "multiconst_clan");
                 if (null != var2) {
-                  vn.field_l = IntKeyLookup.a(13, var2);
+                  DateOfBirthValidator.field_l = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "multiconst_friends");
                 if (null != var2) {
@@ -743,7 +743,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "tab_hidechattemporarily");
                 if (var2 != null) {
-                  re.field_cb = IntKeyLookup.a(13, var2);
+                  NumericDateInputWidget.field_cb = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "esc_cancelprivatemessage");
                 if (null != var2) {
@@ -783,7 +783,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "thisisrunescapeclan");
                 if (var2 != null) {
-                  da.field_c = IntKeyLookup.a(13, var2);
+                  TextLayout.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "thisisrunescapeclan_notowner");
                 if (null != var2) {
@@ -819,7 +819,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_notunlocked");
                 if (var2 != null) {
-                  si.field_u = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_u = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_cannotbecombined1");
                 if (null != var2) {
@@ -855,7 +855,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
-                  si.field_C = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_C = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_youneed1ratedgame");
                 if (var2 != null) {
@@ -903,7 +903,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "gameopt_pleaseselectoption1");
                 if (null != var2) {
-                  il.field_b = IntKeyLookup.a(13, var2);
+                  TextLayoutLine.field_b = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_pleaseselectoption2");
                 if (var2 != null) {
@@ -989,7 +989,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "rule_1_0");
                 if (var2 != null) {
-                  bh.field_i = IntKeyLookup.a(13, var2);
+                  SentinelCommandSimulator.field_i = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rule_1_1");
                 if (var2 != null) {
@@ -1257,7 +1257,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "checking");
                 if (var2 != null) {
-                  me.field_c = IntKeyLookup.a(13, var2);
+                  LoginCredentials.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_namealreadytaken");
                 if (var2 != null) {
@@ -1348,7 +1348,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "day");
                 if (null != var2) {
-                  fb.field_n = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_n = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "month");
                 if (var2 != null) {
@@ -1408,7 +1408,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_welcome");
                 if (var2 != null) {
-                  qj.field_j = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_j = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_u13_welcome");
                 if (var2 != null) {
@@ -1436,7 +1436,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_email");
                 if (null != var2) {
-                  nc.field_i = IntKeyLookup.a(13, var2);
+                  WeightedLruCache.field_i = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_email_confirm");
                 if (var2 != null) {
@@ -1492,7 +1492,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_u13terms");
                 if (null != var2) {
-                  si.field_w = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_w = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "login_username_email");
                 if (var2 != null) {
@@ -1664,11 +1664,11 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "create_alert_invaliddate");
                 if (var2 != null) {
-                  da.field_a = IntKeyLookup.a(13, var2);
+                  TextLayout.field_a = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_alert_invalidage");
                 if (null != var2) {
-                  vn.field_j = IntKeyLookup.a(13, var2);
+                  DateOfBirthValidator.field_j = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_alert_yearrange");
                 if (null != var2) {
@@ -1704,7 +1704,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "unable_to_add_ignore");
                 if (null != var2) {
-                  nc.field_p = IntKeyLookup.a(13, var2);
+                  WeightedLruCache.field_p = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "unable_to_delete_friend");
                 if (var2 != null) {
@@ -1740,7 +1740,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "removeignorefirst");
                 if (var2 != null) {
-                  qj.field_m = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_m = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "removefriendfirst");
                 if (var2 != null) {
@@ -1856,7 +1856,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "loading_extradata");
                 if (var2 != null) {
-                  qj.field_i = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_i = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "loading_languages");
                 if (var2 != null) {
@@ -1990,7 +1990,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "optionsmenu_notpaused");
                 if (var2 != null) {
-                  fb.field_k = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_k = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "menu");
                 if (var2 != null) {
@@ -2090,7 +2090,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "returntogame");
                 if (var2 != null) {
-                  fb.field_q = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_q = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "endgameresign");
                 if (var2 != null) {
@@ -2690,7 +2690,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "fs_accept_countdown_sing");
                 if (var2 != null) {
-                  pg.field_t = IntKeyLookup.a(13, var2);
+                  AlternateUsernameCredentials.field_t = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "fs_accept_countdown_pl");
                 if (var2 != null) {
@@ -2782,15 +2782,15 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "hs_mode_name,0");
                 if (null != var2) {
-                  qj.field_d[0] = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_d[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "hs_mode_name,1");
                 if (null != var2) {
-                  qj.field_d[1] = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_d[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "hs_mode_name,2");
                 if (null != var2) {
-                  qj.field_d[2] = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_d[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rating_mode_name,0");
                 if (null != var2) {
@@ -2870,31 +2870,31 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mustlogin2,1");
                 if (var2 != null) {
-                  fb.field_j[1] = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_j[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin2,2");
                 if (null != var2) {
-                  fb.field_j[2] = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_j[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin2,3");
                 if (null != var2) {
-                  fb.field_j[3] = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_j[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin2,4");
                 if (var2 != null) {
-                  fb.field_j[4] = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_j[4] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin2,5");
                 if (var2 != null) {
-                  fb.field_j[5] = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_j[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin2,6");
                 if (null != var2) {
-                  fb.field_j[6] = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_j[6] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin2,7");
                 if (var2 != null) {
-                  fb.field_j[7] = IntKeyLookup.a(13, var2);
+                  UsernameCredentials.field_j[7] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin3,1");
                 if (null != var2) {
@@ -2932,31 +2932,31 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "mustlogin4,1");
                 if (var2 != null) {
-                  me.field_a[1] = IntKeyLookup.a(13, var2);
+                  LoginCredentials.field_a[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin4,2");
                 if (null != var2) {
-                  me.field_a[2] = IntKeyLookup.a(13, var2);
+                  LoginCredentials.field_a[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin4,3");
                 if (var2 != null) {
-                  me.field_a[3] = IntKeyLookup.a(13, var2);
+                  LoginCredentials.field_a[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin4,4");
                 if (var2 != null) {
-                  me.field_a[4] = IntKeyLookup.a(13, var2);
+                  LoginCredentials.field_a[4] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin4,5");
                 if (var2 != null) {
-                  me.field_a[5] = IntKeyLookup.a(13, var2);
+                  LoginCredentials.field_a[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin4,6");
                 if (null != var2) {
-                  me.field_a[6] = IntKeyLookup.a(13, var2);
+                  LoginCredentials.field_a[6] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin4,7");
                 if (null != var2) {
-                  me.field_a[7] = IntKeyLookup.a(13, var2);
+                  LoginCredentials.field_a[7] = IntKeyLookup.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mustlogin_notloggedin");
                 if (var2 != null) {
@@ -3311,7 +3311,7 @@ final class dn extends SceneWidget {
           var4_int = param3.getGroupId(param0, 11);
           var5 = param3.getFileId(var4_int, -32759, param2);
           if (param1 < 0) {
-            stackIn_4_0 = oe.a(var4_int, var5, 1, param3);
+            stackIn_4_0 = QuickChatPhraseCache.a(var4_int, var5, 1, param3);
             return stackIn_4_0;
           }
           stackIn_2_0 = (RgbSprite) null;

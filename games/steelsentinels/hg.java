@@ -23,7 +23,7 @@ final class hg {
         int var3 = 0;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          si.field_m = si.field_m + 1;
+          CachedTextLayout.field_m = CachedTextLayout.field_m + 1;
           if (pe.field_d == -1 &&
             jj.field_c == -1) {
             jj.field_c = DelegatingCanvas.field_c;
@@ -36,9 +36,9 @@ final class hg {
             decompiledFrameRemainder0 = !(param1.equals(SectorCacheStore.field_b));
           }
           if (decompiledFrameRemainder0) {
-            if (!pg.field_A) {
-              if (ik.field_c <= si.field_m) {
-                stackIn_17_0 = (si.field_m < ni.field_c + ik.field_c) ? 1 : 0;
+            if (!AlternateUsernameCredentials.field_A) {
+              if (ik.field_c <= CachedTextLayout.field_m) {
+                stackIn_17_0 = (CachedTextLayout.field_m < ni.field_c + ik.field_c) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -47,43 +47,43 @@ final class hg {
             }
             var2_int = stackIn_17_0;
             if (param1 == null) {
-              si.field_m = 0;
+              CachedTextLayout.field_m = 0;
             } else {
-              if (pg.field_A) {
-                si.field_m = ik.field_c;
+              if (AlternateUsernameCredentials.field_A) {
+                CachedTextLayout.field_m = ik.field_c;
               } else {
                 if (var2_int != 0) {
-                  si.field_m = ik.field_c;
+                  CachedTextLayout.field_m = ik.field_c;
                 } else {
-                  si.field_m = 0;
+                  CachedTextLayout.field_m = 0;
                 }
               }
             }
             if (param1 != null) {
-              pg.field_A = false;
+              AlternateUsernameCredentials.field_A = false;
             } else {
               if (var2_int != 0) {
-                pg.field_A = true;
+                AlternateUsernameCredentials.field_A = true;
               }
             }
             t.field_l = jj.field_c;
             eh.field_a = pe.field_d;
           }
-          if (!pg.field_A &&
-            si.field_m < ik.field_c &&
+          if (!AlternateUsernameCredentials.field_A &&
+            CachedTextLayout.field_m < ik.field_c &&
             ik.field_a) {
             t.field_l = jj.field_c;
-            si.field_m = 0;
+            CachedTextLayout.field_m = 0;
             eh.field_a = pe.field_d;
           }
           if (param0 > -125) {
             return;
           }
           SectorCacheStore.field_b = param1;
-          if (pg.field_A &&
-            si.field_m == SocialListPanel.field_Ub) {
-            si.field_m = 0;
-            pg.field_A = false;
+          if (AlternateUsernameCredentials.field_A &&
+            CachedTextLayout.field_m == SocialListPanel.field_Ub) {
+            CachedTextLayout.field_m = 0;
+            AlternateUsernameCredentials.field_A = false;
           }
           pe.field_d = -1;
           jj.field_c = -1;
@@ -111,8 +111,8 @@ final class hg {
         try {
           SocketConnector.a(-1, (java.awt.Component) ((Object) param1));
           TickClock.a(true, (java.awt.Component) ((Object) param1));
-          if (null != nc.field_j) {
-            nc.field_j.attach((java.awt.Component) ((Object) param1), false);
+          if (null != WeightedLruCache.field_j) {
+            WeightedLruCache.field_j.attach((java.awt.Component) ((Object) param1), false);
           }
           if (param0 == -93) {
             return;

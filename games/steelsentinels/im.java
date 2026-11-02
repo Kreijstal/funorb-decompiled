@@ -69,7 +69,7 @@ final class im {
             o.field_d.clear(6);
             o.field_d = null;
           }
-          me.field_b = null;
+          LoginCredentials.field_b = null;
           if (null != t.field_c) {
             var4 = (cc) (t.field_c.a(90));
             while (var4 != null) {

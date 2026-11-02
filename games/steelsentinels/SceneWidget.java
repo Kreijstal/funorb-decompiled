@@ -253,7 +253,7 @@ class SceneWidget extends SceneWidgetNode {
     final void a(byte param0, boolean param1) {
         SocketConnector.field_d = !param1 ? true : false;
         int var3 = -36 % ((65 - param0) / 41);
-        bh.field_f = !param1 ? true : false;
+        SentinelCommandSimulator.field_f = !param1 ? true : false;
         this.a(true, SoftwareRaster.field_c, 0, SoftwareRaster.field_j, (byte) -123, 0);
     }
 
@@ -668,12 +668,12 @@ class SceneWidget extends SceneWidgetNode {
           }
           this.field_Eb = 0;
         }
-        if (0 == nc.field_d) {
+        if (0 == WeightedLruCache.field_d) {
           this.field_W = 0;
         }
-        stackIn_33_1 = (!bh.field_f) && (SoftwareRaster.field_i <= oh.field_f) && (oh.field_f < SoftwareRaster.field_b) && (SoftwareRaster.field_l <= DelegatingCanvas.field_c) && (DelegatingCanvas.field_c < SoftwareRaster.field_d);
+        stackIn_33_1 = (!SentinelCommandSimulator.field_f) && (SoftwareRaster.field_i <= oh.field_f) && (oh.field_f < SoftwareRaster.field_b) && (SoftwareRaster.field_l <= DelegatingCanvas.field_c) && (DelegatingCanvas.field_c < SoftwareRaster.field_d);
         this.field_K = stackIn_33_1;
-        stackIn_38_1 = (this.field_K) && (this.field_W == nc.field_d) && (param0);
+        stackIn_38_1 = (this.field_K) && (this.field_W == WeightedLruCache.field_d) && (param0);
         this.field_kb = stackIn_38_1;
         if (this.field_M != null) {
           var14 = (SceneWidget) (this.field_M.b(1063677678));
@@ -683,7 +683,7 @@ class SceneWidget extends SceneWidgetNode {
           }
         }
         if (this.field_K) {
-          bh.field_f = true;
+          SentinelCommandSimulator.field_f = true;
         }
         if (var13 != 0) {
           SocketConnector.field_d = true;

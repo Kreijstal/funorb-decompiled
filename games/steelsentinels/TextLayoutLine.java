@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il {
+final class TextLayoutLine {
     static int[][] field_c;
     int field_h;
     static String field_e;
@@ -46,7 +46,7 @@ final class il {
           return;
         }
         String var2 = (String) null;
-        nc.a("", (String) null, -54);
+        WeightedLruCache.a("", (String) null, -54);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -75,7 +75,7 @@ final class il {
 
     public static void c(int param0) {
         if (param0 >= -14) {
-          il.a(false, (byte) 111);
+          TextLayoutLine.a(false, (byte) 111);
         }
         field_d = null;
         field_e = null;
@@ -84,7 +84,7 @@ final class il {
         field_b = null;
     }
 
-    il(int param0, int param1, int param2) {
+    TextLayoutLine(int param0, int param1, int param2) {
         this.field_h = param0;
         this.field_a = param1;
         this.field_f = new int[1 + param2];
@@ -95,7 +95,7 @@ final class il {
           throw new IllegalStateException();
         }
         if (param0 != 0) {
-          il.a(-7, 91, 38, 66);
+          TextLayoutLine.a(-7, 91, 38, 66);
         }
         if (ch.field_O != null) {
           ch.field_O.closeDialog(106);
@@ -137,10 +137,10 @@ final class il {
         return 0;
     }
 
-    final int b(int param0) {
+    final int width(int param0) {
         int stackIn_7_0 = 0;
         if (param0 != -1) {
-          il.a(-87);
+          TextLayoutLine.a(-87);
         }
         if (this.field_f != null &&
           this.field_f.length != 0) {

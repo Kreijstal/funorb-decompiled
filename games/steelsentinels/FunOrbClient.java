@@ -42,7 +42,7 @@ abstract class FunOrbClient extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = GameApplet.a(ln.a((byte) -89), si.b(64), -121);
+            var5_int = GameApplet.a(ln.a((byte) -89), CachedTextLayout.b(64), -121);
             if (var5_int != -1) {
               MouseWheelInput.a(di.field_e, (byte) 118, var5_int, vh.field_d);
               vh.field_d = null;
@@ -103,7 +103,7 @@ abstract class FunOrbClient extends GameApplet {
             return 20;
           }
           if (7 == var4) {
-            nc.a((byte) -81, Projectile.d((byte) -21));
+            WeightedLruCache.a((byte) -81, Projectile.d((byte) -21));
           }
           if (var4 == 8) {
             NameAvailabilityValidator.a(0, Projectile.d((byte) -21));
@@ -139,7 +139,7 @@ abstract class FunOrbClient extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              sj.a("S1", -100, (Throwable) ((Object) var5));
+              MusicCrossfadeStream.a("S1", -100, (Throwable) ((Object) var5));
               var10 = (String) null;
               na.a((String) null, (byte) -104);
               DelayedServerPacket.field_s = null;
@@ -215,7 +215,7 @@ abstract class FunOrbClient extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            sj.a((String) null, -41, (Throwable) ((Object) var6_ref));
+            MusicCrossfadeStream.a((String) null, -41, (Throwable) ((Object) var6_ref));
             this.a("crash", param2 ^ 16948);
           }
           return;
@@ -278,7 +278,7 @@ abstract class FunOrbClient extends GameApplet {
         ValidationIndicator.a(IterableDualNodeDeque.field_i, this.field_t, param1, this.field_v, param3, this.field_C, this.field_B, SceneWidgetNode.field_D, 5000, this.field_r, (byte) 120, param2, this.field_F, this.field_D);
         GrowableIntList.a(this.field_F, this.field_D, param3, this.field_B, IterableDualNodeDeque.field_i, (byte) -95, SceneWidgetNode.field_D, this.field_v, this.field_t);
         ArchiveProvider.a((byte) 127);
-        nc.field_j = DelegatingCanvas.a((byte) 68);
+        WeightedLruCache.field_j = DelegatingCanvas.a((byte) 68);
         hg.a((byte) -93, sl.field_n);
         Sprite.field_h = param5;
         ArchiveIndex.field_r = param7;
@@ -436,14 +436,14 @@ abstract class FunOrbClient extends GameApplet {
           uj.field_d != 11) {
           BoundedRandomAccessFile.c(-51);
         }
-        if (nc.field_j != null) {
-          jj.field_d = nc.field_j.b(-1);
+        if (WeightedLruCache.field_j != null) {
+          jj.field_d = WeightedLruCache.field_j.b(-1);
         }
         if (ud.e(-116)) {
-          var3 = sj.a((byte) -123) * 1200;
+          var3 = MusicCrossfadeStream.a((byte) -123) * 1200;
           if (this.field_E ||
             !(var3 >= SoundCache.b(-102)) &&
-            !(ha.a((byte) -64) <= var3)) {
+            !(DateInputWidget.a((byte) -64) <= var3)) {
             this.field_E = false;
             LoginForm.m(127);
             of.a(10);
@@ -505,7 +505,7 @@ abstract class FunOrbClient extends GameApplet {
                 } else {
                   if (2 != fl.field_d) {
                     if (fl.field_d != 5) {
-                      cl.a(pg.field_s, 256, 1);
+                      cl.a(AlternateUsernameCredentials.field_s, 256, 1);
                     } else {
                       cl.a(Projectile.field_R, 5, 1);
                     }
@@ -560,11 +560,11 @@ abstract class FunOrbClient extends GameApplet {
             ok.field_f = SceneWidgetNode.a(73, Sprite.field_h);
           }
           WidgetStyleLayer.field_k = GameplayController.a(true, ed.field_h, param0 + 251, 1, false);
-          oe.field_d = GameplayController.a(true, ArchiveIndex.field_r, param0 ^ 261, 1, false);
+          QuickChatPhraseCache.field_d = GameplayController.a(true, ArchiveIndex.field_r, param0 ^ 261, 1, false);
           IconLabelControl.field_bc = GameplayController.a(true, rf.field_c, 256, 1, false);
           AccountTermsPanel.field_Q = 2;
           tm.field_d = WidgetStyleLayer.field_k;
-          MusicPatchPcmStream.field_t = oe.field_d;
+          MusicPatchPcmStream.field_t = QuickChatPhraseCache.field_d;
         }
         if (AccountTermsPanel.field_Q == 2) {
           if (null != ok.field_f &&
@@ -584,13 +584,13 @@ abstract class FunOrbClient extends GameApplet {
           }
         }
         if (AccountTermsPanel.field_Q == 3 &&
-          da.a(WidgetStyleLayer.field_k, IconLabelControl.field_bc, param0 ^ -6, oe.field_d) &&
+          TextLayout.a(WidgetStyleLayer.field_k, IconLabelControl.field_bc, param0 ^ -6, QuickChatPhraseCache.field_d) &&
           fc.a(IconLabelControl.field_bc, param0 - 58)) {
           km.a(false);
           RegistrationRequestDialog.n(-6);
           ClientException.field_i = eb.field_q;
           IntrusiveNode.field_a = false;
-          AccountRegistrationPanel.a((byte) -127, LoadingProgressDialog.field_ib, IconLabelControl.field_bc, WidgetStyleLayer.field_k, oe.field_d);
+          AccountRegistrationPanel.a((byte) -127, LoadingProgressDialog.field_ib, IconLabelControl.field_bc, WidgetStyleLayer.field_k, QuickChatPhraseCache.field_d);
           if (SoundCache.field_j ||
             null != uj.field_k) {
             stackIn_113_0 = uj.field_k;
@@ -602,11 +602,11 @@ abstract class FunOrbClient extends GameApplet {
             MarkerSliderPainter.a((byte) 120);
           }
           if (null == ValidationIndicator.field_cb) {
-            ValidationIndicator.field_cb = vn.c((byte) 83);
+            ValidationIndicator.field_cb = DateOfBirthValidator.c((byte) 83);
             SentinelDesigner.field_e = ue.a((byte) 62);
           }
-          da.a(IconLabelControl.field_bc, 73, SentinelDesigner.field_e, ValidationIndicator.field_cb);
-          oe.field_d = null;
+          TextLayout.a(IconLabelControl.field_bc, 73, SentinelDesigner.field_e, ValidationIndicator.field_cb);
+          QuickChatPhraseCache.field_d = null;
           WidgetStyleLayer.field_k = null;
           IconLabelControl.field_bc = null;
           e.a((java.applet.Applet) (this), false);
@@ -716,7 +716,7 @@ abstract class FunOrbClient extends GameApplet {
                                 oc.a(false);
                                 return;
                               }
-                              sj.a("MGS1: " + ci.a((byte) 94), -27, (Throwable) null);
+                              MusicCrossfadeStream.a("MGS1: " + ci.a((byte) 94), -27, (Throwable) null);
                               LoginForm.m(-93);
                               return;
                             }
@@ -741,7 +741,7 @@ abstract class FunOrbClient extends GameApplet {
           }
           return;
         }
-        sj.a("MGS2: " + ci.a((byte) 94), -85, (Throwable) null);
+        MusicCrossfadeStream.a("MGS2: " + ci.a((byte) 94), -85, (Throwable) null);
         LoginForm.m(-94);
     }
 

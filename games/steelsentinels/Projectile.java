@@ -802,8 +802,8 @@ final class Projectile extends DualNode {
     }
 
     final static java.applet.Applet d(byte param0) {
-        if (fb.field_o != null) {
-          return fb.field_o;
+        if (UsernameCredentials.field_o != null) {
+          return UsernameCredentials.field_o;
         }
         if (param0 != -21) {
           field_J = (SceneWidget) null;
@@ -1303,7 +1303,7 @@ final class Projectile extends DualNode {
         if (TextButton.a(0, true)) {
           var2 = QuickChatPhraseDefinition.field_B;
           var1 = var2;
-          var2[1] = vn.a(var2[1], 64);
+          var2[1] = DateOfBirthValidator.a(var2[1], 64);
           var3 = QuickChatPhraseDefinition.field_A;
           var1 = var3;
           var3[1] = ec.a(var3[1], -65);
@@ -1313,7 +1313,7 @@ final class Projectile extends DualNode {
           var4[1] = ec.a(var4[1], -65);
           var5 = QuickChatPhraseDefinition.field_A;
           var1 = var5;
-          var5[1] = vn.a(var5[1], 64);
+          var5[1] = DateOfBirthValidator.a(var5[1], 64);
         }
         if (param0 < 7) {
           field_N = (rf) null;
@@ -1398,7 +1398,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (param6 & 16711935) + (var15 & 16711935);
                   var15 = (65536 & -var21 + var16) + (16777472 & var21);
-                  var17[var14] = vn.a(-var15 + var16, var15 - (var15 >>> 8));
+                  var17[var14] = DateOfBirthValidator.a(-var15 + var16, var15 - (var15 >>> 8));
                 }
                 var14 = var14 + param3;
                 for (var20 = 1; var20 < param3; var20++) {
@@ -1408,7 +1408,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (16711935 & var15) + (16711935 & param6);
                   var15 = (-var21 + var16 & 65536) + (var21 & 16777472);
-                  var17[var14] = vn.a(var15 - (var15 >>> 8), -var15 + var16);
+                  var17[var14] = DateOfBirthValidator.a(var15 - (var15 >>> 8), -var15 + var16);
                 }
               }
               param1++;
@@ -1442,7 +1442,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (16711935 & param6) + (var15 & 16711935);
                   var15 = (16777472 & var21) + (-var21 + var16 & 65536);
-                  var17[var14] = vn.a(var15 - (var15 >>> 8), var16 - var15);
+                  var17[var14] = DateOfBirthValidator.a(var15 - (var15 >>> 8), var16 - var15);
                 }
                 var14 = var14 + param3 * var13;
                 for (var20 = 1; param3 > var20; var20++) {
@@ -1452,7 +1452,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (var15 & 16711935) + (16711935 & param6);
                   var15 = (65536 & -var21 + var16) + (var21 & 16777472);
-                  var17[var14] = vn.a(var16 - var15, var15 - (var15 >>> 8));
+                  var17[var14] = DateOfBirthValidator.a(var16 - var15, var15 - (var15 >>> 8));
                 }
               }
               param5++;
@@ -1472,7 +1472,7 @@ final class Projectile extends DualNode {
                 var16 = param6 + var15;
                 var21 = (16711935 & param6) + (var15 & 16711935);
                 var15 = (16777472 & var21) + (-var21 + var16 & 65536);
-                var17[var14] = vn.a(var15 - (var15 >>> 8), var16 - var15);
+                var17[var14] = DateOfBirthValidator.a(var15 - (var15 >>> 8), var16 - var15);
               }
               while (true) {
                 var14 = var14 + param3 * var13;
@@ -1483,7 +1483,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (var15 & 16711935) + (16711935 & param6);
                   var15 = (65536 & -var21 + var16) + (var21 & 16777472);
-                  var17[var14] = vn.a(var16 - var15, var15 - (var15 >>> 8));
+                  var17[var14] = DateOfBirthValidator.a(var16 - var15, var15 - (var15 >>> 8));
                 }
                 do {
                   param5++;
@@ -1502,7 +1502,7 @@ final class Projectile extends DualNode {
                   var16 = param6 + var15;
                   var21 = (16711935 & param6) + (var15 & 16711935);
                   var15 = (16777472 & var21) + (-var21 + var16 & 65536);
-                  var17[var14] = vn.a(var15 - (var15 >>> 8), var16 - var15);
+                  var17[var14] = DateOfBirthValidator.a(var15 - (var15 >>> 8), var16 - var15);
                 }
               }
             }
@@ -1527,7 +1527,7 @@ final class Projectile extends DualNode {
                 var16 = param6 + var15;
                 var21 = (16711935 & param6) + (var15 & 16711935);
                 var15 = (16777472 & var21) + (-var21 + var16 & 65536);
-                var17[var14] = vn.a(var15 - (var15 >>> 8), var16 - var15);
+                var17[var14] = DateOfBirthValidator.a(var15 - (var15 >>> 8), var16 - var15);
               }
               var14 = var14 + param3 * var13;
               for (var20 = 1; param3 > var20; var20++) {
@@ -1537,7 +1537,7 @@ final class Projectile extends DualNode {
                 var16 = param6 + var15;
                 var21 = (var15 & 16711935) + (16711935 & param6);
                 var15 = (65536 & -var21 + var16) + (var21 & 16777472);
-                var17[var14] = vn.a(var16 - var15, var15 - (var15 >>> 8));
+                var17[var14] = DateOfBirthValidator.a(var16 - var15, var15 - (var15 >>> 8));
               }
             }
           }

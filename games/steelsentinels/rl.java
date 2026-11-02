@@ -533,7 +533,7 @@ final class rl {
         Object var1 = null;
         var1 = SoundCache.field_e;
         synchronized (var1) {
-          nc.field_d = wn.field_d;
+          WeightedLruCache.field_d = wn.field_d;
           ob.field_q = ob.field_q + 1;
           oh.field_f = SentinelDesigner.field_j;
           DelegatingCanvas.field_c = LabeledField.field_G;
@@ -541,7 +541,7 @@ final class rl {
           ce.field_w = false;
           VerticalScrollbar.field_gc = ad.field_c;
           TextButton.field_S = RegistrationRequestDialog.field_Rb;
-          BufferedRandomAccessFile.field_j = me.field_d;
+          BufferedRandomAccessFile.field_j = LoginCredentials.field_d;
           ad.field_c = param0;
           sf.field_d = rb.field_a;
         }

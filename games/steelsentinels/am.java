@@ -39,9 +39,9 @@ final class am {
           QuickChatMenu.a(SingleChildContainer.field_H, 7411, 8);
           var1 = 111 / ((param0 + 35) / 35);
           if (rd.field_b <= 0) {
-            QuickChatMenu.a(nc.field_h, 7411, 19);
+            QuickChatMenu.a(WeightedLruCache.field_h, 7411, 19);
             if (ArticulatedPart.f((byte) -128)) {
-              ImageProducerRasterBuffer.field_A[34] = oe.field_l;
+              ImageProducerRasterBuffer.field_A[34] = QuickChatPhraseCache.field_l;
             }
             if (!AccountRegistrationPanel.l(13539)) {
               QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
@@ -54,7 +54,7 @@ final class am {
           QuickChatMenu.a(DualNodeDeque.field_c, 7411, 0);
           QuickChatMenu.a(ArchiveProvider.field_c, 7411, 19);
           if (ArticulatedPart.f((byte) -128)) {
-            ImageProducerRasterBuffer.field_A[34] = oe.field_l;
+            ImageProducerRasterBuffer.field_A[34] = QuickChatPhraseCache.field_l;
           }
           if (!AccountRegistrationPanel.l(13539)) {
             QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
@@ -68,9 +68,9 @@ final class am {
         QuickChatMenu.a(SentinelDesigner.field_d, 7411, 8);
         var1Lifetime1 = 111 / ((param0 + 35) / 35);
         if (rd.field_b <= 0) {
-          QuickChatMenu.a(nc.field_h, 7411, 19);
+          QuickChatMenu.a(WeightedLruCache.field_h, 7411, 19);
           if (ArticulatedPart.f((byte) -128)) {
-            ImageProducerRasterBuffer.field_A[34] = oe.field_l;
+            ImageProducerRasterBuffer.field_A[34] = QuickChatPhraseCache.field_l;
           }
           if (!AccountRegistrationPanel.l(13539)) {
             QuickChatMenu.a(NodeDeque.field_c, 7411, 1);
@@ -83,7 +83,7 @@ final class am {
         QuickChatMenu.a(DualNodeDeque.field_c, 7411, 0);
         QuickChatMenu.a(ArchiveProvider.field_c, 7411, 19);
         if (ArticulatedPart.f((byte) -128)) {
-          ImageProducerRasterBuffer.field_A[34] = oe.field_l;
+          ImageProducerRasterBuffer.field_A[34] = QuickChatPhraseCache.field_l;
         }
         if (!AccountRegistrationPanel.l(13539)) {
           QuickChatMenu.a(NodeDeque.field_c, 7411, 1);

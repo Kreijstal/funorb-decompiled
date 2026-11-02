@@ -127,7 +127,7 @@ final class ec {
         ImageProducerRasterBuffer.field_A = new String[48];
         ImageProducerRasterBuffer.field_A[13] = bi.field_c;
         ImageProducerRasterBuffer.field_A[3] = CipherPacketBuffer.field_G;
-        ImageProducerRasterBuffer.field_A[2] = fb.field_q;
+        ImageProducerRasterBuffer.field_A[2] = UsernameCredentials.field_q;
         ImageProducerRasterBuffer.field_A[7] = jn.field_a;
         ImageProducerRasterBuffer.field_A[0] = BoundedUrlRequest.field_f;
         ImageProducerRasterBuffer.field_A[8] = null;
@@ -154,11 +154,11 @@ final class ec {
         }
         stackIn_8_0[stackIn_8_1] = stackIn_9_2;
         ImageProducerRasterBuffer.field_A[param0] = AccountNoticeDialog.field_pb;
-        ImageProducerRasterBuffer.field_A[14] = qj.field_d[0];
+        ImageProducerRasterBuffer.field_A[14] = SentinelAnimationEditor.field_d[0];
         ImageProducerRasterBuffer.field_A[23] = cf.field_v;
         stackIn_11_0 = ImageProducerRasterBuffer.field_A;
         stackIn_11_1 = 41;
-        if (!si.field_p) {
+        if (!CachedTextLayout.field_p) {
           stackIn_12_2 = fm.field_h;
         } else {
           stackIn_12_2 = hf.field_b;
@@ -168,7 +168,7 @@ final class ec {
         ImageProducerRasterBuffer.field_A[46] = AccountNoticeDialog.field_jb;
         ImageProducerRasterBuffer.field_A[24] = BoundedRandomAccessFile.field_h;
         ImageProducerRasterBuffer.field_A[27] = IterableNodeHashTable.field_g;
-        ImageProducerRasterBuffer.field_A[16] = qj.field_d[2];
+        ImageProducerRasterBuffer.field_A[16] = SentinelAnimationEditor.field_d[2];
         ImageProducerRasterBuffer.field_A[18] = MouseInputHandler.field_b[1];
         ImageProducerRasterBuffer.field_A[17] = MouseInputHandler.field_b[0];
         ImageProducerRasterBuffer.field_A[32] = LoginForm.field_P;
@@ -182,12 +182,12 @@ final class ec {
         stackIn_14_0 = ImageProducerRasterBuffer.field_A;
         stackIn_14_1 = 47;
         if (tj.field_a) {
-          stackIn_15_2 = qj.field_u;
+          stackIn_15_2 = SentinelAnimationEditor.field_u;
         } else {
           stackIn_15_2 = RasterBuffer.field_d;
         }
         stackIn_14_0[stackIn_14_1] = stackIn_15_2;
-        ImageProducerRasterBuffer.field_A[15] = qj.field_d[1];
+        ImageProducerRasterBuffer.field_A[15] = SentinelAnimationEditor.field_d[1];
         ImageProducerRasterBuffer.field_A[22] = QuickChatMenu.field_ec;
         stackIn_17_0 = ImageProducerRasterBuffer.field_A;
         stackIn_17_1 = 42;
@@ -213,7 +213,7 @@ final class ec {
         ImageProducerRasterBuffer.field_A[40] = pe.field_R;
         ImageProducerRasterBuffer.field_A[39] = QuickChatMenu.field_nc;
         GameKeyHandler.field_a = SocketConnector.a(GameKeyHandler.field_a, param0 ^ -25, new String[]{ln.a("<img=26>", (byte) 11, "<img=17>", RasterBuffer.field_d)});
-        ValidatedTextWidget.field_yb = SocketConnector.a(ValidatedTextWidget.field_yb, param0 ^ -56, new String[]{ln.a("<img=26>", (byte) 11, "<img=17>", qj.field_u)});
+        ValidatedTextWidget.field_yb = SocketConnector.a(ValidatedTextWidget.field_yb, param0 ^ -56, new String[]{ln.a("<img=26>", (byte) 11, "<img=17>", SentinelAnimationEditor.field_u)});
     }
 
     final static void a(byte param0) {

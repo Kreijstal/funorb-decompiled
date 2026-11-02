@@ -80,21 +80,21 @@ final class NodeIterator {
     }
 
     final static String b(byte param0) {
-        if (pg.field_A) {
+        if (AlternateUsernameCredentials.field_A) {
           if (param0 != -122) {
             field_j = (String) null;
             return null;
           }
           return null;
         }
-        if (si.field_m < ik.field_c) {
+        if (CachedTextLayout.field_m < ik.field_c) {
           if (param0 != -122) {
             field_j = (String) null;
             return null;
           }
           return null;
         }
-        if (ik.field_c + ni.field_c > si.field_m) {
+        if (ik.field_c + ni.field_c > CachedTextLayout.field_m) {
           return SectorCacheStore.field_b;
         }
         if (param0 != -122) {

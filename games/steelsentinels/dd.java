@@ -42,7 +42,7 @@ final class dd {
             return stackIn_6_0;
           }
           if (DisplayNameForm.field_P != 2) {
-            stackIn_10_0 = nc.field_p;
+            stackIn_10_0 = WeightedLruCache.field_p;
             return stackIn_10_0;
           }
           if (param1 != 55) {
@@ -440,7 +440,7 @@ final class dd {
           if (param0 &&
             var7.field_kc) {
             this.field_j.a(2, 0, SocketConnector.a(ArticulatedPart.field_P, -104, new String[]{var5}));
-            this.field_j.a(2, 1, SocketConnector.a(bh.field_o, -54, new String[]{var5}));
+            this.field_j.a(2, 1, SocketConnector.a(SentinelCommandSimulator.field_o, -54, new String[]{var5}));
             if (param1 < -73) {
               return;
             }
@@ -590,15 +590,15 @@ final class dd {
           return true;
         }
         if (param2 == 11) {
-          il.a(0, this.field_f, param1, -18853);
+          TextLayoutLine.a(0, this.field_f, param1, -18853);
           return true;
         }
         if (param2 == 12) {
-          il.a(1, this.field_f, param1, -18853);
+          TextLayoutLine.a(1, this.field_f, param1, -18853);
           return true;
         }
         if (param2 == 13) {
-          il.a(2, this.field_f, param1, -18853);
+          TextLayoutLine.a(2, this.field_f, param1, -18853);
           return true;
         }
         if (param2 == 14) {
@@ -628,7 +628,7 @@ final class dd {
           if (param0 == 5) {
             var5 = DialWidget.a(this.field_k, param2, true);
             if (var5 != null) {
-              sj.a((String) null, var5, 0, (byte) 21, this.field_k, 2);
+              MusicCrossfadeStream.a((String) null, var5, 0, (byte) 21, this.field_k, 2);
               return true;
             }
             return true;
@@ -639,7 +639,7 @@ final class dd {
             }
             var6 = rn.a(this.field_a, param2, this.field_k, true);
             if (var6 != null) {
-              sj.a((String) null, var6, 0, (byte) 21, this.field_k, 2);
+              MusicCrossfadeStream.a((String) null, var6, 0, (byte) 21, this.field_k, 2);
               return true;
             }
             return true;
@@ -648,14 +648,14 @@ final class dd {
           if (var7 == null) {
             return true;
           }
-          sj.a((String) null, var7, 0, (byte) 21, this.field_k, 2);
+          MusicCrossfadeStream.a((String) null, var7, 0, (byte) 21, this.field_k, 2);
           return true;
         }
         String var8 = lj.a(this.field_k, (byte) -79, param2);
         if (var8 == null) {
           return true;
         }
-        sj.a((String) null, var8, 0, (byte) 21, this.field_k, 2);
+        MusicCrossfadeStream.a((String) null, var8, 0, (byte) 21, this.field_k, 2);
         return true;
     }
 

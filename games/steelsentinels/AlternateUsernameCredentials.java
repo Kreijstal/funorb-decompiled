@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class pg extends fb {
+final class AlternateUsernameCredentials extends UsernameCredentials {
     static String field_t;
     static int[] field_w;
     static String field_s;
@@ -16,7 +16,7 @@ final class pg extends fb {
     static int[] field_z;
     static String field_y;
 
-    pg(long param0, String param1) {
+    AlternateUsernameCredentials(long param0, String param1) {
         super(param0, param1);
     }
 
@@ -34,7 +34,7 @@ final class pg extends fb {
           ib.field_b = 0;
           return;
         }
-        pg.a(-52, 18, 84, 62, 58, -55, -37);
+        AlternateUsernameCredentials.a(-52, 18, 84, 62, 58, -55, -37);
         tf.field_g.setLength(0);
         ib.field_b = 0;
     }
@@ -51,7 +51,7 @@ final class pg extends fb {
           field_y = null;
           return;
         }
-        pg.a(-89, 67, 9, -70, 59, 127, 12);
+        AlternateUsernameCredentials.a(-89, 67, 9, -70, 59, 127, 12);
         field_t = null;
         field_s = null;
         field_x = null;
@@ -64,7 +64,7 @@ final class pg extends fb {
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         boolean stackIn_18_0 = false;
         if (param4 != 0) {
-          pg.a(-66, 110, -27, 62, 105, 97, 42);
+          AlternateUsernameCredentials.a(-66, 110, -27, 62, 105, 97, 42);
           if (param3 > param6) {
             return false;
           }

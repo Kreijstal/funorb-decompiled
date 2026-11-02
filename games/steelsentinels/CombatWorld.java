@@ -290,7 +290,7 @@ final class CombatWorld {
                     var8 = jm.field_p;
                   }
                   if (var5_ref_int__[var7] == 18) {
-                    var8 = si.field_k;
+                    var8 = CachedTextLayout.field_k;
                   }
                   if (var5_ref_int__[var7] == 20) {
                     var8 = eb.field_o;
@@ -305,7 +305,7 @@ final class CombatWorld {
                     var8 = uj.field_i;
                   }
                   if (var5_ref_int__[var7] == 24) {
-                    var8 = pg.field_z;
+                    var8 = AlternateUsernameCredentials.field_z;
                   }
                   regionExit1: {
                     var9_int = -1;
@@ -544,9 +544,9 @@ final class CombatWorld {
               (decompiledFrameCompleted4) &&
               (!this.field_j)) {
               this.field_j = true;
-              nc.field_a = this.simulationTick / 50;
+              WeightedLruCache.field_a = this.simulationTick / 50;
               if (DialWidgetPainter.field_f) {
-                nc.field_a = nc.field_a + 600;
+                WeightedLruCache.field_a = WeightedLruCache.field_a + 600;
               }
               var4 = 0;
               var5_ref_jc = new NodeIterator(this.field_e);
@@ -571,7 +571,7 @@ final class CombatWorld {
                   var6_int = var10_ref_mb.armour;
                   var9_int = var10_ref_mb.maximumCharge - GradientOutlineTextPainter.a(91, var10_ref_mb.activeModuleType);
                 }
-                TabbedPanel.a(DirectByteStorage.field_j, -(var9_int * 50000) + (this.field_M + this.field_f), nc.field_a, QuickChatHelpDialog.field_Ub, -(var7 * 60000) + (-(var6_int * 128) + this.field_a), -(var8_int * 256) + (-(var4 * 100) + this.field_N), this.field_q, (byte) -65);
+                TabbedPanel.a(DirectByteStorage.field_j, -(var9_int * 50000) + (this.field_M + this.field_f), WeightedLruCache.field_a, QuickChatHelpDialog.field_Ub, -(var7 * 60000) + (-(var6_int * 128) + this.field_a), -(var8_int * 256) + (-(var4 * 100) + this.field_N), this.field_q, (byte) -65);
               }
             }
           }
@@ -659,7 +659,7 @@ final class CombatWorld {
                     var9 = jm.field_p;
                   }
                   if (var4_ref_int__[var6_int] == 18) {
-                    var9 = si.field_k;
+                    var9 = CachedTextLayout.field_k;
                   }
                   if (null != var9) {
                     if (var4_ref_int__[var6_int] != 0) {
@@ -1402,7 +1402,7 @@ final class CombatWorld {
           IterableNodeHashTable.a(var1, (byte) -82);
           lf.a();
           SoftwareRaster.b();
-          vn.field_h = 0;
+          DateOfBirthValidator.field_h = 0;
           LoginForm.a(param0);
           var2 = var1.copySprite();
           var3 = 0;
@@ -2418,7 +2418,7 @@ final class CombatWorld {
                     if (-1 != param4[var10] &&
                       (param4[var10] & 32) != 0) {
                       param4[var10] = ec.a(param4[var10], -33);
-                      param4[var10] = vn.a(param4[var10], 16);
+                      param4[var10] = DateOfBirthValidator.a(param4[var10], 16);
                     }
                     var10++;
                   }
@@ -3242,9 +3242,9 @@ final class CombatWorld {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (qj.field_q != null &&
-            qj.field_q[param1] != null) {
-            fl.a((byte) 28, qj.field_q[param1], ResourceArchive.field_e[param1]);
+          if (SentinelAnimationEditor.field_q != null &&
+            SentinelAnimationEditor.field_q[param1] != null) {
+            fl.a((byte) 28, SentinelAnimationEditor.field_q[param1], ResourceArchive.field_e[param1]);
           }
           if (param0 != -2483) {
             CombatWorld.a((String) null, (String) null, (String) null, -92);
@@ -3566,7 +3566,7 @@ final class CombatWorld {
         int var16 = 0;
         int var17 = 0;
         long var18 = 0L;
-        bh var20 = null;
+        SentinelCommandSimulator var20 = null;
         int var21 = 0;
         int var22 = 0;
         Projectile var23 = null;
@@ -3663,7 +3663,7 @@ final class CombatWorld {
           }
           if (var18 != 0L &&
             var8.aimAngle != 0) {
-            var20 = new bh(param3);
+            var20 = new SentinelCommandSimulator(param3);
             var20.field_b = var9;
             var21 = param3.worldX;
             var22 = -(param3.field_Db << 3) + param3.worldY;
@@ -3809,7 +3809,7 @@ final class CombatWorld {
             stackIn_13_0 = dc.field_a;
             return stackIn_13_0;
           }
-          stackIn_11_0 = re.field_W + (-this.playerCount + param1 + 1);
+          stackIn_11_0 = NumericDateInputWidget.field_W + (-this.playerCount + param1 + 1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

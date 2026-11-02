@@ -502,10 +502,10 @@ final class SoundCache {
           ef.a(1, UiTheme.field_q * 2);
         }
         if (param1 != -1) {
-          if (qj.field_q[param1] != null) {
-            GrowableIntList.field_c = PcmSampleStream.createAtRatePercent(qj.field_q[param1], 100, UiTheme.field_q);
+          if (SentinelAnimationEditor.field_q[param1] != null) {
+            GrowableIntList.field_c = PcmSampleStream.createAtRatePercent(SentinelAnimationEditor.field_q[param1], 100, UiTheme.field_q);
             ef.a(1, UiTheme.field_q / 2);
-            on.a(GrowableIntList.field_c, -48);
+            EmailCredentials.a(GrowableIntList.field_c, -48);
           }
           return;
         }

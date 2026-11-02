@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oe {
+final class QuickChatPhraseCache {
     private ResourceArchive field_c;
-    private nc field_g;
+    private WeightedLruCache field_g;
     static long field_b;
     static RgbSprite[] field_f;
     static int field_e;
@@ -45,7 +45,7 @@ final class oe {
           if (param2 == -6988) {
             return;
           }
-          oe.a(66);
+          QuickChatPhraseCache.a(66);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,18 +86,18 @@ final class oe {
           var5.a(new PacketBuffer(var4), (byte) -116);
           if (param0 >= 32768) {
             var5.c((byte) -109);
-            this.field_g.a((long)param0, var5, 1);
+            this.field_g.put((long)param0, var5, 1);
             return var5;
           }
-          this.field_g.a((long)param0, var5, 1);
+          this.field_g.put((long)param0, var5, 1);
           return var5;
         }
         if (param0 < 32768) {
-          this.field_g.a((long)param0, var5, 1);
+          this.field_g.put((long)param0, var5, 1);
           return var5;
         }
         var5.c((byte) -109);
-        this.field_g.a((long)param0, var5, 1);
+        this.field_g.put((long)param0, var5, 1);
         return var5;
     }
 
@@ -111,7 +111,7 @@ final class oe {
           field_d = null;
           return;
         }
-        oe.a(-128);
+        QuickChatPhraseCache.a(-128);
         field_l = null;
         field_a = null;
         field_j = null;
@@ -147,7 +147,7 @@ final class oe {
         }
     }
 
-    oe(int param0, ResourceArchive param1, ResourceArchive param2, om param3) {
+    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, om param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -157,7 +157,7 @@ final class oe {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_g = new nc(64);
+        this.field_g = new WeightedLruCache(64);
         try {
           this.field_c = param2;
           this.field_k = param1;

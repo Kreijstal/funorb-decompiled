@@ -34,7 +34,7 @@ final class qf {
         if (param0 == 100) {
           var1 = sh.c(115);
           var2 = AlphaContainer.a(false);
-          MatchingTextValidator.field_p.a((SingleChildContainer.field_I << 1) + var1, -15203, MusicPatchPcmStream.field_D - SingleChildContainer.field_I, var2 + (on.field_n << 1), SingleChildContainer.field_Q - on.field_n);
+          MatchingTextValidator.field_p.a((SingleChildContainer.field_I << 1) + var1, -15203, MusicPatchPcmStream.field_D - SingleChildContainer.field_I, var2 + (EmailCredentials.field_n << 1), SingleChildContainer.field_Q - EmailCredentials.field_n);
           dk.b(param0 - 6661);
           return;
         }
@@ -60,8 +60,8 @@ final class qf {
         if (BoundedUrlRequest.field_i != null) {
           BoundedUrlRequest.field_i.c(param0, 21519);
         }
-        if (si.field_A != null) {
-          si.field_A.c(param0, 21519);
+        if (CachedTextLayout.field_A != null) {
+          CachedTextLayout.field_A.c(param0, 21519);
         }
         if (param1 >= -116) {
           return;

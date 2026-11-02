@@ -59,7 +59,7 @@ final class BattleTerrain {
               return false;
             }
             if (NodeDeque.e((byte) 17)) {
-              oe.a(param2, CachedArchiveProvider.field_t, -6988, hk.field_ic, wn.field_f, (String) null);
+              QuickChatPhraseCache.a(param2, CachedArchiveProvider.field_t, -6988, hk.field_ic, wn.field_f, (String) null);
             }
             return true;
           }
@@ -1372,13 +1372,13 @@ final class BattleTerrain {
                         }
                         case 4: {
                             try {
-                                if (null != si.field_l) {
+                                if (null != CachedTextLayout.field_l) {
                                     statePc = 7;
                                     continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 5. */
                                     {
-                                        si.field_l = new IndexedSprite[256];
+                                        CachedTextLayout.field_l = new IndexedSprite[256];
                                         statePc = 7;
                                         continue scanLoop1;
                                     }
@@ -1959,7 +1959,7 @@ final class BattleTerrain {
                                 } else {
                                     /* Inlined CFG state: 59. */
                                     {
-                                        var1 = new ArticulatedPart(si.field_l[var2[var3] + 11], 16, 32, 39, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[-17 + var2[var3]]), new PartInstruction(0, 0, 10)});
+                                        var1 = new ArticulatedPart(CachedTextLayout.field_l[var2[var3] + 11], 16, 32, 39, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[-17 + var2[var3]]), new PartInstruction(0, 0, 10)});
                                         var1.componentId = var2[var3];
                                         QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                         var3++;
@@ -2028,7 +2028,7 @@ final class BattleTerrain {
                                 } else {
                                     /* Inlined CFG state: 66. */
                                     {
-                                        var1 = new ArticulatedPart(si.field_l[11 + var2[var3]], 32, 32, 32, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[var2[var3] - 17]), new PartInstruction(0, 0, 35)});
+                                        var1 = new ArticulatedPart(CachedTextLayout.field_l[11 + var2[var3]], 32, 32, 32, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[var2[var3] - 17]), new PartInstruction(0, 0, 35)});
                                         var1.componentId = var2[var3];
                                         QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                         var3++;
@@ -2097,7 +2097,7 @@ final class BattleTerrain {
                                 } else {
                                     /* Inlined CFG state: 73. */
                                     {
-                                        var1 = new ArticulatedPart(si.field_l[-17 + var2[var3] + 28], 128, 32, 27, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[-17 + var2[var3]]), new PartInstruction(0, 0, 10)});
+                                        var1 = new ArticulatedPart(CachedTextLayout.field_l[-17 + var2[var3] + 28], 128, 32, 27, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[-17 + var2[var3]]), new PartInstruction(0, 0, 10)});
                                         var1.componentId = var2[var3];
                                         QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                         var3++;
@@ -2177,7 +2177,7 @@ final class BattleTerrain {
                                                 stackIn_82_0 = stackIn_85_0;
                                                 stackIn_85_1 = null;
                                                 stackIn_82_1 = stackIn_85_1;
-                                                stackIn_85_2 = si.field_l[var2[var3] + 28 - 17];
+                                                stackIn_85_2 = CachedTextLayout.field_l[var2[var3] + 28 - 17];
                                                 stackIn_82_2 = stackIn_85_2;
                                                 stackIn_85_3 = 256;
                                                 stackIn_82_3 = stackIn_85_3;

@@ -19,7 +19,7 @@ final class ArchiveIndex {
     static SceneWidget field_s;
     private byte[] indexDigest;
     int groupCapacity;
-    static oe field_w;
+    static QuickChatPhraseCache field_w;
     static String field_f;
     private int[] groupNameHashes;
     int[] groupCrcs;
@@ -275,7 +275,7 @@ final class ArchiveIndex {
             if (64 != expectedDigest.length) {
               throw new RuntimeException();
             }
-            this.indexDigest = co.a((byte) -37, encodedIndex.length, 0, encodedIndex);
+            this.indexDigest = QuickChatCategoryCache.a((byte) -37, encodedIndex.length, 0, encodedIndex);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (expectedDigest[var4_int] != this.indexDigest[var4_int]) {
                 throw new RuntimeException();

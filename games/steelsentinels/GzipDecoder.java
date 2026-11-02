@@ -224,7 +224,7 @@ final class GzipDecoder {
     }
 
     final static void a(byte param0, int param1) {
-        int var2 = (-640 + re.field_Z) / 2;
+        int var2 = (-640 + NumericDateInputWidget.field_Z) / 2;
         int var3 = AudioService.field_h * AudioService.field_h;
         int var4 = -(param1 * param1) + var3;
         SocialListPanel.field_ec.a(0, 90, -210 + (SoftwareRaster.field_j - 4), -(var4 * 199 / var3) + var2, 199);
@@ -300,7 +300,7 @@ final class GzipDecoder {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$e9dea5688aa5(int param0, int param1) {
-        int var2 = (-640 + re.field_Z) / 2;
+        int var2 = (-640 + NumericDateInputWidget.field_Z) / 2;
         int var3 = AudioService.field_h * AudioService.field_h;
         int var4 = -(param1 * param1) + var3;
         SocialListPanel.field_ec.a(0, 90, -210 + (SoftwareRaster.field_j - 4), -(var4 * 199 / var3) + var2, 199);

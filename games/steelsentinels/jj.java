@@ -115,7 +115,7 @@ final class jj {
               ve.a((byte) -86, 1)) {
               var6_intLifetime1 = rf.field_d.readUnsignedByte((byte) -68);
               rf.field_d.position = 0;
-              on.field_k = null;
+              EmailCredentials.field_k = null;
               ch.field_N = var6_intLifetime1;
               if (0 != var6_intLifetime1 &&
                 1 != var6_intLifetime1) {

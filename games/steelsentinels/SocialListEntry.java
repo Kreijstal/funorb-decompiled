@@ -111,13 +111,13 @@ final class SocialListEntry extends SceneWidget {
           if (bd.field_c > 0) {
             if (GzipDecoder.field_c) {
               SoftwareRaster.f(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
-              fb.field_r.a(param0, (byte) 127);
+              UsernameCredentials.field_r.a(param0, (byte) 127);
             }
           } else {
             if (fj.field_f > 0 &&
               GzipDecoder.field_c) {
               SoftwareRaster.f(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
-              fb.field_r.a(param0, (byte) 127);
+              UsernameCredentials.field_r.a(param0, (byte) 127);
             }
           }
         } else {
@@ -126,7 +126,7 @@ final class SocialListEntry extends SceneWidget {
               !(fj.field_f <= 0)) &&
               GzipDecoder.field_c) {
               SoftwareRaster.f(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
-              fb.field_r.a(param0, (byte) 127);
+              UsernameCredentials.field_r.a(param0, (byte) 127);
             }
           } else {
             SoftwareRaster.f(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
@@ -142,7 +142,7 @@ final class SocialListEntry extends SceneWidget {
             }
             if (GzipDecoder.field_c) {
               SoftwareRaster.f(0, 0, SoftwareRaster.field_c, DisplayNameForm.field_V.field_cb);
-              fb.field_r.a(param0, (byte) 127);
+              UsernameCredentials.field_r.a(param0, (byte) 127);
             }
           }
         }

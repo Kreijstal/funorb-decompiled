@@ -92,7 +92,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     if (!param3) {
                       stackIn_35_0 = RasterBuffer.field_h;
                     } else {
-                      stackIn_35_0 = qj.field_c;
+                      stackIn_35_0 = SentinelAnimationEditor.field_c;
                     }
                     var11 = stackIn_35_0;
                     var12 = new SceneWidget(-1L, ThreeSliceButtonPainter.field_s, var11);
@@ -108,7 +108,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   }
                   if (var8 == 0) {
                     var8 = 1;
-                    var15 = new SceneWidget(-1L, ThreeSliceButtonPainter.field_s, si.field_D[var7]);
+                    var15 = new SceneWidget(-1L, ThreeSliceButtonPainter.field_s, CachedTextLayout.field_D[var7]);
                     var15.field_Kb = 1;
                     var15.field_nb = 11119017;
                     param2 += 2;

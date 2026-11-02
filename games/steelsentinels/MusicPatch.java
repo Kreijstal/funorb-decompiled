@@ -94,11 +94,11 @@ final class MusicPatch extends IntrusiveNode {
         t.field_l = -1;
         eh.field_a = -1;
         SectorCacheStore.field_b = null;
-        pg.field_A = false;
+        AlternateUsernameCredentials.field_A = false;
         if (param0 != -30603) {
           return;
         }
-        si.field_m = 0;
+        CachedTextLayout.field_m = 0;
     }
 
     public static void c(byte param0) {
@@ -495,7 +495,7 @@ final class MusicPatch extends IntrusiveNode {
                 var34_int = var34_int + (va.field_e + var52_ref.field_z);
               }
               if ((1 << ja.field_f & var14Lifetime1) != 0) {
-                stackIn_90_0 = ha.field_Q;
+                stackIn_90_0 = DateInputWidget.field_Q;
                 if (var12.field_ec) {
                   stackIn_91_1 = 1;
                 } else {
@@ -564,21 +564,21 @@ final class MusicPatch extends IntrusiveNode {
               }
               if (var12.field_vc) {
                 var12.field_Dc.field_S = SocketConnector.a(LoginMethod.field_a, -121, new String[]{var32});
-                var12.field_Dc.a(0, var31, SocketConnector.field_b, da.field_g, var12.field_zb - da.field_g * 2);
+                var12.field_Dc.a(0, var31, SocketConnector.field_b, TextLayout.field_g, var12.field_zb - TextLayout.field_g * 2);
                 var31 = var31 + SocketConnector.field_b;
               }
               if (var12.field_bc) {
                 var12.field_lc.field_S = SocketConnector.a(MusicPatchPcmStream.field_x, -33, new String[]{var32});
-                var12.field_lc.a(param1 ^ 1, var31, SocketConnector.field_b, da.field_g, -(da.field_g * 2) + var12.field_zb);
+                var12.field_lc.a(param1 ^ 1, var31, SocketConnector.field_b, TextLayout.field_g, -(TextLayout.field_g * 2) + var12.field_zb);
                 var31 = var31 + SocketConnector.field_b;
               }
             }
             var33 = SceneWidgetNode.a(var32, (byte) 112, var12.field_Ac);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_xc.field_L.wrappedLineCount(var33, -da.field_g - da.field_g + var12.field_zb);
+              var34_intLifetime1 = var12.field_xc.field_L.wrappedLineCount(var33, -TextLayout.field_g - TextLayout.field_g + var12.field_zb);
               var12.field_xc.field_S = var33;
               var12.field_xc.field_V = var12.field_mc * 256 / Js5ArchiveManager.field_l;
-              var12.field_xc.a(0, var31, SocketConnector.field_b * var34_intLifetime1, da.field_g, -(2 * da.field_g) + var12.field_zb);
+              var12.field_xc.a(0, var31, SocketConnector.field_b * var34_intLifetime1, TextLayout.field_g, -(2 * TextLayout.field_g) + var12.field_zb);
               var31 = var31 + var34_intLifetime1 * SocketConnector.field_b;
             }
             if (var7_int == 0) {
@@ -625,7 +625,7 @@ final class MusicPatch extends IntrusiveNode {
               if (!var12.field_cc &&
                 !var12.field_vc) {
                 if (var12.field_dc) {
-                  stackIn_164_0 = fb.field_p;
+                  stackIn_164_0 = UsernameCredentials.field_p;
                 } else {
                   stackIn_164_0 = jh.field_e;
                 }

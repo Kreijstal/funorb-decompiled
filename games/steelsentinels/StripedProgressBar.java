@@ -273,7 +273,7 @@ final class StripedProgressBar extends UiComponent {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (nc.field_g.indexOf(var5Lifetime1) == -1) {
+              if (WeightedLruCache.field_g.indexOf(var5Lifetime1) == -1) {
                 stackIn_47_0 = ec.field_b;
                 return stackIn_47_0;
               }
@@ -315,23 +315,23 @@ final class StripedProgressBar extends UiComponent {
         qf.field_c = new SceneWidget(0L, (SceneWidget) null);
         int var4 = -124 / ((param1 + 78) / 32);
         if (param0 == null) {
-          sj.a("QC1", -29, (Throwable) null);
+          MusicCrossfadeStream.a("QC1", -29, (Throwable) null);
           return;
         }
         param0.fileRetentionMode = 0;
         param0.discardPackedGroups = false;
-        cd.field_e = new co(var3_int, param0, param0);
-        ArchiveIndex.field_w = new oe(var3_int, param0, param0, new kb());
+        cd.field_e = new QuickChatCategoryCache(var3_int, param0, param0);
+        ArchiveIndex.field_w = new QuickChatPhraseCache(var3_int, param0, param0, new kb());
         QuickChatCategory var5 = NodeDeque.d(0);
         if (var5 == null) {
-          sj.a("QC2", -49, (Throwable) null);
+          MusicCrossfadeStream.a("QC2", -49, (Throwable) null);
           return;
         }
         try {
           fc.a(var5, 101);
-          pg.field_u = fm.a(65793, false, 2245737, 1127256, 65793, 4020342, 1513239, 0, 1513239, 5138823, 8947848, (BitmapFont) null, 65793);
+          AlternateUsernameCredentials.field_u = fm.a(65793, false, 2245737, 1127256, 65793, 4020342, 1513239, 0, 1513239, 5138823, 8947848, (BitmapFont) null, 65793);
           Sprite.field_f = fm.a(0, false, 0, 0, 0, 0, 0, 16764006, 0, 0, 0, param2, 0);
-          fb.field_l = fm.a(0, false, 0, 0, 0, 0, 0, 16777215, 0, 0, 0, param2, 0);
+          UsernameCredentials.field_l = fm.a(0, false, 0, 0, 0, 0, 0, 16777215, 0, 0, 0, param2, 0);
           var6 = SoftwareRaster.field_c;
           var7 = SoftwareRaster.field_j;
           var16 = SoftwareRaster.field_g;
@@ -341,7 +341,7 @@ final class StripedProgressBar extends UiComponent {
             SoftwareRaster.d(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
           SoftwareRaster.setTarget(var16, var6, var7);
-          ImageProducerRasterBuffer.field_m = BufferedSocket.a(fb.field_l, var5, false, Sprite.field_f, pg.field_u);
+          ImageProducerRasterBuffer.field_m = BufferedSocket.a(UsernameCredentials.field_l, var5, false, Sprite.field_f, AlternateUsernameCredentials.field_u);
           qf.field_c.field_M = new NodeDeque();
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "bk.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

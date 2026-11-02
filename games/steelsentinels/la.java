@@ -116,18 +116,18 @@ final class la {
           if (null != Js5ArchiveManager.field_d &&
             Js5ArchiveManager.field_d.ensureIndex(true) &&
             Js5ArchiveManager.field_d.a("benefits", (byte) 90) &&
-            fb.field_h != null &&
-            fb.field_h.ensureIndex(true) &&
-            fb.field_h.a("benefits", (byte) 90)) {
+            UsernameCredentials.field_h != null &&
+            UsernameCredentials.field_h.ensureIndex(true) &&
+            UsernameCredentials.field_h.a("benefits", (byte) 90)) {
             c.field_o = rl.a(Js5ArchiveManager.field_d, "benefits", "headline", false);
             wb.field_i = rl.a(Js5ArchiveManager.field_d, "benefits", "blurbpane", false);
             ba.field_e = rl.a(Js5ArchiveManager.field_d, "benefits", "button", false);
-            da.field_f = rl.a(Js5ArchiveManager.field_d, "benefits", "signup_text", false);
+            TextLayout.field_f = rl.a(Js5ArchiveManager.field_d, "benefits", "signup_text", false);
             ValidatedTextWidget.field_pb = rl.a(Js5ArchiveManager.field_d, "benefits", "menu_text", false);
             ValidatedTextWidget.field_ub = rl.a(Js5ArchiveManager.field_d, "benefits", "button_frame", false);
             NodeIterator.field_b = rl.a(Js5ArchiveManager.field_d, "benefits", "arrow", false);
-            FullscreenFocusCanvas.field_g = (BitmapFont) ((Object) vd.a(fb.field_h, "benefits", Js5ArchiveManager.field_d, -1, "large_font"));
-            wn.field_a = (BitmapFont) ((Object) vd.a(fb.field_h, "benefits", Js5ArchiveManager.field_d, -1, "small_font"));
+            FullscreenFocusCanvas.field_g = (BitmapFont) ((Object) vd.a(UsernameCredentials.field_h, "benefits", Js5ArchiveManager.field_d, -1, "large_font"));
+            wn.field_a = (BitmapFont) ((Object) vd.a(UsernameCredentials.field_h, "benefits", Js5ArchiveManager.field_d, -1, "small_font"));
             var27 = SoftwareRaster.field_g;
             var2 = SoftwareRaster.field_c;
             var3 = SoftwareRaster.field_j;
@@ -156,7 +156,7 @@ final class la {
               uj.a(3, 0, 0, (byte) -79, AccountMessagePanel.field_R[var7].field_F, 1, AccountMessagePanel.field_R[var7], AccountMessagePanel.field_R[var7].field_A);
             }
             Js5ArchiveManager.field_f = null;
-            tf.field_e = da.field_f.copySprite();
+            tf.field_e = TextLayout.field_f.copySprite();
             tf.field_e.bindRasterTarget();
             MusicPatchPcmStream.a(SoftwareRaster.field_j * 2 / 3, 0, SoftwareRaster.field_c, 64, 0, 40);
             SoftwareRaster.setTarget(var27, var2, var3);
@@ -289,7 +289,7 @@ final class la {
           if (null != ba.field_e &&
             null != ValidatedTextWidget.field_ub) {
             ba.field_e.a(231, 390);
-            var2_ref_wk = da.field_f;
+            var2_ref_wk = TextLayout.field_f;
             if (jh.field_i.field_e == 0) {
               var2_ref_wk = tf.field_e;
             }

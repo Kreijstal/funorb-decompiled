@@ -28,7 +28,7 @@ class TextHotspotWidget extends TextButton {
           return;
         }
         try {
-          vn.field_i = param3;
+          DateOfBirthValidator.field_i = param3;
           cc.field_Xb = param2;
           LoginDialog.a((byte) -102, param0, rh.field_p);
         } catch (RuntimeException runtimeException) {
@@ -59,7 +59,7 @@ class TextHotspotWidget extends TextButton {
         if (DiskCacheWorker.field_j == AccountTermsPanel.field_ab) {
           return LinkButtonPainter.field_f;
         }
-        return vn.field_i;
+        return DateOfBirthValidator.field_i;
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -92,14 +92,14 @@ class TextHotspotWidget extends TextButton {
         int var2;
         int var3;
         WidgetTextLayout var4;
-        da var5;
+        TextLayout var5;
         int var6;
         String var7;
         int var8;
         int var9;
         int var10;
         Object var11;
-        il var13;
+        TextLayoutLine var13;
         int var14;
         int var15;
         TextHotspotRegion var16;
@@ -399,7 +399,7 @@ class TextHotspotWidget extends TextButton {
             var7 = var9.a(param2, 3, (UiComponent) (this));
             var8 = var9.a((byte) -121, (UiComponent) (this), param0);
             do {
-              ha.a(var7 + var6.field_s - 2, var6.field_u + 2, 2 + var6.field_o, 0, var6.field_w + var8 - 2);
+              DateInputWidget.a(var7 + var6.field_s - 2, var6.field_u + 2, 2 + var6.field_o, 0, var6.field_w + var8 - 2);
               var6 = var6.field_q;
             } while (var6 != null);
           }

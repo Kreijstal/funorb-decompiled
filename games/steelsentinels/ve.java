@@ -82,7 +82,7 @@ final class ve {
               var2_int = -rf.field_d.position + param1;
             }
             rb.field_h.readFully(rf.field_d.position, var2_int, rf.field_d.payload, -256);
-            oe.field_b = mm.a(-100);
+            QuickChatPhraseCache.field_b = mm.a(-100);
             rf.field_d.position = rf.field_d.position + var2_int;
             if (rf.field_d.position < param1) {
               return false;

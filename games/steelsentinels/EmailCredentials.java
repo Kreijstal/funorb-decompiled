@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class on extends me {
+final class EmailCredentials extends LoginCredentials {
     static int field_j;
     static int field_h;
     private String field_m;
@@ -122,7 +122,7 @@ final class on extends me {
           param0.a(13588, this.field_m);
           param0.a(this.field_l, (byte) -83);
           if (param1) {
-            on.b(114);
+            EmailCredentials.b(114);
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "on.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -177,7 +177,7 @@ final class on extends me {
         field_k = null;
     }
 
-    on(String param0, String param1) {
+    EmailCredentials(String param0, String param1) {
         try {
           this.field_m = param0;
           this.field_l = param1;

@@ -240,7 +240,7 @@ final class cl {
               oc.field_b[1] = 5;
             }
           } else {
-            var3_int = tc.a(ud.field_C, pa.field_k, 75, SocketConnector.a(pg.field_t, -25, new String[]{"<br><%0><br>"}), TextButton.field_J);
+            var3_int = tc.a(ud.field_C, pa.field_k, 75, SocketConnector.a(AlternateUsernameCredentials.field_t, -25, new String[]{"<br><%0><br>"}), TextButton.field_J);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(TextButton.field_J[var5])) {
@@ -369,7 +369,7 @@ final class cl {
           }
           SingleChildContainer.field_Q = -(TickClock.field_d >> 1) + kb.field_a;
           var4Lifetime3 = -12 / ((param0 - 44) / 61);
-          il.field_c = new int[ProxySocketConnector.field_j.length][];
+          TextLayoutLine.field_c = new int[ProxySocketConnector.field_j.length][];
           var5Lifetime3 = 0;
           var6Lifetime1 = SingleChildContainer.field_Q;
           while (ProxySocketConnector.field_j.length > var5Lifetime3) {
@@ -380,11 +380,11 @@ final class cl {
               var8Lifetime1 = wd.$cfr$intArgs$a$1694234bddb3(ProxySocketConnector.field_j[var5Lifetime3], 52, true);
               var9 = QuickChatMenu.field_kc - (var8Lifetime1 >> 1);
               var6Lifetime1 = var6Lifetime1 + MembershipPromotionScreen.field_m;
-              il.field_c[var5Lifetime3] = new int[4];
-              il.field_c[var5Lifetime3][0] = var9 - ud.field_y;
-              il.field_c[var5Lifetime3][1] = var6Lifetime1;
-              il.field_c[var5Lifetime3][2] = (ud.field_y << 1) + var8Lifetime1;
-              il.field_c[var5Lifetime3][3] = rn.field_q + (SectorCacheStore.field_j << 1);
+              TextLayoutLine.field_c[var5Lifetime3] = new int[4];
+              TextLayoutLine.field_c[var5Lifetime3][0] = var9 - ud.field_y;
+              TextLayoutLine.field_c[var5Lifetime3][1] = var6Lifetime1;
+              TextLayoutLine.field_c[var5Lifetime3][2] = (ud.field_y << 1) + var8Lifetime1;
+              TextLayoutLine.field_c[var5Lifetime3][3] = rn.field_q + (SectorCacheStore.field_j << 1);
               var6Lifetime1 = var6Lifetime1 + ((SectorCacheStore.field_j << 1) - (-MembershipPromotionScreen.field_m - rn.field_q));
             }
             var5Lifetime3++;

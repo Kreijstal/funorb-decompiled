@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj {
+final class SentinelAnimationEditor {
     private Sentinel field_l;
     static String[] field_d;
     private int field_t;
@@ -394,7 +394,7 @@ final class qj {
           }
         }
         this.field_l.g(-18, this.field_n);
-        if (nc.field_d == 1 &&
+        if (WeightedLruCache.field_d == 1 &&
           this.field_w != -1) {
           if (this.field_f != this.field_w) {
             this.field_f = this.field_w;
@@ -410,7 +410,7 @@ final class qj {
           Checkbox.field_bb.b((byte) 127);
         }
         if (param0 <= 43) {
-          qj.c(117);
+          SentinelAnimationEditor.c(117);
         }
     }
 
@@ -521,7 +521,7 @@ final class qj {
                   var10 = 26248;
                 }
                 SoftwareRaster.c(var2, var9, 5, var10);
-                if ((nc.field_d == 0 ||
+                if ((WeightedLruCache.field_d == 0 ||
                   var8Lifetime3 == var4) && (-5 + var2 <= oh.field_f &&
                   5 + var2 >= oh.field_f &&
                   var3 <= DelegatingCanvas.field_c &&
@@ -546,7 +546,7 @@ final class qj {
                     SoftwareRaster.d(var7_int + var2, var3 - 3, 7, 16746496);
                     var9 = var7_int * var5_ref_int__[var8Lifetime3] / 2500 + var7_int + var2;
                     SoftwareRaster.c(var9, var3, 5, 16746496);
-                    if ((nc.field_d == 0 ||
+                    if ((WeightedLruCache.field_d == 0 ||
                       var8Lifetime3 == var4) && (oh.field_f >= var2 &&
                       var7_int * 2 + var2 >= oh.field_f &&
                       -5 + var3 <= DelegatingCanvas.field_c &&
@@ -564,7 +564,7 @@ final class qj {
                   SoftwareRaster.g(-3 + var2, var3 + var7_int, 7, 16746496);
                   var9 = var7_int * var5_ref_int__[var8Lifetime3] / 2500 + var3 + var7_int;
                   SoftwareRaster.c(var2, var9, 5, 16746496);
-                  if ((nc.field_d == 0 ||
+                  if ((WeightedLruCache.field_d == 0 ||
                     var4 == var8Lifetime3) && (oh.field_f >= -5 + var2 &&
                     5 + var2 >= oh.field_f &&
                     DelegatingCanvas.field_c >= var3 &&
@@ -746,7 +746,7 @@ final class qj {
         }
     }
 
-    private qj() throws Throwable {
+    private SentinelAnimationEditor() throws Throwable {
         throw new Error();
     }
 

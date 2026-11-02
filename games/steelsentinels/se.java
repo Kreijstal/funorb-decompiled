@@ -84,7 +84,7 @@ final class se {
               var4_int = param1[var2_int++];
               var5 = dm.field_c ? 1 : 0;
               stackIn_16_0 = ((1 & var4_int) != 0);
-              si.field_p = stackIn_16_0;
+              CachedTextLayout.field_p = stackIn_16_0;
               stackIn_20_0 = ((4 & var4_int) != 0);
               dm.field_c = stackIn_20_0;
               stackIn_24_0 = ((2 & var4_int) != 0);
@@ -114,7 +114,7 @@ final class se {
               stackIn_43_0[stackIn_43_1] = stackIn_44_2;
               stackIn_47_0 = ImageProducerRasterBuffer.field_A;
               stackIn_47_1 = 41;
-              if (si.field_p) {
+              if (CachedTextLayout.field_p) {
                 stackIn_48_2 = hf.field_b;
               } else {
                 stackIn_48_2 = fm.field_h;
@@ -154,7 +154,7 @@ final class se {
               if (!tj.field_a) {
                 stackIn_74_2 = RasterBuffer.field_d;
               } else {
-                stackIn_74_2 = qj.field_u;
+                stackIn_74_2 = SentinelAnimationEditor.field_u;
               }
               stackIn_73_0[stackIn_73_1] = stackIn_74_2;
             }
@@ -399,7 +399,7 @@ final class se {
                 var6 = rg.a(AudioService.field_g[var3_int], true, (byte) -115);
                 var4 = var4 + tf.field_c;
                 var7 = ProxyAuthenticationException.field_f - (var6 >> 1);
-                if (pg.a(WhirlpoolHasher.field_e + (IconLabelControl.field_ac << 1), var6 + (DraggableWidget.field_U << 1), param2, var7 - DraggableWidget.field_U, param0 - 32, var4, param1)) {
+                if (AlternateUsernameCredentials.a(WhirlpoolHasher.field_e + (IconLabelControl.field_ac << 1), var6 + (DraggableWidget.field_U << 1), param2, var7 - DraggableWidget.field_U, param0 - 32, var4, param1)) {
                   stackIn_13_0 = var5;
                   return stackIn_13_0;
                 }
@@ -538,12 +538,12 @@ final class se {
           stackIn_27_0.field_Ab = stackIn_28_1;
           stackIn_31_0 = var8;
           if (param2 != 0) {
-            stackIn_32_1 = co.field_d;
+            stackIn_32_1 = QuickChatCategoryCache.field_d;
           } else {
             stackIn_32_1 = MatchingTextValidator.field_t;
           }
           stackIn_31_0.field_I = stackIn_32_1;
-          var9 = sj.field_v[param3.componentId];
+          var9 = MusicCrossfadeStream.field_v[param3.componentId];
           var10 = 0;
           if (param3.field_Q == 1 &&
             param2 != 0) {
@@ -556,7 +556,7 @@ final class se {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var16 >= var15_ref_int__.length))) {
               var17_int = var15_ref_int__[var16];
-              var18_int = sj.field_v[var17_int];
+              var18_int = MusicCrossfadeStream.field_v[var17_int];
               stackOut_40_0 = t.a(rn.field_D, var17_int, -20370);
               stackIn_48_0 = stackOut_40_0 ? 1 : 0;
               stackIn_41_0 = stackOut_40_0;
@@ -721,7 +721,7 @@ final class se {
           boolean decompiledFrameRemainder0 = true;
           var14 = new SceneWidget((long)param3.componentId, (SceneWidget) null);
           var14.a(0, 2, -4 + var7, 2, var11 - 4);
-          var14.field_I = co.field_d;
+          var14.field_I = QuickChatCategoryCache.field_d;
           if (1 != param3.field_Q ||
             !(NodeDeque.a((byte) -82, param3.componentId) >= 0)) {
             ParticleEffect.a(param3, var14, (byte) -93, false, -4 + var11, -4 + var7);
@@ -731,7 +731,7 @@ final class se {
             var15 = NodeDeque.a((byte) 83, param3.componentId);
             var14.field_Pb = new RgbSprite(Math.min(64, -4 + var11), Math.min(64, var7 - 4));
             var14.field_Pb.bindRasterTarget();
-            si.field_E[var15].a(0, 0);
+            CachedTextLayout.field_E[var15].a(0, 0);
             SoftwareRaster.c();
             Checkbox.field_bb.b((byte) 121);
             ViewportController.field_h[var15] = var14;
@@ -751,11 +751,11 @@ final class se {
           }
           var8.a(var14, 123);
           if (var6 != 0) {
-            var15Lifetime1 = sj.field_F.field_A;
-            var16Lifetime2 = sj.field_F.field_F;
+            var15Lifetime1 = MusicCrossfadeStream.field_F.field_A;
+            var16Lifetime2 = MusicCrossfadeStream.field_F.field_F;
             var17 = new SceneWidget(-1L, (SceneWidget) null);
             var17.a(0, (var14.field_Lb - var15Lifetime1) / 2 + var14.field_eb, var16Lifetime2, (-var15Lifetime1 + var14.field_zb) / 2 + var14.field_Y, var15Lifetime1);
-            var17.field_Pb = sj.field_F;
+            var17.field_Pb = MusicCrossfadeStream.field_F;
             var8.a(var17, 118);
           }
           if ((var6 == 0 ||

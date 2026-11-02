@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class si extends da {
+final class CachedTextLayout extends TextLayout {
     static String field_F;
     static String field_u;
     private int field_G;
@@ -88,7 +88,7 @@ final class si extends da {
           var7.field_L = (BitmapFont) ((Object) pl.field_U);
           if (!param1) {
             var11 = (SceneWidget) null;
-            si.a((SceneWidget) null, true, -1);
+            CachedTextLayout.a((SceneWidget) null, true, -1);
           }
           var7.a(0, param2, 18, 0, var4);
           var7.field_Fb = 1;
@@ -125,7 +125,7 @@ final class si extends da {
     final static ik b(int param0) {
         String var1 = jj.a(true);
         if (param0 != 64) {
-          si.c(-82);
+          CachedTextLayout.c(-82);
         }
         if (var1 != null &&
           !(var1.indexOf('@') < 0)) {
@@ -142,7 +142,7 @@ final class si extends da {
         field_D = null;
         field_w = null;
         if (param0 != 24) {
-          si.b(30);
+          CachedTextLayout.b(30);
         }
         field_o = null;
         field_v = null;
@@ -154,8 +154,8 @@ final class si extends da {
     }
 
     final void a(String param0, boolean param1, int param2, int param3, BitmapFont param4) {
-        il var8 = null;
-        il var9 = null;
+        TextLayoutLine var8 = null;
+        TextLayoutLine var9 = null;
         if (param0 == null) {
           this.field_h = null;
           return;
@@ -175,7 +175,7 @@ final class si extends da {
           }
           this.field_r = 2;
           this.field_s = true;
-          var8 = this.a(param0, (byte) 118, param4, param3);
+          var8 = this.createSingleLine(param0, (byte) 118, param4, param3);
           var9 = var8;
           var9.field_f[0] = param2 - param4.textWidth(param0);
           var9.field_f[param0.length()] = param2;
@@ -186,8 +186,8 @@ final class si extends da {
     }
 
     final void a(int param0, String param1, int param2, int param3, BitmapFont param4) {
-        il var7 = null;
-        il var8 = null;
+        TextLayoutLine var7 = null;
+        TextLayoutLine var8 = null;
         if (param1 == null) {
           this.field_h = null;
           return;
@@ -207,7 +207,7 @@ final class si extends da {
           this.field_n = param1;
           this.field_r = 0;
           this.field_x = param4;
-          var7 = this.a(param1, (byte) 117, param4, param3);
+          var7 = this.createSingleLine(param1, (byte) 117, param4, param3);
           var8 = var7;
           var7.field_f[0] = param0;
           var8.field_f[param1.length()] = param4.textWidth(param1) + param0;
@@ -218,7 +218,7 @@ final class si extends da {
     }
 
     final void b(int param0, String param1, int param2, int param3, BitmapFont param4) {
-        il var8 = null;
+        TextLayoutLine var8 = null;
         int var7 = 0;
         if (param1 == null) {
           this.field_h = null;
@@ -233,12 +233,12 @@ final class si extends da {
         }
         try {
           if (param3 != -1385548511) {
-            si.c(24);
+            CachedTextLayout.c(24);
           }
           this.field_x = param4;
           this.field_r = 1;
           this.field_s = true;
-          var8 = this.a(param1, (byte) 117, param4, param2);
+          var8 = this.createSingleLine(param1, (byte) 117, param4, param2);
           var7 = param4.textWidth(param1);
           var8.field_f[0] = param0 - (var7 >> 1);
           var8.field_f[param1.length()] = (var7 >> 1) + param0;
@@ -249,14 +249,14 @@ final class si extends da {
     }
 
     final void a(int param0, int param1, int param2, String param3, int param4, BitmapFont param5, int param6, int param7) {
-        il stackIn_34_0;
-        il stackIn_34_1;
+        TextLayoutLine stackIn_34_0;
+        TextLayoutLine stackIn_34_1;
         int stackIn_34_2;
         int stackIn_34_3;
-        il stackIn_35_0 = null;
-        il stackIn_35_1 = null;
+        TextLayoutLine stackIn_35_0 = null;
+        TextLayoutLine stackIn_35_1 = null;
         int stackIn_35_4 = 0;
-        il stackIn_38_0 = null;
+        TextLayoutLine stackIn_38_0 = null;
         int stackIn_38_1 = 0;
         int stackIn_39_2 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -270,7 +270,7 @@ final class si extends da {
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
-        il var14 = null;
+        TextLayoutLine var14 = null;
         int var15 = 0;
         String[] var16 = null;
         String[] var17 = null;
@@ -328,7 +328,7 @@ final class si extends da {
           } else {
             var11 = param5.field_G;
           }
-          this.field_h = new il[var10];
+          this.field_h = new TextLayoutLine[var10];
           for (var12Lifetime1 = 0; var10 > var12Lifetime1; var12Lifetime1++) {
             var13 = var16[var12Lifetime1];
             stackIn_34_0 = null;
@@ -344,7 +344,7 @@ final class si extends da {
               stackIn_35_1 = null;
               stackIn_35_4 = 0;
             }
-            var14 = new il(stackIn_34_2, stackIn_34_3, stackIn_35_4);
+            var14 = new TextLayoutLine(stackIn_34_2, stackIn_34_3, stackIn_35_4);
             var14.field_f[0] = 0;
             if (var13 != null) {
               var14.field_f[var13.length()] = param5.textWidth(var13);
@@ -381,11 +381,11 @@ final class si extends da {
         }
     }
 
-    private final il a(String param0, byte param1, BitmapFont param2, int param3) {
-        il var5 = null;
+    private final TextLayoutLine createSingleLine(String param0, byte param1, BitmapFont param2, int param3) {
+        TextLayoutLine var5 = null;
         RuntimeException var5_ref = null;
-        il var6 = null;
-        il stackIn_3_0 = null;
+        TextLayoutLine var6 = null;
+        TextLayoutLine stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -396,9 +396,9 @@ final class si extends da {
           if (param1 < 116) {
             field_k = (int[]) null;
           }
-          var6 = new il(-param2.field_G + param3, param2.field_F + param3, param0.length());
+          var6 = new TextLayoutLine(-param2.field_G + param3, param2.field_F + param3, param0.length());
           var5 = var6;
-          this.field_h = new il[]{var6};
+          this.field_h = new TextLayoutLine[]{var6};
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -421,7 +421,7 @@ final class si extends da {
         }
     }
 
-    public si() {
+    public CachedTextLayout() {
     }
 
     static {

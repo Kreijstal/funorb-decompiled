@@ -5,7 +5,7 @@ final class cd {
     static boolean field_g;
     static String field_f;
     static String[] field_c;
-    static co field_e;
+    static QuickChatCategoryCache field_e;
     static String field_d;
     static char[] field_b;
     static boolean field_a;
@@ -51,7 +51,7 @@ final class cd {
           } else {
             if (1 != var2) {
               if (var2 != 2) {
-                sj.a("A1: " + ci.a((byte) 94), -50, (Throwable) null);
+                MusicCrossfadeStream.a("A1: " + ci.a((byte) 94), -50, (Throwable) null);
                 LoginForm.m(121);
               } else {
                 var15 = (hl) (MidiPcmStream.field_D.first(13058));

@@ -417,7 +417,7 @@ final class ModalStack extends SingleChildContainer {
                 jn.field_g = false;
               }
               if (Js5NetworkRequest.field_N.field_Eb != 0) {
-                pg.d(53);
+                AlternateUsernameCredentials.d(53);
                 jn.field_g = false;
               }
             }

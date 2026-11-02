@@ -254,9 +254,9 @@ final class ln {
             if (null != hk.field_oc) {
               hk.field_oc.shutdown(0);
             }
-            if (null != si.field_o) {
+            if (null != CachedTextLayout.field_o) {
               try {
-                si.field_o.c(param0 ^ 8679);
+                CachedTextLayout.field_o.c(param0 ^ 8679);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

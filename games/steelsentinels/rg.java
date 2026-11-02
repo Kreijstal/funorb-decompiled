@@ -31,7 +31,7 @@ final class rg {
             stackIn_7_0 = MouseWheelInput.field_a.textWidth(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = re.field_ib.textWidth(param0);
+          stackIn_5_0 = NumericDateInputWidget.field_ib.textWidth(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,7 +186,7 @@ final class rg {
               MouseWheelInput.field_a.drawLeft(var7, var9, var2 + MenuInputState.field_g, var6, -1);
               var2 = var2 + (WhirlpoolHasher.field_e + (tf.field_c + IconLabelControl.field_ac));
             } else {
-              re.field_ib.drawLeft(var7, var9, var2 + IntKeyLookup.field_d, var6, -1);
+              NumericDateInputWidget.field_ib.drawLeft(var7, var9, var2 + IntKeyLookup.field_d, var6, -1);
               var2 = var2 + IntrusiveNode.field_e;
             }
           }
@@ -236,7 +236,7 @@ final class rg {
             var6.a(245, 199);
           }
           if (NodeDeque.field_g < hh.field_i) {
-            var7Lifetime2 = Explosion.field_S[oe.field_e];
+            var7Lifetime2 = Explosion.field_S[QuickChatPhraseCache.field_e];
             if (var7Lifetime2 != null) {
               var2_int = (var7Lifetime2.field_z + 60) * NodeDeque.field_g / hh.field_i;
               var3 = var2_int - 30;

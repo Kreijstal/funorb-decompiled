@@ -23,15 +23,15 @@ final class vf {
         int var4 = 0;
         int var5 = 0;
         try {
-          sj.field_z.field_S = param1;
+          MusicCrossfadeStream.field_z.field_S = param1;
           im.field_b = true;
           var2_int = Checkbox.field_bb.field_c;
           var3 = Checkbox.field_bb.field_i;
-          var4 = sj.field_z.field_L.paragraphHeight(param1, 272, sj.field_z.field_Ib);
+          var4 = MusicCrossfadeStream.field_z.field_L.paragraphHeight(param1, 272, MusicCrossfadeStream.field_z.field_Ib);
           var5 = -110 + (var3 / 2 + 7 - var4 / 2);
           fl.field_b.a(0, var5, -(var5 * 2) - 120 + var3, (var2_int - 320) / 2, param0);
           fl.field_b.field_I = se.a(3, 2105376, 11579568, fl.field_b.field_Lb, 8421504, param0 ^ 13382);
-          sj.field_z.a(param0 - 320, 16, -24 + (fl.field_b.field_Lb - 20), 24, -24 + (fl.field_b.field_zb - 24));
+          MusicCrossfadeStream.field_z.a(param0 - 320, 16, -24 + (fl.field_b.field_Lb - 20), 24, -24 + (fl.field_b.field_zb - 24));
           LoginForm.field_gb.a(0, -20 + (fl.field_b.field_Lb - 24), 24, 120, 80);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "vf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

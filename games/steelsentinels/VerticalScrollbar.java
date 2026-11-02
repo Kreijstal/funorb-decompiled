@@ -48,9 +48,9 @@ final class VerticalScrollbar extends SceneWidget {
           WhirlpoolHasher.field_m = new SceneWidget(0L, (SceneWidget) null);
           vc.field_h = new SceneWidget(0L, bd.field_f);
           vc.field_h.field_Kb = 1;
-          mm.field_a = new SceneWidget(0L, sj.field_J, uj.field_g);
+          mm.field_a = new SceneWidget(0L, MusicCrossfadeStream.field_J, uj.field_g);
           SceneWidgetNode.field_E = new SceneWidget(0L, kb.field_b, MenuInputState.field_i);
-          si.field_v = new SceneWidget(0L, ParticleEffect.field_K);
+          CachedTextLayout.field_v = new SceneWidget(0L, ParticleEffect.field_K);
           WhirlpoolHasher.field_m.a(vc.field_h, 121);
           WhirlpoolHasher.field_m.a(mm.field_a, 123);
           WhirlpoolHasher.field_m.a(SceneWidgetNode.field_E, 121);
@@ -58,7 +58,7 @@ final class VerticalScrollbar extends SceneWidget {
             VerticalScrollbar.j(-84);
           }
           WhirlpoolHasher.field_m.a(km.field_j, 118);
-          WhirlpoolHasher.field_m.a(si.field_v, 120);
+          WhirlpoolHasher.field_m.a(CachedTextLayout.field_v, 120);
           km.field_j.field_Xb.field_Tb.b(bd.field_f, 6402);
           var5 = km.field_j.field_Xb.field_Tb;
           var6 = var5;

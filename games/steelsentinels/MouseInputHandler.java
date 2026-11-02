@@ -191,7 +191,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != SoundCache.field_e) {
             ob.field_q = 0;
             RegistrationRequestDialog.field_Rb = param0.getX();
-            me.field_d = param0.getY();
+            LoginCredentials.field_d = param0.getY();
             mm.a(-73);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               ad.field_c = 2;

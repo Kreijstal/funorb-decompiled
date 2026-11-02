@@ -20,7 +20,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (MouseInputHandler.field_i != null) {
-            qj.field_h = -1;
+            SentinelAnimationEditor.field_h = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "i.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
@@ -67,20 +67,20 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             km.field_f = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              qj.field_a.length > var2_int) {
-              var2_int = qj.field_a[var2_int];
+              SentinelAnimationEditor.field_a.length > var2_int) {
+              var2_int = SentinelAnimationEditor.field_a[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }
             } else {
               var2_int = -1;
             }
-            if (0 <= qj.field_h &&
+            if (0 <= SentinelAnimationEditor.field_h &&
               var2_int >= 0) {
-              ni.field_b[qj.field_h] = var2_int;
-              qj.field_h = 1 + qj.field_h & 127;
-              if (qj.field_h == hh.field_b) {
-                qj.field_h = -1;
+              ni.field_b[SentinelAnimationEditor.field_h] = var2_int;
+              SentinelAnimationEditor.field_h = 1 + SentinelAnimationEditor.field_h & 127;
+              if (SentinelAnimationEditor.field_h == hh.field_b) {
+                SentinelAnimationEditor.field_h = -1;
               }
             }
             if (var2_int >= 0) {
@@ -126,17 +126,17 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             km.field_f = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < qj.field_a.length) {
-              var2_int = -129 & qj.field_a[var2_int];
+              var2_int < SentinelAnimationEditor.field_a.length) {
+              var2_int = -129 & SentinelAnimationEditor.field_a[var2_int];
             } else {
               var2_int = -1;
             }
-            if (0 <= qj.field_h &&
+            if (0 <= SentinelAnimationEditor.field_h &&
               var2_int >= 0) {
-              ni.field_b[qj.field_h] = ~var2_int;
-              qj.field_h = 127 & 1 + qj.field_h;
-              if (hh.field_b == qj.field_h) {
-                qj.field_h = -1;
+              ni.field_b[SentinelAnimationEditor.field_h] = ~var2_int;
+              SentinelAnimationEditor.field_h = 127 & 1 + SentinelAnimationEditor.field_h;
+              if (hh.field_b == SentinelAnimationEditor.field_h) {
+                SentinelAnimationEditor.field_h = -1;
               }
             }
           }

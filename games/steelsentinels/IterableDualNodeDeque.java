@@ -416,7 +416,7 @@ final class IterableDualNodeDeque implements Iterable {
             }
             var19 = var15;
             var20 = var16;
-            SoftwareRaster.b(me.field_g);
+            SoftwareRaster.b(LoginCredentials.field_g);
             if (var19 > var20) {
               var20 = var8 * param5 / (var8 + var9) + param3;
               var19 = var8 * param5 / (var8 + var9) + param3;
@@ -424,22 +424,22 @@ final class IterableDualNodeDeque implements Iterable {
             if (param1[0] != null) {
               SoftwareRaster.h(param4, param3, var17, var19);
               param1[0].a(param4, param3);
-              SoftwareRaster.a(me.field_g);
+              SoftwareRaster.a(LoginCredentials.field_g);
             }
             if (param1[2] != null) {
               SoftwareRaster.h(var18, param3, var10, var19);
               param1[2].a(var14, param3);
-              SoftwareRaster.a(me.field_g);
+              SoftwareRaster.a(LoginCredentials.field_g);
             }
             if (param1[6] != null) {
               SoftwareRaster.h(param4, var20, var17, var12);
               param1[6].a(param4, var16);
-              SoftwareRaster.a(me.field_g);
+              SoftwareRaster.a(LoginCredentials.field_g);
             }
             if (param1[8] != null) {
               SoftwareRaster.h(var18, var20, var10, var12);
               param1[8].a(var14, var16);
-              SoftwareRaster.a(me.field_g);
+              SoftwareRaster.a(LoginCredentials.field_g);
             }
             if (param1[1] != null &&
               0 != param1[1].field_z) {
@@ -447,7 +447,7 @@ final class IterableDualNodeDeque implements Iterable {
               for (var21 = var13; var21 < var14; var21 = var21 + param1[1].field_z) {
                 param1[1].a(var21, param3);
               }
-              SoftwareRaster.a(me.field_g);
+              SoftwareRaster.a(LoginCredentials.field_g);
             }
             if (null != param1[7] &&
               param1[7].field_z != 0) {
@@ -455,7 +455,7 @@ final class IterableDualNodeDeque implements Iterable {
               for (var21Lifetime1 = var13; var21Lifetime1 < var14; var21Lifetime1 = var21Lifetime1 + param1[7].field_z) {
                 param1[7].a(var21Lifetime1, var16);
               }
-              SoftwareRaster.a(me.field_g);
+              SoftwareRaster.a(LoginCredentials.field_g);
             }
             if (param1[3] != null &&
               0 != param1[3].field_B) {
@@ -463,7 +463,7 @@ final class IterableDualNodeDeque implements Iterable {
               for (var21Lifetime2 = var15; var16 > var21Lifetime2; var21Lifetime2 = var21Lifetime2 + param1[3].field_B) {
                 param1[3].a(param4, var21Lifetime2);
               }
-              SoftwareRaster.a(me.field_g);
+              SoftwareRaster.a(LoginCredentials.field_g);
             }
             if (null != param1[5] &&
               0 != param1[5].field_B) {
@@ -471,7 +471,7 @@ final class IterableDualNodeDeque implements Iterable {
               for (var21Lifetime3 = var15; var16 > var21Lifetime3; var21Lifetime3 = var21Lifetime3 + param1[5].field_B) {
                 param1[5].a(var14, var21Lifetime3);
               }
-              SoftwareRaster.a(me.field_g);
+              SoftwareRaster.a(LoginCredentials.field_g);
             }
             if (null != param1[4] &&
               param1[4].field_z != 0) {
@@ -484,7 +484,7 @@ final class IterableDualNodeDeque implements Iterable {
                   param1[4].a(var22, var21Lifetime4);
                 }
               }
-              SoftwareRaster.a(me.field_g);
+              SoftwareRaster.a(LoginCredentials.field_g);
             }
             return;
           }

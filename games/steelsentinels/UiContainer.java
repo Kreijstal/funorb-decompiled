@@ -646,7 +646,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (param2 >= -113) {
             return false;
           }
-          var6 = MarkerSlider.a(Sprite.field_f, fb.field_l, pg.field_u, param1, -90);
+          var6 = MarkerSlider.a(Sprite.field_f, UsernameCredentials.field_l, AlternateUsernameCredentials.field_u, param1, -90);
           pa.a(12105, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

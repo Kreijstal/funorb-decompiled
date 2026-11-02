@@ -86,7 +86,7 @@ final class na {
             LoginForm.m(73);
             return;
           }
-          sj.a("LR1: " + ci.a((byte) 94), -102, (Throwable) null);
+          MusicCrossfadeStream.a("LR1: " + ci.a((byte) 94), -102, (Throwable) null);
           LoginForm.m(83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

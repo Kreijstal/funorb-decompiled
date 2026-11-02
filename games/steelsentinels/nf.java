@@ -124,7 +124,7 @@ final class nf {
         int var9Lifetime1;
         var10 = SteelSentinels.obfuscationControl;
         try {
-          var7_int = me.a(param4, -97);
+          var7_int = LoginCredentials.a(param4, -97);
           if (null == IterableDualNodeDeque.field_c) {
             IterableDualNodeDeque.field_c = new java.security.SecureRandom();
           }
@@ -142,12 +142,12 @@ final class nf {
           MusicPatchNode.field_H.writeBytes(param4, (byte) -122, param3, param6);
           MusicPatchNode.field_H.b(-2, var7_int);
           MusicPatchNode.field_H.a(var14, -108);
-          if (sj.field_u == null ||
-            !(sj.field_u.payload.length >= 100)) {
-            sj.field_u = new PacketBuffer(100);
+          if (MusicCrossfadeStream.field_u == null ||
+            !(MusicCrossfadeStream.field_u.payload.length >= 100)) {
+            MusicCrossfadeStream.field_u = new PacketBuffer(100);
           }
-          sj.field_u.position = 0;
-          sj.field_u.writeByte((byte) 122, 10);
+          MusicCrossfadeStream.field_u.position = 0;
+          MusicCrossfadeStream.field_u.writeByte((byte) 122, 10);
           var12 = 0;
           var9Lifetime1 = var12;
           if (param0) {
@@ -155,12 +155,12 @@ final class nf {
             nf.a(true, (PacketBuffer) null, (java.math.BigInteger) null, -45, 111, (java.math.BigInteger) null, (byte[]) null);
           }
           while (var12 < 4) {
-            sj.field_u.writeInt(true, var14[var12]);
+            MusicCrossfadeStream.field_u.writeInt(true, var14[var12]);
             var12++;
           }
-          sj.field_u.writeShort(param4, 17);
-          sj.field_u.a(param2, param5, -10048);
-          param1.writeBytes(sj.field_u.position, (byte) -122, 0, sj.field_u.payload);
+          MusicCrossfadeStream.field_u.writeShort(param4, 17);
+          MusicCrossfadeStream.field_u.a(param2, param5, -10048);
+          param1.writeBytes(MusicCrossfadeStream.field_u.position, (byte) -122, 0, MusicCrossfadeStream.field_u.payload);
           param1.writeBytes(MusicPatchNode.field_H.position, (byte) -122, 0, MusicPatchNode.field_H.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

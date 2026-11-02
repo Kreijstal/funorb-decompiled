@@ -55,7 +55,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = SteelSentinels.obfuscationControl;
-        if (vn.field_h < 0) {
+        if (DateOfBirthValidator.field_h < 0) {
           return;
         }
         if (param0 <= 1) {
@@ -65,11 +65,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         var3 = -135 + param2;
         var4 = param1 - 35;
         var5 = 256;
-        if (vn.field_h < 75) {
-          var5 = (vn.field_h << 8) / 75;
+        if (DateOfBirthValidator.field_h < 75) {
+          var5 = (DateOfBirthValidator.field_h << 8) / 75;
         }
-        if (vn.field_h > 200) {
-          var5 = (250 - vn.field_h << 8) / 50;
+        if (DateOfBirthValidator.field_h > 200) {
+          var5 = (250 - DateOfBirthValidator.field_h << 8) / 50;
         }
         IterableNodeHashTable.a(ai.field_o, (byte) -106);
         lf.a();
@@ -79,12 +79,12 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           SoftwareRaster.c(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, 256 - var5);
         }
         MatchingTextValidator.$cfr$intArgs$f$20d51497949f(103);
-        if (150 > vn.field_h) {
+        if (150 > DateOfBirthValidator.field_h) {
           ai.field_o.drawHalfSize(var3, var4);
         } else {
           dj.field_c.drawShadedGrayscale(var3 + 15, 10 + var4, var5);
         }
-        var6 = -125 + vn.field_h;
+        var6 = -125 + DateOfBirthValidator.field_h;
         if (0 < var6 &&
           50 > var6) {
           if (var6 >= 20) {
@@ -99,7 +99,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             ByteStorage.field_d.drawAdditive(var3, var4, var7);
           }
         }
-        var6Lifetime1 = -140 + vn.field_h;
+        var6Lifetime1 = -140 + DateOfBirthValidator.field_h;
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {
@@ -786,7 +786,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             IsaacRandom.field_d[NameSuggestionsPanel.field_Y].draw(oh.field_f - 20, DelegatingCanvas.field_c - 20);
           }
           if (0 == (RegistrationRequestDialog.field_Ob & 1)) {
-            re.field_eb = -1;
+            NumericDateInputWidget.field_eb = -1;
           } else {
             var8_int = 224;
             var9 = 62;
@@ -794,18 +794,18 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var11 = 20;
             var12 = 60;
             var13_int = NodeDeque.a((byte) -42, uc.field_b[0]);
-            if (re.field_eb != var13_int) {
-              re.field_eb = var13_int;
+            if (NumericDateInputWidget.field_eb != var13_int) {
+              NumericDateInputWidget.field_eb = var13_int;
               SpriteCheckboxPainter.field_a = MouseWheelInput.field_c;
               var14 = 20;
               jj.field_e.bindRasterTarget();
               SoftwareRaster.a(0, 0, jj.field_e.field_z, jj.field_e.field_B, 0);
               SoftwareRaster.setClip(0, 0, var14, var14);
               if (0 > var13_int ||
-                !(var13_int < si.field_E.length)) {
+                !(var13_int < CachedTextLayout.field_E.length)) {
                 var13_int = 0;
               }
-              si.field_E[var13_int].drawScaled(0, 0, 4 * var14, 4 * var14);
+              CachedTextLayout.field_E[var13_int].drawScaled(0, 0, 4 * var14, 4 * var14);
               SoftwareRaster.c();
               Checkbox.field_bb.b((byte) 122);
             }
@@ -848,7 +848,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var13 = var44;
             for (var14 = 0; var14 < var61.length; var14++) {
               var15_int = var61[var14];
-              var16 = sj.field_v[var15_int];
+              var16 = MusicCrossfadeStream.field_v[var15_int];
               if (t.a(rn.field_D, var15_int, -20370)) {
                 var12 = var12 + var16;
               }
@@ -889,12 +889,12 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 discarded$12 = var45.append("</col>");
                 if (var18 == 0) {
                   discarded$13 = var45.append(" (<img=24>");
-                  discarded$14 = var45.append(sj.field_v[var17]);
+                  discarded$14 = var45.append(MusicCrossfadeStream.field_v[var17]);
                   discarded$15 = var45.append(")");
                 }
               }
               if (0 < var64.length) {
-                discarded$7 = var45.append(re.field_X);
+                discarded$7 = var45.append(NumericDateInputWidget.field_X);
               }
             }
             if (var64.length > 0) {
@@ -998,8 +998,8 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
           }
           if ((RegistrationRequestDialog.field_Ob & 1) != 0) {
-            var13_int = oe.field_i;
-            oe.field_i = -1;
+            var13_int = QuickChatPhraseCache.field_i;
+            QuickChatPhraseCache.field_i = -1;
             for (var14 = 0; var14 < 12; var14++) {
               var53 = ViewportController.field_h[var14];
               if (var53 != null) {
@@ -1024,18 +1024,18 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                   var17 = stackIn_430_0;
                   var18 = 0;
                   if (var17 != 0) {
-                    oe.field_i = var14;
-                    if (var13_int != oe.field_i) {
-                      nc.field_f = MouseWheelInput.field_c;
+                    QuickChatPhraseCache.field_i = var14;
+                    if (var13_int != QuickChatPhraseCache.field_i) {
+                      WeightedLruCache.field_f = MouseWheelInput.field_c;
                       CombatWorld.c(-2483, 97);
                     }
-                    var18 = (-nc.field_f + MouseWheelInput.field_c) / 6 % 15;
+                    var18 = (-WeightedLruCache.field_f + MouseWheelInput.field_c) / 6 % 15;
                   }
                   var19 = 64;
                   var53.field_Pb.bindRasterTarget();
                   SoftwareRaster.a(0, 0, var19, var19, 0);
                   SoftwareRaster.setClip(0, 0, var19, var19);
-                  var20_ref_wk = si.field_E[var14];
+                  var20_ref_wk = CachedTextLayout.field_E[var14];
                   var16_ref = var20_ref_wk;
                   var16_ref = var20_ref_wk;
                   var21 = (var18 & 3) * var19;
@@ -1046,7 +1046,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
             Checkbox.field_bb.b((byte) 124);
           } else {
-            oe.field_i = -1;
+            QuickChatPhraseCache.field_i = -1;
           }
           if (0 <= dc.field_g) {
             var13_int = -1;
@@ -1236,7 +1236,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 var19 = 0;
                 var20 = 0;
                 if (0 != RegistrationRequestDialog.field_Ob) {
-                  var20 = sj.field_v[var9];
+                  var20 = MusicCrossfadeStream.field_v[var9];
                   if (t.a(rn.field_D, var9, -20370)) {
                     var18 = 0;
                   } else {
@@ -1696,7 +1696,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var7.field_Ab = be.field_f;
           var8 = new SceneWidget((long)var4, (SceneWidget) null);
           var8.a(0, 2, var5 - 4, 2, -4 + var6);
-          var8.field_I = co.field_d;
+          var8.field_I = QuickChatCategoryCache.field_d;
           if (null == ue.field_g[-1 + param1]) {
             ad.a(param1 - 1, (ArticulatedPart) null, 84);
           }
@@ -1916,7 +1916,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               }
               break regionExit1;
             }
-            var5 = me.field_c;
+            var5 = LoginCredentials.field_c;
           }
           if (!var5.equals(this.field_y)) {
             this.field_y = var5;

@@ -12,10 +12,10 @@ final class mm {
 
     final synchronized static long a(int param0) {
         long var1 = System.currentTimeMillis();
-        if (!(co.field_f <= var1)) {
-          be.field_d = be.field_d + (-var1 + co.field_f);
+        if (!(QuickChatCategoryCache.field_f <= var1)) {
+          be.field_d = be.field_d + (-var1 + QuickChatCategoryCache.field_f);
         }
-        co.field_f = var1;
+        QuickChatCategoryCache.field_f = var1;
         int var3 = 23 / ((-10 - param0) / 47);
         return be.field_d + var1;
     }

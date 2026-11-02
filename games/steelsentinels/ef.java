@@ -162,7 +162,7 @@ final class ef {
         var13 = SteelSentinels.obfuscationControl;
         try {
           sf.field_t = SoftwareRaster.field_j;
-          re.field_Z = SoftwareRaster.field_c;
+          NumericDateInputWidget.field_Z = SoftwareRaster.field_c;
           stackIn_3_0 = 61;
           if (param1) {
             stackIn_4_1 = bd.field_c;
@@ -285,9 +285,9 @@ final class ef {
               }
             }
           }
-          fb.field_r.a(0, 10, -134 + (SoftwareRaster.field_j - 10), SoftwareRaster.field_c - 360 >> 1, 360);
-          tf.field_a.a(0, 0, 24, 0, fb.field_r.field_zb);
-          nd.field_a.a(0, 24, fb.field_r.field_Lb - 24, 0, fb.field_r.field_zb);
+          UsernameCredentials.field_r.a(0, 10, -134 + (SoftwareRaster.field_j - 10), SoftwareRaster.field_c - 360 >> 1, 360);
+          tf.field_a.a(0, 0, 24, 0, UsernameCredentials.field_r.field_zb);
+          nd.field_a.a(0, 24, UsernameCredentials.field_r.field_Lb - 24, 0, UsernameCredentials.field_r.field_zb);
           nd.field_a.field_I = se.a(3, param0, 11579568, nd.field_a.field_Lb, 8421504, 13574);
           fl.field_c.a(0, 5, -26 + (-10 + nd.field_a.field_Lb), 5, -10 + nd.field_a.field_zb);
           Js5ArchiveManager.field_i.a(0, -29 + nd.field_a.field_Lb, 24, (-80 + nd.field_a.field_zb) / 2, 80);

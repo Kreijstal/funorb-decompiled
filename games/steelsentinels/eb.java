@@ -117,7 +117,7 @@ final class eb extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param1, -1) == ArchiveProvider.field_d) {
-            stackIn_3_0 = vn.field_j;
+            stackIn_3_0 = DateOfBirthValidator.field_j;
             return stackIn_3_0;
           }
           if (param0 == 100) {
@@ -186,7 +186,7 @@ final class eb extends TextFieldValidator {
           te.field_f.a(vd.field_d, 122);
           DualNodeDequeIterator.field_e = new SceneWidget(0L, Checkbox.field_ab);
           te.field_f.a(DualNodeDequeIterator.field_e, 125);
-          vc.field_f = new SceneWidget(0L, ReportAbuseDialog.field_ic, re.field_cb);
+          vc.field_f = new SceneWidget(0L, ReportAbuseDialog.field_ic, NumericDateInputWidget.field_cb);
           Js5NetworkRequest.field_N = new SceneWidget(0L, ReportAbuseDialog.field_ic);
           hh.field_a.a(cc.field_bc, 124);
           hh.field_a.a(in.field_d, 127);
@@ -296,7 +296,7 @@ final class eb extends TextFieldValidator {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          sj.a("CC1", -66, (Throwable) ((Object) var6));
+          MusicCrossfadeStream.a("CC1", -66, (Throwable) ((Object) var6));
           WeightedCacheEntry.field_F = null;
           ValidatedTextWidget.field_ob = null;
           return new na(param1);
@@ -386,7 +386,7 @@ final class eb extends TextFieldValidator {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          sj.a("CC1", -66, (Throwable) ((Object) var6));
+          MusicCrossfadeStream.a("CC1", -66, (Throwable) ((Object) var6));
           WeightedCacheEntry.field_F = null;
           ValidatedTextWidget.field_ob = null;
           return new na(param1);

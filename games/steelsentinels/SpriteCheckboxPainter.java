@@ -221,7 +221,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
             var8.drawAdditive(1 + (var6_int + (param1.field_x - var8.field_z >> 1)), (-var8.field_B + param1.field_E >> 1) + (1 + var7), 256);
           }
           if (param1.isFocused(0)) {
-            ha.a(var6_int + 2, -4 + param1.field_x, -4 + param1.field_E, param2 + 30, 2 + var7);
+            DateInputWidget.a(var6_int + 2, -4 + param1.field_x, -4 + param1.field_E, param2 + 30, 2 + var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

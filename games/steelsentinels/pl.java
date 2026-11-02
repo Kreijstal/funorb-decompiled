@@ -8,7 +8,7 @@ final class pl extends ch implements ButtonListener {
     static ResourceArchive field_S;
     static String field_V;
     private TextButton field_R;
-    private re field_Z;
+    private NumericDateInputWidget field_Z;
     static RgbSprite[] field_T;
     static BitmapFont field_X;
     static String field_Q;
@@ -180,7 +180,7 @@ final class pl extends ch implements ButtonListener {
             } else {
               stackIn_25_0 = BoundedUrlRequest.field_q;
               if (var8 != 0) {
-                stackIn_26_1 = ha.field_P;
+                stackIn_26_1 = DateInputWidget.field_P;
               } else {
                 stackIn_26_1 = lj.field_i;
               }
@@ -253,7 +253,7 @@ final class pl extends ch implements ButtonListener {
           stackIn_76_1 = -56;
           stackIn_77_2 = (param0) && (!param1) && (!GzipDecoder.field_c);
           ((SceneWidget) (Object) stackIn_76_0).a((byte) stackIn_76_1, stackIn_77_2);
-          stackIn_81_0 = fb.field_r;
+          stackIn_81_0 = UsernameCredentials.field_r;
           stackIn_81_1 = 120;
           stackIn_82_2 = (param0) && (!param1) && (GzipDecoder.field_c);
           ((SceneWidget) (Object) stackIn_81_0).a((byte) stackIn_81_1, stackIn_82_2);
@@ -281,8 +281,8 @@ final class pl extends ch implements ButtonListener {
 
     pl(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
-        this.field_Z = new re(new GradientOutlineTextPainter(10000536), CipherPacketBuffer.field_B, 0, 0, 140, 25);
-        this.field_Z.a((byte) -26, new vn());
+        this.field_Z = new NumericDateInputWidget(new GradientOutlineTextPainter(10000536), CipherPacketBuffer.field_B, 0, 0, 140, 25);
+        this.field_Z.a((byte) -26, new DateOfBirthValidator());
         this.field_R = new TextButton(SocialListEntry.field_Sb, (UiListener) (this));
         this.field_J = new UiComponent[]{(UiComponent) ((Object) this.field_Z), (UiComponent) ((Object) this.field_R)};
         this.field_R.field_p = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());

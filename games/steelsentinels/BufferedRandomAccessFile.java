@@ -794,7 +794,7 @@ final class BufferedRandomAccessFile {
                             ln.field_c = DialWidgetPainter.field_q[2];
                           }
                         } else {
-                          var15 = ha.field_R;
+                          var15 = DateInputWidget.field_R;
                           ln.field_c = DialWidgetPainter.field_q[2];
                           var16_int = EmailAvailabilityValidator.a(param0 ^ 6985420, var12_int);
                           if (var16_int >= 0 &&
@@ -910,11 +910,11 @@ final class BufferedRandomAccessFile {
                         for (var20_int = 0; var20_int < var19_ref_int__.length; var20_int++) {
                           var21_int = var19_ref_int__[var20_int];
                           if (!t.a(rn.field_D, var21_int, param0 - 7014031)) {
-                            var16_int = var16_int + sj.field_v[var21_int];
+                            var16_int = var16_int + MusicCrossfadeStream.field_v[var21_int];
                           }
                         }
                       } else {
-                        var16_int = sj.field_v[var13_ref_nk.componentId];
+                        var16_int = MusicCrossfadeStream.field_v[var13_ref_nk.componentId];
                       }
                       var17_ref = null;
                       if (t.a(rn.field_D, var13_ref_nk.componentId, -20370)) {
@@ -1103,7 +1103,7 @@ final class BufferedRandomAccessFile {
                   }
                   if (var1_int != 0 &&
                     ContentTransitionDialog.field_jb != null) {
-                    vn.d(-95);
+                    DateOfBirthValidator.d(-95);
                   }
                   decompiledFrameRemainder0 = (ContentTransitionDialog.field_jb == null);
                   if (decompiledFrameRemainder0) {
@@ -1145,7 +1145,7 @@ final class BufferedRandomAccessFile {
             }
             if (var1_int != 0 &&
               ContentTransitionDialog.field_jb != null) {
-              vn.d(-95);
+              DateOfBirthValidator.d(-95);
             }
             decompiledFrameRemainder0 = (ContentTransitionDialog.field_jb == null);
             if (decompiledFrameRemainder0) {
@@ -1160,10 +1160,10 @@ final class BufferedRandomAccessFile {
             SoftwareRaster.a(0, 0, var6, var6, 0);
             var7_int = NodeDeque.a((byte) 105, uc.field_b[0]);
             if (var7_int < 0 ||
-              !(si.field_E.length > var7_int)) {
+              !(CachedTextLayout.field_E.length > var7_int)) {
               var7_int = 0;
             }
-            si.field_E[var7_int].drawScaled(0, 0, 4 * var6, 4 * var6);
+            CachedTextLayout.field_E[var7_int].drawScaled(0, 0, 4 * var6, 4 * var6);
             Checkbox.field_bb.b((byte) 122);
             var6 = MusicPatchNode.field_w;
             MusicPatchNode.field_w = 4096;
@@ -1203,9 +1203,9 @@ final class BufferedRandomAccessFile {
             var51.field_I = AccountMessagePanel.field_Y;
             var14 = new SceneWidget("", var7);
             ((SceneWidget) (var14)).field_I = Checkbox.field_X;
-            ((SceneWidget) (var14)).field_Ab = oe.field_f;
+            ((SceneWidget) (var14)).field_Ab = QuickChatPhraseCache.field_f;
             NameAvailabilityValidator.field_n = new SceneWidget("", var7);
-            NameAvailabilityValidator.field_n.field_I = co.field_d;
+            NameAvailabilityValidator.field_n.field_I = QuickChatCategoryCache.field_d;
             Checkbox.field_Y = new SceneWidget("", var7);
             Checkbox.field_Y.field_I = be.field_f;
             dd.field_b = new SceneWidget("", var7);
@@ -1259,7 +1259,7 @@ final class BufferedRandomAccessFile {
               var52 = new SceneWidget(stackIn_493_2, (SceneWidget) (stackIn_494_3));
               MouseInputHandler.field_h[var20_int] = var52;
               stackIn_496_0 = var52;
-              stackIn_496_1 = da.field_e;
+              stackIn_496_1 = TextLayout.field_e;
               stackIn_496_2 = var20_int;
               if (var21_int != 0) {
                 stackIn_497_3 = 0;
@@ -1279,8 +1279,8 @@ final class BufferedRandomAccessFile {
             CheckboxPainter.field_n = 4;
             WeightedCacheEntry.field_y = 4;
             var54 = new SceneWidget();
-            var54.field_db = sj.field_x[1];
-            var54.field_Pb = sj.field_x[0];
+            var54.field_db = MusicCrossfadeStream.field_x[1];
+            var54.field_Pb = MusicCrossfadeStream.field_x[0];
             var20 = new SceneWidget();
             var20.field_db = SocialListEntry.field_Zb[1];
             var20.field_Pb = SocialListEntry.field_Zb[0];
@@ -1311,7 +1311,7 @@ final class BufferedRandomAccessFile {
                   var27_ref = PasswordFieldPainter.field_E;
                 } else {
                   if ((RegistrationRequestDialog.field_Ob & 16) != 0) {
-                    var27_ref = re.field_hb;
+                    var27_ref = NumericDateInputWidget.field_hb;
                   } else {
                     if (RegistrationRequestDialog.field_Ob == 0) {
                       var27_ref = WeightedCacheEntry.field_D;
@@ -1352,7 +1352,7 @@ final class BufferedRandomAccessFile {
                 }
               }
               if (var28 > 0) {
-                var26_int = si.a(var56, true, var26_int + 4);
+                var26_int = CachedTextLayout.a(var56, true, var26_int + 4);
               }
             }
             if (var27_ref != null) {
@@ -1462,7 +1462,7 @@ final class BufferedRandomAccessFile {
               var61.field_I = null;
             }
           }
-          on.b(param0 - 6993611);
+          EmailCredentials.b(param0 - 6993611);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

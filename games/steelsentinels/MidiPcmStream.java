@@ -10,7 +10,7 @@ final class MidiPcmStream extends PcmStream {
     private int field_W;
     private MusicPatchNode[][] field_x;
     static RgbSprite field_db;
-    static me field_T;
+    static LoginCredentials field_T;
     private NodeHashTable field_bb;
     private int[] field_I;
     private MusicPatchNode[][] field_U;
@@ -1110,7 +1110,7 @@ final class MidiPcmStream extends PcmStream {
           }
           if (var5Lifetime4 == 64) {
             if (64 <= var6Lifetime3) {
-              this.field_F[var4Lifetime4] = vn.a(this.field_F[var4Lifetime4], 1);
+              this.field_F[var4Lifetime4] = DateOfBirthValidator.a(this.field_F[var4Lifetime4], 1);
               if (var8 != 0) {
                 this.field_F[var4Lifetime4] = ec.a(this.field_F[var4Lifetime4], -2);
               }
@@ -1120,7 +1120,7 @@ final class MidiPcmStream extends PcmStream {
           }
           if (var5Lifetime4 == 65) {
             if (64 <= var6Lifetime3) {
-              this.field_F[var4Lifetime4] = vn.a(this.field_F[var4Lifetime4], 2);
+              this.field_F[var4Lifetime4] = DateOfBirthValidator.a(this.field_F[var4Lifetime4], 2);
               if (var8 != 0) {
                 this.f(param0 ^ -32693, var4Lifetime4);
                 this.field_F[var4Lifetime4] = ec.a(this.field_F[var4Lifetime4], -3);
@@ -1174,10 +1174,10 @@ final class MidiPcmStream extends PcmStream {
               this.d(var4Lifetime4, param0 ^ 21766);
               this.field_F[var4Lifetime4] = ec.a(this.field_F[var4Lifetime4], -5);
               if (var8 != 0) {
-                this.field_F[var4Lifetime4] = vn.a(this.field_F[var4Lifetime4], 4);
+                this.field_F[var4Lifetime4] = DateOfBirthValidator.a(this.field_F[var4Lifetime4], 4);
               }
             } else {
-              this.field_F[var4Lifetime4] = vn.a(this.field_F[var4Lifetime4], 4);
+              this.field_F[var4Lifetime4] = DateOfBirthValidator.a(this.field_F[var4Lifetime4], 4);
             }
           }
           if (var5Lifetime4 == 17) {
@@ -1332,7 +1332,7 @@ final class MidiPcmStream extends PcmStream {
           var3_int = ((ScrollContainer) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, param2, (byte) -41) ? 1 : 0;
           var4 = km.field_j.field_Wb.field_M;
           if (param1 <= 10) {
-            field_T = (me) null;
+            field_T = (LoginCredentials) null;
           }
           boolean decompiledFrameRemainder0 = true;
           var5 = null;
@@ -1771,7 +1771,7 @@ final class MidiPcmStream extends PcmStream {
             }
           }
           if (param1 < 2) {
-            field_T = (me) null;
+            field_T = (LoginCredentials) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

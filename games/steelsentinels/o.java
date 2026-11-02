@@ -82,7 +82,7 @@ final class o {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -29) {
-            stackIn_6_0 = (null != da.a(param1, (byte) -41));
+            stackIn_6_0 = (null != TextLayout.a(param1, (byte) -41));
             return stackIn_6_0;
           }
           return false;

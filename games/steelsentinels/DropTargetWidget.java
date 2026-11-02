@@ -18,17 +18,17 @@ final class DropTargetWidget extends SingleChildContainer {
         RuntimeException var7 = null;
         try {
           super.onPointerReleased((byte) 77, param1, param2, param3, param4, param5);
-          var9 = nc.field_e;
+          var9 = WeightedLruCache.field_e;
           var8 = -55 % ((param0 - 36) / 32);
           if (var9 != null &&
             this.a(param5, param2, (byte) 81, param1, param3)) {
             if (this.field_A instanceof WidgetDropListener) {
               ((WidgetDropListener) (this.field_A)).a(var9, this, 127);
-              nc.field_e = null;
+              WeightedLruCache.field_e = null;
             } else {
               if (var9.field_A instanceof WidgetDropListener) {
                 ((WidgetDropListener) (var9.field_A)).a(var9, this, -108);
-                nc.field_e = null;
+                WeightedLruCache.field_e = null;
               }
             }
           }
@@ -101,7 +101,7 @@ final class DropTargetWidget extends SingleChildContainer {
         var11 = SteelSentinels.obfuscationControl;
         if (param5) {
           if (param5) {
-            me.field_e = ln.field_f;
+            LoginCredentials.field_e = ln.field_f;
             cc.a(param5, 0);
             if (0 < SentinelCommand.field_t) {
               tm.a(param7 + 4, param5, param0, param1);
@@ -128,7 +128,7 @@ final class DropTargetWidget extends SingleChildContainer {
               WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
             }
           } else {
-            me.field_e = (re.field_Z - 640) / 2;
+            LoginCredentials.field_e = (NumericDateInputWidget.field_Z - 640) / 2;
             cc.a(param5, 0);
             if (0 < SentinelCommand.field_t) {
               tm.a(param7 + 4, param5, param0, param1);
@@ -156,7 +156,7 @@ final class DropTargetWidget extends SingleChildContainer {
             }
           }
         } else {
-          if (re.field_Z != SoftwareRaster.field_c) {
+          if (NumericDateInputWidget.field_Z != SoftwareRaster.field_c) {
             if (Checkbox.field_bb.field_i == SoftwareRaster.field_j &&
               SoftwareRaster.field_c == Checkbox.field_bb.field_c) {
               if (null == nf.field_b) {
@@ -170,7 +170,7 @@ final class DropTargetWidget extends SingleChildContainer {
               }
             }
             if (param5) {
-              me.field_e = ln.field_f;
+              LoginCredentials.field_e = ln.field_f;
               cc.a(param5, 0);
               if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
@@ -197,7 +197,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
               }
             } else {
-              me.field_e = (re.field_Z - 640) / 2;
+              LoginCredentials.field_e = (NumericDateInputWidget.field_Z - 640) / 2;
               cc.a(param5, 0);
               if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
@@ -239,7 +239,7 @@ final class DropTargetWidget extends SingleChildContainer {
               }
             }
             if (!param5) {
-              me.field_e = (re.field_Z - 640) / 2;
+              LoginCredentials.field_e = (NumericDateInputWidget.field_Z - 640) / 2;
               cc.a(param5, 0);
               if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
@@ -266,7 +266,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 WidgetStyleLayer.a(param8, param1, TabbedPanel.field_Sb, param2, 0);
               }
             } else {
-              me.field_e = ln.field_f;
+              LoginCredentials.field_e = ln.field_f;
               cc.a(param5, 0);
               if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
@@ -391,7 +391,7 @@ final class DropTargetWidget extends SingleChildContainer {
           var11 = var13;
           var5_ref_int__ = var11;
           for (var6 = 0; var1 > var6; var6++) {
-            var5_ref_int__[var6] = vn.a(ba.field_d[ec.a((int) var16[var6], 255)], ec.a(255, (int) var17[var6]) << 24);
+            var5_ref_int__[var6] = DateOfBirthValidator.a(ba.field_d[ec.a((int) var16[var6], 255)], ec.a(255, (int) var17[var6]) << 24);
           }
           var3 = new ArgbSprite(un.field_n, eb.field_n, rl.field_a[0], TextButton.field_M[0], StrongCacheEntry.field_L[0], MusicPatch.field_r[0], var13);
         } else {

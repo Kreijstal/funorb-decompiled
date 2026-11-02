@@ -236,7 +236,7 @@ final class GrowableIntList {
             var6_ref_tc.unlink(4);
             return;
           }
-          sj.a("HS1: " + ci.a((byte) 94), -37, (Throwable) null);
+          MusicCrossfadeStream.a("HS1: " + ci.a((byte) 94), -37, (Throwable) null);
           LoginForm.m(86);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

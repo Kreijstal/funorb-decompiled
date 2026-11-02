@@ -245,7 +245,7 @@ final class ad {
                   break;
                 }
                 SoftwareRaster.c(0, 0, 62, 74, 0, 128);
-                var6 = sj.field_F;
+                var6 = MusicCrossfadeStream.field_F;
                 var6.a((-var6.field_z + 62) / 2, (-var6.field_B + 74) / 2);
                 break;
               }

@@ -7,7 +7,7 @@ final class fn {
     final static void a(int param0, int param1, boolean param2, int param3, MusicTrack param4) {
         RuntimeException var5 = null;
         MusicTrack var6 = null;
-        sj stackIn_2_0;
+        MusicCrossfadeStream stackIn_2_0;
         int stackIn_2_1;
         MusicTrack stackIn_2_2;
         int stackIn_2_3;
@@ -24,7 +24,7 @@ final class fn {
           stackIn_2_3 = param1;
           stackIn_2_4 = 1000000;
           stackIn_3_5 = !(param2);
-          ((sj) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_3_5, param0 ^ -15608);
+          ((MusicCrossfadeStream) (Object) stackIn_2_0).selectTrack(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, stackIn_3_5, param0 ^ -15608);
           if (param0 == -26907) {
             return;
           }

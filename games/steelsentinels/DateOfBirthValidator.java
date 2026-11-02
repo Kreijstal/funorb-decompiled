@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vn extends DebouncedValidator implements TextInputListener, aa {
+final class DateOfBirthValidator extends DebouncedValidator implements TextInputListener, aa {
     static String field_j;
-    ha field_n;
+    DateInputWidget field_n;
     static String field_k;
     static int[] field_m;
     static String field_l;
@@ -14,7 +14,7 @@ final class vn extends DebouncedValidator implements TextInputListener, aa {
     public final void onSubmit(boolean param0, EditableTextWidget param1) {
         try {
           if (!param0) {
-            vn.d(116);
+            DateOfBirthValidator.d(116);
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "vn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -52,7 +52,7 @@ final class vn extends DebouncedValidator implements TextInputListener, aa {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return da.field_a;
+        return TextLayout.field_a;
     }
 
     final static void d(int param0) {
@@ -100,12 +100,12 @@ final class vn extends DebouncedValidator implements TextInputListener, aa {
         }
     }
 
-    public vn() {
+    public DateOfBirthValidator() {
     }
 
     public final boolean b(boolean param0) {
         if (!param0) {
-          vn.d(false);
+          DateOfBirthValidator.d(false);
           return this.field_n.i(-7034);
         }
         return this.field_n.i(-7034);
@@ -131,7 +131,7 @@ final class vn extends DebouncedValidator implements TextInputListener, aa {
 
     final static void c(int param0) {
         if (param0 <= 0) {
-          vn.c((byte) -125);
+          DateOfBirthValidator.c((byte) -125);
           vc.a(-1);
           return;
         }
@@ -179,7 +179,7 @@ final class vn extends DebouncedValidator implements TextInputListener, aa {
 
     final static PcmStreamMixer c(byte param0) {
         if (param0 != 83) {
-          vn.d(true);
+          DateOfBirthValidator.d(true);
           return UiTheme.field_e;
         }
         return UiTheme.field_e;

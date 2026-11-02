@@ -802,7 +802,7 @@ final class ArticulatedPart extends DualNode {
     final void d(int param0, int param1) {
         ed.field_f = 0;
         NanoTickClock.field_p = -1;
-        si.field_t = 0;
+        CachedTextLayout.field_t = 0;
         if (param0 != 65536) {
           this.rotation = 13;
         }
@@ -1592,7 +1592,7 @@ final class ArticulatedPart extends DualNode {
         }
         if (param0 == ja.a(this.componentId, false)) {
           if (0 >= this.field_C) {
-            si.field_t = si.field_t + 1;
+            CachedTextLayout.field_t = CachedTextLayout.field_t + 1;
             if ((var4 != 0) && (NanoTickClock.field_p == -1 ||
               !(this.field_C >= NanoTickClock.field_p))) {
               NanoTickClock.field_p = this.field_C;

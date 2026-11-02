@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc {
+final class WeightedLruCache {
     static String field_p;
     static int field_d;
     static int field_f;
@@ -59,7 +59,7 @@ final class nc {
           return;
         }
         byte[] var2 = (byte[]) null;
-        nc.a((byte[]) null, 57);
+        WeightedLruCache.a((byte[]) null, 57);
         field_j = null;
         field_h = null;
         field_i = null;
@@ -142,7 +142,7 @@ final class nc {
             return;
           }
           var4 = (java.applet.Applet) null;
-          nc.a((byte) -12, (java.applet.Applet) null);
+          WeightedLruCache.a((byte) -12, (java.applet.Applet) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -175,7 +175,7 @@ final class nc {
           }
           if (param1 != 7045) {
             var3 = (java.applet.Applet) null;
-            nc.a((byte) 100, (java.applet.Applet) null);
+            WeightedLruCache.a((byte) 100, (java.applet.Applet) null);
           }
           var2 = new PaletteBitmapFont(param0, rl.field_a, TextButton.field_M, StrongCacheEntry.field_L, MusicPatch.field_r, ba.field_d, UiContainer.field_L);
           NodeHashTable.a(param1 + 2279);
@@ -214,7 +214,7 @@ final class nc {
             return;
           }
           var4 = (java.applet.Applet) null;
-          nc.a((byte) 60, (java.applet.Applet) null);
+          WeightedLruCache.a((byte) 60, (java.applet.Applet) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -236,7 +236,7 @@ final class nc {
         }
     }
 
-    final void a(long param0, Object param1, int param2) {
+    final void put(long param0, Object param1, int param2) {
         try {
           this.a((byte) -109, param2, param1, param0);
         } catch (RuntimeException runtimeException) {
@@ -244,7 +244,7 @@ final class nc {
         }
     }
 
-    nc(int param0) {
+    WeightedLruCache(int param0) {
         this(param0, param0);
     }
 
@@ -353,7 +353,7 @@ final class nc {
         }
     }
 
-    private nc(int param0, int param1) {
+    private WeightedLruCache(int param0, int param1) {
         int var3;
         this.field_k = new IterableDualNodeDeque();
         this.field_l = param0;

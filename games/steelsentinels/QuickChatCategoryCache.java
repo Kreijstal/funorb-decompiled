@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class co {
+final class QuickChatCategoryCache {
     static RgbSprite[] field_d;
     private ResourceArchive field_e;
     private ResourceArchive field_b;
     static SceneWidget field_c;
     static long field_f;
-    private nc field_a;
+    private WeightedLruCache field_a;
 
     final static boolean a(boolean param0) {
         if (param0) {
@@ -56,7 +56,7 @@ final class co {
         if (param1 >= 32768) {
           var3Lifetime1.c((byte) -3);
         }
-        this.field_a.a((long)param1, var3Lifetime1, 1);
+        this.field_a.put((long)param1, var3Lifetime1, 1);
         return var3Lifetime1;
     }
 
@@ -76,7 +76,7 @@ final class co {
         var7 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != -37) {
-            co.a((byte) -53);
+            QuickChatCategoryCache.a((byte) -53);
           }
           if (param2 > 0) {
             var8 = new byte[param1];
@@ -108,7 +108,7 @@ final class co {
         }
     }
 
-    co(int param0, ResourceArchive param1, ResourceArchive param2) {
+    QuickChatCategoryCache(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -116,7 +116,7 @@ final class co {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_a = new nc(64);
+        this.field_a = new WeightedLruCache(64);
         try {
           this.field_b = param1;
           this.field_e = param2;

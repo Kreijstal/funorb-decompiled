@@ -155,7 +155,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         if (param0) {
           return (cc) null;
         }
-        return (cc) (me.field_b.a(param1, (byte) -72));
+        return (cc) (LoginCredentials.field_b.a(param1, (byte) -72));
     }
 
     private ThreeSliceButtonPainter(int param0, int param1, int param2) {

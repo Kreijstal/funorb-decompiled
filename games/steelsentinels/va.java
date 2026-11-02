@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class va {
-    static qj field_c;
+    static SentinelAnimationEditor field_c;
     static String field_i;
     static BinaryBitmapFont field_j;
     static BufferedRandomAccessFile field_h;

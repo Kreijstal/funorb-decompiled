@@ -86,7 +86,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         if (param0 != 150) {
           LoadingProgressDialog.b(-91, (byte) -45);
         }
-        return -oe.field_b + mm.a(115);
+        return -QuickChatPhraseCache.field_b + mm.a(115);
     }
 
     final void setProgress(int param0, boolean param1, String param2, float param3) {
@@ -139,8 +139,8 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final static void a(byte param0, String[] param1) {
         try {
-          if (null != da.field_b) {
-            da.field_b.field_S.a(true, param1);
+          if (null != TextLayout.field_b) {
+            TextLayout.field_b.field_S.a(true, param1);
           }
           if (null != EmailAvailabilityValidator.field_o) {
             EmailAvailabilityValidator.field_o.field_R.a(true, param1);

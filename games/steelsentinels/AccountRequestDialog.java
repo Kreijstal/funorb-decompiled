@@ -23,13 +23,13 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         this.field_Hb.setColors(4210752, 2121792, 16711422);
         if (param0 > 90) {
           var2 = new AccountMessagePanel(this, this.field_Bb, rg.field_a);
-          var2.a(15, fb.field_q, 120);
+          var2.a(15, UsernameCredentials.field_q, 120);
           this.transitionToContent(var2, -22908735);
           return;
         }
         this.field_Bb = (BitmapFont) null;
         var2Lifetime1 = new AccountMessagePanel(this, this.field_Bb, rg.field_a);
-        var2Lifetime1.a(15, fb.field_q, 120);
+        var2Lifetime1.a(15, UsernameCredentials.field_q, 120);
         this.transitionToContent(var2Lifetime1, -22908735);
     }
 
@@ -42,7 +42,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
         this.field_Q = false;
         if (this.field_Jb) {
-          il.d(0);
+          TextLayoutLine.d(0);
         } else {
           if (this.field_Mb) {
             EditableTextWidget.n(0);

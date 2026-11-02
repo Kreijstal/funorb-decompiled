@@ -6,7 +6,7 @@ import java.util.*;
 class UiComponent extends IntrusiveNode {
     int field_x;
     int field_E;
-    da field_s;
+    TextLayout field_s;
     boolean field_C;
     static int field_t;
     int field_F;
@@ -64,15 +64,15 @@ class UiComponent extends IntrusiveNode {
                 }
               }
             }
-            if (0 == nc.field_d &&
+            if (0 == WeightedLruCache.field_d &&
               ba.field_c != 0) {
               this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-              var8 = nc.field_e;
+              var8 = WeightedLruCache.field_e;
               if (var8 != null) {
                 if (var8.field_A instanceof WidgetDropListener) {
                   ((WidgetDropListener) (var8.field_A)).a(var8, (DropTargetWidget) null, 103);
                 }
-                nc.field_e = null;
+                WeightedLruCache.field_e = null;
               }
             }
           } else {
@@ -85,15 +85,15 @@ class UiComponent extends IntrusiveNode {
                   this.a((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, oh.field_f);
                 }
                 if (VerticalScrollbar.field_gc == 0) {
-                  if (0 == nc.field_d &&
+                  if (0 == WeightedLruCache.field_d &&
                     ba.field_c != 0) {
                     this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                    var22 = nc.field_e;
+                    var22 = WeightedLruCache.field_e;
                     if (var22 != null) {
                       if (var22.field_A instanceof WidgetDropListener) {
                         ((WidgetDropListener) (var22.field_A)).a(var22, (DropTargetWidget) null, 103);
                       }
-                      nc.field_e = null;
+                      WeightedLruCache.field_e = null;
                     }
                   }
                 } else {
@@ -101,28 +101,28 @@ class UiComponent extends IntrusiveNode {
                     param1 = false;
                   }
                   if (var5 == 0) {
-                    if (0 == nc.field_d &&
+                    if (0 == WeightedLruCache.field_d &&
                       ba.field_c != 0) {
                       this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                      var22 = nc.field_e;
+                      var22 = WeightedLruCache.field_e;
                       if (var22 != null) {
                         if (var22.field_A instanceof WidgetDropListener) {
                           ((WidgetDropListener) (var22.field_A)).a(var22, (DropTargetWidget) null, 103);
                         }
-                        nc.field_e = null;
+                        WeightedLruCache.field_e = null;
                       }
                     }
                   } else {
                     this.refreshChildLayouts((byte) -45);
-                    if (0 == nc.field_d &&
+                    if (0 == WeightedLruCache.field_d &&
                       ba.field_c != 0) {
                       this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                      var17 = nc.field_e;
+                      var17 = WeightedLruCache.field_e;
                       if (var17 != null) {
                         if (var17.field_A instanceof WidgetDropListener) {
                           ((WidgetDropListener) (var17.field_A)).a(var17, (DropTargetWidget) null, 103);
                         }
-                        nc.field_e = null;
+                        WeightedLruCache.field_e = null;
                       }
                     }
                   }
@@ -130,7 +130,7 @@ class UiComponent extends IntrusiveNode {
               }
             }
           }
-          ba.field_c = nc.field_d;
+          ba.field_c = WeightedLruCache.field_d;
           hg.a(-127, this.getTooltip(0));
           return param1;
         }
@@ -145,15 +145,15 @@ class UiComponent extends IntrusiveNode {
                 this.a((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, oh.field_f);
               }
               if (VerticalScrollbar.field_gc == 0) {
-                if (0 == nc.field_d &&
+                if (0 == WeightedLruCache.field_d &&
                   ba.field_c != 0) {
                   this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                  var27 = nc.field_e;
+                  var27 = WeightedLruCache.field_e;
                   if (var27 != null) {
                     if (var27.field_A instanceof WidgetDropListener) {
                       ((WidgetDropListener) (var27.field_A)).a(var27, (DropTargetWidget) null, 103);
                     }
-                    nc.field_e = null;
+                    WeightedLruCache.field_e = null;
                   }
                 }
               } else {
@@ -161,15 +161,15 @@ class UiComponent extends IntrusiveNode {
                   param1 = false;
                 }
                 this.refreshChildLayouts((byte) -45);
-                if (0 == nc.field_d &&
+                if (0 == WeightedLruCache.field_d &&
                   ba.field_c != 0) {
                   this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                  var31 = nc.field_e;
+                  var31 = WeightedLruCache.field_e;
                   if (var31 != null) {
                     if (var31.field_A instanceof WidgetDropListener) {
                       ((WidgetDropListener) (var31.field_A)).a(var31, (DropTargetWidget) null, 103);
                     }
-                    nc.field_e = null;
+                    WeightedLruCache.field_e = null;
                   }
                 }
               }
@@ -179,16 +179,16 @@ class UiComponent extends IntrusiveNode {
           if (jj.field_d != 0) {
             if (var5Lifetime1 == 0) {
               if (VerticalScrollbar.field_gc == 0) {
-                if (0 == nc.field_d &&
+                if (0 == WeightedLruCache.field_d &&
                   ba.field_c != 0) {
                   this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                  var36 = nc.field_e;
+                  var36 = WeightedLruCache.field_e;
                   var6 = var36;
                   if (var36 != null) {
                     if (var36.field_A instanceof WidgetDropListener) {
                       ((WidgetDropListener) (var36.field_A)).a(var36, (DropTargetWidget) null, 103);
                     }
-                    nc.field_e = null;
+                    WeightedLruCache.field_e = null;
                   }
                 }
               } else {
@@ -196,100 +196,100 @@ class UiComponent extends IntrusiveNode {
                   if (this.handlePointerPress(BufferedRandomAccessFile.field_j, this, param3, TextButton.field_S, param2, true, VerticalScrollbar.field_gc)) {
                     param1 = false;
                     if (var7 == 0) {
-                      if (0 == nc.field_d &&
+                      if (0 == WeightedLruCache.field_d &&
                         ba.field_c != 0) {
                         this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                        var38 = nc.field_e;
+                        var38 = WeightedLruCache.field_e;
                         if (var38 != null) {
                           if (var38.field_A instanceof WidgetDropListener) {
                             ((WidgetDropListener) (var38.field_A)).a(var38, (DropTargetWidget) null, 103);
                           }
-                          nc.field_e = null;
+                          WeightedLruCache.field_e = null;
                         }
                       }
                       break regionExit1;
                     }
                   }
-                  if (0 == nc.field_d &&
+                  if (0 == WeightedLruCache.field_d &&
                     ba.field_c != 0) {
                     this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                    var38 = nc.field_e;
+                    var38 = WeightedLruCache.field_e;
                     if (var38 != null) {
                       if (var38.field_A instanceof WidgetDropListener) {
                         ((WidgetDropListener) (var38.field_A)).a(var38, (DropTargetWidget) null, 103);
                       }
-                      nc.field_e = null;
+                      WeightedLruCache.field_e = null;
                     }
                   }
                 }
               }
-              ba.field_c = nc.field_d;
+              ba.field_c = WeightedLruCache.field_d;
               hg.a(-127, this.getTooltip(0));
               return param1;
             }
             this.a((byte) -127, param2, DelegatingCanvas.field_c, param3, this, jj.field_d, oh.field_f);
           }
           if (VerticalScrollbar.field_gc == 0) {
-            if (0 == nc.field_d &&
+            if (0 == WeightedLruCache.field_d &&
               ba.field_c != 0) {
               this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-              var39 = nc.field_e;
+              var39 = WeightedLruCache.field_e;
               if (var39 != null) {
                 if (var39.field_A instanceof WidgetDropListener) {
                   ((WidgetDropListener) (var39.field_A)).a(var39, (DropTargetWidget) null, 103);
                 }
-                nc.field_e = null;
+                WeightedLruCache.field_e = null;
               }
             }
           } else {
             if (this.handlePointerPress(BufferedRandomAccessFile.field_j, this, param3, TextButton.field_S, param2, true, VerticalScrollbar.field_gc)) {
               param1 = false;
               if (var7 == 0) {
-                if (0 == nc.field_d &&
+                if (0 == WeightedLruCache.field_d &&
                   ba.field_c != 0) {
                   this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                  var41 = nc.field_e;
+                  var41 = WeightedLruCache.field_e;
                   if (var41 != null) {
                     if (var41.field_A instanceof WidgetDropListener) {
                       ((WidgetDropListener) (var41.field_A)).a(var41, (DropTargetWidget) null, 103);
                     }
-                    nc.field_e = null;
+                    WeightedLruCache.field_e = null;
                   }
                 }
-                ba.field_c = nc.field_d;
+                ba.field_c = WeightedLruCache.field_d;
                 hg.a(-127, this.getTooltip(0));
                 return param1;
               }
             }
             if (var5Lifetime1 == 0) {
-              if (0 == nc.field_d &&
+              if (0 == WeightedLruCache.field_d &&
                 ba.field_c != 0) {
                 this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                var41 = nc.field_e;
+                var41 = WeightedLruCache.field_e;
                 if (var41 != null) {
                   if (var41.field_A instanceof WidgetDropListener) {
                     ((WidgetDropListener) (var41.field_A)).a(var41, (DropTargetWidget) null, 103);
                   }
-                  nc.field_e = null;
+                  WeightedLruCache.field_e = null;
                 }
               }
             } else {
               this.refreshChildLayouts((byte) -45);
-              if (0 == nc.field_d &&
+              if (0 == WeightedLruCache.field_d &&
                 ba.field_c != 0) {
                 this.onPointerReleased((byte) 87, oh.field_f, param2, param3, this, DelegatingCanvas.field_c);
-                var40 = nc.field_e;
+                var40 = WeightedLruCache.field_e;
                 if (var40 != null) {
                   if (var40.field_A instanceof WidgetDropListener) {
                     ((WidgetDropListener) (var40.field_A)).a(var40, (DropTargetWidget) null, 103);
                   }
-                  nc.field_e = null;
+                  WeightedLruCache.field_e = null;
                 }
               }
             }
           }
         }
-        ba.field_c = nc.field_d;
+        ba.field_c = WeightedLruCache.field_d;
         hg.a(-127, this.getTooltip(0));
         return param1;
     }

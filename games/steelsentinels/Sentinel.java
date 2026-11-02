@@ -383,7 +383,7 @@ final class Sentinel extends IntrusiveNode {
                           !this.field_M) {
                           var8 = VerticalScrollbar.field_Vb;
                         } else {
-                          var8 = re.field_ab;
+                          var8 = NumericDateInputWidget.field_ab;
                         }
                       }
                     }
@@ -405,7 +405,7 @@ final class Sentinel extends IntrusiveNode {
               this.field_Ib != this.field_L &&
               !this.field_sc) {
               if (4 == this.world.terrain.getTerrainType(126)) {
-                var8 = var8 + da.field_i;
+                var8 = var8 + TextLayout.field_i;
               } else {
                 var8 = var8 + vc.field_k;
               }
@@ -427,7 +427,7 @@ final class Sentinel extends IntrusiveNode {
             stackIn_153_3 = array$0;
             stackIn_153_4 = 0;
             if (null == this.field_L) {
-              stackIn_154_5 = il.field_d;
+              stackIn_154_5 = TextLayoutLine.field_d;
             } else {
               stackIn_154_5 = this.world.d(-1661904765, this.field_L.playerId);
             }
@@ -1875,7 +1875,7 @@ final class Sentinel extends IntrusiveNode {
           } else {
             this.maximumCharge = sl.a(this.chassis, this.moduleTypes, -7);
             this.field_wb = ef.a(this.chassis, 12258, this.moduleTypes);
-            this.field_Q = bh.a(this.moduleTypes, 10, this.chassis);
+            this.field_Q = SentinelCommandSimulator.a(this.moduleTypes, 10, this.chassis);
             this.maximumArmour = this.chassis.getTotalArmour(8192);
             this.moduleCount = this.chassis.i(-128);
             var6_int = this.hasModuleType(34, -27) ? 1 : 0;
@@ -4065,7 +4065,7 @@ final class Sentinel extends IntrusiveNode {
           var8 = var8 * (-Math.abs(this.field_F) + 250) / 250;
         }
         SoftwareRaster.c(-(var7 / 2) + param2, -var6 + param0, var7, var8, 0, 128);
-        var9 = nc.a(this.activeModuleType, (byte) -102);
+        var9 = WeightedLruCache.a(this.activeModuleType, (byte) -102);
         SoftwareRaster.h(param2 - var7 / 2, param0 - var6, var7, var8, 16711935, 128 + jh.sine16(200 * this.world.simulationTick, param3 ^ 4141) / 513);
         if (param3 != 45) {
           var11 = (int[]) null;

@@ -72,7 +72,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           if (param11 != -1) {
             return;
           }
-          re.field_ib = param3;
+          NumericDateInputWidget.field_ib = param3;
           MouseWheelInput.field_a = param18;
           BufferedRandomAccessFile.a(param14, param19, param7, param12, (byte) -89);
           TabbedPanel.a(param1, param10, param16, -89);
@@ -139,7 +139,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           if (param0 != 6940) {
             field_j = (String) null;
           }
-          stackIn_3_0 = on.a(PcmSampleStream.createAtRatePercent(param1, 100, 96), -48);
+          stackIn_3_0 = EmailCredentials.a(PcmSampleStream.createAtRatePercent(param1, 100, 96), -48);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

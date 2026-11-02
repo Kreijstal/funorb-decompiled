@@ -11,7 +11,7 @@ final class ri {
         if (param0 > -111) {
           return false;
         }
-        return nc.field_q;
+        return WeightedLruCache.field_q;
     }
 
     public static void d(int param0) {

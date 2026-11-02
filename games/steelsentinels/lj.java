@@ -56,7 +56,7 @@ final class lj {
             return stackIn_28_0;
           }
           if (o.a(-32, param0)) {
-            stackIn_31_0 = SocketConnector.a(qj.field_m, -68, new String[]{param0});
+            stackIn_31_0 = SocketConnector.a(SentinelAnimationEditor.field_m, -68, new String[]{param0});
             return stackIn_31_0;
           }
           if (param1 != -79) {
@@ -147,7 +147,7 @@ final class lj {
               var2 = SocketConnector.a(oh.field_b, param0 ^ -11, new String[]{en.field_e});
             }
             if (GzipDecoder.field_e) {
-              sj.a((String) null, (String) (var2), 0, (byte) 21, (String) null, 2);
+              MusicCrossfadeStream.a((String) null, (String) (var2), 0, (byte) 21, (String) null, 2);
               LoginForm.a((byte) -110);
             }
           }
@@ -447,7 +447,7 @@ final class lj {
           cj.field_a[param1] = var8_ref;
           stackIn_106_0 = var8_ref;
           if (0 != param4) {
-            stackIn_107_1 = co.field_d;
+            stackIn_107_1 = QuickChatCategoryCache.field_d;
           } else {
             stackIn_107_1 = MatchingTextValidator.field_t;
           }
@@ -478,7 +478,7 @@ final class lj {
           boolean decompiledFrameCompleted0 = true;
           var17 = new SceneWidget((long)param1, (SceneWidget) null);
           var17.a(0, 2, param5 - 4, 2, -4 + var14);
-          var17.field_I = co.field_d;
+          var17.field_I = QuickChatCategoryCache.field_d;
           var18 = IsaacRandom.field_d[param1];
           var17.field_Pb = var18.toRgbSprite();
           if (!param3 ||
@@ -506,11 +506,11 @@ final class lj {
           if (stackIn_131_0 == stackIn_131_1) {
           }
           if (var7 != 0) {
-            var19 = sj.field_F.field_A;
-            var20Lifetime1 = sj.field_F.field_F;
+            var19 = MusicCrossfadeStream.field_F.field_A;
+            var20Lifetime1 = MusicCrossfadeStream.field_F.field_F;
             var21 = new SceneWidget(-1L, (SceneWidget) null);
             var21.a(0, var17.field_eb + (-var19 + var17.field_Lb) / 2, var20Lifetime1, var17.field_Y + (var17.field_zb - var19) / 2, var19);
-            var21.field_Pb = sj.field_F;
+            var21.field_Pb = MusicCrossfadeStream.field_F;
             var8_ref.a(var21, 124);
           }
           if ((var7 == 0 ||

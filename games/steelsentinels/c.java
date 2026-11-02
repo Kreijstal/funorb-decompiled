@@ -56,7 +56,7 @@ final class c extends IntrusiveNode {
               }
             }
             if (hh.field_f <= NodeDeque.field_g) {
-              oe.field_e = UiComponent.field_r;
+              QuickChatPhraseCache.field_e = UiComponent.field_r;
               NodeDeque.field_g = NodeDeque.field_g - hh.field_f;
               if (!rf.field_b) {
                 UiComponent.field_r = UiComponent.field_r - 1;

@@ -159,7 +159,7 @@ final class gj {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = vn.a(ba.field_d[ec.a(255, (int) var21[var7])], ec.a(var16[var7] << 24, -16777216));
+              var6_ref_int__[var7] = DateOfBirthValidator.a(ba.field_d[ec.a(255, (int) var21[var7])], ec.a(var16[var7] << 24, -16777216));
             }
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(un.field_n, eb.field_n, rl.field_a[var2], TextButton.field_M[var2], StrongCacheEntry.field_L[var2], MusicPatch.field_r[var2], var17));
           }

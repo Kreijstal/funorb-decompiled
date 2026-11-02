@@ -114,7 +114,7 @@ abstract class RasterBuffer {
         if (NameAvailabilityValidator.field_q == 84) {
           if (var3 == 0) {
             if (ib.field_b != 0) {
-              pg.d(97);
+              AlternateUsernameCredentials.d(97);
             }
           } else {
             if (tf.field_g.length() > 0) {
@@ -122,11 +122,11 @@ abstract class RasterBuffer {
               if (bi.a(var4_ref_String, true)) {
                 var13 = (String) null;
                 var12 = (String) null;
-                sj.a((String) null, il.field_e, 0, (byte) 21, (String) null, 2);
+                MusicCrossfadeStream.a((String) null, TextLayoutLine.field_e, 0, (byte) 21, (String) null, 2);
                 var15 = (String) null;
                 var14 = (String) null;
-                sj.a((String) null, MouseWheelInput.field_e, 0, (byte) 21, (String) null, 2);
-                pg.d(81);
+                MusicCrossfadeStream.a((String) null, MouseWheelInput.field_e, 0, (byte) 21, (String) null, 2);
+                AlternateUsernameCredentials.d(81);
               } else {
                 var5 = ib.field_b;
                 if (0 == var5 &&
@@ -134,13 +134,13 @@ abstract class RasterBuffer {
                   var5 = 1;
                 }
                 if (NameAvailabilityValidator.a(var5, 1) == 2) {
-                  il.a(1, var5, param2, -18853);
+                  TextLayoutLine.a(1, var5, param2, -18853);
                 }
-                oe.a(param1, en.field_e, -6988, ib.field_b, -1, var4_ref_String);
-                pg.d(81);
+                QuickChatPhraseCache.a(param1, en.field_e, -6988, ib.field_b, -1, var4_ref_String);
+                AlternateUsernameCredentials.d(81);
               }
             } else {
-              pg.d(81);
+              AlternateUsernameCredentials.d(81);
             }
           }
           return true;

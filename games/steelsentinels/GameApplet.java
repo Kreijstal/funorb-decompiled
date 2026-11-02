@@ -35,9 +35,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (null != vd.field_c) {
           return null;
         }
-        if (fb.field_o != null &&
-          fb.field_o != this) {
-          return fb.field_o.getCodeBase();
+        if (UsernameCredentials.field_o != null &&
+          UsernameCredentials.field_o != this) {
+          return UsernameCredentials.field_o.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -53,9 +53,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
-          if (null != fb.field_o &&
-            fb.field_o != this) {
-            stackIn_10_0 = fb.field_o.getDocumentBase();
+          if (null != UsernameCredentials.field_o &&
+            UsernameCredentials.field_o != this) {
+            stackIn_10_0 = UsernameCredentials.field_o.getDocumentBase();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getDocumentBase();
@@ -170,8 +170,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               if (decompiledFrameRemainder3) {
                 var1 = km.field_m;
-                if (fb.field_o != null) {
-                  var1 = fb.field_o;
+                if (UsernameCredentials.field_o != null) {
+                  var1 = UsernameCredentials.field_o;
                 }
                 var2_ref = SystemTaskService.field_c;
                 if (var2_ref != null) {
@@ -216,7 +216,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              sj.a((String) null, -60, (Throwable) (var1));
+              MusicCrossfadeStream.a((String) null, -60, (Throwable) (var1));
               this.a("crash", -16946);
             }
             this.a(true, (byte) 56);
@@ -247,9 +247,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if (fb.field_o != null &&
-            this != fb.field_o) {
-            stackIn_10_0 = fb.field_o.getAppletContext();
+          if (UsernameCredentials.field_o != null &&
+            this != UsernameCredentials.field_o) {
+            stackIn_10_0 = UsernameCredentials.field_o.getAppletContext();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getAppletContext();
@@ -336,7 +336,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             boolean decompiledFrameRemainder0 = true;
             ad.field_b = QuickChatCategory.field_y;
             km.field_f = km.field_f + 1;
-            if (qj.field_h < 0) {
+            if (SentinelAnimationEditor.field_h < 0) {
               var2 = 0;
               while (true) {
                 if (var2 < 112) {
@@ -346,7 +346,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     continue;
                   }
                 } else {
-                  qj.field_h = hh.field_b;
+                  SentinelAnimationEditor.field_h = hh.field_b;
                 }
                 break;
               }
@@ -354,7 +354,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             if (decompiledFrameRemainder0) {
               while (true) {
-                if (~qj.field_h == ~hh.field_b) {
+                if (~SentinelAnimationEditor.field_h == ~hh.field_b) {
                   break;
                 }
                 var2Lifetime1 = ni.field_b[hh.field_b];
@@ -527,8 +527,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (null != fb.field_o) {
-                var2 = fb.field_o;
+              if (null != UsernameCredentials.field_o) {
+                var2 = UsernameCredentials.field_o;
                 if (var4 != 0) {
                   var2 = km.field_m;
                   var2 = SceneWidget.field_N;
@@ -639,8 +639,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             SentinelCommand.field_v = true;
             var4 = 67 / ((param1 - 7) / 46);
           }
-          if (null != fb.field_o) {
-            fb.field_o.destroy();
+          if (null != UsernameCredentials.field_o) {
+            UsernameCredentials.field_o.destroy();
           }
           try {
             this.c((byte) 106);
@@ -699,9 +699,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
-          if (fb.field_o != null &&
-            this != fb.field_o) {
-            stackIn_12_0 = fb.field_o.getParameter(param0);
+          if (UsernameCredentials.field_o != null &&
+            this != UsernameCredentials.field_o) {
+            stackIn_12_0 = UsernameCredentials.field_o.getParameter(param0);
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getParameter(param0);
@@ -751,7 +751,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var6 = wd.$cfr$intArgs$a$1694234bddb3(ProxySocketConnector.field_j[var3_int], 52, true);
                 var7 = QuickChatMenu.field_kc - (var6 >> 1);
                 var4 = var4 + MembershipPromotionScreen.field_m;
-                if (pg.a(rn.field_q + (SectorCacheStore.field_j << 1), (ud.field_y << 1) + var6, param1, var7 - ud.field_y, 0, var4, param2)) {
+                if (AlternateUsernameCredentials.a(rn.field_q + (SectorCacheStore.field_j << 1), (ud.field_y << 1) + var6, param1, var7 - ud.field_y, 0, var4, param2)) {
                   stackIn_13_0 = var5;
                   return stackIn_13_0;
                 }
@@ -799,7 +799,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          fb.field_o = param0;
+          UsernameCredentials.field_o = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -985,7 +985,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var9_ref = decompiledCaughtException;
-              sj.a((String) null, -106, var9_ref);
+              MusicCrossfadeStream.a((String) null, -106, var9_ref);
               this.a("crash", -16946);
             }
             return;

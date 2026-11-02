@@ -15,8 +15,8 @@ final class TextHotspotRegion extends IntrusiveNode {
 
     final static void d(int param0) {
         sf.field_t = SoftwareRaster.field_j;
-        re.field_Z = SoftwareRaster.field_c;
-        bh.a(0);
+        NumericDateInputWidget.field_Z = SoftwareRaster.field_c;
+        SentinelCommandSimulator.a(0);
         BoundedRandomAccessFile.field_f.a(QuickChatMenu.field_Ub.field_Lb - 40 - 2, 0, QuickChatMenu.field_Ub.field_zb, 2, 0);
         Explosion.field_C.a(0, 0, SocketConnector.field_b, 0, Sprite.field_l.field_zb);
         int var1 = 2 + SocketConnector.field_b;
@@ -84,7 +84,7 @@ final class TextHotspotRegion extends IntrusiveNode {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, int param3) {
         try {
-          wn.a(ArchiveIndex.field_s, NameAvailabilityValidator.field_o, ParticleEffect.field_K, NodeHashTable.field_j, param2, 127, Bzip2State.field_d, dj.field_b, CipherPacketBuffer.field_H, nc.field_n, SceneWidget.field_ib, bd.field_f);
+          wn.a(ArchiveIndex.field_s, NameAvailabilityValidator.field_o, ParticleEffect.field_K, NodeHashTable.field_j, param2, 127, Bzip2State.field_d, dj.field_b, CipherPacketBuffer.field_H, WeightedLruCache.field_n, SceneWidget.field_ib, bd.field_f);
           SceneWidgetNode.field_y = cf.a("chatfilter", "lobby", (byte) -62, param0);
           ec.field_e[2] = DialWidgetPainter.field_j;
           if (param3 >= -10) {

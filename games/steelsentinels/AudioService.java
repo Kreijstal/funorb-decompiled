@@ -58,7 +58,7 @@ final class AudioService implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var5 = (String) null;
-            sj.a((String) null, -72, (Throwable) ((Object) var1));
+            MusicCrossfadeStream.a((String) null, -72, (Throwable) ((Object) var1));
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

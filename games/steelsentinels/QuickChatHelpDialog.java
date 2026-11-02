@@ -302,17 +302,17 @@ final class QuickChatHelpDialog extends SceneWidget {
           }
           LoginForm.field_U = 0;
           if (lc.field_e) {
-            if (me.field_f != ml.field_g) {
-              jn.a(true, (byte) 71, 200, me.field_f);
+            if (LoginCredentials.field_f != ml.field_g) {
+              jn.a(true, (byte) 71, 200, LoginCredentials.field_f);
             }
             if (BoundedUrlRequest.field_i != null) {
               BoundedUrlRequest.field_i.f((byte) -92);
             }
-            if (null != si.field_A) {
-              si.field_A.f((byte) -93);
+            if (null != CachedTextLayout.field_A) {
+              CachedTextLayout.field_A.f((byte) -93);
             }
             BoundedUrlRequest.field_i = null;
-            si.field_A = null;
+            CachedTextLayout.field_A = null;
             lc.field_e = false;
           }
           if (ReportAbuseDialog.field_Sb) {

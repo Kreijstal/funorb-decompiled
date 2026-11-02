@@ -47,8 +47,8 @@ public final class SteelSentinels extends FunOrbClient {
             en.a(var2, -28003);
             return;
           }
-          if (!co.a(false)) {
-            mc.a(qj.field_i, 100.0f, -21801);
+          if (!QuickChatCategoryCache.a(false)) {
+            mc.a(SentinelAnimationEditor.field_i, 100.0f, -21801);
             en.a(var2, -28003);
             return;
           }
@@ -92,7 +92,7 @@ public final class SteelSentinels extends FunOrbClient {
           if (!pc.field_w ||
             !Sprite.field_k) {
             boolean decompiledFrameCompleted0 = true;
-            da.a(PasswordFieldPainter.c(8), 25104);
+            TextLayout.a(PasswordFieldPainter.c(8), 25104);
             if (LoginForm.field_T == -2) {
               var3 = hl.a((byte) -66);
               if (var3 != null) {
@@ -340,10 +340,10 @@ public final class SteelSentinels extends FunOrbClient {
                                               cc.j(0);
                                               return false;
                                             }
-                                            mc.a(ModalStack.a((byte) -128, qj.field_i, sl.field_l, BufferedRandomAccessFile.field_k), 90.0f, -21801);
+                                            mc.a(ModalStack.a((byte) -128, SentinelAnimationEditor.field_i, sl.field_l, BufferedRandomAccessFile.field_k), 90.0f, -21801);
                                             return false;
                                           }
-                                          mc.a(ci.a(IsaacRandom.field_k, (byte) 94, "", qj.field_i, sl.field_l), 85.0f, -21801);
+                                          mc.a(ci.a(IsaacRandom.field_k, (byte) 94, "", SentinelAnimationEditor.field_i, sl.field_l), 85.0f, -21801);
                                           return false;
                                         }
                                         mc.a(ci.a(oh.field_a, (byte) 108, "basic", kb.field_c, og.field_c), 80.0f, -21801);
@@ -394,19 +394,19 @@ public final class SteelSentinels extends FunOrbClient {
           if (ImageProducerRasterBuffer.field_t != null) {
             mc.a(ResourceArchive.field_n, 85.0f, -21801);
             this.a((byte) -116);
-            qj.field_q[71] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "deploying_in").decodeAllToPcm();
-            qj.field_q[72] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "five").decodeAllToPcm();
-            qj.field_q[73] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "four").decodeAllToPcm();
-            qj.field_q[74] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "three").decodeAllToPcm();
-            qj.field_q[75] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "two").decodeAllToPcm();
-            qj.field_q[76] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "one").decodeAllToPcm();
-            qj.field_q[77] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "chassis_upgrade_available").decodeAllToPcm();
-            qj.field_q[78] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "armour_level_critical").decodeAllToPcm();
-            qj.field_q[79] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "target_acquired").decodeAllToPcm();
-            qj.field_q[80] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "target_lock_failed").decodeAllToPcm();
-            qj.field_q[81] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "warning").decodeAllToPcm();
-            qj.field_q[82] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "energy_low").decodeAllToPcm();
-            qj.field_q[83] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "shield_depleted").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[71] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "deploying_in").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[72] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "five").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[73] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "four").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[74] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "three").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[75] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "two").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[76] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "one").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[77] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "chassis_upgrade_available").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[78] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "armour_level_critical").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[79] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "target_acquired").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[80] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "target_lock_failed").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[81] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "warning").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[82] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "energy_low").decodeAllToPcm();
+            SentinelAnimationEditor.field_q[83] = VorbisSample.loadNamed(ImageProducerRasterBuffer.field_t, "default", "shield_depleted").decodeAllToPcm();
             ImageProducerRasterBuffer.field_t = null;
             cc.j(0);
             return false;
@@ -414,13 +414,13 @@ public final class SteelSentinels extends FunOrbClient {
           if (GrowableIntList.field_i != null) {
             mc.a(ba.field_a, 88.0f, -21801);
             this.a((byte) 104);
-            me.field_f = MusicTrack.load(GrowableIntList.field_i, "", "md_title_music");
+            LoginCredentials.field_f = MusicTrack.load(GrowableIntList.field_i, "", "md_title_music");
             NodeHashTableIterator.field_i = MusicTrack.load(GrowableIntList.field_i, "", "war_zone");
             ByteStorage.field_e = MusicTrack.load(GrowableIntList.field_i, "", "lost_world");
             CipherPacketBuffer.field_z = MusicTrack.load(GrowableIntList.field_i, "", "cityscape");
             ue.field_e = MusicTrack.load(GrowableIntList.field_i, "", "thats_no_moon");
             SocketConnector.field_a = MusicTrack.load(GrowableIntList.field_i, "", "star_fleet");
-            IterableNodeHashTable.field_f.a(0, me.field_f, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
+            IterableNodeHashTable.field_f.a(0, LoginCredentials.field_f, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
             IterableNodeHashTable.field_f.a(0, NodeHashTableIterator.field_i, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
             IterableNodeHashTable.field_f.a(0, ByteStorage.field_e, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
             IterableNodeHashTable.field_f.a(0, CipherPacketBuffer.field_z, 21687, RasterBuffer.field_e, SectorCacheStore.field_i);
@@ -447,7 +447,7 @@ public final class SteelSentinels extends FunOrbClient {
                 LoginForm.field_T = 0;
                 GzipDecoder.field_g = 0;
                 ProxyAuthenticationException.a(50, (byte) -127);
-                jn.a(true, (byte) 92, 200, me.field_f);
+                jn.a(true, (byte) 92, 200, LoginCredentials.field_f);
                 break;
               }
               GameKeyHandler.field_e[var2_int] = new SentinelDesigner(var2_int);
@@ -495,8 +495,8 @@ public final class SteelSentinels extends FunOrbClient {
               GrowableIntList.field_d = new RgbSprite(40, 40);
               GrowableIntList.field_d.bindRasterTarget();
               ValidationHelpWidget.field_tb.drawScaled(0, 0, 40, 40);
-              sj.field_F = new RgbSprite(40, 40);
-              sj.field_F.bindRasterTarget();
+              MusicCrossfadeStream.field_F = new RgbSprite(40, 40);
+              MusicCrossfadeStream.field_F.bindRasterTarget();
               SingleChildContainer.field_P.drawScaled(0, 0, 40, 40);
               Checkbox.field_bb.b((byte) 126);
               rg.a(false, ValidationHelpWidget.field_tb);
@@ -510,12 +510,12 @@ public final class SteelSentinels extends FunOrbClient {
               sa.field_e = cf.a("darkerbluebox", "basic", (byte) -30, DualNode.field_x);
               FullscreenFocusCanvas.field_a = cf.a("lightbluetabbox", "basic", (byte) -108, DualNode.field_x);
               lj.field_b = cf.a("darkgrayboxfilled", "basic", (byte) -114, DualNode.field_x);
-              co.field_d = cf.a("darkgraybox", "basic", (byte) -67, DualNode.field_x);
+              QuickChatCategoryCache.field_d = cf.a("darkgraybox", "basic", (byte) -67, DualNode.field_x);
               pa.field_g = cf.a("sectiontab", "basic", (byte) -99, DualNode.field_x);
               AccountMessagePanel.field_Y = cf.a("tabselected", "basic", (byte) -40, DualNode.field_x);
               Checkbox.field_X = cf.a("tabunselected", "basic", (byte) -67, DualNode.field_x);
-              oe.field_f = cf.a("tabmouseover", "basic", (byte) -71, DualNode.field_x);
-              si.field_E = cf.a("sentinelimages", "basic", (byte) -111, DualNode.field_x);
+              QuickChatPhraseCache.field_f = cf.a("tabmouseover", "basic", (byte) -71, DualNode.field_x);
+              CachedTextLayout.field_E = cf.a("sentinelimages", "basic", (byte) -111, DualNode.field_x);
               MatchingTextValidator.field_t[4] = null;
               be.field_f[4] = null;
               AccountChoicePanel.field_T = cf.a("greybox", "basic", (byte) -90, DualNode.field_x);
@@ -558,14 +558,14 @@ public final class SteelSentinels extends FunOrbClient {
           }
           var3 = cj.a(stackIn_149_0 ^ stackIn_149_1, "basic", DualNode.field_x, "instr_texticons");
           SoundCache.field_a = new IndexedSprite[18];
-          pg.field_w = new int[SoundCache.field_a.length];
+          AlternateUsernameCredentials.field_w = new int[SoundCache.field_a.length];
           var4_int = 0;
           do {
             if (!(var4_int < SoundCache.field_a.length)) {
               ArraySupport.copy(var3, 0, SoundCache.field_a, 6, 2);
               SoundCache.field_a[17] = SoundCache.field_a[7];
               SocialListEntry.field_Zb = cf.a("scrolldown", "basic", (byte) -87, DualNode.field_x);
-              sj.field_x = cf.a("scrollup", "basic", (byte) -33, DualNode.field_x);
+              MusicCrossfadeStream.field_x = cf.a("scrollup", "basic", (byte) -33, DualNode.field_x);
               jn.field_f = cf.a("scrollbar", "basic", (byte) -95, DualNode.field_x);
               qi.field_a = cf.a("scrollvert", "basic", (byte) -104, DualNode.field_x);
               MouseInputHandler.field_k = cf.a("frame_shiny", "basic", (byte) -123, DualNode.field_x);
@@ -579,7 +579,7 @@ public final class SteelSentinels extends FunOrbClient {
               LinkButtonPainter.field_d[4] = null;
               TextButton.field_Q = cf.a("popup_frame", "basic", (byte) -94, DualNode.field_x);
               TextButton.field_Q[4] = null;
-              si.field_l = cj.a(125, "basic", DualNode.field_x, "mechbits");
+              CachedTextLayout.field_l = cj.a(125, "basic", DualNode.field_x, "mechbits");
               IterableDualNodeDeque.field_j = cf.a("weaponclasses", "basic", (byte) -107, DualNode.field_x);
               ja.field_d = cj.a(-123, "basic", DualNode.field_x, "batdrone");
               VerticalScrollbar.field_Zb = cj.a(param0 ^ 69, "basic", DualNode.field_x, "drones");
@@ -600,7 +600,7 @@ public final class SteelSentinels extends FunOrbClient {
               IsaacRandom.field_d = cj.a(-123, "basic", DualNode.field_x, "modules");
               break;
             }
-            pg.field_w[var4_int] = 14;
+            AlternateUsernameCredentials.field_w[var4_int] = 14;
             var4_int++;
           } while (var6 == 0);
           var3_array = rh.field_v;
@@ -641,7 +641,7 @@ public final class SteelSentinels extends FunOrbClient {
           NodeHashTable.field_k = rl.a(DualNode.field_x, "basic", "tagborder", false);
           MarkerSliderPainter.field_f = cf.a("movekeys", "basic", (byte) -38, DualNode.field_x);
           ValidatedTextWidget.field_wb = rl.a(DualNode.field_x, "basic", "shiftkey", false);
-          da.field_e = cf.a("config_tabs", "basic", (byte) -33, DualNode.field_x);
+          TextLayout.field_e = cf.a("config_tabs", "basic", (byte) -33, DualNode.field_x);
           RasterSnapshot.field_r[0] = rl.a(DualNode.field_x, "basic", "research_ring", false);
           DialWidgetPainter.field_q[0] = rl.a(DualNode.field_x, "basic", "research_icon", false);
           LinkButtonPainter.field_p = cj.a(param0 - 75, "basic", DualNode.field_x, "powerups");
@@ -677,11 +677,11 @@ public final class SteelSentinels extends FunOrbClient {
             cc.field_pc[var4_int] = (ArgbSprite) (var3_array[var4_int]);
             var4_int++;
           } while (var6 == 0);
-          var3_array2 = new RgbSprite[nc.field_m.length][];
-          var4 = new RgbSprite[nc.field_m.length][];
+          var3_array2 = new RgbSprite[WeightedLruCache.field_m.length][];
+          var4 = new RgbSprite[WeightedLruCache.field_m.length][];
           var5 = 0;
           do {
-            if (!(nc.field_m.length > var5)) {
+            if (!(WeightedLruCache.field_m.length > var5)) {
               ResourceArchive.a(te.field_c, (byte) 74, tm.field_d, (int[]) null, BufferedRandomAccessFile.field_k, var4, true, 4, 3, ModalPanel.field_R, var2_array, DebouncedValidator.field_b, var3_array2, MusicPatchPcmStream.field_t, DelayedServerPacket.field_w, ParticleEffect.field_y, ImageProducerRasterBuffer.field_u);
               pa.a(tm.field_d, 111, MusicPatchPcmStream.field_t);
               un.a(200, 126);
@@ -689,7 +689,7 @@ public final class SteelSentinels extends FunOrbClient {
               cc.j(param0 ^ -52);
               break;
             }
-            var3_array2[var5] = cf.a(nc.field_m[var5], "basic", (byte) -63, DualNode.field_x);
+            var3_array2[var5] = cf.a(WeightedLruCache.field_m[var5], "basic", (byte) -63, DualNode.field_x);
             var4[var5] = null;
             var5++;
           } while (var6 == 0);
@@ -1032,14 +1032,14 @@ public final class SteelSentinels extends FunOrbClient {
             regionExit1: {
               ReflectionCheck.field_r = 90;
               if (TickClock.field_g == 0) {
-                qj.field_q[0] = RasterBuffer.field_e.getSoundEffectByName("menu_select", "", -123);
+                SentinelAnimationEditor.field_q[0] = RasterBuffer.field_e.getSoundEffectByName("menu_select", "", -123);
                 TickClock.field_g = TickClock.field_g + 1;
                 if (var3 == 0) {
                   break regionExit1;
                 }
               }
               if (TickClock.field_g == 1) {
-                qj.field_q[1] = RasterBuffer.field_e.getSoundEffectByName("jumping", "", bi.a(param0, 90));
+                SentinelAnimationEditor.field_q[1] = RasterBuffer.field_e.getSoundEffectByName("jumping", "", bi.a(param0, 90));
                 TickClock.field_g = TickClock.field_g + 1;
                 if (var3 == 0) {
                   break regionExit1;
@@ -1048,7 +1048,7 @@ public final class SteelSentinels extends FunOrbClient {
               if (TickClock.field_g != 2) {
                 if (3 != TickClock.field_g) {
                   if (TickClock.field_g == 4) {
-                    qj.field_q[4] = RasterBuffer.field_e.getSoundEffectByName("drop_pod", "", -121);
+                    SentinelAnimationEditor.field_q[4] = RasterBuffer.field_e.getSoundEffectByName("drop_pod", "", -121);
                     TickClock.field_g = TickClock.field_g + 1;
                     if (var3 == 0) {
                       break regionExit1;
@@ -1056,7 +1056,7 @@ public final class SteelSentinels extends FunOrbClient {
                   }
                   if (TickClock.field_g != 5) {
                     if (TickClock.field_g == 6) {
-                      qj.field_q[6] = RasterBuffer.field_e.getSoundEffectByName("footstep_5", "", 100);
+                      SentinelAnimationEditor.field_q[6] = RasterBuffer.field_e.getSoundEffectByName("footstep_5", "", 100);
                       TickClock.field_g = TickClock.field_g + 1;
                       if (var3 == 0) {
                         break regionExit1;
@@ -1064,7 +1064,7 @@ public final class SteelSentinels extends FunOrbClient {
                     }
                     if (TickClock.field_g != 7) {
                       if (8 == TickClock.field_g) {
-                        qj.field_q[8] = RasterBuffer.field_e.getSoundEffectByName("respawn", "", -28);
+                        SentinelAnimationEditor.field_q[8] = RasterBuffer.field_e.getSoundEffectByName("respawn", "", -28);
                         TickClock.field_g = TickClock.field_g + 1;
                         if (var3 == 0) {
                           break regionExit1;
@@ -1074,7 +1074,7 @@ public final class SteelSentinels extends FunOrbClient {
                         if (10 != TickClock.field_g) {
                           if (11 != TickClock.field_g) {
                             if (12 == TickClock.field_g) {
-                              qj.field_q[12] = RasterBuffer.field_e.getSoundEffectByName("proxy_grenade_launcher", "", 105);
+                              SentinelAnimationEditor.field_q[12] = RasterBuffer.field_e.getSoundEffectByName("proxy_grenade_launcher", "", 105);
                               TickClock.field_g = TickClock.field_g + 1;
                               if (var3 == 0) {
                                 break regionExit1;
@@ -1083,7 +1083,7 @@ public final class SteelSentinels extends FunOrbClient {
                             if (TickClock.field_g != 13) {
                               if (TickClock.field_g != 14) {
                                 if (15 == TickClock.field_g) {
-                                  qj.field_q[15] = RasterBuffer.field_e.getSoundEffectByName("pulse_laser", "", -118);
+                                  SentinelAnimationEditor.field_q[15] = RasterBuffer.field_e.getSoundEffectByName("pulse_laser", "", -118);
                                   TickClock.field_g = TickClock.field_g + 1;
                                   if (var3 == 0) {
                                     break regionExit1;
@@ -1091,21 +1091,21 @@ public final class SteelSentinels extends FunOrbClient {
                                 }
                                 if (TickClock.field_g != 16) {
                                   if (TickClock.field_g == 17) {
-                                    qj.field_q[17] = RasterBuffer.field_e.getSoundEffectByName("emp_rocket_impact", "", 112);
+                                    SentinelAnimationEditor.field_q[17] = RasterBuffer.field_e.getSoundEffectByName("emp_rocket_impact", "", 112);
                                     TickClock.field_g = TickClock.field_g + 1;
                                     if (var3 == 0) {
                                       break regionExit1;
                                     }
                                   }
                                   if (TickClock.field_g == 18) {
-                                    qj.field_q[18] = RasterBuffer.field_e.getSoundEffectByName("flak_repeater", "", 124);
+                                    SentinelAnimationEditor.field_q[18] = RasterBuffer.field_e.getSoundEffectByName("flak_repeater", "", 124);
                                     TickClock.field_g = TickClock.field_g + 1;
                                     if (var3 == 0) {
                                       break regionExit1;
                                     }
                                   }
                                   if (19 == TickClock.field_g) {
-                                    qj.field_q[19] = RasterBuffer.field_e.getSoundEffectByName("plasma_spray", "", -50);
+                                    SentinelAnimationEditor.field_q[19] = RasterBuffer.field_e.getSoundEffectByName("plasma_spray", "", -50);
                                     TickClock.field_g = TickClock.field_g + 1;
                                     if (var3 == 0) {
                                       break regionExit1;
@@ -1113,14 +1113,14 @@ public final class SteelSentinels extends FunOrbClient {
                                   }
                                   if (TickClock.field_g != 20) {
                                     if (TickClock.field_g == 21) {
-                                      qj.field_q[21] = RasterBuffer.field_e.getSoundEffectByName("electron_cannon", "", param0 - 135);
+                                      SentinelAnimationEditor.field_q[21] = RasterBuffer.field_e.getSoundEffectByName("electron_cannon", "", param0 - 135);
                                       TickClock.field_g = TickClock.field_g + 1;
                                       if (var3 == 0) {
                                         break regionExit1;
                                       }
                                     }
                                     if (TickClock.field_g == 22) {
-                                      qj.field_q[22] = RasterBuffer.field_e.getSoundEffectByName("sword", "", 113);
+                                      SentinelAnimationEditor.field_q[22] = RasterBuffer.field_e.getSoundEffectByName("sword", "", 113);
                                       TickClock.field_g = TickClock.field_g + 1;
                                       if (var3 == 0) {
                                         break regionExit1;
@@ -1133,28 +1133,28 @@ public final class SteelSentinels extends FunOrbClient {
                                             if (27 != TickClock.field_g) {
                                               if (TickClock.field_g != 28) {
                                                 if (29 == TickClock.field_g) {
-                                                  qj.field_q[29] = RasterBuffer.field_e.getSoundEffectByName("shield_loop", "", 122);
+                                                  SentinelAnimationEditor.field_q[29] = RasterBuffer.field_e.getSoundEffectByName("shield_loop", "", 122);
                                                   TickClock.field_g = TickClock.field_g + 1;
                                                   if (var3 == 0) {
                                                     break regionExit1;
                                                   }
                                                 }
                                                 if (30 == TickClock.field_g) {
-                                                  qj.field_q[30] = RasterBuffer.field_e.getSoundEffectByName("mine_inactive_hum_2", "", -105);
+                                                  SentinelAnimationEditor.field_q[30] = RasterBuffer.field_e.getSoundEffectByName("mine_inactive_hum_2", "", -105);
                                                   TickClock.field_g = TickClock.field_g + 1;
                                                   if (var3 == 0) {
                                                     break regionExit1;
                                                   }
                                                 }
                                                 if (TickClock.field_g == 31) {
-                                                  qj.field_q[31] = RasterBuffer.field_e.getSoundEffectByName("lightning_cannon", "", 123);
+                                                  SentinelAnimationEditor.field_q[31] = RasterBuffer.field_e.getSoundEffectByName("lightning_cannon", "", 123);
                                                   TickClock.field_g = TickClock.field_g + 1;
                                                   if (var3 == 0) {
                                                     break regionExit1;
                                                   }
                                                 }
                                                 if (32 == TickClock.field_g) {
-                                                  qj.field_q[32] = RasterBuffer.field_e.getSoundEffectByName("heavy_cannon_3", "", -86);
+                                                  SentinelAnimationEditor.field_q[32] = RasterBuffer.field_e.getSoundEffectByName("heavy_cannon_3", "", -86);
                                                   TickClock.field_g = TickClock.field_g + 1;
                                                   if (var3 == 0) {
                                                     break regionExit1;
@@ -1162,7 +1162,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                 }
                                                 if (TickClock.field_g != 33) {
                                                   if (TickClock.field_g == 34) {
-                                                    qj.field_q[34] = RasterBuffer.field_e.getSoundEffectByName("heavy_cannon_1", "", -109);
+                                                    SentinelAnimationEditor.field_q[34] = RasterBuffer.field_e.getSoundEffectByName("heavy_cannon_1", "", -109);
                                                     TickClock.field_g = TickClock.field_g + 1;
                                                     if (var3 == 0) {
                                                       break regionExit1;
@@ -1170,21 +1170,21 @@ public final class SteelSentinels extends FunOrbClient {
                                                   }
                                                   if (TickClock.field_g != 35) {
                                                     if (TickClock.field_g == 36) {
-                                                      qj.field_q[36] = RasterBuffer.field_e.getSoundEffectByName("heavy_gun_3", "", param0 - 94);
+                                                      SentinelAnimationEditor.field_q[36] = RasterBuffer.field_e.getSoundEffectByName("heavy_gun_3", "", param0 - 94);
                                                       TickClock.field_g = TickClock.field_g + 1;
                                                       if (var3 == 0) {
                                                         break regionExit1;
                                                       }
                                                     }
                                                     if (TickClock.field_g == 37) {
-                                                      qj.field_q[37] = RasterBuffer.field_e.getSoundEffectByName("air_mine", "", -78);
+                                                      SentinelAnimationEditor.field_q[37] = RasterBuffer.field_e.getSoundEffectByName("air_mine", "", -78);
                                                       TickClock.field_g = TickClock.field_g + 1;
                                                       if (var3 == 0) {
                                                         break regionExit1;
                                                       }
                                                     }
                                                     if (TickClock.field_g == 38) {
-                                                      qj.field_q[38] = RasterBuffer.field_e.getSoundEffectByName("heavy_gun_1", "", 126);
+                                                      SentinelAnimationEditor.field_q[38] = RasterBuffer.field_e.getSoundEffectByName("heavy_gun_1", "", 126);
                                                       TickClock.field_g = TickClock.field_g + 1;
                                                       if (var3 == 0) {
                                                         break regionExit1;
@@ -1192,7 +1192,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                     }
                                                     if (TickClock.field_g != 39) {
                                                       if (TickClock.field_g == 40) {
-                                                        qj.field_q[40] = RasterBuffer.field_e.getSoundEffectByName("rail_repeater", "", 118);
+                                                        SentinelAnimationEditor.field_q[40] = RasterBuffer.field_e.getSoundEffectByName("rail_repeater", "", 118);
                                                         TickClock.field_g = TickClock.field_g + 1;
                                                         if (var3 == 0) {
                                                           break regionExit1;
@@ -1200,7 +1200,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                       }
                                                       if (41 != TickClock.field_g) {
                                                         if (TickClock.field_g == 42) {
-                                                          qj.field_q[42] = RasterBuffer.field_e.getSoundEffectByName("plasma_cannon", "", 104);
+                                                          SentinelAnimationEditor.field_q[42] = RasterBuffer.field_e.getSoundEffectByName("plasma_cannon", "", 104);
                                                           TickClock.field_g = TickClock.field_g + 1;
                                                           if (var3 == 0) {
                                                             break regionExit1;
@@ -1210,7 +1210,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                           if (TickClock.field_g != 44) {
                                                             if (TickClock.field_g != 45) {
                                                               if (TickClock.field_g == 46) {
-                                                                qj.field_q[67] = RasterBuffer.field_e.getSoundEffectByName("laser_beam", "", 110);
+                                                                SentinelAnimationEditor.field_q[67] = RasterBuffer.field_e.getSoundEffectByName("laser_beam", "", 110);
                                                                 TickClock.field_g = TickClock.field_g + 1;
                                                                 if (var3 == 0) {
                                                                   break regionExit1;
@@ -1218,7 +1218,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                               }
                                                               if (TickClock.field_g != 47) {
                                                                 if (TickClock.field_g == 48) {
-                                                                  qj.field_q[46] = RasterBuffer.field_e.getSoundEffectByName("flak_cannon_3", "", 103);
+                                                                  SentinelAnimationEditor.field_q[46] = RasterBuffer.field_e.getSoundEffectByName("flak_cannon_3", "", 103);
                                                                   TickClock.field_g = TickClock.field_g + 1;
                                                                   if (var3 == 0) {
                                                                     break regionExit1;
@@ -1226,21 +1226,21 @@ public final class SteelSentinels extends FunOrbClient {
                                                                 }
                                                                 if (49 != TickClock.field_g) {
                                                                   if (TickClock.field_g == 50) {
-                                                                    qj.field_q[48] = RasterBuffer.field_e.getSoundEffectByName("explosion_1", "", 110);
+                                                                    SentinelAnimationEditor.field_q[48] = RasterBuffer.field_e.getSoundEffectByName("explosion_1", "", 110);
                                                                     TickClock.field_g = TickClock.field_g + 1;
                                                                     if (var3 == 0) {
                                                                       break regionExit1;
                                                                     }
                                                                   }
                                                                   if (TickClock.field_g == 51) {
-                                                                    qj.field_q[49] = RasterBuffer.field_e.getSoundEffectByName("damage_richochet", "", bi.a(param0, -15));
+                                                                    SentinelAnimationEditor.field_q[49] = RasterBuffer.field_e.getSoundEffectByName("damage_richochet", "", bi.a(param0, -15));
                                                                     TickClock.field_g = TickClock.field_g + 1;
                                                                     if (var3 == 0) {
                                                                       break regionExit1;
                                                                     }
                                                                   }
                                                                   if (TickClock.field_g == 52) {
-                                                                    qj.field_q[50] = RasterBuffer.field_e.getSoundEffectByName("damage_plasma_burn", "", 113);
+                                                                    SentinelAnimationEditor.field_q[50] = RasterBuffer.field_e.getSoundEffectByName("damage_plasma_burn", "", 113);
                                                                     TickClock.field_g = TickClock.field_g + 1;
                                                                     if (var3 == 0) {
                                                                       break regionExit1;
@@ -1248,7 +1248,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                                   }
                                                                   if (53 != TickClock.field_g) {
                                                                     if (TickClock.field_g == 54) {
-                                                                      qj.field_q[52] = RasterBuffer.field_e.getSoundEffectByName("explosion_4", "", 122);
+                                                                      SentinelAnimationEditor.field_q[52] = RasterBuffer.field_e.getSoundEffectByName("explosion_4", "", 122);
                                                                       TickClock.field_g = TickClock.field_g + 1;
                                                                       if (var3 == 0) {
                                                                         break regionExit1;
@@ -1257,14 +1257,14 @@ public final class SteelSentinels extends FunOrbClient {
                                                                     if (TickClock.field_g != 55) {
                                                                       if (TickClock.field_g != 56) {
                                                                         if (TickClock.field_g == 57) {
-                                                                          qj.field_q[55] = RasterBuffer.field_e.getSoundEffectByName("damage_debris_hitting_ground", "", -32);
+                                                                          SentinelAnimationEditor.field_q[55] = RasterBuffer.field_e.getSoundEffectByName("damage_debris_hitting_ground", "", -32);
                                                                           TickClock.field_g = TickClock.field_g + 1;
                                                                           if (var3 == 0) {
                                                                             break regionExit1;
                                                                           }
                                                                         }
                                                                         if (TickClock.field_g == 58) {
-                                                                          qj.field_q[56] = RasterBuffer.field_e.getSoundEffectByName("explosion_3", "", -82);
+                                                                          SentinelAnimationEditor.field_q[56] = RasterBuffer.field_e.getSoundEffectByName("explosion_3", "", -82);
                                                                           TickClock.field_g = TickClock.field_g + 1;
                                                                           if (var3 == 0) {
                                                                             break regionExit1;
@@ -1273,7 +1273,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                                         if (TickClock.field_g != 59) {
                                                                           if (60 != TickClock.field_g) {
                                                                             if (TickClock.field_g == 61) {
-                                                                              qj.field_q[59] = RasterBuffer.field_e.getSoundEffectByName("rail_cannon", "", 122);
+                                                                              SentinelAnimationEditor.field_q[59] = RasterBuffer.field_e.getSoundEffectByName("rail_cannon", "", 122);
                                                                               TickClock.field_g = TickClock.field_g + 1;
                                                                               if (var3 == 0) {
                                                                                 break regionExit1;
@@ -1282,7 +1282,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                                             if (TickClock.field_g != 62) {
                                                                               if (TickClock.field_g != 63) {
                                                                                 if (64 == TickClock.field_g) {
-                                                                                  qj.field_q[62] = RasterBuffer.field_e.getSoundEffectByName("fusion_cannon", "", -56);
+                                                                                  SentinelAnimationEditor.field_q[62] = RasterBuffer.field_e.getSoundEffectByName("fusion_cannon", "", -56);
                                                                                   TickClock.field_g = TickClock.field_g + 1;
                                                                                   if (var3 == 0) {
                                                                                     break regionExit1;
@@ -1293,7 +1293,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                                                     if (TickClock.field_g != 67) {
                                                                                       if (TickClock.field_g != 68) {
                                                                                         if (TickClock.field_g == 69) {
-                                                                                          qj.field_q[69] = RasterBuffer.field_e.getSoundEffectByName("Add_order", "", 118);
+                                                                                          SentinelAnimationEditor.field_q[69] = RasterBuffer.field_e.getSoundEffectByName("Add_order", "", 118);
                                                                                           TickClock.field_g = TickClock.field_g + 1;
                                                                                           if (var3 == 0) {
                                                                                             break regionExit1;
@@ -1301,14 +1301,14 @@ public final class SteelSentinels extends FunOrbClient {
                                                                                         }
                                                                                         if (70 != TickClock.field_g) {
                                                                                           if (TickClock.field_g == 71) {
-                                                                                            qj.field_q[85] = RasterBuffer.field_e.getSoundEffectByName("pause_menu_close", "", -92);
+                                                                                            SentinelAnimationEditor.field_q[85] = RasterBuffer.field_e.getSoundEffectByName("pause_menu_close", "", -92);
                                                                                             TickClock.field_g = TickClock.field_g + 1;
                                                                                             if (var3 == 0) {
                                                                                               break regionExit1;
                                                                                             }
                                                                                           }
                                                                                           if (72 == TickClock.field_g) {
-                                                                                            qj.field_q[86] = RasterBuffer.field_e.getSoundEffectByName("explosion_fireball_1", "", 100);
+                                                                                            SentinelAnimationEditor.field_q[86] = RasterBuffer.field_e.getSoundEffectByName("explosion_fireball_1", "", 100);
                                                                                             TickClock.field_g = TickClock.field_g + 1;
                                                                                             if (var3 == 0) {
                                                                                               break regionExit1;
@@ -1318,14 +1318,14 @@ public final class SteelSentinels extends FunOrbClient {
                                                                                             if (74 != TickClock.field_g) {
                                                                                               if (TickClock.field_g != 75) {
                                                                                                 if (TickClock.field_g == 76) {
-                                                                                                  qj.field_q[90] = RasterBuffer.field_e.getSoundEffectByName("steam", "", -108);
+                                                                                                  SentinelAnimationEditor.field_q[90] = RasterBuffer.field_e.getSoundEffectByName("steam", "", -108);
                                                                                                   TickClock.field_g = TickClock.field_g + 1;
                                                                                                   if (var3 == 0) {
                                                                                                     break regionExit1;
                                                                                                   }
                                                                                                 }
                                                                                                 if (TickClock.field_g == 77) {
-                                                                                                  qj.field_q[91] = RasterBuffer.field_e.getSoundEffectByName("flak_explosion_500ms", "", 95);
+                                                                                                  SentinelAnimationEditor.field_q[91] = RasterBuffer.field_e.getSoundEffectByName("flak_explosion_500ms", "", 95);
                                                                                                   TickClock.field_g = TickClock.field_g + 1;
                                                                                                   if (var3 == 0) {
                                                                                                     break regionExit1;
@@ -1338,7 +1338,7 @@ public final class SteelSentinels extends FunOrbClient {
                                                                                                         if (TickClock.field_g != 82) {
                                                                                                           if (TickClock.field_g != 83) {
                                                                                                             if (TickClock.field_g == 84) {
-                                                                                                              qj.field_q[98] = RasterBuffer.field_e.getSoundEffectByName("main_menu_disappear", "", 93);
+                                                                                                              SentinelAnimationEditor.field_q[98] = RasterBuffer.field_e.getSoundEffectByName("main_menu_disappear", "", 93);
                                                                                                               TickClock.field_g = TickClock.field_g + 1;
                                                                                                               if (var3 == 0) {
                                                                                                                 break regionExit1;
@@ -1347,14 +1347,14 @@ public final class SteelSentinels extends FunOrbClient {
                                                                                                             if (TickClock.field_g != 85) {
                                                                                                               if (TickClock.field_g != 86) {
                                                                                                                 if (TickClock.field_g == 87) {
-                                                                                                                  qj.field_q[102] = RasterBuffer.field_e.getSoundEffectByName("power_up", "", 102);
+                                                                                                                  SentinelAnimationEditor.field_q[102] = RasterBuffer.field_e.getSoundEffectByName("power_up", "", 102);
                                                                                                                   TickClock.field_g = TickClock.field_g + 1;
                                                                                                                   if (var3 == 0) {
                                                                                                                     break regionExit1;
                                                                                                                   }
                                                                                                                 }
                                                                                                                 if (TickClock.field_g == 88) {
-                                                                                                                  qj.field_q[103] = RasterBuffer.field_e.getSoundEffectByName("energy_sword_part_1", "", param0 + 47);
+                                                                                                                  SentinelAnimationEditor.field_q[103] = RasterBuffer.field_e.getSoundEffectByName("energy_sword_part_1", "", param0 + 47);
                                                                                                                   TickClock.field_g = TickClock.field_g + 1;
                                                                                                                   if (var3 == 0) {
                                                                                                                     break regionExit1;
@@ -1363,301 +1363,301 @@ public final class SteelSentinels extends FunOrbClient {
                                                                                                                 if (TickClock.field_g != 89) {
                                                                                                                   break regionExit1;
                                                                                                                 }
-                                                                                                                qj.field_q[104] = RasterBuffer.field_e.getSoundEffectByName("new_nuke_explosion", "", 100);
+                                                                                                                SentinelAnimationEditor.field_q[104] = RasterBuffer.field_e.getSoundEffectByName("new_nuke_explosion", "", 100);
                                                                                                                 TickClock.field_g = TickClock.field_g + 1;
                                                                                                                 if (var3 == 0) {
                                                                                                                   break regionExit1;
                                                                                                                 }
                                                                                                               }
-                                                                                                              qj.field_q[100] = RasterBuffer.field_e.getSoundEffectByName("Menu_engineering_select_part", "", -28);
+                                                                                                              SentinelAnimationEditor.field_q[100] = RasterBuffer.field_e.getSoundEffectByName("Menu_engineering_select_part", "", -28);
                                                                                                               TickClock.field_g = TickClock.field_g + 1;
                                                                                                               if (var3 == 0) {
                                                                                                                 break regionExit1;
                                                                                                               }
                                                                                                             }
-                                                                                                            qj.field_q[99] = RasterBuffer.field_e.getSoundEffectByName("Menu_engineering_select_chassis", "", -112);
+                                                                                                            SentinelAnimationEditor.field_q[99] = RasterBuffer.field_e.getSoundEffectByName("Menu_engineering_select_chassis", "", -112);
                                                                                                             TickClock.field_g = TickClock.field_g + 1;
                                                                                                             if (var3 == 0) {
                                                                                                               break regionExit1;
                                                                                                             }
                                                                                                           }
-                                                                                                          qj.field_q[97] = RasterBuffer.field_e.getSoundEffectByName("Mouseover", "", 120);
+                                                                                                          SentinelAnimationEditor.field_q[97] = RasterBuffer.field_e.getSoundEffectByName("Mouseover", "", 120);
                                                                                                           TickClock.field_g = TickClock.field_g + 1;
                                                                                                           if (var3 == 0) {
                                                                                                             break regionExit1;
                                                                                                           }
                                                                                                         }
-                                                                                                        qj.field_q[96] = RasterBuffer.field_e.getSoundEffectByName("Main_menu_appear", "", 104);
+                                                                                                        SentinelAnimationEditor.field_q[96] = RasterBuffer.field_e.getSoundEffectByName("Main_menu_appear", "", 104);
                                                                                                         TickClock.field_g = TickClock.field_g + 1;
                                                                                                         if (var3 == 0) {
                                                                                                           break regionExit1;
                                                                                                         }
                                                                                                       }
-                                                                                                      qj.field_q[95] = RasterBuffer.field_e.getSoundEffectByName("Button_press", "", -49);
+                                                                                                      SentinelAnimationEditor.field_q[95] = RasterBuffer.field_e.getSoundEffectByName("Button_press", "", -49);
                                                                                                       TickClock.field_g = TickClock.field_g + 1;
                                                                                                       if (var3 == 0) {
                                                                                                         break regionExit1;
                                                                                                       }
                                                                                                     }
-                                                                                                    qj.field_q[94] = RasterBuffer.field_e.getSoundEffectByName("damage_plasma_burn2", "", -79);
+                                                                                                    SentinelAnimationEditor.field_q[94] = RasterBuffer.field_e.getSoundEffectByName("damage_plasma_burn2", "", -79);
                                                                                                     TickClock.field_g = TickClock.field_g + 1;
                                                                                                     if (var3 == 0) {
                                                                                                       break regionExit1;
                                                                                                     }
                                                                                                   }
-                                                                                                  qj.field_q[93] = RasterBuffer.field_e.getSoundEffectByName("trackloop", "", bi.a(param0, 68));
+                                                                                                  SentinelAnimationEditor.field_q[93] = RasterBuffer.field_e.getSoundEffectByName("trackloop", "", bi.a(param0, 68));
                                                                                                   TickClock.field_g = TickClock.field_g + 1;
                                                                                                   if (var3 == 0) {
                                                                                                     break regionExit1;
                                                                                                   }
                                                                                                 }
-                                                                                                qj.field_q[92] = RasterBuffer.field_e.getSoundEffectByName("hoverloop", "", param0 + 59);
+                                                                                                SentinelAnimationEditor.field_q[92] = RasterBuffer.field_e.getSoundEffectByName("hoverloop", "", param0 + 59);
                                                                                                 TickClock.field_g = TickClock.field_g + 1;
                                                                                                 if (var3 == 0) {
                                                                                                   break regionExit1;
                                                                                                 }
                                                                                               }
-                                                                                              qj.field_q[89] = RasterBuffer.field_e.getSoundEffectByName("explosion_fireball_4", "", -85);
+                                                                                              SentinelAnimationEditor.field_q[89] = RasterBuffer.field_e.getSoundEffectByName("explosion_fireball_4", "", -85);
                                                                                               TickClock.field_g = TickClock.field_g + 1;
                                                                                               if (var3 == 0) {
                                                                                                 break regionExit1;
                                                                                               }
                                                                                             }
-                                                                                            qj.field_q[88] = RasterBuffer.field_e.getSoundEffectByName("explosion_fireball_3", "", bi.a(param0, -90));
+                                                                                            SentinelAnimationEditor.field_q[88] = RasterBuffer.field_e.getSoundEffectByName("explosion_fireball_3", "", bi.a(param0, -90));
                                                                                             TickClock.field_g = TickClock.field_g + 1;
                                                                                             if (var3 == 0) {
                                                                                               break regionExit1;
                                                                                             }
                                                                                           }
-                                                                                          qj.field_q[87] = RasterBuffer.field_e.getSoundEffectByName("explosion_fireball_2", "", -125);
+                                                                                          SentinelAnimationEditor.field_q[87] = RasterBuffer.field_e.getSoundEffectByName("explosion_fireball_2", "", -125);
                                                                                           TickClock.field_g = TickClock.field_g + 1;
                                                                                           if (var3 == 0) {
                                                                                             break regionExit1;
                                                                                           }
                                                                                         }
-                                                                                        qj.field_q[84] = RasterBuffer.field_e.getSoundEffectByName("pause_menu_open", "", bi.a(param0, -110));
+                                                                                        SentinelAnimationEditor.field_q[84] = RasterBuffer.field_e.getSoundEffectByName("pause_menu_open", "", bi.a(param0, -110));
                                                                                         TickClock.field_g = TickClock.field_g + 1;
                                                                                         if (var3 == 0) {
                                                                                           break regionExit1;
                                                                                         }
                                                                                       }
-                                                                                      qj.field_q[66] = RasterBuffer.field_e.getSoundEffectByName("ultra_gun", "", 123);
+                                                                                      SentinelAnimationEditor.field_q[66] = RasterBuffer.field_e.getSoundEffectByName("ultra_gun", "", 123);
                                                                                       TickClock.field_g = TickClock.field_g + 1;
                                                                                       if (var3 == 0) {
                                                                                         break regionExit1;
                                                                                       }
                                                                                     }
-                                                                                    qj.field_q[65] = RasterBuffer.field_e.getSoundEffectByName("doomsday_cannon", "", -83);
+                                                                                    SentinelAnimationEditor.field_q[65] = RasterBuffer.field_e.getSoundEffectByName("doomsday_cannon", "", -83);
                                                                                     TickClock.field_g = TickClock.field_g + 1;
                                                                                     if (var3 == 0) {
                                                                                       break regionExit1;
                                                                                     }
                                                                                   }
-                                                                                  qj.field_q[64] = RasterBuffer.field_e.getSoundEffectByName("solaris_laser", "", -116);
+                                                                                  SentinelAnimationEditor.field_q[64] = RasterBuffer.field_e.getSoundEffectByName("solaris_laser", "", -116);
                                                                                   TickClock.field_g = TickClock.field_g + 1;
                                                                                   if (var3 == 0) {
                                                                                     break regionExit1;
                                                                                   }
                                                                                 }
-                                                                                qj.field_q[63] = RasterBuffer.field_e.getSoundEffectByName("EMP_cannon", "", -61);
+                                                                                SentinelAnimationEditor.field_q[63] = RasterBuffer.field_e.getSoundEffectByName("EMP_cannon", "", -61);
                                                                                 TickClock.field_g = TickClock.field_g + 1;
                                                                                 if (var3 == 0) {
                                                                                   break regionExit1;
                                                                                 }
                                                                               }
-                                                                              qj.field_q[61] = RasterBuffer.field_e.getSoundEffectByName("air_death_missile", "", bi.a(param0, 85));
+                                                                              SentinelAnimationEditor.field_q[61] = RasterBuffer.field_e.getSoundEffectByName("air_death_missile", "", bi.a(param0, 85));
                                                                               TickClock.field_g = TickClock.field_g + 1;
                                                                               if (var3 == 0) {
                                                                                 break regionExit1;
                                                                               }
                                                                             }
-                                                                            qj.field_q[60] = RasterBuffer.field_e.getSoundEffectByName("class_DEATH_nuke", "", -113);
+                                                                            SentinelAnimationEditor.field_q[60] = RasterBuffer.field_e.getSoundEffectByName("class_DEATH_nuke", "", -113);
                                                                             TickClock.field_g = TickClock.field_g + 1;
                                                                             if (var3 == 0) {
                                                                               break regionExit1;
                                                                             }
                                                                           }
-                                                                          qj.field_q[58] = RasterBuffer.field_e.getSoundEffectByName("howitzer", "", -53);
+                                                                          SentinelAnimationEditor.field_q[58] = RasterBuffer.field_e.getSoundEffectByName("howitzer", "", -53);
                                                                           TickClock.field_g = TickClock.field_g + 1;
                                                                           if (var3 == 0) {
                                                                             break regionExit1;
                                                                           }
                                                                         }
-                                                                        qj.field_q[57] = RasterBuffer.field_e.getSoundEffectByName("destructor_rocket", "", 100);
+                                                                        SentinelAnimationEditor.field_q[57] = RasterBuffer.field_e.getSoundEffectByName("destructor_rocket", "", 100);
                                                                         TickClock.field_g = TickClock.field_g + 1;
                                                                         if (var3 == 0) {
                                                                           break regionExit1;
                                                                         }
                                                                       }
-                                                                      qj.field_q[54] = RasterBuffer.field_e.getSoundEffectByName("explosion_6", "", 96);
+                                                                      SentinelAnimationEditor.field_q[54] = RasterBuffer.field_e.getSoundEffectByName("explosion_6", "", 96);
                                                                       TickClock.field_g = TickClock.field_g + 1;
                                                                       if (var3 == 0) {
                                                                         break regionExit1;
                                                                       }
                                                                     }
-                                                                    qj.field_q[53] = RasterBuffer.field_e.getSoundEffectByName("explosion_5", "", 117);
+                                                                    SentinelAnimationEditor.field_q[53] = RasterBuffer.field_e.getSoundEffectByName("explosion_5", "", 117);
                                                                     TickClock.field_g = TickClock.field_g + 1;
                                                                     if (var3 == 0) {
                                                                       break regionExit1;
                                                                     }
                                                                   }
-                                                                  qj.field_q[51] = RasterBuffer.field_e.getSoundEffectByName("damage_scraping_metal", "", -108);
+                                                                  SentinelAnimationEditor.field_q[51] = RasterBuffer.field_e.getSoundEffectByName("damage_scraping_metal", "", -108);
                                                                   TickClock.field_g = TickClock.field_g + 1;
                                                                   if (var3 == 0) {
                                                                     break regionExit1;
                                                                   }
                                                                 }
-                                                                qj.field_q[47] = RasterBuffer.field_e.getSoundEffectByName("explosion_2", "", bi.a(param0, -87));
+                                                                SentinelAnimationEditor.field_q[47] = RasterBuffer.field_e.getSoundEffectByName("explosion_2", "", bi.a(param0, -87));
                                                                 TickClock.field_g = TickClock.field_g + 1;
                                                                 if (var3 == 0) {
                                                                   break regionExit1;
                                                                 }
                                                               }
-                                                              qj.field_q[68] = RasterBuffer.field_e.getSoundEffectByName("heavy_gun_2", "", bi.a(param0, -27));
+                                                              SentinelAnimationEditor.field_q[68] = RasterBuffer.field_e.getSoundEffectByName("heavy_gun_2", "", bi.a(param0, -27));
                                                               TickClock.field_g = TickClock.field_g + 1;
                                                               if (var3 == 0) {
                                                                 break regionExit1;
                                                               }
                                                             }
-                                                            qj.field_q[45] = RasterBuffer.field_e.getSoundEffectByName("heavy_cannon_2", "", param0 + 62);
+                                                            SentinelAnimationEditor.field_q[45] = RasterBuffer.field_e.getSoundEffectByName("heavy_cannon_2", "", param0 + 62);
                                                             TickClock.field_g = TickClock.field_g + 1;
                                                             if (var3 == 0) {
                                                               break regionExit1;
                                                             }
                                                           }
-                                                          qj.field_q[44] = RasterBuffer.field_e.getSoundEffectByName("heavy_rocket_launch", "", param0 + 63);
+                                                          SentinelAnimationEditor.field_q[44] = RasterBuffer.field_e.getSoundEffectByName("heavy_rocket_launch", "", param0 + 63);
                                                           TickClock.field_g = TickClock.field_g + 1;
                                                           if (var3 == 0) {
                                                             break regionExit1;
                                                           }
                                                         }
-                                                        qj.field_q[43] = RasterBuffer.field_e.getSoundEffectByName("rifled_sniper_cannon", "", 120);
+                                                        SentinelAnimationEditor.field_q[43] = RasterBuffer.field_e.getSoundEffectByName("rifled_sniper_cannon", "", 120);
                                                         TickClock.field_g = TickClock.field_g + 1;
                                                         if (var3 == 0) {
                                                           break regionExit1;
                                                         }
                                                       }
-                                                      qj.field_q[41] = RasterBuffer.field_e.getSoundEffectByName("mine_proximity_2", "", -72);
+                                                      SentinelAnimationEditor.field_q[41] = RasterBuffer.field_e.getSoundEffectByName("mine_proximity_2", "", -72);
                                                       TickClock.field_g = TickClock.field_g + 1;
                                                       if (var3 == 0) {
                                                         break regionExit1;
                                                       }
                                                     }
-                                                    qj.field_q[39] = RasterBuffer.field_e.getSoundEffectByName("flak_cannon_1", "", 95);
+                                                    SentinelAnimationEditor.field_q[39] = RasterBuffer.field_e.getSoundEffectByName("flak_cannon_1", "", 95);
                                                     TickClock.field_g = TickClock.field_g + 1;
                                                     if (var3 == 0) {
                                                       break regionExit1;
                                                     }
                                                   }
-                                                  qj.field_q[35] = RasterBuffer.field_e.getSoundEffectByName("morter", "", -67);
+                                                  SentinelAnimationEditor.field_q[35] = RasterBuffer.field_e.getSoundEffectByName("morter", "", -67);
                                                   TickClock.field_g = TickClock.field_g + 1;
                                                   if (var3 == 0) {
                                                     break regionExit1;
                                                   }
                                                 }
-                                                qj.field_q[33] = RasterBuffer.field_e.getSoundEffectByName("flak_cannon_2", "", -103);
+                                                SentinelAnimationEditor.field_q[33] = RasterBuffer.field_e.getSoundEffectByName("flak_cannon_2", "", -103);
                                                 TickClock.field_g = TickClock.field_g + 1;
                                                 if (var3 == 0) {
                                                   break regionExit1;
                                                 }
                                               }
-                                              qj.field_q[28] = RasterBuffer.field_e.getSoundEffectByName("EDD_teleport", "", 103);
+                                              SentinelAnimationEditor.field_q[28] = RasterBuffer.field_e.getSoundEffectByName("EDD_teleport", "", 103);
                                               TickClock.field_g = TickClock.field_g + 1;
                                               if (var3 == 0) {
                                                 break regionExit1;
                                               }
                                             }
-                                            qj.field_q[27] = RasterBuffer.field_e.getSoundEffectByName("shield_hit", "", bi.a(param0, -109));
+                                            SentinelAnimationEditor.field_q[27] = RasterBuffer.field_e.getSoundEffectByName("shield_hit", "", bi.a(param0, -109));
                                             TickClock.field_g = TickClock.field_g + 1;
                                             if (var3 == 0) {
                                               break regionExit1;
                                             }
                                           }
-                                          qj.field_q[26] = RasterBuffer.field_e.getSoundEffectByName("ballistic_target_tracking_module", "", param0 - 176);
+                                          SentinelAnimationEditor.field_q[26] = RasterBuffer.field_e.getSoundEffectByName("ballistic_target_tracking_module", "", param0 - 176);
                                           TickClock.field_g = TickClock.field_g + 1;
                                           if (var3 == 0) {
                                             break regionExit1;
                                           }
                                         }
-                                        qj.field_q[25] = RasterBuffer.field_e.getSoundEffectByName("attach_component", "", -57);
+                                        SentinelAnimationEditor.field_q[25] = RasterBuffer.field_e.getSoundEffectByName("attach_component", "", -57);
                                         TickClock.field_g = TickClock.field_g + 1;
                                         if (var3 == 0) {
                                           break regionExit1;
                                         }
                                       }
-                                      qj.field_q[24] = RasterBuffer.field_e.getSoundEffectByName("hammer", "", -57);
+                                      SentinelAnimationEditor.field_q[24] = RasterBuffer.field_e.getSoundEffectByName("hammer", "", -57);
                                       TickClock.field_g = TickClock.field_g + 1;
                                       if (var3 == 0) {
                                         break regionExit1;
                                       }
                                     }
-                                    qj.field_q[23] = RasterBuffer.field_e.getSoundEffectByName("energy_sword_part_2", "", -41);
+                                    SentinelAnimationEditor.field_q[23] = RasterBuffer.field_e.getSoundEffectByName("energy_sword_part_2", "", -41);
                                     TickClock.field_g = TickClock.field_g + 1;
                                     if (var3 == 0) {
                                       break regionExit1;
                                     }
                                   }
-                                  qj.field_q[20] = RasterBuffer.field_e.getSoundEffectByName("light_rocket_launch", "", -56);
+                                  SentinelAnimationEditor.field_q[20] = RasterBuffer.field_e.getSoundEffectByName("light_rocket_launch", "", -56);
                                   TickClock.field_g = TickClock.field_g + 1;
                                   if (var3 == 0) {
                                     break regionExit1;
                                   }
                                 }
-                                qj.field_q[16] = RasterBuffer.field_e.getSoundEffectByName("mini_gun", "", 127);
+                                SentinelAnimationEditor.field_q[16] = RasterBuffer.field_e.getSoundEffectByName("mini_gun", "", 127);
                                 TickClock.field_g = TickClock.field_g + 1;
                                 if (var3 == 0) {
                                   break regionExit1;
                                 }
                               }
-                              qj.field_q[14] = RasterBuffer.field_e.getSoundEffectByName("rapier_missle", "", param0 + 68);
+                              SentinelAnimationEditor.field_q[14] = RasterBuffer.field_e.getSoundEffectByName("rapier_missle", "", param0 + 68);
                               TickClock.field_g = TickClock.field_g + 1;
                               if (var3 == 0) {
                                 break regionExit1;
                               }
                             }
-                            qj.field_q[13] = RasterBuffer.field_e.getSoundEffectByName("gauss_gun", "", -110);
+                            SentinelAnimationEditor.field_q[13] = RasterBuffer.field_e.getSoundEffectByName("gauss_gun", "", -110);
                             TickClock.field_g = TickClock.field_g + 1;
                             if (var3 == 0) {
                               break regionExit1;
                             }
                           }
-                          qj.field_q[11] = RasterBuffer.field_e.getSoundEffectByName("landing", "", 121);
+                          SentinelAnimationEditor.field_q[11] = RasterBuffer.field_e.getSoundEffectByName("landing", "", 121);
                           TickClock.field_g = TickClock.field_g + 1;
                           if (var3 == 0) {
                             break regionExit1;
                           }
                         }
-                        qj.field_q[10] = RasterBuffer.field_e.getSoundEffectByName("footstep_3", "", param0 + 64);
+                        SentinelAnimationEditor.field_q[10] = RasterBuffer.field_e.getSoundEffectByName("footstep_3", "", param0 + 64);
                         TickClock.field_g = TickClock.field_g + 1;
                         if (var3 == 0) {
                           break regionExit1;
                         }
                       }
-                      qj.field_q[9] = RasterBuffer.field_e.getSoundEffectByName("death", "", param0 - 141);
+                      SentinelAnimationEditor.field_q[9] = RasterBuffer.field_e.getSoundEffectByName("death", "", param0 - 141);
                       TickClock.field_g = TickClock.field_g + 1;
                       if (var3 == 0) {
                         break regionExit1;
                       }
                     }
-                    qj.field_q[7] = RasterBuffer.field_e.getSoundEffectByName("footstep_2", "", 111);
+                    SentinelAnimationEditor.field_q[7] = RasterBuffer.field_e.getSoundEffectByName("footstep_2", "", 111);
                     TickClock.field_g = TickClock.field_g + 1;
                     if (var3 == 0) {
                       break regionExit1;
                     }
                   }
-                  qj.field_q[5] = RasterBuffer.field_e.getSoundEffectByName("footstep_4", "", 125);
+                  SentinelAnimationEditor.field_q[5] = RasterBuffer.field_e.getSoundEffectByName("footstep_4", "", 125);
                   TickClock.field_g = TickClock.field_g + 1;
                   if (var3 == 0) {
                     break regionExit1;
                   }
                 }
-                qj.field_q[3] = RasterBuffer.field_e.getSoundEffectByName("footstep_1", "", bi.a(param0, 75));
+                SentinelAnimationEditor.field_q[3] = RasterBuffer.field_e.getSoundEffectByName("footstep_1", "", bi.a(param0, 75));
                 TickClock.field_g = TickClock.field_g + 1;
                 if (var3 == 0) {
                   break regionExit1;
                 }
               }
-              qj.field_q[2] = RasterBuffer.field_e.getSoundEffectByName("thrusting", "", bi.a(param0, 92));
+              SentinelAnimationEditor.field_q[2] = RasterBuffer.field_e.getSoundEffectByName("thrusting", "", bi.a(param0, 92));
               TickClock.field_g = TickClock.field_g + 1;
             }
             if (TickClock.field_g == 90) {
@@ -1784,8 +1784,8 @@ public final class SteelSentinels extends FunOrbClient {
                   }
                   gf.c(-128);
                   GzipDecoder.field_g = SentinelDesigner.field_i;
-                  if (si.field_y) {
-                    si.field_y = false;
+                  if (CachedTextLayout.field_y) {
+                    CachedTextLayout.field_y = false;
                     GradientOutlineTextPainter.a(-4, false);
                   }
                   if (ArchiveRequest.field_E &&
@@ -1818,7 +1818,7 @@ public final class SteelSentinels extends FunOrbClient {
               SentinelDesigner.field_a = SentinelDesigner.field_a + 1;
               decompiledFrameRemainder2 = (SentinelDesigner.field_a == 16);
               if (decompiledFrameRemainder2) {
-                if (!si.field_y) {
+                if (!CachedTextLayout.field_y) {
                   ModalPanel.a((byte) 113);
                   if (var8 != 0) {
                     ef.a(param0 ^ 116);
@@ -1901,7 +1901,7 @@ public final class SteelSentinels extends FunOrbClient {
             }
             if ((decompiledFrameCompleted2) && (WeightedCacheEntry.field_H &&
               !SectorCacheStore.field_n &&
-              !da.field_d)) {
+              !TextLayout.field_d)) {
               if (ob.field_y &&
                 jn.field_g) {
                 var3_int = 0;
@@ -1912,8 +1912,8 @@ public final class SteelSentinels extends FunOrbClient {
                 ue.a((byte) 38, var4 != 0, 320, 180);
               }
               if (CombatWorld.field_G &&
-                null != si.field_A) {
-                si.field_A.c(param0 ^ 37, var4 != 0);
+                null != CachedTextLayout.field_A) {
+                CachedTextLayout.field_A.c(param0 ^ 37, var4 != 0);
               }
               if (ob.field_y) {
                 BoundedUrlRequest.field_i.c(-121, var4 != 0);
@@ -1949,7 +1949,7 @@ public final class SteelSentinels extends FunOrbClient {
                   continue;
                 }
                 if (CombatWorld.field_G) {
-                  si.field_A.g(73);
+                  CachedTextLayout.field_A.g(73);
                 }
                 if (!ob.field_y) {
                   continue;
@@ -1964,20 +1964,20 @@ public final class SteelSentinels extends FunOrbClient {
               IntKeyLookup.d((byte) -66);
             }
             if (!TextHotspotRegion.field_v) {
-              if (!(on.field_i <= 0)) {
-                on.field_i = on.field_i - 1;
+              if (!(EmailCredentials.field_i <= 0)) {
+                EmailCredentials.field_i = EmailCredentials.field_i - 1;
                 if ((var8 != 0) &&
-                  (on.field_i < AudioService.field_h)) {
-                  on.field_i = on.field_i + 1;
+                  (EmailCredentials.field_i < AudioService.field_h)) {
+                  EmailCredentials.field_i = EmailCredentials.field_i + 1;
                 }
               }
             } else {
-              if (on.field_i < AudioService.field_h) {
-                on.field_i = on.field_i + 1;
+              if (EmailCredentials.field_i < AudioService.field_h) {
+                EmailCredentials.field_i = EmailCredentials.field_i + 1;
               }
             }
             var5_int = AudioService.field_h * AudioService.field_h;
-            var6 = var5_int - on.field_i * on.field_i;
+            var6 = var5_int - EmailCredentials.field_i * EmailCredentials.field_i;
             var7 = vf.field_e + 120 * var6 / var5_int;
             SentinelDesigner.d(0, var7);
             if (bd.field_b.first(13058) != null) {
@@ -2107,11 +2107,11 @@ public final class SteelSentinels extends FunOrbClient {
               }
               break;
             }
-            on.field_i = AudioService.field_h;
+            EmailCredentials.field_i = AudioService.field_h;
           }
           if (GzipDecoder.field_g == -5) {
             na.a((byte) -43, 11, nf.field_b.j(-26));
-            da.field_d = true;
+            TextLayout.field_d = true;
             GzipDecoder.field_g = LoginForm.field_T;
           }
           return;
@@ -2214,7 +2214,7 @@ public final class SteelSentinels extends FunOrbClient {
         var15 = obfuscationControl;
         try {
           SoundCache.b(-108);
-          ScrollContainer.field_Vb = ha.a((byte) -86);
+          ScrollContainer.field_Vb = DateInputWidget.a((byte) -86);
           Js5Transport.a(false);
           if (wb.field_c != null &&
             wb.field_c.field_b) {
@@ -2240,7 +2240,7 @@ public final class SteelSentinels extends FunOrbClient {
           }
           boolean decompiledFrameRemainder0 = true;
           if (SceneWidget.field_pb) {
-            if (co.a(false)) {
+            if (QuickChatCategoryCache.a(false)) {
               if (QuickChatMenu.b(true)) {
                 if (in.field_i == in.field_h) {
                   var2_int = eh.a(0);
@@ -2250,13 +2250,13 @@ public final class SteelSentinels extends FunOrbClient {
                     default:
                       break;
                     case 4:
-                      si.field_y = true;
+                      CachedTextLayout.field_y = true;
                       DebouncedValidator.a(0, ValidationIndicator.field_bb, param0 + 8);
                       if (var15 == 0) {
                         break;
                       }
                     case 3:
-                      si.field_y = false;
+                      CachedTextLayout.field_y = false;
                       GradientOutlineTextPainter.a(-4, true);
                       break;
                   }
@@ -2393,9 +2393,9 @@ public final class SteelSentinels extends FunOrbClient {
                   CombatWorld.field_G = false;
                   WeightedCacheEntry.field_H = false;
                   lc.field_e = true;
-                  vn.c(103);
+                  DateOfBirthValidator.c(103);
                 }
-                da.field_d = false;
+                TextLayout.field_d = false;
                 SectorCacheStore.field_n = false;
                 continue;
               }
@@ -2473,7 +2473,7 @@ public final class SteelSentinels extends FunOrbClient {
                   var4_ref = var2;
                   var5 = 0;
                   while (var5 < 8) {
-                    ((int[]) (var3_ref))[var5] = vn.a(((int[]) (var3_ref))[var5], ((int[]) (var4_ref))[var5]);
+                    ((int[]) (var3_ref))[var5] = DateOfBirthValidator.a(((int[]) (var3_ref))[var5], ((int[]) (var4_ref))[var5]);
                     var5++;
                   }
                 }
@@ -2481,7 +2481,7 @@ public final class SteelSentinels extends FunOrbClient {
                 var4_ref = var2;
                 var5 = 0;
                 while (var5 < 8) {
-                  ((int[]) (var3_ref))[var5] = vn.a(((int[]) (var3_ref))[var5], ((int[]) (var4_ref))[var5]);
+                  ((int[]) (var3_ref))[var5] = DateOfBirthValidator.a(((int[]) (var3_ref))[var5], ((int[]) (var4_ref))[var5]);
                   var5++;
                 }
                 Projectile.c((byte) 10);
@@ -2505,7 +2505,7 @@ public final class SteelSentinels extends FunOrbClient {
                   va.field_k[var2_int] = 0;
                   var2_int++;
                 }
-                vn.d(-30);
+                DateOfBirthValidator.d(-30);
                 continue;
               }
               if (ch.field_N == 77) {
@@ -2576,7 +2576,7 @@ public final class SteelSentinels extends FunOrbClient {
                 if (var2_int <= 0) {
                   continue;
                 }
-                vn.d(param0 - 44);
+                DateOfBirthValidator.d(param0 - 44);
                 MusicPatchNode.field_F = var2_int;
                 continue;
               }
@@ -2648,7 +2648,7 @@ public final class SteelSentinels extends FunOrbClient {
                 var13 = new GameplayController(true, var2_int, var3, var10, var11_int, var9 != 0, var12, var4, var5, var7 != 0, var8 != 0);
                 var13.field_w = rf.field_d.readInt(0);
                 if (57 != ch.field_N) {
-                  si.field_A = var13;
+                  CachedTextLayout.field_A = var13;
                   CombatWorld.field_G = true;
                   QuickChatHelpDialog.l(0);
                 } else {
@@ -2659,7 +2659,7 @@ public final class SteelSentinels extends FunOrbClient {
                   QuickChatHelpDialog.l(0);
                 }
                 GzipDecoder.field_g = -1;
-                da.field_d = false;
+                TextLayout.field_d = false;
                 Sprite.field_k = true;
                 continue;
               }
@@ -2677,15 +2677,15 @@ public final class SteelSentinels extends FunOrbClient {
                   Sprite.field_k = false;
                   TextHotspotRegion.field_v = true;
                   ln.field_e = 0;
-                  vn.c(104);
+                  DateOfBirthValidator.c(104);
                 }
-                da.field_d = false;
+                TextLayout.field_d = false;
                 continue;
               }
               var2 = null;
               if (!ob.field_y) {
                 if (CombatWorld.field_G) {
-                  var2 = si.field_A;
+                  var2 = CachedTextLayout.field_A;
                 }
               } else {
                 var2 = BoundedUrlRequest.field_i;
@@ -2831,17 +2831,17 @@ public final class SteelSentinels extends FunOrbClient {
                   QuickChatHelpDialog.b(true);
                   GameKeyHandler.field_e[LoginForm.field_T].a(false, 0, -102);
                   WeightedCacheEntry.field_H = false;
-                  vn.c(12);
+                  DateOfBirthValidator.c(12);
                 }
                 SectorCacheStore.field_n = false;
-                da.field_d = false;
+                TextLayout.field_d = false;
                 if (var15 != 0) {
                   SectorCacheStore.field_n = true;
-                  da.field_d = true;
+                  TextLayout.field_d = true;
                 }
               } else {
                 SectorCacheStore.field_n = true;
-                da.field_d = true;
+                TextLayout.field_d = true;
               }
             }
             var3 = 0;
@@ -2850,7 +2850,7 @@ public final class SteelSentinels extends FunOrbClient {
             }
             if (WeightedCacheEntry.field_H ||
               SectorCacheStore.field_n ||
-              da.field_d) {
+              TextLayout.field_d) {
               var3 = 1;
             }
             if (!ri.a(16731221)) {
@@ -2933,7 +2933,7 @@ public final class SteelSentinels extends FunOrbClient {
           lc.b(1);
           o.a(-98);
           dj.a((byte) 94);
-          me.a(-118);
+          LoginCredentials.a(-118);
           CipherPacketBuffer.e(true);
           IsaacRandom.a((byte) -94);
           gj.a(-102);
@@ -2944,7 +2944,7 @@ public final class SteelSentinels extends FunOrbClient {
           CombatWorld.g(0);
           ArticulatedPart.d((byte) 20);
           MenuInputState.d((byte) -18);
-          qj.c(21841);
+          SentinelAnimationEditor.c(21841);
           NodeIterator.e(5370);
           BitmapFont.releaseStatics();
           vf.a(-119);
@@ -2960,7 +2960,7 @@ public final class SteelSentinels extends FunOrbClient {
           MidiFileReader.releaseMessageTable();
           MusicPatchPcmStream.e(-93);
           AudioOutput.releaseStatics();
-          sj.b(false);
+          MusicCrossfadeStream.b(false);
           hk.d((byte) -65);
           dk.b((byte) -91);
           cc.k(102);
@@ -3052,7 +3052,7 @@ public final class SteelSentinels extends FunOrbClient {
           StatefulTextPainter.c(-21121);
           DialWidgetPainter.a(0);
           MarkerSliderPainter.b((byte) 105);
-          da.a(true);
+          TextLayout.a(true);
           UiComponent.c((byte) 19);
           TextButton.a((byte) -105);
           SingleChildContainer.g(475);
@@ -3064,11 +3064,11 @@ public final class SteelSentinels extends FunOrbClient {
           kb.a(5);
           ln.b(0);
           QuickChatMenu.k(-31097);
-          co.a((byte) -13);
-          oe.a(272);
+          QuickChatCategoryCache.a((byte) -13);
+          QuickChatPhraseCache.a(272);
           QuickChatCategory.g(1);
           QuickChatPhraseDefinition.g(0);
-          nc.a((byte) 127);
+          WeightedLruCache.a((byte) 127);
           SocketConnector.a(true);
           ProxyAuthenticationException.a(-61);
           NanoTickClock.c(0);
@@ -3078,7 +3078,7 @@ public final class SteelSentinels extends FunOrbClient {
           ue.b((byte) -96);
           SynthInstrument.releaseStatics();
           ce.a((byte) 77);
-          bh.a((byte) -98);
+          SentinelCommandSimulator.a((byte) -98);
           Explosion.h(-2107133436);
           WhirlpoolHasher.a((byte) 121);
           qf.a(false);
@@ -3102,11 +3102,11 @@ public final class SteelSentinels extends FunOrbClient {
           DialWidget.f((byte) -122);
           MarkerSlider.g(32);
           cl.a(5);
-          vn.d(false);
-          re.l(0);
+          DateOfBirthValidator.d(false);
+          NumericDateInputWidget.l(0);
           ch.a((byte) -68);
-          ha.c(true);
-          si.a(24);
+          DateInputWidget.c(true);
+          CachedTextLayout.a(24);
           DirectByteStorage.b(26);
           GrowableIntList.a(122);
           DraggableWidget.h(0);
@@ -3143,9 +3143,9 @@ public final class SteelSentinels extends FunOrbClient {
           rf.c(126);
           DelayedServerPacket.d(-1341);
           LoginMethod.a(7);
-          fb.b((byte) -119);
-          pg.c(28873);
-          on.b((byte) -116);
+          UsernameCredentials.b((byte) -119);
+          AlternateUsernameCredentials.c(28873);
+          EmailCredentials.b((byte) -116);
           sf.a(false);
           ml.a(107);
           e.a((byte) -89);
@@ -3157,7 +3157,7 @@ public final class SteelSentinels extends FunOrbClient {
           ob.d(18601);
           rn.d(3);
           WidgetStyleLayer.b((byte) 12);
-          il.c(-58);
+          TextLayoutLine.c(-58);
           NameAvailabilityValidator.c(1);
           PasswordValidator.d((byte) -128);
           ih.c(18384);

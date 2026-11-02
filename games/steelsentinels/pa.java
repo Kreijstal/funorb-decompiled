@@ -26,10 +26,10 @@ final class pa {
           if (param1 != 9174) {
             field_b = -11;
           }
-          if (nc.field_j == null) {
+          if (WeightedLruCache.field_j == null) {
             return;
           }
-          nc.field_j.b((java.awt.Component) ((Object) param0), true);
+          WeightedLruCache.field_j.b((java.awt.Component) ((Object) param0), true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -579,7 +579,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           var3Lifetime1 = EmailAvailabilityValidator.field_s[9] >> 8;
           var4 = EmailAvailabilityValidator.field_s[10] >> 8;
           var5Lifetime1 = EmailAvailabilityValidator.field_s[11] >> 8;
-          var6Lifetime1 = vn.field_h << 4;
+          var6Lifetime1 = DateOfBirthValidator.field_h << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = jh.sine16(var6Lifetime1, 4096) >> 8;
           var9Lifetime1 = ScrollContainer.cosine16(var6Lifetime1, (byte) -84) >> 8;

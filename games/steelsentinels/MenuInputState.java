@@ -129,7 +129,7 @@ final class MenuInputState {
           hh.field_g[18] = tc.field_v;
           hh.field_g[7] = rb.field_e;
           hh.field_g[5] = MusicPatchEnvelope.field_f;
-          hh.field_g[16] = bh.field_i;
+          hh.field_g[16] = SentinelCommandSimulator.field_i;
           hh.field_g[17] = nf.field_d;
           hh.field_g[9] = hh.field_e;
           hh.field_g[13] = GameKeyHandler.field_c;
@@ -237,7 +237,7 @@ final class MenuInputState {
         }
         if (this.field_d == 0) {
           if (0 == VerticalScrollbar.field_gc) {
-            if (nc.field_d != 0) {
+            if (WeightedLruCache.field_d != 0) {
               if (param0 <= 123) {
                 this.isHomePressed(-13);
               }
@@ -323,14 +323,14 @@ final class MenuInputState {
           }
           return;
         }
-        if (0 != nc.field_d) {
+        if (0 != WeightedLruCache.field_d) {
           if (this.field_a <= 0) {
-            this.field_a = pg.field_B;
+            this.field_a = AlternateUsernameCredentials.field_B;
           }
           this.field_a = this.field_a - 1;
         }
         if (0 == VerticalScrollbar.field_gc) {
-          if (nc.field_d != 0) {
+          if (WeightedLruCache.field_d != 0) {
             if (param0 > 123) {
               if (0 == this.field_d) {
                 if (!this.field_l &&

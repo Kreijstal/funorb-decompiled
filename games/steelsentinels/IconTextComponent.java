@@ -33,20 +33,20 @@ final class IconTextComponent extends SceneWidget {
           }
           try {
             if (DualNodeDequeIterator.field_d == 0) {
-              ha.field_T = km.field_k.a(rl.field_f, ih.field_n, 376255344);
+              DateInputWidget.field_T = km.field_k.a(rl.field_f, ih.field_n, 376255344);
               DualNodeDequeIterator.field_d = DualNodeDequeIterator.field_d + 1;
             }
             if (1 == DualNodeDequeIterator.field_d) {
-              if (ha.field_T.field_a == 2) {
+              if (DateInputWidget.field_T.field_a == 2) {
                 stackIn_12_0 = gf.a(-1, 16777215);
                 return stackIn_12_0;
               }
-              if (ha.field_T.field_a == 1) {
+              if (DateInputWidget.field_T.field_a == 1) {
                 DualNodeDequeIterator.field_d = DualNodeDequeIterator.field_d + 1;
               }
             }
             if (2 == DualNodeDequeIterator.field_d) {
-              nf.field_c = new BufferedSocket((java.net.Socket) (ha.field_T.field_c), km.field_k);
+              nf.field_c = new BufferedSocket((java.net.Socket) (DateInputWidget.field_T.field_c), km.field_k);
               var2 = new PacketBuffer(13);
               SpriteCheckboxPainter.a(var2, 12, EditableTextWidget.field_ib, rb.field_f, sh.field_a);
               var2.writeByte((byte) 120, 15);
@@ -78,7 +78,7 @@ final class IconTextComponent extends SceneWidget {
             }
             ne.field_N.a(nf.field_c, BoundedUrlRequest.field_h, 6);
             DualNodeDequeIterator.field_d = 0;
-            ha.field_T = null;
+            DateInputWidget.field_T = null;
             nf.field_c = null;
             stackIn_34_0 = 0;
             return stackIn_34_0;

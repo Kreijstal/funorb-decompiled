@@ -345,14 +345,14 @@ final class uj {
     }
 
     final static void b(int param0) {
-        if (vn.field_h != 0 - vc.field_c &&
-          250 - vc.field_c != vn.field_h) {
+        if (DateOfBirthValidator.field_h != 0 - vc.field_c &&
+          250 - vc.field_c != DateOfBirthValidator.field_h) {
         }
         if (param0 != 29) {
           RgbSprite var2 = (RgbSprite) null;
           uj.a(17, 76, 105, (byte) 99, -38, -93, (RgbSprite) null, 68);
         }
-        vn.field_h = vn.field_h + 1;
+        DateOfBirthValidator.field_h = DateOfBirthValidator.field_h + 1;
     }
 
     static {

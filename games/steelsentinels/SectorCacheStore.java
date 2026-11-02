@@ -225,7 +225,7 @@ final class SectorCacheStore {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                sj.field_y = param1;
+                MusicCrossfadeStream.field_y = param1;
                 var2 = SentinelDesigner.a(125, "text_game_name");
                 if (var2 != null) {
                   uj.field_h = IntKeyLookup.a(13, var2);
@@ -248,7 +248,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(88, "expansion_1_installed");
                 if (null != var2) {
-                  oe.field_l = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_l = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(102, "expansion_1_caps,0");
                 if (null != var2) {
@@ -264,7 +264,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(78, "solarite_invader_caps_space");
                 if (var2 != null) {
-                  re.field_W = IntKeyLookup.a(13, var2);
+                  NumericDateInputWidget.field_W = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(84, "baal_space");
                 if (var2 != null) {
@@ -284,19 +284,19 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(57, "baal_gloating,0");
                 if (var2 != null) {
-                  si.field_H[0] = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_H[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(87, "baal_gloating,1");
                 if (var2 != null) {
-                  si.field_H[1] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  CachedTextLayout.field_H[1] = IntKeyLookup.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 73, "baal_gloating,2");
                 if (null != var2) {
-                  si.field_H[2] = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_H[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(66, "baal_gloating,3");
                 if (null != var2) {
-                  si.field_H[3] = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_H[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(77, "baal_vanquished,0");
                 if (var2 != null) {
@@ -348,7 +348,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(85, "nosentinelmsg");
                 if (var2 != null) {
-                  sj.field_C = IntKeyLookup.a(13, var2);
+                  MusicCrossfadeStream.field_C = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(111, "spectatinggametxt");
                 if (null != var2) {
@@ -676,159 +676,159 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(107, "achievement_criteria,0");
                 if (null != var2) {
-                  oe.field_a[0] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(80, "achievement_criteria,1");
                 if (var2 != null) {
-                  oe.field_a[1] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(120, "achievement_criteria,2");
                 if (var2 != null) {
-                  oe.field_a[2] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(109, "achievement_criteria,3");
                 if (null != var2) {
-                  oe.field_a[3] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 103, "achievement_criteria,4");
                 if (var2 != null) {
-                  oe.field_a[4] = IntKeyLookup.a(param0 + 13, var2);
+                  QuickChatPhraseCache.field_a[4] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(71, "achievement_criteria,5");
                 if (var2 != null) {
-                  oe.field_a[5] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(105, "achievement_criteria,6");
                 if (null != var2) {
-                  oe.field_a[6] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[6] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(63, "achievement_criteria,7");
                 if (null != var2) {
-                  oe.field_a[7] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  QuickChatPhraseCache.field_a[7] = IntKeyLookup.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(93, "achievement_criteria,8");
                 if (null != var2) {
-                  oe.field_a[8] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[8] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(75, "achievement_criteria,9");
                 if (var2 != null) {
-                  oe.field_a[9] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[9] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 117, "achievement_criteria,10");
                 if (var2 != null) {
-                  oe.field_a[10] = IntKeyLookup.a(param0 + 13, var2);
+                  QuickChatPhraseCache.field_a[10] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 79, "achievement_criteria,11");
                 if (null != var2) {
-                  oe.field_a[11] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[11] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(108, "achievement_criteria,12");
                 if (var2 != null) {
-                  oe.field_a[12] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[12] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(55, "achievement_criteria,13");
                 if (null != var2) {
-                  oe.field_a[13] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[13] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(124, "achievement_criteria,14");
                 if (var2 != null) {
-                  oe.field_a[14] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[14] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(124, "achievement_criteria,15");
                 if (var2 != null) {
-                  oe.field_a[15] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  QuickChatPhraseCache.field_a[15] = IntKeyLookup.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(125, "achievement_criteria,16");
                 if (var2 != null) {
-                  oe.field_a[16] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[16] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(113, "achievement_criteria,17");
                 if (var2 != null) {
-                  oe.field_a[17] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[17] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(95, "achievement_criteria,18");
                 if (null != var2) {
-                  oe.field_a[18] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[18] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 56, "achievement_criteria,19");
                 if (var2 != null) {
-                  oe.field_a[19] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  QuickChatPhraseCache.field_a[19] = IntKeyLookup.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(114, "achievement_criteria,20");
                 if (null != var2) {
-                  oe.field_a[20] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[20] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(110, "achievement_criteria,21");
                 if (null != var2) {
-                  oe.field_a[21] = IntKeyLookup.a(param0 + 13, var2);
+                  QuickChatPhraseCache.field_a[21] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 104, "achievement_criteria,22");
                 if (var2 != null) {
-                  oe.field_a[22] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[22] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(90, "achievement_criteria,23");
                 if (null != var2) {
-                  oe.field_a[23] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[23] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(61, "achievement_criteria,24");
                 if (null != var2) {
-                  oe.field_a[24] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[24] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(102, "achievement_criteria,25");
                 if (var2 != null) {
-                  oe.field_a[25] = IntKeyLookup.a(param0 + 13, var2);
+                  QuickChatPhraseCache.field_a[25] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(75, "achievement_criteria,26");
                 if (null != var2) {
-                  oe.field_a[26] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[26] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(117, "achievement_criteria,27");
                 if (null != var2) {
-                  oe.field_a[27] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[27] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(62, "achievement_criteria,28");
                 if (null != var2) {
-                  oe.field_a[28] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[28] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(115, "achievement_criteria,29");
                 if (var2 != null) {
-                  oe.field_a[29] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[29] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 65, "achievement_criteria,30");
                 if (null != var2) {
-                  oe.field_a[30] = IntKeyLookup.a(param0 + 13, var2);
+                  QuickChatPhraseCache.field_a[30] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(80, "achievement_criteria,31");
                 if (null != var2) {
-                  oe.field_a[31] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[31] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(112, "achievement_criteria,32");
                 if (var2 != null) {
-                  oe.field_a[32] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[32] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(112, "achievement_criteria,33");
                 if (var2 != null) {
-                  oe.field_a[33] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  QuickChatPhraseCache.field_a[33] = IntKeyLookup.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(100, "achievement_criteria,34");
                 if (var2 != null) {
-                  oe.field_a[34] = IntKeyLookup.a(param0 + 13, var2);
+                  QuickChatPhraseCache.field_a[34] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 62, "achievement_criteria,35");
                 if (var2 != null) {
-                  oe.field_a[35] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[35] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(102, "achievement_criteria,36");
                 if (var2 != null) {
-                  oe.field_a[36] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[36] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 127, "achievement_criteria,37");
                 if (null != var2) {
-                  oe.field_a[37] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  QuickChatPhraseCache.field_a[37] = IntKeyLookup.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 119, "achievement_criteria,38");
                 if (var2 != null) {
-                  oe.field_a[38] = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_a[38] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 95, "tabnames,0");
                 if (var2 != null) {
@@ -992,47 +992,47 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 63, "powerupnames,0");
                 if (null != var2) {
-                  qj.field_v[0] = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_v[0] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(97, "powerupnames,1");
                 if (var2 != null) {
-                  qj.field_v[1] = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_v[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(99, "powerupnames,2");
                 if (null != var2) {
-                  qj.field_v[2] = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_v[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(91, "powerupnames,3");
                 if (var2 != null) {
-                  qj.field_v[3] = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_v[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(54, "powerupnames,4");
                 if (null != var2) {
-                  qj.field_v[4] = IntKeyLookup.a(param0 + 13, var2);
+                  SentinelAnimationEditor.field_v[4] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(82, "powerupnames,5");
                 if (var2 != null) {
-                  qj.field_v[5] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SentinelAnimationEditor.field_v[5] = IntKeyLookup.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(111, "powerupnames,6");
                 if (null != var2) {
-                  qj.field_v[6] = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_v[6] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 98, "powerupnames,7");
                 if (null != var2) {
-                  qj.field_v[7] = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_v[7] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(86, "powerupnames,8");
                 if (null != var2) {
-                  qj.field_v[8] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SentinelAnimationEditor.field_v[8] = IntKeyLookup.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(70, "powerupnames,9");
                 if (var2 != null) {
-                  qj.field_v[9] = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_v[9] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(71, "powerupnames,10");
                 if (null != var2) {
-                  qj.field_v[10] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  SentinelAnimationEditor.field_v[10] = IntKeyLookup.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 99, "meleeattackdesc,0");
                 if (null != var2) {
@@ -1422,35 +1422,35 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(60, "mod_category_names,0");
                 if (var2 != null) {
-                  si.field_D[0] = IntKeyLookup.a(bi.a(param0, 13), var2);
+                  CachedTextLayout.field_D[0] = IntKeyLookup.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(104, "mod_category_names,1");
                 if (var2 != null) {
-                  si.field_D[1] = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_D[1] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(78, "mod_category_names,2");
                 if (var2 != null) {
-                  si.field_D[2] = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_D[2] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(79, "mod_category_names,3");
                 if (null != var2) {
-                  si.field_D[3] = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_D[3] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(93, "mod_category_names,4");
                 if (var2 != null) {
-                  si.field_D[4] = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_D[4] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 107, "mod_category_names,5");
                 if (null != var2) {
-                  si.field_D[5] = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_D[5] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(80, "mod_category_names,6");
                 if (var2 != null) {
-                  si.field_D[6] = IntKeyLookup.a(param0 + 13, var2);
+                  CachedTextLayout.field_D[6] = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(116, "mod_category_names,7");
                 if (null != var2) {
-                  si.field_D[7] = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_D[7] = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(91, "weaponnames,0");
                 if (var2 != null) {
@@ -1766,7 +1766,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(100, "caughtinnukeexplosionmsg");
                 if (var2 != null) {
-                  re.field_ab = IntKeyLookup.a(13, var2);
+                  NumericDateInputWidget.field_ab = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(77, "destroyedinnukeexplosionmsg");
                 if (null != var2) {
@@ -1810,7 +1810,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 69, "andfinishedbyrockmsg");
                 if (var2 != null) {
-                  da.field_i = IntKeyLookup.a(param0 ^ 13, var2);
+                  TextLayout.field_i = IntKeyLookup.a(param0 ^ 13, var2);
                 }
                 var2 = SentinelDesigner.a(59, "plummetmsg");
                 if (var2 != null) {
@@ -1822,7 +1822,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(126, "unknownfoe");
                 if (null != var2) {
-                  il.field_d = IntKeyLookup.a(13, var2);
+                  TextLayoutLine.field_d = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 81, "killedwhenrocketintercepted");
                 if (null != var2) {
@@ -2890,7 +2890,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 117, "CONFIRM_ENGINEER_MSG");
                 if (var2 != null) {
-                  pg.field_y = IntKeyLookup.a(13, var2);
+                  AlternateUsernameCredentials.field_y = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(76, "CONFIG_UNLOCKED_MSG");
                 if (null != var2) {
@@ -3896,7 +3896,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 60, "rmbcancelslockontxt");
                 if (var2 != null) {
-                  qj.field_u = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_u = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(105, "rmbcancelslockofftxt");
                 if (null != var2) {
@@ -3948,7 +3948,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 76, "freeforalltxt");
                 if (var2 != null) {
-                  vn.field_k = IntKeyLookup.a(param0 + 13, var2);
+                  DateOfBirthValidator.field_k = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 65, "teambattletxt");
                 if (var2 != null) {
@@ -4208,7 +4208,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(80, "keycode_scrollright");
                 if (null != var2) {
-                  on.field_h = 255 & var2[0];
+                  EmailCredentials.field_h = 255 & var2[0];
                 }
                 var2 = SentinelDesigner.a(param0 ^ 119, "keycode_moveleft");
                 if (var2 != null) {
@@ -4256,7 +4256,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(81, "backtoconfigtxt");
                 if (var2 != null) {
-                  ha.field_S = IntKeyLookup.a(13, var2);
+                  DateInputWidget.field_S = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(127, "closepreambletxt");
                 if (var2 != null) {
@@ -4666,7 +4666,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 103, "missioncurtime");
                 if (null != var2) {
-                  il.field_g = IntKeyLookup.a(13, var2);
+                  TextLayoutLine.field_g = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(103, "missionrespawns");
                 if (null != var2) {
@@ -5017,7 +5017,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 104, "CANNOT_ENG_MOD_TXT");
                 if (null != var2) {
-                  ha.field_R = IntKeyLookup.a(param0 ^ 13, var2);
+                  DateInputWidget.field_R = IntKeyLookup.a(param0 ^ 13, var2);
                 }
                 var2 = SentinelDesigner.a(112, "FIRST_ENG_THIS_TXT");
                 if (var2 != null) {
@@ -5061,7 +5061,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(90, "WEAPONLIST_BLURB");
                 if (null != var2) {
-                  re.field_hb = IntKeyLookup.a(param0 + 13, var2);
+                  NumericDateInputWidget.field_hb = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(115, "MODLIST_BLURB");
                 if (null != var2) {
@@ -5129,7 +5129,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(59, "engineeredtxt");
                 if (var2 != null) {
-                  qj.field_c = IntKeyLookup.a(13, var2);
+                  SentinelAnimationEditor.field_c = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(95, "notengineeredtxt");
                 if (null != var2) {
@@ -5177,7 +5177,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(54, "anduses");
                 if (null != var2) {
-                  re.field_X = IntKeyLookup.a(13, var2);
+                  NumericDateInputWidget.field_X = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(82, "usescomponents");
                 if (var2 != null) {
@@ -5453,7 +5453,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 ^ 90, "defaultheadfor");
                 if (var2 != null) {
-                  si.field_F = IntKeyLookup.a(13, var2);
+                  CachedTextLayout.field_F = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 117, "defaultarmfor");
                 if (null != var2) {
@@ -5521,7 +5521,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(119, "missiondesc");
                 if (var2 != null) {
-                  oe.field_j = IntKeyLookup.a(13, var2);
+                  QuickChatPhraseCache.field_j = IntKeyLookup.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 101, "pageMofN");
                 if (var2 != null) {
@@ -5593,7 +5593,7 @@ final class SectorCacheStore {
                 if (null != var2) {
                   pa.field_j = IntKeyLookup.a(13, var2);
                 }
-                sj.field_y = null;
+                MusicCrossfadeStream.field_y = null;
             }
             void run() {
                 var3 = SteelSentinels.obfuscationControl;
@@ -5652,7 +5652,7 @@ final class SectorCacheStore {
             }
             dupTemp$1 = mm.a(40);
             vf.field_d = dupTemp$1;
-            oe.field_b = dupTemp$1;
+            QuickChatPhraseCache.field_b = dupTemp$1;
             if (param0 < 115) {
               return false;
             }

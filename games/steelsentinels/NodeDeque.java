@@ -653,7 +653,7 @@ final class NodeDeque {
                   var25Lifetime1Lifetime1 = param4.field_Z[var24Lifetime1];
                   var26Lifetime1Lifetime1 = param4.field_S[var24Lifetime1];
                   var27Lifetime1Lifetime1 = param4.field_Q[var24Lifetime1];
-                  re.field_bb[var24Lifetime1] = var9 + (var27Lifetime1Lifetime1 * var18 + (var12 * var25Lifetime1Lifetime1 + var15 * var26Lifetime1Lifetime1) >> 16);
+                  NumericDateInputWidget.field_bb[var24Lifetime1] = var9 + (var27Lifetime1Lifetime1 * var18 + (var12 * var25Lifetime1Lifetime1 + var15 * var26Lifetime1Lifetime1) >> 16);
                   AudioService.field_d[var24Lifetime1] = (var25Lifetime1Lifetime1 * var13 - (-(var26Lifetime1Lifetime1 * var16) - var27Lifetime1Lifetime1 * var19) >> 16) + var10;
                   ThreeSliceButtonPainter.field_u[var24Lifetime1] = var11 + (var25Lifetime1Lifetime1 * var14 + var17 * var26Lifetime1Lifetime1 + var27Lifetime1Lifetime1 * var20 >> 16);
                   var25Lifetime1Lifetime1 = param4.field_a[var24Lifetime1];
@@ -769,7 +769,7 @@ final class NodeDeque {
               rh.a(false);
               param4 = false;
             }
-            bh.a(param6, param4, (byte) -49);
+            SentinelCommandSimulator.a(param6, param4, (byte) -49);
             cc.a(param2, (byte) 119, param4);
             param4 = false;
           }

@@ -19,7 +19,7 @@ final class QuickChatPhraseDefinition extends DualNode {
         int var2 = -79 % ((param0 + 50) / 55);
         if (this.field_F != null) {
           for (var3 = 0; var3 < this.field_F.length; var3++) {
-            this.field_F[var3] = vn.a(this.field_F[var3], 32768);
+            this.field_F[var3] = DateOfBirthValidator.a(this.field_F[var3], 32768);
           }
         }
     }
@@ -249,21 +249,21 @@ final class QuickChatPhraseDefinition extends DualNode {
         field_A = ViewportController.a(true);
         field_A[0] = -410976256;
         int[] var3 = field_A;
-        var3[1] = vn.a(var3[1], 32);
+        var3[1] = DateOfBirthValidator.a(var3[1], 32);
         field_E = ViewportController.a(true);
         int[] var4 = field_E;
-        var4[1] = vn.a(var4[1], 8);
+        var4[1] = DateOfBirthValidator.a(var4[1], 8);
         field_E[0] = -1711275968;
         int[] var5 = field_E;
-        var5[1] = vn.a(var5[1], 16);
+        var5[1] = DateOfBirthValidator.a(var5[1], 16);
         field_B = ViewportController.a(true);
         field_B[0] = 64712;
         for (var0 = 32; var0 <= 36; var0++) {
           var1 = field_B;
           var2 = var0;
-          var1[var2 >> 5] = vn.a(var1[var2 >> 5], 1 << ec.a(31, var2));
+          var1[var2 >> 5] = DateOfBirthValidator.a(var1[var2 >> 5], 1 << ec.a(31, var2));
         }
         int[] var6 = field_A;
-        var6[1] = vn.a(var6[1], 64);
+        var6[1] = DateOfBirthValidator.a(var6[1], 64);
     }
 }

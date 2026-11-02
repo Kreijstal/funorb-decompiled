@@ -83,7 +83,7 @@ final class DialWidget extends TextButton {
           if (param0 <= 122) {
             return true;
           }
-          vn.d(-31);
+          DateOfBirthValidator.d(-31);
           if (var1_int >= ue.field_c.length) {
             km.field_a = DualNodeDequeIterator.field_i;
             ln.field_c = lj.field_e[0];
@@ -299,7 +299,7 @@ final class DialWidget extends TextButton {
           return jm.field_p;
         }
         if (92 == var2) {
-          return si.field_k;
+          return CachedTextLayout.field_k;
         }
         return null;
     }

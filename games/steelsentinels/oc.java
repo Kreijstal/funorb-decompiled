@@ -299,7 +299,7 @@ final class oc {
         var10 = SteelSentinels.obfuscationControl;
         try {
           ContentTransitionDialog.field_mb = param1;
-          nc.field_q = true;
+          WeightedLruCache.field_q = true;
           var11 = param2;
           if (!param4) {
             stackIn_4_0 = dg.field_f;
@@ -308,7 +308,7 @@ final class oc {
           }
           var6 = stackIn_4_0;
           if (ContentTransitionDialog.field_mb == 0) {
-            var7 = tc.a(480, re.field_ib, 75, var11, lj.field_a);
+            var7 = tc.a(480, NumericDateInputWidget.field_ib, 75, var11, lj.field_a);
             var8 = 3 + var7;
             AudioService.field_g = new String[var8];
             kk.field_g = new int[var8];
@@ -330,7 +330,7 @@ final class oc {
             if (ContentTransitionDialog.field_mb != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = tc.a(480, re.field_ib, 75, var11, lj.field_a);
+            var7 = tc.a(480, NumericDateInputWidget.field_ib, 75, var11, lj.field_a);
             var8 = var7 + 2;
             AudioService.field_g = new String[var8];
             kk.field_g = new int[var8];

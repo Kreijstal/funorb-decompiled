@@ -102,11 +102,11 @@ final class rf {
             var7 = null;
             var8 = null;
             if (km.field_k.field_f != null) {
-              si.field_o = new BufferedRandomAccessFile(km.field_k.field_f, 5200, 0);
+              CachedTextLayout.field_o = new BufferedRandomAccessFile(km.field_k.field_f, 5200, 0);
               km.field_k.field_f = null;
-              var7 = new SectorCacheStore(255, si.field_o, new BufferedRandomAccessFile(km.field_k.field_g, 12000, 0), 2097152);
+              var7 = new SectorCacheStore(255, CachedTextLayout.field_o, new BufferedRandomAccessFile(km.field_k.field_g, 12000, 0), 2097152);
             }
-            if (si.field_o != null) {
+            if (CachedTextLayout.field_o != null) {
               if (rh.field_o == null) {
                 rh.field_o = new BufferedRandomAccessFile[km.field_k.field_a.length];
               }
@@ -114,7 +114,7 @@ final class rf {
                 rh.field_o[param5] = new BufferedRandomAccessFile(km.field_k.field_a[param5], 12000, 0);
                 km.field_k.field_a[param5] = null;
               }
-              var8 = new SectorCacheStore(param5, si.field_o, rh.field_o[param5], 2097152);
+              var8 = new SectorCacheStore(param5, CachedTextLayout.field_o, rh.field_o[param5], 2097152);
             }
             var9 = ByteStorage.field_c.a((SectorCacheStore) (var7), (byte) 115, param3, (SectorCacheStore) (var8), param5);
             if (param4) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh {
+final class SentinelCommandSimulator {
     static String field_i;
     int field_k;
     private int field_d;
@@ -23,7 +23,7 @@ final class bh {
 
     public static void a(byte param0) {
         if (param0 > -69) {
-          bh.a((byte) 39, true);
+          SentinelCommandSimulator.a((byte) 39, true);
         }
         field_o = null;
         field_i = null;
@@ -97,7 +97,7 @@ final class bh {
               }
               if (var5Lifetime1 != null) {
                 var6 = (String) null;
-                sj.a((String) null, (String) (var5Lifetime1), 0, (byte) 21, var4, 2);
+                MusicCrossfadeStream.a((String) null, (String) (var5Lifetime1), 0, (byte) 21, var4, 2);
               }
               QuickChatHelpDialog.field_bc = -1;
               DelayedServerPacket.field_y = null;
@@ -1253,7 +1253,7 @@ final class bh {
         }
     }
 
-    bh(Sentinel param0) {
+    SentinelCommandSimulator(Sentinel param0) {
         try {
           this.field_c = param0;
           this.field_g = this.field_c.worldX;
@@ -1275,7 +1275,7 @@ final class bh {
     }
 
     final static void a(int param0) {
-        int var1 = (re.field_Z - 640) / 2;
+        int var1 = (NumericDateInputWidget.field_Z - 640) / 2;
         int var2 = AudioService.field_h * AudioService.field_h;
         int var3 = -(SentinelCommand.field_t * SentinelCommand.field_t) + var2;
         QuickChatMenu.field_Ub.a(param0 ^ 0, 90, -210 + (SoftwareRaster.field_j - 4), -(199 * var3 / var2) + var1, 199);

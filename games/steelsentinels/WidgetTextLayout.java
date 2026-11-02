@@ -16,7 +16,7 @@ interface WidgetTextLayout {
 
     public abstract int a(int param0, int param1, UiComponent param2);
 
-    public abstract da b(int param0, UiComponent param1);
+    public abstract TextLayout b(int param0, UiComponent param1);
 
     public abstract int a(int param0, UiComponent param1);
 

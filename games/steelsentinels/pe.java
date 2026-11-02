@@ -130,7 +130,7 @@ final class pe {
         int var6;
         var6 = SteelSentinels.obfuscationControl;
         var2 = 0;
-        var3 = vn.field_h;
+        var3 = DateOfBirthValidator.field_h;
         if (var3 < 5) {
           var2 = var3 * var3 * 8192 / 1100;
         } else {

@@ -304,7 +304,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            sj.a((String) null, -59, (Throwable) ((Object) var1_ref));
+            MusicCrossfadeStream.a((String) null, -59, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -408,7 +408,7 @@ final class BufferedSocket implements Runnable {
           }
           o.field_d = param2.field_M;
           o.field_d.clear(6);
-          me.field_b = new dk(param4);
+          LoginCredentials.field_b = new dk(param4);
           ModalStack.field_R = 0L;
           Js5ArchiveManager.field_l = param9;
           return;

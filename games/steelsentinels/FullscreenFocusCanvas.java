@@ -12,7 +12,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static RgbSprite[] field_a;
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        ib.a(param2, SocketConnector.field_b, param1, param3, 127, da.field_g, te.field_b);
+        ib.a(param2, SocketConnector.field_b, param1, param3, 127, TextLayout.field_g, te.field_b);
         if (param0 != -1604006872) {
           field_g = (BitmapFont) null;
         }
@@ -85,8 +85,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
         int var2 = var1 - StatefulTextPainter.field_p * StatefulTextPainter.field_p;
         int var3 = var2 * (jn.field_c - va.field_b) / var1 + va.field_b;
-        DisplayNameForm.field_V.a(0, var3, 120, me.field_e, 640);
-        EmailAvailabilityValidator.a(da.field_g, 0, va.field_e, 5, jn.field_c - 24, 640, 110);
+        DisplayNameForm.field_V.a(0, var3, 120, LoginCredentials.field_e, 640);
+        EmailAvailabilityValidator.a(TextLayout.field_g, 0, va.field_e, 5, jn.field_c - 24, 640, 110);
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {

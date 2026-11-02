@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re extends ha {
+final class NumericDateInputWidget extends DateInputWidget {
     private EditableTextWidget field_fb;
     static String field_hb;
     static String field_ab;
@@ -78,7 +78,7 @@ final class re extends ha {
         field_ib = null;
     }
 
-    re(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
+    NumericDateInputWidget(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
           this.a(param2, (byte) -101, param3, param4, param5);
@@ -97,7 +97,7 @@ final class re extends ha {
         }
         param2 = param2 + this.field_o;
         param0 = param0 + this.field_z;
-        this.a(15853, this.field_fb, param2, fb.field_n, param0);
+        this.a(15853, this.field_fb, param2, UsernameCredentials.field_n, param0);
         this.a(15853, this.field_gb, param2, qi.field_b, param0);
         this.a(15853, this.field_db, param2, fj.field_g, param0);
     }
@@ -159,7 +159,7 @@ final class re extends ha {
             if (param1 == 9268) {
               return;
             }
-            re.l(36);
+            NumericDateInputWidget.l(36);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -223,7 +223,7 @@ final class re extends ha {
         }
     }
 
-    private re(WidgetPainter param0, boolean param1) {
+    private NumericDateInputWidget(WidgetPainter param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_fb = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) null, 2));
@@ -246,7 +246,7 @@ final class re extends ha {
         }
     }
 
-    final void a(byte param0, vn param1) {
+    final void a(byte param0, DateOfBirthValidator param1) {
         super.a((byte) -84, param1);
         if (param0 > -17) {
           return;

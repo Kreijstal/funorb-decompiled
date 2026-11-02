@@ -15,11 +15,11 @@ final class qi {
     static SceneWidget field_c;
     static RgbSprite field_i;
 
-    final static me a(boolean param0, long param1, String param2, int param3, String param4) {
+    final static LoginCredentials a(boolean param0, long param1, String param2, int param3, String param4) {
         RuntimeException var6 = null;
-        on stackIn_3_0 = null;
-        pg stackIn_7_0 = null;
-        fb stackIn_11_0 = null;
+        EmailCredentials stackIn_3_0 = null;
+        AlternateUsernameCredentials stackIn_7_0 = null;
+        UsernameCredentials stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -29,18 +29,18 @@ final class qi {
         try {
           if (param1 == 0L &&
             param4 != null) {
-            stackIn_3_0 = new on(param4, param2);
-            return (me) ((Object) stackIn_3_0);
+            stackIn_3_0 = new EmailCredentials(param4, param2);
+            return (LoginCredentials) ((Object) stackIn_3_0);
           }
           if (param0) {
-            stackIn_7_0 = new pg(param1, param2);
-            return (me) ((Object) stackIn_7_0);
+            stackIn_7_0 = new AlternateUsernameCredentials(param1, param2);
+            return (LoginCredentials) ((Object) stackIn_7_0);
           }
           if (param3 != 0) {
             field_h = (String) null;
           }
-          stackIn_11_0 = new fb(param1, param2);
-          return (me) ((Object) stackIn_11_0);
+          stackIn_11_0 = new UsernameCredentials(param1, param2);
+          return (LoginCredentials) ((Object) stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

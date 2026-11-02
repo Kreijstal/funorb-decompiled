@@ -34,7 +34,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           if (param2 != 248) {
             field_Wb = (String) null;
           }
-          stackIn_3_0 = on.a(PcmSampleStream.createAtRatePercentQ6(param3, 100, param0, param1), -48);
+          stackIn_3_0 = EmailCredentials.a(PcmSampleStream.createAtRatePercentQ6(param3, 100, param0, param1), -48);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

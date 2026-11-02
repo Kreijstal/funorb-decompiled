@@ -73,7 +73,7 @@ final class LinkButtonPainter implements WidgetPainter {
           } else {
             var10 = var10 + (-var8 + param1.field_E);
           }
-          ha.a(var9 - 2, 4 + var7, var8, 0, var10 + 2);
+          DateInputWidget.a(var9 - 2, 4 + var7, var8, 0, var10 + 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
