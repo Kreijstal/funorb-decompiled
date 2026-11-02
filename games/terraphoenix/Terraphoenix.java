@@ -901,16 +901,16 @@ public final class Terraphoenix extends GameShell {
           if (-4 == ha.field_q) {
             this.field_bb = jh.field_l[19];
           }
-          nf.field_h = 8 + 16 * og.field_f.c(this.field_bb, 484);
-          if (wb.field_f < nf.field_h) {
-            nf.field_h = 8 + 16 * og.field_f.c(this.field_bb, 475);
+          PcmPlayerPump.field_h = 8 + 16 * og.field_f.c(this.field_bb, 484);
+          if (wb.field_f < PcmPlayerPump.field_h) {
+            PcmPlayerPump.field_h = 8 + 16 * og.field_f.c(this.field_bb, 475);
           }
           if (this.field_S != null &&
-            wb.field_f >= nf.field_h) {
+            wb.field_f >= PcmPlayerPump.field_h) {
             this.field_S = null;
           }
           if (null == this.field_S &&
-            wb.field_f < nf.field_h) {
+            wb.field_f < PcmPlayerPump.field_h) {
             qg.field_a = 0;
             var3_ref_g = new g(0L, (g) null);
             var3_ref_g.field_X = jc.field_G;
@@ -923,10 +923,10 @@ public final class Terraphoenix extends GameShell {
             var6 = sl.field_b[4];
             var7 = sj.field_e[4];
             this.field_S = new ol(0L, var3_ref_g, var6, var7, var4_ref_g, var5);
-            this.field_S.a(416, qg.field_a, 11, nf.field_h, -689, 511, wb.field_f, wb.field_f);
+            this.field_S.a(416, qg.field_a, 11, PcmPlayerPump.field_h, -689, 511, wb.field_f, wb.field_f);
           }
           if (this.field_S != null) {
-            nf.field_h = 16 * og.field_f.c(this.field_bb.substring(0, this.field_cb), 475) + 8;
+            PcmPlayerPump.field_h = 16 * og.field_f.c(this.field_bb.substring(0, this.field_cb), 475) + 8;
             this.field_S.a(-92, true);
             var3Lifetime2 = 12;
             if (this.field_S.e((byte) -96) ||
@@ -951,16 +951,16 @@ public final class Terraphoenix extends GameShell {
               bh.field_e[105]) {
               qg.field_a = qg.field_a + var4Lifetime2;
             }
-            if (qg.field_a > -wb.field_f + nf.field_h) {
-              qg.field_a = nf.field_h - wb.field_f;
+            if (qg.field_a > -wb.field_f + PcmPlayerPump.field_h) {
+              qg.field_a = PcmPlayerPump.field_h - wb.field_f;
             }
             if (qg.field_a < 0) {
               qg.field_a = 0;
             }
             if (this.field_S.f(-1)) {
-              qg.field_a = this.field_S.a(74, nf.field_h, wb.field_f);
+              qg.field_a = this.field_S.a(74, PcmPlayerPump.field_h, wb.field_f);
             }
-            this.field_S.a((byte) 79, wb.field_f, qg.field_a, nf.field_h);
+            this.field_S.a((byte) 79, wb.field_f, qg.field_a, PcmPlayerPump.field_h);
           }
           if (this.field_ib < 256) {
             this.field_ib = this.field_ib + 1;
@@ -990,9 +990,9 @@ public final class Terraphoenix extends GameShell {
             if (var3Lifetime3 < this.field_mb) {
               this.field_cb = this.field_cb + 1;
               this.field_mb = 0;
-              if (nf.field_h - wb.field_f <= qg.field_a) {
-                nf.field_h = og.field_f.c(this.field_bb.substring(0, this.field_cb), 475) * 16 + 8;
-                qg.field_a = -wb.field_f + nf.field_h;
+              if (PcmPlayerPump.field_h - wb.field_f <= qg.field_a) {
+                PcmPlayerPump.field_h = og.field_f.c(this.field_bb.substring(0, this.field_cb), 475) * 16 + 8;
+                qg.field_a = -wb.field_f + PcmPlayerPump.field_h;
                 if (0 > qg.field_a) {
                   qg.field_a = 0;
                 }
@@ -4319,7 +4319,7 @@ public final class Terraphoenix extends GameShell {
           se.a(-1);
           MapTile.b(-32);
           rl.a(-19959);
-          nf.a((byte) -120);
+          PcmPlayerPump.a((byte) -120);
           il.b((byte) 113);
           sh.c(-96);
           fk.a();
@@ -8372,7 +8372,7 @@ public final class Terraphoenix extends GameShell {
                 SoftwareRasterizer.g(9, 470, 512, 0, 64);
                 SoftwareRasterizer.g(9, 471, 512, 0, 128);
                 SoftwareRasterizer.g(9, 472, 512, 0, 192);
-                this.field_S.a((byte) 74, wb.field_f, qg.field_a, nf.field_h);
+                this.field_S.a((byte) 74, wb.field_f, qg.field_a, PcmPlayerPump.field_h);
                 this.field_S.a((byte) -36, false);
               }
             }
@@ -8533,7 +8533,7 @@ public final class Terraphoenix extends GameShell {
           if (!ib.p(param0 ^ -44)) {
             if (rl.b(0)) {
               stackIn_571_0 = (null != a.field_b);
-              nf.a(stackIn_571_0, -1260);
+              PcmPlayerPump.a(stackIn_571_0, -1260);
               if (var10 != 0) {
                 SoftwareRasterizer.d(0, 0, 640, 480, 0, 128);
                 SoftwareRasterizer.f(320 - (LevelEditor.a(-1) / 2 + 12), 240 - mc.a(param0 ^ 45) / 2 - 12, LevelEditor.a(param0 ^ 88) + 24, mc.a(40) + 24, 0);
@@ -8809,7 +8809,7 @@ public final class Terraphoenix extends GameShell {
           }
           kg.field_r = ig.a(ab.field_a, param0 + 2020, "objects", "");
           rh.field_b = ig.a(ab.field_a, param0 + 2020, "icons", "");
-          nf.field_g = ig.a(ab.field_a, param0 ^ param0, "faces", "");
+          PcmPlayerPump.field_g = ig.a(ab.field_a, param0 ^ param0, "faces", "");
           ic.field_t = il.a("combatview", "", ab.field_a, -1);
           ab.field_a = null;
           aj.field_b = null;

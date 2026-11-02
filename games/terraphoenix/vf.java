@@ -38,7 +38,7 @@ final class vf {
           oe.field_a = param1;
           ra.field_m = param5;
           cg.field_H = param6;
-          nf.field_c = param2;
+          PcmPlayerPump.field_c = param2;
           IsaacCipher.field_f = ua.field_d;
           wf.field_q = param3;
           return true;

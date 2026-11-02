@@ -64,9 +64,9 @@ final class cm {
     final static boolean a(int param0) {
         if (param0 > -116) {
           field_a = (String) null;
-          return nf.field_c;
+          return PcmPlayerPump.field_c;
         }
-        return nf.field_c;
+        return PcmPlayerPump.field_c;
     }
 
     static {

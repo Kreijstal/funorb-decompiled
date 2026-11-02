@@ -140,7 +140,7 @@ final class hi extends ei implements n {
               var3 = tb.field_i;
               this.height = this.height + 10;
               if (ea.a(-20512)) {
-                var3 = nf.field_a;
+                var3 = PcmPlayerPump.field_a;
                 this.height = this.height + 20;
               }
             }

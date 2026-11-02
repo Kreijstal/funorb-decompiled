@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf implements Runnable {
+final class PcmPlayerPump implements Runnable {
     static String field_a;
     static int field_h;
     static boolean field_c;
@@ -52,7 +52,7 @@ final class nf implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
           this.field_i = false;
-          throw nf.<RuntimeException>$cfr$sneakyThrow(var3);
+          throw PcmPlayerPump.<RuntimeException>$cfr$sneakyThrow(var3);
         }
         this.field_i = false;
     }
@@ -68,14 +68,14 @@ final class nf implements Runnable {
 
     final static void a(boolean param0, int param1) {
         if (param1 != -1260) {
-          nf.a(true, 64);
+          PcmPlayerPump.a(true, 64);
           TutorialController.a(param0, 0, true);
           return;
         }
         TutorialController.a(param0, 0, true);
     }
 
-    nf() {
+    PcmPlayerPump() {
         this.field_d = new PcmPlayerService[2];
         this.field_b = false;
         this.field_i = false;

@@ -4167,7 +4167,7 @@ final class BattleState {
               if (decompiledFrameCompleted5) {
                 if (this.field_q != null &&
                   this.field_J) {
-                  nf.field_g[this.field_q.field_Z.field_d].b(10, 9 + var8);
+                  PcmPlayerPump.field_g[this.field_q.field_Z.field_d].b(10, 9 + var8);
                   var9_refLifetime2 = this.field_q.field_nb;
                   if (null != var9_refLifetime2 && (((oh) (var9_refLifetime2)).field_g == 0 ||
                     ((oh) (var9_refLifetime2)).field_g == 3 ||

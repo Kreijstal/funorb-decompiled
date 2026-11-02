@@ -18,8 +18,8 @@ class IntrusiveNode {
         IntrusiveNode.b(75);
     }
 
-    final boolean a(byte param0) {
-        if (param0 <= -21) {
+    final boolean isLinked(byte obfuscationGuard) {
+        if (obfuscationGuard <= -21) {
           return null != this.next ? true : false;
         }
         IntrusiveNode.a(55, -98);

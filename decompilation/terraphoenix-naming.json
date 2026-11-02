@@ -1276,6 +1276,14 @@
       "renamedSymbol": "C:SecondaryNodeDequeIterator"
     },
     {
+      "symbol": "C:nf",
+      "originalName": "nf",
+      "to": "PcmPlayerPump",
+      "evidence": "Runnable with volatile flags that loops over its array of PcmPlayerService outputs on its own thread.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PcmPlayerPump"
+    },
+    {
       "symbol": "C:nk",
       "originalName": "nk",
       "to": "PcmPlayerService",
@@ -2036,6 +2044,14 @@
       "renamedSymbol": "M:BufferedSocket.throwPendingError(I)V"
     },
     {
+      "symbol": "M:uf.a(B)Z",
+      "originalName": "a",
+      "to": "isLinked",
+      "evidence": "True when the forward link is non-null.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNode.isLinked(B)Z"
+    },
+    {
       "symbol": "M:uf.b(B)V",
       "originalName": "b",
       "to": "unlink",
@@ -2554,6 +2570,14 @@
       "evidence": "Clears the pending-error flag and throws an IOException when it was set.",
       "confidence": "reviewed",
       "renamedSymbol": "P:BufferedSocket.throwPendingError(I)V#0"
+    },
+    {
+      "symbol": "P:uf.a(B)Z#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "True when the forward link is non-null.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:IntrusiveNode.isLinked(B)Z#0"
     },
     {
       "symbol": "P:uf.b(B)V#0",
@@ -5985,9 +6009,9 @@
     },
     {
       "symbol": "C:nf",
-      "renamedSymbol": "C:nf",
+      "renamedSymbol": "C:PcmPlayerPump",
       "originalName": "nf",
-      "renamedName": "nf",
+      "renamedName": "PcmPlayerPump",
       "declaration": {
         "file": "nf.java",
         "start": 50,
@@ -25147,7 +25171,7 @@
     },
     {
       "symbol": "F:nf.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:nf.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:PcmPlayerPump.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -25158,7 +25182,7 @@
     },
     {
       "symbol": "F:nf.field_b:Z",
-      "renamedSymbol": "F:nf.field_b:Z",
+      "renamedSymbol": "F:PcmPlayerPump.field_b:Z",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -25169,7 +25193,7 @@
     },
     {
       "symbol": "F:nf.field_c:Z",
-      "renamedSymbol": "F:nf.field_c:Z",
+      "renamedSymbol": "F:PcmPlayerPump.field_c:Z",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -25180,7 +25204,7 @@
     },
     {
       "symbol": "F:nf.field_d:[Lnk;",
-      "renamedSymbol": "F:nf.field_d:[LPcmPlayerService;",
+      "renamedSymbol": "F:PcmPlayerPump.field_d:[LPcmPlayerService;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -25191,7 +25215,7 @@
     },
     {
       "symbol": "F:nf.field_e:Lhe;",
-      "renamedSymbol": "F:nf.field_e:LPlatformTaskDispatcher;",
+      "renamedSymbol": "F:PcmPlayerPump.field_e:LPlatformTaskDispatcher;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -25202,7 +25226,7 @@
     },
     {
       "symbol": "F:nf.field_f:[I",
-      "renamedSymbol": "F:nf.field_f:[I",
+      "renamedSymbol": "F:PcmPlayerPump.field_f:[I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -25213,7 +25237,7 @@
     },
     {
       "symbol": "F:nf.field_g:[Lci;",
-      "renamedSymbol": "F:nf.field_g:[LSprite;",
+      "renamedSymbol": "F:PcmPlayerPump.field_g:[LSprite;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -25224,7 +25248,7 @@
     },
     {
       "symbol": "F:nf.field_h:I",
-      "renamedSymbol": "F:nf.field_h:I",
+      "renamedSymbol": "F:PcmPlayerPump.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -25235,7 +25259,7 @@
     },
     {
       "symbol": "F:nf.field_i:Z",
-      "renamedSymbol": "F:nf.field_i:Z",
+      "renamedSymbol": "F:PcmPlayerPump.field_i:Z",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -25499,7 +25523,7 @@
     },
     {
       "symbol": "F:nk.field_g:Lnf;",
-      "renamedSymbol": "F:PcmPlayerService.field_g:Lnf;",
+      "renamedSymbol": "F:PcmPlayerService.field_g:LPcmPlayerPump;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -140339,7 +140363,7 @@
     },
     {
       "symbol": "L:nf.run()V#0",
-      "renamedSymbol": "L:nf.run()V#0",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -140350,7 +140374,7 @@
     },
     {
       "symbol": "L:nf.run()V#1",
-      "renamedSymbol": "L:nf.run()V#1",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -140361,7 +140385,7 @@
     },
     {
       "symbol": "L:nf.run()V#10",
-      "renamedSymbol": "L:nf.run()V#10",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#10",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -140372,7 +140396,7 @@
     },
     {
       "symbol": "L:nf.run()V#2",
-      "renamedSymbol": "L:nf.run()V#2",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -140383,7 +140407,7 @@
     },
     {
       "symbol": "L:nf.run()V#3",
-      "renamedSymbol": "L:nf.run()V#3",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#3",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -140394,7 +140418,7 @@
     },
     {
       "symbol": "L:nf.run()V#4",
-      "renamedSymbol": "L:nf.run()V#4",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -140405,7 +140429,7 @@
     },
     {
       "symbol": "L:nf.run()V#5",
-      "renamedSymbol": "L:nf.run()V#5",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#5",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -140416,7 +140440,7 @@
     },
     {
       "symbol": "L:nf.run()V#6",
-      "renamedSymbol": "L:nf.run()V#6",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -140427,7 +140451,7 @@
     },
     {
       "symbol": "L:nf.run()V#7",
-      "renamedSymbol": "L:nf.run()V#7",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -140438,7 +140462,7 @@
     },
     {
       "symbol": "L:nf.run()V#8",
-      "renamedSymbol": "L:nf.run()V#8",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -140449,7 +140473,7 @@
     },
     {
       "symbol": "L:nf.run()V#9",
-      "renamedSymbol": "L:nf.run()V#9",
+      "renamedSymbol": "L:PcmPlayerPump.run()V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -205514,7 +205538,7 @@
     },
     {
       "symbol": "M:nf.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:nf.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:PcmPlayerPump.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
       "renamedName": "$cfr$sneakyThrow",
       "declaration": {
@@ -205525,9 +205549,9 @@
     },
     {
       "symbol": "M:nf.<init>()V",
-      "renamedSymbol": "M:nf.<init>()V",
+      "renamedSymbol": "M:PcmPlayerPump.<init>()V",
       "originalName": "nf",
-      "renamedName": "nf",
+      "renamedName": "PcmPlayerPump",
       "declaration": {
         "file": "nf.java",
         "start": 2294,
@@ -205536,7 +205560,7 @@
     },
     {
       "symbol": "M:nf.a(B)V",
-      "renamedSymbol": "M:nf.a(B)V",
+      "renamedSymbol": "M:PcmPlayerPump.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -205547,7 +205571,7 @@
     },
     {
       "symbol": "M:nf.a(ZI)V",
-      "renamedSymbol": "M:nf.a(ZI)V",
+      "renamedSymbol": "M:PcmPlayerPump.a(ZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -205558,7 +205582,7 @@
     },
     {
       "symbol": "M:nf.run()V",
-      "renamedSymbol": "M:nf.run()V",
+      "renamedSymbol": "M:PcmPlayerPump.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -211663,9 +211687,9 @@
     },
     {
       "symbol": "M:uf.a(B)Z",
-      "renamedSymbol": "M:IntrusiveNode.a(B)Z",
+      "renamedSymbol": "M:IntrusiveNode.isLinked(B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isLinked",
       "declaration": {
         "file": "uf.java",
         "start": 357,
@@ -256664,7 +256688,7 @@
     },
     {
       "symbol": "P:nf.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:nf.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:PcmPlayerPump.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -256675,7 +256699,7 @@
     },
     {
       "symbol": "P:nf.a(B)V#0",
-      "renamedSymbol": "P:nf.a(B)V#0",
+      "renamedSymbol": "P:PcmPlayerPump.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -256686,7 +256710,7 @@
     },
     {
       "symbol": "P:nf.a(ZI)V#0",
-      "renamedSymbol": "P:nf.a(ZI)V#0",
+      "renamedSymbol": "P:PcmPlayerPump.a(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -256697,7 +256721,7 @@
     },
     {
       "symbol": "P:nf.a(ZI)V#1",
-      "renamedSymbol": "P:nf.a(ZI)V#1",
+      "renamedSymbol": "P:PcmPlayerPump.a(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -271360,9 +271384,9 @@
     },
     {
       "symbol": "P:uf.a(B)Z#0",
-      "renamedSymbol": "P:IntrusiveNode.a(B)Z#0",
+      "renamedSymbol": "P:IntrusiveNode.isLinked(B)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "uf.java",
         "start": 364,
@@ -276215,7 +276239,7 @@
       "original": "Terraphoenix.java",
       "renamed": "Terraphoenix.java",
       "inputSha256": "349e199da98705d0f4a247977c761e72f7c25d599cfe9cae413e517590c0e5bb",
-      "outputSha256": "a7f357613840ec5e5d70ed6d42032502c7c857615917ea34691d4c48c8577426",
+      "outputSha256": "297918a0e5bba686c948e63c0495af2d12e0bbac693639a8e9f6dfd1760a0f10",
       "edits": [
         {
           "start": 78,
@@ -276673,6 +276697,104 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 32433,
+          "end": 32435,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 32516,
+          "end": 32518,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 32542,
+          "end": 32544,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 32674,
+          "end": 32676,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 32796,
+          "end": 32798,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 33375,
+          "end": 33377,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 33485,
+          "end": 33487,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 34480,
+          "end": 34482,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 34521,
+          "end": 34523,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 34722,
+          "end": 34724,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 34823,
+          "end": 34825,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 35925,
+          "end": 35927,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 35982,
+          "end": 35984,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 36109,
+          "end": 36111,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 36506,
@@ -278702,6 +278824,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "MapTile"
+        },
+        {
+          "start": 164837,
+          "end": 164839,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 165002,
@@ -281655,6 +281784,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 316972,
+          "end": 316974,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
           "start": 317399,
           "end": 317401,
           "symbol": "C:jb",
@@ -281786,6 +281922,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 323530,
+          "end": 323532,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 323606,
@@ -281968,6 +282111,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 337289,
+          "end": 337291,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 337831,
@@ -294637,7 +294787,7 @@
       "original": "cm.java",
       "renamed": "cm.java",
       "inputSha256": "5d586c87fb46eea55ca1ac54da96e1f1429479601483f23aed83036ed2bd2724",
-      "outputSha256": "bd3e87315f4232dc1b2f93392ed7b6261f9286a0e8fdf6bf60c392aeb6b954d9",
+      "outputSha256": "249663d9ad99cd1809bd9bf0ded21c0267c7e2053904c115b4aab7e7df4afc5b",
       "edits": [
         {
           "start": 926,
@@ -294694,6 +294844,20 @@
           "symbol": "F:dh.field_k:I",
           "original": "field_k",
           "renamed": "position"
+        },
+        {
+          "start": 1528,
+          "end": 1530,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 1565,
+          "end": 1567,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         }
       ]
     },
@@ -306404,7 +306568,7 @@
       "original": "e.java",
       "renamed": "BattleState.java",
       "inputSha256": "f4936e9bc7cb412874672987d7c7df6b2d63f94bfe5655340b5391c177dcc333",
-      "outputSha256": "d4ab6bb1f91015d172d833798f147dd8d8bb71e939b3adcb91a1a08d9eda650e",
+      "outputSha256": "a54d2eca78d4b3630bb081a87e084058b1ac28768cc47b8d779e99aadc9e80eb",
       "edits": [
         {
           "start": 50,
@@ -312461,6 +312625,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 170728,
+          "end": 170730,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 171234,
@@ -332852,7 +333023,7 @@
       "original": "gb.java",
       "renamed": "WidgetContainer.java",
       "inputSha256": "639c9d82e4c22d6bf3cf443493bb5b9c8286c52b1856904f72c7367b4699580f",
-      "outputSha256": "f44c530e290f45921f6524ac1557b69bd0a9cb089c6963df55d117d055daa5b8",
+      "outputSha256": "ff846c6df70d7df9452d1a95d477385bbde3e72ca803a4693b78a987896562f9",
       "edits": [
         {
           "start": 65,
@@ -333079,6 +333250,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 6273,
+          "end": 6274,
+          "symbol": "M:uf.a(B)Z",
+          "original": "a",
+          "renamed": "isLinked"
+        },
+        {
           "start": 6345,
           "end": 6352,
           "symbol": "F:gl.field_u:I",
@@ -333128,6 +333306,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 8069,
+          "end": 8070,
+          "symbol": "M:uf.a(B)Z",
+          "original": "a",
+          "renamed": "isLinked"
+        },
+        {
           "start": 8125,
           "end": 8132,
           "symbol": "F:gl.field_u:I",
@@ -333175,6 +333360,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 9715,
+          "end": 9716,
+          "symbol": "M:uf.a(B)Z",
+          "original": "a",
+          "renamed": "isLinked"
         },
         {
           "start": 9767,
@@ -333308,6 +333500,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 14977,
+          "end": 14978,
+          "symbol": "M:uf.a(B)Z",
+          "original": "a",
+          "renamed": "isLinked"
         },
         {
           "start": 15179,
@@ -333560,6 +333759,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 21039,
+          "end": 21040,
+          "symbol": "M:uf.a(B)Z",
+          "original": "a",
+          "renamed": "isLinked"
         },
         {
           "start": 21240,
@@ -338038,7 +338244,7 @@
       "original": "hi.java",
       "renamed": "hi.java",
       "inputSha256": "ff043a9628c39251aee81a435b9d431d245c04be0f0d16eec79bef6aaf0db926",
-      "outputSha256": "730ec3014d26d1b01e47e518356d667ec293dd6d894f0d36f40a94b1a07221aa",
+      "outputSha256": "b4a288f19ec504806ff2a0a69cb8007454a5880474e9d35a4740d7a371eca56b",
       "edits": [
         {
           "start": 193,
@@ -338151,6 +338357,13 @@
           "symbol": "F:gl.field_n:I",
           "original": "field_n",
           "renamed": "height"
+        },
+        {
+          "start": 4654,
+          "end": 4656,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 4687,
@@ -339917,7 +340130,7 @@
       "original": "ij.java",
       "renamed": "MessageKeys.java",
       "inputSha256": "eaea8f280bf6ee75396ecb0a97fc5e251c9cac917837001c1c68a99662c9ee9a",
-      "outputSha256": "76cbc23e97331f1ea36a332a1b065d11e7b4c788340facba1409bccc541a2590",
+      "outputSha256": "98b22290009b4c0547b2996cf40658f26de103287f9e4f4979b9d01e0e5b8079",
       "edits": [
         {
           "start": 50,
@@ -340266,6 +340479,13 @@
           "symbol": "C:tc",
           "original": "tc",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 107214,
+          "end": 107216,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 107531,
@@ -350752,7 +350972,7 @@
       "original": "nd.java",
       "renamed": "nd.java",
       "inputSha256": "0e6933e8b43809c3cc5a0f19c3fc490328d1e8436f7a2c022945699fc28de884",
-      "outputSha256": "e658bb805a14e4687fd6f4e16b64d4b8f254a4b8bfdfc496100b821f226821c1",
+      "outputSha256": "46abdeff6db99b690f9c1a2eaa2c2eee21510f23fc47ac7bb2e455024daa86b4",
       "edits": [
         {
           "start": 61,
@@ -350797,6 +351017,13 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "TutorialController"
+        },
+        {
+          "start": 8060,
+          "end": 8062,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 10226,
@@ -350951,10 +351178,17 @@
     },
     {
       "original": "nf.java",
-      "renamed": "nf.java",
+      "renamed": "PcmPlayerPump.java",
       "inputSha256": "fdf78386e05a102d9dbaec0f3e6f54bd330f8aa31ee2e753179bde9d6ee3faf6",
-      "outputSha256": "e6e2967ec7dd89e6ea2bd1238c78f7d1d79058f9bf428b8ca9e7d4dbb11ff888",
+      "outputSha256": "1b851f3138de5750bfaae13ace927342ace2689ccefab40361e3ab5765ae1244",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
         {
           "start": 158,
           "end": 160,
@@ -350998,6 +351232,20 @@
           "renamed": "reportClientError"
         },
         {
+          "start": 1811,
+          "end": 1813,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
+          "start": 2175,
+          "end": 2177,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
+        },
+        {
           "start": 2201,
           "end": 2203,
           "symbol": "C:ad",
@@ -351010,6 +351258,13 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "TutorialController"
+        },
+        {
+          "start": 2294,
+          "end": 2296,
+          "symbol": "M:nf.<init>()V",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 2328,
@@ -351223,7 +351478,7 @@
       "original": "nk.java",
       "renamed": "PcmPlayerService.java",
       "inputSha256": "501d89bfcb0a02ba1b8e3afc289101a4844f944cdc1ee26cd85c684077828b98",
-      "outputSha256": "6587a3263e6d433a0dced0b6d3434a0070518e4496b5ea37dd6a4428b4e23170",
+      "outputSha256": "8b42efd17d5fc279dceac32f452cfa0f27ea2a187ff8e69495df49e9f3ece31c",
       "edits": [
         {
           "start": 44,
@@ -351238,6 +351493,13 @@
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 251,
+          "end": 253,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 429,
@@ -351399,6 +351661,13 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "PcmPlayerService"
+        },
+        {
+          "start": 3301,
+          "end": 3303,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 3372,
@@ -367889,7 +368158,7 @@
       "original": "uf.java",
       "renamed": "IntrusiveNode.java",
       "inputSha256": "7c57701534313426a4f47c074b8137b2b2fa9ba235c2bd8baba2afa6ecebeb9b",
-      "outputSha256": "82ebf58260846be680fef9511fe8ef599512fdbf2a04d87285267e7216a4aeee",
+      "outputSha256": "2c015978d1fb613adfac2c8897006931f31bfed4af65c45394bd1e64018ede4c",
       "edits": [
         {
           "start": 44,
@@ -367946,6 +368215,27 @@
           "symbol": "C:uf",
           "original": "uf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 357,
+          "end": 358,
+          "symbol": "M:uf.a(B)Z",
+          "original": "a",
+          "renamed": "isLinked"
+        },
+        {
+          "start": 364,
+          "end": 370,
+          "symbol": "P:uf.a(B)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 386,
+          "end": 392,
+          "symbol": "P:uf.a(B)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 433,
@@ -370028,7 +370318,7 @@
       "original": "vf.java",
       "renamed": "vf.java",
       "inputSha256": "04e97b69a49e86e0be23efb517acff65f42cb45414c135d6040eb5548bad171c",
-      "outputSha256": "857a19a53a2bb2b4b513ef69d2ed42b7fec172e45c9fc0c4d340c52467df0174",
+      "outputSha256": "ae5d61ae2b14765fd2064ce5b56dc8ff45c4dab909a49542aea9a04f14b5a42a",
       "edits": [
         {
           "start": 811,
@@ -370043,6 +370333,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 1263,
+          "end": 1265,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 1294,
@@ -370895,7 +371192,7 @@
       "original": "vl.java",
       "renamed": "vl.java",
       "inputSha256": "9b7d088eb47ea97ace46ef67f0efc52d757793a98af806b396e17aea12a40b04",
-      "outputSha256": "334b67a2169e737b990db23d35f08318f592bfe695c286f8057b43dea378d991",
+      "outputSha256": "2b6c0165e4d2ecf7f55c90aa4382f12d0055a2795db589c50d3d795445857296",
       "edits": [
         {
           "start": 148,
@@ -371520,6 +371817,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 28384,
+          "end": 28386,
+          "symbol": "C:nf",
+          "original": "nf",
+          "renamed": "PcmPlayerPump"
         },
         {
           "start": 30560,
@@ -373279,10 +373583,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "26edf206676e04b318ad6f4157a86edb0277a46040a46832c6b7bdc20072e0d8",
+    "rulesSha256": "bfe61d5edbe20a9f41ad873227d17074f1811d0655b3e1f052d18dc3d10b7aee",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "cded4ffd8e6b9db3fc4834e5125b72bd94762046827ae3ee0b58481544b945d7",
+    "outputTreeSha256": "7084e1179f744d90f312323bf0d3d4795dc04fa3ce92cb2ae0d5ca95b3cf00bd",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -9,7 +9,7 @@ class PcmPlayerService {
     private boolean field_p;
     private PcmStream field_i;
     private int field_l;
-    private static nf field_g;
+    private static PcmPlayerPump field_g;
     static int field_u;
     private boolean field_o;
     private long field_j;
@@ -114,7 +114,7 @@ class PcmPlayerService {
               ((PcmPlayerService) ((Object) var4)).b(((PcmPlayerService) ((Object) var4)).field_b);
               if (field_m > 0 &&
                 field_g == null) {
-                field_g = new nf();
+                field_g = new PcmPlayerPump();
                 field_g.field_e = param0;
                 param0.requestThread((Runnable) ((Object) field_g), (byte) -21, field_m);
               }

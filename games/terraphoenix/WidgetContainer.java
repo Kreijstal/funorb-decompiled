@@ -188,7 +188,7 @@ class WidgetContainer extends UiWidget implements sf {
           var11 = new k(this.field_C);
           var9 = (UiWidget) (var11.a((byte) -13));
           while (var9 != null) {
-            if (var9.a((byte) -109)) {
+            if (var9.isLinked((byte) -109)) {
               if (var9.a(false, param1, param2 + this.y, param3 + this.x, param4, param5, param6)) {
                 return true;
               }
@@ -233,7 +233,7 @@ class WidgetContainer extends UiWidget implements sf {
           }
           var8 = (UiWidget) (var7.a((byte) -13));
           while (var8 != null) {
-            if (var8.a((byte) -111)) {
+            if (var8.isLinked((byte) -111)) {
               var8.a(97, param1, this.y + param2, this.x + param3, param4, param5);
               var8 = (UiWidget) (var7.c(45));
               continue;
@@ -273,7 +273,7 @@ class WidgetContainer extends UiWidget implements sf {
           var5 = new k(this.field_C);
           var6 = (UiWidget) (var5.a((byte) -13));
           while (var6 != null) {
-            if (var6.a((byte) -117)) {
+            if (var6.isLinked((byte) -117)) {
               var6.a(param0, this.y + param1, this.x + param2, 73);
               var6 = (UiWidget) (var5.c(66));
               continue;
@@ -425,7 +425,7 @@ class WidgetContainer extends UiWidget implements sf {
           var8 = new k(this.field_C);
           var9 = (UiWidget) (var8.a((byte) -13));
           while (var9 != null) {
-            if (var9.a((byte) -59)) {
+            if (var9.isLinked((byte) -59)) {
               if (var9.d(-105) &&
                 var9.a(param0, param1, param2, param3, param4, param5, (byte) 9)) {
                 return true;
@@ -595,7 +595,7 @@ class WidgetContainer extends UiWidget implements sf {
             return false;
           }
           while (var6_ref_gl != null) {
-            if (var6_ref_gl.a((byte) -61)) {
+            if (var6_ref_gl.isLinked((byte) -61)) {
               if (var6_ref_gl.d(-120) &&
                 var6_ref_gl.a(param0, param1, param2 ^ 0, param3)) {
                 return true;

@@ -181,7 +181,7 @@ final class nd extends IntrusiveNode {
                   var25Lifetime1Lifetime1 = param0.field_e[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_q[var23Lifetime2];
                   TutorialController.field_u[var23Lifetime2] = (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var18 * var26Lifetime1Lifetime1) >> 16) + var9;
-                  nf.field_f[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16);
+                  PcmPlayerPump.field_f[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16);
                   hj.field_J[var23Lifetime2] = (var17 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_O[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_d[var23Lifetime2];
