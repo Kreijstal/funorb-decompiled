@@ -25,7 +25,7 @@ final class LevelView extends LevelGrid {
         int var2 = 0;
         int var3 = TrackController.field_F ? 1 : 0;
         CachedArchiveSource.field_x = param0 ? true : false;
-        super.a(false, 1000, param0);
+        super.drawGrid(false, 1000, param0);
         this.field_p = ClientException.a(this.field_s, this.field_E, -257, this.field_a + 26 * this.field_D, this.field_G, this.field_F, this.field_u * 26 + this.field_f, this.tileFlags[this.field_u][this.field_D]);
         if (this.tickCount >= this.field_A) {
           if (this.field_p != null) {
@@ -165,7 +165,7 @@ final class LevelView extends LevelGrid {
         this.field_E = true;
         this.field_x = new IntrusiveDeque();
         try {
-          this.a(param1, (byte) 50, param2, param0);
+          this.setGrids(param1, (byte) 50, param2, param0);
           this.field_B = new short[param0.length][param0[0].length];
           var7_int = 0;
           scanLoop1: while (true) {

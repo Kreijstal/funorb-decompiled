@@ -91,7 +91,7 @@ final class LevelData extends LevelGrid {
               var24[var9_intLifetime1][var10Lifetime1] = fh.a(0, (int) param1.charAt(incrementValue$5));
             }
           }
-          this.a(var23, (byte) 50, var24, var22);
+          this.setGrids(var23, (byte) 50, var24, var22);
           var9 = new StringBuilder(12);
           while (true) {
             incrementValue$2 = var5;

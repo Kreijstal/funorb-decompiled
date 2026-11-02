@@ -18,7 +18,7 @@ abstract class LevelGrid {
     int field_b;
     int field_a;
 
-    final void a(boolean param0, int param1, boolean param2) {
+    final void drawGrid(boolean param0, int param1, boolean param2) {
         int var5 = 0;
         int var7 = 0;
         int var4;
@@ -65,7 +65,7 @@ abstract class LevelGrid {
         this.a(467, (byte) -117, 229 + param1);
     }
 
-    final void a(int[][] param0, byte param1, int[][] param2, byte[][] param3) {
+    final void setGrids(int[][] param0, byte param1, int[][] param2, byte[][] param3) {
         int var9 = 0;
         int var10 = 0;
         RuntimeException stackIn_30_0 = null;
@@ -161,9 +161,9 @@ abstract class LevelGrid {
         }
     }
 
-    void a(LevelData param0, int param1) {
+    void loadLevel(LevelData param0, int param1) {
         try {
-          this.a(param0.tileFlags, (byte) 50, param0.targetLayout, param0.floorKind);
+          this.setGrids(param0.tileFlags, (byte) 50, param0.targetLayout, param0.floorKind);
           if (param1 <= 36) {
             this.field_f = 43;
           }

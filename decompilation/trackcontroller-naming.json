@@ -1596,6 +1596,14 @@
       "renamedSymbol": "M:ActiveLevel.unlockAchievement(III)V"
     },
     {
+      "symbol": "M:ri.a(Lea;I)V",
+      "originalName": "a",
+      "to": "loadLevel",
+      "evidence": "Passes the LevelData grids to setGrids; ActiveLevel overrides it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ActiveLevel.loadLevel(LLevelData;I)V"
+    },
+    {
       "symbol": "M:ri.a(ZI)V",
       "originalName": "a",
       "to": "tick",
@@ -1620,6 +1628,14 @@
       "renamedSymbol": "M:ActiveLevel.matchesTargetLayout(I)Z"
     },
     {
+      "symbol": "M:sl.a(Lea;I)V",
+      "originalName": "a",
+      "to": "loadLevel",
+      "evidence": "Passes the LevelData grids to setGrids; ActiveLevel overrides it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LevelGrid.loadLevel(LLevelData;I)V"
+    },
+    {
       "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
       "originalName": "a",
       "to": "toClientException",
@@ -1634,6 +1650,22 @@
       "evidence": "Base implementation only increments the frame counter; ActiveLevel and the level view override it.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LevelGrid.tick(ZI)V"
+    },
+    {
+      "symbol": "M:sl.a(ZIZ)V",
+      "originalName": "a",
+      "to": "drawGrid",
+      "evidence": "Loops rows and columns in 26-pixel steps and blits the floor, tile and avatar sprites.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LevelGrid.drawGrid(ZIZ)V"
+    },
+    {
+      "symbol": "M:sl.a([[IB[[I[[B)V",
+      "originalName": "a",
+      "to": "setGrids",
+      "evidence": "Copies the tile, target and floor arrays into new arrays and centres the target block.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LevelGrid.setGrids([[IB[[I[[B)V"
     },
     {
       "symbol": "M:wh.a([III)V",
@@ -116426,7 +116458,7 @@
     },
     {
       "symbol": "L:ri.a(Lea;I)V#0",
-      "renamedSymbol": "L:ActiveLevel.a(LLevelData;I)V#0",
+      "renamedSymbol": "L:ActiveLevel.loadLevel(LLevelData;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -123070,7 +123102,7 @@
     },
     {
       "symbol": "L:sl.a(Lea;I)V#0",
-      "renamedSymbol": "L:LevelGrid.a(LLevelData;I)V#0",
+      "renamedSymbol": "L:LevelGrid.loadLevel(LLevelData;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -123092,7 +123124,7 @@
     },
     {
       "symbol": "L:sl.a(ZIZ)V#0",
-      "renamedSymbol": "L:LevelGrid.a(ZIZ)V#0",
+      "renamedSymbol": "L:LevelGrid.drawGrid(ZIZ)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -123103,7 +123135,7 @@
     },
     {
       "symbol": "L:sl.a(ZIZ)V#1",
-      "renamedSymbol": "L:LevelGrid.a(ZIZ)V#1",
+      "renamedSymbol": "L:LevelGrid.drawGrid(ZIZ)V#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -123114,7 +123146,7 @@
     },
     {
       "symbol": "L:sl.a(ZIZ)V#2",
-      "renamedSymbol": "L:LevelGrid.a(ZIZ)V#2",
+      "renamedSymbol": "L:LevelGrid.drawGrid(ZIZ)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -123125,7 +123157,7 @@
     },
     {
       "symbol": "L:sl.a(ZIZ)V#3",
-      "renamedSymbol": "L:LevelGrid.a(ZIZ)V#3",
+      "renamedSymbol": "L:LevelGrid.drawGrid(ZIZ)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -123136,7 +123168,7 @@
     },
     {
       "symbol": "L:sl.a(ZIZ)V#4",
-      "renamedSymbol": "L:LevelGrid.a(ZIZ)V#4",
+      "renamedSymbol": "L:LevelGrid.drawGrid(ZIZ)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -123147,7 +123179,7 @@
     },
     {
       "symbol": "L:sl.a(ZIZ)V#5",
-      "renamedSymbol": "L:LevelGrid.a(ZIZ)V#5",
+      "renamedSymbol": "L:LevelGrid.drawGrid(ZIZ)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -123158,7 +123190,7 @@
     },
     {
       "symbol": "L:sl.a(ZIZ)V#6",
-      "renamedSymbol": "L:LevelGrid.a(ZIZ)V#6",
+      "renamedSymbol": "L:LevelGrid.drawGrid(ZIZ)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -123169,7 +123201,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#0",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#0",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -123180,7 +123212,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#1",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#1",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#1",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -123191,7 +123223,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#10",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#10",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#10",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -123202,7 +123234,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#11",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#11",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -123213,7 +123245,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#12",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#12",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -123224,7 +123256,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#13",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#13",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -123235,7 +123267,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#14",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#14",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#14",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -123246,7 +123278,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#15",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#15",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -123257,7 +123289,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#16",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#16",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#16",
       "originalName": "var5_intLifetime1",
       "renamedName": "var5_intLifetime1",
       "declaration": {
@@ -123268,7 +123300,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#17",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#17",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#17",
       "originalName": "var5_intLifetime2",
       "renamedName": "var5_intLifetime2",
       "declaration": {
@@ -123279,7 +123311,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#18",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#18",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#18",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -123290,7 +123322,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#2",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#2",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#2",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -123301,7 +123333,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#3",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#3",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#3",
       "originalName": "stackIn_30_1",
       "renamedName": "stackIn_30_1",
       "declaration": {
@@ -123312,7 +123344,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#4",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#4",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#4",
       "originalName": "stackIn_31_2",
       "renamedName": "stackIn_31_2",
       "declaration": {
@@ -123323,7 +123355,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#5",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#5",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#5",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -123334,7 +123366,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#6",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#6",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#6",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -123345,7 +123377,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#7",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#7",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#7",
       "originalName": "stackIn_36_1",
       "renamedName": "stackIn_36_1",
       "declaration": {
@@ -123356,7 +123388,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#8",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#8",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#8",
       "originalName": "stackIn_37_2",
       "renamedName": "stackIn_37_2",
       "declaration": {
@@ -123367,7 +123399,7 @@
     },
     {
       "symbol": "L:sl.a([[IB[[I[[B)V#9",
-      "renamedSymbol": "L:LevelGrid.a([[IB[[I[[B)V#9",
+      "renamedSymbol": "L:LevelGrid.setGrids([[IB[[I[[B)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -158512,9 +158544,9 @@
     },
     {
       "symbol": "M:ri.a(Lea;I)V",
-      "renamedSymbol": "M:ActiveLevel.a(LLevelData;I)V",
+      "renamedSymbol": "M:ActiveLevel.loadLevel(LLevelData;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadLevel",
       "declaration": {
         "file": "ri.java",
         "start": 39604,
@@ -159755,9 +159787,9 @@
     },
     {
       "symbol": "M:sl.a(Lea;I)V",
-      "renamedSymbol": "M:LevelGrid.a(LLevelData;I)V",
+      "renamedSymbol": "M:LevelGrid.loadLevel(LLevelData;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadLevel",
       "declaration": {
         "file": "sl.java",
         "start": 5635,
@@ -159788,9 +159820,9 @@
     },
     {
       "symbol": "M:sl.a(ZIZ)V",
-      "renamedSymbol": "M:LevelGrid.a(ZIZ)V",
+      "renamedSymbol": "M:LevelGrid.drawGrid(ZIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawGrid",
       "declaration": {
         "file": "sl.java",
         "start": 398,
@@ -159799,9 +159831,9 @@
     },
     {
       "symbol": "M:sl.a([[IB[[I[[B)V",
-      "renamedSymbol": "M:LevelGrid.a([[IB[[I[[B)V",
+      "renamedSymbol": "M:LevelGrid.setGrids([[IB[[I[[B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setGrids",
       "declaration": {
         "file": "sl.java",
         "start": 1946,
@@ -208012,7 +208044,7 @@
     },
     {
       "symbol": "P:ri.a(Lea;I)V#0",
-      "renamedSymbol": "P:ActiveLevel.a(LLevelData;I)V#0",
+      "renamedSymbol": "P:ActiveLevel.loadLevel(LLevelData;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -208023,7 +208055,7 @@
     },
     {
       "symbol": "P:ri.a(Lea;I)V#1",
-      "renamedSymbol": "P:ActiveLevel.a(LLevelData;I)V#1",
+      "renamedSymbol": "P:ActiveLevel.loadLevel(LLevelData;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -210718,7 +210750,7 @@
     },
     {
       "symbol": "P:sl.a(Lea;I)V#0",
-      "renamedSymbol": "P:LevelGrid.a(LLevelData;I)V#0",
+      "renamedSymbol": "P:LevelGrid.loadLevel(LLevelData;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -210729,7 +210761,7 @@
     },
     {
       "symbol": "P:sl.a(Lea;I)V#1",
-      "renamedSymbol": "P:LevelGrid.a(LLevelData;I)V#1",
+      "renamedSymbol": "P:LevelGrid.loadLevel(LLevelData;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -210784,7 +210816,7 @@
     },
     {
       "symbol": "P:sl.a(ZIZ)V#0",
-      "renamedSymbol": "P:LevelGrid.a(ZIZ)V#0",
+      "renamedSymbol": "P:LevelGrid.drawGrid(ZIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -210795,7 +210827,7 @@
     },
     {
       "symbol": "P:sl.a(ZIZ)V#1",
-      "renamedSymbol": "P:LevelGrid.a(ZIZ)V#1",
+      "renamedSymbol": "P:LevelGrid.drawGrid(ZIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -210806,7 +210838,7 @@
     },
     {
       "symbol": "P:sl.a(ZIZ)V#2",
-      "renamedSymbol": "P:LevelGrid.a(ZIZ)V#2",
+      "renamedSymbol": "P:LevelGrid.drawGrid(ZIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -210817,7 +210849,7 @@
     },
     {
       "symbol": "P:sl.a([[IB[[I[[B)V#0",
-      "renamedSymbol": "P:LevelGrid.a([[IB[[I[[B)V#0",
+      "renamedSymbol": "P:LevelGrid.setGrids([[IB[[I[[B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -210828,7 +210860,7 @@
     },
     {
       "symbol": "P:sl.a([[IB[[I[[B)V#1",
-      "renamedSymbol": "P:LevelGrid.a([[IB[[I[[B)V#1",
+      "renamedSymbol": "P:LevelGrid.setGrids([[IB[[I[[B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -210839,7 +210871,7 @@
     },
     {
       "symbol": "P:sl.a([[IB[[I[[B)V#2",
-      "renamedSymbol": "P:LevelGrid.a([[IB[[I[[B)V#2",
+      "renamedSymbol": "P:LevelGrid.setGrids([[IB[[I[[B)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -210850,7 +210882,7 @@
     },
     {
       "symbol": "P:sl.a([[IB[[I[[B)V#3",
-      "renamedSymbol": "P:LevelGrid.a([[IB[[I[[B)V#3",
+      "renamedSymbol": "P:LevelGrid.setGrids([[IB[[I[[B)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -234308,7 +234340,7 @@
       "original": "ea.java",
       "renamed": "LevelData.java",
       "inputSha256": "5f19da38db114ac2508e654fee3e7fd3b401750e2ed68299234665c8df87d59f",
-      "outputSha256": "c72e20f19b49ab78bd4e2bd2fb32fc2784e75f528508cdbe124e32191a781386",
+      "outputSha256": "9c8acd83f6c77ada1dc59c74f94993526101ba6dd8b6b6bfe40ceac2b9eb1859",
       "edits": [
         {
           "start": 50,
@@ -234372,6 +234404,13 @@
           "symbol": "C:tc",
           "original": "tc",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 3163,
+          "end": 3164,
+          "symbol": "M:sl.a([[IB[[I[[B)V",
+          "original": "a",
+          "renamed": "setGrids"
         },
         {
           "start": 3600,
@@ -268331,7 +268370,7 @@
       "original": "ra.java",
       "renamed": "LevelView.java",
       "inputSha256": "b1c37851620859797d63ba5809b623992936c31054c22fd59d793215d0149094",
-      "outputSha256": "bb6fb82010f5bb635309803a23bf103468c5aabe0b30fdd9ed1bcc9f346ef686",
+      "outputSha256": "da530e9ecb84a187a62617e29de103c67d88bd5141eca9ffcfe54cb167f99fef",
       "edits": [
         {
           "start": 50,
@@ -268360,6 +268399,13 @@
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 697,
+          "end": 698,
+          "symbol": "M:sl.a(ZIZ)V",
+          "original": "a",
+          "renamed": "drawGrid"
         },
         {
           "start": 744,
@@ -268458,6 +268504,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 6250,
+          "end": 6251,
+          "symbol": "M:sl.a([[IB[[I[[B)V",
+          "original": "a",
+          "renamed": "setGrids"
         },
         {
           "start": 6391,
@@ -270779,7 +270832,7 @@
       "original": "ri.java",
       "renamed": "ActiveLevel.java",
       "inputSha256": "edabddc46b2e6a2367a80c44d28b3fdaca9b91c3c81158c5ccacf75c054d42b8",
-      "outputSha256": "f0cd084b07bc4f339a13cf9151dbc795138d92ba4f98dd47a003740b58df5be8",
+      "outputSha256": "32e9a372aab8bd0e7b3402c4362c8460db0c2f75557cbdf15b1d5c4f18b6e825",
       "edits": [
         {
           "start": 50,
@@ -271578,6 +271631,13 @@
           "symbol": "F:ea.field_x:I",
           "original": "field_x",
           "renamed": "levelIndex"
+        },
+        {
+          "start": 11983,
+          "end": 11984,
+          "symbol": "M:ri.a(Lea;I)V",
+          "original": "a",
+          "renamed": "loadLevel"
         },
         {
           "start": 12299,
@@ -273215,6 +273275,13 @@
           "renamed": "phase"
         },
         {
+          "start": 39604,
+          "end": 39605,
+          "symbol": "M:ri.a(Lea;I)V",
+          "original": "a",
+          "renamed": "loadLevel"
+        },
+        {
           "start": 39606,
           "end": 39608,
           "symbol": "C:ea",
@@ -273248,6 +273315,13 @@
           "symbol": "F:ri.field_I:Lea;",
           "original": "field_I",
           "renamed": "level"
+        },
+        {
+          "start": 40113,
+          "end": 40114,
+          "symbol": "M:sl.a(Lea;I)V",
+          "original": "a",
+          "renamed": "loadLevel"
         },
         {
           "start": 40142,
@@ -273507,6 +273581,13 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 47009,
+          "end": 47010,
+          "symbol": "M:sl.a(ZIZ)V",
+          "original": "a",
+          "renamed": "drawGrid"
         },
         {
           "start": 47088,
@@ -273873,6 +273954,13 @@
           "renamed": "phase"
         },
         {
+          "start": 51460,
+          "end": 51461,
+          "symbol": "M:ri.a(Lea;I)V",
+          "original": "a",
+          "renamed": "loadLevel"
+        },
+        {
           "start": 51467,
           "end": 51474,
           "symbol": "F:ri.field_I:Lea;",
@@ -273913,6 +274001,13 @@
           "symbol": "F:gj.field_f:[Lea;",
           "original": "field_f",
           "renamed": "levels"
+        },
+        {
+          "start": 51902,
+          "end": 51903,
+          "symbol": "M:ri.a(Lea;I)V",
+          "original": "a",
+          "renamed": "loadLevel"
         },
         {
           "start": 51907,
@@ -276747,7 +276842,7 @@
       "original": "sl.java",
       "renamed": "LevelGrid.java",
       "inputSha256": "135a4f518a96a528fbd156bb5366a88bb536eca25c01079e10c08e4bddd601bf",
-      "outputSha256": "b92f87e9dfc3c4563c2f2c5c8b7487cc9cb1dc45bc74068656a24c1a849df0bb",
+      "outputSha256": "cc7b16c33033d45fea82442aa1294fd4a5c3850df91be712c6530ef1172e94ae",
       "edits": [
         {
           "start": 53,
@@ -276783,6 +276878,13 @@
           "symbol": "F:sl.field_o:[[B",
           "original": "field_o",
           "renamed": "floorKind"
+        },
+        {
+          "start": 398,
+          "end": 399,
+          "symbol": "M:sl.a(ZIZ)V",
+          "original": "a",
+          "renamed": "drawGrid"
         },
         {
           "start": 721,
@@ -276890,6 +276992,13 @@
           "renamed": "avatarSprites"
         },
         {
+          "start": 1946,
+          "end": 1947,
+          "symbol": "M:sl.a([[IB[[I[[B)V",
+          "original": "a",
+          "renamed": "setGrids"
+        },
+        {
           "start": 2730,
           "end": 2737,
           "symbol": "F:sl.field_o:[[B",
@@ -276974,11 +277083,25 @@
           "renamed": "toClientException"
         },
         {
+          "start": 5635,
+          "end": 5636,
+          "symbol": "M:sl.a(Lea;I)V",
+          "original": "a",
+          "renamed": "loadLevel"
+        },
+        {
           "start": 5637,
           "end": 5639,
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "LevelData"
+        },
+        {
+          "start": 5691,
+          "end": 5692,
+          "symbol": "M:sl.a([[IB[[I[[B)V",
+          "original": "a",
+          "renamed": "setGrids"
         },
         {
           "start": 5700,
@@ -285221,10 +285344,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/trackcontroller"
     },
-    "rulesSha256": "4940b1e4cb7185e795416fb9a0b6f0110f5cd6fdf52259c6542c25af1746874b",
+    "rulesSha256": "4a8f479879d65e34db4f36daafa53d34db4b11516cc3e20dae12ebae6252fc12",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
-    "outputTreeSha256": "bd23e332d269afec808a09de1ac45d61271836ac13a09ebd094d2300b6441240",
+    "outputTreeSha256": "59e2a1c2b4fc73697115c0c78c3eee0a2adc9951d2de4633dddf2d4b1981f726",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -359,7 +359,7 @@ final class ActiveLevel extends LevelGrid {
         this.field_R = -692867528;
         this.field_cb = 640022790;
         this.field_E = 0;
-        this.a(qh.field_b, 42);
+        this.loadLevel(qh.field_b, 42);
     }
 
     private final void a(int param0, boolean param1) {
@@ -1192,13 +1192,13 @@ final class ActiveLevel extends LevelGrid {
         return 2 == this.phase ? true : false;
     }
 
-    final void a(LevelData param0, int param1) {
+    final void loadLevel(LevelData param0, int param1) {
         if (null == BufferedSocket.field_c) {
           BufferedSocket.field_c = new int[][]{new int[]{3, 2, 1, 4, 1, 2, 1, 0}, new int[]{1, 2, 3, 4, 1, 2, 0, 0}, new int[]{5, 4, 1, 4, 1, 0, 1, 0}, new int[]{1, 4, 3, 4, 0, 0, 0, 0}, new int[]{2, 2, 1, -4, 1, 2, 1, 0}, new int[]{1, 2, -4, -4, 2, 2, 0, 0}, new int[]{1, -4, -3, -4, -2, -2, 1, 0}, new int[]{-6, -2, -1, -4, -1, -2, -1, 0}};
         }
         this.field_F = param0 != this.level ? true : false;
         this.level = param0;
-        super.a(param0, 107);
+        super.loadLevel(param0, 107);
         this.playerRow = param0.a(-8299);
         this.playerColumn = param0.c((byte) 107);
         this.field_w = this.b(this.targetLayout, (byte) -66);
@@ -1405,7 +1405,7 @@ final class ActiveLevel extends LevelGrid {
         if (null == this.field_u) {
           this.b(true, param0 - 53447);
           stackIn_7_1 = !(this.field_z);
-          super.a(stackIn_7_1, 0, true);
+          super.drawGrid(stackIn_7_1, 0, true);
           fd.field_d.e(0, 0);
           var2_int = kf.mouseX - 467;
           var3 = fg.mouseY - 138;
@@ -1523,7 +1523,7 @@ final class ActiveLevel extends LevelGrid {
         int var3 = TrackController.field_F ? 1 : 0;
         if (1 == this.phase) {
           wg.b(117);
-          this.a(this.level, param0 ^ 97);
+          this.loadLevel(this.level, param0 ^ 97);
         } else {
           if (this.phase != 2) {
           } else {
@@ -1535,7 +1535,7 @@ final class ActiveLevel extends LevelGrid {
               this.c(0, 114);
               sc.field_g = 14;
             } else {
-              this.a(gj.levels[this.level.levelIndex], param0 ^ 120);
+              this.loadLevel(gj.levels[this.level.levelIndex], param0 ^ 120);
             }
           }
         }
