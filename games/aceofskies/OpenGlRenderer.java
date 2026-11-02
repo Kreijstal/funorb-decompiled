@@ -31,7 +31,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
     cs field_cc;
     private IntrusiveDeque field_jb;
     int field_hb;
-    private wj field_y;
+    private OpenGlFramebuffer field_y;
     private int field_fc;
     private up[] field_Fc;
     private SecondaryNodeDeque field_Ec;
@@ -84,7 +84,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
     boolean field_eb;
     private int field_T;
     private int field_d;
-    wj field_o;
+    OpenGlFramebuffer field_o;
     private float field_sc;
     int field_U;
     float field_ic;
@@ -1955,22 +1955,22 @@ final class OpenGlRenderer extends GraphicsRenderer {
           this.field_j = (OpenGlRenderSprite) (param0);
           if (this.field_A) {
             if (null == this.field_y) {
-              this.field_y = new wj(this);
+              this.field_y = new OpenGlFramebuffer(this);
             }
             if (this.field_qb == this.field_y) {
               throw new RuntimeException();
             }
             this.a(this.field_y, 32925);
             if (param1) {
-              cu var3 = (cu) (this.field_s.findByKey((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
+              OpenGlRenderbuffer var3 = (OpenGlRenderbuffer) (this.field_s.findByKey((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
               if (var3 == null) {
-                cu var9 = new cu(this, 6402, this.field_j.a(), this.field_j.b());
+                OpenGlRenderbuffer var9 = new OpenGlRenderbuffer(this, 6402, this.field_j.a(), this.field_j.b());
                 var3 = var9;
                 this.field_rb = this.field_rb + var9.field_o;
                 while (this.field_rb > 2097152) {
                   var4 = this.field_Ec.a(3);
                   if (var4 != null) {
-                    cu var10 = (cu) (var4);
+                    OpenGlRenderbuffer var10 = (OpenGlRenderbuffer) (var4);
                     var10.unlinkSecondaryNode(-128);
                     var10.unlink(-126);
                     var10.d((byte) -108);
@@ -2294,8 +2294,8 @@ final class OpenGlRenderer extends GraphicsRenderer {
         nb discarded$12 = new nb(this);
         nb discarded$16 = new nb(this);
         if (this.field_A) {
-          this.field_o = new wj(this);
-          wj discarded$17 = new wj(this);
+          this.field_o = new OpenGlFramebuffer(this);
+          OpenGlFramebuffer discarded$17 = new OpenGlFramebuffer(this);
         }
     }
 

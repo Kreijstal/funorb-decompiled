@@ -7,15 +7,15 @@ final class dd {
     static String field_b;
     static int field_a;
 
-    final static jm a(String param0, int param1, int param2) {
+    final static SocketConnector a(String param0, int param1, int param2) {
         String stackIn_5_2 = null;
         try {
           int var3_int = -17 % ((param2 + 32) / 35);
-          cm var4 = new cm();
-          ((jm) ((Object) var4)).field_f = param1;
-          ((jm) ((Object) var4)).field_e = param0;
-          cm stackIn_1_0 = var4;
-          return (jm) ((Object) stackIn_1_0);
+          ProxySocketConnector var4 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var4)).port = param1;
+          ((SocketConnector) ((Object) var4)).host = param0;
+          ProxySocketConnector stackIn_1_0 = var4;
+          return (SocketConnector) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;

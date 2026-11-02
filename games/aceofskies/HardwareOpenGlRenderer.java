@@ -153,15 +153,15 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
           if (!this.field_zc && (!mg.a(param1, (byte) 114) ||
             !mg.a(param5, (byte) 105))) {
             if (this.field_tc) {
-              ik stackIn_12_0 = new ik(this, param2, param1, param5, param0, param6, param4);
+              OpenGlRectangleTexture stackIn_12_0 = new OpenGlRectangleTexture(this, param2, param1, param5, param0, param6, param4);
               return (HardwareTexture2D) ((Object) stackIn_12_0);
             }
-            ed var10 = new ed(this, param2, BufferElementType.field_i, fk.a(param1, 57), fk.a(param5, 118));
+            OpenGlTexture2D var10 = new OpenGlTexture2D(this, param2, BufferElementType.field_i, fk.a(param1, 57), fk.a(param5, 118));
             var10.a(param0, (byte) -124, 0, 0, param6, param4, param5, param2, param1);
-            ed stackIn_10_0 = var10;
+            OpenGlTexture2D stackIn_10_0 = var10;
             return (HardwareTexture2D) ((Object) stackIn_10_0);
           }
-          ed stackIn_7_0 = new ed(this, param2, param1, param5, param7, param0, param6, param4);
+          OpenGlTexture2D stackIn_7_0 = new OpenGlTexture2D(this, param2, param1, param5, param7, param0, param6, param4);
           return (HardwareTexture2D) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -380,13 +380,13 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
           if (!this.field_zc && (!mg.a(param3, (byte) -58) ||
             !mg.a(param2, (byte) -64))) {
             if (!this.field_tc) {
-              ed stackIn_13_0 = new ed(this, param4, param0, fk.a(param3, 67), fk.a(param2, 78));
+              OpenGlTexture2D stackIn_13_0 = new OpenGlTexture2D(this, param4, param0, fk.a(param3, 67), fk.a(param2, 78));
               return (HardwareTexture2D) ((Object) stackIn_13_0);
             }
-            ik stackIn_11_0 = new ik(this, param4, param0, param3, param2);
+            OpenGlRectangleTexture stackIn_11_0 = new OpenGlRectangleTexture(this, param4, param0, param3, param2);
             return (HardwareTexture2D) ((Object) stackIn_11_0);
           }
-          ed stackIn_8_0 = new ed(this, param4, param0, param3, param2);
+          OpenGlTexture2D stackIn_8_0 = new OpenGlTexture2D(this, param4, param0, param3, param2);
           return (HardwareTexture2D) ((Object) stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -1056,15 +1056,15 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
           if (!this.field_zc && (!mg.a(param0, (byte) -112) ||
             !mg.a(param3, (byte) -41))) {
             if (this.field_tc) {
-              ik stackIn_10_0 = new ik(this, param2, param0, param3, param7, param6, param5);
+              OpenGlRectangleTexture stackIn_10_0 = new OpenGlRectangleTexture(this, param2, param0, param3, param7, param6, param5);
               return (HardwareTexture2D) ((Object) stackIn_10_0);
             }
-            ed var10 = new ed(this, param2, BufferElementType.field_h, fk.a(param0, 40), fk.a(param3, 103));
+            OpenGlTexture2D var10 = new OpenGlTexture2D(this, param2, BufferElementType.field_h, fk.a(param0, 40), fk.a(param3, 103));
             var10.a(0, param0, param6, param3, (byte) -29, param7, param2, 0, param5);
-            ed stackIn_8_0 = var10;
+            OpenGlTexture2D stackIn_8_0 = var10;
             return (HardwareTexture2D) ((Object) stackIn_8_0);
           }
-          ed stackIn_12_0 = new ed(this, param2, param0, param3, param1, param7, param6, param5);
+          OpenGlTexture2D stackIn_12_0 = new OpenGlTexture2D(this, param2, param0, param3, param1, param7, param6, param5);
           return (HardwareTexture2D) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -1224,15 +1224,15 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
           if (!this.field_zc && (!mg.a(param6, (byte) 32) ||
             !mg.a(param3, (byte) 123))) {
             if (this.field_tc) {
-              ik stackIn_11_0 = new ik(this, param6, param3, param5, param0, param4);
+              OpenGlRectangleTexture stackIn_11_0 = new OpenGlRectangleTexture(this, param6, param3, param5, param0, param4);
               return (HardwareTexture2D) ((Object) stackIn_11_0);
             }
-            ed var9 = new ed(this, IterableNodeHashTable.field_g, BufferElementType.field_h, fk.a(param6, 25), fk.a(param3, 30));
+            OpenGlTexture2D var9 = new OpenGlTexture2D(this, IterableNodeHashTable.field_g, BufferElementType.field_h, fk.a(param6, 25), fk.a(param3, 30));
             var9.a((byte) -106, param0, 0, param4, param6, param3, 0, param5);
-            ed stackIn_9_0 = var9;
+            OpenGlTexture2D stackIn_9_0 = var9;
             return (HardwareTexture2D) ((Object) stackIn_9_0);
           }
-          ed stackIn_13_0 = new ed(this, param6, param3, param2, param5, param0, param4);
+          OpenGlTexture2D stackIn_13_0 = new OpenGlTexture2D(this, param6, param3, param2, param5, param0, param4);
           return (HardwareTexture2D) ((Object) stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

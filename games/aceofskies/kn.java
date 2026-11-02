@@ -83,7 +83,7 @@ final class kn {
         int var1 = -37 / ((19 - param0) / 57);
         IndexedSprite[] var2 = new IndexedSprite[to.field_t];
         for (int var3 = 0; var3 < to.field_t; var3++) {
-          var2[var3] = new IndexedSprite(pu.field_a, cc.field_i, lh.field_a[var3], lg.field_j[var3], ji.field_b[var3], ee.field_e[var3], fk.field_a[var3], ud.field_e);
+          var2[var3] = new IndexedSprite(pu.field_a, JaggrabDownloader.field_i, lh.field_a[var3], lg.field_j[var3], ji.field_b[var3], ee.field_e[var3], fk.field_a[var3], ud.field_e);
         }
         OpenGlUnderwaterEffect.f(1);
         return var2;

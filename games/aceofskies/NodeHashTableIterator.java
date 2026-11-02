@@ -146,7 +146,7 @@ final class NodeHashTableIterator implements Iterator {
           BufferElementType.achievementSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "achievements");
           ByteStorage.medalSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "medals");
           vl.coinSpriteData = SpriteData.loadFirstFrame(sharedSpriteArchive, "basic", "orbcoin");
-          es.lockedSpriteData = SpriteData.loadFirstFrame(sharedSpriteArchive, "basic", "locked");
+          SecondaryKeyHashTable.lockedSpriteData = SpriteData.loadFirstFrame(sharedSpriteArchive, "basic", "locked");
           HighscoreQuery.unachievedSpriteData = SpriteData.loadFirstFrame(sharedSpriteArchive, "basic", "unachieved");
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "pe.D(" + (fontMetricsArchive != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (sharedSpriteArchive != null ? "{...}" : "null") + ',' + (gameSpriteArchive != null ? "{...}" : "null") + ')');

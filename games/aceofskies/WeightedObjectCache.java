@@ -221,11 +221,11 @@ final class WeightedObjectCache {
     final static void a(boolean param0, int param1, int param2) {
         if (!param0) {
           WeightedObjectCache.a(false, 19, 116);
-          ik.field_k = param1;
+          OpenGlRectangleTexture.field_k = param1;
           rs.field_v = param2;
           return;
         }
-        ik.field_k = param1;
+        OpenGlRectangleTexture.field_k = param1;
         rs.field_v = param2;
     }
 

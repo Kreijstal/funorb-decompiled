@@ -234,7 +234,7 @@ final class kg {
           if (var2 == null) {
             return null;
           }
-          cl var3 = (cl) (RasterBuffer.field_a.a(124, (long)var2.hashCode()));
+          cl var3 = (cl) (RasterBuffer.field_a.firstWithKey(124, (long)var2.hashCode()));
           if (param1 != 61) {
             cl stackIn_13_0 = (cl) null;
             return stackIn_13_0;
@@ -246,7 +246,7 @@ final class kg {
             CharSequence var7 = (CharSequence) ((Object) var3.field_I);
             String var4 = vu.normalizePlayerName(param1 + 63, var7);
             if (!var4.equals(var2)) {
-              var3 = (cl) (RasterBuffer.field_a.a(false));
+              var3 = (cl) (RasterBuffer.field_a.nextWithLookupKey(false));
               continue;
             }
             break;

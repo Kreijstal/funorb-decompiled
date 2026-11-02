@@ -66,7 +66,7 @@ final class ep extends ab implements bh, dn {
         var2.a(50, 20, var3, 270, (byte) 124);
         var3 += 50;
         this.a(var2, 1);
-        var3 = var3 + (5 + this.a(this.field_w, 170, var3, (byte) 107, es.field_g, sc.field_b));
+        var3 = var3 + (5 + this.a(this.field_w, 170, var3, (byte) 107, SecondaryKeyHashTable.field_g, sc.field_b));
         this.field_v.a(40, -var5 + 496 >> 1, var3, var5, (byte) 126);
         this.field_y.a(40, 3 + var4, var3 + 15, 60, (byte) 125);
         this.field_y.field_o = (no) (this);

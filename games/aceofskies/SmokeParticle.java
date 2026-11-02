@@ -40,7 +40,7 @@ final class SmokeParticle extends FlightBody {
           }
           this.lifetimeTicks = lifetimeTicks;
           this.ageTicks = 10;
-          this.spriteIndex = qq.a(20, es.smokeSprites.length);
+          this.spriteIndex = qq.a(20, SecondaryKeyHashTable.smokeSprites.length);
           this.depthPhase = depthPhase;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "qf.O(" + lifetimeTicks + ',' + obfuscationGuard + ',' + colourOrBlastRadius + ',' + depthPhase + ',' + (position != null ? "{...}" : "null") + ')');
@@ -59,7 +59,7 @@ final class SmokeParticle extends FlightBody {
           this.lifetimeTicks = lifetimeTicks;
           int var5_int = 68 / ((43 - obfuscationGuard) / 61);
           this.ageTicks = 10;
-          this.spriteIndex = qq.a(20, es.smokeSprites.length);
+          this.spriteIndex = qq.a(20, SecondaryKeyHashTable.smokeSprites.length);
           this.depthPhase = 92;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "qf.L(" + obfuscationGuard + ',' + (position != null ? "{...}" : "null") + ',' + colourOrBlastRadius + ',' + lifetimeTicks + ')');

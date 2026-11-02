@@ -99,7 +99,7 @@ final class kb extends vq {
             int var12 = var19.fullHeight << 1;
             if (this.field_F == null) {
               this.field_F = new Sprite(var11, var12);
-              cm.a(this.field_F, -14492);
+              ProxySocketConnector.a(this.field_F, -14492);
               var19.a(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
               this.field_F.d(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
@@ -107,14 +107,14 @@ final class kb extends vq {
             }
             if (this.field_F.width < var11) {
               this.field_F = new Sprite(var11, var12);
-              cm.a(this.field_F, -14492);
+              ProxySocketConnector.a(this.field_F, -14492);
               var19.a(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
               this.field_F.d(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
               return;
             }
             if (this.field_F.height >= var12) {
-              cm.a(this.field_F, -14492);
+              ProxySocketConnector.a(this.field_F, -14492);
               SoftwareRasterizer.clearFramebuffer();
               var19.a(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
@@ -122,7 +122,7 @@ final class kb extends vq {
               return;
             }
             this.field_F = new Sprite(var11, var12);
-            cm.a(this.field_F, -14492);
+            ProxySocketConnector.a(this.field_F, -14492);
             var19.a(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
             sl.c(2765);
             this.field_F.d(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
@@ -164,7 +164,7 @@ final class kb extends vq {
             int var12Lifetime1 = var23.fullHeight << 1;
             if (this.field_F == null) {
               this.field_F = new Sprite(var11Lifetime1, var12Lifetime1);
-              cm.a(this.field_F, -14492);
+              ProxySocketConnector.a(this.field_F, -14492);
               var23.a(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
               this.field_F.d(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
@@ -172,14 +172,14 @@ final class kb extends vq {
             }
             if (this.field_F.width < var11Lifetime1) {
               this.field_F = new Sprite(var11Lifetime1, var12Lifetime1);
-              cm.a(this.field_F, -14492);
+              ProxySocketConnector.a(this.field_F, -14492);
               var23.a(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
               this.field_F.d(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
               return;
             }
             if (this.field_F.height >= var12Lifetime1) {
-              cm.a(this.field_F, -14492);
+              ProxySocketConnector.a(this.field_F, -14492);
               SoftwareRasterizer.clearFramebuffer();
               var23.a(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
@@ -187,7 +187,7 @@ final class kb extends vq {
               return;
             }
             this.field_F = new Sprite(var11Lifetime1, var12Lifetime1);
-            cm.a(this.field_F, -14492);
+            ProxySocketConnector.a(this.field_F, -14492);
             var23.a(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
             sl.c(2765);
             this.field_F.d(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
@@ -222,7 +222,7 @@ final class kb extends vq {
           int var12Lifetime2 = var27.fullHeight << 1;
           if (this.field_F == null) {
             this.field_F = new Sprite(var11Lifetime2, var12Lifetime2);
-            cm.a(this.field_F, -14492);
+            ProxySocketConnector.a(this.field_F, -14492);
             var27.a(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
             sl.c(2765);
             this.field_F.d(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
@@ -230,7 +230,7 @@ final class kb extends vq {
           }
           if (this.field_F.width < var11Lifetime2) {
             this.field_F = new Sprite(var11Lifetime2, var12Lifetime2);
-            cm.a(this.field_F, -14492);
+            ProxySocketConnector.a(this.field_F, -14492);
             var27.a(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
             sl.c(2765);
             this.field_F.d(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
@@ -238,13 +238,13 @@ final class kb extends vq {
           }
           if (this.field_F.height < var12Lifetime2) {
             this.field_F = new Sprite(var11Lifetime2, var12Lifetime2);
-            cm.a(this.field_F, -14492);
+            ProxySocketConnector.a(this.field_F, -14492);
             var27.a(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
             sl.c(2765);
             this.field_F.d(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
             return;
           }
-          cm.a(this.field_F, -14492);
+          ProxySocketConnector.a(this.field_F, -14492);
           SoftwareRasterizer.clearFramebuffer();
           var27.a(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
           sl.c(2765);

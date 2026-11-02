@@ -27,7 +27,7 @@ final class se {
           int var2 = var1.readUnsignedByte(-58);
           if (var2 == 0) {
             if (gi.field_g == null) {
-              gi.field_g = new es(128);
+              gi.field_g = new SecondaryKeyHashTable(128);
               hl.field_a = 0;
             }
             boolean stackIn_15_0 = !(1 != var1.readUnsignedByte(-60));
@@ -45,12 +45,12 @@ final class se {
             if (null == var5) {
               var5 = CachedArchiveProvider.a(var6, 17680);
               if (null != var5) {
-                gi.field_g.a(var5, (long)var7.hashCode(), (byte) 56);
+                gi.field_g.put(var5, (long)var7.hashCode(), (byte) 56);
               }
             }
             if (var5 == null) {
               var5 = new cl();
-              gi.field_g.a(var5, (long)var7.hashCode(), (byte) 56);
+              gi.field_g.put(var5, (long)var7.hashCode(), (byte) 56);
               int fieldTemp$0 = hl.field_a;
               hl.field_a = hl.field_a + 1;
               var5.field_cb = fieldTemp$0;
@@ -85,7 +85,7 @@ final class se {
             return;
           }
           if (null == RasterBuffer.field_a) {
-            RasterBuffer.field_a = new es(128);
+            RasterBuffer.field_a = new SecondaryKeyHashTable(128);
             wo.field_o = 0;
           }
           Object var3Lifetime1 = var1.readNullTerminatedText(-17883);
@@ -98,12 +98,12 @@ final class se {
           if (null == var6_ref) {
             var6_ref = kg.a(var5_ref, (byte) 61);
             if (var6_ref != null) {
-              RasterBuffer.field_a.a(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
+              RasterBuffer.field_a.put(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
             }
           }
           if (var6_ref == null) {
             var6_ref = new cl();
-            RasterBuffer.field_a.a(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
+            RasterBuffer.field_a.put(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
             int fieldTemp$1 = wo.field_o;
             wo.field_o = wo.field_o + 1;
             var6_ref.field_cb = fieldTemp$1;

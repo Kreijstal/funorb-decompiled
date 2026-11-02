@@ -29,10 +29,10 @@ final class ScoreSubmission extends IntrusiveNode {
             hr.aircraftSprites = new RenderSprite[SteeringMode.aircraftSpriteData.length][];
             is.backgroundSprites = new RenderSprite[oo.backgroundSpriteData.length];
             sd.cloudSprites = new RenderSprite[na.cloudSpriteData.length];
-            es.smokeSprites = new RenderSprite[tq.smokeSpriteData.length];
+            SecondaryKeyHashTable.smokeSprites = new RenderSprite[tq.smokeSpriteData.length];
             SectorCacheStore.explosionSprites = new RenderSprite[ud.explosionSpriteData.length];
             ac.keySprites = new RenderSprite[qa.keySpriteData.length];
-            jm.levelRingSprites = new RenderSprite[hq.levelRingSpriteData.length];
+            SocketConnector.levelRingSprites = new RenderSprite[hq.levelRingSpriteData.length];
             aa.achievementSprites = new RenderSprite[BufferElementType.achievementSpriteData.length];
             rs.medalSprites = new RenderSprite[ByteStorage.medalSpriteData.length];
             GameKeyHandler.upgradeSprites = new RenderSprite[qq.upgradeSpriteData.length];
@@ -68,7 +68,7 @@ final class ScoreSubmission extends IntrusiveNode {
             sd.cloudSprites[var2Lifetime3] = var6.createSprite(na.cloudSpriteData[var2Lifetime3], false);
           }
           for (int var2Lifetime4 = 0; tq.smokeSpriteData.length > var2Lifetime4; var2Lifetime4++) {
-            es.smokeSprites[var2Lifetime4] = var6.createSprite(tq.smokeSpriteData[var2Lifetime4], false);
+            SecondaryKeyHashTable.smokeSprites[var2Lifetime4] = var6.createSprite(tq.smokeSpriteData[var2Lifetime4], false);
           }
           for (int var2Lifetime5 = 0; ud.explosionSpriteData.length > var2Lifetime5; var2Lifetime5++) {
             SectorCacheStore.explosionSprites[var2Lifetime5] = var6.createSprite(ud.explosionSpriteData[var2Lifetime5], false);
@@ -118,7 +118,7 @@ final class ScoreSubmission extends IntrusiveNode {
             HighscoreQuery.powerBulbSprites[var2Lifetime16] = var6.createSprite(tt.powerBulbSpriteData[var2Lifetime16], false);
           }
           for (int var2Lifetime17 = 0; hq.levelRingSpriteData.length > var2Lifetime17; var2Lifetime17++) {
-            jm.levelRingSprites[var2Lifetime17] = var6.createSprite(hq.levelRingSpriteData[var2Lifetime17], false);
+            SocketConnector.levelRingSprites[var2Lifetime17] = var6.createSprite(hq.levelRingSpriteData[var2Lifetime17], false);
           }
           for (int var2Lifetime18 = 0; var2Lifetime18 < eb.counterPanelSpriteData.length; var2Lifetime18++) {
             OpenGlBuffer.counterPanelSprites[var2Lifetime18] = var6.createSprite(eb.counterPanelSpriteData[var2Lifetime18], false);
@@ -139,7 +139,7 @@ final class ScoreSubmission extends IntrusiveNode {
             stackIn_78_0[var2Lifetime21] = var6.createSprite(ByteStorage.medalSpriteData[var2Lifetime21], false);
           }
           lg.coinSprite = var6.createSprite(vl.coinSpriteData, false);
-          ut.lockedSprite = var6.createSprite(es.lockedSpriteData, false);
+          ut.lockedSprite = var6.createSprite(SecondaryKeyHashTable.lockedSpriteData, false);
           InstrumentEnvelope.unachievedSprite = var6.createSprite(HighscoreQuery.unachievedSpriteData, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

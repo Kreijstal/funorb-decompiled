@@ -15,16 +15,16 @@ final class ld {
     }
 
     final static void a(int param0) {
-        cu.field_r = false;
+        OpenGlRenderbuffer.field_r = false;
         cn.field_z = null;
-        cc.field_b = null;
+        JaggrabDownloader.field_b = null;
         NetworkArchiveRequest.field_v = null;
         if (param0 == 14183) {
-          es.field_a = null;
+          SecondaryKeyHashTable.field_a = null;
           return;
         }
         field_d = false;
-        es.field_a = null;
+        SecondaryKeyHashTable.field_a = null;
     }
 
     static {

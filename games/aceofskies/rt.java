@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rt implements ws {
+abstract class rt implements FramebufferAttachment {
     private int field_i;
     private boolean field_c;
     OpenGlRenderer field_j;

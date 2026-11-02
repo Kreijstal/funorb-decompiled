@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ik extends OpenGlTexture implements HardwareTexture2D {
+final class OpenGlRectangleTexture extends OpenGlTexture implements HardwareTexture2D {
     private int field_j;
     private int field_i;
     static int field_k;
@@ -16,7 +16,7 @@ final class ik extends OpenGlTexture implements HardwareTexture2D {
         return false;
     }
 
-    ik(HardwareOpenGlRenderer param0, hd param1, BufferElementType param2, int param3, int param4) {
+    OpenGlRectangleTexture(HardwareOpenGlRenderer param0, hd param1, BufferElementType param2, int param3, int param4) {
         super(param0, 34037, param1, param2, param4 * param3, false);
         try {
           this.field_j = param3;
@@ -28,7 +28,7 @@ final class ik extends OpenGlTexture implements HardwareTexture2D {
         }
     }
 
-    ik(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, float[] param4, int param5, int param6) {
+    OpenGlRectangleTexture(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, float[] param4, int param5, int param6) {
         super(param0, 34037, param1, BufferElementType.field_i, param3 * param2, false);
         try {
           this.field_j = param2;
@@ -42,7 +42,7 @@ final class ik extends OpenGlTexture implements HardwareTexture2D {
         }
     }
 
-    ik(HardwareOpenGlRenderer param0, int param1, int param2, int[] param3, int param4, int param5) {
+    OpenGlRectangleTexture(HardwareOpenGlRenderer param0, int param1, int param2, int[] param3, int param4, int param5) {
         super(param0, 34037, IterableNodeHashTable.field_g, BufferElementType.field_h, param1 * param2, false);
         try {
           this.field_j = param1;
@@ -56,7 +56,7 @@ final class ik extends OpenGlTexture implements HardwareTexture2D {
         }
     }
 
-    ik(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, byte[] param4, int param5, int param6) {
+    OpenGlRectangleTexture(HardwareOpenGlRenderer param0, hd param1, int param2, int param3, byte[] param4, int param5, int param6) {
         super(param0, 34037, param1, BufferElementType.field_h, param3 * param2, false);
         try {
           this.field_i = param3;

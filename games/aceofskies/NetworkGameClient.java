@@ -52,7 +52,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (-1 != RenderEffect.field_a &&
               0 != RenderEffect.field_a) {
               RenderEffect.field_a = -1;
-              wj.e(104);
+              OpenGlFramebuffer.e(104);
             }
             if (param2) {
               BitmapFontMetrics.field_f = false;
@@ -107,7 +107,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 13) {
             try {
               if (null == hb.field_a) {
-                hb.field_a = new cc(pt.field_b, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                hb.field_a = new JaggrabDownloader(pt.field_b, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (hb.field_a.a((byte) 118)) {
                 PacketBuffer var12 = hb.field_a.a(true);
@@ -487,7 +487,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (RenderEffect.field_a != -1 &&
             0 != RenderEffect.field_a) {
             RenderEffect.field_a = -1;
-            wj.e(100);
+            OpenGlFramebuffer.e(100);
           }
         }
         if (0 == RenderEffect.field_a &&

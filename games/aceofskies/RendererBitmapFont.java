@@ -100,14 +100,14 @@ abstract class RendererBitmapFont {
             } else if (tag.equals("/u")) {
               PacketBuffer.rendererUnderlineColor = -1;
             } else if (tag.equalsIgnoreCase("shad=-1")) {
-              es.rendererCurrentShadowColor = 0;
+              SecondaryKeyHashTable.rendererCurrentShadowColor = 0;
             } else if (tag.startsWith("shad=")) {
               CharSequence var7 = (CharSequence) ((Object) tag.substring(5));
-              es.rendererCurrentShadowColor = MouseWheelInput.rendererCurrentTextColor & -16777216 | np.a(var7, 4, 16);
+              SecondaryKeyHashTable.rendererCurrentShadowColor = MouseWheelInput.rendererCurrentTextColor & -16777216 | np.a(var7, 4, 16);
             } else if (tag.equals("shad")) {
-              es.rendererCurrentShadowColor = MouseWheelInput.rendererCurrentTextColor & -16777216;
+              SecondaryKeyHashTable.rendererCurrentShadowColor = MouseWheelInput.rendererCurrentTextColor & -16777216;
             } else if (tag.equals("/shad")) {
-              es.rendererCurrentShadowColor = em.rendererDefaultShadowColor;
+              SecondaryKeyHashTable.rendererCurrentShadowColor = em.rendererDefaultShadowColor;
             } else if (tag.equals("br")) {
               this.resetTextStyle(em.rendererDefaultShadowColor, -1, tf.rendererDefaultTextColor);
             }
@@ -374,18 +374,18 @@ abstract class RendererBitmapFont {
                 }
                 if (var14 == 32) {
                   if (OpenGlRenderSprite.rendererSpaceExpansionQ8 > 0) {
-                    ed.rendererJustificationRemainderQ8 = ed.rendererJustificationRemainderQ8 + OpenGlRenderSprite.rendererSpaceExpansionQ8;
-                    penX = penX + (ed.rendererJustificationRemainderQ8 >> 8);
-                    ed.rendererJustificationRemainderQ8 = ed.rendererJustificationRemainderQ8 & 255;
+                    OpenGlTexture2D.rendererJustificationRemainderQ8 = OpenGlTexture2D.rendererJustificationRemainderQ8 + OpenGlRenderSprite.rendererSpaceExpansionQ8;
+                    penX = penX + (OpenGlTexture2D.rendererJustificationRemainderQ8 >> 8);
+                    OpenGlTexture2D.rendererJustificationRemainderQ8 = OpenGlTexture2D.rendererJustificationRemainderQ8 & 255;
                   }
                 } else if (mask == null) {
-                  if (0 != (-16777216 & es.rendererCurrentShadowColor)) {
-                    this.drawGlyph((char) var14, 1 + penX, baselineY + 1, es.rendererCurrentShadowColor, true);
+                  if (0 != (-16777216 & SecondaryKeyHashTable.rendererCurrentShadowColor)) {
+                    this.drawGlyph((char) var14, 1 + penX, baselineY + 1, SecondaryKeyHashTable.rendererCurrentShadowColor, true);
                   }
                   this.drawGlyph((char) var14, penX, baselineY, MouseWheelInput.rendererCurrentTextColor, false);
                 } else {
-                  if (0 != (es.rendererCurrentShadowColor & -16777216)) {
-                    this.drawGlyphWithMask((char) var14, 1 + penX, baselineY + 1, es.rendererCurrentShadowColor, true, mask, maskX, maskY);
+                  if (0 != (SecondaryKeyHashTable.rendererCurrentShadowColor & -16777216)) {
+                    this.drawGlyphWithMask((char) var14, 1 + penX, baselineY + 1, SecondaryKeyHashTable.rendererCurrentShadowColor, true, mask, maskX, maskY);
                   }
                   this.drawGlyphWithMask((char) var14, penX, baselineY, MouseWheelInput.rendererCurrentTextColor, false, mask, maskX, maskY);
                 }
@@ -497,12 +497,12 @@ abstract class RendererBitmapFont {
         MouseWheelInput.rendererCurrentTextColor = textColor;
         OpenGlRenderSprite.rendererSpaceExpansionQ8 = 0;
         PacketBuffer.rendererUnderlineColor = underlineColor;
-        ed.rendererJustificationRemainderQ8 = 0;
+        OpenGlTexture2D.rendererJustificationRemainderQ8 = 0;
         if (shadowColor == -1) {
           shadowColor = 0;
         }
         em.rendererDefaultShadowColor = shadowColor;
-        es.rendererCurrentShadowColor = shadowColor;
+        SecondaryKeyHashTable.rendererCurrentShadowColor = shadowColor;
     }
 
     final void drawCenteredText(int obfuscationGuard, int textColor, int shadowColor, int baselineY, int centerX, String text) {

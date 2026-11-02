@@ -1430,7 +1430,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_displayname");
                 if (var2 != null) {
-                  es.field_g = ea.a(0, var2);
+                  SecondaryKeyHashTable.field_g = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_password");
                 if (var2 != null) {
@@ -2292,7 +2292,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "notyetachieved");
                 if (var2 != null) {
-                  jm.field_b = ea.a(0, var2);
+                  SocketConnector.field_b = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "achieved");
                 if (var2 != null) {
@@ -2716,7 +2716,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "fs_unavailable");
                 if (null != var2) {
-                  jm.field_c = ea.a(0, var2);
+                  SocketConnector.field_c = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "fs_unavailable_try_signed_applet");
                 if (null != var2) {

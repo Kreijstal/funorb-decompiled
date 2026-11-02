@@ -2,7 +2,7 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable; the current reverse dictionary is ../../decompilation/aceofskies-naming.json.
 
-This pass names 149 reviewed classes in 545 source files. Unresolved roles keep their original names; renamed names have no opaque suffix.
+This pass names 161 reviewed classes in 545 source files. Unresolved roles keep their original names; renamed names have no opaque suffix.
 
 Start at `AceOfSkies.advanceGame` → `FlightSession.advanceSession`. `startGame` creates the player and pools; its flag selects the literal arcade mode. `renderSession` draws through `GraphicsRenderer`. `Aircraft` retains its definition, target, pursuing aircraft, firing request and temporary weapon. `FlightBody` and `Vector2` expose the flight arithmetic. `Bullet`, `Pickup`, `SmokeParticle` and `ScreenParticle` are distinct pools.
 

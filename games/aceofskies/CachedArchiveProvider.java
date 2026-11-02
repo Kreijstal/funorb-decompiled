@@ -67,7 +67,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (var2 == null) {
             var2 = param0;
           }
-          cl var3 = (cl) (gi.field_g.a(param1 - 17556, (long)var2.hashCode()));
+          cl var3 = (cl) (gi.field_g.firstWithKey(param1 - 17556, (long)var2.hashCode()));
           while (var3 != null) {
             CharSequence var6 = (CharSequence) ((Object) var3.field_I);
             String var4 = vu.normalizePlayerName(125, var6);
@@ -78,7 +78,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               cl stackIn_15_0 = var3;
               return stackIn_15_0;
             }
-            var3 = (cl) (gi.field_g.a(false));
+            var3 = (cl) (gi.field_g.nextWithLookupKey(false));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

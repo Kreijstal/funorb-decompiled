@@ -161,7 +161,7 @@ final class tn extends ab implements dn {
           if (param1 == this.field_v) {
             OpenGlBuffer.e(4754);
           } else if (this.field_u == param1) {
-            cu.c((byte) 96);
+            OpenGlRenderbuffer.c((byte) 96);
           } else if (param1 == this.field_x) {
             of.a(111);
           }

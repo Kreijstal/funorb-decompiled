@@ -417,7 +417,7 @@ public final class AceOfSkies extends NetworkGameClient {
           NetworkGameClient.o(obfuscationGuard ^ -31983);
           ClientException.a(false);
           GameAppletShell.b((byte) 104);
-          cc.a(obfuscationGuard ^ -19469);
+          JaggrabDownloader.a(obfuscationGuard ^ -19469);
           MouseInputHandler.a(obfuscationGuard ^ 19471);
           MouseWheelInput.a(obfuscationGuard ^ 19558);
           SoftwareRasterizer.c();
@@ -533,7 +533,7 @@ public final class AceOfSkies extends NetworkGameClient {
           v.a(32342);
           td.a(-12546);
           di.a(false);
-          es.a(1020);
+          SecondaryKeyHashTable.a(1020);
           GameCanvas.a(true);
           qa.a(-7);
           IntKeyLookup.a(88);
@@ -558,7 +558,7 @@ public final class AceOfSkies extends NetworkGameClient {
           kq.a(obfuscationGuard - 18291);
           is.a(-92);
           tg.a((byte) 109);
-          jm.a(105);
+          SocketConnector.a(105);
           ImageProducerRasterBuffer.d((byte) -55);
           rm.a((byte) 127);
           ub.a(false);
@@ -673,7 +673,7 @@ public final class AceOfSkies extends NetworkGameClient {
           qd.d(obfuscationGuard - 12162);
           ai.a(-28739);
           na.a(obfuscationGuard ^ 21852);
-          ik.b(true);
+          OpenGlRectangleTexture.b(true);
           OpenGlCubeTexture.b(true);
           OpenGlVolumeTexture.a(126);
           OpenGlUnderwaterEffect.g(obfuscationGuard + 5851);

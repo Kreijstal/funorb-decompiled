@@ -26,7 +26,7 @@ final class ss extends ea {
 
     private final Sprite b(int param0, int param1, int param2) {
         Sprite var13 = new Sprite(this.field_y * 2, this.field_n);
-        cm.a(var13, -14492);
+        ProxySocketConnector.a(var13, -14492);
         int var5 = this.field_n >> 1;
         for (int var6 = 0; var6 < this.field_n; var6++) {
           int var7 = (var6 >> 1) * (2 * this.field_y - 1) % (this.field_y * 2);
@@ -94,7 +94,7 @@ final class ss extends ea {
         }
         int var2 = this.field_n >> 1;
         Sprite var3 = new Sprite(var2, this.field_n);
-        cm.a(var3, -14492);
+        ProxySocketConnector.a(var3, -14492);
         for (int var4 = 0; var4 < this.field_n; var4++) {
           for (int var5 = 0; var5 < var2; var5++) {
             double var6 = (double)var5 * (double)var5 / (double)((-var4 + this.field_n) * var4);
@@ -150,7 +150,7 @@ final class ss extends ea {
           }
           sl.c(2765);
           if (this.field_D.width + param0 >= SoftwareRasterizer.clipLeft) {
-            cm.a(this.field_A, -14492);
+            ProxySocketConnector.a(this.field_A, -14492);
             param3.b(-this.field_r, 0);
             param3.b(2 * this.field_y - this.field_r, 0);
             this.field_C.a(0, 0);
@@ -158,7 +158,7 @@ final class ss extends ea {
             this.field_A.b(param0, param2);
           }
           if (SoftwareRasterizer.clipRight >= var5_int - this.field_D.width) {
-            cm.a(this.field_A, -14492);
+            ProxySocketConnector.a(this.field_A, -14492);
             for (var8 = this.field_r + this.field_q - this.field_D.width; 2 * this.field_y < var8; var8 = var8 - 2 * this.field_y) {
             }
             param3.b(-var8, 0);

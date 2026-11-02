@@ -3,7 +3,7 @@
  */
 final class gi extends za {
     jaclib.memory.heap.NativeHeap field_h;
-    static es field_g;
+    static SecondaryKeyHashTable field_g;
     static int[] field_i;
     static String[] field_f;
     static int[] field_e;
@@ -12,7 +12,7 @@ final class gi extends za {
         if (!param0) {
           return true;
         }
-        return cu.field_r;
+        return OpenGlRenderbuffer.field_r;
     }
 
     gi(int param0) {

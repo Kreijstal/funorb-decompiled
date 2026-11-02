@@ -4,8 +4,8 @@
 import java.io.*;
 import java.util.*;
 
-final class cm extends jm {
-    private java.net.ProxySelector field_g;
+final class ProxySocketConnector extends SocketConnector {
+    private java.net.ProxySelector proxySelector;
 
     private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {
         String stackIn_26_2 = null;
@@ -13,7 +13,7 @@ final class cm extends jm {
         Object var6 = null;
         try {
           if (param1.type() == java.net.Proxy.Type.DIRECT) {
-            java.net.Socket stackIn_3_0 = this.b((byte) 80);
+            java.net.Socket stackIn_3_0 = this.connectDirect((byte) 80);
             return stackIn_3_0;
           }
           java.net.SocketAddress var3 = param1.address();
@@ -28,7 +28,7 @@ final class cm extends jm {
               return null;
             }
             var6 = new java.net.Socket(param1);
-            ((java.net.Socket) (var6)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_e, this.field_f)));
+            ((java.net.Socket) (var6)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.host, this.port)));
             Object stackIn_21_0 = var6;
             return (java.net.Socket) (stackIn_21_0);
           }
@@ -48,7 +48,7 @@ final class cm extends jm {
                 java.lang.reflect.Method var12 = var15.getDeclaredMethod("getHeaderValue", new Class[]{java.net.URL.class, String.class});
                 var12.setAccessible(true);
                 String var13 = (String) (var11.invoke(var9, new Object[]{}));
-                String var14 = (String) (var12.invoke(var9, new Object[]{new java.net.URL("https://" + this.field_e + "/"), "https"}));
+                String var14 = (String) (var12.invoke(var9, new Object[]{new java.net.URL("https://" + this.host + "/"), "https"}));
                 var6 = var13 + ": " + var14;
               }
             }
@@ -94,10 +94,10 @@ final class cm extends jm {
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
-        boolean stackIn_5_0 = !(this.field_f != 443);
+        boolean stackIn_5_0 = !(this.port != 443);
         boolean var5 = stackIn_5_0;
         try {
-          java.net.ProxySelector stackIn_8_0 = this.field_g;
+          java.net.ProxySelector stackIn_8_0 = this.proxySelector;
           java.net.URI stackIn_8_1 = null;
           java.net.URI stackIn_8_2 = null;
           StringBuilder stackIn_8_3 = new StringBuilder();
@@ -108,8 +108,8 @@ final class cm extends jm {
             java.net.URI stackIn_9_2 = null;
             stackIn_9_4 = "http";
           }
-          var3 = ((java.net.ProxySelector) (Object) stackIn_8_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_8_3).append(stackIn_9_4).append("://").append(this.field_e).toString()));
-          java.net.ProxySelector stackIn_11_0 = this.field_g;
+          var3 = ((java.net.ProxySelector) (Object) stackIn_8_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_8_3).append(stackIn_9_4).append("://").append(this.host).toString()));
+          java.net.ProxySelector stackIn_11_0 = this.proxySelector;
           java.net.URI stackIn_11_1 = null;
           java.net.URI stackIn_11_2 = null;
           StringBuilder stackIn_11_3 = new StringBuilder();
@@ -120,11 +120,11 @@ final class cm extends jm {
             java.net.URI stackIn_12_2 = null;
             stackIn_12_4 = "https";
           }
-          var4 = ((java.net.ProxySelector) (Object) stackIn_11_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_11_3).append(stackIn_12_4).append("://").append(this.field_e).toString()));
+          var4 = ((java.net.ProxySelector) (Object) stackIn_11_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_11_3).append(stackIn_12_4).append("://").append(this.host).toString()));
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           java.net.URISyntaxException var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.b((byte) -116);
+          return this.connectDirect((byte) -116);
         }
         var3.addAll((Collection) ((Object) var4));
         Object[] var6_array = var3.toArray();
@@ -151,9 +151,9 @@ final class cm extends jm {
           }
         }
         if (var7 != null) {
-          throw cm.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
         }
-        return this.b((byte) 98);
+        return this.connectDirect((byte) 98);
     }
 
     private final java.net.Socket a(byte param0, String param1, int param2, String param3) throws IOException {
@@ -165,12 +165,12 @@ final class cm extends jm {
           var13.setSoTimeout(10000);
           OutputStream var6 = var13.getOutputStream();
           if (param0 <= 119) {
-            cm.a(-79, (byte) 58);
+            ProxySocketConnector.a(-79, (byte) 58);
           }
           if (param1 != null) {
-            var6.write(("CONNECT " + this.field_e + ":" + this.field_f + " HTTP/1.0\n" + param1 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+            var6.write(("CONNECT " + this.host + ":" + this.port + " HTTP/1.0\n" + param1 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           } else {
-            var6.write(("CONNECT " + this.field_e + ":" + this.field_f + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+            var6.write(("CONNECT " + this.host + ":" + this.port + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           }
           boolean decompiledFrameRemainder0 = true;
           var6.flush();
@@ -237,8 +237,8 @@ final class cm extends jm {
         }
     }
 
-    cm() {
-        this.field_g = java.net.ProxySelector.getDefault();
+    ProxySocketConnector() {
+        this.proxySelector = java.net.ProxySelector.getDefault();
     }
 
     final static ResourceArchive a(int param0, byte param1) {

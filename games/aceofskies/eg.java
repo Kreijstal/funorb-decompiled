@@ -177,7 +177,7 @@ final class eg {
             stackIn_66_0 = var7_int;
             break;
           }
-          ed.a(stackIn_66_0, param0, (byte) -69, var8, param6);
+          OpenGlTexture2D.a(stackIn_66_0, param0, (byte) -69, var8, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

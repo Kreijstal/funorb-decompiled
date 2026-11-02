@@ -157,14 +157,14 @@ final class SystemTaskService implements Runnable {
                         if (this.field_p) {
                           var8.field_f = this.field_x.a(-116);
                         } else {
-                          var8.field_f = Class.forName("il").getMethod("listmodes", new Class[]{}).invoke(this.field_m, new Object[]{});
+                          var8.field_f = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.field_m, new Object[]{});
                         }
                         break;
                       case 7:
                         if (this.field_p) {
                           this.field_x.a((java.awt.Frame) (var8.field_e), -70);
                         } else {
-                          Class.forName("il").getMethod("exit", new Class[]{}).invoke(this.field_m, new Object[]{});
+                          Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.field_m, new Object[]{});
                         }
                         break;
                       case 12:
@@ -238,7 +238,7 @@ final class SystemTaskService implements Runnable {
                         var8.field_f = var11;
                         var11.setResizable(false);
                         if (!this.field_p) {
-                          Class.forName("il").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_m, new Object[]{var11, new Integer(var8.field_c >>> 16), new Integer(var8.field_c & 65535), new Integer(var8.field_b >> 16), new Integer(var8.field_b & 65535)});
+                          Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_m, new Object[]{var11, new Integer(var8.field_c >>> 16), new Integer(var8.field_c & 65535), new Integer(var8.field_b >> 16), new Integer(var8.field_b & 65535)});
                         } else {
                           this.field_x.a(var8.field_c >>> 16, 17, var11, 65535 & var8.field_c, var8.field_b >> 16, 65535 & var8.field_b);
                         }
@@ -580,7 +580,7 @@ final class SystemTaskService implements Runnable {
           }
           try {
             if (!this.field_p) {
-              this.field_m = Class.forName("il").newInstance();
+              this.field_m = Class.forName("AwtFullscreenController").newInstance();
             } else {
               MicrosoftDisplayController var10 = new MicrosoftDisplayController();
               this.field_x = var10;

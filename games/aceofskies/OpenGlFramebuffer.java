@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj implements up {
+final class OpenGlFramebuffer implements up {
     private int field_f;
     private int field_a;
     private int field_d;
     private int field_b;
-    private ws[] field_g;
+    private FramebufferAttachment[] field_g;
     private OpenGlRenderer field_e;
     private int field_c;
     private int field_h;
@@ -35,7 +35,7 @@ final class wj implements up {
             throw new RuntimeException();
           }
           param3.a(fo.field_f[param2], param0 + 0, param1, this.field_c);
-          this.field_g[param2] = (ws) ((Object) param3);
+          this.field_g[param2] = (FramebufferAttachment) ((Object) param3);
           this.field_b = this.field_b | var5_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -94,7 +94,7 @@ final class wj implements up {
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);
           if (param0 > -106) {
             jt var20 = (jt) null;
-            wj.a(-122, (SystemTaskService) null, (java.awt.Component) null, 3, true, (jt) null, -104, 35);
+            OpenGlFramebuffer.a(-122, (SystemTaskService) null, (java.awt.Component) null, 3, true, (jt) null, -104, 35);
           }
           int var12Lifetime1 = var7Lifetime1 - var3Lifetime1;
           int var13Lifetime1 = -var4 + var8Lifetime1;
@@ -183,7 +183,7 @@ final class wj implements up {
         }
     }
 
-    final void a(cu param0, int param1, byte param2) {
+    final void a(OpenGlRenderbuffer param0, int param1, byte param2) {
         String stackIn_14_2 = null;
         try {
           if (this.field_c == -1) {
@@ -198,7 +198,7 @@ final class wj implements up {
             throw new RuntimeException();
           }
           param0.a(this.field_c, -12658, fo.field_f[param1]);
-          this.field_g[param1] = (ws) ((Object) param0);
+          this.field_g[param1] = (FramebufferAttachment) ((Object) param0);
           this.field_b = this.field_b | var4_int;
           if (param2 != 119) {
             this.field_h = -18;
@@ -284,10 +284,10 @@ final class wj implements up {
         this.field_c = this.d(-15395);
     }
 
-    wj(OpenGlRenderer param0) {
+    OpenGlFramebuffer(OpenGlRenderer param0) {
         this.field_a = 0;
         this.field_c = -1;
-        this.field_g = new ws[9];
+        this.field_g = new FramebufferAttachment[9];
         try {
           if (!param0.field_A) {
             throw new IllegalStateException("");

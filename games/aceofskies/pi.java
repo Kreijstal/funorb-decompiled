@@ -68,11 +68,11 @@ final class pi extends mi {
         if (ms.field_c != null &&
           ms.field_c.width >= var9 &&
           var10 <= ms.field_c.height) {
-          cm.a(ms.field_c, -14492);
+          ProxySocketConnector.a(ms.field_c, -14492);
           SoftwareRasterizer.clearFramebuffer();
         } else {
           ms.field_c = new Sprite(var9, var10);
-          cm.a(ms.field_c, -14492);
+          ProxySocketConnector.a(ms.field_c, -14492);
         }
         var15.a(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_y << 10, 4096);
         sl.c(2765);
