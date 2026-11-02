@@ -112,22 +112,22 @@ final class ln extends IntrusiveNode {
         if (param1 <= param3) {
           if (param3 >= param4) {
             if (param1 >= param4) {
-              cn.a(param2, param1, param3, param5, param7, t.field_k, false, param0, param4);
+              cn.a(param2, param1, param3, param5, param7, SoftwareRasterizer.field_k, false, param0, param4);
             } else {
-              cn.a(param0, param4, param3, param5, param7, t.field_k, false, param2, param1);
+              cn.a(param0, param4, param3, param5, param7, SoftwareRasterizer.field_k, false, param2, param1);
             }
           } else {
-            cn.a(param7, param3, param4, param5, param0, t.field_k, false, param2, param1);
+            cn.a(param7, param3, param4, param5, param0, SoftwareRasterizer.field_k, false, param2, param1);
           }
         } else {
           if (param4 <= param1) {
             if (param4 <= param3) {
-              cn.a(param7, param3, param1, param5, param2, t.field_k, false, param0, param4);
+              cn.a(param7, param3, param1, param5, param2, SoftwareRasterizer.field_k, false, param0, param4);
             } else {
-              cn.a(param0, param4, param1, param5, param2, t.field_k, false, param7, param3);
+              cn.a(param0, param4, param1, param5, param2, SoftwareRasterizer.field_k, false, param7, param3);
             }
           } else {
-            cn.a(param2, param1, param4, param5, param0, t.field_k, false, param7, param3);
+            cn.a(param2, param1, param4, param5, param0, SoftwareRasterizer.field_k, false, param7, param3);
           }
         }
     }

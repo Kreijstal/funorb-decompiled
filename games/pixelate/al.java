@@ -126,17 +126,17 @@ final class al {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, we param3, int param4) {
+    final static void a(int param0, byte param1, int param2, PacketBuffer param3, int param4) {
         try {
-          param3.e(160, 12);
+          param3.writeByte(160, 12);
           if (param1 != 66) {
-            tf[] var6 = (tf[]) null;
-            al.a(true, (tf[]) null);
+            Sprite[] var6 = (Sprite[]) null;
+            al.a(true, (Sprite[]) null);
           }
-          param3.b(param1 + 1276387878, 17);
-          param3.b(1276387944, param4);
-          param3.b(1276387944, param0);
-          param3.e(160, param2);
+          param3.writeShort(param1 + 1276387878, 17);
+          param3.writeShort(1276387944, param4);
+          param3.writeShort(1276387944, param0);
+          param3.writeByte(160, param2);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "al.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -169,14 +169,14 @@ final class al {
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_27_0 = 0;
-        tf stackIn_38_0 = null;
-        tf stackIn_41_0 = null;
-        tf stackIn_44_0 = null;
-        tf stackIn_47_0 = null;
-        tf stackIn_51_0 = null;
-        tf stackIn_54_0 = null;
-        tf stackIn_57_0 = null;
-        tf stackIn_60_0 = null;
+        Sprite stackIn_38_0 = null;
+        Sprite stackIn_41_0 = null;
+        Sprite stackIn_44_0 = null;
+        Sprite stackIn_47_0 = null;
+        Sprite stackIn_51_0 = null;
+        Sprite stackIn_54_0 = null;
+        Sprite stackIn_57_0 = null;
+        Sprite stackIn_60_0 = null;
         boolean[] var4;
         int var5;
         int var6;
@@ -193,13 +193,13 @@ final class al {
         int var17;
         int var18;
         Object var19;
-        tf var19_ref;
+        Sprite var19_ref;
         Object var20;
-        tf var20_ref;
+        Sprite var20_ref;
         int var21;
         int var22;
-        tf var23;
-        tf var24;
+        Sprite var23;
+        Sprite var24;
         var4 = this.field_f.field_s;
         if (this.field_h < param0) {
           if (this.field_a >= param0) {
@@ -245,8 +245,8 @@ final class al {
           }
           gd.field_f[this.field_b].b(1 + var13, -63 + var14, var9);
         }
-        t.a(1 + var13, -63 + var14, 63, 63, 16777215);
-        t.a(2 + var13, var14 - 64 + 2, 61, 61, 0);
+        SoftwareRasterizer.a(1 + var13, -63 + var14, 63, 63, 16777215);
+        SoftwareRasterizer.a(2 + var13, var14 - 64 + 2, 61, 61, 0);
         var18 = var9 * var11 * 15 >> 16;
         fi.a(6 + var16, var17 + 5, var13, var14 - 64, 6, var18, gg.field_z);
         fi.a(-7 + (var15 + var16), 5 + var17, 64 + var13, var14 - 64, 6, var18, gg.field_z);
@@ -318,35 +318,35 @@ final class al {
           } else {
             stackIn_38_0 = var20_ref;
           }
-          ((tf) (Object) stackIn_38_0).a(var16, var22 + var17, var15, var15);
+          ((Sprite) (Object) stackIn_38_0).a(var16, var22 + var17, var15, var15);
           if (!var4[1]) {
             stackIn_41_0 = var19_ref;
           } else {
             stackIn_41_0 = var20_ref;
           }
-          ((tf) (Object) stackIn_41_0).a(var15 + var16 - var22, var17, var15, var15);
+          ((Sprite) (Object) stackIn_41_0).a(var15 + var16 - var22, var17, var15, var15);
           if (!var4[2]) {
             stackIn_44_0 = var19_ref;
           } else {
             stackIn_44_0 = var20_ref;
           }
-          ((tf) (Object) stackIn_44_0).a(var22 + var16, var15 + var17, var15, var15);
+          ((Sprite) (Object) stackIn_44_0).a(var22 + var16, var15 + var17, var15, var15);
           if (var4[3]) {
             stackIn_47_0 = var20_ref;
           } else {
             stackIn_47_0 = var19_ref;
           }
-          ((tf) (Object) stackIn_47_0).a(var15 + var16, -var22 + var17 + var15, var15, var15);
+          ((Sprite) (Object) stackIn_47_0).a(var15 + var16, -var22 + var17 + var15, var15, var15);
         }
     }
 
-    final static tf[] a(boolean param0, tf[] param1) {
+    final static Sprite[] a(boolean param0, Sprite[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        tf var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        we var5 = null;
-        tf[] stackIn_6_0 = null;
+        PacketBuffer var5 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -355,8 +355,8 @@ final class al {
         try {
           var2_int = 0;
           if (param0) {
-            var5 = (we) null;
-            al.a(99, (byte) 118, 123, (we) null, -60);
+            var5 = (PacketBuffer) null;
+            al.a(99, (byte) 118, 123, (PacketBuffer) null, -60);
           }
           while (var2_int < param1.length) {
             var3 = param1[var2_int];
@@ -366,7 +366,7 @@ final class al {
             param1[var2_int].field_B = param1[var2_int].field_E;
             var2_int++;
           }
-          stackIn_6_0 = (tf[]) (param1);
+          stackIn_6_0 = (Sprite[]) (param1);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

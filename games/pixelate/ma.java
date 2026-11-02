@@ -227,8 +227,8 @@ final class ma extends bg {
           var2 = -1 + gd.field_h.length;
         }
         this.a(65, var2, this.field_m, this.field_n);
-        t.f(320, this.field_m + 3, 19, 0, 128);
-        t.f(321, 4 + this.field_m, 18, 16777215, 128);
+        SoftwareRasterizer.f(320, this.field_m + 3, 19, 0, 128);
+        SoftwareRasterizer.f(321, 4 + this.field_m, 18, 16777215, 128);
         if (this.field_v != this.field_A) {
           if (this.field_A <= this.field_v) {
             stackIn_11_0 = this.field_A;
@@ -255,8 +255,8 @@ final class ma extends bg {
               var7 = 31;
               var7Lifetime1 = 31 - 31 * Math.abs(-this.field_v + var5) / Math.abs(-this.field_A + this.field_v);
               if (var7Lifetime1 > 0) {
-                t.a(320 + var5 << 4, this.field_m - 7 << 4, 64, var7Lifetime1, var10);
-                t.a(320 + var5 << 4, this.field_m + 30 << 4, 64, var7Lifetime1, var10);
+                SoftwareRasterizer.a(320 + var5 << 4, this.field_m - 7 << 4, 64, var7Lifetime1, var10);
+                SoftwareRasterizer.a(320 + var5 << 4, this.field_m + 30 << 4, 64, var7Lifetime1, var10);
               }
             }
           }

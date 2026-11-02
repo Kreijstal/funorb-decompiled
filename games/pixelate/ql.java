@@ -93,7 +93,7 @@ final class ql extends jj {
             if (var2 == 1) {
               wp.field_a = to.field_o;
             } else {
-              wp.field_a = sd.a(cf.field_v, 63, new String[]{Integer.toString(var2)});
+              wp.field_a = sd.a(SpriteState.field_v, 63, new String[]{Integer.toString(var2)});
             }
             wp.field_a = gi.a(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GameApplet.field_d)});
           }
@@ -102,7 +102,7 @@ final class ql extends jj {
         }
     }
 
-    ql(String param0, tf[] param1) {
+    ql(String param0, Sprite[] param1) {
         super(param0, param1);
     }
 

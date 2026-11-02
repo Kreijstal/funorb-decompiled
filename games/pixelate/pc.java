@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pc extends we {
+final class pc extends PacketBuffer {
     static String field_t;
     static int field_q;
     static int field_s;
@@ -28,9 +28,9 @@ final class pc extends we {
         try {
           var5_int = 0;
           while (param3 > var5_int) {
-            fieldTemp$0 = this.field_m;
-            this.field_m = this.field_m + 1;
-            param0[var5_int + param1] = (byte)(this.field_k[fieldTemp$0] - this.field_v.a(256));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param0[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_v.a(256));
             var5_int++;
             if (var6 != 0) {
               return;
@@ -62,9 +62,9 @@ final class pc extends we {
           if (param1 != 15514) {
             this.f((byte) -21);
           }
-          fieldTemp$1 = this.field_m;
-          this.field_m = this.field_m + 1;
-          this.field_k[fieldTemp$1] = (byte)(param0 + this.field_v.a(256));
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(param0 + this.field_v.a(256));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -275,7 +275,7 @@ final class pc extends we {
 
     final void o(int param0) {
         try {
-          this.field_m = (param0 + this.field_r) / 8;
+          this.position = (param0 + this.field_r) / 8;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "pc.BB(" + param0 + ')');
         }
@@ -356,7 +356,7 @@ final class pc extends we {
           if (param0 >= -2) {
             pc.a((String) null, (byte) -7, (String) null);
           }
-          this.field_r = this.field_m * 8;
+          this.field_r = this.position * 8;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -374,9 +374,9 @@ final class pc extends we {
           if (param0 <= 83) {
             field_q = -104;
           }
-          fieldTemp$1 = this.field_m;
-          this.field_m = this.field_m + 1;
-          stackIn_4_0 = 255 & this.field_k[fieldTemp$1] - this.field_v.a(256);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          stackIn_4_0 = 255 & this.payload[fieldTemp$1] - this.field_v.a(256);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -409,7 +409,7 @@ final class pc extends we {
             if (var4 < param0) {
               incrementValue$1 = var3_int;
               var3_int++;
-              var5 = var5 + ((pk.field_a[var4] & this.field_k[incrementValue$1]) << param0 - var4);
+              var5 = var5 + ((pk.field_a[var4] & this.payload[incrementValue$1]) << param0 - var4);
               param0 = param0 - var4;
               var4 = 8;
               if (var6 == 0) {
@@ -417,13 +417,13 @@ final class pc extends we {
               }
             } else {
               if (~param0 != ~var4) {
-                var5 = var5 + (this.field_k[var3_int] >> -param0 + var4 & pk.field_a[param0]);
+                var5 = var5 + (this.payload[var3_int] >> -param0 + var4 & pk.field_a[param0]);
                 if (var6 == 0) {
                   break scanLoop1;
                 }
               }
             }
-            var5 = var5 + (this.field_k[var3_int] & pk.field_a[var4]);
+            var5 = var5 + (this.payload[var3_int] & pk.field_a[var4]);
             break;
           }
           stackIn_14_0 = var5;

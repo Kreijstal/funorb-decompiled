@@ -104,7 +104,7 @@ final class ic extends ka implements vo {
           } else {
             if (ia.field_c != param1) {
               if (param1 == fh.field_Q) {
-                var3 = ha.field_k;
+                var3 = CanvasRasterBuffer.field_k;
                 this.field_C = this.field_C + 30;
               }
             } else {

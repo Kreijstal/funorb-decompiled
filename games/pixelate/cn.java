@@ -8,10 +8,10 @@ final class cn {
     final static int a(String param0, int param1, int param2, boolean param3, sc param4, int param5, sc param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        we stackIn_13_0 = null;
+        PacketBuffer stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         String stackIn_14_2 = null;
-        we stackIn_16_0 = null;
+        PacketBuffer stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         String stackIn_17_2 = null;
         int stackIn_33_0 = 0;
@@ -58,11 +58,11 @@ final class cn {
             field_a = (bd) null;
           }
           if (uk.field_s == ij.field_o) {
-            aa.field_f.field_m = 0;
+            aa.field_f.position = 0;
             kj.field_j = null;
             if (param0 != null) {
               var9 = 0;
-              uk.field_v.field_m = 0;
+              uk.field_v.position = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
@@ -72,21 +72,21 @@ final class cn {
               uk.field_v.a((byte) -66, var8);
               var15 = (CharSequence) ((Object) param0);
               uk.field_v.a((byte) -66, la.a((byte) 10, var15));
-              uk.field_v.b(1276387944, param1);
-              uk.field_v.e(160, param5);
-              uk.field_v.e(160, var9);
-              aa.field_f.e(160, 18);
-              aa.field_f.field_m = aa.field_f.field_m + 2;
-              var10 = aa.field_f.field_m;
+              uk.field_v.writeShort(1276387944, param1);
+              uk.field_v.writeByte(160, param5);
+              uk.field_v.writeByte(160, var9);
+              aa.field_f.writeByte(160, 18);
+              aa.field_f.position = aa.field_f.position + 2;
+              var10 = aa.field_f.position;
               var11_ref_StringLifetime2 = ln.a(ao.a(13867), (byte) -85);
               if (var11_ref_StringLifetime2 == null) {
                 var11_ref_StringLifetime2 = "";
               }
               aa.field_f.b((byte) -41, var11_ref_StringLifetime2);
               wh.a(ag.field_m, aa.field_f, tp.field_t, uk.field_v, 12556);
-              aa.field_f.c(7519, aa.field_f.field_m - var10);
+              aa.field_f.c(7519, aa.field_f.position - var10);
             } else {
-              uk.field_v.field_m = 0;
+              uk.field_v.position = 0;
               uk.field_v.d(ai.field_d.nextInt(), -90);
               uk.field_v.d(ai.field_d.nextInt(), -68);
               stackIn_13_0 = uk.field_v;
@@ -96,7 +96,7 @@ final class cn {
               } else {
                 stackIn_14_2 = var14;
               }
-              ((we) (Object) stackIn_13_0).a((byte) stackIn_13_1, stackIn_14_2);
+              ((PacketBuffer) (Object) stackIn_13_0).a((byte) stackIn_13_1, stackIn_14_2);
               stackIn_16_0 = uk.field_v;
               stackIn_16_1 = -66;
               if (param4.b((byte) 127)) {
@@ -104,12 +104,12 @@ final class cn {
               } else {
                 stackIn_17_2 = "";
               }
-              ((we) (Object) stackIn_16_0).a((byte) stackIn_16_1, stackIn_17_2);
-              aa.field_f.e(160, 16);
-              aa.field_f.field_m = aa.field_f.field_m + 1;
-              var9 = aa.field_f.field_m;
+              ((PacketBuffer) (Object) stackIn_16_0).a((byte) stackIn_16_1, stackIn_17_2);
+              aa.field_f.writeByte(160, 16);
+              aa.field_f.position = aa.field_f.position + 1;
+              var9 = aa.field_f.position;
               wh.a(ag.field_m, aa.field_f, tp.field_t, uk.field_v, 12556);
-              aa.field_f.f(aa.field_f.field_m - var9, -1);
+              aa.field_f.f(aa.field_f.position - var9, -1);
             }
             vg.b(-1, 10000);
             uk.field_s = mn.field_c;
@@ -117,7 +117,7 @@ final class cn {
           if (mn.field_c == uk.field_s &&
             rd.a(1, false)) {
             var9Lifetime1 = vi.field_o.f(255);
-            vi.field_o.field_m = 0;
+            vi.field_o.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ii.field_y = new String[-100 + var9Lifetime1];
@@ -138,7 +138,7 @@ final class cn {
               } else {
                 rd.a(wl.a(23062), false);
                 kj.field_j = new Boolean(rn.a((byte) 107, vi.field_o));
-                vi.field_o.field_m = 0;
+                vi.field_o.position = 0;
               }
             }
           }
@@ -146,7 +146,7 @@ final class cn {
             var9Lifetime2 = 2;
             if (rd.a(var9Lifetime2, false)) {
               var10Lifetime1 = vi.field_o.a((byte) 82);
-              vi.field_o.field_m = 0;
+              vi.field_o.position = 0;
               if (rd.a(var10Lifetime1, false)) {
                 var11 = ii.field_y.length;
                 for (var12 = 0; var12 < var11; var12++) {
@@ -323,7 +323,7 @@ final class cn {
                   if (ja.field_e <= param8) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + t.field_j;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_j;
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
                 }
@@ -402,7 +402,7 @@ final class cn {
                 return;
               }
               var10 = var10 + var12;
-              var15Lifetime1 = var15Lifetime1 + t.field_j;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_j;
               var9_int = var9_int + var11;
             }
             return;

@@ -36,11 +36,11 @@ class gh extends uc {
           }
           while (lf.a((byte) -91)) {
             var1.g(8, 15514);
-            fieldTemp$0 = var1.field_m + 1;
-            var1.field_m = var1.field_m + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ao.a(var1, -20);
-            aa.field_f.f(var1.field_m - var2, param0 ^ -9);
+            aa.field_f.f(var1.position - var2, param0 ^ -9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

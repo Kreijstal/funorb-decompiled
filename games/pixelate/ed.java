@@ -3,7 +3,7 @@
  */
 final class ed {
     static String field_a;
-    static we field_b;
+    static PacketBuffer field_b;
 
     final static ob a(byte[] param0, int param1) {
         ob var2 = null;

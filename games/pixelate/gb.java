@@ -3,7 +3,7 @@
  */
 final class gb {
     static int[] field_f;
-    static tf field_b;
+    static Sprite field_b;
     static int[] field_e;
     static int field_a;
     static int field_d;

@@ -23,7 +23,7 @@ final class SecondaryNodeDeque implements Iterable {
         return var2;
     }
 
-    final static void a(java.math.BigInteger param0, boolean param1, int param2, int param3, java.math.BigInteger param4, we param5, byte[] param6) {
+    final static void a(java.math.BigInteger param0, boolean param1, int param2, int param3, java.math.BigInteger param4, PacketBuffer param5, byte[] param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -56,29 +56,29 @@ final class SecondaryNodeDeque implements Iterable {
             var8[var9] = qo.field_y.nextInt();
           }
           if (ed.field_b == null ||
-            !(var7_int <= ed.field_b.field_k.length)) {
-            ed.field_b = new we(var7_int);
+            !(var7_int <= ed.field_b.payload.length)) {
+            ed.field_b = new PacketBuffer(var7_int);
           }
-          ed.field_b.field_m = 0;
+          ed.field_b.position = 0;
           ed.field_b.a(param3, param2, -3493, param6);
           ed.field_b.c(var7_int, param1);
           ed.field_b.a(true, var13);
           if (null == bi.field_d ||
-            !(100 <= bi.field_d.field_k.length)) {
-            bi.field_d = new we(100);
+            !(100 <= bi.field_d.payload.length)) {
+            bi.field_d = new PacketBuffer(100);
           }
-          bi.field_d.field_m = 0;
-          bi.field_d.e(160, 10);
+          bi.field_d.position = 0;
+          bi.field_d.writeByte(160, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
             bi.field_d.d(var13[var11], -127);
             var11++;
           }
-          bi.field_d.b(1276387944, param3);
+          bi.field_d.writeShort(1276387944, param3);
           bi.field_d.a(param4, param0, 0);
-          param5.a(bi.field_d.field_m, 0, -3493, bi.field_d.field_k);
-          param5.a(ed.field_b.field_m, 0, -3493, ed.field_b.field_k);
+          param5.a(bi.field_d.position, 0, -3493, bi.field_d.payload);
+          param5.a(ed.field_b.position, 0, -3493, ed.field_b.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,9 +126,9 @@ final class SecondaryNodeDeque implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final static tf[] a(int param0, byte param1) {
-        tf[] var4 = new tf[9];
-        tf[] var2 = var4;
+    final static Sprite[] a(int param0, byte param1) {
+        Sprite[] var4 = new Sprite[9];
+        Sprite[] var2 = var4;
         int var3 = -118 % ((param1 - 67) / 55);
         var4[4] = cl.a(64, param0, (byte) -61);
         return var2;
@@ -154,7 +154,7 @@ final class SecondaryNodeDeque implements Iterable {
     final static boolean b(int param0) {
         if (param0 != 916440577) {
           byte[] var2 = (byte[]) null;
-          SecondaryNodeDeque.a((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (we) null, (byte[]) null);
+          SecondaryNodeDeque.a((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (PacketBuffer) null, (byte[]) null);
         }
         return ck.field_j.c(32059);
     }

@@ -18,14 +18,14 @@ final class wl {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
         int var2 = this.field_a * 240 / 255;
-        t.a((int)this.field_h[0] << 4, (int)this.field_e[0] << 4, 64, this.field_a, this.field_g);
+        SoftwareRasterizer.a((int)this.field_h[0] << 4, (int)this.field_e[0] << 4, 64, this.field_a, this.field_g);
         if (param0 >= -91) {
           field_f = (String) null;
         }
         for (var3 = 1; var3 < 20; var3++) {
           var2 = this.field_a * (-var3 + 20) * 12 / 255;
-          t.a((int)this.field_h[var3] << 4, (int)this.field_e[var3] << 4, 32, var2, this.field_g);
-          t.a((int)(this.field_h[var3] + this.field_h[-1 + var3]) << 3, (int)(this.field_e[var3 - 1] + this.field_e[var3]) << 3, 32, var2, this.field_g);
+          SoftwareRasterizer.a((int)this.field_h[var3] << 4, (int)this.field_e[var3] << 4, 32, var2, this.field_g);
+          SoftwareRasterizer.a((int)(this.field_h[var3] + this.field_h[-1 + var3]) << 3, (int)(this.field_e[var3 - 1] + this.field_e[var3]) << 3, 32, var2, this.field_g);
         }
     }
 

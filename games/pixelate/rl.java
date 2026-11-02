@@ -193,12 +193,12 @@ final class rl {
             }
           } else {
             if (var2 != 0 &&
-              ha.field_h != 2) {
+              CanvasRasterBuffer.field_h != 2) {
               dh.a(0);
             }
           }
           if (0 == var3 &&
-            ha.field_h == 2) {
+            CanvasRasterBuffer.field_h == 2) {
             var4 = hm.a(64) - pk.field_g;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {

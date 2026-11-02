@@ -6,7 +6,7 @@ final class pk {
     static String field_e;
     static long field_g;
     static String field_b;
-    static tf[] field_c;
+    static Sprite[] field_c;
     static String[] field_d;
     static int[] field_a;
 
@@ -268,7 +268,7 @@ final class pk {
           }
           if (ce.field_d == 2 &&
             !ra.a((byte) -99)) {
-            if (ha.a(fp.field_d, (byte) 37)) {
+            if (CanvasRasterBuffer.a(fp.field_d, (byte) 37)) {
               var2 = sd.a(GameApplet.field_m, 34, new String[]{jo.field_k});
               if (var10 != 0) {
                 var2 = sd.a(fg.field_d, 34, new String[]{jo.field_k});

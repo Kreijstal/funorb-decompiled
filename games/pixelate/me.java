@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class me extends ha {
+final class me extends CanvasRasterBuffer {
     private java.awt.Component field_l;
 
     final void a(int param0, java.awt.Component param1, int param2, byte param3) {

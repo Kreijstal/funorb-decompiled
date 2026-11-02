@@ -5,7 +5,7 @@ final class hp extends ak {
     static String field_Fb;
     private ak field_Eb;
     static String[] field_Hb;
-    static tf field_Gb;
+    static Sprite field_Gb;
 
     final static ak j(int param0) {
         if (param0 != 0) {
@@ -37,7 +37,7 @@ final class hp extends ak {
         if (param3 > -83) {
           hp.j(-32);
         }
-        t.d(param0, param4, param2, param1);
+        SoftwareRasterizer.d(param0, param4, param2, param1);
     }
 
     hp(ak param0, ak param1, ak param2, ak param3, ak param4, ak param5) {
@@ -76,7 +76,7 @@ final class hp extends ak {
           var10 = 50;
           var11 = 0;
           for (var12 = 0; var12 < kd.field_c.length; var12++) {
-            var13 = new ak(0L, param3, cf.field_I[var12]);
+            var13 = new ak(0L, param3, SpriteState.field_I[var12]);
             var14 = new ak(0L, param3, kd.field_c[var12]);
             var15 = param3.field_Db.c(kd.field_c[var12]);
             var13.a(var10, 15, 20, 256, 65);
@@ -149,7 +149,7 @@ final class hp extends ak {
     public static void b(byte param0) {
         field_Fb = null;
         if (param0 != -15) {
-          field_Gb = (tf) null;
+          field_Gb = (Sprite) null;
         }
         field_Gb = null;
         field_Hb = null;

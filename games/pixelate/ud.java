@@ -87,9 +87,9 @@ abstract class ud extends ch {
           return;
         }
         if (null == fd.field_a) {
-          fd.field_a = new tf(this.field_E, this.field_C);
+          fd.field_a = new Sprite(this.field_E, this.field_C);
           h.a(-90, fd.field_a);
-          t.d();
+          SoftwareRasterizer.d();
           this.a(0, 0, true);
           super.a(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5 = -94 / ((param3 - 70) / 49);
@@ -98,9 +98,9 @@ abstract class ud extends ch {
           return;
         }
         if (fd.field_a.field_F < this.field_E) {
-          fd.field_a = new tf(this.field_E, this.field_C);
+          fd.field_a = new Sprite(this.field_E, this.field_C);
           h.a(-90, fd.field_a);
-          t.d();
+          SoftwareRasterizer.d();
           this.a(0, 0, true);
           super.a(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5Lifetime1 = -94 / ((param3 - 70) / 49);
@@ -109,9 +109,9 @@ abstract class ud extends ch {
           return;
         }
         if (this.field_C > fd.field_a.field_E) {
-          fd.field_a = new tf(this.field_E, this.field_C);
+          fd.field_a = new Sprite(this.field_E, this.field_C);
           h.a(-90, fd.field_a);
-          t.d();
+          SoftwareRasterizer.d();
           this.a(0, 0, true);
           super.a(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5Lifetime2 = -94 / ((param3 - 70) / 49);
@@ -120,7 +120,7 @@ abstract class ud extends ch {
           return;
         }
         h.a(-90, fd.field_a);
-        t.d();
+        SoftwareRasterizer.d();
         this.a(0, 0, true);
         super.a(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
         var5Lifetime3 = -94 / ((param3 - 70) / 49);

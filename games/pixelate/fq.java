@@ -95,7 +95,7 @@ final class fq extends de {
 
     final void a(byte param0, boolean param1, int param2) {
         int stackIn_5_1 = 0;
-        tf stackIn_7_2 = null;
+        Sprite stackIn_7_2 = null;
         if (param0 >= -116) {
           fq.g((byte) 97);
         }

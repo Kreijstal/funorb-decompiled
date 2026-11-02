@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class pe {
-    static tf field_b;
+    static Sprite field_b;
     static Calendar field_a;
     static int field_c;
 
@@ -49,11 +49,11 @@ final class pe {
     final static void a(int param0, int param1, long param2) {
         pc var4 = aa.field_f;
         var4.g(param1, 15514);
-        var4.field_m = var4.field_m + 1;
-        int var5 = var4.field_m;
-        var4.e(160, param0);
-        var4.a(false, param2);
-        var4.f(var4.field_m - var5, -1);
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
+        var4.writeByte(160, param0);
+        var4.writeLong(false, param2);
+        var4.f(var4.position - var5, -1);
     }
 
     final static boolean a(boolean param0) {
@@ -68,7 +68,7 @@ final class pe {
     }
 
     static {
-        field_b = new tf(640, 480);
+        field_b = new Sprite(640, 480);
         field_a = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
     }
 }

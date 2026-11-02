@@ -62,7 +62,7 @@ final class ko extends ka {
           super.a(param0, param1, param2);
           ba.field_d.b(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
           if (this.field_gb != null) {
-            t.b(param0 + 20, 120 + param1 - 7, 260, 8421504);
+            SoftwareRasterizer.b(param0 + 20, 120 + param1 - 7, 260, 8421504);
             ba.field_d.a(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.field_w);
             return;
           }
@@ -73,7 +73,7 @@ final class ko extends ka {
         if (this.field_gb == null) {
           return;
         }
-        t.b(param0 + 20, 120 + param1 - 7, 260, 8421504);
+        SoftwareRasterizer.b(param0 + 20, 120 + param1 - 7, 260, 8421504);
         ba.field_d.a(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.field_w);
     }
 

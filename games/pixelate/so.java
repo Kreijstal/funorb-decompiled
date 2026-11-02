@@ -15,7 +15,7 @@ final class so {
     boolean field_n;
     private int field_p;
     int field_e;
-    static tf[] field_d;
+    static Sprite[] field_d;
     static int[][] field_c;
     private int field_b;
 
@@ -73,7 +73,7 @@ final class so {
 
     final static void c(int param0) {
         if (param0 != 4478) {
-          field_d = (tf[]) null;
+          field_d = (Sprite[]) null;
         }
         if (!ik.field_a) {
           if (null == pk.field_f) {
@@ -125,7 +125,7 @@ final class so {
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_d = (tf[]) null;
+          field_d = (Sprite[]) null;
         }
         field_d = null;
         field_c = (int[][]) null;
@@ -133,20 +133,20 @@ final class so {
 
     final void f(int param0) {
         int var3 = 0;
-        tf[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
-        tf[] stackIn_9_0 = null;
+        Sprite[] stackIn_9_0 = null;
         int stackIn_10_1 = 0;
-        tf[] stackIn_12_0 = null;
+        Sprite[] stackIn_12_0 = null;
         int stackIn_13_1 = 0;
-        tf[] stackIn_15_0 = null;
+        Sprite[] stackIn_15_0 = null;
         int stackIn_16_1 = 0;
         int var2;
         boolean[] var4;
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
-        t.e(535, -15 + this.field_o, 62, 15 + this.field_b + 15, 6, 0);
-        t.a(535, -15 + this.field_o, 62, 15 + (this.field_b + 15), 6, 0, 128);
+        SoftwareRasterizer.e(535, -15 + this.field_o, 62, 15 + this.field_b + 15, 6, 0);
+        SoftwareRasterizer.a(535, -15 + this.field_o, 62, 15 + (this.field_b + 15), 6, 0, 128);
         li.field_d.b(542, this.field_g - 8, 256);
         var2 = this.field_o;
         if (param0 != 550) {
@@ -160,30 +160,30 @@ final class so {
           } else {
             stackIn_7_1 = 1;
           }
-          ((tf) (Object) stackIn_6_0[stackIn_7_1]).b(550, var2);
+          ((Sprite) (Object) stackIn_6_0[stackIn_7_1]).b(550, var2);
           stackIn_9_0 = rg.field_e.field_a;
           if (var4[1]) {
             stackIn_10_1 = 1;
           } else {
             stackIn_10_1 = 0;
           }
-          ((tf) (Object) stackIn_9_0[stackIn_10_1]).b(566, var2);
+          ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).b(566, var2);
           stackIn_12_0 = rg.field_e.field_a;
           if (var4[2]) {
             stackIn_13_1 = 1;
           } else {
             stackIn_13_1 = 0;
           }
-          ((tf) (Object) stackIn_12_0[stackIn_13_1]).b(550, var2 + 16);
+          ((Sprite) (Object) stackIn_12_0[stackIn_13_1]).b(550, var2 + 16);
           stackIn_15_0 = rg.field_e.field_a;
           if (!var4[3]) {
             stackIn_16_1 = 0;
           } else {
             stackIn_16_1 = 1;
           }
-          ((tf) (Object) stackIn_15_0[stackIn_16_1]).b(566, 16 + var2);
+          ((Sprite) (Object) stackIn_15_0[stackIn_16_1]).b(566, 16 + var2);
           if (var3 < -1 + this.field_p) {
-            t.a(550, var2, 32, 32, 0, 128);
+            SoftwareRasterizer.a(550, var2, 32, 32, 0, 128);
           }
           var2 += 37;
         }

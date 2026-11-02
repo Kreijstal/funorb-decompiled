@@ -47,7 +47,7 @@ abstract class lb extends GameApplet {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          we var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Pixelate.field_H ? 1 : 0;
@@ -142,7 +142,7 @@ abstract class lb extends GameApplet {
                   var9 = (String) null;
                   ri.a((String) null, true);
                 } else {
-                  var7 = ui.a(true, var12.field_k, 0, var12.field_m);
+                  var7 = ui.a(true, var12.payload, 0, var12.position);
                   ri.a(var7, true);
                 }
                 qe.field_w = null;

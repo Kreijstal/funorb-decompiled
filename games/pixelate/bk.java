@@ -22,10 +22,10 @@ final class bk {
         this.field_f = 0;
     }
 
-    final void a(we param0) {
+    final void a(PacketBuffer param0) {
         this.field_a = param0.f(255);
-        this.field_c = param0.k(0);
-        this.field_g = param0.k(0);
+        this.field_c = param0.readInt(0);
+        this.field_g = param0.readInt(0);
         this.b(param0);
     }
 
@@ -48,7 +48,7 @@ final class bk {
         return this.field_d - this.field_b >> 15;
     }
 
-    final void b(we param0) {
+    final void b(PacketBuffer param0) {
         int var2 = 0;
         this.field_i = param0.f(255);
         this.field_e = new int[this.field_i];

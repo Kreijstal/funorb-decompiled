@@ -13,7 +13,7 @@ class IntrusiveNode {
     static String field_i;
     IntrusiveNode field_h;
 
-    final static void a(String[] args, fm param1, int[] param2, byte param3, tf[][] param4, int param5, byte[] param6, tf[][] param7, String[] param8, String[][] param9, String[][] param10, String[] param11, int param12, int param13, byte[] param14) {
+    final static void a(String[] args, fm param1, int[] param2, byte param3, Sprite[][] param4, int param5, byte[] param6, Sprite[][] param7, String[] param8, String[][] param9, String[][] param10, String[] param11, int param12, int param13, byte[] param14) {
         lo[] array$0 = null;
         lo[] array$1 = null;
         lo[] array$2 = null;
@@ -189,27 +189,27 @@ class IntrusiveNode {
             dh.field_b[1] = new ak(0L, qk.field_d, pk.field_e);
             array$0 = new lo[ia.field_a.length + 1];
             hc.field_L[1] = array$0;
-            hc.field_L[1][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
+            hc.field_L[1][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, fg.field_a);
             for (var17_intLifetime1 = 0; ia.field_a.length > var17_intLifetime1; var17_intLifetime1++) {
-              hc.field_L[1][var17_intLifetime1 + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, Integer.toString(ia.field_a[var17_intLifetime1]));
+              hc.field_L[1][var17_intLifetime1 + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, Integer.toString(ia.field_a[var17_intLifetime1]));
             }
           }
           dh.field_b[2] = new ak(0L, qk.field_d, eq.field_Xb);
-          hc.field_L[2] = new lo[]{new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a), new lo(0L, bc.field_o, (ak) null, dn.field_c, so.field_d[0], gk.field_eb), new lo(0L, bc.field_o, (ak) null, dn.field_c, so.field_d[1], ij.field_t)};
+          hc.field_L[2] = new lo[]{new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, fg.field_a), new lo(0L, bc.field_o, (ak) null, dn.field_c, so.field_d[0], gk.field_eb), new lo(0L, bc.field_o, (ak) null, dn.field_c, so.field_d[1], ij.field_t)};
           if (ff.field_i > 1) {
             dh.field_b[3] = new ak(0L, qk.field_d, ii.field_c);
             array$1 = new lo[1 + ff.field_i];
             hc.field_L[3] = array$1;
-            hc.field_L[3][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
+            hc.field_L[3][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, fg.field_a);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < ff.field_i; var17_intLifetime2++) {
-              hc.field_L[3][var17_intLifetime2 + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, rm.field_b[var17_intLifetime2]);
+              hc.field_L[3][var17_intLifetime2 + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, rm.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
             dh.field_b[4 + var17_intLifetime3] = new ak(0L, qk.field_d, jk.field_e[var17_intLifetime3]);
             array$2 = new lo[1 + cm.a(255, (int) g.field_s[var17_intLifetime3])];
             hc.field_L[4 + var17_intLifetime3] = array$2;
-            hc.field_L[var17_intLifetime3 + 4][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
+            hc.field_L[var17_intLifetime3 + 4][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) null, fg.field_a);
             for (var18 = 0; (g.field_s[var17_intLifetime3] & 255) > var18; var18++) {
               if (null == dk.field_a) {
                 var19_ref = null;
@@ -229,7 +229,7 @@ class IntrusiveNode {
                   var20 = null;
                 }
               }
-              hc.field_L[4 + var17_intLifetime3][1 + var18] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) (var19_ref), (String) (var20));
+              hc.field_L[4 + var17_intLifetime3][1 + var18] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param12 > var17_intLifetime4; var17_intLifetime4++) {

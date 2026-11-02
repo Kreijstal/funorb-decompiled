@@ -7,7 +7,7 @@ final class wf {
     static int field_b;
     static String field_a;
 
-    final static void a(int param0, we param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

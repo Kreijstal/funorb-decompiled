@@ -4,8 +4,8 @@
 final class fd {
     static vh field_b;
     static String field_d;
-    static tf field_a;
-    static tf[] field_c;
+    static Sprite field_a;
+    static Sprite[] field_c;
 
     final static ak a(int param0) {
         if (param0 != 0) {

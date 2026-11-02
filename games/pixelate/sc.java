@@ -45,7 +45,7 @@ final class sc {
           return g.field_q + " - " + wk.field_j.c(119, "commonui") + "%";
         }
         if (!io.field_g.b(param0 ^ -16421)) {
-          return ha.field_f;
+          return CanvasRasterBuffer.field_f;
         }
         if (!io.field_g.a("commonui", -1)) {
           return pc.field_x + " - " + io.field_g.c(param0 ^ 16463, "commonui") + "%";

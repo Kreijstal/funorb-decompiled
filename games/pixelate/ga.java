@@ -27,10 +27,10 @@ final class ga {
             var4 = this.field_c * 35 / 1000;
             var5 = var4 >> 1;
             fi.a(320, 349 - var5, var4, oc.field_S, var3_int);
-            t.f(0, -var5 + 355, 640, var4 / 2 + 343);
+            SoftwareRasterizer.f(0, -var5 + 355, 640, var4 / 2 + 343);
           }
           rk.field_e.b(param1, 320, 360, 0, -1);
-          t.c();
+          SoftwareRasterizer.c();
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ga.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -96,7 +96,7 @@ final class ga {
             lg.field_d[this.field_b].b(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
             return;
           }
-          t.a(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
+          SoftwareRasterizer.a(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
           if (this.field_c >= NodeHashTableIterator.field_f) {
             lg.field_d[this.field_b].b(this.field_g, 170);
             return;
@@ -105,7 +105,7 @@ final class ga {
           return;
         }
         if (this.field_c > 0) {
-          t.a(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
+          SoftwareRasterizer.a(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
           if (this.field_c >= NodeHashTableIterator.field_f) {
             lg.field_d[this.field_b].b(this.field_g, 170);
             return;
@@ -160,8 +160,8 @@ final class ga {
           if (null == param5.field_L) {
             param5.field_L = new bb();
           }
-          i.field_n = param5.field_L;
-          i.field_n.e(param3 ^ -121);
+          ImageProducerRasterBuffer.field_n = param5.field_L;
+          ImageProducerRasterBuffer.field_n.e(param3 ^ -121);
           il.field_d = new vg(param1);
           ka.field_X = 0;
           ec.field_r = 0;

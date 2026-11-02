@@ -12,9 +12,9 @@ final class ll implements Runnable {
     private ei field_e;
     static String field_k;
     static String field_p;
-    static tf[] field_m;
+    static Sprite[] field_m;
     private cb field_h;
-    private we field_l;
+    private PacketBuffer field_l;
     static String field_f;
     private DataInputStream field_o;
     static String field_i;
@@ -84,7 +84,7 @@ final class ll implements Runnable {
         field_f = null;
     }
 
-    final we a(int param0) {
+    final PacketBuffer a(int param0) {
         if (this.field_n != param0) {
           return null;
         }
@@ -141,7 +141,7 @@ final class ll implements Runnable {
                 var3.write(gk.b(var5, 353));
                 this.field_o = new DataInputStream(var4.getInputStream());
               }
-              this.field_l.field_m = 0;
+              this.field_l.position = 0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
@@ -177,16 +177,16 @@ final class ll implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = Pixelate.field_H ? 1 : 0;
           try {
-            while (this.field_l.field_k.length > this.field_l.field_m) {
-              var1_int = this.field_o.read(this.field_l.field_k, this.field_l.field_m, -this.field_l.field_m + this.field_l.field_k.length);
+            while (this.field_l.payload.length > this.field_l.position) {
+              var1_int = this.field_o.read(this.field_l.payload, this.field_l.position, -this.field_l.position + this.field_l.payload.length);
               if (var1_int >= 0) {
-                this.field_l.field_m = this.field_l.field_m + var1_int;
+                this.field_l.position = this.field_l.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_l.field_m == this.field_l.field_k.length) {
-              throw ll.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_l.field_k.length + " " + this.field_b));
+            if (this.field_l.position == this.field_l.payload.length) {
+              throw ll.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_l.payload.length + " " + this.field_b));
             }
             var1 = this;
             synchronized (var1) {
@@ -215,7 +215,7 @@ final class ll implements Runnable {
         try {
           this.field_h = param0;
           this.field_b = param1;
-          this.field_l = new we(param2);
+          this.field_l = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ll.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

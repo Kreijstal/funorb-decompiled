@@ -37,7 +37,7 @@ final class aa {
           if (2 != gk.field_db) {
             return 0;
           }
-          if (ha.a(this.field_n, (byte) 37)) {
+          if (CanvasRasterBuffer.a(this.field_n, (byte) 37)) {
             return 1;
           }
           return 0;
@@ -49,7 +49,7 @@ final class aa {
         if (2 != gk.field_db) {
           return 0;
         }
-        if (ha.a(this.field_n, (byte) 37)) {
+        if (CanvasRasterBuffer.a(this.field_n, (byte) 37)) {
           return 1;
         }
         return 0;

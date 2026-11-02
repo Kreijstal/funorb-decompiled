@@ -3,7 +3,7 @@
  */
 public final class Pixelate extends lb {
     static bd field_G;
-    static tf field_E;
+    static Sprite field_E;
     public static boolean field_H;
 
     final void a(byte param0) {
@@ -314,7 +314,7 @@ public final class Pixelate extends lb {
             }
             if (var3_ref != null) {
               if (mn.field_e == 61) {
-                var4Lifetime1 = vi.field_o.c((byte) 13);
+                var4Lifetime1 = vi.field_o.readUnsignedMedium((byte) 13);
                 var5 = var4Lifetime1 >> 8;
                 var6 = (128 & var4Lifetime1) >> 7;
                 var7 = 127 & var4Lifetime1;
@@ -419,7 +419,7 @@ public final class Pixelate extends lb {
           var6 = vi.field_o.f(255);
           var7Lifetime1 = vi.field_o.f(255);
           var8Lifetime1 = vi.field_o.f(255);
-          var9Lifetime1 = vi.field_o.k(0);
+          var9Lifetime1 = vi.field_o.readInt(0);
           wh.field_p = null;
           stackIn_100_0 = (mn.field_e == 58);
           oa.field_i = stackIn_100_0;
@@ -469,12 +469,12 @@ public final class Pixelate extends lb {
         GameApplet.b(true);
         ll.a((byte) -57);
         wb.a(-116);
-        v.a(false);
-        t.e();
+        MouseWheelHandler.a(false);
+        SoftwareRasterizer.e();
         fm.a(-34);
         jl.a();
         wp.b(param0 - 23028);
-        we.b((byte) 114);
+        PacketBuffer.b((byte) 114);
         hm.b((byte) 9);
         he.a(0);
         la.b(param0 - 23114);
@@ -487,7 +487,7 @@ public final class Pixelate extends lb {
         aa.a(-127);
         bl.b(-46342);
         nc.b(false);
-        ha.a(true);
+        CanvasRasterBuffer.a(true);
         re.a(true);
         FullscreenFocusCanvas.a((byte) -85);
         co.a(true);
@@ -500,7 +500,7 @@ public final class Pixelate extends lb {
         uo.b(127);
         mo.a((byte) -84);
         IntrusiveNode.d(-3);
-        cf.a((byte) -114);
+        SpriteState.a((byte) -114);
         DualLinkNode.a(-2575);
         nk.a(true);
         dh.a(true);
@@ -670,7 +670,7 @@ public final class Pixelate extends lb {
         eh.d(29731);
         ProxyAuthenticationException.a((byte) 73);
         k.d(false);
-        i.c(-56);
+        ImageProducerRasterBuffer.c(-56);
         vm.a(116);
         bo.a(true);
         pj.a(false);
@@ -794,21 +794,21 @@ public final class Pixelate extends lb {
         int var4 = 0;
         try {
           if (param1 <= 90) {
-            field_E = (tf) null;
+            field_E = (Sprite) null;
           }
           var5 = aa.field_f;
           var5.g(param0, 15514);
-          var5.field_m = var5.field_m + 1;
-          var4 = var5.field_m;
-          var5.e(160, 1);
-          var5.e(160, param2.field_p);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(160, 1);
+          var5.writeByte(160, param2.field_p);
           var5.a(param2.field_k, -14596);
           var5.d(param2.field_l, -108);
           var5.d(param2.field_n, -43);
           var5.d(param2.field_o, -104);
           var5.d(param2.field_q, -106);
           var5.b(var4, (byte) 43);
-          var5.f(-var4 + var5.field_m, -1);
+          var5.f(-var4 + var5.position, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "Pixelate.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -851,9 +851,9 @@ public final class Pixelate extends lb {
         int stackIn_35_0 = 0;
         int stackIn_69_0 = 0;
         int stackIn_78_0 = 0;
-        tf[] stackIn_80_0 = null;
+        Sprite[] stackIn_80_0 = null;
         int stackIn_81_1 = 0;
-        tf[] stackIn_88_0 = null;
+        Sprite[] stackIn_88_0 = null;
         int stackIn_89_1 = 0;
         String stackIn_155_0 = null;
         String stackIn_165_0 = null;
@@ -895,7 +895,7 @@ public final class Pixelate extends lb {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        tf var42 = null;
+        Sprite var42 = null;
         ak var43 = null;
         ak var44 = null;
         ak var45 = null;
@@ -904,14 +904,14 @@ public final class Pixelate extends lb {
         ak var48 = null;
         ak var49 = null;
         Object var50 = null;
-        tf var50_ref = null;
+        Sprite var50_ref = null;
         Object var51 = null;
-        tf var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        tf var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        tf var53_ref = null;
-        tf var54 = null;
+        Sprite var53_ref = null;
+        Sprite var54 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -1267,21 +1267,21 @@ public final class Pixelate extends lb {
               }
               if (var12.field_cc) {
                 var12.field_Wb.field_cb = sd.a(ok.field_a, param1 - 22, new String[]{var32});
-                var12.field_Wb.a(var31, fq.field_q, v.field_c, 256, -(2 * v.field_c) + var12.field_K);
+                var12.field_Wb.a(var31, fq.field_q, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
                 var31 = var31 + fq.field_q;
               }
               if (var12.field_Ob) {
                 var12.field_lc.field_cb = sd.a(nl.field_h, param1 ^ 25, new String[]{var32});
-                var12.field_lc.a(var31, fq.field_q, v.field_c, 256, var12.field_K - v.field_c * 2);
+                var12.field_lc.a(var31, fq.field_q, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
                 var31 = var31 + fq.field_q;
               }
             }
             var33 = lg.a((byte) 121, var32, var12.field_Qb);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_rc.field_Db.b(var33, -v.field_c + var12.field_K - v.field_c);
+              var34_intLifetime1 = var12.field_rc.field_Db.b(var33, -MouseWheelHandler.field_c + var12.field_K - MouseWheelHandler.field_c);
               var12.field_rc.field_cb = var33;
               var12.field_rc.field_yb = var12.field_Rb * 256 / mh.field_b;
-              var12.field_rc.a(var31, fq.field_q * var34_intLifetime1, v.field_c, 256, -(2 * v.field_c) + var12.field_K);
+              var12.field_rc.a(var31, fq.field_q * var34_intLifetime1, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
               var31 = var31 + var34_intLifetime1 * fq.field_q;
             }
             if (var7_int == 0) {
@@ -1403,7 +1403,7 @@ public final class Pixelate extends lb {
           si.a(-1913, var6);
           return;
         }
-        t.d();
+        SoftwareRasterizer.d();
         if (param0 < 91) {
           field_G = (bd) null;
         }
@@ -1441,7 +1441,7 @@ public final class Pixelate extends lb {
               var3Lifetime1 = 192 - var3Lifetime1;
             }
           }
-          t.a(0, nf.field_f, 640, -nf.field_f + 480, 0, var3Lifetime1);
+          SoftwareRasterizer.a(0, nf.field_f, 640, -nf.field_f + 480, 0, var3Lifetime1);
         }
         if (fc.field_e != ti.field_t &&
           -2 == ti.field_t) {
@@ -1473,17 +1473,17 @@ public final class Pixelate extends lb {
             ko.a(stackIn_51_0, true);
           } else {
             if (fo.a((byte) 41)) {
-              t.a(0, 0, t.field_j, t.field_d);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
               dj.a(ab.field_c[0].field_F, ab.field_c[0].field_E, ab.field_c, -1501881951);
             }
           }
         } else {
-          t.a(0, 0, t.field_j, t.field_d);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           ad.a(ab.field_c, ab.field_c[0].field_E, -96, ab.field_c[0].field_F);
         }
         if (ga.field_a != ga.field_d) {
           var3Lifetime3 = (hf.field_o << 8) / 16;
-          t.a(0, 0, t.field_j, t.field_d, 0, var3Lifetime3);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, var3Lifetime3);
         }
         fj.a(0, 0, (byte) -123, var6);
     }
@@ -1492,11 +1492,11 @@ public final class Pixelate extends lb {
         int var3_int = 0;
         int var8 = 0;
         int var9;
-        tf var3;
-        tf var4;
-        tf var5;
-        tf var6;
-        tf[][] var7;
+        Sprite var3;
+        Sprite var4;
+        Sprite var5;
+        Sprite var6;
+        Sprite[][] var7;
         var9 = field_H ? 1 : 0;
         ho.a(-29810);
         if (ji.field_b != null) {
@@ -1512,8 +1512,8 @@ public final class Pixelate extends lb {
                     dg.field_d.a("lobby", -1)) {
                     if (ji.field_b.b(-3) &&
                       ji.field_b.a((byte) 92)) {
-                      if (we.field_p.b(param1 ^ -7) &&
-                        we.field_p.a((byte) 92)) {
+                      if (PacketBuffer.field_p.b(param1 ^ -7) &&
+                        PacketBuffer.field_p.a((byte) 92)) {
                         if (ab.field_f.b(-3) &&
                           ab.field_f.a((byte) 92)) {
                           if (lj.field_c.b(-3) &&
@@ -1532,7 +1532,7 @@ public final class Pixelate extends lb {
                                       return false;
                                     }
                                     eh.c(5);
-                                    rf.a(new po(ji.field_b, we.field_p), 5088, we.field_p);
+                                    rf.a(new po(ji.field_b, PacketBuffer.field_p), 5088, PacketBuffer.field_p);
                                     ji.field_b = null;
                                     sf.a(param1 - 4);
                                     return false;
@@ -1543,7 +1543,7 @@ public final class Pixelate extends lb {
                                 li.a(75.0f, -1, mn.a(120, eh.field_a, em.field_a, "", jd.field_p));
                                 return false;
                               }
-                              li.a(75.0f, -1, mn.a(53, hd.field_c, pc.field_x, "basic", ha.field_f));
+                              li.a(75.0f, -1, mn.a(53, hd.field_c, pc.field_x, "basic", CanvasRasterBuffer.field_f));
                               return false;
                             }
                             li.a(75.0f, -1, mn.a(param1 + 113, pf.field_d, g.field_q, "basic", im.field_Mb));
@@ -1555,19 +1555,19 @@ public final class Pixelate extends lb {
                         li.a(45.0f, -1, lj.a(ab.field_f, fq.field_p, jh.field_I, -22165, 0));
                         return false;
                       }
-                      li.a(40.0f, -1, mn.a(83, we.field_p, bm.field_n, "", l.field_u));
+                      li.a(40.0f, -1, mn.a(83, PacketBuffer.field_p, bm.field_n, "", l.field_u));
                       return false;
                     }
                     li.a(20.0f, -1, mn.a(125, ji.field_b, bm.field_n, "", l.field_u));
                     return false;
                   }
-                  li.a(17.0f, -1, mn.a(107, dg.field_d, pc.field_x, "lobby", ha.field_f));
+                  li.a(17.0f, -1, mn.a(107, dg.field_d, pc.field_x, "lobby", CanvasRasterBuffer.field_f));
                   return false;
                 }
                 li.a(13.0f, -1, mn.a(56, qn.field_l, g.field_q, "lobby", im.field_Mb));
                 return false;
               }
-              li.a(12.0f, -1, mn.a(57, dg.field_d, pc.field_x, "arial13", ha.field_f));
+              li.a(12.0f, -1, mn.a(57, dg.field_d, pc.field_x, "arial13", CanvasRasterBuffer.field_f));
               return false;
             }
             li.a(11.0f, param1 ^ -5, mn.a(78, qn.field_l, g.field_q, "arial13", im.field_Mb));
@@ -1576,10 +1576,10 @@ public final class Pixelate extends lb {
           li.a(10.0f, param1 - 5, mn.a(62, qn.field_l, g.field_q, "basic", im.field_Mb));
           return false;
         }
-        if (we.field_p != null) {
+        if (PacketBuffer.field_p != null) {
           li.a(90.0f, -1, rh.field_r);
           this.d(param1 + 94);
-          we.field_p = null;
+          PacketBuffer.field_p = null;
           sf.a(0);
           return false;
         }
@@ -1693,7 +1693,7 @@ public final class Pixelate extends lb {
         SecondaryNodeDequeIterator.a(5, eh.a("tiles5", "basic", (byte) 47, pf.field_d), (byte) -53);
         SecondaryNodeDequeIterator.a(6, eh.a("tiles6", "basic", (byte) 47, pf.field_d), (byte) -53);
         SecondaryNodeDequeIterator.a(7, eh.a("tiles7", "basic", (byte) 47, pf.field_d), (byte) -53);
-        oo.field_c = new tf[22];
+        oo.field_c = new Sprite[22];
         oo.field_c[0] = bi.a("basic", "achievement0", pf.field_d, (byte) -75);
         oo.field_c[1] = bi.a("basic", "achievement1", pf.field_d, (byte) -57);
         oo.field_c[2] = bi.a("basic", "achievement2", pf.field_d, (byte) -34);
@@ -1720,17 +1720,17 @@ public final class Pixelate extends lb {
         var6 = bi.a("basic", "orbcoin", qn.field_l, (byte) -32);
         rp.a((byte) -59, pj.field_a);
         rp.a((byte) -59, var6);
-        vn.field_c = new tf(16, 16);
+        vn.field_c = new Sprite(16, 16);
         vn.field_c.c();
         var6.a(0, 0, 16, 16);
-        ha.field_b = new tf(22, 48);
-        de.field_c = new tf(22, 48);
-        ha.field_b.c();
-        t.d(-22, 0, 42, 48, 20, 65793);
+        CanvasRasterBuffer.field_b = new Sprite(22, 48);
+        de.field_c = new Sprite(22, 48);
+        CanvasRasterBuffer.field_b.c();
+        SoftwareRasterizer.d(-22, 0, 42, 48, 20, 65793);
         de.field_c.c();
-        ha.field_b.a(0, 0);
+        CanvasRasterBuffer.field_b.a(0, 0);
         ClientException.field_f.a(19692);
-        var7 = new tf[fo.field_u.length][];
+        var7 = new Sprite[fo.field_u.length][];
         for (var8 = 0; fo.field_u.length > var8; var8++) {
           if (null != fo.field_u[var8]) {
             var7[var8] = eh.a(fo.field_u[var8], "basic", (byte) 47, pf.field_d);
@@ -1764,7 +1764,7 @@ public final class Pixelate extends lb {
         pf.field_d = wb.a(5, (byte) 124);
         hd.field_c = wb.a(6, (byte) 124);
         ji.field_b = wb.a(7, (byte) 124);
-        we.field_p = wb.a(8, (byte) 124);
+        PacketBuffer.field_p = wb.a(8, (byte) 124);
         ab.field_f = wb.a(9, (byte) 124);
         lj.field_c = wb.a(10, (byte) 124);
         uk.field_u = wb.a(11, (byte) 124);

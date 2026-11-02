@@ -231,24 +231,24 @@ class ng extends IntrusiveNode {
 
     final static void g(int param0) {
         RuntimeException runtimeException = null;
-        tf var1 = null;
-        tf var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          var1 = new tf(540, 140);
+          var1 = new Sprite(540, 140);
           h.a(-126, var1);
           ja.a();
-          t.d();
+          SoftwareRasterizer.d();
           ga.field_f = param0;
           ma.d((byte) 106);
           var2 = var1.a();
           var3 = 0;
           while (15 > var3) {
             var2.e(-2, -2, 16777215);
-            t.c(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.c(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;
@@ -750,7 +750,7 @@ class ng extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = we.b(nh.a(param0, -29667), -7067);
+          var2 = PacketBuffer.b(nh.a(param0, -29667), -7067);
           if (var2 == null) {
             var2 = "";
           }

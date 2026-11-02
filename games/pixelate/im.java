@@ -6,7 +6,7 @@ final class im extends ak {
     static boolean field_Jb;
     static int field_Qb;
     static String field_Mb;
-    static tf[] field_Hb;
+    static Sprite[] field_Hb;
     ak field_Pb;
     ak field_Ob;
     int field_Kb;

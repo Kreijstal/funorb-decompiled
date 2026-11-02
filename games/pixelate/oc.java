@@ -3,21 +3,21 @@
  */
 final class oc extends ng {
     private int field_I;
-    static tf field_W;
+    static Sprite field_W;
     private int field_T;
-    static tf field_N;
-    private tf field_K;
+    static Sprite field_N;
+    private Sprite field_K;
     boolean field_Y;
-    private tf field_L;
-    private tf field_F;
+    private Sprite field_L;
+    private Sprite field_F;
     private int field_M;
     static de[] field_H;
-    static tf field_S;
+    static Sprite field_S;
     private int field_V;
     private int field_Z;
     private int field_R;
     int field_Q;
-    private tf[] field_P;
+    private Sprite[] field_P;
     static boolean field_G;
     static ak field_U;
     static boolean field_J;
@@ -25,18 +25,18 @@ final class oc extends ng {
     static String field_X;
 
     private final void d(byte param0) {
-        this.field_P = new tf[]{this.a(this.field_Z, this.field_I, (byte) -121), this.a(this.field_V, this.field_T, (byte) -125)};
+        this.field_P = new Sprite[]{this.a(this.field_Z, this.field_I, (byte) -121), this.a(this.field_V, this.field_T, (byte) -125)};
         if (param0 > 73) {
           this.field_F = this.c(true);
           this.field_K = this.field_F.e();
-          this.field_L = new tf(this.field_C >> 1, this.field_C);
+          this.field_L = new Sprite(this.field_C >> 1, this.field_C);
           return;
         }
         ng var3 = (ng) null;
         this.a(59, -16, -71, (ng) null);
         this.field_F = this.c(true);
         this.field_K = this.field_F.e();
-        this.field_L = new tf(this.field_C >> 1, this.field_C);
+        this.field_L = new Sprite(this.field_C >> 1, this.field_C);
     }
 
     public static void a(byte param0) {
@@ -52,8 +52,8 @@ final class oc extends ng {
         }
     }
 
-    private final tf c(boolean param0) {
-        tf var11 = null;
+    private final Sprite c(boolean param0) {
+        Sprite var11 = null;
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -65,7 +65,7 @@ final class oc extends ng {
         double var6Lifetime1;
         int var8Lifetime1;
         if (param0) {
-          var11 = new tf(var2, this.field_C);
+          var11 = new Sprite(var2, this.field_C);
           h.a(-72, var11);
           for (var4 = 0; this.field_C > var4; var4++) {
             for (var5 = 0; var2 > var5; var5++) {
@@ -75,14 +75,14 @@ final class oc extends ng {
                 var6 = Math.sqrt(-var6 + 1.0);
                 var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
               }
-              t.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+              SoftwareRasterizer.a(var5, var4, var8 << 8 | var8 | var8 << 16);
             }
           }
           ia.a((byte) 92);
           return var11;
         }
         this.a(-24, 16, 122, (byte) -10);
-        tf var10 = new tf(var2, this.field_C);
+        Sprite var10 = new Sprite(var2, this.field_C);
         h.a(-72, var10);
         for (var4Lifetime1 = 0; this.field_C > var4Lifetime1; var4Lifetime1++) {
           for (var5Lifetime1 = 0; var2 > var5Lifetime1; var5Lifetime1++) {
@@ -92,7 +92,7 @@ final class oc extends ng {
               var6Lifetime1 = Math.sqrt(-var6Lifetime1 + 1.0);
               var8Lifetime1 = !(1.0 <= var6Lifetime1) ? (int)(var6Lifetime1 * 255.0) : 255;
             }
-            t.a(var5Lifetime1, var4Lifetime1, var8Lifetime1 << 8 | var8Lifetime1 | var8Lifetime1 << 16);
+            SoftwareRasterizer.a(var5Lifetime1, var4Lifetime1, var8Lifetime1 << 8 | var8Lifetime1 | var8Lifetime1 << 16);
           }
         }
         ia.a((byte) 92);
@@ -185,8 +185,8 @@ final class oc extends ng {
         }
     }
 
-    private final tf a(int param0, int param1, byte param2) {
-        tf var16 = null;
+    private final Sprite a(int param0, int param1, byte param2) {
+        Sprite var16 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -211,7 +211,7 @@ final class oc extends ng {
         int var9Lifetime1Lifetime1;
         int var12Lifetime1Lifetime1;
         if (param2 < -119) {
-          var16 = new tf(2 * this.field_M, this.field_C);
+          var16 = new Sprite(2 * this.field_M, this.field_C);
           h.a(-66, var16);
           var5 = this.field_C >> 1;
           for (var6 = 0; this.field_C > var6; var6++) {
@@ -221,19 +221,19 @@ final class oc extends ng {
             var10 = var6 - var5;
             var11 = 128 + (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
             var12 = 256 <= var11 ? var9 | var8 : (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 8;
-            t.b(var7, var6, this.field_M, var12);
-            t.b(-(this.field_M * 2) + var7, var6, this.field_M, var12);
+            SoftwareRasterizer.b(var7, var6, this.field_M, var12);
+            SoftwareRasterizer.b(-(this.field_M * 2) + var7, var6, this.field_M, var12);
             var9Lifetime2 = param1 & 65280;
             var8Lifetime2 = param1 & 16711935;
             var12Lifetime2 = var11 < 256 ? (-16711936 & var8Lifetime2 * var11 | 16711680 & var11 * var9Lifetime2) >>> 8 : var8Lifetime2 | var9Lifetime2;
-            t.b(this.field_M + var7, var6, this.field_M, var12Lifetime2);
-            t.b(-this.field_M + var7, var6, this.field_M, var12Lifetime2);
+            SoftwareRasterizer.b(this.field_M + var7, var6, this.field_M, var12Lifetime2);
+            SoftwareRasterizer.b(-this.field_M + var7, var6, this.field_M, var12Lifetime2);
           }
           ia.a((byte) 92);
           return var16;
         }
         field_U = (ak) null;
-        tf var15 = new tf(2 * this.field_M, this.field_C);
+        Sprite var15 = new Sprite(2 * this.field_M, this.field_C);
         h.a(-66, var15);
         var5Lifetime1 = this.field_C >> 1;
         for (var6Lifetime1 = 0; this.field_C > var6Lifetime1; var6Lifetime1++) {
@@ -243,19 +243,19 @@ final class oc extends ng {
           var10Lifetime1 = var6Lifetime1 - var5Lifetime1;
           var11Lifetime1 = 128 + (int)(128.0 * (Math.sqrt((double)(-(var10Lifetime1 * var10Lifetime1) + var5Lifetime1 * var5Lifetime1)) / (double)var5Lifetime1));
           var12Lifetime1 = 256 <= var11Lifetime1 ? var9Lifetime1 | var8Lifetime1 : (-16711936 & var8Lifetime1 * var11Lifetime1 | var9Lifetime1 * var11Lifetime1 & 16711680) >>> 8;
-          t.b(var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1);
-          t.b(-(this.field_M * 2) + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1);
+          SoftwareRasterizer.b(var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1);
+          SoftwareRasterizer.b(-(this.field_M * 2) + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1);
           var9Lifetime1Lifetime1 = param1 & 65280;
           var8Lifetime1Lifetime1 = param1 & 16711935;
           var12Lifetime1Lifetime1 = var11Lifetime1 < 256 ? (-16711936 & var8Lifetime1Lifetime1 * var11Lifetime1 | 16711680 & var11Lifetime1 * var9Lifetime1Lifetime1) >>> 8 : var8Lifetime1Lifetime1 | var9Lifetime1Lifetime1;
-          t.b(this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
-          t.b(-this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
+          SoftwareRasterizer.b(this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
+          SoftwareRasterizer.b(-this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
         }
         ia.a((byte) 92);
         return var15;
     }
 
-    private final void a(tf param0, int param1, int param2, int param3) {
+    private final void a(Sprite param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -276,7 +276,7 @@ final class oc extends ng {
             param0.b(var6, param3);
           }
           ia.a((byte) 92);
-          if (this.field_F.field_F + param2 >= t.field_e) {
+          if (this.field_F.field_F + param2 >= SoftwareRasterizer.field_e) {
             h.a(-122, this.field_L);
             param0.b(-this.field_R, 0);
             param0.b(-this.field_R + this.field_M * 2, 0);
@@ -284,7 +284,7 @@ final class oc extends ng {
             ia.a((byte) 92);
             this.field_L.b(param2, param3);
           }
-          if (-this.field_F.field_F + var5_int > t.field_h) {
+          if (-this.field_F.field_F + var5_int > SoftwareRasterizer.field_h) {
             return;
           }
           h.a(param1 - 1177347371, this.field_L);

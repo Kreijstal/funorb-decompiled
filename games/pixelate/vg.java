@@ -323,27 +323,27 @@ final class vg {
           if (null != NodeHashTableIterator.field_e) {
             if (param0 >= 0) {
               decompiledFrameRemainder0 = (Pixelate.field_G == uk.field_s);
-              if ((decompiledFrameRemainder0) && (aa.field_f.field_m == 0 &&
+              if ((decompiledFrameRemainder0) && (aa.field_f.position == 0 &&
                 hm.a(64) > (aj.field_m + 10000L))) {
                 aa.field_f.g(param0, 15514);
               }
             } else {
-              if (aa.field_f.field_m == 0 &&
+              if (aa.field_f.position == 0 &&
                 hm.a(64) > (aj.field_m + 10000L)) {
                 aa.field_f.g(param0, 15514);
               }
             }
             if (decompiledFrameRemainder0) {
-              if (aa.field_f.field_m > 0) {
+              if (aa.field_f.position > 0) {
                 try {
-                  NodeHashTableIterator.field_e.a(aa.field_f.field_m, -98, 0, aa.field_f.field_k);
+                  NodeHashTableIterator.field_e.a(aa.field_f.position, -98, 0, aa.field_f.payload);
                   aj.field_m = hm.a(64);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   na.a(true);
                 }
-                aa.field_f.field_m = 0;
+                aa.field_f.position = 0;
               }
               if (param1 == 10000) {
                 return;
@@ -352,7 +352,7 @@ final class vg {
               return;
             }
           }
-          aa.field_f.field_m = 0;
+          aa.field_f.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -299,7 +299,7 @@ final class hc extends ch implements om, vo {
                   var26 = var26 + var28;
                   var17_int = var17_int + var19;
                   var30 = var30 + var32;
-                  var36Lifetime2 = var36Lifetime2 + t.field_j;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_j;
                 }
               }
               var36Lifetime3 = param1 - param13;
@@ -451,7 +451,7 @@ final class hc extends ch implements om, vo {
               var29 = var29 + var31;
               var30 = var30 + var32;
               var17_int = var17_int + var19;
-              var35Lifetime1 = var35Lifetime1 + t.field_j;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_j;
               var25 = var25 + var27;
               var26 = var26 + var28;
               var22 = var22 + var24;

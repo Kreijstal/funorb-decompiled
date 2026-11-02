@@ -41,7 +41,7 @@ final class on extends hb {
             return stackIn_3_0;
           }
           if (param0 == 2) {
-            stackIn_6_0 = sd.a(cf.field_w, param2 + 17402, new String[]{param1});
+            stackIn_6_0 = sd.a(SpriteState.field_w, param2 + 17402, new String[]{param1});
             return stackIn_6_0;
           }
           if (param0 == 3) {

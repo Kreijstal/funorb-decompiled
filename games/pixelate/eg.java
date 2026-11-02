@@ -151,9 +151,9 @@ final class eg extends eh {
           in.field_t = param2;
           gq.field_n = param1;
           ug.field_k = param3;
-          li.field_a = new tf[param5.length];
+          li.field_a = new Sprite[param5.length];
           for (var7 = 0; param5.length > var7; var7++) {
-            li.field_a[var7] = new tf(317, 34);
+            li.field_a[var7] = new Sprite(317, 34);
           }
           if (param0 != -94) {
             field_h = (int[]) null;
@@ -216,19 +216,19 @@ final class eg extends eh {
           for (var2 = 0; var2 < 256; var2++) {
             var9[var2] = var2 * 65793;
           }
-          gd.field_f = new tf[50];
+          gd.field_f = new Sprite[50];
           var2Lifetime1 = -48 / ((param0 - 31) / 39);
           for (var3 = 0; 50 > var3; var3++) {
-            gd.field_f[var3] = new tf(63, 63);
+            gd.field_f[var3] = new Sprite(63, 63);
             gd.field_f[var3].c();
             var4 = (double)var3 * 6.283185307179586 / 50.0;
             var6 = (int)(16.0 * Math.sin(var4)) >> 1;
-            t.a(512, 512, 48 + var6 << 4, 255, var13);
-            for (var7 = 0; t.field_k.length > var7; var7++) {
-              t.field_k[var7] = 16777215 - t.field_k[var7];
+            SoftwareRasterizer.a(512, 512, 48 + var6 << 4, 255, var13);
+            for (var7 = 0; SoftwareRasterizer.field_k.length > var7; var7++) {
+              SoftwareRasterizer.field_k[var7] = 16777215 - SoftwareRasterizer.field_k[var7];
             }
             for (var7Lifetime1 = 0; var7Lifetime1 < 5; var7Lifetime1++) {
-              t.b();
+              SoftwareRasterizer.b();
             }
           }
           return;

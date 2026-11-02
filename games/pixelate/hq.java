@@ -122,8 +122,8 @@ final class hq extends de {
           var5.a(lo.field_Lb, 120, var6, 0, -1);
           var5.c(Integer.toString(this.field_J), 540, var6, 1, -1);
           var6 = var6 + var7;
-          t.d(118, var6 - 5, 424, 9, 0);
-          t.d(120, var6 - 2, 420, 3, 16777215);
+          SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
+          SoftwareRasterizer.d(120, var6 - 2, 420, 3, 16777215);
           var6 = var6 + var7;
           var5.a(he.field_c, 120, var6, 0, -1);
           var5.c(this.field_K, 540, var6, 1, -1);
@@ -152,8 +152,8 @@ final class hq extends de {
             var5.a(ep.field_d, 120, var6, 0, -1);
             var5.c(this.field_y, 540, var6, 1, -1);
             var6 = var6 + var7;
-            t.d(118, var6 - 5, 424, 9, 0);
-            t.d(120, var6 - 2, 420, 3, 16777215);
+            SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
+            SoftwareRasterizer.d(120, var6 - 2, 420, 3, 16777215);
             var6 = var6 + var7;
             var5.b(this.field_u, 330, var6, 0, -1);
           }
@@ -269,7 +269,7 @@ final class hq extends de {
           super.c(0);
         } else {
           ro.field_e.a(false, param0 ^ 0);
-          t.a(0, 0, 640, 480);
+          SoftwareRasterizer.a(0, 0, 640, 480);
           rh.b((byte) -75);
         }
     }
@@ -382,7 +382,7 @@ final class hq extends de {
         if (c.field_R == null) {
           c.field_R = vk.a(480, 123, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
         }
-        ha var6 = ClientException.field_f;
+        CanvasRasterBuffer var6 = ClientException.field_f;
         ClientException.field_f = c.field_R;
         ClientException.field_f.a(19692);
         this.c(0);

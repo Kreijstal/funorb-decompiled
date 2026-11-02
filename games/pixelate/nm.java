@@ -4,7 +4,7 @@
 final class nm {
     static String field_b;
     private bb field_a;
-    static tf field_f;
+    static Sprite field_f;
     private IntrusiveNode field_e;
     static int field_c;
     static boolean field_d;
@@ -58,7 +58,7 @@ final class nm {
             var3 = (String) null;
             nm.a((String) null, -43);
           }
-          var1 = (uj) (i.field_n.c(1504642273));
+          var1 = (uj) (ImageProducerRasterBuffer.field_n.c(1504642273));
           while (var1 != null) {
             if (var1.field_Tb > 0) {
               var1.field_Tb = var1.field_Tb - 1;
@@ -69,7 +69,7 @@ final class nm {
                 }
               }
             }
-            var1 = (uj) (i.field_n.f(param0 ^ -1504642274));
+            var1 = (uj) (ImageProducerRasterBuffer.field_n.f(param0 ^ -1504642274));
           }
           var1_ref = (eq) (nk.field_a.c(param0 ^ -1504642274));
           while (var1_ref != null) {
@@ -154,7 +154,7 @@ final class nm {
         String var2 = (String) null;
         al.a("", -110, (String) null);
         if (!param0) {
-          field_f = (tf) null;
+          field_f = (Sprite) null;
         }
     }
 

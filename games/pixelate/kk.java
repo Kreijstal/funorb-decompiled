@@ -18,7 +18,7 @@ final class kk {
     private int field_v;
     private int field_x;
     private int[] field_m;
-    private tf field_c;
+    private Sprite field_c;
     private int field_i;
     private int field_g;
     private int field_p;
@@ -177,7 +177,7 @@ final class kk {
           return;
         }
         this.field_c.c();
-        t.d();
+        SoftwareRasterizer.d();
         this.a(-20, 0, 0);
         ClientException.field_f.a(19692);
         for (var2Lifetime1 = 1; -1 + this.field_h > var2Lifetime1; var2Lifetime1++) {
@@ -318,10 +318,10 @@ final class kk {
                 if (var8 == 0) {
                   var13 = this.field_m[var4 * this.field_h + var5];
                   if (var9 == 0) {
-                    t.a(var10, var11, 32, 32, 0, 64 + var13);
+                    SoftwareRasterizer.a(var10, var11, 32, 32, 0, 64 + var13);
                   } else {
                     if (var13 < 48) {
-                      t.a(var10, var11, 32, 32, 0, -var13 + 48);
+                      SoftwareRasterizer.a(var10, var11, 32, 32, 0, -var13 + 48);
                     }
                   }
                 }
@@ -393,19 +393,19 @@ final class kk {
         var4Lifetime1 = -this.field_f + this.field_h;
         var5 = -this.field_e + this.field_j;
         for (var6 = this.field_p; var5 >= var6; var6++) {
-          t.h(32 * this.field_g + var2 - 16, var3 + 32 * var6, 16 + (var4Lifetime1 * 32 + var2), var3 + var6 * 32, 0, 100);
+          SoftwareRasterizer.h(32 * this.field_g + var2 - 16, var3 + 32 * var6, 16 + (var4Lifetime1 * 32 + var2), var3 + var6 * 32, 0, 100);
         }
         for (var6Lifetime1 = this.field_g; var4Lifetime1 >= var6Lifetime1; var6Lifetime1++) {
-          t.h(var2 + 32 * var6Lifetime1, this.field_p * 32 - 16 + var3, var2 + var6Lifetime1 * 32, 32 * var5 + var3 + 16, 0, 100);
+          SoftwareRasterizer.h(var2 + 32 * var6Lifetime1, this.field_p * 32 - 16 + var3, var2 + var6Lifetime1 * 32, 32 * var5 + var3 + 16, 0, 100);
         }
         if (this.c(-108)) {
-          t.a(f.field_d);
+          SoftwareRasterizer.a(f.field_d);
           if (this.field_i == 0 &&
             this.field_v > 0) {
-            t.f(-4 + (this.field_A + this.field_t), this.field_u + this.field_x - 4, 640, 480);
+            SoftwareRasterizer.f(-4 + (this.field_A + this.field_t), this.field_u + this.field_x - 4, 640, 480);
           }
           this.field_c.b(var2, var3);
-          t.b(f.field_d);
+          SoftwareRasterizer.b(f.field_d);
         } else {
           this.a(-20, var3, var2);
         }
@@ -441,13 +441,13 @@ final class kk {
                   fi.a(var11, var12, var13, var13, 16777215, 40);
                 }
               } else {
-                t.a(var11, var12, var13, var13, 0, 192);
+                SoftwareRasterizer.a(var11, var12, var13, var13, 0, 192);
               }
               stackIn_48_0 = (var9 != 0) ? 16777215 : 11184810;
               var14 = stackIn_48_0;
-              t.e(var11 + 1, var12 + 1, -1 + var13, var14, 100);
-              t.f(var11 + 1, 2 + var12, -2 + var13, var14, 100);
-              t.a(var11, var12, var13, var13, 0);
+              SoftwareRasterizer.e(var11 + 1, var12 + 1, -1 + var13, var14, 100);
+              SoftwareRasterizer.f(var11 + 1, 2 + var12, -2 + var13, var14, 100);
+              SoftwareRasterizer.a(var11, var12, var13, var13, 0);
             }
           }
         }
@@ -462,13 +462,13 @@ final class kk {
         if (0 < this.field_v &&
           this.field_i == 0 &&
           0 == this.field_r) {
-          t.a(f.field_d);
-          t.f(var2 + this.field_g * 32, this.field_p * 32 + var3, (this.field_h - this.field_f) * 32 + var2, var3 + 32 * (-this.field_e + this.field_j));
+          SoftwareRasterizer.a(f.field_d);
+          SoftwareRasterizer.f(var2 + this.field_g * 32, this.field_p * 32 + var3, (this.field_h - this.field_f) * 32 + var2, var3 + 32 * (-this.field_e + this.field_j));
           for (var6Lifetime3 = 0; 20 > var6Lifetime3; var6Lifetime3 += 3) {
             fi.a(this.field_g * 32 + (this.field_t - (-this.field_A - var6Lifetime3 * 2 + 40)), -20 + var3, this.field_A + 32 * this.field_g + this.field_t - 2 * (-var6Lifetime3 + 20), this.field_j * 32 + var3 + 20, 4, var6Lifetime3 * 3, sd.field_Q);
             fi.a(var2 - 20, -(2 * (-var6Lifetime3 + 20)) + this.field_x + (this.field_u + this.field_p * 32), this.field_h * 32 + (var2 + 20), var6Lifetime3 * 2 - 40 + (this.field_p * 32 + this.field_u) + this.field_x, 4, 3 * var6Lifetime3, sd.field_Q);
           }
-          t.b(f.field_d);
+          SoftwareRasterizer.b(f.field_d);
         }
     }
 
@@ -507,24 +507,24 @@ final class kk {
         int var10 = 0;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          t.b(param0, param2, param3 + 1, 10000536);
-          t.b(param0, param1 + param2, 1 + param3, 12105912);
+          SoftwareRasterizer.b(param0, param2, param3 + 1, 10000536);
+          SoftwareRasterizer.b(param0, param1 + param2, 1 + param3, 12105912);
           var5_int = 1;
-          if (param2 + var5_int < t.field_f) {
-            var5_int = t.field_f - param2;
+          if (param2 + var5_int < SoftwareRasterizer.field_f) {
+            var5_int = SoftwareRasterizer.field_f - param2;
           }
           var6 = param1;
           if (param4 != -51) {
             field_s = -43;
           }
-          if (t.field_a < param2 + var6) {
-            var6 = t.field_a - param2;
+          if (SoftwareRasterizer.field_a < param2 + var6) {
+            var6 = SoftwareRasterizer.field_a - param2;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + var7 * 48 / param1;
             var9 = var8 | (var8 << 8 | var8 << 16);
-            t.field_k[t.field_j * (param2 + var7) + param0] = var9;
-            t.field_k[param0 + (param2 + var7) * t.field_j + param3] = var9;
+            SoftwareRasterizer.field_k[SoftwareRasterizer.field_j * (param2 + var7) + param0] = var9;
+            SoftwareRasterizer.field_k[param0 + (param2 + var7) * SoftwareRasterizer.field_j + param3] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -557,7 +557,7 @@ final class kk {
           this.field_j = this.field_B.field_a;
           this.field_h = this.field_B.field_i;
           this.field_q = new bb();
-          this.field_c = new tf(this.field_h * 32, 32 * this.field_j);
+          this.field_c = new Sprite(this.field_h * 32, 32 * this.field_j);
           this.field_z = 1;
           var4_int = this.field_B.b((byte) -60);
           if ((2 & var4_int) == 0) {

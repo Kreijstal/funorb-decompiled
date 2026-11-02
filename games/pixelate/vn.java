@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class vn {
-    static tf field_c;
+    static Sprite field_c;
     static boolean[][] field_e;
     static long field_b;
     static int field_g;
@@ -46,7 +46,7 @@ final class vn {
         field_d = null;
         field_c = null;
         if (param0) {
-          field_c = (tf) null;
+          field_c = (Sprite) null;
         }
     }
 
@@ -67,7 +67,7 @@ final class vn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 22510) {
-            field_c = (tf) null;
+            field_c = (Sprite) null;
           }
           var5_int = param0.a(122, param1);
           var6 = param0.a((byte) -95, param2, var5_int);

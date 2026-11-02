@@ -107,18 +107,18 @@ final class ep {
             var3 = var5;
             var5 = param0[var7_int];
             var6 = param0[var7_int + 1];
-            if (var5 >= t.field_e) {
-              if (t.field_e > var3) {
+            if (var5 >= SoftwareRasterizer.field_e) {
+              if (SoftwareRasterizer.field_e > var3) {
                 var8_int = var5;
                 var9 = var6;
                 var10 = var3;
                 var11 = var4;
                 fieldTemp$18 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$18] = t.field_e;
+                qj.field_a[fieldTemp$18] = SoftwareRasterizer.field_e;
                 fieldTemp$19 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$19] = (t.field_e - var8_int) * (-var9 + var11) / (var10 - var8_int) + var9;
+                qj.field_a[fieldTemp$19] = (SoftwareRasterizer.field_e - var8_int) * (-var9 + var11) / (var10 - var8_int) + var9;
               }
               fieldTemp$20 = ef.field_g;
               ef.field_g = ef.field_g + 1;
@@ -127,17 +127,17 @@ final class ep {
               ef.field_g = ef.field_g + 1;
               qj.field_a[fieldTemp$21] = var6;
             } else {
-              if (var3 >= t.field_e) {
+              if (var3 >= SoftwareRasterizer.field_e) {
                 var8_int = var3;
                 var9 = var4;
                 var10 = var5;
                 var11 = var6;
                 fieldTemp$22 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$22] = t.field_e;
+                qj.field_a[fieldTemp$22] = SoftwareRasterizer.field_e;
                 fieldTemp$23 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$23] = (-var9 + var11) * (-var8_int + t.field_e) / (var10 - var8_int) + var9;
+                qj.field_a[fieldTemp$23] = (-var9 + var11) * (-var8_int + SoftwareRasterizer.field_e) / (var10 - var8_int) + var9;
               }
             }
           }
@@ -157,31 +157,31 @@ final class ep {
             var3Lifetime1 = var5Lifetime1;
             var6Lifetime1 = bj.field_b[var8_intLifetime1 + 1];
             var5Lifetime1 = bj.field_b[var8_intLifetime1];
-            if (var5Lifetime1 >= t.field_h) {
-              if (var3Lifetime1 < t.field_h) {
+            if (var5Lifetime1 >= SoftwareRasterizer.field_h) {
+              if (var3Lifetime1 < SoftwareRasterizer.field_h) {
                 var9Lifetime1 = var3Lifetime1;
                 var10Lifetime1 = var4Lifetime1;
                 var11Lifetime1 = var5Lifetime1;
                 var12 = var6Lifetime1;
                 fieldTemp$12 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$12] = t.field_h;
+                qj.field_a[fieldTemp$12] = SoftwareRasterizer.field_h;
                 fieldTemp$13 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$13] = (t.field_h - var9Lifetime1) * (var12 - var10Lifetime1) / (var11Lifetime1 - var9Lifetime1) + var10Lifetime1;
+                qj.field_a[fieldTemp$13] = (SoftwareRasterizer.field_h - var9Lifetime1) * (var12 - var10Lifetime1) / (var11Lifetime1 - var9Lifetime1) + var10Lifetime1;
               }
             } else {
-              if (var3Lifetime1 >= t.field_h) {
+              if (var3Lifetime1 >= SoftwareRasterizer.field_h) {
                 var9Lifetime1 = var5Lifetime1;
                 var10Lifetime1 = var6Lifetime1;
                 var11Lifetime1 = var3Lifetime1;
                 var12 = var4Lifetime1;
                 fieldTemp$14 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$14] = t.field_h;
+                qj.field_a[fieldTemp$14] = SoftwareRasterizer.field_h;
                 fieldTemp$15 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$15] = var10Lifetime1 + (t.field_h - var9Lifetime1) * (-var10Lifetime1 + var12) / (var11Lifetime1 - var9Lifetime1);
+                qj.field_a[fieldTemp$15] = var10Lifetime1 + (SoftwareRasterizer.field_h - var9Lifetime1) * (-var10Lifetime1 + var12) / (var11Lifetime1 - var9Lifetime1);
               }
               fieldTemp$16 = ef.field_g;
               ef.field_g = ef.field_g + 1;
@@ -207,31 +207,31 @@ final class ep {
             var3Lifetime2 = var5Lifetime2;
             var6Lifetime2 = bj.field_b[var8_intLifetime2 + 1];
             var5Lifetime2 = bj.field_b[var8_intLifetime2];
-            if (t.field_f > var6Lifetime2) {
-              if (var4Lifetime2 >= t.field_f) {
+            if (SoftwareRasterizer.field_f > var6Lifetime2) {
+              if (var4Lifetime2 >= SoftwareRasterizer.field_f) {
                 var9Lifetime2 = var3Lifetime2;
                 var10Lifetime2 = var4Lifetime2;
                 var11Lifetime2 = var5Lifetime2;
                 var12Lifetime1 = var6Lifetime2;
                 fieldTemp$6 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$6] = var9Lifetime2 + (t.field_f - var10Lifetime2) * (var11Lifetime2 - var9Lifetime2) / (var12Lifetime1 - var10Lifetime2);
+                qj.field_a[fieldTemp$6] = var9Lifetime2 + (SoftwareRasterizer.field_f - var10Lifetime2) * (var11Lifetime2 - var9Lifetime2) / (var12Lifetime1 - var10Lifetime2);
                 fieldTemp$7 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$7] = t.field_f;
+                qj.field_a[fieldTemp$7] = SoftwareRasterizer.field_f;
               }
             } else {
-              if (var4Lifetime2 < t.field_f) {
+              if (var4Lifetime2 < SoftwareRasterizer.field_f) {
                 var9Lifetime2 = var5Lifetime2;
                 var10Lifetime2 = var6Lifetime2;
                 var11Lifetime2 = var3Lifetime2;
                 var12Lifetime1 = var4Lifetime2;
                 fieldTemp$8 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$8] = var9Lifetime2 + (-var9Lifetime2 + var11Lifetime2) * (t.field_f - var10Lifetime2) / (var12Lifetime1 - var10Lifetime2);
+                qj.field_a[fieldTemp$8] = var9Lifetime2 + (-var9Lifetime2 + var11Lifetime2) * (SoftwareRasterizer.field_f - var10Lifetime2) / (var12Lifetime1 - var10Lifetime2);
                 fieldTemp$9 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$9] = t.field_f;
+                qj.field_a[fieldTemp$9] = SoftwareRasterizer.field_f;
               }
               fieldTemp$10 = ef.field_g;
               ef.field_g = ef.field_g + 1;
@@ -257,31 +257,31 @@ final class ep {
             var4Lifetime3 = var6Lifetime3;
             var6Lifetime3 = bj.field_b[1 + var8_intLifetime3];
             var5Lifetime3 = bj.field_b[var8_intLifetime3];
-            if (var6Lifetime3 >= t.field_a) {
-              if (t.field_a > var4Lifetime3) {
+            if (var6Lifetime3 >= SoftwareRasterizer.field_a) {
+              if (SoftwareRasterizer.field_a > var4Lifetime3) {
                 var9Lifetime3 = var3Lifetime3;
                 var10Lifetime3 = var4Lifetime3;
                 var11Lifetime3 = var5Lifetime3;
                 var12Lifetime2 = var6Lifetime3;
                 fieldTemp$0 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$0] = var9Lifetime3 + (var11Lifetime3 - var9Lifetime3) * (t.field_a - var10Lifetime3) / (var12Lifetime2 - var10Lifetime3);
+                qj.field_a[fieldTemp$0] = var9Lifetime3 + (var11Lifetime3 - var9Lifetime3) * (SoftwareRasterizer.field_a - var10Lifetime3) / (var12Lifetime2 - var10Lifetime3);
                 fieldTemp$1 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$1] = t.field_a;
+                qj.field_a[fieldTemp$1] = SoftwareRasterizer.field_a;
               }
             } else {
-              if (t.field_a <= var4Lifetime3) {
+              if (SoftwareRasterizer.field_a <= var4Lifetime3) {
                 var9Lifetime3 = var5Lifetime3;
                 var10Lifetime3 = var6Lifetime3;
                 var11Lifetime3 = var3Lifetime3;
                 var12Lifetime2 = var4Lifetime3;
                 fieldTemp$2 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$2] = (-var10Lifetime3 + t.field_a) * (var11Lifetime3 - var9Lifetime3) / (-var10Lifetime3 + var12Lifetime2) + var9Lifetime3;
+                qj.field_a[fieldTemp$2] = (-var10Lifetime3 + SoftwareRasterizer.field_a) * (var11Lifetime3 - var9Lifetime3) / (-var10Lifetime3 + var12Lifetime2) + var9Lifetime3;
                 fieldTemp$3 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[fieldTemp$3] = t.field_a;
+                qj.field_a[fieldTemp$3] = SoftwareRasterizer.field_a;
               }
               fieldTemp$4 = ef.field_g;
               ef.field_g = ef.field_g + 1;

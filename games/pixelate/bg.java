@@ -21,19 +21,19 @@ abstract class bg {
         int var5Lifetime1;
         var4.g(param1, 15514);
         if (param2 == -26231) {
-          var4.field_m = var4.field_m + 1;
-          var5 = var4.field_m;
-          var4.e(160, 6);
-          var4.a(false, param0);
-          var4.f(var4.field_m - var5, -1);
+          var4.position = var4.position + 1;
+          var5 = var4.position;
+          var4.writeByte(160, 6);
+          var4.writeLong(false, param0);
+          var4.f(var4.position - var5, -1);
           return;
         }
         bg.a(18L, -62, 23);
-        var4.field_m = var4.field_m + 1;
-        var5Lifetime1 = var4.field_m;
-        var4.e(160, 6);
-        var4.a(false, param0);
-        var4.f(var4.field_m - var5Lifetime1, -1);
+        var4.position = var4.position + 1;
+        var5Lifetime1 = var4.position;
+        var4.writeByte(160, 6);
+        var4.writeLong(false, param0);
+        var4.f(var4.position - var5Lifetime1, -1);
     }
 
     void a(byte param0) {
@@ -120,32 +120,32 @@ abstract class bg {
         }
         int var6 = ui.field_f.field_A + var5;
         int var7 = var5 - (-param3 + ui.field_f.field_A);
-        t.d(var6, param2, param3 - 2 * ui.field_f.field_A, 25, 16711935);
-        t.a(bf.field_r);
-        t.f(0, 0, 320, 480);
+        SoftwareRasterizer.d(var6, param2, param3 - 2 * ui.field_f.field_A, 25, 16711935);
+        SoftwareRasterizer.a(bf.field_r);
+        SoftwareRasterizer.f(0, 0, 320, 480);
         ui.field_f.b(var5, param2);
-        t.f(320, 0, 640, 480);
+        SoftwareRasterizer.f(320, 0, 640, 480);
         ui.field_f.a(var7, param2);
-        t.b(bf.field_r);
-        t.b(var6, param2, -(2 * ui.field_f.field_A) + param3, 0);
-        t.b(var6, 25 + param2 - 1, param3 - 2 * ui.field_f.field_A, 0);
+        SoftwareRasterizer.b(bf.field_r);
+        SoftwareRasterizer.b(var6, param2, -(2 * ui.field_f.field_A) + param3, 0);
+        SoftwareRasterizer.b(var6, 25 + param2 - 1, param3 - 2 * ui.field_f.field_A, 0);
         int var8 = this.field_e >> 16;
         mh.a(param2, gd.field_h[param1], var8 - hp.field_Gb.field_A, 0);
         mh.a(param2, gd.field_h[param1], var8, 0);
-        t.a(bf.field_r);
-        t.f(0, 0, 320, 480);
+        SoftwareRasterizer.a(bf.field_r);
+        SoftwareRasterizer.f(0, 0, 320, 480);
         ec.field_q.a(var5 + 2, param2, 128);
-        t.f(320, 0, 640, 480);
+        SoftwareRasterizer.f(320, 0, 640, 480);
         di.field_c.a(-1 + param3 + (var5 - di.field_c.field_A), param2, 128);
-        t.b(bf.field_r);
+        SoftwareRasterizer.b(bf.field_r);
         if (var7 <= var6) {
           return;
         }
         int var9 = -4 + (param3 - ui.field_f.field_A * 2);
-        t.e(2 + var6, param2 + 3, var9, 16777215, 128);
-        t.e(2 + var6, 25 + param2 - 2, var9, 16777215, 128);
-        t.e(var6 + 2, param2 + 2, var9, 0, 128);
-        t.e(2 + var6, param2 + 22, var9, 0, 128);
+        SoftwareRasterizer.e(2 + var6, param2 + 3, var9, 16777215, 128);
+        SoftwareRasterizer.e(2 + var6, 25 + param2 - 2, var9, 16777215, 128);
+        SoftwareRasterizer.e(var6 + 2, param2 + 2, var9, 0, 128);
+        SoftwareRasterizer.e(2 + var6, param2 + 22, var9, 0, 128);
         fi.a(var6, 7 + param2, var7, param2 + 7, 4, 7, gd.field_b);
         if (this.field_h <= 0) {
           return;

@@ -8,7 +8,7 @@ final class jh extends ch implements vo {
     static String field_P;
     static int field_M;
     private qm field_L;
-    static tf field_O;
+    static Sprite field_O;
     private qm field_J;
 
     final static void a(int param0, int param1, boolean param2, boolean param3) {

@@ -47,11 +47,11 @@ final class aq {
           aj.field_t = aj.field_t - 1;
           var5 = aa.field_f;
           var5.g(param1, 15514);
-          var5.field_m = var5.field_m + 1;
-          var6 = var5.field_m;
-          var5.e(160, 3);
+          var5.position = var5.position + 1;
+          var6 = var5.position;
+          var5.writeByte(160, 3);
           var5.b((byte) -41, param0);
-          var5.f(var5.field_m - var6, -1);
+          var5.f(var5.position - var6, -1);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

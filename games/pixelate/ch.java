@@ -581,7 +581,7 @@ class ch extends ng implements j {
         }
     }
 
-    final static void a(boolean param0, String param1, int param2, int param3, tf[] param4, int param5, int param6, int param7, tf[] param8, boolean param9, jl param10, int param11, byte param12, int param13, int param14) {
+    final static void a(boolean param0, String param1, int param2, int param3, Sprite[] param4, int param5, int param6, int param7, Sprite[] param8, boolean param9, jl param10, int param11, byte param12, int param13, int param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -595,7 +595,7 @@ class ch extends ng implements j {
         int var15_int = 0;
         RuntimeException var15 = null;
         try {
-          qm.a(param13, nl.field_c, param2, param11, new sb(param4), ao.field_d, v.field_d, mh.field_a, new sb(param8), param6, param11, param10, param7, param6, param10, param14, mj.field_k, 108, hd.field_n, param5);
+          qm.a(param13, nl.field_c, param2, param11, new sb(param4), ao.field_d, MouseWheelHandler.field_d, mh.field_a, new sb(param8), param6, param11, param10, param7, param6, param10, param14, mj.field_k, 108, hd.field_n, param5);
           var15_int = 75 % ((param12 + 21) / 34);
           uh.a(param0, param9, param1, 0, param3);
           return;

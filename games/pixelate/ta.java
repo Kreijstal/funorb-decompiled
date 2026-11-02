@@ -28,8 +28,8 @@ final class ta {
         }
         ta.a(0, field_h);
         int var0 = field_c[1];
-        if (var0 < t.field_f) {
-          var0 = t.field_f;
+        if (var0 < SoftwareRasterizer.field_f) {
+          var0 = SoftwareRasterizer.field_f;
         }
         int var1 = 0;
         for (var2 = 0; var2 < field_h; var2 += 4) {
@@ -152,7 +152,7 @@ final class ta {
           }
           var2++;
           field_a = var2;
-          if (var2 >= t.field_a) {
+          if (var2 >= SoftwareRasterizer.field_a) {
             return false;
           }
           var3 = field_b;
@@ -256,7 +256,7 @@ final class ta {
           var1 = field_f;
           var2 = field_e;
           var3 = field_a;
-          t.b(var1, var3, var2 - var1, param0);
+          SoftwareRasterizer.b(var1, var3, var2 - var1, param0);
         }
     }
 

@@ -28,33 +28,33 @@ final class mh {
         int var10Lifetime2;
         param2 = param2 + hp.field_Gb.field_D;
         param0 = param0 + hp.field_Gb.field_y;
-        int var4 = param2 + param0 * t.field_j;
+        int var4 = param2 + param0 * SoftwareRasterizer.field_j;
         int var5 = 0;
         int var6 = hp.field_Gb.field_E;
         int var7 = hp.field_Gb.field_F;
-        int var8 = t.field_j - var7;
-        if (!(param0 >= t.field_f)) {
-          var10 = -param0 + t.field_f;
-          var4 = var4 + var10 * t.field_j;
+        int var8 = SoftwareRasterizer.field_j - var7;
+        if (!(param0 >= SoftwareRasterizer.field_f)) {
+          var10 = -param0 + SoftwareRasterizer.field_f;
+          var4 = var4 + var10 * SoftwareRasterizer.field_j;
           var6 = var6 - var10;
-          param0 = t.field_f;
+          param0 = SoftwareRasterizer.field_f;
           var5 = var5 + var10 * var7;
         }
         int var9 = param3;
-        if (t.field_e > param2) {
-          var10Lifetime1 = -param2 + t.field_e;
+        if (SoftwareRasterizer.field_e > param2) {
+          var10Lifetime1 = -param2 + SoftwareRasterizer.field_e;
           var4 = var4 + var10Lifetime1;
-          param2 = t.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var5 = var5 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var7 = var7 - var10Lifetime1;
         }
-        if (!(t.field_a >= param0 + var6)) {
-          var6 = var6 - (var6 + (param0 - t.field_a));
+        if (!(SoftwareRasterizer.field_a >= param0 + var6)) {
+          var6 = var6 - (var6 + (param0 - SoftwareRasterizer.field_a));
         }
-        if (var7 + param2 > t.field_h) {
-          var10Lifetime2 = var7 + (param2 - t.field_h);
+        if (var7 + param2 > SoftwareRasterizer.field_h) {
+          var10Lifetime2 = var7 + (param2 - SoftwareRasterizer.field_h);
           var8 = var8 + var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var7 = var7 - var10Lifetime2;
@@ -63,7 +63,7 @@ final class mh {
           return;
         }
         if (var6 > 0) {
-          wd.a(t.field_k, param3 ^ -123, param1, var6, var9, var4, var5, var7, var8, hp.field_Gb.field_G);
+          wd.a(SoftwareRasterizer.field_k, param3 ^ -123, param1, var6, var9, var4, var5, var7, var8, hp.field_Gb.field_G);
           return;
         }
     }

@@ -65,11 +65,11 @@ final class wb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             try {
               NodeHashTableIterator.field_e = new mo((java.net.Socket) (ra.field_b.field_e), op.field_p);
-              aa.field_f.field_m = 0;
+              aa.field_f.position = 0;
               var4 = vi.field_o;
               var5 = var4;
               uk.field_s = ij.field_o;
-              var5.field_m = 0;
+              var5.position = 0;
               stackIn_11_0 = (param1) ? -2 : -1;
               oj.field_G = stackIn_11_0;
               gb.field_d = stackIn_11_0;

@@ -108,7 +108,7 @@ final class ij extends de {
         if (param0 != 0) {
           return;
         }
-        t.d();
+        SoftwareRasterizer.d();
     }
 
     final void c(byte param0) {

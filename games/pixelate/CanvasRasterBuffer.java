@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ha {
+abstract class CanvasRasterBuffer {
     static String field_j;
     static String field_f;
     int[] field_e;
     int field_i;
     static int field_h;
     java.awt.Image field_d;
-    static tf[] field_g;
+    static Sprite[] field_g;
     int field_a;
     static String field_k;
-    static tf field_b;
+    static Sprite field_b;
     static String[] field_c;
 
     abstract void a(java.awt.Graphics param0, boolean param1, int param2, int param3);
 
     final static boolean b(int param0) {
         if (param0 != 12742) {
-          ha.b(-110);
+          CanvasRasterBuffer.b(-110);
           if (ri.field_f == null) {
             return un.field_l ? true : false;
           }
@@ -64,7 +64,7 @@ abstract class ha {
         if (param0 != 19692) {
           return;
         }
-        t.a(this.field_e, this.field_a, this.field_i);
+        SoftwareRasterizer.a(this.field_e, this.field_a, this.field_i);
     }
 
     public static void a(boolean param0) {

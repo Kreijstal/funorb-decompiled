@@ -784,7 +784,7 @@ final class be extends ch implements hi, vo {
             he.field_d.a(this.field_S, 20 + (param2 + this.field_z), 15 + param0 + this.field_p, -40 + this.field_E, this.field_C, 16777215, -1, 1, 0, he.field_d.field_w);
           }
           if (this.field_Q != null) {
-            t.b(param2 + 10, 134 + param0, -20 + this.field_E, 4210752);
+            SoftwareRasterizer.b(param2 + 10, 134 + param0, -20 + this.field_E, 4210752);
           }
           super.a(param0, param1, param2, (byte) 6);
           var5_int = 11 / ((param3 - 70) / 49);

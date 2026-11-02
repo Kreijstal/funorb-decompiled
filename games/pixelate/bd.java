@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bd {
-    static tf field_a;
+    static Sprite field_a;
     static int field_c;
     static java.applet.Applet field_b;
 
@@ -62,7 +62,7 @@ final class bd {
           if (0 != gh.field_u.field_P) {
             hc.field_M = new oe(gh.field_u.field_tb, gh.field_u.field_gb, gh.field_u.field_K, gh.field_u.field_nb, param3, cm.field_o, pj.field_i, ae.field_f, mg.field_h, um.field_q, dn.field_c, (String) null, 0L);
           }
-          var9 = ah.a((byte) -110, fq.field_q, param2, v.field_c);
+          var9 = ah.a((byte) -110, fq.field_q, param2, MouseWheelHandler.field_c);
           if (var9 != null) {
             fj.a(var9, (byte) 125);
           }
@@ -81,7 +81,7 @@ final class bd {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          field_a = (tf) null;
+          field_a = (Sprite) null;
           if (hf.field_q < 20) {
             return true;
           }
@@ -161,6 +161,6 @@ final class bd {
     }
 
     static {
-        field_a = new tf(270, 70);
+        field_a = new Sprite(270, 70);
     }
 }

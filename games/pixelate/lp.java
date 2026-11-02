@@ -89,7 +89,7 @@ final class lp {
           for (var7 = -var3; var7 < 0; var7++) {
             incrementValue$0 = var5;
             var5++;
-            t.field_k[incrementValue$0] = t.field_k[incrementValue$0] + uj.field_Ob;
+            SoftwareRasterizer.field_k[incrementValue$0] = SoftwareRasterizer.field_k[incrementValue$0] + uj.field_Ob;
           }
           var5 = var5 + var4;
         }

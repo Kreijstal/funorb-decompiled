@@ -63,10 +63,10 @@ final class se extends jj {
         return true;
     }
 
-    final static tf[] a(int param0, int param1, int param2, fm param3) {
+    final static Sprite[] a(int param0, int param1, int param2, fm param3) {
         RuntimeException var4 = null;
-        tf[] stackIn_5_0 = null;
-        tf[] stackIn_7_0 = null;
+        Sprite[] stackIn_5_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -79,7 +79,7 @@ final class se extends jj {
             stackIn_7_0 = wa.c(param2 - 1119);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (tf[]) null;
+          stackIn_5_0 = (Sprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,7 +130,7 @@ final class se extends jj {
         int var3 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         int var3Lifetime1;
-        t.g(0, 0, 640, 480, 8874, 3368703);
+        SoftwareRasterizer.g(0, 0, 640, 480, 8874, 3368703);
         if (param0) {
           return;
         }
@@ -168,12 +168,12 @@ final class se extends jj {
         }
         ip.field_y = bi.a("benefits", "members_benefits_borders", pf.field_d, (byte) -89);
         km.field_p = bi.a("benefits", "members_benefits_price", pf.field_d, (byte) -70);
-        cf.field_t = bi.a("benefits", "members_benefits_logo", pf.field_d, (byte) -118);
+        SpriteState.field_t = bi.a("benefits", "members_benefits_logo", pf.field_d, (byte) -118);
         li.field_h = eh.a("members_benefits_screenshots", "benefits", (byte) 47, pf.field_d);
         bl.a(11833, ip.field_y, po.field_e);
         ni.a(km.field_p, 2, 40, 40, 80, false, -2400, 15, rk.field_e, 80, 0);
         pb.a(-25960, li.field_h);
-        sk.a(param0 ^ -3744, cf.field_t);
+        sk.a(param0 ^ -3744, SpriteState.field_t);
         return true;
     }
 
@@ -200,7 +200,7 @@ final class se extends jj {
         }
     }
 
-    se(String param0, tf[] param1) {
+    se(String param0, Sprite[] param1) {
         super(param0, param1);
         int var3_int = 0;
         try {

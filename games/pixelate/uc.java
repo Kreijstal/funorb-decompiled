@@ -37,14 +37,14 @@ class uc implements eb, af {
         }
         pc var2 = aa.field_f;
         var2.g(param0, 15514);
-        var2.field_m = var2.field_m + 1;
-        int var3 = var2.field_m;
-        var2.e(160, 5);
-        var2.e(160, io.field_c.field_ec);
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
+        var2.writeByte(160, 5);
+        var2.writeByte(160, io.field_c.field_ec);
         int var4 = io.field_c.field_Ib + (io.field_c.field_Tb << 6);
-        var2.e(160, var4);
+        var2.writeByte(160, var4);
         var2.a(io.field_c.field_Eb.length, 0, -3493, io.field_c.field_Eb);
-        var2.f(var2.field_m - var3, -1);
+        var2.f(var2.position - var3, -1);
     }
 
     public final int a(int param0) {
@@ -553,7 +553,7 @@ class uc implements eb, af {
                 fj.a(0, 0, (byte) -82, param2);
               }
             } else {
-              t.d();
+              SoftwareRasterizer.d();
               io.a(240, (byte) -99, 320);
               fj.a(0, 0, (byte) 119, param2);
             }

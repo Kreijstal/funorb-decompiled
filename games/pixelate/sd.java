@@ -45,7 +45,7 @@ final class sd extends ie {
           this.field_H.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) 122);
           return;
         }
-        tf var7 = new tf(this.field_H.field_E, this.field_H.field_C);
+        Sprite var7 = new Sprite(this.field_H.field_E, this.field_H.field_C);
         h.a(-111, var7);
         int var6 = -5 % ((70 - param3) / 49);
         this.field_H.a(0, param1, 0, (byte) -79);
@@ -180,17 +180,17 @@ final class sd extends ie {
           var7 = aa.field_f;
           var8 = var7;
           var8.g(param2, 15514);
-          var8.field_m = var8.field_m + 1;
-          var4 = var8.field_m;
-          var8.e(160, 1);
-          var8.b(1276387944, param1.field_o);
-          var8.b(1276387944, param1.field_t);
-          var8.b(1276387944, param1.field_p);
+          var8.position = var8.position + 1;
+          var4 = var8.position;
+          var8.writeByte(160, 1);
+          var8.writeShort(1276387944, param1.field_o);
+          var8.writeShort(1276387944, param1.field_t);
+          var8.writeShort(1276387944, param1.field_p);
           var8.d(param1.field_s, -93);
           var8.d(param1.field_v, -71);
           var8.d(param1.field_l, -40);
           var8.d(param1.field_n, -71);
-          var8.e(160, param1.field_k.length);
+          var8.writeByte(160, param1.field_k.length);
           for (var5 = 0; param1.field_k.length > var5; var5++) {
             var7.d(param1.field_k[var5], -123);
           }
@@ -198,7 +198,7 @@ final class sd extends ie {
             field_I = false;
           }
           var8.b(var4, (byte) 86);
-          var8.f(var8.field_m - var4, -1);
+          var8.f(var8.position - var4, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "sd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -235,8 +235,8 @@ final class sd extends ie {
         int var14 = 0;
         int var15 = 0;
         String[] var16 = null;
-        we var17 = null;
-        we var18 = null;
+        PacketBuffer var17 = null;
+        PacketBuffer var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
@@ -248,9 +248,9 @@ final class sd extends ie {
         int var4Lifetime5;
         var15 = Pixelate.field_H ? 1 : 0;
         try {
-          var17 = new we(param1);
+          var17 = new PacketBuffer(param1);
           var18 = var17;
-          var18.field_m = -2 + param1.length;
+          var18.position = -2 + param1.length;
           im.field_Qb = var18.a((byte) 97);
           gd.field_k = new byte[im.field_Qb][];
           rl.field_m = new boolean[im.field_Qb];
@@ -259,7 +259,7 @@ final class sd extends ie {
           IntrusiveNode.field_b = new int[im.field_Qb];
           e.field_b = new int[im.field_Qb];
           wo.field_f = new byte[im.field_Qb][];
-          var18.field_m = -7 + (param1.length - 8 * im.field_Qb);
+          var18.position = -7 + (param1.length - 8 * im.field_Qb);
           tj.field_y = var18.a((byte) 38);
           jb.field_a = var18.a((byte) 46);
           var3 = 1 + (var18.f(255) & 255);
@@ -279,15 +279,15 @@ final class sd extends ie {
           for (var4Lifetime3 = 0; var4Lifetime3 < im.field_Qb; var4Lifetime3++) {
             ge.field_c[var4Lifetime3] = var18.a((byte) -116);
           }
-          var18.field_m = param1.length - (7 - (-(8 * im.field_Qb) - 3 * (-1 + var3)));
+          var18.position = param1.length - (7 - (-(8 * im.field_Qb) - 3 * (-1 + var3)));
           fl.field_g = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            fl.field_g[var4Lifetime4] = var18.c((byte) 13);
+            fl.field_g[var4Lifetime4] = var18.readUnsignedMedium((byte) 13);
             if (0 == fl.field_g[var4Lifetime4]) {
               fl.field_g[var4Lifetime4] = 1;
             }
           }
-          var18.field_m = 0;
+          var18.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < im.field_Qb; var4Lifetime5++) {
             var5 = gf.field_g[var4Lifetime5];
             var6 = ge.field_c[var4Lifetime5];
@@ -366,8 +366,8 @@ final class sd extends ie {
           return;
         }
         var2.g(param1, 15514);
-        var2.e(160, 1);
-        var2.e(160, 0);
+        var2.writeByte(160, 1);
+        var2.writeByte(160, 0);
     }
 
     static {

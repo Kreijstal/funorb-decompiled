@@ -8,7 +8,7 @@ final class sk {
     static String field_b;
     static String field_c;
 
-    final static void a(int param0, tf param1) {
+    final static void a(int param0, Sprite param1) {
         try {
           jf.field_a = param1;
           if (param0 >= -45) {
@@ -32,14 +32,14 @@ final class sk {
         up.field_o = null;
         ug.a(2586);
         param12 = bq.a((byte) -124, param2, param6, param12, param13, param11, param5);
-        i.a(param5, param10, param8, param0, param3, param1, -28362, param12, param4, param9);
+        ImageProducerRasterBuffer.a(param5, param10, param8, param0, param3, param1, -28362, param12, param4, param9);
         oh.a(param0, 0, param4);
         bd.a((byte) -64, param12, param4, param11);
         if (param7 <= -112) {
           return;
         }
-        tf var15 = (tf) null;
-        sk.a(75, (tf) null);
+        Sprite var15 = (Sprite) null;
+        sk.a(75, (Sprite) null);
     }
 
     static {

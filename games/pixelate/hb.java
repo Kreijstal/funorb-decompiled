@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class hb extends ka {
-    static tf field_hb;
+    static Sprite field_hb;
     static ak field_eb;
     static boolean field_kb;
     private int field_ib;

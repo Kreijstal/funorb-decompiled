@@ -45,7 +45,7 @@ final class mc extends IntrusiveNode {
             stackIn_5_0 = (dd) null;
             return stackIn_5_0;
           }
-          var8 = cf.a(false, param3);
+          var8 = SpriteState.a(false, param3);
           var9 = hq.a((byte) 124, param3);
           var10 = mi.a(var12.field_d, param1, var12.field_j, 20);
           var11 = new dd(var12.field_j, var12.field_d, var7, var6.field_a, var6.field_b, var6.field_c, var9, var8, var10);
@@ -67,7 +67,7 @@ final class mc extends IntrusiveNode {
     }
 
     final static void e(int param0) {
-        tf var1 = null;
+        Sprite var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -78,13 +78,13 @@ final class mc extends IntrusiveNode {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        tf var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
         Random var11 = null;
-        tf var12 = null;
-        tf var13 = null;
+        Sprite var12 = null;
+        Sprite var13 = null;
         String var15 = null;
-        tf var17 = null;
+        Sprite var17 = null;
         int[] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
@@ -134,17 +134,17 @@ final class mc extends IntrusiveNode {
             gp.field_Kb = bi.a("benefits", "arrow", pb.field_n, (byte) -125);
             kc.field_r = (jl) ((Object) bf.a(0, kf.field_p, "large_font", pb.field_n, "benefits"));
             qe.field_A = (jl) ((Object) bf.a(0, kf.field_p, "small_font", pb.field_n, "benefits"));
-            var28 = t.field_k;
-            var2 = t.field_j;
-            var3 = t.field_d;
-            t.a(wi.field_f);
-            var12 = new tf(4 + gp.field_Kb.field_F, gp.field_Kb.field_E + 4);
+            var28 = SoftwareRasterizer.field_k;
+            var2 = SoftwareRasterizer.field_j;
+            var3 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.a(wi.field_f);
+            var12 = new Sprite(4 + gp.field_Kb.field_F, gp.field_Kb.field_E + 4);
             var12.c();
             gp.field_Kb.c(2, 2, ug.field_k);
             de.a(0, 0, 1, var12, var12.field_F, -1, 2, var12.field_E);
             gp.field_Kb = var12;
             hf.field_m = gp.field_Kb.e();
-            var13 = new tf(195, 221);
+            var13 = new Sprite(195, 221);
             var6 = var13.field_F / 2;
             var13.c();
             kc.field_r.b(sd.a(vi.field_s, param0 + 24, new String[]{al.field_g}), var6, 40, 16777215, -1);
@@ -164,9 +164,9 @@ final class mc extends IntrusiveNode {
             tm.field_S = null;
             ph.field_n = ro.field_b.a();
             ph.field_n.c();
-            nh.a(t.field_d * 2 / 3, 64, 0, 0, 126, t.field_j);
-            t.a(var28, var2, var3);
-            t.b(wi.field_f);
+            nh.a(SoftwareRasterizer.field_d * 2 / 3, 64, 0, 0, 126, SoftwareRasterizer.field_j);
+            SoftwareRasterizer.a(var28, var2, var3);
+            SoftwareRasterizer.b(wi.field_f);
             pb.field_n = null;
             ll.field_a = (wo.field_c.field_F - jh.field_O.field_F) / 2 + 434;
             bn.field_Q = (wo.field_c.field_E - jh.field_O.field_E) / 2 + 390;
@@ -178,10 +178,10 @@ final class mc extends IntrusiveNode {
           }
           if (null != FullscreenFocusCanvas.field_d &&
             null != kc.field_r) {
-            var29 = t.field_k;
-            var2Lifetime1 = t.field_j;
-            var3Lifetime1 = t.field_d;
-            t.a(wi.field_f);
+            var29 = SoftwareRasterizer.field_k;
+            var2Lifetime1 = SoftwareRasterizer.field_j;
+            var3Lifetime1 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.a(wi.field_f);
             var15 = sd.a(jm.field_p, 93, new String[]{wp.field_b[gb.field_c]});
             var5 = kc.field_r.a(var15, mp.field_f);
             var6Lifetime1 = kc.field_r.a(var15, mp.field_f, kc.field_r.field_w + kc.field_r.field_z);
@@ -212,7 +212,7 @@ final class mc extends IntrusiveNode {
             if (0 > var8) {
               var9_intLifetime2 = -var8;
               var8 = var8 + var9_intLifetime2;
-              i.field_l = i.field_l - var9_intLifetime2;
+              ImageProducerRasterBuffer.field_l = ImageProducerRasterBuffer.field_l - var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime2;
               cl.field_d = cl.field_d + var9_intLifetime2;
               FullscreenFocusCanvas.field_d.field_y = FullscreenFocusCanvas.field_d.field_y + var9_intLifetime2;
@@ -224,31 +224,31 @@ final class mc extends IntrusiveNode {
               cl.field_d = cl.field_d + var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
               FullscreenFocusCanvas.field_d.field_B = FullscreenFocusCanvas.field_d.field_B + var9_intLifetime3 * 2;
-              i.field_l = i.field_l - var9_intLifetime3;
+              ImageProducerRasterBuffer.field_l = ImageProducerRasterBuffer.field_l - var9_intLifetime3;
               FullscreenFocusCanvas.field_d.field_y = FullscreenFocusCanvas.field_d.field_y + var9_intLifetime3;
             }
             FullscreenFocusCanvas.field_d.d();
-            var9 = new tf(FullscreenFocusCanvas.field_d.field_A, FullscreenFocusCanvas.field_d.field_B);
+            var9 = new Sprite(FullscreenFocusCanvas.field_d.field_A, FullscreenFocusCanvas.field_d.field_B);
             var9.c();
             kc.field_r.a(var15, bl.field_c, cl.field_d, mp.field_f, vp.field_Lb, 16777215, -1, 1, 1, kc.field_r.field_w + kc.field_r.field_z);
             de.a(0, 0, 1, var9, var9.field_A, -1, 3, var9.field_B);
             FullscreenFocusCanvas.field_d.c();
             var9.b(0, 0);
-            ni.field_m = new tf(640, 480);
+            ni.field_m = new Sprite(640, 480);
             ni.field_m.c();
-            FullscreenFocusCanvas.field_d.b((FullscreenFocusCanvas.field_d.field_A >> 1) + r.field_a, i.field_l + (FullscreenFocusCanvas.field_d.field_B >> 1), aq.field_a, 4096);
+            FullscreenFocusCanvas.field_d.b((FullscreenFocusCanvas.field_d.field_A >> 1) + r.field_a, ImageProducerRasterBuffer.field_l + (FullscreenFocusCanvas.field_d.field_B >> 1), aq.field_a, 4096);
             FullscreenFocusCanvas.field_d = null;
             ni.field_m.f();
-            t.a(var29, var2Lifetime1, var3Lifetime1);
-            t.b(wi.field_f);
+            SoftwareRasterizer.a(var29, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.b(wi.field_f);
           }
           if (IntrusiveNode.field_i != null &&
             qe.field_A != null) {
-            var30 = t.field_k;
-            var2Lifetime2 = t.field_j;
-            var3Lifetime2 = t.field_d;
-            t.a(wi.field_f);
-            var17 = new tf(412, 43);
+            var30 = SoftwareRasterizer.field_k;
+            var2Lifetime2 = SoftwareRasterizer.field_j;
+            var3Lifetime2 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.a(wi.field_f);
+            var17 = new Sprite(412, 43);
             var5_ref_String = sd.a(dk.field_f, param0 + 18, new String[]{IntrusiveNode.field_i});
             IntrusiveNode.field_i = null;
             var17.c();
@@ -256,15 +256,15 @@ final class mc extends IntrusiveNode {
             de.a(0, 0, 1, var17, var17.field_F, -1, 3, var17.field_E);
             qf.field_c.c();
             var17.b(199 - qf.field_c.field_D, -qf.field_c.field_y + 83);
-            t.a(var30, var2Lifetime2, var3Lifetime2);
-            t.b(wi.field_f);
+            SoftwareRasterizer.a(var30, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.b(wi.field_f);
           }
           if (null != jf.field_a &&
             qe.field_A != null) {
-            var31 = t.field_k;
-            var2Lifetime3 = t.field_j;
-            var3Lifetime3 = t.field_d;
-            t.a(wi.field_f);
+            var31 = SoftwareRasterizer.field_k;
+            var2Lifetime3 = SoftwareRasterizer.field_j;
+            var3Lifetime3 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.a(wi.field_f);
             var4 = 6 + qe.field_A.a(ri.field_i, 640);
             var5Lifetime1 = jf.field_a.field_A + var4 + 20;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
@@ -274,13 +274,13 @@ final class mc extends IntrusiveNode {
             de.a(-qf.field_c.field_D + (var7Lifetime2 - 4), 155 - qf.field_c.field_y, 1, qf.field_c, var4, -1, 3, 50);
             var8Lifetime1 = 155 - qf.field_c.field_y - (-qe.field_A.field_z - qe.field_A.field_w + (-3 + jf.field_a.field_B)) / 2;
             jf.field_a.b(var6Lifetime2 - qf.field_c.field_D, var8Lifetime1);
-            t.a(var31, var2Lifetime3, var3Lifetime3);
-            t.b(wi.field_f);
+            SoftwareRasterizer.a(var31, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.b(wi.field_f);
             jf.field_a = null;
           }
-          t.a(wi.field_f);
-          t.a(16, 16, 608, 112, 15, in.field_t, gq.field_n);
-          t.a(231, 144, 393, 232, 15, in.field_t, gq.field_n);
+          SoftwareRasterizer.a(wi.field_f);
+          SoftwareRasterizer.a(16, 16, 608, 112, 15, in.field_t, gq.field_n);
+          SoftwareRasterizer.a(231, 144, 393, 232, 15, in.field_t, gq.field_n);
           if (go.field_i != null) {
             go.field_i.b(0, 0);
           }

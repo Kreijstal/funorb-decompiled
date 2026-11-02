@@ -3,7 +3,7 @@
  */
 final class fe {
     static boolean field_a;
-    static tf field_b;
+    static Sprite field_b;
 
     final static void a(boolean param0) {
         if (param0) {

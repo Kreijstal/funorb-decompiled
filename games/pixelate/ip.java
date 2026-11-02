@@ -5,7 +5,7 @@ final class ip extends gh {
     static int field_A;
     static int[] field_x;
     static String field_z;
-    static tf field_y;
+    static Sprite field_y;
 
     final String b(ng param0, int param1) {
         RuntimeException var3 = null;
@@ -16,7 +16,7 @@ final class ip extends gh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -472248767) {
-            field_y = (tf) null;
+            field_y = (Sprite) null;
           }
           stackIn_3_0 = bc.a(false, '*', param0.field_q.length());
           return stackIn_3_0;
@@ -38,7 +38,7 @@ final class ip extends gh {
         field_z = null;
         field_y = null;
         if (param0 != 8192) {
-          field_y = (tf) null;
+          field_y = (Sprite) null;
           field_x = null;
           return;
         }

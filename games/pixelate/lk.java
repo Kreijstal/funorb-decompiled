@@ -34,12 +34,12 @@ final class lk extends jj {
         field_o = null;
     }
 
-    lk(String param0, tf[] param1) {
+    lk(String param0, Sprite[] param1) {
         super(param0, param1);
     }
 
     final void a(boolean param0) {
-        t.g(0, 0, 640, 480, f.field_f[this.field_m], f.field_f[this.field_p]);
+        SoftwareRasterizer.g(0, 0, 640, 480, f.field_f[this.field_m], f.field_f[this.field_p]);
         if (param0) {
           return;
         }

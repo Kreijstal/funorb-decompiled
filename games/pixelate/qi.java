@@ -23,7 +23,7 @@ final class qi extends jj {
     final void a(boolean param0) {
         jn var4 = null;
         int var3 = Pixelate.field_H ? 1 : 0;
-        t.d(0, 0, 640, 480, 12632256);
+        SoftwareRasterizer.d(0, 0, 640, 480, 12632256);
         if (!param0) {
           var4 = (jn) (this.field_n.c(1504642273));
           while (var4 != null) {
@@ -79,7 +79,7 @@ final class qi extends jj {
         this.field_m = od.a((byte) 41, 75, 25);
     }
 
-    qi(String param0, tf[] param1) {
+    qi(String param0, Sprite[] param1) {
         super(param0, param1);
         int var3_int = 0;
         try {

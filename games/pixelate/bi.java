@@ -3,8 +3,8 @@
  */
 final class bi {
     private String[] field_b;
-    static tf[] field_g;
-    static we field_d;
+    static Sprite[] field_g;
+    static PacketBuffer field_d;
     int field_f;
     private int field_c;
     private String field_a;
@@ -16,8 +16,8 @@ final class bi {
         int var4;
         int var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
-        t.a(this.field_f, this.field_e, 250, this.field_c, 12, 0, 180);
-        t.e(this.field_f, this.field_e, 250, this.field_c, 12, 0);
+        SoftwareRasterizer.a(this.field_f, this.field_e, 250, this.field_c, 12, 0, 180);
+        SoftwareRasterizer.e(this.field_f, this.field_e, 250, this.field_c, 12, 0);
         var2 = 4 + this.field_e + 8;
         if (!param0) {
           if (null != this.field_a) {
@@ -41,11 +41,11 @@ final class bi {
         }
     }
 
-    final static tf a(String param0, String param1, fm param2, byte param3) {
+    final static Sprite a(String param0, String param1, fm param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        tf stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -91,7 +91,7 @@ final class bi {
     public static void a(int param0) {
         field_g = null;
         if (param0 != -8) {
-          field_g = (tf[]) null;
+          field_g = (Sprite[]) null;
           field_d = null;
           return;
         }

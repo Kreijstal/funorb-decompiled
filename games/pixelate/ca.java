@@ -313,15 +313,15 @@ final class ca {
         }
     }
 
-    final static tf a(int param0) {
+    final static Sprite a(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         byte[] var2 = null;
         int[] var3 = null;
         int var4_int = 0;
-        tf var4 = null;
+        Sprite var4 = null;
         int var5 = 0;
-        tf stackIn_5_0 = null;
+        Sprite stackIn_5_0 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
@@ -337,7 +337,7 @@ final class ca {
             }
             break;
           }
-          var4 = new tf(tj.field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], var3);
+          var4 = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], var3);
           re.b(140);
           stackIn_5_0 = var4;
           return stackIn_5_0;

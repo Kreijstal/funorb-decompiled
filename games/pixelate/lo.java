@@ -23,7 +23,7 @@ final class lo extends ak {
         this.b(param6 ^ 0, param2, param1);
     }
 
-    lo(long param0, ak param1, ak param2, ak param3, tf param4, String param5) {
+    lo(long param0, ak param1, ak param2, ak param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

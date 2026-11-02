@@ -39,13 +39,13 @@ final class td {
         field_a = null;
         field_c = null;
         if (param0 != 6) {
-          tf[] var2 = (tf[]) null;
-          td.a(72, -37, -11, (tf[]) null, (byte) -29, -65);
+          Sprite[] var2 = (Sprite[]) null;
+          td.a(72, -37, -11, (Sprite[]) null, (byte) -29, -65);
         }
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, tf[] param3, byte param4, int param5) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, byte param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -69,14 +69,14 @@ final class td {
             if (param4 != 121) {
               return;
             }
-            t.a(wg.field_c);
-            t.d(var6_int + param0, param1, -var7 + param2 + param0, param1 + param3[1].field_B);
+            SoftwareRasterizer.a(wg.field_c);
+            SoftwareRasterizer.d(var6_int + param0, param1, -var7 + param2 + param0, param1 + param3[1].field_B);
             var9 = param0 + var6_int;
             var10 = -var7 + (param0 + param2);
             for (param0 = var9; var10 > param0; param0 = param0 + var8) {
               param3[1].d(param0, param1, param5);
             }
-            t.b(wg.field_c);
+            SoftwareRasterizer.b(wg.field_c);
             return;
           }
           return;
@@ -106,7 +106,7 @@ final class td {
         int var3 = 0;
         int var4 = 0;
         int var7 = 0;
-        tf[] var8 = null;
+        Sprite[] var8 = null;
         int var2_intLifetime1;
         int var3Lifetime1;
         var7 = Pixelate.field_H ? 1 : 0;
@@ -122,18 +122,18 @@ final class td {
               }
             }
           }
-          li.field_d = new tf(48, 48);
+          li.field_d = new Sprite(48, 48);
           li.field_d.c();
           if (param0 < 117) {
-            var8 = (tf[]) null;
-            td.a(-3, 104, 72, (tf[]) null, (byte) -122, -90);
+            var8 = (Sprite[]) null;
+            td.a(-3, 104, 72, (Sprite[]) null, (byte) -122, -90);
           }
           for (var2_intLifetime1 = 0; 8 > var2_intLifetime1; var2_intLifetime1++) {
             var3Lifetime1 = (var2_intLifetime1 << 8) / 8;
-            t.d(var2_intLifetime1, var2_intLifetime1, 32 + (-var2_intLifetime1 + 8) * 2, -(2 * var2_intLifetime1) + 16 + 32, 6, var3Lifetime1 * 65793);
+            SoftwareRasterizer.d(var2_intLifetime1, var2_intLifetime1, 32 + (-var2_intLifetime1 + 8) * 2, -(2 * var2_intLifetime1) + 16 + 32, 6, var3Lifetime1 * 65793);
           }
-          t.d(8, 8, 32, 32, 6, 16777215);
-          t.c(2, 2, 0, 0, t.field_j, t.field_d);
+          SoftwareRasterizer.d(8, 8, 32, 32, 6, 16777215);
+          SoftwareRasterizer.c(2, 2, 0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           ClientException.field_f.a(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

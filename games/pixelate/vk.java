@@ -9,7 +9,7 @@ class vk extends hb implements vo {
     static String field_qb;
     static String field_sb;
     static ak field_mb;
-    static tf[] field_tb;
+    static Sprite[] field_tb;
     private jl field_wb;
     static int[] field_ub;
     private boolean field_pb;
@@ -246,16 +246,16 @@ class vk extends hb implements vo {
         }
     }
 
-    final static ha a(int param0, int param1, java.awt.Component param2, int param3) {
+    final static CanvasRasterBuffer a(int param0, int param1, java.awt.Component param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          ha var5 = null;
-          i var5_ref = null;
+          CanvasRasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
           int var6 = 0;
-          ha stackIn_1_0 = null;
-          i stackIn_3_0 = null;
+          CanvasRasterBuffer stackIn_1_0 = null;
+          ImageProducerRasterBuffer stackIn_3_0 = null;
           RuntimeException stackIn_6_0 = null;
           StringBuilder stackIn_6_1 = null;
           String stackIn_7_2 = null;
@@ -264,17 +264,17 @@ class vk extends hb implements vo {
             try {
               var4 = Class.forName("me");
               var6 = 32 / ((param1 - 70) / 45);
-              var5 = (ha) (var4.newInstance());
+              var5 = (CanvasRasterBuffer) (var4.newInstance());
               var5.a(param3, param2, param0, (byte) -100);
               stackIn_1_0 = var5;
               return stackIn_1_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new i();
-              ((ha) ((Object) var5_ref)).a(param3, param2, param0, (byte) -78);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((CanvasRasterBuffer) ((Object) var5_ref)).a(param3, param2, param0, (byte) -78);
               stackIn_3_0 = var5_ref;
-              return (ha) ((Object) stackIn_3_0);
+              return (CanvasRasterBuffer) ((Object) stackIn_3_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

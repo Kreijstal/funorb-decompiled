@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ro {
-    static tf field_b;
+    static Sprite field_b;
     static ii field_e;
     static boolean field_d;
     static int field_a;
@@ -12,21 +12,21 @@ final class ro {
     final static void a(int param0, boolean param1) {
         pc var2 = aa.field_f;
         var2.g(param0, 15514);
-        var2.e(160, 2);
-        var2.e(160, 4);
+        var2.writeByte(160, 2);
+        var2.writeByte(160, 4);
         if (param1) {
-          var2.e(160, DelegatingCanvas.a((byte) -102));
+          var2.writeByte(160, DelegatingCanvas.a((byte) -102));
           return;
         }
         ro.b(16, true);
-        var2.e(160, DelegatingCanvas.a((byte) -102));
+        var2.writeByte(160, DelegatingCanvas.a((byte) -102));
     }
 
     public static void a(boolean param0) {
         field_f = null;
         field_e = null;
         if (param0) {
-          field_b = (tf) null;
+          field_b = (Sprite) null;
           field_b = null;
           return;
         }
@@ -37,8 +37,8 @@ final class ro {
         pc var2 = aa.field_f;
         var2.g(param1, 15514);
         if (param0 > 124) {
-          var2.e(160, 1);
-          var2.e(160, 2);
+          var2.writeByte(160, 1);
+          var2.writeByte(160, 2);
           return;
         }
     }
@@ -75,7 +75,7 @@ final class ro {
         }
     }
 
-    final static void a(boolean param0, tf[][] param1, int param2, int param3, fm param4, String[] param5, int[] param6, String[][] param7, hh[] param8, int param9, int[] param10, byte[] param11, String[][] param12, fm param13, tf[][] param14, byte[] param15, fm param16) {
+    final static void a(boolean param0, Sprite[][] param1, int param2, int param3, fm param4, String[] param5, int[] param6, String[][] param7, hh[] param8, int param9, int[] param10, byte[] param11, String[][] param12, fm param13, Sprite[][] param14, byte[] param15, fm param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;

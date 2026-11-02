@@ -34,11 +34,11 @@ final class uj extends ak {
             ue var4 = (ue) null;
             uj.a(-62, (ue) null, 81);
           }
-          var3.e(160, 5);
-          var3.e(160, 0);
-          var3.b(1276387944, param1.field_o);
-          var3.e(160, param1.field_m);
-          var3.e(160, param1.field_s);
+          var3.writeByte(160, 5);
+          var3.writeByte(160, 0);
+          var3.writeShort(1276387944, param1.field_o);
+          var3.writeByte(160, param1.field_m);
+          var3.writeByte(160, param1.field_s);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "uj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -85,7 +85,7 @@ final class uj extends ak {
         cd.field_g = var8.a(false);
         if (fk.field_o == 2) {
           qf.field_b = var8.a((byte) 2);
-          kn.field_I = var8.c((byte) 13);
+          kn.field_I = var8.readUnsignedMedium((byte) 13);
         } else {
           qf.field_b = 0;
           kn.field_I = 0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class km extends sj {
-    static tf field_p;
+    static Sprite field_p;
     static String field_q;
     static String field_t;
     bb field_r;
@@ -20,7 +20,7 @@ final class km extends sj {
           }
           return new sc(eg.f(8192), op.g(120));
         }
-        field_p = (tf) null;
+        field_p = (Sprite) null;
         var1Lifetime1 = eg.f(8192);
         if (var1Lifetime1 != null &&
           var1Lifetime1.indexOf('@') >= 0) {
@@ -62,7 +62,7 @@ final class km extends sj {
           param0 = param0 + var3 * (qo.field_o - param0) / var2;
         }
         ui.field_i.a(param0, 120, ho.field_c, 256, 640);
-        jp.a(qo.field_o - 24, (byte) 123, 640, hd.field_q, 5, 0, v.field_c);
+        jp.a(qo.field_o - 24, (byte) 123, 640, hd.field_q, 5, 0, MouseWheelHandler.field_c);
         if (param1 != 112) {
           km.e(92);
           return;

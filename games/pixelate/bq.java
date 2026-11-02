@@ -55,8 +55,8 @@ final class bq {
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           sm.field_l = true;
-          ha.field_h = param2;
-          if (ha.field_h == 0) {
+          CanvasRasterBuffer.field_h = param2;
+          if (CanvasRasterBuffer.field_h == 0) {
             var3_int = qn.a(l.field_t, wb.field_c, kc.field_p, -128, bg.field_j);
             var4 = var3_int + 3;
             fo.field_a = new int[var4];
@@ -75,7 +75,7 @@ final class bq {
             vm.field_e[-1 + var4] = od.field_Hb;
             fo.field_a[-1 + var4] = 1;
             jj.field_h[1] = 5;
-          } else if (ha.field_h == 1) {
+          } else if (CanvasRasterBuffer.field_h == 1) {
             var3_int = qn.a(l.field_t, wb.field_c, kc.field_p, -102, bg.field_j);
             var4 = 2 + var3_int;
             fo.field_a = new int[var4];
@@ -91,8 +91,8 @@ final class bq {
             vm.field_e[-1 + var4] = od.field_Hb;
             fo.field_a[-1 + var4] = 0;
             jj.field_h[0] = 5;
-          } else if (ha.field_h != 2) {
-            if (3 == ha.field_h) {
+          } else if (CanvasRasterBuffer.field_h != 2) {
+            if (3 == CanvasRasterBuffer.field_h) {
               if (!mc.field_k.field_x) {
                 var3_int = qn.a(mn.field_a, wb.field_c, kc.field_p, -120, bg.field_j);
               } else {
@@ -112,7 +112,7 @@ final class bq {
               vm.field_e[var4 - 1] = od.field_Hb;
               fo.field_a[var4 - 1] = 0;
               jj.field_h[0] = 5;
-            } else if (ha.field_h == 4) {
+            } else if (CanvasRasterBuffer.field_h == 4) {
               var3_int = qn.a(l.field_o, wb.field_c, kc.field_p, -118, bg.field_j);
               var4 = 2 + var3_int;
               vm.field_e = new String[var4];
@@ -129,10 +129,10 @@ final class bq {
               fo.field_a[var4 - 1] = 0;
               jj.field_h[0] = 5;
             } else {
-              if (ha.field_h != 5) {
+              if (CanvasRasterBuffer.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = qn.a(ha.field_k, wb.field_c, kc.field_p, -118, bg.field_j);
+              var3_int = qn.a(CanvasRasterBuffer.field_k, wb.field_c, kc.field_p, -118, bg.field_j);
               var4 = var3_int + 3;
               fo.field_a = new int[var4];
               vm.field_e = new String[var4];
@@ -250,7 +250,7 @@ final class bq {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (ha.field_h == 2) {
+          if (CanvasRasterBuffer.field_h == 2) {
             var10 = df.field_r;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
@@ -305,7 +305,7 @@ final class bq {
             }
             var4Lifetime3++;
           }
-          if (ha.field_h != 2) {
+          if (CanvasRasterBuffer.field_h != 2) {
             mj.field_c.a(param0, mi.a(ProxyAuthenticationException.field_d, bg.field_k, (byte) -97), 17068, 0);
           } else {
             mj.field_c.a(param0, -1, 17068, -1);

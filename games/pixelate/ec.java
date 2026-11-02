@@ -8,7 +8,7 @@ final class ec extends mg {
     static String field_m;
     static int field_r;
     static java.awt.Canvas field_u;
-    static tf field_q;
+    static Sprite field_q;
     private String field_p;
     static String field_o;
 
@@ -123,18 +123,18 @@ final class ec extends mg {
     }
 
     final static void a(boolean param0, fm param1) {
-        tf var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new tf(param1.a((byte) 24, "", "final_frame.jpg"), (java.awt.Component) ((Object) field_u));
+          var2 = new Sprite(param1.a((byte) 24, "", "final_frame.jpg"), (java.awt.Component) ((Object) field_u));
           var3 = var2.field_F;
           var4 = var2.field_E;
           ti.a(param0);
-          th.field_b = new tf(var3, 3 * var4 / 4);
+          th.field_b = new Sprite(var3, 3 * var4 / 4);
           th.field_b.c();
           var2.f(0, 0);
-          in.field_s = new tf(var3, var4 - th.field_b.field_E);
+          in.field_s = new Sprite(var3, var4 - th.field_b.field_E);
           in.field_s.c();
           var2.f(0, -th.field_b.field_E);
           in.field_s.field_y = th.field_b.field_E;

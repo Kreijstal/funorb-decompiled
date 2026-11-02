@@ -92,14 +92,14 @@ final class tj extends ah {
         ko.a(false, SecondaryNodeDequeIterator.field_b, param0 ^ -26047);
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, jl param4, tf[] param5, int param6, int param7, tf[] param8, int param9, jl param10, byte param11, int param12, int param13, int param14) {
+    final static void a(int param0, boolean param1, int param2, int param3, jl param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, jl param10, byte param11, int param12, int param13, int param14) {
         try {
           if (param11 != 122) {
             java.awt.Component var16 = (java.awt.Component) null;
             tj.a((byte) 102, (java.awt.Component) null);
           }
-          tf[] var17 = (tf[]) null;
-          da.a((tf[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, sl.field_l, qo.field_s, param7);
+          Sprite[] var17 = (Sprite[]) null;
+          da.a((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, sl.field_l, qo.field_s, param7);
           ai.a(param1, param11 ^ 124);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "tj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');

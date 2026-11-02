@@ -81,18 +81,18 @@ final class vh {
         }
     }
 
-    final void a(int param0, byte[] param1, we param2) {
+    final void a(int param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
-            if (31 != param2.field_k[param2.field_m] ||
-              param2.field_k[param2.field_m + 1] != -117) {
+            if (31 != param2.payload[param2.position] ||
+              param2.payload[param2.position + 1] != -117) {
               throw new RuntimeException("");
             }
             if (null == this.field_a) {
               this.field_a = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_a.setInput(param2.field_k, param2.field_m + 10, param0 - param2.field_m - (10 - param2.field_k.length));
+              this.field_a.setInput(param2.payload, param2.position + 10, param0 - param2.position - (10 - param2.payload.length));
               this.field_a.inflate(param1);
             } catch (Exception exception) {
               this.field_a.reset();

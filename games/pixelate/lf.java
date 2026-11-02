@@ -3,11 +3,11 @@
  */
 final class lf {
     static int field_b;
-    tf[] field_k;
+    Sprite[] field_k;
     private int field_g;
     private int field_h;
     static String[] field_i;
-    tf field_j;
+    Sprite field_j;
     private int field_e;
     private int field_d;
     private boolean field_c;
@@ -114,7 +114,7 @@ final class lf {
         }
     }
 
-    final lf a(tf[] param0, byte param1) {
+    final lf a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         lf stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;

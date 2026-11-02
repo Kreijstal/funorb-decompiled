@@ -32,7 +32,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     final static void a(int param0, int param1, int param2, sb param3) {
         try {
-          v.field_d = param1;
+          MouseWheelHandler.field_d = param1;
           if (param2 != 7) {
             sb var5 = (sb) null;
             SecondaryNodeDequeIterator.a(-44, 85, 83, (sb) null);
@@ -56,7 +56,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.field_e = null;
     }
 
-    final static void a(int param0, tf[] param1, byte param2) {
+    final static void a(int param0, Sprite[] param1, byte param2) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -64,8 +64,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
         RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
-        tf[] var6 = null;
-        tf[] var7 = null;
+        Sprite[] var6 = null;
+        Sprite[] var7 = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           if (param2 != -53) {
@@ -74,7 +74,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (null == kb.field_L) {
             kb.field_L = rk.field_e;
           }
-          var6 = new tf[]{param1[0], param1[1]};
+          var6 = new Sprite[]{param1[0], param1[1]};
           var7 = var6;
           var4 = wc.field_m[param0];
           if (param0 == 0) {

@@ -60,12 +60,12 @@ final class nk {
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
         RuntimeException decompiledCaughtException = null;
-        tf var12 = null;
+        Sprite var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        tf[] var16 = null;
+        Sprite[] var16 = null;
         ak var17 = null;
         int var18 = 0;
         String var19 = null;
@@ -86,7 +86,7 @@ final class nk {
           qp.field_P[2] = 16736352;
           vp.field_Ib = 8421504;
           qp.field_P[0] = 16764000;
-          var12 = new tf(4, 4);
+          var12 = new Sprite(4, 4);
           var13 = var12.field_G;
           var14 = var12.field_G;
           var15 = var12.field_G;
@@ -94,7 +94,7 @@ final class nk {
           var14[5] = 7368816;
           var13[2] = 7368816;
           var15[8] = 7368816;
-          var16 = new tf[9];
+          var16 = new Sprite[9];
           var16[4] = var12;
           ui.field_i = new ak(0L, param0);
           ki.field_k = new ak(0L, param3);

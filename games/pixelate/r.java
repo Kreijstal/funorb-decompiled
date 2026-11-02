@@ -12,7 +12,7 @@ final class r {
         int var2 = -(oh.field_b * oh.field_b) + var1;
         int var4 = var2 * (qo.field_o - wa.field_i) / var1 + wa.field_i;
         ui.field_i.a(var4, 120, ho.field_c, 256, 640);
-        jp.a(-24 + qo.field_o, (byte) 116, 640, hd.field_q, 5, 0, v.field_c);
+        jp.a(-24 + qo.field_o, (byte) 116, 640, hd.field_q, 5, 0, MouseWheelHandler.field_c);
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
@@ -50,14 +50,14 @@ final class r {
     final static void a(int param0, int param1) {
         pc var2 = aa.field_f;
         var2.g(param1, param0 ^ 15514);
-        var2.field_m = var2.field_m + 1;
-        int var3 = var2.field_m;
-        var2.e(160, 2);
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
+        var2.writeByte(160, 2);
         var2.a(qm.field_J.length, 0, -3493, qm.field_J);
-        var2.e(160, ib.field_a);
-        var2.e(160, mg.field_i);
+        var2.writeByte(160, ib.field_a);
+        var2.writeByte(160, mg.field_i);
         var2.a(k.field_k.length, param0, -3493, k.field_k);
-        var2.f(var2.field_m - var3, -1);
+        var2.f(var2.position - var3, -1);
     }
 
     static {

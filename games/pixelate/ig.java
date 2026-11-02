@@ -5,7 +5,7 @@ final class ig {
     static tc field_d;
     static io field_e;
     static String field_c;
-    static tf[][] field_a;
+    static Sprite[][] field_a;
     static fm field_b;
 
     final static String a(int param0, char param1) {
@@ -58,7 +58,7 @@ final class ig {
     }
 
     public static void a(byte param0) {
-        field_a = (tf[][]) null;
+        field_a = (Sprite[][]) null;
         field_c = null;
         field_b = null;
         int var1 = 113 % ((-66 - param0) / 54);

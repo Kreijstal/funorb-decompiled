@@ -57,7 +57,7 @@ final class ki {
               na.a(true);
               return;
             }
-            var3 = var10.k(0);
+            var3 = var10.readInt(0);
             var4_ref_og = (og) (wk.field_g.c(1504642273));
             while (var4_ref_og != null) {
               if (var4_ref_og.field_m != var3) {
@@ -88,7 +88,7 @@ final class ki {
           } else {
             var5 = null;
           }
-          var10.field_m = var10.field_m + 4;
+          var10.position = var10.position + 4;
           if (!var10.d((byte) 124)) {
             na.a(true);
             return;
@@ -159,15 +159,15 @@ final class ki {
     }
 
     final void a(boolean param0) {
-        t.b(this.field_i, this.field_p, this.field_g, this.field_h, 6710784);
+        SoftwareRasterizer.b(this.field_i, this.field_p, this.field_g, this.field_h, 6710784);
         if (!param0) {
-          t.b(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
-          t.b(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
+          SoftwareRasterizer.b(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
+          SoftwareRasterizer.b(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
           return;
         }
         field_a = (String) null;
-        t.b(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
-        t.b(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
+        SoftwareRasterizer.b(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
+        SoftwareRasterizer.b(this.field_i - 1, this.field_p, -1 + this.field_g, this.field_h, 3355392);
     }
 
     public static void c(int param0) {

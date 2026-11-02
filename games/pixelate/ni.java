@@ -3,7 +3,7 @@
  */
 final class ni extends IntrusiveNode {
     static ak field_s;
-    static tf field_m;
+    static Sprite field_m;
     int field_r;
     int field_t;
     static String field_p;
@@ -20,7 +20,7 @@ final class ni extends IntrusiveNode {
         field_s = null;
         field_m = null;
         if (param0 > -4) {
-          field_m = (tf) null;
+          field_m = (Sprite) null;
         }
     }
 
@@ -32,12 +32,12 @@ final class ni extends IntrusiveNode {
         return var2;
     }
 
-    final static void a(tf param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, jl param8, int param9, int param10) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, jl param8, int param9, int param10) {
         try {
           cl.field_d = param2;
           bl.field_c = param3;
           FullscreenFocusCanvas.field_d = param0;
-          i.field_l = param1;
+          ImageProducerRasterBuffer.field_l = param1;
           r.field_a = param7;
           vp.field_Lb = param9;
           if (param5) {
@@ -63,7 +63,7 @@ final class ni extends IntrusiveNode {
           return;
         }
         jl var2 = (jl) null;
-        ni.a((tf) null, -53, -40, -46, -15, true, 64, 51, (jl) null, -14, -74);
+        ni.a((Sprite) null, -53, -40, -46, -15, true, 64, 51, (jl) null, -14, -74);
     }
 
     final static int a(byte param0, int param1) {

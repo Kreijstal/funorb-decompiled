@@ -11,12 +11,12 @@ abstract class rf {
     static int field_n;
     nj field_p;
     int field_o;
-    we field_b;
+    PacketBuffer field_b;
     long field_k;
     byte field_a;
     volatile int field_h;
     volatile int field_m;
-    we field_g;
+    PacketBuffer field_g;
     rj field_c;
 
     abstract boolean a(boolean param0);
@@ -138,11 +138,11 @@ abstract class rf {
         this.field_f = new nj();
         this.field_l = new nj();
         this.field_p = new nj();
-        this.field_b = new we(6);
+        this.field_b = new PacketBuffer(6);
         this.field_h = 0;
         this.field_a = (byte) 0;
         this.field_m = 0;
-        this.field_g = new we(10);
+        this.field_g = new PacketBuffer(10);
     }
 
     static {

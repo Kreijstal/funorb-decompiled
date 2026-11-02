@@ -140,27 +140,27 @@ final class nh {
           if (param4 < 99) {
             field_d = (String) null;
           }
-          if (param2 < t.field_e) {
-            param5 = param5 - (t.field_e - param2);
-            param2 = t.field_e;
+          if (param2 < SoftwareRasterizer.field_e) {
+            param5 = param5 - (SoftwareRasterizer.field_e - param2);
+            param2 = SoftwareRasterizer.field_e;
           }
-          if (param5 + param2 > t.field_h) {
-            param5 = -param2 + t.field_h;
+          if (param5 + param2 > SoftwareRasterizer.field_h) {
+            param5 = -param2 + SoftwareRasterizer.field_h;
           }
-          if (t.field_f > param3) {
-            param0 = param0 - (-param3 + t.field_f);
-            param3 = t.field_f;
+          if (SoftwareRasterizer.field_f > param3) {
+            param0 = param0 - (-param3 + SoftwareRasterizer.field_f);
+            param3 = SoftwareRasterizer.field_f;
           }
-          if (param0 + param3 > t.field_a) {
-            param0 = t.field_a - param3;
+          if (param0 + param3 > SoftwareRasterizer.field_a) {
+            param0 = SoftwareRasterizer.field_a - param3;
           }
           if (0 < param5 &&
             param0 > 0) {
-            var6_int = param2 + param3 * t.field_j;
-            var7 = -param5 + t.field_j;
+            var6_int = param2 + param3 * SoftwareRasterizer.field_j;
+            var7 = -param5 + SoftwareRasterizer.field_j;
             for (param3 = -param0; param3 < 0; param3++) {
               for (param2 = -param5; param2 < 0; param2++) {
-                var8 = t.field_k[var6_int];
+                var8 = SoftwareRasterizer.field_k[var6_int];
                 if ((var8 & 65280) >> 8 > param1 &&
                   (255 & var8 >> 8) >= (var8 >> 16 & 255)) {
                   var9 = ((16711680 & var8) >> 15) - 60;
@@ -170,7 +170,7 @@ final class nh {
                   var10 = 65280 & var8;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = (255 & var8) >> 3;
-                  t.field_k[var6_int] = bq.a(var11, bq.a(var10, var9 << 16));
+                  SoftwareRasterizer.field_k[var6_int] = bq.a(var11, bq.a(var10, var9 << 16));
                 }
                 var6_int++;
               }

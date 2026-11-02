@@ -6,7 +6,7 @@ final class wh extends de {
     static String field_s;
     static dj field_o;
     static char[] field_r;
-    static tf field_q;
+    static Sprite field_q;
 
     private final void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6, tc param7, int param8, int param9, int param10) {
         String stackIn_11_0 = null;
@@ -118,7 +118,7 @@ final class wh extends de {
     }
 
     private final int d(int param0, int param1) {
-        String var3 = we.field_o[this.field_k[param0]];
+        String var3 = PacketBuffer.field_o[this.field_k[param0]];
         int var4 = 96 / ((param1 + 50) / 50);
         return 20 + rk.field_e.c(var3);
     }
@@ -152,7 +152,7 @@ final class wh extends de {
               na.a(true);
               return;
             }
-            var6_int = -var11.field_m + jj.field_b;
+            var6_int = -var11.position + jj.field_b;
             var13 = var5_ref_sm.field_o;
             var12 = var13;
             var7 = var12;
@@ -291,7 +291,7 @@ final class wh extends de {
                 var21.b(wa.field_d, aj.field_o[2], var7, var8, var9);
                 var21.b(ab.field_e, aj.field_o[3], var7, var8, var9);
                 var21.b(IntrusiveNode.field_d, aj.field_o[4], var7, var8, var9);
-                var4 = cf.field_z;
+                var4 = SpriteState.field_z;
                 var7 = var7 + (var6 + 4);
                 var22 = ca.field_f.field_o[d.field_c];
                 var11 = ca.field_f.field_r[d.field_c];
@@ -351,7 +351,7 @@ final class wh extends de {
                 var21.b(wa.field_d, aj.field_o[2], var7, var8, var9);
                 var21.b(ab.field_e, aj.field_o[3], var7, var8, var9);
                 var21.b(IntrusiveNode.field_d, aj.field_o[4], var7, var8, var9);
-                var4 = cf.field_z;
+                var4 = SpriteState.field_z;
                 var7 = var7 + (var6 + 4);
                 var22 = ca.field_f.field_o[d.field_c];
                 var11 = ca.field_f.field_r[d.field_c];
@@ -398,7 +398,7 @@ final class wh extends de {
                   var25.b(wa.field_d, aj.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var25.b(ab.field_e, aj.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var25.b(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var4Lifetime1 = cf.field_z;
+                  var4Lifetime1 = SpriteState.field_z;
                   var7Lifetime1 = var7Lifetime1 + (var6Lifetime1 + 4);
                   var26 = ca.field_f.field_o[d.field_c];
                   var10 = var26;
@@ -460,7 +460,7 @@ final class wh extends de {
                   var29.b(wa.field_d, aj.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var29.b(ab.field_e, aj.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var29.b(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var4Lifetime1 = cf.field_z;
+                  var4Lifetime1 = SpriteState.field_z;
                   var7Lifetime1 = var7Lifetime1 + (var6Lifetime1 + 4);
                   var30 = ca.field_f.field_o[d.field_c];
                   var10 = var30;
@@ -503,7 +503,7 @@ final class wh extends de {
               var37.b(wa.field_d, aj.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.b(ab.field_e, aj.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.b(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var4Lifetime2 = cf.field_z;
+              var4Lifetime2 = SpriteState.field_z;
               var7Lifetime2 = var7Lifetime2 + (var6Lifetime2 + 4);
               var38 = ca.field_f.field_o[d.field_c];
               var11Lifetime2 = ca.field_f.field_r[d.field_c];
@@ -563,7 +563,7 @@ final class wh extends de {
               var37.b(wa.field_d, aj.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.b(ab.field_e, aj.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.b(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var4Lifetime2 = cf.field_z;
+              var4Lifetime2 = SpriteState.field_z;
               var7Lifetime2 = var7Lifetime2 + (var6Lifetime2 + 4);
               var38 = ca.field_f.field_o[d.field_c];
               var11Lifetime2 = ca.field_f.field_r[d.field_c];
@@ -656,9 +656,9 @@ final class wh extends de {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final static void a(java.math.BigInteger param0, we param1, java.math.BigInteger param2, we param3, int param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, int param4) {
         try {
-          SecondaryNodeDeque.a(param0, true, 0, param3.field_m, param2, param1, param3.field_k);
+          SecondaryNodeDeque.a(param0, true, 0, param3.position, param2, param1, param3.payload);
           if (param4 != 12556) {
             field_s = (String) null;
           }
@@ -668,12 +668,12 @@ final class wh extends de {
     }
 
     final void a(byte param0, boolean param1, int param2) {
-        tf var4 = null;
-        tf var4Lifetime1;
-        tf var4Lifetime2;
-        tf var4Lifetime3;
+        Sprite var4 = null;
+        Sprite var4Lifetime1;
+        Sprite var4Lifetime2;
+        Sprite var4Lifetime3;
         if (param0 > -116) {
-          field_q = (tf) null;
+          field_q = (Sprite) null;
           var4 = oc.field_N;
           if (!jg.a((byte) 117)) {
             if (param2 == 1) {

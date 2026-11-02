@@ -69,7 +69,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a(byte param0, tf param1) {
+    final static void a(byte param0, Sprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;

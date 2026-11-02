@@ -13,7 +13,7 @@ final class pm {
     hd[] field_a;
     static boolean field_u;
     private int field_q;
-    static tf[] field_l;
+    static Sprite[] field_l;
     int field_g;
     dd field_d;
     int field_o;
@@ -64,7 +64,7 @@ final class pm {
         try {
           var1_int = de.field_h;
           var2 = 0;
-          if (2 == ha.field_h) {
+          if (2 == CanvasRasterBuffer.field_h) {
             var3_long = -pk.field_g + hm.a(64);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
@@ -86,7 +86,7 @@ final class pm {
               var5 = qo.field_s;
             }
             var6 = vm.field_e[var3];
-            if (ha.field_h == 2 &&
+            if (CanvasRasterBuffer.field_h == 2 &&
               1 == var2) {
               if (jk.field_d.length <= df.field_r.length) {
                 stackIn_19_0 = df.field_r.length;
@@ -165,9 +165,9 @@ final class pm {
         return this.field_d.a((byte) -117);
     }
 
-    final void a(we param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
-          this.field_q = param0.k(0);
+          this.field_q = param0.readInt(0);
           this.field_v[0] = param0.a((byte) -118);
           this.field_v[1] = param0.a((byte) -111);
           this.field_d.field_d = param0.f(255);
@@ -303,7 +303,7 @@ final class pm {
     final static void a(int param0, int param1, hh[] param2) {
         try {
           if (param0 != 13728) {
-            field_l = (tf[]) null;
+            field_l = (Sprite[]) null;
           }
           up.field_d[param1] = new dd(param2[0].field_g, param2[0].field_d, up.field_c[param1], up.field_k[param1], up.field_f[param1], up.field_p[param1], up.field_e[param1], up.field_i[param1], param2);
         } catch (RuntimeException runtimeException) {

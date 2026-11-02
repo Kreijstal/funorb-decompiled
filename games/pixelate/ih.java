@@ -7,7 +7,7 @@ final class ih {
     static int[] field_c;
     static String field_d;
     static String field_b;
-    static tf[] field_a;
+    static Sprite[] field_a;
     static int field_f;
 
     final static uc a(byte param0) {

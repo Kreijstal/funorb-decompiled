@@ -124,13 +124,13 @@ final class el {
         }
         ta.a(var18, param2);
         if (param3 <= -8) {
-          t.c(param4, param0, (int)(param6 - 0.5f), param2);
-          t.c(param1, param5, (int)(-0.5f + param6), param2);
+          SoftwareRasterizer.c(param4, param0, (int)(param6 - 0.5f), param2);
+          SoftwareRasterizer.c(param1, param5, (int)(-0.5f + param6), param2);
           return;
         }
         field_b = -46;
-        t.c(param4, param0, (int)(param6 - 0.5f), param2);
-        t.c(param1, param5, (int)(-0.5f + param6), param2);
+        SoftwareRasterizer.c(param4, param0, (int)(param6 - 0.5f), param2);
+        SoftwareRasterizer.c(param1, param5, (int)(-0.5f + param6), param2);
     }
 
     final static fm a(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {

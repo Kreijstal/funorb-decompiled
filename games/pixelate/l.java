@@ -44,7 +44,7 @@ final class l extends de {
           }
           am.a((byte) 29, param1);
           if (dk.field_b) {
-            t.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.field_nb);
+            SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.field_nb);
             nd.field_b.field_g.a(param1, 0);
             no.a(param1, (byte) 34);
             return;
@@ -60,7 +60,7 @@ final class l extends de {
           no.a(param1, (byte) 34);
           return;
         }
-        t.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.field_nb);
+        SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.field_nb);
         nd.field_b.field_g.a(param1, 0);
         no.a(param1, (byte) 34);
     }

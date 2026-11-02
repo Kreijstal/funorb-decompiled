@@ -13,7 +13,7 @@ final class dh {
           if (oo.field_b <= 0) {
             if (0 < vn.field_g) {
               if (bm.field_o) {
-                t.a(0, 0, t.field_j, ui.field_i.field_gb);
+                SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
                 ra.field_e.a(param1, 0);
                 return;
               }
@@ -23,7 +23,7 @@ final class dh {
               return;
             }
             if (bm.field_o) {
-              t.a(0, 0, t.field_j, ui.field_i.field_gb);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
               ra.field_e.a(param1, 0);
               return;
             }
@@ -34,7 +34,7 @@ final class dh {
               if (!bm.field_o) {
                 return;
               }
-              t.a(0, 0, t.field_j, ui.field_i.field_gb);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
               ra.field_e.a(param1, 0);
               return;
             }
@@ -42,13 +42,13 @@ final class dh {
               if (!bm.field_o) {
                 return;
               }
-              t.a(0, 0, t.field_j, ui.field_i.field_gb);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
               ra.field_e.a(param1, 0);
               return;
             }
             return;
           }
-          t.a(0, 0, t.field_j, ui.field_i.field_gb);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
           nc.field_e.a(param1, 0);
           if (0 >= vn.field_g &&
             h.field_W <= 0) {
@@ -57,13 +57,13 @@ final class dh {
           if (!bm.field_o) {
             return;
           }
-          t.a(0, 0, t.field_j, ui.field_i.field_gb);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
           ra.field_e.a(param1, 0);
           return;
         }
         if (oo.field_b > 0 &&
           uj.field_Wb) {
-          t.a(0, 0, t.field_j, ui.field_i.field_gb);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
           nc.field_e.a(param1, 0);
           if (0 >= vn.field_g &&
             h.field_W <= 0) {
@@ -72,7 +72,7 @@ final class dh {
           if (!bm.field_o) {
             return;
           }
-          t.a(0, 0, t.field_j, ui.field_i.field_gb);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
           ra.field_e.a(param1, 0);
           return;
         }
@@ -83,7 +83,7 @@ final class dh {
         if (!bm.field_o) {
           return;
         }
-        t.a(0, 0, t.field_j, ui.field_i.field_gb);
+        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.field_gb);
         ra.field_e.a(param1, 0);
     }
 

@@ -3,7 +3,7 @@
  */
 final class re {
     float field_f;
-    static tf field_b;
+    static Sprite field_b;
     private int field_i;
     private int field_j;
     private int field_d;
@@ -278,7 +278,7 @@ final class re {
 
     static {
         field_h = false;
-        field_b = new tf(540, 140);
+        field_b = new Sprite(540, 140);
         field_c = "New Game";
         field_g = "Offline";
         field_k = new String[]{"All scores", "My scores", "Best each"};

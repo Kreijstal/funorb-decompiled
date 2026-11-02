@@ -51,7 +51,7 @@ final class np {
         if (var3 == null) {
           return null;
         }
-        return new np(new we(var3));
+        return new np(new PacketBuffer(var3));
     }
 
     final sp b() {
@@ -59,14 +59,14 @@ final class np {
         return new sp(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
-    private np(we param0) {
+    private np(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new qc[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.f(255);
           if (var3 != 0) {
-            param0.field_m = param0.field_m - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new qc();
             this.field_b[var2].a(param0);
           }

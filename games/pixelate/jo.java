@@ -16,7 +16,7 @@ final class jo implements eb {
     private int field_d;
     static boolean field_r;
     private int field_i;
-    static tf field_j;
+    static Sprite field_j;
     private int field_l;
     private jl field_m;
     private int field_a;
@@ -134,14 +134,14 @@ final class jo implements eb {
           if (param4) {
             var7 = 16777215;
           }
-          t.d(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, this.field_a);
+          SoftwareRasterizer.d(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, this.field_a);
           var8 = this.field_f + (param3 + param0.field_z);
           var9 = param2 + param0.field_p + this.field_l;
-          t.c(var8, var9, this.field_q, this.field_p, 5592405);
-          t.d(var8, var9, this.field_q, this.field_p, var7);
+          SoftwareRasterizer.c(var8, var9, this.field_q, this.field_p, 5592405);
+          SoftwareRasterizer.d(var8, var9, this.field_q, this.field_p, var7);
           if (var11.field_M) {
-            t.b(var8, var9, var8 + this.field_q, var9 + this.field_p, 1);
-            t.b(var8 + this.field_q, var9, var8, var9 + this.field_p, 1);
+            SoftwareRasterizer.b(var8, var9, var8 + this.field_q, var9 + this.field_p, 1);
+            SoftwareRasterizer.b(var8 + this.field_q, var9, var8, var9 + this.field_p, 1);
           }
           if (this.field_m == null) {
             return;
@@ -171,7 +171,7 @@ final class jo implements eb {
           field_k = null;
           return;
         }
-        field_j = (tf) null;
+        field_j = (Sprite) null;
         field_c = null;
         field_n = null;
         field_j = null;

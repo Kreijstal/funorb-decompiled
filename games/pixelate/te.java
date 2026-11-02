@@ -263,7 +263,7 @@ final class te extends ak {
               -1 == this.field_Tb[var13]) {
               var14 = fe.field_b;
             }
-            this.field_Sb[var13] = new lo(0L, param2, (ak) null, param3, (tf) (var14), param6[var13]);
+            this.field_Sb[var13] = new lo(0L, param2, (ak) null, param3, (Sprite) (var14), param6[var13]);
             this.a(this.field_Sb[var13], (byte) 26);
             var15 = var17.c(param6[var13]);
             if (var15 > this.field_Rb) {

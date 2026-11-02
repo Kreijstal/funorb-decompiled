@@ -337,7 +337,7 @@ final class gg extends jp {
         }
     }
 
-    final static void a(boolean param0, String[][] param1, byte[] param2, fm param3, String[] param4, byte[] param5, tf[][] param6, int param7, int param8, tf[][] param9, fm param10, int param11, String[][] param12, fm param13, int[] param14) {
+    final static void a(boolean param0, String[][] param1, byte[] param2, fm param3, String[] param4, byte[] param5, Sprite[][] param6, int param7, int param8, Sprite[][] param9, fm param10, int param11, String[][] param12, fm param13, int[] param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -738,7 +738,7 @@ final class gg extends jp {
         try {
           field_h = null;
           if (param0 != 45) {
-            gg.a(true, (String[][]) null, (byte[]) null, (fm) null, (String[]) null, (byte[]) null, (tf[][]) null, -91, 127, (tf[][]) null, (fm) null, 112, (String[][]) null, (fm) null, (int[]) null);
+            gg.a(true, (String[][]) null, (byte[]) null, (fm) null, (String[]) null, (byte[]) null, (Sprite[][]) null, -91, 127, (Sprite[][]) null, (fm) null, 112, (String[][]) null, (fm) null, (int[]) null);
           }
           field_z = null;
           field_v = null;
@@ -764,7 +764,7 @@ final class gg extends jp {
             return (id) (stackIn_12_0);
           }
           tm.field_X = wm.field_a;
-          stackIn_10_0 = v.field_b;
+          stackIn_10_0 = MouseWheelHandler.field_b;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

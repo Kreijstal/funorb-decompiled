@@ -4,7 +4,7 @@
 final class no extends kd {
     private int field_f;
     static String field_n;
-    static tf[] field_p;
+    static Sprite[] field_p;
     static String field_g;
     private int field_i;
     static String field_j;
@@ -913,10 +913,10 @@ final class no extends kd {
                   if (var12 == 0) {
                     var14 = sd.a(sm.field_n, 80, new String[]{(String) (var11)});
                     if (var19 != 0) {
-                      var14 = cf.field_x + (String) (var11);
+                      var14 = SpriteState.field_x + (String) (var11);
                     }
                   } else {
-                    var14 = cf.field_x + (String) (var11);
+                    var14 = SpriteState.field_x + (String) (var11);
                   }
                 } else {
                   var13_ref = aq.field_c;
@@ -986,14 +986,14 @@ final class no extends kd {
         Object var2 = null;
         int var3 = 0;
         int var4 = 0;
-        tf var5 = null;
-        tf var6 = null;
-        tf var7 = null;
+        Sprite var5 = null;
+        Sprite var6 = null;
+        Sprite var7 = null;
         int var3Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          t.a(243, 197, 369, 143, 16777215);
-          t.d(244, 198, 367, 141, 0);
+          SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.d(244, 198, 367, 141, 0);
           if (wg.field_g == null) {
             if (null != qe.field_A) {
               qe.field_A.a(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
@@ -1001,7 +1001,7 @@ final class no extends kd {
             return;
           }
           if (param0 != -19308) {
-            field_p = (tf[]) null;
+            field_p = (Sprite[]) null;
           }
           var5 = wg.field_g[ae.field_b];
           boolean decompiledSharedTail1 = (var5 == null);

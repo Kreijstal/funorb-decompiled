@@ -155,7 +155,7 @@ final class dm extends vk implements vo {
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (!param0) {
-          t.d();
+          SoftwareRasterizer.d();
           if (param2 != 0) {
             dm.a(true, false, -123);
             rj.a(param2 ^ 91, param0);
@@ -164,7 +164,7 @@ final class dm extends vk implements vo {
           rj.a(param2 ^ 91, param0);
           return;
         }
-        t.a(0, 0, t.field_j, t.field_d, 0, 192);
+        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
         if (param2 != 0) {
           dm.a(true, false, -123);
           rj.a(param2 ^ 91, param0);

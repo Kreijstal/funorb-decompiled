@@ -29,7 +29,7 @@ final class wc extends jj {
         field_p = (int[][]) null;
     }
 
-    wc(String param0, tf[] param1) {
+    wc(String param0, Sprite[] param1) {
         super(param0, param1);
         try {
           this.c((byte) 97);

@@ -4,7 +4,7 @@
 final class qf {
     static int field_b;
     static bn field_a;
-    static tf field_c;
+    static Sprite field_c;
     static String field_d;
 
     public static void a(boolean param0) {
@@ -39,7 +39,7 @@ final class qf {
           GameApplet.field_j[91] = 42;
           return;
         }
-        field_c = (tf) null;
+        field_c = (Sprite) null;
         GameApplet.field_j[222] = 58;
         GameApplet.field_j[93] = 43;
         GameApplet.field_j[47] = 73;

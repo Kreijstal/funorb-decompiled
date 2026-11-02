@@ -13,16 +13,16 @@ final class ff {
     static String field_b;
     static ak field_a;
 
-    final static tf[] a(fm param0, int param1, int param2, int param3) {
+    final static Sprite[] a(fm param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        tf[] stackIn_2_0 = null;
+        Sprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -3) {
-            stackIn_2_0 = (tf[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           if (rk.a(param2, false, param0, param1)) {
@@ -104,11 +104,11 @@ final class ff {
           f.field_q = f.field_q - 1;
           var9 = aa.field_f;
           var9.g(param0, 15514);
-          var9.field_m = var9.field_m + 1;
-          var5 = var9.field_m;
-          var9.e(160, 1);
+          var9.position = var9.position + 1;
+          var5 = var9.position;
+          var9.writeByte(160, 1);
           var9.b((byte) -41, param1);
-          var9.f(-var5 + var9.field_m, -1);
+          var9.f(-var5 + var9.position, -1);
           stackIn_19_0 = null;
           return (String) (stackIn_19_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,14 +125,14 @@ final class ff {
         }
     }
 
-    private final static tf[] b(int param0) {
+    private final static Sprite[] b(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = Pixelate.field_H ? 1 : 0;
-        tf[] var1 = new tf[im.field_Qb];
+        Sprite[] var1 = new Sprite[im.field_Qb];
         for (var2 = param0; var2 < im.field_Qb; var2++) {
           var3 = ge.field_c[var2] * gf.field_g[var2];
           var4 = wo.field_f[var2];
@@ -140,7 +140,7 @@ final class ff {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = fl.field_g[cm.a((int) var4[var6], 255)];
           }
-          var1[var2] = new tf(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var5);
+          var1[var2] = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var5);
         }
         re.b(140);
         return var1;

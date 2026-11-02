@@ -13,7 +13,7 @@ final class hf extends IntrusiveNode {
     static int field_q;
     static int field_w;
     int field_v;
-    static tf field_m;
+    static Sprite field_m;
     static long field_t;
 
     public static void a(byte param0) {

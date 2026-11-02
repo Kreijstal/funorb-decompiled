@@ -43,15 +43,15 @@ final class hg implements eb {
             stackIn_6_0 = (ng) (param0);
           }
           var12 = (tm) (stackIn_6_0);
-          t.d(param0.field_z + param3, param2 + param0.field_p, param0.field_E, param0.field_C, this.field_d);
+          SoftwareRasterizer.d(param0.field_z + param3, param2 + param0.field_p, param0.field_E, param0.field_C, this.field_d);
           if (var12 != null) {
           }
           var7 = param0.field_E - 2 * var12.field_R;
           var8 = param3 + param0.field_z + var12.field_R;
           var9 = param2 + param0.field_p + var12.field_T;
-          t.b(var8, var9, var7 + var8, var9, this.field_c);
+          SoftwareRasterizer.b(var8, var9, var7 + var8, var9, this.field_c);
           for (var10 = -1 + var12.f((byte) 62); var10 >= 0; var10--) {
-            t.c(var8 + var7 * var12.a((byte) -91, var10) / var12.k(param1 + 123), var9, this.field_e, this.field_a);
+            SoftwareRasterizer.c(var8 + var7 * var12.a((byte) -91, var10) / var12.k(param1 + 123), var9, this.field_e, this.field_a);
           }
           if (null == this.field_h) {
             return;

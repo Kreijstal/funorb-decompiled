@@ -31,9 +31,9 @@ final class df extends IntrusiveNode {
             }
             var4 = aa.field_f;
             var4.g(param2, param0 ^ 15513);
-            var4.e(160, 3);
-            var4.e(160, 11);
-            var4.b(1276387944, param1);
+            var4.writeByte(160, 3);
+            var4.writeByte(160, 11);
+            var4.writeShort(1276387944, param1);
           }
           return;
         }
@@ -48,9 +48,9 @@ final class df extends IntrusiveNode {
           }
           var4Lifetime1 = aa.field_f;
           var4Lifetime1.g(param2, param0 ^ 15513);
-          var4Lifetime1.e(160, 3);
-          var4Lifetime1.e(160, 11);
-          var4Lifetime1.b(1276387944, param1);
+          var4Lifetime1.writeByte(160, 3);
+          var4Lifetime1.writeByte(160, 11);
+          var4Lifetime1.writeShort(1276387944, param1);
         }
     }
 

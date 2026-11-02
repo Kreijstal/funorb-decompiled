@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class i extends ha implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_o;
     private java.awt.image.ImageConsumer field_p;
     static bb field_n;
@@ -33,7 +33,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
         try {
           if (param0 != -640) {
             var3 = (String) null;
-            i.a(54, (String) null);
+            ImageProducerRasterBuffer.a(54, (String) null);
           }
           stackIn_5_0 = (fh.a(param1, -99) != null);
           return stackIn_5_0;
@@ -114,7 +114,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
           this.b(false);
           param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
           if (param3 > -51) {
-            i.a(-29, true, false, false, true, 57, -40, true, -122, -23);
+            ImageProducerRasterBuffer.a(-29, true, false, false, true, 57, -40, true, -122, -23);
           }
           this.b(false);
           param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
@@ -133,7 +133,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
         return param0 == this.field_p;
     }
 
-    i() {
+    ImageProducerRasterBuffer() {
     }
 
     public static void c(int param0) {
@@ -181,7 +181,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
             return stackIn_18_0;
           }
           if (param1 >= -66) {
-            i.c(49);
+            ImageProducerRasterBuffer.c(49);
           }
           if (param0.equals("F")) {
             stackIn_24_0 = Float.TYPE;
@@ -331,17 +331,17 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
             }
           }
         } else {
-          if (ni.field_q == t.field_j) {
-            if (t.field_d != wg.field_b &&
-              ClientException.field_f.field_i == t.field_d &&
-              ClientException.field_f.field_a == t.field_j) {
+          if (ni.field_q == SoftwareRasterizer.field_j) {
+            if (SoftwareRasterizer.field_d != wg.field_b &&
+              ClientException.field_f.field_i == SoftwareRasterizer.field_d &&
+              ClientException.field_f.field_a == SoftwareRasterizer.field_j) {
               if (io.field_c != null) {
                 hn.a((byte) 32, false);
               } else {
                 if (bn.field_S != null) {
                   hn.a((byte) 32, true);
                 } else {
-                  we.b(false);
+                  PacketBuffer.b(false);
                 }
               }
             }
@@ -442,15 +442,15 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               }
             }
           } else {
-            if (ClientException.field_f.field_i == t.field_d &&
-              ClientException.field_f.field_a == t.field_j) {
+            if (ClientException.field_f.field_i == SoftwareRasterizer.field_d &&
+              ClientException.field_f.field_a == SoftwareRasterizer.field_j) {
               if (io.field_c != null) {
                 hn.a((byte) 32, false);
               } else {
                 if (bn.field_S != null) {
                   hn.a((byte) 32, true);
                 } else {
-                  we.b(false);
+                  PacketBuffer.b(false);
                 }
               }
             }

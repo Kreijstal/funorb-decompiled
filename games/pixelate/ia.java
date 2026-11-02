@@ -71,8 +71,8 @@ final class ia implements eb {
           if (var1 == null) {
             throw new IllegalStateException();
           }
-          t.a(var1.field_t, var1.field_q, var1.field_u);
-          t.f(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
+          SoftwareRasterizer.a(var1.field_t, var1.field_q, var1.field_u);
+          SoftwareRasterizer.f(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
           var1.field_t = null;
           vc.field_O.a(param0 ^ 22065, var1);
           return;
@@ -80,8 +80,8 @@ final class ia implements eb {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        t.a(var1.field_t, var1.field_q, var1.field_u);
-        t.f(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
+        SoftwareRasterizer.a(var1.field_t, var1.field_q, var1.field_u);
+        SoftwareRasterizer.f(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
         var1.field_t = null;
         vc.field_O.a(param0 ^ 22065, var1);
     }

@@ -13,7 +13,7 @@ final class in extends IntrusiveNode {
     int field_w;
     int field_D;
     sp field_F;
-    static tf field_B;
+    static Sprite field_B;
     sn field_x;
     int field_C;
     int field_k;
@@ -27,7 +27,7 @@ final class in extends IntrusiveNode {
     int field_r;
     static bb field_J;
     int field_I;
-    static tf field_s;
+    static Sprite field_s;
 
     final static void a(java.awt.Component param0, int param1) {
         try {
@@ -48,14 +48,14 @@ final class in extends IntrusiveNode {
             return false;
           }
           jj.field_b = vi.field_o.f(255);
-          vi.field_o.field_m = 0;
+          vi.field_o.position = 0;
         }
         if (-2 == jj.field_b) {
           if (!rd.a(2, false)) {
             return false;
           }
           jj.field_b = vi.field_o.a((byte) -113);
-          vi.field_o.field_m = 0;
+          vi.field_o.position = 0;
         }
         if (param0 == -18481) {
           return rd.a(jj.field_b, false);

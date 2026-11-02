@@ -6,12 +6,12 @@ class jj {
     int field_d;
     static String field_j;
     static String field_e;
-    tf[] field_k;
-    tf[] field_f;
-    tf[] field_a;
+    Sprite[] field_k;
+    Sprite[] field_f;
+    Sprite[] field_a;
     static int[] field_h;
     int[][] field_g;
-    private tf field_i;
+    private Sprite field_i;
     static String field_c;
     static int field_b;
 
@@ -30,23 +30,23 @@ class jj {
           var3 = 20 + kb.field_L.c(this.field_l) / 2 + 320;
           var4 = -1;
           var5 = 25;
-          t.a(nh.field_a);
+          SoftwareRasterizer.a(nh.field_a);
           if (this.field_d <= dm.field_Cb - var5) {
             if (var5 > this.field_d) {
               var4 = 640 - this.field_d * 640 / var5;
-              t.f(var4, 0, var3, 480);
+              SoftwareRasterizer.f(var4, 0, var3, 480);
             }
           } else {
             var4 = 640 * (-this.field_d + dm.field_Cb) / var5;
-            t.f(var2, 0, var4, 480);
+            SoftwareRasterizer.f(var2, 0, var4, 480);
           }
           fi.a(this.field_i, 0, -kb.field_L.field_w + (140 - pd.field_Jb * 2));
           kb.field_L.b(this.field_l, 320, 140, 0, 0);
-          t.b(nh.field_a);
+          SoftwareRasterizer.b(nh.field_a);
           if (var4 > 0) {
             var6 = -((kb.field_L.field_w + kb.field_L.field_z) / 2) + 141;
             for (var7 = 0; 10 > var7; var7++) {
-              t.a(-40 + var4 + 4 * var7 << 4, var6 << 4, var7 << 3, 15, bo.field_c);
+              SoftwareRasterizer.a(-40 + var4 + 4 * var7 << 4, var6 << 4, var7 << 3, 15, bo.field_c);
             }
           }
         }
@@ -164,7 +164,7 @@ class jj {
 
     final static void a(int param0) {
         r.b(-93);
-        eh.a(3, v.field_c, fq.field_q, r.field_c, h.field_V[param0].field_A, DelegatingCanvas.field_b);
+        eh.a(3, MouseWheelHandler.field_c, fq.field_q, r.field_c, h.field_V[param0].field_A, DelegatingCanvas.field_b);
     }
 
     void a(boolean param0) {
@@ -173,14 +173,14 @@ class jj {
         }
     }
 
-    jj(String param0, tf[] param1) {
+    jj(String param0, Sprite[] param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8_int = 0;
-        tf var8 = null;
+        Sprite var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -206,21 +206,21 @@ class jj {
         try {
           this.field_f = param1;
           this.field_l = "\"" + param0 + "\"";
-          this.field_k = new tf[this.field_f.length];
-          this.field_a = new tf[this.field_f.length];
+          this.field_k = new Sprite[this.field_f.length];
+          this.field_a = new Sprite[this.field_f.length];
           var3_int = this.field_f[0].field_F >> 1;
           var4 = this.field_f[0].field_F >> 2;
           for (var5 = 0; var5 < this.field_f.length; var5++) {
-            this.field_k[var5] = new tf(var3_int, var3_int);
-            this.field_a[var5] = new tf(var4, var4);
+            this.field_k[var5] = new Sprite(var3_int, var3_int);
+            this.field_a[var5] = new Sprite(var4, var4);
             this.field_k[var5].c();
             this.field_f[var5].d(0, 0);
             this.field_a[var5].c();
             this.field_f[var5].e(0, 0);
             this.field_f[var5].c();
-            t.a(0, 0, 128, 128, 0, 48);
+            SoftwareRasterizer.a(0, 0, 128, 128, 0, 48);
           }
-          this.field_i = new tf(640, 4 * pd.field_Jb + (kb.field_L.field_w + kb.field_L.field_z));
+          this.field_i = new Sprite(640, 4 * pd.field_Jb + (kb.field_L.field_w + kb.field_L.field_z));
           this.field_i.c();
           var5Lifetime1 = 320;
           var6 = this.field_i.field_E - pd.field_Jb * 2 - kb.field_L.field_z;
@@ -228,7 +228,7 @@ class jj {
           kb.field_L.b(this.field_l, var5Lifetime1 + 1, var6 - 1, 0, -1);
           kb.field_L.b(this.field_l, var5Lifetime1 - 1, var6 + 1, 0, -1);
           kb.field_L.b(this.field_l, 1 + var5Lifetime1, var6 + 1, 0, -1);
-          t.c(pd.field_Jb, pd.field_Jb, 0, 0, this.field_i.field_F, this.field_i.field_E);
+          SoftwareRasterizer.c(pd.field_Jb, pd.field_Jb, 0, 0, this.field_i.field_F, this.field_i.field_E);
           kb.field_L.b(this.field_l, var5Lifetime1, var6, 0, -1);
           ClientException.field_f.a(19692);
           this.field_g = new int[2][];

@@ -44,7 +44,7 @@ abstract class rg {
         }
     }
 
-    abstract void a(byte param0, we param1);
+    abstract void a(byte param0, PacketBuffer param1);
 
     abstract ea b(int param0);
 

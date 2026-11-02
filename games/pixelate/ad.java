@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ad extends uc {
-    private tf[] field_s;
+    private Sprite[] field_s;
     private int field_q;
     static String field_r;
     static wm field_u;
-    static tf field_w;
+    static Sprite field_w;
     private int field_v;
     private int field_t;
 
@@ -139,13 +139,13 @@ final class ad extends uc {
         field_w = null;
         field_r = null;
         if (param0 > -24) {
-          tf[] var2 = (tf[]) null;
-          ad.a((tf[]) null, 23, -123, 94);
+          Sprite[] var2 = (Sprite[]) null;
+          ad.a((Sprite[]) null, 23, -123, 94);
         }
         field_u = null;
     }
 
-    final static void a(tf[] param0, int param1, int param2, int param3) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3) {
         try {
           if (param2 > -57) {
             hh var5 = (hh) null;
@@ -153,7 +153,7 @@ final class ad extends uc {
           }
           he.field_a = new sb(param0);
           gh.field_t = param3;
-          we.field_n = param1;
+          PacketBuffer.field_n = param1;
           bb.h(-126);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ad.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

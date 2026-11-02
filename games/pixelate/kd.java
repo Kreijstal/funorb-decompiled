@@ -44,7 +44,7 @@ abstract class kd {
 
     final static void c(boolean param0, int param1) {
         if (null != ri.field_f) {
-          t.a(t.field_e, t.field_f, -t.field_e + t.field_h, t.field_a - t.field_f);
+          SoftwareRasterizer.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
           ri.field_f.a(param0, 0);
         }
         if (param1 != -24721) {
@@ -71,7 +71,7 @@ abstract class kd {
         return 0;
     }
 
-    final static void a(boolean param0, eq param1, byte param2, we param3) {
+    final static void a(boolean param0, eq param1, byte param2, PacketBuffer param3) {
         int var8 = 0;
         eq stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
@@ -138,18 +138,18 @@ abstract class kd {
           var6 = stackIn_31_0;
           param3.a(param1.field_Eb, 0, -77, param1.field_Eb.length);
           param1.field_bc = param3.a((byte) -11);
-          param1.field_Lb = hm.a(64) - (long)param3.k(param2 - 120);
+          param1.field_Lb = hm.a(64) - (long)param3.readInt(param2 - 120);
           if (var5 == 0) {
             param1.field_nc = -1;
           } else {
-            param1.field_nc = param3.k(param2 - 120);
+            param1.field_nc = param3.readInt(param2 - 120);
           }
           param1.field_kc = param3.a(false);
-          var7 = param3.field_m;
+          var7 = param3.position;
           param1.field_pc = param3.h(5);
           if (var6 != 0) {
             param1.field_Ub = new String[param1.field_mc];
-            param3.field_m = var7;
+            param3.position = var7;
             for (var8 = 0; var8 < param1.field_mc; var8++) {
               param1.field_Ub[var8] = param3.h(param2 - 115);
             }

@@ -22,7 +22,7 @@ final class rb extends de {
         if (param0 == 0) {
           return ge.field_b;
         }
-        return we.field_o[this.field_k[param0]];
+        return PacketBuffer.field_o[this.field_k[param0]];
     }
 
     private final int f(int param0) {
@@ -78,10 +78,10 @@ final class rb extends de {
         tc var4;
         int var5;
         int var6;
-        tf var6_ref_tf;
+        Sprite var6_ref_tf;
         int var7;
         int var8;
-        tf var9;
+        Sprite var9;
         int var10;
         int var11;
         int var12;
@@ -106,10 +106,10 @@ final class rb extends de {
             var7 = this.d(var5, (byte) -54);
             var8 = this.f(-111, var5);
             if (var5 == jm.field_j) {
-              t.a(var7 - 3, -3 + var8, 38, 38, 6, 0, 128);
+              SoftwareRasterizer.a(var7 - 3, -3 + var8, 38, 38, 6, 0, 128);
             }
             if (var5 == jn.field_v) {
-              t.e(var7 - 3, var8 - 3, 38, 38, 6, 16777215);
+              SoftwareRasterizer.e(var7 - 3, var8 - 3, 38, 38, 6, 16777215);
             }
             var6_ref_tf.e(var7, var8);
           }
@@ -239,7 +239,7 @@ final class rb extends de {
         return var4;
     }
 
-    private final tf b(byte param0, int param1) {
+    private final Sprite b(byte param0, int param1) {
         if (this.a((byte) 66, param1)) {
           return oo.field_c[param1];
         }
@@ -250,7 +250,7 @@ final class rb extends de {
         if (param0 == 37) {
           return pj.field_a;
         }
-        return (tf) null;
+        return (Sprite) null;
     }
 
     private final boolean a(byte param0, int param1) {
@@ -317,8 +317,8 @@ final class rb extends de {
 
     final void a(byte param0, boolean param1, int param2) {
         String var4;
-        tf stackIn_5_0 = null;
-        tf var5;
+        Sprite stackIn_5_0 = null;
+        Sprite var5;
         var4 = this.d(param2, 7698);
         if (param2 == 1 &&
           this.field_k[param2] == 23) {

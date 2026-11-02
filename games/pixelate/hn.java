@@ -6,10 +6,10 @@ abstract class hn implements ml {
     private long field_c;
     static int field_d;
     static fm field_e;
-    static tf field_b;
+    static Sprite field_b;
     static long field_f;
 
-    final static int a(boolean param0, String param1, we param2) {
+    final static int a(boolean param0, String param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -22,12 +22,12 @@ abstract class hn implements ml {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param2.field_m;
+          var3_int = param2.position;
           var5 = (CharSequence) ((Object) param1);
           var4 = gk.b(var5, 353);
           param2.a((byte) 81, var4.length);
-          param2.field_m = param2.field_m + kp.field_v.a(param2.field_m, var4.length, param2.field_k, 0, var4, param0);
-          stackIn_1_0 = -var3_int + param2.field_m;
+          param2.position = param2.position + kp.field_v.a(param2.position, var4.length, param2.payload, 0, var4, param0);
+          stackIn_1_0 = -var3_int + param2.position;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,8 +205,8 @@ abstract class hn implements ml {
         int var17 = 0;
         var13 = Pixelate.field_H ? 1 : 0;
         try {
-          ni.field_q = t.field_j;
-          wg.field_b = t.field_d;
+          ni.field_q = SoftwareRasterizer.field_j;
+          wg.field_b = SoftwareRasterizer.field_d;
           if (param0 != 32) {
             var14 = (im) null;
             hn.a((byte) -25, (im) null, (im) null);
@@ -335,7 +335,7 @@ abstract class hn implements ml {
               }
             }
           }
-          ra.field_e.a(10, -10 + (-10 + (-4 + (-120 + t.field_d))), t.field_j - 360 >> 1, 256, 360);
+          ra.field_e.a(10, -10 + (-10 + (-4 + (-120 + SoftwareRasterizer.field_d))), SoftwareRasterizer.field_j - 360 >> 1, 256, 360);
           ih.field_g.a(0, 24, 0, 256, ra.field_e.field_K);
           kh.field_a.a(24, -24 + ra.field_e.field_nb, 0, 256, ra.field_e.field_K);
           kh.field_a.field_zb = op.a(8421504, param0 ^ 48, 11579568, kh.field_a.field_nb, 1, 3);
@@ -398,7 +398,7 @@ abstract class hn implements ml {
         }
         int var3 = bn.field_S != null ? 1 : 0;
         if (9 == ke.field_a &&
-          cf.a(vi.field_F, up.field_h, um.field_o, hm.field_b, 500)) {
+          SpriteState.a(vi.field_F, up.field_h, um.field_o, hm.field_b, 500)) {
           if (hm.field_b != 2 &&
             var3 != 0) {
             return false;

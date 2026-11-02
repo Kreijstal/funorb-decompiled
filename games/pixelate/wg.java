@@ -6,7 +6,7 @@ final class wg {
     static int[] field_c;
     int[] field_f;
     static int field_e;
-    static tf[] field_g;
+    static Sprite[] field_g;
     static boolean field_a;
     static int field_b;
 

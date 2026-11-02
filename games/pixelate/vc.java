@@ -126,10 +126,10 @@ final class vc extends qm {
         int var10;
         int var11;
         int var12;
-        tf var14;
-        tf var15;
-        tf var16;
-        tf var17;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
+        Sprite var17;
         int var10Lifetime1;
         int var11Lifetime1;
         var12 = Pixelate.field_H ? 1 : 0;
@@ -142,22 +142,22 @@ final class vc extends qm {
         var7 = (this.field_C >> 1) + (this.field_p + param0);
         var9 = this.field_P.a((byte) 110);
         if (uo.field_b == var9) {
-          var17 = ha.field_g[0];
+          var17 = CanvasRasterBuffer.field_g[0];
           var10 = var17.field_A << 1;
           var11 = var17.field_B << 1;
           if (null == u.field_k) {
-            u.field_k = new tf(var10, var11);
+            u.field_k = new Sprite(var10, var11);
             h.a(-83, u.field_k);
           } else {
             if (var10 > u.field_k.field_F) {
-              u.field_k = new tf(var10, var11);
+              u.field_k = new Sprite(var10, var11);
               h.a(-83, u.field_k);
             } else {
               if (u.field_k.field_E >= var11) {
                 h.a(-71, u.field_k);
-                t.d();
+                SoftwareRasterizer.d();
               } else {
-                u.field_k = new tf(var10, var11);
+                u.field_k = new Sprite(var10, var11);
                 h.a(-83, u.field_k);
               }
             }
@@ -169,33 +169,33 @@ final class vc extends qm {
         }
         if (var9 != tg.field_j) {
           if (var9 == sk.field_a) {
-            var14 = ha.field_g[2];
+            var14 = CanvasRasterBuffer.field_g[2];
             var14.b(var5 - (var14.field_F >> 1), -(var14.field_E >> 1) + var7, 256);
             return;
           }
           if (qk.field_g != var9) {
             return;
           }
-          var15 = ha.field_g[1];
+          var15 = CanvasRasterBuffer.field_g[1];
           var15.b(-(var15.field_F >> 1) + var5, var7 - (var15.field_E >> 1), 256);
           return;
         }
-        var16 = ha.field_g[0];
+        var16 = CanvasRasterBuffer.field_g[0];
         var10Lifetime1 = var16.field_A << 1;
         var11Lifetime1 = var16.field_B << 1;
         if (null == u.field_k) {
-          u.field_k = new tf(var10Lifetime1, var11Lifetime1);
+          u.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
           h.a(-83, u.field_k);
         } else {
           if (var10Lifetime1 > u.field_k.field_F) {
-            u.field_k = new tf(var10Lifetime1, var11Lifetime1);
+            u.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
             h.a(-83, u.field_k);
           } else {
             if (u.field_k.field_E >= var11Lifetime1) {
               h.a(-71, u.field_k);
-              t.d();
+              SoftwareRasterizer.d();
             } else {
-              u.field_k = new tf(var10Lifetime1, var11Lifetime1);
+              u.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
               h.a(-83, u.field_k);
             }
           }

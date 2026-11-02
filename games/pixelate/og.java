@@ -12,7 +12,7 @@ final class og extends IntrusiveNode {
         return ck.a(true, ao.a(13867));
     }
 
-    final static tf[] a(int param0, boolean param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, boolean param1, int param2, int param3, int param4) {
         if (param1) {
           return ra.a(1, 1, param3, param0, 3, (byte) 126, param4, param2, 1);
         }

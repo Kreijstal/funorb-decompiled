@@ -89,7 +89,7 @@ final class pl extends ch implements om, vo, pn {
         var3 = var3 + (5 + this.a(pb.field_i, var3, this.field_X, 35, 170, r.field_b));
         var3 = var3 + (this.a(na.field_a, var3, this.field_U, 35, 170, mo.field_i) + 5);
         var3 = var3 + this.a((byte) 85, 170, this.field_Q, var3, rl.field_O);
-        qp var4 = new qp(46, var3, this.field_E - 90, 25, this.field_T, true, this.field_E - 120, 5, ep.field_b, 11579568, ha.field_j);
+        qp var4 = new qp(46, var3, this.field_E - 90, 25, this.field_T, true, this.field_E - 120, 5, ep.field_b, 11579568, CanvasRasterBuffer.field_j);
         this.b(var4, 80);
         var3 = var3 + var4.field_C;
         uc var5 = new uc(he.field_d, 0, 0, 0, 0, 16777215, -1, 0, 0, he.field_d.field_w, -1, 2147483647, true);
@@ -275,17 +275,17 @@ final class pl extends ch implements om, vo, pn {
           if (!param0) {
             pl.m(96);
           }
-          var2 = ((we) ((Object) var1)).f(255);
+          var2 = ((PacketBuffer) ((Object) var1)).f(255);
           if (var2 != 0 &&
             var2 != 1 &&
             2 != var2 &&
             3 != var2 &&
             var2 != 4) {
             if (var2 == 5) {
-              var3 = ((we) ((Object) var1)).a(false);
-              var21 = ((we) ((Object) var1)).h(5);
-              var20 = ((we) ((Object) var1)).h(5);
-              var22 = ((we) ((Object) var1)).h(5);
+              var3 = ((PacketBuffer) ((Object) var1)).a(false);
+              var21 = ((PacketBuffer) ((Object) var1)).h(5);
+              var20 = ((PacketBuffer) ((Object) var1)).h(5);
+              var22 = ((PacketBuffer) ((Object) var1)).h(5);
               var8_ref_uj = gp.a(2, var3);
               stackIn_46_0 = (var20.equals("")) ? 0 : 1;
               var9 = stackIn_46_0;
@@ -301,21 +301,21 @@ final class pl extends ch implements om, vo, pn {
                 var8_ref_uj = new uj(var21, var22, var3);
                 il.field_d.a(false, var8_ref_uj, var3);
               }
-              var8_ref_uj.field_Pb = hm.a(64) - (long)((we) ((Object) var1)).k(0);
-              var8_ref_uj.field_Rb = ((we) ((Object) var1)).a((byte) 105);
-              var10 = ((we) ((Object) var1)).j(127);
+              var8_ref_uj.field_Pb = hm.a(64) - (long)((PacketBuffer) ((Object) var1)).readInt(0);
+              var8_ref_uj.field_Rb = ((PacketBuffer) ((Object) var1)).a((byte) 105);
+              var10 = ((PacketBuffer) ((Object) var1)).j(127);
               var8_ref_uj.field_Yb = var10 >> 1;
               stackIn_55_0 = var8_ref_uj;
               stackIn_56_1 = ((var10 & 1) != 0);
               stackIn_55_0.field_Xb = stackIn_56_1;
-              var8_ref_uj.field_Qb = ((we) ((Object) var1)).f(255);
-              var8_ref_uj.field_Ib = ((we) ((Object) var1)).f(255);
+              var8_ref_uj.field_Qb = ((PacketBuffer) ((Object) var1)).f(255);
+              var8_ref_uj.field_Ib = ((PacketBuffer) ((Object) var1)).f(255);
               il.a(-28, var8_ref_uj);
               return;
             }
             if (6 == var2) {
-              var3Lifetime1 = ((we) ((Object) var1)).a(false);
-              var5 = ((we) ((Object) var1)).f(255);
+              var3Lifetime1 = ((PacketBuffer) ((Object) var1)).a(false);
+              var5 = ((PacketBuffer) ((Object) var1)).f(255);
               var30 = gp.a(2, var3Lifetime1);
               if (var30 == null) {
                 return;
@@ -334,17 +334,17 @@ final class pl extends ch implements om, vo, pn {
               return;
             }
             if (var2 == 7) {
-              var31 = (uj) (i.field_n.c(1504642273));
+              var31 = (uj) (ImageProducerRasterBuffer.field_n.c(1504642273));
               while (var31 != null) {
                 var31.c(2779);
                 var31.e(17);
-                var31 = (uj) (i.field_n.f(1504642273));
+                var31 = (uj) (ImageProducerRasterBuffer.field_n.f(1504642273));
               }
               ka.field_X = 0;
               return;
             }
             if (8 == var2) {
-              var3_int = ((we) ((Object) var1)).a((byte) -124);
+              var3_int = ((PacketBuffer) ((Object) var1)).a((byte) -124);
               var4 = (eq) (dg.field_f.a(-11434, (long)var3_int));
               if (var4 == null) {
                 var4 = new eq(fj.field_b);
@@ -355,8 +355,8 @@ final class pl extends ch implements om, vo, pn {
               return;
             }
             if (var2 == 9) {
-              var3_intLifetime4 = ((we) ((Object) var1)).a((byte) 124);
-              var4_int = ((we) ((Object) var1)).f(255);
+              var3_intLifetime4 = ((PacketBuffer) ((Object) var1)).a((byte) 124);
+              var4_int = ((PacketBuffer) ((Object) var1)).f(255);
               var33 = (eq) (dg.field_f.a(-11434, (long)var3_intLifetime4));
               if (var33 == null) {
                 return;
@@ -382,8 +382,8 @@ final class pl extends ch implements om, vo, pn {
             if (11 != var2 &&
               12 != var2) {
               if (var2 == 13) {
-                var3_intLifetime5 = ((we) ((Object) var1)).a((byte) 107);
-                var4_intLifetime1 = ((we) ((Object) var1)).f(255);
+                var3_intLifetime5 = ((PacketBuffer) ((Object) var1)).a((byte) 107);
+                var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).f(255);
                 var17_ref = (eq) (dg.field_f.a(-11434, (long)var3_intLifetime5));
                 if (var17_ref == null) {
                   return;
@@ -405,8 +405,8 @@ final class pl extends ch implements om, vo, pn {
                   var2 != 17) {
                   if (var2 != 18) {
                     if (19 == var2) {
-                      var3Lifetime2 = ((we) ((Object) var1)).a(false);
-                      var5Lifetime1 = ((we) ((Object) var1)).f(255);
+                      var3Lifetime2 = ((PacketBuffer) ((Object) var1)).a(false);
+                      var5Lifetime1 = ((PacketBuffer) ((Object) var1)).f(255);
                       var23 = ll.a(var3Lifetime2, 14428);
                       if (var23 == null) {
                         return;
@@ -426,7 +426,7 @@ final class pl extends ch implements om, vo, pn {
                       return;
                     }
                     if (var2 == 21) {
-                      var3_intLifetime5 = ((we) ((Object) var1)).a((byte) -120);
+                      var3_intLifetime5 = ((PacketBuffer) ((Object) var1)).a((byte) -120);
                       if (var3_intLifetime5 == 0) {
                         bo.field_e = 0L;
                         return;
@@ -435,12 +435,12 @@ final class pl extends ch implements om, vo, pn {
                       return;
                     }
                     if (var2 == 22) {
-                      gi.field_a = ((we) ((Object) var1)).a((byte) 63);
-                      ui.field_e = ((we) ((Object) var1)).j(127);
+                      gi.field_a = ((PacketBuffer) ((Object) var1)).a((byte) 63);
+                      ui.field_e = ((PacketBuffer) ((Object) var1)).j(127);
                       return;
                     }
                     if (var2 == 23) {
-                      hn.field_f = ((we) ((Object) var1)).a(false);
+                      hn.field_f = ((PacketBuffer) ((Object) var1)).a(false);
                       return;
                     }
                     jo.a(1, "L1: " + jm.b(-74), (Throwable) null);
@@ -449,9 +449,9 @@ final class pl extends ch implements om, vo, pn {
                   }
                   stackIn_100_0 = var1;
                   stackIn_101_1 = !(param0);
-                  var3Lifetime2 = ((we) (Object) stackIn_100_0).a(stackIn_101_1);
-                  var24 = ((we) ((Object) var1)).h(5);
-                  var25 = ((we) ((Object) var1)).h(5);
+                  var3Lifetime2 = ((PacketBuffer) (Object) stackIn_100_0).a(stackIn_101_1);
+                  var24 = ((PacketBuffer) ((Object) var1)).h(5);
+                  var25 = ((PacketBuffer) ((Object) var1)).h(5);
                   var7 = ll.a(var3Lifetime2, 14428);
                   if (var7 == null) {
                     var7 = new uj(var24, var25, var3Lifetime2);
@@ -460,21 +460,21 @@ final class pl extends ch implements om, vo, pn {
                     ((vg) (Object) stackIn_105_0).a(stackIn_106_1, var7, var3Lifetime2);
                     io.field_c.field_mc = io.field_c.field_mc + 1;
                   }
-                  var7.field_Rb = ((we) ((Object) var1)).a((byte) 25);
-                  var8 = ((we) ((Object) var1)).j(127);
+                  var7.field_Rb = ((PacketBuffer) ((Object) var1)).a((byte) 25);
+                  var8 = ((PacketBuffer) ((Object) var1)).j(127);
                   stackIn_109_0 = var7;
                   stackIn_110_1 = (0 != (1 & var8));
                   stackIn_109_0.field_Xb = stackIn_110_1;
                   var7.field_Yb = var8 >> 1;
-                  var7.field_Qb = ((we) ((Object) var1)).f(255);
-                  var7.field_Ib = ((we) ((Object) var1)).f(255);
+                  var7.field_Qb = ((PacketBuffer) ((Object) var1)).f(255);
+                  var7.field_Ib = ((PacketBuffer) ((Object) var1)).f(255);
                   wi.field_a.a(22125, var7);
                   return;
                 }
                 stackIn_113_0 = var1;
                 stackIn_114_1 = !(param0);
-                var3Lifetime2 = ((we) (Object) stackIn_113_0).a(stackIn_114_1);
-                var5Lifetime1Lifetime1 = ((we) ((Object) var1)).f(255);
+                var3Lifetime2 = ((PacketBuffer) (Object) stackIn_113_0).a(stackIn_114_1);
+                var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).f(255);
                 var14 = gp.a(2, var3Lifetime2);
                 var26 = var14;
                 if (var14 != null) {
@@ -494,7 +494,7 @@ final class pl extends ch implements om, vo, pn {
                 }
                 return;
               }
-              var3Lifetime2Lifetime1 = ((we) ((Object) var1)).a(false);
+              var3Lifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).a(false);
               var27 = gp.a(2, var3Lifetime2Lifetime1);
               if (var27 != null) {
                 if (var2 == 14) {
@@ -509,7 +509,7 @@ final class pl extends ch implements om, vo, pn {
               }
               return;
             }
-            var3_intLifetime6 = ((we) ((Object) var1)).a((byte) -124);
+            var3_intLifetime6 = ((PacketBuffer) ((Object) var1)).a((byte) -124);
             var19_ref = (eq) (dg.field_f.a(-11434, (long)var3_intLifetime6));
             var28 = var19_ref;
             if (var28 == null) {
@@ -547,7 +547,7 @@ final class pl extends ch implements om, vo, pn {
             wo.field_b = io.field_c.field_pc;
           }
           if (var2 == 4) {
-            var3_intLifetime1 = ((we) ((Object) var1)).a((byte) 49);
+            var3_intLifetime1 = ((PacketBuffer) ((Object) var1)).a((byte) 49);
             io.field_c = new eq(fj.field_b);
             io.field_c.a((long)var3_intLifetime1, 29574);
             kd.a(false, io.field_c, (byte) 120, var1);
@@ -569,12 +569,12 @@ final class pl extends ch implements om, vo, pn {
           }
           rl.field_r = true;
           for (var3_intLifetime2 = 0; var3_intLifetime2 < qm.field_J.length; var3_intLifetime2++) {
-            qm.field_J[var3_intLifetime2] = ((we) ((Object) var1)).a(0);
+            qm.field_J[var3_intLifetime2] = ((PacketBuffer) ((Object) var1)).a(0);
           }
-          ib.field_a = ((we) ((Object) var1)).f(255);
-          mg.field_i = ((we) ((Object) var1)).f(255);
+          ib.field_a = ((PacketBuffer) ((Object) var1)).f(255);
+          mg.field_i = ((PacketBuffer) ((Object) var1)).f(255);
           for (var3_intLifetime3 = 0; k.field_k.length > var3_intLifetime3; var3_intLifetime3++) {
-            k.field_k[var3_intLifetime3] = ((we) ((Object) var1)).a(0);
+            k.field_k[var3_intLifetime3] = ((PacketBuffer) ((Object) var1)).a(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

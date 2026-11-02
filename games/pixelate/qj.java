@@ -31,17 +31,17 @@ final class qj {
         if (!param0) {
           var3 = aa.field_f;
           var3.g(param2, 15514);
-          var3.e(160, 3);
-          var3.e(160, 10);
-          var3.b(1276387944, param1);
+          var3.writeByte(160, 3);
+          var3.writeByte(160, 10);
+          var3.writeShort(1276387944, param1);
           return;
         }
         qj.a(false);
         var3Lifetime1 = aa.field_f;
         var3Lifetime1.g(param2, 15514);
-        var3Lifetime1.e(160, 3);
-        var3Lifetime1.e(160, 10);
-        var3Lifetime1.b(1276387944, param1);
+        var3Lifetime1.writeByte(160, 3);
+        var3Lifetime1.writeByte(160, 10);
+        var3Lifetime1.writeShort(1276387944, param1);
     }
 
     public static void a(boolean param0) {

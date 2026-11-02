@@ -163,15 +163,15 @@ final class ck {
             var5 = 5;
           }
           if (jc.field_d) {
-            t.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var5, var3, var4);
+            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var5, var3, var4);
           } else {
-            t.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, var4);
+            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, var4);
           }
         } else {
           if (!jc.field_d) {
-            t.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, 100);
+            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, var3, 100);
           } else {
-            t.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, 5, var3, 32);
+            SoftwareRasterizer.a((int)this.field_h, (int)this.field_a, this.field_k, this.field_k, 5, var3, 32);
           }
         }
     }
@@ -218,15 +218,15 @@ final class ck {
           vl.field_L = ka.a(65793, 4020342, 65793, (jl) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
           ue.field_t = ka.a(0, 0, 0, param1, 0, 16764006, 0, 0, 21, 0, 0, 0, 0);
           ve.field_Ib = ka.a(0, 0, 0, param1, 0, 16777215, 0, 0, 21, 0, 0, 0, 0);
-          var5 = t.field_j;
-          var6 = t.field_d;
-          var16 = t.field_k;
-          fe.field_b = new tf(10, 14);
+          var5 = SoftwareRasterizer.field_j;
+          var6 = SoftwareRasterizer.field_d;
+          var16 = SoftwareRasterizer.field_k;
+          fe.field_b = new Sprite(10, 14);
           fe.field_b.c();
           for (var8 = 2; var8 < 7; var8++) {
-            t.g(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
+            SoftwareRasterizer.g(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
-          t.a(var16, var5, var6);
+          SoftwareRasterizer.a(var16, var5, var6);
           pi.field_Rb = lj.a(ue.field_t, ve.field_Ib, -55, vl.field_L, var4);
           bn.field_I.field_L = new bb();
           return;

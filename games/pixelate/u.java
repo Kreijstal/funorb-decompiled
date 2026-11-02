@@ -5,7 +5,7 @@ final class u {
     static ak field_l;
     static wm field_d;
     static volatile boolean field_j;
-    static tf field_k;
+    static Sprite field_k;
     private fm field_c;
     private fm field_m;
     static volatile int field_b;
@@ -14,10 +14,10 @@ final class u {
     static String field_g;
     static int field_h;
     static ak field_a;
-    static tf field_f;
+    static Sprite field_f;
     static String field_n;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, tf[] param6, jl param7, int param8, tf[] param9, int param10, boolean param11) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite[] param6, jl param7, int param8, Sprite[] param9, int param10, boolean param11) {
         try {
           if (param1 != -879) {
             field_h = 78;
@@ -46,7 +46,7 @@ final class u {
         }
         var3Lifetime1 = new kp();
         if (var4 != null) {
-          var3Lifetime1.a(param0 ^ 21212, new we(var4));
+          var3Lifetime1.a(param0 ^ 21212, new PacketBuffer(var4));
         }
         if (32768 <= param1) {
           var3Lifetime1.g(126);
@@ -67,7 +67,7 @@ final class u {
           field_l = null;
           return;
         }
-        field_k = (tf) null;
+        field_k = (Sprite) null;
         field_d = null;
         field_l = null;
     }

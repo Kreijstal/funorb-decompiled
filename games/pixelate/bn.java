@@ -6,7 +6,7 @@ import java.util.*;
 final class bn extends ie {
     private boolean field_R;
     private boolean field_O;
-    static tf[] field_P;
+    static Sprite[] field_P;
     static String field_L;
     private int field_T;
     private int field_N;
@@ -131,7 +131,7 @@ final class bn extends ie {
 
     final static void n(int param0) {
         if (param0 != 2147483647) {
-          field_P = (tf[]) null;
+          field_P = (Sprite[]) null;
           te.a(17, -2671);
           return;
         }

@@ -5,7 +5,7 @@ final class jk {
     static String[] field_d;
     static int field_c;
     static String[] field_e;
-    static tf field_a;
+    static Sprite field_a;
     int field_b;
 
     public static void a(int param0) {

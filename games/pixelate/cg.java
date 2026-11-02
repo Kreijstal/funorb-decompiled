@@ -43,43 +43,43 @@ final class cg extends gn {
 
     final static void a(byte param0, ak param1, int param2) {
         wi var11 = null;
-        tf var12 = null;
+        Sprite var12 = null;
         String var13 = null;
         wi var14 = null;
-        tf var15 = null;
+        Sprite var15 = null;
         String var16 = null;
         wi var17 = null;
-        tf var18 = null;
+        Sprite var18 = null;
         String var19 = null;
         wi var20 = null;
-        tf var21 = null;
+        Sprite var21 = null;
         String var22 = null;
         wi var23 = null;
-        tf var24 = null;
+        Sprite var24 = null;
         String var25 = null;
         wi var26 = null;
-        tf var27 = null;
+        Sprite var27 = null;
         String var28 = null;
         wi var29 = null;
         String var31 = null;
         wi var32 = null;
-        tf var33 = null;
+        Sprite var33 = null;
         String var34 = null;
         wi var35 = null;
-        tf var36 = null;
+        Sprite var36 = null;
         String var37 = null;
         wi var38 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        tf var30 = null;
-        tf var30Lifetime1;
-        tf var30Lifetime2;
-        tf var30Lifetime3;
-        tf var30Lifetime4;
-        tf var30Lifetime5;
-        tf var30Lifetime6;
+        Sprite var30 = null;
+        Sprite var30Lifetime1;
+        Sprite var30Lifetime2;
+        Sprite var30Lifetime3;
+        Sprite var30Lifetime4;
+        Sprite var30Lifetime5;
+        Sprite var30Lifetime6;
         try {
           em.a((String) null, 0L, (String) null, -1, param1, -163, (gp) null, (int[]) null, param2);
           if (0 == param2) {

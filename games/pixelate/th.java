@@ -3,7 +3,7 @@
  */
 final class th {
     static String field_a;
-    static tf field_b;
+    static Sprite field_b;
 
     final static String a(int param0, String param1) {
         int var2_int = 0;
@@ -40,7 +40,7 @@ final class th {
     public static void a(byte param0) {
         field_a = null;
         if (param0 > -94) {
-          field_b = (tf) null;
+          field_b = (Sprite) null;
           field_b = null;
           return;
         }

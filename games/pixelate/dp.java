@@ -18,10 +18,10 @@ final class dp extends de {
 
     final void a(int param0, boolean param1, boolean param2) {
         int var6_int = 0;
-        ha var6 = null;
+        CanvasRasterBuffer var6 = null;
         int var4 = param0 * 2;
         int var5 = param0 >= 128 ? (param0 - 128) * 2 : 0;
-        ha var6Lifetime1;
+        CanvasRasterBuffer var6Lifetime1;
         if (param2) {
           var6_int = var4;
           var4 = var5;
@@ -152,8 +152,8 @@ final class dp extends de {
           var6 = 2 + var4 * fq.field_q;
           var7 = ui.a(12, var2_int, var5, (byte) -1);
           var8 = pj.a(var6, var3, 20, (byte) 112);
-          t.a(var7, var8, var5, var6, 0);
-          t.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
+          SoftwareRasterizer.a(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
           mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 - mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -182,7 +182,7 @@ final class dp extends de {
           } else {
             var4.a(false, param0 + param0);
             if (this.field_l == 1) {
-              t.a(0, 0, 640, 480);
+              SoftwareRasterizer.a(0, 0, 640, 480);
               rh.b((byte) 121);
             }
           }
@@ -194,7 +194,7 @@ final class dp extends de {
             } else {
               var3.a(false, param0 + param0);
               if (this.field_l == 1) {
-                t.a(0, 0, 640, 480);
+                SoftwareRasterizer.a(0, 0, 640, 480);
                 rh.b((byte) 121);
               }
             }
@@ -205,7 +205,7 @@ final class dp extends de {
               } else {
                 ((ii) (var2)).a(false, param0 + param0);
                 if (this.field_l == 1) {
-                  t.a(0, 0, 640, 480);
+                  SoftwareRasterizer.a(0, 0, 640, 480);
                   rh.b((byte) 121);
                 }
               }
@@ -216,7 +216,7 @@ final class dp extends de {
               } else {
                 var5.a(false, param0 + param0);
                 if (this.field_l == 1) {
-                  t.a(0, 0, 640, 480);
+                  SoftwareRasterizer.a(0, 0, 640, 480);
                   rh.b((byte) 121);
                 }
               }

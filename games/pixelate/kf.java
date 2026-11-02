@@ -76,8 +76,8 @@ final class kf extends bg {
           var6 = 13 + (76 * var5 + 76) + 2;
           if (5 + var4 <= var6 &&
             this.field_r + var4 - 6 >= var6) {
-            t.f(var6, var2 + 3, 19, 0, 128);
-            t.f(var6 + 1, var2 + 4, 18, 16777215, 128);
+            SoftwareRasterizer.f(var6, var2 + 3, 19, 0, 128);
+            SoftwareRasterizer.f(var6 + 1, var2 + 4, 18, 16777215, 128);
           }
         }
     }

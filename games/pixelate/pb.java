@@ -20,7 +20,7 @@ final class pb {
 
     final static void a(int param0, sb param1, int param2, int param3) {
         try {
-          we.field_n = param3;
+          PacketBuffer.field_n = param3;
           he.field_a = param1;
           gh.field_t = param0;
           if (param2 != 16) {
@@ -41,7 +41,7 @@ final class pb {
         this.field_e = this.b((byte) -37);
     }
 
-    final static void a(int param0, tf[] param1) {
+    final static void a(int param0, Sprite[] param1) {
         RuntimeException var2 = null;
         sb var3 = null;
         RuntimeException stackIn_9_0 = null;
@@ -138,8 +138,8 @@ final class pb {
         }
         int var3 = 512 * (param1 - this.field_o + 100) / 100;
         if (param0) {
-          tf[] var4 = (tf[]) null;
-          pb.a(31, (tf[]) null);
+          Sprite[] var4 = (Sprite[]) null;
+          pb.a(31, (Sprite[]) null);
           if (var3 > 256) {
             return 256;
           }
@@ -164,9 +164,9 @@ final class pb {
         int var11;
         var11 = Pixelate.field_H ? 1 : 0;
         var2 = jc.field_d ? 1 : 0;
-        t.a(ProxyAuthenticationException.field_b);
+        SoftwareRasterizer.a(ProxyAuthenticationException.field_b);
         if (var2 == 0) {
-          t.f(0, -100 + this.field_o, 640, this.field_o + 100);
+          SoftwareRasterizer.f(0, -100 + this.field_o, 640, this.field_o + 100);
         }
         for (var7 = 0; this.field_m.field_l.length > var7; var7++) {
           var8 = var7;
@@ -216,7 +216,7 @@ final class pb {
         if (param0 <= 43) {
           this.field_h = -119;
         }
-        t.b(ProxyAuthenticationException.field_b);
+        SoftwareRasterizer.b(ProxyAuthenticationException.field_b);
     }
 
     final void d(int param0) {

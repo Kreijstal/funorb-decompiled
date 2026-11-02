@@ -43,38 +43,38 @@ final class op extends de {
         this.field_r = 1;
     }
 
-    final static tf[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        tf var16 = null;
-        int[] var18 = t.field_k;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        Sprite var16 = null;
+        int[] var18 = SoftwareRasterizer.field_k;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
-        int var7 = t.field_j;
-        int var8 = t.field_d;
-        tf var9 = new tf(param5, -(2 * param5) + param3);
+        int var7 = SoftwareRasterizer.field_j;
+        int var8 = SoftwareRasterizer.field_d;
+        Sprite var9 = new Sprite(param5, -(2 * param5) + param3);
         var9.c();
-        t.g(0, 0, param5, -(2 * param5) + param3, param2, param0);
-        tf var10 = new tf(param5, param5);
+        SoftwareRasterizer.g(0, 0, param5, -(2 * param5) + param3, param2, param0);
+        Sprite var10 = new Sprite(param5, param5);
         var10.c();
-        t.d(0, 0, param5, param5, param2);
-        tf var11 = new tf(param1, param5);
+        SoftwareRasterizer.d(0, 0, param5, param5, param2);
+        Sprite var11 = new Sprite(param1, param5);
         var11.c();
-        t.d(0, 0, 16, param5, param2);
-        tf var12 = new tf(param5, param5);
+        SoftwareRasterizer.d(0, 0, 16, param5, param2);
+        Sprite var12 = new Sprite(param5, param5);
         var12.c();
-        t.d(0, 0, param5, param5, param0);
-        tf var13 = new tf(16, param5);
+        SoftwareRasterizer.d(0, 0, param5, param5, param0);
+        Sprite var13 = new Sprite(16, param5);
         var13.c();
-        t.d(0, 0, 16, param5, param0);
+        SoftwareRasterizer.d(0, 0, 16, param5, param0);
         Object var14 = null;
         if (param4 > 0) {
-          var16 = new tf(16, 16);
+          var16 = new Sprite(16, 16);
           var14 = var16;
           var16.c();
-          t.d(0, 0, 16, 16, param4);
+          SoftwareRasterizer.d(0, 0, 16, 16, param4);
         }
-        t.a(var18, var7, var8);
-        return new tf[]{var10, var11, var10, var9, (tf) (var14), var9, var12, var13, var12};
+        SoftwareRasterizer.a(var18, var7, var8);
+        return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
     final void a(int param0, byte param1, boolean param2) {
@@ -382,7 +382,7 @@ final class op extends de {
         int stackIn_16_2;
         int stackIn_16_3;
         int stackIn_17_4 = 0;
-        tf[] stackIn_20_0 = null;
+        Sprite[] stackIn_20_0 = null;
         int stackIn_21_1 = 0;
         int var4;
         int var5;
@@ -406,7 +406,7 @@ final class op extends de {
           } else {
             if (var4 != 31) {
               if (var4 == 32) {
-                t.f(0, 182, 640, 350);
+                SoftwareRasterizer.f(0, 182, 640, 350);
                 var5 = -2 + param2;
                 var6 = ki.field_m + ' ' + var5;
                 var7 = this.a(param2, (byte) 90);
@@ -425,9 +425,9 @@ final class op extends de {
                 if (this.a(true, param2 - 3)) {
                   stackIn_20_0 = ih.field_a;
                   stackIn_21_1 = (!param1) ? 0 : 1;
-                  ((tf) (Object) stackIn_20_0[stackIn_21_1]).b(var8, this.b(118, param2));
+                  ((Sprite) (Object) stackIn_20_0[stackIn_21_1]).b(var8, this.b(118, param2));
                 }
-                t.c();
+                SoftwareRasterizer.c();
               }
             } else {
               if (bh.field_k == this.field_o) {

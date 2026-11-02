@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class am {
-    private we field_d;
+    private PacketBuffer field_d;
     static int[] field_i;
     private gm field_a;
     private java.math.BigInteger field_f;
@@ -57,7 +57,7 @@ final class am {
         boolean stackIn_24_1 = false;
         ak stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
-        hp.a(t.field_j - 640 >> 1, t.field_d, 640 + t.field_j >> 1, (byte) -91, 0);
+        hp.a(SoftwareRasterizer.field_j - 640 >> 1, SoftwareRasterizer.field_d, 640 + SoftwareRasterizer.field_j >> 1, (byte) -91, 0);
         if (oo.field_b > 0) {
           if (jo.field_j != null) {
             jo.field_j.f(ql.field_n.field_D, 0);
@@ -115,9 +115,9 @@ final class am {
               stackIn_10_0 = this.field_h[param2];
               return stackIn_10_0;
             }
-            this.field_d.field_m = param1 + 72 * param2;
-            var6_int = this.field_d.k(0);
-            var7 = this.field_d.k(param1 - 6);
+            this.field_d.position = param1 + 72 * param2;
+            var6_int = this.field_d.readInt(0);
+            var7 = this.field_d.readInt(param1 - 6);
             var13 = new byte[64];
             this.field_d.a(var13, 0, -86, 64);
             var9 = new gg(param2, param4, param3, this.field_j, this.field_a, var6_int, var13, var7, param0);
@@ -248,7 +248,7 @@ final class am {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        we var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -266,11 +266,11 @@ final class am {
         if (this.field_g.field_v) {
           return false;
         }
-        var10 = new we(this.field_g.h(0));
-        var10.field_m = 5;
+        var10 = new PacketBuffer(this.field_g.h(0));
+        var10.position = 5;
         var3 = var10.f(255);
-        var10.field_m = var10.field_m + 72 * var3;
-        var13 = new byte[var10.field_k.length - var10.field_m];
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
         var10.a(var4, 0, -79, var13.length);
@@ -285,7 +285,7 @@ final class am {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = db.a(var10.field_k, 5, 1761872464, -var13.length + var10.field_m - 5);
+        var15 = db.a(var10.payload, 5, 1761872464, -var13.length + var10.position - 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

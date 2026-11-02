@@ -5,8 +5,8 @@ class go extends rg {
     private long field_g;
     static boolean field_f;
     private String field_j;
-    static tf[] field_h;
-    static tf field_i;
+    static Sprite[] field_h;
+    static Sprite field_i;
     static int field_k;
 
     final static int c(int param0) {
@@ -193,12 +193,12 @@ class go extends rg {
         return true;
     }
 
-    final void a(byte param0, we param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 != -12) {
             this.field_g = -108L;
           }
-          param1.a(false, this.field_g);
+          param1.writeLong(false, this.field_g);
           param1.a(-129, this.field_j);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "go.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

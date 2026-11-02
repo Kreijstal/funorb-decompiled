@@ -246,8 +246,8 @@ final class rn {
         field_g = null;
         field_f = null;
         if (param0 != 512) {
-          we var2 = (we) null;
-          rn.a((byte) -3, (we) null);
+          PacketBuffer var2 = (PacketBuffer) null;
+          rn.a((byte) -3, (PacketBuffer) null);
         }
     }
 
@@ -294,7 +294,7 @@ final class rn {
         return "" + this.field_d;
     }
 
-    final static boolean a(byte param0, we param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

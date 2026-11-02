@@ -54,8 +54,8 @@ final class cm extends IntrusiveNode {
         int var3 = qh.field_c * qh.field_c;
         int var4 = -(param0 * param0) + var3;
         if (param1 == 4740) {
-          ff.field_h.a(90, -124 + (t.field_d - 90), -(var4 * 199 / var3) + var2, 256, 199);
-          ai.field_A.a(0, t.field_d - 124, var4 * 438 / var3 + (var2 + 202), 256, 438);
+          ff.field_h.a(90, -124 + (SoftwareRasterizer.field_d - 90), -(var4 * 199 / var3) + var2, 256, 199);
+          ai.field_A.a(0, SoftwareRasterizer.field_d - 124, var4 * 438 / var3 + (var2 + 202), 256, 438);
           return;
         }
     }
@@ -127,13 +127,13 @@ final class cm extends IntrusiveNode {
         try {
           int var7_int = -86 % ((-33 - param0) / 49);
           aa.field_f.g(param5, 15514);
-          aa.field_f.field_m = aa.field_f.field_m + 1;
-          var8 = aa.field_f.field_m;
-          aa.field_f.a(false, param2);
+          aa.field_f.position = aa.field_f.position + 1;
+          var8 = aa.field_f.position;
+          aa.field_f.writeLong(false, param2);
           aa.field_f.b((byte) -41, param3);
-          aa.field_f.e(160, param4);
-          aa.field_f.e(160, param1 ? 1 : 0);
-          aa.field_f.f(aa.field_f.field_m - var8, -1);
+          aa.field_f.writeByte(160, param4);
+          aa.field_f.writeByte(160, param1 ? 1 : 0);
+          aa.field_f.f(aa.field_f.position - var8, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "cm.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
