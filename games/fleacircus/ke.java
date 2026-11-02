@@ -7,7 +7,7 @@ final class ke extends sh {
     private int field_o;
     private int field_m;
 
-    private final void a(lh param0, vl param1) {
+    private final void a(IntrusiveNode param0, vl param1) {
         while (true) {
           if (param0 == this.field_p.field_e) {
             nl.a(100, param0, param1);
@@ -106,7 +106,7 @@ final class ke extends sh {
     private final void a(vl param0) {
         param0.c(-1);
         param0.a();
-        lh var2 = this.field_p.field_e.field_h;
+        IntrusiveNode var2 = this.field_p.field_e.field_h;
         if (var2 == this.field_p.field_e) {
           this.field_m = -1;
         } else {

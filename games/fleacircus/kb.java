@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends lh {
+final class kb extends IntrusiveNode {
     static int field_i;
     int field_q;
     static fh field_l;
@@ -13,8 +13,8 @@ final class kb extends lh {
     static String field_m;
     static int field_p;
 
-    final static void a(int param0, ke param1, rh param2, int param3) {
-        wf.field_c = bm.f((byte) 73) * param3 / 1000;
+    final static void a(int param0, ke param1, ResourceArchive param2, int param3) {
+        SecondaryNodeDeque.field_c = bm.f((byte) 73) * param3 / 1000;
         fl.a((byte) 101, param2);
         if (param0 != -1) {
           return;
@@ -24,7 +24,7 @@ final class kb extends lh {
           ed.a(param2, (byte) -111);
           kl.b(param0 ^ -31208);
           aa.c((byte) -65);
-          vg.field_z = -wf.field_c + 0;
+          vg.field_z = -SecondaryNodeDeque.field_c + 0;
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "kb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -46,7 +46,7 @@ final class kb extends lh {
         byte[] var6 = null;
         byte[] var10 = null;
         byte[] var11 = null;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param2 <= 84) {
             var8 = (java.awt.Component) null;

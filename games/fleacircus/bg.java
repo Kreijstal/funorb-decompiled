@@ -17,7 +17,7 @@ final class bg {
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param2 < 85) {
             stackIn_3_0 = -18;
@@ -33,7 +33,7 @@ final class bg {
               var6 = se.a(3, fb.field_d[var3_int], true);
               var7 = af.field_b - (var6 >> 1);
               var4 = var4 + id.field_c;
-              if (lh.a(var4, hb.field_t + (ge.field_h << 1), var6 + (ae.field_c << 1), true, var7 - ae.field_c, param0, param1)) {
+              if (IntrusiveNode.a(var4, hb.field_t + (ge.field_h << 1), var6 + (ae.field_c << 1), true, var7 - ae.field_c, param0, param1)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
@@ -90,7 +90,7 @@ final class bg {
         }
     }
 
-    final static dd[] a(String param0, rh param1, byte param2, String param3) {
+    final static dd[] a(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

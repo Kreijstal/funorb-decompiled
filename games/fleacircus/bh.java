@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh extends lh {
+final class bh extends IntrusiveNode {
     static int field_l;
     int field_m;
     static String[] field_u;
@@ -63,7 +63,7 @@ final class bh extends lh {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param2 == null) {
             return false;

@@ -32,7 +32,7 @@ final class o extends wj {
 
     private final long a(byte param0) {
         int var8 = 0;
-        int var9 = fleas.field_A ? 1 : 0;
+        int var9 = FleaCircusApplet.field_A ? 1 : 0;
         long var2 = System.nanoTime();
         long var4 = -this.field_i + var2;
         this.field_i = var2;
@@ -64,7 +64,7 @@ final class o extends wj {
     final int a(int param0, long param1) {
         int var4;
         int var5;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0 != -23124) {
           this.b(-73);
         }
@@ -102,7 +102,7 @@ final class o extends wj {
         try {
           if (param1 != null &&
             param1.length() >= rf.field_d) {
-            if (param1.length() > rh.field_a) {
+            if (param1.length() > ResourceArchive.field_a) {
               return true;
             }
             if (param0) {

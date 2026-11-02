@@ -15,7 +15,7 @@ final class df {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           c.field_S = c.field_S + 1;
           if (~kb.field_r == param0 &&
@@ -73,7 +73,7 @@ final class df {
           gf.field_b = param1;
           kb.field_r = -1;
           if (ok.field_w &&
-            wb.field_y == c.field_S) {
+            NetworkGameClient.field_y == c.field_S) {
             ok.field_w = false;
             c.field_S = 0;
           }

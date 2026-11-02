@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class lc extends pa {
+class lc extends DualLinkNode {
     static int field_r;
     static String field_s;
     static String field_q;
@@ -28,7 +28,7 @@ class lc extends pa {
           String stackIn_22_2 = null;
           Throwable decompiledCaughtException = null;
           RuntimeException var2_ref = null;
-          var5 = fleas.field_A ? 1 : 0;
+          var5 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             var9 = new byte[24];
             var7 = var9;

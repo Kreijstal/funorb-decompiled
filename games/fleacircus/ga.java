@@ -62,7 +62,7 @@ final class ga extends r {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(160, param1) == ml.field_K) {
-            stackIn_2_0 = h.field_a;
+            stackIn_2_0 = ContextualRuntimeException.field_a;
             return stackIn_2_0;
           }
           var3_int = 83 % ((param0 - 24) / 46);

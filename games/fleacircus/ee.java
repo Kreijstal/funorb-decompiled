@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee implements ch {
+final class ee implements ComponentLayout {
     static String field_k;
     private int field_c;
     private int field_e;
@@ -14,7 +14,7 @@ final class ee implements ch {
     private int field_j;
     private int field_g;
 
-    public final void a(int param0, int param1, boolean param2, qa param3, int param4) {
+    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -23,7 +23,7 @@ final class ee implements ch {
         int var12 = 0;
         int var13 = 0;
         md var14 = null;
-        qa stackIn_5_0 = null;
+        UiComponent stackIn_5_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -38,7 +38,7 @@ final class ee implements ch {
           if (!(param3 instanceof md)) {
             stackIn_5_0 = null;
           } else {
-            stackIn_5_0 = (qa) (param3);
+            stackIn_5_0 = (UiComponent) (param3);
           }
           var14 = (md) (stackIn_5_0);
           gb.e(param1 + param3.field_y, param3.field_z + param4, param3.field_u, param3.field_j, this.field_j);

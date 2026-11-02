@@ -42,7 +42,7 @@ final class l {
         int var4Lifetime3;
         int var4Lifetime4;
         int var4Lifetime5;
-        var15 = fleas.field_A ? 1 : 0;
+        var15 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var16 = new ni(param0);
           var17 = var16;
@@ -52,7 +52,7 @@ final class l {
             return;
           }
           vg.field_I = new int[ef.field_l];
-          wb.field_t = new byte[ef.field_l][];
+          NetworkGameClient.field_t = new byte[ef.field_l][];
           gg.field_i = new boolean[ef.field_l];
           of.field_d = new byte[ef.field_l][];
           ij.field_H = new int[ef.field_l];
@@ -94,7 +94,7 @@ final class l {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            wb.field_t[var4Lifetime5] = var21;
+            NetworkGameClient.field_t[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.e(false);
             if ((1 & var11) == 0) {

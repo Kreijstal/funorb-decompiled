@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cb extends pa {
+abstract class cb extends DualLinkNode {
     int field_r;
     static java.awt.Frame field_t;
     static String field_q;
@@ -74,7 +74,7 @@ abstract class cb extends pa {
         this.field_r = param0;
     }
 
-    final static String a(String param0, String param1, rh param2, byte param3) {
+    final static String a(String param0, String param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;

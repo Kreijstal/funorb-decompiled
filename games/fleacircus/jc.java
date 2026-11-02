@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc implements ch {
+final class jc implements ComponentLayout {
     static String field_d;
     static int field_f;
-    static rh field_e;
+    static ResourceArchive field_e;
     static String[] field_a;
     static vc field_c;
     static long field_b;
 
     final static int a(int param0, int param1) {
         if (param1 <= 113) {
-          field_e = (rh) null;
+          field_e = (ResourceArchive) null;
         }
         param0 = param0 & 8191;
         if (param0 < 4096) {
@@ -30,7 +30,7 @@ final class jc implements ch {
         field_a = null;
     }
 
-    public final void a(int param0, int param1, boolean param2, qa param3, int param4) {
+    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         dd var8 = null;
@@ -85,7 +85,7 @@ final class jc implements ch {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 >= 2 &&
             param0 <= 36) {

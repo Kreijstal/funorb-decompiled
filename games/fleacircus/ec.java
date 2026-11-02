@@ -70,7 +70,7 @@ final class ec implements Runnable {
           var16 = null;
           var21 = null;
           var22 = null;
-          var12 = fleas.field_A ? 1 : 0;
+          var12 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             var13 = (fg) (jk.field_m.c((byte) 47));
             var17 = var13;
@@ -245,7 +245,7 @@ final class ec implements Runnable {
     public final void run() {
         int var1_int = 0;
         la var2 = null;
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         this.field_h = true;
         try {
           while (!this.field_g) {

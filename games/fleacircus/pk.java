@@ -17,7 +17,7 @@ final class pk extends dk {
         StringBuilder discarded$62 = null;
         StringBuilder discarded$63 = null;
         RuntimeException var5 = null;
-        qa var6 = null;
+        UiComponent var6 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -27,8 +27,8 @@ final class pk extends dk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 >= -47) {
-            var6 = (qa) null;
-            this.a((byte) 36, (qa) null, 37, -90, -110, -10);
+            var6 = (UiComponent) null;
+            this.a((byte) 36, (UiComponent) null, 37, -90, -110, -10);
           }
           if (this.a(param1, -103, param0, param2)) {
             this.a(param2, -70, param0, param1);
@@ -61,7 +61,7 @@ final class pk extends dk {
         }
     }
 
-    final void a(byte param0, qa param1, int param2, int param3, int param4, int param5) {
+    final void a(byte param0, UiComponent param1, int param2, int param3, int param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_v = 0;
@@ -70,7 +70,7 @@ final class pk extends dk {
         }
     }
 
-    private pk(int param0, int param1, int param2, int param3, ch param4, kd param5, qa param6, boolean param7, boolean param8) {
+    private pk(int param0, int param1, int param2, int param3, ComponentLayout param4, kd param5, UiComponent param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_I = 2147483647;
         this.field_H = 2147483647;
@@ -90,7 +90,7 @@ final class pk extends dk {
         this.field_I = this.field_y;
     }
 
-    final void a(int param0, int param1, qa param2, byte param3) {
+    final void a(int param0, int param1, UiComponent param2, byte param3) {
         int stackIn_13_1 = 0;
         int stackIn_16_2 = 0;
         int stackIn_21_1 = 0;
@@ -102,13 +102,13 @@ final class pk extends dk {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        qa var7 = null;
+        UiComponent var7 = null;
         int var5_intLifetime1;
         int var5_intLifetime1Lifetime1;
         try {
           if (param3 >= -85) {
-            var7 = (qa) null;
-            this.a((byte) -72, (qa) null, 106, 108, -8, 125);
+            var7 = (UiComponent) null;
+            this.a((byte) -72, (UiComponent) null, 106, 108, -8, 125);
           }
           boolean decompiledFrameRemainder0 = true;
           if ((!(this.field_A instanceof bb) ||
@@ -211,7 +211,7 @@ final class pk extends dk {
         field_J = null;
     }
 
-    final boolean a(int param0, boolean param1, int param2, qa param3, int param4, int param5, int param6) {
+    final boolean a(int param0, boolean param1, int param2, UiComponent param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_9_0 = 0;

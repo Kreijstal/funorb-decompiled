@@ -22,7 +22,7 @@ final class ji {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_14_1 = 0;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         var2 = param0 ? 1 : 0;
         for (var3 = -1 + this.field_e.length; var3 >= 0; var3--) {
           stackIn_7_0 = var2;
@@ -53,17 +53,17 @@ final class ji {
     }
 
     final void b(boolean param0) {
-        rh var5 = null;
+        ResourceArchive var5 = null;
         int var2 = 0;
         int var3 = 0;
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         int var2Lifetime1;
         int var2Lifetime2;
         int var3Lifetime1;
         int var2Lifetime3;
         if (!param0) {
-          var5 = (rh) null;
-          ji.a((rh) null, 11, 87, -10);
+          var5 = (ResourceArchive) null;
+          ji.a((ResourceArchive) null, 11, 87, -10);
         } else {
           var2 = this.field_c * 240 / 255;
           gb.a((int)this.field_e[0] << 4, (int)this.field_g[0] << 4, 64, this.field_c, this.field_d);
@@ -91,7 +91,7 @@ final class ji {
 
     final void a(int param0, byte param1) {
         int var3 = 0;
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         for (var3 = 19; 0 < var3; var3--) {
           this.field_e[var3] = this.field_e[-1 + var3];
           this.field_g[var3] = this.field_g[-1 + var3];
@@ -110,7 +110,7 @@ final class ji {
         this.field_c = this.field_c - param0;
     }
 
-    final static bi a(rh param0, int param1, int param2, int param3) {
+    final static bi a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         bi stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -162,7 +162,7 @@ final class ji {
             var7 = var5_int;
             var6[var7] = -1000.0;
           }
-          var5_double = (double)(db.a((byte) -115, na.field_c, 10) + 15) / 10.0;
+          var5_double = (double)(db.a((byte) -115, NodeHashTableIterator.field_c, 10) + 15) / 10.0;
           this.field_j = ma.a((double)param2 * 3.141592653589793 / 512.0, 70) * var5_double;
           this.field_h = nb.a(3.141592653589793 * (double)param2 / 512.0, -127) * var5_double;
         } catch (RuntimeException runtimeException) {

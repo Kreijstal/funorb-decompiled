@@ -29,7 +29,7 @@ final class ua extends bd implements da {
         RuntimeException var4_ref = null;
         bm var5 = null;
         int var6 = 0;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           this.field_wb = true;
           if (param0 != 58) {

@@ -21,7 +21,7 @@ final class uf {
         int var3;
         cg stackIn_13_0 = null;
         int var2Lifetime1;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_g == null) {
           return;
         }
@@ -52,7 +52,7 @@ final class uf {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var4_int = param1.length();
           param1.setLength(param0);
@@ -91,7 +91,7 @@ final class uf {
         java.math.BigInteger var12;
         byte[] var13;
         byte[] var15;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_c != null) {
           return true;
         }

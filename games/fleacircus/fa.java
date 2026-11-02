@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fa extends pa {
+abstract class fa extends DualLinkNode {
     int field_y;
     private int[] field_D;
     private int[] field_G;

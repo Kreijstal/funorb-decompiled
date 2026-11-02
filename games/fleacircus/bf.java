@@ -3,15 +3,15 @@
  */
 final class bf {
     static vc field_e;
-    private pa field_c;
+    private DualLinkNode field_c;
     static wh field_a;
     static int field_b;
-    private pa field_g;
+    private DualLinkNode field_g;
     static sf field_d;
     static int field_h;
     static String field_f;
 
-    final void a(pa param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         if (param0.field_m != null) {
           param0.e(67);
         }
@@ -29,12 +29,12 @@ final class bf {
     }
 
     final int a(byte param0) {
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0 < 4) {
           return 77;
         }
         int var2 = 0;
-        pa var3 = this.field_c.field_p;
+        DualLinkNode var3 = this.field_c.field_p;
         while (var3 != this.field_c) {
           var3 = var3.field_p;
           var2++;
@@ -52,15 +52,15 @@ final class bf {
         }
     }
 
-    final pa b(byte param0) {
-        pa var2 = this.field_c.field_p;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = this.field_c.field_p;
         if (var2 == this.field_c) {
           this.field_g = null;
           return null;
         }
         this.field_g = var2.field_p;
         if (param0 <= 104) {
-          return (pa) null;
+          return (DualLinkNode) null;
         }
         return var2;
     }
@@ -135,10 +135,10 @@ final class bf {
         return param1 + 1;
     }
 
-    final pa c(byte param0) {
-        pa var2 = this.field_g;
+    final DualLinkNode c(byte param0) {
+        DualLinkNode var2 = this.field_g;
         if (param0 <= 65) {
-          return (pa) null;
+          return (DualLinkNode) null;
         }
         if (this.field_c == var2) {
           this.field_g = null;
@@ -148,8 +148,8 @@ final class bf {
         return var2;
     }
 
-    final pa a(int param0) {
-        pa var2 = this.field_c.field_p;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_c.field_p;
         if (var2 == this.field_c) {
           return null;
         }
@@ -174,7 +174,7 @@ final class bf {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var4_int = param0.b(param3, (byte) -87);
           if (var4_int == 0) {
@@ -218,7 +218,7 @@ final class bf {
     }
 
     public bf() {
-        this.field_c = new pa();
+        this.field_c = new DualLinkNode();
         this.field_c.field_m = this.field_c;
         this.field_c.field_p = this.field_c;
     }

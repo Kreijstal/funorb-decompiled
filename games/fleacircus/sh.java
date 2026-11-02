@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sh extends lh {
+abstract class sh extends IntrusiveNode {
     sh field_l;
     jf field_i;
     volatile boolean field_j;

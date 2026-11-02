@@ -8,7 +8,7 @@ final class rl {
     static sf field_g;
     static mk field_b;
     static int[] field_e;
-    static rh field_d;
+    static ResourceArchive field_d;
     private long field_a;
     private RandomAccessFile field_c;
 
@@ -16,8 +16,8 @@ final class rl {
         this.field_c.seek(param0);
         this.field_f = param0;
         if (param1 > -112) {
-          rh var5 = (rh) null;
-          rl.a((rh) null, -27);
+          ResourceArchive var5 = (ResourceArchive) null;
+          rl.a((ResourceArchive) null, -27);
         }
     }
 
@@ -132,7 +132,7 @@ final class rl {
         }
     }
 
-    final static boolean a(rh param0, int param1) {
+    final static boolean a(ResourceArchive param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         boolean stackIn_3_0 = false;
@@ -238,15 +238,15 @@ final class rl {
           return sd.field_j;
         }
         if (param0 > -49) {
-          field_d = (rh) null;
+          field_d = (ResourceArchive) null;
         }
         return (java.applet.Applet) ((Object) pf.field_c);
     }
 
     final long c(int param0) throws IOException {
         if (param0 != 2049105808) {
-          rh var3 = (rh) null;
-          rl.a((rh) null, -61);
+          ResourceArchive var3 = (ResourceArchive) null;
+          rl.a((ResourceArchive) null, -61);
         }
         return this.field_c.length();
     }
@@ -274,7 +274,7 @@ final class rl {
         int var16Lifetime2;
         int var16Lifetime3;
         int var17Lifetime2;
-        var19 = fleas.field_A ? 1 : 0;
+        var19 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param7 >= 0 &&
             bl.field_i > param1) {
@@ -333,14 +333,14 @@ final class rl {
                         var18 = -1 + (-var17 + bl.field_f);
                       }
                       if (var17 < 0) {
-                        rh.a(param5, var17 + var18, var16Lifetime2, param2, (byte) -68);
+                        ResourceArchive.a(param5, var17 + var18, var16Lifetime2, param2, (byte) -68);
                       } else {
-                        rh.a(param5, var18, var17 + var16Lifetime2, param2, (byte) -84);
+                        ResourceArchive.a(param5, var18, var17 + var16Lifetime2, param2, (byte) -84);
                       }
                     } else {
                       if (var17 >= 0 &&
                         bl.field_f > var17) {
-                        rh.a(param5, var18, var17 + var16Lifetime2, param2, (byte) -122);
+                        ResourceArchive.a(param5, var18, var17 + var16Lifetime2, param2, (byte) -122);
                       }
                     }
                   }
@@ -409,16 +409,16 @@ final class rl {
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < bl.field_f) {
-                    rh.a(param5, var17Lifetime1, var15Lifetime1 + var16Lifetime1, param2, (byte) -120);
+                    ResourceArchive.a(param5, var17Lifetime1, var15Lifetime1 + var16Lifetime1, param2, (byte) -120);
                   }
                 } else {
                   if (bl.field_f <= var16Lifetime1 + var17Lifetime1) {
                     var17Lifetime1 = -1 - var16Lifetime1 + bl.field_f;
                   }
                   if (var16Lifetime1 < 0) {
-                    rh.a(param5, var16Lifetime1 + var17Lifetime1, var15Lifetime1, param2, (byte) -113);
+                    ResourceArchive.a(param5, var16Lifetime1 + var17Lifetime1, var15Lifetime1, param2, (byte) -113);
                   } else {
-                    rh.a(param5, var17Lifetime1, var16Lifetime1 + var15Lifetime1, param2, (byte) -98);
+                    ResourceArchive.a(param5, var17Lifetime1, var16Lifetime1 + var15Lifetime1, param2, (byte) -98);
                   }
                 }
               }

@@ -5,7 +5,7 @@ final class ob {
     static ok[] field_c;
     static int[] field_a;
     static int field_e;
-    static rh field_d;
+    static ResourceArchive field_d;
     static String field_b;
 
     final static boolean a(boolean param0, int param1, boolean param2, int param3) {

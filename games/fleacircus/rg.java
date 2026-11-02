@@ -34,7 +34,7 @@ final class rg extends ef {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (null == di.field_b) {
             return null;
@@ -82,7 +82,7 @@ final class rg extends ef {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = fleas.field_A ? 1 : 0;
+        var2 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 != 4) {
             field_n = 55;
@@ -96,7 +96,7 @@ final class rg extends ef {
             nb.field_b = 0;
             qg.field_c = 149;
             va.field_t[var1_int] = 0;
-            lh.field_e[qg.field_a[var1_int] / 4][dh.field_b[var1_int] / 4] = 1;
+            IntrusiveNode.field_e[qg.field_a[var1_int] / 4][dh.field_b[var1_int] / 4] = 1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -126,7 +126,7 @@ final class rg extends ef {
         int[] var25 = null;
         int[] var29 = null;
         int[] var30 = null;
-        var19 = fleas.field_A ? 1 : 0;
+        var19 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (gb.field_l > param0) {
             param2 = param2 - (gb.field_l - param0);

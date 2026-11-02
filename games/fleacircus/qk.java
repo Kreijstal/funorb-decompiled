@@ -4,20 +4,20 @@
 final class qk {
     private long field_e;
     static int[] field_b;
-    private pa field_d;
+    private DualLinkNode field_d;
     static int field_a;
     static String field_h;
     private int field_g;
     static int[] field_f;
-    private pa[] field_c;
+    private DualLinkNode[] field_c;
 
-    final pa a(long param0, int param1) {
-        pa var4;
-        pa var5;
+    final DualLinkNode a(long param0, int param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         if (param1 != 16571) {
-          return (pa) null;
+          return (DualLinkNode) null;
         }
         this.field_e = param0;
         var4 = this.field_c[(int)((long)(-1 + this.field_g) & param0)];
@@ -38,12 +38,12 @@ final class qk {
         return var5;
     }
 
-    final pa a(int param0) {
-        pa var2;
-        pa var3;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
-        pa var3Lifetime1;
-        var4 = fleas.field_A ? 1 : 0;
+        DualLinkNode var3Lifetime1;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_d == null) {
           return null;
         }
@@ -93,12 +93,12 @@ final class qk {
 
     qk(int param0) {
         int var2 = 0;
-        pa dupTemp$1 = null;
-        pa var3;
-        this.field_c = new pa[param0];
+        DualLinkNode dupTemp$1 = null;
+        DualLinkNode var3;
+        this.field_c = new DualLinkNode[param0];
         this.field_g = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new pa();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_c[var2] = dupTemp$1;
           var3.field_m = var3;
@@ -106,8 +106,8 @@ final class qk {
         }
     }
 
-    final void a(pa param0, int param1, long param2) {
-        pa var5 = null;
+    final void a(DualLinkNode param0, int param1, long param2) {
+        DualLinkNode var5 = null;
         try {
           if (null != param0.field_m) {
             param0.e(param1 ^ -103);

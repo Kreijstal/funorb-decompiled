@@ -7,8 +7,8 @@ final class tf extends dk {
     static vc field_E;
     static ob field_G;
 
-    tf(qa param0) {
-        super(param0.field_y, param0.field_z, param0.field_u, param0.field_j, (ch) null, (kd) null);
+    tf(UiComponent param0) {
+        super(param0.field_y, param0.field_z, param0.field_u, param0.field_j, (ComponentLayout) null, (kd) null);
         try {
           param0.a(0, this.field_u, 0, this.field_j, 80);
           this.field_A = param0;
@@ -19,7 +19,7 @@ final class tf extends dk {
     }
 
     public tf() {
-        super(0, 0, 0, 0, (ch) null, (kd) null);
+        super(0, 0, 0, 0, (ComponentLayout) null, (kd) null);
         this.field_F = 256;
     }
 
@@ -154,7 +154,7 @@ final class tf extends dk {
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var3_int = 1;
           if (param2 != -2) {

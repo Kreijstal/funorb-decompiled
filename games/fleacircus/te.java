@@ -48,7 +48,7 @@ final class te {
         return this;
     }
 
-    final void a(hb param0, qa param1, int param2, int param3, int param4) {
+    final void a(hb param0, UiComponent param1, int param2, int param3, int param4) {
         fa stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
@@ -183,7 +183,7 @@ final class te {
         }
     }
 
-    final void a(te param0, int param1, qa param2, hb param3, int param4, int param5) {
+    final void a(te param0, int param1, UiComponent param2, hb param3, int param4, int param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

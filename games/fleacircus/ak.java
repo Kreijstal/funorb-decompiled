@@ -33,7 +33,7 @@ final class ak {
         int var3 = 0;
         int var4 = 0;
         String var8 = null;
-        int var5 = fleas.field_A ? 1 : 0;
+        int var5 = FleaCircusApplet.field_A ? 1 : 0;
         if (!param0) {
           field_d = (vc) null;
         }
@@ -127,7 +127,7 @@ final class ak {
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
-        var13 = fleas.field_A ? 1 : 0;
+        var13 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var14 = param3.b(param1 ^ -15051);
           var11_ref_String = var14;
@@ -143,7 +143,7 @@ final class ak {
           if (param1 != 15021) {
             field_c = -74;
           }
-          if (rh.field_k == d.field_O) {
+          if (ResourceArchive.field_k == d.field_O) {
             bb.field_A = null;
             ud.field_b.field_i = 0;
             if (param5 == null) {
@@ -196,15 +196,15 @@ final class ak {
               ud.field_b.a((byte) 121, -var10 + ud.field_b.field_i);
             }
             dk.b((byte) 41, -1);
-            rh.field_k = ue.field_c;
+            ResourceArchive.field_k = ue.field_c;
           }
-          if (rh.field_k == ue.field_c &&
+          if (ResourceArchive.field_k == ue.field_c &&
             gi.a(1, true)) {
             var9Lifetime1 = ae.field_a.e(false);
             ae.field_a.field_i = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
-              rh.field_k = u.field_b;
+              ResourceArchive.field_k = u.field_b;
               tc.field_e = new String[var9Lifetime1 - 100];
             } else {
               if (248 == var9Lifetime1) {
@@ -216,7 +216,7 @@ final class ak {
                 return stackIn_35_0;
               }
               if (var9Lifetime1 != 99) {
-                rh.field_k = gd.field_b;
+                ResourceArchive.field_k = gd.field_b;
                 pd.field_l = -1;
                 be.field_a = var9Lifetime1;
               } else {
@@ -226,7 +226,7 @@ final class ak {
               }
             }
           }
-          if (u.field_b == rh.field_k) {
+          if (u.field_b == ResourceArchive.field_k) {
             var9Lifetime2 = 2;
             if (gi.a(var9Lifetime2, true)) {
               var10Lifetime1 = ae.field_a.d((byte) -111);
@@ -243,7 +243,7 @@ final class ak {
               }
             }
           }
-          if (rh.field_k == gd.field_b &&
+          if (ResourceArchive.field_k == gd.field_b &&
             gf.b(param1 - 14911)) {
             if (be.field_a != 255) {
               fh.field_a = ae.field_a.h(param1 - 15021);
@@ -260,7 +260,7 @@ final class ak {
           }
           if (sg.field_h == null) {
             if (aa.field_q) {
-              if (h.b(param1 ^ 15050) <= 30000L) {
+              if (ContextualRuntimeException.b(param1 ^ 15050) <= 30000L) {
                 fh.field_a = jc.field_d;
               } else {
                 fh.field_a = ok.field_B;

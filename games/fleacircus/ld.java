@@ -16,7 +16,7 @@ final class ld extends java.awt.Canvas {
 
     final static int a(int param0) {
         gf.field_e.a(-23608);
-        if (!td.field_k.b((byte) 66)) {
+        if (!BufferedSocket.field_k.b((byte) 66)) {
           return ij.a(125);
         }
         if (param0 <= 37) {
@@ -36,7 +36,7 @@ final class ld extends java.awt.Canvas {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         Throwable decompiledCaughtException = null;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var2_int = -89 % ((73 - param0) / 41);
           try {

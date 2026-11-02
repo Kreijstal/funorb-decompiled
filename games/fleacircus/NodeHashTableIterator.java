@@ -3,21 +3,21 @@
  */
 import java.util.*;
 
-final class na implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     static Random field_c;
     private int field_d;
-    private li field_g;
+    private IterableNodeHashTable field_g;
     static String field_b;
     static long field_f;
-    private lh field_e;
-    private lh field_a;
+    private IntrusiveNode field_e;
+    private IntrusiveNode field_a;
 
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        lh var3;
-        lh var4;
-        var2 = fleas.field_A ? 1 : 0;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
+        var2 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_g.field_f[-1 + this.field_d] != this.field_a) {
           var4 = this.field_a;
           this.field_e = var4;
@@ -64,7 +64,7 @@ final class na implements Iterator {
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
         int var2;
-        var2 = fleas.field_A ? 1 : 0;
+        var2 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_a != this.field_g.field_f[this.field_d - 1]) {
           return true;
         }
@@ -97,7 +97,7 @@ final class na implements Iterator {
         this.field_a = this.field_g.field_f[0].field_h;
     }
 
-    na(li param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_e = null;
         try {
           this.field_g = param0;

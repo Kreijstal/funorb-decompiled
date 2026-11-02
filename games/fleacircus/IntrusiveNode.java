@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lh {
+class IntrusiveNode {
     static fa field_b;
-    lh field_a;
+    IntrusiveNode field_a;
     static String field_d;
     static sk field_g;
     long field_c;
     static int[][] field_e;
     static int field_f;
-    lh field_h;
+    IntrusiveNode field_h;
 
     final boolean b(byte param0) {
         if (null == this.field_a) {
@@ -18,17 +18,17 @@ class lh {
         if (param0 == -54) {
           return true;
         }
-        lh.a(-118, -117, -87, false, -11, -87, -1);
+        IntrusiveNode.a(-118, -117, -87, false, -11, -87, -1);
         return true;
     }
 
     final static void a(boolean param0) {
-        if (rh.field_p == null) {
+        if (ResourceArchive.field_p == null) {
           return;
         }
-        lh.a((byte) -97, rh.field_p);
-        rh.field_p.a(fg.field_q, 20401);
-        rh.field_p = null;
+        IntrusiveNode.a((byte) -97, ResourceArchive.field_p);
+        ResourceArchive.field_p.a(fg.field_q, 20401);
+        ResourceArchive.field_p = null;
         if (aa.field_r != null) {
           aa.field_r.a(-115);
           ol.field_e.requestFocus();
@@ -157,7 +157,7 @@ class lh {
 
     final static boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         if (!param3) {
-          lh.a(-73, 30, -70, true, -43, 84, 103);
+          IntrusiveNode.a(-73, 30, -70, true, -43, 84, 103);
           if (param5 < param4) {
             return false;
           }

@@ -46,7 +46,7 @@ final class s {
         ih var9 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = fleas.field_A ? 1 : 0;
+        int var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var8 = ud.field_b;
           var9 = var8;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wk extends lh {
+final class wk extends IntrusiveNode {
     byte[] field_i;
     hc field_j;
 
-    final static wk a(rh param0, String param1, String param2) {
+    final static wk a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(0, param2, param1);
         if (var3 == null) {
           return null;

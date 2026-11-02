@@ -79,7 +79,7 @@ final class rf {
         int var12Lifetime1;
         int var10Lifetime1Lifetime1;
         int var13Lifetime1Lifetime1;
-        var16 = fleas.field_A ? 1 : 0;
+        var16 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var17 = new ni(qi.a(param0, -22518));
           var4 = var17.e(false);

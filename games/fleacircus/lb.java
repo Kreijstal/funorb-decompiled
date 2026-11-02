@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb implements ch {
+final class lb implements ComponentLayout {
     private int field_i;
     private fa field_h;
     private int field_g;
@@ -16,7 +16,7 @@ final class lb implements ch {
     private int field_f;
     private int field_b;
 
-    final static jh a(rh param0, int param1, int param2, int param3, rh param4) {
+    final static jh a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         jh stackIn_5_0 = null;
@@ -58,8 +58,8 @@ final class lb implements ch {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, qa param3, int param4) {
-        qa stackIn_3_0 = null;
+    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -69,13 +69,13 @@ final class lb implements ch {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        qa var11 = null;
+        UiComponent var11 = null;
         vk var12 = null;
         try {
           if (!(param3 instanceof vk)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (qa) (param3);
+            stackIn_3_0 = (UiComponent) (param3);
           }
           var12 = (vk) (stackIn_3_0);
           if (var12 != null) {
@@ -88,8 +88,8 @@ final class lb implements ch {
           }
           var8 = this.field_g + param3.field_y + param1;
           if (param0 >= -36) {
-            var11 = (qa) null;
-            this.a(-124, -13, false, (qa) null, -107);
+            var11 = (UiComponent) null;
+            this.a(-124, -13, false, (UiComponent) null, -107);
           }
           var9 = this.field_b + param3.field_z + param4;
           gb.f(var8, var9, this.field_e, this.field_l, 5592405);

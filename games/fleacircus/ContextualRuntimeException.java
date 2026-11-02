@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends RuntimeException {
+final class ContextualRuntimeException extends RuntimeException {
     String field_f;
     static volatile boolean field_h;
     static String field_a;
@@ -30,7 +30,7 @@ final class h extends RuntimeException {
 
     final static int[] a(byte param0) {
         if (param0 > -109) {
-          h.a(7);
+          ContextualRuntimeException.a(7);
           return new int[8];
         }
         return new int[8];
@@ -47,7 +47,7 @@ final class h extends RuntimeException {
         if (param0 == -32) {
           return;
         }
-        h.a((byte) 30);
+        ContextualRuntimeException.a((byte) 30);
     }
 
     final static int a(int param0, int param1) {
@@ -60,7 +60,7 @@ final class h extends RuntimeException {
         return 255 & param0;
     }
 
-    h(Throwable param0, String param1) {
+    ContextualRuntimeException(Throwable param0, String param1) {
         this.field_e = param0;
         this.field_f = param1;
     }

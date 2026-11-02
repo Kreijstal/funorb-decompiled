@@ -20,7 +20,7 @@ final class hb extends e {
         te var5 = null;
         te var6 = null;
         int var7 = 0;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           super.a(2, param1);
           if (param2 != 70) {
@@ -62,8 +62,8 @@ final class hb extends e {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, qa param3, int param4) {
-        qa stackIn_3_0 = null;
+    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -78,7 +78,7 @@ final class hb extends e {
         te var14 = null;
         try {
           if (param3 instanceof bb) {
-            stackIn_3_0 = (qa) (param3);
+            stackIn_3_0 = (UiComponent) (param3);
           } else {
             stackIn_3_0 = null;
           }
@@ -196,7 +196,7 @@ final class hb extends e {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var7 = this.field_s;
           var3 = var7;
@@ -237,7 +237,7 @@ final class hb extends e {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var7 = this.field_s;
           var3 = var7;

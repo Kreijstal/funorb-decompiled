@@ -52,7 +52,7 @@ final class af implements Runnable {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (!param2) {
             return;
@@ -104,7 +104,7 @@ final class af implements Runnable {
           Object var2 = null;
           Exception var2_ref = null;
           String var6 = null;
-          var5 = fleas.field_A ? 1 : 0;
+          var5 = FleaCircusApplet.field_A ? 1 : 0;
           while (!this.field_c) {
             var2 = this.field_e;
             synchronized (var2) {
@@ -176,7 +176,7 @@ final class af implements Runnable {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         Throwable decompiledCaughtException = null;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var4 = new qh();
           var4.field_B = 1;
@@ -270,7 +270,7 @@ final class af implements Runnable {
         RuntimeException var6 = null;
         int var8 = 0;
         int var9 = 0;
-        var9 = fleas.field_A ? 1 : 0;
+        var9 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var6_int = -param0 + param2;
           for (var7 = 0; var7 < var6_int; var7++) {
@@ -480,7 +480,7 @@ final class af implements Runnable {
           }
           aa.field_s = param2;
           jk.field_j = param0;
-          wf.a(ll.field_o, false, param1);
+          SecondaryNodeDeque.a(ll.field_o, false, param1);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "af.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

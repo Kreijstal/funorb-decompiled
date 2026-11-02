@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pf {
-    static rh field_b;
+    static ResourceArchive field_b;
     static char[] field_d;
     static dd field_a;
-    static cd field_c;
+    static GameAppletShell field_c;
 
     public static void a(int param0) {
         field_d = null;
@@ -33,7 +33,7 @@ final class pf {
         int var9 = 0;
         hf[] var10 = null;
         od var11 = null;
-        var9 = fleas.field_A ? 1 : 0;
+        var9 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (!param3.a(107)) {
             return null;
@@ -150,12 +150,12 @@ final class pf {
         int var8Lifetime3;
         int var5Lifetime2Lifetime1;
         int var7Lifetime1Lifetime1;
-        var9 = fleas.field_A ? 1 : 0;
+        var9 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           vc.field_a = param0;
           d.field_L = true;
           if (vc.field_a == 0) {
-            var3_int = nb.a(rh.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
+            var3_int = nb.a(ResourceArchive.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
             var4 = var3_int + 3;
             m.field_c = new int[var4];
             fb.field_d = new String[var4];
@@ -174,7 +174,7 @@ final class pf {
             m.field_c[-1 + var4] = 1;
             em.field_e[1] = 5;
           } else if (vc.field_a == 1) {
-            var3_int = nb.a(rh.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
+            var3_int = nb.a(ResourceArchive.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
             var4 = 2 + var3_int;
             fb.field_d = new String[var4];
             m.field_c = new int[var4];
@@ -267,7 +267,7 @@ final class pf {
             oe.field_c = new String[var3_int - (var4 + 1)];
             dm.a(sc.field_d, var4 + 1, oe.field_c, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = nb.a(db.a(cd.field_g, new String[]{"<br><%0><br>"}, true), vh.field_l, pb.field_e, sc.field_d, 1);
+            var3_int = nb.a(db.a(GameAppletShell.field_g, new String[]{"<br><%0><br>"}, true), vh.field_l, pb.field_e, sc.field_d, 1);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(sc.field_d[var5])) {
                 continue;
@@ -416,12 +416,12 @@ final class pf {
         }
     }
 
-    final static h a(Throwable param0, String param1) {
-        h var2 = null;
-        if (!(param0 instanceof h)) {
-          var2 = new h(param0, param1);
+    final static ContextualRuntimeException a(Throwable param0, String param1) {
+        ContextualRuntimeException var2 = null;
+        if (!(param0 instanceof ContextualRuntimeException)) {
+          var2 = new ContextualRuntimeException(param0, param1);
         } else {
-          var2 = (h) ((Object) param0);
+          var2 = (ContextualRuntimeException) ((Object) param0);
           var2.field_f = var2.field_f + ' ' + param1;
         }
         return var2;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ql extends lh {
+final class ql extends IntrusiveNode {
     int field_r;
     static ae field_l;
     int field_n;
@@ -39,7 +39,7 @@ final class ql extends lh {
         fh[] var2;
         int var4;
         fh[] var5;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0 != -22471) {
           field_l = (ae) null;
         }

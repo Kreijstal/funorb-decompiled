@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh extends lh {
+final class uh extends IntrusiveNode {
     int field_q;
     int field_u;
     int field_p;
@@ -16,17 +16,17 @@ final class uh extends lh {
     static int[] field_n;
     int[] field_r;
 
-    final static rh a(int param0, int param1, boolean param2, boolean param3, int param4) {
+    final static ResourceArchive a(int param0, int param1, boolean param2, boolean param3, int param4) {
         RuntimeException var5 = null;
-        rh stackIn_2_0 = null;
-        rh stackIn_4_0 = null;
+        ResourceArchive stackIn_2_0 = null;
+        ResourceArchive stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 26) {
             stackIn_4_0 = ag.a(param2, param4, false, param0, param3, 1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (rh) null;
+          stackIn_2_0 = (ResourceArchive) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class uh extends lh {
         }
     }
 
-    final static void a(byte param0, rh param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         RuntimeException stackIn_777_0 = null;
         StringBuilder stackIn_777_1 = null;
         String stackIn_778_2 = null;
@@ -309,7 +309,7 @@ final class uh extends lh {
         byte[] var2Lifetime215;
         byte[] var2Lifetime216;
         byte[] var2Lifetime217;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           em.field_c = param1;
           var2 = tf.a(0, "waitingfor_patches");
@@ -770,7 +770,7 @@ final class uh extends lh {
           }
           var2Lifetime114 = tf.a(0, "RAMP_TIP");
           if (var2Lifetime114 != null) {
-            qa.field_o = ab.a(0, var2Lifetime114);
+            UiComponent.field_o = ab.a(0, var2Lifetime114);
           }
           var2Lifetime115 = tf.a(0, "BALLOON_TIP");
           if (null != var2Lifetime115) {
@@ -934,7 +934,7 @@ final class uh extends lh {
           }
           var2Lifetime155 = tf.a(0, "INSTRUCTIONS_TITLES_5");
           if (var2Lifetime155 != null) {
-            na.field_b = ab.a(0, var2Lifetime155);
+            NodeHashTableIterator.field_b = ab.a(0, var2Lifetime155);
           }
           var2Lifetime156 = tf.a(0, "INSTRUCTIONS_TITLES_6");
           if (null != var2Lifetime156) {
@@ -974,7 +974,7 @@ final class uh extends lh {
           }
           var2Lifetime165 = tf.a(0, "INSTRUCTIONS_BODIES_2_5");
           if (null != var2Lifetime165) {
-            qa.field_q = ab.a(0, var2Lifetime165);
+            UiComponent.field_q = ab.a(0, var2Lifetime165);
           }
           var2Lifetime166 = tf.a(0, "INSTRUCTIONS_BODIES_2_6");
           if (null != var2Lifetime166) {
@@ -1139,7 +1139,7 @@ final class uh extends lh {
           }
           var2Lifetime206 = tf.a(0, "LABEL_MUSTSAVE");
           if (var2Lifetime206 != null) {
-            fleas.field_H = ab.a(0, var2Lifetime206);
+            FleaCircusApplet.field_H = ab.a(0, var2Lifetime206);
           }
           var2Lifetime207 = tf.a(0, "LABEL_FLEASRESCUED");
           if (var2Lifetime207 != null) {
@@ -1155,7 +1155,7 @@ final class uh extends lh {
           }
           var2Lifetime210 = tf.a(0, "BONUS");
           if (null != var2Lifetime210) {
-            fleas.field_I = ab.a(0, var2Lifetime210);
+            FleaCircusApplet.field_I = ab.a(0, var2Lifetime210);
           }
           var2Lifetime211 = tf.a(0, "LABEL_BONUS_TIME");
           if (var2Lifetime211 != null) {
@@ -1198,8 +1198,8 @@ final class uh extends lh {
           }
           throw pf.a((Throwable) ((Object) stackIn_777_0), ((StringBuilder) (Object) stackIn_777_1).append(stackIn_778_2).append(')').toString());
         }
-        if (cd.field_e) {
-          fleas.field_A = (var4 == 0);
+        if (GameAppletShell.field_e) {
+          FleaCircusApplet.field_A = (var4 == 0);
         }
     }
 

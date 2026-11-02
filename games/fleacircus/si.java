@@ -68,7 +68,7 @@ final class si {
         int var10;
         int var11;
         int var12;
-        var12 = fleas.field_A ? 1 : 0;
+        var12 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_a) {
           return;
         }
@@ -115,7 +115,7 @@ final class si {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
-        int var7 = fleas.field_A ? 1 : 0;
+        int var7 = FleaCircusApplet.field_A ? 1 : 0;
         for (var6 = param4; var6 < this.field_w; var6++) {
           this.field_n[var6] = (short)(this.field_n[var6] * param0 / param1);
           this.field_f[var6] = (short)(param3 * this.field_f[var6] / param1);
@@ -125,7 +125,7 @@ final class si {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        int var7 = fleas.field_A ? 1 : 0;
+        int var7 = FleaCircusApplet.field_A ? 1 : 0;
         int var5 = 0;
         int var6 = 15 % ((param3 + 11) / 63);
         while (var5 < this.field_w) {
@@ -159,7 +159,7 @@ final class si {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           ib.field_g = ib.field_g + 65536;
           while (a.a(hd.field_b, ib.field_g, (byte) -17) >= 65536) {
@@ -176,21 +176,21 @@ final class si {
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (td.field_i < hd.field_g) {
-              td.field_i = td.field_i + 1;
-              if (td.field_i > hd.field_c && (null == wa.field_k ||
+            if (BufferedSocket.field_i < hd.field_g) {
+              BufferedSocket.field_i = BufferedSocket.field_i + 1;
+              if (BufferedSocket.field_i > hd.field_c && (null == wa.field_k ||
                 null == wa.field_k[ql.field_o])) {
-                td.field_i = td.field_i - 1;
+                BufferedSocket.field_i = BufferedSocket.field_i - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (td.field_i >= hd.field_g &&
+                if (BufferedSocket.field_i >= hd.field_g &&
                   null == wa.field_k[(1 + ql.field_o) % var2_int]) {
-                  td.field_i = td.field_i - 1;
+                  BufferedSocket.field_i = BufferedSocket.field_i - 1;
                 }
               }
             }
-            if (td.field_i >= hd.field_g) {
+            if (BufferedSocket.field_i >= hd.field_g) {
               t.field_a = ql.field_o;
               if (rc.field_i) {
                 ql.field_o = ql.field_o + 1;
@@ -203,9 +203,9 @@ final class si {
                   ql.field_o = ql.field_o + var2_int;
                 }
               }
-              td.field_i = td.field_i - hd.field_g;
+              BufferedSocket.field_i = BufferedSocket.field_i - hd.field_g;
             }
-            if (td.field_i > hd.field_c) {
+            if (BufferedSocket.field_i > hd.field_c) {
               rc.field_i = true;
             }
           }
@@ -217,7 +217,7 @@ final class si {
               var3 + jg.field_f.field_t > ob.field_e) {
               if (269 - jg.field_f.field_w < pb.field_d &&
                 pb.field_d < 269) {
-                td.field_i = hd.field_g;
+                BufferedSocket.field_i = hd.field_g;
                 var4 = 1;
                 rc.field_i = false;
               }
@@ -225,20 +225,20 @@ final class si {
                 pb.field_d < jg.field_f.field_w + 586) {
                 rc.field_i = true;
                 var4 = 1;
-                td.field_i = hd.field_g;
+                BufferedSocket.field_i = hd.field_g;
               }
             }
             if (var4 == 0 &&
-              hd.field_c < td.field_i &&
+              hd.field_c < BufferedSocket.field_i &&
               var3 < kc.field_b &&
               kc.field_b < jg.field_f.field_t + var3) {
               if (ag.field_f > 269 - jg.field_f.field_w &&
                 ag.field_f < 269) {
-                td.field_i = hd.field_c;
+                BufferedSocket.field_i = hd.field_c;
               }
               if (ag.field_f > 586 &&
                 ag.field_f < jg.field_f.field_w + 586) {
-                td.field_i = hd.field_c;
+                BufferedSocket.field_i = hd.field_c;
               }
             }
           }
@@ -259,7 +259,7 @@ final class si {
               }
             }
             stackIn_70_0 = -97;
-            while (wf.b(stackIn_70_0)) {
+            while (SecondaryNodeDeque.b(stackIn_70_0)) {
               ul.field_G.a(0, true);
               if (ul.field_G.b(107)) {
                 if (ul.field_G.field_k == 0) {
@@ -295,7 +295,7 @@ final class si {
         int var5 = 0;
         int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var4 = -14 / ((param1 - 2) / 51);
           var3_int = 0;

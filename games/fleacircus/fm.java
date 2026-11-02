@@ -5,10 +5,10 @@ final class fm {
     final static void a(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (rh.field_f != null) {
-          var1 = rh.field_f;
+        if (ResourceArchive.field_f != null) {
+          var1 = ResourceArchive.field_f;
           synchronized (var1) {
-            rh.field_f = null;
+            ResourceArchive.field_f = null;
           }
         }
         if (param0 != 0) {
@@ -25,7 +25,7 @@ final class fm {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);

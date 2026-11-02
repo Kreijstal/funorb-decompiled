@@ -43,7 +43,7 @@ final class ii {
     }
 
     final static String a(int param0, Throwable param1) throws IOException {
-        h var14 = null;
+        ContextualRuntimeException var14 = null;
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
@@ -54,15 +54,15 @@ final class ii {
         int var12 = 0;
         String var2 = null;
         String var11 = null;
-        int var13 = fleas.field_A ? 1 : 0;
+        int var13 = FleaCircusApplet.field_A ? 1 : 0;
         String var2Lifetime1;
         String var2Lifetime2;
         String var2Lifetime3;
         String var2Lifetime4;
-        if (!(param1 instanceof h)) {
+        if (!(param1 instanceof ContextualRuntimeException)) {
           var2 = "";
         } else {
-          var14 = (h) ((Object) param1);
+          var14 = (ContextualRuntimeException) ((Object) param1);
           param1 = var14.field_e;
           var2 = var14.field_f + " | ";
         }
@@ -170,18 +170,18 @@ final class ii {
     final static void a(byte param0) {
         int var1;
         int var2;
-        var2 = fleas.field_A ? 1 : 0;
-        rh.field_e = null;
+        var2 = FleaCircusApplet.field_A ? 1 : 0;
+        ResourceArchive.field_e = null;
         ah.field_c = false;
         if (!jg.field_d) {
           var1 = nb.field_h;
           if (var1 > 0) {
             if (var1 == 1) {
-              rh.field_e = ri.field_q;
+              ResourceArchive.field_e = ri.field_q;
             } else {
-              rh.field_e = db.a(rg.field_r, new String[]{Integer.toString(var1)}, true);
+              ResourceArchive.field_e = db.a(rg.field_r, new String[]{Integer.toString(var1)}, true);
             }
-            rh.field_e = gj.a(0, new CharSequence[]{(CharSequence) ((Object) rh.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) jk.field_p)});
+            ResourceArchive.field_e = gj.a(0, new CharSequence[]{(CharSequence) ((Object) ResourceArchive.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) jk.field_p)});
             ok.field_x.n(-22645);
             ic.n(-128);
             if (param0 == -88) {

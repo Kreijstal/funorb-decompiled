@@ -49,7 +49,7 @@ final class th extends sh {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (this.field_B &&
             param3) {
@@ -177,7 +177,7 @@ final class th extends sh {
         int var11 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (0 >= this.field_x) {
             this.a(param2);
@@ -321,7 +321,7 @@ final class th extends sh {
     final synchronized void a(int param0) {
         int var3;
         boolean decompiledFrameRemainder0 = true;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_E > 0) {
           if (this.field_F != null) {
             this.field_C.a(param0);

@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vc {
-    lh field_e;
+    IntrusiveNode field_e;
     static int field_d;
     static boolean field_b;
     static int field_f;
-    private lh field_c;
+    private IntrusiveNode field_c;
     static int field_a;
     static String field_g;
 
-    final lh c(byte param0) {
-        lh var2 = this.field_e.field_h;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = this.field_e.field_h;
         if (var2 == this.field_e) {
           this.field_c = null;
           return null;
@@ -24,9 +24,9 @@ final class vc {
         return var2;
     }
 
-    final lh a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int var2 = 3 / ((28 - param0) / 36);
-        lh var3 = this.field_e.field_a;
+        IntrusiveNode var3 = this.field_e.field_a;
         if (this.field_e != var3) {
           var3.c(-1);
           return var3;
@@ -34,7 +34,7 @@ final class vc {
         return null;
     }
 
-    final void b(boolean param0, lh param1) {
+    final void b(boolean param0, IntrusiveNode param1) {
         try {
           if (param1.field_a != null) {
             param1.c(-1);
@@ -43,8 +43,8 @@ final class vc {
           param1.field_h = this.field_e.field_h;
           param1.field_a.field_h = param1;
           if (!param0) {
-            lh var4 = (lh) null;
-            this.a(true, (lh) null);
+            IntrusiveNode var4 = (IntrusiveNode) null;
+            this.a(true, (IntrusiveNode) null);
           }
           param1.field_h.field_a = param1;
         } catch (RuntimeException runtimeException) {
@@ -52,8 +52,8 @@ final class vc {
         }
     }
 
-    final lh b(int param0) {
-        lh var2 = this.field_e.field_a;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_e.field_a;
         if (this.field_e == var2) {
           this.field_c = null;
           return null;
@@ -62,11 +62,11 @@ final class vc {
         if (param0 <= -33) {
           return var2;
         }
-        return (lh) null;
+        return (IntrusiveNode) null;
     }
 
-    final lh b(byte param0) {
-        lh var2 = this.field_c;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_c;
         if (param0 != -105) {
           field_g = (String) null;
           if (var2 == this.field_e) {
@@ -84,7 +84,7 @@ final class vc {
         return var2;
     }
 
-    final static void a(byte param0, rh param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         int var5 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -99,13 +99,13 @@ final class vc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4Lifetime1;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var9 = new ih(param1.a(0, "", "logo.fo3d"));
           var10 = var9;
           var3 = var10.e(false);
           var10.k(8);
-          fc.field_a = fleas.a(var10, -6383);
+          fc.field_a = FleaCircusApplet.a(var10, -6383);
           ij.field_F = new si[var3];
           gm.field_kb = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
@@ -136,9 +136,9 @@ final class vc {
         }
     }
 
-    final lh c(int param0) {
-        lh var2 = null;
-        lh var2Lifetime1;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 <= 3) {
           field_d = -51;
           var2 = this.field_c;
@@ -158,7 +158,7 @@ final class vc {
         return var2Lifetime1;
     }
 
-    final void a(boolean param0, lh param1) {
+    final void a(boolean param0, IntrusiveNode param1) {
         try {
           if (null != param1.field_a) {
             param1.c(-1);
@@ -183,7 +183,7 @@ final class vc {
         int stackIn_9_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_intLifetime1;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param2 < param0) {
             var3_int = param2;
@@ -208,8 +208,8 @@ final class vc {
         }
     }
 
-    final lh e(int param0) {
-        lh var2 = this.field_e.field_h;
+    final IntrusiveNode e(int param0) {
+        IntrusiveNode var2 = this.field_e.field_h;
         if (var2 == this.field_e) {
           return null;
         }
@@ -217,13 +217,13 @@ final class vc {
           var2.c(-1);
           return var2;
         }
-        return (lh) null;
+        return (IntrusiveNode) null;
     }
 
     final void f(int param0) {
-        lh var2;
+        IntrusiveNode var2;
         int var3;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         while (true) {
           var2 = this.field_e.field_h;
           if (this.field_e != var2) {
@@ -242,7 +242,7 @@ final class vc {
     }
 
     public vc() {
-        this.field_e = new lh();
+        this.field_e = new IntrusiveNode();
         this.field_e.field_h = this.field_e;
         this.field_e.field_a = this.field_e;
     }

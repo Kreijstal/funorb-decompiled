@@ -6,7 +6,7 @@ final class be {
     static int field_a;
     static int field_b;
 
-    final static bi[] a(int param0, int param1, int param2, rh param3) {
+    final static bi[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         bi[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

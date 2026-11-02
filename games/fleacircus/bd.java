@@ -40,7 +40,7 @@ class bd extends oh implements da {
         int var5 = 0;
         String var6 = null;
         bm var7 = null;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (this.field_rb) {
             return;
@@ -119,7 +119,7 @@ class bd extends oh implements da {
           this.field_rb = false;
           this.field_lb = new lk(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_lb.field_H = true;
-          this.a((qa) (this.field_lb), (byte) -97);
+          this.a((UiComponent) (this.field_lb), (byte) -97);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "bd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -164,7 +164,7 @@ class bd extends oh implements da {
         ih var28 = null;
         int var25Lifetime1;
         int var25Lifetime2;
-        var26 = fleas.field_A ? 1 : 0;
+        var26 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var28 = ae.field_a;
           var2 = var28.e(false);
@@ -337,7 +337,7 @@ class bd extends oh implements da {
         }
     }
 
-    final boolean a(int param0, int param1, qa param2, char param3) {
+    final boolean a(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

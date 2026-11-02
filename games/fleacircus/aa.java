@@ -7,7 +7,7 @@ class aa extends e {
     static boolean field_q;
     static int field_t;
 
-    public final void a(int param0, int param1, boolean param2, qa param3, int param4) {
+    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         try {
           if (param0 >= -36) {
             field_s = (String) null;
@@ -33,7 +33,7 @@ class aa extends e {
         dd var1 = null;
         dd var2 = null;
         int var3 = 0;
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0 != -65) {
           return;
         }

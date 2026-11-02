@@ -21,7 +21,7 @@ final class ic extends jj implements da {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new bb(param1, param2);
-          var4.field_p = (ch) ((Object) new ri());
+          var4.field_p = (ComponentLayout) ((Object) new ri());
           var5 = -6 + this.field_j;
           this.field_j = this.field_j + 38;
           if (param0 != -28732) {
@@ -29,7 +29,7 @@ final class ic extends jj implements da {
             this.a(-90, -88, -85, 85, (bb) null);
           }
           var4.a(15, -16 + (this.field_u - 14), var5, 30, 80);
-          this.a((qa) (var4), (byte) -43);
+          this.a((UiComponent) (var4), (byte) -43);
           this.b(false);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -72,7 +72,7 @@ final class ic extends jj implements da {
           nb.field_a.b(em.field_g, (byte) -35);
           return;
         }
-        em.field_g = new nd(nb.field_a, rh.field_e);
+        em.field_g = new nd(nb.field_a, ResourceArchive.field_e);
         nb.field_a.b(em.field_g, (byte) -35);
     }
 
@@ -108,7 +108,7 @@ final class ic extends jj implements da {
     ic(f param0, fc param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        qa var4 = null;
+        UiComponent var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -134,12 +134,12 @@ final class ic extends jj implements da {
           } else {
             var3 = sa.field_b;
           }
-          var4 = new qa((String) (var3), (kd) null);
+          var4 = new UiComponent((String) (var3), (kd) null);
           var4.field_u = this.field_u;
           var4.field_j = 80;
           var4.field_z = 50;
           var4.field_y = 0;
-          var4.field_p = (ch) ((Object) new e(nb.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_p = (ComponentLayout) ((Object) new e(nb.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) -102);
           this.field_cb = this.a(-28732, ja.field_O, (kd) (this));
           return;

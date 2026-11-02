@@ -19,7 +19,7 @@ final class ca extends gj implements dc, da, pe {
     private bc field_U;
     private bc field_M;
 
-    private final int a(int param0, qa param1, String param2, int param3, int param4) {
+    private final int a(int param0, UiComponent param1, String param2, int param3, int param4) {
         ml var6 = null;
         RuntimeException var6_ref = null;
         je var7 = null;
@@ -32,9 +32,9 @@ final class ca extends gj implements dc, da, pe {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new ml(20, param4, 120 + param3, 25, param1, false, 120, 3, ug.field_e, 16777215, param2);
-          this.a((qa) (var6), (byte) -85);
+          this.a((UiComponent) (var6), (byte) -85);
           var7 = new je(((nh) ((Object) param1)).a((byte) 21));
-          this.a((qa) (var7), (byte) -29);
+          this.a((UiComponent) (var7), (byte) -29);
           var7.a(3 + var6.field_u + var6.field_y, 15, var6.field_z + (var6.field_j + param0 >> 1), 15, 80);
           stackIn_1_0 = var6.field_j;
           return stackIn_1_0;
@@ -58,7 +58,7 @@ final class ca extends gj implements dc, da, pe {
         }
     }
 
-    private final int a(int param0, int param1, String param2, int param3, qa param4) {
+    private final int a(int param0, int param1, String param2, int param3, UiComponent param4) {
         ml var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_4_0 = 0;
@@ -70,7 +70,7 @@ final class ca extends gj implements dc, da, pe {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new ml(20, param3, param1 + 120, 25, param4, false, 120, 3, ug.field_e, 16777215, param2);
-          this.a((qa) (var6), (byte) -66);
+          this.a((UiComponent) (var6), (byte) -66);
           if (param0 > -27) {
             this.field_R = (bb) null;
           }
@@ -156,7 +156,7 @@ final class ca extends gj implements dc, da, pe {
         }
     }
 
-    private final int a(String param0, String param1, int param2, int param3, int param4, qa param5) {
+    private final int a(String param0, String param1, int param2, int param3, int param4, UiComponent param5) {
         RuntimeException var7 = null;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -169,7 +169,7 @@ final class ca extends gj implements dc, da, pe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != -19983) {
-            this.a(-55, -75, (qa) null, (byte) -86);
+            this.a(-55, -75, (UiComponent) null, (byte) -86);
           }
           stackIn_4_0 = this.a(param5, 35, param3, param0, param1, (byte) -86, param2);
           return stackIn_4_0;
@@ -205,7 +205,7 @@ final class ca extends gj implements dc, da, pe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 11579568) {
-            this.a(75, 25, (qa) null, '￱');
+            this.a(75, 25, (UiComponent) null, '￱');
           }
           stackIn_4_0 = "<u=2164A2><col=2164A2>";
           return stackIn_4_0;
@@ -216,7 +216,7 @@ final class ca extends gj implements dc, da, pe {
         }
     }
 
-    final boolean a(int param0, int param1, qa param2, char param3) {
+    final boolean a(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_12_0 = false;
@@ -279,7 +279,7 @@ final class ca extends gj implements dc, da, pe {
         }
     }
 
-    private final int a(qa param0, int param1, int param2, String param3, String param4, byte param5, int param6) {
+    private final int a(UiComponent param0, int param1, int param2, String param3, String param4, byte param5, int param6) {
         ml var8 = null;
         RuntimeException var8_ref = null;
         v var9 = null;
@@ -295,14 +295,14 @@ final class ca extends gj implements dc, da, pe {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = new ml(20, param2, param6 + 120, 25, param0, false, 120, 3, ug.field_e, 16777215, param3);
-          this.a((qa) (var8), (byte) -42);
+          this.a((UiComponent) (var8), (byte) -42);
           if (param5 != -86) {
             stackIn_2_0 = 108;
             return stackIn_2_0;
           }
           var9 = new v(((nh) ((Object) param0)).a((byte) -2), param4, 126, var8.field_j + param2, 50 + param6, param1);
           var9.field_s = (kd) (this);
-          this.a((qa) (var9), (byte) -77);
+          this.a((UiComponent) (var9), (byte) -77);
           stackIn_4_0 = var8.field_j + var9.field_j;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -362,7 +362,7 @@ final class ca extends gj implements dc, da, pe {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 == 0) {
             lk.a(-15493, "terms.ws");
@@ -403,11 +403,11 @@ final class ca extends gj implements dc, da, pe {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          param0.removeKeyListener(rh.field_f);
+          param0.removeKeyListener(ResourceArchive.field_f);
           if (param1 != 83) {
             ca.j(-73);
           }
-          param0.removeFocusListener(rh.field_f);
+          param0.removeFocusListener(ResourceArchive.field_f);
           em.field_f = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -457,7 +457,7 @@ final class ca extends gj implements dc, da, pe {
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = fleas.field_A ? 1 : 0;
+        var19 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var5_int = dk.a(3 * (param1 - param0), (byte) -57);
           var6 = 3 * param0;
@@ -491,11 +491,11 @@ final class ca extends gj implements dc, da, pe {
               }
               if (!stackIn_12_0 ||
                 var14 * var17 - var15 * var16 < 0) {
-                var12Lifetime1 = h.field_c[var9];
+                var12Lifetime1 = ContextualRuntimeException.field_c[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = h.field_c[var10];
+                  var13Lifetime1 = ContextualRuntimeException.field_c[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = h.field_c[var11];
+                    var14 = ContextualRuntimeException.field_c[var11];
                     if (-2147483648 != var14) {
                       var15 = var14 + var13Lifetime1 + (var12Lifetime1 - var6);
                       if (var7 < 0) {
@@ -570,7 +570,7 @@ final class ca extends gj implements dc, da, pe {
     }
 
     public ca() {
-        super(0, 0, 496, 0, (ch) null);
+        super(0, 0, 496, 0, (ComponentLayout) null);
         int var1_int = 0;
         aa dupTemp$0 = null;
         mh dupTemp$1 = null;
@@ -605,17 +605,17 @@ final class ca extends gj implements dc, da, pe {
           this.field_M.a(true, new tl(this.field_M, this.field_F));
           this.field_S.a(true, new ga(this.field_S));
           this.field_I.field_D = false;
-          this.field_I.field_p = (ch) ((Object) new ri());
-          this.field_R.field_p = (ch) ((Object) new me());
-          this.field_K.field_p = (ch) ((Object) new aa(10000536));
+          this.field_I.field_p = (ComponentLayout) ((Object) new ri());
+          this.field_R.field_p = (ComponentLayout) ((Object) new me());
+          this.field_K.field_p = (ComponentLayout) ((Object) new aa(10000536));
           dupTemp$0 = new aa(10000536);
-          this.field_H.field_p = (ch) ((Object) dupTemp$0);
-          this.field_U.field_p = (ch) ((Object) dupTemp$0);
-          this.field_S.field_p = (ch) ((Object) new aa(10000536));
-          this.field_T.field_p = (ch) ((Object) new jc());
+          this.field_H.field_p = (ComponentLayout) ((Object) dupTemp$0);
+          this.field_U.field_p = (ComponentLayout) ((Object) dupTemp$0);
+          this.field_S.field_p = (ComponentLayout) ((Object) new aa(10000536));
+          this.field_T.field_p = (ComponentLayout) ((Object) new jc());
           dupTemp$1 = new mh(10000536);
-          this.field_M.field_p = (ch) ((Object) dupTemp$1);
-          this.field_F.field_p = (ch) ((Object) dupTemp$1);
+          this.field_M.field_p = (ComponentLayout) ((Object) dupTemp$1);
+          this.field_F.field_p = (ComponentLayout) ((Object) dupTemp$1);
           var2 = db.a(ei.field_v, new String[]{this.k(11579568), this.f((byte) 49)}, true);
           var3 = 20;
           var3 = var3 + this.a(-61, 170, ff.field_a, var3, this.field_U);
@@ -625,7 +625,7 @@ final class ca extends gj implements dc, da, pe {
           var3 = var3 + (5 + this.a(me.field_a, bb.field_J, 170, var3, -19983, this.field_K));
           var3 = var3 + this.a(-15, this.field_S, me.field_f, 170, var3);
           var4 = new ml(46, var3, this.field_u - 90, 25, this.field_T, true, -120 + this.field_u, 5, nb.field_c, 11579568, lf.field_a);
-          this.a((qa) (var4), (byte) -101);
+          this.a((UiComponent) (var4), (byte) -101);
           var3 = var3 + var4.field_j;
           var5 = new e(ug.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, ug.field_e.field_H, -1, 2147483647, true);
           this.field_J = new ja(var2, var5);
@@ -635,25 +635,25 @@ final class ca extends gj implements dc, da, pe {
           this.field_J.field_s = (kd) (this);
           this.field_J.b(this.field_u - 90, 46, var3, -9);
           var3 = var3 + (15 + this.field_J.field_j);
-          this.a((qa) (this.field_J), (byte) -83);
+          this.a((UiComponent) (this.field_J), (byte) -83);
           var6 = 4;
           var7 = 200;
           this.field_I.a(-var7 + 496 >> 1, var7, var3, 40, 80);
           this.field_R.a(var6 + 3, 60, var3 + 15, 40, 80);
           this.field_R.field_s = (kd) (this);
           this.field_I.field_s = (kd) (this);
-          this.a((qa) (this.field_I), (byte) -51);
-          this.a((qa) (this.field_R), (byte) -106);
+          this.a((UiComponent) (this.field_I), (byte) -51);
+          this.a((UiComponent) (this.field_R), (byte) -106);
           this.field_N = new ij((pe) (this));
           this.field_N.a(60 + this.field_K.field_u + this.field_K.field_y, -60 + (-this.field_K.field_y + this.field_u - this.field_K.field_u), 20 + this.field_K.field_z, 150, 80);
-          this.a((qa) (this.field_N), (byte) -77);
+          this.a((UiComponent) (this.field_N), (byte) -77);
           this.a(0, 496, 0, var6 + (var3 + 55), 80);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "ca.<init>()");
         }
     }
 
-    final void a(int param0, int param1, qa param2, byte param3) {
+    final void a(int param0, int param1, UiComponent param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -692,7 +692,7 @@ final class ca extends gj implements dc, da, pe {
         try {
           var3 = this.field_K;
           if (param1 != -96) {
-            discarded$1 = this.a(4, (qa) null, (String) null, 11, 117);
+            discarded$1 = this.a(4, (UiComponent) null, (String) null, 11, 117);
           }
           var4 = param0;
           ((c) ((Object) var3)).a(false, (byte) -91, var4);
@@ -738,7 +738,7 @@ final class ca extends gj implements dc, da, pe {
         try {
           if (this.field_R == param4) {
             ej.a(param3 - 232);
-            if ((fleas.field_A) &&
+            if ((FleaCircusApplet.field_A) &&
               (param4 == this.field_I)) {
               discarded$0 = this.l(127);
             }

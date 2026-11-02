@@ -4,15 +4,15 @@
 import java.io.*;
 import java.util.*;
 
-abstract class dk extends qa implements wg {
+abstract class dk extends UiComponent implements wg {
     static int[] field_D;
-    qa field_A;
+    UiComponent field_A;
     static vg field_C;
     static int field_B;
 
     final boolean e(int param0) {
         if (param0 != 1) {
-          this.field_A = (qa) null;
+          this.field_A = (UiComponent) null;
         }
         return null != this.a(0) ? true : false;
     }
@@ -23,7 +23,7 @@ abstract class dk extends qa implements wg {
         StringBuilder discarded$6 = null;
         StringBuilder discarded$5 = null;
         int var6 = 0;
-        qa var7 = null;
+        UiComponent var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -31,15 +31,15 @@ abstract class dk extends qa implements wg {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           discarded$4 = param0.append('\n');
           for (var5_int = 0; var5_int <= param3; var5_int++) {
             discarded$6 = param0.append(' ');
           }
           if (param2 < 9) {
-            var7 = (qa) null;
-            this.a(75, -45, (qa) null, 'r');
+            var7 = (UiComponent) null;
+            this.a(75, -45, (UiComponent) null, 'r');
           }
           if (this.field_A != null) {
             this.field_A.a(param0, param1, param3 + 1, -63);
@@ -67,11 +67,11 @@ abstract class dk extends qa implements wg {
         }
     }
 
-    qa a(int param0) {
+    UiComponent a(int param0) {
         if (param0 != 0) {
-          return (qa) null;
+          return (UiComponent) null;
         }
-        qa var2 = this.field_A;
+        UiComponent var2 = this.field_A;
         if (var2 == null) {
           return null;
         }
@@ -88,7 +88,7 @@ abstract class dk extends qa implements wg {
           boolean decompiledFrameRemainder0 = true;
           if (sg.field_h != null) {
             if (0 <= param1) {
-              decompiledFrameRemainder0 = (rh.field_k == fh.field_b);
+              decompiledFrameRemainder0 = (ResourceArchive.field_k == fh.field_b);
               if ((decompiledFrameRemainder0) && (ud.field_b.field_i == 0 &&
                 lj.a((byte) -116) > jd.field_n + 10000L)) {
                 ud.field_b.e(8, param1);
@@ -125,7 +125,7 @@ abstract class dk extends qa implements wg {
         }
     }
 
-    void a(int param0, int param1, qa param2, byte param3) {
+    void a(int param0, int param1, UiComponent param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -162,7 +162,7 @@ abstract class dk extends qa implements wg {
         field_C = null;
     }
 
-    final boolean a(int param0, qa param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, UiComponent param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -218,22 +218,22 @@ abstract class dk extends qa implements wg {
         return var2 + param0;
     }
 
-    dk(int param0, int param1, int param2, int param3, ch param4, kd param5) {
+    dk(int param0, int param1, int param2, int param3, ComponentLayout param4, kd param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
     void c(boolean param0) {
         boolean discarded$0 = false;
         if (!param0) {
-          qa var3 = (qa) null;
-          discarded$0 = this.a((qa) null, true);
+          UiComponent var3 = (UiComponent) null;
+          discarded$0 = this.a((UiComponent) null, true);
         }
         if (this.field_A != null) {
           this.field_A.b(false);
         }
     }
 
-    final boolean a(qa param0, int param1) {
+    final boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -269,7 +269,7 @@ abstract class dk extends qa implements wg {
         }
     }
 
-    private final boolean a(qa param0, boolean param1) {
+    private final boolean a(UiComponent param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -296,7 +296,7 @@ abstract class dk extends qa implements wg {
         }
     }
 
-    final boolean a(int param0, int param1, qa param2, char param3) {
+    final boolean a(int param0, int param1, UiComponent param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Hashtable var6 = null;
@@ -343,7 +343,7 @@ abstract class dk extends qa implements wg {
     void b(int param0, int param1, boolean param2, int param3) {
         if (0 == param3 &&
           null != this.field_p) {
-          this.field_p.a(-127, param1, true, (qa) (this), param0);
+          this.field_p.a(-127, param1, true, (UiComponent) (this), param0);
         }
         if (null != this.field_A) {
           this.field_A.b(param0 + this.field_z, param1 + this.field_y, true, param3);
@@ -353,7 +353,7 @@ abstract class dk extends qa implements wg {
         }
     }
 
-    boolean a(int param0, boolean param1, int param2, qa param3, int param4, int param5, int param6) {
+    boolean a(int param0, boolean param1, int param2, UiComponent param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -392,8 +392,8 @@ abstract class dk extends qa implements wg {
         return null == this.field_A ? 0 : this.field_A.c((byte) 8);
     }
 
-    void a(byte param0, qa param1, int param2, int param3, int param4, int param5) {
-        qa var8 = null;
+    void a(byte param0, UiComponent param1, int param2, int param3, int param4, int param5) {
+        UiComponent var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -401,8 +401,8 @@ abstract class dk extends qa implements wg {
         RuntimeException var7 = null;
         try {
           if (param0 != 5) {
-            var8 = (qa) null;
-            this.a(-14, true, 48, (qa) null, 20, -115, -77);
+            var8 = (UiComponent) null;
+            this.a(-14, true, 48, (UiComponent) null, 20, -115, -77);
           }
           if (null != this.field_A) {
             this.field_A.a((byte) 5, param1, this.field_y + param2, param3, param4, this.field_z + param5);
@@ -422,9 +422,9 @@ abstract class dk extends qa implements wg {
         }
     }
 
-    private final boolean a(qa param0, byte param1) {
+    private final boolean a(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
-        qa var4 = null;
+        UiComponent var4 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -432,8 +432,8 @@ abstract class dk extends qa implements wg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -96) {
-            var4 = (qa) null;
-            this.a(-1, false, 101, (qa) null, 28, 82, 85);
+            var4 = (UiComponent) null;
+            this.a(-1, false, 101, (UiComponent) null, 28, 82, 85);
           }
           stackIn_7_0 = (this.field_A != null) && (!this.field_A.e(1)) && (this.field_A.a(param0, -102));
           return stackIn_7_0;
@@ -465,7 +465,7 @@ abstract class dk extends qa implements wg {
 
     StringBuilder a(StringBuilder param0, Hashtable param1, int param2, int param3) {
         RuntimeException var5 = null;
-        qa var6 = null;
+        UiComponent var6 = null;
         StringBuilder stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -475,8 +475,8 @@ abstract class dk extends qa implements wg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 >= -47) {
-            var6 = (qa) null;
-            this.a(49, true, -22, (qa) null, -54, 10, 26);
+            var6 = (UiComponent) null;
+            this.a(49, true, -22, (UiComponent) null, -54, 10, 26);
           }
           if (this.a(param1, 121, param0, param2)) {
             this.a(param2, -55, param0, param1);

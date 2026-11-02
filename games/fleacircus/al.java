@@ -98,7 +98,7 @@ final class al {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = rh.a((byte) -70, uj.a(param0, (byte) -103));
+          var2 = ResourceArchive.a((byte) -70, uj.a(param0, (byte) -103));
           if (var2 == null) {
             var2 = "";
           }

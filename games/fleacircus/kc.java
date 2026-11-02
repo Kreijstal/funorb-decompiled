@@ -8,7 +8,7 @@ abstract class kc {
     static sf field_e;
     static int field_f;
     static int field_b;
-    static rh field_d;
+    static ResourceArchive field_d;
     private static String field_z;
 
     abstract uj a(boolean param0);

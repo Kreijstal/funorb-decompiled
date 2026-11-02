@@ -60,14 +60,14 @@ final class ed {
         int var9_intLifetime1;
         int var9_intLifetime2;
         int var9_intLifetime3;
-        var10 = fleas.field_A ? 1 : 0;
+        var10 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (null != ub.field_b &&
             ub.field_b.b((byte) -121) &&
             ub.field_b.a("benefits", -127) &&
-            null != wf.field_b &&
-            wf.field_b.b((byte) -122) &&
-            wf.field_b.a("benefits", -114)) {
+            null != SecondaryNodeDeque.field_b &&
+            SecondaryNodeDeque.field_b.b((byte) -122) &&
+            SecondaryNodeDeque.field_b.a("benefits", -114)) {
             mf.field_b = kl.a(252, ub.field_b, "benefits", "headline");
             wh.field_b = kl.a(252, ub.field_b, "benefits", "blurbpane");
             vj.field_c = kl.a(252, ub.field_b, "benefits", "button");
@@ -75,8 +75,8 @@ final class ed {
             sd.field_c = kl.a(252, ub.field_b, "benefits", "menu_text");
             df.field_b = kl.a(252, ub.field_b, "benefits", "button_frame");
             jg.field_f = kl.a(252, ub.field_b, "benefits", "arrow");
-            ql.field_k = (fa) ((Object) ub.a("benefits", ub.field_b, "large_font", wf.field_b, 32));
-            qj.field_H = (fa) ((Object) ub.a("benefits", ub.field_b, "small_font", wf.field_b, 32));
+            ql.field_k = (fa) ((Object) ub.a("benefits", ub.field_b, "large_font", SecondaryNodeDeque.field_b, 32));
+            qj.field_H = (fa) ((Object) ub.a("benefits", ub.field_b, "small_font", SecondaryNodeDeque.field_b, 32));
             var27 = gb.field_a;
             var2 = gb.field_d;
             var3 = gb.field_k;
@@ -90,9 +90,9 @@ final class ed {
             var12 = new dd(195, 221);
             var6 = var12.field_w / 2;
             var12.f();
-            ql.field_k.a(db.a(li.field_b, new String[]{pi.field_e}, true), var6, 40, 16777215, -1);
+            ql.field_k.a(db.a(IterableNodeHashTable.field_b, new String[]{pi.field_e}, true), var6, 40, 16777215, -1);
             qj.field_H.a(db.a(jj.field_Y, new String[]{pi.field_e}, true), var6, 60, 16777215, -1);
-            ql.field_k.a(db.a(wb.field_w, new String[]{id.field_i}, true), var6, 110, 16777215, -1);
+            ql.field_k.a(db.a(NetworkGameClient.field_w, new String[]{id.field_i}, true), var6, 110, 16777215, -1);
             qj.field_H.a(db.a(lj.field_i, new String[]{id.field_i}, true), var6, 130, 16777215, -1);
             ql.field_k.a(ei.field_N, var6, 180, 16777215, -1);
             qj.field_H.a(pg.field_b, var6, 200, 16777215, -1);
@@ -116,7 +116,7 @@ final class ed {
             ha.field_l = (-df.field_b.field_w + vj.field_c.field_w) / 2 + 231;
             rj.field_o = 390 + (vj.field_c.field_t - df.field_b.field_t) / 2;
           }
-          if (null == cd.field_b) {
+          if (null == GameAppletShell.field_b) {
             return;
           }
           if (pb.field_g != null &&
@@ -130,7 +130,7 @@ final class ed {
             var6Lifetime1 = ql.field_k.b(var14, wa.field_m, ql.field_k.field_K + ql.field_k.field_H);
             var7Lifetime1 = ei.field_V + (wa.field_m - var5) / 2;
             var5 += 6;
-            var8 = (-var6Lifetime1 + bh.field_l) / 2 + li.field_i;
+            var8 = (-var6Lifetime1 + bh.field_l) / 2 + IterableNodeHashTable.field_i;
             var7Lifetime1 -= 3;
             var6Lifetime1 += 6;
             if (0 > var7Lifetime1) {
@@ -157,7 +157,7 @@ final class ed {
               pb.field_g.field_r = pb.field_g.field_r + var9_intLifetime2 * 2;
               pb.field_g.field_v = pb.field_g.field_v + var9_intLifetime2;
               t.field_d = t.field_d - var9_intLifetime2;
-              li.field_i = li.field_i + var9_intLifetime2;
+              IterableNodeHashTable.field_i = IterableNodeHashTable.field_i + var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime2 * 2;
               var8 = var8 + var9_intLifetime2;
             }
@@ -167,13 +167,13 @@ final class ed {
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime3 * 2;
               var8 = var8 + var9_intLifetime3;
               t.field_d = t.field_d - var9_intLifetime3;
-              li.field_i = li.field_i + var9_intLifetime3;
+              IterableNodeHashTable.field_i = IterableNodeHashTable.field_i + var9_intLifetime3;
               pb.field_g.field_r = pb.field_g.field_r + var9_intLifetime3 * 2;
             }
             pb.field_g.a();
             var9 = new dd(pb.field_g.field_x, pb.field_g.field_r);
             var9.f();
-            ql.field_k.a(var14, ei.field_V, li.field_i, wa.field_m, bh.field_l, 16777215, -1, 1, 1, ql.field_k.field_H + ql.field_k.field_K);
+            ql.field_k.a(var14, ei.field_V, IterableNodeHashTable.field_i, wa.field_m, bh.field_l, 16777215, -1, 1, 1, ql.field_k.field_H + ql.field_k.field_K);
             rg.a(0, var9, var9.field_x, var9.field_r, 1, -14, 3, 0);
             pb.field_g.f();
             var9.d(0, 0);
@@ -185,20 +185,20 @@ final class ed {
             gb.a(var28, var2Lifetime1, var3Lifetime1);
             gb.b(ab.field_c);
           }
-          if (pa.field_k != null &&
+          if (DualLinkNode.field_k != null &&
             qj.field_H != null) {
             var29 = gb.field_a;
             var2Lifetime2 = gb.field_d;
             var3Lifetime2 = gb.field_k;
             gb.a(ab.field_c);
             var16 = new dd(412, 43);
-            var5_ref_String = db.a(fk.field_B, new String[]{pa.field_k}, true);
-            pa.field_k = null;
+            var5_ref_String = db.a(fk.field_B, new String[]{DualLinkNode.field_k}, true);
+            DualLinkNode.field_k = null;
             var16.f();
             qj.field_H.a(var5_ref_String, 3, 3, var16.field_w - 6, var16.field_t - 6, 16777215, -1, 0, 1, qj.field_H.field_H + qj.field_H.field_K);
             rg.a(0, var16, var16.field_w, var16.field_t, 1, -27, 3, 0);
-            cd.field_b.f();
-            var16.d(199 - cd.field_b.field_q, 83 - cd.field_b.field_v);
+            GameAppletShell.field_b.f();
+            var16.d(199 - GameAppletShell.field_b.field_q, 83 - GameAppletShell.field_b.field_v);
             gb.a(var29, var2Lifetime2, var3Lifetime2);
             gb.b(ab.field_c);
           }
@@ -208,15 +208,15 @@ final class ed {
             var2Lifetime3 = gb.field_d;
             var3Lifetime3 = gb.field_k;
             gb.a(ab.field_c);
-            var4 = qj.field_H.c(h.field_d, 640) + 6;
+            var4 = qj.field_H.c(ContextualRuntimeException.field_d, 640) + 6;
             var5Lifetime1 = var4 + dl.field_s.field_x + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (dl.field_s.field_x + var6Lifetime2);
-            cd.field_b.f();
-            qj.field_H.c(h.field_d, -cd.field_b.field_q + var7Lifetime2, qj.field_H.field_K + qj.field_H.field_H + (-cd.field_b.field_v + 155), 16777215, -1);
-            rg.a(-cd.field_b.field_q + (var7Lifetime2 - 4), cd.field_b, var4, 50, 1, -90, 3, 155 - cd.field_b.field_v);
-            var8Lifetime1 = -((-qj.field_H.field_K + (-qj.field_H.field_H - 3) + dl.field_s.field_r) / 2) + 155 - cd.field_b.field_v;
-            dl.field_s.d(var6Lifetime2 - cd.field_b.field_q, var8Lifetime1);
+            GameAppletShell.field_b.f();
+            qj.field_H.c(ContextualRuntimeException.field_d, -GameAppletShell.field_b.field_q + var7Lifetime2, qj.field_H.field_K + qj.field_H.field_H + (-GameAppletShell.field_b.field_v + 155), 16777215, -1);
+            rg.a(-GameAppletShell.field_b.field_q + (var7Lifetime2 - 4), GameAppletShell.field_b, var4, 50, 1, -90, 3, 155 - GameAppletShell.field_b.field_v);
+            var8Lifetime1 = -((-qj.field_H.field_K + (-qj.field_H.field_H - 3) + dl.field_s.field_r) / 2) + 155 - GameAppletShell.field_b.field_v;
+            dl.field_s.d(var6Lifetime2 - GameAppletShell.field_b.field_q, var8Lifetime1);
             gb.a(var30, var2Lifetime3, var3Lifetime3);
             gb.b(ab.field_c);
             dl.field_s = null;
@@ -230,7 +230,7 @@ final class ed {
           if (wh.field_b != null) {
             wh.field_b.d(0, 0);
           }
-          cd.field_b.d(0, 0);
+          GameAppletShell.field_b.d(0, 0);
           if (null != uf.field_f) {
             uf.field_f.d(0, 0);
           }
@@ -350,7 +350,7 @@ final class ed {
         return stackIn_8_0;
     }
 
-    final static void a(rh param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         dd var2 = null;
         int var3 = 0;
         int var4 = 0;

@@ -64,7 +64,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var1 = ud.field_b;
           while (hd.a(-101)) {
@@ -104,7 +104,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var2_int = param1.length();
           if (var2_int == 0) {

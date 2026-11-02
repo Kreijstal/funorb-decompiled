@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ni extends lh {
+class ni extends IntrusiveNode {
     int field_i;
     static int field_j;
     byte[] field_k;
@@ -40,7 +40,7 @@ class ni extends lh {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var5_int = param1;
           if (param2 >= -56) {
@@ -80,7 +80,7 @@ class ni extends lh {
         return true;
     }
 
-    final static dj a(int param0, int param1, rh param2, rh param3, int param4) {
+    final static dj a(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         dj stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -140,7 +140,7 @@ class ni extends lh {
 
     final static String a(int param0, char param1, byte param2) {
         int var4 = 0;
-        int var5 = fleas.field_A ? 1 : 0;
+        int var5 = FleaCircusApplet.field_A ? 1 : 0;
         char[] var6 = new char[param0];
         char[] var3 = var6;
         if (param2 <= 24) {
@@ -371,7 +371,7 @@ class ni extends lh {
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = fleas.field_A ? 1 : 0;
+        var10 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param1 != 94) {
             this.field_i = 64;
@@ -460,7 +460,7 @@ class ni extends lh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param3 != 0) {
             return;
@@ -514,7 +514,7 @@ class ni extends lh {
         int var2;
         int var3;
         int var4;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         int fieldTemp$0 = this.field_i;
         this.field_i = this.field_i + 1;
         var2 = this.field_k[fieldTemp$0];
@@ -557,7 +557,7 @@ class ni extends lh {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var10 = fleas.field_A ? 1 : 0;
+        var10 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var3_int = this.field_i / 8;
           this.field_i = param0;
@@ -604,7 +604,7 @@ class ni extends lh {
     final void d(int param0, int param1) {
         int fieldTemp$0 = 0;
         int var4;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         while (param0 > this.field_i) {
           fieldTemp$0 = this.field_i;
           this.field_i = this.field_i + 1;
@@ -674,7 +674,7 @@ class ni extends lh {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var13 = fleas.field_A ? 1 : 0;
+        var13 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var5_int = this.field_i;
           this.field_i = param1;

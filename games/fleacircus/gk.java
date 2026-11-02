@@ -84,7 +84,7 @@ final class gk {
           return bf.field_f;
         }
         if (!rl.field_d.a("commonui", -114)) {
-          return li.field_e + " - " + rl.field_d.a(param0 + 1851, "commonui") + "%";
+          return IterableNodeHashTable.field_e + " - " + rl.field_d.a(param0 + 1851, "commonui") + "%";
         }
         if (param0 != -1917) {
           return (String) null;
@@ -96,7 +96,7 @@ final class gk {
           return rg.field_q + " - " + oa.field_l.a(param0 ^ 1851, "commonui") + "%";
         }
         if (!kc.field_d.b((byte) -108)) {
-          return li.field_h;
+          return IterableNodeHashTable.field_h;
         }
         if (!kc.field_d.a(-75)) {
           return ob.field_b + " - " + kc.field_d.a((byte) -43) + "%";

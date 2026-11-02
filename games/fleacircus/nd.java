@@ -35,7 +35,7 @@ final class nd extends jj {
         od var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (!param1.a(125)) {
             stackIn_3_0 = new hf[]{};
@@ -149,7 +149,7 @@ final class nd extends jj {
           this.field_cb = false;
           this.field_db = false;
           this.field_ab.field_H = true;
-          this.a((qa) (this.field_ab), (byte) -63);
+          this.a((UiComponent) (this.field_ab), (byte) -63);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

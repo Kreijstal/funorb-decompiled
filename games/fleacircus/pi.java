@@ -56,7 +56,7 @@ final class pi {
     final int a(int param0, int param1) {
         int var3 = 0;
         int var4;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (this.field_d == null) {
           return 0;
         }

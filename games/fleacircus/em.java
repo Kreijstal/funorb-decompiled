@@ -10,7 +10,7 @@ final class em extends IOException {
     static int field_d;
     static int field_b;
     static String field_h;
-    static rh field_c;
+    static ResourceArchive field_c;
     static nd field_g;
 
     final static void a(int param0) {
@@ -27,7 +27,7 @@ final class em extends IOException {
           em.a(19);
         }
         pi.field_b[6] = new t(6);
-        rh.field_c.field_d = rh.field_c.field_D.field_N * 11;
+        ResourceArchive.field_c.field_d = ResourceArchive.field_c.field_D.field_N * 11;
         if (wc.field_q > 0 &&
           lf.a(fg.field_q, 31849)) {
           tk.a(34, 155, new int[]{1, 19, 12, 13, 4, 3, 7}, 485, -123, 1, 135);
@@ -78,7 +78,7 @@ final class em extends IOException {
         int var8 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        int var9 = fleas.field_A ? 1 : 0;
+        int var9 = FleaCircusApplet.field_A ? 1 : 0;
         if ((3 & (param0.field_w | param0.field_t | param0.field_q | param0.field_v)) == 0) {
           return;
         }

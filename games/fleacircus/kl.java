@@ -14,7 +14,7 @@ final class kl {
         return var1;
     }
 
-    final static dd a(int param0, rh param1, String param2, String param3) {
+    final static dd a(int param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -69,24 +69,24 @@ final class kl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var1_intLifetime1;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           bl.b();
           bj.field_l = 11;
-          h.field_b = new int[260];
+          ContextualRuntimeException.field_b = new int[260];
           var1_int = 0;
           if (param0 != 31207) {
             kl.a(38);
           }
           while (var1_int < 256) {
             var2 = 15.0;
-            h.field_b[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+            ContextualRuntimeException.field_b[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
             var1_int++;
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (var5 < h.field_b.length) {
-            h.field_b[var5] = 255;
+          while (var5 < ContextualRuntimeException.field_b.length) {
+            ContextualRuntimeException.field_b[var5] = 255;
             var5++;
           }
           return;
@@ -100,7 +100,7 @@ final class kl {
     final static char a(byte param0, char param1) {
         int var2;
         int var3;
-        var3 = fleas.field_A ? 1 : 0;
+        var3 = FleaCircusApplet.field_A ? 1 : 0;
         if (param0 != -78) {
           field_b = (String) null;
         }

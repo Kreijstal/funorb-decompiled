@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ng {
-    private rh field_b;
+    private ResourceArchive field_b;
     static dd[] field_h;
-    private rh field_d;
+    private ResourceArchive field_d;
     static String[] field_g;
     static int field_c;
     private hc field_e;
@@ -238,7 +238,7 @@ final class ng {
         }
     }
 
-    ng(rh param0, rh param1) {
+    ng(ResourceArchive param0, ResourceArchive param1) {
         this.field_e = new hc(256);
         this.field_f = new hc(256);
         try {

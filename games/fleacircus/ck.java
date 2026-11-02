@@ -125,7 +125,7 @@ final class ck extends r {
           Throwable decompiledCaughtException = null;
           Throwable var3_ref = null;
           RuntimeException var3_ref2 = null;
-          var7 = fleas.field_A ? 1 : 0;
+          var7 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             try {
               var3 = (String) (eb.a("getcookies", param2, -250));

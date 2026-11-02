@@ -4,7 +4,7 @@
 final class a {
     static vc field_e;
     static dd field_f;
-    static rh field_a;
+    static ResourceArchive field_a;
     static dd[] field_b;
     static String field_d;
     static int[] field_g;

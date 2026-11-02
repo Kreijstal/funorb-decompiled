@@ -10,7 +10,7 @@ final class qj extends dk {
     static int field_K;
     static String field_F;
 
-    final void a(byte param0, qa param1, int param2, int param3, int param4, int param5) {
+    final void a(byte param0, UiComponent param1, int param2, int param3, int param4, int param5) {
         pk var7 = null;
         try {
           super.a(param0, param1, param2, param3, param4, param5);
@@ -50,7 +50,7 @@ final class qj extends dk {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var5_int = param4;
           while (true) {
@@ -95,7 +95,7 @@ final class qj extends dk {
         }
     }
 
-    private qj(int param0, int param1, int param2, int param3, ch param4, kd param5, qa param6) {
+    private qj(int param0, int param1, int param2, int param3, ComponentLayout param4, kd param5, UiComponent param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_A = param6;

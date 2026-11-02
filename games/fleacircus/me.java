@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me implements ch {
+final class me implements ComponentLayout {
     static String field_e;
     private int field_d;
     static String field_b;
@@ -14,7 +14,7 @@ final class me implements ch {
     static int[] field_i;
     static dd field_g;
 
-    public final void a(int param0, int param1, boolean param2, qa param3, int param4) {
+    public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -27,7 +27,7 @@ final class me implements ch {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = fleas.field_A ? 1 : 0;
+        var11 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 >= -36) {
             field_g = (dd) null;
@@ -135,7 +135,7 @@ final class me implements ch {
         byte[] var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        int var8 = fleas.field_A ? 1 : 0;
+        int var8 = FleaCircusApplet.field_A ? 1 : 0;
         int var1 = -93 / ((param0 + 66) / 37);
         dd[] var2 = new dd[ef.field_l];
         for (var3 = 0; ef.field_l > var3; var3++) {

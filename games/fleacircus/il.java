@@ -3,7 +3,7 @@
  */
 final class il {
     static dd[] field_d;
-    static rh field_a;
+    static ResourceArchive field_a;
     String field_e;
     static int[] field_f;
     static int field_h;
@@ -24,7 +24,7 @@ final class il {
         dd var7 = null;
         dd var8 = null;
         int var3Lifetime1;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           gb.b(243, 197, 369, 143, 16777215);
           gb.e(244, param0, 367, 141, 0);
@@ -42,10 +42,10 @@ final class il {
           } else {
             var6.d(245, 199);
           }
-          if (td.field_i < hd.field_c) {
+          if (BufferedSocket.field_i < hd.field_c) {
             var7 = wa.field_k[t.field_a];
             if (var7 != null) {
-              var2_int = td.field_i * (60 + var7.field_x) / hd.field_c;
+              var2_int = BufferedSocket.field_i * (60 + var7.field_x) / hd.field_c;
               var3 = var2_int - 30;
               if (!rc.field_i) {
                 d.a(var3 * -256 / 30, 199, var7, 245, 2147483647, 256 * (-var3 + var7.field_x) / 30);

@@ -28,7 +28,7 @@ final class cl {
         ia var16_ref = null;
         int[] var17 = null;
         var16 = null;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var13 = ae.field_a;
           if (param0 != -36) {
@@ -36,7 +36,7 @@ final class cl {
           }
           var2 = var13.e(false);
           if (var2 == 0) {
-            var11 = h.a((byte) -112);
+            var11 = ContextualRuntimeException.a((byte) -112);
             var17 = var11;
             var15 = var17;
             var3 = var15;
@@ -77,7 +77,7 @@ final class cl {
             k.c(-28354);
             return;
           }
-          var14.field_i = h.a((byte) -121);
+          var14.field_i = ContextualRuntimeException.a((byte) -121);
           var14.field_n = true;
           var14.field_k = var14.field_i[0];
           var14.c(-1);

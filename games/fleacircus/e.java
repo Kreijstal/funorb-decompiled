@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class e implements ch, eg {
+class e implements ComponentLayout, eg {
     private boolean field_l;
     static String field_g;
     int field_d;
@@ -30,7 +30,7 @@ class e implements ch, eg {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var3 = fi.a(param0, param1, (byte) 124);
           if (var3 != null) {
@@ -58,7 +58,7 @@ class e implements ch, eg {
         }
     }
 
-    private final void a(int param0, int param1, int param2, qa param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, int param2, UiComponent param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -71,7 +71,7 @@ class e implements ch, eg {
         int var13 = 0;
         int var14 = 0;
         int var13Lifetime1;
-        var14 = fleas.field_A ? 1 : 0;
+        var14 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           var10 = -16 / ((54 - param2) / 63);
@@ -126,7 +126,7 @@ class e implements ch, eg {
         }
     }
 
-    public final int b(qa param0, byte param1) {
+    public final int b(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -155,7 +155,7 @@ class e implements ch, eg {
         }
     }
 
-    private final int a(qa param0, int param1, int param2, int param3) {
+    private final int a(UiComponent param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -184,11 +184,11 @@ class e implements ch, eg {
         }
     }
 
-    private final void a(qa param0, int param1, int param2, byte param3) {
+    private final void a(UiComponent param0, int param1, int param2, byte param3) {
         try {
           if (param3 > -26) {
-            qa var6 = (qa) null;
-            this.a(-19, (qa) null);
+            UiComponent var6 = (UiComponent) null;
+            this.a(-19, (UiComponent) null);
           }
           this.a(0, param1, 120, param0, 0, param2, this.field_a, this.field_f);
         } catch (RuntimeException runtimeException) {
@@ -201,8 +201,8 @@ class e implements ch, eg {
           param1.field_m = this.field_m;
           param1.field_k = this.field_k;
           if (param0 != 2) {
-            qa var4 = (qa) null;
-            this.c((qa) null, (byte) 95);
+            UiComponent var4 = (UiComponent) null;
+            this.c((UiComponent) null, (byte) 95);
           }
           param1.field_a = this.field_a;
           param1.field_o = this.field_o;
@@ -220,7 +220,7 @@ class e implements ch, eg {
         }
     }
 
-    public final void a(int param0, int param1, qa param2, int param3, int param4) {
+    public final void a(int param0, int param1, UiComponent param2, int param3, int param4) {
         ne var14 = null;
         ne var15 = null;
         int var7 = 0;
@@ -231,8 +231,8 @@ class e implements ch, eg {
         int var12 = 0;
         try {
           if (param1 != 0) {
-            qa var13 = (qa) null;
-            this.a(67, (qa) null);
+            UiComponent var13 = (UiComponent) null;
+            this.a(67, (UiComponent) null);
           }
           if (param2.e(1)) {
             var14 = this.a(param2, (byte) -35);
@@ -256,12 +256,12 @@ class e implements ch, eg {
         if (param0 == 127) {
           return this.field_j.field_H + this.field_j.field_K;
         }
-        qa var3 = (qa) null;
-        int discarded$0 = this.a((qa) null, -117);
+        UiComponent var3 = (UiComponent) null;
+        int discarded$0 = this.a((UiComponent) null, -117);
         return this.field_j.field_H + this.field_j.field_K;
     }
 
-    public final void a(qa param0, int param1, int param2, int param3, int param4, int param5) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -280,7 +280,7 @@ class e implements ch, eg {
         int var16 = 0;
         ne var17 = null;
         ne var18 = null;
-        var16 = fleas.field_A ? 1 : 0;
+        var16 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param4 != -30298) {
             return;
@@ -339,7 +339,7 @@ class e implements ch, eg {
         }
     }
 
-    public final int a(boolean param0, int param1, qa param2) {
+    public final int a(boolean param0, int param1, UiComponent param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -366,7 +366,7 @@ class e implements ch, eg {
         }
     }
 
-    public final ne a(qa param0, byte param1) {
+    public final ne a(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         ne stackIn_8_0 = null;
         ne stackIn_10_0 = null;
@@ -403,7 +403,7 @@ class e implements ch, eg {
         }
     }
 
-    public final int a(int param0, qa param1) {
+    public final int a(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -433,7 +433,7 @@ class e implements ch, eg {
         }
     }
 
-    private final int a(qa param0, int param1) {
+    private final int a(UiComponent param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -459,7 +459,7 @@ class e implements ch, eg {
         }
     }
 
-    public final int a(int param0, qa param1, byte param2, int param3, int param4, int param5) {
+    public final int a(int param0, UiComponent param1, byte param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -489,7 +489,7 @@ class e implements ch, eg {
         }
     }
 
-    public void a(int param0, int param1, boolean param2, qa param3, int param4) {
+    public void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         if (param0 > -36) {
           this.field_c = 31;
         }
@@ -503,7 +503,7 @@ class e implements ch, eg {
         }
     }
 
-    public final int a(int param0, qa param1, byte param2) {
+    public final int a(int param0, UiComponent param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;
@@ -533,7 +533,7 @@ class e implements ch, eg {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final void c(qa param0, byte param1) {
+    private final void c(UiComponent param0, byte param1) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -545,7 +545,7 @@ class e implements ch, eg {
         int var6 = 0;
         int var7 = 0;
         int var6Lifetime1;
-        var7 = fleas.field_A ? 1 : 0;
+        var7 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0.field_w == null) {
             param0.field_w = (ne) ((Object) new j());
@@ -606,9 +606,9 @@ class e implements ch, eg {
         }
     }
 
-    public final int b(int param0, qa param1) {
+    public final int b(int param0, UiComponent param1) {
         RuntimeException var3 = null;
-        qa var4 = null;
+        UiComponent var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -617,8 +617,8 @@ class e implements ch, eg {
         try {
           this.a(param1, (byte) -35);
           if (param0 > -25) {
-            var4 = (qa) null;
-            this.a((qa) null, -4, 97, -107, -121, 31);
+            var4 = (UiComponent) null;
+            this.a((UiComponent) null, -4, 97, -107, -121, 31);
           }
           stackIn_3_0 = param1.field_w.a(true) - (-this.field_m - this.field_k);
           return stackIn_3_0;
@@ -659,7 +659,7 @@ class e implements ch, eg {
         }
     }
 
-    private final int a(qa param0, int param1, boolean param2, int param3) {
+    private final int a(UiComponent param0, int param1, boolean param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -695,7 +695,7 @@ class e implements ch, eg {
         }
     }
 
-    String c(int param0, qa param1) {
+    String c(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

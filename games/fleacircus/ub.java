@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ub {
-    static rh field_b;
+    static ResourceArchive field_b;
     static qc field_a;
     static long[] field_c;
 
-    final static wc a(int param0, byte param1, rh param2) {
+    final static wc a(int param0, byte param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -42,7 +42,7 @@ final class ub {
         }
     }
 
-    final static jh a(String param0, rh param1, String param2, rh param3, int param4) {
+    final static jh a(String param0, ResourceArchive param1, String param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

@@ -36,14 +36,14 @@ final class id {
           jd.field_n = dupTemp$1;
           ug.field_d = dupTemp$1;
           if (1 != gg.field_e.field_b) {
-            rh.field_k = wb.field_q;
+            ResourceArchive.field_k = NetworkGameClient.field_q;
           } else {
             try {
-              sg.field_h = new td((java.net.Socket) (gg.field_e.field_e), af.field_f);
+              sg.field_h = new BufferedSocket((java.net.Socket) (gg.field_e.field_e), af.field_f);
               ud.field_b.field_i = 0;
               var4 = ae.field_a;
               var5 = var4;
-              rh.field_k = d.field_O;
+              ResourceArchive.field_k = d.field_O;
               var5.field_i = 0;
               stackIn_13_0 = (!param1) ? -1 : -2;
               hc.field_j = stackIn_13_0;
@@ -54,7 +54,7 @@ final class id {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              rh.field_k = wb.field_q;
+              ResourceArchive.field_k = NetworkGameClient.field_q;
               gg.field_e = null;
               return true;
             }
@@ -88,7 +88,7 @@ final class id {
         int var3;
         int var4;
         int var3Lifetime1;
-        var4 = fleas.field_A ? 1 : 0;
+        var4 = FleaCircusApplet.field_A ? 1 : 0;
         if (param1) {
           var3 = this.field_a.length;
           while (param0 >= var3) {
@@ -205,7 +205,7 @@ final class id {
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param1 != 31592) {
             field_h = (int[]) null;

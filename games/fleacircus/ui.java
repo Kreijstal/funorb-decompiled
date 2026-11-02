@@ -37,11 +37,11 @@ final class ui extends oh {
         }
     }
 
-    ui(f param0, qa param1) {
+    ui(f param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 
-    final void d(qa param0, int param1) {
+    final void d(UiComponent param0, int param1) {
         try {
           super.d(param0, param1);
         } catch (RuntimeException runtimeException) {

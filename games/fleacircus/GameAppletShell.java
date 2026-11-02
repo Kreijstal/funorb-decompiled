@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class cd extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_g;
     static dd field_b;
     boolean field_i;
@@ -133,7 +133,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
         int var7 = 0;
         int var8 = 0;
         int stackIn_37_0Lifetime1;
-        var8 = fleas.field_A ? 1 : 0;
+        var8 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (null != param0 &&
             param0.field_p != null &&
@@ -244,7 +244,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
         java.awt.Insets var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (null != ol.field_e) {
             ol.field_e.removeFocusListener((java.awt.event.FocusListener) (this));
@@ -298,7 +298,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
           ha.field_k = true;
           sd.field_g = true;
           j.field_e = true;
-          h.field_h = false;
+          ContextualRuntimeException.field_h = false;
           cg.field_z = lj.a((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -325,7 +325,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
-          var9 = fleas.field_A ? 1 : 0;
+          var9 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             try {
               if (null != pf.field_c) {
@@ -416,7 +416,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
           kb.field_r = param2;
           rf.field_a = param1;
           if (param0 != -25343) {
-            cd.c(true);
+            GameAppletShell.c(true);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "cd.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
@@ -507,7 +507,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
               null == ug.field_b) {
               var6 = cb.field_t.getInsets();
               ol.field_e.setLocation(va.field_u + var6.left, rg.field_p + var6.top);
-              if (fleas.field_A) {
+              if (FleaCircusApplet.field_A) {
                 ol.field_e.setLocation(va.field_u, rg.field_p);
               }
             } else {
@@ -576,7 +576,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
           Throwable var3_ref_Throwable = null;
           String var4 = null;
           int var5 = 0;
-          var5 = fleas.field_A ? 1 : 0;
+          var5 = FleaCircusApplet.field_A ? 1 : 0;
           try {
             try {
               boolean decompiledFrameRemainder3 = true;
@@ -679,7 +679,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
                 this.c(116);
                 gi.field_b = kb.a((java.awt.Component) ((Object) ol.field_e), ki.field_a, gm.field_nb, 1024);
                 this.a((byte) -14);
-                l.field_b = wf.c(0);
+                l.field_b = SecondaryNodeDeque.c(0);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != dh.field_a) {
@@ -691,7 +691,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    w.field_r = l.field_b.b(0, na.field_f);
+                    w.field_r = l.field_b.b(0, NodeHashTableIterator.field_f);
                     stackIn_101_0 = 0;
                   }
                   var3 = stackIn_101_0;
@@ -831,7 +831,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
                   return;
                 }
               }
-              h.field_h = true;
+              ContextualRuntimeException.field_h = true;
             }
             return;
           }
@@ -956,7 +956,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected cd() {
+    protected GameAppletShell() {
         this.field_i = false;
     }
 
@@ -977,7 +977,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = fleas.field_A ? 1 : 0;
+        var9 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           var5_int = 0;
           var6 = -1;
@@ -1012,7 +1012,7 @@ public abstract class cd extends java.applet.Applet implements Runnable, java.aw
             stackIn_24_1 = 30988;
           }
           if (stackIn_24_0 != stackIn_24_1) {
-            cd.provideLoaderApplet((java.applet.Applet) null);
+            GameAppletShell.provideLoaderApplet((java.applet.Applet) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

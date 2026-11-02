@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pa extends lh {
+class DualLinkNode extends IntrusiveNode {
     static int field_o;
     long field_j;
     static dd field_n;
-    static rh field_l;
+    static ResourceArchive field_l;
     static String field_k;
     static String[] field_i;
-    pa field_p;
-    pa field_m;
+    DualLinkNode field_p;
+    DualLinkNode field_m;
 
     final static void a(int param0) {
         RuntimeException decompiledCaughtException = null;
@@ -39,12 +39,12 @@ class pa extends lh {
         int var2Lifetime1Lifetime2;
         int var2Lifetime1Lifetime3;
         int var2Lifetime1Lifetime4;
-        var5 = fleas.field_A ? 1 : 0;
+        var5 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (param0 <= 100) {
             field_k = (String) null;
           }
-          if (0 == fleas.field_E) {
+          if (0 == FleaCircusApplet.field_E) {
             if (!fl.field_f) {
               return;
             }
@@ -199,7 +199,7 @@ class pa extends lh {
         int var38Lifetime2;
         int var39Lifetime2;
         int var40Lifetime2;
-        var42 = fleas.field_A ? 1 : 0;
+        var42 = FleaCircusApplet.field_A ? 1 : 0;
         try {
           if (0 <= param14 &&
             bl.field_i > param7) {
@@ -519,11 +519,11 @@ class pa extends lh {
           lg.a(-118, 256);
         }
         if (param0 != 93) {
-          field_l = (rh) null;
+          field_l = (ResourceArchive) null;
         }
     }
 
-    protected pa() {
+    protected DualLinkNode() {
     }
 
     static {

@@ -24,12 +24,12 @@ final class fl {
         }
     }
 
-    final static void a(byte param0, rh param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         hk var2 = null;
         try {
           if (param0 < 90) {
-            rh var3 = (rh) null;
-            fl.a((byte) 103, (rh) null);
+            ResourceArchive var3 = (ResourceArchive) null;
+            fl.a((byte) 103, (ResourceArchive) null);
           }
           hk.b(param1.a(0, "", "headers.packvorbis"));
           var2 = hk.a(param1, "jagex logo2.packvorbis", "");
@@ -54,7 +54,7 @@ final class fl {
         int var4;
         int var5;
         int var6;
-        var6 = fleas.field_A ? 1 : 0;
+        var6 = FleaCircusApplet.field_A ? 1 : 0;
         var3 = (this.field_a.length >> 1) - 1;
         if (param1 <= 114) {
           this.a(82, (byte) 96);
