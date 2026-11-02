@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lr extends bw {
+final class lr extends IntrusiveNode {
     int field_q;
     int[][] field_h;
     int field_f;
@@ -135,7 +135,7 @@ final class lr extends bw {
           }
         }
         var3Lifetime1 = param0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var3Lifetime1 >= this.field_l) {
             return true;
           }
@@ -143,7 +143,7 @@ final class lr extends bw {
           while (true) {
             if (this.field_n <= var4) {
               var3Lifetime1++;
-              continue L1;
+              continue scanLoop1;
             }
             if (-1 != this.field_p[var3Lifetime1][var4][0] &&
               -1 != this.field_p[var3Lifetime1][var4][1]) {

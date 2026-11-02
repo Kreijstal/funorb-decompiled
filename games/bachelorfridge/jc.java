@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc extends eo {
+final class jc extends DualLinkNode {
     static String field_n;
     boolean field_w;
     String field_s;

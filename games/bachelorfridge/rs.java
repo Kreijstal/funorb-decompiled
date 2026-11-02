@@ -78,7 +78,7 @@ final class rs {
           if (ge.field_D) {
             ih.d((byte) -109);
             oga.e(46);
-            eo.c(106);
+            DualLinkNode.c(106);
             ge.field_D = false;
           }
           if (iba.field_s == 12) {

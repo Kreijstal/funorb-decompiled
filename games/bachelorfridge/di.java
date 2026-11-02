@@ -6,19 +6,19 @@ final class di extends pu {
 
     final static void c(int param0) {
         int var1 = -52 % ((-35 - param0) / 52);
-        if (null == ms.field_u) {
+        if (null == NetworkGameClient.field_u) {
           bga.field_m = null;
-          ms.field_u = null;
+          NetworkGameClient.field_u = null;
           return;
         }
-        if (null != ms.field_u.field_g) {
-          ms.field_u.field_g.field_t = false;
+        if (null != NetworkGameClient.field_u.field_g) {
+          NetworkGameClient.field_u.field_g.field_t = false;
           bga.field_m = null;
-          ms.field_u = null;
+          NetworkGameClient.field_u = null;
           return;
         }
         bga.field_m = null;
-        ms.field_u = null;
+        NetworkGameClient.field_u = null;
     }
 
     final static nea a(String param0, int param1) {

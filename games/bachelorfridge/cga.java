@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cga extends eo {
+abstract class cga extends DualLinkNode {
     static int field_p;
     static ee field_r;
     boolean field_q;

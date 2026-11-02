@@ -250,7 +250,7 @@ final class tfa extends pp {
             mu.field_l[0] = 5;
             mj.field_h[5] = "";
             fr.field_l[3] = 1;
-            mj.field_h[4] = ck.field_e;
+            mj.field_h[4] = GameAppletShell.field_e;
             mu.field_l[1] = 2;
             mj.field_h[3] = hk.field_b;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {

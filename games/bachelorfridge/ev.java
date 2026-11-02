@@ -4,9 +4,9 @@
 import java.util.*;
 
 final class ev implements Iterator {
-    private eo field_c;
+    private DualLinkNode field_c;
     private ou field_b;
-    private eo field_a;
+    private DualLinkNode field_a;
 
     public final void remove() {
         if (null == this.field_a) {
@@ -85,12 +85,12 @@ final class ev implements Iterator {
     public final Object next() {
         Object var1 = this.field_c;
         if (this.field_b.field_a != var1) {
-          this.field_c = ((eo) (var1)).field_m;
+          this.field_c = ((DualLinkNode) (var1)).field_m;
         } else {
           this.field_c = null;
           var1 = null;
         }
-        this.field_a = (eo) (var1);
+        this.field_a = (DualLinkNode) (var1);
         return var1;
     }
 

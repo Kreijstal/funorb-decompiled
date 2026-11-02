@@ -42,14 +42,14 @@ final class fp extends tja {
         cga discarded$2 = null;
         int var2_int;
         cga var2;
-        bw var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        bw var6;
-        bw var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        bw var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = BachelorFridge.field_y;
         if (this.field_v != null) {
@@ -71,18 +71,18 @@ final class fp extends tja {
               }
               var3 = this.field_v.c(0);
             }
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (this.field_d.field_e.length > this.field_u) {
                 if (0 != this.field_d.field_e[this.field_u]) {
                   if (this.field_r.field_b >= 250) {
                     var2_int = 0;
-                    break L3;
+                    break scanLoop1;
                   }
                   if (this.field_s[this.field_u] == 0) {
                     discarded$0 = this.a(1, 34, this.field_u);
                   }
                   if (0 == this.field_s[this.field_u]) {
-                    var7 = new bw();
+                    var7 = new IntrusiveNode();
                     var7.field_c = (long)this.field_u;
                     var2_int = 0;
                     this.field_v.a(var7, true);
@@ -115,18 +115,18 @@ final class fp extends tja {
                 }
                 var3Lifetime1 = this.field_v.c(0);
               }
-              L10: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_u < this.field_d.field_e.length) {
                   if (this.field_d.field_e[this.field_u] != 0) {
                     if (this.field_n.a(false)) {
                       var2_intLifetime1 = 0;
-                      break L10;
+                      break scanLoop2;
                     }
                     if (1 != this.field_s[this.field_u]) {
                       discarded$2 = this.a(2, -107, this.field_u);
                     }
                     if (this.field_s[this.field_u] != 1) {
-                      var6 = new bw();
+                      var6 = new IntrusiveNode();
                       var6.field_c = (long)this.field_u;
                       var2_intLifetime1 = 0;
                       this.field_v.a(var6, true);
@@ -259,7 +259,7 @@ final class fp extends tja {
               var4 = this.field_r.a(this.field_h, (byte) -124, param2);
             }
           }
-          this.field_q.a((long)param2, (byte) -93, (bw) (var4));
+          this.field_q.a((long)param2, (byte) -93, (IntrusiveNode) (var4));
         }
         if (((cga) (var4)).field_n) {
           return null;
@@ -316,7 +316,7 @@ final class fp extends tja {
               return null;
             }
             var4 = this.field_n.a(this.field_o, param2, 127, (byte) 2, true);
-            this.field_q.a((long)param2, (byte) -38, (bw) (var4));
+            this.field_q.a((long)param2, (byte) -38, (IntrusiveNode) (var4));
             return null;
           }
         }
@@ -357,7 +357,7 @@ final class fp extends tja {
           }
           if (!this.field_n.b(20)) {
             var4 = this.field_n.a(this.field_o, param2, 126, (byte) 2, true);
-            this.field_q.a((long)param2, (byte) -77, (bw) (var4));
+            this.field_q.a((long)param2, (byte) -77, (IntrusiveNode) (var4));
           }
           return null;
         }
@@ -466,7 +466,7 @@ final class fp extends tja {
         if (this.b(-24) == null) {
           return;
         }
-        bw var2 = this.field_l.b((byte) 90);
+        IntrusiveNode var2 = this.field_l.b((byte) 90);
         while (var2 != null) {
           var3 = (int)var2.field_c;
           if (var3 < 0) {

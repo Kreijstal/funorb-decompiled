@@ -271,7 +271,7 @@ final class ta {
                 this.field_a.a(-117, 0, rda.field_b, 6);
                 var9 = 0;
                 var10 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var9 < param3) {
                     boolean decompiledFrameRemainder0 = true;
                     var11 = 0;
@@ -287,7 +287,7 @@ final class ta {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var14 = 255 & rda.field_b[7];
                         var12 = ((rda.field_b[0] & 255) << 8) + (rda.field_b[1] & 255);
@@ -303,7 +303,7 @@ final class ta {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (16711680 & rda.field_b[6] << 16) - (-(65280 & rda.field_b[7] << 8) - (rda.field_b[8] & 255));
                         var12 = (rda.field_b[3] & 255) + (((rda.field_b[2] & 255) << 8) + (16711680 & rda.field_b[1] << 16) + ((rda.field_b[0] & 255) << 24));

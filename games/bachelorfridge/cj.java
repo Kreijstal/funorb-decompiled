@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cj extends bw {
+abstract class cj extends IntrusiveNode {
     static volatile int field_f;
     int field_h;
     static int field_i;

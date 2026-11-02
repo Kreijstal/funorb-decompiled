@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class po extends eo {
+abstract class po extends DualLinkNode {
     private int[] field_o;
     private byte[] field_s;
     int field_B;

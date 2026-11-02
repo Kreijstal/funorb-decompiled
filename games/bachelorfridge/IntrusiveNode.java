@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bw {
-    bw field_b;
+class IntrusiveNode {
+    IntrusiveNode field_b;
     static sna field_a;
     long field_c;
-    bw field_e;
+    IntrusiveNode field_e;
     static String field_d;
 
     public static void b(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 != 127) {
-          bw.b((byte) 117);
+          IntrusiveNode.b((byte) 117);
         }
     }
 

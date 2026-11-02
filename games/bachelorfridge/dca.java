@@ -123,7 +123,7 @@ final class dca extends ana {
             return stackIn_45_0;
           }
           if (10 == var2_int) {
-            stackIn_23_0 = eo.a(param1, -4479);
+            stackIn_23_0 = DualLinkNode.a(param1, -4479);
             return stackIn_23_0;
           }
           if (var2_int == 11) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tf extends eo {
+class tf extends DualLinkNode {
     static volatile int field_n;
 
     final static kv a(byte param0, int param1, int param2, int param3, int param4) {

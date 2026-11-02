@@ -136,7 +136,7 @@ final class pt implements qda {
           var21Lifetime2 = jb.field_h;
           var22Lifetime2 = jb.field_j;
           var23Lifetime2 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var23Lifetime2 < param2.field_g) {
               var24Lifetime1 = param2.field_x[var23Lifetime2];
               var25Lifetime1 = param2.field_O[var23Lifetime2];
@@ -219,7 +219,7 @@ final class pt implements qda {
                   stackIn_68_0 = bv.field_G.length;
                   stackIn_68_1 = var18;
                   if (var30 != 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                   if (stackIn_68_0 <= stackIn_68_1) {
                     break;

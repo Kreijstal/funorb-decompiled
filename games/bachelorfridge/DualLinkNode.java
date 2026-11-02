@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class eo extends bw {
+class DualLinkNode extends IntrusiveNode {
     static kv[] field_k;
     static js field_f;
-    eo field_m;
+    DualLinkNode field_m;
     static String field_j;
     static int field_l;
     static String field_g;
     long field_h;
-    eo field_i;
+    DualLinkNode field_i;
 
     final void b(int param0) {
         if (null == this.field_i) {
@@ -85,9 +85,9 @@ class eo extends bw {
     }
 
     final static void c(int param0) {
-        eo var1 = null;
+        DualLinkNode var1 = null;
         int var3 = BachelorFridge.field_y;
-        eo var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         try {
           bda.field_l = 0;
           sja.field_gb = null;
@@ -121,7 +121,7 @@ class eo extends bw {
         this.field_h = param1;
     }
 
-    protected eo() {
+    protected DualLinkNode() {
     }
 
     static {

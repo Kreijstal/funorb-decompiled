@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bga extends bw {
+final class bga extends IntrusiveNode {
     static sga field_m;
     static String field_h;
     int field_i;

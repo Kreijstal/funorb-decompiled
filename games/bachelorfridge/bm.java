@@ -61,7 +61,7 @@ final class bm extends pp {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         an.field_q = param1;
         ha.field_n = param0;
-        eo.field_l = param4;
+        DualLinkNode.field_l = param4;
         if (param3 != -14702) {
           return;
         }

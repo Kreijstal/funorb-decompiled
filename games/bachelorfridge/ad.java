@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ad extends bw {
+final class ad extends IntrusiveNode {
     boolean field_l;
     static boolean field_i;
     static sna field_q;
@@ -264,13 +264,13 @@ final class ad extends bw {
         gca var4Lifetime1;
         var7 = BachelorFridge.field_y;
         var8 = (vca) (this.field_t.b((byte) 90));
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var8 != null) {
             if (var8.b(false)) {
               var8.a(false);
             } else {
               if (var8.c((byte) 127)) {
-                break L1;
+                break scanLoop1;
               }
             }
             var8 = (vca) (this.field_t.c(0));

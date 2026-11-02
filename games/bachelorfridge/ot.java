@@ -17,8 +17,8 @@ class ot extends iga {
         if (param6 > 43) {
           if (lb.g((byte) -96)) {
             kja.a(param1, param3, (byte) -66, param2);
-            if (ms.field_u != null &&
-              ms.field_u.a(true, param2, param1, param0, param4)) {
+            if (NetworkGameClient.field_u != null &&
+              NetworkGameClient.field_u.a(true, param2, param1, param0, param4)) {
               param2 = false;
               di.c(55);
             }
@@ -31,8 +31,8 @@ class ot extends iga {
         ot.a(-115, -104, true, 1, -88, -103, (byte) -27);
         if (lb.g((byte) -96)) {
           kja.a(param1, param3, (byte) -66, param2);
-          if (ms.field_u != null &&
-            ms.field_u.a(true, param2, param1, param0, param4)) {
+          if (NetworkGameClient.field_u != null &&
+            NetworkGameClient.field_u.a(true, param2, param1, param0, param4)) {
             param2 = false;
             di.c(55);
           }

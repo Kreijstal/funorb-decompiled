@@ -167,11 +167,11 @@ final class om extends ana {
             pw.field_w == null &&
             rv.field_n == null) {
             if (!sea.field_j) {
-              var6 = ms.field_u;
+              var6 = NetworkGameClient.field_u;
               var7 = or.field_j;
               var6.field_a.a(var7, true, 14);
             }
-            var8 = ms.field_u;
+            var8 = NetworkGameClient.field_u;
             var9 = gea.field_f;
             var8.field_a.a(var9, true, 20);
           }
@@ -180,20 +180,20 @@ final class om extends ana {
             null != pw.field_w &&
             param0.field_d == pw.field_w.f((byte) -106)) {
             if (!sea.field_j) {
-              var10 = ms.field_u;
+              var10 = NetworkGameClient.field_u;
               var11 = ama.field_k;
               var10.field_a.a(var11, true, 14);
             }
-            var12 = ms.field_u;
+            var12 = NetworkGameClient.field_u;
             var13 = ma.field_k;
             var12.field_a.a(var13, true, 20);
           }
-          ms.field_u.b(true);
-          ms.field_u.a(114, false);
-          ms.field_u.a(param0.field_o, (byte) -127, param0.field_p);
-          ms.field_u.a(21654);
-          ms.field_u.a(-120, param0);
-          var14 = ms.field_u;
+          NetworkGameClient.field_u.b(true);
+          NetworkGameClient.field_u.a(114, false);
+          NetworkGameClient.field_u.a(param0.field_o, (byte) -127, param0.field_p);
+          NetworkGameClient.field_u.a(21654);
+          NetworkGameClient.field_u.a(-120, param0);
+          var14 = NetworkGameClient.field_u;
           var3 = nfa.field_a;
           var4 = jc.field_r;
           var14.field_a.a(0, false, var3, 0, var4);
@@ -267,7 +267,7 @@ final class om extends ana {
         try {
           var8_int = 0;
           var9 = 1;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (param4 >= var9) {
               var10 = null;
               var11 = param0;
@@ -299,7 +299,7 @@ final class om extends ana {
                   var8_int = var9;
                 } else {
                   if (param3) {
-                    break L1;
+                    break scanLoop1;
                   }
                 }
                 var9++;

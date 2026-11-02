@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends eo {
+final class cg extends DualLinkNode {
     private int[] field_n;
     on field_q;
     private float field_r;

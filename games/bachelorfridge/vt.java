@@ -340,7 +340,7 @@ final class vt extends tia {
                         }
                       }
                     } else {
-                      var24Lifetime2 = lga.a(true, new String[]{var20, Integer.toString(var6)}, bw.field_d);
+                      var24Lifetime2 = lga.a(true, new String[]{var20, Integer.toString(var6)}, IntrusiveNode.field_d);
                     }
                   }
                 }

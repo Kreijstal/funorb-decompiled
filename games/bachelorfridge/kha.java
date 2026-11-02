@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kha extends bw {
+final class kha extends IntrusiveNode {
     int field_h;
     static boolean field_f;
     int field_g;

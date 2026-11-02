@@ -464,7 +464,7 @@ final class up {
             var2Lifetime1Lifetime1 = var10Lifetime1Lifetime1;
             var3Lifetime1Lifetime1 = 0;
             var4_intLifetime1Lifetime1 = 0;
-            L55: while (true) {
+            scanLoop1: while (true) {
               if (8 > var4_intLifetime1Lifetime1) {
                 stackIn_148_0 = ~(this.field_e & 1 << var4_intLifetime1Lifetime1);
               } else {
@@ -492,7 +492,7 @@ final class up {
                 this.field_d = true;
                 this.field_g.field_u = false;
                 uca.a(18, (byte) 119);
-                break L55;
+                break scanLoop1;
               }
             }
           }

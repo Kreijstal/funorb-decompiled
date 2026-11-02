@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ft extends bw {
+final class ft extends IntrusiveNode {
     static vr field_h;
     boolean field_f;
     int field_g;

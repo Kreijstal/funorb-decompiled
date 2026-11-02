@@ -50,7 +50,7 @@ final class rv extends cj {
           ur.a(param4, param7, param5, param0, param1, param6, 512);
           return;
         }
-        if (param7 - param4 < eo.field_l) {
+        if (param7 - param4 < DualLinkNode.field_l) {
           eia.a(param0, param1, (byte) -95, param2, param6, param5, param7, param4);
           return;
         }
@@ -150,7 +150,7 @@ final class rv extends cj {
               continue;
             }
             if (var3 == 6) {
-              this.field_m.a(eo.a(param0, -4479), true);
+              this.field_m.a(DualLinkNode.a(param0, -4479), true);
               continue;
             }
             if (var3 != 7) {

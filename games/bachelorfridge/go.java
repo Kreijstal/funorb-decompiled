@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class go extends eo {
+abstract class go extends DualLinkNode {
     int field_t;
     int field_q;
     static qh field_s;

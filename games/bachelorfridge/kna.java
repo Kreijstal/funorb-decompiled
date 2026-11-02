@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kna extends bw {
+final class kna extends IntrusiveNode {
     static String field_h;
     static String[] field_g;
     int field_f;

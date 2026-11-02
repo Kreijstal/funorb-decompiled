@@ -71,7 +71,7 @@ final class hn extends tda {
     private final void a(lea param0) {
         param0.a(false);
         param0.a();
-        bw var2 = this.field_m.field_g.field_b;
+        IntrusiveNode var2 = this.field_m.field_g.field_b;
         if (var2 == this.field_m.field_g) {
           this.field_j = -1;
         } else {
@@ -142,7 +142,7 @@ final class hn extends tda {
         }
     }
 
-    private final void a(bw param0, lea param1) {
+    private final void a(IntrusiveNode param0, lea param1) {
         while (true) {
           if (param0 == this.field_m.field_g) {
             nr.$cfr$intArgs$a$94cfdbf41ae0(115, param0, param1);

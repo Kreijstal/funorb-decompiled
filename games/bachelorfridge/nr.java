@@ -45,7 +45,7 @@ final class nr extends ana {
         }
     }
 
-    final static void a(byte param0, bw param1, bw param2) {
+    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param2.field_e != null) {
             param2.a(false);
@@ -95,8 +95,8 @@ final class nr extends ana {
         field_v = null;
         field_y = null;
         if (param0 != 1) {
-          bw var2 = (bw) null;
-          nr.$cfr$intArgs$a$94cfdbf41ae0(91, (bw) null, (bw) null);
+          IntrusiveNode var2 = (IntrusiveNode) null;
+          nr.$cfr$intArgs$a$94cfdbf41ae0(91, (IntrusiveNode) null, (IntrusiveNode) null);
         }
     }
 
@@ -114,7 +114,7 @@ final class nr extends ana {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$94cfdbf41ae0(int param0, bw param1, bw param2) {
+    final static void $cfr$intArgs$a$94cfdbf41ae0(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param2.field_e != null) {
             param2.a(false);

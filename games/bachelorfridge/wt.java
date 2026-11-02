@@ -30,7 +30,7 @@ final class wt extends k {
         if (param1 != 1) {
           wt.a(19, -118, 72, -6, 50, -27, -99);
         }
-        if (eo.field_l <= param5 &&
+        if (DualLinkNode.field_l <= param5 &&
           pw.field_x >= param0 &&
           an.field_q <= param3 &&
           param4 <= ha.field_n) {

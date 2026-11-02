@@ -300,10 +300,10 @@ final class pj implements Runnable {
           if (an.field_q <= param0 &&
             param0 <= ha.field_n) {
             var39 = tj.field_b[param0];
-            var16 = cr.a(eo.field_l, param3 - param4, pw.field_x, 0);
-            var17 = cr.a(eo.field_l, param3 + param4, pw.field_x, param2 - 170);
-            var18 = cr.a(eo.field_l, -var8 + param3, pw.field_x, param2 ^ 170);
-            var19 = cr.a(eo.field_l, var8 + param3, pw.field_x, param2 - 170);
+            var16 = cr.a(DualLinkNode.field_l, param3 - param4, pw.field_x, 0);
+            var17 = cr.a(DualLinkNode.field_l, param3 + param4, pw.field_x, param2 - 170);
+            var18 = cr.a(DualLinkNode.field_l, -var8 + param3, pw.field_x, param2 ^ 170);
+            var19 = cr.a(DualLinkNode.field_l, var8 + param3, pw.field_x, param2 - 170);
             hba.a(param5, var16, var39, 7, var18);
             hba.a(param6, var18, var39, param2 - 163, var19);
             hba.a(param5, var19, var39, 7, var17);
@@ -332,10 +332,10 @@ final class pj implements Runnable {
                 ha.field_n >= var15) {
                 if (var8 > var9) {
                   var17Lifetime1 = it.field_l[var9];
-                  var18Lifetime1 = cr.a(eo.field_l, var7_int + param3, pw.field_x, param2 - 170);
-                  var19Lifetime1 = cr.a(eo.field_l, param3 - var7_int, pw.field_x, 0);
-                  var20 = cr.a(eo.field_l, param3 + var17Lifetime1, pw.field_x, 0);
-                  var21 = cr.a(eo.field_l, -var17Lifetime1 + param3, pw.field_x, 0);
+                  var18Lifetime1 = cr.a(DualLinkNode.field_l, var7_int + param3, pw.field_x, param2 - 170);
+                  var19Lifetime1 = cr.a(DualLinkNode.field_l, param3 - var7_int, pw.field_x, 0);
+                  var20 = cr.a(DualLinkNode.field_l, param3 + var17Lifetime1, pw.field_x, 0);
+                  var21 = cr.a(DualLinkNode.field_l, -var17Lifetime1 + param3, pw.field_x, 0);
                   if (ha.field_n >= var16Lifetime1) {
                     var40 = tj.field_b[var16Lifetime1];
                     hba.a(param5, var19Lifetime1, var40, 7, var21);
@@ -349,8 +349,8 @@ final class pj implements Runnable {
                     hba.a(param5, var20, var41, 7, var18Lifetime1);
                   }
                 } else {
-                  var17Lifetime1 = cr.a(eo.field_l, var7_int + param3, pw.field_x, 0);
-                  var18Lifetime1 = cr.a(eo.field_l, -var7_int + param3, pw.field_x, 0);
+                  var17Lifetime1 = cr.a(DualLinkNode.field_l, var7_int + param3, pw.field_x, 0);
+                  var18Lifetime1 = cr.a(DualLinkNode.field_l, -var7_int + param3, pw.field_x, 0);
                   if (ha.field_n >= var16Lifetime1) {
                     hba.a(param5, var18Lifetime1, tj.field_b[var16Lifetime1], 7, var17Lifetime1);
                   }
@@ -370,14 +370,14 @@ final class pj implements Runnable {
             }
             var17Lifetime1Lifetime1 = param3 + var9;
             var18Lifetime1Lifetime1 = -var9 + param3;
-            if (eo.field_l > var17Lifetime1Lifetime1) {
+            if (DualLinkNode.field_l > var17Lifetime1Lifetime1) {
               continue;
             }
             if (pw.field_x < var18Lifetime1Lifetime1) {
               continue;
             }
-            var17Lifetime1Lifetime1 = cr.a(eo.field_l, var17Lifetime1Lifetime1, pw.field_x, param2 ^ 170);
-            var18Lifetime1Lifetime1 = cr.a(eo.field_l, var18Lifetime1Lifetime1, pw.field_x, 0);
+            var17Lifetime1Lifetime1 = cr.a(DualLinkNode.field_l, var17Lifetime1Lifetime1, pw.field_x, param2 ^ 170);
+            var18Lifetime1Lifetime1 = cr.a(DualLinkNode.field_l, var18Lifetime1Lifetime1, pw.field_x, 0);
             if (var7_int >= var8) {
               if (var16Lifetime1Lifetime1 <= ha.field_n) {
                 hba.a(param5, var18Lifetime1Lifetime1, tj.field_b[var16Lifetime1Lifetime1], 7, var17Lifetime1Lifetime1);
@@ -394,8 +394,8 @@ final class pj implements Runnable {
               stackIn_38_0 = var11;
             }
             var19Lifetime1Lifetime1 = stackIn_38_0;
-            var20Lifetime1 = cr.a(eo.field_l, param3 + var19Lifetime1Lifetime1, pw.field_x, 0);
-            var21Lifetime1 = cr.a(eo.field_l, -var19Lifetime1Lifetime1 + param3, pw.field_x, 0);
+            var20Lifetime1 = cr.a(DualLinkNode.field_l, param3 + var19Lifetime1Lifetime1, pw.field_x, 0);
+            var21Lifetime1 = cr.a(DualLinkNode.field_l, -var19Lifetime1Lifetime1 + param3, pw.field_x, 0);
             if (ha.field_n >= var16Lifetime1Lifetime1) {
               var42 = tj.field_b[var16Lifetime1Lifetime1];
               hba.a(param5, var18Lifetime1Lifetime1, var42, 7, var21Lifetime1);

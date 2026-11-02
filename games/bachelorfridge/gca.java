@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gca extends bw {
+abstract class gca extends IntrusiveNode {
     static qia field_f;
     int field_h;
     static kv field_g;

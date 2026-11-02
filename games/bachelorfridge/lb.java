@@ -72,7 +72,7 @@ final class lb extends ana {
 
     final static boolean g(byte param0) {
         int var1 = -88 % ((0 - param0) / 39);
-        if (ms.field_u != null) {
+        if (NetworkGameClient.field_u != null) {
           return true;
         }
         if (em.d((byte) -104)) {

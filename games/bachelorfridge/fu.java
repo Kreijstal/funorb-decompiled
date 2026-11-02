@@ -98,9 +98,9 @@ final class fu extends at {
           qs.field_l[2] = dupTemp$2;
           wo.field_k[2] = cl.a(pja.field_d, false);
           dupTemp$3 = jfa.a(param0, 4, "head");
-          eo.field_k = dupTemp$3;
+          DualLinkNode.field_k = dupTemp$3;
           qs.field_l[8] = dupTemp$3;
-          wo.field_k[8] = cl.a(eo.field_k, param1);
+          wo.field_k[8] = cl.a(DualLinkNode.field_k, param1);
           dupTemp$4 = jfa.a(param0, 4, "mouth");
           mea.field_v = dupTemp$4;
           qs.field_l[3] = dupTemp$4;

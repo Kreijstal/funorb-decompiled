@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lu extends bw {
+class lu extends IntrusiveNode {
     static ee field_f;
     int field_g;
     byte[] field_h;

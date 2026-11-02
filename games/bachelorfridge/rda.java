@@ -12,14 +12,14 @@ final class rda {
         int var10 = 0;
         int var11 = 0;
         mna.a(-1, (int[]) null, param5.field_Eb, param5.field_Nb, param5.field_Hb, -1, param0 - 7, param3, param5);
-        ms.field_u.a(param0 + 220, true);
-        ms.field_u.a((int[]) null, (byte) -117, 0);
-        ms.field_u.a(21654);
+        NetworkGameClient.field_u.a(param0 + 220, true);
+        NetworkGameClient.field_u.a((int[]) null, (byte) -117, 0);
+        NetworkGameClient.field_u.a(21654);
         if (param0 != -104) {
           return;
         }
         try {
-          var12 = ms.field_u;
+          var12 = NetworkGameClient.field_u;
           var8 = param6;
           var9 = param4;
           var10 = param2;

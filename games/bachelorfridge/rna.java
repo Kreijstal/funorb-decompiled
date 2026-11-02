@@ -5,12 +5,12 @@ final class rna {
     private eaa field_c;
     static String field_b;
     static String[] field_a;
-    private bw field_d;
+    private IntrusiveNode field_d;
 
-    final bw c(byte param0) {
-        bw var2 = this.field_c.field_g.field_e;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = this.field_c.field_g.field_e;
         if (param0 < 118) {
-          return (bw) null;
+          return (IntrusiveNode) null;
         }
         if (var2 != this.field_c.field_g) {
           this.field_d = var2.field_e;
@@ -20,11 +20,11 @@ final class rna {
         return null;
     }
 
-    final bw a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 != 0) {
-          return (bw) null;
+          return (IntrusiveNode) null;
         }
-        bw var2 = this.field_d;
+        IntrusiveNode var2 = this.field_d;
         if (this.field_c.field_g != var2) {
           this.field_d = var2.field_b;
           return var2;
@@ -33,9 +33,9 @@ final class rna {
         return null;
     }
 
-    final bw b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         int var3 = 30 / ((param0 + 47) / 53);
-        bw var2 = this.field_c.field_g.field_b;
+        IntrusiveNode var2 = this.field_c.field_g.field_b;
         if (var2 != this.field_c.field_g) {
           this.field_d = var2.field_b;
           return var2;
@@ -88,10 +88,10 @@ final class rna {
         field_a = null;
     }
 
-    final bw d(byte param0) {
-        bw var2 = this.field_d;
+    final IntrusiveNode d(byte param0) {
+        IntrusiveNode var2 = this.field_d;
         if (param0 != -124) {
-          return (bw) null;
+          return (IntrusiveNode) null;
         }
         if (this.field_c.field_g == var2) {
           this.field_d = null;
@@ -101,19 +101,19 @@ final class rna {
         return var2;
     }
 
-    final bw a(bw param0, byte param1) {
-        bw var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, byte param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        bw stackIn_2_0 = null;
+        IntrusiveNode stackIn_2_0 = null;
         Object stackIn_8_0 = null;
-        bw stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -86) {
-            stackIn_2_0 = (bw) null;
+            stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
           if (param0 == null) {
@@ -128,7 +128,7 @@ final class rna {
           }
           this.field_d = null;
           stackIn_8_0 = null;
-          return (bw) (stackIn_8_0);
+          return (IntrusiveNode) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -143,12 +143,12 @@ final class rna {
         }
     }
 
-    final bw a(int param0, bw param1) {
-        bw var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        bw stackIn_5_0 = null;
+        IntrusiveNode stackIn_5_0 = null;
         Object stackIn_9_0 = null;
-        bw stackIn_11_0 = null;
+        IntrusiveNode stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -160,13 +160,13 @@ final class rna {
             var3 = param1;
           }
           if (param0 != 6000) {
-            stackIn_5_0 = (bw) null;
+            stackIn_5_0 = (IntrusiveNode) null;
             return stackIn_5_0;
           }
           if (var3 == this.field_c.field_g) {
             this.field_d = null;
             stackIn_9_0 = null;
-            return (bw) (stackIn_9_0);
+            return (IntrusiveNode) (stackIn_9_0);
           }
           this.field_d = var3.field_b;
           stackIn_11_0 = var3;

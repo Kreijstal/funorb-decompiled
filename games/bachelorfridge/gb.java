@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gb extends bw {
+final class gb extends IntrusiveNode {
     static String field_i;
     int field_g;
     int field_h;
@@ -144,7 +144,7 @@ final class gb extends bw {
           var7 = (String) null;
           gb.a(-60, 62, -68, 126, true, (String) null);
         }
-        if (eo.field_l > param4) {
+        if (DualLinkNode.field_l > param4) {
           qn.a(param4, param1, param3, param2, 69, param5);
         } else {
           if (param1 > pw.field_x) {

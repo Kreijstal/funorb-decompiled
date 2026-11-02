@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bia extends bw {
+class bia extends IntrusiveNode {
     static ws field_i;
     static kv[] field_h;
     static eaa field_g;

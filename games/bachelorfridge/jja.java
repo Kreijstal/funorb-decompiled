@@ -21,7 +21,7 @@ final class jja extends tda {
         try {
           this.field_j.a(param0, param1, param2);
           var6 = (fh) (this.field_k.b((byte) 90));
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var6 == null) {
               return;
             }
@@ -36,7 +36,7 @@ final class jja extends tda {
                 this.a(var5, param0, var4_int, var4_int + var5, var6, (byte) 12);
                 var6.field_r = var6.field_r - var5;
                 var6 = (fh) (this.field_k.c(0));
-                continue L0;
+                continue scanLoop1;
               }
               this.a(var6.field_r, param0, var4_int, var5 + var4_int, var6, (byte) 12);
               var5 = var5 - var6.field_r;
@@ -173,7 +173,7 @@ final class jja extends tda {
         var4 = BachelorFridge.field_y;
         this.field_j.a(param0);
         var3 = (fh) (this.field_k.b((byte) 90));
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var3 == null) {
             return;
           }
@@ -187,7 +187,7 @@ final class jja extends tda {
               this.a(var2, 53, var3);
               var3.field_r = var3.field_r - var2;
               var3 = (fh) (this.field_k.c(0));
-              continue L0;
+              continue scanLoop1;
             }
             this.a(var3.field_r, 91, var3);
             var2 = var2 - var3.field_r;

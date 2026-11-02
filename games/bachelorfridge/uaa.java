@@ -172,7 +172,7 @@ final class uaa extends kj {
           uaa.d((byte) -72);
         }
         vu.field_p.field_Y = 1;
-        bw.field_a = new sna("checkout", vu.field_p, 444, 324, 167, 38, "");
+        IntrusiveNode.field_a = new sna("checkout", vu.field_p, 444, 324, 167, 38, "");
         lfa.field_l = new sna("back", vu.field_p, 440, 428, 177, 28, "");
         rv.field_l = new sna("up", vu.field_p, 440, 137, 140, 16, "");
         hk.field_c = new sna("down", vu.field_p, 440, 328, 140, 16, "");

@@ -402,7 +402,7 @@ final class gj extends dfa {
               if (this.field_C.field_T) {
                 fla.field_s.e(574, 64);
               }
-              b.field_t.a(ms.field_q, 580, 41, 40, 30, 0, -1, 1, 0, 10);
+              b.field_t.a(NetworkGameClient.field_q, 580, 41, 40, 30, 0, -1, 1, 0, 10);
             }
             if (null != this.field_G) {
               this.g(-1);
@@ -723,7 +723,7 @@ final class gj extends dfa {
           if (param1 != null) {
             this.field_y = new up(this, this.field_z, param1);
           }
-          this.field_C = new sna("endturn", this.field_z, 574, 64, 50, 24, ms.field_q);
+          this.field_C = new sna("endturn", this.field_z, 574, 64, 50, 24, NetworkGameClient.field_q);
           this.field_O = new sna("cancelorder", (sna) null, 15, 125, 32, 32, "");
           this.field_O.field_v = hh.field_b[2];
           this.field_bb = new sna("abortorder", (sna) null, 15, 125, 16, 16, "");
@@ -2297,14 +2297,14 @@ final class gj extends dfa {
             this.field_h.field_a[this.field_N][this.field_H].field_g = true;
             var6 = this.field_H - var3.field_s.field_J;
             var7 = Math.abs(var6);
-            L7: while (true) {
+            scanLoop1: while (true) {
               if (var7 > 0) {
                 if (var6 > 0) {
                   if (!(this.field_h.field_B > var3.field_s.field_J + var7) ||
                     !var3.field_s.a(this.field_h.field_a[var3.field_s.field_x][var7 + var3.field_s.field_J].field_n, false)) {
                     var6 = -1 + var7;
                     if (this.field_h.field_B <= var3.field_s.field_J + var7) {
-                      break L7;
+                      break scanLoop1;
                     }
                   }
                 } else {
@@ -2315,7 +2315,7 @@ final class gj extends dfa {
                     !var3.field_s.a(this.field_h.field_a[var3.field_s.field_x][-var7 + var3.field_s.field_J].field_n, false)) {
                     var6 = -(-1 + var7);
                     if (var3.field_s.field_J - var7 <= 0) {
-                      break L7;
+                      break scanLoop1;
                     }
                   }
                 }
@@ -2339,14 +2339,14 @@ final class gj extends dfa {
               var6Lifetime1 = -var3.field_s.field_x + this.field_N;
               this.field_h.field_a[this.field_N][this.field_H].field_g = true;
               var7Lifetime1 = Math.abs(var6Lifetime1);
-              L14: while (true) {
+              scanLoop2: while (true) {
                 if (var7Lifetime1 > 0) {
                   if (var6Lifetime1 > 0) {
                     if (!(var3.field_s.field_x + var7Lifetime1 < this.field_h.field_z) ||
                       !var3.field_s.a(this.field_h.field_a[var7Lifetime1 + var3.field_s.field_x][var3.field_s.field_J].field_n, false)) {
                       var6Lifetime1 = var7Lifetime1 - 1;
                       if (this.field_q + var7Lifetime1 >= -1 + this.field_h.field_z) {
-                        break L14;
+                        break scanLoop2;
                       }
                     }
                   } else {
@@ -2357,7 +2357,7 @@ final class gj extends dfa {
                       !var3.field_s.a(this.field_h.field_a[-var7Lifetime1 + var3.field_s.field_x][var3.field_s.field_J].field_n, false)) {
                       var6Lifetime1 = -(var7Lifetime1 - 1);
                       if (-var7Lifetime1 + this.field_q <= 0) {
-                        break L14;
+                        break scanLoop2;
                       }
                     }
                   }

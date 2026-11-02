@@ -113,13 +113,13 @@ final class rha {
             var6 = ur.field_d - 125;
             if (var6 > 0 &&
               var6 < 50) {
-              sharedTailExit_0: {
+              regionExit1: {
                 if (var6 < 20) {
                   var7 = var6 * 256 / 20;
                 } else {
                   if (30 > var6) {
                     rg.field_j.d(var3, var4, 256);
-                    break sharedTailExit_0;
+                    break regionExit1;
                   }
                   var7 = (-(256 * var6) + 12800) / 20;
                 }

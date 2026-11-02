@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class BachelorFridge extends ms {
+public final class BachelorFridge extends NetworkGameClient {
     private boolean field_x;
     public static int field_y;
 
@@ -614,7 +614,7 @@ public final class BachelorFridge extends ms {
         oja.a(-32341);
         dj.a((byte) -75);
         cba.a((byte) -44);
-        ck.e(-12132);
+        GameAppletShell.e(-12132);
         dl.d((byte) -39);
         pn.a((byte) -60);
         dg.a();
@@ -622,7 +622,7 @@ public final class BachelorFridge extends ms {
         pb.d();
         i.a((byte) -122);
         au.a(-31824);
-        ms.g((byte) 109);
+        NetworkGameClient.g((byte) 109);
         gi.a(101);
         tca.a((byte) -84);
         nn.a(0);
@@ -648,7 +648,7 @@ public final class BachelorFridge extends ms {
         jla.b(true);
         da.a(-47);
         mu.a(9072);
-        bw.b((byte) 127);
+        IntrusiveNode.b((byte) 127);
         dga.a((byte) -97);
         jd.a((byte) 89);
         lda.a((byte) -127);
@@ -664,7 +664,7 @@ public final class BachelorFridge extends ms {
         vaa.a(-1);
         tja.a(8192);
         mba.a(-90);
-        eo.c((byte) 114);
+        DualLinkNode.c((byte) 114);
         st.a((byte) 120);
         rp.e((byte) 104);
         tea.q(10462);
@@ -1788,7 +1788,7 @@ public final class BachelorFridge extends ms {
               sg.field_r = true;
             }
           }
-          L23: {
+          regionExit1: {
             boolean decompiledFrameCompleted0 = true;
             if (!bp.e(-29919)) {
               while (true) {
@@ -1819,7 +1819,7 @@ public final class BachelorFridge extends ms {
                     }
                     if (ri.field_a == 14) {
                       rs.a(true);
-                      dfa.a(150, ul.a(-58, 4), ul.a(-51, 2000), 0, jha.field_j, cma.field_y.length, mia.d((byte) -104), efa.c(true), 1024, ms.n(96));
+                      dfa.a(150, ul.a(-58, 4), ul.a(-51, 2000), 0, jha.field_j, cma.field_y.length, mia.d((byte) -104), efa.c(true), 1024, NetworkGameClient.n(96));
                       eka.a(vv.a(31185), -83, jha.c(-31068));
                       wj.field_g = true;
                       hm.field_b = true;
@@ -1977,11 +1977,11 @@ public final class BachelorFridge extends ms {
                     if (!vs.field_d) {
                       lg.a(true, 0, false);
                       if (var8 != 0) {
-                        fia.field_s = ck.field_f;
+                        fia.field_s = GameAppletShell.field_f;
                         hb.a(2, 10, 0, false);
                       }
                     } else {
-                      fia.field_s = ck.field_f;
+                      fia.field_s = GameAppletShell.field_f;
                       hb.a(2, 10, 0, false);
                     }
                     rs.a(true);

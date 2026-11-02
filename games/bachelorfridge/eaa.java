@@ -4,14 +4,14 @@
 final class eaa {
     static long field_a;
     static eaa field_d;
-    bw field_g;
+    IntrusiveNode field_g;
     static boolean field_c;
     static String field_f;
-    private bw field_e;
+    private IntrusiveNode field_e;
     static int field_b;
 
-    final bw c(int param0) {
-        bw var2 = this.field_e;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_e;
         if (this.field_g == var2) {
           this.field_e = null;
           return null;
@@ -20,15 +20,15 @@ final class eaa {
         if (param0 == 0) {
           return var2;
         }
-        this.field_g = (bw) null;
+        this.field_g = (IntrusiveNode) null;
         return var2;
     }
 
-    final bw a(bw param0, int param1) {
-        bw var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        bw stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -45,7 +45,7 @@ final class eaa {
           if (var3 == this.field_g) {
             this.field_e = null;
             stackIn_8_0 = null;
-            return (bw) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_e = var3.field_b;
           stackIn_10_0 = var3;
@@ -67,7 +67,7 @@ final class eaa {
     final int g(int param0) {
         int var4 = BachelorFridge.field_y;
         int var2 = param0;
-        bw var3 = this.field_g.field_b;
+        IntrusiveNode var3 = this.field_g.field_b;
         while (this.field_g != var3) {
           var2++;
           var3 = var3.field_b;
@@ -75,11 +75,11 @@ final class eaa {
         return var2;
     }
 
-    final bw b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         if (param0 != 90) {
-          return (bw) null;
+          return (IntrusiveNode) null;
         }
-        bw var2 = this.field_g.field_b;
+        IntrusiveNode var2 = this.field_g.field_b;
         if (var2 == this.field_g) {
           this.field_e = null;
           return null;
@@ -88,8 +88,8 @@ final class eaa {
         return var2;
     }
 
-    final bw c(byte param0) {
-        bw var2 = this.field_e;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = this.field_e;
         if (var2 == this.field_g) {
           this.field_e = null;
           return null;
@@ -103,7 +103,7 @@ final class eaa {
     }
 
     final void d(int param0) {
-        bw var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = BachelorFridge.field_y;
         while (true) {
           var2 = this.field_g.field_b;
@@ -136,11 +136,11 @@ final class eaa {
         ld.a(16711872, 6, param0 - 31838, 6);
     }
 
-    final int a(byte param0, bw[] param1) {
+    final int a(byte param0, IntrusiveNode[] param1) {
         int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        bw var4 = null;
+        IntrusiveNode var4 = null;
         int var5 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -194,7 +194,7 @@ final class eaa {
         field_d = null;
     }
 
-    final void a(int param0, bw param1) {
+    final void a(int param0, IntrusiveNode param1) {
         if (param1.field_e != null) {
           param1.a(false);
         }
@@ -211,8 +211,8 @@ final class eaa {
         }
     }
 
-    private final void a(eaa param0, bw param1, boolean param2) {
-        bw var4 = null;
+    private final void a(eaa param0, IntrusiveNode param1, boolean param2) {
+        IntrusiveNode var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -259,16 +259,16 @@ final class eaa {
         try {
           this.a(param0, this.field_g.field_b, true);
           if (param1 != 12632256) {
-            bw var4 = (bw) null;
-            this.a((eaa) null, (bw) null, true);
+            IntrusiveNode var4 = (IntrusiveNode) null;
+            this.a((eaa) null, (IntrusiveNode) null, true);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.a((Throwable) ((Object) runtimeException), "eaa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final bw a(int param0) {
-        bw var2 = this.field_g.field_e;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_g.field_e;
         if (this.field_g == var2) {
           this.field_e = null;
           return null;
@@ -277,15 +277,15 @@ final class eaa {
         if (param0 == 6) {
           return var2;
         }
-        bw var3 = (bw) null;
-        this.a((bw) null, false);
+        IntrusiveNode var3 = (IntrusiveNode) null;
+        this.a((IntrusiveNode) null, false);
         return var2;
     }
 
-    final bw a(byte param0) {
-        bw var2 = this.field_g.field_e;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_g.field_e;
         if (param0 != -124) {
-          return (bw) null;
+          return (IntrusiveNode) null;
         }
         if (this.field_g != var2) {
           var2.a(false);
@@ -294,15 +294,15 @@ final class eaa {
         return null;
     }
 
-    final void a(bw param0, boolean param1) {
+    final void a(IntrusiveNode param0, boolean param1) {
         try {
           if (null != param0.field_e) {
             param0.a(!param1 ? true : false);
           }
           param0.field_b = this.field_g;
           if (!param1) {
-            bw var4 = (bw) null;
-            this.a((bw) null, 125);
+            IntrusiveNode var4 = (IntrusiveNode) null;
+            this.a((IntrusiveNode) null, 125);
           }
           param0.field_e = this.field_g.field_e;
           param0.field_e.field_b = param0;
@@ -312,8 +312,8 @@ final class eaa {
         }
     }
 
-    final bw a(boolean param0) {
-        bw var2 = this.field_g.field_b;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = this.field_g.field_b;
         if (var2 == this.field_g) {
           return null;
         }
@@ -322,7 +322,7 @@ final class eaa {
     }
 
     public eaa() {
-        this.field_g = new bw();
+        this.field_g = new IntrusiveNode();
         this.field_g.field_e = this.field_g;
         this.field_g.field_b = this.field_g;
     }

@@ -180,14 +180,14 @@ final class hj extends td {
                   var16 = var7.field_xb;
                   mna.a(-1, (int[]) null, 0L, (String) null, var16, -1, -123, rba.field_a.field_xb, var7);
                   if (var7.field_vb != null &&
-                    !sha.a((byte) -24, ms.field_u.field_j) &&
+                    !sha.a((byte) -24, NetworkGameClient.field_u.field_j) &&
                     !hl.field_I) {
                     if (!sea.field_j) {
-                      var17 = ms.field_u;
+                      var17 = NetworkGameClient.field_u;
                       var18 = lga.a(true, new String[]{var16}, jv.field_m);
                       var17.field_a.a(var18, true, 8);
                     }
-                    var17Lifetime1 = ms.field_u;
+                    var17Lifetime1 = NetworkGameClient.field_u;
                     var18Lifetime1 = lga.a(true, new String[]{var16}, lga.field_i);
                     var17Lifetime1.field_a.a(var18Lifetime1, true, 18);
                   }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eka extends bw {
+final class eka extends IntrusiveNode {
     be[] field_m;
     byte[] field_f;
     static String field_o;
@@ -653,7 +653,7 @@ final class eka extends bw {
         try {
           es.field_j = param2.field_z;
           cca.field_v = param0.field_z;
-          eo.c(-55);
+          DualLinkNode.c(-55);
         } catch (RuntimeException runtimeException) {
           throw pe.a((Throwable) ((Object) runtimeException), "eka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -210,12 +210,12 @@ final class lp extends bca {
           var3 = param1.field_q;
           var4 = param1.field_v;
           var5 = var2_int - 1;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var5 >= 0) {
               var6 = var5 * var3;
               for (var7 = 0; var3 > var7; var7++) {
                 if ((-16777216 & var4[var7 + var6]) != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var5--;
@@ -224,12 +224,12 @@ final class lp extends bca {
             break;
           }
           var6Lifetime1 = 0;
-          L4: while (true) {
+          scanLoop2: while (true) {
             if (var5 > var6Lifetime1) {
               var7Lifetime1 = var3 * var6Lifetime1;
               for (var8 = 0; var8 < var3; var8++) {
                 if (0 != (var4[var8 + var7Lifetime1] & -16777216)) {
-                  break L4;
+                  break scanLoop2;
                 }
               }
               var6Lifetime1++;
@@ -238,11 +238,11 @@ final class lp extends bca {
             break;
           }
           var7Lifetime2 = -1 + var3;
-          L7: while (true) {
+          scanLoop3: while (true) {
             if (var7Lifetime2 >= 0) {
               for (var8Lifetime1 = var6Lifetime1; var5 >= var8Lifetime1; var8Lifetime1++) {
                 if ((-16777216 & var4[var7Lifetime2 + var3 * var8Lifetime1]) != 0) {
-                  break L7;
+                  break scanLoop3;
                 }
               }
               var7Lifetime2--;
@@ -251,11 +251,11 @@ final class lp extends bca {
             break;
           }
           var8Lifetime2 = 0;
-          L10: while (true) {
+          scanLoop4: while (true) {
             if (var7Lifetime2 > var8Lifetime2) {
               for (var9 = var6Lifetime1; var5 >= var9; var9++) {
                 if ((var4[var9 * var3 + var8Lifetime2] & -16777216) != 0) {
-                  break L10;
+                  break scanLoop4;
                 }
               }
               var8Lifetime2++;

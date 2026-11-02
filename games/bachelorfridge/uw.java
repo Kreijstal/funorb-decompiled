@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uw extends eo {
+final class uw extends DualLinkNode {
     static kia field_o;
     byte[] field_n;
 

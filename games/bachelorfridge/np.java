@@ -5,16 +5,16 @@ import java.util.*;
 
 final class np implements Iterator {
     private int field_c;
-    private bw field_b;
-    private bw field_d;
+    private IntrusiveNode field_b;
+    private IntrusiveNode field_d;
     private wha field_a;
 
     public final Object next() {
-        bw[] fieldTemp$0 = null;
+        IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         int var2;
-        bw var3;
-        bw var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = BachelorFridge.field_y;
         if (this.field_b != this.field_a.field_c[this.field_c - 1]) {
           var4 = this.field_b;
@@ -56,7 +56,7 @@ final class np implements Iterator {
     }
 
     public final boolean hasNext() {
-        bw[] fieldTemp$0 = null;
+        IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         int var2;
         var2 = BachelorFridge.field_y;

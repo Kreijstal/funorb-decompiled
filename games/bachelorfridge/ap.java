@@ -11,7 +11,7 @@ final class ap {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 > 50) {
-          if (eo.field_l <= param1 &&
+          if (DualLinkNode.field_l <= param1 &&
             param1 <= pw.field_x) {
             param2 = cr.a(an.field_q, param2, ha.field_n, 0);
             param0 = cr.a(an.field_q, param0, ha.field_n, 0);
@@ -20,7 +20,7 @@ final class ap {
           return;
         }
         ap.a(57, -68, -47, 62, 23);
-        if (eo.field_l <= param1 &&
+        if (DualLinkNode.field_l <= param1 &&
           param1 <= pw.field_x) {
           param2 = cr.a(an.field_q, param2, ha.field_n, 0);
           param0 = cr.a(an.field_q, param0, ha.field_n, 0);

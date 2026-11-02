@@ -12,7 +12,7 @@ class w implements q {
     private int field_f;
 
     on d(int param0, int param1) {
-        eo var3 = this.field_a.a(param1 ^ -23159, (long)param0);
+        DualLinkNode var3 = this.field_a.a(param1 ^ -23159, (long)param0);
         if (var3 != null) {
           return (on) (var3);
         }

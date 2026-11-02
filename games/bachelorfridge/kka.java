@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kka extends bw {
+final class kka extends IntrusiveNode {
     static int field_g;
     static kv[] field_i;
     static sja field_l;
@@ -17,7 +17,7 @@ final class kka extends bw {
         var3 = var3.toLowerCase();
         if (!var3.equals("")) {
           int var4 = 53 / ((4 - param1) / 41);
-          return ((ji) (eo.field_f.a(true, (long)var3.hashCode()))).field_h;
+          return ((ji) (DualLinkNode.field_f.a(true, (long)var3.hashCode()))).field_h;
         }
         return -1;
     }

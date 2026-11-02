@@ -135,7 +135,7 @@ final class gt extends k {
               var23 = -var8 + hh.field_d;
               var25 = hh.field_d;
             }
-            L4: {
+            regionExit1: {
               if (var11 == 0) {
                 var26_int = var9;
                 var54 = var48[var9];
@@ -190,7 +190,7 @@ final class gt extends k {
                       }
                     }
                     var9 = var26_int;
-                    break L4;
+                    break regionExit1;
                   }
                   var28++;
                   var26_int++;

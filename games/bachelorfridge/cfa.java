@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cfa extends bw {
+final class cfa extends IntrusiveNode {
     int field_j;
     int field_i;
     int field_g;

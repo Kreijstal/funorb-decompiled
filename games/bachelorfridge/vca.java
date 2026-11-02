@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vca extends bw {
+final class vca extends IntrusiveNode {
     static sna field_h;
     private int field_k;
     private int field_o;

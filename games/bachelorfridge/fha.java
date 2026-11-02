@@ -144,11 +144,11 @@ final class fha extends at {
         try {
           var12 = cr.a(an.field_q, param7, ha.field_n, 0);
           var13 = cr.a(an.field_q, param2, ha.field_n, 0);
-          var14 = cr.a(eo.field_l, param4, pw.field_x, 0);
+          var14 = cr.a(DualLinkNode.field_l, param4, pw.field_x, 0);
           if (param1 < 43) {
             field_j = (String[][]) null;
           }
-          var15 = cr.a(eo.field_l, param0, pw.field_x, 0);
+          var15 = cr.a(DualLinkNode.field_l, param0, pw.field_x, 0);
           var8_int = cr.a(an.field_q, param6 + param7, ha.field_n, 0);
           var9 = cr.a(an.field_q, param2 - param6, ha.field_n, 0);
           for (var16 = var12; var8_int > var16; var16++) {
@@ -157,8 +157,8 @@ final class fha extends at {
           for (var16Lifetime1 = var13; var16Lifetime1 > var9; var16Lifetime1--) {
             hba.a(param3, var14, tj.field_b[var16Lifetime1], 7, var15);
           }
-          var10 = cr.a(eo.field_l, param6 + param4, pw.field_x, 0);
-          var11 = cr.a(eo.field_l, param0 - param6, pw.field_x, 0);
+          var10 = cr.a(DualLinkNode.field_l, param6 + param4, pw.field_x, 0);
+          var11 = cr.a(DualLinkNode.field_l, param0 - param6, pw.field_x, 0);
           for (var16Lifetime2 = var8_int; var9 >= var16Lifetime2; var16Lifetime2++) {
             var22 = tj.field_b[var16Lifetime2];
             hba.a(param3, var14, var22, 7, var10);
