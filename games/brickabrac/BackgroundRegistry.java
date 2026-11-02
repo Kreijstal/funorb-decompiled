@@ -9,8 +9,8 @@ final class BackgroundRegistry {
     static int field_c;
     private static String field_z;
 
-    public static void a(int param0) {
-        if (param0 == 0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard == 0) {
           field_e = null;
           field_a = null;
           scenes = null;

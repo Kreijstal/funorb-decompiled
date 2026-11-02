@@ -456,7 +456,7 @@ final class QuickChatMenu extends UiComponent {
           while (!(finishedRowCreation = (itemIndex >= this.itemCount))) {
             if (unusedGameFlag == 0) {
               if (this.shortcuts[itemIndex] > 0) {
-                labels[itemIndex] = shortcutColorOpen + MusicEnvelope.a(true, this.shortcuts[itemIndex]).toUpperCase() + ": " + shortcutColorClose + labels[itemIndex];
+                labels[itemIndex] = shortcutColorOpen + MusicEnvelope.characterToString(true, this.shortcuts[itemIndex]).toUpperCase() + ": " + shortcutColorClose + labels[itemIndex];
               }
               branchSprite = null;
               if (null != this.submenus[itemIndex] ||
@@ -1610,8 +1610,8 @@ final class QuickChatMenu extends UiComponent {
         }
     }
 
-    public static void d(boolean param0) {
-        if (!param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return;
         }
         try {
@@ -1619,7 +1619,7 @@ final class QuickChatMenu extends UiComponent {
           field_ac = null;
           backgroundMusicSampleArchive = null;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "og.F(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "og.F(" + obfuscationGuard + ')');
         }
     }
 

@@ -8,11 +8,11 @@ final class BrowserResizeNotificationHelpers {
     static String field_e;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_b = null;
         field_d = null;
         field_c = null;
-        if (param0 > -100) {
+        if (obfuscationGuard > -100) {
           field_b = (String) null;
           field_e = null;
           return;

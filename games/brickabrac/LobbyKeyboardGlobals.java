@@ -8,10 +8,10 @@ final class LobbyKeyboardGlobals {
     static String field_c;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_c = null;
-        if (param0 != 68) {
-          LobbyKeyboardGlobals.a((byte) -53);
+        if (obfuscationGuard != 68) {
+          LobbyKeyboardGlobals.clearSharedReferences((byte) -53);
           field_a = null;
           field_b = null;
           return;

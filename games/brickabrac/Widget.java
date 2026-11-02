@@ -57,16 +57,16 @@ class Widget extends IntrusiveNode {
         this.x = x;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawLayersAndTooltip(int parentX, int parentY, int firstLayer) {
         int var4;
         int var5_int;
         String var5;
         int var6;
         var6 = BrickABrac.field_J ? 1 : 0;
-        var4 = this.e((byte) -79);
-        var5_int = param2;
+        var4 = this.getTopLayer((byte) -79);
+        var5_int = firstLayer;
         while (var5_int <= var4) {
-          this.drawLayer(param1, param0, var5_int, (byte) -11);
+          this.drawLayer(parentY, parentX, var5_int, (byte) -11);
           var5_int++;
           if (var6 == 0) {
             continue;
@@ -77,7 +77,7 @@ class Widget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        PopupWidgetLayer.widgetTheme.a(true, CappedUrlRequest.tooltipAnchorY, MouseInputCleanup.tooltipAnchorX, var5);
+        PopupWidgetLayer.widgetTheme.drawTooltip(true, CappedUrlRequest.tooltipAnchorY, MouseInputCleanup.tooltipAnchorX, var5);
     }
 
     final static void drawPowerUpMeter(int y, int typeId, int x, PlayerBoard board, MultiplayerMatch match, byte obfuscationGuard) {
@@ -127,7 +127,7 @@ class Widget extends IntrusiveNode {
           highlightAge = MembershipBenefitsScreen.clientTick - SpriteGeometry.field_v;
           TextHotspotRegion.powerUpMeterIcons[typeId].drawTransparent(x, y);
           if (highlightMeter != 0) {
-            TextHotspotRegion.powerUpMeterIcons[typeId].f(x, y, 64 + (InteractiveGameClient.sine8192(200 * highlightAge, -4097) >> 10));
+            TextHotspotRegion.powerUpMeterIcons[typeId].drawAdditive(x, y, 64 + (InteractiveGameClient.sine8192(200 * highlightAge, -4097) >> 10));
           }
           x += 7;
           y--;
@@ -178,7 +178,7 @@ class Widget extends IntrusiveNode {
           }
           LevelPackSelectScreen.powerUpMeterBarSprite.drawTransparent(x, y);
           if (highlightMeter != 0) {
-            LevelPackSelectScreen.powerUpMeterBarSprite.f(x, y, (InteractiveGameClient.sine8192(400 * highlightAge, -4097) >> 10) + 64);
+            LevelPackSelectScreen.powerUpMeterBarSprite.drawAdditive(x, y, (InteractiveGameClient.sine8192(400 * highlightAge, -4097) >> 10) + 64);
           }
           return;
         } catch (java.lang.RuntimeException caughtException) {
@@ -202,10 +202,10 @@ class Widget extends IntrusiveNode {
     }
 
     public final String toString() {
-        return this.a(0, new Hashtable(), 24, new StringBuilder()).toString();
+        return this.appendDebugTree(0, new Hashtable(), 24, new StringBuilder()).toString();
     }
 
-    final boolean a(int param0, int param1, int param2, boolean param3) {
+    final boolean processPointerInput(int parentY, int parentX, int obfuscationGuard, boolean consumed) {
         int var5;
         int var6;
         int var7;
@@ -232,51 +232,51 @@ class Widget extends IntrusiveNode {
         int var6Lifetime2Lifetime3;
         int var6Lifetime2Lifetime4;
         var7 = BrickABrac.field_J ? 1 : 0;
-        this.updatePointer(this, (byte) 0, param1, param0);
+        this.updatePointer(this, (byte) 0, parentX, parentY);
         var5 = this.isFocused(-123) ? 1 : 0;
-        if (!param3) {
+        if (!consumed) {
           if (var5 == 0) {
-            var6 = -57 % ((56 - param2) / 43);
+            var6 = -57 % ((56 - obfuscationGuard) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
             MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-            return param3;
+            return consumed;
           }
           if (BackgroundScene.pressedButton == 0) {
-            var6Lifetime6 = -57 % ((56 - param2) / 43);
+            var6Lifetime6 = -57 % ((56 - obfuscationGuard) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
             MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-            return param3;
+            return consumed;
           }
           this.clearFocus(false);
           if (var7 == 0) {
-            var6Lifetime7 = -57 % ((56 - param2) / 43);
+            var6Lifetime7 = -57 % ((56 - obfuscationGuard) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
             MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-            return param3;
+            return consumed;
           }
           if (0 != GameplayAudioEvent.mouseWheelDelta &&
             var5 != 0) {
-            this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, ResourcePreparationEntry.pointerY, this, param1);
+            this.handleMouseWheel(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, parentY, -127, ResourcePreparationEntry.pointerY, this, parentX);
           }
           if (BackgroundScene.pressedButton != 0) {
-            if (this.handlePointerPress(this, LoadingProgressDialog.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
-              param3 = false;
+            if (this.handlePointerPress(this, LoadingProgressDialog.pressX, parentX, parentY, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
+              consumed = false;
             }
             this.clearFocus(false);
           }
           if (0 != MatchingTextValidator.heldButton) {
-            var6Lifetime8 = -57 % ((56 - param2) / 43);
+            var6Lifetime8 = -57 % ((56 - obfuscationGuard) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
             MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-            return param3;
+            return consumed;
           }
           if (ScrollPaneWithFooter.field_Pb == 0) {
-            var6Lifetime9 = -57 % ((56 - param2) / 43);
+            var6Lifetime9 = -57 % ((56 - obfuscationGuard) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
             MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-            return param3;
+            return consumed;
           }
-          this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+          this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, parentY, this, 19223, parentX);
           var8 = ByteArrayPoolHelpers.draggedWidget;
           if (var8 != null) {
             if (var8.listener instanceof WidgetDropListener) {
@@ -284,24 +284,24 @@ class Widget extends IntrusiveNode {
             }
             ByteArrayPoolHelpers.draggedWidget = null;
           }
-          var6Lifetime10 = -57 % ((56 - param2) / 43);
+          var6Lifetime10 = -57 % ((56 - obfuscationGuard) / 43);
           ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
           MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-          return param3;
+          return consumed;
         }
         if (0 != GameplayAudioEvent.mouseWheelDelta) {
           if (var5 == 0) {
             regionExit1: {
               if (BackgroundScene.pressedButton != 0) {
-                if (this.handlePointerPress(this, LoadingProgressDialog.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
-                  param3 = false;
+                if (this.handlePointerPress(this, LoadingProgressDialog.pressX, parentX, parentY, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
+                  consumed = false;
                   if (var7 == 0) {
                     break regionExit1;
                   }
                 }
                 if (0 == MatchingTextValidator.heldButton &&
                   ScrollPaneWithFooter.field_Pb != 0) {
-                  this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+                  this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, parentY, this, 19223, parentX);
                   var9 = ByteArrayPoolHelpers.draggedWidget;
                   if (var9 != null) {
                     if (!(var9.listener instanceof WidgetDropListener)) {
@@ -312,25 +312,25 @@ class Widget extends IntrusiveNode {
                     }
                   }
                 }
-                var6Lifetime1 = -57 % ((56 - param2) / 43);
+                var6Lifetime1 = -57 % ((56 - obfuscationGuard) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
                 MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-                return param3;
+                return consumed;
               }
             }
             if (0 != MatchingTextValidator.heldButton) {
-              var6Lifetime1Lifetime1 = -57 % ((56 - param2) / 43);
+              var6Lifetime1Lifetime1 = -57 % ((56 - obfuscationGuard) / 43);
               ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
               MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-              return param3;
+              return consumed;
             }
             if (ScrollPaneWithFooter.field_Pb == 0) {
-              var6Lifetime1Lifetime2 = -57 % ((56 - param2) / 43);
+              var6Lifetime1Lifetime2 = -57 % ((56 - obfuscationGuard) / 43);
               ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
               MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-              return param3;
+              return consumed;
             }
-            this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+            this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, parentY, this, 19223, parentX);
             var10 = ByteArrayPoolHelpers.draggedWidget;
             if (var10 != null) {
               if (var10.listener instanceof WidgetDropListener) {
@@ -338,72 +338,72 @@ class Widget extends IntrusiveNode {
               }
               ByteArrayPoolHelpers.draggedWidget = null;
             }
-            var6Lifetime1Lifetime3 = -57 % ((56 - param2) / 43);
+            var6Lifetime1Lifetime3 = -57 % ((56 - obfuscationGuard) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
             MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-            return param3;
+            return consumed;
           }
-          this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, ResourcePreparationEntry.pointerY, this, param1);
+          this.handleMouseWheel(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, parentY, -127, ResourcePreparationEntry.pointerY, this, parentX);
         }
         regionExit2: {
           if (BackgroundScene.pressedButton != 0) {
-            if (this.handlePointerPress(this, LoadingProgressDialog.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
-              param3 = false;
+            if (this.handlePointerPress(this, LoadingProgressDialog.pressX, parentX, parentY, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
+              consumed = false;
               if (var7 == 0) {
                 break regionExit2;
               }
             }
             if (var5 == 0) {
               if (0 != MatchingTextValidator.heldButton) {
-                var6Lifetime2 = -57 % ((56 - param2) / 43);
+                var6Lifetime2 = -57 % ((56 - obfuscationGuard) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
                 MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-                return param3;
+                return consumed;
               }
               if (ScrollPaneWithFooter.field_Pb == 0) {
-                var6Lifetime2Lifetime1 = -57 % ((56 - param2) / 43);
+                var6Lifetime2Lifetime1 = -57 % ((56 - obfuscationGuard) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
                 MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-                return param3;
+                return consumed;
               }
-              this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+              this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, parentY, this, 19223, parentX);
               var11 = ByteArrayPoolHelpers.draggedWidget;
               if (var11 == null) {
-                var6Lifetime2Lifetime2 = -57 % ((56 - param2) / 43);
+                var6Lifetime2Lifetime2 = -57 % ((56 - obfuscationGuard) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
                 MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-                return param3;
+                return consumed;
               }
               if (!(var11.listener instanceof WidgetDropListener)) {
                 ByteArrayPoolHelpers.draggedWidget = null;
-                var6Lifetime2Lifetime3 = -57 % ((56 - param2) / 43);
+                var6Lifetime2Lifetime3 = -57 % ((56 - obfuscationGuard) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
                 MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-                return param3;
+                return consumed;
               }
               ((WidgetDropListener) (var11.listener)).onDrop(-24178, var11, (DropTargetWidget) null);
               ByteArrayPoolHelpers.draggedWidget = null;
-              var6Lifetime2Lifetime4 = -57 % ((56 - param2) / 43);
+              var6Lifetime2Lifetime4 = -57 % ((56 - obfuscationGuard) / 43);
               ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
               MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-              return param3;
+              return consumed;
             }
             this.clearFocus(false);
           }
         }
         if (0 != MatchingTextValidator.heldButton) {
-          var6Lifetime3 = -57 % ((56 - param2) / 43);
+          var6Lifetime3 = -57 % ((56 - obfuscationGuard) / 43);
           ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
           MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-          return param3;
+          return consumed;
         }
         if (ScrollPaneWithFooter.field_Pb == 0) {
-          var6Lifetime4 = -57 % ((56 - param2) / 43);
+          var6Lifetime4 = -57 % ((56 - obfuscationGuard) / 43);
           ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
           MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-          return param3;
+          return consumed;
         }
-        this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+        this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, parentY, this, 19223, parentX);
         var12 = ByteArrayPoolHelpers.draggedWidget;
         if (var12 != null) {
           if (var12.listener instanceof WidgetDropListener) {
@@ -411,20 +411,20 @@ class Widget extends IntrusiveNode {
           }
           ByteArrayPoolHelpers.draggedWidget = null;
         }
-        var6Lifetime5 = -57 % ((56 - param2) / 43);
+        var6Lifetime5 = -57 % ((56 - obfuscationGuard) / 43);
         ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
         MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
-        return param3;
+        return consumed;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, Widget param5, int param6) {
+    boolean handleMouseWheel(int wheelDelta, int pointerX, int parentY, int obfuscationGuard, int pointerY, Widget focusRoot, int parentX) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 <= -125) {
+          if (obfuscationGuard <= -125) {
             return false;
           }
           this.textLayout = (WidgetTextLayout) null;
@@ -433,13 +433,13 @@ class Widget extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_6_0 = var8;
-          stackIn_6_1 = new StringBuilder().append("oc.SA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_6_1 = new StringBuilder().append("oc.SA(").append(wheelDelta).append(',').append(pointerX).append(',').append(parentY).append(',').append(obfuscationGuard).append(',').append(pointerY).append(',');
+          if (focusRoot == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -449,7 +449,7 @@ class Widget extends IntrusiveNode {
           FullscreenDialogHelpers.renderRateDiagnosticLine = new DiagnosticTextLine();
           PopupWidgetLayer.heapDiagnosticLine = new DiagnosticTextLine();
           if (obfuscationGuard != 1) {
-            Widget.c(16);
+            Widget.clearSharedReferences(16);
           }
           LoginCredentials.diagnosticLines = new NodeDeque();
         } catch (RuntimeException initializationFailure) {
@@ -462,24 +462,24 @@ class Widget extends IntrusiveNode {
           if (obfuscationGuard == -11) {
             return;
           }
-          this.a(5, -67, -79, true);
+          this.processPointerInput(5, -67, -79, true);
           return;
         }
         if (null == this.renderer) {
           if (obfuscationGuard == -11) {
             return;
           }
-          this.a(5, -67, -79, true);
+          this.processPointerInput(5, -67, -79, true);
           return;
         }
         this.renderer.paintWidget(true, obfuscationGuard - 20607, parentX, this, parentY);
         if (obfuscationGuard == -11) {
           return;
         }
-        this.a(5, -67, -79, true);
+        this.processPointerInput(5, -67, -79, true);
     }
 
-    StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(int indent, Hashtable visited, int obfuscationGuard, StringBuilder builder) {
         RuntimeException var5 = null;
         StringBuilder stackIn_2_0 = null;
         StringBuilder stackIn_6_0 = null;
@@ -490,27 +490,27 @@ class Widget extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != 24) {
+          if (obfuscationGuard != 24) {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(param3, 1595637992, param0, param1)) {
-            this.a(param1, param0, 0, param3);
+          if (this.beginDebugEntry(builder, 1595637992, indent, visited)) {
+            this.appendDebugSummary(visited, indent, 0, builder);
           }
-          stackIn_6_0 = (StringBuilder) (param3);
+          stackIn_6_0 = (StringBuilder) (builder);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("oc.UA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("oc.UA(").append(indent).append(',');
+          if (visited == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',');
+          if (builder == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -519,7 +519,7 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    final boolean a(StringBuilder param0, int param1, int param2, Hashtable param3) {
+    final boolean beginDebugEntry(StringBuilder builder, int obfuscationGuard, int indent, Hashtable visited) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -529,27 +529,27 @@ class Widget extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 1595637992) {
+          if (obfuscationGuard != 1595637992) {
             this.y = -128;
           }
-          if (!param3.containsKey(this)) {
-            param3.put(this, this);
+          if (!visited.containsKey(this)) {
+            visited.put(this, this);
             return true;
           }
-          discarded$1 = param0.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
+          discarded$1 = builder.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("oc.EA(");
-          if (param0 == null) {
+          if (builder == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(indent).append(',');
+          if (visited == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -558,36 +558,36 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    final boolean a(char param0, int param1, boolean param2) {
+    final boolean handleKeyInput(char character, int keyCode, boolean flag) {
         int var4 = 0;
         int var4Lifetime1;
         if (!this.isFocused(-86)) {
-          var4 = param1;
+          var4 = keyCode;
           if (var4 == 80) {
             return this.tryFocus(true, this);
           }
-          if (param2) {
+          if (flag) {
             return false;
           }
           field_p = -38L;
           return false;
         }
-        if (this.handleWidgetKey(param1, (byte) 110, this, param0)) {
+        if (this.handleWidgetKey(keyCode, (byte) 110, this, character)) {
           return true;
         }
-        var4Lifetime1 = param1;
+        var4Lifetime1 = keyCode;
         if (var4Lifetime1 == 80) {
           return this.tryFocus(true, this);
         }
-        if (param2) {
+        if (flag) {
           return false;
         }
         field_p = -38L;
         return false;
     }
 
-    int e(byte param0) {
-        int var2 = 88 / ((-17 - param0) / 43);
+    int getTopLayer(byte obfuscationGuard) {
+        int var2 = 88 / ((-17 - obfuscationGuard) / 43);
         return 0;
     }
 
@@ -598,8 +598,8 @@ class Widget extends IntrusiveNode {
         return false;
     }
 
-    final static void c(byte param0) {
-        if (param0 >= -12) {
+    final static void resetEnabledFeatureMask(byte obfuscationGuard) {
+        if (obfuscationGuard >= -12) {
           Widget.drawPowerUpMeter(89, -103, -10, (PlayerBoard) null, (MultiplayerMatch) null, (byte) 67);
           ClientResourceHelpers.enabledFeatureMask = 0;
           return;
@@ -610,7 +610,7 @@ class Widget extends IntrusiveNode {
     final static void a(PlatformServices param0, byte param1, java.awt.Canvas param2) {
         try {
           ChatLobbyUiHelpers.field_f = new MidiSynthesizer();
-          ChatLobbyUiHelpers.field_f.b(0, 9, 128);
+          ChatLobbyUiHelpers.field_f.setInitialProgram(0, 9, 128);
           MeshAudioHelpers.a(22050, true, ChatLobbyUiHelpers.field_f, param0, 1024, (java.awt.Component) ((Object) param2));
           if (param1 != 60) {
             field_y = (int[]) null;
@@ -620,11 +620,11 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_x = null;
         field_u = null;
         field_y = null;
-        if (param0 == -14711) {
+        if (obfuscationGuard == -14711) {
           field_v = null;
           textChoiceBodyFont = null;
           field_k = null;
@@ -649,7 +649,7 @@ class Widget extends IntrusiveNode {
           if (obfuscationGuard == 0) {
             return false;
           }
-          this.e((byte) -99);
+          this.getTopLayer((byte) -99);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -724,11 +724,11 @@ class Widget extends IntrusiveNode {
 
     void clearFocus(boolean obfuscationGuard) {
         if (obfuscationGuard) {
-          Widget.c(-57);
+          Widget.clearSharedReferences(-57);
         }
     }
 
-    final void a(Hashtable param0, int param1, int param2, StringBuilder param3) {
+    final void appendDebugSummary(Hashtable visited, int indent, int obfuscationGuard, StringBuilder builder) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -747,39 +747,39 @@ class Widget extends IntrusiveNode {
         int var6 = 0;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
+          discarded$0 = builder.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
           if (null != this.text) {
-            discarded$1 = param3.append(" text=\"").append(this.text).append('"');
+            discarded$1 = builder.append(" text=\"").append(this.text).append('"');
           }
           if (this.mouseOver) {
-            discarded$2 = param3.append(" mouseover");
+            discarded$2 = builder.append(" mouseover");
           }
           if (this.isFocused(-102)) {
-            discarded$3 = param3.append(" focused");
+            discarded$3 = builder.append(" focused");
           }
-          if (param2 != 0) {
-            this.a((Hashtable) null, 44, -5, (StringBuilder) null);
+          if (obfuscationGuard != 0) {
+            this.appendDebugSummary((Hashtable) null, 44, -5, (StringBuilder) null);
           }
           if (this.renderer != null) {
-            discarded$4 = param3.append(" renderer=");
+            discarded$4 = builder.append(" renderer=");
             if (!(this.renderer instanceof Widget)) {
-              discarded$5 = param3.append(this.renderer);
+              discarded$5 = builder.append(this.renderer);
               if (var6 != 0) {
-                param3 = this.a(param1 + 1, param0, 24, param3);
+                builder = this.appendDebugTree(indent + 1, visited, 24, builder);
               }
             } else {
-              param3 = this.a(param1 + 1, param0, 24, param3);
+              builder = this.appendDebugTree(indent + 1, visited, 24, builder);
             }
           }
           if (null != this.listener) {
-            discarded$6 = param3.append(" listener=");
+            discarded$6 = builder.append(" listener=");
             if (!(this.listener instanceof Widget)) {
-              discarded$7 = param3.append(this.listener);
+              discarded$7 = builder.append(this.listener);
               if (var6 != 0) {
-                param3 = this.a(1 + param1, param0, 24, param3);
+                builder = this.appendDebugTree(1 + indent, visited, 24, builder);
               }
             } else {
-              param3 = this.a(1 + param1, param0, 24, param3);
+              builder = this.appendDebugTree(1 + indent, visited, 24, builder);
             }
           }
           return;
@@ -788,13 +788,13 @@ class Widget extends IntrusiveNode {
           var5 = decompiledCaughtException;
           stackIn_24_0 = var5;
           stackIn_24_1 = new StringBuilder().append("oc.LA(");
-          if (param0 == null) {
+          if (visited == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(indent).append(',').append(obfuscationGuard).append(',');
+          if (builder == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";

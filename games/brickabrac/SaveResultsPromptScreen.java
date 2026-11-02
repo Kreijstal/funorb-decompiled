@@ -33,7 +33,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -81, 45);
         if (obfuscationGuard <= -14) {
           ContextActionController.field_g.drawParagraph(this.promptText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
-          this.a(0);
+          this.drawEnabledButtons(0);
           return;
         }
     }
@@ -146,7 +146,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         }
     }
 
-    final static void a(IntArrayRequestHelpers param0, int param1, int param2) {
+    final static void writeIntArrayRequest(IntArrayRequestHelpers request, int opcode, int obfuscationGuard) {
         BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -155,10 +155,10 @@ final class SaveResultsPromptScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = TextFieldValidator.outgoingPackets;
-          var3.writeCipheredOpcode(-13413, param1);
-          var3.writeByte(85, param0.field_i);
-          var3.writeShort((byte) 122, param0.field_k);
-          if (param2 == 49) {
+          var3.writeCipheredOpcode(-13413, opcode);
+          var3.writeByte(85, request.field_i);
+          var3.writeShort((byte) 122, request.field_k);
+          if (obfuscationGuard == 49) {
             return;
           }
           field_r = (String) null;
@@ -168,12 +168,12 @@ final class SaveResultsPromptScreen extends MenuScreen {
           var3_ref = decompiledCaughtException;
           stackIn_5_0 = var3_ref;
           stackIn_5_1 = new StringBuilder().append("hq.D(");
-          if (param0 == null) {
+          if (request == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(opcode).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
         int var5 = 0;
-        int var4 = WidgetGroup.a(SpriteInputHelpers.pendingAchievementMask, -1) ? 1 : 0;
+        int var4 = WidgetGroup.containsNonzeroInFirstEight(SpriteInputHelpers.pendingAchievementMask, -1) ? 1 : 0;
         if (obfuscationGuard >= 96) {
           var5 = null != VerticalScrollbar.field_Ub ? 1 : 0;
           this.promptText = PauseMenuScreen.field_w + " " + BytePayloadRequest.replaceCharacter(-1, GamePresentationHelpers.formatIndexedText(AchievementBrowserScreen.buildSavePrompt(var4 != 0, var5 != 0, false, 126), new String[]{DesertBackground.field_r}, (byte) 103), '#', "<br><br>");
@@ -218,16 +218,16 @@ final class SaveResultsPromptScreen extends MenuScreen {
     final void navigateBack(int obfuscationGuard) {
         if (obfuscationGuard != -1) {
           IntArrayRequestHelpers var3 = (IntArrayRequestHelpers) null;
-          SaveResultsPromptScreen.a((IntArrayRequestHelpers) null, -66, -20);
+          SaveResultsPromptScreen.writeIntArrayRequest((IntArrayRequestHelpers) null, -66, -20);
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         validationPending = null;
         field_u = null;
         field_x = null;
         field_y = null;
-        if (param0 == 550) {
+        if (obfuscationGuard == 550) {
           packCardIcons = null;
           field_r = null;
           field_t = null;

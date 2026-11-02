@@ -19,10 +19,10 @@ final class GameplayRenderHelpers {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         lobbyPlayers = null;
         fullscreenCanvas = null;
-        if (param0 == 2) {
+        if (obfuscationGuard == 2) {
           field_a = null;
           field_b = null;
           field_e = null;

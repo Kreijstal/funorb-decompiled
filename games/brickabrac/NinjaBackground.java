@@ -11,8 +11,8 @@ final class NinjaBackground extends BackgroundScene {
     static String emailLocalAtomCharacters;
     static boolean uiHoverClaimed;
 
-    final RgbSprite c(byte param0) {
-        if (param0 >= -74) {
+    final RgbSprite getCharacterSprite(byte obfuscationGuard) {
+        if (obfuscationGuard >= -74) {
           this.drawPreview((byte) 57, -62, 109, 2);
           return ObjectHistoryBuffer.ninjaCharacterSprite;
         }
@@ -59,11 +59,11 @@ final class NinjaBackground extends BackgroundScene {
         super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_s = null;
         emailLocalAtomCharacters = null;
         mouseWheelSource = null;
-        int var1 = -103 % ((-61 - param0) / 57);
+        int var1 = -103 % ((-61 - obfuscationGuard) / 57);
         pendingLevelResults = null;
         field_w = null;
         parisNearSprite = null;
@@ -71,7 +71,7 @@ final class NinjaBackground extends BackgroundScene {
 
     final boolean hasSprites(byte obfuscationGuard) {
         if (obfuscationGuard >= -91) {
-          NinjaBackground.a(-41, -77, (byte) -108, -18);
+          NinjaBackground.dispatchKeyToActiveUi(-41, -77, (byte) -108, -18);
           if (null == LegacyUtf8Decoder.ninjaNearSprite) {
             return false;
           }
@@ -135,8 +135,8 @@ final class NinjaBackground extends BackgroundScene {
         }
     }
 
-    final static void e(byte param0) {
-        int var1 = 35 / ((-43 - param0) / 37);
+    final static void showLoadingProgressDialog(byte obfuscationGuard) {
+        int var1 = 35 / ((-43 - obfuscationGuard) / 37);
         ResourceArchive.field_f.hideLayers(-125);
         if (null != ChatLobbyUiHelpers.loadingProgressDialog) {
           ResourceArchive.field_f.pushLayer(-76, ChatLobbyUiHelpers.loadingProgressDialog);
@@ -198,24 +198,24 @@ final class NinjaBackground extends BackgroundScene {
         }
     }
 
-    final static boolean a(int param0, int param1, byte param2, int param3) {
+    final static boolean dispatchKeyToActiveUi(int argument0, int argument1, byte obfuscationGuard, int argument3) {
         if (TextWidgetRenderer.field_e) {
-          return PacketReceiveHelpers.field_a.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
+          return PacketReceiveHelpers.field_a.handleKeyInput(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
         }
         if (TooltipSprite.quickChatMenuOpen) {
-          return InteractiveGameClient.a(param1, 102, param0);
+          return InteractiveGameClient.a(argument1, 102, argument0);
         }
-        if (BytePayloadSubmission.a(param1, 11, param0)) {
+        if (BytePayloadSubmission.a(argument1, 11, argument0)) {
           return true;
         }
         if (PlayerNameChooserPanel.field_I) {
           return false;
         }
-        if (param2 == 108) {
-          return ButtonWidgetRenderer.a(false, param3, param1);
+        if (obfuscationGuard == 108) {
+          return ButtonWidgetRenderer.a(false, argument3, argument1);
         }
         parisNearSprite = (RgbSprite) null;
-        return ButtonWidgetRenderer.a(false, param3, param1);
+        return ButtonWidgetRenderer.a(false, argument3, argument1);
     }
 
     static {

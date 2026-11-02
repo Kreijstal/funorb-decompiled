@@ -38,7 +38,7 @@ final class OptionsScreen extends FramedMenuScreen {
           BallPulseEffect.framebuffer.bindRaster((byte) 124);
           var7 = new RgbSprite(var4_int * param1, var5 * param1);
           var7.bindRasterTarget();
-          var6.a(0, 0, param1 * var4_int, param1 * var5);
+          var6.drawScaled(0, 0, param1 * var4_int, param1 * var5);
           DualLinkDeque.outlineRasterRegion(var5 * param1, 0, param1 * var4_int, param0 ^ 2, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 126);
           if (param3) {
@@ -91,17 +91,17 @@ final class OptionsScreen extends FramedMenuScreen {
         if (obfuscationGuard > -14) {
           return;
         }
-        AchievementMaskRequest.a(this.screenId, 19);
+        AchievementMaskRequest.drawHorizontallyCenteredSprite(this.screenId, 19);
         this.drawMenuFrame(68);
-        this.a(0);
+        this.drawEnabledButtons(0);
     }
 
-    public static void c(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         desertFarSprite = null;
         field_u = null;
         progressRequests = null;
         field_v = null;
-        if (param0) {
+        if (obfuscationGuard) {
           return;
         }
         field_A = null;

@@ -34,35 +34,35 @@ final class LevelSequence {
         return this.pack.metadata[this.getLevelId(levelIndex, true)].title;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_g = null;
-        if (param0 <= 47) {
-          LevelSequence.a(97, -60, 47, -79);
+        if (obfuscationGuard <= 47) {
+          LevelSequence.dispatchCancelKey(97, -60, 47, -79);
           field_a = null;
           return;
         }
         field_a = null;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
-        if (param1 != -1) {
+    final static boolean dispatchCancelKey(int argument0, int obfuscationGuard, int argument2, int argument3) {
+        if (obfuscationGuard != -1) {
           return true;
         }
         if (null != GameRenderAudioHelpers.contextActions &&
-          GameRenderAudioHelpers.contextActions.handleContextCancelKey(param1 ^ -2100)) {
-          ActivityIndicatorWidget.f((byte) -123);
+          GameRenderAudioHelpers.contextActions.handleContextCancelKey(obfuscationGuard ^ -2100)) {
+          ActivityIndicatorWidget.closeContextActions((byte) -123);
           return true;
         }
         if (CircleBody.reportAbuseDialog != null &&
           CircleBody.reportAbuseDialog.handleCancelKey((byte) 119)) {
           CircleBody.reportAbuseDialog = null;
-          ActivityIndicatorWidget.f((byte) -55);
+          ActivityIndicatorWidget.closeContextActions((byte) -55);
           return true;
         }
-        if (DateFieldsWidget.j((byte) -60)) {
+        if (DateFieldsWidget.handleNameEntryKey((byte) -60)) {
           return true;
         }
-        if (NinjaBackground.a(param3, param0, (byte) 108, param2)) {
+        if (NinjaBackground.dispatchKeyToActiveUi(argument3, argument0, (byte) 108, argument2)) {
           return true;
         }
         return false;

@@ -12,13 +12,13 @@ final class NodeDequeCursor {
     static int[][] boardScaleDivisorsByPlayerCount;
     static RgbSprite field_b;
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_b = null;
         field_i = null;
         constructionSegsSprites = (RgbSprite[][]) null;
         boardScaleDivisorsByPlayerCount = (int[][]) null;
         boardLayoutYByPlayerCount = (int[][]) null;
-        if (param0 > 23) {
+        if (obfuscationGuard > 23) {
           boardLayoutXByPlayerCount = (int[][]) null;
           return;
         }

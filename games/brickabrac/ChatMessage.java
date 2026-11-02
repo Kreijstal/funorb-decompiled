@@ -71,7 +71,7 @@ final class ChatMessage {
           }
           normalized = new StringBuilder(trimmedLength);
           if (obfuscationGuard < 46) {
-            ChatMessage.a(-114);
+            ChatMessage.clearSharedReferences(-114);
           }
           for (characterIndex = startIndex; characterIndex < endIndex; characterIndex++) {
             character = name.charAt(characterIndex);
@@ -122,9 +122,9 @@ final class ChatMessage {
         return 2;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_l = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           receivedChatKeyHigh16 = -77;
         }
         field_i = null;

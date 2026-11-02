@@ -62,7 +62,7 @@ final class ActivityIndicatorWidget extends Widget {
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           rightEdge = x + this.width;
-          MovingBody.a((byte) 107, rightEdge - this.rightCapMask.width, x + this.rightCapMask.width, y, y + this.height);
+          MovingBody.pushRasterIntersectClip((byte) 107, rightEdge - this.rightCapMask.width, x + this.rightCapMask.width, y, y + this.height);
           tileX = x - this.phaseTick;
           if (obfuscationGuard > -56) {
             this.capWorkSurface = (RgbSprite) null;
@@ -76,7 +76,7 @@ final class ActivityIndicatorWidget extends Widget {
             IndexedSpriteGeometry.pushSpriteRaster(-112, this.capWorkSurface);
             stripes.drawTransparent(-this.phaseTick, 0);
             stripes.drawTransparent(this.phaseSpan * 2 - this.phaseTick, 0);
-            this.leftCapMask.b(0, 0);
+            this.leftCapMask.drawMultipliedOntoDestination(0, 0);
             RasterStackHelpers.popRaster(-109);
             this.capWorkSurface.drawTransparent(x, y);
           }
@@ -86,7 +86,7 @@ final class ActivityIndicatorWidget extends Widget {
             }
             stripes.drawTransparent(-rightCapPhase, 0);
             stripes.drawTransparent(-rightCapPhase + 2 * this.phaseSpan, 0);
-            this.rightCapMask.b(0, 0);
+            this.rightCapMask.drawMultipliedOntoDestination(0, 0);
             RasterStackHelpers.popRaster(-117);
             this.capWorkSurface.drawTransparent(rightEdge - this.rightCapMask.width, y);
             return;
@@ -117,10 +117,10 @@ final class ActivityIndicatorWidget extends Widget {
         this.rebuildActivitySprites(-1847795903);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_D = null;
         backgroundSurfacePool1280 = null;
-        if (param0 <= 36) {
+        if (obfuscationGuard <= 36) {
           backgroundSurfacePool1280 = (NodeDeque) null;
         }
     }
@@ -135,12 +135,12 @@ final class ActivityIndicatorWidget extends Widget {
         }
     }
 
-    final static void f(byte param0) {
+    final static void closeContextActions(byte obfuscationGuard) {
         if (null != GameRenderAudioHelpers.contextActions &&
           GameRenderAudioHelpers.contextActions.anchorComponent != null) {
           GameRenderAudioHelpers.contextActions.anchorComponent.selected = false;
         }
-        if (param0 >= -39) {
+        if (obfuscationGuard >= -39) {
           ActivityIndicatorWidget.flushTransportPackets(0, 110);
         }
         ClientResourceHelpers.field_b = null;
@@ -305,7 +305,7 @@ final class ActivityIndicatorWidget extends Widget {
         int destinationY = parentY + this.y;
         this.drawStripedBar(destinationX, destinationY, this.stripeSprites[0], -63);
         if (65536 > this.progressFraction65536) {
-          MovingBody.a((byte) 118, this.width + destinationX, destinationX + (this.progressFraction65536 * this.width >> 16), destinationY, this.height + destinationY);
+          MovingBody.pushRasterIntersectClip((byte) 118, this.width + destinationX, destinationX + (this.progressFraction65536 * this.width >> 16), destinationY, this.height + destinationY);
           this.drawStripedBar(destinationX, destinationY, this.stripeSprites[1], obfuscationGuard ^ 92);
           RasterStackHelpers.popRaster(-102);
         }

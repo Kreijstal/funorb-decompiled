@@ -31,7 +31,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
             stackIn_4_0 = LinkWidgetRenderer.field_c;
             return stackIn_4_0;
           }
-          var3 = NumericLoginCredentials.b(140);
+          var3 = NumericLoginCredentials.getLoginMethodPreferences(140);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5.matchesCookieValue(var2, param1 + 28554)) {
@@ -67,10 +67,10 @@ final class MultiValueSliderWidget extends FocusableWidget {
         return this.values.size(true);
     }
 
-    public static void j(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_K = null;
         field_N = null;
-        if (param0 != 18724) {
+        if (obfuscationGuard != 18724) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           MultiValueSliderWidget.a((java.applet.Applet) null, 5);
         }
@@ -161,7 +161,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
             var5 = packet;
             wordCount = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
             for (wordIndex = 0; wordCount > wordIndex; wordIndex++) {
-              var10[wordIndex] = ((PacketBuffer) ((Object) var5)).readInt(LevelResultSubmission.a(obfuscationGuard, -256));
+              var10[wordIndex] = ((PacketBuffer) ((Object) var5)).readInt(LevelResultSubmission.bitwiseXor(obfuscationGuard, -256));
             }
             maskRequest = (AchievementMaskRequest) (StrongCacheEntry.pendingAchievementMaskRequests.first(obfuscationGuard - 84));
             if (maskRequest == null) {
@@ -265,8 +265,8 @@ final class MultiValueSliderWidget extends FocusableWidget {
         }
     }
 
-    final static int i(int param0) {
-        if (param0 != -29946) {
+    final static int getMusicGain(int obfuscationGuard) {
+        if (obfuscationGuard != -29946) {
           return -15;
         }
         return ScorePopup.field_p;

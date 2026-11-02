@@ -48,9 +48,9 @@ final class LobbyInputHelpers {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         specialMusicPatchArchive = null;
-        if (param0) {
+        if (obfuscationGuard) {
           return;
         }
         field_c = null;

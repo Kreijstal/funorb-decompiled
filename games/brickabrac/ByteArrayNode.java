@@ -9,16 +9,16 @@ final class ByteArrayNode extends IntrusiveNode {
 
     final static RgbSprite[] a(int param0, byte param1, int param2) {
         if (param1 == -18) {
-          return GameTransportHelpers.a(param2, param0, 1, param1 ^ 24);
+          return GameTransportHelpers.createSolidSpriteGrid(param2, param0, 1, param1 ^ 24);
         }
         CharSequence var4 = (CharSequence) null;
         ByteArrayNode.a(21, (CharSequence) null);
-        return GameTransportHelpers.a(param2, param0, 1, param1 ^ 24);
+        return GameTransportHelpers.createSolidSpriteGrid(param2, param0, 1, param1 ^ 24);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_j = null;
-        int var1 = 10 / ((param0 + 33) / 35);
+        int var1 = 10 / ((obfuscationGuard + 33) / 35);
         volcanicFarSprite = null;
         field_l = null;
     }

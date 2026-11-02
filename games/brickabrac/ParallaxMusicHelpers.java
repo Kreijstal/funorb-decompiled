@@ -5,8 +5,8 @@ final class ParallaxMusicHelpers {
     static WidgetLayerStack field_b;
     static int fireworkSpawnMaxY;
 
-    public static void b(int param0) {
-        int var1 = 32 / ((-29 - param0) / 41);
+    public static void clearSharedReferences(int obfuscationGuard) {
+        int var1 = 32 / ((-29 - obfuscationGuard) / 41);
         field_b = null;
     }
 

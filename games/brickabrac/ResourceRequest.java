@@ -32,9 +32,9 @@ abstract class ResourceRequest extends DualLinkNode {
         CheckboxWidgetRenderer.a(4, true);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_A = null;
-        if (param0 <= 1) {
+        if (obfuscationGuard <= 1) {
           QuickChatCategoryDefinition var2 = (QuickChatCategoryDefinition) null;
           ResourceRequest.setQuickChatHelpEntry((QuickChatCategoryDefinition) null, true);
           field_z = null;
@@ -46,7 +46,7 @@ abstract class ResourceRequest extends DualLinkNode {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         param7 = -param7 + 256;
         if (param3 != 2) {
-          ResourceRequest.a((byte) -88);
+          ResourceRequest.clearSharedReferences((byte) -88);
         }
         param4 = 256 - param4;
         if (param8 != 0) {

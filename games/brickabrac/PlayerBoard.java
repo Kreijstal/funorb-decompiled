@@ -452,9 +452,9 @@ final class PlayerBoard extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_jb = (String[][]) null;
-        if (param0 != -2947) {
+        if (obfuscationGuard != -2947) {
           field_jb = (String[][]) null;
         }
     }

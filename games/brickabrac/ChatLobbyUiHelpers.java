@@ -145,7 +145,7 @@ final class ChatLobbyUiHelpers {
               if (0L > maxAgeSeconds) {
                 cookieWithLifetime = cookieAttributes + "; Discard;";
               } else {
-                cookieWithLifetime = cookieAttributes + "; Expires=" + AppletGameShell.a((byte) -75, MonotonicTime.nowMillis(false) + maxAgeSeconds * 1000L) + "; Max-Age=" + maxAgeSeconds;
+                cookieWithLifetime = cookieAttributes + "; Expires=" + AppletGameShell.formatTimestamp((byte) -75, MonotonicTime.nowMillis(false) + maxAgeSeconds * 1000L) + "; Max-Age=" + maxAgeSeconds;
               }
               AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieWithLifetime + "\"", 5797);
             } catch (java.lang.Throwable caughtBrowserFailure) {
@@ -538,12 +538,12 @@ final class ChatLobbyUiHelpers {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_f = null;
         chatMessageStyle = null;
         friendsStatusLabel = null;
         field_c = null;
-        if (param0 != 11) {
+        if (obfuscationGuard != 11) {
           friendsStatusLabel = (UiComponent) null;
         }
         field_g = null;

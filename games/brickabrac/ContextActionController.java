@@ -30,7 +30,7 @@ final class ContextActionController {
           if (8 != actionId ||
             unusedGameFlag != 0) {
             if (18 == actionId) {
-              BitPacketBuffer.a(21846, this.targetName, this.targetId);
+              BitPacketBuffer.selectQuickChatRecipient(21846, this.targetName, this.targetId);
             }
             if (18 != actionId ||
               unusedGameFlag != 0) {
@@ -47,12 +47,12 @@ final class ContextActionController {
                     }
                     if (remainingActionBranch) {
                       if (actionId == 20) {
-                        LevelPackLoader.a(4252);
+                        LevelPackLoader.resetQuickChatToDefaultMenu(4252);
                         remainingActionBranch = (unusedGameFlag != 0);
                       }
                       if (remainingActionBranch) {
                         if (19 == actionId) {
-                          QuickChatParameterType.a(this.suggestedPhraseIds, this.targetId, this.chatChannel, obfuscationGuard, this.targetName);
+                          QuickChatParameterType.openQuickChatForRecipient(this.suggestedPhraseIds, this.targetId, this.chatChannel, obfuscationGuard, this.targetName);
                           remainingActionBranch = (unusedGameFlag != 0);
                         }
                         if (remainingActionBranch) {
@@ -3490,16 +3490,16 @@ final class ContextActionController {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_f = null;
         worldDirectionZ = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         try {
           field_g = null;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + obfuscationGuard + ')');
         }
     }
 

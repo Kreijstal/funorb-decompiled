@@ -14,7 +14,7 @@ final class BlankScreen extends GameScreen {
     final void drawScreen(byte obfuscationGuard) {
         Rasterizer2D.clear();
         if (obfuscationGuard > -14) {
-          BlankScreen.a(-57);
+          BlankScreen.clearSharedReferences(-57);
         }
     }
 
@@ -24,10 +24,10 @@ final class BlankScreen extends GameScreen {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_k = null;
         field_h = null;
-        if (param0 != -2) {
+        if (obfuscationGuard != -2) {
           return;
         }
         friendIndex = null;

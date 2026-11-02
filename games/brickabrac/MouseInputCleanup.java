@@ -20,9 +20,9 @@ final class MouseInputCleanup {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         spaceLeverSprites = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           tooltipAnchorX = 50;
         }
     }

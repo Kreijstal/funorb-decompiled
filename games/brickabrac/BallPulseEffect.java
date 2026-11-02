@@ -13,11 +13,11 @@ final class BallPulseEffect extends IntrusiveNode {
     private int x256;
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_n = null;
         field_o = null;
         parisCharacterSprite = null;
-        int var1 = 82 % ((param0 - 35) / 55);
+        int var1 = 82 % ((obfuscationGuard - 35) / 55);
         arcticMidSprite = null;
         field_i = null;
         specialMusicTrackArchive = null;
@@ -65,15 +65,15 @@ final class BallPulseEffect extends IntrusiveNode {
         this.advance((byte) -61);
     }
 
-    final static RgbSprite[] a(int param0, boolean param1) {
+    final static RgbSprite[] createSolidCenterSpriteGrid(int color, boolean obfuscationGuard) {
         RgbSprite[] var3 = new RgbSprite[9];
         RgbSprite[] var2 = var3;
-        if (!param1) {
-          var3[4] = InvitationDialogHelpers.a(param0, 64, (byte) -6);
+        if (!obfuscationGuard) {
+          var3[4] = InvitationDialogHelpers.createSolidSprite(color, 64, (byte) -6);
           return var2;
         }
         BallPulseEffect.$cfr$intArgs$a$a948187ac0af(-5, false);
-        var3[4] = InvitationDialogHelpers.a(param0, 64, (byte) -6);
+        var3[4] = InvitationDialogHelpers.createSolidSprite(color, 64, (byte) -6);
         return var2;
     }
 
@@ -101,7 +101,7 @@ final class BallPulseEffect extends IntrusiveNode {
         var3 = var8.readUnsignedByte(obfuscationGuard + 188);
         TableQuickChatHelpers.receivedChatChannel = 127 & var3;
         if (obfuscationGuard != 67) {
-          BallPulseEffect.a(73, true);
+          BallPulseEffect.createSolidCenterSpriteGrid(73, true);
         }
         stackIn_5_0 = ((var3 & 128) != 0);
         IterableIntrusiveHashTable.receivedChatSystem = stackIn_5_0;
@@ -186,7 +186,7 @@ final class BallPulseEffect extends IntrusiveNode {
         var3 = var8.readUnsignedByte(param0 + 188);
         TableQuickChatHelpers.receivedChatChannel = 127 & var3;
         if (param0 != 67) {
-          BallPulseEffect.a(73, true);
+          BallPulseEffect.createSolidCenterSpriteGrid(73, true);
         }
         stackIn_5_0 = ((var3 & 128) != 0);
         IterableIntrusiveHashTable.receivedChatSystem = stackIn_5_0;

@@ -19,13 +19,13 @@ final class RadialSelectorWidget extends FocusableWidget {
     int selectedSector;
     static String field_M;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_V = null;
         field_M = null;
         encryptedPayloadScratch = null;
         field_P = null;
         field_S = null;
-        if (param0 >= 89) {
+        if (obfuscationGuard >= 89) {
           emailLoginKind = null;
           field_T = null;
           field_Y = null;
@@ -143,19 +143,19 @@ final class RadialSelectorWidget extends FocusableWidget {
           IntrusiveHashIterator.field_g = StatefulWidgetRenderer.field_v;
           if (param0 != 255) {
             if (param0 < 100) {
-              StateIconLabel.field_Rb = AchievementIcon.a(param0, -126, param2);
+              StateIconLabel.field_Rb = AchievementIcon.createAccountResponseWithMessage(param0, -126, param2);
               return;
             }
             if (param0 > 105) {
-              StateIconLabel.field_Rb = AchievementIcon.a(param0, -126, param2);
+              StateIconLabel.field_Rb = AchievementIcon.createAccountResponseWithMessage(param0, -126, param2);
               return;
             }
-            StateIconLabel.field_Rb = IntKeyIndex.a(-2079, param3);
+            StateIconLabel.field_Rb = IntKeyIndex.createAccountResponseWithSuggestions(-2079, param3);
             return;
           }
           stackIn_4_0 = true;
           stackIn_5_1 = !(Paddle.field_x >= 13);
-          StateIconLabel.field_Rb = LoginCredentialKind.a(stackIn_4_0, stackIn_5_1);
+          StateIconLabel.field_Rb = LoginCredentialKind.createAccountResponse(stackIn_4_0, stackIn_5_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

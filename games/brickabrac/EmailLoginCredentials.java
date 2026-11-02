@@ -11,9 +11,9 @@ final class EmailLoginCredentials extends LoginCredentials {
     static int fullscreenDialogButtonPaint;
     static boolean field_l;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         fireworkColorRamps = (int[][]) null;
-        if (param0) {
+        if (obfuscationGuard) {
           PacketBuffer var2 = (PacketBuffer) null;
           EmailLoginCredentials.decodeLobbyGame((LobbyGame) null, (PacketBuffer) null, -20, false);
         }
@@ -173,7 +173,7 @@ final class EmailLoginCredentials extends LoginCredentials {
             if (var6 < 0) {
               var6 = 0;
             }
-            fireworkColorRamps[var0][var3] = IntrusiveHashIterator.a(var6 * var2, 65280) + IntrusiveHashIterator.a(var1 * var6 >> 8, 16711934) + 1;
+            fireworkColorRamps[var0][var3] = IntrusiveHashIterator.bitwiseAnd(var6 * var2, 65280) + IntrusiveHashIterator.bitwiseAnd(var1 * var6 >> 8, 16711934) + 1;
           }
         }
     }

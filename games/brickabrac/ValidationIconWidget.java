@@ -33,10 +33,10 @@ final class ValidationIconWidget extends FocusableWidget {
           SaveResultsPromptScreen.validationPending != var8) {
           if (AccountMessageDialog.validationInvalid == var8) {
             var13 = AccountDateHelpers.field_a[2];
-            var13.f(-(var13.width >> 1) + var5, -(var13.height >> 1) + var6, 256);
+            var13.drawAdditive(-(var13.width >> 1) + var5, -(var13.height >> 1) + var6, 256);
           } else if (DualLinkIterator.validationValid == var8) {
             var14 = AccountDateHelpers.field_a[1];
-            var14.f(var5 - (var14.width >> 1), -(var14.height >> 1) + var6, 256);
+            var14.drawAdditive(var5 - (var14.width >> 1), -(var14.height >> 1) + var6, 256);
           }
         } else {
           var12 = AccountDateHelpers.field_a[0];
@@ -51,9 +51,9 @@ final class ValidationIconWidget extends FocusableWidget {
             IntrusiveHashIterator.field_c = new RgbSprite(var9, var10);
             IndexedSpriteGeometry.pushSpriteRaster(-87, IntrusiveHashIterator.field_c);
           }
-          var12.a(112, 144, var12.canvasWidth << 4, var12.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
+          var12.drawRotatedScaled(112, 144, var12.canvasWidth << 4, var12.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
           RasterStackHelpers.popRaster(-104);
-          IntrusiveHashIterator.field_c.f(-var12.canvasWidth + var5, -var12.canvasHeight + var6, 256);
+          IntrusiveHashIterator.field_c.drawAdditive(-var12.canvasWidth + var5, -var12.canvasHeight + var6, 256);
         }
     }
 
@@ -345,7 +345,7 @@ final class ValidationIconWidget extends FocusableWidget {
               if (PacketReceiveHelpers.ensureGamePacketBytes(20, var10Lifetime1)) {
                 var11 = ArchiveSourceManager.field_f.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  ArchiveSourceManager.field_f[var12] = LogoRenderHelpers.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.a(param6, 251));
+                  ArchiveSourceManager.field_f[var12] = LogoRenderHelpers.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.bitwiseXor(param6, 251));
                 }
                 GameTransportHelpers.closeGameTransport((byte) 79);
                 RadialSelectorRenderer.field_d = false;
@@ -416,13 +416,13 @@ final class ValidationIconWidget extends FocusableWidget {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_K = null;
         field_L = null;
         worldDirectionX = null;
         field_Q = null;
         invalidEmailMessage = null;
-        if (param0 != 2) {
+        if (obfuscationGuard != 2) {
           LobbyPlayer var2 = (LobbyPlayer) null;
           ValidationIconWidget.insertSortedLobbyPlayer((LobbyPlayer) null, -2);
         }

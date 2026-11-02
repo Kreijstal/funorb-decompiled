@@ -162,10 +162,10 @@ final class AchievementSubmission extends IntrusiveNode {
         return new int[]{0, 0, 0, cosYaw, 0, sinYaw, sinPitchSinYaw, cosPitch, -sinPitchCosYaw, -cosPitchSinYaw, sinPitch, cosPitchCosYaw};
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_l = null;
         friendsTabLabel = null;
-        int var1 = -115 % ((5 - param0) / 58);
+        int var1 = -115 % ((5 - obfuscationGuard) / 58);
         field_q = null;
     }
 

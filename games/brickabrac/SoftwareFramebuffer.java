@@ -27,10 +27,10 @@ abstract class SoftwareFramebuffer {
         Rasterizer2D.bind(this.pixels, this.width, this.height);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         tableNameScratch = null;
         field_e = null;
-        int var1 = 112 % ((param0 + 44) / 63);
+        int var1 = 112 % ((obfuscationGuard + 44) / 63);
     }
 
     final static void a(int param0, int param1, int param2, RgbSprite param3) {

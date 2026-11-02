@@ -74,7 +74,7 @@ final class UnderwaterBackground extends BackgroundScene {
           Under13RegistrationNoticePanel.field_P = UiGeometryHelpers.createScaledHalfSizeSprite(0, SocialTabbedPanel.field_b);
           AppletResourceHelpers.field_d = new RgbSprite(ResourceArchiveFactory.waterRaysSprite.canvasWidth / 2, ResourceArchiveFactory.waterRaysSprite.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-83, AppletResourceHelpers.field_d);
-          ResourceArchiveFactory.waterRaysSprite.a(0, 0, ResourceArchiveFactory.waterRaysSprite.canvasWidth / 2, ResourceArchiveFactory.waterRaysSprite.canvasHeight);
+          ResourceArchiveFactory.waterRaysSprite.drawScaled(0, 0, ResourceArchiveFactory.waterRaysSprite.canvasWidth / 2, ResourceArchiveFactory.waterRaysSprite.canvasHeight);
           RasterStackHelpers.popRaster(-114);
           SpriteInputHelpers.encodeBinaryMaskRuns(ConnectionPhase.waterFarSprite, 0);
           SpriteInputHelpers.encodeBinaryMaskRuns(SocialTabbedPanel.field_b, 0);
@@ -87,8 +87,8 @@ final class UnderwaterBackground extends BackgroundScene {
         return false;
     }
 
-    final RgbSprite c(byte param0) {
-        if (param0 >= -74) {
+    final RgbSprite getCharacterSprite(byte obfuscationGuard) {
+        if (obfuscationGuard >= -74) {
           field_t = (RgbSprite) null;
           return ConstructionBackground.waterCharacterSprite;
         }
@@ -113,7 +113,7 @@ final class UnderwaterBackground extends BackgroundScene {
           packet.backfillByteLength((byte) 126, -payloadStart + packet.position);
           return;
         }
-        UnderwaterBackground.d((byte) 3);
+        UnderwaterBackground.clearSharedReferences((byte) 3);
         packet.writeBytes(PowerUpWarning.matchmakingSettingMask, -1, 0, PowerUpWarning.matchmakingSettingMask.length);
         packet.backfillByteLength((byte) 126, -payloadStart + packet.position);
     }
@@ -128,10 +128,10 @@ final class UnderwaterBackground extends BackgroundScene {
           }
           var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 106);
           if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            IntegerPowerHelpers.a(BufferedFile.field_a, -13, 2, var8, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
+            IntegerPowerHelpers.renderBackdropSurface(BufferedFile.field_a, -13, 2, var8, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
             var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          BubbleDistortion.a(scroll16, WeightedLruCache.field_e, var8.sprite, 2, 2, GameplayScreen.field_l, -13, colorIndex, destinationY, destinationX, AppletResourceHelpers.field_d, 306);
+          BubbleDistortion.drawParallaxLayers(scroll16, WeightedLruCache.field_e, var8.sprite, 2, 2, GameplayScreen.field_l, -13, colorIndex, destinationY, destinationX, AppletResourceHelpers.field_d, 306);
           return;
         }
         if (!this.hasSprites((byte) -95)) {
@@ -140,10 +140,10 @@ final class UnderwaterBackground extends BackgroundScene {
         }
         RasterCacheSurface var9 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 106);
         if (!var9.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          IntegerPowerHelpers.a(BufferedFile.field_a, -13, 2, var9, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
+          IntegerPowerHelpers.renderBackdropSurface(BufferedFile.field_a, -13, 2, var9, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
           var9.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
-        BubbleDistortion.a(scroll16, WeightedLruCache.field_e, var9.sprite, 2, 2, GameplayScreen.field_l, -13, colorIndex, destinationY, destinationX, AppletResourceHelpers.field_d, 306);
+        BubbleDistortion.drawParallaxLayers(scroll16, WeightedLruCache.field_e, var9.sprite, 2, 2, GameplayScreen.field_l, -13, colorIndex, destinationY, destinationX, AppletResourceHelpers.field_d, 306);
     }
 
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
@@ -156,10 +156,10 @@ final class UnderwaterBackground extends BackgroundScene {
           }
           var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            IntegerPowerHelpers.a(ConnectionPhase.waterFarSprite, 0, 1, var7, -8562, colorIndex, SocialTabbedPanel.field_b);
+            IntegerPowerHelpers.renderBackdropSurface(ConnectionPhase.waterFarSprite, 0, 1, var7, -8562, colorIndex, SocialTabbedPanel.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          BubbleDistortion.a(scroll16, FontSceneGlobals.waterNearSprite, var7.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, ResourceArchiveFactory.waterRaysSprite, 640);
+          BubbleDistortion.drawParallaxLayers(scroll16, FontSceneGlobals.waterNearSprite, var7.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, ResourceArchiveFactory.waterRaysSprite, 640);
           return;
         }
         if (!this.hasSprites((byte) -112)) {
@@ -168,10 +168,10 @@ final class UnderwaterBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          IntegerPowerHelpers.a(ConnectionPhase.waterFarSprite, 0, 1, var8, -8562, colorIndex, SocialTabbedPanel.field_b);
+          IntegerPowerHelpers.renderBackdropSurface(ConnectionPhase.waterFarSprite, 0, 1, var8, -8562, colorIndex, SocialTabbedPanel.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
-        BubbleDistortion.a(scroll16, FontSceneGlobals.waterNearSprite, var8.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, ResourceArchiveFactory.waterRaysSprite, 640);
+        BubbleDistortion.drawParallaxLayers(scroll16, FontSceneGlobals.waterNearSprite, var8.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, ResourceArchiveFactory.waterRaysSprite, 640);
     }
 
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
@@ -198,10 +198,10 @@ final class UnderwaterBackground extends BackgroundScene {
         var5Lifetime2 = 14 / ((obfuscationGuard + 28) / 43);
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         gameCompletedMessageSprite = null;
         field_v = null;
-        if (param0 == -46) {
+        if (obfuscationGuard == -46) {
           viewFacePointOneZ = null;
           field_t = null;
           field_w = null;

@@ -103,16 +103,16 @@ final class SecondaryNodeQueue {
         return new QuickChatParameterType[]{CalendarRankingHelpers.field_b, IntrusiveNode.field_c, Bzip2State.field_r, BirthDateValidator.field_i, ClientResourceHelpers.field_h, GrowableIntList.field_m, ProxySocketConnector.field_i, UiComponentNode.field_B, TranslucentNineSliceFrame.field_k, ScrollPaneWithFooter.field_Sb, CacheEntry.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_d = null;
         field_a = null;
         field_b = null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_e = null;
           field_c = null;
           return;
         }
-        SecondaryNodeQueue.b(false);
+        SecondaryNodeQueue.clearSharedReferences(false);
         field_e = null;
         field_c = null;
     }

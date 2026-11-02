@@ -44,8 +44,8 @@ final class LevelPack {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return;
         }
         field_e = null;
@@ -58,7 +58,7 @@ final class LevelPack {
           return;
         }
         CanvasInputCleanup.detachCanvasInput(false, GameplayRenderHelpers.fullscreenCanvas);
-        GameplayRenderHelpers.fullscreenCanvas.a(AccountMessageDialog.field_ub, 121);
+        GameplayRenderHelpers.fullscreenCanvas.closeWindowFrame(AccountMessageDialog.field_ub, 121);
         GameplayRenderHelpers.fullscreenCanvas = null;
         if (param0 <= 49) {
           field_f = (String) null;

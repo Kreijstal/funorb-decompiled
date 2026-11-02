@@ -24,14 +24,14 @@ abstract class ArchiveSource {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 > -102) {
-            ArchiveSource.a(51);
+            ArchiveSource.readLocalPlayerName(51);
           }
           if (IntrusiveHashIterator.field_g != StrongCacheEntry.field_P) {
             return false;
           }
           var8 = new RegistrationResponseDialog(ResourceArchive.field_f, param5);
           ResourceArchive.field_f.pushLayer(-102, var8);
-          if (LevelPackLoader.a((byte) -56)) {
+          if (LevelPackLoader.appletHasTuhstatbutMarker((byte) -56)) {
             var8.showIneligibleResponse(true);
             return true;
           }
@@ -96,9 +96,9 @@ abstract class ArchiveSource {
         }
     }
 
-    final static void a(int param0) {
+    final static void readLocalPlayerName(int obfuscationGuard) {
         CharSequence var3 = null;
-        if (param0 == 27423) {
+        if (obfuscationGuard == 27423) {
           LoadingProgressDialog.field_cb = LogoRenderHelpers.incomingPackets.readCp1252String(-1);
           var3 = (CharSequence) ((Object) LoadingProgressDialog.field_cb);
           ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var3, 71);
@@ -114,12 +114,12 @@ abstract class ArchiveSource {
 
     abstract int getGroupProgress(byte obfuscationGuard, int groupId);
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_b = null;
         field_a = null;
         field_d = null;
         locationColumnHeadingText = null;
-        if (param0 != -59) {
+        if (obfuscationGuard != -59) {
           ArchiveSource.sleepOnce(-15, -86L);
         }
     }

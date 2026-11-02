@@ -32,7 +32,7 @@ class HotspotTextWidget extends FocusableWidget {
         searchOffset = 0;
         layoutProvider = (WidgetLayoutProvider) ((Object) this.renderer);
         if (obfuscationGuard != -1) {
-          this.a(-10, (byte) -28, 79, -11);
+          this.setPreferredBounds(-10, (byte) -28, 79, -11);
         }
         layout = layoutProvider.getTextLayout((Widget) (this), -7);
         while (true) {
@@ -91,11 +91,11 @@ class HotspotTextWidget extends FocusableWidget {
         return this.hotspotTooltips[this.hoveredHotspot.hotspotId];
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        if (param1 != 46) {
+    final void setPreferredBounds(int x, byte obfuscationGuard, int width, int y) {
+        if (obfuscationGuard != 46) {
           return;
         }
-        this.setBounds(((WidgetLayoutProvider) ((Object) this.renderer)).getPreferredHeight((Widget) (this), 46695), param0, param3, (byte) -119, param2);
+        this.setBounds(((WidgetLayoutProvider) ((Object) this.renderer)).getPreferredHeight((Widget) (this), 46695), x, y, (byte) -119, width);
     }
 
     boolean tryFocus(boolean obfuscationGuard, Widget focusRoot) {
@@ -185,8 +185,8 @@ class HotspotTextWidget extends FocusableWidget {
         }
     }
 
-    public static void j(int param0) {
-        if (param0 != -2) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != -2) {
           field_M = (String) null;
         }
         field_M = null;

@@ -9,13 +9,13 @@ final class IncomingPacketHelpers {
     static RgbSprite field_e;
     static RgbSprite gameLogoSprite;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_a = null;
         chocolateNearSprite = null;
         pendingLobbyGame = null;
         field_e = null;
         gameLogoSprite = null;
-        if (param0 > -68) {
+        if (obfuscationGuard > -68) {
           int[] var2 = (int[]) null;
           IncomingPacketHelpers.readNextGamePacket((int[]) null, (byte) -73);
           return;

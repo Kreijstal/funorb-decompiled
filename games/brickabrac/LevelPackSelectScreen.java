@@ -82,11 +82,11 @@ final class LevelPackSelectScreen extends MenuScreen {
         return false;
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         powerUpMeterBarSprite = null;
         field_v = null;
         field_x = null;
-        if (param0 != 14529) {
+        if (obfuscationGuard != 14529) {
           halfPaddleSegmentSprites = (RgbSprite[]) null;
         }
         halfPaddleSegmentSprites = null;
@@ -117,7 +117,7 @@ final class LevelPackSelectScreen extends MenuScreen {
           var7 = this.buttons[var3];
           var9 = var7;
           if (var9.actionId == 8) {
-            stackIn_7_0 = this.e((byte) 81);
+            stackIn_7_0 = this.getActionEightLabel((byte) 81);
           } else {
             stackIn_7_0 = ArrayWidgetGroup.buttonLabels[var7.actionId];
           }
@@ -160,9 +160,9 @@ final class LevelPackSelectScreen extends MenuScreen {
 
     final void drawScreen(byte obfuscationGuard) {
         super.drawScreen((byte) -56);
-        AchievementMaskRequest.a(this.screenId, 19);
+        AchievementMaskRequest.drawHorizontallyCenteredSprite(this.screenId, 19);
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -91, 45);
-        this.a(0);
+        this.drawEnabledButtons(0);
         this.firstPackCard.draw((byte) 105);
         this.secondPackCard.draw((byte) 116);
         if (obfuscationGuard >= -14) {

@@ -21,8 +21,8 @@ final class MenuSelection {
     private int heldCode;
     int selectedIndex;
 
-    public static void b(byte param0) {
-        if (param0 == -60) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard == -60) {
           constructionSmallSprite = null;
           field_m = null;
           field_a = null;
@@ -592,7 +592,7 @@ final class MenuSelection {
 
     final static int e(byte param0) {
         if (param0 <= 28) {
-          MenuSelection.b((byte) 56);
+          MenuSelection.clearSharedReferences((byte) 56);
           return 256;
         }
         return 256;

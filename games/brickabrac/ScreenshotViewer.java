@@ -223,12 +223,12 @@ final class ScreenshotViewer {
             Rasterizer2D.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
-            var16 = MusicVoiceMixer.a(param0 - 580, var2_int, var3);
+            var16 = MusicVoiceMixer.createColorRamp(param0 - 580, var2_int, var3);
             this.a(47, 0, this.title, var16, ArchiveSourceManager.field_j, 622, 0, 0);
             RasterStackHelpers.popRaster(param0 - 592);
             this.field_e = new RgbSprite(param0, 24);
             this.a(ArchiveSourceManager.field_j, -4, 0.75f, (byte) 124, 475, DialogPointerGlobals.field_c, var16, 24, this.field_e, 0);
-            var17 = MusicVoiceMixer.a(-124, 526344, 526344);
+            var17 = MusicVoiceMixer.createColorRamp(-124, 526344, 526344);
             var5 = new RgbSprite(121, 122);
             IndexedSpriteGeometry.pushSpriteRaster(param0 ^ -388, var5);
             Rasterizer2D.fillVerticalGradient(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
@@ -241,7 +241,7 @@ final class ScreenshotViewer {
             RasterStackHelpers.popRaster(-119);
             this.field_p = new RgbSprite(121, 122);
             IndexedSpriteGeometry.pushSpriteRaster(-115, this.field_p);
-            var5.e(this.field_p.width / 2, this.field_p.height / 2, -2048, 4096);
+            var5.drawRotatedAboutCenter(this.field_p.width / 2, this.field_p.height / 2, -2048, 4096);
             RasterStackHelpers.popRaster(-108);
             return;
           }
@@ -314,25 +314,25 @@ final class ScreenshotViewer {
           AchievementsScreen.field_J.drawTransparent(0, 0);
           if (null != PasswordTooltipHelpers.field_c) {
             PasswordTooltipHelpers.field_c.drawTransparent(9, 257);
-            PasswordTooltipHelpers.field_c.f(558, 257);
+            PasswordTooltipHelpers.field_c.drawHorizontallyFlipped(558, 257);
             if (ResourcePreparationEntry.pointerY > 257 &&
               ResourcePreparationEntry.pointerY < 290) {
               var2_intLifetime2 = 40 + (QuickChatSineHelpers.lookupSine2048Q16((byte) 124, this.field_i << 4) * 40 >> 16);
               if (0 < var2_intLifetime2) {
                 if (9 < MusicPatch.pointerX &&
                   MusicPatch.pointerX < 82) {
-                  PasswordTooltipHelpers.field_c.f(8, 256, var2_intLifetime2);
-                  PasswordTooltipHelpers.field_c.f(10, 256, var2_intLifetime2);
-                  PasswordTooltipHelpers.field_c.f(8, 258, var2_intLifetime2);
-                  PasswordTooltipHelpers.field_c.f(10, 258, var2_intLifetime2);
+                  PasswordTooltipHelpers.field_c.drawAdditive(8, 256, var2_intLifetime2);
+                  PasswordTooltipHelpers.field_c.drawAdditive(10, 256, var2_intLifetime2);
+                  PasswordTooltipHelpers.field_c.drawAdditive(8, 258, var2_intLifetime2);
+                  PasswordTooltipHelpers.field_c.drawAdditive(10, 258, var2_intLifetime2);
                 } else {
                   if (558 < MusicPatch.pointerX &&
                     MusicPatch.pointerX < 631) {
                     PasswordTooltipHelpers.field_c.flipHorizontal();
-                    PasswordTooltipHelpers.field_c.f(557, 256, var2_intLifetime2);
-                    PasswordTooltipHelpers.field_c.f(559, 256, var2_intLifetime2);
-                    PasswordTooltipHelpers.field_c.f(557, 258, var2_intLifetime2);
-                    PasswordTooltipHelpers.field_c.f(559, 258, var2_intLifetime2);
+                    PasswordTooltipHelpers.field_c.drawAdditive(557, 256, var2_intLifetime2);
+                    PasswordTooltipHelpers.field_c.drawAdditive(559, 256, var2_intLifetime2);
+                    PasswordTooltipHelpers.field_c.drawAdditive(557, 258, var2_intLifetime2);
+                    PasswordTooltipHelpers.field_c.drawAdditive(559, 258, var2_intLifetime2);
                     PasswordTooltipHelpers.field_c.flipHorizontal();
                   }
                 }
@@ -447,11 +447,11 @@ final class ScreenshotViewer {
           var12 = (int)((float)param7 / param2);
           var13 = new RgbSprite(var11_int, var12);
           IndexedSpriteGeometry.pushSpriteRaster(-116, var13);
-          param8.a((int)((float)(-param9) / param2), (int)((float)(-param1) / param2), (int)((float)param8.width / param2), (int)((float)param8.height / param2));
+          param8.drawScaled((int)((float)(-param9) / param2), (int)((float)(-param1) / param2), (int)((float)param8.width / param2), (int)((float)param8.height / param2));
           this.a(var12, 0, param5, param6, param0, var11_int, 0, 0);
           RasterStackHelpers.popRaster(-104);
           IndexedSpriteGeometry.pushSpriteRaster(-126, param8);
-          var13.c(param9, param1, param4, param7);
+          var13.drawScaledAveraged(param9, param1, param4, param7);
           RasterStackHelpers.popRaster(-93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -601,16 +601,16 @@ final class ScreenshotViewer {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         try {
           field_r = null;
           field_m = null;
-          if (param0 < 82) {
+          if (obfuscationGuard < 82) {
             field_r = (RgbSprite) null;
           }
           field_n = null;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "w.C(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "w.C(" + obfuscationGuard + ')');
         }
     }
 

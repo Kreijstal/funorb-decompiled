@@ -7,16 +7,16 @@ final class InvitationDialogHelpers {
     static QuickChatMenu quickChatMenu;
     static String field_b;
 
-    final static RgbSprite a(int param0, int param1, byte param2) {
+    final static RgbSprite createSolidSprite(int color, int size, byte obfuscationGuard) {
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
-        if (param2 != -6) {
-          InvitationDialogHelpers.a(121, -95, (byte) -105);
+        if (obfuscationGuard != -6) {
+          InvitationDialogHelpers.createSolidSprite(121, -95, (byte) -105);
         }
-        RgbSprite var6 = new RgbSprite(param1, param1);
+        RgbSprite var6 = new RgbSprite(size, size);
         RgbSprite var3 = var6;
         for (var4 = 0; var4 < var3.pixels.length; var4++) {
-          var6.pixels[var4] = param0;
+          var6.pixels[var4] = color;
         }
         return var3;
     }
@@ -45,8 +45,8 @@ final class InvitationDialogHelpers {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 12) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != 12) {
           return;
         }
         quickChatMenu = null;

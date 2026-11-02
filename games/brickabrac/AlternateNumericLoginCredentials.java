@@ -15,13 +15,13 @@ final class AlternateNumericLoginCredentials extends NumericLoginCredentials {
         super(identifier, password);
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_q = null;
         field_u = null;
         field_r = null;
         field_n = null;
         field_t = null;
-        if (param0 == -121) {
+        if (obfuscationGuard == -121) {
           field_p = null;
           return;
         }

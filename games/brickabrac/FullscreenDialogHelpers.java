@@ -9,13 +9,13 @@ final class FullscreenDialogHelpers {
     static String field_f;
     static RgbSprite[][] activePaddleFlameSprites;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         activePaddleFlameSprites = (RgbSprite[][]) null;
         field_f = null;
         field_c = null;
         renderRateDiagnosticLine = null;
         field_a = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           FullscreenDialogHelpers.buildFullscreenDialog(false, 57, (byte) -48);
         }
     }

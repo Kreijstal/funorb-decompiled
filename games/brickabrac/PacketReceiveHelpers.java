@@ -69,10 +69,10 @@ final class PacketReceiveHelpers {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         archiveFetchClient = null;
         field_a = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return;
         }
         viewFacePointThreeX = null;

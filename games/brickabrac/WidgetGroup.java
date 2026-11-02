@@ -10,7 +10,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
     static String field_C;
     NodeDeque children;
 
-    final boolean a(Widget param0, byte param1) {
+    final boolean focusNextChild(Widget focusRoot, byte obfuscationGuard) {
         NodeDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         Widget var4 = null;
@@ -27,7 +27,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
             return false;
           }
           var3 = new NodeDequeCursor(this.children);
-          if (param1 > -115) {
+          if (obfuscationGuard > -115) {
             return false;
           }
           var4 = (Widget) (var3.first(240));
@@ -37,7 +37,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
               var5.firstFrom(122, var4);
               var6 = (Widget) (var5.next(7));
               while (var6 != null) {
-                if (!var6.tryFocus(true, param0)) {
+                if (!var6.tryFocus(true, focusRoot)) {
                   var6 = (Widget) (var5.next(7));
                   continue;
                 }
@@ -52,16 +52,16 @@ class WidgetGroup extends Widget implements WidgetContainer {
           var3_ref = decompiledCaughtException;
           stackIn_21_0 = var3_ref;
           stackIn_21_1 = new StringBuilder().append("ib.FB(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final boolean b(Widget param0, byte param1) {
+    final boolean focusPreviousChild(Widget focusRoot, byte obfuscationGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         NodeDequeCursor var4 = null;
@@ -75,7 +75,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
         RuntimeException decompiledCaughtException = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3_int = -60 % ((param1 - 51) / 34);
+          var3_int = -60 % ((obfuscationGuard - 51) / 34);
           if (this.children.isEmpty(false)) {
             return false;
           }
@@ -87,7 +87,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
               var6.lastFrom(16802, var5);
               var7 = (Widget) (var6.previous(-24706));
               while (var7 != null) {
-                if (var7.tryFocus(true, param0)) {
+                if (var7.tryFocus(true, focusRoot)) {
                   return true;
                 }
                 var7 = (Widget) (var6.previous(-24706));
@@ -101,12 +101,12 @@ class WidgetGroup extends Widget implements WidgetContainer {
           var3 = decompiledCaughtException;
           stackIn_20_0 = var3;
           stackIn_20_1 = new StringBuilder().append("ib.JB(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -138,10 +138,10 @@ class WidgetGroup extends Widget implements WidgetContainer {
         }
     }
 
-    private final void g(int param0) {
+    private final void relayoutChildren(int obfuscationGuard) {
         int var5 = BrickABrac.field_J ? 1 : 0;
         NodeDequeCursor var2 = new NodeDequeCursor(this.children);
-        int var3 = -77 % ((param0 - 69) / 46);
+        int var3 = -77 % ((obfuscationGuard - 69) / 46);
         Widget var4 = (Widget) (var2.first(240));
         while (var4 != null) {
           var4.relayout(1);
@@ -149,7 +149,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, Widget param5, int param6) {
+    final boolean handleMouseWheel(int wheelDelta, int pointerX, int parentY, int obfuscationGuard, int pointerY, Widget focusRoot, int parentX) {
         NodeDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         Widget var9 = null;
@@ -165,7 +165,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
           while (var9 != null) {
             if (var9.isLinked(0)) {
               if (var9.isFocused(-65) &&
-                var9.a(param0, param1, param2, -126, param4, param5, param6)) {
+                var9.handleMouseWheel(wheelDelta, pointerX, parentY, -126, pointerY, focusRoot, parentX)) {
                 return true;
               }
               var9 = (Widget) (var8.next(7));
@@ -173,7 +173,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
             }
             break;
           }
-          if (param3 < -125) {
+          if (obfuscationGuard < -125) {
             return false;
           }
           this.children = (NodeDeque) null;
@@ -182,20 +182,20 @@ class WidgetGroup extends Widget implements WidgetContainer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
           stackIn_15_0 = var8_ref;
-          stackIn_15_1 = new StringBuilder().append("ib.SA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_15_1 = new StringBuilder().append("ib.SA(").append(wheelDelta).append(',').append(pointerX).append(',').append(parentY).append(',').append(obfuscationGuard).append(',').append(pointerY).append(',');
+          if (focusRoot == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(parentX).append(')').toString());
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_E = null;
         field_F = null;
-        int var1 = -92 / ((param0 + 2) / 38);
+        int var1 = -92 / ((obfuscationGuard + 2) / 38);
         rankingLosses = null;
         field_C = null;
     }
@@ -257,7 +257,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
           var8 = (Widget) (var7.first(240));
           if (obfuscationGuard != 19223) {
             var10 = (StringBuilder) null;
-            this.a(-102, (Hashtable) null, 23, (StringBuilder) null);
+            this.appendDebugTree(-102, (Hashtable) null, 23, (StringBuilder) null);
           }
           while (var8 != null) {
             if (var8.isLinked(0)) {
@@ -282,7 +282,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
         }
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean containsNonzeroInFirstEight(int[] values, int obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -293,12 +293,12 @@ class WidgetGroup extends Widget implements WidgetContainer {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 8; var2_int++) {
-            if (param0[var2_int] != 0) {
+            if (values[var2_int] != 0) {
               return true;
             }
           }
-          if (param1 != -1) {
-            WidgetGroup.a(89, false, 71, 122, false, 9, -88);
+          if (obfuscationGuard != -1) {
+            WidgetGroup.drawTrackMarker(89, false, 71, 122, false, 9, -88);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -306,16 +306,16 @@ class WidgetGroup extends Widget implements WidgetContainer {
           var2 = decompiledCaughtException;
           stackIn_14_0 = var2;
           stackIn_14_1 = new StringBuilder().append("ib.KB(");
-          if (param0 == null) {
+          if (values == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final void a(StringBuilder param0, int param1, byte param2, Hashtable param3) {
+    private final void appendDebugChildren(StringBuilder builder, int indent, byte obfuscationGuard, Hashtable visited) {
         StringBuilder discarded$2 = null;
         int var7 = 0;
         StringBuilder discarded$3 = null;
@@ -335,16 +335,16 @@ class WidgetGroup extends Widget implements WidgetContainer {
           var5 = new NodeDequeCursor(this.children);
           var6 = (Widget) (var5.first(240));
           while (var6 != null) {
-            discarded$2 = param0.append('\n');
-            for (var7 = 0; param1 >= var7; var7++) {
-              discarded$3 = param0.append(' ');
+            discarded$2 = builder.append('\n');
+            for (var7 = 0; indent >= var7; var7++) {
+              discarded$3 = builder.append(' ');
             }
-            var6.a(param1 + 1, param3, 24, param0);
+            var6.appendDebugTree(indent + 1, visited, 24, builder);
             var6 = (Widget) (var5.next(7));
           }
-          if (param2 <= 52) {
+          if (obfuscationGuard <= 52) {
             var9 = (Widget) null;
-            this.a((Widget) null, (byte) -19);
+            this.focusNextChild((Widget) null, (byte) -19);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -352,13 +352,13 @@ class WidgetGroup extends Widget implements WidgetContainer {
           var5_ref = decompiledCaughtException;
           stackIn_12_0 = var5_ref;
           stackIn_12_1 = new StringBuilder().append("ib.MB(");
-          if (param0 == null) {
+          if (builder == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(indent).append(',').append(obfuscationGuard).append(',');
+          if (visited == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -367,7 +367,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6) {
+    final static void drawTrackMarker(int characterIndex, boolean flag, int orderTicks, int trackPosition, boolean highlighted, int originY, int originX) {
         int var7;
         int var8;
         int var9_int;
@@ -376,72 +376,72 @@ class WidgetGroup extends Widget implements WidgetContainer {
         int var9_intLifetime2;
         int var9_intLifetime3;
         var7 = 0;
-        param3 = (1414 + param3) % 1414;
+        trackPosition = (1414 + trackPosition) % 1414;
         var8 = 0;
-        if (284 >= param3) {
+        if (284 >= trackPosition) {
           var8 = 5;
-          var7 = 11 + param3;
+          var7 = 11 + trackPosition;
         }
-        param3 -= 284;
-        if (param3 > 0 &&
-          param3 <= 5) {
-          var9_int = 2048 * param3 / 5;
+        trackPosition -= 284;
+        if (trackPosition > 0 &&
+          trackPosition <= 5) {
+          var9_int = 2048 * trackPosition / 5;
           var7 = 295 + (3 * InteractiveGameClient.sine8192(var9_int, -4097) >> 16);
           var8 = -(3 * BrickABrac.cosine8192(2048, var9_int) >> 16) + 8;
         }
-        if (param1) {
+        if (flag) {
           return;
         }
-        param3 -= 5;
-        if (param3 > 0 &&
-          param3 <= 413) {
+        trackPosition -= 5;
+        if (trackPosition > 0 &&
+          trackPosition <= 413) {
           var7 = 298;
-          var8 = param3 + 8;
+          var8 = trackPosition + 8;
         }
-        param3 -= 413;
-        if (param3 > 0 &&
-          param3 <= 5) {
-          var9_intLifetime1 = param3 * 2048 / 5;
+        trackPosition -= 413;
+        if (trackPosition > 0 &&
+          trackPosition <= 5) {
+          var9_intLifetime1 = trackPosition * 2048 / 5;
           var7 = 295 + (3 * BrickABrac.cosine8192(2048, var9_intLifetime1) >> 16);
           var8 = (InteractiveGameClient.sine8192(var9_intLifetime1, -4097) * 3 >> 16) + 421;
         }
-        param3 -= 5;
-        if (0 < param3 &&
-          param3 <= 284) {
-          var7 = 295 - param3;
+        trackPosition -= 5;
+        if (0 < trackPosition &&
+          trackPosition <= 284) {
+          var7 = 295 - trackPosition;
           var8 = 424;
         }
-        param3 -= 284;
-        if (0 < param3 &&
-          param3 <= 5) {
-          var9_intLifetime2 = param3 * 2048 / 5;
+        trackPosition -= 284;
+        if (0 < trackPosition &&
+          trackPosition <= 5) {
+          var9_intLifetime2 = trackPosition * 2048 / 5;
           var7 = -(3 * InteractiveGameClient.sine8192(var9_intLifetime2, -4097) >> 16) + 11;
           var8 = 421 + (BrickABrac.cosine8192(2048, var9_intLifetime2) * 3 >> 16);
         }
-        param3 -= 5;
-        if (param3 > 0 &&
-          param3 <= 413) {
+        trackPosition -= 5;
+        if (trackPosition > 0 &&
+          trackPosition <= 413) {
           var7 = 8;
-          var8 = 421 - param3;
+          var8 = 421 - trackPosition;
         }
-        param3 -= 413;
-        if (param3 > 0) {
-          var9_intLifetime3 = 2048 * param3 / 5;
+        trackPosition -= 413;
+        if (trackPosition > 0) {
+          var9_intLifetime3 = 2048 * trackPosition / 5;
           var7 = 11 - (3 * BrickABrac.cosine8192(2048, var9_intLifetime3) >> 16);
           var8 = 8 - (InteractiveGameClient.sine8192(var9_intLifetime3, -4097) * 3 >> 16);
         }
-        var9 = FullscreenFailureKind.trackHeads[param0];
-        param6 = param6 + (-(var9.canvasWidth / 2) + var7);
-        param5 = param5 + (-(var9.canvasHeight / 2) + var8);
-        if (param4) {
-          SoftwareFramebuffer.a(-111, param5, param6, MusicVoiceMixer.field_n[param0]);
-          BoundedFile.field_a[param0].f(param6, param5, 256);
+        var9 = FullscreenFailureKind.trackHeads[characterIndex];
+        originX = originX + (-(var9.canvasWidth / 2) + var7);
+        originY = originY + (-(var9.canvasHeight / 2) + var8);
+        if (highlighted) {
+          SoftwareFramebuffer.a(-111, originY, originX, MusicVoiceMixer.field_n[characterIndex]);
+          BoundedFile.field_a[characterIndex].drawAdditive(originX, originY, 256);
         }
-        var9.drawTransparent(param6, param5);
+        var9.drawTransparent(originX, originY);
         return;
     }
 
-    final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int indent, Hashtable visited, int obfuscationGuard, StringBuilder builder) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -451,27 +451,27 @@ class WidgetGroup extends Widget implements WidgetContainer {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param3, param2 + 1595637968, param0, param1)) {
-            this.a(param1, param0, 0, param3);
-            this.a(param3, param0, (byte) 104, param1);
+          if (this.beginDebugEntry(builder, obfuscationGuard + 1595637968, indent, visited)) {
+            this.appendDebugSummary(visited, indent, 0, builder);
+            this.appendDebugChildren(builder, indent, (byte) 104, visited);
           }
-          if (param2 != 24) {
+          if (obfuscationGuard != 24) {
             this.children = (NodeDeque) null;
           }
-          stackIn_6_0 = (StringBuilder) (param3);
+          stackIn_6_0 = (StringBuilder) (builder);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("ib.UA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("ib.UA(").append(indent).append(',');
+          if (visited == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',');
+          if (builder == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -482,9 +482,9 @@ class WidgetGroup extends Widget implements WidgetContainer {
 
     final boolean isFocused(int obfuscationGuard) {
         if (obfuscationGuard > -49) {
-          this.g(4);
+          this.relayoutChildren(4);
         }
-        return this.g((byte) -3) != null ? true : false;
+        return this.getFocusedChild((byte) -3) != null ? true : false;
     }
 
     WidgetGroup(int x, int y, int width, int height, WidgetRenderer renderer) {
@@ -492,7 +492,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
         this.children = new NodeDeque();
     }
 
-    Widget g(byte param0) {
+    Widget getFocusedChild(byte obfuscationGuard) {
         int var4 = BrickABrac.field_J ? 1 : 0;
         NodeDequeCursor var2 = new NodeDequeCursor(this.children);
         Widget var3 = (Widget) (var2.first(240));
@@ -502,7 +502,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
           }
           var3 = (Widget) (var2.next(7));
         }
-        if (param0 == -3) {
+        if (obfuscationGuard == -3) {
           return null;
         }
         Widget var5 = (Widget) null;
@@ -560,16 +560,16 @@ class WidgetGroup extends Widget implements WidgetContainer {
           }
           if (obfuscationGuard != 110) {
             var8 = (StringBuilder) null;
-            this.a(87, (Hashtable) null, -4, (StringBuilder) null);
+            this.appendDebugTree(87, (Hashtable) null, -4, (StringBuilder) null);
           }
           var6 = keyCode;
           if (var6 != 80) {
             return false;
           }
           if (IntArrayRequest.heldKeys[81]) {
-            stackIn_17_0 = this.b(focusRoot, (byte) -118);
+            stackIn_17_0 = this.focusPreviousChild(focusRoot, (byte) -118);
           } else {
-            stackIn_17_0 = this.a(focusRoot, (byte) -128);
+            stackIn_17_0 = this.focusNextChild(focusRoot, (byte) -128);
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -589,7 +589,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
     final void clearFocus(boolean obfuscationGuard) {
         int var4 = BrickABrac.field_J ? 1 : 0;
         if (obfuscationGuard) {
-          WidgetGroup.f((byte) 29);
+          WidgetGroup.clearSharedReferences((byte) 29);
         }
         NodeDequeCursor var2 = new NodeDequeCursor(this.children);
         Widget var3 = (Widget) (var2.first(240));
@@ -601,18 +601,18 @@ class WidgetGroup extends Widget implements WidgetContainer {
 
     void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
         super.setBounds(height, x, y, obfuscationGuard, width);
-        this.g(116);
+        this.relayoutChildren(116);
     }
 
-    final int e(byte param0) {
+    final int getTopLayer(byte obfuscationGuard) {
         int var6 = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
-        int var3 = -70 % ((-17 - param0) / 43);
+        int var3 = -70 % ((-17 - obfuscationGuard) / 43);
         int var2 = 0;
         NodeDequeCursor var4 = new NodeDequeCursor(this.children);
         Widget var5 = (Widget) (var4.first(240));
         while (var5 != null) {
-          var6 = var5.e((byte) -86);
+          var6 = var5.getTopLayer((byte) -86);
           if (var6 > var2) {
             var2 = var6;
           }

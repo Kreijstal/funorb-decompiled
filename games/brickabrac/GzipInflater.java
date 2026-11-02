@@ -92,10 +92,10 @@ final class GzipInflater {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         desertCapsSprites = (RgbSprite[][]) null;
         field_c = null;
-        if (param0 != -32) {
+        if (obfuscationGuard != -32) {
           return;
         }
         field_d = null;
@@ -105,7 +105,7 @@ final class GzipInflater {
     final static void b(int param0) {
         TextValidationHelpers.field_a = LobbyOverlayHelpers.field_i;
         if (param0 != -8) {
-          GzipInflater.a(42);
+          GzipInflater.clearSharedReferences(42);
         }
     }
 

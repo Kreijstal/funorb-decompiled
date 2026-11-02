@@ -19,7 +19,7 @@ final class AccountResponse {
         return PasswordValidator.field_m;
     }
 
-    final static boolean a(int param0, int param1, byte param2, int param3, int param4, RgbSprite param5) {
+    final static boolean isOpaquePixelAt(int x, int y, byte obfuscationGuard, int originY, int originX, RgbSprite sprite) {
         RuntimeException var6 = null;
         boolean stackIn_16_0 = false;
         RuntimeException stackIn_19_0 = null;
@@ -27,21 +27,21 @@ final class AccountResponse {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0 = param0 - (param5.offsetX + param4);
-          if (param0 < 0) {
+          x = x - (sprite.offsetX + originX);
+          if (x < 0) {
             return false;
           }
-          if (param5.width <= param0) {
+          if (sprite.width <= x) {
             return false;
           }
-          param1 = param1 - (param3 + param5.offsetY);
-          if (param1 >= 0 &&
-            param1 < param5.height) {
-            if (param2 != -24) {
+          y = y - (originY + sprite.offsetY);
+          if (y >= 0 &&
+            y < sprite.height) {
+            if (obfuscationGuard != -24) {
               collisionX256 = 13;
             }
-            param4 = param5.pixels[param0 + param5.width * param1];
-            stackIn_16_0 = (param4 != 0) && ((-16777216 & param4) != 0);
+            originX = sprite.pixels[x + sprite.width * y];
+            stackIn_16_0 = (originX != 0) && ((-16777216 & originX) != 0);
             return stackIn_16_0;
           }
           return false;
@@ -49,8 +49,8 @@ final class AccountResponse {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_19_0 = var6;
-          stackIn_19_1 = new StringBuilder().append("oh.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_19_1 = new StringBuilder().append("oh.A(").append(x).append(',').append(y).append(',').append(obfuscationGuard).append(',').append(originY).append(',').append(originX).append(',');
+          if (sprite == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
@@ -59,24 +59,24 @@ final class AccountResponse {
         }
     }
 
-    final static String a(byte param0, String param1, String param2, String param3) {
+    final static String replaceAllOccurrences(byte obfuscationGuard, String replacement, String text, String target) {
         int var5 = BrickABrac.field_J ? 1 : 0;
-        int var4 = param2.indexOf(param3);
+        int var4 = text.indexOf(target);
         while (var4 != -1) {
-          param2 = param2.substring(0, var4) + param1 + param2.substring(var4 + param3.length());
-          var4 = param2.indexOf(param3, param1.length() + var4);
+          text = text.substring(0, var4) + replacement + text.substring(var4 + target.length());
+          var4 = text.indexOf(target, replacement.length() + var4);
         }
-        if (param0 == 13) {
-          return param2;
+        if (obfuscationGuard == 13) {
+          return text;
         }
         field_b = -3;
-        return param2;
+        return text;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_h = null;
-        if (param0 < 57) {
-          AccountResponse.a((byte) 49);
+        if (obfuscationGuard < 57) {
+          AccountResponse.clearSharedReferences((byte) 49);
         }
     }
 

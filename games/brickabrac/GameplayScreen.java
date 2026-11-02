@@ -86,11 +86,11 @@ final class GameplayScreen extends GameScreen {
         int[] var5 = SecondaryHashTable.earnedAchievementMask;
         int[] var3 = var5;
         int var4 = achievementId;
-        var5[var4 >> 5] = LevelSelectScreen.d(var5[var4 >> 5], 1 << IntrusiveHashIterator.a(31, var4));
+        var5[var4 >> 5] = LevelSelectScreen.bitwiseOr(var5[var4 >> 5], 1 << IntrusiveHashIterator.bitwiseAnd(31, var4));
         int[] var6 = SpriteInputHelpers.pendingAchievementMask;
         var3 = var6;
         var4 = achievementId;
-        var6[var4 >> 5] = LevelSelectScreen.d(var6[var4 >> 5], pendingBit << IntrusiveHashIterator.a(var4, 31));
+        var6[var4 >> 5] = LevelSelectScreen.bitwiseOr(var6[var4 >> 5], pendingBit << IntrusiveHashIterator.bitwiseAnd(var4, 31));
         LevelResultWireHelpers.achievementNotifications.addLast(new IntNode(achievementId), (byte) 3);
         return false;
     }
@@ -263,7 +263,7 @@ final class GameplayScreen extends GameScreen {
             } else {
               if (TabbedPane.currentBackground != null &&
                 TabbedPane.currentBackground.musicReady) {
-                BytePayloadRequest.a(1, true, TabbedPane.currentBackground.c(-109), false, 1, TabbedPane.currentBackground.musicData, true);
+                BytePayloadRequest.a(1, true, TabbedPane.currentBackground.getMusicChannelGain(-109), false, 1, TabbedPane.currentBackground.musicData, true);
               } else {
                 IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
               }
@@ -452,8 +452,8 @@ final class GameplayScreen extends GameScreen {
             AppletFlowHelpers.field_c.bindRasterTarget();
             TabbedPane.currentBackground.drawFullBackground(true, var9_int, 0, 0, 0);
             BallPulseEffect.framebuffer.bindRaster((byte) 78);
-            ArchiveFetchClient.field_k = TabbedPane.currentBackground.c((byte) -116);
-            HorizontalFrameHelpers.field_c = TabbedPane.currentBackground.b(-102);
+            ArchiveFetchClient.field_k = TabbedPane.currentBackground.getCharacterSprite((byte) -116);
+            HorizontalFrameHelpers.field_c = TabbedPane.currentBackground.getLeverSprites(-102);
             TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(var20.levelState.value, (byte) 19);
             MenuScreen.field_i = 32;
             var20.backgroundChangePending = false;
@@ -539,8 +539,8 @@ final class GameplayScreen extends GameScreen {
             GameClock.field_b = var20.score;
             PacketReceiveHelpers.field_d = Integer.toString(GameClock.field_b);
           }
-          if (DelayedPacket.field_m != 1 + TextValidationHelpers.a(var20, (byte) 59, this.match)) {
-            DelayedPacket.field_m = TextValidationHelpers.a(var20, (byte) -100, this.match) + 1;
+          if (DelayedPacket.field_m != 1 + TextValidationHelpers.getLevelIndexWithinPeriod(var20, (byte) 59, this.match)) {
+            DelayedPacket.field_m = TextValidationHelpers.getLevelIndexWithinPeriod(var20, (byte) -100, this.match) + 1;
             if (DelayedPacket.field_m < 10) {
               stackIn_210_0 = "0" + DelayedPacket.field_m;
             } else {
@@ -603,7 +603,7 @@ final class GameplayScreen extends GameScreen {
         if (!this.networkedMatch) {
           if (1 == this.match.playerCount &&
             !this.suppressResultSubmission) {
-            this.setResultLevel(TextValidationHelpers.a(this.match.playerBoards[0], (byte) 115, this.match), false);
+            this.setResultLevel(TextValidationHelpers.getLevelIndexWithinPeriod(this.match.playerBoards[0], (byte) 115, this.match), false);
             this.queueScoreTableSubmission(0);
             this.sendProgressUpdate(NameEntryPopup.field_Yb, this.resultLevel, -UsernameAvailabilityValidator.field_l + MonotonicTime.nowMillis(false), false, 1000);
             ModalOverlayHelpers.field_d = ModalOverlayHelpers.field_d | BoardPresentationHelpers.combineSequenceLevelAttributes(this.progressBaseLevel, this.match.configuration, -1 + this.resultLevel, true);
@@ -640,14 +640,14 @@ final class GameplayScreen extends GameScreen {
           return;
         }
         if (QuickChatMenu.h(-26090)) {
-          if (!WidgetGroup.a(SpriteInputHelpers.pendingAchievementMask, -1) &&
+          if (!WidgetGroup.containsNonzeroInFirstEight(SpriteInputHelpers.pendingAchievementMask, -1) &&
             VerticalScrollbar.field_Ub == null) {
             ScreenNavigationHelpers.requestScreen(usePointer, 121, 0);
           } else {
             ScreenNavigationHelpers.requestScreen(usePointer, 68, 10);
           }
         } else {
-          if (!WidgetGroup.a(SpriteInputHelpers.pendingAchievementMask, -1)) {
+          if (!WidgetGroup.containsNonzeroInFirstEight(SpriteInputHelpers.pendingAchievementMask, -1)) {
             if (VerticalScrollbar.field_Ub != null) {
               ScreenNavigationHelpers.requestScreen(usePointer, 68, 5);
             } else {
@@ -1137,10 +1137,10 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         friendLocationHeading = null;
         field_l = null;
-        int var1 = 47 / ((param0 - 14) / 59);
+        int var1 = 47 / ((obfuscationGuard - 14) / 59);
     }
 
     private final void setResultLevel(int levelIndex, boolean enableResultWordMode) {
@@ -1633,7 +1633,7 @@ final class GameplayScreen extends GameScreen {
                 break;
               }
               backgroundFadeAlpha = MenuScreen.field_i * 256 / 32;
-              AppletFlowHelpers.field_c.b(0, 0, backgroundFadeAlpha);
+              AppletFlowHelpers.field_c.drawAlphaBlended(0, 0, backgroundFadeAlpha);
               break;
             }
             layoutXAlias = layoutX;
@@ -1641,11 +1641,11 @@ final class GameplayScreen extends GameScreen {
             if (layoutModes[backgroundSlot] != 1) {
               layoutXAlias = layoutX;
               layoutYAlias = layoutY;
-              MovingBody.a((byte) 124, 153 + layoutXAlias[backgroundSlot], layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot], 233 + layoutYAlias[backgroundSlot]);
+              MovingBody.pushRasterIntersectClip((byte) 124, 153 + layoutXAlias[backgroundSlot], layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot], 233 + layoutYAlias[backgroundSlot]);
               TabbedPane.currentBackground.drawPreview((byte) -102, backgroundPlayerId, layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot]);
               RasterStackHelpers.popRaster(-79);
             } else {
-              MovingBody.a((byte) 76, 306 + layoutXAlias[backgroundSlot], layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot], layoutYAlias[backgroundSlot] + 480);
+              MovingBody.pushRasterIntersectClip((byte) 76, 306 + layoutXAlias[backgroundSlot], layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot], layoutYAlias[backgroundSlot] + 480);
               splitBoardScroll = (-(2 * (paddle.x256 + paddle.width256 / 2 << 8)) + 20054016) / 306;
               TabbedPane.currentBackground.drawSplitBackground(layoutYAlias[backgroundSlot], (byte) -107, layoutXAlias[backgroundSlot], backgroundPlayerId, splitBoardScroll / 2);
               RasterStackHelpers.popRaster(-122);
@@ -1757,11 +1757,11 @@ final class GameplayScreen extends GameScreen {
         }
         if (this.match.playerCount > 1 &&
           ((this.match.playerMaskTwo | this.match.playerMaskOne) & 1 << this.viewedPlayerId) == 0) {
-          ClientException.a(layoutX[0], 424, false, this.match, this.viewedPlayerId, layoutY[0]);
+          ClientException.drawPlayerTrackMarkers(layoutX[0], 424, false, this.match, this.viewedPlayerId, layoutY[0]);
         }
         if (this.match.playerCount == 2 &&
           0 == (1 << 1 - this.viewedPlayerId & (this.match.playerMaskTwo | this.match.playerMaskOne))) {
-          ClientException.a(layoutX[1], 424, false, this.match, 1 - this.viewedPlayerId, layoutY[1]);
+          ClientException.drawPlayerTrackMarkers(layoutX[1], 424, false, this.match, 1 - this.viewedPlayerId, layoutY[1]);
         }
         portraitLayoutY = NodeDequeCursor.boardLayoutYByPlayerCount[this.match.playerCount - 1];
         portraitPlayerId = this.viewedPlayerId;

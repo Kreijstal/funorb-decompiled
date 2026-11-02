@@ -11,12 +11,12 @@ class TextFieldRenderer extends TextWidgetRenderer {
     static String field_v;
     static int[] field_C;
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_C = null;
         field_v = null;
         field_y = null;
         field_B = null;
-        if (param0 < 50) {
+        if (obfuscationGuard < 50) {
           field_v = (String) null;
         }
     }

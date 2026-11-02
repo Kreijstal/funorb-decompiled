@@ -7,7 +7,7 @@ final class ConstructionBackground extends BackgroundScene {
     static String field_r;
     static RgbSprite waterCharacterSprite;
 
-    private final static void a(RgbSprite param0, int param1, int param2, int param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, RgbSprite param10, int param11, RgbSprite param12) {
+    private final static void drawParallaxLayers(RgbSprite param0, int param1, int param2, int param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, RgbSprite param10, int param11, RgbSprite param12) {
         try {
           param12.drawAt(-((-param3 + param12.canvasWidth) / 2) + (param6 + (param2 * param7 >> 16)), param8);
           QuickChatMenu.a(-121, 144, 128, param10, 11970969, (param2 * 9 >> 16) + (-param10.canvasWidth + param3) / 2 + param6 - 35 / param1, -(120 / param1) - param10.canvasHeight + (param9 + param4) + param8);
@@ -18,21 +18,21 @@ final class ConstructionBackground extends BackgroundScene {
         }
     }
 
-    final RgbSprite[] a(byte param0, int param1) {
-        int var3 = -31 / ((param0 - 65) / 49);
-        return GamePresentationHelpers.constructionCapsSprites[-1 + param1];
+    final RgbSprite[] getPaddleCapSprites(byte obfuscationGuard, int scaleDivisor) {
+        int var3 = -31 / ((obfuscationGuard - 65) / 49);
+        return GamePresentationHelpers.constructionCapsSprites[-1 + scaleDivisor];
     }
 
-    final RgbSprite a(boolean param0, int param1) {
-        if (!param0) {
+    final RgbSprite getPaddleCentreSprite(boolean obfuscationGuard, int scaleDivisor) {
+        if (!obfuscationGuard) {
           this.drawPreview((byte) 31, 89, 39, 72);
         }
-        return OpacityWidget.constructionCentreSprites[-1 + param1];
+        return OpacityWidget.constructionCentreSprites[-1 + scaleDivisor];
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_r = null;
-        if (param0 < 82) {
+        if (obfuscationGuard < 82) {
           return;
         }
         waterCharacterSprite = null;
@@ -40,11 +40,11 @@ final class ConstructionBackground extends BackgroundScene {
         field_u = null;
     }
 
-    final RgbSprite[] a(int param0, boolean param1) {
-        if (!param1) {
+    final RgbSprite[] getPaddleSegmentSprites(int scaleDivisor, boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return (RgbSprite[]) null;
         }
-        return NodeDequeCursor.constructionSegsSprites[param0 - 1];
+        return NodeDequeCursor.constructionSegsSprites[scaleDivisor - 1];
     }
 
     ConstructionBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
@@ -78,10 +78,10 @@ final class ConstructionBackground extends BackgroundScene {
         if (this.hasSprites((byte) -116)) {
           var6 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -47);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            FullscreenFailureKind.a(-10, colorIndex, var6, 2, -119, DisplayModeInfo.field_g);
+            FullscreenFailureKind.renderBackdropSurface(-10, colorIndex, var6, 2, -119, DisplayModeInfo.field_g);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ConstructionBackground.a(CanvasInputCleanup.field_a, 2, scroll16, 306, -10, IntrusiveNode.field_d, destinationX, 5, destinationY, 480, IntegerRemainderHelpers.constructionSmokeHalfSprite, colorIndex, var6.sprite);
+          ConstructionBackground.drawParallaxLayers(CanvasInputCleanup.field_a, 2, scroll16, 306, -10, IntrusiveNode.field_d, destinationX, 5, destinationY, 480, IntegerRemainderHelpers.constructionSmokeHalfSprite, colorIndex, var6.sprite);
         } else {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 16777215);
         }
@@ -100,10 +100,10 @@ final class ConstructionBackground extends BackgroundScene {
         } else {
           var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            FullscreenFailureKind.a(0, colorIndex, var6, 1, 114, ValidatedTextFieldWidget.constructionFarSprite);
+            FullscreenFailureKind.renderBackdropSurface(0, colorIndex, var6, 1, 114, ValidatedTextFieldWidget.constructionFarSprite);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ConstructionBackground.a(ValidatedTextFieldWidget.constructionNearSprite, 1, scroll16, 640, 0, AchievementBrowserScreen.constructionMidSprite, destinationX, 5, destinationY, 480, IntNode.constructionSmokeSprite, colorIndex, var6.sprite);
+          ConstructionBackground.drawParallaxLayers(ValidatedTextFieldWidget.constructionNearSprite, 1, scroll16, 640, 0, AchievementBrowserScreen.constructionMidSprite, destinationX, 5, destinationY, 480, IntNode.constructionSmokeSprite, colorIndex, var6.sprite);
         }
     }
 
@@ -144,7 +144,7 @@ final class ConstructionBackground extends BackgroundScene {
         VerticalScrollbar.a(QuickChatCategoryDefinition.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
         if (param0 > -70) {
           RgbSprite var4 = (RgbSprite) null;
-          ConstructionBackground.a((RgbSprite) null, 67, 35, -28, -34, (RgbSprite) null, -56, 62, -67, 118, (RgbSprite) null, -55, (RgbSprite) null);
+          ConstructionBackground.drawParallaxLayers((RgbSprite) null, 67, 35, -28, -34, (RgbSprite) null, -56, 62, -67, 118, (RgbSprite) null, -55, (RgbSprite) null);
         }
     }
 
@@ -170,7 +170,7 @@ final class ConstructionBackground extends BackgroundScene {
           for (var6 = 0; var6 < 256; var6++) {
             incrementValue$1 = var3_int;
             var3_int++;
-            var5[var6] = IntrusiveHashIterator.a(255, (int) param1[incrementValue$1]);
+            var5[var6] = IntrusiveHashIterator.bitwiseAnd(255, (int) param1[incrementValue$1]);
           }
           var3_int += 256;
           var8 = 0;
@@ -198,7 +198,7 @@ final class ConstructionBackground extends BackgroundScene {
     final boolean hasSprites(byte obfuscationGuard) {
         boolean stackIn_9_0 = false;
         if (obfuscationGuard >= -91) {
-          this.a((byte) -78, -121);
+          this.getPaddleCapSprites((byte) -78, -121);
         }
         stackIn_9_0 = (null != ValidatedTextFieldWidget.constructionNearSprite) && (AchievementBrowserScreen.constructionMidSprite != null) && (null != ValidatedTextFieldWidget.constructionFarSprite) && (null != IntNode.constructionSmokeSprite) && (MenuSelection.constructionSmallSprite != null);
         return stackIn_9_0;

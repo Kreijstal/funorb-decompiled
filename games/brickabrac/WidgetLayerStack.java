@@ -15,7 +15,7 @@ final class WidgetLayerStack extends SingleChildWidget {
         var3 = BrickABrac.field_J ? 1 : 0;
         if (param1 != 21543) {
           var4 = (PlayerBoard) null;
-          WidgetLayerStack.a(103, 104, 91, (byte) -14, (PlayerBoard) null, 105, 90);
+          WidgetLayerStack.drawBoardEndOverlay(103, 104, 91, (byte) -14, (PlayerBoard) null, 105, 90);
         }
         if (0 >= ResourceArchiveFactory.windowModeCapabilityWord) {
           var2 = (QuickChatMenu.h(-26090)) ? 0 : 1;
@@ -55,10 +55,10 @@ final class WidgetLayerStack extends SingleChildWidget {
         }
     }
 
-    public static void j(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         volcanicMidSprite = null;
         field_G = null;
-        if (param0 > -91) {
+        if (obfuscationGuard > -91) {
           NineSliceFrame var2 = (NineSliceFrame) null;
           WidgetLayerStack.configureFullscreenDialogButtons(-80, 69, (NineSliceFrame) null, 50, (NineSliceFrame) null, -32);
         }
@@ -88,7 +88,7 @@ final class WidgetLayerStack extends SingleChildWidget {
           }
           var3 = (WidgetLayer) (layer);
           if (obfuscationGuard > -63) {
-            WidgetLayerStack.j((byte) -73);
+            WidgetLayerStack.clearSharedReferences((byte) -73);
           }
           this.layers.addFirst(true, var3);
           var3.visible = true;
@@ -186,9 +186,9 @@ final class WidgetLayerStack extends SingleChildWidget {
         }
     }
 
-    final void i(int param0) {
+    final void updateLayers(int obfuscationGuard) {
         int var5 = BrickABrac.field_J ? 1 : 0;
-        int var3 = 18 / ((36 - param0) / 43);
+        int var3 = 18 / ((36 - obfuscationGuard) / 43);
         NodeDequeCursor var2 = new NodeDequeCursor(this.layers);
         WidgetLayer var4 = (WidgetLayer) (var2.first(240));
         while (var4 != null) {
@@ -228,7 +228,7 @@ final class WidgetLayerStack extends SingleChildWidget {
           secondsRemaining = 0;
           if (obfuscationGuard != -16546) {
             unusedBoard = (PlayerBoard) null;
-            WidgetLayerStack.a(-114, -15, 90, (byte) -109, (PlayerBoard) null, -85, -67);
+            WidgetLayerStack.drawBoardEndOverlay(-114, -15, 90, (byte) -109, (PlayerBoard) null, -85, -67);
           }
           if (ArchiveFetchClient.fullscreenDialogKind == 2) {
             elapsedMillis = -CalendarRankingHelpers.fullscreenConfirmationStartMillis + MonotonicTime.nowMillis(false);
@@ -316,7 +316,7 @@ final class WidgetLayerStack extends SingleChildWidget {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, PlayerBoard param4, int param5, int param6) {
+    final static void drawBoardEndOverlay(int x, int width, int height, byte obfuscationGuard, PlayerBoard board, int y, int scaleDivisor) {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_7_2 = 0;
@@ -331,36 +331,36 @@ final class WidgetLayerStack extends SingleChildWidget {
         RgbSprite var9 = null;
         int var8Lifetime1;
         try {
-          if (param4.maskedTicks < 50) {
+          if (board.maskedTicks < 50) {
             return;
           }
-          var7_int = param4.maskedTicks - 50;
+          var7_int = board.maskedTicks - 50;
           var8 = var7_int * 96 / 100;
           if (var8 > 96) {
             var8 = 96;
           }
-          stackIn_7_0 = param0;
-          stackIn_7_1 = param5;
-          stackIn_7_2 = param1 / param6;
-          if (param6 != 1) {
+          stackIn_7_0 = x;
+          stackIn_7_1 = y;
+          stackIn_7_2 = width / scaleDivisor;
+          if (scaleDivisor != 1) {
             stackIn_8_3 = 0;
           } else {
             stackIn_8_3 = 35;
           }
-          Rasterizer2D.fillRectangleAlpha(stackIn_7_0, stackIn_7_1, stackIn_7_2, -stackIn_8_3 + param2 / param6, 0, var8);
+          Rasterizer2D.fillRectangleAlpha(stackIn_7_0, stackIn_7_1, stackIn_7_2, -stackIn_8_3 + height / scaleDivisor, 0, var8);
           if (150 < var7_int * 2 &&
-            param4.resultCode > 0 &&
-            param4.resultCode - 1 < ArchiveNetworkClient.activeRosetteSprites.length) {
+            board.resultCode > 0 &&
+            board.resultCode - 1 < ArchiveNetworkClient.activeRosetteSprites.length) {
             var8Lifetime1 = -75 + var7_int;
             if (50 < var8Lifetime1) {
               var8Lifetime1 = 50;
             }
             var8Lifetime1 = 256 * var8Lifetime1 / 50;
-            var9 = ArchiveNetworkClient.activeRosetteSprites[param4.resultCode - 1];
-            var9.b(param0 + (param1 - param6 * var9.canvasWidth) / (param6 * 2), param5 + (param2 - var9.canvasHeight * param6) / (param6 * 2), var8Lifetime1);
-            LegacyEmailValidationError.drawBoardResultWord(param1, var8Lifetime1, 60, param0, param6, param5, param2, param4);
+            var9 = ArchiveNetworkClient.activeRosetteSprites[board.resultCode - 1];
+            var9.drawAlphaBlended(x + (width - scaleDivisor * var9.canvasWidth) / (scaleDivisor * 2), y + (height - var9.canvasHeight * scaleDivisor) / (scaleDivisor * 2), var8Lifetime1);
+            LegacyEmailValidationError.drawBoardResultWord(width, var8Lifetime1, 60, x, scaleDivisor, y, height, board);
           }
-          if (param3 < 118) {
+          if (obfuscationGuard < 118) {
             WidgetLayerStack.a(true, 86);
           }
           return;
@@ -368,13 +368,13 @@ final class WidgetLayerStack extends SingleChildWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_21_0 = var7;
-          stackIn_21_1 = new StringBuilder().append("cp.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_21_1 = new StringBuilder().append("cp.H(").append(x).append(',').append(width).append(',').append(height).append(',').append(obfuscationGuard).append(',');
+          if (board == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(y).append(',').append(scaleDivisor).append(')').toString());
         }
     }
 
@@ -400,19 +400,19 @@ final class WidgetLayerStack extends SingleChildWidget {
         return request;
     }
 
-    final Widget h(byte param0) {
+    final Widget getFocusedChild(byte obfuscationGuard) {
         NodeDequeCursor var2;
         WidgetLayer var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = new NodeDequeCursor(this.layers);
-        if (param0 != 25) {
-          WidgetLayerStack.j((byte) -34);
+        if (obfuscationGuard != 25) {
+          WidgetLayerStack.clearSharedReferences((byte) -34);
         }
-        var3 = (WidgetLayer) (var2.first(param0 + 215));
+        var3 = (WidgetLayer) (var2.first(obfuscationGuard + 215));
         while (var3 != null) {
           if (var3.visible) {
-            return var3.g((byte) -3);
+            return var3.getFocusedChild((byte) -3);
           }
           var3 = (WidgetLayer) (var2.next(7));
         }

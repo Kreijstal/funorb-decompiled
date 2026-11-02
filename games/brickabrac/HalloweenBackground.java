@@ -32,17 +32,17 @@ final class HalloweenBackground extends BackgroundScene {
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var7 = null;
         if (!obfuscationGuard) {
-          this.a(-127, false);
+          this.getPaddleSegmentSprites(-127, false);
           if (!this.hasSprites((byte) -106)) {
             Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, CacheIoWorker.halloweenBackgroundColors[colorIndex], 22953);
             return;
           }
           var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 1, colorIndex, QuickChatParameterType.field_j, var7, 0, (byte) -86, DialogPointerGlobals.field_b);
+            ResourcePreparationQueue.renderBackdropSurface(SocialListResponseHelpers.field_m, 1, colorIndex, QuickChatParameterType.field_j, var7, 0, (byte) -86, DialogPointerGlobals.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ValidationStatus.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, ValidationMessageWidget.halloweenNearSprite, 67, 640, destinationX, var7.sprite, destinationY);
+          ValidationStatus.drawParallaxLayers(1, 0, StateIconLabel.halloweenMidSprite, scroll16, ValidationMessageWidget.halloweenNearSprite, 67, 640, destinationX, var7.sprite, destinationY);
           return;
         }
         if (!this.hasSprites((byte) -106)) {
@@ -51,17 +51,17 @@ final class HalloweenBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 1, colorIndex, QuickChatParameterType.field_j, var8, 0, (byte) -86, DialogPointerGlobals.field_b);
+          ResourcePreparationQueue.renderBackdropSurface(SocialListResponseHelpers.field_m, 1, colorIndex, QuickChatParameterType.field_j, var8, 0, (byte) -86, DialogPointerGlobals.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
-        ValidationStatus.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, ValidationMessageWidget.halloweenNearSprite, 67, 640, destinationX, var8.sprite, destinationY);
+        ValidationStatus.drawParallaxLayers(1, 0, StateIconLabel.halloweenMidSprite, scroll16, ValidationMessageWidget.halloweenNearSprite, 67, 640, destinationX, var8.sprite, destinationY);
     }
 
-    final RgbSprite[] a(int param0, boolean param1) {
-        if (!param1) {
+    final RgbSprite[] getPaddleSegmentSprites(int scaleDivisor, boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return (RgbSprite[]) null;
         }
-        return GameConnectionShell.halloweenSegsSprites[param0 - 1];
+        return GameConnectionShell.halloweenSegsSprites[scaleDivisor - 1];
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
@@ -87,22 +87,22 @@ final class HalloweenBackground extends BackgroundScene {
         return true;
     }
 
-    final int c(int param0) {
-        if (param0 >= -72) {
+    final int getMusicChannelGain(int obfuscationGuard) {
+        if (obfuscationGuard >= -72) {
           return 2;
         }
         return 128;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, RgbSprite param4, RasterCacheSurface param5) {
+    final static void renderBackdropSurface(int param0, int param1, boolean param2, int param3, RgbSprite param4, RasterCacheSurface param5) {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-95, param5.sprite);
           Rasterizer2D.clear();
-          param4.b(-(60 / param0) + (-param4.canvasWidth + param5.width) / 2, -param4.canvasHeight + param1 - (-param5.height + 130 / param0), 0, 208);
+          param4.drawWithVerticalAlphaGradient(-(60 / param0) + (-param4.canvasWidth + param5.width) / 2, -param4.canvasHeight + param1 - (-param5.height + 130 / param0), 0, 208);
           RasterEffectHelpers.fillVerticalGradientAlpha255(0, 0, param5.width, param5.height, 0, FireworkBurst.backgroundTintColors[param3], 96);
           if (param2) {
             RasterCacheSurface var7 = (RasterCacheSurface) null;
-            HalloweenBackground.a(82, 29, true, -26, (RgbSprite) null, (RasterCacheSurface) null);
+            HalloweenBackground.renderBackdropSurface(82, 29, true, -26, (RgbSprite) null, (RasterCacheSurface) null);
           }
           RasterStackHelpers.popRaster(-80);
         } catch (RuntimeException runtimeException) {
@@ -143,7 +143,7 @@ final class HalloweenBackground extends BackgroundScene {
           return stackIn_40_0;
         }
         var3 = (RasterCacheSurface) null;
-        HalloweenBackground.a(62, -82, true, -61, (RgbSprite) null, (RasterCacheSurface) null);
+        HalloweenBackground.renderBackdropSurface(62, -82, true, -61, (RgbSprite) null, (RasterCacheSurface) null);
         if (ValidationMessageWidget.halloweenNearSprite == null) {
           return false;
         }
@@ -193,12 +193,12 @@ final class HalloweenBackground extends BackgroundScene {
           }
           var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 116);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 2, colorIndex, QuickChatParameterType.field_j, var7, -13, (byte) -96, DialogPointerGlobals.field_b);
+            ResourcePreparationQueue.renderBackdropSurface(SocialListResponseHelpers.field_m, 2, colorIndex, QuickChatParameterType.field_j, var7, -13, (byte) -96, DialogPointerGlobals.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-            ValidationStatus.a(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var7.sprite, destinationY);
+            ValidationStatus.drawParallaxLayers(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var7.sprite, destinationY);
             return;
           }
-          ValidationStatus.a(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var7.sprite, destinationY);
+          ValidationStatus.drawParallaxLayers(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var7.sprite, destinationY);
           return;
         }
         if (!this.hasSprites((byte) -126)) {
@@ -207,31 +207,31 @@ final class HalloweenBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 116);
         if (var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          ValidationStatus.a(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var8.sprite, destinationY);
+          ValidationStatus.drawParallaxLayers(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var8.sprite, destinationY);
           return;
         }
-        ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 2, colorIndex, QuickChatParameterType.field_j, var8, -13, (byte) -96, DialogPointerGlobals.field_b);
+        ResourcePreparationQueue.renderBackdropSurface(SocialListResponseHelpers.field_m, 2, colorIndex, QuickChatParameterType.field_j, var8, -13, (byte) -96, DialogPointerGlobals.field_b);
         var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-        ValidationStatus.a(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var8.sprite, destinationY);
+        ValidationStatus.drawParallaxLayers(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var8.sprite, destinationY);
     }
 
-    final RgbSprite a(boolean param0, int param1) {
-        if (!param0) {
+    final RgbSprite getPaddleCentreSprite(boolean obfuscationGuard, int scaleDivisor) {
+        if (!obfuscationGuard) {
           field_u = (RgbSprite) null;
-          return CanvasInputHelpers.halloweenCentreSprites[-1 + param1];
+          return CanvasInputHelpers.halloweenCentreSprites[-1 + scaleDivisor];
         }
-        return CanvasInputHelpers.halloweenCentreSprites[-1 + param1];
+        return CanvasInputHelpers.halloweenCentreSprites[-1 + scaleDivisor];
     }
 
-    final RgbSprite c(byte param0) {
-        if (param0 > -74) {
+    final RgbSprite getCharacterSprite(byte obfuscationGuard) {
+        if (obfuscationGuard > -74) {
           field_y = false;
           return UiComponentNode.halloweenCharacterSprite;
         }
         return UiComponentNode.halloweenCharacterSprite;
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_r = null;
         receivedChatDisplayName = null;
         field_s = null;
@@ -239,14 +239,14 @@ final class HalloweenBackground extends BackgroundScene {
         field_u = null;
         archiveSourceManager = null;
         field_x = null;
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           field_w = (UiComponent[]) null;
         }
     }
 
-    final RgbSprite[] a(byte param0, int param1) {
-        int var3 = -12 % ((65 - param0) / 49);
-        return StrongCacheEntry.halloweenCapsSprites[-1 + param1];
+    final RgbSprite[] getPaddleCapSprites(byte obfuscationGuard, int scaleDivisor) {
+        int var3 = -12 % ((65 - obfuscationGuard) / 49);
+        return StrongCacheEntry.halloweenCapsSprites[-1 + scaleDivisor];
     }
 
     static {

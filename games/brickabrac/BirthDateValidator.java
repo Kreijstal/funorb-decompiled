@@ -9,12 +9,12 @@ final class BirthDateValidator extends DebouncedValidationSource implements Text
     static int field_h;
     static long receivedChatSenderId;
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_j = null;
         field_i = null;
         field_g = null;
-        if (param0 >= -22) {
-          BirthDateValidator.c((byte) 116);
+        if (obfuscationGuard >= -22) {
+          BirthDateValidator.clearSharedReferences((byte) 116);
         }
     }
 
@@ -115,19 +115,19 @@ final class BirthDateValidator extends DebouncedValidationSource implements Text
         return ScrollPaneWithFooter.field_Rb;
     }
 
-    final static void d(byte param0) {
+    final static void clearChatHistory(byte obfuscationGuard) {
         int var1_int = 0;
         int var2 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var1_int = 0; var1_int < ScrollPane.chatHistorySize; var1_int++) {
             UnderwaterBackground.chatHistory[var1_int] = null;
           }
-          if (param0 != -56) {
+          if (obfuscationGuard != -56) {
             field_i = (QuickChatParameterType) null;
           }
           ScrollPane.chatHistorySize = 0;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.R(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.R(" + obfuscationGuard + ')');
         }
     }
 

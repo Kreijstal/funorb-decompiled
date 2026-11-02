@@ -29,11 +29,11 @@ final class IntHistoryBuffer extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_i = null;
         largeRosetteSprites = null;
         field_k = null;
-        if (param0 != 67108864) {
+        if (obfuscationGuard != 67108864) {
           largeRosetteSprites = (RgbSprite[]) null;
         }
     }

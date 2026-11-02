@@ -54,33 +54,33 @@ final class LobbyOverlayHelpers extends IntrusiveNode {
         field_l = (boolean[]) null;
     }
 
-    final static void d(int param0) {
+    final static void decreaseMasterSoundGain(int obfuscationGuard) {
         int var1 = 0;
         int var1Lifetime1;
         int var1Lifetime2;
         if (BackgroundScene.masterSoundGain <= 32) {
-          SingleChildWidget.a(13894, 0);
-          var1 = -2 % ((-60 - param0) / 34);
+          SingleChildWidget.applyMasterSoundGain(13894, 0);
+          var1 = -2 % ((-60 - obfuscationGuard) / 34);
           return;
         }
         var1Lifetime1 = BackgroundScene.masterSoundGain % 32;
         if (0 == var1Lifetime1) {
           var1Lifetime1 = 32;
         }
-        SingleChildWidget.a(13894, BackgroundScene.masterSoundGain - var1Lifetime1);
-        var1Lifetime2 = -2 % ((-60 - param0) / 34);
+        SingleChildWidget.applyMasterSoundGain(13894, BackgroundScene.masterSoundGain - var1Lifetime1);
+        var1Lifetime2 = -2 % ((-60 - obfuscationGuard) / 34);
     }
 
-    final static boolean c(int param0) {
-        if (param0 != 30794) {
+    final static boolean isEmailAvailabilityPending(int obfuscationGuard) {
+        if (obfuscationGuard != 30794) {
           return false;
         }
         return !LabeledWidget.emailAvailabilityRequest.isCompleted(96) ? true : false;
     }
 
-    public static void a(int param0) {
-        if (param0 != 0) {
-          LobbyOverlayHelpers.a(51);
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
+          LobbyOverlayHelpers.clearSharedReferences(51);
           field_l = null;
           arcticCentreSprites = null;
           return;

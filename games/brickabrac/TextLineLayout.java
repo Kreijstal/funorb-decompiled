@@ -23,7 +23,7 @@ final class TextLineLayout {
             return null;
           }
           if (param3 == 1) {
-            stackIn_7_0 = NineSliceFrame.b(param3 ^ 13875);
+            stackIn_7_0 = NineSliceFrame.buildRgbSpriteFromDecodedData(param3 ^ 13875);
             return stackIn_7_0;
           }
           stackIn_5_0 = (RgbSprite) null;
@@ -169,7 +169,7 @@ final class TextLineLayout {
                     } else {
                       var18 = Rasterizer2D.pixels[var8];
                       var19 = (16711935 & var18) * var16 + (var17 & 16711935) * var15 >> 8 & 16711935;
-                      Rasterizer2D.pixels[var8] = IntrusiveHashIterator.a(65280, var16 * IntrusiveHashIterator.a(var18, 65280) + var15 * IntrusiveHashIterator.a(65280, var17) >> 8) + var19;
+                      Rasterizer2D.pixels[var8] = IntrusiveHashIterator.bitwiseAnd(65280, var16 * IntrusiveHashIterator.bitwiseAnd(var18, 65280) + var15 * IntrusiveHashIterator.bitwiseAnd(65280, var17) >> 8) + var19;
                     }
                   }
                   var8++;
@@ -198,10 +198,10 @@ final class TextLineLayout {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         viewVertexZ = null;
         field_e = null;
-        if (param0 != 111) {
+        if (obfuscationGuard != 111) {
           IndexedSprite var2 = (IndexedSprite) null;
           TextLineLayout.a(26, (IndexedSprite) null, (byte) 26, -9, 66, -42);
         }

@@ -9,13 +9,13 @@ final class FontRequestHelpers implements QuickChatContextMarker {
     static String field_c;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_a = null;
         farmBackgroundColors = null;
         farmMidSprite = null;
         field_e = null;
         field_b = null;
-        if (param0 < -2) {
+        if (obfuscationGuard < -2) {
           field_c = null;
           return;
         }

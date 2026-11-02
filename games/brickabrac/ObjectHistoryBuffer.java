@@ -12,12 +12,12 @@ final class ObjectHistoryBuffer extends IntrusiveNode {
     private Object[] entries;
     private int capacity;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_j = null;
         arcticCapsSprites = (RgbSprite[][]) null;
         ninjaCharacterSprite = null;
         rankingDraws = null;
-        if (param0 <= 36) {
+        if (obfuscationGuard <= 36) {
           return;
         }
         field_l = null;

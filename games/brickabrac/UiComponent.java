@@ -319,7 +319,7 @@ class UiComponent extends UiComponentNode {
             var25 = var25 + (this.height - var18.canvasHeight);
           }
           if (256 > this.spriteAlpha256) {
-            var18.b(var24_int, var25, this.spriteAlpha256);
+            var18.drawAlphaBlended(var24_int, var25, this.spriteAlpha256);
           } else {
             var18.drawTransparent(var24_int, var25);
           }
@@ -518,14 +518,14 @@ class UiComponent extends UiComponentNode {
         this(id, styleTemplate, 0, 0, 0, 0, text);
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_Z = null;
         fullscreenUnsupported = null;
         field_ob = null;
         halfSteelBallSprite = null;
         fullscreenDialogSelection = null;
         glowSequenceWords = null;
-        if (param0 > 60) {
+        if (obfuscationGuard > 60) {
           field_mb = null;
           backgroundMusicTrackArchive = null;
           return;
@@ -590,7 +590,7 @@ class UiComponent extends UiComponentNode {
         this.height = currentHeight;
         this.localY = -currentScroll;
         if (obfuscationGuard != -2147483648) {
-          UiComponent.c((byte) -123);
+          UiComponent.clearSharedReferences((byte) -123);
         }
     }
 

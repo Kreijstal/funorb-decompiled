@@ -16,7 +16,7 @@ final class IntKeyIndex {
         return param0 >= 2 ? true : false;
     }
 
-    final static AccountResponse a(int param0, String[] param1) {
+    final static AccountResponse createAccountResponseWithSuggestions(int obfuscationGuard, String[] suggestedUsernames) {
         AccountResponse var2 = null;
         RuntimeException var2_ref = null;
         AccountResponse stackIn_2_0 = null;
@@ -27,8 +27,8 @@ final class IntKeyIndex {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new AccountResponse(false);
-          var2.suggestedUsernames = param1;
-          if (param0 == -2079) {
+          var2.suggestedUsernames = suggestedUsernames;
+          if (obfuscationGuard == -2079) {
             stackIn_4_0 = var2;
             return stackIn_4_0;
           }
@@ -38,8 +38,8 @@ final class IntKeyIndex {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_7_0 = var2_ref;
-          stackIn_7_1 = new StringBuilder().append("lm.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("lm.A(").append(obfuscationGuard).append(',');
+          if (suggestedUsernames == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -48,13 +48,13 @@ final class IntKeyIndex {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_d = null;
         chocCentreSprites = null;
         fullscreenDialogFrame = null;
         field_a = null;
-        if (!param0) {
-          IntKeyIndex.a(true);
+        if (!obfuscationGuard) {
+          IntKeyIndex.clearSharedReferences(true);
         }
     }
 
@@ -66,9 +66,9 @@ final class IntKeyIndex {
         IntrusiveHashIterator.field_g = StrongCacheEntry.field_P;
     }
 
-    final static boolean a(byte param0) {
-        if (param0 != -10) {
-          IntKeyIndex.a((byte) 35);
+    final static boolean isGameplayActive(byte obfuscationGuard) {
+        if (obfuscationGuard != -10) {
+          IntKeyIndex.isGameplayActive((byte) 35);
         }
         return null != IntArrayRequest.gameplayScreen ? true : false;
     }

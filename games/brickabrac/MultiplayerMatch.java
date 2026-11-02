@@ -869,10 +869,10 @@ final class MultiplayerMatch {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_d = null;
         field_e = null;
-        if (param0 != -19537) {
+        if (obfuscationGuard != -19537) {
           field_e = (String) null;
         }
     }

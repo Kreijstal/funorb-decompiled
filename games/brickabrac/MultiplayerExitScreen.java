@@ -10,9 +10,9 @@ final class MultiplayerExitScreen extends MatchResultScreen {
     static String field_y;
     static long repeatRecipientId;
 
-    public static void i(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_y = null;
-        int var1 = 63 % ((-67 - param0) / 54);
+        int var1 = 63 % ((-67 - obfuscationGuard) / 54);
         field_A = null;
         customBytePoolSizes = null;
         farmSmallSprite = null;
@@ -80,7 +80,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
           if (obfuscationGuard > 113) {
             return;
           }
-          MultiplayerExitScreen.i(-46);
+          MultiplayerExitScreen.clearSharedReferences(-46);
           return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
@@ -123,7 +123,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
 
     final void navigateBack(int obfuscationGuard) {
         if (obfuscationGuard != -1) {
-          MultiplayerExitScreen.i(-22);
+          MultiplayerExitScreen.clearSharedReferences(-22);
           ArchiveNetworkRequest.f((byte) 122);
           return;
         }

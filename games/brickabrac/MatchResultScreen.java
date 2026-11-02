@@ -39,7 +39,7 @@ abstract class MatchResultScreen extends MenuScreen {
         }
         var3 += 20;
         if (!obfuscationGuard) {
-          MatchResultScreen.g(102);
+          MatchResultScreen.clearSharedReferences(102);
         }
         var4Lifetime1 = 5 * var2 - (5 - var2 * var3);
         var5Lifetime1 = (-var4Lifetime1 + 640) / 2;
@@ -143,7 +143,7 @@ abstract class MatchResultScreen extends MenuScreen {
           }
           break;
         }
-        this.a(0);
+        this.drawEnabledButtons(0);
         DelayedPacket.d(0);
         return;
     }
@@ -187,8 +187,8 @@ abstract class MatchResultScreen extends MenuScreen {
         }
     }
 
-    public static void g(int param0) {
-        if (param0 != -25617) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != -25617) {
           return;
         }
         field_r = null;

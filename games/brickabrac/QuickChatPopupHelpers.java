@@ -131,9 +131,9 @@ final class QuickChatPopupHelpers {
         return;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_e = null;
-        if (param0 < 16) {
+        if (obfuscationGuard < 16) {
           return;
         }
         nameCharacterExtensions = null;

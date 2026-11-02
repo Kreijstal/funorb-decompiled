@@ -15,11 +15,11 @@ final class ResourceArchive {
     static RgbSprite[] halfBrickSprites;
     static int[] field_d;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_e = null;
         field_f = null;
         halfBrickSprites = null;
-        if (param0) {
+        if (obfuscationGuard) {
           String var2 = (String) null;
           ResourceArchive.rejectNumericEmailSuffix((byte) -93, (String) null);
         }
@@ -604,7 +604,7 @@ final class ResourceArchive {
           while (true) {
             if (characterIndex >= suffixLength) {
               if (obfuscationGuard > -58) {
-                ResourceArchive.a(false);
+                ResourceArchive.clearSharedReferences(false);
               }
               numericSuffixError = GameCanvas.invalidEmailSyntax;
               return numericSuffixError;
@@ -743,7 +743,7 @@ final class ResourceArchive {
             stackIn_34_0 = var11_ref_RuntimeException;
             stackIn_34_1 = new StringBuilder();
             stackIn_35_2 = (xteaKey != null);
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(NanoGameClock.a(packedBytes.length, packedBytes, (byte) -86)).append(" ").append(NanoGameClock.a(packedBytes.length - 2, packedBytes, (byte) -86)).append(" ").append(this.index.groupCrcs[groupId]).append(" ").append(this.index.indexCrc).toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(NanoGameClock.computeByteArrayCrc32(packedBytes.length, packedBytes, (byte) -86)).append(" ").append(NanoGameClock.computeByteArrayCrc32(packedBytes.length - 2, packedBytes, (byte) -86)).append(" ").append(this.index.groupCrcs[groupId]).append(" ").append(this.index.indexCrc).toString());
           }
           if (this.discardPackedGroups) {
             this.packedGroups[groupId] = null;

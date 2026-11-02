@@ -145,7 +145,7 @@ final class CanvasResizeController {
           ArrayWidgetGroup.fireworkSpawnHeight = -Mesh3D.fireworkSpawnMinY + ParallaxMusicHelpers.fireworkSpawnMaxY;
           return;
         }
-        CanvasResizeController.b(109);
+        CanvasResizeController.clearSharedReferences(109);
         Mesh3D.fireworkSpawnMinY = minY;
         HotspotTextWidget.fireworkSpawnMaxX = maxX;
         ParallaxMusicHelpers.fireworkSpawnMaxY = maxY;
@@ -165,15 +165,15 @@ final class CanvasResizeController {
         return canvas;
     }
 
-    public static void b(int param0) {
-        if (param0 == 0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard == 0) {
           packNames = null;
           field_o = null;
           messageText = null;
           field_k = null;
           return;
         }
-        CanvasResizeController.b(-47);
+        CanvasResizeController.clearSharedReferences(-47);
         packNames = null;
         field_o = null;
         messageText = null;

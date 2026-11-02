@@ -19,12 +19,12 @@ final class ArcticBackground extends BackgroundScene {
           }
           var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 107);
           if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            AccountRegistrationPanel.a(2, colorIndex, var8, -35, 23275, Brick.field_K);
+            AccountRegistrationPanel.renderBackdropSurface(2, colorIndex, var8, -35, 23275, Brick.field_K);
             var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-            SpriteGeometry.a(var8.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
+            SpriteGeometry.drawParallaxLayers(var8.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
             return;
           }
-          SpriteGeometry.a(var8.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
+          SpriteGeometry.drawParallaxLayers(var8.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
           return;
         }
         if (!this.hasSprites((byte) -111)) {
@@ -33,12 +33,12 @@ final class ArcticBackground extends BackgroundScene {
         }
         RasterCacheSurface var9 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 107);
         if (var9.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          SpriteGeometry.a(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
+          SpriteGeometry.drawParallaxLayers(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
           return;
         }
-        AccountRegistrationPanel.a(2, colorIndex, var9, -35, 23275, Brick.field_K);
+        AccountRegistrationPanel.renderBackdropSurface(2, colorIndex, var9, -35, 23275, Brick.field_K);
         var9.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-        SpriteGeometry.a(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
+        SpriteGeometry.drawParallaxLayers(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
     }
 
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
@@ -101,9 +101,9 @@ final class ArcticBackground extends BackgroundScene {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_v = null;
-        if (param0 != -31) {
+        if (obfuscationGuard != -31) {
           return;
         }
         field_u = null;
@@ -112,25 +112,25 @@ final class ArcticBackground extends BackgroundScene {
         faceDepthBucketCounts = null;
     }
 
-    final RgbSprite[] a(int param0, boolean param1) {
-        if (!param1) {
+    final RgbSprite[] getPaddleSegmentSprites(int scaleDivisor, boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_u = (String) null;
-          return BoardPresentationHelpers.arcticSegsSprites[param0 - 1];
+          return BoardPresentationHelpers.arcticSegsSprites[scaleDivisor - 1];
         }
-        return BoardPresentationHelpers.arcticSegsSprites[param0 - 1];
+        return BoardPresentationHelpers.arcticSegsSprites[scaleDivisor - 1];
     }
 
-    final RgbSprite[] a(byte param0, int param1) {
-        int var3 = 84 % ((65 - param0) / 49);
-        return ObjectHistoryBuffer.arcticCapsSprites[-1 + param1];
+    final RgbSprite[] getPaddleCapSprites(byte obfuscationGuard, int scaleDivisor) {
+        int var3 = 84 % ((65 - obfuscationGuard) / 49);
+        return ObjectHistoryBuffer.arcticCapsSprites[-1 + scaleDivisor];
     }
 
-    final RgbSprite a(boolean param0, int param1) {
-        if (param0) {
-          return LobbyOverlayHelpers.arcticCentreSprites[-1 + param1];
+    final RgbSprite getPaddleCentreSprite(boolean obfuscationGuard, int scaleDivisor) {
+        if (obfuscationGuard) {
+          return LobbyOverlayHelpers.arcticCentreSprites[-1 + scaleDivisor];
         }
         this.drawFullBackground(true, -66, 69, -83, 51);
-        return LobbyOverlayHelpers.arcticCentreSprites[-1 + param1];
+        return LobbyOverlayHelpers.arcticCentreSprites[-1 + scaleDivisor];
     }
 
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
@@ -144,17 +144,17 @@ final class ArcticBackground extends BackgroundScene {
         }
         RasterCacheSurface var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          AccountRegistrationPanel.a(1, colorIndex, var6, 0, 23275, LoginPanel.arcticFarSprite);
+          AccountRegistrationPanel.renderBackdropSurface(1, colorIndex, var6, 0, 23275, LoginPanel.arcticFarSprite);
           var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
-          SpriteGeometry.a(var6.sprite, 640, destinationY, destinationX, colorIndex, scroll16, ResourcePreparationQueue.arcticNearSprite, 1, BallPulseEffect.arcticMidSprite, 1, 0);
+          SpriteGeometry.drawParallaxLayers(var6.sprite, 640, destinationY, destinationX, colorIndex, scroll16, ResourcePreparationQueue.arcticNearSprite, 1, BallPulseEffect.arcticMidSprite, 1, 0);
           if (!obfuscationGuard) {
             this.loadSprites(false);
             return;
           }
           return;
         }
-        SpriteGeometry.a(var6.sprite, 640, destinationY, destinationX, colorIndex, scroll16, ResourcePreparationQueue.arcticNearSprite, 1, BallPulseEffect.arcticMidSprite, 1, 0);
+        SpriteGeometry.drawParallaxLayers(var6.sprite, 640, destinationY, destinationX, colorIndex, scroll16, ResourcePreparationQueue.arcticNearSprite, 1, BallPulseEffect.arcticMidSprite, 1, 0);
         if (obfuscationGuard) {
           return;
         }

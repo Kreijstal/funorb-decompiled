@@ -26,7 +26,7 @@ final class IntegerBitLengthHelpers {
           CalendarMatchmakingState.field_e[0] = UiCleanupHelpers.field_a;
           CalendarMatchmakingState.field_e[2] = TableRowSubmission.field_s;
           CalendarMatchmakingState.field_e[1] = AchievementSubmission.friendsTabLabel;
-          LoginPanel.a(GamePresentationHelpers.field_e, (byte) 90, param2);
+          LoginPanel.initializeQuickChat(GamePresentationHelpers.field_e, (byte) 90, param2);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ed.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

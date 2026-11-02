@@ -16,7 +16,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
     static String field_C;
     static int[] decodedSpriteOffsetX;
 
-    final static void f(byte param0) {
+    final static void decreaseMusicGain(byte obfuscationGuard) {
         int var1 = 0;
         int var1Lifetime1;
         if (ScorePopup.field_p > 32) {
@@ -24,14 +24,14 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           if (0 == var1) {
             var1 = 32;
           }
-          SoundCache.a(1, -var1 + ScorePopup.field_p);
+          SoundCache.setMusicGain(1, -var1 + ScorePopup.field_p);
         } else {
-          SoundCache.a(1, 0);
+          SoundCache.setMusicGain(1, 0);
         }
-        var1Lifetime1 = -4 % ((73 - param0) / 40);
+        var1Lifetime1 = -4 % ((73 - obfuscationGuard) / 40);
     }
 
-    private final boolean a(int param0, int param1, Widget param2) {
+    private final boolean focusBackwardFromFocused(int obfuscationGuard, int step, Widget focusRoot) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Widget var5 = null;
@@ -46,7 +46,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           if (this.children == null) {
             return false;
           }
-          if (param0 <= 99) {
+          if (obfuscationGuard <= 99) {
             this.isFocused(-98);
           }
           var4_int = -1 + this.children.length;
@@ -54,10 +54,10 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
             var5 = this.children[var4_int];
             if (var5 != null &&
               var5.isFocused(-106)) {
-              for (var4_int = var4_int - param1; 0 <= var4_int; var4_int = var4_int - param1) {
+              for (var4_int = var4_int - step; 0 <= var4_int; var4_int = var4_int - step) {
                 var6 = this.children[var4_int];
                 if (var6 != null &&
-                  var6.tryFocus(true, param2)) {
+                  var6.tryFocus(true, focusRoot)) {
                   return true;
                 }
               }
@@ -69,8 +69,8 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_24_0 = var4;
-          stackIn_24_1 = new StringBuilder().append("ag.L(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_24_1 = new StringBuilder().append("ag.L(").append(obfuscationGuard).append(',').append(step).append(',');
+          if (focusRoot == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
@@ -101,7 +101,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_M = null;
         field_I = null;
         field_L = null;
@@ -110,13 +110,13 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         decodedSpriteOffsetX = null;
         field_C = null;
         textChoiceButtonFrame = null;
-        if (param0) {
-          ArrayWidgetGroup.c(true);
+        if (obfuscationGuard) {
+          ArrayWidgetGroup.clearSharedReferences(true);
         }
         field_G = null;
     }
 
-    private final boolean a(int param0, Widget param1) {
+    private final boolean focusPreviousChild(int obfuscationGuard, Widget focusRoot) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -124,8 +124,8 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 1) {
-            stackIn_4_0 = this.a(param0 ^ 125, 1, param1);
+          if (obfuscationGuard == 1) {
+            stackIn_4_0 = this.focusBackwardFromFocused(obfuscationGuard ^ 125, 1, focusRoot);
             return stackIn_4_0;
           }
           return true;
@@ -133,8 +133,8 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("ag.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("ag.H(").append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -221,9 +221,9 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
             return false;
           }
           if (IntArrayRequest.heldKeys[81]) {
-            stackIn_20_0 = this.a(1, focusRoot);
+            stackIn_20_0 = this.focusPreviousChild(1, focusRoot);
           } else {
-            stackIn_20_0 = this.b(true, focusRoot);
+            stackIn_20_0 = this.focusNextChild(true, focusRoot);
           }
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -240,7 +240,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         }
     }
 
-    private final boolean b(boolean param0, Widget param1) {
+    private final boolean focusNextChild(boolean obfuscationGuard, Widget focusRoot) {
         RuntimeException var3 = null;
         Widget var4 = null;
         boolean stackIn_3_0 = false;
@@ -249,18 +249,18 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             var4 = (Widget) null;
             this.handleWidgetKey(91, (byte) 97, (Widget) null, '<');
           }
-          stackIn_3_0 = this.a(1, param1, (byte) 116);
+          stackIn_3_0 = this.focusForwardFromFocused(1, focusRoot, (byte) 116);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ag.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ag.M(").append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -313,7 +313,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         }
     }
 
-    private final void a(byte param0, int param1, Hashtable param2, StringBuilder param3) {
+    private final void appendDebugChildren(byte obfuscationGuard, int indent, Hashtable visited, StringBuilder builder) {
         StringBuilder discarded$4 = null;
         int var8 = 0;
         StringBuilder discarded$6 = null;
@@ -336,19 +336,19 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           }
           var10 = this.children;
           var6 = 0;
-          if (param0 <= 72) {
-            ArrayWidgetGroup.c(true);
+          if (obfuscationGuard <= 72) {
+            ArrayWidgetGroup.clearSharedReferences(true);
           }
           while (var6 < var10.length) {
             var7 = var10[var6];
-            discarded$4 = param3.append('\n');
-            for (var8 = 0; param1 >= var8; var8++) {
-              discarded$6 = param3.append(' ');
+            discarded$4 = builder.append('\n');
+            for (var8 = 0; indent >= var8; var8++) {
+              discarded$6 = builder.append(' ');
             }
             if (var7 == null) {
-              discarded$5 = param3.append("null");
+              discarded$5 = builder.append("null");
             } else {
-              var7.a(param1 + 1, param2, 24, param3);
+              var7.appendDebugTree(indent + 1, visited, 24, builder);
             }
             var6++;
           }
@@ -357,14 +357,14 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("ag.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_16_1 = new StringBuilder().append("ag.C(").append(obfuscationGuard).append(',').append(indent).append(',');
+          if (visited == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
           stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
-          if (param3 == null) {
+          if (builder == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
@@ -405,7 +405,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, Widget param5, int param6) {
+    final boolean handleMouseWheel(int wheelDelta, int pointerX, int parentY, int obfuscationGuard, int pointerY, Widget focusRoot, int parentX) {
         int var9 = 0;
         Widget[] var8 = null;
         RuntimeException var8_ref = null;
@@ -421,7 +421,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           if (null == this.children) {
             return false;
           }
-          if (param3 >= -125) {
+          if (obfuscationGuard >= -125) {
             return false;
           }
           var12 = this.children;
@@ -430,7 +430,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
             var10 = var12[var9];
             if (var10 != null &&
               var10.isFocused(-109) &&
-              var10.a(param0, param1, param2, -126, param4, param5, param6)) {
+              var10.handleMouseWheel(wheelDelta, pointerX, parentY, -126, pointerY, focusRoot, parentX)) {
               return true;
             }
           }
@@ -439,13 +439,13 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
           stackIn_21_0 = var8_ref;
-          stackIn_21_1 = new StringBuilder().append("ag.SA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_21_1 = new StringBuilder().append("ag.SA(").append(wheelDelta).append(',').append(pointerX).append(',').append(parentY).append(',').append(obfuscationGuard).append(',').append(pointerY).append(',');
+          if (focusRoot == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -481,7 +481,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         this.layoutChildren(obfuscationGuard ^ -251);
     }
 
-    private final boolean a(int param0, Widget param1, byte param2) {
+    private final boolean focusForwardFromFocused(int step, Widget focusRoot, byte obfuscationGuard) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Widget var5 = null;
@@ -496,7 +496,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           if (null == this.children) {
             return false;
           }
-          if (param2 != 116) {
+          if (obfuscationGuard != 116) {
             textChoiceButtonFrame = (NineSliceFrame) null;
           }
           var4_int = 0;
@@ -504,10 +504,10 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
             var5 = this.children[var4_int];
             if (null != var5 &&
               var5.isFocused(-57)) {
-              for (var4_int = var4_int + param0; this.children.length > var4_int; var4_int = var4_int + param0) {
+              for (var4_int = var4_int + step; this.children.length > var4_int; var4_int = var4_int + step) {
                 var6 = this.children[var4_int];
                 if (null != var6 &&
-                  var6.tryFocus(true, param1)) {
+                  var6.tryFocus(true, focusRoot)) {
                   return true;
                 }
               }
@@ -519,13 +519,13 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_22_0 = var4;
-          stackIn_22_1 = new StringBuilder().append("ag.K(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_22_1 = new StringBuilder().append("ag.K(").append(step).append(',');
+          if (focusRoot == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -544,7 +544,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           var4 = Brick.field_A.font.measureWrappedHeight(param1, 272, Brick.field_A.lineSpacing);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           PlayerBadgeHelpers.field_f.setBounds(-(2 * var5) + (-120 + var3), var5, (var2_int - 320) / 2, 320, (byte) 64);
-          PlayerBadgeHelpers.field_f.frameSprites = DateFieldsWidget.a(false, 8421504, 3, 11579568, PlayerBadgeHelpers.field_f.height, 2105376);
+          PlayerBadgeHelpers.field_f.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(false, 8421504, 3, 11579568, PlayerBadgeHelpers.field_f.height, 2105376);
           Brick.field_A.setBounds(-24 + (PlayerBadgeHelpers.field_f.height - 20), 16, 24, -24 + (-24 + PlayerBadgeHelpers.field_f.width), (byte) 64);
           LobbyUiHelpers.cancelCreateGameButton.setBounds(24, -24 + (-20 + PlayerBadgeHelpers.field_f.height), 120, 80, (byte) 64);
         } catch (RuntimeException runtimeException) {
@@ -619,7 +619,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         return null;
     }
 
-    final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int indent, Hashtable visited, int obfuscationGuard, StringBuilder builder) {
         boolean discarded$1 = false;
         RuntimeException var5 = null;
         Widget var6 = null;
@@ -631,28 +631,28 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param3, param2 ^ 1595638000, param0, param1)) {
-            this.a(param1, param0, param2 ^ 24, param3);
-            this.a((byte) 119, param0, param1, param3);
+          if (this.beginDebugEntry(builder, obfuscationGuard ^ 1595638000, indent, visited)) {
+            this.appendDebugSummary(visited, indent, obfuscationGuard ^ 24, builder);
+            this.appendDebugChildren((byte) 119, indent, visited, builder);
           }
-          if (param2 != 24) {
+          if (obfuscationGuard != 24) {
             var6 = (Widget) null;
-            discarded$1 = this.a(26, -76, (Widget) null);
+            discarded$1 = this.focusBackwardFromFocused(26, -76, (Widget) null);
           }
-          stackIn_6_0 = (StringBuilder) (param3);
+          stackIn_6_0 = (StringBuilder) (builder);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("ag.UA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("ag.UA(").append(indent).append(',');
+          if (visited == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',');
+          if (builder == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -679,7 +679,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           var3 = var8;
           if (!obfuscationGuard) {
             var7 = (Widget) null;
-            this.a(18, 61, 105, -29, 39, (Widget) null, -74);
+            this.handleMouseWheel(18, 61, 105, -29, 39, (Widget) null, -74);
           }
           for (var4 = 0; var4 < var8.length; var4++) {
             var5 = var8[var4];
@@ -703,7 +703,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         }
     }
 
-    final int e(byte param0) {
+    final int getTopLayer(byte obfuscationGuard) {
         int var5 = 0;
         int var2;
         Widget[] var3;
@@ -713,12 +713,12 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         int var7;
         var8 = BrickABrac.field_J ? 1 : 0;
         var2 = 0;
-        var4 = -128 % ((-17 - param0) / 43);
+        var4 = -128 % ((-17 - obfuscationGuard) / 43);
         var3 = this.children;
         for (var5 = 0; var3.length > var5; var5++) {
           var6 = var3[var5];
           if (var6 != null) {
-            var7 = var6.e((byte) 117);
+            var7 = var6.getTopLayer((byte) 117);
             if (var7 > var2) {
               var2 = var7;
             }
@@ -733,7 +733,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           ArrayWidgetGroup.a((byte) 10, (String) null);
         }
         String var5 = (String) null;
-        ToggleButtonWidget.a(param2, param1, -15947, (String) null);
+        ToggleButtonWidget.showLoginPanel(param2, param1, -15947, (String) null);
     }
 
     static {
@@ -743,7 +743,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         field_I = "Spectate";
         for (var0 = 0; var0 < 256; var0++) {
           var1 = var0;
-          field_M[var0] = LevelSelectScreen.d(LevelSelectScreen.d(var1 << 16, var1 << 8), 0 * var1);
+          field_M[var0] = LevelSelectScreen.bitwiseOr(LevelSelectScreen.bitwiseOr(var1 << 16, var1 << 8), 0 * var1);
         }
         field_J = "Find opponents";
         field_L = new int[]{7, 40, 41};

@@ -106,12 +106,12 @@ final class IntrusiveHashTable {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         nameSyntaxCharacters = null;
         achievementSourceIcons = null;
         field_o = null;
         field_k = null;
-        if (param0 <= 76) {
+        if (obfuscationGuard <= 76) {
           IntrusiveHashTable.a(-40, false);
           field_i = null;
           atanRatio2048Table = null;
@@ -184,7 +184,7 @@ final class IntrusiveHashTable {
         if (var2 == null) {
           return;
         }
-        var2.a(DualLinkDeque.field_d.screenX, DualLinkDeque.field_d.screenY, 0);
+        var2.drawLayersAndTooltip(DualLinkDeque.field_d.screenX, DualLinkDeque.field_d.screenY, 0);
     }
 
     final static void a(int param0, byte param1, int param2, int param3) {

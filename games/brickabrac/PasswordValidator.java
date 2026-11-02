@@ -10,8 +10,8 @@ final class PasswordValidator extends TextFieldValidator {
     static String field_q;
     static int[] field_o;
 
-    public static void b(boolean param0) {
-        if (!param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return;
         }
         field_o = null;
@@ -45,7 +45,7 @@ final class PasswordValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 0) {
-            PasswordValidator.b(true);
+            PasswordValidator.clearSharedReferences(true);
           }
           normalizedEmail = this.emailField.text.toLowerCase();
           normalizedPassword = password.toLowerCase();
@@ -145,7 +145,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_27_0 = GameUiController.field_f;
             return stackIn_27_0;
           }
-          if (!WidgetTextLayout.a(var6, (byte) 73, var7)) {
+          if (!WidgetTextLayout.containsOrContainsReverse(var6, (byte) 73, var7)) {
             return RasterStackHelpers.field_a;
           }
           stackIn_31_0 = BackgroundRegistry.field_b;

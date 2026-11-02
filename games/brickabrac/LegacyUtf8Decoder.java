@@ -148,8 +148,8 @@ final class LegacyUtf8Decoder {
         }
     }
 
-    final static boolean a(byte param0) {
-        int var1 = 5 / ((41 - param0) / 62);
+    final static boolean hasFrameFocusOrFullscreen(byte obfuscationGuard) {
+        int var1 = 5 / ((41 - obfuscationGuard) / 62);
         return null == GameplayRenderHelpers.fullscreenCanvas ? NinjaBackground.frameFocus : true;
     }
 

@@ -8,8 +8,8 @@ final class LobbyLoginGlobals {
     static ConnectionPhase awaitingLoginReply;
     private static String field_z;
 
-    public static void a(byte param0) {
-        if (param0 == -118) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard == -118) {
           field_d = null;
           lobbyGames = null;
           field_b = null;

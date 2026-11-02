@@ -21,12 +21,12 @@ final class LevelList {
     private int contentHeight;
     int selectedLevelIndex;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_o = null;
         volcanicCentreSprites = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           CharSequence var2 = (CharSequence) null;
-          LevelList.a((CharSequence) null, false);
+          LevelList.encodeCp1252((CharSequence) null, false);
         }
     }
 
@@ -43,7 +43,7 @@ final class LevelList {
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeButtonLabels(int obfuscationGuard) {
         if (null != ArrayWidgetGroup.buttonLabels) {
           return;
         }
@@ -73,7 +73,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[21] = ArchiveNetworkClient.field_r;
         ArrayWidgetGroup.buttonLabels[17] = LevelCompleteScreen.field_E[0];
         ArrayWidgetGroup.buttonLabels[38] = IndexedSpriteHelpers.field_a;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           return;
         }
         ArrayWidgetGroup.buttonLabels[34] = TableResponseHelpers.levelSelectText;
@@ -189,7 +189,7 @@ final class LevelList {
         int labelStyle;
         int clientBranchFlag;
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
-        MovingBody.a((byte) 70, this.viewport.x + this.viewport.width, this.viewport.x, this.viewport.y, this.viewport.y + this.viewport.height);
+        MovingBody.pushRasterIntersectClip((byte) 70, this.viewport.x + this.viewport.width, this.viewport.x, this.viewport.y, this.viewport.y + this.viewport.height);
         levelIndex = AccountDateHelpers.divideFloorPositive(this.rowSpacing, (byte) 15, this.scrollOffset - this.rowGap);
         if (obfuscationGuard != 28) {
           return;
@@ -289,7 +289,7 @@ final class LevelList {
         }
     }
 
-    final static byte[] a(CharSequence param0, boolean param1) {
+    final static byte[] encodeCp1252(CharSequence text, boolean obfuscationGuard) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;
@@ -303,14 +303,14 @@ final class LevelList {
         int var6 = 0;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1) {
+          if (obfuscationGuard) {
             field_o = (ResourceArchive) null;
           }
-          var2_int = param0.length();
+          var2_int = text.length();
           var3 = new byte[var2_int];
           for (var4 = 0; var2_int > var4; var4++) {
             {
-              var5 = param0.charAt(var4);
+              var5 = text.charAt(var4);
               if ((0 >= var5 ||
                 128 <= var5) && (var5 < 160 ||
                 var5 > 255)) {
@@ -412,12 +412,12 @@ final class LevelList {
           var2 = decompiledCaughtException;
           stackIn_72_0 = var2;
           stackIn_72_1 = new StringBuilder().append("uj.G(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_73_2 = "null";
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

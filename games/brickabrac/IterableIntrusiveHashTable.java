@@ -13,11 +13,11 @@ final class IterableIntrusiveHashTable implements Iterable {
     static ResourceArchive backgroundMusicPatchArchive;
     static UiComponent field_b;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         backgroundMusicPatchArchive = null;
         field_g = null;
         field_b = null;
-        if (param0 != 24968) {
+        if (obfuscationGuard != 24968) {
           MusicTrack var2 = (MusicTrack) null;
           IterableIntrusiveHashTable.a(-14, true, (MusicTrack) null, -51, -100, true);
           packetRandom = null;
@@ -98,7 +98,7 @@ final class IterableIntrusiveHashTable implements Iterable {
             }
             IsaacGenerator.field_a = param2;
             if (IsaacGenerator.field_a != null) {
-              ConditionalTextValue.musicSynthesizer.a(param4, IsaacGenerator.field_a, param3, param1, param0 - 25460, param5);
+              ConditionalTextValue.musicSynthesizer.scheduleTrackAtBoundary(param4, IsaacGenerator.field_a, param3, param1, param0 - 25460, param5);
             }
           }
           return;

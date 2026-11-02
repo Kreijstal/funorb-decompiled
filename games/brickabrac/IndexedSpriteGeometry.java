@@ -24,10 +24,10 @@ abstract class IndexedSpriteGeometry {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         archiveSocketTask = null;
         field_c = null;
-        if (param0 != 31797) {
+        if (obfuscationGuard != 31797) {
           field_c = (String) null;
         }
     }
@@ -144,7 +144,7 @@ abstract class IndexedSpriteGeometry {
                 incrementValue$3 = var23;
                 var23++;
                 if (0 != var18[incrementValue$3]) {
-                  Rasterizer2D.f(var25 + param0, param0 + var24, param0, 2);
+                  Rasterizer2D.fillCircle(var25 + param0, param0 + var24, param0, 2);
                 }
               }
             }

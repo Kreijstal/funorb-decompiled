@@ -102,7 +102,7 @@ final class AppletSettingsUiHelpers {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resendPendingLevelResultsAndRequests(int opcode, byte obfuscationGuard) {
         int var3 = 0;
         LevelResultSubmission var4 = null;
         IntArrayRequest var5 = null;
@@ -112,22 +112,22 @@ final class AppletSettingsUiHelpers {
         try {
           var4 = (LevelResultSubmission) (NinjaBackground.pendingLevelResults.first(-14));
           while (var4 != null) {
-            LevelResultWireHelpers.sendLevelResult(param0, (byte) 112, var4);
+            LevelResultWireHelpers.sendLevelResult(opcode, (byte) 112, var4);
             var4 = (LevelResultSubmission) (NinjaBackground.pendingLevelResults.next((byte) 116));
           }
           var5 = (IntArrayRequest) (PasswordFieldRenderer.pendingIntArrayRequests.first(-61));
           while (var5 != null) {
-            AchievementIcon.sendIntArrayRequest(param0, var5, 61);
+            AchievementIcon.sendIntArrayRequest(opcode, var5, 61);
             var5 = (IntArrayRequest) (PasswordFieldRenderer.pendingIntArrayRequests.next((byte) 116));
           }
-          if (param1 != 115) {
+          if (obfuscationGuard != 115) {
             AppletSettingsUiHelpers.a(-72);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "ui.F(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "ui.F(" + opcode + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -164,7 +164,7 @@ final class AppletSettingsUiHelpers {
               unusedAttributesCopy = cookieAttributes;
               unusedAttributesAlias = cookieAttributes;
               if (settingsValue.length() != 0) {
-                cookieWithLifetime = cookieAttributes + "; Expires=" + AppletGameShell.a((byte) -75, 94608000000L + MonotonicTime.nowMillis(false)) + "; Max-Age=" + 94608000L;
+                cookieWithLifetime = cookieAttributes + "; Expires=" + AppletGameShell.formatTimestamp((byte) -75, 94608000000L + MonotonicTime.nowMillis(false)) + "; Max-Age=" + 94608000L;
               } else {
                 cookieWithLifetime = cookieAttributes + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
@@ -188,12 +188,12 @@ final class AppletSettingsUiHelpers {
         if (param0) {
           field_b = (String) null;
         }
-        stackIn_7_0 = (AchievementIcon.field_j >= 10) && (!LevelPackSelectScreen.field_s) && (!IntrusiveHashIterator.a(false));
+        stackIn_7_0 = (AchievementIcon.field_j >= 10) && (!LevelPackSelectScreen.field_s) && (!IntrusiveHashIterator.isLoggedInTransportActive(false));
         return stackIn_7_0;
     }
 
-    public static void b(int param0) {
-        if (param0 != 1516) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != 1516) {
           field_b = (String) null;
         }
         field_b = null;

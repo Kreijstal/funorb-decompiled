@@ -127,16 +127,16 @@ final class ConditionalTextValue {
         this(text, false);
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_d = null;
         field_k = null;
-        if (param0 == 2) {
+        if (obfuscationGuard == 2) {
           musicSynthesizer = null;
           field_e = null;
           validationDebouncing = null;
           return;
         }
-        ConditionalTextValue.c(1);
+        ConditionalTextValue.clearSharedReferences(1);
         musicSynthesizer = null;
         field_e = null;
         validationDebouncing = null;

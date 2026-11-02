@@ -17,10 +17,10 @@ final class RankingsRequest extends IntrusiveNode {
     int rankingKind;
     int localDraws;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_q = null;
         halfBoardMaskSprite = null;
-        if (param0 > -52) {
+        if (obfuscationGuard > -52) {
           return;
         }
         field_i = null;
@@ -49,35 +49,35 @@ final class RankingsRequest extends IntrusiveNode {
         return (char)unsignedValue;
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawOverlayLayers(boolean flag, byte obfuscationGuard) {
         LevelSequence var3;
-        if (param1 < -118) {
+        if (obfuscationGuard < -118) {
           if (null != WidgetTextLayout.field_e) {
-            DelayedPacket.a(false, WidgetTextLayout.field_e);
+            DelayedPacket.drawPointerTooltipText(false, WidgetTextLayout.field_e);
           }
           if (GameRenderAudioHelpers.contextActions != null) {
-            GameRenderAudioHelpers.contextActions.drawContextMenu((byte) -126, param0);
+            GameRenderAudioHelpers.contextActions.drawContextMenu((byte) -126, flag);
           }
-          MembershipBenefitsScreen.a(param0, false);
+          MembershipBenefitsScreen.a(flag, false);
           if (null != CircleBody.reportAbuseDialog) {
-            CircleBody.reportAbuseDialog.drawRoot(true, param0);
+            CircleBody.reportAbuseDialog.drawRoot(true, flag);
           }
-          WidgetTheme.a(param0, true);
+          WidgetTheme.drawQuickChatHelpDialog(flag, true);
           return;
         }
         var3 = (LevelSequence) null;
         RankingsRequest.a(103, true, 42, (LevelSequence) null);
         if (null != WidgetTextLayout.field_e) {
-          DelayedPacket.a(false, WidgetTextLayout.field_e);
+          DelayedPacket.drawPointerTooltipText(false, WidgetTextLayout.field_e);
         }
         if (GameRenderAudioHelpers.contextActions != null) {
-          GameRenderAudioHelpers.contextActions.drawContextMenu((byte) -126, param0);
+          GameRenderAudioHelpers.contextActions.drawContextMenu((byte) -126, flag);
         }
-        MembershipBenefitsScreen.a(param0, false);
+        MembershipBenefitsScreen.a(flag, false);
         if (null != CircleBody.reportAbuseDialog) {
-          CircleBody.reportAbuseDialog.drawRoot(true, param0);
+          CircleBody.reportAbuseDialog.drawRoot(true, flag);
         }
-        WidgetTheme.a(param0, true);
+        WidgetTheme.drawQuickChatHelpDialog(flag, true);
         return;
     }
 

@@ -211,7 +211,7 @@ final class BrickGameLayerController implements GameLayerController {
         int var5Lifetime10;
         int var5Lifetime11;
         if (obfuscationGuard == 16769381) {
-          if (LegacyUtf8Decoder.a((byte) 121)) {
+          if (LegacyUtf8Decoder.hasFrameFocusOrFullscreen((byte) 121)) {
             stackIn_300_0 = (!AccountMessageDialog.n(obfuscationGuard - 16769386)) ? 0 : 1;
           } else {
             stackIn_300_0 = 0;
@@ -234,7 +234,7 @@ final class BrickGameLayerController implements GameLayerController {
                   stackIn_358_1 = 10;
                   stackIn_358_2 = -8 + var3;
                   stackIn_359_3 = (var5 != 0) ? 256 : 128;
-                  ((RgbSprite) (Object) stackIn_358_0).b(stackIn_358_1, stackIn_358_2, stackIn_359_3);
+                  ((RgbSprite) (Object) stackIn_358_0).drawAlphaBlended(stackIn_358_1, stackIn_358_2, stackIn_359_3);
                 }
                 return;
               }
@@ -250,7 +250,7 @@ final class BrickGameLayerController implements GameLayerController {
                   stackIn_319_1 = 10;
                   stackIn_319_2 = -8 + var3;
                   stackIn_320_3 = (var5Lifetime8 != 0) ? 256 : 128;
-                  ((RgbSprite) (Object) stackIn_319_0).b(stackIn_319_1, stackIn_319_2, stackIn_320_3);
+                  ((RgbSprite) (Object) stackIn_319_0).drawAlphaBlended(stackIn_319_1, stackIn_319_2, stackIn_320_3);
                 }
                 return;
               }
@@ -265,7 +265,7 @@ final class BrickGameLayerController implements GameLayerController {
                   stackIn_329_1 = 10;
                   stackIn_329_2 = -8 + var3;
                   stackIn_330_3 = (var5Lifetime9 != 0) ? 256 : 128;
-                  ((RgbSprite) (Object) stackIn_329_0).b(stackIn_329_1, stackIn_329_2, stackIn_330_3);
+                  ((RgbSprite) (Object) stackIn_329_0).drawAlphaBlended(stackIn_329_1, stackIn_329_2, stackIn_330_3);
                 }
                 return;
               }
@@ -280,7 +280,7 @@ final class BrickGameLayerController implements GameLayerController {
                   stackIn_348_1 = 10;
                   stackIn_348_2 = -8 + var3;
                   stackIn_349_3 = (var5Lifetime10 != 0) ? 256 : 128;
-                  ((RgbSprite) (Object) stackIn_348_0).b(stackIn_348_1, stackIn_348_2, stackIn_349_3);
+                  ((RgbSprite) (Object) stackIn_348_0).drawAlphaBlended(stackIn_348_1, stackIn_348_2, stackIn_349_3);
                 }
                 return;
               }
@@ -294,7 +294,7 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_339_1 = 10;
                 stackIn_339_2 = -8 + var3;
                 stackIn_340_3 = (var5Lifetime11 != 0) ? 256 : 128;
-                ((RgbSprite) (Object) stackIn_339_0).b(stackIn_339_1, stackIn_339_2, stackIn_340_3);
+                ((RgbSprite) (Object) stackIn_339_0).drawAlphaBlended(stackIn_339_1, stackIn_339_2, stackIn_340_3);
               }
               return;
             }
@@ -317,7 +317,7 @@ final class BrickGameLayerController implements GameLayerController {
                   stackIn_378_1 = 10;
                   stackIn_378_2 = -8 + var3;
                   stackIn_379_3 = (var5Lifetime7 != 0) ? 256 : 128;
-                  ((RgbSprite) (Object) stackIn_378_0).b(stackIn_378_1, stackIn_378_2, stackIn_379_3);
+                  ((RgbSprite) (Object) stackIn_378_0).drawAlphaBlended(stackIn_378_1, stackIn_378_2, stackIn_379_3);
                 }
                 return;
               }
@@ -339,12 +339,12 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_389_1 = 10;
             stackIn_389_2 = -8 + var3;
             stackIn_390_3 = (var5Lifetime7 != 0) ? 256 : 128;
-            ((RgbSprite) (Object) stackIn_389_0).b(stackIn_389_1, stackIn_389_2, stackIn_390_3);
+            ((RgbSprite) (Object) stackIn_389_0).drawAlphaBlended(stackIn_389_1, stackIn_389_2, stackIn_390_3);
           }
           return;
         }
         this.field_a = 50;
-        if (!LegacyUtf8Decoder.a((byte) 121)) {
+        if (!LegacyUtf8Decoder.hasFrameFocusOrFullscreen((byte) 121)) {
           var2Lifetime1 = 0;
           var3Lifetime1 = DualLinkDeque.field_d.screenY;
           if (!ConnectionPhase.field_d) {
@@ -380,7 +380,7 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_26_1 = 10;
             stackIn_26_2 = -8 + var3Lifetime1;
             stackIn_27_3 = (var5Lifetime1 != 0) ? 256 : 128;
-            ((RgbSprite) (Object) stackIn_26_0).b(stackIn_26_1, stackIn_26_2, stackIn_27_3);
+            ((RgbSprite) (Object) stackIn_26_0).drawAlphaBlended(stackIn_26_1, stackIn_26_2, stackIn_27_3);
           }
           return;
         }
@@ -414,7 +414,7 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_52_1 = 10;
                 stackIn_52_2 = -8 + var3Lifetime2;
                 stackIn_53_3 = (var5Lifetime2 != 0) ? 256 : 128;
-                ((RgbSprite) (Object) stackIn_52_0).b(stackIn_52_1, stackIn_52_2, stackIn_53_3);
+                ((RgbSprite) (Object) stackIn_52_0).drawAlphaBlended(stackIn_52_1, stackIn_52_2, stackIn_53_3);
               }
               return;
             }
@@ -435,7 +435,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_108_1 = 10;
               stackIn_108_2 = -8 + var3Lifetime2;
               stackIn_109_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
-              ((RgbSprite) (Object) stackIn_108_0).b(stackIn_108_1, stackIn_108_2, stackIn_109_3);
+              ((RgbSprite) (Object) stackIn_108_0).drawAlphaBlended(stackIn_108_1, stackIn_108_2, stackIn_109_3);
             }
           } else {
             if (RadialSelectorRenderer.field_p) {
@@ -450,7 +450,7 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_69_1 = 10;
                 stackIn_69_2 = -8 + var3Lifetime2;
                 stackIn_70_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
-                ((RgbSprite) (Object) stackIn_69_0).b(stackIn_69_1, stackIn_69_2, stackIn_70_3);
+                ((RgbSprite) (Object) stackIn_69_0).drawAlphaBlended(stackIn_69_1, stackIn_69_2, stackIn_70_3);
               }
             } else {
               if (IntArrayRequest.gameplayScreen == null) {
@@ -464,7 +464,7 @@ final class BrickGameLayerController implements GameLayerController {
                   stackIn_79_1 = 10;
                   stackIn_79_2 = -8 + var3Lifetime2;
                   stackIn_80_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
-                  ((RgbSprite) (Object) stackIn_79_0).b(stackIn_79_1, stackIn_79_2, stackIn_80_3);
+                  ((RgbSprite) (Object) stackIn_79_0).drawAlphaBlended(stackIn_79_1, stackIn_79_2, stackIn_80_3);
                 }
               } else {
                 if (IntArrayRequest.gameplayScreen.match.resultsReady) {
@@ -478,7 +478,7 @@ final class BrickGameLayerController implements GameLayerController {
                     stackIn_98_1 = 10;
                     stackIn_98_2 = -8 + var3Lifetime2;
                     stackIn_99_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
-                    ((RgbSprite) (Object) stackIn_98_0).b(stackIn_98_1, stackIn_98_2, stackIn_99_3);
+                    ((RgbSprite) (Object) stackIn_98_0).drawAlphaBlended(stackIn_98_1, stackIn_98_2, stackIn_99_3);
                   }
                 } else {
                   var5Lifetime2Lifetime1 = 0;
@@ -491,7 +491,7 @@ final class BrickGameLayerController implements GameLayerController {
                     stackIn_89_1 = 10;
                     stackIn_89_2 = -8 + var3Lifetime2;
                     stackIn_90_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
-                    ((RgbSprite) (Object) stackIn_89_0).b(stackIn_89_1, stackIn_89_2, stackIn_90_3);
+                    ((RgbSprite) (Object) stackIn_89_0).drawAlphaBlended(stackIn_89_1, stackIn_89_2, stackIn_90_3);
                   }
                 }
               }
@@ -515,7 +515,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_292_1 = 10;
               stackIn_292_2 = -8 + var3Lifetime3;
               stackIn_293_3 = (var5Lifetime3 != 0) ? 256 : 128;
-              ((RgbSprite) (Object) stackIn_292_0).b(stackIn_292_1, stackIn_292_2, stackIn_293_3);
+              ((RgbSprite) (Object) stackIn_292_0).drawAlphaBlended(stackIn_292_1, stackIn_292_2, stackIn_293_3);
             }
           } else {
             if (RadialSelectorRenderer.field_p) {
@@ -530,7 +530,7 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_253_1 = 10;
                 stackIn_253_2 = -8 + var3Lifetime3;
                 stackIn_254_3 = (var5Lifetime3 != 0) ? 256 : 128;
-                ((RgbSprite) (Object) stackIn_253_0).b(stackIn_253_1, stackIn_253_2, stackIn_254_3);
+                ((RgbSprite) (Object) stackIn_253_0).drawAlphaBlended(stackIn_253_1, stackIn_253_2, stackIn_254_3);
               }
             } else {
               if (IntArrayRequest.gameplayScreen == null) {
@@ -544,7 +544,7 @@ final class BrickGameLayerController implements GameLayerController {
                   stackIn_263_1 = 10;
                   stackIn_263_2 = -8 + var3Lifetime3;
                   stackIn_264_3 = (var5Lifetime3 != 0) ? 256 : 128;
-                  ((RgbSprite) (Object) stackIn_263_0).b(stackIn_263_1, stackIn_263_2, stackIn_264_3);
+                  ((RgbSprite) (Object) stackIn_263_0).drawAlphaBlended(stackIn_263_1, stackIn_263_2, stackIn_264_3);
                 }
               } else {
                 if (!IntArrayRequest.gameplayScreen.match.resultsReady) {
@@ -558,7 +558,7 @@ final class BrickGameLayerController implements GameLayerController {
                     stackIn_282_1 = 10;
                     stackIn_282_2 = -8 + var3Lifetime3;
                     stackIn_283_3 = (var5Lifetime3 != 0) ? 256 : 128;
-                    ((RgbSprite) (Object) stackIn_282_0).b(stackIn_282_1, stackIn_282_2, stackIn_283_3);
+                    ((RgbSprite) (Object) stackIn_282_0).drawAlphaBlended(stackIn_282_1, stackIn_282_2, stackIn_283_3);
                   }
                 } else {
                   var5Lifetime3 = 1;
@@ -571,7 +571,7 @@ final class BrickGameLayerController implements GameLayerController {
                     stackIn_273_1 = 10;
                     stackIn_273_2 = -8 + var3Lifetime3;
                     stackIn_274_3 = (var5Lifetime3 != 0) ? 256 : 128;
-                    ((RgbSprite) (Object) stackIn_273_0).b(stackIn_273_1, stackIn_273_2, stackIn_274_3);
+                    ((RgbSprite) (Object) stackIn_273_0).drawAlphaBlended(stackIn_273_1, stackIn_273_2, stackIn_274_3);
                   }
                 }
               }
@@ -593,7 +593,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_165_1 = 10;
               stackIn_165_2 = -8 + var3Lifetime3;
               stackIn_166_3 = (var5Lifetime4 != 0) ? 256 : 128;
-              ((RgbSprite) (Object) stackIn_165_0).b(stackIn_165_1, stackIn_165_2, stackIn_166_3);
+              ((RgbSprite) (Object) stackIn_165_0).drawAlphaBlended(stackIn_165_1, stackIn_165_2, stackIn_166_3);
             }
           } else {
             if (RadialSelectorRenderer.field_p) {
@@ -608,7 +608,7 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_126_1 = 10;
                 stackIn_126_2 = -8 + var3Lifetime3;
                 stackIn_127_3 = (var5Lifetime4 != 0) ? 256 : 128;
-                ((RgbSprite) (Object) stackIn_126_0).b(stackIn_126_1, stackIn_126_2, stackIn_127_3);
+                ((RgbSprite) (Object) stackIn_126_0).drawAlphaBlended(stackIn_126_1, stackIn_126_2, stackIn_127_3);
               }
             } else {
               if (IntArrayRequest.gameplayScreen == null) {
@@ -622,7 +622,7 @@ final class BrickGameLayerController implements GameLayerController {
                   stackIn_136_1 = 10;
                   stackIn_136_2 = -8 + var3Lifetime3;
                   stackIn_137_3 = (var5Lifetime4 != 0) ? 256 : 128;
-                  ((RgbSprite) (Object) stackIn_136_0).b(stackIn_136_1, stackIn_136_2, stackIn_137_3);
+                  ((RgbSprite) (Object) stackIn_136_0).drawAlphaBlended(stackIn_136_1, stackIn_136_2, stackIn_137_3);
                 }
               } else {
                 if (IntArrayRequest.gameplayScreen.match.resultsReady) {
@@ -636,7 +636,7 @@ final class BrickGameLayerController implements GameLayerController {
                     stackIn_155_1 = 10;
                     stackIn_155_2 = -8 + var3Lifetime3;
                     stackIn_156_3 = (var5Lifetime4 != 0) ? 256 : 128;
-                    ((RgbSprite) (Object) stackIn_155_0).b(stackIn_155_1, stackIn_155_2, stackIn_156_3);
+                    ((RgbSprite) (Object) stackIn_155_0).drawAlphaBlended(stackIn_155_1, stackIn_155_2, stackIn_156_3);
                   }
                 } else {
                   var5Lifetime4 = 0;
@@ -649,7 +649,7 @@ final class BrickGameLayerController implements GameLayerController {
                     stackIn_146_1 = 10;
                     stackIn_146_2 = -8 + var3Lifetime3;
                     stackIn_147_3 = (var5Lifetime4 != 0) ? 256 : 128;
-                    ((RgbSprite) (Object) stackIn_146_0).b(stackIn_146_1, stackIn_146_2, stackIn_147_3);
+                    ((RgbSprite) (Object) stackIn_146_0).drawAlphaBlended(stackIn_146_1, stackIn_146_2, stackIn_147_3);
                   }
                 }
               }
@@ -683,7 +683,7 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_188_1 = 10;
             stackIn_188_2 = -8 + var3Lifetime3;
             stackIn_189_3 = (var5Lifetime5 != 0) ? 256 : 128;
-            ((RgbSprite) (Object) stackIn_188_0).b(stackIn_188_1, stackIn_188_2, stackIn_189_3);
+            ((RgbSprite) (Object) stackIn_188_0).drawAlphaBlended(stackIn_188_1, stackIn_188_2, stackIn_189_3);
           }
           return;
         }
@@ -701,7 +701,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_204_1 = 10;
               stackIn_204_2 = -8 + var3Lifetime3;
               stackIn_205_3 = (var5Lifetime6 != 0) ? 256 : 128;
-              ((RgbSprite) (Object) stackIn_204_0).b(stackIn_204_1, stackIn_204_2, stackIn_205_3);
+              ((RgbSprite) (Object) stackIn_204_0).drawAlphaBlended(stackIn_204_1, stackIn_204_2, stackIn_205_3);
             }
             return;
           }
@@ -716,7 +716,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_214_1 = 10;
               stackIn_214_2 = -8 + var3Lifetime3;
               stackIn_215_3 = (var5Lifetime6 != 0) ? 256 : 128;
-              ((RgbSprite) (Object) stackIn_214_0).b(stackIn_214_1, stackIn_214_2, stackIn_215_3);
+              ((RgbSprite) (Object) stackIn_214_0).drawAlphaBlended(stackIn_214_1, stackIn_214_2, stackIn_215_3);
             }
             return;
           }
@@ -731,7 +731,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_225_1 = 10;
               stackIn_225_2 = -8 + var3Lifetime3;
               stackIn_226_3 = (var5Lifetime6 != 0) ? 256 : 128;
-              ((RgbSprite) (Object) stackIn_225_0).b(stackIn_225_1, stackIn_225_2, stackIn_226_3);
+              ((RgbSprite) (Object) stackIn_225_0).drawAlphaBlended(stackIn_225_1, stackIn_225_2, stackIn_226_3);
             }
             return;
           }
@@ -750,7 +750,7 @@ final class BrickGameLayerController implements GameLayerController {
           stackIn_236_1 = 10;
           stackIn_236_2 = -8 + var3Lifetime3;
           stackIn_237_3 = (var5Lifetime6 != 0) ? 256 : 128;
-          ((RgbSprite) (Object) stackIn_236_0).b(stackIn_236_1, stackIn_236_2, stackIn_237_3);
+          ((RgbSprite) (Object) stackIn_236_0).drawAlphaBlended(stackIn_236_1, stackIn_236_2, stackIn_237_3);
         }
     }
 
@@ -758,12 +758,12 @@ final class BrickGameLayerController implements GameLayerController {
         if (obfuscationGuard > -58) {
           field_d = (String) null;
           if (this.c(-25437)) {
-            return LevelSequence.a(13, -1, 12, 15);
+            return LevelSequence.dispatchCancelKey(13, -1, 12, 15);
           }
           return false;
         }
         if (this.c(-25437)) {
-          return LevelSequence.a(13, -1, 12, 15);
+          return LevelSequence.dispatchCancelKey(13, -1, 12, 15);
         }
         return false;
     }
@@ -1009,7 +1009,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_48_8 = var7;
               stackIn_48_9 = inputEnabled;
               stackIn_48_10 = 13;
-              stackIn_49_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+              stackIn_49_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
               MeshAttributeRecord.a(stackIn_45_0, stackIn_46_1, stackIn_48_2, stackIn_48_3, stackIn_48_4, stackIn_48_5, stackIn_48_6, stackIn_48_7, stackIn_48_8 != 0, stackIn_48_9, stackIn_48_10, stackIn_49_11);
               if (CacheEntry.field_w) {
                 TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
@@ -1052,7 +1052,7 @@ final class BrickGameLayerController implements GameLayerController {
           stackIn_67_8 = var7Lifetime1;
           stackIn_67_9 = inputEnabled;
           stackIn_67_10 = 13;
-          stackIn_68_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+          stackIn_68_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
           MeshAttributeRecord.a(stackIn_64_0, stackIn_65_1, stackIn_67_2, stackIn_67_3, stackIn_67_4, stackIn_67_5, stackIn_67_6, stackIn_67_7, stackIn_67_8 != 0, stackIn_67_9, stackIn_67_10, stackIn_68_11);
           if (CacheEntry.field_w) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
@@ -1090,7 +1090,7 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_93_8 = var7Lifetime2;
             stackIn_93_9 = inputEnabled;
             stackIn_93_10 = 13;
-            stackIn_94_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+            stackIn_94_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
             MeshAttributeRecord.a(stackIn_90_0, stackIn_91_1, stackIn_93_2, stackIn_93_3, stackIn_93_4, stackIn_93_5, stackIn_93_6, stackIn_93_7, stackIn_93_8 != 0, stackIn_93_9, stackIn_93_10, stackIn_94_11);
           } else {
             stackIn_102_0 = ConnectionPhase.field_d;
@@ -1117,7 +1117,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_133_8 = var7Lifetime2;
               stackIn_133_9 = inputEnabled;
               stackIn_133_10 = 13;
-              stackIn_134_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+              stackIn_134_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
               MeshAttributeRecord.a(stackIn_130_0, stackIn_131_1, stackIn_133_2, stackIn_133_3, stackIn_133_4, stackIn_133_5, stackIn_133_6, stackIn_133_7, stackIn_133_8 != 0, stackIn_133_9, stackIn_133_10, stackIn_134_11);
             } else {
               SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
@@ -1142,7 +1142,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_115_8 = var7Lifetime2;
               stackIn_115_9 = inputEnabled;
               stackIn_115_10 = 13;
-              stackIn_116_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+              stackIn_116_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
               MeshAttributeRecord.a(stackIn_112_0, stackIn_113_1, stackIn_115_2, stackIn_115_3, stackIn_115_4, stackIn_115_5, stackIn_115_6, stackIn_115_7, stackIn_115_8 != 0, stackIn_115_9, stackIn_115_10, stackIn_116_11);
             }
           }
@@ -1183,7 +1183,7 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_243_8 = var7Lifetime3;
                 stackIn_243_9 = inputEnabled;
                 stackIn_243_10 = 13;
-                stackIn_244_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+                stackIn_244_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
                 MeshAttributeRecord.a(stackIn_240_0, stackIn_241_1, stackIn_243_2, stackIn_243_3, stackIn_243_4, stackIn_243_5, stackIn_243_6, stackIn_243_7, stackIn_243_8 != 0, stackIn_243_9, stackIn_243_10, stackIn_244_11);
                 break regionExit1;
               }
@@ -1210,7 +1210,7 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_262_8 = var7Lifetime3;
             stackIn_262_9 = inputEnabled;
             stackIn_262_10 = 13;
-            stackIn_263_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+            stackIn_263_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
             MeshAttributeRecord.a(stackIn_259_0, stackIn_260_1, stackIn_262_2, stackIn_262_3, stackIn_262_4, stackIn_262_5, stackIn_262_6, stackIn_262_7, stackIn_262_8 != 0, stackIn_262_9, stackIn_262_10, stackIn_263_11);
           }
         } else {
@@ -1243,7 +1243,7 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_161_8 = var7Lifetime3;
                 stackIn_161_9 = inputEnabled;
                 stackIn_161_10 = 13;
-                stackIn_162_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+                stackIn_162_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
                 MeshAttributeRecord.a(stackIn_158_0, stackIn_159_1, stackIn_161_2, stackIn_161_3, stackIn_161_4, stackIn_161_5, stackIn_161_6, stackIn_161_7, stackIn_161_8 != 0, stackIn_161_9, stackIn_161_10, stackIn_162_11);
                 if (CacheEntry.field_w) {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
@@ -1278,7 +1278,7 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_179_8 = var7Lifetime3;
             stackIn_179_9 = inputEnabled;
             stackIn_179_10 = 13;
-            stackIn_180_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+            stackIn_180_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
             MeshAttributeRecord.a(stackIn_176_0, stackIn_177_1, stackIn_179_2, stackIn_179_3, stackIn_179_4, stackIn_179_5, stackIn_179_6, stackIn_179_7, stackIn_179_8 != 0, stackIn_179_9, stackIn_179_10, stackIn_180_11);
           } else {
             this.field_a = 0;
@@ -1308,7 +1308,7 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_202_8 = var7Lifetime3;
                 stackIn_202_9 = inputEnabled;
                 stackIn_202_10 = 13;
-                stackIn_203_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+                stackIn_203_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
                 MeshAttributeRecord.a(stackIn_199_0, stackIn_200_1, stackIn_202_2, stackIn_202_3, stackIn_202_4, stackIn_202_5, stackIn_202_6, stackIn_202_7, stackIn_202_8 != 0, stackIn_202_9, stackIn_202_10, stackIn_203_11);
                 if (CacheEntry.field_w) {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
@@ -1343,7 +1343,7 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_220_8 = var7Lifetime3;
             stackIn_220_9 = inputEnabled;
             stackIn_220_10 = 13;
-            stackIn_221_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
+            stackIn_221_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
             MeshAttributeRecord.a(stackIn_217_0, stackIn_218_1, stackIn_220_2, stackIn_220_3, stackIn_220_4, stackIn_220_5, stackIn_220_6, stackIn_220_7, stackIn_220_8 != 0, stackIn_220_9, stackIn_220_10, stackIn_221_11);
           }
         }
@@ -1358,10 +1358,10 @@ final class BrickGameLayerController implements GameLayerController {
         MeshAudioHelpers.field_c = false;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_b = null;
         field_f = null;
-        if (param0 == -102) {
+        if (obfuscationGuard == -102) {
           field_c = null;
           field_d = null;
           return;
@@ -1371,34 +1371,34 @@ final class BrickGameLayerController implements GameLayerController {
         field_d = null;
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
+    final static void loadLevelPacks(ResourceArchive primaryArchive, ResourceArchive secondaryArchive, int obfuscationGuard) {
         int var4 = 0;
         PacketBuffer var8 = null;
         PacketBuffer var9 = null;
         PacketBuffer var10 = null;
         PacketBuffer var11 = null;
         PacketBuffer var7 = null;
-        int var3_int = param0.getGroupId("", false);
-        if (param2 != 2) {
+        int var3_int = primaryArchive.getGroupId("", false);
+        if (obfuscationGuard != 2) {
           return;
         }
         try {
           DateFieldsWidget.field_L = new LevelPack[2];
           var4 = 0;
-          var8 = new PacketBuffer(param0.takeFileByName(param2 ^ 118, "single", ""));
+          var8 = new PacketBuffer(primaryArchive.takeFileByName(obfuscationGuard ^ 118, "single", ""));
           var9 = var8;
-          DateFieldsWidget.field_L[0] = LevelPackLoader.loadLevelPack((byte) 76, param0, var9, var3_int, 0, 0, var4);
+          DateFieldsWidget.field_L[0] = LevelPackLoader.loadLevelPack((byte) 76, primaryArchive, var9, var3_int, 0, 0, var4);
           var4 = var4 + DateFieldsWidget.field_L[0].levelCount;
-          var10 = new PacketBuffer(param0.takeFileByName(121, "hotseat", ""));
-          ValidationStatus.field_b = LevelPackLoader.loadLevelPack((byte) -115, param0, var10, var3_int, -1, -1, -1);
-          var11 = new PacketBuffer(param0.takeFileByName(100, "multiplayer", ""));
-          MeshAudioHelpers.field_d = LevelPackLoader.loadLevelPack((byte) -97, param0, var11, var3_int, -1, -1, -1);
+          var10 = new PacketBuffer(primaryArchive.takeFileByName(121, "hotseat", ""));
+          ValidationStatus.field_b = LevelPackLoader.loadLevelPack((byte) -115, primaryArchive, var10, var3_int, -1, -1, -1);
+          var11 = new PacketBuffer(primaryArchive.takeFileByName(100, "multiplayer", ""));
+          MeshAudioHelpers.field_d = LevelPackLoader.loadLevelPack((byte) -97, primaryArchive, var11, var3_int, -1, -1, -1);
           MeshAudioHelpers.field_d.appendLevelData(ValidationStatus.field_b, false);
-          var3_int = param1.getGroupId("", false);
-          var7 = new PacketBuffer(param1.takeFileByName(-88, "single", ""));
-          DateFieldsWidget.field_L[1] = LevelPackLoader.loadLevelPack((byte) 94, param1, var7, var3_int, 1, 1, var4);
+          var3_int = secondaryArchive.getGroupId("", false);
+          var7 = new PacketBuffer(secondaryArchive.takeFileByName(-88, "single", ""));
+          DateFieldsWidget.field_L[1] = LevelPackLoader.loadLevelPack((byte) 94, secondaryArchive, var7, var3_int, 1, 1, var4);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sb.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sb.H(" + (primaryArchive != null ? "{...}" : "null") + ',' + (secondaryArchive != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

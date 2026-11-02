@@ -34,8 +34,8 @@ final class TextHuffmanHelpers {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 == 24311) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard == 24311) {
           accountContentLayer = null;
           field_a = null;
           return;

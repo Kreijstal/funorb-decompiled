@@ -9,13 +9,13 @@ final class ReflectionCheckHelpers {
     final static void resetPendingReflectionChecks(byte obfuscationGuard) {
         ResourceArchive.pendingReflectionChecks = new NodeDeque();
         if (obfuscationGuard != -46) {
-          ReflectionCheckHelpers.a(12);
+          ReflectionCheckHelpers.clearSharedReferences(12);
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         playerOneLabel = null;
-        if (param0 != -8495) {
+        if (obfuscationGuard != -8495) {
           ReflectionCheckHelpers.resetPendingReflectionChecks((byte) -45);
           activePowerUpSprites = null;
           return;

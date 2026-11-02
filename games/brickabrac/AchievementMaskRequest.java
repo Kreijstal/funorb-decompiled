@@ -9,11 +9,11 @@ final class AchievementMaskRequest extends IntrusiveNode {
     static GameUiLifecycle uiLifecycle;
     static String field_l;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         uiLifecycle = null;
         field_n = null;
         field_l = null;
-        if (param0 != 28391) {
+        if (obfuscationGuard != 28391) {
           return;
         }
         delayedPackets = null;
@@ -24,8 +24,8 @@ final class AchievementMaskRequest extends IntrusiveNode {
         DialogMessagePanel.a(4227327, param5, param6, (byte) 99, param0, param3, param2, param1);
     }
 
-    final static void a(int param0, int param1) {
-        TableQuickChatHelpers.field_c[param0].drawTransparent((640 - TableQuickChatHelpers.field_c[param0].canvasWidth) / 2, param1);
+    final static void drawHorizontallyCenteredSprite(int spriteIndex, int y) {
+        TableQuickChatHelpers.field_c[spriteIndex].drawTransparent((640 - TableQuickChatHelpers.field_c[spriteIndex].canvasWidth) / 2, y);
     }
 
     AchievementMaskRequest() {

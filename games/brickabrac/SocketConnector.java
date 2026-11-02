@@ -13,10 +13,10 @@ abstract class SocketConnector {
 
     abstract java.net.Socket connect(int obfuscationGuard) throws IOException;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         decodedSpriteOffsetY = null;
         field_e = null;
-        if (param0 != -9125) {
+        if (obfuscationGuard != -9125) {
           field_b = 15;
         }
     }
@@ -25,7 +25,7 @@ abstract class SocketConnector {
         if (obfuscationGuard == -76) {
           return new java.net.Socket(this.targetHost, this.targetPort);
         }
-        SocketConnector.b(53);
+        SocketConnector.clearSharedReferences(53);
         return new java.net.Socket(this.targetHost, this.targetPort);
     }
 

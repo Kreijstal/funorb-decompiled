@@ -42,17 +42,17 @@ final class AchievementIcon extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_s = null;
         field_o = null;
         backgroundSpriteArchive = null;
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           field_l = null;
           chatHistoryPane = null;
           return;
         }
         String var2 = (String) null;
-        AchievementIcon.a(110, 111, (String) null);
+        AchievementIcon.createAccountResponseWithMessage(110, 111, (String) null);
         field_l = null;
         chatHistoryPane = null;
     }
@@ -218,7 +218,7 @@ final class AchievementIcon extends IntrusiveNode {
         field_o = (String) null;
     }
 
-    final static AccountResponse a(int param0, int param1, String param2) {
+    final static AccountResponse createAccountResponseWithMessage(int responseCode, int obfuscationGuard, String message) {
         AccountResponse var3 = null;
         RuntimeException var3_ref = null;
         IntArrayRequest var4 = null;
@@ -229,9 +229,9 @@ final class AchievementIcon extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new AccountResponse(false);
-          var3.responseCode = param0;
-          var3.message = param2;
-          if (param1 > -27) {
+          var3.responseCode = responseCode;
+          var3.message = message;
+          if (obfuscationGuard > -27) {
             var4 = (IntArrayRequest) null;
             AchievementIcon.sendIntArrayRequest(-57, (IntArrayRequest) null, 111);
           }
@@ -241,8 +241,8 @@ final class AchievementIcon extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_6_0 = var3_ref;
-          stackIn_6_1 = new StringBuilder().append("i.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_6_1 = new StringBuilder().append("i.F(").append(responseCode).append(',').append(obfuscationGuard).append(',');
+          if (message == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -278,7 +278,7 @@ final class AchievementIcon extends IntrusiveNode {
         var3 = BrickABrac.field_J ? 1 : 0;
         if (DirectByteStorage.isBitSet(this.owner.achievementMask, this.achievementId, (byte) -75)) {
           if (this.achievementId == ValidationMessageWidget.selectedAchievementId) {
-            TranslucentNineSliceFrame.field_h[this.achievementId].f(this.x, this.y, 384);
+            TranslucentNineSliceFrame.field_h[this.achievementId].drawAdditive(this.x, this.y, 384);
             if (this.cachedThumbnail == null ||
               this.thumbnailIsPlaceholder) {
               var12 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
@@ -290,7 +290,7 @@ final class AchievementIcon extends IntrusiveNode {
             }
           } else {
             if (this.achievementId == ValidationMessageWidget.hoveredAchievementId) {
-              AchievementSubmission.field_l[this.achievementId].f(this.x, this.y, 256);
+              AchievementSubmission.field_l[this.achievementId].drawAdditive(this.x, this.y, 256);
               if (this.cachedThumbnail == null ||
                 this.thumbnailIsPlaceholder) {
                 var11 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
@@ -319,7 +319,7 @@ final class AchievementIcon extends IntrusiveNode {
                 var6 = LevelCompleteScreen.field_F;
                 this.cachedThumbnail = new RgbSprite(var6.canvasWidth / 4, var6.canvasHeight / 4);
                 IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
-                var6.e(0, 0);
+                var6.drawQuarterSize(0, 0);
                 RasterStackHelpers.popRaster(-110);
                 this.thumbnailIsPlaceholder = true;
               } else {
@@ -327,7 +327,7 @@ final class AchievementIcon extends IntrusiveNode {
                   var7 = LevelCompleteScreen.field_F;
                   this.cachedThumbnail = new RgbSprite(var7.canvasWidth / 4, var7.canvasHeight / 4);
                   IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
-                  var7.e(0, 0);
+                  var7.drawQuarterSize(0, 0);
                   RasterStackHelpers.popRaster(-110);
                   this.thumbnailIsPlaceholder = true;
                 }
@@ -338,15 +338,15 @@ final class AchievementIcon extends IntrusiveNode {
               this.cachedThumbnail.drawTransparent(this.x, this.y);
               return;
             }
-            ToggleButtonWidget.field_L.f(this.x, this.y, 256);
+            ToggleButtonWidget.field_L.drawAdditive(this.x, this.y, 256);
           } else {
-            ValidationStatus.field_c.f(this.x, this.y, 384);
+            ValidationStatus.field_c.drawAdditive(this.x, this.y, 384);
           }
           if (this.cachedThumbnail == null) {
             var10 = LevelCompleteScreen.field_F;
             this.cachedThumbnail = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
             IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
-            var10.e(0, 0);
+            var10.drawQuarterSize(0, 0);
             RasterStackHelpers.popRaster(-110);
             this.thumbnailIsPlaceholder = true;
           } else {
@@ -354,7 +354,7 @@ final class AchievementIcon extends IntrusiveNode {
               var10 = LevelCompleteScreen.field_F;
               this.cachedThumbnail = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
               IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
-              var10.e(0, 0);
+              var10.drawQuarterSize(0, 0);
               RasterStackHelpers.popRaster(-110);
               this.thumbnailIsPlaceholder = true;
             }

@@ -27,11 +27,11 @@ final class ScreenNavigationHelpers {
         SoundCache.playUiSound(8, NineSliceFrame.uiSounds[8]);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         spaceFarSprite = null;
         field_d = null;
         field_e = null;
-        if (param0 == -49) {
+        if (obfuscationGuard == -49) {
           field_f = null;
           quickChatHelpTitle = null;
           return;
@@ -43,7 +43,7 @@ final class ScreenNavigationHelpers {
 
     final static void pollQuickChatHelpDialog(byte obfuscationGuard, boolean inputEnabled) {
         if (obfuscationGuard > -64) {
-          ScreenNavigationHelpers.a((byte) -25);
+          ScreenNavigationHelpers.clearSharedReferences((byte) -25);
           if (null == IntegerParsingHelpers.quickChatHelpDialog) {
             return;
           }

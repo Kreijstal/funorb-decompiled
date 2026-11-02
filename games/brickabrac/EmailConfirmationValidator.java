@@ -110,8 +110,8 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         }
     }
 
-    public static void g(int param0) {
-        if (param0 != 0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           pendingBytePayloadRequests = (NodeDeque) null;
         }
         field_r = null;
@@ -185,8 +185,8 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         }
     }
 
-    final static boolean f(int param0) {
-        if (param0 != 21651) {
+    final static boolean isTextChoiceDialogOpen(int obfuscationGuard) {
+        if (obfuscationGuard != 21651) {
           return false;
         }
         return DialogPointerGlobals.textChoiceDialogOpen;

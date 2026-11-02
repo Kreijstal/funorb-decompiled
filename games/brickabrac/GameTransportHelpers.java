@@ -5,8 +5,8 @@ final class GameTransportHelpers {
     static int fullscreenDialogPaddingX;
     static RgbSprite ninjaFarSprite;
 
-    public static void a(int param0) {
-        int var1 = 125 % ((28 - param0) / 60);
+    public static void clearSharedReferences(int obfuscationGuard) {
+        int var1 = 125 % ((28 - obfuscationGuard) / 60);
         ninjaFarSprite = null;
     }
 
@@ -17,7 +17,7 @@ final class GameTransportHelpers {
         return ClientResourceHelpers.currentLobbyGame.protocolId64 == Widget.field_p ? true : false;
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, int param3) {
+    final static RgbSprite[] createSolidSpriteGrid(int edgeColor, int centerColor, int edgeSize, int obfuscationGuard) {
         RgbSprite[] var7 = null;
         RgbSprite[] var4 = null;
         int var5 = 0;
@@ -25,25 +25,25 @@ final class GameTransportHelpers {
         RgbSprite[] var7Lifetime1;
         RgbSprite[] var4Lifetime1;
         int var5Lifetime1;
-        if (param3 != -10) {
-          GameTransportHelpers.a(22, -77, 60, 46);
+        if (obfuscationGuard != -10) {
+          GameTransportHelpers.createSolidSpriteGrid(22, -77, 60, 46);
         } else {
           var7 = new RgbSprite[9];
           var4 = var7;
-          var7[0] = InvitationDialogHelpers.a(param0, param2, (byte) -6);
+          var7[0] = InvitationDialogHelpers.createSolidSprite(edgeColor, edgeSize, (byte) -6);
           for (var5 = 1; var5 < 9; var5++) {
             var7[var5] = var7[0];
           }
-          var4[4] = InvitationDialogHelpers.a(param1, 64, (byte) -6);
+          var4[4] = InvitationDialogHelpers.createSolidSprite(centerColor, 64, (byte) -6);
           return var4;
         }
         var7Lifetime1 = new RgbSprite[9];
         var4Lifetime1 = var7Lifetime1;
-        var7Lifetime1[0] = InvitationDialogHelpers.a(param0, param2, (byte) -6);
+        var7Lifetime1[0] = InvitationDialogHelpers.createSolidSprite(edgeColor, edgeSize, (byte) -6);
         for (var5Lifetime1 = 1; var5Lifetime1 < 9; var5Lifetime1++) {
           var7Lifetime1[var5Lifetime1] = var7Lifetime1[0];
         }
-        var4Lifetime1[4] = InvitationDialogHelpers.a(param1, 64, (byte) -6);
+        var4Lifetime1[4] = InvitationDialogHelpers.createSolidSprite(centerColor, 64, (byte) -6);
         return var4Lifetime1;
     }
 
@@ -58,14 +58,14 @@ final class GameTransportHelpers {
         }
     }
 
-    final static void a(UiComponent param0, UiComponent param1, int param2) {
+    final static void bindSocialListEntries(UiComponent ignoreListContent, UiComponent friendsListContent, int obfuscationGuard) {
         try {
-          if (param1.children == null) {
-            param1.children = new NodeDeque();
+          if (friendsListContent.children == null) {
+            friendsListContent.children = new NodeDeque();
           }
-          int var3_int = -102 / ((param2 + 58) / 50);
-          if (param0.children == null) {
-            param0.children = new NodeDeque();
+          int var3_int = -102 / ((obfuscationGuard + 58) / 50);
+          if (ignoreListContent.children == null) {
+            ignoreListContent.children = new NodeDeque();
           }
           if (null == BlankScreen.friendIndex) {
             BlankScreen.friendIndex = new SecondaryHashTable(64);
@@ -73,11 +73,11 @@ final class GameTransportHelpers {
           if (FullscreenFailureKind.ignoreIndex == null) {
             FullscreenFailureKind.ignoreIndex = new SecondaryHashTable(64);
           }
-          ToggleButtonWidget.friendEntries = param1.children;
-          CachedArchiveSource.ignoreEntries = param0.children;
+          ToggleButtonWidget.friendEntries = friendsListContent.children;
+          CachedArchiveSource.ignoreEntries = ignoreListContent.children;
           EmailConfirmationValidator.e(108);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hn.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hn.E(" + (ignoreListContent != null ? "{...}" : "null") + ',' + (friendsListContent != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

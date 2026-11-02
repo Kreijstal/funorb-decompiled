@@ -30,7 +30,7 @@ final class DateFieldsWidget extends DateInputWidget {
           return var2;
         }
         if (obfuscationGuard <= 6) {
-          DateFieldsWidget.j((byte) -82);
+          DateFieldsWidget.handleNameEntryKey((byte) -82);
           if (this.mouseOver) {
             return this.tooltip == null ? this.text : this.tooltip;
           }
@@ -70,7 +70,7 @@ final class DateFieldsWidget extends DateInputWidget {
         }
     }
 
-    final static RgbSprite[] a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
+    final static RgbSprite[] createGradientNineSliceSprites(boolean flag, int bottomColor, int cornerSize, int topColor, int height, int centerColor) {
         RgbSprite var16 = null;
         int[] var18 = Rasterizer2D.pixels;
         int[] var17 = var18;
@@ -78,33 +78,33 @@ final class DateFieldsWidget extends DateInputWidget {
         int[] var6 = var15;
         int var7 = Rasterizer2D.width;
         int var8 = Rasterizer2D.height;
-        RgbSprite var9 = new RgbSprite(param2, param4 - param2 * 2);
+        RgbSprite var9 = new RgbSprite(cornerSize, height - cornerSize * 2);
         var9.bindRasterTarget();
-        Rasterizer2D.fillVerticalGradient(0, 0, param2, param4 - param2 * 2, param3, param1);
-        RgbSprite var10 = new RgbSprite(param2, param2);
+        Rasterizer2D.fillVerticalGradient(0, 0, cornerSize, height - cornerSize * 2, topColor, bottomColor);
+        RgbSprite var10 = new RgbSprite(cornerSize, cornerSize);
         var10.bindRasterTarget();
-        Rasterizer2D.fillRectangle(0, 0, param2, param2, param3);
-        RgbSprite var11 = new RgbSprite(16, param2);
+        Rasterizer2D.fillRectangle(0, 0, cornerSize, cornerSize, topColor);
+        RgbSprite var11 = new RgbSprite(16, cornerSize);
         var11.bindRasterTarget();
-        Rasterizer2D.fillRectangle(0, 0, 16, param2, param3);
-        RgbSprite var12 = new RgbSprite(param2, param2);
+        Rasterizer2D.fillRectangle(0, 0, 16, cornerSize, topColor);
+        RgbSprite var12 = new RgbSprite(cornerSize, cornerSize);
         var12.bindRasterTarget();
-        Rasterizer2D.fillRectangle(0, 0, param2, param2, param1);
-        RgbSprite var13 = new RgbSprite(16, param2);
+        Rasterizer2D.fillRectangle(0, 0, cornerSize, cornerSize, bottomColor);
+        RgbSprite var13 = new RgbSprite(16, cornerSize);
         var13.bindRasterTarget();
-        Rasterizer2D.fillRectangle(0, 0, 16, param2, param1);
+        Rasterizer2D.fillRectangle(0, 0, 16, cornerSize, bottomColor);
         Object var14 = null;
-        if (0 < param5) {
+        if (0 < centerColor) {
           var16 = new RgbSprite(16, 16);
           var14 = var16;
           var16.bindRasterTarget();
-          Rasterizer2D.fillRectangle(0, 0, 16, 16, param5);
+          Rasterizer2D.fillRectangle(0, 0, 16, 16, centerColor);
         }
         Rasterizer2D.bind(var18, var7, var8);
-        if (!param0) {
+        if (!flag) {
           return new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
         }
-        DateFieldsWidget.a(false, 118, 124, -92, 47, -40);
+        DateFieldsWidget.createGradientNineSliceSprites(false, 118, 124, -92, 47, -40);
         return new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
     }
 
@@ -131,13 +131,13 @@ final class DateFieldsWidget extends DateInputWidget {
         }
     }
 
-    final static boolean j(byte param0) {
-        if (param0 != -60) {
-          DateFieldsWidget.a(true, 76, -125, -71, 104, -123);
+    final static boolean handleNameEntryKey(byte obfuscationGuard) {
+        if (obfuscationGuard != -60) {
+          DateFieldsWidget.createGradientNineSliceSprites(true, 76, -125, -71, 104, -123);
           if (MusicCrossfadeStream.nameEntryPopup == null) {
             return false;
           }
-          if (MusicCrossfadeStream.nameEntryPopup.handleNormalizedNameKey(param0 ^ -55)) {
+          if (MusicCrossfadeStream.nameEntryPopup.handleNormalizedNameKey(obfuscationGuard ^ -55)) {
             return true;
           }
           return false;
@@ -145,7 +145,7 @@ final class DateFieldsWidget extends DateInputWidget {
         if (MusicCrossfadeStream.nameEntryPopup == null) {
           return false;
         }
-        if (MusicCrossfadeStream.nameEntryPopup.handleNormalizedNameKey(param0 ^ -55)) {
+        if (MusicCrossfadeStream.nameEntryPopup.handleNormalizedNameKey(obfuscationGuard ^ -55)) {
           return true;
         }
         return false;
@@ -292,59 +292,59 @@ final class DateFieldsWidget extends DateInputWidget {
         }
     }
 
-    final static byte a(int param0, char param1) {
+    final static byte unicodeToCp1252Byte(int obfuscationGuard, char character) {
         int var2;
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (param1 <= 0) {
-          if (param1 < 160) {
-            if (param1 == 8364) {
+        if (character <= 0) {
+          if (character < 160) {
+            if (character == 8364) {
               var2 = -128;
             } else {
-              if (8218 != param1) {
-                if (param1 != 402) {
-                  if (param1 == 8222) {
+              if (8218 != character) {
+                if (character != 402) {
+                  if (character == 8222) {
                     var2 = -124;
                   } else {
-                    if (param1 != 8230) {
-                      if (8224 != param1) {
-                        if (8225 != param1) {
-                          if (param1 == 710) {
+                    if (character != 8230) {
+                      if (8224 != character) {
+                        if (8225 != character) {
+                          if (character == 710) {
                             var2 = -120;
                           } else {
-                            if (param1 != 8240) {
-                              if (param1 == 352) {
+                            if (character != 8240) {
+                              if (character == 352) {
                                 var2 = -118;
                               } else {
-                                if (param1 != 8249) {
-                                  if (param1 == 338) {
+                                if (character != 8249) {
+                                  if (character == 338) {
                                     var2 = -116;
                                   } else {
-                                    if (381 != param1) {
-                                      if (param1 == 8216) {
+                                    if (381 != character) {
+                                      if (character == 8216) {
                                         var2 = -111;
                                       } else {
-                                        if (param1 != 8217) {
-                                          if (param1 != 8220) {
-                                            if (param1 != 8221) {
-                                              if (8226 != param1) {
-                                                if (8211 != param1) {
-                                                  if (param1 != 8212) {
-                                                    if (param1 != 732) {
-                                                      if (param1 == 8482) {
+                                        if (character != 8217) {
+                                          if (character != 8220) {
+                                            if (character != 8221) {
+                                              if (8226 != character) {
+                                                if (8211 != character) {
+                                                  if (character != 8212) {
+                                                    if (character != 732) {
+                                                      if (character == 8482) {
                                                         var2 = -103;
                                                       } else {
-                                                        if (param1 == 353) {
+                                                        if (character == 353) {
                                                           var2 = -102;
                                                         } else {
-                                                          if (param1 == 8250) {
+                                                          if (character == 8250) {
                                                             var2 = -101;
                                                           } else {
-                                                            if (param1 == 339) {
+                                                            if (character == 339) {
                                                               var2 = -100;
                                                             } else {
-                                                              if (param1 != 382) {
-                                                                var2 = (param1 == 376) ? -97 : 63;
+                                                              if (character != 382) {
+                                                                var2 = (character == 376) ? -97 : 63;
                                                               } else {
                                                                 var2 = -98;
                                                               }
@@ -403,61 +403,61 @@ final class DateFieldsWidget extends DateInputWidget {
                 var2 = -126;
               }
             }
-            if (param0 != -8250) {
+            if (obfuscationGuard != -8250) {
               return (byte) 9;
             }
             return (byte) var2;
           }
-          if (param1 <= 255) {
-            var2 = (byte)param1;
+          if (character <= 255) {
+            var2 = (byte)character;
           } else {
-            if (param1 == 8364) {
+            if (character == 8364) {
               var2 = -128;
             } else {
-              if (8218 != param1) {
-                if (param1 != 402) {
-                  if (param1 == 8222) {
+              if (8218 != character) {
+                if (character != 402) {
+                  if (character == 8222) {
                     var2 = -124;
                   } else {
-                    if (param1 != 8230) {
-                      if (8224 != param1) {
-                        if (8225 != param1) {
-                          if (param1 == 710) {
+                    if (character != 8230) {
+                      if (8224 != character) {
+                        if (8225 != character) {
+                          if (character == 710) {
                             var2 = -120;
                           } else {
-                            if (param1 != 8240) {
-                              if (param1 == 352) {
+                            if (character != 8240) {
+                              if (character == 352) {
                                 var2 = -118;
                               } else {
-                                if (param1 != 8249) {
-                                  if (param1 == 338) {
+                                if (character != 8249) {
+                                  if (character == 338) {
                                     var2 = -116;
                                   } else {
-                                    if (381 != param1) {
-                                      if (param1 == 8216) {
+                                    if (381 != character) {
+                                      if (character == 8216) {
                                         var2 = -111;
                                       } else {
-                                        if (param1 != 8217) {
-                                          if (param1 != 8220) {
-                                            if (param1 != 8221) {
-                                              if (8226 != param1) {
-                                                if (8211 != param1) {
-                                                  if (param1 != 8212) {
-                                                    if (param1 != 732) {
-                                                      if (param1 == 8482) {
+                                        if (character != 8217) {
+                                          if (character != 8220) {
+                                            if (character != 8221) {
+                                              if (8226 != character) {
+                                                if (8211 != character) {
+                                                  if (character != 8212) {
+                                                    if (character != 732) {
+                                                      if (character == 8482) {
                                                         var2 = -103;
                                                       } else {
-                                                        if (param1 == 353) {
+                                                        if (character == 353) {
                                                           var2 = -102;
                                                         } else {
-                                                          if (param1 == 8250) {
+                                                          if (character == 8250) {
                                                             var2 = -101;
                                                           } else {
-                                                            if (param1 == 339) {
+                                                            if (character == 339) {
                                                               var2 = -100;
                                                             } else {
-                                                              if (param1 != 382) {
-                                                                var2 = (param1 == 376) ? -97 : 63;
+                                                              if (character != 382) {
+                                                                var2 = (character == 376) ? -97 : 63;
                                                               } else {
                                                                 var2 = -98;
                                                               }
@@ -518,57 +518,57 @@ final class DateFieldsWidget extends DateInputWidget {
             }
           }
         } else {
-          if (param1 < 128) {
-            var2 = (byte)param1;
+          if (character < 128) {
+            var2 = (byte)character;
           } else {
-            if (param1 < 160) {
-              if (param1 == 8364) {
+            if (character < 160) {
+              if (character == 8364) {
                 var2 = -128;
               } else {
-                if (8218 != param1) {
-                  if (param1 != 402) {
-                    if (param1 == 8222) {
+                if (8218 != character) {
+                  if (character != 402) {
+                    if (character == 8222) {
                       var2 = -124;
                     } else {
-                      if (param1 != 8230) {
-                        if (8224 != param1) {
-                          if (8225 != param1) {
-                            if (param1 == 710) {
+                      if (character != 8230) {
+                        if (8224 != character) {
+                          if (8225 != character) {
+                            if (character == 710) {
                               var2 = -120;
                             } else {
-                              if (param1 != 8240) {
-                                if (param1 == 352) {
+                              if (character != 8240) {
+                                if (character == 352) {
                                   var2 = -118;
                                 } else {
-                                  if (param1 != 8249) {
-                                    if (param1 == 338) {
+                                  if (character != 8249) {
+                                    if (character == 338) {
                                       var2 = -116;
                                     } else {
-                                      if (381 != param1) {
-                                        if (param1 == 8216) {
+                                      if (381 != character) {
+                                        if (character == 8216) {
                                           var2 = -111;
                                         } else {
-                                          if (param1 != 8217) {
-                                            if (param1 != 8220) {
-                                              if (param1 != 8221) {
-                                                if (8226 != param1) {
-                                                  if (8211 != param1) {
-                                                    if (param1 != 8212) {
-                                                      if (param1 != 732) {
-                                                        if (param1 == 8482) {
+                                          if (character != 8217) {
+                                            if (character != 8220) {
+                                              if (character != 8221) {
+                                                if (8226 != character) {
+                                                  if (8211 != character) {
+                                                    if (character != 8212) {
+                                                      if (character != 732) {
+                                                        if (character == 8482) {
                                                           var2 = -103;
                                                         } else {
-                                                          if (param1 == 353) {
+                                                          if (character == 353) {
                                                             var2 = -102;
                                                           } else {
-                                                            if (param1 == 8250) {
+                                                            if (character == 8250) {
                                                               var2 = -101;
                                                             } else {
-                                                              if (param1 == 339) {
+                                                              if (character == 339) {
                                                                 var2 = -100;
                                                               } else {
-                                                                if (param1 != 382) {
-                                                                  if (param1 == 376) {
+                                                                if (character != 382) {
+                                                                  if (character == 376) {
                                                                     var2 = -97;
                                                                   } else {
                                                                     var2 = 63;
@@ -632,68 +632,68 @@ final class DateFieldsWidget extends DateInputWidget {
                 }
               }
             } else {
-              if (param1 <= 255) {
-                var2 = (byte)param1;
+              if (character <= 255) {
+                var2 = (byte)character;
               } else {
-                if (param1 == 8364) {
+                if (character == 8364) {
                   var2 = -128;
                 } else {
-                  if (8218 != param1) {
-                    if (param1 != 402) {
-                      if (param1 == 8222) {
+                  if (8218 != character) {
+                    if (character != 402) {
+                      if (character == 8222) {
                         var2 = -124;
                       } else {
-                        if (param1 != 8230) {
-                          if (8224 != param1) {
-                            if (8225 != param1) {
-                              if (param1 == 710) {
+                        if (character != 8230) {
+                          if (8224 != character) {
+                            if (8225 != character) {
+                              if (character == 710) {
                                 var2 = -120;
                               } else {
-                                if (param1 != 8240) {
-                                  if (param1 == 352) {
+                                if (character != 8240) {
+                                  if (character == 352) {
                                     var2 = -118;
                                   } else {
-                                    if (param1 != 8249) {
-                                      if (param1 == 338) {
+                                    if (character != 8249) {
+                                      if (character == 338) {
                                         var2 = -116;
                                       } else {
-                                        if (381 != param1) {
-                                          if (param1 == 8216) {
+                                        if (381 != character) {
+                                          if (character == 8216) {
                                             var2 = -111;
                                           } else {
-                                            if (param1 != 8217) {
-                                              if (param1 != 8220) {
-                                                if (param1 == 8221) {
+                                            if (character != 8217) {
+                                              if (character != 8220) {
+                                                if (character == 8221) {
                                                   var2 = -108;
                                                 } else {
-                                                  if (8226 == param1) {
+                                                  if (8226 == character) {
                                                     var2 = -107;
                                                   } else {
-                                                    if (8211 == param1) {
+                                                    if (8211 == character) {
                                                       var2 = -106;
                                                     } else {
-                                                      if (param1 == 8212) {
+                                                      if (character == 8212) {
                                                         var2 = -105;
                                                       } else {
-                                                        if (param1 == 732) {
+                                                        if (character == 732) {
                                                           var2 = -104;
                                                         } else {
-                                                          if (param1 == 8482) {
+                                                          if (character == 8482) {
                                                             var2 = -103;
                                                           } else {
-                                                            if (param1 == 353) {
+                                                            if (character == 353) {
                                                               var2 = -102;
                                                             } else {
-                                                              if (param1 == 8250) {
+                                                              if (character == 8250) {
                                                                 var2 = -101;
                                                               } else {
-                                                                if (param1 == 339) {
+                                                                if (character == 339) {
                                                                   var2 = -100;
                                                                 } else {
-                                                                  if (param1 == 382) {
+                                                                  if (character == 382) {
                                                                     var2 = -98;
                                                                   } else {
-                                                                    if (param1 == 376) {
+                                                                    if (character == 376) {
                                                                       var2 = -97;
                                                                     } else {
                                                                       var2 = 63;
@@ -748,14 +748,14 @@ final class DateFieldsWidget extends DateInputWidget {
             }
           }
         }
-        if (param0 == -8250) {
+        if (obfuscationGuard == -8250) {
           return (byte) var2;
         }
         return (byte) 9;
     }
 
-    public static void k(byte param0) {
-        int var1 = 13 / ((-32 - param0) / 57);
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        int var1 = 13 / ((-32 - obfuscationGuard) / 57);
         field_L = null;
         pendingAchievementSubmissions = null;
         field_N = null;

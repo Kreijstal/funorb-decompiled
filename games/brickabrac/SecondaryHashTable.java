@@ -154,7 +154,7 @@ final class SecondaryHashTable {
         if (param0 == -1) {
           return;
         }
-        SecondaryHashTable.c((byte) 88);
+        SecondaryHashTable.clearSharedReferences((byte) 88);
     }
 
     final void put(long key, DualLinkNode node, int obfuscationGuard) {
@@ -176,12 +176,12 @@ final class SecondaryHashTable {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_i = null;
         field_c = (String[][]) null;
         earnedAchievementMask = null;
         field_a = null;
-        if (param0 > 47) {
+        if (obfuscationGuard > 47) {
           return;
         }
         field_i = (java.applet.Applet) null;

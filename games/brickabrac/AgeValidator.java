@@ -50,7 +50,7 @@ final class AgeValidator extends TextFieldValidator {
               for (var14Lifetime1 = 0; var14Lifetime1 < param3; var14Lifetime1++) {
                 if (var13_int >= param8) {
                   var20 = param0[param12 + var13_int];
-                  param0[param12 + var13_int] = IntrusiveHashIterator.a(var17 * IntrusiveHashIterator.a(65280, var20) + var19, 16711680) + IntrusiveHashIterator.a(IntrusiveHashIterator.a(var20, 16711935) * var17 + var18, -16711936) >>> 8;
+                  param0[param12 + var13_int] = IntrusiveHashIterator.bitwiseAnd(var17 * IntrusiveHashIterator.bitwiseAnd(65280, var20) + var19, 16711680) + IntrusiveHashIterator.bitwiseAnd(IntrusiveHashIterator.bitwiseAnd(var20, 16711935) * var17 + var18, -16711936) >>> 8;
                 }
                 var13_int++;
               }
@@ -64,7 +64,7 @@ final class AgeValidator extends TextFieldValidator {
               for (var14Lifetime1Lifetime1 = 0; var14Lifetime1Lifetime1 < param3; var14Lifetime1Lifetime1++) {
                 if (var13_int < param2) {
                   var20Lifetime1 = param0[param12 + var13_int];
-                  param0[param12 + var13_int] = IntrusiveHashIterator.a(-16711936, var17 * IntrusiveHashIterator.a(var20Lifetime1, 16711935) + var18) + IntrusiveHashIterator.a(var19 + IntrusiveHashIterator.a(var20Lifetime1, 65280) * var17, 16711680) >>> 8;
+                  param0[param12 + var13_int] = IntrusiveHashIterator.bitwiseAnd(-16711936, var17 * IntrusiveHashIterator.bitwiseAnd(var20Lifetime1, 16711935) + var18) + IntrusiveHashIterator.bitwiseAnd(var19 + IntrusiveHashIterator.bitwiseAnd(var20Lifetime1, 65280) * var17, 16711680) >>> 8;
                 }
                 var13_int++;
               }
@@ -323,10 +323,10 @@ final class AgeValidator extends TextFieldValidator {
           var6[1].canvasWidth = var6[1].width;
           var6[5].canvasHeight = var6[5].height;
           var6[7].canvasWidth = var6[7].width;
-          var6[1] = FarmBackground.a(var6[1], false, 8);
-          var6[7] = FarmBackground.a(var6[7], false, 8);
-          var6[3] = TextFieldValidator.a(var6[3], 101, 8);
-          var6[5] = TextFieldValidator.a(var6[5], 89, 8);
+          var6[1] = FarmBackground.createHorizontallyTiledSprite(var6[1], false, 8);
+          var6[7] = FarmBackground.createHorizontallyTiledSprite(var6[7], false, 8);
+          var6[3] = TextFieldValidator.createVerticallyTiledSprite(var6[3], 101, 8);
+          var6[5] = TextFieldValidator.createVerticallyTiledSprite(var6[5], 89, 8);
           var5 = -92 / ((-45 - param3) / 34);
           stackIn_1_0 = var4;
           return stackIn_1_0;

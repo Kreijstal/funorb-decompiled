@@ -201,7 +201,7 @@ final class MusicEnvelope {
         }
     }
 
-    final static AlphaFont a(byte[] param0, byte param1) {
+    final static AlphaFont createAlphaFont(byte[] data, byte obfuscationGuard) {
         AlphaFont var2 = null;
         RuntimeException var2_ref = null;
         AlphaFont stackIn_5_0 = null;
@@ -211,14 +211,14 @@ final class MusicEnvelope {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == null) {
+          if (data == null) {
             return null;
           }
-          if (param1 >= -7) {
+          if (obfuscationGuard >= -7) {
             stackIn_5_0 = (AlphaFont) null;
             return stackIn_5_0;
           }
-          var2 = new AlphaFont(param0, ArrayWidgetGroup.decodedSpriteOffsetX, SocketConnector.decodedSpriteOffsetY, UiGeometryHelpers.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, PlayerBadgeHelpers.decodedSpritePalette, GameOverlayHelpers.decodedSpriteIndices);
+          var2 = new AlphaFont(data, ArrayWidgetGroup.decodedSpriteOffsetX, SocketConnector.decodedSpriteOffsetY, UiGeometryHelpers.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, PlayerBadgeHelpers.decodedSpritePalette, GameOverlayHelpers.decodedSpriteIndices);
           MotionWaypoint.clearDecodedSpriteData((byte) 96);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -227,20 +227,20 @@ final class MusicEnvelope {
           var2_ref = decompiledCaughtException;
           stackIn_10_0 = var2_ref;
           stackIn_10_1 = new StringBuilder().append("jm.C(");
-          if (param0 == null) {
+          if (data == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static String a(boolean param0, char param1) {
-        if (!param0) {
+    final static String characterToString(boolean obfuscationGuard, char character) {
+        if (!obfuscationGuard) {
           field_l = (String) null;
         }
-        return String.valueOf(param1);
+        return String.valueOf(character);
     }
 
     final static void handleCommonDataResponse(byte obfuscationGuard) {
@@ -280,7 +280,7 @@ final class MusicEnvelope {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(255) << (IntrusiveHashIterator.a(3, var7) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(255) << (IntrusiveHashIterator.bitwiseAnd(3, var7) << 8));
             }
             var4_ref_pe.complete = true;
             var4_ref_pe.unlink((byte) 111);
@@ -314,11 +314,11 @@ final class MusicEnvelope {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_f = null;
         field_i = null;
         field_l = null;
-        if (param0 != 31) {
+        if (obfuscationGuard != 31) {
           field_l = (String) null;
         }
     }

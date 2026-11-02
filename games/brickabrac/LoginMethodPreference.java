@@ -20,13 +20,13 @@ final class LoginMethodPreference {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_e = (int[][]) null;
         field_f = null;
         field_a = null;
         field_b = null;
         alternateActivityLoop = null;
-        if (param0 != 100) {
+        if (obfuscationGuard != 100) {
           field_a = (IndexedSprite[]) null;
         }
     }
@@ -101,9 +101,9 @@ final class LoginMethodPreference {
         }
     }
 
-    final static void a(String param0, int param1) {
-        System.out.println("Error: " + AccountResponse.a((byte) 13, "\n", param0, "%0a"));
-        if (param1 > -73) {
+    final static void printEscapedError(String message, int obfuscationGuard) {
+        System.out.println("Error: " + AccountResponse.replaceAllOccurrences((byte) 13, "\n", message, "%0a"));
+        if (obfuscationGuard > -73) {
           field_f = (boolean[]) null;
         }
     }

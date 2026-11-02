@@ -21,14 +21,14 @@ final class GameConnectionHelpers {
         if (obfuscationGuard) {
           return;
         }
-        GameConnectionHelpers.a((byte) 102);
+        GameConnectionHelpers.clearSharedReferences((byte) 102);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_c = null;
         field_g = null;
         field_d = null;
-        if (param0 != 98) {
+        if (obfuscationGuard != 98) {
           return;
         }
         spaceSmallSprite = null;

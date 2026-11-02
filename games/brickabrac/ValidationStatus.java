@@ -17,13 +17,13 @@ final class ValidationStatus {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_j = null;
         field_e = null;
         field_c = null;
         fullscreenDialogRows = null;
         field_g = null;
-        if (param0 >= 91) {
+        if (obfuscationGuard >= 91) {
           field_h = null;
           field_b = null;
           return;
@@ -33,7 +33,7 @@ final class ValidationStatus {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, RgbSprite param2, int param3, RgbSprite param4, int param5, int param6, int param7, RgbSprite param8, int param9) {
+    final static void drawParallaxLayers(int param0, int param1, RgbSprite param2, int param3, RgbSprite param4, int param5, int param6, int param7, RgbSprite param8, int param9) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

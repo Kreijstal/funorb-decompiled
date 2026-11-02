@@ -76,7 +76,7 @@ final class MenuButton {
               this.actionId != 45) {
               var4 = ArrayWidgetGroup.buttonLabels[this.actionId];
               if (this.actionId == 8) {
-                var4 = this.owner.e((byte) 87);
+                var4 = this.owner.getActionEightLabel((byte) 87);
               }
               if (this.actionId == 36) {
                 array$0 = new String[1];
@@ -118,9 +118,9 @@ final class MenuButton {
                 Rasterizer2D.drawHorizontalLine(var6, this.y + this.height / 2, 121, 0);
                 Rasterizer2D.drawHorizontalLine(var6, this.height / 2 + this.y + 1, 121, 11184810);
                 if (20 != this.actionId) {
-                  stackIn_56_0 = MultiValueSliderWidget.i(-29946) * 120 / 256;
+                  stackIn_56_0 = MultiValueSliderWidget.getMusicGain(-29946) * 120 / 256;
                 } else {
-                  stackIn_56_0 = FramedMenuScreen.g((byte) -44) * 120 / MenuSelection.e((byte) 43);
+                  stackIn_56_0 = FramedMenuScreen.getMasterSoundGain((byte) -44) * 120 / MenuSelection.e((byte) 43);
                 }
                 var8 = stackIn_56_0;
                 if (!focused) {
@@ -143,7 +143,7 @@ final class MenuButton {
             if (44 == this.actionId) {
               var4_ref.drawTransparent((this.width - var12.canvasWidth) / 2 + this.x, this.y + (-var12.canvasHeight + this.height) / 2);
             } else {
-              var4_ref.f((-var12.canvasWidth + this.width) / 2 + this.x, this.y + (-var12.canvasHeight + this.height) / 2);
+              var4_ref.drawHorizontallyFlipped((-var12.canvasWidth + this.width) / 2 + this.x, this.y + (-var12.canvasHeight + this.height) / 2);
             }
             return;
           }
@@ -203,11 +203,11 @@ final class MenuButton {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_g = null;
         loggedInConnection = null;
-        if (param0 != -32) {
-          MenuButton.a((byte) 49);
+        if (obfuscationGuard != -32) {
+          MenuButton.clearSharedReferences((byte) 49);
         }
     }
 

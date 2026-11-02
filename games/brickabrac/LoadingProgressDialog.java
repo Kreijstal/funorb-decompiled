@@ -44,7 +44,7 @@ final class LoadingProgressDialog extends PopupWidgetLayer {
             pressX = -88;
           }
           if (BytePayloadSubmission.decodeSpritesFromArchive(-104, param4, param2, param1)) {
-            stackIn_6_0 = MusicEnvelope.a(param3.takeFile(param4, param1, 4), (byte) -14);
+            stackIn_6_0 = MusicEnvelope.createAlphaFont(param3.takeFile(param4, param1, 4), (byte) -14);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -237,10 +237,10 @@ final class LoadingProgressDialog extends PopupWidgetLayer {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_cb = null;
         field_db = null;
-        if (param0 > -26) {
+        if (obfuscationGuard > -26) {
           field_db = (String) null;
           field_eb = null;
           return;

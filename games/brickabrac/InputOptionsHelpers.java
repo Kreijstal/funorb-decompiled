@@ -56,8 +56,8 @@ final class InputOptionsHelpers {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 > -33) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard > -33) {
           field_h = (String) null;
           field_f = null;
           field_h = null;

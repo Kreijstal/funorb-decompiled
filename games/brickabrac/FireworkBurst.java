@@ -108,7 +108,7 @@ final class FireworkBurst extends IntrusiveNode {
         int unusedClientFlag;
         unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         if (obfuscationGuard != -1196049244) {
-          FireworkBurst.a(76);
+          FireworkBurst.clearSharedReferences(76);
         }
         if (0 < this.startDelayTicks) {
           return;
@@ -123,9 +123,9 @@ final class FireworkBurst extends IntrusiveNode {
         return;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         matchmakingStatusText = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           matchmakingStatusText = (String) null;
         }
         achievementOrbCoinSprite = null;

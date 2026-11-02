@@ -11,12 +11,12 @@ final class IntNode extends IntrusiveNode {
     static String field_l;
     static NodeDeque queuedLevelResults;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_n = null;
         emailDomainAlphanumerics = null;
         field_m = null;
         constructionSmokeSprite = null;
-        int var1 = 119 / ((param0 - 71) / 51);
+        int var1 = 119 / ((obfuscationGuard - 71) / 51);
         field_l = null;
         queuedLevelResults = null;
         field_i = null;
@@ -172,7 +172,7 @@ final class IntNode extends IntrusiveNode {
             if (ball.phaseTicks <= 0) {
               GameplaySpriteHelpers.activeBallSprite.drawTransparent(destinationX + (ball.x256 >> 8) / scaleDivisor, (ball.y256 >> 8) / scaleDivisor + destinationY);
             } else {
-              GameplaySpriteHelpers.activeBallSprite.b(destinationX + (ball.x256 >> 8) / scaleDivisor, destinationY + (ball.y256 >> 8) / scaleDivisor, 128);
+              GameplaySpriteHelpers.activeBallSprite.drawAlphaBlended(destinationX + (ball.x256 >> 8) / scaleDivisor, destinationY + (ball.y256 >> 8) / scaleDivisor, 128);
             }
           } else {
             WidgetLayer.activeSteelBallSprite.drawTransparent((ball.x256 >> 8) / scaleDivisor + destinationX, destinationY + (ball.y256 >> 8) / scaleDivisor);

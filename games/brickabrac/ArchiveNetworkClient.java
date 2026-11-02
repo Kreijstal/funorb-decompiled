@@ -30,12 +30,12 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
             return;
           }
           fadeAlpha = 256 * MenuScreen.field_i / 32;
-          currentCharacter = TabbedPane.currentBackground.c((byte) -123);
+          currentCharacter = TabbedPane.currentBackground.getCharacterSprite((byte) -123);
           if (currentCharacter != null) {
             if (MenuScreen.field_i == 0) {
               currentCharacter.drawTransparent(-currentCharacter.canvasWidth + 640, 470 - currentCharacter.canvasHeight);
             } else {
-              currentCharacter.b(-currentCharacter.canvasWidth + 640, 470 - currentCharacter.canvasHeight, 256 - fadeAlpha);
+              currentCharacter.drawAlphaBlended(-currentCharacter.canvasWidth + 640, 470 - currentCharacter.canvasHeight, 256 - fadeAlpha);
             }
           }
           if (obfuscationGuard != 640) {
@@ -43,14 +43,14 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
           }
           if (MenuScreen.field_i > 0 &&
             ArchiveFetchClient.field_k != null) {
-            ArchiveFetchClient.field_k.b(640 - ArchiveFetchClient.field_k.canvasWidth, 480 - ArchiveFetchClient.field_k.canvasHeight - 10, fadeAlpha);
+            ArchiveFetchClient.field_k.drawAlphaBlended(640 - ArchiveFetchClient.field_k.canvasWidth, 480 - ArchiveFetchClient.field_k.canvasHeight - 10, fadeAlpha);
           }
           eyeSprite = IntrusiveNode.gameEyeSprites[board.eyeExpression];
           if (currentCharacter != null) {
             eyeSprite.drawTransparent(-3 + (640 - (currentCharacter.canvasWidth + eyeSprite.canvasWidth) / 2), -currentCharacter.canvasHeight + 480 - 10 + 45);
           }
           leverFrame = QuickChatHelpDialog.getLeverFrameIndex(match, 0, 100, board);
-          leverSprites = TabbedPane.currentBackground.b(obfuscationGuard ^ -746);
+          leverSprites = TabbedPane.currentBackground.getLeverSprites(obfuscationGuard ^ -746);
           if (leverSprites != null) {
             currentLever = leverSprites[leverFrame];
             currentLever.drawTransparent(-20 + (-currentLever.canvasWidth + 640), 520 - currentLever.canvasHeight);
@@ -60,7 +60,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
               return;
             }
             fadingLever = HorizontalFrameHelpers.field_c[leverFrame];
-            fadingLever.b(-fadingLever.canvasWidth + 620, 40 + (-fadingLever.canvasHeight + 480), fadeAlpha);
+            fadingLever.drawAlphaBlended(-fadingLever.canvasWidth + 620, 40 + (-fadingLever.canvasHeight + 480), fadeAlpha);
           }
           return;
         } catch (java.lang.RuntimeException caughtException) {
@@ -194,7 +194,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
               var2Lifetime1 = (ArchiveNetworkRequest) (this.pendingBackground.next(-8394));
             }
             if (obfuscationGuard <= 10) {
-              ArchiveNetworkClient.h((byte) -19);
+              ArchiveNetworkClient.clearSharedReferences((byte) -19);
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
               var3_int = this.transport.available(10434);
@@ -223,7 +223,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
                   this.transport.readFully(25826, this.currentResponse.packet.data, var6, this.currentResponse.packet.position);
                   if (this.xorKey != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.currentResponse.packet.data[var7 + this.currentResponse.packet.position] = (byte)LevelResultSubmission.a((int) this.currentResponse.packet.data[var7 + this.currentResponse.packet.position], (int) this.xorKey);
+                      this.currentResponse.packet.data[var7 + this.currentResponse.packet.position] = (byte)LevelResultSubmission.bitwiseXor((int) this.currentResponse.packet.data[var7 + this.currentResponse.packet.position], (int) this.xorKey);
                     }
                   }
                   this.currentResponse.blockPosition = this.currentResponse.blockPosition + var6;
@@ -245,7 +245,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
                   this.transport.readFully(25826, this.responseHeader.data, var5, this.responseHeader.position);
                   if (0 != this.xorKey) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.responseHeader.data[this.responseHeader.position + var6] = (byte)LevelResultSubmission.a((int) this.responseHeader.data[this.responseHeader.position + var6], (int) this.xorKey);
+                      this.responseHeader.data[this.responseHeader.position + var6] = (byte)LevelResultSubmission.bitwiseXor((int) this.responseHeader.data[this.responseHeader.position + var6], (int) this.xorKey);
                     }
                   }
                   this.responseHeader.position = this.responseHeader.position + var5;
@@ -403,10 +403,10 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         this.xorKey = (byte)(int)(1.0 + 255.0 * Math.random());
     }
 
-    public static void h(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_r = null;
-        if (param0 > -92) {
-          ArchiveNetworkClient.h((byte) 64);
+        if (obfuscationGuard > -92) {
+          ArchiveNetworkClient.clearSharedReferences((byte) 64);
         }
         field_u = null;
         activeRosetteSprites = null;

@@ -6,7 +6,7 @@ final class ArgbSprite extends RgbSprite {
         super(width, height);
     }
 
-    private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blendPixelsReversed(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -34,7 +34,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendPixelsDimmed(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -106,10 +106,10 @@ final class ArgbSprite extends RgbSprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.d(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blendPixels(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blendNeutralPixelsTinted(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$1 = 0;
         int var12;
         int var13;
@@ -188,10 +188,10 @@ final class ArgbSprite extends RgbSprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.d(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blendPixels(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blendScaledPixelsWithAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -219,39 +219,39 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void f(int param0, int param1, int param2) {
+    final void drawAdditive(int x, int y, int intensity) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -260,10 +260,10 @@ final class ArgbSprite extends RgbSprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.b(0, 0, 0, Rasterizer2D.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.addPixelsWithAlpha(0, 0, 0, Rasterizer2D.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, intensity);
     }
 
-    private final static void f(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendRecoloredNeutralPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$6 = 0;
@@ -416,7 +416,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void e(int param0, int param1) {
+    final void drawQuarterSize(int x, int y) {
         int var10 = 0;
         int var11 = 0;
         int stackIn_3_0 = 0;
@@ -449,30 +449,30 @@ final class ArgbSprite extends RgbSprite {
         int[] var23Lifetime1;
         var3 = this.width >> 2;
         var4 = this.height >> 2;
-        param0 = param0 + this.offsetX / 4;
-        param1 = param1 + this.offsetY / 4;
-        if (param0 >= Rasterizer2D.clipLeft) {
+        x = x + this.offsetX / 4;
+        y = y + this.offsetY / 4;
+        if (x >= Rasterizer2D.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = Rasterizer2D.clipLeft - param0 << 2;
+          stackIn_3_0 = Rasterizer2D.clipLeft - x << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= Rasterizer2D.clipRight) {
+        if (x + var3 <= Rasterizer2D.clipRight) {
           stackIn_6_0 = this.width - 4;
         } else {
-          stackIn_6_0 = (Rasterizer2D.clipRight - param0 << 2) - 4;
+          stackIn_6_0 = (Rasterizer2D.clipRight - x << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= Rasterizer2D.clipTop) {
+        if (y >= Rasterizer2D.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = Rasterizer2D.clipTop - param1 << 2;
+          stackIn_9_0 = Rasterizer2D.clipTop - y << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= Rasterizer2D.clipBottom) {
+        if (y + var4 <= Rasterizer2D.clipBottom) {
           stackIn_12_0 = this.height - 4;
         } else {
-          stackIn_12_0 = (Rasterizer2D.clipBottom - param1 << 2) - 4;
+          stackIn_12_0 = (Rasterizer2D.clipBottom - y << 2) - 4;
         }
         var8 = stackIn_12_0;
         var23 = new int[16];
@@ -481,7 +481,7 @@ final class ArgbSprite extends RgbSprite {
         for (var10 = var7; var10 <= var8; var10 += 4) {
           for (var11 = var5; var11 <= var6; var11 += 4) {
             var12 = var10 * this.width + var11;
-            var13 = (param1 + (var10 >> 2)) * Rasterizer2D.width + (param0 + (var11 >> 2));
+            var13 = (y + (var10 >> 2)) * Rasterizer2D.width + (x + (var11 >> 2));
             for (var14 = 0; var14 < 4; var14++) {
               for (var15 = 0; var15 < 4; var15++) {
                 var9[(var14 << 2) + var15] = this.pixels[var12 + var14 * this.width + var15];
@@ -512,15 +512,15 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int x, int y, int destinationWidth, int destinationHeight) {
         int var13 = 0;
         int var15 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
         int var15Lifetime1;
         int var15Lifetime2;
-        if (param2 <= 0 ||
-          param3 <= 0) {
+        if (destinationWidth <= 0 ||
+          destinationHeight <= 0) {
           return;
         }
         int var5 = this.width;
@@ -529,87 +529,87 @@ final class ArgbSprite extends RgbSprite {
         int var8 = 0;
         int var9 = this.canvasWidth;
         int var10 = this.canvasHeight;
-        int var11 = (var9 << 16) / param2;
-        int var12 = (var10 << 16) / param3;
+        int var11 = (var9 << 16) / destinationWidth;
+        int var12 = (var10 << 16) / destinationHeight;
         if (this.offsetX > 0) {
           var13 = ((this.offsetX << 16) + var11 - 1) / var11;
-          param0 = param0 + var13;
+          x = x + var13;
           var7 = var7 + (var13 * var11 - (this.offsetX << 16));
         }
         if (this.offsetY > 0) {
           var13Lifetime1 = ((this.offsetY << 16) + var12 - 1) / var12;
-          param1 = param1 + var13Lifetime1;
+          y = y + var13Lifetime1;
           var8 = var8 + (var13Lifetime1 * var12 - (this.offsetY << 16));
         }
         if (var5 < var9) {
-          param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
+          destinationWidth = ((var5 << 16) - var7 + var11 - 1) / var11;
         }
         if (var6 < var10) {
-          param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
+          destinationHeight = ((var6 << 16) - var8 + var12 - 1) / var12;
         }
-        var13Lifetime2 = param0 + param1 * Rasterizer2D.width;
-        int var14 = Rasterizer2D.width - param2;
-        if (param1 + param3 > Rasterizer2D.clipBottom) {
-          param3 = param3 - (param1 + param3 - Rasterizer2D.clipBottom);
+        var13Lifetime2 = x + y * Rasterizer2D.width;
+        int var14 = Rasterizer2D.width - destinationWidth;
+        if (y + destinationHeight > Rasterizer2D.clipBottom) {
+          destinationHeight = destinationHeight - (y + destinationHeight - Rasterizer2D.clipBottom);
         }
-        if (param1 < Rasterizer2D.clipTop) {
-          var15 = Rasterizer2D.clipTop - param1;
-          param3 = param3 - var15;
+        if (y < Rasterizer2D.clipTop) {
+          var15 = Rasterizer2D.clipTop - y;
+          destinationHeight = destinationHeight - var15;
           var13Lifetime2 = var13Lifetime2 + var15 * Rasterizer2D.width;
           var8 = var8 + var12 * var15;
         }
-        if (param0 + param2 > Rasterizer2D.clipRight) {
-          var15Lifetime1 = param0 + param2 - Rasterizer2D.clipRight;
-          param2 = param2 - var15Lifetime1;
+        if (x + destinationWidth > Rasterizer2D.clipRight) {
+          var15Lifetime1 = x + destinationWidth - Rasterizer2D.clipRight;
+          destinationWidth = destinationWidth - var15Lifetime1;
           var14 = var14 + var15Lifetime1;
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var15Lifetime2 = Rasterizer2D.clipLeft - param0;
-          param2 = param2 - var15Lifetime2;
+        if (x < Rasterizer2D.clipLeft) {
+          var15Lifetime2 = Rasterizer2D.clipLeft - x;
+          destinationWidth = destinationWidth - var15Lifetime2;
           var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        ArgbSprite.c(Rasterizer2D.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        ArgbSprite.blendScaledPixels(Rasterizer2D.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, destinationWidth, destinationHeight, var11, var12, var5);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawDimmed(int x, int y, int brightness) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        if (param2 == 256) {
-          this.drawTransparent(param0, param1);
+        if (brightness == 256) {
+          this.drawTransparent(x, y);
           return;
         }
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -618,46 +618,46 @@ final class ArgbSprite extends RgbSprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.d(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.blendPixelsDimmed(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, brightness);
     }
 
     ArgbSprite(int canvasWidth, int canvasHeight, int offsetX, int offsetY, int width, int height, int[] pixels) {
         super(canvasWidth, canvasHeight, offsetX, offsetY, width, height, pixels);
     }
 
-    final void f(int param0, int param1) {
+    final void drawHorizontallyFlipped(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + (this.canvasWidth - this.width - this.offsetX);
-        param1 = param1 + this.offsetY;
-        int var3 = param0 + param1 * Rasterizer2D.width;
+        x = x + (this.canvasWidth - this.width - this.offsetX);
+        y = y + this.offsetY;
+        int var3 = x + y * Rasterizer2D.width;
         int var4 = this.width - 1;
         int var5 = this.height;
         int var6 = this.width;
         int var7 = Rasterizer2D.width - var6;
         int var8 = var6 + var6;
-        if (param1 < Rasterizer2D.clipTop) {
-          var9 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var9 = Rasterizer2D.clipTop - y;
           var5 = var5 - var9;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * Rasterizer2D.width;
         }
-        if (param1 + var5 > Rasterizer2D.clipBottom) {
-          var5 = var5 - (param1 + var5 - Rasterizer2D.clipBottom);
+        if (y + var5 > Rasterizer2D.clipBottom) {
+          var5 = var5 - (y + var5 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var9Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var9Lifetime1 = Rasterizer2D.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > Rasterizer2D.clipRight) {
-          var9Lifetime2 = param0 + var6 - Rasterizer2D.clipRight;
+        if (x + var6 > Rasterizer2D.clipRight) {
+          var9Lifetime2 = x + var6 - Rasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -666,18 +666,18 @@ final class ArgbSprite extends RgbSprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.e(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blendPixelsReversed(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledAlphaBlended(int x, int y, int destinationWidth, int destinationHeight, int alpha) {
         int var14 = 0;
         int var16 = 0;
         int var14Lifetime1;
         int var14Lifetime2;
         int var16Lifetime1;
         int var16Lifetime2;
-        if (param2 <= 0 ||
-          param3 <= 0) {
+        if (destinationWidth <= 0 ||
+          destinationHeight <= 0) {
           return;
         }
         int var6 = this.width;
@@ -686,48 +686,48 @@ final class ArgbSprite extends RgbSprite {
         int var9 = 0;
         int var10 = this.canvasWidth;
         int var11 = this.canvasHeight;
-        int var12 = (var10 << 16) / param2;
-        int var13 = (var11 << 16) / param3;
+        int var12 = (var10 << 16) / destinationWidth;
+        int var13 = (var11 << 16) / destinationHeight;
         if (this.offsetX > 0) {
           var14 = ((this.offsetX << 16) + var12 - 1) / var12;
-          param0 = param0 + var14;
+          x = x + var14;
           var8 = var8 + (var14 * var12 - (this.offsetX << 16));
         }
         if (this.offsetY > 0) {
           var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
-          param1 = param1 + var14Lifetime1;
+          y = y + var14Lifetime1;
           var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
         }
         if (var6 < var10) {
-          param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
+          destinationWidth = ((var6 << 16) - var8 + var12 - 1) / var12;
         }
         if (var7 < var11) {
-          param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
+          destinationHeight = ((var7 << 16) - var9 + var13 - 1) / var13;
         }
-        var14Lifetime2 = param0 + param1 * Rasterizer2D.width;
-        int var15 = Rasterizer2D.width - param2;
-        if (param1 + param3 > Rasterizer2D.clipBottom) {
-          param3 = param3 - (param1 + param3 - Rasterizer2D.clipBottom);
+        var14Lifetime2 = x + y * Rasterizer2D.width;
+        int var15 = Rasterizer2D.width - destinationWidth;
+        if (y + destinationHeight > Rasterizer2D.clipBottom) {
+          destinationHeight = destinationHeight - (y + destinationHeight - Rasterizer2D.clipBottom);
         }
-        if (param1 < Rasterizer2D.clipTop) {
-          var16 = Rasterizer2D.clipTop - param1;
-          param3 = param3 - var16;
+        if (y < Rasterizer2D.clipTop) {
+          var16 = Rasterizer2D.clipTop - y;
+          destinationHeight = destinationHeight - var16;
           var14Lifetime2 = var14Lifetime2 + var16 * Rasterizer2D.width;
           var9 = var9 + var13 * var16;
         }
-        if (param0 + param2 > Rasterizer2D.clipRight) {
-          var16Lifetime1 = param0 + param2 - Rasterizer2D.clipRight;
-          param2 = param2 - var16Lifetime1;
+        if (x + destinationWidth > Rasterizer2D.clipRight) {
+          var16Lifetime1 = x + destinationWidth - Rasterizer2D.clipRight;
+          destinationWidth = destinationWidth - var16Lifetime1;
           var15 = var15 + var16Lifetime1;
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var16Lifetime2 = Rasterizer2D.clipLeft - param0;
-          param2 = param2 - var16Lifetime2;
+        if (x < Rasterizer2D.clipLeft) {
+          var16Lifetime2 = Rasterizer2D.clipLeft - x;
+          destinationWidth = destinationWidth - var16Lifetime2;
           var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
           var8 = var8 + var12 * var16Lifetime2;
           var15 = var15 + var16Lifetime2;
         }
-        ArgbSprite.b(Rasterizer2D.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+        ArgbSprite.blendScaledPixelsWithAlpha(Rasterizer2D.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, destinationWidth, destinationHeight, var12, var13, var6, alpha);
     }
 
     final void drawAt(int x, int y) {
@@ -771,10 +771,10 @@ final class ArgbSprite extends RgbSprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.d(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blendPixels(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blendScaledPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -805,7 +805,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blendPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -833,39 +833,39 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawNeutralPixelsTinted(int x, int y, int tintRgb) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -874,42 +874,42 @@ final class ArgbSprite extends RgbSprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.d(Rasterizer2D.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.blendNeutralPixelsTinted(Rasterizer2D.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, tintRgb);
     }
 
-    final void e(int param0, int param1, int param2) {
+    final void drawNeutralPixelsRecolored(int x, int y, int tintRgb) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -918,42 +918,42 @@ final class ArgbSprite extends RgbSprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.f(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.blendRecoloredNeutralPixels(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, tintRgb);
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawAlphaBlended(int x, int y, int alpha) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
         int var6 = this.height;
         int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -962,10 +962,10 @@ final class ArgbSprite extends RgbSprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.e(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.blendPixelsWithAlpha(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, alpha);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawWithVerticalAlphaGradient(int x, int y, int startAlpha, int endAlpha) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var5;
@@ -986,33 +986,33 @@ final class ArgbSprite extends RgbSprite {
         }
         var5 = this.height;
         var6 = this.width;
-        var7 = param2 << 8;
-        var8 = (param3 - param2 << 8) / var5;
+        var7 = startAlpha << 8;
+        var8 = (endAlpha - startAlpha << 8) / var5;
         var9 = 0;
-        if (param0 < Rasterizer2D.clipLeft) {
-          var6 = var6 - (Rasterizer2D.clipLeft - param0);
-          var9 = var9 + (Rasterizer2D.clipLeft - param0);
-          param0 = Rasterizer2D.clipLeft;
+        if (x < Rasterizer2D.clipLeft) {
+          var6 = var6 - (Rasterizer2D.clipLeft - x);
+          var9 = var9 + (Rasterizer2D.clipLeft - x);
+          x = Rasterizer2D.clipLeft;
         }
-        if (param1 < Rasterizer2D.clipTop) {
-          var7 = var7 + (Rasterizer2D.clipTop - param1) * var8;
-          var5 = var5 - (Rasterizer2D.clipTop - param1);
-          var9 = var9 + (Rasterizer2D.clipTop - param1) * Rasterizer2D.width;
-          param1 = Rasterizer2D.clipTop;
+        if (y < Rasterizer2D.clipTop) {
+          var7 = var7 + (Rasterizer2D.clipTop - y) * var8;
+          var5 = var5 - (Rasterizer2D.clipTop - y);
+          var9 = var9 + (Rasterizer2D.clipTop - y) * Rasterizer2D.width;
+          y = Rasterizer2D.clipTop;
         }
-        if (param0 + var6 > Rasterizer2D.clipRight) {
-          var6 = Rasterizer2D.clipRight - param0;
+        if (x + var6 > Rasterizer2D.clipRight) {
+          var6 = Rasterizer2D.clipRight - x;
         }
-        if (param1 + var5 > Rasterizer2D.clipBottom) {
-          var5 = Rasterizer2D.clipBottom - param1;
+        if (y + var5 > Rasterizer2D.clipBottom) {
+          var5 = Rasterizer2D.clipBottom - y;
         }
         var10 = Rasterizer2D.width - var6;
         var11 = this.width - var6;
-        var12 = param0 + param1 * Rasterizer2D.width;
-        for (param1 = -var5; param1 < 0; param1++) {
+        var12 = x + y * Rasterizer2D.width;
+        for (y = -var5; y < 0; y++) {
           var13 = var7 >> 8;
           if (var13 >= 0) {
-            for (param0 = -var6; param0 < 0; param0++) {
+            for (x = -var6; x < 0; x++) {
               var14 = (this.pixels[var9] >>> 24) * var13 >> 8;
               var15 = 256 - var14;
               incrementValue$0 = var9;
@@ -1031,7 +1031,7 @@ final class ArgbSprite extends RgbSprite {
         return;
     }
 
-    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void addPixelsWithAlpha(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         int var14;
         for (param8 = -param10; param8 < 0; param8++) {
@@ -1057,7 +1057,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendPixelsWithAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;

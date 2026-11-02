@@ -14,8 +14,8 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
         SocialListResponseHelpers.field_b = param0;
     }
 
-    public static void a(boolean param0) {
-        if (!param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_b = (AchievementMaskRequest) null;
           field_a = null;
           field_b = null;
@@ -169,7 +169,7 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
           var8 = AccountDateHelpers.field_a[1];
           if (widget instanceof FocusableWidget &&
             ((FocusableWidget) (widget)).active) {
-            var8.f((-var8.canvasWidth + widget.width >> 1) + 1 + var6_int, (-var8.canvasHeight + widget.height >> 1) + 1 + var7, 256);
+            var8.drawAdditive((-var8.canvasWidth + widget.width >> 1) + 1 + var6_int, (-var8.canvasHeight + widget.height >> 1) + 1 + var7, 256);
           }
           if (!widget.isFocused(callbackGuard ^ 20732)) {
             return;

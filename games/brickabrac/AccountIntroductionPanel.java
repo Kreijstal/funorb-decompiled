@@ -166,13 +166,13 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
             return true;
           }
           if (98 == keyCode) {
-            stackIn_5_0 = this.b(focusRoot, (byte) 117);
+            stackIn_5_0 = this.focusPreviousChild(focusRoot, (byte) 117);
             return stackIn_5_0;
           }
           if (99 != keyCode) {
             return false;
           }
-          stackIn_8_0 = this.a(focusRoot, (byte) -116);
+          stackIn_8_0 = this.focusNextChild(focusRoot, (byte) -116);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -262,7 +262,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
             MotionWaypoint.d(-117);
           } else {
             if (this.createAccountButton == widget) {
-              Mesh3D.d(-1);
+              Mesh3D.showAccountRegistrationPanel(-1);
             } else {
               if (widget == this.guestPlayButton) {
                 NewAchievementsScreen.f(967);
@@ -284,9 +284,9 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_H = null;
-        if (param0 != 36) {
+        if (obfuscationGuard != 36) {
           field_H = (AccountResponse) null;
         }
         field_L = null;

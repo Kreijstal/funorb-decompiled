@@ -183,13 +183,13 @@ final class Brick extends RectangleBody {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_D = null;
         jungleSmallSprite = null;
         chocCapsSprites = (RgbSprite[][]) null;
         field_A = null;
         field_z = null;
-        if (param0 != 4641) {
+        if (obfuscationGuard != 4641) {
           field_x = (CacheIoWorker) null;
         }
         bubbleDistortionFalloff = null;
@@ -394,7 +394,7 @@ final class Brick extends RectangleBody {
         int var3 = var2 - TextLineLayout.field_b * TextLineLayout.field_b;
         ContentTransitionLayer.field_gb.setBounds(-124 + (Rasterizer2D.height - 90), 90, -(199 * var3 / var2) + var1, 199, (byte) 64);
         if (param0 >= -50) {
-          Brick.d(61);
+          Brick.clearSharedReferences(61);
         }
         FontRequestHelpers.field_a.setBounds(-4 + Rasterizer2D.height - 120, 0, 438 * var3 / var2 + (var1 + 202), 438, (byte) 64);
     }

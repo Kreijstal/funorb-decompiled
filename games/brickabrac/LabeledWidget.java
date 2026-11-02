@@ -24,12 +24,12 @@ final class LabeledWidget extends SingleChildWidget {
         this.labelFont.drawParagraph(this.labelText, this.inset + var5 + var7, this.inset + var6, this.labelWidth - this.inset, -(2 * this.inset) + this.height, this.labelColor, -1, !this.labelOnRight ? 2 : 0, 1, this.labelFont.ascent);
     }
 
-    public static void c(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_O = null;
         emailAvailabilityRequest = null;
         field_G = null;
         field_P = null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_O = (PaletteFont) null;
         }
     }
@@ -100,9 +100,9 @@ final class LabeledWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(byte param0, int param1) {
-        int var2 = 51 / ((-51 - param0) / 53);
-        SingleChildWidget.a(13894, param1);
+    final static void applyMasterSoundGain(byte obfuscationGuard, int gain) {
+        int var2 = 51 / ((-51 - obfuscationGuard) / 53);
+        SingleChildWidget.applyMasterSoundGain(13894, gain);
     }
 
     final String getTooltip(int obfuscationGuard) {

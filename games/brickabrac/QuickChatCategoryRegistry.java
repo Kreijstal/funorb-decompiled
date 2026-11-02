@@ -54,14 +54,14 @@ final class QuickChatCategoryRegistry {
         }
     }
 
-    public static void b(byte param0) {
-        int var1 = 22 % ((param0 - 19) / 35);
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        int var1 = 22 % ((obfuscationGuard - 19) / 35);
         textHuffman = null;
         field_e = null;
     }
 
-    final static int a(byte param0) {
-        if (param0 != -35) {
+    final static int getPointerIdleTicks(byte obfuscationGuard) {
+        if (obfuscationGuard != -35) {
           return 43;
         }
         return GameplaySpriteHelpers.pointerIdleTicks;
@@ -186,15 +186,15 @@ final class QuickChatCategoryRegistry {
           SpriteInputHelpers.loadRgbSpriteByName("basic", "locked", (byte) -45, param1);
           FireworkBurst.achievementOrbCoinSprite = new RgbSprite(32, 32);
           FireworkBurst.achievementOrbCoinSprite.bindRasterTarget();
-          DelayedPacket.field_p.c(0, 0, 32, 32);
+          DelayedPacket.field_p.drawScaledAveraged(0, 0, 32, 32);
           BallPulseEffect.framebuffer.bindRaster((byte) 91);
           DelayedPacket.field_p = null;
           var19 = new RgbSprite(LevelCompleteScreen.field_F.canvasWidth / 4, LevelCompleteScreen.field_F.canvasHeight / 4);
           var19.bindRasterTarget();
-          LevelCompleteScreen.field_F.e(0, 0);
+          LevelCompleteScreen.field_F.drawQuarterSize(0, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 113);
-          ToggleButtonWidget.field_L = PlayerInputBatch.a(-12, var19, 8, 9838226);
-          ValidationStatus.field_c = PlayerInputBatch.a(-12, var19, 12, 9838226);
+          ToggleButtonWidget.field_L = PlayerInputBatch.createBlurredSilhouetteSprite(-12, var19, 8, 9838226);
+          ValidationStatus.field_c = PlayerInputBatch.createBlurredSilhouetteSprite(-12, var19, 12, 9838226);
           var8 = null;
           AchievementSubmission.field_l = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
           TranslucentNineSliceFrame.field_h = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
@@ -204,8 +204,8 @@ final class QuickChatCategoryRegistry {
             Rasterizer2D.clear();
             IntrusiveHashTable.achievementSourceIcons[var10_int].drawQuarter(0, 0);
             BallPulseEffect.framebuffer.bindRaster((byte) 101);
-            AchievementSubmission.field_l[var10_int] = PlayerInputBatch.a(-12, var20, 8, 9838226);
-            TranslucentNineSliceFrame.field_h[var10_int] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), var20, 12, 9838226);
+            AchievementSubmission.field_l[var10_int] = PlayerInputBatch.createBlurredSilhouetteSprite(-12, var20, 8, 9838226);
+            TranslucentNineSliceFrame.field_h[var10_int] = PlayerInputBatch.createBlurredSilhouetteSprite(LevelResultSubmission.bitwiseXor(param3, -29147), var20, 12, 9838226);
           }
           CircleBody.field_t = new RgbSprite[LegacyEmailValidationError.field_c.length][];
           var9 = null;
@@ -274,7 +274,7 @@ final class QuickChatCategoryRegistry {
           Ball.fullSteelBallSprite.drawHalfSize(0, 0);
           SocialListResponseHelpers.halfPowerUpSprites = new RgbSprite[TextHotspotRegion.powerUpMeterIcons.length];
           if (param3 != 29137) {
-            QuickChatCategoryRegistry.a((byte) -25);
+            QuickChatCategoryRegistry.getPointerIdleTicks((byte) -25);
           }
           for (var10_intLifetime6 = 0; SocialListResponseHelpers.halfPowerUpSprites.length > var10_intLifetime6; var10_intLifetime6++) {
             SocialListResponseHelpers.halfPowerUpSprites[var10_intLifetime6] = new RgbSprite(TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasWidth / 2, TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasHeight / 2);
@@ -321,11 +321,11 @@ final class QuickChatCategoryRegistry {
           }
           BoundedFile.field_a = new RgbSprite[FullscreenFailureKind.trackHeads.length];
           for (var10_intLifetime12 = 0; BoundedFile.field_a.length > var10_intLifetime12; var10_intLifetime12++) {
-            BoundedFile.field_a[var10_intLifetime12] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), FullscreenFailureKind.trackHeads[var10_intLifetime12], 14, 16755200);
+            BoundedFile.field_a[var10_intLifetime12] = PlayerInputBatch.createBlurredSilhouetteSprite(LevelResultSubmission.bitwiseXor(param3, -29147), FullscreenFailureKind.trackHeads[var10_intLifetime12], 14, 16755200);
           }
           MusicVoiceMixer.field_n = new RgbSprite[FullscreenFailureKind.trackHeads.length];
           for (var10_intLifetime13 = 0; var10_intLifetime13 < MusicVoiceMixer.field_n.length; var10_intLifetime13++) {
-            MusicVoiceMixer.field_n[var10_intLifetime13] = DelayedPacket.a(FullscreenFailureKind.trackHeads[var10_intLifetime13], 20, LevelResultSubmission.a(param3, -13351));
+            MusicVoiceMixer.field_n[var10_intLifetime13] = DelayedPacket.createBlurredSilhouetteSprite(FullscreenFailureKind.trackHeads[var10_intLifetime13], 20, LevelResultSubmission.bitwiseXor(param3, -13351));
           }
           AlignedIconLabel.field_Sb = CanvasInputHelpers.field_a.copy();
           AlignedIconLabel.field_Sb.rotateCounterclockwise();
@@ -340,11 +340,11 @@ final class QuickChatCategoryRegistry {
           for (var11 = 0; var11 < 4; var11++) {
             JungleBackground.fullPaddleFlameSprites[0][var11] = new RgbSprite(var10.canvasWidth - var11, var10.canvasHeight);
             JungleBackground.fullPaddleFlameSprites[0][var11].bindRasterTarget();
-            var10.a(0, 0, -var11 + var10.canvasWidth, var10.canvasHeight);
+            var10.drawScaled(0, 0, -var11 + var10.canvasWidth, var10.canvasHeight);
             JungleBackground.fullPaddleFlameSprites[1][var11] = JungleBackground.fullPaddleFlameSprites[0][var11].copyFlippedHorizontal();
             MeshLobbyUiHelpers.halfPaddleFlameSprites[0][var11] = new RgbSprite(JungleBackground.fullPaddleFlameSprites[0][var11].canvasWidth / 2, JungleBackground.fullPaddleFlameSprites[0][var11].canvasHeight / 2);
             MeshLobbyUiHelpers.halfPaddleFlameSprites[0][var11].bindRasterTarget();
-            var10.a(0, 0, JungleBackground.fullPaddleFlameSprites[0][var11].canvasWidth / 2, JungleBackground.fullPaddleFlameSprites[0][var11].canvasHeight / 2);
+            var10.drawScaled(0, 0, JungleBackground.fullPaddleFlameSprites[0][var11].canvasWidth / 2, JungleBackground.fullPaddleFlameSprites[0][var11].canvasHeight / 2);
             MeshLobbyUiHelpers.halfPaddleFlameSprites[1][var11] = MeshLobbyUiHelpers.halfPaddleFlameSprites[0][var11].copyFlippedHorizontal();
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 127);
@@ -358,11 +358,11 @@ final class QuickChatCategoryRegistry {
           }
           AlternateNumericLoginCredentials.field_r = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime2 = 0; SaveResultsPromptScreen.packCardIcons.length > var11Lifetime2; var11Lifetime2++) {
-            AlternateNumericLoginCredentials.field_r[var11Lifetime2] = DelayedPacket.a(ArchiveNetworkRequest.packSelectorIcons[var11Lifetime2], 20, -17912);
+            AlternateNumericLoginCredentials.field_r[var11Lifetime2] = DelayedPacket.createBlurredSilhouetteSprite(ArchiveNetworkRequest.packSelectorIcons[var11Lifetime2], 20, -17912);
           }
           IntrusiveHashIterator.field_f = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime3 = 0; var11Lifetime3 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime3++) {
-            IntrusiveHashIterator.field_f[var11Lifetime3] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), ArchiveNetworkRequest.packSelectorIcons[var11Lifetime3], 14, 16777215);
+            IntrusiveHashIterator.field_f[var11Lifetime3] = PlayerInputBatch.createBlurredSilhouetteSprite(LevelResultSubmission.bitwiseXor(param3, -29147), ArchiveNetworkRequest.packSelectorIcons[var11Lifetime3], 14, 16777215);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

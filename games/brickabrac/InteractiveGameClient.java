@@ -76,7 +76,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = ByteArrayPoolHelpers.getActiveCanvas((byte) 0);
         if (TextFieldRenderer.c((byte) -84)) {
-          TableNameEntry.a((byte) 68, var2, LegacyUtf8Decoder.a((byte) -81));
+          TableNameEntry.a((byte) 68, var2, LegacyUtf8Decoder.hasFrameFocusOrFullscreen((byte) -81));
           return;
         }
         if (!CalendarRankingHelpers.field_f) {
@@ -132,7 +132,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
             SocialListResponseHelpers.incomingPacketLengths[9] = -1;
             SocialListResponseHelpers.incomingPacketLengths[10] = -1;
             LevelResultWireHelpers.field_d = new Vector();
-            KeyboardInput.a((GameLayerController) (this), 0);
+            KeyboardInput.insertGameLayerController((GameLayerController) (this), 0);
           } catch (RuntimeException runtimeException) {
             throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sa.HB(" + obfuscationGuard + ',' + (lifecycle != null ? "{...}" : "null") + ')');
           }
@@ -222,7 +222,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (EmailConfirmationValidator.f(21651)) {
+              if (EmailConfirmationValidator.isTextChoiceDialogOpen(21651)) {
                 if (!LoginMethodPreference.b(param0 ^ -16)) {
                   var3 = RadialSelectorWidget.pollTextChoiceDialog(0);
                   if (1 == var3) {
@@ -461,7 +461,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
             }
           } while (var4 == 0);
         }
-        HuffmanCodec.a(14114);
+        HuffmanCodec.writeReflectionCheckResponses(14114);
         OutgoingPacketHelpers.flushGamePackets((byte) 110, 0);
         if (AppletSettingsUiHelpers.a(false)) {
           var2 = this.o(-105);

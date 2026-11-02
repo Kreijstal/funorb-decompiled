@@ -101,9 +101,9 @@ final class TableQuickChatHelpers {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_b = null;
-        if (param0 != -27956) {
+        if (obfuscationGuard != -27956) {
           field_c = (RgbSprite[]) null;
         }
         field_d = null;

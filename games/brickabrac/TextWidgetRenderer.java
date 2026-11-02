@@ -279,8 +279,8 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               stackIn_5_3 = var13.lines[1 + var7].top;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            MovingBody.a((byte) 125, widget.width + parentX + widget.x, widget.x + parentX, parentY + widget.y, widget.height + parentY + widget.y);
-            PopupWidgetLayer.widgetTheme.a(this.caretColor, var10, var11, 91, var12, var10);
+            MovingBody.pushRasterIntersectClip((byte) 125, widget.width + parentX + widget.x, widget.x + parentX, parentY + widget.y, widget.height + parentY + widget.y);
+            PopupWidgetLayer.widgetTheme.drawLine(this.caretColor, var10, var11, 91, var12, var10);
             RasterStackHelpers.popRaster(-94);
           }
           if (obfuscationGuard <= 118) {
@@ -634,7 +634,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
             }
             var10 = var18.findLineIndex(var8, true);
             var11 = var18.findLineIndex(var9, true);
-            MovingBody.a((byte) 127, widget.x + parentX + widget.width, parentX + widget.x, widget.y + parentY, widget.height + (widget.y + parentY));
+            MovingBody.pushRasterIntersectClip((byte) 127, widget.x + parentX + widget.width, parentX + widget.x, widget.y + parentY, widget.height + (widget.y + parentY));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.lines[var12];
               if (var10 != var12) {
@@ -653,7 +653,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 }
               }
               var15 = stackIn_21_0;
-              PopupWidgetLayer.widgetTheme.a(var13.top + this.topInset + (widget.y + (parentY + widget.textOffsetY)), this.selectionArgb >>> 24, this.selectionArgb, this.computeTextX(var14, widget, 65263, parentX), var13.bottom, (byte) 55, var15 - var14);
+              PopupWidgetLayer.widgetTheme.fillRectangleAlpha(var13.top + this.topInset + (widget.y + (parentY + widget.textOffsetY)), this.selectionArgb >>> 24, this.selectionArgb, this.computeTextX(var14, widget, 65263, parentX), var13.bottom, (byte) 55, var15 - var14);
             }
             RasterStackHelpers.popRaster(-98);
             return;
@@ -1358,7 +1358,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
         int var12Lifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          MovingBody.a((byte) 81, widget.width + widget.x + parentX, parentX + widget.x, widget.y + parentY, parentY + widget.y + widget.height);
+          MovingBody.pushRasterIntersectClip((byte) 81, widget.width + widget.x + parentX, parentX + widget.x, widget.y + parentY, parentY + widget.y + widget.height);
           if (obfuscationGuard >= -45) {
             return;
           }
@@ -1477,10 +1477,10 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_p = null;
         quarterSineQ16 = null;
-        if (param0 != 31292) {
+        if (obfuscationGuard != 31292) {
           field_b = (UiComponent) null;
         }
         underwaterBackgroundColors = null;

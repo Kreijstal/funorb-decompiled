@@ -27,14 +27,14 @@ abstract class GameScreen {
         this.screenId = screenId;
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_g = null;
         field_b = null;
         field_d = null;
         friendsListPane = null;
         awaitingLoginPreludeReply = null;
         field_e = null;
-        if (param0 != -91) {
+        if (obfuscationGuard != -91) {
           GameScreen.getOrRequestRankings(119, 39, -126, (byte) 48);
           return;
         }
@@ -63,7 +63,7 @@ abstract class GameScreen {
           MultiplayerExitScreen.sendRankingsRequest(-21167, newRequest, opcode);
           return newRequest;
         }
-        GameScreen.c((byte) -109);
+        GameScreen.clearSharedReferences((byte) -109);
         while (pendingRequest != null) {
           if (rankingKind == pendingRequest.rankingKind) {
             return pendingRequest;

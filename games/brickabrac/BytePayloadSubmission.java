@@ -43,9 +43,9 @@ final class BytePayloadSubmission extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         smallRosetteSprites = null;
-        int var1 = -16 % ((62 - param0) / 48);
+        int var1 = -16 % ((62 - obfuscationGuard) / 48);
     }
 
     final static void initializeBackgroundResources(ResourceArchive musicSampleArchive, SoundCache soundCache, ResourceArchive musicTrackArchive, ResourceArchive sceneSpriteArchive, ResourceArchive soundEffectArchive, int obfuscationGuard, ResourceArchive musicPatchArchive) {
@@ -165,18 +165,18 @@ final class BytePayloadSubmission extends IntrusiveNode {
     final static boolean a(int param0, int param1, int param2) {
         int var3 = null != IncomingPacketHelpers.pendingLobbyGame ? 1 : 0;
         if (MeshAttributeRecord.currentKeyCode == 9 &&
-          QuickChatHelpDialog.a(QuickChatHelpDialog.field_Zb, -3, Under13RegistrationNoticePanel.field_K, ResourceRequest.field_z, TextFieldRenderer.field_x)) {
+          QuickChatHelpDialog.canUseQuickChat(QuickChatHelpDialog.field_Zb, -3, Under13RegistrationNoticePanel.field_K, ResourceRequest.field_z, TextFieldRenderer.field_x)) {
           if (TextFieldRenderer.field_x != 2 &&
             var3 != 0) {
             return false;
           }
-          return QuickChatParameterType.a(ResourceRequest.field_z, QuickChatHelpDialog.field_Zb, TextFieldRenderer.field_x, false, Under13RegistrationNoticePanel.field_K);
+          return QuickChatParameterType.openQuickChatForRecipient(ResourceRequest.field_z, QuickChatHelpDialog.field_Zb, TextFieldRenderer.field_x, false, Under13RegistrationNoticePanel.field_K);
         }
         if (10 == MeshAttributeRecord.currentKeyCode) {
           if (var3 != 0) {
             return false;
           }
-          LevelPackLoader.a(4252);
+          LevelPackLoader.resetQuickChatToDefaultMenu(4252);
           return true;
         }
         if (MeshAttributeRecord.currentKeyCode == param1) {
@@ -200,9 +200,9 @@ final class BytePayloadSubmission extends IntrusiveNode {
         return false;
     }
 
-    final static void a(int param0) {
+    final static void showAccountIntroductionPanel(int obfuscationGuard) {
         TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 126, new AccountIntroductionPanel());
-        int var1 = 48 % ((param0 - 32) / 62);
+        int var1 = 48 % ((obfuscationGuard - 32) / 62);
     }
 
     private BytePayloadSubmission() throws Throwable {

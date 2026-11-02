@@ -10,11 +10,11 @@ final class MeshAttributeRecord {
     static String field_d;
     static boolean field_g;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         chocolateCharacterSprite = null;
         field_d = null;
         musicCrossfadeStream = null;
-        if (param0 != -9669) {
+        if (obfuscationGuard != -9669) {
           field_d = (String) null;
           awaitingLoginSeed = null;
           return;

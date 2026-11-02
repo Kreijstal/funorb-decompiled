@@ -18,31 +18,31 @@ final class JungleBackground extends BackgroundScene {
           if (BrickABrac.field_J) {
             var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
             if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-              ArchiveFetchClient.a(var7, WidgetLayerBootstrap.jungleFarSprite, colorIndex, 1, 0, true);
+              ArchiveFetchClient.renderBackdropSurface(var7, WidgetLayerBootstrap.jungleFarSprite, colorIndex, 1, 0, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, SocialListResponseHelpers.jungleNearSprite);
+            ProxyAuthenticationRequiredException.drawParallaxLayers(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, SocialListResponseHelpers.jungleNearSprite);
           }
         } else {
           var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            ArchiveFetchClient.a(var7, WidgetLayerBootstrap.jungleFarSprite, colorIndex, 1, 0, true);
+            ArchiveFetchClient.renderBackdropSurface(var7, WidgetLayerBootstrap.jungleFarSprite, colorIndex, 1, 0, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, SocialListResponseHelpers.jungleNearSprite);
+          ProxyAuthenticationRequiredException.drawParallaxLayers(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, SocialListResponseHelpers.jungleNearSprite);
         }
     }
 
-    final RgbSprite[] a(byte param0, int param1) {
-        int var3 = -53 / ((65 - param0) / 49);
-        return DualLinkNode.jungleCapsSprites[-1 + param1];
+    final RgbSprite[] getPaddleCapSprites(byte obfuscationGuard, int scaleDivisor) {
+        int var3 = -53 / ((65 - obfuscationGuard) / 49);
+        return DualLinkNode.jungleCapsSprites[-1 + scaleDivisor];
     }
 
-    final RgbSprite a(boolean param0, int param1) {
-        if (!param0) {
+    final RgbSprite getPaddleCentreSprite(boolean obfuscationGuard, int scaleDivisor) {
+        if (!obfuscationGuard) {
           this.hasSprites((byte) -1);
         }
-        return StatefulWidgetRenderer.jungleCentreSprites[param1 - 1];
+        return StatefulWidgetRenderer.jungleCentreSprites[scaleDivisor - 1];
     }
 
     final static void a(int param0, LobbyGame param1, boolean param2, boolean param3) {
@@ -252,7 +252,7 @@ final class JungleBackground extends BackgroundScene {
                 }
               }
               if (decompiledFrameCompleted4) {
-                CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8] = (byte)LevelSelectScreen.d((int) CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8], 1 << var7 % 8);
+                CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8] = (byte)LevelSelectScreen.bitwiseOr((int) CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8], 1 << var7 % 8);
               }
             }
             stackIn_63_0 = (param2) ? -1 : 0;
@@ -281,7 +281,7 @@ final class JungleBackground extends BackgroundScene {
                 } else {
                   if (var6Lifetime1 == 0) {
                     if (var7 != -1) {
-                      CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8] = (byte)LevelResultSubmission.a((int) CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8], 1 << IntrusiveHashIterator.a(var7, 7));
+                      CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8] = (byte)LevelResultSubmission.bitwiseXor((int) CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8], 1 << IntrusiveHashIterator.bitwiseAnd(var7, 7));
                     } else {
                       var9 = 0;
                       while (!(var9 >= CalendarMatchmakingState.matchmakingChoiceMask.length)) {
@@ -563,11 +563,11 @@ final class JungleBackground extends BackgroundScene {
                     if (-1 == var9) {
                       var18 = var6Lifetime2;
                       while (-1 + (var6Lifetime2 + var27.length) > var18) {
-                        PowerUpWarning.matchmakingSettingMask[var18 / 8] = (byte)IntrusiveHashIterator.a((int) PowerUpWarning.matchmakingSettingMask[var18 / 8], ~(1 << IntrusiveHashIterator.a(7, var18)));
+                        PowerUpWarning.matchmakingSettingMask[var18 / 8] = (byte)IntrusiveHashIterator.bitwiseAnd((int) PowerUpWarning.matchmakingSettingMask[var18 / 8], ~(1 << IntrusiveHashIterator.bitwiseAnd(7, var18)));
                         var18++;
                       }
                     } else {
-                      PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] = (byte)LevelResultSubmission.a((int) PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8], 1 << IntrusiveHashIterator.a(7, var6Lifetime2 + var9));
+                      PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] = (byte)LevelResultSubmission.bitwiseXor((int) PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8], 1 << IntrusiveHashIterator.bitwiseAnd(7, var6Lifetime2 + var9));
                     }
                     decompiledFrameRemainder1 = false;
                   }
@@ -581,7 +581,7 @@ final class JungleBackground extends BackgroundScene {
                 }
                 if (param2 &&
                   var16Lifetime1 != 0) {
-                  PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] = (byte)IntrusiveHashIterator.a((int) PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8], ~(1 << IntrusiveHashIterator.a(var9 + var6Lifetime2, 7)));
+                  PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] = (byte)IntrusiveHashIterator.bitwiseAnd((int) PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8], ~(1 << IntrusiveHashIterator.bitwiseAnd(var9 + var6Lifetime2, 7)));
                 }
                 if (var9 >= 0 &&
                   var17.hovered) {
@@ -856,11 +856,11 @@ final class JungleBackground extends BackgroundScene {
         }
     }
 
-    final RgbSprite[] a(int param0, boolean param1) {
-        if (!param1) {
+    final RgbSprite[] getPaddleSegmentSprites(int scaleDivisor, boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_t = (String) null;
         }
-        return DualLinkIterator.jungleSegsSprites[param0 - 1];
+        return DualLinkIterator.jungleSegsSprites[scaleDivisor - 1];
     }
 
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
@@ -878,19 +878,19 @@ final class JungleBackground extends BackgroundScene {
         var5 = 107 / ((obfuscationGuard + 28) / 43);
     }
 
-    final RgbSprite c(byte param0) {
-        if (param0 > -74) {
+    final RgbSprite getCharacterSprite(byte obfuscationGuard) {
+        if (obfuscationGuard > -74) {
           this.hasSprites((byte) -112);
         }
         return WidgetTextLayout.jungleCharacterSprite;
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_t = null;
         field_u = null;
         fullPaddleFlameSprites = (RgbSprite[][]) null;
         backgroundSurfacePool960 = null;
-        if (param0) {
+        if (obfuscationGuard) {
           fullPaddleFlameSprites = (RgbSprite[][]) null;
         }
         fireworkRandom = null;
@@ -903,18 +903,18 @@ final class JungleBackground extends BackgroundScene {
           if (BrickABrac.field_J) {
             var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -121);
             if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-              ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
+              ArchiveFetchClient.renderBackdropSurface(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            ProxyAuthenticationRequiredException.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
+            ProxyAuthenticationRequiredException.drawParallaxLayers(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
           }
         } else {
           var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -121);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
+            ArchiveFetchClient.renderBackdropSurface(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ProxyAuthenticationRequiredException.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
+          ProxyAuthenticationRequiredException.drawParallaxLayers(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
         }
         if (obfuscationGuard >= -84) {
           field_t = (String) null;

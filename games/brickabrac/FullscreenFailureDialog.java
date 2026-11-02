@@ -14,7 +14,7 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
     static String[] field_eb;
     static String field_fb;
 
-    final static IndexedSprite a(IndexedSprite param0, byte param1, int[] param2) {
+    final static IndexedSprite createRepalettedSprite(IndexedSprite sprite, byte obfuscationGuard, int[] palette) {
         IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
         IndexedSprite stackIn_2_0 = null;
@@ -26,19 +26,19 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= -57) {
+          if (obfuscationGuard >= -57) {
             stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var3 = new IndexedSprite(0, 0, 0);
-          var3.indices = param0.indices;
-          var3.height = param0.height;
-          var3.width = param0.width;
-          var3.canvasHeight = param0.canvasHeight;
-          var3.offsetY = param0.offsetY;
-          var3.palette = param2;
-          var3.canvasWidth = param0.canvasWidth;
-          var3.offsetX = param0.offsetX;
+          var3.indices = sprite.indices;
+          var3.height = sprite.height;
+          var3.width = sprite.width;
+          var3.canvasHeight = sprite.canvasHeight;
+          var3.offsetY = sprite.offsetY;
+          var3.palette = palette;
+          var3.canvasWidth = sprite.canvasWidth;
+          var3.offsetX = sprite.offsetX;
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -46,13 +46,13 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
           var3_ref = decompiledCaughtException;
           stackIn_7_0 = var3_ref;
           stackIn_7_1 = new StringBuilder().append("ek.L(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(',');
+          if (palette == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -97,7 +97,7 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
           var4.x = 0;
           var4.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(QuickChatMenu.field_Yb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, true);
-          this.dismissButton = this.a(LevelSequence.field_a, 101, (WidgetListener) (this));
+          this.dismissButton = this.addButton(LevelSequence.field_a, 101, (WidgetListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +126,7 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         this.visible = visible ? true : false;
     }
 
-    private final FocusableWidget a(String param0, int param1, WidgetListener param2) {
+    private final FocusableWidget addButton(String caption, int obfuscationGuard, WidgetListener listener) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -138,14 +138,14 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new FocusableWidget(param0, param2);
+          var4 = new FocusableWidget(caption, listener);
           var4.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
           var5 = -6 + this.height;
           this.height = this.height + 38;
           var4.setBounds(30, 15, var5, (byte) -119, -30 + this.width);
           this.addChild(var4, true);
           this.relayout(1);
-          if (param1 < 23) {
+          if (obfuscationGuard < 23) {
             keyChangeReadIndex = -75;
           }
           stackIn_3_0 = var4;
@@ -155,13 +155,13 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
           var4_ref = decompiledCaughtException;
           stackIn_6_0 = var4_ref;
           stackIn_6_1 = new StringBuilder().append("ek.F(");
-          if (param0 == null) {
+          if (caption == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(',');
+          if (listener == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -170,13 +170,13 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_gb = null;
         field_fb = null;
         sortedFaceIds = null;
         field_hb = null;
         field_eb = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_gb = (String) null;
         }
     }
@@ -189,7 +189,7 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -22) {
-            FullscreenFailureDialog.c(false);
+            FullscreenFailureDialog.clearSharedReferences(false);
           }
           if (widget != this.dismissButton) {
             return;

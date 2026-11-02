@@ -16,9 +16,9 @@ final class Paddle extends RectangleBody {
     int aftertouchTicks;
     static int textChoiceOuterPaddingY;
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_C = null;
-        int var1 = -6 / ((param0 + 5) / 47);
+        int var1 = -6 / ((obfuscationGuard + 5) / 47);
         field_G = null;
         projectedVertexDepth = null;
     }
@@ -95,7 +95,7 @@ final class Paddle extends RectangleBody {
             Widget.writeAbuseReport(var3, param0, CircleBody.reportAbuseDialog.reportTargetId, 1, var4 != 0, CircleBody.reportAbuseDialog.getReportedName(107));
           }
           CircleBody.reportAbuseDialog = null;
-          ActivityIndicatorWidget.f((byte) -124);
+          ActivityIndicatorWidget.closeContextActions((byte) -124);
         }
         if (param2 > 69) {
           return;

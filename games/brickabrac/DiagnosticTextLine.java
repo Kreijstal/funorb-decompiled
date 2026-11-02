@@ -33,7 +33,7 @@ final class DiagnosticTextLine extends IntrusiveNode {
         try {
           try {
             if (param2 != 14209) {
-              DiagnosticTextLine.a(53);
+              DiagnosticTextLine.clearSharedReferences(53);
             }
             var4 = param0.getGraphics();
             BallPulseEffect.framebuffer.draw(param3, param1, -17260, var4);
@@ -59,10 +59,10 @@ final class DiagnosticTextLine extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_m = null;
         field_j = null;
-        if (param0 == 30850) {
+        if (obfuscationGuard == 30850) {
           awaitingValidationReply = null;
           field_i = null;
           return;

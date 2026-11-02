@@ -15,10 +15,10 @@ abstract class SpriteGeometry extends DualLinkNode {
     static String field_w;
     static int field_y;
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_B = null;
         field_u = null;
-        if (param0 != 2) {
+        if (obfuscationGuard != 2) {
           String var2 = (String) null;
           SpriteGeometry.a(9, (UiComponent) null, (ScrollPane) null, (int[]) null, (String) null, 53, (byte) -45, 67L, (String) null);
         }
@@ -49,7 +49,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         }
     }
 
-    final static void a(RgbSprite param0, int param1, int param2, int param3, int param4, int param5, RgbSprite param6, int param7, RgbSprite param8, int param9, int param10) {
+    final static void drawParallaxLayers(RgbSprite param0, int param1, int param2, int param3, int param4, int param5, RgbSprite param6, int param7, RgbSprite param8, int param9, int param10) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -105,7 +105,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         }
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] createBeveledFrameSprites(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
         RgbSprite[] var10;

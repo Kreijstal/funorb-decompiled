@@ -13,8 +13,8 @@ class FocusableWidget extends Widget {
     static int recentRenderRate;
     boolean enabled;
 
-    public static void g(int param0) {
-        if (param0 > -22) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard > -22) {
           return;
         }
         field_G = null;
@@ -63,7 +63,7 @@ class FocusableWidget extends Widget {
         this.enabled = true;
     }
 
-    final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int indent, Hashtable visited, int obfuscationGuard, StringBuilder builder) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -75,32 +75,32 @@ class FocusableWidget extends Widget {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param3, 1595637992, param0, param1)) {
-            this.a(param1, param0, 0, param3);
+          if (this.beginDebugEntry(builder, 1595637992, indent, visited)) {
+            this.appendDebugSummary(visited, indent, 0, builder);
             if (this.active) {
-              discarded$2 = param3.append(" active");
+              discarded$2 = builder.append(" active");
             }
             if (!this.enabled) {
-              discarded$3 = param3.append(" disabled");
+              discarded$3 = builder.append(" disabled");
             }
           }
-          if (param2 != 24) {
+          if (obfuscationGuard != 24) {
             this.focused = true;
           }
-          stackIn_10_0 = (StringBuilder) (param3);
+          stackIn_10_0 = (StringBuilder) (builder);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("d.UA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("d.UA(").append(indent).append(',');
+          if (visited == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(',');
+          if (builder == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";

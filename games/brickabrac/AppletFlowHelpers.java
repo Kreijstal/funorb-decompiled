@@ -101,11 +101,11 @@ final class AppletFlowHelpers {
         BufferedSocket.a(21862);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_h = null;
         field_f = null;
         field_a = null;
-        if (param0 == 121) {
+        if (obfuscationGuard == 121) {
           field_e = null;
           field_g = null;
           field_c = null;

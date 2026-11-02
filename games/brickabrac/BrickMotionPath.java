@@ -9,10 +9,10 @@ final class BrickMotionPath extends MovingBody {
     static String field_s;
     int durationTicks;
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_r = null;
-        if (!param0) {
-          BrickMotionPath.b(true);
+        if (!obfuscationGuard) {
+          BrickMotionPath.clearSharedReferences(true);
           field_s = null;
           return;
         }

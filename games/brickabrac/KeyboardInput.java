@@ -37,7 +37,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             stackIn_9_0 = GamePresentationHelpers.formatIndexedText(MusicVoice.field_C, new String[]{name}, (byte) 103);
             return stackIn_9_0;
           }
-          ToggleButtonWidget.friendEntries.a((byte) 107, entry);
+          ToggleButtonWidget.friendEntries.startIterationAt((byte) 107, entry);
           while (true) {
             laterFriend = (SocialListEntry) (ToggleButtonWidget.friendEntries.next((byte) 116));
             if (laterFriend != null) {
@@ -156,29 +156,29 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             Rasterizer2D.saveClip(QuickChatPhraseRegistry.nineSliceClipScratch);
             if (param1[0] != null) {
               Rasterizer2D.intersectClip(param0, param6, var17, var19);
-              param1[0].b(param0, param6, param5);
+              param1[0].drawAlphaBlended(param0, param6, param5);
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.nineSliceClipScratch);
             }
             if (null != param1[2]) {
               Rasterizer2D.intersectClip(var18, param6, var11, var19);
-              param1[2].b(var14, param6, param5);
+              param1[2].drawAlphaBlended(var14, param6, param5);
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.nineSliceClipScratch);
             }
             if (null != param1[param3]) {
               Rasterizer2D.intersectClip(param0, var20, var17, var12);
-              param1[6].b(param0, var16, param5);
+              param1[6].drawAlphaBlended(param0, var16, param5);
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.nineSliceClipScratch);
             }
             if (param1[8] != null) {
               Rasterizer2D.intersectClip(var18, var20, var11, var12);
-              param1[8].b(var14, var16, param5);
+              param1[8].drawAlphaBlended(var14, var16, param5);
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.nineSliceClipScratch);
             }
             if (param1[1] != null &&
               param1[1].canvasWidth != 0) {
               Rasterizer2D.intersectClip(var17, param6, var18, var19);
               for (var21 = var13; var14 > var21; var21 = var21 + param1[1].canvasWidth) {
-                param1[1].b(var21, param6, param5);
+                param1[1].drawAlphaBlended(var21, param6, param5);
               }
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.nineSliceClipScratch);
             }
@@ -186,7 +186,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               param1[7].canvasWidth != 0) {
               Rasterizer2D.intersectClip(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param1[7].canvasWidth) {
-                param1[7].b(var21Lifetime1, var16, param5);
+                param1[7].drawAlphaBlended(var21Lifetime1, var16, param5);
               }
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.nineSliceClipScratch);
             }
@@ -194,7 +194,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               param1[3].canvasHeight != 0) {
               Rasterizer2D.intersectClip(param0, var19, var17, var20);
               for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param1[3].canvasHeight) {
-                param1[3].b(param0, var21Lifetime2, param5);
+                param1[3].drawAlphaBlended(param0, var21Lifetime2, param5);
               }
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.nineSliceClipScratch);
             }
@@ -202,7 +202,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               param1[5].canvasHeight != 0) {
               Rasterizer2D.intersectClip(var18, var19, var11, var20);
               for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param1[5].canvasHeight) {
-                param1[5].b(var14, var21Lifetime3, param5);
+                param1[5].drawAlphaBlended(var14, var21Lifetime3, param5);
               }
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.nineSliceClipScratch);
             }
@@ -212,7 +212,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               Rasterizer2D.intersectClip(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param1[4].canvasHeight) {
                 for (var22 = var13; var22 < var14; var22 = var22 + param1[4].canvasWidth) {
-                  param1[4].b(var22, var21Lifetime4, param5);
+                  param1[4].drawAlphaBlended(var22, var21Lifetime4, param5);
                 }
               }
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.nineSliceClipScratch);
@@ -338,25 +338,25 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         }
     }
 
-    final static void a(GameLayerController param0, int param1) {
+    final static void insertGameLayerController(GameLayerController controller, int index) {
         try {
-          LevelResultWireHelpers.field_d.insertElementAt(param0, param1);
+          LevelResultWireHelpers.field_d.insertElementAt(controller, index);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "op.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "op.B(" + (controller != null ? "{...}" : "null") + ',' + index + ')');
         }
     }
 
     final static String a(boolean param0, int param1) {
         if (param0) {
           GameLayerController var3 = (GameLayerController) null;
-          KeyboardInput.a((GameLayerController) null, -56);
+          KeyboardInput.insertGameLayerController((GameLayerController) null, -56);
         }
         return GamePresentationHelpers.formatIndexedText(FramedMenuScreen.field_t, new String[]{(param1 >= 10 ? "" : "0") + Integer.toString(param1)}, (byte) 103).toLowerCase();
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_b = null;
-        if (param0 != -42) {
+        if (obfuscationGuard != -42) {
           hasNonnegativeResult = false;
         }
     }

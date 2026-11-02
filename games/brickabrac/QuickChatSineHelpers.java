@@ -18,11 +18,11 @@ final class QuickChatSineHelpers {
         return MeshRasterState.sine2048Q16[angle & 2047];
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_c = null;
         field_b = null;
-        if (param0 != 8070) {
-          QuickChatSineHelpers.a(124);
+        if (obfuscationGuard != 8070) {
+          QuickChatSineHelpers.clearSharedReferences(124);
           field_a = null;
           return;
         }

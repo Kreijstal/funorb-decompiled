@@ -70,9 +70,9 @@ class DualLinkNode extends IntrusiveNode {
           drawY = drawY + (font.descent + 4);
           for (lifeIndex = 0; lifeIndex < -1 + board.lives; lifeIndex++) {
             if (lifeIndex < -2 + board.lives) {
-              SocialListResponseHelpers.field_l.a(drawX, drawY, 196);
+              SocialListResponseHelpers.field_l.drawDimmed(drawX, drawY, 196);
             } else {
-              SocialListResponseHelpers.field_l.e(SocialListResponseHelpers.field_l.canvasWidth / 2 + drawX, drawY + SocialListResponseHelpers.field_l.canvasHeight / 2, 0, 4480 + (BrickABrac.cosine8192(2048, 200 * MembershipBenefitsScreen.clientTick) * 384 >> 16));
+              SocialListResponseHelpers.field_l.drawRotatedAboutCenter(SocialListResponseHelpers.field_l.canvasWidth / 2 + drawX, drawY + SocialListResponseHelpers.field_l.canvasHeight / 2, 0, 4480 + (BrickABrac.cosine8192(2048, 200 * MembershipBenefitsScreen.clientTick) * 384 >> 16));
             }
             drawX = drawX + SocialListResponseHelpers.field_l.width / 2;
             if (x + width < drawX + SocialListResponseHelpers.field_l.width) {
@@ -110,10 +110,10 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         quickChatRecipient = null;
         field_o = null;
-        if (param0 != -2) {
+        if (obfuscationGuard != -2) {
           quickChatRecipient = (String) null;
         }
         field_m = null;

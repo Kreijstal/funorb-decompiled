@@ -95,13 +95,13 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         this.achievementMask = SecondaryHashTable.earnedAchievementMask;
     }
 
-    public static void h(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_G = null;
         field_J = null;
         field_H = null;
         field_K = null;
         field_F = (int[][]) null;
-        int var1 = 121 / ((param0 + 59) / 32);
+        int var1 = 121 / ((obfuscationGuard + 59) / 32);
         field_I = null;
     }
 

@@ -358,9 +358,9 @@ final class MusicCrossfadeStream extends AudioStream {
         return 2;
     }
 
-    public static void c(int param0) {
-        if (param0 > -18) {
-          MusicCrossfadeStream.c(-21);
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard > -18) {
+          MusicCrossfadeStream.clearSharedReferences(-21);
         }
         field_B = null;
         nameEntryPopup = null;

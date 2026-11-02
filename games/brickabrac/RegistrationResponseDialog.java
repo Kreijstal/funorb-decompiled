@@ -7,14 +7,14 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
     static int tableSubmissionSequence;
     private boolean ineligibleResponse;
 
-    final static void a(int param0, RasterCacheSurface param1, int param2, RgbSprite param3, int param4, boolean param5) {
+    final static void renderBackdropSurface(int param0, RasterCacheSurface param1, int param2, RgbSprite param3, int param4, boolean param5) {
         try {
           if (param5) {
             tableSubmissionSequence = -58;
           }
           IndexedSpriteGeometry.pushSpriteRaster(-77, param1.sprite);
           Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, FontRequestHelpers.farmBackgroundColors[param0], 22953);
-          param3.b((-param3.canvasWidth + param1.width) / 2 - 80 / param2, -param3.canvasHeight + (param1.height + param4 - 201 / param2), 41, 110);
+          param3.drawWithVerticalAlphaGradient((-param3.canvasWidth + param1.width) / 2 - 80 / param2, -param3.canvasHeight + (param1.height + param4 - 201 / param2), 41, 110);
           RasterStackHelpers.popRaster(-107);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -57,7 +57,7 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
     }
 
     final void showIneligibleResponse(boolean skipIneligibleAction) {
-        this.handleRegistrationResponse(-7, AchievementIcon.a(248, -85, CircleBody.field_q), skipIneligibleAction);
+        this.handleRegistrationResponse(-7, AchievementIcon.createAccountResponseWithMessage(248, -85, CircleBody.field_q), skipIneligibleAction);
     }
 
     public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
@@ -76,8 +76,8 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
         }
     }
 
-    static long a(long param0, long param1) {
-        return param0 ^ param1;
+    static long bitwiseXor(long left, long right) {
+        return left ^ right;
     }
 
     private final void handleRegistrationResponse(int obfuscationGuard, AccountResponse response, boolean skipIneligibleAction) {

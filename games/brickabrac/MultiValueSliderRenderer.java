@@ -15,12 +15,12 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
     static int field_d;
     private int trackColor;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         jungleMidSprite = null;
         fullPaddleCapSprites = null;
         fullBoardMaskSprite = null;
         field_k = null;
-        if (param0 != -51) {
+        if (obfuscationGuard != -51) {
           field_k = (String) null;
         }
     }
@@ -54,10 +54,10 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
           var9 = var12.trackY + widget.y + parentY;
           Rasterizer2D.drawLine(var8, var9, var7 + var8, var9, this.trackColor);
           for (var10 = var12.getValueCount(false) - 1; var10 >= 0; var10--) {
-            Rasterizer2D.f(var8 + var12.getValue(var10, false) * var7 / var12.getMaximumValue(-119), var9, this.markerRadius, this.markerColor);
+            Rasterizer2D.fillCircle(var8 + var12.getValue(var10, false) * var7 / var12.getMaximumValue(-119), var9, this.markerRadius, this.markerColor);
           }
           if (callbackGuard != -20618) {
-            MultiValueSliderRenderer.a(46);
+            MultiValueSliderRenderer.clearSharedReferences(46);
           }
           if (this.font != null) {
             this.font.drawCentered(var12.text, var7 / 2 + var8, var9 + this.font.baselineHeight + var12.trackY, this.textPaint, this.shadowPaint);
@@ -85,7 +85,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         return LoadingProgressDialog.field_cb;
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void drawLogoAnimation(boolean flag, int centerY, int centerX) {
         int var3;
         int var4;
         int var5;
@@ -102,8 +102,8 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         if (0 > MatchResultScreen.logoAnimationTicks) {
           return;
         }
-        var3 = param2 - 135;
-        var4 = param1 - 35;
+        var3 = centerX - 135;
+        var4 = centerY - 35;
         var5 = 256;
         if (MatchResultScreen.logoAnimationTicks < 75) {
           var5 = (MatchResultScreen.logoAnimationTicks << 8) / 75;
@@ -113,7 +113,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         }
         IndexedSpriteGeometry.pushSpriteRaster(-90, LoginMethodPreference.field_b);
         MeshRasterState.syncRasterClip();
-        if (!param0) {
+        if (!flag) {
           Rasterizer2D.clear();
           LogoRenderHelpers.drawLogoPieces(-120);
           if (256 > var5) {
@@ -123,7 +123,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
           if (MatchResultScreen.logoAnimationTicks < 150) {
             LoginMethodPreference.field_b.drawHalfSize(var3, var4);
           } else {
-            LevelCompleteScreen.field_I.b(var3 + 15, 10 + var4, var5);
+            LevelCompleteScreen.field_I.drawAlphaBlended(var3 + 15, 10 + var4, var5);
           }
           var6 = -125 + MatchResultScreen.logoAnimationTicks;
           if (var6 > 0 &&
@@ -131,13 +131,13 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
             if (20 <= var6) {
               if (30 <= var6) {
                 var7 = (-var6 + 50) * 256 / 20;
-                JavaRandomHelpers.field_b.f(var3, var4, var7);
+                JavaRandomHelpers.field_b.drawAdditive(var3, var4, var7);
               } else {
-                JavaRandomHelpers.field_b.f(var3, var4, 256);
+                JavaRandomHelpers.field_b.drawAdditive(var3, var4, 256);
               }
             } else {
               var7 = var6 * 256 / 20;
-              JavaRandomHelpers.field_b.f(var3, var4, var7);
+              JavaRandomHelpers.field_b.drawAdditive(var3, var4, var7);
             }
           }
           var6Lifetime3 = -140 + MatchResultScreen.logoAnimationTicks;
@@ -146,11 +146,11 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
             if (var6Lifetime3 < 20) {
               var7Lifetime3 = 256 * var6Lifetime3 / 20;
             }
-            BitPacketBuffer.field_t.b(15 + var3, 10 + var4, var5 * var7Lifetime3 >> 8);
+            BitPacketBuffer.field_t.drawAlphaBlended(15 + var3, 10 + var4, var5 * var7Lifetime3 >> 8);
           }
           return;
         }
-        MultiValueSliderRenderer.a(-70);
+        MultiValueSliderRenderer.clearSharedReferences(-70);
         Rasterizer2D.clear();
         LogoRenderHelpers.drawLogoPieces(-120);
         if (256 > var5) {
@@ -160,20 +160,20 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         if (MatchResultScreen.logoAnimationTicks < 150) {
           LoginMethodPreference.field_b.drawHalfSize(var3, var4);
         } else {
-          LevelCompleteScreen.field_I.b(var3 + 15, 10 + var4, var5);
+          LevelCompleteScreen.field_I.drawAlphaBlended(var3 + 15, 10 + var4, var5);
         }
         var6Lifetime1 = -125 + MatchResultScreen.logoAnimationTicks;
         if (var6Lifetime1 > 0 &&
           var6Lifetime1 < 50) {
           if (20 > var6Lifetime1) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
-            JavaRandomHelpers.field_b.f(var3, var4, var7Lifetime1);
+            JavaRandomHelpers.field_b.drawAdditive(var3, var4, var7Lifetime1);
           } else {
             if (30 > var6Lifetime1) {
-              JavaRandomHelpers.field_b.f(var3, var4, 256);
+              JavaRandomHelpers.field_b.drawAdditive(var3, var4, 256);
             } else {
               var7Lifetime1 = (-var6Lifetime1 + 50) * 256 / 20;
-              JavaRandomHelpers.field_b.f(var3, var4, var7Lifetime1);
+              JavaRandomHelpers.field_b.drawAdditive(var3, var4, var7Lifetime1);
             }
           }
         }
@@ -183,7 +183,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
           if (var6Lifetime2 < 20) {
             var7Lifetime2 = 256 * var6Lifetime2 / 20;
           }
-          BitPacketBuffer.field_t.b(15 + var3, 10 + var4, var5 * var7Lifetime2 >> 8);
+          BitPacketBuffer.field_t.drawAlphaBlended(15 + var3, 10 + var4, var5 * var7Lifetime2 >> 8);
         }
         return;
     }
@@ -199,7 +199,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         CheckboxWidgetRenderer.a(17, param0);
     }
 
-    final static void a(int param0, int param1, int param2, RgbSprite param3, RgbSprite param4, int param5, int param6, RgbSprite param7, int param8, int param9) {
+    final static void drawParallaxLayers(int param0, int param1, int param2, RgbSprite param3, RgbSprite param4, int param5, int param6, RgbSprite param7, int param8, int param9) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -214,7 +214,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
           param7.drawTransparent((-param7.canvasWidth + param1) / 2 + (param2 + (10 * param8 >> 16)), -param7.canvasHeight + 480 + (param9 + param5));
           param3.drawTransparent((20 * param8 >> 16) + (param1 - param3.canvasWidth) / 2 + param2, -param3.canvasHeight + (480 + param5) + param9);
           if (param0 != -899814320) {
-            MultiValueSliderRenderer.a(-80);
+            MultiValueSliderRenderer.clearSharedReferences(-80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

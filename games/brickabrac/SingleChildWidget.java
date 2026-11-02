@@ -9,17 +9,17 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
     static String[] fullscreenSingularSuffix;
     static IndexedSprite[] field_C;
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_C = null;
         fullscreenSingularSuffix = null;
-        if (param0 > -82) {
+        if (obfuscationGuard > -82) {
           String var2 = (String) null;
           SingleChildWidget.validateEmailLocalPart((String) null, false);
         }
         field_D = null;
     }
 
-    private final boolean b(boolean param0, Widget param1) {
+    private final boolean focusChildIfUnfocused(boolean obfuscationGuard, Widget focusRoot) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -27,17 +27,17 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             return false;
           }
-          stackIn_8_0 = (this.child != null) && (!this.child.isFocused(-124)) && (this.child.tryFocus(true, param1));
+          stackIn_8_0 = (this.child != null) && (!this.child.isFocused(-124)) && (this.child.tryFocus(true, focusRoot));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_11_0 = var3;
-          stackIn_11_1 = new StringBuilder().append("h.KB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("h.KB(").append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
@@ -46,7 +46,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void applyMasterSoundGain(int obfuscationGuard, int gain) {
         SoundPlayback var2 = null;
         int var3 = 0;
         boolean stackIn_14_0 = false;
@@ -55,11 +55,11 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         SoundPlayback var2Lifetime1;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          BackgroundScene.masterSoundGain = param1;
-          if (param0 != 13894) {
-            SingleChildWidget.a(-92, -23);
+          BackgroundScene.masterSoundGain = gain;
+          if (obfuscationGuard != 13894) {
+            SingleChildWidget.applyMasterSoundGain(-92, -23);
           }
-          var2 = (SoundPlayback) (QuickChatPhraseDefinition.soundPlaybacks.first(param0 ^ -13940));
+          var2 = (SoundPlayback) (QuickChatPhraseDefinition.soundPlaybacks.first(obfuscationGuard ^ -13940));
           while (var2 != null) {
             if (!var2.sourceNode.isLinked(0)) {
               var2.unlink((byte) 111);
@@ -69,7 +69,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
             var2 = (SoundPlayback) (QuickChatPhraseDefinition.soundPlaybacks.next((byte) 116));
           }
           if (WidgetLayer.field_M != null) {
-            var2Lifetime1 = (SoundPlayback) (WidgetLayer.field_M.first(param0 - 13977));
+            var2Lifetime1 = (SoundPlayback) (WidgetLayer.field_M.first(obfuscationGuard - 13977));
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.sourceNode.isLinked(0);
               if (stackIn_14_0) {
@@ -85,7 +85,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "h.V(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "h.V(" + obfuscationGuard + ',' + gain + ')');
         }
     }
 
@@ -112,9 +112,9 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
             return false;
           }
           if (IntArrayRequest.heldKeys[81]) {
-            stackIn_9_0 = this.a(focusRoot, (byte) -35);
+            stackIn_9_0 = this.focusChildIfUnfocused(focusRoot, (byte) -35);
           } else {
-            stackIn_9_0 = this.b(true, focusRoot);
+            stackIn_9_0 = this.focusChildIfUnfocused(true, focusRoot);
           }
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,7 +152,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
 
     final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
         super.setBounds(height, x, y, obfuscationGuard, width);
-        this.a((byte) -19);
+        this.layoutChild((byte) -19);
     }
 
     final void clearFocus(boolean obfuscationGuard) {
@@ -164,12 +164,12 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         }
     }
 
-    final int e(byte param0) {
-        int var2 = 100 / ((-17 - param0) / 43);
-        return this.child != null ? this.child.e((byte) -71) : 0;
+    final int getTopLayer(byte obfuscationGuard) {
+        int var2 = 100 / ((-17 - obfuscationGuard) / 43);
+        return this.child != null ? this.child.getTopLayer((byte) -71) : 0;
     }
 
-    StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(int indent, Hashtable visited, int obfuscationGuard, StringBuilder builder) {
         RuntimeException var5 = null;
         StringBuilder stackIn_2_0 = null;
         StringBuilder stackIn_7_0 = null;
@@ -180,28 +180,28 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != 24) {
+          if (obfuscationGuard != 24) {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(param3, param2 ^ 1595638000, param0, param1)) {
-            this.a(param1, param0, param2 - 24, param3);
-            this.a(param3, true, param1, param0);
+          if (this.beginDebugEntry(builder, obfuscationGuard ^ 1595638000, indent, visited)) {
+            this.appendDebugSummary(visited, indent, obfuscationGuard - 24, builder);
+            this.appendDebugChild(builder, true, visited, indent);
           }
-          stackIn_7_0 = (StringBuilder) (param3);
+          stackIn_7_0 = (StringBuilder) (builder);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("h.UA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("h.UA(").append(indent).append(',');
+          if (visited == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(',');
+          if (builder == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -221,7 +221,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, Widget param5, int param6) {
+    final boolean handleMouseWheel(int wheelDelta, int pointerX, int parentY, int obfuscationGuard, int pointerY, Widget focusRoot, int parentX) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -229,22 +229,22 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 > -125) {
-            this.e((byte) 12);
+          if (obfuscationGuard > -125) {
+            this.getTopLayer((byte) 12);
           }
-          stackIn_7_0 = (null != this.child) && (this.child.isFocused(-83)) && (this.child.a(param0, param1, param2, -126, param4, param5, param6));
+          stackIn_7_0 = (null != this.child) && (this.child.isFocused(-83)) && (this.child.handleMouseWheel(wheelDelta, pointerX, parentY, -126, pointerY, focusRoot, parentX));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_10_0 = var8;
-          stackIn_10_1 = new StringBuilder().append("h.SA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_10_1 = new StringBuilder().append("h.SA(").append(wheelDelta).append(',').append(pointerX).append(',').append(parentY).append(',').append(obfuscationGuard).append(',').append(pointerY).append(',');
+          if (focusRoot == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -339,7 +339,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         }
     }
 
-    final void a(StringBuilder param0, boolean param1, Hashtable param2, int param3) {
+    final void appendDebugChild(StringBuilder builder, boolean includeChild, Hashtable visited, int indent) {
         StringBuilder discarded$3 = null;
         int var5_int = 0;
         StringBuilder discarded$5 = null;
@@ -354,17 +354,17 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         RuntimeException var5 = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          discarded$3 = param0.append('\n');
-          for (var5_int = 0; param3 >= var5_int; var5_int++) {
-            discarded$5 = param0.append(' ');
+          discarded$3 = builder.append('\n');
+          for (var5_int = 0; indent >= var5_int; var5_int++) {
+            discarded$5 = builder.append(' ');
           }
-          if (!param1) {
+          if (!includeChild) {
             return;
           }
           if (this.child == null) {
-            discarded$4 = param0.append("null");
+            discarded$4 = builder.append("null");
           } else {
-            this.child.a(1 + param3, param2, 24, param0);
+            this.child.appendDebugTree(1 + indent, visited, 24, builder);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -372,18 +372,18 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
           var5 = decompiledCaughtException;
           stackIn_12_0 = var5;
           stackIn_12_1 = new StringBuilder().append("h.JB(");
-          if (param0 == null) {
+          if (builder == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(includeChild).append(',');
+          if (visited == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(indent).append(')').toString());
         }
     }
 
@@ -427,12 +427,12 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         }
     }
 
-    Widget h(byte param0) {
+    Widget getFocusedChild(byte obfuscationGuard) {
         boolean discarded$0 = false;
         Widget var2 = this.child;
-        if (param0 != 25) {
+        if (obfuscationGuard != 25) {
           Widget var3 = (Widget) null;
-          discarded$0 = this.b(true, (Widget) null);
+          discarded$0 = this.focusChildIfUnfocused(true, (Widget) null);
         }
         if (var2 == null) {
           return null;
@@ -451,17 +451,17 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
           MeshLobbyUiHelpers.updateQuickChatInterface(param5, -7812, param4, param1);
           if (GameRenderAudioHelpers.contextActions != null &&
             GameRenderAudioHelpers.contextActions.pollAndDispatchAction(-2, param1, param6, param0, param5)) {
-            ActivityIndicatorWidget.f((byte) -124);
+            ActivityIndicatorWidget.closeContextActions((byte) -124);
             param5 = false;
           }
-          SoundCache.a(124, param1, param5);
+          SoundCache.handleFriendNameEntry(124, param1, param5);
           Paddle.a(param2, param5, 124);
           param5 = false;
         }
         return param5;
     }
 
-    private final boolean a(Widget param0, byte param1) {
+    private final boolean focusChildIfUnfocused(Widget focusRoot, byte obfuscationGuard) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -469,22 +469,22 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -35) {
+          if (obfuscationGuard != -35) {
             field_C = (IndexedSprite[]) null;
           }
-          stackIn_7_0 = (this.child != null) && (!this.child.isFocused(-117)) && (this.child.tryFocus(true, param0));
+          stackIn_7_0 = (this.child != null) && (!this.child.isFocused(-117)) && (this.child.tryFocus(true, focusRoot));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("h.GB(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -497,7 +497,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 0) {
-            this.h((byte) -11);
+            this.getFocusedChild((byte) -11);
           }
           stackIn_6_0 = (this.child != null) && (this.child.handlePointerPress(focusRoot, pointerX, this.x + parentX, parentY + this.y, button, pointerY, 0));
           return stackIn_6_0;
@@ -515,8 +515,8 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         }
     }
 
-    void a(byte param0) {
-        if (param0 > -7) {
+    void layoutChild(byte obfuscationGuard) {
+        if (obfuscationGuard > -7) {
           field_D = (boolean[]) null;
         }
         if (this.child != null) {
@@ -528,7 +528,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         if (obfuscationGuard >= -49) {
           return true;
         }
-        return null != this.h((byte) 25) ? true : false;
+        return null != this.getFocusedChild((byte) 25) ? true : false;
     }
 
     final static LegacyEmailValidationError validateEmailLocalPart(String localPart, boolean initialPreviousDot) {

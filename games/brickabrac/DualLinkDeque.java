@@ -50,13 +50,13 @@ final class DualLinkDeque implements Iterable {
           if (null != GameRenderAudioHelpers.contextActions) {
             return true;
           }
-          if (ResourcePreparationQueue.a(-121)) {
+          if (ResourcePreparationQueue.isNameEntryPopupOpen(-121)) {
             return true;
           }
           if (CircleBody.reportAbuseDialog != null) {
             return true;
           }
-          if (!BufferedFile.b(true)) {
+          if (!BufferedFile.isQuickChatUiOpen(true)) {
             return false;
           }
           return true;
@@ -64,13 +64,13 @@ final class DualLinkDeque implements Iterable {
         if (null != GameRenderAudioHelpers.contextActions) {
           return true;
         }
-        if (ResourcePreparationQueue.a(-121)) {
+        if (ResourcePreparationQueue.isNameEntryPopupOpen(-121)) {
           return true;
         }
         if (CircleBody.reportAbuseDialog != null) {
           return true;
         }
-        if (!BufferedFile.b(true)) {
+        if (!BufferedFile.isQuickChatUiOpen(true)) {
           return false;
         }
         return true;
@@ -113,10 +113,10 @@ final class DualLinkDeque implements Iterable {
         this.sentinel.secondaryNext = this.sentinel;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_d = null;
         keyboardInput = null;
-        if (param0 != 2) {
+        if (obfuscationGuard != 2) {
           DualLinkDeque.outlineRasterRegion(-125, -106, -42, 126, 57);
         }
     }

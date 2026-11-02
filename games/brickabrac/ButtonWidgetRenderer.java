@@ -125,7 +125,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             } else {
               if (OptionsScreen.field_A.length() > 0) {
                 var4_ref_String = OptionsScreen.field_A.toString();
-                if (ScrollPane.a(var4_ref_String, (byte) -128)) {
+                if (ScrollPane.containsChatFilterText(var4_ref_String, (byte) -128)) {
                   var13 = (String) null;
                   var12 = (String) null;
                   SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, DiagnosticTextLine.field_j, (String) null, 2);
@@ -231,7 +231,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
               } else {
                 if (OptionsScreen.field_A.length() > 0) {
                   var4_ref_StringLifetime1 = OptionsScreen.field_A.toString();
-                  if (ScrollPane.a(var4_ref_StringLifetime1, (byte) -128)) {
+                  if (ScrollPane.containsChatFilterText(var4_ref_StringLifetime1, (byte) -128)) {
                     var13Lifetime1 = (String) null;
                     var12Lifetime1 = (String) null;
                     SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, DiagnosticTextLine.field_j, (String) null, 2);
@@ -340,7 +340,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
               var4_ref_StringLifetime2 = OptionsScreen.field_A.toString();
               var7Lifetime2 = var4_ref_StringLifetime2;
               var7Lifetime2Lifetime1 = var4_ref_StringLifetime2;
-              if (ScrollPane.a(var4_ref_StringLifetime2, (byte) -128)) {
+              if (ScrollPane.containsChatFilterText(var4_ref_StringLifetime2, (byte) -128)) {
                 var13Lifetime2 = (String) null;
                 var12Lifetime2 = (String) null;
                 SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, DiagnosticTextLine.field_j, (String) null, 2);
@@ -531,11 +531,11 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         rasterStack = null;
         field_w = null;
         textChoiceResultCodes = null;
-        if (param0 > -82) {
+        if (obfuscationGuard > -82) {
           textChoiceResultCodes = (int[]) null;
         }
     }

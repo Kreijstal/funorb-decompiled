@@ -19,8 +19,8 @@ final class WidgetPaintStyle {
     static int canvasHeight;
     private int offsetX;
 
-    public static void b(int param0) {
-        if (param0 != 2) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           return;
         }
         field_n = null;
@@ -45,7 +45,7 @@ final class WidgetPaintStyle {
           return this;
         }
         String var4 = (String) null;
-        WidgetPaintStyle.a((ResourceArchive) null, (String) null, -112, (String) null);
+        WidgetPaintStyle.formatArchiveProgressText((ResourceArchive) null, (String) null, -112, (String) null);
         return this;
     }
 
@@ -59,7 +59,7 @@ final class WidgetPaintStyle {
         return this;
     }
 
-    final static String a(ResourceArchive param0, String param1, int param2, String param3) {
+    final static String formatArchiveProgressText(ResourceArchive archive, String fallbackText, int obfuscationGuard, String label) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
@@ -73,31 +73,31 @@ final class WidgetPaintStyle {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = 94 % ((param2 - 52) / 42);
-          if (!param0.ensureIndex((byte) -127)) {
-            stackIn_3_0 = (String) (param1);
+          var4_int = 94 % ((obfuscationGuard - 52) / 42);
+          if (!archive.ensureIndex((byte) -127)) {
+            stackIn_3_0 = (String) (fallbackText);
             return stackIn_3_0;
           }
-          stackIn_5_0 = param3 + " - " + param0.getProgress(-4126) + "%";
+          stackIn_5_0 = label + " - " + archive.getProgress(-4126) + "%";
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_8_0 = var4;
           stackIn_8_1 = new StringBuilder().append("be.L(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param1 == null) {
+          if (fallbackText == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(',');
+          if (label == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

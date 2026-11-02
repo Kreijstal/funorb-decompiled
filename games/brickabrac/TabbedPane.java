@@ -165,11 +165,11 @@ final class TabbedPane extends UiComponent {
         this.layoutTabs(tabHeight, panelInset, -117);
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         currentBackground = null;
         field_Pb = null;
         field_Tb = null;
-        int var1 = 120 / ((-3 - param0) / 47);
+        int var1 = 120 / ((-3 - obfuscationGuard) / 47);
         whirlpoolRoundConstants = null;
         whirlpoolRoundTables = (long[][]) null;
     }
@@ -350,16 +350,16 @@ final class TabbedPane extends UiComponent {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            whirlpoolRoundTables[0][var0] = CacheIoWorker.a(var12, CacheIoWorker.a(CacheIoWorker.a(var8 << 16, CacheIoWorker.a(var10 << 24, CacheIoWorker.a(CacheIoWorker.a(var6 << 40, CacheIoWorker.a(var2 << 48, var2 << 56)), var2 << 32))), var4 << 8));
+            whirlpoolRoundTables[0][var0] = CacheIoWorker.bitwiseOr(var12, CacheIoWorker.bitwiseOr(CacheIoWorker.bitwiseOr(var8 << 16, CacheIoWorker.bitwiseOr(var10 << 24, CacheIoWorker.bitwiseOr(CacheIoWorker.bitwiseOr(var6 << 40, CacheIoWorker.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32))), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                whirlpoolRoundTables[var14][var0] = CacheIoWorker.a(whirlpoolRoundTables[var14 - 1][var0] << 56, whirlpoolRoundTables[-1 + var14][var0] >>> 8);
+                whirlpoolRoundTables[var14][var0] = CacheIoWorker.bitwiseOr(whirlpoolRoundTables[var14 - 1][var0] << 56, whirlpoolRoundTables[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
         whirlpoolRoundConstants[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = var0 * 8 - 8;
-            whirlpoolRoundConstants[var0] = RegistrationResponseDialog.a(SocialListResponseHelpers.bitwiseAnd(255L, whirlpoolRoundTables[7][7 + var1]), RegistrationResponseDialog.a(SocialListResponseHelpers.bitwiseAnd(65280L, whirlpoolRoundTables[6][var1 + 6]), RegistrationResponseDialog.a(SocialListResponseHelpers.bitwiseAnd(16711680L, whirlpoolRoundTables[5][var1 + 5]), RegistrationResponseDialog.a(RegistrationResponseDialog.a(SocialListResponseHelpers.bitwiseAnd(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), RegistrationResponseDialog.a(RegistrationResponseDialog.a(SocialListResponseHelpers.bitwiseAnd(71776119061217280L, whirlpoolRoundTables[1][var1 + 1]), SocialListResponseHelpers.bitwiseAnd(whirlpoolRoundTables[0][var1], -72057594037927936L)), SocialListResponseHelpers.bitwiseAnd(whirlpoolRoundTables[2][var1 + 2], 280375465082880L))), SocialListResponseHelpers.bitwiseAnd(whirlpoolRoundTables[4][4 + var1], 4278190080L)))));
+            whirlpoolRoundConstants[var0] = RegistrationResponseDialog.bitwiseXor(SocialListResponseHelpers.bitwiseAnd(255L, whirlpoolRoundTables[7][7 + var1]), RegistrationResponseDialog.bitwiseXor(SocialListResponseHelpers.bitwiseAnd(65280L, whirlpoolRoundTables[6][var1 + 6]), RegistrationResponseDialog.bitwiseXor(SocialListResponseHelpers.bitwiseAnd(16711680L, whirlpoolRoundTables[5][var1 + 5]), RegistrationResponseDialog.bitwiseXor(RegistrationResponseDialog.bitwiseXor(SocialListResponseHelpers.bitwiseAnd(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), RegistrationResponseDialog.bitwiseXor(RegistrationResponseDialog.bitwiseXor(SocialListResponseHelpers.bitwiseAnd(71776119061217280L, whirlpoolRoundTables[1][var1 + 1]), SocialListResponseHelpers.bitwiseAnd(whirlpoolRoundTables[0][var1], -72057594037927936L)), SocialListResponseHelpers.bitwiseAnd(whirlpoolRoundTables[2][var1 + 2], 280375465082880L))), SocialListResponseHelpers.bitwiseAnd(whirlpoolRoundTables[4][4 + var1], 4278190080L)))));
         }
         field_Pb = "Set up new unrated game";
         outgoingDelayMillis = 0;

@@ -105,7 +105,7 @@ final class RichTextLayout extends WidgetTextLayout {
         int var2Lifetime2;
         int var2Lifetime3;
         int var2Lifetime4;
-        MovingBody.a((byte) 74, 640 + Rasterizer2D.width >> 1, -640 + Rasterizer2D.width >> 1, 0, Rasterizer2D.height);
+        MovingBody.pushRasterIntersectClip((byte) 74, 640 + Rasterizer2D.width >> 1, -640 + Rasterizer2D.width >> 1, 0, Rasterizer2D.height);
         if (TextLineLayout.field_b <= 0) {
           if (IntArrayRequest.field_j > 0) {
             if (null == GrowableIntList.field_e) {
@@ -276,14 +276,14 @@ final class RichTextLayout extends WidgetTextLayout {
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
           if (TabbedPane.currentBackground != null) {
-            stackIn_4_0 = TabbedPane.currentBackground.a((byte) -89, param2);
+            stackIn_4_0 = TabbedPane.currentBackground.getPaddleCapSprites((byte) -89, param2);
           } else {
             stackIn_4_0 = null;
           }
           var14 = stackIn_4_0;
           var7 = var14;
           if (TabbedPane.currentBackground != null) {
-            stackIn_7_0 = TabbedPane.currentBackground.a(param2, true);
+            stackIn_7_0 = TabbedPane.currentBackground.getPaddleSegmentSprites(param2, true);
           } else {
             stackIn_7_0 = null;
           }
@@ -291,7 +291,7 @@ final class RichTextLayout extends WidgetTextLayout {
           if (TabbedPane.currentBackground == null) {
             stackIn_10_0 = null;
           } else {
-            stackIn_10_0 = TabbedPane.currentBackground.a(true, param2);
+            stackIn_10_0 = TabbedPane.currentBackground.getPaddleCentreSprite(true, param2);
           }
           var9 = stackIn_10_0;
           if (param4 < 54) {
@@ -302,7 +302,7 @@ final class RichTextLayout extends WidgetTextLayout {
           if (param0 == 2) {
             var15 = FullscreenDialogHelpers.activePaddleFlameSprites[1][ChocolateBackground.field_w.nextBoundedInt(-37880252, FullscreenDialogHelpers.activePaddleFlameSprites[1].length)];
             var12 = var15;
-            var12.f((var11 + param6 * param2 - var15.canvasWidth * param2 + 3) / param2, (3 + (param2 * param3 + var10)) / param2, 196);
+            var12.drawAdditive((var11 + param6 * param2 - var15.canvasWidth * param2 + 3) / param2, (3 + (param2 * param3 + var10)) / param2, 196);
           }
           FullscreenFailureKind.activePaddleCapSprites[0].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
           if (var7 != null) {
@@ -330,7 +330,7 @@ final class RichTextLayout extends WidgetTextLayout {
           }
           if (0 == param0) {
             var12Lifetime1 = FullscreenDialogHelpers.activePaddleFlameSprites[0][ChocolateBackground.field_w.nextBoundedInt(-37880252, FullscreenDialogHelpers.activePaddleFlameSprites[0].length)];
-            var12Lifetime1.f((var11 + (16 + param6 * param2) - 3) / param2, (3 + param2 * param3 + var10) / param2, 196);
+            var12Lifetime1.drawAdditive((var11 + (16 + param6 * param2) - 3) / param2, (3 + param2 * param3 + var10) / param2, 196);
           }
           FullscreenFailureKind.activePaddleCapSprites[1].drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
           if (var7 == null) {
@@ -400,8 +400,8 @@ final class RichTextLayout extends WidgetTextLayout {
         }
     }
 
-    public static void a(byte param0) {
-        if (param0 == -51) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard == -51) {
           podiumMusicTrack = null;
           field_r = null;
           field_s = null;

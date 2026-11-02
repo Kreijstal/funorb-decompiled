@@ -63,7 +63,7 @@ final class TooltipSprite extends IntrusiveNode {
             var14 = var6[var9];
             IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = FullscreenFailureDialog.a(var5[var9], (byte) -85, var19[var11_int]);
+              var14[var11_int] = FullscreenFailureDialog.createRepalettedSprite(var5[var9], (byte) -85, var19[var11_int]);
             }
           }
           var9Lifetime1 = var17.height;
@@ -94,7 +94,7 @@ final class TooltipSprite extends IntrusiveNode {
         if (obfuscationGuard != 0) {
           return;
         }
-        this.hovered = AccountResponse.a(MusicPatch.pointerX, ResourcePreparationEntry.pointerY, (byte) -24, this.y, this.x, this.sprite);
+        this.hovered = AccountResponse.isOpaquePixelAt(MusicPatch.pointerX, ResourcePreparationEntry.pointerY, (byte) -24, this.y, this.x, this.sprite);
         this.hovered = this.sprite.containsPixel(this.x, this.y, MusicPatch.pointerX, ResourcePreparationEntry.pointerY);
     }
 
@@ -110,9 +110,9 @@ final class TooltipSprite extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_k = null;
-        if (param0 > -40) {
+        if (obfuscationGuard > -40) {
           return;
         }
         field_n = null;
@@ -231,7 +231,7 @@ final class TooltipSprite extends IntrusiveNode {
           return;
         }
         if (this.hovered) {
-          ScrollPaneWithFooter.a(-IntKeyIndex.field_b + MusicPatch.pointerX, -BackgroundScene.field_a + ResourcePreparationEntry.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
+          ScrollPaneWithFooter.drawTooltipBox(-IntKeyIndex.field_b + MusicPatch.pointerX, -BackgroundScene.field_a + ResourcePreparationEntry.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
         }
     }
 

@@ -10,12 +10,12 @@ final class MatchCompleteScreen extends MatchResultScreen {
     static AlignedIconLabel[][] field_A;
     static UiComponent field_x;
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_z = null;
         field_A = (AlignedIconLabel[][]) null;
         field_C = (int[][]) null;
         field_x = null;
-        int var1 = 55 / ((-70 - param0) / 41);
+        int var1 = 55 / ((-70 - obfuscationGuard) / 41);
         field_F = null;
         field_y = null;
     }
@@ -30,7 +30,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
 
     final int getResultBottom(int obfuscationGuard) {
         if (obfuscationGuard != -6) {
-          MatchCompleteScreen.f((byte) -118);
+          MatchCompleteScreen.clearSharedReferences((byte) -118);
         }
         return 480;
     }
@@ -65,7 +65,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
           if (PasswordTooltipHelpers.usernameContainsPasswordOrReverse(password, (byte) 122, username)) {
             return false;
           }
-          if (!WidgetTextLayout.a(password, (byte) 73, username)) {
+          if (!WidgetTextLayout.containsOrContainsReverse(password, (byte) 73, username)) {
             return true;
           }
           return false;

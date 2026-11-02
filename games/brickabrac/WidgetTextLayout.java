@@ -19,7 +19,7 @@ abstract class WidgetTextLayout {
         TextLineLayout line = null;
         int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         if (!obfuscationGuard) {
-          WidgetTextLayout.a(false);
+          WidgetTextLayout.clearSharedReferences(false);
         }
         for (lineIndex = 0; this.lines.length > lineIndex; lineIndex++) {
           line = this.lines[lineIndex];
@@ -101,9 +101,9 @@ abstract class WidgetTextLayout {
         return -1;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         viewVertexY = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_b = (RgbSprite) null;
         }
         field_b = null;
@@ -140,7 +140,7 @@ abstract class WidgetTextLayout {
         return rightEdge;
     }
 
-    final static boolean a(String param0, byte param1, String param2) {
+    final static boolean containsOrContainsReverse(String haystack, byte obfuscationGuard, String needle) {
         String var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -151,25 +151,25 @@ abstract class WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = BytePayloadRequest.replaceCharacter(-1, param2, '_', "");
-          if (param1 != 73) {
-            WidgetTextLayout.a(true);
+          needle = BytePayloadRequest.replaceCharacter(-1, needle, '_', "");
+          if (obfuscationGuard != 73) {
+            WidgetTextLayout.clearSharedReferences(true);
           }
-          var3 = ScreenshotViewer.reverseUtf16CodeUnits(10, param2);
-          stackIn_7_0 = (param0.indexOf(param2) != -1) || (-1 != param0.indexOf(var3));
+          var3 = ScreenshotViewer.reverseUtf16CodeUnits(10, needle);
+          stackIn_7_0 = (haystack.indexOf(needle) != -1) || (-1 != haystack.indexOf(var3));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("ep.A(");
-          if (param0 == null) {
+          if (haystack == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(',');
+          if (needle == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

@@ -17,7 +17,7 @@ final class ScrollPane extends UiComponent {
         }
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean containsChatFilterText(String text, byte obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
@@ -29,20 +29,20 @@ final class ScrollPane extends UiComponent {
           if (null == ByteArrayPoolHelpers.field_b) {
             return false;
           }
-          var2_int = -66 / ((30 - param1) / 42);
-          stackIn_6_0 = !(param0.toLowerCase().indexOf(ByteArrayPoolHelpers.field_b.toLowerCase()) < 0);
+          var2_int = -66 / ((30 - obfuscationGuard) / 42);
+          stackIn_6_0 = !(text.toLowerCase().indexOf(ByteArrayPoolHelpers.field_b.toLowerCase()) < 0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_9_0 = var2;
           stackIn_9_1 = new StringBuilder().append("mm.A(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class ScrollPane extends UiComponent {
           DirectByteStorage.field_f.pump();
           if (param0 != -29448) {
             var3 = (String) null;
-            ScrollPane.a((String) null, (byte) 116);
+            ScrollPane.containsChatFilterText((String) null, (byte) 116);
           }
           UnderwaterBackground.field_w.pump();
           GameRenderAudioHelpers.field_c = GameRenderAudioHelpers.field_c - 1;

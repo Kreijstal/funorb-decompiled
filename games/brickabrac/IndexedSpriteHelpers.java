@@ -21,18 +21,18 @@ final class IndexedSpriteHelpers {
           MotionWaypoint.clearDecodedSpriteData((byte) 96);
           return var1;
         }
-        IndexedSpriteHelpers.a(-77);
+        IndexedSpriteHelpers.clearSharedReferences(-77);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_f = null;
         field_b = null;
         field_c = null;
         field_a = null;
         field_d = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         logoCameraPose = null;

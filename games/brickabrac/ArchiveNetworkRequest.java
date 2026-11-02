@@ -98,11 +98,11 @@ final class ArchiveNetworkRequest extends ResourceRequest {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         projectedVertexX = null;
         field_J = null;
         field_C = null;
-        int var1 = -85 / ((4 - param0) / 55);
+        int var1 = -85 / ((4 - obfuscationGuard) / 55);
         field_H = null;
         packSelectorIcons = null;
         bytePool5000 = (byte[][]) null;

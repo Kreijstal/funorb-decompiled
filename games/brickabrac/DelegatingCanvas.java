@@ -178,8 +178,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(boolean param0) {
-        if (param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           DelegatingCanvas.a((byte) 23);
         }
         field_b = null;

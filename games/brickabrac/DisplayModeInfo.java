@@ -92,9 +92,9 @@ final class DisplayModeInfo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_g = null;
-        if (param0 != 19) {
+        if (obfuscationGuard != 19) {
           field_b = (String) null;
           delayedOutgoingPackets = null;
           field_b = null;

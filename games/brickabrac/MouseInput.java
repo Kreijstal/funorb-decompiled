@@ -113,14 +113,14 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         sharedWidgetTheme = null;
         contentResizing = null;
         field_c = null;
         pendingArchiveTransport = null;
         field_a = null;
         farmFarSprite = null;
-        if (param0 != 24) {
+        if (obfuscationGuard != 24) {
           pendingArchiveTransport = (BufferedSocket) null;
         }
     }

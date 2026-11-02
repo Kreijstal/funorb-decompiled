@@ -10,11 +10,11 @@ final class MembershipBenefitsScreen extends MenuScreen {
     static RgbSprite field_s;
     static int renderTimeCursor;
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         numericLoginKind = null;
         field_t = null;
-        if (param0 != 2) {
-          MembershipBenefitsScreen.g(47);
+        if (obfuscationGuard != 2) {
+          MembershipBenefitsScreen.clearSharedReferences(47);
           field_s = null;
           return;
         }
@@ -29,7 +29,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
           }
           return;
         }
-        MembershipBenefitsScreen.g(61);
+        MembershipBenefitsScreen.clearSharedReferences(61);
         if (LoginCredentials.field_c != null) {
           LoginCredentials.field_c.e((byte) -93);
         }

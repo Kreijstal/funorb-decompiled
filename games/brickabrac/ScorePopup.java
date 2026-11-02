@@ -46,11 +46,11 @@ final class ScorePopup extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_l = null;
         characterHeads = null;
         field_m = null;
-        if (param0 >= -41) {
+        if (obfuscationGuard >= -41) {
           return;
         }
         chocolateSmallLeverSprites = null;
@@ -61,23 +61,23 @@ final class ScorePopup extends IntrusiveNode {
         if (param2 <= 34) {
           ScorePopup.initializeMeshLighting(19);
         }
-        return ScrollPaneWithFooter.a(1, (byte) -110, param1, param3, param0);
+        return ScrollPaneWithFooter.createTwoToneSpriteGrid(1, (byte) -110, param1, param3, param0);
     }
 
-    final static void a(int param0, MusicTrack param1, int param2, boolean param3, int param4) {
+    final static void selectCrossfadeTrack(int argument0, MusicTrack track, int argument2, boolean flag, int obfuscationGuard) {
         try {
-          MeshAttributeRecord.musicCrossfadeStream.selectTrack(param2, !param3 ? true : false, param0, (byte) 22, 1000000, param1);
-          int var5_int = 88 / ((-16 - param4) / 38);
+          MeshAttributeRecord.musicCrossfadeStream.selectTrack(argument2, !flag ? true : false, argument0, (byte) 22, 1000000, track);
+          int var5_int = 88 / ((-16 - obfuscationGuard) / 38);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ul.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ul.F(" + argument0 + ',' + (track != null ? "{...}" : "null") + ',' + argument2 + ',' + flag + ',' + obfuscationGuard + ')');
         }
     }
 
-    final static int a(int param0, int param1) {
-        if (param0 != 255) {
+    final static int hueToRgb(int obfuscationGuard, int hue) {
+        if (obfuscationGuard != 255) {
           characterHeads = (RgbSprite[]) null;
         }
-        return RasterEffectHelpers.hsvFixed8ToRgb(param1, 255, 255);
+        return RasterEffectHelpers.hsvFixed8ToRgb(hue, 255, 255);
     }
 
     final boolean advance(boolean obfuscationGuard) {

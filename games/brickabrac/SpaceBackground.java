@@ -15,28 +15,28 @@ final class SpaceBackground extends BackgroundScene {
           } else {
             var8 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
             if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-              HalloweenBackground.a(1, 0, !obfuscationGuard ? true : false, colorIndex, ScreenNavigationHelpers.spaceFarSprite, var8);
+              HalloweenBackground.renderBackdropSurface(1, 0, !obfuscationGuard ? true : false, colorIndex, ScreenNavigationHelpers.spaceFarSprite, var8);
               var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
             AchievementBrowserScreen.a(LobbyGame.spaceNearSprite, destinationX, scroll16, colorIndex, 640, 0, 0, var8.sprite, 1, LevelResultSubmission.spaceMidSprite, destinationY);
           }
           return;
         }
-        this.c((byte) 70);
+        this.getCharacterSprite((byte) 70);
         if (!this.hasSprites((byte) -102)) {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 640, 480, 0);
           return;
         }
         RasterCacheSurface var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          HalloweenBackground.a(1, 0, !obfuscationGuard ? true : false, colorIndex, ScreenNavigationHelpers.spaceFarSprite, var7);
+          HalloweenBackground.renderBackdropSurface(1, 0, !obfuscationGuard ? true : false, colorIndex, ScreenNavigationHelpers.spaceFarSprite, var7);
           var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
         AchievementBrowserScreen.a(LobbyGame.spaceNearSprite, destinationX, scroll16, colorIndex, 640, 0, 0, var7.sprite, 1, LevelResultSubmission.spaceMidSprite, destinationY);
     }
 
-    final RgbSprite[] b(int param0) {
-        if (param0 > -12) {
+    final RgbSprite[] getLeverSprites(int obfuscationGuard) {
+        if (obfuscationGuard > -12) {
           this.hasSprites((byte) 4);
           return MouseInputCleanup.spaceLeverSprites;
         }
@@ -52,7 +52,7 @@ final class SpaceBackground extends BackgroundScene {
           } else {
             var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 125);
             if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-              HalloweenBackground.a(2, 0, false, colorIndex, NodeDequeCursor.field_b, var8);
+              HalloweenBackground.renderBackdropSurface(2, 0, false, colorIndex, NodeDequeCursor.field_b, var8);
               var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
             AchievementBrowserScreen.a(UiGeometryHelpers.spaceNearHalfSprite, destinationX, scroll16, colorIndex, 306, 0, 0, var8.sprite, 2, MusicVoiceMixer.field_t, destinationY);
@@ -65,7 +65,7 @@ final class SpaceBackground extends BackgroundScene {
         } else {
           var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 125);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            HalloweenBackground.a(2, 0, false, colorIndex, NodeDequeCursor.field_b, var7);
+            HalloweenBackground.renderBackdropSurface(2, 0, false, colorIndex, NodeDequeCursor.field_b, var7);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           AchievementBrowserScreen.a(UiGeometryHelpers.spaceNearHalfSprite, destinationX, scroll16, colorIndex, 306, 0, 0, var7.sprite, 2, MusicVoiceMixer.field_t, destinationY);
@@ -116,8 +116,8 @@ final class SpaceBackground extends BackgroundScene {
         super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
     }
 
-    final RgbSprite c(byte param0) {
-        if (param0 > -74) {
+    final RgbSprite getCharacterSprite(byte obfuscationGuard) {
+        if (obfuscationGuard > -74) {
           String var3 = (String) null;
           SpaceBackground.isLocalPlayerName((String) null, -110);
           return TableNameEntry.spaceCharacterSprite;
@@ -186,10 +186,10 @@ final class SpaceBackground extends BackgroundScene {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_s = null;
-        if (param0 <= 1) {
-          SpaceBackground.d((byte) 54);
+        if (obfuscationGuard <= 1) {
+          SpaceBackground.clearSharedReferences((byte) 54);
         }
     }
 

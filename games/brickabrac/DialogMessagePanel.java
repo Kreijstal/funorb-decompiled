@@ -79,9 +79,9 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
         InteractiveGameClient.field_E = true;
         ResourceArchive.field_f.hideLayers(-126);
         if (param0 != 6846) {
-          DialogMessagePanel.a(-62);
+          DialogMessagePanel.clearSharedReferences(-62);
         }
-        MusicPatch.a(0, GameScreen.field_b, false);
+        MusicPatch.pushAccountMessageDialog(0, GameScreen.field_b, false);
     }
 
     final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
@@ -208,8 +208,8 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
           var14 = 65280 & param0;
           for (var15 = 0; var15 < 16; var15++) {
             var16 = param6 * var15 >> 4;
-            var12[var15] = LevelSelectScreen.d(IntrusiveHashIterator.a(var16 * var14, 16711680), IntrusiveHashIterator.a(var13 * var16, -16711936)) >>> 8;
-            var12[-var15 + 31] = LevelSelectScreen.d(IntrusiveHashIterator.a(var16 * var13, -16711936), IntrusiveHashIterator.a(16711680, var16 * var14)) >>> 8;
+            var12[var15] = LevelSelectScreen.bitwiseOr(IntrusiveHashIterator.bitwiseAnd(var16 * var14, 16711680), IntrusiveHashIterator.bitwiseAnd(var13 * var16, -16711936)) >>> 8;
+            var12[-var15 + 31] = LevelSelectScreen.bitwiseOr(IntrusiveHashIterator.bitwiseAnd(var16 * var13, -16711936), IntrusiveHashIterator.bitwiseAnd(16711680, var16 * var14)) >>> 8;
           }
           var15Lifetime1 = var10 - var8_int;
           var16Lifetime1 = -var9 + var11;
@@ -288,7 +288,7 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
               var21++;
             }
             var17.drawAt(var8_int, var9);
-            Rasterizer2D.b(param2 << 4, param4 << 4, param7 + param1 << 4, 255, var33);
+            Rasterizer2D.drawRadialGlowRowBounded(param2 << 4, param4 << 4, param7 + param1 << 4, 255, var33);
             return;
           }
           return;
@@ -314,9 +314,9 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_Q = null;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_Q = (BackgroundScene) null;
         }
         rankingRatings = null;

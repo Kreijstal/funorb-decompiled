@@ -115,8 +115,8 @@ final class ProxySocketConnector extends SocketConnector {
         return this.connectDirect((byte) -76);
     }
 
-    public static void b(byte param0) {
-        if (param0 == -54) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
+        if (obfuscationGuard == -54) {
           field_i = null;
           field_j = null;
           field_h = null;
@@ -245,7 +245,7 @@ final class ProxySocketConnector extends SocketConnector {
           alignedValue = padding + value;
           return alignedValue;
         }
-        ProxySocketConnector.b((byte) -125);
+        ProxySocketConnector.clearSharedReferences((byte) -125);
         guardedAlignedValue = padding + value;
         return guardedAlignedValue;
     }
@@ -340,8 +340,8 @@ final class ProxySocketConnector extends SocketConnector {
         this.proxySelector = java.net.ProxySelector.getDefault();
     }
 
-    final static int c(int param0) {
-        if (param0 != 1) {
+    final static int getKeyboardIdleTicks(int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           field_j = (UiComponent) null;
           return PowerUp.keyboardIdleTicks;
         }

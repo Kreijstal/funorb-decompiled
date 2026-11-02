@@ -15,7 +15,7 @@ final class TableDataRequest extends IntrusiveNode {
 
     final static void a(boolean param0, int param1) {
         AppletResourceHelpers.a(param0, false);
-        RankingsRequest.a(param0, (byte) -125);
+        RankingsRequest.drawOverlayLayers(param0, (byte) -125);
         if (param1 < 10) {
           byte[] var3 = (byte[]) null;
           TableDataRequest.storeArchiveBytes(38, (byte[]) null, true);
@@ -69,9 +69,9 @@ final class TableDataRequest extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_j = null;
-        if (param0 != 136) {
+        if (obfuscationGuard != 136) {
           field_k = false;
         }
     }

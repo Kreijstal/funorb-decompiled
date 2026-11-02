@@ -448,7 +448,7 @@ abstract class TextFont extends DualLinkNode {
             }
             if ((emitGlyph) &&
               (tagStart == -1)) {
-              characterOrGlyph = (char)(DateFieldsWidget.a(-8250, (char) characterOrGlyph) & 255);
+              characterOrGlyph = (char)(DateFieldsWidget.unicodeToCp1252Byte(-8250, (char) characterOrGlyph) & 255);
               if (this.kerning != null &&
                 previousGlyph != 0) {
                 x = x + this.kerning[(previousGlyph << 8) + characterOrGlyph];
@@ -698,7 +698,7 @@ abstract class TextFont extends DualLinkNode {
             if (tagStart == -1) {
               if (characterOrGlyph != 0) {
                 unusedCharacterAppend = wrapScratch.append((char) characterOrGlyph);
-                characterOrGlyph = (char)(DateFieldsWidget.a(-8250, (char) characterOrGlyph) & 255);
+                characterOrGlyph = (char)(DateFieldsWidget.unicodeToCp1252Byte(-8250, (char) characterOrGlyph) & 255);
                 lineWidth = lineWidth + this.glyphAdvances[characterOrGlyph];
                 if (this.kerning != null &&
                   previousCode != 0) {
@@ -821,7 +821,7 @@ abstract class TextFont extends DualLinkNode {
             }
             if ((emitGlyph) &&
               (tagStart == -1)) {
-              characterOrGlyph = (char)(DateFieldsWidget.a(-8250, (char) characterOrGlyph) & 255);
+              characterOrGlyph = (char)(DateFieldsWidget.unicodeToCp1252Byte(-8250, (char) characterOrGlyph) & 255);
               width = width + this.glyphAdvances[characterOrGlyph];
               if (this.kerning != null &&
                 previousGlyph != 0) {
@@ -889,7 +889,7 @@ abstract class TextFont extends DualLinkNode {
         int glyphId = 0;
         if (character != 32) {
           baselineY = baselineY - this.baselineHeight;
-          glyphId = DateFieldsWidget.a(-8250, character) & 255;
+          glyphId = DateFieldsWidget.unicodeToCp1252Byte(-8250, character) & 255;
           this.drawGlyph(glyphId, x + this.glyphOffsetX[glyphId], baselineY + this.glyphOffsetY[glyphId], this.glyphWidths[glyphId], this.glyphHeights[glyphId], paint, false);
         }
     }
@@ -904,7 +904,7 @@ abstract class TextFont extends DualLinkNode {
     }
 
     final int getAdvance(char character) {
-        return this.glyphAdvances[DateFieldsWidget.a(-8250, character) & 255];
+        return this.glyphAdvances[DateFieldsWidget.unicodeToCp1252Byte(-8250, character) & 255];
     }
 
     final static String truncateText(TextFont font, String text, int width) {

@@ -14,7 +14,7 @@ final class SoundCache {
     static String field_b;
     static String clientSettings;
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void handleFriendNameEntry(int obfuscationGuard, int argument, boolean flag) {
         int var3;
         int var4;
         String var5;
@@ -23,9 +23,9 @@ final class SoundCache {
         CharSequence var8;
         Object var6Lifetime1;
         Object var6Lifetime2;
-        var3 = -76 / ((81 - param0) / 37);
+        var3 = -76 / ((81 - obfuscationGuard) / 37);
         if (MusicCrossfadeStream.nameEntryPopup != null) {
-          var4 = MusicCrossfadeStream.nameEntryPopup.updateAndPollNameInput(param2, (byte) 95);
+          var4 = MusicCrossfadeStream.nameEntryPopup.updateAndPollNameInput(flag, (byte) 95);
           if (var4 != 0) {
             if (2 == var4 &&
               MusicCrossfadeStream.nameEntryPopup.text != null &&
@@ -40,16 +40,16 @@ final class SoundCache {
               }
               var6Lifetime1 = null;
               if (GameUiController.field_d == 0) {
-                var6Lifetime1 = LogoRenderHelpers.requestAddFriend(24943, var5, param1);
+                var6Lifetime1 = LogoRenderHelpers.requestAddFriend(24943, var5, argument);
               }
               if (GameUiController.field_d == 1) {
-                var6Lifetime1 = KeyboardInput.requestRemoveFriend(param1, false, var5);
+                var6Lifetime1 = KeyboardInput.requestRemoveFriend(argument, false, var5);
               }
               if (GameUiController.field_d == 2) {
-                var6Lifetime1 = LoginMethodPreference.requestAddIgnoredPlayer(var5, param1, 2);
+                var6Lifetime1 = LoginMethodPreference.requestAddIgnoredPlayer(var5, argument, 2);
               }
               if (GameUiController.field_d == 3) {
-                var6Lifetime1 = KeyDispatchHelpers.requestRemoveIgnoredPlayer(var5, param1, var5, -45);
+                var6Lifetime1 = KeyDispatchHelpers.requestRemoveIgnoredPlayer(var5, argument, var5, -45);
               }
               if (var6Lifetime1 != null) {
                 var7 = (String) null;
@@ -185,15 +185,15 @@ final class SoundCache {
         }
     }
 
-    final static void a(int param0, int param1) {
-        ScorePopup.field_p = param1;
+    final static void setMusicGain(int obfuscationGuard, int gain) {
+        ScorePopup.field_p = gain;
         if (null != ConditionalTextValue.musicSynthesizer) {
-          ConditionalTextValue.musicSynthesizer.setMasterGain(param1, false);
+          ConditionalTextValue.musicSynthesizer.setMasterGain(gain, false);
         }
         if (null != MeshAttributeRecord.musicCrossfadeStream) {
-          MeshAttributeRecord.musicCrossfadeStream.setMasterGain(true, param1);
+          MeshAttributeRecord.musicCrossfadeStream.setMasterGain(true, gain);
         }
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           field_i = (String) null;
         }
     }
@@ -355,7 +355,7 @@ final class SoundCache {
                 }
               } else {
                 try {
-                  AppletJavaScriptBridge.callFunction(new Object[]{GameplayAudioEvent.a(CacheEntry.field_v, (byte) 3)}, 116, EmailConfirmationValidator.e((byte) -75), "zap");
+                  AppletJavaScriptBridge.callFunction(new Object[]{GameplayAudioEvent.decodeBase37Name(CacheEntry.field_v, (byte) 3)}, 116, EmailConfirmationValidator.e((byte) -75), "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -439,7 +439,7 @@ final class SoundCache {
         ChatMessage var6 = null;
         try {
           if (obfuscationGuard != 92) {
-            SoundCache.a(100, 53);
+            SoundCache.setMusicGain(100, 53);
           }
           var6 = new ChatMessage(channel, senderName, contextId, contextLabel, text);
           ConnectionPhase.appendChatHistory(0, var6);
@@ -638,7 +638,7 @@ final class SoundCache {
             return stackIn_6_0;
           }
           if (obfuscationGuard <= 48) {
-            SoundCache.a(-14, -17);
+            SoundCache.setMusicGain(-14, -17);
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -655,12 +655,12 @@ final class SoundCache {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_f = null;
         clientSettings = null;
         field_i = null;
         field_k = null;
-        if (param0 >= -99) {
+        if (obfuscationGuard >= -99) {
           String var2 = (String) null;
           SoundCache.a((String) null, true, true, true, -106, (String) null);
         }

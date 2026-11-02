@@ -107,14 +107,14 @@ final class RadialSelectorRenderer implements WidgetRenderer {
           Rasterizer2D.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.backgroundColor);
           var7 = var14.centerX + parentX + widget.x;
           var8 = var14.centerY + (parentY + widget.y);
-          Rasterizer2D.f(var7, var8, var14.radius, this.circleColor);
+          Rasterizer2D.fillCircle(var7, var8, var14.radius, this.circleColor);
           if (var14.markedSector != -1) {
             var9 = 3.141592653589793 * (double)var14.markedSector * 2.0 / (double)var14.sectorCount;
             var11 = (int)(-Math.sin(var9) * (double)var14.radius);
             var12 = (int)(Math.cos(var9) * (double)var14.radius);
-            Rasterizer2D.f(var7 + var11, var12 + var8, 1, this.markedSectorColor);
+            Rasterizer2D.fillCircle(var7 + var11, var12 + var8, 1, this.markedSectorColor);
           }
-          Rasterizer2D.f(var7, var8, 2, 1);
+          Rasterizer2D.fillCircle(var7, var8, 2, 1);
           if (callbackGuard != -20618) {
             return;
           }
@@ -151,9 +151,9 @@ final class RadialSelectorRenderer implements WidgetRenderer {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_a = null;
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           arcticBackgroundColors = null;
           field_c = null;
           field_h = null;

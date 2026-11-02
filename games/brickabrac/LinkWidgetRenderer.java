@@ -78,9 +78,9 @@ final class LinkWidgetRenderer implements WidgetRenderer {
         this.verticalAlignment = 1;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         field_c = null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_c = (LoginMethodPreference) null;
           field_a = null;
           return;

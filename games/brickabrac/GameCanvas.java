@@ -80,8 +80,8 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         return ArchiveConnectionHelpers.pollArchiveConnection(-1);
     }
 
-    public static void a(int param0) {
-        if (param0 == 0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        if (obfuscationGuard == 0) {
           invalidEmailSyntax = null;
           field_b = null;
           field_d = null;
@@ -94,12 +94,12 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         field_d = null;
     }
 
-    final void a(PlatformServices param0, int param1) {
+    final void closeWindowFrame(PlatformServices platform, int obfuscationGuard) {
         try {
-          IntegerParsingHelpers.closeFullscreenFrame(param0, -20954, this.window);
-          int var3_int = -13 / ((param1 - 82) / 32);
+          IntegerParsingHelpers.closeFullscreenFrame(platform, -20954, this.window);
+          int var3_int = -13 / ((obfuscationGuard - 82) / 32);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wg.D(" + (platform != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           DualLinkDeque.field_d.updateRoot(param3, -15211);
           if (null != PacketReceiveHelpers.field_a) {
             if (TextWidgetRenderer.field_e) {
-              PacketReceiveHelpers.field_a.a(DualLinkDeque.field_d.screenY, DualLinkDeque.field_d.screenX, 116, param3);
+              PacketReceiveHelpers.field_a.processPointerInput(DualLinkDeque.field_d.screenY, DualLinkDeque.field_d.screenX, 116, param3);
             } else {
               PacketReceiveHelpers.field_a = null;
             }

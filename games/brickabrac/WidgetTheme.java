@@ -22,16 +22,16 @@ final class WidgetTheme {
     WidgetRenderer toggleButtonRenderer;
     private boolean field_s;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         lostBallMessages = null;
         field_d = null;
         field_n = null;
-        if (param0 != -31063) {
+        if (obfuscationGuard != -31063) {
           lostBallMessages = (String[]) null;
         }
     }
 
-    final void a(TextFont param0, int param1) {
+    final void installRenderers(TextFont font, int obfuscationGuard) {
         TextWidgetRenderer var17 = null;
         StatefulWidgetRenderer var4 = null;
         RgbSprite[] var5 = null;
@@ -55,14 +55,14 @@ final class WidgetTheme {
         StatefulWidgetRenderer var14Lifetime1;
         StatefulWidgetRenderer var14Lifetime2;
         try {
-          var17 = new TextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.ascent + param0.descent + 2);
+          var17 = new TextWidgetRenderer(font, 2, 2, 2236962, 1, 1, 1, font.ascent + font.descent + 2);
           var17.textColor = 16777215;
           this.field_i = (WidgetRenderer) ((Object) var17);
           var4 = new StatefulWidgetRenderer();
           var17.copyStyleTo(-86, var4);
           var4.caretColor = 15658734;
           var4.selectionArgb = 11711154;
-          this.font = param0;
+          this.font = font;
           this.field_f = 3;
           this.field_a = 3;
           this.field_p = 5592405;
@@ -73,7 +73,7 @@ final class WidgetTheme {
           this.field_g = 3;
           var4.replaceStateStyle(0, 113).setTextPaint(false, 15658734).setFrameSprites(ScorePopup.a(7829367, 10066329, (byte) 66, 8947848), -2147483648);
           var4.replaceStateStyle(1, 110).setFrameSprites(ScorePopup.a(13421772, 10066329, (byte) 115, 11184810), -2147483648);
-          var4.replaceStateStyle(3, 118).setFrameSprites(ScorePopup.a(10066329, 7829367, (byte) 115, 8947848), param1 ^ -2134061876).setOffsetX(1, (byte) -50).setOffsetY(0, 1);
+          var4.replaceStateStyle(3, 118).setFrameSprites(ScorePopup.a(10066329, 7829367, (byte) 115, 8947848), obfuscationGuard ^ -2134061876).setOffsetX(1, (byte) -50).setOffsetY(0, 1);
           var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -82,17 +82,17 @@ final class WidgetTheme {
           }
           var5[4] = (RgbSprite) ((Object) var18);
           var4.replaceStateStyle(4, 121).setPaintPreviousStyle(true, false).setFrameSprites(var5, -2147483648);
-          var4.replaceStateStyle(5, param1 ^ 13421757).setFrameSprites(VerticalScrollbar.a(0, 0, 65793, 1, 0), param1 ^ -2134061876).setPaintPreviousStyle(true, false).setTextPaint(false, -1);
+          var4.replaceStateStyle(5, obfuscationGuard ^ 13421757).setFrameSprites(VerticalScrollbar.createBeveledFrameSprites(0, 0, 65793, 1, 0), obfuscationGuard ^ -2134061876).setPaintPreviousStyle(true, false).setTextPaint(false, -1);
           this.defaultFocusableRenderer = (WidgetRenderer) ((Object) var4);
           var6 = new StatefulWidgetRenderer(var4, true);
           var6.horizontalAlignment = 0;
           var7 = new StatefulWidgetRenderer(var4, true);
           var7.horizontalAlignment = 0;
-          var7.setAllFrameSprites(BallPulseEffect.a(8947848, false), false);
-          var7.replaceStateStyle(1, 110).setFrameSprites(BallPulseEffect.a(11184810, false), param1 + 2134061876).setTextPaint(false, 2236962);
-          this.toggleButtonRenderer = (WidgetRenderer) ((Object) new LabeledToggleRenderer(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          discarded$0 = new RadialSelectorRenderer(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new MultiValueSliderRenderer(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          var7.setAllFrameSprites(BallPulseEffect.createSolidCenterSpriteGrid(8947848, false), false);
+          var7.replaceStateStyle(1, 110).setFrameSprites(BallPulseEffect.createSolidCenterSpriteGrid(11184810, false), obfuscationGuard + 2134061876).setTextPaint(false, 2236962);
+          this.toggleButtonRenderer = (WidgetRenderer) ((Object) new LabeledToggleRenderer(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          discarded$0 = new RadialSelectorRenderer(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$1 = new MultiValueSliderRenderer(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetRenderer();
           var17.copyStyleTo(-68, var8);
           var8.replaceStateStyle(0, 105).setFrameSprites(ScorePopup.a(10066329, 7829367, (byte) 124, 15658734), -2147483648).setTextPaint(false, 1118481).setShadowPaint(-1, (byte) -69);
@@ -110,7 +110,7 @@ final class WidgetTheme {
           var11.setStateFrameSprites(true, 0, var9);
           var12.setStateFrameSprites(true, 0, var10);
           var13 = new RgbSprite(7, 4);
-          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, param1, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, obfuscationGuard, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new StatefulWidgetRenderer(var4, true);
           var14.setAllIcons(-1553, var13.copy());
           var13.rotateClockwise();
@@ -123,7 +123,7 @@ final class WidgetTheme {
           var19 = new StatefulWidgetRenderer(var4, true);
           var19.setAllIcons(-1553, var13);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "eh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "eh.B(" + (font != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -311,12 +311,12 @@ final class WidgetTheme {
         packet.writeByte(-109, RegistrationResponseDialog.packChatFilters(248));
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var7 = -9 % ((11 - param3) / 49);
-        Rasterizer2D.drawLine(param1, param2, param5, param4, param0);
+    final void drawLine(int color, int x1, int y1, int obfuscationGuard, int y2, int x2) {
+        int var7 = -9 % ((11 - obfuscationGuard) / 49);
+        Rasterizer2D.drawLine(x1, y1, x2, y2, color);
     }
 
-    private final void a(int param0, String param1, int param2, int param3) {
+    private final void drawSingleLineTooltip(int obfuscationGuard, String text, int y, int x) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -327,38 +327,38 @@ final class WidgetTheme {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.font.measureText(param1);
+          var5_int = this.font.measureText(text);
           var6 = this.font.capHeight + this.font.descent;
-          if (param0 != 8081) {
+          if (obfuscationGuard != 8081) {
             return;
           }
-          var7 = param3;
+          var7 = x;
           if (Rasterizer2D.width < 6 + var7 + var5_int) {
             var7 = -6 + (Rasterizer2D.width - var5_int);
           }
-          var8 = param2 - (this.font.capHeight - 32);
+          var8 = y - (this.font.capHeight - 32);
           if (6 + (var8 + var6) > Rasterizer2D.height) {
             var8 = -var6 + Rasterizer2D.height - 6;
           }
           Rasterizer2D.drawRectangle(var7, var8, var5_int + 6, var6 + 6, this.field_c);
           Rasterizer2D.fillRectangle(1 + var7, 1 + var8, var5_int + 4, var6 + 4, this.field_p);
-          this.font.drawLeft(param1, var7 + 3, this.font.capHeight + var8 + 3, this.field_c, -1);
+          this.font.drawLeft(text, var7 + 3, this.font.capHeight + var8 + 3, this.field_c, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("eh.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("eh.F(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(y).append(',').append(x).append(')').toString());
         }
     }
 
-    final void a(boolean param0, int param1, int param2, String param3) {
+    final void drawTooltip(boolean obfuscationGuard, int y, int x, String text) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -366,11 +366,11 @@ final class WidgetTheme {
         RuntimeException var5 = null;
         try {
           if (this.field_s) {
-            this.a(param3, 8947848, param1, param2);
+            this.drawWrappedTooltip(text, 8947848, y, x);
           } else {
-            this.a(8081, param3, param1, param2);
+            this.drawSingleLineTooltip(8081, text, y, x);
           }
-          if (!param0) {
+          if (!obfuscationGuard) {
             this.field_j = -47;
           }
           return;
@@ -378,8 +378,8 @@ final class WidgetTheme {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("eh.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_8_1 = new StringBuilder().append("eh.C(").append(obfuscationGuard).append(',').append(y).append(',').append(x).append(',');
+          if (text == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -397,17 +397,17 @@ final class WidgetTheme {
         return stackIn_6_0;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
-        int var8 = 115 / ((param5 + 18) / 63);
-        Rasterizer2D.fillRectangleAlpha(param3, param0, param6, param4, param2, param1);
+    final void fillRectangleAlpha(int y, int alpha, int color, int x, int height, byte obfuscationGuard, int width) {
+        int var8 = 115 / ((obfuscationGuard + 18) / 63);
+        Rasterizer2D.fillRectangleAlpha(x, y, width, height, color, alpha);
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawQuickChatHelpDialog(boolean flag, boolean obfuscationGuard) {
         if (IntegerParsingHelpers.quickChatHelpDialog != null) {
           Rasterizer2D.darkenRectangle(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, Rasterizer2D.clipRight - Rasterizer2D.clipLeft, Rasterizer2D.clipBottom - Rasterizer2D.clipTop);
-          IntegerParsingHelpers.quickChatHelpDialog.drawRoot(true, param0);
+          IntegerParsingHelpers.quickChatHelpDialog.drawRoot(true, flag);
         }
-        if (!param1) {
+        if (!obfuscationGuard) {
           chatHistoryCategoryLimit = -26;
         }
     }
@@ -487,7 +487,7 @@ final class WidgetTheme {
         }
     }
 
-    private final void a(String param0, int param1, int param2, int param3) {
+    private final void drawWrappedTooltip(String text, int obfuscationGuard, int y, int x) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -512,18 +512,18 @@ final class WidgetTheme {
           var5_int = this.field_h + this.field_f;
           var6 = this.field_a + this.field_g;
           var7 = this.field_m;
-          if (param1 != 8947848) {
+          if (obfuscationGuard != 8947848) {
             field_d = (String) null;
           }
           if (var7 == -1) {
             var7 = this.font.ascent + this.font.descent;
           }
           var8 = Rasterizer2D.width >> 2;
-          var9 = this.font.measureText(param0);
+          var9 = this.font.measureText(text);
           var10 = this.font.descent + this.font.ascent;
           var11 = 1;
           if (var9 > var8 ||
-            param0.indexOf("<br>") != -1) {
+            text.indexOf("<br>") != -1) {
             if (var9 <= var8) {
               var12 = var8;
             } else {
@@ -533,7 +533,7 @@ final class WidgetTheme {
             if (null == BirthDateValidator.field_j) {
               BirthDateValidator.field_j = new String[16];
             }
-            var11Lifetime1 = this.font.wrapText(param0, new int[]{var12}, BirthDateValidator.field_j);
+            var11Lifetime1 = this.font.wrapText(text, new int[]{var12}, BirthDateValidator.field_j);
             var9 = 0;
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
@@ -543,29 +543,29 @@ final class WidgetTheme {
               }
             }
           }
-          var12 = param3;
+          var12 = x;
           if (var12 + var9 + var5_int > Rasterizer2D.width) {
             var12 = Rasterizer2D.width - var9 - var5_int;
           }
-          var13Lifetime1 = -this.font.capHeight + (param2 + 32);
+          var13Lifetime1 = -this.font.capHeight + (y + 32);
           if (var13Lifetime1 + var10 + var6 > Rasterizer2D.height) {
-            var13Lifetime1 = -var6 - var10 + param2;
+            var13Lifetime1 = -var6 - var10 + y;
           }
           Rasterizer2D.drawRectangle(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_j);
           Rasterizer2D.fillRectangle(var12 + 1, 1 + var13Lifetime1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_p);
-          this.font.drawParagraph(param0, this.field_h + var12, var13Lifetime1 + this.field_g, var9, var10, this.field_c, -1, 0, 0, var7);
+          this.font.drawParagraph(text, this.field_h + var12, var13Lifetime1 + this.field_g, var9, var10, this.field_c, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_29_0 = var5;
           stackIn_29_1 = new StringBuilder().append("eh.L(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(obfuscationGuard).append(',').append(y).append(',').append(x).append(')').toString());
         }
     }
 

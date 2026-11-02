@@ -39,7 +39,7 @@ final class MusicPatch extends IntrusiveNode {
           var5_int = 1;
           if (obfuscationGuard >= -48) {
             var11 = (String) null;
-            MusicPatch.a(121, (String) null, false);
+            MusicPatch.pushAccountMessageDialog(121, (String) null, false);
           }
           var6 = 0;
           var7 = null;
@@ -170,35 +170,35 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         field_o = null;
-        if (param0 < 80) {
-          MusicPatch.a((byte) -66);
+        if (obfuscationGuard < 80) {
+          MusicPatch.clearSharedReferences((byte) -66);
         }
         field_n = null;
         field_q = null;
         field_m = null;
     }
 
-    final static void a(int param0, String param1, boolean param2) {
+    final static void pushAccountMessageDialog(int obfuscationGuard, String message, boolean flag) {
         try {
-          BytePayloadSubmission.field_l = param2;
-          if (param0 != 0) {
+          BytePayloadSubmission.field_l = flag;
+          if (obfuscationGuard != 0) {
             pointerX = 121;
           }
           CanvasInputCleanup.field_g = true;
-          StrongCacheEntry.field_I = new AccountMessageDialog(ResourceArchive.field_f, FontSceneGlobals.field_a, param1, NanoGameClock.field_l, BytePayloadSubmission.field_l);
+          StrongCacheEntry.field_I = new AccountMessageDialog(ResourceArchive.field_f, FontSceneGlobals.field_a, message, NanoGameClock.field_l, BytePayloadSubmission.field_l);
           ResourceArchive.field_f.pushLayer(-80, StrongCacheEntry.field_I);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pq.D(" + obfuscationGuard + ',' + (message != null ? "{...}" : "null") + ',' + flag + ')');
         }
     }
 
-    final void c(byte param0) {
+    final void releaseSampleCodes(byte obfuscationGuard) {
         this.sampleCodes = null;
-        if (param0 != 81) {
+        if (obfuscationGuard != 81) {
           String var3 = (String) null;
-          MusicPatch.a(116, (String) null, true);
+          MusicPatch.pushAccountMessageDialog(116, (String) null, true);
         }
     }
 
@@ -463,7 +463,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt((byte) 112);
             }
-            this.pitchOffsets[var23] = (short)(this.pitchOffsets[var23] + (IntrusiveHashIterator.a(2, -1 + var22) << 14));
+            this.pitchOffsets[var23] = (short)(this.pitchOffsets[var23] + (IntrusiveHashIterator.bitwiseAnd(2, -1 + var22) << 14));
             var20Lifetime2--;
             this.sampleCodes[var23] = var22;
           }

@@ -9,16 +9,16 @@ final class CalendarMatchmakingState {
     static int[] commonYearMonthLengths;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         field_c = null;
         field_e = null;
-        if (param0 > 116) {
+        if (obfuscationGuard > 116) {
           commonYearMonthLengths = null;
           matchmakingChoiceMask = null;
           field_a = null;
           return;
         }
-        CalendarMatchmakingState.a(42);
+        CalendarMatchmakingState.clearSharedReferences(42);
         commonYearMonthLengths = null;
         matchmakingChoiceMask = null;
         field_a = null;

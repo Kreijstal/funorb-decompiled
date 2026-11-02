@@ -246,7 +246,7 @@ final class HighscoresScreen extends MenuScreen {
           for (var3 = 0; var3 < -1 + this.buttons.length; var3++) {
             var4_ref_q = this.buttons[var3];
             if (var4_ref_q.actionId == 8) {
-              stackIn_8_0 = this.e((byte) 125);
+              stackIn_8_0 = this.getActionEightLabel((byte) 125);
             } else {
               stackIn_8_0 = ArrayWidgetGroup.buttonLabels[var4_ref_q.actionId];
             }
@@ -487,9 +487,9 @@ final class HighscoresScreen extends MenuScreen {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         bzip2TraversalTable = null;
-        if (param0 != -5) {
+        if (obfuscationGuard != -5) {
           String var2 = (String) null;
           HighscoresScreen.a((String) null, -31, (String) null);
         }
@@ -563,11 +563,11 @@ final class HighscoresScreen extends MenuScreen {
         this.initializeButtons(ObjectHistoryBuffer.field_k, 0);
         this.markButton(true, 1);
         if (obfuscationGuard >= -60) {
-          HighscoresScreen.f(-46);
+          HighscoresScreen.clearSharedReferences(-46);
         }
     }
 
-    final static long a(boolean param0, CharSequence param1) {
+    final static long encodeBase37Name(boolean obfuscationGuard, CharSequence name) {
         long var2_long = 0L;
         int var4 = 0;
         int var5 = 0;
@@ -582,14 +582,14 @@ final class HighscoresScreen extends MenuScreen {
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           var2_long = 0L;
-          var4 = param1.length();
+          var4 = name.length();
           var5 = 0;
-          if (param0) {
+          if (obfuscationGuard) {
             field_w = (int[][]) null;
           }
           while (var4 > var5) {
             var2_long = var2_long * 37L;
-            var6 = param1.charAt(var5);
+            var6 = name.charAt(var5);
             if (var6 >= 65 &&
               var6 <= 90) {
               var2_long = var2_long + (long)(-65 + (1 + var6));
@@ -621,8 +621,8 @@ final class HighscoresScreen extends MenuScreen {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_25_0 = var2;
-          stackIn_25_1 = new StringBuilder().append("ah.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_25_1 = new StringBuilder().append("ah.D(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
@@ -653,8 +653,8 @@ final class HighscoresScreen extends MenuScreen {
         int var10Lifetime1;
         var12 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -38);
-        AchievementMaskRequest.a(this.screenId, 19);
-        this.a(0);
+        AchievementMaskRequest.drawHorizontallyCenteredSprite(this.screenId, 19);
+        this.drawEnabledButtons(0);
         if (QuickChatMenu.h(-26090)) {
           GzipInflater.a(550, 5, 243, 5, 140, (byte) -108, 45);
           VerticalScrollbar.a(243, DateFieldsWidget.field_N, 140, ContextActionController.field_g, -15531, 2);
@@ -662,7 +662,7 @@ final class HighscoresScreen extends MenuScreen {
         }
         GzipInflater.a(475, 5, 33, 5, 140, (byte) -101, 120);
         ContextActionController.field_g.drawCentered(CanvasResizeController.packNames[this.packIndex], 357, 1 + (-ContextActionController.field_g.xHeight + 178), 0, -1);
-        ArchiveNetworkRequest.packSelectorIcons[this.packIndex].e(565, 140, -2048, 4096);
+        ArchiveNetworkRequest.packSelectorIcons[this.packIndex].drawRotatedAboutCenter(565, 140, -2048, 4096);
         if (obfuscationGuard >= -14) {
           quickChatScrollX = -65;
         }

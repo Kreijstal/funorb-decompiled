@@ -15,17 +15,17 @@ final class LevelResultSubmission extends IntrusiveNode {
     static String field_q;
     static String field_s;
 
-    static int a(int param0, int param1) {
+    static int bitwiseXor(int left, int right) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          stackIn_1_0 = param0 ^ param1;
+          stackIn_1_0 = left ^ right;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "pn.D(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "pn.D(" + left + ',' + right + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                 if (PasswordValidator.field_n.pressedButton != 0 &&
                   var9 > PasswordValidator.field_n.pressLocalX &&
                   !TextWidgetRenderer.field_e) {
-                  LevelPackLoader.a(param0 ^ -13455);
+                  LevelPackLoader.resetQuickChatToDefaultMenu(param0 ^ -13455);
                 }
               }
             }
@@ -166,7 +166,7 @@ final class LevelResultSubmission extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         try {
           spaceMidSprite = null;
           field_s = null;
@@ -174,30 +174,30 @@ final class LevelResultSubmission extends IntrusiveNode {
           field_q = null;
           field_o = null;
           field_j = null;
-          if (param0 != -17432) {
-            LevelResultSubmission.a(-11);
+          if (obfuscationGuard != -17432) {
+            LevelResultSubmission.clearSharedReferences(-11);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pn.C(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pn.C(" + obfuscationGuard + ')');
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void configureChatHistory(int obfuscationGuard, int categoryLimit) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          WidgetTheme.chatHistoryCategoryLimit = param1;
+          WidgetTheme.chatHistoryCategoryLimit = categoryLimit;
           BubbleDistortion.chatHistoryCategoryCounts = new int[3];
           ScrollPane.chatHistorySize = 0;
-          if (param0 > -4) {
+          if (obfuscationGuard > -4) {
             LevelResultSubmission.c(104);
           }
-          UnderwaterBackground.chatHistory = new ChatMessage[param1 * 15];
+          UnderwaterBackground.chatHistory = new ChatMessage[categoryLimit * 15];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "pn.A(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "pn.A(" + obfuscationGuard + ',' + categoryLimit + ')');
         }
     }
 

@@ -63,12 +63,12 @@ final class MotionWaypoint extends MovingBody {
         String var2Lifetime1;
         if (param0 < -45) {
           var2 = (String) null;
-          Mesh3D.a(true, (String) null, "");
+          Mesh3D.transitionToLoginPanel(true, (String) null, "");
           return;
         }
         field_s = (UiComponent) null;
         var2Lifetime1 = (String) null;
-        Mesh3D.a(true, (String) null, "");
+        Mesh3D.transitionToLoginPanel(true, (String) null, "");
     }
 
     final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
@@ -98,8 +98,8 @@ final class MotionWaypoint extends MovingBody {
         }
     }
 
-    public static void e(int param0) {
-        int var1 = -7 / ((param0 - 17) / 34);
+    public static void clearSharedReferences(int obfuscationGuard) {
+        int var1 = -7 / ((obfuscationGuard - 17) / 34);
         field_s = null;
         halloweenMoonSprite = null;
         field_r = (boolean[][]) null;
