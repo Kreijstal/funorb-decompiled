@@ -123,15 +123,15 @@ final class SocialListPanel extends SceneWidget {
     }
 
     final static void b(boolean param0) {
-        PacketBuffer.field_o.a(0, 0, 18, 0, fl.field_c.field_zb - (MenuInputState.field_p ? 2 + ReflectionCheck.field_G + 42 : 0));
+        PacketBuffer.field_o.a(0, 0, 18, 0, TeamColourTinter.field_c.field_zb - (MenuInputState.field_p ? 2 + ReflectionCheck.field_G + 42 : 0));
         if (!param0) {
           field_ec = (SceneWidget) null;
-          uj.field_j.a(0, 0, 18, -2 + (fl.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
-          TabbedPanel.field_Sb.a(fl.field_c.field_zb, -2048, ReflectionCheck.field_G, -20 + fl.field_c.field_Lb, 2, 0, 20);
+          uj.field_j.a(0, 0, 18, -2 + (TeamColourTinter.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
+          TabbedPanel.field_Sb.a(TeamColourTinter.field_c.field_zb, -2048, ReflectionCheck.field_G, -20 + TeamColourTinter.field_c.field_Lb, 2, 0, 20);
           return;
         }
-        uj.field_j.a(0, 0, 18, -2 + (fl.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
-        TabbedPanel.field_Sb.a(fl.field_c.field_zb, -2048, ReflectionCheck.field_G, -20 + fl.field_c.field_Lb, 2, 0, 20);
+        uj.field_j.a(0, 0, 18, -2 + (TeamColourTinter.field_c.field_zb - ReflectionCheck.field_G - 40), 42 + ReflectionCheck.field_G);
+        TabbedPanel.field_Sb.a(TeamColourTinter.field_c.field_zb, -2048, ReflectionCheck.field_G, -20 + TeamColourTinter.field_c.field_Lb, 2, 0, 20);
     }
 
     static {

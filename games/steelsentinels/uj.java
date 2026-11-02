@@ -78,9 +78,9 @@ final class uj {
             var10 = SoftwareRaster.field_c;
             var11 = SoftwareRaster.field_j;
             var30 = new int[4];
-            SoftwareRaster.b(var30);
+            SoftwareRaster.getClip(var30);
             param6.bindRasterTarget();
-            SoftwareRaster.h(var30[0], var30[1], var30[2], var30[3]);
+            SoftwareRaster.intersectClip(var30[0], var30[1], var30[2], var30[3]);
             var13 = param1 + param2 * param6.field_A;
             var14 = -param7 + param6.field_A;
             var26 = var22.field_E;
@@ -105,7 +105,7 @@ final class uj {
             }
             var22.a(-param6.field_D, -param6.field_H);
             SoftwareRaster.setTarget(var31, var10, var11);
-            SoftwareRaster.a(var30);
+            SoftwareRaster.setClip(var30);
             return;
           }
           return;
@@ -261,7 +261,7 @@ final class uj {
                       param1.writeByte((byte) 111, 4);
                     } else {
                       param1.writeByte((byte) 108, 2);
-                      param1.a((String) (var10), -120);
+                      param1.writeString((String) (var10), -120);
                     }
                   } else {
                     if (4 == var6_int) {

@@ -58,7 +58,7 @@ final class rn extends IntrusiveNode {
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.writeByte((byte) 124, 3);
-          var5.a(param2, -121);
+          var5.writeString(param2, -121);
           var5.backpatchByteLength((byte) 116, var5.position - var6);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);

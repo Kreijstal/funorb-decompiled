@@ -1367,7 +1367,7 @@ final class Projectile extends DualNode {
             this.sourceWeaponType != 35 &&
             this.sourceWeaponType != 4) {
             SoftwareRaster.e(param5, param1, param3 - 1, 16777215);
-            SoftwareRaster.c(param5, param1, param3 - 1, param6);
+            SoftwareRaster.drawCircleOutline(param5, param1, param3 - 1, param6);
           }
           if (param4 <= param0) {
             param5 = param5 << 16;

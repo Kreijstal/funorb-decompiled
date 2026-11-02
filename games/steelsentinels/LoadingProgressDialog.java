@@ -155,7 +155,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         super.a(param0, param1, param2);
         gf.field_d.drawCentered(this.field_qb, param0 + (this.field_x >> 1), 103 + param1, 16777215, -1);
         if (null != this.field_jb) {
-          SoftwareRaster.g(20 + param0, -7 + param1 + 120, 260, 8421504);
+          SoftwareRaster.drawHorizontalLine(20 + param0, -7 + param1 + 120, 260, 8421504);
           gf.field_d.a(this.field_jb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, gf.field_d.field_G);
         }
     }

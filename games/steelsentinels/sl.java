@@ -41,8 +41,8 @@ final class sl {
             var8 = param0[1].field_z;
             param0[0].drawWithOpacity(param3, param2, param4);
             param0[2].drawWithOpacity(param1 + param3 - var7, param2, param4);
-            SoftwareRaster.b(RasterSnapshot.field_v);
-            SoftwareRaster.h(var6_int + param3, param2, -var7 + param3 + param1, param2 + param0[1].field_B);
+            SoftwareRaster.getClip(RasterSnapshot.field_v);
+            SoftwareRaster.intersectClip(var6_int + param3, param2, -var7 + param3 + param1, param2 + param0[1].field_B);
             var9 = param3 + var6_int;
             var10 = -var7 + (param3 + param1);
             if (param5 > -64) {
@@ -51,7 +51,7 @@ final class sl {
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
               param0[1].drawWithOpacity(param3, param2, param4);
             }
-            SoftwareRaster.a(RasterSnapshot.field_v);
+            SoftwareRaster.setClip(RasterSnapshot.field_v);
             return;
           }
           return;

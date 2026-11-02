@@ -142,7 +142,7 @@ final class qf {
           TabbedPanel.field_cc = param5;
         }
         jm.field_r[DelayedServerPacket.field_z] = param2;
-        ne.field_G[DelayedServerPacket.field_z] = param0;
+        FallingPickup.field_G[DelayedServerPacket.field_z] = param0;
         Sentinel.field_T[DelayedServerPacket.field_z] = param4;
         if (param3 > 36) {
           var6 = param4 + param0 + param2;

@@ -21,7 +21,7 @@ final class AudioService implements Runnable {
           return;
         }
         if (param0 == -2) {
-          SoftwareRaster.b();
+          SoftwareRaster.clear();
           return;
         }
         if (param1) {

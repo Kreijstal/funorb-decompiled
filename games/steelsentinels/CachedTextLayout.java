@@ -41,7 +41,7 @@ final class CachedTextLayout extends TextLayout {
           }
           var1_int = 255;
           for (var2 = 0; var2 < 50; var2++) {
-            SoftwareRaster.c(0, var2, 640, 1052688, var1_int);
+            SoftwareRaster.drawHorizontalLineAlpha(0, var2, 640, 1052688, var1_int);
             var1_int -= 5;
           }
           return;

@@ -75,7 +75,7 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final static int j(int param0) {
         ByteStorage.field_c.a(false);
-        if (!ne.field_N.d((byte) 125)) {
+        if (!FallingPickup.field_N.d((byte) 125)) {
           return IconTextComponent.d((byte) -107);
         }
         if (param0 <= 9) {

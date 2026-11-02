@@ -4662,7 +4662,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.a(param0 + 64, "missionprogresstxt");
                 if (null != var2) {
-                  ne.field_J = IntKeyLookup.a(param0 + 13, var2);
+                  FallingPickup.field_J = IntKeyLookup.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 103, "missioncurtime");
                 if (null != var2) {

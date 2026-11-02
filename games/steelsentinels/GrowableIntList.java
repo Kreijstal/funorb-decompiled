@@ -141,12 +141,12 @@ final class GrowableIntList {
               sa.field_f[0].field_b = null;
               sa.field_f[0].field_g = field_l;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                sa.field_f[var8_int].field_g = var28.h(1);
+                sa.field_f[var8_int].field_g = var28.readString(1);
                 sa.field_f[var8_int].field_d = false;
                 if (var28.readUnsignedByte((byte) -99) != 1) {
                   sa.field_f[var8_int].field_b = null;
                 } else {
-                  sa.field_f[var8_int].field_b = var28.h(1);
+                  sa.field_f[var8_int].field_b = var28.readString(1);
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -170,7 +170,7 @@ final class GrowableIntList {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var28.readUnsignedByte((byte) -58);
                   var21 = sa.field_f[var20].field_g;
-                  var22 = var28.g((byte) -97);
+                  var22 = var28.readLong((byte) -97);
                   var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
@@ -219,7 +219,7 @@ final class GrowableIntList {
           }
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort((byte) -60);
-            var4_long = var28.g((byte) -122);
+            var4_long = var28.readLong((byte) -122);
             var6_ref_tc = (tc) (MidiPcmStream.field_B.first(13058));
             while (var6_ref_tc != null) {
               if (var6_ref_tc.field_p != var3Lifetime1) {
@@ -271,9 +271,9 @@ final class GrowableIntList {
           ih.field_n = param1;
           sh.field_a = param6;
           EditableTextWidget.field_ib = param7;
-          ne.field_N = (Js5Transport) ((Object) new SocketJs5Transport());
+          FallingPickup.field_N = (Js5Transport) ((Object) new SocketJs5Transport());
           hk.field_oc = new DiskCacheWorker(param4);
-          ByteStorage.field_c = new Js5ArchiveManager(ne.field_N, hk.field_oc);
+          ByteStorage.field_c = new Js5ArchiveManager(FallingPickup.field_N, hk.field_oc);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "g.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

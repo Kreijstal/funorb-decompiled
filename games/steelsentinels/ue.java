@@ -11,19 +11,19 @@ final class ue {
     static SceneWidget field_f;
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        ne.field_y.position = 0;
-        ne.field_y.writeByte((byte) 122, 12);
-        ne.field_y.writeInt(param3, rb.field_g.nextInt());
-        ne.field_y.writeInt(true, rb.field_g.nextInt());
-        ne.field_y.writeByte((byte) 121, param0);
-        ne.field_y.writeByte((byte) 109, param2);
-        ne.field_y.writeShort(param1, 59);
-        ne.field_y.a(qe.field_d, AccountNoticeDialog.field_ib, -10048);
+        FallingPickup.field_y.position = 0;
+        FallingPickup.field_y.writeByte((byte) 122, 12);
+        FallingPickup.field_y.writeInt(param3, rb.field_g.nextInt());
+        FallingPickup.field_y.writeInt(true, rb.field_g.nextInt());
+        FallingPickup.field_y.writeByte((byte) 121, param0);
+        FallingPickup.field_y.writeByte((byte) 109, param2);
+        FallingPickup.field_y.writeShort(param1, 59);
+        FallingPickup.field_y.rsaEncryptContents(qe.field_d, AccountNoticeDialog.field_ib, -10048);
         mm.field_g.writeCipheredOpcode(18, (byte) -117);
         int fieldTemp$0 = mm.field_g.position + 1;
         mm.field_g.position = mm.field_g.position + 1;
         int var4 = fieldTemp$0;
-        mm.field_g.writeBytes(ne.field_y.position, (byte) -122, 0, ne.field_y.payload);
+        mm.field_g.writeBytes(FallingPickup.field_y.position, (byte) -122, 0, FallingPickup.field_y.payload);
         mm.field_g.backpatchByteLength((byte) 89, -var4 + mm.field_g.position);
     }
 

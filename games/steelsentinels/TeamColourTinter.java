@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl {
+final class TeamColourTinter {
     static int field_a;
     static SceneWidget field_b;
     static int field_d;
     static SceneWidget field_c;
     static SceneWidget field_e;
 
-    final static void a(int param0, Sentinel param1, byte param2, int param3, int param4, int param5) {
+    final static void tintGreyPixels(int param0, Sentinel param1, byte param2, int param3, int param4, int param5) {
         int var7 = 0;
         int var8 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -27,7 +27,7 @@ final class fl {
           var6_int = Checkbox.field_bb.field_c * param5;
           if (param2 >= -90) {
             var13 = (Sentinel) null;
-            fl.a(48, (Sentinel) null, (byte) -79, 76, -55, -81);
+            TeamColourTinter.tintGreyPixels(48, (Sentinel) null, (byte) -79, 76, -55, -81);
           }
           for (var7 = param5; var7 < param5 + param3; var7++) {
             for (var8 = param4; var8 < param4 + param0; var8++) {
@@ -79,7 +79,7 @@ final class fl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 27) {
-            fl.a((byte) -76, true);
+            TeamColourTinter.a((byte) -76, true);
           }
           stackIn_3_0 = EmailCredentials.a(PcmSampleStream.createAtRatePercent(param1, 100, param2), -48);
           return stackIn_3_0;

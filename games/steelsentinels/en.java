@@ -48,7 +48,7 @@ final class en {
           if (param0 > -77) {
             en.a(-66);
           }
-          SoftwareRaster.b();
+          SoftwareRaster.clear();
           wn.a(0, true);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "en.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

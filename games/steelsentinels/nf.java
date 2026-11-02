@@ -140,8 +140,8 @@ final class nf {
           }
           MusicPatchNode.field_H.position = 0;
           MusicPatchNode.field_H.writeBytes(param4, (byte) -122, param3, param6);
-          MusicPatchNode.field_H.b(-2, var7_int);
-          MusicPatchNode.field_H.a(var14, -108);
+          MusicPatchNode.field_H.padToPosition(-2, var7_int);
+          MusicPatchNode.field_H.xteaEncryptAll(var14, -108);
           if (MusicCrossfadeStream.field_u == null ||
             !(MusicCrossfadeStream.field_u.payload.length >= 100)) {
             MusicCrossfadeStream.field_u = new PacketBuffer(100);
@@ -159,7 +159,7 @@ final class nf {
             var12++;
           }
           MusicCrossfadeStream.field_u.writeShort(param4, 17);
-          MusicCrossfadeStream.field_u.a(param2, param5, -10048);
+          MusicCrossfadeStream.field_u.rsaEncryptContents(param2, param5, -10048);
           param1.writeBytes(MusicCrossfadeStream.field_u.position, (byte) -122, 0, MusicCrossfadeStream.field_u.payload);
           param1.writeBytes(MusicPatchNode.field_H.position, (byte) -122, 0, MusicPatchNode.field_H.payload);
           return;

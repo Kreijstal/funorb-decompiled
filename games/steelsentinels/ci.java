@@ -121,7 +121,7 @@ final class ci {
           var9Lifetime1 = var17.field_F;
           ArchiveIndex.a(false);
           var17.bindRasterTarget();
-          SoftwareRaster.b(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
+          SoftwareRaster.desaturateRectangle(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
           var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.bindRasterTarget();

@@ -27,7 +27,7 @@ final class ArchiveIndex {
     int[][] fileIds;
 
     final static void a(boolean param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (sl.field_b.c(-6533));
+        RasterSnapshot var1 = (RasterSnapshot) (sl.field_b.removeLast(-6533));
         if (var1 == null) {
           var1 = new RasterSnapshot();
         }

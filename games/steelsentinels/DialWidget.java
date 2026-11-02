@@ -157,11 +157,11 @@ final class DialWidget extends TextButton {
           var13 = var9.copySprite();
           var10 = var13;
           var13.bindRasterTarget();
-          SoftwareRaster.g(0, 0, 5, 0);
-          SoftwareRaster.g(0, 1, 3, 0);
-          SoftwareRaster.g(0, 2, 2, 0);
-          SoftwareRaster.g(0, 3, 1, 0);
-          SoftwareRaster.g(0, 4, 1, 0);
+          SoftwareRaster.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRaster.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRaster.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRaster.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRaster.drawHorizontalLine(0, 4, 1, 0);
         }
         if (param3 >= -7) {
           field_X = true;
@@ -170,11 +170,11 @@ final class DialWidget extends TextButton {
           var14 = var9.copySprite();
           var11 = var14;
           var14.bindRasterTarget();
-          SoftwareRaster.g(11, 0, 5, 0);
-          SoftwareRaster.g(13, 1, 3, 0);
-          SoftwareRaster.g(14, 2, 2, 0);
-          SoftwareRaster.g(15, 3, 1, 0);
-          SoftwareRaster.g(15, 4, 1, 0);
+          SoftwareRaster.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRaster.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRaster.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRaster.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRaster.drawHorizontalLine(15, 4, 1, 0);
         }
         SoftwareRaster.setTarget(var16, var7, var8);
         return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
@@ -336,7 +336,7 @@ final class DialWidget extends TextButton {
             stackIn_12_0 = SocketConnector.a(bd.field_a, -75, new String[]{param0});
             return stackIn_12_0;
           }
-          Sprite.field_c.a((byte) 125, (IntrusiveNode) (var8));
+          Sprite.field_c.traverseFrom((byte) 125, (IntrusiveNode) (var8));
           while (true) {
             var7 = (SocialListEntry) (Sprite.field_c.next((byte) -102));
             if (var7 != null) {
@@ -353,7 +353,7 @@ final class DialWidget extends TextButton {
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.writeByte((byte) 110, 1);
-          var9.a(param0, -61);
+          var9.writeString(param0, -61);
           var9.backpatchByteLength((byte) -53, -var5 + var9.position);
           stackIn_18_0 = null;
           return (String) (stackIn_18_0);

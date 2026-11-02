@@ -100,7 +100,7 @@ final class SentinelAnimationEditor {
           }
           this.field_s = -1;
           Js5NetworkRequest.field_J[this.field_b].bindRasterTarget();
-          SoftwareRaster.b();
+          SoftwareRaster.clear();
           this.field_l.field_r = this.field_b;
           this.field_l.field_J = this.field_b;
           this.field_l.f(this.field_n, param0 ^ -27248);
@@ -111,7 +111,7 @@ final class SentinelAnimationEditor {
           -1 != this.field_f) {
           ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b][this.field_f] = this.field_o;
           Js5NetworkRequest.field_J[this.field_b].bindRasterTarget();
-          SoftwareRaster.b();
+          SoftwareRaster.clear();
           this.field_l.field_J = this.field_b;
           this.field_l.field_r = this.field_b;
           this.field_l.f(this.field_n, 22742);
@@ -402,7 +402,7 @@ final class SentinelAnimationEditor {
           }
           ModalStack.field_G[o.a((byte) 84, this.field_n)][this.field_b][this.field_w] = this.field_r;
           Js5NetworkRequest.field_J[this.field_b].bindRasterTarget();
-          SoftwareRaster.b();
+          SoftwareRaster.clear();
           this.field_l.field_r = this.field_b;
           this.field_l.field_J = this.field_b;
           this.field_l.f(this.field_n, 22742);
@@ -482,7 +482,7 @@ final class SentinelAnimationEditor {
         var11 = SteelSentinels.obfuscationControl;
         if (null != ModalStack.field_G[o.a((byte) 84, this.field_n)] &&
           ModalStack.field_G[o.a((byte) 84, this.field_n)][25] != null) {
-          SoftwareRaster.a(0, 0, 640, 380, 0);
+          SoftwareRaster.fillRectangle(0, 0, 640, 380, 0);
           SoftwareRaster.setClip(0, 0, 640, 396);
           var4 = this.field_w;
           this.field_w = param0;
@@ -513,14 +513,14 @@ final class SentinelAnimationEditor {
             var7_int = 48;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               if (this.field_l.animatedParts.length > var8Lifetime3) {
-                SoftwareRaster.d(var2, var3, 2 * var7_int, 16777215);
-                SoftwareRaster.g(var2 - 3, var3 + var7_int, 7, 16777215);
+                SoftwareRaster.drawVerticalLine(var2, var3, 2 * var7_int, 16777215);
+                SoftwareRaster.drawHorizontalLine(var2 - 3, var3 + var7_int, 7, 16777215);
                 var9 = var7_int * var5_ref_int__[var8Lifetime3] / 17763 + (var7_int + var3);
                 var10 = 16777215;
                 if (var5_ref_int__[var8Lifetime3] == 0) {
                   var10 = 26248;
                 }
-                SoftwareRaster.c(var2, var9, 5, var10);
+                SoftwareRaster.drawCircleOutline(var2, var9, 5, var10);
                 if ((WeightedLruCache.field_d == 0 ||
                   var8Lifetime3 == var4) && (-5 + var2 <= oh.field_f &&
                   5 + var2 >= oh.field_f &&
@@ -537,15 +537,15 @@ final class SentinelAnimationEditor {
                   if (this.field_r == 0) {
                     var10 = 26248;
                   }
-                  SoftwareRaster.c(var2, var9, 6, var10);
+                  SoftwareRaster.drawCircleOutline(var2, var9, 6, var10);
                 }
               } else {
                 if (var6 - 2 != var8Lifetime3) {
                   if (var8Lifetime3 == -1 + var6) {
-                    SoftwareRaster.g(var2, var3, var7_int * 2, 16777215);
-                    SoftwareRaster.d(var7_int + var2, var3 - 3, 7, 16746496);
+                    SoftwareRaster.drawHorizontalLine(var2, var3, var7_int * 2, 16777215);
+                    SoftwareRaster.drawVerticalLine(var7_int + var2, var3 - 3, 7, 16746496);
                     var9 = var7_int * var5_ref_int__[var8Lifetime3] / 2500 + var7_int + var2;
-                    SoftwareRaster.c(var9, var3, 5, 16746496);
+                    SoftwareRaster.drawCircleOutline(var9, var3, 5, 16746496);
                     if ((WeightedLruCache.field_d == 0 ||
                       var8Lifetime3 == var4) && (oh.field_f >= var2 &&
                       var7_int * 2 + var2 >= oh.field_f &&
@@ -556,14 +556,14 @@ final class SentinelAnimationEditor {
                       if (Math.abs(-var2 + oh.field_f - var7_int) <= 1) {
                         this.field_r = 0;
                       }
-                      SoftwareRaster.c(var9, var3, 6, 16746496);
+                      SoftwareRaster.drawCircleOutline(var9, var3, 6, 16746496);
                     }
                   }
                 } else {
-                  SoftwareRaster.d(var2, var3, 2 * var7_int, 16777215);
-                  SoftwareRaster.g(-3 + var2, var3 + var7_int, 7, 16746496);
+                  SoftwareRaster.drawVerticalLine(var2, var3, 2 * var7_int, 16777215);
+                  SoftwareRaster.drawHorizontalLine(-3 + var2, var3 + var7_int, 7, 16746496);
                   var9 = var7_int * var5_ref_int__[var8Lifetime3] / 2500 + var3 + var7_int;
-                  SoftwareRaster.c(var2, var9, 5, 16746496);
+                  SoftwareRaster.drawCircleOutline(var2, var9, 5, 16746496);
                   if ((WeightedLruCache.field_d == 0 ||
                     var4 == var8Lifetime3) && (oh.field_f >= -5 + var2 &&
                     5 + var2 >= oh.field_f &&
@@ -574,7 +574,7 @@ final class SentinelAnimationEditor {
                     if (1 >= Math.abs(-var3 + DelegatingCanvas.field_c - var7_int)) {
                       this.field_r = 0;
                     }
-                    SoftwareRaster.c(var2, var9, 6, 16746496);
+                    SoftwareRaster.drawCircleOutline(var2, var9, 6, 16746496);
                   }
                 }
               }
@@ -585,10 +585,10 @@ final class SentinelAnimationEditor {
           var3Lifetime1 = 380;
           if (this.field_t == jh.field_d) {
             for (var5 = 0; var5 < 64; var5++) {
-              SoftwareRaster.d(var2Lifetime1 - (64 - (1 & var5)), var3Lifetime1 - (-64 - var5 / 2), (1 & var5) + 128 + var2Lifetime1, var5 / 2 + (-128 + var3Lifetime1), 3351057);
+              SoftwareRaster.drawLine(var2Lifetime1 - (64 - (1 & var5)), var3Lifetime1 - (-64 - var5 / 2), (1 & var5) + 128 + var2Lifetime1, var5 / 2 + (-128 + var3Lifetime1), 3351057);
             }
           } else {
-            SoftwareRaster.a(-128 + var2Lifetime1, var3Lifetime1, 257, 64, 3351057);
+            SoftwareRaster.fillRectangle(-128 + var2Lifetime1, var3Lifetime1, 257, 64, 3351057);
           }
           var5Lifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][0];
           var6Lifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][1];
@@ -597,9 +597,9 @@ final class SentinelAnimationEditor {
             var6Lifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][6];
           }
           if (this.field_t == wb.field_g) {
-            SoftwareRaster.f(var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
-            SoftwareRaster.f(-64 + var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
-            SoftwareRaster.f(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
+            SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
+            SoftwareRaster.drawVerticalLineAlpha(-64 + var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
+            SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
             var7_intLifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3];
             SoftwareRaster.b(var2Lifetime1 - this.field_g * ((this.field_b - 1) * var5Lifetime1) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 1) * 256 / var7_intLifetime1);
             SoftwareRaster.b(var2Lifetime1 - (var5Lifetime1 * (this.field_b - 1) * this.field_g / var6Lifetime1 + this.field_g * (var5Lifetime1 * var7_intLifetime1) / (var6Lifetime1 * 2)), var3Lifetime1 + 7, 7, 16711680, 128);
@@ -609,9 +609,9 @@ final class SentinelAnimationEditor {
             if (jh.field_d != this.field_t) {
               SoftwareRaster.e(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
             } else {
-              SoftwareRaster.f(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
-              SoftwareRaster.f(var2Lifetime1 - 64, var3Lifetime1 - 192, 192, 16777215, 64);
-              SoftwareRaster.f(var2Lifetime1 + 64, var3Lifetime1 - 192, 192, 16777215, 64);
+              SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
+              SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 - 64, var3Lifetime1 - 192, 192, 16777215, 64);
+              SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 + 64, var3Lifetime1 - 192, 192, 16777215, 64);
               var7_intLifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7];
               var8Lifetime1 = this.field_g * var5Lifetime1 * (this.field_b - 17) / var6Lifetime1;
               SoftwareRaster.b(-var8Lifetime1 + var2Lifetime1, var8Lifetime1 + 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 17) * 256 / var7_intLifetime1);
@@ -627,12 +627,12 @@ final class SentinelAnimationEditor {
           var2Lifetime1 += 320;
           if (this.field_t == jh.field_d) {
             for (var7_intLifetime2 = 0; var7_intLifetime2 < 64; var7_intLifetime2++) {
-              SoftwareRaster.d((1 & var7_intLifetime2) + (var2Lifetime1 - 64), 64 + (var3Lifetime1 + var7_intLifetime2 / 2), 128 + (var2Lifetime1 + (1 & var7_intLifetime2)), var3Lifetime1 + (-128 + var7_intLifetime2 / 2), 3351057);
+              SoftwareRaster.drawLine((1 & var7_intLifetime2) + (var2Lifetime1 - 64), 64 + (var3Lifetime1 + var7_intLifetime2 / 2), 128 + (var2Lifetime1 + (1 & var7_intLifetime2)), var3Lifetime1 + (-128 + var7_intLifetime2 / 2), 3351057);
             }
           } else {
-            SoftwareRaster.a(-128 + var2Lifetime1, var3Lifetime1, 257, 64, 3351057);
+            SoftwareRaster.fillRectangle(-128 + var2Lifetime1, var3Lifetime1, 257, 64, 3351057);
           }
-          SoftwareRaster.c();
+          SoftwareRaster.resetClip();
           if (this.field_t == wb.field_g) {
             SoftwareRaster.setClip(var2Lifetime1 - 128, 130, 128 + var2Lifetime1, var3Lifetime1);
             if (0 > this.field_w ||
@@ -641,18 +641,18 @@ final class SentinelAnimationEditor {
             }
             if (ja.field_i == this.field_p) {
               var7_intLifetime3 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3];
-              SoftwareRaster.f(var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
-              SoftwareRaster.f(var2Lifetime1 - 64, -192 + var3Lifetime1, 192, 16777215, 64);
-              SoftwareRaster.f(64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
+              SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
+              SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 - 64, -192 + var3Lifetime1, 192, 16777215, 64);
+              SoftwareRaster.drawVerticalLineAlpha(64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
               SoftwareRaster.setClip(-128 + var2Lifetime1, 0, 128 + var2Lifetime1, 480);
               var2Lifetime1 = var2Lifetime1 - this.field_g * var5Lifetime1 * (-50 + this.field_l.field_mb) / (50 * var6Lifetime1);
               SoftwareRaster.b(var2Lifetime1 - this.field_g * (var5Lifetime1 * (this.field_l.field_r - 1)) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, -(256 * (this.field_l.field_r - 1) / var7_intLifetime3) + 255);
               SoftwareRaster.b(-(this.field_g * (var7_intLifetime3 * var5Lifetime1) / (var6Lifetime1 * 2)) + var2Lifetime1 - var5Lifetime1 * (this.field_l.field_r - 1) * this.field_g / var6Lifetime1, 7 + var3Lifetime1, 7, 16711680, 128);
               SoftwareRaster.b(-((-var7_intLifetime3 + (this.field_l.field_r - 1)) * (var5Lifetime1 * this.field_g) / var6Lifetime1) + var2Lifetime1, 7 + var3Lifetime1, 7, 16777215, (-256 + 256 * (this.field_l.field_r - var7_intLifetime3)) / var7_intLifetime3 + 255);
               SoftwareRaster.b(var2Lifetime1 - this.field_g * (-var7_intLifetime3 + this.field_l.field_r - 1) * var5Lifetime1 / var6Lifetime1 - this.field_g * (var5Lifetime1 * var7_intLifetime3) / (2 * var6Lifetime1), 7 + var3Lifetime1, 7, 16711680, 128);
-              SoftwareRaster.c();
+              SoftwareRaster.resetClip();
             }
-            SoftwareRaster.c();
+            SoftwareRaster.resetClip();
           } else {
             if (this.field_t == jh.field_d) {
               SoftwareRaster.setClip(-128 + var2Lifetime1, 130, var2Lifetime1 + 128, var3Lifetime1);
@@ -662,9 +662,9 @@ final class SentinelAnimationEditor {
               }
               if (ja.field_i == this.field_p) {
                 var7_intLifetime3 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7];
-                SoftwareRaster.f(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
-                SoftwareRaster.f(-64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
-                SoftwareRaster.f(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
+                SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
+                SoftwareRaster.drawVerticalLineAlpha(-64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
+                SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
                 SoftwareRaster.setClip(-128 + var2Lifetime1, 0, var2Lifetime1 + 128, 480);
                 var2Lifetime1 = var2Lifetime1 - this.field_g * ((this.field_l.field_mb - 50) * var5Lifetime1) / (50 * var6Lifetime1);
                 var3Lifetime1 = var3Lifetime1 + var5Lifetime1 * (this.field_l.field_mb - 50) * this.field_g / (var6Lifetime1 * 50);
@@ -676,12 +676,12 @@ final class SentinelAnimationEditor {
                 SoftwareRaster.b(-var8Lifetime2Lifetime2 + var2Lifetime1, var3Lifetime1 + 7 + var8Lifetime2Lifetime2, 7, 16777215, 255 + 256 * (this.field_l.field_r - (var7_intLifetime3 + 17)) / var7_intLifetime3);
                 var8Lifetime2Lifetime3 = this.field_g * var5Lifetime1 * (-var7_intLifetime3 + (this.field_l.field_r - 17)) / var6Lifetime1 - this.field_g * (var5Lifetime1 * var7_intLifetime3) / (2 * var6Lifetime1);
                 SoftwareRaster.b(var2Lifetime1 - var8Lifetime2Lifetime3, var8Lifetime2Lifetime3 + (var3Lifetime1 + 7), 7, 16711680, 128);
-                SoftwareRaster.c();
+                SoftwareRaster.resetClip();
               }
-              SoftwareRaster.c();
+              SoftwareRaster.resetClip();
             } else {
               SoftwareRaster.setClip(-128 + var2Lifetime1, 130, 128 + var2Lifetime1, var3Lifetime1);
-              SoftwareRaster.c();
+              SoftwareRaster.resetClip();
               SoftwareRaster.e(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
             }
           }

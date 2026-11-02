@@ -296,7 +296,7 @@ final class ak {
             var12 = ((BitmapFont) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_7_6, stackIn_7_7, stackIn_8_8, 0, 0);
             var11 = var11 + (4 + (((BitmapFont) ((Object) var10)).field_W * var12 + 3));
           }
-          SoftwareRaster.h(param4, param1, param3, -param1 + var11, param7);
+          SoftwareRaster.drawRectangleOutline(param4, param1, param3, -param1 + var11, param7);
           var12Lifetime1 = 100;
           var13 = 30;
           if (param8 != null &&

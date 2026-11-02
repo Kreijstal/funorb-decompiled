@@ -187,7 +187,7 @@ abstract class ModalPanel extends UiContainer {
         if (lc.field_b == null) {
           lc.field_b = new RgbSprite(this.field_x, this.field_E);
           IterableNodeHashTable.a(lc.field_b, (byte) -103);
-          SoftwareRaster.b();
+          SoftwareRaster.clear();
           this.a(0, 0, true);
           super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(111);
@@ -197,7 +197,7 @@ abstract class ModalPanel extends UiContainer {
         if (this.field_x > lc.field_b.field_A) {
           lc.field_b = new RgbSprite(this.field_x, this.field_E);
           IterableNodeHashTable.a(lc.field_b, (byte) -103);
-          SoftwareRaster.b();
+          SoftwareRaster.clear();
           this.a(0, 0, true);
           super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(111);
@@ -207,7 +207,7 @@ abstract class ModalPanel extends UiContainer {
         if (lc.field_b.field_F < this.field_E) {
           lc.field_b = new RgbSprite(this.field_x, this.field_E);
           IterableNodeHashTable.a(lc.field_b, (byte) -103);
-          SoftwareRaster.b();
+          SoftwareRaster.clear();
           this.a(0, 0, true);
           super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(111);
@@ -215,7 +215,7 @@ abstract class ModalPanel extends UiContainer {
           return;
         }
         IterableNodeHashTable.a(lc.field_b, (byte) -103);
-        SoftwareRaster.b();
+        SoftwareRaster.clear();
         this.a(0, 0, true);
         super.drawLayer(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
         MatchingTextValidator.$cfr$intArgs$f$20d51497949f(111);

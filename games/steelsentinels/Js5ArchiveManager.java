@@ -31,7 +31,7 @@ final class Js5ArchiveManager {
           for (var11 = param7; var11 < param8 + param7; var11++) {
             var9_int = (param1 - param4) * (-param7 + var11) / param8 + param4;
             var10 = param3 + (-param7 + var11) * (-param3 + param5) / param8;
-            SoftwareRaster.c(param6, var11, param0, var9_int, var10);
+            SoftwareRaster.drawHorizontalLineAlpha(param6, var11, param0, var9_int, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

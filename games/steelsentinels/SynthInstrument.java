@@ -276,7 +276,7 @@ final class SynthInstrument {
             break;
           }
           this.field_d[var3] = var4;
-          this.field_x[var3] = param0.f(69);
+          this.field_x[var3] = param0.readSignedSmart(69);
           this.field_q[var3] = param0.readUnsignedSmart(false);
         }
         this.field_o = param0.readUnsignedSmart(false);

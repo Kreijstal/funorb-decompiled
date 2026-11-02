@@ -217,8 +217,8 @@ final class rg {
           if (param0 != 30) {
             field_b = (ak) null;
           }
-          SoftwareRaster.h(243, 197, 369, 143, 16777215);
-          SoftwareRaster.a(244, 198, 367, 141, 0);
+          SoftwareRaster.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRaster.fillRectangle(244, 198, 367, 141, 0);
           if (Explosion.field_S == null) {
             if (null != wn.field_a) {
               wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

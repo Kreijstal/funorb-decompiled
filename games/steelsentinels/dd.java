@@ -65,7 +65,7 @@ final class dd {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte((byte) 111, 2);
-          var5.a(param2, -93);
+          var5.writeString(param2, -93);
           var5.backpatchByteLength((byte) -28, var5.position - var4);
           stackIn_25_0 = null;
           return (String) (stackIn_25_0);
@@ -212,7 +212,7 @@ final class dd {
           }
           if (param1.field_k == 1) {
             if (0 == LoginForm.field_Z) {
-              this.field_j.a(2, 12, ne.field_H);
+              this.field_j.a(2, 12, FallingPickup.field_H);
             }
             this.field_j.a(2, 13, og.field_a);
           }

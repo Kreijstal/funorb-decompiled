@@ -67,27 +67,27 @@ final class MatchingTextValidator extends TextFieldValidator {
           var9_int = -param3 + (param7 + param6.field_D) + param8;
           var10 = param6.field_D + param7 + (param8 + param2);
           var11 = (param6.field_F >> 1) + param0 + param6.field_H;
-          SoftwareRaster.h(var9_int, 0, var10, var11 + param4);
+          SoftwareRaster.intersectClip(var9_int, 0, var10, var11 + param4);
           param6.drawAdditive(-1 + param7, param0 - 1, param1);
           param6.drawAdditive(param7 - 1, 1 + param0, param1);
-          SoftwareRaster.a(ImageProducerRasterBuffer.field_n);
-          SoftwareRaster.h(1 + var9_int, 0, 1 + var10, param4 + var11);
+          SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
+          SoftwareRaster.intersectClip(1 + var9_int, 0, 1 + var10, param4 + var11);
           param6.drawAdditive(param7 + 1, param0 - 1, param1);
           param6.drawAdditive(param7 + 1, 1 + param0, param1);
-          SoftwareRaster.a(ImageProducerRasterBuffer.field_n);
+          SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
           if (param5 != -30456) {
             MatchingTextValidator.$cfr$intArgs$f$20d51497949f(-117);
           }
           var9_intLifetime1 = param6.field_A + param6.field_D + (param7 + (-param8 - param2));
           var10Lifetime1 = param6.field_A + param6.field_D + param7 - (param8 + param3);
-          SoftwareRaster.h(var9_intLifetime1, -param4 + var11, var10Lifetime1, 480);
+          SoftwareRaster.intersectClip(var9_intLifetime1, -param4 + var11, var10Lifetime1, 480);
           param6.drawAdditive(param7 - 1, param0 - 1, param1);
           param6.drawAdditive(param7 - 1, 1 + param0, param1);
-          SoftwareRaster.a(ImageProducerRasterBuffer.field_n);
-          SoftwareRaster.h(1 + var9_intLifetime1, var11 - param4, 1 + var10Lifetime1, 480);
+          SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
+          SoftwareRaster.intersectClip(1 + var9_intLifetime1, var11 - param4, 1 + var10Lifetime1, 480);
           param6.drawAdditive(1 + param7, -1 + param0, param1);
           param6.drawAdditive(param7 + 1, param0 + 1, param1);
-          SoftwareRaster.a(ImageProducerRasterBuffer.field_n);
+          SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "tk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
@@ -103,7 +103,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     }
 
     final static void f(byte param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (ValidationHelpWidget.field_qb.c(-6533));
+        RasterSnapshot var1 = (RasterSnapshot) (ValidationHelpWidget.field_qb.removeLast(-6533));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -188,7 +188,7 @@ final class MatchingTextValidator extends TextFieldValidator {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$f$20d51497949f(int param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (ValidationHelpWidget.field_qb.c(-6533));
+        RasterSnapshot var1 = (RasterSnapshot) (ValidationHelpWidget.field_qb.removeLast(-6533));
         if (var1 == null) {
           throw new IllegalStateException();
         }

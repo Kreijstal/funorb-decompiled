@@ -119,7 +119,7 @@ final class EmailCredentials extends LoginCredentials {
 
     final void a(PacketBuffer param0, boolean param1) {
         try {
-          param0.a(13588, this.field_m);
+          param0.writePrefixedString(13588, this.field_m);
           param0.a(this.field_l, (byte) -83);
           if (param1) {
             EmailCredentials.b(114);

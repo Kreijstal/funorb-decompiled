@@ -289,7 +289,7 @@ final class ef {
           tf.field_a.a(0, 0, 24, 0, UsernameCredentials.field_r.field_zb);
           nd.field_a.a(0, 24, UsernameCredentials.field_r.field_Lb - 24, 0, UsernameCredentials.field_r.field_zb);
           nd.field_a.field_I = se.a(3, param0, 11579568, nd.field_a.field_Lb, 8421504, 13574);
-          fl.field_c.a(0, 5, -26 + (-10 + nd.field_a.field_Lb), 5, -10 + nd.field_a.field_zb);
+          TeamColourTinter.field_c.a(0, 5, -26 + (-10 + nd.field_a.field_Lb), 5, -10 + nd.field_a.field_zb);
           Js5ArchiveManager.field_i.a(0, -29 + nd.field_a.field_Lb, 24, (-80 + nd.field_a.field_zb) / 2, 80);
           SocialListPanel.b(true);
           return;

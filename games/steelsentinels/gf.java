@@ -17,29 +17,29 @@ final class gf {
         DualNodeDequeIterator.field_d = 0;
         var2 = ih.field_n;
         ih.field_n = UiComponent.field_B;
-        ne.field_N.field_f = ne.field_N.field_f + 1;
+        FallingPickup.field_N.field_f = FallingPickup.field_N.field_f + 1;
         if (param0 == 51) {
-          ne.field_N.field_t = 2;
+          FallingPickup.field_N.field_t = 2;
         } else {
           if (param0 != 50) {
-            ne.field_N.field_t = 1;
+            FallingPickup.field_N.field_t = 1;
           } else {
-            ne.field_N.field_t = 5;
+            FallingPickup.field_N.field_t = 5;
           }
         }
         if (param1 != 16777215) {
           return 29;
         }
         UiComponent.field_B = var2;
-        if (2 <= ne.field_N.field_f &&
+        if (2 <= FallingPickup.field_N.field_f &&
           param0 == 51) {
           return 2;
         }
-        if (2 <= ne.field_N.field_f &&
+        if (2 <= FallingPickup.field_N.field_f &&
           50 == param0) {
           return 5;
         }
-        if (4 <= ne.field_N.field_f) {
+        if (4 <= FallingPickup.field_N.field_f) {
           return 1;
         }
         return -1;

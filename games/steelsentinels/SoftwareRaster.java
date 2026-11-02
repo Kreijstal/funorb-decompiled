@@ -15,7 +15,7 @@ final class SoftwareRaster {
     static int field_b;
     static int field_l;
 
-    final static void b(int param0, int param1, int param2) {
+    final static void plotPixel(int param0, int param1, int param2) {
         if (param0 >= field_i) {
           if (param1 < field_l ||
             param0 >= field_b ||
@@ -27,7 +27,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void h(int param0, int param1, int param2, int param3) {
+    final static void intersectClip(int param0, int param1, int param2, int param3) {
         if (field_i < param0) {
           field_i = param0;
         }
@@ -43,7 +43,7 @@ final class SoftwareRaster {
         SoftwareRaster.d();
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void plotAdditive(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -64,7 +64,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void b() {
+    final static void clear() {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -110,7 +110,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void g(int param0, int param1, int param2, int param3) {
+    final static void drawHorizontalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param1 >= field_l) {
@@ -157,7 +157,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawLine(int param0, int param1, int param2, int param3, int param4) {
         int var5;
         int var6;
         int var5Lifetime1;
@@ -166,17 +166,17 @@ final class SoftwareRaster {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            SoftwareRaster.g(param0 + param2, param1, -param2 + 1, param4);
+            SoftwareRaster.drawHorizontalLine(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            SoftwareRaster.g(param0, param1, param2 + 1, param4);
+            SoftwareRaster.drawHorizontalLine(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            SoftwareRaster.d(param0, param1 + param3, -param3 + 1, param4);
+            SoftwareRaster.drawVerticalLine(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            SoftwareRaster.d(param0, param1, param3 + 1, param4);
+            SoftwareRaster.drawVerticalLine(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -233,7 +233,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void b(int[] param0) {
+    final static void getClip(int[] param0) {
         param0[0] = field_i;
         param0[1] = field_l;
         param0[2] = field_b;
@@ -439,17 +439,17 @@ final class SoftwareRaster {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            SoftwareRaster.c(param0 + param2 + 1, param1, -param2, param4, param5);
+            SoftwareRaster.drawHorizontalLineAlpha(param0 + param2 + 1, param1, -param2, param4, param5);
           } else {
-            SoftwareRaster.c(param0, param1, param2, param4, param5);
+            SoftwareRaster.drawHorizontalLineAlpha(param0, param1, param2, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            SoftwareRaster.f(param0, param1 + param3 + 1, -param3, param4, param5);
+            SoftwareRaster.drawVerticalLineAlpha(param0, param1 + param3 + 1, -param3, param4, param5);
           } else {
-            SoftwareRaster.f(param0, param1, param3, param4, param5);
+            SoftwareRaster.drawVerticalLineAlpha(param0, param1, param3, param4, param5);
           }
           return;
         }
@@ -770,17 +770,17 @@ final class SoftwareRaster {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            SoftwareRaster.c(param0 + param2, param1, -param2 + 1, param4, param5);
+            SoftwareRaster.drawHorizontalLineAlpha(param0 + param2, param1, -param2 + 1, param4, param5);
           } else {
-            SoftwareRaster.c(param0, param1, param2 + 1, param4, param5);
+            SoftwareRaster.drawHorizontalLineAlpha(param0, param1, param2 + 1, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            SoftwareRaster.f(param0, param1 + param3, -param3 + 1, param4, param5);
+            SoftwareRaster.drawVerticalLineAlpha(param0, param1 + param3, -param3 + 1, param4, param5);
           } else {
-            SoftwareRaster.f(param0, param1, param3 + 1, param4, param5);
+            SoftwareRaster.drawVerticalLineAlpha(param0, param1, param3 + 1, param4, param5);
           }
           return;
         }
@@ -852,7 +852,7 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawVerticalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -963,13 +963,13 @@ final class SoftwareRaster {
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDropShadow(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          SoftwareRaster.c(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          SoftwareRaster.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRaster.drawHorizontalLineAlpha(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRaster.drawVerticalLineAlpha(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
@@ -1001,7 +1001,7 @@ final class SoftwareRaster {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          SoftwareRaster.b(param0, param1, param3);
+          SoftwareRaster.plotPixel(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -1108,7 +1108,7 @@ final class SoftwareRaster {
         field_k = null;
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void drawCircleOutline(int param0, int param1, int param2, int param3) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4;
@@ -1119,7 +1119,7 @@ final class SoftwareRaster {
         int var9;
         int var10;
         if (param2 == 0) {
-          SoftwareRaster.b(param0, param1, param3);
+          SoftwareRaster.plotPixel(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -1286,7 +1286,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void c() {
+    final static void resetClip() {
         field_i = 0;
         field_l = 0;
         field_b = field_c;
@@ -1294,17 +1294,17 @@ final class SoftwareRaster {
         SoftwareRaster.d();
     }
 
-    final static void h(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRaster.c(param0, param1, param2, param4, param5);
-        SoftwareRaster.c(param0, param1 + param3 - 1, param2, param4, param5);
+    final static void drawRectangleOutlineAlpha(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRaster.drawHorizontalLineAlpha(param0, param1, param2, param4, param5);
+        SoftwareRaster.drawHorizontalLineAlpha(param0, param1 + param3 - 1, param2, param4, param5);
         if (param3 >= 3) {
-          SoftwareRaster.f(param0, param1 + 1, param3 - 2, param4, param5);
-          SoftwareRaster.f(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+          SoftwareRaster.drawVerticalLineAlpha(param0, param1 + 1, param3 - 2, param4, param5);
+          SoftwareRaster.drawVerticalLineAlpha(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
           return;
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
+    final static void halveBrightnessRectangle(int param0, int param1, int param2, int param3) {
         if (param0 < field_i) {
           param2 = param2 - (field_i - param0);
           param0 = field_i;
@@ -1321,10 +1321,10 @@ final class SoftwareRaster {
         }
         int var4 = field_c - param2;
         int var5 = param0 + param1 * field_c;
-        SoftwareRaster.a(var5, field_g, 0, param2, -param3, var4);
+        SoftwareRaster.halveBrightnessRows(var5, field_g, 0, param2, -param3, var4);
     }
 
-    final static void a(int[] param0) {
+    final static void setClip(int[] param0) {
         field_i = param0[0];
         field_l = param0[1];
         field_b = param0[2];
@@ -1615,7 +1615,7 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillRectangle(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -1645,7 +1645,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3) {
+    final static void drawVerticalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param0 >= field_i) {
@@ -1911,7 +1911,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
+    final static void desaturateRectangle(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1963,14 +1963,14 @@ final class SoftwareRaster {
         SoftwareRaster.setClip(0, 0, param1, param2);
     }
 
-    final static void h(int param0, int param1, int param2, int param3, int param4) {
-        SoftwareRaster.g(param0, param1, param2, param4);
-        SoftwareRaster.g(param0, param1 + param3 - 1, param2, param4);
-        SoftwareRaster.d(param0, param1, param3, param4);
-        SoftwareRaster.d(param0 + param2 - 1, param1, param3, param4);
+    final static void drawRectangleOutline(int param0, int param1, int param2, int param3, int param4) {
+        SoftwareRaster.drawHorizontalLine(param0, param1, param2, param4);
+        SoftwareRaster.drawHorizontalLine(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRaster.drawVerticalLine(param0, param1, param3, param4);
+        SoftwareRaster.drawVerticalLine(param0 + param2 - 1, param1, param3, param4);
     }
 
-    private final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5) {
+    private final static void halveBrightnessRows(int param0, int[] param1, int param2, int param3, int param4, int param5) {
         while (param4 < 0) {
           param2 = param0 + param3 - 7;
           while (param0 < param2) {
@@ -2101,7 +2101,7 @@ final class SoftwareRaster {
         int var20Lifetime1;
         int var20Lifetime2;
         if (param4 == 0) {
-          SoftwareRaster.a(param0, param1, param2, param3, param5);
+          SoftwareRaster.fillRectangle(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -2221,7 +2221,7 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawHorizontalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;

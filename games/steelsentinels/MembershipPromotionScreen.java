@@ -57,7 +57,7 @@ final class MembershipPromotionScreen {
         int var3Lifetime1;
         var4 = SteelSentinels.obfuscationControl;
         SoftwareRaster.e(9, 9, 622, 47, 4540749, 65793);
-        SoftwareRaster.a(9, 257, 622, 33, 2585);
+        SoftwareRaster.fillRectangle(9, 257, 622, 33, 2585);
         SoftwareRaster.e(9, 265, 622, 11, 2585, 1515566);
         var2 = 0;
         var3 = 14;
@@ -70,7 +70,7 @@ final class MembershipPromotionScreen {
         var3Lifetime1 = 299;
         while (var2Lifetime1 < 2) {
           SoftwareRaster.e(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-          SoftwareRaster.a(508, 42 + var3Lifetime1, 127, 42, 12410);
+          SoftwareRaster.fillRectangle(508, 42 + var3Lifetime1, 127, 42, 12410);
           var3Lifetime1 += 91;
           var2Lifetime1++;
         }

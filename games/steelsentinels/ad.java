@@ -173,7 +173,7 @@ final class ad {
             }
             if (null != ue.field_g[param0]) {
               ue.field_g[param0].bindRasterTarget();
-              SoftwareRaster.a(0, 0, 62, 74, 0);
+              SoftwareRaster.fillRectangle(0, 0, 62, 74, 0);
             } else {
               ue.field_g[param0] = new RgbSprite(62, 74);
               ue.field_g[param0].bindRasterTarget();

@@ -335,21 +335,21 @@ final class se {
           if (param5 != 13574) {
             field_a = (String[]) null;
           }
-          SoftwareRaster.a(0, 0, param0, param0, param2);
+          SoftwareRaster.fillRectangle(0, 0, param0, param0, param2);
           var11 = new RgbSprite(16, param0);
           var11.bindRasterTarget();
-          SoftwareRaster.a(0, 0, 16, param0, param2);
+          SoftwareRaster.fillRectangle(0, 0, 16, param0, param2);
           var12 = new RgbSprite(param0, param0);
           var12.bindRasterTarget();
-          SoftwareRaster.a(0, 0, param0, param0, param4);
+          SoftwareRaster.fillRectangle(0, 0, param0, param0, param4);
           var13 = new RgbSprite(16, param0);
           var13.bindRasterTarget();
-          SoftwareRaster.a(0, 0, 16, param0, param4);
+          SoftwareRaster.fillRectangle(0, 0, 16, param0, param4);
           var14 = null;
           if (0 < param1) {
             var14 = new RgbSprite(16, 16);
             ((RgbSprite) (var14)).bindRasterTarget();
-            SoftwareRaster.a(0, 0, 16, 16, param1);
+            SoftwareRaster.fillRectangle(0, 0, 16, 16, param1);
           }
           SoftwareRaster.setTarget(var6, var7, var8);
           stackIn_8_0 = new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
@@ -547,7 +547,7 @@ final class se {
           var10 = 0;
           if (param3.field_Q == 1 &&
             param2 != 0) {
-            var11_ref_int__ = ne.a(param3.componentId, (byte) 28);
+            var11_ref_int__ = FallingPickup.a(param3.componentId, (byte) 28);
             var12 = LoadingProgressDialog.b(param3.componentId, (byte) -101);
             var13_int = 0;
             var14_int = 0;
@@ -732,7 +732,7 @@ final class se {
             var14.field_Pb = new RgbSprite(Math.min(64, -4 + var11), Math.min(64, var7 - 4));
             var14.field_Pb.bindRasterTarget();
             CachedTextLayout.field_E[var15].a(0, 0);
-            SoftwareRaster.c();
+            SoftwareRaster.resetClip();
             Checkbox.field_bb.b((byte) 121);
             ViewportController.field_h[var15] = var14;
             var14.field_Kb = 1;

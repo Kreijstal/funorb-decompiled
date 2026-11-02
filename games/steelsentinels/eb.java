@@ -247,32 +247,32 @@ final class eb extends TextFieldValidator {
         stackIn_3_0 = (0 != (var3 & 128));
         oh.field_e = stackIn_3_0;
         be.field_b = var8.readUnsignedByte((byte) -121);
-        ni.field_d = var8.g((byte) -116);
+        ni.field_d = var8.readLong((byte) -116);
         if (HuffmanDecoder.field_a != 2) {
           dk.field_a = 0;
           t.field_k = 0;
         } else {
           dk.field_a = var8.readUnsignedShort((byte) -60);
-          t.field_k = var8.a(false);
+          t.field_k = var8.readUnsignedMedium(false);
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -77) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        DialWidgetPainter.field_g = var8.h(1);
+        DialWidgetPainter.field_g = var8.readString(1);
         if (param0 >= -50) {
           field_s = (RgbSprite[]) null;
         }
         if (var4 != 0) {
-          IntKeyLookup.field_e = var8.h(1);
+          IntKeyLookup.field_e = var8.readString(1);
         } else {
           IntKeyLookup.field_e = DialWidgetPainter.field_g;
         }
         if (HuffmanDecoder.field_a == 1) {
           ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
-          uj.field_a = var8.h(1);
+          uj.field_a = var8.readString(1);
         } else {
           if (HuffmanDecoder.field_a == 4) {
             ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
-            uj.field_a = var8.h(1);
+            uj.field_a = var8.readString(1);
           } else {
             uj.field_a = null;
             ContentTransitionDialog.field_lb = 0;
@@ -337,32 +337,32 @@ final class eb extends TextFieldValidator {
         stackIn_3_0 = (0 != (var3 & 128));
         oh.field_e = stackIn_3_0;
         be.field_b = var8.readUnsignedByte((byte) -121);
-        ni.field_d = var8.g((byte) -116);
+        ni.field_d = var8.readLong((byte) -116);
         if (HuffmanDecoder.field_a != 2) {
           dk.field_a = 0;
           t.field_k = 0;
         } else {
           dk.field_a = var8.readUnsignedShort((byte) -60);
-          t.field_k = var8.a(false);
+          t.field_k = var8.readUnsignedMedium(false);
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -77) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        DialWidgetPainter.field_g = var8.h(1);
+        DialWidgetPainter.field_g = var8.readString(1);
         if (param0 >= -50) {
           field_s = (RgbSprite[]) null;
         }
         if (var4 != 0) {
-          IntKeyLookup.field_e = var8.h(1);
+          IntKeyLookup.field_e = var8.readString(1);
         } else {
           IntKeyLookup.field_e = DialWidgetPainter.field_g;
         }
         if (HuffmanDecoder.field_a == 1) {
           ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
-          uj.field_a = var8.h(1);
+          uj.field_a = var8.readString(1);
         } else {
           if (HuffmanDecoder.field_a == 4) {
             ContentTransitionDialog.field_lb = var8.readUnsignedShort((byte) -60);
-            uj.field_a = var8.h(1);
+            uj.field_a = var8.readString(1);
           } else {
             uj.field_a = null;
             ContentTransitionDialog.field_lb = 0;

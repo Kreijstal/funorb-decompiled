@@ -71,8 +71,8 @@ final class DualNodeDeque {
         RuntimeException decompiledCaughtException = null;
         var10 = SteelSentinels.obfuscationControl;
         try {
-          SoftwareRaster.g(param3, param0, 1 + param1, 10000536);
-          SoftwareRaster.g(param3, param2 + param0, 1 + param1, 12105912);
+          SoftwareRaster.drawHorizontalLine(param3, param0, 1 + param1, 10000536);
+          SoftwareRaster.drawHorizontalLine(param3, param2 + param0, 1 + param1, 12105912);
           var5_int = 1;
           if (SoftwareRaster.field_l > param0 + var5_int) {
             var5_int = SoftwareRaster.field_l - param0;

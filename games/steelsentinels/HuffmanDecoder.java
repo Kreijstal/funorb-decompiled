@@ -150,19 +150,19 @@ final class HuffmanDecoder {
             var6_int = 1044724;
             var11 = var7;
           }
-          SoftwareRaster.a(var8, var10, var11, var9, var6_int);
-          SoftwareRaster.h(param3, param5, param1, param0, 4408131);
-          SoftwareRaster.d(6100 * param1 / 12200 + param3, param5, param0, 4408131);
+          SoftwareRaster.fillRectangle(var8, var10, var11, var9, var6_int);
+          SoftwareRaster.drawRectangleOutline(param3, param5, param1, param0, 4408131);
+          SoftwareRaster.drawVerticalLine(6100 * param1 / 12200 + param3, param5, param0, 4408131);
           var12 = MusicPatchPcmStream.field_C;
           var13 = param3 + param1 / 4;
           var14 = 6100 < param4 ? 4210752 : 1400960;
           for (var15_int = 0; var15_int < 2; var15_int++) {
-            SoftwareRaster.d(var13 - var7 / 4, -4 + param5, 3, var14);
-            SoftwareRaster.d(var7 / 4 + var13, -4 + param5, 3, var14);
-            SoftwareRaster.g(var13 - var7 / 4, -4 + param5, var7 / 2, var14);
-            SoftwareRaster.d(var13 - var7 / 4, param5 + (param0 + 1), 2, var14);
-            SoftwareRaster.d(var13 + var7 / 4, param5 + param0 + 1, 2, var14);
-            SoftwareRaster.g(var13 - var7 / 4, 3 + (param5 + param0), var7 / 2, var14);
+            SoftwareRaster.drawVerticalLine(var13 - var7 / 4, -4 + param5, 3, var14);
+            SoftwareRaster.drawVerticalLine(var7 / 4 + var13, -4 + param5, 3, var14);
+            SoftwareRaster.drawHorizontalLine(var13 - var7 / 4, -4 + param5, var7 / 2, var14);
+            SoftwareRaster.drawVerticalLine(var13 - var7 / 4, param5 + (param0 + 1), 2, var14);
+            SoftwareRaster.drawVerticalLine(var13 + var7 / 4, param5 + param0 + 1, 2, var14);
+            SoftwareRaster.drawHorizontalLine(var13 - var7 / 4, 3 + (param5 + param0), var7 / 2, var14);
             BoundedUrlRequest.field_d.drawCentered(var12, var13, -5 + param5, var14, -1);
             var14 = param4 > 6100 ? 1400960 : 4210752;
             var12 = CachedArchiveProvider.field_z;
@@ -180,7 +180,7 @@ final class HuffmanDecoder {
             var20 = 13;
             var17 = var17 - var19 / 2;
             SoftwareRaster.c(var17 - 4, var18, var19, var20, 0, 192);
-            SoftwareRaster.h(-4 + var17, var18, var19, var20, 1400960, 192);
+            SoftwareRaster.drawRectangleOutlineAlpha(-4 + var17, var18, var19, var20, 1400960, 192);
             BoundedUrlRequest.field_d.drawLeft(var16, var17, var18 + 10, 41727, -1);
           }
         } catch (RuntimeException runtimeException) {
@@ -514,7 +514,7 @@ final class HuffmanDecoder {
           if (param1 < 126) {
             field_j = (String[]) null;
           }
-          stackIn_3_0 = ne.a((byte) -118, param0, false);
+          stackIn_3_0 = FallingPickup.a((byte) -118, param0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

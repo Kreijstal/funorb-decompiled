@@ -267,7 +267,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           mm.field_g.position = mm.field_g.position + 1;
           var7_int = mm.field_g.position;
           mm.field_g.writeLong(-28875, param2);
-          mm.field_g.a(param4, -88);
+          mm.field_g.writeString(param4, -88);
           mm.field_g.writeByte((byte) 115, param3);
           mm.field_g.writeByte((byte) 115, !param1 ? 0 : 1);
           mm.field_g.backpatchByteLength((byte) 83, -var7_int + mm.field_g.position);

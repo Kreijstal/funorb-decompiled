@@ -38,8 +38,8 @@ final class bi {
     }
 
     final static void b(int param0) {
-        ne.field_N.field_f = 0;
-        ne.field_N.field_t = 0;
+        FallingPickup.field_N.field_f = 0;
+        FallingPickup.field_N.field_t = 0;
         if (param0 >= -49) {
           bi.b(12, -123);
         }

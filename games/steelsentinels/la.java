@@ -131,7 +131,7 @@ final class la {
             var27 = SoftwareRaster.field_g;
             var2 = SoftwareRaster.field_c;
             var3 = SoftwareRaster.field_j;
-            SoftwareRaster.b(ImageProducerRasterBuffer.field_n);
+            SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
             var4_ref_wk = new RgbSprite(NodeIterator.field_b.field_A + 4, 4 + NodeIterator.field_b.field_F);
             var4_ref_wk.bindRasterTarget();
             NodeIterator.field_b.drawTintedGrayscale(2, 2, dc.field_h);
@@ -160,7 +160,7 @@ final class la {
             tf.field_e.bindRasterTarget();
             MusicPatchPcmStream.a(SoftwareRaster.field_j * 2 / 3, 0, SoftwareRaster.field_c, 64, 0, 40);
             SoftwareRaster.setTarget(var27, var2, var3);
-            SoftwareRaster.a(ImageProducerRasterBuffer.field_n);
+            SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
             mc.field_a = (ba.field_e.field_F - ValidatedTextWidget.field_ub.field_F) / 2 + 390;
             Js5ArchiveManager.field_d = null;
             rn.field_u = 434 + (-ValidatedTextWidget.field_ub.field_A + ba.field_e.field_A) / 2;
@@ -176,7 +176,7 @@ final class la {
             var28 = SoftwareRaster.field_g;
             var3Lifetime1 = SoftwareRaster.field_c;
             var4 = SoftwareRaster.field_j;
-            SoftwareRaster.b(ImageProducerRasterBuffer.field_n);
+            SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
             var14 = SocketConnector.a(CombatWorld.field_x, -69, new String[]{ResourceArchive.field_m[MouseInputHandler.field_j]});
             var6Lifetime1 = FullscreenFocusCanvas.field_g.a(var14, pa.field_b);
             var7Lifetime1 = FullscreenFocusCanvas.field_g.paragraphHeight(var14, pa.field_b, FullscreenFocusCanvas.field_g.field_G + FullscreenFocusCanvas.field_g.field_F);
@@ -235,14 +235,14 @@ final class la {
             hl.field_r = null;
             ArchiveProvider.field_e.trimTransparentBorders();
             SoftwareRaster.setTarget(var28, var3Lifetime1, var4);
-            SoftwareRaster.a(ImageProducerRasterBuffer.field_n);
+            SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
           }
           if (NameSuggestionsPanel.field_P != null &&
             null != wn.field_a) {
             var29 = SoftwareRaster.field_g;
             var3Lifetime2 = SoftwareRaster.field_c;
             var4Lifetime1 = SoftwareRaster.field_j;
-            SoftwareRaster.b(ImageProducerRasterBuffer.field_n);
+            SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
             var16 = new RgbSprite(412, 43);
             var6_ref_String = SocketConnector.a(dd.field_l, -109, new String[]{NameSuggestionsPanel.field_P});
             NameSuggestionsPanel.field_P = null;
@@ -252,14 +252,14 @@ final class la {
             EditableTextWidget.field_kb.bindRasterTarget();
             var16.a(-EditableTextWidget.field_kb.field_D + 199, -EditableTextWidget.field_kb.field_H + 83);
             SoftwareRaster.setTarget(var29, var3Lifetime2, var4Lifetime1);
-            SoftwareRaster.a(ImageProducerRasterBuffer.field_n);
+            SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
           }
           if (qi.field_i != null &&
             wn.field_a != null) {
             var30 = SoftwareRaster.field_g;
             var3Lifetime3 = SoftwareRaster.field_c;
             var4Lifetime2 = SoftwareRaster.field_j;
-            SoftwareRaster.b(ImageProducerRasterBuffer.field_n);
+            SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
             var5 = wn.field_a.a(TextFieldValidator.field_j, 640) + 6;
             var6Lifetime2 = 20 + (var5 + qi.field_i.field_z);
             var7Lifetime2 = 427 - var6Lifetime2 / 2;
@@ -270,10 +270,10 @@ final class la {
             var9Lifetime1 = 155 - EditableTextWidget.field_kb.field_H - (-wn.field_a.field_F + (-wn.field_a.field_G + qi.field_i.field_B - 3)) / 2;
             qi.field_i.a(-EditableTextWidget.field_kb.field_D + var7Lifetime2, var9Lifetime1);
             SoftwareRaster.setTarget(var30, var3Lifetime3, var4Lifetime2);
-            SoftwareRaster.a(ImageProducerRasterBuffer.field_n);
+            SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
             qi.field_i = null;
           }
-          SoftwareRaster.b(ImageProducerRasterBuffer.field_n);
+          SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
           SoftwareRaster.a(16, 16, 608, 112, 15, Sentinel.field_bc, AudioService.field_b);
           SoftwareRaster.a(231, 144, 393, 232, 15, Sentinel.field_bc, AudioService.field_b);
           if (c.field_o != null) {

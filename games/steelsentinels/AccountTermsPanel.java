@@ -121,7 +121,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         if (param1) {
           UsernameCredentials.field_r.a(tf.field_a, 121);
           UsernameCredentials.field_r.a(nd.field_a, 119);
-          nd.field_a.a(fl.field_c, 120);
+          nd.field_a.a(TeamColourTinter.field_c, 120);
           nd.field_a.a(Js5ArchiveManager.field_i, 118);
           ef.a(1, param0);
           return;

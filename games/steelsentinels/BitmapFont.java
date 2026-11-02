@@ -386,10 +386,10 @@ abstract class BitmapFont extends DualNode {
               }
               param1 = param1 + this.field_B[var8];
               if (field_S != -1) {
-                SoftwareRaster.g(var11, param2 + (int)((double)this.field_W * 0.7), param1 - var11, field_S);
+                SoftwareRaster.drawHorizontalLine(var11, param2 + (int)((double)this.field_W * 0.7), param1 - var11, field_S);
               }
               if (field_V != -1) {
-                SoftwareRaster.g(var11, param2 + this.field_W + 1, param1 - var11, field_V);
+                SoftwareRaster.drawHorizontalLine(var11, param2 + this.field_W + 1, param1 - var11, field_V);
               }
               var5 = var8;
             }

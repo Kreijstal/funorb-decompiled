@@ -73,7 +73,7 @@ final class be {
             var9.readBytes(0, var11, 28, var4_int);
           }
           var9.position = var9.position + 4;
-          if (!var9.a((byte) -32)) {
+          if (!var9.verifyTrailingChecksum((byte) -32)) {
             LoginForm.m(param0 ^ 16871);
             return;
           }

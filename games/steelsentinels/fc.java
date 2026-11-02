@@ -76,7 +76,7 @@ final class fc {
           return null;
         }
         if (param2 == -1) {
-          return fl.a((byte) 41, SentinelAnimationEditor.field_q[param1], ResourceArchive.field_e[param1]);
+          return TeamColourTinter.a((byte) 41, SentinelAnimationEditor.field_q[param1], ResourceArchive.field_e[param1]);
         }
         var3Lifetime2 = 0;
         if (BoundedUrlRequest.field_i != null) {

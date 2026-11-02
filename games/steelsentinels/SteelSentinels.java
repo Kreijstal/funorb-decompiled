@@ -183,7 +183,7 @@ public final class SteelSentinels extends FunOrbClient {
                   }
                 }
                 if (decompiledFrameCompleted0) {
-                  SoftwareRaster.c();
+                  SoftwareRaster.resetClip();
                 }
               }
             }
@@ -206,7 +206,7 @@ public final class SteelSentinels extends FunOrbClient {
               var7Lifetime1 = var7Lifetime1 + (500 + (-ob.field_o - var6));
             }
             SoftwareRaster.c(var8Lifetime1, var7Lifetime1, var5_intLifetime1, var6, 0, 192);
-            SoftwareRaster.h(var8Lifetime1, var7Lifetime1, var5_intLifetime1, var6, 39398, 192);
+            SoftwareRaster.drawRectangleOutlineAlpha(var8Lifetime1, var7Lifetime1, var5_intLifetime1, var6, 39398, 192);
             if (var3_ref.field_q == null) {
               ValidationHelpWidget.field_lb.a(var3_ref.field_u, var8Lifetime1 + var4Lifetime1, var7Lifetime1 + var4Lifetime1, -(2 * var4Lifetime1) + var5_intLifetime1, -(2 * var4Lifetime1) + var6, 52479, -1, 0, 1, 12);
               if (var13 != 0) {
@@ -221,7 +221,7 @@ public final class SteelSentinels extends FunOrbClient {
           boolean decompiledFrameRemainder0 = true;
           var4Lifetime2 = 27 / ((param0 - 56) / 48);
           if (QuickChatMenu.b(true)) {
-            SoftwareRaster.f(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
+            SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
             qf.a(100);
             decompiledFrameRemainder0 = (var13 != 0);
           }
@@ -229,7 +229,7 @@ public final class SteelSentinels extends FunOrbClient {
             if (!cf.c((byte) 92)) {
               if ((ri.b(-113)) &&
                 (!QuickChatMenu.b(true))) {
-                SoftwareRaster.f(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
+                SoftwareRaster.halveBrightnessRectangle(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
                 ec.a((byte) -95);
                 if (var13 != 0) {
                   stackIn_134_0 = -64;
@@ -258,15 +258,15 @@ public final class SteelSentinels extends FunOrbClient {
             }
           }
           if (DiskCacheWorker.field_l < MusicPatchPcmStream.field_v) {
-            SoftwareRaster.h(2, 2, 102, 15, 6710886, 128);
-            SoftwareRaster.a(3, 3, 100, 13, 0);
-            SoftwareRaster.a(4, 4, DiskCacheWorker.field_l * 33 + 33 * TickClock.field_g / ReflectionCheck.field_r, 11, 39398);
+            SoftwareRaster.drawRectangleOutlineAlpha(2, 2, 102, 15, 6710886, 128);
+            SoftwareRaster.fillRectangle(3, 3, 100, 13, 0);
+            SoftwareRaster.fillRectangle(4, 4, DiskCacheWorker.field_l * 33 + 33 * TickClock.field_g / ReflectionCheck.field_r, 11, 39398);
             if (BoundedUrlRequest.field_d != null) {
               var5 = SocketConnector.a(ValidationHelpWidget.field_sb, -98, new String[]{Integer.toString(DiskCacheWorker.field_l * 33 + TickClock.field_g * 33 / ReflectionCheck.field_r)});
               BoundedUrlRequest.field_d.drawCentered(var5, 54, 12, 39398, 0);
               SoftwareRaster.setClip(3, 3, 33 * DiskCacheWorker.field_l + TickClock.field_g * 33 / ReflectionCheck.field_r, 17);
               BoundedUrlRequest.field_d.drawCentered(var5, 54, 12, 0, 39398);
-              SoftwareRaster.c();
+              SoftwareRaster.resetClip();
             }
           }
           ScrollContainer.a(0, 0, 28594, var2);
@@ -587,7 +587,7 @@ public final class SteelSentinels extends FunOrbClient {
               Sentinel.field_nc = cj.a(42, "basic", DualNode.field_x, "bits_bird");
               PasswordFieldPainter.field_z = cj.a(-115, "basic", DualNode.field_x, "bits_slave");
               wi.field_C = cj.a(125, "basic", DualNode.field_x, "bits_babel");
-              ne.field_R = cj.a(-128, "basic", DualNode.field_x, "bits_valhalla");
+              FallingPickup.field_R = cj.a(-128, "basic", DualNode.field_x, "bits_valhalla");
               hk.field_Ec = cj.a(-128, "basic", DualNode.field_x, "bits_orbital");
               AlphaContainer.field_V = cj.a(61, "basic", DualNode.field_x, "bits_bertha");
               vc.field_b = cj.a(67, "basic", DualNode.field_x, "bits_smasher");
@@ -1985,7 +1985,7 @@ public final class SteelSentinels extends FunOrbClient {
               ob.field_o = ob.field_o + 1;
               if (fieldTemp$0 == 500) {
                 ob.field_o = 0;
-                bd.field_b.a(true);
+                bd.field_b.removeFirst(true);
               }
             }
           }
@@ -2329,7 +2329,7 @@ public final class SteelSentinels extends FunOrbClient {
           }
           if (!ni.b(92)) {
             do {
-              var2 = (cf) (un.field_b.a(true));
+              var2 = (cf) (un.field_b.removeFirst(true));
               if (var2 == null) {
                 if (var15 == 0) {
                   break;
@@ -2352,7 +2352,7 @@ public final class SteelSentinels extends FunOrbClient {
                 QuickChatHelpDialog.b(true);
                 GzipDecoder.field_g = 11;
                 SectorCacheStore.field_n = false;
-                UiTheme.field_s = rf.field_d.h(1);
+                UiTheme.field_s = rf.field_d.readString(1);
                 continue;
               }
               if (ch.field_N == 14) {
@@ -2616,7 +2616,7 @@ public final class SteelSentinels extends FunOrbClient {
                   stackIn_340_0 = ~var13_int;
                   stackIn_340_1 = ~var10.length;
                   if (stackIn_340_0 > stackIn_340_1) {
-                    var10[var13_int] = rf.field_d.e((byte) 126);
+                    var10[var13_int] = rf.field_d.readPrefixedString((byte) 126);
                     array$0 = new int[rf.field_d.readUnsignedByte((byte) -63)];
                     var12[var13_int] = array$0;
                     stackIn_351_0 = 0;
@@ -2694,11 +2694,11 @@ public final class SteelSentinels extends FunOrbClient {
                 if (ch.field_N == 61) {
                   var3 = rf.field_d.readUnsignedByte((byte) -117);
                   var4_ref = ((GameplayController) (var2)).world.findSentinelForPlayer(var3, -128);
-                  var5_ref_je = (SentinelCommand) (((Sentinel) (var4_ref)).secondaryCommands.b(1063677678));
+                  var5_ref_je = (SentinelCommand) (((Sentinel) (var4_ref)).secondaryCommands.last(1063677678));
                   if (var5_ref_je != null) {
                     var5_ref_je.unlink(param0 ^ 6);
                   }
-                  var5_ref_je = (SentinelCommand) (((Sentinel) (var4_ref)).pendingCommands.b(1063677678));
+                  var5_ref_je = (SentinelCommand) (((Sentinel) (var4_ref)).pendingCommands.last(1063677678));
                   if (var5_ref_je == null) {
                     continue;
                   }
@@ -2897,7 +2897,7 @@ public final class SteelSentinels extends FunOrbClient {
           }
           PacketBuffer.d(-125);
           mm.b(122);
-          fl.a(124);
+          TeamColourTinter.a(124);
           of.a((byte) 84);
           in.b(127);
           ph.a(80);
@@ -2990,7 +2990,7 @@ public final class SteelSentinels extends FunOrbClient {
           tj.a(true);
           Sprite.a((byte) 66);
           PartInstruction.a((byte) 17);
-          ne.g(-23261);
+          FallingPickup.g(-23261);
           oc.a(-1);
           qi.a(-104);
           ad.a(0);

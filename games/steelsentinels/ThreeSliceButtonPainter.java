@@ -94,21 +94,21 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           var10.a(0, 1, 12, 22, -20 + (param5 - param7));
           var10.field_Pb = new RgbSprite(var10.field_zb, var10.field_Lb);
           var10.field_Pb.bindRasterTarget();
-          SoftwareRaster.h(0, 0, var10.field_zb, var10.field_Lb, 1995681);
+          SoftwareRaster.drawRectangleOutline(0, 0, var10.field_zb, var10.field_Lb, 1995681);
           if (param2 > 0) {
             if (param2 <= param6) {
-              SoftwareRaster.a(2, 2, param2 * (-4 + var10.field_zb) / param6, -4 + var10.field_Lb, 1995681);
+              SoftwareRaster.fillRectangle(2, 2, param2 * (-4 + var10.field_zb) / param6, -4 + var10.field_Lb, 1995681);
               if (param6 > 100 &&
                 param6 < 2000) {
                 for (var11 = 100; param6 > var11; var11 += 100) {
-                  SoftwareRaster.f(var11 * (var10.field_zb - 4) / param6 + 2, 2, var10.field_Lb - 4, 4473924, 96);
+                  SoftwareRaster.drawVerticalLineAlpha(var11 * (var10.field_zb - 4) / param6 + 2, 2, var10.field_Lb - 4, 4473924, 96);
                 }
               }
             } else {
-              SoftwareRaster.a(2, 2, -4 + var10.field_zb, var10.field_Lb - 4, 5157841);
+              SoftwareRaster.fillRectangle(2, 2, -4 + var10.field_zb, var10.field_Lb - 4, 5157841);
             }
           } else {
-            SoftwareRaster.h(0, 0, var10.field_zb, var10.field_Lb, 10367841);
+            SoftwareRaster.drawRectangleOutline(0, 0, var10.field_zb, var10.field_Lb, 10367841);
           }
           var13.a(var10, 121);
           Checkbox.field_bb.b((byte) 121);

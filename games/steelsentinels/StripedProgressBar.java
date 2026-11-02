@@ -128,13 +128,13 @@ final class StripedProgressBar extends UiComponent {
           var10 = var6 - var5;
           var11 = (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0) + 128;
           var12 = 256 > var11 ? (16711680 & var11 * var9 | -16711936 & var11 * var8) >>> 8 : var8 | var9;
-          SoftwareRaster.g(var7, var6, this.field_T, var12);
-          SoftwareRaster.g(var7 - 2 * this.field_T, var6, this.field_T, var12);
+          SoftwareRaster.drawHorizontalLine(var7, var6, this.field_T, var12);
+          SoftwareRaster.drawHorizontalLine(var7 - 2 * this.field_T, var6, this.field_T, var12);
           var9Lifetime1 = 65280 & param0;
           var8Lifetime1 = 16711935 & param0;
           var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (16711680 & var11 * var9Lifetime1 | var8Lifetime1 * var11 & -16711936) >>> 8;
-          SoftwareRaster.g(var7 + this.field_T, var6, this.field_T, var12Lifetime1);
-          SoftwareRaster.g(-this.field_T + var7, var6, this.field_T, var12Lifetime1);
+          SoftwareRaster.drawHorizontalLine(var7 + this.field_T, var6, this.field_T, var12Lifetime1);
+          SoftwareRaster.drawHorizontalLine(-this.field_T + var7, var6, this.field_T, var12Lifetime1);
         }
         MatchingTextValidator.$cfr$intArgs$f$20d51497949f(107);
         return var14;
@@ -338,7 +338,7 @@ final class StripedProgressBar extends UiComponent {
           ik.field_g = new RgbSprite(10, 14);
           ik.field_g.bindRasterTarget();
           for (var9 = 2; var9 < 7; var9++) {
-            SoftwareRaster.d(var9, var9 + 1, 14 - (var9 << 1), 16777215);
+            SoftwareRaster.drawVerticalLine(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
           SoftwareRaster.setTarget(var16, var6, var7);
           ImageProducerRasterBuffer.field_m = BufferedSocket.a(UsernameCredentials.field_l, var5, false, Sprite.field_f, AlternateUsernameCredentials.field_u);
@@ -370,7 +370,7 @@ final class StripedProgressBar extends UiComponent {
               var7 = Math.sqrt(1.0 - var7);
               var9 = var7 >= 1.0 ? 255 : (int)(255.0 * var7);
             }
-            SoftwareRaster.b(var6, var5, var9 | var9 << 8 | var9 << 16);
+            SoftwareRaster.plotPixel(var6, var5, var9 | var9 << 8 | var9 << 16);
           }
         }
         MatchingTextValidator.$cfr$intArgs$f$20d51497949f(108);

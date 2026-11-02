@@ -22,11 +22,11 @@ final class IconTextComponent extends SceneWidget {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (ne.field_N.field_f >= 4) {
-            if (ne.field_N.field_t == -1) {
+          if (FallingPickup.field_N.field_f >= 4) {
+            if (FallingPickup.field_N.field_t == -1) {
               return 3;
             }
-            if (ne.field_N.field_t != -2) {
+            if (FallingPickup.field_N.field_t != -2) {
               return 1;
             }
             return 4;
@@ -76,7 +76,7 @@ final class IconTextComponent extends SceneWidget {
             if (DualNodeDequeIterator.field_d != 4) {
               return -1;
             }
-            ne.field_N.a(nf.field_c, BoundedUrlRequest.field_h, 6);
+            FallingPickup.field_N.a(nf.field_c, BoundedUrlRequest.field_h, 6);
             DualNodeDequeIterator.field_d = 0;
             DateInputWidget.field_T = null;
             nf.field_c = null;
@@ -399,7 +399,7 @@ final class IconTextComponent extends SceneWidget {
         if (param0 != 8347) {
           IconTextComponent.j(-70);
         }
-        return rf.field_d.h(param0 ^ 8346);
+        return rf.field_d.readString(param0 ^ 8346);
     }
 
     public static void j(int param0) {

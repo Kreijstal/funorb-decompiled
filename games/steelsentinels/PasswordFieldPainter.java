@@ -35,7 +35,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
 
     final static void e(int param0) {
         if (GzipDecoder.field_e) {
-          SoftwareRaster.f(SoftwareRaster.field_i, SoftwareRaster.field_l, SoftwareRaster.field_b - SoftwareRaster.field_i, -SoftwareRaster.field_l + SoftwareRaster.field_d);
+          SoftwareRaster.halveBrightnessRectangle(SoftwareRaster.field_i, SoftwareRaster.field_l, SoftwareRaster.field_b - SoftwareRaster.field_i, -SoftwareRaster.field_l + SoftwareRaster.field_d);
           qf.field_c.a(false, (byte) 127);
         }
         if (param0 == 0) {

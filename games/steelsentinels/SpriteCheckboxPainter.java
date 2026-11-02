@@ -54,21 +54,21 @@ final class SpriteCheckboxPainter implements WidgetPainter {
                 var7 = (-var6_int + 10) * 2 + 2;
               }
               if (!param2) {
-                SoftwareRaster.g(param4 - 5, var6_int + param3 - 5, var7, param0);
+                SoftwareRaster.drawHorizontalLine(param4 - 5, var6_int + param3 - 5, var7, param0);
               } else {
-                SoftwareRaster.g(6 + (param4 - var7), param3 - 5 + var6_int, var7, param0);
+                SoftwareRaster.drawHorizontalLine(6 + (param4 - var7), param3 - 5 + var6_int, var7, param0);
               }
             }
           }
           if (-1 != param5) {
             if (!param2) {
-              SoftwareRaster.d(-5 + param4, param3 - 5, 11, param5);
-              SoftwareRaster.d(param4 - 4, param3 - 5, 5 + param4, param3, param5);
-              SoftwareRaster.d(-4 + param4, 5 + param3, param4 + 5, param3, param5);
+              SoftwareRaster.drawVerticalLine(-5 + param4, param3 - 5, 11, param5);
+              SoftwareRaster.drawLine(param4 - 4, param3 - 5, 5 + param4, param3, param5);
+              SoftwareRaster.drawLine(-4 + param4, 5 + param3, param4 + 5, param3, param5);
             } else {
-              SoftwareRaster.d(param4 + 5, param3 - 5, 11, param5);
-              SoftwareRaster.d(param4 + 4, param3 - 5, -5 + param4, param3, param5);
-              SoftwareRaster.d(4 + param4, 5 + param3, param4 - 5, param3, param5);
+              SoftwareRaster.drawVerticalLine(param4 + 5, param3 - 5, 11, param5);
+              SoftwareRaster.drawLine(param4 + 4, param3 - 5, -5 + param4, param3, param5);
+              SoftwareRaster.drawLine(4 + param4, 5 + param3, param4 - 5, param3, param5);
             }
           }
           if (param4 != -1) {
@@ -77,38 +77,38 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           var6_intLifetime1 = param4 - 10;
           var7Lifetime1 = param4 + 10;
           if (param0 != -1) {
-            SoftwareRaster.a(var6_intLifetime1, -2 + param3, 20, 5, param0);
+            SoftwareRaster.fillRectangle(var6_intLifetime1, -2 + param3, 20, 5, param0);
             for (var8 = 0; 5 > var8; var8++) {
               if (!param2) {
-                SoftwareRaster.d(-var8 + 3 + var7Lifetime1, param3, -7 + (-var8 + 3) + var7Lifetime1, param3 - 7, param0);
-                SoftwareRaster.d(var7Lifetime1 + 3 - var8, param3, -7 - var8 + (var7Lifetime1 + 3), 7 + param3, param0);
+                SoftwareRaster.drawLine(-var8 + 3 + var7Lifetime1, param3, -7 + (-var8 + 3) + var7Lifetime1, param3 - 7, param0);
+                SoftwareRaster.drawLine(var7Lifetime1 + 3 - var8, param3, -7 - var8 + (var7Lifetime1 + 3), 7 + param3, param0);
               } else {
-                SoftwareRaster.d(-3 + var6_intLifetime1 + var8, param3, 7 + var6_intLifetime1 + (-3 + var8), param3 - 7, param0);
-                SoftwareRaster.d(var8 + var6_intLifetime1 - 3, param3, 7 + (-3 + var6_intLifetime1) + var8, 7 + param3, param0);
+                SoftwareRaster.drawLine(-3 + var6_intLifetime1 + var8, param3, 7 + var6_intLifetime1 + (-3 + var8), param3 - 7, param0);
+                SoftwareRaster.drawLine(var8 + var6_intLifetime1 - 3, param3, 7 + (-3 + var6_intLifetime1) + var8, 7 + param3, param0);
               }
             }
           }
           if (param5 != -1) {
             if (param2) {
-              SoftwareRaster.d(var6_intLifetime1 - 3, param3, 4 + var6_intLifetime1, -7 + param3, param5);
-              SoftwareRaster.g(var6_intLifetime1 + 4, param3 - 7, 4, param5);
-              SoftwareRaster.d(8 + var6_intLifetime1, param3 - 7, var6_intLifetime1 + 4, param3 - 3, param5);
-              SoftwareRaster.g(4 + var6_intLifetime1, param3 - 3, 16, param5);
-              SoftwareRaster.d(var6_intLifetime1 - 3, param3, 4 + var6_intLifetime1, 7 + param3, param5);
-              SoftwareRaster.g(4 + var6_intLifetime1, 7 + param3, 4, param5);
-              SoftwareRaster.d(var6_intLifetime1 + 8, 7 + param3, var6_intLifetime1 + 4, param3 + 3, param5);
-              SoftwareRaster.g(var6_intLifetime1 + 4, param3 + 3, 16, param5);
-              SoftwareRaster.d(var7Lifetime1 - 1, param3 - 3, 6, param5);
+              SoftwareRaster.drawLine(var6_intLifetime1 - 3, param3, 4 + var6_intLifetime1, -7 + param3, param5);
+              SoftwareRaster.drawHorizontalLine(var6_intLifetime1 + 4, param3 - 7, 4, param5);
+              SoftwareRaster.drawLine(8 + var6_intLifetime1, param3 - 7, var6_intLifetime1 + 4, param3 - 3, param5);
+              SoftwareRaster.drawHorizontalLine(4 + var6_intLifetime1, param3 - 3, 16, param5);
+              SoftwareRaster.drawLine(var6_intLifetime1 - 3, param3, 4 + var6_intLifetime1, 7 + param3, param5);
+              SoftwareRaster.drawHorizontalLine(4 + var6_intLifetime1, 7 + param3, 4, param5);
+              SoftwareRaster.drawLine(var6_intLifetime1 + 8, 7 + param3, var6_intLifetime1 + 4, param3 + 3, param5);
+              SoftwareRaster.drawHorizontalLine(var6_intLifetime1 + 4, param3 + 3, 16, param5);
+              SoftwareRaster.drawVerticalLine(var7Lifetime1 - 1, param3 - 3, 6, param5);
             } else {
-              SoftwareRaster.d(3 + var7Lifetime1, param3, -4 + var7Lifetime1, -7 + param3, param5);
-              SoftwareRaster.g(-4 + var7Lifetime1 - 4, param3 - 7, 4, param5);
-              SoftwareRaster.d(var7Lifetime1 - 8, -7 + param3, var7Lifetime1 - 4, -3 + param3, param5);
-              SoftwareRaster.g(-16 + (-4 + var7Lifetime1), param3 - 3, 16, param5);
-              SoftwareRaster.d(3 + var7Lifetime1, param3, var7Lifetime1 - 4, 7 + param3, param5);
-              SoftwareRaster.g(-8 + var7Lifetime1, 7 + param3, 4, param5);
-              SoftwareRaster.d(-8 + var7Lifetime1, param3 + 7, -4 + var7Lifetime1, 3 + param3, param5);
-              SoftwareRaster.g(-4 + var7Lifetime1 - 16, param3 + 3, 16, param5);
-              SoftwareRaster.d(var6_intLifetime1, param3 - 3, 6, param5);
+              SoftwareRaster.drawLine(3 + var7Lifetime1, param3, -4 + var7Lifetime1, -7 + param3, param5);
+              SoftwareRaster.drawHorizontalLine(-4 + var7Lifetime1 - 4, param3 - 7, 4, param5);
+              SoftwareRaster.drawLine(var7Lifetime1 - 8, -7 + param3, var7Lifetime1 - 4, -3 + param3, param5);
+              SoftwareRaster.drawHorizontalLine(-16 + (-4 + var7Lifetime1), param3 - 3, 16, param5);
+              SoftwareRaster.drawLine(3 + var7Lifetime1, param3, var7Lifetime1 - 4, 7 + param3, param5);
+              SoftwareRaster.drawHorizontalLine(-8 + var7Lifetime1, 7 + param3, 4, param5);
+              SoftwareRaster.drawLine(-8 + var7Lifetime1, param3 + 7, -4 + var7Lifetime1, 3 + param3, param5);
+              SoftwareRaster.drawHorizontalLine(-4 + var7Lifetime1 - 16, param3 + 3, 16, param5);
+              SoftwareRaster.drawVerticalLine(var6_intLifetime1, param3 - 3, 6, param5);
             }
           }
           if (!param1) {

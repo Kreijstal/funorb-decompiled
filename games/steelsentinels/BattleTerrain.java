@@ -1601,10 +1601,10 @@ final class BattleTerrain {
                         }
                         case 37: {
                             try {
-                                if (ne.field_R == null) {
+                                if (FallingPickup.field_R == null) {
                                     /* Inlined CFG state: 40. */
                                     {
-                                        ne.field_R = new IndexedSprite[21];
+                                        FallingPickup.field_R = new IndexedSprite[21];
                                         statePc = 41;
                                         continue scanLoop1;
                                     }
@@ -1902,19 +1902,19 @@ final class BattleTerrain {
                                 var1.componentId = 84;
                                 var1 = DualNodeDequeIterator.a(0, var1);
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ne.field_R[20], 2, 153, 58, -16384, 8192, new PartInstruction[]{new PartInstruction("Valhalla Head"), new PartInstruction(250, 2, 625)});
+                                var1 = new ArticulatedPart(FallingPickup.field_R[20], 2, 153, 58, -16384, 8192, new PartInstruction[]{new PartInstruction("Valhalla Head"), new PartInstruction(250, 2, 625)});
                                 var1.componentId = 91;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ne.field_R[3], 2048, 120, 73, -16384, 4096, new PartInstruction[]{new PartInstruction("Valhalla Arm"), new PartInstruction(300, 0, 650), new PartInstruction(121, 31, 13884, 0, 256, true), new PartInstruction(123, 39, 13884, 0, 256, true), new PartInstruction(87, 98, 0, 10922, new ArticulatedPart(ne.field_R[4], 87, 98, new PartInstruction[]{new PartInstruction("Energy Blade"), new PartInstruction(65, 126, 29384, 0, 128, true), new PartInstruction(75, 120, 29384, 0, 128), new PartInstruction(70, 123, 29384, 0, 128, true)}))});
+                                var1 = new ArticulatedPart(FallingPickup.field_R[3], 2048, 120, 73, -16384, 4096, new PartInstruction[]{new PartInstruction("Valhalla Arm"), new PartInstruction(300, 0, 650), new PartInstruction(121, 31, 13884, 0, 256, true), new PartInstruction(123, 39, 13884, 0, 256, true), new PartInstruction(87, 98, 0, 10922, new ArticulatedPart(FallingPickup.field_R[4], 87, 98, new PartInstruction[]{new PartInstruction("Energy Blade"), new PartInstruction(65, 126, 29384, 0, 128, true), new PartInstruction(75, 120, 29384, 0, 128), new PartInstruction(70, 123, 29384, 0, 128, true)}))});
                                 var1.componentId = 89;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ne.field_R[0], 1024, 120, 73, -26384, 4096, new PartInstruction[]{new PartInstruction("Valhalla Back arm"), new PartInstruction(81, 97, 0, 4096, new ArticulatedPart(ne.field_R[1], 81, 97, new PartInstruction[]{new PartInstruction(98, 117, 26384, 0, 32, true)}), true)});
+                                var1 = new ArticulatedPart(FallingPickup.field_R[0], 1024, 120, 73, -26384, 4096, new PartInstruction[]{new PartInstruction("Valhalla Back arm"), new PartInstruction(81, 97, 0, 4096, new ArticulatedPart(FallingPickup.field_R[1], 81, 97, new PartInstruction[]{new PartInstruction(98, 117, 26384, 0, 32, true)}), true)});
                                 var1.componentId = 105;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ne.field_R[13], 8, 128, 52, -16384, 4096, new PartInstruction[]{new PartInstruction("Valhalla Wing"), new PartInstruction(200, 0, 500), new PartInstruction(130, 51, 16384, 0, 64, true)});
+                                var1 = new ArticulatedPart(FallingPickup.field_R[13], 8, 128, 52, -16384, 4096, new PartInstruction[]{new PartInstruction("Valhalla Wing"), new PartInstruction(200, 0, 500), new PartInstruction(130, 51, 16384, 0, 64, true)});
                                 var1.componentId = 90;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ne.field_R[12], 1, 146, 293, 0, 0, new PartInstruction[]{new PartInstruction("Valhalla Chassis"), new PartInstruction(700, 4, 2350), new PartInstruction(16), new PartInstruction(0, 400), new PartInstruction(103, 142, 0, 0, new ArticulatedPart(ne.field_R[14], 103, 142, new PartInstruction[]{new PartInstruction("Front0Leg"), new PartInstruction(135, 203, 0, 0, new ArticulatedPart(ne.field_R[15], 135, 140, new PartInstruction[]{new PartInstruction("Front1Leg"), new PartInstruction(130, 153, 0, 0, new ArticulatedPart(ne.field_R[16], 128, 221, new PartInstruction[]{new PartInstruction("Front2Leg")})), new PartInstruction(108, 206, 0, 0, new ArticulatedPart(ne.field_R[17], 108, 206, new PartInstruction[]{new PartInstruction("Front3Leg"), new PartInstruction(138, 231, 0, 0, new ArticulatedPart(ne.field_R[18], 132, 213, new PartInstruction[]{new PartInstruction("Front4Leg")}), true)}))}))})), new PartInstruction(107, 142, 0, 0, new ArticulatedPart(ne.field_R[7], 103, 142, new PartInstruction[]{new PartInstruction("Back0Leg"), new PartInstruction(135, 203, 0, 0, new ArticulatedPart(ne.field_R[8], 135, 140, new PartInstruction[]{new PartInstruction("Back1Leg"), new PartInstruction(130, 153, 0, 0, new ArticulatedPart(ne.field_R[9], 128, 221, new PartInstruction[]{new PartInstruction("Back2Leg")})), new PartInstruction(108, 206, 0, 0, new ArticulatedPart(ne.field_R[10], 108, 206, new PartInstruction[]{new PartInstruction("Back3Leg"), new PartInstruction(138, 231, 0, 0, new ArticulatedPart(ne.field_R[11], 132, 213, new PartInstruction[]{new PartInstruction("Back4Leg")}), true)}))}))}), true), new PartInstruction(133, 63, 16384, 0, 1024, true), new PartInstruction(107, 104, 0, 0, new ArticulatedPart(ne.field_R[19], 107, 104, new PartInstruction[]{new PartInstruction("TopChassis"), new PartInstruction(153, 58, 16384, 0, 2), new PartInstruction(120, 62, 16384, 0, 8), new PartInstruction(120, 73, 16384, 0, 2052)}))});
+                                var1 = new ArticulatedPart(FallingPickup.field_R[12], 1, 146, 293, 0, 0, new PartInstruction[]{new PartInstruction("Valhalla Chassis"), new PartInstruction(700, 4, 2350), new PartInstruction(16), new PartInstruction(0, 400), new PartInstruction(103, 142, 0, 0, new ArticulatedPart(FallingPickup.field_R[14], 103, 142, new PartInstruction[]{new PartInstruction("Front0Leg"), new PartInstruction(135, 203, 0, 0, new ArticulatedPart(FallingPickup.field_R[15], 135, 140, new PartInstruction[]{new PartInstruction("Front1Leg"), new PartInstruction(130, 153, 0, 0, new ArticulatedPart(FallingPickup.field_R[16], 128, 221, new PartInstruction[]{new PartInstruction("Front2Leg")})), new PartInstruction(108, 206, 0, 0, new ArticulatedPart(FallingPickup.field_R[17], 108, 206, new PartInstruction[]{new PartInstruction("Front3Leg"), new PartInstruction(138, 231, 0, 0, new ArticulatedPart(FallingPickup.field_R[18], 132, 213, new PartInstruction[]{new PartInstruction("Front4Leg")}), true)}))}))})), new PartInstruction(107, 142, 0, 0, new ArticulatedPart(FallingPickup.field_R[7], 103, 142, new PartInstruction[]{new PartInstruction("Back0Leg"), new PartInstruction(135, 203, 0, 0, new ArticulatedPart(FallingPickup.field_R[8], 135, 140, new PartInstruction[]{new PartInstruction("Back1Leg"), new PartInstruction(130, 153, 0, 0, new ArticulatedPart(FallingPickup.field_R[9], 128, 221, new PartInstruction[]{new PartInstruction("Back2Leg")})), new PartInstruction(108, 206, 0, 0, new ArticulatedPart(FallingPickup.field_R[10], 108, 206, new PartInstruction[]{new PartInstruction("Back3Leg"), new PartInstruction(138, 231, 0, 0, new ArticulatedPart(FallingPickup.field_R[11], 132, 213, new PartInstruction[]{new PartInstruction("Back4Leg")}), true)}))}))}), true), new PartInstruction(133, 63, 16384, 0, 1024, true), new PartInstruction(107, 104, 0, 0, new ArticulatedPart(FallingPickup.field_R[19], 107, 104, new PartInstruction[]{new PartInstruction("TopChassis"), new PartInstruction(153, 58, 16384, 0, 2), new PartInstruction(120, 62, 16384, 0, 8), new PartInstruction(120, 73, 16384, 0, 2052)}))});
                                 var1.componentId = 88;
                                 var1 = DualNodeDequeIterator.a(0, var1);
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
@@ -2387,7 +2387,7 @@ final class BattleTerrain {
                                 var1 = new ArticulatedPart(Sprite.field_b[8], 32, 64, 96, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[14]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 31;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ne.field_R[2], 32, 98, 144, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[18]), new PartInstruction(0, 0, 100)});
+                                var1 = new ArticulatedPart(FallingPickup.field_R[2], 32, 98, 144, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[18]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 35;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(cf.field_u[8], 32, 80, 69, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[15]), new PartInstruction(0, 0, 100)});
@@ -2411,7 +2411,7 @@ final class BattleTerrain {
                                 var1 = new ArticulatedPart(wi.field_C[0], 64, 143, 152, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[35]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 52;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ne.field_R[6], 64, 39, 127, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[29]), new PartInstruction(0, 0, 500)});
+                                var1 = new ArticulatedPart(FallingPickup.field_R[6], 64, 39, 127, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[29]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 46;
                                 QuickChatPhraseDefinition.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(vc.field_b[15], 64, 147, 168, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[28]), new PartInstruction(0, 0, 500)});

@@ -226,7 +226,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         RuntimeException decompiledCaughtException = null;
         var7 = SteelSentinels.obfuscationControl;
         try {
-          if (this.field_K.f(param0 + 11970)) {
+          if (this.field_K.isEmpty(param0 + 11970)) {
             return false;
           }
           var8 = new NodeIterator(this.field_K);
@@ -341,7 +341,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (param1 <= 55) {
             field_O = (byte[]) null;
           }
-          if (this.field_K.f(7)) {
+          if (this.field_K.isEmpty(7)) {
             return false;
           }
           var8 = new NodeIterator(this.field_K);
@@ -435,9 +435,9 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var8_intLifetime2Lifetime1;
         var11 = SteelSentinels.obfuscationControl;
         try {
-          SoftwareRaster.d(param1, param5, param2, param0, param4);
-          SoftwareRaster.d(param2, param0, param7, param6, param4);
-          SoftwareRaster.d(param7, param6, param1, param5, param4);
+          SoftwareRaster.drawLine(param1, param5, param2, param0, param4);
+          SoftwareRaster.drawLine(param2, param0, param7, param6, param4);
+          SoftwareRaster.drawLine(param7, param6, param1, param5, param4);
           if (param0 < param5) {
             var8_int = param1;
             param1 = param2;
@@ -466,23 +466,23 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             for (var10 = param5; param0 > var10; var10++) {
               var9 = param1 + (var10 - param5) * (-param1 + param7) / (param6 - param5);
               var8_intLifetime3 = (param2 - param1) * (-param5 + var10) / (-param5 + param0) + param1;
-              SoftwareRaster.g(var8_intLifetime3, var10, -var8_intLifetime3 + (var9 + 1), param4);
+              SoftwareRaster.drawHorizontalLine(var8_intLifetime3, var10, -var8_intLifetime3 + (var9 + 1), param4);
             }
             for (var10 = param0; var10 < param6; var10++) {
               var9 = (-param5 + var10) * (-param1 + param7) / (-param5 + param6) + param1;
               var8_intLifetime3 = param2 + (param7 - param2) * (-param0 + var10) / (param6 - param0);
-              SoftwareRaster.g(var8_intLifetime3, var10, 1 + (-var8_intLifetime3 + var9), param4);
+              SoftwareRaster.drawHorizontalLine(var8_intLifetime3, var10, 1 + (-var8_intLifetime3 + var9), param4);
             }
           } else {
             for (var10 = param5; param0 > var10; var10++) {
               var9 = (param2 - param1) * (-param5 + var10) / (param0 - param5) + param1;
               var8_intLifetime3 = (param7 - param1) * (var10 - param5) / (-param5 + param6) + param1;
-              SoftwareRaster.g(var8_intLifetime3, var10, 1 - var8_intLifetime3 + var9, param4);
+              SoftwareRaster.drawHorizontalLine(var8_intLifetime3, var10, 1 - var8_intLifetime3 + var9, param4);
             }
             for (var10 = param0; param6 > var10; var10++) {
               var9 = param2 + (-param2 + param7) * (var10 - param0) / (param6 - param0);
               var8_intLifetime3 = param1 + (var10 - param5) * (-param1 + param7) / (-param5 + param6);
-              SoftwareRaster.g(var8_intLifetime3, var10, 1 - var8_intLifetime3 + var9, param4);
+              SoftwareRaster.drawHorizontalLine(var8_intLifetime3, var10, 1 - var8_intLifetime3 + var9, param4);
             }
           }
           if (!param3) {

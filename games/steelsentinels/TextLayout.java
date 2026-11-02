@@ -322,7 +322,7 @@ abstract class TextLayout {
         }
         LoginDialog.a((byte) -112, param0);
         if (di.field_b) {
-          SoftwareRaster.f(RegistrationRequestDialog.field_Tb.field_d.field_Y, RegistrationRequestDialog.field_Tb.field_d.field_eb, RegistrationRequestDialog.field_Tb.field_d.field_zb, RegistrationRequestDialog.field_Tb.field_d.field_Lb);
+          SoftwareRaster.halveBrightnessRectangle(RegistrationRequestDialog.field_Tb.field_d.field_Y, RegistrationRequestDialog.field_Tb.field_d.field_eb, RegistrationRequestDialog.field_Tb.field_d.field_zb, RegistrationRequestDialog.field_Tb.field_d.field_Lb);
           RegistrationRequestDialog.field_Tb.field_d.a(param0, (byte) 127);
         }
         TextLayoutLine.a(param0, (byte) -125);

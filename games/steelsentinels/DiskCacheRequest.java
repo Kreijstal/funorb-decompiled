@@ -43,7 +43,7 @@ final class DiskCacheRequest extends ArchiveRequest {
             DelayedServerPacket.a(sa.b((byte) 118), CachedArchiveProvider.a(true), var3_int != 0, 300, DropTargetWidget.field_S);
           } else {
             if (!km.a(-124)) {
-              SoftwareRaster.b();
+              SoftwareRaster.clear();
               ValidationHelpWidget.a((byte) 17, 240, 320);
               ScrollContainer.a(0, 0, 28594, param1);
             } else {

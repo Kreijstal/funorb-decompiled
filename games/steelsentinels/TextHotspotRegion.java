@@ -20,7 +20,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         BoundedRandomAccessFile.field_f.a(QuickChatMenu.field_Ub.field_Lb - 40 - 2, 0, QuickChatMenu.field_Ub.field_zb, 2, 0);
         Explosion.field_C.a(0, 0, SocketConnector.field_b, 0, Sprite.field_l.field_zb);
         int var1 = 2 + SocketConnector.field_b;
-        fl.field_c.a(0, MenuInputState.field_p ? var1 : 0, -(!MenuInputState.field_p ? 0 : var1) + Sprite.field_l.field_Lb, 0, Sprite.field_l.field_zb);
+        TeamColourTinter.field_c.a(0, MenuInputState.field_p ? var1 : 0, -(!MenuInputState.field_p ? 0 : var1) + Sprite.field_l.field_Lb, 0, Sprite.field_l.field_zb);
         SocialListPanel.b(true);
         BufferedSocket.field_i.a(0, -40 + QuickChatMenu.field_Ub.field_Lb, 40, 0, QuickChatMenu.field_Ub.field_zb);
         qi.field_c.a(param0, 0, 30, 0, pc.field_q.field_zb);

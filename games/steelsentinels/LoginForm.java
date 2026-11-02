@@ -373,7 +373,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           tj.field_e.a(this.field_fb, 20 + this.field_o + param2, this.field_z + param0 + 15, -40 + this.field_x, this.field_E, 16777215, -1, 1, 0, tj.field_e.field_G);
         }
         if (this.field_X != null) {
-          SoftwareRaster.g(10 + param2, 134 + param0, this.field_x - 20, 4210752);
+          SoftwareRaster.drawHorizontalLine(10 + param2, 134 + param0, this.field_x - 20, 4210752);
         }
         super.drawLayer(param0, (byte) -124, param2, param3);
         if (param1 > -99) {
@@ -449,7 +449,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             ReflectionCheck.field_M[0] = GrowableIntList.field_l;
             var5 = var3.field_u;
             for (var6_int = 1; var6_int < var4Lifetime1; var6_int++) {
-              ReflectionCheck.field_M[var6_int] = var13.h(1);
+              ReflectionCheck.field_M[var6_int] = var13.readString(1);
             }
             IterableDualNodeDeque.a(-121, var4Lifetime1, var5);
             for (var6_intLifetime1 = 0; var4Lifetime1 > var6_intLifetime1; var6_intLifetime1++) {
@@ -479,10 +479,10 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
               var6[0][var10] = ReflectionCheck.field_M[var11];
               var7[0][4 * var10] = ok.field_d[var11];
               var7[0][1 + 4 * var10] = jm.field_r[var11];
-              var7[0][var10 * 4 + 2] = ne.field_G[var11];
+              var7[0][var10 * 4 + 2] = FallingPickup.field_G[var11];
               var7[0][3 + var10 * 4] = Sentinel.field_T[var11];
               if (Projectile.a(107, ReflectionCheck.field_M[var11]) &&
-                0 == jm.field_r[var11] + (ne.field_G[var11] + Sentinel.field_T[var11])) {
+                0 == jm.field_r[var11] + (FallingPickup.field_G[var11] + Sentinel.field_T[var11])) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -497,10 +497,10 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
               var6[1][var14] = ReflectionCheck.field_M[var11Lifetime1];
               var7[1][4 * var14] = ok.field_d[var11Lifetime1];
               var7[1][1 + 4 * var14] = jm.field_r[var11Lifetime1];
-              var7[1][2 + 4 * var14] = ne.field_G[var11Lifetime1];
+              var7[1][2 + 4 * var14] = FallingPickup.field_G[var11Lifetime1];
               var7[1][var14 * 4 + 3] = Sentinel.field_T[var11Lifetime1];
               if (Projectile.a(47, ReflectionCheck.field_M[var11Lifetime1]) &&
-                0 == Sentinel.field_T[var11Lifetime1] + ne.field_G[var11Lifetime1] + jm.field_r[var11Lifetime1]) {
+                0 == Sentinel.field_T[var11Lifetime1] + FallingPickup.field_G[var11Lifetime1] + jm.field_r[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;
               }

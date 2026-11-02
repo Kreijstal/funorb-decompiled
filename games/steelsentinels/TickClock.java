@@ -107,12 +107,12 @@ abstract class TickClock {
                   2 != var6_int) {
                   if (var6_int == 3 ||
                     4 == var6_int) {
-                    var20 = param2.h(1);
-                    var8 = param2.h(1);
+                    var20 = param2.readString(1);
+                    var8 = param2.readString(1);
                     var9 = param2.readUnsignedByte((byte) -84);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param2.h(1);
+                      var10[var11_int] = param2.readString(1);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
@@ -137,8 +137,8 @@ abstract class TickClock {
                     var18.field_F[var5] = var21;
                   }
                 } else {
-                  var15 = param2.h(1);
-                  dupTemp$1 = param2.h(1);
+                  var15 = param2.readString(1);
+                  dupTemp$1 = param2.readString(1);
                   var16 = dupTemp$1;
                   var8 = dupTemp$1;
                   var9 = 0;

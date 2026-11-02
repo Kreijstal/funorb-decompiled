@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ne extends DualNode {
+final class FallingPickup extends DualNode {
     int field_O;
     private int field_C;
     private boolean field_Q;
@@ -83,7 +83,7 @@ final class ne extends DualNode {
                 stackIn_28_1 = 28;
               }
               if (stackIn_28_0 != stackIn_28_1) {
-                ne.g(61);
+                FallingPickup.g(61);
               }
               var5 = new int[var4];
               var4 = 0;
@@ -117,7 +117,7 @@ final class ne extends DualNode {
         }
     }
 
-    private final void a(Sentinel param0, byte param1) {
+    private final void applyToSentinel(Sentinel param0, byte param1) {
         RuntimeException stackIn_186_0 = null;
         StringBuilder stackIn_186_1 = null;
         String stackIn_187_2 = null;
@@ -682,7 +682,7 @@ final class ne extends DualNode {
                 this.field_z + this.field_M / 2 > var10.worldX - var11Lifetime1 &&
                 (this.field_I - this.field_D) <= var10.worldY &&
                 (var10.worldY - var12) < this.field_I) {
-                this.a(var10, (byte) -86);
+                this.applyToSentinel(var10, (byte) -86);
                 fc.a((byte) -73, 102, this.field_z);
                 return;
               }
@@ -802,7 +802,7 @@ final class ne extends DualNode {
             sl.field_p = new RgbSprite(var9, var8 + (var10 + 5));
           }
           sl.field_p.bindRasterTarget();
-          SoftwareRaster.a(0, 0, sl.field_p.field_z, sl.field_p.field_B, 0);
+          SoftwareRaster.fillRectangle(0, 0, sl.field_p.field_z, sl.field_p.field_B, 0);
           var6 = var6 - (var10 - 5);
           var12 = this.field_K / 5 % 3;
           var5_int = var5_int - var9 / 2;
@@ -826,10 +826,10 @@ final class ne extends DualNode {
               stackIn_17_4 = 12303138;
             }
             SoftwareRaster.f(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, 192);
-            SoftwareRaster.a(-1 + var15, var16, var13);
-            SoftwareRaster.a(var15, var16 - 1, var13);
-            SoftwareRaster.a(1 + var15, var16, var13);
-            SoftwareRaster.a(var15, var16 + 1, var13);
+            SoftwareRaster.plotAdditive(-1 + var15, var16, var13);
+            SoftwareRaster.plotAdditive(var15, var16 - 1, var13);
+            SoftwareRaster.plotAdditive(1 + var15, var16, var13);
+            SoftwareRaster.plotAdditive(var15, var16 + 1, var13);
             stackIn_20_0 = var15;
             stackIn_20_1 = var16;
             if (this.field_Q) {
@@ -837,7 +837,7 @@ final class ne extends DualNode {
             } else {
               stackIn_21_2 = 11206655;
             }
-            SoftwareRaster.a(stackIn_20_0, stackIn_20_1, stackIn_21_2);
+            SoftwareRaster.plotAdditive(stackIn_20_0, stackIn_20_1, stackIn_21_2);
           }
           ml.field_c[var12].drawScaled(0, var14, var9, var10);
           if (this.field_L) {
@@ -859,7 +859,7 @@ final class ne extends DualNode {
         }
     }
 
-    ne(CombatWorld param0, int param1) {
+    FallingPickup(CombatWorld param0, int param1) {
         int incrementValue$0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_14_1 = 0;

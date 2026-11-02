@@ -80,8 +80,8 @@ final class uc {
             var7 = param0[1].field_z;
             param0[0].a(param4, param2);
             param0[2].a(param1 + (param4 - var6), param2);
-            SoftwareRaster.b(RasterSnapshot.field_v);
-            SoftwareRaster.h(param4 + var5_int, param2, param4 + param1 - var6, param0[1].field_B + param2);
+            SoftwareRaster.getClip(RasterSnapshot.field_v);
+            SoftwareRaster.intersectClip(param4 + var5_int, param2, param4 + param1 - var6, param0[1].field_B + param2);
             var8 = var5_int + param4;
             var9 = param4 + param1 - var6;
             param4 = var8;
@@ -92,7 +92,7 @@ final class uc {
               param0[1].a(param4, param2);
               param4 = param4 + var7;
             }
-            SoftwareRaster.a(RasterSnapshot.field_v);
+            SoftwareRaster.setClip(RasterSnapshot.field_v);
             return;
           }
           return;

@@ -108,7 +108,7 @@ abstract class ArchiveProvider {
           wn.a(0, param0);
           return;
         }
-        SoftwareRaster.b();
+        SoftwareRaster.clear();
         if (param1 <= 32) {
           field_d = (vd) null;
           wn.a(0, param0);
