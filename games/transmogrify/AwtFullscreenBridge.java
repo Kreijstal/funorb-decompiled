@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cb {
+final class AwtFullscreenBridge {
     private java.awt.GraphicsDevice field_a;
     private java.awt.DisplayMode field_b;
 
@@ -37,7 +37,7 @@ final class cb {
         return var2;
     }
 
-    public cb() throws Exception {
+    public AwtFullscreenBridge() throws Exception {
         int var4 = 0;
         java.awt.GraphicsEnvironment var1;
         java.awt.GraphicsDevice[] var2;
@@ -58,7 +58,7 @@ final class cb {
             return;
           }
         }
-        throw cb.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw AwtFullscreenBridge.<RuntimeException>$cfr$sneakyThrow(new Exception());
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {

@@ -16,7 +16,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private Object field_t;
     private static int field_g;
     private static String field_n;
-    private ke field_q;
+    private DirectDrawFullscreenController field_q;
     private static volatile long field_a;
     boolean field_e;
     static String field_w;
@@ -223,7 +223,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (this.field_i) {
                           var8.field_g = this.field_q.a((byte) 106);
                         } else {
-                          var8.field_g = Class.forName("cb").getMethod("listmodes", new Class[]{}).invoke(this.field_d, new Object[]{});
+                          var8.field_g = Class.forName("AwtFullscreenBridge").getMethod("listmodes", new Class[]{}).invoke(this.field_d, new Object[]{});
                         }
                         break;
                       case 13:
@@ -296,7 +296,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (this.field_i) {
                           this.field_q.a(-16986, (java.awt.Frame) (var8.field_f));
                         } else {
-                          Class.forName("cb").getMethod("exit", new Class[]{}).invoke(this.field_d, new Object[]{});
+                          Class.forName("AwtFullscreenBridge").getMethod("exit", new Class[]{}).invoke(this.field_d, new Object[]{});
                         }
                         break;
                       case 6:
@@ -306,7 +306,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (this.field_i) {
                           this.field_q.a(70, var8.field_e >> 16, var8.field_e & 65535, var13, 65535 & var8.field_b, var8.field_b >>> 16);
                         } else {
-                          Class.forName("cb").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_d, new Object[]{var13, new Integer(var8.field_b >>> 16), new Integer(var8.field_b & 65535), new Integer(var8.field_e >> 16), new Integer(65535 & var8.field_e)});
+                          Class.forName("AwtFullscreenBridge").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_d, new Object[]{var13, new Integer(var8.field_b >>> 16), new Integer(var8.field_b & 65535), new Integer(var8.field_e >> 16), new Integer(65535 & var8.field_e)});
                         }
                         break;
                     }
@@ -502,7 +502,7 @@ final class PlatformTaskDispatcher implements Runnable {
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
-        ke var7 = null;
+        DirectDrawFullscreenController var7 = null;
         this.field_r = false;
         this.field_p = null;
         this.field_e = false;
@@ -579,14 +579,14 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        ed.a((byte) -4, field_u, field_g);
+        CacheFileLocator.a((byte) -4, field_u, field_g);
         if (this.field_e) {
-          this.field_v = new di(ed.a(83, field_g, "random.dat", (String) null), "rw", 25L);
-          this.field_b = new di(ed.a("main_file_cache.dat2", 32718), "rw", 314572800L);
-          this.field_h = new di(ed.a("main_file_cache.idx255", 32718), "rw", 1048576L);
+          this.field_v = new di(CacheFileLocator.a(83, field_g, "random.dat", (String) null), "rw", 25L);
+          this.field_b = new di(CacheFileLocator.a("main_file_cache.dat2", 32718), "rw", 314572800L);
+          this.field_h = new di(CacheFileLocator.a("main_file_cache.idx255", 32718), "rw", 1048576L);
           this.field_s = new di[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_s[var5_int] = new di(ed.a("main_file_cache.idx" + var5_int, 32718), "rw", 1048576L);
+            this.field_s[var5_int] = new di(CacheFileLocator.a("main_file_cache.idx" + var5_int, 32718), "rw", 1048576L);
           }
           if (this.field_i) {
             try {
@@ -598,10 +598,10 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (this.field_i) {
-              var7 = new ke();
+              var7 = new DirectDrawFullscreenController();
               this.field_q = var7;
             } else {
-              this.field_d = Class.forName("cb").newInstance();
+              this.field_d = Class.forName("AwtFullscreenBridge").newInstance();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
             decompiledCaughtException = decompiledCaughtParameter9;

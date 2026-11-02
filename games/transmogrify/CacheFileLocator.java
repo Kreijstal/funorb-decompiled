@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-public class ed {
+public class CacheFileLocator {
     private static boolean field_a;
     private static String field_e;
     private static Hashtable field_d;
@@ -15,7 +15,7 @@ public class ed {
         if (param1 != 32718) {
           return (File) null;
         }
-        return ed.a(51, field_b, param0, field_c);
+        return CacheFileLocator.a(51, field_b, param0, field_c);
     }
 
     public static void a(byte param0, String param1, int param2) {
@@ -51,7 +51,7 @@ public class ed {
         field_a = true;
     }
 
-    private ed() throws Throwable {
+    private CacheFileLocator() throws Throwable {
         throw new Error();
     }
 

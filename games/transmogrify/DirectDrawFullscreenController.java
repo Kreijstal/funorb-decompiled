@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ke implements com.ms.directX.IEnumModesCallback {
+final class DirectDrawFullscreenController implements com.ms.directX.IEnumModesCallback {
     private static int field_c;
     private com.ms.directX.DirectDraw field_a;
     private static int[] field_b;
 
-    public ke() {
+    public DirectDrawFullscreenController() {
         this.field_a = new com.ms.directX.DirectDraw();
         this.field_a.initialize((com.ms.com._Guid) null);
     }

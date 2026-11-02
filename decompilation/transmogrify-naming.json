@@ -284,6 +284,14 @@
       "renamedSymbol": "C:PcmSampleStream"
     },
     {
+      "symbol": "C:cb",
+      "originalName": "cb",
+      "to": "AwtFullscreenBridge",
+      "evidence": "Wraps GraphicsDevice with enter, exit and listmodes for fullscreen display modes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AwtFullscreenBridge"
+    },
+    {
       "symbol": "C:ce",
       "originalName": "ce",
       "to": "GameKeyHandler",
@@ -314,6 +322,14 @@
       "evidence": "Abstract holder of host and port that creates a Socket.",
       "confidence": "reviewed",
       "renamedSymbol": "C:SocketConnector"
+    },
+    {
+      "symbol": "C:ed",
+      "originalName": "ed",
+      "to": "CacheFileLocator",
+      "evidence": "Resolves the user.home directory, falling back to ~/, to locate cache files.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:CacheFileLocator"
     },
     {
       "symbol": "C:fa",
@@ -402,6 +418,14 @@
       "evidence": "Abstract holder of six dimension integers with abstract blit hooks, extended by the paletted sprite.",
       "confidence": "reviewed",
       "renamedSymbol": "C:IndexedSpriteState"
+    },
+    {
+      "symbol": "C:ke",
+      "originalName": "ke",
+      "to": "DirectDrawFullscreenController",
+      "evidence": "Implements IEnumModesCallback and owns a DirectDraw to list and set fullscreen modes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DirectDrawFullscreenController"
     },
     {
       "symbol": "C:kl",
@@ -1734,9 +1758,9 @@
     },
     {
       "symbol": "C:cb",
-      "renamedSymbol": "C:cb",
+      "renamedSymbol": "C:AwtFullscreenBridge",
       "originalName": "cb",
-      "renamedName": "cb",
+      "renamedName": "AwtFullscreenBridge",
       "declaration": {
         "file": "cb.java",
         "start": 50,
@@ -2042,9 +2066,9 @@
     },
     {
       "symbol": "C:ed",
-      "renamedSymbol": "C:ed",
+      "renamedSymbol": "C:CacheFileLocator",
       "originalName": "ed",
-      "renamedName": "ed",
+      "renamedName": "CacheFileLocator",
       "declaration": {
         "file": "ed.java",
         "start": 90,
@@ -2889,9 +2913,9 @@
     },
     {
       "symbol": "C:ke",
-      "renamedSymbol": "C:ke",
+      "renamedSymbol": "C:DirectDrawFullscreenController",
       "originalName": "ke",
-      "renamedName": "ke",
+      "renamedName": "DirectDrawFullscreenController",
       "declaration": {
         "file": "ke.java",
         "start": 50,
@@ -7388,7 +7412,7 @@
     },
     {
       "symbol": "F:cb.field_a:Ljava/awt/GraphicsDevice;",
-      "renamedSymbol": "F:cb.field_a:Ljava/awt/GraphicsDevice;",
+      "renamedSymbol": "F:AwtFullscreenBridge.field_a:Ljava/awt/GraphicsDevice;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -7399,7 +7423,7 @@
     },
     {
       "symbol": "F:cb.field_b:Ljava/awt/DisplayMode;",
-      "renamedSymbol": "F:cb.field_b:Ljava/awt/DisplayMode;",
+      "renamedSymbol": "F:AwtFullscreenBridge.field_b:Ljava/awt/DisplayMode;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -9500,7 +9524,7 @@
     },
     {
       "symbol": "F:ed.field_a:Z",
-      "renamedSymbol": "F:ed.field_a:Z",
+      "renamedSymbol": "F:CacheFileLocator.field_a:Z",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -9511,7 +9535,7 @@
     },
     {
       "symbol": "F:ed.field_b:I",
-      "renamedSymbol": "F:ed.field_b:I",
+      "renamedSymbol": "F:CacheFileLocator.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -9522,7 +9546,7 @@
     },
     {
       "symbol": "F:ed.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:ed.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:CacheFileLocator.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -9533,7 +9557,7 @@
     },
     {
       "symbol": "F:ed.field_d:Ljava/util/Hashtable;",
-      "renamedSymbol": "F:ed.field_d:Ljava/util/Hashtable;",
+      "renamedSymbol": "F:CacheFileLocator.field_d:Ljava/util/Hashtable;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -9544,7 +9568,7 @@
     },
     {
       "symbol": "F:ed.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:ed.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:CacheFileLocator.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -10699,7 +10723,7 @@
     },
     {
       "symbol": "F:fe.field_q:Lke;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_q:Lke;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_q:LDirectDrawFullscreenController;",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -14549,7 +14573,7 @@
     },
     {
       "symbol": "F:ke.field_a:Lcom/ms/directX/DirectDraw;",
-      "renamedSymbol": "F:ke.field_a:Lcom/ms/directX/DirectDraw;",
+      "renamedSymbol": "F:DirectDrawFullscreenController.field_a:Lcom/ms/directX/DirectDraw;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -14560,7 +14584,7 @@
     },
     {
       "symbol": "F:ke.field_b:[I",
-      "renamedSymbol": "F:ke.field_b:[I",
+      "renamedSymbol": "F:DirectDrawFullscreenController.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -14571,7 +14595,7 @@
     },
     {
       "symbol": "F:ke.field_c:I",
-      "renamedSymbol": "F:ke.field_c:I",
+      "renamedSymbol": "F:DirectDrawFullscreenController.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -39343,7 +39367,7 @@
     },
     {
       "symbol": "L:cb.<init>()V#0",
-      "renamedSymbol": "L:cb.<init>()V#0",
+      "renamedSymbol": "L:AwtFullscreenBridge.<init>()V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -39354,7 +39378,7 @@
     },
     {
       "symbol": "L:cb.<init>()V#1",
-      "renamedSymbol": "L:cb.<init>()V#1",
+      "renamedSymbol": "L:AwtFullscreenBridge.<init>()V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -39365,7 +39389,7 @@
     },
     {
       "symbol": "L:cb.<init>()V#2",
-      "renamedSymbol": "L:cb.<init>()V#2",
+      "renamedSymbol": "L:AwtFullscreenBridge.<init>()V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -39376,7 +39400,7 @@
     },
     {
       "symbol": "L:cb.<init>()V#3",
-      "renamedSymbol": "L:cb.<init>()V#3",
+      "renamedSymbol": "L:AwtFullscreenBridge.<init>()V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -39387,7 +39411,7 @@
     },
     {
       "symbol": "L:cb.<init>()V#4",
-      "renamedSymbol": "L:cb.<init>()V#4",
+      "renamedSymbol": "L:AwtFullscreenBridge.<init>()V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -39398,7 +39422,7 @@
     },
     {
       "symbol": "L:cb.enter(Ljava/awt/Frame;IIII)V#0",
-      "renamedSymbol": "L:cb.enter(Ljava/awt/Frame;IIII)V#0",
+      "renamedSymbol": "L:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -39409,7 +39433,7 @@
     },
     {
       "symbol": "L:cb.enter(Ljava/awt/Frame;IIII)V#1",
-      "renamedSymbol": "L:cb.enter(Ljava/awt/Frame;IIII)V#1",
+      "renamedSymbol": "L:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -39420,7 +39444,7 @@
     },
     {
       "symbol": "L:cb.enter(Ljava/awt/Frame;IIII)V#2",
-      "renamedSymbol": "L:cb.enter(Ljava/awt/Frame;IIII)V#2",
+      "renamedSymbol": "L:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -39431,7 +39455,7 @@
     },
     {
       "symbol": "L:cb.enter(Ljava/awt/Frame;IIII)V#3",
-      "renamedSymbol": "L:cb.enter(Ljava/awt/Frame;IIII)V#3",
+      "renamedSymbol": "L:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -39442,7 +39466,7 @@
     },
     {
       "symbol": "L:cb.enter(Ljava/awt/Frame;IIII)V#4",
-      "renamedSymbol": "L:cb.enter(Ljava/awt/Frame;IIII)V#4",
+      "renamedSymbol": "L:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V#4",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -39453,7 +39477,7 @@
     },
     {
       "symbol": "L:cb.listmodes()[I#0",
-      "renamedSymbol": "L:cb.listmodes()[I#0",
+      "renamedSymbol": "L:AwtFullscreenBridge.listmodes()[I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -39464,7 +39488,7 @@
     },
     {
       "symbol": "L:cb.listmodes()[I#1",
-      "renamedSymbol": "L:cb.listmodes()[I#1",
+      "renamedSymbol": "L:AwtFullscreenBridge.listmodes()[I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -39475,7 +39499,7 @@
     },
     {
       "symbol": "L:cb.listmodes()[I#2",
-      "renamedSymbol": "L:cb.listmodes()[I#2",
+      "renamedSymbol": "L:AwtFullscreenBridge.listmodes()[I#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -39486,7 +39510,7 @@
     },
     {
       "symbol": "L:cb.listmodes()[I#3",
-      "renamedSymbol": "L:cb.listmodes()[I#3",
+      "renamedSymbol": "L:AwtFullscreenBridge.listmodes()[I#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -49518,7 +49542,7 @@
     },
     {
       "symbol": "L:ed.a(BLjava/lang/String;I)V#0",
-      "renamedSymbol": "L:ed.a(BLjava/lang/String;I)V#0",
+      "renamedSymbol": "L:CacheFileLocator.a(BLjava/lang/String;I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -49529,7 +49553,7 @@
     },
     {
       "symbol": "L:ed.a(BLjava/lang/String;I)V#1",
-      "renamedSymbol": "L:ed.a(BLjava/lang/String;I)V#1",
+      "renamedSymbol": "L:CacheFileLocator.a(BLjava/lang/String;I)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -49540,7 +49564,7 @@
     },
     {
       "symbol": "L:ed.a(BLjava/lang/String;I)V#2",
-      "renamedSymbol": "L:ed.a(BLjava/lang/String;I)V#2",
+      "renamedSymbol": "L:CacheFileLocator.a(BLjava/lang/String;I)V#2",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -81341,7 +81365,7 @@
     },
     {
       "symbol": "L:ke.a(B)[I#0",
-      "renamedSymbol": "L:ke.a(B)[I#0",
+      "renamedSymbol": "L:DirectDrawFullscreenController.a(B)[I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -81352,7 +81376,7 @@
     },
     {
       "symbol": "L:ke.a(B)[I#1",
-      "renamedSymbol": "L:ke.a(B)[I#1",
+      "renamedSymbol": "L:DirectDrawFullscreenController.a(B)[I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -81363,7 +81387,7 @@
     },
     {
       "symbol": "L:ke.a(IIILjava/awt/Frame;II)V#0",
-      "renamedSymbol": "L:ke.a(IIILjava/awt/Frame;II)V#0",
+      "renamedSymbol": "L:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -81374,7 +81398,7 @@
     },
     {
       "symbol": "L:ke.a(IIILjava/awt/Frame;II)V#1",
-      "renamedSymbol": "L:ke.a(IIILjava/awt/Frame;II)V#1",
+      "renamedSymbol": "L:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -81385,7 +81409,7 @@
     },
     {
       "symbol": "L:ke.a(IIILjava/awt/Frame;II)V#2",
-      "renamedSymbol": "L:ke.a(IIILjava/awt/Frame;II)V#2",
+      "renamedSymbol": "L:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V#2",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -81396,7 +81420,7 @@
     },
     {
       "symbol": "L:ke.a(IIILjava/awt/Frame;II)V#3",
-      "renamedSymbol": "L:ke.a(IIILjava/awt/Frame;II)V#3",
+      "renamedSymbol": "L:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V#3",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -81407,7 +81431,7 @@
     },
     {
       "symbol": "L:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
-      "renamedSymbol": "L:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -81418,7 +81442,7 @@
     },
     {
       "symbol": "L:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
-      "renamedSymbol": "L:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -81429,7 +81453,7 @@
     },
     {
       "symbol": "L:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
-      "renamedSymbol": "L:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -81440,7 +81464,7 @@
     },
     {
       "symbol": "L:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
-      "renamedSymbol": "L:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -147726,7 +147750,7 @@
     },
     {
       "symbol": "M:cb.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:cb.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:AwtFullscreenBridge.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
       "renamedName": "$cfr$sneakyThrow",
       "declaration": {
@@ -147737,9 +147761,9 @@
     },
     {
       "symbol": "M:cb.<init>()V",
-      "renamedSymbol": "M:cb.<init>()V",
+      "renamedSymbol": "M:AwtFullscreenBridge.<init>()V",
       "originalName": "cb",
-      "renamedName": "cb",
+      "renamedName": "AwtFullscreenBridge",
       "declaration": {
         "file": "cb.java",
         "start": 1283,
@@ -147748,7 +147772,7 @@
     },
     {
       "symbol": "M:cb.a(Ljava/awt/Frame;B)V",
-      "renamedSymbol": "M:cb.a(Ljava/awt/Frame;B)V",
+      "renamedSymbol": "M:AwtFullscreenBridge.a(Ljava/awt/Frame;B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -147759,7 +147783,7 @@
     },
     {
       "symbol": "M:cb.enter(Ljava/awt/Frame;IIII)V",
-      "renamedSymbol": "M:cb.enter(Ljava/awt/Frame;IIII)V",
+      "renamedSymbol": "M:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V",
       "originalName": "enter",
       "renamedName": "enter",
       "declaration": {
@@ -147770,7 +147794,7 @@
     },
     {
       "symbol": "M:cb.exit()V",
-      "renamedSymbol": "M:cb.exit()V",
+      "renamedSymbol": "M:AwtFullscreenBridge.exit()V",
       "originalName": "exit",
       "renamedName": "exit",
       "declaration": {
@@ -147781,7 +147805,7 @@
     },
     {
       "symbol": "M:cb.listmodes()[I",
-      "renamedSymbol": "M:cb.listmodes()[I",
+      "renamedSymbol": "M:AwtFullscreenBridge.listmodes()[I",
       "originalName": "listmodes",
       "renamedName": "listmodes",
       "declaration": {
@@ -149871,9 +149895,9 @@
     },
     {
       "symbol": "M:ed.<init>()V",
-      "renamedSymbol": "M:ed.<init>()V",
+      "renamedSymbol": "M:CacheFileLocator.<init>()V",
       "originalName": "ed",
-      "renamedName": "ed",
+      "renamedName": "CacheFileLocator",
       "declaration": {
         "file": "ed.java",
         "start": 1428,
@@ -149882,7 +149906,7 @@
     },
     {
       "symbol": "M:ed.a(BLjava/lang/String;I)V",
-      "renamedSymbol": "M:ed.a(BLjava/lang/String;I)V",
+      "renamedSymbol": "M:CacheFileLocator.a(BLjava/lang/String;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -149893,7 +149917,7 @@
     },
     {
       "symbol": "M:ed.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;",
-      "renamedSymbol": "M:ed.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;",
+      "renamedSymbol": "M:CacheFileLocator.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -149904,7 +149928,7 @@
     },
     {
       "symbol": "M:ed.a(Ljava/lang/String;I)Ljava/io/File;",
-      "renamedSymbol": "M:ed.a(Ljava/lang/String;I)Ljava/io/File;",
+      "renamedSymbol": "M:CacheFileLocator.a(Ljava/lang/String;I)Ljava/io/File;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155690,9 +155714,9 @@
     },
     {
       "symbol": "M:ke.<init>()V",
-      "renamedSymbol": "M:ke.<init>()V",
+      "renamedSymbol": "M:DirectDrawFullscreenController.<init>()V",
       "originalName": "ke",
-      "renamedName": "ke",
+      "renamedName": "DirectDrawFullscreenController",
       "declaration": {
         "file": "ke.java",
         "start": 225,
@@ -155701,7 +155725,7 @@
     },
     {
       "symbol": "M:ke.a(B)[I",
-      "renamedSymbol": "M:ke.a(B)[I",
+      "renamedSymbol": "M:DirectDrawFullscreenController.a(B)[I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155712,7 +155736,7 @@
     },
     {
       "symbol": "M:ke.a(IIILjava/awt/Frame;II)V",
-      "renamedSymbol": "M:ke.a(IIILjava/awt/Frame;II)V",
+      "renamedSymbol": "M:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155723,7 +155747,7 @@
     },
     {
       "symbol": "M:ke.a(ILjava/awt/Frame;)V",
-      "renamedSymbol": "M:ke.a(ILjava/awt/Frame;)V",
+      "renamedSymbol": "M:DirectDrawFullscreenController.a(ILjava/awt/Frame;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155734,7 +155758,7 @@
     },
     {
       "symbol": "M:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
-      "renamedSymbol": "M:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
+      "renamedSymbol": "M:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
       "originalName": "callbackEnumModes",
       "renamedName": "callbackEnumModes",
       "declaration": {
@@ -175809,7 +175833,7 @@
     },
     {
       "symbol": "P:cb.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:cb.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:AwtFullscreenBridge.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -175820,7 +175844,7 @@
     },
     {
       "symbol": "P:cb.a(Ljava/awt/Frame;B)V#0",
-      "renamedSymbol": "P:cb.a(Ljava/awt/Frame;B)V#0",
+      "renamedSymbol": "P:AwtFullscreenBridge.a(Ljava/awt/Frame;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175831,7 +175855,7 @@
     },
     {
       "symbol": "P:cb.a(Ljava/awt/Frame;B)V#1",
-      "renamedSymbol": "P:cb.a(Ljava/awt/Frame;B)V#1",
+      "renamedSymbol": "P:AwtFullscreenBridge.a(Ljava/awt/Frame;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175842,7 +175866,7 @@
     },
     {
       "symbol": "P:cb.enter(Ljava/awt/Frame;IIII)V#0",
-      "renamedSymbol": "P:cb.enter(Ljava/awt/Frame;IIII)V#0",
+      "renamedSymbol": "P:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175853,7 +175877,7 @@
     },
     {
       "symbol": "P:cb.enter(Ljava/awt/Frame;IIII)V#1",
-      "renamedSymbol": "P:cb.enter(Ljava/awt/Frame;IIII)V#1",
+      "renamedSymbol": "P:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175864,7 +175888,7 @@
     },
     {
       "symbol": "P:cb.enter(Ljava/awt/Frame;IIII)V#2",
-      "renamedSymbol": "P:cb.enter(Ljava/awt/Frame;IIII)V#2",
+      "renamedSymbol": "P:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -175875,7 +175899,7 @@
     },
     {
       "symbol": "P:cb.enter(Ljava/awt/Frame;IIII)V#3",
-      "renamedSymbol": "P:cb.enter(Ljava/awt/Frame;IIII)V#3",
+      "renamedSymbol": "P:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -175886,7 +175910,7 @@
     },
     {
       "symbol": "P:cb.enter(Ljava/awt/Frame;IIII)V#4",
-      "renamedSymbol": "P:cb.enter(Ljava/awt/Frame;IIII)V#4",
+      "renamedSymbol": "P:AwtFullscreenBridge.enter(Ljava/awt/Frame;IIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -180264,7 +180288,7 @@
     },
     {
       "symbol": "P:ed.a(BLjava/lang/String;I)V#0",
-      "renamedSymbol": "P:ed.a(BLjava/lang/String;I)V#0",
+      "renamedSymbol": "P:CacheFileLocator.a(BLjava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -180275,7 +180299,7 @@
     },
     {
       "symbol": "P:ed.a(BLjava/lang/String;I)V#1",
-      "renamedSymbol": "P:ed.a(BLjava/lang/String;I)V#1",
+      "renamedSymbol": "P:CacheFileLocator.a(BLjava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -180286,7 +180310,7 @@
     },
     {
       "symbol": "P:ed.a(BLjava/lang/String;I)V#2",
-      "renamedSymbol": "P:ed.a(BLjava/lang/String;I)V#2",
+      "renamedSymbol": "P:CacheFileLocator.a(BLjava/lang/String;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -180297,7 +180321,7 @@
     },
     {
       "symbol": "P:ed.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#0",
-      "renamedSymbol": "P:ed.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#0",
+      "renamedSymbol": "P:CacheFileLocator.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -180308,7 +180332,7 @@
     },
     {
       "symbol": "P:ed.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#1",
-      "renamedSymbol": "P:ed.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#1",
+      "renamedSymbol": "P:CacheFileLocator.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -180319,7 +180343,7 @@
     },
     {
       "symbol": "P:ed.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#2",
-      "renamedSymbol": "P:ed.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#2",
+      "renamedSymbol": "P:CacheFileLocator.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -180330,7 +180354,7 @@
     },
     {
       "symbol": "P:ed.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#3",
-      "renamedSymbol": "P:ed.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#3",
+      "renamedSymbol": "P:CacheFileLocator.a(IILjava/lang/String;Ljava/lang/String;)Ljava/io/File;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -180341,7 +180365,7 @@
     },
     {
       "symbol": "P:ed.a(Ljava/lang/String;I)Ljava/io/File;#0",
-      "renamedSymbol": "P:ed.a(Ljava/lang/String;I)Ljava/io/File;#0",
+      "renamedSymbol": "P:CacheFileLocator.a(Ljava/lang/String;I)Ljava/io/File;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -180352,7 +180376,7 @@
     },
     {
       "symbol": "P:ed.a(Ljava/lang/String;I)Ljava/io/File;#1",
-      "renamedSymbol": "P:ed.a(Ljava/lang/String;I)Ljava/io/File;#1",
+      "renamedSymbol": "P:CacheFileLocator.a(Ljava/lang/String;I)Ljava/io/File;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -194619,7 +194643,7 @@
     },
     {
       "symbol": "P:ke.a(B)[I#0",
-      "renamedSymbol": "P:ke.a(B)[I#0",
+      "renamedSymbol": "P:DirectDrawFullscreenController.a(B)[I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194630,7 +194654,7 @@
     },
     {
       "symbol": "P:ke.a(IIILjava/awt/Frame;II)V#0",
-      "renamedSymbol": "P:ke.a(IIILjava/awt/Frame;II)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194641,7 +194665,7 @@
     },
     {
       "symbol": "P:ke.a(IIILjava/awt/Frame;II)V#1",
-      "renamedSymbol": "P:ke.a(IIILjava/awt/Frame;II)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -194652,7 +194676,7 @@
     },
     {
       "symbol": "P:ke.a(IIILjava/awt/Frame;II)V#2",
-      "renamedSymbol": "P:ke.a(IIILjava/awt/Frame;II)V#2",
+      "renamedSymbol": "P:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -194663,7 +194687,7 @@
     },
     {
       "symbol": "P:ke.a(IIILjava/awt/Frame;II)V#3",
-      "renamedSymbol": "P:ke.a(IIILjava/awt/Frame;II)V#3",
+      "renamedSymbol": "P:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -194674,7 +194698,7 @@
     },
     {
       "symbol": "P:ke.a(IIILjava/awt/Frame;II)V#4",
-      "renamedSymbol": "P:ke.a(IIILjava/awt/Frame;II)V#4",
+      "renamedSymbol": "P:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -194685,7 +194709,7 @@
     },
     {
       "symbol": "P:ke.a(IIILjava/awt/Frame;II)V#5",
-      "renamedSymbol": "P:ke.a(IIILjava/awt/Frame;II)V#5",
+      "renamedSymbol": "P:DirectDrawFullscreenController.a(IIILjava/awt/Frame;II)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -194696,7 +194720,7 @@
     },
     {
       "symbol": "P:ke.a(ILjava/awt/Frame;)V#0",
-      "renamedSymbol": "P:ke.a(ILjava/awt/Frame;)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenController.a(ILjava/awt/Frame;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194707,7 +194731,7 @@
     },
     {
       "symbol": "P:ke.a(ILjava/awt/Frame;)V#1",
-      "renamedSymbol": "P:ke.a(ILjava/awt/Frame;)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenController.a(ILjava/awt/Frame;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -194718,7 +194742,7 @@
     },
     {
       "symbol": "P:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
-      "renamedSymbol": "P:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194729,7 +194753,7 @@
     },
     {
       "symbol": "P:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
-      "renamedSymbol": "P:ke.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227086,10 +227110,32 @@
     },
     {
       "original": "cb.java",
-      "renamed": "cb.java",
+      "renamed": "AwtFullscreenBridge.java",
       "inputSha256": "8f1cf56b270c798fa7a6da4ec8541396da43d17e6c15b1a3259da09b7aef910f",
-      "outputSha256": "8f1cf56b270c798fa7a6da4ec8541396da43d17e6c15b1a3259da09b7aef910f",
-      "edits": []
+      "outputSha256": "92b5cc89b3deb8eefb089a49f7acb0bccaaea41fea6a9c052c8e9b34787889c6",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:cb",
+          "original": "cb",
+          "renamed": "AwtFullscreenBridge"
+        },
+        {
+          "start": 1283,
+          "end": 1285,
+          "symbol": "M:cb.<init>()V",
+          "original": "cb",
+          "renamed": "AwtFullscreenBridge"
+        },
+        {
+          "start": 2005,
+          "end": 2007,
+          "symbol": "C:cb",
+          "original": "cb",
+          "renamed": "AwtFullscreenBridge"
+        }
+      ]
     },
     {
       "original": "cc.java",
@@ -229690,10 +229736,32 @@
     },
     {
       "original": "ed.java",
-      "renamed": "ed.java",
+      "renamed": "CacheFileLocator.java",
       "inputSha256": "868635fb942237c6078c527b60d832a7de806bad9d6baeeb88eed2902b13910d",
-      "outputSha256": "868635fb942237c6078c527b60d832a7de806bad9d6baeeb88eed2902b13910d",
-      "edits": []
+      "outputSha256": "404b3c33fc053b9a3741c12db4d809eb4204ff53f419bdbb3bace58e40471a4b",
+      "edits": [
+        {
+          "start": 90,
+          "end": 92,
+          "symbol": "C:ed",
+          "original": "ed",
+          "renamed": "CacheFileLocator"
+        },
+        {
+          "start": 412,
+          "end": 414,
+          "symbol": "C:ed",
+          "original": "ed",
+          "renamed": "CacheFileLocator"
+        },
+        {
+          "start": 1428,
+          "end": 1430,
+          "symbol": "M:ed.<init>()V",
+          "original": "ed",
+          "renamed": "CacheFileLocator"
+        }
+      ]
     },
     {
       "original": "ee.java",
@@ -231001,7 +231069,7 @@
       "original": "fe.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "bd375cdb275353f63de6cb9342dd4f3c1803d6f5811525cd6aaf0a3f2aa9311e",
-      "outputSha256": "893b24a0a74eb6aaa561d9a65093a6731c203eed7e45f41b351d6b50eaf608df",
+      "outputSha256": "24b716f33dc8e9b8913fc278dc0c090b4ec9a7680aef1ef2abbb5f42ebb47a83",
       "edits": [
         {
           "start": 69,
@@ -231016,6 +231084,13 @@
           "symbol": "C:ib",
           "original": "ib",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 472,
+          "end": 474,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "DirectDrawFullscreenController"
         },
         {
           "start": 715,
@@ -231044,6 +231119,14 @@
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 8549,
+          "end": 8551,
+          "symbol": "C:cb",
+          "original": "cb",
+          "renamed": "AwtFullscreenBridge",
+          "kind": "class-name-literal"
         },
         {
           "start": 8754,
@@ -231093,6 +231176,22 @@
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 12976,
+          "end": 12978,
+          "symbol": "C:cb",
+          "original": "cb",
+          "renamed": "AwtFullscreenBridge",
+          "kind": "class-name-literal"
+        },
+        {
+          "start": 13565,
+          "end": 13567,
+          "symbol": "C:cb",
+          "original": "cb",
+          "renamed": "AwtFullscreenBridge",
+          "kind": "class-name-literal"
         },
         {
           "start": 16419,
@@ -231198,6 +231297,63 @@
           "symbol": "M:fe.<init>(ILjava/lang/String;IZ)V",
           "original": "fe",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 21000,
+          "end": 21002,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "DirectDrawFullscreenController"
+        },
+        {
+          "start": 24277,
+          "end": 24279,
+          "symbol": "C:ed",
+          "original": "ed",
+          "renamed": "CacheFileLocator"
+        },
+        {
+          "start": 24372,
+          "end": 24374,
+          "symbol": "C:ed",
+          "original": "ed",
+          "renamed": "CacheFileLocator"
+        },
+        {
+          "start": 24464,
+          "end": 24466,
+          "symbol": "C:ed",
+          "original": "ed",
+          "renamed": "CacheFileLocator"
+        },
+        {
+          "start": 24552,
+          "end": 24554,
+          "symbol": "C:ed",
+          "original": "ed",
+          "renamed": "CacheFileLocator"
+        },
+        {
+          "start": 24755,
+          "end": 24757,
+          "symbol": "C:ed",
+          "original": "ed",
+          "renamed": "CacheFileLocator"
+        },
+        {
+          "start": 25221,
+          "end": 25223,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "DirectDrawFullscreenController"
+        },
+        {
+          "start": 25327,
+          "end": 25329,
+          "symbol": "C:cb",
+          "original": "cb",
+          "renamed": "AwtFullscreenBridge",
+          "kind": "class-name-literal"
         }
       ]
     },
@@ -237765,10 +237921,25 @@
     },
     {
       "original": "ke.java",
-      "renamed": "ke.java",
+      "renamed": "DirectDrawFullscreenController.java",
       "inputSha256": "5291a677ccfa913c1f11111db2f5a12f054630204b6f392866abe701adf08a07",
-      "outputSha256": "5291a677ccfa913c1f11111db2f5a12f054630204b6f392866abe701adf08a07",
-      "edits": []
+      "outputSha256": "daea922c9d8150e83f817d0e7ffd5fc7496efd9c3eb58392299ae299b37bcdb0",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "DirectDrawFullscreenController"
+        },
+        {
+          "start": 225,
+          "end": 227,
+          "symbol": "M:ke.<init>()V",
+          "original": "ke",
+          "renamed": "DirectDrawFullscreenController"
+        }
+      ]
     },
     {
       "original": "kf.java",
@@ -256922,10 +257093,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/transmogrify"
     },
-    "rulesSha256": "c32c79df573ac43e806022c446847a37c7bbff5b820a946a80fe01a6620ac0bc",
+    "rulesSha256": "3b9e4cd6884e19fd9adae8213d9c48b549807f8ddeffa3cd262e1e1bfb69033b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d",
-    "outputTreeSha256": "30db4b43e42708ad21f7c5dd9d89d66b22196ea1726dd4f688235987ecc62d84",
+    "outputTreeSha256": "4ff617e3a5387e7d23cf7e488d28e1dc44cc676e6c95f22d87d08485d5090867",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -256940,7 +257111,7 @@
       "overrideFamiliesChecked": 383,
       "overrideRelationshipsPreserved": true,
       "classNameLiteralBindingsCompared": 11,
-      "classNameLiteralEdits": 1,
+      "classNameLiteralEdits": 5,
       "labelBindingsCompared": 111,
       "labelEdits": 111,
       "runtimeEquivalenceVerified": false,
